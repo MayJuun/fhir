@@ -19,11 +19,11 @@ class Coverage with Resource, _$Coverage {
     @Default(Stu3ResourceType.Coverage)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Coverage)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -46,7 +46,7 @@ class Coverage with Resource, _$Coverage {
     @JsonKey(name: '_dependent') Element? dependentElement,
     String? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
-    Decimal? order,
+    FhirDecimal? order,
     @JsonKey(name: '_order') Element? orderElement,
     String? network,
     @JsonKey(name: '_network') Element? networkElement,
@@ -149,11 +149,11 @@ class EligibilityRequest with Resource, _$EligibilityRequest {
     @Default(Stu3ResourceType.EligibilityRequest)
     @JsonKey(unknownEnumValue: Stu3ResourceType.EligibilityRequest)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -164,7 +164,7 @@ class EligibilityRequest with Resource, _$EligibilityRequest {
     @JsonKey(name: '_status') Element? statusElement,
     CodeableConcept? priority,
     Reference? patient,
-    Date? servicedDate,
+    FhirDate? servicedDate,
     @JsonKey(name: '_servicedDate') Element? servicedDateElement,
     Period? servicedPeriod,
     String? created,
@@ -216,11 +216,11 @@ class EligibilityResponse with Resource, _$EligibilityResponse {
     @Default(Stu3ResourceType.EligibilityResponse)
     @JsonKey(unknownEnumValue: Stu3ResourceType.EligibilityResponse)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -238,7 +238,7 @@ class EligibilityResponse with Resource, _$EligibilityResponse {
     String? disposition,
     @JsonKey(name: '_disposition') Element? dispositionElement,
     Reference? insurer,
-    Boolean? inforce,
+    FhirBoolean? inforce,
     @JsonKey(name: '_inforce') Element? inforceElement,
     List<EligibilityResponseInsurance>? insurance,
     CodeableConcept? form,
@@ -320,7 +320,7 @@ class EligibilityResponseBenefitBalance
   factory EligibilityResponseBenefitBalance({
     required CodeableConcept category,
     CodeableConcept? subCategory,
-    Boolean? excluded,
+    FhirBoolean? excluded,
     @JsonKey(name: '_excluded') Element? excludedElement,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
@@ -357,12 +357,12 @@ class EligibilityResponseFinancial with _$EligibilityResponseFinancial {
   EligibilityResponseFinancial._();
   factory EligibilityResponseFinancial({
     required CodeableConcept type,
-    Decimal? allowedUnsignedInt,
+    FhirDecimal? allowedUnsignedInt,
     @JsonKey(name: '_allowedUnsignedInt') Element? allowedUnsignedIntElement,
     String? allowedString,
     @JsonKey(name: '_allowedString') Element? allowedStringElement,
     Money? allowedMoney,
-    Decimal? usedUnsignedInt,
+    FhirDecimal? usedUnsignedInt,
     @JsonKey(name: '_usedUnsignedInt') Element? usedUnsignedIntElement,
     Money? usedMoney,
   }) = _EligibilityResponseFinancial;
@@ -443,11 +443,11 @@ class EnrollmentRequest with Resource, _$EnrollmentRequest {
     @Default(Stu3ResourceType.EnrollmentRequest)
     @JsonKey(unknownEnumValue: Stu3ResourceType.EnrollmentRequest)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -500,11 +500,11 @@ class EnrollmentResponse with Resource, _$EnrollmentResponse {
     @Default(Stu3ResourceType.EnrollmentResponse)
     @JsonKey(unknownEnumValue: Stu3ResourceType.EnrollmentResponse)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,

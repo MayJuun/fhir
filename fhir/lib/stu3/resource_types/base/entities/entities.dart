@@ -19,11 +19,11 @@ class Device with Resource, _$Device {
     @Default(Stu3ResourceType.Device)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Device)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -38,9 +38,9 @@ class Device with Resource, _$Device {
     @JsonKey(name: '_lotNumber') Element? lotNumberElement,
     String? manufacturer,
     @JsonKey(name: '_manufacturer') Element? manufacturerElement,
-    Date? manufactureDate,
+    FhirDate? manufactureDate,
     @JsonKey(name: '_manufactureDate') Element? manufactureDateElement,
-    Date? expirationDate,
+    FhirDate? expirationDate,
     @JsonKey(name: '_expirationDate') Element? expirationDateElement,
     String? model,
     @JsonKey(name: '_model') Element? modelElement,
@@ -141,11 +141,11 @@ class DeviceComponent with Resource, _$DeviceComponent {
     @Default(Stu3ResourceType.DeviceComponent)
     @JsonKey(unknownEnumValue: Stu3ResourceType.DeviceComponent)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -232,11 +232,11 @@ class DeviceMetric with Resource, _$DeviceMetric {
     @Default(Stu3ResourceType.DeviceMetric)
     @JsonKey(unknownEnumValue: Stu3ResourceType.DeviceMetric)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -335,11 +335,11 @@ class Endpoint with Resource, _$Endpoint {
     @Default(Stu3ResourceType.Endpoint)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Endpoint)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -398,18 +398,18 @@ class HealthcareService with Resource, _$HealthcareService {
     @Default(Stu3ResourceType.HealthcareService)
     @JsonKey(unknownEnumValue: Stu3ResourceType.HealthcareService)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    Boolean? active,
+    FhirBoolean? active,
     @JsonKey(name: '_active') Element? activeElement,
     Reference? providedBy,
     CodeableConcept? category,
@@ -433,7 +433,7 @@ class HealthcareService with Resource, _$HealthcareService {
     @JsonKey(name: '_programName') List<Element?>? programNameElement,
     List<CodeableConcept>? characteristic,
     List<CodeableConcept>? referralMethod,
-    Boolean? appointmentRequired,
+    FhirBoolean? appointmentRequired,
     @JsonKey(name: '_appointmentRequired') Element? appointmentRequiredElement,
     List<HealthcareServiceAvailableTime>? availableTime,
     List<HealthcareServiceNotAvailable>? notAvailable,
@@ -477,7 +477,7 @@ class HealthcareServiceAvailableTime with _$HealthcareServiceAvailableTime {
   factory HealthcareServiceAvailableTime({
     List<HealthcareServiceAvailableTimeDaysOfWeek>? daysOfWeek,
     @JsonKey(name: '_daysOfWeek') List<Element?>? daysOfWeekElement,
-    Boolean? allDay,
+    FhirBoolean? allDay,
     @JsonKey(name: '_allDay') Element? allDayElement,
     Time? availableStartTime,
     @JsonKey(name: '_availableStartTime') Element? availableStartTimeElement,
@@ -564,11 +564,11 @@ class Location with Resource, _$Location {
     @Default(Stu3ResourceType.Location)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Location)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -628,11 +628,11 @@ class Location with Resource, _$Location {
 class LocationPosition with _$LocationPosition {
   LocationPosition._();
   factory LocationPosition({
-    Decimal? longitude,
+    FhirDecimal? longitude,
     @JsonKey(name: '_longitude') Element? longitudeElement,
-    Decimal? latitude,
+    FhirDecimal? latitude,
     @JsonKey(name: '_latitude') Element? latitudeElement,
-    Decimal? altitude,
+    FhirDecimal? altitude,
     @JsonKey(name: '_altitude') Element? altitudeElement,
   }) = _LocationPosition;
 
@@ -674,18 +674,18 @@ class Organization with Resource, _$Organization {
     @Default(Stu3ResourceType.Organization)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Organization)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    Boolean? active,
+    FhirBoolean? active,
     @JsonKey(name: '_active') Element? activeElement,
     List<CodeableConcept>? type,
     String? name,
@@ -775,11 +775,11 @@ class Substance with Resource, _$Substance {
     @Default(Stu3ResourceType.Substance)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Substance)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,

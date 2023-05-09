@@ -9,31 +9,31 @@ import 'package:yaml/yaml.dart';
 // Project imports:
 import 'primitive_type_exceptions.dart';
 
-class Canonical {
-  const Canonical._(this._valueString, this._valueCanonical, this._isValid);
+class FhirCanonical {
+  const FhirCanonical._(this._valueString, this._valueCanonical, this._isValid);
 
-  factory Canonical(dynamic inValue) {
+  factory FhirCanonical(dynamic inValue) {
     if (inValue is Uri) {
-      return Canonical._(inValue.toString(), inValue, true);
+      return FhirCanonical._(inValue.toString(), inValue, true);
     } else if (inValue is String) {
       if (RegExp(r'^\S*$').hasMatch(inValue)) {
         final Uri? tempUri = Uri.tryParse(inValue);
-        return Canonical._(inValue, tempUri, tempUri != null);
+        return FhirCanonical._(inValue, tempUri, tempUri != null);
       }
-      return Canonical._(inValue, null, false);
+      return FhirCanonical._(inValue, null, false);
     }
 
-    throw CannotBeConstructed<Canonical>(
+    throw CannotBeConstructed<FhirCanonical>(
         'Canonical cannot be constructed from $inValue.');
   }
 
-  factory Canonical.fromJson(dynamic json) => Canonical(json);
+  factory FhirCanonical.fromJson(dynamic json) => FhirCanonical(json);
 
-  factory Canonical.fromYaml(dynamic yaml) => yaml is String
-      ? Canonical.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+  factory FhirCanonical.fromYaml(dynamic yaml) => yaml is String
+      ? FhirCanonical.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
-          ? Canonical.fromJson(jsonDecode(jsonEncode(yaml)))
-          : throw YamlFormatException<Canonical>(
+          ? FhirCanonical.fromJson(jsonDecode(jsonEncode(yaml)))
+          : throw YamlFormatException<FhirCanonical>(
               'FormatException: "$json" is not a valid Yaml string or YamlMap.');
 
   final String _valueString;
@@ -53,7 +53,7 @@ class Canonical {
   @override
   bool operator ==(Object o) => identical(this, o)
       ? true
-      : o is Canonical
+      : o is FhirCanonical
           ? o.value == _valueCanonical
           : o is String
               ? o == _valueString

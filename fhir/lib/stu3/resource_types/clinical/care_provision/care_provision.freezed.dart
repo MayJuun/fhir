@@ -25,32 +25,32 @@ mixin _$VisionPrescriptionDispense {
   VisionPrescriptionDispenseEye? get eye => throw _privateConstructorUsedError;
   @JsonKey(name: '_eye')
   Element? get eyeElement => throw _privateConstructorUsedError;
-  Decimal? get sphere => throw _privateConstructorUsedError;
+  FhirDecimal? get sphere => throw _privateConstructorUsedError;
   @JsonKey(name: '_sphere')
   Element? get sphereElement => throw _privateConstructorUsedError;
-  Decimal? get cylinder => throw _privateConstructorUsedError;
+  FhirDecimal? get cylinder => throw _privateConstructorUsedError;
   @JsonKey(name: '_cylinder')
   Element? get cylinderElement => throw _privateConstructorUsedError;
-  Decimal? get axis => throw _privateConstructorUsedError;
+  FhirDecimal? get axis => throw _privateConstructorUsedError;
   @JsonKey(name: '_axis')
   Element? get axisElement => throw _privateConstructorUsedError;
-  Decimal? get prism => throw _privateConstructorUsedError;
+  FhirDecimal? get prism => throw _privateConstructorUsedError;
   @JsonKey(name: '_prism')
   Element? get prismElement => throw _privateConstructorUsedError;
   VisionPrescriptionDispenseBase? get base =>
       throw _privateConstructorUsedError;
   @JsonKey(name: '_base')
   Element? get baseElement => throw _privateConstructorUsedError;
-  Decimal? get add => throw _privateConstructorUsedError;
+  FhirDecimal? get add => throw _privateConstructorUsedError;
   @JsonKey(name: '_add')
   Element? get addElement => throw _privateConstructorUsedError;
-  Decimal? get power => throw _privateConstructorUsedError;
+  FhirDecimal? get power => throw _privateConstructorUsedError;
   @JsonKey(name: '_power')
   Element? get powerElement => throw _privateConstructorUsedError;
-  Decimal? get backCurve => throw _privateConstructorUsedError;
+  FhirDecimal? get backCurve => throw _privateConstructorUsedError;
   @JsonKey(name: '_backCurve')
   Element? get backCurveElement => throw _privateConstructorUsedError;
-  Decimal? get diameter => throw _privateConstructorUsedError;
+  FhirDecimal? get diameter => throw _privateConstructorUsedError;
   @JsonKey(name: '_diameter')
   Element? get diameterElement => throw _privateConstructorUsedError;
   Quantity? get duration => throw _privateConstructorUsedError;
@@ -79,23 +79,23 @@ abstract class $VisionPrescriptionDispenseCopyWith<$Res> {
       {CodeableConcept? product,
       VisionPrescriptionDispenseEye? eye,
       @JsonKey(name: '_eye') Element? eyeElement,
-      Decimal? sphere,
+      FhirDecimal? sphere,
       @JsonKey(name: '_sphere') Element? sphereElement,
-      Decimal? cylinder,
+      FhirDecimal? cylinder,
       @JsonKey(name: '_cylinder') Element? cylinderElement,
-      Decimal? axis,
+      FhirDecimal? axis,
       @JsonKey(name: '_axis') Element? axisElement,
-      Decimal? prism,
+      FhirDecimal? prism,
       @JsonKey(name: '_prism') Element? prismElement,
       VisionPrescriptionDispenseBase? base,
       @JsonKey(name: '_base') Element? baseElement,
-      Decimal? add,
+      FhirDecimal? add,
       @JsonKey(name: '_add') Element? addElement,
-      Decimal? power,
+      FhirDecimal? power,
       @JsonKey(name: '_power') Element? powerElement,
-      Decimal? backCurve,
+      FhirDecimal? backCurve,
       @JsonKey(name: '_backCurve') Element? backCurveElement,
-      Decimal? diameter,
+      FhirDecimal? diameter,
       @JsonKey(name: '_diameter') Element? diameterElement,
       Quantity? duration,
       String? color,
@@ -456,23 +456,23 @@ abstract class _$$_VisionPrescriptionDispenseCopyWith<$Res>
       {CodeableConcept? product,
       VisionPrescriptionDispenseEye? eye,
       @JsonKey(name: '_eye') Element? eyeElement,
-      Decimal? sphere,
+      FhirDecimal? sphere,
       @JsonKey(name: '_sphere') Element? sphereElement,
-      Decimal? cylinder,
+      FhirDecimal? cylinder,
       @JsonKey(name: '_cylinder') Element? cylinderElement,
-      Decimal? axis,
+      FhirDecimal? axis,
       @JsonKey(name: '_axis') Element? axisElement,
-      Decimal? prism,
+      FhirDecimal? prism,
       @JsonKey(name: '_prism') Element? prismElement,
       VisionPrescriptionDispenseBase? base,
       @JsonKey(name: '_base') Element? baseElement,
-      Decimal? add,
+      FhirDecimal? add,
       @JsonKey(name: '_add') Element? addElement,
-      Decimal? power,
+      FhirDecimal? power,
       @JsonKey(name: '_power') Element? powerElement,
-      Decimal? backCurve,
+      FhirDecimal? backCurve,
       @JsonKey(name: '_backCurve') Element? backCurveElement,
-      Decimal? diameter,
+      FhirDecimal? diameter,
       @JsonKey(name: '_diameter') Element? diameterElement,
       Quantity? duration,
       String? color,
@@ -921,22 +921,22 @@ abstract class _VisionPrescriptionDispense extends VisionPrescriptionDispense {
   @JsonKey(name: '_eye')
   Element? get eyeElement;
   @override
-  Decimal? get sphere;
+  FhirDecimal? get sphere;
   @override
   @JsonKey(name: '_sphere')
   Element? get sphereElement;
   @override
-  Decimal? get cylinder;
+  FhirDecimal? get cylinder;
   @override
   @JsonKey(name: '_cylinder')
   Element? get cylinderElement;
   @override
-  Decimal? get axis;
+  FhirDecimal? get axis;
   @override
   @JsonKey(name: '_axis')
   Element? get axisElement;
   @override
-  Decimal? get prism;
+  FhirDecimal? get prism;
   @override
   @JsonKey(name: '_prism')
   Element? get prismElement;
@@ -946,22 +946,22 @@ abstract class _VisionPrescriptionDispense extends VisionPrescriptionDispense {
   @JsonKey(name: '_base')
   Element? get baseElement;
   @override
-  Decimal? get add;
+  FhirDecimal? get add;
   @override
   @JsonKey(name: '_add')
   Element? get addElement;
   @override
-  Decimal? get power;
+  FhirDecimal? get power;
   @override
   @JsonKey(name: '_power')
   Element? get powerElement;
   @override
-  Decimal? get backCurve;
+  FhirDecimal? get backCurve;
   @override
   @JsonKey(name: '_backCurve')
   Element? get backCurveElement;
   @override
-  Decimal? get diameter;
+  FhirDecimal? get diameter;
   @override
   @JsonKey(name: '_diameter')
   Element? get diameterElement;
@@ -993,12 +993,12 @@ CarePlan _$CarePlanFromJson(Map<String, dynamic> json) {
 mixin _$CarePlan {
   @JsonKey(unknownEnumValue: Stu3ResourceType.CarePlan)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -1050,12 +1050,12 @@ abstract class $CarePlanCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.CarePlan)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -1178,7 +1178,7 @@ class _$CarePlanCopyWithImpl<$Res, $Val extends CarePlan>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -1437,12 +1437,12 @@ abstract class _$$_CarePlanCopyWith<$Res> implements $CarePlanCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.CarePlan)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -1574,7 +1574,7 @@ class __$$_CarePlanCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -1776,7 +1776,7 @@ class _$_CarePlan extends _CarePlan {
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
-  final Code? language;
+  final FhirCode? language;
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
@@ -2098,7 +2098,7 @@ abstract class _CarePlan extends CarePlan {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -2142,7 +2142,7 @@ abstract class _CarePlan extends CarePlan {
   @JsonKey(unknownEnumValue: Stu3ResourceType.CarePlan)
   Stu3ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -2151,7 +2151,7 @@ abstract class _CarePlan extends CarePlan {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
-  Code? get language;
+  FhirCode? get language;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;
@@ -2533,7 +2533,7 @@ mixin _$CarePlanDetail {
   String? get statusReason => throw _privateConstructorUsedError;
   @JsonKey(name: '_statusReason')
   Element? get statusReasonElement => throw _privateConstructorUsedError;
-  Boolean? get prohibited => throw _privateConstructorUsedError;
+  FhirBoolean? get prohibited => throw _privateConstructorUsedError;
   @JsonKey(name: '_prohibited')
   Element? get prohibitedElement => throw _privateConstructorUsedError;
   Timing? get scheduledTiming => throw _privateConstructorUsedError;
@@ -2575,7 +2575,7 @@ abstract class $CarePlanDetailCopyWith<$Res> {
       @JsonKey(name: '_status') Element? statusElement,
       String? statusReason,
       @JsonKey(name: '_statusReason') Element? statusReasonElement,
-      Boolean? prohibited,
+      FhirBoolean? prohibited,
       @JsonKey(name: '_prohibited') Element? prohibitedElement,
       Timing? scheduledTiming,
       Period? scheduledPeriod,
@@ -2689,7 +2689,7 @@ class _$CarePlanDetailCopyWithImpl<$Res, $Val extends CarePlanDetail>
       prohibited: freezed == prohibited
           ? _value.prohibited
           : prohibited // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       prohibitedElement: freezed == prohibitedElement
           ? _value.prohibitedElement
           : prohibitedElement // ignore: cast_nullable_to_non_nullable
@@ -2946,7 +2946,7 @@ abstract class _$$_CarePlanDetailCopyWith<$Res>
       @JsonKey(name: '_status') Element? statusElement,
       String? statusReason,
       @JsonKey(name: '_statusReason') Element? statusReasonElement,
-      Boolean? prohibited,
+      FhirBoolean? prohibited,
       @JsonKey(name: '_prohibited') Element? prohibitedElement,
       Timing? scheduledTiming,
       Period? scheduledPeriod,
@@ -3073,7 +3073,7 @@ class __$$_CarePlanDetailCopyWithImpl<$Res>
       prohibited: freezed == prohibited
           ? _value.prohibited
           : prohibited // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       prohibitedElement: freezed == prohibitedElement
           ? _value.prohibitedElement
           : prohibitedElement // ignore: cast_nullable_to_non_nullable
@@ -3214,7 +3214,7 @@ class _$_CarePlanDetail extends _CarePlanDetail {
   @JsonKey(name: '_statusReason')
   final Element? statusReasonElement;
   @override
-  final Boolean? prohibited;
+  final FhirBoolean? prohibited;
   @override
   @JsonKey(name: '_prohibited')
   final Element? prohibitedElement;
@@ -3368,7 +3368,7 @@ abstract class _CarePlanDetail extends CarePlanDetail {
       final String? statusReason,
       @JsonKey(name: '_statusReason')
           final Element? statusReasonElement,
-      final Boolean? prohibited,
+      final FhirBoolean? prohibited,
       @JsonKey(name: '_prohibited')
           final Element? prohibitedElement,
       final Timing? scheduledTiming,
@@ -3413,7 +3413,7 @@ abstract class _CarePlanDetail extends CarePlanDetail {
   @JsonKey(name: '_statusReason')
   Element? get statusReasonElement;
   @override
-  Boolean? get prohibited;
+  FhirBoolean? get prohibited;
   @override
   @JsonKey(name: '_prohibited')
   Element? get prohibitedElement;
@@ -3457,12 +3457,12 @@ CareTeam _$CareTeamFromJson(Map<String, dynamic> json) {
 mixin _$CareTeam {
   @JsonKey(unknownEnumValue: Stu3ResourceType.CareTeam)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -3504,12 +3504,12 @@ abstract class $CareTeamCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.CareTeam)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -3608,7 +3608,7 @@ class _$CareTeamCopyWithImpl<$Res, $Val extends CareTeam>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -3807,12 +3807,12 @@ abstract class _$$_CareTeamCopyWith<$Res> implements $CareTeamCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.CareTeam)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -3918,7 +3918,7 @@ class __$$_CareTeamCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -4062,7 +4062,7 @@ class _$_CareTeam extends _CareTeam {
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
-  final Code? language;
+  final FhirCode? language;
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
@@ -4293,7 +4293,7 @@ abstract class _CareTeam extends CareTeam {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -4325,7 +4325,7 @@ abstract class _CareTeam extends CareTeam {
   @JsonKey(unknownEnumValue: Stu3ResourceType.CareTeam)
   Stu3ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -4334,7 +4334,7 @@ abstract class _CareTeam extends CareTeam {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
-  Code? get language;
+  FhirCode? get language;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;
@@ -4654,12 +4654,12 @@ Goal _$GoalFromJson(Map<String, dynamic> json) {
 mixin _$Goal {
   @JsonKey(unknownEnumValue: Stu3ResourceType.Goal)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -4676,13 +4676,13 @@ mixin _$Goal {
   CodeableConcept? get priority => throw _privateConstructorUsedError;
   CodeableConcept get description => throw _privateConstructorUsedError;
   Reference? get subject => throw _privateConstructorUsedError;
-  Date? get startDate => throw _privateConstructorUsedError;
+  FhirDate? get startDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_startDate')
   Element? get startDateElement => throw _privateConstructorUsedError;
   CodeableConcept? get startCodeableConcept =>
       throw _privateConstructorUsedError;
   GoalTarget? get target => throw _privateConstructorUsedError;
-  Date? get statusDate => throw _privateConstructorUsedError;
+  FhirDate? get statusDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_statusDate')
   Element? get statusDateElement => throw _privateConstructorUsedError;
   String? get statusReason => throw _privateConstructorUsedError;
@@ -4707,12 +4707,12 @@ abstract class $GoalCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Goal)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -4728,12 +4728,12 @@ abstract class $GoalCopyWith<$Res> {
       CodeableConcept? priority,
       CodeableConcept description,
       Reference? subject,
-      Date? startDate,
+      FhirDate? startDate,
       @JsonKey(name: '_startDate')
           Element? startDateElement,
       CodeableConcept? startCodeableConcept,
       GoalTarget? target,
-      Date? statusDate,
+      FhirDate? statusDate,
       @JsonKey(name: '_statusDate')
           Element? statusDateElement,
       String? statusReason,
@@ -4830,7 +4830,7 @@ class _$GoalCopyWithImpl<$Res, $Val extends Goal>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -5109,12 +5109,12 @@ abstract class _$$_GoalCopyWith<$Res> implements $GoalCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Goal)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -5130,12 +5130,12 @@ abstract class _$$_GoalCopyWith<$Res> implements $GoalCopyWith<$Res> {
       CodeableConcept? priority,
       CodeableConcept description,
       Reference? subject,
-      Date? startDate,
+      FhirDate? startDate,
       @JsonKey(name: '_startDate')
           Element? startDateElement,
       CodeableConcept? startCodeableConcept,
       GoalTarget? target,
-      Date? statusDate,
+      FhirDate? statusDate,
       @JsonKey(name: '_statusDate')
           Element? statusDateElement,
       String? statusReason,
@@ -5242,7 +5242,7 @@ class __$$_GoalCopyWithImpl<$Res> extends _$GoalCopyWithImpl<$Res, _$_Goal>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -5416,7 +5416,7 @@ class _$_Goal extends _Goal {
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
-  final Code? language;
+  final FhirCode? language;
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
@@ -5673,7 +5673,7 @@ abstract class _Goal extends Goal {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -5713,7 +5713,7 @@ abstract class _Goal extends Goal {
   @JsonKey(unknownEnumValue: Stu3ResourceType.Goal)
   Stu3ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -5722,7 +5722,7 @@ abstract class _Goal extends Goal {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
-  Code? get language;
+  FhirCode? get language;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;
@@ -5751,7 +5751,7 @@ abstract class _Goal extends Goal {
   @override
   Reference? get subject;
   @override
-  Date? get startDate;
+  FhirDate? get startDate;
   @override
   @JsonKey(name: '_startDate')
   Element? get startDateElement;
@@ -5760,7 +5760,7 @@ abstract class _Goal extends Goal {
   @override
   GoalTarget? get target;
   @override
-  Date? get statusDate;
+  FhirDate? get statusDate;
   @override
   @JsonKey(name: '_statusDate')
   Element? get statusDateElement;
@@ -5795,7 +5795,7 @@ mixin _$GoalTarget {
   Range? get detailRange => throw _privateConstructorUsedError;
   CodeableConcept? get detailCodeableConcept =>
       throw _privateConstructorUsedError;
-  Date? get dueDate => throw _privateConstructorUsedError;
+  FhirDate? get dueDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_dueDate')
   Element? get dueDateElement => throw _privateConstructorUsedError;
   FhirDuration? get dueDuration => throw _privateConstructorUsedError;
@@ -5817,7 +5817,7 @@ abstract class $GoalTargetCopyWith<$Res> {
       Quantity? detailQuantity,
       Range? detailRange,
       CodeableConcept? detailCodeableConcept,
-      Date? dueDate,
+      FhirDate? dueDate,
       @JsonKey(name: '_dueDate') Element? dueDateElement,
       FhirDuration? dueDuration});
 
@@ -5969,7 +5969,7 @@ abstract class _$$_GoalTargetCopyWith<$Res>
       Quantity? detailQuantity,
       Range? detailRange,
       CodeableConcept? detailCodeableConcept,
-      Date? dueDate,
+      FhirDate? dueDate,
       @JsonKey(name: '_dueDate') Element? dueDateElement,
       FhirDuration? dueDuration});
 
@@ -6137,7 +6137,7 @@ abstract class _GoalTarget extends GoalTarget {
   @override
   CodeableConcept? get detailCodeableConcept;
   @override
-  Date? get dueDate;
+  FhirDate? get dueDate;
   @override
   @JsonKey(name: '_dueDate')
   Element? get dueDateElement;
@@ -6157,12 +6157,12 @@ NutritionOrder _$NutritionOrderFromJson(Map<String, dynamic> json) {
 mixin _$NutritionOrder {
   @JsonKey(unknownEnumValue: Stu3ResourceType.NutritionOrder)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -6207,12 +6207,12 @@ abstract class $NutritionOrderCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.NutritionOrder)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -6313,7 +6313,7 @@ class _$NutritionOrderCopyWithImpl<$Res, $Val extends NutritionOrder>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -6534,12 +6534,12 @@ abstract class _$$_NutritionOrderCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.NutritionOrder)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -6649,7 +6649,7 @@ class __$$_NutritionOrderCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -6791,7 +6791,7 @@ class _$_NutritionOrder extends _NutritionOrder {
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
-  final Code? language;
+  final FhirCode? language;
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
@@ -7013,7 +7013,7 @@ abstract class _NutritionOrder extends NutritionOrder {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -7046,7 +7046,7 @@ abstract class _NutritionOrder extends NutritionOrder {
   @JsonKey(unknownEnumValue: Stu3ResourceType.NutritionOrder)
   Stu3ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -7055,7 +7055,7 @@ abstract class _NutritionOrder extends NutritionOrder {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
-  Code? get language;
+  FhirCode? get language;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;
@@ -9043,12 +9043,12 @@ ProcedureRequest _$ProcedureRequestFromJson(Map<String, dynamic> json) {
 mixin _$ProcedureRequest {
   @JsonKey(unknownEnumValue: Stu3ResourceType.ProcedureRequest)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -9071,7 +9071,7 @@ mixin _$ProcedureRequest {
   String? get priority => throw _privateConstructorUsedError;
   @JsonKey(name: '_priority')
   Element? get priorityElement => throw _privateConstructorUsedError;
-  Boolean? get doNotPerform => throw _privateConstructorUsedError;
+  FhirBoolean? get doNotPerform => throw _privateConstructorUsedError;
   @JsonKey(name: '_doNotPerform')
   Element? get doNotPerformElement => throw _privateConstructorUsedError;
   List<CodeableConcept>? get category => throw _privateConstructorUsedError;
@@ -9083,7 +9083,7 @@ mixin _$ProcedureRequest {
   Element? get occurrenceDateTimeElement => throw _privateConstructorUsedError;
   Period? get occurrencePeriod => throw _privateConstructorUsedError;
   Timing? get occurrenceTiming => throw _privateConstructorUsedError;
-  Boolean? get asNeededBoolean => throw _privateConstructorUsedError;
+  FhirBoolean? get asNeededBoolean => throw _privateConstructorUsedError;
   @JsonKey(name: '_asNeededBoolean')
   Element? get asNeededBooleanElement => throw _privateConstructorUsedError;
   CodeableConcept? get asNeededCodeableConcept =>
@@ -9118,12 +9118,12 @@ abstract class $ProcedureRequestCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ProcedureRequest)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -9145,7 +9145,7 @@ abstract class $ProcedureRequestCopyWith<$Res> {
       String? priority,
       @JsonKey(name: '_priority')
           Element? priorityElement,
-      Boolean? doNotPerform,
+      FhirBoolean? doNotPerform,
       @JsonKey(name: '_doNotPerform')
           Element? doNotPerformElement,
       List<CodeableConcept>? category,
@@ -9157,7 +9157,7 @@ abstract class $ProcedureRequestCopyWith<$Res> {
           Element? occurrenceDateTimeElement,
       Period? occurrencePeriod,
       Timing? occurrenceTiming,
-      Boolean? asNeededBoolean,
+      FhirBoolean? asNeededBoolean,
       @JsonKey(name: '_asNeededBoolean')
           Element? asNeededBooleanElement,
       CodeableConcept? asNeededCodeableConcept,
@@ -9283,7 +9283,7 @@ class _$ProcedureRequestCopyWithImpl<$Res, $Val extends ProcedureRequest>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -9351,7 +9351,7 @@ class _$ProcedureRequestCopyWithImpl<$Res, $Val extends ProcedureRequest>
       doNotPerform: freezed == doNotPerform
           ? _value.doNotPerform
           : doNotPerform // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       doNotPerformElement: freezed == doNotPerformElement
           ? _value.doNotPerformElement
           : doNotPerformElement // ignore: cast_nullable_to_non_nullable
@@ -9391,7 +9391,7 @@ class _$ProcedureRequestCopyWithImpl<$Res, $Val extends ProcedureRequest>
       asNeededBoolean: freezed == asNeededBoolean
           ? _value.asNeededBoolean
           : asNeededBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       asNeededBooleanElement: freezed == asNeededBooleanElement
           ? _value.asNeededBooleanElement
           : asNeededBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -9708,12 +9708,12 @@ abstract class _$$_ProcedureRequestCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ProcedureRequest)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -9735,7 +9735,7 @@ abstract class _$$_ProcedureRequestCopyWith<$Res>
       String? priority,
       @JsonKey(name: '_priority')
           Element? priorityElement,
-      Boolean? doNotPerform,
+      FhirBoolean? doNotPerform,
       @JsonKey(name: '_doNotPerform')
           Element? doNotPerformElement,
       List<CodeableConcept>? category,
@@ -9747,7 +9747,7 @@ abstract class _$$_ProcedureRequestCopyWith<$Res>
           Element? occurrenceDateTimeElement,
       Period? occurrencePeriod,
       Timing? occurrenceTiming,
-      Boolean? asNeededBoolean,
+      FhirBoolean? asNeededBoolean,
       @JsonKey(name: '_asNeededBoolean')
           Element? asNeededBooleanElement,
       CodeableConcept? asNeededCodeableConcept,
@@ -9892,7 +9892,7 @@ class __$$_ProcedureRequestCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -9960,7 +9960,7 @@ class __$$_ProcedureRequestCopyWithImpl<$Res>
       doNotPerform: freezed == doNotPerform
           ? _value.doNotPerform
           : doNotPerform // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       doNotPerformElement: freezed == doNotPerformElement
           ? _value.doNotPerformElement
           : doNotPerformElement // ignore: cast_nullable_to_non_nullable
@@ -10000,7 +10000,7 @@ class __$$_ProcedureRequestCopyWithImpl<$Res>
       asNeededBoolean: freezed == asNeededBoolean
           ? _value.asNeededBoolean
           : asNeededBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       asNeededBooleanElement: freezed == asNeededBooleanElement
           ? _value.asNeededBooleanElement
           : asNeededBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -10156,7 +10156,7 @@ class _$_ProcedureRequest extends _ProcedureRequest {
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
-  final Code? language;
+  final FhirCode? language;
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
@@ -10252,7 +10252,7 @@ class _$_ProcedureRequest extends _ProcedureRequest {
   @JsonKey(name: '_priority')
   final Element? priorityElement;
   @override
-  final Boolean? doNotPerform;
+  final FhirBoolean? doNotPerform;
   @override
   @JsonKey(name: '_doNotPerform')
   final Element? doNotPerformElement;
@@ -10282,7 +10282,7 @@ class _$_ProcedureRequest extends _ProcedureRequest {
   @override
   final Timing? occurrenceTiming;
   @override
-  final Boolean? asNeededBoolean;
+  final FhirBoolean? asNeededBoolean;
   @override
   @JsonKey(name: '_asNeededBoolean')
   final Element? asNeededBooleanElement;
@@ -10539,7 +10539,7 @@ abstract class _ProcedureRequest extends ProcedureRequest {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -10561,7 +10561,7 @@ abstract class _ProcedureRequest extends ProcedureRequest {
       final String? priority,
       @JsonKey(name: '_priority')
           final Element? priorityElement,
-      final Boolean? doNotPerform,
+      final FhirBoolean? doNotPerform,
       @JsonKey(name: '_doNotPerform')
           final Element? doNotPerformElement,
       final List<CodeableConcept>? category,
@@ -10573,7 +10573,7 @@ abstract class _ProcedureRequest extends ProcedureRequest {
           final Element? occurrenceDateTimeElement,
       final Period? occurrencePeriod,
       final Timing? occurrenceTiming,
-      final Boolean? asNeededBoolean,
+      final FhirBoolean? asNeededBoolean,
       @JsonKey(name: '_asNeededBoolean')
           final Element? asNeededBooleanElement,
       final CodeableConcept? asNeededCodeableConcept,
@@ -10599,7 +10599,7 @@ abstract class _ProcedureRequest extends ProcedureRequest {
   @JsonKey(unknownEnumValue: Stu3ResourceType.ProcedureRequest)
   Stu3ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -10608,7 +10608,7 @@ abstract class _ProcedureRequest extends ProcedureRequest {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
-  Code? get language;
+  FhirCode? get language;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;
@@ -10647,7 +10647,7 @@ abstract class _ProcedureRequest extends ProcedureRequest {
   @JsonKey(name: '_priority')
   Element? get priorityElement;
   @override
-  Boolean? get doNotPerform;
+  FhirBoolean? get doNotPerform;
   @override
   @JsonKey(name: '_doNotPerform')
   Element? get doNotPerformElement;
@@ -10669,7 +10669,7 @@ abstract class _ProcedureRequest extends ProcedureRequest {
   @override
   Timing? get occurrenceTiming;
   @override
-  Boolean? get asNeededBoolean;
+  FhirBoolean? get asNeededBoolean;
   @override
   @JsonKey(name: '_asNeededBoolean')
   Element? get asNeededBooleanElement;
@@ -10905,12 +10905,12 @@ ReferralRequest _$ReferralRequestFromJson(Map<String, dynamic> json) {
 mixin _$ReferralRequest {
   @JsonKey(unknownEnumValue: Stu3ResourceType.ReferralRequest)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -10972,12 +10972,12 @@ abstract class $ReferralRequestCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ReferralRequest)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -11120,7 +11120,7 @@ class _$ReferralRequestCopyWithImpl<$Res, $Val extends ReferralRequest>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -11476,12 +11476,12 @@ abstract class _$$_ReferralRequestCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ReferralRequest)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -11639,7 +11639,7 @@ class __$$_ReferralRequestCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -11871,7 +11871,7 @@ class _$_ReferralRequest extends _ReferralRequest {
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
-  final Code? language;
+  final FhirCode? language;
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
@@ -12218,7 +12218,7 @@ abstract class _ReferralRequest extends ReferralRequest {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -12271,7 +12271,7 @@ abstract class _ReferralRequest extends ReferralRequest {
   @JsonKey(unknownEnumValue: Stu3ResourceType.ReferralRequest)
   Stu3ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -12280,7 +12280,7 @@ abstract class _ReferralRequest extends ReferralRequest {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
-  Code? get language;
+  FhirCode? get language;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;
@@ -12563,12 +12563,12 @@ RiskAssessment _$RiskAssessmentFromJson(Map<String, dynamic> json) {
 mixin _$RiskAssessment {
   @JsonKey(unknownEnumValue: Stu3ResourceType.RiskAssessment)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -12621,12 +12621,12 @@ abstract class $RiskAssessmentCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.RiskAssessment)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -12754,7 +12754,7 @@ class _$RiskAssessmentCopyWithImpl<$Res, $Val extends RiskAssessment>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -13119,12 +13119,12 @@ abstract class _$$_RiskAssessmentCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.RiskAssessment)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -13270,7 +13270,7 @@ class __$$_RiskAssessmentCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -13451,7 +13451,7 @@ class _$_RiskAssessment extends _RiskAssessment {
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
-  final Code? language;
+  final FhirCode? language;
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
@@ -13683,7 +13683,7 @@ abstract class _RiskAssessment extends RiskAssessment {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -13726,7 +13726,7 @@ abstract class _RiskAssessment extends RiskAssessment {
   @JsonKey(unknownEnumValue: Stu3ResourceType.RiskAssessment)
   Stu3ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -13735,7 +13735,7 @@ abstract class _RiskAssessment extends RiskAssessment {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
-  Code? get language;
+  FhirCode? get language;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;
@@ -13810,12 +13810,12 @@ RiskAssessmentPrediction _$RiskAssessmentPredictionFromJson(
 /// @nodoc
 mixin _$RiskAssessmentPrediction {
   CodeableConcept get outcome => throw _privateConstructorUsedError;
-  Decimal? get probabilityDecimal => throw _privateConstructorUsedError;
+  FhirDecimal? get probabilityDecimal => throw _privateConstructorUsedError;
   @JsonKey(name: '_probabilityDecimal')
   Element? get probabilityDecimalElement => throw _privateConstructorUsedError;
   Range? get probabilityRange => throw _privateConstructorUsedError;
   CodeableConcept? get qualitativeRisk => throw _privateConstructorUsedError;
-  Decimal? get relativeRisk => throw _privateConstructorUsedError;
+  FhirDecimal? get relativeRisk => throw _privateConstructorUsedError;
   @JsonKey(name: '_relativeRisk')
   Element? get relativeRiskElement => throw _privateConstructorUsedError;
   Period? get whenPeriod => throw _privateConstructorUsedError;
@@ -13838,11 +13838,11 @@ abstract class $RiskAssessmentPredictionCopyWith<$Res> {
   @useResult
   $Res call(
       {CodeableConcept outcome,
-      Decimal? probabilityDecimal,
+      FhirDecimal? probabilityDecimal,
       @JsonKey(name: '_probabilityDecimal') Element? probabilityDecimalElement,
       Range? probabilityRange,
       CodeableConcept? qualitativeRisk,
-      Decimal? relativeRisk,
+      FhirDecimal? relativeRisk,
       @JsonKey(name: '_relativeRisk') Element? relativeRiskElement,
       Period? whenPeriod,
       Range? whenRange,
@@ -14037,11 +14037,11 @@ abstract class _$$_RiskAssessmentPredictionCopyWith<$Res>
   @useResult
   $Res call(
       {CodeableConcept outcome,
-      Decimal? probabilityDecimal,
+      FhirDecimal? probabilityDecimal,
       @JsonKey(name: '_probabilityDecimal') Element? probabilityDecimalElement,
       Range? probabilityRange,
       CodeableConcept? qualitativeRisk,
-      Decimal? relativeRisk,
+      FhirDecimal? relativeRisk,
       @JsonKey(name: '_relativeRisk') Element? relativeRiskElement,
       Period? whenPeriod,
       Range? whenRange,
@@ -14274,7 +14274,7 @@ abstract class _RiskAssessmentPrediction extends RiskAssessmentPrediction {
   @override
   CodeableConcept get outcome;
   @override
-  Decimal? get probabilityDecimal;
+  FhirDecimal? get probabilityDecimal;
   @override
   @JsonKey(name: '_probabilityDecimal')
   Element? get probabilityDecimalElement;
@@ -14283,7 +14283,7 @@ abstract class _RiskAssessmentPrediction extends RiskAssessmentPrediction {
   @override
   CodeableConcept? get qualitativeRisk;
   @override
-  Decimal? get relativeRisk;
+  FhirDecimal? get relativeRisk;
   @override
   @JsonKey(name: '_relativeRisk')
   Element? get relativeRiskElement;
@@ -14310,12 +14310,12 @@ VisionPrescription _$VisionPrescriptionFromJson(Map<String, dynamic> json) {
 mixin _$VisionPrescription {
   @JsonKey(unknownEnumValue: Stu3ResourceType.VisionPrescription)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -14330,7 +14330,7 @@ mixin _$VisionPrescription {
   Element? get statusElement => throw _privateConstructorUsedError;
   Reference? get patient => throw _privateConstructorUsedError;
   Reference? get encounter => throw _privateConstructorUsedError;
-  Date? get dateWritten => throw _privateConstructorUsedError;
+  FhirDate? get dateWritten => throw _privateConstructorUsedError;
   @JsonKey(name: '_dateWritten')
   Element? get dateWrittenElement => throw _privateConstructorUsedError;
   Reference? get prescriber => throw _privateConstructorUsedError;
@@ -14355,12 +14355,12 @@ abstract class $VisionPrescriptionCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.VisionPrescription)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -14374,7 +14374,7 @@ abstract class $VisionPrescriptionCopyWith<$Res> {
           Element? statusElement,
       Reference? patient,
       Reference? encounter,
-      Date? dateWritten,
+      FhirDate? dateWritten,
       @JsonKey(name: '_dateWritten')
           Element? dateWrittenElement,
       Reference? prescriber,
@@ -14455,7 +14455,7 @@ class _$VisionPrescriptionCopyWithImpl<$Res, $Val extends VisionPrescription>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -14668,12 +14668,12 @@ abstract class _$$_VisionPrescriptionCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.VisionPrescription)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -14687,7 +14687,7 @@ abstract class _$$_VisionPrescriptionCopyWith<$Res>
           Element? statusElement,
       Reference? patient,
       Reference? encounter,
-      Date? dateWritten,
+      FhirDate? dateWritten,
       @JsonKey(name: '_dateWritten')
           Element? dateWrittenElement,
       Reference? prescriber,
@@ -14777,7 +14777,7 @@ class __$$_VisionPrescriptionCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -14901,7 +14901,7 @@ class _$_VisionPrescription extends _VisionPrescription {
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
-  final Code? language;
+  final FhirCode? language;
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
@@ -15081,7 +15081,7 @@ abstract class _VisionPrescription extends VisionPrescription {
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
               final Element? implicitRulesElement,
-          final Code? language,
+          final FhirCode? language,
           @JsonKey(name: '_language')
               final Element? languageElement,
           final Narrative? text,
@@ -15112,7 +15112,7 @@ abstract class _VisionPrescription extends VisionPrescription {
   @JsonKey(unknownEnumValue: Stu3ResourceType.VisionPrescription)
   Stu3ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -15121,7 +15121,7 @@ abstract class _VisionPrescription extends VisionPrescription {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
-  Code? get language;
+  FhirCode? get language;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;
@@ -15146,7 +15146,7 @@ abstract class _VisionPrescription extends VisionPrescription {
   @override
   Reference? get encounter;
   @override
-  Date? get dateWritten;
+  FhirDate? get dateWritten;
   @override
   @JsonKey(name: '_dateWritten')
   Element? get dateWrittenElement;

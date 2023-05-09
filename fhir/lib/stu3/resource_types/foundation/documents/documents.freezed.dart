@@ -22,12 +22,12 @@ Composition _$CompositionFromJson(Map<String, dynamic> json) {
 mixin _$Composition {
   @JsonKey(unknownEnumValue: Stu3ResourceType.Composition)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -45,14 +45,14 @@ mixin _$Composition {
   CodeableConcept? get class_ => throw _privateConstructorUsedError;
   Reference get subject => throw _privateConstructorUsedError;
   Reference? get encounter => throw _privateConstructorUsedError;
-  Date? get date => throw _privateConstructorUsedError;
+  FhirDate? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
   List<Reference> get author => throw _privateConstructorUsedError;
   String? get title => throw _privateConstructorUsedError;
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
-  Id? get confidentiality => throw _privateConstructorUsedError;
+  FhirId? get confidentiality => throw _privateConstructorUsedError;
   @JsonKey(name: '_confidentiality')
   Element? get confidentialityElement => throw _privateConstructorUsedError;
   List<CompositionAttester>? get attester => throw _privateConstructorUsedError;
@@ -77,12 +77,12 @@ abstract class $CompositionCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Composition)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -99,14 +99,14 @@ abstract class $CompositionCopyWith<$Res> {
           CodeableConcept? class_,
       Reference subject,
       Reference? encounter,
-      Date? date,
+      FhirDate? date,
       @JsonKey(name: '_date')
           Element? dateElement,
       List<Reference> author,
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Id? confidentiality,
+      FhirId? confidentiality,
       @JsonKey(name: '_confidentiality')
           Element? confidentialityElement,
       List<CompositionAttester>? attester,
@@ -199,7 +199,7 @@ class _$CompositionCopyWithImpl<$Res, $Val extends Composition>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -471,12 +471,12 @@ abstract class _$$_CompositionCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Composition)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -493,14 +493,14 @@ abstract class _$$_CompositionCopyWith<$Res>
           CodeableConcept? class_,
       Reference subject,
       Reference? encounter,
-      Date? date,
+      FhirDate? date,
       @JsonKey(name: '_date')
           Element? dateElement,
       List<Reference> author,
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Id? confidentiality,
+      FhirId? confidentiality,
       @JsonKey(name: '_confidentiality')
           Element? confidentialityElement,
       List<CompositionAttester>? attester,
@@ -605,7 +605,7 @@ class __$$_CompositionCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -775,7 +775,7 @@ class _$_Composition extends _Composition {
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
-  final Code? language;
+  final FhirCode? language;
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
@@ -1012,7 +1012,7 @@ abstract class _Composition extends Composition {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -1053,7 +1053,7 @@ abstract class _Composition extends Composition {
   @JsonKey(unknownEnumValue: Stu3ResourceType.Composition)
   Stu3ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -1062,7 +1062,7 @@ abstract class _Composition extends Composition {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
-  Code? get language;
+  FhirCode? get language;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;
@@ -1092,7 +1092,7 @@ abstract class _Composition extends Composition {
   @override
   Reference? get encounter;
   @override
-  Date? get date;
+  FhirDate? get date;
   @override
   @JsonKey(name: '_date')
   Element? get dateElement;
@@ -1104,7 +1104,7 @@ abstract class _Composition extends Composition {
   @JsonKey(name: '_title')
   Element? get titleElement;
   @override
-  Id? get confidentiality;
+  FhirId? get confidentiality;
   @override
   @JsonKey(name: '_confidentiality')
   Element? get confidentialityElement;
@@ -1417,7 +1417,7 @@ CompositionRelatesTo _$CompositionRelatesToFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$CompositionRelatesTo {
-  Code? get code => throw _privateConstructorUsedError;
+  FhirCode? get code => throw _privateConstructorUsedError;
   @JsonKey(name: '_code')
   Element? get codeElement => throw _privateConstructorUsedError;
   Identifier? get targetIdentifier => throw _privateConstructorUsedError;
@@ -1469,7 +1469,7 @@ class _$CompositionRelatesToCopyWithImpl<$Res,
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -1564,7 +1564,7 @@ class __$$_CompositionRelatesToCopyWithImpl<$Res>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -1595,7 +1595,7 @@ class _$_CompositionRelatesTo extends _CompositionRelatesTo {
       _$$_CompositionRelatesToFromJson(json);
 
   @override
-  final Code? code;
+  final FhirCode? code;
   @override
   @JsonKey(name: '_code')
   final Element? codeElement;
@@ -1645,7 +1645,7 @@ class _$_CompositionRelatesTo extends _CompositionRelatesTo {
 
 abstract class _CompositionRelatesTo extends CompositionRelatesTo {
   factory _CompositionRelatesTo(
-      {final Code? code,
+      {final FhirCode? code,
       @JsonKey(name: '_code') final Element? codeElement,
       final Identifier? targetIdentifier,
       final Reference? targetReference}) = _$_CompositionRelatesTo;
@@ -1655,7 +1655,7 @@ abstract class _CompositionRelatesTo extends CompositionRelatesTo {
       _$_CompositionRelatesTo.fromJson;
 
   @override
-  Code? get code;
+  FhirCode? get code;
   @override
   @JsonKey(name: '_code')
   Element? get codeElement;
@@ -2346,12 +2346,12 @@ DocumentManifest _$DocumentManifestFromJson(Map<String, dynamic> json) {
 mixin _$DocumentManifest {
   @JsonKey(unknownEnumValue: Stu3ResourceType.DocumentManifest)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -2398,12 +2398,12 @@ abstract class $DocumentManifestCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.DocumentManifest)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -2510,7 +2510,7 @@ class _$DocumentManifestCopyWithImpl<$Res, $Val extends DocumentManifest>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -2742,12 +2742,12 @@ abstract class _$$_DocumentManifestCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.DocumentManifest)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -2863,7 +2863,7 @@ class __$$_DocumentManifestCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -3017,7 +3017,7 @@ class _$_DocumentManifest extends _DocumentManifest {
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
-  final Code? language;
+  final FhirCode? language;
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
@@ -3240,7 +3240,7 @@ abstract class _DocumentManifest extends DocumentManifest {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -3277,7 +3277,7 @@ abstract class _DocumentManifest extends DocumentManifest {
   @JsonKey(unknownEnumValue: Stu3ResourceType.DocumentManifest)
   Stu3ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -3286,7 +3286,7 @@ abstract class _DocumentManifest extends DocumentManifest {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
-  Code? get language;
+  FhirCode? get language;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;
@@ -3736,12 +3736,12 @@ DocumentReference _$DocumentReferenceFromJson(Map<String, dynamic> json) {
 mixin _$DocumentReference {
   @JsonKey(unknownEnumValue: Stu3ResourceType.DocumentReference)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -3797,12 +3797,12 @@ abstract class $DocumentReferenceCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.DocumentReference)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -3928,7 +3928,7 @@ class _$DocumentReferenceCopyWithImpl<$Res, $Val extends DocumentReference>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -4240,12 +4240,12 @@ abstract class _$$_DocumentReferenceCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.DocumentReference)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -4385,7 +4385,7 @@ class __$$_DocumentReferenceCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -4571,7 +4571,7 @@ class _$_DocumentReference extends _DocumentReference {
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
-  final Code? language;
+  final FhirCode? language;
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
@@ -4827,7 +4827,7 @@ abstract class _DocumentReference extends DocumentReference {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -4872,7 +4872,7 @@ abstract class _DocumentReference extends DocumentReference {
   @JsonKey(unknownEnumValue: Stu3ResourceType.DocumentReference)
   Stu3ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -4881,7 +4881,7 @@ abstract class _DocumentReference extends DocumentReference {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
-  Code? get language;
+  FhirCode? get language;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;

@@ -22,14 +22,14 @@ Patient _$PatientFromJson(Map<String, dynamic> json) {
 mixin _$Patient {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Patient)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: '_id')
   Element? get idElement => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -39,7 +39,7 @@ mixin _$Patient {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
-  Boolean? get active => throw _privateConstructorUsedError;
+  FhirBoolean? get active => throw _privateConstructorUsedError;
   @JsonKey(name: '_active')
   Element? get activeElement => throw _privateConstructorUsedError;
   List<HumanName>? get name => throw _privateConstructorUsedError;
@@ -48,10 +48,10 @@ mixin _$Patient {
   PatientGender? get gender => throw _privateConstructorUsedError;
   @JsonKey(name: '_gender')
   Element? get genderElement => throw _privateConstructorUsedError;
-  Date? get birthDate => throw _privateConstructorUsedError;
+  FhirDate? get birthDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_birthDate')
   Element? get birthDateElement => throw _privateConstructorUsedError;
-  Boolean? get deceasedBoolean => throw _privateConstructorUsedError;
+  FhirBoolean? get deceasedBoolean => throw _privateConstructorUsedError;
   @JsonKey(name: '_deceasedBoolean')
   Element? get deceasedBooleanElement => throw _privateConstructorUsedError;
   FhirDateTime? get deceasedDateTime => throw _privateConstructorUsedError;
@@ -59,11 +59,11 @@ mixin _$Patient {
   Element? get deceasedDateTimeElement => throw _privateConstructorUsedError;
   List<Address>? get address => throw _privateConstructorUsedError;
   CodeableConcept? get maritalStatus => throw _privateConstructorUsedError;
-  Boolean? get multipleBirthBoolean => throw _privateConstructorUsedError;
+  FhirBoolean? get multipleBirthBoolean => throw _privateConstructorUsedError;
   @JsonKey(name: '_multipleBirthBoolean')
   Element? get multipleBirthBooleanElement =>
       throw _privateConstructorUsedError;
-  Integer? get multipleBirthInteger => throw _privateConstructorUsedError;
+  FhirInteger? get multipleBirthInteger => throw _privateConstructorUsedError;
   @JsonKey(name: '_multipleBirthInteger')
   Element? get multipleBirthIntegerElement =>
       throw _privateConstructorUsedError;
@@ -89,14 +89,14 @@ abstract class $PatientCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Patient)
           Dstu2ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       @JsonKey(name: '_id')
           Element? idElement,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -105,7 +105,7 @@ abstract class $PatientCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Boolean? active,
+      FhirBoolean? active,
       @JsonKey(name: '_active')
           Element? activeElement,
       List<HumanName>? name,
@@ -114,10 +114,10 @@ abstract class $PatientCopyWith<$Res> {
           PatientGender? gender,
       @JsonKey(name: '_gender')
           Element? genderElement,
-      Date? birthDate,
+      FhirDate? birthDate,
       @JsonKey(name: '_birthDate')
           Element? birthDateElement,
-      Boolean? deceasedBoolean,
+      FhirBoolean? deceasedBoolean,
       @JsonKey(name: '_deceasedBoolean')
           Element? deceasedBooleanElement,
       FhirDateTime? deceasedDateTime,
@@ -125,10 +125,10 @@ abstract class $PatientCopyWith<$Res> {
           Element? deceasedDateTimeElement,
       List<Address>? address,
       CodeableConcept? maritalStatus,
-      Boolean? multipleBirthBoolean,
+      FhirBoolean? multipleBirthBoolean,
       @JsonKey(name: '_multipleBirthBoolean')
           Element? multipleBirthBooleanElement,
-      Integer? multipleBirthInteger,
+      FhirInteger? multipleBirthInteger,
       @JsonKey(name: '_multipleBirthInteger')
           Element? multipleBirthIntegerElement,
       List<Attachment>? photo,
@@ -236,7 +236,7 @@ class _$PatientCopyWithImpl<$Res, $Val extends Patient>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -264,7 +264,7 @@ class _$PatientCopyWithImpl<$Res, $Val extends Patient>
       active: freezed == active
           ? _value.active
           : active // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       activeElement: freezed == activeElement
           ? _value.activeElement
           : activeElement // ignore: cast_nullable_to_non_nullable
@@ -296,7 +296,7 @@ class _$PatientCopyWithImpl<$Res, $Val extends Patient>
       deceasedBoolean: freezed == deceasedBoolean
           ? _value.deceasedBoolean
           : deceasedBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       deceasedBooleanElement: freezed == deceasedBooleanElement
           ? _value.deceasedBooleanElement
           : deceasedBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -320,7 +320,7 @@ class _$PatientCopyWithImpl<$Res, $Val extends Patient>
       multipleBirthBoolean: freezed == multipleBirthBoolean
           ? _value.multipleBirthBoolean
           : multipleBirthBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       multipleBirthBooleanElement: freezed == multipleBirthBooleanElement
           ? _value.multipleBirthBooleanElement
           : multipleBirthBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -555,14 +555,14 @@ abstract class _$$_PatientCopyWith<$Res> implements $PatientCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Patient)
           Dstu2ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       @JsonKey(name: '_id')
           Element? idElement,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -571,7 +571,7 @@ abstract class _$$_PatientCopyWith<$Res> implements $PatientCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Boolean? active,
+      FhirBoolean? active,
       @JsonKey(name: '_active')
           Element? activeElement,
       List<HumanName>? name,
@@ -580,10 +580,10 @@ abstract class _$$_PatientCopyWith<$Res> implements $PatientCopyWith<$Res> {
           PatientGender? gender,
       @JsonKey(name: '_gender')
           Element? genderElement,
-      Date? birthDate,
+      FhirDate? birthDate,
       @JsonKey(name: '_birthDate')
           Element? birthDateElement,
-      Boolean? deceasedBoolean,
+      FhirBoolean? deceasedBoolean,
       @JsonKey(name: '_deceasedBoolean')
           Element? deceasedBooleanElement,
       FhirDateTime? deceasedDateTime,
@@ -591,10 +591,10 @@ abstract class _$$_PatientCopyWith<$Res> implements $PatientCopyWith<$Res> {
           Element? deceasedDateTimeElement,
       List<Address>? address,
       CodeableConcept? maritalStatus,
-      Boolean? multipleBirthBoolean,
+      FhirBoolean? multipleBirthBoolean,
       @JsonKey(name: '_multipleBirthBoolean')
           Element? multipleBirthBooleanElement,
-      Integer? multipleBirthInteger,
+      FhirInteger? multipleBirthInteger,
       @JsonKey(name: '_multipleBirthInteger')
           Element? multipleBirthIntegerElement,
       List<Attachment>? photo,
@@ -714,7 +714,7 @@ class __$$_PatientCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -742,7 +742,7 @@ class __$$_PatientCopyWithImpl<$Res>
       active: freezed == active
           ? _value.active
           : active // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       activeElement: freezed == activeElement
           ? _value.activeElement
           : activeElement // ignore: cast_nullable_to_non_nullable
@@ -774,7 +774,7 @@ class __$$_PatientCopyWithImpl<$Res>
       deceasedBoolean: freezed == deceasedBoolean
           ? _value.deceasedBoolean
           : deceasedBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       deceasedBooleanElement: freezed == deceasedBooleanElement
           ? _value.deceasedBooleanElement
           : deceasedBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -798,7 +798,7 @@ class __$$_PatientCopyWithImpl<$Res>
       multipleBirthBoolean: freezed == multipleBirthBoolean
           ? _value.multipleBirthBoolean
           : multipleBirthBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       multipleBirthBooleanElement: freezed == multipleBirthBooleanElement
           ? _value.multipleBirthBooleanElement
           : multipleBirthBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -931,7 +931,7 @@ class _$_Patient extends _Patient {
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
-  final Code? language;
+  final FhirCode? language;
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
@@ -980,7 +980,7 @@ class _$_Patient extends _Patient {
   }
 
   @override
-  final Boolean? active;
+  final FhirBoolean? active;
   @override
   @JsonKey(name: '_active')
   final Element? activeElement;
@@ -1016,7 +1016,7 @@ class _$_Patient extends _Patient {
   @JsonKey(name: '_birthDate')
   final Element? birthDateElement;
   @override
-  final Boolean? deceasedBoolean;
+  final FhirBoolean? deceasedBoolean;
   @override
   @JsonKey(name: '_deceasedBoolean')
   final Element? deceasedBooleanElement;
@@ -1038,7 +1038,7 @@ class _$_Patient extends _Patient {
   @override
   final CodeableConcept? maritalStatus;
   @override
-  final Boolean? multipleBirthBoolean;
+  final FhirBoolean? multipleBirthBoolean;
   @override
   @JsonKey(name: '_multipleBirthBoolean')
   final Element? multipleBirthBooleanElement;
@@ -1251,7 +1251,7 @@ abstract class _Patient extends Patient {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -1260,7 +1260,7 @@ abstract class _Patient extends Patient {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      final Boolean? active,
+      final FhirBoolean? active,
       @JsonKey(name: '_active')
           final Element? activeElement,
       final List<HumanName>? name,
@@ -1272,7 +1272,7 @@ abstract class _Patient extends Patient {
       final Date? birthDate,
       @JsonKey(name: '_birthDate')
           final Element? birthDateElement,
-      final Boolean? deceasedBoolean,
+      final FhirBoolean? deceasedBoolean,
       @JsonKey(name: '_deceasedBoolean')
           final Element? deceasedBooleanElement,
       final FhirDateTime? deceasedDateTime,
@@ -1280,7 +1280,7 @@ abstract class _Patient extends Patient {
           final Element? deceasedDateTimeElement,
       final List<Address>? address,
       final CodeableConcept? maritalStatus,
-      final Boolean? multipleBirthBoolean,
+      final FhirBoolean? multipleBirthBoolean,
       @JsonKey(name: '_multipleBirthBoolean')
           final Element? multipleBirthBooleanElement,
       final Integer? multipleBirthInteger,
@@ -1301,7 +1301,7 @@ abstract class _Patient extends Patient {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Patient)
   Dstu2ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: '_id')
   Element? get idElement;
@@ -1313,7 +1313,7 @@ abstract class _Patient extends Patient {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
-  Code? get language;
+  FhirCode? get language;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;
@@ -1329,7 +1329,7 @@ abstract class _Patient extends Patient {
   @override
   List<Identifier>? get identifier;
   @override
-  Boolean? get active;
+  FhirBoolean? get active;
   @override
   @JsonKey(name: '_active')
   Element? get activeElement;
@@ -1344,12 +1344,12 @@ abstract class _Patient extends Patient {
   @JsonKey(name: '_gender')
   Element? get genderElement;
   @override
-  Date? get birthDate;
+  FhirDate? get birthDate;
   @override
   @JsonKey(name: '_birthDate')
   Element? get birthDateElement;
   @override
-  Boolean? get deceasedBoolean;
+  FhirBoolean? get deceasedBoolean;
   @override
   @JsonKey(name: '_deceasedBoolean')
   Element? get deceasedBooleanElement;
@@ -1363,12 +1363,12 @@ abstract class _Patient extends Patient {
   @override
   CodeableConcept? get maritalStatus;
   @override
-  Boolean? get multipleBirthBoolean;
+  FhirBoolean? get multipleBirthBoolean;
   @override
   @JsonKey(name: '_multipleBirthBoolean')
   Element? get multipleBirthBooleanElement;
   @override
-  Integer? get multipleBirthInteger;
+  FhirInteger? get multipleBirthInteger;
   @override
   @JsonKey(name: '_multipleBirthInteger')
   Element? get multipleBirthIntegerElement;
@@ -1398,7 +1398,7 @@ PatientContact _$PatientContactFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$PatientContact {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -1848,7 +1848,7 @@ abstract class _PatientContact extends PatientContact {
       _$_PatientContact.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -1884,7 +1884,7 @@ PatientAnimal _$PatientAnimalFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$PatientAnimal {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -2178,7 +2178,7 @@ abstract class _PatientAnimal extends PatientAnimal {
       _$_PatientAnimal.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -2202,13 +2202,13 @@ PatientCommunication _$PatientCommunicationFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$PatientCommunication {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   CodeableConcept get language => throw _privateConstructorUsedError;
-  Boolean? get preferred => throw _privateConstructorUsedError;
+  FhirBoolean? get preferred => throw _privateConstructorUsedError;
   @JsonKey(name: '_preferred')
   Element? get preferredElement => throw _privateConstructorUsedError;
 
@@ -2229,7 +2229,7 @@ abstract class $PatientCommunicationCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept language,
-      Boolean? preferred,
+      FhirBoolean? preferred,
       @JsonKey(name: '_preferred') Element? preferredElement});
 
   $CodeableConceptCopyWith<$Res> get language;
@@ -2277,7 +2277,7 @@ class _$PatientCommunicationCopyWithImpl<$Res,
       preferred: freezed == preferred
           ? _value.preferred
           : preferred // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       preferredElement: freezed == preferredElement
           ? _value.preferredElement
           : preferredElement // ignore: cast_nullable_to_non_nullable
@@ -2319,7 +2319,7 @@ abstract class _$$_PatientCommunicationCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept language,
-      Boolean? preferred,
+      FhirBoolean? preferred,
       @JsonKey(name: '_preferred') Element? preferredElement});
 
   @override
@@ -2366,7 +2366,7 @@ class __$$_PatientCommunicationCopyWithImpl<$Res>
       preferred: freezed == preferred
           ? _value.preferred
           : preferred // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       preferredElement: freezed == preferredElement
           ? _value.preferredElement
           : preferredElement // ignore: cast_nullable_to_non_nullable
@@ -2419,7 +2419,7 @@ class _$_PatientCommunication extends _PatientCommunication {
   @override
   final CodeableConcept language;
   @override
-  final Boolean? preferred;
+  final FhirBoolean? preferred;
   @override
   @JsonKey(name: '_preferred')
   final Element? preferredElement;
@@ -2479,7 +2479,7 @@ abstract class _PatientCommunication extends PatientCommunication {
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           required final CodeableConcept language,
-          final Boolean? preferred,
+          final FhirBoolean? preferred,
           @JsonKey(name: '_preferred') final Element? preferredElement}) =
       _$_PatientCommunication;
   _PatientCommunication._() : super._();
@@ -2488,7 +2488,7 @@ abstract class _PatientCommunication extends PatientCommunication {
       _$_PatientCommunication.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -2497,7 +2497,7 @@ abstract class _PatientCommunication extends PatientCommunication {
   @override
   CodeableConcept get language;
   @override
-  Boolean? get preferred;
+  FhirBoolean? get preferred;
   @override
   @JsonKey(name: '_preferred')
   Element? get preferredElement;
@@ -2513,7 +2513,7 @@ PatientLink _$PatientLinkFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$PatientLink {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -2796,7 +2796,7 @@ abstract class _PatientLink extends PatientLink {
       _$_PatientLink.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -2824,12 +2824,12 @@ Practitioner _$PractitionerFromJson(Map<String, dynamic> json) {
 mixin _$Practitioner {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Practitioner)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -2839,7 +2839,7 @@ mixin _$Practitioner {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
-  Boolean? get active => throw _privateConstructorUsedError;
+  FhirBoolean? get active => throw _privateConstructorUsedError;
   @JsonKey(name: '_active')
   Element? get activeElement => throw _privateConstructorUsedError;
   HumanName? get name => throw _privateConstructorUsedError;
@@ -2849,7 +2849,7 @@ mixin _$Practitioner {
   PractitionerGender? get gender => throw _privateConstructorUsedError;
   @JsonKey(name: '_gender')
   Element? get genderElement => throw _privateConstructorUsedError;
-  Date? get birthDate => throw _privateConstructorUsedError;
+  FhirDate? get birthDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_birthDate')
   Element? get birthDateElement => throw _privateConstructorUsedError;
   List<Attachment>? get photo => throw _privateConstructorUsedError;
@@ -2875,12 +2875,12 @@ abstract class $PractitionerCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Practitioner)
           Dstu2ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -2889,7 +2889,7 @@ abstract class $PractitionerCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Boolean? active,
+      FhirBoolean? active,
       @JsonKey(name: '_active')
           Element? activeElement,
       HumanName? name,
@@ -2899,7 +2899,7 @@ abstract class $PractitionerCopyWith<$Res> {
           PractitionerGender? gender,
       @JsonKey(name: '_gender')
           Element? genderElement,
-      Date? birthDate,
+      FhirDate? birthDate,
       @JsonKey(name: '_birthDate')
           Element? birthDateElement,
       List<Attachment>? photo,
@@ -2980,7 +2980,7 @@ class _$PractitionerCopyWithImpl<$Res, $Val extends Practitioner>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -3008,7 +3008,7 @@ class _$PractitionerCopyWithImpl<$Res, $Val extends Practitioner>
       active: freezed == active
           ? _value.active
           : active // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       activeElement: freezed == activeElement
           ? _value.activeElement
           : activeElement // ignore: cast_nullable_to_non_nullable
@@ -3168,12 +3168,12 @@ abstract class _$$_PractitionerCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Practitioner)
           Dstu2ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -3182,7 +3182,7 @@ abstract class _$$_PractitionerCopyWith<$Res>
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Boolean? active,
+      FhirBoolean? active,
       @JsonKey(name: '_active')
           Element? activeElement,
       HumanName? name,
@@ -3192,7 +3192,7 @@ abstract class _$$_PractitionerCopyWith<$Res>
           PractitionerGender? gender,
       @JsonKey(name: '_gender')
           Element? genderElement,
-      Date? birthDate,
+      FhirDate? birthDate,
       @JsonKey(name: '_birthDate')
           Element? birthDateElement,
       List<Attachment>? photo,
@@ -3279,7 +3279,7 @@ class __$$_PractitionerCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -3307,7 +3307,7 @@ class __$$_PractitionerCopyWithImpl<$Res>
       active: freezed == active
           ? _value.active
           : active // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       activeElement: freezed == activeElement
           ? _value.activeElement
           : activeElement // ignore: cast_nullable_to_non_nullable
@@ -3425,7 +3425,7 @@ class _$_Practitioner extends _Practitioner {
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
-  final Code? language;
+  final FhirCode? language;
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
@@ -3474,7 +3474,7 @@ class _$_Practitioner extends _Practitioner {
   }
 
   @override
-  final Boolean? active;
+  final FhirBoolean? active;
   @override
   @JsonKey(name: '_active')
   final Element? activeElement;
@@ -3659,7 +3659,7 @@ abstract class _Practitioner extends Practitioner {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -3668,7 +3668,7 @@ abstract class _Practitioner extends Practitioner {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      final Boolean? active,
+      final FhirBoolean? active,
       @JsonKey(name: '_active')
           final Element? activeElement,
       final HumanName? name,
@@ -3694,7 +3694,7 @@ abstract class _Practitioner extends Practitioner {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Practitioner)
   Dstu2ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -3703,7 +3703,7 @@ abstract class _Practitioner extends Practitioner {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
-  Code? get language;
+  FhirCode? get language;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;
@@ -3719,7 +3719,7 @@ abstract class _Practitioner extends Practitioner {
   @override
   List<Identifier>? get identifier;
   @override
-  Boolean? get active;
+  FhirBoolean? get active;
   @override
   @JsonKey(name: '_active')
   Element? get activeElement;
@@ -3736,7 +3736,7 @@ abstract class _Practitioner extends Practitioner {
   @JsonKey(name: '_gender')
   Element? get genderElement;
   @override
-  Date? get birthDate;
+  FhirDate? get birthDate;
   @override
   @JsonKey(name: '_birthDate')
   Element? get birthDateElement;
@@ -3761,7 +3761,7 @@ PractitionerPractitionerRole _$PractitionerPractitionerRoleFromJson(
 
 /// @nodoc
 mixin _$PractitionerPractitionerRole {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @JsonKey(name: 'fhir_comments')
@@ -4185,7 +4185,7 @@ abstract class _PractitionerPractitionerRole
       _$_PractitionerPractitionerRole.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -4219,7 +4219,7 @@ PractitionerQualification _$PractitionerQualificationFromJson(
 
 /// @nodoc
 mixin _$PractitionerQualification {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -4546,7 +4546,7 @@ abstract class _PractitionerQualification extends PractitionerQualification {
       _$_PractitionerQualification.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -4574,12 +4574,12 @@ RelatedPerson _$RelatedPersonFromJson(Map<String, dynamic> json) {
 mixin _$RelatedPerson {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.RelatedPerson)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -4597,7 +4597,7 @@ mixin _$RelatedPerson {
   RelatedPersonGender? get gender => throw _privateConstructorUsedError;
   @JsonKey(name: '_gender')
   Element? get genderElement => throw _privateConstructorUsedError;
-  Date? get birthDate => throw _privateConstructorUsedError;
+  FhirDate? get birthDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_birthDate')
   Element? get birthDateElement => throw _privateConstructorUsedError;
   List<Address>? get address => throw _privateConstructorUsedError;
@@ -4619,12 +4619,12 @@ abstract class $RelatedPersonCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.RelatedPerson)
           Dstu2ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -4641,7 +4641,7 @@ abstract class $RelatedPersonCopyWith<$Res> {
           RelatedPersonGender? gender,
       @JsonKey(name: '_gender')
           Element? genderElement,
-      Date? birthDate,
+      FhirDate? birthDate,
       @JsonKey(name: '_birthDate')
           Element? birthDateElement,
       List<Address>? address,
@@ -4721,7 +4721,7 @@ class _$RelatedPersonCopyWithImpl<$Res, $Val extends RelatedPerson>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -4921,12 +4921,12 @@ abstract class _$$_RelatedPersonCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.RelatedPerson)
           Dstu2ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -4943,7 +4943,7 @@ abstract class _$$_RelatedPersonCopyWith<$Res>
           RelatedPersonGender? gender,
       @JsonKey(name: '_gender')
           Element? genderElement,
-      Date? birthDate,
+      FhirDate? birthDate,
       @JsonKey(name: '_birthDate')
           Element? birthDateElement,
       List<Address>? address,
@@ -5031,7 +5031,7 @@ class __$$_RelatedPersonCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -5163,7 +5163,7 @@ class _$_RelatedPerson extends _RelatedPerson {
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
-  final Code? language;
+  final FhirCode? language;
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
@@ -5361,7 +5361,7 @@ abstract class _RelatedPerson extends RelatedPerson {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -5393,7 +5393,7 @@ abstract class _RelatedPerson extends RelatedPerson {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.RelatedPerson)
   Dstu2ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -5402,7 +5402,7 @@ abstract class _RelatedPerson extends RelatedPerson {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
-  Code? get language;
+  FhirCode? get language;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;
@@ -5432,7 +5432,7 @@ abstract class _RelatedPerson extends RelatedPerson {
   @JsonKey(name: '_gender')
   Element? get genderElement;
   @override
-  Date? get birthDate;
+  FhirDate? get birthDate;
   @override
   @JsonKey(name: '_birthDate')
   Element? get birthDateElement;

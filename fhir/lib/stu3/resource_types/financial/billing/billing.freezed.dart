@@ -22,12 +22,12 @@ Claim _$ClaimFromJson(Map<String, dynamic> json) {
 mixin _$Claim {
   @JsonKey(unknownEnumValue: Stu3ResourceType.Claim)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -86,12 +86,12 @@ abstract class $ClaimCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Claim)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -245,7 +245,7 @@ class _$ClaimCopyWithImpl<$Res, $Val extends Claim>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -711,12 +711,12 @@ abstract class _$$_ClaimCopyWith<$Res> implements $ClaimCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Claim)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -891,7 +891,7 @@ class __$$_ClaimCopyWithImpl<$Res> extends _$ClaimCopyWithImpl<$Res, _$_Claim>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -1133,7 +1133,7 @@ class _$_Claim extends _Claim {
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
-  final Code? language;
+  final FhirCode? language;
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
@@ -1470,7 +1470,7 @@ abstract class _Claim extends Claim {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -1522,7 +1522,7 @@ abstract class _Claim extends Claim {
   @JsonKey(unknownEnumValue: Stu3ResourceType.Claim)
   Stu3ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -1531,7 +1531,7 @@ abstract class _Claim extends Claim {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
-  Code? get language;
+  FhirCode? get language;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;
@@ -2031,11 +2031,11 @@ ClaimCareTeam _$ClaimCareTeamFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ClaimCareTeam {
-  Decimal? get sequence => throw _privateConstructorUsedError;
+  FhirDecimal? get sequence => throw _privateConstructorUsedError;
   @JsonKey(name: '_sequence')
   Element? get sequenceElement => throw _privateConstructorUsedError;
   Reference get provider => throw _privateConstructorUsedError;
-  Boolean? get responsible => throw _privateConstructorUsedError;
+  FhirBoolean? get responsible => throw _privateConstructorUsedError;
   @JsonKey(name: '_responsible')
   Element? get responsibleElement => throw _privateConstructorUsedError;
   CodeableConcept? get role => throw _privateConstructorUsedError;
@@ -2057,7 +2057,7 @@ abstract class $ClaimCareTeamCopyWith<$Res> {
       {Decimal? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       Reference provider,
-      Boolean? responsible,
+      FhirBoolean? responsible,
       @JsonKey(name: '_responsible') Element? responsibleElement,
       CodeableConcept? role,
       CodeableConcept? qualification});
@@ -2106,7 +2106,7 @@ class _$ClaimCareTeamCopyWithImpl<$Res, $Val extends ClaimCareTeam>
       responsible: freezed == responsible
           ? _value.responsible
           : responsible // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       responsibleElement: freezed == responsibleElement
           ? _value.responsibleElement
           : responsibleElement // ignore: cast_nullable_to_non_nullable
@@ -2191,7 +2191,7 @@ abstract class _$$_ClaimCareTeamCopyWith<$Res>
       {Decimal? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       Reference provider,
-      Boolean? responsible,
+      FhirBoolean? responsible,
       @JsonKey(name: '_responsible') Element? responsibleElement,
       CodeableConcept? role,
       CodeableConcept? qualification});
@@ -2243,7 +2243,7 @@ class __$$_ClaimCareTeamCopyWithImpl<$Res>
       responsible: freezed == responsible
           ? _value.responsible
           : responsible // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       responsibleElement: freezed == responsibleElement
           ? _value.responsibleElement
           : responsibleElement // ignore: cast_nullable_to_non_nullable
@@ -2284,7 +2284,7 @@ class _$_ClaimCareTeam extends _ClaimCareTeam {
   @override
   final Reference provider;
   @override
-  final Boolean? responsible;
+  final FhirBoolean? responsible;
   @override
   @JsonKey(name: '_responsible')
   final Element? responsibleElement;
@@ -2342,7 +2342,7 @@ abstract class _ClaimCareTeam extends ClaimCareTeam {
       {final Decimal? sequence,
       @JsonKey(name: '_sequence') final Element? sequenceElement,
       required final Reference provider,
-      final Boolean? responsible,
+      final FhirBoolean? responsible,
       @JsonKey(name: '_responsible') final Element? responsibleElement,
       final CodeableConcept? role,
       final CodeableConcept? qualification}) = _$_ClaimCareTeam;
@@ -2352,14 +2352,14 @@ abstract class _ClaimCareTeam extends ClaimCareTeam {
       _$_ClaimCareTeam.fromJson;
 
   @override
-  Decimal? get sequence;
+  FhirDecimal? get sequence;
   @override
   @JsonKey(name: '_sequence')
   Element? get sequenceElement;
   @override
   Reference get provider;
   @override
-  Boolean? get responsible;
+  FhirBoolean? get responsible;
   @override
   @JsonKey(name: '_responsible')
   Element? get responsibleElement;
@@ -2379,12 +2379,12 @@ ClaimInformation _$ClaimInformationFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ClaimInformation {
-  Decimal? get sequence => throw _privateConstructorUsedError;
+  FhirDecimal? get sequence => throw _privateConstructorUsedError;
   @JsonKey(name: '_sequence')
   Element? get sequenceElement => throw _privateConstructorUsedError;
   CodeableConcept get category => throw _privateConstructorUsedError;
   CodeableConcept? get code => throw _privateConstructorUsedError;
-  Date? get timingDate => throw _privateConstructorUsedError;
+  FhirDate? get timingDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_timingDate')
   Element? get timingDateElement => throw _privateConstructorUsedError;
   Period? get timingPeriod => throw _privateConstructorUsedError;
@@ -2413,7 +2413,7 @@ abstract class $ClaimInformationCopyWith<$Res> {
       @JsonKey(name: '_sequence') Element? sequenceElement,
       CodeableConcept category,
       CodeableConcept? code,
-      Date? timingDate,
+      FhirDate? timingDate,
       @JsonKey(name: '_timingDate') Element? timingDateElement,
       Period? timingPeriod,
       String? valueString,
@@ -2648,7 +2648,7 @@ abstract class _$$_ClaimInformationCopyWith<$Res>
       @JsonKey(name: '_sequence') Element? sequenceElement,
       CodeableConcept category,
       CodeableConcept? code,
-      Date? timingDate,
+      FhirDate? timingDate,
       @JsonKey(name: '_timingDate') Element? timingDateElement,
       Period? timingPeriod,
       String? valueString,
@@ -2903,7 +2903,7 @@ abstract class _ClaimInformation extends ClaimInformation {
       _$_ClaimInformation.fromJson;
 
   @override
-  Decimal? get sequence;
+  FhirDecimal? get sequence;
   @override
   @JsonKey(name: '_sequence')
   Element? get sequenceElement;
@@ -2912,7 +2912,7 @@ abstract class _ClaimInformation extends ClaimInformation {
   @override
   CodeableConcept? get code;
   @override
-  Date? get timingDate;
+  FhirDate? get timingDate;
   @override
   @JsonKey(name: '_timingDate')
   Element? get timingDateElement;
@@ -2943,7 +2943,7 @@ ClaimDiagnosis _$ClaimDiagnosisFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ClaimDiagnosis {
-  Decimal? get sequence => throw _privateConstructorUsedError;
+  FhirDecimal? get sequence => throw _privateConstructorUsedError;
   @JsonKey(name: '_sequence')
   Element? get sequenceElement => throw _privateConstructorUsedError;
   CodeableConcept? get diagnosisCodeableConcept =>
@@ -3250,7 +3250,7 @@ abstract class _ClaimDiagnosis extends ClaimDiagnosis {
       _$_ClaimDiagnosis.fromJson;
 
   @override
-  Decimal? get sequence;
+  FhirDecimal? get sequence;
   @override
   @JsonKey(name: '_sequence')
   Element? get sequenceElement;
@@ -3274,10 +3274,10 @@ ClaimProcedure _$ClaimProcedureFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ClaimProcedure {
-  Decimal? get sequence => throw _privateConstructorUsedError;
+  FhirDecimal? get sequence => throw _privateConstructorUsedError;
   @JsonKey(name: '_sequence')
   Element? get sequenceElement => throw _privateConstructorUsedError;
-  Date? get date => throw _privateConstructorUsedError;
+  FhirDate? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
   CodeableConcept? get procedureCodeableConcept =>
@@ -3299,7 +3299,7 @@ abstract class $ClaimProcedureCopyWith<$Res> {
   $Res call(
       {Decimal? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
-      Date? date,
+      FhirDate? date,
       @JsonKey(name: '_date') Element? dateElement,
       CodeableConcept? procedureCodeableConcept,
       Reference? procedureReference});
@@ -3419,7 +3419,7 @@ abstract class _$$_ClaimProcedureCopyWith<$Res>
   $Res call(
       {Decimal? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
-      Date? date,
+      FhirDate? date,
       @JsonKey(name: '_date') Element? dateElement,
       CodeableConcept? procedureCodeableConcept,
       Reference? procedureReference});
@@ -3568,12 +3568,12 @@ abstract class _ClaimProcedure extends ClaimProcedure {
       _$_ClaimProcedure.fromJson;
 
   @override
-  Decimal? get sequence;
+  FhirDecimal? get sequence;
   @override
   @JsonKey(name: '_sequence')
   Element? get sequenceElement;
   @override
-  Date? get date;
+  FhirDate? get date;
   @override
   @JsonKey(name: '_date')
   Element? get dateElement;
@@ -3593,10 +3593,10 @@ ClaimInsurance _$ClaimInsuranceFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ClaimInsurance {
-  Decimal? get sequence => throw _privateConstructorUsedError;
+  FhirDecimal? get sequence => throw _privateConstructorUsedError;
   @JsonKey(name: '_sequence')
   Element? get sequenceElement => throw _privateConstructorUsedError;
-  Boolean? get focal => throw _privateConstructorUsedError;
+  FhirBoolean? get focal => throw _privateConstructorUsedError;
   @JsonKey(name: '_focal')
   Element? get focalElement => throw _privateConstructorUsedError;
   Reference get coverage => throw _privateConstructorUsedError;
@@ -3624,7 +3624,7 @@ abstract class $ClaimInsuranceCopyWith<$Res> {
       {Decimal? sequence,
       @JsonKey(name: '_sequence')
           Element? sequenceElement,
-      Boolean? focal,
+      FhirBoolean? focal,
       @JsonKey(name: '_focal')
           Element? focalElement,
       Reference coverage,
@@ -3679,7 +3679,7 @@ class _$ClaimInsuranceCopyWithImpl<$Res, $Val extends ClaimInsurance>
       focal: freezed == focal
           ? _value.focal
           : focal // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       focalElement: freezed == focalElement
           ? _value.focalElement
           : focalElement // ignore: cast_nullable_to_non_nullable
@@ -3780,7 +3780,7 @@ abstract class _$$_ClaimInsuranceCopyWith<$Res>
       {Decimal? sequence,
       @JsonKey(name: '_sequence')
           Element? sequenceElement,
-      Boolean? focal,
+      FhirBoolean? focal,
       @JsonKey(name: '_focal')
           Element? focalElement,
       Reference coverage,
@@ -3838,7 +3838,7 @@ class __$$_ClaimInsuranceCopyWithImpl<$Res>
       focal: freezed == focal
           ? _value.focal
           : focal // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       focalElement: freezed == focalElement
           ? _value.focalElement
           : focalElement // ignore: cast_nullable_to_non_nullable
@@ -3898,7 +3898,7 @@ class _$_ClaimInsurance extends _ClaimInsurance {
   @JsonKey(name: '_sequence')
   final Element? sequenceElement;
   @override
-  final Boolean? focal;
+  final FhirBoolean? focal;
   @override
   @JsonKey(name: '_focal')
   final Element? focalElement;
@@ -4001,7 +4001,7 @@ abstract class _ClaimInsurance extends ClaimInsurance {
       {final Decimal? sequence,
       @JsonKey(name: '_sequence')
           final Element? sequenceElement,
-      final Boolean? focal,
+      final FhirBoolean? focal,
       @JsonKey(name: '_focal')
           final Element? focalElement,
       required final Reference coverage,
@@ -4018,12 +4018,12 @@ abstract class _ClaimInsurance extends ClaimInsurance {
       _$_ClaimInsurance.fromJson;
 
   @override
-  Decimal? get sequence;
+  FhirDecimal? get sequence;
   @override
   @JsonKey(name: '_sequence')
   Element? get sequenceElement;
   @override
-  Boolean? get focal;
+  FhirBoolean? get focal;
   @override
   @JsonKey(name: '_focal')
   Element? get focalElement;
@@ -4053,7 +4053,7 @@ ClaimAccident _$ClaimAccidentFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ClaimAccident {
-  Date? get date => throw _privateConstructorUsedError;
+  FhirDate? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
   CodeableConcept? get type => throw _privateConstructorUsedError;
@@ -4322,7 +4322,7 @@ abstract class _ClaimAccident extends ClaimAccident {
       _$_ClaimAccident.fromJson;
 
   @override
-  Date? get date;
+  FhirDate? get date;
   @override
   @JsonKey(name: '_date')
   Element? get dateElement;
@@ -4344,7 +4344,7 @@ ClaimItem _$ClaimItemFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ClaimItem {
-  Decimal? get sequence => throw _privateConstructorUsedError;
+  FhirDecimal? get sequence => throw _privateConstructorUsedError;
   @JsonKey(name: '_sequence')
   Element? get sequenceElement => throw _privateConstructorUsedError;
   List<Id>? get careTeamLinkId => throw _privateConstructorUsedError;
@@ -4368,7 +4368,7 @@ mixin _$ClaimItem {
   CodeableConcept? get service => throw _privateConstructorUsedError;
   List<CodeableConcept>? get modifier => throw _privateConstructorUsedError;
   List<CodeableConcept>? get programCode => throw _privateConstructorUsedError;
-  Date? get servicedDate => throw _privateConstructorUsedError;
+  FhirDate? get servicedDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_servicedDate')
   Element? get servicedDateElement => throw _privateConstructorUsedError;
   Period? get servicedPeriod => throw _privateConstructorUsedError;
@@ -4378,7 +4378,7 @@ mixin _$ClaimItem {
   Reference? get locationReference => throw _privateConstructorUsedError;
   Quantity? get quantity => throw _privateConstructorUsedError;
   Money? get unitPrice => throw _privateConstructorUsedError;
-  Decimal? get factor => throw _privateConstructorUsedError;
+  FhirDecimal? get factor => throw _privateConstructorUsedError;
   @JsonKey(name: '_factor')
   Element? get factorElement => throw _privateConstructorUsedError;
   Money? get net => throw _privateConstructorUsedError;
@@ -4420,7 +4420,7 @@ abstract class $ClaimItemCopyWith<$Res> {
       CodeableConcept? service,
       List<CodeableConcept>? modifier,
       List<CodeableConcept>? programCode,
-      Date? servicedDate,
+      FhirDate? servicedDate,
       @JsonKey(name: '_servicedDate')
           Element? servicedDateElement,
       Period? servicedPeriod,
@@ -4429,7 +4429,7 @@ abstract class $ClaimItemCopyWith<$Res> {
       Reference? locationReference,
       Quantity? quantity,
       Money? unitPrice,
-      Decimal? factor,
+      FhirDecimal? factor,
       @JsonKey(name: '_factor')
           Element? factorElement,
       Money? net,
@@ -4826,7 +4826,7 @@ abstract class _$$_ClaimItemCopyWith<$Res> implements $ClaimItemCopyWith<$Res> {
       CodeableConcept? service,
       List<CodeableConcept>? modifier,
       List<CodeableConcept>? programCode,
-      Date? servicedDate,
+      FhirDate? servicedDate,
       @JsonKey(name: '_servicedDate')
           Element? servicedDateElement,
       Period? servicedPeriod,
@@ -4835,7 +4835,7 @@ abstract class _$$_ClaimItemCopyWith<$Res> implements $ClaimItemCopyWith<$Res> {
       Reference? locationReference,
       Quantity? quantity,
       Money? unitPrice,
-      Decimal? factor,
+      FhirDecimal? factor,
       @JsonKey(name: '_factor')
           Element? factorElement,
       Money? net,
@@ -5458,7 +5458,7 @@ abstract class _ClaimItem extends ClaimItem {
       _$_ClaimItem.fromJson;
 
   @override
-  Decimal? get sequence;
+  FhirDecimal? get sequence;
   @override
   @JsonKey(name: '_sequence')
   Element? get sequenceElement;
@@ -5493,7 +5493,7 @@ abstract class _ClaimItem extends ClaimItem {
   @override
   List<CodeableConcept>? get programCode;
   @override
-  Date? get servicedDate;
+  FhirDate? get servicedDate;
   @override
   @JsonKey(name: '_servicedDate')
   Element? get servicedDateElement;
@@ -5510,7 +5510,7 @@ abstract class _ClaimItem extends ClaimItem {
   @override
   Money? get unitPrice;
   @override
-  Decimal? get factor;
+  FhirDecimal? get factor;
   @override
   @JsonKey(name: '_factor')
   Element? get factorElement;
@@ -5538,7 +5538,7 @@ ClaimDetail _$ClaimDetailFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ClaimDetail {
-  Decimal? get sequence => throw _privateConstructorUsedError;
+  FhirDecimal? get sequence => throw _privateConstructorUsedError;
   @JsonKey(name: '_sequence')
   Element? get sequenceElement => throw _privateConstructorUsedError;
   CodeableConcept? get revenue => throw _privateConstructorUsedError;
@@ -5548,7 +5548,7 @@ mixin _$ClaimDetail {
   List<CodeableConcept>? get programCode => throw _privateConstructorUsedError;
   Quantity? get quantity => throw _privateConstructorUsedError;
   Money? get unitPrice => throw _privateConstructorUsedError;
-  Decimal? get factor => throw _privateConstructorUsedError;
+  FhirDecimal? get factor => throw _privateConstructorUsedError;
   @JsonKey(name: '_factor')
   Element? get factorElement => throw _privateConstructorUsedError;
   Money? get net => throw _privateConstructorUsedError;
@@ -5577,7 +5577,7 @@ abstract class $ClaimDetailCopyWith<$Res> {
       List<CodeableConcept>? programCode,
       Quantity? quantity,
       Money? unitPrice,
-      Decimal? factor,
+      FhirDecimal? factor,
       @JsonKey(name: '_factor') Element? factorElement,
       Money? net,
       List<Reference>? udi,
@@ -5796,7 +5796,7 @@ abstract class _$$_ClaimDetailCopyWith<$Res>
       List<CodeableConcept>? programCode,
       Quantity? quantity,
       Money? unitPrice,
-      Decimal? factor,
+      FhirDecimal? factor,
       @JsonKey(name: '_factor') Element? factorElement,
       Money? net,
       List<Reference>? udi,
@@ -6085,7 +6085,7 @@ abstract class _ClaimDetail extends ClaimDetail {
       _$_ClaimDetail.fromJson;
 
   @override
-  Decimal? get sequence;
+  FhirDecimal? get sequence;
   @override
   @JsonKey(name: '_sequence')
   Element? get sequenceElement;
@@ -6104,7 +6104,7 @@ abstract class _ClaimDetail extends ClaimDetail {
   @override
   Money? get unitPrice;
   @override
-  Decimal? get factor;
+  FhirDecimal? get factor;
   @override
   @JsonKey(name: '_factor')
   Element? get factorElement;
@@ -6126,7 +6126,7 @@ ClaimSubDetail _$ClaimSubDetailFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ClaimSubDetail {
-  Decimal? get sequence => throw _privateConstructorUsedError;
+  FhirDecimal? get sequence => throw _privateConstructorUsedError;
   @JsonKey(name: '_sequence')
   Element? get sequenceElement => throw _privateConstructorUsedError;
   CodeableConcept? get revenue => throw _privateConstructorUsedError;
@@ -6136,7 +6136,7 @@ mixin _$ClaimSubDetail {
   List<CodeableConcept>? get programCode => throw _privateConstructorUsedError;
   Quantity? get quantity => throw _privateConstructorUsedError;
   Money? get unitPrice => throw _privateConstructorUsedError;
-  Decimal? get factor => throw _privateConstructorUsedError;
+  FhirDecimal? get factor => throw _privateConstructorUsedError;
   @JsonKey(name: '_factor')
   Element? get factorElement => throw _privateConstructorUsedError;
   Money? get net => throw _privateConstructorUsedError;
@@ -6164,7 +6164,7 @@ abstract class $ClaimSubDetailCopyWith<$Res> {
       List<CodeableConcept>? programCode,
       Quantity? quantity,
       Money? unitPrice,
-      Decimal? factor,
+      FhirDecimal? factor,
       @JsonKey(name: '_factor') Element? factorElement,
       Money? net,
       List<Reference>? udi});
@@ -6377,7 +6377,7 @@ abstract class _$$_ClaimSubDetailCopyWith<$Res>
       List<CodeableConcept>? programCode,
       Quantity? quantity,
       Money? unitPrice,
-      Decimal? factor,
+      FhirDecimal? factor,
       @JsonKey(name: '_factor') Element? factorElement,
       Money? net,
       List<Reference>? udi});
@@ -6644,7 +6644,7 @@ abstract class _ClaimSubDetail extends ClaimSubDetail {
       _$_ClaimSubDetail.fromJson;
 
   @override
-  Decimal? get sequence;
+  FhirDecimal? get sequence;
   @override
   @JsonKey(name: '_sequence')
   Element? get sequenceElement;
@@ -6663,7 +6663,7 @@ abstract class _ClaimSubDetail extends ClaimSubDetail {
   @override
   Money? get unitPrice;
   @override
-  Decimal? get factor;
+  FhirDecimal? get factor;
   @override
   @JsonKey(name: '_factor')
   Element? get factorElement;
@@ -6685,12 +6685,12 @@ ClaimResponse _$ClaimResponseFromJson(Map<String, dynamic> json) {
 mixin _$ClaimResponse {
   @JsonKey(unknownEnumValue: Stu3ResourceType.ClaimResponse)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -6747,12 +6747,12 @@ abstract class $ClaimResponseCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ClaimResponse)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -6887,7 +6887,7 @@ class _$ClaimResponseCopyWithImpl<$Res, $Val extends ClaimResponse>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -7267,12 +7267,12 @@ abstract class _$$_ClaimResponseCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ClaimResponse)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -7425,7 +7425,7 @@ class __$$_ClaimResponseCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -7630,7 +7630,7 @@ class _$_ClaimResponse extends _ClaimResponse {
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
-  final Code? language;
+  final FhirCode? language;
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
@@ -7918,7 +7918,7 @@ abstract class _ClaimResponse extends ClaimResponse {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -7964,7 +7964,7 @@ abstract class _ClaimResponse extends ClaimResponse {
   @JsonKey(unknownEnumValue: Stu3ResourceType.ClaimResponse)
   Stu3ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -7973,7 +7973,7 @@ abstract class _ClaimResponse extends ClaimResponse {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
-  Code? get language;
+  FhirCode? get language;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;
@@ -8053,7 +8053,7 @@ ClaimResponseItem _$ClaimResponseItemFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ClaimResponseItem {
-  Id? get sequenceLinkId => throw _privateConstructorUsedError;
+  FhirId? get sequenceLinkId => throw _privateConstructorUsedError;
   @JsonKey(name: '_sequenceLinkId')
   Element? get sequenceLinkIdElement => throw _privateConstructorUsedError;
   List<Decimal>? get noteNumber => throw _privateConstructorUsedError;
@@ -8343,7 +8343,7 @@ abstract class _ClaimResponseItem extends ClaimResponseItem {
       _$_ClaimResponseItem.fromJson;
 
   @override
-  Id? get sequenceLinkId;
+  FhirId? get sequenceLinkId;
   @override
   @JsonKey(name: '_sequenceLinkId')
   Element? get sequenceLinkIdElement;
@@ -8372,7 +8372,7 @@ mixin _$ClaimResponseAdjudication {
   CodeableConcept get category => throw _privateConstructorUsedError;
   CodeableConcept? get reason => throw _privateConstructorUsedError;
   Money? get amount => throw _privateConstructorUsedError;
-  Decimal? get value => throw _privateConstructorUsedError;
+  FhirDecimal? get value => throw _privateConstructorUsedError;
   @JsonKey(name: '_value')
   Element? get valueElement => throw _privateConstructorUsedError;
 
@@ -8392,7 +8392,7 @@ abstract class $ClaimResponseAdjudicationCopyWith<$Res> {
       {CodeableConcept category,
       CodeableConcept? reason,
       Money? amount,
-      Decimal? value,
+      FhirDecimal? value,
       @JsonKey(name: '_value') Element? valueElement});
 
   $CodeableConceptCopyWith<$Res> get category;
@@ -8503,7 +8503,7 @@ abstract class _$$_ClaimResponseAdjudicationCopyWith<$Res>
       {CodeableConcept category,
       CodeableConcept? reason,
       Money? amount,
-      Decimal? value,
+      FhirDecimal? value,
       @JsonKey(name: '_value') Element? valueElement});
 
   @override
@@ -8645,7 +8645,7 @@ abstract class _ClaimResponseAdjudication extends ClaimResponseAdjudication {
   @override
   Money? get amount;
   @override
-  Decimal? get value;
+  FhirDecimal? get value;
   @override
   @JsonKey(name: '_value')
   Element? get valueElement;
@@ -8661,7 +8661,7 @@ ClaimResponseDetail _$ClaimResponseDetailFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ClaimResponseDetail {
-  Id? get sequenceLinkId => throw _privateConstructorUsedError;
+  FhirId? get sequenceLinkId => throw _privateConstructorUsedError;
   @JsonKey(name: '_sequenceLinkId')
   Element? get sequenceLinkIdElement => throw _privateConstructorUsedError;
   List<Decimal>? get noteNumber => throw _privateConstructorUsedError;
@@ -8953,7 +8953,7 @@ abstract class _ClaimResponseDetail extends ClaimResponseDetail {
       _$_ClaimResponseDetail.fromJson;
 
   @override
-  Id? get sequenceLinkId;
+  FhirId? get sequenceLinkId;
   @override
   @JsonKey(name: '_sequenceLinkId')
   Element? get sequenceLinkIdElement;
@@ -8979,7 +8979,7 @@ ClaimResponseSubDetail _$ClaimResponseSubDetailFromJson(
 
 /// @nodoc
 mixin _$ClaimResponseSubDetail {
-  Id? get sequenceLinkId => throw _privateConstructorUsedError;
+  FhirId? get sequenceLinkId => throw _privateConstructorUsedError;
   @JsonKey(name: '_sequenceLinkId')
   Element? get sequenceLinkIdElement => throw _privateConstructorUsedError;
   List<Decimal>? get noteNumber => throw _privateConstructorUsedError;
@@ -9244,7 +9244,7 @@ abstract class _ClaimResponseSubDetail extends ClaimResponseSubDetail {
       _$_ClaimResponseSubDetail.fromJson;
 
   @override
-  Id? get sequenceLinkId;
+  FhirId? get sequenceLinkId;
   @override
   @JsonKey(name: '_sequenceLinkId')
   Element? get sequenceLinkIdElement;
@@ -10167,14 +10167,14 @@ ClaimResponseError _$ClaimResponseErrorFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ClaimResponseError {
-  Id? get sequenceLinkId => throw _privateConstructorUsedError;
+  FhirId? get sequenceLinkId => throw _privateConstructorUsedError;
   @JsonKey(name: '_sequenceLinkId')
   Element? get sequenceLinkIdElement => throw _privateConstructorUsedError;
-  Id? get detailSequenceLinkId => throw _privateConstructorUsedError;
+  FhirId? get detailSequenceLinkId => throw _privateConstructorUsedError;
   @JsonKey(name: '_detailSequenceLinkId')
   Element? get detailSequenceLinkIdElement =>
       throw _privateConstructorUsedError;
-  Id? get subdetailSequenceLinkId => throw _privateConstructorUsedError;
+  FhirId? get subdetailSequenceLinkId => throw _privateConstructorUsedError;
   @JsonKey(name: '_subdetailSequenceLinkId')
   Element? get subdetailSequenceLinkIdElement =>
       throw _privateConstructorUsedError;
@@ -10196,10 +10196,10 @@ abstract class $ClaimResponseErrorCopyWith<$Res> {
       {Id? sequenceLinkId,
       @JsonKey(name: '_sequenceLinkId')
           Element? sequenceLinkIdElement,
-      Id? detailSequenceLinkId,
+      FhirId? detailSequenceLinkId,
       @JsonKey(name: '_detailSequenceLinkId')
           Element? detailSequenceLinkIdElement,
-      Id? subdetailSequenceLinkId,
+      FhirId? subdetailSequenceLinkId,
       @JsonKey(name: '_subdetailSequenceLinkId')
           Element? subdetailSequenceLinkIdElement,
       CodeableConcept code});
@@ -10322,10 +10322,10 @@ abstract class _$$_ClaimResponseErrorCopyWith<$Res>
       {Id? sequenceLinkId,
       @JsonKey(name: '_sequenceLinkId')
           Element? sequenceLinkIdElement,
-      Id? detailSequenceLinkId,
+      FhirId? detailSequenceLinkId,
       @JsonKey(name: '_detailSequenceLinkId')
           Element? detailSequenceLinkIdElement,
-      Id? subdetailSequenceLinkId,
+      FhirId? subdetailSequenceLinkId,
       @JsonKey(name: '_subdetailSequenceLinkId')
           Element? subdetailSequenceLinkIdElement,
       CodeableConcept code});
@@ -10504,17 +10504,17 @@ abstract class _ClaimResponseError extends ClaimResponseError {
       _$_ClaimResponseError.fromJson;
 
   @override
-  Id? get sequenceLinkId;
+  FhirId? get sequenceLinkId;
   @override
   @JsonKey(name: '_sequenceLinkId')
   Element? get sequenceLinkIdElement;
   @override
-  Id? get detailSequenceLinkId;
+  FhirId? get detailSequenceLinkId;
   @override
   @JsonKey(name: '_detailSequenceLinkId')
   Element? get detailSequenceLinkIdElement;
   @override
-  Id? get subdetailSequenceLinkId;
+  FhirId? get subdetailSequenceLinkId;
   @override
   @JsonKey(name: '_subdetailSequenceLinkId')
   Element? get subdetailSequenceLinkIdElement;
@@ -10535,7 +10535,7 @@ mixin _$ClaimResponsePayment {
   CodeableConcept? get type => throw _privateConstructorUsedError;
   Money? get adjustment => throw _privateConstructorUsedError;
   CodeableConcept? get adjustmentReason => throw _privateConstructorUsedError;
-  Date? get date => throw _privateConstructorUsedError;
+  FhirDate? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
   Money? get amount => throw _privateConstructorUsedError;
@@ -10557,7 +10557,7 @@ abstract class $ClaimResponsePaymentCopyWith<$Res> {
       {CodeableConcept? type,
       Money? adjustment,
       CodeableConcept? adjustmentReason,
-      Date? date,
+      FhirDate? date,
       @JsonKey(name: '_date') Element? dateElement,
       Money? amount,
       Identifier? identifier});
@@ -10709,7 +10709,7 @@ abstract class _$$_ClaimResponsePaymentCopyWith<$Res>
       {CodeableConcept? type,
       Money? adjustment,
       CodeableConcept? adjustmentReason,
-      Date? date,
+      FhirDate? date,
       @JsonKey(name: '_date') Element? dateElement,
       Money? amount,
       Identifier? identifier});
@@ -10876,7 +10876,7 @@ abstract class _ClaimResponsePayment extends ClaimResponsePayment {
   @override
   CodeableConcept? get adjustmentReason;
   @override
-  Date? get date;
+  FhirDate? get date;
   @override
   @JsonKey(name: '_date')
   Element? get dateElement;
@@ -10897,7 +10897,7 @@ ClaimResponseProcessNote _$ClaimResponseProcessNoteFromJson(
 
 /// @nodoc
 mixin _$ClaimResponseProcessNote {
-  Decimal? get number => throw _privateConstructorUsedError;
+  FhirDecimal? get number => throw _privateConstructorUsedError;
   @JsonKey(name: '_number')
   Element? get numberElement => throw _privateConstructorUsedError;
   CodeableConcept? get type => throw _privateConstructorUsedError;
@@ -11190,7 +11190,7 @@ abstract class _ClaimResponseProcessNote extends ClaimResponseProcessNote {
       _$_ClaimResponseProcessNote.fromJson;
 
   @override
-  Decimal? get number;
+  FhirDecimal? get number;
   @override
   @JsonKey(name: '_number')
   Element? get numberElement;
@@ -11216,10 +11216,10 @@ ClaimResponseInsurance _$ClaimResponseInsuranceFromJson(
 
 /// @nodoc
 mixin _$ClaimResponseInsurance {
-  Decimal? get sequence => throw _privateConstructorUsedError;
+  FhirDecimal? get sequence => throw _privateConstructorUsedError;
   @JsonKey(name: '_sequence')
   Element? get sequenceElement => throw _privateConstructorUsedError;
-  Boolean? get focal => throw _privateConstructorUsedError;
+  FhirBoolean? get focal => throw _privateConstructorUsedError;
   @JsonKey(name: '_focal')
   Element? get focalElement => throw _privateConstructorUsedError;
   Reference get coverage => throw _privateConstructorUsedError;
@@ -11247,7 +11247,7 @@ abstract class $ClaimResponseInsuranceCopyWith<$Res> {
       {Decimal? sequence,
       @JsonKey(name: '_sequence')
           Element? sequenceElement,
-      Boolean? focal,
+      FhirBoolean? focal,
       @JsonKey(name: '_focal')
           Element? focalElement,
       Reference coverage,
@@ -11303,7 +11303,7 @@ class _$ClaimResponseInsuranceCopyWithImpl<$Res,
       focal: freezed == focal
           ? _value.focal
           : focal // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       focalElement: freezed == focalElement
           ? _value.focalElement
           : focalElement // ignore: cast_nullable_to_non_nullable
@@ -11404,7 +11404,7 @@ abstract class _$$_ClaimResponseInsuranceCopyWith<$Res>
       {Decimal? sequence,
       @JsonKey(name: '_sequence')
           Element? sequenceElement,
-      Boolean? focal,
+      FhirBoolean? focal,
       @JsonKey(name: '_focal')
           Element? focalElement,
       Reference coverage,
@@ -11463,7 +11463,7 @@ class __$$_ClaimResponseInsuranceCopyWithImpl<$Res>
       focal: freezed == focal
           ? _value.focal
           : focal // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       focalElement: freezed == focalElement
           ? _value.focalElement
           : focalElement // ignore: cast_nullable_to_non_nullable
@@ -11523,7 +11523,7 @@ class _$_ClaimResponseInsurance extends _ClaimResponseInsurance {
   @JsonKey(name: '_sequence')
   final Element? sequenceElement;
   @override
-  final Boolean? focal;
+  final FhirBoolean? focal;
   @override
   @JsonKey(name: '_focal')
   final Element? focalElement;
@@ -11627,7 +11627,7 @@ abstract class _ClaimResponseInsurance extends ClaimResponseInsurance {
       {final Decimal? sequence,
       @JsonKey(name: '_sequence')
           final Element? sequenceElement,
-      final Boolean? focal,
+      final FhirBoolean? focal,
       @JsonKey(name: '_focal')
           final Element? focalElement,
       required final Reference coverage,
@@ -11644,12 +11644,12 @@ abstract class _ClaimResponseInsurance extends ClaimResponseInsurance {
       _$_ClaimResponseInsurance.fromJson;
 
   @override
-  Decimal? get sequence;
+  FhirDecimal? get sequence;
   @override
   @JsonKey(name: '_sequence')
   Element? get sequenceElement;
   @override
-  Boolean? get focal;
+  FhirBoolean? get focal;
   @override
   @JsonKey(name: '_focal')
   Element? get focalElement;

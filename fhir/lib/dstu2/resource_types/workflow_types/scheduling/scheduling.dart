@@ -19,11 +19,11 @@ class Appointment with Resource, _$Appointment {
     @Default(Dstu2ResourceType.Appointment)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Appointment)
         Dstu2ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -39,9 +39,9 @@ class Appointment with Resource, _$Appointment {
     @JsonKey(name: '_priority') Element? priorityElement,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    Instant? start,
+    FhirInstant? start,
     @JsonKey(name: '_start') Element? startElement,
-    Instant? end,
+    FhirInstant? end,
     @JsonKey(name: '_end') Element? endElement,
     PositiveInt? minutesDuration,
     @JsonKey(name: '_minutesDuration') Element? minutesDurationElement,
@@ -83,7 +83,7 @@ class Appointment with Resource, _$Appointment {
 class AppointmentParticipant with _$AppointmentParticipant {
   AppointmentParticipant._();
   factory AppointmentParticipant({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<CodeableConcept>? type,
@@ -134,11 +134,11 @@ class AppointmentResponse with Resource, _$AppointmentResponse {
     @Default(Dstu2ResourceType.AppointmentResponse)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.AppointmentResponse)
         Dstu2ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -146,9 +146,9 @@ class AppointmentResponse with Resource, _$AppointmentResponse {
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
     required Reference appointment,
-    Instant? start,
+    FhirInstant? start,
     @JsonKey(name: '_start') Element? startElement,
-    Instant? end,
+    FhirInstant? end,
     @JsonKey(name: '_end') Element? endElement,
     List<CodeableConcept>? participantType,
     Reference? actor,
@@ -194,11 +194,11 @@ class Schedule with Resource, _$Schedule {
     @Default(Dstu2ResourceType.Schedule)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Schedule)
         Dstu2ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -247,11 +247,11 @@ class Slot with Resource, _$Slot {
     @Default(Dstu2ResourceType.Slot)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Slot)
         Dstu2ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -266,7 +266,7 @@ class Slot with Resource, _$Slot {
     @JsonKey(name: '_start') Element? startElement,
     required Instant end,
     @JsonKey(name: '_end') Element? endElement,
-    Boolean? overbooked,
+    FhirBoolean? overbooked,
     @JsonKey(name: '_overbooked') Element? overbookedElement,
     String? comment,
     @JsonKey(name: '_comment') Element? commentElement,

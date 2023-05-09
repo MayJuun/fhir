@@ -4886,7 +4886,7 @@ _$_StructureMapSource _$$_StructureMapSourceFromJson(
           : Element.fromJson(json['_type'] as Map<String, dynamic>),
       defaultValueBase64Binary: json['defaultValueBase64Binary'] == null
           ? null
-          : Base64Binary.fromJson(json['defaultValueBase64Binary']),
+          : FhirBase64Binary?.fromJson(json['defaultValueBase64Binary']),
       defaultValueBase64BinaryElement: json['_defaultValueBase64Binary'] == null
           ? null
           : Element.fromJson(

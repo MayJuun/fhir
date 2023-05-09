@@ -185,7 +185,7 @@ class ResearchStudy with Resource, _$ResearchStudy {
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -249,7 +249,7 @@ class ResearchStudy with Resource, _$ResearchStudy {
     List<Reference>? partOf,
 
     /// [status] The current state of the study.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -294,7 +294,7 @@ class ResearchStudy with Resource, _$ResearchStudy {
     List<CodeableConcept>? location,
 
     /// [description] A full description of how the study is being conducted.
-    Markdown? description,
+    FhirMarkdown? description,
 
     /// [descriptionElement] Extensions for description
     @JsonKey(name: '_description')
@@ -722,7 +722,7 @@ class ResearchSubject with Resource, _$ResearchSubject {
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -770,7 +770,7 @@ class ResearchSubject with Resource, _$ResearchSubject {
     List<Identifier>? identifier,
 
     /// [status] The current state of the subject.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')

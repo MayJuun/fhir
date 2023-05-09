@@ -22,12 +22,12 @@ PaymentNotice _$PaymentNoticeFromJson(Map<String, dynamic> json) {
 mixin _$PaymentNotice {
   @JsonKey(unknownEnumValue: Stu3ResourceType.PaymentNotice)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -42,7 +42,7 @@ mixin _$PaymentNotice {
   Element? get statusElement => throw _privateConstructorUsedError;
   Reference? get request => throw _privateConstructorUsedError;
   Reference? get response => throw _privateConstructorUsedError;
-  Date? get statusDate => throw _privateConstructorUsedError;
+  FhirDate? get statusDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_statusDate')
   Element? get statusDateElement => throw _privateConstructorUsedError;
   String? get created => throw _privateConstructorUsedError;
@@ -68,12 +68,12 @@ abstract class $PaymentNoticeCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.PaymentNotice)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -87,7 +87,7 @@ abstract class $PaymentNoticeCopyWith<$Res> {
           Element? statusElement,
       Reference? request,
       Reference? response,
-      Date? statusDate,
+      FhirDate? statusDate,
       @JsonKey(name: '_statusDate')
           Element? statusDateElement,
       String? created,
@@ -175,7 +175,7 @@ class _$PaymentNoticeCopyWithImpl<$Res, $Val extends PaymentNotice>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -419,12 +419,12 @@ abstract class _$$_PaymentNoticeCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.PaymentNotice)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -438,7 +438,7 @@ abstract class _$$_PaymentNoticeCopyWith<$Res>
           Element? statusElement,
       Reference? request,
       Reference? response,
-      Date? statusDate,
+      FhirDate? statusDate,
       @JsonKey(name: '_statusDate')
           Element? statusDateElement,
       String? created,
@@ -537,7 +537,7 @@ class __$$_PaymentNoticeCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -671,7 +671,7 @@ class _$_PaymentNotice extends _PaymentNotice {
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
-  final Code? language;
+  final FhirCode? language;
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
@@ -853,7 +853,7 @@ abstract class _PaymentNotice extends PaymentNotice {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -886,7 +886,7 @@ abstract class _PaymentNotice extends PaymentNotice {
   @JsonKey(unknownEnumValue: Stu3ResourceType.PaymentNotice)
   Stu3ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -895,7 +895,7 @@ abstract class _PaymentNotice extends PaymentNotice {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
-  Code? get language;
+  FhirCode? get language;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;
@@ -920,7 +920,7 @@ abstract class _PaymentNotice extends PaymentNotice {
   @override
   Reference? get response;
   @override
-  Date? get statusDate;
+  FhirDate? get statusDate;
   @override
   @JsonKey(name: '_statusDate')
   Element? get statusDateElement;
@@ -952,12 +952,12 @@ PaymentReconciliation _$PaymentReconciliationFromJson(
 mixin _$PaymentReconciliation {
   @JsonKey(unknownEnumValue: Stu3ResourceType.PaymentReconciliation)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -1004,12 +1004,12 @@ abstract class $PaymentReconciliationCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.PaymentReconciliation)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -1122,7 +1122,7 @@ class _$PaymentReconciliationCopyWithImpl<$Res,
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -1406,12 +1406,12 @@ abstract class _$$_PaymentReconciliationCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.PaymentReconciliation)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -1536,7 +1536,7 @@ class __$$_PaymentReconciliationCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -1692,7 +1692,7 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
-  final Code? language;
+  final FhirCode? language;
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
@@ -1906,7 +1906,7 @@ abstract class _PaymentReconciliation extends PaymentReconciliation {
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
               final Element? implicitRulesElement,
-          final Code? language,
+          final FhirCode? language,
           @JsonKey(name: '_language')
               final Element? languageElement,
           final Narrative? text,
@@ -1944,7 +1944,7 @@ abstract class _PaymentReconciliation extends PaymentReconciliation {
   @JsonKey(unknownEnumValue: Stu3ResourceType.PaymentReconciliation)
   Stu3ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -1953,7 +1953,7 @@ abstract class _PaymentReconciliation extends PaymentReconciliation {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
-  Code? get language;
+  FhirCode? get language;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;
@@ -2021,7 +2021,7 @@ mixin _$PaymentReconciliationDetail {
   Reference? get response => throw _privateConstructorUsedError;
   Reference? get submitter => throw _privateConstructorUsedError;
   Reference? get payee => throw _privateConstructorUsedError;
-  Date? get date => throw _privateConstructorUsedError;
+  FhirDate? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
   Money? get amount => throw _privateConstructorUsedError;
@@ -2046,7 +2046,7 @@ abstract class $PaymentReconciliationDetailCopyWith<$Res> {
       Reference? response,
       Reference? submitter,
       Reference? payee,
-      Date? date,
+      FhirDate? date,
       @JsonKey(name: '_date') Element? dateElement,
       Money? amount});
 
@@ -2214,7 +2214,7 @@ abstract class _$$_PaymentReconciliationDetailCopyWith<$Res>
       Reference? response,
       Reference? submitter,
       Reference? payee,
-      Date? date,
+      FhirDate? date,
       @JsonKey(name: '_date') Element? dateElement,
       Money? amount});
 
@@ -2398,7 +2398,7 @@ abstract class _PaymentReconciliationDetail
   @override
   Reference? get payee;
   @override
-  Date? get date;
+  FhirDate? get date;
   @override
   @JsonKey(name: '_date')
   Element? get dateElement;

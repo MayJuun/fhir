@@ -18,7 +18,7 @@ _$_FhirExtension _$$_FhirExtensionFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_url'] as Map<String, dynamic>),
       valueBase64Binary: json['valueBase64Binary'] == null
           ? null
-          : Base64Binary.fromJson(json['valueBase64Binary']),
+          : FhirBase64Binary?.fromJson(json['valueBase64Binary']),
       valueBase64BinaryElement: json['_valueBase64Binary'] == null
           ? null
           : Element.fromJson(

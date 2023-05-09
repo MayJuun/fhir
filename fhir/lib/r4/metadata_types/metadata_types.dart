@@ -262,7 +262,7 @@ class DataRequirement with _$DataRequirement {
     /// [type] The type of the required data, specified as the type name of a
     /// resource. For profiles, this value is set to the type of the base resource
     ///  of the profile.
-    Code? type,
+    FhirCode? type,
 
     /// [typeElement] Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
@@ -461,7 +461,7 @@ class DataRequirementCodeFilter with _$DataRequirementCodeFilter {
     /// elements are additive. If valueSet is specified, the filter will return
     /// only those data items for which the value of the code-valued element
     ///  specified in the path is a member of the specified valueset.
-    Canonical? valueSet,
+    FhirCanonical? valueSet,
 
     /// [code] The codes for the code filter. If values are given, the filter
     /// will return only those data items for which the code-valued attribute
@@ -874,20 +874,20 @@ class ParameterDefinition with _$ParameterDefinition {
 
     /// [name] The name of the parameter used to allow access to the value of the
     ///  parameter in evaluation contexts.
-    Code? name,
+    FhirCode? name,
 
     /// [nameElement] Extensions for name
     @JsonKey(name: '_name') Element? nameElement,
 
     /// [use] Whether the parameter is input or output for the module.
-    Code? use,
+    FhirCode? use,
 
     /// [useElement] Extensions for use
     @JsonKey(name: '_use') Element? useElement,
 
     /// [min] The minimum number of times this parameter SHALL appear in the
     ///  request or response.
-    Integer? min,
+    FhirInteger? min,
 
     /// [minElement] Extensions for min
     @JsonKey(name: '_min') Element? minElement,
@@ -907,14 +907,14 @@ class ParameterDefinition with _$ParameterDefinition {
     @JsonKey(name: '_documentation') Element? documentationElement,
 
     /// [type] The type of the parameter.
-    Code? type,
+    FhirCode? type,
 
     /// [typeElement] Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
 
     /// [profile] If specified, this indicates a profile that the input data must
     ///  conform to, or that the output data will conform to.
-    Canonical? profile,
+    FhirCanonical? profile,
   }) = _ParameterDefinition;
 
   /// Produces a Yaml formatted String version of the object
@@ -1036,7 +1036,7 @@ class RelatedArtifact with _$RelatedArtifact {
 
     /// [citation] A bibliographic citation for the related artifact. This text
     ///  SHOULD be formatted according to an accepted citation format.
-    Markdown? citation,
+    FhirMarkdown? citation,
 
     /// [citationElement] Extensions for citation
     @JsonKey(name: '_citation')
@@ -1056,7 +1056,7 @@ class RelatedArtifact with _$RelatedArtifact {
 
     /// [resource] The related resource, such as a library, value set, profile,
     ///  or other knowledge resource.
-    Canonical? resource,
+    FhirCanonical? resource,
   }) = _RelatedArtifact;
 
   /// Produces a Yaml formatted String version of the object
@@ -1179,7 +1179,7 @@ class TriggerDefinition with _$TriggerDefinition {
     Reference? timingReference,
 
     /// [timingDate] The timing of the event (if this is a periodic trigger).
-    Date? timingDate,
+    FhirDate? timingDate,
 
     /// [timingDateElement] Extensions for timingDate
     @JsonKey(name: '_timingDate')
@@ -1401,7 +1401,7 @@ class Expression with _$Expression {
 
     /// [name] A short name assigned to the expression to allow for multiple
     ///  reuse of the expression in the context where it is defined.
-    Id? name,
+    FhirId? name,
 
     /// [nameElement] Extensions for name
     @JsonKey(name: '_name')

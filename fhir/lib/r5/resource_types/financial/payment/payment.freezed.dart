@@ -26,7 +26,7 @@ mixin _$PaymentNotice {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -44,7 +44,7 @@ mixin _$PaymentNotice {
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
@@ -68,7 +68,7 @@ mixin _$PaymentNotice {
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [status] The status of the resource instance.
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
@@ -94,7 +94,7 @@ mixin _$PaymentNotice {
   Reference get payment => throw _privateConstructorUsedError;
 
   /// [paymentDate] The date when the above payment action occurred.
-  Date? get paymentDate => throw _privateConstructorUsedError;
+  FhirDate? get paymentDate => throw _privateConstructorUsedError;
 
   /// [paymentDateElement] ("_paymentDate") Extensions for paymentDate
   @JsonKey(name: '_paymentDate')
@@ -127,12 +127,12 @@ abstract class $PaymentNoticeCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.PaymentNotice)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -141,7 +141,7 @@ abstract class $PaymentNoticeCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Reference? request,
@@ -151,7 +151,7 @@ abstract class $PaymentNoticeCopyWith<$Res> {
           Element? createdElement,
       Reference? provider,
       Reference payment,
-      Date? paymentDate,
+      FhirDate? paymentDate,
       @JsonKey(name: '_paymentDate')
           Element? paymentDateElement,
       Reference? payee,
@@ -240,7 +240,7 @@ class _$PaymentNoticeCopyWithImpl<$Res, $Val extends PaymentNotice>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -268,7 +268,7 @@ class _$PaymentNoticeCopyWithImpl<$Res, $Val extends PaymentNotice>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -504,12 +504,12 @@ abstract class _$$_PaymentNoticeCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.PaymentNotice)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -518,7 +518,7 @@ abstract class _$$_PaymentNoticeCopyWith<$Res>
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Reference? request,
@@ -528,7 +528,7 @@ abstract class _$$_PaymentNoticeCopyWith<$Res>
           Element? createdElement,
       Reference? provider,
       Reference payment,
-      Date? paymentDate,
+      FhirDate? paymentDate,
       @JsonKey(name: '_paymentDate')
           Element? paymentDateElement,
       Reference? payee,
@@ -630,7 +630,7 @@ class __$$_PaymentNoticeCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -658,7 +658,7 @@ class __$$_PaymentNoticeCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -791,7 +791,7 @@ class _$_PaymentNotice extends _PaymentNotice {
 
   /// [language] The base language in which the resource is written.
   @override
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] ("_language") Extensions for language
   @override
@@ -858,7 +858,7 @@ class _$_PaymentNotice extends _PaymentNotice {
 
   /// [status] The status of the resource instance.
   @override
-  final Code? status;
+  final FhirCode? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -1025,7 +1025,7 @@ abstract class _PaymentNotice extends PaymentNotice {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -1034,7 +1034,7 @@ abstract class _PaymentNotice extends PaymentNotice {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      final Code? status,
+      final FhirCode? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
       final Reference? request,
@@ -1065,7 +1065,7 @@ abstract class _PaymentNotice extends PaymentNotice {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -1087,7 +1087,7 @@ abstract class _PaymentNotice extends PaymentNotice {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] ("_language") Extensions for language
@@ -1117,7 +1117,7 @@ abstract class _PaymentNotice extends PaymentNotice {
   @override
 
   /// [status] The status of the resource instance.
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status
@@ -1151,7 +1151,7 @@ abstract class _PaymentNotice extends PaymentNotice {
   @override
 
   /// [paymentDate] The date when the above payment action occurred.
-  Date? get paymentDate;
+  FhirDate? get paymentDate;
   @override
 
   /// [paymentDateElement] ("_paymentDate") Extensions for paymentDate
@@ -1192,7 +1192,7 @@ mixin _$PaymentReconciliation {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -1210,7 +1210,7 @@ mixin _$PaymentReconciliation {
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
@@ -1237,7 +1237,7 @@ mixin _$PaymentReconciliation {
   CodeableConcept get type => throw _privateConstructorUsedError;
 
   /// [status] The status of the resource instance.
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
@@ -1272,7 +1272,7 @@ mixin _$PaymentReconciliation {
   Reference? get requestor => throw _privateConstructorUsedError;
 
   /// [outcome] The outcome of a request for a reconciliation.
-  Code? get outcome => throw _privateConstructorUsedError;
+  FhirCode? get outcome => throw _privateConstructorUsedError;
 
   /// [outcomeElement] ("_outcome") Extensions for outcome
   @JsonKey(name: '_outcome')
@@ -1286,7 +1286,7 @@ mixin _$PaymentReconciliation {
   Element? get dispositionElement => throw _privateConstructorUsedError;
 
   /// [date] The date of payment as indicated on the financial instrument.
-  Date? get date => throw _privateConstructorUsedError;
+  FhirDate? get date => throw _privateConstructorUsedError;
 
   /// [dateElement] ("_date") Extensions for date
   @JsonKey(name: '_date')
@@ -1313,7 +1313,7 @@ mixin _$PaymentReconciliation {
   Element? get accountNumberElement => throw _privateConstructorUsedError;
 
   /// [expirationDate] The year and month (YYYY-MM) when the instrument, typically card, expires.
-  Date? get expirationDate => throw _privateConstructorUsedError;
+  FhirDate? get expirationDate => throw _privateConstructorUsedError;
 
   /// [expirationDateElement] ("_expirationDate") Extensions for expirationDate
   @JsonKey(name: '_expirationDate')
@@ -1378,12 +1378,12 @@ abstract class $PaymentReconciliationCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.PaymentReconciliation)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -1393,7 +1393,7 @@ abstract class $PaymentReconciliationCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       CodeableConcept type,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? kind,
@@ -1406,13 +1406,13 @@ abstract class $PaymentReconciliationCopyWith<$Res> {
       Reference? paymentIssuer,
       Reference? request,
       Reference? requestor,
-      Code? outcome,
+      FhirCode? outcome,
       @JsonKey(name: '_outcome')
           Element? outcomeElement,
       String? disposition,
       @JsonKey(name: '_disposition')
           Element? dispositionElement,
-      Date? date,
+      FhirDate? date,
       @JsonKey(name: '_date')
           Element? dateElement,
       Reference? location,
@@ -1423,7 +1423,7 @@ abstract class $PaymentReconciliationCopyWith<$Res> {
       String? accountNumber,
       @JsonKey(name: '_accountNumber')
           Element? accountNumberElement,
-      Date? expirationDate,
+      FhirDate? expirationDate,
       @JsonKey(name: '_expirationDate')
           Element? expirationDateElement,
       String? processor,
@@ -1565,7 +1565,7 @@ class _$PaymentReconciliationCopyWithImpl<$Res,
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -1597,7 +1597,7 @@ class _$PaymentReconciliationCopyWithImpl<$Res,
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -1641,7 +1641,7 @@ class _$PaymentReconciliationCopyWithImpl<$Res,
       outcome: freezed == outcome
           ? _value.outcome
           : outcome // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       outcomeElement: freezed == outcomeElement
           ? _value.outcomeElement
           : outcomeElement // ignore: cast_nullable_to_non_nullable
@@ -2113,12 +2113,12 @@ abstract class _$$_PaymentReconciliationCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.PaymentReconciliation)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -2128,7 +2128,7 @@ abstract class _$$_PaymentReconciliationCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       CodeableConcept type,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? kind,
@@ -2141,13 +2141,13 @@ abstract class _$$_PaymentReconciliationCopyWith<$Res>
       Reference? paymentIssuer,
       Reference? request,
       Reference? requestor,
-      Code? outcome,
+      FhirCode? outcome,
       @JsonKey(name: '_outcome')
           Element? outcomeElement,
       String? disposition,
       @JsonKey(name: '_disposition')
           Element? dispositionElement,
-      Date? date,
+      FhirDate? date,
       @JsonKey(name: '_date')
           Element? dateElement,
       Reference? location,
@@ -2158,7 +2158,7 @@ abstract class _$$_PaymentReconciliationCopyWith<$Res>
       String? accountNumber,
       @JsonKey(name: '_accountNumber')
           Element? accountNumberElement,
-      Date? expirationDate,
+      FhirDate? expirationDate,
       @JsonKey(name: '_expirationDate')
           Element? expirationDateElement,
       String? processor,
@@ -2327,7 +2327,7 @@ class __$$_PaymentReconciliationCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -2359,7 +2359,7 @@ class __$$_PaymentReconciliationCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -2403,7 +2403,7 @@ class __$$_PaymentReconciliationCopyWithImpl<$Res>
       outcome: freezed == outcome
           ? _value.outcome
           : outcome // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       outcomeElement: freezed == outcomeElement
           ? _value.outcomeElement
           : outcomeElement // ignore: cast_nullable_to_non_nullable
@@ -2623,7 +2623,7 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
 
   /// [language] The base language in which the resource is written.
   @override
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] ("_language") Extensions for language
   @override
@@ -2694,7 +2694,7 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
 
   /// [status] The status of the resource instance.
   @override
-  final Code? status;
+  final FhirCode? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -2740,7 +2740,7 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
 
   /// [outcome] The outcome of a request for a reconciliation.
   @override
-  final Code? outcome;
+  final FhirCode? outcome;
 
   /// [outcomeElement] ("_outcome") Extensions for outcome
   @override
@@ -3054,7 +3054,7 @@ abstract class _PaymentReconciliation extends PaymentReconciliation {
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
               final Element? implicitRulesElement,
-          final Code? language,
+          final FhirCode? language,
           @JsonKey(name: '_language')
               final Element? languageElement,
           final Narrative? text,
@@ -3064,7 +3064,7 @@ abstract class _PaymentReconciliation extends PaymentReconciliation {
           final List<FhirExtension>? modifierExtension,
           final List<Identifier>? identifier,
           required final CodeableConcept type,
-          final Code? status,
+          final FhirCode? status,
           @JsonKey(name: '_status')
               final Element? statusElement,
           final CodeableConcept? kind,
@@ -3077,7 +3077,7 @@ abstract class _PaymentReconciliation extends PaymentReconciliation {
           final Reference? paymentIssuer,
           final Reference? request,
           final Reference? requestor,
-          final Code? outcome,
+          final FhirCode? outcome,
           @JsonKey(name: '_outcome')
               final Element? outcomeElement,
           final String? disposition,
@@ -3128,7 +3128,7 @@ abstract class _PaymentReconciliation extends PaymentReconciliation {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -3150,7 +3150,7 @@ abstract class _PaymentReconciliation extends PaymentReconciliation {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] ("_language") Extensions for language
@@ -3184,7 +3184,7 @@ abstract class _PaymentReconciliation extends PaymentReconciliation {
   @override
 
   /// [status] The status of the resource instance.
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status
@@ -3230,7 +3230,7 @@ abstract class _PaymentReconciliation extends PaymentReconciliation {
   @override
 
   /// [outcome] The outcome of a request for a reconciliation.
-  Code? get outcome;
+  FhirCode? get outcome;
   @override
 
   /// [outcomeElement] ("_outcome") Extensions for outcome
@@ -3248,7 +3248,7 @@ abstract class _PaymentReconciliation extends PaymentReconciliation {
   @override
 
   /// [date] The date of payment as indicated on the financial instrument.
-  Date? get date;
+  FhirDate? get date;
   @override
 
   /// [dateElement] ("_date") Extensions for date
@@ -3283,7 +3283,7 @@ abstract class _PaymentReconciliation extends PaymentReconciliation {
   @override
 
   /// [expirationDate] The year and month (YYYY-MM) when the instrument, typically card, expires.
-  Date? get expirationDate;
+  FhirDate? get expirationDate;
   @override
 
   /// [expirationDateElement] ("_expirationDate") Extensions for expirationDate
@@ -3428,7 +3428,7 @@ mixin _$PaymentReconciliationAllocation {
   Reference? get response => throw _privateConstructorUsedError;
 
   /// [date] The date from the response resource containing a commitment to pay.
-  Date? get date => throw _privateConstructorUsedError;
+  FhirDate? get date => throw _privateConstructorUsedError;
 
   /// [dateElement] ("_date") Extensions for date
   @JsonKey(name: '_date')
@@ -3477,7 +3477,7 @@ abstract class $PaymentReconciliationAllocationCopyWith<$Res> {
       CodeableConcept? type,
       Reference? submitter,
       Reference? response,
-      Date? date,
+      FhirDate? date,
       @JsonKey(name: '_date')
           Element? dateElement,
       Reference? responsible,
@@ -3837,7 +3837,7 @@ abstract class _$$_PaymentReconciliationAllocationCopyWith<$Res>
       CodeableConcept? type,
       Reference? submitter,
       Reference? response,
-      Date? date,
+      FhirDate? date,
       @JsonKey(name: '_date')
           Element? dateElement,
       Reference? responsible,
@@ -4391,7 +4391,7 @@ abstract class _PaymentReconciliationAllocation
   @override
 
   /// [date] The date from the response resource containing a commitment to pay.
-  Date? get date;
+  FhirDate? get date;
   @override
 
   /// [dateElement] ("_date") Extensions for date
@@ -4452,7 +4452,7 @@ mixin _$PaymentReconciliationProcessNote {
       throw _privateConstructorUsedError;
 
   /// [type] The business purpose of the note text.
-  Code? get type => throw _privateConstructorUsedError;
+  FhirCode? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] ("_type") Extensions for type
   @JsonKey(name: '_type')
@@ -4483,7 +4483,7 @@ abstract class $PaymentReconciliationProcessNoteCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? type,
+      FhirCode? type,
       @JsonKey(name: '_type') Element? typeElement,
       String? text,
       @JsonKey(name: '_text') Element? textElement});
@@ -4530,7 +4530,7 @@ class _$PaymentReconciliationProcessNoteCopyWithImpl<$Res,
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       typeElement: freezed == typeElement
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -4584,7 +4584,7 @@ abstract class _$$_PaymentReconciliationProcessNoteCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? type,
+      FhirCode? type,
       @JsonKey(name: '_type') Element? typeElement,
       String? text,
       @JsonKey(name: '_text') Element? textElement});
@@ -4632,7 +4632,7 @@ class __$$_PaymentReconciliationProcessNoteCopyWithImpl<$Res>
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       typeElement: freezed == typeElement
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -4736,7 +4736,7 @@ class _$_PaymentReconciliationProcessNote
 
   /// [type] The business purpose of the note text.
   @override
-  final Code? type;
+  final FhirCode? type;
 
   /// [typeElement] ("_type") Extensions for type
   @override
@@ -4809,7 +4809,7 @@ abstract class _PaymentReconciliationProcessNote
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
-          final Code? type,
+          final FhirCode? type,
           @JsonKey(name: '_type') final Element? typeElement,
           final String? text,
           @JsonKey(name: '_text') final Element? textElement}) =
@@ -4852,7 +4852,7 @@ abstract class _PaymentReconciliationProcessNote
   @override
 
   /// [type] The business purpose of the note text.
-  Code? get type;
+  FhirCode? get type;
   @override
 
   /// [typeElement] ("_type") Extensions for type

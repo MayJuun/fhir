@@ -207,7 +207,7 @@ class AdverseEvent with Resource, _$AdverseEvent {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -224,7 +224,7 @@ class AdverseEvent with Resource, _$AdverseEvent {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -245,13 +245,13 @@ class AdverseEvent with Resource, _$AdverseEvent {
     List<Identifier>? identifier,
 
     /// [status] The current state of the adverse event or potential adverse event.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
 
     /// [actuality] Whether the event actually happened or was a near miss. Note that this is independent of whether anyone was affected or harmed or how severely.
-    Code? actuality,
+    FhirCode? actuality,
 
     /// [actualityElement] ("_actuality") Extensions for actuality
     @JsonKey(name: '_actuality') Element? actualityElement,
@@ -314,7 +314,7 @@ class AdverseEvent with Resource, _$AdverseEvent {
     List<Reference>? study,
 
     /// [expectedInResearchStudy] Considered likely or probable or anticipated in the research study.  Whether the reported event matches any of the outcomes for the patient that are considered by the study as known or likely.
-    Boolean? expectedInResearchStudy,
+    FhirBoolean? expectedInResearchStudy,
 
     /// [expectedInResearchStudyElement] ("_expectedInResearchStudy") Extensions for expectedInResearchStudy
     @JsonKey(name: '_expectedInResearchStudy')
@@ -1513,7 +1513,7 @@ class AllergyIntolerance with Resource, _$AllergyIntolerance {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -1530,7 +1530,7 @@ class AllergyIntolerance with Resource, _$AllergyIntolerance {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -1566,7 +1566,7 @@ class AllergyIntolerance with Resource, _$AllergyIntolerance {
     @JsonKey(name: '_category') List<Element>? categoryElement,
 
     /// [criticality] Estimate of the potential clinical harm, or seriousness, of the reaction to the identified substance.
-    Code? criticality,
+    FhirCode? criticality,
 
     /// [criticalityElement] ("_criticality") Extensions for criticality
     @JsonKey(name: '_criticality') Element? criticalityElement,
@@ -1884,7 +1884,7 @@ class AllergyIntoleranceReaction with _$AllergyIntoleranceReaction {
     @JsonKey(name: '_onset') Element? onsetElement,
 
     /// [severity] Clinical assessment of the severity of the reaction event as a whole, potentially considering multiple different manifestations.
-    Code? severity,
+    FhirCode? severity,
 
     /// [severityElement] ("_severity") Extensions for severity
     @JsonKey(name: '_severity') Element? severityElement,
@@ -2090,7 +2090,7 @@ class ClinicalImpression with Resource, _$ClinicalImpression {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -2107,7 +2107,7 @@ class ClinicalImpression with Resource, _$ClinicalImpression {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -2128,7 +2128,7 @@ class ClinicalImpression with Resource, _$ClinicalImpression {
     List<Identifier>? identifier,
 
     /// [status] Identifies the workflow status of the assessment.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -2539,7 +2539,7 @@ class Condition with Resource, _$Condition {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -2556,7 +2556,7 @@ class Condition with Resource, _$Condition {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -3050,7 +3050,7 @@ class DetectedIssue with Resource, _$DetectedIssue {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -3067,7 +3067,7 @@ class DetectedIssue with Resource, _$DetectedIssue {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -3088,7 +3088,7 @@ class DetectedIssue with Resource, _$DetectedIssue {
     List<Identifier>? identifier,
 
     /// [status] Indicates the status of the detected issue.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -3100,7 +3100,7 @@ class DetectedIssue with Resource, _$DetectedIssue {
     CodeableConcept? code,
 
     /// [severity] Indicates the degree of importance associated with the identified issue based on the potential impact on the patient.
-    Code? severity,
+    FhirCode? severity,
 
     /// [severityElement] ("_severity") Extensions for severity
     @JsonKey(name: '_severity') Element? severityElement,
@@ -3590,7 +3590,7 @@ class FamilyMemberHistory with Resource, _$FamilyMemberHistory {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -3607,7 +3607,7 @@ class FamilyMemberHistory with Resource, _$FamilyMemberHistory {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -3637,7 +3637,7 @@ class FamilyMemberHistory with Resource, _$FamilyMemberHistory {
     @JsonKey(name: '_instantiatesUri') List<Element>? instantiatesUriElement,
 
     /// [status] A code specifying the status of the record of the family history of a specific family member.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -3673,7 +3673,7 @@ class FamilyMemberHistory with Resource, _$FamilyMemberHistory {
     Period? bornPeriod,
 
     /// [bornDate] The actual or approximate date of birth of the relative.
-    Date? bornDate,
+    FhirDate? bornDate,
 
     /// [bornDateElement] ("_bornDate") Extensions for bornDate
     @JsonKey(name: '_bornDate') Element? bornDateElement,
@@ -3697,13 +3697,13 @@ class FamilyMemberHistory with Resource, _$FamilyMemberHistory {
     @JsonKey(name: '_ageString') Element? ageStringElement,
 
     /// [estimatedAge] If true, indicates that the age value specified is an estimated value.
-    Boolean? estimatedAge,
+    FhirBoolean? estimatedAge,
 
     /// [estimatedAgeElement] ("_estimatedAge") Extensions for estimatedAge
     @JsonKey(name: '_estimatedAge') Element? estimatedAgeElement,
 
     /// [deceasedBoolean] Deceased flag or the actual or approximate age of the relative at the time of death for the family member history record.
-    Boolean? deceasedBoolean,
+    FhirBoolean? deceasedBoolean,
 
     /// [deceasedBooleanElement] ("_deceasedBoolean") Extensions for deceasedBoolean
     @JsonKey(name: '_deceasedBoolean') Element? deceasedBooleanElement,
@@ -3715,7 +3715,7 @@ class FamilyMemberHistory with Resource, _$FamilyMemberHistory {
     Range? deceasedRange,
 
     /// [deceasedDate] Deceased flag or the actual or approximate age of the relative at the time of death for the family member history record.
-    Date? deceasedDate,
+    FhirDate? deceasedDate,
 
     /// [deceasedDateElement] ("_deceasedDate") Extensions for deceasedDate
     @JsonKey(name: '_deceasedDate') Element? deceasedDateElement,
@@ -3986,7 +3986,7 @@ class FamilyMemberHistoryCondition with _$FamilyMemberHistoryCondition {
     CodeableConcept? outcome,
 
     /// [contributedToDeath] This condition contributed to the cause of death of the related person. If contributedToDeath is not populated, then it is unknown.
-    Boolean? contributedToDeath,
+    FhirBoolean? contributedToDeath,
 
     /// [contributedToDeathElement] ("_contributedToDeath") Extensions for contributedToDeath
     @JsonKey(name: '_contributedToDeath') Element? contributedToDeathElement,
@@ -4159,7 +4159,7 @@ class FamilyMemberHistoryProcedure with _$FamilyMemberHistoryProcedure {
     CodeableConcept? outcome,
 
     /// [contributedToDeath] This procedure contributed to the cause of death of the related person. If contributedToDeath is not populated, then it is unknown.
-    Boolean? contributedToDeath,
+    FhirBoolean? contributedToDeath,
 
     /// [contributedToDeathElement] ("_contributedToDeath") Extensions for contributedToDeath
     @JsonKey(name: '_contributedToDeath') Element? contributedToDeathElement,
@@ -4465,7 +4465,7 @@ class Procedure with Resource, _$Procedure {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -4482,7 +4482,7 @@ class Procedure with Resource, _$Procedure {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -4518,7 +4518,7 @@ class Procedure with Resource, _$Procedure {
     List<Reference>? partOf,
 
     /// [status] A code specifying the state of the procedure. Generally, this will be the in-progress or completed state.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -4575,7 +4575,7 @@ class Procedure with Resource, _$Procedure {
     Reference? recorder,
 
     /// [reportedBoolean] Indicates if this record was captured as a secondary 'reported' record rather than as an original primary source-of-truth record.  It may also indicate the source of the report.
-    Boolean? reportedBoolean,
+    FhirBoolean? reportedBoolean,
 
     /// [reportedBooleanElement] ("_reportedBoolean") Extensions for reportedBoolean
     @JsonKey(name: '_reportedBoolean') Element? reportedBooleanElement,

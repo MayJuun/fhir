@@ -19,11 +19,11 @@ class MessageHeader with Resource, _$MessageHeader {
     @Default(Dstu2ResourceType.MessageHeader)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.MessageHeader)
         Dstu2ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+     FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -74,7 +74,7 @@ class MessageHeader with Resource, _$MessageHeader {
 class MessageHeaderResponse with _$MessageHeaderResponse {
   MessageHeaderResponse._();
   factory MessageHeaderResponse({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Id identifier,
@@ -119,7 +119,7 @@ class MessageHeaderResponse with _$MessageHeaderResponse {
 class MessageHeaderSource with _$MessageHeaderSource {
   MessageHeaderSource._();
   factory MessageHeaderSource({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? name,
@@ -168,7 +168,7 @@ class MessageHeaderSource with _$MessageHeaderSource {
 class MessageHeaderDestination with _$MessageHeaderDestination {
   MessageHeaderDestination._();
   factory MessageHeaderDestination({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? name,
@@ -216,12 +216,12 @@ class OperationOutcome with Resource, _$OperationOutcome {
     @Default(Dstu2ResourceType.OperationOutcome)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.OperationOutcome)
         Dstu2ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     @JsonKey(name: '_id') Element? idElement,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+     FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -265,7 +265,7 @@ class OperationOutcome with Resource, _$OperationOutcome {
 class OperationOutcomeIssue with _$OperationOutcomeIssue {
   OperationOutcomeIssue._();
   factory OperationOutcomeIssue({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: IssueSeverity.unknown)
@@ -314,11 +314,11 @@ class Parameters with Resource, _$Parameters {
     @Default(Dstu2ResourceType.Parameters)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Parameters)
         Dstu2ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+     FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     List<ParametersParameter>? parameter,
   }) = _Parameters;
@@ -355,30 +355,30 @@ class Parameters with Resource, _$Parameters {
 class ParametersParameter with _$ParametersParameter {
   ParametersParameter._();
   factory ParametersParameter({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required String name,
     @JsonKey(name: '_name') Element? nameElement,
-    Integer? valueInteger,
+    FhirInteger? valueInteger,
     @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
-    Decimal? valueDecimal,
+    FhirDecimal? valueDecimal,
     @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
     FhirDateTime? valueDateTime,
     @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
-    Date? valueDate,
+    FhirDate? valueDate,
     @JsonKey(name: '_valueDate') Element? valueDateElement,
-    Instant? valueInstant,
+    FhirInstant? valueInstant,
     @JsonKey(name: '_valueInstant') Element? valueInstantElement,
     String? valueString,
     @JsonKey(name: '_valueString') Element? valueStringElement,
     FhirUri? valueUri,
     @JsonKey(name: '_valueUri') Element? valueUriElement,
-    Boolean? valueBoolean,
+     FhirBoolean? valueBoolean,
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-    Code? valueCode,
+     FhirCode? valueCode,
     @JsonKey(name: '_valueCode') Element? valueCodeElement,
-    Base64Binary? valueBase64Binary,
+  FhirBase64Binary?? valueBase64Binary,
     @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
     Coding? valueCoding,
     CodeableConcept? valueCodeableConcept,
@@ -435,11 +435,11 @@ class Subscription with Resource, _$Subscription {
     @Default(Dstu2ResourceType.Subscription)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Subscription)
         Dstu2ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+     FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -456,7 +456,7 @@ class Subscription with Resource, _$Subscription {
     String? error,
     @JsonKey(name: '_error') Element? errorElement,
     required SubscriptionChannel channel,
-    Instant? end,
+    FhirInstant? end,
     @JsonKey(name: '_end') Element? endElement,
     List<Coding>? tag,
   }) = _Subscription;
@@ -493,7 +493,7 @@ class Subscription with Resource, _$Subscription {
 class SubscriptionChannel with _$SubscriptionChannel {
   SubscriptionChannel._();
   factory SubscriptionChannel({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: ChannelType.unknown) required ChannelType type,

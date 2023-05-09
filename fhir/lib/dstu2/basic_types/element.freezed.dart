@@ -20,7 +20,7 @@ Element _$ElementFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Element {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @JsonKey(name: 'fhir_comments')
@@ -208,7 +208,7 @@ abstract class _Element extends Element {
   factory _Element.fromJson(Map<String, dynamic> json) = _$_Element.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;

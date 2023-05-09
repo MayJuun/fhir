@@ -26,7 +26,7 @@ mixin _$Account {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -44,7 +44,7 @@ mixin _$Account {
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
@@ -68,7 +68,7 @@ mixin _$Account {
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [status] Indicates whether the account is presently used/usable or not.
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
@@ -120,7 +120,7 @@ mixin _$Account {
   List<AccountBalance>? get balance => throw _privateConstructorUsedError;
 
   /// [calculatedAt] Time the balance amount was calculated.
-  Instant? get calculatedAt => throw _privateConstructorUsedError;
+  FhirInstant? get calculatedAt => throw _privateConstructorUsedError;
 
   /// [calculatedAtElement] ("_calculatedAt") Extensions for calculatedAt
   @JsonKey(name: '_calculatedAt')
@@ -139,12 +139,12 @@ abstract class $AccountCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Account)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -153,7 +153,7 @@ abstract class $AccountCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? billingStatus,
@@ -172,7 +172,7 @@ abstract class $AccountCopyWith<$Res> {
       List<AccountRelatedAccount>? relatedAccount,
       CodeableConcept? currency,
       List<AccountBalance>? balance,
-      Instant? calculatedAt,
+      FhirInstant? calculatedAt,
       @JsonKey(name: '_calculatedAt')
           Element? calculatedAtElement});
 
@@ -259,7 +259,7 @@ class _$AccountCopyWithImpl<$Res, $Val extends Account>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -287,7 +287,7 @@ class _$AccountCopyWithImpl<$Res, $Val extends Account>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -526,12 +526,12 @@ abstract class _$$_AccountCopyWith<$Res> implements $AccountCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Account)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -540,7 +540,7 @@ abstract class _$$_AccountCopyWith<$Res> implements $AccountCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? billingStatus,
@@ -559,7 +559,7 @@ abstract class _$$_AccountCopyWith<$Res> implements $AccountCopyWith<$Res> {
       List<AccountRelatedAccount>? relatedAccount,
       CodeableConcept? currency,
       List<AccountBalance>? balance,
-      Instant? calculatedAt,
+      FhirInstant? calculatedAt,
       @JsonKey(name: '_calculatedAt')
           Element? calculatedAtElement});
 
@@ -656,7 +656,7 @@ class __$$_AccountCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -684,7 +684,7 @@ class __$$_AccountCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -843,7 +843,7 @@ class _$_Account extends _Account {
 
   /// [language] The base language in which the resource is written.
   @override
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] ("_language") Extensions for language
   @override
@@ -910,7 +910,7 @@ class _$_Account extends _Account {
 
   /// [status] Indicates whether the account is presently used/usable or not.
   @override
-  final Code? status;
+  final FhirCode? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -1150,7 +1150,7 @@ abstract class _Account extends Account {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -1159,7 +1159,7 @@ abstract class _Account extends Account {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      final Code? status,
+      final FhirCode? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
       final CodeableConcept? billingStatus,
@@ -1194,7 +1194,7 @@ abstract class _Account extends Account {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -1216,7 +1216,7 @@ abstract class _Account extends Account {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] ("_language") Extensions for language
@@ -1246,7 +1246,7 @@ abstract class _Account extends Account {
   @override
 
   /// [status] Indicates whether the account is presently used/usable or not.
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status
@@ -1313,7 +1313,7 @@ abstract class _Account extends Account {
   @override
 
   /// [calculatedAt] Time the balance amount was calculated.
-  Instant? get calculatedAt;
+  FhirInstant? get calculatedAt;
   @override
 
   /// [calculatedAtElement] ("_calculatedAt") Extensions for calculatedAt
@@ -1775,7 +1775,7 @@ mixin _$AccountGuarantor {
   Reference get party => throw _privateConstructorUsedError;
 
   /// [onHold] A guarantor may be placed on credit hold or otherwise have their role temporarily suspended.
-  Boolean? get onHold => throw _privateConstructorUsedError;
+  FhirBoolean? get onHold => throw _privateConstructorUsedError;
 
   /// [onHoldElement] ("_onHold") Extensions for onHold
   @JsonKey(name: '_onHold')
@@ -1801,7 +1801,7 @@ abstract class $AccountGuarantorCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Reference party,
-      Boolean? onHold,
+      FhirBoolean? onHold,
       @JsonKey(name: '_onHold') Element? onHoldElement,
       Period? period});
 
@@ -1851,7 +1851,7 @@ class _$AccountGuarantorCopyWithImpl<$Res, $Val extends AccountGuarantor>
       onHold: freezed == onHold
           ? _value.onHold
           : onHold // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       onHoldElement: freezed == onHoldElement
           ? _value.onHoldElement
           : onHoldElement // ignore: cast_nullable_to_non_nullable
@@ -1909,7 +1909,7 @@ abstract class _$$_AccountGuarantorCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Reference party,
-      Boolean? onHold,
+      FhirBoolean? onHold,
       @JsonKey(name: '_onHold') Element? onHoldElement,
       Period? period});
 
@@ -1960,7 +1960,7 @@ class __$$_AccountGuarantorCopyWithImpl<$Res>
       onHold: freezed == onHold
           ? _value.onHold
           : onHold // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       onHoldElement: freezed == onHoldElement
           ? _value.onHoldElement
           : onHoldElement // ignore: cast_nullable_to_non_nullable
@@ -2062,7 +2062,7 @@ class _$_AccountGuarantor extends _AccountGuarantor {
 
   /// [onHold] A guarantor may be placed on credit hold or otherwise have their role temporarily suspended.
   @override
-  final Boolean? onHold;
+  final FhirBoolean? onHold;
 
   /// [onHoldElement] ("_onHold") Extensions for onHold
   @override
@@ -2127,7 +2127,7 @@ abstract class _AccountGuarantor extends AccountGuarantor {
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final Reference party,
-      final Boolean? onHold,
+      final FhirBoolean? onHold,
       @JsonKey(name: '_onHold') final Element? onHoldElement,
       final Period? period}) = _$_AccountGuarantor;
   _AccountGuarantor._() : super._();
@@ -2172,7 +2172,7 @@ abstract class _AccountGuarantor extends AccountGuarantor {
   @override
 
   /// [onHold] A guarantor may be placed on credit hold or otherwise have their role temporarily suspended.
-  Boolean? get onHold;
+  FhirBoolean? get onHold;
   @override
 
   /// [onHoldElement] ("_onHold") Extensions for onHold
@@ -2611,7 +2611,7 @@ mixin _$AccountBalance {
   CodeableConcept? get term => throw _privateConstructorUsedError;
 
   /// [estimate] The amount is only an estimated value - this is likely common for `current` term balances, but not with known terms (that were generated by a backend process).
-  Boolean? get estimate => throw _privateConstructorUsedError;
+  FhirBoolean? get estimate => throw _privateConstructorUsedError;
 
   /// [estimateElement] ("_estimate") Extensions for estimate
   @JsonKey(name: '_estimate')
@@ -2638,7 +2638,7 @@ abstract class $AccountBalanceCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       CodeableConcept? aggregate,
       CodeableConcept? term,
-      Boolean? estimate,
+      FhirBoolean? estimate,
       @JsonKey(name: '_estimate') Element? estimateElement,
       Money amount});
 
@@ -2694,7 +2694,7 @@ class _$AccountBalanceCopyWithImpl<$Res, $Val extends AccountBalance>
       estimate: freezed == estimate
           ? _value.estimate
           : estimate // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       estimateElement: freezed == estimateElement
           ? _value.estimateElement
           : estimateElement // ignore: cast_nullable_to_non_nullable
@@ -2765,7 +2765,7 @@ abstract class _$$_AccountBalanceCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       CodeableConcept? aggregate,
       CodeableConcept? term,
-      Boolean? estimate,
+      FhirBoolean? estimate,
       @JsonKey(name: '_estimate') Element? estimateElement,
       Money amount});
 
@@ -2823,7 +2823,7 @@ class __$$_AccountBalanceCopyWithImpl<$Res>
       estimate: freezed == estimate
           ? _value.estimate
           : estimate // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       estimateElement: freezed == estimateElement
           ? _value.estimateElement
           : estimateElement // ignore: cast_nullable_to_non_nullable
@@ -2930,7 +2930,7 @@ class _$_AccountBalance extends _AccountBalance {
 
   /// [estimate] The amount is only an estimated value - this is likely common for `current` term balances, but not with known terms (that were generated by a backend process).
   @override
-  final Boolean? estimate;
+  final FhirBoolean? estimate;
 
   /// [estimateElement] ("_estimate") Extensions for estimate
   @override
@@ -3000,7 +3000,7 @@ abstract class _AccountBalance extends AccountBalance {
       final List<FhirExtension>? modifierExtension,
       final CodeableConcept? aggregate,
       final CodeableConcept? term,
-      final Boolean? estimate,
+      final FhirBoolean? estimate,
       @JsonKey(name: '_estimate') final Element? estimateElement,
       required final Money amount}) = _$_AccountBalance;
   _AccountBalance._() : super._();
@@ -3049,7 +3049,7 @@ abstract class _AccountBalance extends AccountBalance {
   @override
 
   /// [estimate] The amount is only an estimated value - this is likely common for `current` term balances, but not with known terms (that were generated by a backend process).
-  Boolean? get estimate;
+  FhirBoolean? get estimate;
   @override
 
   /// [estimateElement] ("_estimate") Extensions for estimate
@@ -3077,7 +3077,7 @@ mixin _$ChargeItem {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -3095,7 +3095,7 @@ mixin _$ChargeItem {
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
@@ -3130,7 +3130,7 @@ mixin _$ChargeItem {
       throw _privateConstructorUsedError;
 
   /// [status] The current state of the ChargeItem.
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
@@ -3235,12 +3235,12 @@ abstract class $ChargeItemCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.ChargeItem)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -3253,7 +3253,7 @@ abstract class $ChargeItemCopyWith<$Res> {
       @JsonKey(name: '_definitionUri')
           List<Element>? definitionUriElement,
       List<Canonical>? definitionCanonical,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       List<Reference>? partOf,
@@ -3388,7 +3388,7 @@ class _$ChargeItemCopyWithImpl<$Res, $Val extends ChargeItem>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -3428,7 +3428,7 @@ class _$ChargeItemCopyWithImpl<$Res, $Val extends ChargeItem>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -3786,12 +3786,12 @@ abstract class _$$_ChargeItemCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.ChargeItem)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -3804,7 +3804,7 @@ abstract class _$$_ChargeItemCopyWith<$Res>
       @JsonKey(name: '_definitionUri')
           List<Element>? definitionUriElement,
       List<Canonical>? definitionCanonical,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       List<Reference>? partOf,
@@ -3957,7 +3957,7 @@ class __$$_ChargeItemCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -3997,7 +3997,7 @@ class __$$_ChargeItemCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -4216,7 +4216,7 @@ class _$_ChargeItem extends _ChargeItem {
 
   /// [language] The base language in which the resource is written.
   @override
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] ("_language") Extensions for language
   @override
@@ -4325,7 +4325,7 @@ class _$_ChargeItem extends _ChargeItem {
 
   /// [status] The current state of the ChargeItem.
   @override
-  final Code? status;
+  final FhirCode? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -4677,7 +4677,7 @@ abstract class _ChargeItem extends ChargeItem {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -4690,7 +4690,7 @@ abstract class _ChargeItem extends ChargeItem {
       @JsonKey(name: '_definitionUri')
           final List<Element>? definitionUriElement,
       final List<Canonical>? definitionCanonical,
-      final Code? status,
+      final FhirCode? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
       final List<Reference>? partOf,
@@ -4735,7 +4735,7 @@ abstract class _ChargeItem extends ChargeItem {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -4757,7 +4757,7 @@ abstract class _ChargeItem extends ChargeItem {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] ("_language") Extensions for language
@@ -4800,7 +4800,7 @@ abstract class _ChargeItem extends ChargeItem {
   @override
 
   /// [status] The current state of the ChargeItem.
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status
@@ -5313,7 +5313,7 @@ mixin _$ChargeItemDefinition {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -5331,7 +5331,7 @@ mixin _$ChargeItemDefinition {
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
@@ -5394,14 +5394,14 @@ mixin _$ChargeItemDefinition {
   Element? get titleElement => throw _privateConstructorUsedError;
 
   /// [status] The current state of the ChargeItemDefinition.
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
 
   /// [experimental] A Boolean value to indicate that this charge item definition is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.
-  Boolean? get experimental => throw _privateConstructorUsedError;
+  FhirBoolean? get experimental => throw _privateConstructorUsedError;
 
   /// [experimentalElement] ("_experimental") Extensions for experimental
   @JsonKey(name: '_experimental')
@@ -5425,7 +5425,7 @@ mixin _$ChargeItemDefinition {
   List<ContactDetail>? get contact => throw _privateConstructorUsedError;
 
   /// [description] A free text natural language description of the charge item definition from a consumer's perspective.
-  Markdown? get description => throw _privateConstructorUsedError;
+  FhirMarkdown? get description => throw _privateConstructorUsedError;
 
   /// [descriptionElement] ("_description") Extensions for description
   @JsonKey(name: '_description')
@@ -5438,14 +5438,14 @@ mixin _$ChargeItemDefinition {
   List<CodeableConcept>? get jurisdiction => throw _privateConstructorUsedError;
 
   /// [purpose] Explanation of why this charge item definition is needed and why it has been designed as it has.
-  Markdown? get purpose => throw _privateConstructorUsedError;
+  FhirMarkdown? get purpose => throw _privateConstructorUsedError;
 
   /// [purposeElement] ("_purpose") Extensions for purpose
   @JsonKey(name: '_purpose')
   Element? get purposeElement => throw _privateConstructorUsedError;
 
   /// [copyright] A copyright statement relating to the charge item definition and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the charge item definition.
-  Markdown? get copyright => throw _privateConstructorUsedError;
+  FhirMarkdown? get copyright => throw _privateConstructorUsedError;
 
   /// [copyrightElement] ("_copyright") Extensions for copyright
   @JsonKey(name: '_copyright')
@@ -5459,14 +5459,14 @@ mixin _$ChargeItemDefinition {
   Element? get copyrightLabelElement => throw _privateConstructorUsedError;
 
   /// [approvalDate] The date on which the resource content was approved by the publisher. Approval happens once when the content is officially approved for usage.
-  Date? get approvalDate => throw _privateConstructorUsedError;
+  FhirDate? get approvalDate => throw _privateConstructorUsedError;
 
   /// [approvalDateElement] ("_approvalDate") Extensions for approvalDate
   @JsonKey(name: '_approvalDate')
   Element? get approvalDateElement => throw _privateConstructorUsedError;
 
   /// [lastReviewDate] The date on which the resource content was last reviewed. Review happens periodically after approval but does not change the original approval date.
-  Date? get lastReviewDate => throw _privateConstructorUsedError;
+  FhirDate? get lastReviewDate => throw _privateConstructorUsedError;
 
   /// [lastReviewDateElement] ("_lastReviewDate") Extensions for lastReviewDate
   @JsonKey(name: '_lastReviewDate')
@@ -5537,12 +5537,12 @@ abstract class $ChargeItemDefinitionCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.ChargeItemDefinition)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -5567,10 +5567,10 @@ abstract class $ChargeItemDefinitionCopyWith<$Res> {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Boolean? experimental,
+      FhirBoolean? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
       FhirDateTime? date,
@@ -5580,24 +5580,24 @@ abstract class $ChargeItemDefinitionCopyWith<$Res> {
       @JsonKey(name: '_publisher')
           Element? publisherElement,
       List<ContactDetail>? contact,
-      Markdown? description,
+      FhirMarkdown? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
       List<UsageContext>? useContext,
       List<CodeableConcept>? jurisdiction,
-      Markdown? purpose,
+      FhirMarkdown? purpose,
       @JsonKey(name: '_purpose')
           Element? purposeElement,
-      Markdown? copyright,
+      FhirMarkdown? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
       String? copyrightLabel,
       @JsonKey(name: '_copyrightLabel')
           Element? copyrightLabelElement,
-      Date? approvalDate,
+      FhirDate? approvalDate,
       @JsonKey(name: '_approvalDate')
           Element? approvalDateElement,
-      Date? lastReviewDate,
+      FhirDate? lastReviewDate,
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
@@ -5741,7 +5741,7 @@ class _$ChargeItemDefinitionCopyWithImpl<$Res,
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -5813,7 +5813,7 @@ class _$ChargeItemDefinitionCopyWithImpl<$Res,
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -5821,7 +5821,7 @@ class _$ChargeItemDefinitionCopyWithImpl<$Res,
       experimental: freezed == experimental
           ? _value.experimental
           : experimental // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       experimentalElement: freezed == experimentalElement
           ? _value.experimentalElement
           : experimentalElement // ignore: cast_nullable_to_non_nullable
@@ -6243,12 +6243,12 @@ abstract class _$$_ChargeItemDefinitionCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.ChargeItemDefinition)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -6273,10 +6273,10 @@ abstract class _$$_ChargeItemDefinitionCopyWith<$Res>
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Boolean? experimental,
+      FhirBoolean? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
       FhirDateTime? date,
@@ -6286,24 +6286,24 @@ abstract class _$$_ChargeItemDefinitionCopyWith<$Res>
       @JsonKey(name: '_publisher')
           Element? publisherElement,
       List<ContactDetail>? contact,
-      Markdown? description,
+      FhirMarkdown? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
       List<UsageContext>? useContext,
       List<CodeableConcept>? jurisdiction,
-      Markdown? purpose,
+      FhirMarkdown? purpose,
       @JsonKey(name: '_purpose')
           Element? purposeElement,
-      Markdown? copyright,
+      FhirMarkdown? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
       String? copyrightLabel,
       @JsonKey(name: '_copyrightLabel')
           Element? copyrightLabelElement,
-      Date? approvalDate,
+      FhirDate? approvalDate,
       @JsonKey(name: '_approvalDate')
           Element? approvalDateElement,
-      Date? lastReviewDate,
+      FhirDate? lastReviewDate,
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
@@ -6466,7 +6466,7 @@ class __$$_ChargeItemDefinitionCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -6538,7 +6538,7 @@ class __$$_ChargeItemDefinitionCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -6546,7 +6546,7 @@ class __$$_ChargeItemDefinitionCopyWithImpl<$Res>
       experimental: freezed == experimental
           ? _value.experimental
           : experimental // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       experimentalElement: freezed == experimentalElement
           ? _value.experimentalElement
           : experimentalElement // ignore: cast_nullable_to_non_nullable
@@ -6831,7 +6831,7 @@ class _$_ChargeItemDefinition extends _ChargeItemDefinition {
 
   /// [language] The base language in which the resource is written.
   @override
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] ("_language") Extensions for language
   @override
@@ -6947,7 +6947,7 @@ class _$_ChargeItemDefinition extends _ChargeItemDefinition {
 
   /// [status] The current state of the ChargeItemDefinition.
   @override
-  final Code? status;
+  final FhirCode? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -6956,7 +6956,7 @@ class _$_ChargeItemDefinition extends _ChargeItemDefinition {
 
   /// [experimental] A Boolean value to indicate that this charge item definition is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.
   @override
-  final Boolean? experimental;
+  final FhirBoolean? experimental;
 
   /// [experimentalElement] ("_experimental") Extensions for experimental
   @override
@@ -7454,7 +7454,7 @@ abstract class _ChargeItemDefinition extends ChargeItemDefinition {
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
               final Element? implicitRulesElement,
-          final Code? language,
+          final FhirCode? language,
           @JsonKey(name: '_language')
               final Element? languageElement,
           final Narrative? text,
@@ -7479,10 +7479,10 @@ abstract class _ChargeItemDefinition extends ChargeItemDefinition {
           final String? title,
           @JsonKey(name: '_title')
               final Element? titleElement,
-          final Code? status,
+          final FhirCode? status,
           @JsonKey(name: '_status')
               final Element? statusElement,
-          final Boolean? experimental,
+          final FhirBoolean? experimental,
           @JsonKey(name: '_experimental')
               final Element? experimentalElement,
           final FhirDateTime? date,
@@ -7543,7 +7543,7 @@ abstract class _ChargeItemDefinition extends ChargeItemDefinition {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -7565,7 +7565,7 @@ abstract class _ChargeItemDefinition extends ChargeItemDefinition {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] ("_language") Extensions for language
@@ -7644,7 +7644,7 @@ abstract class _ChargeItemDefinition extends ChargeItemDefinition {
   @override
 
   /// [status] The current state of the ChargeItemDefinition.
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status
@@ -7653,7 +7653,7 @@ abstract class _ChargeItemDefinition extends ChargeItemDefinition {
   @override
 
   /// [experimental] A Boolean value to indicate that this charge item definition is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.
-  Boolean? get experimental;
+  FhirBoolean? get experimental;
   @override
 
   /// [experimentalElement] ("_experimental") Extensions for experimental
@@ -7684,7 +7684,7 @@ abstract class _ChargeItemDefinition extends ChargeItemDefinition {
   @override
 
   /// [description] A free text natural language description of the charge item definition from a consumer's perspective.
-  Markdown? get description;
+  FhirMarkdown? get description;
   @override
 
   /// [descriptionElement] ("_description") Extensions for description
@@ -7701,7 +7701,7 @@ abstract class _ChargeItemDefinition extends ChargeItemDefinition {
   @override
 
   /// [purpose] Explanation of why this charge item definition is needed and why it has been designed as it has.
-  Markdown? get purpose;
+  FhirMarkdown? get purpose;
   @override
 
   /// [purposeElement] ("_purpose") Extensions for purpose
@@ -7710,7 +7710,7 @@ abstract class _ChargeItemDefinition extends ChargeItemDefinition {
   @override
 
   /// [copyright] A copyright statement relating to the charge item definition and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the charge item definition.
-  Markdown? get copyright;
+  FhirMarkdown? get copyright;
   @override
 
   /// [copyrightElement] ("_copyright") Extensions for copyright
@@ -7728,7 +7728,7 @@ abstract class _ChargeItemDefinition extends ChargeItemDefinition {
   @override
 
   /// [approvalDate] The date on which the resource content was approved by the publisher. Approval happens once when the content is officially approved for usage.
-  Date? get approvalDate;
+  FhirDate? get approvalDate;
   @override
 
   /// [approvalDateElement] ("_approvalDate") Extensions for approvalDate
@@ -7737,7 +7737,7 @@ abstract class _ChargeItemDefinition extends ChargeItemDefinition {
   @override
 
   /// [lastReviewDate] The date on which the resource content was last reviewed. Review happens periodically after approval but does not change the original approval date.
-  Date? get lastReviewDate;
+  FhirDate? get lastReviewDate;
   @override
 
   /// [lastReviewDateElement] ("_lastReviewDate") Extensions for lastReviewDate
@@ -8653,7 +8653,7 @@ mixin _$Contract {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -8671,7 +8671,7 @@ mixin _$Contract {
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
@@ -8709,7 +8709,7 @@ mixin _$Contract {
   Element? get versionElement => throw _privateConstructorUsedError;
 
   /// [status] The status of the resource instance.
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
@@ -8849,12 +8849,12 @@ abstract class $ContractCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Contract)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -8869,7 +8869,7 @@ abstract class $ContractCopyWith<$Res> {
       String? version,
       @JsonKey(name: '_version')
           Element? versionElement,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? legalState,
@@ -9036,7 +9036,7 @@ class _$ContractCopyWithImpl<$Res, $Val extends Contract>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -9080,7 +9080,7 @@ class _$ContractCopyWithImpl<$Res, $Val extends Contract>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -9549,12 +9549,12 @@ abstract class _$$_ContractCopyWith<$Res> implements $ContractCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Contract)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -9569,7 +9569,7 @@ abstract class _$$_ContractCopyWith<$Res> implements $ContractCopyWith<$Res> {
       String? version,
       @JsonKey(name: '_version')
           Element? versionElement,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? legalState,
@@ -9759,7 +9759,7 @@ class __$$_ContractCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -9803,7 +9803,7 @@ class __$$_ContractCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -10085,7 +10085,7 @@ class _$_Contract extends _Contract {
 
   /// [language] The base language in which the resource is written.
   @override
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] ("_language") Extensions for language
   @override
@@ -10170,7 +10170,7 @@ class _$_Contract extends _Contract {
 
   /// [status] The status of the resource instance.
   @override
-  final Code? status;
+  final FhirCode? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -10642,7 +10642,7 @@ abstract class _Contract extends Contract {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -10657,7 +10657,7 @@ abstract class _Contract extends Contract {
       final String? version,
       @JsonKey(name: '_version')
           final Element? versionElement,
-      final Code? status,
+      final FhirCode? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
       final CodeableConcept? legalState,
@@ -10716,7 +10716,7 @@ abstract class _Contract extends Contract {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -10738,7 +10738,7 @@ abstract class _Contract extends Contract {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] ("_language") Extensions for language
@@ -10786,7 +10786,7 @@ abstract class _Contract extends Contract {
   @override
 
   /// [status] The status of the resource instance.
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status
@@ -11004,14 +11004,14 @@ mixin _$ContractContentDefinition {
   Element? get publicationDateElement => throw _privateConstructorUsedError;
 
   /// [publicationStatus] amended | appended | cancelled | disputed | entered-in-error | executable +.
-  Code? get publicationStatus => throw _privateConstructorUsedError;
+  FhirCode? get publicationStatus => throw _privateConstructorUsedError;
 
   /// [publicationStatusElement] ("_publicationStatus") Extensions for publicationStatus
   @JsonKey(name: '_publicationStatus')
   Element? get publicationStatusElement => throw _privateConstructorUsedError;
 
   /// [copyright] A copyright statement relating to Contract precursor content. Copyright statements are generally legal restrictions on the use and publishing of the Contract precursor content.
-  Markdown? get copyright => throw _privateConstructorUsedError;
+  FhirMarkdown? get copyright => throw _privateConstructorUsedError;
 
   /// [copyrightElement] ("_copyright") Extensions for copyright
   @JsonKey(name: '_copyright')
@@ -11038,9 +11038,9 @@ abstract class $ContractContentDefinitionCopyWith<$Res> {
       Reference? publisher,
       FhirDateTime? publicationDate,
       @JsonKey(name: '_publicationDate') Element? publicationDateElement,
-      Code? publicationStatus,
+      FhirCode? publicationStatus,
       @JsonKey(name: '_publicationStatus') Element? publicationStatusElement,
-      Markdown? copyright,
+      FhirMarkdown? copyright,
       @JsonKey(name: '_copyright') Element? copyrightElement});
 
   $CodeableConceptCopyWith<$Res> get type;
@@ -11114,7 +11114,7 @@ class _$ContractContentDefinitionCopyWithImpl<$Res,
       publicationStatus: freezed == publicationStatus
           ? _value.publicationStatus
           : publicationStatus // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       publicationStatusElement: freezed == publicationStatusElement
           ? _value.publicationStatusElement
           : publicationStatusElement // ignore: cast_nullable_to_non_nullable
@@ -11217,9 +11217,9 @@ abstract class _$$_ContractContentDefinitionCopyWith<$Res>
       Reference? publisher,
       FhirDateTime? publicationDate,
       @JsonKey(name: '_publicationDate') Element? publicationDateElement,
-      Code? publicationStatus,
+      FhirCode? publicationStatus,
       @JsonKey(name: '_publicationStatus') Element? publicationStatusElement,
-      Markdown? copyright,
+      FhirMarkdown? copyright,
       @JsonKey(name: '_copyright') Element? copyrightElement});
 
   @override
@@ -11298,7 +11298,7 @@ class __$$_ContractContentDefinitionCopyWithImpl<$Res>
       publicationStatus: freezed == publicationStatus
           ? _value.publicationStatus
           : publicationStatus // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       publicationStatusElement: freezed == publicationStatusElement
           ? _value.publicationStatusElement
           : publicationStatusElement // ignore: cast_nullable_to_non_nullable
@@ -11426,7 +11426,7 @@ class _$_ContractContentDefinition extends _ContractContentDefinition {
 
   /// [publicationStatus] amended | appended | cancelled | disputed | entered-in-error | executable +.
   @override
-  final Code? publicationStatus;
+  final FhirCode? publicationStatus;
 
   /// [publicationStatusElement] ("_publicationStatus") Extensions for publicationStatus
   @override
@@ -11520,7 +11520,7 @@ abstract class _ContractContentDefinition extends ContractContentDefinition {
       final FhirDateTime? publicationDate,
       @JsonKey(name: '_publicationDate')
           final Element? publicationDateElement,
-      final Code? publicationStatus,
+      final FhirCode? publicationStatus,
       @JsonKey(name: '_publicationStatus')
           final Element? publicationStatusElement,
       final Markdown? copyright,
@@ -11585,7 +11585,7 @@ abstract class _ContractContentDefinition extends ContractContentDefinition {
   @override
 
   /// [publicationStatus] amended | appended | cancelled | disputed | entered-in-error | executable +.
-  Code? get publicationStatus;
+  FhirCode? get publicationStatus;
   @override
 
   /// [publicationStatusElement] ("_publicationStatus") Extensions for publicationStatus
@@ -11594,7 +11594,7 @@ abstract class _ContractContentDefinition extends ContractContentDefinition {
   @override
 
   /// [copyright] A copyright statement relating to Contract precursor content. Copyright statements are generally legal restrictions on the use and publishing of the Contract precursor content.
-  Markdown? get copyright;
+  FhirMarkdown? get copyright;
   @override
 
   /// [copyrightElement] ("_copyright") Extensions for copyright
@@ -14220,28 +14220,28 @@ mixin _$ContractAnswer {
       throw _privateConstructorUsedError;
 
   /// [valueBoolean] Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research.
-  Boolean? get valueBoolean => throw _privateConstructorUsedError;
+  FhirBoolean? get valueBoolean => throw _privateConstructorUsedError;
 
   /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
   @JsonKey(name: '_valueBoolean')
   Element? get valueBooleanElement => throw _privateConstructorUsedError;
 
   /// [valueDecimal] Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research.
-  Decimal? get valueDecimal => throw _privateConstructorUsedError;
+  FhirDecimal? get valueDecimal => throw _privateConstructorUsedError;
 
   /// [valueDecimalElement] ("_valueDecimal") Extensions for valueDecimal
   @JsonKey(name: '_valueDecimal')
   Element? get valueDecimalElement => throw _privateConstructorUsedError;
 
   /// [valueInteger] Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research.
-  Integer? get valueInteger => throw _privateConstructorUsedError;
+  FhirInteger? get valueInteger => throw _privateConstructorUsedError;
 
   /// [valueIntegerElement] ("_valueInteger") Extensions for valueInteger
   @JsonKey(name: '_valueInteger')
   Element? get valueIntegerElement => throw _privateConstructorUsedError;
 
   /// [valueDate] Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research.
-  Date? get valueDate => throw _privateConstructorUsedError;
+  FhirDate? get valueDate => throw _privateConstructorUsedError;
 
   /// [valueDateElement] ("_valueDate") Extensions for valueDate
   @JsonKey(name: '_valueDate')
@@ -14303,13 +14303,13 @@ abstract class $ContractAnswerCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Boolean? valueBoolean,
+      FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-      Decimal? valueDecimal,
+      FhirDecimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
-      Integer? valueInteger,
+      FhirInteger? valueInteger,
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
-      Date? valueDate,
+      FhirDate? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
       FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
@@ -14391,7 +14391,7 @@ class _$ContractAnswerCopyWithImpl<$Res, $Val extends ContractAnswer>
       valueBoolean: freezed == valueBoolean
           ? _value.valueBoolean
           : valueBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       valueBooleanElement: freezed == valueBooleanElement
           ? _value.valueBooleanElement
           : valueBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -14628,13 +14628,13 @@ abstract class _$$_ContractAnswerCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Boolean? valueBoolean,
+      FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-      Decimal? valueDecimal,
+      FhirDecimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
-      Integer? valueInteger,
+      FhirInteger? valueInteger,
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
-      Date? valueDate,
+      FhirDate? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
       FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
@@ -14726,7 +14726,7 @@ class __$$_ContractAnswerCopyWithImpl<$Res>
       valueBoolean: freezed == valueBoolean
           ? _value.valueBoolean
           : valueBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       valueBooleanElement: freezed == valueBooleanElement
           ? _value.valueBooleanElement
           : valueBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -14908,7 +14908,7 @@ class _$_ContractAnswer extends _ContractAnswer {
 
   /// [valueBoolean] Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research.
   @override
-  final Boolean? valueBoolean;
+  final FhirBoolean? valueBoolean;
 
   /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
   @override
@@ -15099,7 +15099,7 @@ abstract class _ContractAnswer extends ContractAnswer {
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final Boolean? valueBoolean,
+      final FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') final Element? valueBooleanElement,
       final Decimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') final Element? valueDecimalElement,
@@ -15157,7 +15157,7 @@ abstract class _ContractAnswer extends ContractAnswer {
   @override
 
   /// [valueBoolean] Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research.
-  Boolean? get valueBoolean;
+  FhirBoolean? get valueBoolean;
   @override
 
   /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
@@ -15166,7 +15166,7 @@ abstract class _ContractAnswer extends ContractAnswer {
   @override
 
   /// [valueDecimal] Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research.
-  Decimal? get valueDecimal;
+  FhirDecimal? get valueDecimal;
   @override
 
   /// [valueDecimalElement] ("_valueDecimal") Extensions for valueDecimal
@@ -15175,7 +15175,7 @@ abstract class _ContractAnswer extends ContractAnswer {
   @override
 
   /// [valueInteger] Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research.
-  Integer? get valueInteger;
+  FhirInteger? get valueInteger;
   @override
 
   /// [valueIntegerElement] ("_valueInteger") Extensions for valueInteger
@@ -15184,7 +15184,7 @@ abstract class _ContractAnswer extends ContractAnswer {
   @override
 
   /// [valueDate] Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research.
-  Date? get valueDate;
+  FhirDate? get valueDate;
   @override
 
   /// [valueDateElement] ("_valueDate") Extensions for valueDate
@@ -16808,14 +16808,14 @@ mixin _$ContractValuedItem {
   Money? get unitPrice => throw _privateConstructorUsedError;
 
   /// [factor] A real number that represents a multiplier used in determining the overall value of the Contract Valued Item delivered. The concept of a Factor allows for a discount or surcharge multiplier to be applied to a monetary amount.
-  Decimal? get factor => throw _privateConstructorUsedError;
+  FhirDecimal? get factor => throw _privateConstructorUsedError;
 
   /// [factorElement] ("_factor") Extensions for factor
   @JsonKey(name: '_factor')
   Element? get factorElement => throw _privateConstructorUsedError;
 
   /// [points] An amount that expresses the weighting (based on difficulty, cost and/or resource intensiveness) associated with the Contract Valued Item delivered. The concept of Points allows for assignment of point values for a Contract Valued Item, such that a monetary amount can be assigned to each point.
-  Decimal? get points => throw _privateConstructorUsedError;
+  FhirDecimal? get points => throw _privateConstructorUsedError;
 
   /// [pointsElement] ("_points") Extensions for points
   @JsonKey(name: '_points')
@@ -16885,10 +16885,10 @@ abstract class $ContractValuedItemCopyWith<$Res> {
           Element? effectiveTimeElement,
       Quantity? quantity,
       Money? unitPrice,
-      Decimal? factor,
+      FhirDecimal? factor,
       @JsonKey(name: '_factor')
           Element? factorElement,
-      Decimal? points,
+      FhirDecimal? points,
       @JsonKey(name: '_points')
           Element? pointsElement,
       Money? net,
@@ -17244,10 +17244,10 @@ abstract class _$$_ContractValuedItemCopyWith<$Res>
           Element? effectiveTimeElement,
       Quantity? quantity,
       Money? unitPrice,
-      Decimal? factor,
+      FhirDecimal? factor,
       @JsonKey(name: '_factor')
           Element? factorElement,
-      Decimal? points,
+      FhirDecimal? points,
       @JsonKey(name: '_points')
           Element? pointsElement,
       Money? net,
@@ -17888,7 +17888,7 @@ abstract class _ContractValuedItem extends ContractValuedItem {
   @override
 
   /// [factor] A real number that represents a multiplier used in determining the overall value of the Contract Valued Item delivered. The concept of a Factor allows for a discount or surcharge multiplier to be applied to a monetary amount.
-  Decimal? get factor;
+  FhirDecimal? get factor;
   @override
 
   /// [factorElement] ("_factor") Extensions for factor
@@ -17897,7 +17897,7 @@ abstract class _ContractValuedItem extends ContractValuedItem {
   @override
 
   /// [points] An amount that expresses the weighting (based on difficulty, cost and/or resource intensiveness) associated with the Contract Valued Item delivered. The concept of Points allows for assignment of point values for a Contract Valued Item, such that a monetary amount can be assigned to each point.
-  Decimal? get points;
+  FhirDecimal? get points;
   @override
 
   /// [pointsElement] ("_points") Extensions for points
@@ -17992,7 +17992,7 @@ mixin _$ContractAction {
       throw _privateConstructorUsedError;
 
   /// [doNotPerform] True if the term prohibits the  action.
-  Boolean? get doNotPerform => throw _privateConstructorUsedError;
+  FhirBoolean? get doNotPerform => throw _privateConstructorUsedError;
 
   /// [doNotPerformElement] ("_doNotPerform") Extensions for doNotPerform
   @JsonKey(name: '_doNotPerform')
@@ -18108,7 +18108,7 @@ abstract class $ContractActionCopyWith<$Res> {
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Boolean? doNotPerform,
+      FhirBoolean? doNotPerform,
       @JsonKey(name: '_doNotPerform')
           Element? doNotPerformElement,
       CodeableConcept type,
@@ -18220,7 +18220,7 @@ class _$ContractActionCopyWithImpl<$Res, $Val extends ContractAction>
       doNotPerform: freezed == doNotPerform
           ? _value.doNotPerform
           : doNotPerform // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       doNotPerformElement: freezed == doNotPerformElement
           ? _value.doNotPerformElement
           : doNotPerformElement // ignore: cast_nullable_to_non_nullable
@@ -18458,7 +18458,7 @@ abstract class _$$_ContractActionCopyWith<$Res>
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Boolean? doNotPerform,
+      FhirBoolean? doNotPerform,
       @JsonKey(name: '_doNotPerform')
           Element? doNotPerformElement,
       CodeableConcept type,
@@ -18578,7 +18578,7 @@ class __$$_ContractActionCopyWithImpl<$Res>
       doNotPerform: freezed == doNotPerform
           ? _value.doNotPerform
           : doNotPerform // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       doNotPerformElement: freezed == doNotPerformElement
           ? _value.doNotPerformElement
           : doNotPerformElement // ignore: cast_nullable_to_non_nullable
@@ -18831,7 +18831,7 @@ class _$_ContractAction extends _ContractAction {
 
   /// [doNotPerform] True if the term prohibits the  action.
   @override
-  final Boolean? doNotPerform;
+  final FhirBoolean? doNotPerform;
 
   /// [doNotPerformElement] ("_doNotPerform") Extensions for doNotPerform
   @override
@@ -19239,7 +19239,7 @@ abstract class _ContractAction extends ContractAction {
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final Boolean? doNotPerform,
+      final FhirBoolean? doNotPerform,
       @JsonKey(name: '_doNotPerform')
           final Element? doNotPerformElement,
       required final CodeableConcept type,
@@ -19314,7 +19314,7 @@ abstract class _ContractAction extends ContractAction {
   @override
 
   /// [doNotPerform] True if the term prohibits the  action.
-  Boolean? get doNotPerform;
+  FhirBoolean? get doNotPerform;
   @override
 
   /// [doNotPerformElement] ("_doNotPerform") Extensions for doNotPerform
@@ -21391,7 +21391,7 @@ mixin _$ExplanationOfBenefit {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -21409,7 +21409,7 @@ mixin _$ExplanationOfBenefit {
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
@@ -21433,7 +21433,7 @@ mixin _$ExplanationOfBenefit {
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [status] The status of the resource instance.
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
@@ -21446,7 +21446,7 @@ mixin _$ExplanationOfBenefit {
   CodeableConcept? get subType => throw _privateConstructorUsedError;
 
   /// [use] A code to indicate whether the nature of the request is: Claim - A request to an Insurer to adjudicate the supplied charges for health care goods and services under the identified policy and to pay the determined Benefit amount, if any; Preauthorization - A request to an Insurer to adjudicate the supplied proposed future charges for health care goods and services under the identified policy and to approve the services and provide the expected benefit amounts and potentially to reserve funds to pay the benefits when Claims for the indicated services are later submitted; or, Pre-determination - A request to an Insurer to adjudicate the supplied 'what if' charges for health care goods and services under the identified policy and report back what the Benefit payable would be had the services actually been provided.
-  Code? get use => throw _privateConstructorUsedError;
+  FhirCode? get use => throw _privateConstructorUsedError;
 
   /// [useElement] ("_use") Extensions for use
   @JsonKey(name: '_use')
@@ -21513,7 +21513,7 @@ mixin _$ExplanationOfBenefit {
   Reference? get claimResponse => throw _privateConstructorUsedError;
 
   /// [outcome] The outcome of the claim, predetermination, or preauthorization processing.
-  Code? get outcome => throw _privateConstructorUsedError;
+  FhirCode? get outcome => throw _privateConstructorUsedError;
 
   /// [outcomeElement] ("_outcome") Extensions for outcome
   @JsonKey(name: '_outcome')
@@ -21629,12 +21629,12 @@ abstract class $ExplanationOfBenefitCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.ExplanationOfBenefit)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -21643,12 +21643,12 @@ abstract class $ExplanationOfBenefitCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept type,
       CodeableConcept? subType,
-      Code? use,
+      FhirCode? use,
       @JsonKey(name: '_use')
           Element? useElement,
       Reference patient,
@@ -21671,7 +21671,7 @@ abstract class $ExplanationOfBenefitCopyWith<$Res> {
       Reference? facility,
       Reference? claim,
       Reference? claimResponse,
-      Code? outcome,
+      FhirCode? outcome,
       @JsonKey(name: '_outcome')
           Element? outcomeElement,
       CodeableConcept? decision,
@@ -21845,7 +21845,7 @@ class _$ExplanationOfBenefitCopyWithImpl<$Res,
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -21873,7 +21873,7 @@ class _$ExplanationOfBenefitCopyWithImpl<$Res,
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -21889,7 +21889,7 @@ class _$ExplanationOfBenefitCopyWithImpl<$Res,
       use: freezed == use
           ? _value.use
           : use // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       useElement: freezed == useElement
           ? _value.useElement
           : useElement // ignore: cast_nullable_to_non_nullable
@@ -21973,7 +21973,7 @@ class _$ExplanationOfBenefitCopyWithImpl<$Res,
       outcome: freezed == outcome
           ? _value.outcome
           : outcome // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       outcomeElement: freezed == outcomeElement
           ? _value.outcomeElement
           : outcomeElement // ignore: cast_nullable_to_non_nullable
@@ -22512,12 +22512,12 @@ abstract class _$$_ExplanationOfBenefitCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.ExplanationOfBenefit)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -22526,12 +22526,12 @@ abstract class _$$_ExplanationOfBenefitCopyWith<$Res>
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept type,
       CodeableConcept? subType,
-      Code? use,
+      FhirCode? use,
       @JsonKey(name: '_use')
           Element? useElement,
       Reference patient,
@@ -22554,7 +22554,7 @@ abstract class _$$_ExplanationOfBenefitCopyWith<$Res>
       Reference? facility,
       Reference? claim,
       Reference? claimResponse,
-      Code? outcome,
+      FhirCode? outcome,
       @JsonKey(name: '_outcome')
           Element? outcomeElement,
       CodeableConcept? decision,
@@ -22760,7 +22760,7 @@ class __$$_ExplanationOfBenefitCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -22788,7 +22788,7 @@ class __$$_ExplanationOfBenefitCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -22804,7 +22804,7 @@ class __$$_ExplanationOfBenefitCopyWithImpl<$Res>
       use: freezed == use
           ? _value.use
           : use // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       useElement: freezed == useElement
           ? _value.useElement
           : useElement // ignore: cast_nullable_to_non_nullable
@@ -22888,7 +22888,7 @@ class __$$_ExplanationOfBenefitCopyWithImpl<$Res>
       outcome: freezed == outcome
           ? _value.outcome
           : outcome // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       outcomeElement: freezed == outcomeElement
           ? _value.outcomeElement
           : outcomeElement // ignore: cast_nullable_to_non_nullable
@@ -23136,7 +23136,7 @@ class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
 
   /// [language] The base language in which the resource is written.
   @override
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] ("_language") Extensions for language
   @override
@@ -23203,7 +23203,7 @@ class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
 
   /// [status] The status of the resource instance.
   @override
-  final Code? status;
+  final FhirCode? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -23220,7 +23220,7 @@ class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
 
   /// [use] A code to indicate whether the nature of the request is: Claim - A request to an Insurer to adjudicate the supplied charges for health care goods and services under the identified policy and to pay the determined Benefit amount, if any; Preauthorization - A request to an Insurer to adjudicate the supplied proposed future charges for health care goods and services under the identified policy and to approve the services and provide the expected benefit amounts and potentially to reserve funds to pay the benefits when Claims for the indicated services are later submitted; or, Pre-determination - A request to an Insurer to adjudicate the supplied 'what if' charges for health care goods and services under the identified policy and report back what the Benefit payable would be had the services actually been provided.
   @override
-  final Code? use;
+  final FhirCode? use;
 
   /// [useElement] ("_use") Extensions for use
   @override
@@ -23324,7 +23324,7 @@ class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
 
   /// [outcome] The outcome of the claim, predetermination, or preauthorization processing.
   @override
-  final Code? outcome;
+  final FhirCode? outcome;
 
   /// [outcomeElement] ("_outcome") Extensions for outcome
   @override
@@ -23781,7 +23781,7 @@ abstract class _ExplanationOfBenefit extends ExplanationOfBenefit {
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
               final Element? implicitRulesElement,
-          final Code? language,
+          final FhirCode? language,
           @JsonKey(name: '_language')
               final Element? languageElement,
           final Narrative? text,
@@ -23790,12 +23790,12 @@ abstract class _ExplanationOfBenefit extends ExplanationOfBenefit {
               final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           final List<Identifier>? identifier,
-          final Code? status,
+          final FhirCode? status,
           @JsonKey(name: '_status')
               final Element? statusElement,
           required final CodeableConcept type,
           final CodeableConcept? subType,
-          final Code? use,
+          final FhirCode? use,
           @JsonKey(name: '_use')
               final Element? useElement,
           required final Reference patient,
@@ -23818,7 +23818,7 @@ abstract class _ExplanationOfBenefit extends ExplanationOfBenefit {
           final Reference? facility,
           final Reference? claim,
           final Reference? claimResponse,
-          final Code? outcome,
+          final FhirCode? outcome,
           @JsonKey(name: '_outcome')
               final Element? outcomeElement,
           final CodeableConcept? decision,
@@ -23865,7 +23865,7 @@ abstract class _ExplanationOfBenefit extends ExplanationOfBenefit {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -23887,7 +23887,7 @@ abstract class _ExplanationOfBenefit extends ExplanationOfBenefit {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] ("_language") Extensions for language
@@ -23917,7 +23917,7 @@ abstract class _ExplanationOfBenefit extends ExplanationOfBenefit {
   @override
 
   /// [status] The status of the resource instance.
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status
@@ -23934,7 +23934,7 @@ abstract class _ExplanationOfBenefit extends ExplanationOfBenefit {
   @override
 
   /// [use] A code to indicate whether the nature of the request is: Claim - A request to an Insurer to adjudicate the supplied charges for health care goods and services under the identified policy and to pay the determined Benefit amount, if any; Preauthorization - A request to an Insurer to adjudicate the supplied proposed future charges for health care goods and services under the identified policy and to approve the services and provide the expected benefit amounts and potentially to reserve funds to pay the benefits when Claims for the indicated services are later submitted; or, Pre-determination - A request to an Insurer to adjudicate the supplied 'what if' charges for health care goods and services under the identified policy and report back what the Benefit payable would be had the services actually been provided.
-  Code? get use;
+  FhirCode? get use;
   @override
 
   /// [useElement] ("_use") Extensions for use
@@ -24020,7 +24020,7 @@ abstract class _ExplanationOfBenefit extends ExplanationOfBenefit {
   @override
 
   /// [outcome] The outcome of the claim, predetermination, or preauthorization processing.
-  Code? get outcome;
+  FhirCode? get outcome;
   @override
 
   /// [outcomeElement] ("_outcome") Extensions for outcome
@@ -25008,7 +25008,7 @@ mixin _$ExplanationOfBenefitCareTeam {
   Reference get provider => throw _privateConstructorUsedError;
 
   /// [responsible] The party who is billing and/or responsible for the claimed products or services.
-  Boolean? get responsible => throw _privateConstructorUsedError;
+  FhirBoolean? get responsible => throw _privateConstructorUsedError;
 
   /// [responsibleElement] ("_responsible") Extensions for responsible
   @JsonKey(name: '_responsible')
@@ -25041,7 +25041,7 @@ abstract class $ExplanationOfBenefitCareTeamCopyWith<$Res> {
       PositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       Reference provider,
-      Boolean? responsible,
+      FhirBoolean? responsible,
       @JsonKey(name: '_responsible') Element? responsibleElement,
       CodeableConcept? role,
       CodeableConcept? specialty});
@@ -25106,7 +25106,7 @@ class _$ExplanationOfBenefitCareTeamCopyWithImpl<$Res,
       responsible: freezed == responsible
           ? _value.responsible
           : responsible // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       responsibleElement: freezed == responsibleElement
           ? _value.responsibleElement
           : responsibleElement // ignore: cast_nullable_to_non_nullable
@@ -25195,7 +25195,7 @@ abstract class _$$_ExplanationOfBenefitCareTeamCopyWith<$Res>
       PositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       Reference provider,
-      Boolean? responsible,
+      FhirBoolean? responsible,
       @JsonKey(name: '_responsible') Element? responsibleElement,
       CodeableConcept? role,
       CodeableConcept? specialty});
@@ -25264,7 +25264,7 @@ class __$$_ExplanationOfBenefitCareTeamCopyWithImpl<$Res>
       responsible: freezed == responsible
           ? _value.responsible
           : responsible // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       responsibleElement: freezed == responsibleElement
           ? _value.responsibleElement
           : responsibleElement // ignore: cast_nullable_to_non_nullable
@@ -25382,7 +25382,7 @@ class _$_ExplanationOfBenefitCareTeam extends _ExplanationOfBenefitCareTeam {
 
   /// [responsible] The party who is billing and/or responsible for the claimed products or services.
   @override
-  final Boolean? responsible;
+  final FhirBoolean? responsible;
 
   /// [responsibleElement] ("_responsible") Extensions for responsible
   @override
@@ -25466,7 +25466,7 @@ abstract class _ExplanationOfBenefitCareTeam
       final PositiveInt? sequence,
       @JsonKey(name: '_sequence') final Element? sequenceElement,
       required final Reference provider,
-      final Boolean? responsible,
+      final FhirBoolean? responsible,
       @JsonKey(name: '_responsible') final Element? responsibleElement,
       final CodeableConcept? role,
       final CodeableConcept? specialty}) = _$_ExplanationOfBenefitCareTeam;
@@ -25521,7 +25521,7 @@ abstract class _ExplanationOfBenefitCareTeam
   @override
 
   /// [responsible] The party who is billing and/or responsible for the claimed products or services.
-  Boolean? get responsible;
+  FhirBoolean? get responsible;
   @override
 
   /// [responsibleElement] ("_responsible") Extensions for responsible
@@ -25590,7 +25590,7 @@ mixin _$ExplanationOfBenefitSupportingInfo {
   CodeableConcept? get code => throw _privateConstructorUsedError;
 
   /// [timingDate] The date when or period to which this information refers.
-  Date? get timingDate => throw _privateConstructorUsedError;
+  FhirDate? get timingDate => throw _privateConstructorUsedError;
 
   /// [timingDateElement] ("_timingDate") Extensions for timingDate
   @JsonKey(name: '_timingDate')
@@ -25600,7 +25600,7 @@ mixin _$ExplanationOfBenefitSupportingInfo {
   Period? get timingPeriod => throw _privateConstructorUsedError;
 
   /// [valueBoolean] Additional data or information such as resources, documents, images etc. including references to the data or the actual inclusion of the data.
-  Boolean? get valueBoolean => throw _privateConstructorUsedError;
+  FhirBoolean? get valueBoolean => throw _privateConstructorUsedError;
 
   /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
   @JsonKey(name: '_valueBoolean')
@@ -25651,10 +25651,10 @@ abstract class $ExplanationOfBenefitSupportingInfoCopyWith<$Res> {
       @JsonKey(name: '_sequence') Element? sequenceElement,
       CodeableConcept category,
       CodeableConcept? code,
-      Date? timingDate,
+      FhirDate? timingDate,
       @JsonKey(name: '_timingDate') Element? timingDateElement,
       Period? timingPeriod,
-      Boolean? valueBoolean,
+      FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
@@ -25756,7 +25756,7 @@ class _$ExplanationOfBenefitSupportingInfoCopyWithImpl<$Res,
       valueBoolean: freezed == valueBoolean
           ? _value.valueBoolean
           : valueBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       valueBooleanElement: freezed == valueBooleanElement
           ? _value.valueBooleanElement
           : valueBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -25950,10 +25950,10 @@ abstract class _$$_ExplanationOfBenefitSupportingInfoCopyWith<$Res>
       @JsonKey(name: '_sequence') Element? sequenceElement,
       CodeableConcept category,
       CodeableConcept? code,
-      Date? timingDate,
+      FhirDate? timingDate,
       @JsonKey(name: '_timingDate') Element? timingDateElement,
       Period? timingPeriod,
-      Boolean? valueBoolean,
+      FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
@@ -26066,7 +26066,7 @@ class __$$_ExplanationOfBenefitSupportingInfoCopyWithImpl<$Res>
       valueBoolean: freezed == valueBoolean
           ? _value.valueBoolean
           : valueBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       valueBooleanElement: freezed == valueBooleanElement
           ? _value.valueBooleanElement
           : valueBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -26232,7 +26232,7 @@ class _$_ExplanationOfBenefitSupportingInfo
 
   /// [valueBoolean] Additional data or information such as resources, documents, images etc. including references to the data or the actual inclusion of the data.
   @override
-  final Boolean? valueBoolean;
+  final FhirBoolean? valueBoolean;
 
   /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
   @override
@@ -26369,7 +26369,7 @@ abstract class _ExplanationOfBenefitSupportingInfo
       final Date? timingDate,
       @JsonKey(name: '_timingDate') final Element? timingDateElement,
       final Period? timingPeriod,
-      final Boolean? valueBoolean,
+      final FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') final Element? valueBooleanElement,
       final String? valueString,
       @JsonKey(name: '_valueString') final Element? valueStringElement,
@@ -26434,7 +26434,7 @@ abstract class _ExplanationOfBenefitSupportingInfo
   @override
 
   /// [timingDate] The date when or period to which this information refers.
-  Date? get timingDate;
+  FhirDate? get timingDate;
   @override
 
   /// [timingDateElement] ("_timingDate") Extensions for timingDate
@@ -26447,7 +26447,7 @@ abstract class _ExplanationOfBenefitSupportingInfo
   @override
 
   /// [valueBoolean] Additional data or information such as resources, documents, images etc. including references to the data or the actual inclusion of the data.
-  Boolean? get valueBoolean;
+  FhirBoolean? get valueBoolean;
   @override
 
   /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
@@ -27694,7 +27694,7 @@ mixin _$ExplanationOfBenefitInsurance {
       throw _privateConstructorUsedError;
 
   /// [focal] A flag to indicate that this Coverage is to be used for adjudication of this claim when set to true.
-  Boolean? get focal => throw _privateConstructorUsedError;
+  FhirBoolean? get focal => throw _privateConstructorUsedError;
 
   /// [focalElement] ("_focal") Extensions for focal
   @JsonKey(name: '_focal')
@@ -27728,7 +27728,7 @@ abstract class $ExplanationOfBenefitInsuranceCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Boolean? focal,
+      FhirBoolean? focal,
       @JsonKey(name: '_focal') Element? focalElement,
       Reference coverage,
       List<String>? preAuthRef,
@@ -27777,7 +27777,7 @@ class _$ExplanationOfBenefitInsuranceCopyWithImpl<$Res,
       focal: freezed == focal
           ? _value.focal
           : focal // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       focalElement: freezed == focalElement
           ? _value.focalElement
           : focalElement // ignore: cast_nullable_to_non_nullable
@@ -27831,7 +27831,7 @@ abstract class _$$_ExplanationOfBenefitInsuranceCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Boolean? focal,
+      FhirBoolean? focal,
       @JsonKey(name: '_focal') Element? focalElement,
       Reference coverage,
       List<String>? preAuthRef,
@@ -27881,7 +27881,7 @@ class __$$_ExplanationOfBenefitInsuranceCopyWithImpl<$Res>
       focal: freezed == focal
           ? _value.focal
           : focal // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       focalElement: freezed == focalElement
           ? _value.focalElement
           : focalElement // ignore: cast_nullable_to_non_nullable
@@ -27991,7 +27991,7 @@ class _$_ExplanationOfBenefitInsurance extends _ExplanationOfBenefitInsurance {
 
   /// [focal] A flag to indicate that this Coverage is to be used for adjudication of this claim when set to true.
   @override
-  final Boolean? focal;
+  final FhirBoolean? focal;
 
   /// [focalElement] ("_focal") Extensions for focal
   @override
@@ -28091,7 +28091,7 @@ abstract class _ExplanationOfBenefitInsurance
           @JsonKey(name: 'extension')
               final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
-          final Boolean? focal,
+          final FhirBoolean? focal,
           @JsonKey(name: '_focal')
               final Element? focalElement,
           required final Reference coverage,
@@ -28137,7 +28137,7 @@ abstract class _ExplanationOfBenefitInsurance
   @override
 
   /// [focal] A flag to indicate that this Coverage is to be used for adjudication of this claim when set to true.
-  Boolean? get focal;
+  FhirBoolean? get focal;
   @override
 
   /// [focalElement] ("_focal") Extensions for focal
@@ -28198,7 +28198,7 @@ mixin _$ExplanationOfBenefitAccident {
       throw _privateConstructorUsedError;
 
   /// [date] Date of an accident event  related to the products and services contained in the claim.
-  Date? get date => throw _privateConstructorUsedError;
+  FhirDate? get date => throw _privateConstructorUsedError;
 
   /// [dateElement] ("_date") Extensions for date
   @JsonKey(name: '_date')
@@ -28231,7 +28231,7 @@ abstract class $ExplanationOfBenefitAccidentCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Date? date,
+      FhirDate? date,
       @JsonKey(name: '_date') Element? dateElement,
       CodeableConcept? type,
       Address? locationAddress,
@@ -28364,7 +28364,7 @@ abstract class _$$_ExplanationOfBenefitAccidentCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Date? date,
+      FhirDate? date,
       @JsonKey(name: '_date') Element? dateElement,
       CodeableConcept? type,
       Address? locationAddress,
@@ -28646,7 +28646,7 @@ abstract class _ExplanationOfBenefitAccident
   @override
 
   /// [date] Date of an accident event  related to the products and services contained in the claim.
-  Date? get date;
+  FhirDate? get date;
   @override
 
   /// [dateElement] ("_date") Extensions for date
@@ -28767,7 +28767,7 @@ mixin _$ExplanationOfBenefitItem {
   List<CodeableConcept>? get programCode => throw _privateConstructorUsedError;
 
   /// [servicedDate] The date or dates when the service or product was supplied, performed or completed.
-  Date? get servicedDate => throw _privateConstructorUsedError;
+  FhirDate? get servicedDate => throw _privateConstructorUsedError;
 
   /// [servicedDateElement] ("_servicedDate") Extensions for servicedDate
   @JsonKey(name: '_servicedDate')
@@ -28796,7 +28796,7 @@ mixin _$ExplanationOfBenefitItem {
   Money? get unitPrice => throw _privateConstructorUsedError;
 
   /// [factor] A real number that represents a multiplier used in determining the overall value of services delivered and/or goods received. The concept of a Factor allows for a discount or surcharge multiplier to be applied to a monetary amount.
-  Decimal? get factor => throw _privateConstructorUsedError;
+  FhirDecimal? get factor => throw _privateConstructorUsedError;
 
   /// [factorElement] ("_factor") Extensions for factor
   @JsonKey(name: '_factor')
@@ -28874,7 +28874,7 @@ abstract class $ExplanationOfBenefitItemCopyWith<$Res> {
       CodeableConcept? productOrServiceEnd,
       List<CodeableConcept>? modifier,
       List<CodeableConcept>? programCode,
-      Date? servicedDate,
+      FhirDate? servicedDate,
       @JsonKey(name: '_servicedDate')
           Element? servicedDateElement,
       Period? servicedPeriod,
@@ -28884,7 +28884,7 @@ abstract class $ExplanationOfBenefitItemCopyWith<$Res> {
       Money? patientPaid,
       Quantity? quantity,
       Money? unitPrice,
-      Decimal? factor,
+      FhirDecimal? factor,
       @JsonKey(name: '_factor')
           Element? factorElement,
       Money? tax,
@@ -29378,7 +29378,7 @@ abstract class _$$_ExplanationOfBenefitItemCopyWith<$Res>
       CodeableConcept? productOrServiceEnd,
       List<CodeableConcept>? modifier,
       List<CodeableConcept>? programCode,
-      Date? servicedDate,
+      FhirDate? servicedDate,
       @JsonKey(name: '_servicedDate')
           Element? servicedDateElement,
       Period? servicedPeriod,
@@ -29388,7 +29388,7 @@ abstract class _$$_ExplanationOfBenefitItemCopyWith<$Res>
       Money? patientPaid,
       Quantity? quantity,
       Money? unitPrice,
-      Decimal? factor,
+      FhirDecimal? factor,
       @JsonKey(name: '_factor')
           Element? factorElement,
       Money? tax,
@@ -30422,7 +30422,7 @@ abstract class _ExplanationOfBenefitItem extends ExplanationOfBenefitItem {
   @override
 
   /// [servicedDate] The date or dates when the service or product was supplied, performed or completed.
-  Date? get servicedDate;
+  FhirDate? get servicedDate;
   @override
 
   /// [servicedDateElement] ("_servicedDate") Extensions for servicedDate
@@ -30459,7 +30459,7 @@ abstract class _ExplanationOfBenefitItem extends ExplanationOfBenefitItem {
   @override
 
   /// [factor] A real number that represents a multiplier used in determining the overall value of services delivered and/or goods received. The concept of a Factor allows for a discount or surcharge multiplier to be applied to a monetary amount.
-  Decimal? get factor;
+  FhirDecimal? get factor;
   @override
 
   /// [factorElement] ("_factor") Extensions for factor
@@ -30934,7 +30934,7 @@ mixin _$ExplanationOfBenefitAdjudication {
   Money? get amount => throw _privateConstructorUsedError;
 
   /// [value] A non-monetary value associated with the category. Mutually exclusive to the amount element above.
-  Decimal? get value => throw _privateConstructorUsedError;
+  FhirDecimal? get value => throw _privateConstructorUsedError;
 
   /// [valueElement] ("_value") Extensions for value
   @JsonKey(name: '_value')
@@ -30961,7 +30961,7 @@ abstract class $ExplanationOfBenefitAdjudicationCopyWith<$Res> {
       CodeableConcept category,
       CodeableConcept? reason,
       Money? amount,
-      Decimal? value,
+      FhirDecimal? value,
       @JsonKey(name: '_value') Element? valueElement});
 
   $CodeableConceptCopyWith<$Res> get category;
@@ -31090,7 +31090,7 @@ abstract class _$$_ExplanationOfBenefitAdjudicationCopyWith<$Res>
       CodeableConcept category,
       CodeableConcept? reason,
       Money? amount,
-      Decimal? value,
+      FhirDecimal? value,
       @JsonKey(name: '_value') Element? valueElement});
 
   @override
@@ -31384,7 +31384,7 @@ abstract class _ExplanationOfBenefitAdjudication
   @override
 
   /// [value] A non-monetary value associated with the category. Mutually exclusive to the amount element above.
-  Decimal? get value;
+  FhirDecimal? get value;
   @override
 
   /// [valueElement] ("_value") Extensions for value
@@ -31468,7 +31468,7 @@ mixin _$ExplanationOfBenefitDetail {
   Money? get unitPrice => throw _privateConstructorUsedError;
 
   /// [factor] A real number that represents a multiplier used in determining the overall value of services delivered and/or goods received. The concept of a Factor allows for a discount or surcharge multiplier to be applied to a monetary amount.
-  Decimal? get factor => throw _privateConstructorUsedError;
+  FhirDecimal? get factor => throw _privateConstructorUsedError;
 
   /// [factorElement] ("_factor") Extensions for factor
   @JsonKey(name: '_factor')
@@ -31529,7 +31529,7 @@ abstract class $ExplanationOfBenefitDetailCopyWith<$Res> {
       Money? patientPaid,
       Quantity? quantity,
       Money? unitPrice,
-      Decimal? factor,
+      FhirDecimal? factor,
       @JsonKey(name: '_factor') Element? factorElement,
       Money? tax,
       Money? net,
@@ -31862,7 +31862,7 @@ abstract class _$$_ExplanationOfBenefitDetailCopyWith<$Res>
       Money? patientPaid,
       Quantity? quantity,
       Money? unitPrice,
-      Decimal? factor,
+      FhirDecimal? factor,
       @JsonKey(name: '_factor') Element? factorElement,
       Money? tax,
       Money? net,
@@ -32504,7 +32504,7 @@ abstract class _ExplanationOfBenefitDetail extends ExplanationOfBenefitDetail {
   @override
 
   /// [factor] A real number that represents a multiplier used in determining the overall value of services delivered and/or goods received. The concept of a Factor allows for a discount or surcharge multiplier to be applied to a monetary amount.
-  Decimal? get factor;
+  FhirDecimal? get factor;
   @override
 
   /// [factorElement] ("_factor") Extensions for factor
@@ -32620,7 +32620,7 @@ mixin _$ExplanationOfBenefitSubDetail {
   Money? get unitPrice => throw _privateConstructorUsedError;
 
   /// [factor] A real number that represents a multiplier used in determining the overall value of services delivered and/or goods received. The concept of a Factor allows for a discount or surcharge multiplier to be applied to a monetary amount.
-  Decimal? get factor => throw _privateConstructorUsedError;
+  FhirDecimal? get factor => throw _privateConstructorUsedError;
 
   /// [factorElement] ("_factor") Extensions for factor
   @JsonKey(name: '_factor')
@@ -32678,7 +32678,7 @@ abstract class $ExplanationOfBenefitSubDetailCopyWith<$Res> {
       Money? patientPaid,
       Quantity? quantity,
       Money? unitPrice,
-      Decimal? factor,
+      FhirDecimal? factor,
       @JsonKey(name: '_factor') Element? factorElement,
       Money? tax,
       Money? net,
@@ -33005,7 +33005,7 @@ abstract class _$$_ExplanationOfBenefitSubDetailCopyWith<$Res>
       Money? patientPaid,
       Quantity? quantity,
       Money? unitPrice,
-      Decimal? factor,
+      FhirDecimal? factor,
       @JsonKey(name: '_factor') Element? factorElement,
       Money? tax,
       Money? net,
@@ -33624,7 +33624,7 @@ abstract class _ExplanationOfBenefitSubDetail
   @override
 
   /// [factor] A real number that represents a multiplier used in determining the overall value of services delivered and/or goods received. The concept of a Factor allows for a discount or surcharge multiplier to be applied to a monetary amount.
-  Decimal? get factor;
+  FhirDecimal? get factor;
   @override
 
   /// [factorElement] ("_factor") Extensions for factor
@@ -33744,7 +33744,7 @@ mixin _$ExplanationOfBenefitAddItem {
   List<CodeableConcept>? get programCode => throw _privateConstructorUsedError;
 
   /// [servicedDate] The date or dates when the service or product was supplied, performed or completed.
-  Date? get servicedDate => throw _privateConstructorUsedError;
+  FhirDate? get servicedDate => throw _privateConstructorUsedError;
 
   /// [servicedDateElement] ("_servicedDate") Extensions for servicedDate
   @JsonKey(name: '_servicedDate')
@@ -33773,7 +33773,7 @@ mixin _$ExplanationOfBenefitAddItem {
   Money? get unitPrice => throw _privateConstructorUsedError;
 
   /// [factor] A real number that represents a multiplier used in determining the overall value of services delivered and/or goods received. The concept of a Factor allows for a discount or surcharge multiplier to be applied to a monetary amount.
-  Decimal? get factor => throw _privateConstructorUsedError;
+  FhirDecimal? get factor => throw _privateConstructorUsedError;
 
   /// [factorElement] ("_factor") Extensions for factor
   @JsonKey(name: '_factor')
@@ -33841,7 +33841,7 @@ abstract class $ExplanationOfBenefitAddItemCopyWith<$Res> {
       CodeableConcept? productOrServiceEnd,
       List<CodeableConcept>? modifier,
       List<CodeableConcept>? programCode,
-      Date? servicedDate,
+      FhirDate? servicedDate,
       @JsonKey(name: '_servicedDate')
           Element? servicedDateElement,
       Period? servicedPeriod,
@@ -33851,7 +33851,7 @@ abstract class $ExplanationOfBenefitAddItemCopyWith<$Res> {
       Money? patientPaid,
       Quantity? quantity,
       Money? unitPrice,
-      Decimal? factor,
+      FhirDecimal? factor,
       @JsonKey(name: '_factor')
           Element? factorElement,
       Money? tax,
@@ -34281,7 +34281,7 @@ abstract class _$$_ExplanationOfBenefitAddItemCopyWith<$Res>
       CodeableConcept? productOrServiceEnd,
       List<CodeableConcept>? modifier,
       List<CodeableConcept>? programCode,
-      Date? servicedDate,
+      FhirDate? servicedDate,
       @JsonKey(name: '_servicedDate')
           Element? servicedDateElement,
       Period? servicedPeriod,
@@ -34291,7 +34291,7 @@ abstract class _$$_ExplanationOfBenefitAddItemCopyWith<$Res>
       Money? patientPaid,
       Quantity? quantity,
       Money? unitPrice,
-      Decimal? factor,
+      FhirDecimal? factor,
       @JsonKey(name: '_factor')
           Element? factorElement,
       Money? tax,
@@ -35178,7 +35178,7 @@ abstract class _ExplanationOfBenefitAddItem
   @override
 
   /// [servicedDate] The date or dates when the service or product was supplied, performed or completed.
-  Date? get servicedDate;
+  FhirDate? get servicedDate;
   @override
 
   /// [servicedDateElement] ("_servicedDate") Extensions for servicedDate
@@ -35215,7 +35215,7 @@ abstract class _ExplanationOfBenefitAddItem
   @override
 
   /// [factor] A real number that represents a multiplier used in determining the overall value of services delivered and/or goods received. The concept of a Factor allows for a discount or surcharge multiplier to be applied to a monetary amount.
-  Decimal? get factor;
+  FhirDecimal? get factor;
   @override
 
   /// [factorElement] ("_factor") Extensions for factor
@@ -35696,7 +35696,7 @@ mixin _$ExplanationOfBenefitDetail1 {
   Money? get unitPrice => throw _privateConstructorUsedError;
 
   /// [factor] A real number that represents a multiplier used in determining the overall value of services delivered and/or goods received. The concept of a Factor allows for a discount or surcharge multiplier to be applied to a monetary amount.
-  Decimal? get factor => throw _privateConstructorUsedError;
+  FhirDecimal? get factor => throw _privateConstructorUsedError;
 
   /// [factorElement] ("_factor") Extensions for factor
   @JsonKey(name: '_factor')
@@ -35751,7 +35751,7 @@ abstract class $ExplanationOfBenefitDetail1CopyWith<$Res> {
       Money? patientPaid,
       Quantity? quantity,
       Money? unitPrice,
-      Decimal? factor,
+      FhirDecimal? factor,
       @JsonKey(name: '_factor') Element? factorElement,
       Money? tax,
       Money? net,
@@ -36028,7 +36028,7 @@ abstract class _$$_ExplanationOfBenefitDetail1CopyWith<$Res>
       Money? patientPaid,
       Quantity? quantity,
       Money? unitPrice,
-      Decimal? factor,
+      FhirDecimal? factor,
       @JsonKey(name: '_factor') Element? factorElement,
       Money? tax,
       Money? net,
@@ -36559,7 +36559,7 @@ abstract class _ExplanationOfBenefitDetail1
   @override
 
   /// [factor] A real number that represents a multiplier used in determining the overall value of services delivered and/or goods received. The concept of a Factor allows for a discount or surcharge multiplier to be applied to a monetary amount.
-  Decimal? get factor;
+  FhirDecimal? get factor;
   @override
 
   /// [factorElement] ("_factor") Extensions for factor
@@ -36658,7 +36658,7 @@ mixin _$ExplanationOfBenefitSubDetail1 {
   Money? get unitPrice => throw _privateConstructorUsedError;
 
   /// [factor] A real number that represents a multiplier used in determining the overall value of services delivered and/or goods received. The concept of a Factor allows for a discount or surcharge multiplier to be applied to a monetary amount.
-  Decimal? get factor => throw _privateConstructorUsedError;
+  FhirDecimal? get factor => throw _privateConstructorUsedError;
 
   /// [factorElement] ("_factor") Extensions for factor
   @JsonKey(name: '_factor')
@@ -36709,7 +36709,7 @@ abstract class $ExplanationOfBenefitSubDetail1CopyWith<$Res> {
       Money? patientPaid,
       Quantity? quantity,
       Money? unitPrice,
-      Decimal? factor,
+      FhirDecimal? factor,
       @JsonKey(name: '_factor') Element? factorElement,
       Money? tax,
       Money? net,
@@ -36980,7 +36980,7 @@ abstract class _$$_ExplanationOfBenefitSubDetail1CopyWith<$Res>
       Money? patientPaid,
       Quantity? quantity,
       Money? unitPrice,
-      Decimal? factor,
+      FhirDecimal? factor,
       @JsonKey(name: '_factor') Element? factorElement,
       Money? tax,
       Money? net,
@@ -37487,7 +37487,7 @@ abstract class _ExplanationOfBenefitSubDetail1
   @override
 
   /// [factor] A real number that represents a multiplier used in determining the overall value of services delivered and/or goods received. The concept of a Factor allows for a discount or surcharge multiplier to be applied to a monetary amount.
-  Decimal? get factor;
+  FhirDecimal? get factor;
   @override
 
   /// [factorElement] ("_factor") Extensions for factor
@@ -37950,7 +37950,7 @@ mixin _$ExplanationOfBenefitPayment {
   CodeableConcept? get adjustmentReason => throw _privateConstructorUsedError;
 
   /// [date] Estimated date the payment will be issued or the actual issue date of payment.
-  Date? get date => throw _privateConstructorUsedError;
+  FhirDate? get date => throw _privateConstructorUsedError;
 
   /// [dateElement] ("_date") Extensions for date
   @JsonKey(name: '_date')
@@ -37983,7 +37983,7 @@ abstract class $ExplanationOfBenefitPaymentCopyWith<$Res> {
       CodeableConcept? type,
       Money? adjustment,
       CodeableConcept? adjustmentReason,
-      Date? date,
+      FhirDate? date,
       @JsonKey(name: '_date') Element? dateElement,
       Money? amount,
       Identifier? identifier});
@@ -38154,7 +38154,7 @@ abstract class _$$_ExplanationOfBenefitPaymentCopyWith<$Res>
       CodeableConcept? type,
       Money? adjustment,
       CodeableConcept? adjustmentReason,
-      Date? date,
+      FhirDate? date,
       @JsonKey(name: '_date') Element? dateElement,
       Money? amount,
       Identifier? identifier});
@@ -38478,7 +38478,7 @@ abstract class _ExplanationOfBenefitPayment
   @override
 
   /// [date] Estimated date the payment will be issued or the actual issue date of payment.
-  Date? get date;
+  FhirDate? get date;
   @override
 
   /// [dateElement] ("_date") Extensions for date
@@ -38541,7 +38541,7 @@ mixin _$ExplanationOfBenefitProcessNote {
   Element? get numberElement => throw _privateConstructorUsedError;
 
   /// [type] The business purpose of the note text.
-  Code? get type => throw _privateConstructorUsedError;
+  FhirCode? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] ("_type") Extensions for type
   @JsonKey(name: '_type')
@@ -38577,7 +38577,7 @@ abstract class $ExplanationOfBenefitProcessNoteCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       PositiveInt? number,
       @JsonKey(name: '_number') Element? numberElement,
-      Code? type,
+      FhirCode? type,
       @JsonKey(name: '_type') Element? typeElement,
       String? text,
       @JsonKey(name: '_text') Element? textElement,
@@ -38638,7 +38638,7 @@ class _$ExplanationOfBenefitProcessNoteCopyWithImpl<$Res,
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       typeElement: freezed == typeElement
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -38722,7 +38722,7 @@ abstract class _$$_ExplanationOfBenefitProcessNoteCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       PositiveInt? number,
       @JsonKey(name: '_number') Element? numberElement,
-      Code? type,
+      FhirCode? type,
       @JsonKey(name: '_type') Element? typeElement,
       String? text,
       @JsonKey(name: '_text') Element? textElement,
@@ -38786,7 +38786,7 @@ class __$$_ExplanationOfBenefitProcessNoteCopyWithImpl<$Res>
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       typeElement: freezed == typeElement
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -38906,7 +38906,7 @@ class _$_ExplanationOfBenefitProcessNote
 
   /// [type] The business purpose of the note text.
   @override
-  final Code? type;
+  final FhirCode? type;
 
   /// [typeElement] ("_type") Extensions for type
   @override
@@ -38993,7 +38993,7 @@ abstract class _ExplanationOfBenefitProcessNote
       final List<FhirExtension>? modifierExtension,
       final PositiveInt? number,
       @JsonKey(name: '_number') final Element? numberElement,
-      final Code? type,
+      final FhirCode? type,
       @JsonKey(name: '_type') final Element? typeElement,
       final String? text,
       @JsonKey(name: '_text') final Element? textElement,
@@ -39045,7 +39045,7 @@ abstract class _ExplanationOfBenefitProcessNote
   @override
 
   /// [type] The business purpose of the note text.
-  Code? get type;
+  FhirCode? get type;
   @override
 
   /// [typeElement] ("_type") Extensions for type
@@ -39110,7 +39110,7 @@ mixin _$ExplanationOfBenefitBenefitBalance {
   CodeableConcept get category => throw _privateConstructorUsedError;
 
   /// [excluded] True if the indicated class of service is excluded from the plan, missing or False indicates the product or service is included in the coverage.
-  Boolean? get excluded => throw _privateConstructorUsedError;
+  FhirBoolean? get excluded => throw _privateConstructorUsedError;
 
   /// [excludedElement] ("_excluded") Extensions for excluded
   @JsonKey(name: '_excluded')
@@ -39163,7 +39163,7 @@ abstract class $ExplanationOfBenefitBenefitBalanceCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept category,
-      Boolean? excluded,
+      FhirBoolean? excluded,
       @JsonKey(name: '_excluded') Element? excludedElement,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
@@ -39232,7 +39232,7 @@ class _$ExplanationOfBenefitBenefitBalanceCopyWithImpl<$Res,
       excluded: freezed == excluded
           ? _value.excluded
           : excluded // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       excludedElement: freezed == excludedElement
           ? _value.excludedElement
           : excludedElement // ignore: cast_nullable_to_non_nullable
@@ -39367,7 +39367,7 @@ abstract class _$$_ExplanationOfBenefitBenefitBalanceCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept category,
-      Boolean? excluded,
+      FhirBoolean? excluded,
       @JsonKey(name: '_excluded') Element? excludedElement,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
@@ -39442,7 +39442,7 @@ class __$$_ExplanationOfBenefitBenefitBalanceCopyWithImpl<$Res>
       excluded: freezed == excluded
           ? _value.excluded
           : excluded // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       excludedElement: freezed == excludedElement
           ? _value.excludedElement
           : excludedElement // ignore: cast_nullable_to_non_nullable
@@ -39582,7 +39582,7 @@ class _$_ExplanationOfBenefitBenefitBalance
 
   /// [excluded] True if the indicated class of service is excluded from the plan, missing or False indicates the product or service is included in the coverage.
   @override
-  final Boolean? excluded;
+  final FhirBoolean? excluded;
 
   /// [excludedElement] ("_excluded") Extensions for excluded
   @override
@@ -39709,7 +39709,7 @@ abstract class _ExplanationOfBenefitBenefitBalance
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           required final CodeableConcept category,
-          final Boolean? excluded,
+          final FhirBoolean? excluded,
           @JsonKey(name: '_excluded') final Element? excludedElement,
           final String? name,
           @JsonKey(name: '_name') final Element? nameElement,
@@ -39763,7 +39763,7 @@ abstract class _ExplanationOfBenefitBenefitBalance
   @override
 
   /// [excluded] True if the indicated class of service is excluded from the plan, missing or False indicates the product or service is included in the coverage.
-  Boolean? get excluded;
+  FhirBoolean? get excluded;
   @override
 
   /// [excludedElement] ("_excluded") Extensions for excluded
@@ -40481,7 +40481,7 @@ mixin _$InsurancePlan {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -40499,7 +40499,7 @@ mixin _$InsurancePlan {
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
@@ -40523,7 +40523,7 @@ mixin _$InsurancePlan {
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [status] The current state of the health insurance product.
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
@@ -40590,12 +40590,12 @@ abstract class $InsurancePlanCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.InsurancePlan)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -40604,7 +40604,7 @@ abstract class $InsurancePlanCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       List<CodeableConcept>? type,
@@ -40701,7 +40701,7 @@ class _$InsurancePlanCopyWithImpl<$Res, $Val extends InsurancePlan>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -40729,7 +40729,7 @@ class _$InsurancePlanCopyWithImpl<$Res, $Val extends InsurancePlan>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -40913,12 +40913,12 @@ abstract class _$$_InsurancePlanCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.InsurancePlan)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -40927,7 +40927,7 @@ abstract class _$$_InsurancePlanCopyWith<$Res>
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       List<CodeableConcept>? type,
@@ -41031,7 +41031,7 @@ class __$$_InsurancePlanCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -41059,7 +41059,7 @@ class __$$_InsurancePlanCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -41211,7 +41211,7 @@ class _$_InsurancePlan extends _InsurancePlan {
 
   /// [language] The base language in which the resource is written.
   @override
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] ("_language") Extensions for language
   @override
@@ -41278,7 +41278,7 @@ class _$_InsurancePlan extends _InsurancePlan {
 
   /// [status] The current state of the health insurance product.
   @override
-  final Code? status;
+  final FhirCode? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -41535,7 +41535,7 @@ abstract class _InsurancePlan extends InsurancePlan {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -41544,7 +41544,7 @@ abstract class _InsurancePlan extends InsurancePlan {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      final Code? status,
+      final FhirCode? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
       final List<CodeableConcept>? type,
@@ -41577,7 +41577,7 @@ abstract class _InsurancePlan extends InsurancePlan {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -41599,7 +41599,7 @@ abstract class _InsurancePlan extends InsurancePlan {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] ("_language") Extensions for language
@@ -41629,7 +41629,7 @@ abstract class _InsurancePlan extends InsurancePlan {
   @override
 
   /// [status] The current state of the health insurance product.
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status

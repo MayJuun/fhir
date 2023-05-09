@@ -135,7 +135,7 @@ class AuditEvent with Resource, _$AuditEvent {
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -189,7 +189,7 @@ class AuditEvent with Resource, _$AuditEvent {
 
     /// [action] Indicator for type of action performed during the event that
     ///  generated the audit.
-    Code? action,
+    FhirCode? action,
 
     /// [actionElement] Extensions for action
     @JsonKey(name: '_action')
@@ -199,14 +199,14 @@ class AuditEvent with Resource, _$AuditEvent {
     Period? period,
 
     /// [recorded] The time when the event was recorded.
-    Instant? recorded,
+    FhirInstant? recorded,
 
     /// [recordedElement] Extensions for recorded
     @JsonKey(name: '_recorded')
         Element? recordedElement,
 
     /// [outcome] Indicates whether the event succeeded or failed.
-    Code? outcome,
+    FhirCode? outcome,
 
     /// [outcomeElement] Extensions for outcome
     @JsonKey(name: '_outcome')
@@ -395,7 +395,7 @@ class AuditEventAgent with _$AuditEventAgent {
 
     /// [requestor] Indicator that the user is or is not the requestor, or
     ///  initiator, for the event being audited.
-    Boolean? requestor,
+    FhirBoolean? requestor,
 
     /// [requestorElement] Extensions for requestor
     @JsonKey(name: '_requestor') Element? requestorElement,
@@ -536,7 +536,7 @@ class AuditEventNetwork with _$AuditEventNetwork {
 
     /// [type] An identifier for the type of network access point that originated
     ///  the audit event.
-    Code? type,
+    FhirCode? type,
 
     /// [typeElement] Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
@@ -808,7 +808,7 @@ class AuditEventEntity with _$AuditEventEntity {
     @JsonKey(name: '_description') Element? descriptionElement,
 
     /// [query] The query parameters for a query-type entities.
-    Base64Binary? query,
+    FhirBase64Binary? query,
 
     /// [queryElement] Extensions for query
     @JsonKey(name: '_query') Element? queryElement,
@@ -935,7 +935,7 @@ class AuditEventDetail with _$AuditEventDetail {
     @JsonKey(name: '_valueString') Element? valueStringElement,
 
     /// [valueBase64Binary] The  value of the extra detail.
-    Base64Binary? valueBase64Binary,
+    FhirBase64Binary? valueBase64Binary,
 
     /// [valueBase64BinaryElement] Extensions for valueBase64Binary
     @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
@@ -1114,7 +1114,7 @@ class Consent with Resource, _$Consent {
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -1162,7 +1162,7 @@ class Consent with Resource, _$Consent {
     List<Identifier>? identifier,
 
     /// [status] Indicates the current state of this consent.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -1451,7 +1451,7 @@ class ConsentVerification with _$ConsentVerification {
     List<FhirExtension>? modifierExtension,
 
     /// [verified] Has the instruction been verified.
-    Boolean? verified,
+    FhirBoolean? verified,
 
     /// [verifiedElement] Extensions for verified
     @JsonKey(name: '_verified') Element? verifiedElement,
@@ -1595,7 +1595,7 @@ class ConsentProvision with _$ConsentProvision {
 
     /// [type] Action  to take - permit or deny - when the rule conditions are
     ///  met.  Not permitted in root rule, required in all nested rules.
-    Code? type,
+    FhirCode? type,
 
     /// [typeElement] Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
@@ -1852,7 +1852,7 @@ class ConsentData with _$ConsentData {
 
     /// [meaning] How the resource reference is interpreted when testing consent
     ///  restrictions.
-    Code? meaning,
+    FhirCode? meaning,
 
     /// [meaningElement] Extensions for meaning
     @JsonKey(name: '_meaning') Element? meaningElement,
@@ -2026,7 +2026,7 @@ class Provenance with Resource, _$Provenance {
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -2086,7 +2086,7 @@ class Provenance with Resource, _$Provenance {
         Element? occurredDateTimeElement,
 
     /// [recorded] The instant of time at which the activity was recorded.
-    Instant? recorded,
+    FhirInstant? recorded,
 
     /// [recordedElement] Extensions for recorded
     @JsonKey(name: '_recorded')
@@ -2360,7 +2360,7 @@ class ProvenanceEntity with _$ProvenanceEntity {
     List<FhirExtension>? modifierExtension,
 
     /// [role] How the entity was used during the activity.
-    Code? role,
+    FhirCode? role,
 
     /// [roleElement] Extensions for role
     @JsonKey(name: '_role') Element? roleElement,

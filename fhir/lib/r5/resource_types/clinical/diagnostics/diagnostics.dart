@@ -112,7 +112,7 @@ class BodyStructure with Resource, _$BodyStructure {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -129,7 +129,7 @@ class BodyStructure with Resource, _$BodyStructure {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -150,7 +150,7 @@ class BodyStructure with Resource, _$BodyStructure {
     List<Identifier>? identifier,
 
     /// [active] Whether this body site is in active use.
-    Boolean? active,
+    FhirBoolean? active,
 
     /// [activeElement] ("_active") Extensions for active
     @JsonKey(name: '_active') Element? activeElement,
@@ -619,7 +619,7 @@ class DiagnosticReport with Resource, _$DiagnosticReport {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -636,7 +636,7 @@ class DiagnosticReport with Resource, _$DiagnosticReport {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -660,7 +660,7 @@ class DiagnosticReport with Resource, _$DiagnosticReport {
     List<Reference>? basedOn,
 
     /// [status] The status of the diagnostic report.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -687,7 +687,7 @@ class DiagnosticReport with Resource, _$DiagnosticReport {
     Period? effectivePeriod,
 
     /// [issued] The date and time that this version of the report was made available to providers, typically after the report was reviewed and verified.
-    Instant? issued,
+    FhirInstant? issued,
 
     /// [issuedElement] ("_issued") Extensions for issued
     @JsonKey(name: '_issued') Element? issuedElement,
@@ -1134,7 +1134,7 @@ class GenomicStudy with Resource, _$GenomicStudy {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -1151,7 +1151,7 @@ class GenomicStudy with Resource, _$GenomicStudy {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -1202,7 +1202,7 @@ class GenomicStudy with Resource, _$GenomicStudy {
     List<CodeableReference>? reason,
 
     /// [instantiatesCanonical] The defined protocol that describes the study.
-    Canonical? instantiatesCanonical,
+    FhirCanonical? instantiatesCanonical,
 
     /// [instantiatesUri] The URL pointing to an externally maintained protocol that describes the study.
     FhirUri? instantiatesUri,
@@ -1381,7 +1381,7 @@ class GenomicStudyAnalysis with _$GenomicStudyAnalysis {
     CodeableConcept? genomeBuild,
 
     /// [instantiatesCanonical] The defined protocol that describes the analysis.
-    Canonical? instantiatesCanonical,
+    FhirCanonical? instantiatesCanonical,
 
     /// [instantiatesUri] The URL pointing to an externally maintained protocol that describes the analysis.
     FhirUri? instantiatesUri,
@@ -2050,7 +2050,7 @@ class ImagingSelection with Resource, _$ImagingSelection {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -2067,7 +2067,7 @@ class ImagingSelection with Resource, _$ImagingSelection {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -2088,7 +2088,7 @@ class ImagingSelection with Resource, _$ImagingSelection {
     List<Identifier>? identifier,
 
     /// [status] The current state of the ImagingSelection resource. This is not the status of any ImagingStudy, ServiceRequest, or Task resources associated with the ImagingSelection.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -2097,7 +2097,7 @@ class ImagingSelection with Resource, _$ImagingSelection {
     Reference? subject,
 
     /// [issued] The date and time this imaging selection was created.
-    Instant? issued,
+    FhirInstant? issued,
 
     /// [issuedElement] ("_issued") Extensions for issued
     @JsonKey(name: '_issued') Element? issuedElement,
@@ -2115,7 +2115,7 @@ class ImagingSelection with Resource, _$ImagingSelection {
     required CodeableConcept code,
 
     /// [studyUid] The Study Instance UID for the DICOM Study from which the images were selected.
-    Id? studyUid,
+    FhirId? studyUid,
 
     /// [studyUidElement] ("_studyUid") Extensions for studyUid
     @JsonKey(name: '_studyUid') Element? studyUidElement,
@@ -2127,7 +2127,7 @@ class ImagingSelection with Resource, _$ImagingSelection {
     List<Reference>? endpoint,
 
     /// [seriesUid] The Series Instance UID for the DICOM Series from which the images were selected.
-    Id? seriesUid,
+    FhirId? seriesUid,
 
     /// [seriesUidElement] ("_seriesUid") Extensions for seriesUid
     @JsonKey(name: '_seriesUid') Element? seriesUidElement,
@@ -2139,7 +2139,7 @@ class ImagingSelection with Resource, _$ImagingSelection {
     @JsonKey(name: '_seriesNumber') Element? seriesNumberElement,
 
     /// [frameOfReferenceUid] The Frame of Reference UID identifying the coordinate system that conveys spatial and/or temporal information for the selected images or frames.
-    Id? frameOfReferenceUid,
+    FhirId? frameOfReferenceUid,
 
     /// [frameOfReferenceUidElement] ("_frameOfReferenceUid") Extensions for frameOfReferenceUid
     @JsonKey(name: '_frameOfReferenceUid') Element? frameOfReferenceUidElement,
@@ -2403,7 +2403,7 @@ class ImagingSelectionInstance with _$ImagingSelectionInstance {
     List<FhirExtension>? modifierExtension,
 
     /// [uid] The SOP Instance UID for the selected DICOM instance.
-    Id? uid,
+    FhirId? uid,
 
     /// [uidElement] ("_uid") Extensions for uid
     @JsonKey(name: '_uid') Element? uidElement,
@@ -2549,7 +2549,7 @@ class ImagingSelectionImageRegion with _$ImagingSelectionImageRegion {
     List<FhirExtension>? modifierExtension,
 
     /// [regionType] Specifies the type of image region.
-    Code? regionType,
+    FhirCode? regionType,
 
     /// [regionTypeElement] ("_regionType") Extensions for regionType
     @JsonKey(name: '_regionType') Element? regionTypeElement,
@@ -2676,7 +2676,7 @@ class ImagingSelectionImageRegion1 with _$ImagingSelectionImageRegion1 {
     List<FhirExtension>? modifierExtension,
 
     /// [regionType] Specifies the type of image region.
-    Code? regionType,
+    FhirCode? regionType,
 
     /// [regionTypeElement] ("_regionType") Extensions for regionType
     @JsonKey(name: '_regionType') Element? regionTypeElement,
@@ -2878,7 +2878,7 @@ class ImagingStudy with Resource, _$ImagingStudy {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -2895,7 +2895,7 @@ class ImagingStudy with Resource, _$ImagingStudy {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -2916,7 +2916,7 @@ class ImagingStudy with Resource, _$ImagingStudy {
     List<Identifier>? identifier,
 
     /// [status] The current state of the ImagingStudy resource. This is not the status of any ServiceRequest or Task resources associated with the ImagingStudy.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -3142,7 +3142,7 @@ class ImagingStudySeries with _$ImagingStudySeries {
     List<FhirExtension>? modifierExtension,
 
     /// [uid] The DICOM Series Instance UID for the series.
-    Id? uid,
+    FhirId? uid,
 
     /// [uidElement] ("_uid") Extensions for uid
     @JsonKey(name: '_uid') Element? uidElement,
@@ -3430,7 +3430,7 @@ class ImagingStudyInstance with _$ImagingStudyInstance {
     List<FhirExtension>? modifierExtension,
 
     /// [uid] The DICOM SOP Instance UID for this image or other DICOM content.
-    Id? uid,
+    FhirId? uid,
 
     /// [uidElement] ("_uid") Extensions for uid
     @JsonKey(name: '_uid') Element? uidElement,
@@ -3576,7 +3576,7 @@ class MolecularSequence with Resource, _$MolecularSequence {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -3593,7 +3593,7 @@ class MolecularSequence with Resource, _$MolecularSequence {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -3614,7 +3614,7 @@ class MolecularSequence with Resource, _$MolecularSequence {
     List<Identifier>? identifier,
 
     /// [type] Amino Acid Sequence/ DNA Sequence / RNA Sequence.
-    Code? type,
+    FhirCode? type,
 
     /// [typeElement] ("_type") Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
@@ -3758,7 +3758,7 @@ class MolecularSequenceRelative with _$MolecularSequenceRelative {
     required CodeableConcept coordinateSystem,
 
     /// [ordinalPosition] Indicates the order in which the sequence should be considered when putting multiple 'relative' elements together.
-    Integer? ordinalPosition,
+    FhirInteger? ordinalPosition,
 
     /// [ordinalPositionElement] ("_ordinalPosition") Extensions for ordinalPosition
     @JsonKey(name: '_ordinalPosition') Element? ordinalPositionElement,
@@ -3929,25 +3929,25 @@ class MolecularSequenceStartingSequence
     Reference? sequenceReference,
 
     /// [windowStart] Start position of the window on the starting sequence. This value should honor the rules of the coordinateSystem.
-    Integer? windowStart,
+    FhirInteger? windowStart,
 
     /// [windowStartElement] ("_windowStart") Extensions for windowStart
     @JsonKey(name: '_windowStart') Element? windowStartElement,
 
     /// [windowEnd] End position of the window on the starting sequence. This value should honor the rules of the  coordinateSystem.
-    Integer? windowEnd,
+    FhirInteger? windowEnd,
 
     /// [windowEndElement] ("_windowEnd") Extensions for windowEnd
     @JsonKey(name: '_windowEnd') Element? windowEndElement,
 
     /// [orientation] A relative reference to a DNA strand based on gene orientation. The strand that contains the open reading frame of the gene is the "sense" strand, and the opposite complementary strand is the "antisense" strand.
-    Code? orientation,
+    FhirCode? orientation,
 
     /// [orientationElement] ("_orientation") Extensions for orientation
     @JsonKey(name: '_orientation') Element? orientationElement,
 
     /// [strand] An absolute reference to a strand. The Watson strand is the strand whose 5'-end is on the short arm of the chromosome, and the Crick strand as the one whose 5'-end is on the long arm.
-    Code? strand,
+    FhirCode? strand,
 
     /// [strandElement] ("_strand") Extensions for strand
     @JsonKey(name: '_strand') Element? strandElement,
@@ -4078,13 +4078,13 @@ class MolecularSequenceEdit with _$MolecularSequenceEdit {
     List<FhirExtension>? modifierExtension,
 
     /// [start] Start position of the edit on the starting sequence. If the coordinate system is either 0-based or 1-based, then start position is inclusive.
-    Integer? start,
+    FhirInteger? start,
 
     /// [startElement] ("_start") Extensions for start
     @JsonKey(name: '_start') Element? startElement,
 
     /// [end] End position of the edit on the starting sequence. If the coordinate system is 0-based then end is exclusive and does not include the last position. If the coordinate system is 1-base, then end is inclusive and includes the last position.
-    Integer? end,
+    FhirInteger? end,
 
     /// [endElement] ("_end") Extensions for end
     @JsonKey(name: '_end') Element? endElement,
@@ -4388,7 +4388,7 @@ class Observation with Resource, _$Observation {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -4405,7 +4405,7 @@ class Observation with Resource, _$Observation {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -4426,7 +4426,7 @@ class Observation with Resource, _$Observation {
     List<Identifier>? identifier,
 
     /// [instantiatesCanonical] The reference to a FHIR ObservationDefinition resource that provides the definition that is adhered to in whole or in part by this Observation instance.
-    Canonical? instantiatesCanonical,
+    FhirCanonical? instantiatesCanonical,
 
     /// [instantiatesCanonicalElement] ("_instantiatesCanonical") Extensions for instantiatesCanonical
     @JsonKey(name: '_instantiatesCanonical')
@@ -4445,7 +4445,7 @@ class Observation with Resource, _$Observation {
     List<Reference>? partOf,
 
     /// [status] The status of the result value.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -4478,13 +4478,13 @@ class Observation with Resource, _$Observation {
     Timing? effectiveTiming,
 
     /// [effectiveInstant] The time or time-period the observed value is asserted as being true. For biological subjects - e.g. human patients - this is usually called the "physiologically relevant time". This is usually either the time of the procedure or of specimen collection, but very often the source of the date/time is not known, only the date/time itself.
-    Instant? effectiveInstant,
+    FhirInstant? effectiveInstant,
 
     /// [effectiveInstantElement] ("_effectiveInstant") Extensions for effectiveInstant
     @JsonKey(name: '_effectiveInstant') Element? effectiveInstantElement,
 
     /// [issued] The date and time this version of the observation was made available to providers, typically after the results have been reviewed and verified.
-    Instant? issued,
+    FhirInstant? issued,
 
     /// [issuedElement] ("_issued") Extensions for issued
     @JsonKey(name: '_issued') Element? issuedElement,
@@ -4505,13 +4505,13 @@ class Observation with Resource, _$Observation {
     @JsonKey(name: '_valueString') Element? valueStringElement,
 
     /// [valueBoolean] The information determined as a result of making the observation, if the information has a simple value.
-    Boolean? valueBoolean,
+    FhirBoolean? valueBoolean,
 
     /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
 
     /// [valueInteger] The information determined as a result of making the observation, if the information has a simple value.
-    Integer? valueInteger,
+    FhirInteger? valueInteger,
 
     /// [valueIntegerElement] ("_valueInteger") Extensions for valueInteger
     @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
@@ -4689,7 +4689,7 @@ class ObservationTriggeredBy with _$ObservationTriggeredBy {
     required Reference observation,
 
     /// [type] The type of trigger. Reflex | Repeat | Re-run.
-    Code? type,
+    FhirCode? type,
 
     /// [typeElement] ("_type") Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
@@ -5018,13 +5018,13 @@ class ObservationComponent with _$ObservationComponent {
     @JsonKey(name: '_valueString') Element? valueStringElement,
 
     /// [valueBoolean] The information determined as a result of making the observation, if the information has a simple value.
-    Boolean? valueBoolean,
+    FhirBoolean? valueBoolean,
 
     /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
 
     /// [valueInteger] The information determined as a result of making the observation, if the information has a simple value.
-    Integer? valueInteger,
+    FhirInteger? valueInteger,
 
     /// [valueIntegerElement] ("_valueInteger") Extensions for valueInteger
     @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
@@ -5216,7 +5216,7 @@ class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -5233,7 +5233,7 @@ class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -5266,7 +5266,7 @@ class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
     @JsonKey(name: '_questionnaire') Element? questionnaireElement,
 
     /// [status] The position of the questionnaire response within its overall lifecycle.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -5592,25 +5592,25 @@ class QuestionnaireResponseAnswer with _$QuestionnaireResponseAnswer {
     List<FhirExtension>? modifierExtension,
 
     /// [valueBoolean] The answer (or one of the answers) provided by the respondent to the question.
-    Boolean? valueBoolean,
+    FhirBoolean? valueBoolean,
 
     /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
 
     /// [valueDecimal] The answer (or one of the answers) provided by the respondent to the question.
-    Decimal? valueDecimal,
+    FhirDecimal? valueDecimal,
 
     /// [valueDecimalElement] ("_valueDecimal") Extensions for valueDecimal
     @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
 
     /// [valueInteger] The answer (or one of the answers) provided by the respondent to the question.
-    Integer? valueInteger,
+    FhirInteger? valueInteger,
 
     /// [valueIntegerElement] ("_valueInteger") Extensions for valueInteger
     @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
 
     /// [valueDate] The answer (or one of the answers) provided by the respondent to the question.
-    Date? valueDate,
+    FhirDate? valueDate,
 
     /// [valueDateElement] ("_valueDate") Extensions for valueDate
     @JsonKey(name: '_valueDate') Element? valueDateElement,
@@ -5812,7 +5812,7 @@ class Specimen with Resource, _$Specimen {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -5829,7 +5829,7 @@ class Specimen with Resource, _$Specimen {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -5853,7 +5853,7 @@ class Specimen with Resource, _$Specimen {
     Identifier? accessionIdentifier,
 
     /// [status] The availability of the specimen.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -5877,7 +5877,7 @@ class Specimen with Resource, _$Specimen {
     List<Reference>? request,
 
     /// [combined] This element signifies if the specimen is part of a group or pooled.
-    Code? combined,
+    FhirCode? combined,
 
     /// [combinedElement] ("_combined") Extensions for combined
     @JsonKey(name: '_combined') Element? combinedElement,

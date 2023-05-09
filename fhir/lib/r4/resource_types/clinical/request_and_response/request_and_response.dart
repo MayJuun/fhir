@@ -182,7 +182,7 @@ class Communication with Resource, _$Communication {
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -257,7 +257,7 @@ class Communication with Resource, _$Communication {
     List<Reference>? inResponseTo,
 
     /// [status] The status of the transmission.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -274,7 +274,7 @@ class Communication with Resource, _$Communication {
     /// [priority] Characterizes how quickly the planned or in progress
     /// communication must be addressed. Includes concepts such as stat, urgent,
     ///  routine.
-    Code? priority,
+    FhirCode? priority,
 
     /// [priorityElement] Extensions for priority
     @JsonKey(name: '_priority')
@@ -658,7 +658,7 @@ class CommunicationRequest with Resource, _$CommunicationRequest {
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -721,7 +721,7 @@ class CommunicationRequest with Resource, _$CommunicationRequest {
     Identifier? groupIdentifier,
 
     /// [status] The status of the proposal or order.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -737,7 +737,7 @@ class CommunicationRequest with Resource, _$CommunicationRequest {
 
     /// [priority] Characterizes how quickly the proposed act must be initiated.
     ///  Includes concepts such as stat, urgent, routine.
-    Code? priority,
+    FhirCode? priority,
 
     /// [priorityElement] Extensions for priority
     @JsonKey(name: '_priority')
@@ -745,7 +745,7 @@ class CommunicationRequest with Resource, _$CommunicationRequest {
 
     /// [doNotPerform] If true indicates that the CommunicationRequest is asking
     ///  for the specified action to *not* occur.
-    Boolean? doNotPerform,
+    FhirBoolean? doNotPerform,
 
     /// [doNotPerformElement] Extensions for doNotPerform
     @JsonKey(name: '_doNotPerform')
@@ -1146,7 +1146,7 @@ class DeviceRequest with Resource, _$DeviceRequest {
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -1219,7 +1219,7 @@ class DeviceRequest with Resource, _$DeviceRequest {
     Identifier? groupIdentifier,
 
     /// [status] The status of the request.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -1227,7 +1227,7 @@ class DeviceRequest with Resource, _$DeviceRequest {
 
     /// [intent] Whether the request is a proposal, plan, an original order or a
     ///  reflex order.
-    Code? intent,
+    FhirCode? intent,
 
     /// [intentElement] Extensions for intent
     @JsonKey(name: '_intent')
@@ -1235,7 +1235,7 @@ class DeviceRequest with Resource, _$DeviceRequest {
 
     /// [priority] Indicates how quickly the {{title}} should be addressed with
     ///  respect to other requests.
-    Code? priority,
+    FhirCode? priority,
 
     /// [priorityElement] Extensions for priority
     @JsonKey(name: '_priority')
@@ -1438,7 +1438,7 @@ class DeviceRequestParameter with _$DeviceRequestParameter {
     Range? valueRange,
 
     /// [valueBoolean] The value of the device detail.
-    Boolean? valueBoolean,
+    FhirBoolean? valueBoolean,
 
     /// [valueBooleanElement] Extensions for valueBoolean
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
@@ -1610,7 +1610,7 @@ class DeviceUseStatement with Resource, _$DeviceUseStatement {
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -1664,7 +1664,7 @@ class DeviceUseStatement with Resource, _$DeviceUseStatement {
     /// [status] A code representing the patient or other source's judgment about
     /// the state of the device used that this statement is about.  Generally this
     ///  will be active or completed.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -1916,7 +1916,7 @@ class GuidanceResponse with Resource, _$GuidanceResponse {
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -1980,7 +1980,7 @@ class GuidanceResponse with Resource, _$GuidanceResponse {
 
     /// [moduleCanonical] An identifier, CodeableConcept or canonical reference
     ///  to the guidance that was requested.
-    Canonical? moduleCanonical,
+    FhirCanonical? moduleCanonical,
 
     /// [moduleCanonicalElement] Extensions for moduleCanonical
     @JsonKey(name: '_moduleCanonical')
@@ -1999,7 +1999,7 @@ class GuidanceResponse with Resource, _$GuidanceResponse {
     /// accurate response could be provided if more data was available, the status
     /// will be data-requested, and the response will contain a description of the
     ///  additional requested information.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -2215,7 +2215,7 @@ class SupplyDelivery with Resource, _$SupplyDelivery {
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -2272,7 +2272,7 @@ class SupplyDelivery with Resource, _$SupplyDelivery {
     List<Reference>? partOf,
 
     /// [status] A code specifying the state of the dispense event.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -2600,7 +2600,7 @@ class SupplyRequest with Resource, _$SupplyRequest {
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -2650,7 +2650,7 @@ class SupplyRequest with Resource, _$SupplyRequest {
     List<Identifier>? identifier,
 
     /// [status] Status of the supply request.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -2662,7 +2662,7 @@ class SupplyRequest with Resource, _$SupplyRequest {
 
     /// [priority] Indicates how quickly this SupplyRequest should be addressed
     ///  with respect to other requests.
-    Code? priority,
+    FhirCode? priority,
 
     /// [priorityElement] Extensions for priority
     @JsonKey(name: '_priority')
@@ -2837,7 +2837,7 @@ class SupplyRequestParameter with _$SupplyRequestParameter {
     Range? valueRange,
 
     /// [valueBoolean] The value of the device detail.
-    Boolean? valueBoolean,
+    FhirBoolean? valueBoolean,
 
     /// [valueBooleanElement] Extensions for valueBoolean
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,

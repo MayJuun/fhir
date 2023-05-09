@@ -126,7 +126,7 @@ class BodyStructure with Resource, _$BodyStructure {
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -174,7 +174,7 @@ class BodyStructure with Resource, _$BodyStructure {
     List<Identifier>? identifier,
 
     /// [active] Whether this body site is in active use.
-    Boolean? active,
+    FhirBoolean? active,
 
     /// [activeElement] Extensions for active
     @JsonKey(name: '_active')
@@ -405,7 +405,7 @@ class DiagnosticReport with Resource, _$DiagnosticReport {
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -457,7 +457,7 @@ class DiagnosticReport with Resource, _$DiagnosticReport {
     List<Reference>? basedOn,
 
     /// [status] The status of the diagnostic report.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -501,7 +501,7 @@ class DiagnosticReport with Resource, _$DiagnosticReport {
     /// [issued] The date and time that this version of the report was made
     /// available to providers, typically after the report was reviewed and
     ///  verified.
-    Instant? issued,
+    FhirInstant? issued,
 
     /// [issuedElement] Extensions for issued
     @JsonKey(name: '_issued')
@@ -862,7 +862,7 @@ class ImagingStudy with Resource, _$ImagingStudy {
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -911,7 +911,7 @@ class ImagingStudy with Resource, _$ImagingStudy {
     List<Identifier>? identifier,
 
     /// [status] The current state of the ImagingStudy.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -1154,7 +1154,7 @@ class ImagingStudySeries with _$ImagingStudySeries {
     List<FhirExtension>? modifierExtension,
 
     /// [uid] The DICOM Series Instance UID for the series.
-    Id? uid,
+    FhirId? uid,
 
     /// [uidElement] Extensions for uid
     @JsonKey(name: '_uid') Element? uidElement,
@@ -1439,7 +1439,7 @@ class ImagingStudyInstance with _$ImagingStudyInstance {
     List<FhirExtension>? modifierExtension,
 
     /// [uid] The DICOM SOP Instance UID for this image or other DICOM content.
-    Id? uid,
+    FhirId? uid,
 
     /// [uidElement] Extensions for uid
     @JsonKey(name: '_uid') Element? uidElement,
@@ -1661,7 +1661,7 @@ class Media with Resource, _$Media {
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -1720,7 +1720,7 @@ class Media with Resource, _$Media {
     List<Reference>? partOf,
 
     /// [status] The current state of the {{title}}.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -1757,7 +1757,7 @@ class Media with Resource, _$Media {
 
     /// [issued] The date and time this version of the media was made available
     ///  to providers, typically after having been reviewed.
-    Instant? issued,
+    FhirInstant? issued,
 
     /// [issuedElement] Extensions for issued
     @JsonKey(name: '_issued')
@@ -1812,7 +1812,7 @@ class Media with Resource, _$Media {
 
     /// [duration] The duration of the recording in seconds - for audio and
     ///  video.
-    Decimal? duration,
+    FhirDecimal? duration,
 
     /// [durationElement] Extensions for duration
     @JsonKey(name: '_duration')
@@ -1999,7 +1999,7 @@ class MolecularSequence with Resource, _$MolecularSequence {
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -2048,7 +2048,7 @@ class MolecularSequence with Resource, _$MolecularSequence {
     List<Identifier>? identifier,
 
     /// [type] Amino Acid Sequence/ DNA Sequence / RNA Sequence.
-    Code? type,
+    FhirCode? type,
 
     /// [typeElement] Extensions for type
     @JsonKey(name: '_type')
@@ -2057,7 +2057,7 @@ class MolecularSequence with Resource, _$MolecularSequence {
     /// [coordinateSystem] Whether the sequence is numbered starting at 0
     /// (0-based numbering or coordinates, inclusive start, exclusive end) or
     ///  starting at 1 (1-based numbering, inclusive start and inclusive end).
-    Integer? coordinateSystem,
+    FhirInteger? coordinateSystem,
 
     /// [coordinateSystemElement] Extensions for coordinateSystem
     @JsonKey(name: '_coordinateSystem')
@@ -2108,7 +2108,7 @@ class MolecularSequence with Resource, _$MolecularSequence {
 
     /// [readCoverage] Coverage (read depth or depth) is the average number of
     ///  reads representing a given nucleotide in the reconstructed sequence.
-    Integer? readCoverage,
+    FhirInteger? readCoverage,
 
     /// [readCoverageElement] Extensions for readCoverage
     @JsonKey(name: '_readCoverage')
@@ -2282,7 +2282,7 @@ class MolecularSequenceReferenceSeq with _$MolecularSequenceReferenceSeq {
     /// orientation. The strand that contains the open reading frame of the gene
     /// is the "sense" strand, and the opposite complementary strand is the
     ///  "antisense" strand.
-    Code? orientation,
+    FhirCode? orientation,
 
     /// [orientationElement] Extensions for orientation
     @JsonKey(name: '_orientation') Element? orientationElement,
@@ -2306,7 +2306,7 @@ class MolecularSequenceReferenceSeq with _$MolecularSequenceReferenceSeq {
     /// [strand] An absolute reference to a strand. The Watson strand is the
     /// strand whose 5'-end is on the short arm of the chromosome, and the Crick
     ///  strand as the one whose 5'-end is on the long arm.
-    Code? strand,
+    FhirCode? strand,
 
     /// [strandElement] Extensions for strand
     @JsonKey(name: '_strand') Element? strandElement,
@@ -2314,7 +2314,7 @@ class MolecularSequenceReferenceSeq with _$MolecularSequenceReferenceSeq {
     /// [windowStart] Start position of the window on the reference sequence. If
     /// the coordinate system is either 0-based or 1-based, then start position is
     ///  inclusive.
-    Integer? windowStart,
+    FhirInteger? windowStart,
 
     /// [windowStartElement] Extensions for windowStart
     @JsonKey(name: '_windowStart') Element? windowStartElement,
@@ -2323,7 +2323,7 @@ class MolecularSequenceReferenceSeq with _$MolecularSequenceReferenceSeq {
     /// coordinate system is 0-based then end is exclusive and does not include
     /// the last position. If the coordinate system is 1-base, then end is
     ///  inclusive and includes the last position.
-    Integer? windowEnd,
+    FhirInteger? windowEnd,
 
     /// [windowEndElement] Extensions for windowEnd
     @JsonKey(name: '_windowEnd') Element? windowEndElement,
@@ -2464,7 +2464,7 @@ class MolecularSequenceVariant with _$MolecularSequenceVariant {
     /// [start] Start position of the variant on the  reference sequence. If the
     /// coordinate system is either 0-based or 1-based, then start position is
     ///  inclusive.
-    Integer? start,
+    FhirInteger? start,
 
     /// [startElement] Extensions for start
     @JsonKey(name: '_start') Element? startElement,
@@ -2473,7 +2473,7 @@ class MolecularSequenceVariant with _$MolecularSequenceVariant {
     /// coordinate system is 0-based then end is exclusive and does not include
     /// the last position. If the coordinate system is 1-base, then end is
     ///  inclusive and includes the last position.
-    Integer? end,
+    FhirInteger? end,
 
     /// [endElement] Extensions for end
     @JsonKey(name: '_end') Element? endElement,
@@ -2682,7 +2682,7 @@ class MolecularSequenceQuality with _$MolecularSequenceQuality {
     List<FhirExtension>? modifierExtension,
 
     /// [type] INDEL / SNP / Undefined variant.
-    Code? type,
+    FhirCode? type,
 
     /// [typeElement] Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
@@ -2692,7 +2692,7 @@ class MolecularSequenceQuality with _$MolecularSequenceQuality {
 
     /// [start] Start position of the sequence. If the coordinate system is
     ///  either 0-based or 1-based, then start position is inclusive.
-    Integer? start,
+    FhirInteger? start,
 
     /// [startElement] Extensions for start
     @JsonKey(name: '_start') Element? startElement,
@@ -2701,7 +2701,7 @@ class MolecularSequenceQuality with _$MolecularSequenceQuality {
     /// then end is exclusive and does not include the last position. If the
     /// coordinate system is 1-base, then end is inclusive and includes the last
     ///  position.
-    Integer? end,
+    FhirInteger? end,
 
     /// [endElement] Extensions for end
     @JsonKey(name: '_end') Element? endElement,
@@ -2718,7 +2718,7 @@ class MolecularSequenceQuality with _$MolecularSequenceQuality {
     /// through the Query Call Set that are consistent with all of the alleles at
     /// this site, and for which there is an accurate genotype call for the
     ///  event.
-    Decimal? truthTP,
+    FhirDecimal? truthTP,
 
     /// [truthTPElement] Extensions for truthTP
     @JsonKey(name: '_truthTP') Element? truthTPElement,
@@ -2728,7 +2728,7 @@ class MolecularSequenceQuality with _$MolecularSequenceQuality {
     /// through the Truth Call Set that are consistent with all of the alleles at
     /// this site, and for which there is an accurate genotype call for the
     ///  event.
-    Decimal? queryTP,
+    FhirDecimal? queryTP,
 
     /// [queryTPElement] Extensions for queryTP
     @JsonKey(name: '_queryTP') Element? queryTPElement,
@@ -2738,7 +2738,7 @@ class MolecularSequenceQuality with _$MolecularSequenceQuality {
     /// with all of the alleles at this site, or sites for which there is an
     /// inaccurate genotype call for the event. Sites with correct variant but
     ///  incorrect genotype are counted here.
-    Decimal? truthFN,
+    FhirDecimal? truthFN,
 
     /// [truthFNElement] Extensions for truthFN
     @JsonKey(name: '_truthFN') Element? truthFNElement,
@@ -2747,7 +2747,7 @@ class MolecularSequenceQuality with _$MolecularSequenceQuality {
     /// for which there is no path through the Truth Call Set that is consistent
     /// with this site. Sites with correct variant but incorrect genotype are
     ///  counted here.
-    Decimal? queryFP,
+    FhirDecimal? queryFP,
 
     /// [queryFPElement] Extensions for queryFP
     @JsonKey(name: '_queryFP') Element? queryFPElement,
@@ -2755,26 +2755,26 @@ class MolecularSequenceQuality with _$MolecularSequenceQuality {
     /// [gtFP] The number of false positives where the non-REF alleles in the
     /// Truth and Query Call Sets match (i.e. cases where the truth is 1/1 and the
     ///  query is 0/1 or similar).
-    Decimal? gtFP,
+    FhirDecimal? gtFP,
 
     /// [gtFPElement] Extensions for gtFP
     @JsonKey(name: '_gtFP') Element? gtFPElement,
 
     /// [precision] QUERY.TP / (QUERY.TP + QUERY.FP).
-    Decimal? precision,
+    FhirDecimal? precision,
 
     /// [precisionElement] Extensions for precision
     @JsonKey(name: '_precision') Element? precisionElement,
 
     /// [recall] TRUTH.TP / (TRUTH.TP + TRUTH.FN).
-    Decimal? recall,
+    FhirDecimal? recall,
 
     /// [recallElement] Extensions for recall
     @JsonKey(name: '_recall') Element? recallElement,
 
     /// [fScore] Harmonic mean of Recall and Precision, computed as: 2 *
     ///  precision * recall / (precision + recall).
-    Decimal? fScore,
+    FhirDecimal? fScore,
 
     /// [fScoreElement] Extensions for fScore
     @JsonKey(name: '_fScore') Element? fScoreElement,
@@ -3082,7 +3082,7 @@ class MolecularSequenceRepository with _$MolecularSequenceRepository {
 
     /// [type] Click and see / RESTful API / Need login to see / RESTful API with
     ///  authentication / Other ways to see resource.
-    Code? type,
+    FhirCode? type,
 
     /// [typeElement] Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
@@ -3236,13 +3236,13 @@ class MolecularSequenceStructureVariant
 
     /// [exact] Used to indicate if the outer and inner start-end values have the
     ///  same meaning.
-    Boolean? exact,
+    FhirBoolean? exact,
 
     /// [exactElement] Extensions for exact
     @JsonKey(name: '_exact') Element? exactElement,
 
     /// [length] Length of the variant chromosome.
-    Integer? length,
+    FhirInteger? length,
 
     /// [lengthElement] Extensions for length
     @JsonKey(name: '_length') Element? lengthElement,
@@ -3347,7 +3347,7 @@ class MolecularSequenceOuter with _$MolecularSequenceOuter {
 
     /// [start] Structural variant outer start. If the coordinate system is
     ///  either 0-based or 1-based, then start position is inclusive.
-    Integer? start,
+    FhirInteger? start,
 
     /// [startElement] Extensions for start
     @JsonKey(name: '_start') Element? startElement,
@@ -3356,7 +3356,7 @@ class MolecularSequenceOuter with _$MolecularSequenceOuter {
     /// then end is exclusive and does not include the last position. If the
     /// coordinate system is 1-base, then end is inclusive and includes the last
     ///  position.
-    Integer? end,
+    FhirInteger? end,
 
     /// [endElement] Extensions for end
     @JsonKey(name: '_end') Element? endElement,
@@ -3466,7 +3466,7 @@ class MolecularSequenceInner with _$MolecularSequenceInner {
 
     /// [start] Structural variant inner start. If the coordinate system is
     ///  either 0-based or 1-based, then start position is inclusive.
-    Integer? start,
+    FhirInteger? start,
 
     /// [startElement] Extensions for start
     @JsonKey(name: '_start') Element? startElement,
@@ -3475,7 +3475,7 @@ class MolecularSequenceInner with _$MolecularSequenceInner {
     /// then end is exclusive and does not include the last position. If the
     /// coordinate system is 1-base, then end is inclusive and includes the last
     ///  position.
-    Integer? end,
+    FhirInteger? end,
 
     /// [endElement] Extensions for end
     @JsonKey(name: '_end') Element? endElement,
@@ -3756,7 +3756,7 @@ class Observation with Resource, _$Observation {
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -3813,7 +3813,7 @@ class Observation with Resource, _$Observation {
     List<Reference>? partOf,
 
     /// [status] The status of the result value.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -3881,7 +3881,7 @@ class Observation with Resource, _$Observation {
     /// usually called the "physiologically relevant time". This is usually either
     /// the time of the procedure or of specimen collection, but very often the
     ///  source of the date/time is not known, only the date/time itself.
-    Instant? effectiveInstant,
+    FhirInstant? effectiveInstant,
 
     /// [effectiveInstantElement] Extensions for effectiveInstant
     @JsonKey(name: '_effectiveInstant')
@@ -3890,7 +3890,7 @@ class Observation with Resource, _$Observation {
     /// [issued] The date and time this version of the observation was made
     /// available to providers, typically after the results have been reviewed and
     ///  verified.
-    Instant? issued,
+    FhirInstant? issued,
 
     /// [issuedElement] Extensions for issued
     @JsonKey(name: '_issued')
@@ -3918,7 +3918,7 @@ class Observation with Resource, _$Observation {
 
     /// [valueBoolean] The information determined as a result of making the
     ///  observation, if the information has a simple value.
-    Boolean? valueBoolean,
+    FhirBoolean? valueBoolean,
 
     /// [valueBooleanElement] Extensions for valueBoolean
     @JsonKey(name: '_valueBoolean')
@@ -3926,7 +3926,7 @@ class Observation with Resource, _$Observation {
 
     /// [valueInteger] The information determined as a result of making the
     ///  observation, if the information has a simple value.
-    Integer? valueInteger,
+    FhirInteger? valueInteger,
 
     /// [valueIntegerElement] Extensions for valueInteger
     @JsonKey(name: '_valueInteger')
@@ -4335,14 +4335,14 @@ class ObservationComponent with _$ObservationComponent {
 
     /// [valueBoolean] The information determined as a result of making the
     ///  observation, if the information has a simple value.
-    Boolean? valueBoolean,
+    FhirBoolean? valueBoolean,
 
     /// [valueBooleanElement] Extensions for valueBoolean
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
 
     /// [valueInteger] The information determined as a result of making the
     ///  observation, if the information has a simple value.
-    Integer? valueInteger,
+    FhirInteger? valueInteger,
 
     /// [valueIntegerElement] Extensions for valueInteger
     @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
@@ -4552,7 +4552,7 @@ class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -4613,7 +4613,7 @@ class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
 
     /// [questionnaire] The Questionnaire that defines and organizes the
     ///  questions for which answers are being provided.
-    Canonical? questionnaire,
+    FhirCanonical? questionnaire,
 
     /// [questionnaireElement] Extensions for [questionnaire].
     @JsonKey(name: '_questionnaire')
@@ -4621,7 +4621,7 @@ class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
 
     /// [status] The position of the questionnaire response within its overall
     ///  lifecycle.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -4943,28 +4943,28 @@ class QuestionnaireResponseAnswer with _$QuestionnaireResponseAnswer {
 
     /// [valueBoolean] The answer (or one of the answers) provided by the
     ///  respondent to the question.
-    Boolean? valueBoolean,
+    FhirBoolean? valueBoolean,
 
     /// [valueBooleanElement] Extensions for valueBoolean
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
 
     /// [valueDecimal] The answer (or one of the answers) provided by the
     ///  respondent to the question.
-    Decimal? valueDecimal,
+    FhirDecimal? valueDecimal,
 
     /// [valueDecimalElement] Extensions for valueDecimal
     @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
 
     /// [valueInteger] The answer (or one of the answers) provided by the
     ///  respondent to the question.
-    Integer? valueInteger,
+    FhirInteger? valueInteger,
 
     /// [valueIntegerElement] Extensions for valueInteger
     @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
 
     /// [valueDate] The answer (or one of the answers) provided by the respondent
     ///  to the question.
-    Date? valueDate,
+    FhirDate? valueDate,
 
     /// [valueDateElement] Extensions for valueDate
     @JsonKey(name: '_valueDate') Element? valueDateElement,
@@ -5177,7 +5177,7 @@ class Specimen with Resource, _$Specimen {
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -5230,7 +5230,7 @@ class Specimen with Resource, _$Specimen {
     Identifier? accessionIdentifier,
 
     /// [status] The availability of the specimen.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')

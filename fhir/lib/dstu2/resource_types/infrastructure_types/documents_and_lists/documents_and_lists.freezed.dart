@@ -22,12 +22,12 @@ Composition _$CompositionFromJson(Map<String, dynamic> json) {
 mixin _$Composition {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Composition)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -50,7 +50,7 @@ mixin _$Composition {
   CompositionStatus get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
-  Code? get confidentiality => throw _privateConstructorUsedError;
+  FhirCode? get confidentiality => throw _privateConstructorUsedError;
   @JsonKey(name: '_confidentiality')
   Element? get confidentialityElement => throw _privateConstructorUsedError;
   Reference get subject => throw _privateConstructorUsedError;
@@ -76,12 +76,12 @@ abstract class $CompositionCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Composition)
           Dstu2ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -103,7 +103,7 @@ abstract class $CompositionCopyWith<$Res> {
           CompositionStatus status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Code? confidentiality,
+      FhirCode? confidentiality,
       @JsonKey(name: '_confidentiality')
           Element? confidentialityElement,
       Reference subject,
@@ -197,7 +197,7 @@ class _$CompositionCopyWithImpl<$Res, $Val extends Composition>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -257,7 +257,7 @@ class _$CompositionCopyWithImpl<$Res, $Val extends Composition>
       confidentiality: freezed == confidentiality
           ? _value.confidentiality
           : confidentiality // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       confidentialityElement: freezed == confidentialityElement
           ? _value.confidentialityElement
           : confidentialityElement // ignore: cast_nullable_to_non_nullable
@@ -465,12 +465,12 @@ abstract class _$$_CompositionCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Composition)
           Dstu2ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -492,7 +492,7 @@ abstract class _$$_CompositionCopyWith<$Res>
           CompositionStatus status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Code? confidentiality,
+      FhirCode? confidentiality,
       @JsonKey(name: '_confidentiality')
           Element? confidentialityElement,
       Reference subject,
@@ -598,7 +598,7 @@ class __$$_CompositionCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -658,7 +658,7 @@ class __$$_CompositionCopyWithImpl<$Res>
       confidentiality: freezed == confidentiality
           ? _value.confidentiality
           : confidentiality // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       confidentialityElement: freezed == confidentialityElement
           ? _value.confidentialityElement
           : confidentialityElement // ignore: cast_nullable_to_non_nullable
@@ -763,7 +763,7 @@ class _$_Composition extends _Composition {
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
-  final Code? language;
+  final FhirCode? language;
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
@@ -825,7 +825,7 @@ class _$_Composition extends _Composition {
   @JsonKey(name: '_status')
   final Element? statusElement;
   @override
-  final Code? confidentiality;
+  final FhirCode? confidentiality;
   @override
   @JsonKey(name: '_confidentiality')
   final Element? confidentialityElement;
@@ -988,7 +988,7 @@ abstract class _Composition extends Composition {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -1010,7 +1010,7 @@ abstract class _Composition extends Composition {
           required final CompositionStatus status,
       @JsonKey(name: '_status')
           final Element? statusElement,
-      final Code? confidentiality,
+      final FhirCode? confidentiality,
       @JsonKey(name: '_confidentiality')
           final Element? confidentialityElement,
       required final Reference subject,
@@ -1029,7 +1029,7 @@ abstract class _Composition extends Composition {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Composition)
   Dstu2ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -1038,7 +1038,7 @@ abstract class _Composition extends Composition {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
-  Code? get language;
+  FhirCode? get language;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;
@@ -1075,7 +1075,7 @@ abstract class _Composition extends Composition {
   @JsonKey(name: '_status')
   Element? get statusElement;
   @override
-  Code? get confidentiality;
+  FhirCode? get confidentiality;
   @override
   @JsonKey(name: '_confidentiality')
   Element? get confidentialityElement;
@@ -1105,7 +1105,7 @@ CompositionAttester _$CompositionAttesterFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$CompositionAttester {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -1454,7 +1454,7 @@ abstract class _CompositionAttester extends CompositionAttester {
       _$_CompositionAttester.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -1484,7 +1484,7 @@ CompositionEvent _$CompositionEventFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$CompositionEvent {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -1768,7 +1768,7 @@ abstract class _CompositionEvent extends CompositionEvent {
       _$_CompositionEvent.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -1792,7 +1792,7 @@ CompositionSection _$CompositionSectionFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$CompositionSection {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -2326,7 +2326,7 @@ abstract class _CompositionSection extends CompositionSection {
       _$_CompositionSection.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -2372,12 +2372,12 @@ DocumentManifest _$DocumentManifestFromJson(Map<String, dynamic> json) {
 mixin _$DocumentManifest {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.DocumentManifest)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -2425,12 +2425,12 @@ abstract class $DocumentManifestCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.DocumentManifest)
           Dstu2ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -2538,7 +2538,7 @@ class _$DocumentManifestCopyWithImpl<$Res, $Val extends DocumentManifest>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -2770,12 +2770,12 @@ abstract class _$$_DocumentManifestCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.DocumentManifest)
           Dstu2ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -2892,7 +2892,7 @@ class __$$_DocumentManifestCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -3047,7 +3047,7 @@ class _$_DocumentManifest extends _DocumentManifest {
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
-  final Code? language;
+  final FhirCode? language;
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
@@ -3271,7 +3271,7 @@ abstract class _DocumentManifest extends DocumentManifest {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -3309,7 +3309,7 @@ abstract class _DocumentManifest extends DocumentManifest {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.DocumentManifest)
   Dstu2ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -3318,7 +3318,7 @@ abstract class _DocumentManifest extends DocumentManifest {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
-  Code? get language;
+  FhirCode? get language;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;
@@ -3381,7 +3381,7 @@ DocumentManifestContent _$DocumentManifestContentFromJson(
 
 /// @nodoc
 mixin _$DocumentManifestContent {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -3650,7 +3650,7 @@ abstract class _DocumentManifestContent extends DocumentManifestContent {
       _$_DocumentManifestContent.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -3673,7 +3673,7 @@ DocumentManifestRelated _$DocumentManifestRelatedFromJson(
 
 /// @nodoc
 mixin _$DocumentManifestRelated {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -3941,7 +3941,7 @@ abstract class _DocumentManifestRelated extends DocumentManifestRelated {
       _$_DocumentManifestRelated.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -3965,12 +3965,12 @@ DocumentReference _$DocumentReferenceFromJson(Map<String, dynamic> json) {
 mixin _$DocumentReference {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.DocumentReference)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -4023,12 +4023,12 @@ abstract class $DocumentReferenceCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.DocumentReference)
           Dstu2ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -4148,7 +4148,7 @@ class _$DocumentReferenceCopyWithImpl<$Res, $Val extends DocumentReference>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -4440,12 +4440,12 @@ abstract class _$$_DocumentReferenceCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.DocumentReference)
           Dstu2ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -4578,7 +4578,7 @@ class __$$_DocumentReferenceCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -4753,7 +4753,7 @@ class _$_DocumentReference extends _DocumentReference {
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
-  final Code? language;
+  final FhirCode? language;
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
@@ -4998,7 +4998,7 @@ abstract class _DocumentReference extends DocumentReference {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -5040,7 +5040,7 @@ abstract class _DocumentReference extends DocumentReference {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.DocumentReference)
   Dstu2ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -5049,7 +5049,7 @@ abstract class _DocumentReference extends DocumentReference {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
-  Code? get language;
+  FhirCode? get language;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;
@@ -5120,7 +5120,7 @@ DocumentReferenceRelatesTo _$DocumentReferenceRelatesToFromJson(
 
 /// @nodoc
 mixin _$DocumentReferenceRelatesTo {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -5412,7 +5412,7 @@ abstract class _DocumentReferenceRelatesTo extends DocumentReferenceRelatesTo {
       _$_DocumentReferenceRelatesTo.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -5439,7 +5439,7 @@ DocumentReferenceContent _$DocumentReferenceContentFromJson(
 
 /// @nodoc
 mixin _$DocumentReferenceContent {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -5696,7 +5696,7 @@ abstract class _DocumentReferenceContent extends DocumentReferenceContent {
       _$_DocumentReferenceContent.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -5719,7 +5719,7 @@ DocumentReferenceContext _$DocumentReferenceContextFromJson(
 
 /// @nodoc
 mixin _$DocumentReferenceContext {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -6149,7 +6149,7 @@ abstract class _DocumentReferenceContext extends DocumentReferenceContext {
       _$_DocumentReferenceContext.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -6182,7 +6182,7 @@ DocumentReferenceContextRelated _$DocumentReferenceContextRelatedFromJson(
 
 /// @nodoc
 mixin _$DocumentReferenceContextRelated {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -6457,7 +6457,7 @@ abstract class _DocumentReferenceContextRelated
       _$_DocumentReferenceContextRelated.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -6482,12 +6482,12 @@ List_ _$List_FromJson(Map<String, dynamic> json) {
 mixin _$List_ {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.List_)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -6533,12 +6533,12 @@ abstract class $List_CopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.List_)
           Dstu2ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -6652,7 +6652,7 @@ class _$List_CopyWithImpl<$Res, $Val extends List_>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -6922,12 +6922,12 @@ abstract class _$$_List_CopyWith<$Res> implements $List_CopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.List_)
           Dstu2ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -7051,7 +7051,7 @@ class __$$_List_CopyWithImpl<$Res> extends _$List_CopyWithImpl<$Res, _$_List_>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -7209,7 +7209,7 @@ class _$_List_ extends _List_ {
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
-  final Code? language;
+  final FhirCode? language;
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
@@ -7417,7 +7417,7 @@ abstract class _List_ extends List_ {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -7456,7 +7456,7 @@ abstract class _List_ extends List_ {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.List_)
   Dstu2ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -7465,7 +7465,7 @@ abstract class _List_ extends List_ {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
-  Code? get language;
+  FhirCode? get language;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;
@@ -7530,7 +7530,7 @@ ListEntry _$ListEntryFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ListEntry {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -7538,7 +7538,7 @@ mixin _$ListEntry {
   @JsonKey(name: 'fhir_comments')
   List<String>? get fhirComments => throw _privateConstructorUsedError;
   CodeableConcept? get flag => throw _privateConstructorUsedError;
-  Boolean? get deleted => throw _privateConstructorUsedError;
+  FhirBoolean? get deleted => throw _privateConstructorUsedError;
   @JsonKey(name: '_deleted')
   Element? get deletedElement => throw _privateConstructorUsedError;
   FhirDateTime? get date => throw _privateConstructorUsedError;
@@ -7563,7 +7563,7 @@ abstract class $ListEntryCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
       CodeableConcept? flag,
-      Boolean? deleted,
+      FhirBoolean? deleted,
       @JsonKey(name: '_deleted') Element? deletedElement,
       FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
@@ -7623,7 +7623,7 @@ class _$ListEntryCopyWithImpl<$Res, $Val extends ListEntry>
       deleted: freezed == deleted
           ? _value.deleted
           : deleted // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       deletedElement: freezed == deletedElement
           ? _value.deletedElement
           : deletedElement // ignore: cast_nullable_to_non_nullable
@@ -7701,7 +7701,7 @@ abstract class _$$_ListEntryCopyWith<$Res> implements $ListEntryCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
       CodeableConcept? flag,
-      Boolean? deleted,
+      FhirBoolean? deleted,
       @JsonKey(name: '_deleted') Element? deletedElement,
       FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
@@ -7763,7 +7763,7 @@ class __$$_ListEntryCopyWithImpl<$Res>
       deleted: freezed == deleted
           ? _value.deleted
           : deleted // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       deletedElement: freezed == deletedElement
           ? _value.deletedElement
           : deletedElement // ignore: cast_nullable_to_non_nullable
@@ -7844,7 +7844,7 @@ class _$_ListEntry extends _ListEntry {
   @override
   final CodeableConcept? flag;
   @override
-  final Boolean? deleted;
+  final FhirBoolean? deleted;
   @override
   @JsonKey(name: '_deleted')
   final Element? deletedElement;
@@ -7919,7 +7919,7 @@ abstract class _ListEntry extends ListEntry {
       final List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
       final CodeableConcept? flag,
-      final Boolean? deleted,
+      final FhirBoolean? deleted,
       @JsonKey(name: '_deleted') final Element? deletedElement,
       final FhirDateTime? date,
       @JsonKey(name: '_date') final Element? dateElement,
@@ -7930,7 +7930,7 @@ abstract class _ListEntry extends ListEntry {
       _$_ListEntry.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -7942,7 +7942,7 @@ abstract class _ListEntry extends ListEntry {
   @override
   CodeableConcept? get flag;
   @override
-  Boolean? get deleted;
+  FhirBoolean? get deleted;
   @override
   @JsonKey(name: '_deleted')
   Element? get deletedElement;

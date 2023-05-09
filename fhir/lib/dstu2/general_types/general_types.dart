@@ -16,7 +16,7 @@ part 'general_types.g.dart';
 class Period with _$Period {
   Period._();
   factory Period({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
     FhirDateTime? start,
@@ -59,18 +59,18 @@ class Period with _$Period {
 class Coding with _$Coding {
   Coding._();
   factory Coding({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
     FhirUri? system,
     @JsonKey(name: '_system') Element? systemElement,
     String? version,
     @JsonKey(name: '_version') Element? versionElement,
-    Code? code,
+     FhirCode? code,
     @JsonKey(name: '_code') Element? codeElement,
     String? display,
     @JsonKey(name: '_display') Element? displayElement,
-    Boolean? userSelected,
+     FhirBoolean? userSelected,
     @JsonKey(name: '_userSelected') Element? userSelectedElement,
   }) = _Coding;
 
@@ -108,7 +108,7 @@ class Coding with _$Coding {
 class Range with _$Range {
   Range._();
   factory Range({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     Quantity? low,
     Quantity? high,
@@ -147,10 +147,10 @@ class Range with _$Range {
 class Quantity with _$Quantity {
   Quantity._();
   factory Quantity({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-    Decimal? value,
+    FhirDecimal? value,
     @JsonKey(name: '_value') Element? valueElement,
     @JsonKey(unknownEnumValue: QuantityComparator.unknown)
         QuantityComparator? comparator,
@@ -159,7 +159,7 @@ class Quantity with _$Quantity {
     @JsonKey(name: '_unit') Element? unitElement,
     FhirUri? system,
     @JsonKey(name: '_system') Element? systemElement,
-    Code? code,
+     FhirCode? code,
     @JsonKey(name: '_code') Element? codeElement,
   }) = _Quantity;
 
@@ -198,20 +198,20 @@ class Quantity with _$Quantity {
 class Attachment with _$Attachment {
   Attachment._();
   factory Attachment({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-    Code? contentType,
+     FhirCode? contentType,
     @JsonKey(name: '_contentType') Element? contentTypeElement,
-    Code? language,
+     FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
-    Base64Binary? data,
+  FhirBase64Binary?? data,
     @JsonKey(name: '_data') Element? dataElement,
     FhirUri? url,
     @JsonKey(name: '_url') Element? urlElement,
     UnsignedInt? size,
     @JsonKey(name: '_size') Element? sizeElement,
-    Base64Binary? hash,
+  FhirBase64Binary?? hash,
     @JsonKey(name: '_hash') Element? hashElement,
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
@@ -254,7 +254,7 @@ class Attachment with _$Attachment {
 class Ratio with _$Ratio {
   Ratio._();
   factory Ratio({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     Quantity? numerator,
     Quantity? denominator,
@@ -293,7 +293,7 @@ class Ratio with _$Ratio {
 class Annotation with _$Annotation {
   Annotation._();
   factory Annotation({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
     Reference? authorReference,
@@ -340,16 +340,16 @@ class Annotation with _$Annotation {
 class SampledData with _$SampledData {
   SampledData._();
   factory SampledData({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     required Quantity origin,
     required Decimal period,
     @JsonKey(name: '_period') Element? periodElement,
-    Decimal? factor,
+    FhirDecimal? factor,
     @JsonKey(name: '_factor') Element? factorElement,
-    Decimal? lowerLimit,
+    FhirDecimal? lowerLimit,
     @JsonKey(name: '_lowerLimit') Element? lowerLimitElement,
-    Decimal? upperLimit,
+    FhirDecimal? upperLimit,
     @JsonKey(name: '_upperLimit') Element? upperLimitElement,
     required PositiveInt dimensions,
     @JsonKey(name: '_dimensions') Element? dimensionsElement,
@@ -392,7 +392,7 @@ class SampledData with _$SampledData {
 class CodeableConcept with _$CodeableConcept {
   CodeableConcept._();
   factory CodeableConcept({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
     List<Coding>? coding,
@@ -435,7 +435,7 @@ class CodeableConcept with _$CodeableConcept {
 class Identifier with _$Identifier {
   Identifier._();
   factory Identifier({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
     @JsonKey(unknownEnumValue: IdentifierUse.unknown) IdentifierUse? use,
@@ -484,7 +484,7 @@ class Identifier with _$Identifier {
 class Signature with _$Signature {
   Signature._();
   factory Signature({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     required List<Coding> type,
     required Instant when,
@@ -492,7 +492,7 @@ class Signature with _$Signature {
     FhirUri? whoUri,
     Reference? whoReference,
     required Code contentType,
-    required Base64Binary blob,
+    required  FhirBase64Binary? blob,
     @JsonKey(name: '_targetFormat') Element? targetFormatElement,
     @JsonKey(name: '_sigFormat') Element? sigFormatElement,
     @JsonKey(name: '_data') Element? dataElement,
@@ -534,7 +534,7 @@ class Signature with _$Signature {
 class Timing with _$Timing {
   Timing._();
   factory Timing({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
     List<FhirDateTime>? event,
@@ -577,7 +577,7 @@ class Timing with _$Timing {
 class Address with _$Address {
   Address._();
   factory Address({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
     @JsonKey(unknownEnumValue: AddressUse.unknown) AddressUse? use,
@@ -636,7 +636,7 @@ class Address with _$Address {
 class HumanName with _$HumanName {
   HumanName._();
   factory HumanName({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
     @JsonKey(unknownEnumValue: HumanNameUse.unknown) HumanNameUse? use,
@@ -689,7 +689,7 @@ class HumanName with _$HumanName {
 class ContactPoint with _$ContactPoint {
   ContactPoint._();
   factory ContactPoint({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
     @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
@@ -739,31 +739,31 @@ class ContactPoint with _$ContactPoint {
 class TimingRepeat with _$TimingRepeat {
   TimingRepeat._();
   factory TimingRepeat({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
     Quantity? boundsQuantity,
     Range? boundsRange,
     Period? boundsPeriod,
-    Integer? count,
+    FhirInteger? count,
     @JsonKey(name: '_count') Element? countElement,
-    Decimal? duration,
+    FhirDecimal? duration,
     @JsonKey(name: '_duration') Element? durationElement,
-    Decimal? durationMax,
+    FhirDecimal? durationMax,
     @JsonKey(name: '_durationMax') Element? durationMaxElement,
     @JsonKey(unknownEnumValue: RepeatUnits.unknown) RepeatUnits? durationUnits,
     @JsonKey(name: '_durationUnit') Element? durationUnitElement,
-    Integer? frequency,
+    FhirInteger? frequency,
     @JsonKey(name: '_frequency') Element? frequencyElement,
-    Integer? frequencyMax,
+    FhirInteger? frequencyMax,
     @JsonKey(name: '_frequencyMax') Element? frequencyMaxElement,
-    Decimal? period,
+    FhirDecimal? period,
     @JsonKey(name: '_period') Element? periodElement,
-    Decimal? periodMax,
+    FhirDecimal? periodMax,
     @JsonKey(name: '_periodMax') Element? periodMaxElement,
     @JsonKey(unknownEnumValue: RepeatUnits.unknown) RepeatUnits? periodUnits,
     @JsonKey(name: '_periodUnits') Element? periodUnitElement,
-    Code? when,
+     FhirCode? when,
     @JsonKey(name: '_when') Element? whenElement,
   }) = _TimingRepeat;
 

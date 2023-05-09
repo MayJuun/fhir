@@ -20,7 +20,7 @@ Period _$PeriodFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Period {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @JsonKey(name: 'fhir_comments')
@@ -321,7 +321,7 @@ abstract class _Period extends Period {
   factory _Period.fromJson(Map<String, dynamic> json) = _$_Period.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -350,7 +350,7 @@ Coding _$CodingFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Coding {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @JsonKey(name: 'fhir_comments')
@@ -361,13 +361,13 @@ mixin _$Coding {
   String? get version => throw _privateConstructorUsedError;
   @JsonKey(name: '_version')
   Element? get versionElement => throw _privateConstructorUsedError;
-  Code? get code => throw _privateConstructorUsedError;
+   FhirCode? get code => throw _privateConstructorUsedError;
   @JsonKey(name: '_code')
   Element? get codeElement => throw _privateConstructorUsedError;
   String? get display => throw _privateConstructorUsedError;
   @JsonKey(name: '_display')
   Element? get displayElement => throw _privateConstructorUsedError;
-  Boolean? get userSelected => throw _privateConstructorUsedError;
+   FhirBoolean? get userSelected => throw _privateConstructorUsedError;
   @JsonKey(name: '_userSelected')
   Element? get userSelectedElement => throw _privateConstructorUsedError;
 
@@ -389,11 +389,11 @@ abstract class $CodingCopyWith<$Res> {
       @JsonKey(name: '_system') Element? systemElement,
       String? version,
       @JsonKey(name: '_version') Element? versionElement,
-      Code? code,
+       FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement,
       String? display,
       @JsonKey(name: '_display') Element? displayElement,
-      Boolean? userSelected,
+       FhirBoolean? userSelected,
       @JsonKey(name: '_userSelected') Element? userSelectedElement});
 
   $ElementCopyWith<$Res>? get systemElement;
@@ -462,7 +462,7 @@ class _$CodingCopyWithImpl<$Res, $Val extends Coding>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -478,7 +478,7 @@ class _$CodingCopyWithImpl<$Res, $Val extends Coding>
       userSelected: freezed == userSelected
           ? _value.userSelected
           : userSelected // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       userSelectedElement: freezed == userSelectedElement
           ? _value.userSelectedElement
           : userSelectedElement // ignore: cast_nullable_to_non_nullable
@@ -561,11 +561,11 @@ abstract class _$$_CodingCopyWith<$Res> implements $CodingCopyWith<$Res> {
       @JsonKey(name: '_system') Element? systemElement,
       String? version,
       @JsonKey(name: '_version') Element? versionElement,
-      Code? code,
+       FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement,
       String? display,
       @JsonKey(name: '_display') Element? displayElement,
-      Boolean? userSelected,
+       FhirBoolean? userSelected,
       @JsonKey(name: '_userSelected') Element? userSelectedElement});
 
   @override
@@ -636,7 +636,7 @@ class __$$_CodingCopyWithImpl<$Res>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -652,7 +652,7 @@ class __$$_CodingCopyWithImpl<$Res>
       userSelected: freezed == userSelected
           ? _value.userSelected
           : userSelected // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       userSelectedElement: freezed == userSelectedElement
           ? _value.userSelectedElement
           : userSelectedElement // ignore: cast_nullable_to_non_nullable
@@ -720,7 +720,7 @@ class _$_Coding extends _Coding {
   @JsonKey(name: '_version')
   final Element? versionElement;
   @override
-  final Code? code;
+  final  FhirCode? code;
   @override
   @JsonKey(name: '_code')
   final Element? codeElement;
@@ -730,7 +730,7 @@ class _$_Coding extends _Coding {
   @JsonKey(name: '_display')
   final Element? displayElement;
   @override
-  final Boolean? userSelected;
+  final  FhirBoolean? userSelected;
   @override
   @JsonKey(name: '_userSelected')
   final Element? userSelectedElement;
@@ -809,11 +809,11 @@ abstract class _Coding extends Coding {
           @JsonKey(name: '_system') final Element? systemElement,
           final String? version,
           @JsonKey(name: '_version') final Element? versionElement,
-          final Code? code,
+          final  FhirCode? code,
           @JsonKey(name: '_code') final Element? codeElement,
           final String? display,
           @JsonKey(name: '_display') final Element? displayElement,
-          final Boolean? userSelected,
+          final  FhirBoolean? userSelected,
           @JsonKey(name: '_userSelected') final Element? userSelectedElement}) =
       _$_Coding;
   _Coding._() : super._();
@@ -821,7 +821,7 @@ abstract class _Coding extends Coding {
   factory _Coding.fromJson(Map<String, dynamic> json) = _$_Coding.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -839,7 +839,7 @@ abstract class _Coding extends Coding {
   @JsonKey(name: '_version')
   Element? get versionElement;
   @override
-  Code? get code;
+   FhirCode? get code;
   @override
   @JsonKey(name: '_code')
   Element? get codeElement;
@@ -849,7 +849,7 @@ abstract class _Coding extends Coding {
   @JsonKey(name: '_display')
   Element? get displayElement;
   @override
-  Boolean? get userSelected;
+   FhirBoolean? get userSelected;
   @override
   @JsonKey(name: '_userSelected')
   Element? get userSelectedElement;
@@ -865,7 +865,7 @@ Range _$RangeFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Range {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   Quantity? get low => throw _privateConstructorUsedError;
@@ -1086,7 +1086,7 @@ abstract class _Range extends Range {
   factory _Range.fromJson(Map<String, dynamic> json) = _$_Range.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -1106,12 +1106,12 @@ Quantity _$QuantityFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Quantity {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @JsonKey(name: 'fhir_comments')
   List<String>? get fhirComments => throw _privateConstructorUsedError;
-  Decimal? get value => throw _privateConstructorUsedError;
+  FhirDecimal? get value => throw _privateConstructorUsedError;
   @JsonKey(name: '_value')
   Element? get valueElement => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: QuantityComparator.unknown)
@@ -1124,7 +1124,7 @@ mixin _$Quantity {
   FhirUri? get system => throw _privateConstructorUsedError;
   @JsonKey(name: '_system')
   Element? get systemElement => throw _privateConstructorUsedError;
-  Code? get code => throw _privateConstructorUsedError;
+   FhirCode? get code => throw _privateConstructorUsedError;
   @JsonKey(name: '_code')
   Element? get codeElement => throw _privateConstructorUsedError;
 
@@ -1145,7 +1145,7 @@ abstract class $QuantityCopyWith<$Res> {
           List<FhirExtension>? extension_,
       @JsonKey(name: 'fhir_comments')
           List<String>? fhirComments,
-      Decimal? value,
+      FhirDecimal? value,
       @JsonKey(name: '_value')
           Element? valueElement,
       @JsonKey(unknownEnumValue: QuantityComparator.unknown)
@@ -1158,7 +1158,7 @@ abstract class $QuantityCopyWith<$Res> {
       FhirUri? system,
       @JsonKey(name: '_system')
           Element? systemElement,
-      Code? code,
+       FhirCode? code,
       @JsonKey(name: '_code')
           Element? codeElement});
 
@@ -1244,7 +1244,7 @@ class _$QuantityCopyWithImpl<$Res, $Val extends Quantity>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -1326,7 +1326,7 @@ abstract class _$$_QuantityCopyWith<$Res> implements $QuantityCopyWith<$Res> {
           List<FhirExtension>? extension_,
       @JsonKey(name: 'fhir_comments')
           List<String>? fhirComments,
-      Decimal? value,
+      FhirDecimal? value,
       @JsonKey(name: '_value')
           Element? valueElement,
       @JsonKey(unknownEnumValue: QuantityComparator.unknown)
@@ -1339,7 +1339,7 @@ abstract class _$$_QuantityCopyWith<$Res> implements $QuantityCopyWith<$Res> {
       FhirUri? system,
       @JsonKey(name: '_system')
           Element? systemElement,
-      Code? code,
+       FhirCode? code,
       @JsonKey(name: '_code')
           Element? codeElement});
 
@@ -1428,7 +1428,7 @@ class __$$_QuantityCopyWithImpl<$Res>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -1507,7 +1507,7 @@ class _$_Quantity extends _Quantity {
   @JsonKey(name: '_system')
   final Element? systemElement;
   @override
-  final Code? code;
+  final  FhirCode? code;
   @override
   @JsonKey(name: '_code')
   final Element? codeElement;
@@ -1597,7 +1597,7 @@ abstract class _Quantity extends Quantity {
       final FhirUri? system,
       @JsonKey(name: '_system')
           final Element? systemElement,
-      final Code? code,
+      final  FhirCode? code,
       @JsonKey(name: '_code')
           final Element? codeElement}) = _$_Quantity;
   _Quantity._() : super._();
@@ -1605,7 +1605,7 @@ abstract class _Quantity extends Quantity {
   factory _Quantity.fromJson(Map<String, dynamic> json) = _$_Quantity.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -1613,7 +1613,7 @@ abstract class _Quantity extends Quantity {
   @JsonKey(name: 'fhir_comments')
   List<String>? get fhirComments;
   @override
-  Decimal? get value;
+  FhirDecimal? get value;
   @override
   @JsonKey(name: '_value')
   Element? get valueElement;
@@ -1634,7 +1634,7 @@ abstract class _Quantity extends Quantity {
   @JsonKey(name: '_system')
   Element? get systemElement;
   @override
-  Code? get code;
+   FhirCode? get code;
   @override
   @JsonKey(name: '_code')
   Element? get codeElement;
@@ -1650,18 +1650,18 @@ Attachment _$AttachmentFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Attachment {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @JsonKey(name: 'fhir_comments')
   List<String>? get fhirComments => throw _privateConstructorUsedError;
-  Code? get contentType => throw _privateConstructorUsedError;
+   FhirCode? get contentType => throw _privateConstructorUsedError;
   @JsonKey(name: '_contentType')
   Element? get contentTypeElement => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+   FhirCode? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
-  Base64Binary? get data => throw _privateConstructorUsedError;
+  FhirBase64Binary?? get data => throw _privateConstructorUsedError;
   @JsonKey(name: '_data')
   Element? get dataElement => throw _privateConstructorUsedError;
   FhirUri? get url => throw _privateConstructorUsedError;
@@ -1670,7 +1670,7 @@ mixin _$Attachment {
   UnsignedInt? get size => throw _privateConstructorUsedError;
   @JsonKey(name: '_size')
   Element? get sizeElement => throw _privateConstructorUsedError;
-  Base64Binary? get hash => throw _privateConstructorUsedError;
+  FhirBase64Binary?? get hash => throw _privateConstructorUsedError;
   @JsonKey(name: '_hash')
   Element? get hashElement => throw _privateConstructorUsedError;
   String? get title => throw _privateConstructorUsedError;
@@ -1696,17 +1696,17 @@ abstract class $AttachmentCopyWith<$Res> {
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-      Code? contentType,
+       FhirCode? contentType,
       @JsonKey(name: '_contentType') Element? contentTypeElement,
-      Code? language,
+       FhirCode? language,
       @JsonKey(name: '_language') Element? languageElement,
-      Base64Binary? data,
+  FhirBase64Binary?? data,
       @JsonKey(name: '_data') Element? dataElement,
       FhirUri? url,
       @JsonKey(name: '_url') Element? urlElement,
       UnsignedInt? size,
       @JsonKey(name: '_size') Element? sizeElement,
-      Base64Binary? hash,
+  FhirBase64Binary?? hash,
       @JsonKey(name: '_hash') Element? hashElement,
       String? title,
       @JsonKey(name: '_title') Element? titleElement,
@@ -1772,7 +1772,7 @@ class _$AttachmentCopyWithImpl<$Res, $Val extends Attachment>
       contentType: freezed == contentType
           ? _value.contentType
           : contentType // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       contentTypeElement: freezed == contentTypeElement
           ? _value.contentTypeElement
           : contentTypeElement // ignore: cast_nullable_to_non_nullable
@@ -1780,7 +1780,7 @@ class _$AttachmentCopyWithImpl<$Res, $Val extends Attachment>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -1788,7 +1788,7 @@ class _$AttachmentCopyWithImpl<$Res, $Val extends Attachment>
       data: freezed == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
-              as Base64Binary?,
+              as  FhirBase64Binary??,
       dataElement: freezed == dataElement
           ? _value.dataElement
           : dataElement // ignore: cast_nullable_to_non_nullable
@@ -1812,7 +1812,7 @@ class _$AttachmentCopyWithImpl<$Res, $Val extends Attachment>
       hash: freezed == hash
           ? _value.hash
           : hash // ignore: cast_nullable_to_non_nullable
-              as Base64Binary?,
+              as  FhirBase64Binary??,
       hashElement: freezed == hashElement
           ? _value.hashElement
           : hashElement // ignore: cast_nullable_to_non_nullable
@@ -1945,17 +1945,17 @@ abstract class _$$_AttachmentCopyWith<$Res>
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-      Code? contentType,
+       FhirCode? contentType,
       @JsonKey(name: '_contentType') Element? contentTypeElement,
-      Code? language,
+       FhirCode? language,
       @JsonKey(name: '_language') Element? languageElement,
-      Base64Binary? data,
+  FhirBase64Binary?? data,
       @JsonKey(name: '_data') Element? dataElement,
       FhirUri? url,
       @JsonKey(name: '_url') Element? urlElement,
       UnsignedInt? size,
       @JsonKey(name: '_size') Element? sizeElement,
-      Base64Binary? hash,
+  FhirBase64Binary?? hash,
       @JsonKey(name: '_hash') Element? hashElement,
       String? title,
       @JsonKey(name: '_title') Element? titleElement,
@@ -2027,7 +2027,7 @@ class __$$_AttachmentCopyWithImpl<$Res>
       contentType: freezed == contentType
           ? _value.contentType
           : contentType // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       contentTypeElement: freezed == contentTypeElement
           ? _value.contentTypeElement
           : contentTypeElement // ignore: cast_nullable_to_non_nullable
@@ -2035,7 +2035,7 @@ class __$$_AttachmentCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -2043,7 +2043,7 @@ class __$$_AttachmentCopyWithImpl<$Res>
       data: freezed == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
-              as Base64Binary?,
+              as  FhirBase64Binary??,
       dataElement: freezed == dataElement
           ? _value.dataElement
           : dataElement // ignore: cast_nullable_to_non_nullable
@@ -2067,7 +2067,7 @@ class __$$_AttachmentCopyWithImpl<$Res>
       hash: freezed == hash
           ? _value.hash
           : hash // ignore: cast_nullable_to_non_nullable
-              as Base64Binary?,
+              as  FhirBase64Binary??,
       hashElement: freezed == hashElement
           ? _value.hashElement
           : hashElement // ignore: cast_nullable_to_non_nullable
@@ -2147,17 +2147,17 @@ class _$_Attachment extends _Attachment {
   }
 
   @override
-  final Code? contentType;
+  final  FhirCode? contentType;
   @override
   @JsonKey(name: '_contentType')
   final Element? contentTypeElement;
   @override
-  final Code? language;
+  final  FhirCode? language;
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
   @override
-  final Base64Binary? data;
+  final  FhirBase64Binary?? data;
   @override
   @JsonKey(name: '_data')
   final Element? dataElement;
@@ -2172,7 +2172,7 @@ class _$_Attachment extends _Attachment {
   @JsonKey(name: '_size')
   final Element? sizeElement;
   @override
-  final Base64Binary? hash;
+  final  FhirBase64Binary?? hash;
   @override
   @JsonKey(name: '_hash')
   final Element? hashElement;
@@ -2275,17 +2275,17 @@ abstract class _Attachment extends Attachment {
           {final Id? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
-          final Code? contentType,
+          final  FhirCode? contentType,
           @JsonKey(name: '_contentType') final Element? contentTypeElement,
-          final Code? language,
+          final  FhirCode? language,
           @JsonKey(name: '_language') final Element? languageElement,
-          final Base64Binary? data,
+          final  FhirBase64Binary?? data,
           @JsonKey(name: '_data') final Element? dataElement,
           final FhirUri? url,
           @JsonKey(name: '_url') final Element? urlElement,
           final UnsignedInt? size,
           @JsonKey(name: '_size') final Element? sizeElement,
-          final Base64Binary? hash,
+          final  FhirBase64Binary?? hash,
           @JsonKey(name: '_hash') final Element? hashElement,
           final String? title,
           @JsonKey(name: '_title') final Element? titleElement,
@@ -2298,7 +2298,7 @@ abstract class _Attachment extends Attachment {
       _$_Attachment.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -2306,17 +2306,17 @@ abstract class _Attachment extends Attachment {
   @JsonKey(name: 'fhir_comments')
   List<String>? get fhirComments;
   @override
-  Code? get contentType;
+   FhirCode? get contentType;
   @override
   @JsonKey(name: '_contentType')
   Element? get contentTypeElement;
   @override
-  Code? get language;
+   FhirCode? get language;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;
   @override
-  Base64Binary? get data;
+  FhirBase64Binary?? get data;
   @override
   @JsonKey(name: '_data')
   Element? get dataElement;
@@ -2331,7 +2331,7 @@ abstract class _Attachment extends Attachment {
   @JsonKey(name: '_size')
   Element? get sizeElement;
   @override
-  Base64Binary? get hash;
+  FhirBase64Binary?? get hash;
   @override
   @JsonKey(name: '_hash')
   Element? get hashElement;
@@ -2357,7 +2357,7 @@ Ratio _$RatioFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Ratio {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   Quantity? get numerator => throw _privateConstructorUsedError;
@@ -2580,7 +2580,7 @@ abstract class _Ratio extends Ratio {
   factory _Ratio.fromJson(Map<String, dynamic> json) = _$_Ratio.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -2600,7 +2600,7 @@ Annotation _$AnnotationFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Annotation {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @JsonKey(name: 'fhir_comments')
@@ -2999,7 +2999,7 @@ abstract class _Annotation extends Annotation {
       _$_Annotation.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -3035,20 +3035,20 @@ SampledData _$SampledDataFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$SampledData {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   Quantity get origin => throw _privateConstructorUsedError;
   Decimal get period => throw _privateConstructorUsedError;
   @JsonKey(name: '_period')
   Element? get periodElement => throw _privateConstructorUsedError;
-  Decimal? get factor => throw _privateConstructorUsedError;
+  FhirDecimal? get factor => throw _privateConstructorUsedError;
   @JsonKey(name: '_factor')
   Element? get factorElement => throw _privateConstructorUsedError;
-  Decimal? get lowerLimit => throw _privateConstructorUsedError;
+  FhirDecimal? get lowerLimit => throw _privateConstructorUsedError;
   @JsonKey(name: '_lowerLimit')
   Element? get lowerLimitElement => throw _privateConstructorUsedError;
-  Decimal? get upperLimit => throw _privateConstructorUsedError;
+  FhirDecimal? get upperLimit => throw _privateConstructorUsedError;
   @JsonKey(name: '_upperLimit')
   Element? get upperLimitElement => throw _privateConstructorUsedError;
   PositiveInt get dimensions => throw _privateConstructorUsedError;
@@ -3076,11 +3076,11 @@ abstract class $SampledDataCopyWith<$Res> {
       Quantity origin,
       Decimal period,
       @JsonKey(name: '_period') Element? periodElement,
-      Decimal? factor,
+      FhirDecimal? factor,
       @JsonKey(name: '_factor') Element? factorElement,
-      Decimal? lowerLimit,
+      FhirDecimal? lowerLimit,
       @JsonKey(name: '_lowerLimit') Element? lowerLimitElement,
-      Decimal? upperLimit,
+      FhirDecimal? upperLimit,
       @JsonKey(name: '_upperLimit') Element? upperLimitElement,
       PositiveInt dimensions,
       @JsonKey(name: '_dimensions') Element? dimensionsElement,
@@ -3284,11 +3284,11 @@ abstract class _$$_SampledDataCopyWith<$Res>
       Quantity origin,
       Decimal period,
       @JsonKey(name: '_period') Element? periodElement,
-      Decimal? factor,
+      FhirDecimal? factor,
       @JsonKey(name: '_factor') Element? factorElement,
-      Decimal? lowerLimit,
+      FhirDecimal? lowerLimit,
       @JsonKey(name: '_lowerLimit') Element? lowerLimitElement,
-      Decimal? upperLimit,
+      FhirDecimal? upperLimit,
       @JsonKey(name: '_upperLimit') Element? upperLimitElement,
       PositiveInt dimensions,
       @JsonKey(name: '_dimensions') Element? dimensionsElement,
@@ -3568,7 +3568,7 @@ abstract class _SampledData extends SampledData {
       _$_SampledData.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -3580,17 +3580,17 @@ abstract class _SampledData extends SampledData {
   @JsonKey(name: '_period')
   Element? get periodElement;
   @override
-  Decimal? get factor;
+  FhirDecimal? get factor;
   @override
   @JsonKey(name: '_factor')
   Element? get factorElement;
   @override
-  Decimal? get lowerLimit;
+  FhirDecimal? get lowerLimit;
   @override
   @JsonKey(name: '_lowerLimit')
   Element? get lowerLimitElement;
   @override
-  Decimal? get upperLimit;
+  FhirDecimal? get upperLimit;
   @override
   @JsonKey(name: '_upperLimit')
   Element? get upperLimitElement;
@@ -3616,7 +3616,7 @@ CodeableConcept _$CodeableConceptFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$CodeableConcept {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @JsonKey(name: 'fhir_comments')
@@ -3895,7 +3895,7 @@ abstract class _CodeableConcept extends CodeableConcept {
       _$_CodeableConcept.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -3921,7 +3921,7 @@ Identifier _$IdentifierFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Identifier {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @JsonKey(name: 'fhir_comments')
@@ -4395,7 +4395,7 @@ abstract class _Identifier extends Identifier {
       _$_Identifier.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -4436,7 +4436,7 @@ Signature _$SignatureFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Signature {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<Coding> get type => throw _privateConstructorUsedError;
@@ -4446,7 +4446,7 @@ mixin _$Signature {
   FhirUri? get whoUri => throw _privateConstructorUsedError;
   Reference? get whoReference => throw _privateConstructorUsedError;
   Code get contentType => throw _privateConstructorUsedError;
-  Base64Binary get blob => throw _privateConstructorUsedError;
+  FhirBase64Binary? get blob => throw _privateConstructorUsedError;
   @JsonKey(name: '_targetFormat')
   Element? get targetFormatElement => throw _privateConstructorUsedError;
   @JsonKey(name: '_sigFormat')
@@ -4476,7 +4476,7 @@ abstract class $SignatureCopyWith<$Res> {
       FhirUri? whoUri,
       Reference? whoReference,
       Code contentType,
-      Base64Binary blob,
+  FhirBase64Binary? blob,
       @JsonKey(name: '_targetFormat') Element? targetFormatElement,
       @JsonKey(name: '_sigFormat') Element? sigFormatElement,
       @JsonKey(name: '_data') Element? dataElement,
@@ -4553,7 +4553,7 @@ class _$SignatureCopyWithImpl<$Res, $Val extends Signature>
       blob: null == blob
           ? _value.blob
           : blob // ignore: cast_nullable_to_non_nullable
-              as Base64Binary,
+              as  FhirBase64Binary?,
       targetFormatElement: freezed == targetFormatElement
           ? _value.targetFormatElement
           : targetFormatElement // ignore: cast_nullable_to_non_nullable
@@ -4662,7 +4662,7 @@ abstract class _$$_SignatureCopyWith<$Res> implements $SignatureCopyWith<$Res> {
       FhirUri? whoUri,
       Reference? whoReference,
       Code contentType,
-      Base64Binary blob,
+  FhirBase64Binary? blob,
       @JsonKey(name: '_targetFormat') Element? targetFormatElement,
       @JsonKey(name: '_sigFormat') Element? sigFormatElement,
       @JsonKey(name: '_data') Element? dataElement,
@@ -4743,7 +4743,7 @@ class __$$_SignatureCopyWithImpl<$Res>
       blob: null == blob
           ? _value.blob
           : blob // ignore: cast_nullable_to_non_nullable
-              as Base64Binary,
+              as  FhirBase64Binary?,
       targetFormatElement: freezed == targetFormatElement
           ? _value.targetFormatElement
           : targetFormatElement // ignore: cast_nullable_to_non_nullable
@@ -4821,7 +4821,7 @@ class _$_Signature extends _Signature {
   @override
   final Code contentType;
   @override
-  final Base64Binary blob;
+  final  FhirBase64Binary? blob;
   @override
   @JsonKey(name: '_targetFormat')
   final Element? targetFormatElement;
@@ -4910,7 +4910,7 @@ abstract class _Signature extends Signature {
           final FhirUri? whoUri,
           final Reference? whoReference,
           required final Code contentType,
-          required final Base64Binary blob,
+          required final  FhirBase64Binary? blob,
           @JsonKey(name: '_targetFormat') final Element? targetFormatElement,
           @JsonKey(name: '_sigFormat') final Element? sigFormatElement,
           @JsonKey(name: '_data') final Element? dataElement,
@@ -4922,7 +4922,7 @@ abstract class _Signature extends Signature {
       _$_Signature.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -4940,7 +4940,7 @@ abstract class _Signature extends Signature {
   @override
   Code get contentType;
   @override
-  Base64Binary get blob;
+  FhirBase64Binary? get blob;
   @override
   @JsonKey(name: '_targetFormat')
   Element? get targetFormatElement;
@@ -4965,7 +4965,7 @@ Timing _$TimingFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Timing {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @JsonKey(name: 'fhir_comments')
@@ -5287,7 +5287,7 @@ abstract class _Timing extends Timing {
   factory _Timing.fromJson(Map<String, dynamic> json) = _$_Timing.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -5315,7 +5315,7 @@ Address _$AddressFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Address {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @JsonKey(name: 'fhir_comments')
@@ -6059,7 +6059,7 @@ abstract class _Address extends Address {
   factory _Address.fromJson(Map<String, dynamic> json) = _$_Address.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -6127,7 +6127,7 @@ HumanName _$HumanNameFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$HumanName {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @JsonKey(name: 'fhir_comments')
@@ -6716,7 +6716,7 @@ abstract class _HumanName extends HumanName {
       _$_HumanName.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -6768,7 +6768,7 @@ ContactPoint _$ContactPointFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ContactPoint {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @JsonKey(name: 'fhir_comments')
@@ -7249,7 +7249,7 @@ abstract class _ContactPoint extends ContactPoint {
       _$_ContactPoint.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -7292,7 +7292,7 @@ TimingRepeat _$TimingRepeatFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$TimingRepeat {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @JsonKey(name: 'fhir_comments')
@@ -7300,36 +7300,36 @@ mixin _$TimingRepeat {
   Quantity? get boundsQuantity => throw _privateConstructorUsedError;
   Range? get boundsRange => throw _privateConstructorUsedError;
   Period? get boundsPeriod => throw _privateConstructorUsedError;
-  Integer? get count => throw _privateConstructorUsedError;
+  FhirInteger? get count => throw _privateConstructorUsedError;
   @JsonKey(name: '_count')
   Element? get countElement => throw _privateConstructorUsedError;
-  Decimal? get duration => throw _privateConstructorUsedError;
+  FhirDecimal? get duration => throw _privateConstructorUsedError;
   @JsonKey(name: '_duration')
   Element? get durationElement => throw _privateConstructorUsedError;
-  Decimal? get durationMax => throw _privateConstructorUsedError;
+  FhirDecimal? get durationMax => throw _privateConstructorUsedError;
   @JsonKey(name: '_durationMax')
   Element? get durationMaxElement => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: RepeatUnits.unknown)
   RepeatUnits? get durationUnits => throw _privateConstructorUsedError;
   @JsonKey(name: '_durationUnit')
   Element? get durationUnitElement => throw _privateConstructorUsedError;
-  Integer? get frequency => throw _privateConstructorUsedError;
+  FhirInteger? get frequency => throw _privateConstructorUsedError;
   @JsonKey(name: '_frequency')
   Element? get frequencyElement => throw _privateConstructorUsedError;
-  Integer? get frequencyMax => throw _privateConstructorUsedError;
+  FhirInteger? get frequencyMax => throw _privateConstructorUsedError;
   @JsonKey(name: '_frequencyMax')
   Element? get frequencyMaxElement => throw _privateConstructorUsedError;
-  Decimal? get period => throw _privateConstructorUsedError;
+  FhirDecimal? get period => throw _privateConstructorUsedError;
   @JsonKey(name: '_period')
   Element? get periodElement => throw _privateConstructorUsedError;
-  Decimal? get periodMax => throw _privateConstructorUsedError;
+  FhirDecimal? get periodMax => throw _privateConstructorUsedError;
   @JsonKey(name: '_periodMax')
   Element? get periodMaxElement => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: RepeatUnits.unknown)
   RepeatUnits? get periodUnits => throw _privateConstructorUsedError;
   @JsonKey(name: '_periodUnits')
   Element? get periodUnitElement => throw _privateConstructorUsedError;
-  Code? get when => throw _privateConstructorUsedError;
+   FhirCode? get when => throw _privateConstructorUsedError;
   @JsonKey(name: '_when')
   Element? get whenElement => throw _privateConstructorUsedError;
 
@@ -7354,36 +7354,36 @@ abstract class $TimingRepeatCopyWith<$Res> {
       Quantity? boundsQuantity,
       Range? boundsRange,
       Period? boundsPeriod,
-      Integer? count,
+      FhirInteger? count,
       @JsonKey(name: '_count')
           Element? countElement,
-      Decimal? duration,
+      FhirDecimal? duration,
       @JsonKey(name: '_duration')
           Element? durationElement,
-      Decimal? durationMax,
+      FhirDecimal? durationMax,
       @JsonKey(name: '_durationMax')
           Element? durationMaxElement,
       @JsonKey(unknownEnumValue: RepeatUnits.unknown)
           RepeatUnits? durationUnits,
       @JsonKey(name: '_durationUnit')
           Element? durationUnitElement,
-      Integer? frequency,
+      FhirInteger? frequency,
       @JsonKey(name: '_frequency')
           Element? frequencyElement,
-      Integer? frequencyMax,
+      FhirInteger? frequencyMax,
       @JsonKey(name: '_frequencyMax')
           Element? frequencyMaxElement,
-      Decimal? period,
+      FhirDecimal? period,
       @JsonKey(name: '_period')
           Element? periodElement,
-      Decimal? periodMax,
+      FhirDecimal? periodMax,
       @JsonKey(name: '_periodMax')
           Element? periodMaxElement,
       @JsonKey(unknownEnumValue: RepeatUnits.unknown)
           RepeatUnits? periodUnits,
       @JsonKey(name: '_periodUnits')
           Element? periodUnitElement,
-      Code? when,
+       FhirCode? when,
       @JsonKey(name: '_when')
           Element? whenElement});
 
@@ -7542,7 +7542,7 @@ class _$TimingRepeatCopyWithImpl<$Res, $Val extends TimingRepeat>
       when: freezed == when
           ? _value.when
           : when // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       whenElement: freezed == whenElement
           ? _value.whenElement
           : whenElement // ignore: cast_nullable_to_non_nullable
@@ -7724,36 +7724,36 @@ abstract class _$$_TimingRepeatCopyWith<$Res>
       Quantity? boundsQuantity,
       Range? boundsRange,
       Period? boundsPeriod,
-      Integer? count,
+      FhirInteger? count,
       @JsonKey(name: '_count')
           Element? countElement,
-      Decimal? duration,
+      FhirDecimal? duration,
       @JsonKey(name: '_duration')
           Element? durationElement,
-      Decimal? durationMax,
+      FhirDecimal? durationMax,
       @JsonKey(name: '_durationMax')
           Element? durationMaxElement,
       @JsonKey(unknownEnumValue: RepeatUnits.unknown)
           RepeatUnits? durationUnits,
       @JsonKey(name: '_durationUnit')
           Element? durationUnitElement,
-      Integer? frequency,
+      FhirInteger? frequency,
       @JsonKey(name: '_frequency')
           Element? frequencyElement,
-      Integer? frequencyMax,
+      FhirInteger? frequencyMax,
       @JsonKey(name: '_frequencyMax')
           Element? frequencyMaxElement,
-      Decimal? period,
+      FhirDecimal? period,
       @JsonKey(name: '_period')
           Element? periodElement,
-      Decimal? periodMax,
+      FhirDecimal? periodMax,
       @JsonKey(name: '_periodMax')
           Element? periodMaxElement,
       @JsonKey(unknownEnumValue: RepeatUnits.unknown)
           RepeatUnits? periodUnits,
       @JsonKey(name: '_periodUnits')
           Element? periodUnitElement,
-      Code? when,
+       FhirCode? when,
       @JsonKey(name: '_when')
           Element? whenElement});
 
@@ -7923,7 +7923,7 @@ class __$$_TimingRepeatCopyWithImpl<$Res>
       when: freezed == when
           ? _value.when
           : when // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       whenElement: freezed == whenElement
           ? _value.whenElement
           : whenElement // ignore: cast_nullable_to_non_nullable
@@ -8047,7 +8047,7 @@ class _$_TimingRepeat extends _TimingRepeat {
   @JsonKey(name: '_periodUnits')
   final Element? periodUnitElement;
   @override
-  final Code? when;
+  final  FhirCode? when;
   @override
   @JsonKey(name: '_when')
   final Element? whenElement;
@@ -8197,7 +8197,7 @@ abstract class _TimingRepeat extends TimingRepeat {
           final RepeatUnits? periodUnits,
       @JsonKey(name: '_periodUnits')
           final Element? periodUnitElement,
-      final Code? when,
+      final  FhirCode? when,
       @JsonKey(name: '_when')
           final Element? whenElement}) = _$_TimingRepeat;
   _TimingRepeat._() : super._();
@@ -8206,7 +8206,7 @@ abstract class _TimingRepeat extends TimingRepeat {
       _$_TimingRepeat.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -8220,17 +8220,17 @@ abstract class _TimingRepeat extends TimingRepeat {
   @override
   Period? get boundsPeriod;
   @override
-  Integer? get count;
+  FhirInteger? get count;
   @override
   @JsonKey(name: '_count')
   Element? get countElement;
   @override
-  Decimal? get duration;
+  FhirDecimal? get duration;
   @override
   @JsonKey(name: '_duration')
   Element? get durationElement;
   @override
-  Decimal? get durationMax;
+  FhirDecimal? get durationMax;
   @override
   @JsonKey(name: '_durationMax')
   Element? get durationMaxElement;
@@ -8241,22 +8241,22 @@ abstract class _TimingRepeat extends TimingRepeat {
   @JsonKey(name: '_durationUnit')
   Element? get durationUnitElement;
   @override
-  Integer? get frequency;
+  FhirInteger? get frequency;
   @override
   @JsonKey(name: '_frequency')
   Element? get frequencyElement;
   @override
-  Integer? get frequencyMax;
+  FhirInteger? get frequencyMax;
   @override
   @JsonKey(name: '_frequencyMax')
   Element? get frequencyMaxElement;
   @override
-  Decimal? get period;
+  FhirDecimal? get period;
   @override
   @JsonKey(name: '_period')
   Element? get periodElement;
   @override
-  Decimal? get periodMax;
+  FhirDecimal? get periodMax;
   @override
   @JsonKey(name: '_periodMax')
   Element? get periodMaxElement;
@@ -8267,7 +8267,7 @@ abstract class _TimingRepeat extends TimingRepeat {
   @JsonKey(name: '_periodUnits')
   Element? get periodUnitElement;
   @override
-  Code? get when;
+   FhirCode? get when;
   @override
   @JsonKey(name: '_when')
   Element? get whenElement;

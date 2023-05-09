@@ -19,12 +19,12 @@ class ValueSet with Resource, _$ValueSet {
     @Default(Dstu2ResourceType.ValueSet)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.ValueSet)
         Dstu2ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     @JsonKey(name: '_id') Element? idElement,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -40,24 +40,24 @@ class ValueSet with Resource, _$ValueSet {
     @JsonKey(unknownEnumValue: ValueSetStatus.unknown)
         required ValueSetStatus status,
     @JsonKey(name: '_status') Element? statusElement,
-    Boolean? experimental,
+    FhirBoolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
     String? publisher,
     @JsonKey(name: '_publisher') Element? publisherElement,
     List<ValueSetContact>? contact,
     FhirDateTime? date,
     @JsonKey(name: '_date') Element? dateElement,
-    Date? lockedDate,
+    FhirDate? lockedDate,
     @JsonKey(name: '_lockedDate') Element? lockedDateElement,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     List<CodeableConcept>? useContext,
-    Boolean? immutable,
+    FhirBoolean? immutable,
     @JsonKey(name: '_immutable') Element? immutableElement,
     String? requirements,
     String? copyright,
     @JsonKey(name: '_copyright') Element? copyrightElement,
-    Boolean? extensible,
+    FhirBoolean? extensible,
     ValueSetCodeSystem? codeSystem,
     ValueSetCompose? compose,
     ValueSetExpansion? expansion,
@@ -95,7 +95,7 @@ class ValueSet with Resource, _$ValueSet {
 class ValueSetContact with _$ValueSetContact {
   ValueSetContact._();
   factory ValueSetContact({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -138,7 +138,7 @@ class ValueSetContact with _$ValueSetContact {
 class ValueSetCodeSystem with _$ValueSetCodeSystem {
   ValueSetCodeSystem._();
   factory ValueSetCodeSystem({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -146,7 +146,7 @@ class ValueSetCodeSystem with _$ValueSetCodeSystem {
     @JsonKey(name: '_system') Element? systemElement,
     String? version,
     @JsonKey(name: '_version') Element? versionElement,
-    Boolean? caseSensitive,
+    FhirBoolean? caseSensitive,
     @JsonKey(name: '_caseSensitive') Element? caseSensitiveElement,
     required List<ValueSetCodeSystemConcept> concept,
   }) = _ValueSetCodeSystem;
@@ -186,13 +186,13 @@ class ValueSetCodeSystem with _$ValueSetCodeSystem {
 class ValueSetCodeSystemConcept with _$ValueSetCodeSystemConcept {
   ValueSetCodeSystemConcept._();
   factory ValueSetCodeSystemConcept({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
     required Code code,
     @JsonKey(name: '_code') Element? codeElement,
-    @JsonKey(name: 'abstract') Boolean? abstract_,
+    @JsonKey(name: 'abstract') FhirBoolean? abstract_,
     String? display,
     @JsonKey(name: '_display') Element? displayElement,
     String? definition,
@@ -235,10 +235,10 @@ class ValueSetCodeSystemConcept with _$ValueSetCodeSystemConcept {
 class ValueSetConceptDesignation with _$ValueSetConceptDesignation {
   ValueSetConceptDesignation._();
   factory ValueSetConceptDesignation({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Coding? use,
     required String value,
@@ -280,7 +280,7 @@ class ValueSetConceptDesignation with _$ValueSetConceptDesignation {
 class ValueSetCompose with _$ValueSetCompose {
   ValueSetCompose._();
   factory ValueSetCompose({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -324,7 +324,7 @@ class ValueSetCompose with _$ValueSetCompose {
 class ValueSetComposeInclude with _$ValueSetComposeInclude {
   ValueSetComposeInclude._();
   factory ValueSetComposeInclude({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -371,7 +371,7 @@ class ValueSetComposeInclude with _$ValueSetComposeInclude {
 class ValueSetIncludeConcept with _$ValueSetIncludeConcept {
   ValueSetIncludeConcept._();
   factory ValueSetIncludeConcept({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -417,7 +417,7 @@ class ValueSetIncludeConcept with _$ValueSetIncludeConcept {
 class ValueSetIncludeFilter with _$ValueSetIncludeFilter {
   ValueSetIncludeFilter._();
   factory ValueSetIncludeFilter({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -464,7 +464,7 @@ class ValueSetIncludeFilter with _$ValueSetIncludeFilter {
 class ValueSetExpansion with _$ValueSetExpansion {
   ValueSetExpansion._();
   factory ValueSetExpansion({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -472,9 +472,9 @@ class ValueSetExpansion with _$ValueSetExpansion {
     @JsonKey(name: '_identifier') Element? identifierElement,
     required FhirDateTime timestamp,
     @JsonKey(name: '_timestamp') Element? timestampElement,
-    Integer? total,
+    FhirInteger? total,
     @JsonKey(name: '_total') Element? totalElement,
-    Integer? offset,
+    FhirInteger? offset,
     @JsonKey(name: '_offset') Element? offsetElement,
     List<ValueSetExpansionParameter>? parameter,
     List<ValueSetExpansionContains>? contains,
@@ -515,7 +515,7 @@ class ValueSetExpansion with _$ValueSetExpansion {
 class ValueSetExpansionParameter with _$ValueSetExpansionParameter {
   ValueSetExpansionParameter._();
   factory ValueSetExpansionParameter({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -523,15 +523,15 @@ class ValueSetExpansionParameter with _$ValueSetExpansionParameter {
     @JsonKey(name: '_name') Element? nameElement,
     String? valueString,
     @JsonKey(name: '_valueString') Element? valueStringElement,
-    Boolean? valueBoolean,
+    FhirBoolean? valueBoolean,
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-    Integer? valueInteger,
+    FhirInteger? valueInteger,
     @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
-    Decimal? valueDecimal,
+    FhirDecimal? valueDecimal,
     @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
     FhirUri? valueUri,
     @JsonKey(name: '_valueUri') Element? valueUriElement,
-    Code? valueCode,
+    FhirCode? valueCode,
     @JsonKey(name: '_valueCode') Element? valueCodeElement,
   }) = _ValueSetExpansionParameter;
 
@@ -570,17 +570,17 @@ class ValueSetExpansionParameter with _$ValueSetExpansionParameter {
 class ValueSetExpansionContains with _$ValueSetExpansionContains {
   ValueSetExpansionContains._();
   factory ValueSetExpansionContains({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
     FhirUri? system,
     @JsonKey(name: '_system') Element? systemElement,
-    @JsonKey(name: 'abstract') Boolean? abstract_,
+    @JsonKey(name: 'abstract') FhirBoolean? abstract_,
     @JsonKey(name: '_abstract') Element? abstractElement,
     String? version,
     @JsonKey(name: '_version') Element? versionElement,
-    Code? code,
+    FhirCode? code,
     @JsonKey(name: '_code') Element? codeElement,
     String? display,
     @JsonKey(name: '_display') Element? displayElement,
@@ -625,11 +625,11 @@ class ConceptMap with Resource, _$ConceptMap {
     @Default(Dstu2ResourceType.ConceptMap)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.ConceptMap)
         Dstu2ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -645,7 +645,7 @@ class ConceptMap with Resource, _$ConceptMap {
     @JsonKey(unknownEnumValue: ConceptMapStatus.unknown)
         required ConceptMapStatus status,
     @JsonKey(name: '_status') Element? statusElement,
-    Boolean? experimental,
+    FhirBoolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
     String? publisher,
     @JsonKey(name: '_publisher') Element? publisherElement,
@@ -699,7 +699,7 @@ class ConceptMap with Resource, _$ConceptMap {
 class ConceptMapContact with _$ConceptMapContact {
   ConceptMapContact._();
   factory ConceptMapContact({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? name,
@@ -741,11 +741,11 @@ class ConceptMapContact with _$ConceptMapContact {
 class ConceptMapElement with _$ConceptMapElement {
   ConceptMapElement._();
   factory ConceptMapElement({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     FhirUri? codeSystem,
-    Code? code,
+    FhirCode? code,
     @JsonKey(name: '_code') Element? codeElement,
     List<ConceptMapElementTarget>? target,
   }) = _ConceptMapElement;
@@ -785,11 +785,11 @@ class ConceptMapElement with _$ConceptMapElement {
 class ConceptMapElementTarget with _$ConceptMapElementTarget {
   ConceptMapElementTarget._();
   factory ConceptMapElementTarget({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     FhirUri? codeSystem,
-    Code? code,
+    FhirCode? code,
     @JsonKey(name: '_code') Element? codeElement,
     @JsonKey(unknownEnumValue: TargetEquivalence.unknown)
         required TargetEquivalence equivalence,
@@ -835,7 +835,7 @@ class ConceptMapElementTarget with _$ConceptMapElementTarget {
 class ConceptMapTargetDependsOn with _$ConceptMapTargetDependsOn {
   ConceptMapTargetDependsOn._();
   factory ConceptMapTargetDependsOn({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required FhirUri element,
@@ -881,11 +881,11 @@ class NamingSystem with Resource, _$NamingSystem {
     @Default(Dstu2ResourceType.NamingSystem)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.NamingSystem)
         Dstu2ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -948,7 +948,7 @@ class NamingSystem with Resource, _$NamingSystem {
 class NamingSystemContact with _$NamingSystemContact {
   NamingSystemContact._();
   factory NamingSystemContact({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? name,
@@ -990,14 +990,14 @@ class NamingSystemContact with _$NamingSystemContact {
 class NamingSystemUniqueId with _$NamingSystemUniqueId {
   NamingSystemUniqueId._();
   factory NamingSystemUniqueId({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: UniqueIdType.unknown) required UniqueIdType type,
     @JsonKey(name: '_type') Element? typeElement,
     required String value,
     @JsonKey(name: '_value') Element? valueElement,
-    Boolean? preferred,
+    FhirBoolean? preferred,
     @JsonKey(name: '_preferred') Element? preferredElement,
     Period? period,
   }) = _NamingSystemUniqueId;

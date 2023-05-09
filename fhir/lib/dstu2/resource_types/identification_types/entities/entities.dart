@@ -19,11 +19,11 @@ class Location with Resource, _$Location {
     @Default(Dstu2ResourceType.Location)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Location)
         Dstu2ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -79,14 +79,14 @@ class Location with Resource, _$Location {
 class LocationPosition with _$LocationPosition {
   LocationPosition._();
   factory LocationPosition({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Decimal longitude,
     @JsonKey(name: '_longitude') Element? longitudeElement,
     required Decimal latitude,
     @JsonKey(name: '_latitude') Element? latitudeElement,
-    Decimal? altitude,
+    FhirDecimal? altitude,
     @JsonKey(name: '_altitude') Element? altitudeElement,
   }) = _LocationPosition;
 
@@ -128,11 +128,11 @@ class Substance with Resource, _$Substance {
     @Default(Dstu2ResourceType.Substance)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Substance)
         Dstu2ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -179,7 +179,7 @@ class Substance with Resource, _$Substance {
 class SubstanceInstance with _$SubstanceInstance {
   SubstanceInstance._();
   factory SubstanceInstance({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Identifier? identifier,
@@ -223,7 +223,7 @@ class SubstanceInstance with _$SubstanceInstance {
 class SubstanceIngredient with _$SubstanceIngredient {
   SubstanceIngredient._();
   factory SubstanceIngredient({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Ratio? quantity,
@@ -268,11 +268,11 @@ class Person with Resource, _$Person {
     @Default(Dstu2ResourceType.Person)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Person)
         Dstu2ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -283,12 +283,12 @@ class Person with Resource, _$Person {
     List<ContactPoint>? telecom,
     @JsonKey(unknownEnumValue: PersonGender.unknown) PersonGender? gender,
     @JsonKey(name: '_gender') Element? genderElement,
-    Date? birthDate,
+    FhirDate? birthDate,
     @JsonKey(name: '_birthDate') Element? birthDateElement,
     List<Address>? address,
     Attachment? photo,
     Reference? managingOrganization,
-    Boolean? active,
+    FhirBoolean? active,
     @JsonKey(name: '_active') Element? activeElement,
     List<PersonLink>? link,
   }) = _Person;
@@ -324,7 +324,7 @@ class Person with Resource, _$Person {
 class PersonLink with _$PersonLink {
   PersonLink._();
   factory PersonLink({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Reference target,
@@ -370,11 +370,11 @@ class Contract with Resource, _$Contract {
     @Default(Dstu2ResourceType.Contract)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Contract)
         Dstu2ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -434,7 +434,7 @@ class Contract with Resource, _$Contract {
 class ContractActor with _$ContractActor {
   ContractActor._();
   factory ContractActor({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Reference entity,
@@ -476,7 +476,7 @@ class ContractActor with _$ContractActor {
 class ContractValuedItem with _$ContractValuedItem {
   ContractValuedItem._();
   factory ContractValuedItem({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? entityCodeableConcept,
@@ -486,9 +486,9 @@ class ContractValuedItem with _$ContractValuedItem {
     @JsonKey(name: '_effectiveTime') Element? effectiveTimeElement,
     Quantity? quantity,
     Quantity? unitPrice,
-    Decimal? factor,
+    FhirDecimal? factor,
     @JsonKey(name: '_factor') Element? factorElement,
-    Decimal? points,
+    FhirDecimal? points,
     @JsonKey(name: '_points') Element? pointsElement,
     Quantity? net,
     List<Element>? securityLabelNumberElement,
@@ -529,7 +529,7 @@ class ContractValuedItem with _$ContractValuedItem {
 class ContractSigner with _$ContractSigner {
   ContractSigner._();
   factory ContractSigner({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Coding type,
@@ -572,7 +572,7 @@ class ContractSigner with _$ContractSigner {
 class ContractTerm with _$ContractTerm {
   ContractTerm._();
   factory ContractTerm({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Identifier? identifier,
@@ -626,7 +626,7 @@ class ContractTerm with _$ContractTerm {
 class ContractTermActor with _$ContractTermActor {
   ContractTermActor._();
   factory ContractTermActor({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Reference entity,
@@ -668,7 +668,7 @@ class ContractTermActor with _$ContractTermActor {
 class ContractFriendly with _$ContractFriendly {
   ContractFriendly._();
   factory ContractFriendly({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Attachment? contentAttachment,
@@ -710,7 +710,7 @@ class ContractFriendly with _$ContractFriendly {
 class ContractLegal with _$ContractLegal {
   ContractLegal._();
   factory ContractLegal({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Attachment? contentAttachment,
@@ -752,7 +752,7 @@ class ContractLegal with _$ContractLegal {
 class ContractRule with _$ContractRule {
   ContractRule._();
   factory ContractRule({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Attachment? contentAttachment,

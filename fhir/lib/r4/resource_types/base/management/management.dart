@@ -182,7 +182,7 @@ class Encounter with Resource, _$Encounter {
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+     FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -231,7 +231,7 @@ class Encounter with Resource, _$Encounter {
 
     /// [status] planned | arrived | triaged | in-progress | onleave | finished |
     ///  cancelled +.
-    Code? status,
+     FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -431,7 +431,7 @@ class EncounterStatusHistory with _$EncounterStatusHistory {
 
     /// [status] planned | arrived | triaged | in-progress | onleave | finished |
     ///  cancelled +.
-    Code? status,
+     FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -1037,7 +1037,7 @@ class EncounterLocation with _$EncounterLocation {
     /// [status] The status of the participants' presence at the specified
     /// location during the period specified. If the participant is no longer at
     ///  the location, then the period will have an end date/time.
-    Code? status,
+     FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -1209,7 +1209,7 @@ class EpisodeOfCare with Resource, _$EpisodeOfCare {
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+     FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -1259,7 +1259,7 @@ class EpisodeOfCare with Resource, _$EpisodeOfCare {
     List<Identifier>? identifier,
 
     /// [status] planned | waitlist | active | onhold | finished | cancelled.
-    Code? status,
+     FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -1402,7 +1402,7 @@ class EpisodeOfCareStatusHistory with _$EpisodeOfCareStatusHistory {
     List<FhirExtension>? modifierExtension,
 
     /// [status] planned | waitlist | active | onhold | finished | cancelled.
-    Code? status,
+     FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -1675,7 +1675,7 @@ class Flag with Resource, _$Flag {
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+     FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -1725,7 +1725,7 @@ class Flag with Resource, _$Flag {
     List<Identifier>? identifier,
 
     /// [status] Supports basic workflow.
-    Code? status,
+     FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -2027,7 +2027,7 @@ class Library with Resource, _$Library {
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+     FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -2134,7 +2134,7 @@ class Library with Resource, _$Library {
 
     /// [status] The status of this library. Enables tracking the life-cycle of
     ///  the content.
-    Code? status,
+     FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -2143,7 +2143,7 @@ class Library with Resource, _$Library {
     /// [experimental] A Boolean value to indicate that this library is authored
     /// for testing purposes (or education/evaluation/marketing) and is not
     ///  intended to be used for genuine usage.
-    Boolean? experimental,
+     FhirBoolean? experimental,
 
     /// [experimentalElement] Extensions for experimental
     @JsonKey(name: '_experimental')
@@ -2185,7 +2185,7 @@ class Library with Resource, _$Library {
 
     /// [description] A free text natural language description of the library
     ///  from a consumer's perspective.
-    Markdown? description,
+    FhirMarkdown? description,
 
     /// [descriptionElement] Extensions for description
     @JsonKey(name: '_description')
@@ -2204,7 +2204,7 @@ class Library with Resource, _$Library {
 
     /// [purpose] Explanation of why this library is needed and why it has been
     ///  designed as it has.
-    Markdown? purpose,
+    FhirMarkdown? purpose,
 
     /// [purposeElement] Extensions for purpose
     @JsonKey(name: '_purpose')
@@ -2221,7 +2221,7 @@ class Library with Resource, _$Library {
     /// [copyright] A copyright statement relating to the library and/or its
     /// contents. Copyright statements are generally legal restrictions on the use
     ///  and publishing of the library.
-    Markdown? copyright,
+    FhirMarkdown? copyright,
 
     /// [copyrightElement] Extensions for copyright
     @JsonKey(name: '_copyright')
@@ -2230,7 +2230,7 @@ class Library with Resource, _$Library {
     /// [approvalDate] The date on which the resource content was approved by the
     /// publisher. Approval happens once when the content is officially approved
     ///  for usage.
-    Date? approvalDate,
+    FhirDate? approvalDate,
 
     /// [approvalDateElement] Extensions for approvalDate
     @JsonKey(name: '_approvalDate')
@@ -2239,7 +2239,7 @@ class Library with Resource, _$Library {
     /// [lastReviewDate] The date on which the resource content was last
     /// reviewed. Review happens periodically after approval but does not change
     ///  the original approval date.
-    Date? lastReviewDate,
+    FhirDate? lastReviewDate,
 
     /// [lastReviewDateElement] Extensions for lastReviewDate
     @JsonKey(name: '_lastReviewDate')
@@ -2319,7 +2319,7 @@ class Library with Resource, _$Library {
 
 /// [List] A list is a curated collection of resources.
 @freezed
-class List_ with Resource, _$List_ {
+class FhirList with Resoure, _$FhirList {
   /// [List] A list is a curated collection of resources.
   List_._();
 
@@ -2446,7 +2446,7 @@ class List_ with Resource, _$List_ {
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+     FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -2495,7 +2495,7 @@ class List_ with Resource, _$List_ {
     List<Identifier>? identifier,
 
     /// [status] Indicates the current state of this list.
-    Code? status,
+     FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -2505,7 +2505,7 @@ class List_ with Resource, _$List_ {
     /// suitable for being maintained on an ongoing basis, or if it represents a
     /// snapshot of a list of items from another source, or whether it is a
     ///  prepared list where items may be marked as added, modified or deleted.
-    Code? mode,
+     FhirCode? mode,
 
     /// [modeElement] Extensions for mode
     @JsonKey(name: '_mode')
@@ -2657,7 +2657,7 @@ class ListEntry with _$ListEntry {
     CodeableConcept? flag,
 
     /// [deleted] True if this item is marked as deleted in the list.
-    Boolean? deleted,
+     FhirBoolean? deleted,
 
     /// [deletedElement] Extensions for deleted
     @JsonKey(name: '_deleted') Element? deletedElement,

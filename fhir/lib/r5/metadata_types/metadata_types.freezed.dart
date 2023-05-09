@@ -1957,7 +1957,7 @@ mixin _$AvailabilityAvailableTime {
   List<Element>? get daysOfWeekElement => throw _privateConstructorUsedError;
 
   /// [allDay] Always available? i.e. 24 hour service.
-  Boolean? get allDay => throw _privateConstructorUsedError;
+  FhirBoolean? get allDay => throw _privateConstructorUsedError;
 
   /// [allDayElement] ("_allDay") Extensions for allDay
   @JsonKey(name: '_allDay')
@@ -1997,7 +1997,7 @@ abstract class $AvailabilityAvailableTimeCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       List<Code>? daysOfWeek,
       @JsonKey(name: '_daysOfWeek') List<Element>? daysOfWeekElement,
-      Boolean? allDay,
+      FhirBoolean? allDay,
       @JsonKey(name: '_allDay') Element? allDayElement,
       Time? availableStartTime,
       @JsonKey(name: '_availableStartTime') Element? availableStartTimeElement,
@@ -2059,7 +2059,7 @@ class _$AvailabilityAvailableTimeCopyWithImpl<$Res,
       allDay: freezed == allDay
           ? _value.allDay
           : allDay // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       allDayElement: freezed == allDayElement
           ? _value.allDayElement
           : allDayElement // ignore: cast_nullable_to_non_nullable
@@ -2135,7 +2135,7 @@ abstract class _$$_AvailabilityAvailableTimeCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       List<Code>? daysOfWeek,
       @JsonKey(name: '_daysOfWeek') List<Element>? daysOfWeekElement,
-      Boolean? allDay,
+      FhirBoolean? allDay,
       @JsonKey(name: '_allDay') Element? allDayElement,
       Time? availableStartTime,
       @JsonKey(name: '_availableStartTime') Element? availableStartTimeElement,
@@ -2199,7 +2199,7 @@ class __$$_AvailabilityAvailableTimeCopyWithImpl<$Res>
       allDay: freezed == allDay
           ? _value.allDay
           : allDay // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       allDayElement: freezed == allDayElement
           ? _value.allDayElement
           : allDayElement // ignore: cast_nullable_to_non_nullable
@@ -2347,7 +2347,7 @@ class _$_AvailabilityAvailableTime extends _AvailabilityAvailableTime {
 
   /// [allDay] Always available? i.e. 24 hour service.
   @override
-  final Boolean? allDay;
+  final FhirBoolean? allDay;
 
   /// [allDayElement] ("_allDay") Extensions for allDay
   @override
@@ -2448,7 +2448,7 @@ abstract class _AvailabilityAvailableTime extends AvailabilityAvailableTime {
           final List<Code>? daysOfWeek,
           @JsonKey(name: '_daysOfWeek')
               final List<Element>? daysOfWeekElement,
-          final Boolean? allDay,
+          final FhirBoolean? allDay,
           @JsonKey(name: '_allDay')
               final Element? allDayElement,
           final Time? availableStartTime,
@@ -2507,7 +2507,7 @@ abstract class _AvailabilityAvailableTime extends AvailabilityAvailableTime {
   @override
 
   /// [allDay] Always available? i.e. 24 hour service.
-  Boolean? get allDay;
+  FhirBoolean? get allDay;
   @override
 
   /// [allDayElement] ("_allDay") Extensions for allDay
@@ -2994,7 +2994,7 @@ mixin _$MonetaryComponent {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [type] base | surcharge | deduction | discount | tax | informational.
-  Code? get type => throw _privateConstructorUsedError;
+  FhirCode? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] ("_type") Extensions for type
   @JsonKey(name: '_type')
@@ -3005,7 +3005,7 @@ mixin _$MonetaryComponent {
   CodeableConcept? get code => throw _privateConstructorUsedError;
 
   /// [factor] Factor used for calculating this component.
-  Decimal? get factor => throw _privateConstructorUsedError;
+  FhirDecimal? get factor => throw _privateConstructorUsedError;
 
   /// [factorElement] ("_factor") Extensions for factor
   @JsonKey(name: '_factor')
@@ -3029,10 +3029,10 @@ abstract class $MonetaryComponentCopyWith<$Res> {
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      Code? type,
+      FhirCode? type,
       @JsonKey(name: '_type') Element? typeElement,
       CodeableConcept? code,
-      Decimal? factor,
+      FhirDecimal? factor,
       @JsonKey(name: '_factor') Element? factorElement,
       Money? amount});
 
@@ -3076,7 +3076,7 @@ class _$MonetaryComponentCopyWithImpl<$Res, $Val extends MonetaryComponent>
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       typeElement: freezed == typeElement
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -3160,10 +3160,10 @@ abstract class _$$_MonetaryComponentCopyWith<$Res>
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      Code? type,
+      FhirCode? type,
       @JsonKey(name: '_type') Element? typeElement,
       CodeableConcept? code,
-      Decimal? factor,
+      FhirDecimal? factor,
       @JsonKey(name: '_factor') Element? factorElement,
       Money? amount});
 
@@ -3209,7 +3209,7 @@ class __$$_MonetaryComponentCopyWithImpl<$Res>
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       typeElement: freezed == typeElement
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -3285,7 +3285,7 @@ class _$_MonetaryComponent extends _MonetaryComponent {
 
   /// [type] base | surcharge | deduction | discount | tax | informational.
   @override
-  final Code? type;
+  final FhirCode? type;
 
   /// [typeElement] ("_type") Extensions for type
   @override
@@ -3365,7 +3365,7 @@ abstract class _MonetaryComponent extends MonetaryComponent {
   factory _MonetaryComponent(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final Code? type,
+      final FhirCode? type,
       @JsonKey(name: '_type') final Element? typeElement,
       final CodeableConcept? code,
       final Decimal? factor,
@@ -3395,7 +3395,7 @@ abstract class _MonetaryComponent extends MonetaryComponent {
   @override
 
   /// [type] base | surcharge | deduction | discount | tax | informational.
-  Code? get type;
+  FhirCode? get type;
   @override
 
   /// [typeElement] ("_type") Extensions for type
@@ -3409,7 +3409,7 @@ abstract class _MonetaryComponent extends MonetaryComponent {
   @override
 
   /// [factor] Factor used for calculating this component.
-  Decimal? get factor;
+  FhirDecimal? get factor;
   @override
 
   /// [factorElement] ("_factor") Extensions for factor
@@ -3856,7 +3856,7 @@ mixin _$DataRequirement {
   /// [type] The type of the required data, specified as the type name of a
   ///  resource. For profiles, this value is set to the type of the base
   ///  resource of the profile.
-  Code? get type => throw _privateConstructorUsedError;
+  FhirCode? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] ("_type") Extensions for type
   @JsonKey(name: '_type')
@@ -3938,7 +3938,7 @@ abstract class $DataRequirementCopyWith<$Res> {
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      Code? type,
+      FhirCode? type,
       @JsonKey(name: '_type') Element? typeElement,
       List<Canonical>? profile,
       CodeableConcept? subjectCodeableConcept,
@@ -3999,7 +3999,7 @@ class _$DataRequirementCopyWithImpl<$Res, $Val extends DataRequirement>
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       typeElement: freezed == typeElement
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -4112,7 +4112,7 @@ abstract class _$$_DataRequirementCopyWith<$Res>
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      Code? type,
+      FhirCode? type,
       @JsonKey(name: '_type') Element? typeElement,
       List<Canonical>? profile,
       CodeableConcept? subjectCodeableConcept,
@@ -4175,7 +4175,7 @@ class __$$_DataRequirementCopyWithImpl<$Res>
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       typeElement: freezed == typeElement
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -4295,7 +4295,7 @@ class _$_DataRequirement extends _DataRequirement {
   ///  resource. For profiles, this value is set to the type of the base
   ///  resource of the profile.
   @override
-  final Code? type;
+  final FhirCode? type;
 
   /// [typeElement] ("_type") Extensions for type
   @override
@@ -4528,7 +4528,7 @@ abstract class _DataRequirement extends DataRequirement {
   factory _DataRequirement(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final Code? type,
+      final FhirCode? type,
       @JsonKey(name: '_type') final Element? typeElement,
       final List<Canonical>? profile,
       final CodeableConcept? subjectCodeableConcept,
@@ -4567,7 +4567,7 @@ abstract class _DataRequirement extends DataRequirement {
   /// [type] The type of the required data, specified as the type name of a
   ///  resource. For profiles, this value is set to the type of the base
   ///  resource of the profile.
-  Code? get type;
+  FhirCode? get type;
   @override
 
   /// [typeElement] ("_type") Extensions for type
@@ -4712,7 +4712,7 @@ mixin _$DataRequirementCodeFilter {
   ///  elements are additive. If valueSet is specified, the filter will
   ///  return only those data items for which the value of the code-valued
   ///  element specified in the path is a member of the specified valueset.
-  Canonical? get valueSet => throw _privateConstructorUsedError;
+  FhirCanonical? get valueSet => throw _privateConstructorUsedError;
 
   /// [code] The codes for the code filter. If values are given, the filter
   ///  will return only those data items for which the code-valued attribute
@@ -4741,7 +4741,7 @@ abstract class $DataRequirementCodeFilterCopyWith<$Res> {
       @JsonKey(name: '_path') Element? pathElement,
       String? searchParam,
       @JsonKey(name: '_searchParam') Element? searchParamElement,
-      Canonical? valueSet,
+      FhirCanonical? valueSet,
       List<Coding>? code});
 
   $ElementCopyWith<$Res>? get pathElement;
@@ -4804,7 +4804,7 @@ class _$DataRequirementCodeFilterCopyWithImpl<$Res,
       valueSet: freezed == valueSet
           ? _value.valueSet
           : valueSet // ignore: cast_nullable_to_non_nullable
-              as Canonical?,
+              as FhirCanonical?,
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
@@ -4854,7 +4854,7 @@ abstract class _$$_DataRequirementCodeFilterCopyWith<$Res>
       @JsonKey(name: '_path') Element? pathElement,
       String? searchParam,
       @JsonKey(name: '_searchParam') Element? searchParamElement,
-      Canonical? valueSet,
+      FhirCanonical? valueSet,
       List<Coding>? code});
 
   @override
@@ -4918,7 +4918,7 @@ class __$$_DataRequirementCodeFilterCopyWithImpl<$Res>
       valueSet: freezed == valueSet
           ? _value.valueSet
           : valueSet // ignore: cast_nullable_to_non_nullable
-              as Canonical?,
+              as FhirCanonical?,
       code: freezed == code
           ? _value._code
           : code // ignore: cast_nullable_to_non_nullable
@@ -5050,7 +5050,7 @@ class _$_DataRequirementCodeFilter extends _DataRequirementCodeFilter {
   ///  return only those data items for which the value of the code-valued
   ///  element specified in the path is a member of the specified valueset.
   @override
-  final Canonical? valueSet;
+  final FhirCanonical? valueSet;
 
   /// [code] The codes for the code filter. If values are given, the filter
   ///  will return only those data items for which the code-valued attribute
@@ -5138,7 +5138,7 @@ abstract class _DataRequirementCodeFilter extends DataRequirementCodeFilter {
       @JsonKey(name: '_path') final Element? pathElement,
       final String? searchParam,
       @JsonKey(name: '_searchParam') final Element? searchParamElement,
-      final Canonical? valueSet,
+      final FhirCanonical? valueSet,
       final List<Coding>? code}) = _$_DataRequirementCodeFilter;
   _DataRequirementCodeFilter._() : super._();
 
@@ -5211,7 +5211,7 @@ abstract class _DataRequirementCodeFilter extends DataRequirementCodeFilter {
   ///  elements are additive. If valueSet is specified, the filter will
   ///  return only those data items for which the value of the code-valued
   ///  element specified in the path is a member of the specified valueset.
-  Canonical? get valueSet;
+  FhirCanonical? get valueSet;
   @override
 
   /// [code] The codes for the code filter. If values are given, the filter
@@ -5996,7 +5996,7 @@ mixin _$DataRequirementValueFilter {
 
   /// [comparator] The comparator to be used to determine whether the value
   ///  is matching.
-  Code? get comparator => throw _privateConstructorUsedError;
+  FhirCode? get comparator => throw _privateConstructorUsedError;
 
   /// [comparatorElement] ("_comparator") Extensions for comparator
   @JsonKey(name: '_comparator')
@@ -6036,7 +6036,7 @@ abstract class $DataRequirementValueFilterCopyWith<$Res> {
       @JsonKey(name: '_path') Element? pathElement,
       String? searchParam,
       @JsonKey(name: '_searchParam') Element? searchParamElement,
-      Code? comparator,
+      FhirCode? comparator,
       @JsonKey(name: '_comparator') Element? comparatorElement,
       FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
@@ -6111,7 +6111,7 @@ class _$DataRequirementValueFilterCopyWithImpl<$Res,
       comparator: freezed == comparator
           ? _value.comparator
           : comparator // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       comparatorElement: freezed == comparatorElement
           ? _value.comparatorElement
           : comparatorElement // ignore: cast_nullable_to_non_nullable
@@ -6225,7 +6225,7 @@ abstract class _$$_DataRequirementValueFilterCopyWith<$Res>
       @JsonKey(name: '_path') Element? pathElement,
       String? searchParam,
       @JsonKey(name: '_searchParam') Element? searchParamElement,
-      Code? comparator,
+      FhirCode? comparator,
       @JsonKey(name: '_comparator') Element? comparatorElement,
       FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
@@ -6305,7 +6305,7 @@ class __$$_DataRequirementValueFilterCopyWithImpl<$Res>
       comparator: freezed == comparator
           ? _value.comparator
           : comparator // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       comparatorElement: freezed == comparatorElement
           ? _value.comparatorElement
           : comparatorElement // ignore: cast_nullable_to_non_nullable
@@ -6455,7 +6455,7 @@ class _$_DataRequirementValueFilter extends _DataRequirementValueFilter {
   /// [comparator] The comparator to be used to determine whether the value
   ///  is matching.
   @override
-  final Code? comparator;
+  final FhirCode? comparator;
 
   /// [comparatorElement] ("_comparator") Extensions for comparator
   @override
@@ -6557,7 +6557,7 @@ abstract class _DataRequirementValueFilter extends DataRequirementValueFilter {
       @JsonKey(name: '_path') final Element? pathElement,
       final String? searchParam,
       @JsonKey(name: '_searchParam') final Element? searchParamElement,
-      final Code? comparator,
+      final FhirCode? comparator,
       @JsonKey(name: '_comparator') final Element? comparatorElement,
       final FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') final Element? valueDateTimeElement,
@@ -6633,7 +6633,7 @@ abstract class _DataRequirementValueFilter extends DataRequirementValueFilter {
 
   /// [comparator] The comparator to be used to determine whether the value
   ///  is matching.
-  Code? get comparator;
+  FhirCode? get comparator;
   @override
 
   /// [comparatorElement] ("_comparator") Extensions for comparator
@@ -7152,14 +7152,14 @@ mixin _$ParameterDefinition {
 
   /// [name] The name of the parameter used to allow access to the value of
   ///  the parameter in evaluation contexts.
-  Code? get name => throw _privateConstructorUsedError;
+  FhirCode? get name => throw _privateConstructorUsedError;
 
   /// [nameElement] ("_name") Extensions for name
   @JsonKey(name: '_name')
   Element? get nameElement => throw _privateConstructorUsedError;
 
   /// [use] Whether the parameter is input or output for the module.
-  Code? get use => throw _privateConstructorUsedError;
+  FhirCode? get use => throw _privateConstructorUsedError;
 
   /// [useElement] ("_use") Extensions for use
   @JsonKey(name: '_use')
@@ -7167,7 +7167,7 @@ mixin _$ParameterDefinition {
 
   /// [min] The minimum number of times this parameter SHALL appear in the
   ///  request or response.
-  Integer? get min => throw _privateConstructorUsedError;
+  FhirInteger? get min => throw _privateConstructorUsedError;
 
   /// [minElement] ("_min") Extensions for min
   @JsonKey(name: '_min')
@@ -7190,7 +7190,7 @@ mixin _$ParameterDefinition {
   Element? get documentationElement => throw _privateConstructorUsedError;
 
   /// [type] The type of the parameter.
-  Code? get type => throw _privateConstructorUsedError;
+  FhirCode? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] ("_type") Extensions for type
   @JsonKey(name: '_type')
@@ -7198,7 +7198,7 @@ mixin _$ParameterDefinition {
 
   /// [profile] If specified, this indicates a profile that the input data
   ///  must conform to, or that the output data will conform to.
-  Canonical? get profile => throw _privateConstructorUsedError;
+  FhirCanonical? get profile => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -7215,19 +7215,19 @@ abstract class $ParameterDefinitionCopyWith<$Res> {
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      Code? name,
+      FhirCode? name,
       @JsonKey(name: '_name') Element? nameElement,
-      Code? use,
+      FhirCode? use,
       @JsonKey(name: '_use') Element? useElement,
-      Integer? min,
+      FhirInteger? min,
       @JsonKey(name: '_min') Element? minElement,
       String? max,
       @JsonKey(name: '_max') Element? maxElement,
       String? documentation,
       @JsonKey(name: '_documentation') Element? documentationElement,
-      Code? type,
+      FhirCode? type,
       @JsonKey(name: '_type') Element? typeElement,
-      Canonical? profile});
+      FhirCanonical? profile});
 
   $ElementCopyWith<$Res>? get nameElement;
   $ElementCopyWith<$Res>? get useElement;
@@ -7278,7 +7278,7 @@ class _$ParameterDefinitionCopyWithImpl<$Res, $Val extends ParameterDefinition>
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       nameElement: freezed == nameElement
           ? _value.nameElement
           : nameElement // ignore: cast_nullable_to_non_nullable
@@ -7286,7 +7286,7 @@ class _$ParameterDefinitionCopyWithImpl<$Res, $Val extends ParameterDefinition>
       use: freezed == use
           ? _value.use
           : use // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       useElement: freezed == useElement
           ? _value.useElement
           : useElement // ignore: cast_nullable_to_non_nullable
@@ -7318,7 +7318,7 @@ class _$ParameterDefinitionCopyWithImpl<$Res, $Val extends ParameterDefinition>
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       typeElement: freezed == typeElement
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -7326,7 +7326,7 @@ class _$ParameterDefinitionCopyWithImpl<$Res, $Val extends ParameterDefinition>
       profile: freezed == profile
           ? _value.profile
           : profile // ignore: cast_nullable_to_non_nullable
-              as Canonical?,
+              as FhirCanonical?,
     ) as $Val);
   }
 
@@ -7414,19 +7414,19 @@ abstract class _$$_ParameterDefinitionCopyWith<$Res>
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      Code? name,
+      FhirCode? name,
       @JsonKey(name: '_name') Element? nameElement,
-      Code? use,
+      FhirCode? use,
       @JsonKey(name: '_use') Element? useElement,
-      Integer? min,
+      FhirInteger? min,
       @JsonKey(name: '_min') Element? minElement,
       String? max,
       @JsonKey(name: '_max') Element? maxElement,
       String? documentation,
       @JsonKey(name: '_documentation') Element? documentationElement,
-      Code? type,
+      FhirCode? type,
       @JsonKey(name: '_type') Element? typeElement,
-      Canonical? profile});
+      FhirCanonical? profile});
 
   @override
   $ElementCopyWith<$Res>? get nameElement;
@@ -7481,7 +7481,7 @@ class __$$_ParameterDefinitionCopyWithImpl<$Res>
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       nameElement: freezed == nameElement
           ? _value.nameElement
           : nameElement // ignore: cast_nullable_to_non_nullable
@@ -7489,7 +7489,7 @@ class __$$_ParameterDefinitionCopyWithImpl<$Res>
       use: freezed == use
           ? _value.use
           : use // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       useElement: freezed == useElement
           ? _value.useElement
           : useElement // ignore: cast_nullable_to_non_nullable
@@ -7521,7 +7521,7 @@ class __$$_ParameterDefinitionCopyWithImpl<$Res>
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       typeElement: freezed == typeElement
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -7529,7 +7529,7 @@ class __$$_ParameterDefinitionCopyWithImpl<$Res>
       profile: freezed == profile
           ? _value.profile
           : profile // ignore: cast_nullable_to_non_nullable
-              as Canonical?,
+              as FhirCanonical?,
     ));
   }
 }
@@ -7593,7 +7593,7 @@ class _$_ParameterDefinition extends _ParameterDefinition {
   /// [name] The name of the parameter used to allow access to the value of
   ///  the parameter in evaluation contexts.
   @override
-  final Code? name;
+  final FhirCode? name;
 
   /// [nameElement] ("_name") Extensions for name
   @override
@@ -7602,7 +7602,7 @@ class _$_ParameterDefinition extends _ParameterDefinition {
 
   /// [use] Whether the parameter is input or output for the module.
   @override
-  final Code? use;
+  final FhirCode? use;
 
   /// [useElement] ("_use") Extensions for use
   @override
@@ -7641,7 +7641,7 @@ class _$_ParameterDefinition extends _ParameterDefinition {
 
   /// [type] The type of the parameter.
   @override
-  final Code? type;
+  final FhirCode? type;
 
   /// [typeElement] ("_type") Extensions for type
   @override
@@ -7651,7 +7651,7 @@ class _$_ParameterDefinition extends _ParameterDefinition {
   /// [profile] If specified, this indicates a profile that the input data
   ///  must conform to, or that the output data will conform to.
   @override
-  final Canonical? profile;
+  final FhirCanonical? profile;
 
   @override
   String toString() {
@@ -7727,9 +7727,9 @@ abstract class _ParameterDefinition extends ParameterDefinition {
   factory _ParameterDefinition(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final Code? name,
+      final FhirCode? name,
       @JsonKey(name: '_name') final Element? nameElement,
-      final Code? use,
+      final FhirCode? use,
       @JsonKey(name: '_use') final Element? useElement,
       final Integer? min,
       @JsonKey(name: '_min') final Element? minElement,
@@ -7737,9 +7737,9 @@ abstract class _ParameterDefinition extends ParameterDefinition {
       @JsonKey(name: '_max') final Element? maxElement,
       final String? documentation,
       @JsonKey(name: '_documentation') final Element? documentationElement,
-      final Code? type,
+      final FhirCode? type,
       @JsonKey(name: '_type') final Element? typeElement,
-      final Canonical? profile}) = _$_ParameterDefinition;
+      final FhirCanonical? profile}) = _$_ParameterDefinition;
   _ParameterDefinition._() : super._();
 
   factory _ParameterDefinition.fromJson(Map<String, dynamic> json) =
@@ -7765,7 +7765,7 @@ abstract class _ParameterDefinition extends ParameterDefinition {
 
   /// [name] The name of the parameter used to allow access to the value of
   ///  the parameter in evaluation contexts.
-  Code? get name;
+  FhirCode? get name;
   @override
 
   /// [nameElement] ("_name") Extensions for name
@@ -7774,7 +7774,7 @@ abstract class _ParameterDefinition extends ParameterDefinition {
   @override
 
   /// [use] Whether the parameter is input or output for the module.
-  Code? get use;
+  FhirCode? get use;
   @override
 
   /// [useElement] ("_use") Extensions for use
@@ -7784,7 +7784,7 @@ abstract class _ParameterDefinition extends ParameterDefinition {
 
   /// [min] The minimum number of times this parameter SHALL appear in the
   ///  request or response.
-  Integer? get min;
+  FhirInteger? get min;
   @override
 
   /// [minElement] ("_min") Extensions for min
@@ -7813,7 +7813,7 @@ abstract class _ParameterDefinition extends ParameterDefinition {
   @override
 
   /// [type] The type of the parameter.
-  Code? get type;
+  FhirCode? get type;
   @override
 
   /// [typeElement] ("_type") Extensions for type
@@ -7823,7 +7823,7 @@ abstract class _ParameterDefinition extends ParameterDefinition {
 
   /// [profile] If specified, this indicates a profile that the input data
   ///  must conform to, or that the output data will conform to.
-  Canonical? get profile;
+  FhirCanonical? get profile;
   @override
   @JsonKey(ignore: true)
   _$$_ParameterDefinitionCopyWith<_$_ParameterDefinition> get copyWith =>
@@ -7878,7 +7878,7 @@ mixin _$RelatedArtifact {
 
   /// [citation] A bibliographic citation for the related artifact. This text
   ///  SHOULD be formatted according to an accepted citation format.
-  Markdown? get citation => throw _privateConstructorUsedError;
+  FhirMarkdown? get citation => throw _privateConstructorUsedError;
 
   /// [citationElement] ("_citation") Extensions for citation
   @JsonKey(name: '_citation')
@@ -7890,7 +7890,7 @@ mixin _$RelatedArtifact {
 
   /// [resource] The related artifact, such as a library, value set, profile,
   ///  or other knowledge resource.
-  Canonical? get resource => throw _privateConstructorUsedError;
+  FhirCanonical? get resource => throw _privateConstructorUsedError;
 
   /// [resourceReference] The related artifact, if the artifact is not a
   ///  canonical resource, or a resource reference to a canonical resource.
@@ -7898,7 +7898,7 @@ mixin _$RelatedArtifact {
 
   /// [publicationStatus] The publication status of the artifact being
   ///  referred to.
-  Code? get publicationStatus => throw _privateConstructorUsedError;
+  FhirCode? get publicationStatus => throw _privateConstructorUsedError;
 
   /// [publicationStatusElement] ("_publicationStatus") Extensions for
   ///  publicationStatus
@@ -7907,7 +7907,7 @@ mixin _$RelatedArtifact {
 
   /// [publicationDate] The date of publication of the artifact being
   ///  referred to.
-  Date? get publicationDate => throw _privateConstructorUsedError;
+  FhirDate? get publicationDate => throw _privateConstructorUsedError;
 
   /// [publicationDateElement] ("_publicationDate") Extensions for
   ///  publicationDate
@@ -7936,14 +7936,14 @@ abstract class $RelatedArtifactCopyWith<$Res> {
       @JsonKey(name: '_label') Element? labelElement,
       String? display,
       @JsonKey(name: '_display') Element? displayElement,
-      Markdown? citation,
+      FhirMarkdown? citation,
       @JsonKey(name: '_citation') Element? citationElement,
       Attachment? document,
-      Canonical? resource,
+      FhirCanonical? resource,
       Reference? resourceReference,
-      Code? publicationStatus,
+      FhirCode? publicationStatus,
       @JsonKey(name: '_publicationStatus') Element? publicationStatusElement,
-      Date? publicationDate,
+      FhirDate? publicationDate,
       @JsonKey(name: '_publicationDate') Element? publicationDateElement});
 
   $ElementCopyWith<$Res>? get typeElement;
@@ -8040,7 +8040,7 @@ class _$RelatedArtifactCopyWithImpl<$Res, $Val extends RelatedArtifact>
       resource: freezed == resource
           ? _value.resource
           : resource // ignore: cast_nullable_to_non_nullable
-              as Canonical?,
+              as FhirCanonical?,
       resourceReference: freezed == resourceReference
           ? _value.resourceReference
           : resourceReference // ignore: cast_nullable_to_non_nullable
@@ -8048,7 +8048,7 @@ class _$RelatedArtifactCopyWithImpl<$Res, $Val extends RelatedArtifact>
       publicationStatus: freezed == publicationStatus
           ? _value.publicationStatus
           : publicationStatus // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       publicationStatusElement: freezed == publicationStatusElement
           ? _value.publicationStatusElement
           : publicationStatusElement // ignore: cast_nullable_to_non_nullable
@@ -8179,14 +8179,14 @@ abstract class _$$_RelatedArtifactCopyWith<$Res>
       @JsonKey(name: '_label') Element? labelElement,
       String? display,
       @JsonKey(name: '_display') Element? displayElement,
-      Markdown? citation,
+      FhirMarkdown? citation,
       @JsonKey(name: '_citation') Element? citationElement,
       Attachment? document,
-      Canonical? resource,
+      FhirCanonical? resource,
       Reference? resourceReference,
-      Code? publicationStatus,
+      FhirCode? publicationStatus,
       @JsonKey(name: '_publicationStatus') Element? publicationStatusElement,
-      Date? publicationDate,
+      FhirDate? publicationDate,
       @JsonKey(name: '_publicationDate') Element? publicationDateElement});
 
   @override
@@ -8289,7 +8289,7 @@ class __$$_RelatedArtifactCopyWithImpl<$Res>
       resource: freezed == resource
           ? _value.resource
           : resource // ignore: cast_nullable_to_non_nullable
-              as Canonical?,
+              as FhirCanonical?,
       resourceReference: freezed == resourceReference
           ? _value.resourceReference
           : resourceReference // ignore: cast_nullable_to_non_nullable
@@ -8297,7 +8297,7 @@ class __$$_RelatedArtifactCopyWithImpl<$Res>
       publicationStatus: freezed == publicationStatus
           ? _value.publicationStatus
           : publicationStatus // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       publicationStatusElement: freezed == publicationStatusElement
           ? _value.publicationStatusElement
           : publicationStatusElement // ignore: cast_nullable_to_non_nullable
@@ -8434,7 +8434,7 @@ class _$_RelatedArtifact extends _RelatedArtifact {
   /// [resource] The related artifact, such as a library, value set, profile,
   ///  or other knowledge resource.
   @override
-  final Canonical? resource;
+  final FhirCanonical? resource;
 
   /// [resourceReference] The related artifact, if the artifact is not a
   ///  canonical resource, or a resource reference to a canonical resource.
@@ -8444,7 +8444,7 @@ class _$_RelatedArtifact extends _RelatedArtifact {
   /// [publicationStatus] The publication status of the artifact being
   ///  referred to.
   @override
-  final Code? publicationStatus;
+  final FhirCode? publicationStatus;
 
   /// [publicationStatusElement] ("_publicationStatus") Extensions for
   ///  publicationStatus
@@ -8564,9 +8564,9 @@ abstract class _RelatedArtifact extends RelatedArtifact {
       @JsonKey(name: '_citation')
           final Element? citationElement,
       final Attachment? document,
-      final Canonical? resource,
+      final FhirCanonical? resource,
       final Reference? resourceReference,
-      final Code? publicationStatus,
+      final FhirCode? publicationStatus,
       @JsonKey(name: '_publicationStatus')
           final Element? publicationStatusElement,
       final Date? publicationDate,
@@ -8630,7 +8630,7 @@ abstract class _RelatedArtifact extends RelatedArtifact {
 
   /// [citation] A bibliographic citation for the related artifact. This text
   ///  SHOULD be formatted according to an accepted citation format.
-  Markdown? get citation;
+  FhirMarkdown? get citation;
   @override
 
   /// [citationElement] ("_citation") Extensions for citation
@@ -8645,7 +8645,7 @@ abstract class _RelatedArtifact extends RelatedArtifact {
 
   /// [resource] The related artifact, such as a library, value set, profile,
   ///  or other knowledge resource.
-  Canonical? get resource;
+  FhirCanonical? get resource;
   @override
 
   /// [resourceReference] The related artifact, if the artifact is not a
@@ -8655,7 +8655,7 @@ abstract class _RelatedArtifact extends RelatedArtifact {
 
   /// [publicationStatus] The publication status of the artifact being
   ///  referred to.
-  Code? get publicationStatus;
+  FhirCode? get publicationStatus;
   @override
 
   /// [publicationStatusElement] ("_publicationStatus") Extensions for
@@ -8666,7 +8666,7 @@ abstract class _RelatedArtifact extends RelatedArtifact {
 
   /// [publicationDate] The date of publication of the artifact being
   ///  referred to.
-  Date? get publicationDate;
+  FhirDate? get publicationDate;
   @override
 
   /// [publicationDateElement] ("_publicationDate") Extensions for
@@ -8721,7 +8721,7 @@ mixin _$TriggerDefinition {
   /// [subscriptionTopic] A reference to a SubscriptionTopic resource that
   ///  defines the event. If this element is provided, no other information
   ///  about the trigger definition may be supplied.
-  Canonical? get subscriptionTopic => throw _privateConstructorUsedError;
+  FhirCanonical? get subscriptionTopic => throw _privateConstructorUsedError;
 
   /// [timingTiming] The timing of the event (if this is a periodic trigger).
   Timing? get timingTiming => throw _privateConstructorUsedError;
@@ -8731,7 +8731,7 @@ mixin _$TriggerDefinition {
   Reference? get timingReference => throw _privateConstructorUsedError;
 
   /// [timingDate] The timing of the event (if this is a periodic trigger).
-  Date? get timingDate => throw _privateConstructorUsedError;
+  FhirDate? get timingDate => throw _privateConstructorUsedError;
 
   /// [timingDateElement] ("_timingDate") Extensions for timingDate
   @JsonKey(name: '_timingDate')
@@ -8776,10 +8776,10 @@ abstract class $TriggerDefinitionCopyWith<$Res> {
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
       CodeableConcept? code,
-      Canonical? subscriptionTopic,
+      FhirCanonical? subscriptionTopic,
       Timing? timingTiming,
       Reference? timingReference,
-      Date? timingDate,
+      FhirDate? timingDate,
       @JsonKey(name: '_timingDate') Element? timingDateElement,
       FhirDateTime? timingDateTime,
       @JsonKey(name: '_timingDateTime') Element? timingDateTimeElement,
@@ -8858,7 +8858,7 @@ class _$TriggerDefinitionCopyWithImpl<$Res, $Val extends TriggerDefinition>
       subscriptionTopic: freezed == subscriptionTopic
           ? _value.subscriptionTopic
           : subscriptionTopic // ignore: cast_nullable_to_non_nullable
-              as Canonical?,
+              as FhirCanonical?,
       timingTiming: freezed == timingTiming
           ? _value.timingTiming
           : timingTiming // ignore: cast_nullable_to_non_nullable
@@ -9007,10 +9007,10 @@ abstract class _$$_TriggerDefinitionCopyWith<$Res>
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
       CodeableConcept? code,
-      Canonical? subscriptionTopic,
+      FhirCanonical? subscriptionTopic,
       Timing? timingTiming,
       Reference? timingReference,
-      Date? timingDate,
+      FhirDate? timingDate,
       @JsonKey(name: '_timingDate') Element? timingDateElement,
       FhirDateTime? timingDateTime,
       @JsonKey(name: '_timingDateTime') Element? timingDateTimeElement,
@@ -9095,7 +9095,7 @@ class __$$_TriggerDefinitionCopyWithImpl<$Res>
       subscriptionTopic: freezed == subscriptionTopic
           ? _value.subscriptionTopic
           : subscriptionTopic // ignore: cast_nullable_to_non_nullable
-              as Canonical?,
+              as FhirCanonical?,
       timingTiming: freezed == timingTiming
           ? _value.timingTiming
           : timingTiming // ignore: cast_nullable_to_non_nullable
@@ -9218,7 +9218,7 @@ class _$_TriggerDefinition extends _TriggerDefinition {
   ///  defines the event. If this element is provided, no other information
   ///  about the trigger definition may be supplied.
   @override
-  final Canonical? subscriptionTopic;
+  final FhirCanonical? subscriptionTopic;
 
   /// [timingTiming] The timing of the event (if this is a periodic trigger).
   @override
@@ -9356,7 +9356,7 @@ abstract class _TriggerDefinition extends TriggerDefinition {
       final String? name,
       @JsonKey(name: '_name') final Element? nameElement,
       final CodeableConcept? code,
-      final Canonical? subscriptionTopic,
+      final FhirCanonical? subscriptionTopic,
       final Timing? timingTiming,
       final Reference? timingReference,
       final Date? timingDate,
@@ -9415,7 +9415,7 @@ abstract class _TriggerDefinition extends TriggerDefinition {
   /// [subscriptionTopic] A reference to a SubscriptionTopic resource that
   ///  defines the event. If this element is provided, no other information
   ///  about the trigger definition may be supplied.
-  Canonical? get subscriptionTopic;
+  FhirCanonical? get subscriptionTopic;
   @override
 
   /// [timingTiming] The timing of the event (if this is a periodic trigger).
@@ -9428,7 +9428,7 @@ abstract class _TriggerDefinition extends TriggerDefinition {
   @override
 
   /// [timingDate] The timing of the event (if this is a periodic trigger).
-  Date? get timingDate;
+  FhirDate? get timingDate;
   @override
 
   /// [timingDateElement] ("_timingDate") Extensions for timingDate
@@ -9941,14 +9941,14 @@ mixin _$Expression {
 
   /// [name] A short name assigned to the expression to allow for multiple
   ///  reuse of the expression in the context where it is defined.
-  Id? get name => throw _privateConstructorUsedError;
+  FhirId? get name => throw _privateConstructorUsedError;
 
   /// [nameElement] ("_name") Extensions for name
   @JsonKey(name: '_name')
   Element? get nameElement => throw _privateConstructorUsedError;
 
   /// [language] The media type of the language for the expression.
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
@@ -9986,9 +9986,9 @@ abstract class $ExpressionCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      Id? name,
+      FhirId? name,
       @JsonKey(name: '_name') Element? nameElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language') Element? languageElement,
       String? expression,
       @JsonKey(name: '_expression') Element? expressionElement,
@@ -10056,7 +10056,7 @@ class _$ExpressionCopyWithImpl<$Res, $Val extends Expression>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -10154,9 +10154,9 @@ abstract class _$$_ExpressionCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      Id? name,
+      FhirId? name,
       @JsonKey(name: '_name') Element? nameElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language') Element? languageElement,
       String? expression,
       @JsonKey(name: '_expression') Element? expressionElement,
@@ -10227,7 +10227,7 @@ class __$$_ExpressionCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -10327,7 +10327,7 @@ class _$_Expression extends _Expression {
 
   /// [language] The media type of the language for the expression.
   @override
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] ("_language") Extensions for language
   @override
@@ -10426,7 +10426,7 @@ abstract class _Expression extends Expression {
           @JsonKey(name: '_description') final Element? descriptionElement,
           final Id? name,
           @JsonKey(name: '_name') final Element? nameElement,
-          final Code? language,
+          final FhirCode? language,
           @JsonKey(name: '_language') final Element? languageElement,
           final String? expression,
           @JsonKey(name: '_expression') final Element? expressionElement,
@@ -10468,7 +10468,7 @@ abstract class _Expression extends Expression {
 
   /// [name] A short name assigned to the expression to allow for multiple
   ///  reuse of the expression in the context where it is defined.
-  Id? get name;
+  FhirId? get name;
   @override
 
   /// [nameElement] ("_name") Extensions for name
@@ -10477,7 +10477,7 @@ abstract class _Expression extends Expression {
   @override
 
   /// [language] The media type of the language for the expression.
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] ("_language") Extensions for language

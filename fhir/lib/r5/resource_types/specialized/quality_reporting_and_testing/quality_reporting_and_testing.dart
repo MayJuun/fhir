@@ -321,7 +321,7 @@ class Measure with Resource, _$Measure {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -338,7 +338,7 @@ class Measure with Resource, _$Measure {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -393,13 +393,13 @@ class Measure with Resource, _$Measure {
     @JsonKey(name: '_title') Element? titleElement,
 
     /// [status] The status of this measure. Enables tracking the life-cycle of the content.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
 
     /// [experimental] A Boolean value to indicate that this measure is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.
-    Boolean? experimental,
+    FhirBoolean? experimental,
 
     /// [experimentalElement] ("_experimental") Extensions for experimental
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -420,7 +420,7 @@ class Measure with Resource, _$Measure {
     List<ContactDetail>? contact,
 
     /// [description] A free text natural language description of the measure from a consumer's perspective.
-    Markdown? description,
+    FhirMarkdown? description,
 
     /// [descriptionElement] ("_description") Extensions for description
     @JsonKey(name: '_description') Element? descriptionElement,
@@ -432,13 +432,13 @@ class Measure with Resource, _$Measure {
     List<CodeableConcept>? jurisdiction,
 
     /// [purpose] Explanation of why this measure is needed and why it has been designed as it has.
-    Markdown? purpose,
+    FhirMarkdown? purpose,
 
     /// [purposeElement] ("_purpose") Extensions for purpose
     @JsonKey(name: '_purpose') Element? purposeElement,
 
     /// [copyright] A copyright statement relating to the measure and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the measure.
-    Markdown? copyright,
+    FhirMarkdown? copyright,
 
     /// [copyrightElement] ("_copyright") Extensions for copyright
     @JsonKey(name: '_copyright') Element? copyrightElement,
@@ -450,13 +450,13 @@ class Measure with Resource, _$Measure {
     @JsonKey(name: '_copyrightLabel') Element? copyrightLabelElement,
 
     /// [approvalDate] The date on which the resource content was approved by the publisher. Approval happens once when the content is officially approved for usage.
-    Date? approvalDate,
+    FhirDate? approvalDate,
 
     /// [approvalDateElement] ("_approvalDate") Extensions for approvalDate
     @JsonKey(name: '_approvalDate') Element? approvalDateElement,
 
     /// [lastReviewDate] The date on which the resource content was last reviewed. Review happens periodically after approval but does not change the original approval date.
-    Date? lastReviewDate,
+    FhirDate? lastReviewDate,
 
     /// [lastReviewDateElement] ("_lastReviewDate") Extensions for lastReviewDate
     @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
@@ -495,7 +495,7 @@ class Measure with Resource, _$Measure {
     Reference? subjectReference,
 
     /// [basis] The population basis specifies the type of elements in the population. For a subject-based measure, this is boolean (because the subject and the population basis are the same, and the population criteria define yes/no values for each individual in the population). For measures that have a population basis that is different than the subject, this element specifies the type of the population basis. For example, an encounter-based measure has a subject of Patient and a population basis of Encounter, and the population criteria all return lists of Encounters.
-    Code? basis,
+    FhirCode? basis,
 
     /// [basisElement] ("_basis") Extensions for basis
     @JsonKey(name: '_basis') Element? basisElement,
@@ -510,7 +510,7 @@ class Measure with Resource, _$Measure {
     @JsonKey(name: 'library') List<Canonical>? library_,
 
     /// [disclaimer] Notices and disclaimers regarding the use of the measure or related to intellectual property (such as code systems) referenced by the measure.
-    Markdown? disclaimer,
+    FhirMarkdown? disclaimer,
 
     /// [disclaimerElement] ("_disclaimer") Extensions for disclaimer
     @JsonKey(name: '_disclaimer') Element? disclaimerElement,
@@ -540,13 +540,13 @@ class Measure with Resource, _$Measure {
     @JsonKey(name: '_rateAggregation') Element? rateAggregationElement,
 
     /// [rationale] Provides a succinct statement of the need for the measure. Usually includes statements pertaining to importance criterion: impact, gap in care, and evidence.
-    Markdown? rationale,
+    FhirMarkdown? rationale,
 
     /// [rationaleElement] ("_rationale") Extensions for rationale
     @JsonKey(name: '_rationale') Element? rationaleElement,
 
     /// [clinicalRecommendationStatement] Provides a summary of relevant clinical guidelines or other clinical recommendations supporting the measure.
-    Markdown? clinicalRecommendationStatement,
+    FhirMarkdown? clinicalRecommendationStatement,
 
     /// [clinicalRecommendationStatementElement] ("_clinicalRecommendationStatement") Extensions for clinicalRecommendationStatement
     @JsonKey(name: '_clinicalRecommendationStatement')
@@ -559,7 +559,7 @@ class Measure with Resource, _$Measure {
     List<MeasureTerm>? term,
 
     /// [guidance] Additional guidance for the measure including how it can be used in a clinical context, and the intent of the measure.
-    Markdown? guidance,
+    FhirMarkdown? guidance,
 
     /// [guidanceElement] ("_guidance") Extensions for guidance
     @JsonKey(name: '_guidance') Element? guidanceElement,
@@ -676,7 +676,7 @@ class MeasureTerm with _$MeasureTerm {
     CodeableConcept? code,
 
     /// [definition] Provides a definition for the term as used within the measure.
-    Markdown? definition,
+    FhirMarkdown? definition,
 
     /// [definitionElement] ("_definition") Extensions for definition
     @JsonKey(name: '_definition') Element? definitionElement,
@@ -832,7 +832,7 @@ class MeasureGroup with _$MeasureGroup {
     List<CodeableConcept>? type,
 
     /// [basis] The population basis specifies the type of elements in the population. For a subject-based measure, this is boolean (because the subject and the population basis are the same, and the population criteria define yes/no values for each individual in the population). For measures that have a population basis that is different than the subject, this element specifies the type of the population basis. For example, an encounter-based measure has a subject of Patient and a population basis of Encounter, and the population criteria all return lists of Encounters.
-    Code? basis,
+    FhirCode? basis,
 
     /// [basisElement] ("_basis") Extensions for basis
     @JsonKey(name: '_basis') Element? basisElement,
@@ -1548,7 +1548,7 @@ class MeasureReport with Resource, _$MeasureReport {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -1565,7 +1565,7 @@ class MeasureReport with Resource, _$MeasureReport {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -1586,25 +1586,25 @@ class MeasureReport with Resource, _$MeasureReport {
     List<Identifier>? identifier,
 
     /// [status] The MeasureReport status. No data will be available until the MeasureReport status is complete.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
 
     /// [type] The type of measure report. This may be an individual report, which provides the score for the measure for an individual member of the population; a subject-listing, which returns the list of members that meet the various criteria in the measure; a summary report, which returns a population count for each of the criteria in the measure; or a data-collection, which enables the MeasureReport to be used to exchange the data-of-interest for a quality measure.
-    Code? type,
+    FhirCode? type,
 
     /// [typeElement] ("_type") Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
 
     /// [dataUpdateType] Indicates whether the data submitted in an data-exchange report represents a snapshot or incremental update. A snapshot update replaces all previously submitted data for the receiver, whereas an incremental update represents only updated and/or changed data and should be applied as a differential update to the existing submitted data for the receiver.
-    Code? dataUpdateType,
+    FhirCode? dataUpdateType,
 
     /// [dataUpdateTypeElement] ("_dataUpdateType") Extensions for dataUpdateType
     @JsonKey(name: '_dataUpdateType') Element? dataUpdateTypeElement,
 
     /// [measure] A reference to the Measure that was calculated to produce this report.
-    Canonical? measure,
+    FhirCanonical? measure,
 
     /// [subject] Optional subject identifying the individual or individuals the report is for.
     Reference? subject,
@@ -1918,7 +1918,7 @@ class MeasureReportPopulation with _$MeasureReportPopulation {
     CodeableConcept? code,
 
     /// [count] The number of members of the population.
-    Integer? count,
+    FhirInteger? count,
 
     /// [countElement] ("_count") Extensions for count
     @JsonKey(name: '_count') Element? countElement,
@@ -2195,7 +2195,7 @@ class MeasureReportStratum with _$MeasureReportStratum {
     CodeableConcept? valueCodeableConcept,
 
     /// [valueBoolean] The value for this stratum, expressed as a CodeableConcept. When defining stratifiers on complex values, the value must be rendered such that the value for each stratum within the stratifier is unique.
-    Boolean? valueBoolean,
+    FhirBoolean? valueBoolean,
 
     /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
@@ -2355,7 +2355,7 @@ class MeasureReportComponent with _$MeasureReportComponent {
     CodeableConcept? valueCodeableConcept,
 
     /// [valueBoolean] The stratum component value.
-    Boolean? valueBoolean,
+    FhirBoolean? valueBoolean,
 
     /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
@@ -2480,7 +2480,7 @@ class MeasureReportPopulation1 with _$MeasureReportPopulation1 {
     CodeableConcept? code,
 
     /// [count] The number of members of the population in this stratum.
-    Integer? count,
+    FhirInteger? count,
 
     /// [countElement] ("_count") Extensions for count
     @JsonKey(name: '_count') Element? countElement,
@@ -2639,7 +2639,7 @@ class TestReport with Resource, _$TestReport {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -2656,7 +2656,7 @@ class TestReport with Resource, _$TestReport {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -2683,7 +2683,7 @@ class TestReport with Resource, _$TestReport {
     @JsonKey(name: '_name') Element? nameElement,
 
     /// [status] The current state of this test report.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -2692,13 +2692,13 @@ class TestReport with Resource, _$TestReport {
     required Canonical testScript,
 
     /// [result] The overall result from the execution of the TestScript.
-    Code? result,
+    FhirCode? result,
 
     /// [resultElement] ("_result") Extensions for result
     @JsonKey(name: '_result') Element? resultElement,
 
     /// [score] The final score (percentage of tests passed) resulting from the execution of the TestScript.
-    Decimal? score,
+    FhirDecimal? score,
 
     /// [scoreElement] ("_score") Extensions for score
     @JsonKey(name: '_score') Element? scoreElement,
@@ -2835,7 +2835,7 @@ class TestReportParticipant with _$TestReportParticipant {
     List<FhirExtension>? modifierExtension,
 
     /// [type] The type of participant.
-    Code? type,
+    FhirCode? type,
 
     /// [typeElement] ("_type") Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
@@ -3163,13 +3163,13 @@ class TestReportOperation with _$TestReportOperation {
     List<FhirExtension>? modifierExtension,
 
     /// [result] The result of this operation.
-    Code? result,
+    FhirCode? result,
 
     /// [resultElement] ("_result") Extensions for result
     @JsonKey(name: '_result') Element? resultElement,
 
     /// [message] An explanatory message associated with the result.
-    Markdown? message,
+    FhirMarkdown? message,
 
     /// [messageElement] ("_message") Extensions for message
     @JsonKey(name: '_message') Element? messageElement,
@@ -3287,13 +3287,13 @@ class TestReportAssert with _$TestReportAssert {
     List<FhirExtension>? modifierExtension,
 
     /// [result] The result of this assertion.
-    Code? result,
+    FhirCode? result,
 
     /// [resultElement] ("_result") Extensions for result
     @JsonKey(name: '_result') Element? resultElement,
 
     /// [message] An explanatory message associated with the result.
-    Markdown? message,
+    FhirMarkdown? message,
 
     /// [messageElement] ("_message") Extensions for message
     @JsonKey(name: '_message') Element? messageElement,
@@ -3962,7 +3962,7 @@ class TestScript with Resource, _$TestScript {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -3979,7 +3979,7 @@ class TestScript with Resource, _$TestScript {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -4034,13 +4034,13 @@ class TestScript with Resource, _$TestScript {
     @JsonKey(name: '_title') Element? titleElement,
 
     /// [status] The status of this test script. Enables tracking the life-cycle of the content.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
 
     /// [experimental] A Boolean value to indicate that this test script is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.
-    Boolean? experimental,
+    FhirBoolean? experimental,
 
     /// [experimentalElement] ("_experimental") Extensions for experimental
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -4061,7 +4061,7 @@ class TestScript with Resource, _$TestScript {
     List<ContactDetail>? contact,
 
     /// [description] A free text natural language description of the test script from a consumer's perspective.
-    Markdown? description,
+    FhirMarkdown? description,
 
     /// [descriptionElement] ("_description") Extensions for description
     @JsonKey(name: '_description') Element? descriptionElement,
@@ -4073,13 +4073,13 @@ class TestScript with Resource, _$TestScript {
     List<CodeableConcept>? jurisdiction,
 
     /// [purpose] Explanation of why this test script is needed and why it has been designed as it has.
-    Markdown? purpose,
+    FhirMarkdown? purpose,
 
     /// [purposeElement] ("_purpose") Extensions for purpose
     @JsonKey(name: '_purpose') Element? purposeElement,
 
     /// [copyright] A copyright statement relating to the test script and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the test script.
-    Markdown? copyright,
+    FhirMarkdown? copyright,
 
     /// [copyrightElement] ("_copyright") Extensions for copyright
     @JsonKey(name: '_copyright') Element? copyrightElement,
@@ -4232,7 +4232,7 @@ class TestScriptOrigin with _$TestScriptOrigin {
     List<FhirExtension>? modifierExtension,
 
     /// [index] Abstract name given to an origin server in this test script.  The name is provided as a number starting at 1.
-    Integer? index,
+    FhirInteger? index,
 
     /// [indexElement] ("_index") Extensions for index
     @JsonKey(name: '_index') Element? indexElement,
@@ -4359,7 +4359,7 @@ class TestScriptDestination with _$TestScriptDestination {
     List<FhirExtension>? modifierExtension,
 
     /// [index] Abstract name given to a destination server in this test script.  The name is provided as a number starting at 1.
-    Integer? index,
+    FhirInteger? index,
 
     /// [indexElement] ("_index") Extensions for index
     @JsonKey(name: '_index') Element? indexElement,
@@ -4730,13 +4730,13 @@ class TestScriptCapability with _$TestScriptCapability {
     List<FhirExtension>? modifierExtension,
 
     /// [required_] ("required") Whether or not the test execution will require the given capabilities of the server in order for this test script to execute.
-    @JsonKey(name: 'required') Boolean? required_,
+    @JsonKey(name: 'required') FhirBoolean? required_,
 
     /// [requiredElement] ("_required") Extensions for required
     @JsonKey(name: '_required') Element? requiredElement,
 
     /// [validated] Whether or not the test execution will validate the given capabilities of the server in order for this test script to execute.
-    Boolean? validated,
+    FhirBoolean? validated,
 
     /// [validatedElement] ("_validated") Extensions for validated
     @JsonKey(name: '_validated') Element? validatedElement,
@@ -4754,7 +4754,7 @@ class TestScriptCapability with _$TestScriptCapability {
     @JsonKey(name: '_origin') List<Element>? originElement,
 
     /// [destination] Which server these requirements apply to.
-    Integer? destination,
+    FhirInteger? destination,
 
     /// [destinationElement] ("_destination") Extensions for destination
     @JsonKey(name: '_destination') Element? destinationElement,
@@ -5003,13 +5003,13 @@ class TestScriptFixture with _$TestScriptFixture {
     List<FhirExtension>? modifierExtension,
 
     /// [autocreate] Whether or not to implicitly create the fixture during setup. If true, the fixture is automatically created on each server being tested during setup, therefore no create operation is required for this fixture in the TestScript.setup section.
-    Boolean? autocreate,
+    FhirBoolean? autocreate,
 
     /// [autocreateElement] ("_autocreate") Extensions for autocreate
     @JsonKey(name: '_autocreate') Element? autocreateElement,
 
     /// [autodelete] Whether or not to implicitly delete the fixture during teardown. If true, the fixture is automatically deleted on each server being tested during teardown, therefore no delete operation is required for this fixture in the TestScript.teardown section.
-    Boolean? autodelete,
+    FhirBoolean? autodelete,
 
     /// [autodeleteElement] ("_autodelete") Extensions for autodelete
     @JsonKey(name: '_autodelete') Element? autodeleteElement,
@@ -5198,7 +5198,7 @@ class TestScriptVariable with _$TestScriptVariable {
     @JsonKey(name: '_path') Element? pathElement,
 
     /// [sourceId] Fixture to evaluate the XPath/JSONPath expression or the headerField  against within this variable.
-    Id? sourceId,
+    FhirId? sourceId,
 
     /// [sourceIdElement] ("_sourceId") Extensions for sourceId
     @JsonKey(name: '_sourceId') Element? sourceIdElement,
@@ -5611,37 +5611,37 @@ class TestScriptOperation with _$TestScriptOperation {
     @JsonKey(name: '_description') Element? descriptionElement,
 
     /// [accept] The mime-type to use for RESTful operation in the 'Accept' header.
-    Code? accept,
+    FhirCode? accept,
 
     /// [acceptElement] ("_accept") Extensions for accept
     @JsonKey(name: '_accept') Element? acceptElement,
 
     /// [contentType] The mime-type to use for RESTful operation in the 'Content-Type' header.
-    Code? contentType,
+    FhirCode? contentType,
 
     /// [contentTypeElement] ("_contentType") Extensions for contentType
     @JsonKey(name: '_contentType') Element? contentTypeElement,
 
     /// [destination] The server where the request message is destined for.  Must be one of the server numbers listed in TestScript.destination section.
-    Integer? destination,
+    FhirInteger? destination,
 
     /// [destinationElement] ("_destination") Extensions for destination
     @JsonKey(name: '_destination') Element? destinationElement,
 
     /// [encodeRequestUrl] Whether or not to implicitly send the request url in encoded format. The default is true to match the standard RESTful client behavior. Set to false when communicating with a server that does not support encoded url paths.
-    Boolean? encodeRequestUrl,
+    FhirBoolean? encodeRequestUrl,
 
     /// [encodeRequestUrlElement] ("_encodeRequestUrl") Extensions for encodeRequestUrl
     @JsonKey(name: '_encodeRequestUrl') Element? encodeRequestUrlElement,
 
     /// [method] The HTTP method the test engine MUST use for this operation regardless of any other operation details.
-    Code? method,
+    FhirCode? method,
 
     /// [methodElement] ("_method") Extensions for method
     @JsonKey(name: '_method') Element? methodElement,
 
     /// [origin] The server where the request message originates from.  Must be one of the server numbers listed in TestScript.origin section.
-    Integer? origin,
+    FhirInteger? origin,
 
     /// [originElement] ("_origin") Extensions for origin
     @JsonKey(name: '_origin') Element? originElement,
@@ -5656,25 +5656,25 @@ class TestScriptOperation with _$TestScriptOperation {
     List<TestScriptRequestHeader>? requestHeader,
 
     /// [requestId] The fixture id (maybe new) to map to the request.
-    Id? requestId,
+    FhirId? requestId,
 
     /// [requestIdElement] ("_requestId") Extensions for requestId
     @JsonKey(name: '_requestId') Element? requestIdElement,
 
     /// [responseId] The fixture id (maybe new) to map to the response.
-    Id? responseId,
+    FhirId? responseId,
 
     /// [responseIdElement] ("_responseId") Extensions for responseId
     @JsonKey(name: '_responseId') Element? responseIdElement,
 
     /// [sourceId] The id of the fixture used as the body of a PUT or POST request.
-    Id? sourceId,
+    FhirId? sourceId,
 
     /// [sourceIdElement] ("_sourceId") Extensions for sourceId
     @JsonKey(name: '_sourceId') Element? sourceIdElement,
 
     /// [targetId] Id of fixture used for extracting the [id],  [type], and [vid] for GET requests.
-    Id? targetId,
+    FhirId? targetId,
 
     /// [targetIdElement] ("_targetId") Extensions for targetId
     @JsonKey(name: '_targetId') Element? targetIdElement,
@@ -6033,7 +6033,7 @@ class TestScriptAssert with _$TestScriptAssert {
     @JsonKey(name: '_description') Element? descriptionElement,
 
     /// [direction] The direction to use for the assertion.
-    Code? direction,
+    FhirCode? direction,
 
     /// [directionElement] ("_direction") Extensions for direction
     @JsonKey(name: '_direction') Element? directionElement,
@@ -6058,7 +6058,7 @@ class TestScriptAssert with _$TestScriptAssert {
     @JsonKey(name: '_compareToSourcePath') Element? compareToSourcePathElement,
 
     /// [contentType] The mime-type contents to compare against the request or response message 'Content-Type' header.
-    Code? contentType,
+    FhirCode? contentType,
 
     /// [contentTypeElement] ("_contentType") Extensions for contentType
     @JsonKey(name: '_contentType') Element? contentTypeElement,
@@ -6082,13 +6082,13 @@ class TestScriptAssert with _$TestScriptAssert {
     @JsonKey(name: '_minimumId') Element? minimumIdElement,
 
     /// [navigationLinks] Whether or not the test execution performs validation on the bundle navigation links.
-    Boolean? navigationLinks,
+    FhirBoolean? navigationLinks,
 
     /// [navigationLinksElement] ("_navigationLinks") Extensions for navigationLinks
     @JsonKey(name: '_navigationLinks') Element? navigationLinksElement,
 
     /// [operator_] ("operator") The operator type defines the conditional behavior of the assert. If not defined, the default is equals.
-    @JsonKey(name: 'operator') Code? operator_,
+    @JsonKey(name: 'operator') FhirCode? operator_,
 
     /// [operatorElement] ("_operator") Extensions for operator
     @JsonKey(name: '_operator') Element? operatorElement,
@@ -6100,7 +6100,7 @@ class TestScriptAssert with _$TestScriptAssert {
     @JsonKey(name: '_path') Element? pathElement,
 
     /// [requestMethod] The request method or HTTP operation code to compare against that used by the client system under test.
-    Code? requestMethod,
+    FhirCode? requestMethod,
 
     /// [requestMethodElement] ("_requestMethod") Extensions for requestMethod
     @JsonKey(name: '_requestMethod') Element? requestMethodElement,
@@ -6118,7 +6118,7 @@ class TestScriptAssert with _$TestScriptAssert {
     @JsonKey(name: '_resource') Element? resourceElement,
 
     /// [response] okay | created | noContent | notModified | bad | forbidden | notFound | methodNotAllowed | conflict | gone | preconditionFailed | unprocessable.
-    Code? response,
+    FhirCode? response,
 
     /// [responseElement] ("_response") Extensions for response
     @JsonKey(name: '_response') Element? responseElement,
@@ -6130,19 +6130,19 @@ class TestScriptAssert with _$TestScriptAssert {
     @JsonKey(name: '_responseCode') Element? responseCodeElement,
 
     /// [sourceId] Fixture to evaluate the XPath/JSONPath expression or the headerField  against.
-    Id? sourceId,
+    FhirId? sourceId,
 
     /// [sourceIdElement] ("_sourceId") Extensions for sourceId
     @JsonKey(name: '_sourceId') Element? sourceIdElement,
 
     /// [stopTestOnFail] Whether or not the current test execution will stop on failure for this assert.
-    Boolean? stopTestOnFail,
+    FhirBoolean? stopTestOnFail,
 
     /// [stopTestOnFailElement] ("_stopTestOnFail") Extensions for stopTestOnFail
     @JsonKey(name: '_stopTestOnFail') Element? stopTestOnFailElement,
 
     /// [validateProfileId] The ID of the Profile to validate against.
-    Id? validateProfileId,
+    FhirId? validateProfileId,
 
     /// [validateProfileIdElement] ("_validateProfileId") Extensions for validateProfileId
     @JsonKey(name: '_validateProfileId') Element? validateProfileIdElement,
@@ -6154,7 +6154,7 @@ class TestScriptAssert with _$TestScriptAssert {
     @JsonKey(name: '_value') Element? valueElement,
 
     /// [warningOnly] Whether or not the test execution will produce a warning only on error for this assert.
-    Boolean? warningOnly,
+    FhirBoolean? warningOnly,
 
     /// [warningOnlyElement] ("_warningOnly") Extensions for warningOnly
     @JsonKey(name: '_warningOnly') Element? warningOnlyElement,

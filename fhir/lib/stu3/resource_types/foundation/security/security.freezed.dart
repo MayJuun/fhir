@@ -22,12 +22,12 @@ AuditEvent _$AuditEventFromJson(Map<String, dynamic> json) {
 mixin _$AuditEvent {
   @JsonKey(unknownEnumValue: Stu3ResourceType.AuditEvent)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -71,12 +71,12 @@ abstract class $AuditEventCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.AuditEvent)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -178,7 +178,7 @@ class _$AuditEventCopyWithImpl<$Res, $Val extends AuditEvent>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -382,12 +382,12 @@ abstract class _$$_AuditEventCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.AuditEvent)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -497,7 +497,7 @@ class __$$_AuditEventCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -640,7 +640,7 @@ class _$_AuditEvent extends _AuditEvent {
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
-  final Code? language;
+  final FhirCode? language;
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
@@ -846,7 +846,7 @@ abstract class _AuditEvent extends AuditEvent {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -881,7 +881,7 @@ abstract class _AuditEvent extends AuditEvent {
   @JsonKey(unknownEnumValue: Stu3ResourceType.AuditEvent)
   Stu3ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -890,7 +890,7 @@ abstract class _AuditEvent extends AuditEvent {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
-  Code? get language;
+  FhirCode? get language;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;
@@ -956,7 +956,7 @@ mixin _$AuditEventAgent {
   String? get name => throw _privateConstructorUsedError;
   @JsonKey(name: '_name')
   Element? get nameElement => throw _privateConstructorUsedError;
-  Boolean? get requestor => throw _privateConstructorUsedError;
+  FhirBoolean? get requestor => throw _privateConstructorUsedError;
   @JsonKey(name: '_requestor')
   Element? get requestorElement => throw _privateConstructorUsedError;
   Reference? get location => throw _privateConstructorUsedError;
@@ -987,7 +987,7 @@ abstract class $AuditEventAgentCopyWith<$Res> {
       @JsonKey(name: '_altId') Element? altIdElement,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
-      Boolean? requestor,
+      FhirBoolean? requestor,
       @JsonKey(name: '_requestor') Element? requestorElement,
       Reference? location,
       List<String>? policy,
@@ -1067,7 +1067,7 @@ class _$AuditEventAgentCopyWithImpl<$Res, $Val extends AuditEventAgent>
       requestor: freezed == requestor
           ? _value.requestor
           : requestor // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       requestorElement: freezed == requestorElement
           ? _value.requestorElement
           : requestorElement // ignore: cast_nullable_to_non_nullable
@@ -1212,7 +1212,7 @@ abstract class _$$_AuditEventAgentCopyWith<$Res>
       @JsonKey(name: '_altId') Element? altIdElement,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
-      Boolean? requestor,
+      FhirBoolean? requestor,
       @JsonKey(name: '_requestor') Element? requestorElement,
       Reference? location,
       List<String>? policy,
@@ -1298,7 +1298,7 @@ class __$$_AuditEventAgentCopyWithImpl<$Res>
       requestor: freezed == requestor
           ? _value.requestor
           : requestor // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       requestorElement: freezed == requestorElement
           ? _value.requestorElement
           : requestorElement // ignore: cast_nullable_to_non_nullable
@@ -1384,7 +1384,7 @@ class _$_AuditEventAgent extends _AuditEventAgent {
   @JsonKey(name: '_name')
   final Element? nameElement;
   @override
-  final Boolean? requestor;
+  final FhirBoolean? requestor;
   @override
   @JsonKey(name: '_requestor')
   final Element? requestorElement;
@@ -1503,7 +1503,7 @@ abstract class _AuditEventAgent extends AuditEventAgent {
       @JsonKey(name: '_altId') final Element? altIdElement,
       final String? name,
       @JsonKey(name: '_name') final Element? nameElement,
-      final Boolean? requestor,
+      final FhirBoolean? requestor,
       @JsonKey(name: '_requestor') final Element? requestorElement,
       final Reference? location,
       final List<String>? policy,
@@ -1533,7 +1533,7 @@ abstract class _AuditEventAgent extends AuditEventAgent {
   @JsonKey(name: '_name')
   Element? get nameElement;
   @override
-  Boolean? get requestor;
+  FhirBoolean? get requestor;
   @override
   @JsonKey(name: '_requestor')
   Element? get requestorElement;
@@ -2849,12 +2849,12 @@ Consent _$ConsentFromJson(Map<String, dynamic> json) {
 mixin _$Consent {
   @JsonKey(unknownEnumValue: Stu3ResourceType.Consent)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -2903,12 +2903,12 @@ abstract class $ConsentCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Consent)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -3031,7 +3031,7 @@ class _$ConsentCopyWithImpl<$Res, $Val extends Consent>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -3322,12 +3322,12 @@ abstract class _$$_ConsentCopyWith<$Res> implements $ConsentCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Consent)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -3461,7 +3461,7 @@ class __$$_ConsentCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -3654,7 +3654,7 @@ class _$_Consent extends _Consent {
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
-  final Code? language;
+  final FhirCode? language;
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
@@ -3951,7 +3951,7 @@ abstract class _Consent extends Consent {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -3993,7 +3993,7 @@ abstract class _Consent extends Consent {
   @JsonKey(unknownEnumValue: Stu3ResourceType.Consent)
   Stu3ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -4002,7 +4002,7 @@ abstract class _Consent extends Consent {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
-  Code? get language;
+  FhirCode? get language;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;
@@ -5586,12 +5586,12 @@ Provenance _$ProvenanceFromJson(Map<String, dynamic> json) {
 mixin _$Provenance {
   @JsonKey(unknownEnumValue: Stu3ResourceType.Provenance)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -5630,12 +5630,12 @@ abstract class $ProvenanceCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Provenance)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -5729,7 +5729,7 @@ class _$ProvenanceCopyWithImpl<$Res, $Val extends Provenance>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -5909,12 +5909,12 @@ abstract class _$$_ProvenanceCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Provenance)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -6014,7 +6014,7 @@ class __$$_ProvenanceCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -6148,7 +6148,7 @@ class _$_Provenance extends _Provenance {
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
-  final Code? language;
+  final FhirCode? language;
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
@@ -6365,7 +6365,7 @@ abstract class _Provenance extends Provenance {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -6396,7 +6396,7 @@ abstract class _Provenance extends Provenance {
   @JsonKey(unknownEnumValue: Stu3ResourceType.Provenance)
   Stu3ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -6405,7 +6405,7 @@ abstract class _Provenance extends Provenance {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
-  Code? get language;
+  FhirCode? get language;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;

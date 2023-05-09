@@ -26,7 +26,7 @@ mixin _$ResearchStudy {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -44,7 +44,7 @@ mixin _$ResearchStudy {
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
@@ -116,7 +116,7 @@ mixin _$ResearchStudy {
   Element? get dateElement => throw _privateConstructorUsedError;
 
   /// [status] The publication state of the resource (not of the study).
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
@@ -144,14 +144,14 @@ mixin _$ResearchStudy {
   List<CodeableConcept>? get region => throw _privateConstructorUsedError;
 
   /// [descriptionSummary] A brief text for explaining the study.
-  Markdown? get descriptionSummary => throw _privateConstructorUsedError;
+  FhirMarkdown? get descriptionSummary => throw _privateConstructorUsedError;
 
   /// [descriptionSummaryElement] ("_descriptionSummary") Extensions for descriptionSummary
   @JsonKey(name: '_descriptionSummary')
   Element? get descriptionSummaryElement => throw _privateConstructorUsedError;
 
   /// [description] A detailed and human-readable narrative of the study. E.g., study abstract.
-  Markdown? get description => throw _privateConstructorUsedError;
+  FhirMarkdown? get description => throw _privateConstructorUsedError;
 
   /// [descriptionElement] ("_description") Extensions for description
   @JsonKey(name: '_description')
@@ -214,12 +214,12 @@ abstract class $ResearchStudyCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.ResearchStudy)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -247,7 +247,7 @@ abstract class $ResearchStudyCopyWith<$Res> {
       FhirDateTime? date,
       @JsonKey(name: '_date')
           Element? dateElement,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? primaryPurposeType,
@@ -257,10 +257,10 @@ abstract class $ResearchStudyCopyWith<$Res> {
       List<CodeableConcept>? condition,
       List<CodeableConcept>? keyword,
       List<CodeableConcept>? region,
-      Markdown? descriptionSummary,
+      FhirMarkdown? descriptionSummary,
       @JsonKey(name: '_descriptionSummary')
           Element? descriptionSummaryElement,
-      Markdown? description,
+      FhirMarkdown? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
       Period? period,
@@ -384,7 +384,7 @@ class _$ResearchStudyCopyWithImpl<$Res, $Val extends ResearchStudy>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -468,7 +468,7 @@ class _$ResearchStudyCopyWithImpl<$Res, $Val extends ResearchStudy>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -785,12 +785,12 @@ abstract class _$$_ResearchStudyCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.ResearchStudy)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -818,7 +818,7 @@ abstract class _$$_ResearchStudyCopyWith<$Res>
       FhirDateTime? date,
       @JsonKey(name: '_date')
           Element? dateElement,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? primaryPurposeType,
@@ -828,10 +828,10 @@ abstract class _$$_ResearchStudyCopyWith<$Res>
       List<CodeableConcept>? condition,
       List<CodeableConcept>? keyword,
       List<CodeableConcept>? region,
-      Markdown? descriptionSummary,
+      FhirMarkdown? descriptionSummary,
       @JsonKey(name: '_descriptionSummary')
           Element? descriptionSummaryElement,
-      Markdown? description,
+      FhirMarkdown? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
       Period? period,
@@ -970,7 +970,7 @@ class __$$_ResearchStudyCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -1054,7 +1054,7 @@ class __$$_ResearchStudyCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -1279,7 +1279,7 @@ class _$_ResearchStudy extends _ResearchStudy {
 
   /// [language] The base language in which the resource is written.
   @override
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] ("_language") Extensions for language
   @override
@@ -1443,7 +1443,7 @@ class _$_ResearchStudy extends _ResearchStudy {
 
   /// [status] The publication state of the resource (not of the study).
   @override
-  final Code? status;
+  final FhirCode? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -1845,7 +1845,7 @@ abstract class _ResearchStudy extends ResearchStudy {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -1873,7 +1873,7 @@ abstract class _ResearchStudy extends ResearchStudy {
       final FhirDateTime? date,
       @JsonKey(name: '_date')
           final Element? dateElement,
-      final Code? status,
+      final FhirCode? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
       final CodeableConcept? primaryPurposeType,
@@ -1915,7 +1915,7 @@ abstract class _ResearchStudy extends ResearchStudy {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -1937,7 +1937,7 @@ abstract class _ResearchStudy extends ResearchStudy {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] ("_language") Extensions for language
@@ -2028,7 +2028,7 @@ abstract class _ResearchStudy extends ResearchStudy {
   @override
 
   /// [status] The publication state of the resource (not of the study).
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status
@@ -2065,7 +2065,7 @@ abstract class _ResearchStudy extends ResearchStudy {
   @override
 
   /// [descriptionSummary] A brief text for explaining the study.
-  Markdown? get descriptionSummary;
+  FhirMarkdown? get descriptionSummary;
   @override
 
   /// [descriptionSummaryElement] ("_descriptionSummary") Extensions for descriptionSummary
@@ -2074,7 +2074,7 @@ abstract class _ResearchStudy extends ResearchStudy {
   @override
 
   /// [description] A detailed and human-readable narrative of the study. E.g., study abstract.
-  Markdown? get description;
+  FhirMarkdown? get description;
   @override
 
   /// [descriptionElement] ("_description") Extensions for description
@@ -3123,7 +3123,7 @@ mixin _$ResearchStudyProgressStatus {
   CodeableConcept get state => throw _privateConstructorUsedError;
 
   /// [actual] An indication of whether or not the date is a known date when the state changed or will change. A value of true indicates a known date. A value of false indicates an estimated date.
-  Boolean? get actual => throw _privateConstructorUsedError;
+  FhirBoolean? get actual => throw _privateConstructorUsedError;
 
   /// [actualElement] ("_actual") Extensions for actual
   @JsonKey(name: '_actual')
@@ -3151,7 +3151,7 @@ abstract class $ResearchStudyProgressStatusCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept state,
-      Boolean? actual,
+      FhirBoolean? actual,
       @JsonKey(name: '_actual') Element? actualElement,
       Period? period});
 
@@ -3202,7 +3202,7 @@ class _$ResearchStudyProgressStatusCopyWithImpl<$Res,
       actual: freezed == actual
           ? _value.actual
           : actual // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       actualElement: freezed == actualElement
           ? _value.actualElement
           : actualElement // ignore: cast_nullable_to_non_nullable
@@ -3261,7 +3261,7 @@ abstract class _$$_ResearchStudyProgressStatusCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept state,
-      Boolean? actual,
+      FhirBoolean? actual,
       @JsonKey(name: '_actual') Element? actualElement,
       Period? period});
 
@@ -3314,7 +3314,7 @@ class __$$_ResearchStudyProgressStatusCopyWithImpl<$Res>
       actual: freezed == actual
           ? _value.actual
           : actual // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       actualElement: freezed == actualElement
           ? _value.actualElement
           : actualElement // ignore: cast_nullable_to_non_nullable
@@ -3416,7 +3416,7 @@ class _$_ResearchStudyProgressStatus extends _ResearchStudyProgressStatus {
 
   /// [actual] An indication of whether or not the date is a known date when the state changed or will change. A value of true indicates a known date. A value of false indicates an estimated date.
   @override
-  final Boolean? actual;
+  final FhirBoolean? actual;
 
   /// [actualElement] ("_actual") Extensions for actual
   @override
@@ -3483,7 +3483,7 @@ abstract class _ResearchStudyProgressStatus
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final CodeableConcept state,
-      final Boolean? actual,
+      final FhirBoolean? actual,
       @JsonKey(name: '_actual') final Element? actualElement,
       final Period? period}) = _$_ResearchStudyProgressStatus;
   _ResearchStudyProgressStatus._() : super._();
@@ -3528,7 +3528,7 @@ abstract class _ResearchStudyProgressStatus
   @override
 
   /// [actual] An indication of whether or not the date is a known date when the state changed or will change. A value of true indicates a known date. A value of false indicates an estimated date.
-  Boolean? get actual;
+  FhirBoolean? get actual;
   @override
 
   /// [actualElement] ("_actual") Extensions for actual
@@ -4130,7 +4130,7 @@ mixin _$ResearchStudyComparisonGroup {
   CodeableConcept? get type => throw _privateConstructorUsedError;
 
   /// [description] A succinct description of the path through the study that would be followed by a subject adhering to this comparisonGroup.
-  Markdown? get description => throw _privateConstructorUsedError;
+  FhirMarkdown? get description => throw _privateConstructorUsedError;
 
   /// [descriptionElement] ("_description") Extensions for description
   @JsonKey(name: '_description')
@@ -4164,7 +4164,7 @@ abstract class $ResearchStudyComparisonGroupCopyWith<$Res> {
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
       CodeableConcept? type,
-      Markdown? description,
+      FhirMarkdown? description,
       @JsonKey(name: '_description') Element? descriptionElement,
       List<Reference>? intendedExposure,
       Reference? observedGroup});
@@ -4315,7 +4315,7 @@ abstract class _$$_ResearchStudyComparisonGroupCopyWith<$Res>
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
       CodeableConcept? type,
-      Markdown? description,
+      FhirMarkdown? description,
       @JsonKey(name: '_description') Element? descriptionElement,
       List<Reference>? intendedExposure,
       Reference? observedGroup});
@@ -4677,7 +4677,7 @@ abstract class _ResearchStudyComparisonGroup
   @override
 
   /// [description] A succinct description of the path through the study that would be followed by a subject adhering to this comparisonGroup.
-  Markdown? get description;
+  FhirMarkdown? get description;
   @override
 
   /// [descriptionElement] ("_description") Extensions for description
@@ -4743,7 +4743,7 @@ mixin _$ResearchStudyObjective {
   CodeableConcept? get type => throw _privateConstructorUsedError;
 
   /// [description] Free text description of the objective of the study.  This is what the study is trying to achieve rather than how it is going to achieve it (see ResearchStudy.description).
-  Markdown? get description => throw _privateConstructorUsedError;
+  FhirMarkdown? get description => throw _privateConstructorUsedError;
 
   /// [descriptionElement] ("_description") Extensions for description
   @JsonKey(name: '_description')
@@ -4768,7 +4768,7 @@ abstract class $ResearchStudyObjectiveCopyWith<$Res> {
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
       CodeableConcept? type,
-      Markdown? description,
+      FhirMarkdown? description,
       @JsonKey(name: '_description') Element? descriptionElement});
 
   $ElementCopyWith<$Res>? get nameElement;
@@ -4887,7 +4887,7 @@ abstract class _$$_ResearchStudyObjectiveCopyWith<$Res>
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
       CodeableConcept? type,
-      Markdown? description,
+      FhirMarkdown? description,
       @JsonKey(name: '_description') Element? descriptionElement});
 
   @override
@@ -5177,7 +5177,7 @@ abstract class _ResearchStudyObjective extends ResearchStudyObjective {
   @override
 
   /// [description] Free text description of the objective of the study.  This is what the study is trying to achieve rather than how it is going to achieve it (see ResearchStudy.description).
-  Markdown? get description;
+  FhirMarkdown? get description;
   @override
 
   /// [descriptionElement] ("_description") Extensions for description
@@ -5235,7 +5235,7 @@ mixin _$ResearchStudyOutcomeMeasure {
   List<CodeableConcept>? get type => throw _privateConstructorUsedError;
 
   /// [description] Description of the outcome.
-  Markdown? get description => throw _privateConstructorUsedError;
+  FhirMarkdown? get description => throw _privateConstructorUsedError;
 
   /// [descriptionElement] ("_description") Extensions for description
   @JsonKey(name: '_description')
@@ -5265,7 +5265,7 @@ abstract class $ResearchStudyOutcomeMeasureCopyWith<$Res> {
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
       List<CodeableConcept>? type,
-      Markdown? description,
+      FhirMarkdown? description,
       @JsonKey(name: '_description') Element? descriptionElement,
       Reference? reference});
 
@@ -5391,7 +5391,7 @@ abstract class _$$_ResearchStudyOutcomeMeasureCopyWith<$Res>
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
       List<CodeableConcept>? type,
-      Markdown? description,
+      FhirMarkdown? description,
       @JsonKey(name: '_description') Element? descriptionElement,
       Reference? reference});
 
@@ -5707,7 +5707,7 @@ abstract class _ResearchStudyOutcomeMeasure
   @override
 
   /// [description] Description of the outcome.
-  Markdown? get description;
+  FhirMarkdown? get description;
   @override
 
   /// [descriptionElement] ("_description") Extensions for description
@@ -5735,7 +5735,7 @@ mixin _$ResearchSubject {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -5753,7 +5753,7 @@ mixin _$ResearchSubject {
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
@@ -5777,7 +5777,7 @@ mixin _$ResearchSubject {
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [status] The publication state of the resource (not of the subject).
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
@@ -5828,12 +5828,12 @@ abstract class $ResearchSubjectCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.ResearchSubject)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -5842,7 +5842,7 @@ abstract class $ResearchSubjectCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       List<ResearchSubjectProgress>? progress,
@@ -5931,7 +5931,7 @@ class _$ResearchSubjectCopyWithImpl<$Res, $Val extends ResearchSubject>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -5959,7 +5959,7 @@ class _$ResearchSubjectCopyWithImpl<$Res, $Val extends ResearchSubject>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -6139,12 +6139,12 @@ abstract class _$$_ResearchSubjectCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.ResearchSubject)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -6153,7 +6153,7 @@ abstract class _$$_ResearchSubjectCopyWith<$Res>
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       List<ResearchSubjectProgress>? progress,
@@ -6251,7 +6251,7 @@ class __$$_ResearchSubjectCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -6279,7 +6279,7 @@ class __$$_ResearchSubjectCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -6398,7 +6398,7 @@ class _$_ResearchSubject extends _ResearchSubject {
 
   /// [language] The base language in which the resource is written.
   @override
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] ("_language") Extensions for language
   @override
@@ -6465,7 +6465,7 @@ class _$_ResearchSubject extends _ResearchSubject {
 
   /// [status] The publication state of the resource (not of the subject).
   @override
-  final Code? status;
+  final FhirCode? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -6620,7 +6620,7 @@ abstract class _ResearchSubject extends ResearchSubject {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -6629,7 +6629,7 @@ abstract class _ResearchSubject extends ResearchSubject {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      final Code? status,
+      final FhirCode? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
       final List<ResearchSubjectProgress>? progress,
@@ -6657,7 +6657,7 @@ abstract class _ResearchSubject extends ResearchSubject {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -6679,7 +6679,7 @@ abstract class _ResearchSubject extends ResearchSubject {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] ("_language") Extensions for language
@@ -6709,7 +6709,7 @@ abstract class _ResearchSubject extends ResearchSubject {
   @override
 
   /// [status] The publication state of the resource (not of the subject).
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status

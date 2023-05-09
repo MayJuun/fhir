@@ -150,7 +150,7 @@ class ArtifactAssessment with Resource, _$ArtifactAssessment {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -167,7 +167,7 @@ class ArtifactAssessment with Resource, _$ArtifactAssessment {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -191,7 +191,7 @@ class ArtifactAssessment with Resource, _$ArtifactAssessment {
     Reference? citeAsReference,
 
     /// [citeAsMarkdown] Display of or reference to the bibliographic citation of the comment, classifier, or rating.
-    Markdown? citeAsMarkdown,
+    FhirMarkdown? citeAsMarkdown,
 
     /// [citeAsMarkdownElement] ("_citeAsMarkdown") Extensions for citeAsMarkdown
     @JsonKey(name: '_citeAsMarkdown') Element? citeAsMarkdownElement,
@@ -203,19 +203,19 @@ class ArtifactAssessment with Resource, _$ArtifactAssessment {
     @JsonKey(name: '_date') Element? dateElement,
 
     /// [copyright] A copyright statement relating to the artifact assessment and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the artifact assessment.
-    Markdown? copyright,
+    FhirMarkdown? copyright,
 
     /// [copyrightElement] ("_copyright") Extensions for copyright
     @JsonKey(name: '_copyright') Element? copyrightElement,
 
     /// [approvalDate] The date on which the resource content was approved by the publisher. Approval happens once when the content is officially approved for usage.
-    Date? approvalDate,
+    FhirDate? approvalDate,
 
     /// [approvalDateElement] ("_approvalDate") Extensions for approvalDate
     @JsonKey(name: '_approvalDate') Element? approvalDateElement,
 
     /// [lastReviewDate] The date on which the resource content was last reviewed. Review happens periodically after approval but does not change the original approval date.
-    Date? lastReviewDate,
+    FhirDate? lastReviewDate,
 
     /// [lastReviewDateElement] ("_lastReviewDate") Extensions for lastReviewDate
     @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
@@ -224,7 +224,7 @@ class ArtifactAssessment with Resource, _$ArtifactAssessment {
     Reference? artifactReference,
 
     /// [artifactCanonical] A reference to a resource, canonical resource, or non-FHIR resource which the comment or assessment is about.
-    Canonical? artifactCanonical,
+    FhirCanonical? artifactCanonical,
 
     /// [artifactCanonicalElement] ("_artifactCanonical") Extensions for artifactCanonical
     @JsonKey(name: '_artifactCanonical') Element? artifactCanonicalElement,
@@ -239,13 +239,13 @@ class ArtifactAssessment with Resource, _$ArtifactAssessment {
     List<ArtifactAssessmentContent>? content,
 
     /// [workflowStatus] Indicates the workflow status of the comment or change request.
-    Code? workflowStatus,
+    FhirCode? workflowStatus,
 
     /// [workflowStatusElement] ("_workflowStatus") Extensions for workflowStatus
     @JsonKey(name: '_workflowStatus') Element? workflowStatusElement,
 
     /// [disposition] Indicates the disposition of the responsible party to the comment or change request.
-    Code? disposition,
+    FhirCode? disposition,
 
     /// [dispositionElement] ("_disposition") Extensions for disposition
     @JsonKey(name: '_disposition') Element? dispositionElement,
@@ -383,13 +383,13 @@ class ArtifactAssessmentContent with _$ArtifactAssessmentContent {
     List<FhirExtension>? modifierExtension,
 
     /// [informationType] The type of information this component of the content represents.
-    Code? informationType,
+    FhirCode? informationType,
 
     /// [informationTypeElement] ("_informationType") Extensions for informationType
     @JsonKey(name: '_informationType') Element? informationTypeElement,
 
     /// [summary] A brief summary of the content of this component.
-    Markdown? summary,
+    FhirMarkdown? summary,
 
     /// [summaryElement] ("_summary") Extensions for summary
     @JsonKey(name: '_summary') Element? summaryElement,
@@ -413,7 +413,7 @@ class ArtifactAssessmentContent with _$ArtifactAssessmentContent {
     List<RelatedArtifact>? relatedArtifact,
 
     /// [freeToShare] Acceptable to publicly share the comment, classifier or rating.
-    Boolean? freeToShare,
+    FhirBoolean? freeToShare,
 
     /// [freeToShareElement] ("_freeToShare") Extensions for freeToShare
     @JsonKey(name: '_freeToShare') Element? freeToShareElement,
@@ -679,7 +679,7 @@ class Citation with Resource, _$Citation {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -696,7 +696,7 @@ class Citation with Resource, _$Citation {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -751,13 +751,13 @@ class Citation with Resource, _$Citation {
     @JsonKey(name: '_title') Element? titleElement,
 
     /// [status] The status of this summary. Enables tracking the life-cycle of the content.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
 
     /// [experimental] A Boolean value to indicate that this citation record is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.
-    Boolean? experimental,
+    FhirBoolean? experimental,
 
     /// [experimentalElement] ("_experimental") Extensions for experimental
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -778,7 +778,7 @@ class Citation with Resource, _$Citation {
     List<ContactDetail>? contact,
 
     /// [description] A free text natural language description of the citation from a consumer's perspective.
-    Markdown? description,
+    FhirMarkdown? description,
 
     /// [descriptionElement] ("_description") Extensions for description
     @JsonKey(name: '_description') Element? descriptionElement,
@@ -790,13 +790,13 @@ class Citation with Resource, _$Citation {
     List<CodeableConcept>? jurisdiction,
 
     /// [purpose] Explanation of why this citation is needed and why it has been designed as it has.
-    Markdown? purpose,
+    FhirMarkdown? purpose,
 
     /// [purposeElement] ("_purpose") Extensions for purpose
     @JsonKey(name: '_purpose') Element? purposeElement,
 
     /// [copyright] Use and/or publishing restrictions for the citation record, not for the cited artifact.
-    Markdown? copyright,
+    FhirMarkdown? copyright,
 
     /// [copyrightElement] ("_copyright") Extensions for copyright
     @JsonKey(name: '_copyright') Element? copyrightElement,
@@ -808,13 +808,13 @@ class Citation with Resource, _$Citation {
     @JsonKey(name: '_copyrightLabel') Element? copyrightLabelElement,
 
     /// [approvalDate] The date on which the resource content was approved by the publisher. Approval happens once when the content is officially approved for usage.
-    Date? approvalDate,
+    FhirDate? approvalDate,
 
     /// [approvalDateElement] ("_approvalDate") Extensions for approvalDate
     @JsonKey(name: '_approvalDate') Element? approvalDateElement,
 
     /// [lastReviewDate] The date on which the resource content was last reviewed. Review happens periodically after approval but does not change the original approval date.
-    Date? lastReviewDate,
+    FhirDate? lastReviewDate,
 
     /// [lastReviewDateElement] ("_lastReviewDate") Extensions for lastReviewDate
     @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
@@ -972,7 +972,7 @@ class CitationSummary with _$CitationSummary {
     CodeableConcept? style,
 
     /// [text] The human-readable display of the citation summary.
-    Markdown? text,
+    FhirMarkdown? text,
 
     /// [textElement] ("_text") Extensions for text
     @JsonKey(name: '_text') Element? textElement,
@@ -1207,7 +1207,7 @@ class CitationStatusDate with _$CitationStatusDate {
     required CodeableConcept activity,
 
     /// [actual] Whether the status date is actual (has occurred) or expected (estimated or anticipated).
-    Boolean? actual,
+    FhirBoolean? actual,
 
     /// [actualElement] ("_actual") Extensions for actual
     @JsonKey(name: '_actual') Element? actualElement,
@@ -1640,7 +1640,7 @@ class CitationStatusDate1 with _$CitationStatusDate1 {
     required CodeableConcept activity,
 
     /// [actual] Either occurred or expected.
-    Boolean? actual,
+    FhirBoolean? actual,
 
     /// [actualElement] ("_actual") Extensions for actual
     @JsonKey(name: '_actual') Element? actualElement,
@@ -1766,7 +1766,7 @@ class CitationTitle with _$CitationTitle {
     CodeableConcept? language,
 
     /// [text] The title of the article or artifact.
-    Markdown? text,
+    FhirMarkdown? text,
 
     /// [textElement] ("_text") Extensions for text
     @JsonKey(name: '_text') Element? textElement,
@@ -1893,13 +1893,13 @@ class CitationAbstract with _$CitationAbstract {
     CodeableConcept? language,
 
     /// [text] Abstract content.
-    Markdown? text,
+    FhirMarkdown? text,
 
     /// [textElement] ("_text") Extensions for text
     @JsonKey(name: '_text') Element? textElement,
 
     /// [copyright] Copyright notice for the abstract.
-    Markdown? copyright,
+    FhirMarkdown? copyright,
 
     /// [copyrightElement] ("_copyright") Extensions for copyright
     @JsonKey(name: '_copyright') Element? copyrightElement,
@@ -2164,7 +2164,7 @@ class CitationRelatesTo with _$CitationRelatesTo {
     List<FhirExtension>? modifierExtension,
 
     /// [type] The type of relationship to the related artifact.
-    Code? type,
+    FhirCode? type,
 
     /// [typeElement] ("_type") Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
@@ -2185,7 +2185,7 @@ class CitationRelatesTo with _$CitationRelatesTo {
     @JsonKey(name: '_display') Element? displayElement,
 
     /// [citation] A bibliographic citation for the related artifact. This text SHOULD be formatted according to an accepted citation format.
-    Markdown? citation,
+    FhirMarkdown? citation,
 
     /// [citationElement] ("_citation") Extensions for citation
     @JsonKey(name: '_citation') Element? citationElement,
@@ -2194,7 +2194,7 @@ class CitationRelatesTo with _$CitationRelatesTo {
     Attachment? document,
 
     /// [resource] The related artifact, such as a library, value set, profile, or other knowledge resource.
-    Canonical? resource,
+    FhirCanonical? resource,
 
     /// [resourceElement] ("_resource") Extensions for resource
     @JsonKey(name: '_resource') Element? resourceElement,
@@ -2483,7 +2483,7 @@ class CitationPublicationForm with _$CitationPublicationForm {
     @JsonKey(name: '_pageCount') Element? pageCountElement,
 
     /// [copyright] Copyright notice for the full article or artifact.
-    Markdown? copyright,
+    FhirMarkdown? copyright,
 
     /// [copyrightElement] ("_copyright") Extensions for copyright
     @JsonKey(name: '_copyright') Element? copyrightElement,
@@ -2978,7 +2978,7 @@ class CitationContributorship with _$CitationContributorship {
     List<FhirExtension>? modifierExtension,
 
     /// [complete] Indicates if the list includes all authors and/or contributors.
-    Boolean? complete,
+    FhirBoolean? complete,
 
     /// [completeElement] ("_complete") Extensions for complete
     @JsonKey(name: '_complete') Element? completeElement,
@@ -3142,7 +3142,7 @@ class CitationEntry with _$CitationEntry {
     List<CitationContributionInstance>? contributionInstance,
 
     /// [correspondingContact] Indication of which contributor is the corresponding contributor for the role.
-    Boolean? correspondingContact,
+    FhirBoolean? correspondingContact,
 
     /// [correspondingContactElement] ("_correspondingContact") Extensions for correspondingContact
     @JsonKey(name: '_correspondingContact')
@@ -3399,7 +3399,7 @@ class CitationSummary1 with _$CitationSummary1 {
     CodeableConcept? source,
 
     /// [value] The display string for the author list, contributor list, or contributorship statement.
-    Markdown? value,
+    FhirMarkdown? value,
 
     /// [valueElement] ("_value") Extensions for value
     @JsonKey(name: '_value') Element? valueElement,
@@ -3680,7 +3680,7 @@ class Evidence with Resource, _$Evidence {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -3697,7 +3697,7 @@ class Evidence with Resource, _$Evidence {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -3752,13 +3752,13 @@ class Evidence with Resource, _$Evidence {
     @JsonKey(name: '_title') Element? titleElement,
 
     /// [status] The status of this summary. Enables tracking the life-cycle of the content.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
 
     /// [experimental] A Boolean value to indicate that this resource is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.
-    Boolean? experimental,
+    FhirBoolean? experimental,
 
     /// [experimentalElement] ("_experimental") Extensions for experimental
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -3779,7 +3779,7 @@ class Evidence with Resource, _$Evidence {
     List<ContactDetail>? contact,
 
     /// [description] A free text natural language description of the evidence from a consumer's perspective.
-    Markdown? description,
+    FhirMarkdown? description,
 
     /// [descriptionElement] ("_description") Extensions for description
     @JsonKey(name: '_description') Element? descriptionElement,
@@ -3791,13 +3791,13 @@ class Evidence with Resource, _$Evidence {
     List<CodeableConcept>? jurisdiction,
 
     /// [purpose] Explanation of why this {{title}} is needed and why it has been designed as it has.
-    Markdown? purpose,
+    FhirMarkdown? purpose,
 
     /// [purposeElement] ("_purpose") Extensions for purpose
     @JsonKey(name: '_purpose') Element? purposeElement,
 
     /// [copyright] A copyright statement relating to the {{title}} and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the {{title}}.
-    Markdown? copyright,
+    FhirMarkdown? copyright,
 
     /// [copyrightElement] ("_copyright") Extensions for copyright
     @JsonKey(name: '_copyright') Element? copyrightElement,
@@ -3809,13 +3809,13 @@ class Evidence with Resource, _$Evidence {
     @JsonKey(name: '_copyrightLabel') Element? copyrightLabelElement,
 
     /// [approvalDate] The date on which the resource content was approved by the publisher. Approval happens once when the content is officially approved for usage.
-    Date? approvalDate,
+    FhirDate? approvalDate,
 
     /// [approvalDateElement] ("_approvalDate") Extensions for approvalDate
     @JsonKey(name: '_approvalDate') Element? approvalDateElement,
 
     /// [lastReviewDate] The date on which the resource content was last reviewed. Review happens periodically after approval but does not change the original approval date.
-    Date? lastReviewDate,
+    FhirDate? lastReviewDate,
 
     /// [lastReviewDateElement] ("_lastReviewDate") Extensions for lastReviewDate
     @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
@@ -3845,13 +3845,13 @@ class Evidence with Resource, _$Evidence {
     Reference? citeAsReference,
 
     /// [citeAsMarkdown] Citation Resource or display of suggested citation for this evidence.
-    Markdown? citeAsMarkdown,
+    FhirMarkdown? citeAsMarkdown,
 
     /// [citeAsMarkdownElement] ("_citeAsMarkdown") Extensions for citeAsMarkdown
     @JsonKey(name: '_citeAsMarkdown') Element? citeAsMarkdownElement,
 
     /// [assertion] Declarative description of the Evidence.
-    Markdown? assertion,
+    FhirMarkdown? assertion,
 
     /// [assertionElement] ("_assertion") Extensions for assertion
     @JsonKey(name: '_assertion') Element? assertionElement,
@@ -3995,7 +3995,7 @@ class EvidenceVariableDefinition with _$EvidenceVariableDefinition {
     List<FhirExtension>? modifierExtension,
 
     /// [description] A text description or summary of the variable.
-    Markdown? description,
+    FhirMarkdown? description,
 
     /// [descriptionElement] ("_description") Extensions for description
     @JsonKey(name: '_description') Element? descriptionElement,
@@ -4484,7 +4484,7 @@ class EvidenceAttributeEstimate with _$EvidenceAttributeEstimate {
     Quantity? quantity,
 
     /// [level] Use 95 for a 95% confidence interval.
-    Decimal? level,
+    FhirDecimal? level,
 
     /// [levelElement] ("_level") Extensions for level
     @JsonKey(name: '_level') Element? levelElement,
@@ -4743,7 +4743,7 @@ class Evidencevariable with _$Evidencevariable {
     required Reference variableDefinition,
 
     /// [handling] How the variable is classified for use in adjusted analysis.
-    Code? handling,
+    FhirCode? handling,
 
     /// [handlingElement] ("_handling") Extensions for handling
     @JsonKey(name: '_handling') Element? handlingElement,
@@ -5170,7 +5170,7 @@ class EvidenceReport with Resource, _$EvidenceReport {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -5187,7 +5187,7 @@ class EvidenceReport with Resource, _$EvidenceReport {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -5242,13 +5242,13 @@ class EvidenceReport with Resource, _$EvidenceReport {
     @JsonKey(name: '_title') Element? titleElement,
 
     /// [status] The status of this summary. Enables tracking the life-cycle of the content.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
 
     /// [experimental] A Boolean value to indicate that this {{title}} is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.
-    Boolean? experimental,
+    FhirBoolean? experimental,
 
     /// [experimentalElement] ("_experimental") Extensions for experimental
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -5269,7 +5269,7 @@ class EvidenceReport with Resource, _$EvidenceReport {
     List<ContactDetail>? contact,
 
     /// [description] A free text natural language description of the {{title}} from a consumer's perspective.
-    Markdown? description,
+    FhirMarkdown? description,
 
     /// [descriptionElement] ("_description") Extensions for description
     @JsonKey(name: '_description') Element? descriptionElement,
@@ -5281,13 +5281,13 @@ class EvidenceReport with Resource, _$EvidenceReport {
     List<CodeableConcept>? jurisdiction,
 
     /// [purpose] Explanation of why this {{title}} is needed and why it has been designed as it has.
-    Markdown? purpose,
+    FhirMarkdown? purpose,
 
     /// [purposeElement] ("_purpose") Extensions for purpose
     @JsonKey(name: '_purpose') Element? purposeElement,
 
     /// [copyright] A copyright statement relating to the {{title}} and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the {{title}}.
-    Markdown? copyright,
+    FhirMarkdown? copyright,
 
     /// [copyrightElement] ("_copyright") Extensions for copyright
     @JsonKey(name: '_copyright') Element? copyrightElement,
@@ -5299,13 +5299,13 @@ class EvidenceReport with Resource, _$EvidenceReport {
     @JsonKey(name: '_copyrightLabel') Element? copyrightLabelElement,
 
     /// [approvalDate] The date on which the resource content was approved by the publisher. Approval happens once when the content is officially approved for usage.
-    Date? approvalDate,
+    FhirDate? approvalDate,
 
     /// [approvalDateElement] ("_approvalDate") Extensions for approvalDate
     @JsonKey(name: '_approvalDate') Element? approvalDateElement,
 
     /// [lastReviewDate] The date on which the resource content was last reviewed. Review happens periodically after approval but does not change the original approval date.
-    Date? lastReviewDate,
+    FhirDate? lastReviewDate,
 
     /// [lastReviewDateElement] ("_lastReviewDate") Extensions for lastReviewDate
     @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
@@ -5338,7 +5338,7 @@ class EvidenceReport with Resource, _$EvidenceReport {
     Reference? citeAsReference,
 
     /// [citeAsMarkdown] Citation Resource or display of suggested citation for this report.
-    Markdown? citeAsMarkdown,
+    FhirMarkdown? citeAsMarkdown,
 
     /// [citeAsMarkdownElement] ("_citeAsMarkdown") Extensions for citeAsMarkdown
     @JsonKey(name: '_citeAsMarkdown') Element? citeAsMarkdownElement,
@@ -5599,7 +5599,7 @@ class EvidenceReportCharacteristic with _$EvidenceReportCharacteristic {
     CodeableConcept? valueCodeableConcept,
 
     /// [valueBoolean] Characteristic value.
-    Boolean? valueBoolean,
+    FhirBoolean? valueBoolean,
 
     /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
@@ -5611,7 +5611,7 @@ class EvidenceReportCharacteristic with _$EvidenceReportCharacteristic {
     Range? valueRange,
 
     /// [exclude] Is used to express not the characteristic.
-    Boolean? exclude,
+    FhirBoolean? exclude,
 
     /// [excludeElement] ("_exclude") Extensions for exclude
     @JsonKey(name: '_exclude') Element? excludeElement,
@@ -5728,7 +5728,7 @@ class EvidenceReportRelatesTo with _$EvidenceReportRelatesTo {
     List<FhirExtension>? modifierExtension,
 
     /// [code] The type of relationship that this composition has with anther composition or document.
-    Code? code,
+    FhirCode? code,
 
     /// [codeElement] ("_code") Extensions for code
     @JsonKey(name: '_code') Element? codeElement,
@@ -5858,7 +5858,7 @@ class EvidenceReportTarget with _$EvidenceReportTarget {
     Identifier? identifier,
 
     /// [display] Target of the relationship Display.
-    Markdown? display,
+    FhirMarkdown? display,
 
     /// [displayElement] ("_display") Extensions for display
     @JsonKey(name: '_display') Element? displayElement,
@@ -6031,7 +6031,7 @@ class EvidenceReportSection with _$EvidenceReportSection {
     Narrative? text,
 
     /// [mode] How the entry list was prepared - whether it is a working list that is suitable for being maintained on an ongoing basis, or if it represents a snapshot of a list of items from another source, or whether it is a prepared list where items may be marked as added, modified or deleted.
-    Code? mode,
+    FhirCode? mode,
 
     /// [modeElement] ("_mode") Extensions for mode
     @JsonKey(name: '_mode') Element? modeElement,
@@ -6328,7 +6328,7 @@ class EvidenceVariable with Resource, _$EvidenceVariable {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -6345,7 +6345,7 @@ class EvidenceVariable with Resource, _$EvidenceVariable {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -6400,13 +6400,13 @@ class EvidenceVariable with Resource, _$EvidenceVariable {
     @JsonKey(name: '_title') Element? titleElement,
 
     /// [status] The status of this evidence variable. Enables tracking the life-cycle of the content.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
 
     /// [experimental] A Boolean value to indicate that this resource is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.
-    Boolean? experimental,
+    FhirBoolean? experimental,
 
     /// [experimentalElement] ("_experimental") Extensions for experimental
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -6427,7 +6427,7 @@ class EvidenceVariable with Resource, _$EvidenceVariable {
     List<ContactDetail>? contact,
 
     /// [description] A free text natural language description of the evidence variable from a consumer's perspective.
-    Markdown? description,
+    FhirMarkdown? description,
 
     /// [descriptionElement] ("_description") Extensions for description
     @JsonKey(name: '_description') Element? descriptionElement,
@@ -6439,13 +6439,13 @@ class EvidenceVariable with Resource, _$EvidenceVariable {
     List<CodeableConcept>? jurisdiction,
 
     /// [purpose] Explanation of why this {{title}} is needed and why it has been designed as it has.
-    Markdown? purpose,
+    FhirMarkdown? purpose,
 
     /// [purposeElement] ("_purpose") Extensions for purpose
     @JsonKey(name: '_purpose') Element? purposeElement,
 
     /// [copyright] A copyright statement relating to the resource and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the resource.
-    Markdown? copyright,
+    FhirMarkdown? copyright,
 
     /// [copyrightElement] ("_copyright") Extensions for copyright
     @JsonKey(name: '_copyright') Element? copyrightElement,
@@ -6457,13 +6457,13 @@ class EvidenceVariable with Resource, _$EvidenceVariable {
     @JsonKey(name: '_copyrightLabel') Element? copyrightLabelElement,
 
     /// [approvalDate] The date on which the resource content was approved by the publisher. Approval happens once when the content is officially approved for usage.
-    Date? approvalDate,
+    FhirDate? approvalDate,
 
     /// [approvalDateElement] ("_approvalDate") Extensions for approvalDate
     @JsonKey(name: '_approvalDate') Element? approvalDateElement,
 
     /// [lastReviewDate] The date on which the resource content was last reviewed. Review happens periodically after approval but does not change the original approval date.
-    Date? lastReviewDate,
+    FhirDate? lastReviewDate,
 
     /// [lastReviewDateElement] ("_lastReviewDate") Extensions for lastReviewDate
     @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
@@ -6505,7 +6505,7 @@ class EvidenceVariable with Resource, _$EvidenceVariable {
     List<Annotation>? note,
 
     /// [actual] True if the actual variable measured, false if a conceptual representation of the intended variable.
-    Boolean? actual,
+    FhirBoolean? actual,
 
     /// [actualElement] ("_actual") Extensions for actual
     @JsonKey(name: '_actual') Element? actualElement,
@@ -6514,7 +6514,7 @@ class EvidenceVariable with Resource, _$EvidenceVariable {
     List<EvidenceVariableCharacteristic>? characteristic,
 
     /// [handling] The method of handling in statistical analysis.
-    Code? handling,
+    FhirCode? handling,
 
     /// [handlingElement] ("_handling") Extensions for handling
     @JsonKey(name: '_handling') Element? handlingElement,
@@ -6658,7 +6658,7 @@ class EvidenceVariableCharacteristic with _$EvidenceVariableCharacteristic {
     List<FhirExtension>? modifierExtension,
 
     /// [linkId] Label used for when a characteristic refers to another characteristic.
-    Id? linkId,
+    FhirId? linkId,
 
     /// [linkIdElement] ("_linkId") Extensions for linkId
     @JsonKey(name: '_linkId') Element? linkIdElement,
@@ -6673,7 +6673,7 @@ class EvidenceVariableCharacteristic with _$EvidenceVariableCharacteristic {
     List<Annotation>? note,
 
     /// [exclude] When true, this characteristic is an exclusion criterion. In other words, not matching this characteristic definition is equivalent to meeting this criterion.
-    Boolean? exclude,
+    FhirBoolean? exclude,
 
     /// [excludeElement] ("_exclude") Extensions for exclude
     @JsonKey(name: '_exclude') Element? excludeElement,
@@ -6682,7 +6682,7 @@ class EvidenceVariableCharacteristic with _$EvidenceVariableCharacteristic {
     Reference? definitionReference,
 
     /// [definitionCanonical] Defines the characteristic using Canonical.
-    Canonical? definitionCanonical,
+    FhirCanonical? definitionCanonical,
 
     /// [definitionCodeableConcept] Defines the characteristic using CodeableConcept.
     CodeableConcept? definitionCodeableConcept,
@@ -6691,7 +6691,7 @@ class EvidenceVariableCharacteristic with _$EvidenceVariableCharacteristic {
     Expression? definitionExpression,
 
     /// [definitionId] Defines the characteristic using id.
-    Id? definitionId,
+    FhirId? definitionId,
 
     /// [definitionIdElement] ("_definitionId") Extensions for definitionId
     @JsonKey(name: '_definitionId') Element? definitionIdElement,
@@ -6845,7 +6845,7 @@ class EvidenceVariableDefinitionByTypeAndValue
     CodeableConcept? valueCodeableConcept,
 
     /// [valueBoolean] Defines the characteristic when paired with characteristic.type.
-    Boolean? valueBoolean,
+    FhirBoolean? valueBoolean,
 
     /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
@@ -6860,7 +6860,7 @@ class EvidenceVariableDefinitionByTypeAndValue
     Reference? valueReference,
 
     /// [valueId] Defines the characteristic when paired with characteristic.type.
-    Id? valueId,
+    FhirId? valueId,
 
     /// [valueIdElement] ("_valueId") Extensions for valueId
     @JsonKey(name: '_valueId') Element? valueIdElement,
@@ -6980,7 +6980,7 @@ class EvidenceVariableDefinitionByCombination
     List<FhirExtension>? modifierExtension,
 
     /// [code] Used to specify if two or more characteristics are combined with OR or AND.
-    Code? code,
+    FhirCode? code,
 
     /// [codeElement] ("_code") Extensions for code
     @JsonKey(name: '_code') Element? codeElement,
@@ -7140,7 +7140,7 @@ class EvidenceVariableTimeFromEvent with _$EvidenceVariableTimeFromEvent {
     @JsonKey(name: '_eventDateTime') Element? eventDateTimeElement,
 
     /// [eventId] The event used as a base point (reference point) in time.
-    Id? eventId,
+    FhirId? eventId,
 
     /// [eventIdElement] ("_eventId") Extensions for eventId
     @JsonKey(name: '_eventId') Element? eventIdElement,

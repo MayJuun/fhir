@@ -26,7 +26,7 @@ mixin _$CodeSystem {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -44,7 +44,7 @@ mixin _$CodeSystem {
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
@@ -107,14 +107,14 @@ mixin _$CodeSystem {
   Element? get titleElement => throw _privateConstructorUsedError;
 
   /// [status] The status of this code system. Enables tracking the life-cycle of the content.
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
 
   /// [experimental] A Boolean value to indicate that this code system is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.
-  Boolean? get experimental => throw _privateConstructorUsedError;
+  FhirBoolean? get experimental => throw _privateConstructorUsedError;
 
   /// [experimentalElement] ("_experimental") Extensions for experimental
   @JsonKey(name: '_experimental')
@@ -138,7 +138,7 @@ mixin _$CodeSystem {
   List<ContactDetail>? get contact => throw _privateConstructorUsedError;
 
   /// [description] A free text natural language description of the code system from a consumer's perspective.
-  Markdown? get description => throw _privateConstructorUsedError;
+  FhirMarkdown? get description => throw _privateConstructorUsedError;
 
   /// [descriptionElement] ("_description") Extensions for description
   @JsonKey(name: '_description')
@@ -151,14 +151,14 @@ mixin _$CodeSystem {
   List<CodeableConcept>? get jurisdiction => throw _privateConstructorUsedError;
 
   /// [purpose] Explanation of why this code system is needed and why it has been designed as it has.
-  Markdown? get purpose => throw _privateConstructorUsedError;
+  FhirMarkdown? get purpose => throw _privateConstructorUsedError;
 
   /// [purposeElement] ("_purpose") Extensions for purpose
   @JsonKey(name: '_purpose')
   Element? get purposeElement => throw _privateConstructorUsedError;
 
   /// [copyright] A copyright statement relating to the code system and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the code system.
-  Markdown? get copyright => throw _privateConstructorUsedError;
+  FhirMarkdown? get copyright => throw _privateConstructorUsedError;
 
   /// [copyrightElement] ("_copyright") Extensions for copyright
   @JsonKey(name: '_copyright')
@@ -172,14 +172,14 @@ mixin _$CodeSystem {
   Element? get copyrightLabelElement => throw _privateConstructorUsedError;
 
   /// [approvalDate] The date on which the resource content was approved by the publisher. Approval happens once when the content is officially approved for usage.
-  Date? get approvalDate => throw _privateConstructorUsedError;
+  FhirDate? get approvalDate => throw _privateConstructorUsedError;
 
   /// [approvalDateElement] ("_approvalDate") Extensions for approvalDate
   @JsonKey(name: '_approvalDate')
   Element? get approvalDateElement => throw _privateConstructorUsedError;
 
   /// [lastReviewDate] The date on which the resource content was last reviewed. Review happens periodically after approval but does not change the original approval date.
-  Date? get lastReviewDate => throw _privateConstructorUsedError;
+  FhirDate? get lastReviewDate => throw _privateConstructorUsedError;
 
   /// [lastReviewDateElement] ("_lastReviewDate") Extensions for lastReviewDate
   @JsonKey(name: '_lastReviewDate')
@@ -208,45 +208,45 @@ mixin _$CodeSystem {
       throw _privateConstructorUsedError;
 
   /// [caseSensitive] If code comparison is case sensitive when codes within this system are compared to each other.
-  Boolean? get caseSensitive => throw _privateConstructorUsedError;
+  FhirBoolean? get caseSensitive => throw _privateConstructorUsedError;
 
   /// [caseSensitiveElement] ("_caseSensitive") Extensions for caseSensitive
   @JsonKey(name: '_caseSensitive')
   Element? get caseSensitiveElement => throw _privateConstructorUsedError;
 
   /// [valueSet] Canonical reference to the value set that contains all codes in the code system independent of code status.
-  Canonical? get valueSet => throw _privateConstructorUsedError;
+  FhirCanonical? get valueSet => throw _privateConstructorUsedError;
 
   /// [hierarchyMeaning] The meaning of the hierarchy of concepts as represented in this resource.
-  Code? get hierarchyMeaning => throw _privateConstructorUsedError;
+  FhirCode? get hierarchyMeaning => throw _privateConstructorUsedError;
 
   /// [hierarchyMeaningElement] ("_hierarchyMeaning") Extensions for hierarchyMeaning
   @JsonKey(name: '_hierarchyMeaning')
   Element? get hierarchyMeaningElement => throw _privateConstructorUsedError;
 
   /// [compositional] The code system defines a compositional (post-coordination) grammar.
-  Boolean? get compositional => throw _privateConstructorUsedError;
+  FhirBoolean? get compositional => throw _privateConstructorUsedError;
 
   /// [compositionalElement] ("_compositional") Extensions for compositional
   @JsonKey(name: '_compositional')
   Element? get compositionalElement => throw _privateConstructorUsedError;
 
   /// [versionNeeded] This flag is used to signify that the code system does not commit to concept permanence across versions. If true, a version must be specified when referencing this code system.
-  Boolean? get versionNeeded => throw _privateConstructorUsedError;
+  FhirBoolean? get versionNeeded => throw _privateConstructorUsedError;
 
   /// [versionNeededElement] ("_versionNeeded") Extensions for versionNeeded
   @JsonKey(name: '_versionNeeded')
   Element? get versionNeededElement => throw _privateConstructorUsedError;
 
   /// [content] The extent of the content of the code system (the concepts and codes it defines) are represented in this resource instance.
-  Code? get content => throw _privateConstructorUsedError;
+  FhirCode? get content => throw _privateConstructorUsedError;
 
   /// [contentElement] ("_content") Extensions for content
   @JsonKey(name: '_content')
   Element? get contentElement => throw _privateConstructorUsedError;
 
   /// [supplements] The canonical URL of the code system that this code system supplement is adding designations and properties to.
-  Canonical? get supplements => throw _privateConstructorUsedError;
+  FhirCanonical? get supplements => throw _privateConstructorUsedError;
 
   /// [count] The total number of concepts defined by the code system. Where the code system has a compositional grammar, the basis of this count is defined by the system steward.
   UnsignedInt? get count => throw _privateConstructorUsedError;
@@ -279,12 +279,12 @@ abstract class $CodeSystemCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.CodeSystem)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -309,10 +309,10 @@ abstract class $CodeSystemCopyWith<$Res> {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Boolean? experimental,
+      FhirBoolean? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
       FhirDateTime? date,
@@ -322,24 +322,24 @@ abstract class $CodeSystemCopyWith<$Res> {
       @JsonKey(name: '_publisher')
           Element? publisherElement,
       List<ContactDetail>? contact,
-      Markdown? description,
+      FhirMarkdown? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
       List<UsageContext>? useContext,
       List<CodeableConcept>? jurisdiction,
-      Markdown? purpose,
+      FhirMarkdown? purpose,
       @JsonKey(name: '_purpose')
           Element? purposeElement,
-      Markdown? copyright,
+      FhirMarkdown? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
       String? copyrightLabel,
       @JsonKey(name: '_copyrightLabel')
           Element? copyrightLabelElement,
-      Date? approvalDate,
+      FhirDate? approvalDate,
       @JsonKey(name: '_approvalDate')
           Element? approvalDateElement,
-      Date? lastReviewDate,
+      FhirDate? lastReviewDate,
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
@@ -349,23 +349,23 @@ abstract class $CodeSystemCopyWith<$Res> {
       List<ContactDetail>? reviewer,
       List<ContactDetail>? endorser,
       List<RelatedArtifact>? relatedArtifact,
-      Boolean? caseSensitive,
+      FhirBoolean? caseSensitive,
       @JsonKey(name: '_caseSensitive')
           Element? caseSensitiveElement,
-      Canonical? valueSet,
-      Code? hierarchyMeaning,
+      FhirCanonical? valueSet,
+      FhirCode? hierarchyMeaning,
       @JsonKey(name: '_hierarchyMeaning')
           Element? hierarchyMeaningElement,
-      Boolean? compositional,
+      FhirBoolean? compositional,
       @JsonKey(name: '_compositional')
           Element? compositionalElement,
-      Boolean? versionNeeded,
+      FhirBoolean? versionNeeded,
       @JsonKey(name: '_versionNeeded')
           Element? versionNeededElement,
-      Code? content,
+      FhirCode? content,
       @JsonKey(name: '_content')
           Element? contentElement,
-      Canonical? supplements,
+      FhirCanonical? supplements,
       UnsignedInt? count,
       @JsonKey(name: '_count')
           Element? countElement,
@@ -510,7 +510,7 @@ class _$CodeSystemCopyWithImpl<$Res, $Val extends CodeSystem>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -582,7 +582,7 @@ class _$CodeSystemCopyWithImpl<$Res, $Val extends CodeSystem>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -590,7 +590,7 @@ class _$CodeSystemCopyWithImpl<$Res, $Val extends CodeSystem>
       experimental: freezed == experimental
           ? _value.experimental
           : experimental // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       experimentalElement: freezed == experimentalElement
           ? _value.experimentalElement
           : experimentalElement // ignore: cast_nullable_to_non_nullable
@@ -702,7 +702,7 @@ class _$CodeSystemCopyWithImpl<$Res, $Val extends CodeSystem>
       caseSensitive: freezed == caseSensitive
           ? _value.caseSensitive
           : caseSensitive // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       caseSensitiveElement: freezed == caseSensitiveElement
           ? _value.caseSensitiveElement
           : caseSensitiveElement // ignore: cast_nullable_to_non_nullable
@@ -710,11 +710,11 @@ class _$CodeSystemCopyWithImpl<$Res, $Val extends CodeSystem>
       valueSet: freezed == valueSet
           ? _value.valueSet
           : valueSet // ignore: cast_nullable_to_non_nullable
-              as Canonical?,
+              as FhirCanonical?,
       hierarchyMeaning: freezed == hierarchyMeaning
           ? _value.hierarchyMeaning
           : hierarchyMeaning // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       hierarchyMeaningElement: freezed == hierarchyMeaningElement
           ? _value.hierarchyMeaningElement
           : hierarchyMeaningElement // ignore: cast_nullable_to_non_nullable
@@ -722,7 +722,7 @@ class _$CodeSystemCopyWithImpl<$Res, $Val extends CodeSystem>
       compositional: freezed == compositional
           ? _value.compositional
           : compositional // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       compositionalElement: freezed == compositionalElement
           ? _value.compositionalElement
           : compositionalElement // ignore: cast_nullable_to_non_nullable
@@ -730,7 +730,7 @@ class _$CodeSystemCopyWithImpl<$Res, $Val extends CodeSystem>
       versionNeeded: freezed == versionNeeded
           ? _value.versionNeeded
           : versionNeeded // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       versionNeededElement: freezed == versionNeededElement
           ? _value.versionNeededElement
           : versionNeededElement // ignore: cast_nullable_to_non_nullable
@@ -738,7 +738,7 @@ class _$CodeSystemCopyWithImpl<$Res, $Val extends CodeSystem>
       content: freezed == content
           ? _value.content
           : content // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       contentElement: freezed == contentElement
           ? _value.contentElement
           : contentElement // ignore: cast_nullable_to_non_nullable
@@ -746,7 +746,7 @@ class _$CodeSystemCopyWithImpl<$Res, $Val extends CodeSystem>
       supplements: freezed == supplements
           ? _value.supplements
           : supplements // ignore: cast_nullable_to_non_nullable
-              as Canonical?,
+              as FhirCanonical?,
       count: freezed == count
           ? _value.count
           : count // ignore: cast_nullable_to_non_nullable
@@ -1108,12 +1108,12 @@ abstract class _$$_CodeSystemCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.CodeSystem)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -1138,10 +1138,10 @@ abstract class _$$_CodeSystemCopyWith<$Res>
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Boolean? experimental,
+      FhirBoolean? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
       FhirDateTime? date,
@@ -1151,24 +1151,24 @@ abstract class _$$_CodeSystemCopyWith<$Res>
       @JsonKey(name: '_publisher')
           Element? publisherElement,
       List<ContactDetail>? contact,
-      Markdown? description,
+      FhirMarkdown? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
       List<UsageContext>? useContext,
       List<CodeableConcept>? jurisdiction,
-      Markdown? purpose,
+      FhirMarkdown? purpose,
       @JsonKey(name: '_purpose')
           Element? purposeElement,
-      Markdown? copyright,
+      FhirMarkdown? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
       String? copyrightLabel,
       @JsonKey(name: '_copyrightLabel')
           Element? copyrightLabelElement,
-      Date? approvalDate,
+      FhirDate? approvalDate,
       @JsonKey(name: '_approvalDate')
           Element? approvalDateElement,
-      Date? lastReviewDate,
+      FhirDate? lastReviewDate,
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
@@ -1178,23 +1178,23 @@ abstract class _$$_CodeSystemCopyWith<$Res>
       List<ContactDetail>? reviewer,
       List<ContactDetail>? endorser,
       List<RelatedArtifact>? relatedArtifact,
-      Boolean? caseSensitive,
+      FhirBoolean? caseSensitive,
       @JsonKey(name: '_caseSensitive')
           Element? caseSensitiveElement,
-      Canonical? valueSet,
-      Code? hierarchyMeaning,
+      FhirCanonical? valueSet,
+      FhirCode? hierarchyMeaning,
       @JsonKey(name: '_hierarchyMeaning')
           Element? hierarchyMeaningElement,
-      Boolean? compositional,
+      FhirBoolean? compositional,
       @JsonKey(name: '_compositional')
           Element? compositionalElement,
-      Boolean? versionNeeded,
+      FhirBoolean? versionNeeded,
       @JsonKey(name: '_versionNeeded')
           Element? versionNeededElement,
-      Code? content,
+      FhirCode? content,
       @JsonKey(name: '_content')
           Element? contentElement,
-      Canonical? supplements,
+      FhirCanonical? supplements,
       UnsignedInt? count,
       @JsonKey(name: '_count')
           Element? countElement,
@@ -1364,7 +1364,7 @@ class __$$_CodeSystemCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -1436,7 +1436,7 @@ class __$$_CodeSystemCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -1444,7 +1444,7 @@ class __$$_CodeSystemCopyWithImpl<$Res>
       experimental: freezed == experimental
           ? _value.experimental
           : experimental // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       experimentalElement: freezed == experimentalElement
           ? _value.experimentalElement
           : experimentalElement // ignore: cast_nullable_to_non_nullable
@@ -1556,7 +1556,7 @@ class __$$_CodeSystemCopyWithImpl<$Res>
       caseSensitive: freezed == caseSensitive
           ? _value.caseSensitive
           : caseSensitive // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       caseSensitiveElement: freezed == caseSensitiveElement
           ? _value.caseSensitiveElement
           : caseSensitiveElement // ignore: cast_nullable_to_non_nullable
@@ -1564,11 +1564,11 @@ class __$$_CodeSystemCopyWithImpl<$Res>
       valueSet: freezed == valueSet
           ? _value.valueSet
           : valueSet // ignore: cast_nullable_to_non_nullable
-              as Canonical?,
+              as FhirCanonical?,
       hierarchyMeaning: freezed == hierarchyMeaning
           ? _value.hierarchyMeaning
           : hierarchyMeaning // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       hierarchyMeaningElement: freezed == hierarchyMeaningElement
           ? _value.hierarchyMeaningElement
           : hierarchyMeaningElement // ignore: cast_nullable_to_non_nullable
@@ -1576,7 +1576,7 @@ class __$$_CodeSystemCopyWithImpl<$Res>
       compositional: freezed == compositional
           ? _value.compositional
           : compositional // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       compositionalElement: freezed == compositionalElement
           ? _value.compositionalElement
           : compositionalElement // ignore: cast_nullable_to_non_nullable
@@ -1584,7 +1584,7 @@ class __$$_CodeSystemCopyWithImpl<$Res>
       versionNeeded: freezed == versionNeeded
           ? _value.versionNeeded
           : versionNeeded // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       versionNeededElement: freezed == versionNeededElement
           ? _value.versionNeededElement
           : versionNeededElement // ignore: cast_nullable_to_non_nullable
@@ -1592,7 +1592,7 @@ class __$$_CodeSystemCopyWithImpl<$Res>
       content: freezed == content
           ? _value.content
           : content // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       contentElement: freezed == contentElement
           ? _value.contentElement
           : contentElement // ignore: cast_nullable_to_non_nullable
@@ -1600,7 +1600,7 @@ class __$$_CodeSystemCopyWithImpl<$Res>
       supplements: freezed == supplements
           ? _value.supplements
           : supplements // ignore: cast_nullable_to_non_nullable
-              as Canonical?,
+              as FhirCanonical?,
       count: freezed == count
           ? _value.count
           : count // ignore: cast_nullable_to_non_nullable
@@ -1775,7 +1775,7 @@ class _$_CodeSystem extends _CodeSystem {
 
   /// [language] The base language in which the resource is written.
   @override
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] ("_language") Extensions for language
   @override
@@ -1891,7 +1891,7 @@ class _$_CodeSystem extends _CodeSystem {
 
   /// [status] The status of this code system. Enables tracking the life-cycle of the content.
   @override
-  final Code? status;
+  final FhirCode? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -1900,7 +1900,7 @@ class _$_CodeSystem extends _CodeSystem {
 
   /// [experimental] A Boolean value to indicate that this code system is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.
   @override
-  final Boolean? experimental;
+  final FhirBoolean? experimental;
 
   /// [experimentalElement] ("_experimental") Extensions for experimental
   @override
@@ -2102,7 +2102,7 @@ class _$_CodeSystem extends _CodeSystem {
 
   /// [caseSensitive] If code comparison is case sensitive when codes within this system are compared to each other.
   @override
-  final Boolean? caseSensitive;
+  final FhirBoolean? caseSensitive;
 
   /// [caseSensitiveElement] ("_caseSensitive") Extensions for caseSensitive
   @override
@@ -2111,11 +2111,11 @@ class _$_CodeSystem extends _CodeSystem {
 
   /// [valueSet] Canonical reference to the value set that contains all codes in the code system independent of code status.
   @override
-  final Canonical? valueSet;
+  final FhirCanonical? valueSet;
 
   /// [hierarchyMeaning] The meaning of the hierarchy of concepts as represented in this resource.
   @override
-  final Code? hierarchyMeaning;
+  final FhirCode? hierarchyMeaning;
 
   /// [hierarchyMeaningElement] ("_hierarchyMeaning") Extensions for hierarchyMeaning
   @override
@@ -2124,7 +2124,7 @@ class _$_CodeSystem extends _CodeSystem {
 
   /// [compositional] The code system defines a compositional (post-coordination) grammar.
   @override
-  final Boolean? compositional;
+  final FhirBoolean? compositional;
 
   /// [compositionalElement] ("_compositional") Extensions for compositional
   @override
@@ -2133,7 +2133,7 @@ class _$_CodeSystem extends _CodeSystem {
 
   /// [versionNeeded] This flag is used to signify that the code system does not commit to concept permanence across versions. If true, a version must be specified when referencing this code system.
   @override
-  final Boolean? versionNeeded;
+  final FhirBoolean? versionNeeded;
 
   /// [versionNeededElement] ("_versionNeeded") Extensions for versionNeeded
   @override
@@ -2142,7 +2142,7 @@ class _$_CodeSystem extends _CodeSystem {
 
   /// [content] The extent of the content of the code system (the concepts and codes it defines) are represented in this resource instance.
   @override
-  final Code? content;
+  final FhirCode? content;
 
   /// [contentElement] ("_content") Extensions for content
   @override
@@ -2151,7 +2151,7 @@ class _$_CodeSystem extends _CodeSystem {
 
   /// [supplements] The canonical URL of the code system that this code system supplement is adding designations and properties to.
   @override
-  final Canonical? supplements;
+  final FhirCanonical? supplements;
 
   /// [count] The total number of concepts defined by the code system. Where the code system has a compositional grammar, the basis of this count is defined by the system steward.
   @override
@@ -2419,7 +2419,7 @@ abstract class _CodeSystem extends CodeSystem {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -2444,10 +2444,10 @@ abstract class _CodeSystem extends CodeSystem {
       final String? title,
       @JsonKey(name: '_title')
           final Element? titleElement,
-      final Code? status,
+      final FhirCode? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
-      final Boolean? experimental,
+      final FhirBoolean? experimental,
       @JsonKey(name: '_experimental')
           final Element? experimentalElement,
       final FhirDateTime? date,
@@ -2484,23 +2484,23 @@ abstract class _CodeSystem extends CodeSystem {
       final List<ContactDetail>? reviewer,
       final List<ContactDetail>? endorser,
       final List<RelatedArtifact>? relatedArtifact,
-      final Boolean? caseSensitive,
+      final FhirBoolean? caseSensitive,
       @JsonKey(name: '_caseSensitive')
           final Element? caseSensitiveElement,
-      final Canonical? valueSet,
-      final Code? hierarchyMeaning,
+      final FhirCanonical? valueSet,
+      final FhirCode? hierarchyMeaning,
       @JsonKey(name: '_hierarchyMeaning')
           final Element? hierarchyMeaningElement,
-      final Boolean? compositional,
+      final FhirBoolean? compositional,
       @JsonKey(name: '_compositional')
           final Element? compositionalElement,
-      final Boolean? versionNeeded,
+      final FhirBoolean? versionNeeded,
       @JsonKey(name: '_versionNeeded')
           final Element? versionNeededElement,
-      final Code? content,
+      final FhirCode? content,
       @JsonKey(name: '_content')
           final Element? contentElement,
-      final Canonical? supplements,
+      final FhirCanonical? supplements,
       final UnsignedInt? count,
       @JsonKey(name: '_count')
           final Element? countElement,
@@ -2521,7 +2521,7 @@ abstract class _CodeSystem extends CodeSystem {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -2543,7 +2543,7 @@ abstract class _CodeSystem extends CodeSystem {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] ("_language") Extensions for language
@@ -2622,7 +2622,7 @@ abstract class _CodeSystem extends CodeSystem {
   @override
 
   /// [status] The status of this code system. Enables tracking the life-cycle of the content.
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status
@@ -2631,7 +2631,7 @@ abstract class _CodeSystem extends CodeSystem {
   @override
 
   /// [experimental] A Boolean value to indicate that this code system is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.
-  Boolean? get experimental;
+  FhirBoolean? get experimental;
   @override
 
   /// [experimentalElement] ("_experimental") Extensions for experimental
@@ -2662,7 +2662,7 @@ abstract class _CodeSystem extends CodeSystem {
   @override
 
   /// [description] A free text natural language description of the code system from a consumer's perspective.
-  Markdown? get description;
+  FhirMarkdown? get description;
   @override
 
   /// [descriptionElement] ("_description") Extensions for description
@@ -2679,7 +2679,7 @@ abstract class _CodeSystem extends CodeSystem {
   @override
 
   /// [purpose] Explanation of why this code system is needed and why it has been designed as it has.
-  Markdown? get purpose;
+  FhirMarkdown? get purpose;
   @override
 
   /// [purposeElement] ("_purpose") Extensions for purpose
@@ -2688,7 +2688,7 @@ abstract class _CodeSystem extends CodeSystem {
   @override
 
   /// [copyright] A copyright statement relating to the code system and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the code system.
-  Markdown? get copyright;
+  FhirMarkdown? get copyright;
   @override
 
   /// [copyrightElement] ("_copyright") Extensions for copyright
@@ -2706,7 +2706,7 @@ abstract class _CodeSystem extends CodeSystem {
   @override
 
   /// [approvalDate] The date on which the resource content was approved by the publisher. Approval happens once when the content is officially approved for usage.
-  Date? get approvalDate;
+  FhirDate? get approvalDate;
   @override
 
   /// [approvalDateElement] ("_approvalDate") Extensions for approvalDate
@@ -2715,7 +2715,7 @@ abstract class _CodeSystem extends CodeSystem {
   @override
 
   /// [lastReviewDate] The date on which the resource content was last reviewed. Review happens periodically after approval but does not change the original approval date.
-  Date? get lastReviewDate;
+  FhirDate? get lastReviewDate;
   @override
 
   /// [lastReviewDateElement] ("_lastReviewDate") Extensions for lastReviewDate
@@ -2752,7 +2752,7 @@ abstract class _CodeSystem extends CodeSystem {
   @override
 
   /// [caseSensitive] If code comparison is case sensitive when codes within this system are compared to each other.
-  Boolean? get caseSensitive;
+  FhirBoolean? get caseSensitive;
   @override
 
   /// [caseSensitiveElement] ("_caseSensitive") Extensions for caseSensitive
@@ -2761,11 +2761,11 @@ abstract class _CodeSystem extends CodeSystem {
   @override
 
   /// [valueSet] Canonical reference to the value set that contains all codes in the code system independent of code status.
-  Canonical? get valueSet;
+  FhirCanonical? get valueSet;
   @override
 
   /// [hierarchyMeaning] The meaning of the hierarchy of concepts as represented in this resource.
-  Code? get hierarchyMeaning;
+  FhirCode? get hierarchyMeaning;
   @override
 
   /// [hierarchyMeaningElement] ("_hierarchyMeaning") Extensions for hierarchyMeaning
@@ -2774,7 +2774,7 @@ abstract class _CodeSystem extends CodeSystem {
   @override
 
   /// [compositional] The code system defines a compositional (post-coordination) grammar.
-  Boolean? get compositional;
+  FhirBoolean? get compositional;
   @override
 
   /// [compositionalElement] ("_compositional") Extensions for compositional
@@ -2783,7 +2783,7 @@ abstract class _CodeSystem extends CodeSystem {
   @override
 
   /// [versionNeeded] This flag is used to signify that the code system does not commit to concept permanence across versions. If true, a version must be specified when referencing this code system.
-  Boolean? get versionNeeded;
+  FhirBoolean? get versionNeeded;
   @override
 
   /// [versionNeededElement] ("_versionNeeded") Extensions for versionNeeded
@@ -2792,7 +2792,7 @@ abstract class _CodeSystem extends CodeSystem {
   @override
 
   /// [content] The extent of the content of the code system (the concepts and codes it defines) are represented in this resource instance.
-  Code? get content;
+  FhirCode? get content;
   @override
 
   /// [contentElement] ("_content") Extensions for content
@@ -2801,7 +2801,7 @@ abstract class _CodeSystem extends CodeSystem {
   @override
 
   /// [supplements] The canonical URL of the code system that this code system supplement is adding designations and properties to.
-  Canonical? get supplements;
+  FhirCanonical? get supplements;
   @override
 
   /// [count] The total number of concepts defined by the code system. Where the code system has a compositional grammar, the basis of this count is defined by the system steward.
@@ -2864,7 +2864,7 @@ mixin _$CodeSystemFilter {
       throw _privateConstructorUsedError;
 
   /// [code] The code that identifies this filter when it is used as a filter in [ValueSet](valueset.html#).compose.include.filter.
-  Code? get code => throw _privateConstructorUsedError;
+  FhirCode? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] ("_code") Extensions for code
   @JsonKey(name: '_code')
@@ -2908,7 +2908,7 @@ abstract class $CodeSystemFilterCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
@@ -2963,7 +2963,7 @@ class _$CodeSystemFilterCopyWithImpl<$Res, $Val extends CodeSystemFilter>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -3044,7 +3044,7 @@ abstract class _$$_CodeSystemFilterCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
@@ -3100,7 +3100,7 @@ class __$$_CodeSystemFilterCopyWithImpl<$Res>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -3224,7 +3224,7 @@ class _$_CodeSystemFilter extends _CodeSystemFilter {
 
   /// [code] The code that identifies this filter when it is used as a filter in [ValueSet](valueset.html#).compose.include.filter.
   @override
-  final Code? code;
+  final FhirCode? code;
 
   /// [codeElement] ("_code") Extensions for code
   @override
@@ -3343,7 +3343,7 @@ abstract class _CodeSystemFilter extends CodeSystemFilter {
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
-          final Code? code,
+          final FhirCode? code,
           @JsonKey(name: '_code') final Element? codeElement,
           final String? description,
           @JsonKey(name: '_description') final Element? descriptionElement,
@@ -3390,7 +3390,7 @@ abstract class _CodeSystemFilter extends CodeSystemFilter {
   @override
 
   /// [code] The code that identifies this filter when it is used as a filter in [ValueSet](valueset.html#).compose.include.filter.
-  Code? get code;
+  FhirCode? get code;
   @override
 
   /// [codeElement] ("_code") Extensions for code
@@ -3465,7 +3465,7 @@ mixin _$CodeSystemProperty {
       throw _privateConstructorUsedError;
 
   /// [code] A code that is used to identify the property. The code is used internally (in CodeSystem.concept.property.code) and also externally, such as in property filters.
-  Code? get code => throw _privateConstructorUsedError;
+  FhirCode? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] ("_code") Extensions for code
   @JsonKey(name: '_code')
@@ -3486,7 +3486,7 @@ mixin _$CodeSystemProperty {
   Element? get descriptionElement => throw _privateConstructorUsedError;
 
   /// [type] The type of the property value. Properties of type "code" contain a code defined by the code system (e.g. a reference to another defined concept).
-  Code? get type => throw _privateConstructorUsedError;
+  FhirCode? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] ("_type") Extensions for type
   @JsonKey(name: '_type')
@@ -3508,13 +3508,13 @@ abstract class $CodeSystemPropertyCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement,
       FhirUri? uri,
       @JsonKey(name: '_uri') Element? uriElement,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      Code? type,
+      FhirCode? type,
       @JsonKey(name: '_type') Element? typeElement});
 
   $ElementCopyWith<$Res>? get codeElement;
@@ -3564,7 +3564,7 @@ class _$CodeSystemPropertyCopyWithImpl<$Res, $Val extends CodeSystemProperty>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -3588,7 +3588,7 @@ class _$CodeSystemPropertyCopyWithImpl<$Res, $Val extends CodeSystemProperty>
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       typeElement: freezed == typeElement
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -3657,13 +3657,13 @@ abstract class _$$_CodeSystemPropertyCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement,
       FhirUri? uri,
       @JsonKey(name: '_uri') Element? uriElement,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      Code? type,
+      FhirCode? type,
       @JsonKey(name: '_type') Element? typeElement});
 
   @override
@@ -3715,7 +3715,7 @@ class __$$_CodeSystemPropertyCopyWithImpl<$Res>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -3739,7 +3739,7 @@ class __$$_CodeSystemPropertyCopyWithImpl<$Res>
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       typeElement: freezed == typeElement
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -3837,7 +3837,7 @@ class _$_CodeSystemProperty extends _CodeSystemProperty {
 
   /// [code] A code that is used to identify the property. The code is used internally (in CodeSystem.concept.property.code) and also externally, such as in property filters.
   @override
-  final Code? code;
+  final FhirCode? code;
 
   /// [codeElement] ("_code") Extensions for code
   @override
@@ -3864,7 +3864,7 @@ class _$_CodeSystemProperty extends _CodeSystemProperty {
 
   /// [type] The type of the property value. Properties of type "code" contain a code defined by the code system (e.g. a reference to another defined concept).
   @override
-  final Code? type;
+  final FhirCode? type;
 
   /// [typeElement] ("_type") Extensions for type
   @override
@@ -3937,13 +3937,13 @@ abstract class _CodeSystemProperty extends CodeSystemProperty {
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
-          final Code? code,
+          final FhirCode? code,
           @JsonKey(name: '_code') final Element? codeElement,
           final FhirUri? uri,
           @JsonKey(name: '_uri') final Element? uriElement,
           final String? description,
           @JsonKey(name: '_description') final Element? descriptionElement,
-          final Code? type,
+          final FhirCode? type,
           @JsonKey(name: '_type') final Element? typeElement}) =
       _$_CodeSystemProperty;
   _CodeSystemProperty._() : super._();
@@ -3984,7 +3984,7 @@ abstract class _CodeSystemProperty extends CodeSystemProperty {
   @override
 
   /// [code] A code that is used to identify the property. The code is used internally (in CodeSystem.concept.property.code) and also externally, such as in property filters.
-  Code? get code;
+  FhirCode? get code;
   @override
 
   /// [codeElement] ("_code") Extensions for code
@@ -4011,7 +4011,7 @@ abstract class _CodeSystemProperty extends CodeSystemProperty {
   @override
 
   /// [type] The type of the property value. Properties of type "code" contain a code defined by the code system (e.g. a reference to another defined concept).
-  Code? get type;
+  FhirCode? get type;
   @override
 
   /// [typeElement] ("_type") Extensions for type
@@ -4058,7 +4058,7 @@ mixin _$CodeSystemConcept {
       throw _privateConstructorUsedError;
 
   /// [code] A code - a text symbol - that uniquely identifies the concept within the code system.
-  Code? get code => throw _privateConstructorUsedError;
+  FhirCode? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] ("_code") Extensions for code
   @JsonKey(name: '_code')
@@ -4104,7 +4104,7 @@ abstract class $CodeSystemConceptCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement,
       String? display,
       @JsonKey(name: '_display') Element? displayElement,
@@ -4161,7 +4161,7 @@ class _$CodeSystemConceptCopyWithImpl<$Res, $Val extends CodeSystemConcept>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -4246,7 +4246,7 @@ abstract class _$$_CodeSystemConceptCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement,
       String? display,
       @JsonKey(name: '_display') Element? displayElement,
@@ -4304,7 +4304,7 @@ class __$$_CodeSystemConceptCopyWithImpl<$Res>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -4434,7 +4434,7 @@ class _$_CodeSystemConcept extends _CodeSystemConcept {
 
   /// [code] A code - a text symbol - that uniquely identifies the concept within the code system.
   @override
-  final Code? code;
+  final FhirCode? code;
 
   /// [codeElement] ("_code") Extensions for code
   @override
@@ -4566,7 +4566,7 @@ abstract class _CodeSystemConcept extends CodeSystemConcept {
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final Code? code,
+      final FhirCode? code,
       @JsonKey(name: '_code') final Element? codeElement,
       final String? display,
       @JsonKey(name: '_display') final Element? displayElement,
@@ -4613,7 +4613,7 @@ abstract class _CodeSystemConcept extends CodeSystemConcept {
   @override
 
   /// [code] A code - a text symbol - that uniquely identifies the concept within the code system.
-  Code? get code;
+  FhirCode? get code;
   @override
 
   /// [codeElement] ("_code") Extensions for code
@@ -4691,7 +4691,7 @@ mixin _$CodeSystemDesignation {
       throw _privateConstructorUsedError;
 
   /// [language] The language this designation is defined for.
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
@@ -4726,7 +4726,7 @@ abstract class $CodeSystemDesignationCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language') Element? languageElement,
       Coding? use,
       List<Coding>? additionalUse,
@@ -4778,7 +4778,7 @@ class _$CodeSystemDesignationCopyWithImpl<$Res,
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -4851,7 +4851,7 @@ abstract class _$$_CodeSystemDesignationCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language') Element? languageElement,
       Coding? use,
       List<Coding>? additionalUse,
@@ -4903,7 +4903,7 @@ class __$$_CodeSystemDesignationCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -5016,7 +5016,7 @@ class _$_CodeSystemDesignation extends _CodeSystemDesignation {
 
   /// [language] The language this designation is defined for.
   @override
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] ("_language") Extensions for language
   @override
@@ -5110,7 +5110,7 @@ abstract class _CodeSystemDesignation extends CodeSystemDesignation {
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
-          final Code? language,
+          final FhirCode? language,
           @JsonKey(name: '_language') final Element? languageElement,
           final Coding? use,
           final List<Coding>? additionalUse,
@@ -5155,7 +5155,7 @@ abstract class _CodeSystemDesignation extends CodeSystemDesignation {
   @override
 
   /// [language] The language this designation is defined for.
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] ("_language") Extensions for language
@@ -5219,14 +5219,14 @@ mixin _$CodeSystemProperty1 {
       throw _privateConstructorUsedError;
 
   /// [code] A code that is a reference to CodeSystem.property.code.
-  Code? get code => throw _privateConstructorUsedError;
+  FhirCode? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] ("_code") Extensions for code
   @JsonKey(name: '_code')
   Element? get codeElement => throw _privateConstructorUsedError;
 
   /// [valueCode] The value of this property.
-  Code? get valueCode => throw _privateConstructorUsedError;
+  FhirCode? get valueCode => throw _privateConstructorUsedError;
 
   /// [valueCodeElement] ("_valueCode") Extensions for valueCode
   @JsonKey(name: '_valueCode')
@@ -5243,14 +5243,14 @@ mixin _$CodeSystemProperty1 {
   Element? get valueStringElement => throw _privateConstructorUsedError;
 
   /// [valueInteger] The value of this property.
-  Integer? get valueInteger => throw _privateConstructorUsedError;
+  FhirInteger? get valueInteger => throw _privateConstructorUsedError;
 
   /// [valueIntegerElement] ("_valueInteger") Extensions for valueInteger
   @JsonKey(name: '_valueInteger')
   Element? get valueIntegerElement => throw _privateConstructorUsedError;
 
   /// [valueBoolean] The value of this property.
-  Boolean? get valueBoolean => throw _privateConstructorUsedError;
+  FhirBoolean? get valueBoolean => throw _privateConstructorUsedError;
 
   /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
   @JsonKey(name: '_valueBoolean')
@@ -5264,7 +5264,7 @@ mixin _$CodeSystemProperty1 {
   Element? get valueDateTimeElement => throw _privateConstructorUsedError;
 
   /// [valueDecimal] The value of this property.
-  Decimal? get valueDecimal => throw _privateConstructorUsedError;
+  FhirDecimal? get valueDecimal => throw _privateConstructorUsedError;
 
   /// [valueDecimalElement] ("_valueDecimal") Extensions for valueDecimal
   @JsonKey(name: '_valueDecimal')
@@ -5286,20 +5286,20 @@ abstract class $CodeSystemProperty1CopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement,
-      Code? valueCode,
+      FhirCode? valueCode,
       @JsonKey(name: '_valueCode') Element? valueCodeElement,
       Coding? valueCoding,
       String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
-      Integer? valueInteger,
+      FhirInteger? valueInteger,
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
-      Boolean? valueBoolean,
+      FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
-      Decimal? valueDecimal,
+      FhirDecimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement});
 
   $ElementCopyWith<$Res>? get codeElement;
@@ -5360,7 +5360,7 @@ class _$CodeSystemProperty1CopyWithImpl<$Res, $Val extends CodeSystemProperty1>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -5368,7 +5368,7 @@ class _$CodeSystemProperty1CopyWithImpl<$Res, $Val extends CodeSystemProperty1>
       valueCode: freezed == valueCode
           ? _value.valueCode
           : valueCode // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       valueCodeElement: freezed == valueCodeElement
           ? _value.valueCodeElement
           : valueCodeElement // ignore: cast_nullable_to_non_nullable
@@ -5396,7 +5396,7 @@ class _$CodeSystemProperty1CopyWithImpl<$Res, $Val extends CodeSystemProperty1>
       valueBoolean: freezed == valueBoolean
           ? _value.valueBoolean
           : valueBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       valueBooleanElement: freezed == valueBooleanElement
           ? _value.valueBooleanElement
           : valueBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -5529,20 +5529,20 @@ abstract class _$$_CodeSystemProperty1CopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement,
-      Code? valueCode,
+      FhirCode? valueCode,
       @JsonKey(name: '_valueCode') Element? valueCodeElement,
       Coding? valueCoding,
       String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
-      Integer? valueInteger,
+      FhirInteger? valueInteger,
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
-      Boolean? valueBoolean,
+      FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
-      Decimal? valueDecimal,
+      FhirDecimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement});
 
   @override
@@ -5609,7 +5609,7 @@ class __$$_CodeSystemProperty1CopyWithImpl<$Res>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -5617,7 +5617,7 @@ class __$$_CodeSystemProperty1CopyWithImpl<$Res>
       valueCode: freezed == valueCode
           ? _value.valueCode
           : valueCode // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       valueCodeElement: freezed == valueCodeElement
           ? _value.valueCodeElement
           : valueCodeElement // ignore: cast_nullable_to_non_nullable
@@ -5645,7 +5645,7 @@ class __$$_CodeSystemProperty1CopyWithImpl<$Res>
       valueBoolean: freezed == valueBoolean
           ? _value.valueBoolean
           : valueBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       valueBooleanElement: freezed == valueBooleanElement
           ? _value.valueBooleanElement
           : valueBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -5766,7 +5766,7 @@ class _$_CodeSystemProperty1 extends _CodeSystemProperty1 {
 
   /// [code] A code that is a reference to CodeSystem.property.code.
   @override
-  final Code? code;
+  final FhirCode? code;
 
   /// [codeElement] ("_code") Extensions for code
   @override
@@ -5775,7 +5775,7 @@ class _$_CodeSystemProperty1 extends _CodeSystemProperty1 {
 
   /// [valueCode] The value of this property.
   @override
-  final Code? valueCode;
+  final FhirCode? valueCode;
 
   /// [valueCodeElement] ("_valueCode") Extensions for valueCode
   @override
@@ -5806,7 +5806,7 @@ class _$_CodeSystemProperty1 extends _CodeSystemProperty1 {
 
   /// [valueBoolean] The value of this property.
   @override
-  final Boolean? valueBoolean;
+  final FhirBoolean? valueBoolean;
 
   /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
   @override
@@ -5920,16 +5920,16 @@ abstract class _CodeSystemProperty1 extends CodeSystemProperty1 {
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
-          final Code? code,
+          final FhirCode? code,
           @JsonKey(name: '_code') final Element? codeElement,
-          final Code? valueCode,
+          final FhirCode? valueCode,
           @JsonKey(name: '_valueCode') final Element? valueCodeElement,
           final Coding? valueCoding,
           final String? valueString,
           @JsonKey(name: '_valueString') final Element? valueStringElement,
           final Integer? valueInteger,
           @JsonKey(name: '_valueInteger') final Element? valueIntegerElement,
-          final Boolean? valueBoolean,
+          final FhirBoolean? valueBoolean,
           @JsonKey(name: '_valueBoolean') final Element? valueBooleanElement,
           final FhirDateTime? valueDateTime,
           @JsonKey(name: '_valueDateTime') final Element? valueDateTimeElement,
@@ -5974,7 +5974,7 @@ abstract class _CodeSystemProperty1 extends CodeSystemProperty1 {
   @override
 
   /// [code] A code that is a reference to CodeSystem.property.code.
-  Code? get code;
+  FhirCode? get code;
   @override
 
   /// [codeElement] ("_code") Extensions for code
@@ -5983,7 +5983,7 @@ abstract class _CodeSystemProperty1 extends CodeSystemProperty1 {
   @override
 
   /// [valueCode] The value of this property.
-  Code? get valueCode;
+  FhirCode? get valueCode;
   @override
 
   /// [valueCodeElement] ("_valueCode") Extensions for valueCode
@@ -6005,7 +6005,7 @@ abstract class _CodeSystemProperty1 extends CodeSystemProperty1 {
   @override
 
   /// [valueInteger] The value of this property.
-  Integer? get valueInteger;
+  FhirInteger? get valueInteger;
   @override
 
   /// [valueIntegerElement] ("_valueInteger") Extensions for valueInteger
@@ -6014,7 +6014,7 @@ abstract class _CodeSystemProperty1 extends CodeSystemProperty1 {
   @override
 
   /// [valueBoolean] The value of this property.
-  Boolean? get valueBoolean;
+  FhirBoolean? get valueBoolean;
   @override
 
   /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
@@ -6032,7 +6032,7 @@ abstract class _CodeSystemProperty1 extends CodeSystemProperty1 {
   @override
 
   /// [valueDecimal] The value of this property.
-  Decimal? get valueDecimal;
+  FhirDecimal? get valueDecimal;
   @override
 
   /// [valueDecimalElement] ("_valueDecimal") Extensions for valueDecimal
@@ -6056,7 +6056,7 @@ mixin _$ConceptMap {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -6074,7 +6074,7 @@ mixin _$ConceptMap {
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
@@ -6137,14 +6137,14 @@ mixin _$ConceptMap {
   Element? get titleElement => throw _privateConstructorUsedError;
 
   /// [status] The status of this concept map. Enables tracking the life-cycle of the content.
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
 
   /// [experimental] A Boolean value to indicate that this concept map is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.
-  Boolean? get experimental => throw _privateConstructorUsedError;
+  FhirBoolean? get experimental => throw _privateConstructorUsedError;
 
   /// [experimentalElement] ("_experimental") Extensions for experimental
   @JsonKey(name: '_experimental')
@@ -6168,7 +6168,7 @@ mixin _$ConceptMap {
   List<ContactDetail>? get contact => throw _privateConstructorUsedError;
 
   /// [description] A free text natural language description of the concept map from a consumer's perspective.
-  Markdown? get description => throw _privateConstructorUsedError;
+  FhirMarkdown? get description => throw _privateConstructorUsedError;
 
   /// [descriptionElement] ("_description") Extensions for description
   @JsonKey(name: '_description')
@@ -6181,14 +6181,14 @@ mixin _$ConceptMap {
   List<CodeableConcept>? get jurisdiction => throw _privateConstructorUsedError;
 
   /// [purpose] Explanation of why this concept map is needed and why it has been designed as it has.
-  Markdown? get purpose => throw _privateConstructorUsedError;
+  FhirMarkdown? get purpose => throw _privateConstructorUsedError;
 
   /// [purposeElement] ("_purpose") Extensions for purpose
   @JsonKey(name: '_purpose')
   Element? get purposeElement => throw _privateConstructorUsedError;
 
   /// [copyright] A copyright statement relating to the concept map and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the concept map.
-  Markdown? get copyright => throw _privateConstructorUsedError;
+  FhirMarkdown? get copyright => throw _privateConstructorUsedError;
 
   /// [copyrightElement] ("_copyright") Extensions for copyright
   @JsonKey(name: '_copyright')
@@ -6202,14 +6202,14 @@ mixin _$ConceptMap {
   Element? get copyrightLabelElement => throw _privateConstructorUsedError;
 
   /// [approvalDate] The date on which the resource content was approved by the publisher. Approval happens once when the content is officially approved for usage.
-  Date? get approvalDate => throw _privateConstructorUsedError;
+  FhirDate? get approvalDate => throw _privateConstructorUsedError;
 
   /// [approvalDateElement] ("_approvalDate") Extensions for approvalDate
   @JsonKey(name: '_approvalDate')
   Element? get approvalDateElement => throw _privateConstructorUsedError;
 
   /// [lastReviewDate] The date on which the resource content was last reviewed. Review happens periodically after approval but does not change the original approval date.
-  Date? get lastReviewDate => throw _privateConstructorUsedError;
+  FhirDate? get lastReviewDate => throw _privateConstructorUsedError;
 
   /// [lastReviewDateElement] ("_lastReviewDate") Extensions for lastReviewDate
   @JsonKey(name: '_lastReviewDate')
@@ -6245,7 +6245,7 @@ mixin _$ConceptMap {
   Element? get sourceScopeUriElement => throw _privateConstructorUsedError;
 
   /// [sourceScopeCanonical] Identifier for the source value set that contains the concepts that are being mapped and provides context for the mappings.  Limits the scope of the map to source codes (ConceptMap.group.element code or valueSet) that are members of this value set.
-  Canonical? get sourceScopeCanonical => throw _privateConstructorUsedError;
+  FhirCanonical? get sourceScopeCanonical => throw _privateConstructorUsedError;
 
   /// [sourceScopeCanonicalElement] ("_sourceScopeCanonical") Extensions for sourceScopeCanonical
   @JsonKey(name: '_sourceScopeCanonical')
@@ -6260,7 +6260,7 @@ mixin _$ConceptMap {
   Element? get targetScopeUriElement => throw _privateConstructorUsedError;
 
   /// [targetScopeCanonical] Identifier for the target value set that provides important context about how the mapping choices are made.  Limits the scope of the map to target codes (ConceptMap.group.element.target code or valueSet) that are members of this value set.
-  Canonical? get targetScopeCanonical => throw _privateConstructorUsedError;
+  FhirCanonical? get targetScopeCanonical => throw _privateConstructorUsedError;
 
   /// [targetScopeCanonicalElement] ("_targetScopeCanonical") Extensions for targetScopeCanonical
   @JsonKey(name: '_targetScopeCanonical')
@@ -6285,12 +6285,12 @@ abstract class $ConceptMapCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.ConceptMap)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -6315,10 +6315,10 @@ abstract class $ConceptMapCopyWith<$Res> {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Boolean? experimental,
+      FhirBoolean? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
       FhirDateTime? date,
@@ -6328,24 +6328,24 @@ abstract class $ConceptMapCopyWith<$Res> {
       @JsonKey(name: '_publisher')
           Element? publisherElement,
       List<ContactDetail>? contact,
-      Markdown? description,
+      FhirMarkdown? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
       List<UsageContext>? useContext,
       List<CodeableConcept>? jurisdiction,
-      Markdown? purpose,
+      FhirMarkdown? purpose,
       @JsonKey(name: '_purpose')
           Element? purposeElement,
-      Markdown? copyright,
+      FhirMarkdown? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
       String? copyrightLabel,
       @JsonKey(name: '_copyrightLabel')
           Element? copyrightLabelElement,
-      Date? approvalDate,
+      FhirDate? approvalDate,
       @JsonKey(name: '_approvalDate')
           Element? approvalDateElement,
-      Date? lastReviewDate,
+      FhirDate? lastReviewDate,
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
@@ -6358,13 +6358,13 @@ abstract class $ConceptMapCopyWith<$Res> {
       FhirUri? sourceScopeUri,
       @JsonKey(name: '_sourceScopeUri')
           Element? sourceScopeUriElement,
-      Canonical? sourceScopeCanonical,
+      FhirCanonical? sourceScopeCanonical,
       @JsonKey(name: '_sourceScopeCanonical')
           Element? sourceScopeCanonicalElement,
       FhirUri? targetScopeUri,
       @JsonKey(name: '_targetScopeUri')
           Element? targetScopeUriElement,
-      Canonical? targetScopeCanonical,
+      FhirCanonical? targetScopeCanonical,
       @JsonKey(name: '_targetScopeCanonical')
           Element? targetScopeCanonicalElement,
       List<ConceptMapGroup>? group});
@@ -6496,7 +6496,7 @@ class _$ConceptMapCopyWithImpl<$Res, $Val extends ConceptMap>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -6568,7 +6568,7 @@ class _$ConceptMapCopyWithImpl<$Res, $Val extends ConceptMap>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -6576,7 +6576,7 @@ class _$ConceptMapCopyWithImpl<$Res, $Val extends ConceptMap>
       experimental: freezed == experimental
           ? _value.experimental
           : experimental // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       experimentalElement: freezed == experimentalElement
           ? _value.experimentalElement
           : experimentalElement // ignore: cast_nullable_to_non_nullable
@@ -6696,7 +6696,7 @@ class _$ConceptMapCopyWithImpl<$Res, $Val extends ConceptMap>
       sourceScopeCanonical: freezed == sourceScopeCanonical
           ? _value.sourceScopeCanonical
           : sourceScopeCanonical // ignore: cast_nullable_to_non_nullable
-              as Canonical?,
+              as FhirCanonical?,
       sourceScopeCanonicalElement: freezed == sourceScopeCanonicalElement
           ? _value.sourceScopeCanonicalElement
           : sourceScopeCanonicalElement // ignore: cast_nullable_to_non_nullable
@@ -6712,7 +6712,7 @@ class _$ConceptMapCopyWithImpl<$Res, $Val extends ConceptMap>
       targetScopeCanonical: freezed == targetScopeCanonical
           ? _value.targetScopeCanonical
           : targetScopeCanonical // ignore: cast_nullable_to_non_nullable
-              as Canonical?,
+              as FhirCanonical?,
       targetScopeCanonicalElement: freezed == targetScopeCanonicalElement
           ? _value.targetScopeCanonicalElement
           : targetScopeCanonicalElement // ignore: cast_nullable_to_non_nullable
@@ -7038,12 +7038,12 @@ abstract class _$$_ConceptMapCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.ConceptMap)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -7068,10 +7068,10 @@ abstract class _$$_ConceptMapCopyWith<$Res>
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Boolean? experimental,
+      FhirBoolean? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
       FhirDateTime? date,
@@ -7081,24 +7081,24 @@ abstract class _$$_ConceptMapCopyWith<$Res>
       @JsonKey(name: '_publisher')
           Element? publisherElement,
       List<ContactDetail>? contact,
-      Markdown? description,
+      FhirMarkdown? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
       List<UsageContext>? useContext,
       List<CodeableConcept>? jurisdiction,
-      Markdown? purpose,
+      FhirMarkdown? purpose,
       @JsonKey(name: '_purpose')
           Element? purposeElement,
-      Markdown? copyright,
+      FhirMarkdown? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
       String? copyrightLabel,
       @JsonKey(name: '_copyrightLabel')
           Element? copyrightLabelElement,
-      Date? approvalDate,
+      FhirDate? approvalDate,
       @JsonKey(name: '_approvalDate')
           Element? approvalDateElement,
-      Date? lastReviewDate,
+      FhirDate? lastReviewDate,
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
@@ -7111,13 +7111,13 @@ abstract class _$$_ConceptMapCopyWith<$Res>
       FhirUri? sourceScopeUri,
       @JsonKey(name: '_sourceScopeUri')
           Element? sourceScopeUriElement,
-      Canonical? sourceScopeCanonical,
+      FhirCanonical? sourceScopeCanonical,
       @JsonKey(name: '_sourceScopeCanonical')
           Element? sourceScopeCanonicalElement,
       FhirUri? targetScopeUri,
       @JsonKey(name: '_targetScopeUri')
           Element? targetScopeUriElement,
-      Canonical? targetScopeCanonical,
+      FhirCanonical? targetScopeCanonical,
       @JsonKey(name: '_targetScopeCanonical')
           Element? targetScopeCanonicalElement,
       List<ConceptMapGroup>? group});
@@ -7272,7 +7272,7 @@ class __$$_ConceptMapCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -7344,7 +7344,7 @@ class __$$_ConceptMapCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -7352,7 +7352,7 @@ class __$$_ConceptMapCopyWithImpl<$Res>
       experimental: freezed == experimental
           ? _value.experimental
           : experimental // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       experimentalElement: freezed == experimentalElement
           ? _value.experimentalElement
           : experimentalElement // ignore: cast_nullable_to_non_nullable
@@ -7472,7 +7472,7 @@ class __$$_ConceptMapCopyWithImpl<$Res>
       sourceScopeCanonical: freezed == sourceScopeCanonical
           ? _value.sourceScopeCanonical
           : sourceScopeCanonical // ignore: cast_nullable_to_non_nullable
-              as Canonical?,
+              as FhirCanonical?,
       sourceScopeCanonicalElement: freezed == sourceScopeCanonicalElement
           ? _value.sourceScopeCanonicalElement
           : sourceScopeCanonicalElement // ignore: cast_nullable_to_non_nullable
@@ -7488,7 +7488,7 @@ class __$$_ConceptMapCopyWithImpl<$Res>
       targetScopeCanonical: freezed == targetScopeCanonical
           ? _value.targetScopeCanonical
           : targetScopeCanonical // ignore: cast_nullable_to_non_nullable
-              as Canonical?,
+              as FhirCanonical?,
       targetScopeCanonicalElement: freezed == targetScopeCanonicalElement
           ? _value.targetScopeCanonicalElement
           : targetScopeCanonicalElement // ignore: cast_nullable_to_non_nullable
@@ -7639,7 +7639,7 @@ class _$_ConceptMap extends _ConceptMap {
 
   /// [language] The base language in which the resource is written.
   @override
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] ("_language") Extensions for language
   @override
@@ -7755,7 +7755,7 @@ class _$_ConceptMap extends _ConceptMap {
 
   /// [status] The status of this concept map. Enables tracking the life-cycle of the content.
   @override
-  final Code? status;
+  final FhirCode? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -7764,7 +7764,7 @@ class _$_ConceptMap extends _ConceptMap {
 
   /// [experimental] A Boolean value to indicate that this concept map is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.
   @override
-  final Boolean? experimental;
+  final FhirBoolean? experimental;
 
   /// [experimentalElement] ("_experimental") Extensions for experimental
   @override
@@ -7975,7 +7975,7 @@ class _$_ConceptMap extends _ConceptMap {
 
   /// [sourceScopeCanonical] Identifier for the source value set that contains the concepts that are being mapped and provides context for the mappings.  Limits the scope of the map to source codes (ConceptMap.group.element code or valueSet) that are members of this value set.
   @override
-  final Canonical? sourceScopeCanonical;
+  final FhirCanonical? sourceScopeCanonical;
 
   /// [sourceScopeCanonicalElement] ("_sourceScopeCanonical") Extensions for sourceScopeCanonical
   @override
@@ -7993,7 +7993,7 @@ class _$_ConceptMap extends _ConceptMap {
 
   /// [targetScopeCanonical] Identifier for the target value set that provides important context about how the mapping choices are made.  Limits the scope of the map to target codes (ConceptMap.group.element.target code or valueSet) that are members of this value set.
   @override
-  final Canonical? targetScopeCanonical;
+  final FhirCanonical? targetScopeCanonical;
 
   /// [targetScopeCanonicalElement] ("_targetScopeCanonical") Extensions for targetScopeCanonical
   @override
@@ -8215,7 +8215,7 @@ abstract class _ConceptMap extends ConceptMap {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -8240,10 +8240,10 @@ abstract class _ConceptMap extends ConceptMap {
       final String? title,
       @JsonKey(name: '_title')
           final Element? titleElement,
-      final Code? status,
+      final FhirCode? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
-      final Boolean? experimental,
+      final FhirBoolean? experimental,
       @JsonKey(name: '_experimental')
           final Element? experimentalElement,
       final FhirDateTime? date,
@@ -8283,13 +8283,13 @@ abstract class _ConceptMap extends ConceptMap {
       final FhirUri? sourceScopeUri,
       @JsonKey(name: '_sourceScopeUri')
           final Element? sourceScopeUriElement,
-      final Canonical? sourceScopeCanonical,
+      final FhirCanonical? sourceScopeCanonical,
       @JsonKey(name: '_sourceScopeCanonical')
           final Element? sourceScopeCanonicalElement,
       final FhirUri? targetScopeUri,
       @JsonKey(name: '_targetScopeUri')
           final Element? targetScopeUriElement,
-      final Canonical? targetScopeCanonical,
+      final FhirCanonical? targetScopeCanonical,
       @JsonKey(name: '_targetScopeCanonical')
           final Element? targetScopeCanonicalElement,
       final List<ConceptMapGroup>? group}) = _$_ConceptMap;
@@ -8307,7 +8307,7 @@ abstract class _ConceptMap extends ConceptMap {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -8329,7 +8329,7 @@ abstract class _ConceptMap extends ConceptMap {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] ("_language") Extensions for language
@@ -8408,7 +8408,7 @@ abstract class _ConceptMap extends ConceptMap {
   @override
 
   /// [status] The status of this concept map. Enables tracking the life-cycle of the content.
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status
@@ -8417,7 +8417,7 @@ abstract class _ConceptMap extends ConceptMap {
   @override
 
   /// [experimental] A Boolean value to indicate that this concept map is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.
-  Boolean? get experimental;
+  FhirBoolean? get experimental;
   @override
 
   /// [experimentalElement] ("_experimental") Extensions for experimental
@@ -8448,7 +8448,7 @@ abstract class _ConceptMap extends ConceptMap {
   @override
 
   /// [description] A free text natural language description of the concept map from a consumer's perspective.
-  Markdown? get description;
+  FhirMarkdown? get description;
   @override
 
   /// [descriptionElement] ("_description") Extensions for description
@@ -8465,7 +8465,7 @@ abstract class _ConceptMap extends ConceptMap {
   @override
 
   /// [purpose] Explanation of why this concept map is needed and why it has been designed as it has.
-  Markdown? get purpose;
+  FhirMarkdown? get purpose;
   @override
 
   /// [purposeElement] ("_purpose") Extensions for purpose
@@ -8474,7 +8474,7 @@ abstract class _ConceptMap extends ConceptMap {
   @override
 
   /// [copyright] A copyright statement relating to the concept map and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the concept map.
-  Markdown? get copyright;
+  FhirMarkdown? get copyright;
   @override
 
   /// [copyrightElement] ("_copyright") Extensions for copyright
@@ -8492,7 +8492,7 @@ abstract class _ConceptMap extends ConceptMap {
   @override
 
   /// [approvalDate] The date on which the resource content was approved by the publisher. Approval happens once when the content is officially approved for usage.
-  Date? get approvalDate;
+  FhirDate? get approvalDate;
   @override
 
   /// [approvalDateElement] ("_approvalDate") Extensions for approvalDate
@@ -8501,7 +8501,7 @@ abstract class _ConceptMap extends ConceptMap {
   @override
 
   /// [lastReviewDate] The date on which the resource content was last reviewed. Review happens periodically after approval but does not change the original approval date.
-  Date? get lastReviewDate;
+  FhirDate? get lastReviewDate;
   @override
 
   /// [lastReviewDateElement] ("_lastReviewDate") Extensions for lastReviewDate
@@ -8547,7 +8547,7 @@ abstract class _ConceptMap extends ConceptMap {
   @override
 
   /// [sourceScopeCanonical] Identifier for the source value set that contains the concepts that are being mapped and provides context for the mappings.  Limits the scope of the map to source codes (ConceptMap.group.element code or valueSet) that are members of this value set.
-  Canonical? get sourceScopeCanonical;
+  FhirCanonical? get sourceScopeCanonical;
   @override
 
   /// [sourceScopeCanonicalElement] ("_sourceScopeCanonical") Extensions for sourceScopeCanonical
@@ -8565,7 +8565,7 @@ abstract class _ConceptMap extends ConceptMap {
   @override
 
   /// [targetScopeCanonical] Identifier for the target value set that provides important context about how the mapping choices are made.  Limits the scope of the map to target codes (ConceptMap.group.element.target code or valueSet) that are members of this value set.
-  Canonical? get targetScopeCanonical;
+  FhirCanonical? get targetScopeCanonical;
   @override
 
   /// [targetScopeCanonicalElement] ("_targetScopeCanonical") Extensions for targetScopeCanonical
@@ -8616,10 +8616,10 @@ mixin _$ConceptMapGroup {
       throw _privateConstructorUsedError;
 
   /// [source] An absolute URI that identifies the source system where the concepts to be mapped are defined.
-  Canonical? get source => throw _privateConstructorUsedError;
+  FhirCanonical? get source => throw _privateConstructorUsedError;
 
   /// [target] An absolute URI that identifies the target system that the concepts will be mapped to.
-  Canonical? get target => throw _privateConstructorUsedError;
+  FhirCanonical? get target => throw _privateConstructorUsedError;
 
   /// [element] Mappings for an individual concept in the source to one or more concepts in the target.
   List<ConceptMapElement> get element => throw _privateConstructorUsedError;
@@ -8643,8 +8643,8 @@ abstract class $ConceptMapGroupCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Canonical? source,
-      Canonical? target,
+      FhirCanonical? source,
+      FhirCanonical? target,
       List<ConceptMapElement> element,
       ConceptMapUnmapped? unmapped});
 
@@ -8688,11 +8688,11 @@ class _$ConceptMapGroupCopyWithImpl<$Res, $Val extends ConceptMapGroup>
       source: freezed == source
           ? _value.source
           : source // ignore: cast_nullable_to_non_nullable
-              as Canonical?,
+              as FhirCanonical?,
       target: freezed == target
           ? _value.target
           : target // ignore: cast_nullable_to_non_nullable
-              as Canonical?,
+              as FhirCanonical?,
       element: null == element
           ? _value.element
           : element // ignore: cast_nullable_to_non_nullable
@@ -8729,8 +8729,8 @@ abstract class _$$_ConceptMapGroupCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Canonical? source,
-      Canonical? target,
+      FhirCanonical? source,
+      FhirCanonical? target,
       List<ConceptMapElement> element,
       ConceptMapUnmapped? unmapped});
 
@@ -8773,11 +8773,11 @@ class __$$_ConceptMapGroupCopyWithImpl<$Res>
       source: freezed == source
           ? _value.source
           : source // ignore: cast_nullable_to_non_nullable
-              as Canonical?,
+              as FhirCanonical?,
       target: freezed == target
           ? _value.target
           : target // ignore: cast_nullable_to_non_nullable
-              as Canonical?,
+              as FhirCanonical?,
       element: null == element
           ? _value._element
           : element // ignore: cast_nullable_to_non_nullable
@@ -8876,11 +8876,11 @@ class _$_ConceptMapGroup extends _ConceptMapGroup {
 
   /// [source] An absolute URI that identifies the source system where the concepts to be mapped are defined.
   @override
-  final Canonical? source;
+  final FhirCanonical? source;
 
   /// [target] An absolute URI that identifies the target system that the concepts will be mapped to.
   @override
-  final Canonical? target;
+  final FhirCanonical? target;
 
   /// [element] Mappings for an individual concept in the source to one or more concepts in the target.
   final List<ConceptMapElement> _element;
@@ -8950,8 +8950,8 @@ abstract class _ConceptMapGroup extends ConceptMapGroup {
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final Canonical? source,
-      final Canonical? target,
+      final FhirCanonical? source,
+      final FhirCanonical? target,
       required final List<ConceptMapElement> element,
       final ConceptMapUnmapped? unmapped}) = _$_ConceptMapGroup;
   _ConceptMapGroup._() : super._();
@@ -8992,11 +8992,11 @@ abstract class _ConceptMapGroup extends ConceptMapGroup {
   @override
 
   /// [source] An absolute URI that identifies the source system where the concepts to be mapped are defined.
-  Canonical? get source;
+  FhirCanonical? get source;
   @override
 
   /// [target] An absolute URI that identifies the target system that the concepts will be mapped to.
-  Canonical? get target;
+  FhirCanonical? get target;
   @override
 
   /// [element] Mappings for an individual concept in the source to one or more concepts in the target.
@@ -9046,7 +9046,7 @@ mixin _$ConceptMapElement {
       throw _privateConstructorUsedError;
 
   /// [code] Identity (code or path) or the element/item being mapped.
-  Code? get code => throw _privateConstructorUsedError;
+  FhirCode? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] ("_code") Extensions for code
   @JsonKey(name: '_code')
@@ -9060,10 +9060,10 @@ mixin _$ConceptMapElement {
   Element? get displayElement => throw _privateConstructorUsedError;
 
   /// [valueSet] The set of codes being mapped.
-  Canonical? get valueSet => throw _privateConstructorUsedError;
+  FhirCanonical? get valueSet => throw _privateConstructorUsedError;
 
   /// [noMap] If noMap = true this indicates that no mapping to a target concept exists for this source concept.
-  Boolean? get noMap => throw _privateConstructorUsedError;
+  FhirBoolean? get noMap => throw _privateConstructorUsedError;
 
   /// [noMapElement] ("_noMap") Extensions for noMap
   @JsonKey(name: '_noMap')
@@ -9088,12 +9088,12 @@ abstract class $ConceptMapElementCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement,
       String? display,
       @JsonKey(name: '_display') Element? displayElement,
-      Canonical? valueSet,
-      Boolean? noMap,
+      FhirCanonical? valueSet,
+      FhirBoolean? noMap,
       @JsonKey(name: '_noMap') Element? noMapElement,
       List<ConceptMapTarget>? target});
 
@@ -9143,7 +9143,7 @@ class _$ConceptMapElementCopyWithImpl<$Res, $Val extends ConceptMapElement>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -9159,11 +9159,11 @@ class _$ConceptMapElementCopyWithImpl<$Res, $Val extends ConceptMapElement>
       valueSet: freezed == valueSet
           ? _value.valueSet
           : valueSet // ignore: cast_nullable_to_non_nullable
-              as Canonical?,
+              as FhirCanonical?,
       noMap: freezed == noMap
           ? _value.noMap
           : noMap // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       noMapElement: freezed == noMapElement
           ? _value.noMapElement
           : noMapElement // ignore: cast_nullable_to_non_nullable
@@ -9224,12 +9224,12 @@ abstract class _$$_ConceptMapElementCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement,
       String? display,
       @JsonKey(name: '_display') Element? displayElement,
-      Canonical? valueSet,
-      Boolean? noMap,
+      FhirCanonical? valueSet,
+      FhirBoolean? noMap,
       @JsonKey(name: '_noMap') Element? noMapElement,
       List<ConceptMapTarget>? target});
 
@@ -9280,7 +9280,7 @@ class __$$_ConceptMapElementCopyWithImpl<$Res>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -9296,11 +9296,11 @@ class __$$_ConceptMapElementCopyWithImpl<$Res>
       valueSet: freezed == valueSet
           ? _value.valueSet
           : valueSet // ignore: cast_nullable_to_non_nullable
-              as Canonical?,
+              as FhirCanonical?,
       noMap: freezed == noMap
           ? _value.noMap
           : noMap // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       noMapElement: freezed == noMapElement
           ? _value.noMapElement
           : noMapElement // ignore: cast_nullable_to_non_nullable
@@ -9403,7 +9403,7 @@ class _$_ConceptMapElement extends _ConceptMapElement {
 
   /// [code] Identity (code or path) or the element/item being mapped.
   @override
-  final Code? code;
+  final FhirCode? code;
 
   /// [codeElement] ("_code") Extensions for code
   @override
@@ -9421,11 +9421,11 @@ class _$_ConceptMapElement extends _ConceptMapElement {
 
   /// [valueSet] The set of codes being mapped.
   @override
-  final Canonical? valueSet;
+  final FhirCanonical? valueSet;
 
   /// [noMap] If noMap = true this indicates that no mapping to a target concept exists for this source concept.
   @override
-  final Boolean? noMap;
+  final FhirBoolean? noMap;
 
   /// [noMapElement] ("_noMap") Extensions for noMap
   @override
@@ -9510,12 +9510,12 @@ abstract class _ConceptMapElement extends ConceptMapElement {
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final Code? code,
+      final FhirCode? code,
       @JsonKey(name: '_code') final Element? codeElement,
       final String? display,
       @JsonKey(name: '_display') final Element? displayElement,
-      final Canonical? valueSet,
-      final Boolean? noMap,
+      final FhirCanonical? valueSet,
+      final FhirBoolean? noMap,
       @JsonKey(name: '_noMap') final Element? noMapElement,
       final List<ConceptMapTarget>? target}) = _$_ConceptMapElement;
   _ConceptMapElement._() : super._();
@@ -9556,7 +9556,7 @@ abstract class _ConceptMapElement extends ConceptMapElement {
   @override
 
   /// [code] Identity (code or path) or the element/item being mapped.
-  Code? get code;
+  FhirCode? get code;
   @override
 
   /// [codeElement] ("_code") Extensions for code
@@ -9574,11 +9574,11 @@ abstract class _ConceptMapElement extends ConceptMapElement {
   @override
 
   /// [valueSet] The set of codes being mapped.
-  Canonical? get valueSet;
+  FhirCanonical? get valueSet;
   @override
 
   /// [noMap] If noMap = true this indicates that no mapping to a target concept exists for this source concept.
-  Boolean? get noMap;
+  FhirBoolean? get noMap;
   @override
 
   /// [noMapElement] ("_noMap") Extensions for noMap
@@ -9629,7 +9629,7 @@ mixin _$ConceptMapTarget {
       throw _privateConstructorUsedError;
 
   /// [code] Identity (code or path) or the element/item that the map refers to.
-  Code? get code => throw _privateConstructorUsedError;
+  FhirCode? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] ("_code") Extensions for code
   @JsonKey(name: '_code')
@@ -9643,10 +9643,10 @@ mixin _$ConceptMapTarget {
   Element? get displayElement => throw _privateConstructorUsedError;
 
   /// [valueSet] The set of codes that the map refers to.
-  Canonical? get valueSet => throw _privateConstructorUsedError;
+  FhirCanonical? get valueSet => throw _privateConstructorUsedError;
 
   /// [relationship] The relationship between the source and target concepts. The relationship is read from source to target (e.g. source-is-narrower-than-target).
-  Code? get relationship => throw _privateConstructorUsedError;
+  FhirCode? get relationship => throw _privateConstructorUsedError;
 
   /// [relationshipElement] ("_relationship") Extensions for relationship
   @JsonKey(name: '_relationship')
@@ -9682,12 +9682,12 @@ abstract class $ConceptMapTargetCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement,
       String? display,
       @JsonKey(name: '_display') Element? displayElement,
-      Canonical? valueSet,
-      Code? relationship,
+      FhirCanonical? valueSet,
+      FhirCode? relationship,
       @JsonKey(name: '_relationship') Element? relationshipElement,
       String? comment,
       @JsonKey(name: '_comment') Element? commentElement,
@@ -9744,7 +9744,7 @@ class _$ConceptMapTargetCopyWithImpl<$Res, $Val extends ConceptMapTarget>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -9760,11 +9760,11 @@ class _$ConceptMapTargetCopyWithImpl<$Res, $Val extends ConceptMapTarget>
       valueSet: freezed == valueSet
           ? _value.valueSet
           : valueSet // ignore: cast_nullable_to_non_nullable
-              as Canonical?,
+              as FhirCanonical?,
       relationship: freezed == relationship
           ? _value.relationship
           : relationship // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       relationshipElement: freezed == relationshipElement
           ? _value.relationshipElement
           : relationshipElement // ignore: cast_nullable_to_non_nullable
@@ -9849,12 +9849,12 @@ abstract class _$$_ConceptMapTargetCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement,
       String? display,
       @JsonKey(name: '_display') Element? displayElement,
-      Canonical? valueSet,
-      Code? relationship,
+      FhirCanonical? valueSet,
+      FhirCode? relationship,
       @JsonKey(name: '_relationship') Element? relationshipElement,
       String? comment,
       @JsonKey(name: '_comment') Element? commentElement,
@@ -9913,7 +9913,7 @@ class __$$_ConceptMapTargetCopyWithImpl<$Res>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -9929,11 +9929,11 @@ class __$$_ConceptMapTargetCopyWithImpl<$Res>
       valueSet: freezed == valueSet
           ? _value.valueSet
           : valueSet // ignore: cast_nullable_to_non_nullable
-              as Canonical?,
+              as FhirCanonical?,
       relationship: freezed == relationship
           ? _value.relationship
           : relationship // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       relationshipElement: freezed == relationshipElement
           ? _value.relationshipElement
           : relationshipElement // ignore: cast_nullable_to_non_nullable
@@ -10052,7 +10052,7 @@ class _$_ConceptMapTarget extends _ConceptMapTarget {
 
   /// [code] Identity (code or path) or the element/item that the map refers to.
   @override
-  final Code? code;
+  final FhirCode? code;
 
   /// [codeElement] ("_code") Extensions for code
   @override
@@ -10070,11 +10070,11 @@ class _$_ConceptMapTarget extends _ConceptMapTarget {
 
   /// [valueSet] The set of codes that the map refers to.
   @override
-  final Canonical? valueSet;
+  final FhirCanonical? valueSet;
 
   /// [relationship] The relationship between the source and target concepts. The relationship is read from source to target (e.g. source-is-narrower-than-target).
   @override
-  final Code? relationship;
+  final FhirCode? relationship;
 
   /// [relationshipElement] ("_relationship") Extensions for relationship
   @override
@@ -10189,12 +10189,12 @@ abstract class _ConceptMapTarget extends ConceptMapTarget {
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final Code? code,
+      final FhirCode? code,
       @JsonKey(name: '_code') final Element? codeElement,
       final String? display,
       @JsonKey(name: '_display') final Element? displayElement,
-      final Canonical? valueSet,
-      final Code? relationship,
+      final FhirCanonical? valueSet,
+      final FhirCode? relationship,
       @JsonKey(name: '_relationship') final Element? relationshipElement,
       final String? comment,
       @JsonKey(name: '_comment') final Element? commentElement,
@@ -10238,7 +10238,7 @@ abstract class _ConceptMapTarget extends ConceptMapTarget {
   @override
 
   /// [code] Identity (code or path) or the element/item that the map refers to.
-  Code? get code;
+  FhirCode? get code;
   @override
 
   /// [codeElement] ("_code") Extensions for code
@@ -10256,11 +10256,11 @@ abstract class _ConceptMapTarget extends ConceptMapTarget {
   @override
 
   /// [valueSet] The set of codes that the map refers to.
-  Canonical? get valueSet;
+  FhirCanonical? get valueSet;
   @override
 
   /// [relationship] The relationship between the source and target concepts. The relationship is read from source to target (e.g. source-is-narrower-than-target).
-  Code? get relationship;
+  FhirCode? get relationship;
   @override
 
   /// [relationshipElement] ("_relationship") Extensions for relationship
@@ -10331,7 +10331,7 @@ mixin _$ConceptMapDependsOn {
   Element? get propertyElement => throw _privateConstructorUsedError;
 
   /// [valueCode] Property value that the map depends on.
-  Code? get valueCode => throw _privateConstructorUsedError;
+  FhirCode? get valueCode => throw _privateConstructorUsedError;
 
   /// [valueCodeElement] ("_valueCode") Extensions for valueCode
   @JsonKey(name: '_valueCode')
@@ -10348,14 +10348,14 @@ mixin _$ConceptMapDependsOn {
   Element? get valueStringElement => throw _privateConstructorUsedError;
 
   /// [valueInteger] Property value that the map depends on.
-  Integer? get valueInteger => throw _privateConstructorUsedError;
+  FhirInteger? get valueInteger => throw _privateConstructorUsedError;
 
   /// [valueIntegerElement] ("_valueInteger") Extensions for valueInteger
   @JsonKey(name: '_valueInteger')
   Element? get valueIntegerElement => throw _privateConstructorUsedError;
 
   /// [valueBoolean] Property value that the map depends on.
-  Boolean? get valueBoolean => throw _privateConstructorUsedError;
+  FhirBoolean? get valueBoolean => throw _privateConstructorUsedError;
 
   /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
   @JsonKey(name: '_valueBoolean')
@@ -10369,7 +10369,7 @@ mixin _$ConceptMapDependsOn {
   Element? get valueDateTimeElement => throw _privateConstructorUsedError;
 
   /// [valueDecimal] Property value that the map depends on.
-  Decimal? get valueDecimal => throw _privateConstructorUsedError;
+  FhirDecimal? get valueDecimal => throw _privateConstructorUsedError;
 
   /// [valueDecimalElement] ("_valueDecimal") Extensions for valueDecimal
   @JsonKey(name: '_valueDecimal')
@@ -10383,14 +10383,14 @@ mixin _$ConceptMapDependsOn {
   Element? get valueUriElement => throw _privateConstructorUsedError;
 
   /// [valueId] Property value that the map depends on.
-  Id? get valueId => throw _privateConstructorUsedError;
+  FhirId? get valueId => throw _privateConstructorUsedError;
 
   /// [valueIdElement] ("_valueId") Extensions for valueId
   @JsonKey(name: '_valueId')
   Element? get valueIdElement => throw _privateConstructorUsedError;
 
   /// [valueSet] This mapping applies if the property value is a code from this value set.
-  Canonical? get valueSet => throw _privateConstructorUsedError;
+  FhirCanonical? get valueSet => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -10410,24 +10410,24 @@ abstract class $ConceptMapDependsOnCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       FhirUri? property,
       @JsonKey(name: '_property') Element? propertyElement,
-      Code? valueCode,
+      FhirCode? valueCode,
       @JsonKey(name: '_valueCode') Element? valueCodeElement,
       Coding? valueCoding,
       String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
-      Integer? valueInteger,
+      FhirInteger? valueInteger,
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
-      Boolean? valueBoolean,
+      FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
-      Decimal? valueDecimal,
+      FhirDecimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
       FhirUri? valueUri,
       @JsonKey(name: '_valueUri') Element? valueUriElement,
-      Id? valueId,
+      FhirId? valueId,
       @JsonKey(name: '_valueId') Element? valueIdElement,
-      Canonical? valueSet});
+      FhirCanonical? valueSet});
 
   $ElementCopyWith<$Res>? get propertyElement;
   $ElementCopyWith<$Res>? get valueCodeElement;
@@ -10502,7 +10502,7 @@ class _$ConceptMapDependsOnCopyWithImpl<$Res, $Val extends ConceptMapDependsOn>
       valueCode: freezed == valueCode
           ? _value.valueCode
           : valueCode // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       valueCodeElement: freezed == valueCodeElement
           ? _value.valueCodeElement
           : valueCodeElement // ignore: cast_nullable_to_non_nullable
@@ -10530,7 +10530,7 @@ class _$ConceptMapDependsOnCopyWithImpl<$Res, $Val extends ConceptMapDependsOn>
       valueBoolean: freezed == valueBoolean
           ? _value.valueBoolean
           : valueBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       valueBooleanElement: freezed == valueBooleanElement
           ? _value.valueBooleanElement
           : valueBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -10570,7 +10570,7 @@ class _$ConceptMapDependsOnCopyWithImpl<$Res, $Val extends ConceptMapDependsOn>
       valueSet: freezed == valueSet
           ? _value.valueSet
           : valueSet // ignore: cast_nullable_to_non_nullable
-              as Canonical?,
+              as FhirCanonical?,
     ) as $Val);
   }
 
@@ -10709,24 +10709,24 @@ abstract class _$$_ConceptMapDependsOnCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       FhirUri? property,
       @JsonKey(name: '_property') Element? propertyElement,
-      Code? valueCode,
+      FhirCode? valueCode,
       @JsonKey(name: '_valueCode') Element? valueCodeElement,
       Coding? valueCoding,
       String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
-      Integer? valueInteger,
+      FhirInteger? valueInteger,
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
-      Boolean? valueBoolean,
+      FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
-      Decimal? valueDecimal,
+      FhirDecimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
       FhirUri? valueUri,
       @JsonKey(name: '_valueUri') Element? valueUriElement,
-      Id? valueId,
+      FhirId? valueId,
       @JsonKey(name: '_valueId') Element? valueIdElement,
-      Canonical? valueSet});
+      FhirCanonical? valueSet});
 
   @override
   $ElementCopyWith<$Res>? get propertyElement;
@@ -10809,7 +10809,7 @@ class __$$_ConceptMapDependsOnCopyWithImpl<$Res>
       valueCode: freezed == valueCode
           ? _value.valueCode
           : valueCode // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       valueCodeElement: freezed == valueCodeElement
           ? _value.valueCodeElement
           : valueCodeElement // ignore: cast_nullable_to_non_nullable
@@ -10837,7 +10837,7 @@ class __$$_ConceptMapDependsOnCopyWithImpl<$Res>
       valueBoolean: freezed == valueBoolean
           ? _value.valueBoolean
           : valueBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       valueBooleanElement: freezed == valueBooleanElement
           ? _value.valueBooleanElement
           : valueBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -10877,7 +10877,7 @@ class __$$_ConceptMapDependsOnCopyWithImpl<$Res>
       valueSet: freezed == valueSet
           ? _value.valueSet
           : valueSet // ignore: cast_nullable_to_non_nullable
-              as Canonical?,
+              as FhirCanonical?,
     ));
   }
 }
@@ -10992,7 +10992,7 @@ class _$_ConceptMapDependsOn extends _ConceptMapDependsOn {
 
   /// [valueCode] Property value that the map depends on.
   @override
-  final Code? valueCode;
+  final FhirCode? valueCode;
 
   /// [valueCodeElement] ("_valueCode") Extensions for valueCode
   @override
@@ -11023,7 +11023,7 @@ class _$_ConceptMapDependsOn extends _ConceptMapDependsOn {
 
   /// [valueBoolean] Property value that the map depends on.
   @override
-  final Boolean? valueBoolean;
+  final FhirBoolean? valueBoolean;
 
   /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
   @override
@@ -11068,7 +11068,7 @@ class _$_ConceptMapDependsOn extends _ConceptMapDependsOn {
 
   /// [valueSet] This mapping applies if the property value is a code from this value set.
   @override
-  final Canonical? valueSet;
+  final FhirCanonical? valueSet;
 
   @override
   String toString() {
@@ -11177,14 +11177,14 @@ abstract class _ConceptMapDependsOn extends ConceptMapDependsOn {
       final List<FhirExtension>? modifierExtension,
       final FhirUri? property,
       @JsonKey(name: '_property') final Element? propertyElement,
-      final Code? valueCode,
+      final FhirCode? valueCode,
       @JsonKey(name: '_valueCode') final Element? valueCodeElement,
       final Coding? valueCoding,
       final String? valueString,
       @JsonKey(name: '_valueString') final Element? valueStringElement,
       final Integer? valueInteger,
       @JsonKey(name: '_valueInteger') final Element? valueIntegerElement,
-      final Boolean? valueBoolean,
+      final FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') final Element? valueBooleanElement,
       final FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') final Element? valueDateTimeElement,
@@ -11194,7 +11194,7 @@ abstract class _ConceptMapDependsOn extends ConceptMapDependsOn {
       @JsonKey(name: '_valueUri') final Element? valueUriElement,
       final Id? valueId,
       @JsonKey(name: '_valueId') final Element? valueIdElement,
-      final Canonical? valueSet}) = _$_ConceptMapDependsOn;
+      final FhirCanonical? valueSet}) = _$_ConceptMapDependsOn;
   _ConceptMapDependsOn._() : super._();
 
   factory _ConceptMapDependsOn.fromJson(Map<String, dynamic> json) =
@@ -11242,7 +11242,7 @@ abstract class _ConceptMapDependsOn extends ConceptMapDependsOn {
   @override
 
   /// [valueCode] Property value that the map depends on.
-  Code? get valueCode;
+  FhirCode? get valueCode;
   @override
 
   /// [valueCodeElement] ("_valueCode") Extensions for valueCode
@@ -11264,7 +11264,7 @@ abstract class _ConceptMapDependsOn extends ConceptMapDependsOn {
   @override
 
   /// [valueInteger] Property value that the map depends on.
-  Integer? get valueInteger;
+  FhirInteger? get valueInteger;
   @override
 
   /// [valueIntegerElement] ("_valueInteger") Extensions for valueInteger
@@ -11273,7 +11273,7 @@ abstract class _ConceptMapDependsOn extends ConceptMapDependsOn {
   @override
 
   /// [valueBoolean] Property value that the map depends on.
-  Boolean? get valueBoolean;
+  FhirBoolean? get valueBoolean;
   @override
 
   /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
@@ -11291,7 +11291,7 @@ abstract class _ConceptMapDependsOn extends ConceptMapDependsOn {
   @override
 
   /// [valueDecimal] Property value that the map depends on.
-  Decimal? get valueDecimal;
+  FhirDecimal? get valueDecimal;
   @override
 
   /// [valueDecimalElement] ("_valueDecimal") Extensions for valueDecimal
@@ -11309,7 +11309,7 @@ abstract class _ConceptMapDependsOn extends ConceptMapDependsOn {
   @override
 
   /// [valueId] Property value that the map depends on.
-  Id? get valueId;
+  FhirId? get valueId;
   @override
 
   /// [valueIdElement] ("_valueId") Extensions for valueId
@@ -11318,7 +11318,7 @@ abstract class _ConceptMapDependsOn extends ConceptMapDependsOn {
   @override
 
   /// [valueSet] This mapping applies if the property value is a code from this value set.
-  Canonical? get valueSet;
+  FhirCanonical? get valueSet;
   @override
   @JsonKey(ignore: true)
   _$$_ConceptMapDependsOnCopyWith<_$_ConceptMapDependsOn> get copyWith =>
@@ -11360,14 +11360,14 @@ mixin _$ConceptMapUnmapped {
       throw _privateConstructorUsedError;
 
   /// [mode] Defines which action to take if there is no match for the source concept in the target system designated for the group. One of 3 actions are possible: use the unmapped source code (this is useful when doing a mapping between versions, and only a few codes have changed), use a fixed code (a default code), or alternatively, a reference to a different concept map can be provided (by canonical URL).
-  Code? get mode => throw _privateConstructorUsedError;
+  FhirCode? get mode => throw _privateConstructorUsedError;
 
   /// [modeElement] ("_mode") Extensions for mode
   @JsonKey(name: '_mode')
   Element? get modeElement => throw _privateConstructorUsedError;
 
   /// [code] The fixed code to use when the mode = 'fixed'  - all unmapped codes are mapped to a single fixed code.
-  Code? get code => throw _privateConstructorUsedError;
+  FhirCode? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] ("_code") Extensions for code
   @JsonKey(name: '_code')
@@ -11381,17 +11381,17 @@ mixin _$ConceptMapUnmapped {
   Element? get displayElement => throw _privateConstructorUsedError;
 
   /// [valueSet] The set of fixed codes to use when the mode = 'fixed'  - all unmapped codes are mapped to each of the fixed codes.
-  Canonical? get valueSet => throw _privateConstructorUsedError;
+  FhirCanonical? get valueSet => throw _privateConstructorUsedError;
 
   /// [relationship] The default relationship value to apply between the source and target concepts when the source code is unmapped and the mode is 'fixed' or 'use-source-code'.
-  Code? get relationship => throw _privateConstructorUsedError;
+  FhirCode? get relationship => throw _privateConstructorUsedError;
 
   /// [relationshipElement] ("_relationship") Extensions for relationship
   @JsonKey(name: '_relationship')
   Element? get relationshipElement => throw _privateConstructorUsedError;
 
   /// [otherMap] The canonical reference to an additional ConceptMap resource instance to use for mapping if this ConceptMap resource contains no matching mapping for the source concept.
-  Canonical? get otherMap => throw _privateConstructorUsedError;
+  FhirCanonical? get otherMap => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -11409,16 +11409,16 @@ abstract class $ConceptMapUnmappedCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? mode,
+      FhirCode? mode,
       @JsonKey(name: '_mode') Element? modeElement,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement,
       String? display,
       @JsonKey(name: '_display') Element? displayElement,
-      Canonical? valueSet,
-      Code? relationship,
+      FhirCanonical? valueSet,
+      FhirCode? relationship,
       @JsonKey(name: '_relationship') Element? relationshipElement,
-      Canonical? otherMap});
+      FhirCanonical? otherMap});
 
   $ElementCopyWith<$Res>? get modeElement;
   $ElementCopyWith<$Res>? get codeElement;
@@ -11469,7 +11469,7 @@ class _$ConceptMapUnmappedCopyWithImpl<$Res, $Val extends ConceptMapUnmapped>
       mode: freezed == mode
           ? _value.mode
           : mode // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       modeElement: freezed == modeElement
           ? _value.modeElement
           : modeElement // ignore: cast_nullable_to_non_nullable
@@ -11477,7 +11477,7 @@ class _$ConceptMapUnmappedCopyWithImpl<$Res, $Val extends ConceptMapUnmapped>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -11493,11 +11493,11 @@ class _$ConceptMapUnmappedCopyWithImpl<$Res, $Val extends ConceptMapUnmapped>
       valueSet: freezed == valueSet
           ? _value.valueSet
           : valueSet // ignore: cast_nullable_to_non_nullable
-              as Canonical?,
+              as FhirCanonical?,
       relationship: freezed == relationship
           ? _value.relationship
           : relationship // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       relationshipElement: freezed == relationshipElement
           ? _value.relationshipElement
           : relationshipElement // ignore: cast_nullable_to_non_nullable
@@ -11505,7 +11505,7 @@ class _$ConceptMapUnmappedCopyWithImpl<$Res, $Val extends ConceptMapUnmapped>
       otherMap: freezed == otherMap
           ? _value.otherMap
           : otherMap // ignore: cast_nullable_to_non_nullable
-              as Canonical?,
+              as FhirCanonical?,
     ) as $Val);
   }
 
@@ -11570,16 +11570,16 @@ abstract class _$$_ConceptMapUnmappedCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? mode,
+      FhirCode? mode,
       @JsonKey(name: '_mode') Element? modeElement,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement,
       String? display,
       @JsonKey(name: '_display') Element? displayElement,
-      Canonical? valueSet,
-      Code? relationship,
+      FhirCanonical? valueSet,
+      FhirCode? relationship,
       @JsonKey(name: '_relationship') Element? relationshipElement,
-      Canonical? otherMap});
+      FhirCanonical? otherMap});
 
   @override
   $ElementCopyWith<$Res>? get modeElement;
@@ -11632,7 +11632,7 @@ class __$$_ConceptMapUnmappedCopyWithImpl<$Res>
       mode: freezed == mode
           ? _value.mode
           : mode // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       modeElement: freezed == modeElement
           ? _value.modeElement
           : modeElement // ignore: cast_nullable_to_non_nullable
@@ -11640,7 +11640,7 @@ class __$$_ConceptMapUnmappedCopyWithImpl<$Res>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -11656,11 +11656,11 @@ class __$$_ConceptMapUnmappedCopyWithImpl<$Res>
       valueSet: freezed == valueSet
           ? _value.valueSet
           : valueSet // ignore: cast_nullable_to_non_nullable
-              as Canonical?,
+              as FhirCanonical?,
       relationship: freezed == relationship
           ? _value.relationship
           : relationship // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       relationshipElement: freezed == relationshipElement
           ? _value.relationshipElement
           : relationshipElement // ignore: cast_nullable_to_non_nullable
@@ -11668,7 +11668,7 @@ class __$$_ConceptMapUnmappedCopyWithImpl<$Res>
       otherMap: freezed == otherMap
           ? _value.otherMap
           : otherMap // ignore: cast_nullable_to_non_nullable
-              as Canonical?,
+              as FhirCanonical?,
     ));
   }
 }
@@ -11764,7 +11764,7 @@ class _$_ConceptMapUnmapped extends _ConceptMapUnmapped {
 
   /// [mode] Defines which action to take if there is no match for the source concept in the target system designated for the group. One of 3 actions are possible: use the unmapped source code (this is useful when doing a mapping between versions, and only a few codes have changed), use a fixed code (a default code), or alternatively, a reference to a different concept map can be provided (by canonical URL).
   @override
-  final Code? mode;
+  final FhirCode? mode;
 
   /// [modeElement] ("_mode") Extensions for mode
   @override
@@ -11773,7 +11773,7 @@ class _$_ConceptMapUnmapped extends _ConceptMapUnmapped {
 
   /// [code] The fixed code to use when the mode = 'fixed'  - all unmapped codes are mapped to a single fixed code.
   @override
-  final Code? code;
+  final FhirCode? code;
 
   /// [codeElement] ("_code") Extensions for code
   @override
@@ -11791,11 +11791,11 @@ class _$_ConceptMapUnmapped extends _ConceptMapUnmapped {
 
   /// [valueSet] The set of fixed codes to use when the mode = 'fixed'  - all unmapped codes are mapped to each of the fixed codes.
   @override
-  final Canonical? valueSet;
+  final FhirCanonical? valueSet;
 
   /// [relationship] The default relationship value to apply between the source and target concepts when the source code is unmapped and the mode is 'fixed' or 'use-source-code'.
   @override
-  final Code? relationship;
+  final FhirCode? relationship;
 
   /// [relationshipElement] ("_relationship") Extensions for relationship
   @override
@@ -11804,7 +11804,7 @@ class _$_ConceptMapUnmapped extends _ConceptMapUnmapped {
 
   /// [otherMap] The canonical reference to an additional ConceptMap resource instance to use for mapping if this ConceptMap resource contains no matching mapping for the source concept.
   @override
-  final Canonical? otherMap;
+  final FhirCanonical? otherMap;
 
   @override
   String toString() {
@@ -11878,16 +11878,16 @@ abstract class _ConceptMapUnmapped extends ConceptMapUnmapped {
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final Code? mode,
+      final FhirCode? mode,
       @JsonKey(name: '_mode') final Element? modeElement,
-      final Code? code,
+      final FhirCode? code,
       @JsonKey(name: '_code') final Element? codeElement,
       final String? display,
       @JsonKey(name: '_display') final Element? displayElement,
-      final Canonical? valueSet,
-      final Code? relationship,
+      final FhirCanonical? valueSet,
+      final FhirCode? relationship,
       @JsonKey(name: '_relationship') final Element? relationshipElement,
-      final Canonical? otherMap}) = _$_ConceptMapUnmapped;
+      final FhirCanonical? otherMap}) = _$_ConceptMapUnmapped;
   _ConceptMapUnmapped._() : super._();
 
   factory _ConceptMapUnmapped.fromJson(Map<String, dynamic> json) =
@@ -11926,7 +11926,7 @@ abstract class _ConceptMapUnmapped extends ConceptMapUnmapped {
   @override
 
   /// [mode] Defines which action to take if there is no match for the source concept in the target system designated for the group. One of 3 actions are possible: use the unmapped source code (this is useful when doing a mapping between versions, and only a few codes have changed), use a fixed code (a default code), or alternatively, a reference to a different concept map can be provided (by canonical URL).
-  Code? get mode;
+  FhirCode? get mode;
   @override
 
   /// [modeElement] ("_mode") Extensions for mode
@@ -11935,7 +11935,7 @@ abstract class _ConceptMapUnmapped extends ConceptMapUnmapped {
   @override
 
   /// [code] The fixed code to use when the mode = 'fixed'  - all unmapped codes are mapped to a single fixed code.
-  Code? get code;
+  FhirCode? get code;
   @override
 
   /// [codeElement] ("_code") Extensions for code
@@ -11953,11 +11953,11 @@ abstract class _ConceptMapUnmapped extends ConceptMapUnmapped {
   @override
 
   /// [valueSet] The set of fixed codes to use when the mode = 'fixed'  - all unmapped codes are mapped to each of the fixed codes.
-  Canonical? get valueSet;
+  FhirCanonical? get valueSet;
   @override
 
   /// [relationship] The default relationship value to apply between the source and target concepts when the source code is unmapped and the mode is 'fixed' or 'use-source-code'.
-  Code? get relationship;
+  FhirCode? get relationship;
   @override
 
   /// [relationshipElement] ("_relationship") Extensions for relationship
@@ -11966,7 +11966,7 @@ abstract class _ConceptMapUnmapped extends ConceptMapUnmapped {
   @override
 
   /// [otherMap] The canonical reference to an additional ConceptMap resource instance to use for mapping if this ConceptMap resource contains no matching mapping for the source concept.
-  Canonical? get otherMap;
+  FhirCanonical? get otherMap;
   @override
   @JsonKey(ignore: true)
   _$$_ConceptMapUnmappedCopyWith<_$_ConceptMapUnmapped> get copyWith =>
@@ -11985,7 +11985,7 @@ mixin _$NamingSystem {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -12003,7 +12003,7 @@ mixin _$NamingSystem {
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
@@ -12066,14 +12066,14 @@ mixin _$NamingSystem {
   Element? get titleElement => throw _privateConstructorUsedError;
 
   /// [status] The status of this naming system. Enables tracking the life-cycle of the content.
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
 
   /// [experimental] A Boolean value to indicate that this naming system is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.
-  Boolean? get experimental => throw _privateConstructorUsedError;
+  FhirBoolean? get experimental => throw _privateConstructorUsedError;
 
   /// [experimentalElement] ("_experimental") Extensions for experimental
   @JsonKey(name: '_experimental')
@@ -12097,7 +12097,7 @@ mixin _$NamingSystem {
   List<ContactDetail>? get contact => throw _privateConstructorUsedError;
 
   /// [description] A free text natural language description of the naming system from a consumer's perspective. Details about what the namespace identifies including scope, granularity, version labeling, etc.
-  Markdown? get description => throw _privateConstructorUsedError;
+  FhirMarkdown? get description => throw _privateConstructorUsedError;
 
   /// [descriptionElement] ("_description") Extensions for description
   @JsonKey(name: '_description')
@@ -12110,14 +12110,14 @@ mixin _$NamingSystem {
   List<CodeableConcept>? get jurisdiction => throw _privateConstructorUsedError;
 
   /// [purpose] Explanation of why this naming system is needed and why it has been designed as it has.
-  Markdown? get purpose => throw _privateConstructorUsedError;
+  FhirMarkdown? get purpose => throw _privateConstructorUsedError;
 
   /// [purposeElement] ("_purpose") Extensions for purpose
   @JsonKey(name: '_purpose')
   Element? get purposeElement => throw _privateConstructorUsedError;
 
   /// [copyright] A copyright statement relating to the naming system and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the naming system.
-  Markdown? get copyright => throw _privateConstructorUsedError;
+  FhirMarkdown? get copyright => throw _privateConstructorUsedError;
 
   /// [copyrightElement] ("_copyright") Extensions for copyright
   @JsonKey(name: '_copyright')
@@ -12131,14 +12131,14 @@ mixin _$NamingSystem {
   Element? get copyrightLabelElement => throw _privateConstructorUsedError;
 
   /// [approvalDate] The date on which the resource content was approved by the publisher. Approval happens once when the content is officially approved for usage.
-  Date? get approvalDate => throw _privateConstructorUsedError;
+  FhirDate? get approvalDate => throw _privateConstructorUsedError;
 
   /// [approvalDateElement] ("_approvalDate") Extensions for approvalDate
   @JsonKey(name: '_approvalDate')
   Element? get approvalDateElement => throw _privateConstructorUsedError;
 
   /// [lastReviewDate] The date on which the resource content was last reviewed. Review happens periodically after approval but does not change the original approval date.
-  Date? get lastReviewDate => throw _privateConstructorUsedError;
+  FhirDate? get lastReviewDate => throw _privateConstructorUsedError;
 
   /// [lastReviewDateElement] ("_lastReviewDate") Extensions for lastReviewDate
   @JsonKey(name: '_lastReviewDate')
@@ -12167,7 +12167,7 @@ mixin _$NamingSystem {
       throw _privateConstructorUsedError;
 
   /// [kind] Indicates the purpose for the naming system - what kinds of things does it make unique?
-  Code? get kind => throw _privateConstructorUsedError;
+  FhirCode? get kind => throw _privateConstructorUsedError;
 
   /// [kindElement] ("_kind") Extensions for kind
   @JsonKey(name: '_kind')
@@ -12208,12 +12208,12 @@ abstract class $NamingSystemCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.NamingSystem)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -12238,10 +12238,10 @@ abstract class $NamingSystemCopyWith<$Res> {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Boolean? experimental,
+      FhirBoolean? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
       FhirDateTime? date,
@@ -12251,24 +12251,24 @@ abstract class $NamingSystemCopyWith<$Res> {
       @JsonKey(name: '_publisher')
           Element? publisherElement,
       List<ContactDetail>? contact,
-      Markdown? description,
+      FhirMarkdown? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
       List<UsageContext>? useContext,
       List<CodeableConcept>? jurisdiction,
-      Markdown? purpose,
+      FhirMarkdown? purpose,
       @JsonKey(name: '_purpose')
           Element? purposeElement,
-      Markdown? copyright,
+      FhirMarkdown? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
       String? copyrightLabel,
       @JsonKey(name: '_copyrightLabel')
           Element? copyrightLabelElement,
-      Date? approvalDate,
+      FhirDate? approvalDate,
       @JsonKey(name: '_approvalDate')
           Element? approvalDateElement,
-      Date? lastReviewDate,
+      FhirDate? lastReviewDate,
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
@@ -12278,7 +12278,7 @@ abstract class $NamingSystemCopyWith<$Res> {
       List<ContactDetail>? reviewer,
       List<ContactDetail>? endorser,
       List<RelatedArtifact>? relatedArtifact,
-      Code? kind,
+      FhirCode? kind,
       @JsonKey(name: '_kind')
           Element? kindElement,
       String? responsible,
@@ -12416,7 +12416,7 @@ class _$NamingSystemCopyWithImpl<$Res, $Val extends NamingSystem>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -12488,7 +12488,7 @@ class _$NamingSystemCopyWithImpl<$Res, $Val extends NamingSystem>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -12496,7 +12496,7 @@ class _$NamingSystemCopyWithImpl<$Res, $Val extends NamingSystem>
       experimental: freezed == experimental
           ? _value.experimental
           : experimental // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       experimentalElement: freezed == experimentalElement
           ? _value.experimentalElement
           : experimentalElement // ignore: cast_nullable_to_non_nullable
@@ -12608,7 +12608,7 @@ class _$NamingSystemCopyWithImpl<$Res, $Val extends NamingSystem>
       kind: freezed == kind
           ? _value.kind
           : kind // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       kindElement: freezed == kindElement
           ? _value.kindElement
           : kindElement // ignore: cast_nullable_to_non_nullable
@@ -12954,12 +12954,12 @@ abstract class _$$_NamingSystemCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.NamingSystem)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -12984,10 +12984,10 @@ abstract class _$$_NamingSystemCopyWith<$Res>
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Boolean? experimental,
+      FhirBoolean? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
       FhirDateTime? date,
@@ -12997,24 +12997,24 @@ abstract class _$$_NamingSystemCopyWith<$Res>
       @JsonKey(name: '_publisher')
           Element? publisherElement,
       List<ContactDetail>? contact,
-      Markdown? description,
+      FhirMarkdown? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
       List<UsageContext>? useContext,
       List<CodeableConcept>? jurisdiction,
-      Markdown? purpose,
+      FhirMarkdown? purpose,
       @JsonKey(name: '_purpose')
           Element? purposeElement,
-      Markdown? copyright,
+      FhirMarkdown? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
       String? copyrightLabel,
       @JsonKey(name: '_copyrightLabel')
           Element? copyrightLabelElement,
-      Date? approvalDate,
+      FhirDate? approvalDate,
       @JsonKey(name: '_approvalDate')
           Element? approvalDateElement,
-      Date? lastReviewDate,
+      FhirDate? lastReviewDate,
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
@@ -13024,7 +13024,7 @@ abstract class _$$_NamingSystemCopyWith<$Res>
       List<ContactDetail>? reviewer,
       List<ContactDetail>? endorser,
       List<RelatedArtifact>? relatedArtifact,
-      Code? kind,
+      FhirCode? kind,
       @JsonKey(name: '_kind')
           Element? kindElement,
       String? responsible,
@@ -13185,7 +13185,7 @@ class __$$_NamingSystemCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -13257,7 +13257,7 @@ class __$$_NamingSystemCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -13265,7 +13265,7 @@ class __$$_NamingSystemCopyWithImpl<$Res>
       experimental: freezed == experimental
           ? _value.experimental
           : experimental // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       experimentalElement: freezed == experimentalElement
           ? _value.experimentalElement
           : experimentalElement // ignore: cast_nullable_to_non_nullable
@@ -13377,7 +13377,7 @@ class __$$_NamingSystemCopyWithImpl<$Res>
       kind: freezed == kind
           ? _value.kind
           : kind // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       kindElement: freezed == kindElement
           ? _value.kindElement
           : kindElement // ignore: cast_nullable_to_non_nullable
@@ -13546,7 +13546,7 @@ class _$_NamingSystem extends _NamingSystem {
 
   /// [language] The base language in which the resource is written.
   @override
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] ("_language") Extensions for language
   @override
@@ -13662,7 +13662,7 @@ class _$_NamingSystem extends _NamingSystem {
 
   /// [status] The status of this naming system. Enables tracking the life-cycle of the content.
   @override
-  final Code? status;
+  final FhirCode? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -13671,7 +13671,7 @@ class _$_NamingSystem extends _NamingSystem {
 
   /// [experimental] A Boolean value to indicate that this naming system is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.
   @override
-  final Boolean? experimental;
+  final FhirBoolean? experimental;
 
   /// [experimentalElement] ("_experimental") Extensions for experimental
   @override
@@ -13873,7 +13873,7 @@ class _$_NamingSystem extends _NamingSystem {
 
   /// [kind] Indicates the purpose for the naming system - what kinds of things does it make unique?
   @override
-  final Code? kind;
+  final FhirCode? kind;
 
   /// [kindElement] ("_kind") Extensions for kind
   @override
@@ -14113,7 +14113,7 @@ abstract class _NamingSystem extends NamingSystem {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -14138,10 +14138,10 @@ abstract class _NamingSystem extends NamingSystem {
       final String? title,
       @JsonKey(name: '_title')
           final Element? titleElement,
-      final Code? status,
+      final FhirCode? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
-      final Boolean? experimental,
+      final FhirBoolean? experimental,
       @JsonKey(name: '_experimental')
           final Element? experimentalElement,
       final FhirDateTime? date,
@@ -14178,7 +14178,7 @@ abstract class _NamingSystem extends NamingSystem {
       final List<ContactDetail>? reviewer,
       final List<ContactDetail>? endorser,
       final List<RelatedArtifact>? relatedArtifact,
-      final Code? kind,
+      final FhirCode? kind,
       @JsonKey(name: '_kind')
           final Element? kindElement,
       final String? responsible,
@@ -14203,7 +14203,7 @@ abstract class _NamingSystem extends NamingSystem {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -14225,7 +14225,7 @@ abstract class _NamingSystem extends NamingSystem {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] ("_language") Extensions for language
@@ -14304,7 +14304,7 @@ abstract class _NamingSystem extends NamingSystem {
   @override
 
   /// [status] The status of this naming system. Enables tracking the life-cycle of the content.
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status
@@ -14313,7 +14313,7 @@ abstract class _NamingSystem extends NamingSystem {
   @override
 
   /// [experimental] A Boolean value to indicate that this naming system is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.
-  Boolean? get experimental;
+  FhirBoolean? get experimental;
   @override
 
   /// [experimentalElement] ("_experimental") Extensions for experimental
@@ -14344,7 +14344,7 @@ abstract class _NamingSystem extends NamingSystem {
   @override
 
   /// [description] A free text natural language description of the naming system from a consumer's perspective. Details about what the namespace identifies including scope, granularity, version labeling, etc.
-  Markdown? get description;
+  FhirMarkdown? get description;
   @override
 
   /// [descriptionElement] ("_description") Extensions for description
@@ -14361,7 +14361,7 @@ abstract class _NamingSystem extends NamingSystem {
   @override
 
   /// [purpose] Explanation of why this naming system is needed and why it has been designed as it has.
-  Markdown? get purpose;
+  FhirMarkdown? get purpose;
   @override
 
   /// [purposeElement] ("_purpose") Extensions for purpose
@@ -14370,7 +14370,7 @@ abstract class _NamingSystem extends NamingSystem {
   @override
 
   /// [copyright] A copyright statement relating to the naming system and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the naming system.
-  Markdown? get copyright;
+  FhirMarkdown? get copyright;
   @override
 
   /// [copyrightElement] ("_copyright") Extensions for copyright
@@ -14388,7 +14388,7 @@ abstract class _NamingSystem extends NamingSystem {
   @override
 
   /// [approvalDate] The date on which the resource content was approved by the publisher. Approval happens once when the content is officially approved for usage.
-  Date? get approvalDate;
+  FhirDate? get approvalDate;
   @override
 
   /// [approvalDateElement] ("_approvalDate") Extensions for approvalDate
@@ -14397,7 +14397,7 @@ abstract class _NamingSystem extends NamingSystem {
   @override
 
   /// [lastReviewDate] The date on which the resource content was last reviewed. Review happens periodically after approval but does not change the original approval date.
-  Date? get lastReviewDate;
+  FhirDate? get lastReviewDate;
   @override
 
   /// [lastReviewDateElement] ("_lastReviewDate") Extensions for lastReviewDate
@@ -14434,7 +14434,7 @@ abstract class _NamingSystem extends NamingSystem {
   @override
 
   /// [kind] Indicates the purpose for the naming system - what kinds of things does it make unique?
-  Code? get kind;
+  FhirCode? get kind;
   @override
 
   /// [kindElement] ("_kind") Extensions for kind
@@ -14507,7 +14507,7 @@ mixin _$NamingSystemUniqueId {
       throw _privateConstructorUsedError;
 
   /// [type] Identifies the unique identifier scheme used for this particular identifier.
-  Code? get type => throw _privateConstructorUsedError;
+  FhirCode? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] ("_type") Extensions for type
   @JsonKey(name: '_type')
@@ -14521,7 +14521,7 @@ mixin _$NamingSystemUniqueId {
   Element? get valueElement => throw _privateConstructorUsedError;
 
   /// [preferred] Indicates whether this identifier is the "preferred" identifier of this type.
-  Boolean? get preferred => throw _privateConstructorUsedError;
+  FhirBoolean? get preferred => throw _privateConstructorUsedError;
 
   /// [preferredElement] ("_preferred") Extensions for preferred
   @JsonKey(name: '_preferred')
@@ -14538,7 +14538,7 @@ mixin _$NamingSystemUniqueId {
   Period? get period => throw _privateConstructorUsedError;
 
   /// [authoritative] Indicates whether this identifier ie endorsed by the official owner of the associated naming system.
-  Boolean? get authoritative => throw _privateConstructorUsedError;
+  FhirBoolean? get authoritative => throw _privateConstructorUsedError;
 
   /// [authoritativeElement] ("_authoritative") Extensions for authoritative
   @JsonKey(name: '_authoritative')
@@ -14560,16 +14560,16 @@ abstract class $NamingSystemUniqueIdCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? type,
+      FhirCode? type,
       @JsonKey(name: '_type') Element? typeElement,
       String? value,
       @JsonKey(name: '_value') Element? valueElement,
-      Boolean? preferred,
+      FhirBoolean? preferred,
       @JsonKey(name: '_preferred') Element? preferredElement,
       String? comment,
       @JsonKey(name: '_comment') Element? commentElement,
       Period? period,
-      Boolean? authoritative,
+      FhirBoolean? authoritative,
       @JsonKey(name: '_authoritative') Element? authoritativeElement});
 
   $ElementCopyWith<$Res>? get typeElement;
@@ -14625,7 +14625,7 @@ class _$NamingSystemUniqueIdCopyWithImpl<$Res,
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       typeElement: freezed == typeElement
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -14641,7 +14641,7 @@ class _$NamingSystemUniqueIdCopyWithImpl<$Res,
       preferred: freezed == preferred
           ? _value.preferred
           : preferred // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       preferredElement: freezed == preferredElement
           ? _value.preferredElement
           : preferredElement // ignore: cast_nullable_to_non_nullable
@@ -14661,7 +14661,7 @@ class _$NamingSystemUniqueIdCopyWithImpl<$Res,
       authoritative: freezed == authoritative
           ? _value.authoritative
           : authoritative // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       authoritativeElement: freezed == authoritativeElement
           ? _value.authoritativeElement
           : authoritativeElement // ignore: cast_nullable_to_non_nullable
@@ -14754,16 +14754,16 @@ abstract class _$$_NamingSystemUniqueIdCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? type,
+      FhirCode? type,
       @JsonKey(name: '_type') Element? typeElement,
       String? value,
       @JsonKey(name: '_value') Element? valueElement,
-      Boolean? preferred,
+      FhirBoolean? preferred,
       @JsonKey(name: '_preferred') Element? preferredElement,
       String? comment,
       @JsonKey(name: '_comment') Element? commentElement,
       Period? period,
-      Boolean? authoritative,
+      FhirBoolean? authoritative,
       @JsonKey(name: '_authoritative') Element? authoritativeElement});
 
   @override
@@ -14822,7 +14822,7 @@ class __$$_NamingSystemUniqueIdCopyWithImpl<$Res>
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       typeElement: freezed == typeElement
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -14838,7 +14838,7 @@ class __$$_NamingSystemUniqueIdCopyWithImpl<$Res>
       preferred: freezed == preferred
           ? _value.preferred
           : preferred // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       preferredElement: freezed == preferredElement
           ? _value.preferredElement
           : preferredElement // ignore: cast_nullable_to_non_nullable
@@ -14858,7 +14858,7 @@ class __$$_NamingSystemUniqueIdCopyWithImpl<$Res>
       authoritative: freezed == authoritative
           ? _value.authoritative
           : authoritative // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       authoritativeElement: freezed == authoritativeElement
           ? _value.authoritativeElement
           : authoritativeElement // ignore: cast_nullable_to_non_nullable
@@ -14959,7 +14959,7 @@ class _$_NamingSystemUniqueId extends _NamingSystemUniqueId {
 
   /// [type] Identifies the unique identifier scheme used for this particular identifier.
   @override
-  final Code? type;
+  final FhirCode? type;
 
   /// [typeElement] ("_type") Extensions for type
   @override
@@ -14977,7 +14977,7 @@ class _$_NamingSystemUniqueId extends _NamingSystemUniqueId {
 
   /// [preferred] Indicates whether this identifier is the "preferred" identifier of this type.
   @override
-  final Boolean? preferred;
+  final FhirBoolean? preferred;
 
   /// [preferredElement] ("_preferred") Extensions for preferred
   @override
@@ -14999,7 +14999,7 @@ class _$_NamingSystemUniqueId extends _NamingSystemUniqueId {
 
   /// [authoritative] Indicates whether this identifier ie endorsed by the official owner of the associated naming system.
   @override
-  final Boolean? authoritative;
+  final FhirBoolean? authoritative;
 
   /// [authoritativeElement] ("_authoritative") Extensions for authoritative
   @override
@@ -15081,20 +15081,20 @@ abstract class _NamingSystemUniqueId extends NamingSystemUniqueId {
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final Code? type,
+      final FhirCode? type,
       @JsonKey(name: '_type')
           final Element? typeElement,
       final String? value,
       @JsonKey(name: '_value')
           final Element? valueElement,
-      final Boolean? preferred,
+      final FhirBoolean? preferred,
       @JsonKey(name: '_preferred')
           final Element? preferredElement,
       final String? comment,
       @JsonKey(name: '_comment')
           final Element? commentElement,
       final Period? period,
-      final Boolean? authoritative,
+      final FhirBoolean? authoritative,
       @JsonKey(name: '_authoritative')
           final Element? authoritativeElement}) = _$_NamingSystemUniqueId;
   _NamingSystemUniqueId._() : super._();
@@ -15135,7 +15135,7 @@ abstract class _NamingSystemUniqueId extends NamingSystemUniqueId {
   @override
 
   /// [type] Identifies the unique identifier scheme used for this particular identifier.
-  Code? get type;
+  FhirCode? get type;
   @override
 
   /// [typeElement] ("_type") Extensions for type
@@ -15153,7 +15153,7 @@ abstract class _NamingSystemUniqueId extends NamingSystemUniqueId {
   @override
 
   /// [preferred] Indicates whether this identifier is the "preferred" identifier of this type.
-  Boolean? get preferred;
+  FhirBoolean? get preferred;
   @override
 
   /// [preferredElement] ("_preferred") Extensions for preferred
@@ -15175,7 +15175,7 @@ abstract class _NamingSystemUniqueId extends NamingSystemUniqueId {
   @override
 
   /// [authoritative] Indicates whether this identifier ie endorsed by the official owner of the associated naming system.
-  Boolean? get authoritative;
+  FhirBoolean? get authoritative;
   @override
 
   /// [authoritativeElement] ("_authoritative") Extensions for authoritative
@@ -15200,7 +15200,7 @@ mixin _$TerminologyCapabilities {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -15218,7 +15218,7 @@ mixin _$TerminologyCapabilities {
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
@@ -15281,14 +15281,14 @@ mixin _$TerminologyCapabilities {
   Element? get titleElement => throw _privateConstructorUsedError;
 
   /// [status] The status of this terminology capabilities. Enables tracking the life-cycle of the content.
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
 
   /// [experimental] A Boolean value to indicate that this terminology capabilities is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.
-  Boolean? get experimental => throw _privateConstructorUsedError;
+  FhirBoolean? get experimental => throw _privateConstructorUsedError;
 
   /// [experimentalElement] ("_experimental") Extensions for experimental
   @JsonKey(name: '_experimental')
@@ -15312,7 +15312,7 @@ mixin _$TerminologyCapabilities {
   List<ContactDetail>? get contact => throw _privateConstructorUsedError;
 
   /// [description] A free text natural language description of the terminology capabilities from a consumer's perspective. Typically, this is used when the capability statement describes a desired rather than an actual solution, for example as a formal expression of requirements as part of an RFP.
-  Markdown? get description => throw _privateConstructorUsedError;
+  FhirMarkdown? get description => throw _privateConstructorUsedError;
 
   /// [descriptionElement] ("_description") Extensions for description
   @JsonKey(name: '_description')
@@ -15325,14 +15325,14 @@ mixin _$TerminologyCapabilities {
   List<CodeableConcept>? get jurisdiction => throw _privateConstructorUsedError;
 
   /// [purpose] Explanation of why this terminology capabilities is needed and why it has been designed as it has.
-  Markdown? get purpose => throw _privateConstructorUsedError;
+  FhirMarkdown? get purpose => throw _privateConstructorUsedError;
 
   /// [purposeElement] ("_purpose") Extensions for purpose
   @JsonKey(name: '_purpose')
   Element? get purposeElement => throw _privateConstructorUsedError;
 
   /// [copyright] A copyright statement relating to the terminology capabilities and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the terminology capabilities.
-  Markdown? get copyright => throw _privateConstructorUsedError;
+  FhirMarkdown? get copyright => throw _privateConstructorUsedError;
 
   /// [copyrightElement] ("_copyright") Extensions for copyright
   @JsonKey(name: '_copyright')
@@ -15346,7 +15346,7 @@ mixin _$TerminologyCapabilities {
   Element? get copyrightLabelElement => throw _privateConstructorUsedError;
 
   /// [kind] The way that this statement is intended to be used, to describe an actual running instance of software, a particular product (kind, not instance of software) or a class of implementation (e.g. a desired purchase).
-  Code? get kind => throw _privateConstructorUsedError;
+  FhirCode? get kind => throw _privateConstructorUsedError;
 
   /// [kindElement] ("_kind") Extensions for kind
   @JsonKey(name: '_kind')
@@ -15361,7 +15361,7 @@ mixin _$TerminologyCapabilities {
       throw _privateConstructorUsedError;
 
   /// [lockedDate] Whether the server supports lockedDate.
-  Boolean? get lockedDate => throw _privateConstructorUsedError;
+  FhirBoolean? get lockedDate => throw _privateConstructorUsedError;
 
   /// [lockedDateElement] ("_lockedDate") Extensions for lockedDate
   @JsonKey(name: '_lockedDate')
@@ -15376,7 +15376,7 @@ mixin _$TerminologyCapabilities {
       throw _privateConstructorUsedError;
 
   /// [codeSearch] The degree to which the server supports the code search parameter on ValueSet, if it is supported.
-  Code? get codeSearch => throw _privateConstructorUsedError;
+  FhirCode? get codeSearch => throw _privateConstructorUsedError;
 
   /// [codeSearchElement] ("_codeSearch") Extensions for codeSearch
   @JsonKey(name: '_codeSearch')
@@ -15409,12 +15409,12 @@ abstract class $TerminologyCapabilitiesCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.TerminologyCapabilities)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -15439,10 +15439,10 @@ abstract class $TerminologyCapabilitiesCopyWith<$Res> {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Boolean? experimental,
+      FhirBoolean? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
       FhirDateTime? date,
@@ -15452,31 +15452,31 @@ abstract class $TerminologyCapabilitiesCopyWith<$Res> {
       @JsonKey(name: '_publisher')
           Element? publisherElement,
       List<ContactDetail>? contact,
-      Markdown? description,
+      FhirMarkdown? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
       List<UsageContext>? useContext,
       List<CodeableConcept>? jurisdiction,
-      Markdown? purpose,
+      FhirMarkdown? purpose,
       @JsonKey(name: '_purpose')
           Element? purposeElement,
-      Markdown? copyright,
+      FhirMarkdown? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
       String? copyrightLabel,
       @JsonKey(name: '_copyrightLabel')
           Element? copyrightLabelElement,
-      Code? kind,
+      FhirCode? kind,
       @JsonKey(name: '_kind')
           Element? kindElement,
       TerminologyCapabilitiesSoftware? software,
       TerminologyCapabilitiesImplementation? implementation,
-      Boolean? lockedDate,
+      FhirBoolean? lockedDate,
       @JsonKey(name: '_lockedDate')
           Element? lockedDateElement,
       List<TerminologyCapabilitiesCodeSystem>? codeSystem,
       TerminologyCapabilitiesExpansion? expansion,
-      Code? codeSearch,
+      FhirCode? codeSearch,
       @JsonKey(name: '_codeSearch')
           Element? codeSearchElement,
       TerminologyCapabilitiesValidateCode? validateCode,
@@ -15606,7 +15606,7 @@ class _$TerminologyCapabilitiesCopyWithImpl<$Res,
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -15678,7 +15678,7 @@ class _$TerminologyCapabilitiesCopyWithImpl<$Res,
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -15686,7 +15686,7 @@ class _$TerminologyCapabilitiesCopyWithImpl<$Res,
       experimental: freezed == experimental
           ? _value.experimental
           : experimental // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       experimentalElement: freezed == experimentalElement
           ? _value.experimentalElement
           : experimentalElement // ignore: cast_nullable_to_non_nullable
@@ -15754,7 +15754,7 @@ class _$TerminologyCapabilitiesCopyWithImpl<$Res,
       kind: freezed == kind
           ? _value.kind
           : kind // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       kindElement: freezed == kindElement
           ? _value.kindElement
           : kindElement // ignore: cast_nullable_to_non_nullable
@@ -15770,7 +15770,7 @@ class _$TerminologyCapabilitiesCopyWithImpl<$Res,
       lockedDate: freezed == lockedDate
           ? _value.lockedDate
           : lockedDate // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       lockedDateElement: freezed == lockedDateElement
           ? _value.lockedDateElement
           : lockedDateElement // ignore: cast_nullable_to_non_nullable
@@ -15786,7 +15786,7 @@ class _$TerminologyCapabilitiesCopyWithImpl<$Res,
       codeSearch: freezed == codeSearch
           ? _value.codeSearch
           : codeSearch // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       codeSearchElement: freezed == codeSearchElement
           ? _value.codeSearchElement
           : codeSearchElement // ignore: cast_nullable_to_non_nullable
@@ -16150,12 +16150,12 @@ abstract class _$$_TerminologyCapabilitiesCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.TerminologyCapabilities)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -16180,10 +16180,10 @@ abstract class _$$_TerminologyCapabilitiesCopyWith<$Res>
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Boolean? experimental,
+      FhirBoolean? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
       FhirDateTime? date,
@@ -16193,31 +16193,31 @@ abstract class _$$_TerminologyCapabilitiesCopyWith<$Res>
       @JsonKey(name: '_publisher')
           Element? publisherElement,
       List<ContactDetail>? contact,
-      Markdown? description,
+      FhirMarkdown? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
       List<UsageContext>? useContext,
       List<CodeableConcept>? jurisdiction,
-      Markdown? purpose,
+      FhirMarkdown? purpose,
       @JsonKey(name: '_purpose')
           Element? purposeElement,
-      Markdown? copyright,
+      FhirMarkdown? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
       String? copyrightLabel,
       @JsonKey(name: '_copyrightLabel')
           Element? copyrightLabelElement,
-      Code? kind,
+      FhirCode? kind,
       @JsonKey(name: '_kind')
           Element? kindElement,
       TerminologyCapabilitiesSoftware? software,
       TerminologyCapabilitiesImplementation? implementation,
-      Boolean? lockedDate,
+      FhirBoolean? lockedDate,
       @JsonKey(name: '_lockedDate')
           Element? lockedDateElement,
       List<TerminologyCapabilitiesCodeSystem>? codeSystem,
       TerminologyCapabilitiesExpansion? expansion,
-      Code? codeSearch,
+      FhirCode? codeSearch,
       @JsonKey(name: '_codeSearch')
           Element? codeSearchElement,
       TerminologyCapabilitiesValidateCode? validateCode,
@@ -16372,7 +16372,7 @@ class __$$_TerminologyCapabilitiesCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -16444,7 +16444,7 @@ class __$$_TerminologyCapabilitiesCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -16452,7 +16452,7 @@ class __$$_TerminologyCapabilitiesCopyWithImpl<$Res>
       experimental: freezed == experimental
           ? _value.experimental
           : experimental // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       experimentalElement: freezed == experimentalElement
           ? _value.experimentalElement
           : experimentalElement // ignore: cast_nullable_to_non_nullable
@@ -16520,7 +16520,7 @@ class __$$_TerminologyCapabilitiesCopyWithImpl<$Res>
       kind: freezed == kind
           ? _value.kind
           : kind // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       kindElement: freezed == kindElement
           ? _value.kindElement
           : kindElement // ignore: cast_nullable_to_non_nullable
@@ -16536,7 +16536,7 @@ class __$$_TerminologyCapabilitiesCopyWithImpl<$Res>
       lockedDate: freezed == lockedDate
           ? _value.lockedDate
           : lockedDate // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       lockedDateElement: freezed == lockedDateElement
           ? _value.lockedDateElement
           : lockedDateElement // ignore: cast_nullable_to_non_nullable
@@ -16552,7 +16552,7 @@ class __$$_TerminologyCapabilitiesCopyWithImpl<$Res>
       codeSearch: freezed == codeSearch
           ? _value.codeSearch
           : codeSearch // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       codeSearchElement: freezed == codeSearchElement
           ? _value.codeSearchElement
           : codeSearchElement // ignore: cast_nullable_to_non_nullable
@@ -16695,7 +16695,7 @@ class _$_TerminologyCapabilities extends _TerminologyCapabilities {
 
   /// [language] The base language in which the resource is written.
   @override
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] ("_language") Extensions for language
   @override
@@ -16811,7 +16811,7 @@ class _$_TerminologyCapabilities extends _TerminologyCapabilities {
 
   /// [status] The status of this terminology capabilities. Enables tracking the life-cycle of the content.
   @override
-  final Code? status;
+  final FhirCode? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -16820,7 +16820,7 @@ class _$_TerminologyCapabilities extends _TerminologyCapabilities {
 
   /// [experimental] A Boolean value to indicate that this terminology capabilities is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.
   @override
-  final Boolean? experimental;
+  final FhirBoolean? experimental;
 
   /// [experimentalElement] ("_experimental") Extensions for experimental
   @override
@@ -16922,7 +16922,7 @@ class _$_TerminologyCapabilities extends _TerminologyCapabilities {
 
   /// [kind] The way that this statement is intended to be used, to describe an actual running instance of software, a particular product (kind, not instance of software) or a class of implementation (e.g. a desired purchase).
   @override
-  final Code? kind;
+  final FhirCode? kind;
 
   /// [kindElement] ("_kind") Extensions for kind
   @override
@@ -16939,7 +16939,7 @@ class _$_TerminologyCapabilities extends _TerminologyCapabilities {
 
   /// [lockedDate] Whether the server supports lockedDate.
   @override
-  final Boolean? lockedDate;
+  final FhirBoolean? lockedDate;
 
   /// [lockedDateElement] ("_lockedDate") Extensions for lockedDate
   @override
@@ -16965,7 +16965,7 @@ class _$_TerminologyCapabilities extends _TerminologyCapabilities {
 
   /// [codeSearch] The degree to which the server supports the code search parameter on ValueSet, if it is supported.
   @override
-  final Code? codeSearch;
+  final FhirCode? codeSearch;
 
   /// [codeSearchElement] ("_codeSearch") Extensions for codeSearch
   @override
@@ -17174,7 +17174,7 @@ abstract class _TerminologyCapabilities extends TerminologyCapabilities {
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
               final Element? implicitRulesElement,
-          final Code? language,
+          final FhirCode? language,
           @JsonKey(name: '_language')
               final Element? languageElement,
           final Narrative? text,
@@ -17199,10 +17199,10 @@ abstract class _TerminologyCapabilities extends TerminologyCapabilities {
           final String? title,
           @JsonKey(name: '_title')
               final Element? titleElement,
-          final Code? status,
+          final FhirCode? status,
           @JsonKey(name: '_status')
               final Element? statusElement,
-          final Boolean? experimental,
+          final FhirBoolean? experimental,
           @JsonKey(name: '_experimental')
               final Element? experimentalElement,
           final FhirDateTime? date,
@@ -17226,17 +17226,17 @@ abstract class _TerminologyCapabilities extends TerminologyCapabilities {
           final String? copyrightLabel,
           @JsonKey(name: '_copyrightLabel')
               final Element? copyrightLabelElement,
-          final Code? kind,
+          final FhirCode? kind,
           @JsonKey(name: '_kind')
               final Element? kindElement,
           final TerminologyCapabilitiesSoftware? software,
           final TerminologyCapabilitiesImplementation? implementation,
-          final Boolean? lockedDate,
+          final FhirBoolean? lockedDate,
           @JsonKey(name: '_lockedDate')
               final Element? lockedDateElement,
           final List<TerminologyCapabilitiesCodeSystem>? codeSystem,
           final TerminologyCapabilitiesExpansion? expansion,
-          final Code? codeSearch,
+          final FhirCode? codeSearch,
           @JsonKey(name: '_codeSearch')
               final Element? codeSearchElement,
           final TerminologyCapabilitiesValidateCode? validateCode,
@@ -17257,7 +17257,7 @@ abstract class _TerminologyCapabilities extends TerminologyCapabilities {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -17279,7 +17279,7 @@ abstract class _TerminologyCapabilities extends TerminologyCapabilities {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] ("_language") Extensions for language
@@ -17358,7 +17358,7 @@ abstract class _TerminologyCapabilities extends TerminologyCapabilities {
   @override
 
   /// [status] The status of this terminology capabilities. Enables tracking the life-cycle of the content.
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status
@@ -17367,7 +17367,7 @@ abstract class _TerminologyCapabilities extends TerminologyCapabilities {
   @override
 
   /// [experimental] A Boolean value to indicate that this terminology capabilities is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.
-  Boolean? get experimental;
+  FhirBoolean? get experimental;
   @override
 
   /// [experimentalElement] ("_experimental") Extensions for experimental
@@ -17398,7 +17398,7 @@ abstract class _TerminologyCapabilities extends TerminologyCapabilities {
   @override
 
   /// [description] A free text natural language description of the terminology capabilities from a consumer's perspective. Typically, this is used when the capability statement describes a desired rather than an actual solution, for example as a formal expression of requirements as part of an RFP.
-  Markdown? get description;
+  FhirMarkdown? get description;
   @override
 
   /// [descriptionElement] ("_description") Extensions for description
@@ -17415,7 +17415,7 @@ abstract class _TerminologyCapabilities extends TerminologyCapabilities {
   @override
 
   /// [purpose] Explanation of why this terminology capabilities is needed and why it has been designed as it has.
-  Markdown? get purpose;
+  FhirMarkdown? get purpose;
   @override
 
   /// [purposeElement] ("_purpose") Extensions for purpose
@@ -17424,7 +17424,7 @@ abstract class _TerminologyCapabilities extends TerminologyCapabilities {
   @override
 
   /// [copyright] A copyright statement relating to the terminology capabilities and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the terminology capabilities.
-  Markdown? get copyright;
+  FhirMarkdown? get copyright;
   @override
 
   /// [copyrightElement] ("_copyright") Extensions for copyright
@@ -17442,7 +17442,7 @@ abstract class _TerminologyCapabilities extends TerminologyCapabilities {
   @override
 
   /// [kind] The way that this statement is intended to be used, to describe an actual running instance of software, a particular product (kind, not instance of software) or a class of implementation (e.g. a desired purchase).
-  Code? get kind;
+  FhirCode? get kind;
   @override
 
   /// [kindElement] ("_kind") Extensions for kind
@@ -17459,7 +17459,7 @@ abstract class _TerminologyCapabilities extends TerminologyCapabilities {
   @override
 
   /// [lockedDate] Whether the server supports lockedDate.
-  Boolean? get lockedDate;
+  FhirBoolean? get lockedDate;
   @override
 
   /// [lockedDateElement] ("_lockedDate") Extensions for lockedDate
@@ -17476,7 +17476,7 @@ abstract class _TerminologyCapabilities extends TerminologyCapabilities {
   @override
 
   /// [codeSearch] The degree to which the server supports the code search parameter on ValueSet, if it is supported.
-  Code? get codeSearch;
+  FhirCode? get codeSearch;
   @override
 
   /// [codeSearchElement] ("_codeSearch") Extensions for codeSearch
@@ -18455,21 +18455,21 @@ mixin _$TerminologyCapabilitiesCodeSystem {
       throw _privateConstructorUsedError;
 
   /// [uri] Canonical identifier for the code system, represented as a URI.
-  Canonical? get uri => throw _privateConstructorUsedError;
+  FhirCanonical? get uri => throw _privateConstructorUsedError;
 
   /// [version] For the code system, a list of versions that are supported by the server.
   List<TerminologyCapabilitiesVersion>? get version =>
       throw _privateConstructorUsedError;
 
   /// [content] The extent of the content of the code system (the concepts and codes it defines) are represented in this resource instance.
-  Code? get content => throw _privateConstructorUsedError;
+  FhirCode? get content => throw _privateConstructorUsedError;
 
   /// [contentElement] ("_content") Extensions for content
   @JsonKey(name: '_content')
   Element? get contentElement => throw _privateConstructorUsedError;
 
   /// [subsumption] True if subsumption is supported for this version of the code system.
-  Boolean? get subsumption => throw _privateConstructorUsedError;
+  FhirBoolean? get subsumption => throw _privateConstructorUsedError;
 
   /// [subsumptionElement] ("_subsumption") Extensions for subsumption
   @JsonKey(name: '_subsumption')
@@ -18493,11 +18493,11 @@ abstract class $TerminologyCapabilitiesCodeSystemCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Canonical? uri,
+      FhirCanonical? uri,
       List<TerminologyCapabilitiesVersion>? version,
-      Code? content,
+      FhirCode? content,
       @JsonKey(name: '_content') Element? contentElement,
-      Boolean? subsumption,
+      FhirBoolean? subsumption,
       @JsonKey(name: '_subsumption') Element? subsumptionElement});
 
   $ElementCopyWith<$Res>? get contentElement;
@@ -18544,7 +18544,7 @@ class _$TerminologyCapabilitiesCodeSystemCopyWithImpl<$Res,
       uri: freezed == uri
           ? _value.uri
           : uri // ignore: cast_nullable_to_non_nullable
-              as Canonical?,
+              as FhirCanonical?,
       version: freezed == version
           ? _value.version
           : version // ignore: cast_nullable_to_non_nullable
@@ -18552,7 +18552,7 @@ class _$TerminologyCapabilitiesCodeSystemCopyWithImpl<$Res,
       content: freezed == content
           ? _value.content
           : content // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       contentElement: freezed == contentElement
           ? _value.contentElement
           : contentElement // ignore: cast_nullable_to_non_nullable
@@ -18560,7 +18560,7 @@ class _$TerminologyCapabilitiesCodeSystemCopyWithImpl<$Res,
       subsumption: freezed == subsumption
           ? _value.subsumption
           : subsumption // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       subsumptionElement: freezed == subsumptionElement
           ? _value.subsumptionElement
           : subsumptionElement // ignore: cast_nullable_to_non_nullable
@@ -18606,11 +18606,11 @@ abstract class _$$_TerminologyCapabilitiesCodeSystemCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Canonical? uri,
+      FhirCanonical? uri,
       List<TerminologyCapabilitiesVersion>? version,
-      Code? content,
+      FhirCode? content,
       @JsonKey(name: '_content') Element? contentElement,
-      Boolean? subsumption,
+      FhirBoolean? subsumption,
       @JsonKey(name: '_subsumption') Element? subsumptionElement});
 
   @override
@@ -18658,7 +18658,7 @@ class __$$_TerminologyCapabilitiesCodeSystemCopyWithImpl<$Res>
       uri: freezed == uri
           ? _value.uri
           : uri // ignore: cast_nullable_to_non_nullable
-              as Canonical?,
+              as FhirCanonical?,
       version: freezed == version
           ? _value._version
           : version // ignore: cast_nullable_to_non_nullable
@@ -18666,7 +18666,7 @@ class __$$_TerminologyCapabilitiesCodeSystemCopyWithImpl<$Res>
       content: freezed == content
           ? _value.content
           : content // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       contentElement: freezed == contentElement
           ? _value.contentElement
           : contentElement // ignore: cast_nullable_to_non_nullable
@@ -18674,7 +18674,7 @@ class __$$_TerminologyCapabilitiesCodeSystemCopyWithImpl<$Res>
       subsumption: freezed == subsumption
           ? _value.subsumption
           : subsumption // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       subsumptionElement: freezed == subsumptionElement
           ? _value.subsumptionElement
           : subsumptionElement // ignore: cast_nullable_to_non_nullable
@@ -18773,7 +18773,7 @@ class _$_TerminologyCapabilitiesCodeSystem
 
   /// [uri] Canonical identifier for the code system, represented as a URI.
   @override
-  final Canonical? uri;
+  final FhirCanonical? uri;
 
   /// [version] For the code system, a list of versions that are supported by the server.
   final List<TerminologyCapabilitiesVersion>? _version;
@@ -18790,7 +18790,7 @@ class _$_TerminologyCapabilitiesCodeSystem
 
   /// [content] The extent of the content of the code system (the concepts and codes it defines) are represented in this resource instance.
   @override
-  final Code? content;
+  final FhirCode? content;
 
   /// [contentElement] ("_content") Extensions for content
   @override
@@ -18799,7 +18799,7 @@ class _$_TerminologyCapabilitiesCodeSystem
 
   /// [subsumption] True if subsumption is supported for this version of the code system.
   @override
-  final Boolean? subsumption;
+  final FhirBoolean? subsumption;
 
   /// [subsumptionElement] ("_subsumption") Extensions for subsumption
   @override
@@ -18868,11 +18868,11 @@ abstract class _TerminologyCapabilitiesCodeSystem
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
-          final Canonical? uri,
+          final FhirCanonical? uri,
           final List<TerminologyCapabilitiesVersion>? version,
-          final Code? content,
+          final FhirCode? content,
           @JsonKey(name: '_content') final Element? contentElement,
-          final Boolean? subsumption,
+          final FhirBoolean? subsumption,
           @JsonKey(name: '_subsumption') final Element? subsumptionElement}) =
       _$_TerminologyCapabilitiesCodeSystem;
   _TerminologyCapabilitiesCodeSystem._() : super._();
@@ -18914,7 +18914,7 @@ abstract class _TerminologyCapabilitiesCodeSystem
   @override
 
   /// [uri] Canonical identifier for the code system, represented as a URI.
-  Canonical? get uri;
+  FhirCanonical? get uri;
   @override
 
   /// [version] For the code system, a list of versions that are supported by the server.
@@ -18922,7 +18922,7 @@ abstract class _TerminologyCapabilitiesCodeSystem
   @override
 
   /// [content] The extent of the content of the code system (the concepts and codes it defines) are represented in this resource instance.
-  Code? get content;
+  FhirCode? get content;
   @override
 
   /// [contentElement] ("_content") Extensions for content
@@ -18931,7 +18931,7 @@ abstract class _TerminologyCapabilitiesCodeSystem
   @override
 
   /// [subsumption] True if subsumption is supported for this version of the code system.
-  Boolean? get subsumption;
+  FhirBoolean? get subsumption;
   @override
 
   /// [subsumptionElement] ("_subsumption") Extensions for subsumption
@@ -18987,14 +18987,14 @@ mixin _$TerminologyCapabilitiesVersion {
   Element? get codeElement => throw _privateConstructorUsedError;
 
   /// [isDefault] If this is the default version for this code system.
-  Boolean? get isDefault => throw _privateConstructorUsedError;
+  FhirBoolean? get isDefault => throw _privateConstructorUsedError;
 
   /// [isDefaultElement] ("_isDefault") Extensions for isDefault
   @JsonKey(name: '_isDefault')
   Element? get isDefaultElement => throw _privateConstructorUsedError;
 
   /// [compositional] If the compositional grammar defined by the code system is supported.
-  Boolean? get compositional => throw _privateConstructorUsedError;
+  FhirBoolean? get compositional => throw _privateConstructorUsedError;
 
   /// [compositionalElement] ("_compositional") Extensions for compositional
   @JsonKey(name: '_compositional')
@@ -19038,9 +19038,9 @@ abstract class $TerminologyCapabilitiesVersionCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       String? code,
       @JsonKey(name: '_code') Element? codeElement,
-      Boolean? isDefault,
+      FhirBoolean? isDefault,
       @JsonKey(name: '_isDefault') Element? isDefaultElement,
-      Boolean? compositional,
+      FhirBoolean? compositional,
       @JsonKey(name: '_compositional') Element? compositionalElement,
       List<Code>? language,
       @JsonKey(name: '_language') List<Element>? languageElement,
@@ -19106,7 +19106,7 @@ class _$TerminologyCapabilitiesVersionCopyWithImpl<$Res,
       isDefault: freezed == isDefault
           ? _value.isDefault
           : isDefault // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       isDefaultElement: freezed == isDefaultElement
           ? _value.isDefaultElement
           : isDefaultElement // ignore: cast_nullable_to_non_nullable
@@ -19114,7 +19114,7 @@ class _$TerminologyCapabilitiesVersionCopyWithImpl<$Res,
       compositional: freezed == compositional
           ? _value.compositional
           : compositional // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       compositionalElement: freezed == compositionalElement
           ? _value.compositionalElement
           : compositionalElement // ignore: cast_nullable_to_non_nullable
@@ -19194,9 +19194,9 @@ abstract class _$$_TerminologyCapabilitiesVersionCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       String? code,
       @JsonKey(name: '_code') Element? codeElement,
-      Boolean? isDefault,
+      FhirBoolean? isDefault,
       @JsonKey(name: '_isDefault') Element? isDefaultElement,
-      Boolean? compositional,
+      FhirBoolean? compositional,
       @JsonKey(name: '_compositional') Element? compositionalElement,
       List<Code>? language,
       @JsonKey(name: '_language') List<Element>? languageElement,
@@ -19264,7 +19264,7 @@ class __$$_TerminologyCapabilitiesVersionCopyWithImpl<$Res>
       isDefault: freezed == isDefault
           ? _value.isDefault
           : isDefault // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       isDefaultElement: freezed == isDefaultElement
           ? _value.isDefaultElement
           : isDefaultElement // ignore: cast_nullable_to_non_nullable
@@ -19272,7 +19272,7 @@ class __$$_TerminologyCapabilitiesVersionCopyWithImpl<$Res>
       compositional: freezed == compositional
           ? _value.compositional
           : compositional // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       compositionalElement: freezed == compositionalElement
           ? _value.compositionalElement
           : compositionalElement // ignore: cast_nullable_to_non_nullable
@@ -19409,7 +19409,7 @@ class _$_TerminologyCapabilitiesVersion
 
   /// [isDefault] If this is the default version for this code system.
   @override
-  final Boolean? isDefault;
+  final FhirBoolean? isDefault;
 
   /// [isDefaultElement] ("_isDefault") Extensions for isDefault
   @override
@@ -19418,7 +19418,7 @@ class _$_TerminologyCapabilitiesVersion
 
   /// [compositional] If the compositional grammar defined by the code system is supported.
   @override
-  final Boolean? compositional;
+  final FhirBoolean? compositional;
 
   /// [compositionalElement] ("_compositional") Extensions for compositional
   @override
@@ -19569,9 +19569,9 @@ abstract class _TerminologyCapabilitiesVersion
           final List<FhirExtension>? modifierExtension,
           final String? code,
           @JsonKey(name: '_code') final Element? codeElement,
-          final Boolean? isDefault,
+          final FhirBoolean? isDefault,
           @JsonKey(name: '_isDefault') final Element? isDefaultElement,
-          final Boolean? compositional,
+          final FhirBoolean? compositional,
           @JsonKey(name: '_compositional') final Element? compositionalElement,
           final List<Code>? language,
           @JsonKey(name: '_language') final List<Element>? languageElement,
@@ -19626,7 +19626,7 @@ abstract class _TerminologyCapabilitiesVersion
   @override
 
   /// [isDefault] If this is the default version for this code system.
-  Boolean? get isDefault;
+  FhirBoolean? get isDefault;
   @override
 
   /// [isDefaultElement] ("_isDefault") Extensions for isDefault
@@ -19635,7 +19635,7 @@ abstract class _TerminologyCapabilitiesVersion
   @override
 
   /// [compositional] If the compositional grammar defined by the code system is supported.
-  Boolean? get compositional;
+  FhirBoolean? get compositional;
   @override
 
   /// [compositionalElement] ("_compositional") Extensions for compositional
@@ -19705,7 +19705,7 @@ mixin _$TerminologyCapabilitiesFilter {
       throw _privateConstructorUsedError;
 
   /// [code] Code of the property supported.
-  Code? get code => throw _privateConstructorUsedError;
+  FhirCode? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] ("_code") Extensions for code
   @JsonKey(name: '_code')
@@ -19736,7 +19736,7 @@ abstract class $TerminologyCapabilitiesFilterCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement,
       List<Code>? op,
       @JsonKey(name: '_op') List<Element>? opElement});
@@ -19782,7 +19782,7 @@ class _$TerminologyCapabilitiesFilterCopyWithImpl<$Res,
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -19824,7 +19824,7 @@ abstract class _$$_TerminologyCapabilitiesFilterCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement,
       List<Code>? op,
       @JsonKey(name: '_op') List<Element>? opElement});
@@ -19870,7 +19870,7 @@ class __$$_TerminologyCapabilitiesFilterCopyWithImpl<$Res>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -19975,7 +19975,7 @@ class _$_TerminologyCapabilitiesFilter extends _TerminologyCapabilitiesFilter {
 
   /// [code] Code of the property supported.
   @override
-  final Code? code;
+  final FhirCode? code;
 
   /// [codeElement] ("_code") Extensions for code
   @override
@@ -20065,7 +20065,7 @@ abstract class _TerminologyCapabilitiesFilter
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
-          final Code? code,
+          final FhirCode? code,
           @JsonKey(name: '_code') final Element? codeElement,
           final List<Code>? op,
           @JsonKey(name: '_op') final List<Element>? opElement}) =
@@ -20108,7 +20108,7 @@ abstract class _TerminologyCapabilitiesFilter
   @override
 
   /// [code] Code of the property supported.
-  Code? get code;
+  FhirCode? get code;
   @override
 
   /// [codeElement] ("_code") Extensions for code
@@ -20165,21 +20165,21 @@ mixin _$TerminologyCapabilitiesExpansion {
       throw _privateConstructorUsedError;
 
   /// [hierarchical] Whether the server can return nested value sets.
-  Boolean? get hierarchical => throw _privateConstructorUsedError;
+  FhirBoolean? get hierarchical => throw _privateConstructorUsedError;
 
   /// [hierarchicalElement] ("_hierarchical") Extensions for hierarchical
   @JsonKey(name: '_hierarchical')
   Element? get hierarchicalElement => throw _privateConstructorUsedError;
 
   /// [paging] Whether the server supports paging on expansion.
-  Boolean? get paging => throw _privateConstructorUsedError;
+  FhirBoolean? get paging => throw _privateConstructorUsedError;
 
   /// [pagingElement] ("_paging") Extensions for paging
   @JsonKey(name: '_paging')
   Element? get pagingElement => throw _privateConstructorUsedError;
 
   /// [incomplete] True if requests for incomplete expansions are allowed.
-  Boolean? get incomplete => throw _privateConstructorUsedError;
+  FhirBoolean? get incomplete => throw _privateConstructorUsedError;
 
   /// [incompleteElement] ("_incomplete") Extensions for incomplete
   @JsonKey(name: '_incomplete')
@@ -20190,7 +20190,7 @@ mixin _$TerminologyCapabilitiesExpansion {
       throw _privateConstructorUsedError;
 
   /// [textFilter] Documentation about text searching works.
-  Markdown? get textFilter => throw _privateConstructorUsedError;
+  FhirMarkdown? get textFilter => throw _privateConstructorUsedError;
 
   /// [textFilterElement] ("_textFilter") Extensions for textFilter
   @JsonKey(name: '_textFilter')
@@ -20214,14 +20214,14 @@ abstract class $TerminologyCapabilitiesExpansionCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Boolean? hierarchical,
+      FhirBoolean? hierarchical,
       @JsonKey(name: '_hierarchical') Element? hierarchicalElement,
-      Boolean? paging,
+      FhirBoolean? paging,
       @JsonKey(name: '_paging') Element? pagingElement,
-      Boolean? incomplete,
+      FhirBoolean? incomplete,
       @JsonKey(name: '_incomplete') Element? incompleteElement,
       List<TerminologyCapabilitiesParameter>? parameter,
-      Markdown? textFilter,
+      FhirMarkdown? textFilter,
       @JsonKey(name: '_textFilter') Element? textFilterElement});
 
   $ElementCopyWith<$Res>? get hierarchicalElement;
@@ -20273,7 +20273,7 @@ class _$TerminologyCapabilitiesExpansionCopyWithImpl<$Res,
       hierarchical: freezed == hierarchical
           ? _value.hierarchical
           : hierarchical // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       hierarchicalElement: freezed == hierarchicalElement
           ? _value.hierarchicalElement
           : hierarchicalElement // ignore: cast_nullable_to_non_nullable
@@ -20281,7 +20281,7 @@ class _$TerminologyCapabilitiesExpansionCopyWithImpl<$Res,
       paging: freezed == paging
           ? _value.paging
           : paging // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       pagingElement: freezed == pagingElement
           ? _value.pagingElement
           : pagingElement // ignore: cast_nullable_to_non_nullable
@@ -20289,7 +20289,7 @@ class _$TerminologyCapabilitiesExpansionCopyWithImpl<$Res,
       incomplete: freezed == incomplete
           ? _value.incomplete
           : incomplete // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       incompleteElement: freezed == incompleteElement
           ? _value.incompleteElement
           : incompleteElement // ignore: cast_nullable_to_non_nullable
@@ -20371,14 +20371,14 @@ abstract class _$$_TerminologyCapabilitiesExpansionCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Boolean? hierarchical,
+      FhirBoolean? hierarchical,
       @JsonKey(name: '_hierarchical') Element? hierarchicalElement,
-      Boolean? paging,
+      FhirBoolean? paging,
       @JsonKey(name: '_paging') Element? pagingElement,
-      Boolean? incomplete,
+      FhirBoolean? incomplete,
       @JsonKey(name: '_incomplete') Element? incompleteElement,
       List<TerminologyCapabilitiesParameter>? parameter,
-      Markdown? textFilter,
+      FhirMarkdown? textFilter,
       @JsonKey(name: '_textFilter') Element? textFilterElement});
 
   @override
@@ -20433,7 +20433,7 @@ class __$$_TerminologyCapabilitiesExpansionCopyWithImpl<$Res>
       hierarchical: freezed == hierarchical
           ? _value.hierarchical
           : hierarchical // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       hierarchicalElement: freezed == hierarchicalElement
           ? _value.hierarchicalElement
           : hierarchicalElement // ignore: cast_nullable_to_non_nullable
@@ -20441,7 +20441,7 @@ class __$$_TerminologyCapabilitiesExpansionCopyWithImpl<$Res>
       paging: freezed == paging
           ? _value.paging
           : paging // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       pagingElement: freezed == pagingElement
           ? _value.pagingElement
           : pagingElement // ignore: cast_nullable_to_non_nullable
@@ -20449,7 +20449,7 @@ class __$$_TerminologyCapabilitiesExpansionCopyWithImpl<$Res>
       incomplete: freezed == incomplete
           ? _value.incomplete
           : incomplete // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       incompleteElement: freezed == incompleteElement
           ? _value.incompleteElement
           : incompleteElement // ignore: cast_nullable_to_non_nullable
@@ -20563,7 +20563,7 @@ class _$_TerminologyCapabilitiesExpansion
 
   /// [hierarchical] Whether the server can return nested value sets.
   @override
-  final Boolean? hierarchical;
+  final FhirBoolean? hierarchical;
 
   /// [hierarchicalElement] ("_hierarchical") Extensions for hierarchical
   @override
@@ -20572,7 +20572,7 @@ class _$_TerminologyCapabilitiesExpansion
 
   /// [paging] Whether the server supports paging on expansion.
   @override
-  final Boolean? paging;
+  final FhirBoolean? paging;
 
   /// [pagingElement] ("_paging") Extensions for paging
   @override
@@ -20581,7 +20581,7 @@ class _$_TerminologyCapabilitiesExpansion
 
   /// [incomplete] True if requests for incomplete expansions are allowed.
   @override
-  final Boolean? incomplete;
+  final FhirBoolean? incomplete;
 
   /// [incompleteElement] ("_incomplete") Extensions for incomplete
   @override
@@ -20683,11 +20683,11 @@ abstract class _TerminologyCapabilitiesExpansion
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
-          final Boolean? hierarchical,
+          final FhirBoolean? hierarchical,
           @JsonKey(name: '_hierarchical') final Element? hierarchicalElement,
-          final Boolean? paging,
+          final FhirBoolean? paging,
           @JsonKey(name: '_paging') final Element? pagingElement,
-          final Boolean? incomplete,
+          final FhirBoolean? incomplete,
           @JsonKey(name: '_incomplete') final Element? incompleteElement,
           final List<TerminologyCapabilitiesParameter>? parameter,
           final Markdown? textFilter,
@@ -20731,7 +20731,7 @@ abstract class _TerminologyCapabilitiesExpansion
   @override
 
   /// [hierarchical] Whether the server can return nested value sets.
-  Boolean? get hierarchical;
+  FhirBoolean? get hierarchical;
   @override
 
   /// [hierarchicalElement] ("_hierarchical") Extensions for hierarchical
@@ -20740,7 +20740,7 @@ abstract class _TerminologyCapabilitiesExpansion
   @override
 
   /// [paging] Whether the server supports paging on expansion.
-  Boolean? get paging;
+  FhirBoolean? get paging;
   @override
 
   /// [pagingElement] ("_paging") Extensions for paging
@@ -20749,7 +20749,7 @@ abstract class _TerminologyCapabilitiesExpansion
   @override
 
   /// [incomplete] True if requests for incomplete expansions are allowed.
-  Boolean? get incomplete;
+  FhirBoolean? get incomplete;
   @override
 
   /// [incompleteElement] ("_incomplete") Extensions for incomplete
@@ -20762,7 +20762,7 @@ abstract class _TerminologyCapabilitiesExpansion
   @override
 
   /// [textFilter] Documentation about text searching works.
-  Markdown? get textFilter;
+  FhirMarkdown? get textFilter;
   @override
 
   /// [textFilterElement] ("_textFilter") Extensions for textFilter
@@ -20811,7 +20811,7 @@ mixin _$TerminologyCapabilitiesParameter {
       throw _privateConstructorUsedError;
 
   /// [name] Name of the supported expansion parameter.
-  Code? get name => throw _privateConstructorUsedError;
+  FhirCode? get name => throw _privateConstructorUsedError;
 
   /// [nameElement] ("_name") Extensions for name
   @JsonKey(name: '_name')
@@ -20842,7 +20842,7 @@ abstract class $TerminologyCapabilitiesParameterCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? name,
+      FhirCode? name,
       @JsonKey(name: '_name') Element? nameElement,
       String? documentation,
       @JsonKey(name: '_documentation') Element? documentationElement});
@@ -20889,7 +20889,7 @@ class _$TerminologyCapabilitiesParameterCopyWithImpl<$Res,
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       nameElement: freezed == nameElement
           ? _value.nameElement
           : nameElement // ignore: cast_nullable_to_non_nullable
@@ -20943,7 +20943,7 @@ abstract class _$$_TerminologyCapabilitiesParameterCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? name,
+      FhirCode? name,
       @JsonKey(name: '_name') Element? nameElement,
       String? documentation,
       @JsonKey(name: '_documentation') Element? documentationElement});
@@ -20991,7 +20991,7 @@ class __$$_TerminologyCapabilitiesParameterCopyWithImpl<$Res>
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       nameElement: freezed == nameElement
           ? _value.nameElement
           : nameElement // ignore: cast_nullable_to_non_nullable
@@ -21095,7 +21095,7 @@ class _$_TerminologyCapabilitiesParameter
 
   /// [name] Name of the supported expansion parameter.
   @override
-  final Code? name;
+  final FhirCode? name;
 
   /// [nameElement] ("_name") Extensions for name
   @override
@@ -21170,7 +21170,7 @@ abstract class _TerminologyCapabilitiesParameter
           @JsonKey(name: 'extension')
               final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
-          final Code? name,
+          final FhirCode? name,
           @JsonKey(name: '_name')
               final Element? nameElement,
           final String? documentation,
@@ -21215,7 +21215,7 @@ abstract class _TerminologyCapabilitiesParameter
   @override
 
   /// [name] Name of the supported expansion parameter.
-  Code? get name;
+  FhirCode? get name;
   @override
 
   /// [nameElement] ("_name") Extensions for name
@@ -21273,7 +21273,7 @@ mixin _$TerminologyCapabilitiesValidateCode {
       throw _privateConstructorUsedError;
 
   /// [translations] Whether translations are validated.
-  Boolean? get translations => throw _privateConstructorUsedError;
+  FhirBoolean? get translations => throw _privateConstructorUsedError;
 
   /// [translationsElement] ("_translations") Extensions for translations
   @JsonKey(name: '_translations')
@@ -21298,7 +21298,7 @@ abstract class $TerminologyCapabilitiesValidateCodeCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Boolean? translations,
+      FhirBoolean? translations,
       @JsonKey(name: '_translations') Element? translationsElement});
 
   $ElementCopyWith<$Res>? get translationsElement;
@@ -21340,7 +21340,7 @@ class _$TerminologyCapabilitiesValidateCodeCopyWithImpl<$Res,
       translations: freezed == translations
           ? _value.translations
           : translations // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       translationsElement: freezed == translationsElement
           ? _value.translationsElement
           : translationsElement // ignore: cast_nullable_to_non_nullable
@@ -21374,7 +21374,7 @@ abstract class _$$_TerminologyCapabilitiesValidateCodeCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Boolean? translations,
+      FhirBoolean? translations,
       @JsonKey(name: '_translations') Element? translationsElement});
 
   @override
@@ -21416,7 +21416,7 @@ class __$$_TerminologyCapabilitiesValidateCodeCopyWithImpl<$Res>
       translations: freezed == translations
           ? _value.translations
           : translations // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       translationsElement: freezed == translationsElement
           ? _value.translationsElement
           : translationsElement // ignore: cast_nullable_to_non_nullable
@@ -21510,7 +21510,7 @@ class _$_TerminologyCapabilitiesValidateCode
 
   /// [translations] Whether translations are validated.
   @override
-  final Boolean? translations;
+  final FhirBoolean? translations;
 
   /// [translationsElement] ("_translations") Extensions for translations
   @override
@@ -21570,7 +21570,7 @@ abstract class _TerminologyCapabilitiesValidateCode
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
-          final Boolean? translations,
+          final FhirBoolean? translations,
           @JsonKey(name: '_translations') final Element? translationsElement}) =
       _$_TerminologyCapabilitiesValidateCode;
   _TerminologyCapabilitiesValidateCode._() : super._();
@@ -21612,7 +21612,7 @@ abstract class _TerminologyCapabilitiesValidateCode
   @override
 
   /// [translations] Whether translations are validated.
-  Boolean? get translations;
+  FhirBoolean? get translations;
   @override
 
   /// [translationsElement] ("_translations") Extensions for translations
@@ -21661,7 +21661,7 @@ mixin _$TerminologyCapabilitiesTranslation {
       throw _privateConstructorUsedError;
 
   /// [needsMap] Whether the client must identify the map.
-  Boolean? get needsMap => throw _privateConstructorUsedError;
+  FhirBoolean? get needsMap => throw _privateConstructorUsedError;
 
   /// [needsMapElement] ("_needsMap") Extensions for needsMap
   @JsonKey(name: '_needsMap')
@@ -21686,7 +21686,7 @@ abstract class $TerminologyCapabilitiesTranslationCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Boolean? needsMap,
+      FhirBoolean? needsMap,
       @JsonKey(name: '_needsMap') Element? needsMapElement});
 
   $ElementCopyWith<$Res>? get needsMapElement;
@@ -21728,7 +21728,7 @@ class _$TerminologyCapabilitiesTranslationCopyWithImpl<$Res,
       needsMap: freezed == needsMap
           ? _value.needsMap
           : needsMap // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       needsMapElement: freezed == needsMapElement
           ? _value.needsMapElement
           : needsMapElement // ignore: cast_nullable_to_non_nullable
@@ -21762,7 +21762,7 @@ abstract class _$$_TerminologyCapabilitiesTranslationCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Boolean? needsMap,
+      FhirBoolean? needsMap,
       @JsonKey(name: '_needsMap') Element? needsMapElement});
 
   @override
@@ -21804,7 +21804,7 @@ class __$$_TerminologyCapabilitiesTranslationCopyWithImpl<$Res>
       needsMap: freezed == needsMap
           ? _value.needsMap
           : needsMap // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       needsMapElement: freezed == needsMapElement
           ? _value.needsMapElement
           : needsMapElement // ignore: cast_nullable_to_non_nullable
@@ -21898,7 +21898,7 @@ class _$_TerminologyCapabilitiesTranslation
 
   /// [needsMap] Whether the client must identify the map.
   @override
-  final Boolean? needsMap;
+  final FhirBoolean? needsMap;
 
   /// [needsMapElement] ("_needsMap") Extensions for needsMap
   @override
@@ -21958,7 +21958,7 @@ abstract class _TerminologyCapabilitiesTranslation
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
-          final Boolean? needsMap,
+          final FhirBoolean? needsMap,
           @JsonKey(name: '_needsMap') final Element? needsMapElement}) =
       _$_TerminologyCapabilitiesTranslation;
   _TerminologyCapabilitiesTranslation._() : super._();
@@ -22000,7 +22000,7 @@ abstract class _TerminologyCapabilitiesTranslation
   @override
 
   /// [needsMap] Whether the client must identify the map.
-  Boolean? get needsMap;
+  FhirBoolean? get needsMap;
   @override
 
   /// [needsMapElement] ("_needsMap") Extensions for needsMap
@@ -22049,7 +22049,7 @@ mixin _$TerminologyCapabilitiesClosure {
       throw _privateConstructorUsedError;
 
   /// [translation] If cross-system closure is supported.
-  Boolean? get translation => throw _privateConstructorUsedError;
+  FhirBoolean? get translation => throw _privateConstructorUsedError;
 
   /// [translationElement] ("_translation") Extensions for translation
   @JsonKey(name: '_translation')
@@ -22073,7 +22073,7 @@ abstract class $TerminologyCapabilitiesClosureCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Boolean? translation,
+      FhirBoolean? translation,
       @JsonKey(name: '_translation') Element? translationElement});
 
   $ElementCopyWith<$Res>? get translationElement;
@@ -22115,7 +22115,7 @@ class _$TerminologyCapabilitiesClosureCopyWithImpl<$Res,
       translation: freezed == translation
           ? _value.translation
           : translation // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       translationElement: freezed == translationElement
           ? _value.translationElement
           : translationElement // ignore: cast_nullable_to_non_nullable
@@ -22149,7 +22149,7 @@ abstract class _$$_TerminologyCapabilitiesClosureCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Boolean? translation,
+      FhirBoolean? translation,
       @JsonKey(name: '_translation') Element? translationElement});
 
   @override
@@ -22191,7 +22191,7 @@ class __$$_TerminologyCapabilitiesClosureCopyWithImpl<$Res>
       translation: freezed == translation
           ? _value.translation
           : translation // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       translationElement: freezed == translationElement
           ? _value.translationElement
           : translationElement // ignore: cast_nullable_to_non_nullable
@@ -22285,7 +22285,7 @@ class _$_TerminologyCapabilitiesClosure
 
   /// [translation] If cross-system closure is supported.
   @override
-  final Boolean? translation;
+  final FhirBoolean? translation;
 
   /// [translationElement] ("_translation") Extensions for translation
   @override
@@ -22344,7 +22344,7 @@ abstract class _TerminologyCapabilitiesClosure
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
-          final Boolean? translation,
+          final FhirBoolean? translation,
           @JsonKey(name: '_translation') final Element? translationElement}) =
       _$_TerminologyCapabilitiesClosure;
   _TerminologyCapabilitiesClosure._() : super._();
@@ -22385,7 +22385,7 @@ abstract class _TerminologyCapabilitiesClosure
   @override
 
   /// [translation] If cross-system closure is supported.
-  Boolean? get translation;
+  FhirBoolean? get translation;
   @override
 
   /// [translationElement] ("_translation") Extensions for translation
@@ -22409,7 +22409,7 @@ mixin _$ValueSet {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -22427,7 +22427,7 @@ mixin _$ValueSet {
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
@@ -22490,14 +22490,14 @@ mixin _$ValueSet {
   Element? get titleElement => throw _privateConstructorUsedError;
 
   /// [status] The status of this value set. Enables tracking the life-cycle of the content. The status of the value set applies to the value set definition (ValueSet.compose) and the associated ValueSet metadata. Expansions do not have a state.
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
 
   /// [experimental] A Boolean value to indicate that this value set is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.
-  Boolean? get experimental => throw _privateConstructorUsedError;
+  FhirBoolean? get experimental => throw _privateConstructorUsedError;
 
   /// [experimentalElement] ("_experimental") Extensions for experimental
   @JsonKey(name: '_experimental')
@@ -22521,7 +22521,7 @@ mixin _$ValueSet {
   List<ContactDetail>? get contact => throw _privateConstructorUsedError;
 
   /// [description] A free text natural language description of the value set from a consumer's perspective. The textual description specifies the span of meanings for concepts to be included within the Value Set Expansion, and also may specify the intended use and limitations of the Value Set.
-  Markdown? get description => throw _privateConstructorUsedError;
+  FhirMarkdown? get description => throw _privateConstructorUsedError;
 
   /// [descriptionElement] ("_description") Extensions for description
   @JsonKey(name: '_description')
@@ -22534,14 +22534,14 @@ mixin _$ValueSet {
   List<CodeableConcept>? get jurisdiction => throw _privateConstructorUsedError;
 
   /// [purpose] Explanation of why this value set is needed and why it has been designed as it has.
-  Markdown? get purpose => throw _privateConstructorUsedError;
+  FhirMarkdown? get purpose => throw _privateConstructorUsedError;
 
   /// [purposeElement] ("_purpose") Extensions for purpose
   @JsonKey(name: '_purpose')
   Element? get purposeElement => throw _privateConstructorUsedError;
 
   /// [copyright] A copyright statement relating to the value set and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the value set.
-  Markdown? get copyright => throw _privateConstructorUsedError;
+  FhirMarkdown? get copyright => throw _privateConstructorUsedError;
 
   /// [copyrightElement] ("_copyright") Extensions for copyright
   @JsonKey(name: '_copyright')
@@ -22555,14 +22555,14 @@ mixin _$ValueSet {
   Element? get copyrightLabelElement => throw _privateConstructorUsedError;
 
   /// [approvalDate] The date on which the resource content was approved by the publisher. Approval happens once when the content is officially approved for usage.
-  Date? get approvalDate => throw _privateConstructorUsedError;
+  FhirDate? get approvalDate => throw _privateConstructorUsedError;
 
   /// [approvalDateElement] ("_approvalDate") Extensions for approvalDate
   @JsonKey(name: '_approvalDate')
   Element? get approvalDateElement => throw _privateConstructorUsedError;
 
   /// [lastReviewDate] The date on which the resource content was last reviewed. Review happens periodically after approval but does not change the original approval date.
-  Date? get lastReviewDate => throw _privateConstructorUsedError;
+  FhirDate? get lastReviewDate => throw _privateConstructorUsedError;
 
   /// [lastReviewDateElement] ("_lastReviewDate") Extensions for lastReviewDate
   @JsonKey(name: '_lastReviewDate')
@@ -22591,7 +22591,7 @@ mixin _$ValueSet {
       throw _privateConstructorUsedError;
 
   /// [immutable] If this is set to 'true', then no new versions of the content logical definition can be created.  Note: Other metadata might still change.
-  Boolean? get immutable => throw _privateConstructorUsedError;
+  FhirBoolean? get immutable => throw _privateConstructorUsedError;
 
   /// [immutableElement] ("_immutable") Extensions for immutable
   @JsonKey(name: '_immutable')
@@ -22620,12 +22620,12 @@ abstract class $ValueSetCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.ValueSet)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -22650,10 +22650,10 @@ abstract class $ValueSetCopyWith<$Res> {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Boolean? experimental,
+      FhirBoolean? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
       FhirDateTime? date,
@@ -22663,24 +22663,24 @@ abstract class $ValueSetCopyWith<$Res> {
       @JsonKey(name: '_publisher')
           Element? publisherElement,
       List<ContactDetail>? contact,
-      Markdown? description,
+      FhirMarkdown? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
       List<UsageContext>? useContext,
       List<CodeableConcept>? jurisdiction,
-      Markdown? purpose,
+      FhirMarkdown? purpose,
       @JsonKey(name: '_purpose')
           Element? purposeElement,
-      Markdown? copyright,
+      FhirMarkdown? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
       String? copyrightLabel,
       @JsonKey(name: '_copyrightLabel')
           Element? copyrightLabelElement,
-      Date? approvalDate,
+      FhirDate? approvalDate,
       @JsonKey(name: '_approvalDate')
           Element? approvalDateElement,
-      Date? lastReviewDate,
+      FhirDate? lastReviewDate,
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
@@ -22690,7 +22690,7 @@ abstract class $ValueSetCopyWith<$Res> {
       List<ContactDetail>? reviewer,
       List<ContactDetail>? endorser,
       List<RelatedArtifact>? relatedArtifact,
-      Boolean? immutable,
+      FhirBoolean? immutable,
       @JsonKey(name: '_immutable')
           Element? immutableElement,
       ValueSetCompose? compose,
@@ -22820,7 +22820,7 @@ class _$ValueSetCopyWithImpl<$Res, $Val extends ValueSet>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -22892,7 +22892,7 @@ class _$ValueSetCopyWithImpl<$Res, $Val extends ValueSet>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -22900,7 +22900,7 @@ class _$ValueSetCopyWithImpl<$Res, $Val extends ValueSet>
       experimental: freezed == experimental
           ? _value.experimental
           : experimental // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       experimentalElement: freezed == experimentalElement
           ? _value.experimentalElement
           : experimentalElement // ignore: cast_nullable_to_non_nullable
@@ -23012,7 +23012,7 @@ class _$ValueSetCopyWithImpl<$Res, $Val extends ValueSet>
       immutable: freezed == immutable
           ? _value.immutable
           : immutable // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       immutableElement: freezed == immutableElement
           ? _value.immutableElement
           : immutableElement // ignore: cast_nullable_to_non_nullable
@@ -23345,12 +23345,12 @@ abstract class _$$_ValueSetCopyWith<$Res> implements $ValueSetCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.ValueSet)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -23375,10 +23375,10 @@ abstract class _$$_ValueSetCopyWith<$Res> implements $ValueSetCopyWith<$Res> {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Boolean? experimental,
+      FhirBoolean? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
       FhirDateTime? date,
@@ -23388,24 +23388,24 @@ abstract class _$$_ValueSetCopyWith<$Res> implements $ValueSetCopyWith<$Res> {
       @JsonKey(name: '_publisher')
           Element? publisherElement,
       List<ContactDetail>? contact,
-      Markdown? description,
+      FhirMarkdown? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
       List<UsageContext>? useContext,
       List<CodeableConcept>? jurisdiction,
-      Markdown? purpose,
+      FhirMarkdown? purpose,
       @JsonKey(name: '_purpose')
           Element? purposeElement,
-      Markdown? copyright,
+      FhirMarkdown? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
       String? copyrightLabel,
       @JsonKey(name: '_copyrightLabel')
           Element? copyrightLabelElement,
-      Date? approvalDate,
+      FhirDate? approvalDate,
       @JsonKey(name: '_approvalDate')
           Element? approvalDateElement,
-      Date? lastReviewDate,
+      FhirDate? lastReviewDate,
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
@@ -23415,7 +23415,7 @@ abstract class _$$_ValueSetCopyWith<$Res> implements $ValueSetCopyWith<$Res> {
       List<ContactDetail>? reviewer,
       List<ContactDetail>? endorser,
       List<RelatedArtifact>? relatedArtifact,
-      Boolean? immutable,
+      FhirBoolean? immutable,
       @JsonKey(name: '_immutable')
           Element? immutableElement,
       ValueSetCompose? compose,
@@ -23568,7 +23568,7 @@ class __$$_ValueSetCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -23640,7 +23640,7 @@ class __$$_ValueSetCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -23648,7 +23648,7 @@ class __$$_ValueSetCopyWithImpl<$Res>
       experimental: freezed == experimental
           ? _value.experimental
           : experimental // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       experimentalElement: freezed == experimentalElement
           ? _value.experimentalElement
           : experimentalElement // ignore: cast_nullable_to_non_nullable
@@ -23760,7 +23760,7 @@ class __$$_ValueSetCopyWithImpl<$Res>
       immutable: freezed == immutable
           ? _value.immutable
           : immutable // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       immutableElement: freezed == immutableElement
           ? _value.immutableElement
           : immutableElement // ignore: cast_nullable_to_non_nullable
@@ -23911,7 +23911,7 @@ class _$_ValueSet extends _ValueSet {
 
   /// [language] The base language in which the resource is written.
   @override
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] ("_language") Extensions for language
   @override
@@ -24027,7 +24027,7 @@ class _$_ValueSet extends _ValueSet {
 
   /// [status] The status of this value set. Enables tracking the life-cycle of the content. The status of the value set applies to the value set definition (ValueSet.compose) and the associated ValueSet metadata. Expansions do not have a state.
   @override
-  final Code? status;
+  final FhirCode? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -24036,7 +24036,7 @@ class _$_ValueSet extends _ValueSet {
 
   /// [experimental] A Boolean value to indicate that this value set is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.
   @override
-  final Boolean? experimental;
+  final FhirBoolean? experimental;
 
   /// [experimentalElement] ("_experimental") Extensions for experimental
   @override
@@ -24238,7 +24238,7 @@ class _$_ValueSet extends _ValueSet {
 
   /// [immutable] If this is set to 'true', then no new versions of the content logical definition can be created.  Note: Other metadata might still change.
   @override
-  final Boolean? immutable;
+  final FhirBoolean? immutable;
 
   /// [immutableElement] ("_immutable") Extensions for immutable
   @override
@@ -24451,7 +24451,7 @@ abstract class _ValueSet extends ValueSet {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -24476,10 +24476,10 @@ abstract class _ValueSet extends ValueSet {
       final String? title,
       @JsonKey(name: '_title')
           final Element? titleElement,
-      final Code? status,
+      final FhirCode? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
-      final Boolean? experimental,
+      final FhirBoolean? experimental,
       @JsonKey(name: '_experimental')
           final Element? experimentalElement,
       final FhirDateTime? date,
@@ -24516,7 +24516,7 @@ abstract class _ValueSet extends ValueSet {
       final List<ContactDetail>? reviewer,
       final List<ContactDetail>? endorser,
       final List<RelatedArtifact>? relatedArtifact,
-      final Boolean? immutable,
+      final FhirBoolean? immutable,
       @JsonKey(name: '_immutable')
           final Element? immutableElement,
       final ValueSetCompose? compose,
@@ -24535,7 +24535,7 @@ abstract class _ValueSet extends ValueSet {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -24557,7 +24557,7 @@ abstract class _ValueSet extends ValueSet {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] ("_language") Extensions for language
@@ -24636,7 +24636,7 @@ abstract class _ValueSet extends ValueSet {
   @override
 
   /// [status] The status of this value set. Enables tracking the life-cycle of the content. The status of the value set applies to the value set definition (ValueSet.compose) and the associated ValueSet metadata. Expansions do not have a state.
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status
@@ -24645,7 +24645,7 @@ abstract class _ValueSet extends ValueSet {
   @override
 
   /// [experimental] A Boolean value to indicate that this value set is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.
-  Boolean? get experimental;
+  FhirBoolean? get experimental;
   @override
 
   /// [experimentalElement] ("_experimental") Extensions for experimental
@@ -24676,7 +24676,7 @@ abstract class _ValueSet extends ValueSet {
   @override
 
   /// [description] A free text natural language description of the value set from a consumer's perspective. The textual description specifies the span of meanings for concepts to be included within the Value Set Expansion, and also may specify the intended use and limitations of the Value Set.
-  Markdown? get description;
+  FhirMarkdown? get description;
   @override
 
   /// [descriptionElement] ("_description") Extensions for description
@@ -24693,7 +24693,7 @@ abstract class _ValueSet extends ValueSet {
   @override
 
   /// [purpose] Explanation of why this value set is needed and why it has been designed as it has.
-  Markdown? get purpose;
+  FhirMarkdown? get purpose;
   @override
 
   /// [purposeElement] ("_purpose") Extensions for purpose
@@ -24702,7 +24702,7 @@ abstract class _ValueSet extends ValueSet {
   @override
 
   /// [copyright] A copyright statement relating to the value set and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the value set.
-  Markdown? get copyright;
+  FhirMarkdown? get copyright;
   @override
 
   /// [copyrightElement] ("_copyright") Extensions for copyright
@@ -24720,7 +24720,7 @@ abstract class _ValueSet extends ValueSet {
   @override
 
   /// [approvalDate] The date on which the resource content was approved by the publisher. Approval happens once when the content is officially approved for usage.
-  Date? get approvalDate;
+  FhirDate? get approvalDate;
   @override
 
   /// [approvalDateElement] ("_approvalDate") Extensions for approvalDate
@@ -24729,7 +24729,7 @@ abstract class _ValueSet extends ValueSet {
   @override
 
   /// [lastReviewDate] The date on which the resource content was last reviewed. Review happens periodically after approval but does not change the original approval date.
-  Date? get lastReviewDate;
+  FhirDate? get lastReviewDate;
   @override
 
   /// [lastReviewDateElement] ("_lastReviewDate") Extensions for lastReviewDate
@@ -24766,7 +24766,7 @@ abstract class _ValueSet extends ValueSet {
   @override
 
   /// [immutable] If this is set to 'true', then no new versions of the content logical definition can be created.  Note: Other metadata might still change.
-  Boolean? get immutable;
+  FhirBoolean? get immutable;
   @override
 
   /// [immutableElement] ("_immutable") Extensions for immutable
@@ -24825,14 +24825,14 @@ mixin _$ValueSetCompose {
       throw _privateConstructorUsedError;
 
   /// [lockedDate] The Locked Date is  the effective date that is used to determine the version of all referenced Code Systems and Value Set Definitions included in the compose that are not already tied to a specific version.
-  Date? get lockedDate => throw _privateConstructorUsedError;
+  FhirDate? get lockedDate => throw _privateConstructorUsedError;
 
   /// [lockedDateElement] ("_lockedDate") Extensions for lockedDate
   @JsonKey(name: '_lockedDate')
   Element? get lockedDateElement => throw _privateConstructorUsedError;
 
   /// [inactive] Whether inactive codes - codes that are not approved for current use - are in the value set. If inactive = true, inactive codes are to be included in the expansion, if inactive = false, the inactive codes will not be included in the expansion. If absent, the behavior is determined by the implementation, or by the applicable $expand parameters (but generally, inactive codes would be expected to be included).
-  Boolean? get inactive => throw _privateConstructorUsedError;
+  FhirBoolean? get inactive => throw _privateConstructorUsedError;
 
   /// [inactiveElement] ("_inactive") Extensions for inactive
   @JsonKey(name: '_inactive')
@@ -24867,9 +24867,9 @@ abstract class $ValueSetComposeCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Date? lockedDate,
+      FhirDate? lockedDate,
       @JsonKey(name: '_lockedDate') Element? lockedDateElement,
-      Boolean? inactive,
+      FhirBoolean? inactive,
       @JsonKey(name: '_inactive') Element? inactiveElement,
       List<ValueSetInclude> include,
       List<ValueSetInclude>? exclude,
@@ -24929,7 +24929,7 @@ class _$ValueSetComposeCopyWithImpl<$Res, $Val extends ValueSetCompose>
       inactive: freezed == inactive
           ? _value.inactive
           : inactive // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       inactiveElement: freezed == inactiveElement
           ? _value.inactiveElement
           : inactiveElement // ignore: cast_nullable_to_non_nullable
@@ -24990,9 +24990,9 @@ abstract class _$$_ValueSetComposeCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Date? lockedDate,
+      FhirDate? lockedDate,
       @JsonKey(name: '_lockedDate') Element? lockedDateElement,
-      Boolean? inactive,
+      FhirBoolean? inactive,
       @JsonKey(name: '_inactive') Element? inactiveElement,
       List<ValueSetInclude> include,
       List<ValueSetInclude>? exclude,
@@ -25052,7 +25052,7 @@ class __$$_ValueSetComposeCopyWithImpl<$Res>
       inactive: freezed == inactive
           ? _value.inactive
           : inactive // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       inactiveElement: freezed == inactiveElement
           ? _value.inactiveElement
           : inactiveElement // ignore: cast_nullable_to_non_nullable
@@ -25179,7 +25179,7 @@ class _$_ValueSetCompose extends _ValueSetCompose {
 
   /// [inactive] Whether inactive codes - codes that are not approved for current use - are in the value set. If inactive = true, inactive codes are to be included in the expansion, if inactive = false, the inactive codes will not be included in the expansion. If absent, the behavior is determined by the implementation, or by the applicable $expand parameters (but generally, inactive codes would be expected to be included).
   @override
-  final Boolean? inactive;
+  final FhirBoolean? inactive;
 
   /// [inactiveElement] ("_inactive") Extensions for inactive
   @override
@@ -25304,7 +25304,7 @@ abstract class _ValueSetCompose extends ValueSetCompose {
           final List<FhirExtension>? modifierExtension,
           final Date? lockedDate,
           @JsonKey(name: '_lockedDate') final Element? lockedDateElement,
-          final Boolean? inactive,
+          final FhirBoolean? inactive,
           @JsonKey(name: '_inactive') final Element? inactiveElement,
           required final List<ValueSetInclude> include,
           final List<ValueSetInclude>? exclude,
@@ -25349,7 +25349,7 @@ abstract class _ValueSetCompose extends ValueSetCompose {
   @override
 
   /// [lockedDate] The Locked Date is  the effective date that is used to determine the version of all referenced Code Systems and Value Set Definitions included in the compose that are not already tied to a specific version.
-  Date? get lockedDate;
+  FhirDate? get lockedDate;
   @override
 
   /// [lockedDateElement] ("_lockedDate") Extensions for lockedDate
@@ -25358,7 +25358,7 @@ abstract class _ValueSetCompose extends ValueSetCompose {
   @override
 
   /// [inactive] Whether inactive codes - codes that are not approved for current use - are in the value set. If inactive = true, inactive codes are to be included in the expansion, if inactive = false, the inactive codes will not be included in the expansion. If absent, the behavior is determined by the implementation, or by the applicable $expand parameters (but generally, inactive codes would be expected to be included).
-  Boolean? get inactive;
+  FhirBoolean? get inactive;
   @override
 
   /// [inactiveElement] ("_inactive") Extensions for inactive
@@ -26052,7 +26052,7 @@ mixin _$ValueSetConcept {
       throw _privateConstructorUsedError;
 
   /// [code] Specifies a code for the concept to be included or excluded.
-  Code? get code => throw _privateConstructorUsedError;
+  FhirCode? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] ("_code") Extensions for code
   @JsonKey(name: '_code')
@@ -26085,7 +26085,7 @@ abstract class $ValueSetConceptCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement,
       String? display,
       @JsonKey(name: '_display') Element? displayElement,
@@ -26133,7 +26133,7 @@ class _$ValueSetConceptCopyWithImpl<$Res, $Val extends ValueSetConcept>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -26190,7 +26190,7 @@ abstract class _$$_ValueSetConceptCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement,
       String? display,
       @JsonKey(name: '_display') Element? displayElement,
@@ -26238,7 +26238,7 @@ class __$$_ValueSetConceptCopyWithImpl<$Res>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -26346,7 +26346,7 @@ class _$_ValueSetConcept extends _ValueSetConcept {
 
   /// [code] Specifies a code for the concept to be included or excluded.
   @override
-  final Code? code;
+  final FhirCode? code;
 
   /// [codeElement] ("_code") Extensions for code
   @override
@@ -26432,7 +26432,7 @@ abstract class _ValueSetConcept extends ValueSetConcept {
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final Code? code,
+      final FhirCode? code,
       @JsonKey(name: '_code') final Element? codeElement,
       final String? display,
       @JsonKey(name: '_display') final Element? displayElement,
@@ -26475,7 +26475,7 @@ abstract class _ValueSetConcept extends ValueSetConcept {
   @override
 
   /// [code] Specifies a code for the concept to be included or excluded.
-  Code? get code;
+  FhirCode? get code;
   @override
 
   /// [codeElement] ("_code") Extensions for code
@@ -26535,7 +26535,7 @@ mixin _$ValueSetDesignation {
       throw _privateConstructorUsedError;
 
   /// [language] The language this designation is defined for.
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
@@ -26570,7 +26570,7 @@ abstract class $ValueSetDesignationCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language') Element? languageElement,
       Coding? use,
       List<Coding>? additionalUse,
@@ -26621,7 +26621,7 @@ class _$ValueSetDesignationCopyWithImpl<$Res, $Val extends ValueSetDesignation>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -26694,7 +26694,7 @@ abstract class _$$_ValueSetDesignationCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language') Element? languageElement,
       Coding? use,
       List<Coding>? additionalUse,
@@ -26746,7 +26746,7 @@ class __$$_ValueSetDesignationCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -26859,7 +26859,7 @@ class _$_ValueSetDesignation extends _ValueSetDesignation {
 
   /// [language] The language this designation is defined for.
   @override
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] ("_language") Extensions for language
   @override
@@ -26953,7 +26953,7 @@ abstract class _ValueSetDesignation extends ValueSetDesignation {
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
-          final Code? language,
+          final FhirCode? language,
           @JsonKey(name: '_language') final Element? languageElement,
           final Coding? use,
           final List<Coding>? additionalUse,
@@ -26998,7 +26998,7 @@ abstract class _ValueSetDesignation extends ValueSetDesignation {
   @override
 
   /// [language] The language this designation is defined for.
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] ("_language") Extensions for language
@@ -27062,14 +27062,14 @@ mixin _$ValueSetFilter {
       throw _privateConstructorUsedError;
 
   /// [property] A code that identifies a property or a filter defined in the code system.
-  Code? get property => throw _privateConstructorUsedError;
+  FhirCode? get property => throw _privateConstructorUsedError;
 
   /// [propertyElement] ("_property") Extensions for property
   @JsonKey(name: '_property')
   Element? get propertyElement => throw _privateConstructorUsedError;
 
   /// [op] The kind of operation to perform as a part of the filter criteria.
-  Code? get op => throw _privateConstructorUsedError;
+  FhirCode? get op => throw _privateConstructorUsedError;
 
   /// [opElement] ("_op") Extensions for op
   @JsonKey(name: '_op')
@@ -27098,9 +27098,9 @@ abstract class $ValueSetFilterCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? property,
+      FhirCode? property,
       @JsonKey(name: '_property') Element? propertyElement,
-      Code? op,
+      FhirCode? op,
       @JsonKey(name: '_op') Element? opElement,
       String? value,
       @JsonKey(name: '_value') Element? valueElement});
@@ -27149,7 +27149,7 @@ class _$ValueSetFilterCopyWithImpl<$Res, $Val extends ValueSetFilter>
       property: freezed == property
           ? _value.property
           : property // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       propertyElement: freezed == propertyElement
           ? _value.propertyElement
           : propertyElement // ignore: cast_nullable_to_non_nullable
@@ -27157,7 +27157,7 @@ class _$ValueSetFilterCopyWithImpl<$Res, $Val extends ValueSetFilter>
       op: freezed == op
           ? _value.op
           : op // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       opElement: freezed == opElement
           ? _value.opElement
           : opElement // ignore: cast_nullable_to_non_nullable
@@ -27222,9 +27222,9 @@ abstract class _$$_ValueSetFilterCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? property,
+      FhirCode? property,
       @JsonKey(name: '_property') Element? propertyElement,
-      Code? op,
+      FhirCode? op,
       @JsonKey(name: '_op') Element? opElement,
       String? value,
       @JsonKey(name: '_value') Element? valueElement});
@@ -27274,7 +27274,7 @@ class __$$_ValueSetFilterCopyWithImpl<$Res>
       property: freezed == property
           ? _value.property
           : property // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       propertyElement: freezed == propertyElement
           ? _value.propertyElement
           : propertyElement // ignore: cast_nullable_to_non_nullable
@@ -27282,7 +27282,7 @@ class __$$_ValueSetFilterCopyWithImpl<$Res>
       op: freezed == op
           ? _value.op
           : op // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       opElement: freezed == opElement
           ? _value.opElement
           : opElement // ignore: cast_nullable_to_non_nullable
@@ -27386,7 +27386,7 @@ class _$_ValueSetFilter extends _ValueSetFilter {
 
   /// [property] A code that identifies a property or a filter defined in the code system.
   @override
-  final Code? property;
+  final FhirCode? property;
 
   /// [propertyElement] ("_property") Extensions for property
   @override
@@ -27395,7 +27395,7 @@ class _$_ValueSetFilter extends _ValueSetFilter {
 
   /// [op] The kind of operation to perform as a part of the filter criteria.
   @override
-  final Code? op;
+  final FhirCode? op;
 
   /// [opElement] ("_op") Extensions for op
   @override
@@ -27471,9 +27471,9 @@ abstract class _ValueSetFilter extends ValueSetFilter {
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
-          final Code? property,
+          final FhirCode? property,
           @JsonKey(name: '_property') final Element? propertyElement,
-          final Code? op,
+          final FhirCode? op,
           @JsonKey(name: '_op') final Element? opElement,
           final String? value,
           @JsonKey(name: '_value') final Element? valueElement}) =
@@ -27516,7 +27516,7 @@ abstract class _ValueSetFilter extends ValueSetFilter {
   @override
 
   /// [property] A code that identifies a property or a filter defined in the code system.
-  Code? get property;
+  FhirCode? get property;
   @override
 
   /// [propertyElement] ("_property") Extensions for property
@@ -27525,7 +27525,7 @@ abstract class _ValueSetFilter extends ValueSetFilter {
   @override
 
   /// [op] The kind of operation to perform as a part of the filter criteria.
-  Code? get op;
+  FhirCode? get op;
   @override
 
   /// [opElement] ("_op") Extensions for op
@@ -27602,14 +27602,14 @@ mixin _$ValueSetExpansion {
   Element? get timestampElement => throw _privateConstructorUsedError;
 
   /// [total] The total number of concepts in the expansion. If the number of concept nodes in this resource is less than the stated number, then the server can return more using the offset parameter.
-  Integer? get total => throw _privateConstructorUsedError;
+  FhirInteger? get total => throw _privateConstructorUsedError;
 
   /// [totalElement] ("_total") Extensions for total
   @JsonKey(name: '_total')
   Element? get totalElement => throw _privateConstructorUsedError;
 
   /// [offset] If paging is being used, the offset at which this resource starts.  I.e. this resource is a partial view into the expansion. If paging is not being used, this element SHALL NOT be present.
-  Integer? get offset => throw _privateConstructorUsedError;
+  FhirInteger? get offset => throw _privateConstructorUsedError;
 
   /// [offsetElement] ("_offset") Extensions for offset
   @JsonKey(name: '_offset')
@@ -27646,9 +27646,9 @@ abstract class $ValueSetExpansionCopyWith<$Res> {
       @JsonKey(name: '_next') Element? nextElement,
       FhirDateTime? timestamp,
       @JsonKey(name: '_timestamp') Element? timestampElement,
-      Integer? total,
+      FhirInteger? total,
       @JsonKey(name: '_total') Element? totalElement,
-      Integer? offset,
+      FhirInteger? offset,
       @JsonKey(name: '_offset') Element? offsetElement,
       List<ValueSetParameter>? parameter,
       List<ValueSetProperty>? property,
@@ -27838,9 +27838,9 @@ abstract class _$$_ValueSetExpansionCopyWith<$Res>
       @JsonKey(name: '_next') Element? nextElement,
       FhirDateTime? timestamp,
       @JsonKey(name: '_timestamp') Element? timestampElement,
-      Integer? total,
+      FhirInteger? total,
       @JsonKey(name: '_total') Element? totalElement,
-      Integer? offset,
+      FhirInteger? offset,
       @JsonKey(name: '_offset') Element? offsetElement,
       List<ValueSetParameter>? parameter,
       List<ValueSetProperty>? property,
@@ -28291,7 +28291,7 @@ abstract class _ValueSetExpansion extends ValueSetExpansion {
   @override
 
   /// [total] The total number of concepts in the expansion. If the number of concept nodes in this resource is less than the stated number, then the server can return more using the offset parameter.
-  Integer? get total;
+  FhirInteger? get total;
   @override
 
   /// [totalElement] ("_total") Extensions for total
@@ -28300,7 +28300,7 @@ abstract class _ValueSetExpansion extends ValueSetExpansion {
   @override
 
   /// [offset] If paging is being used, the offset at which this resource starts.  I.e. this resource is a partial view into the expansion. If paging is not being used, this element SHALL NOT be present.
-  Integer? get offset;
+  FhirInteger? get offset;
   @override
 
   /// [offsetElement] ("_offset") Extensions for offset
@@ -28373,21 +28373,21 @@ mixin _$ValueSetParameter {
   Element? get valueStringElement => throw _privateConstructorUsedError;
 
   /// [valueBoolean] The value of the parameter.
-  Boolean? get valueBoolean => throw _privateConstructorUsedError;
+  FhirBoolean? get valueBoolean => throw _privateConstructorUsedError;
 
   /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
   @JsonKey(name: '_valueBoolean')
   Element? get valueBooleanElement => throw _privateConstructorUsedError;
 
   /// [valueInteger] The value of the parameter.
-  Integer? get valueInteger => throw _privateConstructorUsedError;
+  FhirInteger? get valueInteger => throw _privateConstructorUsedError;
 
   /// [valueIntegerElement] ("_valueInteger") Extensions for valueInteger
   @JsonKey(name: '_valueInteger')
   Element? get valueIntegerElement => throw _privateConstructorUsedError;
 
   /// [valueDecimal] The value of the parameter.
-  Decimal? get valueDecimal => throw _privateConstructorUsedError;
+  FhirDecimal? get valueDecimal => throw _privateConstructorUsedError;
 
   /// [valueDecimalElement] ("_valueDecimal") Extensions for valueDecimal
   @JsonKey(name: '_valueDecimal')
@@ -28401,7 +28401,7 @@ mixin _$ValueSetParameter {
   Element? get valueUriElement => throw _privateConstructorUsedError;
 
   /// [valueCode] The value of the parameter.
-  Code? get valueCode => throw _privateConstructorUsedError;
+  FhirCode? get valueCode => throw _privateConstructorUsedError;
 
   /// [valueCodeElement] ("_valueCode") Extensions for valueCode
   @JsonKey(name: '_valueCode')
@@ -28434,15 +28434,15 @@ abstract class $ValueSetParameterCopyWith<$Res> {
       @JsonKey(name: '_name') Element? nameElement,
       String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
-      Boolean? valueBoolean,
+      FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-      Integer? valueInteger,
+      FhirInteger? valueInteger,
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
-      Decimal? valueDecimal,
+      FhirDecimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
       FhirUri? valueUri,
       @JsonKey(name: '_valueUri') Element? valueUriElement,
-      Code? valueCode,
+      FhirCode? valueCode,
       @JsonKey(name: '_valueCode') Element? valueCodeElement,
       FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement});
@@ -28522,7 +28522,7 @@ class _$ValueSetParameterCopyWithImpl<$Res, $Val extends ValueSetParameter>
       valueBoolean: freezed == valueBoolean
           ? _value.valueBoolean
           : valueBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       valueBooleanElement: freezed == valueBooleanElement
           ? _value.valueBooleanElement
           : valueBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -28554,7 +28554,7 @@ class _$ValueSetParameterCopyWithImpl<$Res, $Val extends ValueSetParameter>
       valueCode: freezed == valueCode
           ? _value.valueCode
           : valueCode // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       valueCodeElement: freezed == valueCodeElement
           ? _value.valueCodeElement
           : valueCodeElement // ignore: cast_nullable_to_non_nullable
@@ -28683,15 +28683,15 @@ abstract class _$$_ValueSetParameterCopyWith<$Res>
       @JsonKey(name: '_name') Element? nameElement,
       String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
-      Boolean? valueBoolean,
+      FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-      Integer? valueInteger,
+      FhirInteger? valueInteger,
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
-      Decimal? valueDecimal,
+      FhirDecimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
       FhirUri? valueUri,
       @JsonKey(name: '_valueUri') Element? valueUriElement,
-      Code? valueCode,
+      FhirCode? valueCode,
       @JsonKey(name: '_valueCode') Element? valueCodeElement,
       FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement});
@@ -28777,7 +28777,7 @@ class __$$_ValueSetParameterCopyWithImpl<$Res>
       valueBoolean: freezed == valueBoolean
           ? _value.valueBoolean
           : valueBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       valueBooleanElement: freezed == valueBooleanElement
           ? _value.valueBooleanElement
           : valueBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -28809,7 +28809,7 @@ class __$$_ValueSetParameterCopyWithImpl<$Res>
       valueCode: freezed == valueCode
           ? _value.valueCode
           : valueCode // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       valueCodeElement: freezed == valueCodeElement
           ? _value.valueCodeElement
           : valueCodeElement // ignore: cast_nullable_to_non_nullable
@@ -28941,7 +28941,7 @@ class _$_ValueSetParameter extends _ValueSetParameter {
 
   /// [valueBoolean] The value of the parameter.
   @override
-  final Boolean? valueBoolean;
+  final FhirBoolean? valueBoolean;
 
   /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
   @override
@@ -28977,7 +28977,7 @@ class _$_ValueSetParameter extends _ValueSetParameter {
 
   /// [valueCode] The value of the parameter.
   @override
-  final Code? valueCode;
+  final FhirCode? valueCode;
 
   /// [valueCodeElement] ("_valueCode") Extensions for valueCode
   @override
@@ -29093,7 +29093,7 @@ abstract class _ValueSetParameter extends ValueSetParameter {
       final String? valueString,
       @JsonKey(name: '_valueString')
           final Element? valueStringElement,
-      final Boolean? valueBoolean,
+      final FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean')
           final Element? valueBooleanElement,
       final Integer? valueInteger,
@@ -29105,7 +29105,7 @@ abstract class _ValueSetParameter extends ValueSetParameter {
       final FhirUri? valueUri,
       @JsonKey(name: '_valueUri')
           final Element? valueUriElement,
-      final Code? valueCode,
+      final FhirCode? valueCode,
       @JsonKey(name: '_valueCode')
           final Element? valueCodeElement,
       final FhirDateTime? valueDateTime,
@@ -29167,7 +29167,7 @@ abstract class _ValueSetParameter extends ValueSetParameter {
   @override
 
   /// [valueBoolean] The value of the parameter.
-  Boolean? get valueBoolean;
+  FhirBoolean? get valueBoolean;
   @override
 
   /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
@@ -29176,7 +29176,7 @@ abstract class _ValueSetParameter extends ValueSetParameter {
   @override
 
   /// [valueInteger] The value of the parameter.
-  Integer? get valueInteger;
+  FhirInteger? get valueInteger;
   @override
 
   /// [valueIntegerElement] ("_valueInteger") Extensions for valueInteger
@@ -29185,7 +29185,7 @@ abstract class _ValueSetParameter extends ValueSetParameter {
   @override
 
   /// [valueDecimal] The value of the parameter.
-  Decimal? get valueDecimal;
+  FhirDecimal? get valueDecimal;
   @override
 
   /// [valueDecimalElement] ("_valueDecimal") Extensions for valueDecimal
@@ -29203,7 +29203,7 @@ abstract class _ValueSetParameter extends ValueSetParameter {
   @override
 
   /// [valueCode] The value of the parameter.
-  Code? get valueCode;
+  FhirCode? get valueCode;
   @override
 
   /// [valueCodeElement] ("_valueCode") Extensions for valueCode
@@ -29259,7 +29259,7 @@ mixin _$ValueSetProperty {
       throw _privateConstructorUsedError;
 
   /// [code] A code that is used to identify the property. The code is used in ValueSet.expansion.contains.property.code.
-  Code? get code => throw _privateConstructorUsedError;
+  FhirCode? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] ("_code") Extensions for code
   @JsonKey(name: '_code')
@@ -29288,7 +29288,7 @@ abstract class $ValueSetPropertyCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement,
       FhirUri? uri,
       @JsonKey(name: '_uri') Element? uriElement});
@@ -29334,7 +29334,7 @@ class _$ValueSetPropertyCopyWithImpl<$Res, $Val extends ValueSetProperty>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -29387,7 +29387,7 @@ abstract class _$$_ValueSetPropertyCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement,
       FhirUri? uri,
       @JsonKey(name: '_uri') Element? uriElement});
@@ -29433,7 +29433,7 @@ class __$$_ValueSetPropertyCopyWithImpl<$Res>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -29535,7 +29535,7 @@ class _$_ValueSetProperty extends _ValueSetProperty {
 
   /// [code] A code that is used to identify the property. The code is used in ValueSet.expansion.contains.property.code.
   @override
-  final Code? code;
+  final FhirCode? code;
 
   /// [codeElement] ("_code") Extensions for code
   @override
@@ -29605,7 +29605,7 @@ abstract class _ValueSetProperty extends ValueSetProperty {
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final Code? code,
+      final FhirCode? code,
       @JsonKey(name: '_code') final Element? codeElement,
       final FhirUri? uri,
       @JsonKey(name: '_uri') final Element? uriElement}) = _$_ValueSetProperty;
@@ -29647,7 +29647,7 @@ abstract class _ValueSetProperty extends ValueSetProperty {
   @override
 
   /// [code] A code that is used to identify the property. The code is used in ValueSet.expansion.contains.property.code.
-  Code? get code;
+  FhirCode? get code;
   @override
 
   /// [codeElement] ("_code") Extensions for code
@@ -29711,14 +29711,14 @@ mixin _$ValueSetContains {
 
   /// [abstract_] ("abstract") If true, this entry is included in the expansion for navigational purposes, and the user cannot select the code directly as a proper value.
   @JsonKey(name: 'abstract')
-  Boolean? get abstract_ => throw _privateConstructorUsedError;
+  FhirBoolean? get abstract_ => throw _privateConstructorUsedError;
 
   /// [abstractElement] ("_abstract") Extensions for abstract
   @JsonKey(name: '_abstract')
   Element? get abstractElement => throw _privateConstructorUsedError;
 
   /// [inactive] If the concept is inactive in the code system that defines it. Inactive codes are those that are no longer to be used, but are maintained by the code system for understanding legacy data. It might not be known or specified whether an concept is inactive (and it may depend on the context of use).
-  Boolean? get inactive => throw _privateConstructorUsedError;
+  FhirBoolean? get inactive => throw _privateConstructorUsedError;
 
   /// [inactiveElement] ("_inactive") Extensions for inactive
   @JsonKey(name: '_inactive')
@@ -29732,7 +29732,7 @@ mixin _$ValueSetContains {
   Element? get versionElement => throw _privateConstructorUsedError;
 
   /// [code] The code for this item in the expansion hierarchy. If this code is missing the entry in the hierarchy is a place holder (abstract) and does not represent a valid code in the value set.
-  Code? get code => throw _privateConstructorUsedError;
+  FhirCode? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] ("_code") Extensions for code
   @JsonKey(name: '_code')
@@ -29773,13 +29773,13 @@ abstract class $ValueSetContainsCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       FhirUri? system,
       @JsonKey(name: '_system') Element? systemElement,
-      @JsonKey(name: 'abstract') Boolean? abstract_,
+      @JsonKey(name: 'abstract') FhirBoolean? abstract_,
       @JsonKey(name: '_abstract') Element? abstractElement,
-      Boolean? inactive,
+      FhirBoolean? inactive,
       @JsonKey(name: '_inactive') Element? inactiveElement,
       String? version,
       @JsonKey(name: '_version') Element? versionElement,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement,
       String? display,
       @JsonKey(name: '_display') Element? displayElement,
@@ -29851,7 +29851,7 @@ class _$ValueSetContainsCopyWithImpl<$Res, $Val extends ValueSetContains>
       abstract_: freezed == abstract_
           ? _value.abstract_
           : abstract_ // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       abstractElement: freezed == abstractElement
           ? _value.abstractElement
           : abstractElement // ignore: cast_nullable_to_non_nullable
@@ -29859,7 +29859,7 @@ class _$ValueSetContainsCopyWithImpl<$Res, $Val extends ValueSetContains>
       inactive: freezed == inactive
           ? _value.inactive
           : inactive // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       inactiveElement: freezed == inactiveElement
           ? _value.inactiveElement
           : inactiveElement // ignore: cast_nullable_to_non_nullable
@@ -29875,7 +29875,7 @@ class _$ValueSetContainsCopyWithImpl<$Res, $Val extends ValueSetContains>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -29990,13 +29990,13 @@ abstract class _$$_ValueSetContainsCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       FhirUri? system,
       @JsonKey(name: '_system') Element? systemElement,
-      @JsonKey(name: 'abstract') Boolean? abstract_,
+      @JsonKey(name: 'abstract') FhirBoolean? abstract_,
       @JsonKey(name: '_abstract') Element? abstractElement,
-      Boolean? inactive,
+      FhirBoolean? inactive,
       @JsonKey(name: '_inactive') Element? inactiveElement,
       String? version,
       @JsonKey(name: '_version') Element? versionElement,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement,
       String? display,
       @JsonKey(name: '_display') Element? displayElement,
@@ -30072,7 +30072,7 @@ class __$$_ValueSetContainsCopyWithImpl<$Res>
       abstract_: freezed == abstract_
           ? _value.abstract_
           : abstract_ // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       abstractElement: freezed == abstractElement
           ? _value.abstractElement
           : abstractElement // ignore: cast_nullable_to_non_nullable
@@ -30080,7 +30080,7 @@ class __$$_ValueSetContainsCopyWithImpl<$Res>
       inactive: freezed == inactive
           ? _value.inactive
           : inactive // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       inactiveElement: freezed == inactiveElement
           ? _value.inactiveElement
           : inactiveElement // ignore: cast_nullable_to_non_nullable
@@ -30096,7 +30096,7 @@ class __$$_ValueSetContainsCopyWithImpl<$Res>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -30234,7 +30234,7 @@ class _$_ValueSetContains extends _ValueSetContains {
   /// [abstract_] ("abstract") If true, this entry is included in the expansion for navigational purposes, and the user cannot select the code directly as a proper value.
   @override
   @JsonKey(name: 'abstract')
-  final Boolean? abstract_;
+  final FhirBoolean? abstract_;
 
   /// [abstractElement] ("_abstract") Extensions for abstract
   @override
@@ -30243,7 +30243,7 @@ class _$_ValueSetContains extends _ValueSetContains {
 
   /// [inactive] If the concept is inactive in the code system that defines it. Inactive codes are those that are no longer to be used, but are maintained by the code system for understanding legacy data. It might not be known or specified whether an concept is inactive (and it may depend on the context of use).
   @override
-  final Boolean? inactive;
+  final FhirBoolean? inactive;
 
   /// [inactiveElement] ("_inactive") Extensions for inactive
   @override
@@ -30261,7 +30261,7 @@ class _$_ValueSetContains extends _ValueSetContains {
 
   /// [code] The code for this item in the expansion hierarchy. If this code is missing the entry in the hierarchy is a place holder (abstract) and does not represent a valid code in the value set.
   @override
-  final Code? code;
+  final FhirCode? code;
 
   /// [codeElement] ("_code") Extensions for code
   @override
@@ -30401,13 +30401,13 @@ abstract class _ValueSetContains extends ValueSetContains {
       final List<FhirExtension>? modifierExtension,
       final FhirUri? system,
       @JsonKey(name: '_system') final Element? systemElement,
-      @JsonKey(name: 'abstract') final Boolean? abstract_,
+      @JsonKey(name: 'abstract') final FhirBoolean? abstract_,
       @JsonKey(name: '_abstract') final Element? abstractElement,
-      final Boolean? inactive,
+      final FhirBoolean? inactive,
       @JsonKey(name: '_inactive') final Element? inactiveElement,
       final String? version,
       @JsonKey(name: '_version') final Element? versionElement,
-      final Code? code,
+      final FhirCode? code,
       @JsonKey(name: '_code') final Element? codeElement,
       final String? display,
       @JsonKey(name: '_display') final Element? displayElement,
@@ -30462,7 +30462,7 @@ abstract class _ValueSetContains extends ValueSetContains {
 
   /// [abstract_] ("abstract") If true, this entry is included in the expansion for navigational purposes, and the user cannot select the code directly as a proper value.
   @JsonKey(name: 'abstract')
-  Boolean? get abstract_;
+  FhirBoolean? get abstract_;
   @override
 
   /// [abstractElement] ("_abstract") Extensions for abstract
@@ -30471,7 +30471,7 @@ abstract class _ValueSetContains extends ValueSetContains {
   @override
 
   /// [inactive] If the concept is inactive in the code system that defines it. Inactive codes are those that are no longer to be used, but are maintained by the code system for understanding legacy data. It might not be known or specified whether an concept is inactive (and it may depend on the context of use).
-  Boolean? get inactive;
+  FhirBoolean? get inactive;
   @override
 
   /// [inactiveElement] ("_inactive") Extensions for inactive
@@ -30489,7 +30489,7 @@ abstract class _ValueSetContains extends ValueSetContains {
   @override
 
   /// [code] The code for this item in the expansion hierarchy. If this code is missing the entry in the hierarchy is a place holder (abstract) and does not represent a valid code in the value set.
-  Code? get code;
+  FhirCode? get code;
   @override
 
   /// [codeElement] ("_code") Extensions for code
@@ -30557,14 +30557,14 @@ mixin _$ValueSetProperty1 {
       throw _privateConstructorUsedError;
 
   /// [code] A code that is a reference to ValueSet.expansion.property.code.
-  Code? get code => throw _privateConstructorUsedError;
+  FhirCode? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] ("_code") Extensions for code
   @JsonKey(name: '_code')
   Element? get codeElement => throw _privateConstructorUsedError;
 
   /// [valueCode] The value of this property.
-  Code? get valueCode => throw _privateConstructorUsedError;
+  FhirCode? get valueCode => throw _privateConstructorUsedError;
 
   /// [valueCodeElement] ("_valueCode") Extensions for valueCode
   @JsonKey(name: '_valueCode')
@@ -30581,14 +30581,14 @@ mixin _$ValueSetProperty1 {
   Element? get valueStringElement => throw _privateConstructorUsedError;
 
   /// [valueInteger] The value of this property.
-  Integer? get valueInteger => throw _privateConstructorUsedError;
+  FhirInteger? get valueInteger => throw _privateConstructorUsedError;
 
   /// [valueIntegerElement] ("_valueInteger") Extensions for valueInteger
   @JsonKey(name: '_valueInteger')
   Element? get valueIntegerElement => throw _privateConstructorUsedError;
 
   /// [valueBoolean] The value of this property.
-  Boolean? get valueBoolean => throw _privateConstructorUsedError;
+  FhirBoolean? get valueBoolean => throw _privateConstructorUsedError;
 
   /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
   @JsonKey(name: '_valueBoolean')
@@ -30602,7 +30602,7 @@ mixin _$ValueSetProperty1 {
   Element? get valueDateTimeElement => throw _privateConstructorUsedError;
 
   /// [valueDecimal] The value of this property.
-  Decimal? get valueDecimal => throw _privateConstructorUsedError;
+  FhirDecimal? get valueDecimal => throw _privateConstructorUsedError;
 
   /// [valueDecimalElement] ("_valueDecimal") Extensions for valueDecimal
   @JsonKey(name: '_valueDecimal')
@@ -30628,20 +30628,20 @@ abstract class $ValueSetProperty1CopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement,
-      Code? valueCode,
+      FhirCode? valueCode,
       @JsonKey(name: '_valueCode') Element? valueCodeElement,
       Coding? valueCoding,
       String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
-      Integer? valueInteger,
+      FhirInteger? valueInteger,
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
-      Boolean? valueBoolean,
+      FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
-      Decimal? valueDecimal,
+      FhirDecimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
       List<ValueSetSubProperty>? subProperty});
 
@@ -30704,7 +30704,7 @@ class _$ValueSetProperty1CopyWithImpl<$Res, $Val extends ValueSetProperty1>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -30712,7 +30712,7 @@ class _$ValueSetProperty1CopyWithImpl<$Res, $Val extends ValueSetProperty1>
       valueCode: freezed == valueCode
           ? _value.valueCode
           : valueCode // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       valueCodeElement: freezed == valueCodeElement
           ? _value.valueCodeElement
           : valueCodeElement // ignore: cast_nullable_to_non_nullable
@@ -30740,7 +30740,7 @@ class _$ValueSetProperty1CopyWithImpl<$Res, $Val extends ValueSetProperty1>
       valueBoolean: freezed == valueBoolean
           ? _value.valueBoolean
           : valueBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       valueBooleanElement: freezed == valueBooleanElement
           ? _value.valueBooleanElement
           : valueBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -30877,20 +30877,20 @@ abstract class _$$_ValueSetProperty1CopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement,
-      Code? valueCode,
+      FhirCode? valueCode,
       @JsonKey(name: '_valueCode') Element? valueCodeElement,
       Coding? valueCoding,
       String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
-      Integer? valueInteger,
+      FhirInteger? valueInteger,
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
-      Boolean? valueBoolean,
+      FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
-      Decimal? valueDecimal,
+      FhirDecimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
       List<ValueSetSubProperty>? subProperty});
 
@@ -30959,7 +30959,7 @@ class __$$_ValueSetProperty1CopyWithImpl<$Res>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -30967,7 +30967,7 @@ class __$$_ValueSetProperty1CopyWithImpl<$Res>
       valueCode: freezed == valueCode
           ? _value.valueCode
           : valueCode // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       valueCodeElement: freezed == valueCodeElement
           ? _value.valueCodeElement
           : valueCodeElement // ignore: cast_nullable_to_non_nullable
@@ -30995,7 +30995,7 @@ class __$$_ValueSetProperty1CopyWithImpl<$Res>
       valueBoolean: freezed == valueBoolean
           ? _value.valueBoolean
           : valueBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       valueBooleanElement: freezed == valueBooleanElement
           ? _value.valueBooleanElement
           : valueBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -31122,7 +31122,7 @@ class _$_ValueSetProperty1 extends _ValueSetProperty1 {
 
   /// [code] A code that is a reference to ValueSet.expansion.property.code.
   @override
-  final Code? code;
+  final FhirCode? code;
 
   /// [codeElement] ("_code") Extensions for code
   @override
@@ -31131,7 +31131,7 @@ class _$_ValueSetProperty1 extends _ValueSetProperty1 {
 
   /// [valueCode] The value of this property.
   @override
-  final Code? valueCode;
+  final FhirCode? valueCode;
 
   /// [valueCodeElement] ("_valueCode") Extensions for valueCode
   @override
@@ -31162,7 +31162,7 @@ class _$_ValueSetProperty1 extends _ValueSetProperty1 {
 
   /// [valueBoolean] The value of this property.
   @override
-  final Boolean? valueBoolean;
+  final FhirBoolean? valueBoolean;
 
   /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
   @override
@@ -31293,16 +31293,16 @@ abstract class _ValueSetProperty1 extends ValueSetProperty1 {
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final Code? code,
+      final FhirCode? code,
       @JsonKey(name: '_code') final Element? codeElement,
-      final Code? valueCode,
+      final FhirCode? valueCode,
       @JsonKey(name: '_valueCode') final Element? valueCodeElement,
       final Coding? valueCoding,
       final String? valueString,
       @JsonKey(name: '_valueString') final Element? valueStringElement,
       final Integer? valueInteger,
       @JsonKey(name: '_valueInteger') final Element? valueIntegerElement,
-      final Boolean? valueBoolean,
+      final FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') final Element? valueBooleanElement,
       final FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') final Element? valueDateTimeElement,
@@ -31347,7 +31347,7 @@ abstract class _ValueSetProperty1 extends ValueSetProperty1 {
   @override
 
   /// [code] A code that is a reference to ValueSet.expansion.property.code.
-  Code? get code;
+  FhirCode? get code;
   @override
 
   /// [codeElement] ("_code") Extensions for code
@@ -31356,7 +31356,7 @@ abstract class _ValueSetProperty1 extends ValueSetProperty1 {
   @override
 
   /// [valueCode] The value of this property.
-  Code? get valueCode;
+  FhirCode? get valueCode;
   @override
 
   /// [valueCodeElement] ("_valueCode") Extensions for valueCode
@@ -31378,7 +31378,7 @@ abstract class _ValueSetProperty1 extends ValueSetProperty1 {
   @override
 
   /// [valueInteger] The value of this property.
-  Integer? get valueInteger;
+  FhirInteger? get valueInteger;
   @override
 
   /// [valueIntegerElement] ("_valueInteger") Extensions for valueInteger
@@ -31387,7 +31387,7 @@ abstract class _ValueSetProperty1 extends ValueSetProperty1 {
   @override
 
   /// [valueBoolean] The value of this property.
-  Boolean? get valueBoolean;
+  FhirBoolean? get valueBoolean;
   @override
 
   /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
@@ -31405,7 +31405,7 @@ abstract class _ValueSetProperty1 extends ValueSetProperty1 {
   @override
 
   /// [valueDecimal] The value of this property.
-  Decimal? get valueDecimal;
+  FhirDecimal? get valueDecimal;
   @override
 
   /// [valueDecimalElement] ("_valueDecimal") Extensions for valueDecimal
@@ -31456,14 +31456,14 @@ mixin _$ValueSetSubProperty {
       throw _privateConstructorUsedError;
 
   /// [code] A code that is a reference to ValueSet.expansion.property.code.
-  Code? get code => throw _privateConstructorUsedError;
+  FhirCode? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] ("_code") Extensions for code
   @JsonKey(name: '_code')
   Element? get codeElement => throw _privateConstructorUsedError;
 
   /// [valueCode] The value of this subproperty.
-  Code? get valueCode => throw _privateConstructorUsedError;
+  FhirCode? get valueCode => throw _privateConstructorUsedError;
 
   /// [valueCodeElement] ("_valueCode") Extensions for valueCode
   @JsonKey(name: '_valueCode')
@@ -31480,14 +31480,14 @@ mixin _$ValueSetSubProperty {
   Element? get valueStringElement => throw _privateConstructorUsedError;
 
   /// [valueInteger] The value of this subproperty.
-  Integer? get valueInteger => throw _privateConstructorUsedError;
+  FhirInteger? get valueInteger => throw _privateConstructorUsedError;
 
   /// [valueIntegerElement] ("_valueInteger") Extensions for valueInteger
   @JsonKey(name: '_valueInteger')
   Element? get valueIntegerElement => throw _privateConstructorUsedError;
 
   /// [valueBoolean] The value of this subproperty.
-  Boolean? get valueBoolean => throw _privateConstructorUsedError;
+  FhirBoolean? get valueBoolean => throw _privateConstructorUsedError;
 
   /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
   @JsonKey(name: '_valueBoolean')
@@ -31501,7 +31501,7 @@ mixin _$ValueSetSubProperty {
   Element? get valueDateTimeElement => throw _privateConstructorUsedError;
 
   /// [valueDecimal] The value of this subproperty.
-  Decimal? get valueDecimal => throw _privateConstructorUsedError;
+  FhirDecimal? get valueDecimal => throw _privateConstructorUsedError;
 
   /// [valueDecimalElement] ("_valueDecimal") Extensions for valueDecimal
   @JsonKey(name: '_valueDecimal')
@@ -31523,20 +31523,20 @@ abstract class $ValueSetSubPropertyCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement,
-      Code? valueCode,
+      FhirCode? valueCode,
       @JsonKey(name: '_valueCode') Element? valueCodeElement,
       Coding? valueCoding,
       String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
-      Integer? valueInteger,
+      FhirInteger? valueInteger,
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
-      Boolean? valueBoolean,
+      FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
-      Decimal? valueDecimal,
+      FhirDecimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement});
 
   $ElementCopyWith<$Res>? get codeElement;
@@ -31597,7 +31597,7 @@ class _$ValueSetSubPropertyCopyWithImpl<$Res, $Val extends ValueSetSubProperty>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -31605,7 +31605,7 @@ class _$ValueSetSubPropertyCopyWithImpl<$Res, $Val extends ValueSetSubProperty>
       valueCode: freezed == valueCode
           ? _value.valueCode
           : valueCode // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       valueCodeElement: freezed == valueCodeElement
           ? _value.valueCodeElement
           : valueCodeElement // ignore: cast_nullable_to_non_nullable
@@ -31633,7 +31633,7 @@ class _$ValueSetSubPropertyCopyWithImpl<$Res, $Val extends ValueSetSubProperty>
       valueBoolean: freezed == valueBoolean
           ? _value.valueBoolean
           : valueBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       valueBooleanElement: freezed == valueBooleanElement
           ? _value.valueBooleanElement
           : valueBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -31766,20 +31766,20 @@ abstract class _$$_ValueSetSubPropertyCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement,
-      Code? valueCode,
+      FhirCode? valueCode,
       @JsonKey(name: '_valueCode') Element? valueCodeElement,
       Coding? valueCoding,
       String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
-      Integer? valueInteger,
+      FhirInteger? valueInteger,
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
-      Boolean? valueBoolean,
+      FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
-      Decimal? valueDecimal,
+      FhirDecimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement});
 
   @override
@@ -31846,7 +31846,7 @@ class __$$_ValueSetSubPropertyCopyWithImpl<$Res>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -31854,7 +31854,7 @@ class __$$_ValueSetSubPropertyCopyWithImpl<$Res>
       valueCode: freezed == valueCode
           ? _value.valueCode
           : valueCode // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       valueCodeElement: freezed == valueCodeElement
           ? _value.valueCodeElement
           : valueCodeElement // ignore: cast_nullable_to_non_nullable
@@ -31882,7 +31882,7 @@ class __$$_ValueSetSubPropertyCopyWithImpl<$Res>
       valueBoolean: freezed == valueBoolean
           ? _value.valueBoolean
           : valueBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       valueBooleanElement: freezed == valueBooleanElement
           ? _value.valueBooleanElement
           : valueBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -32003,7 +32003,7 @@ class _$_ValueSetSubProperty extends _ValueSetSubProperty {
 
   /// [code] A code that is a reference to ValueSet.expansion.property.code.
   @override
-  final Code? code;
+  final FhirCode? code;
 
   /// [codeElement] ("_code") Extensions for code
   @override
@@ -32012,7 +32012,7 @@ class _$_ValueSetSubProperty extends _ValueSetSubProperty {
 
   /// [valueCode] The value of this subproperty.
   @override
-  final Code? valueCode;
+  final FhirCode? valueCode;
 
   /// [valueCodeElement] ("_valueCode") Extensions for valueCode
   @override
@@ -32043,7 +32043,7 @@ class _$_ValueSetSubProperty extends _ValueSetSubProperty {
 
   /// [valueBoolean] The value of this subproperty.
   @override
-  final Boolean? valueBoolean;
+  final FhirBoolean? valueBoolean;
 
   /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
   @override
@@ -32157,16 +32157,16 @@ abstract class _ValueSetSubProperty extends ValueSetSubProperty {
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
-          final Code? code,
+          final FhirCode? code,
           @JsonKey(name: '_code') final Element? codeElement,
-          final Code? valueCode,
+          final FhirCode? valueCode,
           @JsonKey(name: '_valueCode') final Element? valueCodeElement,
           final Coding? valueCoding,
           final String? valueString,
           @JsonKey(name: '_valueString') final Element? valueStringElement,
           final Integer? valueInteger,
           @JsonKey(name: '_valueInteger') final Element? valueIntegerElement,
-          final Boolean? valueBoolean,
+          final FhirBoolean? valueBoolean,
           @JsonKey(name: '_valueBoolean') final Element? valueBooleanElement,
           final FhirDateTime? valueDateTime,
           @JsonKey(name: '_valueDateTime') final Element? valueDateTimeElement,
@@ -32211,7 +32211,7 @@ abstract class _ValueSetSubProperty extends ValueSetSubProperty {
   @override
 
   /// [code] A code that is a reference to ValueSet.expansion.property.code.
-  Code? get code;
+  FhirCode? get code;
   @override
 
   /// [codeElement] ("_code") Extensions for code
@@ -32220,7 +32220,7 @@ abstract class _ValueSetSubProperty extends ValueSetSubProperty {
   @override
 
   /// [valueCode] The value of this subproperty.
-  Code? get valueCode;
+  FhirCode? get valueCode;
   @override
 
   /// [valueCodeElement] ("_valueCode") Extensions for valueCode
@@ -32242,7 +32242,7 @@ abstract class _ValueSetSubProperty extends ValueSetSubProperty {
   @override
 
   /// [valueInteger] The value of this subproperty.
-  Integer? get valueInteger;
+  FhirInteger? get valueInteger;
   @override
 
   /// [valueIntegerElement] ("_valueInteger") Extensions for valueInteger
@@ -32251,7 +32251,7 @@ abstract class _ValueSetSubProperty extends ValueSetSubProperty {
   @override
 
   /// [valueBoolean] The value of this subproperty.
-  Boolean? get valueBoolean;
+  FhirBoolean? get valueBoolean;
   @override
 
   /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
@@ -32269,7 +32269,7 @@ abstract class _ValueSetSubProperty extends ValueSetSubProperty {
   @override
 
   /// [valueDecimal] The value of this subproperty.
-  Decimal? get valueDecimal;
+  FhirDecimal? get valueDecimal;
   @override
 
   /// [valueDecimalElement] ("_valueDecimal") Extensions for valueDecimal

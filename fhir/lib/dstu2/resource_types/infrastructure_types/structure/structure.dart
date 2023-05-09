@@ -19,11 +19,11 @@ class Media with Resource, _$Media {
     @Default(Dstu2ResourceType.Media)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Media)
         Dstu2ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+     FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -81,15 +81,15 @@ class Binary with Resource, _$Binary {
     @Default(Dstu2ResourceType.Binary)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Binary)
         Dstu2ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+     FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
-    Code? contentType,
+     FhirCode? contentType,
     @JsonKey(name: '_contentType') Element? contentTypeElement,
-    Base64Binary? content,
+  FhirBase64Binary?? content,
   }) = _Binary;
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
@@ -126,11 +126,11 @@ class Bundle with Resource, _$Bundle {
     @Default(Dstu2ResourceType.Bundle)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Bundle)
         Dstu2ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+     FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     @JsonKey(unknownEnumValue: BundleType.unknown) required BundleType type,
     @JsonKey(name: '_type') Element? typeElement,
@@ -172,7 +172,7 @@ class Bundle with Resource, _$Bundle {
 class BundleLink with _$BundleLink {
   BundleLink._();
   factory BundleLink({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -217,7 +217,7 @@ class BundleLink with _$BundleLink {
 class BundleEntry with _$BundleEntry {
   BundleEntry._();
   factory BundleEntry({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -308,13 +308,13 @@ class BundleEntry with _$BundleEntry {
 class BundleEntrySearch with _$BundleEntrySearch {
   BundleEntrySearch._();
   factory BundleEntrySearch({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
     @JsonKey(unknownEnumValue: SearchMode.unknown) SearchMode? mode,
     @JsonKey(name: '_mode') Element? modeElement,
-    Decimal? score,
+    FhirDecimal? score,
     @JsonKey(name: '_score') Element? scoreElement,
   }) = _BundleEntrySearch;
 
@@ -353,7 +353,7 @@ class BundleEntrySearch with _$BundleEntrySearch {
 class BundleEntryRequest with _$BundleEntryRequest {
   BundleEntryRequest._();
   factory BundleEntryRequest({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -364,7 +364,7 @@ class BundleEntryRequest with _$BundleEntryRequest {
     @JsonKey(name: '_url') Element? urlElement,
     String? ifNoneMatch,
     @JsonKey(name: '_ifNoneMatch') Element? ifNoneMatchElement,
-    Instant? ifModifiedSince,
+    FhirInstant? ifModifiedSince,
     @JsonKey(name: '_ifModifiedSince') Element? ifModifiedSinceElement,
     String? ifMatch,
     @JsonKey(name: '_ifMatch') Element? ifMatchElement,
@@ -407,7 +407,7 @@ class BundleEntryRequest with _$BundleEntryRequest {
 class BundleEntryResponse with _$BundleEntryResponse {
   BundleEntryResponse._();
   factory BundleEntryResponse({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -417,7 +417,7 @@ class BundleEntryResponse with _$BundleEntryResponse {
     @JsonKey(name: '_location') Element? locationElement,
     String? etag,
     @JsonKey(name: '_etag') Element? etagElement,
-    Instant? lastModified,
+    FhirInstant? lastModified,
     @JsonKey(name: '_lastModified') Element? lastModifiedElement,
   }) = _BundleEntryResponse;
 
@@ -459,11 +459,11 @@ class Basic with Resource, _$Basic {
     @Default(Dstu2ResourceType.Basic)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Basic)
         Dstu2ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+     FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -473,7 +473,7 @@ class Basic with Resource, _$Basic {
     required CodeableConcept code,
     Reference? subject,
     Reference? author,
-    Date? created,
+    FhirDate? created,
     @JsonKey(name: '_created') Element? createdElement,
   }) = _Basic;
 

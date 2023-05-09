@@ -19,10 +19,10 @@ class Conformance with Resource, _$Conformance {
     @Default(Dstu2ResourceType.Conformance)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Conformance)
         Dstu2ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
-    Code? language,
+     FhirCode? language,
     Narrative? text,
     List<Resource>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -33,7 +33,7 @@ class Conformance with Resource, _$Conformance {
     String? name,
     @JsonKey(unknownEnumValue: ConformanceStatus.unknown)
         ConformanceStatus? status,
-    Boolean? experimental,
+     FhirBoolean? experimental,
     String? publisher,
     List<ConformanceContact>? contact,
     required FhirDateTime date,
@@ -91,10 +91,10 @@ class CapabilityStatement with Resource, _$CapabilityStatement {
     @Default(Dstu2ResourceType.CapabilityStatement)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.CapabilityStatement)
         Dstu2ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
-    Code? language,
+     FhirCode? language,
     Narrative? text,
     List<Resource>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -105,7 +105,7 @@ class CapabilityStatement with Resource, _$CapabilityStatement {
     String? name,
     @JsonKey(unknownEnumValue: ConformanceStatus.unknown)
         ConformanceStatus? status,
-    Boolean? experimental,
+     FhirBoolean? experimental,
     String? publisher,
     List<ConformanceContact>? contact,
     required FhirDateTime date,
@@ -160,7 +160,7 @@ class CapabilityStatement with Resource, _$CapabilityStatement {
 class ConformanceContact with _$ConformanceContact {
   ConformanceContact._();
   factory ConformanceContact({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? name,
@@ -202,7 +202,7 @@ class ConformanceContact with _$ConformanceContact {
 class ConformanceSoftware with _$ConformanceSoftware {
   ConformanceSoftware._();
   factory ConformanceSoftware({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required String name,
@@ -245,7 +245,7 @@ class ConformanceSoftware with _$ConformanceSoftware {
 class ConformanceImplementation with _$ConformanceImplementation {
   ConformanceImplementation._();
   factory ConformanceImplementation({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required String description,
@@ -287,7 +287,7 @@ class ConformanceImplementation with _$ConformanceImplementation {
 class ConformanceRest with _$ConformanceRest {
   ConformanceRest._();
   factory ConformanceRest({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -339,7 +339,7 @@ class ConformanceRest with _$ConformanceRest {
 class ConformanceMessaging with _$ConformanceMessaging {
   ConformanceMessaging._();
   factory ConformanceMessaging({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -384,7 +384,7 @@ class ConformanceMessaging with _$ConformanceMessaging {
 class ConformanceDocument with _$ConformanceDocument {
   ConformanceDocument._();
   factory ConformanceDocument({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -428,10 +428,10 @@ class ConformanceDocument with _$ConformanceDocument {
 class ConformanceRestSecurity with _$ConformanceRestSecurity {
   ConformanceRestSecurity._();
   factory ConformanceRestSecurity({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    Boolean? cors,
+     FhirBoolean? cors,
     @JsonKey(name: '_cors') Element? corsElement,
     List<CodeableConcept>? service,
     String? description,
@@ -473,7 +473,7 @@ class ConformanceRestSecurity with _$ConformanceRestSecurity {
 class ConformanceRestResource with _$ConformanceRestResource {
   ConformanceRestResource._();
   factory ConformanceRestResource({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -484,12 +484,12 @@ class ConformanceRestResource with _$ConformanceRestResource {
         required List<ConformanceResourceInteraction> interaction,
     @JsonKey(unknownEnumValue: ResourceVersioning.unknown)
         ResourceVersioning? versioning,
-    Boolean? readHistory,
-    Boolean? updateCreate,
+     FhirBoolean? readHistory,
+     FhirBoolean? updateCreate,
     @JsonKey(name: '_updateCreate') Element? updateCreateElement,
-    Boolean? conditionalCreate,
+     FhirBoolean? conditionalCreate,
     @JsonKey(name: '_conditionalCreate') Element? conditionalCreateElement,
-    Boolean? conditionalUpdate,
+     FhirBoolean? conditionalUpdate,
     @JsonKey(unknownEnumValue: ResourceConditionalDelete.unknown)
         ResourceConditionalDelete? conditionalDelete,
     @JsonKey(name: '_conditionalDelete') Element? conditionalDeleteElement,
@@ -533,7 +533,7 @@ class ConformanceRestResource with _$ConformanceRestResource {
 class ConformanceResourceInteraction with _$ConformanceResourceInteraction {
   ConformanceResourceInteraction._();
   factory ConformanceResourceInteraction({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: ResourceInteractionCode.unknown)
@@ -577,7 +577,7 @@ class ConformanceResourceInteraction with _$ConformanceResourceInteraction {
 class ConformanceRestOperation with _$ConformanceRestOperation {
   ConformanceRestOperation._();
   factory ConformanceRestOperation({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -620,7 +620,7 @@ class ConformanceRestOperation with _$ConformanceRestOperation {
 class ConformanceMessagingEndpoint with _$ConformanceMessagingEndpoint {
   ConformanceMessagingEndpoint._();
   factory ConformanceMessagingEndpoint({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Coding protocol,
@@ -663,7 +663,7 @@ class ConformanceMessagingEndpoint with _$ConformanceMessagingEndpoint {
 class ConformanceMessagingEvent with _$ConformanceMessagingEvent {
   ConformanceMessagingEvent._();
   factory ConformanceMessagingEvent({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Coding code,
@@ -711,11 +711,11 @@ class ConformanceMessagingEvent with _$ConformanceMessagingEvent {
 class ConformanceSecurityCertificate with _$ConformanceSecurityCertificate {
   ConformanceSecurityCertificate._();
   factory ConformanceSecurityCertificate({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    Code? type,
-    Base64Binary? blob,
+     FhirCode? type,
+  FhirBase64Binary?? blob,
     @JsonKey(name: '_blob') Element? blobElement,
   }) = _ConformanceSecurityCertificate;
 
@@ -755,7 +755,7 @@ class ConformanceSecurityCertificate with _$ConformanceSecurityCertificate {
 class ConformanceRestInteraction with _$ConformanceRestInteraction {
   ConformanceRestInteraction._();
   factory ConformanceRestInteraction({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: RestInteractionCode.unknown)
@@ -798,7 +798,7 @@ class ConformanceRestInteraction with _$ConformanceRestInteraction {
 class ConformanceResourceSearchParam with _$ConformanceResourceSearchParam {
   ConformanceResourceSearchParam._();
   factory ConformanceResourceSearchParam({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -851,10 +851,10 @@ class OperationDefinition with Resource, _$OperationDefinition {
     @Default(Dstu2ResourceType.OperationDefinition)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.OperationDefinition)
         Dstu2ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
-    Code? language,
+     FhirCode? language,
     Narrative? text,
     List<Resource>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -866,13 +866,13 @@ class OperationDefinition with Resource, _$OperationDefinition {
         required OperationDefinitionStatus status,
     @JsonKey(unknownEnumValue: OperationDefinitionKind.unknown)
         required OperationDefinitionKind kind,
-    Boolean? experimental,
+     FhirBoolean? experimental,
     String? publisher,
     List<OperationDefinitionContact>? contact,
     FhirDateTime? date,
     String? description,
     String? requirements,
-    Boolean? idempotent,
+     FhirBoolean? idempotent,
     required Code code,
     String? notes,
     Reference? base,
@@ -914,7 +914,7 @@ class OperationDefinition with Resource, _$OperationDefinition {
 class OperationDefinitionContact with _$OperationDefinitionContact {
   OperationDefinitionContact._();
   factory OperationDefinitionContact({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? name,
@@ -956,7 +956,7 @@ class OperationDefinitionContact with _$OperationDefinitionContact {
 class OperationDefinitionParameter with _$OperationDefinitionParameter {
   OperationDefinitionParameter._();
   factory OperationDefinitionParameter({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -965,7 +965,7 @@ class OperationDefinitionParameter with _$OperationDefinitionParameter {
     required Integer min,
     required String max,
     String? documentation,
-    Code? type,
+     FhirCode? type,
     Reference? profile,
     OperationDefinitionParameterBinding? binding,
     @JsonKey(name: 'part') List<OperationDefinitionParameter>? part_,
@@ -1007,7 +1007,7 @@ class OperationDefinitionParameterBinding
     with _$OperationDefinitionParameterBinding {
   OperationDefinitionParameterBinding._();
   factory OperationDefinitionParameterBinding({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(
@@ -1046,10 +1046,10 @@ class SearchParameter with Resource, _$SearchParameter {
     @Default(Dstu2ResourceType.SearchParameter)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.SearchParameter)
         Dstu2ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
-    Code? language,
+     FhirCode? language,
     Narrative? text,
     List<Resource>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1058,14 +1058,14 @@ class SearchParameter with Resource, _$SearchParameter {
     required String name,
     @JsonKey(unknownEnumValue: SearchParameterStatus.unknown)
         SearchParameterStatus? status,
-    Boolean? experimental,
+     FhirBoolean? experimental,
     String? publisher,
     List<SearchParameterContact>? contact,
     FhirDateTime? date,
     String? requirements,
     @JsonKey(name: '_requirements') Element? requirementsElement,
     required Code code,
-    Code? base,
+     FhirCode? base,
     @JsonKey(unknownEnumValue: SearchParameterType.unknown)
         required SearchParameterType type,
     String? description,
@@ -1107,7 +1107,7 @@ class SearchParameter with Resource, _$SearchParameter {
 class SearchParameterContact with _$SearchParameterContact {
   SearchParameterContact._();
   factory SearchParameterContact({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? name,

@@ -22,10 +22,10 @@ Order _$OrderFromJson(Map<String, dynamic> json) {
 mixin _$Order {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Order)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
   List<Resource>? get contained => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
@@ -56,10 +56,10 @@ abstract class $OrderCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Order)
           Dstu2ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
-      Code? language,
+      FhirCode? language,
       Narrative? text,
       List<Resource>? contained,
       @JsonKey(name: 'extension')
@@ -137,7 +137,7 @@ class _$OrderCopyWithImpl<$Res, $Val extends Order>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
@@ -300,10 +300,10 @@ abstract class _$$_OrderCopyWith<$Res> implements $OrderCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Order)
           Dstu2ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
-      Code? language,
+      FhirCode? language,
       Narrative? text,
       List<Resource>? contained,
       @JsonKey(name: 'extension')
@@ -385,7 +385,7 @@ class __$$_OrderCopyWithImpl<$Res> extends _$OrderCopyWithImpl<$Res, _$_Order>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
@@ -486,7 +486,7 @@ class _$_Order extends _Order {
   @override
   final FhirUri? implicitRules;
   @override
-  final Code? language;
+  final FhirCode? language;
   @override
   final Narrative? text;
   final List<Resource>? _contained;
@@ -636,7 +636,7 @@ abstract class _Order extends Order {
       final Id? id,
       final Meta? meta,
       final FhirUri? implicitRules,
-      final Code? language,
+      final FhirCode? language,
       final Narrative? text,
       final List<Resource>? contained,
       @JsonKey(name: 'extension')
@@ -659,13 +659,13 @@ abstract class _Order extends Order {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Order)
   Dstu2ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
-  Code? get language;
+  FhirCode? get language;
   @override
   Narrative? get text;
   @override
@@ -705,7 +705,7 @@ OrderWhen _$OrderWhenFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$OrderWhen {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -998,7 +998,7 @@ abstract class _OrderWhen extends OrderWhen {
       _$_OrderWhen.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -1025,10 +1025,10 @@ OrderResponse _$OrderResponseFromJson(Map<String, dynamic> json) {
 mixin _$OrderResponse {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.OrderResponse)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
   List<Resource>? get contained => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
@@ -1062,10 +1062,10 @@ abstract class $OrderResponseCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.OrderResponse)
           Dstu2ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
-      Code? language,
+      FhirCode? language,
       Narrative? text,
       List<Resource>? contained,
       @JsonKey(name: 'extension')
@@ -1140,7 +1140,7 @@ class _$OrderResponseCopyWithImpl<$Res, $Val extends OrderResponse>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
@@ -1260,10 +1260,10 @@ abstract class _$$_OrderResponseCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.OrderResponse)
           Dstu2ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
-      Code? language,
+      FhirCode? language,
       Narrative? text,
       List<Resource>? contained,
       @JsonKey(name: 'extension')
@@ -1341,7 +1341,7 @@ class __$$_OrderResponseCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
@@ -1439,7 +1439,7 @@ class _$_OrderResponse extends _OrderResponse {
   @override
   final FhirUri? implicitRules;
   @override
-  final Code? language;
+  final FhirCode? language;
   @override
   final Narrative? text;
   final List<Resource>? _contained;
@@ -1591,7 +1591,7 @@ abstract class _OrderResponse extends OrderResponse {
       final Id? id,
       final Meta? meta,
       final FhirUri? implicitRules,
-      final Code? language,
+      final FhirCode? language,
       final Narrative? text,
       final List<Resource>? contained,
       @JsonKey(name: 'extension')
@@ -1616,13 +1616,13 @@ abstract class _OrderResponse extends OrderResponse {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.OrderResponse)
   Dstu2ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
-  Code? get language;
+  FhirCode? get language;
   @override
   Narrative? get text;
   @override
@@ -1664,12 +1664,12 @@ CommunicationRequest _$CommunicationRequestFromJson(Map<String, dynamic> json) {
 mixin _$CommunicationRequest {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.CommunicationRequest)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -1715,12 +1715,12 @@ abstract class $CommunicationRequestCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.CommunicationRequest)
           Dstu2ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -1832,7 +1832,7 @@ class _$CommunicationRequestCopyWithImpl<$Res,
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -2104,12 +2104,12 @@ abstract class _$$_CommunicationRequestCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.CommunicationRequest)
           Dstu2ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -2232,7 +2232,7 @@ class __$$_CommunicationRequestCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -2389,7 +2389,7 @@ class _$_CommunicationRequest extends _CommunicationRequest {
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
-  final Code? language;
+  final FhirCode? language;
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
@@ -2614,7 +2614,7 @@ abstract class _CommunicationRequest extends CommunicationRequest {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -2651,7 +2651,7 @@ abstract class _CommunicationRequest extends CommunicationRequest {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.CommunicationRequest)
   Dstu2ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -2660,7 +2660,7 @@ abstract class _CommunicationRequest extends CommunicationRequest {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
-  Code? get language;
+  FhirCode? get language;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;
@@ -2723,7 +2723,7 @@ CommunicationRequestPayload _$CommunicationRequestPayloadFromJson(
 
 /// @nodoc
 mixin _$CommunicationRequestPayload {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -3053,7 +3053,7 @@ abstract class _CommunicationRequestPayload
       _$_CommunicationRequestPayload.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -3082,12 +3082,12 @@ DeviceUseRequest _$DeviceUseRequestFromJson(Map<String, dynamic> json) {
 mixin _$DeviceUseRequest {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceUseRequest)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -3135,12 +3135,12 @@ abstract class $DeviceUseRequestCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceUseRequest)
           Dstu2ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -3253,7 +3253,7 @@ class _$DeviceUseRequestCopyWithImpl<$Res, $Val extends DeviceUseRequest>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -3510,12 +3510,12 @@ abstract class _$$_DeviceUseRequestCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceUseRequest)
           Dstu2ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -3639,7 +3639,7 @@ class __$$_DeviceUseRequestCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -3801,7 +3801,7 @@ class _$_DeviceUseRequest extends _DeviceUseRequest {
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
-  final Code? language;
+  final FhirCode? language;
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
@@ -4026,7 +4026,7 @@ abstract class _DeviceUseRequest extends DeviceUseRequest {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -4065,7 +4065,7 @@ abstract class _DeviceUseRequest extends DeviceUseRequest {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceUseRequest)
   Dstu2ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -4074,7 +4074,7 @@ abstract class _DeviceUseRequest extends DeviceUseRequest {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
-  Code? get language;
+  FhirCode? get language;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;
@@ -4141,12 +4141,12 @@ DeviceUseStatement _$DeviceUseStatementFromJson(Map<String, dynamic> json) {
 mixin _$DeviceUseStatement {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceUseStatement)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -4188,12 +4188,12 @@ abstract class $DeviceUseStatementCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceUseStatement)
           Dstu2ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -4296,7 +4296,7 @@ class _$DeviceUseStatementCopyWithImpl<$Res, $Val extends DeviceUseStatement>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -4537,12 +4537,12 @@ abstract class _$$_DeviceUseStatementCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceUseStatement)
           Dstu2ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -4656,7 +4656,7 @@ class __$$_DeviceUseStatementCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -4796,7 +4796,7 @@ class _$_DeviceUseStatement extends _DeviceUseStatement {
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
-  final Code? language;
+  final FhirCode? language;
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
@@ -5001,7 +5001,7 @@ abstract class _DeviceUseStatement extends DeviceUseStatement {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -5034,7 +5034,7 @@ abstract class _DeviceUseStatement extends DeviceUseStatement {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceUseStatement)
   Dstu2ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -5043,7 +5043,7 @@ abstract class _DeviceUseStatement extends DeviceUseStatement {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
-  Code? get language;
+  FhirCode? get language;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;

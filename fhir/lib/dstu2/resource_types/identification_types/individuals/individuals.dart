@@ -19,36 +19,36 @@ class Patient with Resource, _$Patient {
     @Default(Dstu2ResourceType.Patient)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Patient)
         Dstu2ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     @JsonKey(name: '_id') Element? idElement,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    Boolean? active,
+    FhirBoolean? active,
     @JsonKey(name: '_active') Element? activeElement,
     List<HumanName>? name,
     List<ContactPoint>? telecom,
     @JsonKey(unknownEnumValue: PatientGender.unknown) PatientGender? gender,
     @JsonKey(name: '_gender') Element? genderElement,
-    Date? birthDate,
+    FhirDate? birthDate,
     @JsonKey(name: '_birthDate') Element? birthDateElement,
-    Boolean? deceasedBoolean,
+    FhirBoolean? deceasedBoolean,
     @JsonKey(name: '_deceasedBoolean') Element? deceasedBooleanElement,
     FhirDateTime? deceasedDateTime,
     @JsonKey(name: '_deceasedDateTime') Element? deceasedDateTimeElement,
     List<Address>? address,
     CodeableConcept? maritalStatus,
-    Boolean? multipleBirthBoolean,
+    FhirBoolean? multipleBirthBoolean,
     @JsonKey(name: '_multipleBirthBoolean')
         Element? multipleBirthBooleanElement,
-    Integer? multipleBirthInteger,
+    FhirInteger? multipleBirthInteger,
     @JsonKey(name: '_multipleBirthInteger')
         Element? multipleBirthIntegerElement,
     List<Attachment>? photo,
@@ -92,7 +92,7 @@ class Patient with Resource, _$Patient {
 class PatientContact with _$PatientContact {
   PatientContact._();
   factory PatientContact({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<CodeableConcept>? relationship,
@@ -140,7 +140,7 @@ class PatientContact with _$PatientContact {
 class PatientAnimal with _$PatientAnimal {
   PatientAnimal._();
   factory PatientAnimal({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept species,
@@ -183,11 +183,11 @@ class PatientAnimal with _$PatientAnimal {
 class PatientCommunication with _$PatientCommunication {
   PatientCommunication._();
   factory PatientCommunication({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept language,
-    Boolean? preferred,
+    FhirBoolean? preferred,
     @JsonKey(name: '_preferred') Element? preferredElement,
   }) = _PatientCommunication;
 
@@ -226,7 +226,7 @@ class PatientCommunication with _$PatientCommunication {
 class PatientLink with _$PatientLink {
   PatientLink._();
   factory PatientLink({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Reference other,
@@ -272,18 +272,18 @@ class Practitioner with Resource, _$Practitioner {
     @Default(Dstu2ResourceType.Practitioner)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Practitioner)
         Dstu2ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    Boolean? active,
+    FhirBoolean? active,
     @JsonKey(name: '_active') Element? activeElement,
     HumanName? name,
     List<ContactPoint>? telecom,
@@ -291,7 +291,7 @@ class Practitioner with Resource, _$Practitioner {
     @JsonKey(unknownEnumValue: PractitionerGender.unknown)
         PractitionerGender? gender,
     @JsonKey(name: '_gender') Element? genderElement,
-    Date? birthDate,
+    FhirDate? birthDate,
     @JsonKey(name: '_birthDate') Element? birthDateElement,
     List<Attachment>? photo,
     List<PractitionerPractitionerRole>? practitionerRole,
@@ -331,7 +331,7 @@ class Practitioner with Resource, _$Practitioner {
 class PractitionerPractitionerRole with _$PractitionerPractitionerRole {
   PractitionerPractitionerRole._();
   factory PractitionerPractitionerRole({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
     List<FhirExtension>? modifierExtension,
@@ -378,7 +378,7 @@ class PractitionerPractitionerRole with _$PractitionerPractitionerRole {
 class PractitionerQualification with _$PractitionerQualification {
   PractitionerQualification._();
   factory PractitionerQualification({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
@@ -425,11 +425,11 @@ class RelatedPerson with Resource, _$RelatedPerson {
     @Default(Dstu2ResourceType.RelatedPerson)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.RelatedPerson)
         Dstu2ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -443,7 +443,7 @@ class RelatedPerson with Resource, _$RelatedPerson {
     @JsonKey(unknownEnumValue: RelatedPersonGender.unknown)
         RelatedPersonGender? gender,
     @JsonKey(name: '_gender') Element? genderElement,
-    Date? birthDate,
+    FhirDate? birthDate,
     @JsonKey(name: '_birthDate') Element? birthDateElement,
     List<Address>? address,
     List<Attachment>? photo,

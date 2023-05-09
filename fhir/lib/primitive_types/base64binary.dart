@@ -9,8 +9,8 @@ import 'package:yaml/yaml.dart';
 // Project imports:
 import 'primitive_type_exceptions.dart';
 
-class Base64Binary {
-  const Base64Binary._(
+class FhirBase64Binary {
+  const FhirBase64Binary._(
       this._valueString, this._valueBase64Binary, this._isValid);
 
 // TODO(TILO): This regexp is the most correct way to check the validity of a base64
@@ -19,22 +19,22 @@ class Base64Binary {
 //  static final RegExp _base64RegExp = RegExp(
 //      r'^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=|[A-Za-z0-9+\/]{4})$');
 
-/*  factory Base64Binary(String inValue) =>
+/*  factory FhirBase64Binary(String inValue) =>
       _base64RegExp.hasMatch(inValue)
-          ? Base64Binary._(inValue, inValue, true)
-          : Base64Binary._(inValue, null, false); */
-  factory Base64Binary(dynamic inValue) =>
+          ? FhirBase64Binary._(inValue, inValue, true)
+          : FhirBase64Binary._(inValue, null, false); */
+  factory FhirBase64Binary(dynamic inValue) =>
       inValue is String && inValue.length % 4 == 0
-          ? Base64Binary._(inValue, inValue, true)
-          : Base64Binary._(inValue.toString(), null, false);
+          ? FhirBase64Binary._(inValue, inValue, true)
+          : FhirBase64Binary._(inValue.toString(), null, false);
 
-  factory Base64Binary.fromJson(dynamic json) => Base64Binary(json);
+  factory FhirBase64Binary.fromJson(dynamic json) => FhirBase64Binary(json);
 
-  factory Base64Binary.fromYaml(dynamic yaml) => yaml is String
-      ? Base64Binary.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+  factory FhirBase64Binary.fromYaml(dynamic yaml) => yaml is String
+      ? FhirBase64Binary.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
-          ? Base64Binary.fromJson(jsonDecode(jsonEncode(yaml)))
-          : throw YamlFormatException<Base64Binary>(
+          ? FhirBase64Binary.fromJson(jsonDecode(jsonEncode(yaml)))
+          : throw YamlFormatException<FhirBase64Binary>(
               'FormatException: "$json" is not a valid Yaml string or YamlMap.');
 
   final String _valueString;
@@ -54,7 +54,7 @@ class Base64Binary {
   @override
   bool operator ==(Object o) => identical(this, o)
       ? true
-      : o is Base64Binary
+      : o is FhirBase64Binary
           ? o.value == _valueBase64Binary
           : o is String
               ? o == _valueString

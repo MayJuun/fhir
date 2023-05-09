@@ -22,12 +22,12 @@ CodeSystem _$CodeSystemFromJson(Map<String, dynamic> json) {
 mixin _$CodeSystem {
   @JsonKey(unknownEnumValue: Stu3ResourceType.CodeSystem)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -52,7 +52,7 @@ mixin _$CodeSystem {
   CodeSystemStatus? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
-  Boolean? get experimental => throw _privateConstructorUsedError;
+  FhirBoolean? get experimental => throw _privateConstructorUsedError;
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
   FhirDateTime? get date => throw _privateConstructorUsedError;
@@ -73,7 +73,7 @@ mixin _$CodeSystem {
   String? get copyright => throw _privateConstructorUsedError;
   @JsonKey(name: '_copyright')
   Element? get copyrightElement => throw _privateConstructorUsedError;
-  Boolean? get caseSensitive => throw _privateConstructorUsedError;
+  FhirBoolean? get caseSensitive => throw _privateConstructorUsedError;
   @JsonKey(name: '_caseSensitive')
   Element? get caseSensitiveElement => throw _privateConstructorUsedError;
   String? get valueSet => throw _privateConstructorUsedError;
@@ -83,16 +83,16 @@ mixin _$CodeSystem {
       throw _privateConstructorUsedError;
   @JsonKey(name: '_hierarchyMeaning')
   Element? get hierarchyMeaningElement => throw _privateConstructorUsedError;
-  Boolean? get compositional => throw _privateConstructorUsedError;
+  FhirBoolean? get compositional => throw _privateConstructorUsedError;
   @JsonKey(name: '_compositional')
   Element? get compositionalElement => throw _privateConstructorUsedError;
-  Boolean? get versionNeeded => throw _privateConstructorUsedError;
+  FhirBoolean? get versionNeeded => throw _privateConstructorUsedError;
   @JsonKey(name: '_versionNeeded')
   Element? get versionNeededElement => throw _privateConstructorUsedError;
   CodeSystemContent? get content => throw _privateConstructorUsedError;
   @JsonKey(name: '_content')
   Element? get contentElement => throw _privateConstructorUsedError;
-  Decimal? get count => throw _privateConstructorUsedError;
+  FhirDecimal? get count => throw _privateConstructorUsedError;
   @JsonKey(name: '_count')
   Element? get countElement => throw _privateConstructorUsedError;
   List<CodeSystemFilter>? get filter => throw _privateConstructorUsedError;
@@ -114,12 +114,12 @@ abstract class $CodeSystemCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.CodeSystem)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -143,7 +143,7 @@ abstract class $CodeSystemCopyWith<$Res> {
       CodeSystemStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Boolean? experimental,
+      FhirBoolean? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
       FhirDateTime? date,
@@ -164,7 +164,7 @@ abstract class $CodeSystemCopyWith<$Res> {
       String? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
-      Boolean? caseSensitive,
+      FhirBoolean? caseSensitive,
       @JsonKey(name: '_caseSensitive')
           Element? caseSensitiveElement,
       String? valueSet,
@@ -173,16 +173,16 @@ abstract class $CodeSystemCopyWith<$Res> {
       CodeSystemHierarchyMeaning? hierarchyMeaning,
       @JsonKey(name: '_hierarchyMeaning')
           Element? hierarchyMeaningElement,
-      Boolean? compositional,
+      FhirBoolean? compositional,
       @JsonKey(name: '_compositional')
           Element? compositionalElement,
-      Boolean? versionNeeded,
+      FhirBoolean? versionNeeded,
       @JsonKey(name: '_versionNeeded')
           Element? versionNeededElement,
       CodeSystemContent? content,
       @JsonKey(name: '_content')
           Element? contentElement,
-      Decimal? count,
+      FhirDecimal? count,
       @JsonKey(name: '_count')
           Element? countElement,
       List<CodeSystemFilter>? filter,
@@ -306,7 +306,7 @@ class _$CodeSystemCopyWithImpl<$Res, $Val extends CodeSystem>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -374,7 +374,7 @@ class _$CodeSystemCopyWithImpl<$Res, $Val extends CodeSystem>
       experimental: freezed == experimental
           ? _value.experimental
           : experimental // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       experimentalElement: freezed == experimentalElement
           ? _value.experimentalElement
           : experimentalElement // ignore: cast_nullable_to_non_nullable
@@ -434,7 +434,7 @@ class _$CodeSystemCopyWithImpl<$Res, $Val extends CodeSystem>
       caseSensitive: freezed == caseSensitive
           ? _value.caseSensitive
           : caseSensitive // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       caseSensitiveElement: freezed == caseSensitiveElement
           ? _value.caseSensitiveElement
           : caseSensitiveElement // ignore: cast_nullable_to_non_nullable
@@ -458,7 +458,7 @@ class _$CodeSystemCopyWithImpl<$Res, $Val extends CodeSystem>
       compositional: freezed == compositional
           ? _value.compositional
           : compositional // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       compositionalElement: freezed == compositionalElement
           ? _value.compositionalElement
           : compositionalElement // ignore: cast_nullable_to_non_nullable
@@ -466,7 +466,7 @@ class _$CodeSystemCopyWithImpl<$Res, $Val extends CodeSystem>
       versionNeeded: freezed == versionNeeded
           ? _value.versionNeeded
           : versionNeeded // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       versionNeededElement: freezed == versionNeededElement
           ? _value.versionNeededElement
           : versionNeededElement // ignore: cast_nullable_to_non_nullable
@@ -790,12 +790,12 @@ abstract class _$$_CodeSystemCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.CodeSystem)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -819,7 +819,7 @@ abstract class _$$_CodeSystemCopyWith<$Res>
       CodeSystemStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Boolean? experimental,
+      FhirBoolean? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
       FhirDateTime? date,
@@ -840,7 +840,7 @@ abstract class _$$_CodeSystemCopyWith<$Res>
       String? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
-      Boolean? caseSensitive,
+      FhirBoolean? caseSensitive,
       @JsonKey(name: '_caseSensitive')
           Element? caseSensitiveElement,
       String? valueSet,
@@ -849,16 +849,16 @@ abstract class _$$_CodeSystemCopyWith<$Res>
       CodeSystemHierarchyMeaning? hierarchyMeaning,
       @JsonKey(name: '_hierarchyMeaning')
           Element? hierarchyMeaningElement,
-      Boolean? compositional,
+      FhirBoolean? compositional,
       @JsonKey(name: '_compositional')
           Element? compositionalElement,
-      Boolean? versionNeeded,
+      FhirBoolean? versionNeeded,
       @JsonKey(name: '_versionNeeded')
           Element? versionNeededElement,
       CodeSystemContent? content,
       @JsonKey(name: '_content')
           Element? contentElement,
-      Decimal? count,
+      FhirDecimal? count,
       @JsonKey(name: '_count')
           Element? countElement,
       List<CodeSystemFilter>? filter,
@@ -1003,7 +1003,7 @@ class __$$_CodeSystemCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -1071,7 +1071,7 @@ class __$$_CodeSystemCopyWithImpl<$Res>
       experimental: freezed == experimental
           ? _value.experimental
           : experimental // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       experimentalElement: freezed == experimentalElement
           ? _value.experimentalElement
           : experimentalElement // ignore: cast_nullable_to_non_nullable
@@ -1131,7 +1131,7 @@ class __$$_CodeSystemCopyWithImpl<$Res>
       caseSensitive: freezed == caseSensitive
           ? _value.caseSensitive
           : caseSensitive // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       caseSensitiveElement: freezed == caseSensitiveElement
           ? _value.caseSensitiveElement
           : caseSensitiveElement // ignore: cast_nullable_to_non_nullable
@@ -1155,7 +1155,7 @@ class __$$_CodeSystemCopyWithImpl<$Res>
       compositional: freezed == compositional
           ? _value.compositional
           : compositional // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       compositionalElement: freezed == compositionalElement
           ? _value.compositionalElement
           : compositionalElement // ignore: cast_nullable_to_non_nullable
@@ -1163,7 +1163,7 @@ class __$$_CodeSystemCopyWithImpl<$Res>
       versionNeeded: freezed == versionNeeded
           ? _value.versionNeeded
           : versionNeeded // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       versionNeededElement: freezed == versionNeededElement
           ? _value.versionNeededElement
           : versionNeededElement // ignore: cast_nullable_to_non_nullable
@@ -1307,7 +1307,7 @@ class _$_CodeSystem extends _CodeSystem {
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
-  final Code? language;
+  final FhirCode? language;
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
@@ -1373,7 +1373,7 @@ class _$_CodeSystem extends _CodeSystem {
   @JsonKey(name: '_status')
   final Element? statusElement;
   @override
-  final Boolean? experimental;
+  final FhirBoolean? experimental;
   @override
   @JsonKey(name: '_experimental')
   final Element? experimentalElement;
@@ -1433,7 +1433,7 @@ class _$_CodeSystem extends _CodeSystem {
   @JsonKey(name: '_copyright')
   final Element? copyrightElement;
   @override
-  final Boolean? caseSensitive;
+  final FhirBoolean? caseSensitive;
   @override
   @JsonKey(name: '_caseSensitive')
   final Element? caseSensitiveElement;
@@ -1448,12 +1448,12 @@ class _$_CodeSystem extends _CodeSystem {
   @JsonKey(name: '_hierarchyMeaning')
   final Element? hierarchyMeaningElement;
   @override
-  final Boolean? compositional;
+  final FhirBoolean? compositional;
   @override
   @JsonKey(name: '_compositional')
   final Element? compositionalElement;
   @override
-  final Boolean? versionNeeded;
+  final FhirBoolean? versionNeeded;
   @override
   @JsonKey(name: '_versionNeeded')
   final Element? versionNeededElement;
@@ -1685,7 +1685,7 @@ abstract class _CodeSystem extends CodeSystem {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -1709,7 +1709,7 @@ abstract class _CodeSystem extends CodeSystem {
       final CodeSystemStatus? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
-      final Boolean? experimental,
+      final FhirBoolean? experimental,
       @JsonKey(name: '_experimental')
           final Element? experimentalElement,
       final FhirDateTime? date,
@@ -1730,7 +1730,7 @@ abstract class _CodeSystem extends CodeSystem {
       final String? copyright,
       @JsonKey(name: '_copyright')
           final Element? copyrightElement,
-      final Boolean? caseSensitive,
+      final FhirBoolean? caseSensitive,
       @JsonKey(name: '_caseSensitive')
           final Element? caseSensitiveElement,
       final String? valueSet,
@@ -1739,10 +1739,10 @@ abstract class _CodeSystem extends CodeSystem {
       final CodeSystemHierarchyMeaning? hierarchyMeaning,
       @JsonKey(name: '_hierarchyMeaning')
           final Element? hierarchyMeaningElement,
-      final Boolean? compositional,
+      final FhirBoolean? compositional,
       @JsonKey(name: '_compositional')
           final Element? compositionalElement,
-      final Boolean? versionNeeded,
+      final FhirBoolean? versionNeeded,
       @JsonKey(name: '_versionNeeded')
           final Element? versionNeededElement,
       final CodeSystemContent? content,
@@ -1763,7 +1763,7 @@ abstract class _CodeSystem extends CodeSystem {
   @JsonKey(unknownEnumValue: Stu3ResourceType.CodeSystem)
   Stu3ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -1772,7 +1772,7 @@ abstract class _CodeSystem extends CodeSystem {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
-  Code? get language;
+  FhirCode? get language;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;
@@ -1813,7 +1813,7 @@ abstract class _CodeSystem extends CodeSystem {
   @JsonKey(name: '_status')
   Element? get statusElement;
   @override
-  Boolean? get experimental;
+  FhirBoolean? get experimental;
   @override
   @JsonKey(name: '_experimental')
   Element? get experimentalElement;
@@ -1849,7 +1849,7 @@ abstract class _CodeSystem extends CodeSystem {
   @JsonKey(name: '_copyright')
   Element? get copyrightElement;
   @override
-  Boolean? get caseSensitive;
+  FhirBoolean? get caseSensitive;
   @override
   @JsonKey(name: '_caseSensitive')
   Element? get caseSensitiveElement;
@@ -1864,12 +1864,12 @@ abstract class _CodeSystem extends CodeSystem {
   @JsonKey(name: '_hierarchyMeaning')
   Element? get hierarchyMeaningElement;
   @override
-  Boolean? get compositional;
+  FhirBoolean? get compositional;
   @override
   @JsonKey(name: '_compositional')
   Element? get compositionalElement;
   @override
-  Boolean? get versionNeeded;
+  FhirBoolean? get versionNeeded;
   @override
   @JsonKey(name: '_versionNeeded')
   Element? get versionNeededElement;
@@ -1879,7 +1879,7 @@ abstract class _CodeSystem extends CodeSystem {
   @JsonKey(name: '_content')
   Element? get contentElement;
   @override
-  Decimal? get count;
+  FhirDecimal? get count;
   @override
   @JsonKey(name: '_count')
   Element? get countElement;
@@ -1901,7 +1901,7 @@ CodeSystemFilter _$CodeSystemFilterFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$CodeSystemFilter {
-  Code? get code => throw _privateConstructorUsedError;
+  FhirCode? get code => throw _privateConstructorUsedError;
   @JsonKey(name: '_code')
   Element? get codeElement => throw _privateConstructorUsedError;
   String? get description => throw _privateConstructorUsedError;
@@ -1968,7 +1968,7 @@ class _$CodeSystemFilterCopyWithImpl<$Res, $Val extends CodeSystemFilter>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -2087,7 +2087,7 @@ class __$$_CodeSystemFilterCopyWithImpl<$Res>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -2140,7 +2140,7 @@ class _$_CodeSystemFilter extends _CodeSystemFilter {
       _$$_CodeSystemFilterFromJson(json);
 
   @override
-  final Code? code;
+  final FhirCode? code;
   @override
   @JsonKey(name: '_code')
   final Element? codeElement;
@@ -2232,7 +2232,7 @@ class _$_CodeSystemFilter extends _CodeSystemFilter {
 
 abstract class _CodeSystemFilter extends CodeSystemFilter {
   factory _CodeSystemFilter(
-          {final Code? code,
+          {final FhirCode? code,
           @JsonKey(name: '_code') final Element? codeElement,
           final String? description,
           @JsonKey(name: '_description') final Element? descriptionElement,
@@ -2247,7 +2247,7 @@ abstract class _CodeSystemFilter extends CodeSystemFilter {
       _$_CodeSystemFilter.fromJson;
 
   @override
-  Code? get code;
+  FhirCode? get code;
   @override
   @JsonKey(name: '_code')
   Element? get codeElement;
@@ -2279,7 +2279,7 @@ CodeSystemProperty _$CodeSystemPropertyFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$CodeSystemProperty {
-  Code? get code => throw _privateConstructorUsedError;
+  FhirCode? get code => throw _privateConstructorUsedError;
   @JsonKey(name: '_code')
   Element? get codeElement => throw _privateConstructorUsedError;
   String? get uri => throw _privateConstructorUsedError;
@@ -2346,7 +2346,7 @@ class _$CodeSystemPropertyCopyWithImpl<$Res, $Val extends CodeSystemProperty>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -2479,7 +2479,7 @@ class __$$_CodeSystemPropertyCopyWithImpl<$Res>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -2530,7 +2530,7 @@ class _$_CodeSystemProperty extends _CodeSystemProperty {
       _$$_CodeSystemPropertyFromJson(json);
 
   @override
-  final Code? code;
+  final FhirCode? code;
   @override
   @JsonKey(name: '_code')
   final Element? codeElement;
@@ -2597,7 +2597,7 @@ class _$_CodeSystemProperty extends _CodeSystemProperty {
 
 abstract class _CodeSystemProperty extends CodeSystemProperty {
   factory _CodeSystemProperty(
-          {final Code? code,
+          {final FhirCode? code,
           @JsonKey(name: '_code') final Element? codeElement,
           final String? uri,
           @JsonKey(name: '_uri') final Element? uriElement,
@@ -2612,7 +2612,7 @@ abstract class _CodeSystemProperty extends CodeSystemProperty {
       _$_CodeSystemProperty.fromJson;
 
   @override
-  Code? get code;
+  FhirCode? get code;
   @override
   @JsonKey(name: '_code')
   Element? get codeElement;
@@ -2645,7 +2645,7 @@ CodeSystemConcept _$CodeSystemConceptFromJson(Map<String, dynamic> json) {
 mixin _$CodeSystemConcept {
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
-  Code? get code => throw _privateConstructorUsedError;
+  FhirCode? get code => throw _privateConstructorUsedError;
   @JsonKey(name: '_code')
   Element? get codeElement => throw _privateConstructorUsedError;
   String? get display => throw _privateConstructorUsedError;
@@ -2673,7 +2673,7 @@ abstract class $CodeSystemConceptCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement,
       String? display,
       @JsonKey(name: '_display') Element? displayElement,
@@ -2720,7 +2720,7 @@ class _$CodeSystemConceptCopyWithImpl<$Res, $Val extends CodeSystemConcept>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -2803,7 +2803,7 @@ abstract class _$$_CodeSystemConceptCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement,
       String? display,
       @JsonKey(name: '_display') Element? displayElement,
@@ -2851,7 +2851,7 @@ class __$$_CodeSystemConceptCopyWithImpl<$Res>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -2923,7 +2923,7 @@ class _$_CodeSystemConcept extends _CodeSystemConcept {
   }
 
   @override
-  final Code? code;
+  final FhirCode? code;
   @override
   @JsonKey(name: '_code')
   final Element? codeElement;
@@ -3028,7 +3028,7 @@ class _$_CodeSystemConcept extends _CodeSystemConcept {
 abstract class _CodeSystemConcept extends CodeSystemConcept {
   factory _CodeSystemConcept(
       {@JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final Code? code,
+      final FhirCode? code,
       @JsonKey(name: '_code') final Element? codeElement,
       final String? display,
       @JsonKey(name: '_display') final Element? displayElement,
@@ -3046,7 +3046,7 @@ abstract class _CodeSystemConcept extends CodeSystemConcept {
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
-  Code? get code;
+  FhirCode? get code;
   @override
   @JsonKey(name: '_code')
   Element? get codeElement;
@@ -3361,20 +3361,20 @@ CodeSystemProperty1 _$CodeSystemProperty1FromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$CodeSystemProperty1 {
-  Code? get code => throw _privateConstructorUsedError;
+  FhirCode? get code => throw _privateConstructorUsedError;
   @JsonKey(name: '_code')
   Element? get codeElement => throw _privateConstructorUsedError;
-  Code? get valueCode => throw _privateConstructorUsedError;
+  FhirCode? get valueCode => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueCode')
   Element? get valueCodeElement => throw _privateConstructorUsedError;
   Coding? get valueCoding => throw _privateConstructorUsedError;
   String? get valueString => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueString')
   Element? get valueStringElement => throw _privateConstructorUsedError;
-  Decimal? get valueInteger => throw _privateConstructorUsedError;
+  FhirDecimal? get valueInteger => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueInteger')
   Element? get valueIntegerElement => throw _privateConstructorUsedError;
-  Boolean? get valueBoolean => throw _privateConstructorUsedError;
+  FhirBoolean? get valueBoolean => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueBoolean')
   Element? get valueBooleanElement => throw _privateConstructorUsedError;
   FhirDateTime? get valueDateTime => throw _privateConstructorUsedError;
@@ -3396,14 +3396,14 @@ abstract class $CodeSystemProperty1CopyWith<$Res> {
   $Res call(
       {Code? code,
       @JsonKey(name: '_code') Element? codeElement,
-      Code? valueCode,
+      FhirCode? valueCode,
       @JsonKey(name: '_valueCode') Element? valueCodeElement,
       Coding? valueCoding,
       String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
-      Decimal? valueInteger,
+      FhirDecimal? valueInteger,
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
-      Boolean? valueBoolean,
+      FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement});
@@ -3448,7 +3448,7 @@ class _$CodeSystemProperty1CopyWithImpl<$Res, $Val extends CodeSystemProperty1>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -3456,7 +3456,7 @@ class _$CodeSystemProperty1CopyWithImpl<$Res, $Val extends CodeSystemProperty1>
       valueCode: freezed == valueCode
           ? _value.valueCode
           : valueCode // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       valueCodeElement: freezed == valueCodeElement
           ? _value.valueCodeElement
           : valueCodeElement // ignore: cast_nullable_to_non_nullable
@@ -3484,7 +3484,7 @@ class _$CodeSystemProperty1CopyWithImpl<$Res, $Val extends CodeSystemProperty1>
       valueBoolean: freezed == valueBoolean
           ? _value.valueBoolean
           : valueBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       valueBooleanElement: freezed == valueBooleanElement
           ? _value.valueBooleanElement
           : valueBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -3596,14 +3596,14 @@ abstract class _$$_CodeSystemProperty1CopyWith<$Res>
   $Res call(
       {Code? code,
       @JsonKey(name: '_code') Element? codeElement,
-      Code? valueCode,
+      FhirCode? valueCode,
       @JsonKey(name: '_valueCode') Element? valueCodeElement,
       Coding? valueCoding,
       String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
-      Decimal? valueInteger,
+      FhirDecimal? valueInteger,
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
-      Boolean? valueBoolean,
+      FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement});
@@ -3653,7 +3653,7 @@ class __$$_CodeSystemProperty1CopyWithImpl<$Res>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -3661,7 +3661,7 @@ class __$$_CodeSystemProperty1CopyWithImpl<$Res>
       valueCode: freezed == valueCode
           ? _value.valueCode
           : valueCode // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       valueCodeElement: freezed == valueCodeElement
           ? _value.valueCodeElement
           : valueCodeElement // ignore: cast_nullable_to_non_nullable
@@ -3689,7 +3689,7 @@ class __$$_CodeSystemProperty1CopyWithImpl<$Res>
       valueBoolean: freezed == valueBoolean
           ? _value.valueBoolean
           : valueBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       valueBooleanElement: freezed == valueBooleanElement
           ? _value.valueBooleanElement
           : valueBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -3729,12 +3729,12 @@ class _$_CodeSystemProperty1 extends _CodeSystemProperty1 {
       _$$_CodeSystemProperty1FromJson(json);
 
   @override
-  final Code? code;
+  final FhirCode? code;
   @override
   @JsonKey(name: '_code')
   final Element? codeElement;
   @override
-  final Code? valueCode;
+  final FhirCode? valueCode;
   @override
   @JsonKey(name: '_valueCode')
   final Element? valueCodeElement;
@@ -3751,7 +3751,7 @@ class _$_CodeSystemProperty1 extends _CodeSystemProperty1 {
   @JsonKey(name: '_valueInteger')
   final Element? valueIntegerElement;
   @override
-  final Boolean? valueBoolean;
+  final FhirBoolean? valueBoolean;
   @override
   @JsonKey(name: '_valueBoolean')
   final Element? valueBooleanElement;
@@ -3833,10 +3833,10 @@ class _$_CodeSystemProperty1 extends _CodeSystemProperty1 {
 
 abstract class _CodeSystemProperty1 extends CodeSystemProperty1 {
   factory _CodeSystemProperty1(
-      {final Code? code,
+      {final FhirCode? code,
       @JsonKey(name: '_code')
           final Element? codeElement,
-      final Code? valueCode,
+      final FhirCode? valueCode,
       @JsonKey(name: '_valueCode')
           final Element? valueCodeElement,
       final Coding? valueCoding,
@@ -3846,7 +3846,7 @@ abstract class _CodeSystemProperty1 extends CodeSystemProperty1 {
       final Decimal? valueInteger,
       @JsonKey(name: '_valueInteger')
           final Element? valueIntegerElement,
-      final Boolean? valueBoolean,
+      final FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean')
           final Element? valueBooleanElement,
       final FhirDateTime? valueDateTime,
@@ -3858,12 +3858,12 @@ abstract class _CodeSystemProperty1 extends CodeSystemProperty1 {
       _$_CodeSystemProperty1.fromJson;
 
   @override
-  Code? get code;
+  FhirCode? get code;
   @override
   @JsonKey(name: '_code')
   Element? get codeElement;
   @override
-  Code? get valueCode;
+  FhirCode? get valueCode;
   @override
   @JsonKey(name: '_valueCode')
   Element? get valueCodeElement;
@@ -3875,12 +3875,12 @@ abstract class _CodeSystemProperty1 extends CodeSystemProperty1 {
   @JsonKey(name: '_valueString')
   Element? get valueStringElement;
   @override
-  Decimal? get valueInteger;
+  FhirDecimal? get valueInteger;
   @override
   @JsonKey(name: '_valueInteger')
   Element? get valueIntegerElement;
   @override
-  Boolean? get valueBoolean;
+  FhirBoolean? get valueBoolean;
   @override
   @JsonKey(name: '_valueBoolean')
   Element? get valueBooleanElement;
@@ -3903,12 +3903,12 @@ ConceptMap _$ConceptMapFromJson(Map<String, dynamic> json) {
 mixin _$ConceptMap {
   @JsonKey(unknownEnumValue: Stu3ResourceType.ConceptMap)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -3933,7 +3933,7 @@ mixin _$ConceptMap {
   ConceptMapStatus? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
-  Boolean? get experimental => throw _privateConstructorUsedError;
+  FhirBoolean? get experimental => throw _privateConstructorUsedError;
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
   FhirDateTime? get date => throw _privateConstructorUsedError;
@@ -3979,12 +3979,12 @@ abstract class $ConceptMapCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ConceptMap)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -4008,7 +4008,7 @@ abstract class $ConceptMapCopyWith<$Res> {
       ConceptMapStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Boolean? experimental,
+      FhirBoolean? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
       FhirDateTime? date,
@@ -4143,7 +4143,7 @@ class _$ConceptMapCopyWithImpl<$Res, $Val extends ConceptMap>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -4211,7 +4211,7 @@ class _$ConceptMapCopyWithImpl<$Res, $Val extends ConceptMap>
       experimental: freezed == experimental
           ? _value.experimental
           : experimental // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       experimentalElement: freezed == experimentalElement
           ? _value.experimentalElement
           : experimentalElement // ignore: cast_nullable_to_non_nullable
@@ -4551,12 +4551,12 @@ abstract class _$$_ConceptMapCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ConceptMap)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -4580,7 +4580,7 @@ abstract class _$$_ConceptMapCopyWith<$Res>
       ConceptMapStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Boolean? experimental,
+      FhirBoolean? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
       FhirDateTime? date,
@@ -4733,7 +4733,7 @@ class __$$_ConceptMapCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -4801,7 +4801,7 @@ class __$$_ConceptMapCopyWithImpl<$Res>
       experimental: freezed == experimental
           ? _value.experimental
           : experimental // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       experimentalElement: freezed == experimentalElement
           ? _value.experimentalElement
           : experimentalElement // ignore: cast_nullable_to_non_nullable
@@ -4980,7 +4980,7 @@ class _$_ConceptMap extends _ConceptMap {
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
-  final Code? language;
+  final FhirCode? language;
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
@@ -5046,7 +5046,7 @@ class _$_ConceptMap extends _ConceptMap {
   @JsonKey(name: '_status')
   final Element? statusElement;
   @override
-  final Boolean? experimental;
+  final FhirBoolean? experimental;
   @override
   @JsonKey(name: '_experimental')
   final Element? experimentalElement;
@@ -5290,7 +5290,7 @@ abstract class _ConceptMap extends ConceptMap {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -5314,7 +5314,7 @@ abstract class _ConceptMap extends ConceptMap {
       final ConceptMapStatus? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
-      final Boolean? experimental,
+      final FhirBoolean? experimental,
       @JsonKey(name: '_experimental')
           final Element? experimentalElement,
       final FhirDateTime? date,
@@ -5353,7 +5353,7 @@ abstract class _ConceptMap extends ConceptMap {
   @JsonKey(unknownEnumValue: Stu3ResourceType.ConceptMap)
   Stu3ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -5362,7 +5362,7 @@ abstract class _ConceptMap extends ConceptMap {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
-  Code? get language;
+  FhirCode? get language;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;
@@ -5403,7 +5403,7 @@ abstract class _ConceptMap extends ConceptMap {
   @JsonKey(name: '_status')
   Element? get statusElement;
   @override
-  Boolean? get experimental;
+  FhirBoolean? get experimental;
   @override
   @JsonKey(name: '_experimental')
   Element? get experimentalElement;
@@ -5902,7 +5902,7 @@ ConceptMapElement _$ConceptMapElementFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ConceptMapElement {
-  Code? get code => throw _privateConstructorUsedError;
+  FhirCode? get code => throw _privateConstructorUsedError;
   @JsonKey(name: '_code')
   Element? get codeElement => throw _privateConstructorUsedError;
   String? get display => throw _privateConstructorUsedError;
@@ -5956,7 +5956,7 @@ class _$ConceptMapElementCopyWithImpl<$Res, $Val extends ConceptMapElement>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -6043,7 +6043,7 @@ class __$$_ConceptMapElementCopyWithImpl<$Res>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -6080,7 +6080,7 @@ class _$_ConceptMapElement extends _ConceptMapElement {
       _$$_ConceptMapElementFromJson(json);
 
   @override
-  final Code? code;
+  final FhirCode? code;
   @override
   @JsonKey(name: '_code')
   final Element? codeElement;
@@ -6140,7 +6140,7 @@ class _$_ConceptMapElement extends _ConceptMapElement {
 
 abstract class _ConceptMapElement extends ConceptMapElement {
   factory _ConceptMapElement(
-      {final Code? code,
+      {final FhirCode? code,
       @JsonKey(name: '_code') final Element? codeElement,
       final String? display,
       @JsonKey(name: '_display') final Element? displayElement,
@@ -6151,7 +6151,7 @@ abstract class _ConceptMapElement extends ConceptMapElement {
       _$_ConceptMapElement.fromJson;
 
   @override
-  Code? get code;
+  FhirCode? get code;
   @override
   @JsonKey(name: '_code')
   Element? get codeElement;
@@ -6174,7 +6174,7 @@ ConceptMapTarget _$ConceptMapTargetFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ConceptMapTarget {
-  Code? get code => throw _privateConstructorUsedError;
+  FhirCode? get code => throw _privateConstructorUsedError;
   @JsonKey(name: '_code')
   Element? get codeElement => throw _privateConstructorUsedError;
   String? get display => throw _privateConstructorUsedError;
@@ -6249,7 +6249,7 @@ class _$ConceptMapTargetCopyWithImpl<$Res, $Val extends ConceptMapTarget>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -6394,7 +6394,7 @@ class __$$_ConceptMapTargetCopyWithImpl<$Res>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -6457,7 +6457,7 @@ class _$_ConceptMapTarget extends _ConceptMapTarget {
       _$$_ConceptMapTargetFromJson(json);
 
   @override
-  final Code? code;
+  final FhirCode? code;
   @override
   @JsonKey(name: '_code')
   final Element? codeElement;
@@ -6555,7 +6555,7 @@ class _$_ConceptMapTarget extends _ConceptMapTarget {
 
 abstract class _ConceptMapTarget extends ConceptMapTarget {
   factory _ConceptMapTarget(
-      {final Code? code,
+      {final FhirCode? code,
       @JsonKey(name: '_code') final Element? codeElement,
       final String? display,
       @JsonKey(name: '_display') final Element? displayElement,
@@ -6571,7 +6571,7 @@ abstract class _ConceptMapTarget extends ConceptMapTarget {
       _$_ConceptMapTarget.fromJson;
 
   @override
-  Code? get code;
+  FhirCode? get code;
   @override
   @JsonKey(name: '_code')
   Element? get codeElement;
@@ -6973,7 +6973,7 @@ mixin _$ConceptMapUnmapped {
   ConceptMapUnmappedMode? get mode => throw _privateConstructorUsedError;
   @JsonKey(name: '_mode')
   Element? get modeElement => throw _privateConstructorUsedError;
-  Code? get code => throw _privateConstructorUsedError;
+  FhirCode? get code => throw _privateConstructorUsedError;
   @JsonKey(name: '_code')
   Element? get codeElement => throw _privateConstructorUsedError;
   String? get display => throw _privateConstructorUsedError;
@@ -6998,7 +6998,7 @@ abstract class $ConceptMapUnmappedCopyWith<$Res> {
   $Res call(
       {ConceptMapUnmappedMode? mode,
       @JsonKey(name: '_mode') Element? modeElement,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement,
       String? display,
       @JsonKey(name: '_display') Element? displayElement,
@@ -7045,7 +7045,7 @@ class _$ConceptMapUnmappedCopyWithImpl<$Res, $Val extends ConceptMapUnmapped>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -7129,7 +7129,7 @@ abstract class _$$_ConceptMapUnmappedCopyWith<$Res>
   $Res call(
       {ConceptMapUnmappedMode? mode,
       @JsonKey(name: '_mode') Element? modeElement,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement,
       String? display,
       @JsonKey(name: '_display') Element? displayElement,
@@ -7178,7 +7178,7 @@ class __$$_ConceptMapUnmappedCopyWithImpl<$Res>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -7226,7 +7226,7 @@ class _$_ConceptMapUnmapped extends _ConceptMapUnmapped {
   @JsonKey(name: '_mode')
   final Element? modeElement;
   @override
-  final Code? code;
+  final FhirCode? code;
   @override
   @JsonKey(name: '_code')
   final Element? codeElement;
@@ -7289,7 +7289,7 @@ abstract class _ConceptMapUnmapped extends ConceptMapUnmapped {
   factory _ConceptMapUnmapped(
           {final ConceptMapUnmappedMode? mode,
           @JsonKey(name: '_mode') final Element? modeElement,
-          final Code? code,
+          final FhirCode? code,
           @JsonKey(name: '_code') final Element? codeElement,
           final String? display,
           @JsonKey(name: '_display') final Element? displayElement,
@@ -7307,7 +7307,7 @@ abstract class _ConceptMapUnmapped extends ConceptMapUnmapped {
   @JsonKey(name: '_mode')
   Element? get modeElement;
   @override
-  Code? get code;
+  FhirCode? get code;
   @override
   @JsonKey(name: '_code')
   Element? get codeElement;
@@ -7335,12 +7335,12 @@ ExpansionProfile _$ExpansionProfileFromJson(Map<String, dynamic> json) {
 mixin _$ExpansionProfile {
   @JsonKey(unknownEnumValue: Stu3ResourceType.ExpansionProfile)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -7362,10 +7362,10 @@ mixin _$ExpansionProfile {
   ExpansionProfileStatus? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
-  Boolean? get experimental => throw _privateConstructorUsedError;
+  FhirBoolean? get experimental => throw _privateConstructorUsedError;
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
-  Date? get date => throw _privateConstructorUsedError;
+  FhirDate? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
   String? get publisher => throw _privateConstructorUsedError;
@@ -7381,31 +7381,31 @@ mixin _$ExpansionProfile {
       throw _privateConstructorUsedError;
   ExpansionProfileExcludedSystem? get excludedSystem =>
       throw _privateConstructorUsedError;
-  Boolean? get includeDesignations => throw _privateConstructorUsedError;
+  FhirBoolean? get includeDesignations => throw _privateConstructorUsedError;
   @JsonKey(name: '_includeDesignations')
   Element? get includeDesignationsElement => throw _privateConstructorUsedError;
   ExpansionProfileDesignation? get designation =>
       throw _privateConstructorUsedError;
-  Boolean? get includeDefinition => throw _privateConstructorUsedError;
+  FhirBoolean? get includeDefinition => throw _privateConstructorUsedError;
   @JsonKey(name: '_includeDefinition')
   Element? get includeDefinitionElement => throw _privateConstructorUsedError;
-  Boolean? get activeOnly => throw _privateConstructorUsedError;
+  FhirBoolean? get activeOnly => throw _privateConstructorUsedError;
   @JsonKey(name: '_activeOnly')
   Element? get activeOnlyElement => throw _privateConstructorUsedError;
-  Boolean? get excludeNested => throw _privateConstructorUsedError;
+  FhirBoolean? get excludeNested => throw _privateConstructorUsedError;
   @JsonKey(name: '_excludeNested')
   Element? get excludeNestedElement => throw _privateConstructorUsedError;
-  Boolean? get excludeNotForUI => throw _privateConstructorUsedError;
+  FhirBoolean? get excludeNotForUI => throw _privateConstructorUsedError;
   @JsonKey(name: '_excludeNotForUI')
   Element? get excludeNotForUIElement => throw _privateConstructorUsedError;
-  Boolean? get excludePostCoordinated => throw _privateConstructorUsedError;
+  FhirBoolean? get excludePostCoordinated => throw _privateConstructorUsedError;
   @JsonKey(name: '_excludePostCoordinated')
   Element? get excludePostCoordinatedElement =>
       throw _privateConstructorUsedError;
   String? get displayLanguage => throw _privateConstructorUsedError;
   @JsonKey(name: '_displayLanguage')
   Element? get displayLanguageElement => throw _privateConstructorUsedError;
-  Boolean? get limitedExpansion => throw _privateConstructorUsedError;
+  FhirBoolean? get limitedExpansion => throw _privateConstructorUsedError;
   @JsonKey(name: '_limitedExpansion')
   Element? get limitedExpansionElement => throw _privateConstructorUsedError;
 
@@ -7424,12 +7424,12 @@ abstract class $ExpansionProfileCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ExpansionProfile)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -7450,10 +7450,10 @@ abstract class $ExpansionProfileCopyWith<$Res> {
       ExpansionProfileStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Boolean? experimental,
+      FhirBoolean? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
-      Date? date,
+      FhirDate? date,
       @JsonKey(name: '_date')
           Element? dateElement,
       String? publisher,
@@ -7467,29 +7467,29 @@ abstract class $ExpansionProfileCopyWith<$Res> {
       List<CodeableConcept>? jurisdiction,
       List<ExpansionProfileFixedVersion>? fixedVersion,
       ExpansionProfileExcludedSystem? excludedSystem,
-      Boolean? includeDesignations,
+      FhirBoolean? includeDesignations,
       @JsonKey(name: '_includeDesignations')
           Element? includeDesignationsElement,
       ExpansionProfileDesignation? designation,
-      Boolean? includeDefinition,
+      FhirBoolean? includeDefinition,
       @JsonKey(name: '_includeDefinition')
           Element? includeDefinitionElement,
-      Boolean? activeOnly,
+      FhirBoolean? activeOnly,
       @JsonKey(name: '_activeOnly')
           Element? activeOnlyElement,
-      Boolean? excludeNested,
+      FhirBoolean? excludeNested,
       @JsonKey(name: '_excludeNested')
           Element? excludeNestedElement,
-      Boolean? excludeNotForUI,
+      FhirBoolean? excludeNotForUI,
       @JsonKey(name: '_excludeNotForUI')
           Element? excludeNotForUIElement,
-      Boolean? excludePostCoordinated,
+      FhirBoolean? excludePostCoordinated,
       @JsonKey(name: '_excludePostCoordinated')
           Element? excludePostCoordinatedElement,
       String? displayLanguage,
       @JsonKey(name: '_displayLanguage')
           Element? displayLanguageElement,
-      Boolean? limitedExpansion,
+      FhirBoolean? limitedExpansion,
       @JsonKey(name: '_limitedExpansion')
           Element? limitedExpansionElement});
 
@@ -7606,7 +7606,7 @@ class _$ExpansionProfileCopyWithImpl<$Res, $Val extends ExpansionProfile>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -7666,7 +7666,7 @@ class _$ExpansionProfileCopyWithImpl<$Res, $Val extends ExpansionProfile>
       experimental: freezed == experimental
           ? _value.experimental
           : experimental // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       experimentalElement: freezed == experimentalElement
           ? _value.experimentalElement
           : experimentalElement // ignore: cast_nullable_to_non_nullable
@@ -7718,7 +7718,7 @@ class _$ExpansionProfileCopyWithImpl<$Res, $Val extends ExpansionProfile>
       includeDesignations: freezed == includeDesignations
           ? _value.includeDesignations
           : includeDesignations // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       includeDesignationsElement: freezed == includeDesignationsElement
           ? _value.includeDesignationsElement
           : includeDesignationsElement // ignore: cast_nullable_to_non_nullable
@@ -7730,7 +7730,7 @@ class _$ExpansionProfileCopyWithImpl<$Res, $Val extends ExpansionProfile>
       includeDefinition: freezed == includeDefinition
           ? _value.includeDefinition
           : includeDefinition // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       includeDefinitionElement: freezed == includeDefinitionElement
           ? _value.includeDefinitionElement
           : includeDefinitionElement // ignore: cast_nullable_to_non_nullable
@@ -7738,7 +7738,7 @@ class _$ExpansionProfileCopyWithImpl<$Res, $Val extends ExpansionProfile>
       activeOnly: freezed == activeOnly
           ? _value.activeOnly
           : activeOnly // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       activeOnlyElement: freezed == activeOnlyElement
           ? _value.activeOnlyElement
           : activeOnlyElement // ignore: cast_nullable_to_non_nullable
@@ -7746,7 +7746,7 @@ class _$ExpansionProfileCopyWithImpl<$Res, $Val extends ExpansionProfile>
       excludeNested: freezed == excludeNested
           ? _value.excludeNested
           : excludeNested // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       excludeNestedElement: freezed == excludeNestedElement
           ? _value.excludeNestedElement
           : excludeNestedElement // ignore: cast_nullable_to_non_nullable
@@ -7754,7 +7754,7 @@ class _$ExpansionProfileCopyWithImpl<$Res, $Val extends ExpansionProfile>
       excludeNotForUI: freezed == excludeNotForUI
           ? _value.excludeNotForUI
           : excludeNotForUI // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       excludeNotForUIElement: freezed == excludeNotForUIElement
           ? _value.excludeNotForUIElement
           : excludeNotForUIElement // ignore: cast_nullable_to_non_nullable
@@ -7762,7 +7762,7 @@ class _$ExpansionProfileCopyWithImpl<$Res, $Val extends ExpansionProfile>
       excludePostCoordinated: freezed == excludePostCoordinated
           ? _value.excludePostCoordinated
           : excludePostCoordinated // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       excludePostCoordinatedElement: freezed == excludePostCoordinatedElement
           ? _value.excludePostCoordinatedElement
           : excludePostCoordinatedElement // ignore: cast_nullable_to_non_nullable
@@ -7778,7 +7778,7 @@ class _$ExpansionProfileCopyWithImpl<$Res, $Val extends ExpansionProfile>
       limitedExpansion: freezed == limitedExpansion
           ? _value.limitedExpansion
           : limitedExpansion // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       limitedExpansionElement: freezed == limitedExpansionElement
           ? _value.limitedExpansionElement
           : limitedExpansionElement // ignore: cast_nullable_to_non_nullable
@@ -8078,12 +8078,12 @@ abstract class _$$_ExpansionProfileCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ExpansionProfile)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -8104,10 +8104,10 @@ abstract class _$$_ExpansionProfileCopyWith<$Res>
       ExpansionProfileStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Boolean? experimental,
+      FhirBoolean? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
-      Date? date,
+      FhirDate? date,
       @JsonKey(name: '_date')
           Element? dateElement,
       String? publisher,
@@ -8121,29 +8121,29 @@ abstract class _$$_ExpansionProfileCopyWith<$Res>
       List<CodeableConcept>? jurisdiction,
       List<ExpansionProfileFixedVersion>? fixedVersion,
       ExpansionProfileExcludedSystem? excludedSystem,
-      Boolean? includeDesignations,
+      FhirBoolean? includeDesignations,
       @JsonKey(name: '_includeDesignations')
           Element? includeDesignationsElement,
       ExpansionProfileDesignation? designation,
-      Boolean? includeDefinition,
+      FhirBoolean? includeDefinition,
       @JsonKey(name: '_includeDefinition')
           Element? includeDefinitionElement,
-      Boolean? activeOnly,
+      FhirBoolean? activeOnly,
       @JsonKey(name: '_activeOnly')
           Element? activeOnlyElement,
-      Boolean? excludeNested,
+      FhirBoolean? excludeNested,
       @JsonKey(name: '_excludeNested')
           Element? excludeNestedElement,
-      Boolean? excludeNotForUI,
+      FhirBoolean? excludeNotForUI,
       @JsonKey(name: '_excludeNotForUI')
           Element? excludeNotForUIElement,
-      Boolean? excludePostCoordinated,
+      FhirBoolean? excludePostCoordinated,
       @JsonKey(name: '_excludePostCoordinated')
           Element? excludePostCoordinatedElement,
       String? displayLanguage,
       @JsonKey(name: '_displayLanguage')
           Element? displayLanguageElement,
-      Boolean? limitedExpansion,
+      FhirBoolean? limitedExpansion,
       @JsonKey(name: '_limitedExpansion')
           Element? limitedExpansionElement});
 
@@ -8281,7 +8281,7 @@ class __$$_ExpansionProfileCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -8341,7 +8341,7 @@ class __$$_ExpansionProfileCopyWithImpl<$Res>
       experimental: freezed == experimental
           ? _value.experimental
           : experimental // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       experimentalElement: freezed == experimentalElement
           ? _value.experimentalElement
           : experimentalElement // ignore: cast_nullable_to_non_nullable
@@ -8393,7 +8393,7 @@ class __$$_ExpansionProfileCopyWithImpl<$Res>
       includeDesignations: freezed == includeDesignations
           ? _value.includeDesignations
           : includeDesignations // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       includeDesignationsElement: freezed == includeDesignationsElement
           ? _value.includeDesignationsElement
           : includeDesignationsElement // ignore: cast_nullable_to_non_nullable
@@ -8405,7 +8405,7 @@ class __$$_ExpansionProfileCopyWithImpl<$Res>
       includeDefinition: freezed == includeDefinition
           ? _value.includeDefinition
           : includeDefinition // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       includeDefinitionElement: freezed == includeDefinitionElement
           ? _value.includeDefinitionElement
           : includeDefinitionElement // ignore: cast_nullable_to_non_nullable
@@ -8413,7 +8413,7 @@ class __$$_ExpansionProfileCopyWithImpl<$Res>
       activeOnly: freezed == activeOnly
           ? _value.activeOnly
           : activeOnly // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       activeOnlyElement: freezed == activeOnlyElement
           ? _value.activeOnlyElement
           : activeOnlyElement // ignore: cast_nullable_to_non_nullable
@@ -8421,7 +8421,7 @@ class __$$_ExpansionProfileCopyWithImpl<$Res>
       excludeNested: freezed == excludeNested
           ? _value.excludeNested
           : excludeNested // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       excludeNestedElement: freezed == excludeNestedElement
           ? _value.excludeNestedElement
           : excludeNestedElement // ignore: cast_nullable_to_non_nullable
@@ -8429,7 +8429,7 @@ class __$$_ExpansionProfileCopyWithImpl<$Res>
       excludeNotForUI: freezed == excludeNotForUI
           ? _value.excludeNotForUI
           : excludeNotForUI // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       excludeNotForUIElement: freezed == excludeNotForUIElement
           ? _value.excludeNotForUIElement
           : excludeNotForUIElement // ignore: cast_nullable_to_non_nullable
@@ -8437,7 +8437,7 @@ class __$$_ExpansionProfileCopyWithImpl<$Res>
       excludePostCoordinated: freezed == excludePostCoordinated
           ? _value.excludePostCoordinated
           : excludePostCoordinated // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       excludePostCoordinatedElement: freezed == excludePostCoordinatedElement
           ? _value.excludePostCoordinatedElement
           : excludePostCoordinatedElement // ignore: cast_nullable_to_non_nullable
@@ -8453,7 +8453,7 @@ class __$$_ExpansionProfileCopyWithImpl<$Res>
       limitedExpansion: freezed == limitedExpansion
           ? _value.limitedExpansion
           : limitedExpansion // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       limitedExpansionElement: freezed == limitedExpansionElement
           ? _value.limitedExpansionElement
           : limitedExpansionElement // ignore: cast_nullable_to_non_nullable
@@ -8561,7 +8561,7 @@ class _$_ExpansionProfile extends _ExpansionProfile {
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
-  final Code? language;
+  final FhirCode? language;
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
@@ -8622,7 +8622,7 @@ class _$_ExpansionProfile extends _ExpansionProfile {
   @JsonKey(name: '_status')
   final Element? statusElement;
   @override
-  final Boolean? experimental;
+  final FhirBoolean? experimental;
   @override
   @JsonKey(name: '_experimental')
   final Element? experimentalElement;
@@ -8684,34 +8684,34 @@ class _$_ExpansionProfile extends _ExpansionProfile {
   @override
   final ExpansionProfileExcludedSystem? excludedSystem;
   @override
-  final Boolean? includeDesignations;
+  final FhirBoolean? includeDesignations;
   @override
   @JsonKey(name: '_includeDesignations')
   final Element? includeDesignationsElement;
   @override
   final ExpansionProfileDesignation? designation;
   @override
-  final Boolean? includeDefinition;
+  final FhirBoolean? includeDefinition;
   @override
   @JsonKey(name: '_includeDefinition')
   final Element? includeDefinitionElement;
   @override
-  final Boolean? activeOnly;
+  final FhirBoolean? activeOnly;
   @override
   @JsonKey(name: '_activeOnly')
   final Element? activeOnlyElement;
   @override
-  final Boolean? excludeNested;
+  final FhirBoolean? excludeNested;
   @override
   @JsonKey(name: '_excludeNested')
   final Element? excludeNestedElement;
   @override
-  final Boolean? excludeNotForUI;
+  final FhirBoolean? excludeNotForUI;
   @override
   @JsonKey(name: '_excludeNotForUI')
   final Element? excludeNotForUIElement;
   @override
-  final Boolean? excludePostCoordinated;
+  final FhirBoolean? excludePostCoordinated;
   @override
   @JsonKey(name: '_excludePostCoordinated')
   final Element? excludePostCoordinatedElement;
@@ -8721,7 +8721,7 @@ class _$_ExpansionProfile extends _ExpansionProfile {
   @JsonKey(name: '_displayLanguage')
   final Element? displayLanguageElement;
   @override
-  final Boolean? limitedExpansion;
+  final FhirBoolean? limitedExpansion;
   @override
   @JsonKey(name: '_limitedExpansion')
   final Element? limitedExpansionElement;
@@ -8907,7 +8907,7 @@ abstract class _ExpansionProfile extends ExpansionProfile {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -8928,7 +8928,7 @@ abstract class _ExpansionProfile extends ExpansionProfile {
       final ExpansionProfileStatus? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
-      final Boolean? experimental,
+      final FhirBoolean? experimental,
       @JsonKey(name: '_experimental')
           final Element? experimentalElement,
       final Date? date,
@@ -8945,29 +8945,29 @@ abstract class _ExpansionProfile extends ExpansionProfile {
       final List<CodeableConcept>? jurisdiction,
       final List<ExpansionProfileFixedVersion>? fixedVersion,
       final ExpansionProfileExcludedSystem? excludedSystem,
-      final Boolean? includeDesignations,
+      final FhirBoolean? includeDesignations,
       @JsonKey(name: '_includeDesignations')
           final Element? includeDesignationsElement,
       final ExpansionProfileDesignation? designation,
-      final Boolean? includeDefinition,
+      final FhirBoolean? includeDefinition,
       @JsonKey(name: '_includeDefinition')
           final Element? includeDefinitionElement,
-      final Boolean? activeOnly,
+      final FhirBoolean? activeOnly,
       @JsonKey(name: '_activeOnly')
           final Element? activeOnlyElement,
-      final Boolean? excludeNested,
+      final FhirBoolean? excludeNested,
       @JsonKey(name: '_excludeNested')
           final Element? excludeNestedElement,
-      final Boolean? excludeNotForUI,
+      final FhirBoolean? excludeNotForUI,
       @JsonKey(name: '_excludeNotForUI')
           final Element? excludeNotForUIElement,
-      final Boolean? excludePostCoordinated,
+      final FhirBoolean? excludePostCoordinated,
       @JsonKey(name: '_excludePostCoordinated')
           final Element? excludePostCoordinatedElement,
       final String? displayLanguage,
       @JsonKey(name: '_displayLanguage')
           final Element? displayLanguageElement,
-      final Boolean? limitedExpansion,
+      final FhirBoolean? limitedExpansion,
       @JsonKey(name: '_limitedExpansion')
           final Element? limitedExpansionElement}) = _$_ExpansionProfile;
   _ExpansionProfile._() : super._();
@@ -8979,7 +8979,7 @@ abstract class _ExpansionProfile extends ExpansionProfile {
   @JsonKey(unknownEnumValue: Stu3ResourceType.ExpansionProfile)
   Stu3ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -8988,7 +8988,7 @@ abstract class _ExpansionProfile extends ExpansionProfile {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
-  Code? get language;
+  FhirCode? get language;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;
@@ -9024,12 +9024,12 @@ abstract class _ExpansionProfile extends ExpansionProfile {
   @JsonKey(name: '_status')
   Element? get statusElement;
   @override
-  Boolean? get experimental;
+  FhirBoolean? get experimental;
   @override
   @JsonKey(name: '_experimental')
   Element? get experimentalElement;
   @override
-  Date? get date;
+  FhirDate? get date;
   @override
   @JsonKey(name: '_date')
   Element? get dateElement;
@@ -9054,34 +9054,34 @@ abstract class _ExpansionProfile extends ExpansionProfile {
   @override
   ExpansionProfileExcludedSystem? get excludedSystem;
   @override
-  Boolean? get includeDesignations;
+  FhirBoolean? get includeDesignations;
   @override
   @JsonKey(name: '_includeDesignations')
   Element? get includeDesignationsElement;
   @override
   ExpansionProfileDesignation? get designation;
   @override
-  Boolean? get includeDefinition;
+  FhirBoolean? get includeDefinition;
   @override
   @JsonKey(name: '_includeDefinition')
   Element? get includeDefinitionElement;
   @override
-  Boolean? get activeOnly;
+  FhirBoolean? get activeOnly;
   @override
   @JsonKey(name: '_activeOnly')
   Element? get activeOnlyElement;
   @override
-  Boolean? get excludeNested;
+  FhirBoolean? get excludeNested;
   @override
   @JsonKey(name: '_excludeNested')
   Element? get excludeNestedElement;
   @override
-  Boolean? get excludeNotForUI;
+  FhirBoolean? get excludeNotForUI;
   @override
   @JsonKey(name: '_excludeNotForUI')
   Element? get excludeNotForUIElement;
   @override
-  Boolean? get excludePostCoordinated;
+  FhirBoolean? get excludePostCoordinated;
   @override
   @JsonKey(name: '_excludePostCoordinated')
   Element? get excludePostCoordinatedElement;
@@ -9091,7 +9091,7 @@ abstract class _ExpansionProfile extends ExpansionProfile {
   @JsonKey(name: '_displayLanguage')
   Element? get displayLanguageElement;
   @override
-  Boolean? get limitedExpansion;
+  FhirBoolean? get limitedExpansion;
   @override
   @JsonKey(name: '_limitedExpansion')
   Element? get limitedExpansionElement;
@@ -10645,12 +10645,12 @@ NamingSystem _$NamingSystemFromJson(Map<String, dynamic> json) {
 mixin _$NamingSystem {
   @JsonKey(unknownEnumValue: Stu3ResourceType.NamingSystem)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -10705,12 +10705,12 @@ abstract class $NamingSystemCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.NamingSystem)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -10836,7 +10836,7 @@ class _$NamingSystemCopyWithImpl<$Res, $Val extends NamingSystem>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -11128,12 +11128,12 @@ abstract class _$$_NamingSystemCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.NamingSystem)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -11271,7 +11271,7 @@ class __$$_NamingSystemCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -11458,7 +11458,7 @@ class _$_NamingSystem extends _NamingSystem {
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
-  final Code? language;
+  final FhirCode? language;
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
@@ -11708,7 +11708,7 @@ abstract class _NamingSystem extends NamingSystem {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -11755,7 +11755,7 @@ abstract class _NamingSystem extends NamingSystem {
   @JsonKey(unknownEnumValue: Stu3ResourceType.NamingSystem)
   Stu3ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -11764,7 +11764,7 @@ abstract class _NamingSystem extends NamingSystem {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
-  Code? get language;
+  FhirCode? get language;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;
@@ -11847,7 +11847,7 @@ mixin _$NamingSystemUniqueId {
   String? get value => throw _privateConstructorUsedError;
   @JsonKey(name: '_value')
   Element? get valueElement => throw _privateConstructorUsedError;
-  Boolean? get preferred => throw _privateConstructorUsedError;
+  FhirBoolean? get preferred => throw _privateConstructorUsedError;
   @JsonKey(name: '_preferred')
   Element? get preferredElement => throw _privateConstructorUsedError;
   String? get comment => throw _privateConstructorUsedError;
@@ -11872,7 +11872,7 @@ abstract class $NamingSystemUniqueIdCopyWith<$Res> {
       @JsonKey(name: '_type') Element? typeElement,
       String? value,
       @JsonKey(name: '_value') Element? valueElement,
-      Boolean? preferred,
+      FhirBoolean? preferred,
       @JsonKey(name: '_preferred') Element? preferredElement,
       String? comment,
       @JsonKey(name: '_comment') Element? commentElement,
@@ -11929,7 +11929,7 @@ class _$NamingSystemUniqueIdCopyWithImpl<$Res,
       preferred: freezed == preferred
           ? _value.preferred
           : preferred // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       preferredElement: freezed == preferredElement
           ? _value.preferredElement
           : preferredElement // ignore: cast_nullable_to_non_nullable
@@ -12023,7 +12023,7 @@ abstract class _$$_NamingSystemUniqueIdCopyWith<$Res>
       @JsonKey(name: '_type') Element? typeElement,
       String? value,
       @JsonKey(name: '_value') Element? valueElement,
-      Boolean? preferred,
+      FhirBoolean? preferred,
       @JsonKey(name: '_preferred') Element? preferredElement,
       String? comment,
       @JsonKey(name: '_comment') Element? commentElement,
@@ -12082,7 +12082,7 @@ class __$$_NamingSystemUniqueIdCopyWithImpl<$Res>
       preferred: freezed == preferred
           ? _value.preferred
           : preferred // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       preferredElement: freezed == preferredElement
           ? _value.preferredElement
           : preferredElement // ignore: cast_nullable_to_non_nullable
@@ -12132,7 +12132,7 @@ class _$_NamingSystemUniqueId extends _NamingSystemUniqueId {
   @JsonKey(name: '_value')
   final Element? valueElement;
   @override
-  final Boolean? preferred;
+  final FhirBoolean? preferred;
   @override
   @JsonKey(name: '_preferred')
   final Element? preferredElement;
@@ -12205,7 +12205,7 @@ abstract class _NamingSystemUniqueId extends NamingSystemUniqueId {
       @JsonKey(name: '_type') final Element? typeElement,
       final String? value,
       @JsonKey(name: '_value') final Element? valueElement,
-      final Boolean? preferred,
+      final FhirBoolean? preferred,
       @JsonKey(name: '_preferred') final Element? preferredElement,
       final String? comment,
       @JsonKey(name: '_comment') final Element? commentElement,
@@ -12226,7 +12226,7 @@ abstract class _NamingSystemUniqueId extends NamingSystemUniqueId {
   @JsonKey(name: '_value')
   Element? get valueElement;
   @override
-  Boolean? get preferred;
+  FhirBoolean? get preferred;
   @override
   @JsonKey(name: '_preferred')
   Element? get preferredElement;
@@ -12251,12 +12251,12 @@ ValueSet _$ValueSetFromJson(Map<String, dynamic> json) {
 mixin _$ValueSet {
   @JsonKey(unknownEnumValue: Stu3ResourceType.ValueSet)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -12281,7 +12281,7 @@ mixin _$ValueSet {
   ValueSetStatus? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
-  Boolean? get experimental => throw _privateConstructorUsedError;
+  FhirBoolean? get experimental => throw _privateConstructorUsedError;
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
   FhirDateTime? get date => throw _privateConstructorUsedError;
@@ -12296,7 +12296,7 @@ mixin _$ValueSet {
   Element? get descriptionElement => throw _privateConstructorUsedError;
   List<UsageContext>? get useContext => throw _privateConstructorUsedError;
   List<CodeableConcept>? get jurisdiction => throw _privateConstructorUsedError;
-  Boolean? get immutable => throw _privateConstructorUsedError;
+  FhirBoolean? get immutable => throw _privateConstructorUsedError;
   @JsonKey(name: '_immutable')
   Element? get immutableElement => throw _privateConstructorUsedError;
   String? get purpose => throw _privateConstructorUsedError;
@@ -12305,7 +12305,7 @@ mixin _$ValueSet {
   String? get copyright => throw _privateConstructorUsedError;
   @JsonKey(name: '_copyright')
   Element? get copyrightElement => throw _privateConstructorUsedError;
-  Boolean? get extensible => throw _privateConstructorUsedError;
+  FhirBoolean? get extensible => throw _privateConstructorUsedError;
   @JsonKey(name: '_extensible')
   Element? get extensibleElement => throw _privateConstructorUsedError;
   ValueSetCompose? get compose => throw _privateConstructorUsedError;
@@ -12325,12 +12325,12 @@ abstract class $ValueSetCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ValueSet)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -12354,7 +12354,7 @@ abstract class $ValueSetCopyWith<$Res> {
       ValueSetStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Boolean? experimental,
+      FhirBoolean? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
       FhirDateTime? date,
@@ -12369,7 +12369,7 @@ abstract class $ValueSetCopyWith<$Res> {
           Element? descriptionElement,
       List<UsageContext>? useContext,
       List<CodeableConcept>? jurisdiction,
-      Boolean? immutable,
+      FhirBoolean? immutable,
       @JsonKey(name: '_immutable')
           Element? immutableElement,
       String? purpose,
@@ -12378,7 +12378,7 @@ abstract class $ValueSetCopyWith<$Res> {
       String? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
-      Boolean? extensible,
+      FhirBoolean? extensible,
       @JsonKey(name: '_extensible')
           Element? extensibleElement,
       ValueSetCompose? compose,
@@ -12486,7 +12486,7 @@ class _$ValueSetCopyWithImpl<$Res, $Val extends ValueSet>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -12554,7 +12554,7 @@ class _$ValueSetCopyWithImpl<$Res, $Val extends ValueSet>
       experimental: freezed == experimental
           ? _value.experimental
           : experimental // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       experimentalElement: freezed == experimentalElement
           ? _value.experimentalElement
           : experimentalElement // ignore: cast_nullable_to_non_nullable
@@ -12598,7 +12598,7 @@ class _$ValueSetCopyWithImpl<$Res, $Val extends ValueSet>
       immutable: freezed == immutable
           ? _value.immutable
           : immutable // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       immutableElement: freezed == immutableElement
           ? _value.immutableElement
           : immutableElement // ignore: cast_nullable_to_non_nullable
@@ -12622,7 +12622,7 @@ class _$ValueSetCopyWithImpl<$Res, $Val extends ValueSet>
       extensible: freezed == extensible
           ? _value.extensible
           : extensible // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       extensibleElement: freezed == extensibleElement
           ? _value.extensibleElement
           : extensibleElement // ignore: cast_nullable_to_non_nullable
@@ -12877,12 +12877,12 @@ abstract class _$$_ValueSetCopyWith<$Res> implements $ValueSetCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ValueSet)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -12906,7 +12906,7 @@ abstract class _$$_ValueSetCopyWith<$Res> implements $ValueSetCopyWith<$Res> {
       ValueSetStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Boolean? experimental,
+      FhirBoolean? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
       FhirDateTime? date,
@@ -12921,7 +12921,7 @@ abstract class _$$_ValueSetCopyWith<$Res> implements $ValueSetCopyWith<$Res> {
           Element? descriptionElement,
       List<UsageContext>? useContext,
       List<CodeableConcept>? jurisdiction,
-      Boolean? immutable,
+      FhirBoolean? immutable,
       @JsonKey(name: '_immutable')
           Element? immutableElement,
       String? purpose,
@@ -12930,7 +12930,7 @@ abstract class _$$_ValueSetCopyWith<$Res> implements $ValueSetCopyWith<$Res> {
       String? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
-      Boolean? extensible,
+      FhirBoolean? extensible,
       @JsonKey(name: '_extensible')
           Element? extensibleElement,
       ValueSetCompose? compose,
@@ -13055,7 +13055,7 @@ class __$$_ValueSetCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -13123,7 +13123,7 @@ class __$$_ValueSetCopyWithImpl<$Res>
       experimental: freezed == experimental
           ? _value.experimental
           : experimental // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       experimentalElement: freezed == experimentalElement
           ? _value.experimentalElement
           : experimentalElement // ignore: cast_nullable_to_non_nullable
@@ -13167,7 +13167,7 @@ class __$$_ValueSetCopyWithImpl<$Res>
       immutable: freezed == immutable
           ? _value.immutable
           : immutable // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       immutableElement: freezed == immutableElement
           ? _value.immutableElement
           : immutableElement // ignore: cast_nullable_to_non_nullable
@@ -13191,7 +13191,7 @@ class __$$_ValueSetCopyWithImpl<$Res>
       extensible: freezed == extensible
           ? _value.extensible
           : extensible // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       extensibleElement: freezed == extensibleElement
           ? _value.extensibleElement
           : extensibleElement // ignore: cast_nullable_to_non_nullable
@@ -13297,7 +13297,7 @@ class _$_ValueSet extends _ValueSet {
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
-  final Code? language;
+  final FhirCode? language;
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
@@ -13371,7 +13371,7 @@ class _$_ValueSet extends _ValueSet {
   @JsonKey(name: '_status')
   final Element? statusElement;
   @override
-  final Boolean? experimental;
+  final FhirBoolean? experimental;
   @override
   @JsonKey(name: '_experimental')
   final Element? experimentalElement;
@@ -13421,7 +13421,7 @@ class _$_ValueSet extends _ValueSet {
   }
 
   @override
-  final Boolean? immutable;
+  final FhirBoolean? immutable;
   @override
   @JsonKey(name: '_immutable')
   final Element? immutableElement;
@@ -13436,7 +13436,7 @@ class _$_ValueSet extends _ValueSet {
   @JsonKey(name: '_copyright')
   final Element? copyrightElement;
   @override
-  final Boolean? extensible;
+  final FhirBoolean? extensible;
   @override
   @JsonKey(name: '_extensible')
   final Element? extensibleElement;
@@ -13603,7 +13603,7 @@ abstract class _ValueSet extends ValueSet {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -13627,7 +13627,7 @@ abstract class _ValueSet extends ValueSet {
       final ValueSetStatus? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
-      final Boolean? experimental,
+      final FhirBoolean? experimental,
       @JsonKey(name: '_experimental')
           final Element? experimentalElement,
       final FhirDateTime? date,
@@ -13642,7 +13642,7 @@ abstract class _ValueSet extends ValueSet {
           final Element? descriptionElement,
       final List<UsageContext>? useContext,
       final List<CodeableConcept>? jurisdiction,
-      final Boolean? immutable,
+      final FhirBoolean? immutable,
       @JsonKey(name: '_immutable')
           final Element? immutableElement,
       final String? purpose,
@@ -13651,7 +13651,7 @@ abstract class _ValueSet extends ValueSet {
       final String? copyright,
       @JsonKey(name: '_copyright')
           final Element? copyrightElement,
-      final Boolean? extensible,
+      final FhirBoolean? extensible,
       @JsonKey(name: '_extensible')
           final Element? extensibleElement,
       final ValueSetCompose? compose,
@@ -13664,7 +13664,7 @@ abstract class _ValueSet extends ValueSet {
   @JsonKey(unknownEnumValue: Stu3ResourceType.ValueSet)
   Stu3ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -13673,7 +13673,7 @@ abstract class _ValueSet extends ValueSet {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
-  Code? get language;
+  FhirCode? get language;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;
@@ -13714,7 +13714,7 @@ abstract class _ValueSet extends ValueSet {
   @JsonKey(name: '_status')
   Element? get statusElement;
   @override
-  Boolean? get experimental;
+  FhirBoolean? get experimental;
   @override
   @JsonKey(name: '_experimental')
   Element? get experimentalElement;
@@ -13740,7 +13740,7 @@ abstract class _ValueSet extends ValueSet {
   @override
   List<CodeableConcept>? get jurisdiction;
   @override
-  Boolean? get immutable;
+  FhirBoolean? get immutable;
   @override
   @JsonKey(name: '_immutable')
   Element? get immutableElement;
@@ -13755,7 +13755,7 @@ abstract class _ValueSet extends ValueSet {
   @JsonKey(name: '_copyright')
   Element? get copyrightElement;
   @override
-  Boolean? get extensible;
+  FhirBoolean? get extensible;
   @override
   @JsonKey(name: '_extensible')
   Element? get extensibleElement;
@@ -13775,10 +13775,10 @@ ValueSetCompose _$ValueSetComposeFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ValueSetCompose {
-  Date? get lockedDate => throw _privateConstructorUsedError;
+  FhirDate? get lockedDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_lockedDate')
   Element? get lockedDateElement => throw _privateConstructorUsedError;
-  Boolean? get inactive => throw _privateConstructorUsedError;
+  FhirBoolean? get inactive => throw _privateConstructorUsedError;
   @JsonKey(name: '_inactive')
   Element? get inactiveElement => throw _privateConstructorUsedError;
   List<ValueSetInclude> get include => throw _privateConstructorUsedError;
@@ -13799,7 +13799,7 @@ abstract class $ValueSetComposeCopyWith<$Res> {
   $Res call(
       {Date? lockedDate,
       @JsonKey(name: '_lockedDate') Element? lockedDateElement,
-      Boolean? inactive,
+      FhirBoolean? inactive,
       @JsonKey(name: '_inactive') Element? inactiveElement,
       List<ValueSetInclude> include,
       List<ValueSetInclude>? exclude});
@@ -13840,7 +13840,7 @@ class _$ValueSetComposeCopyWithImpl<$Res, $Val extends ValueSetCompose>
       inactive: freezed == inactive
           ? _value.inactive
           : inactive // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       inactiveElement: freezed == inactiveElement
           ? _value.inactiveElement
           : inactiveElement // ignore: cast_nullable_to_non_nullable
@@ -13892,7 +13892,7 @@ abstract class _$$_ValueSetComposeCopyWith<$Res>
   $Res call(
       {Date? lockedDate,
       @JsonKey(name: '_lockedDate') Element? lockedDateElement,
-      Boolean? inactive,
+      FhirBoolean? inactive,
       @JsonKey(name: '_inactive') Element? inactiveElement,
       List<ValueSetInclude> include,
       List<ValueSetInclude>? exclude});
@@ -13933,7 +13933,7 @@ class __$$_ValueSetComposeCopyWithImpl<$Res>
       inactive: freezed == inactive
           ? _value.inactive
           : inactive // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       inactiveElement: freezed == inactiveElement
           ? _value.inactiveElement
           : inactiveElement // ignore: cast_nullable_to_non_nullable
@@ -13973,7 +13973,7 @@ class _$_ValueSetCompose extends _ValueSetCompose {
   @JsonKey(name: '_lockedDate')
   final Element? lockedDateElement;
   @override
-  final Boolean? inactive;
+  final FhirBoolean? inactive;
   @override
   @JsonKey(name: '_inactive')
   final Element? inactiveElement;
@@ -14046,7 +14046,7 @@ abstract class _ValueSetCompose extends ValueSetCompose {
   factory _ValueSetCompose(
       {final Date? lockedDate,
       @JsonKey(name: '_lockedDate') final Element? lockedDateElement,
-      final Boolean? inactive,
+      final FhirBoolean? inactive,
       @JsonKey(name: '_inactive') final Element? inactiveElement,
       required final List<ValueSetInclude> include,
       final List<ValueSetInclude>? exclude}) = _$_ValueSetCompose;
@@ -14056,12 +14056,12 @@ abstract class _ValueSetCompose extends ValueSetCompose {
       _$_ValueSetCompose.fromJson;
 
   @override
-  Date? get lockedDate;
+  FhirDate? get lockedDate;
   @override
   @JsonKey(name: '_lockedDate')
   Element? get lockedDateElement;
   @override
-  Boolean? get inactive;
+  FhirBoolean? get inactive;
   @override
   @JsonKey(name: '_inactive')
   Element? get inactiveElement;
@@ -14488,7 +14488,7 @@ ValueSetConcept _$ValueSetConceptFromJson(Map<String, dynamic> json) {
 mixin _$ValueSetConcept {
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
-  Code? get code => throw _privateConstructorUsedError;
+  FhirCode? get code => throw _privateConstructorUsedError;
   @JsonKey(name: '_code')
   Element? get codeElement => throw _privateConstructorUsedError;
   String? get display => throw _privateConstructorUsedError;
@@ -14511,7 +14511,7 @@ abstract class $ValueSetConceptCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement,
       String? display,
       @JsonKey(name: '_display') Element? displayElement,
@@ -14549,7 +14549,7 @@ class _$ValueSetConceptCopyWithImpl<$Res, $Val extends ValueSetConcept>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -14604,7 +14604,7 @@ abstract class _$$_ValueSetConceptCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement,
       String? display,
       @JsonKey(name: '_display') Element? displayElement,
@@ -14642,7 +14642,7 @@ class __$$_ValueSetConceptCopyWithImpl<$Res>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -14692,7 +14692,7 @@ class _$_ValueSetConcept extends _ValueSetConcept {
   }
 
   @override
-  final Code? code;
+  final FhirCode? code;
   @override
   @JsonKey(name: '_code')
   final Element? codeElement;
@@ -14761,7 +14761,7 @@ class _$_ValueSetConcept extends _ValueSetConcept {
 abstract class _ValueSetConcept extends ValueSetConcept {
   factory _ValueSetConcept(
       {@JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final Code? code,
+      final FhirCode? code,
       @JsonKey(name: '_code') final Element? codeElement,
       final String? display,
       @JsonKey(name: '_display') final Element? displayElement,
@@ -14775,7 +14775,7 @@ abstract class _ValueSetConcept extends ValueSetConcept {
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
-  Code? get code;
+  FhirCode? get code;
   @override
   @JsonKey(name: '_code')
   Element? get codeElement;
@@ -15389,10 +15389,10 @@ mixin _$ValueSetExpansion {
   FhirDateTime? get timestamp => throw _privateConstructorUsedError;
   @JsonKey(name: '_timestamp')
   Element? get timestampElement => throw _privateConstructorUsedError;
-  Decimal? get total => throw _privateConstructorUsedError;
+  FhirDecimal? get total => throw _privateConstructorUsedError;
   @JsonKey(name: '_total')
   Element? get totalElement => throw _privateConstructorUsedError;
-  Decimal? get offset => throw _privateConstructorUsedError;
+  FhirDecimal? get offset => throw _privateConstructorUsedError;
   @JsonKey(name: '_offset')
   Element? get offsetElement => throw _privateConstructorUsedError;
   List<ValueSetParameter>? get parameter => throw _privateConstructorUsedError;
@@ -15415,9 +15415,9 @@ abstract class $ValueSetExpansionCopyWith<$Res> {
       @JsonKey(name: '_identifier') Element? identifierElement,
       FhirDateTime? timestamp,
       @JsonKey(name: '_timestamp') Element? timestampElement,
-      Decimal? total,
+      FhirDecimal? total,
       @JsonKey(name: '_total') Element? totalElement,
-      Decimal? offset,
+      FhirDecimal? offset,
       @JsonKey(name: '_offset') Element? offsetElement,
       List<ValueSetParameter>? parameter,
       List<ValueSetContains>? contains});
@@ -15558,9 +15558,9 @@ abstract class _$$_ValueSetExpansionCopyWith<$Res>
       @JsonKey(name: '_identifier') Element? identifierElement,
       FhirDateTime? timestamp,
       @JsonKey(name: '_timestamp') Element? timestampElement,
-      Decimal? total,
+      FhirDecimal? total,
       @JsonKey(name: '_total') Element? totalElement,
-      Decimal? offset,
+      FhirDecimal? offset,
       @JsonKey(name: '_offset') Element? offsetElement,
       List<ValueSetParameter>? parameter,
       List<ValueSetContains>? contains});
@@ -15790,12 +15790,12 @@ abstract class _ValueSetExpansion extends ValueSetExpansion {
   @JsonKey(name: '_timestamp')
   Element? get timestampElement;
   @override
-  Decimal? get total;
+  FhirDecimal? get total;
   @override
   @JsonKey(name: '_total')
   Element? get totalElement;
   @override
-  Decimal? get offset;
+  FhirDecimal? get offset;
   @override
   @JsonKey(name: '_offset')
   Element? get offsetElement;
@@ -15821,19 +15821,19 @@ mixin _$ValueSetParameter {
   String? get valueString => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueString')
   Element? get valueStringElement => throw _privateConstructorUsedError;
-  Boolean? get valueBoolean => throw _privateConstructorUsedError;
+  FhirBoolean? get valueBoolean => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueBoolean')
   Element? get valueBooleanElement => throw _privateConstructorUsedError;
-  Decimal? get valueInteger => throw _privateConstructorUsedError;
+  FhirDecimal? get valueInteger => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueInteger')
   Element? get valueIntegerElement => throw _privateConstructorUsedError;
-  Decimal? get valueDecimal => throw _privateConstructorUsedError;
+  FhirDecimal? get valueDecimal => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueDecimal')
   Element? get valueDecimalElement => throw _privateConstructorUsedError;
   String? get valueUri => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueUri')
   Element? get valueUriElement => throw _privateConstructorUsedError;
-  Code? get valueCode => throw _privateConstructorUsedError;
+  FhirCode? get valueCode => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueCode')
   Element? get valueCodeElement => throw _privateConstructorUsedError;
 
@@ -15854,15 +15854,15 @@ abstract class $ValueSetParameterCopyWith<$Res> {
       @JsonKey(name: '_name') Element? nameElement,
       String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
-      Boolean? valueBoolean,
+      FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-      Decimal? valueInteger,
+      FhirDecimal? valueInteger,
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
-      Decimal? valueDecimal,
+      FhirDecimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
       String? valueUri,
       @JsonKey(name: '_valueUri') Element? valueUriElement,
-      Code? valueCode,
+      FhirCode? valueCode,
       @JsonKey(name: '_valueCode') Element? valueCodeElement});
 
   $ElementCopyWith<$Res>? get nameElement;
@@ -15922,7 +15922,7 @@ class _$ValueSetParameterCopyWithImpl<$Res, $Val extends ValueSetParameter>
       valueBoolean: freezed == valueBoolean
           ? _value.valueBoolean
           : valueBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       valueBooleanElement: freezed == valueBooleanElement
           ? _value.valueBooleanElement
           : valueBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -15954,7 +15954,7 @@ class _$ValueSetParameterCopyWithImpl<$Res, $Val extends ValueSetParameter>
       valueCode: freezed == valueCode
           ? _value.valueCode
           : valueCode // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       valueCodeElement: freezed == valueCodeElement
           ? _value.valueCodeElement
           : valueCodeElement // ignore: cast_nullable_to_non_nullable
@@ -16060,15 +16060,15 @@ abstract class _$$_ValueSetParameterCopyWith<$Res>
       @JsonKey(name: '_name') Element? nameElement,
       String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
-      Boolean? valueBoolean,
+      FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-      Decimal? valueInteger,
+      FhirDecimal? valueInteger,
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
-      Decimal? valueDecimal,
+      FhirDecimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
       String? valueUri,
       @JsonKey(name: '_valueUri') Element? valueUriElement,
-      Code? valueCode,
+      FhirCode? valueCode,
       @JsonKey(name: '_valueCode') Element? valueCodeElement});
 
   @override
@@ -16133,7 +16133,7 @@ class __$$_ValueSetParameterCopyWithImpl<$Res>
       valueBoolean: freezed == valueBoolean
           ? _value.valueBoolean
           : valueBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       valueBooleanElement: freezed == valueBooleanElement
           ? _value.valueBooleanElement
           : valueBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -16165,7 +16165,7 @@ class __$$_ValueSetParameterCopyWithImpl<$Res>
       valueCode: freezed == valueCode
           ? _value.valueCode
           : valueCode // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       valueCodeElement: freezed == valueCodeElement
           ? _value.valueCodeElement
           : valueCodeElement // ignore: cast_nullable_to_non_nullable
@@ -16208,7 +16208,7 @@ class _$_ValueSetParameter extends _ValueSetParameter {
   @JsonKey(name: '_valueString')
   final Element? valueStringElement;
   @override
-  final Boolean? valueBoolean;
+  final FhirBoolean? valueBoolean;
   @override
   @JsonKey(name: '_valueBoolean')
   final Element? valueBooleanElement;
@@ -16228,7 +16228,7 @@ class _$_ValueSetParameter extends _ValueSetParameter {
   @JsonKey(name: '_valueUri')
   final Element? valueUriElement;
   @override
-  final Code? valueCode;
+  final FhirCode? valueCode;
   @override
   @JsonKey(name: '_valueCode')
   final Element? valueCodeElement;
@@ -16312,7 +16312,7 @@ abstract class _ValueSetParameter extends ValueSetParameter {
           @JsonKey(name: '_name') final Element? nameElement,
           final String? valueString,
           @JsonKey(name: '_valueString') final Element? valueStringElement,
-          final Boolean? valueBoolean,
+          final FhirBoolean? valueBoolean,
           @JsonKey(name: '_valueBoolean') final Element? valueBooleanElement,
           final Decimal? valueInteger,
           @JsonKey(name: '_valueInteger') final Element? valueIntegerElement,
@@ -16320,7 +16320,7 @@ abstract class _ValueSetParameter extends ValueSetParameter {
           @JsonKey(name: '_valueDecimal') final Element? valueDecimalElement,
           final String? valueUri,
           @JsonKey(name: '_valueUri') final Element? valueUriElement,
-          final Code? valueCode,
+          final FhirCode? valueCode,
           @JsonKey(name: '_valueCode') final Element? valueCodeElement}) =
       _$_ValueSetParameter;
   _ValueSetParameter._() : super._();
@@ -16339,17 +16339,17 @@ abstract class _ValueSetParameter extends ValueSetParameter {
   @JsonKey(name: '_valueString')
   Element? get valueStringElement;
   @override
-  Boolean? get valueBoolean;
+  FhirBoolean? get valueBoolean;
   @override
   @JsonKey(name: '_valueBoolean')
   Element? get valueBooleanElement;
   @override
-  Decimal? get valueInteger;
+  FhirDecimal? get valueInteger;
   @override
   @JsonKey(name: '_valueInteger')
   Element? get valueIntegerElement;
   @override
-  Decimal? get valueDecimal;
+  FhirDecimal? get valueDecimal;
   @override
   @JsonKey(name: '_valueDecimal')
   Element? get valueDecimalElement;
@@ -16359,7 +16359,7 @@ abstract class _ValueSetParameter extends ValueSetParameter {
   @JsonKey(name: '_valueUri')
   Element? get valueUriElement;
   @override
-  Code? get valueCode;
+  FhirCode? get valueCode;
   @override
   @JsonKey(name: '_valueCode')
   Element? get valueCodeElement;
@@ -16379,16 +16379,16 @@ mixin _$ValueSetContains {
   @JsonKey(name: '_system')
   Element? get systemElement => throw _privateConstructorUsedError;
   @JsonKey(name: 'abstract')
-  Boolean? get abstract_ => throw _privateConstructorUsedError;
+  FhirBoolean? get abstract_ => throw _privateConstructorUsedError;
   @JsonKey(name: '_abstract')
   Element? get abstractElement => throw _privateConstructorUsedError;
-  Boolean? get inactive => throw _privateConstructorUsedError;
+  FhirBoolean? get inactive => throw _privateConstructorUsedError;
   @JsonKey(name: '_inactive')
   Element? get inactiveElement => throw _privateConstructorUsedError;
   String? get version => throw _privateConstructorUsedError;
   @JsonKey(name: '_version')
   Element? get versionElement => throw _privateConstructorUsedError;
-  Code? get code => throw _privateConstructorUsedError;
+  FhirCode? get code => throw _privateConstructorUsedError;
   @JsonKey(name: '_code')
   Element? get codeElement => throw _privateConstructorUsedError;
   String? get display => throw _privateConstructorUsedError;
@@ -16413,13 +16413,13 @@ abstract class $ValueSetContainsCopyWith<$Res> {
   $Res call(
       {String? system,
       @JsonKey(name: '_system') Element? systemElement,
-      @JsonKey(name: 'abstract') Boolean? abstract_,
+      @JsonKey(name: 'abstract') FhirBoolean? abstract_,
       @JsonKey(name: '_abstract') Element? abstractElement,
-      Boolean? inactive,
+      FhirBoolean? inactive,
       @JsonKey(name: '_inactive') Element? inactiveElement,
       String? version,
       @JsonKey(name: '_version') Element? versionElement,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement,
       String? display,
       @JsonKey(name: '_display') Element? displayElement,
@@ -16474,7 +16474,7 @@ class _$ValueSetContainsCopyWithImpl<$Res, $Val extends ValueSetContains>
       abstract_: freezed == abstract_
           ? _value.abstract_
           : abstract_ // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       abstractElement: freezed == abstractElement
           ? _value.abstractElement
           : abstractElement // ignore: cast_nullable_to_non_nullable
@@ -16482,7 +16482,7 @@ class _$ValueSetContainsCopyWithImpl<$Res, $Val extends ValueSetContains>
       inactive: freezed == inactive
           ? _value.inactive
           : inactive // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       inactiveElement: freezed == inactiveElement
           ? _value.inactiveElement
           : inactiveElement // ignore: cast_nullable_to_non_nullable
@@ -16498,7 +16498,7 @@ class _$ValueSetContainsCopyWithImpl<$Res, $Val extends ValueSetContains>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -16606,13 +16606,13 @@ abstract class _$$_ValueSetContainsCopyWith<$Res>
   $Res call(
       {String? system,
       @JsonKey(name: '_system') Element? systemElement,
-      @JsonKey(name: 'abstract') Boolean? abstract_,
+      @JsonKey(name: 'abstract') FhirBoolean? abstract_,
       @JsonKey(name: '_abstract') Element? abstractElement,
-      Boolean? inactive,
+      FhirBoolean? inactive,
       @JsonKey(name: '_inactive') Element? inactiveElement,
       String? version,
       @JsonKey(name: '_version') Element? versionElement,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement,
       String? display,
       @JsonKey(name: '_display') Element? displayElement,
@@ -16671,7 +16671,7 @@ class __$$_ValueSetContainsCopyWithImpl<$Res>
       abstract_: freezed == abstract_
           ? _value.abstract_
           : abstract_ // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       abstractElement: freezed == abstractElement
           ? _value.abstractElement
           : abstractElement // ignore: cast_nullable_to_non_nullable
@@ -16679,7 +16679,7 @@ class __$$_ValueSetContainsCopyWithImpl<$Res>
       inactive: freezed == inactive
           ? _value.inactive
           : inactive // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       inactiveElement: freezed == inactiveElement
           ? _value.inactiveElement
           : inactiveElement // ignore: cast_nullable_to_non_nullable
@@ -16695,7 +16695,7 @@ class __$$_ValueSetContainsCopyWithImpl<$Res>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -16752,12 +16752,12 @@ class _$_ValueSetContains extends _ValueSetContains {
   final Element? systemElement;
   @override
   @JsonKey(name: 'abstract')
-  final Boolean? abstract_;
+  final FhirBoolean? abstract_;
   @override
   @JsonKey(name: '_abstract')
   final Element? abstractElement;
   @override
-  final Boolean? inactive;
+  final FhirBoolean? inactive;
   @override
   @JsonKey(name: '_inactive')
   final Element? inactiveElement;
@@ -16767,7 +16767,7 @@ class _$_ValueSetContains extends _ValueSetContains {
   @JsonKey(name: '_version')
   final Element? versionElement;
   @override
-  final Code? code;
+  final FhirCode? code;
   @override
   @JsonKey(name: '_code')
   final Element? codeElement;
@@ -16868,13 +16868,13 @@ abstract class _ValueSetContains extends ValueSetContains {
   factory _ValueSetContains(
       {final String? system,
       @JsonKey(name: '_system') final Element? systemElement,
-      @JsonKey(name: 'abstract') final Boolean? abstract_,
+      @JsonKey(name: 'abstract') final FhirBoolean? abstract_,
       @JsonKey(name: '_abstract') final Element? abstractElement,
-      final Boolean? inactive,
+      final FhirBoolean? inactive,
       @JsonKey(name: '_inactive') final Element? inactiveElement,
       final String? version,
       @JsonKey(name: '_version') final Element? versionElement,
-      final Code? code,
+      final FhirCode? code,
       @JsonKey(name: '_code') final Element? codeElement,
       final String? display,
       @JsonKey(name: '_display') final Element? displayElement,
@@ -16892,12 +16892,12 @@ abstract class _ValueSetContains extends ValueSetContains {
   Element? get systemElement;
   @override
   @JsonKey(name: 'abstract')
-  Boolean? get abstract_;
+  FhirBoolean? get abstract_;
   @override
   @JsonKey(name: '_abstract')
   Element? get abstractElement;
   @override
-  Boolean? get inactive;
+  FhirBoolean? get inactive;
   @override
   @JsonKey(name: '_inactive')
   Element? get inactiveElement;
@@ -16907,7 +16907,7 @@ abstract class _ValueSetContains extends ValueSetContains {
   @JsonKey(name: '_version')
   Element? get versionElement;
   @override
-  Code? get code;
+  FhirCode? get code;
   @override
   @JsonKey(name: '_code')
   Element? get codeElement;

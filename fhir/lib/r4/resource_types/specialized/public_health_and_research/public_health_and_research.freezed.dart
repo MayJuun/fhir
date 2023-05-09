@@ -43,7 +43,7 @@ mixin _$ResearchStudy {
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -108,7 +108,7 @@ mixin _$ResearchStudy {
   List<Reference>? get partOf => throw _privateConstructorUsedError;
 
   /// [status] The current state of the study.
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -154,7 +154,7 @@ mixin _$ResearchStudy {
   List<CodeableConcept>? get location => throw _privateConstructorUsedError;
 
   /// [description] A full description of how the study is being conducted.
-  Markdown? get description => throw _privateConstructorUsedError;
+  FhirMarkdown? get description => throw _privateConstructorUsedError;
 
   /// [descriptionElement] Extensions for description
   @JsonKey(name: '_description')
@@ -221,7 +221,7 @@ abstract class $ResearchStudyCopyWith<$Res> {
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -235,7 +235,7 @@ abstract class $ResearchStudyCopyWith<$Res> {
           Element? titleElement,
       List<Reference>? protocol,
       List<Reference>? partOf,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? primaryPurposeType,
@@ -247,7 +247,7 @@ abstract class $ResearchStudyCopyWith<$Res> {
       List<RelatedArtifact>? relatedArtifact,
       List<CodeableConcept>? keyword,
       List<CodeableConcept>? location,
-      Markdown? description,
+      FhirMarkdown? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
       List<Reference>? enrollment,
@@ -351,7 +351,7 @@ class _$ResearchStudyCopyWithImpl<$Res, $Val extends ResearchStudy>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -395,7 +395,7 @@ class _$ResearchStudyCopyWithImpl<$Res, $Val extends ResearchStudy>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -656,7 +656,7 @@ abstract class _$$_ResearchStudyCopyWith<$Res>
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -670,7 +670,7 @@ abstract class _$$_ResearchStudyCopyWith<$Res>
           Element? titleElement,
       List<Reference>? protocol,
       List<Reference>? partOf,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? primaryPurposeType,
@@ -682,7 +682,7 @@ abstract class _$$_ResearchStudyCopyWith<$Res>
       List<RelatedArtifact>? relatedArtifact,
       List<CodeableConcept>? keyword,
       List<CodeableConcept>? location,
-      Markdown? description,
+      FhirMarkdown? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
       List<Reference>? enrollment,
@@ -797,7 +797,7 @@ class __$$_ResearchStudyCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -841,7 +841,7 @@ class __$$_ResearchStudyCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -1031,7 +1031,7 @@ class _$_ResearchStudy extends _ResearchStudy {
 
   /// [language] The base language in which the resource is written.
   @override
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] Extensions for language
   @override
@@ -1184,7 +1184,7 @@ class _$_ResearchStudy extends _ResearchStudy {
 
   /// [status] The current state of the study.
   @override
-  final Code? status;
+  final FhirCode? status;
 
   /// [statusElement] Extensions for status
   @override
@@ -1557,7 +1557,7 @@ abstract class _ResearchStudy extends ResearchStudy {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -1571,7 +1571,7 @@ abstract class _ResearchStudy extends ResearchStudy {
           final Element? titleElement,
       final List<Reference>? protocol,
       final List<Reference>? partOf,
-      final Code? status,
+      final FhirCode? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
       final CodeableConcept? primaryPurposeType,
@@ -1629,7 +1629,7 @@ abstract class _ResearchStudy extends ResearchStudy {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -1704,7 +1704,7 @@ abstract class _ResearchStudy extends ResearchStudy {
   @override
 
   /// [status] The current state of the study.
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -1760,7 +1760,7 @@ abstract class _ResearchStudy extends ResearchStudy {
   @override
 
   /// [description] A full description of how the study is being conducted.
-  Markdown? get description;
+  FhirMarkdown? get description;
   @override
 
   /// [descriptionElement] Extensions for description
@@ -2769,7 +2769,7 @@ mixin _$ResearchSubject {
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -2818,7 +2818,7 @@ mixin _$ResearchSubject {
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [status] The current state of the subject.
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -2875,7 +2875,7 @@ abstract class $ResearchSubjectCopyWith<$Res> {
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -2884,7 +2884,7 @@ abstract class $ResearchSubjectCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Period? period,
@@ -2971,7 +2971,7 @@ class _$ResearchSubjectCopyWithImpl<$Res, $Val extends ResearchSubject>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -2999,7 +2999,7 @@ class _$ResearchSubjectCopyWithImpl<$Res, $Val extends ResearchSubject>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -3180,7 +3180,7 @@ abstract class _$$_ResearchSubjectCopyWith<$Res>
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -3189,7 +3189,7 @@ abstract class _$$_ResearchSubjectCopyWith<$Res>
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Period? period,
@@ -3285,7 +3285,7 @@ class __$$_ResearchSubjectCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -3313,7 +3313,7 @@ class __$$_ResearchSubjectCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -3425,7 +3425,7 @@ class _$_ResearchSubject extends _ResearchSubject {
 
   /// [language] The base language in which the resource is written.
   @override
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] Extensions for language
   @override
@@ -3537,7 +3537,7 @@ class _$_ResearchSubject extends _ResearchSubject {
 
   /// [status] The current state of the subject.
   @override
-  final Code? status;
+  final FhirCode? status;
 
   /// [statusElement] Extensions for status
   @override
@@ -3683,7 +3683,7 @@ abstract class _ResearchSubject extends ResearchSubject {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -3692,7 +3692,7 @@ abstract class _ResearchSubject extends ResearchSubject {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      final Code? status,
+      final FhirCode? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
       final Period? period,
@@ -3739,7 +3739,7 @@ abstract class _ResearchSubject extends ResearchSubject {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -3794,7 +3794,7 @@ abstract class _ResearchSubject extends ResearchSubject {
   @override
 
   /// [status] The current state of the subject.
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status

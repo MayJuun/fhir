@@ -147,7 +147,7 @@ class AdministrableProductDefinition
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -164,7 +164,7 @@ class AdministrableProductDefinition
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -185,7 +185,7 @@ class AdministrableProductDefinition
     List<Identifier>? identifier,
 
     /// [status] The status of this administrable product. Enables tracking the life-cycle of the content.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -344,13 +344,13 @@ class AdministrableProductDefinitionProperty
     Quantity? valueQuantity,
 
     /// [valueDate] A value for the characteristic.
-    Date? valueDate,
+    FhirDate? valueDate,
 
     /// [valueDateElement] ("_valueDate") Extensions for valueDate
     @JsonKey(name: '_valueDate') Element? valueDateElement,
 
     /// [valueBoolean] A value for the characteristic.
-    Boolean? valueBoolean,
+    FhirBoolean? valueBoolean,
 
     /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
@@ -890,7 +890,7 @@ class ClinicalUseDefinition with Resource, _$ClinicalUseDefinition {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -907,7 +907,7 @@ class ClinicalUseDefinition with Resource, _$ClinicalUseDefinition {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -928,7 +928,7 @@ class ClinicalUseDefinition with Resource, _$ClinicalUseDefinition {
     List<Identifier>? identifier,
 
     /// [type] indication | contraindication | interaction | undesirable-effect | warning.
-    Code? type,
+    FhirCode? type,
 
     /// [typeElement] ("_type") Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
@@ -1838,7 +1838,7 @@ class ClinicalUseDefinitionWarning with _$ClinicalUseDefinitionWarning {
     List<FhirExtension>? modifierExtension,
 
     /// [description] A textual definition of this warning, with formatting.
-    Markdown? description,
+    FhirMarkdown? description,
 
     /// [descriptionElement] ("_description") Extensions for description
     @JsonKey(name: '_description') Element? descriptionElement,
@@ -1991,7 +1991,7 @@ class Ingredient with Resource, _$Ingredient {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -2008,7 +2008,7 @@ class Ingredient with Resource, _$Ingredient {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -2029,7 +2029,7 @@ class Ingredient with Resource, _$Ingredient {
     Identifier? identifier,
 
     /// [status] The status of this ingredient. Enables tracking the life-cycle of the content.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -2047,7 +2047,7 @@ class Ingredient with Resource, _$Ingredient {
     CodeableConcept? group,
 
     /// [allergenicIndicator] If the ingredient is a known or suspected allergen. Note that this is a property of the substance, so if a reference to a SubstanceDefinition is used to decribe that (rather than just a code), the allergen information should go there, not here.
-    Boolean? allergenicIndicator,
+    FhirBoolean? allergenicIndicator,
 
     /// [allergenicIndicatorElement] ("_allergenicIndicator") Extensions for allergenicIndicator
     @JsonKey(name: '_allergenicIndicator') Element? allergenicIndicatorElement,
@@ -2163,7 +2163,7 @@ class IngredientManufacturer with _$IngredientManufacturer {
     List<FhirExtension>? modifierExtension,
 
     /// [role] The way in which this manufacturer is associated with the ingredient. For example whether it is a possible one (others allowed), or an exclusive authorized one for this ingredient. Note that this is not the manufacturing process role.
-    Code? role,
+    FhirCode? role,
 
     /// [roleElement] ("_role") Extensions for role
     @JsonKey(name: '_role') Element? roleElement,
@@ -2770,7 +2770,7 @@ class ManufacturedItemDefinition with Resource, _$ManufacturedItemDefinition {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -2787,7 +2787,7 @@ class ManufacturedItemDefinition with Resource, _$ManufacturedItemDefinition {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -2808,7 +2808,7 @@ class ManufacturedItemDefinition with Resource, _$ManufacturedItemDefinition {
     List<Identifier>? identifier,
 
     /// [status] The status of this item. Enables tracking the life-cycle of the content.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -2965,13 +2965,13 @@ class ManufacturedItemDefinitionProperty
     Quantity? valueQuantity,
 
     /// [valueDate] A value for the characteristic.
-    Date? valueDate,
+    FhirDate? valueDate,
 
     /// [valueDateElement] ("_valueDate") Extensions for valueDate
     @JsonKey(name: '_valueDate') Element? valueDateElement,
 
     /// [valueBoolean] A value for the characteristic.
-    Boolean? valueBoolean,
+    FhirBoolean? valueBoolean,
 
     /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
@@ -3492,7 +3492,7 @@ class MedicinalProductDefinition with Resource, _$MedicinalProductDefinition {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -3509,7 +3509,7 @@ class MedicinalProductDefinition with Resource, _$MedicinalProductDefinition {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -3551,7 +3551,7 @@ class MedicinalProductDefinition with Resource, _$MedicinalProductDefinition {
     @JsonKey(name: '_statusDate') Element? statusDateElement,
 
     /// [description] General description of this product.
-    Markdown? description,
+    FhirMarkdown? description,
 
     /// [descriptionElement] ("_description") Extensions for description
     @JsonKey(name: '_description') Element? descriptionElement,
@@ -3563,7 +3563,7 @@ class MedicinalProductDefinition with Resource, _$MedicinalProductDefinition {
     List<CodeableConcept>? route,
 
     /// [indication] Description of indication(s) for this product, used when structured indications are not required. In cases where structured indications are required, they are captured using the ClinicalUseDefinition resource. An indication is a medical situation for which using the product is appropriate.
-    Markdown? indication,
+    FhirMarkdown? indication,
 
     /// [indicationElement] ("_indication") Extensions for indication
     @JsonKey(name: '_indication') Element? indicationElement,
@@ -4558,19 +4558,19 @@ class MedicinalProductDefinitionCharacteristic
     Quantity? valueQuantity,
 
     /// [valueInteger] A value for the characteristic.text.
-    Integer? valueInteger,
+    FhirInteger? valueInteger,
 
     /// [valueIntegerElement] ("_valueInteger") Extensions for valueInteger
     @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
 
     /// [valueDate] A value for the characteristic.text.
-    Date? valueDate,
+    FhirDate? valueDate,
 
     /// [valueDateElement] ("_valueDate") Extensions for valueDate
     @JsonKey(name: '_valueDate') Element? valueDateElement,
 
     /// [valueBoolean] A value for the characteristic.text.
-    Boolean? valueBoolean,
+    FhirBoolean? valueBoolean,
 
     /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
@@ -4759,7 +4759,7 @@ class PackagedProductDefinition with Resource, _$PackagedProductDefinition {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -4776,7 +4776,7 @@ class PackagedProductDefinition with Resource, _$PackagedProductDefinition {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -4821,7 +4821,7 @@ class PackagedProductDefinition with Resource, _$PackagedProductDefinition {
     List<Quantity>? containedItemQuantity,
 
     /// [description] Textual description. Note that this is not the name of the package or product.
-    Markdown? description,
+    FhirMarkdown? description,
 
     /// [descriptionElement] ("_description") Extensions for description
     @JsonKey(name: '_description') Element? descriptionElement,
@@ -4833,7 +4833,7 @@ class PackagedProductDefinition with Resource, _$PackagedProductDefinition {
     List<MarketingStatus>? marketingStatus,
 
     /// [copackagedIndicator] Identifies if the package contains different items, such as when a drug product is supplied with another item e.g. a diluent or adjuvant.
-    Boolean? copackagedIndicator,
+    FhirBoolean? copackagedIndicator,
 
     /// [copackagedIndicatorElement] ("_copackagedIndicator") Extensions for copackagedIndicator
     @JsonKey(name: '_copackagedIndicator') Element? copackagedIndicatorElement,
@@ -5106,13 +5106,13 @@ class PackagedProductDefinitionPackaging
     CodeableConcept? type,
 
     /// [componentPart] Is this a part of the packaging (e.g. a cap or bottle stopper), rather than the packaging itself (e.g. a bottle or vial). The latter type are designed be a container, but the former are not.
-    Boolean? componentPart,
+    FhirBoolean? componentPart,
 
     /// [componentPartElement] ("_componentPart") Extensions for componentPart
     @JsonKey(name: '_componentPart') Element? componentPartElement,
 
     /// [quantity] The quantity of packaging items contained at this layer of the package. This does not relate to the number of contained items but relates solely to the number of packaging items. When looking at the outermost layer it is always 1. If there are two boxes within, at the next layer it would be 2.
-    Integer? quantity,
+    FhirInteger? quantity,
 
     /// [quantityElement] ("_quantity") Extensions for quantity
     @JsonKey(name: '_quantity') Element? quantityElement,
@@ -5262,13 +5262,13 @@ class PackagedProductDefinitionProperty
     Quantity? valueQuantity,
 
     /// [valueDate] A value for the characteristic.
-    Date? valueDate,
+    FhirDate? valueDate,
 
     /// [valueDateElement] ("_valueDate") Extensions for valueDate
     @JsonKey(name: '_valueDate') Element? valueDateElement,
 
     /// [valueBoolean] A value for the characteristic.
-    Boolean? valueBoolean,
+    FhirBoolean? valueBoolean,
 
     /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
@@ -5559,7 +5559,7 @@ class RegulatedAuthorization with Resource, _$RegulatedAuthorization {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -5576,7 +5576,7 @@ class RegulatedAuthorization with Resource, _$RegulatedAuthorization {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -5603,7 +5603,7 @@ class RegulatedAuthorization with Resource, _$RegulatedAuthorization {
     CodeableConcept? type,
 
     /// [description] General textual supporting information.
-    Markdown? description,
+    FhirMarkdown? description,
 
     /// [descriptionElement] ("_description") Extensions for description
     @JsonKey(name: '_description') Element? descriptionElement,
@@ -5953,7 +5953,7 @@ class SubstanceDefinition with Resource, _$SubstanceDefinition {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -5970,7 +5970,7 @@ class SubstanceDefinition with Resource, _$SubstanceDefinition {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -6009,7 +6009,7 @@ class SubstanceDefinition with Resource, _$SubstanceDefinition {
     List<CodeableConcept>? grade,
 
     /// [description] Textual description of the substance.
-    Markdown? description,
+    FhirMarkdown? description,
 
     /// [descriptionElement] ("_description") Extensions for description
     @JsonKey(name: '_description') Element? descriptionElement,
@@ -6339,7 +6339,7 @@ class SubstanceDefinitionCharacterization
     CodeableConcept? form,
 
     /// [description] Narrative text, data, tables about the characterization.
-    Markdown? description,
+    FhirMarkdown? description,
 
     /// [descriptionElement] ("_description") Extensions for description
     @JsonKey(name: '_description') Element? descriptionElement,
@@ -6470,13 +6470,13 @@ class SubstanceDefinitionProperty with _$SubstanceDefinitionProperty {
     Quantity? valueQuantity,
 
     /// [valueDate] A value for the property.
-    Date? valueDate,
+    FhirDate? valueDate,
 
     /// [valueDateElement] ("_valueDate") Extensions for valueDate
     @JsonKey(name: '_valueDate') Element? valueDateElement,
 
     /// [valueBoolean] A value for the property.
-    Boolean? valueBoolean,
+    FhirBoolean? valueBoolean,
 
     /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
@@ -7143,7 +7143,7 @@ class SubstanceDefinitionName with _$SubstanceDefinitionName {
     CodeableConcept? status,
 
     /// [preferred] If this is the preferred name for this substance.
-    Boolean? preferred,
+    FhirBoolean? preferred,
 
     /// [preferredElement] ("_preferred") Extensions for preferred
     @JsonKey(name: '_preferred') Element? preferredElement,
@@ -7425,7 +7425,7 @@ class SubstanceDefinitionRelationship with _$SubstanceDefinitionRelationship {
     required CodeableConcept type,
 
     /// [isDefining] For example where an enzyme strongly bonds with a particular substance, this is a defining relationship for that enzyme, out of several possible substance relationships.
-    Boolean? isDefining,
+    FhirBoolean? isDefining,
 
     /// [isDefiningElement] ("_isDefining") Extensions for isDefining
     @JsonKey(name: '_isDefining') Element? isDefiningElement,
@@ -7719,7 +7719,7 @@ class SubstanceNucleicAcid with Resource, _$SubstanceNucleicAcid {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -7736,7 +7736,7 @@ class SubstanceNucleicAcid with Resource, _$SubstanceNucleicAcid {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -7757,7 +7757,7 @@ class SubstanceNucleicAcid with Resource, _$SubstanceNucleicAcid {
     CodeableConcept? sequenceType,
 
     /// [numberOfSubunits] The number of linear sequences of nucleotides linked through phosphodiester bonds shall be described. Subunits would be strands of nucleic acids that are tightly associated typically through Watson-Crick base pairing. NOTE: If not specified in the reference source, the assumption is that there is 1 subunit.
-    Integer? numberOfSubunits,
+    FhirInteger? numberOfSubunits,
 
     /// [numberOfSubunitsElement] ("_numberOfSubunits") Extensions for numberOfSubunits
     @JsonKey(name: '_numberOfSubunits') Element? numberOfSubunitsElement,
@@ -7909,7 +7909,7 @@ class SubstanceNucleicAcidSubunit with _$SubstanceNucleicAcidSubunit {
     List<FhirExtension>? modifierExtension,
 
     /// [subunit] Index of linear sequences of nucleic acids in order of decreasing length. Sequences of the same length will be ordered by molecular weight. Subunits that have identical sequences will be repeated and have sequential subscripts.
-    Integer? subunit,
+    FhirInteger? subunit,
 
     /// [subunitElement] ("_subunit") Extensions for subunit
     @JsonKey(name: '_subunit') Element? subunitElement,
@@ -7921,7 +7921,7 @@ class SubstanceNucleicAcidSubunit with _$SubstanceNucleicAcidSubunit {
     @JsonKey(name: '_sequence') Element? sequenceElement,
 
     /// [length] The length of the sequence shall be captured.
-    Integer? length,
+    FhirInteger? length,
 
     /// [lengthElement] ("_length") Extensions for length
     @JsonKey(name: '_length') Element? lengthElement,
@@ -8339,7 +8339,7 @@ class SubstancePolymer with Resource, _$SubstancePolymer {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -8356,7 +8356,7 @@ class SubstancePolymer with Resource, _$SubstancePolymer {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -8616,7 +8616,7 @@ class SubstancePolymerStartingMaterial with _$SubstancePolymerStartingMaterial {
     CodeableConcept? category,
 
     /// [isDefining] Used to specify whether the attribute described is a defining element for the unique identification of the polymer.
-    Boolean? isDefining,
+    FhirBoolean? isDefining,
 
     /// [isDefiningElement] ("_isDefining") Extensions for isDefining
     @JsonKey(name: '_isDefining') Element? isDefiningElement,
@@ -8866,7 +8866,7 @@ class SubstancePolymerRepeatUnit with _$SubstancePolymerRepeatUnit {
     CodeableConcept? orientation,
 
     /// [amount] Number of repeats of this unit.
-    Integer? amount,
+    FhirInteger? amount,
 
     /// [amountElement] ("_amount") Extensions for amount
     @JsonKey(name: '_amount') Element? amountElement,
@@ -8991,19 +8991,19 @@ class SubstancePolymerDegreeOfPolymerisation
     CodeableConcept? type,
 
     /// [average] An average amount of polymerisation.
-    Integer? average,
+    FhirInteger? average,
 
     /// [averageElement] ("_average") Extensions for average
     @JsonKey(name: '_average') Element? averageElement,
 
     /// [low] A low expected limit of the amount.
-    Integer? low,
+    FhirInteger? low,
 
     /// [lowElement] ("_low") Extensions for low
     @JsonKey(name: '_low') Element? lowElement,
 
     /// [high] A high expected limit of the amount.
-    Integer? high,
+    FhirInteger? high,
 
     /// [highElement] ("_high") Extensions for high
     @JsonKey(name: '_high') Element? highElement,
@@ -9294,7 +9294,7 @@ class SubstanceProtein with Resource, _$SubstanceProtein {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -9311,7 +9311,7 @@ class SubstanceProtein with Resource, _$SubstanceProtein {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -9332,7 +9332,7 @@ class SubstanceProtein with Resource, _$SubstanceProtein {
     CodeableConcept? sequenceType,
 
     /// [numberOfSubunits] Number of linear sequences of amino acids linked through peptide bonds. The number of subunits constituting the SubstanceProtein shall be described. It is possible that the number of subunits can be variable.
-    Integer? numberOfSubunits,
+    FhirInteger? numberOfSubunits,
 
     /// [numberOfSubunitsElement] ("_numberOfSubunits") Extensions for numberOfSubunits
     @JsonKey(name: '_numberOfSubunits') Element? numberOfSubunitsElement,
@@ -9512,7 +9512,7 @@ class SubstanceProteinSubunit with _$SubstanceProteinSubunit {
     List<FhirExtension>? modifierExtension,
 
     /// [subunit] Index of primary sequences of amino acids linked through peptide bonds in order of decreasing length. Sequences of the same length will be ordered by molecular weight. Subunits that have identical sequences will be repeated and have sequential subscripts.
-    Integer? subunit,
+    FhirInteger? subunit,
 
     /// [subunitElement] ("_subunit") Extensions for subunit
     @JsonKey(name: '_subunit') Element? subunitElement,
@@ -9524,7 +9524,7 @@ class SubstanceProteinSubunit with _$SubstanceProteinSubunit {
     @JsonKey(name: '_sequence') Element? sequenceElement,
 
     /// [length] Length of linear sequences of amino acids contained in the subunit.
-    Integer? length,
+    FhirInteger? length,
 
     /// [lengthElement] ("_length") Extensions for length
     @JsonKey(name: '_length') Element? lengthElement,
@@ -9665,7 +9665,7 @@ class SubstanceReferenceInformation
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -9682,7 +9682,7 @@ class SubstanceReferenceInformation
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -10291,7 +10291,7 @@ class SubstanceSourceMaterial with Resource, _$SubstanceSourceMaterial {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -10308,7 +10308,7 @@ class SubstanceSourceMaterial with Resource, _$SubstanceSourceMaterial {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,

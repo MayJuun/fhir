@@ -22,12 +22,12 @@ GuidanceResponse _$GuidanceResponseFromJson(Map<String, dynamic> json) {
 mixin _$GuidanceResponse {
   @JsonKey(unknownEnumValue: Stu3ResourceType.GuidanceResponse)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -36,7 +36,7 @@ mixin _$GuidanceResponse {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  Id? get requestId => throw _privateConstructorUsedError;
+  FhirId? get requestId => throw _privateConstructorUsedError;
   @JsonKey(name: '_requestId')
   Element? get requestIdElement => throw _privateConstructorUsedError;
   Identifier? get identifier => throw _privateConstructorUsedError;
@@ -75,12 +75,12 @@ abstract class $GuidanceResponseCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.GuidanceResponse)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -88,7 +88,7 @@ abstract class $GuidanceResponseCopyWith<$Res> {
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Id? requestId,
+      FhirId? requestId,
       @JsonKey(name: '_requestId')
           Element? requestIdElement,
       Identifier? identifier,
@@ -195,7 +195,7 @@ class _$GuidanceResponseCopyWithImpl<$Res, $Val extends GuidanceResponse>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -492,12 +492,12 @@ abstract class _$$_GuidanceResponseCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.GuidanceResponse)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -505,7 +505,7 @@ abstract class _$$_GuidanceResponseCopyWith<$Res>
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Id? requestId,
+      FhirId? requestId,
       @JsonKey(name: '_requestId')
           Element? requestIdElement,
       Identifier? identifier,
@@ -626,7 +626,7 @@ class __$$_GuidanceResponseCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -787,7 +787,7 @@ class _$_GuidanceResponse extends _GuidanceResponse {
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
-  final Code? language;
+  final FhirCode? language;
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
@@ -1009,7 +1009,7 @@ abstract class _GuidanceResponse extends GuidanceResponse {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -1047,7 +1047,7 @@ abstract class _GuidanceResponse extends GuidanceResponse {
   @JsonKey(unknownEnumValue: Stu3ResourceType.GuidanceResponse)
   Stu3ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -1056,7 +1056,7 @@ abstract class _GuidanceResponse extends GuidanceResponse {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
-  Code? get language;
+  FhirCode? get language;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;
@@ -1070,7 +1070,7 @@ abstract class _GuidanceResponse extends GuidanceResponse {
   @override
   List<FhirExtension>? get modifierExtension;
   @override
-  Id? get requestId;
+  FhirId? get requestId;
   @override
   @JsonKey(name: '_requestId')
   Element? get requestIdElement;

@@ -425,7 +425,7 @@ _$_ElementDefinition _$$_ElementDefinitionFromJson(Map<String, dynamic> json) =>
           .toList(),
       defaultValueBase64Binary: json['defaultValueBase64Binary'] == null
           ? null
-          : Base64Binary.fromJson(json['defaultValueBase64Binary']),
+          : FhirBase64Binary?.fromJson(json['defaultValueBase64Binary']),
       defaultValueBase64BinaryElement: json['_defaultValueBase64Binary'] == null
           ? null
           : Element.fromJson(
@@ -682,7 +682,7 @@ _$_ElementDefinition _$$_ElementDefinitionFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_orderMeaning'] as Map<String, dynamic>),
       fixedBase64Binary: json['fixedBase64Binary'] == null
           ? null
-          : Base64Binary.fromJson(json['fixedBase64Binary']),
+          : FhirBase64Binary?.fromJson(json['fixedBase64Binary']),
       fixedBase64BinaryElement: json['_fixedBase64Binary'] == null
           ? null
           : Element.fromJson(
@@ -899,7 +899,7 @@ _$_ElementDefinition _$$_ElementDefinitionFromJson(Map<String, dynamic> json) =>
           : Dosage.fromJson(json['fixedDosage'] as Map<String, dynamic>),
       patternBase64Binary: json['patternBase64Binary'] == null
           ? null
-          : Base64Binary.fromJson(json['patternBase64Binary']),
+          : FhirBase64Binary?.fromJson(json['patternBase64Binary']),
       patternBase64BinaryElement: json['_patternBase64Binary'] == null
           ? null
           : Element.fromJson(
@@ -1939,7 +1939,7 @@ _$_ElementDefinitionExample _$$_ElementDefinitionExampleFromJson(
           : Element.fromJson(json['_label'] as Map<String, dynamic>),
       valueBase64Binary: json['valueBase64Binary'] == null
           ? null
-          : Base64Binary.fromJson(json['valueBase64Binary']),
+          : FhirBase64Binary?.fromJson(json['valueBase64Binary']),
       valueBase64BinaryElement: json['_valueBase64Binary'] == null
           ? null
           : Element.fromJson(

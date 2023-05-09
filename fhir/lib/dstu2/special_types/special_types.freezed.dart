@@ -20,15 +20,15 @@ Meta _$MetaFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Meta {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @JsonKey(name: 'fhir_comments')
   List<String>? get fhirComments => throw _privateConstructorUsedError;
-  Id? get versionId => throw _privateConstructorUsedError;
+  FhirId? get versionId => throw _privateConstructorUsedError;
   @JsonKey(name: '_versionId')
   Element? get versionIdElement => throw _privateConstructorUsedError;
-  Instant? get lastUpdated => throw _privateConstructorUsedError;
+  FhirInstant? get lastUpdated => throw _privateConstructorUsedError;
   @JsonKey(name: '_lastUpdated')
   Element? get lastUpdatedElement => throw _privateConstructorUsedError;
   List<FhirUri>? get profile => throw _privateConstructorUsedError;
@@ -49,9 +49,9 @@ abstract class $MetaCopyWith<$Res> {
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-      Id? versionId,
+      FhirId? versionId,
       @JsonKey(name: '_versionId') Element? versionIdElement,
-      Instant? lastUpdated,
+      FhirInstant? lastUpdated,
       @JsonKey(name: '_lastUpdated') Element? lastUpdatedElement,
       List<FhirUri>? profile,
       List<Coding>? security,
@@ -164,9 +164,9 @@ abstract class _$$_MetaCopyWith<$Res> implements $MetaCopyWith<$Res> {
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-      Id? versionId,
+      FhirId? versionId,
       @JsonKey(name: '_versionId') Element? versionIdElement,
-      Instant? lastUpdated,
+      FhirInstant? lastUpdated,
       @JsonKey(name: '_lastUpdated') Element? lastUpdatedElement,
       List<FhirUri>? profile,
       List<Coding>? security,
@@ -404,7 +404,7 @@ abstract class _Meta extends Meta {
   factory _Meta.fromJson(Map<String, dynamic> json) = _$_Meta.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -412,12 +412,12 @@ abstract class _Meta extends Meta {
   @JsonKey(name: 'fhir_comments')
   List<String>? get fhirComments;
   @override
-  Id? get versionId;
+  FhirId? get versionId;
   @override
   @JsonKey(name: '_versionId')
   Element? get versionIdElement;
   @override
-  Instant? get lastUpdated;
+  FhirInstant? get lastUpdated;
   @override
   @JsonKey(name: '_lastUpdated')
   Element? get lastUpdatedElement;
@@ -438,7 +438,7 @@ Reference _$ReferenceFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Reference {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @JsonKey(name: 'fhir_comments')
@@ -744,7 +744,7 @@ abstract class _Reference extends Reference {
       _$_Reference.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -773,7 +773,7 @@ ElementDefinition _$ElementDefinitionFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ElementDefinition {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   String get path => throw _privateConstructorUsedError;
@@ -789,19 +789,19 @@ mixin _$ElementDefinition {
   String? get short => throw _privateConstructorUsedError;
   @JsonKey(name: '_short')
   Element? get shortElement => throw _privateConstructorUsedError;
-  Markdown? get definition => throw _privateConstructorUsedError;
+  FhirMarkdown? get definition => throw _privateConstructorUsedError;
   @JsonKey(name: '_definition')
   Element? get definitionElement => throw _privateConstructorUsedError;
-  Markdown? get comments => throw _privateConstructorUsedError;
+  FhirMarkdown? get comments => throw _privateConstructorUsedError;
   @JsonKey(name: '_comments')
   Element? get commentElement => throw _privateConstructorUsedError;
-  Markdown? get requirements => throw _privateConstructorUsedError;
+  FhirMarkdown? get requirements => throw _privateConstructorUsedError;
   @JsonKey(name: '_requirements')
   Element? get requirementsElement => throw _privateConstructorUsedError;
   List<String>? get alias => throw _privateConstructorUsedError;
   @JsonKey(name: '_alias')
   Element? get aliasElement => throw _privateConstructorUsedError;
-  Integer? get min => throw _privateConstructorUsedError;
+  FhirInteger? get min => throw _privateConstructorUsedError;
   @JsonKey(name: '_min')
   Element? get minElement => throw _privateConstructorUsedError;
   String? get max => throw _privateConstructorUsedError;
@@ -810,21 +810,21 @@ mixin _$ElementDefinition {
   ElementDefinitionBase? get base => throw _privateConstructorUsedError;
   List<ElementDefinitionType>? get type => throw _privateConstructorUsedError;
   String? get nameReference => throw _privateConstructorUsedError;
-  Boolean? get defaultValueBoolean => throw _privateConstructorUsedError;
+   FhirBoolean? get defaultValueBoolean => throw _privateConstructorUsedError;
   @JsonKey(name: '_defaultValueBoolean')
   Element? get defaultValueBooleanElement => throw _privateConstructorUsedError;
-  Integer? get defaultValueInteger => throw _privateConstructorUsedError;
+  FhirInteger? get defaultValueInteger => throw _privateConstructorUsedError;
   @JsonKey(name: '_defaultValueInteger')
   Element? get defaultValueIntegerElement => throw _privateConstructorUsedError;
-  Decimal? get defaultValueDecimal => throw _privateConstructorUsedError;
+  FhirDecimal? get defaultValueDecimal => throw _privateConstructorUsedError;
   @JsonKey(name: '_defaultValueDecimal')
   Element? get defaultValueDecimalElement => throw _privateConstructorUsedError;
-  Base64Binary? get defaultValueBase64Binary =>
+  FhirBase64Binary?? get defaultValueBase64Binary =>
       throw _privateConstructorUsedError;
   @JsonKey(name: '_defaultValueBase64Binary')
   Element? get defaultValueBase64BinaryElement =>
       throw _privateConstructorUsedError;
-  Instant? get defaultValueInstant => throw _privateConstructorUsedError;
+  FhirInstant? get defaultValueInstant => throw _privateConstructorUsedError;
   @JsonKey(name: '_defaultValueInstant')
   Element? get defaultValueInstantElement => throw _privateConstructorUsedError;
   String? get defaultValueString => throw _privateConstructorUsedError;
@@ -833,7 +833,7 @@ mixin _$ElementDefinition {
   FhirUri? get defaultValueUri => throw _privateConstructorUsedError;
   @JsonKey(name: '_defaultValueUri')
   Element? get defaultValueUriElement => throw _privateConstructorUsedError;
-  Date? get defaultValueDate => throw _privateConstructorUsedError;
+  FhirDate? get defaultValueDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_defaultValueDate')
   Element? get defaultValueDateElement => throw _privateConstructorUsedError;
   FhirDateTime? get defaultValueDateTime => throw _privateConstructorUsedError;
@@ -843,13 +843,13 @@ mixin _$ElementDefinition {
   Time? get defaultValueTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_defaultValueTime')
   Element? get defaultValueTimeElement => throw _privateConstructorUsedError;
-  Code? get defaultValueCode => throw _privateConstructorUsedError;
+   FhirCode? get defaultValueCode => throw _privateConstructorUsedError;
   @JsonKey(name: '_defaultValueCode')
   Element? get defaultValueCodeElement => throw _privateConstructorUsedError;
   Oid? get defaultValueOid => throw _privateConstructorUsedError;
   @JsonKey(name: '_defaultValueOid')
   Element? get defaultValueOidElement => throw _privateConstructorUsedError;
-  Id? get defaultValueId => throw _privateConstructorUsedError;
+  FhirId? get defaultValueId => throw _privateConstructorUsedError;
   @JsonKey(name: '_defaultValueId')
   Element? get defaultValueIdElement => throw _privateConstructorUsedError;
   UnsignedInt? get defaultValueUnsignedInt =>
@@ -862,7 +862,7 @@ mixin _$ElementDefinition {
   @JsonKey(name: '_defaultValuePositiveInt')
   Element? get defaultValuePositiveIntElement =>
       throw _privateConstructorUsedError;
-  Markdown? get defaultValueMarkdown => throw _privateConstructorUsedError;
+  FhirMarkdown? get defaultValueMarkdown => throw _privateConstructorUsedError;
   @JsonKey(name: '_defaultValueMarkDown')
   Element? get defaultValueMarkDownElement =>
       throw _privateConstructorUsedError;
@@ -886,22 +886,22 @@ mixin _$ElementDefinition {
   Timing? get defaultValueTiming => throw _privateConstructorUsedError;
   Reference? get defaultValueReference => throw _privateConstructorUsedError;
   Meta? get defaultValueMeta => throw _privateConstructorUsedError;
-  Markdown? get meaningWhenMissing => throw _privateConstructorUsedError;
+  FhirMarkdown? get meaningWhenMissing => throw _privateConstructorUsedError;
   @JsonKey(name: '_meaningWhenMissing')
   Element? get meaningWhenMissingElement => throw _privateConstructorUsedError;
-  Boolean? get fixedBoolean => throw _privateConstructorUsedError;
+   FhirBoolean? get fixedBoolean => throw _privateConstructorUsedError;
   @JsonKey(name: '_fixedBoolean')
   Element? get fixedBooleanElement => throw _privateConstructorUsedError;
-  Integer? get fixedInteger => throw _privateConstructorUsedError;
+  FhirInteger? get fixedInteger => throw _privateConstructorUsedError;
   @JsonKey(name: '_fixedInteger')
   Element? get fixedIntegerElement => throw _privateConstructorUsedError;
-  Decimal? get fixedDecimal => throw _privateConstructorUsedError;
+  FhirDecimal? get fixedDecimal => throw _privateConstructorUsedError;
   @JsonKey(name: '_fixedDecimal')
   Element? get fixedDecimalElement => throw _privateConstructorUsedError;
-  Base64Binary? get fixedBase64Binary => throw _privateConstructorUsedError;
+  FhirBase64Binary?? get fixedBase64Binary => throw _privateConstructorUsedError;
   @JsonKey(name: '_fixedBase64Binary')
   Element? get fixedBase64BinaryElement => throw _privateConstructorUsedError;
-  Instant? get fixedInstant => throw _privateConstructorUsedError;
+  FhirInstant? get fixedInstant => throw _privateConstructorUsedError;
   @JsonKey(name: '_fixedInstant')
   Element? get fixedInstantElement => throw _privateConstructorUsedError;
   String? get fixedString => throw _privateConstructorUsedError;
@@ -910,19 +910,19 @@ mixin _$ElementDefinition {
   FhirUri? get fixedUri => throw _privateConstructorUsedError;
   @JsonKey(name: '_fixedUri')
   Element? get fixedUriElement => throw _privateConstructorUsedError;
-  Date? get fixedDate => throw _privateConstructorUsedError;
+  FhirDate? get fixedDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_fixedDate')
   Element? get fixedDateElement => throw _privateConstructorUsedError;
   FhirDateTime? get fixedDateTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_fixedDateTime')
   Element? get fixedDateTimeElement => throw _privateConstructorUsedError;
-  Code? get fixedCode => throw _privateConstructorUsedError;
+   FhirCode? get fixedCode => throw _privateConstructorUsedError;
   @JsonKey(name: '_fixedCode')
   Element? get fixedCodeElement => throw _privateConstructorUsedError;
   Oid? get fixedOid => throw _privateConstructorUsedError;
   @JsonKey(name: '_fixedOid')
   Element? get fixedOidElement => throw _privateConstructorUsedError;
-  Id? get fixedId => throw _privateConstructorUsedError;
+  FhirId? get fixedId => throw _privateConstructorUsedError;
   @JsonKey(name: '_fixedId')
   Element? get fixedIdElement => throw _privateConstructorUsedError;
   UnsignedInt? get fixedUnsignedInt => throw _privateConstructorUsedError;
@@ -931,7 +931,7 @@ mixin _$ElementDefinition {
   PositiveInt? get fixedPositiveInt => throw _privateConstructorUsedError;
   @JsonKey(name: '_fixedPositiveInt')
   Element? get fixedPositiveIntElement => throw _privateConstructorUsedError;
-  Markdown? get fixedMarkdown => throw _privateConstructorUsedError;
+  FhirMarkdown? get fixedMarkdown => throw _privateConstructorUsedError;
   @JsonKey(name: '_fixedMarkdown')
   Element? get fixedMarkdownElement => throw _privateConstructorUsedError;
   Annotation? get fixedAnnotation => throw _privateConstructorUsedError;
@@ -952,19 +952,19 @@ mixin _$ElementDefinition {
   Timing? get fixedTiming => throw _privateConstructorUsedError;
   Reference? get fixedReference => throw _privateConstructorUsedError;
   Meta? get fixedMeta => throw _privateConstructorUsedError;
-  Boolean? get patternBoolean => throw _privateConstructorUsedError;
+   FhirBoolean? get patternBoolean => throw _privateConstructorUsedError;
   @JsonKey(name: '_patternBoolean')
   Element? get patternBooleanElement => throw _privateConstructorUsedError;
-  Integer? get patternInteger => throw _privateConstructorUsedError;
+  FhirInteger? get patternInteger => throw _privateConstructorUsedError;
   @JsonKey(name: '_patternInteger')
   Element? get patternIntegerElement => throw _privateConstructorUsedError;
-  Decimal? get patternDecimal => throw _privateConstructorUsedError;
+  FhirDecimal? get patternDecimal => throw _privateConstructorUsedError;
   @JsonKey(name: '_patternDecimal')
   Element? get patternDecimalElement => throw _privateConstructorUsedError;
-  Base64Binary? get patternBase64Binary => throw _privateConstructorUsedError;
+  FhirBase64Binary?? get patternBase64Binary => throw _privateConstructorUsedError;
   @JsonKey(name: '_patternBase64Binary')
   Element? get patternBase64BinaryElement => throw _privateConstructorUsedError;
-  Instant? get patternInstant => throw _privateConstructorUsedError;
+  FhirInstant? get patternInstant => throw _privateConstructorUsedError;
   @JsonKey(name: '_patternInstant')
   Element? get patternInstantElement => throw _privateConstructorUsedError;
   String? get patternString => throw _privateConstructorUsedError;
@@ -973,7 +973,7 @@ mixin _$ElementDefinition {
   FhirUri? get patternUri => throw _privateConstructorUsedError;
   @JsonKey(name: '_patternUri')
   Element? get patternUriElement => throw _privateConstructorUsedError;
-  Date? get patternDate => throw _privateConstructorUsedError;
+  FhirDate? get patternDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_patternDate')
   Element? get patternDateElement => throw _privateConstructorUsedError;
   FhirDateTime? get patternDateTime => throw _privateConstructorUsedError;
@@ -982,13 +982,13 @@ mixin _$ElementDefinition {
   Time? get patternTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_patternTime')
   Element? get patternTimeElement => throw _privateConstructorUsedError;
-  Code? get patternCode => throw _privateConstructorUsedError;
+   FhirCode? get patternCode => throw _privateConstructorUsedError;
   @JsonKey(name: '_patternCode')
   Element? get patternCodeElement => throw _privateConstructorUsedError;
   Oid? get patternOid => throw _privateConstructorUsedError;
   @JsonKey(name: '_patternOid')
   Element? get patternOidElement => throw _privateConstructorUsedError;
-  Id? get patternId => throw _privateConstructorUsedError;
+  FhirId? get patternId => throw _privateConstructorUsedError;
   @JsonKey(name: '_patternId')
   Element? get patternIdElement => throw _privateConstructorUsedError;
   UnsignedInt? get patternUnsignedInt => throw _privateConstructorUsedError;
@@ -997,7 +997,7 @@ mixin _$ElementDefinition {
   PositiveInt? get patternPositiveInt => throw _privateConstructorUsedError;
   @JsonKey(name: '_patternPositiveInt')
   Element? get patternPositiveIntElement => throw _privateConstructorUsedError;
-  Markdown? get patternMarkdown => throw _privateConstructorUsedError;
+  FhirMarkdown? get patternMarkdown => throw _privateConstructorUsedError;
   @JsonKey(name: '_patternMarkdown')
   Element? get patternMarkdownElement => throw _privateConstructorUsedError;
   Annotation? get patternAnnotation => throw _privateConstructorUsedError;
@@ -1018,19 +1018,19 @@ mixin _$ElementDefinition {
   Timing? get patternTiming => throw _privateConstructorUsedError;
   Reference? get patternReference => throw _privateConstructorUsedError;
   Meta? get patternMeta => throw _privateConstructorUsedError;
-  Boolean? get exampleBoolean => throw _privateConstructorUsedError;
+   FhirBoolean? get exampleBoolean => throw _privateConstructorUsedError;
   @JsonKey(name: '_exampleBoolean')
   Element? get exampleBooleanElement => throw _privateConstructorUsedError;
-  Integer? get exampleInteger => throw _privateConstructorUsedError;
+  FhirInteger? get exampleInteger => throw _privateConstructorUsedError;
   @JsonKey(name: '_exampleInteger')
   Element? get exampleIntegerElement => throw _privateConstructorUsedError;
-  Decimal? get exampleDecimal => throw _privateConstructorUsedError;
+  FhirDecimal? get exampleDecimal => throw _privateConstructorUsedError;
   @JsonKey(name: '_exampleDecimal')
   Element? get exampleDecimalElement => throw _privateConstructorUsedError;
-  Base64Binary? get exampleBase64Binary => throw _privateConstructorUsedError;
+  FhirBase64Binary?? get exampleBase64Binary => throw _privateConstructorUsedError;
   @JsonKey(name: '_exampleBase64Binary')
   Element? get exampleBase64BinaryElement => throw _privateConstructorUsedError;
-  Instant? get exampleInstant => throw _privateConstructorUsedError;
+  FhirInstant? get exampleInstant => throw _privateConstructorUsedError;
   @JsonKey(name: '_exampleInstant')
   Element? get exampleInstantElement => throw _privateConstructorUsedError;
   String? get exampleString => throw _privateConstructorUsedError;
@@ -1039,7 +1039,7 @@ mixin _$ElementDefinition {
   FhirUri? get exampleUri => throw _privateConstructorUsedError;
   @JsonKey(name: '_exampleUri')
   Element? get exampleUriElement => throw _privateConstructorUsedError;
-  Date? get exampleDate => throw _privateConstructorUsedError;
+  FhirDate? get exampleDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_exampleDate')
   Element? get exampleDateElement => throw _privateConstructorUsedError;
   FhirDateTime? get exampleDateTime => throw _privateConstructorUsedError;
@@ -1048,13 +1048,13 @@ mixin _$ElementDefinition {
   Time? get exampleTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_exampleTime')
   Element? get exampleTimeElement => throw _privateConstructorUsedError;
-  Code? get exampleCode => throw _privateConstructorUsedError;
+   FhirCode? get exampleCode => throw _privateConstructorUsedError;
   @JsonKey(name: '_exampleCode')
   Element? get exampleCodeElement => throw _privateConstructorUsedError;
   Oid? get exampleOid => throw _privateConstructorUsedError;
   @JsonKey(name: '_exampleOid')
   Element? get exampleOidElement => throw _privateConstructorUsedError;
-  Id? get exampleId => throw _privateConstructorUsedError;
+  FhirId? get exampleId => throw _privateConstructorUsedError;
   @JsonKey(name: '_exampleId')
   Element? get exampleIdElement => throw _privateConstructorUsedError;
   UnsignedInt? get exampleUnsignedInt => throw _privateConstructorUsedError;
@@ -1063,7 +1063,7 @@ mixin _$ElementDefinition {
   PositiveInt? get examplePositiveInt => throw _privateConstructorUsedError;
   @JsonKey(name: '_examplePositiveInt')
   Element? get examplePositiveIntElement => throw _privateConstructorUsedError;
-  Markdown? get exampleMarkdown => throw _privateConstructorUsedError;
+  FhirMarkdown? get exampleMarkdown => throw _privateConstructorUsedError;
   @JsonKey(name: '_exampleMarkdown')
   Element? get exampleMarkdownElement => throw _privateConstructorUsedError;
   Annotation? get exampleAnnotation => throw _privateConstructorUsedError;
@@ -1084,20 +1084,20 @@ mixin _$ElementDefinition {
   Timing? get exampleTiming => throw _privateConstructorUsedError;
   Reference? get exampleReference => throw _privateConstructorUsedError;
   Meta? get exampleMeta => throw _privateConstructorUsedError;
-  Boolean? get minValueBoolean => throw _privateConstructorUsedError;
+   FhirBoolean? get minValueBoolean => throw _privateConstructorUsedError;
   @JsonKey(name: '_minValueBoolean')
   Element? get minValueBooleanElement => throw _privateConstructorUsedError;
-  Integer? get minValueInteger => throw _privateConstructorUsedError;
+  FhirInteger? get minValueInteger => throw _privateConstructorUsedError;
   @JsonKey(name: '_minValueInteger')
   Element? get minValueIntegerElement => throw _privateConstructorUsedError;
-  Decimal? get minValueDecimal => throw _privateConstructorUsedError;
+  FhirDecimal? get minValueDecimal => throw _privateConstructorUsedError;
   @JsonKey(name: '_minValueDecimal')
   Element? get minValueDecimalElement => throw _privateConstructorUsedError;
-  Base64Binary? get minValueBase64Binary => throw _privateConstructorUsedError;
+  FhirBase64Binary?? get minValueBase64Binary => throw _privateConstructorUsedError;
   @JsonKey(name: '_minValueBase64Binary')
   Element? get minValueBase64BinaryElement =>
       throw _privateConstructorUsedError;
-  Instant? get minValueInstant => throw _privateConstructorUsedError;
+  FhirInstant? get minValueInstant => throw _privateConstructorUsedError;
   @JsonKey(name: '_minValueInstant')
   Element? get minValueInstantElement => throw _privateConstructorUsedError;
   String? get minValueString => throw _privateConstructorUsedError;
@@ -1106,7 +1106,7 @@ mixin _$ElementDefinition {
   FhirUri? get minValueUri => throw _privateConstructorUsedError;
   @JsonKey(name: '_minValueUri')
   Element? get minValueUriElement => throw _privateConstructorUsedError;
-  Date? get minValueDate => throw _privateConstructorUsedError;
+  FhirDate? get minValueDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_minValueDate')
   Element? get minValueDateElement => throw _privateConstructorUsedError;
   FhirDateTime? get minValueDateTime => throw _privateConstructorUsedError;
@@ -1115,13 +1115,13 @@ mixin _$ElementDefinition {
   Time? get minValueTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_minValueTime')
   Element? get minValueTimeElement => throw _privateConstructorUsedError;
-  Code? get minValueCode => throw _privateConstructorUsedError;
+   FhirCode? get minValueCode => throw _privateConstructorUsedError;
   @JsonKey(name: '_minValueCode')
   Element? get minValueCodeElement => throw _privateConstructorUsedError;
   Oid? get minValueOid => throw _privateConstructorUsedError;
   @JsonKey(name: '_minValueOid')
   Element? get minValueOidElement => throw _privateConstructorUsedError;
-  Id? get minValueId => throw _privateConstructorUsedError;
+  FhirId? get minValueId => throw _privateConstructorUsedError;
   @JsonKey(name: '_minValueId')
   Element? get minValueIdElement => throw _privateConstructorUsedError;
   UnsignedInt? get minValueUnsignedInt => throw _privateConstructorUsedError;
@@ -1130,7 +1130,7 @@ mixin _$ElementDefinition {
   PositiveInt? get minValuePositiveInt => throw _privateConstructorUsedError;
   @JsonKey(name: '_minValuePositiveInt')
   Element? get minValuePositiveIntElement => throw _privateConstructorUsedError;
-  Markdown? get minValueMarkdown => throw _privateConstructorUsedError;
+  FhirMarkdown? get minValueMarkdown => throw _privateConstructorUsedError;
   @JsonKey(name: '_minValueMarkdown')
   Element? get minValueMarkdownElement => throw _privateConstructorUsedError;
   Annotation? get minValueAnnotation => throw _privateConstructorUsedError;
@@ -1151,20 +1151,20 @@ mixin _$ElementDefinition {
   Timing? get minValueTiming => throw _privateConstructorUsedError;
   Reference? get minValueReference => throw _privateConstructorUsedError;
   Meta? get minValueMeta => throw _privateConstructorUsedError;
-  Boolean? get maxValueBoolean => throw _privateConstructorUsedError;
+   FhirBoolean? get maxValueBoolean => throw _privateConstructorUsedError;
   @JsonKey(name: '_maxValueBoolean')
   Element? get maxValueBooleanElement => throw _privateConstructorUsedError;
-  Integer? get maxValueInteger => throw _privateConstructorUsedError;
+  FhirInteger? get maxValueInteger => throw _privateConstructorUsedError;
   @JsonKey(name: '_maxValueInteger')
   Element? get maxValueIntegerElement => throw _privateConstructorUsedError;
-  Decimal? get maxValueDecimal => throw _privateConstructorUsedError;
+  FhirDecimal? get maxValueDecimal => throw _privateConstructorUsedError;
   @JsonKey(name: '_maxValueDecimal')
   Element? get maxValueDecimalElement => throw _privateConstructorUsedError;
-  Base64Binary? get maxValueBase64Binary => throw _privateConstructorUsedError;
+  FhirBase64Binary?? get maxValueBase64Binary => throw _privateConstructorUsedError;
   @JsonKey(name: '_maxValueBase64Binary')
   Element? get maxValueBase64BinaryElement =>
       throw _privateConstructorUsedError;
-  Instant? get maxValueInstant => throw _privateConstructorUsedError;
+  FhirInstant? get maxValueInstant => throw _privateConstructorUsedError;
   @JsonKey(name: '_maxValueInstant')
   Element? get maxValueInstantElement => throw _privateConstructorUsedError;
   String? get maxValueString => throw _privateConstructorUsedError;
@@ -1173,7 +1173,7 @@ mixin _$ElementDefinition {
   FhirUri? get maxValueUri => throw _privateConstructorUsedError;
   @JsonKey(name: '_maxValueUri')
   Element? get maxValueUriElement => throw _privateConstructorUsedError;
-  Date? get maxValueDate => throw _privateConstructorUsedError;
+  FhirDate? get maxValueDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_maxValueDate')
   Element? get maxValueDateElement => throw _privateConstructorUsedError;
   FhirDateTime? get maxValueDateTime => throw _privateConstructorUsedError;
@@ -1182,13 +1182,13 @@ mixin _$ElementDefinition {
   Time? get maxValueTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_maxValueTime')
   Element? get maxValueTimeElement => throw _privateConstructorUsedError;
-  Code? get maxValueCode => throw _privateConstructorUsedError;
+   FhirCode? get maxValueCode => throw _privateConstructorUsedError;
   @JsonKey(name: '_maxValueCode')
   Element? get maxValueCodeElement => throw _privateConstructorUsedError;
   Oid? get maxValueOid => throw _privateConstructorUsedError;
   @JsonKey(name: '_maxValueOid')
   Element? get maxValueOidElement => throw _privateConstructorUsedError;
-  Id? get maxValueId => throw _privateConstructorUsedError;
+  FhirId? get maxValueId => throw _privateConstructorUsedError;
   @JsonKey(name: '_maxValueId')
   Element? get maxValueIdElement => throw _privateConstructorUsedError;
   UnsignedInt? get maxValueUnsignedInt => throw _privateConstructorUsedError;
@@ -1197,7 +1197,7 @@ mixin _$ElementDefinition {
   PositiveInt? get maxValuePositiveInt => throw _privateConstructorUsedError;
   @JsonKey(name: '_maxValuePositiveInt')
   Element? get maxValuePositiveIntElement => throw _privateConstructorUsedError;
-  Markdown? get maxValueMarkdown => throw _privateConstructorUsedError;
+  FhirMarkdown? get maxValueMarkdown => throw _privateConstructorUsedError;
   @JsonKey(name: '_maxValueMarkdown')
   Element? get maxValueMarkdownElement => throw _privateConstructorUsedError;
   Annotation? get maxValueAnnotation => throw _privateConstructorUsedError;
@@ -1218,7 +1218,7 @@ mixin _$ElementDefinition {
   Timing? get maxValueTiming => throw _privateConstructorUsedError;
   Reference? get maxValueReference => throw _privateConstructorUsedError;
   Meta? get maxValueMeta => throw _privateConstructorUsedError;
-  Integer? get maxLength => throw _privateConstructorUsedError;
+  FhirInteger? get maxLength => throw _privateConstructorUsedError;
   @JsonKey(name: '_maxLength')
   Element? get maxLengthElement => throw _privateConstructorUsedError;
   List<Id>? get condition => throw _privateConstructorUsedError;
@@ -1226,13 +1226,13 @@ mixin _$ElementDefinition {
   Element? get conditionElement => throw _privateConstructorUsedError;
   List<ElementDefinitionConstraint>? get constraint =>
       throw _privateConstructorUsedError;
-  Boolean? get mustSupport => throw _privateConstructorUsedError;
+   FhirBoolean? get mustSupport => throw _privateConstructorUsedError;
   @JsonKey(name: '_mustSupport')
   Element? get mustSupportElement => throw _privateConstructorUsedError;
-  Boolean? get isModifier => throw _privateConstructorUsedError;
+   FhirBoolean? get isModifier => throw _privateConstructorUsedError;
   @JsonKey(name: '_isModifier')
   Element? get isModifierElement => throw _privateConstructorUsedError;
-  Boolean? get isSummary => throw _privateConstructorUsedError;
+   FhirBoolean? get isSummary => throw _privateConstructorUsedError;
   @JsonKey(name: '_isSummary')
   Element? get isSummaryElement => throw _privateConstructorUsedError;
   ElementDefinitionBinding? get binding => throw _privateConstructorUsedError;
@@ -1268,19 +1268,19 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       String? short,
       @JsonKey(name: '_short')
           Element? shortElement,
-      Markdown? definition,
+      FhirMarkdown? definition,
       @JsonKey(name: '_definition')
           Element? definitionElement,
-      Markdown? comments,
+      FhirMarkdown? comments,
       @JsonKey(name: '_comments')
           Element? commentElement,
-      Markdown? requirements,
+      FhirMarkdown? requirements,
       @JsonKey(name: '_requirements')
           Element? requirementsElement,
       List<String>? alias,
       @JsonKey(name: '_alias')
           Element? aliasElement,
-      Integer? min,
+      FhirInteger? min,
       @JsonKey(name: '_min')
           Element? minElement,
       String? max,
@@ -1289,19 +1289,19 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       ElementDefinitionBase? base,
       List<ElementDefinitionType>? type,
       String? nameReference,
-      Boolean? defaultValueBoolean,
+       FhirBoolean? defaultValueBoolean,
       @JsonKey(name: '_defaultValueBoolean')
           Element? defaultValueBooleanElement,
-      Integer? defaultValueInteger,
+      FhirInteger? defaultValueInteger,
       @JsonKey(name: '_defaultValueInteger')
           Element? defaultValueIntegerElement,
-      Decimal? defaultValueDecimal,
+      FhirDecimal? defaultValueDecimal,
       @JsonKey(name: '_defaultValueDecimal')
           Element? defaultValueDecimalElement,
-      Base64Binary? defaultValueBase64Binary,
+  FhirBase64Binary?? defaultValueBase64Binary,
       @JsonKey(name: '_defaultValueBase64Binary')
           Element? defaultValueBase64BinaryElement,
-      Instant? defaultValueInstant,
+      FhirInstant? defaultValueInstant,
       @JsonKey(name: '_defaultValueInstant')
           Element? defaultValueInstantElement,
       String? defaultValueString,
@@ -1310,7 +1310,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       FhirUri? defaultValueUri,
       @JsonKey(name: '_defaultValueUri')
           Element? defaultValueUriElement,
-      Date? defaultValueDate,
+      FhirDate? defaultValueDate,
       @JsonKey(name: '_defaultValueDate')
           Element? defaultValueDateElement,
       FhirDateTime? defaultValueDateTime,
@@ -1319,13 +1319,13 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       Time? defaultValueTime,
       @JsonKey(name: '_defaultValueTime')
           Element? defaultValueTimeElement,
-      Code? defaultValueCode,
+       FhirCode? defaultValueCode,
       @JsonKey(name: '_defaultValueCode')
           Element? defaultValueCodeElement,
       Oid? defaultValueOid,
       @JsonKey(name: '_defaultValueOid')
           Element? defaultValueOidElement,
-      Id? defaultValueId,
+      FhirId? defaultValueId,
       @JsonKey(name: '_defaultValueId')
           Element? defaultValueIdElement,
       UnsignedInt? defaultValueUnsignedInt,
@@ -1334,7 +1334,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       PositiveInt? defaultValuePositiveInt,
       @JsonKey(name: '_defaultValuePositiveInt')
           Element? defaultValuePositiveIntElement,
-      Markdown? defaultValueMarkdown,
+      FhirMarkdown? defaultValueMarkdown,
       @JsonKey(name: '_defaultValueMarkDown')
           Element? defaultValueMarkDownElement,
       Annotation? defaultValueAnnotation,
@@ -1354,22 +1354,22 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       Timing? defaultValueTiming,
       Reference? defaultValueReference,
       Meta? defaultValueMeta,
-      Markdown? meaningWhenMissing,
+      FhirMarkdown? meaningWhenMissing,
       @JsonKey(name: '_meaningWhenMissing')
           Element? meaningWhenMissingElement,
-      Boolean? fixedBoolean,
+       FhirBoolean? fixedBoolean,
       @JsonKey(name: '_fixedBoolean')
           Element? fixedBooleanElement,
-      Integer? fixedInteger,
+      FhirInteger? fixedInteger,
       @JsonKey(name: '_fixedInteger')
           Element? fixedIntegerElement,
-      Decimal? fixedDecimal,
+      FhirDecimal? fixedDecimal,
       @JsonKey(name: '_fixedDecimal')
           Element? fixedDecimalElement,
-      Base64Binary? fixedBase64Binary,
+  FhirBase64Binary?? fixedBase64Binary,
       @JsonKey(name: '_fixedBase64Binary')
           Element? fixedBase64BinaryElement,
-      Instant? fixedInstant,
+      FhirInstant? fixedInstant,
       @JsonKey(name: '_fixedInstant')
           Element? fixedInstantElement,
       String? fixedString,
@@ -1378,19 +1378,19 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       FhirUri? fixedUri,
       @JsonKey(name: '_fixedUri')
           Element? fixedUriElement,
-      Date? fixedDate,
+      FhirDate? fixedDate,
       @JsonKey(name: '_fixedDate')
           Element? fixedDateElement,
       FhirDateTime? fixedDateTime,
       @JsonKey(name: '_fixedDateTime')
           Element? fixedDateTimeElement,
-      Code? fixedCode,
+       FhirCode? fixedCode,
       @JsonKey(name: '_fixedCode')
           Element? fixedCodeElement,
       Oid? fixedOid,
       @JsonKey(name: '_fixedOid')
           Element? fixedOidElement,
-      Id? fixedId,
+      FhirId? fixedId,
       @JsonKey(name: '_fixedId')
           Element? fixedIdElement,
       UnsignedInt? fixedUnsignedInt,
@@ -1399,7 +1399,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       PositiveInt? fixedPositiveInt,
       @JsonKey(name: '_fixedPositiveInt')
           Element? fixedPositiveIntElement,
-      Markdown? fixedMarkdown,
+      FhirMarkdown? fixedMarkdown,
       @JsonKey(name: '_fixedMarkdown')
           Element? fixedMarkdownElement,
       Annotation? fixedAnnotation,
@@ -1419,19 +1419,19 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       Timing? fixedTiming,
       Reference? fixedReference,
       Meta? fixedMeta,
-      Boolean? patternBoolean,
+       FhirBoolean? patternBoolean,
       @JsonKey(name: '_patternBoolean')
           Element? patternBooleanElement,
-      Integer? patternInteger,
+      FhirInteger? patternInteger,
       @JsonKey(name: '_patternInteger')
           Element? patternIntegerElement,
-      Decimal? patternDecimal,
+      FhirDecimal? patternDecimal,
       @JsonKey(name: '_patternDecimal')
           Element? patternDecimalElement,
-      Base64Binary? patternBase64Binary,
+  FhirBase64Binary?? patternBase64Binary,
       @JsonKey(name: '_patternBase64Binary')
           Element? patternBase64BinaryElement,
-      Instant? patternInstant,
+      FhirInstant? patternInstant,
       @JsonKey(name: '_patternInstant')
           Element? patternInstantElement,
       String? patternString,
@@ -1440,7 +1440,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       FhirUri? patternUri,
       @JsonKey(name: '_patternUri')
           Element? patternUriElement,
-      Date? patternDate,
+      FhirDate? patternDate,
       @JsonKey(name: '_patternDate')
           Element? patternDateElement,
       FhirDateTime? patternDateTime,
@@ -1449,13 +1449,13 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       Time? patternTime,
       @JsonKey(name: '_patternTime')
           Element? patternTimeElement,
-      Code? patternCode,
+       FhirCode? patternCode,
       @JsonKey(name: '_patternCode')
           Element? patternCodeElement,
       Oid? patternOid,
       @JsonKey(name: '_patternOid')
           Element? patternOidElement,
-      Id? patternId,
+      FhirId? patternId,
       @JsonKey(name: '_patternId')
           Element? patternIdElement,
       UnsignedInt? patternUnsignedInt,
@@ -1464,7 +1464,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       PositiveInt? patternPositiveInt,
       @JsonKey(name: '_patternPositiveInt')
           Element? patternPositiveIntElement,
-      Markdown? patternMarkdown,
+      FhirMarkdown? patternMarkdown,
       @JsonKey(name: '_patternMarkdown')
           Element? patternMarkdownElement,
       Annotation? patternAnnotation,
@@ -1484,19 +1484,19 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       Timing? patternTiming,
       Reference? patternReference,
       Meta? patternMeta,
-      Boolean? exampleBoolean,
+       FhirBoolean? exampleBoolean,
       @JsonKey(name: '_exampleBoolean')
           Element? exampleBooleanElement,
-      Integer? exampleInteger,
+      FhirInteger? exampleInteger,
       @JsonKey(name: '_exampleInteger')
           Element? exampleIntegerElement,
-      Decimal? exampleDecimal,
+      FhirDecimal? exampleDecimal,
       @JsonKey(name: '_exampleDecimal')
           Element? exampleDecimalElement,
-      Base64Binary? exampleBase64Binary,
+  FhirBase64Binary?? exampleBase64Binary,
       @JsonKey(name: '_exampleBase64Binary')
           Element? exampleBase64BinaryElement,
-      Instant? exampleInstant,
+      FhirInstant? exampleInstant,
       @JsonKey(name: '_exampleInstant')
           Element? exampleInstantElement,
       String? exampleString,
@@ -1505,7 +1505,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       FhirUri? exampleUri,
       @JsonKey(name: '_exampleUri')
           Element? exampleUriElement,
-      Date? exampleDate,
+      FhirDate? exampleDate,
       @JsonKey(name: '_exampleDate')
           Element? exampleDateElement,
       FhirDateTime? exampleDateTime,
@@ -1514,13 +1514,13 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       Time? exampleTime,
       @JsonKey(name: '_exampleTime')
           Element? exampleTimeElement,
-      Code? exampleCode,
+       FhirCode? exampleCode,
       @JsonKey(name: '_exampleCode')
           Element? exampleCodeElement,
       Oid? exampleOid,
       @JsonKey(name: '_exampleOid')
           Element? exampleOidElement,
-      Id? exampleId,
+      FhirId? exampleId,
       @JsonKey(name: '_exampleId')
           Element? exampleIdElement,
       UnsignedInt? exampleUnsignedInt,
@@ -1529,7 +1529,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       PositiveInt? examplePositiveInt,
       @JsonKey(name: '_examplePositiveInt')
           Element? examplePositiveIntElement,
-      Markdown? exampleMarkdown,
+      FhirMarkdown? exampleMarkdown,
       @JsonKey(name: '_exampleMarkdown')
           Element? exampleMarkdownElement,
       Annotation? exampleAnnotation,
@@ -1549,19 +1549,19 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       Timing? exampleTiming,
       Reference? exampleReference,
       Meta? exampleMeta,
-      Boolean? minValueBoolean,
+       FhirBoolean? minValueBoolean,
       @JsonKey(name: '_minValueBoolean')
           Element? minValueBooleanElement,
-      Integer? minValueInteger,
+      FhirInteger? minValueInteger,
       @JsonKey(name: '_minValueInteger')
           Element? minValueIntegerElement,
-      Decimal? minValueDecimal,
+      FhirDecimal? minValueDecimal,
       @JsonKey(name: '_minValueDecimal')
           Element? minValueDecimalElement,
-      Base64Binary? minValueBase64Binary,
+  FhirBase64Binary?? minValueBase64Binary,
       @JsonKey(name: '_minValueBase64Binary')
           Element? minValueBase64BinaryElement,
-      Instant? minValueInstant,
+      FhirInstant? minValueInstant,
       @JsonKey(name: '_minValueInstant')
           Element? minValueInstantElement,
       String? minValueString,
@@ -1570,7 +1570,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       FhirUri? minValueUri,
       @JsonKey(name: '_minValueUri')
           Element? minValueUriElement,
-      Date? minValueDate,
+      FhirDate? minValueDate,
       @JsonKey(name: '_minValueDate')
           Element? minValueDateElement,
       FhirDateTime? minValueDateTime,
@@ -1579,13 +1579,13 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       Time? minValueTime,
       @JsonKey(name: '_minValueTime')
           Element? minValueTimeElement,
-      Code? minValueCode,
+       FhirCode? minValueCode,
       @JsonKey(name: '_minValueCode')
           Element? minValueCodeElement,
       Oid? minValueOid,
       @JsonKey(name: '_minValueOid')
           Element? minValueOidElement,
-      Id? minValueId,
+      FhirId? minValueId,
       @JsonKey(name: '_minValueId')
           Element? minValueIdElement,
       UnsignedInt? minValueUnsignedInt,
@@ -1594,7 +1594,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       PositiveInt? minValuePositiveInt,
       @JsonKey(name: '_minValuePositiveInt')
           Element? minValuePositiveIntElement,
-      Markdown? minValueMarkdown,
+      FhirMarkdown? minValueMarkdown,
       @JsonKey(name: '_minValueMarkdown')
           Element? minValueMarkdownElement,
       Annotation? minValueAnnotation,
@@ -1614,19 +1614,19 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       Timing? minValueTiming,
       Reference? minValueReference,
       Meta? minValueMeta,
-      Boolean? maxValueBoolean,
+       FhirBoolean? maxValueBoolean,
       @JsonKey(name: '_maxValueBoolean')
           Element? maxValueBooleanElement,
-      Integer? maxValueInteger,
+      FhirInteger? maxValueInteger,
       @JsonKey(name: '_maxValueInteger')
           Element? maxValueIntegerElement,
-      Decimal? maxValueDecimal,
+      FhirDecimal? maxValueDecimal,
       @JsonKey(name: '_maxValueDecimal')
           Element? maxValueDecimalElement,
-      Base64Binary? maxValueBase64Binary,
+  FhirBase64Binary?? maxValueBase64Binary,
       @JsonKey(name: '_maxValueBase64Binary')
           Element? maxValueBase64BinaryElement,
-      Instant? maxValueInstant,
+      FhirInstant? maxValueInstant,
       @JsonKey(name: '_maxValueInstant')
           Element? maxValueInstantElement,
       String? maxValueString,
@@ -1635,7 +1635,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       FhirUri? maxValueUri,
       @JsonKey(name: '_maxValueUri')
           Element? maxValueUriElement,
-      Date? maxValueDate,
+      FhirDate? maxValueDate,
       @JsonKey(name: '_maxValueDate')
           Element? maxValueDateElement,
       FhirDateTime? maxValueDateTime,
@@ -1644,13 +1644,13 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       Time? maxValueTime,
       @JsonKey(name: '_maxValueTime')
           Element? maxValueTimeElement,
-      Code? maxValueCode,
+       FhirCode? maxValueCode,
       @JsonKey(name: '_maxValueCode')
           Element? maxValueCodeElement,
       Oid? maxValueOid,
       @JsonKey(name: '_maxValueOid')
           Element? maxValueOidElement,
-      Id? maxValueId,
+      FhirId? maxValueId,
       @JsonKey(name: '_maxValueId')
           Element? maxValueIdElement,
       UnsignedInt? maxValueUnsignedInt,
@@ -1659,7 +1659,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       PositiveInt? maxValuePositiveInt,
       @JsonKey(name: '_maxValuePositiveInt')
           Element? maxValuePositiveIntElement,
-      Markdown? maxValueMarkdown,
+      FhirMarkdown? maxValueMarkdown,
       @JsonKey(name: '_maxValueMarkdown')
           Element? maxValueMarkdownElement,
       Annotation? maxValueAnnotation,
@@ -1679,20 +1679,20 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       Timing? maxValueTiming,
       Reference? maxValueReference,
       Meta? maxValueMeta,
-      Integer? maxLength,
+      FhirInteger? maxLength,
       @JsonKey(name: '_maxLength')
           Element? maxLengthElement,
       List<Id>? condition,
       @JsonKey(name: '_condition')
           Element? conditionElement,
       List<ElementDefinitionConstraint>? constraint,
-      Boolean? mustSupport,
+       FhirBoolean? mustSupport,
       @JsonKey(name: '_mustSupport')
           Element? mustSupportElement,
-      Boolean? isModifier,
+       FhirBoolean? isModifier,
       @JsonKey(name: '_isModifier')
           Element? isModifierElement,
-      Boolean? isSummary,
+       FhirBoolean? isSummary,
       @JsonKey(name: '_isSummary')
           Element? isSummaryElement,
       ElementDefinitionBinding? binding,
@@ -2375,7 +2375,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       defaultValueBoolean: freezed == defaultValueBoolean
           ? _value.defaultValueBoolean
           : defaultValueBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       defaultValueBooleanElement: freezed == defaultValueBooleanElement
           ? _value.defaultValueBooleanElement
           : defaultValueBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -2399,7 +2399,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       defaultValueBase64Binary: freezed == defaultValueBase64Binary
           ? _value.defaultValueBase64Binary
           : defaultValueBase64Binary // ignore: cast_nullable_to_non_nullable
-              as Base64Binary?,
+              as  FhirBase64Binary??,
       defaultValueBase64BinaryElement: freezed ==
               defaultValueBase64BinaryElement
           ? _value.defaultValueBase64BinaryElement
@@ -2456,7 +2456,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       defaultValueCode: freezed == defaultValueCode
           ? _value.defaultValueCode
           : defaultValueCode // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       defaultValueCodeElement: freezed == defaultValueCodeElement
           ? _value.defaultValueCodeElement
           : defaultValueCodeElement // ignore: cast_nullable_to_non_nullable
@@ -2580,7 +2580,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       fixedBoolean: freezed == fixedBoolean
           ? _value.fixedBoolean
           : fixedBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       fixedBooleanElement: freezed == fixedBooleanElement
           ? _value.fixedBooleanElement
           : fixedBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -2604,7 +2604,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       fixedBase64Binary: freezed == fixedBase64Binary
           ? _value.fixedBase64Binary
           : fixedBase64Binary // ignore: cast_nullable_to_non_nullable
-              as Base64Binary?,
+              as  FhirBase64Binary??,
       fixedBase64BinaryElement: freezed == fixedBase64BinaryElement
           ? _value.fixedBase64BinaryElement
           : fixedBase64BinaryElement // ignore: cast_nullable_to_non_nullable
@@ -2652,7 +2652,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       fixedCode: freezed == fixedCode
           ? _value.fixedCode
           : fixedCode // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       fixedCodeElement: freezed == fixedCodeElement
           ? _value.fixedCodeElement
           : fixedCodeElement // ignore: cast_nullable_to_non_nullable
@@ -2768,7 +2768,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       patternBoolean: freezed == patternBoolean
           ? _value.patternBoolean
           : patternBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       patternBooleanElement: freezed == patternBooleanElement
           ? _value.patternBooleanElement
           : patternBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -2792,7 +2792,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       patternBase64Binary: freezed == patternBase64Binary
           ? _value.patternBase64Binary
           : patternBase64Binary // ignore: cast_nullable_to_non_nullable
-              as Base64Binary?,
+              as  FhirBase64Binary??,
       patternBase64BinaryElement: freezed == patternBase64BinaryElement
           ? _value.patternBase64BinaryElement
           : patternBase64BinaryElement // ignore: cast_nullable_to_non_nullable
@@ -2848,7 +2848,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       patternCode: freezed == patternCode
           ? _value.patternCode
           : patternCode // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       patternCodeElement: freezed == patternCodeElement
           ? _value.patternCodeElement
           : patternCodeElement // ignore: cast_nullable_to_non_nullable
@@ -2964,7 +2964,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       exampleBoolean: freezed == exampleBoolean
           ? _value.exampleBoolean
           : exampleBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       exampleBooleanElement: freezed == exampleBooleanElement
           ? _value.exampleBooleanElement
           : exampleBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -2988,7 +2988,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       exampleBase64Binary: freezed == exampleBase64Binary
           ? _value.exampleBase64Binary
           : exampleBase64Binary // ignore: cast_nullable_to_non_nullable
-              as Base64Binary?,
+              as  FhirBase64Binary??,
       exampleBase64BinaryElement: freezed == exampleBase64BinaryElement
           ? _value.exampleBase64BinaryElement
           : exampleBase64BinaryElement // ignore: cast_nullable_to_non_nullable
@@ -3044,7 +3044,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       exampleCode: freezed == exampleCode
           ? _value.exampleCode
           : exampleCode // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       exampleCodeElement: freezed == exampleCodeElement
           ? _value.exampleCodeElement
           : exampleCodeElement // ignore: cast_nullable_to_non_nullable
@@ -3160,7 +3160,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       minValueBoolean: freezed == minValueBoolean
           ? _value.minValueBoolean
           : minValueBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       minValueBooleanElement: freezed == minValueBooleanElement
           ? _value.minValueBooleanElement
           : minValueBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -3184,7 +3184,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       minValueBase64Binary: freezed == minValueBase64Binary
           ? _value.minValueBase64Binary
           : minValueBase64Binary // ignore: cast_nullable_to_non_nullable
-              as Base64Binary?,
+              as  FhirBase64Binary??,
       minValueBase64BinaryElement: freezed == minValueBase64BinaryElement
           ? _value.minValueBase64BinaryElement
           : minValueBase64BinaryElement // ignore: cast_nullable_to_non_nullable
@@ -3240,7 +3240,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       minValueCode: freezed == minValueCode
           ? _value.minValueCode
           : minValueCode // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       minValueCodeElement: freezed == minValueCodeElement
           ? _value.minValueCodeElement
           : minValueCodeElement // ignore: cast_nullable_to_non_nullable
@@ -3356,7 +3356,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       maxValueBoolean: freezed == maxValueBoolean
           ? _value.maxValueBoolean
           : maxValueBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       maxValueBooleanElement: freezed == maxValueBooleanElement
           ? _value.maxValueBooleanElement
           : maxValueBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -3380,7 +3380,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       maxValueBase64Binary: freezed == maxValueBase64Binary
           ? _value.maxValueBase64Binary
           : maxValueBase64Binary // ignore: cast_nullable_to_non_nullable
-              as Base64Binary?,
+              as  FhirBase64Binary??,
       maxValueBase64BinaryElement: freezed == maxValueBase64BinaryElement
           ? _value.maxValueBase64BinaryElement
           : maxValueBase64BinaryElement // ignore: cast_nullable_to_non_nullable
@@ -3436,7 +3436,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       maxValueCode: freezed == maxValueCode
           ? _value.maxValueCode
           : maxValueCode // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       maxValueCodeElement: freezed == maxValueCodeElement
           ? _value.maxValueCodeElement
           : maxValueCodeElement // ignore: cast_nullable_to_non_nullable
@@ -3572,7 +3572,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       mustSupport: freezed == mustSupport
           ? _value.mustSupport
           : mustSupport // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       mustSupportElement: freezed == mustSupportElement
           ? _value.mustSupportElement
           : mustSupportElement // ignore: cast_nullable_to_non_nullable
@@ -3580,7 +3580,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       isModifier: freezed == isModifier
           ? _value.isModifier
           : isModifier // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       isModifierElement: freezed == isModifierElement
           ? _value.isModifierElement
           : isModifierElement // ignore: cast_nullable_to_non_nullable
@@ -3588,7 +3588,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       isSummary: freezed == isSummary
           ? _value.isSummary
           : isSummary // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       isSummaryElement: freezed == isSummaryElement
           ? _value.isSummaryElement
           : isSummaryElement // ignore: cast_nullable_to_non_nullable
@@ -6223,19 +6223,19 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       String? short,
       @JsonKey(name: '_short')
           Element? shortElement,
-      Markdown? definition,
+      FhirMarkdown? definition,
       @JsonKey(name: '_definition')
           Element? definitionElement,
-      Markdown? comments,
+      FhirMarkdown? comments,
       @JsonKey(name: '_comments')
           Element? commentElement,
-      Markdown? requirements,
+      FhirMarkdown? requirements,
       @JsonKey(name: '_requirements')
           Element? requirementsElement,
       List<String>? alias,
       @JsonKey(name: '_alias')
           Element? aliasElement,
-      Integer? min,
+      FhirInteger? min,
       @JsonKey(name: '_min')
           Element? minElement,
       String? max,
@@ -6244,19 +6244,19 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       ElementDefinitionBase? base,
       List<ElementDefinitionType>? type,
       String? nameReference,
-      Boolean? defaultValueBoolean,
+       FhirBoolean? defaultValueBoolean,
       @JsonKey(name: '_defaultValueBoolean')
           Element? defaultValueBooleanElement,
-      Integer? defaultValueInteger,
+      FhirInteger? defaultValueInteger,
       @JsonKey(name: '_defaultValueInteger')
           Element? defaultValueIntegerElement,
-      Decimal? defaultValueDecimal,
+      FhirDecimal? defaultValueDecimal,
       @JsonKey(name: '_defaultValueDecimal')
           Element? defaultValueDecimalElement,
-      Base64Binary? defaultValueBase64Binary,
+  FhirBase64Binary?? defaultValueBase64Binary,
       @JsonKey(name: '_defaultValueBase64Binary')
           Element? defaultValueBase64BinaryElement,
-      Instant? defaultValueInstant,
+      FhirInstant? defaultValueInstant,
       @JsonKey(name: '_defaultValueInstant')
           Element? defaultValueInstantElement,
       String? defaultValueString,
@@ -6265,7 +6265,7 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       FhirUri? defaultValueUri,
       @JsonKey(name: '_defaultValueUri')
           Element? defaultValueUriElement,
-      Date? defaultValueDate,
+      FhirDate? defaultValueDate,
       @JsonKey(name: '_defaultValueDate')
           Element? defaultValueDateElement,
       FhirDateTime? defaultValueDateTime,
@@ -6274,13 +6274,13 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       Time? defaultValueTime,
       @JsonKey(name: '_defaultValueTime')
           Element? defaultValueTimeElement,
-      Code? defaultValueCode,
+       FhirCode? defaultValueCode,
       @JsonKey(name: '_defaultValueCode')
           Element? defaultValueCodeElement,
       Oid? defaultValueOid,
       @JsonKey(name: '_defaultValueOid')
           Element? defaultValueOidElement,
-      Id? defaultValueId,
+      FhirId? defaultValueId,
       @JsonKey(name: '_defaultValueId')
           Element? defaultValueIdElement,
       UnsignedInt? defaultValueUnsignedInt,
@@ -6289,7 +6289,7 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       PositiveInt? defaultValuePositiveInt,
       @JsonKey(name: '_defaultValuePositiveInt')
           Element? defaultValuePositiveIntElement,
-      Markdown? defaultValueMarkdown,
+      FhirMarkdown? defaultValueMarkdown,
       @JsonKey(name: '_defaultValueMarkDown')
           Element? defaultValueMarkDownElement,
       Annotation? defaultValueAnnotation,
@@ -6309,22 +6309,22 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       Timing? defaultValueTiming,
       Reference? defaultValueReference,
       Meta? defaultValueMeta,
-      Markdown? meaningWhenMissing,
+      FhirMarkdown? meaningWhenMissing,
       @JsonKey(name: '_meaningWhenMissing')
           Element? meaningWhenMissingElement,
-      Boolean? fixedBoolean,
+       FhirBoolean? fixedBoolean,
       @JsonKey(name: '_fixedBoolean')
           Element? fixedBooleanElement,
-      Integer? fixedInteger,
+      FhirInteger? fixedInteger,
       @JsonKey(name: '_fixedInteger')
           Element? fixedIntegerElement,
-      Decimal? fixedDecimal,
+      FhirDecimal? fixedDecimal,
       @JsonKey(name: '_fixedDecimal')
           Element? fixedDecimalElement,
-      Base64Binary? fixedBase64Binary,
+  FhirBase64Binary?? fixedBase64Binary,
       @JsonKey(name: '_fixedBase64Binary')
           Element? fixedBase64BinaryElement,
-      Instant? fixedInstant,
+      FhirInstant? fixedInstant,
       @JsonKey(name: '_fixedInstant')
           Element? fixedInstantElement,
       String? fixedString,
@@ -6333,19 +6333,19 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       FhirUri? fixedUri,
       @JsonKey(name: '_fixedUri')
           Element? fixedUriElement,
-      Date? fixedDate,
+      FhirDate? fixedDate,
       @JsonKey(name: '_fixedDate')
           Element? fixedDateElement,
       FhirDateTime? fixedDateTime,
       @JsonKey(name: '_fixedDateTime')
           Element? fixedDateTimeElement,
-      Code? fixedCode,
+       FhirCode? fixedCode,
       @JsonKey(name: '_fixedCode')
           Element? fixedCodeElement,
       Oid? fixedOid,
       @JsonKey(name: '_fixedOid')
           Element? fixedOidElement,
-      Id? fixedId,
+      FhirId? fixedId,
       @JsonKey(name: '_fixedId')
           Element? fixedIdElement,
       UnsignedInt? fixedUnsignedInt,
@@ -6354,7 +6354,7 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       PositiveInt? fixedPositiveInt,
       @JsonKey(name: '_fixedPositiveInt')
           Element? fixedPositiveIntElement,
-      Markdown? fixedMarkdown,
+      FhirMarkdown? fixedMarkdown,
       @JsonKey(name: '_fixedMarkdown')
           Element? fixedMarkdownElement,
       Annotation? fixedAnnotation,
@@ -6374,19 +6374,19 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       Timing? fixedTiming,
       Reference? fixedReference,
       Meta? fixedMeta,
-      Boolean? patternBoolean,
+       FhirBoolean? patternBoolean,
       @JsonKey(name: '_patternBoolean')
           Element? patternBooleanElement,
-      Integer? patternInteger,
+      FhirInteger? patternInteger,
       @JsonKey(name: '_patternInteger')
           Element? patternIntegerElement,
-      Decimal? patternDecimal,
+      FhirDecimal? patternDecimal,
       @JsonKey(name: '_patternDecimal')
           Element? patternDecimalElement,
-      Base64Binary? patternBase64Binary,
+  FhirBase64Binary?? patternBase64Binary,
       @JsonKey(name: '_patternBase64Binary')
           Element? patternBase64BinaryElement,
-      Instant? patternInstant,
+      FhirInstant? patternInstant,
       @JsonKey(name: '_patternInstant')
           Element? patternInstantElement,
       String? patternString,
@@ -6395,7 +6395,7 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       FhirUri? patternUri,
       @JsonKey(name: '_patternUri')
           Element? patternUriElement,
-      Date? patternDate,
+      FhirDate? patternDate,
       @JsonKey(name: '_patternDate')
           Element? patternDateElement,
       FhirDateTime? patternDateTime,
@@ -6404,13 +6404,13 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       Time? patternTime,
       @JsonKey(name: '_patternTime')
           Element? patternTimeElement,
-      Code? patternCode,
+       FhirCode? patternCode,
       @JsonKey(name: '_patternCode')
           Element? patternCodeElement,
       Oid? patternOid,
       @JsonKey(name: '_patternOid')
           Element? patternOidElement,
-      Id? patternId,
+      FhirId? patternId,
       @JsonKey(name: '_patternId')
           Element? patternIdElement,
       UnsignedInt? patternUnsignedInt,
@@ -6419,7 +6419,7 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       PositiveInt? patternPositiveInt,
       @JsonKey(name: '_patternPositiveInt')
           Element? patternPositiveIntElement,
-      Markdown? patternMarkdown,
+      FhirMarkdown? patternMarkdown,
       @JsonKey(name: '_patternMarkdown')
           Element? patternMarkdownElement,
       Annotation? patternAnnotation,
@@ -6439,19 +6439,19 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       Timing? patternTiming,
       Reference? patternReference,
       Meta? patternMeta,
-      Boolean? exampleBoolean,
+       FhirBoolean? exampleBoolean,
       @JsonKey(name: '_exampleBoolean')
           Element? exampleBooleanElement,
-      Integer? exampleInteger,
+      FhirInteger? exampleInteger,
       @JsonKey(name: '_exampleInteger')
           Element? exampleIntegerElement,
-      Decimal? exampleDecimal,
+      FhirDecimal? exampleDecimal,
       @JsonKey(name: '_exampleDecimal')
           Element? exampleDecimalElement,
-      Base64Binary? exampleBase64Binary,
+  FhirBase64Binary?? exampleBase64Binary,
       @JsonKey(name: '_exampleBase64Binary')
           Element? exampleBase64BinaryElement,
-      Instant? exampleInstant,
+      FhirInstant? exampleInstant,
       @JsonKey(name: '_exampleInstant')
           Element? exampleInstantElement,
       String? exampleString,
@@ -6460,7 +6460,7 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       FhirUri? exampleUri,
       @JsonKey(name: '_exampleUri')
           Element? exampleUriElement,
-      Date? exampleDate,
+      FhirDate? exampleDate,
       @JsonKey(name: '_exampleDate')
           Element? exampleDateElement,
       FhirDateTime? exampleDateTime,
@@ -6469,13 +6469,13 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       Time? exampleTime,
       @JsonKey(name: '_exampleTime')
           Element? exampleTimeElement,
-      Code? exampleCode,
+       FhirCode? exampleCode,
       @JsonKey(name: '_exampleCode')
           Element? exampleCodeElement,
       Oid? exampleOid,
       @JsonKey(name: '_exampleOid')
           Element? exampleOidElement,
-      Id? exampleId,
+      FhirId? exampleId,
       @JsonKey(name: '_exampleId')
           Element? exampleIdElement,
       UnsignedInt? exampleUnsignedInt,
@@ -6484,7 +6484,7 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       PositiveInt? examplePositiveInt,
       @JsonKey(name: '_examplePositiveInt')
           Element? examplePositiveIntElement,
-      Markdown? exampleMarkdown,
+      FhirMarkdown? exampleMarkdown,
       @JsonKey(name: '_exampleMarkdown')
           Element? exampleMarkdownElement,
       Annotation? exampleAnnotation,
@@ -6504,19 +6504,19 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       Timing? exampleTiming,
       Reference? exampleReference,
       Meta? exampleMeta,
-      Boolean? minValueBoolean,
+       FhirBoolean? minValueBoolean,
       @JsonKey(name: '_minValueBoolean')
           Element? minValueBooleanElement,
-      Integer? minValueInteger,
+      FhirInteger? minValueInteger,
       @JsonKey(name: '_minValueInteger')
           Element? minValueIntegerElement,
-      Decimal? minValueDecimal,
+      FhirDecimal? minValueDecimal,
       @JsonKey(name: '_minValueDecimal')
           Element? minValueDecimalElement,
-      Base64Binary? minValueBase64Binary,
+  FhirBase64Binary?? minValueBase64Binary,
       @JsonKey(name: '_minValueBase64Binary')
           Element? minValueBase64BinaryElement,
-      Instant? minValueInstant,
+      FhirInstant? minValueInstant,
       @JsonKey(name: '_minValueInstant')
           Element? minValueInstantElement,
       String? minValueString,
@@ -6525,7 +6525,7 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       FhirUri? minValueUri,
       @JsonKey(name: '_minValueUri')
           Element? minValueUriElement,
-      Date? minValueDate,
+      FhirDate? minValueDate,
       @JsonKey(name: '_minValueDate')
           Element? minValueDateElement,
       FhirDateTime? minValueDateTime,
@@ -6534,13 +6534,13 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       Time? minValueTime,
       @JsonKey(name: '_minValueTime')
           Element? minValueTimeElement,
-      Code? minValueCode,
+       FhirCode? minValueCode,
       @JsonKey(name: '_minValueCode')
           Element? minValueCodeElement,
       Oid? minValueOid,
       @JsonKey(name: '_minValueOid')
           Element? minValueOidElement,
-      Id? minValueId,
+      FhirId? minValueId,
       @JsonKey(name: '_minValueId')
           Element? minValueIdElement,
       UnsignedInt? minValueUnsignedInt,
@@ -6549,7 +6549,7 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       PositiveInt? minValuePositiveInt,
       @JsonKey(name: '_minValuePositiveInt')
           Element? minValuePositiveIntElement,
-      Markdown? minValueMarkdown,
+      FhirMarkdown? minValueMarkdown,
       @JsonKey(name: '_minValueMarkdown')
           Element? minValueMarkdownElement,
       Annotation? minValueAnnotation,
@@ -6569,19 +6569,19 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       Timing? minValueTiming,
       Reference? minValueReference,
       Meta? minValueMeta,
-      Boolean? maxValueBoolean,
+       FhirBoolean? maxValueBoolean,
       @JsonKey(name: '_maxValueBoolean')
           Element? maxValueBooleanElement,
-      Integer? maxValueInteger,
+      FhirInteger? maxValueInteger,
       @JsonKey(name: '_maxValueInteger')
           Element? maxValueIntegerElement,
-      Decimal? maxValueDecimal,
+      FhirDecimal? maxValueDecimal,
       @JsonKey(name: '_maxValueDecimal')
           Element? maxValueDecimalElement,
-      Base64Binary? maxValueBase64Binary,
+  FhirBase64Binary?? maxValueBase64Binary,
       @JsonKey(name: '_maxValueBase64Binary')
           Element? maxValueBase64BinaryElement,
-      Instant? maxValueInstant,
+      FhirInstant? maxValueInstant,
       @JsonKey(name: '_maxValueInstant')
           Element? maxValueInstantElement,
       String? maxValueString,
@@ -6590,7 +6590,7 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       FhirUri? maxValueUri,
       @JsonKey(name: '_maxValueUri')
           Element? maxValueUriElement,
-      Date? maxValueDate,
+      FhirDate? maxValueDate,
       @JsonKey(name: '_maxValueDate')
           Element? maxValueDateElement,
       FhirDateTime? maxValueDateTime,
@@ -6599,13 +6599,13 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       Time? maxValueTime,
       @JsonKey(name: '_maxValueTime')
           Element? maxValueTimeElement,
-      Code? maxValueCode,
+       FhirCode? maxValueCode,
       @JsonKey(name: '_maxValueCode')
           Element? maxValueCodeElement,
       Oid? maxValueOid,
       @JsonKey(name: '_maxValueOid')
           Element? maxValueOidElement,
-      Id? maxValueId,
+      FhirId? maxValueId,
       @JsonKey(name: '_maxValueId')
           Element? maxValueIdElement,
       UnsignedInt? maxValueUnsignedInt,
@@ -6614,7 +6614,7 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       PositiveInt? maxValuePositiveInt,
       @JsonKey(name: '_maxValuePositiveInt')
           Element? maxValuePositiveIntElement,
-      Markdown? maxValueMarkdown,
+      FhirMarkdown? maxValueMarkdown,
       @JsonKey(name: '_maxValueMarkdown')
           Element? maxValueMarkdownElement,
       Annotation? maxValueAnnotation,
@@ -6634,20 +6634,20 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       Timing? maxValueTiming,
       Reference? maxValueReference,
       Meta? maxValueMeta,
-      Integer? maxLength,
+      FhirInteger? maxLength,
       @JsonKey(name: '_maxLength')
           Element? maxLengthElement,
       List<Id>? condition,
       @JsonKey(name: '_condition')
           Element? conditionElement,
       List<ElementDefinitionConstraint>? constraint,
-      Boolean? mustSupport,
+       FhirBoolean? mustSupport,
       @JsonKey(name: '_mustSupport')
           Element? mustSupportElement,
-      Boolean? isModifier,
+       FhirBoolean? isModifier,
       @JsonKey(name: '_isModifier')
           Element? isModifierElement,
-      Boolean? isSummary,
+       FhirBoolean? isSummary,
       @JsonKey(name: '_isSummary')
           Element? isSummaryElement,
       ElementDefinitionBinding? binding,
@@ -7543,7 +7543,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       defaultValueBoolean: freezed == defaultValueBoolean
           ? _value.defaultValueBoolean
           : defaultValueBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       defaultValueBooleanElement: freezed == defaultValueBooleanElement
           ? _value.defaultValueBooleanElement
           : defaultValueBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -7567,7 +7567,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       defaultValueBase64Binary: freezed == defaultValueBase64Binary
           ? _value.defaultValueBase64Binary
           : defaultValueBase64Binary // ignore: cast_nullable_to_non_nullable
-              as Base64Binary?,
+              as  FhirBase64Binary??,
       defaultValueBase64BinaryElement: freezed ==
               defaultValueBase64BinaryElement
           ? _value.defaultValueBase64BinaryElement
@@ -7624,7 +7624,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       defaultValueCode: freezed == defaultValueCode
           ? _value.defaultValueCode
           : defaultValueCode // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       defaultValueCodeElement: freezed == defaultValueCodeElement
           ? _value.defaultValueCodeElement
           : defaultValueCodeElement // ignore: cast_nullable_to_non_nullable
@@ -7748,7 +7748,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       fixedBoolean: freezed == fixedBoolean
           ? _value.fixedBoolean
           : fixedBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       fixedBooleanElement: freezed == fixedBooleanElement
           ? _value.fixedBooleanElement
           : fixedBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -7772,7 +7772,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       fixedBase64Binary: freezed == fixedBase64Binary
           ? _value.fixedBase64Binary
           : fixedBase64Binary // ignore: cast_nullable_to_non_nullable
-              as Base64Binary?,
+              as  FhirBase64Binary??,
       fixedBase64BinaryElement: freezed == fixedBase64BinaryElement
           ? _value.fixedBase64BinaryElement
           : fixedBase64BinaryElement // ignore: cast_nullable_to_non_nullable
@@ -7820,7 +7820,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       fixedCode: freezed == fixedCode
           ? _value.fixedCode
           : fixedCode // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       fixedCodeElement: freezed == fixedCodeElement
           ? _value.fixedCodeElement
           : fixedCodeElement // ignore: cast_nullable_to_non_nullable
@@ -7936,7 +7936,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       patternBoolean: freezed == patternBoolean
           ? _value.patternBoolean
           : patternBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       patternBooleanElement: freezed == patternBooleanElement
           ? _value.patternBooleanElement
           : patternBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -7960,7 +7960,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       patternBase64Binary: freezed == patternBase64Binary
           ? _value.patternBase64Binary
           : patternBase64Binary // ignore: cast_nullable_to_non_nullable
-              as Base64Binary?,
+              as  FhirBase64Binary??,
       patternBase64BinaryElement: freezed == patternBase64BinaryElement
           ? _value.patternBase64BinaryElement
           : patternBase64BinaryElement // ignore: cast_nullable_to_non_nullable
@@ -8016,7 +8016,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       patternCode: freezed == patternCode
           ? _value.patternCode
           : patternCode // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       patternCodeElement: freezed == patternCodeElement
           ? _value.patternCodeElement
           : patternCodeElement // ignore: cast_nullable_to_non_nullable
@@ -8132,7 +8132,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       exampleBoolean: freezed == exampleBoolean
           ? _value.exampleBoolean
           : exampleBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       exampleBooleanElement: freezed == exampleBooleanElement
           ? _value.exampleBooleanElement
           : exampleBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -8156,7 +8156,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       exampleBase64Binary: freezed == exampleBase64Binary
           ? _value.exampleBase64Binary
           : exampleBase64Binary // ignore: cast_nullable_to_non_nullable
-              as Base64Binary?,
+              as  FhirBase64Binary??,
       exampleBase64BinaryElement: freezed == exampleBase64BinaryElement
           ? _value.exampleBase64BinaryElement
           : exampleBase64BinaryElement // ignore: cast_nullable_to_non_nullable
@@ -8212,7 +8212,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       exampleCode: freezed == exampleCode
           ? _value.exampleCode
           : exampleCode // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       exampleCodeElement: freezed == exampleCodeElement
           ? _value.exampleCodeElement
           : exampleCodeElement // ignore: cast_nullable_to_non_nullable
@@ -8328,7 +8328,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       minValueBoolean: freezed == minValueBoolean
           ? _value.minValueBoolean
           : minValueBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       minValueBooleanElement: freezed == minValueBooleanElement
           ? _value.minValueBooleanElement
           : minValueBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -8352,7 +8352,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       minValueBase64Binary: freezed == minValueBase64Binary
           ? _value.minValueBase64Binary
           : minValueBase64Binary // ignore: cast_nullable_to_non_nullable
-              as Base64Binary?,
+              as  FhirBase64Binary??,
       minValueBase64BinaryElement: freezed == minValueBase64BinaryElement
           ? _value.minValueBase64BinaryElement
           : minValueBase64BinaryElement // ignore: cast_nullable_to_non_nullable
@@ -8408,7 +8408,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       minValueCode: freezed == minValueCode
           ? _value.minValueCode
           : minValueCode // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       minValueCodeElement: freezed == minValueCodeElement
           ? _value.minValueCodeElement
           : minValueCodeElement // ignore: cast_nullable_to_non_nullable
@@ -8524,7 +8524,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       maxValueBoolean: freezed == maxValueBoolean
           ? _value.maxValueBoolean
           : maxValueBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       maxValueBooleanElement: freezed == maxValueBooleanElement
           ? _value.maxValueBooleanElement
           : maxValueBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -8548,7 +8548,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       maxValueBase64Binary: freezed == maxValueBase64Binary
           ? _value.maxValueBase64Binary
           : maxValueBase64Binary // ignore: cast_nullable_to_non_nullable
-              as Base64Binary?,
+              as  FhirBase64Binary??,
       maxValueBase64BinaryElement: freezed == maxValueBase64BinaryElement
           ? _value.maxValueBase64BinaryElement
           : maxValueBase64BinaryElement // ignore: cast_nullable_to_non_nullable
@@ -8604,7 +8604,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       maxValueCode: freezed == maxValueCode
           ? _value.maxValueCode
           : maxValueCode // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       maxValueCodeElement: freezed == maxValueCodeElement
           ? _value.maxValueCodeElement
           : maxValueCodeElement // ignore: cast_nullable_to_non_nullable
@@ -8740,7 +8740,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       mustSupport: freezed == mustSupport
           ? _value.mustSupport
           : mustSupport // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       mustSupportElement: freezed == mustSupportElement
           ? _value.mustSupportElement
           : mustSupportElement // ignore: cast_nullable_to_non_nullable
@@ -8748,7 +8748,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       isModifier: freezed == isModifier
           ? _value.isModifier
           : isModifier // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       isModifierElement: freezed == isModifierElement
           ? _value.isModifierElement
           : isModifierElement // ignore: cast_nullable_to_non_nullable
@@ -8756,7 +8756,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       isSummary: freezed == isSummary
           ? _value.isSummary
           : isSummary // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       isSummaryElement: freezed == isSummaryElement
           ? _value.isSummaryElement
           : isSummaryElement // ignore: cast_nullable_to_non_nullable
@@ -9340,7 +9340,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   @override
   final String? nameReference;
   @override
-  final Boolean? defaultValueBoolean;
+  final  FhirBoolean? defaultValueBoolean;
   @override
   @JsonKey(name: '_defaultValueBoolean')
   final Element? defaultValueBooleanElement;
@@ -9355,7 +9355,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   @JsonKey(name: '_defaultValueDecimal')
   final Element? defaultValueDecimalElement;
   @override
-  final Base64Binary? defaultValueBase64Binary;
+  final  FhirBase64Binary?? defaultValueBase64Binary;
   @override
   @JsonKey(name: '_defaultValueBase64Binary')
   final Element? defaultValueBase64BinaryElement;
@@ -9390,7 +9390,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   @JsonKey(name: '_defaultValueTime')
   final Element? defaultValueTimeElement;
   @override
-  final Code? defaultValueCode;
+  final  FhirCode? defaultValueCode;
   @override
   @JsonKey(name: '_defaultValueCode')
   final Element? defaultValueCodeElement;
@@ -9459,7 +9459,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   @JsonKey(name: '_meaningWhenMissing')
   final Element? meaningWhenMissingElement;
   @override
-  final Boolean? fixedBoolean;
+  final  FhirBoolean? fixedBoolean;
   @override
   @JsonKey(name: '_fixedBoolean')
   final Element? fixedBooleanElement;
@@ -9474,7 +9474,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   @JsonKey(name: '_fixedDecimal')
   final Element? fixedDecimalElement;
   @override
-  final Base64Binary? fixedBase64Binary;
+  final  FhirBase64Binary?? fixedBase64Binary;
   @override
   @JsonKey(name: '_fixedBase64Binary')
   final Element? fixedBase64BinaryElement;
@@ -9504,7 +9504,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   @JsonKey(name: '_fixedDateTime')
   final Element? fixedDateTimeElement;
   @override
-  final Code? fixedCode;
+  final  FhirCode? fixedCode;
   @override
   @JsonKey(name: '_fixedCode')
   final Element? fixedCodeElement;
@@ -9568,7 +9568,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   @override
   final Meta? fixedMeta;
   @override
-  final Boolean? patternBoolean;
+  final  FhirBoolean? patternBoolean;
   @override
   @JsonKey(name: '_patternBoolean')
   final Element? patternBooleanElement;
@@ -9583,7 +9583,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   @JsonKey(name: '_patternDecimal')
   final Element? patternDecimalElement;
   @override
-  final Base64Binary? patternBase64Binary;
+  final  FhirBase64Binary?? patternBase64Binary;
   @override
   @JsonKey(name: '_patternBase64Binary')
   final Element? patternBase64BinaryElement;
@@ -9618,7 +9618,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   @JsonKey(name: '_patternTime')
   final Element? patternTimeElement;
   @override
-  final Code? patternCode;
+  final  FhirCode? patternCode;
   @override
   @JsonKey(name: '_patternCode')
   final Element? patternCodeElement;
@@ -9682,7 +9682,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   @override
   final Meta? patternMeta;
   @override
-  final Boolean? exampleBoolean;
+  final  FhirBoolean? exampleBoolean;
   @override
   @JsonKey(name: '_exampleBoolean')
   final Element? exampleBooleanElement;
@@ -9697,7 +9697,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   @JsonKey(name: '_exampleDecimal')
   final Element? exampleDecimalElement;
   @override
-  final Base64Binary? exampleBase64Binary;
+  final  FhirBase64Binary?? exampleBase64Binary;
   @override
   @JsonKey(name: '_exampleBase64Binary')
   final Element? exampleBase64BinaryElement;
@@ -9732,7 +9732,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   @JsonKey(name: '_exampleTime')
   final Element? exampleTimeElement;
   @override
-  final Code? exampleCode;
+  final  FhirCode? exampleCode;
   @override
   @JsonKey(name: '_exampleCode')
   final Element? exampleCodeElement;
@@ -9796,7 +9796,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   @override
   final Meta? exampleMeta;
   @override
-  final Boolean? minValueBoolean;
+  final  FhirBoolean? minValueBoolean;
   @override
   @JsonKey(name: '_minValueBoolean')
   final Element? minValueBooleanElement;
@@ -9811,7 +9811,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   @JsonKey(name: '_minValueDecimal')
   final Element? minValueDecimalElement;
   @override
-  final Base64Binary? minValueBase64Binary;
+  final  FhirBase64Binary?? minValueBase64Binary;
   @override
   @JsonKey(name: '_minValueBase64Binary')
   final Element? minValueBase64BinaryElement;
@@ -9846,7 +9846,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   @JsonKey(name: '_minValueTime')
   final Element? minValueTimeElement;
   @override
-  final Code? minValueCode;
+  final  FhirCode? minValueCode;
   @override
   @JsonKey(name: '_minValueCode')
   final Element? minValueCodeElement;
@@ -9910,7 +9910,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   @override
   final Meta? minValueMeta;
   @override
-  final Boolean? maxValueBoolean;
+  final  FhirBoolean? maxValueBoolean;
   @override
   @JsonKey(name: '_maxValueBoolean')
   final Element? maxValueBooleanElement;
@@ -9925,7 +9925,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   @JsonKey(name: '_maxValueDecimal')
   final Element? maxValueDecimalElement;
   @override
-  final Base64Binary? maxValueBase64Binary;
+  final  FhirBase64Binary?? maxValueBase64Binary;
   @override
   @JsonKey(name: '_maxValueBase64Binary')
   final Element? maxValueBase64BinaryElement;
@@ -9960,7 +9960,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   @JsonKey(name: '_maxValueTime')
   final Element? maxValueTimeElement;
   @override
-  final Code? maxValueCode;
+  final  FhirCode? maxValueCode;
   @override
   @JsonKey(name: '_maxValueCode')
   final Element? maxValueCodeElement;
@@ -10052,17 +10052,17 @@ class _$_ElementDefinition extends _ElementDefinition {
   }
 
   @override
-  final Boolean? mustSupport;
+  final  FhirBoolean? mustSupport;
   @override
   @JsonKey(name: '_mustSupport')
   final Element? mustSupportElement;
   @override
-  final Boolean? isModifier;
+  final  FhirBoolean? isModifier;
   @override
   @JsonKey(name: '_isModifier')
   final Element? isModifierElement;
   @override
-  final Boolean? isSummary;
+  final  FhirBoolean? isSummary;
   @override
   @JsonKey(name: '_isSummary')
   final Element? isSummaryElement;
@@ -10855,7 +10855,7 @@ abstract class _ElementDefinition extends ElementDefinition {
       final ElementDefinitionBase? base,
       final List<ElementDefinitionType>? type,
       final String? nameReference,
-      final Boolean? defaultValueBoolean,
+      final  FhirBoolean? defaultValueBoolean,
       @JsonKey(name: '_defaultValueBoolean')
           final Element? defaultValueBooleanElement,
       final Integer? defaultValueInteger,
@@ -10864,7 +10864,7 @@ abstract class _ElementDefinition extends ElementDefinition {
       final Decimal? defaultValueDecimal,
       @JsonKey(name: '_defaultValueDecimal')
           final Element? defaultValueDecimalElement,
-      final Base64Binary? defaultValueBase64Binary,
+      final  FhirBase64Binary?? defaultValueBase64Binary,
       @JsonKey(name: '_defaultValueBase64Binary')
           final Element? defaultValueBase64BinaryElement,
       final Instant? defaultValueInstant,
@@ -10885,7 +10885,7 @@ abstract class _ElementDefinition extends ElementDefinition {
       final Time? defaultValueTime,
       @JsonKey(name: '_defaultValueTime')
           final Element? defaultValueTimeElement,
-      final Code? defaultValueCode,
+      final  FhirCode? defaultValueCode,
       @JsonKey(name: '_defaultValueCode')
           final Element? defaultValueCodeElement,
       final Oid? defaultValueOid,
@@ -10923,7 +10923,7 @@ abstract class _ElementDefinition extends ElementDefinition {
       final Markdown? meaningWhenMissing,
       @JsonKey(name: '_meaningWhenMissing')
           final Element? meaningWhenMissingElement,
-      final Boolean? fixedBoolean,
+      final  FhirBoolean? fixedBoolean,
       @JsonKey(name: '_fixedBoolean')
           final Element? fixedBooleanElement,
       final Integer? fixedInteger,
@@ -10932,7 +10932,7 @@ abstract class _ElementDefinition extends ElementDefinition {
       final Decimal? fixedDecimal,
       @JsonKey(name: '_fixedDecimal')
           final Element? fixedDecimalElement,
-      final Base64Binary? fixedBase64Binary,
+      final  FhirBase64Binary?? fixedBase64Binary,
       @JsonKey(name: '_fixedBase64Binary')
           final Element? fixedBase64BinaryElement,
       final Instant? fixedInstant,
@@ -10950,7 +10950,7 @@ abstract class _ElementDefinition extends ElementDefinition {
       final FhirDateTime? fixedDateTime,
       @JsonKey(name: '_fixedDateTime')
           final Element? fixedDateTimeElement,
-      final Code? fixedCode,
+      final  FhirCode? fixedCode,
       @JsonKey(name: '_fixedCode')
           final Element? fixedCodeElement,
       final Oid? fixedOid,
@@ -10985,7 +10985,7 @@ abstract class _ElementDefinition extends ElementDefinition {
       final Timing? fixedTiming,
       final Reference? fixedReference,
       final Meta? fixedMeta,
-      final Boolean? patternBoolean,
+      final  FhirBoolean? patternBoolean,
       @JsonKey(name: '_patternBoolean')
           final Element? patternBooleanElement,
       final Integer? patternInteger,
@@ -10994,7 +10994,7 @@ abstract class _ElementDefinition extends ElementDefinition {
       final Decimal? patternDecimal,
       @JsonKey(name: '_patternDecimal')
           final Element? patternDecimalElement,
-      final Base64Binary? patternBase64Binary,
+      final  FhirBase64Binary?? patternBase64Binary,
       @JsonKey(name: '_patternBase64Binary')
           final Element? patternBase64BinaryElement,
       final Instant? patternInstant,
@@ -11015,7 +11015,7 @@ abstract class _ElementDefinition extends ElementDefinition {
       final Time? patternTime,
       @JsonKey(name: '_patternTime')
           final Element? patternTimeElement,
-      final Code? patternCode,
+      final  FhirCode? patternCode,
       @JsonKey(name: '_patternCode')
           final Element? patternCodeElement,
       final Oid? patternOid,
@@ -11050,7 +11050,7 @@ abstract class _ElementDefinition extends ElementDefinition {
       final Timing? patternTiming,
       final Reference? patternReference,
       final Meta? patternMeta,
-      final Boolean? exampleBoolean,
+      final  FhirBoolean? exampleBoolean,
       @JsonKey(name: '_exampleBoolean')
           final Element? exampleBooleanElement,
       final Integer? exampleInteger,
@@ -11059,7 +11059,7 @@ abstract class _ElementDefinition extends ElementDefinition {
       final Decimal? exampleDecimal,
       @JsonKey(name: '_exampleDecimal')
           final Element? exampleDecimalElement,
-      final Base64Binary? exampleBase64Binary,
+      final  FhirBase64Binary?? exampleBase64Binary,
       @JsonKey(name: '_exampleBase64Binary')
           final Element? exampleBase64BinaryElement,
       final Instant? exampleInstant,
@@ -11080,7 +11080,7 @@ abstract class _ElementDefinition extends ElementDefinition {
       final Time? exampleTime,
       @JsonKey(name: '_exampleTime')
           final Element? exampleTimeElement,
-      final Code? exampleCode,
+      final  FhirCode? exampleCode,
       @JsonKey(name: '_exampleCode')
           final Element? exampleCodeElement,
       final Oid? exampleOid,
@@ -11115,7 +11115,7 @@ abstract class _ElementDefinition extends ElementDefinition {
       final Timing? exampleTiming,
       final Reference? exampleReference,
       final Meta? exampleMeta,
-      final Boolean? minValueBoolean,
+      final  FhirBoolean? minValueBoolean,
       @JsonKey(name: '_minValueBoolean')
           final Element? minValueBooleanElement,
       final Integer? minValueInteger,
@@ -11124,7 +11124,7 @@ abstract class _ElementDefinition extends ElementDefinition {
       final Decimal? minValueDecimal,
       @JsonKey(name: '_minValueDecimal')
           final Element? minValueDecimalElement,
-      final Base64Binary? minValueBase64Binary,
+      final  FhirBase64Binary?? minValueBase64Binary,
       @JsonKey(name: '_minValueBase64Binary')
           final Element? minValueBase64BinaryElement,
       final Instant? minValueInstant,
@@ -11145,7 +11145,7 @@ abstract class _ElementDefinition extends ElementDefinition {
       final Time? minValueTime,
       @JsonKey(name: '_minValueTime')
           final Element? minValueTimeElement,
-      final Code? minValueCode,
+      final  FhirCode? minValueCode,
       @JsonKey(name: '_minValueCode')
           final Element? minValueCodeElement,
       final Oid? minValueOid,
@@ -11180,7 +11180,7 @@ abstract class _ElementDefinition extends ElementDefinition {
       final Timing? minValueTiming,
       final Reference? minValueReference,
       final Meta? minValueMeta,
-      final Boolean? maxValueBoolean,
+      final  FhirBoolean? maxValueBoolean,
       @JsonKey(name: '_maxValueBoolean')
           final Element? maxValueBooleanElement,
       final Integer? maxValueInteger,
@@ -11189,7 +11189,7 @@ abstract class _ElementDefinition extends ElementDefinition {
       final Decimal? maxValueDecimal,
       @JsonKey(name: '_maxValueDecimal')
           final Element? maxValueDecimalElement,
-      final Base64Binary? maxValueBase64Binary,
+      final  FhirBase64Binary?? maxValueBase64Binary,
       @JsonKey(name: '_maxValueBase64Binary')
           final Element? maxValueBase64BinaryElement,
       final Instant? maxValueInstant,
@@ -11210,7 +11210,7 @@ abstract class _ElementDefinition extends ElementDefinition {
       final Time? maxValueTime,
       @JsonKey(name: '_maxValueTime')
           final Element? maxValueTimeElement,
-      final Code? maxValueCode,
+      final  FhirCode? maxValueCode,
       @JsonKey(name: '_maxValueCode')
           final Element? maxValueCodeElement,
       final Oid? maxValueOid,
@@ -11252,13 +11252,13 @@ abstract class _ElementDefinition extends ElementDefinition {
       @JsonKey(name: '_condition')
           final Element? conditionElement,
       final List<ElementDefinitionConstraint>? constraint,
-      final Boolean? mustSupport,
+      final  FhirBoolean? mustSupport,
       @JsonKey(name: '_mustSupport')
           final Element? mustSupportElement,
-      final Boolean? isModifier,
+      final  FhirBoolean? isModifier,
       @JsonKey(name: '_isModifier')
           final Element? isModifierElement,
-      final Boolean? isSummary,
+      final  FhirBoolean? isSummary,
       @JsonKey(name: '_isSummary')
           final Element? isSummaryElement,
       final ElementDefinitionBinding? binding,
@@ -11269,7 +11269,7 @@ abstract class _ElementDefinition extends ElementDefinition {
       _$_ElementDefinition.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -11297,17 +11297,17 @@ abstract class _ElementDefinition extends ElementDefinition {
   @JsonKey(name: '_short')
   Element? get shortElement;
   @override
-  Markdown? get definition;
+  FhirMarkdown? get definition;
   @override
   @JsonKey(name: '_definition')
   Element? get definitionElement;
   @override
-  Markdown? get comments;
+  FhirMarkdown? get comments;
   @override
   @JsonKey(name: '_comments')
   Element? get commentElement;
   @override
-  Markdown? get requirements;
+  FhirMarkdown? get requirements;
   @override
   @JsonKey(name: '_requirements')
   Element? get requirementsElement;
@@ -11317,7 +11317,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   @JsonKey(name: '_alias')
   Element? get aliasElement;
   @override
-  Integer? get min;
+  FhirInteger? get min;
   @override
   @JsonKey(name: '_min')
   Element? get minElement;
@@ -11333,27 +11333,27 @@ abstract class _ElementDefinition extends ElementDefinition {
   @override
   String? get nameReference;
   @override
-  Boolean? get defaultValueBoolean;
+   FhirBoolean? get defaultValueBoolean;
   @override
   @JsonKey(name: '_defaultValueBoolean')
   Element? get defaultValueBooleanElement;
   @override
-  Integer? get defaultValueInteger;
+  FhirInteger? get defaultValueInteger;
   @override
   @JsonKey(name: '_defaultValueInteger')
   Element? get defaultValueIntegerElement;
   @override
-  Decimal? get defaultValueDecimal;
+  FhirDecimal? get defaultValueDecimal;
   @override
   @JsonKey(name: '_defaultValueDecimal')
   Element? get defaultValueDecimalElement;
   @override
-  Base64Binary? get defaultValueBase64Binary;
+  FhirBase64Binary?? get defaultValueBase64Binary;
   @override
   @JsonKey(name: '_defaultValueBase64Binary')
   Element? get defaultValueBase64BinaryElement;
   @override
-  Instant? get defaultValueInstant;
+  FhirInstant? get defaultValueInstant;
   @override
   @JsonKey(name: '_defaultValueInstant')
   Element? get defaultValueInstantElement;
@@ -11368,7 +11368,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   @JsonKey(name: '_defaultValueUri')
   Element? get defaultValueUriElement;
   @override
-  Date? get defaultValueDate;
+  FhirDate? get defaultValueDate;
   @override
   @JsonKey(name: '_defaultValueDate')
   Element? get defaultValueDateElement;
@@ -11383,7 +11383,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   @JsonKey(name: '_defaultValueTime')
   Element? get defaultValueTimeElement;
   @override
-  Code? get defaultValueCode;
+   FhirCode? get defaultValueCode;
   @override
   @JsonKey(name: '_defaultValueCode')
   Element? get defaultValueCodeElement;
@@ -11393,7 +11393,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   @JsonKey(name: '_defaultValueOid')
   Element? get defaultValueOidElement;
   @override
-  Id? get defaultValueId;
+  FhirId? get defaultValueId;
   @override
   @JsonKey(name: '_defaultValueId')
   Element? get defaultValueIdElement;
@@ -11408,7 +11408,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   @JsonKey(name: '_defaultValuePositiveInt')
   Element? get defaultValuePositiveIntElement;
   @override
-  Markdown? get defaultValueMarkdown;
+  FhirMarkdown? get defaultValueMarkdown;
   @override
   @JsonKey(name: '_defaultValueMarkDown')
   Element? get defaultValueMarkDownElement;
@@ -11447,32 +11447,32 @@ abstract class _ElementDefinition extends ElementDefinition {
   @override
   Meta? get defaultValueMeta;
   @override
-  Markdown? get meaningWhenMissing;
+  FhirMarkdown? get meaningWhenMissing;
   @override
   @JsonKey(name: '_meaningWhenMissing')
   Element? get meaningWhenMissingElement;
   @override
-  Boolean? get fixedBoolean;
+   FhirBoolean? get fixedBoolean;
   @override
   @JsonKey(name: '_fixedBoolean')
   Element? get fixedBooleanElement;
   @override
-  Integer? get fixedInteger;
+  FhirInteger? get fixedInteger;
   @override
   @JsonKey(name: '_fixedInteger')
   Element? get fixedIntegerElement;
   @override
-  Decimal? get fixedDecimal;
+  FhirDecimal? get fixedDecimal;
   @override
   @JsonKey(name: '_fixedDecimal')
   Element? get fixedDecimalElement;
   @override
-  Base64Binary? get fixedBase64Binary;
+  FhirBase64Binary?? get fixedBase64Binary;
   @override
   @JsonKey(name: '_fixedBase64Binary')
   Element? get fixedBase64BinaryElement;
   @override
-  Instant? get fixedInstant;
+  FhirInstant? get fixedInstant;
   @override
   @JsonKey(name: '_fixedInstant')
   Element? get fixedInstantElement;
@@ -11487,7 +11487,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   @JsonKey(name: '_fixedUri')
   Element? get fixedUriElement;
   @override
-  Date? get fixedDate;
+  FhirDate? get fixedDate;
   @override
   @JsonKey(name: '_fixedDate')
   Element? get fixedDateElement;
@@ -11497,7 +11497,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   @JsonKey(name: '_fixedDateTime')
   Element? get fixedDateTimeElement;
   @override
-  Code? get fixedCode;
+   FhirCode? get fixedCode;
   @override
   @JsonKey(name: '_fixedCode')
   Element? get fixedCodeElement;
@@ -11507,7 +11507,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   @JsonKey(name: '_fixedOid')
   Element? get fixedOidElement;
   @override
-  Id? get fixedId;
+  FhirId? get fixedId;
   @override
   @JsonKey(name: '_fixedId')
   Element? get fixedIdElement;
@@ -11522,7 +11522,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   @JsonKey(name: '_fixedPositiveInt')
   Element? get fixedPositiveIntElement;
   @override
-  Markdown? get fixedMarkdown;
+  FhirMarkdown? get fixedMarkdown;
   @override
   @JsonKey(name: '_fixedMarkdown')
   Element? get fixedMarkdownElement;
@@ -11561,27 +11561,27 @@ abstract class _ElementDefinition extends ElementDefinition {
   @override
   Meta? get fixedMeta;
   @override
-  Boolean? get patternBoolean;
+   FhirBoolean? get patternBoolean;
   @override
   @JsonKey(name: '_patternBoolean')
   Element? get patternBooleanElement;
   @override
-  Integer? get patternInteger;
+  FhirInteger? get patternInteger;
   @override
   @JsonKey(name: '_patternInteger')
   Element? get patternIntegerElement;
   @override
-  Decimal? get patternDecimal;
+  FhirDecimal? get patternDecimal;
   @override
   @JsonKey(name: '_patternDecimal')
   Element? get patternDecimalElement;
   @override
-  Base64Binary? get patternBase64Binary;
+  FhirBase64Binary?? get patternBase64Binary;
   @override
   @JsonKey(name: '_patternBase64Binary')
   Element? get patternBase64BinaryElement;
   @override
-  Instant? get patternInstant;
+  FhirInstant? get patternInstant;
   @override
   @JsonKey(name: '_patternInstant')
   Element? get patternInstantElement;
@@ -11596,7 +11596,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   @JsonKey(name: '_patternUri')
   Element? get patternUriElement;
   @override
-  Date? get patternDate;
+  FhirDate? get patternDate;
   @override
   @JsonKey(name: '_patternDate')
   Element? get patternDateElement;
@@ -11611,7 +11611,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   @JsonKey(name: '_patternTime')
   Element? get patternTimeElement;
   @override
-  Code? get patternCode;
+   FhirCode? get patternCode;
   @override
   @JsonKey(name: '_patternCode')
   Element? get patternCodeElement;
@@ -11621,7 +11621,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   @JsonKey(name: '_patternOid')
   Element? get patternOidElement;
   @override
-  Id? get patternId;
+  FhirId? get patternId;
   @override
   @JsonKey(name: '_patternId')
   Element? get patternIdElement;
@@ -11636,7 +11636,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   @JsonKey(name: '_patternPositiveInt')
   Element? get patternPositiveIntElement;
   @override
-  Markdown? get patternMarkdown;
+  FhirMarkdown? get patternMarkdown;
   @override
   @JsonKey(name: '_patternMarkdown')
   Element? get patternMarkdownElement;
@@ -11675,27 +11675,27 @@ abstract class _ElementDefinition extends ElementDefinition {
   @override
   Meta? get patternMeta;
   @override
-  Boolean? get exampleBoolean;
+   FhirBoolean? get exampleBoolean;
   @override
   @JsonKey(name: '_exampleBoolean')
   Element? get exampleBooleanElement;
   @override
-  Integer? get exampleInteger;
+  FhirInteger? get exampleInteger;
   @override
   @JsonKey(name: '_exampleInteger')
   Element? get exampleIntegerElement;
   @override
-  Decimal? get exampleDecimal;
+  FhirDecimal? get exampleDecimal;
   @override
   @JsonKey(name: '_exampleDecimal')
   Element? get exampleDecimalElement;
   @override
-  Base64Binary? get exampleBase64Binary;
+  FhirBase64Binary?? get exampleBase64Binary;
   @override
   @JsonKey(name: '_exampleBase64Binary')
   Element? get exampleBase64BinaryElement;
   @override
-  Instant? get exampleInstant;
+  FhirInstant? get exampleInstant;
   @override
   @JsonKey(name: '_exampleInstant')
   Element? get exampleInstantElement;
@@ -11710,7 +11710,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   @JsonKey(name: '_exampleUri')
   Element? get exampleUriElement;
   @override
-  Date? get exampleDate;
+  FhirDate? get exampleDate;
   @override
   @JsonKey(name: '_exampleDate')
   Element? get exampleDateElement;
@@ -11725,7 +11725,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   @JsonKey(name: '_exampleTime')
   Element? get exampleTimeElement;
   @override
-  Code? get exampleCode;
+   FhirCode? get exampleCode;
   @override
   @JsonKey(name: '_exampleCode')
   Element? get exampleCodeElement;
@@ -11735,7 +11735,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   @JsonKey(name: '_exampleOid')
   Element? get exampleOidElement;
   @override
-  Id? get exampleId;
+  FhirId? get exampleId;
   @override
   @JsonKey(name: '_exampleId')
   Element? get exampleIdElement;
@@ -11750,7 +11750,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   @JsonKey(name: '_examplePositiveInt')
   Element? get examplePositiveIntElement;
   @override
-  Markdown? get exampleMarkdown;
+  FhirMarkdown? get exampleMarkdown;
   @override
   @JsonKey(name: '_exampleMarkdown')
   Element? get exampleMarkdownElement;
@@ -11789,27 +11789,27 @@ abstract class _ElementDefinition extends ElementDefinition {
   @override
   Meta? get exampleMeta;
   @override
-  Boolean? get minValueBoolean;
+   FhirBoolean? get minValueBoolean;
   @override
   @JsonKey(name: '_minValueBoolean')
   Element? get minValueBooleanElement;
   @override
-  Integer? get minValueInteger;
+  FhirInteger? get minValueInteger;
   @override
   @JsonKey(name: '_minValueInteger')
   Element? get minValueIntegerElement;
   @override
-  Decimal? get minValueDecimal;
+  FhirDecimal? get minValueDecimal;
   @override
   @JsonKey(name: '_minValueDecimal')
   Element? get minValueDecimalElement;
   @override
-  Base64Binary? get minValueBase64Binary;
+  FhirBase64Binary?? get minValueBase64Binary;
   @override
   @JsonKey(name: '_minValueBase64Binary')
   Element? get minValueBase64BinaryElement;
   @override
-  Instant? get minValueInstant;
+  FhirInstant? get minValueInstant;
   @override
   @JsonKey(name: '_minValueInstant')
   Element? get minValueInstantElement;
@@ -11824,7 +11824,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   @JsonKey(name: '_minValueUri')
   Element? get minValueUriElement;
   @override
-  Date? get minValueDate;
+  FhirDate? get minValueDate;
   @override
   @JsonKey(name: '_minValueDate')
   Element? get minValueDateElement;
@@ -11839,7 +11839,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   @JsonKey(name: '_minValueTime')
   Element? get minValueTimeElement;
   @override
-  Code? get minValueCode;
+   FhirCode? get minValueCode;
   @override
   @JsonKey(name: '_minValueCode')
   Element? get minValueCodeElement;
@@ -11849,7 +11849,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   @JsonKey(name: '_minValueOid')
   Element? get minValueOidElement;
   @override
-  Id? get minValueId;
+  FhirId? get minValueId;
   @override
   @JsonKey(name: '_minValueId')
   Element? get minValueIdElement;
@@ -11864,7 +11864,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   @JsonKey(name: '_minValuePositiveInt')
   Element? get minValuePositiveIntElement;
   @override
-  Markdown? get minValueMarkdown;
+  FhirMarkdown? get minValueMarkdown;
   @override
   @JsonKey(name: '_minValueMarkdown')
   Element? get minValueMarkdownElement;
@@ -11903,27 +11903,27 @@ abstract class _ElementDefinition extends ElementDefinition {
   @override
   Meta? get minValueMeta;
   @override
-  Boolean? get maxValueBoolean;
+   FhirBoolean? get maxValueBoolean;
   @override
   @JsonKey(name: '_maxValueBoolean')
   Element? get maxValueBooleanElement;
   @override
-  Integer? get maxValueInteger;
+  FhirInteger? get maxValueInteger;
   @override
   @JsonKey(name: '_maxValueInteger')
   Element? get maxValueIntegerElement;
   @override
-  Decimal? get maxValueDecimal;
+  FhirDecimal? get maxValueDecimal;
   @override
   @JsonKey(name: '_maxValueDecimal')
   Element? get maxValueDecimalElement;
   @override
-  Base64Binary? get maxValueBase64Binary;
+  FhirBase64Binary?? get maxValueBase64Binary;
   @override
   @JsonKey(name: '_maxValueBase64Binary')
   Element? get maxValueBase64BinaryElement;
   @override
-  Instant? get maxValueInstant;
+  FhirInstant? get maxValueInstant;
   @override
   @JsonKey(name: '_maxValueInstant')
   Element? get maxValueInstantElement;
@@ -11938,7 +11938,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   @JsonKey(name: '_maxValueUri')
   Element? get maxValueUriElement;
   @override
-  Date? get maxValueDate;
+  FhirDate? get maxValueDate;
   @override
   @JsonKey(name: '_maxValueDate')
   Element? get maxValueDateElement;
@@ -11953,7 +11953,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   @JsonKey(name: '_maxValueTime')
   Element? get maxValueTimeElement;
   @override
-  Code? get maxValueCode;
+   FhirCode? get maxValueCode;
   @override
   @JsonKey(name: '_maxValueCode')
   Element? get maxValueCodeElement;
@@ -11963,7 +11963,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   @JsonKey(name: '_maxValueOid')
   Element? get maxValueOidElement;
   @override
-  Id? get maxValueId;
+  FhirId? get maxValueId;
   @override
   @JsonKey(name: '_maxValueId')
   Element? get maxValueIdElement;
@@ -11978,7 +11978,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   @JsonKey(name: '_maxValuePositiveInt')
   Element? get maxValuePositiveIntElement;
   @override
-  Markdown? get maxValueMarkdown;
+  FhirMarkdown? get maxValueMarkdown;
   @override
   @JsonKey(name: '_maxValueMarkdown')
   Element? get maxValueMarkdownElement;
@@ -12017,7 +12017,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   @override
   Meta? get maxValueMeta;
   @override
-  Integer? get maxLength;
+  FhirInteger? get maxLength;
   @override
   @JsonKey(name: '_maxLength')
   Element? get maxLengthElement;
@@ -12029,17 +12029,17 @@ abstract class _ElementDefinition extends ElementDefinition {
   @override
   List<ElementDefinitionConstraint>? get constraint;
   @override
-  Boolean? get mustSupport;
+   FhirBoolean? get mustSupport;
   @override
   @JsonKey(name: '_mustSupport')
   Element? get mustSupportElement;
   @override
-  Boolean? get isModifier;
+   FhirBoolean? get isModifier;
   @override
   @JsonKey(name: '_isModifier')
   Element? get isModifierElement;
   @override
-  Boolean? get isSummary;
+   FhirBoolean? get isSummary;
   @override
   @JsonKey(name: '_isSummary')
   Element? get isSummaryElement;
@@ -12059,7 +12059,7 @@ Narrative _$NarrativeFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Narrative {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @JsonKey(name: 'fhir_comments')
@@ -12341,7 +12341,7 @@ abstract class _Narrative extends Narrative {
       _$_Narrative.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -12369,14 +12369,14 @@ ElementDefinitionSlicing _$ElementDefinitionSlicingFromJson(
 
 /// @nodoc
 mixin _$ElementDefinitionSlicing {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<String>? get discriminator => throw _privateConstructorUsedError;
   String? get description => throw _privateConstructorUsedError;
   @JsonKey(name: '_description')
   Element? get descriptionElement => throw _privateConstructorUsedError;
-  Boolean? get ordered => throw _privateConstructorUsedError;
+   FhirBoolean? get ordered => throw _privateConstructorUsedError;
   @JsonKey(name: '_ordered')
   Element? get orderedElement => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: SlicingRules.unknown)
@@ -12402,7 +12402,7 @@ abstract class $ElementDefinitionSlicingCopyWith<$Res> {
       List<String>? discriminator,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      Boolean? ordered,
+       FhirBoolean? ordered,
       @JsonKey(name: '_ordered') Element? orderedElement,
       @JsonKey(unknownEnumValue: SlicingRules.unknown) SlicingRules rules,
       @JsonKey(name: '_rules') Element? rulesElement});
@@ -12460,7 +12460,7 @@ class _$ElementDefinitionSlicingCopyWithImpl<$Res,
       ordered: freezed == ordered
           ? _value.ordered
           : ordered // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       orderedElement: freezed == orderedElement
           ? _value.orderedElement
           : orderedElement // ignore: cast_nullable_to_non_nullable
@@ -12528,7 +12528,7 @@ abstract class _$$_ElementDefinitionSlicingCopyWith<$Res>
       List<String>? discriminator,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      Boolean? ordered,
+       FhirBoolean? ordered,
       @JsonKey(name: '_ordered') Element? orderedElement,
       @JsonKey(unknownEnumValue: SlicingRules.unknown) SlicingRules rules,
       @JsonKey(name: '_rules') Element? rulesElement});
@@ -12587,7 +12587,7 @@ class __$$_ElementDefinitionSlicingCopyWithImpl<$Res>
       ordered: freezed == ordered
           ? _value.ordered
           : ordered // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       orderedElement: freezed == orderedElement
           ? _value.orderedElement
           : orderedElement // ignore: cast_nullable_to_non_nullable
@@ -12653,7 +12653,7 @@ class _$_ElementDefinitionSlicing extends _ElementDefinitionSlicing {
   @JsonKey(name: '_description')
   final Element? descriptionElement;
   @override
-  final Boolean? ordered;
+  final  FhirBoolean? ordered;
   @override
   @JsonKey(name: '_ordered')
   final Element? orderedElement;
@@ -12729,7 +12729,7 @@ abstract class _ElementDefinitionSlicing extends ElementDefinitionSlicing {
       final String? description,
       @JsonKey(name: '_description')
           final Element? descriptionElement,
-      final Boolean? ordered,
+      final  FhirBoolean? ordered,
       @JsonKey(name: '_ordered')
           final Element? orderedElement,
       @JsonKey(unknownEnumValue: SlicingRules.unknown)
@@ -12742,7 +12742,7 @@ abstract class _ElementDefinitionSlicing extends ElementDefinitionSlicing {
       _$_ElementDefinitionSlicing.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -12754,7 +12754,7 @@ abstract class _ElementDefinitionSlicing extends ElementDefinitionSlicing {
   @JsonKey(name: '_description')
   Element? get descriptionElement;
   @override
-  Boolean? get ordered;
+   FhirBoolean? get ordered;
   @override
   @JsonKey(name: '_ordered')
   Element? get orderedElement;
@@ -12777,7 +12777,7 @@ ElementDefinitionBase _$ElementDefinitionBaseFromJson(
 
 /// @nodoc
 mixin _$ElementDefinitionBase {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   String get path => throw _privateConstructorUsedError;
@@ -13112,7 +13112,7 @@ abstract class _ElementDefinitionBase extends ElementDefinitionBase {
       _$_ElementDefinitionBase.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -13144,10 +13144,10 @@ ElementDefinitionType _$ElementDefinitionTypeFromJson(
 
 /// @nodoc
 mixin _$ElementDefinitionType {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
-  Code? get code => throw _privateConstructorUsedError;
+   FhirCode? get code => throw _privateConstructorUsedError;
   @JsonKey(name: '_code')
   TypeCodeExtension? get codeExtension => throw _privateConstructorUsedError;
   List<FhirUri>? get profile => throw _privateConstructorUsedError;
@@ -13172,7 +13172,7 @@ abstract class $ElementDefinitionTypeCopyWith<$Res> {
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      Code? code,
+       FhirCode? code,
       @JsonKey(name: '_code') TypeCodeExtension? codeExtension,
       List<FhirUri>? profile,
       List<TypeAggregation>? aggregation,
@@ -13218,7 +13218,7 @@ class _$ElementDefinitionTypeCopyWithImpl<$Res,
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       codeExtension: freezed == codeExtension
           ? _value.codeExtension
           : codeExtension // ignore: cast_nullable_to_non_nullable
@@ -13278,7 +13278,7 @@ abstract class _$$_ElementDefinitionTypeCopyWith<$Res>
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      Code? code,
+       FhirCode? code,
       @JsonKey(name: '_code') TypeCodeExtension? codeExtension,
       List<FhirUri>? profile,
       List<TypeAggregation>? aggregation,
@@ -13323,7 +13323,7 @@ class __$$_ElementDefinitionTypeCopyWithImpl<$Res>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       codeExtension: freezed == codeExtension
           ? _value.codeExtension
           : codeExtension // ignore: cast_nullable_to_non_nullable
@@ -13383,7 +13383,7 @@ class _$_ElementDefinitionType extends _ElementDefinitionType {
   }
 
   @override
-  final Code? code;
+  final  FhirCode? code;
   @override
   @JsonKey(name: '_code')
   final TypeCodeExtension? codeExtension;
@@ -13478,7 +13478,7 @@ abstract class _ElementDefinitionType extends ElementDefinitionType {
   factory _ElementDefinitionType(
           {final Id? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-          final Code? code,
+          final  FhirCode? code,
           @JsonKey(name: '_code') final TypeCodeExtension? codeExtension,
           final List<FhirUri>? profile,
           final List<TypeAggregation>? aggregation,
@@ -13491,12 +13491,12 @@ abstract class _ElementDefinitionType extends ElementDefinitionType {
       _$_ElementDefinitionType.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
-  Code? get code;
+   FhirCode? get code;
   @override
   @JsonKey(name: '_code')
   TypeCodeExtension? get codeExtension;
@@ -13678,7 +13678,7 @@ ElementDefinitionConstraint _$ElementDefinitionConstraintFromJson(
 
 /// @nodoc
 mixin _$ElementDefinitionConstraint {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   Id get key => throw _privateConstructorUsedError;
@@ -14162,7 +14162,7 @@ abstract class _ElementDefinitionConstraint
       _$_ElementDefinitionConstraint.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -14205,7 +14205,7 @@ ElementDefinitionBinding _$ElementDefinitionBindingFromJson(
 
 /// @nodoc
 mixin _$ElementDefinitionBinding {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @JsonKey(
@@ -14565,7 +14565,7 @@ abstract class _ElementDefinitionBinding extends ElementDefinitionBinding {
       _$_ElementDefinitionBinding.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -14599,7 +14599,7 @@ ElementDefinitionMapping _$ElementDefinitionMappingFromJson(
 
 /// @nodoc
 mixin _$ElementDefinitionMapping {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @JsonKey(name: 'fhir_comments')
@@ -14607,7 +14607,7 @@ mixin _$ElementDefinitionMapping {
   Id get identity => throw _privateConstructorUsedError;
   @JsonKey(name: '_identity')
   Element? get identityElement => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+   FhirCode? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   String get map => throw _privateConstructorUsedError;
@@ -14632,7 +14632,7 @@ abstract class $ElementDefinitionMappingCopyWith<$Res> {
       @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
       Id identity,
       @JsonKey(name: '_identity') Element? identityElement,
-      Code? language,
+       FhirCode? language,
       @JsonKey(name: '_language') Element? languageElement,
       String map,
       @JsonKey(name: '_map') Element? mapElement});
@@ -14690,7 +14690,7 @@ class _$ElementDefinitionMappingCopyWithImpl<$Res,
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -14758,7 +14758,7 @@ abstract class _$$_ElementDefinitionMappingCopyWith<$Res>
       @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
       Id identity,
       @JsonKey(name: '_identity') Element? identityElement,
-      Code? language,
+       FhirCode? language,
       @JsonKey(name: '_language') Element? languageElement,
       String map,
       @JsonKey(name: '_map') Element? mapElement});
@@ -14817,7 +14817,7 @@ class __$$_ElementDefinitionMappingCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -14884,7 +14884,7 @@ class _$_ElementDefinitionMapping extends _ElementDefinitionMapping {
   @JsonKey(name: '_identity')
   final Element? identityElement;
   @override
-  final Code? language;
+  final  FhirCode? language;
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
@@ -14958,7 +14958,7 @@ abstract class _ElementDefinitionMapping extends ElementDefinitionMapping {
           @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
           required final Id identity,
           @JsonKey(name: '_identity') final Element? identityElement,
-          final Code? language,
+          final  FhirCode? language,
           @JsonKey(name: '_language') final Element? languageElement,
           required final String map,
           @JsonKey(name: '_map') final Element? mapElement}) =
@@ -14969,7 +14969,7 @@ abstract class _ElementDefinitionMapping extends ElementDefinitionMapping {
       _$_ElementDefinitionMapping.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -14982,7 +14982,7 @@ abstract class _ElementDefinitionMapping extends ElementDefinitionMapping {
   @JsonKey(name: '_identity')
   Element? get identityElement;
   @override
-  Code? get language;
+   FhirCode? get language;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;

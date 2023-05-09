@@ -19,11 +19,11 @@ class StructureDefinition with Resource, _$StructureDefinition {
     @Default(Dstu2ResourceType.StructureDefinition)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.StructureDefinition)
         Dstu2ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -41,7 +41,7 @@ class StructureDefinition with Resource, _$StructureDefinition {
     @JsonKey(required: true, unknownEnumValue: StructureDefinitionStatus.unknown)
         required StructureDefinitionStatus status,
     @JsonKey(name: '_status') Element? statusElement,
-    Boolean? experimental,
+    FhirBoolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
     String? publisher,
     @JsonKey(name: '_publisher') Element? publisherElement,
@@ -55,13 +55,13 @@ class StructureDefinition with Resource, _$StructureDefinition {
     String? copyright,
     @JsonKey(name: '_copyright') Element? copyrightElement,
     List<Coding>? code,
-    Id? fhirVersion,
+    FhirId? fhirVersion,
     @JsonKey(name: '_fhirVersion') Element? fhirVersionElement,
     List<StructureDefinitionMapping>? mapping,
     @JsonKey(unknownEnumValue: StructureDefinitionKind.unknown)
         required StructureDefinitionKind kind,
     @JsonKey(name: '_kind') Element? kindElement,
-    Code? constrainedType,
+    FhirCode? constrainedType,
     @JsonKey(name: 'abstract') required Boolean abstract_,
     @JsonKey(name: '_abstract') Element? abstractElement,
     @JsonKey(unknownEnumValue: StructureDefinitionContextType.unknown)
@@ -104,7 +104,7 @@ class StructureDefinition with Resource, _$StructureDefinition {
 class StructureDefinitionContact with _$StructureDefinitionContact {
   StructureDefinitionContact._();
   factory StructureDefinitionContact({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? name,
@@ -146,7 +146,7 @@ class StructureDefinitionContact with _$StructureDefinitionContact {
 class StructureDefinitionMapping with _$StructureDefinitionMapping {
   StructureDefinitionMapping._();
   factory StructureDefinitionMapping({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -195,7 +195,7 @@ class StructureDefinitionMapping with _$StructureDefinitionMapping {
 class StructureDefinitionSnapshot with _$StructureDefinitionSnapshot {
   StructureDefinitionSnapshot._();
   factory StructureDefinitionSnapshot({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required List<ElementDefinition> element,
@@ -236,7 +236,7 @@ class StructureDefinitionSnapshot with _$StructureDefinitionSnapshot {
 class StructureDefinitionDifferential with _$StructureDefinitionDifferential {
   StructureDefinitionDifferential._();
   factory StructureDefinitionDifferential({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required List<ElementDefinition> element,
@@ -281,10 +281,10 @@ class DataElement with Resource, _$DataElement {
     @Default(Dstu2ResourceType.DataElement)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.DataElement)
         Dstu2ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
-    Code? language,
+    FhirCode? language,
     Narrative? text,
     List<Resource>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -295,7 +295,7 @@ class DataElement with Resource, _$DataElement {
     String? name,
     @JsonKey(unknownEnumValue: DataElementStatus.unknown)
         required DataElementStatus status,
-    Boolean? experimental,
+    FhirBoolean? experimental,
     String? publisher,
     List<DataElementContact>? contact,
     FhirDateTime? date,
@@ -339,7 +339,7 @@ class DataElement with Resource, _$DataElement {
 class DataElementContact with _$DataElementContact {
   DataElementContact._();
   factory DataElementContact({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? name,
@@ -381,7 +381,7 @@ class DataElementContact with _$DataElementContact {
 class DataElementMapping with _$DataElementMapping {
   DataElementMapping._();
   factory DataElementMapping({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,

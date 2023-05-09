@@ -26,7 +26,7 @@ mixin _$Appointment {
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
@@ -45,7 +45,7 @@ mixin _$Appointment {
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+   FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
@@ -104,7 +104,7 @@ mixin _$Appointment {
   ///  participants has their own participation status which indicates their
   ///  involvement in the process, however this status indicates the shared
   ///  status.
-  Code? get status => throw _privateConstructorUsedError;
+   FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
@@ -185,14 +185,14 @@ mixin _$Appointment {
   Reference? get originatingAppointment => throw _privateConstructorUsedError;
 
   /// [start] Date/Time that the appointment is to take place.
-  Instant? get start => throw _privateConstructorUsedError;
+  FhirInstant? get start => throw _privateConstructorUsedError;
 
   /// [startElement] ("_start") Extensions for start
   @JsonKey(name: '_start')
   Element? get startElement => throw _privateConstructorUsedError;
 
   /// [end] Date/Time that the appointment is to conclude.
-  Instant? get end => throw _privateConstructorUsedError;
+  FhirInstant? get end => throw _privateConstructorUsedError;
 
   /// [endElement] ("_end") Extensions for end
   @JsonKey(name: '_end')
@@ -271,7 +271,7 @@ mixin _$Appointment {
   Element? get recurrenceIdElement => throw _privateConstructorUsedError;
 
   /// [occurrenceChanged] This appointment varies from the recurring pattern.
-  Boolean? get occurrenceChanged => throw _privateConstructorUsedError;
+   FhirBoolean? get occurrenceChanged => throw _privateConstructorUsedError;
 
   /// [occurrenceChangedElement] ("_occurrenceChanged") Extensions for
   ///  occurrenceChanged
@@ -298,12 +298,12 @@ abstract class $AppointmentCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Appointment)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+       FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -312,7 +312,7 @@ abstract class $AppointmentCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+       FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? cancellationReason,
@@ -332,10 +332,10 @@ abstract class $AppointmentCopyWith<$Res> {
       List<Reference>? supportingInformation,
       Reference? previousAppointment,
       Reference? originatingAppointment,
-      Instant? start,
+      FhirInstant? start,
       @JsonKey(name: '_start')
           Element? startElement,
-      Instant? end,
+      FhirInstant? end,
       @JsonKey(name: '_end')
           Element? endElement,
       PositiveInt? minutesDuration,
@@ -355,7 +355,7 @@ abstract class $AppointmentCopyWith<$Res> {
       PositiveInt? recurrenceId,
       @JsonKey(name: '_recurrenceId')
           Element? recurrenceIdElement,
-      Boolean? occurrenceChanged,
+       FhirBoolean? occurrenceChanged,
       @JsonKey(name: '_occurrenceChanged')
           Element? occurrenceChangedElement,
       List<AppointmentRecurrenceTemplate>? recurrenceTemplate});
@@ -468,7 +468,7 @@ class _$AppointmentCopyWithImpl<$Res, $Val extends Appointment>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -496,7 +496,7 @@ class _$AppointmentCopyWithImpl<$Res, $Val extends Appointment>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -636,7 +636,7 @@ class _$AppointmentCopyWithImpl<$Res, $Val extends Appointment>
       occurrenceChanged: freezed == occurrenceChanged
           ? _value.occurrenceChanged
           : occurrenceChanged // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       occurrenceChangedElement: freezed == occurrenceChangedElement
           ? _value.occurrenceChangedElement
           : occurrenceChangedElement // ignore: cast_nullable_to_non_nullable
@@ -876,12 +876,12 @@ abstract class _$$_AppointmentCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Appointment)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+       FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -890,7 +890,7 @@ abstract class _$$_AppointmentCopyWith<$Res>
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+       FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? cancellationReason,
@@ -910,10 +910,10 @@ abstract class _$$_AppointmentCopyWith<$Res>
       List<Reference>? supportingInformation,
       Reference? previousAppointment,
       Reference? originatingAppointment,
-      Instant? start,
+      FhirInstant? start,
       @JsonKey(name: '_start')
           Element? startElement,
-      Instant? end,
+      FhirInstant? end,
       @JsonKey(name: '_end')
           Element? endElement,
       PositiveInt? minutesDuration,
@@ -933,7 +933,7 @@ abstract class _$$_AppointmentCopyWith<$Res>
       PositiveInt? recurrenceId,
       @JsonKey(name: '_recurrenceId')
           Element? recurrenceIdElement,
-      Boolean? occurrenceChanged,
+       FhirBoolean? occurrenceChanged,
       @JsonKey(name: '_occurrenceChanged')
           Element? occurrenceChangedElement,
       List<AppointmentRecurrenceTemplate>? recurrenceTemplate});
@@ -1062,7 +1062,7 @@ class __$$_AppointmentCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -1090,7 +1090,7 @@ class __$$_AppointmentCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -1230,7 +1230,7 @@ class __$$_AppointmentCopyWithImpl<$Res>
       occurrenceChanged: freezed == occurrenceChanged
           ? _value.occurrenceChanged
           : occurrenceChanged // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       occurrenceChangedElement: freezed == occurrenceChangedElement
           ? _value.occurrenceChangedElement
           : occurrenceChangedElement // ignore: cast_nullable_to_non_nullable
@@ -1366,7 +1366,7 @@ class _$_Appointment extends _Appointment {
 
   /// [language] The base language in which the resource is written.
   @override
-  final Code? language;
+  final  FhirCode? language;
 
   /// [languageElement] ("_language") Extensions for language
   @override
@@ -1494,7 +1494,7 @@ class _$_Appointment extends _Appointment {
   ///  involvement in the process, however this status indicates the shared
   ///  status.
   @override
-  final Code? status;
+  final  FhirCode? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -1850,7 +1850,7 @@ class _$_Appointment extends _Appointment {
 
   /// [occurrenceChanged] This appointment varies from the recurring pattern.
   @override
-  final Boolean? occurrenceChanged;
+  final  FhirBoolean? occurrenceChanged;
 
   /// [occurrenceChangedElement] ("_occurrenceChanged") Extensions for
   ///  occurrenceChanged
@@ -2051,7 +2051,7 @@ abstract class _Appointment extends Appointment {
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
               final Element? implicitRulesElement,
-          final Code? language,
+          final  FhirCode? language,
           @JsonKey(name: '_language')
               final Element? languageElement,
           final Narrative? text,
@@ -2060,7 +2060,7 @@ abstract class _Appointment extends Appointment {
               final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           final List<Identifier>? identifier,
-          final Code? status,
+          final  FhirCode? status,
           @JsonKey(name: '_status')
               final Element? statusElement,
           final CodeableConcept? cancellationReason,
@@ -2103,7 +2103,7 @@ abstract class _Appointment extends Appointment {
           final PositiveInt? recurrenceId,
           @JsonKey(name: '_recurrenceId')
               final Element? recurrenceIdElement,
-          final Boolean? occurrenceChanged,
+          final  FhirBoolean? occurrenceChanged,
           @JsonKey(name: '_occurrenceChanged')
               final Element? occurrenceChangedElement,
           final List<AppointmentRecurrenceTemplate>? recurrenceTemplate}) =
@@ -2122,7 +2122,7 @@ abstract class _Appointment extends Appointment {
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -2145,7 +2145,7 @@ abstract class _Appointment extends Appointment {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+   FhirCode? get language;
   @override
 
   /// [languageElement] ("_language") Extensions for language
@@ -2210,7 +2210,7 @@ abstract class _Appointment extends Appointment {
   ///  participants has their own participation status which indicates their
   ///  involvement in the process, however this status indicates the shared
   ///  status.
-  Code? get status;
+   FhirCode? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status
@@ -2304,7 +2304,7 @@ abstract class _Appointment extends Appointment {
   @override
 
   /// [start] Date/Time that the appointment is to take place.
-  Instant? get start;
+  FhirInstant? get start;
   @override
 
   /// [startElement] ("_start") Extensions for start
@@ -2313,7 +2313,7 @@ abstract class _Appointment extends Appointment {
   @override
 
   /// [end] Date/Time that the appointment is to conclude.
-  Instant? get end;
+  FhirInstant? get end;
   @override
 
   /// [endElement] ("_end") Extensions for end
@@ -2406,7 +2406,7 @@ abstract class _Appointment extends Appointment {
   @override
 
   /// [occurrenceChanged] This appointment varies from the recurring pattern.
-  Boolean? get occurrenceChanged;
+   FhirBoolean? get occurrenceChanged;
   @override
 
   /// [occurrenceChangedElement] ("_occurrenceChanged") Extensions for
@@ -2474,14 +2474,14 @@ mixin _$AppointmentParticipant {
   /// [required_] ("required") Whether this participant is required to be
   ///  present at the meeting. If false, the participant is optional.
   @JsonKey(name: 'required')
-  Boolean? get required_ => throw _privateConstructorUsedError;
+   FhirBoolean? get required_ => throw _privateConstructorUsedError;
 
   /// [requiredElement] ("_required") Extensions for required
   @JsonKey(name: '_required')
   Element? get requiredElement => throw _privateConstructorUsedError;
 
   /// [status] Participation status of the actor.
-  Code? get status => throw _privateConstructorUsedError;
+   FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
@@ -2506,9 +2506,9 @@ abstract class $AppointmentParticipantCopyWith<$Res> {
       List<CodeableConcept>? type,
       Period? period,
       Reference? actor,
-      @JsonKey(name: 'required') Boolean? required_,
+      @JsonKey(name: 'required')  FhirBoolean? required_,
       @JsonKey(name: '_required') Element? requiredElement,
-      Code? status,
+       FhirCode? status,
       @JsonKey(name: '_status') Element? statusElement});
 
   $PeriodCopyWith<$Res>? get period;
@@ -2570,7 +2570,7 @@ class _$AppointmentParticipantCopyWithImpl<$Res,
       required_: freezed == required_
           ? _value.required_
           : required_ // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       requiredElement: freezed == requiredElement
           ? _value.requiredElement
           : requiredElement // ignore: cast_nullable_to_non_nullable
@@ -2578,7 +2578,7 @@ class _$AppointmentParticipantCopyWithImpl<$Res,
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -2650,9 +2650,9 @@ abstract class _$$_AppointmentParticipantCopyWith<$Res>
       List<CodeableConcept>? type,
       Period? period,
       Reference? actor,
-      @JsonKey(name: 'required') Boolean? required_,
+      @JsonKey(name: 'required')  FhirBoolean? required_,
       @JsonKey(name: '_required') Element? requiredElement,
-      Code? status,
+       FhirCode? status,
       @JsonKey(name: '_status') Element? statusElement});
 
   @override
@@ -2716,7 +2716,7 @@ class __$$_AppointmentParticipantCopyWithImpl<$Res>
       required_: freezed == required_
           ? _value.required_
           : required_ // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       requiredElement: freezed == requiredElement
           ? _value.requiredElement
           : requiredElement // ignore: cast_nullable_to_non_nullable
@@ -2724,7 +2724,7 @@ class __$$_AppointmentParticipantCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -2850,7 +2850,7 @@ class _$_AppointmentParticipant extends _AppointmentParticipant {
   ///  present at the meeting. If false, the participant is optional.
   @override
   @JsonKey(name: 'required')
-  final Boolean? required_;
+  final  FhirBoolean? required_;
 
   /// [requiredElement] ("_required") Extensions for required
   @override
@@ -2859,7 +2859,7 @@ class _$_AppointmentParticipant extends _AppointmentParticipant {
 
   /// [status] Participation status of the actor.
   @override
-  final Code? status;
+  final  FhirCode? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -2931,9 +2931,9 @@ abstract class _AppointmentParticipant extends AppointmentParticipant {
           final List<CodeableConcept>? type,
           final Period? period,
           final Reference? actor,
-          @JsonKey(name: 'required') final Boolean? required_,
+          @JsonKey(name: 'required') final  FhirBoolean? required_,
           @JsonKey(name: '_required') final Element? requiredElement,
-          final Code? status,
+          final  FhirCode? status,
           @JsonKey(name: '_status') final Element? statusElement}) =
       _$_AppointmentParticipant;
   _AppointmentParticipant._() : super._();
@@ -2991,7 +2991,7 @@ abstract class _AppointmentParticipant extends AppointmentParticipant {
   /// [required_] ("required") Whether this participant is required to be
   ///  present at the meeting. If false, the participant is optional.
   @JsonKey(name: 'required')
-  Boolean? get required_;
+   FhirBoolean? get required_;
   @override
 
   /// [requiredElement] ("_required") Extensions for required
@@ -3000,7 +3000,7 @@ abstract class _AppointmentParticipant extends AppointmentParticipant {
   @override
 
   /// [status] Participation status of the actor.
-  Code? get status;
+   FhirCode? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status
@@ -3057,7 +3057,7 @@ mixin _$AppointmentRecurrenceTemplate {
 
   /// [lastOccurrenceDate] Recurring appointments will not occur after this
   ///  date.
-  Date? get lastOccurrenceDate => throw _privateConstructorUsedError;
+  FhirDate? get lastOccurrenceDate => throw _privateConstructorUsedError;
 
   /// [lastOccurrenceDateElement] ("_lastOccurrenceDate") Extensions for
   ///  lastOccurrenceDate
@@ -3134,7 +3134,7 @@ abstract class $AppointmentRecurrenceTemplateCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       CodeableConcept? timezone,
       CodeableConcept recurrenceType,
-      Date? lastOccurrenceDate,
+      FhirDate? lastOccurrenceDate,
       @JsonKey(name: '_lastOccurrenceDate')
           Element? lastOccurrenceDateElement,
       PositiveInt? occurrenceCount,
@@ -3371,7 +3371,7 @@ abstract class _$$_AppointmentRecurrenceTemplateCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       CodeableConcept? timezone,
       CodeableConcept recurrenceType,
-      Date? lastOccurrenceDate,
+      FhirDate? lastOccurrenceDate,
       @JsonKey(name: '_lastOccurrenceDate')
           Element? lastOccurrenceDateElement,
       PositiveInt? occurrenceCount,
@@ -3926,7 +3926,7 @@ abstract class _AppointmentRecurrenceTemplate
 
   /// [lastOccurrenceDate] Recurring appointments will not occur after this
   ///  date.
-  Date? get lastOccurrenceDate;
+  FhirDate? get lastOccurrenceDate;
   @override
 
   /// [lastOccurrenceDateElement] ("_lastOccurrenceDate") Extensions for
@@ -4031,7 +4031,7 @@ mixin _$AppointmentWeeklyTemplate {
       throw _privateConstructorUsedError;
 
   /// [monday] Indicates that recurring appointments should occur on Mondays.
-  Boolean? get monday => throw _privateConstructorUsedError;
+   FhirBoolean? get monday => throw _privateConstructorUsedError;
 
   /// [mondayElement] ("_monday") Extensions for monday
   @JsonKey(name: '_monday')
@@ -4039,7 +4039,7 @@ mixin _$AppointmentWeeklyTemplate {
 
   /// [tuesday] Indicates that recurring appointments should occur on
   ///  Tuesdays.
-  Boolean? get tuesday => throw _privateConstructorUsedError;
+   FhirBoolean? get tuesday => throw _privateConstructorUsedError;
 
   /// [tuesdayElement] ("_tuesday") Extensions for tuesday
   @JsonKey(name: '_tuesday')
@@ -4047,7 +4047,7 @@ mixin _$AppointmentWeeklyTemplate {
 
   /// [wednesday] Indicates that recurring appointments should occur on
   ///  Wednesdays.
-  Boolean? get wednesday => throw _privateConstructorUsedError;
+   FhirBoolean? get wednesday => throw _privateConstructorUsedError;
 
   /// [wednesdayElement] ("_wednesday") Extensions for wednesday
   @JsonKey(name: '_wednesday')
@@ -4055,14 +4055,14 @@ mixin _$AppointmentWeeklyTemplate {
 
   /// [thursday] Indicates that recurring appointments should occur on
   ///  Thursdays.
-  Boolean? get thursday => throw _privateConstructorUsedError;
+   FhirBoolean? get thursday => throw _privateConstructorUsedError;
 
   /// [thursdayElement] ("_thursday") Extensions for thursday
   @JsonKey(name: '_thursday')
   Element? get thursdayElement => throw _privateConstructorUsedError;
 
   /// [friday] Indicates that recurring appointments should occur on Fridays.
-  Boolean? get friday => throw _privateConstructorUsedError;
+   FhirBoolean? get friday => throw _privateConstructorUsedError;
 
   /// [fridayElement] ("_friday") Extensions for friday
   @JsonKey(name: '_friday')
@@ -4070,14 +4070,14 @@ mixin _$AppointmentWeeklyTemplate {
 
   /// [saturday] Indicates that recurring appointments should occur on
   ///  Saturdays.
-  Boolean? get saturday => throw _privateConstructorUsedError;
+   FhirBoolean? get saturday => throw _privateConstructorUsedError;
 
   /// [saturdayElement] ("_saturday") Extensions for saturday
   @JsonKey(name: '_saturday')
   Element? get saturdayElement => throw _privateConstructorUsedError;
 
   /// [sunday] Indicates that recurring appointments should occur on Sundays.
-  Boolean? get sunday => throw _privateConstructorUsedError;
+   FhirBoolean? get sunday => throw _privateConstructorUsedError;
 
   /// [sundayElement] ("_sunday") Extensions for sunday
   @JsonKey(name: '_sunday')
@@ -4109,19 +4109,19 @@ abstract class $AppointmentWeeklyTemplateCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Boolean? monday,
+       FhirBoolean? monday,
       @JsonKey(name: '_monday') Element? mondayElement,
-      Boolean? tuesday,
+       FhirBoolean? tuesday,
       @JsonKey(name: '_tuesday') Element? tuesdayElement,
-      Boolean? wednesday,
+       FhirBoolean? wednesday,
       @JsonKey(name: '_wednesday') Element? wednesdayElement,
-      Boolean? thursday,
+       FhirBoolean? thursday,
       @JsonKey(name: '_thursday') Element? thursdayElement,
-      Boolean? friday,
+       FhirBoolean? friday,
       @JsonKey(name: '_friday') Element? fridayElement,
-      Boolean? saturday,
+       FhirBoolean? saturday,
       @JsonKey(name: '_saturday') Element? saturdayElement,
-      Boolean? sunday,
+       FhirBoolean? sunday,
       @JsonKey(name: '_sunday') Element? sundayElement,
       PositiveInt? weekInterval,
       @JsonKey(name: '_weekInterval') Element? weekIntervalElement});
@@ -4186,7 +4186,7 @@ class _$AppointmentWeeklyTemplateCopyWithImpl<$Res,
       monday: freezed == monday
           ? _value.monday
           : monday // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       mondayElement: freezed == mondayElement
           ? _value.mondayElement
           : mondayElement // ignore: cast_nullable_to_non_nullable
@@ -4194,7 +4194,7 @@ class _$AppointmentWeeklyTemplateCopyWithImpl<$Res,
       tuesday: freezed == tuesday
           ? _value.tuesday
           : tuesday // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       tuesdayElement: freezed == tuesdayElement
           ? _value.tuesdayElement
           : tuesdayElement // ignore: cast_nullable_to_non_nullable
@@ -4202,7 +4202,7 @@ class _$AppointmentWeeklyTemplateCopyWithImpl<$Res,
       wednesday: freezed == wednesday
           ? _value.wednesday
           : wednesday // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       wednesdayElement: freezed == wednesdayElement
           ? _value.wednesdayElement
           : wednesdayElement // ignore: cast_nullable_to_non_nullable
@@ -4210,7 +4210,7 @@ class _$AppointmentWeeklyTemplateCopyWithImpl<$Res,
       thursday: freezed == thursday
           ? _value.thursday
           : thursday // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       thursdayElement: freezed == thursdayElement
           ? _value.thursdayElement
           : thursdayElement // ignore: cast_nullable_to_non_nullable
@@ -4218,7 +4218,7 @@ class _$AppointmentWeeklyTemplateCopyWithImpl<$Res,
       friday: freezed == friday
           ? _value.friday
           : friday // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       fridayElement: freezed == fridayElement
           ? _value.fridayElement
           : fridayElement // ignore: cast_nullable_to_non_nullable
@@ -4226,7 +4226,7 @@ class _$AppointmentWeeklyTemplateCopyWithImpl<$Res,
       saturday: freezed == saturday
           ? _value.saturday
           : saturday // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       saturdayElement: freezed == saturdayElement
           ? _value.saturdayElement
           : saturdayElement // ignore: cast_nullable_to_non_nullable
@@ -4234,7 +4234,7 @@ class _$AppointmentWeeklyTemplateCopyWithImpl<$Res,
       sunday: freezed == sunday
           ? _value.sunday
           : sunday // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       sundayElement: freezed == sundayElement
           ? _value.sundayElement
           : sundayElement // ignore: cast_nullable_to_non_nullable
@@ -4360,19 +4360,19 @@ abstract class _$$_AppointmentWeeklyTemplateCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Boolean? monday,
+       FhirBoolean? monday,
       @JsonKey(name: '_monday') Element? mondayElement,
-      Boolean? tuesday,
+       FhirBoolean? tuesday,
       @JsonKey(name: '_tuesday') Element? tuesdayElement,
-      Boolean? wednesday,
+       FhirBoolean? wednesday,
       @JsonKey(name: '_wednesday') Element? wednesdayElement,
-      Boolean? thursday,
+       FhirBoolean? thursday,
       @JsonKey(name: '_thursday') Element? thursdayElement,
-      Boolean? friday,
+       FhirBoolean? friday,
       @JsonKey(name: '_friday') Element? fridayElement,
-      Boolean? saturday,
+       FhirBoolean? saturday,
       @JsonKey(name: '_saturday') Element? saturdayElement,
-      Boolean? sunday,
+       FhirBoolean? sunday,
       @JsonKey(name: '_sunday') Element? sundayElement,
       PositiveInt? weekInterval,
       @JsonKey(name: '_weekInterval') Element? weekIntervalElement});
@@ -4444,7 +4444,7 @@ class __$$_AppointmentWeeklyTemplateCopyWithImpl<$Res>
       monday: freezed == monday
           ? _value.monday
           : monday // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       mondayElement: freezed == mondayElement
           ? _value.mondayElement
           : mondayElement // ignore: cast_nullable_to_non_nullable
@@ -4452,7 +4452,7 @@ class __$$_AppointmentWeeklyTemplateCopyWithImpl<$Res>
       tuesday: freezed == tuesday
           ? _value.tuesday
           : tuesday // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       tuesdayElement: freezed == tuesdayElement
           ? _value.tuesdayElement
           : tuesdayElement // ignore: cast_nullable_to_non_nullable
@@ -4460,7 +4460,7 @@ class __$$_AppointmentWeeklyTemplateCopyWithImpl<$Res>
       wednesday: freezed == wednesday
           ? _value.wednesday
           : wednesday // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       wednesdayElement: freezed == wednesdayElement
           ? _value.wednesdayElement
           : wednesdayElement // ignore: cast_nullable_to_non_nullable
@@ -4468,7 +4468,7 @@ class __$$_AppointmentWeeklyTemplateCopyWithImpl<$Res>
       thursday: freezed == thursday
           ? _value.thursday
           : thursday // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       thursdayElement: freezed == thursdayElement
           ? _value.thursdayElement
           : thursdayElement // ignore: cast_nullable_to_non_nullable
@@ -4476,7 +4476,7 @@ class __$$_AppointmentWeeklyTemplateCopyWithImpl<$Res>
       friday: freezed == friday
           ? _value.friday
           : friday // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       fridayElement: freezed == fridayElement
           ? _value.fridayElement
           : fridayElement // ignore: cast_nullable_to_non_nullable
@@ -4484,7 +4484,7 @@ class __$$_AppointmentWeeklyTemplateCopyWithImpl<$Res>
       saturday: freezed == saturday
           ? _value.saturday
           : saturday // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       saturdayElement: freezed == saturdayElement
           ? _value.saturdayElement
           : saturdayElement // ignore: cast_nullable_to_non_nullable
@@ -4492,7 +4492,7 @@ class __$$_AppointmentWeeklyTemplateCopyWithImpl<$Res>
       sunday: freezed == sunday
           ? _value.sunday
           : sunday // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       sundayElement: freezed == sundayElement
           ? _value.sundayElement
           : sundayElement // ignore: cast_nullable_to_non_nullable
@@ -4610,7 +4610,7 @@ class _$_AppointmentWeeklyTemplate extends _AppointmentWeeklyTemplate {
 
   /// [monday] Indicates that recurring appointments should occur on Mondays.
   @override
-  final Boolean? monday;
+  final  FhirBoolean? monday;
 
   /// [mondayElement] ("_monday") Extensions for monday
   @override
@@ -4620,7 +4620,7 @@ class _$_AppointmentWeeklyTemplate extends _AppointmentWeeklyTemplate {
   /// [tuesday] Indicates that recurring appointments should occur on
   ///  Tuesdays.
   @override
-  final Boolean? tuesday;
+  final  FhirBoolean? tuesday;
 
   /// [tuesdayElement] ("_tuesday") Extensions for tuesday
   @override
@@ -4630,7 +4630,7 @@ class _$_AppointmentWeeklyTemplate extends _AppointmentWeeklyTemplate {
   /// [wednesday] Indicates that recurring appointments should occur on
   ///  Wednesdays.
   @override
-  final Boolean? wednesday;
+  final  FhirBoolean? wednesday;
 
   /// [wednesdayElement] ("_wednesday") Extensions for wednesday
   @override
@@ -4640,7 +4640,7 @@ class _$_AppointmentWeeklyTemplate extends _AppointmentWeeklyTemplate {
   /// [thursday] Indicates that recurring appointments should occur on
   ///  Thursdays.
   @override
-  final Boolean? thursday;
+  final  FhirBoolean? thursday;
 
   /// [thursdayElement] ("_thursday") Extensions for thursday
   @override
@@ -4649,7 +4649,7 @@ class _$_AppointmentWeeklyTemplate extends _AppointmentWeeklyTemplate {
 
   /// [friday] Indicates that recurring appointments should occur on Fridays.
   @override
-  final Boolean? friday;
+  final  FhirBoolean? friday;
 
   /// [fridayElement] ("_friday") Extensions for friday
   @override
@@ -4659,7 +4659,7 @@ class _$_AppointmentWeeklyTemplate extends _AppointmentWeeklyTemplate {
   /// [saturday] Indicates that recurring appointments should occur on
   ///  Saturdays.
   @override
-  final Boolean? saturday;
+  final  FhirBoolean? saturday;
 
   /// [saturdayElement] ("_saturday") Extensions for saturday
   @override
@@ -4668,7 +4668,7 @@ class _$_AppointmentWeeklyTemplate extends _AppointmentWeeklyTemplate {
 
   /// [sunday] Indicates that recurring appointments should occur on Sundays.
   @override
-  final Boolean? sunday;
+  final  FhirBoolean? sunday;
 
   /// [sundayElement] ("_sunday") Extensions for sunday
   @override
@@ -4777,19 +4777,19 @@ abstract class _AppointmentWeeklyTemplate extends AppointmentWeeklyTemplate {
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
-          final Boolean? monday,
+          final  FhirBoolean? monday,
           @JsonKey(name: '_monday') final Element? mondayElement,
-          final Boolean? tuesday,
+          final  FhirBoolean? tuesday,
           @JsonKey(name: '_tuesday') final Element? tuesdayElement,
-          final Boolean? wednesday,
+          final  FhirBoolean? wednesday,
           @JsonKey(name: '_wednesday') final Element? wednesdayElement,
-          final Boolean? thursday,
+          final  FhirBoolean? thursday,
           @JsonKey(name: '_thursday') final Element? thursdayElement,
-          final Boolean? friday,
+          final  FhirBoolean? friday,
           @JsonKey(name: '_friday') final Element? fridayElement,
-          final Boolean? saturday,
+          final  FhirBoolean? saturday,
           @JsonKey(name: '_saturday') final Element? saturdayElement,
-          final Boolean? sunday,
+          final  FhirBoolean? sunday,
           @JsonKey(name: '_sunday') final Element? sundayElement,
           final PositiveInt? weekInterval,
           @JsonKey(name: '_weekInterval') final Element? weekIntervalElement}) =
@@ -4834,7 +4834,7 @@ abstract class _AppointmentWeeklyTemplate extends AppointmentWeeklyTemplate {
   @override
 
   /// [monday] Indicates that recurring appointments should occur on Mondays.
-  Boolean? get monday;
+   FhirBoolean? get monday;
   @override
 
   /// [mondayElement] ("_monday") Extensions for monday
@@ -4844,7 +4844,7 @@ abstract class _AppointmentWeeklyTemplate extends AppointmentWeeklyTemplate {
 
   /// [tuesday] Indicates that recurring appointments should occur on
   ///  Tuesdays.
-  Boolean? get tuesday;
+   FhirBoolean? get tuesday;
   @override
 
   /// [tuesdayElement] ("_tuesday") Extensions for tuesday
@@ -4854,7 +4854,7 @@ abstract class _AppointmentWeeklyTemplate extends AppointmentWeeklyTemplate {
 
   /// [wednesday] Indicates that recurring appointments should occur on
   ///  Wednesdays.
-  Boolean? get wednesday;
+   FhirBoolean? get wednesday;
   @override
 
   /// [wednesdayElement] ("_wednesday") Extensions for wednesday
@@ -4864,7 +4864,7 @@ abstract class _AppointmentWeeklyTemplate extends AppointmentWeeklyTemplate {
 
   /// [thursday] Indicates that recurring appointments should occur on
   ///  Thursdays.
-  Boolean? get thursday;
+   FhirBoolean? get thursday;
   @override
 
   /// [thursdayElement] ("_thursday") Extensions for thursday
@@ -4873,7 +4873,7 @@ abstract class _AppointmentWeeklyTemplate extends AppointmentWeeklyTemplate {
   @override
 
   /// [friday] Indicates that recurring appointments should occur on Fridays.
-  Boolean? get friday;
+   FhirBoolean? get friday;
   @override
 
   /// [fridayElement] ("_friday") Extensions for friday
@@ -4883,7 +4883,7 @@ abstract class _AppointmentWeeklyTemplate extends AppointmentWeeklyTemplate {
 
   /// [saturday] Indicates that recurring appointments should occur on
   ///  Saturdays.
-  Boolean? get saturday;
+   FhirBoolean? get saturday;
   @override
 
   /// [saturdayElement] ("_saturday") Extensions for saturday
@@ -4892,7 +4892,7 @@ abstract class _AppointmentWeeklyTemplate extends AppointmentWeeklyTemplate {
   @override
 
   /// [sunday] Indicates that recurring appointments should occur on Sundays.
-  Boolean? get sunday;
+   FhirBoolean? get sunday;
   @override
 
   /// [sundayElement] ("_sunday") Extensions for sunday
@@ -5877,7 +5877,7 @@ mixin _$AppointmentResponse {
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
@@ -5896,7 +5896,7 @@ mixin _$AppointmentResponse {
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+   FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
@@ -5956,7 +5956,7 @@ mixin _$AppointmentResponse {
   /// [proposedNewTime] Indicates that the response is proposing a different
   ///  time that was initially requested.  The new proposed time will be
   ///  indicated in the start and end properties.
-  Boolean? get proposedNewTime => throw _privateConstructorUsedError;
+   FhirBoolean? get proposedNewTime => throw _privateConstructorUsedError;
 
   /// [proposedNewTimeElement] ("_proposedNewTime") Extensions for
   ///  proposedNewTime
@@ -5965,7 +5965,7 @@ mixin _$AppointmentResponse {
 
   /// [start] Date/Time that the appointment is to take place, or requested
   ///  new start time.
-  Instant? get start => throw _privateConstructorUsedError;
+  FhirInstant? get start => throw _privateConstructorUsedError;
 
   /// [startElement] ("_start") Extensions for start
   @JsonKey(name: '_start')
@@ -5974,7 +5974,7 @@ mixin _$AppointmentResponse {
   /// [end] This may be either the same as the appointment request to confirm
   ///  the details of the appointment, or alternately a new time to request a
   ///  re-negotiation of the end time.
-  Instant? get end => throw _privateConstructorUsedError;
+  FhirInstant? get end => throw _privateConstructorUsedError;
 
   /// [endElement] ("_end") Extensions for end
   @JsonKey(name: '_end')
@@ -5994,7 +5994,7 @@ mixin _$AppointmentResponse {
   ///  requested time change. When the status is accepted, the times can
   ///  either be the time of the appointment (as a confirmation of the time)
   ///  or can be empty.
-  Code? get participantStatus => throw _privateConstructorUsedError;
+   FhirCode? get participantStatus => throw _privateConstructorUsedError;
 
   /// [participantStatusElement] ("_participantStatus") Extensions for
   ///  participantStatus
@@ -6010,7 +6010,7 @@ mixin _$AppointmentResponse {
 
   /// [recurring] Indicates that this AppointmentResponse applies to all
   ///  occurrences in a recurring request.
-  Boolean? get recurring => throw _privateConstructorUsedError;
+   FhirBoolean? get recurring => throw _privateConstructorUsedError;
 
   /// [recurringElement] ("_recurring") Extensions for recurring
   @JsonKey(name: '_recurring')
@@ -6020,7 +6020,7 @@ mixin _$AppointmentResponse {
   ///  could be used in place of the recurrenceId to be more direct (or where
   ///  the template is provided through the simple list of dates in
   ///  `Appointment.occurrenceDate`).
-  Date? get occurrenceDate => throw _privateConstructorUsedError;
+  FhirDate? get occurrenceDate => throw _privateConstructorUsedError;
 
   /// [occurrenceDateElement] ("_occurrenceDate") Extensions for
   ///  occurrenceDate
@@ -6050,12 +6050,12 @@ abstract class $AppointmentResponseCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.AppointmentResponse)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+       FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -6065,27 +6065,27 @@ abstract class $AppointmentResponseCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       Reference appointment,
-      Boolean? proposedNewTime,
+       FhirBoolean? proposedNewTime,
       @JsonKey(name: '_proposedNewTime')
           Element? proposedNewTimeElement,
-      Instant? start,
+      FhirInstant? start,
       @JsonKey(name: '_start')
           Element? startElement,
-      Instant? end,
+      FhirInstant? end,
       @JsonKey(name: '_end')
           Element? endElement,
       List<CodeableConcept>? participantType,
       Reference? actor,
-      Code? participantStatus,
+       FhirCode? participantStatus,
       @JsonKey(name: '_participantStatus')
           Element? participantStatusElement,
       String? comment,
       @JsonKey(name: '_comment')
           Element? commentElement,
-      Boolean? recurring,
+       FhirBoolean? recurring,
       @JsonKey(name: '_recurring')
           Element? recurringElement,
-      Date? occurrenceDate,
+      FhirDate? occurrenceDate,
       @JsonKey(name: '_occurrenceDate')
           Element? occurrenceDateElement,
       PositiveInt? recurrenceId,
@@ -6177,7 +6177,7 @@ class _$AppointmentResponseCopyWithImpl<$Res, $Val extends AppointmentResponse>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -6209,7 +6209,7 @@ class _$AppointmentResponseCopyWithImpl<$Res, $Val extends AppointmentResponse>
       proposedNewTime: freezed == proposedNewTime
           ? _value.proposedNewTime
           : proposedNewTime // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       proposedNewTimeElement: freezed == proposedNewTimeElement
           ? _value.proposedNewTimeElement
           : proposedNewTimeElement // ignore: cast_nullable_to_non_nullable
@@ -6241,7 +6241,7 @@ class _$AppointmentResponseCopyWithImpl<$Res, $Val extends AppointmentResponse>
       participantStatus: freezed == participantStatus
           ? _value.participantStatus
           : participantStatus // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       participantStatusElement: freezed == participantStatusElement
           ? _value.participantStatusElement
           : participantStatusElement // ignore: cast_nullable_to_non_nullable
@@ -6257,7 +6257,7 @@ class _$AppointmentResponseCopyWithImpl<$Res, $Val extends AppointmentResponse>
       recurring: freezed == recurring
           ? _value.recurring
           : recurring // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       recurringElement: freezed == recurringElement
           ? _value.recurringElement
           : recurringElement // ignore: cast_nullable_to_non_nullable
@@ -6457,12 +6457,12 @@ abstract class _$$_AppointmentResponseCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.AppointmentResponse)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+       FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -6472,27 +6472,27 @@ abstract class _$$_AppointmentResponseCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       Reference appointment,
-      Boolean? proposedNewTime,
+       FhirBoolean? proposedNewTime,
       @JsonKey(name: '_proposedNewTime')
           Element? proposedNewTimeElement,
-      Instant? start,
+      FhirInstant? start,
       @JsonKey(name: '_start')
           Element? startElement,
-      Instant? end,
+      FhirInstant? end,
       @JsonKey(name: '_end')
           Element? endElement,
       List<CodeableConcept>? participantType,
       Reference? actor,
-      Code? participantStatus,
+       FhirCode? participantStatus,
       @JsonKey(name: '_participantStatus')
           Element? participantStatusElement,
       String? comment,
       @JsonKey(name: '_comment')
           Element? commentElement,
-      Boolean? recurring,
+       FhirBoolean? recurring,
       @JsonKey(name: '_recurring')
           Element? recurringElement,
-      Date? occurrenceDate,
+      FhirDate? occurrenceDate,
       @JsonKey(name: '_occurrenceDate')
           Element? occurrenceDateElement,
       PositiveInt? recurrenceId,
@@ -6596,7 +6596,7 @@ class __$$_AppointmentResponseCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -6628,7 +6628,7 @@ class __$$_AppointmentResponseCopyWithImpl<$Res>
       proposedNewTime: freezed == proposedNewTime
           ? _value.proposedNewTime
           : proposedNewTime // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       proposedNewTimeElement: freezed == proposedNewTimeElement
           ? _value.proposedNewTimeElement
           : proposedNewTimeElement // ignore: cast_nullable_to_non_nullable
@@ -6660,7 +6660,7 @@ class __$$_AppointmentResponseCopyWithImpl<$Res>
       participantStatus: freezed == participantStatus
           ? _value.participantStatus
           : participantStatus // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       participantStatusElement: freezed == participantStatusElement
           ? _value.participantStatusElement
           : participantStatusElement // ignore: cast_nullable_to_non_nullable
@@ -6676,7 +6676,7 @@ class __$$_AppointmentResponseCopyWithImpl<$Res>
       recurring: freezed == recurring
           ? _value.recurring
           : recurring // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       recurringElement: freezed == recurringElement
           ? _value.recurringElement
           : recurringElement // ignore: cast_nullable_to_non_nullable
@@ -6789,7 +6789,7 @@ class _$_AppointmentResponse extends _AppointmentResponse {
 
   /// [language] The base language in which the resource is written.
   @override
-  final Code? language;
+  final  FhirCode? language;
 
   /// [languageElement] ("_language") Extensions for language
   @override
@@ -6918,7 +6918,7 @@ class _$_AppointmentResponse extends _AppointmentResponse {
   ///  time that was initially requested.  The new proposed time will be
   ///  indicated in the start and end properties.
   @override
-  final Boolean? proposedNewTime;
+  final  FhirBoolean? proposedNewTime;
 
   /// [proposedNewTimeElement] ("_proposedNewTime") Extensions for
   ///  proposedNewTime
@@ -6972,7 +6972,7 @@ class _$_AppointmentResponse extends _AppointmentResponse {
   ///  either be the time of the appointment (as a confirmation of the time)
   ///  or can be empty.
   @override
-  final Code? participantStatus;
+  final  FhirCode? participantStatus;
 
   /// [participantStatusElement] ("_participantStatus") Extensions for
   ///  participantStatus
@@ -6992,7 +6992,7 @@ class _$_AppointmentResponse extends _AppointmentResponse {
   /// [recurring] Indicates that this AppointmentResponse applies to all
   ///  occurrences in a recurring request.
   @override
-  final Boolean? recurring;
+  final  FhirBoolean? recurring;
 
   /// [recurringElement] ("_recurring") Extensions for recurring
   @override
@@ -7151,7 +7151,7 @@ abstract class _AppointmentResponse extends AppointmentResponse {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final  FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -7161,7 +7161,7 @@ abstract class _AppointmentResponse extends AppointmentResponse {
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       required final Reference appointment,
-      final Boolean? proposedNewTime,
+      final  FhirBoolean? proposedNewTime,
       @JsonKey(name: '_proposedNewTime')
           final Element? proposedNewTimeElement,
       final Instant? start,
@@ -7172,13 +7172,13 @@ abstract class _AppointmentResponse extends AppointmentResponse {
           final Element? endElement,
       final List<CodeableConcept>? participantType,
       final Reference? actor,
-      final Code? participantStatus,
+      final  FhirCode? participantStatus,
       @JsonKey(name: '_participantStatus')
           final Element? participantStatusElement,
       final String? comment,
       @JsonKey(name: '_comment')
           final Element? commentElement,
-      final Boolean? recurring,
+      final  FhirBoolean? recurring,
       @JsonKey(name: '_recurring')
           final Element? recurringElement,
       final Date? occurrenceDate,
@@ -7201,7 +7201,7 @@ abstract class _AppointmentResponse extends AppointmentResponse {
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -7224,7 +7224,7 @@ abstract class _AppointmentResponse extends AppointmentResponse {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+   FhirCode? get language;
   @override
 
   /// [languageElement] ("_language") Extensions for language
@@ -7291,7 +7291,7 @@ abstract class _AppointmentResponse extends AppointmentResponse {
   /// [proposedNewTime] Indicates that the response is proposing a different
   ///  time that was initially requested.  The new proposed time will be
   ///  indicated in the start and end properties.
-  Boolean? get proposedNewTime;
+   FhirBoolean? get proposedNewTime;
   @override
 
   /// [proposedNewTimeElement] ("_proposedNewTime") Extensions for
@@ -7302,7 +7302,7 @@ abstract class _AppointmentResponse extends AppointmentResponse {
 
   /// [start] Date/Time that the appointment is to take place, or requested
   ///  new start time.
-  Instant? get start;
+  FhirInstant? get start;
   @override
 
   /// [startElement] ("_start") Extensions for start
@@ -7313,7 +7313,7 @@ abstract class _AppointmentResponse extends AppointmentResponse {
   /// [end] This may be either the same as the appointment request to confirm
   ///  the details of the appointment, or alternately a new time to request a
   ///  re-negotiation of the end time.
-  Instant? get end;
+  FhirInstant? get end;
   @override
 
   /// [endElement] ("_end") Extensions for end
@@ -7336,7 +7336,7 @@ abstract class _AppointmentResponse extends AppointmentResponse {
   ///  requested time change. When the status is accepted, the times can
   ///  either be the time of the appointment (as a confirmation of the time)
   ///  or can be empty.
-  Code? get participantStatus;
+   FhirCode? get participantStatus;
   @override
 
   /// [participantStatusElement] ("_participantStatus") Extensions for
@@ -7356,7 +7356,7 @@ abstract class _AppointmentResponse extends AppointmentResponse {
 
   /// [recurring] Indicates that this AppointmentResponse applies to all
   ///  occurrences in a recurring request.
-  Boolean? get recurring;
+   FhirBoolean? get recurring;
   @override
 
   /// [recurringElement] ("_recurring") Extensions for recurring
@@ -7368,7 +7368,7 @@ abstract class _AppointmentResponse extends AppointmentResponse {
   ///  could be used in place of the recurrenceId to be more direct (or where
   ///  the template is provided through the simple list of dates in
   ///  `Appointment.occurrenceDate`).
-  Date? get occurrenceDate;
+  FhirDate? get occurrenceDate;
   @override
 
   /// [occurrenceDateElement] ("_occurrenceDate") Extensions for
@@ -7403,7 +7403,7 @@ mixin _$Schedule {
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
@@ -7422,7 +7422,7 @@ mixin _$Schedule {
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+   FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
@@ -7475,7 +7475,7 @@ mixin _$Schedule {
 
   /// [active] Whether this schedule record is in active use or should not be
   ///  used (such as was entered in error).
-  Boolean? get active => throw _privateConstructorUsedError;
+   FhirBoolean? get active => throw _privateConstructorUsedError;
 
   /// [activeElement] ("_active") Extensions for active
   @JsonKey(name: '_active')
@@ -7537,12 +7537,12 @@ abstract class $ScheduleCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Schedule)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+       FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -7551,7 +7551,7 @@ abstract class $ScheduleCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Boolean? active,
+       FhirBoolean? active,
       @JsonKey(name: '_active')
           Element? activeElement,
       List<CodeableConcept>? serviceCategory,
@@ -7637,7 +7637,7 @@ class _$ScheduleCopyWithImpl<$Res, $Val extends Schedule>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -7665,7 +7665,7 @@ class _$ScheduleCopyWithImpl<$Res, $Val extends Schedule>
       active: freezed == active
           ? _value.active
           : active // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       activeElement: freezed == activeElement
           ? _value.activeElement
           : activeElement // ignore: cast_nullable_to_non_nullable
@@ -7816,12 +7816,12 @@ abstract class _$$_ScheduleCopyWith<$Res> implements $ScheduleCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Schedule)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+       FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -7830,7 +7830,7 @@ abstract class _$$_ScheduleCopyWith<$Res> implements $ScheduleCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Boolean? active,
+       FhirBoolean? active,
       @JsonKey(name: '_active')
           Element? activeElement,
       List<CodeableConcept>? serviceCategory,
@@ -7922,7 +7922,7 @@ class __$$_ScheduleCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -7950,7 +7950,7 @@ class __$$_ScheduleCopyWithImpl<$Res>
       active: freezed == active
           ? _value.active
           : active // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       activeElement: freezed == activeElement
           ? _value.activeElement
           : activeElement // ignore: cast_nullable_to_non_nullable
@@ -8073,7 +8073,7 @@ class _$_Schedule extends _Schedule {
 
   /// [language] The base language in which the resource is written.
   @override
-  final Code? language;
+  final  FhirCode? language;
 
   /// [languageElement] ("_language") Extensions for language
   @override
@@ -8191,7 +8191,7 @@ class _$_Schedule extends _Schedule {
   /// [active] Whether this schedule record is in active use or should not be
   ///  used (such as was entered in error).
   @override
-  final Boolean? active;
+  final  FhirBoolean? active;
 
   /// [activeElement] ("_active") Extensions for active
   @override
@@ -8388,7 +8388,7 @@ abstract class _Schedule extends Schedule {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final  FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -8397,7 +8397,7 @@ abstract class _Schedule extends Schedule {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      final Boolean? active,
+      final  FhirBoolean? active,
       @JsonKey(name: '_active')
           final Element? activeElement,
       final List<CodeableConcept>? serviceCategory,
@@ -8424,7 +8424,7 @@ abstract class _Schedule extends Schedule {
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -8447,7 +8447,7 @@ abstract class _Schedule extends Schedule {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+   FhirCode? get language;
   @override
 
   /// [languageElement] ("_language") Extensions for language
@@ -8506,7 +8506,7 @@ abstract class _Schedule extends Schedule {
 
   /// [active] Whether this schedule record is in active use or should not be
   ///  used (such as was entered in error).
-  Boolean? get active;
+   FhirBoolean? get active;
   @override
 
   /// [activeElement] ("_active") Extensions for active
@@ -8579,7 +8579,7 @@ mixin _$Slot {
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
@@ -8598,7 +8598,7 @@ mixin _$Slot {
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+   FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
@@ -8676,21 +8676,21 @@ mixin _$Slot {
 
   /// [status] busy | free | busy-unavailable | busy-tentative |
   ///  entered-in-error.
-  Code? get status => throw _privateConstructorUsedError;
+   FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
 
   /// [start] Date/Time that the slot is to begin.
-  Instant? get start => throw _privateConstructorUsedError;
+  FhirInstant? get start => throw _privateConstructorUsedError;
 
   /// [startElement] ("_start") Extensions for start
   @JsonKey(name: '_start')
   Element? get startElement => throw _privateConstructorUsedError;
 
   /// [end] Date/Time that the slot is to conclude.
-  Instant? get end => throw _privateConstructorUsedError;
+  FhirInstant? get end => throw _privateConstructorUsedError;
 
   /// [endElement] ("_end") Extensions for end
   @JsonKey(name: '_end')
@@ -8698,7 +8698,7 @@ mixin _$Slot {
 
   /// [overbooked] This slot has already been overbooked, appointments are
   ///  unlikely to be accepted for this time.
-  Boolean? get overbooked => throw _privateConstructorUsedError;
+   FhirBoolean? get overbooked => throw _privateConstructorUsedError;
 
   /// [overbookedElement] ("_overbooked") Extensions for overbooked
   @JsonKey(name: '_overbooked')
@@ -8725,12 +8725,12 @@ abstract class $SlotCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Slot)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+       FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -8744,16 +8744,16 @@ abstract class $SlotCopyWith<$Res> {
       List<CodeableConcept>? specialty,
       List<CodeableConcept>? appointmentType,
       Reference schedule,
-      Code? status,
+       FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Instant? start,
+      FhirInstant? start,
       @JsonKey(name: '_start')
           Element? startElement,
-      Instant? end,
+      FhirInstant? end,
       @JsonKey(name: '_end')
           Element? endElement,
-      Boolean? overbooked,
+       FhirBoolean? overbooked,
       @JsonKey(name: '_overbooked')
           Element? overbookedElement,
       String? comment,
@@ -8837,7 +8837,7 @@ class _$SlotCopyWithImpl<$Res, $Val extends Slot>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -8885,7 +8885,7 @@ class _$SlotCopyWithImpl<$Res, $Val extends Slot>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -8909,7 +8909,7 @@ class _$SlotCopyWithImpl<$Res, $Val extends Slot>
       overbooked: freezed == overbooked
           ? _value.overbooked
           : overbooked // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       overbookedElement: freezed == overbookedElement
           ? _value.overbookedElement
           : overbookedElement // ignore: cast_nullable_to_non_nullable
@@ -9051,12 +9051,12 @@ abstract class _$$_SlotCopyWith<$Res> implements $SlotCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Slot)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+       FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -9070,16 +9070,16 @@ abstract class _$$_SlotCopyWith<$Res> implements $SlotCopyWith<$Res> {
       List<CodeableConcept>? specialty,
       List<CodeableConcept>? appointmentType,
       Reference schedule,
-      Code? status,
+       FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Instant? start,
+      FhirInstant? start,
       @JsonKey(name: '_start')
           Element? startElement,
-      Instant? end,
+      FhirInstant? end,
       @JsonKey(name: '_end')
           Element? endElement,
-      Boolean? overbooked,
+       FhirBoolean? overbooked,
       @JsonKey(name: '_overbooked')
           Element? overbookedElement,
       String? comment,
@@ -9169,7 +9169,7 @@ class __$$_SlotCopyWithImpl<$Res> extends _$SlotCopyWithImpl<$Res, _$_Slot>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -9217,7 +9217,7 @@ class __$$_SlotCopyWithImpl<$Res> extends _$SlotCopyWithImpl<$Res, _$_Slot>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -9241,7 +9241,7 @@ class __$$_SlotCopyWithImpl<$Res> extends _$SlotCopyWithImpl<$Res, _$_Slot>
       overbooked: freezed == overbooked
           ? _value.overbooked
           : overbooked // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       overbookedElement: freezed == overbookedElement
           ? _value.overbookedElement
           : overbookedElement // ignore: cast_nullable_to_non_nullable
@@ -9341,7 +9341,7 @@ class _$_Slot extends _Slot {
 
   /// [language] The base language in which the resource is written.
   @override
-  final Code? language;
+  final  FhirCode? language;
 
   /// [languageElement] ("_language") Extensions for language
   @override
@@ -9528,7 +9528,7 @@ class _$_Slot extends _Slot {
   /// [status] busy | free | busy-unavailable | busy-tentative |
   ///  entered-in-error.
   @override
-  final Code? status;
+  final  FhirCode? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -9556,7 +9556,7 @@ class _$_Slot extends _Slot {
   /// [overbooked] This slot has already been overbooked, appointments are
   ///  unlikely to be accepted for this time.
   @override
-  final Boolean? overbooked;
+  final  FhirBoolean? overbooked;
 
   /// [overbookedElement] ("_overbooked") Extensions for overbooked
   @override
@@ -9688,7 +9688,7 @@ abstract class _Slot extends Slot {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final  FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -9702,7 +9702,7 @@ abstract class _Slot extends Slot {
       final List<CodeableConcept>? specialty,
       final List<CodeableConcept>? appointmentType,
       required final Reference schedule,
-      final Code? status,
+      final  FhirCode? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
       final Instant? start,
@@ -9711,7 +9711,7 @@ abstract class _Slot extends Slot {
       final Instant? end,
       @JsonKey(name: '_end')
           final Element? endElement,
-      final Boolean? overbooked,
+      final  FhirBoolean? overbooked,
       @JsonKey(name: '_overbooked')
           final Element? overbookedElement,
       final String? comment,
@@ -9730,7 +9730,7 @@ abstract class _Slot extends Slot {
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -9753,7 +9753,7 @@ abstract class _Slot extends Slot {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+   FhirCode? get language;
   @override
 
   /// [languageElement] ("_language") Extensions for language
@@ -9839,7 +9839,7 @@ abstract class _Slot extends Slot {
 
   /// [status] busy | free | busy-unavailable | busy-tentative |
   ///  entered-in-error.
-  Code? get status;
+   FhirCode? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status
@@ -9848,7 +9848,7 @@ abstract class _Slot extends Slot {
   @override
 
   /// [start] Date/Time that the slot is to begin.
-  Instant? get start;
+  FhirInstant? get start;
   @override
 
   /// [startElement] ("_start") Extensions for start
@@ -9857,7 +9857,7 @@ abstract class _Slot extends Slot {
   @override
 
   /// [end] Date/Time that the slot is to conclude.
-  Instant? get end;
+  FhirInstant? get end;
   @override
 
   /// [endElement] ("_end") Extensions for end
@@ -9867,7 +9867,7 @@ abstract class _Slot extends Slot {
 
   /// [overbooked] This slot has already been overbooked, appointments are
   ///  unlikely to be accepted for this time.
-  Boolean? get overbooked;
+   FhirBoolean? get overbooked;
   @override
 
   /// [overbookedElement] ("_overbooked") Extensions for overbooked
@@ -9900,7 +9900,7 @@ mixin _$Task {
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
@@ -9919,7 +9919,7 @@ mixin _$Task {
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+   FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
@@ -9973,7 +9973,7 @@ mixin _$Task {
   /// [instantiatesCanonical] The URL pointing to a *FHIR*-defined protocol,
   ///  guideline, orderset or other definition that is adhered to in whole or
   ///  in part by this Task.
-  Canonical? get instantiatesCanonical => throw _privateConstructorUsedError;
+   FhirCanonical? get instantiatesCanonical => throw _privateConstructorUsedError;
 
   /// [instantiatesUri] The URL pointing to an *externally* maintained
   ///  protocol, guideline, orderset or other definition that is adhered to
@@ -10002,7 +10002,7 @@ mixin _$Task {
   List<Reference>? get partOf => throw _privateConstructorUsedError;
 
   /// [status] The current status of the task.
-  Code? get status => throw _privateConstructorUsedError;
+   FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
@@ -10019,7 +10019,7 @@ mixin _$Task {
   /// [intent] Indicates the "level" of actionability associated with the
   ///  Task, i.e. i+R[9]Cs this a proposed task, a planned task, an
   ///  actionable task, etc.
-  Code? get intent => throw _privateConstructorUsedError;
+   FhirCode? get intent => throw _privateConstructorUsedError;
 
   /// [intentElement] ("_intent") Extensions for intent
   @JsonKey(name: '_intent')
@@ -10027,7 +10027,7 @@ mixin _$Task {
 
   /// [priority] Indicates how quickly the Task should be addressed with
   ///  respect to other requests.
-  Code? get priority => throw _privateConstructorUsedError;
+   FhirCode? get priority => throw _privateConstructorUsedError;
 
   /// [priorityElement] ("_priority") Extensions for priority
   @JsonKey(name: '_priority')
@@ -10035,7 +10035,7 @@ mixin _$Task {
 
   /// [doNotPerform] If true indicates that the Task is asking for the
   ///  specified action to *not* occur.
-  Boolean? get doNotPerform => throw _privateConstructorUsedError;
+   FhirBoolean? get doNotPerform => throw _privateConstructorUsedError;
 
   /// [doNotPerformElement] ("_doNotPerform") Extensions for doNotPerform
   @JsonKey(name: '_doNotPerform')
@@ -10145,12 +10145,12 @@ abstract class $TaskCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Task)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+       FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -10159,25 +10159,25 @@ abstract class $TaskCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Canonical? instantiatesCanonical,
+       FhirCanonical? instantiatesCanonical,
       FhirUri? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
           Element? instantiatesUriElement,
       List<Reference>? basedOn,
       Identifier? groupIdentifier,
       List<Reference>? partOf,
-      Code? status,
+       FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableReference? statusReason,
       CodeableConcept? businessStatus,
-      Code? intent,
+       FhirCode? intent,
       @JsonKey(name: '_intent')
           Element? intentElement,
-      Code? priority,
+       FhirCode? priority,
       @JsonKey(name: '_priority')
           Element? priorityElement,
-      Boolean? doNotPerform,
+       FhirBoolean? doNotPerform,
       @JsonKey(name: '_doNotPerform')
           Element? doNotPerformElement,
       CodeableConcept? code,
@@ -10324,7 +10324,7 @@ class _$TaskCopyWithImpl<$Res, $Val extends Task>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -10352,7 +10352,7 @@ class _$TaskCopyWithImpl<$Res, $Val extends Task>
       instantiatesCanonical: freezed == instantiatesCanonical
           ? _value.instantiatesCanonical
           : instantiatesCanonical // ignore: cast_nullable_to_non_nullable
-              as Canonical?,
+              as  FhirCanonical?,
       instantiatesUri: freezed == instantiatesUri
           ? _value.instantiatesUri
           : instantiatesUri // ignore: cast_nullable_to_non_nullable
@@ -10376,7 +10376,7 @@ class _$TaskCopyWithImpl<$Res, $Val extends Task>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -10392,7 +10392,7 @@ class _$TaskCopyWithImpl<$Res, $Val extends Task>
       intent: freezed == intent
           ? _value.intent
           : intent // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       intentElement: freezed == intentElement
           ? _value.intentElement
           : intentElement // ignore: cast_nullable_to_non_nullable
@@ -10400,7 +10400,7 @@ class _$TaskCopyWithImpl<$Res, $Val extends Task>
       priority: freezed == priority
           ? _value.priority
           : priority // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       priorityElement: freezed == priorityElement
           ? _value.priorityElement
           : priorityElement // ignore: cast_nullable_to_non_nullable
@@ -10408,7 +10408,7 @@ class _$TaskCopyWithImpl<$Res, $Val extends Task>
       doNotPerform: freezed == doNotPerform
           ? _value.doNotPerform
           : doNotPerform // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       doNotPerformElement: freezed == doNotPerformElement
           ? _value.doNotPerformElement
           : doNotPerformElement // ignore: cast_nullable_to_non_nullable
@@ -10818,12 +10818,12 @@ abstract class _$$_TaskCopyWith<$Res> implements $TaskCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Task)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+       FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -10832,25 +10832,25 @@ abstract class _$$_TaskCopyWith<$Res> implements $TaskCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Canonical? instantiatesCanonical,
+       FhirCanonical? instantiatesCanonical,
       FhirUri? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
           Element? instantiatesUriElement,
       List<Reference>? basedOn,
       Identifier? groupIdentifier,
       List<Reference>? partOf,
-      Code? status,
+       FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableReference? statusReason,
       CodeableConcept? businessStatus,
-      Code? intent,
+       FhirCode? intent,
       @JsonKey(name: '_intent')
           Element? intentElement,
-      Code? priority,
+       FhirCode? priority,
       @JsonKey(name: '_priority')
           Element? priorityElement,
-      Boolean? doNotPerform,
+       FhirBoolean? doNotPerform,
       @JsonKey(name: '_doNotPerform')
           Element? doNotPerformElement,
       CodeableConcept? code,
@@ -11018,7 +11018,7 @@ class __$$_TaskCopyWithImpl<$Res> extends _$TaskCopyWithImpl<$Res, _$_Task>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -11046,7 +11046,7 @@ class __$$_TaskCopyWithImpl<$Res> extends _$TaskCopyWithImpl<$Res, _$_Task>
       instantiatesCanonical: freezed == instantiatesCanonical
           ? _value.instantiatesCanonical
           : instantiatesCanonical // ignore: cast_nullable_to_non_nullable
-              as Canonical?,
+              as  FhirCanonical?,
       instantiatesUri: freezed == instantiatesUri
           ? _value.instantiatesUri
           : instantiatesUri // ignore: cast_nullable_to_non_nullable
@@ -11070,7 +11070,7 @@ class __$$_TaskCopyWithImpl<$Res> extends _$TaskCopyWithImpl<$Res, _$_Task>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -11086,7 +11086,7 @@ class __$$_TaskCopyWithImpl<$Res> extends _$TaskCopyWithImpl<$Res, _$_Task>
       intent: freezed == intent
           ? _value.intent
           : intent // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       intentElement: freezed == intentElement
           ? _value.intentElement
           : intentElement // ignore: cast_nullable_to_non_nullable
@@ -11094,7 +11094,7 @@ class __$$_TaskCopyWithImpl<$Res> extends _$TaskCopyWithImpl<$Res, _$_Task>
       priority: freezed == priority
           ? _value.priority
           : priority // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       priorityElement: freezed == priorityElement
           ? _value.priorityElement
           : priorityElement // ignore: cast_nullable_to_non_nullable
@@ -11102,7 +11102,7 @@ class __$$_TaskCopyWithImpl<$Res> extends _$TaskCopyWithImpl<$Res, _$_Task>
       doNotPerform: freezed == doNotPerform
           ? _value.doNotPerform
           : doNotPerform // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       doNotPerformElement: freezed == doNotPerformElement
           ? _value.doNotPerformElement
           : doNotPerformElement // ignore: cast_nullable_to_non_nullable
@@ -11319,7 +11319,7 @@ class _$_Task extends _Task {
 
   /// [language] The base language in which the resource is written.
   @override
-  final Code? language;
+  final  FhirCode? language;
 
   /// [languageElement] ("_language") Extensions for language
   @override
@@ -11438,7 +11438,7 @@ class _$_Task extends _Task {
   ///  guideline, orderset or other definition that is adhered to in whole or
   ///  in part by this Task.
   @override
-  final Canonical? instantiatesCanonical;
+  final  FhirCanonical? instantiatesCanonical;
 
   /// [instantiatesUri] The URL pointing to an *externally* maintained
   ///  protocol, guideline, orderset or other definition that is adhered to
@@ -11497,7 +11497,7 @@ class _$_Task extends _Task {
 
   /// [status] The current status of the task.
   @override
-  final Code? status;
+  final  FhirCode? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -11518,7 +11518,7 @@ class _$_Task extends _Task {
   ///  Task, i.e. i+R[9]Cs this a proposed task, a planned task, an
   ///  actionable task, etc.
   @override
-  final Code? intent;
+  final  FhirCode? intent;
 
   /// [intentElement] ("_intent") Extensions for intent
   @override
@@ -11528,7 +11528,7 @@ class _$_Task extends _Task {
   /// [priority] Indicates how quickly the Task should be addressed with
   ///  respect to other requests.
   @override
-  final Code? priority;
+  final  FhirCode? priority;
 
   /// [priorityElement] ("_priority") Extensions for priority
   @override
@@ -11538,7 +11538,7 @@ class _$_Task extends _Task {
   /// [doNotPerform] If true indicates that the Task is asking for the
   ///  specified action to *not* occur.
   @override
-  final Boolean? doNotPerform;
+  final  FhirBoolean? doNotPerform;
 
   /// [doNotPerformElement] ("_doNotPerform") Extensions for doNotPerform
   @override
@@ -11907,7 +11907,7 @@ abstract class _Task extends Task {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final  FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -11916,25 +11916,25 @@ abstract class _Task extends Task {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      final Canonical? instantiatesCanonical,
+      final  FhirCanonical? instantiatesCanonical,
       final FhirUri? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
           final Element? instantiatesUriElement,
       final List<Reference>? basedOn,
       final Identifier? groupIdentifier,
       final List<Reference>? partOf,
-      final Code? status,
+      final  FhirCode? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
       final CodeableReference? statusReason,
       final CodeableConcept? businessStatus,
-      final Code? intent,
+      final  FhirCode? intent,
       @JsonKey(name: '_intent')
           final Element? intentElement,
-      final Code? priority,
+      final  FhirCode? priority,
       @JsonKey(name: '_priority')
           final Element? priorityElement,
-      final Boolean? doNotPerform,
+      final  FhirBoolean? doNotPerform,
       @JsonKey(name: '_doNotPerform')
           final Element? doNotPerformElement,
       final CodeableConcept? code,
@@ -11977,7 +11977,7 @@ abstract class _Task extends Task {
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -12000,7 +12000,7 @@ abstract class _Task extends Task {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+   FhirCode? get language;
   @override
 
   /// [languageElement] ("_language") Extensions for language
@@ -12060,7 +12060,7 @@ abstract class _Task extends Task {
   /// [instantiatesCanonical] The URL pointing to a *FHIR*-defined protocol,
   ///  guideline, orderset or other definition that is adhered to in whole or
   ///  in part by this Task.
-  Canonical? get instantiatesCanonical;
+   FhirCanonical? get instantiatesCanonical;
   @override
 
   /// [instantiatesUri] The URL pointing to an *externally* maintained
@@ -12095,7 +12095,7 @@ abstract class _Task extends Task {
   @override
 
   /// [status] The current status of the task.
-  Code? get status;
+   FhirCode? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status
@@ -12116,7 +12116,7 @@ abstract class _Task extends Task {
   /// [intent] Indicates the "level" of actionability associated with the
   ///  Task, i.e. i+R[9]Cs this a proposed task, a planned task, an
   ///  actionable task, etc.
-  Code? get intent;
+   FhirCode? get intent;
   @override
 
   /// [intentElement] ("_intent") Extensions for intent
@@ -12126,7 +12126,7 @@ abstract class _Task extends Task {
 
   /// [priority] Indicates how quickly the Task should be addressed with
   ///  respect to other requests.
-  Code? get priority;
+   FhirCode? get priority;
   @override
 
   /// [priorityElement] ("_priority") Extensions for priority
@@ -12136,7 +12136,7 @@ abstract class _Task extends Task {
 
   /// [doNotPerform] If true indicates that the Task is asking for the
   ///  specified action to *not* occur.
-  Boolean? get doNotPerform;
+   FhirBoolean? get doNotPerform;
   @override
 
   /// [doNotPerformElement] ("_doNotPerform") Extensions for doNotPerform
@@ -12774,7 +12774,7 @@ mixin _$TaskInput {
   CodeableConcept get type => throw _privateConstructorUsedError;
 
   /// [valueBase64Binary] The value of the input parameter as a basic type.
-  Base64Binary? get valueBase64Binary => throw _privateConstructorUsedError;
+  FhirBase64Binary?? get valueBase64Binary => throw _privateConstructorUsedError;
 
   /// [valueBase64BinaryElement] ("_valueBase64Binary") Extensions for
   ///  valueBase64Binary
@@ -12782,14 +12782,14 @@ mixin _$TaskInput {
   Element? get valueBase64BinaryElement => throw _privateConstructorUsedError;
 
   /// [valueBoolean] The value of the input parameter as a basic type.
-  Boolean? get valueBoolean => throw _privateConstructorUsedError;
+   FhirBoolean? get valueBoolean => throw _privateConstructorUsedError;
 
   /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
   @JsonKey(name: '_valueBoolean')
   Element? get valueBooleanElement => throw _privateConstructorUsedError;
 
   /// [valueCanonical] The value of the input parameter as a basic type.
-  Canonical? get valueCanonical => throw _privateConstructorUsedError;
+   FhirCanonical? get valueCanonical => throw _privateConstructorUsedError;
 
   /// [valueCanonicalElement] ("_valueCanonical") Extensions for
   ///  valueCanonical
@@ -12797,14 +12797,14 @@ mixin _$TaskInput {
   Element? get valueCanonicalElement => throw _privateConstructorUsedError;
 
   /// [valueCode] The value of the input parameter as a basic type.
-  Code? get valueCode => throw _privateConstructorUsedError;
+   FhirCode? get valueCode => throw _privateConstructorUsedError;
 
   /// [valueCodeElement] ("_valueCode") Extensions for valueCode
   @JsonKey(name: '_valueCode')
   Element? get valueCodeElement => throw _privateConstructorUsedError;
 
   /// [valueDate] The value of the input parameter as a basic type.
-  Date? get valueDate => throw _privateConstructorUsedError;
+  FhirDate? get valueDate => throw _privateConstructorUsedError;
 
   /// [valueDateElement] ("_valueDate") Extensions for valueDate
   @JsonKey(name: '_valueDate')
@@ -12818,35 +12818,35 @@ mixin _$TaskInput {
   Element? get valueDateTimeElement => throw _privateConstructorUsedError;
 
   /// [valueDecimal] The value of the input parameter as a basic type.
-  Decimal? get valueDecimal => throw _privateConstructorUsedError;
+  FhirDecimal? get valueDecimal => throw _privateConstructorUsedError;
 
   /// [valueDecimalElement] ("_valueDecimal") Extensions for valueDecimal
   @JsonKey(name: '_valueDecimal')
   Element? get valueDecimalElement => throw _privateConstructorUsedError;
 
   /// [valueId] The value of the input parameter as a basic type.
-  Id? get valueId => throw _privateConstructorUsedError;
+  FhirId? get valueId => throw _privateConstructorUsedError;
 
   /// [valueIdElement] ("_valueId") Extensions for valueId
   @JsonKey(name: '_valueId')
   Element? get valueIdElement => throw _privateConstructorUsedError;
 
   /// [valueInstant] The value of the input parameter as a basic type.
-  Instant? get valueInstant => throw _privateConstructorUsedError;
+  FhirInstant? get valueInstant => throw _privateConstructorUsedError;
 
   /// [valueInstantElement] ("_valueInstant") Extensions for valueInstant
   @JsonKey(name: '_valueInstant')
   Element? get valueInstantElement => throw _privateConstructorUsedError;
 
   /// [valueInteger] The value of the input parameter as a basic type.
-  Integer? get valueInteger => throw _privateConstructorUsedError;
+  FhirInteger? get valueInteger => throw _privateConstructorUsedError;
 
   /// [valueIntegerElement] ("_valueInteger") Extensions for valueInteger
   @JsonKey(name: '_valueInteger')
   Element? get valueIntegerElement => throw _privateConstructorUsedError;
 
   /// [valueInteger64] The value of the input parameter as a basic type.
-  Integer64? get valueInteger64 => throw _privateConstructorUsedError;
+  FhirInteger64? get valueInteger64 => throw _privateConstructorUsedError;
 
   /// [valueInteger64Element] ("_valueInteger64") Extensions for
   ///  valueInteger64
@@ -12854,14 +12854,14 @@ mixin _$TaskInput {
   Element? get valueInteger64Element => throw _privateConstructorUsedError;
 
   /// [valueMarkdown] The value of the input parameter as a basic type.
-  Markdown? get valueMarkdown => throw _privateConstructorUsedError;
+  FhirMarkdown? get valueMarkdown => throw _privateConstructorUsedError;
 
   /// [valueMarkdownElement] ("_valueMarkdown") Extensions for valueMarkdown
   @JsonKey(name: '_valueMarkdown')
   Element? get valueMarkdownElement => throw _privateConstructorUsedError;
 
   /// [valueOid] The value of the input parameter as a basic type.
-  Id? get valueOid => throw _privateConstructorUsedError;
+  FhirId? get valueOid => throw _privateConstructorUsedError;
 
   /// [valueOidElement] ("_valueOid") Extensions for valueOid
   @JsonKey(name: '_valueOid')
@@ -12912,7 +12912,7 @@ mixin _$TaskInput {
   Element? get valueUrlElement => throw _privateConstructorUsedError;
 
   /// [valueUuid] The value of the input parameter as a basic type.
-  Id? get valueUuid => throw _privateConstructorUsedError;
+  FhirId? get valueUuid => throw _privateConstructorUsedError;
 
   /// [valueUuidElement] ("_valueUuid") Extensions for valueUuid
   @JsonKey(name: '_valueUuid')
@@ -13047,31 +13047,31 @@ abstract class $TaskInputCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept type,
-      Base64Binary? valueBase64Binary,
+  FhirBase64Binary?? valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
-      Boolean? valueBoolean,
+       FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-      Canonical? valueCanonical,
+       FhirCanonical? valueCanonical,
       @JsonKey(name: '_valueCanonical') Element? valueCanonicalElement,
-      Code? valueCode,
+       FhirCode? valueCode,
       @JsonKey(name: '_valueCode') Element? valueCodeElement,
-      Date? valueDate,
+      FhirDate? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
       FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
-      Decimal? valueDecimal,
+      FhirDecimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
-      Id? valueId,
+      FhirId? valueId,
       @JsonKey(name: '_valueId') Element? valueIdElement,
-      Instant? valueInstant,
+      FhirInstant? valueInstant,
       @JsonKey(name: '_valueInstant') Element? valueInstantElement,
-      Integer? valueInteger,
+      FhirInteger? valueInteger,
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
-      Integer64? valueInteger64,
+      FhirInteger64? valueInteger64,
       @JsonKey(name: '_valueInteger64') Element? valueInteger64Element,
-      Markdown? valueMarkdown,
+      FhirMarkdown? valueMarkdown,
       @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
-      Id? valueOid,
+      FhirId? valueOid,
       @JsonKey(name: '_valueOid') Element? valueOidElement,
       PositiveInt? valuePositiveInt,
       @JsonKey(name: '_valuePositiveInt') Element? valuePositiveIntElement,
@@ -13085,7 +13085,7 @@ abstract class $TaskInputCopyWith<$Res> {
       @JsonKey(name: '_valueUri') Element? valueUriElement,
       FhirUrl? valueUrl,
       @JsonKey(name: '_valueUrl') Element? valueUrlElement,
-      Id? valueUuid,
+      FhirId? valueUuid,
       @JsonKey(name: '_valueUuid') Element? valueUuidElement,
       Address? valueAddress,
       Age? valueAge,
@@ -13291,7 +13291,7 @@ class _$TaskInputCopyWithImpl<$Res, $Val extends TaskInput>
       valueBase64Binary: freezed == valueBase64Binary
           ? _value.valueBase64Binary
           : valueBase64Binary // ignore: cast_nullable_to_non_nullable
-              as Base64Binary?,
+              as  FhirBase64Binary??,
       valueBase64BinaryElement: freezed == valueBase64BinaryElement
           ? _value.valueBase64BinaryElement
           : valueBase64BinaryElement // ignore: cast_nullable_to_non_nullable
@@ -13299,7 +13299,7 @@ class _$TaskInputCopyWithImpl<$Res, $Val extends TaskInput>
       valueBoolean: freezed == valueBoolean
           ? _value.valueBoolean
           : valueBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       valueBooleanElement: freezed == valueBooleanElement
           ? _value.valueBooleanElement
           : valueBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -13307,7 +13307,7 @@ class _$TaskInputCopyWithImpl<$Res, $Val extends TaskInput>
       valueCanonical: freezed == valueCanonical
           ? _value.valueCanonical
           : valueCanonical // ignore: cast_nullable_to_non_nullable
-              as Canonical?,
+              as  FhirCanonical?,
       valueCanonicalElement: freezed == valueCanonicalElement
           ? _value.valueCanonicalElement
           : valueCanonicalElement // ignore: cast_nullable_to_non_nullable
@@ -13315,7 +13315,7 @@ class _$TaskInputCopyWithImpl<$Res, $Val extends TaskInput>
       valueCode: freezed == valueCode
           ? _value.valueCode
           : valueCode // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       valueCodeElement: freezed == valueCodeElement
           ? _value.valueCodeElement
           : valueCodeElement // ignore: cast_nullable_to_non_nullable
@@ -14263,31 +14263,31 @@ abstract class _$$_TaskInputCopyWith<$Res> implements $TaskInputCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept type,
-      Base64Binary? valueBase64Binary,
+  FhirBase64Binary?? valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
-      Boolean? valueBoolean,
+       FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-      Canonical? valueCanonical,
+       FhirCanonical? valueCanonical,
       @JsonKey(name: '_valueCanonical') Element? valueCanonicalElement,
-      Code? valueCode,
+       FhirCode? valueCode,
       @JsonKey(name: '_valueCode') Element? valueCodeElement,
-      Date? valueDate,
+      FhirDate? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
       FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
-      Decimal? valueDecimal,
+      FhirDecimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
-      Id? valueId,
+      FhirId? valueId,
       @JsonKey(name: '_valueId') Element? valueIdElement,
-      Instant? valueInstant,
+      FhirInstant? valueInstant,
       @JsonKey(name: '_valueInstant') Element? valueInstantElement,
-      Integer? valueInteger,
+      FhirInteger? valueInteger,
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
-      Integer64? valueInteger64,
+      FhirInteger64? valueInteger64,
       @JsonKey(name: '_valueInteger64') Element? valueInteger64Element,
-      Markdown? valueMarkdown,
+      FhirMarkdown? valueMarkdown,
       @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
-      Id? valueOid,
+      FhirId? valueOid,
       @JsonKey(name: '_valueOid') Element? valueOidElement,
       PositiveInt? valuePositiveInt,
       @JsonKey(name: '_valuePositiveInt') Element? valuePositiveIntElement,
@@ -14301,7 +14301,7 @@ abstract class _$$_TaskInputCopyWith<$Res> implements $TaskInputCopyWith<$Res> {
       @JsonKey(name: '_valueUri') Element? valueUriElement,
       FhirUrl? valueUrl,
       @JsonKey(name: '_valueUrl') Element? valueUrlElement,
-      Id? valueUuid,
+      FhirId? valueUuid,
       @JsonKey(name: '_valueUuid') Element? valueUuidElement,
       Address? valueAddress,
       Age? valueAge,
@@ -14560,7 +14560,7 @@ class __$$_TaskInputCopyWithImpl<$Res>
       valueBase64Binary: freezed == valueBase64Binary
           ? _value.valueBase64Binary
           : valueBase64Binary // ignore: cast_nullable_to_non_nullable
-              as Base64Binary?,
+              as  FhirBase64Binary??,
       valueBase64BinaryElement: freezed == valueBase64BinaryElement
           ? _value.valueBase64BinaryElement
           : valueBase64BinaryElement // ignore: cast_nullable_to_non_nullable
@@ -14568,7 +14568,7 @@ class __$$_TaskInputCopyWithImpl<$Res>
       valueBoolean: freezed == valueBoolean
           ? _value.valueBoolean
           : valueBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       valueBooleanElement: freezed == valueBooleanElement
           ? _value.valueBooleanElement
           : valueBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -14576,7 +14576,7 @@ class __$$_TaskInputCopyWithImpl<$Res>
       valueCanonical: freezed == valueCanonical
           ? _value.valueCanonical
           : valueCanonical // ignore: cast_nullable_to_non_nullable
-              as Canonical?,
+              as  FhirCanonical?,
       valueCanonicalElement: freezed == valueCanonicalElement
           ? _value.valueCanonicalElement
           : valueCanonicalElement // ignore: cast_nullable_to_non_nullable
@@ -14584,7 +14584,7 @@ class __$$_TaskInputCopyWithImpl<$Res>
       valueCode: freezed == valueCode
           ? _value.valueCode
           : valueCode // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       valueCodeElement: freezed == valueCodeElement
           ? _value.valueCodeElement
           : valueCodeElement // ignore: cast_nullable_to_non_nullable
@@ -15022,7 +15022,7 @@ class _$_TaskInput extends _TaskInput {
 
   /// [valueBase64Binary] The value of the input parameter as a basic type.
   @override
-  final Base64Binary? valueBase64Binary;
+  final  FhirBase64Binary?? valueBase64Binary;
 
   /// [valueBase64BinaryElement] ("_valueBase64Binary") Extensions for
   ///  valueBase64Binary
@@ -15032,7 +15032,7 @@ class _$_TaskInput extends _TaskInput {
 
   /// [valueBoolean] The value of the input parameter as a basic type.
   @override
-  final Boolean? valueBoolean;
+  final  FhirBoolean? valueBoolean;
 
   /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
   @override
@@ -15041,7 +15041,7 @@ class _$_TaskInput extends _TaskInput {
 
   /// [valueCanonical] The value of the input parameter as a basic type.
   @override
-  final Canonical? valueCanonical;
+  final  FhirCanonical? valueCanonical;
 
   /// [valueCanonicalElement] ("_valueCanonical") Extensions for
   ///  valueCanonical
@@ -15051,7 +15051,7 @@ class _$_TaskInput extends _TaskInput {
 
   /// [valueCode] The value of the input parameter as a basic type.
   @override
-  final Code? valueCode;
+  final  FhirCode? valueCode;
 
   /// [valueCodeElement] ("_valueCode") Extensions for valueCode
   @override
@@ -15572,16 +15572,16 @@ abstract class _TaskInput extends TaskInput {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final CodeableConcept type,
-      final Base64Binary? valueBase64Binary,
+      final  FhirBase64Binary?? valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary')
           final Element? valueBase64BinaryElement,
-      final Boolean? valueBoolean,
+      final  FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean')
           final Element? valueBooleanElement,
-      final Canonical? valueCanonical,
+      final  FhirCanonical? valueCanonical,
       @JsonKey(name: '_valueCanonical')
           final Element? valueCanonicalElement,
-      final Code? valueCode,
+      final  FhirCode? valueCode,
       @JsonKey(name: '_valueCode')
           final Element? valueCodeElement,
       final Date? valueDate,
@@ -15711,7 +15711,7 @@ abstract class _TaskInput extends TaskInput {
   @override
 
   /// [valueBase64Binary] The value of the input parameter as a basic type.
-  Base64Binary? get valueBase64Binary;
+  FhirBase64Binary?? get valueBase64Binary;
   @override
 
   /// [valueBase64BinaryElement] ("_valueBase64Binary") Extensions for
@@ -15721,7 +15721,7 @@ abstract class _TaskInput extends TaskInput {
   @override
 
   /// [valueBoolean] The value of the input parameter as a basic type.
-  Boolean? get valueBoolean;
+   FhirBoolean? get valueBoolean;
   @override
 
   /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
@@ -15730,7 +15730,7 @@ abstract class _TaskInput extends TaskInput {
   @override
 
   /// [valueCanonical] The value of the input parameter as a basic type.
-  Canonical? get valueCanonical;
+   FhirCanonical? get valueCanonical;
   @override
 
   /// [valueCanonicalElement] ("_valueCanonical") Extensions for
@@ -15740,7 +15740,7 @@ abstract class _TaskInput extends TaskInput {
   @override
 
   /// [valueCode] The value of the input parameter as a basic type.
-  Code? get valueCode;
+   FhirCode? get valueCode;
   @override
 
   /// [valueCodeElement] ("_valueCode") Extensions for valueCode
@@ -15749,7 +15749,7 @@ abstract class _TaskInput extends TaskInput {
   @override
 
   /// [valueDate] The value of the input parameter as a basic type.
-  Date? get valueDate;
+  FhirDate? get valueDate;
   @override
 
   /// [valueDateElement] ("_valueDate") Extensions for valueDate
@@ -15767,7 +15767,7 @@ abstract class _TaskInput extends TaskInput {
   @override
 
   /// [valueDecimal] The value of the input parameter as a basic type.
-  Decimal? get valueDecimal;
+  FhirDecimal? get valueDecimal;
   @override
 
   /// [valueDecimalElement] ("_valueDecimal") Extensions for valueDecimal
@@ -15776,7 +15776,7 @@ abstract class _TaskInput extends TaskInput {
   @override
 
   /// [valueId] The value of the input parameter as a basic type.
-  Id? get valueId;
+  FhirId? get valueId;
   @override
 
   /// [valueIdElement] ("_valueId") Extensions for valueId
@@ -15785,7 +15785,7 @@ abstract class _TaskInput extends TaskInput {
   @override
 
   /// [valueInstant] The value of the input parameter as a basic type.
-  Instant? get valueInstant;
+  FhirInstant? get valueInstant;
   @override
 
   /// [valueInstantElement] ("_valueInstant") Extensions for valueInstant
@@ -15794,7 +15794,7 @@ abstract class _TaskInput extends TaskInput {
   @override
 
   /// [valueInteger] The value of the input parameter as a basic type.
-  Integer? get valueInteger;
+  FhirInteger? get valueInteger;
   @override
 
   /// [valueIntegerElement] ("_valueInteger") Extensions for valueInteger
@@ -15803,7 +15803,7 @@ abstract class _TaskInput extends TaskInput {
   @override
 
   /// [valueInteger64] The value of the input parameter as a basic type.
-  Integer64? get valueInteger64;
+  FhirInteger64? get valueInteger64;
   @override
 
   /// [valueInteger64Element] ("_valueInteger64") Extensions for
@@ -15813,7 +15813,7 @@ abstract class _TaskInput extends TaskInput {
   @override
 
   /// [valueMarkdown] The value of the input parameter as a basic type.
-  Markdown? get valueMarkdown;
+  FhirMarkdown? get valueMarkdown;
   @override
 
   /// [valueMarkdownElement] ("_valueMarkdown") Extensions for valueMarkdown
@@ -15822,7 +15822,7 @@ abstract class _TaskInput extends TaskInput {
   @override
 
   /// [valueOid] The value of the input parameter as a basic type.
-  Id? get valueOid;
+  FhirId? get valueOid;
   @override
 
   /// [valueOidElement] ("_valueOid") Extensions for valueOid
@@ -15887,7 +15887,7 @@ abstract class _TaskInput extends TaskInput {
   @override
 
   /// [valueUuid] The value of the input parameter as a basic type.
-  Id? get valueUuid;
+  FhirId? get valueUuid;
   @override
 
   /// [valueUuidElement] ("_valueUuid") Extensions for valueUuid
@@ -16079,7 +16079,7 @@ mixin _$TaskOutput {
   CodeableConcept get type => throw _privateConstructorUsedError;
 
   /// [valueBase64Binary] The value of the Output parameter as a basic type.
-  Base64Binary? get valueBase64Binary => throw _privateConstructorUsedError;
+  FhirBase64Binary?? get valueBase64Binary => throw _privateConstructorUsedError;
 
   /// [valueBase64BinaryElement] ("_valueBase64Binary") Extensions for
   ///  valueBase64Binary
@@ -16087,14 +16087,14 @@ mixin _$TaskOutput {
   Element? get valueBase64BinaryElement => throw _privateConstructorUsedError;
 
   /// [valueBoolean] The value of the Output parameter as a basic type.
-  Boolean? get valueBoolean => throw _privateConstructorUsedError;
+   FhirBoolean? get valueBoolean => throw _privateConstructorUsedError;
 
   /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
   @JsonKey(name: '_valueBoolean')
   Element? get valueBooleanElement => throw _privateConstructorUsedError;
 
   /// [valueCanonical] The value of the Output parameter as a basic type.
-  Canonical? get valueCanonical => throw _privateConstructorUsedError;
+   FhirCanonical? get valueCanonical => throw _privateConstructorUsedError;
 
   /// [valueCanonicalElement] ("_valueCanonical") Extensions for
   ///  valueCanonical
@@ -16102,14 +16102,14 @@ mixin _$TaskOutput {
   Element? get valueCanonicalElement => throw _privateConstructorUsedError;
 
   /// [valueCode] The value of the Output parameter as a basic type.
-  Code? get valueCode => throw _privateConstructorUsedError;
+   FhirCode? get valueCode => throw _privateConstructorUsedError;
 
   /// [valueCodeElement] ("_valueCode") Extensions for valueCode
   @JsonKey(name: '_valueCode')
   Element? get valueCodeElement => throw _privateConstructorUsedError;
 
   /// [valueDate] The value of the Output parameter as a basic type.
-  Date? get valueDate => throw _privateConstructorUsedError;
+  FhirDate? get valueDate => throw _privateConstructorUsedError;
 
   /// [valueDateElement] ("_valueDate") Extensions for valueDate
   @JsonKey(name: '_valueDate')
@@ -16123,35 +16123,35 @@ mixin _$TaskOutput {
   Element? get valueDateTimeElement => throw _privateConstructorUsedError;
 
   /// [valueDecimal] The value of the Output parameter as a basic type.
-  Decimal? get valueDecimal => throw _privateConstructorUsedError;
+  FhirDecimal? get valueDecimal => throw _privateConstructorUsedError;
 
   /// [valueDecimalElement] ("_valueDecimal") Extensions for valueDecimal
   @JsonKey(name: '_valueDecimal')
   Element? get valueDecimalElement => throw _privateConstructorUsedError;
 
   /// [valueId] The value of the Output parameter as a basic type.
-  Id? get valueId => throw _privateConstructorUsedError;
+  FhirId? get valueId => throw _privateConstructorUsedError;
 
   /// [valueIdElement] ("_valueId") Extensions for valueId
   @JsonKey(name: '_valueId')
   Element? get valueIdElement => throw _privateConstructorUsedError;
 
   /// [valueInstant] The value of the Output parameter as a basic type.
-  Instant? get valueInstant => throw _privateConstructorUsedError;
+  FhirInstant? get valueInstant => throw _privateConstructorUsedError;
 
   /// [valueInstantElement] ("_valueInstant") Extensions for valueInstant
   @JsonKey(name: '_valueInstant')
   Element? get valueInstantElement => throw _privateConstructorUsedError;
 
   /// [valueInteger] The value of the Output parameter as a basic type.
-  Integer? get valueInteger => throw _privateConstructorUsedError;
+  FhirInteger? get valueInteger => throw _privateConstructorUsedError;
 
   /// [valueIntegerElement] ("_valueInteger") Extensions for valueInteger
   @JsonKey(name: '_valueInteger')
   Element? get valueIntegerElement => throw _privateConstructorUsedError;
 
   /// [valueInteger64] The value of the Output parameter as a basic type.
-  Integer64? get valueInteger64 => throw _privateConstructorUsedError;
+  FhirInteger64? get valueInteger64 => throw _privateConstructorUsedError;
 
   /// [valueInteger64Element] ("_valueInteger64") Extensions for
   ///  valueInteger64
@@ -16159,14 +16159,14 @@ mixin _$TaskOutput {
   Element? get valueInteger64Element => throw _privateConstructorUsedError;
 
   /// [valueMarkdown] The value of the Output parameter as a basic type.
-  Markdown? get valueMarkdown => throw _privateConstructorUsedError;
+  FhirMarkdown? get valueMarkdown => throw _privateConstructorUsedError;
 
   /// [valueMarkdownElement] ("_valueMarkdown") Extensions for valueMarkdown
   @JsonKey(name: '_valueMarkdown')
   Element? get valueMarkdownElement => throw _privateConstructorUsedError;
 
   /// [valueOid] The value of the Output parameter as a basic type.
-  Id? get valueOid => throw _privateConstructorUsedError;
+  FhirId? get valueOid => throw _privateConstructorUsedError;
 
   /// [valueOidElement] ("_valueOid") Extensions for valueOid
   @JsonKey(name: '_valueOid')
@@ -16217,7 +16217,7 @@ mixin _$TaskOutput {
   Element? get valueUrlElement => throw _privateConstructorUsedError;
 
   /// [valueUuid] The value of the Output parameter as a basic type.
-  Id? get valueUuid => throw _privateConstructorUsedError;
+  FhirId? get valueUuid => throw _privateConstructorUsedError;
 
   /// [valueUuidElement] ("_valueUuid") Extensions for valueUuid
   @JsonKey(name: '_valueUuid')
@@ -16356,31 +16356,31 @@ abstract class $TaskOutputCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept type,
-      Base64Binary? valueBase64Binary,
+  FhirBase64Binary?? valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
-      Boolean? valueBoolean,
+       FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-      Canonical? valueCanonical,
+       FhirCanonical? valueCanonical,
       @JsonKey(name: '_valueCanonical') Element? valueCanonicalElement,
-      Code? valueCode,
+       FhirCode? valueCode,
       @JsonKey(name: '_valueCode') Element? valueCodeElement,
-      Date? valueDate,
+      FhirDate? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
       FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
-      Decimal? valueDecimal,
+      FhirDecimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
-      Id? valueId,
+      FhirId? valueId,
       @JsonKey(name: '_valueId') Element? valueIdElement,
-      Instant? valueInstant,
+      FhirInstant? valueInstant,
       @JsonKey(name: '_valueInstant') Element? valueInstantElement,
-      Integer? valueInteger,
+      FhirInteger? valueInteger,
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
-      Integer64? valueInteger64,
+      FhirInteger64? valueInteger64,
       @JsonKey(name: '_valueInteger64') Element? valueInteger64Element,
-      Markdown? valueMarkdown,
+      FhirMarkdown? valueMarkdown,
       @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
-      Id? valueOid,
+      FhirId? valueOid,
       @JsonKey(name: '_valueOid') Element? valueOidElement,
       PositiveInt? valuePositiveInt,
       @JsonKey(name: '_valuePositiveInt') Element? valuePositiveIntElement,
@@ -16394,7 +16394,7 @@ abstract class $TaskOutputCopyWith<$Res> {
       @JsonKey(name: '_valueUri') Element? valueUriElement,
       FhirUrl? valueUrl,
       @JsonKey(name: '_valueUrl') Element? valueUrlElement,
-      Id? valueUuid,
+      FhirId? valueUuid,
       @JsonKey(name: '_valueUuid') Element? valueUuidElement,
       Address? valueAddress,
       Age? valueAge,
@@ -16600,7 +16600,7 @@ class _$TaskOutputCopyWithImpl<$Res, $Val extends TaskOutput>
       valueBase64Binary: freezed == valueBase64Binary
           ? _value.valueBase64Binary
           : valueBase64Binary // ignore: cast_nullable_to_non_nullable
-              as Base64Binary?,
+              as  FhirBase64Binary??,
       valueBase64BinaryElement: freezed == valueBase64BinaryElement
           ? _value.valueBase64BinaryElement
           : valueBase64BinaryElement // ignore: cast_nullable_to_non_nullable
@@ -16608,7 +16608,7 @@ class _$TaskOutputCopyWithImpl<$Res, $Val extends TaskOutput>
       valueBoolean: freezed == valueBoolean
           ? _value.valueBoolean
           : valueBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       valueBooleanElement: freezed == valueBooleanElement
           ? _value.valueBooleanElement
           : valueBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -16616,7 +16616,7 @@ class _$TaskOutputCopyWithImpl<$Res, $Val extends TaskOutput>
       valueCanonical: freezed == valueCanonical
           ? _value.valueCanonical
           : valueCanonical // ignore: cast_nullable_to_non_nullable
-              as Canonical?,
+              as  FhirCanonical?,
       valueCanonicalElement: freezed == valueCanonicalElement
           ? _value.valueCanonicalElement
           : valueCanonicalElement // ignore: cast_nullable_to_non_nullable
@@ -16624,7 +16624,7 @@ class _$TaskOutputCopyWithImpl<$Res, $Val extends TaskOutput>
       valueCode: freezed == valueCode
           ? _value.valueCode
           : valueCode // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       valueCodeElement: freezed == valueCodeElement
           ? _value.valueCodeElement
           : valueCodeElement // ignore: cast_nullable_to_non_nullable
@@ -17573,31 +17573,31 @@ abstract class _$$_TaskOutputCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept type,
-      Base64Binary? valueBase64Binary,
+  FhirBase64Binary?? valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
-      Boolean? valueBoolean,
+       FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-      Canonical? valueCanonical,
+       FhirCanonical? valueCanonical,
       @JsonKey(name: '_valueCanonical') Element? valueCanonicalElement,
-      Code? valueCode,
+       FhirCode? valueCode,
       @JsonKey(name: '_valueCode') Element? valueCodeElement,
-      Date? valueDate,
+      FhirDate? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
       FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
-      Decimal? valueDecimal,
+      FhirDecimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
-      Id? valueId,
+      FhirId? valueId,
       @JsonKey(name: '_valueId') Element? valueIdElement,
-      Instant? valueInstant,
+      FhirInstant? valueInstant,
       @JsonKey(name: '_valueInstant') Element? valueInstantElement,
-      Integer? valueInteger,
+      FhirInteger? valueInteger,
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
-      Integer64? valueInteger64,
+      FhirInteger64? valueInteger64,
       @JsonKey(name: '_valueInteger64') Element? valueInteger64Element,
-      Markdown? valueMarkdown,
+      FhirMarkdown? valueMarkdown,
       @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
-      Id? valueOid,
+      FhirId? valueOid,
       @JsonKey(name: '_valueOid') Element? valueOidElement,
       PositiveInt? valuePositiveInt,
       @JsonKey(name: '_valuePositiveInt') Element? valuePositiveIntElement,
@@ -17611,7 +17611,7 @@ abstract class _$$_TaskOutputCopyWith<$Res>
       @JsonKey(name: '_valueUri') Element? valueUriElement,
       FhirUrl? valueUrl,
       @JsonKey(name: '_valueUrl') Element? valueUrlElement,
-      Id? valueUuid,
+      FhirId? valueUuid,
       @JsonKey(name: '_valueUuid') Element? valueUuidElement,
       Address? valueAddress,
       Age? valueAge,
@@ -17870,7 +17870,7 @@ class __$$_TaskOutputCopyWithImpl<$Res>
       valueBase64Binary: freezed == valueBase64Binary
           ? _value.valueBase64Binary
           : valueBase64Binary // ignore: cast_nullable_to_non_nullable
-              as Base64Binary?,
+              as  FhirBase64Binary??,
       valueBase64BinaryElement: freezed == valueBase64BinaryElement
           ? _value.valueBase64BinaryElement
           : valueBase64BinaryElement // ignore: cast_nullable_to_non_nullable
@@ -17878,7 +17878,7 @@ class __$$_TaskOutputCopyWithImpl<$Res>
       valueBoolean: freezed == valueBoolean
           ? _value.valueBoolean
           : valueBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       valueBooleanElement: freezed == valueBooleanElement
           ? _value.valueBooleanElement
           : valueBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -17886,7 +17886,7 @@ class __$$_TaskOutputCopyWithImpl<$Res>
       valueCanonical: freezed == valueCanonical
           ? _value.valueCanonical
           : valueCanonical // ignore: cast_nullable_to_non_nullable
-              as Canonical?,
+              as  FhirCanonical?,
       valueCanonicalElement: freezed == valueCanonicalElement
           ? _value.valueCanonicalElement
           : valueCanonicalElement // ignore: cast_nullable_to_non_nullable
@@ -17894,7 +17894,7 @@ class __$$_TaskOutputCopyWithImpl<$Res>
       valueCode: freezed == valueCode
           ? _value.valueCode
           : valueCode // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       valueCodeElement: freezed == valueCodeElement
           ? _value.valueCodeElement
           : valueCodeElement // ignore: cast_nullable_to_non_nullable
@@ -18331,7 +18331,7 @@ class _$_TaskOutput extends _TaskOutput {
 
   /// [valueBase64Binary] The value of the Output parameter as a basic type.
   @override
-  final Base64Binary? valueBase64Binary;
+  final  FhirBase64Binary?? valueBase64Binary;
 
   /// [valueBase64BinaryElement] ("_valueBase64Binary") Extensions for
   ///  valueBase64Binary
@@ -18341,7 +18341,7 @@ class _$_TaskOutput extends _TaskOutput {
 
   /// [valueBoolean] The value of the Output parameter as a basic type.
   @override
-  final Boolean? valueBoolean;
+  final  FhirBoolean? valueBoolean;
 
   /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
   @override
@@ -18350,7 +18350,7 @@ class _$_TaskOutput extends _TaskOutput {
 
   /// [valueCanonical] The value of the Output parameter as a basic type.
   @override
-  final Canonical? valueCanonical;
+  final  FhirCanonical? valueCanonical;
 
   /// [valueCanonicalElement] ("_valueCanonical") Extensions for
   ///  valueCanonical
@@ -18360,7 +18360,7 @@ class _$_TaskOutput extends _TaskOutput {
 
   /// [valueCode] The value of the Output parameter as a basic type.
   @override
-  final Code? valueCode;
+  final  FhirCode? valueCode;
 
   /// [valueCodeElement] ("_valueCode") Extensions for valueCode
   @override
@@ -18884,16 +18884,16 @@ abstract class _TaskOutput extends TaskOutput {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final CodeableConcept type,
-      final Base64Binary? valueBase64Binary,
+      final  FhirBase64Binary?? valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary')
           final Element? valueBase64BinaryElement,
-      final Boolean? valueBoolean,
+      final  FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean')
           final Element? valueBooleanElement,
-      final Canonical? valueCanonical,
+      final  FhirCanonical? valueCanonical,
       @JsonKey(name: '_valueCanonical')
           final Element? valueCanonicalElement,
-      final Code? valueCode,
+      final  FhirCode? valueCode,
       @JsonKey(name: '_valueCode')
           final Element? valueCodeElement,
       final Date? valueDate,
@@ -19022,7 +19022,7 @@ abstract class _TaskOutput extends TaskOutput {
   @override
 
   /// [valueBase64Binary] The value of the Output parameter as a basic type.
-  Base64Binary? get valueBase64Binary;
+  FhirBase64Binary?? get valueBase64Binary;
   @override
 
   /// [valueBase64BinaryElement] ("_valueBase64Binary") Extensions for
@@ -19032,7 +19032,7 @@ abstract class _TaskOutput extends TaskOutput {
   @override
 
   /// [valueBoolean] The value of the Output parameter as a basic type.
-  Boolean? get valueBoolean;
+   FhirBoolean? get valueBoolean;
   @override
 
   /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
@@ -19041,7 +19041,7 @@ abstract class _TaskOutput extends TaskOutput {
   @override
 
   /// [valueCanonical] The value of the Output parameter as a basic type.
-  Canonical? get valueCanonical;
+   FhirCanonical? get valueCanonical;
   @override
 
   /// [valueCanonicalElement] ("_valueCanonical") Extensions for
@@ -19051,7 +19051,7 @@ abstract class _TaskOutput extends TaskOutput {
   @override
 
   /// [valueCode] The value of the Output parameter as a basic type.
-  Code? get valueCode;
+   FhirCode? get valueCode;
   @override
 
   /// [valueCodeElement] ("_valueCode") Extensions for valueCode
@@ -19060,7 +19060,7 @@ abstract class _TaskOutput extends TaskOutput {
   @override
 
   /// [valueDate] The value of the Output parameter as a basic type.
-  Date? get valueDate;
+  FhirDate? get valueDate;
   @override
 
   /// [valueDateElement] ("_valueDate") Extensions for valueDate
@@ -19078,7 +19078,7 @@ abstract class _TaskOutput extends TaskOutput {
   @override
 
   /// [valueDecimal] The value of the Output parameter as a basic type.
-  Decimal? get valueDecimal;
+  FhirDecimal? get valueDecimal;
   @override
 
   /// [valueDecimalElement] ("_valueDecimal") Extensions for valueDecimal
@@ -19087,7 +19087,7 @@ abstract class _TaskOutput extends TaskOutput {
   @override
 
   /// [valueId] The value of the Output parameter as a basic type.
-  Id? get valueId;
+  FhirId? get valueId;
   @override
 
   /// [valueIdElement] ("_valueId") Extensions for valueId
@@ -19096,7 +19096,7 @@ abstract class _TaskOutput extends TaskOutput {
   @override
 
   /// [valueInstant] The value of the Output parameter as a basic type.
-  Instant? get valueInstant;
+  FhirInstant? get valueInstant;
   @override
 
   /// [valueInstantElement] ("_valueInstant") Extensions for valueInstant
@@ -19105,7 +19105,7 @@ abstract class _TaskOutput extends TaskOutput {
   @override
 
   /// [valueInteger] The value of the Output parameter as a basic type.
-  Integer? get valueInteger;
+  FhirInteger? get valueInteger;
   @override
 
   /// [valueIntegerElement] ("_valueInteger") Extensions for valueInteger
@@ -19114,7 +19114,7 @@ abstract class _TaskOutput extends TaskOutput {
   @override
 
   /// [valueInteger64] The value of the Output parameter as a basic type.
-  Integer64? get valueInteger64;
+  FhirInteger64? get valueInteger64;
   @override
 
   /// [valueInteger64Element] ("_valueInteger64") Extensions for
@@ -19124,7 +19124,7 @@ abstract class _TaskOutput extends TaskOutput {
   @override
 
   /// [valueMarkdown] The value of the Output parameter as a basic type.
-  Markdown? get valueMarkdown;
+  FhirMarkdown? get valueMarkdown;
   @override
 
   /// [valueMarkdownElement] ("_valueMarkdown") Extensions for valueMarkdown
@@ -19133,7 +19133,7 @@ abstract class _TaskOutput extends TaskOutput {
   @override
 
   /// [valueOid] The value of the Output parameter as a basic type.
-  Id? get valueOid;
+  FhirId? get valueOid;
   @override
 
   /// [valueOidElement] ("_valueOid") Extensions for valueOid
@@ -19198,7 +19198,7 @@ abstract class _TaskOutput extends TaskOutput {
   @override
 
   /// [valueUuid] The value of the Output parameter as a basic type.
-  Id? get valueUuid;
+  FhirId? get valueUuid;
   @override
 
   /// [valueUuidElement] ("_valueUuid") Extensions for valueUuid
@@ -19365,7 +19365,7 @@ mixin _$Transport {
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
@@ -19384,7 +19384,7 @@ mixin _$Transport {
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+   FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
@@ -19439,7 +19439,7 @@ mixin _$Transport {
   /// [instantiatesCanonical] The URL pointing to a *FHIR*-defined protocol,
   ///  guideline, orderset or other definition that is adhered to in whole or
   ///  in part by this Transport.
-  Canonical? get instantiatesCanonical => throw _privateConstructorUsedError;
+   FhirCanonical? get instantiatesCanonical => throw _privateConstructorUsedError;
 
   /// [instantiatesUri] The URL pointing to an *externally* maintained
   ///  protocol, guideline, orderset or other definition that is adhered to
@@ -19469,7 +19469,7 @@ mixin _$Transport {
   List<Reference>? get partOf => throw _privateConstructorUsedError;
 
   /// [status] A code specifying the state of the transport event.
-  Code? get status => throw _privateConstructorUsedError;
+   FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
@@ -19482,7 +19482,7 @@ mixin _$Transport {
   /// [intent] Indicates the "level" of actionability associated with the
   ///  Transport, i.e. i+R[9]Cs this a proposed transport, a planned
   ///  transport, an actionable transport, etc.
-  Code? get intent => throw _privateConstructorUsedError;
+   FhirCode? get intent => throw _privateConstructorUsedError;
 
   /// [intentElement] ("_intent") Extensions for intent
   @JsonKey(name: '_intent')
@@ -19490,7 +19490,7 @@ mixin _$Transport {
 
   /// [priority] Indicates how quickly the Transport should be addressed with
   ///  respect to other requests.
-  Code? get priority => throw _privateConstructorUsedError;
+   FhirCode? get priority => throw _privateConstructorUsedError;
 
   /// [priorityElement] ("_priority") Extensions for priority
   @JsonKey(name: '_priority')
@@ -19617,12 +19617,12 @@ abstract class $TransportCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Transport)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+       FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -19631,21 +19631,21 @@ abstract class $TransportCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Canonical? instantiatesCanonical,
+       FhirCanonical? instantiatesCanonical,
       FhirUri? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
           Element? instantiatesUriElement,
       List<Reference>? basedOn,
       Identifier? groupIdentifier,
       List<Reference>? partOf,
-      Code? status,
+       FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? statusReason,
-      Code? intent,
+       FhirCode? intent,
       @JsonKey(name: '_intent')
           Element? intentElement,
-      Code? priority,
+       FhirCode? priority,
       @JsonKey(name: '_priority')
           Element? priorityElement,
       CodeableConcept? code,
@@ -19800,7 +19800,7 @@ class _$TransportCopyWithImpl<$Res, $Val extends Transport>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -19828,7 +19828,7 @@ class _$TransportCopyWithImpl<$Res, $Val extends Transport>
       instantiatesCanonical: freezed == instantiatesCanonical
           ? _value.instantiatesCanonical
           : instantiatesCanonical // ignore: cast_nullable_to_non_nullable
-              as Canonical?,
+              as  FhirCanonical?,
       instantiatesUri: freezed == instantiatesUri
           ? _value.instantiatesUri
           : instantiatesUri // ignore: cast_nullable_to_non_nullable
@@ -19852,7 +19852,7 @@ class _$TransportCopyWithImpl<$Res, $Val extends Transport>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -19864,7 +19864,7 @@ class _$TransportCopyWithImpl<$Res, $Val extends Transport>
       intent: freezed == intent
           ? _value.intent
           : intent // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       intentElement: freezed == intentElement
           ? _value.intentElement
           : intentElement // ignore: cast_nullable_to_non_nullable
@@ -19872,7 +19872,7 @@ class _$TransportCopyWithImpl<$Res, $Val extends Transport>
       priority: freezed == priority
           ? _value.priority
           : priority // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       priorityElement: freezed == priorityElement
           ? _value.priorityElement
           : priorityElement // ignore: cast_nullable_to_non_nullable
@@ -20315,12 +20315,12 @@ abstract class _$$_TransportCopyWith<$Res> implements $TransportCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Transport)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+       FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -20329,21 +20329,21 @@ abstract class _$$_TransportCopyWith<$Res> implements $TransportCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Canonical? instantiatesCanonical,
+       FhirCanonical? instantiatesCanonical,
       FhirUri? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
           Element? instantiatesUriElement,
       List<Reference>? basedOn,
       Identifier? groupIdentifier,
       List<Reference>? partOf,
-      Code? status,
+       FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? statusReason,
-      Code? intent,
+       FhirCode? intent,
       @JsonKey(name: '_intent')
           Element? intentElement,
-      Code? priority,
+       FhirCode? priority,
       @JsonKey(name: '_priority')
           Element? priorityElement,
       CodeableConcept? code,
@@ -20523,7 +20523,7 @@ class __$$_TransportCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -20551,7 +20551,7 @@ class __$$_TransportCopyWithImpl<$Res>
       instantiatesCanonical: freezed == instantiatesCanonical
           ? _value.instantiatesCanonical
           : instantiatesCanonical // ignore: cast_nullable_to_non_nullable
-              as Canonical?,
+              as  FhirCanonical?,
       instantiatesUri: freezed == instantiatesUri
           ? _value.instantiatesUri
           : instantiatesUri // ignore: cast_nullable_to_non_nullable
@@ -20575,7 +20575,7 @@ class __$$_TransportCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -20587,7 +20587,7 @@ class __$$_TransportCopyWithImpl<$Res>
       intent: freezed == intent
           ? _value.intent
           : intent // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       intentElement: freezed == intentElement
           ? _value.intentElement
           : intentElement // ignore: cast_nullable_to_non_nullable
@@ -20595,7 +20595,7 @@ class __$$_TransportCopyWithImpl<$Res>
       priority: freezed == priority
           ? _value.priority
           : priority // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       priorityElement: freezed == priorityElement
           ? _value.priorityElement
           : priorityElement // ignore: cast_nullable_to_non_nullable
@@ -20829,7 +20829,7 @@ class _$_Transport extends _Transport {
 
   /// [language] The base language in which the resource is written.
   @override
-  final Code? language;
+  final  FhirCode? language;
 
   /// [languageElement] ("_language") Extensions for language
   @override
@@ -20950,7 +20950,7 @@ class _$_Transport extends _Transport {
   ///  guideline, orderset or other definition that is adhered to in whole or
   ///  in part by this Transport.
   @override
-  final Canonical? instantiatesCanonical;
+  final  FhirCanonical? instantiatesCanonical;
 
   /// [instantiatesUri] The URL pointing to an *externally* maintained
   ///  protocol, guideline, orderset or other definition that is adhered to
@@ -21011,7 +21011,7 @@ class _$_Transport extends _Transport {
 
   /// [status] A code specifying the state of the transport event.
   @override
-  final Code? status;
+  final  FhirCode? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -21027,7 +21027,7 @@ class _$_Transport extends _Transport {
   ///  Transport, i.e. i+R[9]Cs this a proposed transport, a planned
   ///  transport, an actionable transport, etc.
   @override
-  final Code? intent;
+  final  FhirCode? intent;
 
   /// [intentElement] ("_intent") Extensions for intent
   @override
@@ -21037,7 +21037,7 @@ class _$_Transport extends _Transport {
   /// [priority] Indicates how quickly the Transport should be addressed with
   ///  respect to other requests.
   @override
-  final Code? priority;
+  final  FhirCode? priority;
 
   /// [priorityElement] ("_priority") Extensions for priority
   @override
@@ -21420,7 +21420,7 @@ abstract class _Transport extends Transport {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final  FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -21429,21 +21429,21 @@ abstract class _Transport extends Transport {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      final Canonical? instantiatesCanonical,
+      final  FhirCanonical? instantiatesCanonical,
       final FhirUri? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
           final Element? instantiatesUriElement,
       final List<Reference>? basedOn,
       final Identifier? groupIdentifier,
       final List<Reference>? partOf,
-      final Code? status,
+      final  FhirCode? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
       final CodeableConcept? statusReason,
-      final Code? intent,
+      final  FhirCode? intent,
       @JsonKey(name: '_intent')
           final Element? intentElement,
-      final Code? priority,
+      final  FhirCode? priority,
       @JsonKey(name: '_priority')
           final Element? priorityElement,
       final CodeableConcept? code,
@@ -21492,7 +21492,7 @@ abstract class _Transport extends Transport {
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -21515,7 +21515,7 @@ abstract class _Transport extends Transport {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+   FhirCode? get language;
   @override
 
   /// [languageElement] ("_language") Extensions for language
@@ -21576,7 +21576,7 @@ abstract class _Transport extends Transport {
   /// [instantiatesCanonical] The URL pointing to a *FHIR*-defined protocol,
   ///  guideline, orderset or other definition that is adhered to in whole or
   ///  in part by this Transport.
-  Canonical? get instantiatesCanonical;
+   FhirCanonical? get instantiatesCanonical;
   @override
 
   /// [instantiatesUri] The URL pointing to an *externally* maintained
@@ -21612,7 +21612,7 @@ abstract class _Transport extends Transport {
   @override
 
   /// [status] A code specifying the state of the transport event.
-  Code? get status;
+   FhirCode? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status
@@ -21628,7 +21628,7 @@ abstract class _Transport extends Transport {
   /// [intent] Indicates the "level" of actionability associated with the
   ///  Transport, i.e. i+R[9]Cs this a proposed transport, a planned
   ///  transport, an actionable transport, etc.
-  Code? get intent;
+   FhirCode? get intent;
   @override
 
   /// [intentElement] ("_intent") Extensions for intent
@@ -21638,7 +21638,7 @@ abstract class _Transport extends Transport {
 
   /// [priority] Indicates how quickly the Transport should be addressed with
   ///  respect to other requests.
-  Code? get priority;
+   FhirCode? get priority;
   @override
 
   /// [priorityElement] ("_priority") Extensions for priority
@@ -22293,7 +22293,7 @@ mixin _$TransportInput {
   CodeableConcept get type => throw _privateConstructorUsedError;
 
   /// [valueBase64Binary] The value of the input parameter as a basic type.
-  Base64Binary? get valueBase64Binary => throw _privateConstructorUsedError;
+  FhirBase64Binary?? get valueBase64Binary => throw _privateConstructorUsedError;
 
   /// [valueBase64BinaryElement] ("_valueBase64Binary") Extensions for
   ///  valueBase64Binary
@@ -22301,14 +22301,14 @@ mixin _$TransportInput {
   Element? get valueBase64BinaryElement => throw _privateConstructorUsedError;
 
   /// [valueBoolean] The value of the input parameter as a basic type.
-  Boolean? get valueBoolean => throw _privateConstructorUsedError;
+   FhirBoolean? get valueBoolean => throw _privateConstructorUsedError;
 
   /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
   @JsonKey(name: '_valueBoolean')
   Element? get valueBooleanElement => throw _privateConstructorUsedError;
 
   /// [valueCanonical] The value of the input parameter as a basic type.
-  Canonical? get valueCanonical => throw _privateConstructorUsedError;
+   FhirCanonical? get valueCanonical => throw _privateConstructorUsedError;
 
   /// [valueCanonicalElement] ("_valueCanonical") Extensions for
   ///  valueCanonical
@@ -22316,14 +22316,14 @@ mixin _$TransportInput {
   Element? get valueCanonicalElement => throw _privateConstructorUsedError;
 
   /// [valueCode] The value of the input parameter as a basic type.
-  Code? get valueCode => throw _privateConstructorUsedError;
+   FhirCode? get valueCode => throw _privateConstructorUsedError;
 
   /// [valueCodeElement] ("_valueCode") Extensions for valueCode
   @JsonKey(name: '_valueCode')
   Element? get valueCodeElement => throw _privateConstructorUsedError;
 
   /// [valueDate] The value of the input parameter as a basic type.
-  Date? get valueDate => throw _privateConstructorUsedError;
+  FhirDate? get valueDate => throw _privateConstructorUsedError;
 
   /// [valueDateElement] ("_valueDate") Extensions for valueDate
   @JsonKey(name: '_valueDate')
@@ -22337,35 +22337,35 @@ mixin _$TransportInput {
   Element? get valueDateTimeElement => throw _privateConstructorUsedError;
 
   /// [valueDecimal] The value of the input parameter as a basic type.
-  Decimal? get valueDecimal => throw _privateConstructorUsedError;
+  FhirDecimal? get valueDecimal => throw _privateConstructorUsedError;
 
   /// [valueDecimalElement] ("_valueDecimal") Extensions for valueDecimal
   @JsonKey(name: '_valueDecimal')
   Element? get valueDecimalElement => throw _privateConstructorUsedError;
 
   /// [valueId] The value of the input parameter as a basic type.
-  Id? get valueId => throw _privateConstructorUsedError;
+  FhirId? get valueId => throw _privateConstructorUsedError;
 
   /// [valueIdElement] ("_valueId") Extensions for valueId
   @JsonKey(name: '_valueId')
   Element? get valueIdElement => throw _privateConstructorUsedError;
 
   /// [valueInstant] The value of the input parameter as a basic type.
-  Instant? get valueInstant => throw _privateConstructorUsedError;
+  FhirInstant? get valueInstant => throw _privateConstructorUsedError;
 
   /// [valueInstantElement] ("_valueInstant") Extensions for valueInstant
   @JsonKey(name: '_valueInstant')
   Element? get valueInstantElement => throw _privateConstructorUsedError;
 
   /// [valueInteger] The value of the input parameter as a basic type.
-  Integer? get valueInteger => throw _privateConstructorUsedError;
+  FhirInteger? get valueInteger => throw _privateConstructorUsedError;
 
   /// [valueIntegerElement] ("_valueInteger") Extensions for valueInteger
   @JsonKey(name: '_valueInteger')
   Element? get valueIntegerElement => throw _privateConstructorUsedError;
 
   /// [valueInteger64] The value of the input parameter as a basic type.
-  Integer64? get valueInteger64 => throw _privateConstructorUsedError;
+  FhirInteger64? get valueInteger64 => throw _privateConstructorUsedError;
 
   /// [valueInteger64Element] ("_valueInteger64") Extensions for
   ///  valueInteger64
@@ -22373,14 +22373,14 @@ mixin _$TransportInput {
   Element? get valueInteger64Element => throw _privateConstructorUsedError;
 
   /// [valueMarkdown] The value of the input parameter as a basic type.
-  Markdown? get valueMarkdown => throw _privateConstructorUsedError;
+  FhirMarkdown? get valueMarkdown => throw _privateConstructorUsedError;
 
   /// [valueMarkdownElement] ("_valueMarkdown") Extensions for valueMarkdown
   @JsonKey(name: '_valueMarkdown')
   Element? get valueMarkdownElement => throw _privateConstructorUsedError;
 
   /// [valueOid] The value of the input parameter as a basic type.
-  Id? get valueOid => throw _privateConstructorUsedError;
+  FhirId? get valueOid => throw _privateConstructorUsedError;
 
   /// [valueOidElement] ("_valueOid") Extensions for valueOid
   @JsonKey(name: '_valueOid')
@@ -22431,7 +22431,7 @@ mixin _$TransportInput {
   Element? get valueUrlElement => throw _privateConstructorUsedError;
 
   /// [valueUuid] The value of the input parameter as a basic type.
-  Id? get valueUuid => throw _privateConstructorUsedError;
+  FhirId? get valueUuid => throw _privateConstructorUsedError;
 
   /// [valueUuidElement] ("_valueUuid") Extensions for valueUuid
   @JsonKey(name: '_valueUuid')
@@ -22567,31 +22567,31 @@ abstract class $TransportInputCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept type,
-      Base64Binary? valueBase64Binary,
+  FhirBase64Binary?? valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
-      Boolean? valueBoolean,
+       FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-      Canonical? valueCanonical,
+       FhirCanonical? valueCanonical,
       @JsonKey(name: '_valueCanonical') Element? valueCanonicalElement,
-      Code? valueCode,
+       FhirCode? valueCode,
       @JsonKey(name: '_valueCode') Element? valueCodeElement,
-      Date? valueDate,
+      FhirDate? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
       FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
-      Decimal? valueDecimal,
+      FhirDecimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
-      Id? valueId,
+      FhirId? valueId,
       @JsonKey(name: '_valueId') Element? valueIdElement,
-      Instant? valueInstant,
+      FhirInstant? valueInstant,
       @JsonKey(name: '_valueInstant') Element? valueInstantElement,
-      Integer? valueInteger,
+      FhirInteger? valueInteger,
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
-      Integer64? valueInteger64,
+      FhirInteger64? valueInteger64,
       @JsonKey(name: '_valueInteger64') Element? valueInteger64Element,
-      Markdown? valueMarkdown,
+      FhirMarkdown? valueMarkdown,
       @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
-      Id? valueOid,
+      FhirId? valueOid,
       @JsonKey(name: '_valueOid') Element? valueOidElement,
       PositiveInt? valuePositiveInt,
       @JsonKey(name: '_valuePositiveInt') Element? valuePositiveIntElement,
@@ -22605,7 +22605,7 @@ abstract class $TransportInputCopyWith<$Res> {
       @JsonKey(name: '_valueUri') Element? valueUriElement,
       FhirUrl? valueUrl,
       @JsonKey(name: '_valueUrl') Element? valueUrlElement,
-      Id? valueUuid,
+      FhirId? valueUuid,
       @JsonKey(name: '_valueUuid') Element? valueUuidElement,
       Address? valueAddress,
       Age? valueAge,
@@ -22811,7 +22811,7 @@ class _$TransportInputCopyWithImpl<$Res, $Val extends TransportInput>
       valueBase64Binary: freezed == valueBase64Binary
           ? _value.valueBase64Binary
           : valueBase64Binary // ignore: cast_nullable_to_non_nullable
-              as Base64Binary?,
+              as  FhirBase64Binary??,
       valueBase64BinaryElement: freezed == valueBase64BinaryElement
           ? _value.valueBase64BinaryElement
           : valueBase64BinaryElement // ignore: cast_nullable_to_non_nullable
@@ -22819,7 +22819,7 @@ class _$TransportInputCopyWithImpl<$Res, $Val extends TransportInput>
       valueBoolean: freezed == valueBoolean
           ? _value.valueBoolean
           : valueBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       valueBooleanElement: freezed == valueBooleanElement
           ? _value.valueBooleanElement
           : valueBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -22827,7 +22827,7 @@ class _$TransportInputCopyWithImpl<$Res, $Val extends TransportInput>
       valueCanonical: freezed == valueCanonical
           ? _value.valueCanonical
           : valueCanonical // ignore: cast_nullable_to_non_nullable
-              as Canonical?,
+              as  FhirCanonical?,
       valueCanonicalElement: freezed == valueCanonicalElement
           ? _value.valueCanonicalElement
           : valueCanonicalElement // ignore: cast_nullable_to_non_nullable
@@ -22835,7 +22835,7 @@ class _$TransportInputCopyWithImpl<$Res, $Val extends TransportInput>
       valueCode: freezed == valueCode
           ? _value.valueCode
           : valueCode // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       valueCodeElement: freezed == valueCodeElement
           ? _value.valueCodeElement
           : valueCodeElement // ignore: cast_nullable_to_non_nullable
@@ -23784,31 +23784,31 @@ abstract class _$$_TransportInputCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept type,
-      Base64Binary? valueBase64Binary,
+  FhirBase64Binary?? valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
-      Boolean? valueBoolean,
+       FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-      Canonical? valueCanonical,
+       FhirCanonical? valueCanonical,
       @JsonKey(name: '_valueCanonical') Element? valueCanonicalElement,
-      Code? valueCode,
+       FhirCode? valueCode,
       @JsonKey(name: '_valueCode') Element? valueCodeElement,
-      Date? valueDate,
+      FhirDate? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
       FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
-      Decimal? valueDecimal,
+      FhirDecimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
-      Id? valueId,
+      FhirId? valueId,
       @JsonKey(name: '_valueId') Element? valueIdElement,
-      Instant? valueInstant,
+      FhirInstant? valueInstant,
       @JsonKey(name: '_valueInstant') Element? valueInstantElement,
-      Integer? valueInteger,
+      FhirInteger? valueInteger,
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
-      Integer64? valueInteger64,
+      FhirInteger64? valueInteger64,
       @JsonKey(name: '_valueInteger64') Element? valueInteger64Element,
-      Markdown? valueMarkdown,
+      FhirMarkdown? valueMarkdown,
       @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
-      Id? valueOid,
+      FhirId? valueOid,
       @JsonKey(name: '_valueOid') Element? valueOidElement,
       PositiveInt? valuePositiveInt,
       @JsonKey(name: '_valuePositiveInt') Element? valuePositiveIntElement,
@@ -23822,7 +23822,7 @@ abstract class _$$_TransportInputCopyWith<$Res>
       @JsonKey(name: '_valueUri') Element? valueUriElement,
       FhirUrl? valueUrl,
       @JsonKey(name: '_valueUrl') Element? valueUrlElement,
-      Id? valueUuid,
+      FhirId? valueUuid,
       @JsonKey(name: '_valueUuid') Element? valueUuidElement,
       Address? valueAddress,
       Age? valueAge,
@@ -24081,7 +24081,7 @@ class __$$_TransportInputCopyWithImpl<$Res>
       valueBase64Binary: freezed == valueBase64Binary
           ? _value.valueBase64Binary
           : valueBase64Binary // ignore: cast_nullable_to_non_nullable
-              as Base64Binary?,
+              as  FhirBase64Binary??,
       valueBase64BinaryElement: freezed == valueBase64BinaryElement
           ? _value.valueBase64BinaryElement
           : valueBase64BinaryElement // ignore: cast_nullable_to_non_nullable
@@ -24089,7 +24089,7 @@ class __$$_TransportInputCopyWithImpl<$Res>
       valueBoolean: freezed == valueBoolean
           ? _value.valueBoolean
           : valueBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       valueBooleanElement: freezed == valueBooleanElement
           ? _value.valueBooleanElement
           : valueBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -24097,7 +24097,7 @@ class __$$_TransportInputCopyWithImpl<$Res>
       valueCanonical: freezed == valueCanonical
           ? _value.valueCanonical
           : valueCanonical // ignore: cast_nullable_to_non_nullable
-              as Canonical?,
+              as  FhirCanonical?,
       valueCanonicalElement: freezed == valueCanonicalElement
           ? _value.valueCanonicalElement
           : valueCanonicalElement // ignore: cast_nullable_to_non_nullable
@@ -24105,7 +24105,7 @@ class __$$_TransportInputCopyWithImpl<$Res>
       valueCode: freezed == valueCode
           ? _value.valueCode
           : valueCode // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       valueCodeElement: freezed == valueCodeElement
           ? _value.valueCodeElement
           : valueCodeElement // ignore: cast_nullable_to_non_nullable
@@ -24543,7 +24543,7 @@ class _$_TransportInput extends _TransportInput {
 
   /// [valueBase64Binary] The value of the input parameter as a basic type.
   @override
-  final Base64Binary? valueBase64Binary;
+  final  FhirBase64Binary?? valueBase64Binary;
 
   /// [valueBase64BinaryElement] ("_valueBase64Binary") Extensions for
   ///  valueBase64Binary
@@ -24553,7 +24553,7 @@ class _$_TransportInput extends _TransportInput {
 
   /// [valueBoolean] The value of the input parameter as a basic type.
   @override
-  final Boolean? valueBoolean;
+  final  FhirBoolean? valueBoolean;
 
   /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
   @override
@@ -24562,7 +24562,7 @@ class _$_TransportInput extends _TransportInput {
 
   /// [valueCanonical] The value of the input parameter as a basic type.
   @override
-  final Canonical? valueCanonical;
+  final  FhirCanonical? valueCanonical;
 
   /// [valueCanonicalElement] ("_valueCanonical") Extensions for
   ///  valueCanonical
@@ -24572,7 +24572,7 @@ class _$_TransportInput extends _TransportInput {
 
   /// [valueCode] The value of the input parameter as a basic type.
   @override
-  final Code? valueCode;
+  final  FhirCode? valueCode;
 
   /// [valueCodeElement] ("_valueCode") Extensions for valueCode
   @override
@@ -25093,16 +25093,16 @@ abstract class _TransportInput extends TransportInput {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final CodeableConcept type,
-      final Base64Binary? valueBase64Binary,
+      final  FhirBase64Binary?? valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary')
           final Element? valueBase64BinaryElement,
-      final Boolean? valueBoolean,
+      final  FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean')
           final Element? valueBooleanElement,
-      final Canonical? valueCanonical,
+      final  FhirCanonical? valueCanonical,
       @JsonKey(name: '_valueCanonical')
           final Element? valueCanonicalElement,
-      final Code? valueCode,
+      final  FhirCode? valueCode,
       @JsonKey(name: '_valueCode')
           final Element? valueCodeElement,
       final Date? valueDate,
@@ -25232,7 +25232,7 @@ abstract class _TransportInput extends TransportInput {
   @override
 
   /// [valueBase64Binary] The value of the input parameter as a basic type.
-  Base64Binary? get valueBase64Binary;
+  FhirBase64Binary?? get valueBase64Binary;
   @override
 
   /// [valueBase64BinaryElement] ("_valueBase64Binary") Extensions for
@@ -25242,7 +25242,7 @@ abstract class _TransportInput extends TransportInput {
   @override
 
   /// [valueBoolean] The value of the input parameter as a basic type.
-  Boolean? get valueBoolean;
+   FhirBoolean? get valueBoolean;
   @override
 
   /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
@@ -25251,7 +25251,7 @@ abstract class _TransportInput extends TransportInput {
   @override
 
   /// [valueCanonical] The value of the input parameter as a basic type.
-  Canonical? get valueCanonical;
+   FhirCanonical? get valueCanonical;
   @override
 
   /// [valueCanonicalElement] ("_valueCanonical") Extensions for
@@ -25261,7 +25261,7 @@ abstract class _TransportInput extends TransportInput {
   @override
 
   /// [valueCode] The value of the input parameter as a basic type.
-  Code? get valueCode;
+   FhirCode? get valueCode;
   @override
 
   /// [valueCodeElement] ("_valueCode") Extensions for valueCode
@@ -25270,7 +25270,7 @@ abstract class _TransportInput extends TransportInput {
   @override
 
   /// [valueDate] The value of the input parameter as a basic type.
-  Date? get valueDate;
+  FhirDate? get valueDate;
   @override
 
   /// [valueDateElement] ("_valueDate") Extensions for valueDate
@@ -25288,7 +25288,7 @@ abstract class _TransportInput extends TransportInput {
   @override
 
   /// [valueDecimal] The value of the input parameter as a basic type.
-  Decimal? get valueDecimal;
+  FhirDecimal? get valueDecimal;
   @override
 
   /// [valueDecimalElement] ("_valueDecimal") Extensions for valueDecimal
@@ -25297,7 +25297,7 @@ abstract class _TransportInput extends TransportInput {
   @override
 
   /// [valueId] The value of the input parameter as a basic type.
-  Id? get valueId;
+  FhirId? get valueId;
   @override
 
   /// [valueIdElement] ("_valueId") Extensions for valueId
@@ -25306,7 +25306,7 @@ abstract class _TransportInput extends TransportInput {
   @override
 
   /// [valueInstant] The value of the input parameter as a basic type.
-  Instant? get valueInstant;
+  FhirInstant? get valueInstant;
   @override
 
   /// [valueInstantElement] ("_valueInstant") Extensions for valueInstant
@@ -25315,7 +25315,7 @@ abstract class _TransportInput extends TransportInput {
   @override
 
   /// [valueInteger] The value of the input parameter as a basic type.
-  Integer? get valueInteger;
+  FhirInteger? get valueInteger;
   @override
 
   /// [valueIntegerElement] ("_valueInteger") Extensions for valueInteger
@@ -25324,7 +25324,7 @@ abstract class _TransportInput extends TransportInput {
   @override
 
   /// [valueInteger64] The value of the input parameter as a basic type.
-  Integer64? get valueInteger64;
+  FhirInteger64? get valueInteger64;
   @override
 
   /// [valueInteger64Element] ("_valueInteger64") Extensions for
@@ -25334,7 +25334,7 @@ abstract class _TransportInput extends TransportInput {
   @override
 
   /// [valueMarkdown] The value of the input parameter as a basic type.
-  Markdown? get valueMarkdown;
+  FhirMarkdown? get valueMarkdown;
   @override
 
   /// [valueMarkdownElement] ("_valueMarkdown") Extensions for valueMarkdown
@@ -25343,7 +25343,7 @@ abstract class _TransportInput extends TransportInput {
   @override
 
   /// [valueOid] The value of the input parameter as a basic type.
-  Id? get valueOid;
+  FhirId? get valueOid;
   @override
 
   /// [valueOidElement] ("_valueOid") Extensions for valueOid
@@ -25408,7 +25408,7 @@ abstract class _TransportInput extends TransportInput {
   @override
 
   /// [valueUuid] The value of the input parameter as a basic type.
-  Id? get valueUuid;
+  FhirId? get valueUuid;
   @override
 
   /// [valueUuidElement] ("_valueUuid") Extensions for valueUuid
@@ -25600,7 +25600,7 @@ mixin _$TransportOutput {
   CodeableConcept get type => throw _privateConstructorUsedError;
 
   /// [valueBase64Binary] The value of the Output parameter as a basic type.
-  Base64Binary? get valueBase64Binary => throw _privateConstructorUsedError;
+  FhirBase64Binary?? get valueBase64Binary => throw _privateConstructorUsedError;
 
   /// [valueBase64BinaryElement] ("_valueBase64Binary") Extensions for
   ///  valueBase64Binary
@@ -25608,14 +25608,14 @@ mixin _$TransportOutput {
   Element? get valueBase64BinaryElement => throw _privateConstructorUsedError;
 
   /// [valueBoolean] The value of the Output parameter as a basic type.
-  Boolean? get valueBoolean => throw _privateConstructorUsedError;
+   FhirBoolean? get valueBoolean => throw _privateConstructorUsedError;
 
   /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
   @JsonKey(name: '_valueBoolean')
   Element? get valueBooleanElement => throw _privateConstructorUsedError;
 
   /// [valueCanonical] The value of the Output parameter as a basic type.
-  Canonical? get valueCanonical => throw _privateConstructorUsedError;
+   FhirCanonical? get valueCanonical => throw _privateConstructorUsedError;
 
   /// [valueCanonicalElement] ("_valueCanonical") Extensions for
   ///  valueCanonical
@@ -25623,14 +25623,14 @@ mixin _$TransportOutput {
   Element? get valueCanonicalElement => throw _privateConstructorUsedError;
 
   /// [valueCode] The value of the Output parameter as a basic type.
-  Code? get valueCode => throw _privateConstructorUsedError;
+   FhirCode? get valueCode => throw _privateConstructorUsedError;
 
   /// [valueCodeElement] ("_valueCode") Extensions for valueCode
   @JsonKey(name: '_valueCode')
   Element? get valueCodeElement => throw _privateConstructorUsedError;
 
   /// [valueDate] The value of the Output parameter as a basic type.
-  Date? get valueDate => throw _privateConstructorUsedError;
+  FhirDate? get valueDate => throw _privateConstructorUsedError;
 
   /// [valueDateElement] ("_valueDate") Extensions for valueDate
   @JsonKey(name: '_valueDate')
@@ -25644,35 +25644,35 @@ mixin _$TransportOutput {
   Element? get valueDateTimeElement => throw _privateConstructorUsedError;
 
   /// [valueDecimal] The value of the Output parameter as a basic type.
-  Decimal? get valueDecimal => throw _privateConstructorUsedError;
+  FhirDecimal? get valueDecimal => throw _privateConstructorUsedError;
 
   /// [valueDecimalElement] ("_valueDecimal") Extensions for valueDecimal
   @JsonKey(name: '_valueDecimal')
   Element? get valueDecimalElement => throw _privateConstructorUsedError;
 
   /// [valueId] The value of the Output parameter as a basic type.
-  Id? get valueId => throw _privateConstructorUsedError;
+  FhirId? get valueId => throw _privateConstructorUsedError;
 
   /// [valueIdElement] ("_valueId") Extensions for valueId
   @JsonKey(name: '_valueId')
   Element? get valueIdElement => throw _privateConstructorUsedError;
 
   /// [valueInstant] The value of the Output parameter as a basic type.
-  Instant? get valueInstant => throw _privateConstructorUsedError;
+  FhirInstant? get valueInstant => throw _privateConstructorUsedError;
 
   /// [valueInstantElement] ("_valueInstant") Extensions for valueInstant
   @JsonKey(name: '_valueInstant')
   Element? get valueInstantElement => throw _privateConstructorUsedError;
 
   /// [valueInteger] The value of the Output parameter as a basic type.
-  Integer? get valueInteger => throw _privateConstructorUsedError;
+  FhirInteger? get valueInteger => throw _privateConstructorUsedError;
 
   /// [valueIntegerElement] ("_valueInteger") Extensions for valueInteger
   @JsonKey(name: '_valueInteger')
   Element? get valueIntegerElement => throw _privateConstructorUsedError;
 
   /// [valueInteger64] The value of the Output parameter as a basic type.
-  Integer64? get valueInteger64 => throw _privateConstructorUsedError;
+  FhirInteger64? get valueInteger64 => throw _privateConstructorUsedError;
 
   /// [valueInteger64Element] ("_valueInteger64") Extensions for
   ///  valueInteger64
@@ -25680,14 +25680,14 @@ mixin _$TransportOutput {
   Element? get valueInteger64Element => throw _privateConstructorUsedError;
 
   /// [valueMarkdown] The value of the Output parameter as a basic type.
-  Markdown? get valueMarkdown => throw _privateConstructorUsedError;
+  FhirMarkdown? get valueMarkdown => throw _privateConstructorUsedError;
 
   /// [valueMarkdownElement] ("_valueMarkdown") Extensions for valueMarkdown
   @JsonKey(name: '_valueMarkdown')
   Element? get valueMarkdownElement => throw _privateConstructorUsedError;
 
   /// [valueOid] The value of the Output parameter as a basic type.
-  Id? get valueOid => throw _privateConstructorUsedError;
+  FhirId? get valueOid => throw _privateConstructorUsedError;
 
   /// [valueOidElement] ("_valueOid") Extensions for valueOid
   @JsonKey(name: '_valueOid')
@@ -25738,7 +25738,7 @@ mixin _$TransportOutput {
   Element? get valueUrlElement => throw _privateConstructorUsedError;
 
   /// [valueUuid] The value of the Output parameter as a basic type.
-  Id? get valueUuid => throw _privateConstructorUsedError;
+  FhirId? get valueUuid => throw _privateConstructorUsedError;
 
   /// [valueUuidElement] ("_valueUuid") Extensions for valueUuid
   @JsonKey(name: '_valueUuid')
@@ -25877,31 +25877,31 @@ abstract class $TransportOutputCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept type,
-      Base64Binary? valueBase64Binary,
+  FhirBase64Binary?? valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
-      Boolean? valueBoolean,
+       FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-      Canonical? valueCanonical,
+       FhirCanonical? valueCanonical,
       @JsonKey(name: '_valueCanonical') Element? valueCanonicalElement,
-      Code? valueCode,
+       FhirCode? valueCode,
       @JsonKey(name: '_valueCode') Element? valueCodeElement,
-      Date? valueDate,
+      FhirDate? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
       FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
-      Decimal? valueDecimal,
+      FhirDecimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
-      Id? valueId,
+      FhirId? valueId,
       @JsonKey(name: '_valueId') Element? valueIdElement,
-      Instant? valueInstant,
+      FhirInstant? valueInstant,
       @JsonKey(name: '_valueInstant') Element? valueInstantElement,
-      Integer? valueInteger,
+      FhirInteger? valueInteger,
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
-      Integer64? valueInteger64,
+      FhirInteger64? valueInteger64,
       @JsonKey(name: '_valueInteger64') Element? valueInteger64Element,
-      Markdown? valueMarkdown,
+      FhirMarkdown? valueMarkdown,
       @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
-      Id? valueOid,
+      FhirId? valueOid,
       @JsonKey(name: '_valueOid') Element? valueOidElement,
       PositiveInt? valuePositiveInt,
       @JsonKey(name: '_valuePositiveInt') Element? valuePositiveIntElement,
@@ -25915,7 +25915,7 @@ abstract class $TransportOutputCopyWith<$Res> {
       @JsonKey(name: '_valueUri') Element? valueUriElement,
       FhirUrl? valueUrl,
       @JsonKey(name: '_valueUrl') Element? valueUrlElement,
-      Id? valueUuid,
+      FhirId? valueUuid,
       @JsonKey(name: '_valueUuid') Element? valueUuidElement,
       Address? valueAddress,
       Age? valueAge,
@@ -26121,7 +26121,7 @@ class _$TransportOutputCopyWithImpl<$Res, $Val extends TransportOutput>
       valueBase64Binary: freezed == valueBase64Binary
           ? _value.valueBase64Binary
           : valueBase64Binary // ignore: cast_nullable_to_non_nullable
-              as Base64Binary?,
+              as  FhirBase64Binary??,
       valueBase64BinaryElement: freezed == valueBase64BinaryElement
           ? _value.valueBase64BinaryElement
           : valueBase64BinaryElement // ignore: cast_nullable_to_non_nullable
@@ -26129,7 +26129,7 @@ class _$TransportOutputCopyWithImpl<$Res, $Val extends TransportOutput>
       valueBoolean: freezed == valueBoolean
           ? _value.valueBoolean
           : valueBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       valueBooleanElement: freezed == valueBooleanElement
           ? _value.valueBooleanElement
           : valueBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -26137,7 +26137,7 @@ class _$TransportOutputCopyWithImpl<$Res, $Val extends TransportOutput>
       valueCanonical: freezed == valueCanonical
           ? _value.valueCanonical
           : valueCanonical // ignore: cast_nullable_to_non_nullable
-              as Canonical?,
+              as  FhirCanonical?,
       valueCanonicalElement: freezed == valueCanonicalElement
           ? _value.valueCanonicalElement
           : valueCanonicalElement // ignore: cast_nullable_to_non_nullable
@@ -26145,7 +26145,7 @@ class _$TransportOutputCopyWithImpl<$Res, $Val extends TransportOutput>
       valueCode: freezed == valueCode
           ? _value.valueCode
           : valueCode // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       valueCodeElement: freezed == valueCodeElement
           ? _value.valueCodeElement
           : valueCodeElement // ignore: cast_nullable_to_non_nullable
@@ -27094,31 +27094,31 @@ abstract class _$$_TransportOutputCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept type,
-      Base64Binary? valueBase64Binary,
+  FhirBase64Binary?? valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
-      Boolean? valueBoolean,
+       FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-      Canonical? valueCanonical,
+       FhirCanonical? valueCanonical,
       @JsonKey(name: '_valueCanonical') Element? valueCanonicalElement,
-      Code? valueCode,
+       FhirCode? valueCode,
       @JsonKey(name: '_valueCode') Element? valueCodeElement,
-      Date? valueDate,
+      FhirDate? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
       FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
-      Decimal? valueDecimal,
+      FhirDecimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
-      Id? valueId,
+      FhirId? valueId,
       @JsonKey(name: '_valueId') Element? valueIdElement,
-      Instant? valueInstant,
+      FhirInstant? valueInstant,
       @JsonKey(name: '_valueInstant') Element? valueInstantElement,
-      Integer? valueInteger,
+      FhirInteger? valueInteger,
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
-      Integer64? valueInteger64,
+      FhirInteger64? valueInteger64,
       @JsonKey(name: '_valueInteger64') Element? valueInteger64Element,
-      Markdown? valueMarkdown,
+      FhirMarkdown? valueMarkdown,
       @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
-      Id? valueOid,
+      FhirId? valueOid,
       @JsonKey(name: '_valueOid') Element? valueOidElement,
       PositiveInt? valuePositiveInt,
       @JsonKey(name: '_valuePositiveInt') Element? valuePositiveIntElement,
@@ -27132,7 +27132,7 @@ abstract class _$$_TransportOutputCopyWith<$Res>
       @JsonKey(name: '_valueUri') Element? valueUriElement,
       FhirUrl? valueUrl,
       @JsonKey(name: '_valueUrl') Element? valueUrlElement,
-      Id? valueUuid,
+      FhirId? valueUuid,
       @JsonKey(name: '_valueUuid') Element? valueUuidElement,
       Address? valueAddress,
       Age? valueAge,
@@ -27391,7 +27391,7 @@ class __$$_TransportOutputCopyWithImpl<$Res>
       valueBase64Binary: freezed == valueBase64Binary
           ? _value.valueBase64Binary
           : valueBase64Binary // ignore: cast_nullable_to_non_nullable
-              as Base64Binary?,
+              as  FhirBase64Binary??,
       valueBase64BinaryElement: freezed == valueBase64BinaryElement
           ? _value.valueBase64BinaryElement
           : valueBase64BinaryElement // ignore: cast_nullable_to_non_nullable
@@ -27399,7 +27399,7 @@ class __$$_TransportOutputCopyWithImpl<$Res>
       valueBoolean: freezed == valueBoolean
           ? _value.valueBoolean
           : valueBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       valueBooleanElement: freezed == valueBooleanElement
           ? _value.valueBooleanElement
           : valueBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -27407,7 +27407,7 @@ class __$$_TransportOutputCopyWithImpl<$Res>
       valueCanonical: freezed == valueCanonical
           ? _value.valueCanonical
           : valueCanonical // ignore: cast_nullable_to_non_nullable
-              as Canonical?,
+              as  FhirCanonical?,
       valueCanonicalElement: freezed == valueCanonicalElement
           ? _value.valueCanonicalElement
           : valueCanonicalElement // ignore: cast_nullable_to_non_nullable
@@ -27415,7 +27415,7 @@ class __$$_TransportOutputCopyWithImpl<$Res>
       valueCode: freezed == valueCode
           ? _value.valueCode
           : valueCode // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       valueCodeElement: freezed == valueCodeElement
           ? _value.valueCodeElement
           : valueCodeElement // ignore: cast_nullable_to_non_nullable
@@ -27852,7 +27852,7 @@ class _$_TransportOutput extends _TransportOutput {
 
   /// [valueBase64Binary] The value of the Output parameter as a basic type.
   @override
-  final Base64Binary? valueBase64Binary;
+  final  FhirBase64Binary?? valueBase64Binary;
 
   /// [valueBase64BinaryElement] ("_valueBase64Binary") Extensions for
   ///  valueBase64Binary
@@ -27862,7 +27862,7 @@ class _$_TransportOutput extends _TransportOutput {
 
   /// [valueBoolean] The value of the Output parameter as a basic type.
   @override
-  final Boolean? valueBoolean;
+  final  FhirBoolean? valueBoolean;
 
   /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
   @override
@@ -27871,7 +27871,7 @@ class _$_TransportOutput extends _TransportOutput {
 
   /// [valueCanonical] The value of the Output parameter as a basic type.
   @override
-  final Canonical? valueCanonical;
+  final  FhirCanonical? valueCanonical;
 
   /// [valueCanonicalElement] ("_valueCanonical") Extensions for
   ///  valueCanonical
@@ -27881,7 +27881,7 @@ class _$_TransportOutput extends _TransportOutput {
 
   /// [valueCode] The value of the Output parameter as a basic type.
   @override
-  final Code? valueCode;
+  final  FhirCode? valueCode;
 
   /// [valueCodeElement] ("_valueCode") Extensions for valueCode
   @override
@@ -28405,16 +28405,16 @@ abstract class _TransportOutput extends TransportOutput {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final CodeableConcept type,
-      final Base64Binary? valueBase64Binary,
+      final  FhirBase64Binary?? valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary')
           final Element? valueBase64BinaryElement,
-      final Boolean? valueBoolean,
+      final  FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean')
           final Element? valueBooleanElement,
-      final Canonical? valueCanonical,
+      final  FhirCanonical? valueCanonical,
       @JsonKey(name: '_valueCanonical')
           final Element? valueCanonicalElement,
-      final Code? valueCode,
+      final  FhirCode? valueCode,
       @JsonKey(name: '_valueCode')
           final Element? valueCodeElement,
       final Date? valueDate,
@@ -28543,7 +28543,7 @@ abstract class _TransportOutput extends TransportOutput {
   @override
 
   /// [valueBase64Binary] The value of the Output parameter as a basic type.
-  Base64Binary? get valueBase64Binary;
+  FhirBase64Binary?? get valueBase64Binary;
   @override
 
   /// [valueBase64BinaryElement] ("_valueBase64Binary") Extensions for
@@ -28553,7 +28553,7 @@ abstract class _TransportOutput extends TransportOutput {
   @override
 
   /// [valueBoolean] The value of the Output parameter as a basic type.
-  Boolean? get valueBoolean;
+   FhirBoolean? get valueBoolean;
   @override
 
   /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
@@ -28562,7 +28562,7 @@ abstract class _TransportOutput extends TransportOutput {
   @override
 
   /// [valueCanonical] The value of the Output parameter as a basic type.
-  Canonical? get valueCanonical;
+   FhirCanonical? get valueCanonical;
   @override
 
   /// [valueCanonicalElement] ("_valueCanonical") Extensions for
@@ -28572,7 +28572,7 @@ abstract class _TransportOutput extends TransportOutput {
   @override
 
   /// [valueCode] The value of the Output parameter as a basic type.
-  Code? get valueCode;
+   FhirCode? get valueCode;
   @override
 
   /// [valueCodeElement] ("_valueCode") Extensions for valueCode
@@ -28581,7 +28581,7 @@ abstract class _TransportOutput extends TransportOutput {
   @override
 
   /// [valueDate] The value of the Output parameter as a basic type.
-  Date? get valueDate;
+  FhirDate? get valueDate;
   @override
 
   /// [valueDateElement] ("_valueDate") Extensions for valueDate
@@ -28599,7 +28599,7 @@ abstract class _TransportOutput extends TransportOutput {
   @override
 
   /// [valueDecimal] The value of the Output parameter as a basic type.
-  Decimal? get valueDecimal;
+  FhirDecimal? get valueDecimal;
   @override
 
   /// [valueDecimalElement] ("_valueDecimal") Extensions for valueDecimal
@@ -28608,7 +28608,7 @@ abstract class _TransportOutput extends TransportOutput {
   @override
 
   /// [valueId] The value of the Output parameter as a basic type.
-  Id? get valueId;
+  FhirId? get valueId;
   @override
 
   /// [valueIdElement] ("_valueId") Extensions for valueId
@@ -28617,7 +28617,7 @@ abstract class _TransportOutput extends TransportOutput {
   @override
 
   /// [valueInstant] The value of the Output parameter as a basic type.
-  Instant? get valueInstant;
+  FhirInstant? get valueInstant;
   @override
 
   /// [valueInstantElement] ("_valueInstant") Extensions for valueInstant
@@ -28626,7 +28626,7 @@ abstract class _TransportOutput extends TransportOutput {
   @override
 
   /// [valueInteger] The value of the Output parameter as a basic type.
-  Integer? get valueInteger;
+  FhirInteger? get valueInteger;
   @override
 
   /// [valueIntegerElement] ("_valueInteger") Extensions for valueInteger
@@ -28635,7 +28635,7 @@ abstract class _TransportOutput extends TransportOutput {
   @override
 
   /// [valueInteger64] The value of the Output parameter as a basic type.
-  Integer64? get valueInteger64;
+  FhirInteger64? get valueInteger64;
   @override
 
   /// [valueInteger64Element] ("_valueInteger64") Extensions for
@@ -28645,7 +28645,7 @@ abstract class _TransportOutput extends TransportOutput {
   @override
 
   /// [valueMarkdown] The value of the Output parameter as a basic type.
-  Markdown? get valueMarkdown;
+  FhirMarkdown? get valueMarkdown;
   @override
 
   /// [valueMarkdownElement] ("_valueMarkdown") Extensions for valueMarkdown
@@ -28654,7 +28654,7 @@ abstract class _TransportOutput extends TransportOutput {
   @override
 
   /// [valueOid] The value of the Output parameter as a basic type.
-  Id? get valueOid;
+  FhirId? get valueOid;
   @override
 
   /// [valueOidElement] ("_valueOid") Extensions for valueOid
@@ -28719,7 +28719,7 @@ abstract class _TransportOutput extends TransportOutput {
   @override
 
   /// [valueUuid] The value of the Output parameter as a basic type.
-  Id? get valueUuid;
+  FhirId? get valueUuid;
   @override
 
   /// [valueUuidElement] ("_valueUuid") Extensions for valueUuid
@@ -28886,7 +28886,7 @@ mixin _$VerificationResult {
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
@@ -28905,7 +28905,7 @@ mixin _$VerificationResult {
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+   FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
@@ -28973,7 +28973,7 @@ mixin _$VerificationResult {
   /// [status] The validation status of the target (attested; validated; in
   ///  process; requires revalidation; validation failed; revalidation
   ///  failed).
-  Code? get status => throw _privateConstructorUsedError;
+   FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
@@ -29008,7 +29008,7 @@ mixin _$VerificationResult {
   Element? get lastPerformedElement => throw _privateConstructorUsedError;
 
   /// [nextScheduled] The date when target is next validated, if appropriate.
-  Date? get nextScheduled => throw _privateConstructorUsedError;
+  FhirDate? get nextScheduled => throw _privateConstructorUsedError;
 
   /// [nextScheduledElement] ("_nextScheduled") Extensions for nextScheduled
   @JsonKey(name: '_nextScheduled')
@@ -29046,12 +29046,12 @@ abstract class $VerificationResultCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.VerificationResult)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+       FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -29064,7 +29064,7 @@ abstract class $VerificationResultCopyWith<$Res> {
       @JsonKey(name: '_targetLocation')
           List<Element>? targetLocationElement,
       CodeableConcept? need,
-      Code? status,
+       FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       FhirDateTime? statusDate,
@@ -29076,7 +29076,7 @@ abstract class $VerificationResultCopyWith<$Res> {
       FhirDateTime? lastPerformed,
       @JsonKey(name: '_lastPerformed')
           Element? lastPerformedElement,
-      Date? nextScheduled,
+      FhirDate? nextScheduled,
       @JsonKey(name: '_nextScheduled')
           Element? nextScheduledElement,
       CodeableConcept? failureAction,
@@ -29167,7 +29167,7 @@ class _$VerificationResultCopyWithImpl<$Res, $Val extends VerificationResult>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -29207,7 +29207,7 @@ class _$VerificationResultCopyWithImpl<$Res, $Val extends VerificationResult>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -29436,12 +29436,12 @@ abstract class _$$_VerificationResultCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.VerificationResult)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+       FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -29454,7 +29454,7 @@ abstract class _$$_VerificationResultCopyWith<$Res>
       @JsonKey(name: '_targetLocation')
           List<Element>? targetLocationElement,
       CodeableConcept? need,
-      Code? status,
+       FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       FhirDateTime? statusDate,
@@ -29466,7 +29466,7 @@ abstract class _$$_VerificationResultCopyWith<$Res>
       FhirDateTime? lastPerformed,
       @JsonKey(name: '_lastPerformed')
           Element? lastPerformedElement,
-      Date? nextScheduled,
+      FhirDate? nextScheduled,
       @JsonKey(name: '_nextScheduled')
           Element? nextScheduledElement,
       CodeableConcept? failureAction,
@@ -29568,7 +29568,7 @@ class __$$_VerificationResultCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -29608,7 +29608,7 @@ class __$$_VerificationResultCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -29757,7 +29757,7 @@ class _$_VerificationResult extends _VerificationResult {
 
   /// [language] The base language in which the resource is written.
   @override
-  final Code? language;
+  final  FhirCode? language;
 
   /// [languageElement] ("_language") Extensions for language
   @override
@@ -29913,7 +29913,7 @@ class _$_VerificationResult extends _VerificationResult {
   ///  process; requires revalidation; validation failed; revalidation
   ///  failed).
   @override
-  final Code? status;
+  final  FhirCode? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -30138,7 +30138,7 @@ abstract class _VerificationResult extends VerificationResult {
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
               final Element? implicitRulesElement,
-          final Code? language,
+          final  FhirCode? language,
           @JsonKey(name: '_language')
               final Element? languageElement,
           final Narrative? text,
@@ -30151,7 +30151,7 @@ abstract class _VerificationResult extends VerificationResult {
           @JsonKey(name: '_targetLocation')
               final List<Element>? targetLocationElement,
           final CodeableConcept? need,
-          final Code? status,
+          final  FhirCode? status,
           @JsonKey(name: '_status')
               final Element? statusElement,
           final FhirDateTime? statusDate,
@@ -30185,7 +30185,7 @@ abstract class _VerificationResult extends VerificationResult {
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -30208,7 +30208,7 @@ abstract class _VerificationResult extends VerificationResult {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+   FhirCode? get language;
   @override
 
   /// [languageElement] ("_language") Extensions for language
@@ -30284,7 +30284,7 @@ abstract class _VerificationResult extends VerificationResult {
   /// [status] The validation status of the target (attested; validated; in
   ///  process; requires revalidation; validation failed; revalidation
   ///  failed).
-  Code? get status;
+   FhirCode? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status
@@ -30327,7 +30327,7 @@ abstract class _VerificationResult extends VerificationResult {
   @override
 
   /// [nextScheduled] The date when target is next validated, if appropriate.
-  Date? get nextScheduled;
+  FhirDate? get nextScheduled;
   @override
 
   /// [nextScheduledElement] ("_nextScheduled") Extensions for nextScheduled
@@ -31074,7 +31074,7 @@ mixin _$VerificationResultAttestation {
       throw _privateConstructorUsedError;
 
   /// [date] The date the information was attested to.
-  Date? get date => throw _privateConstructorUsedError;
+  FhirDate? get date => throw _privateConstructorUsedError;
 
   /// [dateElement] ("_date") Extensions for date
   @JsonKey(name: '_date')
@@ -31132,7 +31132,7 @@ abstract class $VerificationResultAttestationCopyWith<$Res> {
       Reference? who,
       Reference? onBehalfOf,
       CodeableConcept? communicationMethod,
-      Date? date,
+      FhirDate? date,
       @JsonKey(name: '_date')
           Element? dateElement,
       String? sourceIdentityCertificate,
@@ -31363,7 +31363,7 @@ abstract class _$$_VerificationResultAttestationCopyWith<$Res>
       Reference? who,
       Reference? onBehalfOf,
       CodeableConcept? communicationMethod,
-      Date? date,
+      FhirDate? date,
       @JsonKey(name: '_date')
           Element? dateElement,
       String? sourceIdentityCertificate,
@@ -31792,7 +31792,7 @@ abstract class _VerificationResultAttestation
   @override
 
   /// [date] The date the information was attested to.
-  Date? get date;
+  FhirDate? get date;
   @override
 
   /// [dateElement] ("_date") Extensions for date

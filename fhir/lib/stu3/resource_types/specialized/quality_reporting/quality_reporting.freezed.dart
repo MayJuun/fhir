@@ -22,12 +22,12 @@ Measure _$MeasureFromJson(Map<String, dynamic> json) {
 mixin _$Measure {
   @JsonKey(unknownEnumValue: Stu3ResourceType.Measure)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -52,10 +52,10 @@ mixin _$Measure {
   MeasureStatus? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
-  Boolean? get experimental => throw _privateConstructorUsedError;
+  FhirBoolean? get experimental => throw _privateConstructorUsedError;
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
-  Date? get date => throw _privateConstructorUsedError;
+  FhirDate? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
   String? get publisher => throw _privateConstructorUsedError;
@@ -70,10 +70,10 @@ mixin _$Measure {
   String? get usage => throw _privateConstructorUsedError;
   @JsonKey(name: '_usage')
   Element? get usageElement => throw _privateConstructorUsedError;
-  Date? get approvalDate => throw _privateConstructorUsedError;
+  FhirDate? get approvalDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_approvalDate')
   Element? get approvalDateElement => throw _privateConstructorUsedError;
-  Date? get lastReviewDate => throw _privateConstructorUsedError;
+  FhirDate? get lastReviewDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_lastReviewDate')
   Element? get lastReviewDateElement => throw _privateConstructorUsedError;
   Period? get effectivePeriod => throw _privateConstructorUsedError;
@@ -139,12 +139,12 @@ abstract class $MeasureCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Measure)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -168,10 +168,10 @@ abstract class $MeasureCopyWith<$Res> {
       MeasureStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Boolean? experimental,
+      FhirBoolean? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
-      Date? date,
+      FhirDate? date,
       @JsonKey(name: '_date')
           Element? dateElement,
       String? publisher,
@@ -186,10 +186,10 @@ abstract class $MeasureCopyWith<$Res> {
       String? usage,
       @JsonKey(name: '_usage')
           Element? usageElement,
-      Date? approvalDate,
+      FhirDate? approvalDate,
       @JsonKey(name: '_approvalDate')
           Element? approvalDateElement,
-      Date? lastReviewDate,
+      FhirDate? lastReviewDate,
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
@@ -378,7 +378,7 @@ class _$MeasureCopyWithImpl<$Res, $Val extends Measure>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -446,7 +446,7 @@ class _$MeasureCopyWithImpl<$Res, $Val extends Measure>
       experimental: freezed == experimental
           ? _value.experimental
           : experimental // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       experimentalElement: freezed == experimentalElement
           ? _value.experimentalElement
           : experimentalElement // ignore: cast_nullable_to_non_nullable
@@ -1005,12 +1005,12 @@ abstract class _$$_MeasureCopyWith<$Res> implements $MeasureCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Measure)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -1034,10 +1034,10 @@ abstract class _$$_MeasureCopyWith<$Res> implements $MeasureCopyWith<$Res> {
       MeasureStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Boolean? experimental,
+      FhirBoolean? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
-      Date? date,
+      FhirDate? date,
       @JsonKey(name: '_date')
           Element? dateElement,
       String? publisher,
@@ -1052,10 +1052,10 @@ abstract class _$$_MeasureCopyWith<$Res> implements $MeasureCopyWith<$Res> {
       String? usage,
       @JsonKey(name: '_usage')
           Element? usageElement,
-      Date? approvalDate,
+      FhirDate? approvalDate,
       @JsonKey(name: '_approvalDate')
           Element? approvalDateElement,
-      Date? lastReviewDate,
+      FhirDate? lastReviewDate,
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
@@ -1270,7 +1270,7 @@ class __$$_MeasureCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -1338,7 +1338,7 @@ class __$$_MeasureCopyWithImpl<$Res>
       experimental: freezed == experimental
           ? _value.experimental
           : experimental // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       experimentalElement: freezed == experimentalElement
           ? _value.experimentalElement
           : experimentalElement // ignore: cast_nullable_to_non_nullable
@@ -1675,7 +1675,7 @@ class _$_Measure extends _Measure {
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
-  final Code? language;
+  final FhirCode? language;
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
@@ -1749,7 +1749,7 @@ class _$_Measure extends _Measure {
   @JsonKey(name: '_status')
   final Element? statusElement;
   @override
-  final Boolean? experimental;
+  final FhirBoolean? experimental;
   @override
   @JsonKey(name: '_experimental')
   final Element? experimentalElement;
@@ -2190,7 +2190,7 @@ abstract class _Measure extends Measure {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -2214,7 +2214,7 @@ abstract class _Measure extends Measure {
       final MeasureStatus? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
-      final Boolean? experimental,
+      final FhirBoolean? experimental,
       @JsonKey(name: '_experimental')
           final Element? experimentalElement,
       final Date? date,
@@ -2291,7 +2291,7 @@ abstract class _Measure extends Measure {
   @JsonKey(unknownEnumValue: Stu3ResourceType.Measure)
   Stu3ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -2300,7 +2300,7 @@ abstract class _Measure extends Measure {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
-  Code? get language;
+  FhirCode? get language;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;
@@ -2341,12 +2341,12 @@ abstract class _Measure extends Measure {
   @JsonKey(name: '_status')
   Element? get statusElement;
   @override
-  Boolean? get experimental;
+  FhirBoolean? get experimental;
   @override
   @JsonKey(name: '_experimental')
   Element? get experimentalElement;
   @override
-  Date? get date;
+  FhirDate? get date;
   @override
   @JsonKey(name: '_date')
   Element? get dateElement;
@@ -2371,12 +2371,12 @@ abstract class _Measure extends Measure {
   @JsonKey(name: '_usage')
   Element? get usageElement;
   @override
-  Date? get approvalDate;
+  FhirDate? get approvalDate;
   @override
   @JsonKey(name: '_approvalDate')
   Element? get approvalDateElement;
   @override
-  Date? get lastReviewDate;
+  FhirDate? get lastReviewDate;
   @override
   @JsonKey(name: '_lastReviewDate')
   Element? get lastReviewDateElement;
@@ -3794,12 +3794,12 @@ MeasureReport _$MeasureReportFromJson(Map<String, dynamic> json) {
 mixin _$MeasureReport {
   @JsonKey(unknownEnumValue: Stu3ResourceType.MeasureReport)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -3817,7 +3817,7 @@ mixin _$MeasureReport {
   Element? get typeElement => throw _privateConstructorUsedError;
   Reference get measure => throw _privateConstructorUsedError;
   Reference? get patient => throw _privateConstructorUsedError;
-  Date? get date => throw _privateConstructorUsedError;
+  FhirDate? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
   Reference? get reportingOrganization => throw _privateConstructorUsedError;
@@ -3840,12 +3840,12 @@ abstract class $MeasureReportCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.MeasureReport)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -3862,7 +3862,7 @@ abstract class $MeasureReportCopyWith<$Res> {
           Element? typeElement,
       Reference measure,
       Reference? patient,
-      Date? date,
+      FhirDate? date,
       @JsonKey(name: '_date')
           Element? dateElement,
       Reference? reportingOrganization,
@@ -3947,7 +3947,7 @@ class _$MeasureReportCopyWithImpl<$Res, $Val extends MeasureReport>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -4183,12 +4183,12 @@ abstract class _$$_MeasureReportCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.MeasureReport)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -4205,7 +4205,7 @@ abstract class _$$_MeasureReportCopyWith<$Res>
           Element? typeElement,
       Reference measure,
       Reference? patient,
-      Date? date,
+      FhirDate? date,
       @JsonKey(name: '_date')
           Element? dateElement,
       Reference? reportingOrganization,
@@ -4301,7 +4301,7 @@ class __$$_MeasureReportCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -4435,7 +4435,7 @@ class _$_MeasureReport extends _MeasureReport {
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
-  final Code? language;
+  final FhirCode? language;
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
@@ -4614,7 +4614,7 @@ abstract class _MeasureReport extends MeasureReport {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -4647,7 +4647,7 @@ abstract class _MeasureReport extends MeasureReport {
   @JsonKey(unknownEnumValue: Stu3ResourceType.MeasureReport)
   Stu3ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -4656,7 +4656,7 @@ abstract class _MeasureReport extends MeasureReport {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
-  Code? get language;
+  FhirCode? get language;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;
@@ -4686,7 +4686,7 @@ abstract class _MeasureReport extends MeasureReport {
   @override
   Reference? get patient;
   @override
-  Date? get date;
+  FhirDate? get date;
   @override
   @JsonKey(name: '_date')
   Element? get dateElement;
@@ -4713,7 +4713,7 @@ mixin _$MeasureReportGroup {
   Identifier get identifier => throw _privateConstructorUsedError;
   List<MeasureReportPopulation>? get population =>
       throw _privateConstructorUsedError;
-  Decimal? get measureScore => throw _privateConstructorUsedError;
+  FhirDecimal? get measureScore => throw _privateConstructorUsedError;
   @JsonKey(name: '_measureScore')
   Element? get measureScoreElement => throw _privateConstructorUsedError;
   List<MeasureReportStratifier>? get stratifier =>
@@ -4734,7 +4734,7 @@ abstract class $MeasureReportGroupCopyWith<$Res> {
   $Res call(
       {Identifier identifier,
       List<MeasureReportPopulation>? population,
-      Decimal? measureScore,
+      FhirDecimal? measureScore,
       @JsonKey(name: '_measureScore') Element? measureScoreElement,
       List<MeasureReportStratifier>? stratifier});
 
@@ -4817,7 +4817,7 @@ abstract class _$$_MeasureReportGroupCopyWith<$Res>
   $Res call(
       {Identifier identifier,
       List<MeasureReportPopulation>? population,
-      Decimal? measureScore,
+      FhirDecimal? measureScore,
       @JsonKey(name: '_measureScore') Element? measureScoreElement,
       List<MeasureReportStratifier>? stratifier});
 
@@ -4976,7 +4976,7 @@ abstract class _MeasureReportGroup extends MeasureReportGroup {
   @override
   List<MeasureReportPopulation>? get population;
   @override
-  Decimal? get measureScore;
+  FhirDecimal? get measureScore;
   @override
   @JsonKey(name: '_measureScore')
   Element? get measureScoreElement;
@@ -4997,7 +4997,7 @@ MeasureReportPopulation _$MeasureReportPopulationFromJson(
 mixin _$MeasureReportPopulation {
   Identifier? get identifier => throw _privateConstructorUsedError;
   CodeableConcept? get code => throw _privateConstructorUsedError;
-  Decimal? get count => throw _privateConstructorUsedError;
+  FhirDecimal? get count => throw _privateConstructorUsedError;
   @JsonKey(name: '_count')
   Element? get countElement => throw _privateConstructorUsedError;
   Reference? get patients => throw _privateConstructorUsedError;
@@ -5017,7 +5017,7 @@ abstract class $MeasureReportPopulationCopyWith<$Res> {
   $Res call(
       {Identifier? identifier,
       CodeableConcept? code,
-      Decimal? count,
+      FhirDecimal? count,
       @JsonKey(name: '_count') Element? countElement,
       Reference? patients});
 
@@ -5131,7 +5131,7 @@ abstract class _$$_MeasureReportPopulationCopyWith<$Res>
   $Res call(
       {Identifier? identifier,
       CodeableConcept? code,
-      Decimal? count,
+      FhirDecimal? count,
       @JsonKey(name: '_count') Element? countElement,
       Reference? patients});
 
@@ -5272,7 +5272,7 @@ abstract class _MeasureReportPopulation extends MeasureReportPopulation {
   @override
   CodeableConcept? get code;
   @override
-  Decimal? get count;
+  FhirDecimal? get count;
   @override
   @JsonKey(name: '_count')
   Element? get countElement;
@@ -5484,7 +5484,7 @@ mixin _$MeasureReportStratum {
   Element? get valueElement => throw _privateConstructorUsedError;
   List<MeasureReportPopulation1>? get population =>
       throw _privateConstructorUsedError;
-  Decimal? get measureScore => throw _privateConstructorUsedError;
+  FhirDecimal? get measureScore => throw _privateConstructorUsedError;
   @JsonKey(name: '_measureScore')
   Element? get measureScoreElement => throw _privateConstructorUsedError;
 
@@ -5504,7 +5504,7 @@ abstract class $MeasureReportStratumCopyWith<$Res> {
       {String? value,
       @JsonKey(name: '_value') Element? valueElement,
       List<MeasureReportPopulation1>? population,
-      Decimal? measureScore,
+      FhirDecimal? measureScore,
       @JsonKey(name: '_measureScore') Element? measureScoreElement});
 
   $ElementCopyWith<$Res>? get valueElement;
@@ -5592,7 +5592,7 @@ abstract class _$$_MeasureReportStratumCopyWith<$Res>
       {String? value,
       @JsonKey(name: '_value') Element? valueElement,
       List<MeasureReportPopulation1>? population,
-      Decimal? measureScore,
+      FhirDecimal? measureScore,
       @JsonKey(name: '_measureScore') Element? measureScoreElement});
 
   @override
@@ -5746,7 +5746,7 @@ abstract class _MeasureReportStratum extends MeasureReportStratum {
   @override
   List<MeasureReportPopulation1>? get population;
   @override
-  Decimal? get measureScore;
+  FhirDecimal? get measureScore;
   @override
   @JsonKey(name: '_measureScore')
   Element? get measureScoreElement;
@@ -5765,7 +5765,7 @@ MeasureReportPopulation1 _$MeasureReportPopulation1FromJson(
 mixin _$MeasureReportPopulation1 {
   Identifier? get identifier => throw _privateConstructorUsedError;
   CodeableConcept? get code => throw _privateConstructorUsedError;
-  Decimal? get count => throw _privateConstructorUsedError;
+  FhirDecimal? get count => throw _privateConstructorUsedError;
   @JsonKey(name: '_count')
   Element? get countElement => throw _privateConstructorUsedError;
   Reference? get patients => throw _privateConstructorUsedError;
@@ -5785,7 +5785,7 @@ abstract class $MeasureReportPopulation1CopyWith<$Res> {
   $Res call(
       {Identifier? identifier,
       CodeableConcept? code,
-      Decimal? count,
+      FhirDecimal? count,
       @JsonKey(name: '_count') Element? countElement,
       Reference? patients});
 
@@ -5900,7 +5900,7 @@ abstract class _$$_MeasureReportPopulation1CopyWith<$Res>
   $Res call(
       {Identifier? identifier,
       CodeableConcept? code,
-      Decimal? count,
+      FhirDecimal? count,
       @JsonKey(name: '_count') Element? countElement,
       Reference? patients});
 
@@ -6040,7 +6040,7 @@ abstract class _MeasureReportPopulation1 extends MeasureReportPopulation1 {
   @override
   CodeableConcept? get code;
   @override
-  Decimal? get count;
+  FhirDecimal? get count;
   @override
   @JsonKey(name: '_count')
   Element? get countElement;

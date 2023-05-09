@@ -1,6 +1,14 @@
 # fhir
 
+## [0.10.0]
+
+* Been trying to do type generation for some DBs, mostly unsuccessful. Did leave in the TypeAdapter Generator for Hive, because it's only useful for the enum R4ResourceType
+* There are a number of classes with the same name in the Db/Server packages I've been using
+* To avoid any difficulties, I'm renaming all primitive classes to start with Fhir, and also Meta and List
+* Dependencies updated, Hive added
+
 ## [0.9.5]
+
 * Added a few constructors to BundleRequest to more easily create them
 * One convenience method for OperationOutcome to check if it's informational
 

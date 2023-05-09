@@ -165,7 +165,7 @@ class Coverage with Resource, _$Coverage {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -182,7 +182,7 @@ class Coverage with Resource, _$Coverage {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -203,13 +203,13 @@ class Coverage with Resource, _$Coverage {
     List<Identifier>? identifier,
 
     /// [status] The status of the resource instance.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
 
     /// [kind] The nature of the coverage be it insurance, or cash payment such as self-pay.
-    Code? kind,
+    FhirCode? kind,
 
     /// [kindElement] ("_kind") Extensions for kind
     @JsonKey(name: '_kind') Element? kindElement,
@@ -266,7 +266,7 @@ class Coverage with Resource, _$Coverage {
     List<CoverageCostToBeneficiary>? costToBeneficiary,
 
     /// [subrogation] When 'subrogation=true' this insurance instance has been included not for adjudication but to provide insurers with the details to recover costs.
-    Boolean? subrogation,
+    FhirBoolean? subrogation,
 
     /// [subrogationElement] ("_subrogation") Extensions for subrogation
     @JsonKey(name: '_subrogation') Element? subrogationElement,
@@ -926,7 +926,7 @@ class CoverageEligibilityRequest with Resource, _$CoverageEligibilityRequest {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -943,7 +943,7 @@ class CoverageEligibilityRequest with Resource, _$CoverageEligibilityRequest {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -964,7 +964,7 @@ class CoverageEligibilityRequest with Resource, _$CoverageEligibilityRequest {
     List<Identifier>? identifier,
 
     /// [status] The status of the resource instance.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -982,7 +982,7 @@ class CoverageEligibilityRequest with Resource, _$CoverageEligibilityRequest {
     required Reference patient,
 
     /// [servicedDate] The date or dates when the enclosed suite of services were performed or completed.
-    Date? servicedDate,
+    FhirDate? servicedDate,
 
     /// [servicedDateElement] ("_servicedDate") Extensions for servicedDate
     @JsonKey(name: '_servicedDate') Element? servicedDateElement,
@@ -1145,7 +1145,7 @@ class CoverageEligibilityRequestSupportingInfo
     required Reference information,
 
     /// [appliesToAll] The supporting materials are applicable for all detail items, product/servce categories and specific billing codes.
-    Boolean? appliesToAll,
+    FhirBoolean? appliesToAll,
 
     /// [appliesToAllElement] ("_appliesToAll") Extensions for appliesToAll
     @JsonKey(name: '_appliesToAll') Element? appliesToAllElement,
@@ -1275,7 +1275,7 @@ class CoverageEligibilityRequestInsurance
     List<FhirExtension>? modifierExtension,
 
     /// [focal] A flag to indicate that this Coverage is to be used for evaluation of this request when set to true.
-    Boolean? focal,
+    FhirBoolean? focal,
 
     /// [focalElement] ("_focal") Extensions for focal
     @JsonKey(name: '_focal') Element? focalElement,
@@ -1744,7 +1744,7 @@ class CoverageEligibilityResponse with Resource, _$CoverageEligibilityResponse {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -1761,7 +1761,7 @@ class CoverageEligibilityResponse with Resource, _$CoverageEligibilityResponse {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -1782,7 +1782,7 @@ class CoverageEligibilityResponse with Resource, _$CoverageEligibilityResponse {
     List<Identifier>? identifier,
 
     /// [status] The status of the resource instance.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -1797,7 +1797,7 @@ class CoverageEligibilityResponse with Resource, _$CoverageEligibilityResponse {
     required Reference patient,
 
     /// [servicedDate] The date or dates when the enclosed suite of services were performed or completed.
-    Date? servicedDate,
+    FhirDate? servicedDate,
 
     /// [servicedDateElement] ("_servicedDate") Extensions for servicedDate
     @JsonKey(name: '_servicedDate') Element? servicedDateElement,
@@ -1818,7 +1818,7 @@ class CoverageEligibilityResponse with Resource, _$CoverageEligibilityResponse {
     required Reference request,
 
     /// [outcome] The outcome of the request processing.
-    Code? outcome,
+    FhirCode? outcome,
 
     /// [outcomeElement] ("_outcome") Extensions for outcome
     @JsonKey(name: '_outcome') Element? outcomeElement,
@@ -1967,7 +1967,7 @@ class CoverageEligibilityResponseInsurance
     required Reference coverage,
 
     /// [inforce] Flag indicating if the coverage provided is inforce currently if no service date(s) specified or for the whole duration of the service dates.
-    Boolean? inforce,
+    FhirBoolean? inforce,
 
     /// [inforceElement] ("_inforce") Extensions for inforce
     @JsonKey(name: '_inforce') Element? inforceElement,
@@ -2141,7 +2141,7 @@ class CoverageEligibilityResponseItem with _$CoverageEligibilityResponseItem {
     Reference? provider,
 
     /// [excluded] True if the indicated class of service is excluded from the plan, missing or False indicates the product or service is included in the coverage.
-    Boolean? excluded,
+    FhirBoolean? excluded,
 
     /// [excludedElement] ("_excluded") Extensions for excluded
     @JsonKey(name: '_excluded') Element? excludedElement,
@@ -2171,7 +2171,7 @@ class CoverageEligibilityResponseItem with _$CoverageEligibilityResponseItem {
     List<CoverageEligibilityResponseBenefit>? benefit,
 
     /// [authorizationRequired] A boolean flag indicating whether a preauthorization is required prior to actual service delivery.
-    Boolean? authorizationRequired,
+    FhirBoolean? authorizationRequired,
 
     /// [authorizationRequiredElement] ("_authorizationRequired") Extensions for authorizationRequired
     @JsonKey(name: '_authorizationRequired')
@@ -2579,7 +2579,7 @@ class EnrollmentRequest with Resource, _$EnrollmentRequest {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -2596,7 +2596,7 @@ class EnrollmentRequest with Resource, _$EnrollmentRequest {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -2617,7 +2617,7 @@ class EnrollmentRequest with Resource, _$EnrollmentRequest {
     List<Identifier>? identifier,
 
     /// [status] The status of the resource instance.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -2772,7 +2772,7 @@ class EnrollmentResponse with Resource, _$EnrollmentResponse {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -2789,7 +2789,7 @@ class EnrollmentResponse with Resource, _$EnrollmentResponse {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -2810,7 +2810,7 @@ class EnrollmentResponse with Resource, _$EnrollmentResponse {
     List<Identifier>? identifier,
 
     /// [status] The status of the resource instance.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -2819,7 +2819,7 @@ class EnrollmentResponse with Resource, _$EnrollmentResponse {
     Reference? request,
 
     /// [outcome] Processing status: error, complete.
-    Code? outcome,
+    FhirCode? outcome,
 
     /// [outcomeElement] ("_outcome") Extensions for outcome
     @JsonKey(name: '_outcome') Element? outcomeElement,

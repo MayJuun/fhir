@@ -19,11 +19,11 @@ class Encounter with Resource, _$Encounter {
     @Default(Dstu2ResourceType.Encounter)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Encounter)
         Dstu2ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -86,7 +86,7 @@ class Encounter with Resource, _$Encounter {
 class EncounterStatusHistory with _$EncounterStatusHistory {
   EncounterStatusHistory._();
   factory EncounterStatusHistory({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: EncounterHistoryStatus.unknown)
@@ -130,7 +130,7 @@ class EncounterStatusHistory with _$EncounterStatusHistory {
 class EncounterParticipant with _$EncounterParticipant {
   EncounterParticipant._();
   factory EncounterParticipant({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<CodeableConcept>? type,
@@ -173,7 +173,7 @@ class EncounterParticipant with _$EncounterParticipant {
 class EncounterHospitalization with _$EncounterHospitalization {
   EncounterHospitalization._();
   factory EncounterHospitalization({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
     List<FhirExtension>? modifierExtension,
@@ -225,7 +225,7 @@ class EncounterHospitalization with _$EncounterHospitalization {
 class EncounterLocation with _$EncounterLocation {
   EncounterLocation._();
   factory EncounterLocation({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Reference location,
@@ -273,11 +273,11 @@ class EpisodeOfCare with Resource, _$EpisodeOfCare {
     @Default(Dstu2ResourceType.EpisodeOfCare)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.EpisodeOfCare)
         Dstu2ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -330,7 +330,7 @@ class EpisodeOfCare with Resource, _$EpisodeOfCare {
 class EpisodeOfCareStatusHistory with _$EpisodeOfCareStatusHistory {
   EpisodeOfCareStatusHistory._();
   factory EpisodeOfCareStatusHistory({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(required: true, unknownEnumValue: EpisodeOfCareHistoryStatus.unknown)
@@ -374,7 +374,7 @@ class EpisodeOfCareStatusHistory with _$EpisodeOfCareStatusHistory {
 class EpisodeOfCareCareTeam with _$EpisodeOfCareCareTeam {
   EpisodeOfCareCareTeam._();
   factory EpisodeOfCareCareTeam({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<CodeableConcept>? role,
@@ -420,11 +420,11 @@ class Communication with Resource, _$Communication {
     @Default(Dstu2ResourceType.Communication)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Communication)
         Dstu2ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -481,7 +481,7 @@ class Communication with Resource, _$Communication {
 class CommunicationPayload with _$CommunicationPayload {
   CommunicationPayload._();
   factory CommunicationPayload({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? contentString,
@@ -528,11 +528,11 @@ class Flag with Resource, _$Flag {
     @Default(Dstu2ResourceType.Flag)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Flag)
         Dstu2ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,

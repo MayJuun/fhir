@@ -26,7 +26,7 @@ mixin _$AdverseEvent {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -44,7 +44,7 @@ mixin _$AdverseEvent {
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
@@ -68,14 +68,14 @@ mixin _$AdverseEvent {
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [status] The current state of the adverse event or potential adverse event.
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
 
   /// [actuality] Whether the event actually happened or was a near miss. Note that this is independent of whether anyone was affected or harmed or how severely.
-  Code? get actuality => throw _privateConstructorUsedError;
+  FhirCode? get actuality => throw _privateConstructorUsedError;
 
   /// [actualityElement] ("_actuality") Extensions for actuality
   @JsonKey(name: '_actuality')
@@ -143,7 +143,8 @@ mixin _$AdverseEvent {
   List<Reference>? get study => throw _privateConstructorUsedError;
 
   /// [expectedInResearchStudy] Considered likely or probable or anticipated in the research study.  Whether the reported event matches any of the outcomes for the patient that are considered by the study as known or likely.
-  Boolean? get expectedInResearchStudy => throw _privateConstructorUsedError;
+  FhirBoolean? get expectedInResearchStudy =>
+      throw _privateConstructorUsedError;
 
   /// [expectedInResearchStudyElement] ("_expectedInResearchStudy") Extensions for expectedInResearchStudy
   @JsonKey(name: '_expectedInResearchStudy')
@@ -188,12 +189,12 @@ abstract class $AdverseEventCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.AdverseEvent)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -202,10 +203,10 @@ abstract class $AdverseEventCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Code? actuality,
+      FhirCode? actuality,
       @JsonKey(name: '_actuality')
           Element? actualityElement,
       List<CodeableConcept>? category,
@@ -230,7 +231,7 @@ abstract class $AdverseEventCopyWith<$Res> {
       Reference? recorder,
       List<AdverseEventParticipant>? participant,
       List<Reference>? study,
-      Boolean? expectedInResearchStudy,
+      FhirBoolean? expectedInResearchStudy,
       @JsonKey(name: '_expectedInResearchStudy')
           Element? expectedInResearchStudyElement,
       List<AdverseEventSuspectEntity>? suspectEntity,
@@ -341,7 +342,7 @@ class _$AdverseEventCopyWithImpl<$Res, $Val extends AdverseEvent>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -369,7 +370,7 @@ class _$AdverseEventCopyWithImpl<$Res, $Val extends AdverseEvent>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -377,7 +378,7 @@ class _$AdverseEventCopyWithImpl<$Res, $Val extends AdverseEvent>
       actuality: freezed == actuality
           ? _value.actuality
           : actuality // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       actualityElement: freezed == actualityElement
           ? _value.actualityElement
           : actualityElement // ignore: cast_nullable_to_non_nullable
@@ -461,7 +462,7 @@ class _$AdverseEventCopyWithImpl<$Res, $Val extends AdverseEvent>
       expectedInResearchStudy: freezed == expectedInResearchStudy
           ? _value.expectedInResearchStudy
           : expectedInResearchStudy // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       expectedInResearchStudyElement: freezed == expectedInResearchStudyElement
           ? _value.expectedInResearchStudyElement
           : expectedInResearchStudyElement // ignore: cast_nullable_to_non_nullable
@@ -719,12 +720,12 @@ abstract class _$$_AdverseEventCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.AdverseEvent)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -733,10 +734,10 @@ abstract class _$$_AdverseEventCopyWith<$Res>
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Code? actuality,
+      FhirCode? actuality,
       @JsonKey(name: '_actuality')
           Element? actualityElement,
       List<CodeableConcept>? category,
@@ -761,7 +762,7 @@ abstract class _$$_AdverseEventCopyWith<$Res>
       Reference? recorder,
       List<AdverseEventParticipant>? participant,
       List<Reference>? study,
-      Boolean? expectedInResearchStudy,
+      FhirBoolean? expectedInResearchStudy,
       @JsonKey(name: '_expectedInResearchStudy')
           Element? expectedInResearchStudyElement,
       List<AdverseEventSuspectEntity>? suspectEntity,
@@ -888,7 +889,7 @@ class __$$_AdverseEventCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -916,7 +917,7 @@ class __$$_AdverseEventCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -924,7 +925,7 @@ class __$$_AdverseEventCopyWithImpl<$Res>
       actuality: freezed == actuality
           ? _value.actuality
           : actuality // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       actualityElement: freezed == actualityElement
           ? _value.actualityElement
           : actualityElement // ignore: cast_nullable_to_non_nullable
@@ -1008,7 +1009,7 @@ class __$$_AdverseEventCopyWithImpl<$Res>
       expectedInResearchStudy: freezed == expectedInResearchStudy
           ? _value.expectedInResearchStudy
           : expectedInResearchStudy // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       expectedInResearchStudyElement: freezed == expectedInResearchStudyElement
           ? _value.expectedInResearchStudyElement
           : expectedInResearchStudyElement // ignore: cast_nullable_to_non_nullable
@@ -1148,7 +1149,7 @@ class _$_AdverseEvent extends _AdverseEvent {
 
   /// [language] The base language in which the resource is written.
   @override
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] ("_language") Extensions for language
   @override
@@ -1215,7 +1216,7 @@ class _$_AdverseEvent extends _AdverseEvent {
 
   /// [status] The current state of the adverse event or potential adverse event.
   @override
-  final Code? status;
+  final FhirCode? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -1224,7 +1225,7 @@ class _$_AdverseEvent extends _AdverseEvent {
 
   /// [actuality] Whether the event actually happened or was a near miss. Note that this is independent of whether anyone was affected or harmed or how severely.
   @override
-  final Code? actuality;
+  final FhirCode? actuality;
 
   /// [actualityElement] ("_actuality") Extensions for actuality
   @override
@@ -1357,7 +1358,7 @@ class _$_AdverseEvent extends _AdverseEvent {
 
   /// [expectedInResearchStudy] Considered likely or probable or anticipated in the research study.  Whether the reported event matches any of the outcomes for the patient that are considered by the study as known or likely.
   @override
-  final Boolean? expectedInResearchStudy;
+  final FhirBoolean? expectedInResearchStudy;
 
   /// [expectedInResearchStudyElement] ("_expectedInResearchStudy") Extensions for expectedInResearchStudy
   @override
@@ -1607,7 +1608,7 @@ abstract class _AdverseEvent extends AdverseEvent {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -1616,10 +1617,10 @@ abstract class _AdverseEvent extends AdverseEvent {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      final Code? status,
+      final FhirCode? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
-      final Code? actuality,
+      final FhirCode? actuality,
       @JsonKey(name: '_actuality')
           final Element? actualityElement,
       final List<CodeableConcept>? category,
@@ -1644,7 +1645,7 @@ abstract class _AdverseEvent extends AdverseEvent {
       final Reference? recorder,
       final List<AdverseEventParticipant>? participant,
       final List<Reference>? study,
-      final Boolean? expectedInResearchStudy,
+      final FhirBoolean? expectedInResearchStudy,
       @JsonKey(name: '_expectedInResearchStudy')
           final Element? expectedInResearchStudyElement,
       final List<AdverseEventSuspectEntity>? suspectEntity,
@@ -1667,7 +1668,7 @@ abstract class _AdverseEvent extends AdverseEvent {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -1689,7 +1690,7 @@ abstract class _AdverseEvent extends AdverseEvent {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] ("_language") Extensions for language
@@ -1719,7 +1720,7 @@ abstract class _AdverseEvent extends AdverseEvent {
   @override
 
   /// [status] The current state of the adverse event or potential adverse event.
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status
@@ -1728,7 +1729,7 @@ abstract class _AdverseEvent extends AdverseEvent {
   @override
 
   /// [actuality] Whether the event actually happened or was a near miss. Note that this is independent of whether anyone was affected or harmed or how severely.
-  Code? get actuality;
+  FhirCode? get actuality;
   @override
 
   /// [actualityElement] ("_actuality") Extensions for actuality
@@ -1816,7 +1817,7 @@ abstract class _AdverseEvent extends AdverseEvent {
   @override
 
   /// [expectedInResearchStudy] Considered likely or probable or anticipated in the research study.  Whether the reported event matches any of the outcomes for the patient that are considered by the study as known or likely.
-  Boolean? get expectedInResearchStudy;
+  FhirBoolean? get expectedInResearchStudy;
   @override
 
   /// [expectedInResearchStudyElement] ("_expectedInResearchStudy") Extensions for expectedInResearchStudy
@@ -4696,7 +4697,7 @@ mixin _$AllergyIntolerance {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -4714,7 +4715,7 @@ mixin _$AllergyIntolerance {
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
@@ -4754,7 +4755,7 @@ mixin _$AllergyIntolerance {
   List<Element>? get categoryElement => throw _privateConstructorUsedError;
 
   /// [criticality] Estimate of the potential clinical harm, or seriousness, of the reaction to the identified substance.
-  Code? get criticality => throw _privateConstructorUsedError;
+  FhirCode? get criticality => throw _privateConstructorUsedError;
 
   /// [criticalityElement] ("_criticality") Extensions for criticality
   @JsonKey(name: '_criticality')
@@ -4832,12 +4833,12 @@ abstract class $AllergyIntoleranceCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.AllergyIntolerance)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -4852,7 +4853,7 @@ abstract class $AllergyIntoleranceCopyWith<$Res> {
       List<Code>? category,
       @JsonKey(name: '_category')
           List<Element>? categoryElement,
-      Code? criticality,
+      FhirCode? criticality,
       @JsonKey(name: '_criticality')
           Element? criticalityElement,
       CodeableConcept? code,
@@ -4971,7 +4972,7 @@ class _$AllergyIntoleranceCopyWithImpl<$Res, $Val extends AllergyIntolerance>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -5019,7 +5020,7 @@ class _$AllergyIntoleranceCopyWithImpl<$Res, $Val extends AllergyIntolerance>
       criticality: freezed == criticality
           ? _value.criticality
           : criticality // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       criticalityElement: freezed == criticalityElement
           ? _value.criticalityElement
           : criticalityElement // ignore: cast_nullable_to_non_nullable
@@ -5319,12 +5320,12 @@ abstract class _$$_AllergyIntoleranceCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.AllergyIntolerance)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -5339,7 +5340,7 @@ abstract class _$$_AllergyIntoleranceCopyWith<$Res>
       List<Code>? category,
       @JsonKey(name: '_category')
           List<Element>? categoryElement,
-      Code? criticality,
+      FhirCode? criticality,
       @JsonKey(name: '_criticality')
           Element? criticalityElement,
       CodeableConcept? code,
@@ -5474,7 +5475,7 @@ class __$$_AllergyIntoleranceCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -5522,7 +5523,7 @@ class __$$_AllergyIntoleranceCopyWithImpl<$Res>
       criticality: freezed == criticality
           ? _value.criticality
           : criticality // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       criticalityElement: freezed == criticalityElement
           ? _value.criticalityElement
           : criticalityElement // ignore: cast_nullable_to_non_nullable
@@ -5693,7 +5694,7 @@ class _$_AllergyIntolerance extends _AllergyIntolerance {
 
   /// [language] The base language in which the resource is written.
   @override
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] ("_language") Extensions for language
   @override
@@ -5799,7 +5800,7 @@ class _$_AllergyIntolerance extends _AllergyIntolerance {
 
   /// [criticality] Estimate of the potential clinical harm, or seriousness, of the reaction to the identified substance.
   @override
-  final Code? criticality;
+  final FhirCode? criticality;
 
   /// [criticalityElement] ("_criticality") Extensions for criticality
   @override
@@ -6046,7 +6047,7 @@ abstract class _AllergyIntolerance extends AllergyIntolerance {
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
               final Element? implicitRulesElement,
-          final Code? language,
+          final FhirCode? language,
           @JsonKey(name: '_language')
               final Element? languageElement,
           final Narrative? text,
@@ -6061,7 +6062,7 @@ abstract class _AllergyIntolerance extends AllergyIntolerance {
           final List<Code>? category,
           @JsonKey(name: '_category')
               final List<Element>? categoryElement,
-          final Code? criticality,
+          final FhirCode? criticality,
           @JsonKey(name: '_criticality')
               final Element? criticalityElement,
           final CodeableConcept? code,
@@ -6100,7 +6101,7 @@ abstract class _AllergyIntolerance extends AllergyIntolerance {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -6122,7 +6123,7 @@ abstract class _AllergyIntolerance extends AllergyIntolerance {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] ("_language") Extensions for language
@@ -6173,7 +6174,7 @@ abstract class _AllergyIntolerance extends AllergyIntolerance {
   @override
 
   /// [criticality] Estimate of the potential clinical harm, or seriousness, of the reaction to the identified substance.
-  Code? get criticality;
+  FhirCode? get criticality;
   @override
 
   /// [criticalityElement] ("_criticality") Extensions for criticality
@@ -6706,7 +6707,7 @@ mixin _$AllergyIntoleranceReaction {
   Element? get onsetElement => throw _privateConstructorUsedError;
 
   /// [severity] Clinical assessment of the severity of the reaction event as a whole, potentially considering multiple different manifestations.
-  Code? get severity => throw _privateConstructorUsedError;
+  FhirCode? get severity => throw _privateConstructorUsedError;
 
   /// [severityElement] ("_severity") Extensions for severity
   @JsonKey(name: '_severity')
@@ -6741,7 +6742,7 @@ abstract class $AllergyIntoleranceReactionCopyWith<$Res> {
       @JsonKey(name: '_description') Element? descriptionElement,
       FhirDateTime? onset,
       @JsonKey(name: '_onset') Element? onsetElement,
-      Code? severity,
+      FhirCode? severity,
       @JsonKey(name: '_severity') Element? severityElement,
       CodeableConcept? exposureRoute,
       List<Annotation>? note});
@@ -6821,7 +6822,7 @@ class _$AllergyIntoleranceReactionCopyWithImpl<$Res,
       severity: freezed == severity
           ? _value.severity
           : severity // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       severityElement: freezed == severityElement
           ? _value.severityElement
           : severityElement // ignore: cast_nullable_to_non_nullable
@@ -6917,7 +6918,7 @@ abstract class _$$_AllergyIntoleranceReactionCopyWith<$Res>
       @JsonKey(name: '_description') Element? descriptionElement,
       FhirDateTime? onset,
       @JsonKey(name: '_onset') Element? onsetElement,
-      Code? severity,
+      FhirCode? severity,
       @JsonKey(name: '_severity') Element? severityElement,
       CodeableConcept? exposureRoute,
       List<Annotation>? note});
@@ -7001,7 +7002,7 @@ class __$$_AllergyIntoleranceReactionCopyWithImpl<$Res>
       severity: freezed == severity
           ? _value.severity
           : severity // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       severityElement: freezed == severityElement
           ? _value.severityElement
           : severityElement // ignore: cast_nullable_to_non_nullable
@@ -7144,7 +7145,7 @@ class _$_AllergyIntoleranceReaction extends _AllergyIntoleranceReaction {
 
   /// [severity] Clinical assessment of the severity of the reaction event as a whole, potentially considering multiple different manifestations.
   @override
-  final Code? severity;
+  final FhirCode? severity;
 
   /// [severityElement] ("_severity") Extensions for severity
   @override
@@ -7247,7 +7248,7 @@ abstract class _AllergyIntoleranceReaction extends AllergyIntoleranceReaction {
       @JsonKey(name: '_description') final Element? descriptionElement,
       final FhirDateTime? onset,
       @JsonKey(name: '_onset') final Element? onsetElement,
-      final Code? severity,
+      final FhirCode? severity,
       @JsonKey(name: '_severity') final Element? severityElement,
       final CodeableConcept? exposureRoute,
       final List<Annotation>? note}) = _$_AllergyIntoleranceReaction;
@@ -7315,7 +7316,7 @@ abstract class _AllergyIntoleranceReaction extends AllergyIntoleranceReaction {
   @override
 
   /// [severity] Clinical assessment of the severity of the reaction event as a whole, potentially considering multiple different manifestations.
-  Code? get severity;
+  FhirCode? get severity;
   @override
 
   /// [severityElement] ("_severity") Extensions for severity
@@ -7347,7 +7348,7 @@ mixin _$ClinicalImpression {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -7365,7 +7366,7 @@ mixin _$ClinicalImpression {
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
@@ -7389,7 +7390,7 @@ mixin _$ClinicalImpression {
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [status] Identifies the workflow status of the assessment.
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
@@ -7486,12 +7487,12 @@ abstract class $ClinicalImpressionCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.ClinicalImpression)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -7500,7 +7501,7 @@ abstract class $ClinicalImpressionCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? statusReason,
@@ -7625,7 +7626,7 @@ class _$ClinicalImpressionCopyWithImpl<$Res, $Val extends ClinicalImpression>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -7653,7 +7654,7 @@ class _$ClinicalImpressionCopyWithImpl<$Res, $Val extends ClinicalImpression>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -7953,12 +7954,12 @@ abstract class _$$_ClinicalImpressionCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.ClinicalImpression)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -7967,7 +7968,7 @@ abstract class _$$_ClinicalImpressionCopyWith<$Res>
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? statusReason,
@@ -8106,7 +8107,7 @@ class __$$_ClinicalImpressionCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -8134,7 +8135,7 @@ class __$$_ClinicalImpressionCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -8333,7 +8334,7 @@ class _$_ClinicalImpression extends _ClinicalImpression {
 
   /// [language] The base language in which the resource is written.
   @override
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] ("_language") Extensions for language
   @override
@@ -8400,7 +8401,7 @@ class _$_ClinicalImpression extends _ClinicalImpression {
 
   /// [status] Identifies the workflow status of the assessment.
   @override
-  final Code? status;
+  final FhirCode? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -8721,7 +8722,7 @@ abstract class _ClinicalImpression extends ClinicalImpression {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -8730,7 +8731,7 @@ abstract class _ClinicalImpression extends ClinicalImpression {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      final Code? status,
+      final FhirCode? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
       final CodeableConcept? statusReason,
@@ -8775,7 +8776,7 @@ abstract class _ClinicalImpression extends ClinicalImpression {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -8797,7 +8798,7 @@ abstract class _ClinicalImpression extends ClinicalImpression {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] ("_language") Extensions for language
@@ -8827,7 +8828,7 @@ abstract class _ClinicalImpression extends ClinicalImpression {
   @override
 
   /// [status] Identifies the workflow status of the assessment.
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status
@@ -9368,7 +9369,7 @@ mixin _$Condition {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -9386,7 +9387,7 @@ mixin _$Condition {
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
@@ -9513,12 +9514,12 @@ abstract class $ConditionCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Condition)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -9662,7 +9663,7 @@ class _$ConditionCopyWithImpl<$Res, $Val extends Condition>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -10057,12 +10058,12 @@ abstract class _$$_ConditionCopyWith<$Res> implements $ConditionCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Condition)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -10225,7 +10226,7 @@ class __$$_ConditionCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -10464,7 +10465,7 @@ class _$_Condition extends _Condition {
 
   /// [language] The base language in which the resource is written.
   @override
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] ("_language") Extensions for language
   @override
@@ -10852,7 +10853,7 @@ abstract class _Condition extends Condition {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -10908,7 +10909,7 @@ abstract class _Condition extends Condition {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -10930,7 +10931,7 @@ abstract class _Condition extends Condition {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] ("_language") Extensions for language
@@ -11896,7 +11897,7 @@ mixin _$DetectedIssue {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -11914,7 +11915,7 @@ mixin _$DetectedIssue {
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
@@ -11938,7 +11939,7 @@ mixin _$DetectedIssue {
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [status] Indicates the status of the detected issue.
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
@@ -11951,7 +11952,7 @@ mixin _$DetectedIssue {
   CodeableConcept? get code => throw _privateConstructorUsedError;
 
   /// [severity] Indicates the degree of importance associated with the identified issue based on the potential impact on the patient.
-  Code? get severity => throw _privateConstructorUsedError;
+  FhirCode? get severity => throw _privateConstructorUsedError;
 
   /// [severityElement] ("_severity") Extensions for severity
   @JsonKey(name: '_severity')
@@ -12013,12 +12014,12 @@ abstract class $DetectedIssueCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.DetectedIssue)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -12027,12 +12028,12 @@ abstract class $DetectedIssueCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       List<CodeableConcept>? category,
       CodeableConcept? code,
-      Code? severity,
+      FhirCode? severity,
       @JsonKey(name: '_severity')
           Element? severityElement,
       Reference? subject,
@@ -12134,7 +12135,7 @@ class _$DetectedIssueCopyWithImpl<$Res, $Val extends DetectedIssue>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -12162,7 +12163,7 @@ class _$DetectedIssueCopyWithImpl<$Res, $Val extends DetectedIssue>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -12178,7 +12179,7 @@ class _$DetectedIssueCopyWithImpl<$Res, $Val extends DetectedIssue>
       severity: freezed == severity
           ? _value.severity
           : severity // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       severityElement: freezed == severityElement
           ? _value.severityElement
           : severityElement // ignore: cast_nullable_to_non_nullable
@@ -12402,12 +12403,12 @@ abstract class _$$_DetectedIssueCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.DetectedIssue)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -12416,12 +12417,12 @@ abstract class _$$_DetectedIssueCopyWith<$Res>
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       List<CodeableConcept>? category,
       CodeableConcept? code,
-      Code? severity,
+      FhirCode? severity,
       @JsonKey(name: '_severity')
           Element? severityElement,
       Reference? subject,
@@ -12534,7 +12535,7 @@ class __$$_DetectedIssueCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -12562,7 +12563,7 @@ class __$$_DetectedIssueCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -12578,7 +12579,7 @@ class __$$_DetectedIssueCopyWithImpl<$Res>
       severity: freezed == severity
           ? _value.severity
           : severity // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       severityElement: freezed == severityElement
           ? _value.severityElement
           : severityElement // ignore: cast_nullable_to_non_nullable
@@ -12721,7 +12722,7 @@ class _$_DetectedIssue extends _DetectedIssue {
 
   /// [language] The base language in which the resource is written.
   @override
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] ("_language") Extensions for language
   @override
@@ -12788,7 +12789,7 @@ class _$_DetectedIssue extends _DetectedIssue {
 
   /// [status] Indicates the status of the detected issue.
   @override
-  final Code? status;
+  final FhirCode? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -12814,7 +12815,7 @@ class _$_DetectedIssue extends _DetectedIssue {
 
   /// [severity] Indicates the degree of importance associated with the identified issue based on the potential impact on the patient.
   @override
-  final Code? severity;
+  final FhirCode? severity;
 
   /// [severityElement] ("_severity") Extensions for severity
   @override
@@ -13021,7 +13022,7 @@ abstract class _DetectedIssue extends DetectedIssue {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -13030,12 +13031,12 @@ abstract class _DetectedIssue extends DetectedIssue {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      final Code? status,
+      final FhirCode? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
       final List<CodeableConcept>? category,
       final CodeableConcept? code,
-      final Code? severity,
+      final FhirCode? severity,
       @JsonKey(name: '_severity')
           final Element? severityElement,
       final Reference? subject,
@@ -13067,7 +13068,7 @@ abstract class _DetectedIssue extends DetectedIssue {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -13089,7 +13090,7 @@ abstract class _DetectedIssue extends DetectedIssue {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] ("_language") Extensions for language
@@ -13119,7 +13120,7 @@ abstract class _DetectedIssue extends DetectedIssue {
   @override
 
   /// [status] Indicates the status of the detected issue.
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status
@@ -13136,7 +13137,7 @@ abstract class _DetectedIssue extends DetectedIssue {
   @override
 
   /// [severity] Indicates the degree of importance associated with the identified issue based on the potential impact on the patient.
-  Code? get severity;
+  FhirCode? get severity;
   @override
 
   /// [severityElement] ("_severity") Extensions for severity
@@ -14040,7 +14041,7 @@ mixin _$FamilyMemberHistory {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -14058,7 +14059,7 @@ mixin _$FamilyMemberHistory {
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
@@ -14094,7 +14095,7 @@ mixin _$FamilyMemberHistory {
       throw _privateConstructorUsedError;
 
   /// [status] A code specifying the status of the record of the family history of a specific family member.
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
@@ -14134,7 +14135,7 @@ mixin _$FamilyMemberHistory {
   Period? get bornPeriod => throw _privateConstructorUsedError;
 
   /// [bornDate] The actual or approximate date of birth of the relative.
-  Date? get bornDate => throw _privateConstructorUsedError;
+  FhirDate? get bornDate => throw _privateConstructorUsedError;
 
   /// [bornDateElement] ("_bornDate") Extensions for bornDate
   @JsonKey(name: '_bornDate')
@@ -14161,14 +14162,14 @@ mixin _$FamilyMemberHistory {
   Element? get ageStringElement => throw _privateConstructorUsedError;
 
   /// [estimatedAge] If true, indicates that the age value specified is an estimated value.
-  Boolean? get estimatedAge => throw _privateConstructorUsedError;
+  FhirBoolean? get estimatedAge => throw _privateConstructorUsedError;
 
   /// [estimatedAgeElement] ("_estimatedAge") Extensions for estimatedAge
   @JsonKey(name: '_estimatedAge')
   Element? get estimatedAgeElement => throw _privateConstructorUsedError;
 
   /// [deceasedBoolean] Deceased flag or the actual or approximate age of the relative at the time of death for the family member history record.
-  Boolean? get deceasedBoolean => throw _privateConstructorUsedError;
+  FhirBoolean? get deceasedBoolean => throw _privateConstructorUsedError;
 
   /// [deceasedBooleanElement] ("_deceasedBoolean") Extensions for deceasedBoolean
   @JsonKey(name: '_deceasedBoolean')
@@ -14181,7 +14182,7 @@ mixin _$FamilyMemberHistory {
   Range? get deceasedRange => throw _privateConstructorUsedError;
 
   /// [deceasedDate] Deceased flag or the actual or approximate age of the relative at the time of death for the family member history record.
-  Date? get deceasedDate => throw _privateConstructorUsedError;
+  FhirDate? get deceasedDate => throw _privateConstructorUsedError;
 
   /// [deceasedDateElement] ("_deceasedDate") Extensions for deceasedDate
   @JsonKey(name: '_deceasedDate')
@@ -14223,12 +14224,12 @@ abstract class $FamilyMemberHistoryCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.FamilyMemberHistory)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -14241,7 +14242,7 @@ abstract class $FamilyMemberHistoryCopyWith<$Res> {
       List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
           List<Element>? instantiatesUriElement,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? dataAbsentReason,
@@ -14256,7 +14257,7 @@ abstract class $FamilyMemberHistoryCopyWith<$Res> {
       CodeableConcept relationship,
       CodeableConcept? sex,
       Period? bornPeriod,
-      Date? bornDate,
+      FhirDate? bornDate,
       @JsonKey(name: '_bornDate')
           Element? bornDateElement,
       String? bornString,
@@ -14267,15 +14268,15 @@ abstract class $FamilyMemberHistoryCopyWith<$Res> {
       String? ageString,
       @JsonKey(name: '_ageString')
           Element? ageStringElement,
-      Boolean? estimatedAge,
+      FhirBoolean? estimatedAge,
       @JsonKey(name: '_estimatedAge')
           Element? estimatedAgeElement,
-      Boolean? deceasedBoolean,
+      FhirBoolean? deceasedBoolean,
       @JsonKey(name: '_deceasedBoolean')
           Element? deceasedBooleanElement,
       Age? deceasedAge,
       Range? deceasedRange,
-      Date? deceasedDate,
+      FhirDate? deceasedDate,
       @JsonKey(name: '_deceasedDate')
           Element? deceasedDateElement,
       String? deceasedString,
@@ -14398,7 +14399,7 @@ class _$FamilyMemberHistoryCopyWithImpl<$Res, $Val extends FamilyMemberHistory>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -14438,7 +14439,7 @@ class _$FamilyMemberHistoryCopyWithImpl<$Res, $Val extends FamilyMemberHistory>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -14518,7 +14519,7 @@ class _$FamilyMemberHistoryCopyWithImpl<$Res, $Val extends FamilyMemberHistory>
       estimatedAge: freezed == estimatedAge
           ? _value.estimatedAge
           : estimatedAge // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       estimatedAgeElement: freezed == estimatedAgeElement
           ? _value.estimatedAgeElement
           : estimatedAgeElement // ignore: cast_nullable_to_non_nullable
@@ -14526,7 +14527,7 @@ class _$FamilyMemberHistoryCopyWithImpl<$Res, $Val extends FamilyMemberHistory>
       deceasedBoolean: freezed == deceasedBoolean
           ? _value.deceasedBoolean
           : deceasedBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       deceasedBooleanElement: freezed == deceasedBooleanElement
           ? _value.deceasedBooleanElement
           : deceasedBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -14854,12 +14855,12 @@ abstract class _$$_FamilyMemberHistoryCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.FamilyMemberHistory)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -14872,7 +14873,7 @@ abstract class _$$_FamilyMemberHistoryCopyWith<$Res>
       List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
           List<Element>? instantiatesUriElement,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? dataAbsentReason,
@@ -14887,7 +14888,7 @@ abstract class _$$_FamilyMemberHistoryCopyWith<$Res>
       CodeableConcept relationship,
       CodeableConcept? sex,
       Period? bornPeriod,
-      Date? bornDate,
+      FhirDate? bornDate,
       @JsonKey(name: '_bornDate')
           Element? bornDateElement,
       String? bornString,
@@ -14898,15 +14899,15 @@ abstract class _$$_FamilyMemberHistoryCopyWith<$Res>
       String? ageString,
       @JsonKey(name: '_ageString')
           Element? ageStringElement,
-      Boolean? estimatedAge,
+      FhirBoolean? estimatedAge,
       @JsonKey(name: '_estimatedAge')
           Element? estimatedAgeElement,
-      Boolean? deceasedBoolean,
+      FhirBoolean? deceasedBoolean,
       @JsonKey(name: '_deceasedBoolean')
           Element? deceasedBooleanElement,
       Age? deceasedAge,
       Range? deceasedRange,
-      Date? deceasedDate,
+      FhirDate? deceasedDate,
       @JsonKey(name: '_deceasedDate')
           Element? deceasedDateElement,
       String? deceasedString,
@@ -15050,7 +15051,7 @@ class __$$_FamilyMemberHistoryCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -15090,7 +15091,7 @@ class __$$_FamilyMemberHistoryCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -15170,7 +15171,7 @@ class __$$_FamilyMemberHistoryCopyWithImpl<$Res>
       estimatedAge: freezed == estimatedAge
           ? _value.estimatedAge
           : estimatedAge // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       estimatedAgeElement: freezed == estimatedAgeElement
           ? _value.estimatedAgeElement
           : estimatedAgeElement // ignore: cast_nullable_to_non_nullable
@@ -15178,7 +15179,7 @@ class __$$_FamilyMemberHistoryCopyWithImpl<$Res>
       deceasedBoolean: freezed == deceasedBoolean
           ? _value.deceasedBoolean
           : deceasedBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       deceasedBooleanElement: freezed == deceasedBooleanElement
           ? _value.deceasedBooleanElement
           : deceasedBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -15342,7 +15343,7 @@ class _$_FamilyMemberHistory extends _FamilyMemberHistory {
 
   /// [language] The base language in which the resource is written.
   @override
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] ("_language") Extensions for language
   @override
@@ -15451,7 +15452,7 @@ class _$_FamilyMemberHistory extends _FamilyMemberHistory {
 
   /// [status] A code specifying the status of the record of the family history of a specific family member.
   @override
-  final Code? status;
+  final FhirCode? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -15546,7 +15547,7 @@ class _$_FamilyMemberHistory extends _FamilyMemberHistory {
 
   /// [estimatedAge] If true, indicates that the age value specified is an estimated value.
   @override
-  final Boolean? estimatedAge;
+  final FhirBoolean? estimatedAge;
 
   /// [estimatedAgeElement] ("_estimatedAge") Extensions for estimatedAge
   @override
@@ -15555,7 +15556,7 @@ class _$_FamilyMemberHistory extends _FamilyMemberHistory {
 
   /// [deceasedBoolean] Deceased flag or the actual or approximate age of the relative at the time of death for the family member history record.
   @override
-  final Boolean? deceasedBoolean;
+  final FhirBoolean? deceasedBoolean;
 
   /// [deceasedBooleanElement] ("_deceasedBoolean") Extensions for deceasedBoolean
   @override
@@ -15818,7 +15819,7 @@ abstract class _FamilyMemberHistory extends FamilyMemberHistory {
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
               final Element? implicitRulesElement,
-          final Code? language,
+          final FhirCode? language,
           @JsonKey(name: '_language')
               final Element? languageElement,
           final Narrative? text,
@@ -15831,7 +15832,7 @@ abstract class _FamilyMemberHistory extends FamilyMemberHistory {
           final List<FhirUri>? instantiatesUri,
           @JsonKey(name: '_instantiatesUri')
               final List<Element>? instantiatesUriElement,
-          final Code? status,
+          final FhirCode? status,
           @JsonKey(name: '_status')
               final Element? statusElement,
           final CodeableConcept? dataAbsentReason,
@@ -15857,10 +15858,10 @@ abstract class _FamilyMemberHistory extends FamilyMemberHistory {
           final String? ageString,
           @JsonKey(name: '_ageString')
               final Element? ageStringElement,
-          final Boolean? estimatedAge,
+          final FhirBoolean? estimatedAge,
           @JsonKey(name: '_estimatedAge')
               final Element? estimatedAgeElement,
-          final Boolean? deceasedBoolean,
+          final FhirBoolean? deceasedBoolean,
           @JsonKey(name: '_deceasedBoolean')
               final Element? deceasedBooleanElement,
           final Age? deceasedAge,
@@ -15890,7 +15891,7 @@ abstract class _FamilyMemberHistory extends FamilyMemberHistory {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -15912,7 +15913,7 @@ abstract class _FamilyMemberHistory extends FamilyMemberHistory {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] ("_language") Extensions for language
@@ -15955,7 +15956,7 @@ abstract class _FamilyMemberHistory extends FamilyMemberHistory {
   @override
 
   /// [status] A code specifying the status of the record of the family history of a specific family member.
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status
@@ -16006,7 +16007,7 @@ abstract class _FamilyMemberHistory extends FamilyMemberHistory {
   @override
 
   /// [bornDate] The actual or approximate date of birth of the relative.
-  Date? get bornDate;
+  FhirDate? get bornDate;
   @override
 
   /// [bornDateElement] ("_bornDate") Extensions for bornDate
@@ -16041,7 +16042,7 @@ abstract class _FamilyMemberHistory extends FamilyMemberHistory {
   @override
 
   /// [estimatedAge] If true, indicates that the age value specified is an estimated value.
-  Boolean? get estimatedAge;
+  FhirBoolean? get estimatedAge;
   @override
 
   /// [estimatedAgeElement] ("_estimatedAge") Extensions for estimatedAge
@@ -16050,7 +16051,7 @@ abstract class _FamilyMemberHistory extends FamilyMemberHistory {
   @override
 
   /// [deceasedBoolean] Deceased flag or the actual or approximate age of the relative at the time of death for the family member history record.
-  Boolean? get deceasedBoolean;
+  FhirBoolean? get deceasedBoolean;
   @override
 
   /// [deceasedBooleanElement] ("_deceasedBoolean") Extensions for deceasedBoolean
@@ -16067,7 +16068,7 @@ abstract class _FamilyMemberHistory extends FamilyMemberHistory {
   @override
 
   /// [deceasedDate] Deceased flag or the actual or approximate age of the relative at the time of death for the family member history record.
-  Date? get deceasedDate;
+  FhirDate? get deceasedDate;
   @override
 
   /// [deceasedDateElement] ("_deceasedDate") Extensions for deceasedDate
@@ -16539,7 +16540,7 @@ mixin _$FamilyMemberHistoryCondition {
   CodeableConcept? get outcome => throw _privateConstructorUsedError;
 
   /// [contributedToDeath] This condition contributed to the cause of death of the related person. If contributedToDeath is not populated, then it is unknown.
-  Boolean? get contributedToDeath => throw _privateConstructorUsedError;
+  FhirBoolean? get contributedToDeath => throw _privateConstructorUsedError;
 
   /// [contributedToDeathElement] ("_contributedToDeath") Extensions for contributedToDeath
   @JsonKey(name: '_contributedToDeath')
@@ -16584,7 +16585,7 @@ abstract class $FamilyMemberHistoryConditionCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       CodeableConcept code,
       CodeableConcept? outcome,
-      Boolean? contributedToDeath,
+      FhirBoolean? contributedToDeath,
       @JsonKey(name: '_contributedToDeath') Element? contributedToDeathElement,
       Age? onsetAge,
       Range? onsetRange,
@@ -16654,7 +16655,7 @@ class _$FamilyMemberHistoryConditionCopyWithImpl<$Res,
       contributedToDeath: freezed == contributedToDeath
           ? _value.contributedToDeath
           : contributedToDeath // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       contributedToDeathElement: freezed == contributedToDeathElement
           ? _value.contributedToDeathElement
           : contributedToDeathElement // ignore: cast_nullable_to_non_nullable
@@ -16782,7 +16783,7 @@ abstract class _$$_FamilyMemberHistoryConditionCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       CodeableConcept code,
       CodeableConcept? outcome,
-      Boolean? contributedToDeath,
+      FhirBoolean? contributedToDeath,
       @JsonKey(name: '_contributedToDeath') Element? contributedToDeathElement,
       Age? onsetAge,
       Range? onsetRange,
@@ -16858,7 +16859,7 @@ class __$$_FamilyMemberHistoryConditionCopyWithImpl<$Res>
       contributedToDeath: freezed == contributedToDeath
           ? _value.contributedToDeath
           : contributedToDeath // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       contributedToDeathElement: freezed == contributedToDeathElement
           ? _value.contributedToDeathElement
           : contributedToDeathElement // ignore: cast_nullable_to_non_nullable
@@ -16991,7 +16992,7 @@ class _$_FamilyMemberHistoryCondition extends _FamilyMemberHistoryCondition {
 
   /// [contributedToDeath] This condition contributed to the cause of death of the related person. If contributedToDeath is not populated, then it is unknown.
   @override
-  final Boolean? contributedToDeath;
+  final FhirBoolean? contributedToDeath;
 
   /// [contributedToDeathElement] ("_contributedToDeath") Extensions for contributedToDeath
   @override
@@ -17109,7 +17110,7 @@ abstract class _FamilyMemberHistoryCondition
       final List<FhirExtension>? modifierExtension,
       required final CodeableConcept code,
       final CodeableConcept? outcome,
-      final Boolean? contributedToDeath,
+      final FhirBoolean? contributedToDeath,
       @JsonKey(name: '_contributedToDeath')
           final Element? contributedToDeathElement,
       final Age? onsetAge,
@@ -17165,7 +17166,7 @@ abstract class _FamilyMemberHistoryCondition
   @override
 
   /// [contributedToDeath] This condition contributed to the cause of death of the related person. If contributedToDeath is not populated, then it is unknown.
-  Boolean? get contributedToDeath;
+  FhirBoolean? get contributedToDeath;
   @override
 
   /// [contributedToDeathElement] ("_contributedToDeath") Extensions for contributedToDeath
@@ -17244,7 +17245,7 @@ mixin _$FamilyMemberHistoryProcedure {
   CodeableConcept? get outcome => throw _privateConstructorUsedError;
 
   /// [contributedToDeath] This procedure contributed to the cause of death of the related person. If contributedToDeath is not populated, then it is unknown.
-  Boolean? get contributedToDeath => throw _privateConstructorUsedError;
+  FhirBoolean? get contributedToDeath => throw _privateConstructorUsedError;
 
   /// [contributedToDeathElement] ("_contributedToDeath") Extensions for contributedToDeath
   @JsonKey(name: '_contributedToDeath')
@@ -17296,7 +17297,7 @@ abstract class $FamilyMemberHistoryProcedureCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       CodeableConcept code,
       CodeableConcept? outcome,
-      Boolean? contributedToDeath,
+      FhirBoolean? contributedToDeath,
       @JsonKey(name: '_contributedToDeath') Element? contributedToDeathElement,
       Age? performedAge,
       Range? performedRange,
@@ -17371,7 +17372,7 @@ class _$FamilyMemberHistoryProcedureCopyWithImpl<$Res,
       contributedToDeath: freezed == contributedToDeath
           ? _value.contributedToDeath
           : contributedToDeath // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       contributedToDeathElement: freezed == contributedToDeathElement
           ? _value.contributedToDeathElement
           : contributedToDeathElement // ignore: cast_nullable_to_non_nullable
@@ -17519,7 +17520,7 @@ abstract class _$$_FamilyMemberHistoryProcedureCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       CodeableConcept code,
       CodeableConcept? outcome,
-      Boolean? contributedToDeath,
+      FhirBoolean? contributedToDeath,
       @JsonKey(name: '_contributedToDeath') Element? contributedToDeathElement,
       Age? performedAge,
       Range? performedRange,
@@ -17601,7 +17602,7 @@ class __$$_FamilyMemberHistoryProcedureCopyWithImpl<$Res>
       contributedToDeath: freezed == contributedToDeath
           ? _value.contributedToDeath
           : contributedToDeath // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       contributedToDeathElement: freezed == contributedToDeathElement
           ? _value.contributedToDeathElement
           : contributedToDeathElement // ignore: cast_nullable_to_non_nullable
@@ -17744,7 +17745,7 @@ class _$_FamilyMemberHistoryProcedure extends _FamilyMemberHistoryProcedure {
 
   /// [contributedToDeath] This procedure contributed to the cause of death of the related person. If contributedToDeath is not populated, then it is unknown.
   @override
-  final Boolean? contributedToDeath;
+  final FhirBoolean? contributedToDeath;
 
   /// [contributedToDeathElement] ("_contributedToDeath") Extensions for contributedToDeath
   @override
@@ -17878,7 +17879,7 @@ abstract class _FamilyMemberHistoryProcedure
       final List<FhirExtension>? modifierExtension,
       required final CodeableConcept code,
       final CodeableConcept? outcome,
-      final Boolean? contributedToDeath,
+      final FhirBoolean? contributedToDeath,
       @JsonKey(name: '_contributedToDeath')
           final Element? contributedToDeathElement,
       final Age? performedAge,
@@ -17937,7 +17938,7 @@ abstract class _FamilyMemberHistoryProcedure
   @override
 
   /// [contributedToDeath] This procedure contributed to the cause of death of the related person. If contributedToDeath is not populated, then it is unknown.
-  Boolean? get contributedToDeath;
+  FhirBoolean? get contributedToDeath;
   @override
 
   /// [contributedToDeathElement] ("_contributedToDeath") Extensions for contributedToDeath
@@ -17995,7 +17996,7 @@ mixin _$Procedure {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -18013,7 +18014,7 @@ mixin _$Procedure {
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
@@ -18055,7 +18056,7 @@ mixin _$Procedure {
   List<Reference>? get partOf => throw _privateConstructorUsedError;
 
   /// [status] A code specifying the state of the procedure. Generally, this will be the in-progress or completed state.
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
@@ -18116,7 +18117,7 @@ mixin _$Procedure {
   Reference? get recorder => throw _privateConstructorUsedError;
 
   /// [reportedBoolean] Indicates if this record was captured as a secondary 'reported' record rather than as an original primary source-of-truth record.  It may also indicate the source of the report.
-  Boolean? get reportedBoolean => throw _privateConstructorUsedError;
+  FhirBoolean? get reportedBoolean => throw _privateConstructorUsedError;
 
   /// [reportedBooleanElement] ("_reportedBoolean") Extensions for reportedBoolean
   @JsonKey(name: '_reportedBoolean')
@@ -18177,12 +18178,12 @@ abstract class $ProcedureCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Procedure)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -18197,7 +18198,7 @@ abstract class $ProcedureCopyWith<$Res> {
           List<Element>? instantiatesUriElement,
       List<Reference>? basedOn,
       List<Reference>? partOf,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? statusReason,
@@ -18220,7 +18221,7 @@ abstract class $ProcedureCopyWith<$Res> {
       @JsonKey(name: '_recorded')
           Element? recordedElement,
       Reference? recorder,
-      Boolean? reportedBoolean,
+      FhirBoolean? reportedBoolean,
       @JsonKey(name: '_reportedBoolean')
           Element? reportedBooleanElement,
       Reference? reportedReference,
@@ -18350,7 +18351,7 @@ class _$ProcedureCopyWithImpl<$Res, $Val extends Procedure>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -18398,7 +18399,7 @@ class _$ProcedureCopyWithImpl<$Res, $Val extends Procedure>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -18474,7 +18475,7 @@ class _$ProcedureCopyWithImpl<$Res, $Val extends Procedure>
       reportedBoolean: freezed == reportedBoolean
           ? _value.reportedBoolean
           : reportedBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       reportedBooleanElement: freezed == reportedBooleanElement
           ? _value.reportedBooleanElement
           : reportedBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -18805,12 +18806,12 @@ abstract class _$$_ProcedureCopyWith<$Res> implements $ProcedureCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Procedure)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -18825,7 +18826,7 @@ abstract class _$$_ProcedureCopyWith<$Res> implements $ProcedureCopyWith<$Res> {
           List<Element>? instantiatesUriElement,
       List<Reference>? basedOn,
       List<Reference>? partOf,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? statusReason,
@@ -18848,7 +18849,7 @@ abstract class _$$_ProcedureCopyWith<$Res> implements $ProcedureCopyWith<$Res> {
       @JsonKey(name: '_recorded')
           Element? recordedElement,
       Reference? recorder,
-      Boolean? reportedBoolean,
+      FhirBoolean? reportedBoolean,
       @JsonKey(name: '_reportedBoolean')
           Element? reportedBooleanElement,
       Reference? reportedReference,
@@ -18998,7 +18999,7 @@ class __$$_ProcedureCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -19046,7 +19047,7 @@ class __$$_ProcedureCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -19122,7 +19123,7 @@ class __$$_ProcedureCopyWithImpl<$Res>
       reportedBoolean: freezed == reportedBoolean
           ? _value.reportedBoolean
           : reportedBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       reportedBooleanElement: freezed == reportedBooleanElement
           ? _value.reportedBooleanElement
           : reportedBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -19303,7 +19304,7 @@ class _$_Procedure extends _Procedure {
 
   /// [language] The base language in which the resource is written.
   @override
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] ("_language") Extensions for language
   @override
@@ -19438,7 +19439,7 @@ class _$_Procedure extends _Procedure {
 
   /// [status] A code specifying the state of the procedure. Generally, this will be the in-progress or completed state.
   @override
-  final Code? status;
+  final FhirCode? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -19527,7 +19528,7 @@ class _$_Procedure extends _Procedure {
 
   /// [reportedBoolean] Indicates if this record was captured as a secondary 'reported' record rather than as an original primary source-of-truth record.  It may also indicate the source of the report.
   @override
-  final Boolean? reportedBoolean;
+  final FhirBoolean? reportedBoolean;
 
   /// [reportedBooleanElement] ("_reportedBoolean") Extensions for reportedBoolean
   @override
@@ -19853,7 +19854,7 @@ abstract class _Procedure extends Procedure {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -19868,7 +19869,7 @@ abstract class _Procedure extends Procedure {
           final List<Element>? instantiatesUriElement,
       final List<Reference>? basedOn,
       final List<Reference>? partOf,
-      final Code? status,
+      final FhirCode? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
       final CodeableConcept? statusReason,
@@ -19891,7 +19892,7 @@ abstract class _Procedure extends Procedure {
       @JsonKey(name: '_recorded')
           final Element? recordedElement,
       final Reference? recorder,
-      final Boolean? reportedBoolean,
+      final FhirBoolean? reportedBoolean,
       @JsonKey(name: '_reportedBoolean')
           final Element? reportedBooleanElement,
       final Reference? reportedReference,
@@ -19921,7 +19922,7 @@ abstract class _Procedure extends Procedure {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -19943,7 +19944,7 @@ abstract class _Procedure extends Procedure {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] ("_language") Extensions for language
@@ -19994,7 +19995,7 @@ abstract class _Procedure extends Procedure {
   @override
 
   /// [status] A code specifying the state of the procedure. Generally, this will be the in-progress or completed state.
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status
@@ -20074,7 +20075,7 @@ abstract class _Procedure extends Procedure {
   @override
 
   /// [reportedBoolean] Indicates if this record was captured as a secondary 'reported' record rather than as an original primary source-of-truth record.  It may also indicate the source of the report.
-  Boolean? get reportedBoolean;
+  FhirBoolean? get reportedBoolean;
   @override
 
   /// [reportedBooleanElement] ("_reportedBoolean") Extensions for reportedBoolean

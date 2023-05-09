@@ -463,8 +463,9 @@ _$_AuditEventEntity _$$_AuditEventEntityFromJson(Map<String, dynamic> json) =>
       descriptionElement: json['_description'] == null
           ? null
           : Element.fromJson(json['_description'] as Map<String, dynamic>),
-      query:
-          json['query'] == null ? null : Base64Binary.fromJson(json['query']),
+      query: json['query'] == null
+          ? null
+          : FhirBase64Binary?.fromJson(json['query']),
       queryElement: json['_query'] == null
           ? null
           : Element.fromJson(json['_query'] as Map<String, dynamic>),
@@ -522,7 +523,7 @@ _$_AuditEventDetail _$$_AuditEventDetailFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_valueString'] as Map<String, dynamic>),
       valueBase64Binary: json['valueBase64Binary'] == null
           ? null
-          : Base64Binary.fromJson(json['valueBase64Binary']),
+          : FhirBase64Binary?.fromJson(json['valueBase64Binary']),
       valueBase64BinaryElement: json['_valueBase64Binary'] == null
           ? null
           : Element.fromJson(

@@ -5,7 +5,7 @@ import 'dart:convert';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
-import 'fhir_date_time_base.dart';
+import 'date_time_base.dart';
 import 'primitive_type_exceptions.dart';
 
 enum DatePrecision {
@@ -16,44 +16,44 @@ enum DatePrecision {
 }
 
 // TODO(Dokotela): Does not accept 'YYYY-MM'
-class Date extends FhirDateTimeBase {
-  const Date._(String valueString, DateTime? valueDateTime, bool isValid,
+class FhirDate extends FhirDateTimeBase {
+  const FhirDate._(String valueString, DateTime? valueDateTime, bool isValid,
       this._precision, Exception? parseError)
       : super(valueString, valueDateTime, isValid, parseError);
 
-  factory Date(dynamic inValue) {
+  factory FhirDate(dynamic inValue) {
     if (inValue is DateTime) {
-      return Date.fromDateTime(inValue, DatePrecision.YYYYMMDD);
+      return FhirDate.fromDateTime(inValue, DatePrecision.YYYYMMDD);
     } else if (inValue is String) {
       try {
         final DateTime dateTimeValue = _parseDate(inValue);
-        return Date._(
+        return FhirDate._(
             inValue, dateTimeValue, true, _getPrecision(inValue), null);
       } on FormatException catch (e) {
-        return Date._(inValue, null, false, DatePrecision.INVALID, e);
+        return FhirDate._(inValue, null, false, DatePrecision.INVALID, e);
       }
     } else {
-      throw CannotBeConstructed<Date>(
+      throw CannotBeConstructed<FhirDate>(
           'Date cannot be constructed from $inValue.');
     }
   }
 
-  factory Date.fromDateTime(DateTime dateTime,
+  factory FhirDate.fromDateTime(DateTime dateTime,
       [DatePrecision precision = DatePrecision.YYYYMMDD]) {
     final String dateString = dateTime.toIso8601String();
     final int len = <int>[4, 7, 10][precision.index];
 
-    return Date._(
+    return FhirDate._(
         dateString.substring(0, len), dateTime, true, precision, null);
   }
 
-  factory Date.fromJson(dynamic json) => Date(json);
+  factory FhirDate.fromJson(dynamic json) => FhirDate(json);
 
-  factory Date.fromYaml(dynamic yaml) => yaml is String
-      ? Date.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+  factory FhirDate.fromYaml(dynamic yaml) => yaml is String
+      ? FhirDate.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
-          ? Date.fromJson(jsonDecode(jsonEncode(yaml)))
-          : throw YamlFormatException<Date>(
+          ? FhirDate.fromJson(jsonDecode(jsonEncode(yaml)))
+          : throw YamlFormatException<FhirDate>(
               'FormatException: "$json" is not a valid Yaml string or YamlMap.');
 
   final DatePrecision _precision;
@@ -78,7 +78,7 @@ class Date extends FhirDateTimeBase {
           throw const FormatException();
         }
       } on FormatException {
-        throw PrimitiveTypeFormatException<Date>(
+        throw PrimitiveTypeFormatException<FhirDate>(
             'FormatException: "$value" is not a Date, as defined by: '
             'https://www.hl7.org/fhir/datatypes.html#date');
       }
@@ -93,7 +93,7 @@ class Date extends FhirDateTimeBase {
       final int month = int.parse(value.split('-')[1]);
       return DateTime(year, month);
     } else {
-      throw PrimitiveTypeFormatException<Date>(
+      throw PrimitiveTypeFormatException<FhirDate>(
           'FormatException: "$value" is not a Date, as defined by: '
           'https://www.hl7.org/fhir/datatypes.html#date');
     }
@@ -108,7 +108,7 @@ class Date extends FhirDateTimeBase {
       case 10:
         return DatePrecision.YYYYMMDD;
       default:
-        throw PrimitiveTypeFormatException<Date>(
+        throw PrimitiveTypeFormatException<FhirDate>(
             'FormatException: "$value" is not a Date, as defined by: '
             'https://www.hl7.org/fhir/datatypes.html#date');
     }

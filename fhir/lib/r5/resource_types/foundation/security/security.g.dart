@@ -469,8 +469,9 @@ _$_AuditEventEntity _$$_AuditEventEntityFromJson(Map<String, dynamic> json) =>
       securityLabel: (json['securityLabel'] as List<dynamic>?)
           ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
           .toList(),
-      query:
-          json['query'] == null ? null : Base64Binary.fromJson(json['query']),
+      query: json['query'] == null
+          ? null
+          : FhirBase64Binary?.fromJson(json['query']),
       queryElement: json['_query'] == null
           ? null
           : Element.fromJson(json['_query'] as Map<String, dynamic>),
@@ -562,7 +563,7 @@ _$_AuditEventDetail _$$_AuditEventDetailFromJson(Map<String, dynamic> json) =>
           : Period.fromJson(json['valuePeriod'] as Map<String, dynamic>),
       valueBase64Binary: json['valueBase64Binary'] == null
           ? null
-          : Base64Binary.fromJson(json['valueBase64Binary']),
+          : FhirBase64Binary?.fromJson(json['valueBase64Binary']),
       valueBase64BinaryElement: json['_valueBase64Binary'] == null
           ? null
           : Element.fromJson(

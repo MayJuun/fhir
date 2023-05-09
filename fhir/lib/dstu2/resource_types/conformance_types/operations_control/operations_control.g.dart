@@ -1075,7 +1075,9 @@ _$_ConformanceSecurityCertificate _$$_ConformanceSecurityCertificateFromJson(
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
       type: json['type'] == null ? null : Code.fromJson(json['type']),
-      blob: json['blob'] == null ? null : Base64Binary.fromJson(json['blob']),
+      blob: json['blob'] == null
+          ? null
+          : FhirBase64Binary?.fromJson(json['blob']),
       blobElement: json['_blob'] == null
           ? null
           : Element.fromJson(json['_blob'] as Map<String, dynamic>),

@@ -1,6 +1,6 @@
 part of 'resource.dart';
 
-@HiveType(typeId: 1)
+@HiveType(typeId: 0)
 enum R4ResourceType {
   @HiveField(0)
   @JsonValue('Account')

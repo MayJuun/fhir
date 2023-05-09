@@ -19,18 +19,18 @@ class Organization with Resource, _$Organization {
     @Default(Dstu2ResourceType.Organization)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Organization)
         Dstu2ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    Boolean? active,
+    FhirBoolean? active,
     @JsonKey(name: '_active') Element? activeElement,
     CodeableConcept? type,
     String? name,
@@ -75,7 +75,7 @@ class Organization with Resource, _$Organization {
 class OrganizationContact with _$OrganizationContact {
   OrganizationContact._();
   factory OrganizationContact({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -123,11 +123,11 @@ class HealthcareService with Resource, _$HealthcareService {
     @Default(Dstu2ResourceType.HealthcareService)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.HealthcareService)
         Dstu2ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -153,7 +153,7 @@ class HealthcareService with Resource, _$HealthcareService {
     List<CodeableConcept>? characteristic,
     List<CodeableConcept>? referralMethod,
     String? publicKey,
-    Boolean? appointmentRequired,
+    FhirBoolean? appointmentRequired,
     @JsonKey(name: '_appointmentRequired') Element? appointmentRequiredElement,
     List<HealthcareServiceAvailableTime>? availableTime,
     List<HealthcareServiceNotAvailable>? notAvailable,
@@ -194,7 +194,7 @@ class HealthcareService with Resource, _$HealthcareService {
 class HealthcareServiceServiceType with _$HealthcareServiceServiceType {
   HealthcareServiceServiceType._();
   factory HealthcareServiceServiceType({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept type,
@@ -236,12 +236,12 @@ class HealthcareServiceServiceType with _$HealthcareServiceServiceType {
 class HealthcareServiceAvailableTime with _$HealthcareServiceAvailableTime {
   HealthcareServiceAvailableTime._();
   factory HealthcareServiceAvailableTime({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<AvailableTimeDaysOfWeek>? daysOfWeek,
     @JsonKey(name: '_daysOfWeek') Element? daysOfWeekElement,
-    Boolean? allDay,
+    FhirBoolean? allDay,
     @JsonKey(name: '_allDay') Element? allDayElement,
     Time? availableStartTime,
     @JsonKey(name: '_availableStartTime') Element? availableStartTimeElement,
@@ -285,7 +285,7 @@ class HealthcareServiceAvailableTime with _$HealthcareServiceAvailableTime {
 class HealthcareServiceNotAvailable with _$HealthcareServiceNotAvailable {
   HealthcareServiceNotAvailable._();
   factory HealthcareServiceNotAvailable({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required String description,
@@ -331,11 +331,11 @@ class Group with Resource, _$Group {
     @Default(Dstu2ResourceType.Group)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Group)
         Dstu2ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -385,12 +385,12 @@ class Group with Resource, _$Group {
 class GroupCharacteristic with _$GroupCharacteristic {
   GroupCharacteristic._();
   factory GroupCharacteristic({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept code,
     CodeableConcept? valueCodeableConcept,
-    Boolean? valueBoolean,
+    FhirBoolean? valueBoolean,
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
     Quantity? valueQuantity,
     Range? valueRange,
@@ -433,12 +433,12 @@ class GroupCharacteristic with _$GroupCharacteristic {
 class GroupMember with _$GroupMember {
   GroupMember._();
   factory GroupMember({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Reference entity,
     Period? period,
-    Boolean? inactive,
+    FhirBoolean? inactive,
     @JsonKey(name: '_inactive') Element? inactiveElement,
   }) = _GroupMember;
 

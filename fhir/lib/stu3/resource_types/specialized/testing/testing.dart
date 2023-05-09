@@ -19,11 +19,11 @@ class TestReport with Resource, _$TestReport {
     @Default(Stu3ResourceType.TestReport)
     @JsonKey(unknownEnumValue: Stu3ResourceType.TestReport)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -37,7 +37,7 @@ class TestReport with Resource, _$TestReport {
     required Reference testScript,
     TestReportResult? result,
     @JsonKey(name: '_result') Element? resultElement,
-    Decimal? score,
+    FhirDecimal? score,
     @JsonKey(name: '_score') Element? scoreElement,
     String? tester,
     @JsonKey(name: '_tester') Element? testerElement,
@@ -447,11 +447,11 @@ class TestScript with Resource, _$TestScript {
     @Default(Stu3ResourceType.TestScript)
     @JsonKey(unknownEnumValue: Stu3ResourceType.TestScript)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -468,9 +468,9 @@ class TestScript with Resource, _$TestScript {
     @JsonKey(name: '_title') Element? titleElement,
     TestScriptStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
-    Boolean? experimental,
+    FhirBoolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
-    Date? date,
+    FhirDate? date,
     @JsonKey(name: '_date') Element? dateElement,
     String? publisher,
     @JsonKey(name: '_publisher') Element? publisherElement,
@@ -528,7 +528,7 @@ class TestScript with Resource, _$TestScript {
 class TestScriptOrigin with _$TestScriptOrigin {
   TestScriptOrigin._();
   factory TestScriptOrigin({
-    Decimal? index,
+    FhirDecimal? index,
     @JsonKey(name: '_index') Element? indexElement,
     required Coding profile,
   }) = _TestScriptOrigin;
@@ -568,7 +568,7 @@ class TestScriptOrigin with _$TestScriptOrigin {
 class TestScriptDestination with _$TestScriptDestination {
   TestScriptDestination._();
   factory TestScriptDestination({
-    Decimal? index,
+    FhirDecimal? index,
     @JsonKey(name: '_index') Element? indexElement,
     required Coding profile,
   }) = _TestScriptDestination;
@@ -688,15 +688,15 @@ class TestScriptLink with _$TestScriptLink {
 class TestScriptCapability with _$TestScriptCapability {
   TestScriptCapability._();
   factory TestScriptCapability({
-    @JsonKey(name: 'required') Boolean? required_,
+    @JsonKey(name: 'required') FhirBoolean? required_,
     @JsonKey(name: '_required') Element? requiredElement,
-    Boolean? validated,
+    FhirBoolean? validated,
     @JsonKey(name: '_validated') Element? validatedElement,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     List<Decimal>? origin,
     @JsonKey(name: '_origin') List<Element?>? originElement,
-    Decimal? destination,
+    FhirDecimal? destination,
     @JsonKey(name: '_destination') Element? destinationElement,
     List<String>? link,
     @JsonKey(name: '_link') List<Element?>? linkElement,
@@ -738,9 +738,9 @@ class TestScriptCapability with _$TestScriptCapability {
 class TestScriptFixture with _$TestScriptFixture {
   TestScriptFixture._();
   factory TestScriptFixture({
-    Boolean? autocreate,
+    FhirBoolean? autocreate,
     @JsonKey(name: '_autocreate') Element? autocreateElement,
-    Boolean? autodelete,
+    FhirBoolean? autodelete,
     @JsonKey(name: '_autodelete') Element? autodeleteElement,
     Reference? resource,
   }) = _TestScriptFixture;
@@ -794,7 +794,7 @@ class TestScriptVariable with _$TestScriptVariable {
     @JsonKey(name: '_hint') Element? hintElement,
     String? path,
     @JsonKey(name: '_path') Element? pathElement,
-    Id? sourceId,
+    FhirId? sourceId,
     @JsonKey(name: '_sourceId') Element? sourceIdElement,
   }) = _TestScriptVariable;
 
@@ -952,7 +952,7 @@ class TestScriptRuleset with _$TestScriptRuleset {
 class TestScriptRule1 with _$TestScriptRule1 {
   TestScriptRule1._();
   factory TestScriptRule1({
-    Id? ruleId,
+    FhirId? ruleId,
     @JsonKey(name: '_ruleId') Element? ruleIdElement,
     List<TestScriptParam1>? param,
   }) = _TestScriptRule1;
@@ -1121,22 +1121,22 @@ class TestScriptOperation with _$TestScriptOperation {
     @JsonKey(name: '_accept') Element? acceptElement,
     TestScriptOperationContentType? contentType,
     @JsonKey(name: '_contentType') Element? contentTypeElement,
-    Decimal? destination,
+    FhirDecimal? destination,
     @JsonKey(name: '_destination') Element? destinationElement,
-    Boolean? encodeRequestUrl,
+    FhirBoolean? encodeRequestUrl,
     @JsonKey(name: '_encodeRequestUrl') Element? encodeRequestUrlElement,
-    Decimal? origin,
+    FhirDecimal? origin,
     @JsonKey(name: '_origin') Element? originElement,
     String? params,
     @JsonKey(name: '_params') Element? paramsElement,
     List<TestScriptRequestHeader>? requestHeader,
-    Id? requestId,
+    FhirId? requestId,
     @JsonKey(name: '_requestId') Element? requestIdElement,
-    Id? responseId,
+    FhirId? responseId,
     @JsonKey(name: '_responseId') Element? responseIdElement,
-    Id? sourceId,
+    FhirId? sourceId,
     @JsonKey(name: '_sourceId') Element? sourceIdElement,
-    Id? targetId,
+    FhirId? targetId,
     @JsonKey(name: '_targetId') Element? targetIdElement,
     String? url,
     @JsonKey(name: '_url') Element? urlElement,
@@ -1239,7 +1239,7 @@ class TestScriptAssert with _$TestScriptAssert {
     @JsonKey(name: '_headerField') Element? headerFieldElement,
     String? minimumId,
     @JsonKey(name: '_minimumId') Element? minimumIdElement,
-    Boolean? navigationLinks,
+    FhirBoolean? navigationLinks,
     @JsonKey(name: '_navigationLinks') Element? navigationLinksElement,
     @JsonKey(name: 'operator') TestScriptAssertOperator? operator_,
     @JsonKey(name: '_operator') Element? operatorElement,
@@ -1257,13 +1257,13 @@ class TestScriptAssert with _$TestScriptAssert {
     @JsonKey(name: '_responseCode') Element? responseCodeElement,
     TestScriptRule2? rule,
     TestScriptRuleset1? ruleset,
-    Id? sourceId,
+    FhirId? sourceId,
     @JsonKey(name: '_sourceId') Element? sourceIdElement,
-    Date? validateProfileId,
+    FhirDate? validateProfileId,
     @JsonKey(name: '_validateProfileId') Element? validateProfileIdElement,
     String? value,
     @JsonKey(name: '_value') Element? valueElement,
-    Boolean? warningOnly,
+    FhirBoolean? warningOnly,
     @JsonKey(name: '_warningOnly') Element? warningOnlyElement,
   }) = _TestScriptAssert;
 
@@ -1302,7 +1302,7 @@ class TestScriptAssert with _$TestScriptAssert {
 class TestScriptRule2 with _$TestScriptRule2 {
   TestScriptRule2._();
   factory TestScriptRule2({
-    Id? ruleId,
+    FhirId? ruleId,
     @JsonKey(name: '_ruleId') Element? ruleIdElement,
     List<TestScriptParam2>? param,
   }) = _TestScriptRule2;
@@ -1383,7 +1383,7 @@ class TestScriptParam2 with _$TestScriptParam2 {
 class TestScriptRuleset1 with _$TestScriptRuleset1 {
   TestScriptRuleset1._();
   factory TestScriptRuleset1({
-    Id? rulesetId,
+    FhirId? rulesetId,
     @JsonKey(name: '_rulesetId') Element? rulesetIdElement,
     List<TestScriptRule3>? rule,
   }) = _TestScriptRuleset1;
@@ -1423,7 +1423,7 @@ class TestScriptRuleset1 with _$TestScriptRuleset1 {
 class TestScriptRule3 with _$TestScriptRule3 {
   TestScriptRule3._();
   factory TestScriptRule3({
-    Id? ruleId,
+    FhirId? ruleId,
     @JsonKey(name: '_ruleId') Element? ruleIdElement,
     List<TestScriptParam3>? param,
   }) = _TestScriptRule3;

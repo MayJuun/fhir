@@ -22,12 +22,12 @@ Device _$DeviceFromJson(Map<String, dynamic> json) {
 mixin _$Device {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Device)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -79,12 +79,12 @@ abstract class $DeviceCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Device)
           Dstu2ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -209,7 +209,7 @@ class _$DeviceCopyWithImpl<$Res, $Val extends Device>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -495,12 +495,12 @@ abstract class _$$_DeviceCopyWith<$Res> implements $DeviceCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Device)
           Dstu2ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -636,7 +636,7 @@ class __$$_DeviceCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -821,7 +821,7 @@ class _$_Device extends _Device {
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
-  final Code? language;
+  final FhirCode? language;
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
@@ -1061,7 +1061,7 @@ abstract class _Device extends Device {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -1106,7 +1106,7 @@ abstract class _Device extends Device {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Device)
   Dstu2ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -1115,7 +1115,7 @@ abstract class _Device extends Device {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
-  Code? get language;
+  FhirCode? get language;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;
@@ -1193,12 +1193,12 @@ DeviceComponent _$DeviceComponentFromJson(Map<String, dynamic> json) {
 mixin _$DeviceComponent {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceComponent)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: '_id')
   Element? get idElement => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
   List<Resource>? get contained => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
@@ -1235,12 +1235,12 @@ abstract class $DeviceComponentCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceComponent)
           Dstu2ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       @JsonKey(name: '_id')
           Element? idElement,
       Meta? meta,
       FhirUri? implicitRules,
-      Code? language,
+      FhirCode? language,
       Narrative? text,
       List<Resource>? contained,
       @JsonKey(name: 'extension')
@@ -1327,7 +1327,7 @@ class _$DeviceComponentCopyWithImpl<$Res, $Val extends DeviceComponent>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
@@ -1499,12 +1499,12 @@ abstract class _$$_DeviceComponentCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceComponent)
           Dstu2ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       @JsonKey(name: '_id')
           Element? idElement,
       Meta? meta,
       FhirUri? implicitRules,
-      Code? language,
+      FhirCode? language,
       Narrative? text,
       List<Resource>? contained,
       @JsonKey(name: 'extension')
@@ -1598,7 +1598,7 @@ class __$$_DeviceComponentCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
@@ -1711,7 +1711,7 @@ class _$_DeviceComponent extends _DeviceComponent {
   @override
   final FhirUri? implicitRules;
   @override
-  final Code? language;
+  final FhirCode? language;
   @override
   final Narrative? text;
   final List<Resource>? _contained;
@@ -1881,7 +1881,7 @@ abstract class _DeviceComponent extends DeviceComponent {
           final Element? idElement,
       final Meta? meta,
       final FhirUri? implicitRules,
-      final Code? language,
+      final FhirCode? language,
       final Narrative? text,
       final List<Resource>? contained,
       @JsonKey(name: 'extension')
@@ -1908,7 +1908,7 @@ abstract class _DeviceComponent extends DeviceComponent {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceComponent)
   Dstu2ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: '_id')
   Element? get idElement;
@@ -1917,7 +1917,7 @@ abstract class _DeviceComponent extends DeviceComponent {
   @override
   FhirUri? get implicitRules;
   @override
-  Code? get language;
+  FhirCode? get language;
   @override
   Narrative? get text;
   @override
@@ -1962,7 +1962,7 @@ DeviceComponentProductionSpecification
 
 /// @nodoc
 mixin _$DeviceComponentProductionSpecification {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -2261,7 +2261,7 @@ abstract class _DeviceComponentProductionSpecification
       _$_DeviceComponentProductionSpecification.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -2288,12 +2288,12 @@ DeviceMetric _$DeviceMetricFromJson(Map<String, dynamic> json) {
 mixin _$DeviceMetric {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceMetric)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -2339,12 +2339,12 @@ abstract class $DeviceMetricCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceMetric)
           Dstu2ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -2449,7 +2449,7 @@ class _$DeviceMetricCopyWithImpl<$Res, $Val extends DeviceMetric>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -2685,12 +2685,12 @@ abstract class _$$_DeviceMetricCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceMetric)
           Dstu2ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -2806,7 +2806,7 @@ class __$$_DeviceMetricCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -2943,7 +2943,7 @@ class _$_DeviceMetric extends _DeviceMetric {
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
-  final Code? language;
+  final FhirCode? language;
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
@@ -3127,7 +3127,7 @@ abstract class _DeviceMetric extends DeviceMetric {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -3163,7 +3163,7 @@ abstract class _DeviceMetric extends DeviceMetric {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceMetric)
   Dstu2ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -3172,7 +3172,7 @@ abstract class _DeviceMetric extends DeviceMetric {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
-  Code? get language;
+  FhirCode? get language;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;
@@ -3230,7 +3230,7 @@ DeviceMetricCalibration _$DeviceMetricCalibrationFromJson(
 
 /// @nodoc
 mixin _$DeviceMetricCalibration {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -3243,7 +3243,7 @@ mixin _$DeviceMetricCalibration {
   CalibrationState? get state => throw _privateConstructorUsedError;
   @JsonKey(name: '_state')
   Element? get stateElement => throw _privateConstructorUsedError;
-  Instant? get time => throw _privateConstructorUsedError;
+  FhirInstant? get time => throw _privateConstructorUsedError;
   @JsonKey(name: '_time')
   Element? get timeElement => throw _privateConstructorUsedError;
 
@@ -3272,7 +3272,7 @@ abstract class $DeviceMetricCalibrationCopyWith<$Res> {
           CalibrationState? state,
       @JsonKey(name: '_state')
           Element? stateElement,
-      Instant? time,
+      FhirInstant? time,
       @JsonKey(name: '_time')
           Element? timeElement});
 
@@ -3403,7 +3403,7 @@ abstract class _$$_DeviceMetricCalibrationCopyWith<$Res>
           CalibrationState? state,
       @JsonKey(name: '_state')
           Element? stateElement,
-      Instant? time,
+      FhirInstant? time,
       @JsonKey(name: '_time')
           Element? timeElement});
 
@@ -3619,7 +3619,7 @@ abstract class _DeviceMetricCalibration extends DeviceMetricCalibration {
       _$_DeviceMetricCalibration.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -3638,7 +3638,7 @@ abstract class _DeviceMetricCalibration extends DeviceMetricCalibration {
   @JsonKey(name: '_state')
   Element? get stateElement;
   @override
-  Instant? get time;
+  FhirInstant? get time;
   @override
   @JsonKey(name: '_time')
   Element? get timeElement;

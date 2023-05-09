@@ -19,11 +19,11 @@ class CarePlan with Resource, _$CarePlan {
     @Default(Dstu2ResourceType.CarePlan)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.CarePlan)
         Dstu2ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -82,7 +82,7 @@ class CarePlan with Resource, _$CarePlan {
 class CarePlanRelatedPlan with _$CarePlanRelatedPlan {
   CarePlanRelatedPlan._();
   factory CarePlanRelatedPlan({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: RelatedPlanCode.unknown) RelatedPlanCode? code,
@@ -124,7 +124,7 @@ class CarePlanRelatedPlan with _$CarePlanRelatedPlan {
 class CarePlanParticipant with _$CarePlanParticipant {
   CarePlanParticipant._();
   factory CarePlanParticipant({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? role,
@@ -166,7 +166,7 @@ class CarePlanParticipant with _$CarePlanParticipant {
 class CarePlanActivity with _$CarePlanActivity {
   CarePlanActivity._();
   factory CarePlanActivity({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -211,7 +211,7 @@ class CarePlanActivity with _$CarePlanActivity {
 class CarePlanActivityDetail with _$CarePlanActivityDetail {
   CarePlanActivityDetail._();
   factory CarePlanActivityDetail({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -276,11 +276,11 @@ class Goal with Resource, _$Goal {
     @Default(Dstu2ResourceType.Goal)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Goal)
         Dstu2ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -288,15 +288,15 @@ class Goal with Resource, _$Goal {
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
     Reference? subject,
-    Date? startDate,
+    FhirDate? startDate,
     @JsonKey(name: '_startDate') Element? startDateElement,
     CodeableConcept? startCodeableConcept,
-    Date? targetDate,
+    FhirDate? targetDate,
     Quantity? targetQuantity,
     List<CodeableConcept>? category,
     required String description,
     @JsonKey(unknownEnumValue: GoalStatus.unknown) required GoalStatus status,
-    Date? statusDate,
+    FhirDate? statusDate,
     @JsonKey(name: '_statusDate') Element? statusDateElement,
     CodeableConcept? statusReason,
     @JsonKey(name: '_statusReason') Element? statusReasonElement,
@@ -337,7 +337,7 @@ class Goal with Resource, _$Goal {
 class GoalOutcome with _$GoalOutcome {
   GoalOutcome._();
   factory GoalOutcome({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? resultCodeableConcept,
@@ -382,10 +382,10 @@ class ReferralRequest with Resource, _$ReferralRequest {
     @Default(Dstu2ResourceType.ReferralRequest)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.ReferralRequest)
         Dstu2ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
-    Code? language,
+    FhirCode? language,
     Narrative? text,
     List<Resource>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -444,10 +444,10 @@ class ProcedureRequest with Resource, _$ProcedureRequest {
     @Default(Dstu2ResourceType.ProcedureRequest)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.ProcedureRequest)
         Dstu2ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
-    Code? language,
+    FhirCode? language,
     Narrative? text,
     List<Resource>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -466,7 +466,7 @@ class ProcedureRequest with Resource, _$ProcedureRequest {
     @JsonKey(unknownEnumValue: ProcedureRequestStatus.unknown)
         ProcedureRequestStatus? status,
     List<Annotation>? notes,
-    Boolean? asNeededBoolean,
+    FhirBoolean? asNeededBoolean,
     CodeableConcept? asNeededCodeableConcept,
     FhirDateTime? orderedOn,
     Reference? orderer,
@@ -509,11 +509,11 @@ class NutritionOrder with Resource, _$NutritionOrder {
     @Default(Dstu2ResourceType.NutritionOrder)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.NutritionOrder)
         Dstu2ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -568,7 +568,7 @@ class NutritionOrder with Resource, _$NutritionOrder {
 class NutritionOrderOralDiet with _$NutritionOrderOralDiet {
   NutritionOrderOralDiet._();
   factory NutritionOrderOralDiet({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -616,7 +616,7 @@ class NutritionOrderOralDiet with _$NutritionOrderOralDiet {
 class NutritionOrderSupplement with _$NutritionOrderSupplement {
   NutritionOrderSupplement._();
   factory NutritionOrderSupplement({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -664,7 +664,7 @@ class NutritionOrderSupplement with _$NutritionOrderSupplement {
 class NutritionOrderEnteralFormula with _$NutritionOrderEnteralFormula {
   NutritionOrderEnteralFormula._();
   factory NutritionOrderEnteralFormula({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -719,7 +719,7 @@ class NutritionOrderEnteralFormula with _$NutritionOrderEnteralFormula {
 class NutritionOrderOralDietNutrient with _$NutritionOrderOralDietNutrient {
   NutritionOrderOralDietNutrient._();
   factory NutritionOrderOralDietNutrient({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -763,7 +763,7 @@ class NutritionOrderOralDietNutrient with _$NutritionOrderOralDietNutrient {
 class NutritionOrderOralDietTexture with _$NutritionOrderOralDietTexture {
   NutritionOrderOralDietTexture._();
   factory NutritionOrderOralDietTexture({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -807,7 +807,7 @@ class NutritionOrderEnteralFormulaAdministration
     with _$NutritionOrderEnteralFormulaAdministration {
   NutritionOrderEnteralFormulaAdministration._();
   factory NutritionOrderEnteralFormulaAdministration({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Timing? schedule,
@@ -840,20 +840,20 @@ class NutritionOrderEnteralFormulaAdministration
 class VisionPrescriptionDispense with _$VisionPrescriptionDispense {
   VisionPrescriptionDispense._();
   factory VisionPrescriptionDispense({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Coding product,
     @JsonKey(unknownEnumValue: DispenseEye.unknown) DispenseEye? eye,
-    Decimal? sphere,
-    Decimal? cylinder,
-    Integer? axis,
-    Decimal? prism,
+    FhirDecimal? sphere,
+    FhirDecimal? cylinder,
+    FhirInteger? axis,
+    FhirDecimal? prism,
     @JsonKey(unknownEnumValue: DispenseBase.unknown) DispenseBase? base,
-    Decimal? add,
-    Decimal? power,
-    Decimal? backCurve,
-    Decimal? diameter,
+    FhirDecimal? add,
+    FhirDecimal? power,
+    FhirDecimal? backCurve,
+    FhirDecimal? diameter,
     Quantity? duration,
     String? color,
     String? brand,
@@ -898,11 +898,11 @@ class VisionPrescription with Resource, _$VisionPrescription {
     @Default(Dstu2ResourceType.VisionPrescription)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.VisionPrescription)
         Dstu2ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,

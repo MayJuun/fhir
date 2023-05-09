@@ -19,11 +19,11 @@ class Communication with Resource, _$Communication {
     @Default(Stu3ResourceType.Communication)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Communication)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -35,7 +35,7 @@ class Communication with Resource, _$Communication {
     List<Reference>? partOf,
     String? status,
     @JsonKey(name: '_status') Element? statusElement,
-    Boolean? notDone,
+    FhirBoolean? notDone,
     @JsonKey(name: '_notDone') Element? notDoneElement,
     CodeableConcept? notDoneReason,
     List<CodeableConcept>? category,
@@ -131,11 +131,11 @@ class CommunicationRequest with Resource, _$CommunicationRequest {
     @Default(Stu3ResourceType.CommunicationRequest)
     @JsonKey(unknownEnumValue: Stu3ResourceType.CommunicationRequest)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -283,11 +283,11 @@ class DeviceRequest with Resource, _$DeviceRequest {
     @Default(Stu3ResourceType.DeviceRequest)
     @JsonKey(unknownEnumValue: Stu3ResourceType.DeviceRequest)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -397,11 +397,11 @@ class DeviceUseStatement with Resource, _$DeviceUseStatement {
     @Default(Stu3ResourceType.DeviceUseStatement)
     @JsonKey(unknownEnumValue: Stu3ResourceType.DeviceUseStatement)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -460,11 +460,11 @@ class SupplyDelivery with Resource, _$SupplyDelivery {
     @Default(Stu3ResourceType.SupplyDelivery)
     @JsonKey(unknownEnumValue: Stu3ResourceType.SupplyDelivery)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -562,11 +562,11 @@ class SupplyRequest with Resource, _$SupplyRequest {
     @Default(Stu3ResourceType.SupplyRequest)
     @JsonKey(unknownEnumValue: Stu3ResourceType.SupplyRequest)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,

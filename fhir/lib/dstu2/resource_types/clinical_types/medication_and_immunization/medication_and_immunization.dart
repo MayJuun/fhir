@@ -19,18 +19,18 @@ class Medication with Resource, _$Medication {
     @Default(Dstu2ResourceType.Medication)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Medication)
         Dstu2ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? code,
-    Boolean? isBrand,
+    FhirBoolean? isBrand,
     Reference? manufacturer,
     MedicationProduct? product,
     MedicationPackage? package,
@@ -68,7 +68,7 @@ class Medication with Resource, _$Medication {
 class MedicationProduct with _$MedicationProduct {
   MedicationProduct._();
   factory MedicationProduct({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -112,7 +112,7 @@ class MedicationProduct with _$MedicationProduct {
 class MedicationProductIngredient with _$MedicationProductIngredient {
   MedicationProductIngredient._();
   factory MedicationProductIngredient({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Reference item,
@@ -154,7 +154,7 @@ class MedicationProductIngredient with _$MedicationProductIngredient {
 class MedicationProductBatch with _$MedicationProductBatch {
   MedicationProductBatch._();
   factory MedicationProductBatch({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? lotNumber,
@@ -198,7 +198,7 @@ class MedicationProductBatch with _$MedicationProductBatch {
 class MedicationPackage with _$MedicationPackage {
   MedicationPackage._();
   factory MedicationPackage({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -241,7 +241,7 @@ class MedicationPackage with _$MedicationPackage {
 class MedicationPackageContent with _$MedicationPackageContent {
   MedicationPackageContent._();
   factory MedicationPackageContent({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Reference item,
@@ -286,11 +286,11 @@ class MedicationOrder with Resource, _$MedicationOrder {
     @Default(Dstu2ResourceType.MedicationOrder)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationOrder)
         Dstu2ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     @JsonKey(name: '_id') Element? idElement,
     Meta? meta,
     FhirUri? implicitRules,
-    Code? language,
+    FhirCode? language,
     Narrative? text,
     List<Resource>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -348,13 +348,13 @@ class MedicationOrder with Resource, _$MedicationOrder {
 class MedicationOrderDosageInstruction with _$MedicationOrderDosageInstruction {
   MedicationOrderDosageInstruction._();
   factory MedicationOrderDosageInstruction({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? text,
     CodeableConcept? additionalInstructions,
     Timing? timing,
-    Boolean? asNeededBoolean,
+    FhirBoolean? asNeededBoolean,
     CodeableConcept? asNeededCodeableConcept,
     CodeableConcept? siteCodeableConcept,
     Reference? siteReference,
@@ -391,7 +391,7 @@ class MedicationOrderDosageInstruction with _$MedicationOrderDosageInstruction {
 class MedicationOrderDispenseRequest with _$MedicationOrderDispenseRequest {
   MedicationOrderDispenseRequest._();
   factory MedicationOrderDispenseRequest({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? medicationCodeableConcept,
@@ -438,7 +438,7 @@ class MedicationOrderDispenseRequest with _$MedicationOrderDispenseRequest {
 class MedicationOrderSubstitution with _$MedicationOrderSubstitution {
   MedicationOrderSubstitution._();
   factory MedicationOrderSubstitution({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept type,
@@ -483,11 +483,11 @@ class MedicationAdministration with Resource, _$MedicationAdministration {
     @Default(Dstu2ResourceType.MedicationAdministration)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationAdministration)
         Dstu2ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -501,7 +501,7 @@ class MedicationAdministration with Resource, _$MedicationAdministration {
     Reference? practitioner,
     Reference? encounter,
     Reference? prescription,
-    Boolean? wasNotGiven,
+    FhirBoolean? wasNotGiven,
     List<CodeableConcept>? reasonNotGiven,
     List<CodeableConcept>? reasonGiven,
     FhirDateTime? effectiveTimeDateTime,
@@ -546,7 +546,7 @@ class MedicationAdministration with Resource, _$MedicationAdministration {
 class MedicationAdministrationDosage with _$MedicationAdministrationDosage {
   MedicationAdministrationDosage._();
   factory MedicationAdministrationDosage({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? text,
@@ -599,11 +599,11 @@ class MedicationDispense with Resource, _$MedicationDispense {
     @Default(Dstu2ResourceType.MedicationDispense)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationDispense)
         Dstu2ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -665,13 +665,13 @@ class MedicationDispenseDosageInstruction
     with _$MedicationDispenseDosageInstruction {
   MedicationDispenseDosageInstruction._();
   factory MedicationDispenseDosageInstruction({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? text,
     CodeableConcept? additionalInstructions,
     Timing? timing,
-    Boolean? asNeededBoolean,
+    FhirBoolean? asNeededBoolean,
     CodeableConcept? asNeededCodeableConcept,
     CodeableConcept? siteCodeableConcept,
     Reference? siteReference,
@@ -708,7 +708,7 @@ class MedicationDispenseDosageInstruction
 class MedicationDispenseSubstitution with _$MedicationDispenseSubstitution {
   MedicationDispenseSubstitution._();
   factory MedicationDispenseSubstitution({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept type,
@@ -755,11 +755,11 @@ class MedicationStatement with Resource, _$MedicationStatement {
     @Default(Dstu2ResourceType.MedicationStatement)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationStatement)
         Dstu2ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -773,7 +773,7 @@ class MedicationStatement with Resource, _$MedicationStatement {
     @JsonKey(required: true, unknownEnumValue: MedicationStatementStatus.unknown)
         required MedicationStatementStatus status,
     @JsonKey(name: '_status') Element? statusElement,
-    Boolean? wasNotTaken,
+    FhirBoolean? wasNotTaken,
     List<CodeableConcept>? reasonNotTaken,
     CodeableConcept? reasonForUseCodeableConcept,
     Reference? reasonForUseReference,
@@ -819,12 +819,12 @@ class MedicationStatement with Resource, _$MedicationStatement {
 class MedicationStatementDosage with _$MedicationStatementDosage {
   MedicationStatementDosage._();
   factory MedicationStatementDosage({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? text,
     Timing? timing,
-    Boolean? asNeededBoolean,
+    FhirBoolean? asNeededBoolean,
     CodeableConcept? asNeededCodeableConcept,
     CodeableConcept? siteCodeableConcept,
     Reference? siteReference,
@@ -875,11 +875,11 @@ class Immunization with Resource, _$Immunization {
     @Default(Dstu2ResourceType.Immunization)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Immunization)
         Dstu2ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -901,7 +901,7 @@ class Immunization with Resource, _$Immunization {
     Reference? location,
     String? lotNumber,
     @JsonKey(name: '_lotNumber') Element? lotNumberElement,
-    Date? expirationDate,
+    FhirDate? expirationDate,
     @JsonKey(name: '_expirationDate') Element? expirationDateElement,
     CodeableConcept? site,
     CodeableConcept? route,
@@ -944,7 +944,7 @@ class Immunization with Resource, _$Immunization {
 class ImmunizationExplanation with _$ImmunizationExplanation {
   ImmunizationExplanation._();
   factory ImmunizationExplanation({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<CodeableConcept>? reason,
@@ -986,13 +986,13 @@ class ImmunizationExplanation with _$ImmunizationExplanation {
 class ImmunizationReaction with _$ImmunizationReaction {
   ImmunizationReaction._();
   factory ImmunizationReaction({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     FhirDateTime? date,
     @JsonKey(name: '_date') Element? dateElement,
     Reference? detail,
-    Boolean? reported,
+    FhirBoolean? reported,
     @JsonKey(name: '_reported') Element? reportedElement,
   }) = _ImmunizationReaction;
 
@@ -1031,7 +1031,7 @@ class ImmunizationReaction with _$ImmunizationReaction {
 class ImmunizationVaccinationProtocol with _$ImmunizationVaccinationProtocol {
   ImmunizationVaccinationProtocol._();
   factory ImmunizationVaccinationProtocol({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required PositiveInt doseSequence,
@@ -1084,11 +1084,11 @@ class ImmunizationRecommendation with Resource, _$ImmunizationRecommendation {
     @Default(Dstu2ResourceType.ImmunizationRecommendation)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.ImmunizationRecommendation)
         Dstu2ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -1133,7 +1133,7 @@ class ImmunizationRecommendationRecommendation
     with _$ImmunizationRecommendationRecommendation {
   ImmunizationRecommendationRecommendation._();
   factory ImmunizationRecommendationRecommendation({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required FhirDateTime date,
@@ -1171,7 +1171,7 @@ class ImmunizationRecommendationRecommendationDateCriterion
     with _$ImmunizationRecommendationRecommendationDateCriterion {
   ImmunizationRecommendationRecommendationDateCriterion._();
   factory ImmunizationRecommendationRecommendationDateCriterion({
-    Id? id,
+    FhirId? id,
     FhirExtension? extensio,
     FhirExtension? modifier,
     required CodeableConcept code,
@@ -1205,10 +1205,10 @@ class ImmunizationRecommendationRecommendationProtocol
     with _$ImmunizationRecommendationRecommendationProtocol {
   ImmunizationRecommendationRecommendationProtocol._();
   factory ImmunizationRecommendationRecommendationProtocol({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     FhirExtension? modifierExten,
-    Integer? doseSequence,
+    FhirInteger? doseSequence,
     String? description,
     Reference? authority,
     String? series,

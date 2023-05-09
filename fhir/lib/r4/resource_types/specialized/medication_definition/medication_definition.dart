@@ -67,7 +67,7 @@ class AdministrableProductDefinition
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.;
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] (_language): Extensions for language;
     @JsonKey(name: '_language')
@@ -90,7 +90,7 @@ class AdministrableProductDefinition
     List<Identifier>? identifier,
 
     /// [status] The status of this ingredient. Enables tracking the life-cycle of the content.;
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] (_status): Extensions for status;
     @JsonKey(name: '_status')
@@ -189,13 +189,13 @@ class AdministrableProductDefinitionProperty
     Quantity? valueQuantity,
 
     /// [valueDate] A value for the characteristic.;
-    Date? valueDate,
+    FhirDate? valueDate,
 
     /// [valueDateElement] (_valueDate): Extensions for valueDate;
     @JsonKey(name: '_valueDate') Element? valueDateElement,
 
     /// [valueBoolean] A value for the characteristic.;
-    Boolean? valueBoolean,
+    FhirBoolean? valueBoolean,
 
     /// [valueBooleanElement] (_valueBoolean): Extensions for valueBoolean;
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
@@ -564,7 +564,7 @@ class Ingredient with Resource, _$Ingredient {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.;
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] (_language): Extensions for language;
     @JsonKey(name: '_language') Element? languageElement,
@@ -586,7 +586,7 @@ class Ingredient with Resource, _$Ingredient {
     Identifier? identifier,
 
     /// [status] The status of this ingredient. Enables tracking the life-cycle of the content.;
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] (_status): Extensions for status;
     @JsonKey(name: '_status') Element? statusElement,
@@ -604,7 +604,7 @@ class Ingredient with Resource, _$Ingredient {
     CodeableConcept? group,
 
     /// [allergenicIndicator] If the ingredient is a known or suspected allergen. Note that this is a property of the substance, so if a reference to a SubstanceDefinition is used to decribe that (rather than just a code), the allergen information should go there, not here.;
-    Boolean? allergenicIndicator,
+    FhirBoolean? allergenicIndicator,
 
     /// [allergenicIndicatorElement] (_allergenicIndicator): Extensions for allergenicIndicator;
     @JsonKey(name: '_allergenicIndicator') Element? allergenicIndicatorElement,
@@ -675,7 +675,7 @@ class IngredientManufacturer with _$IngredientManufacturer {
     List<FhirExtension>? modifierExtension,
 
     /// [role] The way in which this manufacturer is associated with the ingredient. For example whether it is a possible one (others allowed), or an exclusive authorized one for this ingredient. Note that this is not the manufacturing process role.;
-    Code? role,
+    FhirCode? role,
 
     /// [roleElement] (_role): Extensions for role;
     @JsonKey(name: '_role') Element? roleElement,
@@ -1068,7 +1068,7 @@ class ClinicalUseDefinition with Resource, _$ClinicalUseDefinition {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.;
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] (_language): Extensions for language;
     @JsonKey(name: '_language') Element? languageElement,
@@ -1089,7 +1089,7 @@ class ClinicalUseDefinition with Resource, _$ClinicalUseDefinition {
     List<Identifier>? identifier,
 
     /// [type] indication | contraindication | interaction | undesirable-effect | warning.;
-    Code? type,
+    FhirCode? type,
 
     /// [typeElement] (_type): Extensions for type;
     @JsonKey(name: '_type') Element? typeElement,
@@ -1357,7 +1357,7 @@ class ClinicalUseDefinitionIndication with _$ClinicalUseDefinitionIndication {
     Range? durationRange,
 
     /// [durationString] Timing or duration information, that may be associated with use with the indicated condition e.g. Adult patients suffering from myocardial infarction (from a few days until less than 35 days), ischaemic stroke (from 7 days until less than 6 months).;
-    Markdown? durationString,
+    FhirMarkdown? durationString,
 
     /// [durationStringElement] (_durationString): Extensions for durationString;
     @JsonKey(name: '_durationString') Element? durationStringElement,
@@ -1655,7 +1655,7 @@ class ClinicalUseDefinitionWarning with _$ClinicalUseDefinitionWarning {
     List<FhirExtension>? modifierExtension,
 
     /// [description] A textual definition of this warning, with formatting.;
-    Markdown? description,
+    FhirMarkdown? description,
 
     /// [descriptionElement] (_description): Extensions for description;
     @JsonKey(name: '_description') Element? descriptionElement,
@@ -1763,7 +1763,7 @@ class ManufacturedItemDefinition with Resource, _$ManufacturedItemDefinition {
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.;
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] (_language): Extensions for language;
     @JsonKey(name: '_language')
@@ -1787,7 +1787,7 @@ class ManufacturedItemDefinition with Resource, _$ManufacturedItemDefinition {
     List<Identifier>? identifier,
 
     /// [status] The status of this item. Enables tracking the life-cycle of the content.;
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] (_status): Extensions for status;
     @JsonKey(name: '_status')
@@ -1889,13 +1889,13 @@ class ManufacturedItemDefinitionProperty
     Quantity? valueQuantity,
 
     /// [valueDate] A value for the characteristic.;
-    Date? valueDate,
+    FhirDate? valueDate,
 
     /// [valueDateElement] (_valueDate): Extensions for valueDate;
     @JsonKey(name: '_valueDate') Element? valueDateElement,
 
     /// [valueBoolean] A value for the characteristic.;
-    Boolean? valueBoolean,
+    FhirBoolean? valueBoolean,
 
     /// [valueBooleanElement] (_valueBoolean): Extensions for valueBoolean;
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
@@ -2052,7 +2052,7 @@ class MedicinalProductDefinition with Resource, _$MedicinalProductDefinition {
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.;
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] (_language): Extensions for language;
     @JsonKey(name: '_language')
@@ -2099,7 +2099,7 @@ class MedicinalProductDefinition with Resource, _$MedicinalProductDefinition {
         Element? statusDateElement,
 
     /// [description] General description of this product.;
-    Markdown? description,
+    FhirMarkdown? description,
 
     /// [descriptionElement] (_description): Extensions for description;
     @JsonKey(name: '_description')
@@ -2112,7 +2112,7 @@ class MedicinalProductDefinition with Resource, _$MedicinalProductDefinition {
     List<CodeableConcept>? route,
 
     /// [indication] Description of indication(s) for this product, used when structured indications are not required. In cases where structured indications are required, they are captured using the ClinicalUseDefinition resource. An indication is a medical situation for which using the product is appropriate.;
-    Markdown? indication,
+    FhirMarkdown? indication,
 
     /// [indicationElement] (_indication): Extensions for indication;
     @JsonKey(name: '_indication')
@@ -2710,13 +2710,13 @@ class MedicinalProductDefinitionCharacteristic
     Quantity? valueQuantity,
 
     /// [valueDate] A value for the characteristic.text.;
-    Date? valueDate,
+    FhirDate? valueDate,
 
     /// [valueDateElement] (_valueDate): Extensions for valueDate;
     @JsonKey(name: '_valueDate') Element? valueDateElement,
 
     /// [valueBoolean] A value for the characteristic.text.;
-    Boolean? valueBoolean,
+    FhirBoolean? valueBoolean,
 
     /// [valueBooleanElement] (_valueBoolean): Extensions for valueBoolean;
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
@@ -2847,7 +2847,7 @@ class PackagedProductDefinition with Resource, _$PackagedProductDefinition {
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.;
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] (_language): Extensions for language;
     @JsonKey(name: '_language')
@@ -2897,7 +2897,7 @@ class PackagedProductDefinition with Resource, _$PackagedProductDefinition {
     List<Quantity>? containedItemQuantity,
 
     /// [description] Textual description. Note that this is not the name of the package or product.;
-    Markdown? description,
+    FhirMarkdown? description,
 
     /// [descriptionElement] (_description): Extensions for description;
     @JsonKey(name: '_description')
@@ -2913,7 +2913,7 @@ class PackagedProductDefinition with Resource, _$PackagedProductDefinition {
     List<CodeableConcept>? characteristic,
 
     /// [copackagedIndicator] Identifies if the package contains different items, such as when a drug product is supplied with another item e.g. a diluent or adjuvant.;
-    Boolean? copackagedIndicator,
+    FhirBoolean? copackagedIndicator,
 
     /// [copackagedIndicatorElement] (_copackagedIndicator): Extensions for copackagedIndicator;
     @JsonKey(name: '_copackagedIndicator')
@@ -3081,7 +3081,7 @@ class PackagedProductDefinitionPackage with _$PackagedProductDefinitionPackage {
     CodeableConcept? type,
 
     /// [quantity] The quantity of packaging items contained at this layer of the package. This does not relate to the number of contained items but relates solely to the number of packaging items. When looking at the outermost layer it is always 1. If there are two boxes within, at the next layer it would be 2.;
-    Integer? quantity,
+    FhirInteger? quantity,
 
     /// [quantityElement] (_quantity): Extensions for quantity;
     @JsonKey(name: '_quantity') Element? quantityElement,
@@ -3347,13 +3347,13 @@ class PackagedProductDefinitionProperty
     Quantity? valueQuantity,
 
     /// [valueDate] A value for the characteristic.;
-    Date? valueDate,
+    FhirDate? valueDate,
 
     /// [valueDateElement] (_valueDate): Extensions for valueDate;
     @JsonKey(name: '_valueDate') Element? valueDateElement,
 
     /// [valueBoolean] A value for the characteristic.;
-    Boolean? valueBoolean,
+    FhirBoolean? valueBoolean,
 
     /// [valueBooleanElement] (_valueBoolean): Extensions for valueBoolean;
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
@@ -3546,7 +3546,7 @@ class RegulatedAuthorization with Resource, _$RegulatedAuthorization {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.;
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] (_language): Extensions for language;
     @JsonKey(name: '_language') Element? languageElement,
@@ -3574,7 +3574,7 @@ class RegulatedAuthorization with Resource, _$RegulatedAuthorization {
     CodeableConcept? type,
 
     /// [description] General textual supporting information.;
-    Markdown? description,
+    FhirMarkdown? description,
 
     /// [descriptionElement] (_description): Extensions for description;
     @JsonKey(name: '_description') Element? descriptionElement,
@@ -3826,7 +3826,7 @@ class SubstanceDefinition with Resource, _$SubstanceDefinition {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.;
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] (_language): Extensions for language;
     @JsonKey(name: '_language') Element? languageElement,
@@ -3866,7 +3866,7 @@ class SubstanceDefinition with Resource, _$SubstanceDefinition {
     List<CodeableConcept>? grade,
 
     /// [description] Textual description of the substance.;
-    Markdown? description,
+    FhirMarkdown? description,
 
     /// [descriptionElement] (_description): Extensions for description;
     @JsonKey(name: '_description') Element? descriptionElement,
@@ -4015,7 +4015,7 @@ class SubstanceDefinitionMoiety with _$SubstanceDefinitionMoiety {
     Quantity? amountQuantity,
 
     /// [amountString] Quantitative value for this moiety.;
-    Markdown? amountString,
+    FhirMarkdown? amountString,
 
     /// [amountStringElement] (_amountString): Extensions for amountString;
     @JsonKey(name: '_amountString') Element? amountStringElement,
@@ -4108,13 +4108,13 @@ class SubstanceDefinitionProperty with _$SubstanceDefinitionProperty {
     Quantity? valueQuantity,
 
     /// [valueDate] A value for the property.;
-    Date? valueDate,
+    FhirDate? valueDate,
 
     /// [valueDateElement] (_valueDate): Extensions for valueDate;
     @JsonKey(name: '_valueDate') Element? valueDateElement,
 
     /// [valueBoolean] A value for the property.;
-    Boolean? valueBoolean,
+    FhirBoolean? valueBoolean,
 
     /// [valueBooleanElement] (_valueBoolean): Extensions for valueBoolean;
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
@@ -4581,7 +4581,7 @@ class SubstanceDefinitionName with _$SubstanceDefinitionName {
     CodeableConcept? status,
 
     /// [preferred] If this is the preferred name for this substance.;
-    Boolean? preferred,
+    FhirBoolean? preferred,
 
     /// [preferredElement] (_preferred): Extensions for preferred;
     @JsonKey(name: '_preferred') Element? preferredElement,
@@ -4779,7 +4779,7 @@ class SubstanceDefinitionRelationship with _$SubstanceDefinitionRelationship {
     required CodeableConcept type,
 
     /// [isDefining] For example where an enzyme strongly bonds with a particular substance, this is a defining relationship for that enzyme, out of several possible substance relationships.;
-    Boolean? isDefining,
+    FhirBoolean? isDefining,
 
     /// [isDefiningElement] (_isDefining): Extensions for isDefining;
     @JsonKey(name: '_isDefining') Element? isDefiningElement,
@@ -4791,7 +4791,7 @@ class SubstanceDefinitionRelationship with _$SubstanceDefinitionRelationship {
     Ratio? amountRatio,
 
     /// [amountString] A numeric factor for the relationship, for instance to express that the salt of a substance has some percentage of the active substance in relation to some other.;
-    Markdown? amountString,
+    FhirMarkdown? amountString,
 
     /// [amountStringElement] (_amountString): Extensions for amountString;
     @JsonKey(name: '_amountString') Element? amountStringElement,

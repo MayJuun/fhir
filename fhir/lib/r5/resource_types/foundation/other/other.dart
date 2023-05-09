@@ -102,7 +102,7 @@ class Basic with Resource, _$Basic {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -119,7 +119,7 @@ class Basic with Resource, _$Basic {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -248,7 +248,7 @@ class Binary with Resource, _$Binary {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -265,13 +265,13 @@ class Binary with Resource, _$Binary {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
 
     /// [contentType] MimeType of the binary content represented as a standard MimeType (BCP 13).
-    Code? contentType,
+    FhirCode? contentType,
 
     /// [contentTypeElement] ("_contentType") Extensions for contentType
     @JsonKey(name: '_contentType') Element? contentTypeElement,
@@ -280,7 +280,7 @@ class Binary with Resource, _$Binary {
     Reference? securityContext,
 
     /// [data] The actual content, base64 encoded.
-    Base64Binary? data,
+    FhirBase64Binary? data,
 
     /// [dataElement] ("_data") Extensions for data
     @JsonKey(name: '_data') Element? dataElement,
@@ -383,7 +383,7 @@ class Bundle with Resource, _$Bundle {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -400,7 +400,7 @@ class Bundle with Resource, _$Bundle {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -409,13 +409,13 @@ class Bundle with Resource, _$Bundle {
     Identifier? identifier,
 
     /// [type] Indicates the purpose of this bundle - how it is intended to be used.
-    Code? type,
+    FhirCode? type,
 
     /// [typeElement] ("_type") Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
 
     /// [timestamp] The date/time that the bundle was assembled - i.e. when the resources were placed in the bundle.
-    Instant? timestamp,
+    FhirInstant? timestamp,
 
     /// [timestampElement] ("_timestamp") Extensions for timestamp
     @JsonKey(name: '_timestamp') Element? timestampElement,
@@ -541,7 +541,7 @@ class BundleLink with _$BundleLink {
     List<FhirExtension>? modifierExtension,
 
     /// [relation] A name which details the functional use for this link - see [http://www.iana.org/assignments/link-relations/link-relations.xhtml#link-relations-1](http://www.iana.org/assignments/link-relations/link-relations.xhtml#link-relations-1).
-    Code? relation,
+    FhirCode? relation,
 
     /// [relationElement] ("_relation") Extensions for relation
     @JsonKey(name: '_relation') Element? relationElement,
@@ -859,13 +859,13 @@ class BundleSearch with _$BundleSearch {
     List<FhirExtension>? modifierExtension,
 
     /// [mode] Why this entry is in the result set - whether it's included as a match or because of an _include requirement, or to convey information or warning information about the search process.
-    Code? mode,
+    FhirCode? mode,
 
     /// [modeElement] ("_mode") Extensions for mode
     @JsonKey(name: '_mode') Element? modeElement,
 
     /// [score] When searching, the server's search ranking score for the entry.
-    Decimal? score,
+    FhirDecimal? score,
 
     /// [scoreElement] ("_score") Extensions for score
     @JsonKey(name: '_score') Element? scoreElement,
@@ -999,7 +999,7 @@ class BundleRequest with _$BundleRequest {
     List<FhirExtension>? modifierExtension,
 
     /// [method] In a transaction or batch, this is the HTTP action to be executed for this entry. In a history bundle, this indicates the HTTP action that occurred.
-    Code? method,
+    FhirCode? method,
 
     /// [methodElement] ("_method") Extensions for method
     @JsonKey(name: '_method') Element? methodElement,
@@ -1017,7 +1017,7 @@ class BundleRequest with _$BundleRequest {
     @JsonKey(name: '_ifNoneMatch') Element? ifNoneMatchElement,
 
     /// [ifModifiedSince] Only perform the operation if the last updated date matches. See the API documentation for ["Conditional Read"](http.html#cread).
-    Instant? ifModifiedSince,
+    FhirInstant? ifModifiedSince,
 
     /// [ifModifiedSinceElement] ("_ifModifiedSince") Extensions for ifModifiedSince
     @JsonKey(name: '_ifModifiedSince') Element? ifModifiedSinceElement,
@@ -1169,7 +1169,7 @@ class BundleResponse with _$BundleResponse {
     @JsonKey(name: '_etag') Element? etagElement,
 
     /// [lastModified] The date/time that the resource was modified on the server.
-    Instant? lastModified,
+    FhirInstant? lastModified,
 
     /// [lastModifiedElement] ("_lastModified") Extensions for lastModified
     @JsonKey(name: '_lastModified') Element? lastModifiedElement,
@@ -1295,7 +1295,7 @@ class Linkage with Resource, _$Linkage {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -1312,7 +1312,7 @@ class Linkage with Resource, _$Linkage {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -1330,7 +1330,7 @@ class Linkage with Resource, _$Linkage {
     List<FhirExtension>? modifierExtension,
 
     /// [active] Indicates whether the asserted set of linkages are considered to be "in effect".
-    Boolean? active,
+    FhirBoolean? active,
 
     /// [activeElement] ("_active") Extensions for active
     @JsonKey(name: '_active') Element? activeElement,
@@ -1444,7 +1444,7 @@ class LinkageItem with _$LinkageItem {
     List<FhirExtension>? modifierExtension,
 
     /// [type] Distinguishes which item is "source of truth" (if any) and which items are no longer considered to be current representations.
-    Code? type,
+    FhirCode? type,
 
     /// [typeElement] ("_type") Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
@@ -1612,7 +1612,7 @@ class MessageHeader with Resource, _$MessageHeader {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -1629,7 +1629,7 @@ class MessageHeader with Resource, _$MessageHeader {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -1650,7 +1650,7 @@ class MessageHeader with Resource, _$MessageHeader {
     Coding? eventCoding,
 
     /// [eventCanonical] Code that identifies the event this message represents and connects it with its definition. Events defined as part of the FHIR specification have the system value "http://terminology.hl7.org/CodeSystem/message-events".  Alternatively a canonical uri to the EventDefinition.
-    Canonical? eventCanonical,
+    FhirCanonical? eventCanonical,
 
     /// [eventCanonicalElement] ("_eventCanonical") Extensions for eventCanonical
     @JsonKey(name: '_eventCanonical') Element? eventCanonicalElement,
@@ -1683,7 +1683,7 @@ class MessageHeader with Resource, _$MessageHeader {
     List<Reference>? focus,
 
     /// [definition] Permanent link to the MessageDefinition for this message.
-    Canonical? definition,
+    FhirCanonical? definition,
   }) = _MessageHeader;
 
   /// Produces a Yaml formatted String version of the object
@@ -2090,7 +2090,7 @@ class MessageHeaderResponse with _$MessageHeaderResponse {
     required Identifier identifier,
 
     /// [code] Code that identifies the type of response to the message - whether it was successful or not, and whether it should be resent or not.
-    Code? code,
+    FhirCode? code,
 
     /// [codeElement] ("_code") Extensions for code
     @JsonKey(name: '_code') Element? codeElement,
@@ -2206,7 +2206,7 @@ class OperationOutcome with Resource, _$OperationOutcome {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -2223,7 +2223,7 @@ class OperationOutcome with Resource, _$OperationOutcome {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -2377,13 +2377,13 @@ class OperationOutcomeIssue with _$OperationOutcomeIssue {
     List<FhirExtension>? modifierExtension,
 
     /// [severity] Indicates whether the issue indicates a variation from successful processing.
-    Code? severity,
+    FhirCode? severity,
 
     /// [severityElement] ("_severity") Extensions for severity
     @JsonKey(name: '_severity') Element? severityElement,
 
     /// [code] Describes the type of the issue. The system that creates an OperationOutcome SHALL choose the most applicable code from the IssueType value set, and may additional provide its own code for the error in the details element.
-    Code? code,
+    FhirCode? code,
 
     /// [codeElement] ("_code") Extensions for code
     @JsonKey(name: '_code') Element? codeElement,
@@ -2488,7 +2488,7 @@ class Parameters with Resource, _$Parameters {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -2505,7 +2505,7 @@ class Parameters with Resource, _$Parameters {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -2787,31 +2787,31 @@ class ParametersParameter with _$ParametersParameter {
     @JsonKey(name: '_name') Element? nameElement,
 
     /// [valueBase64Binary] Conveys the content if the parameter is a data type.
-    Base64Binary? valueBase64Binary,
+    FhirBase64Binary? valueBase64Binary,
 
     /// [valueBase64BinaryElement] ("_valueBase64Binary") Extensions for valueBase64Binary
     @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
 
     /// [valueBoolean] Conveys the content if the parameter is a data type.
-    Boolean? valueBoolean,
+    FhirBoolean? valueBoolean,
 
     /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
 
     /// [valueCanonical] Conveys the content if the parameter is a data type.
-    Canonical? valueCanonical,
+    FhirCanonical? valueCanonical,
 
     /// [valueCanonicalElement] ("_valueCanonical") Extensions for valueCanonical
     @JsonKey(name: '_valueCanonical') Element? valueCanonicalElement,
 
     /// [valueCode] Conveys the content if the parameter is a data type.
-    Code? valueCode,
+    FhirCode? valueCode,
 
     /// [valueCodeElement] ("_valueCode") Extensions for valueCode
     @JsonKey(name: '_valueCode') Element? valueCodeElement,
 
     /// [valueDate] Conveys the content if the parameter is a data type.
-    Date? valueDate,
+    FhirDate? valueDate,
 
     /// [valueDateElement] ("_valueDate") Extensions for valueDate
     @JsonKey(name: '_valueDate') Element? valueDateElement,
@@ -2823,43 +2823,43 @@ class ParametersParameter with _$ParametersParameter {
     @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
 
     /// [valueDecimal] Conveys the content if the parameter is a data type.
-    Decimal? valueDecimal,
+    FhirDecimal? valueDecimal,
 
     /// [valueDecimalElement] ("_valueDecimal") Extensions for valueDecimal
     @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
 
     /// [valueId] Conveys the content if the parameter is a data type.
-    Id? valueId,
+    FhirId? valueId,
 
     /// [valueIdElement] ("_valueId") Extensions for valueId
     @JsonKey(name: '_valueId') Element? valueIdElement,
 
     /// [valueInstant] Conveys the content if the parameter is a data type.
-    Instant? valueInstant,
+    FhirInstant? valueInstant,
 
     /// [valueInstantElement] ("_valueInstant") Extensions for valueInstant
     @JsonKey(name: '_valueInstant') Element? valueInstantElement,
 
     /// [valueInteger] Conveys the content if the parameter is a data type.
-    Integer? valueInteger,
+    FhirInteger? valueInteger,
 
     /// [valueIntegerElement] ("_valueInteger") Extensions for valueInteger
     @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
 
     /// [valueInteger64] Conveys the content if the parameter is a data type.
-    Integer64? valueInteger64,
+    FhirInteger64? valueInteger64,
 
     /// [valueInteger64Element] ("_valueInteger64") Extensions for valueInteger64
     @JsonKey(name: '_valueInteger64') Element? valueInteger64Element,
 
     /// [valueMarkdown] Conveys the content if the parameter is a data type.
-    Markdown? valueMarkdown,
+    FhirMarkdown? valueMarkdown,
 
     /// [valueMarkdownElement] ("_valueMarkdown") Extensions for valueMarkdown
     @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
 
     /// [valueOid] Conveys the content if the parameter is a data type.
-    Id? valueOid,
+    FhirId? valueOid,
 
     /// [valueOidElement] ("_valueOid") Extensions for valueOid
     @JsonKey(name: '_valueOid') Element? valueOidElement,
@@ -2901,7 +2901,7 @@ class ParametersParameter with _$ParametersParameter {
     @JsonKey(name: '_valueUrl') Element? valueUrlElement,
 
     /// [valueUuid] Conveys the content if the parameter is a data type.
-    Id? valueUuid,
+    FhirId? valueUuid,
 
     /// [valueUuidElement] ("_valueUuid") Extensions for valueUuid
     @JsonKey(name: '_valueUuid') Element? valueUuidElement,
@@ -3199,7 +3199,7 @@ class Subscription with Resource, _$Subscription {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -3216,7 +3216,7 @@ class Subscription with Resource, _$Subscription {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -3243,7 +3243,7 @@ class Subscription with Resource, _$Subscription {
     @JsonKey(name: '_name') Element? nameElement,
 
     /// [status] The status of the subscription, which marks the server state for managing the subscription.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -3255,7 +3255,7 @@ class Subscription with Resource, _$Subscription {
     List<ContactPoint>? contact,
 
     /// [end] The time for the server to turn the subscription off.
-    Instant? end,
+    FhirInstant? end,
 
     /// [endElement] ("_end") Extensions for end
     @JsonKey(name: '_end') Element? endElement,
@@ -3300,13 +3300,13 @@ class Subscription with Resource, _$Subscription {
     @JsonKey(name: '_timeout') Element? timeoutElement,
 
     /// [contentType] The mime type to send the payload in - either application/fhir+xml, or application/fhir+json. The MIME types "text/plain" and "text/html" may also be used for Email subscriptions.
-    Code? contentType,
+    FhirCode? contentType,
 
     /// [contentTypeElement] ("_contentType") Extensions for contentType
     @JsonKey(name: '_contentType') Element? contentTypeElement,
 
     /// [content] How much of the resource content to deliver in the notification payload. The choices are an empty payload, only the resource id, or the full resource content.
-    Code? content,
+    FhirCode? content,
 
     /// [contentElement] ("_content") Extensions for content
     @JsonKey(name: '_content') Element? contentElement,
@@ -3450,7 +3450,7 @@ class SubscriptionFilterBy with _$SubscriptionFilterBy {
     @JsonKey(name: '_filterParameter') Element? filterParameterElement,
 
     /// [modifier] Operator to apply when determining matches (Search Modifiers), from the list of allowed modifiers for this filter in the relevant SubscriptionTopic.
-    Code? modifier,
+    FhirCode? modifier,
 
     /// [modifierElement] ("_modifier") Extensions for modifier
     @JsonKey(name: '_modifier') Element? modifierElement,
@@ -3596,7 +3596,7 @@ class SubscriptionStatus with Resource, _$SubscriptionStatus {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -3613,7 +3613,7 @@ class SubscriptionStatus with Resource, _$SubscriptionStatus {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -3631,19 +3631,19 @@ class SubscriptionStatus with Resource, _$SubscriptionStatus {
     List<FhirExtension>? modifierExtension,
 
     /// [status] The status of the subscription, which marks the server state for managing the subscription.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
 
     /// [type] The type of event being conveyed with this notificaiton.
-    Code? type,
+    FhirCode? type,
 
     /// [typeElement] ("_type") Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
 
     /// [eventsSinceSubscriptionStart] The total number of actual events which have been generated since the Subscription was created (inclusive of this notification) - regardless of how many have been successfully communicated.  This number is NOT incremented for handshake and heartbeat notifications.
-    Integer64? eventsSinceSubscriptionStart,
+    FhirInteger64? eventsSinceSubscriptionStart,
 
     /// [eventsSinceSubscriptionStartElement] ("_eventsSinceSubscriptionStart") Extensions for eventsSinceSubscriptionStart
     @JsonKey(name: '_eventsSinceSubscriptionStart')
@@ -3656,7 +3656,7 @@ class SubscriptionStatus with Resource, _$SubscriptionStatus {
     required Reference subscription,
 
     /// [topic] The reference to the SubscriptionTopic for the Subscription which generated this notification.
-    Canonical? topic,
+    FhirCanonical? topic,
 
     /// [error] A record of errors that occurred when the server processed a notification.
     List<CodeableConcept>? error,
@@ -3776,13 +3776,13 @@ class SubscriptionStatusNotificationEvent
     List<FhirExtension>? modifierExtension,
 
     /// [eventNumber] The sequential number of this event in this subscription context.
-    Integer64? eventNumber,
+    FhirInteger64? eventNumber,
 
     /// [eventNumberElement] ("_eventNumber") Extensions for eventNumber
     @JsonKey(name: '_eventNumber') Element? eventNumberElement,
 
     /// [timestamp] The actual time this event occured on the server.
-    Instant? timestamp,
+    FhirInstant? timestamp,
 
     /// [timestampElement] ("_timestamp") Extensions for timestamp
     @JsonKey(name: '_timestamp') Element? timestampElement,
@@ -4035,7 +4035,7 @@ class SubscriptionTopic with Resource, _$SubscriptionTopic {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -4052,7 +4052,7 @@ class SubscriptionTopic with Resource, _$SubscriptionTopic {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -4107,13 +4107,13 @@ class SubscriptionTopic with Resource, _$SubscriptionTopic {
     @JsonKey(name: '_title') Element? titleElement,
 
     /// [status] The current state of the SubscriptionTopic.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
 
     /// [experimental] A flag to indicate that this TopSubscriptionTopicic is authored for testing purposes (or education/evaluation/marketing), and is not intended to be used for genuine usage.
-    Boolean? experimental,
+    FhirBoolean? experimental,
 
     /// [experimentalElement] ("_experimental") Extensions for experimental
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -4134,7 +4134,7 @@ class SubscriptionTopic with Resource, _$SubscriptionTopic {
     List<ContactDetail>? contact,
 
     /// [description] A free text natural language description of the Topic from the consumer's perspective.
-    Markdown? description,
+    FhirMarkdown? description,
 
     /// [descriptionElement] ("_description") Extensions for description
     @JsonKey(name: '_description') Element? descriptionElement,
@@ -4146,13 +4146,13 @@ class SubscriptionTopic with Resource, _$SubscriptionTopic {
     List<CodeableConcept>? jurisdiction,
 
     /// [purpose] Explains why this Topic is needed and why it has been designed as it has.
-    Markdown? purpose,
+    FhirMarkdown? purpose,
 
     /// [purposeElement] ("_purpose") Extensions for purpose
     @JsonKey(name: '_purpose') Element? purposeElement,
 
     /// [copyright] A copyright statement relating to the SubscriptionTopic and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the SubscriptionTopic.
-    Markdown? copyright,
+    FhirMarkdown? copyright,
 
     /// [copyrightElement] ("_copyright") Extensions for copyright
     @JsonKey(name: '_copyright') Element? copyrightElement,
@@ -4167,13 +4167,13 @@ class SubscriptionTopic with Resource, _$SubscriptionTopic {
     List<Canonical>? derivedFrom,
 
     /// [approvalDate] The date on which the asset content was approved by the publisher. Approval happens once when the content is officially approved for usage.
-    Date? approvalDate,
+    FhirDate? approvalDate,
 
     /// [approvalDateElement] ("_approvalDate") Extensions for approvalDate
     @JsonKey(name: '_approvalDate') Element? approvalDateElement,
 
     /// [lastReviewDate] The date on which the asset content was last reviewed. Review happens periodically after that, but doesn't change the original approval date.
-    Date? lastReviewDate,
+    FhirDate? lastReviewDate,
 
     /// [lastReviewDateElement] ("_lastReviewDate") Extensions for lastReviewDate
     @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
@@ -4326,7 +4326,7 @@ class SubscriptionTopicResourceTrigger with _$SubscriptionTopicResourceTrigger {
     List<FhirExtension>? modifierExtension,
 
     /// [description] The human readable description of this resource trigger for the SubscriptionTopic -  for example, "An Encounter enters the 'in-progress' state".
-    Markdown? description,
+    FhirMarkdown? description,
 
     /// [descriptionElement] ("_description") Extensions for description
     @JsonKey(name: '_description') Element? descriptionElement,
@@ -4489,7 +4489,7 @@ class SubscriptionTopicQueryCriteria with _$SubscriptionTopicQueryCriteria {
     @JsonKey(name: '_previous') Element? previousElement,
 
     /// [resultForCreate] For "create" interactions, should the "previous" criteria count as an automatic pass or an automatic fail.
-    Code? resultForCreate,
+    FhirCode? resultForCreate,
 
     /// [resultForCreateElement] ("_resultForCreate") Extensions for resultForCreate
     @JsonKey(name: '_resultForCreate') Element? resultForCreateElement,
@@ -4501,13 +4501,13 @@ class SubscriptionTopicQueryCriteria with _$SubscriptionTopicQueryCriteria {
     @JsonKey(name: '_current') Element? currentElement,
 
     /// [resultForDelete] For "delete" interactions, should the "current" criteria count as an automatic pass or an automatic fail.
-    Code? resultForDelete,
+    FhirCode? resultForDelete,
 
     /// [resultForDeleteElement] ("_resultForDelete") Extensions for resultForDelete
     @JsonKey(name: '_resultForDelete') Element? resultForDeleteElement,
 
     /// [requireBoth] If set to true, both current and previous criteria must evaluate true to  trigger a notification for this topic.  Otherwise a notification for this topic will be triggered if either one evaluates to true.
-    Boolean? requireBoth,
+    FhirBoolean? requireBoth,
 
     /// [requireBothElement] ("_requireBoth") Extensions for requireBoth
     @JsonKey(name: '_requireBoth') Element? requireBothElement,
@@ -4634,7 +4634,7 @@ class SubscriptionTopicEventTrigger with _$SubscriptionTopicEventTrigger {
     List<FhirExtension>? modifierExtension,
 
     /// [description] The human readable description of an event to trigger a notification for the SubscriptionTopic - for example, "Patient Admission, as defined in HL7v2 via message ADT^A01". Multiple values are considered OR joined (e.g., matching any single event listed).
-    Markdown? description,
+    FhirMarkdown? description,
 
     /// [descriptionElement] ("_description") Extensions for description
     @JsonKey(name: '_description') Element? descriptionElement,
@@ -4783,7 +4783,7 @@ class SubscriptionTopicCanFilterBy with _$SubscriptionTopicCanFilterBy {
     List<FhirExtension>? modifierExtension,
 
     /// [description] Description of how this filtering parameter is intended to be used.
-    Markdown? description,
+    FhirMarkdown? description,
 
     /// [descriptionElement] ("_description") Extensions for description
     @JsonKey(name: '_description') Element? descriptionElement,

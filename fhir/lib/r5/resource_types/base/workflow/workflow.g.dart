@@ -1372,7 +1372,7 @@ _$_TaskInput _$$_TaskInputFromJson(Map<String, dynamic> json) => _$_TaskInput(
       type: CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
       valueBase64Binary: json['valueBase64Binary'] == null
           ? null
-          : Base64Binary.fromJson(json['valueBase64Binary']),
+          : FhirBase64Binary?.fromJson(json['valueBase64Binary']),
       valueBase64BinaryElement: json['_valueBase64Binary'] == null
           ? null
           : Element.fromJson(
@@ -1710,7 +1710,7 @@ _$_TaskOutput _$$_TaskOutputFromJson(Map<String, dynamic> json) =>
       type: CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
       valueBase64Binary: json['valueBase64Binary'] == null
           ? null
-          : Base64Binary.fromJson(json['valueBase64Binary']),
+          : FhirBase64Binary?.fromJson(json['valueBase64Binary']),
       valueBase64BinaryElement: json['_valueBase64Binary'] == null
           ? null
           : Element.fromJson(
@@ -2320,7 +2320,7 @@ _$_TransportInput _$$_TransportInputFromJson(Map<String, dynamic> json) =>
       type: CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
       valueBase64Binary: json['valueBase64Binary'] == null
           ? null
-          : Base64Binary.fromJson(json['valueBase64Binary']),
+          : FhirBase64Binary?.fromJson(json['valueBase64Binary']),
       valueBase64BinaryElement: json['_valueBase64Binary'] == null
           ? null
           : Element.fromJson(
@@ -2658,7 +2658,7 @@ _$_TransportOutput _$$_TransportOutputFromJson(Map<String, dynamic> json) =>
       type: CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
       valueBase64Binary: json['valueBase64Binary'] == null
           ? null
-          : Base64Binary.fromJson(json['valueBase64Binary']),
+          : FhirBase64Binary?.fromJson(json['valueBase64Binary']),
       valueBase64BinaryElement: json['_valueBase64Binary'] == null
           ? null
           : Element.fromJson(

@@ -1258,8 +1258,9 @@ _$_AuditEventObject _$$_AuditEventObjectFromJson(Map<String, dynamic> json) =>
           .toList(),
       name: json['name'] as String?,
       description: json['description'] as String?,
-      query:
-          json['query'] == null ? null : Base64Binary.fromJson(json['query']),
+      query: json['query'] == null
+          ? null
+          : FhirBase64Binary?.fromJson(json['query']),
       queryElement: json['_query'] == null
           ? null
           : Element.fromJson(json['_query'] as Map<String, dynamic>),
@@ -1354,7 +1355,7 @@ _$_AuditEventObjectDetail _$$_AuditEventObjectDetailFromJson(
       typeElement: json['_type'] == null
           ? null
           : Element.fromJson(json['_type'] as Map<String, dynamic>),
-      value: Base64Binary.fromJson(json['value']),
+      value: FhirBase64Binary?.fromJson(json['value']),
     );
 
 Map<String, dynamic> _$$_AuditEventObjectDetailToJson(

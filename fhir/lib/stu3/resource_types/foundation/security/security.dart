@@ -19,11 +19,11 @@ class AuditEvent with Resource, _$AuditEvent {
     @Default(Stu3ResourceType.AuditEvent)
     @JsonKey(unknownEnumValue: Stu3ResourceType.AuditEvent)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -84,7 +84,7 @@ class AuditEventAgent with _$AuditEventAgent {
     @JsonKey(name: '_altId') Element? altIdElement,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
-    Boolean? requestor,
+    FhirBoolean? requestor,
     @JsonKey(name: '_requestor') Element? requestorElement,
     Reference? location,
     List<String>? policy,
@@ -305,11 +305,11 @@ class Consent with Resource, _$Consent {
     @Default(Stu3ResourceType.Consent)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Consent)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -622,11 +622,11 @@ class Provenance with Resource, _$Provenance {
     @Default(Stu3ResourceType.Provenance)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Provenance)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,

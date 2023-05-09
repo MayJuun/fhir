@@ -137,7 +137,7 @@ class Account with Resource, _$Account {
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -186,7 +186,7 @@ class Account with Resource, _$Account {
     List<Identifier>? identifier,
 
     /// [status] Indicates whether the account is presently used/usable or not.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -456,7 +456,7 @@ class AccountGuarantor with _$AccountGuarantor {
 
     /// [onHold] A guarantor may be placed on credit hold or otherwise have their
     ///  role temporarily suspended.
-    Boolean? onHold,
+    FhirBoolean? onHold,
 
     /// [onHoldElement] Extensions for onHold
     @JsonKey(name: '_onHold') Element? onHoldElement,
@@ -678,7 +678,7 @@ class ChargeItem with Resource, _$ChargeItem {
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -739,7 +739,7 @@ class ChargeItem with Resource, _$ChargeItem {
     List<Canonical>? definitionCanonical,
 
     /// [status] The current state of the ChargeItem.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -799,7 +799,7 @@ class ChargeItem with Resource, _$ChargeItem {
 
     /// [factorOverride] Factor overriding the factor determined by the rules
     ///  associated with the code.
-    Decimal? factorOverride,
+    FhirDecimal? factorOverride,
 
     /// [factorOverrideElement] Extensions for factorOverride
     @JsonKey(name: '_factorOverride')
@@ -1200,7 +1200,7 @@ class ChargeItemDefinition with Resource, _$ChargeItemDefinition {
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -1304,7 +1304,7 @@ class ChargeItemDefinition with Resource, _$ChargeItemDefinition {
     List<Canonical>? replaces,
 
     /// [status] The current state of the ChargeItemDefinition.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -1314,7 +1314,7 @@ class ChargeItemDefinition with Resource, _$ChargeItemDefinition {
     /// definition is authored for testing purposes (or
     /// education/evaluation/marketing) and is not intended to be used for genuine
     ///  usage.
-    Boolean? experimental,
+    FhirBoolean? experimental,
 
     /// [experimentalElement] Extensions for experimental
     @JsonKey(name: '_experimental')
@@ -1344,7 +1344,7 @@ class ChargeItemDefinition with Resource, _$ChargeItemDefinition {
 
     /// [description] A free text natural language description of the charge item
     ///  definition from a consumer's perspective.
-    Markdown? description,
+    FhirMarkdown? description,
 
     /// [descriptionElement] Extensions for description
     @JsonKey(name: '_description')
@@ -1364,7 +1364,7 @@ class ChargeItemDefinition with Resource, _$ChargeItemDefinition {
     /// [copyright] A copyright statement relating to the charge item definition
     /// and/or its contents. Copyright statements are generally legal restrictions
     ///  on the use and publishing of the charge item definition.
-    Markdown? copyright,
+    FhirMarkdown? copyright,
 
     /// [copyrightElement] Extensions for copyright
     @JsonKey(name: '_copyright')
@@ -1373,7 +1373,7 @@ class ChargeItemDefinition with Resource, _$ChargeItemDefinition {
     /// [approvalDate] The date on which the resource content was approved by the
     /// publisher. Approval happens once when the content is officially approved
     ///  for usage.
-    Date? approvalDate,
+    FhirDate? approvalDate,
 
     /// [approvalDateElement] Extensions for approvalDate
     @JsonKey(name: '_approvalDate')
@@ -1382,7 +1382,7 @@ class ChargeItemDefinition with Resource, _$ChargeItemDefinition {
     /// [lastReviewDate] The date on which the resource content was last
     /// reviewed. Review happens periodically after approval but does not change
     ///  the original approval date.
-    Date? lastReviewDate,
+    FhirDate? lastReviewDate,
 
     /// [lastReviewDateElement] Extensions for lastReviewDate
     @JsonKey(name: '_lastReviewDate')
@@ -1745,7 +1745,7 @@ class ChargeItemDefinitionPriceComponent
     List<FhirExtension>? modifierExtension,
 
     /// [type] This code identifies the type of the component.
-    Code? type,
+    FhirCode? type,
 
     /// [typeElement] Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
@@ -1756,7 +1756,7 @@ class ChargeItemDefinitionPriceComponent
 
     /// [factor] The factor that has been applied on the base price for
     ///  calculating this component.
-    Decimal? factor,
+    FhirDecimal? factor,
 
     /// [factorElement] Extensions for factor
     @JsonKey(name: '_factor') Element? factorElement,
@@ -2025,7 +2025,7 @@ class Contract with Resource, _$Contract {
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -2090,7 +2090,7 @@ class Contract with Resource, _$Contract {
         Element? versionElement,
 
     /// [status] The status of the resource instance.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -2415,7 +2415,7 @@ class ContractContentDefinition with _$ContractContentDefinition {
     /// [publicationStatus] amended | appended | cancelled | disputed |
     /// entered-in-error | executable | executed | negotiable | offered | policy |
     ///  rejected | renewed | revoked | resolved | terminated.
-    Code? publicationStatus,
+    FhirCode? publicationStatus,
 
     /// [publicationStatusElement] Extensions for publicationStatus
     @JsonKey(name: '_publicationStatus') Element? publicationStatusElement,
@@ -2423,7 +2423,7 @@ class ContractContentDefinition with _$ContractContentDefinition {
     /// [copyright] A copyright statement relating to Contract precursor content.
     /// Copyright statements are generally legal restrictions on the use and
     ///  publishing of the Contract precursor content.
-    Markdown? copyright,
+    FhirMarkdown? copyright,
 
     /// [copyrightElement] Extensions for copyright
     @JsonKey(name: '_copyright') Element? copyrightElement,
@@ -3181,7 +3181,7 @@ class ContractAnswer with _$ContractAnswer {
     /// enables selection of values to be agreed to, e.g., the period of
     /// participation, the date of occupancy of a rental, warrently duration, or
     ///  whether biospecimen may be used for further research.
-    Boolean? valueBoolean,
+    FhirBoolean? valueBoolean,
 
     /// [valueBooleanElement] Extensions for valueBoolean
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
@@ -3190,7 +3190,7 @@ class ContractAnswer with _$ContractAnswer {
     /// enables selection of values to be agreed to, e.g., the period of
     /// participation, the date of occupancy of a rental, warrently duration, or
     ///  whether biospecimen may be used for further research.
-    Decimal? valueDecimal,
+    FhirDecimal? valueDecimal,
 
     /// [valueDecimalElement] Extensions for valueDecimal
     @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
@@ -3199,7 +3199,7 @@ class ContractAnswer with _$ContractAnswer {
     /// enables selection of values to be agreed to, e.g., the period of
     /// participation, the date of occupancy of a rental, warrently duration, or
     ///  whether biospecimen may be used for further research.
-    Integer? valueInteger,
+    FhirInteger? valueInteger,
 
     /// [valueIntegerElement] Extensions for valueInteger
     @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
@@ -3208,7 +3208,7 @@ class ContractAnswer with _$ContractAnswer {
     /// selection of values to be agreed to, e.g., the period of participation,
     /// the date of occupancy of a rental, warrently duration, or whether
     ///  biospecimen may be used for further research.
-    Date? valueDate,
+    FhirDate? valueDate,
 
     /// [valueDateElement] Extensions for valueDate
     @JsonKey(name: '_valueDate') Element? valueDateElement,
@@ -3780,7 +3780,7 @@ class ContractValuedItem with _$ContractValuedItem {
     /// the overall value of the Contract Valued Item delivered. The concept of a
     /// Factor allows for a discount or surcharge multiplier to be applied to a
     ///  monetary amount.
-    Decimal? factor,
+    FhirDecimal? factor,
 
     /// [factorElement] Extensions for factor
     @JsonKey(name: '_factor')
@@ -3791,7 +3791,7 @@ class ContractValuedItem with _$ContractValuedItem {
     /// Item delivered. The concept of Points allows for assignment of point
     /// values for a Contract Valued Item, such that a monetary amount can be
     ///  assigned to each point.
-    Decimal? points,
+    FhirDecimal? points,
 
     /// [pointsElement] Extensions for points
     @JsonKey(name: '_points')
@@ -4017,7 +4017,7 @@ class ContractAction with _$ContractAction {
     List<FhirExtension>? modifierExtension,
 
     /// [doNotPerform] True if the term prohibits the  action.
-    Boolean? doNotPerform,
+    FhirBoolean? doNotPerform,
 
     /// [doNotPerformElement] Extensions for doNotPerform
     @JsonKey(name: '_doNotPerform')
@@ -4932,7 +4932,7 @@ class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -4980,7 +4980,7 @@ class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
     List<Identifier>? identifier,
 
     /// [status] The status of the resource instance.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -5000,7 +5000,7 @@ class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
     /// authorization and adjudication for provision in the future; or requesting
     /// the non-binding adjudication of the listed products and services which
     ///  could be provided in the future.
-    Code? use,
+    FhirCode? use,
 
     /// [useElement] Extensions for use
     @JsonKey(name: '_use')
@@ -5079,7 +5079,7 @@ class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
 
     /// [outcome] The outcome of the claim, predetermination, or preauthorization
     ///  processing.
-    Code? outcome,
+    FhirCode? outcome,
 
     /// [outcomeElement] Extensions for outcome
     @JsonKey(name: '_outcome')
@@ -5509,7 +5509,7 @@ class ExplanationOfBenefitCareTeam with _$ExplanationOfBenefitCareTeam {
 
     /// [responsible] The party who is billing and/or responsible for the claimed
     ///  products or services.
-    Boolean? responsible,
+    FhirBoolean? responsible,
 
     /// [responsibleElement] Extensions for responsible
     @JsonKey(name: '_responsible') Element? responsibleElement,
@@ -5675,7 +5675,7 @@ class ExplanationOfBenefitSupportingInfo
     CodeableConcept? code,
 
     /// [timingDate] The date when or period to which this information refers.
-    Date? timingDate,
+    FhirDate? timingDate,
 
     /// [timingDateElement] Extensions for timingDate
     @JsonKey(name: '_timingDate') Element? timingDateElement,
@@ -5686,7 +5686,7 @@ class ExplanationOfBenefitSupportingInfo
     /// [valueBoolean] Additional data or information such as resources,
     /// documents, images etc. including references to the data or the actual
     ///  inclusion of the data.
-    Boolean? valueBoolean,
+    FhirBoolean? valueBoolean,
 
     /// [valueBooleanElement] Extensions for valueBoolean
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
@@ -6096,7 +6096,7 @@ class ExplanationOfBenefitInsurance with _$ExplanationOfBenefitInsurance {
 
     /// [focal] A flag to indicate that this Coverage is to be used for
     ///  adjudication of this claim when set to true.
-    Boolean? focal,
+    FhirBoolean? focal,
 
     /// [focalElement] Extensions for focal
     @JsonKey(name: '_focal') Element? focalElement,
@@ -6224,7 +6224,7 @@ class ExplanationOfBenefitAccident with _$ExplanationOfBenefitAccident {
 
     /// [date] Date of an accident event  related to the products and services
     ///  contained in the claim.
-    Date? date,
+    FhirDate? date,
 
     /// [dateElement] Extensions for date
     @JsonKey(name: '_date') Element? dateElement,
@@ -6480,7 +6480,7 @@ class ExplanationOfBenefitItem with _$ExplanationOfBenefitItem {
 
     /// [servicedDate] The date or dates when the service or product was
     ///  supplied, performed or completed.
-    Date? servicedDate,
+    FhirDate? servicedDate,
 
     /// [servicedDateElement] Extensions for servicedDate
     @JsonKey(name: '_servicedDate')
@@ -6511,7 +6511,7 @@ class ExplanationOfBenefitItem with _$ExplanationOfBenefitItem {
     /// the overall value of services delivered and/or goods received. The concept
     /// of a Factor allows for a discount or surcharge multiplier to be applied to
     ///  a monetary amount.
-    Decimal? factor,
+    FhirDecimal? factor,
 
     /// [factorElement] Extensions for factor
     @JsonKey(name: '_factor')
@@ -6677,7 +6677,7 @@ class ExplanationOfBenefitAdjudication with _$ExplanationOfBenefitAdjudication {
 
     /// [value] A non-monetary value associated with the category. Mutually
     ///  exclusive to the amount element above.
-    Decimal? value,
+    FhirDecimal? value,
 
     /// [valueElement] Extensions for value
     @JsonKey(name: '_value') Element? valueElement,
@@ -6851,7 +6851,7 @@ class ExplanationOfBenefitDetail with _$ExplanationOfBenefitDetail {
     /// the overall value of services delivered and/or goods received. The concept
     /// of a Factor allows for a discount or surcharge multiplier to be applied to
     ///  a monetary amount.
-    Decimal? factor,
+    FhirDecimal? factor,
 
     /// [factorElement] Extensions for factor
     @JsonKey(name: '_factor') Element? factorElement,
@@ -7054,7 +7054,7 @@ class ExplanationOfBenefitSubDetail with _$ExplanationOfBenefitSubDetail {
     /// the overall value of services delivered and/or goods received. The concept
     /// of a Factor allows for a discount or surcharge multiplier to be applied to
     ///  a monetary amount.
-    Decimal? factor,
+    FhirDecimal? factor,
 
     /// [factorElement] Extensions for factor
     @JsonKey(name: '_factor') Element? factorElement,
@@ -7284,7 +7284,7 @@ class ExplanationOfBenefitAddItem with _$ExplanationOfBenefitAddItem {
 
     /// [servicedDate] The date or dates when the service or product was
     ///  supplied, performed or completed.
-    Date? servicedDate,
+    FhirDate? servicedDate,
 
     /// [servicedDateElement] Extensions for servicedDate
     @JsonKey(name: '_servicedDate')
@@ -7315,7 +7315,7 @@ class ExplanationOfBenefitAddItem with _$ExplanationOfBenefitAddItem {
     /// the overall value of services delivered and/or goods received. The concept
     /// of a Factor allows for a discount or surcharge multiplier to be applied to
     ///  a monetary amount.
-    Decimal? factor,
+    FhirDecimal? factor,
 
     /// [factorElement] Extensions for factor
     @JsonKey(name: '_factor')
@@ -7494,7 +7494,7 @@ class ExplanationOfBenefitDetail1 with _$ExplanationOfBenefitDetail1 {
     /// the overall value of services delivered and/or goods received. The concept
     /// of a Factor allows for a discount or surcharge multiplier to be applied to
     ///  a monetary amount.
-    Decimal? factor,
+    FhirDecimal? factor,
 
     /// [factorElement] Extensions for factor
     @JsonKey(name: '_factor') Element? factorElement,
@@ -7662,7 +7662,7 @@ class ExplanationOfBenefitSubDetail1 with _$ExplanationOfBenefitSubDetail1 {
     /// the overall value of services delivered and/or goods received. The concept
     /// of a Factor allows for a discount or surcharge multiplier to be applied to
     ///  a monetary amount.
-    Decimal? factor,
+    FhirDecimal? factor,
 
     /// [factorElement] Extensions for factor
     @JsonKey(name: '_factor') Element? factorElement,
@@ -7918,7 +7918,7 @@ class ExplanationOfBenefitPayment with _$ExplanationOfBenefitPayment {
 
     /// [date] Estimated date the payment will be issued or the actual issue date
     ///  of payment.
-    Date? date,
+    FhirDate? date,
 
     /// [dateElement] Extensions for date
     @JsonKey(name: '_date') Element? dateElement,
@@ -8044,7 +8044,7 @@ class ExplanationOfBenefitProcessNote with _$ExplanationOfBenefitProcessNote {
     @JsonKey(name: '_number') Element? numberElement,
 
     /// [type] The business purpose of the note text.
-    Code? type,
+    FhirCode? type,
 
     /// [typeElement] Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
@@ -8186,7 +8186,7 @@ class ExplanationOfBenefitBenefitBalance
     /// [excluded] True if the indicated class of service is excluded from the
     /// plan, missing or False indicates the product or service is included in the
     ///  coverage.
-    Boolean? excluded,
+    FhirBoolean? excluded,
 
     /// [excludedElement] Extensions for excluded
     @JsonKey(name: '_excluded') Element? excludedElement,
@@ -8521,7 +8521,7 @@ class InsurancePlan with Resource, _$InsurancePlan {
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -8571,7 +8571,7 @@ class InsurancePlan with Resource, _$InsurancePlan {
     List<Identifier>? identifier,
 
     /// [status] The current state of the health insurance product.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')

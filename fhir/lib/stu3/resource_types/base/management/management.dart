@@ -21,11 +21,11 @@ class Encounter with Resource, _$Encounter {
     @Default(Stu3ResourceType.Encounter)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Encounter)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+     FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -208,7 +208,7 @@ class EncounterDiagnosis with _$EncounterDiagnosis {
   factory EncounterDiagnosis({
     required Reference condition,
     CodeableConcept? role,
-    Decimal? rank,
+    FhirDecimal? rank,
     @JsonKey(name: '_rank') Element? rankElement,
   }) = _EncounterDiagnosis;
 
@@ -337,11 +337,11 @@ class EpisodeOfCare with Resource, _$EpisodeOfCare {
     @Default(Stu3ResourceType.EpisodeOfCare)
     @JsonKey(unknownEnumValue: Stu3ResourceType.EpisodeOfCare)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+     FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -436,7 +436,7 @@ class EpisodeOfCareDiagnosis with _$EpisodeOfCareDiagnosis {
   factory EpisodeOfCareDiagnosis({
     required Reference condition,
     CodeableConcept? role,
-    Decimal? rank,
+    FhirDecimal? rank,
     @JsonKey(name: '_rank') Element? rankElement,
   }) = _EpisodeOfCareDiagnosis;
 
@@ -478,11 +478,11 @@ class Flag with Resource, _$Flag {
     @Default(Stu3ResourceType.Flag)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Flag)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+     FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -532,11 +532,11 @@ class Library with Resource, _$Library {
     @Default(Stu3ResourceType.Library)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Library)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+     FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -553,10 +553,10 @@ class Library with Resource, _$Library {
     @JsonKey(name: '_title') Element? titleElement,
     LibraryStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
-    Boolean? experimental,
+     FhirBoolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
     required CodeableConcept type,
-    Date? date,
+    FhirDate? date,
     @JsonKey(name: '_date') Element? dateElement,
     String? publisher,
     @JsonKey(name: '_publisher') Element? publisherElement,
@@ -566,9 +566,9 @@ class Library with Resource, _$Library {
     @JsonKey(name: '_purpose') Element? purposeElement,
     String? usage,
     @JsonKey(name: '_usage') Element? usageElement,
-    Date? approvalDate,
+    FhirDate? approvalDate,
     @JsonKey(name: '_approvalDate') Element? approvalDateElement,
-    Date? lastReviewDate,
+    FhirDate? lastReviewDate,
     @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
     Period? effectivePeriod,
     List<UsageContext>? useContext,
@@ -613,17 +613,17 @@ class Library with Resource, _$Library {
 }
 
 @freezed
-class List_ with Resource, _$List_ {
+class FhirList with Resoure, _$FhirList {
   List_._();
   factory List_({
     @Default(Stu3ResourceType.List_)
     @JsonKey(unknownEnumValue: Stu3ResourceType.List_)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+     FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -639,7 +639,7 @@ class List_ with Resource, _$List_ {
     CodeableConcept? code,
     Reference? subject,
     Reference? encounter,
-    Date? date,
+    FhirDate? date,
     @JsonKey(name: '_date') Element? dateElement,
     Reference? source,
     CodeableConcept? orderedBy,
@@ -679,9 +679,9 @@ class ListEntry with _$ListEntry {
   ListEntry._();
   factory ListEntry({
     CodeableConcept? flag,
-    Boolean? deleted,
+     FhirBoolean? deleted,
     @JsonKey(name: '_deleted') Element? deletedElement,
-    Date? date,
+    FhirDate? date,
     @JsonKey(name: '_date') Element? dateElement,
     required Reference item,
   }) = _ListEntry;

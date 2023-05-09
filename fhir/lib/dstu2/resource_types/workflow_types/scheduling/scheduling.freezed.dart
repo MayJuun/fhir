@@ -22,12 +22,12 @@ Appointment _$AppointmentFromJson(Map<String, dynamic> json) {
 mixin _$Appointment {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Appointment)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -49,10 +49,10 @@ mixin _$Appointment {
   String? get description => throw _privateConstructorUsedError;
   @JsonKey(name: '_description')
   Element? get descriptionElement => throw _privateConstructorUsedError;
-  Instant? get start => throw _privateConstructorUsedError;
+  FhirInstant? get start => throw _privateConstructorUsedError;
   @JsonKey(name: '_start')
   Element? get startElement => throw _privateConstructorUsedError;
-  Instant? get end => throw _privateConstructorUsedError;
+  FhirInstant? get end => throw _privateConstructorUsedError;
   @JsonKey(name: '_end')
   Element? get endElement => throw _privateConstructorUsedError;
   PositiveInt? get minutesDuration => throw _privateConstructorUsedError;
@@ -80,12 +80,12 @@ abstract class $AppointmentCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Appointment)
           Dstu2ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -106,10 +106,10 @@ abstract class $AppointmentCopyWith<$Res> {
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      Instant? start,
+      FhirInstant? start,
       @JsonKey(name: '_start')
           Element? startElement,
-      Instant? end,
+      FhirInstant? end,
       @JsonKey(name: '_end')
           Element? endElement,
       PositiveInt? minutesDuration,
@@ -204,7 +204,7 @@ class _$AppointmentCopyWithImpl<$Res, $Val extends Appointment>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -472,12 +472,12 @@ abstract class _$$_AppointmentCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Appointment)
           Dstu2ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -498,10 +498,10 @@ abstract class _$$_AppointmentCopyWith<$Res>
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      Instant? start,
+      FhirInstant? start,
       @JsonKey(name: '_start')
           Element? startElement,
-      Instant? end,
+      FhirInstant? end,
       @JsonKey(name: '_end')
           Element? endElement,
       PositiveInt? minutesDuration,
@@ -607,7 +607,7 @@ class __$$_AppointmentCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -778,7 +778,7 @@ class _$_Appointment extends _Appointment {
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
-  final Code? language;
+  final FhirCode? language;
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
@@ -1005,7 +1005,7 @@ abstract class _Appointment extends Appointment {
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
               final Element? implicitRulesElement,
-          final Code? language,
+          final FhirCode? language,
           @JsonKey(name: '_language')
               final Element? languageElement,
           final Narrative? text,
@@ -1050,7 +1050,7 @@ abstract class _Appointment extends Appointment {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Appointment)
   Dstu2ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -1059,7 +1059,7 @@ abstract class _Appointment extends Appointment {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
-  Code? get language;
+  FhirCode? get language;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;
@@ -1095,12 +1095,12 @@ abstract class _Appointment extends Appointment {
   @JsonKey(name: '_description')
   Element? get descriptionElement;
   @override
-  Instant? get start;
+  FhirInstant? get start;
   @override
   @JsonKey(name: '_start')
   Element? get startElement;
   @override
-  Instant? get end;
+  FhirInstant? get end;
   @override
   @JsonKey(name: '_end')
   Element? get endElement;
@@ -1131,7 +1131,7 @@ AppointmentParticipant _$AppointmentParticipantFromJson(
 
 /// @nodoc
 mixin _$AppointmentParticipant {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -1528,7 +1528,7 @@ abstract class _AppointmentParticipant extends AppointmentParticipant {
       _$_AppointmentParticipant.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -1564,12 +1564,12 @@ AppointmentResponse _$AppointmentResponseFromJson(Map<String, dynamic> json) {
 mixin _$AppointmentResponse {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.AppointmentResponse)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -1580,10 +1580,10 @@ mixin _$AppointmentResponse {
       throw _privateConstructorUsedError;
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
   Reference get appointment => throw _privateConstructorUsedError;
-  Instant? get start => throw _privateConstructorUsedError;
+  FhirInstant? get start => throw _privateConstructorUsedError;
   @JsonKey(name: '_start')
   Element? get startElement => throw _privateConstructorUsedError;
-  Instant? get end => throw _privateConstructorUsedError;
+  FhirInstant? get end => throw _privateConstructorUsedError;
   @JsonKey(name: '_end')
   Element? get endElement => throw _privateConstructorUsedError;
   List<CodeableConcept>? get participantType =>
@@ -1615,12 +1615,12 @@ abstract class $AppointmentResponseCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.AppointmentResponse)
           Dstu2ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -1630,10 +1630,10 @@ abstract class $AppointmentResponseCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       Reference appointment,
-      Instant? start,
+      FhirInstant? start,
       @JsonKey(name: '_start')
           Element? startElement,
-      Instant? end,
+      FhirInstant? end,
       @JsonKey(name: '_end')
           Element? endElement,
       List<CodeableConcept>? participantType,
@@ -1719,7 +1719,7 @@ class _$AppointmentResponseCopyWithImpl<$Res, $Val extends AppointmentResponse>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -1919,12 +1919,12 @@ abstract class _$$_AppointmentResponseCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.AppointmentResponse)
           Dstu2ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -1934,10 +1934,10 @@ abstract class _$$_AppointmentResponseCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       Reference appointment,
-      Instant? start,
+      FhirInstant? start,
       @JsonKey(name: '_start')
           Element? startElement,
-      Instant? end,
+      FhirInstant? end,
       @JsonKey(name: '_end')
           Element? endElement,
       List<CodeableConcept>? participantType,
@@ -2031,7 +2031,7 @@ class __$$_AppointmentResponseCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -2163,7 +2163,7 @@ class _$_AppointmentResponse extends _AppointmentResponse {
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
-  final Code? language;
+  final FhirCode? language;
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
@@ -2354,7 +2354,7 @@ abstract class _AppointmentResponse extends AppointmentResponse {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -2388,7 +2388,7 @@ abstract class _AppointmentResponse extends AppointmentResponse {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.AppointmentResponse)
   Dstu2ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -2397,7 +2397,7 @@ abstract class _AppointmentResponse extends AppointmentResponse {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
-  Code? get language;
+  FhirCode? get language;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;
@@ -2415,12 +2415,12 @@ abstract class _AppointmentResponse extends AppointmentResponse {
   @override
   Reference get appointment;
   @override
-  Instant? get start;
+  FhirInstant? get start;
   @override
   @JsonKey(name: '_start')
   Element? get startElement;
   @override
-  Instant? get end;
+  FhirInstant? get end;
   @override
   @JsonKey(name: '_end')
   Element? get endElement;
@@ -2455,12 +2455,12 @@ Schedule _$ScheduleFromJson(Map<String, dynamic> json) {
 mixin _$Schedule {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Schedule)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -2491,12 +2491,12 @@ abstract class $ScheduleCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Schedule)
           Dstu2ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -2576,7 +2576,7 @@ class _$ScheduleCopyWithImpl<$Res, $Val extends Schedule>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -2715,12 +2715,12 @@ abstract class _$$_ScheduleCopyWith<$Res> implements $ScheduleCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Schedule)
           Dstu2ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -2805,7 +2805,7 @@ class __$$_ScheduleCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -2903,7 +2903,7 @@ class _$_Schedule extends _Schedule {
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
-  final Code? language;
+  final FhirCode? language;
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
@@ -3056,7 +3056,7 @@ abstract class _Schedule extends Schedule {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -3079,7 +3079,7 @@ abstract class _Schedule extends Schedule {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Schedule)
   Dstu2ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -3088,7 +3088,7 @@ abstract class _Schedule extends Schedule {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
-  Code? get language;
+  FhirCode? get language;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;
@@ -3128,12 +3128,12 @@ Slot _$SlotFromJson(Map<String, dynamic> json) {
 mixin _$Slot {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Slot)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -3153,7 +3153,7 @@ mixin _$Slot {
   Instant get end => throw _privateConstructorUsedError;
   @JsonKey(name: '_end')
   Element? get endElement => throw _privateConstructorUsedError;
-  Boolean? get overbooked => throw _privateConstructorUsedError;
+  FhirBoolean? get overbooked => throw _privateConstructorUsedError;
   @JsonKey(name: '_overbooked')
   Element? get overbookedElement => throw _privateConstructorUsedError;
   String? get comment => throw _privateConstructorUsedError;
@@ -3173,12 +3173,12 @@ abstract class $SlotCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Slot)
           Dstu2ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -3197,7 +3197,7 @@ abstract class $SlotCopyWith<$Res> {
       Instant end,
       @JsonKey(name: '_end')
           Element? endElement,
-      Boolean? overbooked,
+      FhirBoolean? overbooked,
       @JsonKey(name: '_overbooked')
           Element? overbookedElement,
       String? comment,
@@ -3277,7 +3277,7 @@ class _$SlotCopyWithImpl<$Res, $Val extends Slot>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -3333,7 +3333,7 @@ class _$SlotCopyWithImpl<$Res, $Val extends Slot>
       overbooked: freezed == overbooked
           ? _value.overbooked
           : overbooked // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       overbookedElement: freezed == overbookedElement
           ? _value.overbookedElement
           : overbookedElement // ignore: cast_nullable_to_non_nullable
@@ -3475,12 +3475,12 @@ abstract class _$$_SlotCopyWith<$Res> implements $SlotCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Slot)
           Dstu2ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -3499,7 +3499,7 @@ abstract class _$$_SlotCopyWith<$Res> implements $SlotCopyWith<$Res> {
       Instant end,
       @JsonKey(name: '_end')
           Element? endElement,
-      Boolean? overbooked,
+      FhirBoolean? overbooked,
       @JsonKey(name: '_overbooked')
           Element? overbookedElement,
       String? comment,
@@ -3585,7 +3585,7 @@ class __$$_SlotCopyWithImpl<$Res> extends _$SlotCopyWithImpl<$Res, _$_Slot>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -3641,7 +3641,7 @@ class __$$_SlotCopyWithImpl<$Res> extends _$SlotCopyWithImpl<$Res, _$_Slot>
       overbooked: freezed == overbooked
           ? _value.overbooked
           : overbooked // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       overbookedElement: freezed == overbookedElement
           ? _value.overbookedElement
           : overbookedElement // ignore: cast_nullable_to_non_nullable
@@ -3715,7 +3715,7 @@ class _$_Slot extends _Slot {
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
-  final Code? language;
+  final FhirCode? language;
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
@@ -3781,7 +3781,7 @@ class _$_Slot extends _Slot {
   @JsonKey(name: '_end')
   final Element? endElement;
   @override
-  final Boolean? overbooked;
+  final FhirBoolean? overbooked;
   @override
   @JsonKey(name: '_overbooked')
   final Element? overbookedElement;
@@ -3894,7 +3894,7 @@ abstract class _Slot extends Slot {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -3913,7 +3913,7 @@ abstract class _Slot extends Slot {
       required final Instant end,
       @JsonKey(name: '_end')
           final Element? endElement,
-      final Boolean? overbooked,
+      final FhirBoolean? overbooked,
       @JsonKey(name: '_overbooked')
           final Element? overbookedElement,
       final String? comment,
@@ -3927,7 +3927,7 @@ abstract class _Slot extends Slot {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Slot)
   Dstu2ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -3936,7 +3936,7 @@ abstract class _Slot extends Slot {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
-  Code? get language;
+  FhirCode? get language;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;
@@ -3969,7 +3969,7 @@ abstract class _Slot extends Slot {
   @JsonKey(name: '_end')
   Element? get endElement;
   @override
-  Boolean? get overbooked;
+  FhirBoolean? get overbooked;
   @override
   @JsonKey(name: '_overbooked')
   Element? get overbookedElement;

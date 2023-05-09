@@ -19,12 +19,12 @@ class Observation with Resource, _$Observation {
     @Default(Dstu2ResourceType.Observation)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Observation)
         Dstu2ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     @JsonKey(name: '_id') Element? idElement,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -41,7 +41,7 @@ class Observation with Resource, _$Observation {
     FhirDateTime? effectiveDateTime,
     @JsonKey(name: '_effectiveDateTime') Element? effectiveDateTimeElement,
     Period? effectivePeriod,
-    Instant? issued,
+    FhirInstant? issued,
     @JsonKey(name: '_issued') Element? issuedElement,
     List<Reference>? performer,
     Quantity? valueQuantity,
@@ -101,7 +101,7 @@ class Observation with Resource, _$Observation {
 class ObservationReferenceRange with _$ObservationReferenceRange {
   ObservationReferenceRange._();
   factory ObservationReferenceRange({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -148,7 +148,7 @@ class ObservationReferenceRange with _$ObservationReferenceRange {
 class ObservationRelated with _$ObservationRelated {
   ObservationRelated._();
   factory ObservationRelated({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -191,7 +191,7 @@ class ObservationRelated with _$ObservationRelated {
 class ObservationComponent with _$ObservationComponent {
   ObservationComponent._();
   factory ObservationComponent({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -251,11 +251,11 @@ class DiagnosticReport with Resource, _$DiagnosticReport {
     @Default(Dstu2ResourceType.DiagnosticReport)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.DiagnosticReport)
         Dstu2ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -318,7 +318,7 @@ class DiagnosticReport with Resource, _$DiagnosticReport {
 class DiagnosticReportImage with _$DiagnosticReportImage {
   DiagnosticReportImage._();
   factory DiagnosticReportImage({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? comment,
@@ -364,10 +364,10 @@ class DiagnosticOrder with Resource, _$DiagnosticOrder {
     @Default(Dstu2ResourceType.DiagnosticOrder)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.DiagnosticOrder)
         Dstu2ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
-    Code? language,
+    FhirCode? language,
     Narrative? text,
     List<Resource>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -420,7 +420,7 @@ class DiagnosticOrder with Resource, _$DiagnosticOrder {
 class DiagnosticOrderEvent with _$DiagnosticOrderEvent {
   DiagnosticOrderEvent._();
   factory DiagnosticOrderEvent({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: EventStatus.unknown) required EventStatus status,
@@ -464,7 +464,7 @@ class DiagnosticOrderEvent with _$DiagnosticOrderEvent {
 class DiagnosticOrderItem with _$DiagnosticOrderItem {
   DiagnosticOrderItem._();
   factory DiagnosticOrderItem({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept code,
@@ -512,11 +512,11 @@ class Specimen with Resource, _$Specimen {
     @Default(Dstu2ResourceType.Specimen)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Specimen)
         Dstu2ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -568,7 +568,7 @@ class Specimen with Resource, _$Specimen {
 class SpecimenCollection with _$SpecimenCollection {
   SpecimenCollection._();
   factory SpecimenCollection({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
     List<FhirExtension>? modifierExtension,
@@ -617,7 +617,7 @@ class SpecimenCollection with _$SpecimenCollection {
 class SpecimenTreatment with _$SpecimenTreatment {
   SpecimenTreatment._();
   factory SpecimenTreatment({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? description,
@@ -660,7 +660,7 @@ class SpecimenTreatment with _$SpecimenTreatment {
 class SpecimenContainer with _$SpecimenContainer {
   SpecimenContainer._();
   factory SpecimenContainer({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
@@ -711,10 +711,10 @@ class BodySite with Resource, _$BodySite {
     @Default(Dstu2ResourceType.BodySite)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.BodySite)
         Dstu2ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
-    Code? language,
+    FhirCode? language,
     Narrative? text,
     List<Resource>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -762,11 +762,11 @@ class ImagingStudy with Resource, _$ImagingStudy {
     @Default(Dstu2ResourceType.ImagingStudy)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.ImagingStudy)
         Dstu2ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -827,7 +827,7 @@ class ImagingStudy with Resource, _$ImagingStudy {
 class ImagingStudySeries with _$ImagingStudySeries {
   ImagingStudySeries._();
   factory ImagingStudySeries({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     UnsignedInt? number,
@@ -884,7 +884,7 @@ class ImagingStudySeries with _$ImagingStudySeries {
 class ImagingStudySeriesInstance with _$ImagingStudySeriesInstance {
   ImagingStudySeriesInstance._();
   factory ImagingStudySeriesInstance({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     UnsignedInt? number,
@@ -936,10 +936,10 @@ class ImagingObjectSelection with Resource, _$ImagingObjectSelection {
     @Default(Dstu2ResourceType.ImagingObjectSelection)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.ImagingObjectSelection)
         Dstu2ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
-    Code? language,
+    FhirCode? language,
     Narrative? text,
     List<Resource>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -985,7 +985,7 @@ class ImagingObjectSelection with Resource, _$ImagingObjectSelection {
 class ImagingObjectSelectionStudy with _$ImagingObjectSelectionStudy {
   ImagingObjectSelectionStudy._();
   factory ImagingObjectSelectionStudy({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Oid uid,
@@ -1031,7 +1031,7 @@ class ImagingObjectSelectionStudySeries
     with _$ImagingObjectSelectionStudySeries {
   ImagingObjectSelectionStudySeries._();
   factory ImagingObjectSelectionStudySeries({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Oid? uid,
@@ -1065,7 +1065,7 @@ class ImagingObjectSelectionSeriesInstance
     with _$ImagingObjectSelectionSeriesInstance {
   ImagingObjectSelectionSeriesInstance._();
   factory ImagingObjectSelectionSeriesInstance({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Oid sopClass,
@@ -1099,7 +1099,7 @@ class ImagingObjectSelectionInstanceFrames
     with _$ImagingObjectSelectionInstanceFrames {
   ImagingObjectSelectionInstanceFrames._();
   factory ImagingObjectSelectionInstanceFrames({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     FhirExtension? modifierExte,
     required List<UnsignedInt> frameNumbers,

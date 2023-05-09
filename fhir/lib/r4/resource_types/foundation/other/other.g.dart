@@ -262,7 +262,9 @@ _$_Binary _$$_BinaryFromJson(Map<String, dynamic> json) => _$_Binary(
       securityContext: json['securityContext'] == null
           ? null
           : Reference.fromJson(json['securityContext'] as Map<String, dynamic>),
-      data: json['data'] == null ? null : Base64Binary.fromJson(json['data']),
+      data: json['data'] == null
+          ? null
+          : FhirBase64Binary?.fromJson(json['data']),
       dataElement: json['_data'] == null
           ? null
           : Element.fromJson(json['_data'] as Map<String, dynamic>),
@@ -1271,7 +1273,7 @@ _$_ParametersParameter _$$_ParametersParameterFromJson(
           : Element.fromJson(json['_name'] as Map<String, dynamic>),
       valueBase64Binary: json['valueBase64Binary'] == null
           ? null
-          : Base64Binary.fromJson(json['valueBase64Binary']),
+          : FhirBase64Binary?.fromJson(json['valueBase64Binary']),
       valueBase64BinaryElement: json['_valueBase64Binary'] == null
           ? null
           : Element.fromJson(

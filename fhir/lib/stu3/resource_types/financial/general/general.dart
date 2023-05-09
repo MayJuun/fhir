@@ -19,11 +19,11 @@ class Account with Resource, _$Account {
     @Default(Stu3ResourceType.Account)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Account)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -79,7 +79,7 @@ class AccountCoverage with _$AccountCoverage {
   AccountCoverage._();
   factory AccountCoverage({
     required Reference coverage,
-    Decimal? priority,
+    FhirDecimal? priority,
     @JsonKey(name: '_priority') Element? priorityElement,
   }) = _AccountCoverage;
 
@@ -119,7 +119,7 @@ class AccountGuarantor with _$AccountGuarantor {
   AccountGuarantor._();
   factory AccountGuarantor({
     required Reference party,
-    Boolean? onHold,
+    FhirBoolean? onHold,
     @JsonKey(name: '_onHold') Element? onHoldElement,
     Period? period,
   }) = _AccountGuarantor;
@@ -162,11 +162,11 @@ class ChargeItem with Resource, _$ChargeItem {
     @Default(Stu3ResourceType.ChargeItem)
     @JsonKey(unknownEnumValue: Stu3ResourceType.ChargeItem)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -190,13 +190,13 @@ class ChargeItem with Resource, _$ChargeItem {
     Reference? requestingOrganization,
     Quantity? quantity,
     List<CodeableConcept>? bodysite,
-    Id? factorOverride,
+    FhirId? factorOverride,
     @JsonKey(name: '_factorOverride') Element? factorOverrideElement,
     Money? priceOverride,
     String? overrideReason,
     @JsonKey(name: '_overrideReason') Element? overrideReasonElement,
     Reference? enterer,
-    Date? enteredDate,
+    FhirDate? enteredDate,
     @JsonKey(name: '_enteredDate') Element? enteredDateElement,
     List<CodeableConcept>? reason,
     List<Reference>? service,
@@ -279,11 +279,11 @@ class Contract with Resource, _$Contract {
     @Default(Stu3ResourceType.Contract)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Contract)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -435,9 +435,9 @@ class ContractValuedItem with _$ContractValuedItem {
     @JsonKey(name: '_effectiveTime') Element? effectiveTimeElement,
     Quantity? quantity,
     Money? unitPrice,
-    Decimal? factor,
+    FhirDecimal? factor,
     @JsonKey(name: '_factor') Element? factorElement,
-    Decimal? points,
+    FhirDecimal? points,
     @JsonKey(name: '_points') Element? pointsElement,
     Money? net,
   }) = _ContractValuedItem;
@@ -575,9 +575,9 @@ class ContractValuedItem1 with _$ContractValuedItem1 {
     @JsonKey(name: '_effectiveTime') Element? effectiveTimeElement,
     Quantity? quantity,
     Money? unitPrice,
-    Decimal? factor,
+    FhirDecimal? factor,
     @JsonKey(name: '_factor') Element? factorElement,
-    Decimal? points,
+    FhirDecimal? points,
     @JsonKey(name: '_points') Element? pointsElement,
     Money? net,
   }) = _ContractValuedItem1;
@@ -737,11 +737,11 @@ class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
     @Default(Stu3ResourceType.ExplanationOfBenefit)
     @JsonKey(unknownEnumValue: Stu3ResourceType.ExplanationOfBenefit)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -775,7 +775,7 @@ class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
     List<ExplanationOfBenefitCareTeam>? careTeam,
     List<ExplanationOfBenefitDiagnosis>? diagnosis,
     List<ExplanationOfBenefitProcedure>? procedure,
-    Decimal? precedence,
+    FhirDecimal? precedence,
     @JsonKey(name: '_precedence') Element? precedenceElement,
     ExplanationOfBenefitInsurance? insurance,
     ExplanationOfBenefitAccident? accident,
@@ -903,11 +903,11 @@ class ExplanationOfBenefitPayee with _$ExplanationOfBenefitPayee {
 class ExplanationOfBenefitInformation with _$ExplanationOfBenefitInformation {
   ExplanationOfBenefitInformation._();
   factory ExplanationOfBenefitInformation({
-    Decimal? sequence,
+    FhirDecimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
     required CodeableConcept category,
     CodeableConcept? code,
-    Date? timingDate,
+    FhirDate? timingDate,
     @JsonKey(name: '_timingDate') Element? timingDateElement,
     Period? timingPeriod,
     String? valueString,
@@ -954,10 +954,10 @@ class ExplanationOfBenefitInformation with _$ExplanationOfBenefitInformation {
 class ExplanationOfBenefitCareTeam with _$ExplanationOfBenefitCareTeam {
   ExplanationOfBenefitCareTeam._();
   factory ExplanationOfBenefitCareTeam({
-    Decimal? sequence,
+    FhirDecimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
     required Reference provider,
-    Boolean? responsible,
+    FhirBoolean? responsible,
     @JsonKey(name: '_responsible') Element? responsibleElement,
     CodeableConcept? role,
     CodeableConcept? qualification,
@@ -998,7 +998,7 @@ class ExplanationOfBenefitCareTeam with _$ExplanationOfBenefitCareTeam {
 class ExplanationOfBenefitDiagnosis with _$ExplanationOfBenefitDiagnosis {
   ExplanationOfBenefitDiagnosis._();
   factory ExplanationOfBenefitDiagnosis({
-    Decimal? sequence,
+    FhirDecimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
     CodeableConcept? diagnosisCodeableConcept,
     Reference? diagnosisReference,
@@ -1041,9 +1041,9 @@ class ExplanationOfBenefitDiagnosis with _$ExplanationOfBenefitDiagnosis {
 class ExplanationOfBenefitProcedure with _$ExplanationOfBenefitProcedure {
   ExplanationOfBenefitProcedure._();
   factory ExplanationOfBenefitProcedure({
-    Decimal? sequence,
+    FhirDecimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
-    Date? date,
+    FhirDate? date,
     @JsonKey(name: '_date') Element? dateElement,
     CodeableConcept? procedureCodeableConcept,
     Reference? procedureReference,
@@ -1124,7 +1124,7 @@ class ExplanationOfBenefitInsurance with _$ExplanationOfBenefitInsurance {
 class ExplanationOfBenefitAccident with _$ExplanationOfBenefitAccident {
   ExplanationOfBenefitAccident._();
   factory ExplanationOfBenefitAccident({
-    Date? date,
+    FhirDate? date,
     @JsonKey(name: '_date') Element? dateElement,
     CodeableConcept? type,
     Address? locationAddress,
@@ -1166,7 +1166,7 @@ class ExplanationOfBenefitAccident with _$ExplanationOfBenefitAccident {
 class ExplanationOfBenefitItem with _$ExplanationOfBenefitItem {
   ExplanationOfBenefitItem._();
   factory ExplanationOfBenefitItem({
-    Decimal? sequence,
+    FhirDecimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
     List<PositiveInt>? careTeamLinkId,
     @JsonKey(name: '_careTeamLinkId') List<Element?>? careTeamLinkIdElement,
@@ -1182,7 +1182,7 @@ class ExplanationOfBenefitItem with _$ExplanationOfBenefitItem {
     CodeableConcept? service,
     List<CodeableConcept>? modifier,
     List<CodeableConcept>? programCode,
-    Date? servicedDate,
+    FhirDate? servicedDate,
     @JsonKey(name: '_servicedDate') Element? servicedDateElement,
     Period? servicedPeriod,
     CodeableConcept? locationCodeableConcept,
@@ -1190,7 +1190,7 @@ class ExplanationOfBenefitItem with _$ExplanationOfBenefitItem {
     Reference? locationReference,
     Quantity? quantity,
     Money? unitPrice,
-    Decimal? factor,
+    FhirDecimal? factor,
     @JsonKey(name: '_factor') Element? factorElement,
     Money? net,
     List<Reference>? udi,
@@ -1241,7 +1241,7 @@ class ExplanationOfBenefitAdjudication with _$ExplanationOfBenefitAdjudication {
     required CodeableConcept category,
     CodeableConcept? reason,
     Money? amount,
-    Decimal? value,
+    FhirDecimal? value,
     @JsonKey(name: '_value') Element? valueElement,
   }) = _ExplanationOfBenefitAdjudication;
 
@@ -1269,7 +1269,7 @@ class ExplanationOfBenefitAdjudication with _$ExplanationOfBenefitAdjudication {
 class ExplanationOfBenefitDetail with _$ExplanationOfBenefitDetail {
   ExplanationOfBenefitDetail._();
   factory ExplanationOfBenefitDetail({
-    Decimal? sequence,
+    FhirDecimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
     required CodeableConcept type,
     CodeableConcept? revenue,
@@ -1279,7 +1279,7 @@ class ExplanationOfBenefitDetail with _$ExplanationOfBenefitDetail {
     List<CodeableConcept>? programCode,
     Quantity? quantity,
     Money? unitPrice,
-    Decimal? factor,
+    FhirDecimal? factor,
     @JsonKey(name: '_factor') Element? factorElement,
     Money? net,
     List<Reference>? udi,
@@ -1324,7 +1324,7 @@ class ExplanationOfBenefitDetail with _$ExplanationOfBenefitDetail {
 class ExplanationOfBenefitSubDetail with _$ExplanationOfBenefitSubDetail {
   ExplanationOfBenefitSubDetail._();
   factory ExplanationOfBenefitSubDetail({
-    Decimal? sequence,
+    FhirDecimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
     required CodeableConcept type,
     CodeableConcept? revenue,
@@ -1334,7 +1334,7 @@ class ExplanationOfBenefitSubDetail with _$ExplanationOfBenefitSubDetail {
     List<CodeableConcept>? programCode,
     Quantity? quantity,
     Money? unitPrice,
-    Decimal? factor,
+    FhirDecimal? factor,
     @JsonKey(name: '_factor') Element? factorElement,
     Money? net,
     List<Reference>? udi,
@@ -1474,7 +1474,7 @@ class ExplanationOfBenefitPayment with _$ExplanationOfBenefitPayment {
     CodeableConcept? type,
     Money? adjustment,
     CodeableConcept? adjustmentReason,
-    Date? date,
+    FhirDate? date,
     @JsonKey(name: '_date') Element? dateElement,
     Money? amount,
     Identifier? identifier,
@@ -1515,7 +1515,7 @@ class ExplanationOfBenefitPayment with _$ExplanationOfBenefitPayment {
 class ExplanationOfBenefitProcessNote with _$ExplanationOfBenefitProcessNote {
   ExplanationOfBenefitProcessNote._();
   factory ExplanationOfBenefitProcessNote({
-    Decimal? number,
+    FhirDecimal? number,
     @JsonKey(name: '_number') Element? numberElement,
     CodeableConcept? type,
     String? text,
@@ -1562,7 +1562,7 @@ class ExplanationOfBenefitBenefitBalance
   factory ExplanationOfBenefitBenefitBalance({
     required CodeableConcept category,
     CodeableConcept? subCategory,
-    Boolean? excluded,
+    FhirBoolean? excluded,
     @JsonKey(name: '_excluded') Element? excludedElement,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
@@ -1599,12 +1599,12 @@ class ExplanationOfBenefitFinancial with _$ExplanationOfBenefitFinancial {
   ExplanationOfBenefitFinancial._();
   factory ExplanationOfBenefitFinancial({
     required CodeableConcept type,
-    Decimal? allowedUnsignedInt,
+    FhirDecimal? allowedUnsignedInt,
     @JsonKey(name: '_allowedUnsignedInt') Element? allowedUnsignedIntElement,
     String? allowedString,
     @JsonKey(name: '_allowedString') Element? allowedStringElement,
     Money? allowedMoney,
-    Decimal? usedUnsignedInt,
+    FhirDecimal? usedUnsignedInt,
     @JsonKey(name: '_usedUnsignedInt') Element? usedUnsignedIntElement,
     Money? usedMoney,
   }) = _ExplanationOfBenefitFinancial;

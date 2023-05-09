@@ -273,7 +273,7 @@ class CodeSystem with Resource, _$CodeSystem {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -290,7 +290,7 @@ class CodeSystem with Resource, _$CodeSystem {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -345,13 +345,13 @@ class CodeSystem with Resource, _$CodeSystem {
     @JsonKey(name: '_title') Element? titleElement,
 
     /// [status] The status of this code system. Enables tracking the life-cycle of the content.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
 
     /// [experimental] A Boolean value to indicate that this code system is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.
-    Boolean? experimental,
+    FhirBoolean? experimental,
 
     /// [experimentalElement] ("_experimental") Extensions for experimental
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -372,7 +372,7 @@ class CodeSystem with Resource, _$CodeSystem {
     List<ContactDetail>? contact,
 
     /// [description] A free text natural language description of the code system from a consumer's perspective.
-    Markdown? description,
+    FhirMarkdown? description,
 
     /// [descriptionElement] ("_description") Extensions for description
     @JsonKey(name: '_description') Element? descriptionElement,
@@ -384,13 +384,13 @@ class CodeSystem with Resource, _$CodeSystem {
     List<CodeableConcept>? jurisdiction,
 
     /// [purpose] Explanation of why this code system is needed and why it has been designed as it has.
-    Markdown? purpose,
+    FhirMarkdown? purpose,
 
     /// [purposeElement] ("_purpose") Extensions for purpose
     @JsonKey(name: '_purpose') Element? purposeElement,
 
     /// [copyright] A copyright statement relating to the code system and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the code system.
-    Markdown? copyright,
+    FhirMarkdown? copyright,
 
     /// [copyrightElement] ("_copyright") Extensions for copyright
     @JsonKey(name: '_copyright') Element? copyrightElement,
@@ -402,13 +402,13 @@ class CodeSystem with Resource, _$CodeSystem {
     @JsonKey(name: '_copyrightLabel') Element? copyrightLabelElement,
 
     /// [approvalDate] The date on which the resource content was approved by the publisher. Approval happens once when the content is officially approved for usage.
-    Date? approvalDate,
+    FhirDate? approvalDate,
 
     /// [approvalDateElement] ("_approvalDate") Extensions for approvalDate
     @JsonKey(name: '_approvalDate') Element? approvalDateElement,
 
     /// [lastReviewDate] The date on which the resource content was last reviewed. Review happens periodically after approval but does not change the original approval date.
-    Date? lastReviewDate,
+    FhirDate? lastReviewDate,
 
     /// [lastReviewDateElement] ("_lastReviewDate") Extensions for lastReviewDate
     @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
@@ -435,40 +435,40 @@ class CodeSystem with Resource, _$CodeSystem {
     List<RelatedArtifact>? relatedArtifact,
 
     /// [caseSensitive] If code comparison is case sensitive when codes within this system are compared to each other.
-    Boolean? caseSensitive,
+    FhirBoolean? caseSensitive,
 
     /// [caseSensitiveElement] ("_caseSensitive") Extensions for caseSensitive
     @JsonKey(name: '_caseSensitive') Element? caseSensitiveElement,
 
     /// [valueSet] Canonical reference to the value set that contains all codes in the code system independent of code status.
-    Canonical? valueSet,
+    FhirCanonical? valueSet,
 
     /// [hierarchyMeaning] The meaning of the hierarchy of concepts as represented in this resource.
-    Code? hierarchyMeaning,
+    FhirCode? hierarchyMeaning,
 
     /// [hierarchyMeaningElement] ("_hierarchyMeaning") Extensions for hierarchyMeaning
     @JsonKey(name: '_hierarchyMeaning') Element? hierarchyMeaningElement,
 
     /// [compositional] The code system defines a compositional (post-coordination) grammar.
-    Boolean? compositional,
+    FhirBoolean? compositional,
 
     /// [compositionalElement] ("_compositional") Extensions for compositional
     @JsonKey(name: '_compositional') Element? compositionalElement,
 
     /// [versionNeeded] This flag is used to signify that the code system does not commit to concept permanence across versions. If true, a version must be specified when referencing this code system.
-    Boolean? versionNeeded,
+    FhirBoolean? versionNeeded,
 
     /// [versionNeededElement] ("_versionNeeded") Extensions for versionNeeded
     @JsonKey(name: '_versionNeeded') Element? versionNeededElement,
 
     /// [content] The extent of the content of the code system (the concepts and codes it defines) are represented in this resource instance.
-    Code? content,
+    FhirCode? content,
 
     /// [contentElement] ("_content") Extensions for content
     @JsonKey(name: '_content') Element? contentElement,
 
     /// [supplements] The canonical URL of the code system that this code system supplement is adding designations and properties to.
-    Canonical? supplements,
+    FhirCanonical? supplements,
 
     /// [count] The total number of concepts defined by the code system. Where the code system has a compositional grammar, the basis of this count is defined by the system steward.
     UnsignedInt? count,
@@ -602,7 +602,7 @@ class CodeSystemFilter with _$CodeSystemFilter {
     List<FhirExtension>? modifierExtension,
 
     /// [code] The code that identifies this filter when it is used as a filter in [ValueSet](valueset.html#).compose.include.filter.
-    Code? code,
+    FhirCode? code,
 
     /// [codeElement] ("_code") Extensions for code
     @JsonKey(name: '_code') Element? codeElement,
@@ -746,7 +746,7 @@ class CodeSystemProperty with _$CodeSystemProperty {
     List<FhirExtension>? modifierExtension,
 
     /// [code] A code that is used to identify the property. The code is used internally (in CodeSystem.concept.property.code) and also externally, such as in property filters.
-    Code? code,
+    FhirCode? code,
 
     /// [codeElement] ("_code") Extensions for code
     @JsonKey(name: '_code') Element? codeElement,
@@ -764,7 +764,7 @@ class CodeSystemProperty with _$CodeSystemProperty {
     @JsonKey(name: '_description') Element? descriptionElement,
 
     /// [type] The type of the property value. Properties of type "code" contain a code defined by the code system (e.g. a reference to another defined concept).
-    Code? type,
+    FhirCode? type,
 
     /// [typeElement] ("_type") Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
@@ -894,7 +894,7 @@ class CodeSystemConcept with _$CodeSystemConcept {
     List<FhirExtension>? modifierExtension,
 
     /// [code] A code - a text symbol - that uniquely identifies the concept within the code system.
-    Code? code,
+    FhirCode? code,
 
     /// [codeElement] ("_code") Extensions for code
     @JsonKey(name: '_code') Element? codeElement,
@@ -1031,7 +1031,7 @@ class CodeSystemDesignation with _$CodeSystemDesignation {
     List<FhirExtension>? modifierExtension,
 
     /// [language] The language this designation is defined for.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -1176,13 +1176,13 @@ class CodeSystemProperty1 with _$CodeSystemProperty1 {
     List<FhirExtension>? modifierExtension,
 
     /// [code] A code that is a reference to CodeSystem.property.code.
-    Code? code,
+    FhirCode? code,
 
     /// [codeElement] ("_code") Extensions for code
     @JsonKey(name: '_code') Element? codeElement,
 
     /// [valueCode] The value of this property.
-    Code? valueCode,
+    FhirCode? valueCode,
 
     /// [valueCodeElement] ("_valueCode") Extensions for valueCode
     @JsonKey(name: '_valueCode') Element? valueCodeElement,
@@ -1197,13 +1197,13 @@ class CodeSystemProperty1 with _$CodeSystemProperty1 {
     @JsonKey(name: '_valueString') Element? valueStringElement,
 
     /// [valueInteger] The value of this property.
-    Integer? valueInteger,
+    FhirInteger? valueInteger,
 
     /// [valueIntegerElement] ("_valueInteger") Extensions for valueInteger
     @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
 
     /// [valueBoolean] The value of this property.
-    Boolean? valueBoolean,
+    FhirBoolean? valueBoolean,
 
     /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
@@ -1215,7 +1215,7 @@ class CodeSystemProperty1 with _$CodeSystemProperty1 {
     @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
 
     /// [valueDecimal] The value of this property.
-    Decimal? valueDecimal,
+    FhirDecimal? valueDecimal,
 
     /// [valueDecimalElement] ("_valueDecimal") Extensions for valueDecimal
     @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
@@ -1498,7 +1498,7 @@ class ConceptMap with Resource, _$ConceptMap {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -1515,7 +1515,7 @@ class ConceptMap with Resource, _$ConceptMap {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -1570,13 +1570,13 @@ class ConceptMap with Resource, _$ConceptMap {
     @JsonKey(name: '_title') Element? titleElement,
 
     /// [status] The status of this concept map. Enables tracking the life-cycle of the content.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
 
     /// [experimental] A Boolean value to indicate that this concept map is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.
-    Boolean? experimental,
+    FhirBoolean? experimental,
 
     /// [experimentalElement] ("_experimental") Extensions for experimental
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -1597,7 +1597,7 @@ class ConceptMap with Resource, _$ConceptMap {
     List<ContactDetail>? contact,
 
     /// [description] A free text natural language description of the concept map from a consumer's perspective.
-    Markdown? description,
+    FhirMarkdown? description,
 
     /// [descriptionElement] ("_description") Extensions for description
     @JsonKey(name: '_description') Element? descriptionElement,
@@ -1609,13 +1609,13 @@ class ConceptMap with Resource, _$ConceptMap {
     List<CodeableConcept>? jurisdiction,
 
     /// [purpose] Explanation of why this concept map is needed and why it has been designed as it has.
-    Markdown? purpose,
+    FhirMarkdown? purpose,
 
     /// [purposeElement] ("_purpose") Extensions for purpose
     @JsonKey(name: '_purpose') Element? purposeElement,
 
     /// [copyright] A copyright statement relating to the concept map and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the concept map.
-    Markdown? copyright,
+    FhirMarkdown? copyright,
 
     /// [copyrightElement] ("_copyright") Extensions for copyright
     @JsonKey(name: '_copyright') Element? copyrightElement,
@@ -1627,13 +1627,13 @@ class ConceptMap with Resource, _$ConceptMap {
     @JsonKey(name: '_copyrightLabel') Element? copyrightLabelElement,
 
     /// [approvalDate] The date on which the resource content was approved by the publisher. Approval happens once when the content is officially approved for usage.
-    Date? approvalDate,
+    FhirDate? approvalDate,
 
     /// [approvalDateElement] ("_approvalDate") Extensions for approvalDate
     @JsonKey(name: '_approvalDate') Element? approvalDateElement,
 
     /// [lastReviewDate] The date on which the resource content was last reviewed. Review happens periodically after approval but does not change the original approval date.
-    Date? lastReviewDate,
+    FhirDate? lastReviewDate,
 
     /// [lastReviewDateElement] ("_lastReviewDate") Extensions for lastReviewDate
     @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
@@ -1666,7 +1666,7 @@ class ConceptMap with Resource, _$ConceptMap {
     @JsonKey(name: '_sourceScopeUri') Element? sourceScopeUriElement,
 
     /// [sourceScopeCanonical] Identifier for the source value set that contains the concepts that are being mapped and provides context for the mappings.  Limits the scope of the map to source codes (ConceptMap.group.element code or valueSet) that are members of this value set.
-    Canonical? sourceScopeCanonical,
+    FhirCanonical? sourceScopeCanonical,
 
     /// [sourceScopeCanonicalElement] ("_sourceScopeCanonical") Extensions for sourceScopeCanonical
     @JsonKey(name: '_sourceScopeCanonical')
@@ -1679,7 +1679,7 @@ class ConceptMap with Resource, _$ConceptMap {
     @JsonKey(name: '_targetScopeUri') Element? targetScopeUriElement,
 
     /// [targetScopeCanonical] Identifier for the target value set that provides important context about how the mapping choices are made.  Limits the scope of the map to target codes (ConceptMap.group.element.target code or valueSet) that are members of this value set.
-    Canonical? targetScopeCanonical,
+    FhirCanonical? targetScopeCanonical,
 
     /// [targetScopeCanonicalElement] ("_targetScopeCanonical") Extensions for targetScopeCanonical
     @JsonKey(name: '_targetScopeCanonical')
@@ -1801,10 +1801,10 @@ class ConceptMapGroup with _$ConceptMapGroup {
     List<FhirExtension>? modifierExtension,
 
     /// [source] An absolute URI that identifies the source system where the concepts to be mapped are defined.
-    Canonical? source,
+    FhirCanonical? source,
 
     /// [target] An absolute URI that identifies the target system that the concepts will be mapped to.
-    Canonical? target,
+    FhirCanonical? target,
 
     /// [element] Mappings for an individual concept in the source to one or more concepts in the target.
     required List<ConceptMapElement> element,
@@ -1928,7 +1928,7 @@ class ConceptMapElement with _$ConceptMapElement {
     List<FhirExtension>? modifierExtension,
 
     /// [code] Identity (code or path) or the element/item being mapped.
-    Code? code,
+    FhirCode? code,
 
     /// [codeElement] ("_code") Extensions for code
     @JsonKey(name: '_code') Element? codeElement,
@@ -1940,10 +1940,10 @@ class ConceptMapElement with _$ConceptMapElement {
     @JsonKey(name: '_display') Element? displayElement,
 
     /// [valueSet] The set of codes being mapped.
-    Canonical? valueSet,
+    FhirCanonical? valueSet,
 
     /// [noMap] If noMap = true this indicates that no mapping to a target concept exists for this source concept.
-    Boolean? noMap,
+    FhirBoolean? noMap,
 
     /// [noMapElement] ("_noMap") Extensions for noMap
     @JsonKey(name: '_noMap') Element? noMapElement,
@@ -2078,7 +2078,7 @@ class ConceptMapTarget with _$ConceptMapTarget {
     List<FhirExtension>? modifierExtension,
 
     /// [code] Identity (code or path) or the element/item that the map refers to.
-    Code? code,
+    FhirCode? code,
 
     /// [codeElement] ("_code") Extensions for code
     @JsonKey(name: '_code') Element? codeElement,
@@ -2090,10 +2090,10 @@ class ConceptMapTarget with _$ConceptMapTarget {
     @JsonKey(name: '_display') Element? displayElement,
 
     /// [valueSet] The set of codes that the map refers to.
-    Canonical? valueSet,
+    FhirCanonical? valueSet,
 
     /// [relationship] The relationship between the source and target concepts. The relationship is read from source to target (e.g. source-is-narrower-than-target).
-    Code? relationship,
+    FhirCode? relationship,
 
     /// [relationshipElement] ("_relationship") Extensions for relationship
     @JsonKey(name: '_relationship') Element? relationshipElement,
@@ -2259,7 +2259,7 @@ class ConceptMapDependsOn with _$ConceptMapDependsOn {
     @JsonKey(name: '_property') Element? propertyElement,
 
     /// [valueCode] Property value that the map depends on.
-    Code? valueCode,
+    FhirCode? valueCode,
 
     /// [valueCodeElement] ("_valueCode") Extensions for valueCode
     @JsonKey(name: '_valueCode') Element? valueCodeElement,
@@ -2274,13 +2274,13 @@ class ConceptMapDependsOn with _$ConceptMapDependsOn {
     @JsonKey(name: '_valueString') Element? valueStringElement,
 
     /// [valueInteger] Property value that the map depends on.
-    Integer? valueInteger,
+    FhirInteger? valueInteger,
 
     /// [valueIntegerElement] ("_valueInteger") Extensions for valueInteger
     @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
 
     /// [valueBoolean] Property value that the map depends on.
-    Boolean? valueBoolean,
+    FhirBoolean? valueBoolean,
 
     /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
@@ -2292,7 +2292,7 @@ class ConceptMapDependsOn with _$ConceptMapDependsOn {
     @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
 
     /// [valueDecimal] Property value that the map depends on.
-    Decimal? valueDecimal,
+    FhirDecimal? valueDecimal,
 
     /// [valueDecimalElement] ("_valueDecimal") Extensions for valueDecimal
     @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
@@ -2304,13 +2304,13 @@ class ConceptMapDependsOn with _$ConceptMapDependsOn {
     @JsonKey(name: '_valueUri') Element? valueUriElement,
 
     /// [valueId] Property value that the map depends on.
-    Id? valueId,
+    FhirId? valueId,
 
     /// [valueIdElement] ("_valueId") Extensions for valueId
     @JsonKey(name: '_valueId') Element? valueIdElement,
 
     /// [valueSet] This mapping applies if the property value is a code from this value set.
-    Canonical? valueSet,
+    FhirCanonical? valueSet,
   }) = _ConceptMapDependsOn;
 
   /// Produces a Yaml formatted String version of the object
@@ -2444,13 +2444,13 @@ class ConceptMapUnmapped with _$ConceptMapUnmapped {
     List<FhirExtension>? modifierExtension,
 
     /// [mode] Defines which action to take if there is no match for the source concept in the target system designated for the group. One of 3 actions are possible: use the unmapped source code (this is useful when doing a mapping between versions, and only a few codes have changed), use a fixed code (a default code), or alternatively, a reference to a different concept map can be provided (by canonical URL).
-    Code? mode,
+    FhirCode? mode,
 
     /// [modeElement] ("_mode") Extensions for mode
     @JsonKey(name: '_mode') Element? modeElement,
 
     /// [code] The fixed code to use when the mode = 'fixed'  - all unmapped codes are mapped to a single fixed code.
-    Code? code,
+    FhirCode? code,
 
     /// [codeElement] ("_code") Extensions for code
     @JsonKey(name: '_code') Element? codeElement,
@@ -2462,16 +2462,16 @@ class ConceptMapUnmapped with _$ConceptMapUnmapped {
     @JsonKey(name: '_display') Element? displayElement,
 
     /// [valueSet] The set of fixed codes to use when the mode = 'fixed'  - all unmapped codes are mapped to each of the fixed codes.
-    Canonical? valueSet,
+    FhirCanonical? valueSet,
 
     /// [relationship] The default relationship value to apply between the source and target concepts when the source code is unmapped and the mode is 'fixed' or 'use-source-code'.
-    Code? relationship,
+    FhirCode? relationship,
 
     /// [relationshipElement] ("_relationship") Extensions for relationship
     @JsonKey(name: '_relationship') Element? relationshipElement,
 
     /// [otherMap] The canonical reference to an additional ConceptMap resource instance to use for mapping if this ConceptMap resource contains no matching mapping for the source concept.
-    Canonical? otherMap,
+    FhirCanonical? otherMap,
   }) = _ConceptMapUnmapped;
 
   /// Produces a Yaml formatted String version of the object
@@ -2740,7 +2740,7 @@ class NamingSystem with Resource, _$NamingSystem {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -2757,7 +2757,7 @@ class NamingSystem with Resource, _$NamingSystem {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -2812,13 +2812,13 @@ class NamingSystem with Resource, _$NamingSystem {
     @JsonKey(name: '_title') Element? titleElement,
 
     /// [status] The status of this naming system. Enables tracking the life-cycle of the content.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
 
     /// [experimental] A Boolean value to indicate that this naming system is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.
-    Boolean? experimental,
+    FhirBoolean? experimental,
 
     /// [experimentalElement] ("_experimental") Extensions for experimental
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -2839,7 +2839,7 @@ class NamingSystem with Resource, _$NamingSystem {
     List<ContactDetail>? contact,
 
     /// [description] A free text natural language description of the naming system from a consumer's perspective. Details about what the namespace identifies including scope, granularity, version labeling, etc.
-    Markdown? description,
+    FhirMarkdown? description,
 
     /// [descriptionElement] ("_description") Extensions for description
     @JsonKey(name: '_description') Element? descriptionElement,
@@ -2851,13 +2851,13 @@ class NamingSystem with Resource, _$NamingSystem {
     List<CodeableConcept>? jurisdiction,
 
     /// [purpose] Explanation of why this naming system is needed and why it has been designed as it has.
-    Markdown? purpose,
+    FhirMarkdown? purpose,
 
     /// [purposeElement] ("_purpose") Extensions for purpose
     @JsonKey(name: '_purpose') Element? purposeElement,
 
     /// [copyright] A copyright statement relating to the naming system and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the naming system.
-    Markdown? copyright,
+    FhirMarkdown? copyright,
 
     /// [copyrightElement] ("_copyright") Extensions for copyright
     @JsonKey(name: '_copyright') Element? copyrightElement,
@@ -2869,13 +2869,13 @@ class NamingSystem with Resource, _$NamingSystem {
     @JsonKey(name: '_copyrightLabel') Element? copyrightLabelElement,
 
     /// [approvalDate] The date on which the resource content was approved by the publisher. Approval happens once when the content is officially approved for usage.
-    Date? approvalDate,
+    FhirDate? approvalDate,
 
     /// [approvalDateElement] ("_approvalDate") Extensions for approvalDate
     @JsonKey(name: '_approvalDate') Element? approvalDateElement,
 
     /// [lastReviewDate] The date on which the resource content was last reviewed. Review happens periodically after approval but does not change the original approval date.
-    Date? lastReviewDate,
+    FhirDate? lastReviewDate,
 
     /// [lastReviewDateElement] ("_lastReviewDate") Extensions for lastReviewDate
     @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
@@ -2902,7 +2902,7 @@ class NamingSystem with Resource, _$NamingSystem {
     List<RelatedArtifact>? relatedArtifact,
 
     /// [kind] Indicates the purpose for the naming system - what kinds of things does it make unique?
-    Code? kind,
+    FhirCode? kind,
 
     /// [kindElement] ("_kind") Extensions for kind
     @JsonKey(name: '_kind') Element? kindElement,
@@ -3055,7 +3055,7 @@ class NamingSystemUniqueId with _$NamingSystemUniqueId {
     List<FhirExtension>? modifierExtension,
 
     /// [type] Identifies the unique identifier scheme used for this particular identifier.
-    Code? type,
+    FhirCode? type,
 
     /// [typeElement] ("_type") Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
@@ -3067,7 +3067,7 @@ class NamingSystemUniqueId with _$NamingSystemUniqueId {
     @JsonKey(name: '_value') Element? valueElement,
 
     /// [preferred] Indicates whether this identifier is the "preferred" identifier of this type.
-    Boolean? preferred,
+    FhirBoolean? preferred,
 
     /// [preferredElement] ("_preferred") Extensions for preferred
     @JsonKey(name: '_preferred') Element? preferredElement,
@@ -3082,7 +3082,7 @@ class NamingSystemUniqueId with _$NamingSystemUniqueId {
     Period? period,
 
     /// [authoritative] Indicates whether this identifier ie endorsed by the official owner of the associated naming system.
-    Boolean? authoritative,
+    FhirBoolean? authoritative,
 
     /// [authoritativeElement] ("_authoritative") Extensions for authoritative
     @JsonKey(name: '_authoritative') Element? authoritativeElement,
@@ -3347,7 +3347,7 @@ class TerminologyCapabilities with Resource, _$TerminologyCapabilities {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -3364,7 +3364,7 @@ class TerminologyCapabilities with Resource, _$TerminologyCapabilities {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -3419,13 +3419,13 @@ class TerminologyCapabilities with Resource, _$TerminologyCapabilities {
     @JsonKey(name: '_title') Element? titleElement,
 
     /// [status] The status of this terminology capabilities. Enables tracking the life-cycle of the content.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
 
     /// [experimental] A Boolean value to indicate that this terminology capabilities is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.
-    Boolean? experimental,
+    FhirBoolean? experimental,
 
     /// [experimentalElement] ("_experimental") Extensions for experimental
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -3446,7 +3446,7 @@ class TerminologyCapabilities with Resource, _$TerminologyCapabilities {
     List<ContactDetail>? contact,
 
     /// [description] A free text natural language description of the terminology capabilities from a consumer's perspective. Typically, this is used when the capability statement describes a desired rather than an actual solution, for example as a formal expression of requirements as part of an RFP.
-    Markdown? description,
+    FhirMarkdown? description,
 
     /// [descriptionElement] ("_description") Extensions for description
     @JsonKey(name: '_description') Element? descriptionElement,
@@ -3458,13 +3458,13 @@ class TerminologyCapabilities with Resource, _$TerminologyCapabilities {
     List<CodeableConcept>? jurisdiction,
 
     /// [purpose] Explanation of why this terminology capabilities is needed and why it has been designed as it has.
-    Markdown? purpose,
+    FhirMarkdown? purpose,
 
     /// [purposeElement] ("_purpose") Extensions for purpose
     @JsonKey(name: '_purpose') Element? purposeElement,
 
     /// [copyright] A copyright statement relating to the terminology capabilities and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the terminology capabilities.
-    Markdown? copyright,
+    FhirMarkdown? copyright,
 
     /// [copyrightElement] ("_copyright") Extensions for copyright
     @JsonKey(name: '_copyright') Element? copyrightElement,
@@ -3476,7 +3476,7 @@ class TerminologyCapabilities with Resource, _$TerminologyCapabilities {
     @JsonKey(name: '_copyrightLabel') Element? copyrightLabelElement,
 
     /// [kind] The way that this statement is intended to be used, to describe an actual running instance of software, a particular product (kind, not instance of software) or a class of implementation (e.g. a desired purchase).
-    Code? kind,
+    FhirCode? kind,
 
     /// [kindElement] ("_kind") Extensions for kind
     @JsonKey(name: '_kind') Element? kindElement,
@@ -3488,7 +3488,7 @@ class TerminologyCapabilities with Resource, _$TerminologyCapabilities {
     TerminologyCapabilitiesImplementation? implementation,
 
     /// [lockedDate] Whether the server supports lockedDate.
-    Boolean? lockedDate,
+    FhirBoolean? lockedDate,
 
     /// [lockedDateElement] ("_lockedDate") Extensions for lockedDate
     @JsonKey(name: '_lockedDate') Element? lockedDateElement,
@@ -3500,7 +3500,7 @@ class TerminologyCapabilities with Resource, _$TerminologyCapabilities {
     TerminologyCapabilitiesExpansion? expansion,
 
     /// [codeSearch] The degree to which the server supports the code search parameter on ValueSet, if it is supported.
-    Code? codeSearch,
+    FhirCode? codeSearch,
 
     /// [codeSearchElement] ("_codeSearch") Extensions for codeSearch
     @JsonKey(name: '_codeSearch') Element? codeSearchElement,
@@ -3882,19 +3882,19 @@ class TerminologyCapabilitiesCodeSystem
     List<FhirExtension>? modifierExtension,
 
     /// [uri] Canonical identifier for the code system, represented as a URI.
-    Canonical? uri,
+    FhirCanonical? uri,
 
     /// [version] For the code system, a list of versions that are supported by the server.
     List<TerminologyCapabilitiesVersion>? version,
 
     /// [content] The extent of the content of the code system (the concepts and codes it defines) are represented in this resource instance.
-    Code? content,
+    FhirCode? content,
 
     /// [contentElement] ("_content") Extensions for content
     @JsonKey(name: '_content') Element? contentElement,
 
     /// [subsumption] True if subsumption is supported for this version of the code system.
-    Boolean? subsumption,
+    FhirBoolean? subsumption,
 
     /// [subsumptionElement] ("_subsumption") Extensions for subsumption
     @JsonKey(name: '_subsumption') Element? subsumptionElement,
@@ -4033,13 +4033,13 @@ class TerminologyCapabilitiesVersion with _$TerminologyCapabilitiesVersion {
     @JsonKey(name: '_code') Element? codeElement,
 
     /// [isDefault] If this is the default version for this code system.
-    Boolean? isDefault,
+    FhirBoolean? isDefault,
 
     /// [isDefaultElement] ("_isDefault") Extensions for isDefault
     @JsonKey(name: '_isDefault') Element? isDefaultElement,
 
     /// [compositional] If the compositional grammar defined by the code system is supported.
-    Boolean? compositional,
+    FhirBoolean? compositional,
 
     /// [compositionalElement] ("_compositional") Extensions for compositional
     @JsonKey(name: '_compositional') Element? compositionalElement,
@@ -4170,7 +4170,7 @@ class TerminologyCapabilitiesFilter with _$TerminologyCapabilitiesFilter {
     List<FhirExtension>? modifierExtension,
 
     /// [code] Code of the property supported.
-    Code? code,
+    FhirCode? code,
 
     /// [codeElement] ("_code") Extensions for code
     @JsonKey(name: '_code') Element? codeElement,
@@ -4301,19 +4301,19 @@ class TerminologyCapabilitiesExpansion with _$TerminologyCapabilitiesExpansion {
     List<FhirExtension>? modifierExtension,
 
     /// [hierarchical] Whether the server can return nested value sets.
-    Boolean? hierarchical,
+    FhirBoolean? hierarchical,
 
     /// [hierarchicalElement] ("_hierarchical") Extensions for hierarchical
     @JsonKey(name: '_hierarchical') Element? hierarchicalElement,
 
     /// [paging] Whether the server supports paging on expansion.
-    Boolean? paging,
+    FhirBoolean? paging,
 
     /// [pagingElement] ("_paging") Extensions for paging
     @JsonKey(name: '_paging') Element? pagingElement,
 
     /// [incomplete] True if requests for incomplete expansions are allowed.
-    Boolean? incomplete,
+    FhirBoolean? incomplete,
 
     /// [incompleteElement] ("_incomplete") Extensions for incomplete
     @JsonKey(name: '_incomplete') Element? incompleteElement,
@@ -4322,7 +4322,7 @@ class TerminologyCapabilitiesExpansion with _$TerminologyCapabilitiesExpansion {
     List<TerminologyCapabilitiesParameter>? parameter,
 
     /// [textFilter] Documentation about text searching works.
-    Markdown? textFilter,
+    FhirMarkdown? textFilter,
 
     /// [textFilterElement] ("_textFilter") Extensions for textFilter
     @JsonKey(name: '_textFilter') Element? textFilterElement,
@@ -4439,7 +4439,7 @@ class TerminologyCapabilitiesParameter with _$TerminologyCapabilitiesParameter {
     List<FhirExtension>? modifierExtension,
 
     /// [name] Name of the supported expansion parameter.
-    Code? name,
+    FhirCode? name,
 
     /// [nameElement] ("_name") Extensions for name
     @JsonKey(name: '_name') Element? nameElement,
@@ -4559,7 +4559,7 @@ class TerminologyCapabilitiesValidateCode
     List<FhirExtension>? modifierExtension,
 
     /// [translations] Whether translations are validated.
-    Boolean? translations,
+    FhirBoolean? translations,
 
     /// [translationsElement] ("_translations") Extensions for translations
     @JsonKey(name: '_translations') Element? translationsElement,
@@ -4673,7 +4673,7 @@ class TerminologyCapabilitiesTranslation
     List<FhirExtension>? modifierExtension,
 
     /// [needsMap] Whether the client must identify the map.
-    Boolean? needsMap,
+    FhirBoolean? needsMap,
 
     /// [needsMapElement] ("_needsMap") Extensions for needsMap
     @JsonKey(name: '_needsMap') Element? needsMapElement,
@@ -4786,7 +4786,7 @@ class TerminologyCapabilitiesClosure with _$TerminologyCapabilitiesClosure {
     List<FhirExtension>? modifierExtension,
 
     /// [translation] If cross-system closure is supported.
-    Boolean? translation,
+    FhirBoolean? translation,
 
     /// [translationElement] ("_translation") Extensions for translation
     @JsonKey(name: '_translation') Element? translationElement,
@@ -5062,7 +5062,7 @@ class ValueSet with Resource, _$ValueSet {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -5079,7 +5079,7 @@ class ValueSet with Resource, _$ValueSet {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -5134,13 +5134,13 @@ class ValueSet with Resource, _$ValueSet {
     @JsonKey(name: '_title') Element? titleElement,
 
     /// [status] The status of this value set. Enables tracking the life-cycle of the content. The status of the value set applies to the value set definition (ValueSet.compose) and the associated ValueSet metadata. Expansions do not have a state.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
 
     /// [experimental] A Boolean value to indicate that this value set is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.
-    Boolean? experimental,
+    FhirBoolean? experimental,
 
     /// [experimentalElement] ("_experimental") Extensions for experimental
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -5161,7 +5161,7 @@ class ValueSet with Resource, _$ValueSet {
     List<ContactDetail>? contact,
 
     /// [description] A free text natural language description of the value set from a consumer's perspective. The textual description specifies the span of meanings for concepts to be included within the Value Set Expansion, and also may specify the intended use and limitations of the Value Set.
-    Markdown? description,
+    FhirMarkdown? description,
 
     /// [descriptionElement] ("_description") Extensions for description
     @JsonKey(name: '_description') Element? descriptionElement,
@@ -5173,13 +5173,13 @@ class ValueSet with Resource, _$ValueSet {
     List<CodeableConcept>? jurisdiction,
 
     /// [purpose] Explanation of why this value set is needed and why it has been designed as it has.
-    Markdown? purpose,
+    FhirMarkdown? purpose,
 
     /// [purposeElement] ("_purpose") Extensions for purpose
     @JsonKey(name: '_purpose') Element? purposeElement,
 
     /// [copyright] A copyright statement relating to the value set and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the value set.
-    Markdown? copyright,
+    FhirMarkdown? copyright,
 
     /// [copyrightElement] ("_copyright") Extensions for copyright
     @JsonKey(name: '_copyright') Element? copyrightElement,
@@ -5191,13 +5191,13 @@ class ValueSet with Resource, _$ValueSet {
     @JsonKey(name: '_copyrightLabel') Element? copyrightLabelElement,
 
     /// [approvalDate] The date on which the resource content was approved by the publisher. Approval happens once when the content is officially approved for usage.
-    Date? approvalDate,
+    FhirDate? approvalDate,
 
     /// [approvalDateElement] ("_approvalDate") Extensions for approvalDate
     @JsonKey(name: '_approvalDate') Element? approvalDateElement,
 
     /// [lastReviewDate] The date on which the resource content was last reviewed. Review happens periodically after approval but does not change the original approval date.
-    Date? lastReviewDate,
+    FhirDate? lastReviewDate,
 
     /// [lastReviewDateElement] ("_lastReviewDate") Extensions for lastReviewDate
     @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
@@ -5224,7 +5224,7 @@ class ValueSet with Resource, _$ValueSet {
     List<RelatedArtifact>? relatedArtifact,
 
     /// [immutable] If this is set to 'true', then no new versions of the content logical definition can be created.  Note: Other metadata might still change.
-    Boolean? immutable,
+    FhirBoolean? immutable,
 
     /// [immutableElement] ("_immutable") Extensions for immutable
     @JsonKey(name: '_immutable') Element? immutableElement,
@@ -5370,13 +5370,13 @@ class ValueSetCompose with _$ValueSetCompose {
     List<FhirExtension>? modifierExtension,
 
     /// [lockedDate] The Locked Date is  the effective date that is used to determine the version of all referenced Code Systems and Value Set Definitions included in the compose that are not already tied to a specific version.
-    Date? lockedDate,
+    FhirDate? lockedDate,
 
     /// [lockedDateElement] ("_lockedDate") Extensions for lockedDate
     @JsonKey(name: '_lockedDate') Element? lockedDateElement,
 
     /// [inactive] Whether inactive codes - codes that are not approved for current use - are in the value set. If inactive = true, inactive codes are to be included in the expansion, if inactive = false, the inactive codes will not be included in the expansion. If absent, the behavior is determined by the implementation, or by the applicable $expand parameters (but generally, inactive codes would be expected to be included).
-    Boolean? inactive,
+    FhirBoolean? inactive,
 
     /// [inactiveElement] ("_inactive") Extensions for inactive
     @JsonKey(name: '_inactive') Element? inactiveElement,
@@ -5665,7 +5665,7 @@ class ValueSetConcept with _$ValueSetConcept {
     List<FhirExtension>? modifierExtension,
 
     /// [code] Specifies a code for the concept to be included or excluded.
-    Code? code,
+    FhirCode? code,
 
     /// [codeElement] ("_code") Extensions for code
     @JsonKey(name: '_code') Element? codeElement,
@@ -5795,7 +5795,7 @@ class ValueSetDesignation with _$ValueSetDesignation {
     List<FhirExtension>? modifierExtension,
 
     /// [language] The language this designation is defined for.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -5931,13 +5931,13 @@ class ValueSetFilter with _$ValueSetFilter {
     List<FhirExtension>? modifierExtension,
 
     /// [property] A code that identifies a property or a filter defined in the code system.
-    Code? property,
+    FhirCode? property,
 
     /// [propertyElement] ("_property") Extensions for property
     @JsonKey(name: '_property') Element? propertyElement,
 
     /// [op] The kind of operation to perform as a part of the filter criteria.
-    Code? op,
+    FhirCode? op,
 
     /// [opElement] ("_op") Extensions for op
     @JsonKey(name: '_op') Element? opElement,
@@ -6108,13 +6108,13 @@ class ValueSetExpansion with _$ValueSetExpansion {
     @JsonKey(name: '_timestamp') Element? timestampElement,
 
     /// [total] The total number of concepts in the expansion. If the number of concept nodes in this resource is less than the stated number, then the server can return more using the offset parameter.
-    Integer? total,
+    FhirInteger? total,
 
     /// [totalElement] ("_total") Extensions for total
     @JsonKey(name: '_total') Element? totalElement,
 
     /// [offset] If paging is being used, the offset at which this resource starts.  I.e. this resource is a partial view into the expansion. If paging is not being used, this element SHALL NOT be present.
-    Integer? offset,
+    FhirInteger? offset,
 
     /// [offsetElement] ("_offset") Extensions for offset
     @JsonKey(name: '_offset') Element? offsetElement,
@@ -6275,19 +6275,19 @@ class ValueSetParameter with _$ValueSetParameter {
     @JsonKey(name: '_valueString') Element? valueStringElement,
 
     /// [valueBoolean] The value of the parameter.
-    Boolean? valueBoolean,
+    FhirBoolean? valueBoolean,
 
     /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
 
     /// [valueInteger] The value of the parameter.
-    Integer? valueInteger,
+    FhirInteger? valueInteger,
 
     /// [valueIntegerElement] ("_valueInteger") Extensions for valueInteger
     @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
 
     /// [valueDecimal] The value of the parameter.
-    Decimal? valueDecimal,
+    FhirDecimal? valueDecimal,
 
     /// [valueDecimalElement] ("_valueDecimal") Extensions for valueDecimal
     @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
@@ -6299,7 +6299,7 @@ class ValueSetParameter with _$ValueSetParameter {
     @JsonKey(name: '_valueUri') Element? valueUriElement,
 
     /// [valueCode] The value of the parameter.
-    Code? valueCode,
+    FhirCode? valueCode,
 
     /// [valueCodeElement] ("_valueCode") Extensions for valueCode
     @JsonKey(name: '_valueCode') Element? valueCodeElement,
@@ -6422,7 +6422,7 @@ class ValueSetProperty with _$ValueSetProperty {
     List<FhirExtension>? modifierExtension,
 
     /// [code] A code that is used to identify the property. The code is used in ValueSet.expansion.contains.property.code.
-    Code? code,
+    FhirCode? code,
 
     /// [codeElement] ("_code") Extensions for code
     @JsonKey(name: '_code') Element? codeElement,
@@ -6587,13 +6587,13 @@ class ValueSetContains with _$ValueSetContains {
     @JsonKey(name: '_system') Element? systemElement,
 
     /// [abstract_] ("abstract") If true, this entry is included in the expansion for navigational purposes, and the user cannot select the code directly as a proper value.
-    @JsonKey(name: 'abstract') Boolean? abstract_,
+    @JsonKey(name: 'abstract') FhirBoolean? abstract_,
 
     /// [abstractElement] ("_abstract") Extensions for abstract
     @JsonKey(name: '_abstract') Element? abstractElement,
 
     /// [inactive] If the concept is inactive in the code system that defines it. Inactive codes are those that are no longer to be used, but are maintained by the code system for understanding legacy data. It might not be known or specified whether an concept is inactive (and it may depend on the context of use).
-    Boolean? inactive,
+    FhirBoolean? inactive,
 
     /// [inactiveElement] ("_inactive") Extensions for inactive
     @JsonKey(name: '_inactive') Element? inactiveElement,
@@ -6605,7 +6605,7 @@ class ValueSetContains with _$ValueSetContains {
     @JsonKey(name: '_version') Element? versionElement,
 
     /// [code] The code for this item in the expansion hierarchy. If this code is missing the entry in the hierarchy is a place holder (abstract) and does not represent a valid code in the value set.
-    Code? code,
+    FhirCode? code,
 
     /// [codeElement] ("_code") Extensions for code
     @JsonKey(name: '_code') Element? codeElement,
@@ -6758,13 +6758,13 @@ class ValueSetProperty1 with _$ValueSetProperty1 {
     List<FhirExtension>? modifierExtension,
 
     /// [code] A code that is a reference to ValueSet.expansion.property.code.
-    Code? code,
+    FhirCode? code,
 
     /// [codeElement] ("_code") Extensions for code
     @JsonKey(name: '_code') Element? codeElement,
 
     /// [valueCode] The value of this property.
-    Code? valueCode,
+    FhirCode? valueCode,
 
     /// [valueCodeElement] ("_valueCode") Extensions for valueCode
     @JsonKey(name: '_valueCode') Element? valueCodeElement,
@@ -6779,13 +6779,13 @@ class ValueSetProperty1 with _$ValueSetProperty1 {
     @JsonKey(name: '_valueString') Element? valueStringElement,
 
     /// [valueInteger] The value of this property.
-    Integer? valueInteger,
+    FhirInteger? valueInteger,
 
     /// [valueIntegerElement] ("_valueInteger") Extensions for valueInteger
     @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
 
     /// [valueBoolean] The value of this property.
-    Boolean? valueBoolean,
+    FhirBoolean? valueBoolean,
 
     /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
@@ -6797,7 +6797,7 @@ class ValueSetProperty1 with _$ValueSetProperty1 {
     @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
 
     /// [valueDecimal] The value of this property.
-    Decimal? valueDecimal,
+    FhirDecimal? valueDecimal,
 
     /// [valueDecimalElement] ("_valueDecimal") Extensions for valueDecimal
     @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
@@ -6938,13 +6938,13 @@ class ValueSetSubProperty with _$ValueSetSubProperty {
     List<FhirExtension>? modifierExtension,
 
     /// [code] A code that is a reference to ValueSet.expansion.property.code.
-    Code? code,
+    FhirCode? code,
 
     /// [codeElement] ("_code") Extensions for code
     @JsonKey(name: '_code') Element? codeElement,
 
     /// [valueCode] The value of this subproperty.
-    Code? valueCode,
+    FhirCode? valueCode,
 
     /// [valueCodeElement] ("_valueCode") Extensions for valueCode
     @JsonKey(name: '_valueCode') Element? valueCodeElement,
@@ -6959,13 +6959,13 @@ class ValueSetSubProperty with _$ValueSetSubProperty {
     @JsonKey(name: '_valueString') Element? valueStringElement,
 
     /// [valueInteger] The value of this subproperty.
-    Integer? valueInteger,
+    FhirInteger? valueInteger,
 
     /// [valueIntegerElement] ("_valueInteger") Extensions for valueInteger
     @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
 
     /// [valueBoolean] The value of this subproperty.
-    Boolean? valueBoolean,
+    FhirBoolean? valueBoolean,
 
     /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
@@ -6977,7 +6977,7 @@ class ValueSetSubProperty with _$ValueSetSubProperty {
     @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
 
     /// [valueDecimal] The value of this subproperty.
-    Decimal? valueDecimal,
+    FhirDecimal? valueDecimal,
 
     /// [valueDecimalElement] ("_valueDecimal") Extensions for valueDecimal
     @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,

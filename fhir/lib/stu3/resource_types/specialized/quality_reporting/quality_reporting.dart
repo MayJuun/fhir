@@ -19,11 +19,11 @@ class Measure with Resource, _$Measure {
     @Default(Stu3ResourceType.Measure)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Measure)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -40,9 +40,9 @@ class Measure with Resource, _$Measure {
     @JsonKey(name: '_title') Element? titleElement,
     MeasureStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
-    Boolean? experimental,
+    FhirBoolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
-    Date? date,
+    FhirDate? date,
     @JsonKey(name: '_date') Element? dateElement,
     String? publisher,
     @JsonKey(name: '_publisher') Element? publisherElement,
@@ -52,9 +52,9 @@ class Measure with Resource, _$Measure {
     @JsonKey(name: '_purpose') Element? purposeElement,
     String? usage,
     @JsonKey(name: '_usage') Element? usageElement,
-    Date? approvalDate,
+    FhirDate? approvalDate,
     @JsonKey(name: '_approvalDate') Element? approvalDateElement,
-    Date? lastReviewDate,
+    FhirDate? lastReviewDate,
     @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
     Period? effectivePeriod,
     List<UsageContext>? useContext,
@@ -301,11 +301,11 @@ class MeasureReport with Resource, _$MeasureReport {
     @Default(Stu3ResourceType.MeasureReport)
     @JsonKey(unknownEnumValue: Stu3ResourceType.MeasureReport)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -318,7 +318,7 @@ class MeasureReport with Resource, _$MeasureReport {
     @JsonKey(name: '_type') Element? typeElement,
     required Reference measure,
     Reference? patient,
-    Date? date,
+    FhirDate? date,
     @JsonKey(name: '_date') Element? dateElement,
     Reference? reportingOrganization,
     required Period period,
@@ -360,7 +360,7 @@ class MeasureReportGroup with _$MeasureReportGroup {
   factory MeasureReportGroup({
     required Identifier identifier,
     List<MeasureReportPopulation>? population,
-    Decimal? measureScore,
+    FhirDecimal? measureScore,
     @JsonKey(name: '_measureScore') Element? measureScoreElement,
     List<MeasureReportStratifier>? stratifier,
   }) = _MeasureReportGroup;
@@ -402,7 +402,7 @@ class MeasureReportPopulation with _$MeasureReportPopulation {
   factory MeasureReportPopulation({
     Identifier? identifier,
     CodeableConcept? code,
-    Decimal? count,
+    FhirDecimal? count,
     @JsonKey(name: '_count') Element? countElement,
     Reference? patients,
   }) = _MeasureReportPopulation;
@@ -484,7 +484,7 @@ class MeasureReportStratum with _$MeasureReportStratum {
     String? value,
     @JsonKey(name: '_value') Element? valueElement,
     List<MeasureReportPopulation1>? population,
-    Decimal? measureScore,
+    FhirDecimal? measureScore,
     @JsonKey(name: '_measureScore') Element? measureScoreElement,
   }) = _MeasureReportStratum;
 
@@ -525,7 +525,7 @@ class MeasureReportPopulation1 with _$MeasureReportPopulation1 {
   factory MeasureReportPopulation1({
     Identifier? identifier,
     CodeableConcept? code,
-    Decimal? count,
+    FhirDecimal? count,
     @JsonKey(name: '_count') Element? countElement,
     Reference? patients,
   }) = _MeasureReportPopulation1;

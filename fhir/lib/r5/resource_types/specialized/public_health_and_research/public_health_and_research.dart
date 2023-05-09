@@ -221,7 +221,7 @@ class ResearchStudy with Resource, _$ResearchStudy {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -238,7 +238,7 @@ class ResearchStudy with Resource, _$ResearchStudy {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -301,7 +301,7 @@ class ResearchStudy with Resource, _$ResearchStudy {
     @JsonKey(name: '_date') Element? dateElement,
 
     /// [status] The publication state of the resource (not of the study).
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -328,13 +328,13 @@ class ResearchStudy with Resource, _$ResearchStudy {
     List<CodeableConcept>? region,
 
     /// [descriptionSummary] A brief text for explaining the study.
-    Markdown? descriptionSummary,
+    FhirMarkdown? descriptionSummary,
 
     /// [descriptionSummaryElement] ("_descriptionSummary") Extensions for descriptionSummary
     @JsonKey(name: '_descriptionSummary') Element? descriptionSummaryElement,
 
     /// [description] A detailed and human-readable narrative of the study. E.g., study abstract.
-    Markdown? description,
+    FhirMarkdown? description,
 
     /// [descriptionElement] ("_description") Extensions for description
     @JsonKey(name: '_description') Element? descriptionElement,
@@ -756,7 +756,7 @@ class ResearchStudyProgressStatus with _$ResearchStudyProgressStatus {
     required CodeableConcept state,
 
     /// [actual] An indication of whether or not the date is a known date when the state changed or will change. A value of true indicates a known date. A value of false indicates an estimated date.
-    Boolean? actual,
+    FhirBoolean? actual,
 
     /// [actualElement] ("_actual") Extensions for actual
     @JsonKey(name: '_actual') Element? actualElement,
@@ -1041,7 +1041,7 @@ class ResearchStudyComparisonGroup with _$ResearchStudyComparisonGroup {
     CodeableConcept? type,
 
     /// [description] A succinct description of the path through the study that would be followed by a subject adhering to this comparisonGroup.
-    Markdown? description,
+    FhirMarkdown? description,
 
     /// [descriptionElement] ("_description") Extensions for description
     @JsonKey(name: '_description') Element? descriptionElement,
@@ -1181,7 +1181,7 @@ class ResearchStudyObjective with _$ResearchStudyObjective {
     CodeableConcept? type,
 
     /// [description] Free text description of the objective of the study.  This is what the study is trying to achieve rather than how it is going to achieve it (see ResearchStudy.description).
-    Markdown? description,
+    FhirMarkdown? description,
 
     /// [descriptionElement] ("_description") Extensions for description
     @JsonKey(name: '_description') Element? descriptionElement,
@@ -1315,7 +1315,7 @@ class ResearchStudyOutcomeMeasure with _$ResearchStudyOutcomeMeasure {
     List<CodeableConcept>? type,
 
     /// [description] Description of the outcome.
-    Markdown? description,
+    FhirMarkdown? description,
 
     /// [descriptionElement] ("_description") Extensions for description
     @JsonKey(name: '_description') Element? descriptionElement,
@@ -1459,7 +1459,7 @@ class ResearchSubject with Resource, _$ResearchSubject {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -1476,7 +1476,7 @@ class ResearchSubject with Resource, _$ResearchSubject {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -1497,7 +1497,7 @@ class ResearchSubject with Resource, _$ResearchSubject {
     List<Identifier>? identifier,
 
     /// [status] The publication state of the resource (not of the subject).
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,

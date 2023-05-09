@@ -19,10 +19,10 @@ class Order with Resource, _$Order {
     @Default(Dstu2ResourceType.Order)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Order)
         Dstu2ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
-    Code? language,
+    FhirCode? language,
     Narrative? text,
     List<Resource>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -68,7 +68,7 @@ class Order with Resource, _$Order {
 class OrderWhen with _$OrderWhen {
   OrderWhen._();
   factory OrderWhen({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -114,10 +114,10 @@ class OrderResponse with Resource, _$OrderResponse {
     @Default(Dstu2ResourceType.OrderResponse)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.OrderResponse)
         Dstu2ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
-    Code? language,
+    FhirCode? language,
     Narrative? text,
     List<Resource>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -168,11 +168,11 @@ class CommunicationRequest with Resource, _$CommunicationRequest {
     @Default(Dstu2ResourceType.CommunicationRequest)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.CommunicationRequest)
         Dstu2ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -230,7 +230,7 @@ class CommunicationRequest with Resource, _$CommunicationRequest {
 class CommunicationRequestPayload with _$CommunicationRequestPayload {
   CommunicationRequestPayload._();
   factory CommunicationRequestPayload({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? contentString,
@@ -277,11 +277,11 @@ class DeviceUseRequest with Resource, _$DeviceUseRequest {
     @Default(Dstu2ResourceType.DeviceUseRequest)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceUseRequest)
         Dstu2ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -344,11 +344,11 @@ class DeviceUseStatement with Resource, _$DeviceUseStatement {
     @Default(Dstu2ResourceType.DeviceUseStatement)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceUseStatement)
         Dstu2ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,

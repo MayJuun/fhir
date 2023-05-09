@@ -165,7 +165,7 @@ class Communication with Resource, _$Communication {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -182,7 +182,7 @@ class Communication with Resource, _$Communication {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -221,7 +221,7 @@ class Communication with Resource, _$Communication {
     List<Reference>? inResponseTo,
 
     /// [status] The status of the transmission.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -233,7 +233,7 @@ class Communication with Resource, _$Communication {
     List<CodeableConcept>? category,
 
     /// [priority] Characterizes how quickly the planned or in progress communication must be addressed. Includes concepts such as stat, urgent, routine.
-    Code? priority,
+    FhirCode? priority,
 
     /// [priorityElement] ("_priority") Extensions for priority
     @JsonKey(name: '_priority') Element? priorityElement,
@@ -594,7 +594,7 @@ class CommunicationRequest with Resource, _$CommunicationRequest {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -611,7 +611,7 @@ class CommunicationRequest with Resource, _$CommunicationRequest {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -641,7 +641,7 @@ class CommunicationRequest with Resource, _$CommunicationRequest {
     Identifier? groupIdentifier,
 
     /// [status] The status of the proposal or order.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -650,7 +650,7 @@ class CommunicationRequest with Resource, _$CommunicationRequest {
     CodeableConcept? statusReason,
 
     /// [intent] Indicates the level of authority/intentionality associated with the CommunicationRequest and where the request fits into the workflow chain.
-    Code? intent,
+    FhirCode? intent,
 
     /// [intentElement] ("_intent") Extensions for intent
     @JsonKey(name: '_intent') Element? intentElement,
@@ -659,13 +659,13 @@ class CommunicationRequest with Resource, _$CommunicationRequest {
     List<CodeableConcept>? category,
 
     /// [priority] Characterizes how quickly the proposed act must be initiated. Includes concepts such as stat, urgent, routine.
-    Code? priority,
+    FhirCode? priority,
 
     /// [priorityElement] ("_priority") Extensions for priority
     @JsonKey(name: '_priority') Element? priorityElement,
 
     /// [doNotPerform] If true indicates that the CommunicationRequest is asking for the specified action to *not* occur.
-    Boolean? doNotPerform,
+    FhirBoolean? doNotPerform,
 
     /// [doNotPerformElement] ("_doNotPerform") Extensions for doNotPerform
     @JsonKey(name: '_doNotPerform') Element? doNotPerformElement,
@@ -997,7 +997,7 @@ class DeviceDispense with Resource, _$DeviceDispense {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -1014,7 +1014,7 @@ class DeviceDispense with Resource, _$DeviceDispense {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -1041,7 +1041,7 @@ class DeviceDispense with Resource, _$DeviceDispense {
     List<Reference>? partOf,
 
     /// [status] A code specifying the state of the set of dispense events.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -1428,7 +1428,7 @@ class DeviceRequest with Resource, _$DeviceRequest {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -1445,7 +1445,7 @@ class DeviceRequest with Resource, _$DeviceRequest {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -1484,25 +1484,25 @@ class DeviceRequest with Resource, _$DeviceRequest {
     Identifier? groupIdentifier,
 
     /// [status] The status of the request.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
 
     /// [intent] Whether the request is a proposal, plan, an original order or a reflex order.
-    Code? intent,
+    FhirCode? intent,
 
     /// [intentElement] ("_intent") Extensions for intent
     @JsonKey(name: '_intent') Element? intentElement,
 
     /// [priority] Indicates how quickly the request should be addressed with respect to other requests.
-    Code? priority,
+    FhirCode? priority,
 
     /// [priorityElement] ("_priority") Extensions for priority
     @JsonKey(name: '_priority') Element? priorityElement,
 
     /// [doNotPerform] If true, indicates that the provider is asking for the patient to either stop using or to not start using the specified device or category of devices. For example, the patient has undergone surgery and the provider is indicating that the patient should not wear contact lenses.
-    Boolean? doNotPerform,
+    FhirBoolean? doNotPerform,
 
     /// [doNotPerformElement] ("_doNotPerform") Extensions for doNotPerform
     @JsonKey(name: '_doNotPerform') Element? doNotPerformElement,
@@ -1511,7 +1511,7 @@ class DeviceRequest with Resource, _$DeviceRequest {
     required CodeableReference code,
 
     /// [quantity] The number of devices to be provided.
-    Integer? quantity,
+    FhirInteger? quantity,
 
     /// [quantityElement] ("_quantity") Extensions for quantity
     @JsonKey(name: '_quantity') Element? quantityElement,
@@ -1556,7 +1556,7 @@ class DeviceRequest with Resource, _$DeviceRequest {
     List<CodeableReference>? reason,
 
     /// [asNeeded] This status is to indicate whether the request is a PRN or may be given as needed.
-    Boolean? asNeeded,
+    FhirBoolean? asNeeded,
 
     /// [asNeededElement] ("_asNeeded") Extensions for asNeeded
     @JsonKey(name: '_asNeeded') Element? asNeededElement,
@@ -1699,7 +1699,7 @@ class DeviceRequestParameter with _$DeviceRequestParameter {
     Range? valueRange,
 
     /// [valueBoolean] The value of the device detail.
-    Boolean? valueBoolean,
+    FhirBoolean? valueBoolean,
 
     /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
@@ -1869,7 +1869,7 @@ class DeviceUsage with Resource, _$DeviceUsage {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -1886,7 +1886,7 @@ class DeviceUsage with Resource, _$DeviceUsage {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -1910,7 +1910,7 @@ class DeviceUsage with Resource, _$DeviceUsage {
     List<Reference>? basedOn,
 
     /// [status] A code representing the patient or other source's judgment about the state of the device used that this statement is about.  Generally this will be active or completed.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -2261,7 +2261,7 @@ class GuidanceResponse with Resource, _$GuidanceResponse {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -2278,7 +2278,7 @@ class GuidanceResponse with Resource, _$GuidanceResponse {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -2308,7 +2308,7 @@ class GuidanceResponse with Resource, _$GuidanceResponse {
     @JsonKey(name: '_moduleUri') Element? moduleUriElement,
 
     /// [moduleCanonical] An identifier, CodeableConcept or canonical reference to the guidance that was requested.
-    Canonical? moduleCanonical,
+    FhirCanonical? moduleCanonical,
 
     /// [moduleCanonicalElement] ("_moduleCanonical") Extensions for moduleCanonical
     @JsonKey(name: '_moduleCanonical') Element? moduleCanonicalElement,
@@ -2317,7 +2317,7 @@ class GuidanceResponse with Resource, _$GuidanceResponse {
     CodeableConcept? moduleCodeableConcept,
 
     /// [status] The status of the response. If the evaluation is completed successfully, the status will indicate success. However, in order to complete the evaluation, the engine may require more information. In this case, the status will be data-required, and the response will contain a description of the additional required information. If the evaluation completed successfully, but the engine determines that a potentially more accurate response could be provided if more data was available, the status will be data-requested, and the response will contain a description of the additional requested information.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -2490,7 +2490,7 @@ class InventoryReport with Resource, _$InventoryReport {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -2507,7 +2507,7 @@ class InventoryReport with Resource, _$InventoryReport {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -2528,13 +2528,13 @@ class InventoryReport with Resource, _$InventoryReport {
     List<Identifier>? identifier,
 
     /// [status] The status of the inventory check or notification - whether this is draft (e.g. the report is still pending some updates) or active.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
 
     /// [countType] Whether the report is about the current inventory count (snapshot) or a differential change in inventory (change).
-    Code? countType,
+    FhirCode? countType,
 
     /// [countTypeElement] ("_countType") Extensions for countType
     @JsonKey(name: '_countType') Element? countTypeElement,
@@ -2971,7 +2971,7 @@ class SupplyDelivery with Resource, _$SupplyDelivery {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -2988,7 +2988,7 @@ class SupplyDelivery with Resource, _$SupplyDelivery {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -3015,7 +3015,7 @@ class SupplyDelivery with Resource, _$SupplyDelivery {
     List<Reference>? partOf,
 
     /// [status] A code specifying the state of the dispense event.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -3325,7 +3325,7 @@ class SupplyRequest with Resource, _$SupplyRequest {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -3342,7 +3342,7 @@ class SupplyRequest with Resource, _$SupplyRequest {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -3363,7 +3363,7 @@ class SupplyRequest with Resource, _$SupplyRequest {
     List<Identifier>? identifier,
 
     /// [status] Status of the supply request.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -3375,7 +3375,7 @@ class SupplyRequest with Resource, _$SupplyRequest {
     CodeableConcept? category,
 
     /// [priority] Indicates how quickly this SupplyRequest should be addressed with respect to other requests.
-    Code? priority,
+    FhirCode? priority,
 
     /// [priorityElement] ("_priority") Extensions for priority
     @JsonKey(name: '_priority') Element? priorityElement,
@@ -3548,7 +3548,7 @@ class SupplyRequestParameter with _$SupplyRequestParameter {
     Range? valueRange,
 
     /// [valueBoolean] The value of the device detail.
-    Boolean? valueBoolean,
+    FhirBoolean? valueBoolean,
 
     /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,

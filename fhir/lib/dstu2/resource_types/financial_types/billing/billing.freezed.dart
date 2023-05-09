@@ -22,12 +22,12 @@ Account _$AccountFromJson(Map<String, dynamic> json) {
 mixin _$Account {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Account)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -68,12 +68,12 @@ abstract class $AccountCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Account)
           Dstu2ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -179,7 +179,7 @@ class _$AccountCopyWithImpl<$Res, $Val extends Account>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -438,12 +438,12 @@ abstract class _$$_AccountCopyWith<$Res> implements $AccountCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Account)
           Dstu2ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -560,7 +560,7 @@ class __$$_AccountCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -700,7 +700,7 @@ class _$_Account extends _Account {
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
-  final Code? language;
+  final FhirCode? language;
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
@@ -886,7 +886,7 @@ abstract class _Account extends Account {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -920,7 +920,7 @@ abstract class _Account extends Account {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Account)
   Dstu2ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -929,7 +929,7 @@ abstract class _Account extends Account {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
-  Code? get language;
+  FhirCode? get language;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;
@@ -988,12 +988,12 @@ Claim _$ClaimFromJson(Map<String, dynamic> json) {
 mixin _$Claim {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Claim)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -1031,7 +1031,7 @@ mixin _$Claim {
   List<ClaimCoverage>? get coverage => throw _privateConstructorUsedError;
   List<Coding>? get exception => throw _privateConstructorUsedError;
   String? get school => throw _privateConstructorUsedError;
-  Date? get accident => throw _privateConstructorUsedError;
+  FhirDate? get accident => throw _privateConstructorUsedError;
   Coding? get accidentType => throw _privateConstructorUsedError;
   List<Coding>? get interventionException => throw _privateConstructorUsedError;
   List<ClaimItem>? get item => throw _privateConstructorUsedError;
@@ -1052,12 +1052,12 @@ abstract class $ClaimCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Claim)
           Dstu2ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -1094,7 +1094,7 @@ abstract class $ClaimCopyWith<$Res> {
       List<ClaimCoverage>? coverage,
       List<Coding>? exception,
       String? school,
-      Date? accident,
+      FhirDate? accident,
       Coding? accidentType,
       List<Coding>? interventionException,
       List<ClaimItem>? item,
@@ -1204,7 +1204,7 @@ class _$ClaimCopyWithImpl<$Res, $Val extends Claim>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -1610,12 +1610,12 @@ abstract class _$$_ClaimCopyWith<$Res> implements $ClaimCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Claim)
           Dstu2ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -1652,7 +1652,7 @@ abstract class _$$_ClaimCopyWith<$Res> implements $ClaimCopyWith<$Res> {
       List<ClaimCoverage>? coverage,
       List<Coding>? exception,
       String? school,
-      Date? accident,
+      FhirDate? accident,
       Coding? accidentType,
       List<Coding>? interventionException,
       List<ClaimItem>? item,
@@ -1779,7 +1779,7 @@ class __$$_ClaimCopyWithImpl<$Res> extends _$ClaimCopyWithImpl<$Res, _$_Claim>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -2012,7 +2012,7 @@ class _$_Claim extends _Claim {
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
-  final Code? language;
+  final FhirCode? language;
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
@@ -2343,7 +2343,7 @@ abstract class _Claim extends Claim {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -2394,7 +2394,7 @@ abstract class _Claim extends Claim {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Claim)
   Dstu2ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -2403,7 +2403,7 @@ abstract class _Claim extends Claim {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
-  Code? get language;
+  FhirCode? get language;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;
@@ -2471,7 +2471,7 @@ abstract class _Claim extends Claim {
   @override
   String? get school;
   @override
-  Date? get accident;
+  FhirDate? get accident;
   @override
   Coding? get accidentType;
   @override
@@ -2494,7 +2494,7 @@ ClaimPayee _$ClaimPayeeFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ClaimPayee {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -2827,7 +2827,7 @@ abstract class _ClaimPayee extends ClaimPayee {
       _$_ClaimPayee.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -2853,7 +2853,7 @@ ClaimDiagnosis _$ClaimDiagnosisFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ClaimDiagnosis {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -3136,7 +3136,7 @@ abstract class _ClaimDiagnosis extends ClaimDiagnosis {
       _$_ClaimDiagnosis.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -3161,7 +3161,7 @@ ClaimCoverage _$ClaimCoverageFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ClaimCoverage {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -3576,7 +3576,7 @@ abstract class _ClaimCoverage extends ClaimCoverage {
       _$_ClaimCoverage.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -3610,7 +3610,7 @@ ClaimItem _$ClaimItemFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ClaimItem {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -3624,13 +3624,13 @@ mixin _$ClaimItem {
   Coding get service => throw _privateConstructorUsedError;
   @JsonKey(name: '_servicedDate')
   Element? get servicedDateElement => throw _privateConstructorUsedError;
-  Date? get serviceDate => throw _privateConstructorUsedError;
+  FhirDate? get serviceDate => throw _privateConstructorUsedError;
   Quantity? get quantity => throw _privateConstructorUsedError;
   Quantity? get unitPrice => throw _privateConstructorUsedError;
-  Decimal? get factor => throw _privateConstructorUsedError;
+  FhirDecimal? get factor => throw _privateConstructorUsedError;
   @JsonKey(name: '_factor')
   Element? get factorElement => throw _privateConstructorUsedError;
-  Decimal? get points => throw _privateConstructorUsedError;
+  FhirDecimal? get points => throw _privateConstructorUsedError;
   Quantity? get net => throw _privateConstructorUsedError;
   Coding? get udi => throw _privateConstructorUsedError;
   Coding? get bodySite => throw _privateConstructorUsedError;
@@ -3661,12 +3661,12 @@ abstract class $ClaimItemCopyWith<$Res> {
       List<PositiveInt>? diagnosisLinkId,
       Coding service,
       @JsonKey(name: '_servicedDate') Element? servicedDateElement,
-      Date? serviceDate,
+      FhirDate? serviceDate,
       Quantity? quantity,
       Quantity? unitPrice,
-      Decimal? factor,
+      FhirDecimal? factor,
       @JsonKey(name: '_factor') Element? factorElement,
-      Decimal? points,
+      FhirDecimal? points,
       Quantity? net,
       Coding? udi,
       Coding? bodySite,
@@ -3977,12 +3977,12 @@ abstract class _$$_ClaimItemCopyWith<$Res> implements $ClaimItemCopyWith<$Res> {
       List<PositiveInt>? diagnosisLinkId,
       Coding service,
       @JsonKey(name: '_servicedDate') Element? servicedDateElement,
-      Date? serviceDate,
+      FhirDate? serviceDate,
       Quantity? quantity,
       Quantity? unitPrice,
-      Decimal? factor,
+      FhirDecimal? factor,
       @JsonKey(name: '_factor') Element? factorElement,
-      Decimal? points,
+      FhirDecimal? points,
       Quantity? net,
       Coding? udi,
       Coding? bodySite,
@@ -4409,7 +4409,7 @@ abstract class _ClaimItem extends ClaimItem {
       _$_ClaimItem.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -4432,18 +4432,18 @@ abstract class _ClaimItem extends ClaimItem {
   @JsonKey(name: '_servicedDate')
   Element? get servicedDateElement;
   @override
-  Date? get serviceDate;
+  FhirDate? get serviceDate;
   @override
   Quantity? get quantity;
   @override
   Quantity? get unitPrice;
   @override
-  Decimal? get factor;
+  FhirDecimal? get factor;
   @override
   @JsonKey(name: '_factor')
   Element? get factorElement;
   @override
-  Decimal? get points;
+  FhirDecimal? get points;
   @override
   Quantity? get net;
   @override
@@ -4470,7 +4470,7 @@ ClaimItemDetail _$ClaimItemDetailFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ClaimItemDetail {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -4482,10 +4482,10 @@ mixin _$ClaimItemDetail {
   Coding get service => throw _privateConstructorUsedError;
   Quantity? get quantity => throw _privateConstructorUsedError;
   Quantity? get unitPrice => throw _privateConstructorUsedError;
-  Decimal? get factor => throw _privateConstructorUsedError;
+  FhirDecimal? get factor => throw _privateConstructorUsedError;
   @JsonKey(name: '_factor')
   Element? get factorElement => throw _privateConstructorUsedError;
-  Decimal? get points => throw _privateConstructorUsedError;
+  FhirDecimal? get points => throw _privateConstructorUsedError;
   Quantity? get net => throw _privateConstructorUsedError;
   Coding? get udi => throw _privateConstructorUsedError;
   List<ClaimDetailSubDetail>? get subDetail =>
@@ -4513,9 +4513,9 @@ abstract class $ClaimItemDetailCopyWith<$Res> {
       Coding service,
       Quantity? quantity,
       Quantity? unitPrice,
-      Decimal? factor,
+      FhirDecimal? factor,
       @JsonKey(name: '_factor') Element? factorElement,
-      Decimal? points,
+      FhirDecimal? points,
       Quantity? net,
       Coding? udi,
       List<ClaimDetailSubDetail>? subDetail});
@@ -4730,9 +4730,9 @@ abstract class _$$_ClaimItemDetailCopyWith<$Res>
       Coding service,
       Quantity? quantity,
       Quantity? unitPrice,
-      Decimal? factor,
+      FhirDecimal? factor,
       @JsonKey(name: '_factor') Element? factorElement,
-      Decimal? points,
+      FhirDecimal? points,
       Quantity? net,
       Coding? udi,
       List<ClaimDetailSubDetail>? subDetail});
@@ -5024,7 +5024,7 @@ abstract class _ClaimItemDetail extends ClaimItemDetail {
       _$_ClaimItemDetail.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -5044,12 +5044,12 @@ abstract class _ClaimItemDetail extends ClaimItemDetail {
   @override
   Quantity? get unitPrice;
   @override
-  Decimal? get factor;
+  FhirDecimal? get factor;
   @override
   @JsonKey(name: '_factor')
   Element? get factorElement;
   @override
-  Decimal? get points;
+  FhirDecimal? get points;
   @override
   Quantity? get net;
   @override
@@ -5068,7 +5068,7 @@ ClaimDetailSubDetail _$ClaimDetailSubDetailFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ClaimDetailSubDetail {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -5080,10 +5080,10 @@ mixin _$ClaimDetailSubDetail {
   Coding get service => throw _privateConstructorUsedError;
   Quantity? get quantity => throw _privateConstructorUsedError;
   Quantity? get unitPrice => throw _privateConstructorUsedError;
-  Decimal? get factor => throw _privateConstructorUsedError;
+  FhirDecimal? get factor => throw _privateConstructorUsedError;
   @JsonKey(name: '_factor')
   Element? get factorElement => throw _privateConstructorUsedError;
-  Decimal? get points => throw _privateConstructorUsedError;
+  FhirDecimal? get points => throw _privateConstructorUsedError;
   Quantity? get net => throw _privateConstructorUsedError;
   Coding? get udi => throw _privateConstructorUsedError;
 
@@ -5109,9 +5109,9 @@ abstract class $ClaimDetailSubDetailCopyWith<$Res> {
       Coding service,
       Quantity? quantity,
       Quantity? unitPrice,
-      Decimal? factor,
+      FhirDecimal? factor,
       @JsonKey(name: '_factor') Element? factorElement,
-      Decimal? points,
+      FhirDecimal? points,
       Quantity? net,
       Coding? udi});
 
@@ -5321,9 +5321,9 @@ abstract class _$$_ClaimDetailSubDetailCopyWith<$Res>
       Coding service,
       Quantity? quantity,
       Quantity? unitPrice,
-      Decimal? factor,
+      FhirDecimal? factor,
       @JsonKey(name: '_factor') Element? factorElement,
-      Decimal? points,
+      FhirDecimal? points,
       Quantity? net,
       Coding? udi});
 
@@ -5595,7 +5595,7 @@ abstract class _ClaimDetailSubDetail extends ClaimDetailSubDetail {
       _$_ClaimDetailSubDetail.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -5615,12 +5615,12 @@ abstract class _ClaimDetailSubDetail extends ClaimDetailSubDetail {
   @override
   Quantity? get unitPrice;
   @override
-  Decimal? get factor;
+  FhirDecimal? get factor;
   @override
   @JsonKey(name: '_factor')
   Element? get factorElement;
   @override
-  Decimal? get points;
+  FhirDecimal? get points;
   @override
   Quantity? get net;
   @override
@@ -5637,13 +5637,13 @@ ClaimItemProsthesis _$ClaimItemProsthesisFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ClaimItemProsthesis {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  Boolean? get initial => throw _privateConstructorUsedError;
-  Date? get priorDate => throw _privateConstructorUsedError;
+  FhirBoolean? get initial => throw _privateConstructorUsedError;
+  FhirDate? get priorDate => throw _privateConstructorUsedError;
   Coding? get priorMaterial => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -5662,8 +5662,8 @@ abstract class $ClaimItemProsthesisCopyWith<$Res> {
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Boolean? initial,
-      Date? priorDate,
+      FhirBoolean? initial,
+      FhirDate? priorDate,
       Coding? priorMaterial});
 
   $CodingCopyWith<$Res>? get priorMaterial;
@@ -5705,7 +5705,7 @@ class _$ClaimItemProsthesisCopyWithImpl<$Res, $Val extends ClaimItemProsthesis>
       initial: freezed == initial
           ? _value.initial
           : initial // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       priorDate: freezed == priorDate
           ? _value.priorDate
           : priorDate // ignore: cast_nullable_to_non_nullable
@@ -5742,8 +5742,8 @@ abstract class _$$_ClaimItemProsthesisCopyWith<$Res>
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Boolean? initial,
-      Date? priorDate,
+      FhirBoolean? initial,
+      FhirDate? priorDate,
       Coding? priorMaterial});
 
   @override
@@ -5784,7 +5784,7 @@ class __$$_ClaimItemProsthesisCopyWithImpl<$Res>
       initial: freezed == initial
           ? _value.initial
           : initial // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       priorDate: freezed == priorDate
           ? _value.priorDate
           : priorDate // ignore: cast_nullable_to_non_nullable
@@ -5839,7 +5839,7 @@ class _$_ClaimItemProsthesis extends _ClaimItemProsthesis {
   }
 
   @override
-  final Boolean? initial;
+  final FhirBoolean? initial;
   @override
   final Date? priorDate;
   @override
@@ -5898,7 +5898,7 @@ abstract class _ClaimItemProsthesis extends ClaimItemProsthesis {
       {final Id? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final Boolean? initial,
+      final FhirBoolean? initial,
       final Date? priorDate,
       final Coding? priorMaterial}) = _$_ClaimItemProsthesis;
   _ClaimItemProsthesis._() : super._();
@@ -5907,16 +5907,16 @@ abstract class _ClaimItemProsthesis extends ClaimItemProsthesis {
       _$_ClaimItemProsthesis.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
   List<FhirExtension>? get modifierExtension;
   @override
-  Boolean? get initial;
+  FhirBoolean? get initial;
   @override
-  Date? get priorDate;
+  FhirDate? get priorDate;
   @override
   Coding? get priorMaterial;
   @override
@@ -5931,14 +5931,14 @@ ClaimMissingTeeth _$ClaimMissingTeethFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ClaimMissingTeeth {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   Coding get tooth => throw _privateConstructorUsedError;
   Coding? get reason => throw _privateConstructorUsedError;
-  Date? get extractionDate => throw _privateConstructorUsedError;
+  FhirDate? get extractionDate => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -5958,7 +5958,7 @@ abstract class $ClaimMissingTeethCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       Coding tooth,
       Coding? reason,
-      Date? extractionDate});
+      FhirDate? extractionDate});
 
   $CodingCopyWith<$Res> get tooth;
   $CodingCopyWith<$Res>? get reason;
@@ -6047,7 +6047,7 @@ abstract class _$$_ClaimMissingTeethCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       Coding tooth,
       Coding? reason,
-      Date? extractionDate});
+      FhirDate? extractionDate});
 
   @override
   $CodingCopyWith<$Res> get tooth;
@@ -6211,7 +6211,7 @@ abstract class _ClaimMissingTeeth extends ClaimMissingTeeth {
       _$_ClaimMissingTeeth.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -6222,7 +6222,7 @@ abstract class _ClaimMissingTeeth extends ClaimMissingTeeth {
   @override
   Coding? get reason;
   @override
-  Date? get extractionDate;
+  FhirDate? get extractionDate;
   @override
   @JsonKey(ignore: true)
   _$$_ClaimMissingTeethCopyWith<_$_ClaimMissingTeeth> get copyWith =>
@@ -6237,12 +6237,12 @@ ClaimResponse _$ClaimResponseFromJson(Map<String, dynamic> json) {
 mixin _$ClaimResponse {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.ClaimResponse)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -6277,7 +6277,7 @@ mixin _$ClaimResponse {
   Quantity? get totalBenefit => throw _privateConstructorUsedError;
   Quantity? get paymentAdjustment => throw _privateConstructorUsedError;
   Coding? get paymentAdjustmentReason => throw _privateConstructorUsedError;
-  Date? get paymentDate => throw _privateConstructorUsedError;
+  FhirDate? get paymentDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_paymentDate')
   Element? get paymentDateElement => throw _privateConstructorUsedError;
   Quantity? get paymentAmount => throw _privateConstructorUsedError;
@@ -6303,12 +6303,12 @@ abstract class $ClaimResponseCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ClaimResponse)
           Dstu2ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -6342,7 +6342,7 @@ abstract class $ClaimResponseCopyWith<$Res> {
       Quantity? totalBenefit,
       Quantity? paymentAdjustment,
       Coding? paymentAdjustmentReason,
-      Date? paymentDate,
+      FhirDate? paymentDate,
       @JsonKey(name: '_paymentDate')
           Element? paymentDateElement,
       Quantity? paymentAmount,
@@ -6457,7 +6457,7 @@ class _$ClaimResponseCopyWithImpl<$Res, $Val extends ClaimResponse>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -6901,12 +6901,12 @@ abstract class _$$_ClaimResponseCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ClaimResponse)
           Dstu2ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -6940,7 +6940,7 @@ abstract class _$$_ClaimResponseCopyWith<$Res>
       Quantity? totalBenefit,
       Quantity? paymentAdjustment,
       Coding? paymentAdjustmentReason,
-      Date? paymentDate,
+      FhirDate? paymentDate,
       @JsonKey(name: '_paymentDate')
           Element? paymentDateElement,
       Quantity? paymentAmount,
@@ -7077,7 +7077,7 @@ class __$$_ClaimResponseCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -7303,7 +7303,7 @@ class _$_ClaimResponse extends _ClaimResponse {
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
-  final Code? language;
+  final FhirCode? language;
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
@@ -7606,7 +7606,7 @@ abstract class _ClaimResponse extends ClaimResponse {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -7658,7 +7658,7 @@ abstract class _ClaimResponse extends ClaimResponse {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.ClaimResponse)
   Dstu2ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -7667,7 +7667,7 @@ abstract class _ClaimResponse extends ClaimResponse {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
-  Code? get language;
+  FhirCode? get language;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;
@@ -7729,7 +7729,7 @@ abstract class _ClaimResponse extends ClaimResponse {
   @override
   Coding? get paymentAdjustmentReason;
   @override
-  Date? get paymentDate;
+  FhirDate? get paymentDate;
   @override
   @JsonKey(name: '_paymentDate')
   Element? get paymentDateElement;
@@ -7757,7 +7757,7 @@ ClaimResponseItem _$ClaimResponseItemFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ClaimResponseItem {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -8121,7 +8121,7 @@ abstract class _ClaimResponseItem extends ClaimResponseItem {
       _$_ClaimResponseItem.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -8154,14 +8154,14 @@ ClaimResponseItemAdjudication _$ClaimResponseItemAdjudicationFromJson(
 
 /// @nodoc
 mixin _$ClaimResponseItemAdjudication {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   Coding get code => throw _privateConstructorUsedError;
   Quantity? get amount => throw _privateConstructorUsedError;
-  Decimal? get value => throw _privateConstructorUsedError;
+  FhirDecimal? get value => throw _privateConstructorUsedError;
   @JsonKey(name: '_value')
   Element? get valueElement => throw _privateConstructorUsedError;
 
@@ -8185,7 +8185,7 @@ abstract class $ClaimResponseItemAdjudicationCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       Coding code,
       Quantity? amount,
-      Decimal? value,
+      FhirDecimal? value,
       @JsonKey(name: '_value') Element? valueElement});
 
   $CodingCopyWith<$Res> get code;
@@ -8295,7 +8295,7 @@ abstract class _$$_ClaimResponseItemAdjudicationCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       Coding code,
       Quantity? amount,
-      Decimal? value,
+      FhirDecimal? value,
       @JsonKey(name: '_value') Element? valueElement});
 
   @override
@@ -8479,7 +8479,7 @@ abstract class _ClaimResponseItemAdjudication
       _$_ClaimResponseItemAdjudication.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -8490,7 +8490,7 @@ abstract class _ClaimResponseItemAdjudication
   @override
   Quantity? get amount;
   @override
-  Decimal? get value;
+  FhirDecimal? get value;
   @override
   @JsonKey(name: '_value')
   Element? get valueElement;
@@ -8507,7 +8507,7 @@ ClaimResponseItemDetail _$ClaimResponseItemDetailFromJson(
 
 /// @nodoc
 mixin _$ClaimResponseItemDetail {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -8784,7 +8784,7 @@ abstract class _ClaimResponseItemDetail extends ClaimResponseItemDetail {
       _$_ClaimResponseItemDetail.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -8809,7 +8809,7 @@ ClaimResponseDetailSubDetail _$ClaimResponseDetailSubDetailFromJson(
 
 /// @nodoc
 mixin _$ClaimResponseDetailSubDetail {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -9060,7 +9060,7 @@ abstract class _ClaimResponseDetailSubDetail
       _$_ClaimResponseDetailSubDetail.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -9082,7 +9082,7 @@ ClaimResponseAddItem _$ClaimResponseAddItemFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ClaimResponseAddItem {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -9466,7 +9466,7 @@ abstract class _ClaimResponseAddItem extends ClaimResponseAddItem {
       _$_ClaimResponseAddItem.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -9497,7 +9497,7 @@ ClaimResponseAddItemDetail _$ClaimResponseAddItemDetailFromJson(
 
 /// @nodoc
 mixin _$ClaimResponseAddItemDetail {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -9792,7 +9792,7 @@ abstract class _ClaimResponseAddItemDetail extends ClaimResponseAddItemDetail {
       _$_ClaimResponseAddItemDetail.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -9816,7 +9816,7 @@ ClaimResponseError _$ClaimResponseErrorFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ClaimResponseError {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -10104,7 +10104,7 @@ abstract class _ClaimResponseError extends ClaimResponseError {
       _$_ClaimResponseError.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -10130,7 +10130,7 @@ ClaimResponseNote _$ClaimResponseNoteFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ClaimResponseNote {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -10510,7 +10510,7 @@ abstract class _ClaimResponseNote extends ClaimResponseNote {
       _$_ClaimResponseNote.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -10544,7 +10544,7 @@ ClaimResponseCoverage _$ClaimResponseCoverageFromJson(
 
 /// @nodoc
 mixin _$ClaimResponseCoverage {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -10961,7 +10961,7 @@ abstract class _ClaimResponseCoverage extends ClaimResponseCoverage {
       _$_ClaimResponseCoverage.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;

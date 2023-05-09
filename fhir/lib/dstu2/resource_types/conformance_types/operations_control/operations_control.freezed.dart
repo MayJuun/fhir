@@ -22,10 +22,10 @@ Conformance _$ConformanceFromJson(Map<String, dynamic> json) {
 mixin _$Conformance {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Conformance)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+   FhirCode? get language => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
   List<Resource>? get contained => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
@@ -39,7 +39,7 @@ mixin _$Conformance {
   String? get name => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: ConformanceStatus.unknown)
   ConformanceStatus? get status => throw _privateConstructorUsedError;
-  Boolean? get experimental => throw _privateConstructorUsedError;
+   FhirBoolean? get experimental => throw _privateConstructorUsedError;
   String? get publisher => throw _privateConstructorUsedError;
   List<ConformanceContact>? get contact => throw _privateConstructorUsedError;
   FhirDateTime get date => throw _privateConstructorUsedError;
@@ -81,10 +81,10 @@ abstract class $ConformanceCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Conformance)
           Dstu2ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
-      Code? language,
+       FhirCode? language,
       Narrative? text,
       List<Resource>? contained,
       @JsonKey(name: 'extension')
@@ -97,7 +97,7 @@ abstract class $ConformanceCopyWith<$Res> {
       String? name,
       @JsonKey(unknownEnumValue: ConformanceStatus.unknown)
           ConformanceStatus? status,
-      Boolean? experimental,
+       FhirBoolean? experimental,
       String? publisher,
       List<ConformanceContact>? contact,
       FhirDateTime date,
@@ -197,7 +197,7 @@ class _$ConformanceCopyWithImpl<$Res, $Val extends Conformance>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
@@ -237,7 +237,7 @@ class _$ConformanceCopyWithImpl<$Res, $Val extends Conformance>
       experimental: freezed == experimental
           ? _value.experimental
           : experimental // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       publisher: freezed == publisher
           ? _value.publisher
           : publisher // ignore: cast_nullable_to_non_nullable
@@ -410,10 +410,10 @@ abstract class _$$_ConformanceCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Conformance)
           Dstu2ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
-      Code? language,
+       FhirCode? language,
       Narrative? text,
       List<Resource>? contained,
       @JsonKey(name: 'extension')
@@ -426,7 +426,7 @@ abstract class _$$_ConformanceCopyWith<$Res>
       String? name,
       @JsonKey(unknownEnumValue: ConformanceStatus.unknown)
           ConformanceStatus? status,
-      Boolean? experimental,
+       FhirBoolean? experimental,
       String? publisher,
       List<ConformanceContact>? contact,
       FhirDateTime date,
@@ -531,7 +531,7 @@ class __$$_ConformanceCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
@@ -571,7 +571,7 @@ class __$$_ConformanceCopyWithImpl<$Res>
       experimental: freezed == experimental
           ? _value.experimental
           : experimental // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       publisher: freezed == publisher
           ? _value.publisher
           : publisher // ignore: cast_nullable_to_non_nullable
@@ -717,7 +717,7 @@ class _$_Conformance extends _Conformance {
   @override
   final FhirUri? implicitRules;
   @override
-  final Code? language;
+  final  FhirCode? language;
   @override
   final Narrative? text;
   final List<Resource>? _contained;
@@ -765,7 +765,7 @@ class _$_Conformance extends _Conformance {
   @JsonKey(unknownEnumValue: ConformanceStatus.unknown)
   final ConformanceStatus? status;
   @override
-  final Boolean? experimental;
+  final  FhirBoolean? experimental;
   @override
   final String? publisher;
   final List<ConformanceContact>? _contact;
@@ -976,7 +976,7 @@ abstract class _Conformance extends Conformance {
       final Id? id,
       final Meta? meta,
       final FhirUri? implicitRules,
-      final Code? language,
+      final  FhirCode? language,
       final Narrative? text,
       final List<Resource>? contained,
       @JsonKey(name: 'extension')
@@ -989,7 +989,7 @@ abstract class _Conformance extends Conformance {
       final String? name,
       @JsonKey(unknownEnumValue: ConformanceStatus.unknown)
           final ConformanceStatus? status,
-      final Boolean? experimental,
+      final  FhirBoolean? experimental,
       final String? publisher,
       final List<ConformanceContact>? contact,
       required final FhirDateTime date,
@@ -1021,13 +1021,13 @@ abstract class _Conformance extends Conformance {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Conformance)
   Dstu2ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
-  Code? get language;
+   FhirCode? get language;
   @override
   Narrative? get text;
   @override
@@ -1050,7 +1050,7 @@ abstract class _Conformance extends Conformance {
   @JsonKey(unknownEnumValue: ConformanceStatus.unknown)
   ConformanceStatus? get status;
   @override
-  Boolean? get experimental;
+   FhirBoolean? get experimental;
   @override
   String? get publisher;
   @override
@@ -1105,10 +1105,10 @@ CapabilityStatement _$CapabilityStatementFromJson(Map<String, dynamic> json) {
 mixin _$CapabilityStatement {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.CapabilityStatement)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+   FhirCode? get language => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
   List<Resource>? get contained => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
@@ -1122,7 +1122,7 @@ mixin _$CapabilityStatement {
   String? get name => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: ConformanceStatus.unknown)
   ConformanceStatus? get status => throw _privateConstructorUsedError;
-  Boolean? get experimental => throw _privateConstructorUsedError;
+   FhirBoolean? get experimental => throw _privateConstructorUsedError;
   String? get publisher => throw _privateConstructorUsedError;
   List<ConformanceContact>? get contact => throw _privateConstructorUsedError;
   FhirDateTime get date => throw _privateConstructorUsedError;
@@ -1164,10 +1164,10 @@ abstract class $CapabilityStatementCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.CapabilityStatement)
           Dstu2ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
-      Code? language,
+       FhirCode? language,
       Narrative? text,
       List<Resource>? contained,
       @JsonKey(name: 'extension')
@@ -1180,7 +1180,7 @@ abstract class $CapabilityStatementCopyWith<$Res> {
       String? name,
       @JsonKey(unknownEnumValue: ConformanceStatus.unknown)
           ConformanceStatus? status,
-      Boolean? experimental,
+       FhirBoolean? experimental,
       String? publisher,
       List<ConformanceContact>? contact,
       FhirDateTime date,
@@ -1280,7 +1280,7 @@ class _$CapabilityStatementCopyWithImpl<$Res, $Val extends CapabilityStatement>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
@@ -1320,7 +1320,7 @@ class _$CapabilityStatementCopyWithImpl<$Res, $Val extends CapabilityStatement>
       experimental: freezed == experimental
           ? _value.experimental
           : experimental // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       publisher: freezed == publisher
           ? _value.publisher
           : publisher // ignore: cast_nullable_to_non_nullable
@@ -1493,10 +1493,10 @@ abstract class _$$_CapabilityStatementCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.CapabilityStatement)
           Dstu2ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
-      Code? language,
+       FhirCode? language,
       Narrative? text,
       List<Resource>? contained,
       @JsonKey(name: 'extension')
@@ -1509,7 +1509,7 @@ abstract class _$$_CapabilityStatementCopyWith<$Res>
       String? name,
       @JsonKey(unknownEnumValue: ConformanceStatus.unknown)
           ConformanceStatus? status,
-      Boolean? experimental,
+       FhirBoolean? experimental,
       String? publisher,
       List<ConformanceContact>? contact,
       FhirDateTime date,
@@ -1614,7 +1614,7 @@ class __$$_CapabilityStatementCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
@@ -1654,7 +1654,7 @@ class __$$_CapabilityStatementCopyWithImpl<$Res>
       experimental: freezed == experimental
           ? _value.experimental
           : experimental // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       publisher: freezed == publisher
           ? _value.publisher
           : publisher // ignore: cast_nullable_to_non_nullable
@@ -1800,7 +1800,7 @@ class _$_CapabilityStatement extends _CapabilityStatement {
   @override
   final FhirUri? implicitRules;
   @override
-  final Code? language;
+  final  FhirCode? language;
   @override
   final Narrative? text;
   final List<Resource>? _contained;
@@ -1848,7 +1848,7 @@ class _$_CapabilityStatement extends _CapabilityStatement {
   @JsonKey(unknownEnumValue: ConformanceStatus.unknown)
   final ConformanceStatus? status;
   @override
-  final Boolean? experimental;
+  final  FhirBoolean? experimental;
   @override
   final String? publisher;
   final List<ConformanceContact>? _contact;
@@ -2060,7 +2060,7 @@ abstract class _CapabilityStatement extends CapabilityStatement {
       final Id? id,
       final Meta? meta,
       final FhirUri? implicitRules,
-      final Code? language,
+      final  FhirCode? language,
       final Narrative? text,
       final List<Resource>? contained,
       @JsonKey(name: 'extension')
@@ -2073,7 +2073,7 @@ abstract class _CapabilityStatement extends CapabilityStatement {
       final String? name,
       @JsonKey(unknownEnumValue: ConformanceStatus.unknown)
           final ConformanceStatus? status,
-      final Boolean? experimental,
+      final  FhirBoolean? experimental,
       final String? publisher,
       final List<ConformanceContact>? contact,
       required final FhirDateTime date,
@@ -2105,13 +2105,13 @@ abstract class _CapabilityStatement extends CapabilityStatement {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.CapabilityStatement)
   Dstu2ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
-  Code? get language;
+   FhirCode? get language;
   @override
   Narrative? get text;
   @override
@@ -2134,7 +2134,7 @@ abstract class _CapabilityStatement extends CapabilityStatement {
   @JsonKey(unknownEnumValue: ConformanceStatus.unknown)
   ConformanceStatus? get status;
   @override
-  Boolean? get experimental;
+   FhirBoolean? get experimental;
   @override
   String? get publisher;
   @override
@@ -2187,7 +2187,7 @@ ConformanceContact _$ConformanceContactFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ConformanceContact {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -2427,7 +2427,7 @@ abstract class _ConformanceContact extends ConformanceContact {
       _$_ConformanceContact.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -2449,7 +2449,7 @@ ConformanceSoftware _$ConformanceSoftwareFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ConformanceSoftware {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -2701,7 +2701,7 @@ abstract class _ConformanceSoftware extends ConformanceSoftware {
       _$_ConformanceSoftware.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -2726,7 +2726,7 @@ ConformanceImplementation _$ConformanceImplementationFromJson(
 
 /// @nodoc
 mixin _$ConformanceImplementation {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -2963,7 +2963,7 @@ abstract class _ConformanceImplementation extends ConformanceImplementation {
       _$_ConformanceImplementation.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -2985,7 +2985,7 @@ ConformanceRest _$ConformanceRestFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ConformanceRest {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -3512,7 +3512,7 @@ abstract class _ConformanceRest extends ConformanceRest {
       _$_ConformanceRest.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -3556,7 +3556,7 @@ ConformanceMessaging _$ConformanceMessagingFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ConformanceMessaging {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -3878,7 +3878,7 @@ abstract class _ConformanceMessaging extends ConformanceMessaging {
       _$_ConformanceMessaging.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -3907,7 +3907,7 @@ ConformanceDocument _$ConformanceDocumentFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ConformanceDocument {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -4208,7 +4208,7 @@ abstract class _ConformanceDocument extends ConformanceDocument {
       _$_ConformanceDocument.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -4237,12 +4237,12 @@ ConformanceRestSecurity _$ConformanceRestSecurityFromJson(
 
 /// @nodoc
 mixin _$ConformanceRestSecurity {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  Boolean? get cors => throw _privateConstructorUsedError;
+   FhirBoolean? get cors => throw _privateConstructorUsedError;
   @JsonKey(name: '_cors')
   Element? get corsElement => throw _privateConstructorUsedError;
   List<CodeableConcept>? get service => throw _privateConstructorUsedError;
@@ -4266,7 +4266,7 @@ abstract class $ConformanceRestSecurityCopyWith<$Res> {
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Boolean? cors,
+       FhirBoolean? cors,
       @JsonKey(name: '_cors') Element? corsElement,
       List<CodeableConcept>? service,
       String? description,
@@ -4314,7 +4314,7 @@ class _$ConformanceRestSecurityCopyWithImpl<$Res,
       cors: freezed == cors
           ? _value.cors
           : cors // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       corsElement: freezed == corsElement
           ? _value.corsElement
           : corsElement // ignore: cast_nullable_to_non_nullable
@@ -4359,7 +4359,7 @@ abstract class _$$_ConformanceRestSecurityCopyWith<$Res>
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Boolean? cors,
+       FhirBoolean? cors,
       @JsonKey(name: '_cors') Element? corsElement,
       List<CodeableConcept>? service,
       String? description,
@@ -4406,7 +4406,7 @@ class __$$_ConformanceRestSecurityCopyWithImpl<$Res>
       cors: freezed == cors
           ? _value.cors
           : cors // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       corsElement: freezed == corsElement
           ? _value.corsElement
           : corsElement // ignore: cast_nullable_to_non_nullable
@@ -4473,7 +4473,7 @@ class _$_ConformanceRestSecurity extends _ConformanceRestSecurity {
   }
 
   @override
-  final Boolean? cors;
+  final  FhirBoolean? cors;
   @override
   @JsonKey(name: '_cors')
   final Element? corsElement;
@@ -4558,7 +4558,7 @@ abstract class _ConformanceRestSecurity extends ConformanceRestSecurity {
           {final Id? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
-          final Boolean? cors,
+          final  FhirBoolean? cors,
           @JsonKey(name: '_cors') final Element? corsElement,
           final List<CodeableConcept>? service,
           final String? description,
@@ -4570,14 +4570,14 @@ abstract class _ConformanceRestSecurity extends ConformanceRestSecurity {
       _$_ConformanceRestSecurity.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
   List<FhirExtension>? get modifierExtension;
   @override
-  Boolean? get cors;
+   FhirBoolean? get cors;
   @override
   @JsonKey(name: '_cors')
   Element? get corsElement;
@@ -4600,7 +4600,7 @@ ConformanceRestResource _$ConformanceRestResourceFromJson(
 
 /// @nodoc
 mixin _$ConformanceRestResource {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -4616,14 +4616,14 @@ mixin _$ConformanceRestResource {
       throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: ResourceVersioning.unknown)
   ResourceVersioning? get versioning => throw _privateConstructorUsedError;
-  Boolean? get readHistory => throw _privateConstructorUsedError;
-  Boolean? get updateCreate => throw _privateConstructorUsedError;
+   FhirBoolean? get readHistory => throw _privateConstructorUsedError;
+   FhirBoolean? get updateCreate => throw _privateConstructorUsedError;
   @JsonKey(name: '_updateCreate')
   Element? get updateCreateElement => throw _privateConstructorUsedError;
-  Boolean? get conditionalCreate => throw _privateConstructorUsedError;
+   FhirBoolean? get conditionalCreate => throw _privateConstructorUsedError;
   @JsonKey(name: '_conditionalCreate')
   Element? get conditionalCreateElement => throw _privateConstructorUsedError;
-  Boolean? get conditionalUpdate => throw _privateConstructorUsedError;
+   FhirBoolean? get conditionalUpdate => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: ResourceConditionalDelete.unknown)
   ResourceConditionalDelete? get conditionalDelete =>
       throw _privateConstructorUsedError;
@@ -4661,14 +4661,14 @@ abstract class $ConformanceRestResourceCopyWith<$Res> {
           List<ConformanceResourceInteraction> interaction,
       @JsonKey(unknownEnumValue: ResourceVersioning.unknown)
           ResourceVersioning? versioning,
-      Boolean? readHistory,
-      Boolean? updateCreate,
+       FhirBoolean? readHistory,
+       FhirBoolean? updateCreate,
       @JsonKey(name: '_updateCreate')
           Element? updateCreateElement,
-      Boolean? conditionalCreate,
+       FhirBoolean? conditionalCreate,
       @JsonKey(name: '_conditionalCreate')
           Element? conditionalCreateElement,
-      Boolean? conditionalUpdate,
+       FhirBoolean? conditionalUpdate,
       @JsonKey(unknownEnumValue: ResourceConditionalDelete.unknown)
           ResourceConditionalDelete? conditionalDelete,
       @JsonKey(name: '_conditionalDelete')
@@ -4759,11 +4759,11 @@ class _$ConformanceRestResourceCopyWithImpl<$Res,
       readHistory: freezed == readHistory
           ? _value.readHistory
           : readHistory // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       updateCreate: freezed == updateCreate
           ? _value.updateCreate
           : updateCreate // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       updateCreateElement: freezed == updateCreateElement
           ? _value.updateCreateElement
           : updateCreateElement // ignore: cast_nullable_to_non_nullable
@@ -4771,7 +4771,7 @@ class _$ConformanceRestResourceCopyWithImpl<$Res,
       conditionalCreate: freezed == conditionalCreate
           ? _value.conditionalCreate
           : conditionalCreate // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       conditionalCreateElement: freezed == conditionalCreateElement
           ? _value.conditionalCreateElement
           : conditionalCreateElement // ignore: cast_nullable_to_non_nullable
@@ -4779,7 +4779,7 @@ class _$ConformanceRestResourceCopyWithImpl<$Res,
       conditionalUpdate: freezed == conditionalUpdate
           ? _value.conditionalUpdate
           : conditionalUpdate // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       conditionalDelete: freezed == conditionalDelete
           ? _value.conditionalDelete
           : conditionalDelete // ignore: cast_nullable_to_non_nullable
@@ -4887,14 +4887,14 @@ abstract class _$$_ConformanceRestResourceCopyWith<$Res>
           List<ConformanceResourceInteraction> interaction,
       @JsonKey(unknownEnumValue: ResourceVersioning.unknown)
           ResourceVersioning? versioning,
-      Boolean? readHistory,
-      Boolean? updateCreate,
+       FhirBoolean? readHistory,
+       FhirBoolean? updateCreate,
       @JsonKey(name: '_updateCreate')
           Element? updateCreateElement,
-      Boolean? conditionalCreate,
+       FhirBoolean? conditionalCreate,
       @JsonKey(name: '_conditionalCreate')
           Element? conditionalCreateElement,
-      Boolean? conditionalUpdate,
+       FhirBoolean? conditionalUpdate,
       @JsonKey(unknownEnumValue: ResourceConditionalDelete.unknown)
           ResourceConditionalDelete? conditionalDelete,
       @JsonKey(name: '_conditionalDelete')
@@ -4988,11 +4988,11 @@ class __$$_ConformanceRestResourceCopyWithImpl<$Res>
       readHistory: freezed == readHistory
           ? _value.readHistory
           : readHistory // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       updateCreate: freezed == updateCreate
           ? _value.updateCreate
           : updateCreate // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       updateCreateElement: freezed == updateCreateElement
           ? _value.updateCreateElement
           : updateCreateElement // ignore: cast_nullable_to_non_nullable
@@ -5000,7 +5000,7 @@ class __$$_ConformanceRestResourceCopyWithImpl<$Res>
       conditionalCreate: freezed == conditionalCreate
           ? _value.conditionalCreate
           : conditionalCreate // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       conditionalCreateElement: freezed == conditionalCreateElement
           ? _value.conditionalCreateElement
           : conditionalCreateElement // ignore: cast_nullable_to_non_nullable
@@ -5008,7 +5008,7 @@ class __$$_ConformanceRestResourceCopyWithImpl<$Res>
       conditionalUpdate: freezed == conditionalUpdate
           ? _value.conditionalUpdate
           : conditionalUpdate // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       conditionalDelete: freezed == conditionalDelete
           ? _value.conditionalDelete
           : conditionalDelete // ignore: cast_nullable_to_non_nullable
@@ -5133,19 +5133,19 @@ class _$_ConformanceRestResource extends _ConformanceRestResource {
   @JsonKey(unknownEnumValue: ResourceVersioning.unknown)
   final ResourceVersioning? versioning;
   @override
-  final Boolean? readHistory;
+  final  FhirBoolean? readHistory;
   @override
-  final Boolean? updateCreate;
+  final  FhirBoolean? updateCreate;
   @override
   @JsonKey(name: '_updateCreate')
   final Element? updateCreateElement;
   @override
-  final Boolean? conditionalCreate;
+  final  FhirBoolean? conditionalCreate;
   @override
   @JsonKey(name: '_conditionalCreate')
   final Element? conditionalCreateElement;
   @override
-  final Boolean? conditionalUpdate;
+  final  FhirBoolean? conditionalUpdate;
   @override
   @JsonKey(unknownEnumValue: ResourceConditionalDelete.unknown)
   final ResourceConditionalDelete? conditionalDelete;
@@ -5292,14 +5292,14 @@ abstract class _ConformanceRestResource extends ConformanceRestResource {
               required final List<ConformanceResourceInteraction> interaction,
           @JsonKey(unknownEnumValue: ResourceVersioning.unknown)
               final ResourceVersioning? versioning,
-          final Boolean? readHistory,
-          final Boolean? updateCreate,
+          final  FhirBoolean? readHistory,
+          final  FhirBoolean? updateCreate,
           @JsonKey(name: '_updateCreate')
               final Element? updateCreateElement,
-          final Boolean? conditionalCreate,
+          final  FhirBoolean? conditionalCreate,
           @JsonKey(name: '_conditionalCreate')
               final Element? conditionalCreateElement,
-          final Boolean? conditionalUpdate,
+          final  FhirBoolean? conditionalUpdate,
           @JsonKey(unknownEnumValue: ResourceConditionalDelete.unknown)
               final ResourceConditionalDelete? conditionalDelete,
           @JsonKey(name: '_conditionalDelete')
@@ -5314,7 +5314,7 @@ abstract class _ConformanceRestResource extends ConformanceRestResource {
       _$_ConformanceRestResource.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -5337,19 +5337,19 @@ abstract class _ConformanceRestResource extends ConformanceRestResource {
   @JsonKey(unknownEnumValue: ResourceVersioning.unknown)
   ResourceVersioning? get versioning;
   @override
-  Boolean? get readHistory;
+   FhirBoolean? get readHistory;
   @override
-  Boolean? get updateCreate;
+   FhirBoolean? get updateCreate;
   @override
   @JsonKey(name: '_updateCreate')
   Element? get updateCreateElement;
   @override
-  Boolean? get conditionalCreate;
+   FhirBoolean? get conditionalCreate;
   @override
   @JsonKey(name: '_conditionalCreate')
   Element? get conditionalCreateElement;
   @override
-  Boolean? get conditionalUpdate;
+   FhirBoolean? get conditionalUpdate;
   @override
   @JsonKey(unknownEnumValue: ResourceConditionalDelete.unknown)
   ResourceConditionalDelete? get conditionalDelete;
@@ -5375,7 +5375,7 @@ ConformanceResourceInteraction _$ConformanceResourceInteractionFromJson(
 
 /// @nodoc
 mixin _$ConformanceResourceInteraction {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -5627,7 +5627,7 @@ abstract class _ConformanceResourceInteraction
       _$_ConformanceResourceInteraction.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -5651,7 +5651,7 @@ ConformanceRestOperation _$ConformanceRestOperationFromJson(
 
 /// @nodoc
 mixin _$ConformanceRestOperation {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -5931,7 +5931,7 @@ abstract class _ConformanceRestOperation extends ConformanceRestOperation {
       _$_ConformanceRestOperation.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -5957,7 +5957,7 @@ ConformanceMessagingEndpoint _$ConformanceMessagingEndpointFromJson(
 
 /// @nodoc
 mixin _$ConformanceMessagingEndpoint {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -6248,7 +6248,7 @@ abstract class _ConformanceMessagingEndpoint
       _$_ConformanceMessagingEndpoint.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -6274,7 +6274,7 @@ ConformanceMessagingEvent _$ConformanceMessagingEventFromJson(
 
 /// @nodoc
 mixin _$ConformanceMessagingEvent {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -6688,7 +6688,7 @@ abstract class _ConformanceMessagingEvent extends ConformanceMessagingEvent {
       _$_ConformanceMessagingEvent.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -6726,13 +6726,13 @@ ConformanceSecurityCertificate _$ConformanceSecurityCertificateFromJson(
 
 /// @nodoc
 mixin _$ConformanceSecurityCertificate {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  Code? get type => throw _privateConstructorUsedError;
-  Base64Binary? get blob => throw _privateConstructorUsedError;
+   FhirCode? get type => throw _privateConstructorUsedError;
+  FhirBase64Binary?? get blob => throw _privateConstructorUsedError;
   @JsonKey(name: '_blob')
   Element? get blobElement => throw _privateConstructorUsedError;
 
@@ -6754,8 +6754,8 @@ abstract class $ConformanceSecurityCertificateCopyWith<$Res> {
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? type,
-      Base64Binary? blob,
+       FhirCode? type,
+  FhirBase64Binary?? blob,
       @JsonKey(name: '_blob') Element? blobElement});
 
   $ElementCopyWith<$Res>? get blobElement;
@@ -6798,11 +6798,11 @@ class _$ConformanceSecurityCertificateCopyWithImpl<$Res,
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       blob: freezed == blob
           ? _value.blob
           : blob // ignore: cast_nullable_to_non_nullable
-              as Base64Binary?,
+              as  FhirBase64Binary??,
       blobElement: freezed == blobElement
           ? _value.blobElement
           : blobElement // ignore: cast_nullable_to_non_nullable
@@ -6836,8 +6836,8 @@ abstract class _$$_ConformanceSecurityCertificateCopyWith<$Res>
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? type,
-      Base64Binary? blob,
+       FhirCode? type,
+  FhirBase64Binary?? blob,
       @JsonKey(name: '_blob') Element? blobElement});
 
   @override
@@ -6880,11 +6880,11 @@ class __$$_ConformanceSecurityCertificateCopyWithImpl<$Res>
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       blob: freezed == blob
           ? _value.blob
           : blob // ignore: cast_nullable_to_non_nullable
-              as Base64Binary?,
+              as  FhirBase64Binary??,
       blobElement: freezed == blobElement
           ? _value.blobElement
           : blobElement // ignore: cast_nullable_to_non_nullable
@@ -6937,9 +6937,9 @@ class _$_ConformanceSecurityCertificate
   }
 
   @override
-  final Code? type;
+  final  FhirCode? type;
   @override
-  final Base64Binary? blob;
+  final  FhirBase64Binary?? blob;
   @override
   @JsonKey(name: '_blob')
   final Element? blobElement;
@@ -6997,8 +6997,8 @@ abstract class _ConformanceSecurityCertificate
           {final Id? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
-          final Code? type,
-          final Base64Binary? blob,
+          final  FhirCode? type,
+          final  FhirBase64Binary?? blob,
           @JsonKey(name: '_blob') final Element? blobElement}) =
       _$_ConformanceSecurityCertificate;
   _ConformanceSecurityCertificate._() : super._();
@@ -7007,16 +7007,16 @@ abstract class _ConformanceSecurityCertificate
       _$_ConformanceSecurityCertificate.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
   List<FhirExtension>? get modifierExtension;
   @override
-  Code? get type;
+   FhirCode? get type;
   @override
-  Base64Binary? get blob;
+  FhirBase64Binary?? get blob;
   @override
   @JsonKey(name: '_blob')
   Element? get blobElement;
@@ -7033,7 +7033,7 @@ ConformanceRestInteraction _$ConformanceRestInteractionFromJson(
 
 /// @nodoc
 mixin _$ConformanceRestInteraction {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -7281,7 +7281,7 @@ abstract class _ConformanceRestInteraction extends ConformanceRestInteraction {
       _$_ConformanceRestInteraction.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -7305,7 +7305,7 @@ ConformanceResourceSearchParam _$ConformanceResourceSearchParamFromJson(
 
 /// @nodoc
 mixin _$ConformanceResourceSearchParam {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -7705,7 +7705,7 @@ abstract class _ConformanceResourceSearchParam
       _$_ConformanceResourceSearchParam.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -7743,10 +7743,10 @@ OperationDefinition _$OperationDefinitionFromJson(Map<String, dynamic> json) {
 mixin _$OperationDefinition {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.OperationDefinition)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+   FhirCode? get language => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
   List<Resource>? get contained => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
@@ -7760,14 +7760,14 @@ mixin _$OperationDefinition {
   OperationDefinitionStatus get status => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: OperationDefinitionKind.unknown)
   OperationDefinitionKind get kind => throw _privateConstructorUsedError;
-  Boolean? get experimental => throw _privateConstructorUsedError;
+   FhirBoolean? get experimental => throw _privateConstructorUsedError;
   String? get publisher => throw _privateConstructorUsedError;
   List<OperationDefinitionContact>? get contact =>
       throw _privateConstructorUsedError;
   FhirDateTime? get date => throw _privateConstructorUsedError;
   String? get description => throw _privateConstructorUsedError;
   String? get requirements => throw _privateConstructorUsedError;
-  Boolean? get idempotent => throw _privateConstructorUsedError;
+   FhirBoolean? get idempotent => throw _privateConstructorUsedError;
   Code get code => throw _privateConstructorUsedError;
   String? get notes => throw _privateConstructorUsedError;
   Reference? get base => throw _privateConstructorUsedError;
@@ -7792,10 +7792,10 @@ abstract class $OperationDefinitionCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.OperationDefinition)
           Dstu2ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
-      Code? language,
+       FhirCode? language,
       Narrative? text,
       List<Resource>? contained,
       @JsonKey(name: 'extension')
@@ -7808,13 +7808,13 @@ abstract class $OperationDefinitionCopyWith<$Res> {
           OperationDefinitionStatus status,
       @JsonKey(unknownEnumValue: OperationDefinitionKind.unknown)
           OperationDefinitionKind kind,
-      Boolean? experimental,
+       FhirBoolean? experimental,
       String? publisher,
       List<OperationDefinitionContact>? contact,
       FhirDateTime? date,
       String? description,
       String? requirements,
-      Boolean? idempotent,
+       FhirBoolean? idempotent,
       Code code,
       String? notes,
       Reference? base,
@@ -7890,7 +7890,7 @@ class _$OperationDefinitionCopyWithImpl<$Res, $Val extends OperationDefinition>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
@@ -7930,7 +7930,7 @@ class _$OperationDefinitionCopyWithImpl<$Res, $Val extends OperationDefinition>
       experimental: freezed == experimental
           ? _value.experimental
           : experimental // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       publisher: freezed == publisher
           ? _value.publisher
           : publisher // ignore: cast_nullable_to_non_nullable
@@ -7954,7 +7954,7 @@ class _$OperationDefinitionCopyWithImpl<$Res, $Val extends OperationDefinition>
       idempotent: freezed == idempotent
           ? _value.idempotent
           : idempotent // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       code: null == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
@@ -8034,10 +8034,10 @@ abstract class _$$_OperationDefinitionCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.OperationDefinition)
           Dstu2ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
-      Code? language,
+       FhirCode? language,
       Narrative? text,
       List<Resource>? contained,
       @JsonKey(name: 'extension')
@@ -8050,13 +8050,13 @@ abstract class _$$_OperationDefinitionCopyWith<$Res>
           OperationDefinitionStatus status,
       @JsonKey(unknownEnumValue: OperationDefinitionKind.unknown)
           OperationDefinitionKind kind,
-      Boolean? experimental,
+       FhirBoolean? experimental,
       String? publisher,
       List<OperationDefinitionContact>? contact,
       FhirDateTime? date,
       String? description,
       String? requirements,
-      Boolean? idempotent,
+       FhirBoolean? idempotent,
       Code code,
       String? notes,
       Reference? base,
@@ -8133,7 +8133,7 @@ class __$$_OperationDefinitionCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
@@ -8173,7 +8173,7 @@ class __$$_OperationDefinitionCopyWithImpl<$Res>
       experimental: freezed == experimental
           ? _value.experimental
           : experimental // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       publisher: freezed == publisher
           ? _value.publisher
           : publisher // ignore: cast_nullable_to_non_nullable
@@ -8197,7 +8197,7 @@ class __$$_OperationDefinitionCopyWithImpl<$Res>
       idempotent: freezed == idempotent
           ? _value.idempotent
           : idempotent // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       code: null == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
@@ -8287,7 +8287,7 @@ class _$_OperationDefinition extends _OperationDefinition {
   @override
   final FhirUri? implicitRules;
   @override
-  final Code? language;
+  final  FhirCode? language;
   @override
   final Narrative? text;
   final List<Resource>? _contained;
@@ -8335,7 +8335,7 @@ class _$_OperationDefinition extends _OperationDefinition {
   @JsonKey(unknownEnumValue: OperationDefinitionKind.unknown)
   final OperationDefinitionKind kind;
   @override
-  final Boolean? experimental;
+  final  FhirBoolean? experimental;
   @override
   final String? publisher;
   final List<OperationDefinitionContact>? _contact;
@@ -8355,7 +8355,7 @@ class _$_OperationDefinition extends _OperationDefinition {
   @override
   final String? requirements;
   @override
-  final Boolean? idempotent;
+  final  FhirBoolean? idempotent;
   @override
   final Code code;
   @override
@@ -8495,7 +8495,7 @@ abstract class _OperationDefinition extends OperationDefinition {
       final Id? id,
       final Meta? meta,
       final FhirUri? implicitRules,
-      final Code? language,
+      final  FhirCode? language,
       final Narrative? text,
       final List<Resource>? contained,
       @JsonKey(name: 'extension')
@@ -8508,13 +8508,13 @@ abstract class _OperationDefinition extends OperationDefinition {
           required final OperationDefinitionStatus status,
       @JsonKey(unknownEnumValue: OperationDefinitionKind.unknown)
           required final OperationDefinitionKind kind,
-      final Boolean? experimental,
+      final  FhirBoolean? experimental,
       final String? publisher,
       final List<OperationDefinitionContact>? contact,
       final FhirDateTime? date,
       final String? description,
       final String? requirements,
-      final Boolean? idempotent,
+      final  FhirBoolean? idempotent,
       required final Code code,
       final String? notes,
       final Reference? base,
@@ -8531,13 +8531,13 @@ abstract class _OperationDefinition extends OperationDefinition {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.OperationDefinition)
   Dstu2ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
-  Code? get language;
+   FhirCode? get language;
   @override
   Narrative? get text;
   @override
@@ -8560,7 +8560,7 @@ abstract class _OperationDefinition extends OperationDefinition {
   @JsonKey(unknownEnumValue: OperationDefinitionKind.unknown)
   OperationDefinitionKind get kind;
   @override
-  Boolean? get experimental;
+   FhirBoolean? get experimental;
   @override
   String? get publisher;
   @override
@@ -8572,7 +8572,7 @@ abstract class _OperationDefinition extends OperationDefinition {
   @override
   String? get requirements;
   @override
-  Boolean? get idempotent;
+   FhirBoolean? get idempotent;
   @override
   Code get code;
   @override
@@ -8600,7 +8600,7 @@ OperationDefinitionContact _$OperationDefinitionContactFromJson(
 
 /// @nodoc
 mixin _$OperationDefinitionContact {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -8845,7 +8845,7 @@ abstract class _OperationDefinitionContact extends OperationDefinitionContact {
       _$_OperationDefinitionContact.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -8868,7 +8868,7 @@ OperationDefinitionParameter _$OperationDefinitionParameterFromJson(
 
 /// @nodoc
 mixin _$OperationDefinitionParameter {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -8881,7 +8881,7 @@ mixin _$OperationDefinitionParameter {
   Integer get min => throw _privateConstructorUsedError;
   String get max => throw _privateConstructorUsedError;
   String? get documentation => throw _privateConstructorUsedError;
-  Code? get type => throw _privateConstructorUsedError;
+   FhirCode? get type => throw _privateConstructorUsedError;
   Reference? get profile => throw _privateConstructorUsedError;
   OperationDefinitionParameterBinding? get binding =>
       throw _privateConstructorUsedError;
@@ -8913,7 +8913,7 @@ abstract class $OperationDefinitionParameterCopyWith<$Res> {
       Integer min,
       String max,
       String? documentation,
-      Code? type,
+       FhirCode? type,
       Reference? profile,
       OperationDefinitionParameterBinding? binding,
       @JsonKey(name: 'part') List<OperationDefinitionParameter>? part_});
@@ -8990,7 +8990,7 @@ class _$OperationDefinitionParameterCopyWithImpl<$Res,
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       profile: freezed == profile
           ? _value.profile
           : profile // ignore: cast_nullable_to_non_nullable
@@ -9051,7 +9051,7 @@ abstract class _$$_OperationDefinitionParameterCopyWith<$Res>
       Integer min,
       String max,
       String? documentation,
-      Code? type,
+       FhirCode? type,
       Reference? profile,
       OperationDefinitionParameterBinding? binding,
       @JsonKey(name: 'part') List<OperationDefinitionParameter>? part_});
@@ -9129,7 +9129,7 @@ class __$$_OperationDefinitionParameterCopyWithImpl<$Res>
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       profile: freezed == profile
           ? _value.profile
           : profile // ignore: cast_nullable_to_non_nullable
@@ -9219,7 +9219,7 @@ class _$_OperationDefinitionParameter extends _OperationDefinitionParameter {
   @override
   final String? documentation;
   @override
-  final Code? type;
+  final  FhirCode? type;
   @override
   final Reference? profile;
   @override
@@ -9312,7 +9312,7 @@ abstract class _OperationDefinitionParameter
           required final Integer min,
           required final String max,
           final String? documentation,
-          final Code? type,
+          final  FhirCode? type,
           final Reference? profile,
           final OperationDefinitionParameterBinding? binding,
           @JsonKey(name: 'part')
@@ -9324,7 +9324,7 @@ abstract class _OperationDefinitionParameter
       _$_OperationDefinitionParameter.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -9345,7 +9345,7 @@ abstract class _OperationDefinitionParameter
   @override
   String? get documentation;
   @override
-  Code? get type;
+   FhirCode? get type;
   @override
   Reference? get profile;
   @override
@@ -9366,7 +9366,7 @@ OperationDefinitionParameterBinding
 
 /// @nodoc
 mixin _$OperationDefinitionParameterBinding {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -9679,7 +9679,7 @@ abstract class _OperationDefinitionParameterBinding
       _$_OperationDefinitionParameterBinding.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -9710,10 +9710,10 @@ SearchParameter _$SearchParameterFromJson(Map<String, dynamic> json) {
 mixin _$SearchParameter {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.SearchParameter)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+   FhirCode? get language => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
   List<Resource>? get contained => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
@@ -9724,7 +9724,7 @@ mixin _$SearchParameter {
   String get name => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: SearchParameterStatus.unknown)
   SearchParameterStatus? get status => throw _privateConstructorUsedError;
-  Boolean? get experimental => throw _privateConstructorUsedError;
+   FhirBoolean? get experimental => throw _privateConstructorUsedError;
   String? get publisher => throw _privateConstructorUsedError;
   List<SearchParameterContact>? get contact =>
       throw _privateConstructorUsedError;
@@ -9733,7 +9733,7 @@ mixin _$SearchParameter {
   @JsonKey(name: '_requirements')
   Element? get requirementsElement => throw _privateConstructorUsedError;
   Code get code => throw _privateConstructorUsedError;
-  Code? get base => throw _privateConstructorUsedError;
+   FhirCode? get base => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: SearchParameterType.unknown)
   SearchParameterType get type => throw _privateConstructorUsedError;
   String? get description => throw _privateConstructorUsedError;
@@ -9758,10 +9758,10 @@ abstract class $SearchParameterCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.SearchParameter)
           Dstu2ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
-      Code? language,
+       FhirCode? language,
       Narrative? text,
       List<Resource>? contained,
       @JsonKey(name: 'extension')
@@ -9771,7 +9771,7 @@ abstract class $SearchParameterCopyWith<$Res> {
       String name,
       @JsonKey(unknownEnumValue: SearchParameterStatus.unknown)
           SearchParameterStatus? status,
-      Boolean? experimental,
+       FhirBoolean? experimental,
       String? publisher,
       List<SearchParameterContact>? contact,
       FhirDateTime? date,
@@ -9779,7 +9779,7 @@ abstract class $SearchParameterCopyWith<$Res> {
       @JsonKey(name: '_requirements')
           Element? requirementsElement,
       Code code,
-      Code? base,
+       FhirCode? base,
       @JsonKey(unknownEnumValue: SearchParameterType.unknown)
           SearchParameterType type,
       String? description,
@@ -9852,7 +9852,7 @@ class _$SearchParameterCopyWithImpl<$Res, $Val extends SearchParameter>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
@@ -9884,7 +9884,7 @@ class _$SearchParameterCopyWithImpl<$Res, $Val extends SearchParameter>
       experimental: freezed == experimental
           ? _value.experimental
           : experimental // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       publisher: freezed == publisher
           ? _value.publisher
           : publisher // ignore: cast_nullable_to_non_nullable
@@ -9912,7 +9912,7 @@ class _$SearchParameterCopyWithImpl<$Res, $Val extends SearchParameter>
       base: freezed == base
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
@@ -9984,10 +9984,10 @@ abstract class _$$_SearchParameterCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.SearchParameter)
           Dstu2ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
-      Code? language,
+       FhirCode? language,
       Narrative? text,
       List<Resource>? contained,
       @JsonKey(name: 'extension')
@@ -9997,7 +9997,7 @@ abstract class _$$_SearchParameterCopyWith<$Res>
       String name,
       @JsonKey(unknownEnumValue: SearchParameterStatus.unknown)
           SearchParameterStatus? status,
-      Boolean? experimental,
+       FhirBoolean? experimental,
       String? publisher,
       List<SearchParameterContact>? contact,
       FhirDateTime? date,
@@ -10005,7 +10005,7 @@ abstract class _$$_SearchParameterCopyWith<$Res>
       @JsonKey(name: '_requirements')
           Element? requirementsElement,
       Code code,
-      Code? base,
+       FhirCode? base,
       @JsonKey(unknownEnumValue: SearchParameterType.unknown)
           SearchParameterType type,
       String? description,
@@ -10079,7 +10079,7 @@ class __$$_SearchParameterCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
@@ -10111,7 +10111,7 @@ class __$$_SearchParameterCopyWithImpl<$Res>
       experimental: freezed == experimental
           ? _value.experimental
           : experimental // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as  FhirBoolean?,
       publisher: freezed == publisher
           ? _value.publisher
           : publisher // ignore: cast_nullable_to_non_nullable
@@ -10139,7 +10139,7 @@ class __$$_SearchParameterCopyWithImpl<$Res>
       base: freezed == base
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as  FhirCode?,
       type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
@@ -10219,7 +10219,7 @@ class _$_SearchParameter extends _SearchParameter {
   @override
   final FhirUri? implicitRules;
   @override
-  final Code? language;
+  final  FhirCode? language;
   @override
   final Narrative? text;
   final List<Resource>? _contained;
@@ -10262,7 +10262,7 @@ class _$_SearchParameter extends _SearchParameter {
   @JsonKey(unknownEnumValue: SearchParameterStatus.unknown)
   final SearchParameterStatus? status;
   @override
-  final Boolean? experimental;
+  final  FhirBoolean? experimental;
   @override
   final String? publisher;
   final List<SearchParameterContact>? _contact;
@@ -10285,7 +10285,7 @@ class _$_SearchParameter extends _SearchParameter {
   @override
   final Code code;
   @override
-  final Code? base;
+  final  FhirCode? base;
   @override
   @JsonKey(unknownEnumValue: SearchParameterType.unknown)
   final SearchParameterType type;
@@ -10407,7 +10407,7 @@ abstract class _SearchParameter extends SearchParameter {
       final Id? id,
       final Meta? meta,
       final FhirUri? implicitRules,
-      final Code? language,
+      final  FhirCode? language,
       final Narrative? text,
       final List<Resource>? contained,
       @JsonKey(name: 'extension')
@@ -10417,7 +10417,7 @@ abstract class _SearchParameter extends SearchParameter {
       required final String name,
       @JsonKey(unknownEnumValue: SearchParameterStatus.unknown)
           final SearchParameterStatus? status,
-      final Boolean? experimental,
+      final  FhirBoolean? experimental,
       final String? publisher,
       final List<SearchParameterContact>? contact,
       final FhirDateTime? date,
@@ -10425,7 +10425,7 @@ abstract class _SearchParameter extends SearchParameter {
       @JsonKey(name: '_requirements')
           final Element? requirementsElement,
       required final Code code,
-      final Code? base,
+      final  FhirCode? base,
       @JsonKey(unknownEnumValue: SearchParameterType.unknown)
           required final SearchParameterType type,
       final String? description,
@@ -10442,13 +10442,13 @@ abstract class _SearchParameter extends SearchParameter {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.SearchParameter)
   Dstu2ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
-  Code? get language;
+   FhirCode? get language;
   @override
   Narrative? get text;
   @override
@@ -10466,7 +10466,7 @@ abstract class _SearchParameter extends SearchParameter {
   @JsonKey(unknownEnumValue: SearchParameterStatus.unknown)
   SearchParameterStatus? get status;
   @override
-  Boolean? get experimental;
+   FhirBoolean? get experimental;
   @override
   String? get publisher;
   @override
@@ -10481,7 +10481,7 @@ abstract class _SearchParameter extends SearchParameter {
   @override
   Code get code;
   @override
-  Code? get base;
+   FhirCode? get base;
   @override
   @JsonKey(unknownEnumValue: SearchParameterType.unknown)
   SearchParameterType get type;
@@ -10507,7 +10507,7 @@ SearchParameterContact _$SearchParameterContactFromJson(
 
 /// @nodoc
 mixin _$SearchParameterContact {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -10749,7 +10749,7 @@ abstract class _SearchParameterContact extends SearchParameterContact {
       _$_SearchParameterContact.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;

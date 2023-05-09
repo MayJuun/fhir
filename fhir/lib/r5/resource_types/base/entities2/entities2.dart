@@ -133,7 +133,7 @@ class BiologicallyDerivedProduct with Resource, _$BiologicallyDerivedProduct {
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -151,7 +151,7 @@ class BiologicallyDerivedProduct with Resource, _$BiologicallyDerivedProduct {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -527,13 +527,13 @@ class BiologicallyDerivedProductProperty
     required Coding type,
 
     /// [valueBoolean] Property values.
-    Boolean? valueBoolean,
+    FhirBoolean? valueBoolean,
 
     /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
 
     /// [valueInteger] Property values.
-    Integer? valueInteger,
+    FhirInteger? valueInteger,
 
     /// [valueIntegerElement] ("_valueInteger") Extensions for valueInteger
     @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
@@ -793,7 +793,7 @@ class Device with Resource, _$Device {
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -811,7 +811,7 @@ class Device with Resource, _$Device {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -880,7 +880,7 @@ class Device with Resource, _$Device {
 
     /// [status] The Device record status. This is not the status of the device
     ///  like availability.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -1206,7 +1206,7 @@ class DeviceUdiCarrier with _$DeviceUdiCarrier {
     ///  Because of limitations on character sets in XML and the need to
     ///  round-trip JSON data through XML, AIDC Formats *SHALL* be base64
     ///  encoded.
-    Base64Binary? carrierAIDC,
+    FhirBase64Binary? carrierAIDC,
 
     /// [carrierAIDCElement] ("_carrierAIDC") Extensions for carrierAIDC
     @JsonKey(name: '_carrierAIDC') Element? carrierAIDCElement,
@@ -1220,7 +1220,7 @@ class DeviceUdiCarrier with _$DeviceUdiCarrier {
     @JsonKey(name: '_carrierHRF') Element? carrierHRFElement,
 
     /// [entryType] A coded entry to indicate how the data was entered.
-    Code? entryType,
+    FhirCode? entryType,
 
     /// [entryTypeElement] ("_entryType") Extensions for entryType
     @JsonKey(name: '_entryType') Element? entryTypeElement,
@@ -1344,7 +1344,7 @@ class DeviceDeviceName with _$DeviceDeviceName {
     ///  that the name is the name as given by the manufacturer, not the name
     ///  of the manufacturer. RegisteredName | UserFriendlyName |
     ///  PatientReportedName.
-    Code? type,
+    FhirCode? type,
 
     /// [typeElement] ("_type") Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
@@ -1759,14 +1759,14 @@ class DeviceProperty with _$DeviceProperty {
 
     /// [valueBoolean] Property value - can be a code, quantity, boolean,
     ///  string or attachment.
-    Boolean? valueBoolean,
+    FhirBoolean? valueBoolean,
 
     /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
 
     /// [valueInteger] Property value - can be a code, quantity, boolean,
     ///  string or attachment.
-    Integer? valueInteger,
+    FhirInteger? valueInteger,
 
     /// [valueIntegerElement] ("_valueInteger") Extensions for valueInteger
     @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
@@ -2199,7 +2199,7 @@ class DeviceMetric with Resource, _$DeviceMetric {
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -2217,7 +2217,7 @@ class DeviceMetric with Resource, _$DeviceMetric {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -2291,7 +2291,7 @@ class DeviceMetric with Resource, _$DeviceMetric {
 
     /// [operationalStatus] Indicates current operational state of the device.
     ///  For example: On, Off, Standby, etc.
-    Code? operationalStatus,
+    FhirCode? operationalStatus,
 
     /// [operationalStatusElement] ("_operationalStatus") Extensions for
     ///  operationalStatus
@@ -2303,7 +2303,7 @@ class DeviceMetric with Resource, _$DeviceMetric {
     ///  Pleth for example; the parameters are displayed in different
     ///  characteristic colors, such as HR-blue, BP-green, and PR and SpO2-
     ///  magenta.
-    Code? color,
+    FhirCode? color,
 
     /// [colorElement] ("_color") Extensions for color
     @JsonKey(name: '_color') Element? colorElement,
@@ -2311,7 +2311,7 @@ class DeviceMetric with Resource, _$DeviceMetric {
     /// [category] Indicates the category of the observation generation
     ///  process. A DeviceMetric can be for example a setting, measurement, or
     ///  calculation.
-    Code? category,
+    FhirCode? category,
 
     /// [categoryElement] ("_category") Extensions for category
     @JsonKey(name: '_category') Element? categoryElement,
@@ -2441,19 +2441,19 @@ class DeviceMetricCalibration with _$DeviceMetricCalibration {
     List<FhirExtension>? modifierExtension,
 
     /// [type] Describes the type of the calibration method.
-    Code? type,
+    FhirCode? type,
 
     /// [typeElement] ("_type") Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
 
     /// [state] Describes the state of the calibration.
-    Code? state,
+    FhirCode? state,
 
     /// [stateElement] ("_state") Extensions for state
     @JsonKey(name: '_state') Element? stateElement,
 
     /// [time] Describes the time last calibration has been performed.
-    Instant? time,
+    FhirInstant? time,
 
     /// [timeElement] ("_time") Extensions for time
     @JsonKey(name: '_time') Element? timeElement,
@@ -2590,7 +2590,7 @@ class NutritionProduct with Resource, _$NutritionProduct {
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -2608,7 +2608,7 @@ class NutritionProduct with Resource, _$NutritionProduct {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -2658,7 +2658,7 @@ class NutritionProduct with Resource, _$NutritionProduct {
     CodeableConcept? code,
 
     /// [status] The current state of the product.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -3050,7 +3050,7 @@ class NutritionProductCharacteristic with _$NutritionProductCharacteristic {
 
     /// [valueBase64Binary] The actual characteristic value corresponding to
     ///  the type.
-    Base64Binary? valueBase64Binary,
+    FhirBase64Binary? valueBase64Binary,
 
     /// [valueBase64BinaryElement] ("_valueBase64Binary") Extensions for
     ///  valueBase64Binary
@@ -3062,7 +3062,7 @@ class NutritionProductCharacteristic with _$NutritionProductCharacteristic {
 
     /// [valueBoolean] The actual characteristic value corresponding to the
     ///  type.
-    Boolean? valueBoolean,
+    FhirBoolean? valueBoolean,
 
     /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
@@ -3366,7 +3366,7 @@ class Substance with Resource, _$Substance {
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -3384,7 +3384,7 @@ class Substance with Resource, _$Substance {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -3436,13 +3436,13 @@ class Substance with Resource, _$Substance {
 
     /// [instance] A boolean to indicate if this an instance of a substance or
     ///  a kind of one (a definition).
-    Boolean? instance,
+    FhirBoolean? instance,
 
     /// [instanceElement] ("_instance") Extensions for instance
     @JsonKey(name: '_instance') Element? instanceElement,
 
     /// [status] A code to indicate if the substance is actively used.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,

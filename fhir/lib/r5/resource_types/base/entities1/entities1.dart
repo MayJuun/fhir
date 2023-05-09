@@ -145,7 +145,7 @@ class Endpoint with Resource, _$Endpoint {
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -163,7 +163,7 @@ class Endpoint with Resource, _$Endpoint {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -214,7 +214,7 @@ class Endpoint with Resource, _$Endpoint {
 
     /// [status] The endpoint status represents the general expected
     ///  availability of an endpoint.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -471,7 +471,7 @@ class HealthcareService with Resource, _$HealthcareService {
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -489,7 +489,7 @@ class HealthcareService with Resource, _$HealthcareService {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -540,7 +540,7 @@ class HealthcareService with Resource, _$HealthcareService {
     /// [active] This flag is used to mark the record to not be used. This is
     ///  not used when a center is closed for maintenance, or for holidays, the
     ///  notAvailable period is to be used for this.
-    Boolean? active,
+    FhirBoolean? active,
 
     /// [activeElement] ("_active") Extensions for active
     @JsonKey(name: '_active') Element? activeElement,
@@ -585,7 +585,7 @@ class HealthcareService with Resource, _$HealthcareService {
 
     /// [extraDetails] Extra details about the service that can't be placed in
     ///  the other fields.
-    Markdown? extraDetails,
+    FhirMarkdown? extraDetails,
 
     /// [extraDetailsElement] ("_extraDetails") Extensions for extraDetails
     @JsonKey(name: '_extraDetails') Element? extraDetailsElement,
@@ -633,7 +633,7 @@ class HealthcareService with Resource, _$HealthcareService {
     ///  will require an appointment for a particular service at a site to be
     ///  provided by the Organization. Indicates if an appointment is required
     ///  for access to this service.
-    Boolean? appointmentRequired,
+    FhirBoolean? appointmentRequired,
 
     /// [appointmentRequiredElement] ("_appointmentRequired") Extensions for
     ///  appointmentRequired
@@ -754,7 +754,7 @@ class HealthcareServiceEligibility with _$HealthcareServiceEligibility {
     CodeableConcept? code,
 
     /// [comment] Describes the eligibility conditions for the service.
-    Markdown? comment,
+    FhirMarkdown? comment,
 
     /// [commentElement] ("_comment") Extensions for comment
     @JsonKey(name: '_comment') Element? commentElement,
@@ -931,7 +931,7 @@ class Location with Resource, _$Location {
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -949,7 +949,7 @@ class Location with Resource, _$Location {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -1002,7 +1002,7 @@ class Location with Resource, _$Location {
     ///  resource, not the current value which may be covered by the
     ///  operationStatus, or by a schedule/slots if they are configured for the
     ///  location.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -1037,7 +1037,7 @@ class Location with Resource, _$Location {
 
     /// [mode] Indicates whether a resource instance represents a specific
     ///  location or a class of locations.
-    Code? mode,
+    FhirCode? mode,
 
     /// [modeElement] ("_mode") Extensions for mode
     @JsonKey(name: '_mode') Element? modeElement,
@@ -1206,7 +1206,7 @@ class LocationPosition with _$LocationPosition {
     /// [longitude] Longitude. The value domain and the interpretation are the
     ///  same as for the text of the longitude element in KML (see notes on
     ///  Location main page).
-    Decimal? longitude,
+    FhirDecimal? longitude,
 
     /// [longitudeElement] ("_longitude") Extensions for longitude
     @JsonKey(name: '_longitude') Element? longitudeElement,
@@ -1214,7 +1214,7 @@ class LocationPosition with _$LocationPosition {
     /// [latitude] Latitude. The value domain and the interpretation are the
     ///  same as for the text of the latitude element in KML (see notes on
     ///  Location main page).
-    Decimal? latitude,
+    FhirDecimal? latitude,
 
     /// [latitudeElement] ("_latitude") Extensions for latitude
     @JsonKey(name: '_latitude') Element? latitudeElement,
@@ -1222,7 +1222,7 @@ class LocationPosition with _$LocationPosition {
     /// [altitude] Altitude. The value domain and the interpretation are the
     ///  same as for the text of the altitude element in KML (see notes on
     ///  Location main page).
-    Decimal? altitude,
+    FhirDecimal? altitude,
 
     /// [altitudeElement] ("_altitude") Extensions for altitude
     @JsonKey(name: '_altitude') Element? altitudeElement,
@@ -1379,7 +1379,7 @@ class Organization with Resource, _$Organization {
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -1397,7 +1397,7 @@ class Organization with Resource, _$Organization {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -1447,7 +1447,7 @@ class Organization with Resource, _$Organization {
     List<Identifier>? identifier,
 
     /// [active] Whether the organization's record is still in active use.
-    Boolean? active,
+    FhirBoolean? active,
 
     /// [activeElement] ("_active") Extensions for active
     @JsonKey(name: '_active') Element? activeElement,
@@ -1767,7 +1767,7 @@ class OrganizationAffiliation with Resource, _$OrganizationAffiliation {
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -1785,7 +1785,7 @@ class OrganizationAffiliation with Resource, _$OrganizationAffiliation {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -1834,7 +1834,7 @@ class OrganizationAffiliation with Resource, _$OrganizationAffiliation {
     List<Identifier>? identifier,
 
     /// [active] Whether this organization affiliation record is in active use.
-    Boolean? active,
+    FhirBoolean? active,
 
     /// [activeElement] ("_active") Extensions for active
     @JsonKey(name: '_active') Element? activeElement,

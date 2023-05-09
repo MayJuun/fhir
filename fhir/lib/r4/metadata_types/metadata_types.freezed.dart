@@ -775,7 +775,7 @@ mixin _$DataRequirement {
   /// [type] The type of the required data, specified as the type name of a
   /// resource. For profiles, this value is set to the type of the base resource
   ///  of the profile.
-  Code? get type => throw _privateConstructorUsedError;
+  FhirCode? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
@@ -849,7 +849,7 @@ abstract class $DataRequirementCopyWith<$Res> {
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      Code? type,
+      FhirCode? type,
       @JsonKey(name: '_type') Element? typeElement,
       List<Canonical>? profile,
       CodeableConcept? subjectCodeableConcept,
@@ -908,7 +908,7 @@ class _$DataRequirementCopyWithImpl<$Res, $Val extends DataRequirement>
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       typeElement: freezed == typeElement
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -1017,7 +1017,7 @@ abstract class _$$_DataRequirementCopyWith<$Res>
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      Code? type,
+      FhirCode? type,
       @JsonKey(name: '_type') Element? typeElement,
       List<Canonical>? profile,
       CodeableConcept? subjectCodeableConcept,
@@ -1078,7 +1078,7 @@ class __$$_DataRequirementCopyWithImpl<$Res>
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       typeElement: freezed == typeElement
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -1190,7 +1190,7 @@ class _$_DataRequirement extends _DataRequirement {
   /// resource. For profiles, this value is set to the type of the base resource
   ///  of the profile.
   @override
-  final Code? type;
+  final FhirCode? type;
 
   /// [typeElement] Extensions for type
   @override
@@ -1399,7 +1399,7 @@ abstract class _DataRequirement extends DataRequirement {
   factory _DataRequirement(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final Code? type,
+      final FhirCode? type,
       @JsonKey(name: '_type') final Element? typeElement,
       final List<Canonical>? profile,
       final CodeableConcept? subjectCodeableConcept,
@@ -1436,7 +1436,7 @@ abstract class _DataRequirement extends DataRequirement {
   /// [type] The type of the required data, specified as the type name of a
   /// resource. For profiles, this value is set to the type of the base resource
   ///  of the profile.
-  Code? get type;
+  FhirCode? get type;
   @override
 
   /// [typeElement] Extensions for type
@@ -1571,7 +1571,7 @@ mixin _$DataRequirementCodeFilter {
   /// elements are additive. If valueSet is specified, the filter will return
   /// only those data items for which the value of the code-valued element
   ///  specified in the path is a member of the specified valueset.
-  Canonical? get valueSet => throw _privateConstructorUsedError;
+  FhirCanonical? get valueSet => throw _privateConstructorUsedError;
 
   /// [code] The codes for the code filter. If values are given, the filter
   /// will return only those data items for which the code-valued attribute
@@ -1600,7 +1600,7 @@ abstract class $DataRequirementCodeFilterCopyWith<$Res> {
       @JsonKey(name: '_path') Element? pathElement,
       String? searchParam,
       @JsonKey(name: '_searchParam') Element? searchParamElement,
-      Canonical? valueSet,
+      FhirCanonical? valueSet,
       List<Coding>? code});
 
   $ElementCopyWith<$Res>? get pathElement;
@@ -1663,7 +1663,7 @@ class _$DataRequirementCodeFilterCopyWithImpl<$Res,
       valueSet: freezed == valueSet
           ? _value.valueSet
           : valueSet // ignore: cast_nullable_to_non_nullable
-              as Canonical?,
+              as FhirCanonical?,
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
@@ -1713,7 +1713,7 @@ abstract class _$$_DataRequirementCodeFilterCopyWith<$Res>
       @JsonKey(name: '_path') Element? pathElement,
       String? searchParam,
       @JsonKey(name: '_searchParam') Element? searchParamElement,
-      Canonical? valueSet,
+      FhirCanonical? valueSet,
       List<Coding>? code});
 
   @override
@@ -1777,7 +1777,7 @@ class __$$_DataRequirementCodeFilterCopyWithImpl<$Res>
       valueSet: freezed == valueSet
           ? _value.valueSet
           : valueSet // ignore: cast_nullable_to_non_nullable
-              as Canonical?,
+              as FhirCanonical?,
       code: freezed == code
           ? _value._code
           : code // ignore: cast_nullable_to_non_nullable
@@ -1906,7 +1906,7 @@ class _$_DataRequirementCodeFilter extends _DataRequirementCodeFilter {
   /// only those data items for which the value of the code-valued element
   ///  specified in the path is a member of the specified valueset.
   @override
-  final Canonical? valueSet;
+  final FhirCanonical? valueSet;
 
   /// [code] The codes for the code filter. If values are given, the filter
   /// will return only those data items for which the code-valued attribute
@@ -1994,7 +1994,7 @@ abstract class _DataRequirementCodeFilter extends DataRequirementCodeFilter {
       @JsonKey(name: '_path') final Element? pathElement,
       final String? searchParam,
       @JsonKey(name: '_searchParam') final Element? searchParamElement,
-      final Canonical? valueSet,
+      final FhirCanonical? valueSet,
       final List<Coding>? code}) = _$_DataRequirementCodeFilter;
   _DataRequirementCodeFilter._() : super._();
 
@@ -2065,7 +2065,7 @@ abstract class _DataRequirementCodeFilter extends DataRequirementCodeFilter {
   /// elements are additive. If valueSet is specified, the filter will return
   /// only those data items for which the value of the code-valued element
   ///  specified in the path is a member of the specified valueset.
-  Canonical? get valueSet;
+  FhirCanonical? get valueSet;
   @override
 
   /// [code] The codes for the code filter. If values are given, the filter
@@ -3264,14 +3264,14 @@ mixin _$ParameterDefinition {
 
   /// [name] The name of the parameter used to allow access to the value of the
   ///  parameter in evaluation contexts.
-  Code? get name => throw _privateConstructorUsedError;
+  FhirCode? get name => throw _privateConstructorUsedError;
 
   /// [nameElement] Extensions for name
   @JsonKey(name: '_name')
   Element? get nameElement => throw _privateConstructorUsedError;
 
   /// [use] Whether the parameter is input or output for the module.
-  Code? get use => throw _privateConstructorUsedError;
+  FhirCode? get use => throw _privateConstructorUsedError;
 
   /// [useElement] Extensions for use
   @JsonKey(name: '_use')
@@ -3279,7 +3279,7 @@ mixin _$ParameterDefinition {
 
   /// [min] The minimum number of times this parameter SHALL appear in the
   ///  request or response.
-  Integer? get min => throw _privateConstructorUsedError;
+  FhirInteger? get min => throw _privateConstructorUsedError;
 
   /// [minElement] Extensions for min
   @JsonKey(name: '_min')
@@ -3302,7 +3302,7 @@ mixin _$ParameterDefinition {
   Element? get documentationElement => throw _privateConstructorUsedError;
 
   /// [type] The type of the parameter.
-  Code? get type => throw _privateConstructorUsedError;
+  FhirCode? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
@@ -3310,7 +3310,7 @@ mixin _$ParameterDefinition {
 
   /// [profile] If specified, this indicates a profile that the input data must
   ///  conform to, or that the output data will conform to.
-  Canonical? get profile => throw _privateConstructorUsedError;
+  FhirCanonical? get profile => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -3327,19 +3327,19 @@ abstract class $ParameterDefinitionCopyWith<$Res> {
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      Code? name,
+      FhirCode? name,
       @JsonKey(name: '_name') Element? nameElement,
-      Code? use,
+      FhirCode? use,
       @JsonKey(name: '_use') Element? useElement,
-      Integer? min,
+      FhirInteger? min,
       @JsonKey(name: '_min') Element? minElement,
       String? max,
       @JsonKey(name: '_max') Element? maxElement,
       String? documentation,
       @JsonKey(name: '_documentation') Element? documentationElement,
-      Code? type,
+      FhirCode? type,
       @JsonKey(name: '_type') Element? typeElement,
-      Canonical? profile});
+      FhirCanonical? profile});
 
   $ElementCopyWith<$Res>? get nameElement;
   $ElementCopyWith<$Res>? get useElement;
@@ -3390,7 +3390,7 @@ class _$ParameterDefinitionCopyWithImpl<$Res, $Val extends ParameterDefinition>
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       nameElement: freezed == nameElement
           ? _value.nameElement
           : nameElement // ignore: cast_nullable_to_non_nullable
@@ -3398,7 +3398,7 @@ class _$ParameterDefinitionCopyWithImpl<$Res, $Val extends ParameterDefinition>
       use: freezed == use
           ? _value.use
           : use // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       useElement: freezed == useElement
           ? _value.useElement
           : useElement // ignore: cast_nullable_to_non_nullable
@@ -3430,7 +3430,7 @@ class _$ParameterDefinitionCopyWithImpl<$Res, $Val extends ParameterDefinition>
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       typeElement: freezed == typeElement
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -3438,7 +3438,7 @@ class _$ParameterDefinitionCopyWithImpl<$Res, $Val extends ParameterDefinition>
       profile: freezed == profile
           ? _value.profile
           : profile // ignore: cast_nullable_to_non_nullable
-              as Canonical?,
+              as FhirCanonical?,
     ) as $Val);
   }
 
@@ -3526,19 +3526,19 @@ abstract class _$$_ParameterDefinitionCopyWith<$Res>
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      Code? name,
+      FhirCode? name,
       @JsonKey(name: '_name') Element? nameElement,
-      Code? use,
+      FhirCode? use,
       @JsonKey(name: '_use') Element? useElement,
-      Integer? min,
+      FhirInteger? min,
       @JsonKey(name: '_min') Element? minElement,
       String? max,
       @JsonKey(name: '_max') Element? maxElement,
       String? documentation,
       @JsonKey(name: '_documentation') Element? documentationElement,
-      Code? type,
+      FhirCode? type,
       @JsonKey(name: '_type') Element? typeElement,
-      Canonical? profile});
+      FhirCanonical? profile});
 
   @override
   $ElementCopyWith<$Res>? get nameElement;
@@ -3593,7 +3593,7 @@ class __$$_ParameterDefinitionCopyWithImpl<$Res>
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       nameElement: freezed == nameElement
           ? _value.nameElement
           : nameElement // ignore: cast_nullable_to_non_nullable
@@ -3601,7 +3601,7 @@ class __$$_ParameterDefinitionCopyWithImpl<$Res>
       use: freezed == use
           ? _value.use
           : use // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       useElement: freezed == useElement
           ? _value.useElement
           : useElement // ignore: cast_nullable_to_non_nullable
@@ -3633,7 +3633,7 @@ class __$$_ParameterDefinitionCopyWithImpl<$Res>
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       typeElement: freezed == typeElement
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -3641,7 +3641,7 @@ class __$$_ParameterDefinitionCopyWithImpl<$Res>
       profile: freezed == profile
           ? _value.profile
           : profile // ignore: cast_nullable_to_non_nullable
-              as Canonical?,
+              as FhirCanonical?,
     ));
   }
 }
@@ -3703,7 +3703,7 @@ class _$_ParameterDefinition extends _ParameterDefinition {
   /// [name] The name of the parameter used to allow access to the value of the
   ///  parameter in evaluation contexts.
   @override
-  final Code? name;
+  final FhirCode? name;
 
   /// [nameElement] Extensions for name
   @override
@@ -3712,7 +3712,7 @@ class _$_ParameterDefinition extends _ParameterDefinition {
 
   /// [use] Whether the parameter is input or output for the module.
   @override
-  final Code? use;
+  final FhirCode? use;
 
   /// [useElement] Extensions for use
   @override
@@ -3751,7 +3751,7 @@ class _$_ParameterDefinition extends _ParameterDefinition {
 
   /// [type] The type of the parameter.
   @override
-  final Code? type;
+  final FhirCode? type;
 
   /// [typeElement] Extensions for type
   @override
@@ -3761,7 +3761,7 @@ class _$_ParameterDefinition extends _ParameterDefinition {
   /// [profile] If specified, this indicates a profile that the input data must
   ///  conform to, or that the output data will conform to.
   @override
-  final Canonical? profile;
+  final FhirCanonical? profile;
 
   @override
   String toString() {
@@ -3837,9 +3837,9 @@ abstract class _ParameterDefinition extends ParameterDefinition {
   factory _ParameterDefinition(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final Code? name,
+      final FhirCode? name,
       @JsonKey(name: '_name') final Element? nameElement,
-      final Code? use,
+      final FhirCode? use,
       @JsonKey(name: '_use') final Element? useElement,
       final Integer? min,
       @JsonKey(name: '_min') final Element? minElement,
@@ -3847,9 +3847,9 @@ abstract class _ParameterDefinition extends ParameterDefinition {
       @JsonKey(name: '_max') final Element? maxElement,
       final String? documentation,
       @JsonKey(name: '_documentation') final Element? documentationElement,
-      final Code? type,
+      final FhirCode? type,
       @JsonKey(name: '_type') final Element? typeElement,
-      final Canonical? profile}) = _$_ParameterDefinition;
+      final FhirCanonical? profile}) = _$_ParameterDefinition;
   _ParameterDefinition._() : super._();
 
   factory _ParameterDefinition.fromJson(Map<String, dynamic> json) =
@@ -3874,7 +3874,7 @@ abstract class _ParameterDefinition extends ParameterDefinition {
 
   /// [name] The name of the parameter used to allow access to the value of the
   ///  parameter in evaluation contexts.
-  Code? get name;
+  FhirCode? get name;
   @override
 
   /// [nameElement] Extensions for name
@@ -3883,7 +3883,7 @@ abstract class _ParameterDefinition extends ParameterDefinition {
   @override
 
   /// [use] Whether the parameter is input or output for the module.
-  Code? get use;
+  FhirCode? get use;
   @override
 
   /// [useElement] Extensions for use
@@ -3893,7 +3893,7 @@ abstract class _ParameterDefinition extends ParameterDefinition {
 
   /// [min] The minimum number of times this parameter SHALL appear in the
   ///  request or response.
-  Integer? get min;
+  FhirInteger? get min;
   @override
 
   /// [minElement] Extensions for min
@@ -3922,7 +3922,7 @@ abstract class _ParameterDefinition extends ParameterDefinition {
   @override
 
   /// [type] The type of the parameter.
-  Code? get type;
+  FhirCode? get type;
   @override
 
   /// [typeElement] Extensions for type
@@ -3932,7 +3932,7 @@ abstract class _ParameterDefinition extends ParameterDefinition {
 
   /// [profile] If specified, this indicates a profile that the input data must
   ///  conform to, or that the output data will conform to.
-  Canonical? get profile;
+  FhirCanonical? get profile;
   @override
   @JsonKey(ignore: true)
   _$$_ParameterDefinitionCopyWith<_$_ParameterDefinition> get copyWith =>
@@ -3982,7 +3982,7 @@ mixin _$RelatedArtifact {
 
   /// [citation] A bibliographic citation for the related artifact. This text
   ///  SHOULD be formatted according to an accepted citation format.
-  Markdown? get citation => throw _privateConstructorUsedError;
+  FhirMarkdown? get citation => throw _privateConstructorUsedError;
 
   /// [citationElement] Extensions for citation
   @JsonKey(name: '_citation')
@@ -4002,7 +4002,7 @@ mixin _$RelatedArtifact {
 
   /// [resource] The related resource, such as a library, value set, profile,
   ///  or other knowledge resource.
-  Canonical? get resource => throw _privateConstructorUsedError;
+  FhirCanonical? get resource => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -4030,14 +4030,14 @@ abstract class $RelatedArtifactCopyWith<$Res> {
       String? display,
       @JsonKey(name: '_display')
           Element? displayElement,
-      Markdown? citation,
+      FhirMarkdown? citation,
       @JsonKey(name: '_citation')
           Element? citationElement,
       FhirUrl? url,
       @JsonKey(name: '_url')
           Element? urlElement,
       Attachment? document,
-      Canonical? resource});
+      FhirCanonical? resource});
 
   $ElementCopyWith<$Res>? get typeElement;
   $ElementCopyWith<$Res>? get labelElement;
@@ -4131,7 +4131,7 @@ class _$RelatedArtifactCopyWithImpl<$Res, $Val extends RelatedArtifact>
       resource: freezed == resource
           ? _value.resource
           : resource // ignore: cast_nullable_to_non_nullable
-              as Canonical?,
+              as FhirCanonical?,
     ) as $Val);
   }
 
@@ -4230,14 +4230,14 @@ abstract class _$$_RelatedArtifactCopyWith<$Res>
       String? display,
       @JsonKey(name: '_display')
           Element? displayElement,
-      Markdown? citation,
+      FhirMarkdown? citation,
       @JsonKey(name: '_citation')
           Element? citationElement,
       FhirUrl? url,
       @JsonKey(name: '_url')
           Element? urlElement,
       Attachment? document,
-      Canonical? resource});
+      FhirCanonical? resource});
 
   @override
   $ElementCopyWith<$Res>? get typeElement;
@@ -4335,7 +4335,7 @@ class __$$_RelatedArtifactCopyWithImpl<$Res>
       resource: freezed == resource
           ? _value.resource
           : resource // ignore: cast_nullable_to_non_nullable
-              as Canonical?,
+              as FhirCanonical?,
     ));
   }
 }
@@ -4450,7 +4450,7 @@ class _$_RelatedArtifact extends _RelatedArtifact {
   /// [resource] The related resource, such as a library, value set, profile,
   ///  or other knowledge resource.
   @override
-  final Canonical? resource;
+  final FhirCanonical? resource;
 
   @override
   String toString() {
@@ -4542,7 +4542,7 @@ abstract class _RelatedArtifact extends RelatedArtifact {
       @JsonKey(name: '_url')
           final Element? urlElement,
       final Attachment? document,
-      final Canonical? resource}) = _$_RelatedArtifact;
+      final FhirCanonical? resource}) = _$_RelatedArtifact;
   _RelatedArtifact._() : super._();
 
   factory _RelatedArtifact.fromJson(Map<String, dynamic> json) =
@@ -4595,7 +4595,7 @@ abstract class _RelatedArtifact extends RelatedArtifact {
 
   /// [citation] A bibliographic citation for the related artifact. This text
   ///  SHOULD be formatted according to an accepted citation format.
-  Markdown? get citation;
+  FhirMarkdown? get citation;
   @override
 
   /// [citationElement] Extensions for citation
@@ -4620,7 +4620,7 @@ abstract class _RelatedArtifact extends RelatedArtifact {
 
   /// [resource] The related resource, such as a library, value set, profile,
   ///  or other knowledge resource.
-  Canonical? get resource;
+  FhirCanonical? get resource;
   @override
   @JsonKey(ignore: true)
   _$$_RelatedArtifactCopyWith<_$_RelatedArtifact> get copyWith =>
@@ -4669,7 +4669,7 @@ mixin _$TriggerDefinition {
   Reference? get timingReference => throw _privateConstructorUsedError;
 
   /// [timingDate] The timing of the event (if this is a periodic trigger).
-  Date? get timingDate => throw _privateConstructorUsedError;
+  FhirDate? get timingDate => throw _privateConstructorUsedError;
 
   /// [timingDateElement] Extensions for timingDate
   @JsonKey(name: '_timingDate')
@@ -4717,7 +4717,7 @@ abstract class $TriggerDefinitionCopyWith<$Res> {
           Element? nameElement,
       Timing? timingTiming,
       Reference? timingReference,
-      Date? timingDate,
+      FhirDate? timingDate,
       @JsonKey(name: '_timingDate')
           Element? timingDateElement,
       FhirDateTime? timingDateTime,
@@ -4929,7 +4929,7 @@ abstract class _$$_TriggerDefinitionCopyWith<$Res>
           Element? nameElement,
       Timing? timingTiming,
       Reference? timingReference,
-      Date? timingDate,
+      FhirDate? timingDate,
       @JsonKey(name: '_timingDate')
           Element? timingDateElement,
       FhirDateTime? timingDateTime,
@@ -5308,7 +5308,7 @@ abstract class _TriggerDefinition extends TriggerDefinition {
   @override
 
   /// [timingDate] The timing of the event (if this is a periodic trigger).
-  Date? get timingDate;
+  FhirDate? get timingDate;
   @override
 
   /// [timingDateElement] Extensions for timingDate
@@ -5811,7 +5811,7 @@ mixin _$Expression {
 
   /// [name] A short name assigned to the expression to allow for multiple
   ///  reuse of the expression in the context where it is defined.
-  Id? get name => throw _privateConstructorUsedError;
+  FhirId? get name => throw _privateConstructorUsedError;
 
   /// [nameElement] Extensions for name
   @JsonKey(name: '_name')
@@ -5857,7 +5857,7 @@ abstract class $ExpressionCopyWith<$Res> {
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      Id? name,
+      FhirId? name,
       @JsonKey(name: '_name')
           Element? nameElement,
       @JsonKey(unknownEnumValue: ExpressionLanguage.unknown)
@@ -6032,7 +6032,7 @@ abstract class _$$_ExpressionCopyWith<$Res>
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      Id? name,
+      FhirId? name,
       @JsonKey(name: '_name')
           Element? nameElement,
       @JsonKey(unknownEnumValue: ExpressionLanguage.unknown)
@@ -6353,7 +6353,7 @@ abstract class _Expression extends Expression {
 
   /// [name] A short name assigned to the expression to allow for multiple
   ///  reuse of the expression in the context where it is defined.
-  Id? get name;
+  FhirId? get name;
   @override
 
   /// [nameElement] Extensions for name

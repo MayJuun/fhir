@@ -68,7 +68,9 @@ _$_Attachment _$$_AttachmentFromJson(Map<String, dynamic> json) =>
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),
-      data: json['data'] == null ? null : Base64Binary.fromJson(json['data']),
+      data: json['data'] == null
+          ? null
+          : FhirBase64Binary?.fromJson(json['data']),
       dataElement: json['_data'] == null
           ? null
           : Element.fromJson(json['_data'] as Map<String, dynamic>),
@@ -80,7 +82,9 @@ _$_Attachment _$$_AttachmentFromJson(Map<String, dynamic> json) =>
       sizeElement: json['_size'] == null
           ? null
           : Element.fromJson(json['_size'] as Map<String, dynamic>),
-      hash: json['hash'] == null ? null : Base64Binary.fromJson(json['hash']),
+      hash: json['hash'] == null
+          ? null
+          : FhirBase64Binary?.fromJson(json['hash']),
       hashElement: json['_hash'] == null
           ? null
           : Element.fromJson(json['_hash'] as Map<String, dynamic>),
@@ -847,7 +851,9 @@ _$_Signature _$$_SignatureFromJson(Map<String, dynamic> json) => _$_Signature(
       sigFormatElement: json['_sigFormat'] == null
           ? null
           : Element.fromJson(json['_sigFormat'] as Map<String, dynamic>),
-      data: json['data'] == null ? null : Base64Binary.fromJson(json['data']),
+      data: json['data'] == null
+          ? null
+          : FhirBase64Binary?.fromJson(json['data']),
       dataElement: json['_data'] == null
           ? null
           : Element.fromJson(json['_data'] as Map<String, dynamic>),

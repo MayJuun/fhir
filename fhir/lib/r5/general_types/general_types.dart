@@ -77,7 +77,7 @@ class Annotation with _$Annotation {
     @JsonKey(name: '_time') Element? timeElement,
 
     /// [text] The text of the annotation in markdown format.
-    Markdown? text,
+    FhirMarkdown? text,
 
     /// [textElement] ("_text") Extensions for text
     @JsonKey(name: '_text') Element? textElement,
@@ -211,21 +211,21 @@ class Attachment with _$Attachment {
     /// [contentType] Identifies the type of the data in the attachment and
     ///  allows a method to be chosen to interpret or render the data. Includes
     ///  mime type parameters such as charset where appropriate.
-    Code? contentType,
+    FhirCode? contentType,
 
     /// [contentTypeElement] ("_contentType") Extensions for contentType
     @JsonKey(name: '_contentType') Element? contentTypeElement,
 
     /// [language] The human language of the content. The value can be any
     ///  valid value according to BCP 47.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
 
     /// [data] The actual data of the attachment - a sequence of bytes, base64
     ///  encoded.
-    Base64Binary? data,
+    FhirBase64Binary? data,
 
     /// [dataElement] ("_data") Extensions for data
     @JsonKey(name: '_data') Element? dataElement,
@@ -238,14 +238,14 @@ class Attachment with _$Attachment {
 
     /// [size] The number of bytes of data that make up this attachment (before
     ///  base64 encoding, if that is done).
-    Integer64? size,
+    FhirInteger64? size,
 
     /// [sizeElement] ("_size") Extensions for size
     @JsonKey(name: '_size') Element? sizeElement,
 
     /// [hash] The calculated hash of the data using SHA-1. Represented using
     ///  base64.
-    Base64Binary? hash,
+    FhirBase64Binary? hash,
 
     /// [hashElement] ("_hash") Extensions for hash
     @JsonKey(name: '_hash') Element? hashElement,
@@ -286,7 +286,7 @@ class Attachment with _$Attachment {
 
     /// [duration] The duration of the recording in seconds - for audio and
     ///  video.
-    Decimal? duration,
+    FhirDecimal? duration,
 
     /// [durationElement] ("_duration") Extensions for duration
     @JsonKey(name: '_duration') Element? durationElement,
@@ -616,7 +616,7 @@ class Coding with _$Coding {
     /// [code] A symbol in syntax defined by the system. The symbol may be a
     ///  predefined code or an expression in a syntax defined by the coding
     ///  system (e.g. post-coordination).
-    Code? code,
+    FhirCode? code,
 
     /// [codeElement] ("_code") Extensions for code
     @JsonKey(name: '_code') Element? codeElement,
@@ -630,7 +630,7 @@ class Coding with _$Coding {
 
     /// [userSelected] Indicates that this coding was chosen by a user directly
     ///  - e.g. off a pick list of available items (codes or displays).
-    Boolean? userSelected,
+    FhirBoolean? userSelected,
 
     /// [userSelectedElement] ("_userSelected") Extensions for userSelected
     @JsonKey(name: '_userSelected') Element? userSelectedElement,
@@ -735,7 +735,7 @@ class Quantity with _$Quantity {
 
     /// [value] The value of the measured amount. The value includes an
     ///  implicit precision in the presentation of the value.
-    Decimal? value,
+    FhirDecimal? value,
 
     /// [valueElement] ("_value") Extensions for value
     @JsonKey(name: '_value') Element? valueElement,
@@ -764,7 +764,7 @@ class Quantity with _$Quantity {
 
     /// [code] A computer processable form of the unit in some unit
     ///  representation system.
-    Code? code,
+    FhirCode? code,
 
     /// [codeElement] ("_code") Extensions for code
     @JsonKey(name: '_code') Element? codeElement,
@@ -861,7 +861,7 @@ class FhirDuration with _$FhirDuration {
 
     /// [value] The value of the measured amount. The value includes an
     ///  implicit precision in the presentation of the value.
-    Decimal? value,
+    FhirDecimal? value,
 
     /// [valueElement] ("_value") Extensions for value
     @JsonKey(name: '_value') Element? valueElement,
@@ -890,7 +890,7 @@ class FhirDuration with _$FhirDuration {
 
     /// [code] A computer processable form of the unit in some unit
     ///  representation system.
-    Code? code,
+    FhirCode? code,
 
     /// [codeElement] ("_code") Extensions for code
     @JsonKey(name: '_code') Element? codeElement,
@@ -987,7 +987,7 @@ class Distance with _$Distance {
 
     /// [value] The value of the measured amount. The value includes an
     ///  implicit precision in the presentation of the value.
-    Decimal? value,
+    FhirDecimal? value,
 
     /// [valueElement] ("_value") Extensions for value
     @JsonKey(name: '_value') Element? valueElement,
@@ -1016,7 +1016,7 @@ class Distance with _$Distance {
 
     /// [code] A computer processable form of the unit in some unit
     ///  representation system.
-    Code? code,
+    FhirCode? code,
 
     /// [codeElement] ("_code") Extensions for code
     @JsonKey(name: '_code') Element? codeElement,
@@ -1122,7 +1122,7 @@ class Count with _$Count {
 
     /// [value] The value of the measured amount. The value includes an
     ///  implicit precision in the presentation of the value.
-    Decimal? value,
+    FhirDecimal? value,
 
     /// [valueElement] ("_value") Extensions for value
     @JsonKey(name: '_value') Element? valueElement,
@@ -1151,7 +1151,7 @@ class Count with _$Count {
 
     /// [code] A computer processable form of the unit in some unit
     ///  representation system.
-    Code? code,
+    FhirCode? code,
 
     /// [codeElement] ("_code") Extensions for code
     @JsonKey(name: '_code') Element? codeElement,
@@ -1227,13 +1227,13 @@ class Money with _$Money {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [value] Numerical value (with implicit precision).
-    Decimal? value,
+    FhirDecimal? value,
 
     /// [valueElement] ("_value") Extensions for value
     @JsonKey(name: '_value') Element? valueElement,
 
     /// [currency] ISO 4217 Currency Code.
-    Code? currency,
+    FhirCode? currency,
 
     /// [currencyElement] ("_currency") Extensions for currency
     @JsonKey(name: '_currency') Element? currencyElement,
@@ -1331,7 +1331,7 @@ class Age with _$Age {
 
     /// [value] The value of the measured amount. The value includes an
     ///  implicit precision in the presentation of the value.
-    Decimal? value,
+    FhirDecimal? value,
 
     /// [valueElement] ("_value") Extensions for value
     @JsonKey(name: '_value') Element? valueElement,
@@ -1360,7 +1360,7 @@ class Age with _$Age {
 
     /// [code] A computer processable form of the unit in some unit
     ///  representation system.
-    Code? code,
+    FhirCode? code,
 
     /// [codeElement] ("_code") Extensions for code
     @JsonKey(name: '_code') Element? codeElement,
@@ -1798,21 +1798,21 @@ class SampledData with _$SampledData {
 
     /// [interval] Amount of intervalUnits between samples, eg. milliseconds
     ///  for time-based sampling.
-    Decimal? interval,
+    FhirDecimal? interval,
 
     /// [intervalElement] ("_interval") Extensions for interval
     @JsonKey(name: '_interval') Element? intervalElement,
 
     /// [intervalUnit] The measurement unit in which the sample interval is
     ///  expressed.
-    Code? intervalUnit,
+    FhirCode? intervalUnit,
 
     /// [intervalUnitElement] ("_intervalUnit") Extensions for intervalUnit
     @JsonKey(name: '_intervalUnit') Element? intervalUnitElement,
 
     /// [factor] A correction factor that is applied to the sampled data points
     ///  before they are added to the origin.
-    Decimal? factor,
+    FhirDecimal? factor,
 
     /// [factorElement] ("_factor") Extensions for factor
     @JsonKey(name: '_factor') Element? factorElement,
@@ -1820,7 +1820,7 @@ class SampledData with _$SampledData {
     /// [lowerLimit] The lower limit of detection of the measured points. This
     ///  is needed if any of the data points have the value "L" (lower than
     ///  detection limit).
-    Decimal? lowerLimit,
+    FhirDecimal? lowerLimit,
 
     /// [lowerLimitElement] ("_lowerLimit") Extensions for lowerLimit
     @JsonKey(name: '_lowerLimit') Element? lowerLimitElement,
@@ -1828,7 +1828,7 @@ class SampledData with _$SampledData {
     /// [upperLimit] The upper limit of detection of the measured points. This
     ///  is needed if any of the data points have the value "U" (higher than
     ///  detection limit).
-    Decimal? upperLimit,
+    FhirDecimal? upperLimit,
 
     /// [upperLimitElement] ("_upperLimit") Extensions for upperLimit
     @JsonKey(name: '_upperLimit') Element? upperLimitElement,
@@ -1967,7 +1967,7 @@ class Signature with _$Signature {
     List<Coding>? type,
 
     /// [when] When the digital signature was signed.
-    Instant? when,
+    FhirInstant? when,
 
     /// [whenElement] ("_when") Extensions for when
     @JsonKey(name: '_when') Element? whenElement,
@@ -1982,7 +1982,7 @@ class Signature with _$Signature {
 
     /// [targetFormat] A mime type that indicates the technical format of the
     ///  target resources signed by the signature.
-    Code? targetFormat,
+    FhirCode? targetFormat,
 
     /// [targetFormatElement] ("_targetFormat") Extensions for targetFormat
     @JsonKey(name: '_targetFormat') Element? targetFormatElement,
@@ -1991,14 +1991,14 @@ class Signature with _$Signature {
     ///  signature. Important mime types are application/signature+xml for X ML
     ///  DigSig, application/jose for JWS, and image/* for a graphical image of
     ///  a signature, etc.
-    Code? sigFormat,
+    FhirCode? sigFormat,
 
     /// [sigFormatElement] ("_sigFormat") Extensions for sigFormat
     @JsonKey(name: '_sigFormat') Element? sigFormatElement,
 
     /// [data] The base64 encoding of the Signature content. When signature is
     ///  not recorded electronically this element would be empty.
-    Base64Binary? data,
+    FhirBase64Binary? data,
 
     /// [dataElement] ("_data") Extensions for data
     @JsonKey(name: '_data') Element? dataElement,
@@ -2850,14 +2850,14 @@ class TimingRepeat with _$TimingRepeat {
     /// [duration] How long this thing happens for when it happens. If
     ///  durationMax is present, this element indicates the lower bound of the
     ///  allowed range of the duration.
-    Decimal? duration,
+    FhirDecimal? duration,
 
     /// [durationElement] ("_duration") Extensions for duration
     @JsonKey(name: '_duration') Element? durationElement,
 
     /// [durationMax] If present, indicates that the duration is a range - so
     ///  to perform the action between [duration] and [durationMax] time length.
-    Decimal? durationMax,
+    FhirDecimal? durationMax,
 
     /// [durationMaxElement] ("_durationMax") Extensions for durationMax
     @JsonKey(name: '_durationMax') Element? durationMaxElement,
@@ -2890,7 +2890,7 @@ class TimingRepeat with _$TimingRepeat {
     ///  occur; e.g. to express "3 times per day", 3 would be the frequency and
     ///  "1 day" would be the period. If periodMax is present, this element
     ///  indicates the lower bound of the allowed range of the period length.
-    Decimal? period,
+    FhirDecimal? period,
 
     /// [periodElement] ("_period") Extensions for period
     @JsonKey(name: '_period') Element? periodElement,
@@ -2898,7 +2898,7 @@ class TimingRepeat with _$TimingRepeat {
     /// [periodMax] If present, indicates that the period is a range from
     ///  [period] to [periodMax], allowing expressing concepts such as "do this
     ///  once every 3-5 days.
-    Decimal? periodMax,
+    FhirDecimal? periodMax,
 
     /// [periodMaxElement] ("_periodMax") Extensions for periodMax
     @JsonKey(name: '_periodMax') Element? periodMaxElement,

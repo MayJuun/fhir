@@ -22,12 +22,12 @@ Medication _$MedicationFromJson(Map<String, dynamic> json) {
 mixin _$Medication {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Medication)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -37,7 +37,7 @@ mixin _$Medication {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   CodeableConcept? get code => throw _privateConstructorUsedError;
-  Boolean? get isBrand => throw _privateConstructorUsedError;
+  FhirBoolean? get isBrand => throw _privateConstructorUsedError;
   Reference? get manufacturer => throw _privateConstructorUsedError;
   MedicationProduct? get product => throw _privateConstructorUsedError;
   MedicationPackage? get package => throw _privateConstructorUsedError;
@@ -57,12 +57,12 @@ abstract class $MedicationCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Medication)
           Dstu2ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -71,7 +71,7 @@ abstract class $MedicationCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept? code,
-      Boolean? isBrand,
+      FhirBoolean? isBrand,
       Reference? manufacturer,
       MedicationProduct? product,
       MedicationPackage? package});
@@ -140,7 +140,7 @@ class _$MedicationCopyWithImpl<$Res, $Val extends Medication>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -168,7 +168,7 @@ class _$MedicationCopyWithImpl<$Res, $Val extends Medication>
       isBrand: freezed == isBrand
           ? _value.isBrand
           : isBrand // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       manufacturer: freezed == manufacturer
           ? _value.manufacturer
           : manufacturer // ignore: cast_nullable_to_non_nullable
@@ -292,12 +292,12 @@ abstract class _$$_MedicationCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Medication)
           Dstu2ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -306,7 +306,7 @@ abstract class _$$_MedicationCopyWith<$Res>
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept? code,
-      Boolean? isBrand,
+      FhirBoolean? isBrand,
       Reference? manufacturer,
       MedicationProduct? product,
       MedicationPackage? package});
@@ -381,7 +381,7 @@ class __$$_MedicationCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -409,7 +409,7 @@ class __$$_MedicationCopyWithImpl<$Res>
       isBrand: freezed == isBrand
           ? _value.isBrand
           : isBrand // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       manufacturer: freezed == manufacturer
           ? _value.manufacturer
           : manufacturer // ignore: cast_nullable_to_non_nullable
@@ -471,7 +471,7 @@ class _$_Medication extends _Medication {
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
-  final Code? language;
+  final FhirCode? language;
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
@@ -512,7 +512,7 @@ class _$_Medication extends _Medication {
   @override
   final CodeableConcept? code;
   @override
-  final Boolean? isBrand;
+  final FhirBoolean? isBrand;
   @override
   final Reference? manufacturer;
   @override
@@ -601,7 +601,7 @@ abstract class _Medication extends Medication {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -610,7 +610,7 @@ abstract class _Medication extends Medication {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final CodeableConcept? code,
-      final Boolean? isBrand,
+      final FhirBoolean? isBrand,
       final Reference? manufacturer,
       final MedicationProduct? product,
       final MedicationPackage? package}) = _$_Medication;
@@ -623,7 +623,7 @@ abstract class _Medication extends Medication {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Medication)
   Dstu2ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -632,7 +632,7 @@ abstract class _Medication extends Medication {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
-  Code? get language;
+  FhirCode? get language;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;
@@ -648,7 +648,7 @@ abstract class _Medication extends Medication {
   @override
   CodeableConcept? get code;
   @override
-  Boolean? get isBrand;
+  FhirBoolean? get isBrand;
   @override
   Reference? get manufacturer;
   @override
@@ -667,7 +667,7 @@ MedicationProduct _$MedicationProductFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$MedicationProduct {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -985,7 +985,7 @@ abstract class _MedicationProduct extends MedicationProduct {
       _$_MedicationProduct.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -1013,7 +1013,7 @@ MedicationProductIngredient _$MedicationProductIngredientFromJson(
 
 /// @nodoc
 mixin _$MedicationProductIngredient {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -1280,7 +1280,7 @@ abstract class _MedicationProductIngredient
       _$_MedicationProductIngredient.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -1303,7 +1303,7 @@ MedicationProductBatch _$MedicationProductBatchFromJson(
 
 /// @nodoc
 mixin _$MedicationProductBatch {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -1618,7 +1618,7 @@ abstract class _MedicationProductBatch extends MedicationProductBatch {
       _$_MedicationProductBatch.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -1646,7 +1646,7 @@ MedicationPackage _$MedicationPackageFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$MedicationPackage {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -1936,7 +1936,7 @@ abstract class _MedicationPackage extends MedicationPackage {
       _$_MedicationPackage.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -1962,7 +1962,7 @@ MedicationPackageContent _$MedicationPackageContentFromJson(
 
 /// @nodoc
 mixin _$MedicationPackageContent {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -2225,7 +2225,7 @@ abstract class _MedicationPackageContent extends MedicationPackageContent {
       _$_MedicationPackageContent.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -2249,12 +2249,12 @@ MedicationOrder _$MedicationOrderFromJson(Map<String, dynamic> json) {
 mixin _$MedicationOrder {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationOrder)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: '_id')
   Element? get idElement => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
   List<Resource>? get contained => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
@@ -2302,12 +2302,12 @@ abstract class $MedicationOrderCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationOrder)
           Dstu2ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       @JsonKey(name: '_id')
           Element? idElement,
       Meta? meta,
       FhirUri? implicitRules,
-      Code? language,
+      FhirCode? language,
       Narrative? text,
       List<Resource>? contained,
       @JsonKey(name: 'extension')
@@ -2417,7 +2417,7 @@ class _$MedicationOrderCopyWithImpl<$Res, $Val extends MedicationOrder>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
@@ -2705,12 +2705,12 @@ abstract class _$$_MedicationOrderCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationOrder)
           Dstu2ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       @JsonKey(name: '_id')
           Element? idElement,
       Meta? meta,
       FhirUri? implicitRules,
-      Code? language,
+      FhirCode? language,
       Narrative? text,
       List<Resource>? contained,
       @JsonKey(name: 'extension')
@@ -2833,7 +2833,7 @@ class __$$_MedicationOrderCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
@@ -2986,7 +2986,7 @@ class _$_MedicationOrder extends _MedicationOrder {
   @override
   final FhirUri? implicitRules;
   @override
-  final Code? language;
+  final FhirCode? language;
   @override
   final Narrative? text;
   final List<Resource>? _contained;
@@ -3197,7 +3197,7 @@ abstract class _MedicationOrder extends MedicationOrder {
           final Element? idElement,
       final Meta? meta,
       final FhirUri? implicitRules,
-      final Code? language,
+      final FhirCode? language,
       final Narrative? text,
       final List<Resource>? contained,
       @JsonKey(name: 'extension')
@@ -3232,7 +3232,7 @@ abstract class _MedicationOrder extends MedicationOrder {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationOrder)
   Dstu2ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: '_id')
   Element? get idElement;
@@ -3241,7 +3241,7 @@ abstract class _MedicationOrder extends MedicationOrder {
   @override
   FhirUri? get implicitRules;
   @override
-  Code? get language;
+  FhirCode? get language;
   @override
   Narrative? get text;
   @override
@@ -3302,7 +3302,7 @@ MedicationOrderDosageInstruction _$MedicationOrderDosageInstructionFromJson(
 
 /// @nodoc
 mixin _$MedicationOrderDosageInstruction {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -3311,7 +3311,7 @@ mixin _$MedicationOrderDosageInstruction {
   CodeableConcept? get additionalInstructions =>
       throw _privateConstructorUsedError;
   Timing? get timing => throw _privateConstructorUsedError;
-  Boolean? get asNeededBoolean => throw _privateConstructorUsedError;
+  FhirBoolean? get asNeededBoolean => throw _privateConstructorUsedError;
   CodeableConcept? get asNeededCodeableConcept =>
       throw _privateConstructorUsedError;
   CodeableConcept? get siteCodeableConcept =>
@@ -3346,7 +3346,7 @@ abstract class $MedicationOrderDosageInstructionCopyWith<$Res> {
       String? text,
       CodeableConcept? additionalInstructions,
       Timing? timing,
-      Boolean? asNeededBoolean,
+      FhirBoolean? asNeededBoolean,
       CodeableConcept? asNeededCodeableConcept,
       CodeableConcept? siteCodeableConcept,
       Reference? siteReference,
@@ -3432,7 +3432,7 @@ class _$MedicationOrderDosageInstructionCopyWithImpl<$Res,
       asNeededBoolean: freezed == asNeededBoolean
           ? _value.asNeededBoolean
           : asNeededBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       asNeededCodeableConcept: freezed == asNeededCodeableConcept
           ? _value.asNeededCodeableConcept
           : asNeededCodeableConcept // ignore: cast_nullable_to_non_nullable
@@ -3639,7 +3639,7 @@ abstract class _$$_MedicationOrderDosageInstructionCopyWith<$Res>
       String? text,
       CodeableConcept? additionalInstructions,
       Timing? timing,
-      Boolean? asNeededBoolean,
+      FhirBoolean? asNeededBoolean,
       CodeableConcept? asNeededCodeableConcept,
       CodeableConcept? siteCodeableConcept,
       Reference? siteReference,
@@ -3736,7 +3736,7 @@ class __$$_MedicationOrderDosageInstructionCopyWithImpl<$Res>
       asNeededBoolean: freezed == asNeededBoolean
           ? _value.asNeededBoolean
           : asNeededBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       asNeededCodeableConcept: freezed == asNeededCodeableConcept
           ? _value.asNeededCodeableConcept
           : asNeededCodeableConcept // ignore: cast_nullable_to_non_nullable
@@ -3842,7 +3842,7 @@ class _$_MedicationOrderDosageInstruction
   @override
   final Timing? timing;
   @override
-  final Boolean? asNeededBoolean;
+  final FhirBoolean? asNeededBoolean;
   @override
   final CodeableConcept? asNeededCodeableConcept;
   @override
@@ -3953,7 +3953,7 @@ abstract class _MedicationOrderDosageInstruction
       final String? text,
       final CodeableConcept? additionalInstructions,
       final Timing? timing,
-      final Boolean? asNeededBoolean,
+      final FhirBoolean? asNeededBoolean,
       final CodeableConcept? asNeededCodeableConcept,
       final CodeableConcept? siteCodeableConcept,
       final Reference? siteReference,
@@ -3970,7 +3970,7 @@ abstract class _MedicationOrderDosageInstruction
       Map<String, dynamic> json) = _$_MedicationOrderDosageInstruction.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -3983,7 +3983,7 @@ abstract class _MedicationOrderDosageInstruction
   @override
   Timing? get timing;
   @override
-  Boolean? get asNeededBoolean;
+  FhirBoolean? get asNeededBoolean;
   @override
   CodeableConcept? get asNeededCodeableConcept;
   @override
@@ -4018,7 +4018,7 @@ MedicationOrderDispenseRequest _$MedicationOrderDispenseRequestFromJson(
 
 /// @nodoc
 mixin _$MedicationOrderDispenseRequest {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -4422,7 +4422,7 @@ abstract class _MedicationOrderDispenseRequest
       _$_MedicationOrderDispenseRequest.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -4453,7 +4453,7 @@ MedicationOrderSubstitution _$MedicationOrderSubstitutionFromJson(
 
 /// @nodoc
 mixin _$MedicationOrderSubstitution {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -4720,7 +4720,7 @@ abstract class _MedicationOrderSubstitution
       _$_MedicationOrderSubstitution.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -4745,12 +4745,12 @@ MedicationAdministration _$MedicationAdministrationFromJson(
 mixin _$MedicationAdministration {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationAdministration)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -4770,7 +4770,7 @@ mixin _$MedicationAdministration {
   Reference? get practitioner => throw _privateConstructorUsedError;
   Reference? get encounter => throw _privateConstructorUsedError;
   Reference? get prescription => throw _privateConstructorUsedError;
-  Boolean? get wasNotGiven => throw _privateConstructorUsedError;
+  FhirBoolean? get wasNotGiven => throw _privateConstructorUsedError;
   List<CodeableConcept>? get reasonNotGiven =>
       throw _privateConstructorUsedError;
   List<CodeableConcept>? get reasonGiven => throw _privateConstructorUsedError;
@@ -4801,12 +4801,12 @@ abstract class $MedicationAdministrationCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationAdministration)
           Dstu2ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -4823,7 +4823,7 @@ abstract class $MedicationAdministrationCopyWith<$Res> {
       Reference? practitioner,
       Reference? encounter,
       Reference? prescription,
-      Boolean? wasNotGiven,
+      FhirBoolean? wasNotGiven,
       List<CodeableConcept>? reasonNotGiven,
       List<CodeableConcept>? reasonGiven,
       FhirDateTime? effectiveTimeDateTime,
@@ -4920,7 +4920,7 @@ class _$MedicationAdministrationCopyWithImpl<$Res,
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -4972,7 +4972,7 @@ class _$MedicationAdministrationCopyWithImpl<$Res,
       wasNotGiven: freezed == wasNotGiven
           ? _value.wasNotGiven
           : wasNotGiven // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       reasonNotGiven: freezed == reasonNotGiven
           ? _value.reasonNotGiven
           : reasonNotGiven // ignore: cast_nullable_to_non_nullable
@@ -5195,12 +5195,12 @@ abstract class _$$_MedicationAdministrationCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationAdministration)
           Dstu2ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -5217,7 +5217,7 @@ abstract class _$$_MedicationAdministrationCopyWith<$Res>
       Reference? practitioner,
       Reference? encounter,
       Reference? prescription,
-      Boolean? wasNotGiven,
+      FhirBoolean? wasNotGiven,
       List<CodeableConcept>? reasonNotGiven,
       List<CodeableConcept>? reasonGiven,
       FhirDateTime? effectiveTimeDateTime,
@@ -5326,7 +5326,7 @@ class __$$_MedicationAdministrationCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -5378,7 +5378,7 @@ class __$$_MedicationAdministrationCopyWithImpl<$Res>
       wasNotGiven: freezed == wasNotGiven
           ? _value.wasNotGiven
           : wasNotGiven // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       reasonNotGiven: freezed == reasonNotGiven
           ? _value._reasonNotGiven
           : reasonNotGiven // ignore: cast_nullable_to_non_nullable
@@ -5488,7 +5488,7 @@ class _$_MedicationAdministration extends _MedicationAdministration {
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
-  final Code? language;
+  final FhirCode? language;
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
@@ -5552,7 +5552,7 @@ class _$_MedicationAdministration extends _MedicationAdministration {
   @override
   final Reference? prescription;
   @override
-  final Boolean? wasNotGiven;
+  final FhirBoolean? wasNotGiven;
   final List<CodeableConcept>? _reasonNotGiven;
   @override
   List<CodeableConcept>? get reasonNotGiven {
@@ -5722,7 +5722,7 @@ abstract class _MedicationAdministration extends MedicationAdministration {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -5739,7 +5739,7 @@ abstract class _MedicationAdministration extends MedicationAdministration {
       final Reference? practitioner,
       final Reference? encounter,
       final Reference? prescription,
-      final Boolean? wasNotGiven,
+      final FhirBoolean? wasNotGiven,
       final List<CodeableConcept>? reasonNotGiven,
       final List<CodeableConcept>? reasonGiven,
       final FhirDateTime? effectiveTimeDateTime,
@@ -5760,7 +5760,7 @@ abstract class _MedicationAdministration extends MedicationAdministration {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationAdministration)
   Dstu2ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -5769,7 +5769,7 @@ abstract class _MedicationAdministration extends MedicationAdministration {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
-  Code? get language;
+  FhirCode? get language;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;
@@ -5800,7 +5800,7 @@ abstract class _MedicationAdministration extends MedicationAdministration {
   @override
   Reference? get prescription;
   @override
-  Boolean? get wasNotGiven;
+  FhirBoolean? get wasNotGiven;
   @override
   List<CodeableConcept>? get reasonNotGiven;
   @override
@@ -5835,7 +5835,7 @@ MedicationAdministrationDosage _$MedicationAdministrationDosageFromJson(
 
 /// @nodoc
 mixin _$MedicationAdministrationDosage {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -6340,7 +6340,7 @@ abstract class _MedicationAdministrationDosage
       _$_MedicationAdministrationDosage.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -6379,12 +6379,12 @@ MedicationDispense _$MedicationDispenseFromJson(Map<String, dynamic> json) {
 mixin _$MedicationDispense {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationDispense)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -6437,12 +6437,12 @@ abstract class $MedicationDispenseCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationDispense)
           Dstu2ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -6563,7 +6563,7 @@ class _$MedicationDispenseCopyWithImpl<$Res, $Val extends MedicationDispense>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -6885,12 +6885,12 @@ abstract class _$$_MedicationDispenseCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationDispense)
           Dstu2ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -7026,7 +7026,7 @@ class __$$_MedicationDispenseCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -7198,7 +7198,7 @@ class _$_MedicationDispense extends _MedicationDispense {
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
-  final Code? language;
+  final FhirCode? language;
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
@@ -7435,7 +7435,7 @@ abstract class _MedicationDispense extends MedicationDispense {
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
               final Element? implicitRulesElement,
-          final Code? language,
+          final FhirCode? language,
           @JsonKey(name: '_language')
               final Element? languageElement,
           final Narrative? text,
@@ -7477,7 +7477,7 @@ abstract class _MedicationDispense extends MedicationDispense {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationDispense)
   Dstu2ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -7486,7 +7486,7 @@ abstract class _MedicationDispense extends MedicationDispense {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
-  Code? get language;
+  FhirCode? get language;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;
@@ -7556,7 +7556,7 @@ MedicationDispenseDosageInstruction
 
 /// @nodoc
 mixin _$MedicationDispenseDosageInstruction {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -7565,7 +7565,7 @@ mixin _$MedicationDispenseDosageInstruction {
   CodeableConcept? get additionalInstructions =>
       throw _privateConstructorUsedError;
   Timing? get timing => throw _privateConstructorUsedError;
-  Boolean? get asNeededBoolean => throw _privateConstructorUsedError;
+  FhirBoolean? get asNeededBoolean => throw _privateConstructorUsedError;
   CodeableConcept? get asNeededCodeableConcept =>
       throw _privateConstructorUsedError;
   CodeableConcept? get siteCodeableConcept =>
@@ -7601,7 +7601,7 @@ abstract class $MedicationDispenseDosageInstructionCopyWith<$Res> {
       String? text,
       CodeableConcept? additionalInstructions,
       Timing? timing,
-      Boolean? asNeededBoolean,
+      FhirBoolean? asNeededBoolean,
       CodeableConcept? asNeededCodeableConcept,
       CodeableConcept? siteCodeableConcept,
       Reference? siteReference,
@@ -7687,7 +7687,7 @@ class _$MedicationDispenseDosageInstructionCopyWithImpl<$Res,
       asNeededBoolean: freezed == asNeededBoolean
           ? _value.asNeededBoolean
           : asNeededBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       asNeededCodeableConcept: freezed == asNeededCodeableConcept
           ? _value.asNeededCodeableConcept
           : asNeededCodeableConcept // ignore: cast_nullable_to_non_nullable
@@ -7894,7 +7894,7 @@ abstract class _$$_MedicationDispenseDosageInstructionCopyWith<$Res>
       String? text,
       CodeableConcept? additionalInstructions,
       Timing? timing,
-      Boolean? asNeededBoolean,
+      FhirBoolean? asNeededBoolean,
       CodeableConcept? asNeededCodeableConcept,
       CodeableConcept? siteCodeableConcept,
       Reference? siteReference,
@@ -7991,7 +7991,7 @@ class __$$_MedicationDispenseDosageInstructionCopyWithImpl<$Res>
       asNeededBoolean: freezed == asNeededBoolean
           ? _value.asNeededBoolean
           : asNeededBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       asNeededCodeableConcept: freezed == asNeededCodeableConcept
           ? _value.asNeededCodeableConcept
           : asNeededCodeableConcept // ignore: cast_nullable_to_non_nullable
@@ -8097,7 +8097,7 @@ class _$_MedicationDispenseDosageInstruction
   @override
   final Timing? timing;
   @override
-  final Boolean? asNeededBoolean;
+  final FhirBoolean? asNeededBoolean;
   @override
   final CodeableConcept? asNeededCodeableConcept;
   @override
@@ -8208,7 +8208,7 @@ abstract class _MedicationDispenseDosageInstruction
       final String? text,
       final CodeableConcept? additionalInstructions,
       final Timing? timing,
-      final Boolean? asNeededBoolean,
+      final FhirBoolean? asNeededBoolean,
       final CodeableConcept? asNeededCodeableConcept,
       final CodeableConcept? siteCodeableConcept,
       final Reference? siteReference,
@@ -8226,7 +8226,7 @@ abstract class _MedicationDispenseDosageInstruction
       _$_MedicationDispenseDosageInstruction.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -8239,7 +8239,7 @@ abstract class _MedicationDispenseDosageInstruction
   @override
   Timing? get timing;
   @override
-  Boolean? get asNeededBoolean;
+  FhirBoolean? get asNeededBoolean;
   @override
   CodeableConcept? get asNeededCodeableConcept;
   @override
@@ -8274,7 +8274,7 @@ MedicationDispenseSubstitution _$MedicationDispenseSubstitutionFromJson(
 
 /// @nodoc
 mixin _$MedicationDispenseSubstitution {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -8567,7 +8567,7 @@ abstract class _MedicationDispenseSubstitution
       _$_MedicationDispenseSubstitution.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -8593,12 +8593,12 @@ MedicationStatement _$MedicationStatementFromJson(Map<String, dynamic> json) {
 mixin _$MedicationStatement {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationStatement)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -8617,7 +8617,7 @@ mixin _$MedicationStatement {
   MedicationStatementStatus get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
-  Boolean? get wasNotTaken => throw _privateConstructorUsedError;
+  FhirBoolean? get wasNotTaken => throw _privateConstructorUsedError;
   List<CodeableConcept>? get reasonNotTaken =>
       throw _privateConstructorUsedError;
   CodeableConcept? get reasonForUseCodeableConcept =>
@@ -8651,12 +8651,12 @@ abstract class $MedicationStatementCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationStatement)
           Dstu2ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -8674,7 +8674,7 @@ abstract class $MedicationStatementCopyWith<$Res> {
           MedicationStatementStatus status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Boolean? wasNotTaken,
+      FhirBoolean? wasNotTaken,
       List<CodeableConcept>? reasonNotTaken,
       CodeableConcept? reasonForUseCodeableConcept,
       Reference? reasonForUseReference,
@@ -8772,7 +8772,7 @@ class _$MedicationStatementCopyWithImpl<$Res, $Val extends MedicationStatement>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -8824,7 +8824,7 @@ class _$MedicationStatementCopyWithImpl<$Res, $Val extends MedicationStatement>
       wasNotTaken: freezed == wasNotTaken
           ? _value.wasNotTaken
           : wasNotTaken // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       reasonNotTaken: freezed == reasonNotTaken
           ? _value.reasonNotTaken
           : reasonNotTaken // ignore: cast_nullable_to_non_nullable
@@ -9050,12 +9050,12 @@ abstract class _$$_MedicationStatementCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationStatement)
           Dstu2ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -9073,7 +9073,7 @@ abstract class _$$_MedicationStatementCopyWith<$Res>
           MedicationStatementStatus status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Boolean? wasNotTaken,
+      FhirBoolean? wasNotTaken,
       List<CodeableConcept>? reasonNotTaken,
       CodeableConcept? reasonForUseCodeableConcept,
       Reference? reasonForUseReference,
@@ -9183,7 +9183,7 @@ class __$$_MedicationStatementCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -9235,7 +9235,7 @@ class __$$_MedicationStatementCopyWithImpl<$Res>
       wasNotTaken: freezed == wasNotTaken
           ? _value.wasNotTaken
           : wasNotTaken // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       reasonNotTaken: freezed == reasonNotTaken
           ? _value._reasonNotTaken
           : reasonNotTaken // ignore: cast_nullable_to_non_nullable
@@ -9351,7 +9351,7 @@ class _$_MedicationStatement extends _MedicationStatement {
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
-  final Code? language;
+  final FhirCode? language;
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
@@ -9415,7 +9415,7 @@ class _$_MedicationStatement extends _MedicationStatement {
   @JsonKey(name: '_status')
   final Element? statusElement;
   @override
-  final Boolean? wasNotTaken;
+  final FhirBoolean? wasNotTaken;
   final List<CodeableConcept>? _reasonNotTaken;
   @override
   List<CodeableConcept>? get reasonNotTaken {
@@ -9593,7 +9593,7 @@ abstract class _MedicationStatement extends MedicationStatement {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -9611,7 +9611,7 @@ abstract class _MedicationStatement extends MedicationStatement {
           required final MedicationStatementStatus status,
       @JsonKey(name: '_status')
           final Element? statusElement,
-      final Boolean? wasNotTaken,
+      final FhirBoolean? wasNotTaken,
       final List<CodeableConcept>? reasonNotTaken,
       final CodeableConcept? reasonForUseCodeableConcept,
       final Reference? reasonForUseReference,
@@ -9633,7 +9633,7 @@ abstract class _MedicationStatement extends MedicationStatement {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationStatement)
   Dstu2ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -9642,7 +9642,7 @@ abstract class _MedicationStatement extends MedicationStatement {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
-  Code? get language;
+  FhirCode? get language;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;
@@ -9673,7 +9673,7 @@ abstract class _MedicationStatement extends MedicationStatement {
   @JsonKey(name: '_status')
   Element? get statusElement;
   @override
-  Boolean? get wasNotTaken;
+  FhirBoolean? get wasNotTaken;
   @override
   List<CodeableConcept>? get reasonNotTaken;
   @override
@@ -9710,14 +9710,14 @@ MedicationStatementDosage _$MedicationStatementDosageFromJson(
 
 /// @nodoc
 mixin _$MedicationStatementDosage {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   String? get text => throw _privateConstructorUsedError;
   Timing? get timing => throw _privateConstructorUsedError;
-  Boolean? get asNeededBoolean => throw _privateConstructorUsedError;
+  FhirBoolean? get asNeededBoolean => throw _privateConstructorUsedError;
   CodeableConcept? get asNeededCodeableConcept =>
       throw _privateConstructorUsedError;
   CodeableConcept? get siteCodeableConcept =>
@@ -9749,7 +9749,7 @@ abstract class $MedicationStatementDosageCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       String? text,
       Timing? timing,
-      Boolean? asNeededBoolean,
+      FhirBoolean? asNeededBoolean,
       CodeableConcept? asNeededCodeableConcept,
       CodeableConcept? siteCodeableConcept,
       Reference? siteReference,
@@ -9829,7 +9829,7 @@ class _$MedicationStatementDosageCopyWithImpl<$Res,
       asNeededBoolean: freezed == asNeededBoolean
           ? _value.asNeededBoolean
           : asNeededBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       asNeededCodeableConcept: freezed == asNeededCodeableConcept
           ? _value.asNeededCodeableConcept
           : asNeededCodeableConcept // ignore: cast_nullable_to_non_nullable
@@ -10022,7 +10022,7 @@ abstract class _$$_MedicationStatementDosageCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       String? text,
       Timing? timing,
-      Boolean? asNeededBoolean,
+      FhirBoolean? asNeededBoolean,
       CodeableConcept? asNeededCodeableConcept,
       CodeableConcept? siteCodeableConcept,
       Reference? siteReference,
@@ -10112,7 +10112,7 @@ class __$$_MedicationStatementDosageCopyWithImpl<$Res>
       asNeededBoolean: freezed == asNeededBoolean
           ? _value.asNeededBoolean
           : asNeededBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       asNeededCodeableConcept: freezed == asNeededCodeableConcept
           ? _value.asNeededCodeableConcept
           : asNeededCodeableConcept // ignore: cast_nullable_to_non_nullable
@@ -10213,7 +10213,7 @@ class _$_MedicationStatementDosage extends _MedicationStatementDosage {
   @override
   final Timing? timing;
   @override
-  final Boolean? asNeededBoolean;
+  final FhirBoolean? asNeededBoolean;
   @override
   final CodeableConcept? asNeededCodeableConcept;
   @override
@@ -10318,7 +10318,7 @@ abstract class _MedicationStatementDosage extends MedicationStatementDosage {
       final List<FhirExtension>? modifierExtension,
       final String? text,
       final Timing? timing,
-      final Boolean? asNeededBoolean,
+      final FhirBoolean? asNeededBoolean,
       final CodeableConcept? asNeededCodeableConcept,
       final CodeableConcept? siteCodeableConcept,
       final Reference? siteReference,
@@ -10335,7 +10335,7 @@ abstract class _MedicationStatementDosage extends MedicationStatementDosage {
       _$_MedicationStatementDosage.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -10346,7 +10346,7 @@ abstract class _MedicationStatementDosage extends MedicationStatementDosage {
   @override
   Timing? get timing;
   @override
-  Boolean? get asNeededBoolean;
+  FhirBoolean? get asNeededBoolean;
   @override
   CodeableConcept? get asNeededCodeableConcept;
   @override
@@ -10381,12 +10381,12 @@ Immunization _$ImmunizationFromJson(Map<String, dynamic> json) {
 mixin _$Immunization {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Immunization)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -10413,7 +10413,7 @@ mixin _$Immunization {
   String? get lotNumber => throw _privateConstructorUsedError;
   @JsonKey(name: '_lotNumber')
   Element? get lotNumberElement => throw _privateConstructorUsedError;
-  Date? get expirationDate => throw _privateConstructorUsedError;
+  FhirDate? get expirationDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_expirationDate')
   Element? get expirationDateElement => throw _privateConstructorUsedError;
   CodeableConcept? get site => throw _privateConstructorUsedError;
@@ -10442,12 +10442,12 @@ abstract class $ImmunizationCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Immunization)
           Dstu2ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -10473,7 +10473,7 @@ abstract class $ImmunizationCopyWith<$Res> {
       String? lotNumber,
       @JsonKey(name: '_lotNumber')
           Element? lotNumberElement,
-      Date? expirationDate,
+      FhirDate? expirationDate,
       @JsonKey(name: '_expirationDate')
           Element? expirationDateElement,
       CodeableConcept? site,
@@ -10577,7 +10577,7 @@ class _$ImmunizationCopyWithImpl<$Res, $Val extends Immunization>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -10917,12 +10917,12 @@ abstract class _$$_ImmunizationCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Immunization)
           Dstu2ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -10948,7 +10948,7 @@ abstract class _$$_ImmunizationCopyWith<$Res>
       String? lotNumber,
       @JsonKey(name: '_lotNumber')
           Element? lotNumberElement,
-      Date? expirationDate,
+      FhirDate? expirationDate,
       @JsonKey(name: '_expirationDate')
           Element? expirationDateElement,
       CodeableConcept? site,
@@ -11068,7 +11068,7 @@ class __$$_ImmunizationCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -11261,7 +11261,7 @@ class _$_Immunization extends _Immunization {
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
-  final Code? language;
+  final FhirCode? language;
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
@@ -11520,7 +11520,7 @@ abstract class _Immunization extends Immunization {
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
               final Element? implicitRulesElement,
-          final Code? language,
+          final FhirCode? language,
           @JsonKey(name: '_language')
               final Element? languageElement,
           final Narrative? text,
@@ -11566,7 +11566,7 @@ abstract class _Immunization extends Immunization {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Immunization)
   Dstu2ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -11575,7 +11575,7 @@ abstract class _Immunization extends Immunization {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
-  Code? get language;
+  FhirCode? get language;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;
@@ -11622,7 +11622,7 @@ abstract class _Immunization extends Immunization {
   @JsonKey(name: '_lotNumber')
   Element? get lotNumberElement;
   @override
-  Date? get expirationDate;
+  FhirDate? get expirationDate;
   @override
   @JsonKey(name: '_expirationDate')
   Element? get expirationDateElement;
@@ -11653,7 +11653,7 @@ ImmunizationExplanation _$ImmunizationExplanationFromJson(
 
 /// @nodoc
 mixin _$ImmunizationExplanation {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -11908,7 +11908,7 @@ abstract class _ImmunizationExplanation extends ImmunizationExplanation {
       _$_ImmunizationExplanation.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -11930,7 +11930,7 @@ ImmunizationReaction _$ImmunizationReactionFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ImmunizationReaction {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -11939,7 +11939,7 @@ mixin _$ImmunizationReaction {
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
   Reference? get detail => throw _privateConstructorUsedError;
-  Boolean? get reported => throw _privateConstructorUsedError;
+  FhirBoolean? get reported => throw _privateConstructorUsedError;
   @JsonKey(name: '_reported')
   Element? get reportedElement => throw _privateConstructorUsedError;
 
@@ -11962,7 +11962,7 @@ abstract class $ImmunizationReactionCopyWith<$Res> {
       FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       Reference? detail,
-      Boolean? reported,
+      FhirBoolean? reported,
       @JsonKey(name: '_reported') Element? reportedElement});
 
   $ElementCopyWith<$Res>? get dateElement;
@@ -12021,7 +12021,7 @@ class _$ImmunizationReactionCopyWithImpl<$Res,
       reported: freezed == reported
           ? _value.reported
           : reported // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       reportedElement: freezed == reportedElement
           ? _value.reportedElement
           : reportedElement // ignore: cast_nullable_to_non_nullable
@@ -12081,7 +12081,7 @@ abstract class _$$_ImmunizationReactionCopyWith<$Res>
       FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       Reference? detail,
-      Boolean? reported,
+      FhirBoolean? reported,
       @JsonKey(name: '_reported') Element? reportedElement});
 
   @override
@@ -12140,7 +12140,7 @@ class __$$_ImmunizationReactionCopyWithImpl<$Res>
       reported: freezed == reported
           ? _value.reported
           : reported // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       reportedElement: freezed == reportedElement
           ? _value.reportedElement
           : reportedElement // ignore: cast_nullable_to_non_nullable
@@ -12200,7 +12200,7 @@ class _$_ImmunizationReaction extends _ImmunizationReaction {
   @override
   final Reference? detail;
   @override
-  final Boolean? reported;
+  final FhirBoolean? reported;
   @override
   @JsonKey(name: '_reported')
   final Element? reportedElement;
@@ -12266,7 +12266,7 @@ abstract class _ImmunizationReaction extends ImmunizationReaction {
           final FhirDateTime? date,
           @JsonKey(name: '_date') final Element? dateElement,
           final Reference? detail,
-          final Boolean? reported,
+          final FhirBoolean? reported,
           @JsonKey(name: '_reported') final Element? reportedElement}) =
       _$_ImmunizationReaction;
   _ImmunizationReaction._() : super._();
@@ -12275,7 +12275,7 @@ abstract class _ImmunizationReaction extends ImmunizationReaction {
       _$_ImmunizationReaction.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -12289,7 +12289,7 @@ abstract class _ImmunizationReaction extends ImmunizationReaction {
   @override
   Reference? get detail;
   @override
-  Boolean? get reported;
+  FhirBoolean? get reported;
   @override
   @JsonKey(name: '_reported')
   Element? get reportedElement;
@@ -12306,7 +12306,7 @@ ImmunizationVaccinationProtocol _$ImmunizationVaccinationProtocolFromJson(
 
 /// @nodoc
 mixin _$ImmunizationVaccinationProtocol {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -12760,7 +12760,7 @@ abstract class _ImmunizationVaccinationProtocol
       _$_ImmunizationVaccinationProtocol.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -12801,12 +12801,12 @@ ImmunizationRecommendation _$ImmunizationRecommendationFromJson(
 mixin _$ImmunizationRecommendation {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.ImmunizationRecommendation)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -12837,12 +12837,12 @@ abstract class $ImmunizationRecommendationCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ImmunizationRecommendation)
           Dstu2ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -12915,7 +12915,7 @@ class _$ImmunizationRecommendationCopyWithImpl<$Res,
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -13020,12 +13020,12 @@ abstract class _$$_ImmunizationRecommendationCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ImmunizationRecommendation)
           Dstu2ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -13102,7 +13102,7 @@ class __$$_ImmunizationRecommendationCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -13186,7 +13186,7 @@ class _$_ImmunizationRecommendation extends _ImmunizationRecommendation {
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
-  final Code? language;
+  final FhirCode? language;
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
@@ -13324,7 +13324,7 @@ abstract class _ImmunizationRecommendation extends ImmunizationRecommendation {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -13346,7 +13346,7 @@ abstract class _ImmunizationRecommendation extends ImmunizationRecommendation {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.ImmunizationRecommendation)
   Dstu2ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -13355,7 +13355,7 @@ abstract class _ImmunizationRecommendation extends ImmunizationRecommendation {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
-  Code? get language;
+  FhirCode? get language;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;
@@ -13389,7 +13389,7 @@ ImmunizationRecommendationRecommendation
 
 /// @nodoc
 mixin _$ImmunizationRecommendationRecommendation {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -13836,7 +13836,7 @@ abstract class _ImmunizationRecommendationRecommendation
       _$_ImmunizationRecommendationRecommendation.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -13874,7 +13874,7 @@ ImmunizationRecommendationRecommendationDateCriterion
 
 /// @nodoc
 mixin _$ImmunizationRecommendationRecommendationDateCriterion {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   FhirExtension? get extensio => throw _privateConstructorUsedError;
   FhirExtension? get modifier => throw _privateConstructorUsedError;
   CodeableConcept get code => throw _privateConstructorUsedError;
@@ -14186,7 +14186,7 @@ abstract class _ImmunizationRecommendationRecommendationDateCriterion
       _$_ImmunizationRecommendationRecommendationDateCriterion.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   FhirExtension? get extensio;
   @override
@@ -14213,11 +14213,11 @@ ImmunizationRecommendationRecommendationProtocol
 
 /// @nodoc
 mixin _$ImmunizationRecommendationRecommendationProtocol {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   FhirExtension? get modifierExten => throw _privateConstructorUsedError;
-  Integer? get doseSequence => throw _privateConstructorUsedError;
+  FhirInteger? get doseSequence => throw _privateConstructorUsedError;
   String? get description => throw _privateConstructorUsedError;
   Reference? get authority => throw _privateConstructorUsedError;
   String? get series => throw _privateConstructorUsedError;
@@ -14244,7 +14244,7 @@ abstract class $ImmunizationRecommendationRecommendationProtocolCopyWith<$Res> {
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       FhirExtension? modifierExten,
-      Integer? doseSequence,
+      FhirInteger? doseSequence,
       String? description,
       Reference? authority,
       String? series,
@@ -14367,7 +14367,7 @@ abstract class _$$_ImmunizationRecommendationRecommendationProtocolCopyWith<
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       FhirExtension? modifierExten,
-      Integer? doseSequence,
+      FhirInteger? doseSequence,
       String? description,
       Reference? authority,
       String? series,
@@ -14564,14 +14564,14 @@ abstract class _ImmunizationRecommendationRecommendationProtocol
       _$_ImmunizationRecommendationRecommendationProtocol.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
   FhirExtension? get modifierExten;
   @override
-  Integer? get doseSequence;
+  FhirInteger? get doseSequence;
   @override
   String? get description;
   @override

@@ -260,7 +260,7 @@ _$_Binary _$$_BinaryFromJson(Map<String, dynamic> json) => _$_Binary(
           : Element.fromJson(json['_contentType'] as Map<String, dynamic>),
       content: json['content'] == null
           ? null
-          : Base64Binary.fromJson(json['content']),
+          : FhirBase64Binary?.fromJson(json['content']),
     )
       ..text = json['text'] == null
           ? null

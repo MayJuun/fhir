@@ -188,7 +188,7 @@ class Composition with Resource, _$Composition {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -205,7 +205,7 @@ class Composition with Resource, _$Composition {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -238,7 +238,7 @@ class Composition with Resource, _$Composition {
     @JsonKey(name: '_version') Element? versionElement,
 
     /// [status] The workflow/clinical status of this composition. The status is a marker for the clinical standing of the document.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -761,7 +761,7 @@ class CompositionSection with _$CompositionSection {
     Narrative? text,
 
     /// [mode] How the entry list was prepared - whether it is a working list that is suitable for being maintained on an ongoing basis, or if it represents a snapshot of a list of items from another source, or whether it is a prepared list where items may be marked as added, modified or deleted.
-    Code? mode,
+    FhirCode? mode,
 
     /// [modeElement] ("_mode") Extensions for mode
     @JsonKey(name: '_mode') Element? modeElement,
@@ -931,7 +931,7 @@ class DocumentManifest with Resource, _$DocumentManifest {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -948,7 +948,7 @@ class DocumentManifest with Resource, _$DocumentManifest {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -972,7 +972,7 @@ class DocumentManifest with Resource, _$DocumentManifest {
     List<Identifier>? identifier,
 
     /// [status] The status of this document manifest.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -1329,7 +1329,7 @@ class DocumentReference with Resource, _$DocumentReference {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -1346,7 +1346,7 @@ class DocumentReference with Resource, _$DocumentReference {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -1370,13 +1370,13 @@ class DocumentReference with Resource, _$DocumentReference {
     List<Reference>? basedOn,
 
     /// [status] The status of this document reference.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
 
     /// [docStatus] The status of the underlying document.
-    Code? docStatus,
+    FhirCode? docStatus,
 
     /// [docStatusElement] ("_docStatus") Extensions for docStatus
     @JsonKey(name: '_docStatus') Element? docStatusElement,
@@ -1406,7 +1406,7 @@ class DocumentReference with Resource, _$DocumentReference {
     Period? period,
 
     /// [date] When the document reference was created.
-    Instant? date,
+    FhirInstant? date,
 
     /// [dateElement] ("_date") Extensions for date
     @JsonKey(name: '_date') Element? dateElement,
@@ -1424,7 +1424,7 @@ class DocumentReference with Resource, _$DocumentReference {
     List<DocumentReferenceRelatesTo>? relatesTo,
 
     /// [description] Human-readable description of the source document.
-    Markdown? description,
+    FhirMarkdown? description,
 
     /// [descriptionElement] ("_description") Extensions for description
     @JsonKey(name: '_description') Element? descriptionElement,
@@ -1968,7 +1968,7 @@ class DocumentReferenceProfile with _$DocumentReferenceProfile {
     @JsonKey(name: '_valueUri') Element? valueUriElement,
 
     /// [valueCanonical] Code|uri|canonical.
-    Canonical? valueCanonical,
+    FhirCanonical? valueCanonical,
 
     /// [valueCanonicalElement] ("_valueCanonical") Extensions for valueCanonical
     @JsonKey(name: '_valueCanonical') Element? valueCanonicalElement,

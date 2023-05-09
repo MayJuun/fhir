@@ -19,11 +19,11 @@ class Claim with Resource, _$Claim {
     @Default(Stu3ResourceType.Claim)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Claim)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -173,10 +173,10 @@ class ClaimPayee with _$ClaimPayee {
 class ClaimCareTeam with _$ClaimCareTeam {
   ClaimCareTeam._();
   factory ClaimCareTeam({
-    Decimal? sequence,
+    FhirDecimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
     required Reference provider,
-    Boolean? responsible,
+    FhirBoolean? responsible,
     @JsonKey(name: '_responsible') Element? responsibleElement,
     CodeableConcept? role,
     CodeableConcept? qualification,
@@ -217,11 +217,11 @@ class ClaimCareTeam with _$ClaimCareTeam {
 class ClaimInformation with _$ClaimInformation {
   ClaimInformation._();
   factory ClaimInformation({
-    Decimal? sequence,
+    FhirDecimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
     required CodeableConcept category,
     CodeableConcept? code,
-    Date? timingDate,
+    FhirDate? timingDate,
     @JsonKey(name: '_timingDate') Element? timingDateElement,
     Period? timingPeriod,
     String? valueString,
@@ -267,7 +267,7 @@ class ClaimInformation with _$ClaimInformation {
 class ClaimDiagnosis with _$ClaimDiagnosis {
   ClaimDiagnosis._();
   factory ClaimDiagnosis({
-    Decimal? sequence,
+    FhirDecimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
     CodeableConcept? diagnosisCodeableConcept,
     Reference? diagnosisReference,
@@ -310,9 +310,9 @@ class ClaimDiagnosis with _$ClaimDiagnosis {
 class ClaimProcedure with _$ClaimProcedure {
   ClaimProcedure._();
   factory ClaimProcedure({
-    Decimal? sequence,
+    FhirDecimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
-    Date? date,
+    FhirDate? date,
     @JsonKey(name: '_date') Element? dateElement,
     CodeableConcept? procedureCodeableConcept,
     Reference? procedureReference,
@@ -353,9 +353,9 @@ class ClaimProcedure with _$ClaimProcedure {
 class ClaimInsurance with _$ClaimInsurance {
   ClaimInsurance._();
   factory ClaimInsurance({
-    Decimal? sequence,
+    FhirDecimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
-    Boolean? focal,
+    FhirBoolean? focal,
     @JsonKey(name: '_focal') Element? focalElement,
     required Reference coverage,
     String? businessArrangement,
@@ -400,7 +400,7 @@ class ClaimInsurance with _$ClaimInsurance {
 class ClaimAccident with _$ClaimAccident {
   ClaimAccident._();
   factory ClaimAccident({
-    Date? date,
+    FhirDate? date,
     @JsonKey(name: '_date') Element? dateElement,
     CodeableConcept? type,
     Address? locationAddress,
@@ -442,7 +442,7 @@ class ClaimAccident with _$ClaimAccident {
 class ClaimItem with _$ClaimItem {
   ClaimItem._();
   factory ClaimItem({
-    Decimal? sequence,
+    FhirDecimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
     List<Id>? careTeamLinkId,
     @JsonKey(name: '_careTeamLinkId') List<Element?>? careTeamLinkIdElement,
@@ -458,7 +458,7 @@ class ClaimItem with _$ClaimItem {
     CodeableConcept? service,
     List<CodeableConcept>? modifier,
     List<CodeableConcept>? programCode,
-    Date? servicedDate,
+    FhirDate? servicedDate,
     @JsonKey(name: '_servicedDate') Element? servicedDateElement,
     Period? servicedPeriod,
     CodeableConcept? locationCodeableConcept,
@@ -466,7 +466,7 @@ class ClaimItem with _$ClaimItem {
     Reference? locationReference,
     Quantity? quantity,
     Money? unitPrice,
-    Decimal? factor,
+    FhirDecimal? factor,
     @JsonKey(name: '_factor') Element? factorElement,
     Money? net,
     List<Reference>? udi,
@@ -511,7 +511,7 @@ class ClaimItem with _$ClaimItem {
 class ClaimDetail with _$ClaimDetail {
   ClaimDetail._();
   factory ClaimDetail({
-    Decimal? sequence,
+    FhirDecimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
     CodeableConcept? revenue,
     CodeableConcept? category,
@@ -520,7 +520,7 @@ class ClaimDetail with _$ClaimDetail {
     List<CodeableConcept>? programCode,
     Quantity? quantity,
     Money? unitPrice,
-    Decimal? factor,
+    FhirDecimal? factor,
     @JsonKey(name: '_factor') Element? factorElement,
     Money? net,
     List<Reference>? udi,
@@ -562,7 +562,7 @@ class ClaimDetail with _$ClaimDetail {
 class ClaimSubDetail with _$ClaimSubDetail {
   ClaimSubDetail._();
   factory ClaimSubDetail({
-    Decimal? sequence,
+    FhirDecimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
     CodeableConcept? revenue,
     CodeableConcept? category,
@@ -571,7 +571,7 @@ class ClaimSubDetail with _$ClaimSubDetail {
     List<CodeableConcept>? programCode,
     Quantity? quantity,
     Money? unitPrice,
-    Decimal? factor,
+    FhirDecimal? factor,
     @JsonKey(name: '_factor') Element? factorElement,
     Money? net,
     List<Reference>? udi,
@@ -615,11 +615,11 @@ class ClaimResponse with Resource, _$ClaimResponse {
     @Default(Stu3ResourceType.ClaimResponse)
     @JsonKey(unknownEnumValue: Stu3ResourceType.ClaimResponse)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -685,7 +685,7 @@ class ClaimResponse with Resource, _$ClaimResponse {
 class ClaimResponseItem with _$ClaimResponseItem {
   ClaimResponseItem._();
   factory ClaimResponseItem({
-    Id? sequenceLinkId,
+    FhirId? sequenceLinkId,
     @JsonKey(name: '_sequenceLinkId') Element? sequenceLinkIdElement,
     List<Decimal>? noteNumber,
     @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
@@ -731,7 +731,7 @@ class ClaimResponseAdjudication with _$ClaimResponseAdjudication {
     required CodeableConcept category,
     CodeableConcept? reason,
     Money? amount,
-    Decimal? value,
+    FhirDecimal? value,
     @JsonKey(name: '_value') Element? valueElement,
   }) = _ClaimResponseAdjudication;
 
@@ -770,7 +770,7 @@ class ClaimResponseAdjudication with _$ClaimResponseAdjudication {
 class ClaimResponseDetail with _$ClaimResponseDetail {
   ClaimResponseDetail._();
   factory ClaimResponseDetail({
-    Id? sequenceLinkId,
+    FhirId? sequenceLinkId,
     @JsonKey(name: '_sequenceLinkId') Element? sequenceLinkIdElement,
     List<Decimal>? noteNumber,
     @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
@@ -813,7 +813,7 @@ class ClaimResponseDetail with _$ClaimResponseDetail {
 class ClaimResponseSubDetail with _$ClaimResponseSubDetail {
   ClaimResponseSubDetail._();
   factory ClaimResponseSubDetail({
-    Id? sequenceLinkId,
+    FhirId? sequenceLinkId,
     @JsonKey(name: '_sequenceLinkId') Element? sequenceLinkIdElement,
     List<Decimal>? noteNumber,
     @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
@@ -948,12 +948,12 @@ class ClaimResponseDetail1 with _$ClaimResponseDetail1 {
 class ClaimResponseError with _$ClaimResponseError {
   ClaimResponseError._();
   factory ClaimResponseError({
-    Id? sequenceLinkId,
+    FhirId? sequenceLinkId,
     @JsonKey(name: '_sequenceLinkId') Element? sequenceLinkIdElement,
-    Id? detailSequenceLinkId,
+    FhirId? detailSequenceLinkId,
     @JsonKey(name: '_detailSequenceLinkId')
         Element? detailSequenceLinkIdElement,
-    Id? subdetailSequenceLinkId,
+    FhirId? subdetailSequenceLinkId,
     @JsonKey(name: '_subdetailSequenceLinkId')
         Element? subdetailSequenceLinkIdElement,
     required CodeableConcept code,
@@ -997,7 +997,7 @@ class ClaimResponsePayment with _$ClaimResponsePayment {
     CodeableConcept? type,
     Money? adjustment,
     CodeableConcept? adjustmentReason,
-    Date? date,
+    FhirDate? date,
     @JsonKey(name: '_date') Element? dateElement,
     Money? amount,
     Identifier? identifier,
@@ -1038,7 +1038,7 @@ class ClaimResponsePayment with _$ClaimResponsePayment {
 class ClaimResponseProcessNote with _$ClaimResponseProcessNote {
   ClaimResponseProcessNote._();
   factory ClaimResponseProcessNote({
-    Decimal? number,
+    FhirDecimal? number,
     @JsonKey(name: '_number') Element? numberElement,
     CodeableConcept? type,
     String? text,
@@ -1081,9 +1081,9 @@ class ClaimResponseProcessNote with _$ClaimResponseProcessNote {
 class ClaimResponseInsurance with _$ClaimResponseInsurance {
   ClaimResponseInsurance._();
   factory ClaimResponseInsurance({
-    Decimal? sequence,
+    FhirDecimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
-    Boolean? focal,
+    FhirBoolean? focal,
     @JsonKey(name: '_focal') Element? focalElement,
     required Reference coverage,
     String? businessArrangement,

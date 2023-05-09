@@ -174,7 +174,7 @@ class CarePlan with Resource, _$CarePlan {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -191,7 +191,7 @@ class CarePlan with Resource, _$CarePlan {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -230,13 +230,13 @@ class CarePlan with Resource, _$CarePlan {
     List<Reference>? partOf,
 
     /// [status] Indicates whether the plan is currently being acted upon, represents future intentions or is now a historical record.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
 
     /// [intent] Indicates the level of authority/intentionality associated with the care plan and where the care plan fits into the workflow chain.
-    Code? intent,
+    FhirCode? intent,
 
     /// [intentElement] ("_intent") Extensions for intent
     @JsonKey(name: '_intent') Element? intentElement,
@@ -620,7 +620,7 @@ class CarePlanPlannedActivityDetail with _$CarePlanPlannedActivityDetail {
     List<FhirExtension>? modifierExtension,
 
     /// [kind] A description of the kind of resource the in-line definition of a care plan activity is representing.  The CarePlan.activity.detail is an in-line definition when a resource is not referenced using CarePlan.activity.reference.  For example, a MedicationRequest, a ServiceRequest, or a CommunicationRequest.
-    Code? kind,
+    FhirCode? kind,
 
     /// [kindElement] ("_kind") Extensions for kind
     @JsonKey(name: '_kind') Element? kindElement,
@@ -644,7 +644,7 @@ class CarePlanPlannedActivityDetail with _$CarePlanPlannedActivityDetail {
     List<Reference>? goal,
 
     /// [status] Identifies what progress is being made for the specific activity.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -653,7 +653,7 @@ class CarePlanPlannedActivityDetail with _$CarePlanPlannedActivityDetail {
     CodeableConcept? statusReason,
 
     /// [doNotPerform] If true, indicates that the described activity is one that must NOT be engaged in when following the plan.  If false, or missing, indicates that the described activity is one that should be engaged in when following the plan.
-    Boolean? doNotPerform,
+    FhirBoolean? doNotPerform,
 
     /// [doNotPerformElement] ("_doNotPerform") Extensions for doNotPerform
     @JsonKey(name: '_doNotPerform') Element? doNotPerformElement,
@@ -674,7 +674,7 @@ class CarePlanPlannedActivityDetail with _$CarePlanPlannedActivityDetail {
     CodeableReference? location,
 
     /// [reportedBoolean] Indicates if this record was captured as a secondary 'reported' record rather than as an original primary source-of-truth record.  It may also indicate the source of the report.
-    Boolean? reportedBoolean,
+    FhirBoolean? reportedBoolean,
 
     /// [reportedBooleanElement] ("_reportedBoolean") Extensions for reportedBoolean
     @JsonKey(name: '_reportedBoolean') Element? reportedBooleanElement,
@@ -844,7 +844,7 @@ class CareTeam with Resource, _$CareTeam {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -861,7 +861,7 @@ class CareTeam with Resource, _$CareTeam {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -882,7 +882,7 @@ class CareTeam with Resource, _$CareTeam {
     List<Identifier>? identifier,
 
     /// [status] Indicates the current state of the care team.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -1215,7 +1215,7 @@ class Goal with Resource, _$Goal {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -1232,7 +1232,7 @@ class Goal with Resource, _$Goal {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -1253,7 +1253,7 @@ class Goal with Resource, _$Goal {
     List<Identifier>? identifier,
 
     /// [lifecycleStatus] The state of the goal throughout its lifecycle.
-    Code? lifecycleStatus,
+    FhirCode? lifecycleStatus,
 
     /// [lifecycleStatusElement] ("_lifecycleStatus") Extensions for lifecycleStatus
     @JsonKey(name: '_lifecycleStatus') Element? lifecycleStatusElement,
@@ -1265,7 +1265,7 @@ class Goal with Resource, _$Goal {
     List<CodeableConcept>? category,
 
     /// [continuous] After meeting the goal, ongoing activity is needed to sustain the goal objective.
-    Boolean? continuous,
+    FhirBoolean? continuous,
 
     /// [continuousElement] ("_continuous") Extensions for continuous
     @JsonKey(name: '_continuous') Element? continuousElement,
@@ -1280,7 +1280,7 @@ class Goal with Resource, _$Goal {
     required Reference subject,
 
     /// [startDate] The date or event after which the goal should begin being pursued.
-    Date? startDate,
+    FhirDate? startDate,
 
     /// [startDateElement] ("_startDate") Extensions for startDate
     @JsonKey(name: '_startDate') Element? startDateElement,
@@ -1292,7 +1292,7 @@ class Goal with Resource, _$Goal {
     List<GoalTarget>? target,
 
     /// [statusDate] Identifies when the current status.  I.e. When initially created, when achieved, when cancelled, etc.
-    Date? statusDate,
+    FhirDate? statusDate,
 
     /// [statusDateElement] ("_statusDate") Extensions for statusDate
     @JsonKey(name: '_statusDate') Element? statusDateElement,
@@ -1506,13 +1506,13 @@ class GoalTarget with _$GoalTarget {
     @JsonKey(name: '_detailString') Element? detailStringElement,
 
     /// [detailBoolean] The target value of the focus to be achieved to signify the fulfillment of the goal, e.g. 150 pounds, 7.0%. Either the high or low or both values of the range can be specified. When a low value is missing, it indicates that the goal is achieved at any focus value at or below the high value. Similarly, if the high value is missing, it indicates that the goal is achieved at any focus value at or above the low value.
-    Boolean? detailBoolean,
+    FhirBoolean? detailBoolean,
 
     /// [detailBooleanElement] ("_detailBoolean") Extensions for detailBoolean
     @JsonKey(name: '_detailBoolean') Element? detailBooleanElement,
 
     /// [detailInteger] The target value of the focus to be achieved to signify the fulfillment of the goal, e.g. 150 pounds, 7.0%. Either the high or low or both values of the range can be specified. When a low value is missing, it indicates that the goal is achieved at any focus value at or below the high value. Similarly, if the high value is missing, it indicates that the goal is achieved at any focus value at or above the low value.
-    Integer? detailInteger,
+    FhirInteger? detailInteger,
 
     /// [detailIntegerElement] ("_detailInteger") Extensions for detailInteger
     @JsonKey(name: '_detailInteger') Element? detailIntegerElement,
@@ -1521,7 +1521,7 @@ class GoalTarget with _$GoalTarget {
     Ratio? detailRatio,
 
     /// [dueDate] Indicates either the date or the duration after start by which the goal should be met.
-    Date? dueDate,
+    FhirDate? dueDate,
 
     /// [dueDateElement] ("_dueDate") Extensions for dueDate
     @JsonKey(name: '_dueDate') Element? dueDateElement,
@@ -1739,7 +1739,7 @@ class NutritionIntake with Resource, _$NutritionIntake {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -1756,7 +1756,7 @@ class NutritionIntake with Resource, _$NutritionIntake {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -1792,7 +1792,7 @@ class NutritionIntake with Resource, _$NutritionIntake {
     List<Reference>? partOf,
 
     /// [status] A code representing the patient or other source's judgment about the state of the intake that this assertion is about.  Generally, this will be active or completed.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -1825,7 +1825,7 @@ class NutritionIntake with Resource, _$NutritionIntake {
     @JsonKey(name: '_recorded') Element? recordedElement,
 
     /// [reportedBoolean] The person or organization that provided the information about the consumption of this food or fluid. Note: Use derivedFrom when a NutritionIntake is derived from other resources.
-    Boolean? reportedBoolean,
+    FhirBoolean? reportedBoolean,
 
     /// [reportedBooleanElement] ("_reportedBoolean") Extensions for reportedBoolean
     @JsonKey(name: '_reportedBoolean') Element? reportedBooleanElement,
@@ -2014,7 +2014,7 @@ class NutritionIntakeConsumedItem with _$NutritionIntakeConsumedItem {
     Quantity? rate,
 
     /// [notConsumed] Indicator when a patient is in a setting where it is helpful to know if food was not consumed, such as it was refused, held (as in tube feedings), or otherwise not provided. If a consumption is being recorded from an app, such as MyFitnessPal, this indicator will likely not be used.
-    Boolean? notConsumed,
+    FhirBoolean? notConsumed,
 
     /// [notConsumedElement] ("_notConsumed") Extensions for notConsumed
     @JsonKey(name: '_notConsumed') Element? notConsumedElement,
@@ -2486,7 +2486,7 @@ class NutritionOrder with Resource, _$NutritionOrder {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -2503,7 +2503,7 @@ class NutritionOrder with Resource, _$NutritionOrder {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -2542,19 +2542,19 @@ class NutritionOrder with Resource, _$NutritionOrder {
     List<Reference>? basedOn,
 
     /// [status] The workflow status of the nutrition order/request.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
 
     /// [intent] Indicates the level of authority/intentionality associated with the NutrionOrder and where the request fits into the workflow chain.
-    Code? intent,
+    FhirCode? intent,
 
     /// [intentElement] ("_intent") Extensions for intent
     @JsonKey(name: '_intent') Element? intentElement,
 
     /// [priority] Indicates how quickly the Nutrition Order should be addressed with respect to other        requests.
-    Code? priority,
+    FhirCode? priority,
 
     /// [priorityElement] ("_priority") Extensions for priority
     @JsonKey(name: '_priority') Element? priorityElement,
@@ -2590,7 +2590,7 @@ class NutritionOrder with Resource, _$NutritionOrder {
     List<CodeableConcept>? excludeFoodModifier,
 
     /// [outsideFoodAllowed] This modifier is used to convey whether a food item is allowed to be brought in by the patient and/or family.  If set to true, indicates that the receiving system does not need to supply the food item.
-    Boolean? outsideFoodAllowed,
+    FhirBoolean? outsideFoodAllowed,
 
     /// [outsideFoodAllowedElement] ("_outsideFoodAllowed") Extensions for outsideFoodAllowed
     @JsonKey(name: '_outsideFoodAllowed') Element? outsideFoodAllowedElement,
@@ -2854,7 +2854,7 @@ class NutritionOrderSchedule with _$NutritionOrderSchedule {
     List<Timing>? timing,
 
     /// [asNeeded] Indicates whether the product is only taken when needed within a specific dosing schedule.
-    Boolean? asNeeded,
+    FhirBoolean? asNeeded,
 
     /// [asNeededElement] ("_asNeeded") Extensions for asNeeded
     @JsonKey(name: '_asNeeded') Element? asNeededElement,
@@ -3315,7 +3315,7 @@ class NutritionOrderSchedule1 with _$NutritionOrderSchedule1 {
     List<Timing>? timing,
 
     /// [asNeeded] Indicates whether the supplement is only taken when needed within a specific dosing schedule.
-    Boolean? asNeeded,
+    FhirBoolean? asNeeded,
 
     /// [asNeededElement] ("_asNeeded") Extensions for asNeeded
     @JsonKey(name: '_asNeeded') Element? asNeededElement,
@@ -3840,7 +3840,7 @@ class NutritionOrderSchedule2 with _$NutritionOrderSchedule2 {
     List<Timing>? timing,
 
     /// [asNeeded] Indicates whether the enteral formula is only taken when needed within a specific dosing schedule.
-    Boolean? asNeeded,
+    FhirBoolean? asNeeded,
 
     /// [asNeededElement] ("_asNeeded") Extensions for asNeeded
     @JsonKey(name: '_asNeeded') Element? asNeededElement,
@@ -4021,7 +4021,7 @@ class RequestOrchestration with Resource, _$RequestOrchestration {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -4038,7 +4038,7 @@ class RequestOrchestration with Resource, _$RequestOrchestration {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -4081,19 +4081,19 @@ class RequestOrchestration with Resource, _$RequestOrchestration {
     Identifier? groupIdentifier,
 
     /// [status] The current state of the request. For request orchestrations, the status reflects the status of all the requests in the orchestration.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
 
     /// [intent] Indicates the level of authority/intentionality associated with the request and where the request fits into the workflow chain.
-    Code? intent,
+    FhirCode? intent,
 
     /// [intentElement] ("_intent") Extensions for intent
     @JsonKey(name: '_intent') Element? intentElement,
 
     /// [priority] Indicates how quickly the request should be addressed with respect to other requests.
-    Code? priority,
+    FhirCode? priority,
 
     /// [priorityElement] ("_priority") Extensions for priority
     @JsonKey(name: '_priority') Element? priorityElement,
@@ -4399,7 +4399,7 @@ class RequestOrchestrationAction with _$RequestOrchestrationAction {
     @JsonKey(name: '_textEquivalent') Element? textEquivalentElement,
 
     /// [priority] Indicates how quickly the action should be addressed with respect to other actions.
-    Code? priority,
+    FhirCode? priority,
 
     /// [priorityElement] ("_priority") Extensions for priority
     @JsonKey(name: '_priority') Element? priorityElement,
@@ -4456,31 +4456,31 @@ class RequestOrchestrationAction with _$RequestOrchestrationAction {
     CodeableConcept? type,
 
     /// [groupingBehavior] Defines the grouping behavior for the action and its children.
-    Code? groupingBehavior,
+    FhirCode? groupingBehavior,
 
     /// [groupingBehaviorElement] ("_groupingBehavior") Extensions for groupingBehavior
     @JsonKey(name: '_groupingBehavior') Element? groupingBehaviorElement,
 
     /// [selectionBehavior] Defines the selection behavior for the action and its children.
-    Code? selectionBehavior,
+    FhirCode? selectionBehavior,
 
     /// [selectionBehaviorElement] ("_selectionBehavior") Extensions for selectionBehavior
     @JsonKey(name: '_selectionBehavior') Element? selectionBehaviorElement,
 
     /// [requiredBehavior] Defines expectations around whether an action is required.
-    Code? requiredBehavior,
+    FhirCode? requiredBehavior,
 
     /// [requiredBehaviorElement] ("_requiredBehavior") Extensions for requiredBehavior
     @JsonKey(name: '_requiredBehavior') Element? requiredBehaviorElement,
 
     /// [precheckBehavior] Defines whether the action should usually be preselected.
-    Code? precheckBehavior,
+    FhirCode? precheckBehavior,
 
     /// [precheckBehaviorElement] ("_precheckBehavior") Extensions for precheckBehavior
     @JsonKey(name: '_precheckBehavior') Element? precheckBehaviorElement,
 
     /// [cardinalityBehavior] Defines whether the action can be selected multiple times.
-    Code? cardinalityBehavior,
+    FhirCode? cardinalityBehavior,
 
     /// [cardinalityBehaviorElement] ("_cardinalityBehavior") Extensions for cardinalityBehavior
     @JsonKey(name: '_cardinalityBehavior') Element? cardinalityBehaviorElement,
@@ -4489,7 +4489,7 @@ class RequestOrchestrationAction with _$RequestOrchestrationAction {
     Reference? resource,
 
     /// [definitionCanonical] A reference to an ActivityDefinition that describes the action to be taken in detail, a PlanDefinition that describes a series of actions to be taken, a Questionnaire that should be filled out, a SpecimenDefinition describing a specimen to be collected, or an ObservationDefinition that specifies what observation should be captured.
-    Canonical? definitionCanonical,
+    FhirCanonical? definitionCanonical,
 
     /// [definitionCanonicalElement] ("_definitionCanonical") Extensions for definitionCanonical
     @JsonKey(name: '_definitionCanonical') Element? definitionCanonicalElement,
@@ -4501,7 +4501,7 @@ class RequestOrchestrationAction with _$RequestOrchestrationAction {
     @JsonKey(name: '_definitionUri') Element? definitionUriElement,
 
     /// [transform] A reference to a StructureMap resource that defines a transform that can be executed to produce the intent resource using the ActivityDefinition instance as the input.
-    Canonical? transform,
+    FhirCanonical? transform,
 
     /// [dynamicValue] Customizations that should be applied to the statically defined resource. For example, if the dosage of a medication must be computed based on the patient's weight, a customization would be used to specify an expression that calculated the weight, and the path on the resource that would contain the result.
     List<RequestOrchestrationDynamicValue>? dynamicValue,
@@ -4614,7 +4614,7 @@ class RequestOrchestrationCondition with _$RequestOrchestrationCondition {
     List<FhirExtension>? modifierExtension,
 
     /// [kind] The kind of condition.
-    Code? kind,
+    FhirCode? kind,
 
     /// [kindElement] ("_kind") Extensions for kind
     @JsonKey(name: '_kind') Element? kindElement,
@@ -4745,7 +4745,7 @@ class RequestOrchestrationInput with _$RequestOrchestrationInput {
     DataRequirement? requirement,
 
     /// [relatedData] Points to an existing input or output element that provides data to this input.
-    Id? relatedData,
+    FhirId? relatedData,
 
     /// [relatedDataElement] ("_relatedData") Extensions for relatedData
     @JsonKey(name: '_relatedData') Element? relatedDataElement,
@@ -4989,13 +4989,13 @@ class RequestOrchestrationRelatedAction
     List<FhirExtension>? modifierExtension,
 
     /// [targetId] The element id of the target related action.
-    Id? targetId,
+    FhirId? targetId,
 
     /// [targetIdElement] ("_targetId") Extensions for targetId
     @JsonKey(name: '_targetId') Element? targetIdElement,
 
     /// [relationship] The relationship of this action to the related action.
-    Code? relationship,
+    FhirCode? relationship,
 
     /// [relationshipElement] ("_relationship") Extensions for relationship
     @JsonKey(name: '_relationship') Element? relationshipElement,
@@ -5127,13 +5127,13 @@ class RequestOrchestrationParticipant with _$RequestOrchestrationParticipant {
     List<FhirExtension>? modifierExtension,
 
     /// [type] The type of participant in the action.
-    Code? type,
+    FhirCode? type,
 
     /// [typeElement] ("_type") Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
 
     /// [typeCanonical] The type of participant in the action.
-    Canonical? typeCanonical,
+    FhirCanonical? typeCanonical,
 
     /// [typeReference] The type of participant in the action.
     Reference? typeReference,
@@ -5145,7 +5145,7 @@ class RequestOrchestrationParticipant with _$RequestOrchestrationParticipant {
     @JsonKey(name: 'function') CodeableConcept? function_,
 
     /// [actorCanonical] A reference to the actual participant.
-    Canonical? actorCanonical,
+    FhirCanonical? actorCanonical,
 
     /// [actorCanonicalElement] ("_actorCanonical") Extensions for actorCanonical
     @JsonKey(name: '_actorCanonical') Element? actorCanonicalElement,
@@ -5433,7 +5433,7 @@ class RiskAssessment with Resource, _$RiskAssessment {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -5450,7 +5450,7 @@ class RiskAssessment with Resource, _$RiskAssessment {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -5477,7 +5477,7 @@ class RiskAssessment with Resource, _$RiskAssessment {
     Reference? parent,
 
     /// [status] The status of the RiskAssessment, using the same statuses as an Observation.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -5659,7 +5659,7 @@ class RiskAssessmentPrediction with _$RiskAssessmentPrediction {
     CodeableConcept? outcome,
 
     /// [probabilityDecimal] Indicates how likely the outcome is (in the specified timeframe).
-    Decimal? probabilityDecimal,
+    FhirDecimal? probabilityDecimal,
 
     /// [probabilityDecimalElement] ("_probabilityDecimal") Extensions for probabilityDecimal
     @JsonKey(name: '_probabilityDecimal') Element? probabilityDecimalElement,
@@ -5671,7 +5671,7 @@ class RiskAssessmentPrediction with _$RiskAssessmentPrediction {
     CodeableConcept? qualitativeRisk,
 
     /// [relativeRisk] Indicates the risk for this particular subject (with their specific characteristics) divided by the risk of the population in general.  (Numbers greater than 1 = higher risk than the population, numbers less than 1 = lower risk.).
-    Decimal? relativeRisk,
+    FhirDecimal? relativeRisk,
 
     /// [relativeRiskElement] ("_relativeRisk") Extensions for relativeRisk
     @JsonKey(name: '_relativeRisk') Element? relativeRiskElement,
@@ -5950,7 +5950,7 @@ class ServiceRequest with Resource, _$ServiceRequest {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -5967,7 +5967,7 @@ class ServiceRequest with Resource, _$ServiceRequest {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -6006,13 +6006,13 @@ class ServiceRequest with Resource, _$ServiceRequest {
     Identifier? requisition,
 
     /// [status] The status of the order.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
 
     /// [intent] Whether the request is a proposal, plan, an original order or a reflex order.
-    Code? intent,
+    FhirCode? intent,
 
     /// [intentElement] ("_intent") Extensions for intent
     @JsonKey(name: '_intent') Element? intentElement,
@@ -6021,13 +6021,13 @@ class ServiceRequest with Resource, _$ServiceRequest {
     List<CodeableConcept>? category,
 
     /// [priority] Indicates how quickly the ServiceRequest should be addressed with respect to other requests.
-    Code? priority,
+    FhirCode? priority,
 
     /// [priorityElement] ("_priority") Extensions for priority
     @JsonKey(name: '_priority') Element? priorityElement,
 
     /// [doNotPerform] Set this to true if the record is saying that the service/procedure should NOT be performed.
-    Boolean? doNotPerform,
+    FhirBoolean? doNotPerform,
 
     /// [doNotPerformElement] ("_doNotPerform") Extensions for doNotPerform
     @JsonKey(name: '_doNotPerform') Element? doNotPerformElement,
@@ -6069,7 +6069,7 @@ class ServiceRequest with Resource, _$ServiceRequest {
     Timing? occurrenceTiming,
 
     /// [asNeededBoolean] If a CodeableConcept is present, it indicates the pre-condition for performing the service.  For example "pain", "on flare-up", etc.
-    Boolean? asNeededBoolean,
+    FhirBoolean? asNeededBoolean,
 
     /// [asNeededBooleanElement] ("_asNeededBoolean") Extensions for asNeededBoolean
     @JsonKey(name: '_asNeededBoolean') Element? asNeededBooleanElement,
@@ -6260,7 +6260,7 @@ class VisionPrescription with Resource, _$VisionPrescription {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -6277,7 +6277,7 @@ class VisionPrescription with Resource, _$VisionPrescription {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -6298,7 +6298,7 @@ class VisionPrescription with Resource, _$VisionPrescription {
     List<Identifier>? identifier,
 
     /// [status] The status of the resource instance.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -6478,25 +6478,25 @@ class VisionPrescriptionLensSpecification
     required CodeableConcept product,
 
     /// [eye] The eye for which the lens specification applies.
-    Code? eye,
+    FhirCode? eye,
 
     /// [eyeElement] ("_eye") Extensions for eye
     @JsonKey(name: '_eye') Element? eyeElement,
 
     /// [sphere] Lens power measured in dioptres (0.25 units).
-    Decimal? sphere,
+    FhirDecimal? sphere,
 
     /// [sphereElement] ("_sphere") Extensions for sphere
     @JsonKey(name: '_sphere') Element? sphereElement,
 
     /// [cylinder] Power adjustment for astigmatism measured in dioptres (0.25 units).
-    Decimal? cylinder,
+    FhirDecimal? cylinder,
 
     /// [cylinderElement] ("_cylinder") Extensions for cylinder
     @JsonKey(name: '_cylinder') Element? cylinderElement,
 
     /// [axis] Adjustment for astigmatism measured in integer degrees.
-    Integer? axis,
+    FhirInteger? axis,
 
     /// [axisElement] ("_axis") Extensions for axis
     @JsonKey(name: '_axis') Element? axisElement,
@@ -6505,25 +6505,25 @@ class VisionPrescriptionLensSpecification
     List<VisionPrescriptionPrism>? prism,
 
     /// [add] Power adjustment for multifocal lenses measured in dioptres (0.25 units).
-    Decimal? add,
+    FhirDecimal? add,
 
     /// [addElement] ("_add") Extensions for add
     @JsonKey(name: '_add') Element? addElement,
 
     /// [power] Contact lens power measured in dioptres (0.25 units).
-    Decimal? power,
+    FhirDecimal? power,
 
     /// [powerElement] ("_power") Extensions for power
     @JsonKey(name: '_power') Element? powerElement,
 
     /// [backCurve] Back curvature measured in millimetres.
-    Decimal? backCurve,
+    FhirDecimal? backCurve,
 
     /// [backCurveElement] ("_backCurve") Extensions for backCurve
     @JsonKey(name: '_backCurve') Element? backCurveElement,
 
     /// [diameter] Contact lens diameter measured in millimetres.
-    Decimal? diameter,
+    FhirDecimal? diameter,
 
     /// [diameterElement] ("_diameter") Extensions for diameter
     @JsonKey(name: '_diameter') Element? diameterElement,
@@ -6653,13 +6653,13 @@ class VisionPrescriptionPrism with _$VisionPrescriptionPrism {
     List<FhirExtension>? modifierExtension,
 
     /// [amount] Amount of prism to compensate for eye alignment in fractional units.
-    Decimal? amount,
+    FhirDecimal? amount,
 
     /// [amountElement] ("_amount") Extensions for amount
     @JsonKey(name: '_amount') Element? amountElement,
 
     /// [base] The relative base, or reference lens edge, for the prism.
-    Code? base,
+    FhirCode? base,
 
     /// [baseElement] ("_base") Extensions for base
     @JsonKey(name: '_base') Element? baseElement,

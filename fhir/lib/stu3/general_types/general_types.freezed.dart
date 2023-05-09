@@ -522,7 +522,7 @@ mixin _$Attachment {
   String? get url => throw _privateConstructorUsedError;
   @JsonKey(name: '_url')
   Element? get urlElement => throw _privateConstructorUsedError;
-  Decimal? get size => throw _privateConstructorUsedError;
+  FhirDecimal? get size => throw _privateConstructorUsedError;
   @JsonKey(name: '_size')
   Element? get sizeElement => throw _privateConstructorUsedError;
   String? get hash => throw _privateConstructorUsedError;
@@ -556,7 +556,7 @@ abstract class $AttachmentCopyWith<$Res> {
       @JsonKey(name: '_data') Element? dataElement,
       String? url,
       @JsonKey(name: '_url') Element? urlElement,
-      Decimal? size,
+      FhirDecimal? size,
       @JsonKey(name: '_size') Element? sizeElement,
       String? hash,
       @JsonKey(name: '_hash') Element? hashElement,
@@ -787,7 +787,7 @@ abstract class _$$_AttachmentCopyWith<$Res>
       @JsonKey(name: '_data') Element? dataElement,
       String? url,
       @JsonKey(name: '_url') Element? urlElement,
-      Decimal? size,
+      FhirDecimal? size,
       @JsonKey(name: '_size') Element? sizeElement,
       String? hash,
       @JsonKey(name: '_hash') Element? hashElement,
@@ -1096,7 +1096,7 @@ abstract class _Attachment extends Attachment {
   @JsonKey(name: '_url')
   Element? get urlElement;
   @override
-  Decimal? get size;
+  FhirDecimal? get size;
   @override
   @JsonKey(name: '_size')
   Element? get sizeElement;
@@ -1754,13 +1754,13 @@ mixin _$Coding {
   String? get version => throw _privateConstructorUsedError;
   @JsonKey(name: '_version')
   Element? get versionElement => throw _privateConstructorUsedError;
-  Code? get code => throw _privateConstructorUsedError;
+  FhirCode? get code => throw _privateConstructorUsedError;
   @JsonKey(name: '_code')
   Element? get codeElement => throw _privateConstructorUsedError;
   String? get display => throw _privateConstructorUsedError;
   @JsonKey(name: '_display')
   Element? get displayElement => throw _privateConstructorUsedError;
-  Boolean? get userSelected => throw _privateConstructorUsedError;
+  FhirBoolean? get userSelected => throw _privateConstructorUsedError;
   @JsonKey(name: '_userSelected')
   Element? get userSelectedElement => throw _privateConstructorUsedError;
 
@@ -1779,11 +1779,11 @@ abstract class $CodingCopyWith<$Res> {
       @JsonKey(name: '_system') Element? systemElement,
       String? version,
       @JsonKey(name: '_version') Element? versionElement,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement,
       String? display,
       @JsonKey(name: '_display') Element? displayElement,
-      Boolean? userSelected,
+      FhirBoolean? userSelected,
       @JsonKey(name: '_userSelected') Element? userSelectedElement});
 
   $ElementCopyWith<$Res>? get systemElement;
@@ -1837,7 +1837,7 @@ class _$CodingCopyWithImpl<$Res, $Val extends Coding>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -1853,7 +1853,7 @@ class _$CodingCopyWithImpl<$Res, $Val extends Coding>
       userSelected: freezed == userSelected
           ? _value.userSelected
           : userSelected // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       userSelectedElement: freezed == userSelectedElement
           ? _value.userSelectedElement
           : userSelectedElement // ignore: cast_nullable_to_non_nullable
@@ -1933,11 +1933,11 @@ abstract class _$$_CodingCopyWith<$Res> implements $CodingCopyWith<$Res> {
       @JsonKey(name: '_system') Element? systemElement,
       String? version,
       @JsonKey(name: '_version') Element? versionElement,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement,
       String? display,
       @JsonKey(name: '_display') Element? displayElement,
-      Boolean? userSelected,
+      FhirBoolean? userSelected,
       @JsonKey(name: '_userSelected') Element? userSelectedElement});
 
   @override
@@ -1993,7 +1993,7 @@ class __$$_CodingCopyWithImpl<$Res>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -2009,7 +2009,7 @@ class __$$_CodingCopyWithImpl<$Res>
       userSelected: freezed == userSelected
           ? _value.userSelected
           : userSelected // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       userSelectedElement: freezed == userSelectedElement
           ? _value.userSelectedElement
           : userSelectedElement // ignore: cast_nullable_to_non_nullable
@@ -2048,7 +2048,7 @@ class _$_Coding extends _Coding {
   @JsonKey(name: '_version')
   final Element? versionElement;
   @override
-  final Code? code;
+  final FhirCode? code;
   @override
   @JsonKey(name: '_code')
   final Element? codeElement;
@@ -2058,7 +2058,7 @@ class _$_Coding extends _Coding {
   @JsonKey(name: '_display')
   final Element? displayElement;
   @override
-  final Boolean? userSelected;
+  final FhirBoolean? userSelected;
   @override
   @JsonKey(name: '_userSelected')
   final Element? userSelectedElement;
@@ -2126,11 +2126,11 @@ abstract class _Coding extends Coding {
           @JsonKey(name: '_system') final Element? systemElement,
           final String? version,
           @JsonKey(name: '_version') final Element? versionElement,
-          final Code? code,
+          final FhirCode? code,
           @JsonKey(name: '_code') final Element? codeElement,
           final String? display,
           @JsonKey(name: '_display') final Element? displayElement,
-          final Boolean? userSelected,
+          final FhirBoolean? userSelected,
           @JsonKey(name: '_userSelected') final Element? userSelectedElement}) =
       _$_Coding;
   _Coding._() : super._();
@@ -2148,7 +2148,7 @@ abstract class _Coding extends Coding {
   @JsonKey(name: '_version')
   Element? get versionElement;
   @override
-  Code? get code;
+  FhirCode? get code;
   @override
   @JsonKey(name: '_code')
   Element? get codeElement;
@@ -2158,7 +2158,7 @@ abstract class _Coding extends Coding {
   @JsonKey(name: '_display')
   Element? get displayElement;
   @override
-  Boolean? get userSelected;
+  FhirBoolean? get userSelected;
   @override
   @JsonKey(name: '_userSelected')
   Element? get userSelectedElement;
@@ -2174,7 +2174,7 @@ Quantity _$QuantityFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Quantity {
-  Decimal? get value => throw _privateConstructorUsedError;
+  FhirDecimal? get value => throw _privateConstructorUsedError;
   @JsonKey(name: '_value')
   Element? get valueElement => throw _privateConstructorUsedError;
   QuantityComparator? get comparator => throw _privateConstructorUsedError;
@@ -2186,7 +2186,7 @@ mixin _$Quantity {
   String? get system => throw _privateConstructorUsedError;
   @JsonKey(name: '_system')
   Element? get systemElement => throw _privateConstructorUsedError;
-  Code? get code => throw _privateConstructorUsedError;
+  FhirCode? get code => throw _privateConstructorUsedError;
   @JsonKey(name: '_code')
   Element? get codeElement => throw _privateConstructorUsedError;
 
@@ -2210,7 +2210,7 @@ abstract class $QuantityCopyWith<$Res> {
       @JsonKey(name: '_unit') Element? unitElement,
       String? system,
       @JsonKey(name: '_system') Element? systemElement,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement});
 
   $ElementCopyWith<$Res>? get valueElement;
@@ -2280,7 +2280,7 @@ class _$QuantityCopyWithImpl<$Res, $Val extends Quantity>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -2365,7 +2365,7 @@ abstract class _$$_QuantityCopyWith<$Res> implements $QuantityCopyWith<$Res> {
       @JsonKey(name: '_unit') Element? unitElement,
       String? system,
       @JsonKey(name: '_system') Element? systemElement,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement});
 
   @override
@@ -2438,7 +2438,7 @@ class __$$_QuantityCopyWithImpl<$Res>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -2487,7 +2487,7 @@ class _$_Quantity extends _Quantity {
   @JsonKey(name: '_system')
   final Element? systemElement;
   @override
-  final Code? code;
+  final FhirCode? code;
   @override
   @JsonKey(name: '_code')
   final Element? codeElement;
@@ -2559,14 +2559,14 @@ abstract class _Quantity extends Quantity {
       @JsonKey(name: '_unit') final Element? unitElement,
       final String? system,
       @JsonKey(name: '_system') final Element? systemElement,
-      final Code? code,
+      final FhirCode? code,
       @JsonKey(name: '_code') final Element? codeElement}) = _$_Quantity;
   _Quantity._() : super._();
 
   factory _Quantity.fromJson(Map<String, dynamic> json) = _$_Quantity.fromJson;
 
   @override
-  Decimal? get value;
+  FhirDecimal? get value;
   @override
   @JsonKey(name: '_value')
   Element? get valueElement;
@@ -2586,7 +2586,7 @@ abstract class _Quantity extends Quantity {
   @JsonKey(name: '_system')
   Element? get systemElement;
   @override
-  Code? get code;
+  FhirCode? get code;
   @override
   @JsonKey(name: '_code')
   Element? get codeElement;
@@ -2602,7 +2602,7 @@ FhirDuration _$FhirDurationFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$FhirDuration {
-  Decimal? get value => throw _privateConstructorUsedError;
+  FhirDecimal? get value => throw _privateConstructorUsedError;
   @JsonKey(name: '_value')
   Element? get valueElement => throw _privateConstructorUsedError;
   QuantityComparator? get comparator => throw _privateConstructorUsedError;
@@ -2614,7 +2614,7 @@ mixin _$FhirDuration {
   String? get system => throw _privateConstructorUsedError;
   @JsonKey(name: '_system')
   Element? get systemElement => throw _privateConstructorUsedError;
-  Code? get code => throw _privateConstructorUsedError;
+  FhirCode? get code => throw _privateConstructorUsedError;
   @JsonKey(name: '_code')
   Element? get codeElement => throw _privateConstructorUsedError;
 
@@ -2639,7 +2639,7 @@ abstract class $FhirDurationCopyWith<$Res> {
       @JsonKey(name: '_unit') Element? unitElement,
       String? system,
       @JsonKey(name: '_system') Element? systemElement,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement});
 
   $ElementCopyWith<$Res>? get valueElement;
@@ -2709,7 +2709,7 @@ class _$FhirDurationCopyWithImpl<$Res, $Val extends FhirDuration>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -2795,7 +2795,7 @@ abstract class _$$_FhirDurationCopyWith<$Res>
       @JsonKey(name: '_unit') Element? unitElement,
       String? system,
       @JsonKey(name: '_system') Element? systemElement,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement});
 
   @override
@@ -2868,7 +2868,7 @@ class __$$_FhirDurationCopyWithImpl<$Res>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -2917,7 +2917,7 @@ class _$_FhirDuration extends _FhirDuration {
   @JsonKey(name: '_system')
   final Element? systemElement;
   @override
-  final Code? code;
+  final FhirCode? code;
   @override
   @JsonKey(name: '_code')
   final Element? codeElement;
@@ -2989,7 +2989,7 @@ abstract class _FhirDuration extends FhirDuration {
       @JsonKey(name: '_unit') final Element? unitElement,
       final String? system,
       @JsonKey(name: '_system') final Element? systemElement,
-      final Code? code,
+      final FhirCode? code,
       @JsonKey(name: '_code') final Element? codeElement}) = _$_FhirDuration;
   _FhirDuration._() : super._();
 
@@ -2997,7 +2997,7 @@ abstract class _FhirDuration extends FhirDuration {
       _$_FhirDuration.fromJson;
 
   @override
-  Decimal? get value;
+  FhirDecimal? get value;
   @override
   @JsonKey(name: '_value')
   Element? get valueElement;
@@ -3017,7 +3017,7 @@ abstract class _FhirDuration extends FhirDuration {
   @JsonKey(name: '_system')
   Element? get systemElement;
   @override
-  Code? get code;
+  FhirCode? get code;
   @override
   @JsonKey(name: '_code')
   Element? get codeElement;
@@ -3033,7 +3033,7 @@ Distance _$DistanceFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Distance {
-  Decimal? get value => throw _privateConstructorUsedError;
+  FhirDecimal? get value => throw _privateConstructorUsedError;
   @JsonKey(name: '_value')
   Element? get valueElement => throw _privateConstructorUsedError;
   QuantityComparator? get comparator => throw _privateConstructorUsedError;
@@ -3045,7 +3045,7 @@ mixin _$Distance {
   String? get system => throw _privateConstructorUsedError;
   @JsonKey(name: '_system')
   Element? get systemElement => throw _privateConstructorUsedError;
-  Code? get code => throw _privateConstructorUsedError;
+  FhirCode? get code => throw _privateConstructorUsedError;
   @JsonKey(name: '_code')
   Element? get codeElement => throw _privateConstructorUsedError;
 
@@ -3069,7 +3069,7 @@ abstract class $DistanceCopyWith<$Res> {
       @JsonKey(name: '_unit') Element? unitElement,
       String? system,
       @JsonKey(name: '_system') Element? systemElement,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement});
 
   $ElementCopyWith<$Res>? get valueElement;
@@ -3139,7 +3139,7 @@ class _$DistanceCopyWithImpl<$Res, $Val extends Distance>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -3224,7 +3224,7 @@ abstract class _$$_DistanceCopyWith<$Res> implements $DistanceCopyWith<$Res> {
       @JsonKey(name: '_unit') Element? unitElement,
       String? system,
       @JsonKey(name: '_system') Element? systemElement,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement});
 
   @override
@@ -3297,7 +3297,7 @@ class __$$_DistanceCopyWithImpl<$Res>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -3346,7 +3346,7 @@ class _$_Distance extends _Distance {
   @JsonKey(name: '_system')
   final Element? systemElement;
   @override
-  final Code? code;
+  final FhirCode? code;
   @override
   @JsonKey(name: '_code')
   final Element? codeElement;
@@ -3418,14 +3418,14 @@ abstract class _Distance extends Distance {
       @JsonKey(name: '_unit') final Element? unitElement,
       final String? system,
       @JsonKey(name: '_system') final Element? systemElement,
-      final Code? code,
+      final FhirCode? code,
       @JsonKey(name: '_code') final Element? codeElement}) = _$_Distance;
   _Distance._() : super._();
 
   factory _Distance.fromJson(Map<String, dynamic> json) = _$_Distance.fromJson;
 
   @override
-  Decimal? get value;
+  FhirDecimal? get value;
   @override
   @JsonKey(name: '_value')
   Element? get valueElement;
@@ -3445,7 +3445,7 @@ abstract class _Distance extends Distance {
   @JsonKey(name: '_system')
   Element? get systemElement;
   @override
-  Code? get code;
+  FhirCode? get code;
   @override
   @JsonKey(name: '_code')
   Element? get codeElement;
@@ -3461,7 +3461,7 @@ Count _$CountFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Count {
-  Decimal? get value => throw _privateConstructorUsedError;
+  FhirDecimal? get value => throw _privateConstructorUsedError;
   @JsonKey(name: '_value')
   Element? get valueElement => throw _privateConstructorUsedError;
   QuantityComparator? get comparator => throw _privateConstructorUsedError;
@@ -3473,7 +3473,7 @@ mixin _$Count {
   String? get system => throw _privateConstructorUsedError;
   @JsonKey(name: '_system')
   Element? get systemElement => throw _privateConstructorUsedError;
-  Code? get code => throw _privateConstructorUsedError;
+  FhirCode? get code => throw _privateConstructorUsedError;
   @JsonKey(name: '_code')
   Element? get codeElement => throw _privateConstructorUsedError;
 
@@ -3496,7 +3496,7 @@ abstract class $CountCopyWith<$Res> {
       @JsonKey(name: '_unit') Element? unitElement,
       String? system,
       @JsonKey(name: '_system') Element? systemElement,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement});
 
   $ElementCopyWith<$Res>? get valueElement;
@@ -3566,7 +3566,7 @@ class _$CountCopyWithImpl<$Res, $Val extends Count>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -3650,7 +3650,7 @@ abstract class _$$_CountCopyWith<$Res> implements $CountCopyWith<$Res> {
       @JsonKey(name: '_unit') Element? unitElement,
       String? system,
       @JsonKey(name: '_system') Element? systemElement,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement});
 
   @override
@@ -3721,7 +3721,7 @@ class __$$_CountCopyWithImpl<$Res> extends _$CountCopyWithImpl<$Res, _$_Count>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -3770,7 +3770,7 @@ class _$_Count extends _Count {
   @JsonKey(name: '_system')
   final Element? systemElement;
   @override
-  final Code? code;
+  final FhirCode? code;
   @override
   @JsonKey(name: '_code')
   final Element? codeElement;
@@ -3842,14 +3842,14 @@ abstract class _Count extends Count {
       @JsonKey(name: '_unit') final Element? unitElement,
       final String? system,
       @JsonKey(name: '_system') final Element? systemElement,
-      final Code? code,
+      final FhirCode? code,
       @JsonKey(name: '_code') final Element? codeElement}) = _$_Count;
   _Count._() : super._();
 
   factory _Count.fromJson(Map<String, dynamic> json) = _$_Count.fromJson;
 
   @override
-  Decimal? get value;
+  FhirDecimal? get value;
   @override
   @JsonKey(name: '_value')
   Element? get valueElement;
@@ -3869,7 +3869,7 @@ abstract class _Count extends Count {
   @JsonKey(name: '_system')
   Element? get systemElement;
   @override
-  Code? get code;
+  FhirCode? get code;
   @override
   @JsonKey(name: '_code')
   Element? get codeElement;
@@ -3885,7 +3885,7 @@ Money _$MoneyFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Money {
-  Decimal? get value => throw _privateConstructorUsedError;
+  FhirDecimal? get value => throw _privateConstructorUsedError;
   @JsonKey(name: '_value')
   Element? get valueElement => throw _privateConstructorUsedError;
   QuantityComparator? get comparator => throw _privateConstructorUsedError;
@@ -3897,7 +3897,7 @@ mixin _$Money {
   String? get system => throw _privateConstructorUsedError;
   @JsonKey(name: '_system')
   Element? get systemElement => throw _privateConstructorUsedError;
-  Code? get code => throw _privateConstructorUsedError;
+  FhirCode? get code => throw _privateConstructorUsedError;
   @JsonKey(name: '_code')
   Element? get codeElement => throw _privateConstructorUsedError;
 
@@ -3920,7 +3920,7 @@ abstract class $MoneyCopyWith<$Res> {
       @JsonKey(name: '_unit') Element? unitElement,
       String? system,
       @JsonKey(name: '_system') Element? systemElement,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement});
 
   $ElementCopyWith<$Res>? get valueElement;
@@ -3990,7 +3990,7 @@ class _$MoneyCopyWithImpl<$Res, $Val extends Money>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -4074,7 +4074,7 @@ abstract class _$$_MoneyCopyWith<$Res> implements $MoneyCopyWith<$Res> {
       @JsonKey(name: '_unit') Element? unitElement,
       String? system,
       @JsonKey(name: '_system') Element? systemElement,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement});
 
   @override
@@ -4145,7 +4145,7 @@ class __$$_MoneyCopyWithImpl<$Res> extends _$MoneyCopyWithImpl<$Res, _$_Money>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -4194,7 +4194,7 @@ class _$_Money extends _Money {
   @JsonKey(name: '_system')
   final Element? systemElement;
   @override
-  final Code? code;
+  final FhirCode? code;
   @override
   @JsonKey(name: '_code')
   final Element? codeElement;
@@ -4266,14 +4266,14 @@ abstract class _Money extends Money {
       @JsonKey(name: '_unit') final Element? unitElement,
       final String? system,
       @JsonKey(name: '_system') final Element? systemElement,
-      final Code? code,
+      final FhirCode? code,
       @JsonKey(name: '_code') final Element? codeElement}) = _$_Money;
   _Money._() : super._();
 
   factory _Money.fromJson(Map<String, dynamic> json) = _$_Money.fromJson;
 
   @override
-  Decimal? get value;
+  FhirDecimal? get value;
   @override
   @JsonKey(name: '_value')
   Element? get valueElement;
@@ -4293,7 +4293,7 @@ abstract class _Money extends Money {
   @JsonKey(name: '_system')
   Element? get systemElement;
   @override
-  Code? get code;
+  FhirCode? get code;
   @override
   @JsonKey(name: '_code')
   Element? get codeElement;
@@ -4309,7 +4309,7 @@ Age _$AgeFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Age {
-  Decimal? get value => throw _privateConstructorUsedError;
+  FhirDecimal? get value => throw _privateConstructorUsedError;
   @JsonKey(name: '_value')
   Element? get valueElement => throw _privateConstructorUsedError;
   QuantityComparator? get comparator => throw _privateConstructorUsedError;
@@ -4321,7 +4321,7 @@ mixin _$Age {
   String? get system => throw _privateConstructorUsedError;
   @JsonKey(name: '_system')
   Element? get systemElement => throw _privateConstructorUsedError;
-  Code? get code => throw _privateConstructorUsedError;
+  FhirCode? get code => throw _privateConstructorUsedError;
   @JsonKey(name: '_code')
   Element? get codeElement => throw _privateConstructorUsedError;
 
@@ -4344,7 +4344,7 @@ abstract class $AgeCopyWith<$Res> {
       @JsonKey(name: '_unit') Element? unitElement,
       String? system,
       @JsonKey(name: '_system') Element? systemElement,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement});
 
   $ElementCopyWith<$Res>? get valueElement;
@@ -4413,7 +4413,7 @@ class _$AgeCopyWithImpl<$Res, $Val extends Age> implements $AgeCopyWith<$Res> {
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -4497,7 +4497,7 @@ abstract class _$$_AgeCopyWith<$Res> implements $AgeCopyWith<$Res> {
       @JsonKey(name: '_unit') Element? unitElement,
       String? system,
       @JsonKey(name: '_system') Element? systemElement,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement});
 
   @override
@@ -4568,7 +4568,7 @@ class __$$_AgeCopyWithImpl<$Res> extends _$AgeCopyWithImpl<$Res, _$_Age>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -4616,7 +4616,7 @@ class _$_Age extends _Age {
   @JsonKey(name: '_system')
   final Element? systemElement;
   @override
-  final Code? code;
+  final FhirCode? code;
   @override
   @JsonKey(name: '_code')
   final Element? codeElement;
@@ -4688,14 +4688,14 @@ abstract class _Age extends Age {
       @JsonKey(name: '_unit') final Element? unitElement,
       final String? system,
       @JsonKey(name: '_system') final Element? systemElement,
-      final Code? code,
+      final FhirCode? code,
       @JsonKey(name: '_code') final Element? codeElement}) = _$_Age;
   _Age._() : super._();
 
   factory _Age.fromJson(Map<String, dynamic> json) = _$_Age.fromJson;
 
   @override
-  Decimal? get value;
+  FhirDecimal? get value;
   @override
   @JsonKey(name: '_value')
   Element? get valueElement;
@@ -4715,7 +4715,7 @@ abstract class _Age extends Age {
   @JsonKey(name: '_system')
   Element? get systemElement;
   @override
-  Code? get code;
+  FhirCode? get code;
   @override
   @JsonKey(name: '_code')
   Element? get codeElement;
@@ -5327,19 +5327,19 @@ SampledData _$SampledDataFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$SampledData {
   Quantity get origin => throw _privateConstructorUsedError;
-  Decimal? get period => throw _privateConstructorUsedError;
+  FhirDecimal? get period => throw _privateConstructorUsedError;
   @JsonKey(name: '_period')
   Element? get periodElement => throw _privateConstructorUsedError;
-  Decimal? get factor => throw _privateConstructorUsedError;
+  FhirDecimal? get factor => throw _privateConstructorUsedError;
   @JsonKey(name: '_factor')
   Element? get factorElement => throw _privateConstructorUsedError;
-  Decimal? get lowerLimit => throw _privateConstructorUsedError;
+  FhirDecimal? get lowerLimit => throw _privateConstructorUsedError;
   @JsonKey(name: '_lowerLimit')
   Element? get lowerLimitElement => throw _privateConstructorUsedError;
-  Decimal? get upperLimit => throw _privateConstructorUsedError;
+  FhirDecimal? get upperLimit => throw _privateConstructorUsedError;
   @JsonKey(name: '_upperLimit')
   Element? get upperLimitElement => throw _privateConstructorUsedError;
-  Decimal? get dimensions => throw _privateConstructorUsedError;
+  FhirDecimal? get dimensions => throw _privateConstructorUsedError;
   @JsonKey(name: '_dimensions')
   Element? get dimensionsElement => throw _privateConstructorUsedError;
   String? get data => throw _privateConstructorUsedError;
@@ -5360,15 +5360,15 @@ abstract class $SampledDataCopyWith<$Res> {
   @useResult
   $Res call(
       {Quantity origin,
-      Decimal? period,
+      FhirDecimal? period,
       @JsonKey(name: '_period') Element? periodElement,
-      Decimal? factor,
+      FhirDecimal? factor,
       @JsonKey(name: '_factor') Element? factorElement,
-      Decimal? lowerLimit,
+      FhirDecimal? lowerLimit,
       @JsonKey(name: '_lowerLimit') Element? lowerLimitElement,
-      Decimal? upperLimit,
+      FhirDecimal? upperLimit,
       @JsonKey(name: '_upperLimit') Element? upperLimitElement,
-      Decimal? dimensions,
+      FhirDecimal? dimensions,
       @JsonKey(name: '_dimensions') Element? dimensionsElement,
       String? data,
       @JsonKey(name: '_data') Element? dataElement});
@@ -5556,15 +5556,15 @@ abstract class _$$_SampledDataCopyWith<$Res>
   @useResult
   $Res call(
       {Quantity origin,
-      Decimal? period,
+      FhirDecimal? period,
       @JsonKey(name: '_period') Element? periodElement,
-      Decimal? factor,
+      FhirDecimal? factor,
       @JsonKey(name: '_factor') Element? factorElement,
-      Decimal? lowerLimit,
+      FhirDecimal? lowerLimit,
       @JsonKey(name: '_lowerLimit') Element? lowerLimitElement,
-      Decimal? upperLimit,
+      FhirDecimal? upperLimit,
       @JsonKey(name: '_upperLimit') Element? upperLimitElement,
-      Decimal? dimensions,
+      FhirDecimal? dimensions,
       @JsonKey(name: '_dimensions') Element? dimensionsElement,
       String? data,
       @JsonKey(name: '_data') Element? dataElement});
@@ -5811,27 +5811,27 @@ abstract class _SampledData extends SampledData {
   @override
   Quantity get origin;
   @override
-  Decimal? get period;
+  FhirDecimal? get period;
   @override
   @JsonKey(name: '_period')
   Element? get periodElement;
   @override
-  Decimal? get factor;
+  FhirDecimal? get factor;
   @override
   @JsonKey(name: '_factor')
   Element? get factorElement;
   @override
-  Decimal? get lowerLimit;
+  FhirDecimal? get lowerLimit;
   @override
   @JsonKey(name: '_lowerLimit')
   Element? get lowerLimitElement;
   @override
-  Decimal? get upperLimit;
+  FhirDecimal? get upperLimit;
   @override
   @JsonKey(name: '_upperLimit')
   Element? get upperLimitElement;
   @override
-  Decimal? get dimensions;
+  FhirDecimal? get dimensions;
   @override
   @JsonKey(name: '_dimensions')
   Element? get dimensionsElement;
@@ -7638,7 +7638,7 @@ mixin _$ContactPoint {
   ContactPointUse? get use => throw _privateConstructorUsedError;
   @JsonKey(name: '_use')
   Element? get useElement => throw _privateConstructorUsedError;
-  Decimal? get rank => throw _privateConstructorUsedError;
+  FhirDecimal? get rank => throw _privateConstructorUsedError;
   @JsonKey(name: '_rank')
   Element? get rankElement => throw _privateConstructorUsedError;
   Period? get period => throw _privateConstructorUsedError;
@@ -7662,7 +7662,7 @@ abstract class $ContactPointCopyWith<$Res> {
       @JsonKey(name: '_value') Element? valueElement,
       ContactPointUse? use,
       @JsonKey(name: '_use') Element? useElement,
-      Decimal? rank,
+      FhirDecimal? rank,
       @JsonKey(name: '_rank') Element? rankElement,
       Period? period});
 
@@ -7812,7 +7812,7 @@ abstract class _$$_ContactPointCopyWith<$Res>
       @JsonKey(name: '_value') Element? valueElement,
       ContactPointUse? use,
       @JsonKey(name: '_use') Element? useElement,
-      Decimal? rank,
+      FhirDecimal? rank,
       @JsonKey(name: '_rank') Element? rankElement,
       Period? period});
 
@@ -8007,7 +8007,7 @@ abstract class _ContactPoint extends ContactPoint {
   @JsonKey(name: '_use')
   Element? get useElement;
   @override
-  Decimal? get rank;
+  FhirDecimal? get rank;
   @override
   @JsonKey(name: '_rank')
   Element? get rankElement;
@@ -8283,32 +8283,32 @@ mixin _$TimingRepeat {
   FhirDuration? get boundsDuration => throw _privateConstructorUsedError;
   Range? get boundsRange => throw _privateConstructorUsedError;
   Period? get boundsPeriod => throw _privateConstructorUsedError;
-  Decimal? get count => throw _privateConstructorUsedError;
+  FhirDecimal? get count => throw _privateConstructorUsedError;
   @JsonKey(name: '_count')
   Element? get countElement => throw _privateConstructorUsedError;
-  Decimal? get countMax => throw _privateConstructorUsedError;
+  FhirDecimal? get countMax => throw _privateConstructorUsedError;
   @JsonKey(name: '_countMax')
   Element? get countMaxElement => throw _privateConstructorUsedError;
-  Decimal? get duration => throw _privateConstructorUsedError;
+  FhirDecimal? get duration => throw _privateConstructorUsedError;
   @JsonKey(name: '_duration')
   Element? get durationElement => throw _privateConstructorUsedError;
-  Decimal? get durationMax => throw _privateConstructorUsedError;
+  FhirDecimal? get durationMax => throw _privateConstructorUsedError;
   @JsonKey(name: '_durationMax')
   Element? get durationMaxElement => throw _privateConstructorUsedError;
   TimingRepeatDurationUnit? get durationUnit =>
       throw _privateConstructorUsedError;
   @JsonKey(name: '_durationUnit')
   Element? get durationUnitElement => throw _privateConstructorUsedError;
-  Decimal? get frequency => throw _privateConstructorUsedError;
+  FhirDecimal? get frequency => throw _privateConstructorUsedError;
   @JsonKey(name: '_frequency')
   Element? get frequencyElement => throw _privateConstructorUsedError;
-  Decimal? get frequencyMax => throw _privateConstructorUsedError;
+  FhirDecimal? get frequencyMax => throw _privateConstructorUsedError;
   @JsonKey(name: '_frequencyMax')
   Element? get frequencyMaxElement => throw _privateConstructorUsedError;
-  Decimal? get period => throw _privateConstructorUsedError;
+  FhirDecimal? get period => throw _privateConstructorUsedError;
   @JsonKey(name: '_period')
   Element? get periodElement => throw _privateConstructorUsedError;
-  Decimal? get periodMax => throw _privateConstructorUsedError;
+  FhirDecimal? get periodMax => throw _privateConstructorUsedError;
   @JsonKey(name: '_periodMax')
   Element? get periodMaxElement => throw _privateConstructorUsedError;
   TimingRepeatPeriodUnit? get periodUnit => throw _privateConstructorUsedError;
@@ -8323,7 +8323,7 @@ mixin _$TimingRepeat {
   List<TimingRepeatWhen>? get when => throw _privateConstructorUsedError;
   @JsonKey(name: '_when')
   List<Element?>? get whenElement => throw _privateConstructorUsedError;
-  Decimal? get offset => throw _privateConstructorUsedError;
+  FhirDecimal? get offset => throw _privateConstructorUsedError;
   @JsonKey(name: '_offset')
   Element? get offsetElement => throw _privateConstructorUsedError;
 
@@ -8343,23 +8343,23 @@ abstract class $TimingRepeatCopyWith<$Res> {
       {FhirDuration? boundsDuration,
       Range? boundsRange,
       Period? boundsPeriod,
-      Decimal? count,
+      FhirDecimal? count,
       @JsonKey(name: '_count') Element? countElement,
-      Decimal? countMax,
+      FhirDecimal? countMax,
       @JsonKey(name: '_countMax') Element? countMaxElement,
-      Decimal? duration,
+      FhirDecimal? duration,
       @JsonKey(name: '_duration') Element? durationElement,
-      Decimal? durationMax,
+      FhirDecimal? durationMax,
       @JsonKey(name: '_durationMax') Element? durationMaxElement,
       TimingRepeatDurationUnit? durationUnit,
       @JsonKey(name: '_durationUnit') Element? durationUnitElement,
-      Decimal? frequency,
+      FhirDecimal? frequency,
       @JsonKey(name: '_frequency') Element? frequencyElement,
-      Decimal? frequencyMax,
+      FhirDecimal? frequencyMax,
       @JsonKey(name: '_frequencyMax') Element? frequencyMaxElement,
-      Decimal? period,
+      FhirDecimal? period,
       @JsonKey(name: '_period') Element? periodElement,
-      Decimal? periodMax,
+      FhirDecimal? periodMax,
       @JsonKey(name: '_periodMax') Element? periodMaxElement,
       TimingRepeatPeriodUnit? periodUnit,
       @JsonKey(name: '_periodUnit') Element? periodUnitElement,
@@ -8369,7 +8369,7 @@ abstract class $TimingRepeatCopyWith<$Res> {
       @JsonKey(name: '_timeOfDay') List<Element?>? timeOfDayElement,
       List<TimingRepeatWhen>? when,
       @JsonKey(name: '_when') List<Element?>? whenElement,
-      Decimal? offset,
+      FhirDecimal? offset,
       @JsonKey(name: '_offset') Element? offsetElement});
 
   $FhirDurationCopyWith<$Res>? get boundsDuration;
@@ -8742,23 +8742,23 @@ abstract class _$$_TimingRepeatCopyWith<$Res>
       {FhirDuration? boundsDuration,
       Range? boundsRange,
       Period? boundsPeriod,
-      Decimal? count,
+      FhirDecimal? count,
       @JsonKey(name: '_count') Element? countElement,
-      Decimal? countMax,
+      FhirDecimal? countMax,
       @JsonKey(name: '_countMax') Element? countMaxElement,
-      Decimal? duration,
+      FhirDecimal? duration,
       @JsonKey(name: '_duration') Element? durationElement,
-      Decimal? durationMax,
+      FhirDecimal? durationMax,
       @JsonKey(name: '_durationMax') Element? durationMaxElement,
       TimingRepeatDurationUnit? durationUnit,
       @JsonKey(name: '_durationUnit') Element? durationUnitElement,
-      Decimal? frequency,
+      FhirDecimal? frequency,
       @JsonKey(name: '_frequency') Element? frequencyElement,
-      Decimal? frequencyMax,
+      FhirDecimal? frequencyMax,
       @JsonKey(name: '_frequencyMax') Element? frequencyMaxElement,
-      Decimal? period,
+      FhirDecimal? period,
       @JsonKey(name: '_period') Element? periodElement,
-      Decimal? periodMax,
+      FhirDecimal? periodMax,
       @JsonKey(name: '_periodMax') Element? periodMaxElement,
       TimingRepeatPeriodUnit? periodUnit,
       @JsonKey(name: '_periodUnit') Element? periodUnitElement,
@@ -8768,7 +8768,7 @@ abstract class _$$_TimingRepeatCopyWith<$Res>
       @JsonKey(name: '_timeOfDay') List<Element?>? timeOfDayElement,
       List<TimingRepeatWhen>? when,
       @JsonKey(name: '_when') List<Element?>? whenElement,
-      Decimal? offset,
+      FhirDecimal? offset,
       @JsonKey(name: '_offset') Element? offsetElement});
 
   @override
@@ -9313,22 +9313,22 @@ abstract class _TimingRepeat extends TimingRepeat {
   @override
   Period? get boundsPeriod;
   @override
-  Decimal? get count;
+  FhirDecimal? get count;
   @override
   @JsonKey(name: '_count')
   Element? get countElement;
   @override
-  Decimal? get countMax;
+  FhirDecimal? get countMax;
   @override
   @JsonKey(name: '_countMax')
   Element? get countMaxElement;
   @override
-  Decimal? get duration;
+  FhirDecimal? get duration;
   @override
   @JsonKey(name: '_duration')
   Element? get durationElement;
   @override
-  Decimal? get durationMax;
+  FhirDecimal? get durationMax;
   @override
   @JsonKey(name: '_durationMax')
   Element? get durationMaxElement;
@@ -9338,22 +9338,22 @@ abstract class _TimingRepeat extends TimingRepeat {
   @JsonKey(name: '_durationUnit')
   Element? get durationUnitElement;
   @override
-  Decimal? get frequency;
+  FhirDecimal? get frequency;
   @override
   @JsonKey(name: '_frequency')
   Element? get frequencyElement;
   @override
-  Decimal? get frequencyMax;
+  FhirDecimal? get frequencyMax;
   @override
   @JsonKey(name: '_frequencyMax')
   Element? get frequencyMaxElement;
   @override
-  Decimal? get period;
+  FhirDecimal? get period;
   @override
   @JsonKey(name: '_period')
   Element? get periodElement;
   @override
-  Decimal? get periodMax;
+  FhirDecimal? get periodMax;
   @override
   @JsonKey(name: '_periodMax')
   Element? get periodMaxElement;
@@ -9378,7 +9378,7 @@ abstract class _TimingRepeat extends TimingRepeat {
   @JsonKey(name: '_when')
   List<Element?>? get whenElement;
   @override
-  Decimal? get offset;
+  FhirDecimal? get offset;
   @override
   @JsonKey(name: '_offset')
   Element? get offsetElement;

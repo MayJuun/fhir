@@ -4,6 +4,7 @@
 import 'dart:convert';
 
 // Package imports:
+import 'package:hive/hive.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:xml2json/xml2json.dart';
 import 'package:yaml/yaml.dart';
@@ -31,7 +32,7 @@ class Resource {
   R4ResourceType? resourceType;
   Meta? meta;
   FhirUri? implicitRules;
-  Code? language;
+  FhirCode? language;
   Narrative? text;
   List<Resource>? contained;
   @JsonKey(name: 'extension')
@@ -75,7 +76,7 @@ class Resource {
     R4ResourceType? resourceType,
     Meta? meta,
     FhirUri? implicitRules,
-    Code? language,
+    FhirCode? language,
     Narrative? text,
     List<Resource>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,

@@ -19,18 +19,18 @@ class BodySite with Resource, _$BodySite {
     @Default(Stu3ResourceType.BodySite)
     @JsonKey(unknownEnumValue: Stu3ResourceType.BodySite)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    Boolean? active,
+    FhirBoolean? active,
     @JsonKey(name: '_active') Element? activeElement,
     CodeableConcept? code,
     List<CodeableConcept>? qualifier,
@@ -75,11 +75,11 @@ class DiagnosticReport with Resource, _$DiagnosticReport {
     @Default(Stu3ResourceType.DiagnosticReport)
     @JsonKey(unknownEnumValue: Stu3ResourceType.DiagnosticReport)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -223,11 +223,11 @@ class ImagingManifest with Resource, _$ImagingManifest {
     @Default(Stu3ResourceType.ImagingManifest)
     @JsonKey(unknownEnumValue: Stu3ResourceType.ImagingManifest)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -275,7 +275,7 @@ class ImagingManifest with Resource, _$ImagingManifest {
 class ImagingManifestStudy with _$ImagingManifestStudy {
   ImagingManifestStudy._();
   factory ImagingManifestStudy({
-    Id? uid,
+    FhirId? uid,
     @JsonKey(name: '_uid') Element? uidElement,
     Reference? imagingStudy,
     List<Reference>? endpoint,
@@ -317,7 +317,7 @@ class ImagingManifestStudy with _$ImagingManifestStudy {
 class ImagingManifestSeries with _$ImagingManifestSeries {
   ImagingManifestSeries._();
   factory ImagingManifestSeries({
-    Id? uid,
+    FhirId? uid,
     @JsonKey(name: '_uid') Element? uidElement,
     List<Reference>? endpoint,
     required List<ImagingManifestInstance> instance,
@@ -360,7 +360,7 @@ class ImagingManifestInstance with _$ImagingManifestInstance {
   factory ImagingManifestInstance({
     String? sopClass,
     @JsonKey(name: '_sopClass') Element? sopClassElement,
-    Id? uid,
+    FhirId? uid,
     @JsonKey(name: '_uid') Element? uidElement,
   }) = _ImagingManifestInstance;
 
@@ -402,17 +402,17 @@ class ImagingStudy with Resource, _$ImagingStudy {
     @Default(Stu3ResourceType.ImagingStudy)
     @JsonKey(unknownEnumValue: Stu3ResourceType.ImagingStudy)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    Id? uid,
+    FhirId? uid,
     @JsonKey(name: '_uid') Element? uidElement,
     Identifier? accession,
     List<Identifier>? identifier,
@@ -427,9 +427,9 @@ class ImagingStudy with Resource, _$ImagingStudy {
     Reference? referrer,
     List<Reference>? interpreter,
     List<Reference>? endpoint,
-    Decimal? numberOfSeries,
+    FhirDecimal? numberOfSeries,
     @JsonKey(name: '_numberOfSeries') Element? numberOfSeriesElement,
-    Decimal? numberOfInstances,
+    FhirDecimal? numberOfInstances,
     @JsonKey(name: '_numberOfInstances') Element? numberOfInstancesElement,
     List<Reference>? procedureReference,
     List<CodeableConcept>? procedureCode,
@@ -471,14 +471,14 @@ class ImagingStudy with Resource, _$ImagingStudy {
 class ImagingStudySeries with _$ImagingStudySeries {
   ImagingStudySeries._();
   factory ImagingStudySeries({
-    Id? uid,
+    FhirId? uid,
     @JsonKey(name: '_uid') Element? uidElement,
-    Decimal? number,
+    FhirDecimal? number,
     @JsonKey(name: '_number') Element? numberElement,
     required Coding modality,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    Decimal? numberOfInstances,
+    FhirDecimal? numberOfInstances,
     @JsonKey(name: '_numberOfInstances') Element? numberOfInstancesElement,
     ImagingStudySeriesAvailability? availability,
     @JsonKey(name: '_availability') Element? availabilityElement,
@@ -526,9 +526,9 @@ class ImagingStudySeries with _$ImagingStudySeries {
 class ImagingStudyInstance with _$ImagingStudyInstance {
   ImagingStudyInstance._();
   factory ImagingStudyInstance({
-    Id? uid,
+    FhirId? uid,
     @JsonKey(name: '_uid') Element? uidElement,
-    Decimal? number,
+    FhirDecimal? number,
     @JsonKey(name: '_number') Element? numberElement,
     String? sopClass,
     @JsonKey(name: '_sopClass') Element? sopClassElement,
@@ -574,11 +574,11 @@ class Observation with Resource, _$Observation {
     @Default(Stu3ResourceType.Observation)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Observation)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -595,14 +595,14 @@ class Observation with Resource, _$Observation {
     FhirDateTime? effectiveDateTime,
     @JsonKey(name: '_effectiveDateTime') Element? effectiveDateTimeElement,
     Period? effectivePeriod,
-    Instant? issued,
+    FhirInstant? issued,
     @JsonKey(name: '_issued') Element? issuedElement,
     List<Reference>? performer,
     Quantity? valueQuantity,
     CodeableConcept? valueCodeableConcept,
     String? valueString,
     @JsonKey(name: '_valueString') Element? valueStringElement,
-    Boolean? valueBoolean,
+    FhirBoolean? valueBoolean,
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
     Range? valueRange,
     Ratio? valueRatio,
@@ -799,11 +799,11 @@ class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
     @Default(Stu3ResourceType.QuestionnaireResponse)
     @JsonKey(unknownEnumValue: Stu3ResourceType.QuestionnaireResponse)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -902,13 +902,13 @@ class QuestionnaireResponseItem with _$QuestionnaireResponseItem {
 class QuestionnaireResponseAnswer with _$QuestionnaireResponseAnswer {
   QuestionnaireResponseAnswer._();
   factory QuestionnaireResponseAnswer({
-    Boolean? valueBoolean,
+    FhirBoolean? valueBoolean,
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-    Decimal? valueDecimal,
+    FhirDecimal? valueDecimal,
     @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
-    Decimal? valueInteger,
+    FhirDecimal? valueInteger,
     @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
-    Date? valueDate,
+    FhirDate? valueDate,
     @JsonKey(name: '_valueDate') Element? valueDateElement,
     FhirDateTime? valueDateTime,
     @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
@@ -963,11 +963,11 @@ class Sequence with Resource, _$Sequence {
     @Default(Stu3ResourceType.Sequence)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Sequence)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -976,7 +976,7 @@ class Sequence with Resource, _$Sequence {
     List<Identifier>? identifier,
     SequenceType? type,
     @JsonKey(name: '_type') Element? typeElement,
-    Decimal? coordinateSystem,
+    FhirDecimal? coordinateSystem,
     @JsonKey(name: '_coordinateSystem') Element? coordinateSystemElement,
     Reference? patient,
     Reference? specimen,
@@ -988,7 +988,7 @@ class Sequence with Resource, _$Sequence {
     String? observedSeq,
     @JsonKey(name: '_observedSeq') Element? observedSeqElement,
     List<SequenceQuality>? quality,
-    Decimal? readCoverage,
+    FhirDecimal? readCoverage,
     @JsonKey(name: '_readCoverage') Element? readCoverageElement,
     List<SequenceRepository>? repository,
     List<Reference>? pointer,
@@ -1033,11 +1033,11 @@ class SequenceReferenceSeq with _$SequenceReferenceSeq {
     Reference? referenceSeqPointer,
     String? referenceSeqString,
     @JsonKey(name: '_referenceSeqString') Element? referenceSeqStringElement,
-    Decimal? strand,
+    FhirDecimal? strand,
     @JsonKey(name: '_strand') Element? strandElement,
-    Decimal? windowStart,
+    FhirDecimal? windowStart,
     @JsonKey(name: '_windowStart') Element? windowStartElement,
-    Decimal? windowEnd,
+    FhirDecimal? windowEnd,
     @JsonKey(name: '_windowEnd') Element? windowEndElement,
   }) = _SequenceReferenceSeq;
 
@@ -1076,9 +1076,9 @@ class SequenceReferenceSeq with _$SequenceReferenceSeq {
 class SequenceVariant with _$SequenceVariant {
   SequenceVariant._();
   factory SequenceVariant({
-    Decimal? start,
+    FhirDecimal? start,
     @JsonKey(name: '_start') Element? startElement,
-    Decimal? end,
+    FhirDecimal? end,
     @JsonKey(name: '_end') Element? endElement,
     String? observedAllele,
     @JsonKey(name: '_observedAllele') Element? observedAlleleElement,
@@ -1127,27 +1127,27 @@ class SequenceQuality with _$SequenceQuality {
     SequenceQualityType? type,
     @JsonKey(name: '_type') Element? typeElement,
     CodeableConcept? standardSequence,
-    Decimal? start,
+    FhirDecimal? start,
     @JsonKey(name: '_start') Element? startElement,
-    Decimal? end,
+    FhirDecimal? end,
     @JsonKey(name: '_end') Element? endElement,
     Quantity? score,
     CodeableConcept? method,
-    Decimal? truthTP,
+    FhirDecimal? truthTP,
     @JsonKey(name: '_truthTP') Element? truthTPElement,
-    Decimal? queryTP,
+    FhirDecimal? queryTP,
     @JsonKey(name: '_queryTP') Element? queryTPElement,
-    Decimal? truthFN,
+    FhirDecimal? truthFN,
     @JsonKey(name: '_truthFN') Element? truthFNElement,
-    Decimal? queryFP,
+    FhirDecimal? queryFP,
     @JsonKey(name: '_queryFP') Element? queryFPElement,
-    Decimal? gtFP,
+    FhirDecimal? gtFP,
     @JsonKey(name: '_gtFP') Element? gtFPElement,
-    Decimal? precision,
+    FhirDecimal? precision,
     @JsonKey(name: '_precision') Element? precisionElement,
-    Decimal? recall,
+    FhirDecimal? recall,
     @JsonKey(name: '_recall') Element? recallElement,
-    Decimal? fScore,
+    FhirDecimal? fScore,
     @JsonKey(name: '_fScore') Element? fScoreElement,
   }) = _SequenceQuality;
 
@@ -1238,11 +1238,11 @@ class Specimen with Resource, _$Specimen {
     @Default(Stu3ResourceType.Specimen)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Specimen)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,

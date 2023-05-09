@@ -26,7 +26,7 @@ mixin _$Endpoint {
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
@@ -45,7 +45,7 @@ mixin _$Endpoint {
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
@@ -99,7 +99,7 @@ mixin _$Endpoint {
 
   /// [status] The endpoint status represents the general expected
   ///  availability of an endpoint.
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
@@ -190,12 +190,12 @@ abstract class $EndpointCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Endpoint)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -204,7 +204,7 @@ abstract class $EndpointCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       List<CodeableConcept> connectionType,
@@ -309,7 +309,7 @@ class _$EndpointCopyWithImpl<$Res, $Val extends Endpoint>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -337,7 +337,7 @@ class _$EndpointCopyWithImpl<$Res, $Val extends Endpoint>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -540,12 +540,12 @@ abstract class _$$_EndpointCopyWith<$Res> implements $EndpointCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Endpoint)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -554,7 +554,7 @@ abstract class _$$_EndpointCopyWith<$Res> implements $EndpointCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       List<CodeableConcept> connectionType,
@@ -667,7 +667,7 @@ class __$$_EndpointCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -695,7 +695,7 @@ class __$$_EndpointCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -860,7 +860,7 @@ class _$_Endpoint extends _Endpoint {
 
   /// [language] The base language in which the resource is written.
   @override
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] ("_language") Extensions for language
   @override
@@ -980,7 +980,7 @@ class _$_Endpoint extends _Endpoint {
   /// [status] The endpoint status represents the general expected
   ///  availability of an endpoint.
   @override
-  final Code? status;
+  final FhirCode? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -1274,7 +1274,7 @@ abstract class _Endpoint extends Endpoint {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -1283,7 +1283,7 @@ abstract class _Endpoint extends Endpoint {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      final Code? status,
+      final FhirCode? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
       required final List<CodeableConcept> connectionType,
@@ -1320,7 +1320,7 @@ abstract class _Endpoint extends Endpoint {
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -1343,7 +1343,7 @@ abstract class _Endpoint extends Endpoint {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] ("_language") Extensions for language
@@ -1403,7 +1403,7 @@ abstract class _Endpoint extends Endpoint {
 
   /// [status] The endpoint status represents the general expected
   ///  availability of an endpoint.
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status
@@ -1511,7 +1511,7 @@ mixin _$HealthcareService {
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
@@ -1530,7 +1530,7 @@ mixin _$HealthcareService {
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
@@ -1584,7 +1584,7 @@ mixin _$HealthcareService {
   /// [active] This flag is used to mark the record to not be used. This is
   ///  not used when a center is closed for maintenance, or for holidays, the
   ///  notAvailable period is to be used for this.
-  Boolean? get active => throw _privateConstructorUsedError;
+  FhirBoolean? get active => throw _privateConstructorUsedError;
 
   /// [activeElement] ("_active") Extensions for active
   @JsonKey(name: '_active')
@@ -1632,7 +1632,7 @@ mixin _$HealthcareService {
 
   /// [extraDetails] Extra details about the service that can't be placed in
   ///  the other fields.
-  Markdown? get extraDetails => throw _privateConstructorUsedError;
+  FhirMarkdown? get extraDetails => throw _privateConstructorUsedError;
 
   /// [extraDetailsElement] ("_extraDetails") Extensions for extraDetails
   @JsonKey(name: '_extraDetails')
@@ -1687,7 +1687,7 @@ mixin _$HealthcareService {
   ///  will require an appointment for a particular service at a site to be
   ///  provided by the Organization. Indicates if an appointment is required
   ///  for access to this service.
-  Boolean? get appointmentRequired => throw _privateConstructorUsedError;
+  FhirBoolean? get appointmentRequired => throw _privateConstructorUsedError;
 
   /// [appointmentRequiredElement] ("_appointmentRequired") Extensions for
   ///  appointmentRequired
@@ -1717,12 +1717,12 @@ abstract class $HealthcareServiceCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.HealthcareService)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -1731,7 +1731,7 @@ abstract class $HealthcareServiceCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Boolean? active,
+      FhirBoolean? active,
       @JsonKey(name: '_active')
           Element? activeElement,
       Reference? providedBy,
@@ -1746,7 +1746,7 @@ abstract class $HealthcareServiceCopyWith<$Res> {
       String? comment,
       @JsonKey(name: '_comment')
           Element? commentElement,
-      Markdown? extraDetails,
+      FhirMarkdown? extraDetails,
       @JsonKey(name: '_extraDetails')
           Element? extraDetailsElement,
       Attachment? photo,
@@ -1758,7 +1758,7 @@ abstract class $HealthcareServiceCopyWith<$Res> {
       List<CodeableConcept>? characteristic,
       List<CodeableConcept>? communication,
       List<CodeableConcept>? referralMethod,
-      Boolean? appointmentRequired,
+      FhirBoolean? appointmentRequired,
       @JsonKey(name: '_appointmentRequired')
           Element? appointmentRequiredElement,
       List<Availability>? availability,
@@ -1854,7 +1854,7 @@ class _$HealthcareServiceCopyWithImpl<$Res, $Val extends HealthcareService>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -1882,7 +1882,7 @@ class _$HealthcareServiceCopyWithImpl<$Res, $Val extends HealthcareService>
       active: freezed == active
           ? _value.active
           : active // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       activeElement: freezed == activeElement
           ? _value.activeElement
           : activeElement // ignore: cast_nullable_to_non_nullable
@@ -1974,7 +1974,7 @@ class _$HealthcareServiceCopyWithImpl<$Res, $Val extends HealthcareService>
       appointmentRequired: freezed == appointmentRequired
           ? _value.appointmentRequired
           : appointmentRequired // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       appointmentRequiredElement: freezed == appointmentRequiredElement
           ? _value.appointmentRequiredElement
           : appointmentRequiredElement // ignore: cast_nullable_to_non_nullable
@@ -2134,12 +2134,12 @@ abstract class _$$_HealthcareServiceCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.HealthcareService)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -2148,7 +2148,7 @@ abstract class _$$_HealthcareServiceCopyWith<$Res>
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Boolean? active,
+      FhirBoolean? active,
       @JsonKey(name: '_active')
           Element? activeElement,
       Reference? providedBy,
@@ -2163,7 +2163,7 @@ abstract class _$$_HealthcareServiceCopyWith<$Res>
       String? comment,
       @JsonKey(name: '_comment')
           Element? commentElement,
-      Markdown? extraDetails,
+      FhirMarkdown? extraDetails,
       @JsonKey(name: '_extraDetails')
           Element? extraDetailsElement,
       Attachment? photo,
@@ -2175,7 +2175,7 @@ abstract class _$$_HealthcareServiceCopyWith<$Res>
       List<CodeableConcept>? characteristic,
       List<CodeableConcept>? communication,
       List<CodeableConcept>? referralMethod,
-      Boolean? appointmentRequired,
+      FhirBoolean? appointmentRequired,
       @JsonKey(name: '_appointmentRequired')
           Element? appointmentRequiredElement,
       List<Availability>? availability,
@@ -2280,7 +2280,7 @@ class __$$_HealthcareServiceCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -2308,7 +2308,7 @@ class __$$_HealthcareServiceCopyWithImpl<$Res>
       active: freezed == active
           ? _value.active
           : active // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       activeElement: freezed == activeElement
           ? _value.activeElement
           : activeElement // ignore: cast_nullable_to_non_nullable
@@ -2400,7 +2400,7 @@ class __$$_HealthcareServiceCopyWithImpl<$Res>
       appointmentRequired: freezed == appointmentRequired
           ? _value.appointmentRequired
           : appointmentRequired // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       appointmentRequiredElement: freezed == appointmentRequiredElement
           ? _value.appointmentRequiredElement
           : appointmentRequiredElement // ignore: cast_nullable_to_non_nullable
@@ -2524,7 +2524,7 @@ class _$_HealthcareService extends _HealthcareService {
 
   /// [language] The base language in which the resource is written.
   @override
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] ("_language") Extensions for language
   @override
@@ -2643,7 +2643,7 @@ class _$_HealthcareService extends _HealthcareService {
   ///  not used when a center is closed for maintenance, or for holidays, the
   ///  notAvailable period is to be used for this.
   @override
-  final Boolean? active;
+  final FhirBoolean? active;
 
   /// [activeElement] ("_active") Extensions for active
   @override
@@ -2896,7 +2896,7 @@ class _$_HealthcareService extends _HealthcareService {
   ///  provided by the Organization. Indicates if an appointment is required
   ///  for access to this service.
   @override
-  final Boolean? appointmentRequired;
+  final FhirBoolean? appointmentRequired;
 
   /// [appointmentRequiredElement] ("_appointmentRequired") Extensions for
   ///  appointmentRequired
@@ -3082,7 +3082,7 @@ abstract class _HealthcareService extends HealthcareService {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -3091,7 +3091,7 @@ abstract class _HealthcareService extends HealthcareService {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      final Boolean? active,
+      final FhirBoolean? active,
       @JsonKey(name: '_active')
           final Element? activeElement,
       final Reference? providedBy,
@@ -3118,7 +3118,7 @@ abstract class _HealthcareService extends HealthcareService {
       final List<CodeableConcept>? characteristic,
       final List<CodeableConcept>? communication,
       final List<CodeableConcept>? referralMethod,
-      final Boolean? appointmentRequired,
+      final FhirBoolean? appointmentRequired,
       @JsonKey(name: '_appointmentRequired')
           final Element? appointmentRequiredElement,
       final List<Availability>? availability,
@@ -3137,7 +3137,7 @@ abstract class _HealthcareService extends HealthcareService {
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -3160,7 +3160,7 @@ abstract class _HealthcareService extends HealthcareService {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] ("_language") Extensions for language
@@ -3220,7 +3220,7 @@ abstract class _HealthcareService extends HealthcareService {
   /// [active] This flag is used to mark the record to not be used. This is
   ///  not used when a center is closed for maintenance, or for holidays, the
   ///  notAvailable period is to be used for this.
-  Boolean? get active;
+  FhirBoolean? get active;
   @override
 
   /// [activeElement] ("_active") Extensions for active
@@ -3280,7 +3280,7 @@ abstract class _HealthcareService extends HealthcareService {
 
   /// [extraDetails] Extra details about the service that can't be placed in
   ///  the other fields.
-  Markdown? get extraDetails;
+  FhirMarkdown? get extraDetails;
   @override
 
   /// [extraDetailsElement] ("_extraDetails") Extensions for extraDetails
@@ -3340,7 +3340,7 @@ abstract class _HealthcareService extends HealthcareService {
   ///  will require an appointment for a particular service at a site to be
   ///  provided by the Organization. Indicates if an appointment is required
   ///  for access to this service.
-  Boolean? get appointmentRequired;
+  FhirBoolean? get appointmentRequired;
   @override
 
   /// [appointmentRequiredElement] ("_appointmentRequired") Extensions for
@@ -3404,7 +3404,7 @@ mixin _$HealthcareServiceEligibility {
   CodeableConcept? get code => throw _privateConstructorUsedError;
 
   /// [comment] Describes the eligibility conditions for the service.
-  Markdown? get comment => throw _privateConstructorUsedError;
+  FhirMarkdown? get comment => throw _privateConstructorUsedError;
 
   /// [commentElement] ("_comment") Extensions for comment
   @JsonKey(name: '_comment')
@@ -3429,7 +3429,7 @@ abstract class $HealthcareServiceEligibilityCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept? code,
-      Markdown? comment,
+      FhirMarkdown? comment,
       @JsonKey(name: '_comment') Element? commentElement});
 
   $CodeableConceptCopyWith<$Res>? get code;
@@ -3524,7 +3524,7 @@ abstract class _$$_HealthcareServiceEligibilityCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept? code,
-      Markdown? comment,
+      FhirMarkdown? comment,
       @JsonKey(name: '_comment') Element? commentElement});
 
   @override
@@ -3782,7 +3782,7 @@ abstract class _HealthcareServiceEligibility
   @override
 
   /// [comment] Describes the eligibility conditions for the service.
-  Markdown? get comment;
+  FhirMarkdown? get comment;
   @override
 
   /// [commentElement] ("_comment") Extensions for comment
@@ -3806,7 +3806,7 @@ mixin _$Location {
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
@@ -3825,7 +3825,7 @@ mixin _$Location {
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
@@ -3881,7 +3881,7 @@ mixin _$Location {
   ///  resource, not the current value which may be covered by the
   ///  operationStatus, or by a schedule/slots if they are configured for the
   ///  location.
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
@@ -3920,7 +3920,7 @@ mixin _$Location {
 
   /// [mode] Indicates whether a resource instance represents a specific
   ///  location or a class of locations.
-  Code? get mode => throw _privateConstructorUsedError;
+  FhirCode? get mode => throw _privateConstructorUsedError;
 
   /// [modeElement] ("_mode") Extensions for mode
   @JsonKey(name: '_mode')
@@ -3987,12 +3987,12 @@ abstract class $LocationCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Location)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -4001,7 +4001,7 @@ abstract class $LocationCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Coding? operationalStatus,
@@ -4014,7 +4014,7 @@ abstract class $LocationCopyWith<$Res> {
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      Code? mode,
+      FhirCode? mode,
       @JsonKey(name: '_mode')
           Element? modeElement,
       List<CodeableConcept>? type,
@@ -4117,7 +4117,7 @@ class _$LocationCopyWithImpl<$Res, $Val extends Location>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -4145,7 +4145,7 @@ class _$LocationCopyWithImpl<$Res, $Val extends Location>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -4181,7 +4181,7 @@ class _$LocationCopyWithImpl<$Res, $Val extends Location>
       mode: freezed == mode
           ? _value.mode
           : mode // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       modeElement: freezed == modeElement
           ? _value.modeElement
           : modeElement // ignore: cast_nullable_to_non_nullable
@@ -4412,12 +4412,12 @@ abstract class _$$_LocationCopyWith<$Res> implements $LocationCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Location)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -4426,7 +4426,7 @@ abstract class _$$_LocationCopyWith<$Res> implements $LocationCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Coding? operationalStatus,
@@ -4439,7 +4439,7 @@ abstract class _$$_LocationCopyWith<$Res> implements $LocationCopyWith<$Res> {
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      Code? mode,
+      FhirCode? mode,
       @JsonKey(name: '_mode')
           Element? modeElement,
       List<CodeableConcept>? type,
@@ -4554,7 +4554,7 @@ class __$$_LocationCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -4582,7 +4582,7 @@ class __$$_LocationCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -4618,7 +4618,7 @@ class __$$_LocationCopyWithImpl<$Res>
       mode: freezed == mode
           ? _value.mode
           : mode // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       modeElement: freezed == modeElement
           ? _value.modeElement
           : modeElement // ignore: cast_nullable_to_non_nullable
@@ -4766,7 +4766,7 @@ class _$_Location extends _Location {
 
   /// [language] The base language in which the resource is written.
   @override
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] ("_language") Extensions for language
   @override
@@ -4888,7 +4888,7 @@ class _$_Location extends _Location {
   ///  operationStatus, or by a schedule/slots if they are configured for the
   ///  location.
   @override
-  final Code? status;
+  final FhirCode? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -4955,7 +4955,7 @@ class _$_Location extends _Location {
   /// [mode] Indicates whether a resource instance represents a specific
   ///  location or a class of locations.
   @override
-  final Code? mode;
+  final FhirCode? mode;
 
   /// [modeElement] ("_mode") Extensions for mode
   @override
@@ -5206,7 +5206,7 @@ abstract class _Location extends Location {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -5215,7 +5215,7 @@ abstract class _Location extends Location {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      final Code? status,
+      final FhirCode? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
       final Coding? operationalStatus,
@@ -5228,7 +5228,7 @@ abstract class _Location extends Location {
       final String? description,
       @JsonKey(name: '_description')
           final Element? descriptionElement,
-      final Code? mode,
+      final FhirCode? mode,
       @JsonKey(name: '_mode')
           final Element? modeElement,
       final List<CodeableConcept>? type,
@@ -5255,7 +5255,7 @@ abstract class _Location extends Location {
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -5278,7 +5278,7 @@ abstract class _Location extends Location {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] ("_language") Extensions for language
@@ -5340,7 +5340,7 @@ abstract class _Location extends Location {
   ///  resource, not the current value which may be covered by the
   ///  operationStatus, or by a schedule/slots if they are configured for the
   ///  location.
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status
@@ -5388,7 +5388,7 @@ abstract class _Location extends Location {
 
   /// [mode] Indicates whether a resource instance represents a specific
   ///  location or a class of locations.
-  Code? get mode;
+  FhirCode? get mode;
   @override
 
   /// [modeElement] ("_mode") Extensions for mode
@@ -5493,7 +5493,7 @@ mixin _$LocationPosition {
   /// [longitude] Longitude. The value domain and the interpretation are the
   ///  same as for the text of the longitude element in KML (see notes on
   ///  Location main page).
-  Decimal? get longitude => throw _privateConstructorUsedError;
+  FhirDecimal? get longitude => throw _privateConstructorUsedError;
 
   /// [longitudeElement] ("_longitude") Extensions for longitude
   @JsonKey(name: '_longitude')
@@ -5502,7 +5502,7 @@ mixin _$LocationPosition {
   /// [latitude] Latitude. The value domain and the interpretation are the
   ///  same as for the text of the latitude element in KML (see notes on
   ///  Location main page).
-  Decimal? get latitude => throw _privateConstructorUsedError;
+  FhirDecimal? get latitude => throw _privateConstructorUsedError;
 
   /// [latitudeElement] ("_latitude") Extensions for latitude
   @JsonKey(name: '_latitude')
@@ -5511,7 +5511,7 @@ mixin _$LocationPosition {
   /// [altitude] Altitude. The value domain and the interpretation are the
   ///  same as for the text of the altitude element in KML (see notes on
   ///  Location main page).
-  Decimal? get altitude => throw _privateConstructorUsedError;
+  FhirDecimal? get altitude => throw _privateConstructorUsedError;
 
   /// [altitudeElement] ("_altitude") Extensions for altitude
   @JsonKey(name: '_altitude')
@@ -5533,11 +5533,11 @@ abstract class $LocationPositionCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Decimal? longitude,
+      FhirDecimal? longitude,
       @JsonKey(name: '_longitude') Element? longitudeElement,
-      Decimal? latitude,
+      FhirDecimal? latitude,
       @JsonKey(name: '_latitude') Element? latitudeElement,
-      Decimal? altitude,
+      FhirDecimal? altitude,
       @JsonKey(name: '_altitude') Element? altitudeElement});
 
   $ElementCopyWith<$Res>? get longitudeElement;
@@ -5657,11 +5657,11 @@ abstract class _$$_LocationPositionCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Decimal? longitude,
+      FhirDecimal? longitude,
       @JsonKey(name: '_longitude') Element? longitudeElement,
-      Decimal? latitude,
+      FhirDecimal? latitude,
       @JsonKey(name: '_latitude') Element? latitudeElement,
-      Decimal? altitude,
+      FhirDecimal? altitude,
       @JsonKey(name: '_altitude') Element? altitudeElement});
 
   @override
@@ -5967,7 +5967,7 @@ abstract class _LocationPosition extends LocationPosition {
   /// [longitude] Longitude. The value domain and the interpretation are the
   ///  same as for the text of the longitude element in KML (see notes on
   ///  Location main page).
-  Decimal? get longitude;
+  FhirDecimal? get longitude;
   @override
 
   /// [longitudeElement] ("_longitude") Extensions for longitude
@@ -5978,7 +5978,7 @@ abstract class _LocationPosition extends LocationPosition {
   /// [latitude] Latitude. The value domain and the interpretation are the
   ///  same as for the text of the latitude element in KML (see notes on
   ///  Location main page).
-  Decimal? get latitude;
+  FhirDecimal? get latitude;
   @override
 
   /// [latitudeElement] ("_latitude") Extensions for latitude
@@ -5989,7 +5989,7 @@ abstract class _LocationPosition extends LocationPosition {
   /// [altitude] Altitude. The value domain and the interpretation are the
   ///  same as for the text of the altitude element in KML (see notes on
   ///  Location main page).
-  Decimal? get altitude;
+  FhirDecimal? get altitude;
   @override
 
   /// [altitudeElement] ("_altitude") Extensions for altitude
@@ -6013,7 +6013,7 @@ mixin _$Organization {
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
@@ -6032,7 +6032,7 @@ mixin _$Organization {
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
@@ -6085,7 +6085,7 @@ mixin _$Organization {
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [active] Whether the organization's record is still in active use.
-  Boolean? get active => throw _privateConstructorUsedError;
+  FhirBoolean? get active => throw _privateConstructorUsedError;
 
   /// [activeElement] ("_active") Extensions for active
   @JsonKey(name: '_active')
@@ -6155,12 +6155,12 @@ abstract class $OrganizationCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Organization)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -6169,7 +6169,7 @@ abstract class $OrganizationCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Boolean? active,
+      FhirBoolean? active,
       @JsonKey(name: '_active')
           Element? activeElement,
       List<CodeableConcept>? type,
@@ -6260,7 +6260,7 @@ class _$OrganizationCopyWithImpl<$Res, $Val extends Organization>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -6288,7 +6288,7 @@ class _$OrganizationCopyWithImpl<$Res, $Val extends Organization>
       active: freezed == active
           ? _value.active
           : active // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       activeElement: freezed == activeElement
           ? _value.activeElement
           : activeElement // ignore: cast_nullable_to_non_nullable
@@ -6448,12 +6448,12 @@ abstract class _$$_OrganizationCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Organization)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -6462,7 +6462,7 @@ abstract class _$$_OrganizationCopyWith<$Res>
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Boolean? active,
+      FhirBoolean? active,
       @JsonKey(name: '_active')
           Element? activeElement,
       List<CodeableConcept>? type,
@@ -6559,7 +6559,7 @@ class __$$_OrganizationCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -6587,7 +6587,7 @@ class __$$_OrganizationCopyWithImpl<$Res>
       active: freezed == active
           ? _value.active
           : active // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       activeElement: freezed == activeElement
           ? _value.activeElement
           : activeElement // ignore: cast_nullable_to_non_nullable
@@ -6723,7 +6723,7 @@ class _$_Organization extends _Organization {
 
   /// [language] The base language in which the resource is written.
   @override
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] ("_language") Extensions for language
   @override
@@ -6842,7 +6842,7 @@ class _$_Organization extends _Organization {
 
   /// [active] Whether the organization's record is still in active use.
   @override
-  final Boolean? active;
+  final FhirBoolean? active;
 
   /// [activeElement] ("_active") Extensions for active
   @override
@@ -7076,7 +7076,7 @@ abstract class _Organization extends Organization {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -7085,7 +7085,7 @@ abstract class _Organization extends Organization {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      final Boolean? active,
+      final FhirBoolean? active,
       @JsonKey(name: '_active')
           final Element? activeElement,
       final List<CodeableConcept>? type,
@@ -7116,7 +7116,7 @@ abstract class _Organization extends Organization {
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -7139,7 +7139,7 @@ abstract class _Organization extends Organization {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] ("_language") Extensions for language
@@ -7198,7 +7198,7 @@ abstract class _Organization extends Organization {
   @override
 
   /// [active] Whether the organization's record is still in active use.
-  Boolean? get active;
+  FhirBoolean? get active;
   @override
 
   /// [activeElement] ("_active") Extensions for active
@@ -7757,7 +7757,7 @@ mixin _$OrganizationAffiliation {
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
@@ -7776,7 +7776,7 @@ mixin _$OrganizationAffiliation {
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
@@ -7828,7 +7828,7 @@ mixin _$OrganizationAffiliation {
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [active] Whether this organization affiliation record is in active use.
-  Boolean? get active => throw _privateConstructorUsedError;
+  FhirBoolean? get active => throw _privateConstructorUsedError;
 
   /// [activeElement] ("_active") Extensions for active
   @JsonKey(name: '_active')
@@ -7891,12 +7891,12 @@ abstract class $OrganizationAffiliationCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.OrganizationAffiliation)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -7905,7 +7905,7 @@ abstract class $OrganizationAffiliationCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Boolean? active,
+      FhirBoolean? active,
       @JsonKey(name: '_active')
           Element? activeElement,
       Period? period,
@@ -7992,7 +7992,7 @@ class _$OrganizationAffiliationCopyWithImpl<$Res,
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -8020,7 +8020,7 @@ class _$OrganizationAffiliationCopyWithImpl<$Res,
       active: freezed == active
           ? _value.active
           : active // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       activeElement: freezed == activeElement
           ? _value.activeElement
           : activeElement // ignore: cast_nullable_to_non_nullable
@@ -8176,12 +8176,12 @@ abstract class _$$_OrganizationAffiliationCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.OrganizationAffiliation)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -8190,7 +8190,7 @@ abstract class _$$_OrganizationAffiliationCopyWith<$Res>
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Boolean? active,
+      FhirBoolean? active,
       @JsonKey(name: '_active')
           Element? activeElement,
       Period? period,
@@ -8283,7 +8283,7 @@ class __$$_OrganizationAffiliationCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -8311,7 +8311,7 @@ class __$$_OrganizationAffiliationCopyWithImpl<$Res>
       active: freezed == active
           ? _value.active
           : active // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       activeElement: freezed == activeElement
           ? _value.activeElement
           : activeElement // ignore: cast_nullable_to_non_nullable
@@ -8440,7 +8440,7 @@ class _$_OrganizationAffiliation extends _OrganizationAffiliation {
 
   /// [language] The base language in which the resource is written.
   @override
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] ("_language") Extensions for language
   @override
@@ -8557,7 +8557,7 @@ class _$_OrganizationAffiliation extends _OrganizationAffiliation {
 
   /// [active] Whether this organization affiliation record is in active use.
   @override
-  final Boolean? active;
+  final FhirBoolean? active;
 
   /// [activeElement] ("_active") Extensions for active
   @override
@@ -8790,7 +8790,7 @@ abstract class _OrganizationAffiliation extends OrganizationAffiliation {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -8799,7 +8799,7 @@ abstract class _OrganizationAffiliation extends OrganizationAffiliation {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      final Boolean? active,
+      final FhirBoolean? active,
       @JsonKey(name: '_active')
           final Element? activeElement,
       final Period? period,
@@ -8826,7 +8826,7 @@ abstract class _OrganizationAffiliation extends OrganizationAffiliation {
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -8849,7 +8849,7 @@ abstract class _OrganizationAffiliation extends OrganizationAffiliation {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] ("_language") Extensions for language
@@ -8907,7 +8907,7 @@ abstract class _OrganizationAffiliation extends OrganizationAffiliation {
   @override
 
   /// [active] Whether this organization affiliation record is in active use.
-  Boolean? get active;
+  FhirBoolean? get active;
   @override
 
   /// [activeElement] ("_active") Extensions for active

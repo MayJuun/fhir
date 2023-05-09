@@ -711,7 +711,7 @@ _$_DeviceUdiCarrier _$$_DeviceUdiCarrierFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_jurisdiction'] as Map<String, dynamic>),
       carrierAIDC: json['carrierAIDC'] == null
           ? null
-          : Base64Binary.fromJson(json['carrierAIDC']),
+          : FhirBase64Binary?.fromJson(json['carrierAIDC']),
       carrierAIDCElement: json['_carrierAIDC'] == null
           ? null
           : Element.fromJson(json['_carrierAIDC'] as Map<String, dynamic>),
@@ -1289,7 +1289,7 @@ _$_NutritionProductCharacteristic _$$_NutritionProductCharacteristicFromJson(
           : Quantity.fromJson(json['valueQuantity'] as Map<String, dynamic>),
       valueBase64Binary: json['valueBase64Binary'] == null
           ? null
-          : Base64Binary.fromJson(json['valueBase64Binary']),
+          : FhirBase64Binary?.fromJson(json['valueBase64Binary']),
       valueBase64BinaryElement: json['_valueBase64Binary'] == null
           ? null
           : Element.fromJson(

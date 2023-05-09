@@ -19,11 +19,11 @@ class PaymentNotice with Resource, _$PaymentNotice {
     @Default(Stu3ResourceType.PaymentNotice)
     @JsonKey(unknownEnumValue: Stu3ResourceType.PaymentNotice)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -34,7 +34,7 @@ class PaymentNotice with Resource, _$PaymentNotice {
     @JsonKey(name: '_status') Element? statusElement,
     Reference? request,
     Reference? response,
-    Date? statusDate,
+    FhirDate? statusDate,
     @JsonKey(name: '_statusDate') Element? statusDateElement,
     String? created,
     @JsonKey(name: '_created') Element? createdElement,
@@ -79,11 +79,11 @@ class PaymentReconciliation with Resource, _$PaymentReconciliation {
     @Default(Stu3ResourceType.PaymentReconciliation)
     @JsonKey(unknownEnumValue: Stu3ResourceType.PaymentReconciliation)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -145,7 +145,7 @@ class PaymentReconciliationDetail with _$PaymentReconciliationDetail {
     Reference? response,
     Reference? submitter,
     Reference? payee,
-    Date? date,
+    FhirDate? date,
     @JsonKey(name: '_date') Element? dateElement,
     Money? amount,
   }) = _PaymentReconciliationDetail;

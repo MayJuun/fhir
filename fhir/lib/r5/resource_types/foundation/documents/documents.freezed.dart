@@ -26,7 +26,7 @@ mixin _$Composition {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -44,7 +44,7 @@ mixin _$Composition {
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
@@ -82,7 +82,7 @@ mixin _$Composition {
   Element? get versionElement => throw _privateConstructorUsedError;
 
   /// [status] The workflow/clinical status of this composition. The status is a marker for the clinical standing of the document.
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
@@ -160,12 +160,12 @@ abstract class $CompositionCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Composition)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -180,7 +180,7 @@ abstract class $CompositionCopyWith<$Res> {
       String? version,
       @JsonKey(name: '_version')
           Element? versionElement,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept type,
@@ -294,7 +294,7 @@ class _$CompositionCopyWithImpl<$Res, $Val extends Composition>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -338,7 +338,7 @@ class _$CompositionCopyWithImpl<$Res, $Val extends Composition>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -582,12 +582,12 @@ abstract class _$$_CompositionCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Composition)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -602,7 +602,7 @@ abstract class _$$_CompositionCopyWith<$Res>
       String? version,
       @JsonKey(name: '_version')
           Element? versionElement,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept type,
@@ -727,7 +727,7 @@ class __$$_CompositionCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -771,7 +771,7 @@ class __$$_CompositionCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -950,7 +950,7 @@ class _$_Composition extends _Composition {
 
   /// [language] The base language in which the resource is written.
   @override
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] ("_language") Extensions for language
   @override
@@ -1035,7 +1035,7 @@ class _$_Composition extends _Composition {
 
   /// [status] The workflow/clinical status of this composition. The status is a marker for the clinical standing of the document.
   @override
-  final Code? status;
+  final FhirCode? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -1328,7 +1328,7 @@ abstract class _Composition extends Composition {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -1343,7 +1343,7 @@ abstract class _Composition extends Composition {
       final String? version,
       @JsonKey(name: '_version')
           final Element? versionElement,
-      final Code? status,
+      final FhirCode? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
       required final CodeableConcept type,
@@ -1381,7 +1381,7 @@ abstract class _Composition extends Composition {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -1403,7 +1403,7 @@ abstract class _Composition extends Composition {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] ("_language") Extensions for language
@@ -1451,7 +1451,7 @@ abstract class _Composition extends Composition {
   @override
 
   /// [status] The workflow/clinical status of this composition. The status is a marker for the clinical standing of the document.
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status
@@ -2458,7 +2458,7 @@ mixin _$CompositionSection {
   Narrative? get text => throw _privateConstructorUsedError;
 
   /// [mode] How the entry list was prepared - whether it is a working list that is suitable for being maintained on an ongoing basis, or if it represents a snapshot of a list of items from another source, or whether it is a prepared list where items may be marked as added, modified or deleted.
-  Code? get mode => throw _privateConstructorUsedError;
+  FhirCode? get mode => throw _privateConstructorUsedError;
 
   /// [modeElement] ("_mode") Extensions for mode
   @JsonKey(name: '_mode')
@@ -2498,7 +2498,7 @@ abstract class $CompositionSectionCopyWith<$Res> {
       List<Reference>? author,
       Reference? focus,
       Narrative? text,
-      Code? mode,
+      FhirCode? mode,
       @JsonKey(name: '_mode') Element? modeElement,
       CodeableConcept? orderedBy,
       List<Reference>? entry,
@@ -2583,7 +2583,7 @@ class _$CompositionSectionCopyWithImpl<$Res, $Val extends CompositionSection>
       mode: freezed == mode
           ? _value.mode
           : mode // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       modeElement: freezed == modeElement
           ? _value.modeElement
           : modeElement // ignore: cast_nullable_to_non_nullable
@@ -2710,7 +2710,7 @@ abstract class _$$_CompositionSectionCopyWith<$Res>
       List<Reference>? author,
       Reference? focus,
       Narrative? text,
-      Code? mode,
+      FhirCode? mode,
       @JsonKey(name: '_mode') Element? modeElement,
       CodeableConcept? orderedBy,
       List<Reference>? entry,
@@ -2800,7 +2800,7 @@ class __$$_CompositionSectionCopyWithImpl<$Res>
       mode: freezed == mode
           ? _value.mode
           : mode // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       modeElement: freezed == modeElement
           ? _value.modeElement
           : modeElement // ignore: cast_nullable_to_non_nullable
@@ -2955,7 +2955,7 @@ class _$_CompositionSection extends _CompositionSection {
 
   /// [mode] How the entry list was prepared - whether it is a working list that is suitable for being maintained on an ongoing basis, or if it represents a snapshot of a list of items from another source, or whether it is a prepared list where items may be marked as added, modified or deleted.
   @override
-  final Code? mode;
+  final FhirCode? mode;
 
   /// [modeElement] ("_mode") Extensions for mode
   @override
@@ -3075,7 +3075,7 @@ abstract class _CompositionSection extends CompositionSection {
       final List<Reference>? author,
       final Reference? focus,
       final Narrative? text,
-      final Code? mode,
+      final FhirCode? mode,
       @JsonKey(name: '_mode') final Element? modeElement,
       final CodeableConcept? orderedBy,
       final List<Reference>? entry,
@@ -3144,7 +3144,7 @@ abstract class _CompositionSection extends CompositionSection {
   @override
 
   /// [mode] How the entry list was prepared - whether it is a working list that is suitable for being maintained on an ongoing basis, or if it represents a snapshot of a list of items from another source, or whether it is a prepared list where items may be marked as added, modified or deleted.
-  Code? get mode;
+  FhirCode? get mode;
   @override
 
   /// [modeElement] ("_mode") Extensions for mode
@@ -3184,7 +3184,7 @@ mixin _$DocumentManifest {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -3202,7 +3202,7 @@ mixin _$DocumentManifest {
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
@@ -3229,7 +3229,7 @@ mixin _$DocumentManifest {
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [status] The status of this document manifest.
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
@@ -3290,12 +3290,12 @@ abstract class $DocumentManifestCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.DocumentManifest)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -3305,7 +3305,7 @@ abstract class $DocumentManifestCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       Identifier? masterIdentifier,
       List<Identifier>? identifier,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? type,
@@ -3402,7 +3402,7 @@ class _$DocumentManifestCopyWithImpl<$Res, $Val extends DocumentManifest>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -3434,7 +3434,7 @@ class _$DocumentManifestCopyWithImpl<$Res, $Val extends DocumentManifest>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -3634,12 +3634,12 @@ abstract class _$$_DocumentManifestCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.DocumentManifest)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -3649,7 +3649,7 @@ abstract class _$$_DocumentManifestCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       Identifier? masterIdentifier,
       List<Identifier>? identifier,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? type,
@@ -3755,7 +3755,7 @@ class __$$_DocumentManifestCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -3787,7 +3787,7 @@ class __$$_DocumentManifestCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -3926,7 +3926,7 @@ class _$_DocumentManifest extends _DocumentManifest {
 
   /// [language] The base language in which the resource is written.
   @override
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] ("_language") Extensions for language
   @override
@@ -3997,7 +3997,7 @@ class _$_DocumentManifest extends _DocumentManifest {
 
   /// [status] The status of this document manifest.
   @override
-  final Code? status;
+  final FhirCode? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -4200,7 +4200,7 @@ abstract class _DocumentManifest extends DocumentManifest {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -4210,7 +4210,7 @@ abstract class _DocumentManifest extends DocumentManifest {
       final List<FhirExtension>? modifierExtension,
       final Identifier? masterIdentifier,
       final List<Identifier>? identifier,
-      final Code? status,
+      final FhirCode? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
       final CodeableConcept? type,
@@ -4242,7 +4242,7 @@ abstract class _DocumentManifest extends DocumentManifest {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -4264,7 +4264,7 @@ abstract class _DocumentManifest extends DocumentManifest {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] ("_language") Extensions for language
@@ -4298,7 +4298,7 @@ abstract class _DocumentManifest extends DocumentManifest {
   @override
 
   /// [status] The status of this document manifest.
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status
@@ -4761,7 +4761,7 @@ mixin _$DocumentReference {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -4779,7 +4779,7 @@ mixin _$DocumentReference {
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
@@ -4806,14 +4806,14 @@ mixin _$DocumentReference {
   List<Reference>? get basedOn => throw _privateConstructorUsedError;
 
   /// [status] The status of this document reference.
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
 
   /// [docStatus] The status of the underlying document.
-  Code? get docStatus => throw _privateConstructorUsedError;
+  FhirCode? get docStatus => throw _privateConstructorUsedError;
 
   /// [docStatusElement] ("_docStatus") Extensions for docStatus
   @JsonKey(name: '_docStatus')
@@ -4844,7 +4844,7 @@ mixin _$DocumentReference {
   Period? get period => throw _privateConstructorUsedError;
 
   /// [date] When the document reference was created.
-  Instant? get date => throw _privateConstructorUsedError;
+  FhirInstant? get date => throw _privateConstructorUsedError;
 
   /// [dateElement] ("_date") Extensions for date
   @JsonKey(name: '_date')
@@ -4865,7 +4865,7 @@ mixin _$DocumentReference {
       throw _privateConstructorUsedError;
 
   /// [description] Human-readable description of the source document.
-  Markdown? get description => throw _privateConstructorUsedError;
+  FhirMarkdown? get description => throw _privateConstructorUsedError;
 
   /// [descriptionElement] ("_description") Extensions for description
   @JsonKey(name: '_description')
@@ -4894,12 +4894,12 @@ abstract class $DocumentReferenceCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.DocumentReference)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -4909,10 +4909,10 @@ abstract class $DocumentReferenceCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       List<Reference>? basedOn,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Code? docStatus,
+      FhirCode? docStatus,
       @JsonKey(name: '_docStatus')
           Element? docStatusElement,
       CodeableConcept? type,
@@ -4923,14 +4923,14 @@ abstract class $DocumentReferenceCopyWith<$Res> {
       CodeableConcept? facilityType,
       CodeableConcept? practiceSetting,
       Period? period,
-      Instant? date,
+      FhirInstant? date,
       @JsonKey(name: '_date')
           Element? dateElement,
       List<Reference>? author,
       List<DocumentReferenceAttester>? attester,
       Reference? custodian,
       List<DocumentReferenceRelatesTo>? relatesTo,
-      Markdown? description,
+      FhirMarkdown? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
       List<CodeableConcept>? securityLabel,
@@ -5025,7 +5025,7 @@ class _$DocumentReferenceCopyWithImpl<$Res, $Val extends DocumentReference>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -5057,7 +5057,7 @@ class _$DocumentReferenceCopyWithImpl<$Res, $Val extends DocumentReference>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -5065,7 +5065,7 @@ class _$DocumentReferenceCopyWithImpl<$Res, $Val extends DocumentReference>
       docStatus: freezed == docStatus
           ? _value.docStatus
           : docStatus // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       docStatusElement: freezed == docStatusElement
           ? _value.docStatusElement
           : docStatusElement // ignore: cast_nullable_to_non_nullable
@@ -5325,12 +5325,12 @@ abstract class _$$_DocumentReferenceCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.DocumentReference)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -5340,10 +5340,10 @@ abstract class _$$_DocumentReferenceCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       List<Reference>? basedOn,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Code? docStatus,
+      FhirCode? docStatus,
       @JsonKey(name: '_docStatus')
           Element? docStatusElement,
       CodeableConcept? type,
@@ -5354,14 +5354,14 @@ abstract class _$$_DocumentReferenceCopyWith<$Res>
       CodeableConcept? facilityType,
       CodeableConcept? practiceSetting,
       Period? period,
-      Instant? date,
+      FhirInstant? date,
       @JsonKey(name: '_date')
           Element? dateElement,
       List<Reference>? author,
       List<DocumentReferenceAttester>? attester,
       Reference? custodian,
       List<DocumentReferenceRelatesTo>? relatesTo,
-      Markdown? description,
+      FhirMarkdown? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
       List<CodeableConcept>? securityLabel,
@@ -5468,7 +5468,7 @@ class __$$_DocumentReferenceCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -5500,7 +5500,7 @@ class __$$_DocumentReferenceCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -5508,7 +5508,7 @@ class __$$_DocumentReferenceCopyWithImpl<$Res>
       docStatus: freezed == docStatus
           ? _value.docStatus
           : docStatus // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       docStatusElement: freezed == docStatusElement
           ? _value.docStatusElement
           : docStatusElement // ignore: cast_nullable_to_non_nullable
@@ -5684,7 +5684,7 @@ class _$_DocumentReference extends _DocumentReference {
 
   /// [language] The base language in which the resource is written.
   @override
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] ("_language") Extensions for language
   @override
@@ -5764,7 +5764,7 @@ class _$_DocumentReference extends _DocumentReference {
 
   /// [status] The status of this document reference.
   @override
-  final Code? status;
+  final FhirCode? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -5773,7 +5773,7 @@ class _$_DocumentReference extends _DocumentReference {
 
   /// [docStatus] The status of the underlying document.
   @override
-  final Code? docStatus;
+  final FhirCode? docStatus;
 
   /// [docStatusElement] ("_docStatus") Extensions for docStatus
   @override
@@ -6056,7 +6056,7 @@ abstract class _DocumentReference extends DocumentReference {
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
               final Element? implicitRulesElement,
-          final Code? language,
+          final FhirCode? language,
           @JsonKey(name: '_language')
               final Element? languageElement,
           final Narrative? text,
@@ -6066,10 +6066,10 @@ abstract class _DocumentReference extends DocumentReference {
           final List<FhirExtension>? modifierExtension,
           final List<Identifier>? identifier,
           final List<Reference>? basedOn,
-          final Code? status,
+          final FhirCode? status,
           @JsonKey(name: '_status')
               final Element? statusElement,
-          final Code? docStatus,
+          final FhirCode? docStatus,
           @JsonKey(name: '_docStatus')
               final Element? docStatusElement,
           final CodeableConcept? type,
@@ -6107,7 +6107,7 @@ abstract class _DocumentReference extends DocumentReference {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -6129,7 +6129,7 @@ abstract class _DocumentReference extends DocumentReference {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] ("_language") Extensions for language
@@ -6163,7 +6163,7 @@ abstract class _DocumentReference extends DocumentReference {
   @override
 
   /// [status] The status of this document reference.
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status
@@ -6172,7 +6172,7 @@ abstract class _DocumentReference extends DocumentReference {
   @override
 
   /// [docStatus] The status of the underlying document.
-  Code? get docStatus;
+  FhirCode? get docStatus;
   @override
 
   /// [docStatusElement] ("_docStatus") Extensions for docStatus
@@ -6213,7 +6213,7 @@ abstract class _DocumentReference extends DocumentReference {
   @override
 
   /// [date] When the document reference was created.
-  Instant? get date;
+  FhirInstant? get date;
   @override
 
   /// [dateElement] ("_date") Extensions for date
@@ -6238,7 +6238,7 @@ abstract class _DocumentReference extends DocumentReference {
   @override
 
   /// [description] Human-readable description of the source document.
-  Markdown? get description;
+  FhirMarkdown? get description;
   @override
 
   /// [descriptionElement] ("_description") Extensions for description
@@ -7523,7 +7523,7 @@ mixin _$DocumentReferenceProfile {
   Element? get valueUriElement => throw _privateConstructorUsedError;
 
   /// [valueCanonical] Code|uri|canonical.
-  Canonical? get valueCanonical => throw _privateConstructorUsedError;
+  FhirCanonical? get valueCanonical => throw _privateConstructorUsedError;
 
   /// [valueCanonicalElement] ("_valueCanonical") Extensions for valueCanonical
   @JsonKey(name: '_valueCanonical')
@@ -7548,7 +7548,7 @@ abstract class $DocumentReferenceProfileCopyWith<$Res> {
       Coding? valueCoding,
       FhirUri? valueUri,
       @JsonKey(name: '_valueUri') Element? valueUriElement,
-      Canonical? valueCanonical,
+      FhirCanonical? valueCanonical,
       @JsonKey(name: '_valueCanonical') Element? valueCanonicalElement});
 
   $CodingCopyWith<$Res>? get valueCoding;
@@ -7607,7 +7607,7 @@ class _$DocumentReferenceProfileCopyWithImpl<$Res,
       valueCanonical: freezed == valueCanonical
           ? _value.valueCanonical
           : valueCanonical // ignore: cast_nullable_to_non_nullable
-              as Canonical?,
+              as FhirCanonical?,
       valueCanonicalElement: freezed == valueCanonicalElement
           ? _value.valueCanonicalElement
           : valueCanonicalElement // ignore: cast_nullable_to_non_nullable
@@ -7668,7 +7668,7 @@ abstract class _$$_DocumentReferenceProfileCopyWith<$Res>
       Coding? valueCoding,
       FhirUri? valueUri,
       @JsonKey(name: '_valueUri') Element? valueUriElement,
-      Canonical? valueCanonical,
+      FhirCanonical? valueCanonical,
       @JsonKey(name: '_valueCanonical') Element? valueCanonicalElement});
 
   @override
@@ -7728,7 +7728,7 @@ class __$$_DocumentReferenceProfileCopyWithImpl<$Res>
       valueCanonical: freezed == valueCanonical
           ? _value.valueCanonical
           : valueCanonical // ignore: cast_nullable_to_non_nullable
-              as Canonical?,
+              as FhirCanonical?,
       valueCanonicalElement: freezed == valueCanonicalElement
           ? _value.valueCanonicalElement
           : valueCanonicalElement // ignore: cast_nullable_to_non_nullable
@@ -7836,7 +7836,7 @@ class _$_DocumentReferenceProfile extends _DocumentReferenceProfile {
 
   /// [valueCanonical] Code|uri|canonical.
   @override
-  final Canonical? valueCanonical;
+  final FhirCanonical? valueCanonical;
 
   /// [valueCanonicalElement] ("_valueCanonical") Extensions for valueCanonical
   @override
@@ -7908,7 +7908,7 @@ abstract class _DocumentReferenceProfile extends DocumentReferenceProfile {
       final FhirUri? valueUri,
       @JsonKey(name: '_valueUri')
           final Element? valueUriElement,
-      final Canonical? valueCanonical,
+      final FhirCanonical? valueCanonical,
       @JsonKey(name: '_valueCanonical')
           final Element? valueCanonicalElement}) = _$_DocumentReferenceProfile;
   _DocumentReferenceProfile._() : super._();
@@ -7962,7 +7962,7 @@ abstract class _DocumentReferenceProfile extends DocumentReferenceProfile {
   @override
 
   /// [valueCanonical] Code|uri|canonical.
-  Canonical? get valueCanonical;
+  FhirCanonical? get valueCanonical;
   @override
 
   /// [valueCanonicalElement] ("_valueCanonical") Extensions for valueCanonical

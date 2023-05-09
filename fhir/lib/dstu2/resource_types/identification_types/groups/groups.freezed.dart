@@ -22,12 +22,12 @@ Organization _$OrganizationFromJson(Map<String, dynamic> json) {
 mixin _$Organization {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Organization)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -37,7 +37,7 @@ mixin _$Organization {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
-  Boolean? get active => throw _privateConstructorUsedError;
+  FhirBoolean? get active => throw _privateConstructorUsedError;
   @JsonKey(name: '_active')
   Element? get activeElement => throw _privateConstructorUsedError;
   CodeableConcept? get type => throw _privateConstructorUsedError;
@@ -64,12 +64,12 @@ abstract class $OrganizationCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Organization)
           Dstu2ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -78,7 +78,7 @@ abstract class $OrganizationCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Boolean? active,
+      FhirBoolean? active,
       @JsonKey(name: '_active')
           Element? activeElement,
       CodeableConcept? type,
@@ -159,7 +159,7 @@ class _$OrganizationCopyWithImpl<$Res, $Val extends Organization>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -187,7 +187,7 @@ class _$OrganizationCopyWithImpl<$Res, $Val extends Organization>
       active: freezed == active
           ? _value.active
           : active // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       activeElement: freezed == activeElement
           ? _value.activeElement
           : activeElement // ignore: cast_nullable_to_non_nullable
@@ -331,12 +331,12 @@ abstract class _$$_OrganizationCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Organization)
           Dstu2ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -345,7 +345,7 @@ abstract class _$$_OrganizationCopyWith<$Res>
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Boolean? active,
+      FhirBoolean? active,
       @JsonKey(name: '_active')
           Element? activeElement,
       CodeableConcept? type,
@@ -432,7 +432,7 @@ class __$$_OrganizationCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -460,7 +460,7 @@ class __$$_OrganizationCopyWithImpl<$Res>
       active: freezed == active
           ? _value.active
           : active // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       activeElement: freezed == activeElement
           ? _value.activeElement
           : activeElement // ignore: cast_nullable_to_non_nullable
@@ -553,7 +553,7 @@ class _$_Organization extends _Organization {
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
-  final Code? language;
+  final FhirCode? language;
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
@@ -602,7 +602,7 @@ class _$_Organization extends _Organization {
   }
 
   @override
-  final Boolean? active;
+  final FhirBoolean? active;
   @override
   @JsonKey(name: '_active')
   final Element? activeElement;
@@ -739,7 +739,7 @@ abstract class _Organization extends Organization {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -748,7 +748,7 @@ abstract class _Organization extends Organization {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      final Boolean? active,
+      final FhirBoolean? active,
       @JsonKey(name: '_active')
           final Element? activeElement,
       final CodeableConcept? type,
@@ -768,7 +768,7 @@ abstract class _Organization extends Organization {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Organization)
   Dstu2ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -777,7 +777,7 @@ abstract class _Organization extends Organization {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
-  Code? get language;
+  FhirCode? get language;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;
@@ -793,7 +793,7 @@ abstract class _Organization extends Organization {
   @override
   List<Identifier>? get identifier;
   @override
-  Boolean? get active;
+  FhirBoolean? get active;
   @override
   @JsonKey(name: '_active')
   Element? get activeElement;
@@ -824,7 +824,7 @@ OrganizationContact _$OrganizationContactFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$OrganizationContact {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -1181,7 +1181,7 @@ abstract class _OrganizationContact extends OrganizationContact {
       _$_OrganizationContact.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -1212,12 +1212,12 @@ HealthcareService _$HealthcareServiceFromJson(Map<String, dynamic> json) {
 mixin _$HealthcareService {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.HealthcareService)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -1252,7 +1252,7 @@ mixin _$HealthcareService {
   List<CodeableConcept>? get referralMethod =>
       throw _privateConstructorUsedError;
   String? get publicKey => throw _privateConstructorUsedError;
-  Boolean? get appointmentRequired => throw _privateConstructorUsedError;
+  FhirBoolean? get appointmentRequired => throw _privateConstructorUsedError;
   @JsonKey(name: '_appointmentRequired')
   Element? get appointmentRequiredElement => throw _privateConstructorUsedError;
   List<HealthcareServiceAvailableTime>? get availableTime =>
@@ -1279,12 +1279,12 @@ abstract class $HealthcareServiceCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.HealthcareService)
           Dstu2ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -1314,7 +1314,7 @@ abstract class $HealthcareServiceCopyWith<$Res> {
       List<CodeableConcept>? characteristic,
       List<CodeableConcept>? referralMethod,
       String? publicKey,
-      Boolean? appointmentRequired,
+      FhirBoolean? appointmentRequired,
       @JsonKey(name: '_appointmentRequired')
           Element? appointmentRequiredElement,
       List<HealthcareServiceAvailableTime>? availableTime,
@@ -1413,7 +1413,7 @@ class _$HealthcareServiceCopyWithImpl<$Res, $Val extends HealthcareService>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -1517,7 +1517,7 @@ class _$HealthcareServiceCopyWithImpl<$Res, $Val extends HealthcareService>
       appointmentRequired: freezed == appointmentRequired
           ? _value.appointmentRequired
           : appointmentRequired // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       appointmentRequiredElement: freezed == appointmentRequiredElement
           ? _value.appointmentRequiredElement
           : appointmentRequiredElement // ignore: cast_nullable_to_non_nullable
@@ -1707,12 +1707,12 @@ abstract class _$$_HealthcareServiceCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.HealthcareService)
           Dstu2ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -1742,7 +1742,7 @@ abstract class _$$_HealthcareServiceCopyWith<$Res>
       List<CodeableConcept>? characteristic,
       List<CodeableConcept>? referralMethod,
       String? publicKey,
-      Boolean? appointmentRequired,
+      FhirBoolean? appointmentRequired,
       @JsonKey(name: '_appointmentRequired')
           Element? appointmentRequiredElement,
       List<HealthcareServiceAvailableTime>? availableTime,
@@ -1852,7 +1852,7 @@ class __$$_HealthcareServiceCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -1956,7 +1956,7 @@ class __$$_HealthcareServiceCopyWithImpl<$Res>
       appointmentRequired: freezed == appointmentRequired
           ? _value.appointmentRequired
           : appointmentRequired // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       appointmentRequiredElement: freezed == appointmentRequiredElement
           ? _value.appointmentRequiredElement
           : appointmentRequiredElement // ignore: cast_nullable_to_non_nullable
@@ -2061,7 +2061,7 @@ class _$_HealthcareService extends _HealthcareService {
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
-  final Code? language;
+  final FhirCode? language;
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
@@ -2207,7 +2207,7 @@ class _$_HealthcareService extends _HealthcareService {
   @override
   final String? publicKey;
   @override
-  final Boolean? appointmentRequired;
+  final FhirBoolean? appointmentRequired;
   @override
   @JsonKey(name: '_appointmentRequired')
   final Element? appointmentRequiredElement;
@@ -2388,7 +2388,7 @@ abstract class _HealthcareService extends HealthcareService {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -2418,7 +2418,7 @@ abstract class _HealthcareService extends HealthcareService {
       final List<CodeableConcept>? characteristic,
       final List<CodeableConcept>? referralMethod,
       final String? publicKey,
-      final Boolean? appointmentRequired,
+      final FhirBoolean? appointmentRequired,
       @JsonKey(name: '_appointmentRequired')
           final Element? appointmentRequiredElement,
       final List<HealthcareServiceAvailableTime>? availableTime,
@@ -2435,7 +2435,7 @@ abstract class _HealthcareService extends HealthcareService {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.HealthcareService)
   Dstu2ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -2444,7 +2444,7 @@ abstract class _HealthcareService extends HealthcareService {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
-  Code? get language;
+  FhirCode? get language;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;
@@ -2500,7 +2500,7 @@ abstract class _HealthcareService extends HealthcareService {
   @override
   String? get publicKey;
   @override
-  Boolean? get appointmentRequired;
+  FhirBoolean? get appointmentRequired;
   @override
   @JsonKey(name: '_appointmentRequired')
   Element? get appointmentRequiredElement;
@@ -2526,7 +2526,7 @@ HealthcareServiceServiceType _$HealthcareServiceServiceTypeFromJson(
 
 /// @nodoc
 mixin _$HealthcareServiceServiceType {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -2788,7 +2788,7 @@ abstract class _HealthcareServiceServiceType
       _$_HealthcareServiceServiceType.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -2811,7 +2811,7 @@ HealthcareServiceAvailableTime _$HealthcareServiceAvailableTimeFromJson(
 
 /// @nodoc
 mixin _$HealthcareServiceAvailableTime {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -2820,7 +2820,7 @@ mixin _$HealthcareServiceAvailableTime {
       throw _privateConstructorUsedError;
   @JsonKey(name: '_daysOfWeek')
   Element? get daysOfWeekElement => throw _privateConstructorUsedError;
-  Boolean? get allDay => throw _privateConstructorUsedError;
+  FhirBoolean? get allDay => throw _privateConstructorUsedError;
   @JsonKey(name: '_allDay')
   Element? get allDayElement => throw _privateConstructorUsedError;
   Time? get availableStartTime => throw _privateConstructorUsedError;
@@ -2850,7 +2850,7 @@ abstract class $HealthcareServiceAvailableTimeCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       List<AvailableTimeDaysOfWeek>? daysOfWeek,
       @JsonKey(name: '_daysOfWeek') Element? daysOfWeekElement,
-      Boolean? allDay,
+      FhirBoolean? allDay,
       @JsonKey(name: '_allDay') Element? allDayElement,
       Time? availableStartTime,
       @JsonKey(name: '_availableStartTime') Element? availableStartTimeElement,
@@ -2913,7 +2913,7 @@ class _$HealthcareServiceAvailableTimeCopyWithImpl<$Res,
       allDay: freezed == allDay
           ? _value.allDay
           : allDay // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       allDayElement: freezed == allDayElement
           ? _value.allDayElement
           : allDayElement // ignore: cast_nullable_to_non_nullable
@@ -3001,7 +3001,7 @@ abstract class _$$_HealthcareServiceAvailableTimeCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       List<AvailableTimeDaysOfWeek>? daysOfWeek,
       @JsonKey(name: '_daysOfWeek') Element? daysOfWeekElement,
-      Boolean? allDay,
+      FhirBoolean? allDay,
       @JsonKey(name: '_allDay') Element? allDayElement,
       Time? availableStartTime,
       @JsonKey(name: '_availableStartTime') Element? availableStartTimeElement,
@@ -3067,7 +3067,7 @@ class __$$_HealthcareServiceAvailableTimeCopyWithImpl<$Res>
       allDay: freezed == allDay
           ? _value.allDay
           : allDay // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       allDayElement: freezed == allDayElement
           ? _value.allDayElement
           : allDayElement // ignore: cast_nullable_to_non_nullable
@@ -3155,7 +3155,7 @@ class _$_HealthcareServiceAvailableTime
   @JsonKey(name: '_daysOfWeek')
   final Element? daysOfWeekElement;
   @override
-  final Boolean? allDay;
+  final FhirBoolean? allDay;
   @override
   @JsonKey(name: '_allDay')
   final Element? allDayElement;
@@ -3245,7 +3245,7 @@ abstract class _HealthcareServiceAvailableTime
           final List<AvailableTimeDaysOfWeek>? daysOfWeek,
           @JsonKey(name: '_daysOfWeek')
               final Element? daysOfWeekElement,
-          final Boolean? allDay,
+          final FhirBoolean? allDay,
           @JsonKey(name: '_allDay')
               final Element? allDayElement,
           final Time? availableStartTime,
@@ -3261,7 +3261,7 @@ abstract class _HealthcareServiceAvailableTime
       _$_HealthcareServiceAvailableTime.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -3273,7 +3273,7 @@ abstract class _HealthcareServiceAvailableTime
   @JsonKey(name: '_daysOfWeek')
   Element? get daysOfWeekElement;
   @override
-  Boolean? get allDay;
+  FhirBoolean? get allDay;
   @override
   @JsonKey(name: '_allDay')
   Element? get allDayElement;
@@ -3300,7 +3300,7 @@ HealthcareServiceNotAvailable _$HealthcareServiceNotAvailableFromJson(
 
 /// @nodoc
 mixin _$HealthcareServiceNotAvailable {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -3595,7 +3595,7 @@ abstract class _HealthcareServiceNotAvailable
       _$_HealthcareServiceNotAvailable.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -3622,12 +3622,12 @@ Group _$GroupFromJson(Map<String, dynamic> json) {
 mixin _$Group {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Group)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -3668,12 +3668,12 @@ abstract class $GroupCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Group)
           Dstu2ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -3771,7 +3771,7 @@ class _$GroupCopyWithImpl<$Res, $Val extends Group>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -3961,12 +3961,12 @@ abstract class _$$_GroupCopyWith<$Res> implements $GroupCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Group)
           Dstu2ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -4069,7 +4069,7 @@ class __$$_GroupCopyWithImpl<$Res> extends _$GroupCopyWithImpl<$Res, _$_Group>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -4202,7 +4202,7 @@ class _$_Group extends _Group {
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
-  final Code? language;
+  final FhirCode? language;
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
@@ -4395,7 +4395,7 @@ abstract class _Group extends Group {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -4428,7 +4428,7 @@ abstract class _Group extends Group {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Group)
   Dstu2ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -4437,7 +4437,7 @@ abstract class _Group extends Group {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
-  Code? get language;
+  FhirCode? get language;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;
@@ -4491,7 +4491,7 @@ GroupCharacteristic _$GroupCharacteristicFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$GroupCharacteristic {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -4499,7 +4499,7 @@ mixin _$GroupCharacteristic {
   CodeableConcept get code => throw _privateConstructorUsedError;
   CodeableConcept? get valueCodeableConcept =>
       throw _privateConstructorUsedError;
-  Boolean? get valueBoolean => throw _privateConstructorUsedError;
+  FhirBoolean? get valueBoolean => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueBoolean')
   Element? get valueBooleanElement => throw _privateConstructorUsedError;
   Quantity? get valueQuantity => throw _privateConstructorUsedError;
@@ -4525,7 +4525,7 @@ abstract class $GroupCharacteristicCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       CodeableConcept code,
       CodeableConcept? valueCodeableConcept,
-      Boolean? valueBoolean,
+      FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       Quantity? valueQuantity,
       Range? valueRange,
@@ -4589,7 +4589,7 @@ class _$GroupCharacteristicCopyWithImpl<$Res, $Val extends GroupCharacteristic>
       valueBoolean: freezed == valueBoolean
           ? _value.valueBoolean
           : valueBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       valueBooleanElement: freezed == valueBooleanElement
           ? _value.valueBooleanElement
           : valueBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -4697,7 +4697,7 @@ abstract class _$$_GroupCharacteristicCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       CodeableConcept code,
       CodeableConcept? valueCodeableConcept,
-      Boolean? valueBoolean,
+      FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       Quantity? valueQuantity,
       Range? valueRange,
@@ -4765,7 +4765,7 @@ class __$$_GroupCharacteristicCopyWithImpl<$Res>
       valueBoolean: freezed == valueBoolean
           ? _value.valueBoolean
           : valueBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       valueBooleanElement: freezed == valueBooleanElement
           ? _value.valueBooleanElement
           : valueBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -4841,7 +4841,7 @@ class _$_GroupCharacteristic extends _GroupCharacteristic {
   @override
   final CodeableConcept? valueCodeableConcept;
   @override
-  final Boolean? valueBoolean;
+  final FhirBoolean? valueBoolean;
   @override
   @JsonKey(name: '_valueBoolean')
   final Element? valueBooleanElement;
@@ -4922,7 +4922,7 @@ abstract class _GroupCharacteristic extends GroupCharacteristic {
       final List<FhirExtension>? modifierExtension,
       required final CodeableConcept code,
       final CodeableConcept? valueCodeableConcept,
-      final Boolean? valueBoolean,
+      final FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') final Element? valueBooleanElement,
       final Quantity? valueQuantity,
       final Range? valueRange,
@@ -4934,7 +4934,7 @@ abstract class _GroupCharacteristic extends GroupCharacteristic {
       _$_GroupCharacteristic.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -4945,7 +4945,7 @@ abstract class _GroupCharacteristic extends GroupCharacteristic {
   @override
   CodeableConcept? get valueCodeableConcept;
   @override
-  Boolean? get valueBoolean;
+  FhirBoolean? get valueBoolean;
   @override
   @JsonKey(name: '_valueBoolean')
   Element? get valueBooleanElement;
@@ -4969,14 +4969,14 @@ GroupMember _$GroupMemberFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$GroupMember {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   Reference get entity => throw _privateConstructorUsedError;
   Period? get period => throw _privateConstructorUsedError;
-  Boolean? get inactive => throw _privateConstructorUsedError;
+  FhirBoolean? get inactive => throw _privateConstructorUsedError;
   @JsonKey(name: '_inactive')
   Element? get inactiveElement => throw _privateConstructorUsedError;
 
@@ -4998,7 +4998,7 @@ abstract class $GroupMemberCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       Reference entity,
       Period? period,
-      Boolean? inactive,
+      FhirBoolean? inactive,
       @JsonKey(name: '_inactive') Element? inactiveElement});
 
   $ReferenceCopyWith<$Res> get entity;
@@ -5051,7 +5051,7 @@ class _$GroupMemberCopyWithImpl<$Res, $Val extends GroupMember>
       inactive: freezed == inactive
           ? _value.inactive
           : inactive // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       inactiveElement: freezed == inactiveElement
           ? _value.inactiveElement
           : inactiveElement // ignore: cast_nullable_to_non_nullable
@@ -5106,7 +5106,7 @@ abstract class _$$_GroupMemberCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       Reference entity,
       Period? period,
-      Boolean? inactive,
+      FhirBoolean? inactive,
       @JsonKey(name: '_inactive') Element? inactiveElement});
 
   @override
@@ -5160,7 +5160,7 @@ class __$$_GroupMemberCopyWithImpl<$Res>
       inactive: freezed == inactive
           ? _value.inactive
           : inactive // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       inactiveElement: freezed == inactiveElement
           ? _value.inactiveElement
           : inactiveElement // ignore: cast_nullable_to_non_nullable
@@ -5216,7 +5216,7 @@ class _$_GroupMember extends _GroupMember {
   @override
   final Period? period;
   @override
-  final Boolean? inactive;
+  final FhirBoolean? inactive;
   @override
   @JsonKey(name: '_inactive')
   final Element? inactiveElement;
@@ -5277,7 +5277,7 @@ abstract class _GroupMember extends GroupMember {
           final List<FhirExtension>? modifierExtension,
           required final Reference entity,
           final Period? period,
-          final Boolean? inactive,
+          final FhirBoolean? inactive,
           @JsonKey(name: '_inactive') final Element? inactiveElement}) =
       _$_GroupMember;
   _GroupMember._() : super._();
@@ -5286,7 +5286,7 @@ abstract class _GroupMember extends GroupMember {
       _$_GroupMember.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -5297,7 +5297,7 @@ abstract class _GroupMember extends GroupMember {
   @override
   Period? get period;
   @override
-  Boolean? get inactive;
+  FhirBoolean? get inactive;
   @override
   @JsonKey(name: '_inactive')
   Element? get inactiveElement;

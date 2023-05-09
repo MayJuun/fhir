@@ -141,7 +141,7 @@ class Group with Resource, _$Group {
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -159,7 +159,7 @@ class Group with Resource, _$Group {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -209,14 +209,14 @@ class Group with Resource, _$Group {
 
     /// [active] Indicates whether the record for the group is available for
     ///  use or is merely being retained for historical purposes.
-    Boolean? active,
+    FhirBoolean? active,
 
     /// [activeElement] ("_active") Extensions for active
     @JsonKey(name: '_active') Element? activeElement,
 
     /// [type] Identifies the broad classification of the kind of resources the
     ///  group includes.
-    Code? type,
+    FhirCode? type,
 
     /// [typeElement] ("_type") Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
@@ -231,7 +231,7 @@ class Group with Resource, _$Group {
     /// * 'enumerated': The Group.characteristics are necessary but not
     ///  sufficient to determine membership. Membership is determined by being
     ///  listed as one of the Group.member.
-    Code? membership,
+    FhirCode? membership,
 
     /// [membershipElement] ("_membership") Extensions for membership
     @JsonKey(name: '_membership') Element? membershipElement,
@@ -249,7 +249,7 @@ class Group with Resource, _$Group {
 
     /// [description] Explanation of what the group represents and how it is
     ///  intended to be used.
-    Markdown? description,
+    FhirMarkdown? description,
 
     /// [descriptionElement] ("_description") Extensions for description
     @JsonKey(name: '_description') Element? descriptionElement,
@@ -410,7 +410,7 @@ class GroupCharacteristic with _$GroupCharacteristic {
 
     /// [valueBoolean] The value of the trait that holds (or does not hold -
     ///  see 'exclude') for members of the group.
-    Boolean? valueBoolean,
+    FhirBoolean? valueBoolean,
 
     /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
@@ -429,7 +429,7 @@ class GroupCharacteristic with _$GroupCharacteristic {
 
     /// [exclude] If true, indicates the characteristic is one that is NOT held
     ///  by members of the group.
-    Boolean? exclude,
+    FhirBoolean? exclude,
 
     /// [excludeElement] ("_exclude") Extensions for exclude
     @JsonKey(name: '_exclude') Element? excludeElement,
@@ -561,7 +561,7 @@ class GroupMember with _$GroupMember {
 
     /// [inactive] A flag to indicate that the member is no longer in the
     ///  group, but previously may have been a member.
-    Boolean? inactive,
+    FhirBoolean? inactive,
 
     /// [inactiveElement] ("_inactive") Extensions for inactive
     @JsonKey(name: '_inactive') Element? inactiveElement,
@@ -739,7 +739,7 @@ class Patient with Resource, _$Patient {
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -757,7 +757,7 @@ class Patient with Resource, _$Patient {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -811,7 +811,7 @@ class Patient with Resource, _$Patient {
     ///  rules. It is often used to filter patient lists to exclude inactive
     ///  patients Deceased patients may also be marked as inactive for the same
     ///  reasons, but may be active for some time after death.
-    Boolean? active,
+    FhirBoolean? active,
 
     /// [activeElement] ("_active") Extensions for active
     @JsonKey(name: '_active') Element? activeElement,
@@ -825,19 +825,19 @@ class Patient with Resource, _$Patient {
 
     /// [gender] Administrative Gender - the gender that the patient is
     ///  considered to have for administration and record keeping purposes.
-    Code? gender,
+    FhirCode? gender,
 
     /// [genderElement] ("_gender") Extensions for gender
     @JsonKey(name: '_gender') Element? genderElement,
 
     /// [birthDate] The date of birth for the individual.
-    Date? birthDate,
+    FhirDate? birthDate,
 
     /// [birthDateElement] ("_birthDate") Extensions for birthDate
     @JsonKey(name: '_birthDate') Element? birthDateElement,
 
     /// [deceasedBoolean] Indicates if the individual is deceased or not.
-    Boolean? deceasedBoolean,
+    FhirBoolean? deceasedBoolean,
 
     /// [deceasedBooleanElement] ("_deceasedBoolean") Extensions for
     ///  deceasedBoolean
@@ -859,7 +859,7 @@ class Patient with Resource, _$Patient {
 
     /// [multipleBirthBoolean] Indicates whether the patient is part of a
     ///  multiple (boolean) or indicates the actual birth order (integer).
-    Boolean? multipleBirthBoolean,
+    FhirBoolean? multipleBirthBoolean,
 
     /// [multipleBirthBooleanElement] ("_multipleBirthBoolean") Extensions for
     ///  multipleBirthBoolean
@@ -868,7 +868,7 @@ class Patient with Resource, _$Patient {
 
     /// [multipleBirthInteger] Indicates whether the patient is part of a
     ///  multiple (boolean) or indicates the actual birth order (integer).
-    Integer? multipleBirthInteger,
+    FhirInteger? multipleBirthInteger,
 
     /// [multipleBirthIntegerElement] ("_multipleBirthInteger") Extensions for
     ///  multipleBirthInteger
@@ -1031,7 +1031,7 @@ class PatientContact with _$PatientContact {
 
     /// [gender] Administrative Gender - the gender that the contact person is
     ///  considered to have for administration and record keeping purposes.
-    Code? gender,
+    FhirCode? gender,
 
     /// [genderElement] ("_gender") Extensions for gender
     @JsonKey(name: '_gender') Element? genderElement,
@@ -1161,7 +1161,7 @@ class PatientCommunication with _$PatientCommunication {
 
     /// [preferred] Indicates whether or not the patient prefers this language
     ///  (over other languages he masters up a certain level).
-    Boolean? preferred,
+    FhirBoolean? preferred,
 
     /// [preferredElement] ("_preferred") Extensions for preferred
     @JsonKey(name: '_preferred') Element? preferredElement,
@@ -1276,7 +1276,7 @@ class PatientLink with _$PatientLink {
 
     /// [type] The type of link between this patient resource and another
     ///  patient resource.
-    Code? type,
+    FhirCode? type,
 
     /// [typeElement] ("_type") Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
@@ -1431,7 +1431,7 @@ class Person with Resource, _$Person {
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -1449,7 +1449,7 @@ class Person with Resource, _$Person {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -1498,7 +1498,7 @@ class Person with Resource, _$Person {
     List<Identifier>? identifier,
 
     /// [active] Whether this person's record is in active use.
-    Boolean? active,
+    FhirBoolean? active,
 
     /// [activeElement] ("_active") Extensions for active
     @JsonKey(name: '_active') Element? activeElement,
@@ -1511,19 +1511,19 @@ class Person with Resource, _$Person {
     List<ContactPoint>? telecom,
 
     /// [gender] Administrative Gender.
-    Code? gender,
+    FhirCode? gender,
 
     /// [genderElement] ("_gender") Extensions for gender
     @JsonKey(name: '_gender') Element? genderElement,
 
     /// [birthDate] The birth date for the person.
-    Date? birthDate,
+    FhirDate? birthDate,
 
     /// [birthDateElement] ("_birthDate") Extensions for birthDate
     @JsonKey(name: '_birthDate') Element? birthDateElement,
 
     /// [deceasedBoolean] Indicates if the individual is deceased or not.
-    Boolean? deceasedBoolean,
+    FhirBoolean? deceasedBoolean,
 
     /// [deceasedBooleanElement] ("_deceasedBoolean") Extensions for
     ///  deceasedBoolean
@@ -1672,7 +1672,7 @@ class PersonCommunication with _$PersonCommunication {
 
     /// [preferred] Indicates whether or not the person prefers this language
     ///  (over other languages he masters up a certain level).
-    Boolean? preferred,
+    FhirBoolean? preferred,
 
     /// [preferredElement] ("_preferred") Extensions for preferred
     @JsonKey(name: '_preferred') Element? preferredElement,
@@ -1785,7 +1785,7 @@ class PersonLink with _$PersonLink {
 
     /// [assurance] Level of assurance that this link is associated with the
     ///  target resource.
-    Code? assurance,
+    FhirCode? assurance,
 
     /// [assuranceElement] ("_assurance") Extensions for assurance
     @JsonKey(name: '_assurance') Element? assuranceElement,
@@ -1941,7 +1941,7 @@ class Practitioner with Resource, _$Practitioner {
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -1959,7 +1959,7 @@ class Practitioner with Resource, _$Practitioner {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -2008,7 +2008,7 @@ class Practitioner with Resource, _$Practitioner {
     List<Identifier>? identifier,
 
     /// [active] Whether this practitioner's record is in active use.
-    Boolean? active,
+    FhirBoolean? active,
 
     /// [activeElement] ("_active") Extensions for active
     @JsonKey(name: '_active') Element? activeElement,
@@ -2022,19 +2022,19 @@ class Practitioner with Resource, _$Practitioner {
 
     /// [gender] Administrative Gender - the gender that the person is
     ///  considered to have for administration and record keeping purposes.
-    Code? gender,
+    FhirCode? gender,
 
     /// [genderElement] ("_gender") Extensions for gender
     @JsonKey(name: '_gender') Element? genderElement,
 
     /// [birthDate] The date of birth for the practitioner.
-    Date? birthDate,
+    FhirDate? birthDate,
 
     /// [birthDateElement] ("_birthDate") Extensions for birthDate
     @JsonKey(name: '_birthDate') Element? birthDateElement,
 
     /// [deceasedBoolean] Indicates if the practitioner is deceased or not.
-    Boolean? deceasedBoolean,
+    FhirBoolean? deceasedBoolean,
 
     /// [deceasedBooleanElement] ("_deceasedBoolean") Extensions for
     ///  deceasedBoolean
@@ -2325,7 +2325,7 @@ class PractitionerRole with Resource, _$PractitionerRole {
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -2343,7 +2343,7 @@ class PractitionerRole with Resource, _$PractitionerRole {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -2392,7 +2392,7 @@ class PractitionerRole with Resource, _$PractitionerRole {
     List<Identifier>? identifier,
 
     /// [active] Whether this practitioner role record is in active use.
-    Boolean? active,
+    FhirBoolean? active,
 
     /// [activeElement] ("_active") Extensions for active
     @JsonKey(name: '_active') Element? activeElement,
@@ -2583,7 +2583,7 @@ class RelatedPerson with Resource, _$RelatedPerson {
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -2601,7 +2601,7 @@ class RelatedPerson with Resource, _$RelatedPerson {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -2650,7 +2650,7 @@ class RelatedPerson with Resource, _$RelatedPerson {
     List<Identifier>? identifier,
 
     /// [active] Whether this related person record is in active use.
-    Boolean? active,
+    FhirBoolean? active,
 
     /// [activeElement] ("_active") Extensions for active
     @JsonKey(name: '_active') Element? activeElement,
@@ -2671,13 +2671,13 @@ class RelatedPerson with Resource, _$RelatedPerson {
 
     /// [gender] Administrative Gender - the gender that the person is
     ///  considered to have for administration and record keeping purposes.
-    Code? gender,
+    FhirCode? gender,
 
     /// [genderElement] ("_gender") Extensions for gender
     @JsonKey(name: '_gender') Element? genderElement,
 
     /// [birthDate] The date on which the related person was born.
-    Date? birthDate,
+    FhirDate? birthDate,
 
     /// [birthDateElement] ("_birthDate") Extensions for birthDate
     @JsonKey(name: '_birthDate') Element? birthDateElement,
@@ -2816,7 +2816,7 @@ class RelatedPersonCommunication with _$RelatedPersonCommunication {
 
     /// [preferred] Indicates whether or not the related person prefers this
     ///  language (over other languages he or she masters up a certain level).
-    Boolean? preferred,
+    FhirBoolean? preferred,
 
     /// [preferredElement] ("_preferred") Extensions for preferred
     @JsonKey(name: '_preferred') Element? preferredElement,

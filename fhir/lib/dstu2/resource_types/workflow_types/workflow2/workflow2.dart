@@ -19,10 +19,10 @@ class ProcessRequest with Resource, _$ProcessRequest {
     @Default(Dstu2ResourceType.ProcessRequest)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.ProcessRequest)
         Dstu2ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
-    Code? language,
+    FhirCode? language,
     Narrative? text,
     List<Resource>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -38,7 +38,7 @@ class ProcessRequest with Resource, _$ProcessRequest {
     Reference? organization,
     Reference? request,
     Reference? response,
-    Boolean? nullify,
+    FhirBoolean? nullify,
     String? reference,
     List<ProcessRequestItem>? item,
     List<String>? include,
@@ -78,7 +78,7 @@ class ProcessRequest with Resource, _$ProcessRequest {
 class ProcessRequestItem with _$ProcessRequestItem {
   ProcessRequestItem._();
   factory ProcessRequestItem({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Integer sequenceLinkId,
@@ -122,10 +122,10 @@ class ProcessResponse with Resource, _$ProcessResponse {
     @Default(Dstu2ResourceType.ProcessResponse)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.ProcessResponse)
         Dstu2ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
-    Code? language,
+    FhirCode? language,
     Narrative? text,
     List<Resource>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -177,7 +177,7 @@ class ProcessResponse with Resource, _$ProcessResponse {
 class ProcessResponseNotes with _$ProcessResponseNotes {
   ProcessResponseNotes._();
   factory ProcessResponseNotes({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Coding? type,
@@ -222,11 +222,11 @@ class SupplyRequest with Resource, _$SupplyRequest {
     @Default(Dstu2ResourceType.SupplyRequest)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.SupplyRequest)
         Dstu2ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -279,7 +279,7 @@ class SupplyRequest with Resource, _$SupplyRequest {
 class SupplyRequestWhen with _$SupplyRequestWhen {
   SupplyRequestWhen._();
   factory SupplyRequestWhen({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? code,
@@ -324,11 +324,11 @@ class SupplyDelivery with Resource, _$SupplyDelivery {
     @Default(Dstu2ResourceType.SupplyDelivery)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.SupplyDelivery)
         Dstu2ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,

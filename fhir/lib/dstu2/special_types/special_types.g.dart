@@ -188,7 +188,7 @@ _$_ElementDefinition _$$_ElementDefinitionFromJson(Map<String, dynamic> json) =>
               json['_defaultValueDecimal'] as Map<String, dynamic>),
       defaultValueBase64Binary: json['defaultValueBase64Binary'] == null
           ? null
-          : Base64Binary.fromJson(json['defaultValueBase64Binary']),
+          : FhirBase64Binary?.fromJson(json['defaultValueBase64Binary']),
       defaultValueBase64BinaryElement: json['_defaultValueBase64Binary'] == null
           ? null
           : Element.fromJson(
@@ -358,7 +358,7 @@ _$_ElementDefinition _$$_ElementDefinitionFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_fixedDecimal'] as Map<String, dynamic>),
       fixedBase64Binary: json['fixedBase64Binary'] == null
           ? null
-          : Base64Binary.fromJson(json['fixedBase64Binary']),
+          : FhirBase64Binary?.fromJson(json['fixedBase64Binary']),
       fixedBase64BinaryElement: json['_fixedBase64Binary'] == null
           ? null
           : Element.fromJson(
@@ -498,7 +498,7 @@ _$_ElementDefinition _$$_ElementDefinitionFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_patternDecimal'] as Map<String, dynamic>),
       patternBase64Binary: json['patternBase64Binary'] == null
           ? null
-          : Base64Binary.fromJson(json['patternBase64Binary']),
+          : FhirBase64Binary?.fromJson(json['patternBase64Binary']),
       patternBase64BinaryElement: json['_patternBase64Binary'] == null
           ? null
           : Element.fromJson(
@@ -653,7 +653,7 @@ _$_ElementDefinition _$$_ElementDefinitionFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_exampleDecimal'] as Map<String, dynamic>),
       exampleBase64Binary: json['exampleBase64Binary'] == null
           ? null
-          : Base64Binary.fromJson(json['exampleBase64Binary']),
+          : FhirBase64Binary?.fromJson(json['exampleBase64Binary']),
       exampleBase64BinaryElement: json['_exampleBase64Binary'] == null
           ? null
           : Element.fromJson(
@@ -808,7 +808,7 @@ _$_ElementDefinition _$$_ElementDefinitionFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_minValueDecimal'] as Map<String, dynamic>),
       minValueBase64Binary: json['minValueBase64Binary'] == null
           ? null
-          : Base64Binary.fromJson(json['minValueBase64Binary']),
+          : FhirBase64Binary?.fromJson(json['minValueBase64Binary']),
       minValueBase64BinaryElement: json['_minValueBase64Binary'] == null
           ? null
           : Element.fromJson(
@@ -964,7 +964,7 @@ _$_ElementDefinition _$$_ElementDefinitionFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_maxValueDecimal'] as Map<String, dynamic>),
       maxValueBase64Binary: json['maxValueBase64Binary'] == null
           ? null
-          : Base64Binary.fromJson(json['maxValueBase64Binary']),
+          : FhirBase64Binary?.fromJson(json['maxValueBase64Binary']),
       maxValueBase64BinaryElement: json['_maxValueBase64Binary'] == null
           ? null
           : Element.fromJson(

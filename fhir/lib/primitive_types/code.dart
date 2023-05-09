@@ -9,27 +9,27 @@ import 'package:yaml/yaml.dart';
 // Project imports:
 import 'primitive_type_exceptions.dart';
 
-class Code {
-  const Code._(this._valueString, this._valueCode, this._isValid);
+class FhirCode {
+  const FhirCode._(this._valueString, this._valueCode, this._isValid);
 
-  /// Construct a [Code] constant at compile time
-  const Code.asConst(String code)
+  /// Construct a [FhirCode] constant at compile time
+  const FhirCode.asConst(String code)
       : _valueString = code,
         _valueCode = code,
         _isValid = true;
 
-  factory Code(dynamic inValue) =>
+  factory FhirCode(dynamic inValue) =>
       inValue is String && RegExp(r'^[^\s]+(\s[^\s]+)*$').hasMatch(inValue)
-          ? Code._(inValue, inValue, true)
-          : Code._(inValue.toString(), null, false);
+          ? FhirCode._(inValue, inValue, true)
+          : FhirCode._(inValue.toString(), null, false);
 
-  factory Code.fromJson(dynamic json) => Code(json);
+  factory FhirCode.fromJson(dynamic json) => FhirCode(json);
 
-  factory Code.fromYaml(dynamic yaml) => yaml is String
-      ? Code.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+  factory FhirCode.fromYaml(dynamic yaml) => yaml is String
+      ? FhirCode.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
-          ? Code.fromJson(jsonDecode(jsonEncode(yaml)))
-          : throw YamlFormatException<Code>(
+          ? FhirCode.fromJson(jsonDecode(jsonEncode(yaml)))
+          : throw YamlFormatException<FhirCode>(
               'FormatException: "$json" is not a valid Yaml string or YamlMap.');
 
   final String _valueString;
@@ -49,7 +49,7 @@ class Code {
   @override
   bool operator ==(Object o) => identical(this, o)
       ? true
-      : o is Code
+      : o is FhirCode
           ? o.value == _valueCode
           : o is String
               ? o == _valueString

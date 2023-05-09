@@ -22,12 +22,12 @@ Account _$AccountFromJson(Map<String, dynamic> json) {
 mixin _$Account {
   @JsonKey(unknownEnumValue: Stu3ResourceType.Account)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -68,12 +68,12 @@ abstract class $AccountCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Account)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -179,7 +179,7 @@ class _$AccountCopyWithImpl<$Res, $Val extends Account>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -430,12 +430,12 @@ abstract class _$$_AccountCopyWith<$Res> implements $AccountCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Account)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -551,7 +551,7 @@ class __$$_AccountCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -697,7 +697,7 @@ class _$_Account extends _Account {
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
-  final Code? language;
+  final FhirCode? language;
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
@@ -899,7 +899,7 @@ abstract class _Account extends Account {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -933,7 +933,7 @@ abstract class _Account extends Account {
   @JsonKey(unknownEnumValue: Stu3ResourceType.Account)
   Stu3ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -942,7 +942,7 @@ abstract class _Account extends Account {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
-  Code? get language;
+  FhirCode? get language;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;
@@ -1001,7 +1001,7 @@ AccountCoverage _$AccountCoverageFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$AccountCoverage {
   Reference get coverage => throw _privateConstructorUsedError;
-  Decimal? get priority => throw _privateConstructorUsedError;
+  FhirDecimal? get priority => throw _privateConstructorUsedError;
   @JsonKey(name: '_priority')
   Element? get priorityElement => throw _privateConstructorUsedError;
 
@@ -1019,7 +1019,7 @@ abstract class $AccountCoverageCopyWith<$Res> {
   @useResult
   $Res call(
       {Reference coverage,
-      Decimal? priority,
+      FhirDecimal? priority,
       @JsonKey(name: '_priority') Element? priorityElement});
 
   $ReferenceCopyWith<$Res> get coverage;
@@ -1090,7 +1090,7 @@ abstract class _$$_AccountCoverageCopyWith<$Res>
   @useResult
   $Res call(
       {Reference coverage,
-      Decimal? priority,
+      FhirDecimal? priority,
       @JsonKey(name: '_priority') Element? priorityElement});
 
   @override
@@ -1202,7 +1202,7 @@ abstract class _AccountCoverage extends AccountCoverage {
   @override
   Reference get coverage;
   @override
-  Decimal? get priority;
+  FhirDecimal? get priority;
   @override
   @JsonKey(name: '_priority')
   Element? get priorityElement;
@@ -1219,7 +1219,7 @@ AccountGuarantor _$AccountGuarantorFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$AccountGuarantor {
   Reference get party => throw _privateConstructorUsedError;
-  Boolean? get onHold => throw _privateConstructorUsedError;
+  FhirBoolean? get onHold => throw _privateConstructorUsedError;
   @JsonKey(name: '_onHold')
   Element? get onHoldElement => throw _privateConstructorUsedError;
   Period? get period => throw _privateConstructorUsedError;
@@ -1238,7 +1238,7 @@ abstract class $AccountGuarantorCopyWith<$Res> {
   @useResult
   $Res call(
       {Reference party,
-      Boolean? onHold,
+      FhirBoolean? onHold,
       @JsonKey(name: '_onHold') Element? onHoldElement,
       Period? period});
 
@@ -1273,7 +1273,7 @@ class _$AccountGuarantorCopyWithImpl<$Res, $Val extends AccountGuarantor>
       onHold: freezed == onHold
           ? _value.onHold
           : onHold // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       onHoldElement: freezed == onHoldElement
           ? _value.onHoldElement
           : onHoldElement // ignore: cast_nullable_to_non_nullable
@@ -1328,7 +1328,7 @@ abstract class _$$_AccountGuarantorCopyWith<$Res>
   @useResult
   $Res call(
       {Reference party,
-      Boolean? onHold,
+      FhirBoolean? onHold,
       @JsonKey(name: '_onHold') Element? onHoldElement,
       Period? period});
 
@@ -1364,7 +1364,7 @@ class __$$_AccountGuarantorCopyWithImpl<$Res>
       onHold: freezed == onHold
           ? _value.onHold
           : onHold // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       onHoldElement: freezed == onHoldElement
           ? _value.onHoldElement
           : onHoldElement // ignore: cast_nullable_to_non_nullable
@@ -1393,7 +1393,7 @@ class _$_AccountGuarantor extends _AccountGuarantor {
   @override
   final Reference party;
   @override
-  final Boolean? onHold;
+  final FhirBoolean? onHold;
   @override
   @JsonKey(name: '_onHold')
   final Element? onHoldElement;
@@ -1439,7 +1439,7 @@ class _$_AccountGuarantor extends _AccountGuarantor {
 abstract class _AccountGuarantor extends AccountGuarantor {
   factory _AccountGuarantor(
       {required final Reference party,
-      final Boolean? onHold,
+      final FhirBoolean? onHold,
       @JsonKey(name: '_onHold') final Element? onHoldElement,
       final Period? period}) = _$_AccountGuarantor;
   _AccountGuarantor._() : super._();
@@ -1450,7 +1450,7 @@ abstract class _AccountGuarantor extends AccountGuarantor {
   @override
   Reference get party;
   @override
-  Boolean? get onHold;
+  FhirBoolean? get onHold;
   @override
   @JsonKey(name: '_onHold')
   Element? get onHoldElement;
@@ -1470,12 +1470,12 @@ ChargeItem _$ChargeItemFromJson(Map<String, dynamic> json) {
 mixin _$ChargeItem {
   @JsonKey(unknownEnumValue: Stu3ResourceType.ChargeItem)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -1506,7 +1506,7 @@ mixin _$ChargeItem {
   Reference? get requestingOrganization => throw _privateConstructorUsedError;
   Quantity? get quantity => throw _privateConstructorUsedError;
   List<CodeableConcept>? get bodysite => throw _privateConstructorUsedError;
-  Id? get factorOverride => throw _privateConstructorUsedError;
+  FhirId? get factorOverride => throw _privateConstructorUsedError;
   @JsonKey(name: '_factorOverride')
   Element? get factorOverrideElement => throw _privateConstructorUsedError;
   Money? get priceOverride => throw _privateConstructorUsedError;
@@ -1514,7 +1514,7 @@ mixin _$ChargeItem {
   @JsonKey(name: '_overrideReason')
   Element? get overrideReasonElement => throw _privateConstructorUsedError;
   Reference? get enterer => throw _privateConstructorUsedError;
-  Date? get enteredDate => throw _privateConstructorUsedError;
+  FhirDate? get enteredDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_enteredDate')
   Element? get enteredDateElement => throw _privateConstructorUsedError;
   List<CodeableConcept>? get reason => throw _privateConstructorUsedError;
@@ -1539,12 +1539,12 @@ abstract class $ChargeItemCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ChargeItem)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -1573,7 +1573,7 @@ abstract class $ChargeItemCopyWith<$Res> {
       Reference? requestingOrganization,
       Quantity? quantity,
       List<CodeableConcept>? bodysite,
-      Id? factorOverride,
+      FhirId? factorOverride,
       @JsonKey(name: '_factorOverride')
           Element? factorOverrideElement,
       Money? priceOverride,
@@ -1581,7 +1581,7 @@ abstract class $ChargeItemCopyWith<$Res> {
       @JsonKey(name: '_overrideReason')
           Element? overrideReasonElement,
       Reference? enterer,
-      Date? enteredDate,
+      FhirDate? enteredDate,
       @JsonKey(name: '_enteredDate')
           Element? enteredDateElement,
       List<CodeableConcept>? reason,
@@ -1692,7 +1692,7 @@ class _$ChargeItemCopyWithImpl<$Res, $Val extends ChargeItem>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -2084,12 +2084,12 @@ abstract class _$$_ChargeItemCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ChargeItem)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -2118,7 +2118,7 @@ abstract class _$$_ChargeItemCopyWith<$Res>
       Reference? requestingOrganization,
       Quantity? quantity,
       List<CodeableConcept>? bodysite,
-      Id? factorOverride,
+      FhirId? factorOverride,
       @JsonKey(name: '_factorOverride')
           Element? factorOverrideElement,
       Money? priceOverride,
@@ -2126,7 +2126,7 @@ abstract class _$$_ChargeItemCopyWith<$Res>
       @JsonKey(name: '_overrideReason')
           Element? overrideReasonElement,
       Reference? enterer,
-      Date? enteredDate,
+      FhirDate? enteredDate,
       @JsonKey(name: '_enteredDate')
           Element? enteredDateElement,
       List<CodeableConcept>? reason,
@@ -2255,7 +2255,7 @@ class __$$_ChargeItemCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -2491,7 +2491,7 @@ class _$_ChargeItem extends _ChargeItem {
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
-  final Code? language;
+  final FhirCode? language;
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
@@ -2833,7 +2833,7 @@ abstract class _ChargeItem extends ChargeItem {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -2887,7 +2887,7 @@ abstract class _ChargeItem extends ChargeItem {
   @JsonKey(unknownEnumValue: Stu3ResourceType.ChargeItem)
   Stu3ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -2896,7 +2896,7 @@ abstract class _ChargeItem extends ChargeItem {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
-  Code? get language;
+  FhirCode? get language;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;
@@ -2949,7 +2949,7 @@ abstract class _ChargeItem extends ChargeItem {
   @override
   List<CodeableConcept>? get bodysite;
   @override
-  Id? get factorOverride;
+  FhirId? get factorOverride;
   @override
   @JsonKey(name: '_factorOverride')
   Element? get factorOverrideElement;
@@ -2963,7 +2963,7 @@ abstract class _ChargeItem extends ChargeItem {
   @override
   Reference? get enterer;
   @override
-  Date? get enteredDate;
+  FhirDate? get enteredDate;
   @override
   @JsonKey(name: '_enteredDate')
   Element? get enteredDateElement;
@@ -3177,12 +3177,12 @@ Contract _$ContractFromJson(Map<String, dynamic> json) {
 mixin _$Contract {
   @JsonKey(unknownEnumValue: Stu3ResourceType.Contract)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -3235,12 +3235,12 @@ abstract class $ContractCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Contract)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -3367,7 +3367,7 @@ class _$ContractCopyWithImpl<$Res, $Val extends Contract>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -3662,12 +3662,12 @@ abstract class _$$_ContractCopyWith<$Res> implements $ContractCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Contract)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -3805,7 +3805,7 @@ class __$$_ContractCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -4017,7 +4017,7 @@ class _$_Contract extends _Contract {
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
-  final Code? language;
+  final FhirCode? language;
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
@@ -4363,7 +4363,7 @@ abstract class _Contract extends Contract {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -4407,7 +4407,7 @@ abstract class _Contract extends Contract {
   @JsonKey(unknownEnumValue: Stu3ResourceType.Contract)
   Stu3ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -4416,7 +4416,7 @@ abstract class _Contract extends Contract {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
-  Code? get language;
+  FhirCode? get language;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;
@@ -4890,10 +4890,10 @@ mixin _$ContractValuedItem {
   Element? get effectiveTimeElement => throw _privateConstructorUsedError;
   Quantity? get quantity => throw _privateConstructorUsedError;
   Money? get unitPrice => throw _privateConstructorUsedError;
-  Decimal? get factor => throw _privateConstructorUsedError;
+  FhirDecimal? get factor => throw _privateConstructorUsedError;
   @JsonKey(name: '_factor')
   Element? get factorElement => throw _privateConstructorUsedError;
-  Decimal? get points => throw _privateConstructorUsedError;
+  FhirDecimal? get points => throw _privateConstructorUsedError;
   @JsonKey(name: '_points')
   Element? get pointsElement => throw _privateConstructorUsedError;
   Money? get net => throw _privateConstructorUsedError;
@@ -4918,9 +4918,9 @@ abstract class $ContractValuedItemCopyWith<$Res> {
       @JsonKey(name: '_effectiveTime') Element? effectiveTimeElement,
       Quantity? quantity,
       Money? unitPrice,
-      Decimal? factor,
+      FhirDecimal? factor,
       @JsonKey(name: '_factor') Element? factorElement,
-      Decimal? points,
+      FhirDecimal? points,
       @JsonKey(name: '_points') Element? pointsElement,
       Money? net});
 
@@ -5139,9 +5139,9 @@ abstract class _$$_ContractValuedItemCopyWith<$Res>
       @JsonKey(name: '_effectiveTime') Element? effectiveTimeElement,
       Quantity? quantity,
       Money? unitPrice,
-      Decimal? factor,
+      FhirDecimal? factor,
       @JsonKey(name: '_factor') Element? factorElement,
-      Decimal? points,
+      FhirDecimal? points,
       @JsonKey(name: '_points') Element? pointsElement,
       Money? net});
 
@@ -5391,12 +5391,12 @@ abstract class _ContractValuedItem extends ContractValuedItem {
   @override
   Money? get unitPrice;
   @override
-  Decimal? get factor;
+  FhirDecimal? get factor;
   @override
   @JsonKey(name: '_factor')
   Element? get factorElement;
   @override
-  Decimal? get points;
+  FhirDecimal? get points;
   @override
   @JsonKey(name: '_points')
   Element? get pointsElement;
@@ -6206,10 +6206,10 @@ mixin _$ContractValuedItem1 {
   Element? get effectiveTimeElement => throw _privateConstructorUsedError;
   Quantity? get quantity => throw _privateConstructorUsedError;
   Money? get unitPrice => throw _privateConstructorUsedError;
-  Decimal? get factor => throw _privateConstructorUsedError;
+  FhirDecimal? get factor => throw _privateConstructorUsedError;
   @JsonKey(name: '_factor')
   Element? get factorElement => throw _privateConstructorUsedError;
-  Decimal? get points => throw _privateConstructorUsedError;
+  FhirDecimal? get points => throw _privateConstructorUsedError;
   @JsonKey(name: '_points')
   Element? get pointsElement => throw _privateConstructorUsedError;
   Money? get net => throw _privateConstructorUsedError;
@@ -6234,9 +6234,9 @@ abstract class $ContractValuedItem1CopyWith<$Res> {
       @JsonKey(name: '_effectiveTime') Element? effectiveTimeElement,
       Quantity? quantity,
       Money? unitPrice,
-      Decimal? factor,
+      FhirDecimal? factor,
       @JsonKey(name: '_factor') Element? factorElement,
-      Decimal? points,
+      FhirDecimal? points,
       @JsonKey(name: '_points') Element? pointsElement,
       Money? net});
 
@@ -6455,9 +6455,9 @@ abstract class _$$_ContractValuedItem1CopyWith<$Res>
       @JsonKey(name: '_effectiveTime') Element? effectiveTimeElement,
       Quantity? quantity,
       Money? unitPrice,
-      Decimal? factor,
+      FhirDecimal? factor,
       @JsonKey(name: '_factor') Element? factorElement,
-      Decimal? points,
+      FhirDecimal? points,
       @JsonKey(name: '_points') Element? pointsElement,
       Money? net});
 
@@ -6707,12 +6707,12 @@ abstract class _ContractValuedItem1 extends ContractValuedItem1 {
   @override
   Money? get unitPrice;
   @override
-  Decimal? get factor;
+  FhirDecimal? get factor;
   @override
   @JsonKey(name: '_factor')
   Element? get factorElement;
   @override
-  Decimal? get points;
+  FhirDecimal? get points;
   @override
   @JsonKey(name: '_points')
   Element? get pointsElement;
@@ -7303,12 +7303,12 @@ ExplanationOfBenefit _$ExplanationOfBenefitFromJson(Map<String, dynamic> json) {
 mixin _$ExplanationOfBenefit {
   @JsonKey(unknownEnumValue: Stu3ResourceType.ExplanationOfBenefit)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -7353,7 +7353,7 @@ mixin _$ExplanationOfBenefit {
       throw _privateConstructorUsedError;
   List<ExplanationOfBenefitProcedure>? get procedure =>
       throw _privateConstructorUsedError;
-  Decimal? get precedence => throw _privateConstructorUsedError;
+  FhirDecimal? get precedence => throw _privateConstructorUsedError;
   @JsonKey(name: '_precedence')
   Element? get precedenceElement => throw _privateConstructorUsedError;
   ExplanationOfBenefitInsurance? get insurance =>
@@ -7392,12 +7392,12 @@ abstract class $ExplanationOfBenefitCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ExplanationOfBenefit)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -7436,7 +7436,7 @@ abstract class $ExplanationOfBenefitCopyWith<$Res> {
       List<ExplanationOfBenefitCareTeam>? careTeam,
       List<ExplanationOfBenefitDiagnosis>? diagnosis,
       List<ExplanationOfBenefitProcedure>? procedure,
-      Decimal? precedence,
+      FhirDecimal? precedence,
       @JsonKey(name: '_precedence')
           Element? precedenceElement,
       ExplanationOfBenefitInsurance? insurance,
@@ -7580,7 +7580,7 @@ class _$ExplanationOfBenefitCopyWithImpl<$Res,
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -8174,12 +8174,12 @@ abstract class _$$_ExplanationOfBenefitCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ExplanationOfBenefit)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -8218,7 +8218,7 @@ abstract class _$$_ExplanationOfBenefitCopyWith<$Res>
       List<ExplanationOfBenefitCareTeam>? careTeam,
       List<ExplanationOfBenefitDiagnosis>? diagnosis,
       List<ExplanationOfBenefitProcedure>? procedure,
-      Decimal? precedence,
+      FhirDecimal? precedence,
       @JsonKey(name: '_precedence')
           Element? precedenceElement,
       ExplanationOfBenefitInsurance? insurance,
@@ -8391,7 +8391,7 @@ class __$$_ExplanationOfBenefitCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -8686,7 +8686,7 @@ class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
-  final Code? language;
+  final FhirCode? language;
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
@@ -9087,7 +9087,7 @@ abstract class _ExplanationOfBenefit extends ExplanationOfBenefit {
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
               final Element? implicitRulesElement,
-          final Code? language,
+          final FhirCode? language,
           @JsonKey(name: '_language')
               final Element? languageElement,
           final Narrative? text,
@@ -9152,7 +9152,7 @@ abstract class _ExplanationOfBenefit extends ExplanationOfBenefit {
   @JsonKey(unknownEnumValue: Stu3ResourceType.ExplanationOfBenefit)
   Stu3ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -9161,7 +9161,7 @@ abstract class _ExplanationOfBenefit extends ExplanationOfBenefit {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
-  Code? get language;
+  FhirCode? get language;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;
@@ -9234,7 +9234,7 @@ abstract class _ExplanationOfBenefit extends ExplanationOfBenefit {
   @override
   List<ExplanationOfBenefitProcedure>? get procedure;
   @override
-  Decimal? get precedence;
+  FhirDecimal? get precedence;
   @override
   @JsonKey(name: '_precedence')
   Element? get precedenceElement;
@@ -9704,12 +9704,12 @@ ExplanationOfBenefitInformation _$ExplanationOfBenefitInformationFromJson(
 
 /// @nodoc
 mixin _$ExplanationOfBenefitInformation {
-  Decimal? get sequence => throw _privateConstructorUsedError;
+  FhirDecimal? get sequence => throw _privateConstructorUsedError;
   @JsonKey(name: '_sequence')
   Element? get sequenceElement => throw _privateConstructorUsedError;
   CodeableConcept get category => throw _privateConstructorUsedError;
   CodeableConcept? get code => throw _privateConstructorUsedError;
-  Date? get timingDate => throw _privateConstructorUsedError;
+  FhirDate? get timingDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_timingDate')
   Element? get timingDateElement => throw _privateConstructorUsedError;
   Period? get timingPeriod => throw _privateConstructorUsedError;
@@ -9740,7 +9740,7 @@ abstract class $ExplanationOfBenefitInformationCopyWith<$Res> {
       @JsonKey(name: '_sequence') Element? sequenceElement,
       CodeableConcept category,
       CodeableConcept? code,
-      Date? timingDate,
+      FhirDate? timingDate,
       @JsonKey(name: '_timingDate') Element? timingDateElement,
       Period? timingPeriod,
       String? valueString,
@@ -9977,7 +9977,7 @@ abstract class _$$_ExplanationOfBenefitInformationCopyWith<$Res>
       @JsonKey(name: '_sequence') Element? sequenceElement,
       CodeableConcept category,
       CodeableConcept? code,
-      Date? timingDate,
+      FhirDate? timingDate,
       @JsonKey(name: '_timingDate') Element? timingDateElement,
       Period? timingPeriod,
       String? valueString,
@@ -10239,7 +10239,7 @@ abstract class _ExplanationOfBenefitInformation
       _$_ExplanationOfBenefitInformation.fromJson;
 
   @override
-  Decimal? get sequence;
+  FhirDecimal? get sequence;
   @override
   @JsonKey(name: '_sequence')
   Element? get sequenceElement;
@@ -10248,7 +10248,7 @@ abstract class _ExplanationOfBenefitInformation
   @override
   CodeableConcept? get code;
   @override
-  Date? get timingDate;
+  FhirDate? get timingDate;
   @override
   @JsonKey(name: '_timingDate')
   Element? get timingDateElement;
@@ -10281,11 +10281,11 @@ ExplanationOfBenefitCareTeam _$ExplanationOfBenefitCareTeamFromJson(
 
 /// @nodoc
 mixin _$ExplanationOfBenefitCareTeam {
-  Decimal? get sequence => throw _privateConstructorUsedError;
+  FhirDecimal? get sequence => throw _privateConstructorUsedError;
   @JsonKey(name: '_sequence')
   Element? get sequenceElement => throw _privateConstructorUsedError;
   Reference get provider => throw _privateConstructorUsedError;
-  Boolean? get responsible => throw _privateConstructorUsedError;
+  FhirBoolean? get responsible => throw _privateConstructorUsedError;
   @JsonKey(name: '_responsible')
   Element? get responsibleElement => throw _privateConstructorUsedError;
   CodeableConcept? get role => throw _privateConstructorUsedError;
@@ -10309,7 +10309,7 @@ abstract class $ExplanationOfBenefitCareTeamCopyWith<$Res> {
       {Decimal? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       Reference provider,
-      Boolean? responsible,
+      FhirBoolean? responsible,
       @JsonKey(name: '_responsible') Element? responsibleElement,
       CodeableConcept? role,
       CodeableConcept? qualification});
@@ -10359,7 +10359,7 @@ class _$ExplanationOfBenefitCareTeamCopyWithImpl<$Res,
       responsible: freezed == responsible
           ? _value.responsible
           : responsible // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       responsibleElement: freezed == responsibleElement
           ? _value.responsibleElement
           : responsibleElement // ignore: cast_nullable_to_non_nullable
@@ -10445,7 +10445,7 @@ abstract class _$$_ExplanationOfBenefitCareTeamCopyWith<$Res>
       {Decimal? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       Reference provider,
-      Boolean? responsible,
+      FhirBoolean? responsible,
       @JsonKey(name: '_responsible') Element? responsibleElement,
       CodeableConcept? role,
       CodeableConcept? qualification});
@@ -10499,7 +10499,7 @@ class __$$_ExplanationOfBenefitCareTeamCopyWithImpl<$Res>
       responsible: freezed == responsible
           ? _value.responsible
           : responsible // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       responsibleElement: freezed == responsibleElement
           ? _value.responsibleElement
           : responsibleElement // ignore: cast_nullable_to_non_nullable
@@ -10540,7 +10540,7 @@ class _$_ExplanationOfBenefitCareTeam extends _ExplanationOfBenefitCareTeam {
   @override
   final Reference provider;
   @override
-  final Boolean? responsible;
+  final FhirBoolean? responsible;
   @override
   @JsonKey(name: '_responsible')
   final Element? responsibleElement;
@@ -10600,7 +10600,7 @@ abstract class _ExplanationOfBenefitCareTeam
       {final Decimal? sequence,
       @JsonKey(name: '_sequence') final Element? sequenceElement,
       required final Reference provider,
-      final Boolean? responsible,
+      final FhirBoolean? responsible,
       @JsonKey(name: '_responsible') final Element? responsibleElement,
       final CodeableConcept? role,
       final CodeableConcept? qualification}) = _$_ExplanationOfBenefitCareTeam;
@@ -10610,14 +10610,14 @@ abstract class _ExplanationOfBenefitCareTeam
       _$_ExplanationOfBenefitCareTeam.fromJson;
 
   @override
-  Decimal? get sequence;
+  FhirDecimal? get sequence;
   @override
   @JsonKey(name: '_sequence')
   Element? get sequenceElement;
   @override
   Reference get provider;
   @override
-  Boolean? get responsible;
+  FhirBoolean? get responsible;
   @override
   @JsonKey(name: '_responsible')
   Element? get responsibleElement;
@@ -10638,7 +10638,7 @@ ExplanationOfBenefitDiagnosis _$ExplanationOfBenefitDiagnosisFromJson(
 
 /// @nodoc
 mixin _$ExplanationOfBenefitDiagnosis {
-  Decimal? get sequence => throw _privateConstructorUsedError;
+  FhirDecimal? get sequence => throw _privateConstructorUsedError;
   @JsonKey(name: '_sequence')
   Element? get sequenceElement => throw _privateConstructorUsedError;
   CodeableConcept? get diagnosisCodeableConcept =>
@@ -10954,7 +10954,7 @@ abstract class _ExplanationOfBenefitDiagnosis
       _$_ExplanationOfBenefitDiagnosis.fromJson;
 
   @override
-  Decimal? get sequence;
+  FhirDecimal? get sequence;
   @override
   @JsonKey(name: '_sequence')
   Element? get sequenceElement;
@@ -10979,10 +10979,10 @@ ExplanationOfBenefitProcedure _$ExplanationOfBenefitProcedureFromJson(
 
 /// @nodoc
 mixin _$ExplanationOfBenefitProcedure {
-  Decimal? get sequence => throw _privateConstructorUsedError;
+  FhirDecimal? get sequence => throw _privateConstructorUsedError;
   @JsonKey(name: '_sequence')
   Element? get sequenceElement => throw _privateConstructorUsedError;
-  Date? get date => throw _privateConstructorUsedError;
+  FhirDate? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
   CodeableConcept? get procedureCodeableConcept =>
@@ -11006,7 +11006,7 @@ abstract class $ExplanationOfBenefitProcedureCopyWith<$Res> {
   $Res call(
       {Decimal? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
-      Date? date,
+      FhirDate? date,
       @JsonKey(name: '_date') Element? dateElement,
       CodeableConcept? procedureCodeableConcept,
       Reference? procedureReference});
@@ -11128,7 +11128,7 @@ abstract class _$$_ExplanationOfBenefitProcedureCopyWith<$Res>
   $Res call(
       {Decimal? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
-      Date? date,
+      FhirDate? date,
       @JsonKey(name: '_date') Element? dateElement,
       CodeableConcept? procedureCodeableConcept,
       Reference? procedureReference});
@@ -11282,12 +11282,12 @@ abstract class _ExplanationOfBenefitProcedure
       _$_ExplanationOfBenefitProcedure.fromJson;
 
   @override
-  Decimal? get sequence;
+  FhirDecimal? get sequence;
   @override
   @JsonKey(name: '_sequence')
   Element? get sequenceElement;
   @override
-  Date? get date;
+  FhirDate? get date;
   @override
   @JsonKey(name: '_date')
   Element? get dateElement;
@@ -11547,7 +11547,7 @@ ExplanationOfBenefitAccident _$ExplanationOfBenefitAccidentFromJson(
 
 /// @nodoc
 mixin _$ExplanationOfBenefitAccident {
-  Date? get date => throw _privateConstructorUsedError;
+  FhirDate? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
   CodeableConcept? get type => throw _privateConstructorUsedError;
@@ -11824,7 +11824,7 @@ abstract class _ExplanationOfBenefitAccident
       _$_ExplanationOfBenefitAccident.fromJson;
 
   @override
-  Date? get date;
+  FhirDate? get date;
   @override
   @JsonKey(name: '_date')
   Element? get dateElement;
@@ -11847,7 +11847,7 @@ ExplanationOfBenefitItem _$ExplanationOfBenefitItemFromJson(
 
 /// @nodoc
 mixin _$ExplanationOfBenefitItem {
-  Decimal? get sequence => throw _privateConstructorUsedError;
+  FhirDecimal? get sequence => throw _privateConstructorUsedError;
   @JsonKey(name: '_sequence')
   Element? get sequenceElement => throw _privateConstructorUsedError;
   List<PositiveInt>? get careTeamLinkId => throw _privateConstructorUsedError;
@@ -11872,7 +11872,7 @@ mixin _$ExplanationOfBenefitItem {
   CodeableConcept? get service => throw _privateConstructorUsedError;
   List<CodeableConcept>? get modifier => throw _privateConstructorUsedError;
   List<CodeableConcept>? get programCode => throw _privateConstructorUsedError;
-  Date? get servicedDate => throw _privateConstructorUsedError;
+  FhirDate? get servicedDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_servicedDate')
   Element? get servicedDateElement => throw _privateConstructorUsedError;
   Period? get servicedPeriod => throw _privateConstructorUsedError;
@@ -11882,7 +11882,7 @@ mixin _$ExplanationOfBenefitItem {
   Reference? get locationReference => throw _privateConstructorUsedError;
   Quantity? get quantity => throw _privateConstructorUsedError;
   Money? get unitPrice => throw _privateConstructorUsedError;
-  Decimal? get factor => throw _privateConstructorUsedError;
+  FhirDecimal? get factor => throw _privateConstructorUsedError;
   @JsonKey(name: '_factor')
   Element? get factorElement => throw _privateConstructorUsedError;
   Money? get net => throw _privateConstructorUsedError;
@@ -11931,7 +11931,7 @@ abstract class $ExplanationOfBenefitItemCopyWith<$Res> {
       CodeableConcept? service,
       List<CodeableConcept>? modifier,
       List<CodeableConcept>? programCode,
-      Date? servicedDate,
+      FhirDate? servicedDate,
       @JsonKey(name: '_servicedDate')
           Element? servicedDateElement,
       Period? servicedPeriod,
@@ -11940,7 +11940,7 @@ abstract class $ExplanationOfBenefitItemCopyWith<$Res> {
       Reference? locationReference,
       Quantity? quantity,
       Money? unitPrice,
-      Decimal? factor,
+      FhirDecimal? factor,
       @JsonKey(name: '_factor')
           Element? factorElement,
       Money? net,
@@ -12359,7 +12359,7 @@ abstract class _$$_ExplanationOfBenefitItemCopyWith<$Res>
       CodeableConcept? service,
       List<CodeableConcept>? modifier,
       List<CodeableConcept>? programCode,
-      Date? servicedDate,
+      FhirDate? servicedDate,
       @JsonKey(name: '_servicedDate')
           Element? servicedDateElement,
       Period? servicedPeriod,
@@ -12368,7 +12368,7 @@ abstract class _$$_ExplanationOfBenefitItemCopyWith<$Res>
       Reference? locationReference,
       Quantity? quantity,
       Money? unitPrice,
-      Decimal? factor,
+      FhirDecimal? factor,
       @JsonKey(name: '_factor')
           Element? factorElement,
       Money? net,
@@ -13065,7 +13065,7 @@ abstract class _ExplanationOfBenefitItem extends ExplanationOfBenefitItem {
       _$_ExplanationOfBenefitItem.fromJson;
 
   @override
-  Decimal? get sequence;
+  FhirDecimal? get sequence;
   @override
   @JsonKey(name: '_sequence')
   Element? get sequenceElement;
@@ -13100,7 +13100,7 @@ abstract class _ExplanationOfBenefitItem extends ExplanationOfBenefitItem {
   @override
   List<CodeableConcept>? get programCode;
   @override
-  Date? get servicedDate;
+  FhirDate? get servicedDate;
   @override
   @JsonKey(name: '_servicedDate')
   Element? get servicedDateElement;
@@ -13117,7 +13117,7 @@ abstract class _ExplanationOfBenefitItem extends ExplanationOfBenefitItem {
   @override
   Money? get unitPrice;
   @override
-  Decimal? get factor;
+  FhirDecimal? get factor;
   @override
   @JsonKey(name: '_factor')
   Element? get factorElement;
@@ -13156,7 +13156,7 @@ mixin _$ExplanationOfBenefitAdjudication {
   CodeableConcept get category => throw _privateConstructorUsedError;
   CodeableConcept? get reason => throw _privateConstructorUsedError;
   Money? get amount => throw _privateConstructorUsedError;
-  Decimal? get value => throw _privateConstructorUsedError;
+  FhirDecimal? get value => throw _privateConstructorUsedError;
   @JsonKey(name: '_value')
   Element? get valueElement => throw _privateConstructorUsedError;
 
@@ -13178,7 +13178,7 @@ abstract class $ExplanationOfBenefitAdjudicationCopyWith<$Res> {
       {CodeableConcept category,
       CodeableConcept? reason,
       Money? amount,
-      Decimal? value,
+      FhirDecimal? value,
       @JsonKey(name: '_value') Element? valueElement});
 
   $CodeableConceptCopyWith<$Res> get category;
@@ -13289,7 +13289,7 @@ abstract class _$$_ExplanationOfBenefitAdjudicationCopyWith<$Res>
       {CodeableConcept category,
       CodeableConcept? reason,
       Money? amount,
-      Decimal? value,
+      FhirDecimal? value,
       @JsonKey(name: '_value') Element? valueElement});
 
   @override
@@ -13435,7 +13435,7 @@ abstract class _ExplanationOfBenefitAdjudication
   @override
   Money? get amount;
   @override
-  Decimal? get value;
+  FhirDecimal? get value;
   @override
   @JsonKey(name: '_value')
   Element? get valueElement;
@@ -13453,7 +13453,7 @@ ExplanationOfBenefitDetail _$ExplanationOfBenefitDetailFromJson(
 
 /// @nodoc
 mixin _$ExplanationOfBenefitDetail {
-  Decimal? get sequence => throw _privateConstructorUsedError;
+  FhirDecimal? get sequence => throw _privateConstructorUsedError;
   @JsonKey(name: '_sequence')
   Element? get sequenceElement => throw _privateConstructorUsedError;
   CodeableConcept get type => throw _privateConstructorUsedError;
@@ -13464,7 +13464,7 @@ mixin _$ExplanationOfBenefitDetail {
   List<CodeableConcept>? get programCode => throw _privateConstructorUsedError;
   Quantity? get quantity => throw _privateConstructorUsedError;
   Money? get unitPrice => throw _privateConstructorUsedError;
-  Decimal? get factor => throw _privateConstructorUsedError;
+  FhirDecimal? get factor => throw _privateConstructorUsedError;
   @JsonKey(name: '_factor')
   Element? get factorElement => throw _privateConstructorUsedError;
   Money? get net => throw _privateConstructorUsedError;
@@ -13501,7 +13501,7 @@ abstract class $ExplanationOfBenefitDetailCopyWith<$Res> {
       List<CodeableConcept>? programCode,
       Quantity? quantity,
       Money? unitPrice,
-      Decimal? factor,
+      FhirDecimal? factor,
       @JsonKey(name: '_factor') Element? factorElement,
       Money? net,
       List<Reference>? udi,
@@ -13755,7 +13755,7 @@ abstract class _$$_ExplanationOfBenefitDetailCopyWith<$Res>
       List<CodeableConcept>? programCode,
       Quantity? quantity,
       Money? unitPrice,
-      Decimal? factor,
+      FhirDecimal? factor,
       @JsonKey(name: '_factor') Element? factorElement,
       Money? net,
       List<Reference>? udi,
@@ -14129,7 +14129,7 @@ abstract class _ExplanationOfBenefitDetail extends ExplanationOfBenefitDetail {
       _$_ExplanationOfBenefitDetail.fromJson;
 
   @override
-  Decimal? get sequence;
+  FhirDecimal? get sequence;
   @override
   @JsonKey(name: '_sequence')
   Element? get sequenceElement;
@@ -14150,7 +14150,7 @@ abstract class _ExplanationOfBenefitDetail extends ExplanationOfBenefitDetail {
   @override
   Money? get unitPrice;
   @override
-  Decimal? get factor;
+  FhirDecimal? get factor;
   @override
   @JsonKey(name: '_factor')
   Element? get factorElement;
@@ -14180,7 +14180,7 @@ ExplanationOfBenefitSubDetail _$ExplanationOfBenefitSubDetailFromJson(
 
 /// @nodoc
 mixin _$ExplanationOfBenefitSubDetail {
-  Decimal? get sequence => throw _privateConstructorUsedError;
+  FhirDecimal? get sequence => throw _privateConstructorUsedError;
   @JsonKey(name: '_sequence')
   Element? get sequenceElement => throw _privateConstructorUsedError;
   CodeableConcept get type => throw _privateConstructorUsedError;
@@ -14191,7 +14191,7 @@ mixin _$ExplanationOfBenefitSubDetail {
   List<CodeableConcept>? get programCode => throw _privateConstructorUsedError;
   Quantity? get quantity => throw _privateConstructorUsedError;
   Money? get unitPrice => throw _privateConstructorUsedError;
-  Decimal? get factor => throw _privateConstructorUsedError;
+  FhirDecimal? get factor => throw _privateConstructorUsedError;
   @JsonKey(name: '_factor')
   Element? get factorElement => throw _privateConstructorUsedError;
   Money? get net => throw _privateConstructorUsedError;
@@ -14227,7 +14227,7 @@ abstract class $ExplanationOfBenefitSubDetailCopyWith<$Res> {
       List<CodeableConcept>? programCode,
       Quantity? quantity,
       Money? unitPrice,
-      Decimal? factor,
+      FhirDecimal? factor,
       @JsonKey(name: '_factor') Element? factorElement,
       Money? net,
       List<Reference>? udi,
@@ -14475,7 +14475,7 @@ abstract class _$$_ExplanationOfBenefitSubDetailCopyWith<$Res>
       List<CodeableConcept>? programCode,
       Quantity? quantity,
       Money? unitPrice,
-      Decimal? factor,
+      FhirDecimal? factor,
       @JsonKey(name: '_factor') Element? factorElement,
       Money? net,
       List<Reference>? udi,
@@ -14829,7 +14829,7 @@ abstract class _ExplanationOfBenefitSubDetail
       _$_ExplanationOfBenefitSubDetail.fromJson;
 
   @override
-  Decimal? get sequence;
+  FhirDecimal? get sequence;
   @override
   @JsonKey(name: '_sequence')
   Element? get sequenceElement;
@@ -14850,7 +14850,7 @@ abstract class _ExplanationOfBenefitSubDetail
   @override
   Money? get unitPrice;
   @override
-  Decimal? get factor;
+  FhirDecimal? get factor;
   @override
   @JsonKey(name: '_factor')
   Element? get factorElement;
@@ -15797,7 +15797,7 @@ mixin _$ExplanationOfBenefitPayment {
   CodeableConcept? get type => throw _privateConstructorUsedError;
   Money? get adjustment => throw _privateConstructorUsedError;
   CodeableConcept? get adjustmentReason => throw _privateConstructorUsedError;
-  Date? get date => throw _privateConstructorUsedError;
+  FhirDate? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
   Money? get amount => throw _privateConstructorUsedError;
@@ -15821,7 +15821,7 @@ abstract class $ExplanationOfBenefitPaymentCopyWith<$Res> {
       {CodeableConcept? type,
       Money? adjustment,
       CodeableConcept? adjustmentReason,
-      Date? date,
+      FhirDate? date,
       @JsonKey(name: '_date') Element? dateElement,
       Money? amount,
       Identifier? identifier});
@@ -15974,7 +15974,7 @@ abstract class _$$_ExplanationOfBenefitPaymentCopyWith<$Res>
       {CodeableConcept? type,
       Money? adjustment,
       CodeableConcept? adjustmentReason,
-      Date? date,
+      FhirDate? date,
       @JsonKey(name: '_date') Element? dateElement,
       Money? amount,
       Identifier? identifier});
@@ -16144,7 +16144,7 @@ abstract class _ExplanationOfBenefitPayment
   @override
   CodeableConcept? get adjustmentReason;
   @override
-  Date? get date;
+  FhirDate? get date;
   @override
   @JsonKey(name: '_date')
   Element? get dateElement;
@@ -16165,7 +16165,7 @@ ExplanationOfBenefitProcessNote _$ExplanationOfBenefitProcessNoteFromJson(
 
 /// @nodoc
 mixin _$ExplanationOfBenefitProcessNote {
-  Decimal? get number => throw _privateConstructorUsedError;
+  FhirDecimal? get number => throw _privateConstructorUsedError;
   @JsonKey(name: '_number')
   Element? get numberElement => throw _privateConstructorUsedError;
   CodeableConcept? get type => throw _privateConstructorUsedError;
@@ -16465,7 +16465,7 @@ abstract class _ExplanationOfBenefitProcessNote
       _$_ExplanationOfBenefitProcessNote.fromJson;
 
   @override
-  Decimal? get number;
+  FhirDecimal? get number;
   @override
   @JsonKey(name: '_number')
   Element? get numberElement;
@@ -16494,7 +16494,7 @@ ExplanationOfBenefitBenefitBalance _$ExplanationOfBenefitBenefitBalanceFromJson(
 mixin _$ExplanationOfBenefitBenefitBalance {
   CodeableConcept get category => throw _privateConstructorUsedError;
   CodeableConcept? get subCategory => throw _privateConstructorUsedError;
-  Boolean? get excluded => throw _privateConstructorUsedError;
+  FhirBoolean? get excluded => throw _privateConstructorUsedError;
   @JsonKey(name: '_excluded')
   Element? get excludedElement => throw _privateConstructorUsedError;
   String? get name => throw _privateConstructorUsedError;
@@ -16527,7 +16527,7 @@ abstract class $ExplanationOfBenefitBenefitBalanceCopyWith<$Res> {
   $Res call(
       {CodeableConcept category,
       CodeableConcept? subCategory,
-      Boolean? excluded,
+      FhirBoolean? excluded,
       @JsonKey(name: '_excluded') Element? excludedElement,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
@@ -16587,7 +16587,7 @@ class _$ExplanationOfBenefitBenefitBalanceCopyWithImpl<$Res,
       excluded: freezed == excluded
           ? _value.excluded
           : excluded // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       excludedElement: freezed == excludedElement
           ? _value.excludedElement
           : excludedElement // ignore: cast_nullable_to_non_nullable
@@ -16732,7 +16732,7 @@ abstract class _$$_ExplanationOfBenefitBenefitBalanceCopyWith<$Res>
   $Res call(
       {CodeableConcept category,
       CodeableConcept? subCategory,
-      Boolean? excluded,
+      FhirBoolean? excluded,
       @JsonKey(name: '_excluded') Element? excludedElement,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
@@ -16799,7 +16799,7 @@ class __$$_ExplanationOfBenefitBenefitBalanceCopyWithImpl<$Res>
       excluded: freezed == excluded
           ? _value.excluded
           : excluded // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       excludedElement: freezed == excludedElement
           ? _value.excludedElement
           : excludedElement // ignore: cast_nullable_to_non_nullable
@@ -16869,7 +16869,7 @@ class _$_ExplanationOfBenefitBenefitBalance
   @override
   final CodeableConcept? subCategory;
   @override
-  final Boolean? excluded;
+  final FhirBoolean? excluded;
   @override
   @JsonKey(name: '_excluded')
   final Element? excludedElement;
@@ -16969,7 +16969,7 @@ abstract class _ExplanationOfBenefitBenefitBalance
   factory _ExplanationOfBenefitBenefitBalance(
           {required final CodeableConcept category,
           final CodeableConcept? subCategory,
-          final Boolean? excluded,
+          final FhirBoolean? excluded,
           @JsonKey(name: '_excluded') final Element? excludedElement,
           final String? name,
           @JsonKey(name: '_name') final Element? nameElement,
@@ -16991,7 +16991,7 @@ abstract class _ExplanationOfBenefitBenefitBalance
   @override
   CodeableConcept? get subCategory;
   @override
-  Boolean? get excluded;
+  FhirBoolean? get excluded;
   @override
   @JsonKey(name: '_excluded')
   Element? get excludedElement;
@@ -17028,14 +17028,14 @@ ExplanationOfBenefitFinancial _$ExplanationOfBenefitFinancialFromJson(
 /// @nodoc
 mixin _$ExplanationOfBenefitFinancial {
   CodeableConcept get type => throw _privateConstructorUsedError;
-  Decimal? get allowedUnsignedInt => throw _privateConstructorUsedError;
+  FhirDecimal? get allowedUnsignedInt => throw _privateConstructorUsedError;
   @JsonKey(name: '_allowedUnsignedInt')
   Element? get allowedUnsignedIntElement => throw _privateConstructorUsedError;
   String? get allowedString => throw _privateConstructorUsedError;
   @JsonKey(name: '_allowedString')
   Element? get allowedStringElement => throw _privateConstructorUsedError;
   Money? get allowedMoney => throw _privateConstructorUsedError;
-  Decimal? get usedUnsignedInt => throw _privateConstructorUsedError;
+  FhirDecimal? get usedUnsignedInt => throw _privateConstructorUsedError;
   @JsonKey(name: '_usedUnsignedInt')
   Element? get usedUnsignedIntElement => throw _privateConstructorUsedError;
   Money? get usedMoney => throw _privateConstructorUsedError;
@@ -17056,12 +17056,12 @@ abstract class $ExplanationOfBenefitFinancialCopyWith<$Res> {
   @useResult
   $Res call(
       {CodeableConcept type,
-      Decimal? allowedUnsignedInt,
+      FhirDecimal? allowedUnsignedInt,
       @JsonKey(name: '_allowedUnsignedInt') Element? allowedUnsignedIntElement,
       String? allowedString,
       @JsonKey(name: '_allowedString') Element? allowedStringElement,
       Money? allowedMoney,
-      Decimal? usedUnsignedInt,
+      FhirDecimal? usedUnsignedInt,
       @JsonKey(name: '_usedUnsignedInt') Element? usedUnsignedIntElement,
       Money? usedMoney});
 
@@ -17217,12 +17217,12 @@ abstract class _$$_ExplanationOfBenefitFinancialCopyWith<$Res>
   @useResult
   $Res call(
       {CodeableConcept type,
-      Decimal? allowedUnsignedInt,
+      FhirDecimal? allowedUnsignedInt,
       @JsonKey(name: '_allowedUnsignedInt') Element? allowedUnsignedIntElement,
       String? allowedString,
       @JsonKey(name: '_allowedString') Element? allowedStringElement,
       Money? allowedMoney,
-      Decimal? usedUnsignedInt,
+      FhirDecimal? usedUnsignedInt,
       @JsonKey(name: '_usedUnsignedInt') Element? usedUnsignedIntElement,
       Money? usedMoney});
 
@@ -17427,7 +17427,7 @@ abstract class _ExplanationOfBenefitFinancial
   @override
   CodeableConcept get type;
   @override
-  Decimal? get allowedUnsignedInt;
+  FhirDecimal? get allowedUnsignedInt;
   @override
   @JsonKey(name: '_allowedUnsignedInt')
   Element? get allowedUnsignedIntElement;
@@ -17439,7 +17439,7 @@ abstract class _ExplanationOfBenefitFinancial
   @override
   Money? get allowedMoney;
   @override
-  Decimal? get usedUnsignedInt;
+  FhirDecimal? get usedUnsignedInt;
   @override
   @JsonKey(name: '_usedUnsignedInt')
   Element? get usedUnsignedIntElement;

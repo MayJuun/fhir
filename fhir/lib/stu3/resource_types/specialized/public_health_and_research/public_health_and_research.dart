@@ -19,11 +19,11 @@ class ResearchStudy with Resource, _$ResearchStudy {
     @Default(Stu3ResourceType.ResearchStudy)
     @JsonKey(unknownEnumValue: Stu3ResourceType.ResearchStudy)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -131,11 +131,11 @@ class ResearchSubject with Resource, _$ResearchSubject {
     @Default(Stu3ResourceType.ResearchSubject)
     @JsonKey(unknownEnumValue: Stu3ResourceType.ResearchSubject)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,

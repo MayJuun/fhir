@@ -43,7 +43,7 @@ mixin _$Communication {
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -121,7 +121,7 @@ mixin _$Communication {
   List<Reference>? get inResponseTo => throw _privateConstructorUsedError;
 
   /// [status] The status of the transmission.
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -138,7 +138,7 @@ mixin _$Communication {
   /// [priority] Characterizes how quickly the planned or in progress
   /// communication must be addressed. Includes concepts such as stat, urgent,
   ///  routine.
-  Code? get priority => throw _privateConstructorUsedError;
+  FhirCode? get priority => throw _privateConstructorUsedError;
 
   /// [priorityElement] Extensions for priority
   @JsonKey(name: '_priority')
@@ -225,7 +225,7 @@ abstract class $CommunicationCopyWith<$Res> {
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -241,12 +241,12 @@ abstract class $CommunicationCopyWith<$Res> {
       List<Reference>? basedOn,
       List<Reference>? partOf,
       List<Reference>? inResponseTo,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? statusReason,
       List<CodeableConcept>? category,
-      Code? priority,
+      FhirCode? priority,
       @JsonKey(name: '_priority')
           Element? priorityElement,
       List<CodeableConcept>? medium,
@@ -359,7 +359,7 @@ class _$CommunicationCopyWithImpl<$Res, $Val extends Communication>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -411,7 +411,7 @@ class _$CommunicationCopyWithImpl<$Res, $Val extends Communication>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -427,7 +427,7 @@ class _$CommunicationCopyWithImpl<$Res, $Val extends Communication>
       priority: freezed == priority
           ? _value.priority
           : priority // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       priorityElement: freezed == priorityElement
           ? _value.priorityElement
           : priorityElement // ignore: cast_nullable_to_non_nullable
@@ -668,7 +668,7 @@ abstract class _$$_CommunicationCopyWith<$Res>
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -684,12 +684,12 @@ abstract class _$$_CommunicationCopyWith<$Res>
       List<Reference>? basedOn,
       List<Reference>? partOf,
       List<Reference>? inResponseTo,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? statusReason,
       List<CodeableConcept>? category,
-      Code? priority,
+      FhirCode? priority,
       @JsonKey(name: '_priority')
           Element? priorityElement,
       List<CodeableConcept>? medium,
@@ -813,7 +813,7 @@ class __$$_CommunicationCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -865,7 +865,7 @@ class __$$_CommunicationCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -881,7 +881,7 @@ class __$$_CommunicationCopyWithImpl<$Res>
       priority: freezed == priority
           ? _value.priority
           : priority // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       priorityElement: freezed == priorityElement
           ? _value.priorityElement
           : priorityElement // ignore: cast_nullable_to_non_nullable
@@ -1054,7 +1054,7 @@ class _$_Communication extends _Communication {
 
   /// [language] The base language in which the resource is written.
   @override
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] Extensions for language
   @override
@@ -1263,7 +1263,7 @@ class _$_Communication extends _Communication {
 
   /// [status] The status of the transmission.
   @override
-  final Code? status;
+  final FhirCode? status;
 
   /// [statusElement] Extensions for status
   @override
@@ -1294,7 +1294,7 @@ class _$_Communication extends _Communication {
   /// communication must be addressed. Includes concepts such as stat, urgent,
   ///  routine.
   @override
-  final Code? priority;
+  final FhirCode? priority;
 
   /// [priorityElement] Extensions for priority
   @override
@@ -1594,7 +1594,7 @@ abstract class _Communication extends Communication {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -1610,12 +1610,12 @@ abstract class _Communication extends Communication {
       final List<Reference>? basedOn,
       final List<Reference>? partOf,
       final List<Reference>? inResponseTo,
-      final Code? status,
+      final FhirCode? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
       final CodeableConcept? statusReason,
       final List<CodeableConcept>? category,
-      final Code? priority,
+      final FhirCode? priority,
       @JsonKey(name: '_priority')
           final Element? priorityElement,
       final List<CodeableConcept>? medium,
@@ -1669,7 +1669,7 @@ abstract class _Communication extends Communication {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -1757,7 +1757,7 @@ abstract class _Communication extends Communication {
   @override
 
   /// [status] The status of the transmission.
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -1778,7 +1778,7 @@ abstract class _Communication extends Communication {
   /// [priority] Characterizes how quickly the planned or in progress
   /// communication must be addressed. Includes concepts such as stat, urgent,
   ///  routine.
-  Code? get priority;
+  FhirCode? get priority;
   @override
 
   /// [priorityElement] Extensions for priority
@@ -2368,7 +2368,7 @@ mixin _$CommunicationRequest {
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -2432,7 +2432,7 @@ mixin _$CommunicationRequest {
   Identifier? get groupIdentifier => throw _privateConstructorUsedError;
 
   /// [status] The status of the proposal or order.
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -2448,7 +2448,7 @@ mixin _$CommunicationRequest {
 
   /// [priority] Characterizes how quickly the proposed act must be initiated.
   ///  Includes concepts such as stat, urgent, routine.
-  Code? get priority => throw _privateConstructorUsedError;
+  FhirCode? get priority => throw _privateConstructorUsedError;
 
   /// [priorityElement] Extensions for priority
   @JsonKey(name: '_priority')
@@ -2456,7 +2456,7 @@ mixin _$CommunicationRequest {
 
   /// [doNotPerform] If true indicates that the CommunicationRequest is asking
   ///  for the specified action to *not* occur.
-  Boolean? get doNotPerform => throw _privateConstructorUsedError;
+  FhirBoolean? get doNotPerform => throw _privateConstructorUsedError;
 
   /// [doNotPerformElement] Extensions for doNotPerform
   @JsonKey(name: '_doNotPerform')
@@ -2546,7 +2546,7 @@ abstract class $CommunicationRequestCopyWith<$Res> {
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -2558,15 +2558,15 @@ abstract class $CommunicationRequestCopyWith<$Res> {
       List<Reference>? basedOn,
       List<Reference>? replaces,
       Identifier? groupIdentifier,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? statusReason,
       List<CodeableConcept>? category,
-      Code? priority,
+      FhirCode? priority,
       @JsonKey(name: '_priority')
           Element? priorityElement,
-      Boolean? doNotPerform,
+      FhirBoolean? doNotPerform,
       @JsonKey(name: '_doNotPerform')
           Element? doNotPerformElement,
       List<CodeableConcept>? medium,
@@ -2684,7 +2684,7 @@ class _$CommunicationRequestCopyWithImpl<$Res,
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -2724,7 +2724,7 @@ class _$CommunicationRequestCopyWithImpl<$Res,
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -2740,7 +2740,7 @@ class _$CommunicationRequestCopyWithImpl<$Res,
       priority: freezed == priority
           ? _value.priority
           : priority // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       priorityElement: freezed == priorityElement
           ? _value.priorityElement
           : priorityElement // ignore: cast_nullable_to_non_nullable
@@ -2748,7 +2748,7 @@ class _$CommunicationRequestCopyWithImpl<$Res,
       doNotPerform: freezed == doNotPerform
           ? _value.doNotPerform
           : doNotPerform // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       doNotPerformElement: freezed == doNotPerformElement
           ? _value.doNotPerformElement
           : doNotPerformElement // ignore: cast_nullable_to_non_nullable
@@ -3029,7 +3029,7 @@ abstract class _$$_CommunicationRequestCopyWith<$Res>
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -3041,15 +3041,15 @@ abstract class _$$_CommunicationRequestCopyWith<$Res>
       List<Reference>? basedOn,
       List<Reference>? replaces,
       Identifier? groupIdentifier,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? statusReason,
       List<CodeableConcept>? category,
-      Code? priority,
+      FhirCode? priority,
       @JsonKey(name: '_priority')
           Element? priorityElement,
-      Boolean? doNotPerform,
+      FhirBoolean? doNotPerform,
       @JsonKey(name: '_doNotPerform')
           Element? doNotPerformElement,
       List<CodeableConcept>? medium,
@@ -3180,7 +3180,7 @@ class __$$_CommunicationRequestCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -3220,7 +3220,7 @@ class __$$_CommunicationRequestCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -3236,7 +3236,7 @@ class __$$_CommunicationRequestCopyWithImpl<$Res>
       priority: freezed == priority
           ? _value.priority
           : priority // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       priorityElement: freezed == priorityElement
           ? _value.priorityElement
           : priorityElement // ignore: cast_nullable_to_non_nullable
@@ -3244,7 +3244,7 @@ class __$$_CommunicationRequestCopyWithImpl<$Res>
       doNotPerform: freezed == doNotPerform
           ? _value.doNotPerform
           : doNotPerform // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       doNotPerformElement: freezed == doNotPerformElement
           ? _value.doNotPerformElement
           : doNotPerformElement // ignore: cast_nullable_to_non_nullable
@@ -3417,7 +3417,7 @@ class _$_CommunicationRequest extends _CommunicationRequest {
 
   /// [language] The base language in which the resource is written.
   @override
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] Extensions for language
   @override
@@ -3569,7 +3569,7 @@ class _$_CommunicationRequest extends _CommunicationRequest {
 
   /// [status] The status of the proposal or order.
   @override
-  final Code? status;
+  final FhirCode? status;
 
   /// [statusElement] Extensions for status
   @override
@@ -3599,7 +3599,7 @@ class _$_CommunicationRequest extends _CommunicationRequest {
   /// [priority] Characterizes how quickly the proposed act must be initiated.
   ///  Includes concepts such as stat, urgent, routine.
   @override
-  final Code? priority;
+  final FhirCode? priority;
 
   /// [priorityElement] Extensions for priority
   @override
@@ -3609,7 +3609,7 @@ class _$_CommunicationRequest extends _CommunicationRequest {
   /// [doNotPerform] If true indicates that the CommunicationRequest is asking
   ///  for the specified action to *not* occur.
   @override
-  final Boolean? doNotPerform;
+  final FhirBoolean? doNotPerform;
 
   /// [doNotPerformElement] Extensions for doNotPerform
   @override
@@ -3913,7 +3913,7 @@ abstract class _CommunicationRequest extends CommunicationRequest {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -3925,15 +3925,15 @@ abstract class _CommunicationRequest extends CommunicationRequest {
       final List<Reference>? basedOn,
       final List<Reference>? replaces,
       final Identifier? groupIdentifier,
-      final Code? status,
+      final FhirCode? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
       final CodeableConcept? statusReason,
       final List<CodeableConcept>? category,
-      final Code? priority,
+      final FhirCode? priority,
       @JsonKey(name: '_priority')
           final Element? priorityElement,
-      final Boolean? doNotPerform,
+      final FhirBoolean? doNotPerform,
       @JsonKey(name: '_doNotPerform')
           final Element? doNotPerformElement,
       final List<CodeableConcept>? medium,
@@ -3988,7 +3988,7 @@ abstract class _CommunicationRequest extends CommunicationRequest {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -4061,7 +4061,7 @@ abstract class _CommunicationRequest extends CommunicationRequest {
   @override
 
   /// [status] The status of the proposal or order.
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -4081,7 +4081,7 @@ abstract class _CommunicationRequest extends CommunicationRequest {
 
   /// [priority] Characterizes how quickly the proposed act must be initiated.
   ///  Includes concepts such as stat, urgent, routine.
-  Code? get priority;
+  FhirCode? get priority;
   @override
 
   /// [priorityElement] Extensions for priority
@@ -4091,7 +4091,7 @@ abstract class _CommunicationRequest extends CommunicationRequest {
 
   /// [doNotPerform] If true indicates that the CommunicationRequest is asking
   ///  for the specified action to *not* occur.
-  Boolean? get doNotPerform;
+  FhirBoolean? get doNotPerform;
   @override
 
   /// [doNotPerformElement] Extensions for doNotPerform
@@ -4691,7 +4691,7 @@ mixin _$DeviceRequest {
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -4767,7 +4767,7 @@ mixin _$DeviceRequest {
   Identifier? get groupIdentifier => throw _privateConstructorUsedError;
 
   /// [status] The status of the request.
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -4775,7 +4775,7 @@ mixin _$DeviceRequest {
 
   /// [intent] Whether the request is a proposal, plan, an original order or a
   ///  reflex order.
-  Code? get intent => throw _privateConstructorUsedError;
+  FhirCode? get intent => throw _privateConstructorUsedError;
 
   /// [intentElement] Extensions for intent
   @JsonKey(name: '_intent')
@@ -4783,7 +4783,7 @@ mixin _$DeviceRequest {
 
   /// [priority] Indicates how quickly the {{title}} should be addressed with
   ///  respect to other requests.
-  Code? get priority => throw _privateConstructorUsedError;
+  FhirCode? get priority => throw _privateConstructorUsedError;
 
   /// [priorityElement] Extensions for priority
   @JsonKey(name: '_priority')
@@ -4893,7 +4893,7 @@ abstract class $DeviceRequestCopyWith<$Res> {
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -4909,13 +4909,13 @@ abstract class $DeviceRequestCopyWith<$Res> {
       List<Reference>? basedOn,
       List<Reference>? priorRequest,
       Identifier? groupIdentifier,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Code? intent,
+      FhirCode? intent,
       @JsonKey(name: '_intent')
           Element? intentElement,
-      Code? priority,
+      FhirCode? priority,
       @JsonKey(name: '_priority')
           Element? priorityElement,
       Reference? codeReference,
@@ -5044,7 +5044,7 @@ class _$DeviceRequestCopyWithImpl<$Res, $Val extends DeviceRequest>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -5096,7 +5096,7 @@ class _$DeviceRequestCopyWithImpl<$Res, $Val extends DeviceRequest>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -5104,7 +5104,7 @@ class _$DeviceRequestCopyWithImpl<$Res, $Val extends DeviceRequest>
       intent: freezed == intent
           ? _value.intent
           : intent // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       intentElement: freezed == intentElement
           ? _value.intentElement
           : intentElement // ignore: cast_nullable_to_non_nullable
@@ -5112,7 +5112,7 @@ class _$DeviceRequestCopyWithImpl<$Res, $Val extends DeviceRequest>
       priority: freezed == priority
           ? _value.priority
           : priority // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       priorityElement: freezed == priorityElement
           ? _value.priorityElement
           : priorityElement // ignore: cast_nullable_to_non_nullable
@@ -5441,7 +5441,7 @@ abstract class _$$_DeviceRequestCopyWith<$Res>
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -5457,13 +5457,13 @@ abstract class _$$_DeviceRequestCopyWith<$Res>
       List<Reference>? basedOn,
       List<Reference>? priorRequest,
       Identifier? groupIdentifier,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Code? intent,
+      FhirCode? intent,
       @JsonKey(name: '_intent')
           Element? intentElement,
-      Code? priority,
+      FhirCode? priority,
       @JsonKey(name: '_priority')
           Element? priorityElement,
       Reference? codeReference,
@@ -5609,7 +5609,7 @@ class __$$_DeviceRequestCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -5661,7 +5661,7 @@ class __$$_DeviceRequestCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -5669,7 +5669,7 @@ class __$$_DeviceRequestCopyWithImpl<$Res>
       intent: freezed == intent
           ? _value.intent
           : intent // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       intentElement: freezed == intentElement
           ? _value.intentElement
           : intentElement // ignore: cast_nullable_to_non_nullable
@@ -5677,7 +5677,7 @@ class __$$_DeviceRequestCopyWithImpl<$Res>
       priority: freezed == priority
           ? _value.priority
           : priority // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       priorityElement: freezed == priorityElement
           ? _value.priorityElement
           : priorityElement // ignore: cast_nullable_to_non_nullable
@@ -5874,7 +5874,7 @@ class _$_DeviceRequest extends _DeviceRequest {
 
   /// [language] The base language in which the resource is written.
   @override
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] Extensions for language
   @override
@@ -6070,7 +6070,7 @@ class _$_DeviceRequest extends _DeviceRequest {
 
   /// [status] The status of the request.
   @override
-  final Code? status;
+  final FhirCode? status;
 
   /// [statusElement] Extensions for status
   @override
@@ -6080,7 +6080,7 @@ class _$_DeviceRequest extends _DeviceRequest {
   /// [intent] Whether the request is a proposal, plan, an original order or a
   ///  reflex order.
   @override
-  final Code? intent;
+  final FhirCode? intent;
 
   /// [intentElement] Extensions for intent
   @override
@@ -6090,7 +6090,7 @@ class _$_DeviceRequest extends _DeviceRequest {
   /// [priority] Indicates how quickly the {{title}} should be addressed with
   ///  respect to other requests.
   @override
-  final Code? priority;
+  final FhirCode? priority;
 
   /// [priorityElement] Extensions for priority
   @override
@@ -6436,7 +6436,7 @@ abstract class _DeviceRequest extends DeviceRequest {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -6452,13 +6452,13 @@ abstract class _DeviceRequest extends DeviceRequest {
       final List<Reference>? basedOn,
       final List<Reference>? priorRequest,
       final Identifier? groupIdentifier,
-      final Code? status,
+      final FhirCode? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
-      final Code? intent,
+      final FhirCode? intent,
       @JsonKey(name: '_intent')
           final Element? intentElement,
-      final Code? priority,
+      final FhirCode? priority,
       @JsonKey(name: '_priority')
           final Element? priorityElement,
       final Reference? codeReference,
@@ -6517,7 +6517,7 @@ abstract class _DeviceRequest extends DeviceRequest {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -6603,7 +6603,7 @@ abstract class _DeviceRequest extends DeviceRequest {
   @override
 
   /// [status] The status of the request.
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -6613,7 +6613,7 @@ abstract class _DeviceRequest extends DeviceRequest {
 
   /// [intent] Whether the request is a proposal, plan, an original order or a
   ///  reflex order.
-  Code? get intent;
+  FhirCode? get intent;
   @override
 
   /// [intentElement] Extensions for intent
@@ -6623,7 +6623,7 @@ abstract class _DeviceRequest extends DeviceRequest {
 
   /// [priority] Indicates how quickly the {{title}} should be addressed with
   ///  respect to other requests.
-  Code? get priority;
+  FhirCode? get priority;
   @override
 
   /// [priorityElement] Extensions for priority
@@ -6787,7 +6787,7 @@ mixin _$DeviceRequestParameter {
   Range? get valueRange => throw _privateConstructorUsedError;
 
   /// [valueBoolean] The value of the device detail.
-  Boolean? get valueBoolean => throw _privateConstructorUsedError;
+  FhirBoolean? get valueBoolean => throw _privateConstructorUsedError;
 
   /// [valueBooleanElement] Extensions for valueBoolean
   @JsonKey(name: '_valueBoolean')
@@ -6813,7 +6813,7 @@ abstract class $DeviceRequestParameterCopyWith<$Res> {
       CodeableConcept? valueCodeableConcept,
       Quantity? valueQuantity,
       Range? valueRange,
-      Boolean? valueBoolean,
+      FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement});
 
   $CodeableConceptCopyWith<$Res>? get code;
@@ -6879,7 +6879,7 @@ class _$DeviceRequestParameterCopyWithImpl<$Res,
       valueBoolean: freezed == valueBoolean
           ? _value.valueBoolean
           : valueBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       valueBooleanElement: freezed == valueBooleanElement
           ? _value.valueBooleanElement
           : valueBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -6965,7 +6965,7 @@ abstract class _$$_DeviceRequestParameterCopyWith<$Res>
       CodeableConcept? valueCodeableConcept,
       Quantity? valueQuantity,
       Range? valueRange,
-      Boolean? valueBoolean,
+      FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement});
 
   @override
@@ -7034,7 +7034,7 @@ class __$$_DeviceRequestParameterCopyWithImpl<$Res>
       valueBoolean: freezed == valueBoolean
           ? _value.valueBoolean
           : valueBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       valueBooleanElement: freezed == valueBooleanElement
           ? _value.valueBooleanElement
           : valueBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -7148,7 +7148,7 @@ class _$_DeviceRequestParameter extends _DeviceRequestParameter {
 
   /// [valueBoolean] The value of the device detail.
   @override
-  final Boolean? valueBoolean;
+  final FhirBoolean? valueBoolean;
 
   /// [valueBooleanElement] Extensions for valueBoolean
   @override
@@ -7221,7 +7221,7 @@ abstract class _DeviceRequestParameter extends DeviceRequestParameter {
           final CodeableConcept? valueCodeableConcept,
           final Quantity? valueQuantity,
           final Range? valueRange,
-          final Boolean? valueBoolean,
+          final FhirBoolean? valueBoolean,
           @JsonKey(name: '_valueBoolean') final Element? valueBooleanElement}) =
       _$_DeviceRequestParameter;
   _DeviceRequestParameter._() : super._();
@@ -7279,7 +7279,7 @@ abstract class _DeviceRequestParameter extends DeviceRequestParameter {
   @override
 
   /// [valueBoolean] The value of the device detail.
-  Boolean? get valueBoolean;
+  FhirBoolean? get valueBoolean;
   @override
 
   /// [valueBooleanElement] Extensions for valueBoolean
@@ -7320,7 +7320,7 @@ mixin _$DeviceUseStatement {
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -7375,7 +7375,7 @@ mixin _$DeviceUseStatement {
   /// [status] A code representing the patient or other source's judgment about
   /// the state of the device used that this statement is about.  Generally this
   ///  will be active or completed.
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -7452,7 +7452,7 @@ abstract class $DeviceUseStatementCopyWith<$Res> {
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -7462,7 +7462,7 @@ abstract class $DeviceUseStatementCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       List<Reference>? basedOn,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Reference subject,
@@ -7564,7 +7564,7 @@ class _$DeviceUseStatementCopyWithImpl<$Res, $Val extends DeviceUseStatement>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -7596,7 +7596,7 @@ class _$DeviceUseStatementCopyWithImpl<$Res, $Val extends DeviceUseStatement>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -7825,7 +7825,7 @@ abstract class _$$_DeviceUseStatementCopyWith<$Res>
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -7835,7 +7835,7 @@ abstract class _$$_DeviceUseStatementCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       List<Reference>? basedOn,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Reference subject,
@@ -7948,7 +7948,7 @@ class __$$_DeviceUseStatementCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -7980,7 +7980,7 @@ class __$$_DeviceUseStatementCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -8128,7 +8128,7 @@ class _$_DeviceUseStatement extends _DeviceUseStatement {
 
   /// [language] The base language in which the resource is written.
   @override
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] Extensions for language
   @override
@@ -8257,7 +8257,7 @@ class _$_DeviceUseStatement extends _DeviceUseStatement {
   /// the state of the device used that this statement is about.  Generally this
   ///  will be active or completed.
   @override
-  final Code? status;
+  final FhirCode? status;
 
   /// [statusElement] Extensions for status
   @override
@@ -8491,7 +8491,7 @@ abstract class _DeviceUseStatement extends DeviceUseStatement {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -8501,7 +8501,7 @@ abstract class _DeviceUseStatement extends DeviceUseStatement {
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       final List<Reference>? basedOn,
-      final Code? status,
+      final FhirCode? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
       required final Reference subject,
@@ -8554,7 +8554,7 @@ abstract class _DeviceUseStatement extends DeviceUseStatement {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -8616,7 +8616,7 @@ abstract class _DeviceUseStatement extends DeviceUseStatement {
   /// [status] A code representing the patient or other source's judgment about
   /// the state of the device used that this statement is about.  Generally this
   ///  will be active or completed.
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -8722,7 +8722,7 @@ mixin _$GuidanceResponse {
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -8787,7 +8787,7 @@ mixin _$GuidanceResponse {
 
   /// [moduleCanonical] An identifier, CodeableConcept or canonical reference
   ///  to the guidance that was requested.
-  Canonical? get moduleCanonical => throw _privateConstructorUsedError;
+  FhirCanonical? get moduleCanonical => throw _privateConstructorUsedError;
 
   /// [moduleCanonicalElement] Extensions for moduleCanonical
   @JsonKey(name: '_moduleCanonical')
@@ -8807,7 +8807,7 @@ mixin _$GuidanceResponse {
   /// accurate response could be provided if more data was available, the status
   /// will be data-requested, and the response will contain a description of the
   ///  additional requested information.
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -8890,7 +8890,7 @@ abstract class $GuidanceResponseCopyWith<$Res> {
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -8903,11 +8903,11 @@ abstract class $GuidanceResponseCopyWith<$Res> {
       FhirUri? moduleUri,
       @JsonKey(name: '_moduleUri')
           Element? moduleUriElement,
-      Canonical? moduleCanonical,
+      FhirCanonical? moduleCanonical,
       @JsonKey(name: '_moduleCanonical')
           Element? moduleCanonicalElement,
       CodeableConcept? moduleCodeableConcept,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Reference? subject,
@@ -9011,7 +9011,7 @@ class _$GuidanceResponseCopyWithImpl<$Res, $Val extends GuidanceResponse>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -9051,7 +9051,7 @@ class _$GuidanceResponseCopyWithImpl<$Res, $Val extends GuidanceResponse>
       moduleCanonical: freezed == moduleCanonical
           ? _value.moduleCanonical
           : moduleCanonical // ignore: cast_nullable_to_non_nullable
-              as Canonical?,
+              as FhirCanonical?,
       moduleCanonicalElement: freezed == moduleCanonicalElement
           ? _value.moduleCanonicalElement
           : moduleCanonicalElement // ignore: cast_nullable_to_non_nullable
@@ -9063,7 +9063,7 @@ class _$GuidanceResponseCopyWithImpl<$Res, $Val extends GuidanceResponse>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -9317,7 +9317,7 @@ abstract class _$$_GuidanceResponseCopyWith<$Res>
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -9330,11 +9330,11 @@ abstract class _$$_GuidanceResponseCopyWith<$Res>
       FhirUri? moduleUri,
       @JsonKey(name: '_moduleUri')
           Element? moduleUriElement,
-      Canonical? moduleCanonical,
+      FhirCanonical? moduleCanonical,
       @JsonKey(name: '_moduleCanonical')
           Element? moduleCanonicalElement,
       CodeableConcept? moduleCodeableConcept,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Reference? subject,
@@ -9451,7 +9451,7 @@ class __$$_GuidanceResponseCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -9491,7 +9491,7 @@ class __$$_GuidanceResponseCopyWithImpl<$Res>
       moduleCanonical: freezed == moduleCanonical
           ? _value.moduleCanonical
           : moduleCanonical // ignore: cast_nullable_to_non_nullable
-              as Canonical?,
+              as FhirCanonical?,
       moduleCanonicalElement: freezed == moduleCanonicalElement
           ? _value.moduleCanonicalElement
           : moduleCanonicalElement // ignore: cast_nullable_to_non_nullable
@@ -9503,7 +9503,7 @@ class __$$_GuidanceResponseCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -9647,7 +9647,7 @@ class _$_GuidanceResponse extends _GuidanceResponse {
 
   /// [language] The base language in which the resource is written.
   @override
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] Extensions for language
   @override
@@ -9779,7 +9779,7 @@ class _$_GuidanceResponse extends _GuidanceResponse {
   /// [moduleCanonical] An identifier, CodeableConcept or canonical reference
   ///  to the guidance that was requested.
   @override
-  final Canonical? moduleCanonical;
+  final FhirCanonical? moduleCanonical;
 
   /// [moduleCanonicalElement] Extensions for moduleCanonical
   @override
@@ -9801,7 +9801,7 @@ class _$_GuidanceResponse extends _GuidanceResponse {
   /// will be data-requested, and the response will contain a description of the
   ///  additional requested information.
   @override
-  final Code? status;
+  final FhirCode? status;
 
   /// [statusElement] Extensions for status
   @override
@@ -10065,7 +10065,7 @@ abstract class _GuidanceResponse extends GuidanceResponse {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -10078,11 +10078,11 @@ abstract class _GuidanceResponse extends GuidanceResponse {
       final FhirUri? moduleUri,
       @JsonKey(name: '_moduleUri')
           final Element? moduleUriElement,
-      final Canonical? moduleCanonical,
+      final FhirCanonical? moduleCanonical,
       @JsonKey(name: '_moduleCanonical')
           final Element? moduleCanonicalElement,
       final CodeableConcept? moduleCodeableConcept,
-      final Code? status,
+      final FhirCode? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
       final Reference? subject,
@@ -10132,7 +10132,7 @@ abstract class _GuidanceResponse extends GuidanceResponse {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -10206,7 +10206,7 @@ abstract class _GuidanceResponse extends GuidanceResponse {
 
   /// [moduleCanonical] An identifier, CodeableConcept or canonical reference
   ///  to the guidance that was requested.
-  Canonical? get moduleCanonical;
+  FhirCanonical? get moduleCanonical;
   @override
 
   /// [moduleCanonicalElement] Extensions for moduleCanonical
@@ -10228,7 +10228,7 @@ abstract class _GuidanceResponse extends GuidanceResponse {
   /// accurate response could be provided if more data was available, the status
   /// will be data-requested, and the response will contain a description of the
   ///  additional requested information.
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -10337,7 +10337,7 @@ mixin _$SupplyDelivery {
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -10395,7 +10395,7 @@ mixin _$SupplyDelivery {
   List<Reference>? get partOf => throw _privateConstructorUsedError;
 
   /// [status] A code specifying the state of the dispense event.
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -10458,7 +10458,7 @@ abstract class $SupplyDeliveryCopyWith<$Res> {
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -10469,7 +10469,7 @@ abstract class $SupplyDeliveryCopyWith<$Res> {
       List<Identifier>? identifier,
       List<Reference>? basedOn,
       List<Reference>? partOf,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Reference? patient,
@@ -10563,7 +10563,7 @@ class _$SupplyDeliveryCopyWithImpl<$Res, $Val extends SupplyDelivery>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -10599,7 +10599,7 @@ class _$SupplyDeliveryCopyWithImpl<$Res, $Val extends SupplyDelivery>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -10821,7 +10821,7 @@ abstract class _$$_SupplyDeliveryCopyWith<$Res>
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -10832,7 +10832,7 @@ abstract class _$$_SupplyDeliveryCopyWith<$Res>
       List<Identifier>? identifier,
       List<Reference>? basedOn,
       List<Reference>? partOf,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Reference? patient,
@@ -10937,7 +10937,7 @@ class __$$_SupplyDeliveryCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -10973,7 +10973,7 @@ class __$$_SupplyDeliveryCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -11099,7 +11099,7 @@ class _$_SupplyDelivery extends _SupplyDelivery {
 
   /// [language] The base language in which the resource is written.
   @override
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] Extensions for language
   @override
@@ -11243,7 +11243,7 @@ class _$_SupplyDelivery extends _SupplyDelivery {
 
   /// [status] A code specifying the state of the dispense event.
   @override
-  final Code? status;
+  final FhirCode? status;
 
   /// [statusElement] Extensions for status
   @override
@@ -11416,7 +11416,7 @@ abstract class _SupplyDelivery extends SupplyDelivery {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -11427,7 +11427,7 @@ abstract class _SupplyDelivery extends SupplyDelivery {
       final List<Identifier>? identifier,
       final List<Reference>? basedOn,
       final List<Reference>? partOf,
-      final Code? status,
+      final FhirCode? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
       final Reference? patient,
@@ -11475,7 +11475,7 @@ abstract class _SupplyDelivery extends SupplyDelivery {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -11541,7 +11541,7 @@ abstract class _SupplyDelivery extends SupplyDelivery {
   @override
 
   /// [status] A code specifying the state of the dispense event.
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -12082,7 +12082,7 @@ mixin _$SupplyRequest {
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -12133,7 +12133,7 @@ mixin _$SupplyRequest {
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [status] Status of the supply request.
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -12145,7 +12145,7 @@ mixin _$SupplyRequest {
 
   /// [priority] Indicates how quickly this SupplyRequest should be addressed
   ///  with respect to other requests.
-  Code? get priority => throw _privateConstructorUsedError;
+  FhirCode? get priority => throw _privateConstructorUsedError;
 
   /// [priorityElement] Extensions for priority
   @JsonKey(name: '_priority')
@@ -12228,7 +12228,7 @@ abstract class $SupplyRequestCopyWith<$Res> {
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -12237,11 +12237,11 @@ abstract class $SupplyRequestCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? category,
-      Code? priority,
+      FhirCode? priority,
       @JsonKey(name: '_priority')
           Element? priorityElement,
       CodeableConcept? itemCodeableConcept,
@@ -12353,7 +12353,7 @@ class _$SupplyRequestCopyWithImpl<$Res, $Val extends SupplyRequest>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -12381,7 +12381,7 @@ class _$SupplyRequestCopyWithImpl<$Res, $Val extends SupplyRequest>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -12393,7 +12393,7 @@ class _$SupplyRequestCopyWithImpl<$Res, $Val extends SupplyRequest>
       priority: freezed == priority
           ? _value.priority
           : priority // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       priorityElement: freezed == priorityElement
           ? _value.priorityElement
           : priorityElement // ignore: cast_nullable_to_non_nullable
@@ -12682,7 +12682,7 @@ abstract class _$$_SupplyRequestCopyWith<$Res>
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -12691,11 +12691,11 @@ abstract class _$$_SupplyRequestCopyWith<$Res>
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? category,
-      Code? priority,
+      FhirCode? priority,
       @JsonKey(name: '_priority')
           Element? priorityElement,
       CodeableConcept? itemCodeableConcept,
@@ -12822,7 +12822,7 @@ class __$$_SupplyRequestCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -12850,7 +12850,7 @@ class __$$_SupplyRequestCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -12862,7 +12862,7 @@ class __$$_SupplyRequestCopyWithImpl<$Res>
       priority: freezed == priority
           ? _value.priority
           : priority // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       priorityElement: freezed == priorityElement
           ? _value.priorityElement
           : priorityElement // ignore: cast_nullable_to_non_nullable
@@ -13022,7 +13022,7 @@ class _$_SupplyRequest extends _SupplyRequest {
 
   /// [language] The base language in which the resource is written.
   @override
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] Extensions for language
   @override
@@ -13138,7 +13138,7 @@ class _$_SupplyRequest extends _SupplyRequest {
 
   /// [status] Status of the supply request.
   @override
-  final Code? status;
+  final FhirCode? status;
 
   /// [statusElement] Extensions for status
   @override
@@ -13153,7 +13153,7 @@ class _$_SupplyRequest extends _SupplyRequest {
   /// [priority] Indicates how quickly this SupplyRequest should be addressed
   ///  with respect to other requests.
   @override
-  final Code? priority;
+  final FhirCode? priority;
 
   /// [priorityElement] Extensions for priority
   @override
@@ -13404,7 +13404,7 @@ abstract class _SupplyRequest extends SupplyRequest {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -13413,11 +13413,11 @@ abstract class _SupplyRequest extends SupplyRequest {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      final Code? status,
+      final FhirCode? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
       final CodeableConcept? category,
-      final Code? priority,
+      final FhirCode? priority,
       @JsonKey(name: '_priority')
           final Element? priorityElement,
       final CodeableConcept? itemCodeableConcept,
@@ -13472,7 +13472,7 @@ abstract class _SupplyRequest extends SupplyRequest {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -13529,7 +13529,7 @@ abstract class _SupplyRequest extends SupplyRequest {
   @override
 
   /// [status] Status of the supply request.
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -13544,7 +13544,7 @@ abstract class _SupplyRequest extends SupplyRequest {
 
   /// [priority] Indicates how quickly this SupplyRequest should be addressed
   ///  with respect to other requests.
-  Code? get priority;
+  FhirCode? get priority;
   @override
 
   /// [priorityElement] Extensions for priority
@@ -13677,7 +13677,7 @@ mixin _$SupplyRequestParameter {
   Range? get valueRange => throw _privateConstructorUsedError;
 
   /// [valueBoolean] The value of the device detail.
-  Boolean? get valueBoolean => throw _privateConstructorUsedError;
+  FhirBoolean? get valueBoolean => throw _privateConstructorUsedError;
 
   /// [valueBooleanElement] Extensions for valueBoolean
   @JsonKey(name: '_valueBoolean')
@@ -13703,7 +13703,7 @@ abstract class $SupplyRequestParameterCopyWith<$Res> {
       CodeableConcept? valueCodeableConcept,
       Quantity? valueQuantity,
       Range? valueRange,
-      Boolean? valueBoolean,
+      FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement});
 
   $CodeableConceptCopyWith<$Res>? get code;
@@ -13769,7 +13769,7 @@ class _$SupplyRequestParameterCopyWithImpl<$Res,
       valueBoolean: freezed == valueBoolean
           ? _value.valueBoolean
           : valueBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       valueBooleanElement: freezed == valueBooleanElement
           ? _value.valueBooleanElement
           : valueBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -13855,7 +13855,7 @@ abstract class _$$_SupplyRequestParameterCopyWith<$Res>
       CodeableConcept? valueCodeableConcept,
       Quantity? valueQuantity,
       Range? valueRange,
-      Boolean? valueBoolean,
+      FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement});
 
   @override
@@ -13924,7 +13924,7 @@ class __$$_SupplyRequestParameterCopyWithImpl<$Res>
       valueBoolean: freezed == valueBoolean
           ? _value.valueBoolean
           : valueBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       valueBooleanElement: freezed == valueBooleanElement
           ? _value.valueBooleanElement
           : valueBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -14038,7 +14038,7 @@ class _$_SupplyRequestParameter extends _SupplyRequestParameter {
 
   /// [valueBoolean] The value of the device detail.
   @override
-  final Boolean? valueBoolean;
+  final FhirBoolean? valueBoolean;
 
   /// [valueBooleanElement] Extensions for valueBoolean
   @override
@@ -14111,7 +14111,7 @@ abstract class _SupplyRequestParameter extends SupplyRequestParameter {
           final CodeableConcept? valueCodeableConcept,
           final Quantity? valueQuantity,
           final Range? valueRange,
-          final Boolean? valueBoolean,
+          final FhirBoolean? valueBoolean,
           @JsonKey(name: '_valueBoolean') final Element? valueBooleanElement}) =
       _$_SupplyRequestParameter;
   _SupplyRequestParameter._() : super._();
@@ -14169,7 +14169,7 @@ abstract class _SupplyRequestParameter extends SupplyRequestParameter {
   @override
 
   /// [valueBoolean] The value of the device detail.
-  Boolean? get valueBoolean;
+  FhirBoolean? get valueBoolean;
   @override
 
   /// [valueBooleanElement] Extensions for valueBoolean

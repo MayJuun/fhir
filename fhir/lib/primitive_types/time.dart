@@ -10,22 +10,22 @@ import 'package:yaml/yaml.dart';
 import 'comparator.dart';
 import 'primitive_type_exceptions.dart';
 
-class Time {
-  const Time._(this._valueString, this._valueTime, this._isValid);
+class FhirTime {
+  const FhirTime._(this._valueString, this._valueTime, this._isValid);
 
-  factory Time(dynamic inValue) => inValue is String &&
+  factory FhirTime(dynamic inValue) => inValue is String &&
           RegExp(r'^([01][0-9]|2[0-3])(:([0-5][0-9])(:([0-5][0-9]|60)(\.[0-9]+)?)?)?$')
               .hasMatch(inValue)
-      ? Time._(inValue, inValue, true)
-      : Time._(inValue.toString(), null, false);
+      ? FhirTime._(inValue, inValue, true)
+      : FhirTime._(inValue.toString(), null, false);
 
-  factory Time.fromJson(dynamic json) => Time(json);
+  factory FhirTime.fromJson(dynamic json) => FhirTime(json);
 
-  factory Time.fromYaml(dynamic yaml) => yaml is String
-      ? Time.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+  factory FhirTime.fromYaml(dynamic yaml) => yaml is String
+      ? FhirTime.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
-          ? Time.fromJson(jsonDecode(jsonEncode(yaml)))
-          : throw YamlFormatException<Time>(
+          ? FhirTime.fromJson(jsonDecode(jsonEncode(yaml)))
+          : throw YamlFormatException<FhirTime>(
               'FormatException: "$json" is not a valid Yaml string or YamlMap.');
 
   final String _valueString;
@@ -61,10 +61,10 @@ class Time {
     }
 
     /// create a right-hand-side value
-    final rhs = o is Time
+    final rhs = o is FhirTime
         ? o
         : o is String
-            ? Time(o)
+            ? FhirTime(o)
             : null;
 
     /// If compared Object is null, is invalid, or if this is invalid, we don't
@@ -76,7 +76,7 @@ class Time {
       } else {
         /// otherwise passed value is null or invalid OR this is invalid, or all
         /// of the above, and we throw and error saying as much.
-        throw InvalidTypes<Time>('Two values were passed to the date time '
+        throw InvalidTypes<FhirTime>('Two values were passed to the date time '
             '"$comparator" comparison operator, '
             'they were not both valid FhirDateTimeBase types\n'
             'Argument 1: $value (${value.runtimeType}): Valid - $isValid\n'
@@ -191,7 +191,8 @@ class Time {
     /// Once again, all the Precisions (for Time) are equal that we can compare
     /// but if the precisions aren't equal, then we throw an error
     if (lhsTimePrecision != rhsTimePrecision) {
-      throw UnequalPrecision<Time>('Two values were passed to the date time '
+      throw UnequalPrecision<FhirTime>(
+          'Two values were passed to the date time '
           '"$comparator" comparison operator, '
           'they did not have the same precision\n'
           'Argument 1: $value\nArgument 2: $o ');

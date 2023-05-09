@@ -106,7 +106,7 @@ class Attachment with _$Attachment {
     @JsonKey(name: '_data') Element? dataElement,
     String? url,
     @JsonKey(name: '_url') Element? urlElement,
-    Decimal? size,
+    FhirDecimal? size,
     @JsonKey(name: '_size') Element? sizeElement,
     String? hash,
     @JsonKey(name: '_hash') Element? hashElement,
@@ -241,11 +241,11 @@ class Coding with _$Coding {
     @JsonKey(name: '_system') Element? systemElement,
     String? version,
     @JsonKey(name: '_version') Element? versionElement,
-    Code? code,
+    FhirCode? code,
     @JsonKey(name: '_code') Element? codeElement,
     String? display,
     @JsonKey(name: '_display') Element? displayElement,
-    Boolean? userSelected,
+    FhirBoolean? userSelected,
     @JsonKey(name: '_userSelected') Element? userSelectedElement,
   }) = _Coding;
 
@@ -283,7 +283,7 @@ class Coding with _$Coding {
 class Quantity with _$Quantity {
   Quantity._();
   factory Quantity({
-    Decimal? value,
+    FhirDecimal? value,
     @JsonKey(name: '_value') Element? valueElement,
     QuantityComparator? comparator,
     @JsonKey(name: '_comparator') Element? comparatorElement,
@@ -291,7 +291,7 @@ class Quantity with _$Quantity {
     @JsonKey(name: '_unit') Element? unitElement,
     String? system,
     @JsonKey(name: '_system') Element? systemElement,
-    Code? code,
+    FhirCode? code,
     @JsonKey(name: '_code') Element? codeElement,
   }) = _Quantity;
 
@@ -330,7 +330,7 @@ class Quantity with _$Quantity {
 class FhirDuration with _$FhirDuration {
   FhirDuration._();
   factory FhirDuration({
-    Decimal? value,
+    FhirDecimal? value,
     @JsonKey(name: '_value') Element? valueElement,
     QuantityComparator? comparator,
     @JsonKey(name: '_comparator') Element? comparatorElement,
@@ -338,7 +338,7 @@ class FhirDuration with _$FhirDuration {
     @JsonKey(name: '_unit') Element? unitElement,
     String? system,
     @JsonKey(name: '_system') Element? systemElement,
-    Code? code,
+    FhirCode? code,
     @JsonKey(name: '_code') Element? codeElement,
   }) = _FhirDuration;
 
@@ -377,7 +377,7 @@ class FhirDuration with _$FhirDuration {
 class Distance with _$Distance {
   Distance._();
   factory Distance({
-    Decimal? value,
+    FhirDecimal? value,
     @JsonKey(name: '_value') Element? valueElement,
     QuantityComparator? comparator,
     @JsonKey(name: '_comparator') Element? comparatorElement,
@@ -385,7 +385,7 @@ class Distance with _$Distance {
     @JsonKey(name: '_unit') Element? unitElement,
     String? system,
     @JsonKey(name: '_system') Element? systemElement,
-    Code? code,
+    FhirCode? code,
     @JsonKey(name: '_code') Element? codeElement,
   }) = _Distance;
 
@@ -424,7 +424,7 @@ class Distance with _$Distance {
 class Count with _$Count {
   Count._();
   factory Count({
-    Decimal? value,
+    FhirDecimal? value,
     @JsonKey(name: '_value') Element? valueElement,
     QuantityComparator? comparator,
     @JsonKey(name: '_comparator') Element? comparatorElement,
@@ -432,7 +432,7 @@ class Count with _$Count {
     @JsonKey(name: '_unit') Element? unitElement,
     String? system,
     @JsonKey(name: '_system') Element? systemElement,
-    Code? code,
+    FhirCode? code,
     @JsonKey(name: '_code') Element? codeElement,
   }) = _Count;
 
@@ -469,7 +469,7 @@ class Count with _$Count {
 class Money with _$Money {
   Money._();
   factory Money({
-    Decimal? value,
+    FhirDecimal? value,
     @JsonKey(name: '_value') Element? valueElement,
     QuantityComparator? comparator,
     @JsonKey(name: '_comparator') Element? comparatorElement,
@@ -477,7 +477,7 @@ class Money with _$Money {
     @JsonKey(name: '_unit') Element? unitElement,
     String? system,
     @JsonKey(name: '_system') Element? systemElement,
-    Code? code,
+    FhirCode? code,
     @JsonKey(name: '_code') Element? codeElement,
   }) = _Money;
 
@@ -514,7 +514,7 @@ class Money with _$Money {
 class Age with _$Age {
   Age._();
   factory Age({
-    Decimal? value,
+    FhirDecimal? value,
     @JsonKey(name: '_value') Element? valueElement,
     QuantityComparator? comparator,
     @JsonKey(name: '_comparator') Element? comparatorElement,
@@ -522,7 +522,7 @@ class Age with _$Age {
     @JsonKey(name: '_unit') Element? unitElement,
     String? system,
     @JsonKey(name: '_system') Element? systemElement,
-    Code? code,
+    FhirCode? code,
     @JsonKey(name: '_code') Element? codeElement,
   }) = _Age;
 
@@ -673,15 +673,15 @@ class SampledData with _$SampledData {
   SampledData._();
   factory SampledData({
     required Quantity origin,
-    Decimal? period,
+    FhirDecimal? period,
     @JsonKey(name: '_period') Element? periodElement,
-    Decimal? factor,
+    FhirDecimal? factor,
     @JsonKey(name: '_factor') Element? factorElement,
-    Decimal? lowerLimit,
+    FhirDecimal? lowerLimit,
     @JsonKey(name: '_lowerLimit') Element? lowerLimitElement,
-    Decimal? upperLimit,
+    FhirDecimal? upperLimit,
     @JsonKey(name: '_upperLimit') Element? upperLimitElement,
-    Decimal? dimensions,
+    FhirDecimal? dimensions,
     @JsonKey(name: '_dimensions') Element? dimensionsElement,
     String? data,
     @JsonKey(name: '_data') Element? dataElement,
@@ -884,7 +884,7 @@ class ContactPoint with _$ContactPoint {
     @JsonKey(name: '_value') Element? valueElement,
     ContactPointUse? use,
     @JsonKey(name: '_use') Element? useElement,
-    Decimal? rank,
+    FhirDecimal? rank,
     @JsonKey(name: '_rank') Element? rankElement,
     Period? period,
   }) = _ContactPoint;
@@ -967,23 +967,23 @@ class TimingRepeat with _$TimingRepeat {
     FhirDuration? boundsDuration,
     Range? boundsRange,
     Period? boundsPeriod,
-    Decimal? count,
+    FhirDecimal? count,
     @JsonKey(name: '_count') Element? countElement,
-    Decimal? countMax,
+    FhirDecimal? countMax,
     @JsonKey(name: '_countMax') Element? countMaxElement,
-    Decimal? duration,
+    FhirDecimal? duration,
     @JsonKey(name: '_duration') Element? durationElement,
-    Decimal? durationMax,
+    FhirDecimal? durationMax,
     @JsonKey(name: '_durationMax') Element? durationMaxElement,
     TimingRepeatDurationUnit? durationUnit,
     @JsonKey(name: '_durationUnit') Element? durationUnitElement,
-    Decimal? frequency,
+    FhirDecimal? frequency,
     @JsonKey(name: '_frequency') Element? frequencyElement,
-    Decimal? frequencyMax,
+    FhirDecimal? frequencyMax,
     @JsonKey(name: '_frequencyMax') Element? frequencyMaxElement,
-    Decimal? period,
+    FhirDecimal? period,
     @JsonKey(name: '_period') Element? periodElement,
-    Decimal? periodMax,
+    FhirDecimal? periodMax,
     @JsonKey(name: '_periodMax') Element? periodMaxElement,
     TimingRepeatPeriodUnit? periodUnit,
     @JsonKey(name: '_periodUnit') Element? periodUnitElement,
@@ -993,7 +993,7 @@ class TimingRepeat with _$TimingRepeat {
     @JsonKey(name: '_timeOfDay') List<Element?>? timeOfDayElement,
     List<TimingRepeatWhen>? when,
     @JsonKey(name: '_when') List<Element?>? whenElement,
-    Decimal? offset,
+    FhirDecimal? offset,
     @JsonKey(name: '_offset') Element? offsetElement,
   }) = _TimingRepeat;
 

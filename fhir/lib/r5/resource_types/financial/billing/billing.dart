@@ -195,7 +195,7 @@ class Claim with Resource, _$Claim {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -212,7 +212,7 @@ class Claim with Resource, _$Claim {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -233,7 +233,7 @@ class Claim with Resource, _$Claim {
     List<Identifier>? identifier,
 
     /// [status] The status of the resource instance.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -245,7 +245,7 @@ class Claim with Resource, _$Claim {
     CodeableConcept? subType,
 
     /// [use] A code to indicate whether the nature of the request is: Claim - A request to an Insurer to adjudicate the supplied charges for health care goods and services under the identified policy and to pay the determined Benefit amount, if any; Preauthorization - A request to an Insurer to adjudicate the supplied proposed future charges for health care goods and services under the identified policy and to approve the services and provide the expected benefit amounts and potentially to reserve funds to pay the benefits when Claims for the indicated services are later submitted; or, Pre-determination - A request to an Insurer to adjudicate the supplied 'what if' charges for health care goods and services under the identified policy and report back what the Benefit payable would be had the services actually been provided.
-    Code? use,
+    FhirCode? use,
 
     /// [useElement] ("_use") Extensions for use
     @JsonKey(name: '_use') Element? useElement,
@@ -672,7 +672,7 @@ class ClaimCareTeam with _$ClaimCareTeam {
     required Reference provider,
 
     /// [responsible] The party who is billing and/or responsible for the claimed products or services.
-    Boolean? responsible,
+    FhirBoolean? responsible,
 
     /// [responsibleElement] ("_responsible") Extensions for responsible
     @JsonKey(name: '_responsible') Element? responsibleElement,
@@ -841,7 +841,7 @@ class ClaimSupportingInfo with _$ClaimSupportingInfo {
     CodeableConcept? code,
 
     /// [timingDate] The date when or period to which this information refers.
-    Date? timingDate,
+    FhirDate? timingDate,
 
     /// [timingDateElement] ("_timingDate") Extensions for timingDate
     @JsonKey(name: '_timingDate') Element? timingDateElement,
@@ -850,7 +850,7 @@ class ClaimSupportingInfo with _$ClaimSupportingInfo {
     Period? timingPeriod,
 
     /// [valueBoolean] Additional data or information such as resources, documents, images etc. including references to the data or the actual inclusion of the data.
-    Boolean? valueBoolean,
+    FhirBoolean? valueBoolean,
 
     /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
@@ -1282,7 +1282,7 @@ class ClaimInsurance with _$ClaimInsurance {
     @JsonKey(name: '_sequence') Element? sequenceElement,
 
     /// [focal] A flag to indicate that this Coverage is to be used for adjudication of this claim when set to true.
-    Boolean? focal,
+    FhirBoolean? focal,
 
     /// [focalElement] ("_focal") Extensions for focal
     @JsonKey(name: '_focal') Element? focalElement,
@@ -1419,7 +1419,7 @@ class ClaimAccident with _$ClaimAccident {
     List<FhirExtension>? modifierExtension,
 
     /// [date] Date of an accident event  related to the products and services contained in the claim.
-    Date? date,
+    FhirDate? date,
 
     /// [dateElement] ("_date") Extensions for date
     @JsonKey(name: '_date') Element? dateElement,
@@ -1678,7 +1678,7 @@ class ClaimItem with _$ClaimItem {
     List<CodeableConcept>? programCode,
 
     /// [servicedDate] The date or dates when the service or product was supplied, performed or completed.
-    Date? servicedDate,
+    FhirDate? servicedDate,
 
     /// [servicedDateElement] ("_servicedDate") Extensions for servicedDate
     @JsonKey(name: '_servicedDate') Element? servicedDateElement,
@@ -1705,7 +1705,7 @@ class ClaimItem with _$ClaimItem {
     Money? unitPrice,
 
     /// [factor] A real number that represents a multiplier used in determining the overall value of services delivered and/or goods received. The concept of a Factor allows for a discount or surcharge multiplier to be applied to a monetary amount.
-    Decimal? factor,
+    FhirDecimal? factor,
 
     /// [factorElement] ("_factor") Extensions for factor
     @JsonKey(name: '_factor') Element? factorElement,
@@ -2023,7 +2023,7 @@ class ClaimDetail with _$ClaimDetail {
     Money? unitPrice,
 
     /// [factor] A real number that represents a multiplier used in determining the overall value of services delivered and/or goods received. The concept of a Factor allows for a discount or surcharge multiplier to be applied to a monetary amount.
-    Decimal? factor,
+    FhirDecimal? factor,
 
     /// [factorElement] ("_factor") Extensions for factor
     @JsonKey(name: '_factor') Element? factorElement,
@@ -2224,7 +2224,7 @@ class ClaimSubDetail with _$ClaimSubDetail {
     Money? unitPrice,
 
     /// [factor] A real number that represents a multiplier used in determining the overall value of services delivered and/or goods received. The concept of a Factor allows for a discount or surcharge multiplier to be applied to a monetary amount.
-    Decimal? factor,
+    FhirDecimal? factor,
 
     /// [factorElement] ("_factor") Extensions for factor
     @JsonKey(name: '_factor') Element? factorElement,
@@ -2450,7 +2450,7 @@ class ClaimResponse with Resource, _$ClaimResponse {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -2467,7 +2467,7 @@ class ClaimResponse with Resource, _$ClaimResponse {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -2488,7 +2488,7 @@ class ClaimResponse with Resource, _$ClaimResponse {
     List<Identifier>? identifier,
 
     /// [status] The status of the resource instance.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -2500,7 +2500,7 @@ class ClaimResponse with Resource, _$ClaimResponse {
     CodeableConcept? subType,
 
     /// [use] A code to indicate whether the nature of the request is: Claim - A request to an Insurer to adjudicate the supplied charges for health care goods and services under the identified policy and to pay the determined Benefit amount, if any; Preauthorization - A request to an Insurer to adjudicate the supplied proposed future charges for health care goods and services under the identified policy and to approve the services and provide the expected benefit amounts and potentially to reserve funds to pay the benefits when Claims for the indicated services are later submitted; or, Pre-determination - A request to an Insurer to adjudicate the supplied 'what if' charges for health care goods and services under the identified policy and report back what the Benefit payable would be had the services actually been provided.
-    Code? use,
+    FhirCode? use,
 
     /// [useElement] ("_use") Extensions for use
     @JsonKey(name: '_use') Element? useElement,
@@ -2524,7 +2524,7 @@ class ClaimResponse with Resource, _$ClaimResponse {
     Reference? request,
 
     /// [outcome] The outcome of the claim, predetermination, or preauthorization processing.
-    Code? outcome,
+    FhirCode? outcome,
 
     /// [outcomeElement] ("_outcome") Extensions for outcome
     @JsonKey(name: '_outcome') Element? outcomeElement,
@@ -2848,7 +2848,7 @@ class ClaimResponseAdjudication with _$ClaimResponseAdjudication {
     Money? amount,
 
     /// [value] A non-monetary value associated with the category. Mutually exclusive to the amount element above.
-    Decimal? value,
+    FhirDecimal? value,
 
     /// [valueElement] ("_value") Extensions for value
     @JsonKey(name: '_value') Element? valueElement,
@@ -3330,7 +3330,7 @@ class ClaimResponseAddItem with _$ClaimResponseAddItem {
     List<CodeableConcept>? programCode,
 
     /// [servicedDate] The date or dates when the service or product was supplied, performed or completed.
-    Date? servicedDate,
+    FhirDate? servicedDate,
 
     /// [servicedDateElement] ("_servicedDate") Extensions for servicedDate
     @JsonKey(name: '_servicedDate') Element? servicedDateElement,
@@ -3354,7 +3354,7 @@ class ClaimResponseAddItem with _$ClaimResponseAddItem {
     Money? unitPrice,
 
     /// [factor] A real number that represents a multiplier used in determining the overall value of services delivered and/or goods received. The concept of a Factor allows for a discount or surcharge multiplier to be applied to a monetary amount.
-    Decimal? factor,
+    FhirDecimal? factor,
 
     /// [factorElement] ("_factor") Extensions for factor
     @JsonKey(name: '_factor') Element? factorElement,
@@ -3651,7 +3651,7 @@ class ClaimResponseDetail1 with _$ClaimResponseDetail1 {
     Money? unitPrice,
 
     /// [factor] A real number that represents a multiplier used in determining the overall value of services delivered and/or goods received. The concept of a Factor allows for a discount or surcharge multiplier to be applied to a monetary amount.
-    Decimal? factor,
+    FhirDecimal? factor,
 
     /// [factorElement] ("_factor") Extensions for factor
     @JsonKey(name: '_factor') Element? factorElement,
@@ -3838,7 +3838,7 @@ class ClaimResponseSubDetail1 with _$ClaimResponseSubDetail1 {
     Money? unitPrice,
 
     /// [factor] A real number that represents a multiplier used in determining the overall value of services delivered and/or goods received. The concept of a Factor allows for a discount or surcharge multiplier to be applied to a monetary amount.
-    Decimal? factor,
+    FhirDecimal? factor,
 
     /// [factorElement] ("_factor") Extensions for factor
     @JsonKey(name: '_factor') Element? factorElement,
@@ -4090,7 +4090,7 @@ class ClaimResponsePayment with _$ClaimResponsePayment {
     CodeableConcept? adjustmentReason,
 
     /// [date] Estimated date the payment will be issued or the actual issue date of payment.
-    Date? date,
+    FhirDate? date,
 
     /// [dateElement] ("_date") Extensions for date
     @JsonKey(name: '_date') Element? dateElement,
@@ -4216,7 +4216,7 @@ class ClaimResponseProcessNote with _$ClaimResponseProcessNote {
     @JsonKey(name: '_number') Element? numberElement,
 
     /// [type] The business purpose of the note text.
-    Code? type,
+    FhirCode? type,
 
     /// [typeElement] ("_type") Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
@@ -4355,7 +4355,7 @@ class ClaimResponseInsurance with _$ClaimResponseInsurance {
     @JsonKey(name: '_sequence') Element? sequenceElement,
 
     /// [focal] A flag to indicate that this Coverage is to be used for adjudication of this claim when set to true.
-    Boolean? focal,
+    FhirBoolean? focal,
 
     /// [focalElement] ("_focal") Extensions for focal
     @JsonKey(name: '_focal') Element? focalElement,
@@ -4679,7 +4679,7 @@ class Invoice with Resource, _$Invoice {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -4696,7 +4696,7 @@ class Invoice with Resource, _$Invoice {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -4717,7 +4717,7 @@ class Invoice with Resource, _$Invoice {
     List<Identifier>? identifier,
 
     /// [status] The current state of the Invoice.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -4750,7 +4750,7 @@ class Invoice with Resource, _$Invoice {
     @JsonKey(name: '_creation') Element? creationElement,
 
     /// [periodDate] Date/time(s) range of services included in this invoice.
-    Date? periodDate,
+    FhirDate? periodDate,
 
     /// [periodDateElement] ("_periodDate") Extensions for periodDate
     @JsonKey(name: '_periodDate') Element? periodDateElement,
@@ -4780,7 +4780,7 @@ class Invoice with Resource, _$Invoice {
     Money? totalGross,
 
     /// [paymentTerms] Payment details such as banking details, period of payment, deductibles, methods of payment.
-    Markdown? paymentTerms,
+    FhirMarkdown? paymentTerms,
 
     /// [paymentTermsElement] ("_paymentTerms") Extensions for paymentTerms
     @JsonKey(name: '_paymentTerms') Element? paymentTermsElement,
@@ -5026,7 +5026,7 @@ class InvoiceLineItem with _$InvoiceLineItem {
     @JsonKey(name: '_sequence') Element? sequenceElement,
 
     /// [servicedDate] Date/time(s) range when this service was delivered or completed.
-    Date? servicedDate,
+    FhirDate? servicedDate,
 
     /// [servicedDateElement] ("_servicedDate") Extensions for servicedDate
     @JsonKey(name: '_servicedDate') Element? servicedDateElement,

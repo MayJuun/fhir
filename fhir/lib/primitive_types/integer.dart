@@ -5,31 +5,31 @@ import 'dart:convert';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
-import 'fhir_number.dart';
+import 'number.dart';
 import 'primitive_type_exceptions.dart';
 
-class Integer extends FhirNumber {
-  const Integer._(String valueString, int? valueNumber, bool isValid)
+class FhirInteger extends FhirNumber {
+  const FhirInteger._(String valueString, int? valueNumber, bool isValid)
       : super(valueString, valueNumber, isValid);
 
-  factory Integer(dynamic inValue) {
+  factory FhirInteger(dynamic inValue) {
     if (inValue is int) {
-      return Integer._(inValue.toString(), inValue, true);
+      return FhirInteger._(inValue.toString(), inValue, true);
     } else if (inValue is num) {
-      return Integer._(inValue.toString(), int.tryParse(inValue.toString()),
+      return FhirInteger._(inValue.toString(), int.tryParse(inValue.toString()),
           int.tryParse(inValue.toString()) != null);
     }
-    throw CannotBeConstructed<Integer>(
+    throw CannotBeConstructed<FhirInteger>(
         'Integer cannot be constructed from $inValue.');
   }
 
-  factory Integer.fromJson(dynamic json) => Integer(json);
+  factory FhirInteger.fromJson(dynamic json) => FhirInteger(json);
 
-  factory Integer.fromYaml(dynamic yaml) => yaml is String
-      ? Integer.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+  factory FhirInteger.fromYaml(dynamic yaml) => yaml is String
+      ? FhirInteger.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
-          ? Integer.fromJson(jsonDecode(jsonEncode(yaml)))
-          : throw YamlFormatException<Integer>(
+          ? FhirInteger.fromJson(jsonDecode(jsonEncode(yaml)))
+          : throw YamlFormatException<FhirInteger>(
               'FormatException: "$json" is not a valid Yaml string or YamlMap.');
 
   int? get value => valueNumber as int?;

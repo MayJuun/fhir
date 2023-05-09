@@ -2341,7 +2341,7 @@ mixin _$ParameterDefinition {
   String? get use => throw _privateConstructorUsedError;
   @JsonKey(name: '_use')
   Element? get useElement => throw _privateConstructorUsedError;
-  Decimal? get min => throw _privateConstructorUsedError;
+  FhirDecimal? get min => throw _privateConstructorUsedError;
   @JsonKey(name: '_min')
   Element? get minElement => throw _privateConstructorUsedError;
   String? get max => throw _privateConstructorUsedError;
@@ -2372,7 +2372,7 @@ abstract class $ParameterDefinitionCopyWith<$Res> {
       @JsonKey(name: '_name') Element? nameElement,
       String? use,
       @JsonKey(name: '_use') Element? useElement,
-      Decimal? min,
+      FhirDecimal? min,
       @JsonKey(name: '_min') Element? minElement,
       String? max,
       @JsonKey(name: '_max') Element? maxElement,
@@ -2572,7 +2572,7 @@ abstract class _$$_ParameterDefinitionCopyWith<$Res>
       @JsonKey(name: '_name') Element? nameElement,
       String? use,
       @JsonKey(name: '_use') Element? useElement,
-      Decimal? min,
+      FhirDecimal? min,
       @JsonKey(name: '_min') Element? minElement,
       String? max,
       @JsonKey(name: '_max') Element? maxElement,
@@ -2831,7 +2831,7 @@ abstract class _ParameterDefinition extends ParameterDefinition {
   @JsonKey(name: '_use')
   Element? get useElement;
   @override
-  Decimal? get min;
+  FhirDecimal? get min;
   @override
   @JsonKey(name: '_min')
   Element? get minElement;
@@ -2872,7 +2872,7 @@ mixin _$TriggerDefinition {
   Element? get eventNameElement => throw _privateConstructorUsedError;
   Timing? get eventTimingTiming => throw _privateConstructorUsedError;
   Reference? get eventTimingReference => throw _privateConstructorUsedError;
-  Date? get eventTimingDate => throw _privateConstructorUsedError;
+  FhirDate? get eventTimingDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_eventTimingDate')
   Element? get eventTimingDateElement => throw _privateConstructorUsedError;
   FhirDateTime? get eventTimingDateTime => throw _privateConstructorUsedError;
@@ -2901,7 +2901,7 @@ abstract class $TriggerDefinitionCopyWith<$Res> {
           Element? eventNameElement,
       Timing? eventTimingTiming,
       Reference? eventTimingReference,
-      Date? eventTimingDate,
+      FhirDate? eventTimingDate,
       @JsonKey(name: '_eventTimingDate')
           Element? eventTimingDateElement,
       FhirDateTime? eventTimingDateTime,
@@ -3093,7 +3093,7 @@ abstract class _$$_TriggerDefinitionCopyWith<$Res>
           Element? eventNameElement,
       Timing? eventTimingTiming,
       Reference? eventTimingReference,
-      Date? eventTimingDate,
+      FhirDate? eventTimingDate,
       @JsonKey(name: '_eventTimingDate')
           Element? eventTimingDateElement,
       FhirDateTime? eventTimingDateTime,
@@ -3339,7 +3339,7 @@ abstract class _TriggerDefinition extends TriggerDefinition {
   @override
   Reference? get eventTimingReference;
   @override
-  Date? get eventTimingDate;
+  FhirDate? get eventTimingDate;
   @override
   @JsonKey(name: '_eventTimingDate')
   Element? get eventTimingDateElement;

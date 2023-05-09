@@ -26,7 +26,7 @@ mixin _$Encounter {
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
@@ -45,7 +45,7 @@ mixin _$Encounter {
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
@@ -98,7 +98,7 @@ mixin _$Encounter {
 
   /// [status] planned | in-progress | on-hold | discharged | completed |
   ///  cancelled | discontinued | entered-in-error | unknown.
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
@@ -255,12 +255,12 @@ abstract class $EncounterCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Encounter)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -269,7 +269,7 @@ abstract class $EncounterCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       List<EncounterStatusHistory>? statusHistory,
@@ -399,7 +399,7 @@ class _$EncounterCopyWithImpl<$Res, $Val extends Encounter>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -427,7 +427,7 @@ class _$EncounterCopyWithImpl<$Res, $Val extends Encounter>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -734,12 +734,12 @@ abstract class _$$_EncounterCopyWith<$Res> implements $EncounterCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Encounter)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -748,7 +748,7 @@ abstract class _$$_EncounterCopyWith<$Res> implements $EncounterCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       List<EncounterStatusHistory>? statusHistory,
@@ -891,7 +891,7 @@ class __$$_EncounterCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -919,7 +919,7 @@ class __$$_EncounterCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -1144,7 +1144,7 @@ class _$_Encounter extends _Encounter {
 
   /// [language] The base language in which the resource is written.
   @override
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] ("_language") Extensions for language
   @override
@@ -1262,7 +1262,7 @@ class _$_Encounter extends _Encounter {
   /// [status] planned | in-progress | on-hold | discharged | completed |
   ///  cancelled | discontinued | entered-in-error | unknown.
   @override
-  final Code? status;
+  final FhirCode? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -1744,7 +1744,7 @@ abstract class _Encounter extends Encounter {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -1753,7 +1753,7 @@ abstract class _Encounter extends Encounter {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      final Code? status,
+      final FhirCode? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
       final List<EncounterStatusHistory>? statusHistory,
@@ -1800,7 +1800,7 @@ abstract class _Encounter extends Encounter {
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -1823,7 +1823,7 @@ abstract class _Encounter extends Encounter {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] ("_language") Extensions for language
@@ -1882,7 +1882,7 @@ abstract class _Encounter extends Encounter {
 
   /// [status] planned | in-progress | on-hold | discharged | completed |
   ///  cancelled | discontinued | entered-in-error | unknown.
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status
@@ -2092,7 +2092,7 @@ mixin _$EncounterStatusHistory {
 
   /// [status] planned | in-progress | on-hold | discharged | completed |
   ///  cancelled | discontinued | entered-in-error | unknown.
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
@@ -2117,7 +2117,7 @@ abstract class $EncounterStatusHistoryCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status') Element? statusElement,
       Period period});
 
@@ -2162,7 +2162,7 @@ class _$EncounterStatusHistoryCopyWithImpl<$Res,
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -2207,7 +2207,7 @@ abstract class _$$_EncounterStatusHistoryCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status') Element? statusElement,
       Period period});
 
@@ -2252,7 +2252,7 @@ class __$$_EncounterStatusHistoryCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -2354,7 +2354,7 @@ class _$_EncounterStatusHistory extends _EncounterStatusHistory {
   /// [status] planned | in-progress | on-hold | discharged | completed |
   ///  cancelled | discontinued | entered-in-error | unknown.
   @override
-  final Code? status;
+  final FhirCode? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -2417,7 +2417,7 @@ abstract class _EncounterStatusHistory extends EncounterStatusHistory {
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final Code? status,
+      final FhirCode? status,
       @JsonKey(name: '_status') final Element? statusElement,
       required final Period period}) = _$_EncounterStatusHistory;
   _EncounterStatusHistory._() : super._();
@@ -2461,7 +2461,7 @@ abstract class _EncounterStatusHistory extends EncounterStatusHistory {
 
   /// [status] planned | in-progress | on-hold | discharged | completed |
   ///  cancelled | discontinued | entered-in-error | unknown.
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status
@@ -4529,7 +4529,7 @@ mixin _$EncounterLocation {
   /// [status] The status of the participants' presence at the specified
   ///  location during the period specified. If the participant is no longer
   ///  at the location, then the period will have an end date/time.
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
@@ -4561,7 +4561,7 @@ abstract class $EncounterLocationCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Reference location,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status') Element? statusElement,
       CodeableConcept? form,
       Period? period});
@@ -4614,7 +4614,7 @@ class _$EncounterLocationCopyWithImpl<$Res, $Val extends EncounterLocation>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -4688,7 +4688,7 @@ abstract class _$$_EncounterLocationCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Reference location,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status') Element? statusElement,
       CodeableConcept? form,
       Period? period});
@@ -4743,7 +4743,7 @@ class __$$_EncounterLocationCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -4856,7 +4856,7 @@ class _$_EncounterLocation extends _EncounterLocation {
   ///  location during the period specified. If the participant is no longer
   ///  at the location, then the period will have an end date/time.
   @override
-  final Code? status;
+  final FhirCode? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -4932,7 +4932,7 @@ abstract class _EncounterLocation extends EncounterLocation {
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final Reference location,
-      final Code? status,
+      final FhirCode? status,
       @JsonKey(name: '_status') final Element? statusElement,
       final CodeableConcept? form,
       final Period? period}) = _$_EncounterLocation;
@@ -4982,7 +4982,7 @@ abstract class _EncounterLocation extends EncounterLocation {
   /// [status] The status of the participants' presence at the specified
   ///  location during the period specified. If the participant is no longer
   ///  at the location, then the period will have an end date/time.
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status
@@ -5017,7 +5017,7 @@ mixin _$EpisodeOfCare {
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
@@ -5036,7 +5036,7 @@ mixin _$EpisodeOfCare {
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
@@ -5090,7 +5090,7 @@ mixin _$EpisodeOfCare {
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [status] planned | waitlist | active | onhold | finished | cancelled.
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
@@ -5152,12 +5152,12 @@ abstract class $EpisodeOfCareCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.EpisodeOfCare)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -5166,7 +5166,7 @@ abstract class $EpisodeOfCareCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       List<EpisodeOfCareStatusHistory>? statusHistory,
@@ -5253,7 +5253,7 @@ class _$EpisodeOfCareCopyWithImpl<$Res, $Val extends EpisodeOfCare>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -5281,7 +5281,7 @@ class _$EpisodeOfCareCopyWithImpl<$Res, $Val extends EpisodeOfCare>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -5445,12 +5445,12 @@ abstract class _$$_EpisodeOfCareCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.EpisodeOfCare)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -5459,7 +5459,7 @@ abstract class _$$_EpisodeOfCareCopyWith<$Res>
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       List<EpisodeOfCareStatusHistory>? statusHistory,
@@ -5553,7 +5553,7 @@ class __$$_EpisodeOfCareCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -5581,7 +5581,7 @@ class __$$_EpisodeOfCareCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -5709,7 +5709,7 @@ class _$_EpisodeOfCare extends _EpisodeOfCare {
 
   /// [language] The base language in which the resource is written.
   @override
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] ("_language") Extensions for language
   @override
@@ -5830,7 +5830,7 @@ class _$_EpisodeOfCare extends _EpisodeOfCare {
 
   /// [status] planned | waitlist | active | onhold | finished | cancelled.
   @override
-  final Code? status;
+  final FhirCode? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -6049,7 +6049,7 @@ abstract class _EpisodeOfCare extends EpisodeOfCare {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -6058,7 +6058,7 @@ abstract class _EpisodeOfCare extends EpisodeOfCare {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      final Code? status,
+      final FhirCode? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
       final List<EpisodeOfCareStatusHistory>? statusHistory,
@@ -6085,7 +6085,7 @@ abstract class _EpisodeOfCare extends EpisodeOfCare {
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -6108,7 +6108,7 @@ abstract class _EpisodeOfCare extends EpisodeOfCare {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] ("_language") Extensions for language
@@ -6168,7 +6168,7 @@ abstract class _EpisodeOfCare extends EpisodeOfCare {
   @override
 
   /// [status] planned | waitlist | active | onhold | finished | cancelled.
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status
@@ -6267,7 +6267,7 @@ mixin _$EpisodeOfCareStatusHistory {
       throw _privateConstructorUsedError;
 
   /// [status] planned | waitlist | active | onhold | finished | cancelled.
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
@@ -6294,7 +6294,7 @@ abstract class $EpisodeOfCareStatusHistoryCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status') Element? statusElement,
       Period period});
 
@@ -6339,7 +6339,7 @@ class _$EpisodeOfCareStatusHistoryCopyWithImpl<$Res,
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -6385,7 +6385,7 @@ abstract class _$$_EpisodeOfCareStatusHistoryCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status') Element? statusElement,
       Period period});
 
@@ -6431,7 +6431,7 @@ class __$$_EpisodeOfCareStatusHistoryCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -6532,7 +6532,7 @@ class _$_EpisodeOfCareStatusHistory extends _EpisodeOfCareStatusHistory {
 
   /// [status] planned | waitlist | active | onhold | finished | cancelled.
   @override
-  final Code? status;
+  final FhirCode? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -6596,7 +6596,7 @@ abstract class _EpisodeOfCareStatusHistory extends EpisodeOfCareStatusHistory {
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final Code? status,
+      final FhirCode? status,
       @JsonKey(name: '_status') final Element? statusElement,
       required final Period period}) = _$_EpisodeOfCareStatusHistory;
   _EpisodeOfCareStatusHistory._() : super._();
@@ -6639,7 +6639,7 @@ abstract class _EpisodeOfCareStatusHistory extends EpisodeOfCareStatusHistory {
   @override
 
   /// [status] planned | waitlist | active | onhold | finished | cancelled.
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status
@@ -7139,7 +7139,7 @@ mixin _$Flag {
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
@@ -7158,7 +7158,7 @@ mixin _$Flag {
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
@@ -7212,7 +7212,7 @@ mixin _$Flag {
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [status] Supports basic workflow.
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
@@ -7256,12 +7256,12 @@ abstract class $FlagCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Flag)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -7270,7 +7270,7 @@ abstract class $FlagCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       List<CodeableConcept>? category,
@@ -7350,7 +7350,7 @@ class _$FlagCopyWithImpl<$Res, $Val extends Flag>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -7378,7 +7378,7 @@ class _$FlagCopyWithImpl<$Res, $Val extends Flag>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -7532,12 +7532,12 @@ abstract class _$$_FlagCopyWith<$Res> implements $FlagCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Flag)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -7546,7 +7546,7 @@ abstract class _$$_FlagCopyWith<$Res> implements $FlagCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       List<CodeableConcept>? category,
@@ -7632,7 +7632,7 @@ class __$$_FlagCopyWithImpl<$Res> extends _$FlagCopyWithImpl<$Res, _$_Flag>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -7660,7 +7660,7 @@ class __$$_FlagCopyWithImpl<$Res> extends _$FlagCopyWithImpl<$Res, _$_Flag>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -7762,7 +7762,7 @@ class _$_Flag extends _Flag {
 
   /// [language] The base language in which the resource is written.
   @override
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] ("_language") Extensions for language
   @override
@@ -7883,7 +7883,7 @@ class _$_Flag extends _Flag {
 
   /// [status] Supports basic workflow.
   @override
-  final Code? status;
+  final FhirCode? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -8025,7 +8025,7 @@ abstract class _Flag extends Flag {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -8034,7 +8034,7 @@ abstract class _Flag extends Flag {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      final Code? status,
+      final FhirCode? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
       final List<CodeableConcept>? category,
@@ -8056,7 +8056,7 @@ abstract class _Flag extends Flag {
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -8079,7 +8079,7 @@ abstract class _Flag extends Flag {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] ("_language") Extensions for language
@@ -8139,7 +8139,7 @@ abstract class _Flag extends Flag {
   @override
 
   /// [status] Supports basic workflow.
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status
@@ -8193,7 +8193,7 @@ mixin _$Library {
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
@@ -8212,7 +8212,7 @@ mixin _$Library {
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
@@ -8329,7 +8329,7 @@ mixin _$Library {
 
   /// [status] The status of this library. Enables tracking the life-cycle of
   ///  the content.
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
@@ -8338,7 +8338,7 @@ mixin _$Library {
   /// [experimental] A Boolean value to indicate that this library is
   ///  authored for testing purposes (or education/evaluation/marketing) and
   ///  is not intended to be used for genuine usage.
-  Boolean? get experimental => throw _privateConstructorUsedError;
+  FhirBoolean? get experimental => throw _privateConstructorUsedError;
 
   /// [experimentalElement] ("_experimental") Extensions for experimental
   @JsonKey(name: '_experimental')
@@ -8368,7 +8368,7 @@ mixin _$Library {
 
   /// [description] A free text natural language description of the library
   ///  from a consumer's perspective.
-  Markdown? get description => throw _privateConstructorUsedError;
+  FhirMarkdown? get description => throw _privateConstructorUsedError;
 
   /// [descriptionElement] ("_description") Extensions for description
   @JsonKey(name: '_description')
@@ -8387,7 +8387,7 @@ mixin _$Library {
 
   /// [purpose] Explanation of why this library is needed and why it has been
   ///  designed as it has.
-  Markdown? get purpose => throw _privateConstructorUsedError;
+  FhirMarkdown? get purpose => throw _privateConstructorUsedError;
 
   /// [purposeElement] ("_purpose") Extensions for purpose
   @JsonKey(name: '_purpose')
@@ -8396,7 +8396,7 @@ mixin _$Library {
   /// [copyright] A copyright statement relating to the library and/or its
   ///  contents. Copyright statements are generally legal restrictions on the
   ///  use and publishing of the library.
-  Markdown? get copyright => throw _privateConstructorUsedError;
+  FhirMarkdown? get copyright => throw _privateConstructorUsedError;
 
   /// [copyrightElement] ("_copyright") Extensions for copyright
   @JsonKey(name: '_copyright')
@@ -8416,7 +8416,7 @@ mixin _$Library {
   /// [approvalDate] The date on which the resource content was approved by
   ///  the publisher. Approval happens once when the content is officially
   ///  approved for usage.
-  Date? get approvalDate => throw _privateConstructorUsedError;
+  FhirDate? get approvalDate => throw _privateConstructorUsedError;
 
   /// [approvalDateElement] ("_approvalDate") Extensions for approvalDate
   @JsonKey(name: '_approvalDate')
@@ -8425,7 +8425,7 @@ mixin _$Library {
   /// [lastReviewDate] The date on which the resource content was last
   ///  reviewed. Review happens periodically after approval but does not
   ///  change the original approval date.
-  Date? get lastReviewDate => throw _privateConstructorUsedError;
+  FhirDate? get lastReviewDate => throw _privateConstructorUsedError;
 
   /// [lastReviewDateElement] ("_lastReviewDate") Extensions for
   ///  lastReviewDate
@@ -8521,12 +8521,12 @@ abstract class $LibraryCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Library)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -8551,10 +8551,10 @@ abstract class $LibraryCopyWith<$Res> {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Boolean? experimental,
+      FhirBoolean? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
       FhirDateTime? date,
@@ -8564,24 +8564,24 @@ abstract class $LibraryCopyWith<$Res> {
       @JsonKey(name: '_publisher')
           Element? publisherElement,
       List<ContactDetail>? contact,
-      Markdown? description,
+      FhirMarkdown? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
       List<UsageContext>? useContext,
       List<CodeableConcept>? jurisdiction,
-      Markdown? purpose,
+      FhirMarkdown? purpose,
       @JsonKey(name: '_purpose')
           Element? purposeElement,
-      Markdown? copyright,
+      FhirMarkdown? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
       String? copyrightLabel,
       @JsonKey(name: '_copyrightLabel')
           Element? copyrightLabelElement,
-      Date? approvalDate,
+      FhirDate? approvalDate,
       @JsonKey(name: '_approvalDate')
           Element? approvalDateElement,
-      Date? lastReviewDate,
+      FhirDate? lastReviewDate,
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
@@ -8733,7 +8733,7 @@ class _$LibraryCopyWithImpl<$Res, $Val extends Library>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -8805,7 +8805,7 @@ class _$LibraryCopyWithImpl<$Res, $Val extends Library>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -8813,7 +8813,7 @@ class _$LibraryCopyWithImpl<$Res, $Val extends Library>
       experimental: freezed == experimental
           ? _value.experimental
           : experimental // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       experimentalElement: freezed == experimentalElement
           ? _value.experimentalElement
           : experimentalElement // ignore: cast_nullable_to_non_nullable
@@ -9287,12 +9287,12 @@ abstract class _$$_LibraryCopyWith<$Res> implements $LibraryCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Library)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -9317,10 +9317,10 @@ abstract class _$$_LibraryCopyWith<$Res> implements $LibraryCopyWith<$Res> {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Boolean? experimental,
+      FhirBoolean? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
       FhirDateTime? date,
@@ -9330,24 +9330,24 @@ abstract class _$$_LibraryCopyWith<$Res> implements $LibraryCopyWith<$Res> {
       @JsonKey(name: '_publisher')
           Element? publisherElement,
       List<ContactDetail>? contact,
-      Markdown? description,
+      FhirMarkdown? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
       List<UsageContext>? useContext,
       List<CodeableConcept>? jurisdiction,
-      Markdown? purpose,
+      FhirMarkdown? purpose,
       @JsonKey(name: '_purpose')
           Element? purposeElement,
-      Markdown? copyright,
+      FhirMarkdown? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
       String? copyrightLabel,
       @JsonKey(name: '_copyrightLabel')
           Element? copyrightLabelElement,
-      Date? approvalDate,
+      FhirDate? approvalDate,
       @JsonKey(name: '_approvalDate')
           Element? approvalDateElement,
-      Date? lastReviewDate,
+      FhirDate? lastReviewDate,
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
@@ -9522,7 +9522,7 @@ class __$$_LibraryCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -9594,7 +9594,7 @@ class __$$_LibraryCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -9602,7 +9602,7 @@ class __$$_LibraryCopyWithImpl<$Res>
       experimental: freezed == experimental
           ? _value.experimental
           : experimental // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       experimentalElement: freezed == experimentalElement
           ? _value.experimentalElement
           : experimentalElement // ignore: cast_nullable_to_non_nullable
@@ -9895,7 +9895,7 @@ class _$_Library extends _Library {
 
   /// [language] The base language in which the resource is written.
   @override
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] ("_language") Extensions for language
   @override
@@ -10091,7 +10091,7 @@ class _$_Library extends _Library {
   /// [status] The status of this library. Enables tracking the life-cycle of
   ///  the content.
   @override
-  final Code? status;
+  final FhirCode? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -10102,7 +10102,7 @@ class _$_Library extends _Library {
   ///  authored for testing purposes (or education/evaluation/marketing) and
   ///  is not intended to be used for genuine usage.
   @override
-  final Boolean? experimental;
+  final FhirBoolean? experimental;
 
   /// [experimentalElement] ("_experimental") Extensions for experimental
   @override
@@ -10636,7 +10636,7 @@ abstract class _Library extends Library {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -10661,10 +10661,10 @@ abstract class _Library extends Library {
       final String? title,
       @JsonKey(name: '_title')
           final Element? titleElement,
-      final Code? status,
+      final FhirCode? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
-      final Boolean? experimental,
+      final FhirBoolean? experimental,
       @JsonKey(name: '_experimental')
           final Element? experimentalElement,
       final FhirDateTime? date,
@@ -10726,7 +10726,7 @@ abstract class _Library extends Library {
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -10749,7 +10749,7 @@ abstract class _Library extends Library {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] ("_language") Extensions for language
@@ -10882,7 +10882,7 @@ abstract class _Library extends Library {
 
   /// [status] The status of this library. Enables tracking the life-cycle of
   ///  the content.
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status
@@ -10893,7 +10893,7 @@ abstract class _Library extends Library {
   /// [experimental] A Boolean value to indicate that this library is
   ///  authored for testing purposes (or education/evaluation/marketing) and
   ///  is not intended to be used for genuine usage.
-  Boolean? get experimental;
+  FhirBoolean? get experimental;
   @override
 
   /// [experimentalElement] ("_experimental") Extensions for experimental
@@ -10930,7 +10930,7 @@ abstract class _Library extends Library {
 
   /// [description] A free text natural language description of the library
   ///  from a consumer's perspective.
-  Markdown? get description;
+  FhirMarkdown? get description;
   @override
 
   /// [descriptionElement] ("_description") Extensions for description
@@ -10953,7 +10953,7 @@ abstract class _Library extends Library {
 
   /// [purpose] Explanation of why this library is needed and why it has been
   ///  designed as it has.
-  Markdown? get purpose;
+  FhirMarkdown? get purpose;
   @override
 
   /// [purposeElement] ("_purpose") Extensions for purpose
@@ -10964,7 +10964,7 @@ abstract class _Library extends Library {
   /// [copyright] A copyright statement relating to the library and/or its
   ///  contents. Copyright statements are generally legal restrictions on the
   ///  use and publishing of the library.
-  Markdown? get copyright;
+  FhirMarkdown? get copyright;
   @override
 
   /// [copyrightElement] ("_copyright") Extensions for copyright
@@ -10988,7 +10988,7 @@ abstract class _Library extends Library {
   /// [approvalDate] The date on which the resource content was approved by
   ///  the publisher. Approval happens once when the content is officially
   ///  approved for usage.
-  Date? get approvalDate;
+  FhirDate? get approvalDate;
   @override
 
   /// [approvalDateElement] ("_approvalDate") Extensions for approvalDate
@@ -10999,7 +10999,7 @@ abstract class _Library extends Library {
   /// [lastReviewDate] The date on which the resource content was last
   ///  reviewed. Review happens periodically after approval but does not
   ///  change the original approval date.
-  Date? get lastReviewDate;
+  FhirDate? get lastReviewDate;
   @override
 
   /// [lastReviewDateElement] ("_lastReviewDate") Extensions for
@@ -11113,7 +11113,7 @@ mixin _$List_ {
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
@@ -11132,7 +11132,7 @@ mixin _$List_ {
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
@@ -11185,7 +11185,7 @@ mixin _$List_ {
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [status] Indicates the current state of this list.
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
@@ -11196,7 +11196,7 @@ mixin _$List_ {
   ///  represents a snapshot of a list of items from another source, or
   ///  whether it is a prepared list where items may be marked as added,
   ///  modified or deleted.
-  Code? get mode => throw _privateConstructorUsedError;
+  FhirCode? get mode => throw _privateConstructorUsedError;
 
   /// [modeElement] ("_mode") Extensions for mode
   @JsonKey(name: '_mode')
@@ -11258,12 +11258,12 @@ abstract class $List_CopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.List_)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -11272,10 +11272,10 @@ abstract class $List_CopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Code? mode,
+      FhirCode? mode,
       @JsonKey(name: '_mode')
           Element? modeElement,
       String? title,
@@ -11375,7 +11375,7 @@ class _$List_CopyWithImpl<$Res, $Val extends List_>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -11403,7 +11403,7 @@ class _$List_CopyWithImpl<$Res, $Val extends List_>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -11411,7 +11411,7 @@ class _$List_CopyWithImpl<$Res, $Val extends List_>
       mode: freezed == mode
           ? _value.mode
           : mode // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       modeElement: freezed == modeElement
           ? _value.modeElement
           : modeElement // ignore: cast_nullable_to_non_nullable
@@ -11645,12 +11645,12 @@ abstract class _$$_List_CopyWith<$Res> implements $List_CopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.List_)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -11659,10 +11659,10 @@ abstract class _$$_List_CopyWith<$Res> implements $List_CopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Code? mode,
+      FhirCode? mode,
       @JsonKey(name: '_mode')
           Element? modeElement,
       String? title,
@@ -11772,7 +11772,7 @@ class __$$_List_CopyWithImpl<$Res> extends _$List_CopyWithImpl<$Res, _$_List_>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -11800,7 +11800,7 @@ class __$$_List_CopyWithImpl<$Res> extends _$List_CopyWithImpl<$Res, _$_List_>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -11808,7 +11808,7 @@ class __$$_List_CopyWithImpl<$Res> extends _$List_CopyWithImpl<$Res, _$_List_>
       mode: freezed == mode
           ? _value.mode
           : mode // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       modeElement: freezed == modeElement
           ? _value.modeElement
           : modeElement // ignore: cast_nullable_to_non_nullable
@@ -11947,7 +11947,7 @@ class _$_List_ extends _List_ {
 
   /// [language] The base language in which the resource is written.
   @override
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] ("_language") Extensions for language
   @override
@@ -12066,7 +12066,7 @@ class _$_List_ extends _List_ {
 
   /// [status] Indicates the current state of this list.
   @override
-  final Code? status;
+  final FhirCode? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -12079,7 +12079,7 @@ class _$_List_ extends _List_ {
   ///  whether it is a prepared list where items may be marked as added,
   ///  modified or deleted.
   @override
-  final Code? mode;
+  final FhirCode? mode;
 
   /// [modeElement] ("_mode") Extensions for mode
   @override
@@ -12272,7 +12272,7 @@ abstract class _List_ extends List_ {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -12281,10 +12281,10 @@ abstract class _List_ extends List_ {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      final Code? status,
+      final FhirCode? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
-      final Code? mode,
+      final FhirCode? mode,
       @JsonKey(name: '_mode')
           final Element? modeElement,
       final String? title,
@@ -12314,7 +12314,7 @@ abstract class _List_ extends List_ {
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -12337,7 +12337,7 @@ abstract class _List_ extends List_ {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] ("_language") Extensions for language
@@ -12396,7 +12396,7 @@ abstract class _List_ extends List_ {
   @override
 
   /// [status] Indicates the current state of this list.
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status
@@ -12409,7 +12409,7 @@ abstract class _List_ extends List_ {
   ///  represents a snapshot of a list of items from another source, or
   ///  whether it is a prepared list where items may be marked as added,
   ///  modified or deleted.
-  Code? get mode;
+  FhirCode? get mode;
   @override
 
   /// [modeElement] ("_mode") Extensions for mode
@@ -12517,7 +12517,7 @@ mixin _$ListEntry {
   CodeableConcept? get flag => throw _privateConstructorUsedError;
 
   /// [deleted] True if this item is marked as deleted in the list.
-  Boolean? get deleted => throw _privateConstructorUsedError;
+  FhirBoolean? get deleted => throw _privateConstructorUsedError;
 
   /// [deletedElement] ("_deleted") Extensions for deleted
   @JsonKey(name: '_deleted')
@@ -12549,7 +12549,7 @@ abstract class $ListEntryCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept? flag,
-      Boolean? deleted,
+      FhirBoolean? deleted,
       @JsonKey(name: '_deleted') Element? deletedElement,
       FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
@@ -12604,7 +12604,7 @@ class _$ListEntryCopyWithImpl<$Res, $Val extends ListEntry>
       deleted: freezed == deleted
           ? _value.deleted
           : deleted // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       deletedElement: freezed == deletedElement
           ? _value.deletedElement
           : deletedElement // ignore: cast_nullable_to_non_nullable
@@ -12681,7 +12681,7 @@ abstract class _$$_ListEntryCopyWith<$Res> implements $ListEntryCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept? flag,
-      Boolean? deleted,
+      FhirBoolean? deleted,
       @JsonKey(name: '_deleted') Element? deletedElement,
       FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
@@ -12738,7 +12738,7 @@ class __$$_ListEntryCopyWithImpl<$Res>
       deleted: freezed == deleted
           ? _value.deleted
           : deleted // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       deletedElement: freezed == deletedElement
           ? _value.deletedElement
           : deletedElement // ignore: cast_nullable_to_non_nullable
@@ -12855,7 +12855,7 @@ class _$_ListEntry extends _ListEntry {
 
   /// [deleted] True if this item is marked as deleted in the list.
   @override
-  final Boolean? deleted;
+  final FhirBoolean? deleted;
 
   /// [deletedElement] ("_deleted") Extensions for deleted
   @override
@@ -12934,7 +12934,7 @@ abstract class _ListEntry extends ListEntry {
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final CodeableConcept? flag,
-      final Boolean? deleted,
+      final FhirBoolean? deleted,
       @JsonKey(name: '_deleted') final Element? deletedElement,
       final FhirDateTime? date,
       @JsonKey(name: '_date') final Element? dateElement,
@@ -12984,7 +12984,7 @@ abstract class _ListEntry extends ListEntry {
   @override
 
   /// [deleted] True if this item is marked as deleted in the list.
-  Boolean? get deleted;
+  FhirBoolean? get deleted;
   @override
 
   /// [deletedElement] ("_deleted") Extensions for deleted

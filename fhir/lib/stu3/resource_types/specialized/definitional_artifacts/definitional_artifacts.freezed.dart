@@ -22,12 +22,12 @@ ActivityDefinition _$ActivityDefinitionFromJson(Map<String, dynamic> json) {
 mixin _$ActivityDefinition {
   @JsonKey(unknownEnumValue: Stu3ResourceType.ActivityDefinition)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -52,10 +52,10 @@ mixin _$ActivityDefinition {
   ActivityDefinitionStatus? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
-  Boolean? get experimental => throw _privateConstructorUsedError;
+  FhirBoolean? get experimental => throw _privateConstructorUsedError;
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
-  Date? get date => throw _privateConstructorUsedError;
+  FhirDate? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
   String? get publisher => throw _privateConstructorUsedError;
@@ -70,10 +70,10 @@ mixin _$ActivityDefinition {
   String? get usage => throw _privateConstructorUsedError;
   @JsonKey(name: '_usage')
   Element? get usageElement => throw _privateConstructorUsedError;
-  Date? get approvalDate => throw _privateConstructorUsedError;
+  FhirDate? get approvalDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_approvalDate')
   Element? get approvalDateElement => throw _privateConstructorUsedError;
-  Date? get lastReviewDate => throw _privateConstructorUsedError;
+  FhirDate? get lastReviewDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_lastReviewDate')
   Element? get lastReviewDateElement => throw _privateConstructorUsedError;
   Period? get effectivePeriod => throw _privateConstructorUsedError;
@@ -127,12 +127,12 @@ abstract class $ActivityDefinitionCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ActivityDefinition)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -156,10 +156,10 @@ abstract class $ActivityDefinitionCopyWith<$Res> {
       ActivityDefinitionStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Boolean? experimental,
+      FhirBoolean? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
-      Date? date,
+      FhirDate? date,
       @JsonKey(name: '_date')
           Element? dateElement,
       String? publisher,
@@ -174,10 +174,10 @@ abstract class $ActivityDefinitionCopyWith<$Res> {
       String? usage,
       @JsonKey(name: '_usage')
           Element? usageElement,
-      Date? approvalDate,
+      FhirDate? approvalDate,
       @JsonKey(name: '_approvalDate')
           Element? approvalDateElement,
-      Date? lastReviewDate,
+      FhirDate? lastReviewDate,
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
@@ -347,7 +347,7 @@ class _$ActivityDefinitionCopyWithImpl<$Res, $Val extends ActivityDefinition>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -415,7 +415,7 @@ class _$ActivityDefinitionCopyWithImpl<$Res, $Val extends ActivityDefinition>
       experimental: freezed == experimental
           ? _value.experimental
           : experimental // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       experimentalElement: freezed == experimentalElement
           ? _value.experimentalElement
           : experimentalElement // ignore: cast_nullable_to_non_nullable
@@ -960,12 +960,12 @@ abstract class _$$_ActivityDefinitionCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ActivityDefinition)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -989,10 +989,10 @@ abstract class _$$_ActivityDefinitionCopyWith<$Res>
       ActivityDefinitionStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Boolean? experimental,
+      FhirBoolean? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
-      Date? date,
+      FhirDate? date,
       @JsonKey(name: '_date')
           Element? dateElement,
       String? publisher,
@@ -1007,10 +1007,10 @@ abstract class _$$_ActivityDefinitionCopyWith<$Res>
       String? usage,
       @JsonKey(name: '_usage')
           Element? usageElement,
-      Date? approvalDate,
+      FhirDate? approvalDate,
       @JsonKey(name: '_approvalDate')
           Element? approvalDateElement,
-      Date? lastReviewDate,
+      FhirDate? lastReviewDate,
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
@@ -1208,7 +1208,7 @@ class __$$_ActivityDefinitionCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -1276,7 +1276,7 @@ class __$$_ActivityDefinitionCopyWithImpl<$Res>
       experimental: freezed == experimental
           ? _value.experimental
           : experimental // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       experimentalElement: freezed == experimentalElement
           ? _value.experimentalElement
           : experimentalElement // ignore: cast_nullable_to_non_nullable
@@ -1572,7 +1572,7 @@ class _$_ActivityDefinition extends _ActivityDefinition {
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
-  final Code? language;
+  final FhirCode? language;
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
@@ -1646,7 +1646,7 @@ class _$_ActivityDefinition extends _ActivityDefinition {
   @JsonKey(name: '_status')
   final Element? statusElement;
   @override
-  final Boolean? experimental;
+  final FhirBoolean? experimental;
   @override
   @JsonKey(name: '_experimental')
   final Element? experimentalElement;
@@ -2046,7 +2046,7 @@ abstract class _ActivityDefinition extends ActivityDefinition {
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
               final Element? implicitRulesElement,
-          final Code? language,
+          final FhirCode? language,
           @JsonKey(name: '_language')
               final Element? languageElement,
           final Narrative? text,
@@ -2070,7 +2070,7 @@ abstract class _ActivityDefinition extends ActivityDefinition {
           final ActivityDefinitionStatus? status,
           @JsonKey(name: '_status')
               final Element? statusElement,
-          final Boolean? experimental,
+          final FhirBoolean? experimental,
           @JsonKey(name: '_experimental')
               final Element? experimentalElement,
           final Date? date,
@@ -2135,7 +2135,7 @@ abstract class _ActivityDefinition extends ActivityDefinition {
   @JsonKey(unknownEnumValue: Stu3ResourceType.ActivityDefinition)
   Stu3ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -2144,7 +2144,7 @@ abstract class _ActivityDefinition extends ActivityDefinition {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
-  Code? get language;
+  FhirCode? get language;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;
@@ -2185,12 +2185,12 @@ abstract class _ActivityDefinition extends ActivityDefinition {
   @JsonKey(name: '_status')
   Element? get statusElement;
   @override
-  Boolean? get experimental;
+  FhirBoolean? get experimental;
   @override
   @JsonKey(name: '_experimental')
   Element? get experimentalElement;
   @override
-  Date? get date;
+  FhirDate? get date;
   @override
   @JsonKey(name: '_date')
   Element? get dateElement;
@@ -2215,12 +2215,12 @@ abstract class _ActivityDefinition extends ActivityDefinition {
   @JsonKey(name: '_usage')
   Element? get usageElement;
   @override
-  Date? get approvalDate;
+  FhirDate? get approvalDate;
   @override
   @JsonKey(name: '_approvalDate')
   Element? get approvalDateElement;
   @override
-  Date? get lastReviewDate;
+  FhirDate? get lastReviewDate;
   @override
   @JsonKey(name: '_lastReviewDate')
   Element? get lastReviewDateElement;
@@ -2906,12 +2906,12 @@ PlanDefinition _$PlanDefinitionFromJson(Map<String, dynamic> json) {
 mixin _$PlanDefinition {
   @JsonKey(unknownEnumValue: Stu3ResourceType.PlanDefinition)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -2937,10 +2937,10 @@ mixin _$PlanDefinition {
   PlanDefinitionStatus? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
-  Boolean? get experimental => throw _privateConstructorUsedError;
+  FhirBoolean? get experimental => throw _privateConstructorUsedError;
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
-  Date? get date => throw _privateConstructorUsedError;
+  FhirDate? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
   String? get publisher => throw _privateConstructorUsedError;
@@ -2955,10 +2955,10 @@ mixin _$PlanDefinition {
   String? get usage => throw _privateConstructorUsedError;
   @JsonKey(name: '_usage')
   Element? get usageElement => throw _privateConstructorUsedError;
-  Date? get approvalDate => throw _privateConstructorUsedError;
+  FhirDate? get approvalDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_approvalDate')
   Element? get approvalDateElement => throw _privateConstructorUsedError;
-  Date? get lastReviewDate => throw _privateConstructorUsedError;
+  FhirDate? get lastReviewDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_lastReviewDate')
   Element? get lastReviewDateElement => throw _privateConstructorUsedError;
   Period? get effectivePeriod => throw _privateConstructorUsedError;
@@ -2992,12 +2992,12 @@ abstract class $PlanDefinitionCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.PlanDefinition)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -3022,10 +3022,10 @@ abstract class $PlanDefinitionCopyWith<$Res> {
       PlanDefinitionStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Boolean? experimental,
+      FhirBoolean? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
-      Date? date,
+      FhirDate? date,
       @JsonKey(name: '_date')
           Element? dateElement,
       String? publisher,
@@ -3040,10 +3040,10 @@ abstract class $PlanDefinitionCopyWith<$Res> {
       String? usage,
       @JsonKey(name: '_usage')
           Element? usageElement,
-      Date? approvalDate,
+      FhirDate? approvalDate,
       @JsonKey(name: '_approvalDate')
           Element? approvalDateElement,
-      Date? lastReviewDate,
+      FhirDate? lastReviewDate,
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
@@ -3172,7 +3172,7 @@ class _$PlanDefinitionCopyWithImpl<$Res, $Val extends PlanDefinition>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -3244,7 +3244,7 @@ class _$PlanDefinitionCopyWithImpl<$Res, $Val extends PlanDefinition>
       experimental: freezed == experimental
           ? _value.experimental
           : experimental // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       experimentalElement: freezed == experimentalElement
           ? _value.experimentalElement
           : experimentalElement // ignore: cast_nullable_to_non_nullable
@@ -3608,12 +3608,12 @@ abstract class _$$_PlanDefinitionCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.PlanDefinition)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -3638,10 +3638,10 @@ abstract class _$$_PlanDefinitionCopyWith<$Res>
       PlanDefinitionStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Boolean? experimental,
+      FhirBoolean? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
-      Date? date,
+      FhirDate? date,
       @JsonKey(name: '_date')
           Element? dateElement,
       String? publisher,
@@ -3656,10 +3656,10 @@ abstract class _$$_PlanDefinitionCopyWith<$Res>
       String? usage,
       @JsonKey(name: '_usage')
           Element? usageElement,
-      Date? approvalDate,
+      FhirDate? approvalDate,
       @JsonKey(name: '_approvalDate')
           Element? approvalDateElement,
-      Date? lastReviewDate,
+      FhirDate? lastReviewDate,
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
@@ -3806,7 +3806,7 @@ class __$$_PlanDefinitionCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -3878,7 +3878,7 @@ class __$$_PlanDefinitionCopyWithImpl<$Res>
       experimental: freezed == experimental
           ? _value.experimental
           : experimental // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       experimentalElement: freezed == experimentalElement
           ? _value.experimentalElement
           : experimentalElement // ignore: cast_nullable_to_non_nullable
@@ -4096,7 +4096,7 @@ class _$_PlanDefinition extends _PlanDefinition {
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
-  final Code? language;
+  final FhirCode? language;
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
@@ -4172,7 +4172,7 @@ class _$_PlanDefinition extends _PlanDefinition {
   @JsonKey(name: '_status')
   final Element? statusElement;
   @override
-  final Boolean? experimental;
+  final FhirBoolean? experimental;
   @override
   @JsonKey(name: '_experimental')
   final Element? experimentalElement;
@@ -4486,7 +4486,7 @@ abstract class _PlanDefinition extends PlanDefinition {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -4511,7 +4511,7 @@ abstract class _PlanDefinition extends PlanDefinition {
       final PlanDefinitionStatus? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
-      final Boolean? experimental,
+      final FhirBoolean? experimental,
       @JsonKey(name: '_experimental')
           final Element? experimentalElement,
       final Date? date,
@@ -4558,7 +4558,7 @@ abstract class _PlanDefinition extends PlanDefinition {
   @JsonKey(unknownEnumValue: Stu3ResourceType.PlanDefinition)
   Stu3ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -4567,7 +4567,7 @@ abstract class _PlanDefinition extends PlanDefinition {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
-  Code? get language;
+  FhirCode? get language;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;
@@ -4610,12 +4610,12 @@ abstract class _PlanDefinition extends PlanDefinition {
   @JsonKey(name: '_status')
   Element? get statusElement;
   @override
-  Boolean? get experimental;
+  FhirBoolean? get experimental;
   @override
   @JsonKey(name: '_experimental')
   Element? get experimentalElement;
   @override
-  Date? get date;
+  FhirDate? get date;
   @override
   @JsonKey(name: '_date')
   Element? get dateElement;
@@ -4640,12 +4640,12 @@ abstract class _PlanDefinition extends PlanDefinition {
   @JsonKey(name: '_usage')
   Element? get usageElement;
   @override
-  Date? get approvalDate;
+  FhirDate? get approvalDate;
   @override
   @JsonKey(name: '_approvalDate')
   Element? get approvalDateElement;
   @override
-  Date? get lastReviewDate;
+  FhirDate? get lastReviewDate;
   @override
   @JsonKey(name: '_lastReviewDate')
   Element? get lastReviewDateElement;
@@ -7184,7 +7184,7 @@ PlanDefinitionRelatedAction _$PlanDefinitionRelatedActionFromJson(
 
 /// @nodoc
 mixin _$PlanDefinitionRelatedAction {
-  Id? get actionId => throw _privateConstructorUsedError;
+  FhirId? get actionId => throw _privateConstructorUsedError;
   @JsonKey(name: '_actionId')
   Element? get actionIdElement => throw _privateConstructorUsedError;
   PlanDefinitionRelatedActionRelationship? get relationship =>
@@ -7485,7 +7485,7 @@ abstract class _PlanDefinitionRelatedAction
       _$_PlanDefinitionRelatedAction.fromJson;
 
   @override
-  Id? get actionId;
+  FhirId? get actionId;
   @override
   @JsonKey(name: '_actionId')
   Element? get actionIdElement;
@@ -8114,12 +8114,12 @@ Questionnaire _$QuestionnaireFromJson(Map<String, dynamic> json) {
 mixin _$Questionnaire {
   @JsonKey(unknownEnumValue: Stu3ResourceType.Questionnaire)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -8144,7 +8144,7 @@ mixin _$Questionnaire {
   QuestionnaireStatus? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
-  Boolean? get experimental => throw _privateConstructorUsedError;
+  FhirBoolean? get experimental => throw _privateConstructorUsedError;
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
   FhirDateTime? get date => throw _privateConstructorUsedError;
@@ -8159,10 +8159,10 @@ mixin _$Questionnaire {
   String? get purpose => throw _privateConstructorUsedError;
   @JsonKey(name: '_purpose')
   Element? get purposeElement => throw _privateConstructorUsedError;
-  Date? get approvalDate => throw _privateConstructorUsedError;
+  FhirDate? get approvalDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_approvalDate')
   Element? get approvalDateElement => throw _privateConstructorUsedError;
-  Date? get lastReviewDate => throw _privateConstructorUsedError;
+  FhirDate? get lastReviewDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_lastReviewDate')
   Element? get lastReviewDateElement => throw _privateConstructorUsedError;
   Period? get effectivePeriod => throw _privateConstructorUsedError;
@@ -8193,12 +8193,12 @@ abstract class $QuestionnaireCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Questionnaire)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -8222,7 +8222,7 @@ abstract class $QuestionnaireCopyWith<$Res> {
       QuestionnaireStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Boolean? experimental,
+      FhirBoolean? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
       FhirDateTime? date,
@@ -8237,10 +8237,10 @@ abstract class $QuestionnaireCopyWith<$Res> {
       String? purpose,
       @JsonKey(name: '_purpose')
           Element? purposeElement,
-      Date? approvalDate,
+      FhirDate? approvalDate,
       @JsonKey(name: '_approvalDate')
           Element? approvalDateElement,
-      Date? lastReviewDate,
+      FhirDate? lastReviewDate,
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
@@ -8360,7 +8360,7 @@ class _$QuestionnaireCopyWithImpl<$Res, $Val extends Questionnaire>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -8428,7 +8428,7 @@ class _$QuestionnaireCopyWithImpl<$Res, $Val extends Questionnaire>
       experimental: freezed == experimental
           ? _value.experimental
           : experimental // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       experimentalElement: freezed == experimentalElement
           ? _value.experimentalElement
           : experimentalElement // ignore: cast_nullable_to_non_nullable
@@ -8752,12 +8752,12 @@ abstract class _$$_QuestionnaireCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Questionnaire)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -8781,7 +8781,7 @@ abstract class _$$_QuestionnaireCopyWith<$Res>
       QuestionnaireStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Boolean? experimental,
+      FhirBoolean? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
       FhirDateTime? date,
@@ -8796,10 +8796,10 @@ abstract class _$$_QuestionnaireCopyWith<$Res>
       String? purpose,
       @JsonKey(name: '_purpose')
           Element? purposeElement,
-      Date? approvalDate,
+      FhirDate? approvalDate,
       @JsonKey(name: '_approvalDate')
           Element? approvalDateElement,
-      Date? lastReviewDate,
+      FhirDate? lastReviewDate,
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
@@ -8935,7 +8935,7 @@ class __$$_QuestionnaireCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -9003,7 +9003,7 @@ class __$$_QuestionnaireCopyWithImpl<$Res>
       experimental: freezed == experimental
           ? _value.experimental
           : experimental // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       experimentalElement: freezed == experimentalElement
           ? _value.experimentalElement
           : experimentalElement // ignore: cast_nullable_to_non_nullable
@@ -9197,7 +9197,7 @@ class _$_Questionnaire extends _Questionnaire {
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
-  final Code? language;
+  final FhirCode? language;
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
@@ -9271,7 +9271,7 @@ class _$_Questionnaire extends _Questionnaire {
   @JsonKey(name: '_status')
   final Element? statusElement;
   @override
-  final Boolean? experimental;
+  final FhirBoolean? experimental;
   @override
   @JsonKey(name: '_experimental')
   final Element? experimentalElement;
@@ -9550,7 +9550,7 @@ abstract class _Questionnaire extends Questionnaire {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -9574,7 +9574,7 @@ abstract class _Questionnaire extends Questionnaire {
       final QuestionnaireStatus? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
-      final Boolean? experimental,
+      final FhirBoolean? experimental,
       @JsonKey(name: '_experimental')
           final Element? experimentalElement,
       final FhirDateTime? date,
@@ -9616,7 +9616,7 @@ abstract class _Questionnaire extends Questionnaire {
   @JsonKey(unknownEnumValue: Stu3ResourceType.Questionnaire)
   Stu3ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -9625,7 +9625,7 @@ abstract class _Questionnaire extends Questionnaire {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
-  Code? get language;
+  FhirCode? get language;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;
@@ -9666,7 +9666,7 @@ abstract class _Questionnaire extends Questionnaire {
   @JsonKey(name: '_status')
   Element? get statusElement;
   @override
-  Boolean? get experimental;
+  FhirBoolean? get experimental;
   @override
   @JsonKey(name: '_experimental')
   Element? get experimentalElement;
@@ -9691,12 +9691,12 @@ abstract class _Questionnaire extends Questionnaire {
   @JsonKey(name: '_purpose')
   Element? get purposeElement;
   @override
-  Date? get approvalDate;
+  FhirDate? get approvalDate;
   @override
   @JsonKey(name: '_approvalDate')
   Element? get approvalDateElement;
   @override
-  Date? get lastReviewDate;
+  FhirDate? get lastReviewDate;
   @override
   @JsonKey(name: '_lastReviewDate')
   Element? get lastReviewDateElement;
@@ -9755,30 +9755,30 @@ mixin _$QuestionnaireItem {
   List<QuestionnaireEnableWhen>? get enableWhen =>
       throw _privateConstructorUsedError;
   @JsonKey(name: 'required')
-  Boolean? get required_ => throw _privateConstructorUsedError;
+  FhirBoolean? get required_ => throw _privateConstructorUsedError;
   @JsonKey(name: '_required')
   Element? get requiredElement => throw _privateConstructorUsedError;
-  Boolean? get repeats => throw _privateConstructorUsedError;
+  FhirBoolean? get repeats => throw _privateConstructorUsedError;
   @JsonKey(name: '_repeats')
   Element? get repeatsElement => throw _privateConstructorUsedError;
-  Boolean? get readOnly => throw _privateConstructorUsedError;
+  FhirBoolean? get readOnly => throw _privateConstructorUsedError;
   @JsonKey(name: '_readOnly')
   Element? get readOnlyElement => throw _privateConstructorUsedError;
-  Decimal? get maxLength => throw _privateConstructorUsedError;
+  FhirDecimal? get maxLength => throw _privateConstructorUsedError;
   @JsonKey(name: '_maxLength')
   Element? get maxLengthElement => throw _privateConstructorUsedError;
   Reference? get options => throw _privateConstructorUsedError;
   List<QuestionnaireOption>? get option => throw _privateConstructorUsedError;
-  Boolean? get initialBoolean => throw _privateConstructorUsedError;
+  FhirBoolean? get initialBoolean => throw _privateConstructorUsedError;
   @JsonKey(name: '_initialBoolean')
   Element? get initialBooleanElement => throw _privateConstructorUsedError;
-  Decimal? get initialDecimal => throw _privateConstructorUsedError;
+  FhirDecimal? get initialDecimal => throw _privateConstructorUsedError;
   @JsonKey(name: '_initialDecimal')
   Element? get initialDecimalElement => throw _privateConstructorUsedError;
-  Decimal? get initialInteger => throw _privateConstructorUsedError;
+  FhirDecimal? get initialInteger => throw _privateConstructorUsedError;
   @JsonKey(name: '_initialInteger')
   Element? get initialIntegerElement => throw _privateConstructorUsedError;
-  Date? get initialDate => throw _privateConstructorUsedError;
+  FhirDate? get initialDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_initialDate')
   Element? get initialDateElement => throw _privateConstructorUsedError;
   FhirDateTime? get initialDateTime => throw _privateConstructorUsedError;
@@ -9825,23 +9825,23 @@ abstract class $QuestionnaireItemCopyWith<$Res> {
       QuestionnaireItemType? type,
       @JsonKey(name: '_type') Element? typeElement,
       List<QuestionnaireEnableWhen>? enableWhen,
-      @JsonKey(name: 'required') Boolean? required_,
+      @JsonKey(name: 'required') FhirBoolean? required_,
       @JsonKey(name: '_required') Element? requiredElement,
-      Boolean? repeats,
+      FhirBoolean? repeats,
       @JsonKey(name: '_repeats') Element? repeatsElement,
-      Boolean? readOnly,
+      FhirBoolean? readOnly,
       @JsonKey(name: '_readOnly') Element? readOnlyElement,
-      Decimal? maxLength,
+      FhirDecimal? maxLength,
       @JsonKey(name: '_maxLength') Element? maxLengthElement,
       Reference? options,
       List<QuestionnaireOption>? option,
-      Boolean? initialBoolean,
+      FhirBoolean? initialBoolean,
       @JsonKey(name: '_initialBoolean') Element? initialBooleanElement,
-      Decimal? initialDecimal,
+      FhirDecimal? initialDecimal,
       @JsonKey(name: '_initialDecimal') Element? initialDecimalElement,
-      Decimal? initialInteger,
+      FhirDecimal? initialInteger,
       @JsonKey(name: '_initialInteger') Element? initialIntegerElement,
-      Date? initialDate,
+      FhirDate? initialDate,
       @JsonKey(name: '_initialDate') Element? initialDateElement,
       FhirDateTime? initialDateTime,
       @JsonKey(name: '_initialDateTime') Element? initialDateTimeElement,
@@ -9995,7 +9995,7 @@ class _$QuestionnaireItemCopyWithImpl<$Res, $Val extends QuestionnaireItem>
       required_: freezed == required_
           ? _value.required_
           : required_ // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       requiredElement: freezed == requiredElement
           ? _value.requiredElement
           : requiredElement // ignore: cast_nullable_to_non_nullable
@@ -10003,7 +10003,7 @@ class _$QuestionnaireItemCopyWithImpl<$Res, $Val extends QuestionnaireItem>
       repeats: freezed == repeats
           ? _value.repeats
           : repeats // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       repeatsElement: freezed == repeatsElement
           ? _value.repeatsElement
           : repeatsElement // ignore: cast_nullable_to_non_nullable
@@ -10011,7 +10011,7 @@ class _$QuestionnaireItemCopyWithImpl<$Res, $Val extends QuestionnaireItem>
       readOnly: freezed == readOnly
           ? _value.readOnly
           : readOnly // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       readOnlyElement: freezed == readOnlyElement
           ? _value.readOnlyElement
           : readOnlyElement // ignore: cast_nullable_to_non_nullable
@@ -10035,7 +10035,7 @@ class _$QuestionnaireItemCopyWithImpl<$Res, $Val extends QuestionnaireItem>
       initialBoolean: freezed == initialBoolean
           ? _value.initialBoolean
           : initialBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       initialBooleanElement: freezed == initialBooleanElement
           ? _value.initialBooleanElement
           : initialBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -10406,23 +10406,23 @@ abstract class _$$_QuestionnaireItemCopyWith<$Res>
       QuestionnaireItemType? type,
       @JsonKey(name: '_type') Element? typeElement,
       List<QuestionnaireEnableWhen>? enableWhen,
-      @JsonKey(name: 'required') Boolean? required_,
+      @JsonKey(name: 'required') FhirBoolean? required_,
       @JsonKey(name: '_required') Element? requiredElement,
-      Boolean? repeats,
+      FhirBoolean? repeats,
       @JsonKey(name: '_repeats') Element? repeatsElement,
-      Boolean? readOnly,
+      FhirBoolean? readOnly,
       @JsonKey(name: '_readOnly') Element? readOnlyElement,
-      Decimal? maxLength,
+      FhirDecimal? maxLength,
       @JsonKey(name: '_maxLength') Element? maxLengthElement,
       Reference? options,
       List<QuestionnaireOption>? option,
-      Boolean? initialBoolean,
+      FhirBoolean? initialBoolean,
       @JsonKey(name: '_initialBoolean') Element? initialBooleanElement,
-      Decimal? initialDecimal,
+      FhirDecimal? initialDecimal,
       @JsonKey(name: '_initialDecimal') Element? initialDecimalElement,
-      Decimal? initialInteger,
+      FhirDecimal? initialInteger,
       @JsonKey(name: '_initialInteger') Element? initialIntegerElement,
-      Date? initialDate,
+      FhirDate? initialDate,
       @JsonKey(name: '_initialDate') Element? initialDateElement,
       FhirDateTime? initialDateTime,
       @JsonKey(name: '_initialDateTime') Element? initialDateTimeElement,
@@ -10596,7 +10596,7 @@ class __$$_QuestionnaireItemCopyWithImpl<$Res>
       required_: freezed == required_
           ? _value.required_
           : required_ // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       requiredElement: freezed == requiredElement
           ? _value.requiredElement
           : requiredElement // ignore: cast_nullable_to_non_nullable
@@ -10604,7 +10604,7 @@ class __$$_QuestionnaireItemCopyWithImpl<$Res>
       repeats: freezed == repeats
           ? _value.repeats
           : repeats // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       repeatsElement: freezed == repeatsElement
           ? _value.repeatsElement
           : repeatsElement // ignore: cast_nullable_to_non_nullable
@@ -10612,7 +10612,7 @@ class __$$_QuestionnaireItemCopyWithImpl<$Res>
       readOnly: freezed == readOnly
           ? _value.readOnly
           : readOnly // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       readOnlyElement: freezed == readOnlyElement
           ? _value.readOnlyElement
           : readOnlyElement // ignore: cast_nullable_to_non_nullable
@@ -10636,7 +10636,7 @@ class __$$_QuestionnaireItemCopyWithImpl<$Res>
       initialBoolean: freezed == initialBoolean
           ? _value.initialBoolean
           : initialBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       initialBooleanElement: freezed == initialBooleanElement
           ? _value.initialBooleanElement
           : initialBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -10837,17 +10837,17 @@ class _$_QuestionnaireItem extends _QuestionnaireItem {
 
   @override
   @JsonKey(name: 'required')
-  final Boolean? required_;
+  final FhirBoolean? required_;
   @override
   @JsonKey(name: '_required')
   final Element? requiredElement;
   @override
-  final Boolean? repeats;
+  final FhirBoolean? repeats;
   @override
   @JsonKey(name: '_repeats')
   final Element? repeatsElement;
   @override
-  final Boolean? readOnly;
+  final FhirBoolean? readOnly;
   @override
   @JsonKey(name: '_readOnly')
   final Element? readOnlyElement;
@@ -10869,7 +10869,7 @@ class _$_QuestionnaireItem extends _QuestionnaireItem {
   }
 
   @override
-  final Boolean? initialBoolean;
+  final FhirBoolean? initialBoolean;
   @override
   @JsonKey(name: '_initialBoolean')
   final Element? initialBooleanElement;
@@ -11097,17 +11097,17 @@ abstract class _QuestionnaireItem extends QuestionnaireItem {
       final QuestionnaireItemType? type,
       @JsonKey(name: '_type') final Element? typeElement,
       final List<QuestionnaireEnableWhen>? enableWhen,
-      @JsonKey(name: 'required') final Boolean? required_,
+      @JsonKey(name: 'required') final FhirBoolean? required_,
       @JsonKey(name: '_required') final Element? requiredElement,
-      final Boolean? repeats,
+      final FhirBoolean? repeats,
       @JsonKey(name: '_repeats') final Element? repeatsElement,
-      final Boolean? readOnly,
+      final FhirBoolean? readOnly,
       @JsonKey(name: '_readOnly') final Element? readOnlyElement,
       final Decimal? maxLength,
       @JsonKey(name: '_maxLength') final Element? maxLengthElement,
       final Reference? options,
       final List<QuestionnaireOption>? option,
-      final Boolean? initialBoolean,
+      final FhirBoolean? initialBoolean,
       @JsonKey(name: '_initialBoolean') final Element? initialBooleanElement,
       final Decimal? initialDecimal,
       @JsonKey(name: '_initialDecimal') final Element? initialDecimalElement,
@@ -11167,22 +11167,22 @@ abstract class _QuestionnaireItem extends QuestionnaireItem {
   List<QuestionnaireEnableWhen>? get enableWhen;
   @override
   @JsonKey(name: 'required')
-  Boolean? get required_;
+  FhirBoolean? get required_;
   @override
   @JsonKey(name: '_required')
   Element? get requiredElement;
   @override
-  Boolean? get repeats;
+  FhirBoolean? get repeats;
   @override
   @JsonKey(name: '_repeats')
   Element? get repeatsElement;
   @override
-  Boolean? get readOnly;
+  FhirBoolean? get readOnly;
   @override
   @JsonKey(name: '_readOnly')
   Element? get readOnlyElement;
   @override
-  Decimal? get maxLength;
+  FhirDecimal? get maxLength;
   @override
   @JsonKey(name: '_maxLength')
   Element? get maxLengthElement;
@@ -11191,22 +11191,22 @@ abstract class _QuestionnaireItem extends QuestionnaireItem {
   @override
   List<QuestionnaireOption>? get option;
   @override
-  Boolean? get initialBoolean;
+  FhirBoolean? get initialBoolean;
   @override
   @JsonKey(name: '_initialBoolean')
   Element? get initialBooleanElement;
   @override
-  Decimal? get initialDecimal;
+  FhirDecimal? get initialDecimal;
   @override
   @JsonKey(name: '_initialDecimal')
   Element? get initialDecimalElement;
   @override
-  Decimal? get initialInteger;
+  FhirDecimal? get initialInteger;
   @override
   @JsonKey(name: '_initialInteger')
   Element? get initialIntegerElement;
   @override
-  Date? get initialDate;
+  FhirDate? get initialDate;
   @override
   @JsonKey(name: '_initialDate')
   Element? get initialDateElement;
@@ -11256,19 +11256,19 @@ mixin _$QuestionnaireEnableWhen {
   String? get question => throw _privateConstructorUsedError;
   @JsonKey(name: '_question')
   Element? get questionElement => throw _privateConstructorUsedError;
-  Boolean? get hasAnswer => throw _privateConstructorUsedError;
+  FhirBoolean? get hasAnswer => throw _privateConstructorUsedError;
   @JsonKey(name: '_hasAnswer')
   Element? get hasAnswerElement => throw _privateConstructorUsedError;
-  Boolean? get answerBoolean => throw _privateConstructorUsedError;
+  FhirBoolean? get answerBoolean => throw _privateConstructorUsedError;
   @JsonKey(name: '_answerBoolean')
   Element? get answerBooleanElement => throw _privateConstructorUsedError;
-  Decimal? get answerDecimal => throw _privateConstructorUsedError;
+  FhirDecimal? get answerDecimal => throw _privateConstructorUsedError;
   @JsonKey(name: '_answerDecimal')
   Element? get answerDecimalElement => throw _privateConstructorUsedError;
-  Decimal? get answerInteger => throw _privateConstructorUsedError;
+  FhirDecimal? get answerInteger => throw _privateConstructorUsedError;
   @JsonKey(name: '_answerInteger')
   Element? get answerIntegerElement => throw _privateConstructorUsedError;
-  Date? get answerDate => throw _privateConstructorUsedError;
+  FhirDate? get answerDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_answerDate')
   Element? get answerDateElement => throw _privateConstructorUsedError;
   FhirDateTime? get answerDateTime => throw _privateConstructorUsedError;
@@ -11303,15 +11303,15 @@ abstract class $QuestionnaireEnableWhenCopyWith<$Res> {
   $Res call(
       {String? question,
       @JsonKey(name: '_question') Element? questionElement,
-      Boolean? hasAnswer,
+      FhirBoolean? hasAnswer,
       @JsonKey(name: '_hasAnswer') Element? hasAnswerElement,
-      Boolean? answerBoolean,
+      FhirBoolean? answerBoolean,
       @JsonKey(name: '_answerBoolean') Element? answerBooleanElement,
-      Decimal? answerDecimal,
+      FhirDecimal? answerDecimal,
       @JsonKey(name: '_answerDecimal') Element? answerDecimalElement,
-      Decimal? answerInteger,
+      FhirDecimal? answerInteger,
       @JsonKey(name: '_answerInteger') Element? answerIntegerElement,
-      Date? answerDate,
+      FhirDate? answerDate,
       @JsonKey(name: '_answerDate') Element? answerDateElement,
       FhirDateTime? answerDateTime,
       @JsonKey(name: '_answerDateTime') Element? answerDateTimeElement,
@@ -11393,7 +11393,7 @@ class _$QuestionnaireEnableWhenCopyWithImpl<$Res,
       hasAnswer: freezed == hasAnswer
           ? _value.hasAnswer
           : hasAnswer // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       hasAnswerElement: freezed == hasAnswerElement
           ? _value.hasAnswerElement
           : hasAnswerElement // ignore: cast_nullable_to_non_nullable
@@ -11401,7 +11401,7 @@ class _$QuestionnaireEnableWhenCopyWithImpl<$Res,
       answerBoolean: freezed == answerBoolean
           ? _value.answerBoolean
           : answerBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       answerBooleanElement: freezed == answerBooleanElement
           ? _value.answerBooleanElement
           : answerBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -11661,15 +11661,15 @@ abstract class _$$_QuestionnaireEnableWhenCopyWith<$Res>
   $Res call(
       {String? question,
       @JsonKey(name: '_question') Element? questionElement,
-      Boolean? hasAnswer,
+      FhirBoolean? hasAnswer,
       @JsonKey(name: '_hasAnswer') Element? hasAnswerElement,
-      Boolean? answerBoolean,
+      FhirBoolean? answerBoolean,
       @JsonKey(name: '_answerBoolean') Element? answerBooleanElement,
-      Decimal? answerDecimal,
+      FhirDecimal? answerDecimal,
       @JsonKey(name: '_answerDecimal') Element? answerDecimalElement,
-      Decimal? answerInteger,
+      FhirDecimal? answerInteger,
       @JsonKey(name: '_answerInteger') Element? answerIntegerElement,
-      Date? answerDate,
+      FhirDate? answerDate,
       @JsonKey(name: '_answerDate') Element? answerDateElement,
       FhirDateTime? answerDateTime,
       @JsonKey(name: '_answerDateTime') Element? answerDateTimeElement,
@@ -11763,7 +11763,7 @@ class __$$_QuestionnaireEnableWhenCopyWithImpl<$Res>
       hasAnswer: freezed == hasAnswer
           ? _value.hasAnswer
           : hasAnswer // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       hasAnswerElement: freezed == hasAnswerElement
           ? _value.hasAnswerElement
           : hasAnswerElement // ignore: cast_nullable_to_non_nullable
@@ -11771,7 +11771,7 @@ class __$$_QuestionnaireEnableWhenCopyWithImpl<$Res>
       answerBoolean: freezed == answerBoolean
           ? _value.answerBoolean
           : answerBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       answerBooleanElement: freezed == answerBooleanElement
           ? _value.answerBooleanElement
           : answerBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -11891,12 +11891,12 @@ class _$_QuestionnaireEnableWhen extends _QuestionnaireEnableWhen {
   @JsonKey(name: '_question')
   final Element? questionElement;
   @override
-  final Boolean? hasAnswer;
+  final FhirBoolean? hasAnswer;
   @override
   @JsonKey(name: '_hasAnswer')
   final Element? hasAnswerElement;
   @override
-  final Boolean? answerBoolean;
+  final FhirBoolean? answerBoolean;
   @override
   @JsonKey(name: '_answerBoolean')
   final Element? answerBooleanElement;
@@ -12054,9 +12054,9 @@ abstract class _QuestionnaireEnableWhen extends QuestionnaireEnableWhen {
   factory _QuestionnaireEnableWhen(
       {final String? question,
       @JsonKey(name: '_question') final Element? questionElement,
-      final Boolean? hasAnswer,
+      final FhirBoolean? hasAnswer,
       @JsonKey(name: '_hasAnswer') final Element? hasAnswerElement,
-      final Boolean? answerBoolean,
+      final FhirBoolean? answerBoolean,
       @JsonKey(name: '_answerBoolean') final Element? answerBooleanElement,
       final Decimal? answerDecimal,
       @JsonKey(name: '_answerDecimal') final Element? answerDecimalElement,
@@ -12087,27 +12087,27 @@ abstract class _QuestionnaireEnableWhen extends QuestionnaireEnableWhen {
   @JsonKey(name: '_question')
   Element? get questionElement;
   @override
-  Boolean? get hasAnswer;
+  FhirBoolean? get hasAnswer;
   @override
   @JsonKey(name: '_hasAnswer')
   Element? get hasAnswerElement;
   @override
-  Boolean? get answerBoolean;
+  FhirBoolean? get answerBoolean;
   @override
   @JsonKey(name: '_answerBoolean')
   Element? get answerBooleanElement;
   @override
-  Decimal? get answerDecimal;
+  FhirDecimal? get answerDecimal;
   @override
   @JsonKey(name: '_answerDecimal')
   Element? get answerDecimalElement;
   @override
-  Decimal? get answerInteger;
+  FhirDecimal? get answerInteger;
   @override
   @JsonKey(name: '_answerInteger')
   Element? get answerIntegerElement;
   @override
-  Date? get answerDate;
+  FhirDate? get answerDate;
   @override
   @JsonKey(name: '_answerDate')
   Element? get answerDateElement;
@@ -12151,10 +12151,10 @@ QuestionnaireOption _$QuestionnaireOptionFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$QuestionnaireOption {
-  Decimal? get valueInteger => throw _privateConstructorUsedError;
+  FhirDecimal? get valueInteger => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueInteger')
   Element? get valueIntegerElement => throw _privateConstructorUsedError;
-  Date? get valueDate => throw _privateConstructorUsedError;
+  FhirDate? get valueDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueDate')
   Element? get valueDateElement => throw _privateConstructorUsedError;
   Time? get valueTime => throw _privateConstructorUsedError;
@@ -12180,7 +12180,7 @@ abstract class $QuestionnaireOptionCopyWith<$Res> {
   $Res call(
       {Decimal? valueInteger,
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
-      Date? valueDate,
+      FhirDate? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
       Time? valueTime,
       @JsonKey(name: '_valueTime') Element? valueTimeElement,
@@ -12330,7 +12330,7 @@ abstract class _$$_QuestionnaireOptionCopyWith<$Res>
   $Res call(
       {Decimal? valueInteger,
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
-      Date? valueDate,
+      FhirDate? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
       Time? valueTime,
       @JsonKey(name: '_valueTime') Element? valueTimeElement,
@@ -12529,12 +12529,12 @@ abstract class _QuestionnaireOption extends QuestionnaireOption {
       _$_QuestionnaireOption.fromJson;
 
   @override
-  Decimal? get valueInteger;
+  FhirDecimal? get valueInteger;
   @override
   @JsonKey(name: '_valueInteger')
   Element? get valueIntegerElement;
   @override
-  Date? get valueDate;
+  FhirDate? get valueDate;
   @override
   @JsonKey(name: '_valueDate')
   Element? get valueDateElement;
@@ -12564,12 +12564,12 @@ ServiceDefinition _$ServiceDefinitionFromJson(Map<String, dynamic> json) {
 mixin _$ServiceDefinition {
   @JsonKey(unknownEnumValue: Stu3ResourceType.ServiceDefinition)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -12594,10 +12594,10 @@ mixin _$ServiceDefinition {
   ServiceDefinitionStatus? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
-  Boolean? get experimental => throw _privateConstructorUsedError;
+  FhirBoolean? get experimental => throw _privateConstructorUsedError;
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
-  Date? get date => throw _privateConstructorUsedError;
+  FhirDate? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
   String? get publisher => throw _privateConstructorUsedError;
@@ -12612,10 +12612,10 @@ mixin _$ServiceDefinition {
   String? get usage => throw _privateConstructorUsedError;
   @JsonKey(name: '_usage')
   Element? get usageElement => throw _privateConstructorUsedError;
-  Date? get approvalDate => throw _privateConstructorUsedError;
+  FhirDate? get approvalDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_approvalDate')
   Element? get approvalDateElement => throw _privateConstructorUsedError;
-  Date? get lastReviewDate => throw _privateConstructorUsedError;
+  FhirDate? get lastReviewDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_lastReviewDate')
   Element? get lastReviewDateElement => throw _privateConstructorUsedError;
   Period? get effectivePeriod => throw _privateConstructorUsedError;
@@ -12649,12 +12649,12 @@ abstract class $ServiceDefinitionCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ServiceDefinition)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -12678,10 +12678,10 @@ abstract class $ServiceDefinitionCopyWith<$Res> {
       ServiceDefinitionStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Boolean? experimental,
+      FhirBoolean? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
-      Date? date,
+      FhirDate? date,
       @JsonKey(name: '_date')
           Element? dateElement,
       String? publisher,
@@ -12696,10 +12696,10 @@ abstract class $ServiceDefinitionCopyWith<$Res> {
       String? usage,
       @JsonKey(name: '_usage')
           Element? usageElement,
-      Date? approvalDate,
+      FhirDate? approvalDate,
       @JsonKey(name: '_approvalDate')
           Element? approvalDateElement,
-      Date? lastReviewDate,
+      FhirDate? lastReviewDate,
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
@@ -12826,7 +12826,7 @@ class _$ServiceDefinitionCopyWithImpl<$Res, $Val extends ServiceDefinition>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -12894,7 +12894,7 @@ class _$ServiceDefinitionCopyWithImpl<$Res, $Val extends ServiceDefinition>
       experimental: freezed == experimental
           ? _value.experimental
           : experimental // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       experimentalElement: freezed == experimentalElement
           ? _value.experimentalElement
           : experimentalElement // ignore: cast_nullable_to_non_nullable
@@ -13258,12 +13258,12 @@ abstract class _$$_ServiceDefinitionCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ServiceDefinition)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -13287,10 +13287,10 @@ abstract class _$$_ServiceDefinitionCopyWith<$Res>
       ServiceDefinitionStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Boolean? experimental,
+      FhirBoolean? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
-      Date? date,
+      FhirDate? date,
       @JsonKey(name: '_date')
           Element? dateElement,
       String? publisher,
@@ -13305,10 +13305,10 @@ abstract class _$$_ServiceDefinitionCopyWith<$Res>
       String? usage,
       @JsonKey(name: '_usage')
           Element? usageElement,
-      Date? approvalDate,
+      FhirDate? approvalDate,
       @JsonKey(name: '_approvalDate')
           Element? approvalDateElement,
-      Date? lastReviewDate,
+      FhirDate? lastReviewDate,
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
@@ -13453,7 +13453,7 @@ class __$$_ServiceDefinitionCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -13521,7 +13521,7 @@ class __$$_ServiceDefinitionCopyWithImpl<$Res>
       experimental: freezed == experimental
           ? _value.experimental
           : experimental // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       experimentalElement: freezed == experimentalElement
           ? _value.experimentalElement
           : experimentalElement // ignore: cast_nullable_to_non_nullable
@@ -13736,7 +13736,7 @@ class _$_ServiceDefinition extends _ServiceDefinition {
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
-  final Code? language;
+  final FhirCode? language;
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
@@ -13810,7 +13810,7 @@ class _$_ServiceDefinition extends _ServiceDefinition {
   @JsonKey(name: '_status')
   final Element? statusElement;
   @override
-  final Boolean? experimental;
+  final FhirBoolean? experimental;
   @override
   @JsonKey(name: '_experimental')
   final Element? experimentalElement;
@@ -14117,7 +14117,7 @@ abstract class _ServiceDefinition extends ServiceDefinition {
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -14141,7 +14141,7 @@ abstract class _ServiceDefinition extends ServiceDefinition {
       final ServiceDefinitionStatus? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
-      final Boolean? experimental,
+      final FhirBoolean? experimental,
       @JsonKey(name: '_experimental')
           final Element? experimentalElement,
       final Date? date,
@@ -14187,7 +14187,7 @@ abstract class _ServiceDefinition extends ServiceDefinition {
   @JsonKey(unknownEnumValue: Stu3ResourceType.ServiceDefinition)
   Stu3ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -14196,7 +14196,7 @@ abstract class _ServiceDefinition extends ServiceDefinition {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
-  Code? get language;
+  FhirCode? get language;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;
@@ -14237,12 +14237,12 @@ abstract class _ServiceDefinition extends ServiceDefinition {
   @JsonKey(name: '_status')
   Element? get statusElement;
   @override
-  Boolean? get experimental;
+  FhirBoolean? get experimental;
   @override
   @JsonKey(name: '_experimental')
   Element? get experimentalElement;
   @override
-  Date? get date;
+  FhirDate? get date;
   @override
   @JsonKey(name: '_date')
   Element? get dateElement;
@@ -14267,12 +14267,12 @@ abstract class _ServiceDefinition extends ServiceDefinition {
   @JsonKey(name: '_usage')
   Element? get usageElement;
   @override
-  Date? get approvalDate;
+  FhirDate? get approvalDate;
   @override
   @JsonKey(name: '_approvalDate')
   Element? get approvalDateElement;
   @override
-  Date? get lastReviewDate;
+  FhirDate? get lastReviewDate;
   @override
   @JsonKey(name: '_lastReviewDate')
   Element? get lastReviewDateElement;

@@ -120,7 +120,7 @@ class PaymentNotice with Resource, _$PaymentNotice {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -137,7 +137,7 @@ class PaymentNotice with Resource, _$PaymentNotice {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -158,7 +158,7 @@ class PaymentNotice with Resource, _$PaymentNotice {
     List<Identifier>? identifier,
 
     /// [status] The status of the resource instance.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -182,7 +182,7 @@ class PaymentNotice with Resource, _$PaymentNotice {
     required Reference payment,
 
     /// [paymentDate] The date when the above payment action occurred.
-    Date? paymentDate,
+    FhirDate? paymentDate,
 
     /// [paymentDateElement] ("_paymentDate") Extensions for paymentDate
     @JsonKey(name: '_paymentDate') Element? paymentDateElement,
@@ -405,7 +405,7 @@ class PaymentReconciliation with Resource, _$PaymentReconciliation {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -422,7 +422,7 @@ class PaymentReconciliation with Resource, _$PaymentReconciliation {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -446,7 +446,7 @@ class PaymentReconciliation with Resource, _$PaymentReconciliation {
     required CodeableConcept type,
 
     /// [status] The status of the resource instance.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -479,7 +479,7 @@ class PaymentReconciliation with Resource, _$PaymentReconciliation {
     Reference? requestor,
 
     /// [outcome] The outcome of a request for a reconciliation.
-    Code? outcome,
+    FhirCode? outcome,
 
     /// [outcomeElement] ("_outcome") Extensions for outcome
     @JsonKey(name: '_outcome') Element? outcomeElement,
@@ -491,7 +491,7 @@ class PaymentReconciliation with Resource, _$PaymentReconciliation {
     @JsonKey(name: '_disposition') Element? dispositionElement,
 
     /// [date] The date of payment as indicated on the financial instrument.
-    Date? date,
+    FhirDate? date,
 
     /// [dateElement] ("_date") Extensions for date
     @JsonKey(name: '_date') Element? dateElement,
@@ -515,7 +515,7 @@ class PaymentReconciliation with Resource, _$PaymentReconciliation {
     @JsonKey(name: '_accountNumber') Element? accountNumberElement,
 
     /// [expirationDate] The year and month (YYYY-MM) when the instrument, typically card, expires.
-    Date? expirationDate,
+    FhirDate? expirationDate,
 
     /// [expirationDateElement] ("_expirationDate") Extensions for expirationDate
     @JsonKey(name: '_expirationDate') Element? expirationDateElement,
@@ -747,7 +747,7 @@ class PaymentReconciliationAllocation with _$PaymentReconciliationAllocation {
     Reference? response,
 
     /// [date] The date from the response resource containing a commitment to pay.
-    Date? date,
+    FhirDate? date,
 
     /// [dateElement] ("_date") Extensions for date
     @JsonKey(name: '_date') Element? dateElement,
@@ -866,7 +866,7 @@ class PaymentReconciliationProcessNote with _$PaymentReconciliationProcessNote {
     List<FhirExtension>? modifierExtension,
 
     /// [type] The business purpose of the note text.
-    Code? type,
+    FhirCode? type,
 
     /// [typeElement] ("_type") Extensions for type
     @JsonKey(name: '_type') Element? typeElement,

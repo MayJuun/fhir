@@ -11,31 +11,31 @@ import 'primitive_type_exceptions.dart';
 
 //
 
-class Boolean {
-  const Boolean._(this._valueString, this._valueBoolean, this._isValid,
+class FhirBoolean {
+  const FhirBoolean._(this._valueString, this._valueBoolean, this._isValid,
       this._isTrueBoolean);
 
-  factory Boolean(dynamic inValue) {
+  factory FhirBoolean(dynamic inValue) {
     if (inValue is bool) {
-      return Boolean._(inValue.toString(), inValue, true, true);
+      return FhirBoolean._(inValue.toString(), inValue, true, true);
     } else if (inValue is String) {
       return <String>['true', 'false'].contains(inValue.toLowerCase())
-          ? Boolean._(inValue, inValue.toLowerCase() == 'true', true, false)
-          : Boolean._(inValue, null, false, false);
+          ? FhirBoolean._(inValue, inValue.toLowerCase() == 'true', true, false)
+          : FhirBoolean._(inValue, null, false, false);
     } else {
-      throw CannotBeConstructed<Boolean>(
+      throw CannotBeConstructed<FhirBoolean>(
           'Boolean cannot be constructed from $inValue of type '
           "'${inValue.runtimeType}'.");
     }
   }
 
-  factory Boolean.fromJson(dynamic json) => Boolean(json);
+  factory FhirBoolean.fromJson(dynamic json) => FhirBoolean(json);
 
-  factory Boolean.fromYaml(dynamic yaml) => yaml is String
-      ? Boolean.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+  factory FhirBoolean.fromYaml(dynamic yaml) => yaml is String
+      ? FhirBoolean.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
-          ? Boolean.fromJson(jsonDecode(jsonEncode(yaml)))
-          : throw YamlFormatException<Boolean>(
+          ? FhirBoolean.fromJson(jsonDecode(jsonEncode(yaml)))
+          : throw YamlFormatException<FhirBoolean>(
               'FormatException: "$json" is not a valid Yaml string or YamlMap.');
 
   final String _valueString;
@@ -56,7 +56,7 @@ class Boolean {
   @override
   bool operator ==(Object o) => identical(this, o)
       ? true
-      : o is Boolean
+      : o is FhirBoolean
           ? o.value == _valueBoolean
           : o is bool
               ? o == _valueBoolean
