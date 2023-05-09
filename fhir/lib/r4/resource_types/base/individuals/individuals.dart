@@ -127,7 +127,7 @@ class Group with Resource, _$Group {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -226,7 +226,7 @@ class Group with Resource, _$Group {
 
     /// [quantity] A count of the number of resource instances that are part of
     ///  the group.
-    UnsignedInt? quantity,
+    FhirUnsignedInt? quantity,
 
     /// [quantityElement] Extensions for quantity
     @JsonKey(name: '_quantity')
@@ -688,7 +688,7 @@ class Patient with Resource, _$Patient {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -1342,7 +1342,7 @@ class Person with Resource, _$Person {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -1692,7 +1692,7 @@ class Practitioner with Resource, _$Practitioner {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -2062,7 +2062,7 @@ class PractitionerRole with Resource, _$PractitionerRole {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -2292,7 +2292,7 @@ class PractitionerRoleAvailableTime with _$PractitionerRoleAvailableTime {
 
     /// [daysOfWeek] Indicates which days of the week are available between the
     ///  start and end Times.
-    List<Code>? daysOfWeek,
+    List<FhirCode>? daysOfWeek,
 
     /// [daysOfWeekElement] Extensions for daysOfWeek
     @JsonKey(name: '_daysOfWeek') List<Element?>? daysOfWeekElement,
@@ -2306,14 +2306,14 @@ class PractitionerRoleAvailableTime with _$PractitionerRoleAvailableTime {
 
     /// [availableStartTime] The opening time of day. Note: If the AllDay flag is
     ///  set, then this time is ignored.
-    Time? availableStartTime,
+    FhirTime? availableStartTime,
 
     /// [availableStartTimeElement] Extensions for availableStartTime
     @JsonKey(name: '_availableStartTime') Element? availableStartTimeElement,
 
     /// [availableEndTime] The closing time of day. Note: If the AllDay flag is
     ///  set, then this time is ignored.
-    Time? availableEndTime,
+    FhirTime? availableEndTime,
 
     /// [availableEndTimeElement] Extensions for availableEndTime
     @JsonKey(name: '_availableEndTime') Element? availableEndTimeElement,
@@ -2573,7 +2573,7 @@ class RelatedPerson with Resource, _$RelatedPerson {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the

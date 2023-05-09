@@ -29,7 +29,7 @@ part 'resource_types_enum.dart';
 class Resource {
   FhirId? id;
   R5ResourceType? resourceType;
-  Meta? meta;
+  FhirMeta? meta;
   FhirUri? implicitRules;
   FhirCode? language;
   Narrative? text;
@@ -74,7 +74,7 @@ class Resource {
   static Resource copyWith({
     FhirId? id,
     R5ResourceType? resourceType,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     FhirCode? language,
     Narrative? text,

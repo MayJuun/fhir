@@ -106,7 +106,7 @@ mixin _$Communication {
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @HiveField(12)
   @HiveField(13)
-  List<Canonical>? get instantiatesCanonical =>
+  List<FhirCanonical>? get instantiatesCanonical =>
       throw _privateConstructorUsedError;
   @HiveField(14)
   @HiveField(15)
@@ -276,7 +276,7 @@ abstract class $CommunicationCopyWith<$Res> {
           List<Identifier>? identifier,
       @HiveField(12)
       @HiveField(13)
-          List<Canonical>? instantiatesCanonical,
+          List<FhirCanonical>? instantiatesCanonical,
       @HiveField(14)
       @HiveField(15)
           List<FhirUri>? instantiatesUri,
@@ -459,7 +459,7 @@ class _$CommunicationCopyWithImpl<$Res, $Val extends Communication>
       instantiatesCanonical: freezed == instantiatesCanonical
           ? _value.instantiatesCanonical
           : instantiatesCanonical // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       instantiatesUri: freezed == instantiatesUri
           ? _value.instantiatesUri
           : instantiatesUri // ignore: cast_nullable_to_non_nullable
@@ -763,7 +763,7 @@ abstract class _$$_CommunicationCopyWith<$Res>
           List<Identifier>? identifier,
       @HiveField(12)
       @HiveField(13)
-          List<Canonical>? instantiatesCanonical,
+          List<FhirCanonical>? instantiatesCanonical,
       @HiveField(14)
       @HiveField(15)
           List<FhirUri>? instantiatesUri,
@@ -957,7 +957,7 @@ class __$$_CommunicationCopyWithImpl<$Res>
       instantiatesCanonical: freezed == instantiatesCanonical
           ? _value._instantiatesCanonical
           : instantiatesCanonical // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       instantiatesUri: freezed == instantiatesUri
           ? _value._instantiatesUri
           : instantiatesUri // ignore: cast_nullable_to_non_nullable
@@ -1101,7 +1101,7 @@ class _$_Communication extends _Communication {
           final List<Identifier>? identifier,
       @HiveField(12)
       @HiveField(13)
-          final List<Canonical>? instantiatesCanonical,
+          final List<FhirCanonical>? instantiatesCanonical,
       @HiveField(14)
       @HiveField(15)
           final List<FhirUri>? instantiatesUri,
@@ -1341,11 +1341,11 @@ class _$_Communication extends _Communication {
     return EqualUnmodifiableListView(value);
   }
 
-  final List<Canonical>? _instantiatesCanonical;
+  final List<FhirCanonical>? _instantiatesCanonical;
   @override
   @HiveField(12)
   @HiveField(13)
-  List<Canonical>? get instantiatesCanonical {
+  List<FhirCanonical>? get instantiatesCanonical {
     final value = _instantiatesCanonical;
     if (value == null) return null;
     if (_instantiatesCanonical is EqualUnmodifiableListView)
@@ -1794,7 +1794,7 @@ abstract class _Communication extends Communication {
           final List<Identifier>? identifier,
       @HiveField(12)
       @HiveField(13)
-          final List<Canonical>? instantiatesCanonical,
+          final List<FhirCanonical>? instantiatesCanonical,
       @HiveField(14)
       @HiveField(15)
           final List<FhirUri>? instantiatesUri,
@@ -1959,7 +1959,7 @@ abstract class _Communication extends Communication {
   @override
   @HiveField(12)
   @HiveField(13)
-  List<Canonical>? get instantiatesCanonical;
+  List<FhirCanonical>? get instantiatesCanonical;
   @override
   @HiveField(14)
   @HiveField(15)
@@ -5262,7 +5262,7 @@ mixin _$DeviceRequest {
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @HiveField(12)
   @HiveField(13)
-  List<Canonical>? get instantiatesCanonical =>
+  List<FhirCanonical>? get instantiatesCanonical =>
       throw _privateConstructorUsedError;
   @HiveField(14)
   @HiveField(15)
@@ -5463,7 +5463,7 @@ abstract class $DeviceRequestCopyWith<$Res> {
           List<Identifier>? identifier,
       @HiveField(12)
       @HiveField(13)
-          List<Canonical>? instantiatesCanonical,
+          List<FhirCanonical>? instantiatesCanonical,
       @HiveField(14)
       @HiveField(15)
           List<FhirUri>? instantiatesUri,
@@ -5665,7 +5665,7 @@ class _$DeviceRequestCopyWithImpl<$Res, $Val extends DeviceRequest>
       instantiatesCanonical: freezed == instantiatesCanonical
           ? _value.instantiatesCanonical
           : instantiatesCanonical // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       instantiatesUri: freezed == instantiatesUri
           ? _value.instantiatesUri
           : instantiatesUri // ignore: cast_nullable_to_non_nullable
@@ -6057,7 +6057,7 @@ abstract class _$$_DeviceRequestCopyWith<$Res>
           List<Identifier>? identifier,
       @HiveField(12)
       @HiveField(13)
-          List<Canonical>? instantiatesCanonical,
+          List<FhirCanonical>? instantiatesCanonical,
       @HiveField(14)
       @HiveField(15)
           List<FhirUri>? instantiatesUri,
@@ -6276,7 +6276,7 @@ class __$$_DeviceRequestCopyWithImpl<$Res>
       instantiatesCanonical: freezed == instantiatesCanonical
           ? _value._instantiatesCanonical
           : instantiatesCanonical // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       instantiatesUri: freezed == instantiatesUri
           ? _value._instantiatesUri
           : instantiatesUri // ignore: cast_nullable_to_non_nullable
@@ -6440,7 +6440,7 @@ class _$_DeviceRequest extends _DeviceRequest {
           final List<Identifier>? identifier,
       @HiveField(12)
       @HiveField(13)
-          final List<Canonical>? instantiatesCanonical,
+          final List<FhirCanonical>? instantiatesCanonical,
       @HiveField(14)
       @HiveField(15)
           final List<FhirUri>? instantiatesUri,
@@ -6684,11 +6684,11 @@ class _$_DeviceRequest extends _DeviceRequest {
     return EqualUnmodifiableListView(value);
   }
 
-  final List<Canonical>? _instantiatesCanonical;
+  final List<FhirCanonical>? _instantiatesCanonical;
   @override
   @HiveField(12)
   @HiveField(13)
-  List<Canonical>? get instantiatesCanonical {
+  List<FhirCanonical>? get instantiatesCanonical {
     final value = _instantiatesCanonical;
     if (value == null) return null;
     if (_instantiatesCanonical is EqualUnmodifiableListView)
@@ -7177,7 +7177,7 @@ abstract class _DeviceRequest extends DeviceRequest {
           final List<Identifier>? identifier,
       @HiveField(12)
       @HiveField(13)
-          final List<Canonical>? instantiatesCanonical,
+          final List<FhirCanonical>? instantiatesCanonical,
       @HiveField(14)
       @HiveField(15)
           final List<FhirUri>? instantiatesUri,
@@ -7349,7 +7349,7 @@ abstract class _DeviceRequest extends DeviceRequest {
   @override
   @HiveField(12)
   @HiveField(13)
-  List<Canonical>? get instantiatesCanonical;
+  List<FhirCanonical>? get instantiatesCanonical;
   @override
   @HiveField(14)
   @HiveField(15)

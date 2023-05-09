@@ -162,7 +162,7 @@ enum R5ResourceType {
   @JsonValue('Linkage')
   Linkage,
   @JsonValue('List')
-  List_,
+  FhirList,
   @JsonValue('Location')
   Location,
   @JsonValue('ManufacturedItemDefinition')

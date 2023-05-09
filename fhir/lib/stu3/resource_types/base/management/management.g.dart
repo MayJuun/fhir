@@ -225,7 +225,7 @@ const _$Stu3ResourceTypeEnumMap = {
   Stu3ResourceType.ImplementationGuide: 'ImplementationGuide',
   Stu3ResourceType.Library: 'Library',
   Stu3ResourceType.Linkage: 'Linkage',
-  Stu3ResourceType.List_: 'List',
+  Stu3ResourceType.FhirList: 'List',
   Stu3ResourceType.Location: 'Location',
   Stu3ResourceType.Measure: 'Measure',
   Stu3ResourceType.MeasureReport: 'MeasureReport',
@@ -1019,11 +1019,11 @@ const _$LibraryStatusEnumMap = {
   LibraryStatus.unknown: 'unknown',
 };
 
-_$_List_ _$$_List_FromJson(Map<String, dynamic> json) => _$_List_(
+_$_FhirList _$$_FhirListFromJson(Map<String, dynamic> json) => _$_FhirList(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
-              unknownValue: Stu3ResourceType.List_) ??
-          Stu3ResourceType.List_,
+              unknownValue: Stu3ResourceType.FhirList) ??
+          Stu3ResourceType.FhirList,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1097,7 +1097,7 @@ _$_List_ _$$_List_FromJson(Map<String, dynamic> json) => _$_List_(
               json['emptyReason'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_List_ToJson(_$_List_ instance) {
+Map<String, dynamic> _$$_FhirListToJson(_$_FhirList instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };

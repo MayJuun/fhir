@@ -5,7 +5,7 @@ class LocationUsCore extends Resource {
   LocationUsCore._(this._location);
 
   factory LocationUsCore({
-    Meta? meta,
+    FhirMeta? meta,
     Narrative? text,
     List<Identifier>? identifier,
     Code? status,
@@ -49,7 +49,7 @@ class LocationUsCore extends Resource {
 
   Location _location;
   Location get value => _location;
-  Meta? get meta => _location.meta;
+  FhirMeta? get meta => _location.meta;
   Narrative? get text => _location.text;
   List<Identifier>? get identifier => _location.identifier;
   Code? get status => _location.status;

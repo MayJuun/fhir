@@ -59,7 +59,7 @@ class CarePlanUsCore extends Resource {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -211,7 +211,7 @@ class CarePlanUsCore extends Resource {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  Meta? get meta => _carePlan.meta;
+  FhirMeta? get meta => _carePlan.meta;
 
   /// [text] A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The

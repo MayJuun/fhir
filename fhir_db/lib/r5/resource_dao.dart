@@ -153,7 +153,7 @@ class ResourceDao {
     String? password, {
     Resource? resource,
     R5ResourceType? resourceType,
-    Id? id,
+    FhirId? id,
     String? field,
     String? value,
   }) async {
@@ -229,7 +229,7 @@ class ResourceDao {
     String? password,
     Resource? resource,
     R5ResourceType? resourceType,
-    Id? id,
+    FhirId? id,
     String? field,
     String? value,
   ) async {

@@ -124,7 +124,7 @@ class Account with Resource, _$Account {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -343,7 +343,7 @@ class AccountCoverage with _$AccountCoverage {
     required Reference coverage,
 
     /// [priority] The priority of the coverage in the context of this account.
-    PositiveInt? priority,
+    FhirPositiveInt? priority,
 
     /// [priorityElement] Extensions for priority
     @JsonKey(name: '_priority') Element? priorityElement,
@@ -665,7 +665,7 @@ class ChargeItem with Resource, _$ChargeItem {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -736,7 +736,7 @@ class ChargeItem with Resource, _$ChargeItem {
 
     /// [definitionCanonical] References the source of pricing information, rules
     ///  of application for the code this ChargeItem uses.
-    List<Canonical>? definitionCanonical,
+    List<FhirCanonical>? definitionCanonical,
 
     /// [status] The current state of the ChargeItem.
     FhirCode? status,
@@ -1187,7 +1187,7 @@ class ChargeItemDefinition with Resource, _$ChargeItemDefinition {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -1297,11 +1297,11 @@ class ChargeItemDefinition with Resource, _$ChargeItemDefinition {
 
     /// [partOf] A larger definition of which this particular definition is a
     ///  component or step.
-    List<Canonical>? partOf,
+    List<FhirCanonical>? partOf,
 
     /// [replaces] As new versions of a protocol or guideline are defined, allows
     ///  identification of what versions are replaced by a new instance.
-    List<Canonical>? replaces,
+    List<FhirCanonical>? replaces,
 
     /// [status] The current state of the ChargeItemDefinition.
     FhirCode? status,
@@ -2012,7 +2012,7 @@ class Contract with Resource, _$Contract {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -2719,7 +2719,7 @@ class ContractSecurityLabel with _$ContractSecurityLabel {
 
     /// [number] Number used to link this term or term element to the applicable
     ///  Security Label.
-    List<UnsignedInt>? number,
+    List<FhirUnsignedInt>? number,
 
     /// [numberElement] Extensions for number
     @JsonKey(name: '_number') List<Element?>? numberElement,
@@ -2901,7 +2901,7 @@ class ContractOffer with _$ContractOffer {
         List<Element?>? linkIdElement,
 
     /// [securityLabelNumber] Security labels that protects the offer.
-    List<UnsignedInt>? securityLabelNumber,
+    List<FhirUnsignedInt>? securityLabelNumber,
     @JsonKey(name: '_securityLabelNumber')
 
         /// [securityLabelNumberElement] Extensions for securityLabelNumber
@@ -3226,7 +3226,7 @@ class ContractAnswer with _$ContractAnswer {
     /// selection of values to be agreed to, e.g., the period of participation,
     /// the date of occupancy of a rental, warrently duration, or whether
     ///  biospecimen may be used for further research.
-    Time? valueTime,
+    FhirTime? valueTime,
 
     /// [valueTimeElement] Extensions for valueTime
     @JsonKey(name: '_valueTime') Element? valueTimeElement,
@@ -3468,7 +3468,7 @@ class ContractAsset with _$ContractAsset {
     List<ContractAnswer>? answer,
 
     /// [securityLabelNumber] Security labels that protects the asset.
-    List<UnsignedInt>? securityLabelNumber,
+    List<FhirUnsignedInt>? securityLabelNumber,
     @JsonKey(name: '_securityLabelNumber')
 
         /// [securityLabelNumberElement] Extensions for securityLabelNumber
@@ -3833,7 +3833,7 @@ class ContractValuedItem with _$ContractValuedItem {
 
     /// [securityLabelNumber] A set of security labels that define which terms
     ///  are controlled by this condition.
-    List<UnsignedInt>? securityLabelNumber,
+    List<FhirUnsignedInt>? securityLabelNumber,
     @JsonKey(name: '_securityLabelNumber')
 
         /// [securityLabelNumberElement] Extensions for securityLabelNumber
@@ -4135,7 +4135,7 @@ class ContractAction with _$ContractAction {
     List<Annotation>? note,
 
     /// [securityLabelNumber] Security labels that protects the action.
-    List<UnsignedInt>? securityLabelNumber,
+    List<FhirUnsignedInt>? securityLabelNumber,
     @JsonKey(name: '_securityLabelNumber')
 
         /// [securityLabelNumberElement] Extensions for securityLabelNumber
@@ -4919,7 +4919,7 @@ class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -5124,7 +5124,7 @@ class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
 
     /// [precedence] This indicates the relative order of a series of EOBs
     ///  related to different coverages for the same suite of services.
-    PositiveInt? precedence,
+    FhirPositiveInt? precedence,
 
     /// [precedenceElement] Extensions for precedence
     @JsonKey(name: '_precedence')
@@ -5499,7 +5499,7 @@ class ExplanationOfBenefitCareTeam with _$ExplanationOfBenefitCareTeam {
     List<FhirExtension>? modifierExtension,
 
     /// [sequence] A number to uniquely identify care team entries.
-    PositiveInt? sequence,
+    FhirPositiveInt? sequence,
 
     /// [sequenceElement] Extensions for sequence
     @JsonKey(name: '_sequence') Element? sequenceElement,
@@ -5660,7 +5660,7 @@ class ExplanationOfBenefitSupportingInfo
     List<FhirExtension>? modifierExtension,
 
     /// [sequence] A number to uniquely identify supporting information entries.
-    PositiveInt? sequence,
+    FhirPositiveInt? sequence,
 
     /// [sequenceElement] Extensions for sequence
     @JsonKey(name: '_sequence') Element? sequenceElement,
@@ -5821,7 +5821,7 @@ class ExplanationOfBenefitDiagnosis with _$ExplanationOfBenefitDiagnosis {
     List<FhirExtension>? modifierExtension,
 
     /// [sequence] A number to uniquely identify diagnosis entries.
-    PositiveInt? sequence,
+    FhirPositiveInt? sequence,
 
     /// [sequenceElement] Extensions for sequence
     @JsonKey(name: '_sequence') Element? sequenceElement,
@@ -5959,7 +5959,7 @@ class ExplanationOfBenefitProcedure with _$ExplanationOfBenefitProcedure {
     List<FhirExtension>? modifierExtension,
 
     /// [sequence] A number to uniquely identify procedure entries.
-    PositiveInt? sequence,
+    FhirPositiveInt? sequence,
 
     /// [sequenceElement] Extensions for sequence
     @JsonKey(name: '_sequence') Element? sequenceElement,
@@ -6423,28 +6423,28 @@ class ExplanationOfBenefitItem with _$ExplanationOfBenefitItem {
     List<FhirExtension>? modifierExtension,
 
     /// [sequence] A number to uniquely identify item entries.
-    PositiveInt? sequence,
+    FhirPositiveInt? sequence,
 
     /// [sequenceElement] Extensions for sequence
     @JsonKey(name: '_sequence')
         Element? sequenceElement,
 
     /// [careTeamSequence] Care team members related to this service or product.
-    List<PositiveInt>? careTeamSequence,
+    List<FhirPositiveInt>? careTeamSequence,
 
     /// [careTeamSequenceElement] Extensions for careTeamSequence
     @JsonKey(name: '_careTeamSequence')
         List<Element?>? careTeamSequenceElement,
 
     /// [diagnosisSequence] Diagnoses applicable for this service or product.
-    List<PositiveInt>? diagnosisSequence,
+    List<FhirPositiveInt>? diagnosisSequence,
     @JsonKey(name: '_diagnosisSequence')
 
         /// [diagnosisSequenceElement] Extensions for diagnosisSequence
         List<Element>? diagnosisSequenceElement,
 
     /// [procedureSequence] Procedures applicable for this service or product.
-    List<PositiveInt>? procedureSequence,
+    List<FhirPositiveInt>? procedureSequence,
     @JsonKey(name: '_procedureSequence')
 
         /// [procedureSequenceElement] Extensions for procedureSequence
@@ -6452,7 +6452,7 @@ class ExplanationOfBenefitItem with _$ExplanationOfBenefitItem {
 
     /// [informationSequence] Exceptions, special conditions and supporting
     ///  information applicable for this service or product.
-    List<PositiveInt>? informationSequence,
+    List<FhirPositiveInt>? informationSequence,
     @JsonKey(name: '_informationSequence')
 
         /// [informationSequenceElement] Extensions for informationSequence
@@ -6537,7 +6537,7 @@ class ExplanationOfBenefitItem with _$ExplanationOfBenefitItem {
 
     /// [noteNumber] The numbers associated with notes below which apply to the
     ///  adjudication of this item.
-    List<PositiveInt>? noteNumber,
+    List<FhirPositiveInt>? noteNumber,
 
     /// [noteNumberElement] Extensions for noteNumber
     @JsonKey(name: '_noteNumber')
@@ -6814,7 +6814,7 @@ class ExplanationOfBenefitDetail with _$ExplanationOfBenefitDetail {
 
     /// [sequence] A claim detail line. Either a simple (a product or service) or
     ///  a 'group' of sub-details which are simple items.
-    PositiveInt? sequence,
+    FhirPositiveInt? sequence,
 
     /// [sequenceElement] Extensions for sequence
     @JsonKey(name: '_sequence') Element? sequenceElement,
@@ -6865,7 +6865,7 @@ class ExplanationOfBenefitDetail with _$ExplanationOfBenefitDetail {
 
     /// [noteNumber] The numbers associated with notes below which apply to the
     ///  adjudication of this item.
-    List<PositiveInt>? noteNumber,
+    List<FhirPositiveInt>? noteNumber,
 
     /// [noteNumberElement] Extensions for noteNumber
     @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
@@ -7017,7 +7017,7 @@ class ExplanationOfBenefitSubDetail with _$ExplanationOfBenefitSubDetail {
 
     /// [sequence] A claim detail line. Either a simple (a product or service) or
     ///  a 'group' of sub-details which are simple items.
-    PositiveInt? sequence,
+    FhirPositiveInt? sequence,
 
     /// [sequenceElement] Extensions for sequence
     @JsonKey(name: '_sequence') Element? sequenceElement,
@@ -7068,7 +7068,7 @@ class ExplanationOfBenefitSubDetail with _$ExplanationOfBenefitSubDetail {
 
     /// [noteNumber] The numbers associated with notes below which apply to the
     ///  adjudication of this item.
-    List<PositiveInt>? noteNumber,
+    List<FhirPositiveInt>? noteNumber,
 
     /// [noteNumberElement] Extensions for noteNumber
     @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
@@ -7244,7 +7244,7 @@ class ExplanationOfBenefitAddItem with _$ExplanationOfBenefitAddItem {
 
     /// [itemSequence] Claim items which this service line is intended to
     ///  replace.
-    List<PositiveInt>? itemSequence,
+    List<FhirPositiveInt>? itemSequence,
 
     /// [itemSequenceElement] Extensions for itemSequence
     @JsonKey(name: '_itemSequence')
@@ -7252,7 +7252,7 @@ class ExplanationOfBenefitAddItem with _$ExplanationOfBenefitAddItem {
 
     /// [detailSequence] The sequence number of the details within the claim item
     ///  which this line is intended to replace.
-    List<PositiveInt>? detailSequence,
+    List<FhirPositiveInt>? detailSequence,
 
     /// [detailSequenceElement] Extensions for detailSequence
     @JsonKey(name: '_detailSequence')
@@ -7260,7 +7260,7 @@ class ExplanationOfBenefitAddItem with _$ExplanationOfBenefitAddItem {
 
     /// [subDetailSequence] The sequence number of the sub-details woithin the
     ///  details within the claim item which this line is intended to replace.
-    List<PositiveInt>? subDetailSequence,
+    List<FhirPositiveInt>? subDetailSequence,
     @JsonKey(name: '_subDetailSequence')
 
         /// [subDetailSequenceElement] Extensions for subDetailSequence
@@ -7334,7 +7334,7 @@ class ExplanationOfBenefitAddItem with _$ExplanationOfBenefitAddItem {
 
     /// [noteNumber] The numbers associated with notes below which apply to the
     ///  adjudication of this item.
-    List<PositiveInt>? noteNumber,
+    List<FhirPositiveInt>? noteNumber,
 
     /// [noteNumberElement] Extensions for noteNumber
     @JsonKey(name: '_noteNumber')
@@ -7505,7 +7505,7 @@ class ExplanationOfBenefitDetail1 with _$ExplanationOfBenefitDetail1 {
 
     /// [noteNumber] The numbers associated with notes below which apply to the
     ///  adjudication of this item.
-    List<PositiveInt>? noteNumber,
+    List<FhirPositiveInt>? noteNumber,
 
     /// [noteNumberElement] Extensions for noteNumber
     @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
@@ -7673,7 +7673,7 @@ class ExplanationOfBenefitSubDetail1 with _$ExplanationOfBenefitSubDetail1 {
 
     /// [noteNumber] The numbers associated with notes below which apply to the
     ///  adjudication of this item.
-    List<PositiveInt>? noteNumber,
+    List<FhirPositiveInt>? noteNumber,
 
     /// [noteNumberElement] Extensions for noteNumber
     @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
@@ -8038,7 +8038,7 @@ class ExplanationOfBenefitProcessNote with _$ExplanationOfBenefitProcessNote {
     List<FhirExtension>? modifierExtension,
 
     /// [number] A number to uniquely identify a note entry.
-    PositiveInt? number,
+    FhirPositiveInt? number,
 
     /// [numberElement] Extensions for number
     @JsonKey(name: '_number') Element? numberElement,
@@ -8327,7 +8327,7 @@ class ExplanationOfBenefitFinancial with _$ExplanationOfBenefitFinancial {
 
     /// [allowedUnsignedInt] The quantity of the benefit which is permitted under
     ///  the coverage.
-    UnsignedInt? allowedUnsignedInt,
+    FhirUnsignedInt? allowedUnsignedInt,
 
     /// [allowedUnsignedIntElement] Extensions for allowedUnsignedInt
     @JsonKey(name: '_allowedUnsignedInt') Element? allowedUnsignedIntElement,
@@ -8345,7 +8345,7 @@ class ExplanationOfBenefitFinancial with _$ExplanationOfBenefitFinancial {
 
     /// [usedUnsignedInt] The quantity of the benefit which have been consumed to
     ///  date.
-    UnsignedInt? usedUnsignedInt,
+    FhirUnsignedInt? usedUnsignedInt,
 
     /// [usedUnsignedIntElement] Extensions for usedUnsignedInt
     @JsonKey(name: '_usedUnsignedInt') Element? usedUnsignedIntElement,
@@ -8508,7 +8508,7 @@ class InsurancePlan with Resource, _$InsurancePlan {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -9312,7 +9312,7 @@ class InsurancePlanGeneralCost with _$InsurancePlanGeneralCost {
     CodeableConcept? type,
 
     /// [groupSize] Number of participants enrolled in the plan.
-    PositiveInt? groupSize,
+    FhirPositiveInt? groupSize,
 
     /// [groupSizeElement] Extensions for groupSize
     @JsonKey(name: '_groupSize') Element? groupSizeElement,

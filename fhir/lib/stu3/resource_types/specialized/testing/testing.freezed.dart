@@ -23,7 +23,7 @@ mixin _$TestReport {
   @JsonKey(unknownEnumValue: Stu3ResourceType.TestReport)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
   FhirId? get id => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
@@ -78,7 +78,7 @@ abstract class $TestReportCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: Stu3ResourceType.TestReport)
           Stu3ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -471,7 +471,7 @@ abstract class _$$_TestReportCopyWith<$Res>
       {@JsonKey(unknownEnumValue: Stu3ResourceType.TestReport)
           Stu3ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -757,7 +757,7 @@ class _$_TestReport extends _TestReport {
   @JsonKey(unknownEnumValue: Stu3ResourceType.TestReport)
   final Stu3ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -975,7 +975,7 @@ abstract class _TestReport extends TestReport {
   factory _TestReport(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.TestReport)
           final Stu3ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -1023,7 +1023,7 @@ abstract class _TestReport extends TestReport {
   @override
   FhirId? get id;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
@@ -3124,7 +3124,7 @@ mixin _$TestScript {
   @JsonKey(unknownEnumValue: Stu3ResourceType.TestScript)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
   FhirId? get id => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
@@ -3203,7 +3203,7 @@ abstract class $TestScriptCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: Stu3ResourceType.TestScript)
           Stu3ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -3784,7 +3784,7 @@ abstract class _$$_TestScriptCopyWith<$Res>
       {@JsonKey(unknownEnumValue: Stu3ResourceType.TestScript)
           Stu3ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -4232,7 +4232,7 @@ class _$_TestScript extends _TestScript {
   @JsonKey(unknownEnumValue: Stu3ResourceType.TestScript)
   final Stu3ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -4614,7 +4614,7 @@ abstract class _TestScript extends TestScript {
   factory _TestScript(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.TestScript)
           final Stu3ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -4686,7 +4686,7 @@ abstract class _TestScript extends TestScript {
   @override
   FhirId? get id;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
@@ -5671,7 +5671,7 @@ mixin _$TestScriptCapability {
   String? get description => throw _privateConstructorUsedError;
   @JsonKey(name: '_description')
   Element? get descriptionElement => throw _privateConstructorUsedError;
-  List<Decimal>? get origin => throw _privateConstructorUsedError;
+  List<FhirDecimal>? get origin => throw _privateConstructorUsedError;
   @JsonKey(name: '_origin')
   List<Element?>? get originElement => throw _privateConstructorUsedError;
   FhirDecimal? get destination => throw _privateConstructorUsedError;
@@ -5701,7 +5701,7 @@ abstract class $TestScriptCapabilityCopyWith<$Res> {
       @JsonKey(name: '_validated') Element? validatedElement,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      List<Decimal>? origin,
+      List<FhirDecimal>? origin,
       @JsonKey(name: '_origin') List<Element?>? originElement,
       FhirDecimal? destination,
       @JsonKey(name: '_destination') Element? destinationElement,
@@ -5772,7 +5772,7 @@ class _$TestScriptCapabilityCopyWithImpl<$Res,
       origin: freezed == origin
           ? _value.origin
           : origin // ignore: cast_nullable_to_non_nullable
-              as List<Decimal>?,
+              as List<FhirDecimal>?,
       originElement: freezed == originElement
           ? _value.originElement
           : originElement // ignore: cast_nullable_to_non_nullable
@@ -5872,7 +5872,7 @@ abstract class _$$_TestScriptCapabilityCopyWith<$Res>
       @JsonKey(name: '_validated') Element? validatedElement,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      List<Decimal>? origin,
+      List<FhirDecimal>? origin,
       @JsonKey(name: '_origin') List<Element?>? originElement,
       FhirDecimal? destination,
       @JsonKey(name: '_destination') Element? destinationElement,
@@ -5945,7 +5945,7 @@ class __$$_TestScriptCapabilityCopyWithImpl<$Res>
       origin: freezed == origin
           ? _value._origin
           : origin // ignore: cast_nullable_to_non_nullable
-              as List<Decimal>?,
+              as List<FhirDecimal>?,
       originElement: freezed == originElement
           ? _value._originElement
           : originElement // ignore: cast_nullable_to_non_nullable
@@ -5984,7 +5984,7 @@ class _$_TestScriptCapability extends _TestScriptCapability {
       @JsonKey(name: '_validated') this.validatedElement,
       this.description,
       @JsonKey(name: '_description') this.descriptionElement,
-      final List<Decimal>? origin,
+      final List<FhirDecimal>? origin,
       @JsonKey(name: '_origin') final List<Element?>? originElement,
       this.destination,
       @JsonKey(name: '_destination') this.destinationElement,
@@ -6016,9 +6016,9 @@ class _$_TestScriptCapability extends _TestScriptCapability {
   @override
   @JsonKey(name: '_description')
   final Element? descriptionElement;
-  final List<Decimal>? _origin;
+  final List<FhirDecimal>? _origin;
   @override
-  List<Decimal>? get origin {
+  List<FhirDecimal>? get origin {
     final value = _origin;
     if (value == null) return null;
     if (_origin is EqualUnmodifiableListView) return _origin;
@@ -6143,7 +6143,7 @@ abstract class _TestScriptCapability extends TestScriptCapability {
       @JsonKey(name: '_validated') final Element? validatedElement,
       final String? description,
       @JsonKey(name: '_description') final Element? descriptionElement,
-      final List<Decimal>? origin,
+      final List<FhirDecimal>? origin,
       @JsonKey(name: '_origin') final List<Element?>? originElement,
       final Decimal? destination,
       @JsonKey(name: '_destination') final Element? destinationElement,
@@ -6172,7 +6172,7 @@ abstract class _TestScriptCapability extends TestScriptCapability {
   @JsonKey(name: '_description')
   Element? get descriptionElement;
   @override
-  List<Decimal>? get origin;
+  List<FhirDecimal>? get origin;
   @override
   @JsonKey(name: '_origin')
   List<Element?>? get originElement;
@@ -6944,7 +6944,7 @@ class _$_TestScriptVariable extends _TestScriptVariable {
   @JsonKey(name: '_path')
   final Element? pathElement;
   @override
-  final Id? sourceId;
+  final FhirId? sourceId;
   @override
   @JsonKey(name: '_sourceId')
   final Element? sourceIdElement;
@@ -7042,7 +7042,7 @@ abstract class _TestScriptVariable extends TestScriptVariable {
           @JsonKey(name: '_hint') final Element? hintElement,
           final String? path,
           @JsonKey(name: '_path') final Element? pathElement,
-          final Id? sourceId,
+          final FhirId? sourceId,
           @JsonKey(name: '_sourceId') final Element? sourceIdElement}) =
       _$_TestScriptVariable;
   _TestScriptVariable._() : super._();
@@ -7839,7 +7839,7 @@ class _$_TestScriptRule1 extends _TestScriptRule1 {
       _$$_TestScriptRule1FromJson(json);
 
   @override
-  final Id? ruleId;
+  final FhirId? ruleId;
   @override
   @JsonKey(name: '_ruleId')
   final Element? ruleIdElement;
@@ -7890,7 +7890,7 @@ class _$_TestScriptRule1 extends _TestScriptRule1 {
 
 abstract class _TestScriptRule1 extends TestScriptRule1 {
   factory _TestScriptRule1(
-      {final Id? ruleId,
+      {final FhirId? ruleId,
       @JsonKey(name: '_ruleId') final Element? ruleIdElement,
       final List<TestScriptParam1>? param}) = _$_TestScriptRule1;
   _TestScriptRule1._() : super._();
@@ -9298,22 +9298,22 @@ class _$_TestScriptOperation extends _TestScriptOperation {
   }
 
   @override
-  final Id? requestId;
+  final FhirId? requestId;
   @override
   @JsonKey(name: '_requestId')
   final Element? requestIdElement;
   @override
-  final Id? responseId;
+  final FhirId? responseId;
   @override
   @JsonKey(name: '_responseId')
   final Element? responseIdElement;
   @override
-  final Id? sourceId;
+  final FhirId? sourceId;
   @override
   @JsonKey(name: '_sourceId')
   final Element? sourceIdElement;
   @override
-  final Id? targetId;
+  final FhirId? targetId;
   @override
   @JsonKey(name: '_targetId')
   final Element? targetIdElement;
@@ -9472,16 +9472,16 @@ abstract class _TestScriptOperation extends TestScriptOperation {
       @JsonKey(name: '_params')
           final Element? paramsElement,
       final List<TestScriptRequestHeader>? requestHeader,
-      final Id? requestId,
+      final FhirId? requestId,
       @JsonKey(name: '_requestId')
           final Element? requestIdElement,
-      final Id? responseId,
+      final FhirId? responseId,
       @JsonKey(name: '_responseId')
           final Element? responseIdElement,
-      final Id? sourceId,
+      final FhirId? sourceId,
       @JsonKey(name: '_sourceId')
           final Element? sourceIdElement,
-      final Id? targetId,
+      final FhirId? targetId,
       @JsonKey(name: '_targetId')
           final Element? targetIdElement,
       final String? url,
@@ -11101,7 +11101,7 @@ class _$_TestScriptAssert extends _TestScriptAssert {
   @override
   final TestScriptRuleset1? ruleset;
   @override
-  final Id? sourceId;
+  final FhirId? sourceId;
   @override
   @JsonKey(name: '_sourceId')
   final Element? sourceIdElement;
@@ -11329,7 +11329,7 @@ abstract class _TestScriptAssert extends TestScriptAssert {
           final Element? responseCodeElement,
       final TestScriptRule2? rule,
       final TestScriptRuleset1? ruleset,
-      final Id? sourceId,
+      final FhirId? sourceId,
       @JsonKey(name: '_sourceId')
           final Element? sourceIdElement,
       final Date? validateProfileId,
@@ -11607,7 +11607,7 @@ class _$_TestScriptRule2 extends _TestScriptRule2 {
       _$$_TestScriptRule2FromJson(json);
 
   @override
-  final Id? ruleId;
+  final FhirId? ruleId;
   @override
   @JsonKey(name: '_ruleId')
   final Element? ruleIdElement;
@@ -11658,7 +11658,7 @@ class _$_TestScriptRule2 extends _TestScriptRule2 {
 
 abstract class _TestScriptRule2 extends TestScriptRule2 {
   factory _TestScriptRule2(
-      {final Id? ruleId,
+      {final FhirId? ruleId,
       @JsonKey(name: '_ruleId') final Element? ruleIdElement,
       final List<TestScriptParam2>? param}) = _$_TestScriptRule2;
   _TestScriptRule2._() : super._();
@@ -12063,7 +12063,7 @@ class _$_TestScriptRuleset1 extends _TestScriptRuleset1 {
       _$$_TestScriptRuleset1FromJson(json);
 
   @override
-  final Id? rulesetId;
+  final FhirId? rulesetId;
   @override
   @JsonKey(name: '_rulesetId')
   final Element? rulesetIdElement;
@@ -12116,7 +12116,7 @@ class _$_TestScriptRuleset1 extends _TestScriptRuleset1 {
 
 abstract class _TestScriptRuleset1 extends TestScriptRuleset1 {
   factory _TestScriptRuleset1(
-      {final Id? rulesetId,
+      {final FhirId? rulesetId,
       @JsonKey(name: '_rulesetId') final Element? rulesetIdElement,
       final List<TestScriptRule3>? rule}) = _$_TestScriptRuleset1;
   _TestScriptRuleset1._() : super._();
@@ -12277,7 +12277,7 @@ class _$_TestScriptRule3 extends _TestScriptRule3 {
       _$$_TestScriptRule3FromJson(json);
 
   @override
-  final Id? ruleId;
+  final FhirId? ruleId;
   @override
   @JsonKey(name: '_ruleId')
   final Element? ruleIdElement;
@@ -12328,7 +12328,7 @@ class _$_TestScriptRule3 extends _TestScriptRule3 {
 
 abstract class _TestScriptRule3 extends TestScriptRule3 {
   factory _TestScriptRule3(
-      {final Id? ruleId,
+      {final FhirId? ruleId,
       @JsonKey(name: '_ruleId') final Element? ruleIdElement,
       final List<TestScriptParam3>? param}) = _$_TestScriptRule3;
   _TestScriptRule3._() : super._();

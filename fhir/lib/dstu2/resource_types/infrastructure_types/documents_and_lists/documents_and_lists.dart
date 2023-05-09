@@ -22,10 +22,10 @@ class Composition with Resource, _$Composition {
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Composition)
         Dstu2ResourceType resourceType,
     FhirId? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-     FhirCode? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -41,7 +41,7 @@ class Composition with Resource, _$Composition {
     @JsonKey(unknownEnumValue: CompositionStatus.unknown)
         required CompositionStatus status,
     @JsonKey(name: '_status') Element? statusElement,
-     FhirCode? confidentiality,
+    FhirCode? confidentiality,
     @JsonKey(name: '_confidentiality') Element? confidentialityElement,
     required Reference subject,
     required List<Reference> author,
@@ -227,10 +227,10 @@ class DocumentManifest with Resource, _$DocumentManifest {
     @JsonKey(unknownEnumValue: Dstu2ResourceType.DocumentManifest)
         Dstu2ResourceType resourceType,
     FhirId? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-     FhirCode? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -375,10 +375,10 @@ class DocumentReference with Resource, _$DocumentReference {
     @JsonKey(unknownEnumValue: Dstu2ResourceType.DocumentReference)
         Dstu2ResourceType resourceType,
     FhirId? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-     FhirCode? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -393,7 +393,7 @@ class DocumentReference with Resource, _$DocumentReference {
     Reference? custodian,
     Reference? authenticator,
     FhirDateTime? created,
-    required Instant indexed,
+    required FhirInstant indexed,
     @JsonKey(unknownEnumValue: DocumentReferenceStatus.unknown)
         required DocumentReferenceStatus status,
     @JsonKey(name: '_status') Element? statusElement,
@@ -612,17 +612,17 @@ class DocumentReferenceContextRelated with _$DocumentReferenceContextRelated {
 }
 
 @freezed
-class FhirList with Resoure, _$FhirList {
-  List_._();
-  factory List_({
-    @Default(Dstu2ResourceType.List_)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.List_)
+class FhirList with Resource, _$FhirList {
+  FhirList._();
+  factory FhirList({
+    @Default(Dstu2ResourceType.FhirList)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.FhirList)
         Dstu2ResourceType resourceType,
     FhirId? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-     FhirCode? language,
+    FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -645,27 +645,29 @@ class FhirList with Resoure, _$FhirList {
     String? note,
     List<ListEntry>? entry,
     CodeableConcept? emptyReason,
-  }) = _List_;
+  }) = _FhirList;
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
-  factory List_.fromYaml(dynamic yaml) => yaml is String
-      ? List_.fromJson(
+  factory FhirList.fromYaml(dynamic yaml) => yaml is String
+      ? FhirList.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? List_.fromJson(jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          ? FhirList.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
-              'List_ cannot be constructed from input provided,'
+              'FhirList cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory List_.fromJson(Map<String, dynamic> json) => _$List_FromJson(json);
+  factory FhirList.fromJson(Map<String, dynamic> json) =>
+      _$FhirListFromJson(json);
 
-  /// Acts like a constructor, returns a [List_], accepts a
+  /// Acts like a constructor, returns a [FhirList], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
-  factory List_.fromJsonString(String source) {
+  factory FhirList.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
-      return _$List_FromJson(json);
+      return _$FhirListFromJson(json);
     } else {
       throw FormatException('FormatException:\nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
@@ -682,7 +684,7 @@ class ListEntry with _$ListEntry {
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
     CodeableConcept? flag,
-     FhirBoolean? deleted,
+    FhirBoolean? deleted,
     @JsonKey(name: '_deleted') Element? deletedElement,
     FhirDateTime? date,
     @JsonKey(name: '_date') Element? dateElement,

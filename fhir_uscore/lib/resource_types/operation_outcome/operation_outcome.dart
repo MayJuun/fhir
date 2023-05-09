@@ -6,7 +6,7 @@ class OperationOutcomeUsCore extends Resource {
 
   factory OperationOutcomeUsCore({
     String? id,
-    Meta? meta,
+    FhirMeta? meta,
     Narrative? text,
     Code? language,
     List<Resource>? contained,
@@ -27,7 +27,7 @@ class OperationOutcomeUsCore extends Resource {
   OperationOutcome _operationOutcome;
   OperationOutcome get value => _operationOutcome;
   String? get id => _operationOutcome.id;
-  Meta? get meta => _operationOutcome.meta;
+  FhirMeta? get meta => _operationOutcome.meta;
   Narrative? get text => _operationOutcome.text;
   Code? get language => _operationOutcome.language;
   List<Resource>? get contained => _operationOutcome.contained;

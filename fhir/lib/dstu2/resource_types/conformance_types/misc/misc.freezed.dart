@@ -23,7 +23,7 @@ mixin _$ImplementationGuide {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.ImplementationGuide)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
   FhirId? get id => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
@@ -95,7 +95,7 @@ abstract class $ImplementationGuideCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ImplementationGuide)
           Dstu2ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -547,7 +547,7 @@ abstract class _$$_ImplementationGuideCopyWith<$Res>
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ImplementationGuide)
           Dstu2ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -911,7 +911,7 @@ class _$_ImplementationGuide extends _ImplementationGuide {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.ImplementationGuide)
   final Dstu2ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -1025,7 +1025,7 @@ class _$_ImplementationGuide extends _ImplementationGuide {
   @JsonKey(name: '_copyright')
   final Element? copyrightElement;
   @override
-  final Id? fhirVersion;
+  final FhirId? fhirVersion;
   final List<Element?>? _fhirVersionElement;
   @override
   @JsonKey(name: '_fhirVersion')
@@ -1217,7 +1217,7 @@ abstract class _ImplementationGuide extends ImplementationGuide {
   factory _ImplementationGuide(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ImplementationGuide)
           final Dstu2ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -1260,7 +1260,7 @@ abstract class _ImplementationGuide extends ImplementationGuide {
       final String? copyright,
       @JsonKey(name: '_copyright')
           final Element? copyrightElement,
-      final Id? fhirVersion,
+      final FhirId? fhirVersion,
       @JsonKey(name: '_fhirVersion')
           final List<Element?>? fhirVersionElement,
       final List<ImplementationGuideDependency>? dependency,
@@ -1279,7 +1279,7 @@ abstract class _ImplementationGuide extends ImplementationGuide {
   @override
   FhirId? get id;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
@@ -1530,7 +1530,7 @@ class _$_ImplementationGuideContact extends _ImplementationGuideContact {
       _$$_ImplementationGuideContactFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -1611,7 +1611,7 @@ class _$_ImplementationGuideContact extends _ImplementationGuideContact {
 
 abstract class _ImplementationGuideContact extends ImplementationGuideContact {
   factory _ImplementationGuideContact(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final String? name,
@@ -1832,7 +1832,7 @@ class _$_ImplementationGuideDependency extends _ImplementationGuideDependency {
       _$$_ImplementationGuideDependencyFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -1914,7 +1914,7 @@ class _$_ImplementationGuideDependency extends _ImplementationGuideDependency {
 abstract class _ImplementationGuideDependency
     extends ImplementationGuideDependency {
   factory _ImplementationGuideDependency(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -2131,7 +2131,7 @@ class _$_ImplementationGuidePackage extends _ImplementationGuidePackage {
       _$$_ImplementationGuidePackageFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -2216,7 +2216,7 @@ class _$_ImplementationGuidePackage extends _ImplementationGuidePackage {
 
 abstract class _ImplementationGuidePackage extends ImplementationGuidePackage {
   factory _ImplementationGuidePackage(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -2451,7 +2451,7 @@ class _$_ImplementationGuideGlobal extends _ImplementationGuideGlobal {
       _$$_ImplementationGuideGlobalFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -2531,7 +2531,7 @@ class _$_ImplementationGuideGlobal extends _ImplementationGuideGlobal {
 
 abstract class _ImplementationGuideGlobal extends ImplementationGuideGlobal {
   factory _ImplementationGuideGlobal(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final Code type,
@@ -2578,7 +2578,7 @@ mixin _$ImplementationGuidePage {
   String get name => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: PageKind.unknown)
   PageKind get kind => throw _privateConstructorUsedError;
-  List<Code>? get type => throw _privateConstructorUsedError;
+  List<FhirCode>? get type => throw _privateConstructorUsedError;
   List<String>? get package => throw _privateConstructorUsedError;
   FhirCode? get format => throw _privateConstructorUsedError;
   List<ImplementationGuidePage>? get page => throw _privateConstructorUsedError;
@@ -2602,7 +2602,7 @@ abstract class $ImplementationGuidePageCopyWith<$Res> {
       FhirUri source,
       String name,
       @JsonKey(unknownEnumValue: PageKind.unknown) PageKind kind,
-      List<Code>? type,
+      List<FhirCode>? type,
       List<String>? package,
       FhirCode? format,
       List<ImplementationGuidePage>? page});
@@ -2661,7 +2661,7 @@ class _$ImplementationGuidePageCopyWithImpl<$Res,
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as List<Code>?,
+              as List<FhirCode>?,
       package: freezed == package
           ? _value.package
           : package // ignore: cast_nullable_to_non_nullable
@@ -2693,7 +2693,7 @@ abstract class _$$_ImplementationGuidePageCopyWith<$Res>
       FhirUri source,
       String name,
       @JsonKey(unknownEnumValue: PageKind.unknown) PageKind kind,
-      List<Code>? type,
+      List<FhirCode>? type,
       List<String>? package,
       FhirCode? format,
       List<ImplementationGuidePage>? page});
@@ -2750,7 +2750,7 @@ class __$$_ImplementationGuidePageCopyWithImpl<$Res>
       type: freezed == type
           ? _value._type
           : type // ignore: cast_nullable_to_non_nullable
-              as List<Code>?,
+              as List<FhirCode>?,
       package: freezed == package
           ? _value._package
           : package // ignore: cast_nullable_to_non_nullable
@@ -2777,7 +2777,7 @@ class _$_ImplementationGuidePage extends _ImplementationGuidePage {
       required this.source,
       required this.name,
       @JsonKey(unknownEnumValue: PageKind.unknown) required this.kind,
-      final List<Code>? type,
+      final List<FhirCode>? type,
       final List<String>? package,
       this.format,
       final List<ImplementationGuidePage>? page})
@@ -2792,7 +2792,7 @@ class _$_ImplementationGuidePage extends _ImplementationGuidePage {
       _$$_ImplementationGuidePageFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -2822,9 +2822,9 @@ class _$_ImplementationGuidePage extends _ImplementationGuidePage {
   @override
   @JsonKey(unknownEnumValue: PageKind.unknown)
   final PageKind kind;
-  final List<Code>? _type;
+  final List<FhirCode>? _type;
   @override
-  List<Code>? get type {
+  List<FhirCode>? get type {
     final value = _type;
     if (value == null) return null;
     if (_type is EqualUnmodifiableListView) return _type;
@@ -2911,13 +2911,13 @@ class _$_ImplementationGuidePage extends _ImplementationGuidePage {
 
 abstract class _ImplementationGuidePage extends ImplementationGuidePage {
   factory _ImplementationGuidePage(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final FhirUri source,
       required final String name,
       @JsonKey(unknownEnumValue: PageKind.unknown) required final PageKind kind,
-      final List<Code>? type,
+      final List<FhirCode>? type,
       final List<String>? package,
       final FhirCode? format,
       final List<ImplementationGuidePage>? page}) = _$_ImplementationGuidePage;
@@ -2941,7 +2941,7 @@ abstract class _ImplementationGuidePage extends ImplementationGuidePage {
   @JsonKey(unknownEnumValue: PageKind.unknown)
   PageKind get kind;
   @override
-  List<Code>? get type;
+  List<FhirCode>? get type;
   @override
   List<String>? get package;
   @override
@@ -3256,7 +3256,7 @@ class _$_ImplementationGuidePackageResource
       _$$_ImplementationGuidePackageResourceFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -3363,7 +3363,7 @@ class _$_ImplementationGuidePackageResource
 abstract class _ImplementationGuidePackageResource
     extends ImplementationGuidePackageResource {
   factory _ImplementationGuidePackageResource(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -3424,7 +3424,7 @@ mixin _$TestScript {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.TestScript)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
   FhirId? get id => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
@@ -3492,7 +3492,7 @@ abstract class $TestScriptCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.TestScript)
           Dstu2ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -3984,7 +3984,7 @@ abstract class _$$_TestScriptCopyWith<$Res>
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.TestScript)
           Dstu2ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -4361,7 +4361,7 @@ class _$_TestScript extends _TestScript {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.TestScript)
   final Dstu2ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -4666,7 +4666,7 @@ abstract class _TestScript extends TestScript {
   factory _TestScript(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.TestScript)
           final Dstu2ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -4728,7 +4728,7 @@ abstract class _TestScript extends TestScript {
   @override
   FhirId? get id;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
@@ -4975,7 +4975,7 @@ class _$_TestScriptContact extends _TestScriptContact {
       _$$_TestScriptContactFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -5056,7 +5056,7 @@ class _$_TestScriptContact extends _TestScriptContact {
 
 abstract class _TestScriptContact extends TestScriptContact {
   factory _TestScriptContact(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final String? name,
@@ -5242,7 +5242,7 @@ class _$_TestScriptMetadata extends _TestScriptMetadata {
       _$$_TestScriptMetadataFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -5331,7 +5331,7 @@ class _$_TestScriptMetadata extends _TestScriptMetadata {
 
 abstract class _TestScriptMetadata extends TestScriptMetadata {
   factory _TestScriptMetadata(
-          {final Id? id,
+          {final FhirId? id,
           @JsonKey(name: 'extension')
               final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -5580,7 +5580,7 @@ class _$_TestScriptMetadataLink extends _TestScriptMetadataLink {
       _$$_TestScriptMetadataLinkFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -5667,7 +5667,7 @@ class _$_TestScriptMetadataLink extends _TestScriptMetadataLink {
 
 abstract class _TestScriptMetadataLink extends TestScriptMetadataLink {
   factory _TestScriptMetadataLink(
-          {final Id? id,
+          {final FhirId? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           required final FhirUri url,
@@ -6070,7 +6070,7 @@ class _$_TestScriptMetadataCapability extends _TestScriptMetadataCapability {
       _$$_TestScriptMetadataCapabilityFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -6213,7 +6213,7 @@ class _$_TestScriptMetadataCapability extends _TestScriptMetadataCapability {
 abstract class _TestScriptMetadataCapability
     extends TestScriptMetadataCapability {
   factory _TestScriptMetadataCapability(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'required') final FhirBoolean? required_,
@@ -6517,7 +6517,7 @@ class _$_TestScriptFixture extends _TestScriptFixture {
       _$$_TestScriptFixtureFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -6610,7 +6610,7 @@ class _$_TestScriptFixture extends _TestScriptFixture {
 
 abstract class _TestScriptFixture extends TestScriptFixture {
   factory _TestScriptFixture(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final FhirBoolean? autocreate,
@@ -6951,7 +6951,7 @@ class _$_TestScriptVariable extends _TestScriptVariable {
       _$$_TestScriptVariableFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -6990,7 +6990,7 @@ class _$_TestScriptVariable extends _TestScriptVariable {
   @JsonKey(name: '_path')
   final Element? pathElement;
   @override
-  final Id? sourceId;
+  final FhirId? sourceId;
   @override
   @JsonKey(name: '_sourceId')
   final Element? sourceIdElement;
@@ -7059,7 +7059,7 @@ class _$_TestScriptVariable extends _TestScriptVariable {
 
 abstract class _TestScriptVariable extends TestScriptVariable {
   factory _TestScriptVariable(
-          {final Id? id,
+          {final FhirId? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           required final String name,
@@ -7068,7 +7068,7 @@ abstract class _TestScriptVariable extends TestScriptVariable {
           @JsonKey(name: '_headerField') final Element? headerFieldElement,
           final String? path,
           @JsonKey(name: '_path') final Element? pathElement,
-          final Id? sourceId,
+          final FhirId? sourceId,
           @JsonKey(name: '_sourceId') final Element? sourceIdElement}) =
       _$_TestScriptVariable;
   _TestScriptVariable._() : super._();
@@ -7280,7 +7280,7 @@ class _$_TestScriptSetup extends _TestScriptSetup {
       _$$_TestScriptSetupFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -7359,7 +7359,7 @@ class _$_TestScriptSetup extends _TestScriptSetup {
 
 abstract class _TestScriptSetup extends TestScriptSetup {
   factory _TestScriptSetup(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final TestScriptMetadata? metadata,
@@ -7591,7 +7591,7 @@ class _$_TestScriptSetupAction extends _TestScriptSetupAction {
       _$$_TestScriptSetupActionFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -7681,7 +7681,7 @@ class _$_TestScriptSetupAction extends _TestScriptSetupAction {
 
 abstract class _TestScriptSetupAction extends TestScriptSetupAction {
   factory _TestScriptSetupAction(
-          {final Id? id,
+          {final FhirId? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
@@ -8469,7 +8469,7 @@ class _$_TestScriptActionOperation extends _TestScriptActionOperation {
       _$$_TestScriptActionOperationFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -8558,17 +8558,17 @@ class _$_TestScriptActionOperation extends _TestScriptActionOperation {
   }
 
   @override
-  final Id? responseId;
+  final FhirId? responseId;
   @override
   @JsonKey(name: '_responseId')
   final Element? responseIdElement;
   @override
-  final Id? sourceId;
+  final FhirId? sourceId;
   @override
   @JsonKey(name: '_sourceId')
   final Element? sourceIdElement;
   @override
-  final Id? targetId;
+  final FhirId? targetId;
   @override
   @JsonKey(name: '_targetId')
   final Element? targetIdElement;
@@ -8698,7 +8698,7 @@ class _$_TestScriptActionOperation extends _TestScriptActionOperation {
 
 abstract class _TestScriptActionOperation extends TestScriptActionOperation {
   factory _TestScriptActionOperation(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -8732,13 +8732,13 @@ abstract class _TestScriptActionOperation extends TestScriptActionOperation {
       @JsonKey(name: '_params')
           final Element? paramsElement,
       final List<TestScriptOperationRequestHeader>? requestHeader,
-      final Id? responseId,
+      final FhirId? responseId,
       @JsonKey(name: '_responseId')
           final Element? responseIdElement,
-      final Id? sourceId,
+      final FhirId? sourceId,
       @JsonKey(name: '_sourceId')
           final Element? sourceIdElement,
-      final Id? targetId,
+      final FhirId? targetId,
       @JsonKey(name: '_targetId')
           final Element? targetIdElement,
       final String? url,
@@ -9068,7 +9068,7 @@ class _$_TestScriptOperationRequestHeader
       _$$_TestScriptOperationRequestHeaderFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -9147,7 +9147,7 @@ class _$_TestScriptOperationRequestHeader
 abstract class _TestScriptOperationRequestHeader
     extends TestScriptOperationRequestHeader {
   factory _TestScriptOperationRequestHeader(
-          {final Id? id,
+          {final FhirId? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final FhirExtension? modifierExtension,
           required final String field,
@@ -10146,7 +10146,7 @@ class _$_TestScriptActionAssert extends _TestScriptActionAssert {
       _$$_TestScriptActionAssertFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -10241,12 +10241,12 @@ class _$_TestScriptActionAssert extends _TestScriptActionAssert {
   @JsonKey(name: '_responseCode')
   final Element? responseCodeElement;
   @override
-  final Id? sourceId;
+  final FhirId? sourceId;
   @override
   @JsonKey(name: '_sourceId')
   final Element? sourceIdElement;
   @override
-  final Id? validateProfileId;
+  final FhirId? validateProfileId;
   @override
   @JsonKey(name: '_validateProfileId')
   final Element? validateProfileIdElement;
@@ -10401,7 +10401,7 @@ class _$_TestScriptActionAssert extends _TestScriptActionAssert {
 
 abstract class _TestScriptActionAssert extends TestScriptActionAssert {
   factory _TestScriptActionAssert(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -10449,10 +10449,10 @@ abstract class _TestScriptActionAssert extends TestScriptActionAssert {
       final String? responseCode,
       @JsonKey(name: '_responseCode')
           final Element? responseCodeElement,
-      final Id? sourceId,
+      final FhirId? sourceId,
       @JsonKey(name: '_sourceId')
           final Element? sourceIdElement,
-      final Id? validateProfileId,
+      final FhirId? validateProfileId,
       @JsonKey(name: '_validateProfileId')
           final Element? validateProfileIdElement,
       final String? value,
@@ -10829,7 +10829,7 @@ class _$_TestScriptTest extends _TestScriptTest {
       _$$_TestScriptTestFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -10929,7 +10929,7 @@ class _$_TestScriptTest extends _TestScriptTest {
 
 abstract class _TestScriptTest extends TestScriptTest {
   factory _TestScriptTest(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final String? name,
@@ -11111,7 +11111,7 @@ class _$_TestScriptTeardown extends _TestScriptTeardown {
       _$$_TestScriptTeardownFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -11186,7 +11186,7 @@ class _$_TestScriptTeardown extends _TestScriptTeardown {
 
 abstract class _TestScriptTeardown extends TestScriptTeardown {
   factory _TestScriptTeardown(
-          {final Id? id,
+          {final FhirId? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           required final List<TestScriptTeardownAction> action}) =
@@ -11388,7 +11388,7 @@ class _$_TestScriptTeardownAction extends _TestScriptTeardownAction {
       _$$_TestScriptTeardownActionFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -11473,7 +11473,7 @@ class _$_TestScriptTeardownAction extends _TestScriptTeardownAction {
 
 abstract class _TestScriptTeardownAction extends TestScriptTeardownAction {
   factory _TestScriptTeardownAction(
-          {final Id? id,
+          {final FhirId? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,

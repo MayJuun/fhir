@@ -40,7 +40,7 @@ class BundleUsCore extends Resource {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [type] Indicates the purpose of this bundle - how it is intended to be
     ///  used.
@@ -54,7 +54,7 @@ class BundleUsCore extends Resource {
     /// of type 'match' across all pages in the search.  It does not include
     /// search.mode = 'include' or 'outcome' entries and it does not provide a
     ///  count of the number of entries in the Bundle.
-    UnsignedInt? total,
+    FhirUnsignedInt? total,
 
     /// [link] A series of links that provide context to this bundle.
     List<BundleLink>? link,
@@ -90,7 +90,7 @@ class BundleUsCore extends Resource {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  Meta? get meta => _bundle.meta;
+  FhirMeta? get meta => _bundle.meta;
 
   /// [type] Indicates the purpose of this bundle - how it is intended to be
   ///  used.
@@ -104,7 +104,7 @@ class BundleUsCore extends Resource {
   /// of type 'match' across all pages in the search.  It does not include
   /// search.mode = 'include' or 'outcome' entries and it does not provide a
   ///  count of the number of entries in the Bundle.
-  UnsignedInt? get total => _bundle.total;
+  FhirUnsignedInt? get total => _bundle.total;
 
   /// [link] A series of links that provide context to this bundle.
   List<BundleLink>? get link => _bundle.link;

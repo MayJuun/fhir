@@ -2180,7 +2180,7 @@ class CitationEntry with _$CitationEntry {
     Boolean? correspondingContact,
     @JsonKey(name: '_correspondingContact')
         Element? correspondingContactElement,
-    PositiveInt? listOrder,
+    FhirPositiveInt? listOrder,
     @JsonKey(name: '_listOrder') Element? listOrderElement,
   }) = _CitationEntry;
 
@@ -2880,9 +2880,9 @@ class EvidenceStatistic with _$EvidenceStatistic {
     CodeableConcept? statisticType,
     CodeableConcept? category,
     Quantity? quantity,
-    UnsignedInt? numberOfEvents,
+    FhirUnsignedInt? numberOfEvents,
     @JsonKey(name: '_numberOfEvents') Element? numberOfEventsElement,
-    UnsignedInt? numberAffected,
+    FhirUnsignedInt? numberAffected,
     @JsonKey(name: '_numberAffected') Element? numberAffectedElement,
     EvidenceSampleSize? sampleSize,
     List<EvidenceAttributeEstimate>? attributeEstimate,
@@ -2959,12 +2959,12 @@ class EvidenceSampleSize with _$EvidenceSampleSize {
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     List<Annotation>? note,
-    UnsignedInt? numberOfStudies,
+    FhirUnsignedInt? numberOfStudies,
     @JsonKey(name: '_numberOfStudies') Element? numberOfStudiesElement,
-    UnsignedInt? numberOfParticipants,
+    FhirUnsignedInt? numberOfParticipants,
     @JsonKey(name: '_numberOfParticipants')
         Element? numberOfParticipantsElement,
-    UnsignedInt? knownDataCount,
+    FhirUnsignedInt? knownDataCount,
     @JsonKey(name: '_knownDataCount') Element? knownDataCountElement,
   }) = _EvidenceSampleSize;
 
@@ -4675,7 +4675,7 @@ class ResearchDefinition extends HiveObject
     @HiveField(55) List<ContactDetail>? reviewer,
     @HiveField(56) List<ContactDetail>? endorser,
     @HiveField(57) List<RelatedArtifact>? relatedArtifact,
-    @HiveField(58) @JsonKey(name: 'library') List<Canonical>? library_,
+    @HiveField(58) @JsonKey(name: 'library') List<FhirCanonical>? library_,
     @HiveField(59) required Reference population,
     @HiveField(60) Reference? exposure,
     @HiveField(61) Reference? exposureAlternative,
@@ -5017,7 +5017,7 @@ class ResearchElementDefinition extends HiveObject
     @HiveField(55) List<ContactDetail>? reviewer,
     @HiveField(56) List<ContactDetail>? endorser,
     @HiveField(57) List<RelatedArtifact>? relatedArtifact,
-    @HiveField(58) @JsonKey(name: 'library') List<Canonical>? library_,
+    @HiveField(58) @JsonKey(name: 'library') List<FhirCanonical>? library_,
     @HiveField(59) Code? type,
     @HiveField(60) @JsonKey(name: '_type') Element? typeElement,
     @HiveField(61) Code? variableType,

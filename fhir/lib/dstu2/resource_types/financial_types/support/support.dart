@@ -20,7 +20,7 @@ class Coverage with Resource, _$Coverage {
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Coverage)
         Dstu2ResourceType resourceType,
     FhirId? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,
@@ -39,9 +39,9 @@ class Coverage with Resource, _$Coverage {
     String? group,
     String? plan,
     String? subPlan,
-    PositiveInt? dependent,
+    FhirPositiveInt? dependent,
     @JsonKey(name: '_dependent') Element? dependentElement,
-    PositiveInt? sequence,
+    FhirPositiveInt? sequence,
     Reference? subscriber,
     Identifier? network,
     @JsonKey(name: '_network') Element? networkElement,
@@ -84,7 +84,7 @@ class EligibilityRequest with Resource, _$EligibilityRequest {
     @JsonKey(unknownEnumValue: Dstu2ResourceType.EligibilityRequest)
         Dstu2ResourceType resourceType,
     FhirId? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,
@@ -139,7 +139,7 @@ class EligibilityResponse with Resource, _$EligibilityResponse {
     @JsonKey(unknownEnumValue: Dstu2ResourceType.EligibilityResponse)
         Dstu2ResourceType resourceType,
     FhirId? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,
@@ -200,7 +200,7 @@ class EnrollmentRequest with Resource, _$EnrollmentRequest {
     @JsonKey(unknownEnumValue: Dstu2ResourceType.EnrollmentRequest)
         Dstu2ResourceType resourceType,
     FhirId? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,
@@ -258,7 +258,7 @@ class EnrollmentResponse with Resource, _$EnrollmentResponse {
     @JsonKey(unknownEnumValue: Dstu2ResourceType.EnrollmentResponse)
         Dstu2ResourceType resourceType,
     FhirId? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,

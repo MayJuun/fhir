@@ -101,8 +101,8 @@ Resource _newId(Resource resource) {
       return (resource as ImmunizationRecommendation).copyWith(id: newId());
     case Dstu2ResourceType.ImplementationGuide:
       return (resource as ImplementationGuide).copyWith(id: newId());
-    case Dstu2ResourceType.List_:
-      return (resource as List_).copyWith(id: newId());
+    case Dstu2ResourceType.FhirList:
+      return (resource as FhirList).copyWith(id: newId());
     case Dstu2ResourceType.Location:
       return (resource as Location).copyWith(id: newId());
     case Dstu2ResourceType.Media:

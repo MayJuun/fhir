@@ -412,7 +412,7 @@ class FhirMeta with _$FhirMeta {
     /// [profile] A list of profiles (references to [[[StructureDefinition]]]
     /// resources) that this resource claims to conform to. The URL is a reference
     ///  to [[[StructureDefinition.url]]].
-    List<Canonical>? profile,
+    List<FhirCanonical>? profile,
 
     /// [security] Security labels applied to this resource. These tags connect
     ///  specific resources to the overall security policy and infrastructure.
@@ -2572,7 +2572,7 @@ class ElementDefinition with _$ElementDefinition {
 
     /// [min] The minimum number of times this element SHALL appear in the
     ///  instance.
-    UnsignedInt? min,
+    FhirUnsignedInt? min,
 
     /// [minElement] Extensions for min
     @JsonKey(name: '_min')
@@ -2713,7 +2713,7 @@ class ElementDefinition with _$ElementDefinition {
     /// [defaultValueOid] The value that should be used if there is no value
     /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
     ///  false').
-    Oid? defaultValueOid,
+    FhirOid? defaultValueOid,
 
     /// [defaultValueOidElement] Extensions for defaultValueOid
     @JsonKey(name: '_defaultValueOid')
@@ -2722,7 +2722,7 @@ class ElementDefinition with _$ElementDefinition {
     /// [defaultValuePositiveInt] The value that should be used if there is no
     /// value stated in the instance (e.g. 'if not otherwise specified, the
     ///  abstract is false').
-    PositiveInt? defaultValuePositiveInt,
+    FhirPositiveInt? defaultValuePositiveInt,
     @JsonKey(name: '_defaultValuePositiveInt')
 
         /// [defaultValuePositiveIntElement] Extensions for defaultValuePositiveInt
@@ -2740,7 +2740,7 @@ class ElementDefinition with _$ElementDefinition {
     /// [defaultValueTime] The value that should be used if there is no value
     /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
     ///  false').
-    Time? defaultValueTime,
+    FhirTime? defaultValueTime,
 
     /// [defaultValueTimeElement] Extensions for defaultValueTime
     @JsonKey(name: '_defaultValueTime')
@@ -2749,7 +2749,7 @@ class ElementDefinition with _$ElementDefinition {
     /// [defaultValueUnsignedInt] The value that should be used if there is no
     /// value stated in the instance (e.g. 'if not otherwise specified, the
     ///  abstract is false').
-    UnsignedInt? defaultValueUnsignedInt,
+    FhirUnsignedInt? defaultValueUnsignedInt,
     @JsonKey(name: '_defaultValueUnsignedInt')
 
         /// [defaultValueUnsignedIntElement] Extensions for defaultValueUnsignedInt
@@ -2776,7 +2776,7 @@ class ElementDefinition with _$ElementDefinition {
     /// [defaultValueUuid] The value that should be used if there is no value
     /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
     ///  false').
-    Uuid? defaultValueUuid,
+    FhirUuid? defaultValueUuid,
 
     /// [defaultValueUuidElement] Extensions for defaultValueUuid
     @JsonKey(name: '_defaultValueUuid')
@@ -3067,7 +3067,7 @@ class ElementDefinition with _$ElementDefinition {
     /// element in the instance. For purposes of comparison, non-significant
     /// whitespace is ignored, and all values must be an exact match (case and
     ///  accent sensitive). Missing elements/attributes must also be missing.
-    Oid? fixedOid,
+    FhirOid? fixedOid,
 
     /// [fixedOidElement] Extensions for fixedOid
     @JsonKey(name: '_fixedOid')
@@ -3077,7 +3077,7 @@ class ElementDefinition with _$ElementDefinition {
     /// this element in the instance. For purposes of comparison, non-significant
     /// whitespace is ignored, and all values must be an exact match (case and
     ///  accent sensitive). Missing elements/attributes must also be missing.
-    PositiveInt? fixedPositiveInt,
+    FhirPositiveInt? fixedPositiveInt,
 
     /// [fixedPositiveIntElement] Extensions for fixedPositiveInt
     @JsonKey(name: '_fixedPositiveInt')
@@ -3097,7 +3097,7 @@ class ElementDefinition with _$ElementDefinition {
     /// element in the instance. For purposes of comparison, non-significant
     /// whitespace is ignored, and all values must be an exact match (case and
     ///  accent sensitive). Missing elements/attributes must also be missing.
-    Time? fixedTime,
+    FhirTime? fixedTime,
 
     /// [fixedTimeElement] Extensions for fixedTime
     @JsonKey(name: '_fixedTime')
@@ -3107,7 +3107,7 @@ class ElementDefinition with _$ElementDefinition {
     /// this element in the instance. For purposes of comparison, non-significant
     /// whitespace is ignored, and all values must be an exact match (case and
     ///  accent sensitive). Missing elements/attributes must also be missing.
-    UnsignedInt? fixedUnsignedInt,
+    FhirUnsignedInt? fixedUnsignedInt,
 
     /// [fixedUnsignedIntElement] Extensions for fixedUnsignedInt
     @JsonKey(name: '_fixedUnsignedInt')
@@ -3137,7 +3137,7 @@ class ElementDefinition with _$ElementDefinition {
     /// element in the instance. For purposes of comparison, non-significant
     /// whitespace is ignored, and all values must be an exact match (case and
     ///  accent sensitive). Missing elements/attributes must also be missing.
-    Uuid? fixedUuid,
+    FhirUuid? fixedUuid,
 
     /// [fixedUuidElement] Extensions for fixedUuid
     @JsonKey(name: '_fixedUuid')
@@ -3579,7 +3579,7 @@ class ElementDefinition with _$ElementDefinition {
     /// 1. If primitive: it must match exactly the pattern value
     /// 2. If a complex object: it must match (recursively) the pattern value
     /// 3. If an array: it must match (recursively) the pattern value.
-    Oid? patternOid,
+    FhirOid? patternOid,
 
     /// [patternOidElement] Extensions for patternOid
     @JsonKey(name: '_patternOid')
@@ -3600,7 +3600,7 @@ class ElementDefinition with _$ElementDefinition {
     /// 1. If primitive: it must match exactly the pattern value
     /// 2. If a complex object: it must match (recursively) the pattern value
     /// 3. If an array: it must match (recursively) the pattern value.
-    PositiveInt? patternPositiveInt,
+    FhirPositiveInt? patternPositiveInt,
 
     /// [patternPositiveIntElement] Extensions for patternPositiveInt
     @JsonKey(name: '_patternPositiveInt')
@@ -3642,7 +3642,7 @@ class ElementDefinition with _$ElementDefinition {
     /// 1. If primitive: it must match exactly the pattern value
     /// 2. If a complex object: it must match (recursively) the pattern value
     /// 3. If an array: it must match (recursively) the pattern value.
-    Time? patternTime,
+    FhirTime? patternTime,
 
     /// [patternTimeElement] Extensions for patternTime
     @JsonKey(name: '_patternTime')
@@ -3663,7 +3663,7 @@ class ElementDefinition with _$ElementDefinition {
     /// 1. If primitive: it must match exactly the pattern value
     /// 2. If a complex object: it must match (recursively) the pattern value
     /// 3. If an array: it must match (recursively) the pattern value.
-    UnsignedInt? patternUnsignedInt,
+    FhirUnsignedInt? patternUnsignedInt,
 
     /// [patternUnsignedIntElement] Extensions for patternUnsignedInt
     @JsonKey(name: '_patternUnsignedInt')
@@ -3726,7 +3726,7 @@ class ElementDefinition with _$ElementDefinition {
     /// 1. If primitive: it must match exactly the pattern value
     /// 2. If a complex object: it must match (recursively) the pattern value
     /// 3. If an array: it must match (recursively) the pattern value.
-    Uuid? patternUuid,
+    FhirUuid? patternUuid,
 
     /// [patternUuidElement] Extensions for patternUuid
     @JsonKey(name: '_patternUuid')
@@ -4278,7 +4278,7 @@ class ElementDefinition with _$ElementDefinition {
     /// [minValueTime] The minimum allowed value for the element. The value is
     /// inclusive. This is allowed for the types date, dateTime, instant, time,
     ///  decimal, integer, and Quantity.
-    Time? minValueTime,
+    FhirTime? minValueTime,
 
     /// [minValueTimeElement] Extensions for minValueTime
     @JsonKey(name: '_minValueTime')
@@ -4305,7 +4305,7 @@ class ElementDefinition with _$ElementDefinition {
     /// [minValuePositiveInt] The minimum allowed value for the element. The
     /// value is inclusive. This is allowed for the types date, dateTime, instant,
     ///  time, decimal, integer, and Quantity.
-    PositiveInt? minValuePositiveInt,
+    FhirPositiveInt? minValuePositiveInt,
 
     /// [minValuePositiveIntElement] Extensions for minValuePositiveInt
     @JsonKey(name: '_minValuePositiveInt')
@@ -4314,7 +4314,7 @@ class ElementDefinition with _$ElementDefinition {
     /// [minValueUnsignedInt] The minimum allowed value for the element. The
     /// value is inclusive. This is allowed for the types date, dateTime, instant,
     ///  time, decimal, integer, and Quantity.
-    UnsignedInt? minValueUnsignedInt,
+    FhirUnsignedInt? minValueUnsignedInt,
 
     /// [minValueUnsignedIntElement] Extensions for minValueUnsignedInt
     @JsonKey(name: '_minValueUnsignedInt')
@@ -4355,7 +4355,7 @@ class ElementDefinition with _$ElementDefinition {
     /// [maxValueTime] The maximum allowed value for the element. The value is
     /// inclusive. This is allowed for the types date, dateTime, instant, time,
     ///  decimal, integer, and Quantity.
-    Time? maxValueTime,
+    FhirTime? maxValueTime,
 
     /// [maxValueTimeElement] Extensions for maxValueTime
     @JsonKey(name: '_maxValueTime')
@@ -4382,7 +4382,7 @@ class ElementDefinition with _$ElementDefinition {
     /// [maxValuePositiveInt] The maximum allowed value for the element. The
     /// value is inclusive. This is allowed for the types date, dateTime, instant,
     ///  time, decimal, integer, and Quantity.
-    PositiveInt? maxValuePositiveInt,
+    FhirPositiveInt? maxValuePositiveInt,
 
     /// [maxValuePositiveIntElement] Extensions for maxValuePositiveInt
     @JsonKey(name: '_maxValuePositiveInt')
@@ -4391,7 +4391,7 @@ class ElementDefinition with _$ElementDefinition {
     /// [maxValueUnsignedInt] The maximum allowed value for the element. The
     /// value is inclusive. This is allowed for the types date, dateTime, instant,
     ///  time, decimal, integer, and Quantity.
-    UnsignedInt? maxValueUnsignedInt,
+    FhirUnsignedInt? maxValueUnsignedInt,
 
     /// [maxValueUnsignedIntElement] Extensions for maxValueUnsignedInt
     @JsonKey(name: '_maxValueUnsignedInt')
@@ -4413,7 +4413,7 @@ class ElementDefinition with _$ElementDefinition {
 
     /// [condition] A reference to an invariant that may make additional
     ///  statements about the cardinality or value in the instance.
-    List<Id>? condition,
+    List<FhirId>? condition,
 
     /// [conditionElement] Extensions for condition
     @JsonKey(name: '_condition')
@@ -4866,7 +4866,7 @@ class ElementDefinitionBase with _$ElementDefinitionBase {
     @JsonKey(name: '_path') Element? pathElement,
 
     /// [min] Minimum cardinality of the base element identified by the path.
-    UnsignedInt? min,
+    FhirUnsignedInt? min,
 
     /// [minElement] Extensions for min
     @JsonKey(name: '_min') Element? minElement,
@@ -5025,7 +5025,7 @@ class ElementDefinitionType with _$ElementDefinitionType {
     /// reference to another StructureDefinition or Implementation Guide by a
     /// canonical URL. When an implementation guide is specified, the type SHALL
     ///  conform to at least one profile defined in the implementation guide.
-    List<Canonical>? profile,
+    List<FhirCanonical>? profile,
     @JsonKey(name: '_profile')
         List<Element?>? profileElement,
 
@@ -5038,7 +5038,7 @@ class ElementDefinitionType with _$ElementDefinitionType {
     /// canonical URL. When an implementation guide is specified, the target
     /// resource SHALL conform to at least one profile defined in the
     ///  implementation guide.
-    List<Canonical>? targetProfile,
+    List<FhirCanonical>? targetProfile,
 
     /// [aggregation] If the type is a reference to another resource, how the
     /// resource is or can be aggregated - is it a contained resource, or a
@@ -5427,14 +5427,14 @@ class ElementDefinitionExample with _$ElementDefinitionExample {
 
     /// [valueOid] The actual value for the element, which must be one of the
     ///  types allowed for this element.
-    Oid? valueOid,
+    FhirOid? valueOid,
 
     /// [valueOidElement] Extensions for valueOid
     @JsonKey(name: '_valueOid') Element? valueOidElement,
 
     /// [valuePositiveInt] The actual value for the element, which must be one of
     ///  the types allowed for this element.
-    PositiveInt? valuePositiveInt,
+    FhirPositiveInt? valuePositiveInt,
 
     /// [valuePositiveIntElement] Extensions for valuePositiveInt
     @JsonKey(name: '_valuePositiveInt') Element? valuePositiveIntElement,
@@ -5448,14 +5448,14 @@ class ElementDefinitionExample with _$ElementDefinitionExample {
 
     /// [valueTime] The actual value for the element, which must be one of the
     ///  types allowed for this element.
-    Time? valueTime,
+    FhirTime? valueTime,
 
     /// [valueTimeElement] Extensions for valueTime
     @JsonKey(name: '_valueTime') Element? valueTimeElement,
 
     /// [valueUnsignedInt] The actual value for the element, which must be one of
     ///  the types allowed for this element.
-    UnsignedInt? valueUnsignedInt,
+    FhirUnsignedInt? valueUnsignedInt,
 
     /// [valueUnsignedIntElement] Extensions for valueUnsignedInt
     @JsonKey(name: '_valueUnsignedInt') Element? valueUnsignedIntElement,
@@ -5476,7 +5476,7 @@ class ElementDefinitionExample with _$ElementDefinitionExample {
 
     /// [valueUuid] The actual value for the element, which must be one of the
     ///  types allowed for this element.
-    Uuid? valueUuid,
+    FhirUuid? valueUuid,
 
     /// [valueUuidElement] Extensions for valueUuid
     @JsonKey(name: '_valueUuid') Element? valueUuidElement,
@@ -5605,7 +5605,7 @@ class ElementDefinitionExample with _$ElementDefinitionExample {
 
     /// [valueMeta] The actual value for the element, which must be one of the
     ///  types allowed for this element.
-    Meta? valueMeta,
+    FhirMeta? valueMeta,
   }) = _ElementDefinitionExample;
 
   /// Produces a Yaml formatted String version of the object

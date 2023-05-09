@@ -9,7 +9,7 @@ class ProcedureUsCore extends Resource {
 
   factory ProcedureUsCore({
     String? id,
-    Meta? meta,
+    FhirMeta? meta,
     Narrative? text,
     List<Identifier>? identifier,
     required ProcedureStatus status,
@@ -37,7 +37,7 @@ class ProcedureUsCore extends Resource {
   Procedure _procedure;
   Procedure get value => _procedure;
   String? get id => _procedure.id;
-  Meta? get meta => _procedure.meta;
+  FhirMeta? get meta => _procedure.meta;
   Narrative? get text => _procedure.text;
   List<Identifier>? get identifier => _procedure.identifier;
   Code? get status => _procedure.status;

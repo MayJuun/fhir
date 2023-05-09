@@ -23,7 +23,7 @@ mixin _$AdverseEvent {
   @JsonKey(unknownEnumValue: R4ResourceType.AdverseEvent)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   String? get id => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
@@ -83,7 +83,7 @@ abstract class $AdverseEventCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R4ResourceType.AdverseEvent)
           R4ResourceType resourceType,
       String? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -549,7 +549,7 @@ abstract class _$$_AdverseEventCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R4ResourceType.AdverseEvent)
           R4ResourceType resourceType,
       String? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -1226,7 +1226,7 @@ abstract class _AdverseEvent extends AdverseEvent {
   @override
   String? get id;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
@@ -1987,7 +1987,7 @@ mixin _$AllergyIntolerance {
   @JsonKey(unknownEnumValue: R4ResourceType.AllergyIntolerance)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   String? get id => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
@@ -2006,7 +2006,7 @@ mixin _$AllergyIntolerance {
   FhirCode? get type => throw _privateConstructorUsedError;
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
-  List<Code>? get category => throw _privateConstructorUsedError;
+  List<FhirCode>? get category => throw _privateConstructorUsedError;
   @JsonKey(name: '_category')
   List<Element?>? get categoryElement => throw _privateConstructorUsedError;
   FhirCode? get criticality => throw _privateConstructorUsedError;
@@ -2052,7 +2052,7 @@ abstract class $AllergyIntoleranceCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R4ResourceType.AllergyIntolerance)
           R4ResourceType resourceType,
       String? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -2070,7 +2070,7 @@ abstract class $AllergyIntoleranceCopyWith<$Res> {
       FhirCode? type,
       @JsonKey(name: '_type')
           Element? typeElement,
-      List<Code>? category,
+      List<FhirCode>? category,
       @JsonKey(name: '_category')
           List<Element?>? categoryElement,
       FhirCode? criticality,
@@ -2241,7 +2241,7 @@ class _$AllergyIntoleranceCopyWithImpl<$Res, $Val extends AllergyIntolerance>
       category: freezed == category
           ? _value.category
           : category // ignore: cast_nullable_to_non_nullable
-              as List<Code>?,
+              as List<FhirCode>?,
       categoryElement: freezed == categoryElement
           ? _value.categoryElement
           : categoryElement // ignore: cast_nullable_to_non_nullable
@@ -2578,7 +2578,7 @@ abstract class _$$_AllergyIntoleranceCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R4ResourceType.AllergyIntolerance)
           R4ResourceType resourceType,
       String? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -2596,7 +2596,7 @@ abstract class _$$_AllergyIntoleranceCopyWith<$Res>
       FhirCode? type,
       @JsonKey(name: '_type')
           Element? typeElement,
-      List<Code>? category,
+      List<FhirCode>? category,
       @JsonKey(name: '_category')
           List<Element?>? categoryElement,
       FhirCode? criticality,
@@ -2785,7 +2785,7 @@ class __$$_AllergyIntoleranceCopyWithImpl<$Res>
       category: freezed == category
           ? _value._category
           : category // ignore: cast_nullable_to_non_nullable
-              as List<Code>?,
+              as List<FhirCode>?,
       categoryElement: freezed == categoryElement
           ? _value._categoryElement
           : categoryElement // ignore: cast_nullable_to_non_nullable
@@ -2899,7 +2899,7 @@ class _$_AllergyIntolerance extends _AllergyIntolerance {
       this.type,
       @JsonKey(name: '_type')
           this.typeElement,
-      final List<Code>? category,
+      final List<FhirCode>? category,
       @JsonKey(name: '_category')
           final List<Element?>? categoryElement,
       this.criticality,
@@ -3010,9 +3010,9 @@ class _$_AllergyIntolerance extends _AllergyIntolerance {
   @override
   @JsonKey(name: '_type')
   final Element? typeElement;
-  final List<Code>? _category;
+  final List<FhirCode>? _category;
   @override
-  List<Code>? get category {
+  List<FhirCode>? get category {
     final value = _category;
     if (value == null) return null;
     if (_category is EqualUnmodifiableListView) return _category;
@@ -3253,7 +3253,7 @@ abstract class _AllergyIntolerance extends AllergyIntolerance {
           final FhirCode? type,
           @JsonKey(name: '_type')
               final Element? typeElement,
-          final List<Code>? category,
+          final List<FhirCode>? category,
           @JsonKey(name: '_category')
               final List<Element?>? categoryElement,
           final FhirCode? criticality,
@@ -3293,7 +3293,7 @@ abstract class _AllergyIntolerance extends AllergyIntolerance {
   @override
   String? get id;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
@@ -3325,7 +3325,7 @@ abstract class _AllergyIntolerance extends AllergyIntolerance {
   @JsonKey(name: '_type')
   Element? get typeElement;
   @override
-  List<Code>? get category;
+  List<FhirCode>? get category;
   @override
   @JsonKey(name: '_category')
   List<Element?>? get categoryElement;
@@ -3926,7 +3926,7 @@ mixin _$ClinicalImpression {
   @JsonKey(unknownEnumValue: R4ResourceType.ClinicalImpression)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   String? get id => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
@@ -3992,7 +3992,7 @@ abstract class $ClinicalImpressionCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R4ResourceType.ClinicalImpression)
           R4ResourceType resourceType,
       String? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -4465,7 +4465,7 @@ abstract class _$$_ClinicalImpressionCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R4ResourceType.ClinicalImpression)
           R4ResourceType resourceType,
       String? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -5212,7 +5212,7 @@ abstract class _ClinicalImpression extends ClinicalImpression {
   @override
   String? get id;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
@@ -5950,7 +5950,7 @@ mixin _$Condition {
   @JsonKey(unknownEnumValue: R4ResourceType.Condition)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   String? get id => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
@@ -6014,7 +6014,7 @@ abstract class $ConditionCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R4ResourceType.Condition)
           R4ResourceType resourceType,
       String? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -6594,7 +6594,7 @@ abstract class _$$_ConditionCopyWith<$Res> implements $ConditionCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R4ResourceType.Condition)
           R4ResourceType resourceType,
       String? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -7353,7 +7353,7 @@ abstract class _Condition extends Condition {
   @override
   String? get id;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
@@ -8040,7 +8040,7 @@ mixin _$DetectedIssue {
   @JsonKey(unknownEnumValue: R4ResourceType.DetectedIssue)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   String? get id => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
@@ -8095,7 +8095,7 @@ abstract class $DetectedIssueCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R4ResourceType.DetectedIssue)
           R4ResourceType resourceType,
       String? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -8478,7 +8478,7 @@ abstract class _$$_DetectedIssueCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R4ResourceType.DetectedIssue)
           R4ResourceType resourceType,
       String? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -9044,7 +9044,7 @@ abstract class _DetectedIssue extends DetectedIssue {
   @override
   String? get id;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
@@ -9740,7 +9740,7 @@ mixin _$FamilyMemberHistory {
   @JsonKey(unknownEnumValue: R4ResourceType.FamilyMemberHistory)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   String? get id => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
@@ -9754,7 +9754,7 @@ mixin _$FamilyMemberHistory {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
-  List<Canonical>? get instantiatesCanonical =>
+  List<FhirCanonical>? get instantiatesCanonical =>
       throw _privateConstructorUsedError;
   List<FhirUri>? get instantiatesUri => throw _privateConstructorUsedError;
   @JsonKey(name: '_instantiatesUri')
@@ -9821,7 +9821,7 @@ abstract class $FamilyMemberHistoryCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R4ResourceType.FamilyMemberHistory)
           R4ResourceType resourceType,
       String? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -9834,7 +9834,7 @@ abstract class $FamilyMemberHistoryCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      List<Canonical>? instantiatesCanonical,
+      List<FhirCanonical>? instantiatesCanonical,
       List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
           List<Element?>? instantiatesUriElement,
@@ -10021,7 +10021,7 @@ class _$FamilyMemberHistoryCopyWithImpl<$Res, $Val extends FamilyMemberHistory>
       instantiatesCanonical: freezed == instantiatesCanonical
           ? _value.instantiatesCanonical
           : instantiatesCanonical // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       instantiatesUri: freezed == instantiatesUri
           ? _value.instantiatesUri
           : instantiatesUri // ignore: cast_nullable_to_non_nullable
@@ -10446,7 +10446,7 @@ abstract class _$$_FamilyMemberHistoryCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R4ResourceType.FamilyMemberHistory)
           R4ResourceType resourceType,
       String? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -10459,7 +10459,7 @@ abstract class _$$_FamilyMemberHistoryCopyWith<$Res>
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      List<Canonical>? instantiatesCanonical,
+      List<FhirCanonical>? instantiatesCanonical,
       List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
           List<Element?>? instantiatesUriElement,
@@ -10667,7 +10667,7 @@ class __$$_FamilyMemberHistoryCopyWithImpl<$Res>
       instantiatesCanonical: freezed == instantiatesCanonical
           ? _value._instantiatesCanonical
           : instantiatesCanonical // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       instantiatesUri: freezed == instantiatesUri
           ? _value._instantiatesUri
           : instantiatesUri // ignore: cast_nullable_to_non_nullable
@@ -10832,7 +10832,7 @@ class _$_FamilyMemberHistory extends _FamilyMemberHistory {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      final List<Canonical>? instantiatesCanonical,
+      final List<FhirCanonical>? instantiatesCanonical,
       final List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
           final List<Element?>? instantiatesUriElement,
@@ -10956,9 +10956,9 @@ class _$_FamilyMemberHistory extends _FamilyMemberHistory {
     return EqualUnmodifiableListView(value);
   }
 
-  final List<Canonical>? _instantiatesCanonical;
+  final List<FhirCanonical>? _instantiatesCanonical;
   @override
-  List<Canonical>? get instantiatesCanonical {
+  List<FhirCanonical>? get instantiatesCanonical {
     final value = _instantiatesCanonical;
     if (value == null) return null;
     if (_instantiatesCanonical is EqualUnmodifiableListView)
@@ -11282,7 +11282,7 @@ abstract class _FamilyMemberHistory extends FamilyMemberHistory {
               final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           final List<Identifier>? identifier,
-          final List<Canonical>? instantiatesCanonical,
+          final List<FhirCanonical>? instantiatesCanonical,
           final List<FhirUri>? instantiatesUri,
           @JsonKey(name: '_instantiatesUri')
               final List<Element?>? instantiatesUriElement,
@@ -11341,7 +11341,7 @@ abstract class _FamilyMemberHistory extends FamilyMemberHistory {
   @override
   String? get id;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
@@ -11364,7 +11364,7 @@ abstract class _FamilyMemberHistory extends FamilyMemberHistory {
   @override
   List<Identifier>? get identifier;
   @override
-  List<Canonical>? get instantiatesCanonical;
+  List<FhirCanonical>? get instantiatesCanonical;
   @override
   List<FhirUri>? get instantiatesUri;
   @override
@@ -12019,7 +12019,7 @@ mixin _$Procedure {
   @JsonKey(unknownEnumValue: R4ResourceType.Procedure)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   String? get id => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
@@ -12033,7 +12033,7 @@ mixin _$Procedure {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
-  List<Canonical>? get instantiatesCanonical =>
+  List<FhirCanonical>? get instantiatesCanonical =>
       throw _privateConstructorUsedError;
   List<FhirUri>? get instantiatesUri => throw _privateConstructorUsedError;
   @JsonKey(name: '_instantiatesUri')
@@ -12091,7 +12091,7 @@ abstract class $ProcedureCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R4ResourceType.Procedure)
           R4ResourceType resourceType,
       String? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -12104,7 +12104,7 @@ abstract class $ProcedureCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      List<Canonical>? instantiatesCanonical,
+      List<FhirCanonical>? instantiatesCanonical,
       List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
           List<Element?>? instantiatesUriElement,
@@ -12278,7 +12278,7 @@ class _$ProcedureCopyWithImpl<$Res, $Val extends Procedure>
       instantiatesCanonical: freezed == instantiatesCanonical
           ? _value.instantiatesCanonical
           : instantiatesCanonical // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       instantiatesUri: freezed == instantiatesUri
           ? _value.instantiatesUri
           : instantiatesUri // ignore: cast_nullable_to_non_nullable
@@ -12654,7 +12654,7 @@ abstract class _$$_ProcedureCopyWith<$Res> implements $ProcedureCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R4ResourceType.Procedure)
           R4ResourceType resourceType,
       String? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -12667,7 +12667,7 @@ abstract class _$$_ProcedureCopyWith<$Res> implements $ProcedureCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      List<Canonical>? instantiatesCanonical,
+      List<FhirCanonical>? instantiatesCanonical,
       List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
           List<Element?>? instantiatesUriElement,
@@ -12858,7 +12858,7 @@ class __$$_ProcedureCopyWithImpl<$Res>
       instantiatesCanonical: freezed == instantiatesCanonical
           ? _value._instantiatesCanonical
           : instantiatesCanonical // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       instantiatesUri: freezed == instantiatesUri
           ? _value._instantiatesUri
           : instantiatesUri // ignore: cast_nullable_to_non_nullable
@@ -13019,7 +13019,7 @@ class _$_Procedure extends _Procedure {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      final List<Canonical>? instantiatesCanonical,
+      final List<FhirCanonical>? instantiatesCanonical,
       final List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
           final List<Element?>? instantiatesUriElement,
@@ -13145,9 +13145,9 @@ class _$_Procedure extends _Procedure {
     return EqualUnmodifiableListView(value);
   }
 
-  final List<Canonical>? _instantiatesCanonical;
+  final List<FhirCanonical>? _instantiatesCanonical;
   @override
-  List<Canonical>? get instantiatesCanonical {
+  List<FhirCanonical>? get instantiatesCanonical {
     final value = _instantiatesCanonical;
     if (value == null) return null;
     if (_instantiatesCanonical is EqualUnmodifiableListView)
@@ -13536,7 +13536,7 @@ abstract class _Procedure extends Procedure {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      final List<Canonical>? instantiatesCanonical,
+      final List<FhirCanonical>? instantiatesCanonical,
       final List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
           final List<Element?>? instantiatesUriElement,
@@ -13586,7 +13586,7 @@ abstract class _Procedure extends Procedure {
   @override
   String? get id;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
@@ -13609,7 +13609,7 @@ abstract class _Procedure extends Procedure {
   @override
   List<Identifier>? get identifier;
   @override
-  List<Canonical>? get instantiatesCanonical;
+  List<FhirCanonical>? get instantiatesCanonical;
   @override
   List<FhirUri>? get instantiatesUri;
   @override

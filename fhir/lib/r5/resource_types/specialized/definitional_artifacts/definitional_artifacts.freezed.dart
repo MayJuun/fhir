@@ -31,7 +31,7 @@ mixin _$ActivityDefinition {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -237,7 +237,7 @@ mixin _$ActivityDefinition {
 
   /// [library_] ("library") A reference to a Library resource containing any formal logic used by the activity definition.
   @JsonKey(name: 'library')
-  List<Canonical>? get library_ => throw _privateConstructorUsedError;
+  List<FhirCanonical>? get library_ => throw _privateConstructorUsedError;
 
   /// [kind] A description of the kind of resource the activity definition is representing. For example, a MedicationRequest, a ServiceRequest, or a CommunicationRequest. Typically, but not always, this is a Request resource.
   FhirCode? get kind => throw _privateConstructorUsedError;
@@ -320,15 +320,15 @@ mixin _$ActivityDefinition {
   List<CodeableConcept>? get bodySite => throw _privateConstructorUsedError;
 
   /// [specimenRequirement] Defines specimen requirements for the action to be performed, such as required specimens for a lab test.
-  List<Canonical>? get specimenRequirement =>
+  List<FhirCanonical>? get specimenRequirement =>
       throw _privateConstructorUsedError;
 
   /// [observationRequirement] Defines observation requirements for the action to be performed, such as body weight or surface area.
-  List<Canonical>? get observationRequirement =>
+  List<FhirCanonical>? get observationRequirement =>
       throw _privateConstructorUsedError;
 
   /// [observationResultRequirement] Defines the observations that are expected to be produced by the action.
-  List<Canonical>? get observationResultRequirement =>
+  List<FhirCanonical>? get observationResultRequirement =>
       throw _privateConstructorUsedError;
 
   /// [transform] A reference to a StructureMap resource that defines a transform that can be executed to produce the intent resource using the ActivityDefinition instance as the input.
@@ -354,7 +354,7 @@ abstract class $ActivityDefinitionCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.ActivityDefinition)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -435,7 +435,7 @@ abstract class $ActivityDefinitionCopyWith<$Res> {
       @JsonKey(name: '_usage')
           Element? usageElement,
       @JsonKey(name: 'library')
-          List<Canonical>? library_,
+          List<FhirCanonical>? library_,
       FhirCode? kind,
       @JsonKey(name: '_kind')
           Element? kindElement,
@@ -465,9 +465,9 @@ abstract class $ActivityDefinitionCopyWith<$Res> {
       Quantity? quantity,
       List<Dosage>? dosage,
       List<CodeableConcept>? bodySite,
-      List<Canonical>? specimenRequirement,
-      List<Canonical>? observationRequirement,
-      List<Canonical>? observationResultRequirement,
+      List<FhirCanonical>? specimenRequirement,
+      List<FhirCanonical>? observationRequirement,
+      List<FhirCanonical>? observationResultRequirement,
       FhirCanonical? transform,
       List<ActivityDefinitionDynamicValue>? dynamicValue});
 
@@ -867,7 +867,7 @@ class _$ActivityDefinitionCopyWithImpl<$Res, $Val extends ActivityDefinition>
       library_: freezed == library_
           ? _value.library_
           : library_ // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       kind: freezed == kind
           ? _value.kind
           : kind // ignore: cast_nullable_to_non_nullable
@@ -967,15 +967,15 @@ class _$ActivityDefinitionCopyWithImpl<$Res, $Val extends ActivityDefinition>
       specimenRequirement: freezed == specimenRequirement
           ? _value.specimenRequirement
           : specimenRequirement // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       observationRequirement: freezed == observationRequirement
           ? _value.observationRequirement
           : observationRequirement // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       observationResultRequirement: freezed == observationResultRequirement
           ? _value.observationResultRequirement
           : observationResultRequirement // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       transform: freezed == transform
           ? _value.transform
           : transform // ignore: cast_nullable_to_non_nullable
@@ -1497,7 +1497,7 @@ abstract class _$$_ActivityDefinitionCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R5ResourceType.ActivityDefinition)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -1578,7 +1578,7 @@ abstract class _$$_ActivityDefinitionCopyWith<$Res>
       @JsonKey(name: '_usage')
           Element? usageElement,
       @JsonKey(name: 'library')
-          List<Canonical>? library_,
+          List<FhirCanonical>? library_,
       FhirCode? kind,
       @JsonKey(name: '_kind')
           Element? kindElement,
@@ -1608,9 +1608,9 @@ abstract class _$$_ActivityDefinitionCopyWith<$Res>
       Quantity? quantity,
       List<Dosage>? dosage,
       List<CodeableConcept>? bodySite,
-      List<Canonical>? specimenRequirement,
-      List<Canonical>? observationRequirement,
-      List<Canonical>? observationResultRequirement,
+      List<FhirCanonical>? specimenRequirement,
+      List<FhirCanonical>? observationRequirement,
+      List<FhirCanonical>? observationResultRequirement,
       FhirCanonical? transform,
       List<ActivityDefinitionDynamicValue>? dynamicValue});
 
@@ -2049,7 +2049,7 @@ class __$$_ActivityDefinitionCopyWithImpl<$Res>
       library_: freezed == library_
           ? _value._library_
           : library_ // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       kind: freezed == kind
           ? _value.kind
           : kind // ignore: cast_nullable_to_non_nullable
@@ -2149,15 +2149,15 @@ class __$$_ActivityDefinitionCopyWithImpl<$Res>
       specimenRequirement: freezed == specimenRequirement
           ? _value._specimenRequirement
           : specimenRequirement // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       observationRequirement: freezed == observationRequirement
           ? _value._observationRequirement
           : observationRequirement // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       observationResultRequirement: freezed == observationResultRequirement
           ? _value._observationResultRequirement
           : observationResultRequirement // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       transform: freezed == transform
           ? _value.transform
           : transform // ignore: cast_nullable_to_non_nullable
@@ -2258,7 +2258,7 @@ class _$_ActivityDefinition extends _ActivityDefinition {
       @JsonKey(name: '_usage')
           this.usageElement,
       @JsonKey(name: 'library')
-          final List<Canonical>? library_,
+          final List<FhirCanonical>? library_,
       this.kind,
       @JsonKey(name: '_kind')
           this.kindElement,
@@ -2288,9 +2288,9 @@ class _$_ActivityDefinition extends _ActivityDefinition {
       this.quantity,
       final List<Dosage>? dosage,
       final List<CodeableConcept>? bodySite,
-      final List<Canonical>? specimenRequirement,
-      final List<Canonical>? observationRequirement,
-      final List<Canonical>? observationResultRequirement,
+      final List<FhirCanonical>? specimenRequirement,
+      final List<FhirCanonical>? observationRequirement,
+      final List<FhirCanonical>? observationResultRequirement,
       this.transform,
       final List<ActivityDefinitionDynamicValue>? dynamicValue})
       : _contained = contained,
@@ -2327,7 +2327,7 @@ class _$_ActivityDefinition extends _ActivityDefinition {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -2710,12 +2710,12 @@ class _$_ActivityDefinition extends _ActivityDefinition {
   final Element? usageElement;
 
   /// [library_] ("library") A reference to a Library resource containing any formal logic used by the activity definition.
-  final List<Canonical>? _library_;
+  final List<FhirCanonical>? _library_;
 
   /// [library_] ("library") A reference to a Library resource containing any formal logic used by the activity definition.
   @override
   @JsonKey(name: 'library')
-  List<Canonical>? get library_ {
+  List<FhirCanonical>? get library_ {
     final value = _library_;
     if (value == null) return null;
     if (_library_ is EqualUnmodifiableListView) return _library_;
@@ -2852,11 +2852,11 @@ class _$_ActivityDefinition extends _ActivityDefinition {
   }
 
   /// [specimenRequirement] Defines specimen requirements for the action to be performed, such as required specimens for a lab test.
-  final List<Canonical>? _specimenRequirement;
+  final List<FhirCanonical>? _specimenRequirement;
 
   /// [specimenRequirement] Defines specimen requirements for the action to be performed, such as required specimens for a lab test.
   @override
-  List<Canonical>? get specimenRequirement {
+  List<FhirCanonical>? get specimenRequirement {
     final value = _specimenRequirement;
     if (value == null) return null;
     if (_specimenRequirement is EqualUnmodifiableListView)
@@ -2866,11 +2866,11 @@ class _$_ActivityDefinition extends _ActivityDefinition {
   }
 
   /// [observationRequirement] Defines observation requirements for the action to be performed, such as body weight or surface area.
-  final List<Canonical>? _observationRequirement;
+  final List<FhirCanonical>? _observationRequirement;
 
   /// [observationRequirement] Defines observation requirements for the action to be performed, such as body weight or surface area.
   @override
-  List<Canonical>? get observationRequirement {
+  List<FhirCanonical>? get observationRequirement {
     final value = _observationRequirement;
     if (value == null) return null;
     if (_observationRequirement is EqualUnmodifiableListView)
@@ -2880,11 +2880,11 @@ class _$_ActivityDefinition extends _ActivityDefinition {
   }
 
   /// [observationResultRequirement] Defines the observations that are expected to be produced by the action.
-  final List<Canonical>? _observationResultRequirement;
+  final List<FhirCanonical>? _observationResultRequirement;
 
   /// [observationResultRequirement] Defines the observations that are expected to be produced by the action.
   @override
-  List<Canonical>? get observationResultRequirement {
+  List<FhirCanonical>? get observationResultRequirement {
     final value = _observationResultRequirement;
     if (value == null) return null;
     if (_observationResultRequirement is EqualUnmodifiableListView)
@@ -3166,7 +3166,7 @@ abstract class _ActivityDefinition extends ActivityDefinition {
   factory _ActivityDefinition(
           {@JsonKey(unknownEnumValue: R5ResourceType.ActivityDefinition)
               final R5ResourceType resourceType,
-          final Id? id,
+          final FhirId? id,
           final Meta? meta,
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
@@ -3248,7 +3248,7 @@ abstract class _ActivityDefinition extends ActivityDefinition {
           @JsonKey(name: '_usage')
               final Element? usageElement,
           @JsonKey(name: 'library')
-              final List<Canonical>? library_,
+              final List<FhirCanonical>? library_,
           final FhirCode? kind,
           @JsonKey(name: '_kind')
               final Element? kindElement,
@@ -3278,9 +3278,9 @@ abstract class _ActivityDefinition extends ActivityDefinition {
           final Quantity? quantity,
           final List<Dosage>? dosage,
           final List<CodeableConcept>? bodySite,
-          final List<Canonical>? specimenRequirement,
-          final List<Canonical>? observationRequirement,
-          final List<Canonical>? observationResultRequirement,
+          final List<FhirCanonical>? specimenRequirement,
+          final List<FhirCanonical>? observationRequirement,
+          final List<FhirCanonical>? observationResultRequirement,
           final FhirCanonical? transform,
           final List<ActivityDefinitionDynamicValue>? dynamicValue}) =
       _$_ActivityDefinition;
@@ -3304,7 +3304,7 @@ abstract class _ActivityDefinition extends ActivityDefinition {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when
@@ -3565,7 +3565,7 @@ abstract class _ActivityDefinition extends ActivityDefinition {
 
   /// [library_] ("library") A reference to a Library resource containing any formal logic used by the activity definition.
   @JsonKey(name: 'library')
-  List<Canonical>? get library_;
+  List<FhirCanonical>? get library_;
   @override
 
   /// [kind] A description of the kind of resource the activity definition is representing. For example, a MedicationRequest, a ServiceRequest, or a CommunicationRequest. Typically, but not always, this is a Request resource.
@@ -3670,15 +3670,15 @@ abstract class _ActivityDefinition extends ActivityDefinition {
   @override
 
   /// [specimenRequirement] Defines specimen requirements for the action to be performed, such as required specimens for a lab test.
-  List<Canonical>? get specimenRequirement;
+  List<FhirCanonical>? get specimenRequirement;
   @override
 
   /// [observationRequirement] Defines observation requirements for the action to be performed, such as body weight or surface area.
-  List<Canonical>? get observationRequirement;
+  List<FhirCanonical>? get observationRequirement;
   @override
 
   /// [observationResultRequirement] Defines the observations that are expected to be produced by the action.
-  List<Canonical>? get observationResultRequirement;
+  List<FhirCanonical>? get observationResultRequirement;
   @override
 
   /// [transform] A reference to a StructureMap resource that defines a transform that can be executed to produce the intent resource using the ActivityDefinition instance as the input.
@@ -4673,7 +4673,7 @@ mixin _$ActorDefinition {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -4838,7 +4838,7 @@ mixin _$ActorDefinition {
   FhirCanonical? get capabilities => throw _privateConstructorUsedError;
 
   /// [derivedFrom] A url that identifies the definition of this actor in another IG (which IG must be listed in the dependencies). This actor inherits all the obligations etc as defined in the other IG.
-  List<Canonical>? get derivedFrom => throw _privateConstructorUsedError;
+  List<FhirCanonical>? get derivedFrom => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -4856,7 +4856,7 @@ abstract class $ActorDefinitionCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.ActorDefinition)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -4922,7 +4922,7 @@ abstract class $ActorDefinitionCopyWith<$Res> {
       @JsonKey(name: '_reference')
           List<Element>? referenceElement,
       FhirCanonical? capabilities,
-      List<Canonical>? derivedFrom});
+      List<FhirCanonical>? derivedFrom});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -5210,7 +5210,7 @@ class _$ActorDefinitionCopyWithImpl<$Res, $Val extends ActorDefinition>
       derivedFrom: freezed == derivedFrom
           ? _value.derivedFrom
           : derivedFrom // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
     ) as $Val);
   }
 
@@ -5469,7 +5469,7 @@ abstract class _$$_ActorDefinitionCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R5ResourceType.ActorDefinition)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -5535,7 +5535,7 @@ abstract class _$$_ActorDefinitionCopyWith<$Res>
       @JsonKey(name: '_reference')
           List<Element>? referenceElement,
       FhirCanonical? capabilities,
-      List<Canonical>? derivedFrom});
+      List<FhirCanonical>? derivedFrom});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -5841,7 +5841,7 @@ class __$$_ActorDefinitionCopyWithImpl<$Res>
       derivedFrom: freezed == derivedFrom
           ? _value._derivedFrom
           : derivedFrom // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
     ));
   }
 }
@@ -5919,7 +5919,7 @@ class _$_ActorDefinition extends _ActorDefinition {
       @JsonKey(name: '_reference')
           final List<Element>? referenceElement,
       this.capabilities,
-      final List<Canonical>? derivedFrom})
+      final List<FhirCanonical>? derivedFrom})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -5943,7 +5943,7 @@ class _$_ActorDefinition extends _ActorDefinition {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -6241,11 +6241,11 @@ class _$_ActorDefinition extends _ActorDefinition {
   final FhirCanonical? capabilities;
 
   /// [derivedFrom] A url that identifies the definition of this actor in another IG (which IG must be listed in the dependencies). This actor inherits all the obligations etc as defined in the other IG.
-  final List<Canonical>? _derivedFrom;
+  final List<FhirCanonical>? _derivedFrom;
 
   /// [derivedFrom] A url that identifies the definition of this actor in another IG (which IG must be listed in the dependencies). This actor inherits all the obligations etc as defined in the other IG.
   @override
-  List<Canonical>? get derivedFrom {
+  List<FhirCanonical>? get derivedFrom {
     final value = _derivedFrom;
     if (value == null) return null;
     if (_derivedFrom is EqualUnmodifiableListView) return _derivedFrom;
@@ -6426,7 +6426,7 @@ abstract class _ActorDefinition extends ActorDefinition {
   factory _ActorDefinition(
       {@JsonKey(unknownEnumValue: R5ResourceType.ActorDefinition)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -6493,7 +6493,7 @@ abstract class _ActorDefinition extends ActorDefinition {
       @JsonKey(name: '_reference')
           final List<Element>? referenceElement,
       final FhirCanonical? capabilities,
-      final List<Canonical>? derivedFrom}) = _$_ActorDefinition;
+      final List<FhirCanonical>? derivedFrom}) = _$_ActorDefinition;
   _ActorDefinition._() : super._();
 
   factory _ActorDefinition.fromJson(Map<String, dynamic> json) =
@@ -6514,7 +6514,7 @@ abstract class _ActorDefinition extends ActorDefinition {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when
@@ -6724,7 +6724,7 @@ abstract class _ActorDefinition extends ActorDefinition {
   @override
 
   /// [derivedFrom] A url that identifies the definition of this actor in another IG (which IG must be listed in the dependencies). This actor inherits all the obligations etc as defined in the other IG.
-  List<Canonical>? get derivedFrom;
+  List<FhirCanonical>? get derivedFrom;
   @override
   @JsonKey(ignore: true)
   _$$_ActorDefinitionCopyWith<_$_ActorDefinition> get copyWith =>
@@ -6748,7 +6748,7 @@ mixin _$ConditionDefinition {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -7009,7 +7009,7 @@ abstract class $ConditionDefinitionCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.ConditionDefinition)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -7877,7 +7877,7 @@ abstract class _$$_ConditionDefinitionCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R5ResourceType.ConditionDefinition)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -8549,7 +8549,7 @@ class _$_ConditionDefinition extends _ConditionDefinition {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -9274,7 +9274,7 @@ abstract class _ConditionDefinition extends ConditionDefinition {
   factory _ConditionDefinition(
       {@JsonKey(unknownEnumValue: R5ResourceType.ConditionDefinition)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -9389,7 +9389,7 @@ abstract class _ConditionDefinition extends ConditionDefinition {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when
@@ -11824,7 +11824,7 @@ mixin _$DeviceDefinition {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -11950,7 +11950,7 @@ mixin _$DeviceDefinition {
       throw _privateConstructorUsedError;
 
   /// [productionIdentifierInUDI] Indicates the production identifier(s) that are expected to appear in the UDI carrier on the device label.
-  List<Code>? get productionIdentifierInUDI =>
+  List<FhirCode>? get productionIdentifierInUDI =>
       throw _privateConstructorUsedError;
 
   /// [productionIdentifierInUDIElement] ("_productionIdentifierInUDI") Extensions for productionIdentifierInUDI
@@ -11986,7 +11986,7 @@ abstract class $DeviceDefinitionCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.DeviceDefinition)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -12027,7 +12027,7 @@ abstract class $DeviceDefinitionCopyWith<$Res> {
       List<Annotation>? note,
       Reference? parentDevice,
       List<DeviceDefinitionMaterial>? material,
-      List<Code>? productionIdentifierInUDI,
+      List<FhirCode>? productionIdentifierInUDI,
       @JsonKey(name: '_productionIdentifierInUDI')
           List<Element>? productionIdentifierInUDIElement,
       DeviceDefinitionGuideline? guideline,
@@ -12256,7 +12256,7 @@ class _$DeviceDefinitionCopyWithImpl<$Res, $Val extends DeviceDefinition>
       productionIdentifierInUDI: freezed == productionIdentifierInUDI
           ? _value.productionIdentifierInUDI
           : productionIdentifierInUDI // ignore: cast_nullable_to_non_nullable
-              as List<Code>?,
+              as List<FhirCode>?,
       productionIdentifierInUDIElement: freezed ==
               productionIdentifierInUDIElement
           ? _value.productionIdentifierInUDIElement
@@ -12435,7 +12435,7 @@ abstract class _$$_DeviceDefinitionCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R5ResourceType.DeviceDefinition)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -12476,7 +12476,7 @@ abstract class _$$_DeviceDefinitionCopyWith<$Res>
       List<Annotation>? note,
       Reference? parentDevice,
       List<DeviceDefinitionMaterial>? material,
-      List<Code>? productionIdentifierInUDI,
+      List<FhirCode>? productionIdentifierInUDI,
       @JsonKey(name: '_productionIdentifierInUDI')
           List<Element>? productionIdentifierInUDIElement,
       DeviceDefinitionGuideline? guideline,
@@ -12715,7 +12715,7 @@ class __$$_DeviceDefinitionCopyWithImpl<$Res>
       productionIdentifierInUDI: freezed == productionIdentifierInUDI
           ? _value._productionIdentifierInUDI
           : productionIdentifierInUDI // ignore: cast_nullable_to_non_nullable
-              as List<Code>?,
+              as List<FhirCode>?,
       productionIdentifierInUDIElement: freezed ==
               productionIdentifierInUDIElement
           ? _value._productionIdentifierInUDIElement
@@ -12785,7 +12785,7 @@ class _$_DeviceDefinition extends _DeviceDefinition {
       final List<Annotation>? note,
       this.parentDevice,
       final List<DeviceDefinitionMaterial>? material,
-      final List<Code>? productionIdentifierInUDI,
+      final List<FhirCode>? productionIdentifierInUDI,
       @JsonKey(name: '_productionIdentifierInUDI')
           final List<Element>? productionIdentifierInUDIElement,
       this.guideline,
@@ -12827,7 +12827,7 @@ class _$_DeviceDefinition extends _DeviceDefinition {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -13165,11 +13165,11 @@ class _$_DeviceDefinition extends _DeviceDefinition {
   }
 
   /// [productionIdentifierInUDI] Indicates the production identifier(s) that are expected to appear in the UDI carrier on the device label.
-  final List<Code>? _productionIdentifierInUDI;
+  final List<FhirCode>? _productionIdentifierInUDI;
 
   /// [productionIdentifierInUDI] Indicates the production identifier(s) that are expected to appear in the UDI carrier on the device label.
   @override
-  List<Code>? get productionIdentifierInUDI {
+  List<FhirCode>? get productionIdentifierInUDI {
     final value = _productionIdentifierInUDI;
     if (value == null) return null;
     if (_productionIdentifierInUDI is EqualUnmodifiableListView)
@@ -13365,7 +13365,7 @@ abstract class _DeviceDefinition extends DeviceDefinition {
   factory _DeviceDefinition(
       {@JsonKey(unknownEnumValue: R5ResourceType.DeviceDefinition)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -13407,7 +13407,7 @@ abstract class _DeviceDefinition extends DeviceDefinition {
       final List<Annotation>? note,
       final Reference? parentDevice,
       final List<DeviceDefinitionMaterial>? material,
-      final List<Code>? productionIdentifierInUDI,
+      final List<FhirCode>? productionIdentifierInUDI,
       @JsonKey(name: '_productionIdentifierInUDI')
           final List<Element>? productionIdentifierInUDIElement,
       final DeviceDefinitionGuideline? guideline,
@@ -13434,7 +13434,7 @@ abstract class _DeviceDefinition extends DeviceDefinition {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when
@@ -13583,7 +13583,7 @@ abstract class _DeviceDefinition extends DeviceDefinition {
   @override
 
   /// [productionIdentifierInUDI] Indicates the production identifier(s) that are expected to appear in the UDI carrier on the device label.
-  List<Code>? get productionIdentifierInUDI;
+  List<FhirCode>? get productionIdentifierInUDI;
   @override
 
   /// [productionIdentifierInUDIElement] ("_productionIdentifierInUDI") Extensions for productionIdentifierInUDI
@@ -21190,7 +21190,7 @@ mixin _$EventDefinition {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -21406,7 +21406,7 @@ abstract class $EventDefinitionCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.EventDefinition)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -22146,7 +22146,7 @@ abstract class _$$_EventDefinitionCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R5ResourceType.EventDefinition)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -22706,7 +22706,7 @@ class _$_EventDefinition extends _EventDefinition {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -23283,7 +23283,7 @@ abstract class _EventDefinition extends EventDefinition {
   factory _EventDefinition(
       {@JsonKey(unknownEnumValue: R5ResourceType.EventDefinition)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -23382,7 +23382,7 @@ abstract class _EventDefinition extends EventDefinition {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when
@@ -23657,7 +23657,7 @@ mixin _$ExampleScenario {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -23824,7 +23824,7 @@ abstract class $ExampleScenarioCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.ExampleScenario)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -24378,7 +24378,7 @@ abstract class _$$_ExampleScenarioCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R5ResourceType.ExampleScenario)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -24807,7 +24807,7 @@ class _$_ExampleScenario extends _ExampleScenario {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -25252,7 +25252,7 @@ abstract class _ExampleScenario extends ExampleScenario {
   factory _ExampleScenario(
       {@JsonKey(unknownEnumValue: R5ResourceType.ExampleScenario)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -25332,7 +25332,7 @@ abstract class _ExampleScenario extends ExampleScenario {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when
@@ -30711,7 +30711,7 @@ mixin _$ObservationDefinition {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -30888,7 +30888,7 @@ mixin _$ObservationDefinition {
       throw _privateConstructorUsedError;
 
   /// [derivedFromCanonical] The canonical URL pointing to another FHIR-defined ObservationDefinition that is adhered to in whole or in part by this definition.
-  List<Canonical>? get derivedFromCanonical =>
+  List<FhirCanonical>? get derivedFromCanonical =>
       throw _privateConstructorUsedError;
 
   /// [derivedFromUri] The URL pointing to an externally-defined observation definition, guideline or other definition that is adhered to in whole or in part by this definition.
@@ -30912,7 +30912,7 @@ mixin _$ObservationDefinition {
   CodeableConcept get code => throw _privateConstructorUsedError;
 
   /// [permittedDataType] The data types allowed for the value element of the instance observations conforming to this ObservationDefinition.
-  List<Code>? get permittedDataType => throw _privateConstructorUsedError;
+  List<FhirCode>? get permittedDataType => throw _privateConstructorUsedError;
 
   /// [permittedDataTypeElement] ("_permittedDataType") Extensions for permittedDataType
   @JsonKey(name: '_permittedDataType')
@@ -30977,7 +30977,7 @@ abstract class $ObservationDefinitionCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.ObservationDefinition)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -31046,7 +31046,7 @@ abstract class $ObservationDefinitionCopyWith<$Res> {
       List<ContactDetail>? reviewer,
       List<ContactDetail>? endorser,
       List<RelatedArtifact>? relatedArtifact,
-      List<Canonical>? derivedFromCanonical,
+      List<FhirCanonical>? derivedFromCanonical,
       List<FhirUri>? derivedFromUri,
       @JsonKey(name: '_derivedFromUri')
           List<Element>? derivedFromUriElement,
@@ -31054,7 +31054,7 @@ abstract class $ObservationDefinitionCopyWith<$Res> {
       CodeableConcept? performerType,
       List<CodeableConcept>? category,
       CodeableConcept code,
-      List<Code>? permittedDataType,
+      List<FhirCode>? permittedDataType,
       @JsonKey(name: '_permittedDataType')
           List<Element>? permittedDataTypeElement,
       FhirBoolean? multipleResultsAllowed,
@@ -31409,7 +31409,7 @@ class _$ObservationDefinitionCopyWithImpl<$Res,
       derivedFromCanonical: freezed == derivedFromCanonical
           ? _value.derivedFromCanonical
           : derivedFromCanonical // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       derivedFromUri: freezed == derivedFromUri
           ? _value.derivedFromUri
           : derivedFromUri // ignore: cast_nullable_to_non_nullable
@@ -31437,7 +31437,7 @@ class _$ObservationDefinitionCopyWithImpl<$Res,
       permittedDataType: freezed == permittedDataType
           ? _value.permittedDataType
           : permittedDataType // ignore: cast_nullable_to_non_nullable
-              as List<Code>?,
+              as List<FhirCode>?,
       permittedDataTypeElement: freezed == permittedDataTypeElement
           ? _value.permittedDataTypeElement
           : permittedDataTypeElement // ignore: cast_nullable_to_non_nullable
@@ -31856,7 +31856,7 @@ abstract class _$$_ObservationDefinitionCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R5ResourceType.ObservationDefinition)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -31925,7 +31925,7 @@ abstract class _$$_ObservationDefinitionCopyWith<$Res>
       List<ContactDetail>? reviewer,
       List<ContactDetail>? endorser,
       List<RelatedArtifact>? relatedArtifact,
-      List<Canonical>? derivedFromCanonical,
+      List<FhirCanonical>? derivedFromCanonical,
       List<FhirUri>? derivedFromUri,
       @JsonKey(name: '_derivedFromUri')
           List<Element>? derivedFromUriElement,
@@ -31933,7 +31933,7 @@ abstract class _$$_ObservationDefinitionCopyWith<$Res>
       CodeableConcept? performerType,
       List<CodeableConcept>? category,
       CodeableConcept code,
-      List<Code>? permittedDataType,
+      List<FhirCode>? permittedDataType,
       @JsonKey(name: '_permittedDataType')
           List<Element>? permittedDataTypeElement,
       FhirBoolean? multipleResultsAllowed,
@@ -32314,7 +32314,7 @@ class __$$_ObservationDefinitionCopyWithImpl<$Res>
       derivedFromCanonical: freezed == derivedFromCanonical
           ? _value._derivedFromCanonical
           : derivedFromCanonical // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       derivedFromUri: freezed == derivedFromUri
           ? _value._derivedFromUri
           : derivedFromUri // ignore: cast_nullable_to_non_nullable
@@ -32342,7 +32342,7 @@ class __$$_ObservationDefinitionCopyWithImpl<$Res>
       permittedDataType: freezed == permittedDataType
           ? _value._permittedDataType
           : permittedDataType // ignore: cast_nullable_to_non_nullable
-              as List<Code>?,
+              as List<FhirCode>?,
       permittedDataTypeElement: freezed == permittedDataTypeElement
           ? _value._permittedDataTypeElement
           : permittedDataTypeElement // ignore: cast_nullable_to_non_nullable
@@ -32475,7 +32475,7 @@ class _$_ObservationDefinition extends _ObservationDefinition {
       final List<ContactDetail>? reviewer,
       final List<ContactDetail>? endorser,
       final List<RelatedArtifact>? relatedArtifact,
-      final List<Canonical>? derivedFromCanonical,
+      final List<FhirCanonical>? derivedFromCanonical,
       final List<FhirUri>? derivedFromUri,
       @JsonKey(name: '_derivedFromUri')
           final List<Element>? derivedFromUriElement,
@@ -32483,7 +32483,7 @@ class _$_ObservationDefinition extends _ObservationDefinition {
       this.performerType,
       final List<CodeableConcept>? category,
       required this.code,
-      final List<Code>? permittedDataType,
+      final List<FhirCode>? permittedDataType,
       @JsonKey(name: '_permittedDataType')
           final List<Element>? permittedDataTypeElement,
       this.multipleResultsAllowed,
@@ -32537,7 +32537,7 @@ class _$_ObservationDefinition extends _ObservationDefinition {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -32876,11 +32876,11 @@ class _$_ObservationDefinition extends _ObservationDefinition {
   }
 
   /// [derivedFromCanonical] The canonical URL pointing to another FHIR-defined ObservationDefinition that is adhered to in whole or in part by this definition.
-  final List<Canonical>? _derivedFromCanonical;
+  final List<FhirCanonical>? _derivedFromCanonical;
 
   /// [derivedFromCanonical] The canonical URL pointing to another FHIR-defined ObservationDefinition that is adhered to in whole or in part by this definition.
   @override
-  List<Canonical>? get derivedFromCanonical {
+  List<FhirCanonical>? get derivedFromCanonical {
     final value = _derivedFromCanonical;
     if (value == null) return null;
     if (_derivedFromCanonical is EqualUnmodifiableListView)
@@ -32952,11 +32952,11 @@ class _$_ObservationDefinition extends _ObservationDefinition {
   final CodeableConcept code;
 
   /// [permittedDataType] The data types allowed for the value element of the instance observations conforming to this ObservationDefinition.
-  final List<Code>? _permittedDataType;
+  final List<FhirCode>? _permittedDataType;
 
   /// [permittedDataType] The data types allowed for the value element of the instance observations conforming to this ObservationDefinition.
   @override
-  List<Code>? get permittedDataType {
+  List<FhirCode>? get permittedDataType {
     final value = _permittedDataType;
     if (value == null) return null;
     if (_permittedDataType is EqualUnmodifiableListView)
@@ -33297,7 +33297,7 @@ abstract class _ObservationDefinition extends ObservationDefinition {
   factory _ObservationDefinition(
           {@JsonKey(unknownEnumValue: R5ResourceType.ObservationDefinition)
               final R5ResourceType resourceType,
-          final Id? id,
+          final FhirId? id,
           final Meta? meta,
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
@@ -33367,7 +33367,7 @@ abstract class _ObservationDefinition extends ObservationDefinition {
           final List<ContactDetail>? reviewer,
           final List<ContactDetail>? endorser,
           final List<RelatedArtifact>? relatedArtifact,
-          final List<Canonical>? derivedFromCanonical,
+          final List<FhirCanonical>? derivedFromCanonical,
           final List<FhirUri>? derivedFromUri,
           @JsonKey(name: '_derivedFromUri')
               final List<Element>? derivedFromUriElement,
@@ -33375,7 +33375,7 @@ abstract class _ObservationDefinition extends ObservationDefinition {
           final CodeableConcept? performerType,
           final List<CodeableConcept>? category,
           required final CodeableConcept code,
-          final List<Code>? permittedDataType,
+          final List<FhirCode>? permittedDataType,
           @JsonKey(name: '_permittedDataType')
               final List<Element>? permittedDataTypeElement,
           final FhirBoolean? multipleResultsAllowed,
@@ -33413,7 +33413,7 @@ abstract class _ObservationDefinition extends ObservationDefinition {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when
@@ -33638,7 +33638,7 @@ abstract class _ObservationDefinition extends ObservationDefinition {
   @override
 
   /// [derivedFromCanonical] The canonical URL pointing to another FHIR-defined ObservationDefinition that is adhered to in whole or in part by this definition.
-  List<Canonical>? get derivedFromCanonical;
+  List<FhirCanonical>? get derivedFromCanonical;
   @override
 
   /// [derivedFromUri] The URL pointing to an externally-defined observation definition, guideline or other definition that is adhered to in whole or in part by this definition.
@@ -33667,7 +33667,7 @@ abstract class _ObservationDefinition extends ObservationDefinition {
   @override
 
   /// [permittedDataType] The data types allowed for the value element of the instance observations conforming to this ObservationDefinition.
-  List<Code>? get permittedDataType;
+  List<FhirCode>? get permittedDataType;
   @override
 
   /// [permittedDataTypeElement] ("_permittedDataType") Extensions for permittedDataType
@@ -35178,7 +35178,7 @@ mixin _$ObservationDefinitionComponent {
   CodeableConcept get code => throw _privateConstructorUsedError;
 
   /// [permittedDataType] The data types allowed for the value element of the instance of this component observations.
-  List<Code>? get permittedDataType => throw _privateConstructorUsedError;
+  List<FhirCode>? get permittedDataType => throw _privateConstructorUsedError;
 
   /// [permittedDataTypeElement] ("_permittedDataType") Extensions for permittedDataType
   @JsonKey(name: '_permittedDataType')
@@ -35213,7 +35213,7 @@ abstract class $ObservationDefinitionComponentCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept code,
-      List<Code>? permittedDataType,
+      List<FhirCode>? permittedDataType,
       @JsonKey(name: '_permittedDataType')
           List<Element>? permittedDataTypeElement,
       ObservationDefinitionQuantitativeDetails? quantitativeDetails,
@@ -35267,7 +35267,7 @@ class _$ObservationDefinitionComponentCopyWithImpl<$Res,
       permittedDataType: freezed == permittedDataType
           ? _value.permittedDataType
           : permittedDataType // ignore: cast_nullable_to_non_nullable
-              as List<Code>?,
+              as List<FhirCode>?,
       permittedDataTypeElement: freezed == permittedDataTypeElement
           ? _value.permittedDataTypeElement
           : permittedDataTypeElement // ignore: cast_nullable_to_non_nullable
@@ -35321,7 +35321,7 @@ abstract class _$$_ObservationDefinitionComponentCopyWith<$Res>
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept code,
-      List<Code>? permittedDataType,
+      List<FhirCode>? permittedDataType,
       @JsonKey(name: '_permittedDataType')
           List<Element>? permittedDataTypeElement,
       ObservationDefinitionQuantitativeDetails? quantitativeDetails,
@@ -35376,7 +35376,7 @@ class __$$_ObservationDefinitionComponentCopyWithImpl<$Res>
       permittedDataType: freezed == permittedDataType
           ? _value._permittedDataType
           : permittedDataType // ignore: cast_nullable_to_non_nullable
-              as List<Code>?,
+              as List<FhirCode>?,
       permittedDataTypeElement: freezed == permittedDataTypeElement
           ? _value._permittedDataTypeElement
           : permittedDataTypeElement // ignore: cast_nullable_to_non_nullable
@@ -35403,7 +35403,7 @@ class _$_ObservationDefinitionComponent
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required this.code,
-      final List<Code>? permittedDataType,
+      final List<FhirCode>? permittedDataType,
       @JsonKey(name: '_permittedDataType')
           final List<Element>? permittedDataTypeElement,
       this.quantitativeDetails,
@@ -35489,11 +35489,11 @@ class _$_ObservationDefinitionComponent
   final CodeableConcept code;
 
   /// [permittedDataType] The data types allowed for the value element of the instance of this component observations.
-  final List<Code>? _permittedDataType;
+  final List<FhirCode>? _permittedDataType;
 
   /// [permittedDataType] The data types allowed for the value element of the instance of this component observations.
   @override
-  List<Code>? get permittedDataType {
+  List<FhirCode>? get permittedDataType {
     final value = _permittedDataType;
     if (value == null) return null;
     if (_permittedDataType is EqualUnmodifiableListView)
@@ -35596,7 +35596,7 @@ abstract class _ObservationDefinitionComponent
               final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           required final CodeableConcept code,
-          final List<Code>? permittedDataType,
+          final List<FhirCode>? permittedDataType,
           @JsonKey(name: '_permittedDataType')
               final List<Element>? permittedDataTypeElement,
           final ObservationDefinitionQuantitativeDetails? quantitativeDetails,
@@ -35644,7 +35644,7 @@ abstract class _ObservationDefinitionComponent
   @override
 
   /// [permittedDataType] The data types allowed for the value element of the instance of this component observations.
-  List<Code>? get permittedDataType;
+  List<FhirCode>? get permittedDataType;
   @override
 
   /// [permittedDataTypeElement] ("_permittedDataType") Extensions for permittedDataType
@@ -35681,7 +35681,7 @@ mixin _$PlanDefinition {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -35890,7 +35890,7 @@ mixin _$PlanDefinition {
 
   /// [library_] ("library") A reference to a Library resource containing any formal logic used by the plan definition.
   @JsonKey(name: 'library')
-  List<Canonical>? get library_ => throw _privateConstructorUsedError;
+  List<FhirCanonical>? get library_ => throw _privateConstructorUsedError;
 
   /// [goal] A goal describes an expected outcome that activities within the plan are intended to achieve. For example, weight loss, restoring an activity of daily living, obtaining herd immunity via immunization, meeting a process improvement objective, meeting the acceptance criteria for a test as specified by a quality specification, etc.
   List<PlanDefinitionGoal>? get goal => throw _privateConstructorUsedError;
@@ -35928,7 +35928,7 @@ abstract class $PlanDefinitionCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.PlanDefinition)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -36010,7 +36010,7 @@ abstract class $PlanDefinitionCopyWith<$Res> {
       @JsonKey(name: '_usage')
           Element? usageElement,
       @JsonKey(name: 'library')
-          List<Canonical>? library_,
+          List<FhirCanonical>? library_,
       List<PlanDefinitionGoal>? goal,
       List<PlanDefinitionActor>? actor,
       List<PlanDefinitionAction>? action,
@@ -36385,7 +36385,7 @@ class _$PlanDefinitionCopyWithImpl<$Res, $Val extends PlanDefinition>
       library_: freezed == library_
           ? _value.library_
           : library_ // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       goal: freezed == goal
           ? _value.goal
           : goal // ignore: cast_nullable_to_non_nullable
@@ -36778,7 +36778,7 @@ abstract class _$$_PlanDefinitionCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R5ResourceType.PlanDefinition)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -36860,7 +36860,7 @@ abstract class _$$_PlanDefinitionCopyWith<$Res>
       @JsonKey(name: '_usage')
           Element? usageElement,
       @JsonKey(name: 'library')
-          List<Canonical>? library_,
+          List<FhirCanonical>? library_,
       List<PlanDefinitionGoal>? goal,
       List<PlanDefinitionActor>? actor,
       List<PlanDefinitionAction>? action,
@@ -37262,7 +37262,7 @@ class __$$_PlanDefinitionCopyWithImpl<$Res>
       library_: freezed == library_
           ? _value._library_
           : library_ // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       goal: freezed == goal
           ? _value._goal
           : goal // ignore: cast_nullable_to_non_nullable
@@ -37380,7 +37380,7 @@ class _$_PlanDefinition extends _PlanDefinition {
       @JsonKey(name: '_usage')
           this.usageElement,
       @JsonKey(name: 'library')
-          final List<Canonical>? library_,
+          final List<FhirCanonical>? library_,
       final List<PlanDefinitionGoal>? goal,
       final List<PlanDefinitionActor>? actor,
       final List<PlanDefinitionAction>? action,
@@ -37418,7 +37418,7 @@ class _$_PlanDefinition extends _PlanDefinition {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -37805,12 +37805,12 @@ class _$_PlanDefinition extends _PlanDefinition {
   final Element? usageElement;
 
   /// [library_] ("library") A reference to a Library resource containing any formal logic used by the plan definition.
-  final List<Canonical>? _library_;
+  final List<FhirCanonical>? _library_;
 
   /// [library_] ("library") A reference to a Library resource containing any formal logic used by the plan definition.
   @override
   @JsonKey(name: 'library')
-  List<Canonical>? get library_ {
+  List<FhirCanonical>? get library_ {
     final value = _library_;
     if (value == null) return null;
     if (_library_ is EqualUnmodifiableListView) return _library_;
@@ -38081,7 +38081,7 @@ abstract class _PlanDefinition extends PlanDefinition {
   factory _PlanDefinition(
       {@JsonKey(unknownEnumValue: R5ResourceType.PlanDefinition)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -38164,7 +38164,7 @@ abstract class _PlanDefinition extends PlanDefinition {
       @JsonKey(name: '_usage')
           final Element? usageElement,
       @JsonKey(name: 'library')
-          final List<Canonical>? library_,
+          final List<FhirCanonical>? library_,
       final List<PlanDefinitionGoal>? goal,
       final List<PlanDefinitionActor>? actor,
       final List<PlanDefinitionAction>? action,
@@ -38192,7 +38192,7 @@ abstract class _PlanDefinition extends PlanDefinition {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when
@@ -38457,7 +38457,7 @@ abstract class _PlanDefinition extends PlanDefinition {
 
   /// [library_] ("library") A reference to a Library resource containing any formal logic used by the plan definition.
   @JsonKey(name: 'library')
-  List<Canonical>? get library_;
+  List<FhirCanonical>? get library_;
   @override
 
   /// [goal] A goal describes an expected outcome that activities within the plan are intended to achieve. For example, weight loss, restoring an activity of daily living, obtaining herd immunity via immunization, meeting a process improvement objective, meeting the acceptance criteria for a test as specified by a quality specification, etc.
@@ -40904,7 +40904,7 @@ mixin _$PlanDefinitionAction {
       throw _privateConstructorUsedError;
 
   /// [goalId] Identifies goals that this action supports. The reference must be to a goal element defined within this plan definition. In pharmaceutical quality, a goal represents acceptance criteria (Goal) for a given action (Test), so the goalId would be the unique id of a defined goal element establishing the acceptance criteria for the action.
-  List<Id>? get goalId => throw _privateConstructorUsedError;
+  List<FhirId>? get goalId => throw _privateConstructorUsedError;
 
   /// [goalIdElement] ("_goalId") Extensions for goalId
   @JsonKey(name: '_goalId')
@@ -41060,7 +41060,7 @@ abstract class $PlanDefinitionActionCopyWith<$Res> {
       CodeableConcept? code,
       List<CodeableConcept>? reason,
       List<RelatedArtifact>? documentation,
-      List<Id>? goalId,
+      List<FhirId>? goalId,
       @JsonKey(name: '_goalId')
           List<Element>? goalIdElement,
       CodeableConcept? subjectCodeableConcept,
@@ -41274,7 +41274,7 @@ class _$PlanDefinitionActionCopyWithImpl<$Res,
       goalId: freezed == goalId
           ? _value.goalId
           : goalId // ignore: cast_nullable_to_non_nullable
-              as List<Id>?,
+              as List<FhirId>?,
       goalIdElement: freezed == goalIdElement
           ? _value.goalIdElement
           : goalIdElement // ignore: cast_nullable_to_non_nullable
@@ -41726,7 +41726,7 @@ abstract class _$$_PlanDefinitionActionCopyWith<$Res>
       CodeableConcept? code,
       List<CodeableConcept>? reason,
       List<RelatedArtifact>? documentation,
-      List<Id>? goalId,
+      List<FhirId>? goalId,
       @JsonKey(name: '_goalId')
           List<Element>? goalIdElement,
       CodeableConcept? subjectCodeableConcept,
@@ -41960,7 +41960,7 @@ class __$$_PlanDefinitionActionCopyWithImpl<$Res>
       goalId: freezed == goalId
           ? _value._goalId
           : goalId // ignore: cast_nullable_to_non_nullable
-              as List<Id>?,
+              as List<FhirId>?,
       goalIdElement: freezed == goalIdElement
           ? _value._goalIdElement
           : goalIdElement // ignore: cast_nullable_to_non_nullable
@@ -42123,7 +42123,7 @@ class _$_PlanDefinitionAction extends _PlanDefinitionAction {
       this.code,
       final List<CodeableConcept>? reason,
       final List<RelatedArtifact>? documentation,
-      final List<Id>? goalId,
+      final List<FhirId>? goalId,
       @JsonKey(name: '_goalId') final List<Element>? goalIdElement,
       this.subjectCodeableConcept,
       this.subjectReference,
@@ -42327,11 +42327,11 @@ class _$_PlanDefinitionAction extends _PlanDefinitionAction {
   }
 
   /// [goalId] Identifies goals that this action supports. The reference must be to a goal element defined within this plan definition. In pharmaceutical quality, a goal represents acceptance criteria (Goal) for a given action (Test), so the goalId would be the unique id of a defined goal element establishing the acceptance criteria for the action.
-  final List<Id>? _goalId;
+  final List<FhirId>? _goalId;
 
   /// [goalId] Identifies goals that this action supports. The reference must be to a goal element defined within this plan definition. In pharmaceutical quality, a goal represents acceptance criteria (Goal) for a given action (Test), so the goalId would be the unique id of a defined goal element establishing the acceptance criteria for the action.
   @override
-  List<Id>? get goalId {
+  List<FhirId>? get goalId {
     final value = _goalId;
     if (value == null) return null;
     if (_goalId is EqualUnmodifiableListView) return _goalId;
@@ -42768,7 +42768,7 @@ abstract class _PlanDefinitionAction extends PlanDefinitionAction {
       final CodeableConcept? code,
       final List<CodeableConcept>? reason,
       final List<RelatedArtifact>? documentation,
-      final List<Id>? goalId,
+      final List<FhirId>? goalId,
       @JsonKey(name: '_goalId')
           final List<Element>? goalIdElement,
       final CodeableConcept? subjectCodeableConcept,
@@ -42916,7 +42916,7 @@ abstract class _PlanDefinitionAction extends PlanDefinitionAction {
   @override
 
   /// [goalId] Identifies goals that this action supports. The reference must be to a goal element defined within this plan definition. In pharmaceutical quality, a goal represents acceptance criteria (Goal) for a given action (Test), so the goalId would be the unique id of a defined goal element establishing the acceptance criteria for the action.
-  List<Id>? get goalId;
+  List<FhirId>? get goalId;
   @override
 
   /// [goalIdElement] ("_goalId") Extensions for goalId
@@ -43842,7 +43842,7 @@ class _$_PlanDefinitionInput extends _PlanDefinitionInput {
 
   /// [relatedData] Points to an existing input or output element that provides data to this input.
   @override
-  final Id? relatedData;
+  final FhirId? relatedData;
 
   /// [relatedDataElement] ("_relatedData") Extensions for relatedData
   @override
@@ -43911,7 +43911,7 @@ abstract class _PlanDefinitionInput extends PlanDefinitionInput {
           final String? title,
           @JsonKey(name: '_title') final Element? titleElement,
           final DataRequirement? requirement,
-          final Id? relatedData,
+          final FhirId? relatedData,
           @JsonKey(name: '_relatedData') final Element? relatedDataElement}) =
       _$_PlanDefinitionInput;
   _PlanDefinitionInput._() : super._();
@@ -44848,7 +44848,7 @@ class _$_PlanDefinitionRelatedAction extends _PlanDefinitionRelatedAction {
 
   /// [targetId] The element id of the target related action.
   @override
-  final Id? targetId;
+  final FhirId? targetId;
 
   /// [targetIdElement] ("_targetId") Extensions for targetId
   @override
@@ -44936,7 +44936,7 @@ abstract class _PlanDefinitionRelatedAction
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final Id? targetId,
+      final FhirId? targetId,
       @JsonKey(name: '_targetId') final Element? targetIdElement,
       final FhirCode? relationship,
       @JsonKey(name: '_relationship') final Element? relationshipElement,
@@ -46057,7 +46057,7 @@ mixin _$Questionnaire {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -46234,10 +46234,10 @@ mixin _$Questionnaire {
       throw _privateConstructorUsedError;
 
   /// [derivedFrom] The URL of a Questionnaire that this Questionnaire is based on.
-  List<Canonical>? get derivedFrom => throw _privateConstructorUsedError;
+  List<FhirCanonical>? get derivedFrom => throw _privateConstructorUsedError;
 
   /// [subjectType] The types of subjects that can be the subject of responses created for the questionnaire.
-  List<Code>? get subjectType => throw _privateConstructorUsedError;
+  List<FhirCode>? get subjectType => throw _privateConstructorUsedError;
 
   /// [subjectTypeElement] ("_subjectType") Extensions for subjectType
   @JsonKey(name: '_subjectType')
@@ -46265,7 +46265,7 @@ abstract class $QuestionnaireCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.Questionnaire)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -46334,8 +46334,8 @@ abstract class $QuestionnaireCopyWith<$Res> {
       List<ContactDetail>? reviewer,
       List<ContactDetail>? endorser,
       List<RelatedArtifact>? relatedArtifact,
-      List<Canonical>? derivedFrom,
-      List<Code>? subjectType,
+      List<FhirCanonical>? derivedFrom,
+      List<FhirCode>? subjectType,
       @JsonKey(name: '_subjectType')
           List<Element>? subjectTypeElement,
       List<Coding>? code,
@@ -46652,11 +46652,11 @@ class _$QuestionnaireCopyWithImpl<$Res, $Val extends Questionnaire>
       derivedFrom: freezed == derivedFrom
           ? _value.derivedFrom
           : derivedFrom // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       subjectType: freezed == subjectType
           ? _value.subjectType
           : subjectType // ignore: cast_nullable_to_non_nullable
-              as List<Code>?,
+              as List<FhirCode>?,
       subjectTypeElement: freezed == subjectTypeElement
           ? _value.subjectTypeElement
           : subjectTypeElement // ignore: cast_nullable_to_non_nullable
@@ -46939,7 +46939,7 @@ abstract class _$$_QuestionnaireCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R5ResourceType.Questionnaire)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -47008,8 +47008,8 @@ abstract class _$$_QuestionnaireCopyWith<$Res>
       List<ContactDetail>? reviewer,
       List<ContactDetail>? endorser,
       List<RelatedArtifact>? relatedArtifact,
-      List<Canonical>? derivedFrom,
-      List<Code>? subjectType,
+      List<FhirCanonical>? derivedFrom,
+      List<FhirCode>? subjectType,
       @JsonKey(name: '_subjectType')
           List<Element>? subjectTypeElement,
       List<Coding>? code,
@@ -47345,11 +47345,11 @@ class __$$_QuestionnaireCopyWithImpl<$Res>
       derivedFrom: freezed == derivedFrom
           ? _value._derivedFrom
           : derivedFrom // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       subjectType: freezed == subjectType
           ? _value._subjectType
           : subjectType // ignore: cast_nullable_to_non_nullable
-              as List<Code>?,
+              as List<FhirCode>?,
       subjectTypeElement: freezed == subjectTypeElement
           ? _value._subjectTypeElement
           : subjectTypeElement // ignore: cast_nullable_to_non_nullable
@@ -47442,8 +47442,8 @@ class _$_Questionnaire extends _Questionnaire {
       final List<ContactDetail>? reviewer,
       final List<ContactDetail>? endorser,
       final List<RelatedArtifact>? relatedArtifact,
-      final List<Canonical>? derivedFrom,
-      final List<Code>? subjectType,
+      final List<FhirCanonical>? derivedFrom,
+      final List<FhirCode>? subjectType,
       @JsonKey(name: '_subjectType')
           final List<Element>? subjectTypeElement,
       final List<Coding>? code,
@@ -47479,7 +47479,7 @@ class _$_Questionnaire extends _Questionnaire {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -47827,11 +47827,11 @@ class _$_Questionnaire extends _Questionnaire {
   }
 
   /// [derivedFrom] The URL of a Questionnaire that this Questionnaire is based on.
-  final List<Canonical>? _derivedFrom;
+  final List<FhirCanonical>? _derivedFrom;
 
   /// [derivedFrom] The URL of a Questionnaire that this Questionnaire is based on.
   @override
-  List<Canonical>? get derivedFrom {
+  List<FhirCanonical>? get derivedFrom {
     final value = _derivedFrom;
     if (value == null) return null;
     if (_derivedFrom is EqualUnmodifiableListView) return _derivedFrom;
@@ -47840,11 +47840,11 @@ class _$_Questionnaire extends _Questionnaire {
   }
 
   /// [subjectType] The types of subjects that can be the subject of responses created for the questionnaire.
-  final List<Code>? _subjectType;
+  final List<FhirCode>? _subjectType;
 
   /// [subjectType] The types of subjects that can be the subject of responses created for the questionnaire.
   @override
-  List<Code>? get subjectType {
+  List<FhirCode>? get subjectType {
     final value = _subjectType;
     if (value == null) return null;
     if (_subjectType is EqualUnmodifiableListView) return _subjectType;
@@ -48082,7 +48082,7 @@ abstract class _Questionnaire extends Questionnaire {
   factory _Questionnaire(
       {@JsonKey(unknownEnumValue: R5ResourceType.Questionnaire)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -48152,8 +48152,8 @@ abstract class _Questionnaire extends Questionnaire {
       final List<ContactDetail>? reviewer,
       final List<ContactDetail>? endorser,
       final List<RelatedArtifact>? relatedArtifact,
-      final List<Canonical>? derivedFrom,
-      final List<Code>? subjectType,
+      final List<FhirCanonical>? derivedFrom,
+      final List<FhirCode>? subjectType,
       @JsonKey(name: '_subjectType')
           final List<Element>? subjectTypeElement,
       final List<Coding>? code,
@@ -48178,7 +48178,7 @@ abstract class _Questionnaire extends Questionnaire {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when
@@ -48403,11 +48403,11 @@ abstract class _Questionnaire extends Questionnaire {
   @override
 
   /// [derivedFrom] The URL of a Questionnaire that this Questionnaire is based on.
-  List<Canonical>? get derivedFrom;
+  List<FhirCanonical>? get derivedFrom;
   @override
 
   /// [subjectType] The types of subjects that can be the subject of responses created for the questionnaire.
-  List<Code>? get subjectType;
+  List<FhirCode>? get subjectType;
   @override
 
   /// [subjectTypeElement] ("_subjectType") Extensions for subjectType
@@ -49931,7 +49931,7 @@ mixin _$QuestionnaireEnableWhen {
   Element? get answerDateTimeElement => throw _privateConstructorUsedError;
 
   /// [answerTime] A value that the referenced question is tested using the specified operator in order for the item to be enabled.  If there are multiple answers, a match on any of the answers suffices.  If different behavior is desired (all must match, at least 2 must match, etc.), consider using the enableWhenExpression extension.
-  Time? get answerTime => throw _privateConstructorUsedError;
+  FhirTime? get answerTime => throw _privateConstructorUsedError;
 
   /// [answerTimeElement] ("_answerTime") Extensions for answerTime
   @JsonKey(name: '_answerTime')
@@ -49983,7 +49983,7 @@ abstract class $QuestionnaireEnableWhenCopyWith<$Res> {
       @JsonKey(name: '_answerDate') Element? answerDateElement,
       FhirDateTime? answerDateTime,
       @JsonKey(name: '_answerDateTime') Element? answerDateTimeElement,
-      Time? answerTime,
+      FhirTime? answerTime,
       @JsonKey(name: '_answerTime') Element? answerTimeElement,
       String? answerString,
       @JsonKey(name: '_answerString') Element? answerStringElement,
@@ -50315,7 +50315,7 @@ abstract class _$$_QuestionnaireEnableWhenCopyWith<$Res>
       @JsonKey(name: '_answerDate') Element? answerDateElement,
       FhirDateTime? answerDateTime,
       @JsonKey(name: '_answerDateTime') Element? answerDateTimeElement,
-      Time? answerTime,
+      FhirTime? answerTime,
       @JsonKey(name: '_answerTime') Element? answerTimeElement,
       String? answerString,
       @JsonKey(name: '_answerString') Element? answerStringElement,
@@ -50914,7 +50914,7 @@ abstract class _QuestionnaireEnableWhen extends QuestionnaireEnableWhen {
   @override
 
   /// [answerTime] A value that the referenced question is tested using the specified operator in order for the item to be enabled.  If there are multiple answers, a match on any of the answers suffices.  If different behavior is desired (all must match, at least 2 must match, etc.), consider using the enableWhenExpression extension.
-  Time? get answerTime;
+  FhirTime? get answerTime;
   @override
 
   /// [answerTimeElement] ("_answerTime") Extensions for answerTime
@@ -50997,7 +50997,7 @@ mixin _$QuestionnaireAnswerOption {
   Element? get valueDateElement => throw _privateConstructorUsedError;
 
   /// [valueTime] A potential answer that's allowed as the answer to this question.
-  Time? get valueTime => throw _privateConstructorUsedError;
+  FhirTime? get valueTime => throw _privateConstructorUsedError;
 
   /// [valueTimeElement] ("_valueTime") Extensions for valueTime
   @JsonKey(name: '_valueTime')
@@ -51043,7 +51043,7 @@ abstract class $QuestionnaireAnswerOptionCopyWith<$Res> {
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
       FhirDate? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
-      Time? valueTime,
+      FhirTime? valueTime,
       @JsonKey(name: '_valueTime') Element? valueTimeElement,
       String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
@@ -51257,7 +51257,7 @@ abstract class _$$_QuestionnaireAnswerOptionCopyWith<$Res>
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
       FhirDate? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
-      Time? valueTime,
+      FhirTime? valueTime,
       @JsonKey(name: '_valueTime') Element? valueTimeElement,
       String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
@@ -51676,7 +51676,7 @@ abstract class _QuestionnaireAnswerOption extends QuestionnaireAnswerOption {
   @override
 
   /// [valueTime] A potential answer that's allowed as the answer to this question.
-  Time? get valueTime;
+  FhirTime? get valueTime;
   @override
 
   /// [valueTimeElement] ("_valueTime") Extensions for valueTime
@@ -51784,7 +51784,7 @@ mixin _$QuestionnaireInitial {
   Element? get valueDateTimeElement => throw _privateConstructorUsedError;
 
   /// [valueTime] The actual value to for an initial answer.
-  Time? get valueTime => throw _privateConstructorUsedError;
+  FhirTime? get valueTime => throw _privateConstructorUsedError;
 
   /// [valueTimeElement] ("_valueTime") Extensions for valueTime
   @JsonKey(name: '_valueTime')
@@ -51842,7 +51842,7 @@ abstract class $QuestionnaireInitialCopyWith<$Res> {
       @JsonKey(name: '_valueDate') Element? valueDateElement,
       FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
-      Time? valueTime,
+      FhirTime? valueTime,
       @JsonKey(name: '_valueTime') Element? valueTimeElement,
       String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
@@ -52168,7 +52168,7 @@ abstract class _$$_QuestionnaireInitialCopyWith<$Res>
       @JsonKey(name: '_valueDate') Element? valueDateElement,
       FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
-      Time? valueTime,
+      FhirTime? valueTime,
       @JsonKey(name: '_valueTime') Element? valueTimeElement,
       String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
@@ -52733,7 +52733,7 @@ abstract class _QuestionnaireInitial extends QuestionnaireInitial {
   @override
 
   /// [valueTime] The actual value to for an initial answer.
-  Time? get valueTime;
+  FhirTime? get valueTime;
   @override
 
   /// [valueTimeElement] ("_valueTime") Extensions for valueTime
@@ -52796,7 +52796,7 @@ mixin _$Requirements {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -52937,10 +52937,10 @@ mixin _$Requirements {
   Element? get copyrightLabelElement => throw _privateConstructorUsedError;
 
   /// [derivedFrom] Another set of Requirements that this set of Requirements builds on and updates.
-  List<Canonical>? get derivedFrom => throw _privateConstructorUsedError;
+  List<FhirCanonical>? get derivedFrom => throw _privateConstructorUsedError;
 
   /// [actor] An actor these requirements are in regard to.
-  List<Canonical>? get actor => throw _privateConstructorUsedError;
+  List<FhirCanonical>? get actor => throw _privateConstructorUsedError;
 
   /// [statement] The actual statement of requirement, in markdown format.
   List<RequirementsStatement>? get statement =>
@@ -52962,7 +52962,7 @@ abstract class $RequirementsCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.Requirements)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -53018,8 +53018,8 @@ abstract class $RequirementsCopyWith<$Res> {
       String? copyrightLabel,
       @JsonKey(name: '_copyrightLabel')
           Element? copyrightLabelElement,
-      List<Canonical>? derivedFrom,
-      List<Canonical>? actor,
+      List<FhirCanonical>? derivedFrom,
+      List<FhirCanonical>? actor,
       List<RequirementsStatement>? statement});
 
   $MetaCopyWith<$Res>? get meta;
@@ -53273,11 +53273,11 @@ class _$RequirementsCopyWithImpl<$Res, $Val extends Requirements>
       derivedFrom: freezed == derivedFrom
           ? _value.derivedFrom
           : derivedFrom // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       actor: freezed == actor
           ? _value.actor
           : actor // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       statement: freezed == statement
           ? _value.statement
           : statement // ignore: cast_nullable_to_non_nullable
@@ -53516,7 +53516,7 @@ abstract class _$$_RequirementsCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R5ResourceType.Requirements)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -53572,8 +53572,8 @@ abstract class _$$_RequirementsCopyWith<$Res>
       String? copyrightLabel,
       @JsonKey(name: '_copyrightLabel')
           Element? copyrightLabelElement,
-      List<Canonical>? derivedFrom,
-      List<Canonical>? actor,
+      List<FhirCanonical>? derivedFrom,
+      List<FhirCanonical>? actor,
       List<RequirementsStatement>? statement});
 
   @override
@@ -53843,11 +53843,11 @@ class __$$_RequirementsCopyWithImpl<$Res>
       derivedFrom: freezed == derivedFrom
           ? _value._derivedFrom
           : derivedFrom // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       actor: freezed == actor
           ? _value._actor
           : actor // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       statement: freezed == statement
           ? _value._statement
           : statement // ignore: cast_nullable_to_non_nullable
@@ -53919,8 +53919,8 @@ class _$_Requirements extends _Requirements {
       this.copyrightLabel,
       @JsonKey(name: '_copyrightLabel')
           this.copyrightLabelElement,
-      final List<Canonical>? derivedFrom,
-      final List<Canonical>? actor,
+      final List<FhirCanonical>? derivedFrom,
+      final List<FhirCanonical>? actor,
       final List<RequirementsStatement>? statement})
       : _contained = contained,
         _extension_ = extension_,
@@ -53945,7 +53945,7 @@ class _$_Requirements extends _Requirements {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -54193,11 +54193,11 @@ class _$_Requirements extends _Requirements {
   final Element? copyrightLabelElement;
 
   /// [derivedFrom] Another set of Requirements that this set of Requirements builds on and updates.
-  final List<Canonical>? _derivedFrom;
+  final List<FhirCanonical>? _derivedFrom;
 
   /// [derivedFrom] Another set of Requirements that this set of Requirements builds on and updates.
   @override
-  List<Canonical>? get derivedFrom {
+  List<FhirCanonical>? get derivedFrom {
     final value = _derivedFrom;
     if (value == null) return null;
     if (_derivedFrom is EqualUnmodifiableListView) return _derivedFrom;
@@ -54206,11 +54206,11 @@ class _$_Requirements extends _Requirements {
   }
 
   /// [actor] An actor these requirements are in regard to.
-  final List<Canonical>? _actor;
+  final List<FhirCanonical>? _actor;
 
   /// [actor] An actor these requirements are in regard to.
   @override
-  List<Canonical>? get actor {
+  List<FhirCanonical>? get actor {
     final value = _actor;
     if (value == null) return null;
     if (_actor is EqualUnmodifiableListView) return _actor;
@@ -54392,7 +54392,7 @@ abstract class _Requirements extends Requirements {
   factory _Requirements(
       {@JsonKey(unknownEnumValue: R5ResourceType.Requirements)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -54449,8 +54449,8 @@ abstract class _Requirements extends Requirements {
       final String? copyrightLabel,
       @JsonKey(name: '_copyrightLabel')
           final Element? copyrightLabelElement,
-      final List<Canonical>? derivedFrom,
-      final List<Canonical>? actor,
+      final List<FhirCanonical>? derivedFrom,
+      final List<FhirCanonical>? actor,
       final List<RequirementsStatement>? statement}) = _$_Requirements;
   _Requirements._() : super._();
 
@@ -54472,7 +54472,7 @@ abstract class _Requirements extends Requirements {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when
@@ -54651,11 +54651,11 @@ abstract class _Requirements extends Requirements {
   @override
 
   /// [derivedFrom] Another set of Requirements that this set of Requirements builds on and updates.
-  List<Canonical>? get derivedFrom;
+  List<FhirCanonical>? get derivedFrom;
   @override
 
   /// [actor] An actor these requirements are in regard to.
-  List<Canonical>? get actor;
+  List<FhirCanonical>? get actor;
   @override
 
   /// [statement] The actual statement of requirement, in markdown format.
@@ -54716,7 +54716,7 @@ mixin _$RequirementsStatement {
   Element? get labelElement => throw _privateConstructorUsedError;
 
   /// [conformance] A short human usable label for this statement.
-  List<Code>? get conformance => throw _privateConstructorUsedError;
+  List<FhirCode>? get conformance => throw _privateConstructorUsedError;
 
   /// [conformanceElement] ("_conformance") Extensions for conformance
   @JsonKey(name: '_conformance')
@@ -54787,7 +54787,7 @@ abstract class $RequirementsStatementCopyWith<$Res> {
       @JsonKey(name: '_key') Element? keyElement,
       String? label,
       @JsonKey(name: '_label') Element? labelElement,
-      List<Code>? conformance,
+      List<FhirCode>? conformance,
       @JsonKey(name: '_conformance') List<Element>? conformanceElement,
       FhirBoolean? conditionality,
       @JsonKey(name: '_conditionality') Element? conditionalityElement,
@@ -54880,7 +54880,7 @@ class _$RequirementsStatementCopyWithImpl<$Res,
       conformance: freezed == conformance
           ? _value.conformance
           : conformance // ignore: cast_nullable_to_non_nullable
-              as List<Code>?,
+              as List<FhirCode>?,
       conformanceElement: freezed == conformanceElement
           ? _value.conformanceElement
           : conformanceElement // ignore: cast_nullable_to_non_nullable
@@ -55029,7 +55029,7 @@ abstract class _$$_RequirementsStatementCopyWith<$Res>
       @JsonKey(name: '_key') Element? keyElement,
       String? label,
       @JsonKey(name: '_label') Element? labelElement,
-      List<Code>? conformance,
+      List<FhirCode>? conformance,
       @JsonKey(name: '_conformance') List<Element>? conformanceElement,
       FhirBoolean? conditionality,
       @JsonKey(name: '_conditionality') Element? conditionalityElement,
@@ -55125,7 +55125,7 @@ class __$$_RequirementsStatementCopyWithImpl<$Res>
       conformance: freezed == conformance
           ? _value._conformance
           : conformance // ignore: cast_nullable_to_non_nullable
-              as List<Code>?,
+              as List<FhirCode>?,
       conformanceElement: freezed == conformanceElement
           ? _value._conformanceElement
           : conformanceElement // ignore: cast_nullable_to_non_nullable
@@ -55197,7 +55197,7 @@ class _$_RequirementsStatement extends _RequirementsStatement {
       @JsonKey(name: '_key') this.keyElement,
       this.label,
       @JsonKey(name: '_label') this.labelElement,
-      final List<Code>? conformance,
+      final List<FhirCode>? conformance,
       @JsonKey(name: '_conformance') final List<Element>? conformanceElement,
       this.conditionality,
       @JsonKey(name: '_conditionality') this.conditionalityElement,
@@ -55293,7 +55293,7 @@ class _$_RequirementsStatement extends _RequirementsStatement {
 
   /// [key] Key that identifies this statement (unique within this resource).
   @override
-  final Id? key;
+  final FhirId? key;
 
   /// [keyElement] ("_key") Extensions for key
   @override
@@ -55310,11 +55310,11 @@ class _$_RequirementsStatement extends _RequirementsStatement {
   final Element? labelElement;
 
   /// [conformance] A short human usable label for this statement.
-  final List<Code>? _conformance;
+  final List<FhirCode>? _conformance;
 
   /// [conformance] A short human usable label for this statement.
   @override
-  List<Code>? get conformance {
+  List<FhirCode>? get conformance {
     final value = _conformance;
     if (value == null) return null;
     if (_conformance is EqualUnmodifiableListView) return _conformance;
@@ -55541,11 +55541,11 @@ abstract class _RequirementsStatement extends RequirementsStatement {
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final Id? key,
+      final FhirId? key,
       @JsonKey(name: '_key') final Element? keyElement,
       final String? label,
       @JsonKey(name: '_label') final Element? labelElement,
-      final List<Code>? conformance,
+      final List<FhirCode>? conformance,
       @JsonKey(name: '_conformance') final List<Element>? conformanceElement,
       final FhirBoolean? conditionality,
       @JsonKey(name: '_conditionality') final Element? conditionalityElement,
@@ -55616,7 +55616,7 @@ abstract class _RequirementsStatement extends RequirementsStatement {
   @override
 
   /// [conformance] A short human usable label for this statement.
-  List<Code>? get conformance;
+  List<FhirCode>? get conformance;
   @override
 
   /// [conformanceElement] ("_conformance") Extensions for conformance
@@ -55703,7 +55703,7 @@ mixin _$SpecimenDefinition {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -55880,7 +55880,7 @@ mixin _$SpecimenDefinition {
       throw _privateConstructorUsedError;
 
   /// [derivedFromCanonical] The canonical URL pointing to another FHIR-defined SpecimenDefinition that is adhered to in whole or in part by this definition.
-  List<Canonical>? get derivedFromCanonical =>
+  List<FhirCanonical>? get derivedFromCanonical =>
       throw _privateConstructorUsedError;
 
   /// [derivedFromUri] The URL pointing to an externally-defined type of specimen, guideline or other definition that is adhered to in whole or in part by this definition.
@@ -55935,7 +55935,7 @@ abstract class $SpecimenDefinitionCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.SpecimenDefinition)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -56004,7 +56004,7 @@ abstract class $SpecimenDefinitionCopyWith<$Res> {
       List<ContactDetail>? reviewer,
       List<ContactDetail>? endorser,
       List<RelatedArtifact>? relatedArtifact,
-      List<Canonical>? derivedFromCanonical,
+      List<FhirCanonical>? derivedFromCanonical,
       List<FhirUri>? derivedFromUri,
       @JsonKey(name: '_derivedFromUri')
           List<Element>? derivedFromUriElement,
@@ -56340,7 +56340,7 @@ class _$SpecimenDefinitionCopyWithImpl<$Res, $Val extends SpecimenDefinition>
       derivedFromCanonical: freezed == derivedFromCanonical
           ? _value.derivedFromCanonical
           : derivedFromCanonical // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       derivedFromUri: freezed == derivedFromUri
           ? _value.derivedFromUri
           : derivedFromUri // ignore: cast_nullable_to_non_nullable
@@ -56712,7 +56712,7 @@ abstract class _$$_SpecimenDefinitionCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R5ResourceType.SpecimenDefinition)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -56781,7 +56781,7 @@ abstract class _$$_SpecimenDefinitionCopyWith<$Res>
       List<ContactDetail>? reviewer,
       List<ContactDetail>? endorser,
       List<RelatedArtifact>? relatedArtifact,
-      List<Canonical>? derivedFromCanonical,
+      List<FhirCanonical>? derivedFromCanonical,
       List<FhirUri>? derivedFromUri,
       @JsonKey(name: '_derivedFromUri')
           List<Element>? derivedFromUriElement,
@@ -57141,7 +57141,7 @@ class __$$_SpecimenDefinitionCopyWithImpl<$Res>
       derivedFromCanonical: freezed == derivedFromCanonical
           ? _value._derivedFromCanonical
           : derivedFromCanonical // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       derivedFromUri: freezed == derivedFromUri
           ? _value._derivedFromUri
           : derivedFromUri // ignore: cast_nullable_to_non_nullable
@@ -57262,7 +57262,7 @@ class _$_SpecimenDefinition extends _SpecimenDefinition {
       final List<ContactDetail>? reviewer,
       final List<ContactDetail>? endorser,
       final List<RelatedArtifact>? relatedArtifact,
-      final List<Canonical>? derivedFromCanonical,
+      final List<FhirCanonical>? derivedFromCanonical,
       final List<FhirUri>? derivedFromUri,
       @JsonKey(name: '_derivedFromUri')
           final List<Element>? derivedFromUriElement,
@@ -57306,7 +57306,7 @@ class _$_SpecimenDefinition extends _SpecimenDefinition {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -57645,11 +57645,11 @@ class _$_SpecimenDefinition extends _SpecimenDefinition {
   }
 
   /// [derivedFromCanonical] The canonical URL pointing to another FHIR-defined SpecimenDefinition that is adhered to in whole or in part by this definition.
-  final List<Canonical>? _derivedFromCanonical;
+  final List<FhirCanonical>? _derivedFromCanonical;
 
   /// [derivedFromCanonical] The canonical URL pointing to another FHIR-defined SpecimenDefinition that is adhered to in whole or in part by this definition.
   @override
-  List<Canonical>? get derivedFromCanonical {
+  List<FhirCanonical>? get derivedFromCanonical {
     final value = _derivedFromCanonical;
     if (value == null) return null;
     if (_derivedFromCanonical is EqualUnmodifiableListView)
@@ -57949,7 +57949,7 @@ abstract class _SpecimenDefinition extends SpecimenDefinition {
   factory _SpecimenDefinition(
           {@JsonKey(unknownEnumValue: R5ResourceType.SpecimenDefinition)
               final R5ResourceType resourceType,
-          final Id? id,
+          final FhirId? id,
           final Meta? meta,
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
@@ -58019,7 +58019,7 @@ abstract class _SpecimenDefinition extends SpecimenDefinition {
           final List<ContactDetail>? reviewer,
           final List<ContactDetail>? endorser,
           final List<RelatedArtifact>? relatedArtifact,
-          final List<Canonical>? derivedFromCanonical,
+          final List<FhirCanonical>? derivedFromCanonical,
           final List<FhirUri>? derivedFromUri,
           @JsonKey(name: '_derivedFromUri')
               final List<Element>? derivedFromUriElement,
@@ -58053,7 +58053,7 @@ abstract class _SpecimenDefinition extends SpecimenDefinition {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when
@@ -58278,7 +58278,7 @@ abstract class _SpecimenDefinition extends SpecimenDefinition {
   @override
 
   /// [derivedFromCanonical] The canonical URL pointing to another FHIR-defined SpecimenDefinition that is adhered to in whole or in part by this definition.
-  List<Canonical>? get derivedFromCanonical;
+  List<FhirCanonical>? get derivedFromCanonical;
   @override
 
   /// [derivedFromUri] The URL pointing to an externally-defined type of specimen, guideline or other definition that is adhered to in whole or in part by this definition.

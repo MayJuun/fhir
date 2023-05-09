@@ -95,7 +95,7 @@ Future<void> main() async {
       entry: [
         BundleEntry(
             request: BundleRequest(
-          method: Code('delete'),
+          method: FhirCode('delete'),
         ))
       ]);
   request = FhirRequest.transaction(

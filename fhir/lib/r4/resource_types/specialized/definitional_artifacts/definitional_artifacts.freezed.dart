@@ -30,7 +30,7 @@ mixin _$ActivityDefinition {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -294,7 +294,7 @@ mixin _$ActivityDefinition {
   /// [library] A reference to a Library resource containing any formal logic
   ///  used by the activity definition.
   @JsonKey(name: 'library')
-  List<Canonical>? get library_ => throw _privateConstructorUsedError;
+  List<FhirCanonical>? get library_ => throw _privateConstructorUsedError;
 
   /// [kind] A description of the kind of resource the activity definition is
   /// representing. For example, a MedicationRequest, a ServiceRequest, or a
@@ -443,7 +443,7 @@ abstract class $ActivityDefinitionCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R4ResourceType.ActivityDefinition)
           R4ResourceType resourceType,
       String? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -517,7 +517,7 @@ abstract class $ActivityDefinitionCopyWith<$Res> {
       List<ContactDetail>? endorser,
       List<RelatedArtifact>? relatedArtifact,
       @JsonKey(name: 'library')
-          List<Canonical>? library_,
+          List<FhirCanonical>? library_,
       FhirCode? kind,
       @JsonKey(name: '_kind')
           Element? kindElement,
@@ -921,7 +921,7 @@ class _$ActivityDefinitionCopyWithImpl<$Res, $Val extends ActivityDefinition>
       library_: freezed == library_
           ? _value.library_
           : library_ // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       kind: freezed == kind
           ? _value.kind
           : kind // ignore: cast_nullable_to_non_nullable
@@ -1512,7 +1512,7 @@ abstract class _$$_ActivityDefinitionCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R4ResourceType.ActivityDefinition)
           R4ResourceType resourceType,
       String? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -1586,7 +1586,7 @@ abstract class _$$_ActivityDefinitionCopyWith<$Res>
       List<ContactDetail>? endorser,
       List<RelatedArtifact>? relatedArtifact,
       @JsonKey(name: 'library')
-          List<Canonical>? library_,
+          List<FhirCanonical>? library_,
       FhirCode? kind,
       @JsonKey(name: '_kind')
           Element? kindElement,
@@ -2026,7 +2026,7 @@ class __$$_ActivityDefinitionCopyWithImpl<$Res>
       library_: freezed == library_
           ? _value._library_
           : library_ // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       kind: freezed == kind
           ? _value.kind
           : kind // ignore: cast_nullable_to_non_nullable
@@ -2228,7 +2228,7 @@ class _$_ActivityDefinition extends _ActivityDefinition {
       final List<ContactDetail>? endorser,
       final List<RelatedArtifact>? relatedArtifact,
       @JsonKey(name: 'library')
-          final List<Canonical>? library_,
+          final List<FhirCanonical>? library_,
       this.kind,
       @JsonKey(name: '_kind')
           this.kindElement,
@@ -2768,13 +2768,13 @@ class _$_ActivityDefinition extends _ActivityDefinition {
 
   /// [library] A reference to a Library resource containing any formal logic
   ///  used by the activity definition.
-  final List<Canonical>? _library_;
+  final List<FhirCanonical>? _library_;
 
   /// [library] A reference to a Library resource containing any formal logic
   ///  used by the activity definition.
   @override
   @JsonKey(name: 'library')
-  List<Canonical>? get library_ {
+  List<FhirCanonical>? get library_ {
     final value = _library_;
     if (value == null) return null;
     if (_library_ is EqualUnmodifiableListView) return _library_;
@@ -3335,7 +3335,7 @@ abstract class _ActivityDefinition extends ActivityDefinition {
           final List<ContactDetail>? endorser,
           final List<RelatedArtifact>? relatedArtifact,
           @JsonKey(name: 'library')
-              final List<Canonical>? library_,
+              final List<FhirCanonical>? library_,
           final FhirCode? kind,
           @JsonKey(name: '_kind')
               final Element? kindElement,
@@ -3389,7 +3389,7 @@ abstract class _ActivityDefinition extends ActivityDefinition {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -3704,7 +3704,7 @@ abstract class _ActivityDefinition extends ActivityDefinition {
   /// [library] A reference to a Library resource containing any formal logic
   ///  used by the activity definition.
   @JsonKey(name: 'library')
-  List<Canonical>? get library_;
+  List<FhirCanonical>? get library_;
   @override
 
   /// [kind] A description of the kind of resource the activity definition is
@@ -4761,7 +4761,7 @@ mixin _$DeviceDefinition {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -4947,7 +4947,7 @@ abstract class $DeviceDefinitionCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R4ResourceType.DeviceDefinition)
           R4ResourceType resourceType,
       String? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -5404,7 +5404,7 @@ abstract class _$$_DeviceDefinitionCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R4ResourceType.DeviceDefinition)
           R4ResourceType resourceType,
       String? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -6372,7 +6372,7 @@ abstract class _DeviceDefinition extends DeviceDefinition {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -9385,7 +9385,7 @@ mixin _$EventDefinition {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -9660,7 +9660,7 @@ abstract class $EventDefinitionCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R4ResourceType.EventDefinition)
           R4ResourceType resourceType,
       String? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -10327,7 +10327,7 @@ abstract class _$$_EventDefinitionCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R4ResourceType.EventDefinition)
           R4ResourceType resourceType,
       String? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -11590,7 +11590,7 @@ abstract class _EventDefinition extends EventDefinition {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -11920,7 +11920,7 @@ mixin _$ObservationDefinition {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -11991,7 +11991,7 @@ mixin _$ObservationDefinition {
 
   /// [permittedDataType] The data types allowed for the value element of the
   ///  instance observations conforming to this ObservationDefinition.
-  List<Code>? get permittedDataType => throw _privateConstructorUsedError;
+  List<FhirCode>? get permittedDataType => throw _privateConstructorUsedError;
   @JsonKey(name: '_permittedDataType')
   List<Element>? get permittedDataTypeElement =>
       throw _privateConstructorUsedError;
@@ -12057,7 +12057,7 @@ abstract class $ObservationDefinitionCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R4ResourceType.ObservationDefinition)
           R4ResourceType resourceType,
       String? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -12072,7 +12072,7 @@ abstract class $ObservationDefinitionCopyWith<$Res> {
       List<CodeableConcept>? category,
       CodeableConcept code,
       List<Identifier>? identifier,
-      List<Code>? permittedDataType,
+      List<FhirCode>? permittedDataType,
       @JsonKey(name: '_permittedDataType')
           List<Element>? permittedDataTypeElement,
       FhirBoolean? multipleResultsAllowed,
@@ -12207,7 +12207,7 @@ class _$ObservationDefinitionCopyWithImpl<$Res,
       permittedDataType: freezed == permittedDataType
           ? _value.permittedDataType
           : permittedDataType // ignore: cast_nullable_to_non_nullable
-              as List<Code>?,
+              as List<FhirCode>?,
       permittedDataTypeElement: freezed == permittedDataTypeElement
           ? _value.permittedDataTypeElement
           : permittedDataTypeElement // ignore: cast_nullable_to_non_nullable
@@ -12428,7 +12428,7 @@ abstract class _$$_ObservationDefinitionCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R4ResourceType.ObservationDefinition)
           R4ResourceType resourceType,
       String? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -12443,7 +12443,7 @@ abstract class _$$_ObservationDefinitionCopyWith<$Res>
       List<CodeableConcept>? category,
       CodeableConcept code,
       List<Identifier>? identifier,
-      List<Code>? permittedDataType,
+      List<FhirCode>? permittedDataType,
       @JsonKey(name: '_permittedDataType')
           List<Element>? permittedDataTypeElement,
       FhirBoolean? multipleResultsAllowed,
@@ -12588,7 +12588,7 @@ class __$$_ObservationDefinitionCopyWithImpl<$Res>
       permittedDataType: freezed == permittedDataType
           ? _value._permittedDataType
           : permittedDataType // ignore: cast_nullable_to_non_nullable
-              as List<Code>?,
+              as List<FhirCode>?,
       permittedDataTypeElement: freezed == permittedDataTypeElement
           ? _value._permittedDataTypeElement
           : permittedDataTypeElement // ignore: cast_nullable_to_non_nullable
@@ -12663,7 +12663,7 @@ class _$_ObservationDefinition extends _ObservationDefinition {
       final List<CodeableConcept>? category,
       required this.code,
       final List<Identifier>? identifier,
-      final List<Code>? permittedDataType,
+      final List<FhirCode>? permittedDataType,
       @JsonKey(name: '_permittedDataType')
           final List<Element>? permittedDataTypeElement,
       this.multipleResultsAllowed,
@@ -12853,12 +12853,12 @@ class _$_ObservationDefinition extends _ObservationDefinition {
 
   /// [permittedDataType] The data types allowed for the value element of the
   ///  instance observations conforming to this ObservationDefinition.
-  final List<Code>? _permittedDataType;
+  final List<FhirCode>? _permittedDataType;
 
   /// [permittedDataType] The data types allowed for the value element of the
   ///  instance observations conforming to this ObservationDefinition.
   @override
-  List<Code>? get permittedDataType {
+  List<FhirCode>? get permittedDataType {
     final value = _permittedDataType;
     if (value == null) return null;
     if (_permittedDataType is EqualUnmodifiableListView)
@@ -13076,7 +13076,7 @@ abstract class _ObservationDefinition extends ObservationDefinition {
       final List<CodeableConcept>? category,
       required final CodeableConcept code,
       final List<Identifier>? identifier,
-      final List<Code>? permittedDataType,
+      final List<FhirCode>? permittedDataType,
       @JsonKey(name: '_permittedDataType')
           final List<Element>? permittedDataTypeElement,
       final FhirBoolean? multipleResultsAllowed,
@@ -13110,7 +13110,7 @@ abstract class _ObservationDefinition extends ObservationDefinition {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -13192,7 +13192,7 @@ abstract class _ObservationDefinition extends ObservationDefinition {
 
   /// [permittedDataType] The data types allowed for the value element of the
   ///  instance observations conforming to this ObservationDefinition.
-  List<Code>? get permittedDataType;
+  List<FhirCode>? get permittedDataType;
   @override
   @JsonKey(name: '_permittedDataType')
   List<Element>? get permittedDataTypeElement;
@@ -14607,7 +14607,7 @@ mixin _$PlanDefinition {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -14875,7 +14875,7 @@ mixin _$PlanDefinition {
   /// [library] A reference to a Library resource containing any formal logic
   ///  used by the plan definition.
   @JsonKey(name: 'library')
-  List<Canonical>? get library_ => throw _privateConstructorUsedError;
+  List<FhirCanonical>? get library_ => throw _privateConstructorUsedError;
 
   /// [goal] Goals that describe what the activities within the plan are
   /// intended to achieve. For example, weight loss, restoring an activity of
@@ -14902,7 +14902,7 @@ abstract class $PlanDefinitionCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R4ResourceType.PlanDefinition)
           R4ResourceType resourceType,
       String? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -14977,7 +14977,7 @@ abstract class $PlanDefinitionCopyWith<$Res> {
       List<ContactDetail>? endorser,
       List<RelatedArtifact>? relatedArtifact,
       @JsonKey(name: 'library')
-          List<Canonical>? library_,
+          List<FhirCanonical>? library_,
       List<PlanDefinitionGoal>? goal,
       List<PlanDefinitionAction>? action});
 
@@ -15313,7 +15313,7 @@ class _$PlanDefinitionCopyWithImpl<$Res, $Val extends PlanDefinition>
       library_: freezed == library_
           ? _value.library_
           : library_ // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       goal: freezed == goal
           ? _value.goal
           : goal // ignore: cast_nullable_to_non_nullable
@@ -15627,7 +15627,7 @@ abstract class _$$_PlanDefinitionCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R4ResourceType.PlanDefinition)
           R4ResourceType resourceType,
       String? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -15702,7 +15702,7 @@ abstract class _$$_PlanDefinitionCopyWith<$Res>
       List<ContactDetail>? endorser,
       List<RelatedArtifact>? relatedArtifact,
       @JsonKey(name: 'library')
-          List<Canonical>? library_,
+          List<FhirCanonical>? library_,
       List<PlanDefinitionGoal>? goal,
       List<PlanDefinitionAction>? action});
 
@@ -16060,7 +16060,7 @@ class __$$_PlanDefinitionCopyWithImpl<$Res>
       library_: freezed == library_
           ? _value._library_
           : library_ // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       goal: freezed == goal
           ? _value._goal
           : goal // ignore: cast_nullable_to_non_nullable
@@ -16155,7 +16155,7 @@ class _$_PlanDefinition extends _PlanDefinition {
       final List<ContactDetail>? endorser,
       final List<RelatedArtifact>? relatedArtifact,
       @JsonKey(name: 'library')
-          final List<Canonical>? library_,
+          final List<FhirCanonical>? library_,
       final List<PlanDefinitionGoal>? goal,
       final List<PlanDefinitionAction>? action})
       : _contained = contained,
@@ -16663,13 +16663,13 @@ class _$_PlanDefinition extends _PlanDefinition {
 
   /// [library] A reference to a Library resource containing any formal logic
   ///  used by the plan definition.
-  final List<Canonical>? _library_;
+  final List<FhirCanonical>? _library_;
 
   /// [library] A reference to a Library resource containing any formal logic
   ///  used by the plan definition.
   @override
   @JsonKey(name: 'library')
-  List<Canonical>? get library_ {
+  List<FhirCanonical>? get library_ {
     final value = _library_;
     if (value == null) return null;
     if (_library_ is EqualUnmodifiableListView) return _library_;
@@ -16980,7 +16980,7 @@ abstract class _PlanDefinition extends PlanDefinition {
       final List<ContactDetail>? endorser,
       final List<RelatedArtifact>? relatedArtifact,
       @JsonKey(name: 'library')
-          final List<Canonical>? library_,
+          final List<FhirCanonical>? library_,
       final List<PlanDefinitionGoal>? goal,
       final List<PlanDefinitionAction>? action}) = _$_PlanDefinition;
   _PlanDefinition._() : super._();
@@ -17001,7 +17001,7 @@ abstract class _PlanDefinition extends PlanDefinition {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -17321,7 +17321,7 @@ abstract class _PlanDefinition extends PlanDefinition {
   /// [library] A reference to a Library resource containing any formal logic
   ///  used by the plan definition.
   @JsonKey(name: 'library')
-  List<Canonical>? get library_;
+  List<FhirCanonical>? get library_;
   @override
 
   /// [goal] Goals that describe what the activities within the plan are
@@ -18609,7 +18609,7 @@ mixin _$PlanDefinitionAction {
 
   /// [goalId] Identifies goals that this action supports. The reference must
   ///  be to a goal element defined within this plan definition.
-  List<Id>? get goalId => throw _privateConstructorUsedError;
+  List<FhirId>? get goalId => throw _privateConstructorUsedError;
 
   /// [goalIdElement] Extensions for goalId
   @JsonKey(name: '_goalId')
@@ -18795,7 +18795,7 @@ abstract class $PlanDefinitionActionCopyWith<$Res> {
       List<CodeableConcept>? code,
       List<CodeableConcept>? reason,
       List<RelatedArtifact>? documentation,
-      List<Id>? goalId,
+      List<FhirId>? goalId,
       @JsonKey(name: '_goalId')
           List<Element?>? goalIdElement,
       CodeableConcept? subjectCodeableConcept,
@@ -19002,7 +19002,7 @@ class _$PlanDefinitionActionCopyWithImpl<$Res,
       goalId: freezed == goalId
           ? _value.goalId
           : goalId // ignore: cast_nullable_to_non_nullable
-              as List<Id>?,
+              as List<FhirId>?,
       goalIdElement: freezed == goalIdElement
           ? _value.goalIdElement
           : goalIdElement // ignore: cast_nullable_to_non_nullable
@@ -19435,7 +19435,7 @@ abstract class _$$_PlanDefinitionActionCopyWith<$Res>
       List<CodeableConcept>? code,
       List<CodeableConcept>? reason,
       List<RelatedArtifact>? documentation,
-      List<Id>? goalId,
+      List<FhirId>? goalId,
       @JsonKey(name: '_goalId')
           List<Element?>? goalIdElement,
       CodeableConcept? subjectCodeableConcept,
@@ -19660,7 +19660,7 @@ class __$$_PlanDefinitionActionCopyWithImpl<$Res>
       goalId: freezed == goalId
           ? _value._goalId
           : goalId // ignore: cast_nullable_to_non_nullable
-              as List<Id>?,
+              as List<FhirId>?,
       goalIdElement: freezed == goalIdElement
           ? _value._goalIdElement
           : goalIdElement // ignore: cast_nullable_to_non_nullable
@@ -19835,7 +19835,7 @@ class _$_PlanDefinitionAction extends _PlanDefinitionAction {
       final List<CodeableConcept>? code,
       final List<CodeableConcept>? reason,
       final List<RelatedArtifact>? documentation,
-      final List<Id>? goalId,
+      final List<FhirId>? goalId,
       @JsonKey(name: '_goalId')
           final List<Element?>? goalIdElement,
       this.subjectCodeableConcept,
@@ -20069,12 +20069,12 @@ class _$_PlanDefinitionAction extends _PlanDefinitionAction {
 
   /// [goalId] Identifies goals that this action supports. The reference must
   ///  be to a goal element defined within this plan definition.
-  final List<Id>? _goalId;
+  final List<FhirId>? _goalId;
 
   /// [goalId] Identifies goals that this action supports. The reference must
   ///  be to a goal element defined within this plan definition.
   @override
-  List<Id>? get goalId {
+  List<FhirId>? get goalId {
     final value = _goalId;
     if (value == null) return null;
     if (_goalId is EqualUnmodifiableListView) return _goalId;
@@ -20564,7 +20564,7 @@ abstract class _PlanDefinitionAction extends PlanDefinitionAction {
       final List<CodeableConcept>? code,
       final List<CodeableConcept>? reason,
       final List<RelatedArtifact>? documentation,
-      final List<Id>? goalId,
+      final List<FhirId>? goalId,
       @JsonKey(name: '_goalId')
           final List<Element?>? goalIdElement,
       final CodeableConcept? subjectCodeableConcept,
@@ -20717,7 +20717,7 @@ abstract class _PlanDefinitionAction extends PlanDefinitionAction {
 
   /// [goalId] Identifies goals that this action supports. The reference must
   ///  be to a goal element defined within this plan definition.
-  List<Id>? get goalId;
+  List<FhirId>? get goalId;
   @override
 
   /// [goalIdElement] Extensions for goalId
@@ -21714,7 +21714,7 @@ class _$_PlanDefinitionRelatedAction extends _PlanDefinitionRelatedAction {
 
   /// [actionId] The element id of the related action.
   @override
-  final Id? actionId;
+  final FhirId? actionId;
 
   /// [actionIdElement] Extensions for actionId
   @override
@@ -21804,7 +21804,7 @@ abstract class _PlanDefinitionRelatedAction
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final Id? actionId,
+      final FhirId? actionId,
       @JsonKey(name: '_actionId') final Element? actionIdElement,
       final FhirCode? relationship,
       @JsonKey(name: '_relationship') final Element? relationshipElement,
@@ -22771,7 +22771,7 @@ mixin _$Questionnaire {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -22878,7 +22878,7 @@ mixin _$Questionnaire {
 
   /// [derivedFrom] The URL of a Questionnaire that this Questionnaire is based
   ///  on.
-  List<Canonical>? get derivedFrom => throw _privateConstructorUsedError;
+  List<FhirCanonical>? get derivedFrom => throw _privateConstructorUsedError;
 
   /// [status] The status of this questionnaire. Enables tracking the
   ///  life-cycle of the content.
@@ -22899,7 +22899,7 @@ mixin _$Questionnaire {
 
   /// [subjectType] The types of subjects that can be the subject of responses
   ///  created for the questionnaire.
-  List<Code>? get subjectType => throw _privateConstructorUsedError;
+  List<FhirCode>? get subjectType => throw _privateConstructorUsedError;
 
   /// [subjectTypeElement] Extensions for subjectType
   @JsonKey(name: '_subjectType')
@@ -23009,7 +23009,7 @@ abstract class $QuestionnaireCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R4ResourceType.Questionnaire)
           R4ResourceType resourceType,
       String? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -23034,14 +23034,14 @@ abstract class $QuestionnaireCopyWith<$Res> {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      List<Canonical>? derivedFrom,
+      List<FhirCanonical>? derivedFrom,
       FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       FhirBoolean? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
-      List<Code>? subjectType,
+      List<FhirCode>? subjectType,
       @JsonKey(name: '_subjectType')
           List<Element?>? subjectTypeElement,
       FhirDateTime? date,
@@ -23237,7 +23237,7 @@ class _$QuestionnaireCopyWithImpl<$Res, $Val extends Questionnaire>
       derivedFrom: freezed == derivedFrom
           ? _value.derivedFrom
           : derivedFrom // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
@@ -23257,7 +23257,7 @@ class _$QuestionnaireCopyWithImpl<$Res, $Val extends Questionnaire>
       subjectType: freezed == subjectType
           ? _value.subjectType
           : subjectType // ignore: cast_nullable_to_non_nullable
-              as List<Code>?,
+              as List<FhirCode>?,
       subjectTypeElement: freezed == subjectTypeElement
           ? _value.subjectTypeElement
           : subjectTypeElement // ignore: cast_nullable_to_non_nullable
@@ -23574,7 +23574,7 @@ abstract class _$$_QuestionnaireCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R4ResourceType.Questionnaire)
           R4ResourceType resourceType,
       String? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -23599,14 +23599,14 @@ abstract class _$$_QuestionnaireCopyWith<$Res>
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      List<Canonical>? derivedFrom,
+      List<FhirCanonical>? derivedFrom,
       FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       FhirBoolean? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
-      List<Code>? subjectType,
+      List<FhirCode>? subjectType,
       @JsonKey(name: '_subjectType')
           List<Element?>? subjectTypeElement,
       FhirDateTime? date,
@@ -23818,7 +23818,7 @@ class __$$_QuestionnaireCopyWithImpl<$Res>
       derivedFrom: freezed == derivedFrom
           ? _value._derivedFrom
           : derivedFrom // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
@@ -23838,7 +23838,7 @@ class __$$_QuestionnaireCopyWithImpl<$Res>
       subjectType: freezed == subjectType
           ? _value._subjectType
           : subjectType // ignore: cast_nullable_to_non_nullable
-              as List<Code>?,
+              as List<FhirCode>?,
       subjectTypeElement: freezed == subjectTypeElement
           ? _value._subjectTypeElement
           : subjectTypeElement // ignore: cast_nullable_to_non_nullable
@@ -23959,14 +23959,14 @@ class _$_Questionnaire extends _Questionnaire {
       this.title,
       @JsonKey(name: '_title')
           this.titleElement,
-      final List<Canonical>? derivedFrom,
+      final List<FhirCanonical>? derivedFrom,
       this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       this.experimental,
       @JsonKey(name: '_experimental')
           this.experimentalElement,
-      final List<Code>? subjectType,
+      final List<FhirCode>? subjectType,
       @JsonKey(name: '_subjectType')
           final List<Element?>? subjectTypeElement,
       this.date,
@@ -24208,12 +24208,12 @@ class _$_Questionnaire extends _Questionnaire {
 
   /// [derivedFrom] The URL of a Questionnaire that this Questionnaire is based
   ///  on.
-  final List<Canonical>? _derivedFrom;
+  final List<FhirCanonical>? _derivedFrom;
 
   /// [derivedFrom] The URL of a Questionnaire that this Questionnaire is based
   ///  on.
   @override
-  List<Canonical>? get derivedFrom {
+  List<FhirCanonical>? get derivedFrom {
     final value = _derivedFrom;
     if (value == null) return null;
     if (_derivedFrom is EqualUnmodifiableListView) return _derivedFrom;
@@ -24244,12 +24244,12 @@ class _$_Questionnaire extends _Questionnaire {
 
   /// [subjectType] The types of subjects that can be the subject of responses
   ///  created for the questionnaire.
-  final List<Code>? _subjectType;
+  final List<FhirCode>? _subjectType;
 
   /// [subjectType] The types of subjects that can be the subject of responses
   ///  created for the questionnaire.
   @override
-  List<Code>? get subjectType {
+  List<FhirCode>? get subjectType {
     final value = _subjectType;
     if (value == null) return null;
     if (_subjectType is EqualUnmodifiableListView) return _subjectType;
@@ -24623,14 +24623,14 @@ abstract class _Questionnaire extends Questionnaire {
       final String? title,
       @JsonKey(name: '_title')
           final Element? titleElement,
-      final List<Canonical>? derivedFrom,
+      final List<FhirCanonical>? derivedFrom,
       final FhirCode? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
       final FhirBoolean? experimental,
       @JsonKey(name: '_experimental')
           final Element? experimentalElement,
-      final List<Code>? subjectType,
+      final List<FhirCode>? subjectType,
       @JsonKey(name: '_subjectType')
           final List<Element?>? subjectTypeElement,
       final FhirDateTime? date,
@@ -24678,7 +24678,7 @@ abstract class _Questionnaire extends Questionnaire {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -24802,7 +24802,7 @@ abstract class _Questionnaire extends Questionnaire {
 
   /// [derivedFrom] The URL of a Questionnaire that this Questionnaire is based
   ///  on.
-  List<Canonical>? get derivedFrom;
+  List<FhirCanonical>? get derivedFrom;
   @override
 
   /// [status] The status of this questionnaire. Enables tracking the
@@ -24828,7 +24828,7 @@ abstract class _Questionnaire extends Questionnaire {
 
   /// [subjectType] The types of subjects that can be the subject of responses
   ///  created for the questionnaire.
-  List<Code>? get subjectType;
+  List<FhirCode>? get subjectType;
   @override
 
   /// [subjectTypeElement] Extensions for subjectType
@@ -26367,7 +26367,7 @@ mixin _$QuestionnaireEnableWhen {
 
   /// [answerTime] A value that the referenced question is tested using the
   ///  specified operator in order for the item to be enabled.
-  Time? get answerTime => throw _privateConstructorUsedError;
+  FhirTime? get answerTime => throw _privateConstructorUsedError;
 
   /// [answerTimeElement] Extensions for answerTime
   @JsonKey(name: '_answerTime')
@@ -26423,7 +26423,7 @@ abstract class $QuestionnaireEnableWhenCopyWith<$Res> {
       @JsonKey(name: '_answerDate') Element? answerDateElement,
       FhirDateTime? answerDateTime,
       @JsonKey(name: '_answerDateTime') Element? answerDateTimeElement,
-      Time? answerTime,
+      FhirTime? answerTime,
       @JsonKey(name: '_answerTime') Element? answerTimeElement,
       String? answerString,
       @JsonKey(name: '_answerString') Element? answerStringElement,
@@ -26755,7 +26755,7 @@ abstract class _$$_QuestionnaireEnableWhenCopyWith<$Res>
       @JsonKey(name: '_answerDate') Element? answerDateElement,
       FhirDateTime? answerDateTime,
       @JsonKey(name: '_answerDateTime') Element? answerDateTimeElement,
-      Time? answerTime,
+      FhirTime? answerTime,
       @JsonKey(name: '_answerTime') Element? answerTimeElement,
       String? answerString,
       @JsonKey(name: '_answerString') Element? answerStringElement,
@@ -27375,7 +27375,7 @@ abstract class _QuestionnaireEnableWhen extends QuestionnaireEnableWhen {
 
   /// [answerTime] A value that the referenced question is tested using the
   ///  specified operator in order for the item to be enabled.
-  Time? get answerTime;
+  FhirTime? get answerTime;
   @override
 
   /// [answerTimeElement] Extensions for answerTime
@@ -27466,7 +27466,7 @@ mixin _$QuestionnaireAnswerOption {
 
   /// [valueTime] A potential answer that's allowed as the answer to this
   ///  question.
-  Time? get valueTime => throw _privateConstructorUsedError;
+  FhirTime? get valueTime => throw _privateConstructorUsedError;
 
   /// [valueTimeElement] Extensions for valueTime
   @JsonKey(name: '_valueTime')
@@ -27516,7 +27516,7 @@ abstract class $QuestionnaireAnswerOptionCopyWith<$Res> {
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
       FhirDate? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
-      Time? valueTime,
+      FhirTime? valueTime,
       @JsonKey(name: '_valueTime') Element? valueTimeElement,
       String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
@@ -27730,7 +27730,7 @@ abstract class _$$_QuestionnaireAnswerOptionCopyWith<$Res>
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
       FhirDate? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
-      Time? valueTime,
+      FhirTime? valueTime,
       @JsonKey(name: '_valueTime') Element? valueTimeElement,
       String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
@@ -28162,7 +28162,7 @@ abstract class _QuestionnaireAnswerOption extends QuestionnaireAnswerOption {
 
   /// [valueTime] A potential answer that's allowed as the answer to this
   ///  question.
-  Time? get valueTime;
+  FhirTime? get valueTime;
   @override
 
   /// [valueTimeElement] Extensions for valueTime
@@ -28275,7 +28275,7 @@ mixin _$QuestionnaireInitial {
   Element? get valueDateTimeElement => throw _privateConstructorUsedError;
 
   /// [valueTime] The actual value to for an initial answer.
-  Time? get valueTime => throw _privateConstructorUsedError;
+  FhirTime? get valueTime => throw _privateConstructorUsedError;
 
   /// [valueTimeElement] Extensions for valueTime
   @JsonKey(name: '_valueTime')
@@ -28333,7 +28333,7 @@ abstract class $QuestionnaireInitialCopyWith<$Res> {
       @JsonKey(name: '_valueDate') Element? valueDateElement,
       FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
-      Time? valueTime,
+      FhirTime? valueTime,
       @JsonKey(name: '_valueTime') Element? valueTimeElement,
       String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
@@ -28659,7 +28659,7 @@ abstract class _$$_QuestionnaireInitialCopyWith<$Res>
       @JsonKey(name: '_valueDate') Element? valueDateElement,
       FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
-      Time? valueTime,
+      FhirTime? valueTime,
       @JsonKey(name: '_valueTime') Element? valueTimeElement,
       String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
@@ -29227,7 +29227,7 @@ abstract class _QuestionnaireInitial extends QuestionnaireInitial {
   @override
 
   /// [valueTime] The actual value to for an initial answer.
-  Time? get valueTime;
+  FhirTime? get valueTime;
   @override
 
   /// [valueTimeElement] Extensions for valueTime
@@ -29289,7 +29289,7 @@ mixin _$SpecimenDefinition {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -29388,7 +29388,7 @@ abstract class $SpecimenDefinitionCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R4ResourceType.SpecimenDefinition)
           R4ResourceType resourceType,
       String? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -29623,7 +29623,7 @@ abstract class _$$_SpecimenDefinitionCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R4ResourceType.SpecimenDefinition)
           R4ResourceType resourceType,
       String? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -30117,7 +30117,7 @@ abstract class _SpecimenDefinition extends SpecimenDefinition {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when the

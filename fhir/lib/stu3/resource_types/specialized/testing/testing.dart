@@ -20,7 +20,7 @@ class TestReport with Resource, _$TestReport {
     @JsonKey(unknownEnumValue: Stu3ResourceType.TestReport)
         Stu3ResourceType resourceType,
     FhirId? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,
@@ -448,7 +448,7 @@ class TestScript with Resource, _$TestScript {
     @JsonKey(unknownEnumValue: Stu3ResourceType.TestScript)
         Stu3ResourceType resourceType,
     FhirId? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,
@@ -694,7 +694,7 @@ class TestScriptCapability with _$TestScriptCapability {
     @JsonKey(name: '_validated') Element? validatedElement,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    List<Decimal>? origin,
+    List<FhirDecimal>? origin,
     @JsonKey(name: '_origin') List<Element?>? originElement,
     FhirDecimal? destination,
     @JsonKey(name: '_destination') Element? destinationElement,

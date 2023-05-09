@@ -23,7 +23,7 @@ mixin _$Composition {
   @JsonKey(unknownEnumValue: Stu3ResourceType.Composition)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
   FhirId? get id => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
@@ -78,7 +78,7 @@ abstract class $CompositionCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Composition)
           Stu3ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -472,7 +472,7 @@ abstract class _$$_CompositionCopyWith<$Res>
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Composition)
           Stu3ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -766,7 +766,7 @@ class _$_Composition extends _Composition {
   @JsonKey(unknownEnumValue: Stu3ResourceType.Composition)
   final Stu3ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -848,7 +848,7 @@ class _$_Composition extends _Composition {
   @JsonKey(name: '_title')
   final Element? titleElement;
   @override
-  final Id? confidentiality;
+  final FhirId? confidentiality;
   @override
   @JsonKey(name: '_confidentiality')
   final Element? confidentialityElement;
@@ -1007,7 +1007,7 @@ abstract class _Composition extends Composition {
   factory _Composition(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Composition)
           final Stu3ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -1036,7 +1036,7 @@ abstract class _Composition extends Composition {
       final String? title,
       @JsonKey(name: '_title')
           final Element? titleElement,
-      final Id? confidentiality,
+      final FhirId? confidentiality,
       @JsonKey(name: '_confidentiality')
           final Element? confidentialityElement,
       final List<CompositionAttester>? attester,
@@ -1055,7 +1055,7 @@ abstract class _Composition extends Composition {
   @override
   FhirId? get id;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
@@ -1133,7 +1133,7 @@ mixin _$CompositionAttester {
   List<CompositionAttesterMode>? get mode => throw _privateConstructorUsedError;
   @JsonKey(name: '_mode')
   List<Element?>? get modeElement => throw _privateConstructorUsedError;
-  Time? get time => throw _privateConstructorUsedError;
+  FhirTime? get time => throw _privateConstructorUsedError;
   @JsonKey(name: '_time')
   Element? get timeElement => throw _privateConstructorUsedError;
   Reference? get party => throw _privateConstructorUsedError;
@@ -1153,7 +1153,7 @@ abstract class $CompositionAttesterCopyWith<$Res> {
   $Res call(
       {List<CompositionAttesterMode>? mode,
       @JsonKey(name: '_mode') List<Element?>? modeElement,
-      Time? time,
+      FhirTime? time,
       @JsonKey(name: '_time') Element? timeElement,
       Reference? party});
 
@@ -1240,7 +1240,7 @@ abstract class _$$_CompositionAttesterCopyWith<$Res>
   $Res call(
       {List<CompositionAttesterMode>? mode,
       @JsonKey(name: '_mode') List<Element?>? modeElement,
-      Time? time,
+      FhirTime? time,
       @JsonKey(name: '_time') Element? timeElement,
       Reference? party});
 
@@ -1399,7 +1399,7 @@ abstract class _CompositionAttester extends CompositionAttester {
   @JsonKey(name: '_mode')
   List<Element?>? get modeElement;
   @override
-  Time? get time;
+  FhirTime? get time;
   @override
   @JsonKey(name: '_time')
   Element? get timeElement;
@@ -2347,7 +2347,7 @@ mixin _$DocumentManifest {
   @JsonKey(unknownEnumValue: Stu3ResourceType.DocumentManifest)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
   FhirId? get id => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
@@ -2399,7 +2399,7 @@ abstract class $DocumentManifestCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: Stu3ResourceType.DocumentManifest)
           Stu3ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -2743,7 +2743,7 @@ abstract class _$$_DocumentManifestCopyWith<$Res>
       {@JsonKey(unknownEnumValue: Stu3ResourceType.DocumentManifest)
           Stu3ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -3008,7 +3008,7 @@ class _$_DocumentManifest extends _DocumentManifest {
   @JsonKey(unknownEnumValue: Stu3ResourceType.DocumentManifest)
   final Stu3ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -3235,7 +3235,7 @@ abstract class _DocumentManifest extends DocumentManifest {
   factory _DocumentManifest(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.DocumentManifest)
           final Stu3ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -3279,7 +3279,7 @@ abstract class _DocumentManifest extends DocumentManifest {
   @override
   FhirId? get id;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
@@ -3737,7 +3737,7 @@ mixin _$DocumentReference {
   @JsonKey(unknownEnumValue: Stu3ResourceType.DocumentReference)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
   FhirId? get id => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
@@ -3798,7 +3798,7 @@ abstract class $DocumentReferenceCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: Stu3ResourceType.DocumentReference)
           Stu3ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -4241,7 +4241,7 @@ abstract class _$$_DocumentReferenceCopyWith<$Res>
       {@JsonKey(unknownEnumValue: Stu3ResourceType.DocumentReference)
           Stu3ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -4562,7 +4562,7 @@ class _$_DocumentReference extends _DocumentReference {
   @JsonKey(unknownEnumValue: Stu3ResourceType.DocumentReference)
   final Stu3ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -4822,7 +4822,7 @@ abstract class _DocumentReference extends DocumentReference {
   factory _DocumentReference(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.DocumentReference)
           final Stu3ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -4874,7 +4874,7 @@ abstract class _DocumentReference extends DocumentReference {
   @override
   FhirId? get id;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override

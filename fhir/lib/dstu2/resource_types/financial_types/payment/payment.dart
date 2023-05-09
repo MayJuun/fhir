@@ -20,7 +20,7 @@ class PaymentNotice with Resource, _$PaymentNotice {
     @JsonKey(unknownEnumValue: Dstu2ResourceType.PaymentNotice)
         Dstu2ResourceType resourceType,
     FhirId? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,
@@ -78,7 +78,7 @@ class PaymentReconciliation with Resource, _$PaymentReconciliation {
     @JsonKey(unknownEnumValue: Dstu2ResourceType.PaymentReconciliation)
         Dstu2ResourceType resourceType,
     FhirId? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,

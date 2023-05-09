@@ -211,7 +211,7 @@ class Attachment with _$Attachment {
 
     /// [size] The number of bytes of data that make up this attachment (before
     ///  base64 encoding, if that is done).
-    UnsignedInt? size,
+    FhirUnsignedInt? size,
 
     /// [sizeElement] Extensions for size
     @JsonKey(name: '_size') Element? sizeElement,
@@ -1777,7 +1777,7 @@ class SampledData with _$SampledData {
     /// [dimensions] The number of sample points at each time point. If this
     /// value is greater than one, then the dimensions will be interlaced - all
     ///  the sample points for a point in time will be recorded at once.
-    PositiveInt? dimensions,
+    FhirPositiveInt? dimensions,
 
     /// [dimensionsElement] Extensions for dimensions
     @JsonKey(name: '_dimensions') Element? dimensionsElement,
@@ -2397,7 +2397,7 @@ class ContactPoint with _$ContactPoint {
     /// ContactPoints with lower rank values are more preferred than those with
     ///  higher rank values.
 
-    PositiveInt? rank,
+    FhirPositiveInt? rank,
 
     /// [rankElement] Extensions for rank
     @JsonKey(name: '_rank')
@@ -2752,7 +2752,7 @@ class TimingRepeat with _$TimingRepeat {
     /// duration of the entire timing specification. If countMax is present, this
     ///  element indicates the lower bound of the allowed range of count values.
 
-    PositiveInt? count,
+    FhirPositiveInt? count,
 
     /// [countElement] Extensions for count
     @JsonKey(name: '_count')
@@ -2761,7 +2761,7 @@ class TimingRepeat with _$TimingRepeat {
     /// [countMax] If present, indicates that the count is a range - so to
     ///  perform the action between [count] and [countMax] times.
 
-    PositiveInt? countMax,
+    FhirPositiveInt? countMax,
 
     /// [countMaxElement] Extensions for countMax
     @JsonKey(name: '_countMax')
@@ -2799,7 +2799,7 @@ class TimingRepeat with _$TimingRepeat {
     /// period. If frequencyMax is present, this element indicates the lower bound
     ///  of the allowed range of the frequency.
 
-    PositiveInt? frequency,
+    FhirPositiveInt? frequency,
 
     /// [frequencyElement] Extensions for frequency
     @JsonKey(name: '_frequency')
@@ -2809,7 +2809,7 @@ class TimingRepeat with _$TimingRepeat {
     /// to repeat between [frequency] and [frequencyMax] times within the period
     ///  or period range.
 
-    PositiveInt? frequencyMax,
+    FhirPositiveInt? frequencyMax,
 
     /// [frequencyMaxElement] Extensions for frequencyMax
     @JsonKey(name: '_frequencyMax')
@@ -2848,7 +2848,7 @@ class TimingRepeat with _$TimingRepeat {
     /// [dayOfWeek] If one or more days of week is provided, then the action
     ///  happens only on the specified day(s).
 
-    List<Code>? dayOfWeek,
+    List<FhirCode>? dayOfWeek,
 
     /// [dayOfWeekElement] Extensions for dayOfWeek
     @JsonKey(name: '_dayOfWeek')
@@ -2856,7 +2856,7 @@ class TimingRepeat with _$TimingRepeat {
 
     /// [timeOfDay] Specified time of day for action to take place.
 
-    List<Time>? timeOfDay,
+    List<FhirTime>? timeOfDay,
 
     /// [timeOfDayElement] Extensions for timeOfDay
     @JsonKey(name: '_timeOfDay')
@@ -2875,7 +2875,7 @@ class TimingRepeat with _$TimingRepeat {
     /// indicate whether the minutes is before or after the event, then the offset
     ///  is assumed to be after the event.
 
-    UnsignedInt? offset,
+    FhirUnsignedInt? offset,
 
     /// [offsetElement] Extensions for offset
     @JsonKey(name: '_offset')

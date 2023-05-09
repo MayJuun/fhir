@@ -26,7 +26,7 @@ mixin _$FhirExtension {
   FhirUri? get url => throw _privateConstructorUsedError;
   @JsonKey(name: '_url')
   Element? get urlElement => throw _privateConstructorUsedError;
-   FhirBoolean? get valueBoolean => throw _privateConstructorUsedError;
+  FhirBoolean? get valueBoolean => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueBoolean')
   Element? get valueBooleanElement => throw _privateConstructorUsedError;
   FhirInteger? get valueInteger => throw _privateConstructorUsedError;
@@ -35,7 +35,7 @@ mixin _$FhirExtension {
   FhirDecimal? get valueDecimal => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueDecimal')
   Element? get valueDecimalElement => throw _privateConstructorUsedError;
-  FhirBase64Binary?? get valueBase64Binary => throw _privateConstructorUsedError;
+  FhirBase64Binary? get valueBase64Binary => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueBase64Binary')
   Element? get valueBase64BinaryElement => throw _privateConstructorUsedError;
   FhirInstant? get valueInstant => throw _privateConstructorUsedError;
@@ -53,25 +53,25 @@ mixin _$FhirExtension {
   FhirDateTime? get valueDateTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueDateTime')
   Element? get valueDateTimeElement => throw _privateConstructorUsedError;
-  Time? get valueTime => throw _privateConstructorUsedError;
+  FhirTime? get valueTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueTime')
   Element? get valueTimeElement => throw _privateConstructorUsedError;
-   FhirCode? get valueCode => throw _privateConstructorUsedError;
+  FhirCode? get valueCode => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueCode')
   Element? get valueCodeElement => throw _privateConstructorUsedError;
-  Oid? get valueOid => throw _privateConstructorUsedError;
+  FhirOid? get valueOid => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueOid')
   Element? get valueOidElement => throw _privateConstructorUsedError;
-  Uuid? get valueUuid => throw _privateConstructorUsedError;
+  FhirUuid? get valueUuid => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueUuid')
   Element? get valueUuidElement => throw _privateConstructorUsedError;
   FhirId? get valueId => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueId')
   Element? get valueIdElement => throw _privateConstructorUsedError;
-  UnsignedInt? get valueUnsignedInt => throw _privateConstructorUsedError;
+  FhirUnsignedInt? get valueUnsignedInt => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueUnsignedInt')
   Element? get valueUnsignedIntElement => throw _privateConstructorUsedError;
-  PositiveInt? get valuePositiveInt => throw _privateConstructorUsedError;
+  FhirPositiveInt? get valuePositiveInt => throw _privateConstructorUsedError;
   @JsonKey(name: '_valuePositiveInt')
   Element? get valuePositiveIntElement => throw _privateConstructorUsedError;
   String? get valueMarkdown => throw _privateConstructorUsedError;
@@ -105,7 +105,7 @@ mixin _$FhirExtension {
   Address? get valueAddress => throw _privateConstructorUsedError;
   ContactPoint? get valueContactPoint => throw _privateConstructorUsedError;
   Timing? get valueTiming => throw _privateConstructorUsedError;
-  Meta? get valueMeta => throw _privateConstructorUsedError;
+  FhirMeta? get valueMeta => throw _privateConstructorUsedError;
   ElementDefinition? get valueElementDefinition =>
       throw _privateConstructorUsedError;
   ContactDetail? get valueContactDetail => throw _privateConstructorUsedError;
@@ -138,13 +138,13 @@ abstract class $FhirExtensionCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       FhirUri? url,
       @JsonKey(name: '_url') Element? urlElement,
-       FhirBoolean? valueBoolean,
+      FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       FhirInteger? valueInteger,
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
       FhirDecimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
-  FhirBase64Binary?? valueBase64Binary,
+      FhirBase64Binary? valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
       FhirInstant? valueInstant,
       @JsonKey(name: '_valueInstant') Element? valueInstantElement,
@@ -156,19 +156,19 @@ abstract class $FhirExtensionCopyWith<$Res> {
       @JsonKey(name: '_valueDate') Element? valueDateElement,
       FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
-      Time? valueTime,
+      FhirTime? valueTime,
       @JsonKey(name: '_valueTime') Element? valueTimeElement,
-       FhirCode? valueCode,
+      FhirCode? valueCode,
       @JsonKey(name: '_valueCode') Element? valueCodeElement,
-      Oid? valueOid,
+      FhirOid? valueOid,
       @JsonKey(name: '_valueOid') Element? valueOidElement,
-      Uuid? valueUuid,
+      FhirUuid? valueUuid,
       @JsonKey(name: '_valueUuid') Element? valueUuidElement,
       FhirId? valueId,
       @JsonKey(name: '_valueId') Element? valueIdElement,
-      UnsignedInt? valueUnsignedInt,
+      FhirUnsignedInt? valueUnsignedInt,
       @JsonKey(name: '_valueUnsignedInt') Element? valueUnsignedIntElement,
-      PositiveInt? valuePositiveInt,
+      FhirPositiveInt? valuePositiveInt,
       @JsonKey(name: '_valuePositiveInt') Element? valuePositiveIntElement,
       String? valueMarkdown,
       @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
@@ -198,7 +198,7 @@ abstract class $FhirExtensionCopyWith<$Res> {
       Address? valueAddress,
       ContactPoint? valueContactPoint,
       Timing? valueTiming,
-      Meta? valueMeta,
+      FhirMeta? valueMeta,
       ElementDefinition? valueElementDefinition,
       ContactDetail? valueContactDetail,
       Contributor? valueContributor,
@@ -373,7 +373,7 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
       valueBoolean: freezed == valueBoolean
           ? _value.valueBoolean
           : valueBoolean // ignore: cast_nullable_to_non_nullable
-              as  FhirBoolean?,
+              as FhirBoolean?,
       valueBooleanElement: freezed == valueBooleanElement
           ? _value.valueBooleanElement
           : valueBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -397,7 +397,7 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
       valueBase64Binary: freezed == valueBase64Binary
           ? _value.valueBase64Binary
           : valueBase64Binary // ignore: cast_nullable_to_non_nullable
-              as  FhirBase64Binary??,
+              as FhirBase64Binary?,
       valueBase64BinaryElement: freezed == valueBase64BinaryElement
           ? _value.valueBase64BinaryElement
           : valueBase64BinaryElement // ignore: cast_nullable_to_non_nullable
@@ -453,7 +453,7 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
       valueCode: freezed == valueCode
           ? _value.valueCode
           : valueCode // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       valueCodeElement: freezed == valueCodeElement
           ? _value.valueCodeElement
           : valueCodeElement // ignore: cast_nullable_to_non_nullable
@@ -1322,13 +1322,13 @@ abstract class _$$_FhirExtensionCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       FhirUri? url,
       @JsonKey(name: '_url') Element? urlElement,
-       FhirBoolean? valueBoolean,
+      FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       FhirInteger? valueInteger,
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
       FhirDecimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
-  FhirBase64Binary?? valueBase64Binary,
+      FhirBase64Binary? valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
       FhirInstant? valueInstant,
       @JsonKey(name: '_valueInstant') Element? valueInstantElement,
@@ -1340,19 +1340,19 @@ abstract class _$$_FhirExtensionCopyWith<$Res>
       @JsonKey(name: '_valueDate') Element? valueDateElement,
       FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
-      Time? valueTime,
+      FhirTime? valueTime,
       @JsonKey(name: '_valueTime') Element? valueTimeElement,
-       FhirCode? valueCode,
+      FhirCode? valueCode,
       @JsonKey(name: '_valueCode') Element? valueCodeElement,
-      Oid? valueOid,
+      FhirOid? valueOid,
       @JsonKey(name: '_valueOid') Element? valueOidElement,
-      Uuid? valueUuid,
+      FhirUuid? valueUuid,
       @JsonKey(name: '_valueUuid') Element? valueUuidElement,
       FhirId? valueId,
       @JsonKey(name: '_valueId') Element? valueIdElement,
-      UnsignedInt? valueUnsignedInt,
+      FhirUnsignedInt? valueUnsignedInt,
       @JsonKey(name: '_valueUnsignedInt') Element? valueUnsignedIntElement,
-      PositiveInt? valuePositiveInt,
+      FhirPositiveInt? valuePositiveInt,
       @JsonKey(name: '_valuePositiveInt') Element? valuePositiveIntElement,
       String? valueMarkdown,
       @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
@@ -1382,7 +1382,7 @@ abstract class _$$_FhirExtensionCopyWith<$Res>
       Address? valueAddress,
       ContactPoint? valueContactPoint,
       Timing? valueTiming,
-      Meta? valueMeta,
+      FhirMeta? valueMeta,
       ElementDefinition? valueElementDefinition,
       ContactDetail? valueContactDetail,
       Contributor? valueContributor,
@@ -1609,7 +1609,7 @@ class __$$_FhirExtensionCopyWithImpl<$Res>
       valueBoolean: freezed == valueBoolean
           ? _value.valueBoolean
           : valueBoolean // ignore: cast_nullable_to_non_nullable
-              as  FhirBoolean?,
+              as FhirBoolean?,
       valueBooleanElement: freezed == valueBooleanElement
           ? _value.valueBooleanElement
           : valueBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -1633,7 +1633,7 @@ class __$$_FhirExtensionCopyWithImpl<$Res>
       valueBase64Binary: freezed == valueBase64Binary
           ? _value.valueBase64Binary
           : valueBase64Binary // ignore: cast_nullable_to_non_nullable
-              as  FhirBase64Binary??,
+              as FhirBase64Binary?,
       valueBase64BinaryElement: freezed == valueBase64BinaryElement
           ? _value.valueBase64BinaryElement
           : valueBase64BinaryElement // ignore: cast_nullable_to_non_nullable
@@ -1689,7 +1689,7 @@ class __$$_FhirExtensionCopyWithImpl<$Res>
       valueCode: freezed == valueCode
           ? _value.valueCode
           : valueCode // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       valueCodeElement: freezed == valueCodeElement
           ? _value.valueCodeElement
           : valueCodeElement // ignore: cast_nullable_to_non_nullable
@@ -1993,7 +1993,7 @@ class _$_FhirExtension extends _FhirExtension {
   @JsonKey(name: '_url')
   final Element? urlElement;
   @override
-  final  FhirBoolean? valueBoolean;
+  final FhirBoolean? valueBoolean;
   @override
   @JsonKey(name: '_valueBoolean')
   final Element? valueBooleanElement;
@@ -2008,7 +2008,7 @@ class _$_FhirExtension extends _FhirExtension {
   @JsonKey(name: '_valueDecimal')
   final Element? valueDecimalElement;
   @override
-  final  FhirBase64Binary?? valueBase64Binary;
+  final FhirBase64Binary? valueBase64Binary;
   @override
   @JsonKey(name: '_valueBase64Binary')
   final Element? valueBase64BinaryElement;
@@ -2043,7 +2043,7 @@ class _$_FhirExtension extends _FhirExtension {
   @JsonKey(name: '_valueTime')
   final Element? valueTimeElement;
   @override
-  final  FhirCode? valueCode;
+  final FhirCode? valueCode;
   @override
   @JsonKey(name: '_valueCode')
   final Element? valueCodeElement;
@@ -2058,7 +2058,7 @@ class _$_FhirExtension extends _FhirExtension {
   @JsonKey(name: '_valueUuid')
   final Element? valueUuidElement;
   @override
-  final Id? valueId;
+  final FhirId? valueId;
   @override
   @JsonKey(name: '_valueId')
   final Element? valueIdElement;
@@ -2372,7 +2372,7 @@ abstract class _FhirExtension extends FhirExtension {
       final FhirUri? url,
       @JsonKey(name: '_url')
           final Element? urlElement,
-      final  FhirBoolean? valueBoolean,
+      final FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean')
           final Element? valueBooleanElement,
       final Integer? valueInteger,
@@ -2381,7 +2381,7 @@ abstract class _FhirExtension extends FhirExtension {
       final Decimal? valueDecimal,
       @JsonKey(name: '_valueDecimal')
           final Element? valueDecimalElement,
-      final  FhirBase64Binary?? valueBase64Binary,
+      final FhirBase64Binary? valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary')
           final Element? valueBase64BinaryElement,
       final Instant? valueInstant,
@@ -2402,7 +2402,7 @@ abstract class _FhirExtension extends FhirExtension {
       final Time? valueTime,
       @JsonKey(name: '_valueTime')
           final Element? valueTimeElement,
-      final  FhirCode? valueCode,
+      final FhirCode? valueCode,
       @JsonKey(name: '_valueCode')
           final Element? valueCodeElement,
       final Oid? valueOid,
@@ -2411,7 +2411,7 @@ abstract class _FhirExtension extends FhirExtension {
       final Uuid? valueUuid,
       @JsonKey(name: '_valueUuid')
           final Element? valueUuidElement,
-      final Id? valueId,
+      final FhirId? valueId,
       @JsonKey(name: '_valueId')
           final Element? valueIdElement,
       final UnsignedInt? valueUnsignedInt,
@@ -2475,7 +2475,7 @@ abstract class _FhirExtension extends FhirExtension {
   @JsonKey(name: '_url')
   Element? get urlElement;
   @override
-   FhirBoolean? get valueBoolean;
+  FhirBoolean? get valueBoolean;
   @override
   @JsonKey(name: '_valueBoolean')
   Element? get valueBooleanElement;
@@ -2490,7 +2490,7 @@ abstract class _FhirExtension extends FhirExtension {
   @JsonKey(name: '_valueDecimal')
   Element? get valueDecimalElement;
   @override
-  FhirBase64Binary?? get valueBase64Binary;
+  FhirBase64Binary? get valueBase64Binary;
   @override
   @JsonKey(name: '_valueBase64Binary')
   Element? get valueBase64BinaryElement;
@@ -2520,22 +2520,22 @@ abstract class _FhirExtension extends FhirExtension {
   @JsonKey(name: '_valueDateTime')
   Element? get valueDateTimeElement;
   @override
-  Time? get valueTime;
+  FhirTime? get valueTime;
   @override
   @JsonKey(name: '_valueTime')
   Element? get valueTimeElement;
   @override
-   FhirCode? get valueCode;
+  FhirCode? get valueCode;
   @override
   @JsonKey(name: '_valueCode')
   Element? get valueCodeElement;
   @override
-  Oid? get valueOid;
+  FhirOid? get valueOid;
   @override
   @JsonKey(name: '_valueOid')
   Element? get valueOidElement;
   @override
-  Uuid? get valueUuid;
+  FhirUuid? get valueUuid;
   @override
   @JsonKey(name: '_valueUuid')
   Element? get valueUuidElement;
@@ -2545,12 +2545,12 @@ abstract class _FhirExtension extends FhirExtension {
   @JsonKey(name: '_valueId')
   Element? get valueIdElement;
   @override
-  UnsignedInt? get valueUnsignedInt;
+  FhirUnsignedInt? get valueUnsignedInt;
   @override
   @JsonKey(name: '_valueUnsignedInt')
   Element? get valueUnsignedIntElement;
   @override
-  PositiveInt? get valuePositiveInt;
+  FhirPositiveInt? get valuePositiveInt;
   @override
   @JsonKey(name: '_valuePositiveInt')
   Element? get valuePositiveIntElement;
@@ -2612,7 +2612,7 @@ abstract class _FhirExtension extends FhirExtension {
   @override
   Timing? get valueTiming;
   @override
-  Meta? get valueMeta;
+  FhirMeta? get valueMeta;
   @override
   ElementDefinition? get valueElementDefinition;
   @override

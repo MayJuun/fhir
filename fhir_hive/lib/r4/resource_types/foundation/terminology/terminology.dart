@@ -505,7 +505,7 @@ class CodeSystem extends HiveObject with Resource, _$CodeSystem {
     /// the code system has a compositional grammar, the basis of this count is
     ///  defined by the system steward.
     @HiveField(49)
-        UnsignedInt? count,
+        FhirUnsignedInt? count,
 
     /// [countElement] Extensions for count
     @JsonKey(name: '_count')
@@ -649,7 +649,7 @@ class CodeSystemFilter with _$CodeSystemFilter {
     @JsonKey(name: '_description') Element? descriptionElement,
 
     /// [operator] A list of operators that can be used with the filter.
-    @JsonKey(name: 'operator') List<Code>? operator_,
+    @JsonKey(name: 'operator') List<FhirCode>? operator_,
 
     /// [operatorElement] Extensions for operator
     @JsonKey(name: '_operator') List<Element?>? operatorElement,
@@ -3944,7 +3944,7 @@ class TerminologyCapabilitiesVersion with _$TerminologyCapabilitiesVersion {
     @JsonKey(name: '_compositional') Element? compositionalElement,
 
     /// [language] Language Displays supported.
-    List<Code>? language,
+    List<FhirCode>? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language') List<Element?>? languageElement,
@@ -3953,7 +3953,7 @@ class TerminologyCapabilitiesVersion with _$TerminologyCapabilitiesVersion {
     List<TerminologyCapabilitiesFilter>? filter,
 
     /// [property] Properties supported for $lookup.
-    List<Code>? property,
+    List<FhirCode>? property,
 
     /// [propertyElement] Extensions for property
     @JsonKey(name: '_property') List<Element?>? propertyElement,
@@ -4068,7 +4068,7 @@ class TerminologyCapabilitiesFilter with _$TerminologyCapabilitiesFilter {
     @JsonKey(name: '_code') Element? codeElement,
 
     /// [op] Operations supported for the property.
-    List<Code>? op,
+    List<FhirCode>? op,
 
     /// [opElement] Extensions for op
     @JsonKey(name: '_op') List<Element?>? opElement,
@@ -5335,7 +5335,7 @@ class ValueSetInclude with _$ValueSetInclude {
     /// value set definition). This is an absolute URI that is a reference to
     /// ValueSet.url.  If multiple value sets are specified this includes the
     ///  union of the contents of all of the referenced value sets.
-    List<Canonical>? valueSet,
+    List<FhirCanonical>? valueSet,
   }) = _ValueSetInclude;
 
   /// Produces a Yaml formatted String version of the object

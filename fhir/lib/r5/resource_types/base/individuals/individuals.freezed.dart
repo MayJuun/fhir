@@ -31,7 +31,7 @@ mixin _$Group {
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
   ///  always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   ///  the resource was constructed, and which must be understood when
@@ -150,7 +150,7 @@ mixin _$Group {
 
   /// [quantity] A count of the number of resource instances that are part of
   ///  the group.
-  UnsignedInt? get quantity => throw _privateConstructorUsedError;
+  FhirUnsignedInt? get quantity => throw _privateConstructorUsedError;
 
   /// [quantityElement] ("_quantity") Extensions for quantity
   @JsonKey(name: '_quantity')
@@ -183,7 +183,7 @@ abstract class $GroupCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.Group)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -212,7 +212,7 @@ abstract class $GroupCopyWith<$Res> {
       FhirMarkdown? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      UnsignedInt? quantity,
+      FhirUnsignedInt? quantity,
       @JsonKey(name: '_quantity')
           Element? quantityElement,
       Reference? managingEntity,
@@ -546,7 +546,7 @@ abstract class _$$_GroupCopyWith<$Res> implements $GroupCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.Group)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -575,7 +575,7 @@ abstract class _$$_GroupCopyWith<$Res> implements $GroupCopyWith<$Res> {
       FhirMarkdown? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      UnsignedInt? quantity,
+      FhirUnsignedInt? quantity,
       @JsonKey(name: '_quantity')
           Element? quantityElement,
       Reference? managingEntity,
@@ -824,7 +824,7 @@ class _$_Group extends _Group {
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
@@ -1182,7 +1182,7 @@ abstract class _Group extends Group {
   factory _Group(
       {@JsonKey(unknownEnumValue: R5ResourceType.Group)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -1237,7 +1237,7 @@ abstract class _Group extends Group {
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
   ///  always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when
@@ -1376,7 +1376,7 @@ abstract class _Group extends Group {
 
   /// [quantity] A count of the number of resource instances that are part of
   ///  the group.
-  UnsignedInt? get quantity;
+  FhirUnsignedInt? get quantity;
   @override
 
   /// [quantityElement] ("_quantity") Extensions for quantity
@@ -2619,7 +2619,7 @@ mixin _$Patient {
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
   ///  always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   ///  the resource was constructed, and which must be understood when
@@ -2799,7 +2799,7 @@ abstract class $PatientCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.Patient)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -3225,7 +3225,7 @@ abstract class _$$_PatientCopyWith<$Res> implements $PatientCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.Patient)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -3570,7 +3570,7 @@ class _$_Patient extends _Patient {
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
@@ -4044,7 +4044,7 @@ abstract class _Patient extends Patient {
   factory _Patient(
       {@JsonKey(unknownEnumValue: R5ResourceType.Patient)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -4108,7 +4108,7 @@ abstract class _Patient extends Patient {
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
   ///  always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when
@@ -5821,7 +5821,7 @@ mixin _$Person {
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
   ///  always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   ///  the resource was constructed, and which must be understood when
@@ -5967,7 +5967,7 @@ abstract class $PersonCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.Person)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -6328,7 +6328,7 @@ abstract class _$$_PersonCopyWith<$Res> implements $PersonCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.Person)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -6621,7 +6621,7 @@ class _$_Person extends _Person {
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
@@ -7017,7 +7017,7 @@ abstract class _Person extends Person {
   factory _Person(
       {@JsonKey(unknownEnumValue: R5ResourceType.Person)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -7073,7 +7073,7 @@ abstract class _Person extends Person {
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
   ///  always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when
@@ -8107,7 +8107,7 @@ mixin _$Practitioner {
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
   ///  always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   ///  the resource was constructed, and which must be understood when
@@ -8255,7 +8255,7 @@ abstract class $PractitionerCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.Practitioner)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -8580,7 +8580,7 @@ abstract class _$$_PractitionerCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R5ResourceType.Practitioner)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -8856,7 +8856,7 @@ class _$_Practitioner extends _Practitioner {
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
@@ -9250,7 +9250,7 @@ abstract class _Practitioner extends Practitioner {
   factory _Practitioner(
       {@JsonKey(unknownEnumValue: R5ResourceType.Practitioner)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -9305,7 +9305,7 @@ abstract class _Practitioner extends Practitioner {
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
   ///  always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when
@@ -9953,7 +9953,7 @@ mixin _$PractitionerRole {
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
   ///  always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   ///  the resource was constructed, and which must be understood when
@@ -10084,7 +10084,7 @@ abstract class $PractitionerRoleCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.PractitionerRole)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -10368,7 +10368,7 @@ abstract class _$$_PractitionerRoleCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R5ResourceType.PractitionerRole)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -10607,7 +10607,7 @@ class _$_PractitionerRole extends _PractitionerRole {
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
@@ -10978,7 +10978,7 @@ abstract class _PractitionerRole extends PractitionerRole {
   factory _PractitionerRole(
       {@JsonKey(unknownEnumValue: R5ResourceType.PractitionerRole)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -11025,7 +11025,7 @@ abstract class _PractitionerRole extends PractitionerRole {
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
   ///  always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when
@@ -11181,7 +11181,7 @@ mixin _$RelatedPerson {
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
   ///  always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   ///  the resource was constructed, and which must be understood when
@@ -11313,7 +11313,7 @@ abstract class $RelatedPersonCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.RelatedPerson)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -11620,7 +11620,7 @@ abstract class _$$_RelatedPersonCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R5ResourceType.RelatedPerson)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -11878,7 +11878,7 @@ class _$_RelatedPerson extends _RelatedPerson {
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
@@ -12240,7 +12240,7 @@ abstract class _RelatedPerson extends RelatedPerson {
   factory _RelatedPerson(
           {@JsonKey(unknownEnumValue: R5ResourceType.RelatedPerson)
               final R5ResourceType resourceType,
-          final Id? id,
+          final FhirId? id,
           final Meta? meta,
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
@@ -12292,7 +12292,7 @@ abstract class _RelatedPerson extends RelatedPerson {
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
   ///  always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when

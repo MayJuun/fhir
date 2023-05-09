@@ -252,7 +252,7 @@ class CarePlan extends HiveObject with Resource, _$CarePlan {
     /// guideline, questionnaire or other definition that is adhered to in whole
     ///  or in part by this CarePlan.
     @HiveField(13)
-        List<Canonical>? instantiatesCanonical,
+        List<FhirCanonical>? instantiatesCanonical,
     @HiveField(14)
 
     /// [instantiatesUri] The URL pointing to an externally maintained protocol,
@@ -719,7 +719,7 @@ class CarePlanDetail with _$CarePlanDetail {
     /// [instantiatesCanonical] The URL pointing to a FHIR-defined protocol,
     /// guideline, questionnaire or other definition that is adhered to in whole
     ///  or in part by this CarePlan activity.
-    List<Canonical>? instantiatesCanonical,
+    List<FhirCanonical>? instantiatesCanonical,
 
     /// [instantiatesUri] The URL pointing to an externally maintained protocol,
     /// guideline, questionnaire or other definition that is adhered to in whole
@@ -2054,7 +2054,7 @@ class NutritionOrder extends HiveObject with Resource, _$NutritionOrder {
     /// guideline, orderset or other definition that is adhered to in whole or in
     ///  part by this NutritionOrder.
     @HiveField(13)
-        List<Canonical>? instantiatesCanonical,
+        List<FhirCanonical>? instantiatesCanonical,
     @HiveField(14)
 
     /// [instantiatesUri] The URL pointing to an externally maintained protocol,
@@ -3219,7 +3219,7 @@ class RequestGroup extends HiveObject with Resource, _$RequestGroup {
     /// protocol, guideline, orderset or other definition that is adhered to in
     ///  whole or in part by this request.
     @HiveField(12)
-        List<Canonical>? instantiatesCanonical,
+        List<FhirCanonical>? instantiatesCanonical,
     @JsonKey(name: '_instantiatesCanonical')
 
     /// [instantiatesCanonicalElement] Extensions for instantiatesCanonical
@@ -3860,7 +3860,7 @@ class RequestGroupRelatedAction with _$RequestGroupRelatedAction {
     List<FhirExtension>? modifierExtension,
 
     /// [actionId] The element id of the action this is related to.
-    Id? actionId,
+    FhirId? actionId,
 
     /// [actionIdElement] Extensions for actionId
     @JsonKey(name: '_actionId') Element? actionIdElement,
@@ -4707,7 +4707,7 @@ class ServiceRequest extends HiveObject with Resource, _$ServiceRequest {
     /// guideline, orderset or other definition that is adhered to in whole or in
     ///  part by this ServiceRequest.
     @HiveField(13)
-        List<Canonical>? instantiatesCanonical,
+        List<FhirCanonical>? instantiatesCanonical,
     @HiveField(14)
 
     /// [instantiatesUri] The URL pointing to an externally maintained protocol,

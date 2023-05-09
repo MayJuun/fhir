@@ -20,7 +20,7 @@ class CodeSystem with Resource, _$CodeSystem {
     @JsonKey(unknownEnumValue: Stu3ResourceType.CodeSystem)
         Stu3ResourceType resourceType,
     FhirId? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,
@@ -339,7 +339,7 @@ class ConceptMap with Resource, _$ConceptMap {
     @JsonKey(unknownEnumValue: Stu3ResourceType.ConceptMap)
         Stu3ResourceType resourceType,
     FhirId? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,
@@ -645,7 +645,7 @@ class ExpansionProfile with Resource, _$ExpansionProfile {
     @JsonKey(unknownEnumValue: Stu3ResourceType.ExpansionProfile)
         Stu3ResourceType resourceType,
     FhirId? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,
@@ -1012,7 +1012,7 @@ class NamingSystem with Resource, _$NamingSystem {
     @JsonKey(unknownEnumValue: Stu3ResourceType.NamingSystem)
         Stu3ResourceType resourceType,
     FhirId? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,
@@ -1127,7 +1127,7 @@ class ValueSet with Resource, _$ValueSet {
     @JsonKey(unknownEnumValue: Stu3ResourceType.ValueSet)
         Stu3ResourceType resourceType,
     FhirId? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,

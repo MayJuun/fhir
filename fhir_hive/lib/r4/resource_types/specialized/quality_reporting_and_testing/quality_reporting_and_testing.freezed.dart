@@ -344,7 +344,7 @@ mixin _$Measure {
   ///  used by the measure.
   @JsonKey(name: 'library')
   @HiveField(56)
-  List<Canonical>? get library_ => throw _privateConstructorUsedError;
+  List<FhirCanonical>? get library_ => throw _privateConstructorUsedError;
 
   /// [disclaimer] Notices and disclaimers regarding the use of the measure or
   /// related to intellectual property (such as code systems) referenced by the
@@ -421,7 +421,7 @@ mixin _$Measure {
   /// [definition] Provides a description of an individual term used within the
   ///  measure.
   @HiveField(74)
-  List<Markdown>? get definition => throw _privateConstructorUsedError;
+  List<FhirMarkdown>? get definition => throw _privateConstructorUsedError;
 
   /// [definitionElement] Extensions for definition
   @JsonKey(name: '_definition')
@@ -588,7 +588,7 @@ abstract class $MeasureCopyWith<$Res> {
           List<RelatedArtifact>? relatedArtifact,
       @JsonKey(name: 'library')
       @HiveField(56)
-          List<Canonical>? library_,
+          List<FhirCanonical>? library_,
       @HiveField(57)
           Markdown? disclaimer,
       @JsonKey(name: '_disclaimer')
@@ -626,7 +626,7 @@ abstract class $MeasureCopyWith<$Res> {
       @HiveField(73)
           CodeableConcept? improvementNotation,
       @HiveField(74)
-          List<Markdown>? definition,
+          List<FhirMarkdown>? definition,
       @JsonKey(name: '_definition')
       @HiveField(75)
           List<Element?>? definitionElement,
@@ -983,7 +983,7 @@ class _$MeasureCopyWithImpl<$Res, $Val extends Measure>
       library_: freezed == library_
           ? _value.library_
           : library_ // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       disclaimer: freezed == disclaimer
           ? _value.disclaimer
           : disclaimer // ignore: cast_nullable_to_non_nullable
@@ -1045,7 +1045,7 @@ class _$MeasureCopyWithImpl<$Res, $Val extends Measure>
       definition: freezed == definition
           ? _value.definition
           : definition // ignore: cast_nullable_to_non_nullable
-              as List<Markdown>?,
+              as List<FhirMarkdown>?,
       definitionElement: freezed == definitionElement
           ? _value.definitionElement
           : definitionElement // ignore: cast_nullable_to_non_nullable
@@ -1584,7 +1584,7 @@ abstract class _$$_MeasureCopyWith<$Res> implements $MeasureCopyWith<$Res> {
           List<RelatedArtifact>? relatedArtifact,
       @JsonKey(name: 'library')
       @HiveField(56)
-          List<Canonical>? library_,
+          List<FhirCanonical>? library_,
       @HiveField(57)
           Markdown? disclaimer,
       @JsonKey(name: '_disclaimer')
@@ -1622,7 +1622,7 @@ abstract class _$$_MeasureCopyWith<$Res> implements $MeasureCopyWith<$Res> {
       @HiveField(73)
           CodeableConcept? improvementNotation,
       @HiveField(74)
-          List<Markdown>? definition,
+          List<FhirMarkdown>? definition,
       @JsonKey(name: '_definition')
       @HiveField(75)
           List<Element?>? definitionElement,
@@ -2007,7 +2007,7 @@ class __$$_MeasureCopyWithImpl<$Res>
       library_: freezed == library_
           ? _value._library_
           : library_ // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       disclaimer: freezed == disclaimer
           ? _value.disclaimer
           : disclaimer // ignore: cast_nullable_to_non_nullable
@@ -2069,7 +2069,7 @@ class __$$_MeasureCopyWithImpl<$Res>
       definition: freezed == definition
           ? _value._definition
           : definition // ignore: cast_nullable_to_non_nullable
-              as List<Markdown>?,
+              as List<FhirMarkdown>?,
       definitionElement: freezed == definitionElement
           ? _value._definitionElement
           : definitionElement // ignore: cast_nullable_to_non_nullable
@@ -2230,7 +2230,7 @@ class _$_Measure extends _Measure {
           final List<RelatedArtifact>? relatedArtifact,
       @JsonKey(name: 'library')
       @HiveField(56)
-          final List<Canonical>? library_,
+          final List<FhirCanonical>? library_,
       @HiveField(57)
           this.disclaimer,
       @JsonKey(name: '_disclaimer')
@@ -2268,7 +2268,7 @@ class _$_Measure extends _Measure {
       @HiveField(73)
           this.improvementNotation,
       @HiveField(74)
-          final List<Markdown>? definition,
+          final List<FhirMarkdown>? definition,
       @JsonKey(name: '_definition')
       @HiveField(75)
           final List<Element?>? definitionElement,
@@ -2828,14 +2828,14 @@ class _$_Measure extends _Measure {
 
   /// [library] A reference to a Library resource containing the formal logic
   ///  used by the measure.
-  final List<Canonical>? _library_;
+  final List<FhirCanonical>? _library_;
 
   /// [library] A reference to a Library resource containing the formal logic
   ///  used by the measure.
   @override
   @JsonKey(name: 'library')
   @HiveField(56)
-  List<Canonical>? get library_ {
+  List<FhirCanonical>? get library_ {
     final value = _library_;
     if (value == null) return null;
     if (_library_ is EqualUnmodifiableListView) return _library_;
@@ -2939,13 +2939,13 @@ class _$_Measure extends _Measure {
 
   /// [definition] Provides a description of an individual term used within the
   ///  measure.
-  final List<Markdown>? _definition;
+  final List<FhirMarkdown>? _definition;
 
   /// [definition] Provides a description of an individual term used within the
   ///  measure.
   @override
   @HiveField(74)
-  List<Markdown>? get definition {
+  List<FhirMarkdown>? get definition {
     final value = _definition;
     if (value == null) return null;
     if (_definition is EqualUnmodifiableListView) return _definition;
@@ -3366,7 +3366,7 @@ abstract class _Measure extends Measure {
           final List<RelatedArtifact>? relatedArtifact,
       @JsonKey(name: 'library')
       @HiveField(56)
-          final List<Canonical>? library_,
+          final List<FhirCanonical>? library_,
       @HiveField(57)
           final Markdown? disclaimer,
       @JsonKey(name: '_disclaimer')
@@ -3404,7 +3404,7 @@ abstract class _Measure extends Measure {
       @HiveField(73)
           final CodeableConcept? improvementNotation,
       @HiveField(74)
-          final List<Markdown>? definition,
+          final List<FhirMarkdown>? definition,
       @JsonKey(name: '_definition')
       @HiveField(75)
           final List<Element?>? definitionElement,
@@ -3798,7 +3798,7 @@ abstract class _Measure extends Measure {
   ///  used by the measure.
   @JsonKey(name: 'library')
   @HiveField(56)
-  List<Canonical>? get library_;
+  List<FhirCanonical>? get library_;
   @override
 
   /// [disclaimer] Notices and disclaimers regarding the use of the measure or
@@ -3887,7 +3887,7 @@ abstract class _Measure extends Measure {
   /// [definition] Provides a description of an individual term used within the
   ///  measure.
   @HiveField(74)
-  List<Markdown>? get definition;
+  List<FhirMarkdown>? get definition;
   @override
 
   /// [definitionElement] Extensions for definition
@@ -20253,7 +20253,7 @@ mixin _$TestScriptCapability {
   Element? get descriptionElement => throw _privateConstructorUsedError;
 
   /// [origin] Which origin server these requirements apply to.
-  List<Integer>? get origin => throw _privateConstructorUsedError;
+  List<FhirInteger>? get origin => throw _privateConstructorUsedError;
 
   /// [originElement] Extensions for origin
   @JsonKey(name: '_origin')
@@ -20302,7 +20302,7 @@ abstract class $TestScriptCapabilityCopyWith<$Res> {
       @JsonKey(name: '_validated') Element? validatedElement,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      List<Integer>? origin,
+      List<FhirInteger>? origin,
       @JsonKey(name: '_origin') List<Element?>? originElement,
       Integer? destination,
       @JsonKey(name: '_destination') Element? destinationElement,
@@ -20387,7 +20387,7 @@ class _$TestScriptCapabilityCopyWithImpl<$Res,
       origin: freezed == origin
           ? _value.origin
           : origin // ignore: cast_nullable_to_non_nullable
-              as List<Integer>?,
+              as List<FhirInteger>?,
       originElement: freezed == originElement
           ? _value.originElement
           : originElement // ignore: cast_nullable_to_non_nullable
@@ -20482,7 +20482,7 @@ abstract class _$$_TestScriptCapabilityCopyWith<$Res>
       @JsonKey(name: '_validated') Element? validatedElement,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      List<Integer>? origin,
+      List<FhirInteger>? origin,
       @JsonKey(name: '_origin') List<Element?>? originElement,
       Integer? destination,
       @JsonKey(name: '_destination') Element? destinationElement,
@@ -20568,7 +20568,7 @@ class __$$_TestScriptCapabilityCopyWithImpl<$Res>
       origin: freezed == origin
           ? _value._origin
           : origin // ignore: cast_nullable_to_non_nullable
-              as List<Integer>?,
+              as List<FhirInteger>?,
       originElement: freezed == originElement
           ? _value._originElement
           : originElement // ignore: cast_nullable_to_non_nullable
@@ -20610,7 +20610,7 @@ class _$_TestScriptCapability extends _TestScriptCapability {
       @JsonKey(name: '_validated') this.validatedElement,
       this.description,
       @JsonKey(name: '_description') this.descriptionElement,
-      final List<Integer>? origin,
+      final List<FhirInteger>? origin,
       @JsonKey(name: '_origin') final List<Element?>? originElement,
       this.destination,
       @JsonKey(name: '_destination') this.destinationElement,
@@ -20727,11 +20727,11 @@ class _$_TestScriptCapability extends _TestScriptCapability {
   final Element? descriptionElement;
 
   /// [origin] Which origin server these requirements apply to.
-  final List<Integer>? _origin;
+  final List<FhirInteger>? _origin;
 
   /// [origin] Which origin server these requirements apply to.
   @override
-  List<Integer>? get origin {
+  List<FhirInteger>? get origin {
     final value = _origin;
     if (value == null) return null;
     if (_origin is EqualUnmodifiableListView) return _origin;
@@ -20886,7 +20886,7 @@ abstract class _TestScriptCapability extends TestScriptCapability {
       @JsonKey(name: '_validated') final Element? validatedElement,
       final String? description,
       @JsonKey(name: '_description') final Element? descriptionElement,
-      final List<Integer>? origin,
+      final List<FhirInteger>? origin,
       @JsonKey(name: '_origin') final List<Element?>? originElement,
       final Integer? destination,
       @JsonKey(name: '_destination') final Element? destinationElement,
@@ -20963,7 +20963,7 @@ abstract class _TestScriptCapability extends TestScriptCapability {
   @override
 
   /// [origin] Which origin server these requirements apply to.
-  List<Integer>? get origin;
+  List<FhirInteger>? get origin;
   @override
 
   /// [originElement] Extensions for origin
@@ -21610,7 +21610,7 @@ mixin _$TestScriptVariable {
 
   /// [sourceId] Fixture to evaluate the XPath/JSONPath expression or the
   ///  headerField  against within this variable.
-  Id? get sourceId => throw _privateConstructorUsedError;
+  FhirId? get sourceId => throw _privateConstructorUsedError;
 
   /// [sourceIdElement] Extensions for sourceId
   @JsonKey(name: '_sourceId')
@@ -21646,7 +21646,7 @@ abstract class $TestScriptVariableCopyWith<$Res> {
       @JsonKey(name: '_hint') Element? hintElement,
       String? path,
       @JsonKey(name: '_path') Element? pathElement,
-      Id? sourceId,
+      FhirId? sourceId,
       @JsonKey(name: '_sourceId') Element? sourceIdElement});
 
   $ElementCopyWith<$Res>? get nameElement;
@@ -21895,7 +21895,7 @@ abstract class _$$_TestScriptVariableCopyWith<$Res>
       @JsonKey(name: '_hint') Element? hintElement,
       String? path,
       @JsonKey(name: '_path') Element? pathElement,
-      Id? sourceId,
+      FhirId? sourceId,
       @JsonKey(name: '_sourceId') Element? sourceIdElement});
 
   @override
@@ -22199,7 +22199,7 @@ class _$_TestScriptVariable extends _TestScriptVariable {
   /// [sourceId] Fixture to evaluate the XPath/JSONPath expression or the
   ///  headerField  against within this variable.
   @override
-  final Id? sourceId;
+  final FhirId? sourceId;
 
   /// [sourceIdElement] Extensions for sourceId
   @override
@@ -22311,7 +22311,7 @@ abstract class _TestScriptVariable extends TestScriptVariable {
           @JsonKey(name: '_hint') final Element? hintElement,
           final String? path,
           @JsonKey(name: '_path') final Element? pathElement,
-          final Id? sourceId,
+          final FhirId? sourceId,
           @JsonKey(name: '_sourceId') final Element? sourceIdElement}) =
       _$_TestScriptVariable;
   _TestScriptVariable._() : super._();
@@ -22425,7 +22425,7 @@ abstract class _TestScriptVariable extends TestScriptVariable {
 
   /// [sourceId] Fixture to evaluate the XPath/JSONPath expression or the
   ///  headerField  against within this variable.
-  Id? get sourceId;
+  FhirId? get sourceId;
   @override
 
   /// [sourceIdElement] Extensions for sourceId
@@ -23291,14 +23291,14 @@ mixin _$TestScriptOperation {
       throw _privateConstructorUsedError;
 
   /// [requestId] The fixture id (maybe new) to map to the request.
-  Id? get requestId => throw _privateConstructorUsedError;
+  FhirId? get requestId => throw _privateConstructorUsedError;
 
   /// [requestIdElement] Extensions for requestId
   @JsonKey(name: '_requestId')
   Element? get requestIdElement => throw _privateConstructorUsedError;
 
   /// [responseId] The fixture id (maybe new) to map to the response.
-  Id? get responseId => throw _privateConstructorUsedError;
+  FhirId? get responseId => throw _privateConstructorUsedError;
 
   /// [responseIdElement] Extensions for responseId
   @JsonKey(name: '_responseId')
@@ -23306,7 +23306,7 @@ mixin _$TestScriptOperation {
 
   /// [sourceId] The id of the fixture used as the body of a PUT or POST
   ///  request.
-  Id? get sourceId => throw _privateConstructorUsedError;
+  FhirId? get sourceId => throw _privateConstructorUsedError;
 
   /// [sourceIdElement] Extensions for sourceId
   @JsonKey(name: '_sourceId')
@@ -23314,7 +23314,7 @@ mixin _$TestScriptOperation {
 
   /// [targetId] Id of fixture used for extracting the [id],  [type], and [vid]
   ///  for GET requests.
-  Id? get targetId => throw _privateConstructorUsedError;
+  FhirId? get targetId => throw _privateConstructorUsedError;
 
   /// [targetIdElement] Extensions for targetId
   @JsonKey(name: '_targetId')
@@ -23365,13 +23365,13 @@ abstract class $TestScriptOperationCopyWith<$Res> {
       String? params,
       @JsonKey(name: '_params') Element? paramsElement,
       List<TestScriptRequestHeader>? requestHeader,
-      Id? requestId,
+      FhirId? requestId,
       @JsonKey(name: '_requestId') Element? requestIdElement,
-      Id? responseId,
+      FhirId? responseId,
       @JsonKey(name: '_responseId') Element? responseIdElement,
-      Id? sourceId,
+      FhirId? sourceId,
       @JsonKey(name: '_sourceId') Element? sourceIdElement,
-      Id? targetId,
+      FhirId? targetId,
       @JsonKey(name: '_targetId') Element? targetIdElement,
       String? url,
       @JsonKey(name: '_url') Element? urlElement});
@@ -23814,13 +23814,13 @@ abstract class _$$_TestScriptOperationCopyWith<$Res>
       String? params,
       @JsonKey(name: '_params') Element? paramsElement,
       List<TestScriptRequestHeader>? requestHeader,
-      Id? requestId,
+      FhirId? requestId,
       @JsonKey(name: '_requestId') Element? requestIdElement,
-      Id? responseId,
+      FhirId? responseId,
       @JsonKey(name: '_responseId') Element? responseIdElement,
-      Id? sourceId,
+      FhirId? sourceId,
       @JsonKey(name: '_sourceId') Element? sourceIdElement,
-      Id? targetId,
+      FhirId? targetId,
       @JsonKey(name: '_targetId') Element? targetIdElement,
       String? url,
       @JsonKey(name: '_url') Element? urlElement});
@@ -24286,7 +24286,7 @@ class _$_TestScriptOperation extends _TestScriptOperation {
 
   /// [requestId] The fixture id (maybe new) to map to the request.
   @override
-  final Id? requestId;
+  final FhirId? requestId;
 
   /// [requestIdElement] Extensions for requestId
   @override
@@ -24295,7 +24295,7 @@ class _$_TestScriptOperation extends _TestScriptOperation {
 
   /// [responseId] The fixture id (maybe new) to map to the response.
   @override
-  final Id? responseId;
+  final FhirId? responseId;
 
   /// [responseIdElement] Extensions for responseId
   @override
@@ -24305,7 +24305,7 @@ class _$_TestScriptOperation extends _TestScriptOperation {
   /// [sourceId] The id of the fixture used as the body of a PUT or POST
   ///  request.
   @override
-  final Id? sourceId;
+  final FhirId? sourceId;
 
   /// [sourceIdElement] Extensions for sourceId
   @override
@@ -24315,7 +24315,7 @@ class _$_TestScriptOperation extends _TestScriptOperation {
   /// [targetId] Id of fixture used for extracting the [id],  [type], and [vid]
   ///  for GET requests.
   @override
-  final Id? targetId;
+  final FhirId? targetId;
 
   /// [targetIdElement] Extensions for targetId
   @override
@@ -24500,16 +24500,16 @@ abstract class _TestScriptOperation extends TestScriptOperation {
       @JsonKey(name: '_params')
           final Element? paramsElement,
       final List<TestScriptRequestHeader>? requestHeader,
-      final Id? requestId,
+      final FhirId? requestId,
       @JsonKey(name: '_requestId')
           final Element? requestIdElement,
-      final Id? responseId,
+      final FhirId? responseId,
       @JsonKey(name: '_responseId')
           final Element? responseIdElement,
-      final Id? sourceId,
+      final FhirId? sourceId,
       @JsonKey(name: '_sourceId')
           final Element? sourceIdElement,
-      final Id? targetId,
+      final FhirId? targetId,
       @JsonKey(name: '_targetId')
           final Element? targetIdElement,
       final String? url,
@@ -24664,7 +24664,7 @@ abstract class _TestScriptOperation extends TestScriptOperation {
   @override
 
   /// [requestId] The fixture id (maybe new) to map to the request.
-  Id? get requestId;
+  FhirId? get requestId;
   @override
 
   /// [requestIdElement] Extensions for requestId
@@ -24673,7 +24673,7 @@ abstract class _TestScriptOperation extends TestScriptOperation {
   @override
 
   /// [responseId] The fixture id (maybe new) to map to the response.
-  Id? get responseId;
+  FhirId? get responseId;
   @override
 
   /// [responseIdElement] Extensions for responseId
@@ -24683,7 +24683,7 @@ abstract class _TestScriptOperation extends TestScriptOperation {
 
   /// [sourceId] The id of the fixture used as the body of a PUT or POST
   ///  request.
-  Id? get sourceId;
+  FhirId? get sourceId;
   @override
 
   /// [sourceIdElement] Extensions for sourceId
@@ -24693,7 +24693,7 @@ abstract class _TestScriptOperation extends TestScriptOperation {
 
   /// [targetId] Id of fixture used for extracting the [id],  [type], and [vid]
   ///  for GET requests.
-  Id? get targetId;
+  FhirId? get targetId;
   @override
 
   /// [targetIdElement] Extensions for targetId
@@ -25352,14 +25352,14 @@ mixin _$TestScriptAssert {
 
   /// [sourceId] Fixture to evaluate the XPath/JSONPath expression or the
   ///  headerField  against.
-  Id? get sourceId => throw _privateConstructorUsedError;
+  FhirId? get sourceId => throw _privateConstructorUsedError;
 
   /// [sourceIdElement] Extensions for sourceId
   @JsonKey(name: '_sourceId')
   Element? get sourceIdElement => throw _privateConstructorUsedError;
 
   /// [validateProfileId] The ID of the Profile to validate against.
-  Id? get validateProfileId => throw _privateConstructorUsedError;
+  FhirId? get validateProfileId => throw _privateConstructorUsedError;
 
   /// [validateProfileIdElement] Extensions for validateProfileId
   @JsonKey(name: '_validateProfileId')
@@ -25452,10 +25452,10 @@ abstract class $TestScriptAssertCopyWith<$Res> {
       String? responseCode,
       @JsonKey(name: '_responseCode')
           Element? responseCodeElement,
-      Id? sourceId,
+      FhirId? sourceId,
       @JsonKey(name: '_sourceId')
           Element? sourceIdElement,
-      Id? validateProfileId,
+      FhirId? validateProfileId,
       @JsonKey(name: '_validateProfileId')
           Element? validateProfileIdElement,
       String? value,
@@ -26078,10 +26078,10 @@ abstract class _$$_TestScriptAssertCopyWith<$Res>
       String? responseCode,
       @JsonKey(name: '_responseCode')
           Element? responseCodeElement,
-      Id? sourceId,
+      FhirId? sourceId,
       @JsonKey(name: '_sourceId')
           Element? sourceIdElement,
-      Id? validateProfileId,
+      FhirId? validateProfileId,
       @JsonKey(name: '_validateProfileId')
           Element? validateProfileIdElement,
       String? value,
@@ -26724,7 +26724,7 @@ class _$_TestScriptAssert extends _TestScriptAssert {
   /// [sourceId] Fixture to evaluate the XPath/JSONPath expression or the
   ///  headerField  against.
   @override
-  final Id? sourceId;
+  final FhirId? sourceId;
 
   /// [sourceIdElement] Extensions for sourceId
   @override
@@ -26733,7 +26733,7 @@ class _$_TestScriptAssert extends _TestScriptAssert {
 
   /// [validateProfileId] The ID of the Profile to validate against.
   @override
-  final Id? validateProfileId;
+  final FhirId? validateProfileId;
 
   /// [validateProfileIdElement] Extensions for validateProfileId
   @override
@@ -26972,10 +26972,10 @@ abstract class _TestScriptAssert extends TestScriptAssert {
       final String? responseCode,
       @JsonKey(name: '_responseCode')
           final Element? responseCodeElement,
-      final Id? sourceId,
+      final FhirId? sourceId,
       @JsonKey(name: '_sourceId')
           final Element? sourceIdElement,
-      final Id? validateProfileId,
+      final FhirId? validateProfileId,
       @JsonKey(name: '_validateProfileId')
           final Element? validateProfileIdElement,
       final String? value,
@@ -27206,7 +27206,7 @@ abstract class _TestScriptAssert extends TestScriptAssert {
 
   /// [sourceId] Fixture to evaluate the XPath/JSONPath expression or the
   ///  headerField  against.
-  Id? get sourceId;
+  FhirId? get sourceId;
   @override
 
   /// [sourceIdElement] Extensions for sourceId
@@ -27215,7 +27215,7 @@ abstract class _TestScriptAssert extends TestScriptAssert {
   @override
 
   /// [validateProfileId] The ID of the Profile to validate against.
-  Id? get validateProfileId;
+  FhirId? get validateProfileId;
   @override
 
   /// [validateProfileIdElement] Extensions for validateProfileId

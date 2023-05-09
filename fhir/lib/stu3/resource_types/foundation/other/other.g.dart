@@ -150,7 +150,7 @@ const _$Stu3ResourceTypeEnumMap = {
   Stu3ResourceType.ImplementationGuide: 'ImplementationGuide',
   Stu3ResourceType.Library: 'Library',
   Stu3ResourceType.Linkage: 'Linkage',
-  Stu3ResourceType.List_: 'List',
+  Stu3ResourceType.FhirList: 'List',
   Stu3ResourceType.Location: 'Location',
   Stu3ResourceType.Measure: 'Measure',
   Stu3ResourceType.MeasureReport: 'MeasureReport',

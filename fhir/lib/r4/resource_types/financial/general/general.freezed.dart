@@ -30,7 +30,7 @@ mixin _$Account {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -156,7 +156,7 @@ abstract class $AccountCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R4ResourceType.Account)
           R4ResourceType resourceType,
       String? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -486,7 +486,7 @@ abstract class _$$_AccountCopyWith<$Res> implements $AccountCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R4ResourceType.Account)
           R4ResourceType resourceType,
       String? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -1113,7 +1113,7 @@ abstract class _Account extends Account {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -1294,7 +1294,7 @@ mixin _$AccountCoverage {
   Reference get coverage => throw _privateConstructorUsedError;
 
   /// [priority] The priority of the coverage in the context of this account.
-  PositiveInt? get priority => throw _privateConstructorUsedError;
+  FhirPositiveInt? get priority => throw _privateConstructorUsedError;
 
   /// [priorityElement] Extensions for priority
   @JsonKey(name: '_priority')
@@ -1317,7 +1317,7 @@ abstract class $AccountCoverageCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Reference coverage,
-      PositiveInt? priority,
+      FhirPositiveInt? priority,
       @JsonKey(name: '_priority') Element? priorityElement});
 
   $ReferenceCopyWith<$Res> get coverage;
@@ -1406,7 +1406,7 @@ abstract class _$$_AccountCoverageCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Reference coverage,
-      PositiveInt? priority,
+      FhirPositiveInt? priority,
       @JsonKey(name: '_priority') Element? priorityElement});
 
   @override
@@ -1667,7 +1667,7 @@ abstract class _AccountCoverage extends AccountCoverage {
   @override
 
   /// [priority] The priority of the coverage in the context of this account.
-  PositiveInt? get priority;
+  FhirPositiveInt? get priority;
   @override
 
   /// [priorityElement] Extensions for priority
@@ -2156,7 +2156,7 @@ mixin _$ChargeItem {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -2229,7 +2229,7 @@ mixin _$ChargeItem {
 
   /// [definitionCanonical] References the source of pricing information, rules
   ///  of application for the code this ChargeItem uses.
-  List<Canonical>? get definitionCanonical =>
+  List<FhirCanonical>? get definitionCanonical =>
       throw _privateConstructorUsedError;
 
   /// [status] The current state of the ChargeItem.
@@ -2365,7 +2365,7 @@ abstract class $ChargeItemCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R4ResourceType.ChargeItem)
           R4ResourceType resourceType,
       String? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -2381,7 +2381,7 @@ abstract class $ChargeItemCopyWith<$Res> {
       List<FhirUri>? definitionUri,
       @JsonKey(name: '_definitionUri')
           List<Element?>? definitionUriElement,
-      List<Canonical>? definitionCanonical,
+      List<FhirCanonical>? definitionCanonical,
       FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -2563,7 +2563,7 @@ class _$ChargeItemCopyWithImpl<$Res, $Val extends ChargeItem>
       definitionCanonical: freezed == definitionCanonical
           ? _value.definitionCanonical
           : definitionCanonical // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
@@ -2961,7 +2961,7 @@ abstract class _$$_ChargeItemCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R4ResourceType.ChargeItem)
           R4ResourceType resourceType,
       String? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -2977,7 +2977,7 @@ abstract class _$$_ChargeItemCopyWith<$Res>
       List<FhirUri>? definitionUri,
       @JsonKey(name: '_definitionUri')
           List<Element?>? definitionUriElement,
-      List<Canonical>? definitionCanonical,
+      List<FhirCanonical>? definitionCanonical,
       FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -3179,7 +3179,7 @@ class __$$_ChargeItemCopyWithImpl<$Res>
       definitionCanonical: freezed == definitionCanonical
           ? _value._definitionCanonical
           : definitionCanonical // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
@@ -3331,7 +3331,7 @@ class _$_ChargeItem extends _ChargeItem {
       final List<FhirUri>? definitionUri,
       @JsonKey(name: '_definitionUri')
           final List<Element?>? definitionUriElement,
-      final List<Canonical>? definitionCanonical,
+      final List<FhirCanonical>? definitionCanonical,
       this.status,
       @JsonKey(name: '_status')
           this.statusElement,
@@ -3561,12 +3561,12 @@ class _$_ChargeItem extends _ChargeItem {
 
   /// [definitionCanonical] References the source of pricing information, rules
   ///  of application for the code this ChargeItem uses.
-  final List<Canonical>? _definitionCanonical;
+  final List<FhirCanonical>? _definitionCanonical;
 
   /// [definitionCanonical] References the source of pricing information, rules
   ///  of application for the code this ChargeItem uses.
   @override
-  List<Canonical>? get definitionCanonical {
+  List<FhirCanonical>? get definitionCanonical {
     final value = _definitionCanonical;
     if (value == null) return null;
     if (_definitionCanonical is EqualUnmodifiableListView)
@@ -3975,7 +3975,7 @@ abstract class _ChargeItem extends ChargeItem {
       final List<FhirUri>? definitionUri,
       @JsonKey(name: '_definitionUri')
           final List<Element?>? definitionUriElement,
-      final List<Canonical>? definitionCanonical,
+      final List<FhirCanonical>? definitionCanonical,
       final FhirCode? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
@@ -4030,7 +4030,7 @@ abstract class _ChargeItem extends ChargeItem {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -4113,7 +4113,7 @@ abstract class _ChargeItem extends ChargeItem {
 
   /// [definitionCanonical] References the source of pricing information, rules
   ///  of application for the code this ChargeItem uses.
-  List<Canonical>? get definitionCanonical;
+  List<FhirCanonical>? get definitionCanonical;
   @override
 
   /// [status] The current state of the ChargeItem.
@@ -4671,7 +4671,7 @@ mixin _$ChargeItemDefinition {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -4783,11 +4783,11 @@ mixin _$ChargeItemDefinition {
 
   /// [partOf] A larger definition of which this particular definition is a
   ///  component or step.
-  List<Canonical>? get partOf => throw _privateConstructorUsedError;
+  List<FhirCanonical>? get partOf => throw _privateConstructorUsedError;
 
   /// [replaces] As new versions of a protocol or guideline are defined, allows
   ///  identification of what versions are replaced by a new instance.
-  List<Canonical>? get replaces => throw _privateConstructorUsedError;
+  List<FhirCanonical>? get replaces => throw _privateConstructorUsedError;
 
   /// [status] The current state of the ChargeItemDefinition.
   FhirCode? get status => throw _privateConstructorUsedError;
@@ -4913,7 +4913,7 @@ abstract class $ChargeItemDefinitionCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R4ResourceType.ChargeItemDefinition)
           R4ResourceType resourceType,
       String? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -4938,8 +4938,8 @@ abstract class $ChargeItemDefinitionCopyWith<$Res> {
       List<FhirUri>? derivedFromUri,
       @JsonKey(name: '_derivedFromUri')
           List<Element?>? derivedFromUriElement,
-      List<Canonical>? partOf,
-      List<Canonical>? replaces,
+      List<FhirCanonical>? partOf,
+      List<FhirCanonical>? replaces,
       FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -5137,11 +5137,11 @@ class _$ChargeItemDefinitionCopyWithImpl<$Res,
       partOf: freezed == partOf
           ? _value.partOf
           : partOf // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       replaces: freezed == replaces
           ? _value.replaces
           : replaces // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
@@ -5458,7 +5458,7 @@ abstract class _$$_ChargeItemDefinitionCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R4ResourceType.ChargeItemDefinition)
           R4ResourceType resourceType,
       String? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -5483,8 +5483,8 @@ abstract class _$$_ChargeItemDefinitionCopyWith<$Res>
       List<FhirUri>? derivedFromUri,
       @JsonKey(name: '_derivedFromUri')
           List<Element?>? derivedFromUriElement,
-      List<Canonical>? partOf,
-      List<Canonical>? replaces,
+      List<FhirCanonical>? partOf,
+      List<FhirCanonical>? replaces,
       FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -5696,11 +5696,11 @@ class __$$_ChargeItemDefinitionCopyWithImpl<$Res>
       partOf: freezed == partOf
           ? _value._partOf
           : partOf // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       replaces: freezed == replaces
           ? _value._replaces
           : replaces // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
@@ -5833,8 +5833,8 @@ class _$_ChargeItemDefinition extends _ChargeItemDefinition {
       final List<FhirUri>? derivedFromUri,
       @JsonKey(name: '_derivedFromUri')
           final List<Element?>? derivedFromUriElement,
-      final List<Canonical>? partOf,
-      final List<Canonical>? replaces,
+      final List<FhirCanonical>? partOf,
+      final List<FhirCanonical>? replaces,
       this.status,
       @JsonKey(name: '_status')
           this.statusElement,
@@ -6105,12 +6105,12 @@ class _$_ChargeItemDefinition extends _ChargeItemDefinition {
 
   /// [partOf] A larger definition of which this particular definition is a
   ///  component or step.
-  final List<Canonical>? _partOf;
+  final List<FhirCanonical>? _partOf;
 
   /// [partOf] A larger definition of which this particular definition is a
   ///  component or step.
   @override
-  List<Canonical>? get partOf {
+  List<FhirCanonical>? get partOf {
     final value = _partOf;
     if (value == null) return null;
     if (_partOf is EqualUnmodifiableListView) return _partOf;
@@ -6120,12 +6120,12 @@ class _$_ChargeItemDefinition extends _ChargeItemDefinition {
 
   /// [replaces] As new versions of a protocol or guideline are defined, allows
   ///  identification of what versions are replaced by a new instance.
-  final List<Canonical>? _replaces;
+  final List<FhirCanonical>? _replaces;
 
   /// [replaces] As new versions of a protocol or guideline are defined, allows
   ///  identification of what versions are replaced by a new instance.
   @override
-  List<Canonical>? get replaces {
+  List<FhirCanonical>? get replaces {
     final value = _replaces;
     if (value == null) return null;
     if (_replaces is EqualUnmodifiableListView) return _replaces;
@@ -6515,8 +6515,8 @@ abstract class _ChargeItemDefinition extends ChargeItemDefinition {
           final List<FhirUri>? derivedFromUri,
           @JsonKey(name: '_derivedFromUri')
               final List<Element?>? derivedFromUriElement,
-          final List<Canonical>? partOf,
-          final List<Canonical>? replaces,
+          final List<FhirCanonical>? partOf,
+          final List<FhirCanonical>? replaces,
           final FhirCode? status,
           @JsonKey(name: '_status')
               final Element? statusElement,
@@ -6568,7 +6568,7 @@ abstract class _ChargeItemDefinition extends ChargeItemDefinition {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -6696,12 +6696,12 @@ abstract class _ChargeItemDefinition extends ChargeItemDefinition {
 
   /// [partOf] A larger definition of which this particular definition is a
   ///  component or step.
-  List<Canonical>? get partOf;
+  List<FhirCanonical>? get partOf;
   @override
 
   /// [replaces] As new versions of a protocol or guideline are defined, allows
   ///  identification of what versions are replaced by a new instance.
-  List<Canonical>? get replaces;
+  List<FhirCanonical>? get replaces;
   @override
 
   /// [status] The current state of the ChargeItemDefinition.
@@ -8381,7 +8381,7 @@ mixin _$Contract {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -8662,7 +8662,7 @@ abstract class $ContractCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R4ResourceType.Contract)
           R4ResourceType resourceType,
       String? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -9362,7 +9362,7 @@ abstract class _$$_ContractCopyWith<$Res> implements $ContractCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R4ResourceType.Contract)
           R4ResourceType resourceType,
       String? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -10670,7 +10670,7 @@ abstract class _Contract extends Contract {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -12634,7 +12634,7 @@ mixin _$ContractSecurityLabel {
 
   /// [number] Number used to link this term or term element to the applicable
   ///  Security Label.
-  List<UnsignedInt>? get number => throw _privateConstructorUsedError;
+  List<FhirUnsignedInt>? get number => throw _privateConstructorUsedError;
 
   /// [numberElement] Extensions for number
   @JsonKey(name: '_number')
@@ -12668,7 +12668,7 @@ abstract class $ContractSecurityLabelCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      List<UnsignedInt>? number,
+      List<FhirUnsignedInt>? number,
       @JsonKey(name: '_number') List<Element?>? numberElement,
       Coding classification,
       List<Coding>? category,
@@ -12716,7 +12716,7 @@ class _$ContractSecurityLabelCopyWithImpl<$Res,
       number: freezed == number
           ? _value.number
           : number // ignore: cast_nullable_to_non_nullable
-              as List<UnsignedInt>?,
+              as List<FhirUnsignedInt>?,
       numberElement: freezed == numberElement
           ? _value.numberElement
           : numberElement // ignore: cast_nullable_to_non_nullable
@@ -12757,7 +12757,7 @@ abstract class _$$_ContractSecurityLabelCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      List<UnsignedInt>? number,
+      List<FhirUnsignedInt>? number,
       @JsonKey(name: '_number') List<Element?>? numberElement,
       Coding classification,
       List<Coding>? category,
@@ -12803,7 +12803,7 @@ class __$$_ContractSecurityLabelCopyWithImpl<$Res>
       number: freezed == number
           ? _value._number
           : number // ignore: cast_nullable_to_non_nullable
-              as List<UnsignedInt>?,
+              as List<FhirUnsignedInt>?,
       numberElement: freezed == numberElement
           ? _value._numberElement
           : numberElement // ignore: cast_nullable_to_non_nullable
@@ -12831,7 +12831,7 @@ class _$_ContractSecurityLabel extends _ContractSecurityLabel {
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final List<UnsignedInt>? number,
+      final List<FhirUnsignedInt>? number,
       @JsonKey(name: '_number') final List<Element?>? numberElement,
       required this.classification,
       final List<Coding>? category,
@@ -12916,12 +12916,12 @@ class _$_ContractSecurityLabel extends _ContractSecurityLabel {
 
   /// [number] Number used to link this term or term element to the applicable
   ///  Security Label.
-  final List<UnsignedInt>? _number;
+  final List<FhirUnsignedInt>? _number;
 
   /// [number] Number used to link this term or term element to the applicable
   ///  Security Label.
   @override
-  List<UnsignedInt>? get number {
+  List<FhirUnsignedInt>? get number {
     final value = _number;
     if (value == null) return null;
     if (_number is EqualUnmodifiableListView) return _number;
@@ -13035,7 +13035,7 @@ abstract class _ContractSecurityLabel extends ContractSecurityLabel {
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final List<UnsignedInt>? number,
+      final List<FhirUnsignedInt>? number,
       @JsonKey(name: '_number') final List<Element?>? numberElement,
       required final Coding classification,
       final List<Coding>? category,
@@ -13080,7 +13080,7 @@ abstract class _ContractSecurityLabel extends ContractSecurityLabel {
 
   /// [number] Number used to link this term or term element to the applicable
   ///  Security Label.
-  List<UnsignedInt>? get number;
+  List<FhirUnsignedInt>? get number;
   @override
 
   /// [numberElement] Extensions for number
@@ -13183,7 +13183,7 @@ mixin _$ContractOffer {
   List<Element?>? get linkIdElement => throw _privateConstructorUsedError;
 
   /// [securityLabelNumber] Security labels that protects the offer.
-  List<UnsignedInt>? get securityLabelNumber =>
+  List<FhirUnsignedInt>? get securityLabelNumber =>
       throw _privateConstructorUsedError;
   @JsonKey(name: '_securityLabelNumber')
   List<Element>? get securityLabelNumberElement =>
@@ -13219,7 +13219,7 @@ abstract class $ContractOfferCopyWith<$Res> {
       List<String>? linkId,
       @JsonKey(name: '_linkId')
           List<Element?>? linkIdElement,
-      List<UnsignedInt>? securityLabelNumber,
+      List<FhirUnsignedInt>? securityLabelNumber,
       @JsonKey(name: '_securityLabelNumber')
           List<Element>? securityLabelNumberElement});
 
@@ -13319,7 +13319,7 @@ class _$ContractOfferCopyWithImpl<$Res, $Val extends ContractOffer>
       securityLabelNumber: freezed == securityLabelNumber
           ? _value.securityLabelNumber
           : securityLabelNumber // ignore: cast_nullable_to_non_nullable
-              as List<UnsignedInt>?,
+              as List<FhirUnsignedInt>?,
       securityLabelNumberElement: freezed == securityLabelNumberElement
           ? _value.securityLabelNumberElement
           : securityLabelNumberElement // ignore: cast_nullable_to_non_nullable
@@ -13402,7 +13402,7 @@ abstract class _$$_ContractOfferCopyWith<$Res>
       List<String>? linkId,
       @JsonKey(name: '_linkId')
           List<Element?>? linkIdElement,
-      List<UnsignedInt>? securityLabelNumber,
+      List<FhirUnsignedInt>? securityLabelNumber,
       @JsonKey(name: '_securityLabelNumber')
           List<Element>? securityLabelNumberElement});
 
@@ -13504,7 +13504,7 @@ class __$$_ContractOfferCopyWithImpl<$Res>
       securityLabelNumber: freezed == securityLabelNumber
           ? _value._securityLabelNumber
           : securityLabelNumber // ignore: cast_nullable_to_non_nullable
-              as List<UnsignedInt>?,
+              as List<FhirUnsignedInt>?,
       securityLabelNumberElement: freezed == securityLabelNumberElement
           ? _value._securityLabelNumberElement
           : securityLabelNumberElement // ignore: cast_nullable_to_non_nullable
@@ -13534,7 +13534,7 @@ class _$_ContractOffer extends _ContractOffer {
       final List<String>? linkId,
       @JsonKey(name: '_linkId')
           final List<Element?>? linkIdElement,
-      final List<UnsignedInt>? securityLabelNumber,
+      final List<FhirUnsignedInt>? securityLabelNumber,
       @JsonKey(name: '_securityLabelNumber')
           final List<Element>? securityLabelNumberElement})
       : _extension_ = extension_,
@@ -13726,11 +13726,11 @@ class _$_ContractOffer extends _ContractOffer {
   }
 
   /// [securityLabelNumber] Security labels that protects the offer.
-  final List<UnsignedInt>? _securityLabelNumber;
+  final List<FhirUnsignedInt>? _securityLabelNumber;
 
   /// [securityLabelNumber] Security labels that protects the offer.
   @override
-  List<UnsignedInt>? get securityLabelNumber {
+  List<FhirUnsignedInt>? get securityLabelNumber {
     final value = _securityLabelNumber;
     if (value == null) return null;
     if (_securityLabelNumber is EqualUnmodifiableListView)
@@ -13843,7 +13843,7 @@ abstract class _ContractOffer extends ContractOffer {
       final List<String>? linkId,
       @JsonKey(name: '_linkId')
           final List<Element?>? linkIdElement,
-      final List<UnsignedInt>? securityLabelNumber,
+      final List<FhirUnsignedInt>? securityLabelNumber,
       @JsonKey(name: '_securityLabelNumber')
           final List<Element>? securityLabelNumberElement}) = _$_ContractOffer;
   _ContractOffer._() : super._();
@@ -13936,7 +13936,7 @@ abstract class _ContractOffer extends ContractOffer {
   @override
 
   /// [securityLabelNumber] Security labels that protects the offer.
-  List<UnsignedInt>? get securityLabelNumber;
+  List<FhirUnsignedInt>? get securityLabelNumber;
   @override
   @JsonKey(name: '_securityLabelNumber')
   List<Element>? get securityLabelNumberElement;
@@ -14411,7 +14411,7 @@ mixin _$ContractAnswer {
   /// selection of values to be agreed to, e.g., the period of participation,
   /// the date of occupancy of a rental, warrently duration, or whether
   ///  biospecimen may be used for further research.
-  Time? get valueTime => throw _privateConstructorUsedError;
+  FhirTime? get valueTime => throw _privateConstructorUsedError;
 
   /// [valueTimeElement] Extensions for valueTime
   @JsonKey(name: '_valueTime')
@@ -14487,7 +14487,7 @@ abstract class $ContractAnswerCopyWith<$Res> {
       @JsonKey(name: '_valueDate') Element? valueDateElement,
       FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
-      Time? valueTime,
+      FhirTime? valueTime,
       @JsonKey(name: '_valueTime') Element? valueTimeElement,
       String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
@@ -14812,7 +14812,7 @@ abstract class _$$_ContractAnswerCopyWith<$Res>
       @JsonKey(name: '_valueDate') Element? valueDateElement,
       FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
-      Time? valueTime,
+      FhirTime? valueTime,
       @JsonKey(name: '_valueTime') Element? valueTimeElement,
       String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
@@ -15433,7 +15433,7 @@ abstract class _ContractAnswer extends ContractAnswer {
   /// selection of values to be agreed to, e.g., the period of participation,
   /// the date of occupancy of a rental, warrently duration, or whether
   ///  biospecimen may be used for further research.
-  Time? get valueTime;
+  FhirTime? get valueTime;
   @override
 
   /// [valueTimeElement] Extensions for valueTime
@@ -15590,7 +15590,7 @@ mixin _$ContractAsset {
   List<ContractAnswer>? get answer => throw _privateConstructorUsedError;
 
   /// [securityLabelNumber] Security labels that protects the asset.
-  List<UnsignedInt>? get securityLabelNumber =>
+  List<FhirUnsignedInt>? get securityLabelNumber =>
       throw _privateConstructorUsedError;
   @JsonKey(name: '_securityLabelNumber')
   List<Element>? get securityLabelNumberElement =>
@@ -15636,7 +15636,7 @@ abstract class $ContractAssetCopyWith<$Res> {
       @JsonKey(name: '_linkId')
           List<Element?>? linkIdElement,
       List<ContractAnswer>? answer,
-      List<UnsignedInt>? securityLabelNumber,
+      List<FhirUnsignedInt>? securityLabelNumber,
       @JsonKey(name: '_securityLabelNumber')
           List<Element>? securityLabelNumberElement,
       List<ContractValuedItem>? valuedItem});
@@ -15763,7 +15763,7 @@ class _$ContractAssetCopyWithImpl<$Res, $Val extends ContractAsset>
       securityLabelNumber: freezed == securityLabelNumber
           ? _value.securityLabelNumber
           : securityLabelNumber // ignore: cast_nullable_to_non_nullable
-              as List<UnsignedInt>?,
+              as List<FhirUnsignedInt>?,
       securityLabelNumberElement: freezed == securityLabelNumberElement
           ? _value.securityLabelNumberElement
           : securityLabelNumberElement // ignore: cast_nullable_to_non_nullable
@@ -15856,7 +15856,7 @@ abstract class _$$_ContractAssetCopyWith<$Res>
       @JsonKey(name: '_linkId')
           List<Element?>? linkIdElement,
       List<ContractAnswer>? answer,
-      List<UnsignedInt>? securityLabelNumber,
+      List<FhirUnsignedInt>? securityLabelNumber,
       @JsonKey(name: '_securityLabelNumber')
           List<Element>? securityLabelNumberElement,
       List<ContractValuedItem>? valuedItem});
@@ -15985,7 +15985,7 @@ class __$$_ContractAssetCopyWithImpl<$Res>
       securityLabelNumber: freezed == securityLabelNumber
           ? _value._securityLabelNumber
           : securityLabelNumber // ignore: cast_nullable_to_non_nullable
-              as List<UnsignedInt>?,
+              as List<FhirUnsignedInt>?,
       securityLabelNumberElement: freezed == securityLabelNumberElement
           ? _value._securityLabelNumberElement
           : securityLabelNumberElement // ignore: cast_nullable_to_non_nullable
@@ -16025,7 +16025,7 @@ class _$_ContractAsset extends _ContractAsset {
       @JsonKey(name: '_linkId')
           final List<Element?>? linkIdElement,
       final List<ContractAnswer>? answer,
-      final List<UnsignedInt>? securityLabelNumber,
+      final List<FhirUnsignedInt>? securityLabelNumber,
       @JsonKey(name: '_securityLabelNumber')
           final List<Element>? securityLabelNumberElement,
       final List<ContractValuedItem>? valuedItem})
@@ -16281,11 +16281,11 @@ class _$_ContractAsset extends _ContractAsset {
   }
 
   /// [securityLabelNumber] Security labels that protects the asset.
-  final List<UnsignedInt>? _securityLabelNumber;
+  final List<FhirUnsignedInt>? _securityLabelNumber;
 
   /// [securityLabelNumber] Security labels that protects the asset.
   @override
-  List<UnsignedInt>? get securityLabelNumber {
+  List<FhirUnsignedInt>? get securityLabelNumber {
     final value = _securityLabelNumber;
     if (value == null) return null;
     if (_securityLabelNumber is EqualUnmodifiableListView)
@@ -16434,7 +16434,7 @@ abstract class _ContractAsset extends ContractAsset {
       @JsonKey(name: '_linkId')
           final List<Element?>? linkIdElement,
       final List<ContractAnswer>? answer,
-      final List<UnsignedInt>? securityLabelNumber,
+      final List<FhirUnsignedInt>? securityLabelNumber,
       @JsonKey(name: '_securityLabelNumber')
           final List<Element>? securityLabelNumberElement,
       final List<ContractValuedItem>? valuedItem}) = _$_ContractAsset;
@@ -16550,7 +16550,7 @@ abstract class _ContractAsset extends ContractAsset {
   @override
 
   /// [securityLabelNumber] Security labels that protects the asset.
-  List<UnsignedInt>? get securityLabelNumber;
+  List<FhirUnsignedInt>? get securityLabelNumber;
   @override
   @JsonKey(name: '_securityLabelNumber')
   List<Element>? get securityLabelNumberElement;
@@ -17149,7 +17149,7 @@ mixin _$ContractValuedItem {
 
   /// [securityLabelNumber] A set of security labels that define which terms
   ///  are controlled by this condition.
-  List<UnsignedInt>? get securityLabelNumber =>
+  List<FhirUnsignedInt>? get securityLabelNumber =>
       throw _privateConstructorUsedError;
   @JsonKey(name: '_securityLabelNumber')
   List<Element>? get securityLabelNumberElement =>
@@ -17198,7 +17198,7 @@ abstract class $ContractValuedItemCopyWith<$Res> {
       List<String>? linkId,
       @JsonKey(name: '_linkId')
           List<Element?>? linkIdElement,
-      List<UnsignedInt>? securityLabelNumber,
+      List<FhirUnsignedInt>? securityLabelNumber,
       @JsonKey(name: '_securityLabelNumber')
           List<Element>? securityLabelNumberElement});
 
@@ -17352,7 +17352,7 @@ class _$ContractValuedItemCopyWithImpl<$Res, $Val extends ContractValuedItem>
       securityLabelNumber: freezed == securityLabelNumber
           ? _value.securityLabelNumber
           : securityLabelNumber // ignore: cast_nullable_to_non_nullable
-              as List<UnsignedInt>?,
+              as List<FhirUnsignedInt>?,
       securityLabelNumberElement: freezed == securityLabelNumberElement
           ? _value.securityLabelNumberElement
           : securityLabelNumberElement // ignore: cast_nullable_to_non_nullable
@@ -17557,7 +17557,7 @@ abstract class _$$_ContractValuedItemCopyWith<$Res>
       List<String>? linkId,
       @JsonKey(name: '_linkId')
           List<Element?>? linkIdElement,
-      List<UnsignedInt>? securityLabelNumber,
+      List<FhirUnsignedInt>? securityLabelNumber,
       @JsonKey(name: '_securityLabelNumber')
           List<Element>? securityLabelNumberElement});
 
@@ -17722,7 +17722,7 @@ class __$$_ContractValuedItemCopyWithImpl<$Res>
       securityLabelNumber: freezed == securityLabelNumber
           ? _value._securityLabelNumber
           : securityLabelNumber // ignore: cast_nullable_to_non_nullable
-              as List<UnsignedInt>?,
+              as List<FhirUnsignedInt>?,
       securityLabelNumberElement: freezed == securityLabelNumberElement
           ? _value._securityLabelNumberElement
           : securityLabelNumberElement // ignore: cast_nullable_to_non_nullable
@@ -17765,7 +17765,7 @@ class _$_ContractValuedItem extends _ContractValuedItem {
       final List<String>? linkId,
       @JsonKey(name: '_linkId')
           final List<Element?>? linkIdElement,
-      final List<UnsignedInt>? securityLabelNumber,
+      final List<FhirUnsignedInt>? securityLabelNumber,
       @JsonKey(name: '_securityLabelNumber')
           final List<Element>? securityLabelNumberElement})
       : _extension_ = extension_,
@@ -17969,12 +17969,12 @@ class _$_ContractValuedItem extends _ContractValuedItem {
 
   /// [securityLabelNumber] A set of security labels that define which terms
   ///  are controlled by this condition.
-  final List<UnsignedInt>? _securityLabelNumber;
+  final List<FhirUnsignedInt>? _securityLabelNumber;
 
   /// [securityLabelNumber] A set of security labels that define which terms
   ///  are controlled by this condition.
   @override
-  List<UnsignedInt>? get securityLabelNumber {
+  List<FhirUnsignedInt>? get securityLabelNumber {
     final value = _securityLabelNumber;
     if (value == null) return null;
     if (_securityLabelNumber is EqualUnmodifiableListView)
@@ -18130,7 +18130,7 @@ abstract class _ContractValuedItem extends ContractValuedItem {
           final List<String>? linkId,
           @JsonKey(name: '_linkId')
               final List<Element?>? linkIdElement,
-          final List<UnsignedInt>? securityLabelNumber,
+          final List<FhirUnsignedInt>? securityLabelNumber,
           @JsonKey(name: '_securityLabelNumber')
               final List<Element>? securityLabelNumberElement}) =
       _$_ContractValuedItem;
@@ -18276,7 +18276,7 @@ abstract class _ContractValuedItem extends ContractValuedItem {
 
   /// [securityLabelNumber] A set of security labels that define which terms
   ///  are controlled by this condition.
-  List<UnsignedInt>? get securityLabelNumber;
+  List<FhirUnsignedInt>? get securityLabelNumber;
   @override
   @JsonKey(name: '_securityLabelNumber')
   List<Element>? get securityLabelNumberElement;
@@ -18444,7 +18444,7 @@ mixin _$ContractAction {
   List<Annotation>? get note => throw _privateConstructorUsedError;
 
   /// [securityLabelNumber] Security labels that protects the action.
-  List<UnsignedInt>? get securityLabelNumber =>
+  List<FhirUnsignedInt>? get securityLabelNumber =>
       throw _privateConstructorUsedError;
   @JsonKey(name: '_securityLabelNumber')
   List<Element>? get securityLabelNumberElement =>
@@ -18505,7 +18505,7 @@ abstract class $ContractActionCopyWith<$Res> {
       @JsonKey(name: '_reasonLinkId')
           List<Element?>? reasonLinkIdElement,
       List<Annotation>? note,
-      List<UnsignedInt>? securityLabelNumber,
+      List<FhirUnsignedInt>? securityLabelNumber,
       @JsonKey(name: '_securityLabelNumber')
           List<Element>? securityLabelNumberElement});
 
@@ -18706,7 +18706,7 @@ class _$ContractActionCopyWithImpl<$Res, $Val extends ContractAction>
       securityLabelNumber: freezed == securityLabelNumber
           ? _value.securityLabelNumber
           : securityLabelNumber // ignore: cast_nullable_to_non_nullable
-              as List<UnsignedInt>?,
+              as List<FhirUnsignedInt>?,
       securityLabelNumberElement: freezed == securityLabelNumberElement
           ? _value.securityLabelNumberElement
           : securityLabelNumberElement // ignore: cast_nullable_to_non_nullable
@@ -18874,7 +18874,7 @@ abstract class _$$_ContractActionCopyWith<$Res>
       @JsonKey(name: '_reasonLinkId')
           List<Element?>? reasonLinkIdElement,
       List<Annotation>? note,
-      List<UnsignedInt>? securityLabelNumber,
+      List<FhirUnsignedInt>? securityLabelNumber,
       @JsonKey(name: '_securityLabelNumber')
           List<Element>? securityLabelNumberElement});
 
@@ -19083,7 +19083,7 @@ class __$$_ContractActionCopyWithImpl<$Res>
       securityLabelNumber: freezed == securityLabelNumber
           ? _value._securityLabelNumber
           : securityLabelNumber // ignore: cast_nullable_to_non_nullable
-              as List<UnsignedInt>?,
+              as List<FhirUnsignedInt>?,
       securityLabelNumberElement: freezed == securityLabelNumberElement
           ? _value._securityLabelNumberElement
           : securityLabelNumberElement // ignore: cast_nullable_to_non_nullable
@@ -19138,7 +19138,7 @@ class _$_ContractAction extends _ContractAction {
       @JsonKey(name: '_reasonLinkId')
           final List<Element?>? reasonLinkIdElement,
       final List<Annotation>? note,
-      final List<UnsignedInt>? securityLabelNumber,
+      final List<FhirUnsignedInt>? securityLabelNumber,
       @JsonKey(name: '_securityLabelNumber')
           final List<Element>? securityLabelNumberElement})
       : _extension_ = extension_,
@@ -19565,11 +19565,11 @@ class _$_ContractAction extends _ContractAction {
   }
 
   /// [securityLabelNumber] Security labels that protects the action.
-  final List<UnsignedInt>? _securityLabelNumber;
+  final List<FhirUnsignedInt>? _securityLabelNumber;
 
   /// [securityLabelNumber] Security labels that protects the action.
   @override
-  List<UnsignedInt>? get securityLabelNumber {
+  List<FhirUnsignedInt>? get securityLabelNumber {
     final value = _securityLabelNumber;
     if (value == null) return null;
     if (_securityLabelNumber is EqualUnmodifiableListView)
@@ -19764,7 +19764,7 @@ abstract class _ContractAction extends ContractAction {
       @JsonKey(name: '_reasonLinkId')
           final List<Element?>? reasonLinkIdElement,
       final List<Annotation>? note,
-      final List<UnsignedInt>? securityLabelNumber,
+      final List<FhirUnsignedInt>? securityLabelNumber,
       @JsonKey(name: '_securityLabelNumber')
           final List<Element>? securityLabelNumberElement}) = _$_ContractAction;
   _ContractAction._() : super._();
@@ -19954,7 +19954,7 @@ abstract class _ContractAction extends ContractAction {
   @override
 
   /// [securityLabelNumber] Security labels that protects the action.
-  List<UnsignedInt>? get securityLabelNumber;
+  List<FhirUnsignedInt>? get securityLabelNumber;
   @override
   @JsonKey(name: '_securityLabelNumber')
   List<Element>? get securityLabelNumberElement;
@@ -21960,7 +21960,7 @@ mixin _$ExplanationOfBenefit {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -22172,7 +22172,7 @@ mixin _$ExplanationOfBenefit {
 
   /// [precedence] This indicates the relative order of a series of EOBs
   ///  related to different coverages for the same suite of services.
-  PositiveInt? get precedence => throw _privateConstructorUsedError;
+  FhirPositiveInt? get precedence => throw _privateConstructorUsedError;
 
   /// [precedenceElement] Extensions for precedence
   @JsonKey(name: '_precedence')
@@ -22246,7 +22246,7 @@ abstract class $ExplanationOfBenefitCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R4ResourceType.ExplanationOfBenefit)
           R4ResourceType resourceType,
       String? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -22300,7 +22300,7 @@ abstract class $ExplanationOfBenefitCopyWith<$Res> {
       List<ExplanationOfBenefitSupportingInfo>? supportingInfo,
       List<ExplanationOfBenefitDiagnosis>? diagnosis,
       List<ExplanationOfBenefitProcedure>? procedure,
-      PositiveInt? precedence,
+      FhirPositiveInt? precedence,
       @JsonKey(name: '_precedence')
           Element? precedenceElement,
       List<ExplanationOfBenefitInsurance> insurance,
@@ -23057,7 +23057,7 @@ abstract class _$$_ExplanationOfBenefitCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R4ResourceType.ExplanationOfBenefit)
           R4ResourceType resourceType,
       String? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -23111,7 +23111,7 @@ abstract class _$$_ExplanationOfBenefitCopyWith<$Res>
       List<ExplanationOfBenefitSupportingInfo>? supportingInfo,
       List<ExplanationOfBenefitDiagnosis>? diagnosis,
       List<ExplanationOfBenefitProcedure>? procedure,
-      PositiveInt? precedence,
+      FhirPositiveInt? precedence,
       @JsonKey(name: '_precedence')
           Element? precedenceElement,
       List<ExplanationOfBenefitInsurance> insurance,
@@ -24433,7 +24433,7 @@ abstract class _ExplanationOfBenefit extends ExplanationOfBenefit {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -24683,7 +24683,7 @@ abstract class _ExplanationOfBenefit extends ExplanationOfBenefit {
 
   /// [precedence] This indicates the relative order of a series of EOBs
   ///  related to different coverages for the same suite of services.
-  PositiveInt? get precedence;
+  FhirPositiveInt? get precedence;
   @override
 
   /// [precedenceElement] Extensions for precedence
@@ -25624,7 +25624,7 @@ mixin _$ExplanationOfBenefitCareTeam {
       throw _privateConstructorUsedError;
 
   /// [sequence] A number to uniquely identify care team entries.
-  PositiveInt? get sequence => throw _privateConstructorUsedError;
+  FhirPositiveInt? get sequence => throw _privateConstructorUsedError;
 
   /// [sequenceElement] Extensions for sequence
   @JsonKey(name: '_sequence')
@@ -25667,7 +25667,7 @@ abstract class $ExplanationOfBenefitCareTeamCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      PositiveInt? sequence,
+      FhirPositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       Reference provider,
       FhirBoolean? responsible,
@@ -25821,7 +25821,7 @@ abstract class _$$_ExplanationOfBenefitCareTeamCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      PositiveInt? sequence,
+      FhirPositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       Reference provider,
       FhirBoolean? responsible,
@@ -26143,7 +26143,7 @@ abstract class _ExplanationOfBenefitCareTeam
   @override
 
   /// [sequence] A number to uniquely identify care team entries.
-  PositiveInt? get sequence;
+  FhirPositiveInt? get sequence;
   @override
 
   /// [sequenceElement] Extensions for sequence
@@ -26216,7 +26216,7 @@ mixin _$ExplanationOfBenefitSupportingInfo {
       throw _privateConstructorUsedError;
 
   /// [sequence] A number to uniquely identify supporting information entries.
-  PositiveInt? get sequence => throw _privateConstructorUsedError;
+  FhirPositiveInt? get sequence => throw _privateConstructorUsedError;
 
   /// [sequenceElement] Extensions for sequence
   @JsonKey(name: '_sequence')
@@ -26297,7 +26297,7 @@ abstract class $ExplanationOfBenefitSupportingInfoCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      PositiveInt? sequence,
+      FhirPositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       CodeableConcept category,
       CodeableConcept? code,
@@ -26577,7 +26577,7 @@ abstract class _$$_ExplanationOfBenefitSupportingInfoCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      PositiveInt? sequence,
+      FhirPositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       CodeableConcept category,
       CodeableConcept? code,
@@ -27047,7 +27047,7 @@ abstract class _ExplanationOfBenefitSupportingInfo
   @override
 
   /// [sequence] A number to uniquely identify supporting information entries.
-  PositiveInt? get sequence;
+  FhirPositiveInt? get sequence;
   @override
 
   /// [sequenceElement] Extensions for sequence
@@ -27166,7 +27166,7 @@ mixin _$ExplanationOfBenefitDiagnosis {
       throw _privateConstructorUsedError;
 
   /// [sequence] A number to uniquely identify diagnosis entries.
-  PositiveInt? get sequence => throw _privateConstructorUsedError;
+  FhirPositiveInt? get sequence => throw _privateConstructorUsedError;
 
   /// [sequenceElement] Extensions for sequence
   @JsonKey(name: '_sequence')
@@ -27211,7 +27211,7 @@ abstract class $ExplanationOfBenefitDiagnosisCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      PositiveInt? sequence,
+      FhirPositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       CodeableConcept? diagnosisCodeableConcept,
       Reference? diagnosisReference,
@@ -27370,7 +27370,7 @@ abstract class _$$_ExplanationOfBenefitDiagnosisCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      PositiveInt? sequence,
+      FhirPositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       CodeableConcept? diagnosisCodeableConcept,
       Reference? diagnosisReference,
@@ -27705,7 +27705,7 @@ abstract class _ExplanationOfBenefitDiagnosis
   @override
 
   /// [sequence] A number to uniquely identify diagnosis entries.
-  PositiveInt? get sequence;
+  FhirPositiveInt? get sequence;
   @override
 
   /// [sequenceElement] Extensions for sequence
@@ -27779,7 +27779,7 @@ mixin _$ExplanationOfBenefitProcedure {
       throw _privateConstructorUsedError;
 
   /// [sequence] A number to uniquely identify procedure entries.
-  PositiveInt? get sequence => throw _privateConstructorUsedError;
+  FhirPositiveInt? get sequence => throw _privateConstructorUsedError;
 
   /// [sequenceElement] Extensions for sequence
   @JsonKey(name: '_sequence')
@@ -27825,7 +27825,7 @@ abstract class $ExplanationOfBenefitProcedureCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      PositiveInt? sequence,
+      FhirPositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       List<CodeableConcept>? type,
       FhirDateTime? date,
@@ -27977,7 +27977,7 @@ abstract class _$$_ExplanationOfBenefitProcedureCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      PositiveInt? sequence,
+      FhirPositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       List<CodeableConcept>? type,
       FhirDateTime? date,
@@ -28331,7 +28331,7 @@ abstract class _ExplanationOfBenefitProcedure
   @override
 
   /// [sequence] A number to uniquely identify procedure entries.
-  PositiveInt? get sequence;
+  FhirPositiveInt? get sequence;
   @override
 
   /// [sequenceElement] Extensions for sequence
@@ -29456,14 +29456,15 @@ mixin _$ExplanationOfBenefitItem {
       throw _privateConstructorUsedError;
 
   /// [sequence] A number to uniquely identify item entries.
-  PositiveInt? get sequence => throw _privateConstructorUsedError;
+  FhirPositiveInt? get sequence => throw _privateConstructorUsedError;
 
   /// [sequenceElement] Extensions for sequence
   @JsonKey(name: '_sequence')
   Element? get sequenceElement => throw _privateConstructorUsedError;
 
   /// [careTeamSequence] Care team members related to this service or product.
-  List<PositiveInt>? get careTeamSequence => throw _privateConstructorUsedError;
+  List<FhirPositiveInt>? get careTeamSequence =>
+      throw _privateConstructorUsedError;
 
   /// [careTeamSequenceElement] Extensions for careTeamSequence
   @JsonKey(name: '_careTeamSequence')
@@ -29471,14 +29472,14 @@ mixin _$ExplanationOfBenefitItem {
       throw _privateConstructorUsedError;
 
   /// [diagnosisSequence] Diagnoses applicable for this service or product.
-  List<PositiveInt>? get diagnosisSequence =>
+  List<FhirPositiveInt>? get diagnosisSequence =>
       throw _privateConstructorUsedError;
   @JsonKey(name: '_diagnosisSequence')
   List<Element>? get diagnosisSequenceElement =>
       throw _privateConstructorUsedError;
 
   /// [procedureSequence] Procedures applicable for this service or product.
-  List<PositiveInt>? get procedureSequence =>
+  List<FhirPositiveInt>? get procedureSequence =>
       throw _privateConstructorUsedError;
   @JsonKey(name: '_procedureSequence')
   List<Element>? get procedureSequenceElement =>
@@ -29486,7 +29487,7 @@ mixin _$ExplanationOfBenefitItem {
 
   /// [informationSequence] Exceptions, special conditions and supporting
   ///  information applicable for this service or product.
-  List<PositiveInt>? get informationSequence =>
+  List<FhirPositiveInt>? get informationSequence =>
       throw _privateConstructorUsedError;
   @JsonKey(name: '_informationSequence')
   List<Element>? get informationSequenceElement =>
@@ -29572,7 +29573,7 @@ mixin _$ExplanationOfBenefitItem {
 
   /// [noteNumber] The numbers associated with notes below which apply to the
   ///  adjudication of this item.
-  List<PositiveInt>? get noteNumber => throw _privateConstructorUsedError;
+  List<FhirPositiveInt>? get noteNumber => throw _privateConstructorUsedError;
 
   /// [noteNumberElement] Extensions for noteNumber
   @JsonKey(name: '_noteNumber')
@@ -29605,19 +29606,19 @@ abstract class $ExplanationOfBenefitItemCopyWith<$Res> {
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      PositiveInt? sequence,
+      FhirPositiveInt? sequence,
       @JsonKey(name: '_sequence')
           Element? sequenceElement,
-      List<PositiveInt>? careTeamSequence,
+      List<FhirPositiveInt>? careTeamSequence,
       @JsonKey(name: '_careTeamSequence')
           List<Element?>? careTeamSequenceElement,
-      List<PositiveInt>? diagnosisSequence,
+      List<FhirPositiveInt>? diagnosisSequence,
       @JsonKey(name: '_diagnosisSequence')
           List<Element>? diagnosisSequenceElement,
-      List<PositiveInt>? procedureSequence,
+      List<FhirPositiveInt>? procedureSequence,
       @JsonKey(name: '_procedureSequence')
           List<Element>? procedureSequenceElement,
-      List<PositiveInt>? informationSequence,
+      List<FhirPositiveInt>? informationSequence,
       @JsonKey(name: '_informationSequence')
           List<Element>? informationSequenceElement,
       CodeableConcept? revenue,
@@ -29642,7 +29643,7 @@ abstract class $ExplanationOfBenefitItemCopyWith<$Res> {
       CodeableConcept? bodySite,
       List<CodeableConcept>? subSite,
       List<Reference>? encounter,
-      List<PositiveInt>? noteNumber,
+      List<FhirPositiveInt>? noteNumber,
       @JsonKey(name: '_noteNumber')
           List<Element?>? noteNumberElement,
       List<ExplanationOfBenefitAdjudication>? adjudication,
@@ -29740,7 +29741,7 @@ class _$ExplanationOfBenefitItemCopyWithImpl<$Res,
       careTeamSequence: freezed == careTeamSequence
           ? _value.careTeamSequence
           : careTeamSequence // ignore: cast_nullable_to_non_nullable
-              as List<PositiveInt>?,
+              as List<FhirPositiveInt>?,
       careTeamSequenceElement: freezed == careTeamSequenceElement
           ? _value.careTeamSequenceElement
           : careTeamSequenceElement // ignore: cast_nullable_to_non_nullable
@@ -29748,7 +29749,7 @@ class _$ExplanationOfBenefitItemCopyWithImpl<$Res,
       diagnosisSequence: freezed == diagnosisSequence
           ? _value.diagnosisSequence
           : diagnosisSequence // ignore: cast_nullable_to_non_nullable
-              as List<PositiveInt>?,
+              as List<FhirPositiveInt>?,
       diagnosisSequenceElement: freezed == diagnosisSequenceElement
           ? _value.diagnosisSequenceElement
           : diagnosisSequenceElement // ignore: cast_nullable_to_non_nullable
@@ -29756,7 +29757,7 @@ class _$ExplanationOfBenefitItemCopyWithImpl<$Res,
       procedureSequence: freezed == procedureSequence
           ? _value.procedureSequence
           : procedureSequence // ignore: cast_nullable_to_non_nullable
-              as List<PositiveInt>?,
+              as List<FhirPositiveInt>?,
       procedureSequenceElement: freezed == procedureSequenceElement
           ? _value.procedureSequenceElement
           : procedureSequenceElement // ignore: cast_nullable_to_non_nullable
@@ -29764,7 +29765,7 @@ class _$ExplanationOfBenefitItemCopyWithImpl<$Res,
       informationSequence: freezed == informationSequence
           ? _value.informationSequence
           : informationSequence // ignore: cast_nullable_to_non_nullable
-              as List<PositiveInt>?,
+              as List<FhirPositiveInt>?,
       informationSequenceElement: freezed == informationSequenceElement
           ? _value.informationSequenceElement
           : informationSequenceElement // ignore: cast_nullable_to_non_nullable
@@ -29852,7 +29853,7 @@ class _$ExplanationOfBenefitItemCopyWithImpl<$Res,
       noteNumber: freezed == noteNumber
           ? _value.noteNumber
           : noteNumber // ignore: cast_nullable_to_non_nullable
-              as List<PositiveInt>?,
+              as List<FhirPositiveInt>?,
       noteNumberElement: freezed == noteNumberElement
           ? _value.noteNumberElement
           : noteNumberElement // ignore: cast_nullable_to_non_nullable
@@ -30048,19 +30049,19 @@ abstract class _$$_ExplanationOfBenefitItemCopyWith<$Res>
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      PositiveInt? sequence,
+      FhirPositiveInt? sequence,
       @JsonKey(name: '_sequence')
           Element? sequenceElement,
-      List<PositiveInt>? careTeamSequence,
+      List<FhirPositiveInt>? careTeamSequence,
       @JsonKey(name: '_careTeamSequence')
           List<Element?>? careTeamSequenceElement,
-      List<PositiveInt>? diagnosisSequence,
+      List<FhirPositiveInt>? diagnosisSequence,
       @JsonKey(name: '_diagnosisSequence')
           List<Element>? diagnosisSequenceElement,
-      List<PositiveInt>? procedureSequence,
+      List<FhirPositiveInt>? procedureSequence,
       @JsonKey(name: '_procedureSequence')
           List<Element>? procedureSequenceElement,
-      List<PositiveInt>? informationSequence,
+      List<FhirPositiveInt>? informationSequence,
       @JsonKey(name: '_informationSequence')
           List<Element>? informationSequenceElement,
       CodeableConcept? revenue,
@@ -30085,7 +30086,7 @@ abstract class _$$_ExplanationOfBenefitItemCopyWith<$Res>
       CodeableConcept? bodySite,
       List<CodeableConcept>? subSite,
       List<Reference>? encounter,
-      List<PositiveInt>? noteNumber,
+      List<FhirPositiveInt>? noteNumber,
       @JsonKey(name: '_noteNumber')
           List<Element?>? noteNumberElement,
       List<ExplanationOfBenefitAdjudication>? adjudication,
@@ -30195,7 +30196,7 @@ class __$$_ExplanationOfBenefitItemCopyWithImpl<$Res>
       careTeamSequence: freezed == careTeamSequence
           ? _value._careTeamSequence
           : careTeamSequence // ignore: cast_nullable_to_non_nullable
-              as List<PositiveInt>?,
+              as List<FhirPositiveInt>?,
       careTeamSequenceElement: freezed == careTeamSequenceElement
           ? _value._careTeamSequenceElement
           : careTeamSequenceElement // ignore: cast_nullable_to_non_nullable
@@ -30203,7 +30204,7 @@ class __$$_ExplanationOfBenefitItemCopyWithImpl<$Res>
       diagnosisSequence: freezed == diagnosisSequence
           ? _value._diagnosisSequence
           : diagnosisSequence // ignore: cast_nullable_to_non_nullable
-              as List<PositiveInt>?,
+              as List<FhirPositiveInt>?,
       diagnosisSequenceElement: freezed == diagnosisSequenceElement
           ? _value._diagnosisSequenceElement
           : diagnosisSequenceElement // ignore: cast_nullable_to_non_nullable
@@ -30211,7 +30212,7 @@ class __$$_ExplanationOfBenefitItemCopyWithImpl<$Res>
       procedureSequence: freezed == procedureSequence
           ? _value._procedureSequence
           : procedureSequence // ignore: cast_nullable_to_non_nullable
-              as List<PositiveInt>?,
+              as List<FhirPositiveInt>?,
       procedureSequenceElement: freezed == procedureSequenceElement
           ? _value._procedureSequenceElement
           : procedureSequenceElement // ignore: cast_nullable_to_non_nullable
@@ -30219,7 +30220,7 @@ class __$$_ExplanationOfBenefitItemCopyWithImpl<$Res>
       informationSequence: freezed == informationSequence
           ? _value._informationSequence
           : informationSequence // ignore: cast_nullable_to_non_nullable
-              as List<PositiveInt>?,
+              as List<FhirPositiveInt>?,
       informationSequenceElement: freezed == informationSequenceElement
           ? _value._informationSequenceElement
           : informationSequenceElement // ignore: cast_nullable_to_non_nullable
@@ -30307,7 +30308,7 @@ class __$$_ExplanationOfBenefitItemCopyWithImpl<$Res>
       noteNumber: freezed == noteNumber
           ? _value._noteNumber
           : noteNumber // ignore: cast_nullable_to_non_nullable
-              as List<PositiveInt>?,
+              as List<FhirPositiveInt>?,
       noteNumberElement: freezed == noteNumberElement
           ? _value._noteNumberElement
           : noteNumberElement // ignore: cast_nullable_to_non_nullable
@@ -30335,16 +30336,16 @@ class _$_ExplanationOfBenefitItem extends _ExplanationOfBenefitItem {
       this.sequence,
       @JsonKey(name: '_sequence')
           this.sequenceElement,
-      final List<PositiveInt>? careTeamSequence,
+      final List<FhirPositiveInt>? careTeamSequence,
       @JsonKey(name: '_careTeamSequence')
           final List<Element?>? careTeamSequenceElement,
-      final List<PositiveInt>? diagnosisSequence,
+      final List<FhirPositiveInt>? diagnosisSequence,
       @JsonKey(name: '_diagnosisSequence')
           final List<Element>? diagnosisSequenceElement,
-      final List<PositiveInt>? procedureSequence,
+      final List<FhirPositiveInt>? procedureSequence,
       @JsonKey(name: '_procedureSequence')
           final List<Element>? procedureSequenceElement,
-      final List<PositiveInt>? informationSequence,
+      final List<FhirPositiveInt>? informationSequence,
       @JsonKey(name: '_informationSequence')
           final List<Element>? informationSequenceElement,
       this.revenue,
@@ -30369,7 +30370,7 @@ class _$_ExplanationOfBenefitItem extends _ExplanationOfBenefitItem {
       this.bodySite,
       final List<CodeableConcept>? subSite,
       final List<Reference>? encounter,
-      final List<PositiveInt>? noteNumber,
+      final List<FhirPositiveInt>? noteNumber,
       @JsonKey(name: '_noteNumber')
           final List<Element?>? noteNumberElement,
       final List<ExplanationOfBenefitAdjudication>? adjudication,
@@ -30475,11 +30476,11 @@ class _$_ExplanationOfBenefitItem extends _ExplanationOfBenefitItem {
   final Element? sequenceElement;
 
   /// [careTeamSequence] Care team members related to this service or product.
-  final List<PositiveInt>? _careTeamSequence;
+  final List<FhirPositiveInt>? _careTeamSequence;
 
   /// [careTeamSequence] Care team members related to this service or product.
   @override
-  List<PositiveInt>? get careTeamSequence {
+  List<FhirPositiveInt>? get careTeamSequence {
     final value = _careTeamSequence;
     if (value == null) return null;
     if (_careTeamSequence is EqualUnmodifiableListView)
@@ -30504,11 +30505,11 @@ class _$_ExplanationOfBenefitItem extends _ExplanationOfBenefitItem {
   }
 
   /// [diagnosisSequence] Diagnoses applicable for this service or product.
-  final List<PositiveInt>? _diagnosisSequence;
+  final List<FhirPositiveInt>? _diagnosisSequence;
 
   /// [diagnosisSequence] Diagnoses applicable for this service or product.
   @override
-  List<PositiveInt>? get diagnosisSequence {
+  List<FhirPositiveInt>? get diagnosisSequence {
     final value = _diagnosisSequence;
     if (value == null) return null;
     if (_diagnosisSequence is EqualUnmodifiableListView)
@@ -30530,11 +30531,11 @@ class _$_ExplanationOfBenefitItem extends _ExplanationOfBenefitItem {
   }
 
   /// [procedureSequence] Procedures applicable for this service or product.
-  final List<PositiveInt>? _procedureSequence;
+  final List<FhirPositiveInt>? _procedureSequence;
 
   /// [procedureSequence] Procedures applicable for this service or product.
   @override
-  List<PositiveInt>? get procedureSequence {
+  List<FhirPositiveInt>? get procedureSequence {
     final value = _procedureSequence;
     if (value == null) return null;
     if (_procedureSequence is EqualUnmodifiableListView)
@@ -30557,12 +30558,12 @@ class _$_ExplanationOfBenefitItem extends _ExplanationOfBenefitItem {
 
   /// [informationSequence] Exceptions, special conditions and supporting
   ///  information applicable for this service or product.
-  final List<PositiveInt>? _informationSequence;
+  final List<FhirPositiveInt>? _informationSequence;
 
   /// [informationSequence] Exceptions, special conditions and supporting
   ///  information applicable for this service or product.
   @override
-  List<PositiveInt>? get informationSequence {
+  List<FhirPositiveInt>? get informationSequence {
     final value = _informationSequence;
     if (value == null) return null;
     if (_informationSequence is EqualUnmodifiableListView)
@@ -30730,12 +30731,12 @@ class _$_ExplanationOfBenefitItem extends _ExplanationOfBenefitItem {
 
   /// [noteNumber] The numbers associated with notes below which apply to the
   ///  adjudication of this item.
-  final List<PositiveInt>? _noteNumber;
+  final List<FhirPositiveInt>? _noteNumber;
 
   /// [noteNumber] The numbers associated with notes below which apply to the
   ///  adjudication of this item.
   @override
-  List<PositiveInt>? get noteNumber {
+  List<FhirPositiveInt>? get noteNumber {
     final value = _noteNumber;
     if (value == null) return null;
     if (_noteNumber is EqualUnmodifiableListView) return _noteNumber;
@@ -30935,16 +30936,16 @@ abstract class _ExplanationOfBenefitItem extends ExplanationOfBenefitItem {
           final PositiveInt? sequence,
           @JsonKey(name: '_sequence')
               final Element? sequenceElement,
-          final List<PositiveInt>? careTeamSequence,
+          final List<FhirPositiveInt>? careTeamSequence,
           @JsonKey(name: '_careTeamSequence')
               final List<Element?>? careTeamSequenceElement,
-          final List<PositiveInt>? diagnosisSequence,
+          final List<FhirPositiveInt>? diagnosisSequence,
           @JsonKey(name: '_diagnosisSequence')
               final List<Element>? diagnosisSequenceElement,
-          final List<PositiveInt>? procedureSequence,
+          final List<FhirPositiveInt>? procedureSequence,
           @JsonKey(name: '_procedureSequence')
               final List<Element>? procedureSequenceElement,
-          final List<PositiveInt>? informationSequence,
+          final List<FhirPositiveInt>? informationSequence,
           @JsonKey(name: '_informationSequence')
               final List<Element>? informationSequenceElement,
           final CodeableConcept? revenue,
@@ -30969,7 +30970,7 @@ abstract class _ExplanationOfBenefitItem extends ExplanationOfBenefitItem {
           final CodeableConcept? bodySite,
           final List<CodeableConcept>? subSite,
           final List<Reference>? encounter,
-          final List<PositiveInt>? noteNumber,
+          final List<FhirPositiveInt>? noteNumber,
           @JsonKey(name: '_noteNumber')
               final List<Element?>? noteNumberElement,
           final List<ExplanationOfBenefitAdjudication>? adjudication,
@@ -31014,7 +31015,7 @@ abstract class _ExplanationOfBenefitItem extends ExplanationOfBenefitItem {
   @override
 
   /// [sequence] A number to uniquely identify item entries.
-  PositiveInt? get sequence;
+  FhirPositiveInt? get sequence;
   @override
 
   /// [sequenceElement] Extensions for sequence
@@ -31023,7 +31024,7 @@ abstract class _ExplanationOfBenefitItem extends ExplanationOfBenefitItem {
   @override
 
   /// [careTeamSequence] Care team members related to this service or product.
-  List<PositiveInt>? get careTeamSequence;
+  List<FhirPositiveInt>? get careTeamSequence;
   @override
 
   /// [careTeamSequenceElement] Extensions for careTeamSequence
@@ -31032,14 +31033,14 @@ abstract class _ExplanationOfBenefitItem extends ExplanationOfBenefitItem {
   @override
 
   /// [diagnosisSequence] Diagnoses applicable for this service or product.
-  List<PositiveInt>? get diagnosisSequence;
+  List<FhirPositiveInt>? get diagnosisSequence;
   @override
   @JsonKey(name: '_diagnosisSequence')
   List<Element>? get diagnosisSequenceElement;
   @override
 
   /// [procedureSequence] Procedures applicable for this service or product.
-  List<PositiveInt>? get procedureSequence;
+  List<FhirPositiveInt>? get procedureSequence;
   @override
   @JsonKey(name: '_procedureSequence')
   List<Element>? get procedureSequenceElement;
@@ -31047,7 +31048,7 @@ abstract class _ExplanationOfBenefitItem extends ExplanationOfBenefitItem {
 
   /// [informationSequence] Exceptions, special conditions and supporting
   ///  information applicable for this service or product.
-  List<PositiveInt>? get informationSequence;
+  List<FhirPositiveInt>? get informationSequence;
   @override
   @JsonKey(name: '_informationSequence')
   List<Element>? get informationSequenceElement;
@@ -31152,7 +31153,7 @@ abstract class _ExplanationOfBenefitItem extends ExplanationOfBenefitItem {
 
   /// [noteNumber] The numbers associated with notes below which apply to the
   ///  adjudication of this item.
-  List<PositiveInt>? get noteNumber;
+  List<FhirPositiveInt>? get noteNumber;
   @override
 
   /// [noteNumberElement] Extensions for noteNumber
@@ -31742,7 +31743,7 @@ mixin _$ExplanationOfBenefitDetail {
 
   /// [sequence] A claim detail line. Either a simple (a product or service) or
   ///  a 'group' of sub-details which are simple items.
-  PositiveInt? get sequence => throw _privateConstructorUsedError;
+  FhirPositiveInt? get sequence => throw _privateConstructorUsedError;
 
   /// [sequenceElement] Extensions for sequence
   @JsonKey(name: '_sequence')
@@ -31795,7 +31796,7 @@ mixin _$ExplanationOfBenefitDetail {
 
   /// [noteNumber] The numbers associated with notes below which apply to the
   ///  adjudication of this item.
-  List<PositiveInt>? get noteNumber => throw _privateConstructorUsedError;
+  List<FhirPositiveInt>? get noteNumber => throw _privateConstructorUsedError;
 
   /// [noteNumberElement] Extensions for noteNumber
   @JsonKey(name: '_noteNumber')
@@ -31826,7 +31827,7 @@ abstract class $ExplanationOfBenefitDetailCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      PositiveInt? sequence,
+      FhirPositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       CodeableConcept? revenue,
       CodeableConcept? category,
@@ -31839,7 +31840,7 @@ abstract class $ExplanationOfBenefitDetailCopyWith<$Res> {
       @JsonKey(name: '_factor') Element? factorElement,
       Money? net,
       List<Reference>? udi,
-      List<PositiveInt>? noteNumber,
+      List<FhirPositiveInt>? noteNumber,
       @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
       List<ExplanationOfBenefitAdjudication>? adjudication,
       List<ExplanationOfBenefitSubDetail>? subDetail});
@@ -31957,7 +31958,7 @@ class _$ExplanationOfBenefitDetailCopyWithImpl<$Res,
       noteNumber: freezed == noteNumber
           ? _value.noteNumber
           : noteNumber // ignore: cast_nullable_to_non_nullable
-              as List<PositiveInt>?,
+              as List<FhirPositiveInt>?,
       noteNumberElement: freezed == noteNumberElement
           ? _value.noteNumberElement
           : noteNumberElement // ignore: cast_nullable_to_non_nullable
@@ -32079,7 +32080,7 @@ abstract class _$$_ExplanationOfBenefitDetailCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      PositiveInt? sequence,
+      FhirPositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       CodeableConcept? revenue,
       CodeableConcept? category,
@@ -32092,7 +32093,7 @@ abstract class _$$_ExplanationOfBenefitDetailCopyWith<$Res>
       @JsonKey(name: '_factor') Element? factorElement,
       Money? net,
       List<Reference>? udi,
-      List<PositiveInt>? noteNumber,
+      List<FhirPositiveInt>? noteNumber,
       @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
       List<ExplanationOfBenefitAdjudication>? adjudication,
       List<ExplanationOfBenefitSubDetail>? subDetail});
@@ -32217,7 +32218,7 @@ class __$$_ExplanationOfBenefitDetailCopyWithImpl<$Res>
       noteNumber: freezed == noteNumber
           ? _value._noteNumber
           : noteNumber // ignore: cast_nullable_to_non_nullable
-              as List<PositiveInt>?,
+              as List<FhirPositiveInt>?,
       noteNumberElement: freezed == noteNumberElement
           ? _value._noteNumberElement
           : noteNumberElement // ignore: cast_nullable_to_non_nullable
@@ -32254,7 +32255,7 @@ class _$_ExplanationOfBenefitDetail extends _ExplanationOfBenefitDetail {
       @JsonKey(name: '_factor') this.factorElement,
       this.net,
       final List<Reference>? udi,
-      final List<PositiveInt>? noteNumber,
+      final List<FhirPositiveInt>? noteNumber,
       @JsonKey(name: '_noteNumber') final List<Element?>? noteNumberElement,
       final List<ExplanationOfBenefitAdjudication>? adjudication,
       final List<ExplanationOfBenefitSubDetail>? subDetail})
@@ -32435,12 +32436,12 @@ class _$_ExplanationOfBenefitDetail extends _ExplanationOfBenefitDetail {
 
   /// [noteNumber] The numbers associated with notes below which apply to the
   ///  adjudication of this item.
-  final List<PositiveInt>? _noteNumber;
+  final List<FhirPositiveInt>? _noteNumber;
 
   /// [noteNumber] The numbers associated with notes below which apply to the
   ///  adjudication of this item.
   @override
-  List<PositiveInt>? get noteNumber {
+  List<FhirPositiveInt>? get noteNumber {
     final value = _noteNumber;
     if (value == null) return null;
     if (_noteNumber is EqualUnmodifiableListView) return _noteNumber;
@@ -32594,7 +32595,7 @@ abstract class _ExplanationOfBenefitDetail extends ExplanationOfBenefitDetail {
           @JsonKey(name: '_factor') final Element? factorElement,
           final Money? net,
           final List<Reference>? udi,
-          final List<PositiveInt>? noteNumber,
+          final List<FhirPositiveInt>? noteNumber,
           @JsonKey(name: '_noteNumber') final List<Element?>? noteNumberElement,
           final List<ExplanationOfBenefitAdjudication>? adjudication,
           final List<ExplanationOfBenefitSubDetail>? subDetail}) =
@@ -32639,7 +32640,7 @@ abstract class _ExplanationOfBenefitDetail extends ExplanationOfBenefitDetail {
 
   /// [sequence] A claim detail line. Either a simple (a product or service) or
   ///  a 'group' of sub-details which are simple items.
-  PositiveInt? get sequence;
+  FhirPositiveInt? get sequence;
   @override
 
   /// [sequenceElement] Extensions for sequence
@@ -32705,7 +32706,7 @@ abstract class _ExplanationOfBenefitDetail extends ExplanationOfBenefitDetail {
 
   /// [noteNumber] The numbers associated with notes below which apply to the
   ///  adjudication of this item.
-  List<PositiveInt>? get noteNumber;
+  List<FhirPositiveInt>? get noteNumber;
   @override
 
   /// [noteNumberElement] Extensions for noteNumber
@@ -32763,7 +32764,7 @@ mixin _$ExplanationOfBenefitSubDetail {
 
   /// [sequence] A claim detail line. Either a simple (a product or service) or
   ///  a 'group' of sub-details which are simple items.
-  PositiveInt? get sequence => throw _privateConstructorUsedError;
+  FhirPositiveInt? get sequence => throw _privateConstructorUsedError;
 
   /// [sequenceElement] Extensions for sequence
   @JsonKey(name: '_sequence')
@@ -32816,7 +32817,7 @@ mixin _$ExplanationOfBenefitSubDetail {
 
   /// [noteNumber] The numbers associated with notes below which apply to the
   ///  adjudication of this item.
-  List<PositiveInt>? get noteNumber => throw _privateConstructorUsedError;
+  List<FhirPositiveInt>? get noteNumber => throw _privateConstructorUsedError;
 
   /// [noteNumberElement] Extensions for noteNumber
   @JsonKey(name: '_noteNumber')
@@ -32844,7 +32845,7 @@ abstract class $ExplanationOfBenefitSubDetailCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      PositiveInt? sequence,
+      FhirPositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       CodeableConcept? revenue,
       CodeableConcept? category,
@@ -32857,7 +32858,7 @@ abstract class $ExplanationOfBenefitSubDetailCopyWith<$Res> {
       @JsonKey(name: '_factor') Element? factorElement,
       Money? net,
       List<Reference>? udi,
-      List<PositiveInt>? noteNumber,
+      List<FhirPositiveInt>? noteNumber,
       @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
       List<ExplanationOfBenefitAdjudication>? adjudication});
 
@@ -32973,7 +32974,7 @@ class _$ExplanationOfBenefitSubDetailCopyWithImpl<$Res,
       noteNumber: freezed == noteNumber
           ? _value.noteNumber
           : noteNumber // ignore: cast_nullable_to_non_nullable
-              as List<PositiveInt>?,
+              as List<FhirPositiveInt>?,
       noteNumberElement: freezed == noteNumberElement
           ? _value.noteNumberElement
           : noteNumberElement // ignore: cast_nullable_to_non_nullable
@@ -33091,7 +33092,7 @@ abstract class _$$_ExplanationOfBenefitSubDetailCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      PositiveInt? sequence,
+      FhirPositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       CodeableConcept? revenue,
       CodeableConcept? category,
@@ -33104,7 +33105,7 @@ abstract class _$$_ExplanationOfBenefitSubDetailCopyWith<$Res>
       @JsonKey(name: '_factor') Element? factorElement,
       Money? net,
       List<Reference>? udi,
-      List<PositiveInt>? noteNumber,
+      List<FhirPositiveInt>? noteNumber,
       @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
       List<ExplanationOfBenefitAdjudication>? adjudication});
 
@@ -33227,7 +33228,7 @@ class __$$_ExplanationOfBenefitSubDetailCopyWithImpl<$Res>
       noteNumber: freezed == noteNumber
           ? _value._noteNumber
           : noteNumber // ignore: cast_nullable_to_non_nullable
-              as List<PositiveInt>?,
+              as List<FhirPositiveInt>?,
       noteNumberElement: freezed == noteNumberElement
           ? _value._noteNumberElement
           : noteNumberElement // ignore: cast_nullable_to_non_nullable
@@ -33260,7 +33261,7 @@ class _$_ExplanationOfBenefitSubDetail extends _ExplanationOfBenefitSubDetail {
       @JsonKey(name: '_factor') this.factorElement,
       this.net,
       final List<Reference>? udi,
-      final List<PositiveInt>? noteNumber,
+      final List<FhirPositiveInt>? noteNumber,
       @JsonKey(name: '_noteNumber') final List<Element?>? noteNumberElement,
       final List<ExplanationOfBenefitAdjudication>? adjudication})
       : _extension_ = extension_,
@@ -33440,12 +33441,12 @@ class _$_ExplanationOfBenefitSubDetail extends _ExplanationOfBenefitSubDetail {
 
   /// [noteNumber] The numbers associated with notes below which apply to the
   ///  adjudication of this item.
-  final List<PositiveInt>? _noteNumber;
+  final List<FhirPositiveInt>? _noteNumber;
 
   /// [noteNumber] The numbers associated with notes below which apply to the
   ///  adjudication of this item.
   @override
-  List<PositiveInt>? get noteNumber {
+  List<FhirPositiveInt>? get noteNumber {
     final value = _noteNumber;
     if (value == null) return null;
     if (_noteNumber is EqualUnmodifiableListView) return _noteNumber;
@@ -33584,7 +33585,7 @@ abstract class _ExplanationOfBenefitSubDetail
           @JsonKey(name: '_factor') final Element? factorElement,
           final Money? net,
           final List<Reference>? udi,
-          final List<PositiveInt>? noteNumber,
+          final List<FhirPositiveInt>? noteNumber,
           @JsonKey(name: '_noteNumber') final List<Element?>? noteNumberElement,
           final List<ExplanationOfBenefitAdjudication>? adjudication}) =
       _$_ExplanationOfBenefitSubDetail;
@@ -33628,7 +33629,7 @@ abstract class _ExplanationOfBenefitSubDetail
 
   /// [sequence] A claim detail line. Either a simple (a product or service) or
   ///  a 'group' of sub-details which are simple items.
-  PositiveInt? get sequence;
+  FhirPositiveInt? get sequence;
   @override
 
   /// [sequenceElement] Extensions for sequence
@@ -33694,7 +33695,7 @@ abstract class _ExplanationOfBenefitSubDetail
 
   /// [noteNumber] The numbers associated with notes below which apply to the
   ///  adjudication of this item.
-  List<PositiveInt>? get noteNumber;
+  List<FhirPositiveInt>? get noteNumber;
   @override
 
   /// [noteNumberElement] Extensions for noteNumber
@@ -33748,7 +33749,7 @@ mixin _$ExplanationOfBenefitAddItem {
 
   /// [itemSequence] Claim items which this service line is intended to
   ///  replace.
-  List<PositiveInt>? get itemSequence => throw _privateConstructorUsedError;
+  List<FhirPositiveInt>? get itemSequence => throw _privateConstructorUsedError;
 
   /// [itemSequenceElement] Extensions for itemSequence
   @JsonKey(name: '_itemSequence')
@@ -33756,7 +33757,8 @@ mixin _$ExplanationOfBenefitAddItem {
 
   /// [detailSequence] The sequence number of the details within the claim item
   ///  which this line is intended to replace.
-  List<PositiveInt>? get detailSequence => throw _privateConstructorUsedError;
+  List<FhirPositiveInt>? get detailSequence =>
+      throw _privateConstructorUsedError;
 
   /// [detailSequenceElement] Extensions for detailSequence
   @JsonKey(name: '_detailSequence')
@@ -33765,7 +33767,7 @@ mixin _$ExplanationOfBenefitAddItem {
 
   /// [subDetailSequence] The sequence number of the sub-details woithin the
   ///  details within the claim item which this line is intended to replace.
-  List<PositiveInt>? get subDetailSequence =>
+  List<FhirPositiveInt>? get subDetailSequence =>
       throw _privateConstructorUsedError;
   @JsonKey(name: '_subDetailSequence')
   List<Element>? get subDetailSequenceElement =>
@@ -33840,7 +33842,7 @@ mixin _$ExplanationOfBenefitAddItem {
 
   /// [noteNumber] The numbers associated with notes below which apply to the
   ///  adjudication of this item.
-  List<PositiveInt>? get noteNumber => throw _privateConstructorUsedError;
+  List<FhirPositiveInt>? get noteNumber => throw _privateConstructorUsedError;
 
   /// [noteNumberElement] Extensions for noteNumber
   @JsonKey(name: '_noteNumber')
@@ -33873,13 +33875,13 @@ abstract class $ExplanationOfBenefitAddItemCopyWith<$Res> {
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      List<PositiveInt>? itemSequence,
+      List<FhirPositiveInt>? itemSequence,
       @JsonKey(name: '_itemSequence')
           List<Element?>? itemSequenceElement,
-      List<PositiveInt>? detailSequence,
+      List<FhirPositiveInt>? detailSequence,
       @JsonKey(name: '_detailSequence')
           List<Element?>? detailSequenceElement,
-      List<PositiveInt>? subDetailSequence,
+      List<FhirPositiveInt>? subDetailSequence,
       @JsonKey(name: '_subDetailSequence')
           List<Element>? subDetailSequenceElement,
       List<Reference>? provider,
@@ -33901,7 +33903,7 @@ abstract class $ExplanationOfBenefitAddItemCopyWith<$Res> {
       Money? net,
       CodeableConcept? bodySite,
       List<CodeableConcept>? subSite,
-      List<PositiveInt>? noteNumber,
+      List<FhirPositiveInt>? noteNumber,
       @JsonKey(name: '_noteNumber')
           List<Element?>? noteNumberElement,
       List<ExplanationOfBenefitAdjudication>? adjudication,
@@ -33981,7 +33983,7 @@ class _$ExplanationOfBenefitAddItemCopyWithImpl<$Res,
       itemSequence: freezed == itemSequence
           ? _value.itemSequence
           : itemSequence // ignore: cast_nullable_to_non_nullable
-              as List<PositiveInt>?,
+              as List<FhirPositiveInt>?,
       itemSequenceElement: freezed == itemSequenceElement
           ? _value.itemSequenceElement
           : itemSequenceElement // ignore: cast_nullable_to_non_nullable
@@ -33989,7 +33991,7 @@ class _$ExplanationOfBenefitAddItemCopyWithImpl<$Res,
       detailSequence: freezed == detailSequence
           ? _value.detailSequence
           : detailSequence // ignore: cast_nullable_to_non_nullable
-              as List<PositiveInt>?,
+              as List<FhirPositiveInt>?,
       detailSequenceElement: freezed == detailSequenceElement
           ? _value.detailSequenceElement
           : detailSequenceElement // ignore: cast_nullable_to_non_nullable
@@ -33997,7 +33999,7 @@ class _$ExplanationOfBenefitAddItemCopyWithImpl<$Res,
       subDetailSequence: freezed == subDetailSequence
           ? _value.subDetailSequence
           : subDetailSequence // ignore: cast_nullable_to_non_nullable
-              as List<PositiveInt>?,
+              as List<FhirPositiveInt>?,
       subDetailSequenceElement: freezed == subDetailSequenceElement
           ? _value.subDetailSequenceElement
           : subDetailSequenceElement // ignore: cast_nullable_to_non_nullable
@@ -34073,7 +34075,7 @@ class _$ExplanationOfBenefitAddItemCopyWithImpl<$Res,
       noteNumber: freezed == noteNumber
           ? _value.noteNumber
           : noteNumber // ignore: cast_nullable_to_non_nullable
-              as List<PositiveInt>?,
+              as List<FhirPositiveInt>?,
       noteNumberElement: freezed == noteNumberElement
           ? _value.noteNumberElement
           : noteNumberElement // ignore: cast_nullable_to_non_nullable
@@ -34233,13 +34235,13 @@ abstract class _$$_ExplanationOfBenefitAddItemCopyWith<$Res>
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      List<PositiveInt>? itemSequence,
+      List<FhirPositiveInt>? itemSequence,
       @JsonKey(name: '_itemSequence')
           List<Element?>? itemSequenceElement,
-      List<PositiveInt>? detailSequence,
+      List<FhirPositiveInt>? detailSequence,
       @JsonKey(name: '_detailSequence')
           List<Element?>? detailSequenceElement,
-      List<PositiveInt>? subDetailSequence,
+      List<FhirPositiveInt>? subDetailSequence,
       @JsonKey(name: '_subDetailSequence')
           List<Element>? subDetailSequenceElement,
       List<Reference>? provider,
@@ -34261,7 +34263,7 @@ abstract class _$$_ExplanationOfBenefitAddItemCopyWith<$Res>
       Money? net,
       CodeableConcept? bodySite,
       List<CodeableConcept>? subSite,
-      List<PositiveInt>? noteNumber,
+      List<FhirPositiveInt>? noteNumber,
       @JsonKey(name: '_noteNumber')
           List<Element?>? noteNumberElement,
       List<ExplanationOfBenefitAdjudication>? adjudication,
@@ -34351,7 +34353,7 @@ class __$$_ExplanationOfBenefitAddItemCopyWithImpl<$Res>
       itemSequence: freezed == itemSequence
           ? _value._itemSequence
           : itemSequence // ignore: cast_nullable_to_non_nullable
-              as List<PositiveInt>?,
+              as List<FhirPositiveInt>?,
       itemSequenceElement: freezed == itemSequenceElement
           ? _value._itemSequenceElement
           : itemSequenceElement // ignore: cast_nullable_to_non_nullable
@@ -34359,7 +34361,7 @@ class __$$_ExplanationOfBenefitAddItemCopyWithImpl<$Res>
       detailSequence: freezed == detailSequence
           ? _value._detailSequence
           : detailSequence // ignore: cast_nullable_to_non_nullable
-              as List<PositiveInt>?,
+              as List<FhirPositiveInt>?,
       detailSequenceElement: freezed == detailSequenceElement
           ? _value._detailSequenceElement
           : detailSequenceElement // ignore: cast_nullable_to_non_nullable
@@ -34367,7 +34369,7 @@ class __$$_ExplanationOfBenefitAddItemCopyWithImpl<$Res>
       subDetailSequence: freezed == subDetailSequence
           ? _value._subDetailSequence
           : subDetailSequence // ignore: cast_nullable_to_non_nullable
-              as List<PositiveInt>?,
+              as List<FhirPositiveInt>?,
       subDetailSequenceElement: freezed == subDetailSequenceElement
           ? _value._subDetailSequenceElement
           : subDetailSequenceElement // ignore: cast_nullable_to_non_nullable
@@ -34443,7 +34445,7 @@ class __$$_ExplanationOfBenefitAddItemCopyWithImpl<$Res>
       noteNumber: freezed == noteNumber
           ? _value._noteNumber
           : noteNumber // ignore: cast_nullable_to_non_nullable
-              as List<PositiveInt>?,
+              as List<FhirPositiveInt>?,
       noteNumberElement: freezed == noteNumberElement
           ? _value._noteNumberElement
           : noteNumberElement // ignore: cast_nullable_to_non_nullable
@@ -34468,13 +34470,13 @@ class _$_ExplanationOfBenefitAddItem extends _ExplanationOfBenefitAddItem {
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final List<PositiveInt>? itemSequence,
+      final List<FhirPositiveInt>? itemSequence,
       @JsonKey(name: '_itemSequence')
           final List<Element?>? itemSequenceElement,
-      final List<PositiveInt>? detailSequence,
+      final List<FhirPositiveInt>? detailSequence,
       @JsonKey(name: '_detailSequence')
           final List<Element?>? detailSequenceElement,
-      final List<PositiveInt>? subDetailSequence,
+      final List<FhirPositiveInt>? subDetailSequence,
       @JsonKey(name: '_subDetailSequence')
           final List<Element>? subDetailSequenceElement,
       final List<Reference>? provider,
@@ -34496,7 +34498,7 @@ class _$_ExplanationOfBenefitAddItem extends _ExplanationOfBenefitAddItem {
       this.net,
       this.bodySite,
       final List<CodeableConcept>? subSite,
-      final List<PositiveInt>? noteNumber,
+      final List<FhirPositiveInt>? noteNumber,
       @JsonKey(name: '_noteNumber')
           final List<Element?>? noteNumberElement,
       final List<ExplanationOfBenefitAdjudication>? adjudication,
@@ -34591,12 +34593,12 @@ class _$_ExplanationOfBenefitAddItem extends _ExplanationOfBenefitAddItem {
 
   /// [itemSequence] Claim items which this service line is intended to
   ///  replace.
-  final List<PositiveInt>? _itemSequence;
+  final List<FhirPositiveInt>? _itemSequence;
 
   /// [itemSequence] Claim items which this service line is intended to
   ///  replace.
   @override
-  List<PositiveInt>? get itemSequence {
+  List<FhirPositiveInt>? get itemSequence {
     final value = _itemSequence;
     if (value == null) return null;
     if (_itemSequence is EqualUnmodifiableListView) return _itemSequence;
@@ -34621,12 +34623,12 @@ class _$_ExplanationOfBenefitAddItem extends _ExplanationOfBenefitAddItem {
 
   /// [detailSequence] The sequence number of the details within the claim item
   ///  which this line is intended to replace.
-  final List<PositiveInt>? _detailSequence;
+  final List<FhirPositiveInt>? _detailSequence;
 
   /// [detailSequence] The sequence number of the details within the claim item
   ///  which this line is intended to replace.
   @override
-  List<PositiveInt>? get detailSequence {
+  List<FhirPositiveInt>? get detailSequence {
     final value = _detailSequence;
     if (value == null) return null;
     if (_detailSequence is EqualUnmodifiableListView) return _detailSequence;
@@ -34651,12 +34653,12 @@ class _$_ExplanationOfBenefitAddItem extends _ExplanationOfBenefitAddItem {
 
   /// [subDetailSequence] The sequence number of the sub-details woithin the
   ///  details within the claim item which this line is intended to replace.
-  final List<PositiveInt>? _subDetailSequence;
+  final List<FhirPositiveInt>? _subDetailSequence;
 
   /// [subDetailSequence] The sequence number of the sub-details woithin the
   ///  details within the claim item which this line is intended to replace.
   @override
-  List<PositiveInt>? get subDetailSequence {
+  List<FhirPositiveInt>? get subDetailSequence {
     final value = _subDetailSequence;
     if (value == null) return null;
     if (_subDetailSequence is EqualUnmodifiableListView)
@@ -34801,12 +34803,12 @@ class _$_ExplanationOfBenefitAddItem extends _ExplanationOfBenefitAddItem {
 
   /// [noteNumber] The numbers associated with notes below which apply to the
   ///  adjudication of this item.
-  final List<PositiveInt>? _noteNumber;
+  final List<FhirPositiveInt>? _noteNumber;
 
   /// [noteNumber] The numbers associated with notes below which apply to the
   ///  adjudication of this item.
   @override
-  List<PositiveInt>? get noteNumber {
+  List<FhirPositiveInt>? get noteNumber {
     final value = _noteNumber;
     if (value == null) return null;
     if (_noteNumber is EqualUnmodifiableListView) return _noteNumber;
@@ -34979,13 +34981,13 @@ abstract class _ExplanationOfBenefitAddItem
           @JsonKey(name: 'extension')
               final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
-          final List<PositiveInt>? itemSequence,
+          final List<FhirPositiveInt>? itemSequence,
           @JsonKey(name: '_itemSequence')
               final List<Element?>? itemSequenceElement,
-          final List<PositiveInt>? detailSequence,
+          final List<FhirPositiveInt>? detailSequence,
           @JsonKey(name: '_detailSequence')
               final List<Element?>? detailSequenceElement,
-          final List<PositiveInt>? subDetailSequence,
+          final List<FhirPositiveInt>? subDetailSequence,
           @JsonKey(name: '_subDetailSequence')
               final List<Element>? subDetailSequenceElement,
           final List<Reference>? provider,
@@ -35007,7 +35009,7 @@ abstract class _ExplanationOfBenefitAddItem
           final Money? net,
           final CodeableConcept? bodySite,
           final List<CodeableConcept>? subSite,
-          final List<PositiveInt>? noteNumber,
+          final List<FhirPositiveInt>? noteNumber,
           @JsonKey(name: '_noteNumber')
               final List<Element?>? noteNumberElement,
           final List<ExplanationOfBenefitAdjudication>? adjudication,
@@ -35053,7 +35055,7 @@ abstract class _ExplanationOfBenefitAddItem
 
   /// [itemSequence] Claim items which this service line is intended to
   ///  replace.
-  List<PositiveInt>? get itemSequence;
+  List<FhirPositiveInt>? get itemSequence;
   @override
 
   /// [itemSequenceElement] Extensions for itemSequence
@@ -35063,7 +35065,7 @@ abstract class _ExplanationOfBenefitAddItem
 
   /// [detailSequence] The sequence number of the details within the claim item
   ///  which this line is intended to replace.
-  List<PositiveInt>? get detailSequence;
+  List<FhirPositiveInt>? get detailSequence;
   @override
 
   /// [detailSequenceElement] Extensions for detailSequence
@@ -35073,7 +35075,7 @@ abstract class _ExplanationOfBenefitAddItem
 
   /// [subDetailSequence] The sequence number of the sub-details woithin the
   ///  details within the claim item which this line is intended to replace.
-  List<PositiveInt>? get subDetailSequence;
+  List<FhirPositiveInt>? get subDetailSequence;
   @override
   @JsonKey(name: '_subDetailSequence')
   List<Element>? get subDetailSequenceElement;
@@ -35164,7 +35166,7 @@ abstract class _ExplanationOfBenefitAddItem
 
   /// [noteNumber] The numbers associated with notes below which apply to the
   ///  adjudication of this item.
-  List<PositiveInt>? get noteNumber;
+  List<FhirPositiveInt>? get noteNumber;
   @override
 
   /// [noteNumberElement] Extensions for noteNumber
@@ -35253,7 +35255,7 @@ mixin _$ExplanationOfBenefitDetail1 {
 
   /// [noteNumber] The numbers associated with notes below which apply to the
   ///  adjudication of this item.
-  List<PositiveInt>? get noteNumber => throw _privateConstructorUsedError;
+  List<FhirPositiveInt>? get noteNumber => throw _privateConstructorUsedError;
 
   /// [noteNumberElement] Extensions for noteNumber
   @JsonKey(name: '_noteNumber')
@@ -35293,7 +35295,7 @@ abstract class $ExplanationOfBenefitDetail1CopyWith<$Res> {
       FhirDecimal? factor,
       @JsonKey(name: '_factor') Element? factorElement,
       Money? net,
-      List<PositiveInt>? noteNumber,
+      List<FhirPositiveInt>? noteNumber,
       @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
       List<ExplanationOfBenefitAdjudication>? adjudication,
       List<ExplanationOfBenefitSubDetail1>? subDetail});
@@ -35378,7 +35380,7 @@ class _$ExplanationOfBenefitDetail1CopyWithImpl<$Res,
       noteNumber: freezed == noteNumber
           ? _value.noteNumber
           : noteNumber // ignore: cast_nullable_to_non_nullable
-              as List<PositiveInt>?,
+              as List<FhirPositiveInt>?,
       noteNumberElement: freezed == noteNumberElement
           ? _value.noteNumberElement
           : noteNumberElement // ignore: cast_nullable_to_non_nullable
@@ -35471,7 +35473,7 @@ abstract class _$$_ExplanationOfBenefitDetail1CopyWith<$Res>
       FhirDecimal? factor,
       @JsonKey(name: '_factor') Element? factorElement,
       Money? net,
-      List<PositiveInt>? noteNumber,
+      List<FhirPositiveInt>? noteNumber,
       @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
       List<ExplanationOfBenefitAdjudication>? adjudication,
       List<ExplanationOfBenefitSubDetail1>? subDetail});
@@ -35560,7 +35562,7 @@ class __$$_ExplanationOfBenefitDetail1CopyWithImpl<$Res>
       noteNumber: freezed == noteNumber
           ? _value._noteNumber
           : noteNumber // ignore: cast_nullable_to_non_nullable
-              as List<PositiveInt>?,
+              as List<FhirPositiveInt>?,
       noteNumberElement: freezed == noteNumberElement
           ? _value._noteNumberElement
           : noteNumberElement // ignore: cast_nullable_to_non_nullable
@@ -35591,7 +35593,7 @@ class _$_ExplanationOfBenefitDetail1 extends _ExplanationOfBenefitDetail1 {
       this.factor,
       @JsonKey(name: '_factor') this.factorElement,
       this.net,
-      final List<PositiveInt>? noteNumber,
+      final List<FhirPositiveInt>? noteNumber,
       @JsonKey(name: '_noteNumber') final List<Element?>? noteNumberElement,
       final List<ExplanationOfBenefitAdjudication>? adjudication,
       final List<ExplanationOfBenefitSubDetail1>? subDetail})
@@ -35724,12 +35726,12 @@ class _$_ExplanationOfBenefitDetail1 extends _ExplanationOfBenefitDetail1 {
 
   /// [noteNumber] The numbers associated with notes below which apply to the
   ///  adjudication of this item.
-  final List<PositiveInt>? _noteNumber;
+  final List<FhirPositiveInt>? _noteNumber;
 
   /// [noteNumber] The numbers associated with notes below which apply to the
   ///  adjudication of this item.
   @override
-  List<PositiveInt>? get noteNumber {
+  List<FhirPositiveInt>? get noteNumber {
     final value = _noteNumber;
     if (value == null) return null;
     if (_noteNumber is EqualUnmodifiableListView) return _noteNumber;
@@ -35863,7 +35865,7 @@ abstract class _ExplanationOfBenefitDetail1
           final Decimal? factor,
           @JsonKey(name: '_factor') final Element? factorElement,
           final Money? net,
-          final List<PositiveInt>? noteNumber,
+          final List<FhirPositiveInt>? noteNumber,
           @JsonKey(name: '_noteNumber') final List<Element?>? noteNumberElement,
           final List<ExplanationOfBenefitAdjudication>? adjudication,
           final List<ExplanationOfBenefitSubDetail1>? subDetail}) =
@@ -35946,7 +35948,7 @@ abstract class _ExplanationOfBenefitDetail1
 
   /// [noteNumber] The numbers associated with notes below which apply to the
   ///  adjudication of this item.
-  List<PositiveInt>? get noteNumber;
+  List<FhirPositiveInt>? get noteNumber;
   @override
 
   /// [noteNumberElement] Extensions for noteNumber
@@ -36036,7 +36038,7 @@ mixin _$ExplanationOfBenefitSubDetail1 {
 
   /// [noteNumber] The numbers associated with notes below which apply to the
   ///  adjudication of this item.
-  List<PositiveInt>? get noteNumber => throw _privateConstructorUsedError;
+  List<FhirPositiveInt>? get noteNumber => throw _privateConstructorUsedError;
 
   /// [noteNumberElement] Extensions for noteNumber
   @JsonKey(name: '_noteNumber')
@@ -36071,7 +36073,7 @@ abstract class $ExplanationOfBenefitSubDetail1CopyWith<$Res> {
       FhirDecimal? factor,
       @JsonKey(name: '_factor') Element? factorElement,
       Money? net,
-      List<PositiveInt>? noteNumber,
+      List<FhirPositiveInt>? noteNumber,
       @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
       List<ExplanationOfBenefitAdjudication>? adjudication});
 
@@ -36154,7 +36156,7 @@ class _$ExplanationOfBenefitSubDetail1CopyWithImpl<$Res,
       noteNumber: freezed == noteNumber
           ? _value.noteNumber
           : noteNumber // ignore: cast_nullable_to_non_nullable
-              as List<PositiveInt>?,
+              as List<FhirPositiveInt>?,
       noteNumberElement: freezed == noteNumberElement
           ? _value.noteNumberElement
           : noteNumberElement // ignore: cast_nullable_to_non_nullable
@@ -36243,7 +36245,7 @@ abstract class _$$_ExplanationOfBenefitSubDetail1CopyWith<$Res>
       FhirDecimal? factor,
       @JsonKey(name: '_factor') Element? factorElement,
       Money? net,
-      List<PositiveInt>? noteNumber,
+      List<FhirPositiveInt>? noteNumber,
       @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
       List<ExplanationOfBenefitAdjudication>? adjudication});
 
@@ -36330,7 +36332,7 @@ class __$$_ExplanationOfBenefitSubDetail1CopyWithImpl<$Res>
       noteNumber: freezed == noteNumber
           ? _value._noteNumber
           : noteNumber // ignore: cast_nullable_to_non_nullable
-              as List<PositiveInt>?,
+              as List<FhirPositiveInt>?,
       noteNumberElement: freezed == noteNumberElement
           ? _value._noteNumberElement
           : noteNumberElement // ignore: cast_nullable_to_non_nullable
@@ -36358,7 +36360,7 @@ class _$_ExplanationOfBenefitSubDetail1
       this.factor,
       @JsonKey(name: '_factor') this.factorElement,
       this.net,
-      final List<PositiveInt>? noteNumber,
+      final List<FhirPositiveInt>? noteNumber,
       @JsonKey(name: '_noteNumber') final List<Element?>? noteNumberElement,
       final List<ExplanationOfBenefitAdjudication>? adjudication})
       : _extension_ = extension_,
@@ -36490,12 +36492,12 @@ class _$_ExplanationOfBenefitSubDetail1
 
   /// [noteNumber] The numbers associated with notes below which apply to the
   ///  adjudication of this item.
-  final List<PositiveInt>? _noteNumber;
+  final List<FhirPositiveInt>? _noteNumber;
 
   /// [noteNumber] The numbers associated with notes below which apply to the
   ///  adjudication of this item.
   @override
-  List<PositiveInt>? get noteNumber {
+  List<FhirPositiveInt>? get noteNumber {
     final value = _noteNumber;
     if (value == null) return null;
     if (_noteNumber is EqualUnmodifiableListView) return _noteNumber;
@@ -36611,7 +36613,7 @@ abstract class _ExplanationOfBenefitSubDetail1
           final Decimal? factor,
           @JsonKey(name: '_factor') final Element? factorElement,
           final Money? net,
-          final List<PositiveInt>? noteNumber,
+          final List<FhirPositiveInt>? noteNumber,
           @JsonKey(name: '_noteNumber') final List<Element?>? noteNumberElement,
           final List<ExplanationOfBenefitAdjudication>? adjudication}) =
       _$_ExplanationOfBenefitSubDetail1;
@@ -36693,7 +36695,7 @@ abstract class _ExplanationOfBenefitSubDetail1
 
   /// [noteNumber] The numbers associated with notes below which apply to the
   ///  adjudication of this item.
-  List<PositiveInt>? get noteNumber;
+  List<FhirPositiveInt>? get noteNumber;
   @override
 
   /// [noteNumberElement] Extensions for noteNumber
@@ -37749,7 +37751,7 @@ mixin _$ExplanationOfBenefitProcessNote {
       throw _privateConstructorUsedError;
 
   /// [number] A number to uniquely identify a note entry.
-  PositiveInt? get number => throw _privateConstructorUsedError;
+  FhirPositiveInt? get number => throw _privateConstructorUsedError;
 
   /// [numberElement] Extensions for number
   @JsonKey(name: '_number')
@@ -37790,7 +37792,7 @@ abstract class $ExplanationOfBenefitProcessNoteCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      PositiveInt? number,
+      FhirPositiveInt? number,
       @JsonKey(name: '_number') Element? numberElement,
       FhirCode? type,
       @JsonKey(name: '_type') Element? typeElement,
@@ -37935,7 +37937,7 @@ abstract class _$$_ExplanationOfBenefitProcessNoteCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      PositiveInt? number,
+      FhirPositiveInt? number,
       @JsonKey(name: '_number') Element? numberElement,
       FhirCode? type,
       @JsonKey(name: '_type') Element? typeElement,
@@ -38254,7 +38256,7 @@ abstract class _ExplanationOfBenefitProcessNote
   @override
 
   /// [number] A number to uniquely identify a note entry.
-  PositiveInt? get number;
+  FhirPositiveInt? get number;
   @override
 
   /// [numberElement] Extensions for number
@@ -39088,7 +39090,7 @@ mixin _$ExplanationOfBenefitFinancial {
 
   /// [allowedUnsignedInt] The quantity of the benefit which is permitted under
   ///  the coverage.
-  UnsignedInt? get allowedUnsignedInt => throw _privateConstructorUsedError;
+  FhirUnsignedInt? get allowedUnsignedInt => throw _privateConstructorUsedError;
 
   /// [allowedUnsignedIntElement] Extensions for allowedUnsignedInt
   @JsonKey(name: '_allowedUnsignedInt')
@@ -39108,7 +39110,7 @@ mixin _$ExplanationOfBenefitFinancial {
 
   /// [usedUnsignedInt] The quantity of the benefit which have been consumed to
   ///  date.
-  UnsignedInt? get usedUnsignedInt => throw _privateConstructorUsedError;
+  FhirUnsignedInt? get usedUnsignedInt => throw _privateConstructorUsedError;
 
   /// [usedUnsignedIntElement] Extensions for usedUnsignedInt
   @JsonKey(name: '_usedUnsignedInt')
@@ -39136,12 +39138,12 @@ abstract class $ExplanationOfBenefitFinancialCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept type,
-      UnsignedInt? allowedUnsignedInt,
+      FhirUnsignedInt? allowedUnsignedInt,
       @JsonKey(name: '_allowedUnsignedInt') Element? allowedUnsignedIntElement,
       String? allowedString,
       @JsonKey(name: '_allowedString') Element? allowedStringElement,
       Money? allowedMoney,
-      UnsignedInt? usedUnsignedInt,
+      FhirUnsignedInt? usedUnsignedInt,
       @JsonKey(name: '_usedUnsignedInt') Element? usedUnsignedIntElement,
       Money? usedMoney});
 
@@ -39315,12 +39317,12 @@ abstract class _$$_ExplanationOfBenefitFinancialCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept type,
-      UnsignedInt? allowedUnsignedInt,
+      FhirUnsignedInt? allowedUnsignedInt,
       @JsonKey(name: '_allowedUnsignedInt') Element? allowedUnsignedIntElement,
       String? allowedString,
       @JsonKey(name: '_allowedString') Element? allowedStringElement,
       Money? allowedMoney,
-      UnsignedInt? usedUnsignedInt,
+      FhirUnsignedInt? usedUnsignedInt,
       @JsonKey(name: '_usedUnsignedInt') Element? usedUnsignedIntElement,
       Money? usedMoney});
 
@@ -39681,7 +39683,7 @@ abstract class _ExplanationOfBenefitFinancial
 
   /// [allowedUnsignedInt] The quantity of the benefit which is permitted under
   ///  the coverage.
-  UnsignedInt? get allowedUnsignedInt;
+  FhirUnsignedInt? get allowedUnsignedInt;
   @override
 
   /// [allowedUnsignedIntElement] Extensions for allowedUnsignedInt
@@ -39706,7 +39708,7 @@ abstract class _ExplanationOfBenefitFinancial
 
   /// [usedUnsignedInt] The quantity of the benefit which have been consumed to
   ///  date.
-  UnsignedInt? get usedUnsignedInt;
+  FhirUnsignedInt? get usedUnsignedInt;
   @override
 
   /// [usedUnsignedIntElement] Extensions for usedUnsignedInt
@@ -39738,7 +39740,7 @@ mixin _$InsurancePlan {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -39881,7 +39883,7 @@ abstract class $InsurancePlanCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R4ResourceType.InsurancePlan)
           R4ResourceType resourceType,
       String? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -40204,7 +40206,7 @@ abstract class _$$_InsurancePlanCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R4ResourceType.InsurancePlan)
           R4ResourceType resourceType,
       String? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -40936,7 +40938,7 @@ abstract class _InsurancePlan extends InsurancePlan {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -43423,7 +43425,7 @@ mixin _$InsurancePlanGeneralCost {
   CodeableConcept? get type => throw _privateConstructorUsedError;
 
   /// [groupSize] Number of participants enrolled in the plan.
-  PositiveInt? get groupSize => throw _privateConstructorUsedError;
+  FhirPositiveInt? get groupSize => throw _privateConstructorUsedError;
 
   /// [groupSizeElement] Extensions for groupSize
   @JsonKey(name: '_groupSize')
@@ -43457,7 +43459,7 @@ abstract class $InsurancePlanGeneralCostCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept? type,
-      PositiveInt? groupSize,
+      FhirPositiveInt? groupSize,
       @JsonKey(name: '_groupSize') Element? groupSizeElement,
       Money? cost,
       String? comment,
@@ -43596,7 +43598,7 @@ abstract class _$$_InsurancePlanGeneralCostCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept? type,
-      PositiveInt? groupSize,
+      FhirPositiveInt? groupSize,
       @JsonKey(name: '_groupSize') Element? groupSizeElement,
       Money? cost,
       String? comment,
@@ -43899,7 +43901,7 @@ abstract class _InsurancePlanGeneralCost extends InsurancePlanGeneralCost {
   @override
 
   /// [groupSize] Number of participants enrolled in the plan.
-  PositiveInt? get groupSize;
+  FhirPositiveInt? get groupSize;
   @override
 
   /// [groupSizeElement] Extensions for groupSize

@@ -23,7 +23,7 @@ mixin _$Composition {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Composition)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
   FhirId? get id => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
@@ -77,7 +77,7 @@ abstract class $CompositionCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Composition)
           Dstu2ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -466,7 +466,7 @@ abstract class _$$_CompositionCopyWith<$Res>
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Composition)
           Dstu2ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -754,7 +754,7 @@ class _$_Composition extends _Composition {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Composition)
   final Dstu2ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -983,7 +983,7 @@ abstract class _Composition extends Composition {
   factory _Composition(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Composition)
           final Dstu2ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -1031,7 +1031,7 @@ abstract class _Composition extends Composition {
   @override
   FhirId? get id;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
@@ -1344,7 +1344,7 @@ class _$_CompositionAttester extends _CompositionAttester {
       _$$_CompositionAttesterFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -1440,7 +1440,7 @@ class _$_CompositionAttester extends _CompositionAttester {
 
 abstract class _CompositionAttester extends CompositionAttester {
   factory _CompositionAttester(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final List<AttesterMode> mode,
@@ -1664,7 +1664,7 @@ class _$_CompositionEvent extends _CompositionEvent {
       _$$_CompositionEventFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -1756,7 +1756,7 @@ class _$_CompositionEvent extends _CompositionEvent {
 
 abstract class _CompositionEvent extends CompositionEvent {
   factory _CompositionEvent(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<CodeableConcept>? code,
@@ -2164,7 +2164,7 @@ class _$_CompositionSection extends _CompositionSection {
       _$$_CompositionSectionFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -2306,7 +2306,7 @@ class _$_CompositionSection extends _CompositionSection {
 
 abstract class _CompositionSection extends CompositionSection {
   factory _CompositionSection(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
@@ -2373,7 +2373,7 @@ mixin _$DocumentManifest {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.DocumentManifest)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
   FhirId? get id => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
@@ -2426,7 +2426,7 @@ abstract class $DocumentManifestCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.DocumentManifest)
           Dstu2ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -2771,7 +2771,7 @@ abstract class _$$_DocumentManifestCopyWith<$Res>
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.DocumentManifest)
           Dstu2ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -3038,7 +3038,7 @@ class _$_DocumentManifest extends _DocumentManifest {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.DocumentManifest)
   final Dstu2ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -3266,7 +3266,7 @@ abstract class _DocumentManifest extends DocumentManifest {
   factory _DocumentManifest(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.DocumentManifest)
           final Dstu2ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -3311,7 +3311,7 @@ abstract class _DocumentManifest extends DocumentManifest {
   @override
   FhirId? get id;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
@@ -3562,7 +3562,7 @@ class _$_DocumentManifestContent extends _DocumentManifestContent {
       _$$_DocumentManifestContentFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -3639,7 +3639,7 @@ class _$_DocumentManifestContent extends _DocumentManifestContent {
 
 abstract class _DocumentManifestContent extends DocumentManifestContent {
   factory _DocumentManifestContent(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final Attachment? pAttachment,
@@ -3854,7 +3854,7 @@ class _$_DocumentManifestRelated extends _DocumentManifestRelated {
       _$$_DocumentManifestRelatedFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -3930,7 +3930,7 @@ class _$_DocumentManifestRelated extends _DocumentManifestRelated {
 
 abstract class _DocumentManifestRelated extends DocumentManifestRelated {
   factory _DocumentManifestRelated(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final Identifier? identifier,
@@ -3966,7 +3966,7 @@ mixin _$DocumentReference {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.DocumentReference)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
   FhirId? get id => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
@@ -4024,7 +4024,7 @@ abstract class $DocumentReferenceCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.DocumentReference)
           Dstu2ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -4441,7 +4441,7 @@ abstract class _$$_DocumentReferenceCopyWith<$Res>
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.DocumentReference)
           Dstu2ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -4744,7 +4744,7 @@ class _$_DocumentReference extends _DocumentReference {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.DocumentReference)
   final Dstu2ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -4993,7 +4993,7 @@ abstract class _DocumentReference extends DocumentReference {
   factory _DocumentReference(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.DocumentReference)
           final Dstu2ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -5042,7 +5042,7 @@ abstract class _DocumentReference extends DocumentReference {
   @override
   FhirId? get id;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
@@ -5316,7 +5316,7 @@ class _$_DocumentReferenceRelatesTo extends _DocumentReferenceRelatesTo {
       _$$_DocumentReferenceRelatesToFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -5397,7 +5397,7 @@ class _$_DocumentReferenceRelatesTo extends _DocumentReferenceRelatesTo {
 
 abstract class _DocumentReferenceRelatesTo extends DocumentReferenceRelatesTo {
   factory _DocumentReferenceRelatesTo(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -5603,7 +5603,7 @@ class _$_DocumentReferenceContent extends _DocumentReferenceContent {
       _$$_DocumentReferenceContentFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -5685,7 +5685,7 @@ class _$_DocumentReferenceContent extends _DocumentReferenceContent {
 
 abstract class _DocumentReferenceContent extends DocumentReferenceContent {
   factory _DocumentReferenceContent(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final Attachment attachment,
@@ -6019,7 +6019,7 @@ class _$_DocumentReferenceContext extends _DocumentReferenceContext {
       _$$_DocumentReferenceContextFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -6132,7 +6132,7 @@ class _$_DocumentReferenceContext extends _DocumentReferenceContext {
 
 abstract class _DocumentReferenceContext extends DocumentReferenceContext {
   factory _DocumentReferenceContext(
-          {final Id? id,
+          {final FhirId? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           final Reference? encounter,
@@ -6369,7 +6369,7 @@ class _$_DocumentReferenceContextRelated
       _$$_DocumentReferenceContextRelatedFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -6446,7 +6446,7 @@ class _$_DocumentReferenceContextRelated
 abstract class _DocumentReferenceContextRelated
     extends DocumentReferenceContextRelated {
   factory _DocumentReferenceContextRelated(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final Identifier? identifier,
@@ -6474,16 +6474,16 @@ abstract class _DocumentReferenceContextRelated
       get copyWith => throw _privateConstructorUsedError;
 }
 
-List_ _$List_FromJson(Map<String, dynamic> json) {
-  return _List_.fromJson(json);
+FhirList _$FhirListFromJson(Map<String, dynamic> json) {
+  return _FhirList.fromJson(json);
 }
 
 /// @nodoc
-mixin _$List_ {
-  @JsonKey(unknownEnumValue: Dstu2ResourceType.List_)
+mixin _$FhirList {
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.FhirList)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
   FhirId? get id => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
@@ -6522,19 +6522,20 @@ mixin _$List_ {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $List_CopyWith<List_> get copyWith => throw _privateConstructorUsedError;
+  $FhirListCopyWith<FhirList> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $List_CopyWith<$Res> {
-  factory $List_CopyWith(List_ value, $Res Function(List_) then) =
-      _$List_CopyWithImpl<$Res, List_>;
+abstract class $FhirListCopyWith<$Res> {
+  factory $FhirListCopyWith(FhirList value, $Res Function(FhirList) then) =
+      _$FhirListCopyWithImpl<$Res, FhirList>;
   @useResult
   $Res call(
-      {@JsonKey(unknownEnumValue: Dstu2ResourceType.List_)
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.FhirList)
           Dstu2ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -6587,9 +6588,9 @@ abstract class $List_CopyWith<$Res> {
 }
 
 /// @nodoc
-class _$List_CopyWithImpl<$Res, $Val extends List_>
-    implements $List_CopyWith<$Res> {
-  _$List_CopyWithImpl(this._value, this._then);
+class _$FhirListCopyWithImpl<$Res, $Val extends FhirList>
+    implements $FhirListCopyWith<$Res> {
+  _$FhirListCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -6914,16 +6915,17 @@ class _$List_CopyWithImpl<$Res, $Val extends List_>
 }
 
 /// @nodoc
-abstract class _$$_List_CopyWith<$Res> implements $List_CopyWith<$Res> {
-  factory _$$_List_CopyWith(_$_List_ value, $Res Function(_$_List_) then) =
-      __$$_List_CopyWithImpl<$Res>;
+abstract class _$$_FhirListCopyWith<$Res> implements $FhirListCopyWith<$Res> {
+  factory _$$_FhirListCopyWith(
+          _$_FhirList value, $Res Function(_$_FhirList) then) =
+      __$$_FhirListCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
-      {@JsonKey(unknownEnumValue: Dstu2ResourceType.List_)
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.FhirList)
           Dstu2ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -6990,9 +6992,11 @@ abstract class _$$_List_CopyWith<$Res> implements $List_CopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_List_CopyWithImpl<$Res> extends _$List_CopyWithImpl<$Res, _$_List_>
-    implements _$$_List_CopyWith<$Res> {
-  __$$_List_CopyWithImpl(_$_List_ _value, $Res Function(_$_List_) _then)
+class __$$_FhirListCopyWithImpl<$Res>
+    extends _$FhirListCopyWithImpl<$Res, _$_FhirList>
+    implements _$$_FhirListCopyWith<$Res> {
+  __$$_FhirListCopyWithImpl(
+      _$_FhirList _value, $Res Function(_$_FhirList) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -7027,7 +7031,7 @@ class __$$_List_CopyWithImpl<$Res> extends _$List_CopyWithImpl<$Res, _$_List_>
     Object? entry = freezed,
     Object? emptyReason = freezed,
   }) {
-    return _then(_$_List_(
+    return _then(_$_FhirList(
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -7146,10 +7150,10 @@ class __$$_List_CopyWithImpl<$Res> extends _$List_CopyWithImpl<$Res, _$_List_>
 
 /// @nodoc
 @JsonSerializable()
-class _$_List_ extends _List_ {
-  _$_List_(
-      {@JsonKey(unknownEnumValue: Dstu2ResourceType.List_)
-          this.resourceType = Dstu2ResourceType.List_,
+class _$_FhirList extends _FhirList {
+  _$_FhirList(
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.FhirList)
+          this.resourceType = Dstu2ResourceType.FhirList,
       this.id,
       this.meta,
       this.implicitRules,
@@ -7193,14 +7197,14 @@ class _$_List_ extends _List_ {
         _entry = entry,
         super._();
 
-  factory _$_List_.fromJson(Map<String, dynamic> json) =>
-      _$$_List_FromJson(json);
+  factory _$_FhirList.fromJson(Map<String, dynamic> json) =>
+      _$$_FhirListFromJson(json);
 
   @override
-  @JsonKey(unknownEnumValue: Dstu2ResourceType.List_)
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.FhirList)
   final Dstu2ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -7306,14 +7310,14 @@ class _$_List_ extends _List_ {
 
   @override
   String toString() {
-    return 'List_(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, title: $title, titleElement: $titleElement, code: $code, subject: $subject, source: $source, encounter: $encounter, status: $status, statusElement: $statusElement, date: $date, dateElement: $dateElement, orderedBy: $orderedBy, mode: $mode, modeElement: $modeElement, note: $note, entry: $entry, emptyReason: $emptyReason)';
+    return 'FhirList(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, title: $title, titleElement: $titleElement, code: $code, subject: $subject, source: $source, encounter: $encounter, status: $status, statusElement: $statusElement, date: $date, dateElement: $dateElement, orderedBy: $orderedBy, mode: $mode, modeElement: $modeElement, note: $note, entry: $entry, emptyReason: $emptyReason)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_List_ &&
+            other is _$_FhirList &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
             (identical(other.id, id) || other.id == id) &&
@@ -7397,22 +7401,22 @@ class _$_List_ extends _List_ {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_List_CopyWith<_$_List_> get copyWith =>
-      __$$_List_CopyWithImpl<_$_List_>(this, _$identity);
+  _$$_FhirListCopyWith<_$_FhirList> get copyWith =>
+      __$$_FhirListCopyWithImpl<_$_FhirList>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_List_ToJson(
+    return _$$_FhirListToJson(
       this,
     );
   }
 }
 
-abstract class _List_ extends List_ {
-  factory _List_(
-      {@JsonKey(unknownEnumValue: Dstu2ResourceType.List_)
+abstract class _FhirList extends FhirList {
+  factory _FhirList(
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.FhirList)
           final Dstu2ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -7447,18 +7451,18 @@ abstract class _List_ extends List_ {
           final Element? modeElement,
       final String? note,
       final List<ListEntry>? entry,
-      final CodeableConcept? emptyReason}) = _$_List_;
-  _List_._() : super._();
+      final CodeableConcept? emptyReason}) = _$_FhirList;
+  _FhirList._() : super._();
 
-  factory _List_.fromJson(Map<String, dynamic> json) = _$_List_.fromJson;
+  factory _FhirList.fromJson(Map<String, dynamic> json) = _$_FhirList.fromJson;
 
   @override
-  @JsonKey(unknownEnumValue: Dstu2ResourceType.List_)
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.FhirList)
   Dstu2ResourceType get resourceType;
   @override
   FhirId? get id;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
@@ -7520,7 +7524,7 @@ abstract class _List_ extends List_ {
   CodeableConcept? get emptyReason;
   @override
   @JsonKey(ignore: true)
-  _$$_List_CopyWith<_$_List_> get copyWith =>
+  _$$_FhirListCopyWith<_$_FhirList> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -7807,7 +7811,7 @@ class _$_ListEntry extends _ListEntry {
       _$$_ListEntryFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -7914,7 +7918,7 @@ class _$_ListEntry extends _ListEntry {
 
 abstract class _ListEntry extends ListEntry {
   factory _ListEntry(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,

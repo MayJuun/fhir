@@ -9,7 +9,7 @@ class MedicationRequestUsCore extends Resource {
 
   factory MedicationRequestUsCore({
     String? id,
-    Meta? meta,
+    FhirMeta? meta,
     Narrative? text,
     List<Identifier>? identifier,
     required MedicationRequestStatus status,
@@ -95,7 +95,7 @@ class MedicationRequestUsCore extends Resource {
   MedicationRequest _medicationRequest;
   MedicationRequest get value => _medicationRequest;
   String? get id => _medicationRequest.id;
-  Meta? get meta => _medicationRequest.meta;
+  FhirMeta? get meta => _medicationRequest.meta;
   Narrative? get text => _medicationRequest.text;
   List<Identifier>? get identifier => _medicationRequest.identifier;
   Code? get status => _medicationRequest.status;
@@ -124,7 +124,7 @@ class MedicationRequestDispenseRequestUsCore {
     MedicationRequestInitialFill? initialFill,
     FhirDuration? dispenseInterval,
     Period? validityPeriod,
-    UnsignedInt? numberOfRepeatsAllowed,
+    FhirUnsignedInt? numberOfRepeatsAllowed,
     Quantity? quantity,
     FhirDuration? expectedSupplyDuration,
     Reference? performer,
@@ -150,7 +150,7 @@ class MedicationRequestDispenseRequestUsCore {
       _medicationRequestDispenseRequest.dispenseInterval;
   Period? get validityPeriod =>
       _medicationRequestDispenseRequest.validityPeriod;
-  UnsignedInt? get numberOfRepeatsAllowed =>
+  FhirUnsignedInt? get numberOfRepeatsAllowed =>
       _medicationRequestDispenseRequest.numberOfRepeatsAllowed;
   Quantity? get quantity => _medicationRequestDispenseRequest.quantity;
   FhirDuration? get expectedSupplyDuration =>

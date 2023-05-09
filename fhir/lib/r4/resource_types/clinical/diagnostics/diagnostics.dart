@@ -113,7 +113,7 @@ class BodyStructure with Resource, _$BodyStructure {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -392,7 +392,7 @@ class DiagnosticReport with Resource, _$DiagnosticReport {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -849,7 +849,7 @@ class ImagingStudy with Resource, _$ImagingStudy {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -958,7 +958,7 @@ class ImagingStudy with Resource, _$ImagingStudy {
     /// larger than the number of series elements this Resource contains due to
     /// resource availability, security, or other factors. This element should be
     ///  present if any series elements are present.
-    UnsignedInt? numberOfSeries,
+    FhirUnsignedInt? numberOfSeries,
 
     /// [numberOfSeriesElement] Extensions for numberOfSeries
     @JsonKey(name: '_numberOfSeries')
@@ -968,7 +968,7 @@ class ImagingStudy with Resource, _$ImagingStudy {
     /// may be larger than the number of instance elements this resource contains
     /// due to resource availability, security, or other factors. This element
     ///  should be present if any instance elements are present.
-    UnsignedInt? numberOfInstances,
+    FhirUnsignedInt? numberOfInstances,
 
     /// [numberOfInstancesElement] Extensions for numberOfInstances
     @JsonKey(name: '_numberOfInstances')
@@ -1160,7 +1160,7 @@ class ImagingStudySeries with _$ImagingStudySeries {
     @JsonKey(name: '_uid') Element? uidElement,
 
     /// [number] The numeric identifier of this series in the study.
-    UnsignedInt? number,
+    FhirUnsignedInt? number,
 
     /// [numberElement] Extensions for number
     @JsonKey(name: '_number') Element? numberElement,
@@ -1178,7 +1178,7 @@ class ImagingStudySeries with _$ImagingStudySeries {
     /// may be larger than the number of instance elements this resource contains
     /// due to resource availability, security, or other factors. This element
     ///  should be present if any instance elements are present.
-    UnsignedInt? numberOfInstances,
+    FhirUnsignedInt? numberOfInstances,
 
     /// [numberOfInstancesElement] Extensions for numberOfInstances
     @JsonKey(name: '_numberOfInstances') Element? numberOfInstancesElement,
@@ -1448,7 +1448,7 @@ class ImagingStudyInstance with _$ImagingStudyInstance {
     required Coding sopClass,
 
     /// [number] The number of instance in the series.
-    UnsignedInt? number,
+    FhirUnsignedInt? number,
 
     /// [numberElement] Extensions for number
     @JsonKey(name: '_number') Element? numberElement,
@@ -1648,7 +1648,7 @@ class Media with Resource, _$Media {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -1786,14 +1786,14 @@ class Media with Resource, _$Media {
     Reference? device,
 
     /// [height] Height of the image in pixels (photo/video).
-    PositiveInt? height,
+    FhirPositiveInt? height,
 
     /// [heightElement] Extensions for height
     @JsonKey(name: '_height')
         Element? heightElement,
 
     /// [width] Width of the image in pixels (photo/video).
-    PositiveInt? width,
+    FhirPositiveInt? width,
 
     /// [widthElement] Extensions for width
     @JsonKey(name: '_width')
@@ -1804,7 +1804,7 @@ class Media with Resource, _$Media {
     /// single image, or an animated gif. If there is more than one frame, this
     /// SHALL have a value in order to alert interface software that a multi-frame
     ///  capable rendering widget is required.
-    PositiveInt? frames,
+    FhirPositiveInt? frames,
 
     /// [framesElement] Extensions for frames
     @JsonKey(name: '_frames')
@@ -1986,7 +1986,7 @@ class MolecularSequence with Resource, _$MolecularSequence {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -2911,49 +2911,49 @@ class MolecularSequenceRoc with _$MolecularSequenceRoc {
 
     /// [score] Invidual data point representing the GQ (genotype quality) score
     ///  threshold.
-    List<Integer>? score,
+    List<FhirInteger>? score,
 
     /// [scoreElement] Extensions for score
     @JsonKey(name: '_score') List<Element?>? scoreElement,
 
     /// [numTP] The number of true positives if the GQ score threshold was set to
     ///  "score" field value.
-    List<Integer>? numTP,
+    List<FhirInteger>? numTP,
 
     /// [numTPElement] Extensions for numTP
     @JsonKey(name: '_numTP') List<Element?>? numTPElement,
 
     /// [numFP] The number of false positives if the GQ score threshold was set
     ///  to "score" field value.
-    List<Integer>? numFP,
+    List<FhirInteger>? numFP,
 
     /// [numFPElement] Extensions for numFP
     @JsonKey(name: '_numFP') List<Element?>? numFPElement,
 
     /// [numFN] The number of false negatives if the GQ score threshold was set
     ///  to "score" field value.
-    List<Integer>? numFN,
+    List<FhirInteger>? numFN,
 
     /// [numFNElement] Extensions for numFN
     @JsonKey(name: '_numFN') List<Element?>? numFNElement,
 
     /// [precision] Calculated precision if the GQ score threshold was set to
     ///  "score" field value.
-    List<Decimal>? precision,
+    List<FhirDecimal>? precision,
 
     /// [precisionElement] Extensions for precision
     @JsonKey(name: '_precision') List<Element?>? precisionElement,
 
     /// [sensitivity] Calculated sensitivity if the GQ score threshold was set to
     ///  "score" field value.
-    List<Decimal>? sensitivity,
+    List<FhirDecimal>? sensitivity,
 
     /// [sensitivityElement] Extensions for sensitivity
     @JsonKey(name: '_sensitivity') List<Element?>? sensitivityElement,
 
     /// [fMeasure] Calculated fScore if the GQ score threshold was set to "score"
     ///  field value.
-    List<Decimal>? fMeasure,
+    List<FhirDecimal>? fMeasure,
 
     /// [fMeasureElement] Extensions for fMeasure
     @JsonKey(name: '_fMeasure') List<Element?>? fMeasureElement,
@@ -3743,7 +3743,7 @@ class Observation with Resource, _$Observation {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -3946,7 +3946,7 @@ class Observation with Resource, _$Observation {
 
     /// [valueTime] The information determined as a result of making the
     ///  observation, if the information has a simple value.
-    Time? valueTime,
+    FhirTime? valueTime,
 
     /// [valueTimeElement] Extensions for valueTime
     @JsonKey(name: '_valueTime')
@@ -4361,7 +4361,7 @@ class ObservationComponent with _$ObservationComponent {
 
     /// [valueTime] The information determined as a result of making the
     ///  observation, if the information has a simple value.
-    Time? valueTime,
+    FhirTime? valueTime,
 
     /// [valueTimeElement] Extensions for valueTime
     @JsonKey(name: '_valueTime') Element? valueTimeElement,
@@ -4539,7 +4539,7 @@ class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -4978,7 +4978,7 @@ class QuestionnaireResponseAnswer with _$QuestionnaireResponseAnswer {
 
     /// [valueTime] The answer (or one of the answers) provided by the respondent
     ///  to the question.
-    Time? valueTime,
+    FhirTime? valueTime,
 
     /// [valueTimeElement] Extensions for valueTime
     @JsonKey(name: '_valueTime') Element? valueTimeElement,
@@ -5164,7 +5164,7 @@ class Specimen with Resource, _$Specimen {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the

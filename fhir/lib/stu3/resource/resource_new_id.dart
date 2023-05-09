@@ -125,8 +125,8 @@ Resource _newId(Resource resource) {
       return (resource as Library).copyWith(id: newId());
     case Stu3ResourceType.Linkage:
       return (resource as Linkage).copyWith(id: newId());
-    case Stu3ResourceType.List_:
-      return (resource as List_).copyWith(id: newId());
+    case Stu3ResourceType.FhirList:
+      return (resource as FhirList).copyWith(id: newId());
     case Stu3ResourceType.Location:
       return (resource as Location).copyWith(id: newId());
     case Stu3ResourceType.Measure:

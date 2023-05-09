@@ -20,7 +20,7 @@ class Group with Resource, _$Group {
     @JsonKey(unknownEnumValue: Stu3ResourceType.Group)
         Stu3ResourceType resourceType,
     FhirId? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,
@@ -166,7 +166,7 @@ class Patient with Resource, _$Patient {
     @JsonKey(unknownEnumValue: Stu3ResourceType.Patient)
         Stu3ResourceType resourceType,
     FhirId? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,
@@ -406,7 +406,7 @@ class Person with Resource, _$Person {
     @JsonKey(unknownEnumValue: Stu3ResourceType.Person)
         Stu3ResourceType resourceType,
     FhirId? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,
@@ -505,7 +505,7 @@ class Practitioner with Resource, _$Practitioner {
     @JsonKey(unknownEnumValue: Stu3ResourceType.Practitioner)
         Stu3ResourceType resourceType,
     FhirId? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,
@@ -606,7 +606,7 @@ class PractitionerRole with Resource, _$PractitionerRole {
     @JsonKey(unknownEnumValue: Stu3ResourceType.PractitionerRole)
         Stu3ResourceType resourceType,
     FhirId? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,
@@ -670,9 +670,9 @@ class PractitionerRoleAvailableTime with _$PractitionerRoleAvailableTime {
     @JsonKey(name: '_daysOfWeek') List<Element?>? daysOfWeekElement,
     FhirBoolean? allDay,
     @JsonKey(name: '_allDay') Element? allDayElement,
-    Time? availableStartTime,
+    FhirTime? availableStartTime,
     @JsonKey(name: '_availableStartTime') Element? availableStartTimeElement,
-    Time? availableEndTime,
+    FhirTime? availableEndTime,
     @JsonKey(name: '_availableEndTime') Element? availableEndTimeElement,
   }) = _PractitionerRoleAvailableTime;
 
@@ -755,7 +755,7 @@ class RelatedPerson with Resource, _$RelatedPerson {
     @JsonKey(unknownEnumValue: Stu3ResourceType.RelatedPerson)
         Stu3ResourceType resourceType,
     FhirId? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,

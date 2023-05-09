@@ -139,7 +139,7 @@ class AuditEvent with Resource, _$AuditEvent {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when
@@ -922,7 +922,7 @@ class AuditEventDetail with _$AuditEventDetail {
     Ratio? valueRatio,
 
     /// [valueTime] The  value of the extra detail.
-    Time? valueTime,
+    FhirTime? valueTime,
 
     /// [valueTimeElement] ("_valueTime") Extensions for valueTime
     @JsonKey(name: '_valueTime') Element? valueTimeElement,
@@ -1115,7 +1115,7 @@ class Consent with Resource, _$Consent {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when
@@ -2015,7 +2015,7 @@ class Permission with Resource, _$Permission {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when
@@ -2824,7 +2824,7 @@ class Provenance with Resource, _$Provenance {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when

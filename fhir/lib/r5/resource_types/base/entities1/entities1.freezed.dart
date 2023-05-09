@@ -31,7 +31,7 @@ mixin _$Endpoint {
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
   ///  always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   ///  the resource was constructed, and which must be understood when
@@ -153,7 +153,7 @@ mixin _$Endpoint {
   ///  application/fhir+xml, application/fhir+json. If the mime type is not
   ///  specified, then the sender could send any content (including no
   ///  content depending on the connectionType).
-  List<Code>? get payloadMimeType => throw _privateConstructorUsedError;
+  List<FhirCode>? get payloadMimeType => throw _privateConstructorUsedError;
 
   /// [payloadMimeTypeElement] ("_payloadMimeType") Extensions for
   ///  payloadMimeType
@@ -191,7 +191,7 @@ abstract class $EndpointCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.Endpoint)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -219,7 +219,7 @@ abstract class $EndpointCopyWith<$Res> {
       List<ContactPoint>? contact,
       Period? period,
       List<CodeableConcept>? payloadType,
-      List<Code>? payloadMimeType,
+      List<FhirCode>? payloadMimeType,
       @JsonKey(name: '_payloadMimeType')
           List<Element>? payloadMimeTypeElement,
       FhirUrl? address,
@@ -385,7 +385,7 @@ class _$EndpointCopyWithImpl<$Res, $Val extends Endpoint>
       payloadMimeType: freezed == payloadMimeType
           ? _value.payloadMimeType
           : payloadMimeType // ignore: cast_nullable_to_non_nullable
-              as List<Code>?,
+              as List<FhirCode>?,
       payloadMimeTypeElement: freezed == payloadMimeTypeElement
           ? _value.payloadMimeTypeElement
           : payloadMimeTypeElement // ignore: cast_nullable_to_non_nullable
@@ -541,7 +541,7 @@ abstract class _$$_EndpointCopyWith<$Res> implements $EndpointCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.Endpoint)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -569,7 +569,7 @@ abstract class _$$_EndpointCopyWith<$Res> implements $EndpointCopyWith<$Res> {
       List<ContactPoint>? contact,
       Period? period,
       List<CodeableConcept>? payloadType,
-      List<Code>? payloadMimeType,
+      List<FhirCode>? payloadMimeType,
       @JsonKey(name: '_payloadMimeType')
           List<Element>? payloadMimeTypeElement,
       FhirUrl? address,
@@ -743,7 +743,7 @@ class __$$_EndpointCopyWithImpl<$Res>
       payloadMimeType: freezed == payloadMimeType
           ? _value._payloadMimeType
           : payloadMimeType // ignore: cast_nullable_to_non_nullable
-              as List<Code>?,
+              as List<FhirCode>?,
       payloadMimeTypeElement: freezed == payloadMimeTypeElement
           ? _value._payloadMimeTypeElement
           : payloadMimeTypeElement // ignore: cast_nullable_to_non_nullable
@@ -803,7 +803,7 @@ class _$_Endpoint extends _Endpoint {
       final List<ContactPoint>? contact,
       this.period,
       final List<CodeableConcept>? payloadType,
-      final List<Code>? payloadMimeType,
+      final List<FhirCode>? payloadMimeType,
       @JsonKey(name: '_payloadMimeType')
           final List<Element>? payloadMimeTypeElement,
       this.address,
@@ -837,7 +837,7 @@ class _$_Endpoint extends _Endpoint {
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
@@ -1082,14 +1082,14 @@ class _$_Endpoint extends _Endpoint {
   ///  application/fhir+xml, application/fhir+json. If the mime type is not
   ///  specified, then the sender could send any content (including no
   ///  content depending on the connectionType).
-  final List<Code>? _payloadMimeType;
+  final List<FhirCode>? _payloadMimeType;
 
   /// [payloadMimeType] The mime type to send the payload in - e.g.
   ///  application/fhir+xml, application/fhir+json. If the mime type is not
   ///  specified, then the sender could send any content (including no
   ///  content depending on the connectionType).
   @override
-  List<Code>? get payloadMimeType {
+  List<FhirCode>? get payloadMimeType {
     final value = _payloadMimeType;
     if (value == null) return null;
     if (_payloadMimeType is EqualUnmodifiableListView) return _payloadMimeType;
@@ -1269,7 +1269,7 @@ abstract class _Endpoint extends Endpoint {
   factory _Endpoint(
       {@JsonKey(unknownEnumValue: R5ResourceType.Endpoint)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -1298,7 +1298,7 @@ abstract class _Endpoint extends Endpoint {
       final List<ContactPoint>? contact,
       final Period? period,
       final List<CodeableConcept>? payloadType,
-      final List<Code>? payloadMimeType,
+      final List<FhirCode>? payloadMimeType,
       @JsonKey(name: '_payloadMimeType')
           final List<Element>? payloadMimeTypeElement,
       final FhirUrl? address,
@@ -1326,7 +1326,7 @@ abstract class _Endpoint extends Endpoint {
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
   ///  always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when
@@ -1467,7 +1467,7 @@ abstract class _Endpoint extends Endpoint {
   ///  application/fhir+xml, application/fhir+json. If the mime type is not
   ///  specified, then the sender could send any content (including no
   ///  content depending on the connectionType).
-  List<Code>? get payloadMimeType;
+  List<FhirCode>? get payloadMimeType;
   @override
 
   /// [payloadMimeTypeElement] ("_payloadMimeType") Extensions for
@@ -1516,7 +1516,7 @@ mixin _$HealthcareService {
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
   ///  always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   ///  the resource was constructed, and which must be understood when
@@ -1718,7 +1718,7 @@ abstract class $HealthcareServiceCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.HealthcareService)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -2135,7 +2135,7 @@ abstract class _$$_HealthcareServiceCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R5ResourceType.HealthcareService)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -2501,7 +2501,7 @@ class _$_HealthcareService extends _HealthcareService {
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
@@ -3077,7 +3077,7 @@ abstract class _HealthcareService extends HealthcareService {
   factory _HealthcareService(
       {@JsonKey(unknownEnumValue: R5ResourceType.HealthcareService)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -3143,7 +3143,7 @@ abstract class _HealthcareService extends HealthcareService {
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
   ///  always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when
@@ -3811,7 +3811,7 @@ mixin _$Location {
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
   ///  always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   ///  the resource was constructed, and which must be understood when
@@ -3988,7 +3988,7 @@ abstract class $LocationCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.Location)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -4413,7 +4413,7 @@ abstract class _$$_LocationCopyWith<$Res> implements $LocationCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.Location)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -4743,7 +4743,7 @@ class _$_Location extends _Location {
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
@@ -5201,7 +5201,7 @@ abstract class _Location extends Location {
   factory _Location(
       {@JsonKey(unknownEnumValue: R5ResourceType.Location)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -5261,7 +5261,7 @@ abstract class _Location extends Location {
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
   ///  always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when
@@ -6018,7 +6018,7 @@ mixin _$Organization {
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
   ///  always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   ///  the resource was constructed, and which must be understood when
@@ -6156,7 +6156,7 @@ abstract class $OrganizationCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.Organization)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -6449,7 +6449,7 @@ abstract class _$$_OrganizationCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R5ResourceType.Organization)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -6700,7 +6700,7 @@ class _$_Organization extends _Organization {
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
@@ -7071,7 +7071,7 @@ abstract class _Organization extends Organization {
   factory _Organization(
       {@JsonKey(unknownEnumValue: R5ResourceType.Organization)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -7122,7 +7122,7 @@ abstract class _Organization extends Organization {
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
   ///  always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when
@@ -7762,7 +7762,7 @@ mixin _$OrganizationAffiliation {
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
   ///  always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   ///  the resource was constructed, and which must be understood when
@@ -7892,7 +7892,7 @@ abstract class $OrganizationAffiliationCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.OrganizationAffiliation)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -8177,7 +8177,7 @@ abstract class _$$_OrganizationAffiliationCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R5ResourceType.OrganizationAffiliation)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -8417,7 +8417,7 @@ class _$_OrganizationAffiliation extends _OrganizationAffiliation {
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
@@ -8785,7 +8785,7 @@ abstract class _OrganizationAffiliation extends OrganizationAffiliation {
   factory _OrganizationAffiliation(
       {@JsonKey(unknownEnumValue: R5ResourceType.OrganizationAffiliation)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -8832,7 +8832,7 @@ abstract class _OrganizationAffiliation extends OrganizationAffiliation {
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
   ///  always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when

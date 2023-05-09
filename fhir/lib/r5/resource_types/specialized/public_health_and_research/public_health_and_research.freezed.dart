@@ -31,7 +31,7 @@ mixin _$ResearchStudy {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -215,7 +215,7 @@ abstract class $ResearchStudyCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.ResearchStudy)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -786,7 +786,7 @@ abstract class _$$_ResearchStudyCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R5ResourceType.ResearchStudy)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -1257,7 +1257,7 @@ class _$_ResearchStudy extends _ResearchStudy {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -1840,7 +1840,7 @@ abstract class _ResearchStudy extends ResearchStudy {
   factory _ResearchStudy(
       {@JsonKey(unknownEnumValue: R5ResourceType.ResearchStudy)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -1921,7 +1921,7 @@ abstract class _ResearchStudy extends ResearchStudy {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when
@@ -3580,14 +3580,14 @@ mixin _$ResearchStudyRecruitment {
       throw _privateConstructorUsedError;
 
   /// [targetNumber] Estimated total number of participants to be enrolled.
-  UnsignedInt? get targetNumber => throw _privateConstructorUsedError;
+  FhirUnsignedInt? get targetNumber => throw _privateConstructorUsedError;
 
   /// [targetNumberElement] ("_targetNumber") Extensions for targetNumber
   @JsonKey(name: '_targetNumber')
   Element? get targetNumberElement => throw _privateConstructorUsedError;
 
   /// [actualNumber] Actual total number of participants enrolled in study.
-  UnsignedInt? get actualNumber => throw _privateConstructorUsedError;
+  FhirUnsignedInt? get actualNumber => throw _privateConstructorUsedError;
 
   /// [actualNumberElement] ("_actualNumber") Extensions for actualNumber
   @JsonKey(name: '_actualNumber')
@@ -3615,9 +3615,9 @@ abstract class $ResearchStudyRecruitmentCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      UnsignedInt? targetNumber,
+      FhirUnsignedInt? targetNumber,
       @JsonKey(name: '_targetNumber') Element? targetNumberElement,
-      UnsignedInt? actualNumber,
+      FhirUnsignedInt? actualNumber,
       @JsonKey(name: '_actualNumber') Element? actualNumberElement,
       Reference? eligibility,
       Reference? actualGroup});
@@ -3754,9 +3754,9 @@ abstract class _$$_ResearchStudyRecruitmentCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      UnsignedInt? targetNumber,
+      FhirUnsignedInt? targetNumber,
       @JsonKey(name: '_targetNumber') Element? targetNumberElement,
-      UnsignedInt? actualNumber,
+      FhirUnsignedInt? actualNumber,
       @JsonKey(name: '_actualNumber') Element? actualNumberElement,
       Reference? eligibility,
       Reference? actualGroup});
@@ -4052,7 +4052,7 @@ abstract class _ResearchStudyRecruitment extends ResearchStudyRecruitment {
   @override
 
   /// [targetNumber] Estimated total number of participants to be enrolled.
-  UnsignedInt? get targetNumber;
+  FhirUnsignedInt? get targetNumber;
   @override
 
   /// [targetNumberElement] ("_targetNumber") Extensions for targetNumber
@@ -4061,7 +4061,7 @@ abstract class _ResearchStudyRecruitment extends ResearchStudyRecruitment {
   @override
 
   /// [actualNumber] Actual total number of participants enrolled in study.
-  UnsignedInt? get actualNumber;
+  FhirUnsignedInt? get actualNumber;
   @override
 
   /// [actualNumberElement] ("_actualNumber") Extensions for actualNumber
@@ -5740,7 +5740,7 @@ mixin _$ResearchSubject {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -5829,7 +5829,7 @@ abstract class $ResearchSubjectCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.ResearchSubject)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -6140,7 +6140,7 @@ abstract class _$$_ResearchSubjectCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R5ResourceType.ResearchSubject)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -6376,7 +6376,7 @@ class _$_ResearchSubject extends _ResearchSubject {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -6615,7 +6615,7 @@ abstract class _ResearchSubject extends ResearchSubject {
   factory _ResearchSubject(
       {@JsonKey(unknownEnumValue: R5ResourceType.ResearchSubject)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -6663,7 +6663,7 @@ abstract class _ResearchSubject extends ResearchSubject {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when

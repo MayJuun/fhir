@@ -558,7 +558,7 @@ class AllergyIntolerance extends HiveObject
     @HiveField(13) CodeableConcept? verificationStatus,
     @HiveField(14) Code? type,
     @HiveField(15) @JsonKey(name: '_type') Element? typeElement,
-    @HiveField(16) List<Code>? category,
+    @HiveField(16) List<FhirCode>? category,
     @HiveField(17) @JsonKey(name: '_category') List<Element?>? categoryElement,
     @HiveField(18) Code? criticality,
     @HiveField(19) @JsonKey(name: '_criticality') Element? criticalityElement,
@@ -2049,7 +2049,7 @@ class FamilyMemberHistory extends HiveObject
     @HiveField(9) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @HiveField(10) List<FhirExtension>? modifierExtension,
     @HiveField(11) List<Identifier>? identifier,
-    @HiveField(12) List<Canonical>? instantiatesCanonical,
+    @HiveField(12) List<FhirCanonical>? instantiatesCanonical,
     @HiveField(13) List<FhirUri>? instantiatesUri,
     @HiveField(14)
     @JsonKey(name: '_instantiatesUri')
@@ -2440,7 +2440,7 @@ class Procedure extends HiveObject with Resource, _$Procedure {
     @HiveField(9) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @HiveField(10) List<FhirExtension>? modifierExtension,
     @HiveField(11) List<Identifier>? identifier,
-    @HiveField(12) List<Canonical>? instantiatesCanonical,
+    @HiveField(12) List<FhirCanonical>? instantiatesCanonical,
     @HiveField(13) List<FhirUri>? instantiatesUri,
     @HiveField(14)
     @JsonKey(name: '_instantiatesUri')

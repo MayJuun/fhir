@@ -8260,7 +8260,7 @@ final fhirFieldMap = {
     'dataRequirement': const FhirField(true, 'DataRequirement'),
     'content': const FhirField(true, 'Attachment'),
   },
-  'List_': {
+  'FhirList': {
     'id': const FhirField(false, 'String'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),

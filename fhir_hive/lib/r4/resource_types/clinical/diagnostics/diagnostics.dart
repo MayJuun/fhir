@@ -1046,7 +1046,7 @@ class ImagingStudy extends HiveObject with Resource, _$ImagingStudy {
     /// resource availability, security, or other factors. This element should be
     ///  present if any series elements are present.
     @HiveField(23)
-        UnsignedInt? numberOfSeries,
+        FhirUnsignedInt? numberOfSeries,
 
     /// [numberOfSeriesElement] Extensions for numberOfSeries
     @JsonKey(name: '_numberOfSeries')
@@ -1058,7 +1058,7 @@ class ImagingStudy extends HiveObject with Resource, _$ImagingStudy {
     /// due to resource availability, security, or other factors. This element
     ///  should be present if any instance elements are present.
     @HiveField(25)
-        UnsignedInt? numberOfInstances,
+        FhirUnsignedInt? numberOfInstances,
 
     /// [numberOfInstancesElement] Extensions for numberOfInstances
     @JsonKey(name: '_numberOfInstances')
@@ -1254,13 +1254,13 @@ class ImagingStudySeries with _$ImagingStudySeries {
     List<FhirExtension>? modifierExtension,
 
     /// [uid] The DICOM Series Instance UID for the series.
-    Id? uid,
+    FhirId? uid,
 
     /// [uidElement] Extensions for uid
     @JsonKey(name: '_uid') Element? uidElement,
 
     /// [number] The numeric identifier of this series in the study.
-    UnsignedInt? number,
+    FhirUnsignedInt? number,
 
     /// [numberElement] Extensions for number
     @JsonKey(name: '_number') Element? numberElement,
@@ -1278,7 +1278,7 @@ class ImagingStudySeries with _$ImagingStudySeries {
     /// may be larger than the number of instance elements this resource contains
     /// due to resource availability, security, or other factors. This element
     ///  should be present if any instance elements are present.
-    UnsignedInt? numberOfInstances,
+    FhirUnsignedInt? numberOfInstances,
 
     /// [numberOfInstancesElement] Extensions for numberOfInstances
     @JsonKey(name: '_numberOfInstances') Element? numberOfInstancesElement,
@@ -1539,7 +1539,7 @@ class ImagingStudyInstance with _$ImagingStudyInstance {
     List<FhirExtension>? modifierExtension,
 
     /// [uid] The DICOM SOP Instance UID for this image or other DICOM content.
-    Id? uid,
+    FhirId? uid,
 
     /// [uidElement] Extensions for uid
     @JsonKey(name: '_uid') Element? uidElement,
@@ -1548,7 +1548,7 @@ class ImagingStudyInstance with _$ImagingStudyInstance {
     required Coding sopClass,
 
     /// [number] The number of instance in the series.
-    UnsignedInt? number,
+    FhirUnsignedInt? number,
 
     /// [numberElement] Extensions for number
     @JsonKey(name: '_number') Element? numberElement,
@@ -1920,7 +1920,7 @@ class Media extends HiveObject with Resource, _$Media {
 
     /// [height] Height of the image in pixels (photo/video).
     @HiveField(32)
-        PositiveInt? height,
+        FhirPositiveInt? height,
 
     /// [heightElement] Extensions for height
     @JsonKey(name: '_height')
@@ -1929,7 +1929,7 @@ class Media extends HiveObject with Resource, _$Media {
 
     /// [width] Width of the image in pixels (photo/video).
     @HiveField(34)
-        PositiveInt? width,
+        FhirPositiveInt? width,
 
     /// [widthElement] Extensions for width
     @JsonKey(name: '_width')
@@ -1942,7 +1942,7 @@ class Media extends HiveObject with Resource, _$Media {
     /// SHALL have a value in order to alert interface software that a multi-frame
     ///  capable rendering widget is required.
     @HiveField(36)
-        PositiveInt? frames,
+        FhirPositiveInt? frames,
 
     /// [framesElement] Extensions for frames
     @JsonKey(name: '_frames')
@@ -3086,49 +3086,49 @@ class MolecularSequenceRoc with _$MolecularSequenceRoc {
 
     /// [score] Invidual data point representing the GQ (genotype quality) score
     ///  threshold.
-    List<Integer>? score,
+    List<FhirInteger>? score,
 
     /// [scoreElement] Extensions for score
     @JsonKey(name: '_score') List<Element?>? scoreElement,
 
     /// [numTP] The number of true positives if the GQ score threshold was set to
     ///  "score" field value.
-    List<Integer>? numTP,
+    List<FhirInteger>? numTP,
 
     /// [numTPElement] Extensions for numTP
     @JsonKey(name: '_numTP') List<Element?>? numTPElement,
 
     /// [numFP] The number of false positives if the GQ score threshold was set
     ///  to "score" field value.
-    List<Integer>? numFP,
+    List<FhirInteger>? numFP,
 
     /// [numFPElement] Extensions for numFP
     @JsonKey(name: '_numFP') List<Element?>? numFPElement,
 
     /// [numFN] The number of false negatives if the GQ score threshold was set
     ///  to "score" field value.
-    List<Integer>? numFN,
+    List<FhirInteger>? numFN,
 
     /// [numFNElement] Extensions for numFN
     @JsonKey(name: '_numFN') List<Element?>? numFNElement,
 
     /// [precision] Calculated precision if the GQ score threshold was set to
     ///  "score" field value.
-    List<Decimal>? precision,
+    List<FhirDecimal>? precision,
 
     /// [precisionElement] Extensions for precision
     @JsonKey(name: '_precision') List<Element?>? precisionElement,
 
     /// [sensitivity] Calculated sensitivity if the GQ score threshold was set to
     ///  "score" field value.
-    List<Decimal>? sensitivity,
+    List<FhirDecimal>? sensitivity,
 
     /// [sensitivityElement] Extensions for sensitivity
     @JsonKey(name: '_sensitivity') List<Element?>? sensitivityElement,
 
     /// [fMeasure] Calculated fScore if the GQ score threshold was set to "score"
     ///  field value.
-    List<Decimal>? fMeasure,
+    List<FhirDecimal>? fMeasure,
 
     /// [fMeasureElement] Extensions for fMeasure
     @JsonKey(name: '_fMeasure') List<Element?>? fMeasureElement,
@@ -4164,7 +4164,7 @@ class Observation extends HiveObject with Resource, _$Observation {
     /// [valueTime] The information determined as a result of making the
     ///  observation, if the information has a simple value.
     @HiveField(41)
-        Time? valueTime,
+        FhirTime? valueTime,
 
     /// [valueTimeElement] Extensions for valueTime
     @JsonKey(name: '_valueTime')
@@ -4594,7 +4594,7 @@ class ObservationComponent with _$ObservationComponent {
 
     /// [valueTime] The information determined as a result of making the
     ///  observation, if the information has a simple value.
-    Time? valueTime,
+    FhirTime? valueTime,
 
     /// [valueTimeElement] Extensions for valueTime
     @JsonKey(name: '_valueTime') Element? valueTimeElement,
@@ -5238,7 +5238,7 @@ class QuestionnaireResponseAnswer with _$QuestionnaireResponseAnswer {
 
     /// [valueTime] The answer (or one of the answers) provided by the respondent
     ///  to the question.
-    Time? valueTime,
+    FhirTime? valueTime,
 
     /// [valueTimeElement] Extensions for valueTime
     @JsonKey(name: '_valueTime') Element? valueTimeElement,

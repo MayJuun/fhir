@@ -30,7 +30,7 @@ mixin _$ResearchStudy {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -217,7 +217,7 @@ abstract class $ResearchStudyCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R4ResourceType.ResearchStudy)
           R4ResourceType resourceType,
       String? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -652,7 +652,7 @@ abstract class _$$_ResearchStudyCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R4ResourceType.ResearchStudy)
           R4ResourceType resourceType,
       String? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -1613,7 +1613,7 @@ abstract class _ResearchStudy extends ResearchStudy {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -2756,7 +2756,7 @@ mixin _$ResearchSubject {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -2871,7 +2871,7 @@ abstract class $ResearchSubjectCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R4ResourceType.ResearchSubject)
           R4ResourceType resourceType,
       String? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -3176,7 +3176,7 @@ abstract class _$$_ResearchSubjectCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R4ResourceType.ResearchSubject)
           R4ResourceType resourceType,
       String? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -3723,7 +3723,7 @@ abstract class _ResearchSubject extends ResearchSubject {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when the

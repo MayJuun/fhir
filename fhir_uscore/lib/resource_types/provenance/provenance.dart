@@ -9,10 +9,10 @@ class ProvenanceUsCore extends Resource {
 
   factory ProvenanceUsCore({
     String? id,
-    Meta? meta,
+    FhirMeta? meta,
     Narrative? text,
     required List<Reference> target,
-    required Instant recorded,
+    required FhirInstant recorded,
     required List<ProvenanceAgent> agent,
   }) =>
       ProvenanceUsCore._(Provenance(
@@ -26,7 +26,7 @@ class ProvenanceUsCore extends Resource {
   factory ProvenanceUsCore.simple({
     required Reference provenanceTarget,
     List<Reference>? target,
-    required Instant recorded,
+    required FhirInstant recorded,
     required List<ProvenanceAgent> agent,
   }) {
     target ??= <Reference>[];
@@ -37,7 +37,7 @@ class ProvenanceUsCore extends Resource {
   Provenance _provenance;
   Provenance get value => _provenance;
   String? get id => _provenance.id;
-  Meta? get meta => _provenance.meta;
+  FhirMeta? get meta => _provenance.meta;
   Narrative? get text => _provenance.text;
   List<Reference> get target => _provenance.target;
   Instant? get recorded => _provenance.recorded;

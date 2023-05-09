@@ -23,7 +23,7 @@ mixin _$Appointment {
   @JsonKey(unknownEnumValue: Stu3ResourceType.Appointment)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
   FhirId? get id => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
@@ -91,7 +91,7 @@ abstract class $AppointmentCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Appointment)
           Stu3ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -550,7 +550,7 @@ abstract class _$$_AppointmentCopyWith<$Res>
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Appointment)
           Stu3ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -918,7 +918,7 @@ class _$_Appointment extends _Appointment {
   @JsonKey(unknownEnumValue: Stu3ResourceType.Appointment)
   final Stu3ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -1252,7 +1252,7 @@ abstract class _Appointment extends Appointment {
   factory _Appointment(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Appointment)
           final Stu3ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -1312,7 +1312,7 @@ abstract class _Appointment extends Appointment {
   @override
   FhirId? get id;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
@@ -1737,7 +1737,7 @@ mixin _$AppointmentResponse {
   @JsonKey(unknownEnumValue: Stu3ResourceType.AppointmentResponse)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
   FhirId? get id => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
@@ -1784,7 +1784,7 @@ abstract class $AppointmentResponseCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: Stu3ResourceType.AppointmentResponse)
           Stu3ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -2087,7 +2087,7 @@ abstract class _$$_AppointmentResponseCopyWith<$Res>
       {@JsonKey(unknownEnumValue: Stu3ResourceType.AppointmentResponse)
           Stu3ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -2319,7 +2319,7 @@ class _$_AppointmentResponse extends _AppointmentResponse {
   @JsonKey(unknownEnumValue: Stu3ResourceType.AppointmentResponse)
   final Stu3ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -2511,7 +2511,7 @@ abstract class _AppointmentResponse extends AppointmentResponse {
   factory _AppointmentResponse(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.AppointmentResponse)
           final Stu3ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -2551,7 +2551,7 @@ abstract class _AppointmentResponse extends AppointmentResponse {
   @override
   FhirId? get id;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
@@ -2614,7 +2614,7 @@ mixin _$ProcessRequest {
   @JsonKey(unknownEnumValue: Stu3ResourceType.ProcessRequest)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
   FhirId? get id => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
@@ -2673,7 +2673,7 @@ abstract class $ProcessRequestCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ProcessRequest)
           Stu3ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -3108,7 +3108,7 @@ abstract class _$$_ProcessRequestCopyWith<$Res>
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ProcessRequest)
           Stu3ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -3430,7 +3430,7 @@ class _$_ProcessRequest extends _ProcessRequest {
   @JsonKey(unknownEnumValue: Stu3ResourceType.ProcessRequest)
   final Stu3ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -3699,7 +3699,7 @@ abstract class _ProcessRequest extends ProcessRequest {
   factory _ProcessRequest(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ProcessRequest)
           final Stu3ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -3752,7 +3752,7 @@ abstract class _ProcessRequest extends ProcessRequest {
   @override
   FhirId? get id;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
@@ -3954,7 +3954,7 @@ class _$_ProcessRequestItem extends _ProcessRequestItem {
       _$$_ProcessRequestItemFromJson(json);
 
   @override
-  final Id? sequenceLinkId;
+  final FhirId? sequenceLinkId;
   @override
   @JsonKey(name: '_sequenceLinkId')
   final Element? sequenceLinkIdElement;
@@ -3997,7 +3997,7 @@ class _$_ProcessRequestItem extends _ProcessRequestItem {
 
 abstract class _ProcessRequestItem extends ProcessRequestItem {
   factory _ProcessRequestItem(
-      {final Id? sequenceLinkId,
+      {final FhirId? sequenceLinkId,
       @JsonKey(name: '_sequenceLinkId')
           final Element? sequenceLinkIdElement}) = _$_ProcessRequestItem;
   _ProcessRequestItem._() : super._();
@@ -4025,7 +4025,7 @@ mixin _$ProcessResponse {
   @JsonKey(unknownEnumValue: Stu3ResourceType.ProcessResponse)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
   FhirId? get id => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
@@ -4076,7 +4076,7 @@ abstract class $ProcessResponseCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ProcessResponse)
           Stu3ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -4445,7 +4445,7 @@ abstract class _$$_ProcessResponseCopyWith<$Res>
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ProcessResponse)
           Stu3ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -4711,7 +4711,7 @@ class _$_ProcessResponse extends _ProcessResponse {
   @JsonKey(unknownEnumValue: Stu3ResourceType.ProcessResponse)
   final Stu3ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -4934,7 +4934,7 @@ abstract class _ProcessResponse extends ProcessResponse {
   factory _ProcessResponse(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ProcessResponse)
           final Stu3ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -4977,7 +4977,7 @@ abstract class _ProcessResponse extends ProcessResponse {
   @override
   FhirId? get id;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
@@ -5271,7 +5271,7 @@ mixin _$RequestGroup {
   @JsonKey(unknownEnumValue: Stu3ResourceType.RequestGroup)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
   FhirId? get id => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
@@ -5326,7 +5326,7 @@ abstract class $RequestGroupCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: Stu3ResourceType.RequestGroup)
           Stu3ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -5734,7 +5734,7 @@ abstract class _$$_RequestGroupCopyWith<$Res>
       {@JsonKey(unknownEnumValue: Stu3ResourceType.RequestGroup)
           Stu3ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -6034,7 +6034,7 @@ class _$_RequestGroup extends _RequestGroup {
   @JsonKey(unknownEnumValue: Stu3ResourceType.RequestGroup)
   final Stu3ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -6290,7 +6290,7 @@ abstract class _RequestGroup extends RequestGroup {
   factory _RequestGroup(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.RequestGroup)
           final Stu3ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -6338,7 +6338,7 @@ abstract class _RequestGroup extends RequestGroup {
   @override
   FhirId? get id;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
@@ -8202,7 +8202,7 @@ class _$_RequestGroupRelatedAction extends _RequestGroupRelatedAction {
       _$$_RequestGroupRelatedActionFromJson(json);
 
   @override
-  final Id? actionId;
+  final FhirId? actionId;
   @override
   @JsonKey(name: '_actionId')
   final Element? actionIdElement;
@@ -8262,7 +8262,7 @@ class _$_RequestGroupRelatedAction extends _RequestGroupRelatedAction {
 
 abstract class _RequestGroupRelatedAction extends RequestGroupRelatedAction {
   factory _RequestGroupRelatedAction(
-      {final Id? actionId,
+      {final FhirId? actionId,
       @JsonKey(name: '_actionId') final Element? actionIdElement,
       final String? relationship,
       @JsonKey(name: '_relationship') final Element? relationshipElement,
@@ -8302,7 +8302,7 @@ mixin _$Schedule {
   @JsonKey(unknownEnumValue: Stu3ResourceType.Schedule)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
   FhirId? get id => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
@@ -8343,7 +8343,7 @@ abstract class $ScheduleCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Schedule)
           Stu3ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -8609,7 +8609,7 @@ abstract class _$$_ScheduleCopyWith<$Res> implements $ScheduleCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Schedule)
           Stu3ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -8821,7 +8821,7 @@ class _$_Schedule extends _Schedule {
   @JsonKey(unknownEnumValue: Stu3ResourceType.Schedule)
   final Stu3ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -9014,7 +9014,7 @@ abstract class _Schedule extends Schedule {
   factory _Schedule(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Schedule)
           final Stu3ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -9049,7 +9049,7 @@ abstract class _Schedule extends Schedule {
   @override
   FhirId? get id;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
@@ -9106,7 +9106,7 @@ mixin _$Slot {
   @JsonKey(unknownEnumValue: Stu3ResourceType.Slot)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
   FhirId? get id => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
@@ -9155,7 +9155,7 @@ abstract class $SlotCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Slot)
           Stu3ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -9507,7 +9507,7 @@ abstract class _$$_SlotCopyWith<$Res> implements $SlotCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Slot)
           Stu3ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -9771,7 +9771,7 @@ class _$_Slot extends _Slot {
   @JsonKey(unknownEnumValue: Stu3ResourceType.Slot)
   final Stu3ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -9990,7 +9990,7 @@ abstract class _Slot extends Slot {
   factory _Slot(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Slot)
           final Stu3ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -10034,7 +10034,7 @@ abstract class _Slot extends Slot {
   @override
   FhirId? get id;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
@@ -10105,7 +10105,7 @@ mixin _$Task {
   @JsonKey(unknownEnumValue: Stu3ResourceType.Task)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
   FhirId? get id => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
@@ -10177,7 +10177,7 @@ abstract class $TaskCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Task)
           Stu3ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -10806,7 +10806,7 @@ abstract class _$$_TaskCopyWith<$Res> implements $TaskCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Task)
           Stu3ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -11238,7 +11238,7 @@ class _$_Task extends _Task {
   @JsonKey(unknownEnumValue: Stu3ResourceType.Task)
   final Stu3ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -11585,7 +11585,7 @@ abstract class _Task extends Task {
   factory _Task(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Task)
           final Stu3ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -11651,7 +11651,7 @@ abstract class _Task extends Task {
   @override
   FhirId? get id;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
@@ -12221,7 +12221,7 @@ mixin _$TaskInput {
   FhirDateTime? get valueDateTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueDateTime')
   Element? get valueDateTimeElement => throw _privateConstructorUsedError;
-  Time? get valueTime => throw _privateConstructorUsedError;
+  FhirTime? get valueTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueTime')
   Element? get valueTimeElement => throw _privateConstructorUsedError;
   FhirCode? get valueCode => throw _privateConstructorUsedError;
@@ -12273,7 +12273,7 @@ mixin _$TaskInput {
   Address? get valueAddress => throw _privateConstructorUsedError;
   ContactPoint? get valueContactPoint => throw _privateConstructorUsedError;
   Timing? get valueTiming => throw _privateConstructorUsedError;
-  Meta? get valueMeta => throw _privateConstructorUsedError;
+  FhirMeta? get valueMeta => throw _privateConstructorUsedError;
   ElementDefinition? get valueElementDefinition =>
       throw _privateConstructorUsedError;
   ContactDetail? get valueContactDetail => throw _privateConstructorUsedError;
@@ -12320,7 +12320,7 @@ abstract class $TaskInputCopyWith<$Res> {
       @JsonKey(name: '_valueDate') Element? valueDateElement,
       FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
-      Time? valueTime,
+      FhirTime? valueTime,
       @JsonKey(name: '_valueTime') Element? valueTimeElement,
       FhirCode? valueCode,
       @JsonKey(name: '_valueCode') Element? valueCodeElement,
@@ -12362,7 +12362,7 @@ abstract class $TaskInputCopyWith<$Res> {
       Address? valueAddress,
       ContactPoint? valueContactPoint,
       Timing? valueTiming,
-      Meta? valueMeta,
+      FhirMeta? valueMeta,
       ElementDefinition? valueElementDefinition,
       ContactDetail? valueContactDetail,
       Contributor? valueContributor,
@@ -13481,7 +13481,7 @@ abstract class _$$_TaskInputCopyWith<$Res> implements $TaskInputCopyWith<$Res> {
       @JsonKey(name: '_valueDate') Element? valueDateElement,
       FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
-      Time? valueTime,
+      FhirTime? valueTime,
       @JsonKey(name: '_valueTime') Element? valueTimeElement,
       FhirCode? valueCode,
       @JsonKey(name: '_valueCode') Element? valueCodeElement,
@@ -13523,7 +13523,7 @@ abstract class _$$_TaskInputCopyWith<$Res> implements $TaskInputCopyWith<$Res> {
       Address? valueAddress,
       ContactPoint? valueContactPoint,
       Timing? valueTiming,
-      Meta? valueMeta,
+      FhirMeta? valueMeta,
       ElementDefinition? valueElementDefinition,
       ContactDetail? valueContactDetail,
       Contributor? valueContributor,
@@ -14154,17 +14154,17 @@ class _$_TaskInput extends _TaskInput {
   @JsonKey(name: '_valueCode')
   final Element? valueCodeElement;
   @override
-  final Id? valueOid;
+  final FhirId? valueOid;
   @override
   @JsonKey(name: '_valueOid')
   final Element? valueOidElement;
   @override
-  final Id? valueUuid;
+  final FhirId? valueUuid;
   @override
   @JsonKey(name: '_valueUuid')
   final Element? valueUuidElement;
   @override
-  final Id? valueId;
+  final FhirId? valueId;
   @override
   @JsonKey(name: '_valueId')
   final Element? valueIdElement;
@@ -14500,13 +14500,13 @@ abstract class _TaskInput extends TaskInput {
       final FhirCode? valueCode,
       @JsonKey(name: '_valueCode')
           final Element? valueCodeElement,
-      final Id? valueOid,
+      final FhirId? valueOid,
       @JsonKey(name: '_valueOid')
           final Element? valueOidElement,
-      final Id? valueUuid,
+      final FhirId? valueUuid,
       @JsonKey(name: '_valueUuid')
           final Element? valueUuidElement,
-      final Id? valueId,
+      final FhirId? valueId,
       @JsonKey(name: '_valueId')
           final Element? valueIdElement,
       final Decimal? valueUnsignedInt,
@@ -14607,7 +14607,7 @@ abstract class _TaskInput extends TaskInput {
   @JsonKey(name: '_valueDateTime')
   Element? get valueDateTimeElement;
   @override
-  Time? get valueTime;
+  FhirTime? get valueTime;
   @override
   @JsonKey(name: '_valueTime')
   Element? get valueTimeElement;
@@ -14699,7 +14699,7 @@ abstract class _TaskInput extends TaskInput {
   @override
   Timing? get valueTiming;
   @override
-  Meta? get valueMeta;
+  FhirMeta? get valueMeta;
   @override
   ElementDefinition? get valueElementDefinition;
   @override
@@ -14758,7 +14758,7 @@ mixin _$TaskOutput {
   FhirDateTime? get valueDateTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueDateTime')
   Element? get valueDateTimeElement => throw _privateConstructorUsedError;
-  Time? get valueTime => throw _privateConstructorUsedError;
+  FhirTime? get valueTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueTime')
   Element? get valueTimeElement => throw _privateConstructorUsedError;
   FhirCode? get valueCode => throw _privateConstructorUsedError;
@@ -14810,7 +14810,7 @@ mixin _$TaskOutput {
   Address? get valueAddress => throw _privateConstructorUsedError;
   ContactPoint? get valueContactPoint => throw _privateConstructorUsedError;
   Timing? get valueTiming => throw _privateConstructorUsedError;
-  Meta? get valueMeta => throw _privateConstructorUsedError;
+  FhirMeta? get valueMeta => throw _privateConstructorUsedError;
   ElementDefinition? get valueElementDefinition =>
       throw _privateConstructorUsedError;
   ContactDetail? get valueContactDetail => throw _privateConstructorUsedError;
@@ -14858,7 +14858,7 @@ abstract class $TaskOutputCopyWith<$Res> {
       @JsonKey(name: '_valueDate') Element? valueDateElement,
       FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
-      Time? valueTime,
+      FhirTime? valueTime,
       @JsonKey(name: '_valueTime') Element? valueTimeElement,
       FhirCode? valueCode,
       @JsonKey(name: '_valueCode') Element? valueCodeElement,
@@ -14900,7 +14900,7 @@ abstract class $TaskOutputCopyWith<$Res> {
       Address? valueAddress,
       ContactPoint? valueContactPoint,
       Timing? valueTiming,
-      Meta? valueMeta,
+      FhirMeta? valueMeta,
       ElementDefinition? valueElementDefinition,
       ContactDetail? valueContactDetail,
       Contributor? valueContributor,
@@ -16020,7 +16020,7 @@ abstract class _$$_TaskOutputCopyWith<$Res>
       @JsonKey(name: '_valueDate') Element? valueDateElement,
       FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
-      Time? valueTime,
+      FhirTime? valueTime,
       @JsonKey(name: '_valueTime') Element? valueTimeElement,
       FhirCode? valueCode,
       @JsonKey(name: '_valueCode') Element? valueCodeElement,
@@ -16062,7 +16062,7 @@ abstract class _$$_TaskOutputCopyWith<$Res>
       Address? valueAddress,
       ContactPoint? valueContactPoint,
       Timing? valueTiming,
-      Meta? valueMeta,
+      FhirMeta? valueMeta,
       ElementDefinition? valueElementDefinition,
       ContactDetail? valueContactDetail,
       Contributor? valueContributor,
@@ -16693,17 +16693,17 @@ class _$_TaskOutput extends _TaskOutput {
   @JsonKey(name: '_valueCode')
   final Element? valueCodeElement;
   @override
-  final Id? valueOid;
+  final FhirId? valueOid;
   @override
   @JsonKey(name: '_valueOid')
   final Element? valueOidElement;
   @override
-  final Id? valueUuid;
+  final FhirId? valueUuid;
   @override
   @JsonKey(name: '_valueUuid')
   final Element? valueUuidElement;
   @override
-  final Id? valueId;
+  final FhirId? valueId;
   @override
   @JsonKey(name: '_valueId')
   final Element? valueIdElement;
@@ -17039,13 +17039,13 @@ abstract class _TaskOutput extends TaskOutput {
       final FhirCode? valueCode,
       @JsonKey(name: '_valueCode')
           final Element? valueCodeElement,
-      final Id? valueOid,
+      final FhirId? valueOid,
       @JsonKey(name: '_valueOid')
           final Element? valueOidElement,
-      final Id? valueUuid,
+      final FhirId? valueUuid,
       @JsonKey(name: '_valueUuid')
           final Element? valueUuidElement,
-      final Id? valueId,
+      final FhirId? valueId,
       @JsonKey(name: '_valueId')
           final Element? valueIdElement,
       final Decimal? valueUnsignedInt,
@@ -17146,7 +17146,7 @@ abstract class _TaskOutput extends TaskOutput {
   @JsonKey(name: '_valueDateTime')
   Element? get valueDateTimeElement;
   @override
-  Time? get valueTime;
+  FhirTime? get valueTime;
   @override
   @JsonKey(name: '_valueTime')
   Element? get valueTimeElement;
@@ -17238,7 +17238,7 @@ abstract class _TaskOutput extends TaskOutput {
   @override
   Timing? get valueTiming;
   @override
-  Meta? get valueMeta;
+  FhirMeta? get valueMeta;
   @override
   ElementDefinition? get valueElementDefinition;
   @override

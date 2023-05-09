@@ -152,7 +152,7 @@ class AdministrableProductDefinition
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when
@@ -895,7 +895,7 @@ class ClinicalUseDefinition with Resource, _$ClinicalUseDefinition {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when
@@ -955,7 +955,7 @@ class ClinicalUseDefinition with Resource, _$ClinicalUseDefinition {
     List<Reference>? population,
 
     /// [library_] ("library") Logic used by the clinical use definition.
-    @JsonKey(name: 'library') List<Canonical>? library_,
+    @JsonKey(name: 'library') List<FhirCanonical>? library_,
 
     /// [undesirableEffect] Describe the possible undesirable effects (negative outcomes) from the use of the medicinal product as treatment.
     ClinicalUseDefinitionUndesirableEffect? undesirableEffect,
@@ -1996,7 +1996,7 @@ class Ingredient with Resource, _$Ingredient {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when
@@ -2775,7 +2775,7 @@ class ManufacturedItemDefinition with Resource, _$ManufacturedItemDefinition {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when
@@ -3497,7 +3497,7 @@ class MedicinalProductDefinition with Resource, _$MedicinalProductDefinition {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when
@@ -4764,7 +4764,7 @@ class PackagedProductDefinition with Resource, _$PackagedProductDefinition {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when
@@ -5564,7 +5564,7 @@ class RegulatedAuthorization with Resource, _$RegulatedAuthorization {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when
@@ -5958,7 +5958,7 @@ class SubstanceDefinition with Resource, _$SubstanceDefinition {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when
@@ -7724,7 +7724,7 @@ class SubstanceNucleicAcid with Resource, _$SubstanceNucleicAcid {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when
@@ -8344,7 +8344,7 @@ class SubstancePolymer with Resource, _$SubstancePolymer {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when
@@ -9299,7 +9299,7 @@ class SubstanceProtein with Resource, _$SubstanceProtein {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when
@@ -9670,7 +9670,7 @@ class SubstanceReferenceInformation
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when
@@ -10296,7 +10296,7 @@ class SubstanceSourceMaterial with Resource, _$SubstanceSourceMaterial {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when

@@ -20,7 +20,7 @@ class Basic with Resource, _$Basic {
     @JsonKey(unknownEnumValue: Stu3ResourceType.Basic)
         Stu3ResourceType resourceType,
     FhirId? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,
@@ -71,7 +71,7 @@ class Binary with Resource, _$Binary {
     @JsonKey(unknownEnumValue: Stu3ResourceType.Binary)
         Stu3ResourceType resourceType,
     FhirId? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,
@@ -122,7 +122,7 @@ class Bundle with Resource, _$Bundle {
     @JsonKey(unknownEnumValue: Stu3ResourceType.Bundle)
         Stu3ResourceType resourceType,
     FhirId? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,
@@ -442,7 +442,7 @@ class Linkage with Resource, _$Linkage {
     @JsonKey(unknownEnumValue: Stu3ResourceType.Linkage)
         Stu3ResourceType resourceType,
     FhirId? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,
@@ -533,7 +533,7 @@ class Media with Resource, _$Media {
     @JsonKey(unknownEnumValue: Stu3ResourceType.Media)
         Stu3ResourceType resourceType,
     FhirId? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,
@@ -603,7 +603,7 @@ class MessageHeader with Resource, _$MessageHeader {
     @JsonKey(unknownEnumValue: Stu3ResourceType.MessageHeader)
         Stu3ResourceType resourceType,
     FhirId? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,
@@ -793,7 +793,7 @@ class OperationOutcome with Resource, _$OperationOutcome {
     @JsonKey(unknownEnumValue: Stu3ResourceType.OperationOutcome)
         Stu3ResourceType resourceType,
     FhirId? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,
@@ -892,7 +892,7 @@ class Parameters with Resource, _$Parameters {
     @JsonKey(unknownEnumValue: Stu3ResourceType.Parameters)
         Stu3ResourceType resourceType,
     FhirId? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,
@@ -956,7 +956,7 @@ class ParametersParameter with _$ParametersParameter {
     @JsonKey(name: '_valueDate') Element? valueDateElement,
     FhirDateTime? valueDateTime,
     @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
-    Time? valueTime,
+    FhirTime? valueTime,
     @JsonKey(name: '_valueTime') Element? valueTimeElement,
     FhirCode? valueCode,
     @JsonKey(name: '_valueCode') Element? valueCodeElement,
@@ -998,7 +998,7 @@ class ParametersParameter with _$ParametersParameter {
     Address? valueAddress,
     ContactPoint? valueContactPoint,
     Timing? valueTiming,
-    Meta? valueMeta,
+    FhirMeta? valueMeta,
     ElementDefinition? valueElementDefinition,
     ContactDetail? valueContactDetail,
     Contributor? valueContributor,
@@ -1051,7 +1051,7 @@ class Subscription with Resource, _$Subscription {
     @JsonKey(unknownEnumValue: Stu3ResourceType.Subscription)
         Stu3ResourceType resourceType,
     FhirId? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,

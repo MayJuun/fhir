@@ -9,7 +9,7 @@ class CareTeamUsCore extends Resource {
 
   factory CareTeamUsCore({
     String? id,
-    Meta? meta,
+    FhirMeta? meta,
     Narrative? text,
     String? name,
     CareTeamStatus? status,
@@ -55,7 +55,7 @@ class CareTeamUsCore extends Resource {
   CareTeam _careTeam;
   CareTeam get value => _careTeam;
   String? get id => _careTeam.id;
-  Meta? get meta => _careTeam.meta;
+  FhirMeta? get meta => _careTeam.meta;
   Narrative? get text => _careTeam.text;
   String? get name => _careTeam.name;
   Code? get status => _careTeam.status;

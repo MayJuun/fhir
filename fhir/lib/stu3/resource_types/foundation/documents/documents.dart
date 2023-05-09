@@ -20,7 +20,7 @@ class Composition with Resource, _$Composition {
     @JsonKey(unknownEnumValue: Stu3ResourceType.Composition)
         Stu3ResourceType resourceType,
     FhirId? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,
@@ -84,7 +84,7 @@ class CompositionAttester with _$CompositionAttester {
   factory CompositionAttester({
     List<CompositionAttesterMode>? mode,
     @JsonKey(name: '_mode') List<Element?>? modeElement,
-    Time? time,
+    FhirTime? time,
     @JsonKey(name: '_time') Element? timeElement,
     Reference? party,
   }) = _CompositionAttester;
@@ -256,7 +256,7 @@ class DocumentManifest with Resource, _$DocumentManifest {
     @JsonKey(unknownEnumValue: Stu3ResourceType.DocumentManifest)
         Stu3ResourceType resourceType,
     FhirId? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,
@@ -397,7 +397,7 @@ class DocumentReference with Resource, _$DocumentReference {
     @JsonKey(unknownEnumValue: Stu3ResourceType.DocumentReference)
         Stu3ResourceType resourceType,
     FhirId? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,

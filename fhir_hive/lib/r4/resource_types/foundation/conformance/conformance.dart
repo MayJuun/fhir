@@ -466,7 +466,7 @@ class CapabilityStatement extends HiveObject
     /// statement it claims to implement, so the capability statement must specify
     ///  the full capability details.
     @HiveField(41)
-        List<Canonical>? instantiates,
+        List<FhirCanonical>? instantiates,
 
     /// [imports] Reference to a canonical URL of another CapabilityStatement
     /// that this software adds to. The capability statement automatically
@@ -476,7 +476,7 @@ class CapabilityStatement extends HiveObject
     /// though the server may repeat the same resources, interactions and
     ///  operations to add additional details to them.
     @HiveField(43)
-        List<Canonical>? imports,
+        List<FhirCanonical>? imports,
 
     /// [software] Software that is covered by this capability statement.  It is
     /// used when the capability statement describes the capabilities of a
@@ -506,7 +506,7 @@ class CapabilityStatement extends HiveObject
     /// [format] A list of the formats supported by this implementation using
     ///  their content types.
     @HiveField(49)
-        List<Code>? format,
+        List<FhirCode>? format,
 
     /// [formatElement] Extensions for format
     @JsonKey(name: '_format')
@@ -516,7 +516,7 @@ class CapabilityStatement extends HiveObject
     /// [patchFormat] A list of the patch formats supported by this
     ///  implementation using their content types.
     @HiveField(51)
-        List<Code>? patchFormat,
+        List<FhirCode>? patchFormat,
 
     /// [patchFormatElement] Extensions for patchFormat
     @JsonKey(name: '_patchFormat')
@@ -526,7 +526,7 @@ class CapabilityStatement extends HiveObject
     /// [implementationGuide] A list of implementation guides that the server
     ///  does (or should) support in their entirety.
     @HiveField(53)
-        List<Canonical>? implementationGuide,
+        List<FhirCanonical>? implementationGuide,
 
     /// [rest] A definition of the restful capabilities of the solution, if any.
     @HiveField(54)
@@ -946,7 +946,7 @@ class CapabilityStatementRest with _$CapabilityStatementRest {
     /// [compartment] An absolute URI which is a reference to the definition of a
     /// compartment that the system supports. The reference is to a
     ///  CompartmentDefinition resource by its canonical URL .
-    List<Canonical>? compartment,
+    List<FhirCanonical>? compartment,
   }) = _CapabilityStatementRest;
 
   /// Produces a Yaml formatted String version of the object
@@ -1287,7 +1287,7 @@ class CapabilityStatementResource with _$CapabilityStatementResource {
     /// the system will search by this profile and process data according to the
     /// guidance implicit in the profile. See further discussion in [Using
     ///  Profiles](profiling.html#profile-uses).
-    List<Canonical>? supportedProfile,
+    List<FhirCanonical>? supportedProfile,
 
     /// [documentation] Additional information about the resource type used by
     ///  the system.
@@ -1357,7 +1357,7 @@ class CapabilityStatementResource with _$CapabilityStatementResource {
 
     /// [referencePolicy] A set of flags that defines how references are
     ///  supported.
-    List<Code>? referencePolicy,
+    List<FhirCode>? referencePolicy,
 
     /// [referencePolicyElement] Extensions for referencePolicy
     @JsonKey(name: '_referencePolicy') List<Element?>? referencePolicyElement,
@@ -1802,7 +1802,7 @@ class CapabilityStatementOperation with _$CapabilityStatementOperation {
     /// custom [[[OperationDefinition]]] with a 'base' of the original
     /// OperationDefinition.  The custom definition would describe the specific
     ///  subset of functionality supported.
-    required Canonical definition,
+    required FhirCanonical definition,
 
     /// [documentation] Documentation that describes anything special about the
     /// operation behavior, possibly detailing different behavior for system, type
@@ -2063,7 +2063,7 @@ class CapabilityStatementMessaging with _$CapabilityStatementMessaging {
     /// [reliableCache] Length if the receiver's reliable messaging cache in
     /// minutes (if a receiver) or how long the cache length on the receiver
     ///  should be (if a sender).
-    UnsignedInt? reliableCache,
+    FhirUnsignedInt? reliableCache,
 
     /// [reliableCacheElement] Extensions for reliableCache
     @JsonKey(name: '_reliableCache') Element? reliableCacheElement,
@@ -2328,7 +2328,7 @@ class CapabilityStatementSupportedMessage
 
     /// [definition] Points to a message definition that identifies the messaging
     ///  event, message structure, allowed responses, etc.
-    required Canonical definition,
+    required FhirCanonical definition,
   }) = _CapabilityStatementSupportedMessage;
 
   /// Produces a Yaml formatted String version of the object
@@ -2450,7 +2450,7 @@ class CapabilityStatementDocument with _$CapabilityStatementDocument {
 
     /// [profile] A profile on the document Bundle that constrains which
     ///  resources are present, and their contents.
-    required Canonical profile,
+    required FhirCanonical profile,
   }) = _CapabilityStatementDocument;
 
   /// Produces a Yaml formatted String version of the object
@@ -3387,7 +3387,7 @@ class ExampleScenario extends HiveObject with Resource, _$ExampleScenario {
 
     /// [workflow] Another nested workflow.
     @HiveField(36)
-        List<Canonical>? workflow,
+        List<FhirCanonical>? workflow,
   }) = _ExampleScenario;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -5685,7 +5685,7 @@ class ImplementationGuide extends HiveObject
     /// based tooling manages IG dependencies. This value must be globally unique,
     ///  and should be assigned with care.
     @HiveField(36)
-        Id? packageId,
+        FhirId? packageId,
 
     /// [packageIdElement] Extensions for packageId
     @JsonKey(name: '_packageId')
@@ -5708,7 +5708,7 @@ class ImplementationGuide extends HiveObject
     /// number, e.g. [publication].[major].[minor], which is 4.0.1. for this
     ///  version.
     @HiveField(40)
-        List<Code>? fhirVersion,
+        List<FhirCode>? fhirVersion,
 
     /// [fhirVersionElement] Extensions for fhirVersion
     @JsonKey(name: '_fhirVersion')
@@ -5843,11 +5843,11 @@ class ImplementationGuideDependsOn with _$ImplementationGuideDependsOn {
 
     /// [uri] A canonical reference to the Implementation guide for the
     ///  dependency.
-    required Canonical uri,
+    required FhirCanonical uri,
 
     /// [packageId] The NPM package name for the Implementation Guide that this
     ///  IG depends on.
-    Id? packageId,
+    FhirId? packageId,
 
     /// [packageIdElement] Extensions for packageId
     @JsonKey(name: '_packageId') Element? packageIdElement,
@@ -5967,7 +5967,7 @@ class ImplementationGuideGlobal with _$ImplementationGuideGlobal {
     @JsonKey(name: '_type') Element? typeElement,
 
     /// [profile] A reference to the profile that all instances must conform to.
-    required Canonical profile,
+    required FhirCanonical profile,
   }) = _ImplementationGuideGlobal;
 
   /// Produces a Yaml formatted String version of the object
@@ -6353,7 +6353,7 @@ class ImplementationGuideResource with _$ImplementationGuideResource {
     /// [fhirVersion] Indicates the FHIR Version(s) this artifact is intended to
     /// apply to. If no versions are specified, the resource is assumed to apply
     ///  to all the versions stated in ImplementationGuide.fhirVersion.
-    List<Code>? fhirVersion,
+    List<FhirCode>? fhirVersion,
 
     /// [fhirVersionElement] Extensions for fhirVersion
     @JsonKey(name: '_fhirVersion') List<Element?>? fhirVersionElement,
@@ -6391,7 +6391,7 @@ class ImplementationGuideResource with _$ImplementationGuideResource {
 
     /// [groupingId] Reference to the id of the grouping this resource appears
     ///  in.
-    Id? groupingId,
+    FhirId? groupingId,
 
     /// [groupingIdElement] Extensions for groupingId
     @JsonKey(name: '_groupingId') Element? groupingIdElement,
@@ -7540,7 +7540,7 @@ class MessageDefinition extends HiveObject with Resource, _$MessageDefinition {
 
     /// [replaces] A MessageDefinition that is superseded by this definition.
     @HiveField(20)
-        List<Canonical>? replaces,
+        List<FhirCanonical>? replaces,
 
     /// [status] The status of this message definition. Enables tracking the
     ///  life-cycle of the content.
@@ -7642,7 +7642,7 @@ class MessageDefinition extends HiveObject with Resource, _$MessageDefinition {
     /// [parent] Identifies a protocol or workflow that this MessageDefinition
     ///  represents a step in.
     @HiveField(39)
-        List<Canonical>? parent,
+        List<FhirCanonical>? parent,
 
     /// [eventCoding] Event code or link to the EventDefinition.
     @HiveField(40)
@@ -7694,7 +7694,7 @@ class MessageDefinition extends HiveObject with Resource, _$MessageDefinition {
     /// The GraphDefinition can also specify profiles that apply to the various
     ///  resources.
     @HiveField(50)
-        List<Canonical>? graph,
+        List<FhirCanonical>? graph,
   }) = _MessageDefinition;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -7819,7 +7819,7 @@ class MessageDefinitionFocus with _$MessageDefinitionFocus {
     /// [min] Identifies the minimum number of resources of this type that must
     /// be pointed to by a message in order for it to be valid against this
     ///  MessageDefinition.
-    UnsignedInt? min,
+    FhirUnsignedInt? min,
 
     /// [minElement] Extensions for min
     @JsonKey(name: '_min') Element? minElement,
@@ -7936,7 +7936,7 @@ class MessageDefinitionAllowedResponse with _$MessageDefinitionAllowedResponse {
 
     /// [message] A reference to the message definition that must be adhered to
     ///  by this supported response.
-    required Canonical message,
+    required FhirCanonical message,
 
     /// [situation] Provides a description of the circumstances in which this
     ///  response should be used (as opposed to one of the alternative responses).
@@ -8424,7 +8424,7 @@ class OperationDefinition extends HiveObject
 
     /// [resource] The types on which this operation can be executed.
     @HiveField(45)
-        List<Code>? resource,
+        List<FhirCode>? resource,
 
     /// [resourceElement] Extensions for resource
     @JsonKey(name: '_resource')
@@ -8671,7 +8671,7 @@ class OperationDefinitionParameter with _$OperationDefinitionParameter {
     /// canonical URL. When an implementation guide is specified, the target
     /// resource SHALL conform to at least one profile defined in the
     ///  implementation guide.
-    List<Canonical>? targetProfile,
+    List<FhirCanonical>? targetProfile,
 
     /// [searchType] How the parameter is understood as a search parameter. This
     ///  is only used if the parameter type is 'string'.
@@ -8803,7 +8803,7 @@ class OperationDefinitionBinding with _$OperationDefinitionBinding {
 
     /// [valueSet] Points to the value set or external definition (e.g. implicit
     ///  value set) that identifies the set of codes to be used.
-    required Canonical valueSet,
+    required FhirCanonical valueSet,
   }) = _OperationDefinitionBinding;
 
   /// Produces a Yaml formatted String version of the object
@@ -9484,7 +9484,7 @@ class SearchParameter extends HiveObject with Resource, _$SearchParameter {
     /// [base] The base resource type(s) that this search parameter can be used
     ///  against.
     @HiveField(35)
-        List<Code>? base,
+        List<FhirCode>? base,
 
     /// [baseElement] Extensions for base
     @JsonKey(name: '_base')
@@ -9533,7 +9533,7 @@ class SearchParameter extends HiveObject with Resource, _$SearchParameter {
 
     /// [target] Types of resource (if a resource is referenced).
     @HiveField(45)
-        List<Code>? target,
+        List<FhirCode>? target,
 
     /// [targetElement] Extensions for target
     @JsonKey(name: '_target')
@@ -9564,7 +9564,7 @@ class SearchParameter extends HiveObject with Resource, _$SearchParameter {
 
     /// [comparator] Comparators supported for the search parameter.
     @HiveField(51)
-        List<Code>? comparator,
+        List<FhirCode>? comparator,
 
     /// [comparatorElement] Extensions for comparator
     @JsonKey(name: '_comparator')
@@ -9573,7 +9573,7 @@ class SearchParameter extends HiveObject with Resource, _$SearchParameter {
 
     /// [modifier] A modifier supported for the search parameter.
     @HiveField(53)
-        List<Code>? modifier,
+        List<FhirCode>? modifier,
 
     /// [modifierElement] Extensions for modifier
     @JsonKey(name: '_modifier')
@@ -9697,7 +9697,7 @@ class SearchParameterComponent with _$SearchParameterComponent {
 
     /// [definition] The definition of the search parameter that describes this
     ///  part.
-    required Canonical definition,
+    required FhirCanonical definition,
 
     /// [expression] A sub-expression that defines how to extract values for this
     ///  component from the output of the main SearchParameter.expression.
@@ -10400,7 +10400,7 @@ class StructureDefinitionMapping with _$StructureDefinitionMapping {
 
     /// [identity] An Internal id that is used to identify this mapping set when
     ///  specific mappings are made.
-    Id? identity,
+    FhirId? identity,
 
     /// [identityElement] Extensions for identity
     @JsonKey(name: '_identity') Element? identityElement,
@@ -11169,7 +11169,7 @@ class StructureMap extends HiveObject with Resource, _$StructureMap {
     /// [import] Other maps used by this map (canonical URLs).
     @JsonKey(name: 'import')
     @HiveField(38)
-        List<Canonical>? import_,
+        List<FhirCanonical>? import_,
 
     /// [group] Organizes the mapping into manageable chunks for human
     ///  review/ease of maintenance.
@@ -11281,7 +11281,7 @@ class StructureMapStructure with _$StructureMapStructure {
     List<FhirExtension>? modifierExtension,
 
     /// [url] The canonical reference to the structure.
-    required Canonical url,
+    required FhirCanonical url,
 
     /// [mode] How the referenced structure is used in this mapping.
     Code? mode,
@@ -11419,13 +11419,13 @@ class StructureMapGroup with _$StructureMapGroup {
     @HiveField(2) List<FhirExtension>? modifierExtension,
 
     /// [name] A unique name for the group for the convenience of human readers.
-    @HiveField(3) Id? name,
+    @HiveField(3) FhirId? name,
 
     /// [nameElement] Extensions for name
     @HiveField(4) @JsonKey(name: '_name') Element? nameElement,
 
     /// [extends] Another group that this group adds rules to.
-    @HiveField(5) @JsonKey(name: 'extends') Id? extends_,
+    @HiveField(5) @JsonKey(name: 'extends') FhirId? extends_,
 
     /// [extendsElement] Extensions for extends
     @HiveField(6) @JsonKey(name: '_extends') Element? extendsElement,
@@ -11562,7 +11562,7 @@ class StructureMapInput with _$StructureMapInput {
     List<FhirExtension>? modifierExtension,
 
     /// [name] Name for this instance of data.
-    Id? name,
+    FhirId? name,
 
     /// [nameElement] Extensions for name
     @JsonKey(name: '_name') Element? nameElement,
@@ -11694,7 +11694,7 @@ class StructureMapRule with _$StructureMapRule {
     List<FhirExtension>? modifierExtension,
 
     /// [name] Name of the rule for internal references.
-    Id? name,
+    FhirId? name,
 
     /// [nameElement] Extensions for name
     @JsonKey(name: '_name') Element? nameElement,
@@ -12046,7 +12046,7 @@ class StructureMapSource with _$StructureMapSource {
     List<FhirExtension>? modifierExtension,
 
     /// [context] Type or variable this rule applies to.
-    Id? context,
+    FhirId? context,
 
     /// [contextElement] Extensions for context
     @JsonKey(name: '_context')
@@ -12135,7 +12135,7 @@ class StructureMapSource with _$StructureMapSource {
 
     /// [defaultValueId] A value to use if there is no existing value in the
     ///  source object.
-    Id? defaultValueId,
+    FhirId? defaultValueId,
 
     /// [defaultValueIdElement] Extensions for defaultValueId
     @JsonKey(name: '_defaultValueId')
@@ -12167,7 +12167,7 @@ class StructureMapSource with _$StructureMapSource {
 
     /// [defaultValueOid] A value to use if there is no existing value in the
     ///  source object.
-    Oid? defaultValueOid,
+    FhirOid? defaultValueOid,
 
     /// [defaultValueOidElement] Extensions for defaultValueOid
     @JsonKey(name: '_defaultValueOid')
@@ -12175,7 +12175,7 @@ class StructureMapSource with _$StructureMapSource {
 
     /// [defaultValuePositiveInt] A value to use if there is no existing value in
     ///  the source object.
-    PositiveInt? defaultValuePositiveInt,
+    FhirPositiveInt? defaultValuePositiveInt,
     @JsonKey(name: '_defaultValuePositiveInt')
 
         /// [defaultValuePositiveIntElement] Extensions for defaultValuePositiveInt
@@ -12191,7 +12191,7 @@ class StructureMapSource with _$StructureMapSource {
 
     /// [defaultValueTime] A value to use if there is no existing value in the
     ///  source object.
-    Time? defaultValueTime,
+    FhirTime? defaultValueTime,
 
     /// [defaultValueTimeElement] Extensions for defaultValueTime
     @JsonKey(name: '_defaultValueTime')
@@ -12199,7 +12199,7 @@ class StructureMapSource with _$StructureMapSource {
 
     /// [defaultValueUnsignedInt] A value to use if there is no existing value in
     ///  the source object.
-    UnsignedInt? defaultValueUnsignedInt,
+    FhirUnsignedInt? defaultValueUnsignedInt,
     @JsonKey(name: '_defaultValueUnsignedInt')
 
         /// [defaultValueUnsignedIntElement] Extensions for defaultValueUnsignedInt
@@ -12223,7 +12223,7 @@ class StructureMapSource with _$StructureMapSource {
 
     /// [defaultValueUuid] A value to use if there is no existing value in the
     ///  source object.
-    Uuid? defaultValueUuid,
+    FhirUuid? defaultValueUuid,
 
     /// [defaultValueUuidElement] Extensions for defaultValueUuid
     @JsonKey(name: '_defaultValueUuid')
@@ -12368,7 +12368,7 @@ class StructureMapSource with _$StructureMapSource {
         Element? listModeElement,
 
     /// [variable] Named context for field, if a field is specified.
-    Id? variable,
+    FhirId? variable,
 
     /// [variableElement] Extensions for variable
     @JsonKey(name: '_variable')
@@ -12521,7 +12521,7 @@ class StructureMapTarget with _$StructureMapTarget {
     List<FhirExtension>? modifierExtension,
 
     /// [context] Type or variable this rule applies to.
-    Id? context,
+    FhirId? context,
 
     /// [contextElement] Extensions for context
     @JsonKey(name: '_context') Element? contextElement,
@@ -12539,19 +12539,19 @@ class StructureMapTarget with _$StructureMapTarget {
     @JsonKey(name: '_element') Element? elementElement,
 
     /// [variable] Named context for field, if desired, and a field is specified.
-    Id? variable,
+    FhirId? variable,
 
     /// [variableElement] Extensions for variable
     @JsonKey(name: '_variable') Element? variableElement,
 
     /// [listMode] If field is a list, how to manage the list.
-    List<Code>? listMode,
+    List<FhirCode>? listMode,
 
     /// [listModeElement] Extensions for listMode
     @JsonKey(name: '_listMode') List<Element?>? listModeElement,
 
     /// [listRuleId] Internal rule reference for shared list items.
-    Id? listRuleId,
+    FhirId? listRuleId,
 
     /// [listRuleIdElement] Extensions for listRuleId
     @JsonKey(name: '_listRuleId') Element? listRuleIdElement,
@@ -12678,7 +12678,7 @@ class StructureMapParameter with _$StructureMapParameter {
     List<FhirExtension>? modifierExtension,
 
     /// [valueId] Parameter value - variable or literal.
-    Id? valueId,
+    FhirId? valueId,
 
     /// [valueIdElement] Extensions for valueId
     @JsonKey(name: '_valueId') Element? valueIdElement,
@@ -12808,7 +12808,7 @@ class StructureMapDependent with _$StructureMapDependent {
     List<FhirExtension>? modifierExtension,
 
     /// [name] Name of a rule or group to apply.
-    Id? name,
+    FhirId? name,
 
     /// [nameElement] Extensions for name
     @JsonKey(name: '_name') Element? nameElement,

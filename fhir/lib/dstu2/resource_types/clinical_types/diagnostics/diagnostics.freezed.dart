@@ -25,7 +25,7 @@ mixin _$Observation {
   FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: '_id')
   Element? get idElement => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
@@ -65,7 +65,7 @@ mixin _$Observation {
   Ratio? get valueRatio => throw _privateConstructorUsedError;
   SampledData? get valueSampledData => throw _privateConstructorUsedError;
   Attachment? get valueAttachment => throw _privateConstructorUsedError;
-  Time? get valueTime => throw _privateConstructorUsedError;
+  FhirTime? get valueTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueTime')
   Element? get valueTimeElement => throw _privateConstructorUsedError;
   FhirDateTime? get valueDateTime => throw _privateConstructorUsedError;
@@ -103,7 +103,7 @@ abstract class $ObservationCopyWith<$Res> {
       FhirId? id,
       @JsonKey(name: '_id')
           Element? idElement,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -141,7 +141,7 @@ abstract class $ObservationCopyWith<$Res> {
       Ratio? valueRatio,
       SampledData? valueSampledData,
       Attachment? valueAttachment,
-      Time? valueTime,
+      FhirTime? valueTime,
       @JsonKey(name: '_valueTime')
           Element? valueTimeElement,
       FhirDateTime? valueDateTime,
@@ -808,7 +808,7 @@ abstract class _$$_ObservationCopyWith<$Res>
       FhirId? id,
       @JsonKey(name: '_id')
           Element? idElement,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -846,7 +846,7 @@ abstract class _$$_ObservationCopyWith<$Res>
       Ratio? valueRatio,
       SampledData? valueSampledData,
       Attachment? valueAttachment,
-      Time? valueTime,
+      FhirTime? valueTime,
       @JsonKey(name: '_valueTime')
           Element? valueTimeElement,
       FhirDateTime? valueDateTime,
@@ -1262,7 +1262,7 @@ class _$_Observation extends _Observation {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Observation)
   final Dstu2ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   @JsonKey(name: '_id')
   final Element? idElement;
@@ -1599,7 +1599,7 @@ abstract class _Observation extends Observation {
   factory _Observation(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Observation)
           final Dstu2ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       @JsonKey(name: '_id')
           final Element? idElement,
       final Meta? meta,
@@ -1671,7 +1671,7 @@ abstract class _Observation extends Observation {
   @JsonKey(name: '_id')
   Element? get idElement;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
@@ -1739,7 +1739,7 @@ abstract class _Observation extends Observation {
   @override
   Attachment? get valueAttachment;
   @override
-  Time? get valueTime;
+  FhirTime? get valueTime;
   @override
   @JsonKey(name: '_valueTime')
   Element? get valueTimeElement;
@@ -2084,7 +2084,7 @@ class _$_ObservationReferenceRange extends _ObservationReferenceRange {
       _$$_ObservationReferenceRangeFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -2190,7 +2190,7 @@ class _$_ObservationReferenceRange extends _ObservationReferenceRange {
 
 abstract class _ObservationReferenceRange extends ObservationReferenceRange {
   factory _ObservationReferenceRange(
-          {final Id? id,
+          {final FhirId? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
@@ -2418,7 +2418,7 @@ class _$_ObservationRelated extends _ObservationRelated {
       _$$_ObservationRelatedFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -2507,7 +2507,7 @@ class _$_ObservationRelated extends _ObservationRelated {
 
 abstract class _ObservationRelated extends ObservationRelated {
   factory _ObservationRelated(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
@@ -2563,7 +2563,7 @@ mixin _$ObservationComponent {
   Ratio? get valueRatio => throw _privateConstructorUsedError;
   SampledData? get valueSampledData => throw _privateConstructorUsedError;
   Attachment? get valueAttachment => throw _privateConstructorUsedError;
-  Time? get valueTime => throw _privateConstructorUsedError;
+  FhirTime? get valueTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueTime')
   Element? get valueTimeElement => throw _privateConstructorUsedError;
   FhirDateTime? get valueDateTime => throw _privateConstructorUsedError;
@@ -2600,7 +2600,7 @@ abstract class $ObservationComponentCopyWith<$Res> {
       Ratio? valueRatio,
       SampledData? valueSampledData,
       Attachment? valueAttachment,
-      Time? valueTime,
+      FhirTime? valueTime,
       @JsonKey(name: '_valueTime') Element? valueTimeElement,
       FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
@@ -2905,7 +2905,7 @@ abstract class _$$_ObservationComponentCopyWith<$Res>
       Ratio? valueRatio,
       SampledData? valueSampledData,
       Attachment? valueAttachment,
-      Time? valueTime,
+      FhirTime? valueTime,
       @JsonKey(name: '_valueTime') Element? valueTimeElement,
       FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
@@ -3090,7 +3090,7 @@ class _$_ObservationComponent extends _ObservationComponent {
       _$$_ObservationComponentFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -3260,7 +3260,7 @@ class _$_ObservationComponent extends _ObservationComponent {
 
 abstract class _ObservationComponent extends ObservationComponent {
   factory _ObservationComponent(
-          {final Id? id,
+          {final FhirId? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
@@ -3316,7 +3316,7 @@ abstract class _ObservationComponent extends ObservationComponent {
   @override
   Attachment? get valueAttachment;
   @override
-  Time? get valueTime;
+  FhirTime? get valueTime;
   @override
   @JsonKey(name: '_valueTime')
   Element? get valueTimeElement;
@@ -3346,7 +3346,7 @@ mixin _$DiagnosticReport {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.DiagnosticReport)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
   FhirId? get id => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
@@ -3404,7 +3404,7 @@ abstract class $DiagnosticReportCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.DiagnosticReport)
           Dstu2ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -3812,7 +3812,7 @@ abstract class _$$_DiagnosticReportCopyWith<$Res>
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.DiagnosticReport)
           Dstu2ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -4130,7 +4130,7 @@ class _$_DiagnosticReport extends _DiagnosticReport {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.DiagnosticReport)
   final Dstu2ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -4415,7 +4415,7 @@ abstract class _DiagnosticReport extends DiagnosticReport {
   factory _DiagnosticReport(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.DiagnosticReport)
           final Dstu2ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -4466,7 +4466,7 @@ abstract class _DiagnosticReport extends DiagnosticReport {
   @override
   FhirId? get id;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
@@ -4739,7 +4739,7 @@ class _$_DiagnosticReportImage extends _DiagnosticReportImage {
       _$$_DiagnosticReportImageFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -4819,7 +4819,7 @@ class _$_DiagnosticReportImage extends _DiagnosticReportImage {
 
 abstract class _DiagnosticReportImage extends DiagnosticReportImage {
   factory _DiagnosticReportImage(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final String? comment,
@@ -4859,7 +4859,7 @@ mixin _$DiagnosticOrder {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.DiagnosticOrder)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
   FhirId? get id => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   FhirCode? get language => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -4900,7 +4900,7 @@ abstract class $DiagnosticOrderCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.DiagnosticOrder)
           Dstu2ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       FhirCode? language,
       Narrative? text,
@@ -5122,7 +5122,7 @@ abstract class _$$_DiagnosticOrderCopyWith<$Res>
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.DiagnosticOrder)
           Dstu2ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       FhirCode? language,
       Narrative? text,
@@ -5327,7 +5327,7 @@ class _$_DiagnosticOrder extends _DiagnosticOrder {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.DiagnosticOrder)
   final Dstu2ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -5539,7 +5539,7 @@ abstract class _DiagnosticOrder extends DiagnosticOrder {
   factory _DiagnosticOrder(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.DiagnosticOrder)
           final Dstu2ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       final FhirCode? language,
@@ -5573,7 +5573,7 @@ abstract class _DiagnosticOrder extends DiagnosticOrder {
   @override
   FhirId? get id;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
@@ -5834,7 +5834,7 @@ class _$_DiagnosticOrderEvent extends _DiagnosticOrderEvent {
       _$$_DiagnosticOrderEventFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -5919,7 +5919,7 @@ class _$_DiagnosticOrderEvent extends _DiagnosticOrderEvent {
 
 abstract class _DiagnosticOrderEvent extends DiagnosticOrderEvent {
   factory _DiagnosticOrderEvent(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -6181,7 +6181,7 @@ class _$_DiagnosticOrderItem extends _DiagnosticOrderItem {
       _$$_DiagnosticOrderItemFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -6284,7 +6284,7 @@ class _$_DiagnosticOrderItem extends _DiagnosticOrderItem {
 
 abstract class _DiagnosticOrderItem extends DiagnosticOrderItem {
   factory _DiagnosticOrderItem(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final CodeableConcept code,
@@ -6330,7 +6330,7 @@ mixin _$Specimen {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Specimen)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
   FhirId? get id => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
@@ -6374,7 +6374,7 @@ abstract class $SpecimenCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Specimen)
           Dstu2ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -6675,7 +6675,7 @@ abstract class _$$_SpecimenCopyWith<$Res> implements $SpecimenCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Specimen)
           Dstu2ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -6907,7 +6907,7 @@ class _$_Specimen extends _Specimen {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Specimen)
   final Dstu2ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -7111,7 +7111,7 @@ abstract class _Specimen extends Specimen {
   factory _Specimen(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Specimen)
           final Dstu2ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -7149,7 +7149,7 @@ abstract class _Specimen extends Specimen {
   @override
   FhirId? get id;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
@@ -7549,7 +7549,7 @@ class _$_SpecimenCollection extends _SpecimenCollection {
       _$$_SpecimenCollectionFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -7677,7 +7677,7 @@ class _$_SpecimenCollection extends _SpecimenCollection {
 
 abstract class _SpecimenCollection extends SpecimenCollection {
   factory _SpecimenCollection(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
       @JsonKey(name: 'fhir_comments')
@@ -7915,7 +7915,7 @@ class _$_SpecimenTreatment extends _SpecimenTreatment {
       _$$_SpecimenTreatmentFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -8002,7 +8002,7 @@ class _$_SpecimenTreatment extends _SpecimenTreatment {
 
 abstract class _SpecimenTreatment extends SpecimenTreatment {
   factory _SpecimenTreatment(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final String? description,
@@ -8365,7 +8365,7 @@ class _$_SpecimenContainer extends _SpecimenContainer {
       _$$_SpecimenContainerFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -8480,7 +8480,7 @@ class _$_SpecimenContainer extends _SpecimenContainer {
 
 abstract class _SpecimenContainer extends SpecimenContainer {
   factory _SpecimenContainer(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
@@ -8535,7 +8535,7 @@ mixin _$BodySite {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.BodySite)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
   FhirId? get id => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   FhirCode? get language => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -8566,7 +8566,7 @@ abstract class $BodySiteCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.BodySite)
           Dstu2ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       FhirCode? language,
       Narrative? text,
@@ -8736,7 +8736,7 @@ abstract class _$$_BodySiteCopyWith<$Res> implements $BodySiteCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.BodySite)
           Dstu2ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       FhirCode? language,
       Narrative? text,
@@ -8889,7 +8889,7 @@ class _$_BodySite extends _BodySite {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.BodySite)
   final Dstu2ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -9039,7 +9039,7 @@ abstract class _BodySite extends BodySite {
   factory _BodySite(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.BodySite)
           final Dstu2ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       final FhirCode? language,
@@ -9064,7 +9064,7 @@ abstract class _BodySite extends BodySite {
   @override
   FhirId? get id;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
@@ -9105,7 +9105,7 @@ mixin _$ImagingStudy {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.ImagingStudy)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
   FhirId? get id => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
@@ -9122,7 +9122,7 @@ mixin _$ImagingStudy {
   @JsonKey(name: '_started')
   Element? get startedElement => throw _privateConstructorUsedError;
   Reference get patient => throw _privateConstructorUsedError;
-  Oid get uid => throw _privateConstructorUsedError;
+  FhirOid? get uid => throw _privateConstructorUsedError;
   Identifier? get accession => throw _privateConstructorUsedError;
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
   List<Reference>? get order => throw _privateConstructorUsedError;
@@ -9161,7 +9161,7 @@ abstract class $ImagingStudyCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ImagingStudy)
           Dstu2ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -9177,7 +9177,7 @@ abstract class $ImagingStudyCopyWith<$Res> {
       @JsonKey(name: '_started')
           Element? startedElement,
       Reference patient,
-      Oid uid,
+      FhirOid? uid,
       Identifier? accession,
       List<Identifier>? identifier,
       List<Reference>? order,
@@ -9539,7 +9539,7 @@ abstract class _$$_ImagingStudyCopyWith<$Res>
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ImagingStudy)
           Dstu2ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -9555,7 +9555,7 @@ abstract class _$$_ImagingStudyCopyWith<$Res>
       @JsonKey(name: '_started')
           Element? startedElement,
       Reference patient,
-      Oid uid,
+      FhirOid? uid,
       Identifier? accession,
       List<Identifier>? identifier,
       List<Reference>? order,
@@ -9836,7 +9836,7 @@ class _$_ImagingStudy extends _ImagingStudy {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.ImagingStudy)
   final Dstu2ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -10089,7 +10089,7 @@ abstract class _ImagingStudy extends ImagingStudy {
   factory _ImagingStudy(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ImagingStudy)
           final Dstu2ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -10138,7 +10138,7 @@ abstract class _ImagingStudy extends ImagingStudy {
   @override
   FhirId? get id;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
@@ -10166,7 +10166,7 @@ abstract class _ImagingStudy extends ImagingStudy {
   @override
   Reference get patient;
   @override
-  Oid get uid;
+  FhirOid? get uid;
   @override
   Identifier? get accession;
   @override
@@ -10220,11 +10220,11 @@ mixin _$ImagingStudySeries {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  UnsignedInt? get number => throw _privateConstructorUsedError;
+  FhirUnsignedInt? get number => throw _privateConstructorUsedError;
   @JsonKey(name: '_number')
   Element? get numberElement => throw _privateConstructorUsedError;
   Coding get modality => throw _privateConstructorUsedError;
-  Oid get uid => throw _privateConstructorUsedError;
+  FhirOid? get uid => throw _privateConstructorUsedError;
   @JsonKey(name: '_uid')
   Element? get uidElement => throw _privateConstructorUsedError;
   String? get description => throw _privateConstructorUsedError;
@@ -10261,11 +10261,11 @@ abstract class $ImagingStudySeriesCopyWith<$Res> {
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      UnsignedInt? number,
+      FhirUnsignedInt? number,
       @JsonKey(name: '_number')
           Element? numberElement,
       Coding modality,
-      Oid uid,
+      FhirOid? uid,
       @JsonKey(name: '_uid')
           Element? uidElement,
       String? description,
@@ -10513,11 +10513,11 @@ abstract class _$$_ImagingStudySeriesCopyWith<$Res>
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      UnsignedInt? number,
+      FhirUnsignedInt? number,
       @JsonKey(name: '_number')
           Element? numberElement,
       Coding modality,
-      Oid uid,
+      FhirOid? uid,
       @JsonKey(name: '_uid')
           Element? uidElement,
       String? description,
@@ -10698,7 +10698,7 @@ class _$_ImagingStudySeries extends _ImagingStudySeries {
       _$$_ImagingStudySeriesFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -10854,7 +10854,7 @@ class _$_ImagingStudySeries extends _ImagingStudySeries {
 
 abstract class _ImagingStudySeries extends ImagingStudySeries {
   factory _ImagingStudySeries(
-          {final Id? id,
+          {final FhirId? id,
           @JsonKey(name: 'extension')
               final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -10894,14 +10894,14 @@ abstract class _ImagingStudySeries extends ImagingStudySeries {
   @override
   List<FhirExtension>? get modifierExtension;
   @override
-  UnsignedInt? get number;
+  FhirUnsignedInt? get number;
   @override
   @JsonKey(name: '_number')
   Element? get numberElement;
   @override
   Coding get modality;
   @override
-  Oid get uid;
+  FhirOid? get uid;
   @override
   @JsonKey(name: '_uid')
   Element? get uidElement;
@@ -10949,13 +10949,13 @@ mixin _$ImagingStudySeriesInstance {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  UnsignedInt? get number => throw _privateConstructorUsedError;
+  FhirUnsignedInt? get number => throw _privateConstructorUsedError;
   @JsonKey(name: '_number')
   Element? get numberElement => throw _privateConstructorUsedError;
-  Oid get uid => throw _privateConstructorUsedError;
+  FhirOid? get uid => throw _privateConstructorUsedError;
   @JsonKey(name: '_uid')
   Element? get uidElement => throw _privateConstructorUsedError;
-  Oid get sopClass => throw _privateConstructorUsedError;
+  FhirOid? get sopClass => throw _privateConstructorUsedError;
   String? get type => throw _privateConstructorUsedError;
   String? get title => throw _privateConstructorUsedError;
   @JsonKey(name: '_title')
@@ -10979,11 +10979,11 @@ abstract class $ImagingStudySeriesInstanceCopyWith<$Res> {
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      UnsignedInt? number,
+      FhirUnsignedInt? number,
       @JsonKey(name: '_number') Element? numberElement,
-      Oid uid,
+      FhirOid? uid,
       @JsonKey(name: '_uid') Element? uidElement,
-      Oid sopClass,
+      FhirOid? sopClass,
       String? type,
       String? title,
       @JsonKey(name: '_title') Element? titleElement,
@@ -11123,11 +11123,11 @@ abstract class _$$_ImagingStudySeriesInstanceCopyWith<$Res>
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      UnsignedInt? number,
+      FhirUnsignedInt? number,
       @JsonKey(name: '_number') Element? numberElement,
-      Oid uid,
+      FhirOid? uid,
       @JsonKey(name: '_uid') Element? uidElement,
-      Oid sopClass,
+      FhirOid? sopClass,
       String? type,
       String? title,
       @JsonKey(name: '_title') Element? titleElement,
@@ -11245,7 +11245,7 @@ class _$_ImagingStudySeriesInstance extends _ImagingStudySeriesInstance {
       _$$_ImagingStudySeriesInstanceFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -11361,7 +11361,7 @@ class _$_ImagingStudySeriesInstance extends _ImagingStudySeriesInstance {
 
 abstract class _ImagingStudySeriesInstance extends ImagingStudySeriesInstance {
   factory _ImagingStudySeriesInstance(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final UnsignedInt? number,
@@ -11386,17 +11386,17 @@ abstract class _ImagingStudySeriesInstance extends ImagingStudySeriesInstance {
   @override
   List<FhirExtension>? get modifierExtension;
   @override
-  UnsignedInt? get number;
+  FhirUnsignedInt? get number;
   @override
   @JsonKey(name: '_number')
   Element? get numberElement;
   @override
-  Oid get uid;
+  FhirOid? get uid;
   @override
   @JsonKey(name: '_uid')
   Element? get uidElement;
   @override
-  Oid get sopClass;
+  FhirOid? get sopClass;
   @override
   String? get type;
   @override
@@ -11422,7 +11422,7 @@ mixin _$ImagingObjectSelection {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.ImagingObjectSelection)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
   FhirId? get id => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   FhirCode? get language => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -11431,7 +11431,7 @@ mixin _$ImagingObjectSelection {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  Oid get uid => throw _privateConstructorUsedError;
+  FhirOid? get uid => throw _privateConstructorUsedError;
   Reference get patient => throw _privateConstructorUsedError;
   CodeableConcept get title => throw _privateConstructorUsedError;
   String? get description => throw _privateConstructorUsedError;
@@ -11456,7 +11456,7 @@ abstract class $ImagingObjectSelectionCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ImagingObjectSelection)
           Dstu2ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       FhirCode? language,
       Narrative? text,
@@ -11464,7 +11464,7 @@ abstract class $ImagingObjectSelectionCopyWith<$Res> {
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Oid uid,
+      FhirOid? uid,
       Reference patient,
       CodeableConcept title,
       String? description,
@@ -11643,7 +11643,7 @@ abstract class _$$_ImagingObjectSelectionCopyWith<$Res>
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ImagingObjectSelection)
           Dstu2ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       FhirCode? language,
       Narrative? text,
@@ -11651,7 +11651,7 @@ abstract class _$$_ImagingObjectSelectionCopyWith<$Res>
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Oid uid,
+      FhirOid? uid,
       Reference patient,
       CodeableConcept title,
       String? description,
@@ -11804,7 +11804,7 @@ class _$_ImagingObjectSelection extends _ImagingObjectSelection {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.ImagingObjectSelection)
   final Dstu2ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -11941,7 +11941,7 @@ abstract class _ImagingObjectSelection extends ImagingObjectSelection {
   factory _ImagingObjectSelection(
           {@JsonKey(unknownEnumValue: Dstu2ResourceType.ImagingObjectSelection)
               final Dstu2ResourceType resourceType,
-          final Id? id,
+          final FhirId? id,
           final Meta? meta,
           final FhirUri? implicitRules,
           final FhirCode? language,
@@ -11969,7 +11969,7 @@ abstract class _ImagingObjectSelection extends ImagingObjectSelection {
   @override
   FhirId? get id;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
@@ -11984,7 +11984,7 @@ abstract class _ImagingObjectSelection extends ImagingObjectSelection {
   @override
   List<FhirExtension>? get modifierExtension;
   @override
-  Oid get uid;
+  FhirOid? get uid;
   @override
   Reference get patient;
   @override
@@ -12015,7 +12015,7 @@ mixin _$ImagingObjectSelectionStudy {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  Oid get uid => throw _privateConstructorUsedError;
+  FhirOid? get uid => throw _privateConstructorUsedError;
   FhirUri? get url => throw _privateConstructorUsedError;
   Reference? get imagingStudy => throw _privateConstructorUsedError;
   @JsonKey(required: true)
@@ -12040,7 +12040,7 @@ abstract class $ImagingObjectSelectionStudyCopyWith<$Res> {
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Oid uid,
+      FhirOid? uid,
       FhirUri? url,
       Reference? imagingStudy,
       @JsonKey(required: true) List<ImagingObjectSelectionStudySeries> series});
@@ -12128,7 +12128,7 @@ abstract class _$$_ImagingObjectSelectionStudyCopyWith<$Res>
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Oid uid,
+      FhirOid? uid,
       FhirUri? url,
       Reference? imagingStudy,
       @JsonKey(required: true) List<ImagingObjectSelectionStudySeries> series});
@@ -12213,7 +12213,7 @@ class _$_ImagingObjectSelectionStudy extends _ImagingObjectSelectionStudy {
       _$$_ImagingObjectSelectionStudyFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -12303,7 +12303,7 @@ class _$_ImagingObjectSelectionStudy extends _ImagingObjectSelectionStudy {
 abstract class _ImagingObjectSelectionStudy
     extends ImagingObjectSelectionStudy {
   factory _ImagingObjectSelectionStudy(
-          {final Id? id,
+          {final FhirId? id,
           @JsonKey(name: 'extension')
               final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -12326,7 +12326,7 @@ abstract class _ImagingObjectSelectionStudy
   @override
   List<FhirExtension>? get modifierExtension;
   @override
-  Oid get uid;
+  FhirOid? get uid;
   @override
   FhirUri? get url;
   @override
@@ -12352,7 +12352,7 @@ mixin _$ImagingObjectSelectionStudySeries {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  Oid? get uid => throw _privateConstructorUsedError;
+  FhirOid? get uid => throw _privateConstructorUsedError;
   FhirUri? get url => throw _privateConstructorUsedError;
   @JsonKey(required: true)
   List<ImagingObjectSelectionSeriesInstance> get instance =>
@@ -12377,7 +12377,7 @@ abstract class $ImagingObjectSelectionStudySeriesCopyWith<$Res> {
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Oid? uid,
+      FhirOid? uid,
       FhirUri? url,
       @JsonKey(required: true)
           List<ImagingObjectSelectionSeriesInstance> instance});
@@ -12447,7 +12447,7 @@ abstract class _$$_ImagingObjectSelectionStudySeriesCopyWith<$Res>
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Oid? uid,
+      FhirOid? uid,
       FhirUri? url,
       @JsonKey(required: true)
           List<ImagingObjectSelectionSeriesInstance> instance});
@@ -12525,7 +12525,7 @@ class _$_ImagingObjectSelectionStudySeries
       _$$_ImagingObjectSelectionStudySeriesFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -12611,7 +12611,7 @@ class _$_ImagingObjectSelectionStudySeries
 abstract class _ImagingObjectSelectionStudySeries
     extends ImagingObjectSelectionStudySeries {
   factory _ImagingObjectSelectionStudySeries(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -12634,7 +12634,7 @@ abstract class _ImagingObjectSelectionStudySeries
   @override
   List<FhirExtension>? get modifierExtension;
   @override
-  Oid? get uid;
+  FhirOid? get uid;
   @override
   FhirUri? get url;
   @override
@@ -12659,8 +12659,8 @@ mixin _$ImagingObjectSelectionSeriesInstance {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  Oid get sopClass => throw _privateConstructorUsedError;
-  Oid get uid => throw _privateConstructorUsedError;
+  FhirOid? get sopClass => throw _privateConstructorUsedError;
+  FhirOid? get uid => throw _privateConstructorUsedError;
   FhirUri get url => throw _privateConstructorUsedError;
   List<ImagingObjectSelectionInstanceFrames>? get frames =>
       throw _privateConstructorUsedError;
@@ -12684,8 +12684,8 @@ abstract class $ImagingObjectSelectionSeriesInstanceCopyWith<$Res> {
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Oid sopClass,
-      Oid uid,
+      FhirOid? sopClass,
+      FhirOid? uid,
       FhirUri url,
       List<ImagingObjectSelectionInstanceFrames>? frames});
 }
@@ -12758,8 +12758,8 @@ abstract class _$$_ImagingObjectSelectionSeriesInstanceCopyWith<$Res>
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Oid sopClass,
-      Oid uid,
+      FhirOid? sopClass,
+      FhirOid? uid,
       FhirUri url,
       List<ImagingObjectSelectionInstanceFrames>? frames});
 }
@@ -12840,7 +12840,7 @@ class _$_ImagingObjectSelectionSeriesInstance
       _$$_ImagingObjectSelectionSeriesInstanceFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -12932,7 +12932,7 @@ class _$_ImagingObjectSelectionSeriesInstance
 abstract class _ImagingObjectSelectionSeriesInstance
     extends ImagingObjectSelectionSeriesInstance {
   factory _ImagingObjectSelectionSeriesInstance(
-          {final Id? id,
+          {final FhirId? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           required final Oid sopClass,
@@ -12954,9 +12954,9 @@ abstract class _ImagingObjectSelectionSeriesInstance
   @override
   List<FhirExtension>? get modifierExtension;
   @override
-  Oid get sopClass;
+  FhirOid? get sopClass;
   @override
-  Oid get uid;
+  FhirOid? get uid;
   @override
   FhirUri get url;
   @override
@@ -12979,7 +12979,7 @@ mixin _$ImagingObjectSelectionInstanceFrames {
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   FhirExtension? get modifierExte => throw _privateConstructorUsedError;
-  List<UnsignedInt> get frameNumbers => throw _privateConstructorUsedError;
+  List<FhirUnsignedInt> get frameNumbers => throw _privateConstructorUsedError;
   FhirUri get url => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -13001,7 +13001,7 @@ abstract class $ImagingObjectSelectionInstanceFramesCopyWith<$Res> {
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       FhirExtension? modifierExte,
-      List<UnsignedInt> frameNumbers,
+      List<FhirUnsignedInt> frameNumbers,
       FhirUri url});
 
   $FhirExtensionCopyWith<$Res>? get modifierExte;
@@ -13043,7 +13043,7 @@ class _$ImagingObjectSelectionInstanceFramesCopyWithImpl<$Res,
       frameNumbers: null == frameNumbers
           ? _value.frameNumbers
           : frameNumbers // ignore: cast_nullable_to_non_nullable
-              as List<UnsignedInt>,
+              as List<FhirUnsignedInt>,
       url: null == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
@@ -13077,7 +13077,7 @@ abstract class _$$_ImagingObjectSelectionInstanceFramesCopyWith<$Res>
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       FhirExtension? modifierExte,
-      List<UnsignedInt> frameNumbers,
+      List<FhirUnsignedInt> frameNumbers,
       FhirUri url});
 
   @override
@@ -13119,7 +13119,7 @@ class __$$_ImagingObjectSelectionInstanceFramesCopyWithImpl<$Res>
       frameNumbers: null == frameNumbers
           ? _value._frameNumbers
           : frameNumbers // ignore: cast_nullable_to_non_nullable
-              as List<UnsignedInt>,
+              as List<FhirUnsignedInt>,
       url: null == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
@@ -13136,7 +13136,7 @@ class _$_ImagingObjectSelectionInstanceFrames
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       this.modifierExte,
-      required final List<UnsignedInt> frameNumbers,
+      required final List<FhirUnsignedInt> frameNumbers,
       required this.url})
       : _extension_ = extension_,
         _frameNumbers = frameNumbers,
@@ -13147,7 +13147,7 @@ class _$_ImagingObjectSelectionInstanceFrames
       _$$_ImagingObjectSelectionInstanceFramesFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -13161,9 +13161,9 @@ class _$_ImagingObjectSelectionInstanceFrames
 
   @override
   final FhirExtension? modifierExte;
-  final List<UnsignedInt> _frameNumbers;
+  final List<FhirUnsignedInt> _frameNumbers;
   @override
-  List<UnsignedInt> get frameNumbers {
+  List<FhirUnsignedInt> get frameNumbers {
     if (_frameNumbers is EqualUnmodifiableListView) return _frameNumbers;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_frameNumbers);
@@ -13221,10 +13221,10 @@ class _$_ImagingObjectSelectionInstanceFrames
 abstract class _ImagingObjectSelectionInstanceFrames
     extends ImagingObjectSelectionInstanceFrames {
   factory _ImagingObjectSelectionInstanceFrames(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final FhirExtension? modifierExte,
-      required final List<UnsignedInt> frameNumbers,
+      required final List<FhirUnsignedInt> frameNumbers,
       required final FhirUri url}) = _$_ImagingObjectSelectionInstanceFrames;
   _ImagingObjectSelectionInstanceFrames._() : super._();
 
@@ -13240,7 +13240,7 @@ abstract class _ImagingObjectSelectionInstanceFrames
   @override
   FhirExtension? get modifierExte;
   @override
-  List<UnsignedInt> get frameNumbers;
+  List<FhirUnsignedInt> get frameNumbers;
   @override
   FhirUri get url;
   @override

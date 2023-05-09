@@ -250,7 +250,7 @@ class Communication extends HiveObject with Resource, _$Communication {
     /// guideline, orderset or other definition that is adhered to in whole or in
     ///  part by this Communication.
     @HiveField(13)
-        List<Canonical>? instantiatesCanonical,
+        List<FhirCanonical>? instantiatesCanonical,
     @HiveField(14)
 
     /// [instantiatesUri] The URL pointing to an externally maintained protocol,
@@ -1303,7 +1303,7 @@ class DeviceRequest extends HiveObject with Resource, _$DeviceRequest {
     /// guideline, orderset or other definition that is adhered to in whole or in
     ///  part by this DeviceRequest.
     @HiveField(13)
-        List<Canonical>? instantiatesCanonical,
+        List<FhirCanonical>? instantiatesCanonical,
     @HiveField(14)
 
     /// [instantiatesUri] The URL pointing to an externally maintained protocol,

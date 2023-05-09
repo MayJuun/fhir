@@ -103,7 +103,7 @@ class Basic with Resource, _$Basic {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -274,7 +274,7 @@ class Binary with Resource, _$Binary {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -417,7 +417,7 @@ class Bundle with Resource, _$Bundle {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -460,7 +460,7 @@ class Bundle with Resource, _$Bundle {
     /// of type 'match' across all pages in the search.  It does not include
     /// search.mode = 'include' or 'outcome' entries and it does not provide a
     ///  count of the number of entries in the Bundle.
-    UnsignedInt? total,
+    FhirUnsignedInt? total,
 
     /// [totalElement] Extensions for total
     @JsonKey(name: '_total')
@@ -744,7 +744,7 @@ class BundleEntry with _$BundleEntry {
               ? null
               : FhirUri('$canonicalBaseUrl/$resourcePath'),
           request: BundleRequest(
-            method: Code('GET'),
+            method: FhirCode('GET'),
             url: FhirUri(resourcePath),
           ));
 
@@ -755,7 +755,7 @@ class BundleEntry with _$BundleEntry {
               ? null
               : FhirUri('$canonicalBaseUrl/${resource.path}'),
           request: BundleRequest(
-            method: Code('POST'),
+            method: FhirCode('POST'),
             url: FhirUri(resource.path),
           ));
 
@@ -766,7 +766,7 @@ class BundleEntry with _$BundleEntry {
               ? null
               : FhirUri('$canonicalBaseUrl/${resource.path}'),
           request: BundleRequest(
-            method: Code('PUT'),
+            method: FhirCode('PUT'),
             url: FhirUri(resource.path),
           ));
 
@@ -779,7 +779,7 @@ class BundleEntry with _$BundleEntry {
               ? null
               : FhirUri('$canonicalBaseUrl/$resourcePath'),
           request: BundleRequest(
-            method: Code('DELETE'),
+            method: FhirCode('DELETE'),
             url: FhirUri(resourcePath),
           ));
 
@@ -790,7 +790,7 @@ class BundleEntry with _$BundleEntry {
               ? null
               : FhirUri('$canonicalBaseUrl/${resource.path}'),
           request: BundleRequest(
-            method: Code('PATCH'),
+            method: FhirCode('PATCH'),
             url: FhirUri(resource.path),
           ));
 
@@ -1355,7 +1355,7 @@ class Linkage with Resource, _$Linkage {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -1692,7 +1692,7 @@ class MessageHeader with Resource, _$MessageHeader {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -2317,7 +2317,7 @@ class OperationOutcome with Resource, _$OperationOutcome {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -2630,7 +2630,7 @@ class Parameters with Resource, _$Parameters {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -2961,13 +2961,13 @@ class ParametersParameter with _$ParametersParameter {
     @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
 
     /// [valueOid] If the parameter is a data type.
-    Oid? valueOid,
+    FhirOid? valueOid,
 
     /// [valueOidElement] Extensions for valueOid
     @JsonKey(name: '_valueOid') Element? valueOidElement,
 
     /// [valuePositiveInt] If the parameter is a data type.
-    PositiveInt? valuePositiveInt,
+    FhirPositiveInt? valuePositiveInt,
 
     /// [valuePositiveIntElement] Extensions for valuePositiveInt
     @JsonKey(name: '_valuePositiveInt') Element? valuePositiveIntElement,
@@ -2979,13 +2979,13 @@ class ParametersParameter with _$ParametersParameter {
     @JsonKey(name: '_valueString') Element? valueStringElement,
 
     /// [valueTime] If the parameter is a data type.
-    Time? valueTime,
+    FhirTime? valueTime,
 
     /// [valueTimeElement] Extensions for valueTime
     @JsonKey(name: '_valueTime') Element? valueTimeElement,
 
     /// [valueUnsignedInt] If the parameter is a data type.
-    UnsignedInt? valueUnsignedInt,
+    FhirUnsignedInt? valueUnsignedInt,
 
     /// [valueUnsignedIntElement] Extensions for valueUnsignedInt
     @JsonKey(name: '_valueUnsignedInt') Element? valueUnsignedIntElement,
@@ -3003,7 +3003,7 @@ class ParametersParameter with _$ParametersParameter {
     @JsonKey(name: '_valueUrl') Element? valueUrlElement,
 
     /// [valueUuid] If the parameter is a data type.
-    Uuid? valueUuid,
+    FhirUuid? valueUuid,
 
     /// [valueUuidElement] Extensions for valueUuid
     @JsonKey(name: '_valueUuid') Element? valueUuidElement,
@@ -3099,7 +3099,7 @@ class ParametersParameter with _$ParametersParameter {
     Dosage? valueDosage,
 
     /// [valueMeta] If the parameter is a data type.
-    Meta? valueMeta,
+    FhirMeta? valueMeta,
 
     /// [resource] If the parameter is a whole resource.
     Resource? resource,
@@ -3247,7 +3247,7 @@ class Subscription with Resource, _$Subscription {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -3588,7 +3588,7 @@ class SubscriptionStatus with Resource, _$SubscriptionStatus {
     String? id,
 
     /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
     FhirUri? implicitRules,
@@ -3875,7 +3875,7 @@ class SubscriptionTopic with Resource, _$SubscriptionTopic {
     String? id,
 
     /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
     FhirUri? implicitRules,
@@ -3922,7 +3922,7 @@ class SubscriptionTopic with Resource, _$SubscriptionTopic {
 
     /// [titleElement] (_title): Extensions for title;
     @JsonKey(name: '_title') Element? titleElement,
-    List<Canonical>? derivedFrom,
+    List<FhirCanonical>? derivedFrom,
 
     /// [status] The current state of the SubscriptionTopic.;
     FhirCode? status,
@@ -4055,7 +4055,7 @@ class SubscriptionTopicResourceTrigger with _$SubscriptionTopicResourceTrigger {
     @JsonKey(name: '_description') Element? descriptionElement,
     FhirUri? resource,
     @JsonKey(name: '_resource') Element? resourceElement,
-    List<Code>? supportedInteraction,
+    List<FhirCode>? supportedInteraction,
     @JsonKey(name: '_supportedInteraction')
         List<Element>? supportedInteractionElement,
     SubscriptionTopicQueryCriteria? queryCriteria,
@@ -4296,7 +4296,7 @@ class SubscriptionTopicCanFilterBy with _$SubscriptionTopicCanFilterBy {
     @JsonKey(name: '_filterParameter') Element? filterParameterElement,
     FhirUri? filterDefinition,
     @JsonKey(name: '_filterDefinition') Element? filterDefinitionElement,
-    List<Code>? modifier,
+    List<FhirCode>? modifier,
     @JsonKey(name: '_modifier') List<Element>? modifierElement,
   }) = _SubscriptionTopicCanFilterBy;
 

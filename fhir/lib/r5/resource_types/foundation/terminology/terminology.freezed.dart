@@ -31,7 +31,7 @@ mixin _$CodeSystem {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -249,7 +249,7 @@ mixin _$CodeSystem {
   FhirCanonical? get supplements => throw _privateConstructorUsedError;
 
   /// [count] The total number of concepts defined by the code system. Where the code system has a compositional grammar, the basis of this count is defined by the system steward.
-  UnsignedInt? get count => throw _privateConstructorUsedError;
+  FhirUnsignedInt? get count => throw _privateConstructorUsedError;
 
   /// [countElement] ("_count") Extensions for count
   @JsonKey(name: '_count')
@@ -280,7 +280,7 @@ abstract class $CodeSystemCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.CodeSystem)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -366,7 +366,7 @@ abstract class $CodeSystemCopyWith<$Res> {
       @JsonKey(name: '_content')
           Element? contentElement,
       FhirCanonical? supplements,
-      UnsignedInt? count,
+      FhirUnsignedInt? count,
       @JsonKey(name: '_count')
           Element? countElement,
       List<CodeSystemFilter>? filter,
@@ -1109,7 +1109,7 @@ abstract class _$$_CodeSystemCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R5ResourceType.CodeSystem)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -1195,7 +1195,7 @@ abstract class _$$_CodeSystemCopyWith<$Res>
       @JsonKey(name: '_content')
           Element? contentElement,
       FhirCanonical? supplements,
-      UnsignedInt? count,
+      FhirUnsignedInt? count,
       @JsonKey(name: '_count')
           Element? countElement,
       List<CodeSystemFilter>? filter,
@@ -1753,7 +1753,7 @@ class _$_CodeSystem extends _CodeSystem {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -2414,7 +2414,7 @@ abstract class _CodeSystem extends CodeSystem {
   factory _CodeSystem(
       {@JsonKey(unknownEnumValue: R5ResourceType.CodeSystem)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -2527,7 +2527,7 @@ abstract class _CodeSystem extends CodeSystem {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when
@@ -2805,7 +2805,7 @@ abstract class _CodeSystem extends CodeSystem {
   @override
 
   /// [count] The total number of concepts defined by the code system. Where the code system has a compositional grammar, the basis of this count is defined by the system steward.
-  UnsignedInt? get count;
+  FhirUnsignedInt? get count;
   @override
 
   /// [countElement] ("_count") Extensions for count
@@ -2879,7 +2879,7 @@ mixin _$CodeSystemFilter {
 
   /// [operator_] ("operator") A list of operators that can be used with the filter.
   @JsonKey(name: 'operator')
-  List<Code>? get operator_ => throw _privateConstructorUsedError;
+  List<FhirCode>? get operator_ => throw _privateConstructorUsedError;
 
   /// [operatorElement] ("_operator") Extensions for operator
   @JsonKey(name: '_operator')
@@ -2912,7 +2912,7 @@ abstract class $CodeSystemFilterCopyWith<$Res> {
       @JsonKey(name: '_code') Element? codeElement,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      @JsonKey(name: 'operator') List<Code>? operator_,
+      @JsonKey(name: 'operator') List<FhirCode>? operator_,
       @JsonKey(name: '_operator') List<Element>? operatorElement,
       String? value,
       @JsonKey(name: '_value') Element? valueElement});
@@ -2979,7 +2979,7 @@ class _$CodeSystemFilterCopyWithImpl<$Res, $Val extends CodeSystemFilter>
       operator_: freezed == operator_
           ? _value.operator_
           : operator_ // ignore: cast_nullable_to_non_nullable
-              as List<Code>?,
+              as List<FhirCode>?,
       operatorElement: freezed == operatorElement
           ? _value.operatorElement
           : operatorElement // ignore: cast_nullable_to_non_nullable
@@ -3048,7 +3048,7 @@ abstract class _$$_CodeSystemFilterCopyWith<$Res>
       @JsonKey(name: '_code') Element? codeElement,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      @JsonKey(name: 'operator') List<Code>? operator_,
+      @JsonKey(name: 'operator') List<FhirCode>? operator_,
       @JsonKey(name: '_operator') List<Element>? operatorElement,
       String? value,
       @JsonKey(name: '_value') Element? valueElement});
@@ -3116,7 +3116,7 @@ class __$$_CodeSystemFilterCopyWithImpl<$Res>
       operator_: freezed == operator_
           ? _value._operator_
           : operator_ // ignore: cast_nullable_to_non_nullable
-              as List<Code>?,
+              as List<FhirCode>?,
       operatorElement: freezed == operatorElement
           ? _value._operatorElement
           : operatorElement // ignore: cast_nullable_to_non_nullable
@@ -3144,7 +3144,7 @@ class _$_CodeSystemFilter extends _CodeSystemFilter {
       @JsonKey(name: '_code') this.codeElement,
       this.description,
       @JsonKey(name: '_description') this.descriptionElement,
-      @JsonKey(name: 'operator') final List<Code>? operator_,
+      @JsonKey(name: 'operator') final List<FhirCode>? operator_,
       @JsonKey(name: '_operator') final List<Element>? operatorElement,
       this.value,
       @JsonKey(name: '_value') this.valueElement})
@@ -3241,12 +3241,12 @@ class _$_CodeSystemFilter extends _CodeSystemFilter {
   final Element? descriptionElement;
 
   /// [operator_] ("operator") A list of operators that can be used with the filter.
-  final List<Code>? _operator_;
+  final List<FhirCode>? _operator_;
 
   /// [operator_] ("operator") A list of operators that can be used with the filter.
   @override
   @JsonKey(name: 'operator')
-  List<Code>? get operator_ {
+  List<FhirCode>? get operator_ {
     final value = _operator_;
     if (value == null) return null;
     if (_operator_ is EqualUnmodifiableListView) return _operator_;
@@ -3347,7 +3347,7 @@ abstract class _CodeSystemFilter extends CodeSystemFilter {
           @JsonKey(name: '_code') final Element? codeElement,
           final String? description,
           @JsonKey(name: '_description') final Element? descriptionElement,
-          @JsonKey(name: 'operator') final List<Code>? operator_,
+          @JsonKey(name: 'operator') final List<FhirCode>? operator_,
           @JsonKey(name: '_operator') final List<Element>? operatorElement,
           final String? value,
           @JsonKey(name: '_value') final Element? valueElement}) =
@@ -3409,7 +3409,7 @@ abstract class _CodeSystemFilter extends CodeSystemFilter {
 
   /// [operator_] ("operator") A list of operators that can be used with the filter.
   @JsonKey(name: 'operator')
-  List<Code>? get operator_;
+  List<FhirCode>? get operator_;
   @override
 
   /// [operatorElement] ("_operator") Extensions for operator
@@ -6061,7 +6061,7 @@ mixin _$ConceptMap {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -6286,7 +6286,7 @@ abstract class $ConceptMapCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.ConceptMap)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -7039,7 +7039,7 @@ abstract class _$$_ConceptMapCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R5ResourceType.ConceptMap)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -7617,7 +7617,7 @@ class _$_ConceptMap extends _ConceptMap {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -8210,7 +8210,7 @@ abstract class _ConceptMap extends ConceptMap {
   factory _ConceptMap(
       {@JsonKey(unknownEnumValue: R5ResourceType.ConceptMap)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -8313,7 +8313,7 @@ abstract class _ConceptMap extends ConceptMap {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when
@@ -11059,7 +11059,7 @@ class _$_ConceptMapDependsOn extends _ConceptMapDependsOn {
 
   /// [valueId] Property value that the map depends on.
   @override
-  final Id? valueId;
+  final FhirId? valueId;
 
   /// [valueIdElement] ("_valueId") Extensions for valueId
   @override
@@ -11192,7 +11192,7 @@ abstract class _ConceptMapDependsOn extends ConceptMapDependsOn {
       @JsonKey(name: '_valueDecimal') final Element? valueDecimalElement,
       final FhirUri? valueUri,
       @JsonKey(name: '_valueUri') final Element? valueUriElement,
-      final Id? valueId,
+      final FhirId? valueId,
       @JsonKey(name: '_valueId') final Element? valueIdElement,
       final FhirCanonical? valueSet}) = _$_ConceptMapDependsOn;
   _ConceptMapDependsOn._() : super._();
@@ -11990,7 +11990,7 @@ mixin _$NamingSystem {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -12209,7 +12209,7 @@ abstract class $NamingSystemCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.NamingSystem)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -12955,7 +12955,7 @@ abstract class _$$_NamingSystemCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R5ResourceType.NamingSystem)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -13524,7 +13524,7 @@ class _$_NamingSystem extends _NamingSystem {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -14108,7 +14108,7 @@ abstract class _NamingSystem extends NamingSystem {
   factory _NamingSystem(
       {@JsonKey(unknownEnumValue: R5ResourceType.NamingSystem)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -14209,7 +14209,7 @@ abstract class _NamingSystem extends NamingSystem {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when
@@ -15205,7 +15205,7 @@ mixin _$TerminologyCapabilities {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -15410,7 +15410,7 @@ abstract class $TerminologyCapabilitiesCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.TerminologyCapabilities)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -16151,7 +16151,7 @@ abstract class _$$_TerminologyCapabilitiesCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R5ResourceType.TerminologyCapabilities)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -16673,7 +16673,7 @@ class _$_TerminologyCapabilities extends _TerminologyCapabilities {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -17169,7 +17169,7 @@ abstract class _TerminologyCapabilities extends TerminologyCapabilities {
   factory _TerminologyCapabilities(
           {@JsonKey(unknownEnumValue: R5ResourceType.TerminologyCapabilities)
               final R5ResourceType resourceType,
-          final Id? id,
+          final FhirId? id,
           final Meta? meta,
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
@@ -17263,7 +17263,7 @@ abstract class _TerminologyCapabilities extends TerminologyCapabilities {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when
@@ -19001,7 +19001,7 @@ mixin _$TerminologyCapabilitiesVersion {
   Element? get compositionalElement => throw _privateConstructorUsedError;
 
   /// [language] Language Displays supported.
-  List<Code>? get language => throw _privateConstructorUsedError;
+  List<FhirCode>? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
@@ -19012,7 +19012,7 @@ mixin _$TerminologyCapabilitiesVersion {
       throw _privateConstructorUsedError;
 
   /// [property] Properties supported for $lookup.
-  List<Code>? get property => throw _privateConstructorUsedError;
+  List<FhirCode>? get property => throw _privateConstructorUsedError;
 
   /// [propertyElement] ("_property") Extensions for property
   @JsonKey(name: '_property')
@@ -19042,10 +19042,10 @@ abstract class $TerminologyCapabilitiesVersionCopyWith<$Res> {
       @JsonKey(name: '_isDefault') Element? isDefaultElement,
       FhirBoolean? compositional,
       @JsonKey(name: '_compositional') Element? compositionalElement,
-      List<Code>? language,
+      List<FhirCode>? language,
       @JsonKey(name: '_language') List<Element>? languageElement,
       List<TerminologyCapabilitiesFilter>? filter,
-      List<Code>? property,
+      List<FhirCode>? property,
       @JsonKey(name: '_property') List<Element>? propertyElement});
 
   $ElementCopyWith<$Res>? get codeElement;
@@ -19122,7 +19122,7 @@ class _$TerminologyCapabilitiesVersionCopyWithImpl<$Res,
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as List<Code>?,
+              as List<FhirCode>?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -19134,7 +19134,7 @@ class _$TerminologyCapabilitiesVersionCopyWithImpl<$Res,
       property: freezed == property
           ? _value.property
           : property // ignore: cast_nullable_to_non_nullable
-              as List<Code>?,
+              as List<FhirCode>?,
       propertyElement: freezed == propertyElement
           ? _value.propertyElement
           : propertyElement // ignore: cast_nullable_to_non_nullable
@@ -19198,10 +19198,10 @@ abstract class _$$_TerminologyCapabilitiesVersionCopyWith<$Res>
       @JsonKey(name: '_isDefault') Element? isDefaultElement,
       FhirBoolean? compositional,
       @JsonKey(name: '_compositional') Element? compositionalElement,
-      List<Code>? language,
+      List<FhirCode>? language,
       @JsonKey(name: '_language') List<Element>? languageElement,
       List<TerminologyCapabilitiesFilter>? filter,
-      List<Code>? property,
+      List<FhirCode>? property,
       @JsonKey(name: '_property') List<Element>? propertyElement});
 
   @override
@@ -19280,7 +19280,7 @@ class __$$_TerminologyCapabilitiesVersionCopyWithImpl<$Res>
       language: freezed == language
           ? _value._language
           : language // ignore: cast_nullable_to_non_nullable
-              as List<Code>?,
+              as List<FhirCode>?,
       languageElement: freezed == languageElement
           ? _value._languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -19292,7 +19292,7 @@ class __$$_TerminologyCapabilitiesVersionCopyWithImpl<$Res>
       property: freezed == property
           ? _value._property
           : property // ignore: cast_nullable_to_non_nullable
-              as List<Code>?,
+              as List<FhirCode>?,
       propertyElement: freezed == propertyElement
           ? _value._propertyElement
           : propertyElement // ignore: cast_nullable_to_non_nullable
@@ -19315,10 +19315,10 @@ class _$_TerminologyCapabilitiesVersion
       @JsonKey(name: '_isDefault') this.isDefaultElement,
       this.compositional,
       @JsonKey(name: '_compositional') this.compositionalElement,
-      final List<Code>? language,
+      final List<FhirCode>? language,
       @JsonKey(name: '_language') final List<Element>? languageElement,
       final List<TerminologyCapabilitiesFilter>? filter,
-      final List<Code>? property,
+      final List<FhirCode>? property,
       @JsonKey(name: '_property') final List<Element>? propertyElement})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -19426,11 +19426,11 @@ class _$_TerminologyCapabilitiesVersion
   final Element? compositionalElement;
 
   /// [language] Language Displays supported.
-  final List<Code>? _language;
+  final List<FhirCode>? _language;
 
   /// [language] Language Displays supported.
   @override
-  List<Code>? get language {
+  List<FhirCode>? get language {
     final value = _language;
     if (value == null) return null;
     if (_language is EqualUnmodifiableListView) return _language;
@@ -19466,11 +19466,11 @@ class _$_TerminologyCapabilitiesVersion
   }
 
   /// [property] Properties supported for $lookup.
-  final List<Code>? _property;
+  final List<FhirCode>? _property;
 
   /// [property] Properties supported for $lookup.
   @override
-  List<Code>? get property {
+  List<FhirCode>? get property {
     final value = _property;
     if (value == null) return null;
     if (_property is EqualUnmodifiableListView) return _property;
@@ -19573,10 +19573,10 @@ abstract class _TerminologyCapabilitiesVersion
           @JsonKey(name: '_isDefault') final Element? isDefaultElement,
           final FhirBoolean? compositional,
           @JsonKey(name: '_compositional') final Element? compositionalElement,
-          final List<Code>? language,
+          final List<FhirCode>? language,
           @JsonKey(name: '_language') final List<Element>? languageElement,
           final List<TerminologyCapabilitiesFilter>? filter,
-          final List<Code>? property,
+          final List<FhirCode>? property,
           @JsonKey(name: '_property') final List<Element>? propertyElement}) =
       _$_TerminologyCapabilitiesVersion;
   _TerminologyCapabilitiesVersion._() : super._();
@@ -19644,7 +19644,7 @@ abstract class _TerminologyCapabilitiesVersion
   @override
 
   /// [language] Language Displays supported.
-  List<Code>? get language;
+  List<FhirCode>? get language;
   @override
 
   /// [languageElement] ("_language") Extensions for language
@@ -19657,7 +19657,7 @@ abstract class _TerminologyCapabilitiesVersion
   @override
 
   /// [property] Properties supported for $lookup.
-  List<Code>? get property;
+  List<FhirCode>? get property;
   @override
 
   /// [propertyElement] ("_property") Extensions for property
@@ -19712,7 +19712,7 @@ mixin _$TerminologyCapabilitiesFilter {
   Element? get codeElement => throw _privateConstructorUsedError;
 
   /// [op] Operations supported for the property.
-  List<Code>? get op => throw _privateConstructorUsedError;
+  List<FhirCode>? get op => throw _privateConstructorUsedError;
 
   /// [opElement] ("_op") Extensions for op
   @JsonKey(name: '_op')
@@ -19738,7 +19738,7 @@ abstract class $TerminologyCapabilitiesFilterCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement,
-      List<Code>? op,
+      List<FhirCode>? op,
       @JsonKey(name: '_op') List<Element>? opElement});
 
   $ElementCopyWith<$Res>? get codeElement;
@@ -19790,7 +19790,7 @@ class _$TerminologyCapabilitiesFilterCopyWithImpl<$Res,
       op: freezed == op
           ? _value.op
           : op // ignore: cast_nullable_to_non_nullable
-              as List<Code>?,
+              as List<FhirCode>?,
       opElement: freezed == opElement
           ? _value.opElement
           : opElement // ignore: cast_nullable_to_non_nullable
@@ -19826,7 +19826,7 @@ abstract class _$$_TerminologyCapabilitiesFilterCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement,
-      List<Code>? op,
+      List<FhirCode>? op,
       @JsonKey(name: '_op') List<Element>? opElement});
 
   @override
@@ -19878,7 +19878,7 @@ class __$$_TerminologyCapabilitiesFilterCopyWithImpl<$Res>
       op: freezed == op
           ? _value._op
           : op // ignore: cast_nullable_to_non_nullable
-              as List<Code>?,
+              as List<FhirCode>?,
       opElement: freezed == opElement
           ? _value._opElement
           : opElement // ignore: cast_nullable_to_non_nullable
@@ -19896,7 +19896,7 @@ class _$_TerminologyCapabilitiesFilter extends _TerminologyCapabilitiesFilter {
       final List<FhirExtension>? modifierExtension,
       this.code,
       @JsonKey(name: '_code') this.codeElement,
-      final List<Code>? op,
+      final List<FhirCode>? op,
       @JsonKey(name: '_op') final List<Element>? opElement})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -19983,11 +19983,11 @@ class _$_TerminologyCapabilitiesFilter extends _TerminologyCapabilitiesFilter {
   final Element? codeElement;
 
   /// [op] Operations supported for the property.
-  final List<Code>? _op;
+  final List<FhirCode>? _op;
 
   /// [op] Operations supported for the property.
   @override
-  List<Code>? get op {
+  List<FhirCode>? get op {
     final value = _op;
     if (value == null) return null;
     if (_op is EqualUnmodifiableListView) return _op;
@@ -20067,7 +20067,7 @@ abstract class _TerminologyCapabilitiesFilter
           final List<FhirExtension>? modifierExtension,
           final FhirCode? code,
           @JsonKey(name: '_code') final Element? codeElement,
-          final List<Code>? op,
+          final List<FhirCode>? op,
           @JsonKey(name: '_op') final List<Element>? opElement}) =
       _$_TerminologyCapabilitiesFilter;
   _TerminologyCapabilitiesFilter._() : super._();
@@ -20117,7 +20117,7 @@ abstract class _TerminologyCapabilitiesFilter
   @override
 
   /// [op] Operations supported for the property.
-  List<Code>? get op;
+  List<FhirCode>? get op;
   @override
 
   /// [opElement] ("_op") Extensions for op
@@ -22414,7 +22414,7 @@ mixin _$ValueSet {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -22621,7 +22621,7 @@ abstract class $ValueSetCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.ValueSet)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -23346,7 +23346,7 @@ abstract class _$$_ValueSetCopyWith<$Res> implements $ValueSetCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.ValueSet)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -23889,7 +23889,7 @@ class _$_ValueSet extends _ValueSet {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -24446,7 +24446,7 @@ abstract class _ValueSet extends ValueSet {
   factory _ValueSet(
       {@JsonKey(unknownEnumValue: R5ResourceType.ValueSet)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -24541,7 +24541,7 @@ abstract class _ValueSet extends ValueSet {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when
@@ -25442,7 +25442,7 @@ mixin _$ValueSetInclude {
   List<ValueSetFilter>? get filter => throw _privateConstructorUsedError;
 
   /// [valueSet] Selects the concepts found in this value set (based on its value set definition). This is an absolute URI that is a reference to ValueSet.url.  If multiple value sets are specified this includes the intersection of the contents of all of the referenced value sets.
-  List<Canonical>? get valueSet => throw _privateConstructorUsedError;
+  List<FhirCanonical>? get valueSet => throw _privateConstructorUsedError;
 
   /// [copyright] A copyright statement for the specific code system asserted by the containing ValueSet.compose.include element's system value (if the associated ValueSet.compose.include.version element is not present); or the code system and version combination (if the associated ValueSet.compose.include.version element is present).
   String? get copyright => throw _privateConstructorUsedError;
@@ -25473,7 +25473,7 @@ abstract class $ValueSetIncludeCopyWith<$Res> {
       @JsonKey(name: '_version') Element? versionElement,
       List<ValueSetConcept>? concept,
       List<ValueSetFilter>? filter,
-      List<Canonical>? valueSet,
+      List<FhirCanonical>? valueSet,
       String? copyright,
       @JsonKey(name: '_copyright') Element? copyrightElement});
 
@@ -25548,7 +25548,7 @@ class _$ValueSetIncludeCopyWithImpl<$Res, $Val extends ValueSetInclude>
       valueSet: freezed == valueSet
           ? _value.valueSet
           : valueSet // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       copyright: freezed == copyright
           ? _value.copyright
           : copyright // ignore: cast_nullable_to_non_nullable
@@ -25615,7 +25615,7 @@ abstract class _$$_ValueSetIncludeCopyWith<$Res>
       @JsonKey(name: '_version') Element? versionElement,
       List<ValueSetConcept>? concept,
       List<ValueSetFilter>? filter,
-      List<Canonical>? valueSet,
+      List<FhirCanonical>? valueSet,
       String? copyright,
       @JsonKey(name: '_copyright') Element? copyrightElement});
 
@@ -25691,7 +25691,7 @@ class __$$_ValueSetIncludeCopyWithImpl<$Res>
       valueSet: freezed == valueSet
           ? _value._valueSet
           : valueSet // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       copyright: freezed == copyright
           ? _value.copyright
           : copyright // ignore: cast_nullable_to_non_nullable
@@ -25717,7 +25717,7 @@ class _$_ValueSetInclude extends _ValueSetInclude {
       @JsonKey(name: '_version') this.versionElement,
       final List<ValueSetConcept>? concept,
       final List<ValueSetFilter>? filter,
-      final List<Canonical>? valueSet,
+      final List<FhirCanonical>? valueSet,
       this.copyright,
       @JsonKey(name: '_copyright') this.copyrightElement})
       : _extension_ = extension_,
@@ -25840,11 +25840,11 @@ class _$_ValueSetInclude extends _ValueSetInclude {
   }
 
   /// [valueSet] Selects the concepts found in this value set (based on its value set definition). This is an absolute URI that is a reference to ValueSet.url.  If multiple value sets are specified this includes the intersection of the contents of all of the referenced value sets.
-  final List<Canonical>? _valueSet;
+  final List<FhirCanonical>? _valueSet;
 
   /// [valueSet] Selects the concepts found in this value set (based on its value set definition). This is an absolute URI that is a reference to ValueSet.url.  If multiple value sets are specified this includes the intersection of the contents of all of the referenced value sets.
   @override
-  List<Canonical>? get valueSet {
+  List<FhirCanonical>? get valueSet {
     final value = _valueSet;
     if (value == null) return null;
     if (_valueSet is EqualUnmodifiableListView) return _valueSet;
@@ -25933,7 +25933,7 @@ abstract class _ValueSetInclude extends ValueSetInclude {
           @JsonKey(name: '_version') final Element? versionElement,
           final List<ValueSetConcept>? concept,
           final List<ValueSetFilter>? filter,
-          final List<Canonical>? valueSet,
+          final List<FhirCanonical>? valueSet,
           final String? copyright,
           @JsonKey(name: '_copyright') final Element? copyrightElement}) =
       _$_ValueSetInclude;
@@ -26001,7 +26001,7 @@ abstract class _ValueSetInclude extends ValueSetInclude {
   @override
 
   /// [valueSet] Selects the concepts found in this value set (based on its value set definition). This is an absolute URI that is a reference to ValueSet.url.  If multiple value sets are specified this includes the intersection of the contents of all of the referenced value sets.
-  List<Canonical>? get valueSet;
+  List<FhirCanonical>? get valueSet;
   @override
 
   /// [copyright] A copyright statement for the specific code system asserted by the containing ValueSet.compose.include element's system value (if the associated ValueSet.compose.include.version element is not present); or the code system and version combination (if the associated ValueSet.compose.include.version element is present).

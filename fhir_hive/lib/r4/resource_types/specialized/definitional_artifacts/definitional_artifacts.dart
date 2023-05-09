@@ -647,7 +647,7 @@ class ActivityDefinition extends HiveObject
     ///  used by the activity definition.
     @JsonKey(name: 'library')
     @HiveField(59)
-        List<Canonical>? library_,
+        List<FhirCanonical>? library_,
 
     /// [kind] A description of the kind of resource the activity definition is
     /// representing. For example, a MedicationRequest, a ServiceRequest, or a
@@ -2884,7 +2884,7 @@ class ObservationDefinition extends HiveObject
     /// [permittedDataType] The data types allowed for the value element of the
     ///  instance observations conforming to this ObservationDefinition.
     @HiveField(14)
-        List<Code>? permittedDataType,
+        List<FhirCode>? permittedDataType,
     @JsonKey(name: '_permittedDataType')
 
     /// [permittedDataTypeElement] Extensions for permittedDataType
@@ -3798,7 +3798,7 @@ class PlanDefinition extends HiveObject with Resource, _$PlanDefinition {
     ///  used by the plan definition.
     @JsonKey(name: 'library')
     @HiveField(58)
-        List<Canonical>? library_,
+        List<FhirCanonical>? library_,
 
     /// [goal] Goals that describe what the activities within the plan are
     /// intended to achieve. For example, weight loss, restoring an activity of
@@ -4387,7 +4387,7 @@ class PlanDefinitionAction with _$PlanDefinitionAction {
 
     /// [goalId] Identifies goals that this action supports. The reference must
     ///  be to a goal element defined within this plan definition.
-    List<Id>? goalId,
+    List<FhirId>? goalId,
 
     /// [goalIdElement] Extensions for goalId
     @JsonKey(name: '_goalId') List<Element?>? goalIdElement,
@@ -4745,7 +4745,7 @@ class PlanDefinitionRelatedAction with _$PlanDefinitionRelatedAction {
     List<FhirExtension>? modifierExtension,
 
     /// [actionId] The element id of the related action.
-    Id? actionId,
+    FhirId? actionId,
 
     /// [actionIdElement] Extensions for actionId
     @JsonKey(name: '_actionId') Element? actionIdElement,
@@ -5353,7 +5353,7 @@ class Questionnaire extends HiveObject with Resource, _$Questionnaire {
     /// [derivedFrom] The URL of a Questionnaire that this Questionnaire is based
     ///  on.
     @HiveField(20)
-        List<Canonical>? derivedFrom,
+        List<FhirCanonical>? derivedFrom,
 
     /// [status] The status of this questionnaire. Enables tracking the
     ///  life-cycle of the content.
@@ -5379,7 +5379,7 @@ class Questionnaire extends HiveObject with Resource, _$Questionnaire {
     /// [subjectType] The types of subjects that can be the subject of responses
     ///  created for the questionnaire.
     @HiveField(25)
-        List<Code>? subjectType,
+        List<FhirCode>? subjectType,
 
     /// [subjectTypeElement] Extensions for subjectType
     @JsonKey(name: '_subjectType')
@@ -5707,7 +5707,7 @@ class QuestionnaireItem with _$QuestionnaireItem {
     /// [type] The type of questionnaire item this is - whether text for display,
     /// a grouping of other items or a particular type of data to be captured
     ///  (string, integer, coded choice, etc.).
-    required Code type,
+    required FhirCode type,
 
     /// [typeElement] Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
@@ -5967,7 +5967,7 @@ class QuestionnaireEnableWhen with _$QuestionnaireEnableWhen {
 
     /// [answerTime] A value that the referenced question is tested using the
     ///  specified operator in order for the item to be enabled.
-    Time? answerTime,
+    FhirTime? answerTime,
 
     /// [answerTimeElement] Extensions for answerTime
     @JsonKey(name: '_answerTime') Element? answerTimeElement,
@@ -6132,7 +6132,7 @@ class QuestionnaireAnswerOption with _$QuestionnaireAnswerOption {
 
     /// [valueTime] A potential answer that's allowed as the answer to this
     ///  question.
-    Time? valueTime,
+    FhirTime? valueTime,
 
     /// [valueTimeElement] Extensions for valueTime
     @JsonKey(name: '_valueTime') Element? valueTimeElement,
@@ -6324,7 +6324,7 @@ class QuestionnaireInitial with _$QuestionnaireInitial {
     @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
 
     /// [valueTime] The actual value to for an initial answer.
-    Time? valueTime,
+    FhirTime? valueTime,
 
     /// [valueTimeElement] Extensions for valueTime
     @JsonKey(name: '_valueTime') Element? valueTimeElement,

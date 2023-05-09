@@ -31,7 +31,7 @@ mixin _$BodyStructure {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -114,7 +114,7 @@ abstract class $BodyStructureCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.BodyStructure)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -377,7 +377,7 @@ abstract class _$$_BodyStructureCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R5ResourceType.BodyStructure)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -593,7 +593,7 @@ class _$_BodyStructure extends _BodyStructure {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -838,7 +838,7 @@ abstract class _BodyStructure extends BodyStructure {
   factory _BodyStructure(
       {@JsonKey(unknownEnumValue: R5ResourceType.BodyStructure)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -883,7 +883,7 @@ abstract class _BodyStructure extends BodyStructure {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when
@@ -1847,7 +1847,7 @@ mixin _$DiagnosticReport {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -1980,7 +1980,7 @@ abstract class $DiagnosticReportCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.DiagnosticReport)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -2406,7 +2406,7 @@ abstract class _$$_DiagnosticReportCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R5ResourceType.DiagnosticReport)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -2757,7 +2757,7 @@ class _$_DiagnosticReport extends _DiagnosticReport {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -3191,7 +3191,7 @@ abstract class _DiagnosticReport extends DiagnosticReport {
   factory _DiagnosticReport(
       {@JsonKey(unknownEnumValue: R5ResourceType.DiagnosticReport)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -3254,7 +3254,7 @@ abstract class _DiagnosticReport extends DiagnosticReport {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when
@@ -4222,7 +4222,7 @@ mixin _$GenomicStudy {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -4330,7 +4330,7 @@ abstract class $GenomicStudyCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.GenomicStudy)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -4677,7 +4677,7 @@ abstract class _$$_GenomicStudyCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R5ResourceType.GenomicStudy)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -4960,7 +4960,7 @@ class _$_GenomicStudy extends _GenomicStudy {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -5285,7 +5285,7 @@ abstract class _GenomicStudy extends GenomicStudy {
   factory _GenomicStudy(
       {@JsonKey(unknownEnumValue: R5ResourceType.GenomicStudy)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -5339,7 +5339,7 @@ abstract class _GenomicStudy extends GenomicStudy {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when
@@ -8193,7 +8193,7 @@ mixin _$ImagingSelection {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -8280,7 +8280,7 @@ mixin _$ImagingSelection {
   Element? get seriesUidElement => throw _privateConstructorUsedError;
 
   /// [seriesNumber] The Series Number for the DICOM Series from which the images were selected.
-  UnsignedInt? get seriesNumber => throw _privateConstructorUsedError;
+  FhirUnsignedInt? get seriesNumber => throw _privateConstructorUsedError;
 
   /// [seriesNumberElement] ("_seriesNumber") Extensions for seriesNumber
   @JsonKey(name: '_seriesNumber')
@@ -8323,7 +8323,7 @@ abstract class $ImagingSelectionCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.ImagingSelection)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -8355,7 +8355,7 @@ abstract class $ImagingSelectionCopyWith<$Res> {
       FhirId? seriesUid,
       @JsonKey(name: '_seriesUid')
           Element? seriesUidElement,
-      UnsignedInt? seriesNumber,
+      FhirUnsignedInt? seriesNumber,
       @JsonKey(name: '_seriesNumber')
           Element? seriesNumberElement,
       FhirId? frameOfReferenceUid,
@@ -8739,7 +8739,7 @@ abstract class _$$_ImagingSelectionCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R5ResourceType.ImagingSelection)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -8771,7 +8771,7 @@ abstract class _$$_ImagingSelectionCopyWith<$Res>
       FhirId? seriesUid,
       @JsonKey(name: '_seriesUid')
           Element? seriesUidElement,
-      UnsignedInt? seriesNumber,
+      FhirUnsignedInt? seriesNumber,
       @JsonKey(name: '_seriesNumber')
           Element? seriesNumberElement,
       FhirId? frameOfReferenceUid,
@@ -9076,7 +9076,7 @@ class _$_ImagingSelection extends _ImagingSelection {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -9230,7 +9230,7 @@ class _$_ImagingSelection extends _ImagingSelection {
 
   /// [studyUid] The Study Instance UID for the DICOM Study from which the images were selected.
   @override
-  final Id? studyUid;
+  final FhirId? studyUid;
 
   /// [studyUidElement] ("_studyUid") Extensions for studyUid
   @override
@@ -9265,7 +9265,7 @@ class _$_ImagingSelection extends _ImagingSelection {
 
   /// [seriesUid] The Series Instance UID for the DICOM Series from which the images were selected.
   @override
-  final Id? seriesUid;
+  final FhirId? seriesUid;
 
   /// [seriesUidElement] ("_seriesUid") Extensions for seriesUid
   @override
@@ -9283,7 +9283,7 @@ class _$_ImagingSelection extends _ImagingSelection {
 
   /// [frameOfReferenceUid] The Frame of Reference UID identifying the coordinate system that conveys spatial and/or temporal information for the selected images or frames.
   @override
-  final Id? frameOfReferenceUid;
+  final FhirId? frameOfReferenceUid;
 
   /// [frameOfReferenceUidElement] ("_frameOfReferenceUid") Extensions for frameOfReferenceUid
   @override
@@ -9464,7 +9464,7 @@ abstract class _ImagingSelection extends ImagingSelection {
   factory _ImagingSelection(
           {@JsonKey(unknownEnumValue: R5ResourceType.ImagingSelection)
               final R5ResourceType resourceType,
-          final Id? id,
+          final FhirId? id,
           final Meta? meta,
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
@@ -9489,18 +9489,18 @@ abstract class _ImagingSelection extends ImagingSelection {
           final List<Reference>? basedOn,
           final List<CodeableConcept>? category,
           required final CodeableConcept code,
-          final Id? studyUid,
+          final FhirId? studyUid,
           @JsonKey(name: '_studyUid')
               final Element? studyUidElement,
           final List<Reference>? derivedFrom,
           final List<Reference>? endpoint,
-          final Id? seriesUid,
+          final FhirId? seriesUid,
           @JsonKey(name: '_seriesUid')
               final Element? seriesUidElement,
           final UnsignedInt? seriesNumber,
           @JsonKey(name: '_seriesNumber')
               final Element? seriesNumberElement,
-          final Id? frameOfReferenceUid,
+          final FhirId? frameOfReferenceUid,
           @JsonKey(name: '_frameOfReferenceUid')
               final Element? frameOfReferenceUidElement,
           final CodeableReference? bodySite,
@@ -9528,7 +9528,7 @@ abstract class _ImagingSelection extends ImagingSelection {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when
@@ -9638,7 +9638,7 @@ abstract class _ImagingSelection extends ImagingSelection {
   @override
 
   /// [seriesNumber] The Series Number for the DICOM Series from which the images were selected.
-  UnsignedInt? get seriesNumber;
+  FhirUnsignedInt? get seriesNumber;
   @override
 
   /// [seriesNumberElement] ("_seriesNumber") Extensions for seriesNumber
@@ -10110,7 +10110,7 @@ mixin _$ImagingSelectionInstance {
   Element? get uidElement => throw _privateConstructorUsedError;
 
   /// [number] The Instance Number for the selected DICOM instance.
-  UnsignedInt? get number => throw _privateConstructorUsedError;
+  FhirUnsignedInt? get number => throw _privateConstructorUsedError;
 
   /// [numberElement] ("_number") Extensions for number
   @JsonKey(name: '_number')
@@ -10153,7 +10153,7 @@ abstract class $ImagingSelectionInstanceCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       FhirId? uid,
       @JsonKey(name: '_uid') Element? uidElement,
-      UnsignedInt? number,
+      FhirUnsignedInt? number,
       @JsonKey(name: '_number') Element? numberElement,
       Coding? sopClass,
       List<String>? subset,
@@ -10291,7 +10291,7 @@ abstract class _$$_ImagingSelectionInstanceCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       FhirId? uid,
       @JsonKey(name: '_uid') Element? uidElement,
-      UnsignedInt? number,
+      FhirUnsignedInt? number,
       @JsonKey(name: '_number') Element? numberElement,
       Coding? sopClass,
       List<String>? subset,
@@ -10471,7 +10471,7 @@ class _$_ImagingSelectionInstance extends _ImagingSelectionInstance {
 
   /// [uid] The SOP Instance UID for the selected DICOM instance.
   @override
-  final Id? uid;
+  final FhirId? uid;
 
   /// [uidElement] ("_uid") Extensions for uid
   @override
@@ -10607,7 +10607,7 @@ abstract class _ImagingSelectionInstance extends ImagingSelectionInstance {
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
-          final Id? uid,
+          final FhirId? uid,
           @JsonKey(name: '_uid') final Element? uidElement,
           final UnsignedInt? number,
           @JsonKey(name: '_number') final Element? numberElement,
@@ -10663,7 +10663,7 @@ abstract class _ImagingSelectionInstance extends ImagingSelectionInstance {
   @override
 
   /// [number] The Instance Number for the selected DICOM instance.
-  UnsignedInt? get number;
+  FhirUnsignedInt? get number;
   @override
 
   /// [numberElement] ("_number") Extensions for number
@@ -10740,7 +10740,7 @@ mixin _$ImagingSelectionImageRegion {
   Element? get regionTypeElement => throw _privateConstructorUsedError;
 
   /// [coordinate] The coordinates describing the image region. Encoded as a set of (column, row) pairs that denote positions in the selected image / frames specified with sub-pixel resolution. The origin at the TLHC of the TLHC pixel is 0.0\0.0, the BRHC of the TLHC pixel is 1.0\1.0, and the BRHC of the BRHC pixel is the number of columns\rows in the image / frames. The values must be within the range 0\0 to the number of columns\rows in the image / frames.
-  List<Decimal>? get coordinate => throw _privateConstructorUsedError;
+  List<FhirDecimal>? get coordinate => throw _privateConstructorUsedError;
 
   /// [coordinateElement] ("_coordinate") Extensions for coordinate
   @JsonKey(name: '_coordinate')
@@ -10766,7 +10766,7 @@ abstract class $ImagingSelectionImageRegionCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       FhirCode? regionType,
       @JsonKey(name: '_regionType') Element? regionTypeElement,
-      List<Decimal>? coordinate,
+      List<FhirDecimal>? coordinate,
       @JsonKey(name: '_coordinate') List<Element>? coordinateElement});
 
   $ElementCopyWith<$Res>? get regionTypeElement;
@@ -10818,7 +10818,7 @@ class _$ImagingSelectionImageRegionCopyWithImpl<$Res,
       coordinate: freezed == coordinate
           ? _value.coordinate
           : coordinate // ignore: cast_nullable_to_non_nullable
-              as List<Decimal>?,
+              as List<FhirDecimal>?,
       coordinateElement: freezed == coordinateElement
           ? _value.coordinateElement
           : coordinateElement // ignore: cast_nullable_to_non_nullable
@@ -10854,7 +10854,7 @@ abstract class _$$_ImagingSelectionImageRegionCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       FhirCode? regionType,
       @JsonKey(name: '_regionType') Element? regionTypeElement,
-      List<Decimal>? coordinate,
+      List<FhirDecimal>? coordinate,
       @JsonKey(name: '_coordinate') List<Element>? coordinateElement});
 
   @override
@@ -10906,7 +10906,7 @@ class __$$_ImagingSelectionImageRegionCopyWithImpl<$Res>
       coordinate: freezed == coordinate
           ? _value._coordinate
           : coordinate // ignore: cast_nullable_to_non_nullable
-              as List<Decimal>?,
+              as List<FhirDecimal>?,
       coordinateElement: freezed == coordinateElement
           ? _value._coordinateElement
           : coordinateElement // ignore: cast_nullable_to_non_nullable
@@ -10924,7 +10924,7 @@ class _$_ImagingSelectionImageRegion extends _ImagingSelectionImageRegion {
       final List<FhirExtension>? modifierExtension,
       this.regionType,
       @JsonKey(name: '_regionType') this.regionTypeElement,
-      final List<Decimal>? coordinate,
+      final List<FhirDecimal>? coordinate,
       @JsonKey(name: '_coordinate') final List<Element>? coordinateElement})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -11010,11 +11010,11 @@ class _$_ImagingSelectionImageRegion extends _ImagingSelectionImageRegion {
   final Element? regionTypeElement;
 
   /// [coordinate] The coordinates describing the image region. Encoded as a set of (column, row) pairs that denote positions in the selected image / frames specified with sub-pixel resolution. The origin at the TLHC of the TLHC pixel is 0.0\0.0, the BRHC of the TLHC pixel is 1.0\1.0, and the BRHC of the BRHC pixel is the number of columns\rows in the image / frames. The values must be within the range 0\0 to the number of columns\rows in the image / frames.
-  final List<Decimal>? _coordinate;
+  final List<FhirDecimal>? _coordinate;
 
   /// [coordinate] The coordinates describing the image region. Encoded as a set of (column, row) pairs that denote positions in the selected image / frames specified with sub-pixel resolution. The origin at the TLHC of the TLHC pixel is 0.0\0.0, the BRHC of the TLHC pixel is 1.0\1.0, and the BRHC of the BRHC pixel is the number of columns\rows in the image / frames. The values must be within the range 0\0 to the number of columns\rows in the image / frames.
   @override
-  List<Decimal>? get coordinate {
+  List<FhirDecimal>? get coordinate {
     final value = _coordinate;
     if (value == null) return null;
     if (_coordinate is EqualUnmodifiableListView) return _coordinate;
@@ -11099,7 +11099,7 @@ abstract class _ImagingSelectionImageRegion
           final FhirCode? regionType,
           @JsonKey(name: '_regionType')
               final Element? regionTypeElement,
-          final List<Decimal>? coordinate,
+          final List<FhirDecimal>? coordinate,
           @JsonKey(name: '_coordinate')
               final List<Element>? coordinateElement}) =
       _$_ImagingSelectionImageRegion;
@@ -11150,7 +11150,7 @@ abstract class _ImagingSelectionImageRegion
   @override
 
   /// [coordinate] The coordinates describing the image region. Encoded as a set of (column, row) pairs that denote positions in the selected image / frames specified with sub-pixel resolution. The origin at the TLHC of the TLHC pixel is 0.0\0.0, the BRHC of the TLHC pixel is 1.0\1.0, and the BRHC of the BRHC pixel is the number of columns\rows in the image / frames. The values must be within the range 0\0 to the number of columns\rows in the image / frames.
-  List<Decimal>? get coordinate;
+  List<FhirDecimal>? get coordinate;
   @override
 
   /// [coordinateElement] ("_coordinate") Extensions for coordinate
@@ -11205,7 +11205,7 @@ mixin _$ImagingSelectionImageRegion1 {
   Element? get regionTypeElement => throw _privateConstructorUsedError;
 
   /// [coordinate] The coordinates describing the image region. Encoded as an ordered set of (x,y,z) triplets (in mm and may be negative) that define a region of interest in the patient-relative Reference Coordinate System defined by ImagingSelection.frameOfReferenceUid element.
-  List<Decimal>? get coordinate => throw _privateConstructorUsedError;
+  List<FhirDecimal>? get coordinate => throw _privateConstructorUsedError;
 
   /// [coordinateElement] ("_coordinate") Extensions for coordinate
   @JsonKey(name: '_coordinate')
@@ -11231,7 +11231,7 @@ abstract class $ImagingSelectionImageRegion1CopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       FhirCode? regionType,
       @JsonKey(name: '_regionType') Element? regionTypeElement,
-      List<Decimal>? coordinate,
+      List<FhirDecimal>? coordinate,
       @JsonKey(name: '_coordinate') List<Element>? coordinateElement});
 
   $ElementCopyWith<$Res>? get regionTypeElement;
@@ -11283,7 +11283,7 @@ class _$ImagingSelectionImageRegion1CopyWithImpl<$Res,
       coordinate: freezed == coordinate
           ? _value.coordinate
           : coordinate // ignore: cast_nullable_to_non_nullable
-              as List<Decimal>?,
+              as List<FhirDecimal>?,
       coordinateElement: freezed == coordinateElement
           ? _value.coordinateElement
           : coordinateElement // ignore: cast_nullable_to_non_nullable
@@ -11319,7 +11319,7 @@ abstract class _$$_ImagingSelectionImageRegion1CopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       FhirCode? regionType,
       @JsonKey(name: '_regionType') Element? regionTypeElement,
-      List<Decimal>? coordinate,
+      List<FhirDecimal>? coordinate,
       @JsonKey(name: '_coordinate') List<Element>? coordinateElement});
 
   @override
@@ -11371,7 +11371,7 @@ class __$$_ImagingSelectionImageRegion1CopyWithImpl<$Res>
       coordinate: freezed == coordinate
           ? _value._coordinate
           : coordinate // ignore: cast_nullable_to_non_nullable
-              as List<Decimal>?,
+              as List<FhirDecimal>?,
       coordinateElement: freezed == coordinateElement
           ? _value._coordinateElement
           : coordinateElement // ignore: cast_nullable_to_non_nullable
@@ -11389,7 +11389,7 @@ class _$_ImagingSelectionImageRegion1 extends _ImagingSelectionImageRegion1 {
       final List<FhirExtension>? modifierExtension,
       this.regionType,
       @JsonKey(name: '_regionType') this.regionTypeElement,
-      final List<Decimal>? coordinate,
+      final List<FhirDecimal>? coordinate,
       @JsonKey(name: '_coordinate') final List<Element>? coordinateElement})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -11475,11 +11475,11 @@ class _$_ImagingSelectionImageRegion1 extends _ImagingSelectionImageRegion1 {
   final Element? regionTypeElement;
 
   /// [coordinate] The coordinates describing the image region. Encoded as an ordered set of (x,y,z) triplets (in mm and may be negative) that define a region of interest in the patient-relative Reference Coordinate System defined by ImagingSelection.frameOfReferenceUid element.
-  final List<Decimal>? _coordinate;
+  final List<FhirDecimal>? _coordinate;
 
   /// [coordinate] The coordinates describing the image region. Encoded as an ordered set of (x,y,z) triplets (in mm and may be negative) that define a region of interest in the patient-relative Reference Coordinate System defined by ImagingSelection.frameOfReferenceUid element.
   @override
-  List<Decimal>? get coordinate {
+  List<FhirDecimal>? get coordinate {
     final value = _coordinate;
     if (value == null) return null;
     if (_coordinate is EqualUnmodifiableListView) return _coordinate;
@@ -11564,7 +11564,7 @@ abstract class _ImagingSelectionImageRegion1
           final FhirCode? regionType,
           @JsonKey(name: '_regionType')
               final Element? regionTypeElement,
-          final List<Decimal>? coordinate,
+          final List<FhirDecimal>? coordinate,
           @JsonKey(name: '_coordinate')
               final List<Element>? coordinateElement}) =
       _$_ImagingSelectionImageRegion1;
@@ -11615,7 +11615,7 @@ abstract class _ImagingSelectionImageRegion1
   @override
 
   /// [coordinate] The coordinates describing the image region. Encoded as an ordered set of (x,y,z) triplets (in mm and may be negative) that define a region of interest in the patient-relative Reference Coordinate System defined by ImagingSelection.frameOfReferenceUid element.
-  List<Decimal>? get coordinate;
+  List<FhirDecimal>? get coordinate;
   @override
 
   /// [coordinateElement] ("_coordinate") Extensions for coordinate
@@ -11644,7 +11644,7 @@ mixin _$ImagingStudy {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -11716,14 +11716,14 @@ mixin _$ImagingStudy {
   List<Reference>? get endpoint => throw _privateConstructorUsedError;
 
   /// [numberOfSeries] Number of Series in the Study. This value given may be larger than the number of series elements this Resource contains due to resource availability, security, or other factors. This element should be present if any series elements are present.
-  UnsignedInt? get numberOfSeries => throw _privateConstructorUsedError;
+  FhirUnsignedInt? get numberOfSeries => throw _privateConstructorUsedError;
 
   /// [numberOfSeriesElement] ("_numberOfSeries") Extensions for numberOfSeries
   @JsonKey(name: '_numberOfSeries')
   Element? get numberOfSeriesElement => throw _privateConstructorUsedError;
 
   /// [numberOfInstances] Number of SOP Instances in Study. This value given may be larger than the number of instance elements this resource contains due to resource availability, security, or other factors. This element should be present if any instance elements are present.
-  UnsignedInt? get numberOfInstances => throw _privateConstructorUsedError;
+  FhirUnsignedInt? get numberOfInstances => throw _privateConstructorUsedError;
 
   /// [numberOfInstancesElement] ("_numberOfInstances") Extensions for numberOfInstances
   @JsonKey(name: '_numberOfInstances')
@@ -11767,7 +11767,7 @@ abstract class $ImagingStudyCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.ImagingStudy)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -11793,10 +11793,10 @@ abstract class $ImagingStudyCopyWith<$Res> {
       Reference? referrer,
       List<Reference>? interpreter,
       List<Reference>? endpoint,
-      UnsignedInt? numberOfSeries,
+      FhirUnsignedInt? numberOfSeries,
       @JsonKey(name: '_numberOfSeries')
           Element? numberOfSeriesElement,
-      UnsignedInt? numberOfInstances,
+      FhirUnsignedInt? numberOfInstances,
       @JsonKey(name: '_numberOfInstances')
           Element? numberOfInstancesElement,
       List<CodeableReference>? procedure,
@@ -12176,7 +12176,7 @@ abstract class _$$_ImagingStudyCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R5ResourceType.ImagingStudy)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -12202,10 +12202,10 @@ abstract class _$$_ImagingStudyCopyWith<$Res>
       Reference? referrer,
       List<Reference>? interpreter,
       List<Reference>? endpoint,
-      UnsignedInt? numberOfSeries,
+      FhirUnsignedInt? numberOfSeries,
       @JsonKey(name: '_numberOfSeries')
           Element? numberOfSeriesElement,
-      UnsignedInt? numberOfInstances,
+      FhirUnsignedInt? numberOfInstances,
       @JsonKey(name: '_numberOfInstances')
           Element? numberOfInstancesElement,
       List<CodeableReference>? procedure,
@@ -12504,7 +12504,7 @@ class _$_ImagingStudy extends _ImagingStudy {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -12883,7 +12883,7 @@ abstract class _ImagingStudy extends ImagingStudy {
   factory _ImagingStudy(
       {@JsonKey(unknownEnumValue: R5ResourceType.ImagingStudy)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -12944,7 +12944,7 @@ abstract class _ImagingStudy extends ImagingStudy {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when
@@ -13036,7 +13036,7 @@ abstract class _ImagingStudy extends ImagingStudy {
   @override
 
   /// [numberOfSeries] Number of Series in the Study. This value given may be larger than the number of series elements this Resource contains due to resource availability, security, or other factors. This element should be present if any series elements are present.
-  UnsignedInt? get numberOfSeries;
+  FhirUnsignedInt? get numberOfSeries;
   @override
 
   /// [numberOfSeriesElement] ("_numberOfSeries") Extensions for numberOfSeries
@@ -13045,7 +13045,7 @@ abstract class _ImagingStudy extends ImagingStudy {
   @override
 
   /// [numberOfInstances] Number of SOP Instances in Study. This value given may be larger than the number of instance elements this resource contains due to resource availability, security, or other factors. This element should be present if any instance elements are present.
-  UnsignedInt? get numberOfInstances;
+  FhirUnsignedInt? get numberOfInstances;
   @override
 
   /// [numberOfInstancesElement] ("_numberOfInstances") Extensions for numberOfInstances
@@ -13128,7 +13128,7 @@ mixin _$ImagingStudySeries {
   Element? get uidElement => throw _privateConstructorUsedError;
 
   /// [number] The numeric identifier of this series in the study.
-  UnsignedInt? get number => throw _privateConstructorUsedError;
+  FhirUnsignedInt? get number => throw _privateConstructorUsedError;
 
   /// [numberElement] ("_number") Extensions for number
   @JsonKey(name: '_number')
@@ -13145,7 +13145,7 @@ mixin _$ImagingStudySeries {
   Element? get descriptionElement => throw _privateConstructorUsedError;
 
   /// [numberOfInstances] Number of SOP Instances in the Study. The value given may be larger than the number of instance elements this resource contains due to resource availability, security, or other factors. This element should be present if any instance elements are present.
-  UnsignedInt? get numberOfInstances => throw _privateConstructorUsedError;
+  FhirUnsignedInt? get numberOfInstances => throw _privateConstructorUsedError;
 
   /// [numberOfInstancesElement] ("_numberOfInstances") Extensions for numberOfInstances
   @JsonKey(name: '_numberOfInstances')
@@ -13196,12 +13196,12 @@ abstract class $ImagingStudySeriesCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       FhirId? uid,
       @JsonKey(name: '_uid') Element? uidElement,
-      UnsignedInt? number,
+      FhirUnsignedInt? number,
       @JsonKey(name: '_number') Element? numberElement,
       CodeableConcept modality,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      UnsignedInt? numberOfInstances,
+      FhirUnsignedInt? numberOfInstances,
       @JsonKey(name: '_numberOfInstances') Element? numberOfInstancesElement,
       List<Reference>? endpoint,
       CodeableReference? bodySite,
@@ -13447,12 +13447,12 @@ abstract class _$$_ImagingStudySeriesCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       FhirId? uid,
       @JsonKey(name: '_uid') Element? uidElement,
-      UnsignedInt? number,
+      FhirUnsignedInt? number,
       @JsonKey(name: '_number') Element? numberElement,
       CodeableConcept modality,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      UnsignedInt? numberOfInstances,
+      FhirUnsignedInt? numberOfInstances,
       @JsonKey(name: '_numberOfInstances') Element? numberOfInstancesElement,
       List<Reference>? endpoint,
       CodeableReference? bodySite,
@@ -13700,7 +13700,7 @@ class _$_ImagingStudySeries extends _ImagingStudySeries {
 
   /// [uid] The DICOM Series Instance UID for the series.
   @override
-  final Id? uid;
+  final FhirId? uid;
 
   /// [uidElement] ("_uid") Extensions for uid
   @override
@@ -13900,7 +13900,7 @@ abstract class _ImagingStudySeries extends ImagingStudySeries {
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final Id? uid,
+      final FhirId? uid,
       @JsonKey(name: '_uid')
           final Element? uidElement,
       final UnsignedInt? number,
@@ -13969,7 +13969,7 @@ abstract class _ImagingStudySeries extends ImagingStudySeries {
   @override
 
   /// [number] The numeric identifier of this series in the study.
-  UnsignedInt? get number;
+  FhirUnsignedInt? get number;
   @override
 
   /// [numberElement] ("_number") Extensions for number
@@ -13991,7 +13991,7 @@ abstract class _ImagingStudySeries extends ImagingStudySeries {
   @override
 
   /// [numberOfInstances] Number of SOP Instances in the Study. The value given may be larger than the number of instance elements this resource contains due to resource availability, security, or other factors. This element should be present if any instance elements are present.
-  UnsignedInt? get numberOfInstances;
+  FhirUnsignedInt? get numberOfInstances;
   @override
 
   /// [numberOfInstancesElement] ("_numberOfInstances") Extensions for numberOfInstances
@@ -14466,7 +14466,7 @@ mixin _$ImagingStudyInstance {
   Coding get sopClass => throw _privateConstructorUsedError;
 
   /// [number] The number of instance in the series.
-  UnsignedInt? get number => throw _privateConstructorUsedError;
+  FhirUnsignedInt? get number => throw _privateConstructorUsedError;
 
   /// [numberElement] ("_number") Extensions for number
   @JsonKey(name: '_number')
@@ -14498,7 +14498,7 @@ abstract class $ImagingStudyInstanceCopyWith<$Res> {
       FhirId? uid,
       @JsonKey(name: '_uid') Element? uidElement,
       Coding sopClass,
-      UnsignedInt? number,
+      FhirUnsignedInt? number,
       @JsonKey(name: '_number') Element? numberElement,
       String? title,
       @JsonKey(name: '_title') Element? titleElement});
@@ -14638,7 +14638,7 @@ abstract class _$$_ImagingStudyInstanceCopyWith<$Res>
       FhirId? uid,
       @JsonKey(name: '_uid') Element? uidElement,
       Coding sopClass,
-      UnsignedInt? number,
+      FhirUnsignedInt? number,
       @JsonKey(name: '_number') Element? numberElement,
       String? title,
       @JsonKey(name: '_title') Element? titleElement});
@@ -14808,7 +14808,7 @@ class _$_ImagingStudyInstance extends _ImagingStudyInstance {
 
   /// [uid] The DICOM SOP Instance UID for this image or other DICOM content.
   @override
-  final Id? uid;
+  final FhirId? uid;
 
   /// [uidElement] ("_uid") Extensions for uid
   @override
@@ -14900,7 +14900,7 @@ abstract class _ImagingStudyInstance extends ImagingStudyInstance {
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
-          final Id? uid,
+          final FhirId? uid,
           @JsonKey(name: '_uid') final Element? uidElement,
           required final Coding sopClass,
           final UnsignedInt? number,
@@ -14959,7 +14959,7 @@ abstract class _ImagingStudyInstance extends ImagingStudyInstance {
   @override
 
   /// [number] The number of instance in the series.
-  UnsignedInt? get number;
+  FhirUnsignedInt? get number;
   @override
 
   /// [numberElement] ("_number") Extensions for number
@@ -14997,7 +14997,7 @@ mixin _$MolecularSequence {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -15082,7 +15082,7 @@ abstract class $MolecularSequenceCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.MolecularSequence)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -15381,7 +15381,7 @@ abstract class _$$_MolecularSequenceCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R5ResourceType.MolecularSequence)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -15607,7 +15607,7 @@ class _$_MolecularSequence extends _MolecularSequence {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -15849,7 +15849,7 @@ abstract class _MolecularSequence extends MolecularSequence {
   factory _MolecularSequence(
       {@JsonKey(unknownEnumValue: R5ResourceType.MolecularSequence)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -15895,7 +15895,7 @@ abstract class _MolecularSequence extends MolecularSequence {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when
@@ -18020,7 +18020,7 @@ mixin _$Observation {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -18168,7 +18168,7 @@ mixin _$Observation {
   SampledData? get valueSampledData => throw _privateConstructorUsedError;
 
   /// [valueTime] The information determined as a result of making the observation, if the information has a simple value.
-  Time? get valueTime => throw _privateConstructorUsedError;
+  FhirTime? get valueTime => throw _privateConstructorUsedError;
 
   /// [valueTimeElement] ("_valueTime") Extensions for valueTime
   @JsonKey(name: '_valueTime')
@@ -18242,7 +18242,7 @@ abstract class $ObservationCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.Observation)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -18296,7 +18296,7 @@ abstract class $ObservationCopyWith<$Res> {
       Range? valueRange,
       Ratio? valueRatio,
       SampledData? valueSampledData,
-      Time? valueTime,
+      FhirTime? valueTime,
       @JsonKey(name: '_valueTime')
           Element? valueTimeElement,
       FhirDateTime? valueDateTime,
@@ -19093,7 +19093,7 @@ abstract class _$$_ObservationCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R5ResourceType.Observation)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -19147,7 +19147,7 @@ abstract class _$$_ObservationCopyWith<$Res>
       Range? valueRange,
       Ratio? valueRatio,
       SampledData? valueSampledData,
-      Time? valueTime,
+      FhirTime? valueTime,
       @JsonKey(name: '_valueTime')
           Element? valueTimeElement,
       FhirDateTime? valueDateTime,
@@ -19678,7 +19678,7 @@ class _$_Observation extends _Observation {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -20281,7 +20281,7 @@ abstract class _Observation extends Observation {
   factory _Observation(
       {@JsonKey(unknownEnumValue: R5ResourceType.Observation)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -20376,7 +20376,7 @@ abstract class _Observation extends Observation {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when
@@ -20562,7 +20562,7 @@ abstract class _Observation extends Observation {
   @override
 
   /// [valueTime] The information determined as a result of making the observation, if the information has a simple value.
-  Time? get valueTime;
+  FhirTime? get valueTime;
   @override
 
   /// [valueTimeElement] ("_valueTime") Extensions for valueTime
@@ -21829,7 +21829,7 @@ mixin _$ObservationComponent {
   SampledData? get valueSampledData => throw _privateConstructorUsedError;
 
   /// [valueTime] The information determined as a result of making the observation, if the information has a simple value.
-  Time? get valueTime => throw _privateConstructorUsedError;
+  FhirTime? get valueTime => throw _privateConstructorUsedError;
 
   /// [valueTimeElement] ("_valueTime") Extensions for valueTime
   @JsonKey(name: '_valueTime')
@@ -21887,7 +21887,7 @@ abstract class $ObservationComponentCopyWith<$Res> {
       Range? valueRange,
       Ratio? valueRatio,
       SampledData? valueSampledData,
-      Time? valueTime,
+      FhirTime? valueTime,
       @JsonKey(name: '_valueTime') Element? valueTimeElement,
       FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
@@ -22242,7 +22242,7 @@ abstract class _$$_ObservationComponentCopyWith<$Res>
       Range? valueRange,
       Ratio? valueRatio,
       SampledData? valueSampledData,
-      Time? valueTime,
+      FhirTime? valueTime,
       @JsonKey(name: '_valueTime') Element? valueTimeElement,
       FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
@@ -22847,7 +22847,7 @@ abstract class _ObservationComponent extends ObservationComponent {
   @override
 
   /// [valueTime] The information determined as a result of making the observation, if the information has a simple value.
-  Time? get valueTime;
+  FhirTime? get valueTime;
   @override
 
   /// [valueTimeElement] ("_valueTime") Extensions for valueTime
@@ -22906,7 +22906,7 @@ mixin _$QuestionnaireResponse {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -23001,7 +23001,7 @@ abstract class $QuestionnaireResponseCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.QuestionnaireResponse)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -23333,7 +23333,7 @@ abstract class _$$_QuestionnaireResponseCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R5ResourceType.QuestionnaireResponse)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -23585,7 +23585,7 @@ class _$_QuestionnaireResponse extends _QuestionnaireResponse {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -23856,7 +23856,7 @@ abstract class _QuestionnaireResponse extends QuestionnaireResponse {
   factory _QuestionnaireResponse(
       {@JsonKey(unknownEnumValue: R5ResourceType.QuestionnaireResponse)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -23906,7 +23906,7 @@ abstract class _QuestionnaireResponse extends QuestionnaireResponse {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when
@@ -24682,7 +24682,7 @@ mixin _$QuestionnaireResponseAnswer {
   Element? get valueDateTimeElement => throw _privateConstructorUsedError;
 
   /// [valueTime] The answer (or one of the answers) provided by the respondent to the question.
-  Time? get valueTime => throw _privateConstructorUsedError;
+  FhirTime? get valueTime => throw _privateConstructorUsedError;
 
   /// [valueTimeElement] ("_valueTime") Extensions for valueTime
   @JsonKey(name: '_valueTime')
@@ -24746,7 +24746,7 @@ abstract class $QuestionnaireResponseAnswerCopyWith<$Res> {
       @JsonKey(name: '_valueDate') Element? valueDateElement,
       FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
-      Time? valueTime,
+      FhirTime? valueTime,
       @JsonKey(name: '_valueTime') Element? valueTimeElement,
       String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
@@ -25079,7 +25079,7 @@ abstract class _$$_QuestionnaireResponseAnswerCopyWith<$Res>
       @JsonKey(name: '_valueDate') Element? valueDateElement,
       FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
-      Time? valueTime,
+      FhirTime? valueTime,
       @JsonKey(name: '_valueTime') Element? valueTimeElement,
       String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
@@ -25672,7 +25672,7 @@ abstract class _QuestionnaireResponseAnswer
   @override
 
   /// [valueTime] The answer (or one of the answers) provided by the respondent to the question.
-  Time? get valueTime;
+  FhirTime? get valueTime;
   @override
 
   /// [valueTimeElement] ("_valueTime") Extensions for valueTime
@@ -25739,7 +25739,7 @@ mixin _$Specimen {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -25848,7 +25848,7 @@ abstract class $SpecimenCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.Specimen)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -26208,7 +26208,7 @@ abstract class _$$_SpecimenCopyWith<$Res> implements $SpecimenCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.Specimen)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -26500,7 +26500,7 @@ class _$_Specimen extends _Specimen {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -26849,7 +26849,7 @@ abstract class _Specimen extends Specimen {
   factory _Specimen(
       {@JsonKey(unknownEnumValue: R5ResourceType.Specimen)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -26903,7 +26903,7 @@ abstract class _Specimen extends Specimen {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when

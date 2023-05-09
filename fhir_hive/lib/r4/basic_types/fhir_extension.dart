@@ -327,7 +327,7 @@ class FhirExtension with _$FhirExtension {
 
     /// [valueId] Value of extension - must be one of a constrained set of the
     ///  data types (see [Extensibility](extensibility.html) for a list).
-    Id? valueId,
+    FhirId? valueId,
 
     /// [valueIdElement] Extensions for valueId
     @JsonKey(name: '_valueId') Element? valueIdElement,
@@ -356,14 +356,14 @@ class FhirExtension with _$FhirExtension {
 
     /// [valueOid] Value of extension - must be one of a constrained set of the
     ///  data types (see [Extensibility](extensibility.html) for a list).
-    Oid? valueOid,
+    FhirOid? valueOid,
 
     /// [valueOidElement] Extensions for valueOid
     @JsonKey(name: '_valueOid') Element? valueOidElement,
 
     /// [valuePositiveInt] Value of extension - must be one of a constrained set
     ///  of the data types (see [Extensibility](extensibility.html) for a list).
-    PositiveInt? valuePositiveInt,
+    FhirPositiveInt? valuePositiveInt,
 
     /// [valuePositiveIntElement] Extensions for valuePositiveInt
 
@@ -378,14 +378,14 @@ class FhirExtension with _$FhirExtension {
 
     /// [valueTime] Value of extension - must be one of a constrained set of the
     ///  data types (see [Extensibility](extensibility.html) for a list).
-    Time? valueTime,
+    FhirTime? valueTime,
 
     /// [valueTimeElement] Extensions for valueTime
     @JsonKey(name: '_valueTime') Element? valueTimeElement,
 
     /// [valueUnsignedInt] Value of extension - must be one of a constrained set
     ///  of the data types (see [Extensibility](extensibility.html) for a list).
-    UnsignedInt? valueUnsignedInt,
+    FhirUnsignedInt? valueUnsignedInt,
 
     /// [valueUnsignedIntElement] Extensions for valueUnsignedInt
 
@@ -407,7 +407,7 @@ class FhirExtension with _$FhirExtension {
 
     /// [valueUuid] Value of extension - must be one of a constrained set of the
     ///  data types (see [Extensibility](extensibility.html) for a list).
-    Uuid? valueUuid,
+    FhirUuid? valueUuid,
 
     /// [valueUuidElement] Extensions for valueUuid
     @JsonKey(name: '_valueUuid') Element? valueUuidElement,

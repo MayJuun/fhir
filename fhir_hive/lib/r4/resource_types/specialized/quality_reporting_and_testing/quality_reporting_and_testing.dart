@@ -612,7 +612,7 @@ class Measure extends HiveObject with Resource, _$Measure {
     ///  used by the measure.
     @JsonKey(name: 'library')
     @HiveField(56)
-        List<Canonical>? library_,
+        List<FhirCanonical>? library_,
 
     /// [disclaimer] Notices and disclaimers regarding the use of the measure or
     /// related to intellectual property (such as code systems) referenced by the
@@ -701,7 +701,7 @@ class Measure extends HiveObject with Resource, _$Measure {
     /// [definition] Provides a description of an individual term used within the
     ///  measure.
     @HiveField(74)
-        List<Markdown>? definition,
+        List<FhirMarkdown>? definition,
 
     /// [definitionElement] Extensions for definition
     @JsonKey(name: '_definition')
@@ -1617,7 +1617,7 @@ class MeasureReport extends HiveObject with Resource, _$MeasureReport {
     /// [measure] A reference to the Measure that was calculated to produce this
     ///  report.
     @HiveField(17)
-        required Canonical measure,
+        required FhirCanonical measure,
 
     /// [subject] Optional subject identifying the individual or individuals the
     ///  report is for.
@@ -4698,7 +4698,7 @@ class TestScriptCapability with _$TestScriptCapability {
     @JsonKey(name: '_description') Element? descriptionElement,
 
     /// [origin] Which origin server these requirements apply to.
-    List<Integer>? origin,
+    List<FhirInteger>? origin,
 
     /// [originElement] Extensions for origin
     @JsonKey(name: '_origin') List<Element?>? originElement,
@@ -4720,7 +4720,7 @@ class TestScriptCapability with _$TestScriptCapability {
     /// execute successfully.   If server does not meet at a minimum the
     /// referenced capability statement, then all tests in this script are
     ///  skipped.
-    required Canonical capabilities,
+    required FhirCanonical capabilities,
   }) = _TestScriptCapability;
 
   /// Produces a Yaml formatted String version of the object
@@ -5040,7 +5040,7 @@ class TestScriptVariable with _$TestScriptVariable {
 
     /// [sourceId] Fixture to evaluate the XPath/JSONPath expression or the
     ///  headerField  against within this variable.
-    Id? sourceId,
+    FhirId? sourceId,
 
     /// [sourceIdElement] Extensions for sourceId
     @JsonKey(name: '_sourceId') Element? sourceIdElement,
@@ -5498,27 +5498,27 @@ class TestScriptOperation with _$TestScriptOperation {
     List<TestScriptRequestHeader>? requestHeader,
 
     /// [requestId] The fixture id (maybe new) to map to the request.
-    Id? requestId,
+    FhirId? requestId,
 
     /// [requestIdElement] Extensions for requestId
     @JsonKey(name: '_requestId') Element? requestIdElement,
 
     /// [responseId] The fixture id (maybe new) to map to the response.
-    Id? responseId,
+    FhirId? responseId,
 
     /// [responseIdElement] Extensions for responseId
     @JsonKey(name: '_responseId') Element? responseIdElement,
 
     /// [sourceId] The id of the fixture used as the body of a PUT or POST
     ///  request.
-    Id? sourceId,
+    FhirId? sourceId,
 
     /// [sourceIdElement] Extensions for sourceId
     @JsonKey(name: '_sourceId') Element? sourceIdElement,
 
     /// [targetId] Id of fixture used for extracting the [id],  [type], and [vid]
     ///  for GET requests.
-    Id? targetId,
+    FhirId? targetId,
 
     /// [targetIdElement] Extensions for targetId
     @JsonKey(name: '_targetId') Element? targetIdElement,
@@ -5997,14 +5997,14 @@ class TestScriptAssert with _$TestScriptAssert {
 
     /// [sourceId] Fixture to evaluate the XPath/JSONPath expression or the
     ///  headerField  against.
-    Id? sourceId,
+    FhirId? sourceId,
 
     /// [sourceIdElement] Extensions for sourceId
     @JsonKey(name: '_sourceId')
         Element? sourceIdElement,
 
     /// [validateProfileId] The ID of the Profile to validate against.
-    Id? validateProfileId,
+    FhirId? validateProfileId,
 
     /// [validateProfileIdElement] Extensions for validateProfileId
     @JsonKey(name: '_validateProfileId')

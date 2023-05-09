@@ -367,7 +367,7 @@ class ActivityDefinition with Resource, _$ActivityDefinition {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when
@@ -548,7 +548,7 @@ class ActivityDefinition with Resource, _$ActivityDefinition {
     @JsonKey(name: '_usage') Element? usageElement,
 
     /// [library_] ("library") A reference to a Library resource containing any formal logic used by the activity definition.
-    @JsonKey(name: 'library') List<Canonical>? library_,
+    @JsonKey(name: 'library') List<FhirCanonical>? library_,
 
     /// [kind] A description of the kind of resource the activity definition is representing. For example, a MedicationRequest, a ServiceRequest, or a CommunicationRequest. Typically, but not always, this is a Request resource.
     FhirCode? kind,
@@ -623,13 +623,13 @@ class ActivityDefinition with Resource, _$ActivityDefinition {
     List<CodeableConcept>? bodySite,
 
     /// [specimenRequirement] Defines specimen requirements for the action to be performed, such as required specimens for a lab test.
-    List<Canonical>? specimenRequirement,
+    List<FhirCanonical>? specimenRequirement,
 
     /// [observationRequirement] Defines observation requirements for the action to be performed, such as body weight or surface area.
-    List<Canonical>? observationRequirement,
+    List<FhirCanonical>? observationRequirement,
 
     /// [observationResultRequirement] Defines the observations that are expected to be produced by the action.
-    List<Canonical>? observationResultRequirement,
+    List<FhirCanonical>? observationResultRequirement,
 
     /// [transform] A reference to a StructureMap resource that defines a transform that can be executed to produce the intent resource using the ActivityDefinition instance as the input.
     FhirCanonical? transform,
@@ -1125,7 +1125,7 @@ class ActorDefinition with Resource, _$ActorDefinition {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when
@@ -1270,7 +1270,7 @@ class ActorDefinition with Resource, _$ActorDefinition {
     FhirCanonical? capabilities,
 
     /// [derivedFrom] A url that identifies the definition of this actor in another IG (which IG must be listed in the dependencies). This actor inherits all the obligations etc as defined in the other IG.
-    List<Canonical>? derivedFrom,
+    List<FhirCanonical>? derivedFrom,
   }) = _ActorDefinition;
 
   /// Produces a Yaml formatted String version of the object
@@ -1567,7 +1567,7 @@ class ConditionDefinition with Resource, _$ConditionDefinition {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when
@@ -2534,7 +2534,7 @@ class DeviceDefinition with Resource, _$DeviceDefinition {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when
@@ -2642,7 +2642,7 @@ class DeviceDefinition with Resource, _$DeviceDefinition {
     List<DeviceDefinitionMaterial>? material,
 
     /// [productionIdentifierInUDI] Indicates the production identifier(s) that are expected to appear in the UDI carrier on the device label.
-    List<Code>? productionIdentifierInUDI,
+    List<FhirCode>? productionIdentifierInUDI,
 
     /// [productionIdentifierInUDIElement] ("_productionIdentifierInUDI") Extensions for productionIdentifierInUDI
     @JsonKey(name: '_productionIdentifierInUDI')
@@ -4784,7 +4784,7 @@ class EventDefinition with Resource, _$EventDefinition {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when
@@ -5179,7 +5179,7 @@ class ExampleScenario with Resource, _$ExampleScenario {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when
@@ -6762,7 +6762,7 @@ class ObservationDefinition with Resource, _$ObservationDefinition {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when
@@ -6919,7 +6919,7 @@ class ObservationDefinition with Resource, _$ObservationDefinition {
     List<RelatedArtifact>? relatedArtifact,
 
     /// [derivedFromCanonical] The canonical URL pointing to another FHIR-defined ObservationDefinition that is adhered to in whole or in part by this definition.
-    List<Canonical>? derivedFromCanonical,
+    List<FhirCanonical>? derivedFromCanonical,
 
     /// [derivedFromUri] The URL pointing to an externally-defined observation definition, guideline or other definition that is adhered to in whole or in part by this definition.
     List<FhirUri>? derivedFromUri,
@@ -6940,7 +6940,7 @@ class ObservationDefinition with Resource, _$ObservationDefinition {
     required CodeableConcept code,
 
     /// [permittedDataType] The data types allowed for the value element of the instance observations conforming to this ObservationDefinition.
-    List<Code>? permittedDataType,
+    List<FhirCode>? permittedDataType,
 
     /// [permittedDataTypeElement] ("_permittedDataType") Extensions for permittedDataType
     @JsonKey(name: '_permittedDataType')
@@ -7423,7 +7423,7 @@ class ObservationDefinitionComponent with _$ObservationDefinitionComponent {
     required CodeableConcept code,
 
     /// [permittedDataType] The data types allowed for the value element of the instance of this component observations.
-    List<Code>? permittedDataType,
+    List<FhirCode>? permittedDataType,
 
     /// [permittedDataTypeElement] ("_permittedDataType") Extensions for permittedDataType
     @JsonKey(name: '_permittedDataType')
@@ -7766,7 +7766,7 @@ class PlanDefinition with Resource, _$PlanDefinition {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when
@@ -7950,7 +7950,7 @@ class PlanDefinition with Resource, _$PlanDefinition {
     @JsonKey(name: '_usage') Element? usageElement,
 
     /// [library_] ("library") A reference to a Library resource containing any formal logic used by the plan definition.
-    @JsonKey(name: 'library') List<Canonical>? library_,
+    @JsonKey(name: 'library') List<FhirCanonical>? library_,
 
     /// [goal] A goal describes an expected outcome that activities within the plan are intended to achieve. For example, weight loss, restoring an activity of daily living, obtaining herd immunity via immunization, meeting a process improvement objective, meeting the acceptance criteria for a test as specified by a quality specification, etc.
     List<PlanDefinitionGoal>? goal,
@@ -8908,7 +8908,7 @@ class PlanDefinitionAction with _$PlanDefinitionAction {
     List<RelatedArtifact>? documentation,
 
     /// [goalId] Identifies goals that this action supports. The reference must be to a goal element defined within this plan definition. In pharmaceutical quality, a goal represents acceptance criteria (Goal) for a given action (Test), so the goalId would be the unique id of a defined goal element establishing the acceptance criteria for the action.
-    List<Id>? goalId,
+    List<FhirId>? goalId,
 
     /// [goalIdElement] ("_goalId") Extensions for goalId
     @JsonKey(name: '_goalId') List<Element>? goalIdElement,
@@ -10078,7 +10078,7 @@ class Questionnaire with Resource, _$Questionnaire {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when
@@ -10235,10 +10235,10 @@ class Questionnaire with Resource, _$Questionnaire {
     List<RelatedArtifact>? relatedArtifact,
 
     /// [derivedFrom] The URL of a Questionnaire that this Questionnaire is based on.
-    List<Canonical>? derivedFrom,
+    List<FhirCanonical>? derivedFrom,
 
     /// [subjectType] The types of subjects that can be the subject of responses created for the questionnaire.
-    List<Code>? subjectType,
+    List<FhirCode>? subjectType,
 
     /// [subjectTypeElement] ("_subjectType") Extensions for subjectType
     @JsonKey(name: '_subjectType') List<Element>? subjectTypeElement,
@@ -10758,7 +10758,7 @@ class QuestionnaireEnableWhen with _$QuestionnaireEnableWhen {
     @JsonKey(name: '_answerDateTime') Element? answerDateTimeElement,
 
     /// [answerTime] A value that the referenced question is tested using the specified operator in order for the item to be enabled.  If there are multiple answers, a match on any of the answers suffices.  If different behavior is desired (all must match, at least 2 must match, etc.), consider using the enableWhenExpression extension.
-    Time? answerTime,
+    FhirTime? answerTime,
 
     /// [answerTimeElement] ("_answerTime") Extensions for answerTime
     @JsonKey(name: '_answerTime') Element? answerTimeElement,
@@ -10923,7 +10923,7 @@ class QuestionnaireAnswerOption with _$QuestionnaireAnswerOption {
     @JsonKey(name: '_valueDate') Element? valueDateElement,
 
     /// [valueTime] A potential answer that's allowed as the answer to this question.
-    Time? valueTime,
+    FhirTime? valueTime,
 
     /// [valueTimeElement] ("_valueTime") Extensions for valueTime
     @JsonKey(name: '_valueTime') Element? valueTimeElement,
@@ -11117,7 +11117,7 @@ class QuestionnaireInitial with _$QuestionnaireInitial {
     @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
 
     /// [valueTime] The actual value to for an initial answer.
-    Time? valueTime,
+    FhirTime? valueTime,
 
     /// [valueTimeElement] ("_valueTime") Extensions for valueTime
     @JsonKey(name: '_valueTime') Element? valueTimeElement,
@@ -11366,7 +11366,7 @@ class Requirements with Resource, _$Requirements {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when
@@ -11490,10 +11490,10 @@ class Requirements with Resource, _$Requirements {
     @JsonKey(name: '_copyrightLabel') Element? copyrightLabelElement,
 
     /// [derivedFrom] Another set of Requirements that this set of Requirements builds on and updates.
-    List<Canonical>? derivedFrom,
+    List<FhirCanonical>? derivedFrom,
 
     /// [actor] An actor these requirements are in regard to.
-    List<Canonical>? actor,
+    List<FhirCanonical>? actor,
 
     /// [statement] The actual statement of requirement, in markdown format.
     List<RequirementsStatement>? statement,
@@ -11658,7 +11658,7 @@ class RequirementsStatement with _$RequirementsStatement {
     @JsonKey(name: '_label') Element? labelElement,
 
     /// [conformance] A short human usable label for this statement.
-    List<Code>? conformance,
+    List<FhirCode>? conformance,
 
     /// [conformanceElement] ("_conformance") Extensions for conformance
     @JsonKey(name: '_conformance') List<Element>? conformanceElement,
@@ -11966,7 +11966,7 @@ class SpecimenDefinition with Resource, _$SpecimenDefinition {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when
@@ -12123,7 +12123,7 @@ class SpecimenDefinition with Resource, _$SpecimenDefinition {
     List<RelatedArtifact>? relatedArtifact,
 
     /// [derivedFromCanonical] The canonical URL pointing to another FHIR-defined SpecimenDefinition that is adhered to in whole or in part by this definition.
-    List<Canonical>? derivedFromCanonical,
+    List<FhirCanonical>? derivedFromCanonical,
 
     /// [derivedFromUri] The URL pointing to an externally-defined type of specimen, guideline or other definition that is adhered to in whole or in part by this definition.
     List<FhirUri>? derivedFromUri,

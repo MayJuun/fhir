@@ -20,7 +20,7 @@ class ImplementationGuide with Resource, _$ImplementationGuide {
     @JsonKey(unknownEnumValue: Dstu2ResourceType.ImplementationGuide)
         Dstu2ResourceType resourceType,
     FhirId? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,
@@ -224,7 +224,7 @@ class ImplementationGuideGlobal with _$ImplementationGuideGlobal {
     FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    required Code type,
+    required FhirCode type,
     @JsonKey(name: '_type') Element? typeElement,
     required Reference profile,
   }) = _ImplementationGuideGlobal;
@@ -270,7 +270,7 @@ class ImplementationGuidePage with _$ImplementationGuidePage {
     required FhirUri source,
     required String name,
     @JsonKey(unknownEnumValue: PageKind.unknown) required PageKind kind,
-    List<Code>? type,
+    List<FhirCode>? type,
     List<String>? package,
     FhirCode? format,
     List<ImplementationGuidePage>? page,
@@ -354,7 +354,7 @@ class TestScript with Resource, _$TestScript {
     @JsonKey(unknownEnumValue: Dstu2ResourceType.TestScript)
         Dstu2ResourceType resourceType,
     FhirId? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,

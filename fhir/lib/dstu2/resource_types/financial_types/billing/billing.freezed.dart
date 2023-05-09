@@ -23,7 +23,7 @@ mixin _$Account {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Account)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
   FhirId? get id => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
@@ -69,7 +69,7 @@ abstract class $AccountCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Account)
           Dstu2ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -439,7 +439,7 @@ abstract class _$$_AccountCopyWith<$Res> implements $AccountCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Account)
           Dstu2ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -691,7 +691,7 @@ class _$_Account extends _Account {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Account)
   final Dstu2ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -881,7 +881,7 @@ abstract class _Account extends Account {
   factory _Account(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Account)
           final Dstu2ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -922,7 +922,7 @@ abstract class _Account extends Account {
   @override
   FhirId? get id;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
@@ -989,7 +989,7 @@ mixin _$Claim {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Claim)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
   FhirId? get id => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
@@ -1053,7 +1053,7 @@ abstract class $ClaimCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Claim)
           Dstu2ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -1611,7 +1611,7 @@ abstract class _$$_ClaimCopyWith<$Res> implements $ClaimCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Claim)
           Dstu2ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -2003,7 +2003,7 @@ class _$_Claim extends _Claim {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Claim)
   final Dstu2ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -2338,7 +2338,7 @@ abstract class _Claim extends Claim {
   factory _Claim(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Claim)
           final Dstu2ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -2396,7 +2396,7 @@ abstract class _Claim extends Claim {
   @override
   FhirId? get id;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
@@ -2731,7 +2731,7 @@ class _$_ClaimPayee extends _ClaimPayee {
       _$$_ClaimPayeeFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -2814,7 +2814,7 @@ class _$_ClaimPayee extends _ClaimPayee {
 
 abstract class _ClaimPayee extends ClaimPayee {
   factory _ClaimPayee(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final Coding? type,
@@ -2858,7 +2858,7 @@ mixin _$ClaimDiagnosis {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  PositiveInt get sequence => throw _privateConstructorUsedError;
+  FhirPositiveInt? get sequence => throw _privateConstructorUsedError;
   @JsonKey(name: '_sequence')
   Element? get sequenceElement => throw _privateConstructorUsedError;
   Coding get diagnosis => throw _privateConstructorUsedError;
@@ -2879,7 +2879,7 @@ abstract class $ClaimDiagnosisCopyWith<$Res> {
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      PositiveInt sequence,
+      FhirPositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       Coding diagnosis});
 
@@ -2968,7 +2968,7 @@ abstract class _$$_ClaimDiagnosisCopyWith<$Res>
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      PositiveInt sequence,
+      FhirPositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       Coding diagnosis});
 
@@ -3043,7 +3043,7 @@ class _$_ClaimDiagnosis extends _ClaimDiagnosis {
       _$$_ClaimDiagnosisFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -3124,7 +3124,7 @@ class _$_ClaimDiagnosis extends _ClaimDiagnosis {
 
 abstract class _ClaimDiagnosis extends ClaimDiagnosis {
   factory _ClaimDiagnosis(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final PositiveInt sequence,
@@ -3143,7 +3143,7 @@ abstract class _ClaimDiagnosis extends ClaimDiagnosis {
   @override
   List<FhirExtension>? get modifierExtension;
   @override
-  PositiveInt get sequence;
+  FhirPositiveInt? get sequence;
   @override
   @JsonKey(name: '_sequence')
   Element? get sequenceElement;
@@ -3166,7 +3166,7 @@ mixin _$ClaimCoverage {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  PositiveInt get sequence => throw _privateConstructorUsedError;
+  FhirPositiveInt? get sequence => throw _privateConstructorUsedError;
   Boolean get focal => throw _privateConstructorUsedError;
   Reference get coverage => throw _privateConstructorUsedError;
   String? get businessArrangement => throw _privateConstructorUsedError;
@@ -3191,7 +3191,7 @@ abstract class $ClaimCoverageCopyWith<$Res> {
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      PositiveInt sequence,
+      FhirPositiveInt? sequence,
       Boolean focal,
       Reference coverage,
       String? businessArrangement,
@@ -3332,7 +3332,7 @@ abstract class _$$_ClaimCoverageCopyWith<$Res>
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      PositiveInt sequence,
+      FhirPositiveInt? sequence,
       Boolean focal,
       Reference coverage,
       String? businessArrangement,
@@ -3447,7 +3447,7 @@ class _$_ClaimCoverage extends _ClaimCoverage {
       _$$_ClaimCoverageFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -3559,7 +3559,7 @@ class _$_ClaimCoverage extends _ClaimCoverage {
 
 abstract class _ClaimCoverage extends ClaimCoverage {
   factory _ClaimCoverage(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final PositiveInt sequence,
@@ -3583,7 +3583,7 @@ abstract class _ClaimCoverage extends ClaimCoverage {
   @override
   List<FhirExtension>? get modifierExtension;
   @override
-  PositiveInt get sequence;
+  FhirPositiveInt? get sequence;
   @override
   Boolean get focal;
   @override
@@ -3615,12 +3615,13 @@ mixin _$ClaimItem {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  PositiveInt get sequence => throw _privateConstructorUsedError;
+  FhirPositiveInt? get sequence => throw _privateConstructorUsedError;
   @JsonKey(name: '_sequence')
   Element? get sequenceElement => throw _privateConstructorUsedError;
   Coding get type => throw _privateConstructorUsedError;
   Reference? get provider => throw _privateConstructorUsedError;
-  List<PositiveInt>? get diagnosisLinkId => throw _privateConstructorUsedError;
+  List<FhirPositiveInt>? get diagnosisLinkId =>
+      throw _privateConstructorUsedError;
   Coding get service => throw _privateConstructorUsedError;
   @JsonKey(name: '_servicedDate')
   Element? get servicedDateElement => throw _privateConstructorUsedError;
@@ -3654,11 +3655,11 @@ abstract class $ClaimItemCopyWith<$Res> {
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      PositiveInt sequence,
+      FhirPositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       Coding type,
       Reference? provider,
-      List<PositiveInt>? diagnosisLinkId,
+      List<FhirPositiveInt>? diagnosisLinkId,
       Coding service,
       @JsonKey(name: '_servicedDate') Element? servicedDateElement,
       FhirDate? serviceDate,
@@ -3758,7 +3759,7 @@ class _$ClaimItemCopyWithImpl<$Res, $Val extends ClaimItem>
       diagnosisLinkId: freezed == diagnosisLinkId
           ? _value.diagnosisLinkId
           : diagnosisLinkId // ignore: cast_nullable_to_non_nullable
-              as List<PositiveInt>?,
+              as List<FhirPositiveInt>?,
       service: null == service
           ? _value.service
           : service // ignore: cast_nullable_to_non_nullable
@@ -3970,11 +3971,11 @@ abstract class _$$_ClaimItemCopyWith<$Res> implements $ClaimItemCopyWith<$Res> {
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      PositiveInt sequence,
+      FhirPositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       Coding type,
       Reference? provider,
-      List<PositiveInt>? diagnosisLinkId,
+      List<FhirPositiveInt>? diagnosisLinkId,
       Coding service,
       @JsonKey(name: '_servicedDate') Element? servicedDateElement,
       FhirDate? serviceDate,
@@ -4084,7 +4085,7 @@ class __$$_ClaimItemCopyWithImpl<$Res>
       diagnosisLinkId: freezed == diagnosisLinkId
           ? _value._diagnosisLinkId
           : diagnosisLinkId // ignore: cast_nullable_to_non_nullable
-              as List<PositiveInt>?,
+              as List<FhirPositiveInt>?,
       service: null == service
           ? _value.service
           : service // ignore: cast_nullable_to_non_nullable
@@ -4160,7 +4161,7 @@ class _$_ClaimItem extends _ClaimItem {
       @JsonKey(name: '_sequence') this.sequenceElement,
       required this.type,
       this.provider,
-      final List<PositiveInt>? diagnosisLinkId,
+      final List<FhirPositiveInt>? diagnosisLinkId,
       required this.service,
       @JsonKey(name: '_servicedDate') this.servicedDateElement,
       this.serviceDate,
@@ -4188,7 +4189,7 @@ class _$_ClaimItem extends _ClaimItem {
       _$$_ClaimItemFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -4220,9 +4221,9 @@ class _$_ClaimItem extends _ClaimItem {
   final Coding type;
   @override
   final Reference? provider;
-  final List<PositiveInt>? _diagnosisLinkId;
+  final List<FhirPositiveInt>? _diagnosisLinkId;
   @override
-  List<PositiveInt>? get diagnosisLinkId {
+  List<FhirPositiveInt>? get diagnosisLinkId {
     final value = _diagnosisLinkId;
     if (value == null) return null;
     if (_diagnosisLinkId is EqualUnmodifiableListView) return _diagnosisLinkId;
@@ -4380,14 +4381,14 @@ class _$_ClaimItem extends _ClaimItem {
 
 abstract class _ClaimItem extends ClaimItem {
   factory _ClaimItem(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final PositiveInt sequence,
       @JsonKey(name: '_sequence') final Element? sequenceElement,
       required final Coding type,
       final Reference? provider,
-      final List<PositiveInt>? diagnosisLinkId,
+      final List<FhirPositiveInt>? diagnosisLinkId,
       required final Coding service,
       @JsonKey(name: '_servicedDate') final Element? servicedDateElement,
       final Date? serviceDate,
@@ -4416,7 +4417,7 @@ abstract class _ClaimItem extends ClaimItem {
   @override
   List<FhirExtension>? get modifierExtension;
   @override
-  PositiveInt get sequence;
+  FhirPositiveInt? get sequence;
   @override
   @JsonKey(name: '_sequence')
   Element? get sequenceElement;
@@ -4425,7 +4426,7 @@ abstract class _ClaimItem extends ClaimItem {
   @override
   Reference? get provider;
   @override
-  List<PositiveInt>? get diagnosisLinkId;
+  List<FhirPositiveInt>? get diagnosisLinkId;
   @override
   Coding get service;
   @override
@@ -4475,7 +4476,7 @@ mixin _$ClaimItemDetail {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  PositiveInt get sequence => throw _privateConstructorUsedError;
+  FhirPositiveInt? get sequence => throw _privateConstructorUsedError;
   @JsonKey(name: '_sequence')
   Element? get sequenceElement => throw _privateConstructorUsedError;
   Coding get type => throw _privateConstructorUsedError;
@@ -4507,7 +4508,7 @@ abstract class $ClaimItemDetailCopyWith<$Res> {
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      PositiveInt sequence,
+      FhirPositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       Coding type,
       Coding service,
@@ -4724,7 +4725,7 @@ abstract class _$$_ClaimItemDetailCopyWith<$Res>
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      PositiveInt sequence,
+      FhirPositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       Coding type,
       Coding service,
@@ -4875,7 +4876,7 @@ class _$_ClaimItemDetail extends _ClaimItemDetail {
       _$$_ClaimItemDetailFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -5003,7 +5004,7 @@ class _$_ClaimItemDetail extends _ClaimItemDetail {
 
 abstract class _ClaimItemDetail extends ClaimItemDetail {
   factory _ClaimItemDetail(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final PositiveInt sequence,
@@ -5031,7 +5032,7 @@ abstract class _ClaimItemDetail extends ClaimItemDetail {
   @override
   List<FhirExtension>? get modifierExtension;
   @override
-  PositiveInt get sequence;
+  FhirPositiveInt? get sequence;
   @override
   @JsonKey(name: '_sequence')
   Element? get sequenceElement;
@@ -5073,7 +5074,7 @@ mixin _$ClaimDetailSubDetail {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  PositiveInt get sequence => throw _privateConstructorUsedError;
+  FhirPositiveInt? get sequence => throw _privateConstructorUsedError;
   @JsonKey(name: '_sequence')
   Element? get sequenceElement => throw _privateConstructorUsedError;
   Coding get type => throw _privateConstructorUsedError;
@@ -5103,7 +5104,7 @@ abstract class $ClaimDetailSubDetailCopyWith<$Res> {
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      PositiveInt sequence,
+      FhirPositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       Coding type,
       Coding service,
@@ -5315,7 +5316,7 @@ abstract class _$$_ClaimDetailSubDetailCopyWith<$Res>
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      PositiveInt sequence,
+      FhirPositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       Coding type,
       Coding service,
@@ -5458,7 +5459,7 @@ class _$_ClaimDetailSubDetail extends _ClaimDetailSubDetail {
       _$$_ClaimDetailSubDetailFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -5575,7 +5576,7 @@ class _$_ClaimDetailSubDetail extends _ClaimDetailSubDetail {
 
 abstract class _ClaimDetailSubDetail extends ClaimDetailSubDetail {
   factory _ClaimDetailSubDetail(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final PositiveInt sequence,
@@ -5602,7 +5603,7 @@ abstract class _ClaimDetailSubDetail extends ClaimDetailSubDetail {
   @override
   List<FhirExtension>? get modifierExtension;
   @override
-  PositiveInt get sequence;
+  FhirPositiveInt? get sequence;
   @override
   @JsonKey(name: '_sequence')
   Element? get sequenceElement;
@@ -5815,7 +5816,7 @@ class _$_ClaimItemProsthesis extends _ClaimItemProsthesis {
       _$$_ClaimItemProsthesisFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -5895,7 +5896,7 @@ class _$_ClaimItemProsthesis extends _ClaimItemProsthesis {
 
 abstract class _ClaimItemProsthesis extends ClaimItemProsthesis {
   factory _ClaimItemProsthesis(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final FhirBoolean? initial,
@@ -6120,7 +6121,7 @@ class _$_ClaimMissingTeeth extends _ClaimMissingTeeth {
       _$$_ClaimMissingTeethFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -6199,7 +6200,7 @@ class _$_ClaimMissingTeeth extends _ClaimMissingTeeth {
 
 abstract class _ClaimMissingTeeth extends ClaimMissingTeeth {
   factory _ClaimMissingTeeth(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final Coding tooth,
@@ -6238,7 +6239,7 @@ mixin _$ClaimResponse {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.ClaimResponse)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
   FhirId? get id => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
@@ -6304,7 +6305,7 @@ abstract class $ClaimResponseCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ClaimResponse)
           Dstu2ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -6902,7 +6903,7 @@ abstract class _$$_ClaimResponseCopyWith<$Res>
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ClaimResponse)
           Dstu2ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -7294,7 +7295,7 @@ class _$_ClaimResponse extends _ClaimResponse {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.ClaimResponse)
   final Dstu2ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -7601,7 +7602,7 @@ abstract class _ClaimResponse extends ClaimResponse {
   factory _ClaimResponse(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ClaimResponse)
           final Dstu2ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -7660,7 +7661,7 @@ abstract class _ClaimResponse extends ClaimResponse {
   @override
   FhirId? get id;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
@@ -7764,8 +7765,8 @@ mixin _$ClaimResponseItem {
       throw _privateConstructorUsedError;
   @JsonKey(name: 'fhir_comments')
   List<String>? get fhirComments => throw _privateConstructorUsedError;
-  PositiveInt get sequenceLinkId => throw _privateConstructorUsedError;
-  List<PositiveInt>? get noteNumber => throw _privateConstructorUsedError;
+  FhirPositiveInt? get sequenceLinkId => throw _privateConstructorUsedError;
+  List<FhirPositiveInt>? get noteNumber => throw _privateConstructorUsedError;
   @JsonKey(name: '_noteNumber')
   List<Element?>? get noteNumberElement => throw _privateConstructorUsedError;
   List<ClaimResponseItemAdjudication>? get adjudication =>
@@ -7790,8 +7791,8 @@ abstract class $ClaimResponseItemCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-      PositiveInt sequenceLinkId,
-      List<PositiveInt>? noteNumber,
+      FhirPositiveInt? sequenceLinkId,
+      List<FhirPositiveInt>? noteNumber,
       @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
       List<ClaimResponseItemAdjudication>? adjudication,
       List<ClaimResponseItemDetail>? detail});
@@ -7844,7 +7845,7 @@ class _$ClaimResponseItemCopyWithImpl<$Res, $Val extends ClaimResponseItem>
       noteNumber: freezed == noteNumber
           ? _value.noteNumber
           : noteNumber // ignore: cast_nullable_to_non_nullable
-              as List<PositiveInt>?,
+              as List<FhirPositiveInt>?,
       noteNumberElement: freezed == noteNumberElement
           ? _value.noteNumberElement
           : noteNumberElement // ignore: cast_nullable_to_non_nullable
@@ -7874,8 +7875,8 @@ abstract class _$$_ClaimResponseItemCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-      PositiveInt sequenceLinkId,
-      List<PositiveInt>? noteNumber,
+      FhirPositiveInt? sequenceLinkId,
+      List<FhirPositiveInt>? noteNumber,
       @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
       List<ClaimResponseItemAdjudication>? adjudication,
       List<ClaimResponseItemDetail>? detail});
@@ -7926,7 +7927,7 @@ class __$$_ClaimResponseItemCopyWithImpl<$Res>
       noteNumber: freezed == noteNumber
           ? _value._noteNumber
           : noteNumber // ignore: cast_nullable_to_non_nullable
-              as List<PositiveInt>?,
+              as List<FhirPositiveInt>?,
       noteNumberElement: freezed == noteNumberElement
           ? _value._noteNumberElement
           : noteNumberElement // ignore: cast_nullable_to_non_nullable
@@ -7952,7 +7953,7 @@ class _$_ClaimResponseItem extends _ClaimResponseItem {
       final List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
       required this.sequenceLinkId,
-      final List<PositiveInt>? noteNumber,
+      final List<FhirPositiveInt>? noteNumber,
       @JsonKey(name: '_noteNumber') final List<Element?>? noteNumberElement,
       final List<ClaimResponseItemAdjudication>? adjudication,
       final List<ClaimResponseItemDetail>? detail})
@@ -7969,7 +7970,7 @@ class _$_ClaimResponseItem extends _ClaimResponseItem {
       _$$_ClaimResponseItemFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -8005,9 +8006,9 @@ class _$_ClaimResponseItem extends _ClaimResponseItem {
 
   @override
   final PositiveInt sequenceLinkId;
-  final List<PositiveInt>? _noteNumber;
+  final List<FhirPositiveInt>? _noteNumber;
   @override
-  List<PositiveInt>? get noteNumber {
+  List<FhirPositiveInt>? get noteNumber {
     final value = _noteNumber;
     if (value == null) return null;
     if (_noteNumber is EqualUnmodifiableListView) return _noteNumber;
@@ -8106,12 +8107,12 @@ class _$_ClaimResponseItem extends _ClaimResponseItem {
 
 abstract class _ClaimResponseItem extends ClaimResponseItem {
   factory _ClaimResponseItem(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
       required final PositiveInt sequenceLinkId,
-      final List<PositiveInt>? noteNumber,
+      final List<FhirPositiveInt>? noteNumber,
       @JsonKey(name: '_noteNumber') final List<Element?>? noteNumberElement,
       final List<ClaimResponseItemAdjudication>? adjudication,
       final List<ClaimResponseItemDetail>? detail}) = _$_ClaimResponseItem;
@@ -8131,9 +8132,9 @@ abstract class _ClaimResponseItem extends ClaimResponseItem {
   @JsonKey(name: 'fhir_comments')
   List<String>? get fhirComments;
   @override
-  PositiveInt get sequenceLinkId;
+  FhirPositiveInt? get sequenceLinkId;
   @override
-  List<PositiveInt>? get noteNumber;
+  List<FhirPositiveInt>? get noteNumber;
   @override
   @JsonKey(name: '_noteNumber')
   List<Element?>? get noteNumberElement;
@@ -8380,7 +8381,7 @@ class _$_ClaimResponseItemAdjudication extends _ClaimResponseItemAdjudication {
       _$$_ClaimResponseItemAdjudicationFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -8465,7 +8466,7 @@ class _$_ClaimResponseItemAdjudication extends _ClaimResponseItemAdjudication {
 abstract class _ClaimResponseItemAdjudication
     extends ClaimResponseItemAdjudication {
   factory _ClaimResponseItemAdjudication(
-          {final Id? id,
+          {final FhirId? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           required final Coding code,
@@ -8512,7 +8513,7 @@ mixin _$ClaimResponseItemDetail {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  PositiveInt get sequenceLinkId => throw _privateConstructorUsedError;
+  FhirPositiveInt? get sequenceLinkId => throw _privateConstructorUsedError;
   List<ClaimResponseItemAdjudication>? get adjudication =>
       throw _privateConstructorUsedError;
   List<ClaimResponseDetailSubDetail>? get subDetail =>
@@ -8534,7 +8535,7 @@ abstract class $ClaimResponseItemDetailCopyWith<$Res> {
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      PositiveInt sequenceLinkId,
+      FhirPositiveInt? sequenceLinkId,
       List<ClaimResponseItemAdjudication>? adjudication,
       List<ClaimResponseDetailSubDetail>? subDetail});
 }
@@ -8601,7 +8602,7 @@ abstract class _$$_ClaimResponseItemDetailCopyWith<$Res>
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      PositiveInt sequenceLinkId,
+      FhirPositiveInt? sequenceLinkId,
       List<ClaimResponseItemAdjudication>? adjudication,
       List<ClaimResponseDetailSubDetail>? subDetail});
 }
@@ -8674,7 +8675,7 @@ class _$_ClaimResponseItemDetail extends _ClaimResponseItemDetail {
       _$$_ClaimResponseItemDetailFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -8771,7 +8772,7 @@ class _$_ClaimResponseItemDetail extends _ClaimResponseItemDetail {
 
 abstract class _ClaimResponseItemDetail extends ClaimResponseItemDetail {
   factory _ClaimResponseItemDetail(
-          {final Id? id,
+          {final FhirId? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           required final PositiveInt sequenceLinkId,
@@ -8791,7 +8792,7 @@ abstract class _ClaimResponseItemDetail extends ClaimResponseItemDetail {
   @override
   List<FhirExtension>? get modifierExtension;
   @override
-  PositiveInt get sequenceLinkId;
+  FhirPositiveInt? get sequenceLinkId;
   @override
   List<ClaimResponseItemAdjudication>? get adjudication;
   @override
@@ -8814,7 +8815,7 @@ mixin _$ClaimResponseDetailSubDetail {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  PositiveInt get sequenceLinkId => throw _privateConstructorUsedError;
+  FhirPositiveInt? get sequenceLinkId => throw _privateConstructorUsedError;
   List<ClaimResponseItemAdjudication>? get adjudication =>
       throw _privateConstructorUsedError;
 
@@ -8836,7 +8837,7 @@ abstract class $ClaimResponseDetailSubDetailCopyWith<$Res> {
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      PositiveInt sequenceLinkId,
+      FhirPositiveInt? sequenceLinkId,
       List<ClaimResponseItemAdjudication>? adjudication});
 }
 
@@ -8898,7 +8899,7 @@ abstract class _$$_ClaimResponseDetailSubDetailCopyWith<$Res>
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      PositiveInt sequenceLinkId,
+      FhirPositiveInt? sequenceLinkId,
       List<ClaimResponseItemAdjudication>? adjudication});
 }
 
@@ -8964,7 +8965,7 @@ class _$_ClaimResponseDetailSubDetail extends _ClaimResponseDetailSubDetail {
       _$$_ClaimResponseDetailSubDetailFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -9048,7 +9049,7 @@ class _$_ClaimResponseDetailSubDetail extends _ClaimResponseDetailSubDetail {
 abstract class _ClaimResponseDetailSubDetail
     extends ClaimResponseDetailSubDetail {
   factory _ClaimResponseDetailSubDetail(
-          {final Id? id,
+          {final FhirId? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           required final PositiveInt sequenceLinkId,
@@ -9067,7 +9068,7 @@ abstract class _ClaimResponseDetailSubDetail
   @override
   List<FhirExtension>? get modifierExtension;
   @override
-  PositiveInt get sequenceLinkId;
+  FhirPositiveInt? get sequenceLinkId;
   @override
   List<ClaimResponseItemAdjudication>? get adjudication;
   @override
@@ -9087,10 +9088,12 @@ mixin _$ClaimResponseAddItem {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  List<PositiveInt>? get sequenceLinkId => throw _privateConstructorUsedError;
+  List<FhirPositiveInt>? get sequenceLinkId =>
+      throw _privateConstructorUsedError;
   Coding get service => throw _privateConstructorUsedError;
   Quantity? get fee => throw _privateConstructorUsedError;
-  List<PositiveInt>? get noteNumberLinkId => throw _privateConstructorUsedError;
+  List<FhirPositiveInt>? get noteNumberLinkId =>
+      throw _privateConstructorUsedError;
   List<ClaimResponseItemAdjudication>? get adjudication =>
       throw _privateConstructorUsedError;
   ClaimResponseAddItemDetail? get detail => throw _privateConstructorUsedError;
@@ -9111,10 +9114,10 @@ abstract class $ClaimResponseAddItemCopyWith<$Res> {
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      List<PositiveInt>? sequenceLinkId,
+      List<FhirPositiveInt>? sequenceLinkId,
       Coding service,
       Quantity? fee,
-      List<PositiveInt>? noteNumberLinkId,
+      List<FhirPositiveInt>? noteNumberLinkId,
       List<ClaimResponseItemAdjudication>? adjudication,
       ClaimResponseAddItemDetail? detail});
 
@@ -9163,7 +9166,7 @@ class _$ClaimResponseAddItemCopyWithImpl<$Res,
       sequenceLinkId: freezed == sequenceLinkId
           ? _value.sequenceLinkId
           : sequenceLinkId // ignore: cast_nullable_to_non_nullable
-              as List<PositiveInt>?,
+              as List<FhirPositiveInt>?,
       service: null == service
           ? _value.service
           : service // ignore: cast_nullable_to_non_nullable
@@ -9175,7 +9178,7 @@ class _$ClaimResponseAddItemCopyWithImpl<$Res,
       noteNumberLinkId: freezed == noteNumberLinkId
           ? _value.noteNumberLinkId
           : noteNumberLinkId // ignore: cast_nullable_to_non_nullable
-              as List<PositiveInt>?,
+              as List<FhirPositiveInt>?,
       adjudication: freezed == adjudication
           ? _value.adjudication
           : adjudication // ignore: cast_nullable_to_non_nullable
@@ -9232,10 +9235,10 @@ abstract class _$$_ClaimResponseAddItemCopyWith<$Res>
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      List<PositiveInt>? sequenceLinkId,
+      List<FhirPositiveInt>? sequenceLinkId,
       Coding service,
       Quantity? fee,
-      List<PositiveInt>? noteNumberLinkId,
+      List<FhirPositiveInt>? noteNumberLinkId,
       List<ClaimResponseItemAdjudication>? adjudication,
       ClaimResponseAddItemDetail? detail});
 
@@ -9284,7 +9287,7 @@ class __$$_ClaimResponseAddItemCopyWithImpl<$Res>
       sequenceLinkId: freezed == sequenceLinkId
           ? _value._sequenceLinkId
           : sequenceLinkId // ignore: cast_nullable_to_non_nullable
-              as List<PositiveInt>?,
+              as List<FhirPositiveInt>?,
       service: null == service
           ? _value.service
           : service // ignore: cast_nullable_to_non_nullable
@@ -9296,7 +9299,7 @@ class __$$_ClaimResponseAddItemCopyWithImpl<$Res>
       noteNumberLinkId: freezed == noteNumberLinkId
           ? _value._noteNumberLinkId
           : noteNumberLinkId // ignore: cast_nullable_to_non_nullable
-              as List<PositiveInt>?,
+              as List<FhirPositiveInt>?,
       adjudication: freezed == adjudication
           ? _value._adjudication
           : adjudication // ignore: cast_nullable_to_non_nullable
@@ -9316,10 +9319,10 @@ class _$_ClaimResponseAddItem extends _ClaimResponseAddItem {
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final List<PositiveInt>? sequenceLinkId,
+      final List<FhirPositiveInt>? sequenceLinkId,
       required this.service,
       this.fee,
-      final List<PositiveInt>? noteNumberLinkId,
+      final List<FhirPositiveInt>? noteNumberLinkId,
       final List<ClaimResponseItemAdjudication>? adjudication,
       this.detail})
       : _extension_ = extension_,
@@ -9333,7 +9336,7 @@ class _$_ClaimResponseAddItem extends _ClaimResponseAddItem {
       _$$_ClaimResponseAddItemFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -9356,9 +9359,9 @@ class _$_ClaimResponseAddItem extends _ClaimResponseAddItem {
     return EqualUnmodifiableListView(value);
   }
 
-  final List<PositiveInt>? _sequenceLinkId;
+  final List<FhirPositiveInt>? _sequenceLinkId;
   @override
-  List<PositiveInt>? get sequenceLinkId {
+  List<FhirPositiveInt>? get sequenceLinkId {
     final value = _sequenceLinkId;
     if (value == null) return null;
     if (_sequenceLinkId is EqualUnmodifiableListView) return _sequenceLinkId;
@@ -9370,9 +9373,9 @@ class _$_ClaimResponseAddItem extends _ClaimResponseAddItem {
   final Coding service;
   @override
   final Quantity? fee;
-  final List<PositiveInt>? _noteNumberLinkId;
+  final List<FhirPositiveInt>? _noteNumberLinkId;
   @override
-  List<PositiveInt>? get noteNumberLinkId {
+  List<FhirPositiveInt>? get noteNumberLinkId {
     final value = _noteNumberLinkId;
     if (value == null) return null;
     if (_noteNumberLinkId is EqualUnmodifiableListView)
@@ -9451,13 +9454,13 @@ class _$_ClaimResponseAddItem extends _ClaimResponseAddItem {
 
 abstract class _ClaimResponseAddItem extends ClaimResponseAddItem {
   factory _ClaimResponseAddItem(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final List<PositiveInt>? sequenceLinkId,
+      final List<FhirPositiveInt>? sequenceLinkId,
       required final Coding service,
       final Quantity? fee,
-      final List<PositiveInt>? noteNumberLinkId,
+      final List<FhirPositiveInt>? noteNumberLinkId,
       final List<ClaimResponseItemAdjudication>? adjudication,
       final ClaimResponseAddItemDetail? detail}) = _$_ClaimResponseAddItem;
   _ClaimResponseAddItem._() : super._();
@@ -9473,13 +9476,13 @@ abstract class _ClaimResponseAddItem extends ClaimResponseAddItem {
   @override
   List<FhirExtension>? get modifierExtension;
   @override
-  List<PositiveInt>? get sequenceLinkId;
+  List<FhirPositiveInt>? get sequenceLinkId;
   @override
   Coding get service;
   @override
   Quantity? get fee;
   @override
-  List<PositiveInt>? get noteNumberLinkId;
+  List<FhirPositiveInt>? get noteNumberLinkId;
   @override
   List<ClaimResponseItemAdjudication>? get adjudication;
   @override
@@ -9693,7 +9696,7 @@ class _$_ClaimResponseAddItemDetail extends _ClaimResponseAddItemDetail {
       _$$_ClaimResponseAddItemDetailFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -9779,7 +9782,7 @@ class _$_ClaimResponseAddItemDetail extends _ClaimResponseAddItemDetail {
 
 abstract class _ClaimResponseAddItemDetail extends ClaimResponseAddItemDetail {
   factory _ClaimResponseAddItemDetail(
-          {final Id? id,
+          {final FhirId? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           required final Coding service,
@@ -9821,9 +9824,10 @@ mixin _$ClaimResponseError {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  PositiveInt? get sequenceLinkId => throw _privateConstructorUsedError;
-  PositiveInt? get detailSequenceLinkId => throw _privateConstructorUsedError;
-  PositiveInt? get subdetailSequenceLinkId =>
+  FhirPositiveInt? get sequenceLinkId => throw _privateConstructorUsedError;
+  FhirPositiveInt? get detailSequenceLinkId =>
+      throw _privateConstructorUsedError;
+  FhirPositiveInt? get subdetailSequenceLinkId =>
       throw _privateConstructorUsedError;
   Coding get code => throw _privateConstructorUsedError;
 
@@ -9843,9 +9847,9 @@ abstract class $ClaimResponseErrorCopyWith<$Res> {
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      PositiveInt? sequenceLinkId,
-      PositiveInt? detailSequenceLinkId,
-      PositiveInt? subdetailSequenceLinkId,
+      FhirPositiveInt? sequenceLinkId,
+      FhirPositiveInt? detailSequenceLinkId,
+      FhirPositiveInt? subdetailSequenceLinkId,
       Coding code});
 
   $CodingCopyWith<$Res> get code;
@@ -9925,9 +9929,9 @@ abstract class _$$_ClaimResponseErrorCopyWith<$Res>
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      PositiveInt? sequenceLinkId,
-      PositiveInt? detailSequenceLinkId,
-      PositiveInt? subdetailSequenceLinkId,
+      FhirPositiveInt? sequenceLinkId,
+      FhirPositiveInt? detailSequenceLinkId,
+      FhirPositiveInt? subdetailSequenceLinkId,
       Coding code});
 
   @override
@@ -10005,7 +10009,7 @@ class _$_ClaimResponseError extends _ClaimResponseError {
       _$$_ClaimResponseErrorFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -10091,7 +10095,7 @@ class _$_ClaimResponseError extends _ClaimResponseError {
 
 abstract class _ClaimResponseError extends ClaimResponseError {
   factory _ClaimResponseError(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final PositiveInt? sequenceLinkId,
@@ -10111,11 +10115,11 @@ abstract class _ClaimResponseError extends ClaimResponseError {
   @override
   List<FhirExtension>? get modifierExtension;
   @override
-  PositiveInt? get sequenceLinkId;
+  FhirPositiveInt? get sequenceLinkId;
   @override
-  PositiveInt? get detailSequenceLinkId;
+  FhirPositiveInt? get detailSequenceLinkId;
   @override
-  PositiveInt? get subdetailSequenceLinkId;
+  FhirPositiveInt? get subdetailSequenceLinkId;
   @override
   Coding get code;
   @override
@@ -10135,7 +10139,7 @@ mixin _$ClaimResponseNote {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  PositiveInt? get number => throw _privateConstructorUsedError;
+  FhirPositiveInt? get number => throw _privateConstructorUsedError;
   @JsonKey(name: '_number')
   Element? get numberElement => throw _privateConstructorUsedError;
   Coding? get type => throw _privateConstructorUsedError;
@@ -10161,7 +10165,7 @@ abstract class $ClaimResponseNoteCopyWith<$Res> {
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      PositiveInt? number,
+      FhirPositiveInt? number,
       @JsonKey(name: '_number') Element? numberElement,
       Coding? type,
       @JsonKey(name: '_type') Element? typeElement,
@@ -10298,7 +10302,7 @@ abstract class _$$_ClaimResponseNoteCopyWith<$Res>
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      PositiveInt? number,
+      FhirPositiveInt? number,
       @JsonKey(name: '_number') Element? numberElement,
       Coding? type,
       @JsonKey(name: '_type') Element? typeElement,
@@ -10398,7 +10402,7 @@ class _$_ClaimResponseNote extends _ClaimResponseNote {
       _$$_ClaimResponseNoteFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -10494,7 +10498,7 @@ class _$_ClaimResponseNote extends _ClaimResponseNote {
 
 abstract class _ClaimResponseNote extends ClaimResponseNote {
   factory _ClaimResponseNote(
-          {final Id? id,
+          {final FhirId? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           final PositiveInt? number,
@@ -10517,7 +10521,7 @@ abstract class _ClaimResponseNote extends ClaimResponseNote {
   @override
   List<FhirExtension>? get modifierExtension;
   @override
-  PositiveInt? get number;
+  FhirPositiveInt? get number;
   @override
   @JsonKey(name: '_number')
   Element? get numberElement;
@@ -10549,7 +10553,7 @@ mixin _$ClaimResponseCoverage {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  PositiveInt get sequence => throw _privateConstructorUsedError;
+  FhirPositiveInt? get sequence => throw _privateConstructorUsedError;
   Boolean get focal => throw _privateConstructorUsedError;
   Reference get coverage => throw _privateConstructorUsedError;
   String? get businessArrangement => throw _privateConstructorUsedError;
@@ -10574,7 +10578,7 @@ abstract class $ClaimResponseCoverageCopyWith<$Res> {
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      PositiveInt sequence,
+      FhirPositiveInt? sequence,
       Boolean focal,
       Reference coverage,
       String? businessArrangement,
@@ -10716,7 +10720,7 @@ abstract class _$$_ClaimResponseCoverageCopyWith<$Res>
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      PositiveInt sequence,
+      FhirPositiveInt? sequence,
       Boolean focal,
       Reference coverage,
       String? businessArrangement,
@@ -10831,7 +10835,7 @@ class _$_ClaimResponseCoverage extends _ClaimResponseCoverage {
       _$$_ClaimResponseCoverageFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -10944,7 +10948,7 @@ class _$_ClaimResponseCoverage extends _ClaimResponseCoverage {
 
 abstract class _ClaimResponseCoverage extends ClaimResponseCoverage {
   factory _ClaimResponseCoverage(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final PositiveInt sequence,
@@ -10968,7 +10972,7 @@ abstract class _ClaimResponseCoverage extends ClaimResponseCoverage {
   @override
   List<FhirExtension>? get modifierExtension;
   @override
-  PositiveInt get sequence;
+  FhirPositiveInt? get sequence;
   @override
   Boolean get focal;
   @override

@@ -31,7 +31,7 @@ mixin _$CarePlan {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -68,7 +68,7 @@ mixin _$CarePlan {
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [instantiatesCanonical] The URL pointing to a FHIR-defined protocol, guideline, questionnaire or other definition that is adhered to in whole or in part by this CarePlan.
-  List<Canonical>? get instantiatesCanonical =>
+  List<FhirCanonical>? get instantiatesCanonical =>
       throw _privateConstructorUsedError;
 
   /// [instantiatesUri] The URL pointing to an externally maintained protocol, guideline, questionnaire or other definition that is adhered to in whole or in part by this CarePlan.
@@ -174,7 +174,7 @@ abstract class $CarePlanCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.CarePlan)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -187,7 +187,7 @@ abstract class $CarePlanCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      List<Canonical>? instantiatesCanonical,
+      List<FhirCanonical>? instantiatesCanonical,
       List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
           List<Element>? instantiatesUriElement,
@@ -343,7 +343,7 @@ class _$CarePlanCopyWithImpl<$Res, $Val extends CarePlan>
       instantiatesCanonical: freezed == instantiatesCanonical
           ? _value.instantiatesCanonical
           : instantiatesCanonical // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       instantiatesUri: freezed == instantiatesUri
           ? _value.instantiatesUri
           : instantiatesUri // ignore: cast_nullable_to_non_nullable
@@ -619,7 +619,7 @@ abstract class _$$_CarePlanCopyWith<$Res> implements $CarePlanCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.CarePlan)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -632,7 +632,7 @@ abstract class _$$_CarePlanCopyWith<$Res> implements $CarePlanCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      List<Canonical>? instantiatesCanonical,
+      List<FhirCanonical>? instantiatesCanonical,
       List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
           List<Element>? instantiatesUriElement,
@@ -799,7 +799,7 @@ class __$$_CarePlanCopyWithImpl<$Res>
       instantiatesCanonical: freezed == instantiatesCanonical
           ? _value._instantiatesCanonical
           : instantiatesCanonical // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       instantiatesUri: freezed == instantiatesUri
           ? _value._instantiatesUri
           : instantiatesUri // ignore: cast_nullable_to_non_nullable
@@ -932,7 +932,7 @@ class _$_CarePlan extends _CarePlan {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      final List<Canonical>? instantiatesCanonical,
+      final List<FhirCanonical>? instantiatesCanonical,
       final List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
           final List<Element>? instantiatesUriElement,
@@ -997,7 +997,7 @@ class _$_CarePlan extends _CarePlan {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -1085,11 +1085,11 @@ class _$_CarePlan extends _CarePlan {
   }
 
   /// [instantiatesCanonical] The URL pointing to a FHIR-defined protocol, guideline, questionnaire or other definition that is adhered to in whole or in part by this CarePlan.
-  final List<Canonical>? _instantiatesCanonical;
+  final List<FhirCanonical>? _instantiatesCanonical;
 
   /// [instantiatesCanonical] The URL pointing to a FHIR-defined protocol, guideline, questionnaire or other definition that is adhered to in whole or in part by this CarePlan.
   @override
-  List<Canonical>? get instantiatesCanonical {
+  List<FhirCanonical>? get instantiatesCanonical {
     final value = _instantiatesCanonical;
     if (value == null) return null;
     if (_instantiatesCanonical is EqualUnmodifiableListView)
@@ -1469,7 +1469,7 @@ abstract class _CarePlan extends CarePlan {
   factory _CarePlan(
       {@JsonKey(unknownEnumValue: R5ResourceType.CarePlan)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -1483,7 +1483,7 @@ abstract class _CarePlan extends CarePlan {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      final List<Canonical>? instantiatesCanonical,
+      final List<FhirCanonical>? instantiatesCanonical,
       final List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
           final List<Element>? instantiatesUriElement,
@@ -1536,7 +1536,7 @@ abstract class _CarePlan extends CarePlan {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when
@@ -1582,7 +1582,7 @@ abstract class _CarePlan extends CarePlan {
   @override
 
   /// [instantiatesCanonical] The URL pointing to a FHIR-defined protocol, guideline, questionnaire or other definition that is adhered to in whole or in part by this CarePlan.
-  List<Canonical>? get instantiatesCanonical;
+  List<FhirCanonical>? get instantiatesCanonical;
   @override
 
   /// [instantiatesUri] The URL pointing to an externally maintained protocol, guideline, questionnaire or other definition that is adhered to in whole or in part by this CarePlan.
@@ -2211,7 +2211,7 @@ mixin _$CarePlanPlannedActivityDetail {
   Element? get kindElement => throw _privateConstructorUsedError;
 
   /// [instantiatesCanonical] The URL pointing to a FHIR-defined protocol, guideline, questionnaire or other definition that is adhered to in whole or in part by this CarePlan activity.
-  List<Canonical>? get instantiatesCanonical =>
+  List<FhirCanonical>? get instantiatesCanonical =>
       throw _privateConstructorUsedError;
 
   /// [instantiatesUri] The URL pointing to an externally maintained protocol, guideline, questionnaire or other definition that is adhered to in whole or in part by this CarePlan activity.
@@ -2317,7 +2317,7 @@ abstract class $CarePlanPlannedActivityDetailCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       FhirCode? kind,
       @JsonKey(name: '_kind') Element? kindElement,
-      List<Canonical>? instantiatesCanonical,
+      List<FhirCanonical>? instantiatesCanonical,
       List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri') List<Element>? instantiatesUriElement,
       CodeableConcept? code,
@@ -2432,7 +2432,7 @@ class _$CarePlanPlannedActivityDetailCopyWithImpl<$Res,
       instantiatesCanonical: freezed == instantiatesCanonical
           ? _value.instantiatesCanonical
           : instantiatesCanonical // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       instantiatesUri: freezed == instantiatesUri
           ? _value.instantiatesUri
           : instantiatesUri // ignore: cast_nullable_to_non_nullable
@@ -2745,7 +2745,7 @@ abstract class _$$_CarePlanPlannedActivityDetailCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       FhirCode? kind,
       @JsonKey(name: '_kind') Element? kindElement,
-      List<Canonical>? instantiatesCanonical,
+      List<FhirCanonical>? instantiatesCanonical,
       List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri') List<Element>? instantiatesUriElement,
       CodeableConcept? code,
@@ -2875,7 +2875,7 @@ class __$$_CarePlanPlannedActivityDetailCopyWithImpl<$Res>
       instantiatesCanonical: freezed == instantiatesCanonical
           ? _value._instantiatesCanonical
           : instantiatesCanonical // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       instantiatesUri: freezed == instantiatesUri
           ? _value._instantiatesUri
           : instantiatesUri // ignore: cast_nullable_to_non_nullable
@@ -2991,7 +2991,7 @@ class _$_CarePlanPlannedActivityDetail extends _CarePlanPlannedActivityDetail {
       this.kind,
       @JsonKey(name: '_kind')
           this.kindElement,
-      final List<Canonical>? instantiatesCanonical,
+      final List<FhirCanonical>? instantiatesCanonical,
       final List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
           final List<Element>? instantiatesUriElement,
@@ -3112,11 +3112,11 @@ class _$_CarePlanPlannedActivityDetail extends _CarePlanPlannedActivityDetail {
   final Element? kindElement;
 
   /// [instantiatesCanonical] The URL pointing to a FHIR-defined protocol, guideline, questionnaire or other definition that is adhered to in whole or in part by this CarePlan activity.
-  final List<Canonical>? _instantiatesCanonical;
+  final List<FhirCanonical>? _instantiatesCanonical;
 
   /// [instantiatesCanonical] The URL pointing to a FHIR-defined protocol, guideline, questionnaire or other definition that is adhered to in whole or in part by this CarePlan activity.
   @override
-  List<Canonical>? get instantiatesCanonical {
+  List<FhirCanonical>? get instantiatesCanonical {
     final value = _instantiatesCanonical;
     if (value == null) return null;
     if (_instantiatesCanonical is EqualUnmodifiableListView)
@@ -3407,7 +3407,7 @@ abstract class _CarePlanPlannedActivityDetail
           final FhirCode? kind,
           @JsonKey(name: '_kind')
               final Element? kindElement,
-          final List<Canonical>? instantiatesCanonical,
+          final List<FhirCanonical>? instantiatesCanonical,
           final List<FhirUri>? instantiatesUri,
           @JsonKey(name: '_instantiatesUri')
               final List<Element>? instantiatesUriElement,
@@ -3487,7 +3487,7 @@ abstract class _CarePlanPlannedActivityDetail
   @override
 
   /// [instantiatesCanonical] The URL pointing to a FHIR-defined protocol, guideline, questionnaire or other definition that is adhered to in whole or in part by this CarePlan activity.
-  List<Canonical>? get instantiatesCanonical;
+  List<FhirCanonical>? get instantiatesCanonical;
   @override
 
   /// [instantiatesUri] The URL pointing to an externally maintained protocol, guideline, questionnaire or other definition that is adhered to in whole or in part by this CarePlan activity.
@@ -3617,7 +3617,7 @@ mixin _$CareTeam {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -3708,7 +3708,7 @@ abstract class $CareTeamCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.CareTeam)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -3992,7 +3992,7 @@ abstract class _$$_CareTeamCopyWith<$Res> implements $CareTeamCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.CareTeam)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -4232,7 +4232,7 @@ class _$_CareTeam extends _CareTeam {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -4521,7 +4521,7 @@ abstract class _CareTeam extends CareTeam {
   factory _CareTeam(
       {@JsonKey(unknownEnumValue: R5ResourceType.CareTeam)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -4568,7 +4568,7 @@ abstract class _CareTeam extends CareTeam {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when
@@ -5196,7 +5196,7 @@ mixin _$Goal {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -5315,7 +5315,7 @@ abstract class $GoalCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.Goal)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -5739,7 +5739,7 @@ abstract class _$$_GoalCopyWith<$Res> implements $GoalCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.Goal)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -6058,7 +6058,7 @@ class _$_Goal extends _Goal {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -6405,7 +6405,7 @@ abstract class _Goal extends Goal {
   factory _Goal(
       {@JsonKey(unknownEnumValue: R5ResourceType.Goal)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -6464,7 +6464,7 @@ abstract class _Goal extends Goal {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when
@@ -7470,7 +7470,7 @@ mixin _$NutritionIntake {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -7507,7 +7507,7 @@ mixin _$NutritionIntake {
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [instantiatesCanonical] Instantiates FHIR protocol or definition.
-  List<Canonical>? get instantiatesCanonical =>
+  List<FhirCanonical>? get instantiatesCanonical =>
       throw _privateConstructorUsedError;
 
   /// [instantiatesUri] Instantiates external protocol or definition.
@@ -7610,7 +7610,7 @@ abstract class $NutritionIntakeCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.NutritionIntake)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -7623,7 +7623,7 @@ abstract class $NutritionIntakeCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      List<Canonical>? instantiatesCanonical,
+      List<FhirCanonical>? instantiatesCanonical,
       List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
           List<Element>? instantiatesUriElement,
@@ -7775,7 +7775,7 @@ class _$NutritionIntakeCopyWithImpl<$Res, $Val extends NutritionIntake>
       instantiatesCanonical: freezed == instantiatesCanonical
           ? _value.instantiatesCanonical
           : instantiatesCanonical // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       instantiatesUri: freezed == instantiatesUri
           ? _value.instantiatesUri
           : instantiatesUri // ignore: cast_nullable_to_non_nullable
@@ -8056,7 +8056,7 @@ abstract class _$$_NutritionIntakeCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R5ResourceType.NutritionIntake)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -8069,7 +8069,7 @@ abstract class _$$_NutritionIntakeCopyWith<$Res>
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      List<Canonical>? instantiatesCanonical,
+      List<FhirCanonical>? instantiatesCanonical,
       List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
           List<Element>? instantiatesUriElement,
@@ -8233,7 +8233,7 @@ class __$$_NutritionIntakeCopyWithImpl<$Res>
       instantiatesCanonical: freezed == instantiatesCanonical
           ? _value._instantiatesCanonical
           : instantiatesCanonical // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       instantiatesUri: freezed == instantiatesUri
           ? _value._instantiatesUri
           : instantiatesUri // ignore: cast_nullable_to_non_nullable
@@ -8358,7 +8358,7 @@ class _$_NutritionIntake extends _NutritionIntake {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      final List<Canonical>? instantiatesCanonical,
+      final List<FhirCanonical>? instantiatesCanonical,
       final List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
           final List<Element>? instantiatesUriElement,
@@ -8418,7 +8418,7 @@ class _$_NutritionIntake extends _NutritionIntake {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -8506,11 +8506,11 @@ class _$_NutritionIntake extends _NutritionIntake {
   }
 
   /// [instantiatesCanonical] Instantiates FHIR protocol or definition.
-  final List<Canonical>? _instantiatesCanonical;
+  final List<FhirCanonical>? _instantiatesCanonical;
 
   /// [instantiatesCanonical] Instantiates FHIR protocol or definition.
   @override
-  List<Canonical>? get instantiatesCanonical {
+  List<FhirCanonical>? get instantiatesCanonical {
     final value = _instantiatesCanonical;
     if (value == null) return null;
     if (_instantiatesCanonical is EqualUnmodifiableListView)
@@ -8863,7 +8863,7 @@ abstract class _NutritionIntake extends NutritionIntake {
   factory _NutritionIntake(
       {@JsonKey(unknownEnumValue: R5ResourceType.NutritionIntake)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -8877,7 +8877,7 @@ abstract class _NutritionIntake extends NutritionIntake {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      final List<Canonical>? instantiatesCanonical,
+      final List<FhirCanonical>? instantiatesCanonical,
       final List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
           final List<Element>? instantiatesUriElement,
@@ -8928,7 +8928,7 @@ abstract class _NutritionIntake extends NutritionIntake {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when
@@ -8974,7 +8974,7 @@ abstract class _NutritionIntake extends NutritionIntake {
   @override
 
   /// [instantiatesCanonical] Instantiates FHIR protocol or definition.
-  List<Canonical>? get instantiatesCanonical;
+  List<FhirCanonical>? get instantiatesCanonical;
   @override
 
   /// [instantiatesUri] Instantiates external protocol or definition.
@@ -10505,7 +10505,7 @@ mixin _$NutritionOrder {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -10542,7 +10542,7 @@ mixin _$NutritionOrder {
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [instantiatesCanonical] The URL pointing to a FHIR-defined protocol, guideline, orderset or other definition that is adhered to in whole or in part by this NutritionOrder.
-  List<Canonical>? get instantiatesCanonical =>
+  List<FhirCanonical>? get instantiatesCanonical =>
       throw _privateConstructorUsedError;
 
   /// [instantiatesUri] The URL pointing to an externally maintained protocol, guideline, orderset or other definition that is adhered to in whole or in part by this NutritionOrder.
@@ -10655,7 +10655,7 @@ abstract class $NutritionOrderCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.NutritionOrder)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -10668,7 +10668,7 @@ abstract class $NutritionOrderCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      List<Canonical>? instantiatesCanonical,
+      List<FhirCanonical>? instantiatesCanonical,
       List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
           List<Element>? instantiatesUriElement,
@@ -10826,7 +10826,7 @@ class _$NutritionOrderCopyWithImpl<$Res, $Val extends NutritionOrder>
       instantiatesCanonical: freezed == instantiatesCanonical
           ? _value.instantiatesCanonical
           : instantiatesCanonical // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       instantiatesUri: freezed == instantiatesUri
           ? _value.instantiatesUri
           : instantiatesUri // ignore: cast_nullable_to_non_nullable
@@ -11116,7 +11116,7 @@ abstract class _$$_NutritionOrderCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R5ResourceType.NutritionOrder)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -11129,7 +11129,7 @@ abstract class _$$_NutritionOrderCopyWith<$Res>
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      List<Canonical>? instantiatesCanonical,
+      List<FhirCanonical>? instantiatesCanonical,
       List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
           List<Element>? instantiatesUriElement,
@@ -11299,7 +11299,7 @@ class __$$_NutritionOrderCopyWithImpl<$Res>
       instantiatesCanonical: freezed == instantiatesCanonical
           ? _value._instantiatesCanonical
           : instantiatesCanonical // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       instantiatesUri: freezed == instantiatesUri
           ? _value._instantiatesUri
           : instantiatesUri // ignore: cast_nullable_to_non_nullable
@@ -11432,7 +11432,7 @@ class _$_NutritionOrder extends _NutritionOrder {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      final List<Canonical>? instantiatesCanonical,
+      final List<FhirCanonical>? instantiatesCanonical,
       final List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
           final List<Element>? instantiatesUriElement,
@@ -11497,7 +11497,7 @@ class _$_NutritionOrder extends _NutritionOrder {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -11585,11 +11585,11 @@ class _$_NutritionOrder extends _NutritionOrder {
   }
 
   /// [instantiatesCanonical] The URL pointing to a FHIR-defined protocol, guideline, orderset or other definition that is adhered to in whole or in part by this NutritionOrder.
-  final List<Canonical>? _instantiatesCanonical;
+  final List<FhirCanonical>? _instantiatesCanonical;
 
   /// [instantiatesCanonical] The URL pointing to a FHIR-defined protocol, guideline, orderset or other definition that is adhered to in whole or in part by this NutritionOrder.
   @override
-  List<Canonical>? get instantiatesCanonical {
+  List<FhirCanonical>? get instantiatesCanonical {
     final value = _instantiatesCanonical;
     if (value == null) return null;
     if (_instantiatesCanonical is EqualUnmodifiableListView)
@@ -11975,7 +11975,7 @@ abstract class _NutritionOrder extends NutritionOrder {
   factory _NutritionOrder(
       {@JsonKey(unknownEnumValue: R5ResourceType.NutritionOrder)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -11989,7 +11989,7 @@ abstract class _NutritionOrder extends NutritionOrder {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      final List<Canonical>? instantiatesCanonical,
+      final List<FhirCanonical>? instantiatesCanonical,
       final List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
           final List<Element>? instantiatesUriElement,
@@ -12044,7 +12044,7 @@ abstract class _NutritionOrder extends NutritionOrder {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when
@@ -12090,7 +12090,7 @@ abstract class _NutritionOrder extends NutritionOrder {
   @override
 
   /// [instantiatesCanonical] The URL pointing to a FHIR-defined protocol, guideline, orderset or other definition that is adhered to in whole or in part by this NutritionOrder.
-  List<Canonical>? get instantiatesCanonical;
+  List<FhirCanonical>? get instantiatesCanonical;
   @override
 
   /// [instantiatesUri] The URL pointing to an externally maintained protocol, guideline, orderset or other definition that is adhered to in whole or in part by this NutritionOrder.
@@ -17237,7 +17237,7 @@ mixin _$RequestOrchestration {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -17274,7 +17274,7 @@ mixin _$RequestOrchestration {
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [instantiatesCanonical] A canonical URL referencing a FHIR-defined protocol, guideline, orderset or other definition that is adhered to in whole or in part by this request.
-  List<Canonical>? get instantiatesCanonical =>
+  List<FhirCanonical>? get instantiatesCanonical =>
       throw _privateConstructorUsedError;
 
   /// [instantiatesCanonicalElement] ("_instantiatesCanonical") Extensions for instantiatesCanonical
@@ -17368,7 +17368,7 @@ abstract class $RequestOrchestrationCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.RequestOrchestration)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -17381,7 +17381,7 @@ abstract class $RequestOrchestrationCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      List<Canonical>? instantiatesCanonical,
+      List<FhirCanonical>? instantiatesCanonical,
       @JsonKey(name: '_instantiatesCanonical')
           List<Element>? instantiatesCanonicalElement,
       List<FhirUri>? instantiatesUri,
@@ -17528,7 +17528,7 @@ class _$RequestOrchestrationCopyWithImpl<$Res,
       instantiatesCanonical: freezed == instantiatesCanonical
           ? _value.instantiatesCanonical
           : instantiatesCanonical // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       instantiatesCanonicalElement: freezed == instantiatesCanonicalElement
           ? _value.instantiatesCanonicalElement
           : instantiatesCanonicalElement // ignore: cast_nullable_to_non_nullable
@@ -17789,7 +17789,7 @@ abstract class _$$_RequestOrchestrationCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R5ResourceType.RequestOrchestration)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -17802,7 +17802,7 @@ abstract class _$$_RequestOrchestrationCopyWith<$Res>
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      List<Canonical>? instantiatesCanonical,
+      List<FhirCanonical>? instantiatesCanonical,
       @JsonKey(name: '_instantiatesCanonical')
           List<Element>? instantiatesCanonicalElement,
       List<FhirUri>? instantiatesUri,
@@ -17959,7 +17959,7 @@ class __$$_RequestOrchestrationCopyWithImpl<$Res>
       instantiatesCanonical: freezed == instantiatesCanonical
           ? _value._instantiatesCanonical
           : instantiatesCanonical // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       instantiatesCanonicalElement: freezed == instantiatesCanonicalElement
           ? _value._instantiatesCanonicalElement
           : instantiatesCanonicalElement // ignore: cast_nullable_to_non_nullable
@@ -18072,7 +18072,7 @@ class _$_RequestOrchestration extends _RequestOrchestration {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      final List<Canonical>? instantiatesCanonical,
+      final List<FhirCanonical>? instantiatesCanonical,
       @JsonKey(name: '_instantiatesCanonical')
           final List<Element>? instantiatesCanonicalElement,
       final List<FhirUri>? instantiatesUri,
@@ -18128,7 +18128,7 @@ class _$_RequestOrchestration extends _RequestOrchestration {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -18216,11 +18216,11 @@ class _$_RequestOrchestration extends _RequestOrchestration {
   }
 
   /// [instantiatesCanonical] A canonical URL referencing a FHIR-defined protocol, guideline, orderset or other definition that is adhered to in whole or in part by this request.
-  final List<Canonical>? _instantiatesCanonical;
+  final List<FhirCanonical>? _instantiatesCanonical;
 
   /// [instantiatesCanonical] A canonical URL referencing a FHIR-defined protocol, guideline, orderset or other definition that is adhered to in whole or in part by this request.
   @override
-  List<Canonical>? get instantiatesCanonical {
+  List<FhirCanonical>? get instantiatesCanonical {
     final value = _instantiatesCanonical;
     if (value == null) return null;
     if (_instantiatesCanonical is EqualUnmodifiableListView)
@@ -18535,7 +18535,7 @@ abstract class _RequestOrchestration extends RequestOrchestration {
   factory _RequestOrchestration(
           {@JsonKey(unknownEnumValue: R5ResourceType.RequestOrchestration)
               final R5ResourceType resourceType,
-          final Id? id,
+          final FhirId? id,
           final Meta? meta,
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
@@ -18549,7 +18549,7 @@ abstract class _RequestOrchestration extends RequestOrchestration {
               final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           final List<Identifier>? identifier,
-          final List<Canonical>? instantiatesCanonical,
+          final List<FhirCanonical>? instantiatesCanonical,
           @JsonKey(name: '_instantiatesCanonical')
               final List<Element>? instantiatesCanonicalElement,
           final List<FhirUri>? instantiatesUri,
@@ -18599,7 +18599,7 @@ abstract class _RequestOrchestration extends RequestOrchestration {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when
@@ -18645,7 +18645,7 @@ abstract class _RequestOrchestration extends RequestOrchestration {
   @override
 
   /// [instantiatesCanonical] A canonical URL referencing a FHIR-defined protocol, guideline, orderset or other definition that is adhered to in whole or in part by this request.
-  List<Canonical>? get instantiatesCanonical;
+  List<FhirCanonical>? get instantiatesCanonical;
   @override
 
   /// [instantiatesCanonicalElement] ("_instantiatesCanonical") Extensions for instantiatesCanonical
@@ -21667,7 +21667,7 @@ class _$_RequestOrchestrationInput extends _RequestOrchestrationInput {
 
   /// [relatedData] Points to an existing input or output element that provides data to this input.
   @override
-  final Id? relatedData;
+  final FhirId? relatedData;
 
   /// [relatedDataElement] ("_relatedData") Extensions for relatedData
   @override
@@ -21736,7 +21736,7 @@ abstract class _RequestOrchestrationInput extends RequestOrchestrationInput {
           final String? title,
           @JsonKey(name: '_title') final Element? titleElement,
           final DataRequirement? requirement,
-          final Id? relatedData,
+          final FhirId? relatedData,
           @JsonKey(name: '_relatedData') final Element? relatedDataElement}) =
       _$_RequestOrchestrationInput;
   _RequestOrchestrationInput._() : super._();
@@ -22680,7 +22680,7 @@ class _$_RequestOrchestrationRelatedAction
 
   /// [targetId] The element id of the target related action.
   @override
-  final Id? targetId;
+  final FhirId? targetId;
 
   /// [targetIdElement] ("_targetId") Extensions for targetId
   @override
@@ -22769,7 +22769,7 @@ abstract class _RequestOrchestrationRelatedAction
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final Id? targetId,
+      final FhirId? targetId,
       @JsonKey(name: '_targetId') final Element? targetIdElement,
       final FhirCode? relationship,
       @JsonKey(name: '_relationship') final Element? relationshipElement,
@@ -23948,7 +23948,7 @@ mixin _$RiskAssessment {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -24061,7 +24061,7 @@ abstract class $RiskAssessmentCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.RiskAssessment)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -24489,7 +24489,7 @@ abstract class _$$_RiskAssessmentCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R5ResourceType.RiskAssessment)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -24794,7 +24794,7 @@ class _$_RiskAssessment extends _RiskAssessment {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -25114,7 +25114,7 @@ abstract class _RiskAssessment extends RiskAssessment {
   factory _RiskAssessment(
       {@JsonKey(unknownEnumValue: R5ResourceType.RiskAssessment)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -25170,7 +25170,7 @@ abstract class _RiskAssessment extends RiskAssessment {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when
@@ -26059,7 +26059,7 @@ mixin _$ServiceRequest {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -26096,7 +26096,7 @@ mixin _$ServiceRequest {
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [instantiatesCanonical] The URL pointing to a FHIR-defined protocol, guideline, orderset or other definition that is adhered to in whole or in part by this ServiceRequest.
-  List<Canonical>? get instantiatesCanonical =>
+  List<FhirCanonical>? get instantiatesCanonical =>
       throw _privateConstructorUsedError;
 
   /// [instantiatesUri] The URL pointing to an externally maintained protocol, guideline, orderset or other definition that is adhered to in whole or in part by this ServiceRequest.
@@ -26261,7 +26261,7 @@ abstract class $ServiceRequestCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.ServiceRequest)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -26274,7 +26274,7 @@ abstract class $ServiceRequestCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      List<Canonical>? instantiatesCanonical,
+      List<FhirCanonical>? instantiatesCanonical,
       List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
           List<Element>? instantiatesUriElement,
@@ -26481,7 +26481,7 @@ class _$ServiceRequestCopyWithImpl<$Res, $Val extends ServiceRequest>
       instantiatesCanonical: freezed == instantiatesCanonical
           ? _value.instantiatesCanonical
           : instantiatesCanonical // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       instantiatesUri: freezed == instantiatesUri
           ? _value.instantiatesUri
           : instantiatesUri // ignore: cast_nullable_to_non_nullable
@@ -26975,7 +26975,7 @@ abstract class _$$_ServiceRequestCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R5ResourceType.ServiceRequest)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -26988,7 +26988,7 @@ abstract class _$$_ServiceRequestCopyWith<$Res>
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      List<Canonical>? instantiatesCanonical,
+      List<FhirCanonical>? instantiatesCanonical,
       List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
           List<Element>? instantiatesUriElement,
@@ -27218,7 +27218,7 @@ class __$$_ServiceRequestCopyWithImpl<$Res>
       instantiatesCanonical: freezed == instantiatesCanonical
           ? _value._instantiatesCanonical
           : instantiatesCanonical // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       instantiatesUri: freezed == instantiatesUri
           ? _value._instantiatesUri
           : instantiatesUri // ignore: cast_nullable_to_non_nullable
@@ -27423,7 +27423,7 @@ class _$_ServiceRequest extends _ServiceRequest {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      final List<Canonical>? instantiatesCanonical,
+      final List<FhirCanonical>? instantiatesCanonical,
       final List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
           final List<Element>? instantiatesUriElement,
@@ -27512,7 +27512,7 @@ class _$_ServiceRequest extends _ServiceRequest {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -27600,11 +27600,11 @@ class _$_ServiceRequest extends _ServiceRequest {
   }
 
   /// [instantiatesCanonical] The URL pointing to a FHIR-defined protocol, guideline, orderset or other definition that is adhered to in whole or in part by this ServiceRequest.
-  final List<Canonical>? _instantiatesCanonical;
+  final List<FhirCanonical>? _instantiatesCanonical;
 
   /// [instantiatesCanonical] The URL pointing to a FHIR-defined protocol, guideline, orderset or other definition that is adhered to in whole or in part by this ServiceRequest.
   @override
-  List<Canonical>? get instantiatesCanonical {
+  List<FhirCanonical>? get instantiatesCanonical {
     final value = _instantiatesCanonical;
     if (value == null) return null;
     if (_instantiatesCanonical is EqualUnmodifiableListView)
@@ -28139,7 +28139,7 @@ abstract class _ServiceRequest extends ServiceRequest {
   factory _ServiceRequest(
       {@JsonKey(unknownEnumValue: R5ResourceType.ServiceRequest)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -28153,7 +28153,7 @@ abstract class _ServiceRequest extends ServiceRequest {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      final List<Canonical>? instantiatesCanonical,
+      final List<FhirCanonical>? instantiatesCanonical,
       final List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
           final List<Element>? instantiatesUriElement,
@@ -28228,7 +28228,7 @@ abstract class _ServiceRequest extends ServiceRequest {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when
@@ -28274,7 +28274,7 @@ abstract class _ServiceRequest extends ServiceRequest {
   @override
 
   /// [instantiatesCanonical] The URL pointing to a FHIR-defined protocol, guideline, orderset or other definition that is adhered to in whole or in part by this ServiceRequest.
-  List<Canonical>? get instantiatesCanonical;
+  List<FhirCanonical>? get instantiatesCanonical;
   @override
 
   /// [instantiatesUri] The URL pointing to an externally maintained protocol, guideline, orderset or other definition that is adhered to in whole or in part by this ServiceRequest.
@@ -28487,7 +28487,7 @@ mixin _$VisionPrescription {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -28573,7 +28573,7 @@ abstract class $VisionPrescriptionCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.VisionPrescription)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -28865,7 +28865,7 @@ abstract class _$$_VisionPrescriptionCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R5ResourceType.VisionPrescription)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -29093,7 +29093,7 @@ class _$_VisionPrescription extends _VisionPrescription {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -29328,7 +29328,7 @@ abstract class _VisionPrescription extends VisionPrescription {
   factory _VisionPrescription(
       {@JsonKey(unknownEnumValue: R5ResourceType.VisionPrescription)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -29376,7 +29376,7 @@ abstract class _VisionPrescription extends VisionPrescription {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when

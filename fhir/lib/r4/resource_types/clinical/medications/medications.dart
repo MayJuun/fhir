@@ -182,7 +182,7 @@ class Immunization with Resource, _$Immunization {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -875,7 +875,7 @@ class ImmunizationProtocolApplied with _$ImmunizationProtocolApplied {
     List<CodeableConcept>? targetDisease,
 
     /// [doseNumberPositiveInt] Nominal position in a series.
-    PositiveInt? doseNumberPositiveInt,
+    FhirPositiveInt? doseNumberPositiveInt,
     @JsonKey(name: '_doseNumberPositiveInt')
 
         /// [doseNumberPositiveIntElement] Extensions for doseNumberPositiveInt
@@ -890,7 +890,7 @@ class ImmunizationProtocolApplied with _$ImmunizationProtocolApplied {
 
     /// [seriesDosesPositiveInt] The recommended number of doses to achieve
     ///  immunity.
-    PositiveInt? seriesDosesPositiveInt,
+    FhirPositiveInt? seriesDosesPositiveInt,
     @JsonKey(name: '_seriesDosesPositiveInt')
 
         /// [seriesDosesPositiveIntElement] Extensions for seriesDosesPositiveInt
@@ -1067,7 +1067,7 @@ class ImmunizationEvaluation with Resource, _$ImmunizationEvaluation {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -1183,7 +1183,7 @@ class ImmunizationEvaluation with Resource, _$ImmunizationEvaluation {
         Element? seriesElement,
 
     /// [doseNumberPositiveInt] Nominal position in a series.
-    PositiveInt? doseNumberPositiveInt,
+    FhirPositiveInt? doseNumberPositiveInt,
     @JsonKey(name: '_doseNumberPositiveInt')
 
         /// [doseNumberPositiveIntElement] Extensions for doseNumberPositiveInt
@@ -1198,7 +1198,7 @@ class ImmunizationEvaluation with Resource, _$ImmunizationEvaluation {
 
     /// [seriesDosesPositiveInt] The recommended number of doses to achieve
     ///  immunity.
-    PositiveInt? seriesDosesPositiveInt,
+    FhirPositiveInt? seriesDosesPositiveInt,
     @JsonKey(name: '_seriesDosesPositiveInt')
 
         /// [seriesDosesPositiveIntElement] Extensions for seriesDosesPositiveInt
@@ -1330,7 +1330,7 @@ class ImmunizationRecommendation with Resource, _$ImmunizationRecommendation {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -1590,7 +1590,7 @@ class ImmunizationRecommendationRecommendation
 
     /// [doseNumberPositiveInt] Nominal position of the recommended dose in a
     ///  series (e.g. dose 2 is the next recommended dose).
-    PositiveInt? doseNumberPositiveInt,
+    FhirPositiveInt? doseNumberPositiveInt,
     @JsonKey(name: '_doseNumberPositiveInt')
 
         /// [doseNumberPositiveIntElement] Extensions for doseNumberPositiveInt
@@ -1606,7 +1606,7 @@ class ImmunizationRecommendationRecommendation
 
     /// [seriesDosesPositiveInt] The recommended number of doses to achieve
     ///  immunity.
-    PositiveInt? seriesDosesPositiveInt,
+    FhirPositiveInt? seriesDosesPositiveInt,
     @JsonKey(name: '_seriesDosesPositiveInt')
 
         /// [seriesDosesPositiveIntElement] Extensions for seriesDosesPositiveInt
@@ -1853,7 +1853,7 @@ class Medication with Resource, _$Medication {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -2381,7 +2381,7 @@ class MedicationAdministration with Resource, _$MedicationAdministration {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -3020,7 +3020,7 @@ class MedicationDispense with Resource, _$MedicationDispense {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -3622,7 +3622,7 @@ class MedicationKnowledge with Resource, _$MedicationKnowledge {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -5738,7 +5738,7 @@ class MedicationRequest with Resource, _$MedicationRequest {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -5916,7 +5916,7 @@ class MedicationRequest with Resource, _$MedicationRequest {
     /// [instantiatesCanonical] The URL pointing to a protocol, guideline,
     /// orderset, or other definition that is adhered to in whole or in part by
     ///  this MedicationRequest.
-    List<Canonical>? instantiatesCanonical,
+    List<FhirCanonical>? instantiatesCanonical,
     @JsonKey(name: '_instantiatesCanonical')
 
         /// [instantiatesCanonicalElement] Extensions for instantiatesCanonical
@@ -6129,7 +6129,7 @@ class MedicationRequestDispenseRequest with _$MedicationRequestDispenseRequest {
     /// dispensed a total of 4 times and the patient can receive a total of 120
     /// tablets.  A prescriber may explicitly say that zero refills are permitted
     ///  after the initial dispense.
-    UnsignedInt? numberOfRepeatsAllowed,
+    FhirUnsignedInt? numberOfRepeatsAllowed,
     @JsonKey(name: '_numberOfRepeatsAllowed')
 
         /// [numberOfRepeatsAllowedElement] Extensions for numberOfRepeatsAllowed
@@ -6571,7 +6571,7 @@ class MedicationStatement with Resource, _$MedicationStatement {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the

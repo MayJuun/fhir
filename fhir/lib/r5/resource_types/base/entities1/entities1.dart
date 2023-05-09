@@ -150,7 +150,7 @@ class Endpoint with Resource, _$Endpoint {
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
     ///  always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     ///  the resource was constructed, and which must be understood when
@@ -263,7 +263,7 @@ class Endpoint with Resource, _$Endpoint {
     ///  application/fhir+xml, application/fhir+json. If the mime type is not
     ///  specified, then the sender could send any content (including no
     ///  content depending on the connectionType).
-    List<Code>? payloadMimeType,
+    List<FhirCode>? payloadMimeType,
 
     /// [payloadMimeTypeElement] ("_payloadMimeType") Extensions for
     ///  payloadMimeType
@@ -476,7 +476,7 @@ class HealthcareService with Resource, _$HealthcareService {
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
     ///  always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     ///  the resource was constructed, and which must be understood when
@@ -936,7 +936,7 @@ class Location with Resource, _$Location {
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
     ///  always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     ///  the resource was constructed, and which must be understood when
@@ -1384,7 +1384,7 @@ class Organization with Resource, _$Organization {
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
     ///  always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     ///  the resource was constructed, and which must be understood when
@@ -1772,7 +1772,7 @@ class OrganizationAffiliation with Resource, _$OrganizationAffiliation {
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
     ///  always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     ///  the resource was constructed, and which must be understood when

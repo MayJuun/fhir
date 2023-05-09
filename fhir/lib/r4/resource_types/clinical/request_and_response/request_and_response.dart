@@ -169,7 +169,7 @@ class Communication with Resource, _$Communication {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -234,7 +234,7 @@ class Communication with Resource, _$Communication {
     /// [instantiatesCanonical] The URL pointing to a FHIR-defined protocol,
     /// guideline, orderset or other definition that is adhered to in whole or in
     ///  part by this Communication.
-    List<Canonical>? instantiatesCanonical,
+    List<FhirCanonical>? instantiatesCanonical,
 
     /// [instantiatesUri] The URL pointing to an externally maintained protocol,
     /// guideline, orderset or other definition that is adhered to in whole or in
@@ -645,7 +645,7 @@ class CommunicationRequest with Resource, _$CommunicationRequest {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -1133,7 +1133,7 @@ class DeviceRequest with Resource, _$DeviceRequest {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -1197,7 +1197,7 @@ class DeviceRequest with Resource, _$DeviceRequest {
     /// [instantiatesCanonical] The URL pointing to a FHIR-defined protocol,
     /// guideline, orderset or other definition that is adhered to in whole or in
     ///  part by this DeviceRequest.
-    List<Canonical>? instantiatesCanonical,
+    List<FhirCanonical>? instantiatesCanonical,
 
     /// [instantiatesUri] The URL pointing to an externally maintained protocol,
     /// guideline, orderset or other definition that is adhered to in whole or in
@@ -1597,7 +1597,7 @@ class DeviceUseStatement with Resource, _$DeviceUseStatement {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -1903,7 +1903,7 @@ class GuidanceResponse with Resource, _$GuidanceResponse {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -2202,7 +2202,7 @@ class SupplyDelivery with Resource, _$SupplyDelivery {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -2587,7 +2587,7 @@ class SupplyRequest with Resource, _$SupplyRequest {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the

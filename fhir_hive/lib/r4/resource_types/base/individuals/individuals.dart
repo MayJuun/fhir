@@ -250,7 +250,7 @@ class Group extends HiveObject with Resource, _$Group {
     /// [quantity] A count of the number of resource instances that are part of
     ///  the group.
     @HiveField(21)
-        UnsignedInt? quantity,
+        FhirUnsignedInt? quantity,
 
     /// [quantityElement] Extensions for quantity
     @JsonKey(name: '_quantity')
@@ -2446,7 +2446,7 @@ class PractitionerRoleAvailableTime with _$PractitionerRoleAvailableTime {
 
     /// [daysOfWeek] Indicates which days of the week are available between the
     ///  start and end Times.
-    List<Code>? daysOfWeek,
+    List<FhirCode>? daysOfWeek,
 
     /// [daysOfWeekElement] Extensions for daysOfWeek
     @JsonKey(name: '_daysOfWeek') List<Element?>? daysOfWeekElement,
@@ -2460,14 +2460,14 @@ class PractitionerRoleAvailableTime with _$PractitionerRoleAvailableTime {
 
     /// [availableStartTime] The opening time of day. Note: If the AllDay flag is
     ///  set, then this time is ignored.
-    Time? availableStartTime,
+    FhirTime? availableStartTime,
 
     /// [availableStartTimeElement] Extensions for availableStartTime
     @JsonKey(name: '_availableStartTime') Element? availableStartTimeElement,
 
     /// [availableEndTime] The closing time of day. Note: If the AllDay flag is
     ///  set, then this time is ignored.
-    Time? availableEndTime,
+    FhirTime? availableEndTime,
 
     /// [availableEndTimeElement] Extensions for availableEndTime
     @JsonKey(name: '_availableEndTime') Element? availableEndTimeElement,

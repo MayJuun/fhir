@@ -170,7 +170,7 @@ class Coverage with Resource, _$Coverage {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when
@@ -251,7 +251,7 @@ class Coverage with Resource, _$Coverage {
     @JsonKey(name: 'class') List<CoverageClass>? class_,
 
     /// [order] The order of applicability of this coverage relative to other coverages which are currently in force. Note, there may be gaps in the numbering and this does not imply primary, secondary etc. as the specific positioning of coverages depends upon the episode of care. For example; a patient might have (0) auto insurance (1) their own health insurance and (2) spouse's health insurance. When claiming for treatments which were not the result of an auto accident then only coverages (1) and (2) above would be applicatble and would apply in the order specified in parenthesis.
-    PositiveInt? order,
+    FhirPositiveInt? order,
 
     /// [orderElement] ("_order") Extensions for order
     @JsonKey(name: '_order') Element? orderElement,
@@ -931,7 +931,7 @@ class CoverageEligibilityRequest with Resource, _$CoverageEligibilityRequest {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when
@@ -973,7 +973,7 @@ class CoverageEligibilityRequest with Resource, _$CoverageEligibilityRequest {
     CodeableConcept? priority,
 
     /// [purpose] Code to specify whether requesting: prior authorization requirements for some service categories or billing codes; benefits for coverages specified or discovered; discovery and return of coverages for the patient; and/or validation that the specified coverage is in-force at the date/period specified or 'now' if not specified.
-    List<Code>? purpose,
+    List<FhirCode>? purpose,
 
     /// [purposeElement] ("_purpose") Extensions for purpose
     @JsonKey(name: '_purpose') List<Element>? purposeElement,
@@ -1136,7 +1136,7 @@ class CoverageEligibilityRequestSupportingInfo
     List<FhirExtension>? modifierExtension,
 
     /// [sequence] A number to uniquely identify supporting information entries.
-    PositiveInt? sequence,
+    FhirPositiveInt? sequence,
 
     /// [sequenceElement] ("_sequence") Extensions for sequence
     @JsonKey(name: '_sequence') Element? sequenceElement,
@@ -1426,7 +1426,7 @@ class CoverageEligibilityRequestItem with _$CoverageEligibilityRequestItem {
     List<FhirExtension>? modifierExtension,
 
     /// [supportingInfoSequence] Exceptions, special conditions and supporting information applicable for this service or product line.
-    List<PositiveInt>? supportingInfoSequence,
+    List<FhirPositiveInt>? supportingInfoSequence,
 
     /// [supportingInfoSequenceElement] ("_supportingInfoSequence") Extensions for supportingInfoSequence
     @JsonKey(name: '_supportingInfoSequence')
@@ -1749,7 +1749,7 @@ class CoverageEligibilityResponse with Resource, _$CoverageEligibilityResponse {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when
@@ -1788,7 +1788,7 @@ class CoverageEligibilityResponse with Resource, _$CoverageEligibilityResponse {
     @JsonKey(name: '_status') Element? statusElement,
 
     /// [purpose] Code to specify whether requesting: prior authorization requirements for some service categories or billing codes; benefits for coverages specified or discovered; discovery and return of coverages for the patient; and/or validation that the specified coverage is in-force at the date/period specified or 'now' if not specified.
-    List<Code>? purpose,
+    List<FhirCode>? purpose,
 
     /// [purposeElement] ("_purpose") Extensions for purpose
     @JsonKey(name: '_purpose') List<Element>? purposeElement,
@@ -2317,7 +2317,7 @@ class CoverageEligibilityResponseBenefit
     required CodeableConcept type,
 
     /// [allowedUnsignedInt] The quantity of the benefit which is permitted under the coverage.
-    UnsignedInt? allowedUnsignedInt,
+    FhirUnsignedInt? allowedUnsignedInt,
 
     /// [allowedUnsignedIntElement] ("_allowedUnsignedInt") Extensions for allowedUnsignedInt
     @JsonKey(name: '_allowedUnsignedInt') Element? allowedUnsignedIntElement,
@@ -2332,7 +2332,7 @@ class CoverageEligibilityResponseBenefit
     Money? allowedMoney,
 
     /// [usedUnsignedInt] The quantity of the benefit which have been consumed to date.
-    UnsignedInt? usedUnsignedInt,
+    FhirUnsignedInt? usedUnsignedInt,
 
     /// [usedUnsignedIntElement] ("_usedUnsignedInt") Extensions for usedUnsignedInt
     @JsonKey(name: '_usedUnsignedInt') Element? usedUnsignedIntElement,
@@ -2584,7 +2584,7 @@ class EnrollmentRequest with Resource, _$EnrollmentRequest {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when
@@ -2777,7 +2777,7 @@ class EnrollmentResponse with Resource, _$EnrollmentResponse {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when

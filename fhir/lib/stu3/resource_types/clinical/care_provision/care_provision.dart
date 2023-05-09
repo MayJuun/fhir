@@ -84,7 +84,7 @@ class CarePlan with Resource, _$CarePlan {
     @JsonKey(unknownEnumValue: Stu3ResourceType.CarePlan)
         Stu3ResourceType resourceType,
     FhirId? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,
@@ -258,7 +258,7 @@ class CareTeam with Resource, _$CareTeam {
     @JsonKey(unknownEnumValue: Stu3ResourceType.CareTeam)
         Stu3ResourceType resourceType,
     FhirId? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,
@@ -360,7 +360,7 @@ class Goal with Resource, _$Goal {
     @JsonKey(unknownEnumValue: Stu3ResourceType.Goal)
         Stu3ResourceType resourceType,
     FhirId? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,
@@ -469,7 +469,7 @@ class NutritionOrder with Resource, _$NutritionOrder {
     @JsonKey(unknownEnumValue: Stu3ResourceType.NutritionOrder)
         Stu3ResourceType resourceType,
     FhirId? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,
@@ -788,7 +788,7 @@ class ProcedureRequest with Resource, _$ProcedureRequest {
     @JsonKey(unknownEnumValue: Stu3ResourceType.ProcedureRequest)
         Stu3ResourceType resourceType,
     FhirId? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,
@@ -910,7 +910,7 @@ class ReferralRequest with Resource, _$ReferralRequest {
     @JsonKey(unknownEnumValue: Stu3ResourceType.ReferralRequest)
         Stu3ResourceType resourceType,
     FhirId? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,
@@ -1026,7 +1026,7 @@ class RiskAssessment with Resource, _$RiskAssessment {
     @JsonKey(unknownEnumValue: Stu3ResourceType.RiskAssessment)
         Stu3ResourceType resourceType,
     FhirId? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,
@@ -1143,7 +1143,7 @@ class VisionPrescription with Resource, _$VisionPrescription {
     @JsonKey(unknownEnumValue: Stu3ResourceType.VisionPrescription)
         Stu3ResourceType resourceType,
     FhirId? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,

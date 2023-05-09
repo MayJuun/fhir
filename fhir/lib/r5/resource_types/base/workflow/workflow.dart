@@ -224,7 +224,7 @@ class Appointment with Resource, _$Appointment {
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
     ///  always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     ///  the resource was constructed, and which must be understood when
@@ -385,7 +385,7 @@ class Appointment with Resource, _$Appointment {
     ///  work.  Also, if there is, for example, a planned 15 minute break in
     ///  the middle of a long appointment, the duration may be 15 minutes less
     ///  than the difference between the start and end.
-    PositiveInt? minutesDuration,
+    FhirPositiveInt? minutesDuration,
 
     /// [minutesDurationElement] ("_minutesDuration") Extensions for
     ///  minutesDuration
@@ -440,7 +440,7 @@ class Appointment with Resource, _$Appointment {
 
     /// [recurrenceId] The sequence number that identifies a specific
     ///  appointment in a recurring pattern.
-    PositiveInt? recurrenceId,
+    FhirPositiveInt? recurrenceId,
 
     /// [recurrenceIdElement] ("_recurrenceId") Extensions for recurrenceId
     @JsonKey(name: '_recurrenceId') Element? recurrenceIdElement,
@@ -746,7 +746,7 @@ class AppointmentRecurrenceTemplate with _$AppointmentRecurrenceTemplate {
     @JsonKey(name: '_lastOccurrenceDate') Element? lastOccurrenceDateElement,
 
     /// [occurrenceCount] How many appointments are planned in the recurrence.
-    PositiveInt? occurrenceCount,
+    FhirPositiveInt? occurrenceCount,
 
     /// [occurrenceCountElement] ("_occurrenceCount") Extensions for
     ///  occurrenceCount
@@ -754,7 +754,7 @@ class AppointmentRecurrenceTemplate with _$AppointmentRecurrenceTemplate {
 
     /// [occurrenceDate] The list of specific dates that will have appointments
     ///  generated.
-    List<Date>? occurrenceDate,
+    List<FhirDate>? occurrenceDate,
 
     /// [occurrenceDateElement] ("_occurrenceDate") Extensions for
     ///  occurrenceDate
@@ -771,14 +771,14 @@ class AppointmentRecurrenceTemplate with _$AppointmentRecurrenceTemplate {
 
     /// [excludingDate] Any dates, such as holidays, that should be excluded
     ///  from the recurrence.
-    List<Date>? excludingDate,
+    List<FhirDate>? excludingDate,
 
     /// [excludingDateElement] ("_excludingDate") Extensions for excludingDate
     @JsonKey(name: '_excludingDate') List<Element>? excludingDateElement,
 
     /// [excludingRecurrenceId] Any dates, such as holidays, that should be
     ///  excluded from the recurrence.
-    List<PositiveInt>? excludingRecurrenceId,
+    List<FhirPositiveInt>? excludingRecurrenceId,
 
     /// [excludingRecurrenceIdElement] ("_excludingRecurrenceId") Extensions
     ///  for excludingRecurrenceId
@@ -973,7 +973,7 @@ class AppointmentWeeklyTemplate with _$AppointmentWeeklyTemplate {
     ///  week. The default is every week, so it is expected that this value
     ///  will be 2 or more. e.g. For recurring every second week this interval
     ///  would be 2, or every third week the interval would be 3.
-    PositiveInt? weekInterval,
+    FhirPositiveInt? weekInterval,
 
     /// [weekIntervalElement] ("_weekInterval") Extensions for weekInterval
     @JsonKey(name: '_weekInterval') Element? weekIntervalElement,
@@ -1095,7 +1095,7 @@ class AppointmentMonthlyTemplate with _$AppointmentMonthlyTemplate {
 
     /// [dayOfMonth] Indicates that appointments in the series of recurring
     ///  appointments should occur on a specific day of the month.
-    PositiveInt? dayOfMonth,
+    FhirPositiveInt? dayOfMonth,
 
     /// [dayOfMonthElement] ("_dayOfMonth") Extensions for dayOfMonth
     @JsonKey(name: '_dayOfMonth') Element? dayOfMonthElement,
@@ -1110,7 +1110,7 @@ class AppointmentMonthlyTemplate with _$AppointmentMonthlyTemplate {
 
     /// [monthInterval] Indicates that recurring appointments should occur
     ///  every nth month.
-    PositiveInt? monthInterval,
+    FhirPositiveInt? monthInterval,
 
     /// [monthIntervalElement] ("_monthInterval") Extensions for monthInterval
     @JsonKey(name: '_monthInterval') Element? monthIntervalElement,
@@ -1219,7 +1219,7 @@ class AppointmentYearlyTemplate with _$AppointmentYearlyTemplate {
     List<FhirExtension>? modifierExtension,
 
     /// [yearInterval] Appointment recurs every nth year.
-    PositiveInt? yearInterval,
+    FhirPositiveInt? yearInterval,
 
     /// [yearIntervalElement] ("_yearInterval") Extensions for yearInterval
     @JsonKey(name: '_yearInterval') Element? yearIntervalElement,
@@ -1394,7 +1394,7 @@ class AppointmentResponse with Resource, _$AppointmentResponse {
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
     ///  always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     ///  the resource was constructed, and which must be understood when
@@ -1529,7 +1529,7 @@ class AppointmentResponse with Resource, _$AppointmentResponse {
 
     /// [recurrenceId] The recurrence ID (sequence number) of the specific
     ///  appointment when responding to a recurring request.
-    PositiveInt? recurrenceId,
+    FhirPositiveInt? recurrenceId,
 
     /// [recurrenceIdElement] ("_recurrenceId") Extensions for recurrenceId
     @JsonKey(name: '_recurrenceId') Element? recurrenceIdElement,
@@ -1681,7 +1681,7 @@ class Schedule with Resource, _$Schedule {
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
     ///  always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     ///  the resource was constructed, and which must be understood when
@@ -1940,7 +1940,7 @@ class Slot with Resource, _$Slot {
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
     ///  always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     ///  the resource was constructed, and which must be understood when
@@ -2275,7 +2275,7 @@ class Task with Resource, _$Task {
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
     ///  always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     ///  the resource was constructed, and which must be understood when
@@ -2594,7 +2594,7 @@ class TaskRestriction with _$TaskRestriction {
 
     /// [repetitions] Indicates the number of times the requested action should
     ///  occur.
-    PositiveInt? repetitions,
+    FhirPositiveInt? repetitions,
 
     /// [repetitionsElement] ("_repetitions") Extensions for repetitions
     @JsonKey(name: '_repetitions') Element? repetitionsElement,
@@ -2943,7 +2943,7 @@ class TaskInput with _$TaskInput {
     @JsonKey(name: '_valueOid') Element? valueOidElement,
 
     /// [valuePositiveInt] The value of the input parameter as a basic type.
-    PositiveInt? valuePositiveInt,
+    FhirPositiveInt? valuePositiveInt,
 
     /// [valuePositiveIntElement] ("_valuePositiveInt") Extensions for
     ///  valuePositiveInt
@@ -2956,13 +2956,13 @@ class TaskInput with _$TaskInput {
     @JsonKey(name: '_valueString') Element? valueStringElement,
 
     /// [valueTime] The value of the input parameter as a basic type.
-    Time? valueTime,
+    FhirTime? valueTime,
 
     /// [valueTimeElement] ("_valueTime") Extensions for valueTime
     @JsonKey(name: '_valueTime') Element? valueTimeElement,
 
     /// [valueUnsignedInt] The value of the input parameter as a basic type.
-    UnsignedInt? valueUnsignedInt,
+    FhirUnsignedInt? valueUnsignedInt,
 
     /// [valueUnsignedIntElement] ("_valueUnsignedInt") Extensions for
     ///  valueUnsignedInt
@@ -3090,7 +3090,7 @@ class TaskInput with _$TaskInput {
     Dosage? valueDosage,
 
     /// [valueMeta] The value of the input parameter as a basic type.
-    Meta? valueMeta,
+    FhirMeta? valueMeta,
   }) = _TaskInput;
 
   /// Produces a Yaml formatted String version of the object
@@ -3427,7 +3427,7 @@ class TaskOutput with _$TaskOutput {
     @JsonKey(name: '_valueOid') Element? valueOidElement,
 
     /// [valuePositiveInt] The value of the Output parameter as a basic type.
-    PositiveInt? valuePositiveInt,
+    FhirPositiveInt? valuePositiveInt,
 
     /// [valuePositiveIntElement] ("_valuePositiveInt") Extensions for
     ///  valuePositiveInt
@@ -3440,13 +3440,13 @@ class TaskOutput with _$TaskOutput {
     @JsonKey(name: '_valueString') Element? valueStringElement,
 
     /// [valueTime] The value of the Output parameter as a basic type.
-    Time? valueTime,
+    FhirTime? valueTime,
 
     /// [valueTimeElement] ("_valueTime") Extensions for valueTime
     @JsonKey(name: '_valueTime') Element? valueTimeElement,
 
     /// [valueUnsignedInt] The value of the Output parameter as a basic type.
-    UnsignedInt? valueUnsignedInt,
+    FhirUnsignedInt? valueUnsignedInt,
 
     /// [valueUnsignedIntElement] ("_valueUnsignedInt") Extensions for
     ///  valueUnsignedInt
@@ -3577,7 +3577,7 @@ class TaskOutput with _$TaskOutput {
     Dosage? valueDosage,
 
     /// [valueMeta] The value of the Output parameter as a basic type.
-    Meta? valueMeta,
+    FhirMeta? valueMeta,
   }) = _TaskOutput;
 
   /// Produces a Yaml formatted String version of the object
@@ -3802,7 +3802,7 @@ class Transport with Resource, _$Transport {
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
     ///  always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     ///  the resource was constructed, and which must be understood when
@@ -4127,7 +4127,7 @@ class TransportRestriction with _$TransportRestriction {
 
     /// [repetitions] Indicates the number of times the requested action should
     ///  occur.
-    PositiveInt? repetitions,
+    FhirPositiveInt? repetitions,
 
     /// [repetitionsElement] ("_repetitions") Extensions for repetitions
     @JsonKey(name: '_repetitions') Element? repetitionsElement,
@@ -4474,7 +4474,7 @@ class TransportInput with _$TransportInput {
     @JsonKey(name: '_valueOid') Element? valueOidElement,
 
     /// [valuePositiveInt] The value of the input parameter as a basic type.
-    PositiveInt? valuePositiveInt,
+    FhirPositiveInt? valuePositiveInt,
 
     /// [valuePositiveIntElement] ("_valuePositiveInt") Extensions for
     ///  valuePositiveInt
@@ -4487,13 +4487,13 @@ class TransportInput with _$TransportInput {
     @JsonKey(name: '_valueString') Element? valueStringElement,
 
     /// [valueTime] The value of the input parameter as a basic type.
-    Time? valueTime,
+    FhirTime? valueTime,
 
     /// [valueTimeElement] ("_valueTime") Extensions for valueTime
     @JsonKey(name: '_valueTime') Element? valueTimeElement,
 
     /// [valueUnsignedInt] The value of the input parameter as a basic type.
-    UnsignedInt? valueUnsignedInt,
+    FhirUnsignedInt? valueUnsignedInt,
 
     /// [valueUnsignedIntElement] ("_valueUnsignedInt") Extensions for
     ///  valueUnsignedInt
@@ -4621,7 +4621,7 @@ class TransportInput with _$TransportInput {
     Dosage? valueDosage,
 
     /// [valueMeta] The value of the input parameter as a basic type.
-    Meta? valueMeta,
+    FhirMeta? valueMeta,
   }) = _TransportInput;
 
   /// Produces a Yaml formatted String version of the object
@@ -4958,7 +4958,7 @@ class TransportOutput with _$TransportOutput {
     @JsonKey(name: '_valueOid') Element? valueOidElement,
 
     /// [valuePositiveInt] The value of the Output parameter as a basic type.
-    PositiveInt? valuePositiveInt,
+    FhirPositiveInt? valuePositiveInt,
 
     /// [valuePositiveIntElement] ("_valuePositiveInt") Extensions for
     ///  valuePositiveInt
@@ -4971,13 +4971,13 @@ class TransportOutput with _$TransportOutput {
     @JsonKey(name: '_valueString') Element? valueStringElement,
 
     /// [valueTime] The value of the Output parameter as a basic type.
-    Time? valueTime,
+    FhirTime? valueTime,
 
     /// [valueTimeElement] ("_valueTime") Extensions for valueTime
     @JsonKey(name: '_valueTime') Element? valueTimeElement,
 
     /// [valueUnsignedInt] The value of the Output parameter as a basic type.
-    UnsignedInt? valueUnsignedInt,
+    FhirUnsignedInt? valueUnsignedInt,
 
     /// [valueUnsignedIntElement] ("_valueUnsignedInt") Extensions for
     ///  valueUnsignedInt
@@ -5108,7 +5108,7 @@ class TransportOutput with _$TransportOutput {
     Dosage? valueDosage,
 
     /// [valueMeta] The value of the Output parameter as a basic type.
-    Meta? valueMeta,
+    FhirMeta? valueMeta,
   }) = _TransportOutput;
 
   /// Produces a Yaml formatted String version of the object
@@ -5267,7 +5267,7 @@ class VerificationResult with Resource, _$VerificationResult {
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
     ///  always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     ///  the resource was constructed, and which must be understood when

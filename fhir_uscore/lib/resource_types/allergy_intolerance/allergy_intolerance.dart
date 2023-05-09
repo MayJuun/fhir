@@ -73,7 +73,7 @@ class AllergyIntoleranceUsCore extends Resource {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -117,7 +117,7 @@ class AllergyIntoleranceUsCore extends Resource {
     List<AllergyIntoleranceReaction>? reaction,
 
     /// [category] Category of the identified substance.
-    List<Code>? category,
+    List<FhirCode>? category,
 
     /// [criticality] Estimate of the potential clinical harm, or seriousness, of
     ///  the reaction to the identified substance.
@@ -217,7 +217,7 @@ class AllergyIntoleranceUsCore extends Resource {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  Meta? get meta => _allergyIntolerance.meta;
+  FhirMeta? get meta => _allergyIntolerance.meta;
 
   /// [text] A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -263,7 +263,7 @@ class AllergyIntoleranceUsCore extends Resource {
       _allergyIntolerance.reaction;
 
   /// [category] Category of the identified substance.
-  List<Code>? get category => _allergyIntolerance.category;
+  List<FhirCode>? get category => _allergyIntolerance.category;
 
   /// [criticality] Estimate of the potential clinical harm, or seriousness, of
   ///  the reaction to the identified substance.

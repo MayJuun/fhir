@@ -163,8 +163,8 @@ Resource _newId(Resource resource) {
       return (resource as Library).copyWith(id: newId());
     case R5ResourceType.Linkage:
       return (resource as Linkage).copyWith(id: newId());
-    case R5ResourceType.List_:
-      return (resource as List_).copyWith(id: newId());
+    case R5ResourceType.FhirList:
+      return (resource as FhirList).copyWith(id: newId());
     case R5ResourceType.Location:
       return (resource as Location).copyWith(id: newId());
     case R5ResourceType.ManufacturedItemDefinition:

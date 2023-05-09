@@ -226,7 +226,7 @@ class ResearchStudy with Resource, _$ResearchStudy {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when
@@ -884,13 +884,13 @@ class ResearchStudyRecruitment with _$ResearchStudyRecruitment {
     List<FhirExtension>? modifierExtension,
 
     /// [targetNumber] Estimated total number of participants to be enrolled.
-    UnsignedInt? targetNumber,
+    FhirUnsignedInt? targetNumber,
 
     /// [targetNumberElement] ("_targetNumber") Extensions for targetNumber
     @JsonKey(name: '_targetNumber') Element? targetNumberElement,
 
     /// [actualNumber] Actual total number of participants enrolled in study.
-    UnsignedInt? actualNumber,
+    FhirUnsignedInt? actualNumber,
 
     /// [actualNumberElement] ("_actualNumber") Extensions for actualNumber
     @JsonKey(name: '_actualNumber') Element? actualNumberElement,
@@ -1464,7 +1464,7 @@ class ResearchSubject with Resource, _$ResearchSubject {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when

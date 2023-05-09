@@ -3731,7 +3731,7 @@ mixin _$ImagingStudy {
   /// resource availability, security, or other factors. This element should be
   ///  present if any series elements are present.
   @HiveField(23)
-  UnsignedInt? get numberOfSeries => throw _privateConstructorUsedError;
+  FhirUnsignedInt? get numberOfSeries => throw _privateConstructorUsedError;
 
   /// [numberOfSeriesElement] Extensions for numberOfSeries
   @JsonKey(name: '_numberOfSeries')
@@ -3743,7 +3743,7 @@ mixin _$ImagingStudy {
   /// due to resource availability, security, or other factors. This element
   ///  should be present if any instance elements are present.
   @HiveField(25)
-  UnsignedInt? get numberOfInstances => throw _privateConstructorUsedError;
+  FhirUnsignedInt? get numberOfInstances => throw _privateConstructorUsedError;
 
   /// [numberOfInstancesElement] Extensions for numberOfInstances
   @JsonKey(name: '_numberOfInstances')
@@ -3862,12 +3862,12 @@ abstract class $ImagingStudyCopyWith<$Res> {
       @HiveField(22)
           List<Reference>? endpoint,
       @HiveField(23)
-          UnsignedInt? numberOfSeries,
+          FhirUnsignedInt? numberOfSeries,
       @JsonKey(name: '_numberOfSeries')
       @HiveField(24)
           Element? numberOfSeriesElement,
       @HiveField(25)
-          UnsignedInt? numberOfInstances,
+          FhirUnsignedInt? numberOfInstances,
       @JsonKey(name: '_numberOfInstances')
       @HiveField(26)
           Element? numberOfInstancesElement,
@@ -4332,12 +4332,12 @@ abstract class _$$_ImagingStudyCopyWith<$Res>
       @HiveField(22)
           List<Reference>? endpoint,
       @HiveField(23)
-          UnsignedInt? numberOfSeries,
+          FhirUnsignedInt? numberOfSeries,
       @JsonKey(name: '_numberOfSeries')
       @HiveField(24)
           Element? numberOfSeriesElement,
       @HiveField(25)
-          UnsignedInt? numberOfInstances,
+          FhirUnsignedInt? numberOfInstances,
       @JsonKey(name: '_numberOfInstances')
       @HiveField(26)
           Element? numberOfInstancesElement,
@@ -5472,7 +5472,7 @@ abstract class _ImagingStudy extends ImagingStudy {
   /// resource availability, security, or other factors. This element should be
   ///  present if any series elements are present.
   @HiveField(23)
-  UnsignedInt? get numberOfSeries;
+  FhirUnsignedInt? get numberOfSeries;
   @override
 
   /// [numberOfSeriesElement] Extensions for numberOfSeries
@@ -5486,7 +5486,7 @@ abstract class _ImagingStudy extends ImagingStudy {
   /// due to resource availability, security, or other factors. This element
   ///  should be present if any instance elements are present.
   @HiveField(25)
-  UnsignedInt? get numberOfInstances;
+  FhirUnsignedInt? get numberOfInstances;
   @override
 
   /// [numberOfInstancesElement] Extensions for numberOfInstances
@@ -5589,14 +5589,14 @@ mixin _$ImagingStudySeries {
       throw _privateConstructorUsedError;
 
   /// [uid] The DICOM Series Instance UID for the series.
-  Id? get uid => throw _privateConstructorUsedError;
+  FhirId? get uid => throw _privateConstructorUsedError;
 
   /// [uidElement] Extensions for uid
   @JsonKey(name: '_uid')
   Element? get uidElement => throw _privateConstructorUsedError;
 
   /// [number] The numeric identifier of this series in the study.
-  UnsignedInt? get number => throw _privateConstructorUsedError;
+  FhirUnsignedInt? get number => throw _privateConstructorUsedError;
 
   /// [numberElement] Extensions for number
   @JsonKey(name: '_number')
@@ -5616,7 +5616,7 @@ mixin _$ImagingStudySeries {
   /// may be larger than the number of instance elements this resource contains
   /// due to resource availability, security, or other factors. This element
   ///  should be present if any instance elements are present.
-  UnsignedInt? get numberOfInstances => throw _privateConstructorUsedError;
+  FhirUnsignedInt? get numberOfInstances => throw _privateConstructorUsedError;
 
   /// [numberOfInstancesElement] Extensions for numberOfInstances
   @JsonKey(name: '_numberOfInstances')
@@ -5678,14 +5678,14 @@ abstract class $ImagingStudySeriesCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Id? uid,
+      FhirId? uid,
       @JsonKey(name: '_uid') Element? uidElement,
-      UnsignedInt? number,
+      FhirUnsignedInt? number,
       @JsonKey(name: '_number') Element? numberElement,
       Coding modality,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      UnsignedInt? numberOfInstances,
+      FhirUnsignedInt? numberOfInstances,
       @JsonKey(name: '_numberOfInstances') Element? numberOfInstancesElement,
       List<Reference>? endpoint,
       Coding? bodySite,
@@ -5929,14 +5929,14 @@ abstract class _$$_ImagingStudySeriesCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Id? uid,
+      FhirId? uid,
       @JsonKey(name: '_uid') Element? uidElement,
-      UnsignedInt? number,
+      FhirUnsignedInt? number,
       @JsonKey(name: '_number') Element? numberElement,
       Coding modality,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      UnsignedInt? numberOfInstances,
+      FhirUnsignedInt? numberOfInstances,
       @JsonKey(name: '_numberOfInstances') Element? numberOfInstancesElement,
       List<Reference>? endpoint,
       Coding? bodySite,
@@ -6186,7 +6186,7 @@ class _$_ImagingStudySeries extends _ImagingStudySeries {
 
   /// [uid] The DICOM Series Instance UID for the series.
   @override
-  final Id? uid;
+  final FhirId? uid;
 
   /// [uidElement] Extensions for uid
   @override
@@ -6408,7 +6408,7 @@ abstract class _ImagingStudySeries extends ImagingStudySeries {
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final Id? uid,
+      final FhirId? uid,
       @JsonKey(name: '_uid')
           final Element? uidElement,
       final UnsignedInt? number,
@@ -6469,7 +6469,7 @@ abstract class _ImagingStudySeries extends ImagingStudySeries {
   @override
 
   /// [uid] The DICOM Series Instance UID for the series.
-  Id? get uid;
+  FhirId? get uid;
   @override
 
   /// [uidElement] Extensions for uid
@@ -6478,7 +6478,7 @@ abstract class _ImagingStudySeries extends ImagingStudySeries {
   @override
 
   /// [number] The numeric identifier of this series in the study.
-  UnsignedInt? get number;
+  FhirUnsignedInt? get number;
   @override
 
   /// [numberElement] Extensions for number
@@ -6503,7 +6503,7 @@ abstract class _ImagingStudySeries extends ImagingStudySeries {
   /// may be larger than the number of instance elements this resource contains
   /// due to resource availability, security, or other factors. This element
   ///  should be present if any instance elements are present.
-  UnsignedInt? get numberOfInstances;
+  FhirUnsignedInt? get numberOfInstances;
   @override
 
   /// [numberOfInstancesElement] Extensions for numberOfInstances
@@ -6986,7 +6986,7 @@ mixin _$ImagingStudyInstance {
       throw _privateConstructorUsedError;
 
   /// [uid] The DICOM SOP Instance UID for this image or other DICOM content.
-  Id? get uid => throw _privateConstructorUsedError;
+  FhirId? get uid => throw _privateConstructorUsedError;
 
   /// [uidElement] Extensions for uid
   @JsonKey(name: '_uid')
@@ -6996,7 +6996,7 @@ mixin _$ImagingStudyInstance {
   Coding get sopClass => throw _privateConstructorUsedError;
 
   /// [number] The number of instance in the series.
-  UnsignedInt? get number => throw _privateConstructorUsedError;
+  FhirUnsignedInt? get number => throw _privateConstructorUsedError;
 
   /// [numberElement] Extensions for number
   @JsonKey(name: '_number')
@@ -7025,10 +7025,10 @@ abstract class $ImagingStudyInstanceCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Id? uid,
+      FhirId? uid,
       @JsonKey(name: '_uid') Element? uidElement,
       Coding sopClass,
-      UnsignedInt? number,
+      FhirUnsignedInt? number,
       @JsonKey(name: '_number') Element? numberElement,
       String? title,
       @JsonKey(name: '_title') Element? titleElement});
@@ -7165,10 +7165,10 @@ abstract class _$$_ImagingStudyInstanceCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Id? uid,
+      FhirId? uid,
       @JsonKey(name: '_uid') Element? uidElement,
       Coding sopClass,
-      UnsignedInt? number,
+      FhirUnsignedInt? number,
       @JsonKey(name: '_number') Element? numberElement,
       String? title,
       @JsonKey(name: '_title') Element? titleElement});
@@ -7340,7 +7340,7 @@ class _$_ImagingStudyInstance extends _ImagingStudyInstance {
 
   /// [uid] The DICOM SOP Instance UID for this image or other DICOM content.
   @override
-  final Id? uid;
+  final FhirId? uid;
 
   /// [uidElement] Extensions for uid
   @override
@@ -7432,7 +7432,7 @@ abstract class _ImagingStudyInstance extends ImagingStudyInstance {
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
-          final Id? uid,
+          final FhirId? uid,
           @JsonKey(name: '_uid') final Element? uidElement,
           required final Coding sopClass,
           final UnsignedInt? number,
@@ -7479,7 +7479,7 @@ abstract class _ImagingStudyInstance extends ImagingStudyInstance {
   @override
 
   /// [uid] The DICOM SOP Instance UID for this image or other DICOM content.
-  Id? get uid;
+  FhirId? get uid;
   @override
 
   /// [uidElement] Extensions for uid
@@ -7492,7 +7492,7 @@ abstract class _ImagingStudyInstance extends ImagingStudyInstance {
   @override
 
   /// [number] The number of instance in the series.
-  UnsignedInt? get number;
+  FhirUnsignedInt? get number;
   @override
 
   /// [numberElement] Extensions for number
@@ -7701,7 +7701,7 @@ mixin _$Media {
 
   /// [height] Height of the image in pixels (photo/video).
   @HiveField(32)
-  PositiveInt? get height => throw _privateConstructorUsedError;
+  FhirPositiveInt? get height => throw _privateConstructorUsedError;
 
   /// [heightElement] Extensions for height
   @JsonKey(name: '_height')
@@ -7710,7 +7710,7 @@ mixin _$Media {
 
   /// [width] Width of the image in pixels (photo/video).
   @HiveField(34)
-  PositiveInt? get width => throw _privateConstructorUsedError;
+  FhirPositiveInt? get width => throw _privateConstructorUsedError;
 
   /// [widthElement] Extensions for width
   @JsonKey(name: '_width')
@@ -7723,7 +7723,7 @@ mixin _$Media {
   /// SHALL have a value in order to alert interface software that a multi-frame
   ///  capable rendering widget is required.
   @HiveField(36)
-  PositiveInt? get frames => throw _privateConstructorUsedError;
+  FhirPositiveInt? get frames => throw _privateConstructorUsedError;
 
   /// [framesElement] Extensions for frames
   @JsonKey(name: '_frames')
@@ -7835,17 +7835,17 @@ abstract class $MediaCopyWith<$Res> {
       @HiveField(31)
           Reference? device,
       @HiveField(32)
-          PositiveInt? height,
+          FhirPositiveInt? height,
       @JsonKey(name: '_height')
       @HiveField(33)
           Element? heightElement,
       @HiveField(34)
-          PositiveInt? width,
+          FhirPositiveInt? width,
       @JsonKey(name: '_width')
       @HiveField(35)
           Element? widthElement,
       @HiveField(36)
-          PositiveInt? frames,
+          FhirPositiveInt? frames,
       @JsonKey(name: '_frames')
       @HiveField(37)
           Element? framesElement,
@@ -8453,17 +8453,17 @@ abstract class _$$_MediaCopyWith<$Res> implements $MediaCopyWith<$Res> {
       @HiveField(31)
           Reference? device,
       @HiveField(32)
-          PositiveInt? height,
+          FhirPositiveInt? height,
       @JsonKey(name: '_height')
       @HiveField(33)
           Element? heightElement,
       @HiveField(34)
-          PositiveInt? width,
+          FhirPositiveInt? width,
       @JsonKey(name: '_width')
       @HiveField(35)
           Element? widthElement,
       @HiveField(36)
-          PositiveInt? frames,
+          FhirPositiveInt? frames,
       @JsonKey(name: '_frames')
       @HiveField(37)
           Element? framesElement,
@@ -9693,7 +9693,7 @@ abstract class _Media extends Media {
 
   /// [height] Height of the image in pixels (photo/video).
   @HiveField(32)
-  PositiveInt? get height;
+  FhirPositiveInt? get height;
   @override
 
   /// [heightElement] Extensions for height
@@ -9704,7 +9704,7 @@ abstract class _Media extends Media {
 
   /// [width] Width of the image in pixels (photo/video).
   @HiveField(34)
-  PositiveInt? get width;
+  FhirPositiveInt? get width;
   @override
 
   /// [widthElement] Extensions for width
@@ -9719,7 +9719,7 @@ abstract class _Media extends Media {
   /// SHALL have a value in order to alert interface software that a multi-frame
   ///  capable rendering widget is required.
   @HiveField(36)
-  PositiveInt? get frames;
+  FhirPositiveInt? get frames;
   @override
 
   /// [framesElement] Extensions for frames
@@ -14618,7 +14618,7 @@ mixin _$MolecularSequenceRoc {
 
   /// [score] Invidual data point representing the GQ (genotype quality) score
   ///  threshold.
-  List<Integer>? get score => throw _privateConstructorUsedError;
+  List<FhirInteger>? get score => throw _privateConstructorUsedError;
 
   /// [scoreElement] Extensions for score
   @JsonKey(name: '_score')
@@ -14626,7 +14626,7 @@ mixin _$MolecularSequenceRoc {
 
   /// [numTP] The number of true positives if the GQ score threshold was set to
   ///  "score" field value.
-  List<Integer>? get numTP => throw _privateConstructorUsedError;
+  List<FhirInteger>? get numTP => throw _privateConstructorUsedError;
 
   /// [numTPElement] Extensions for numTP
   @JsonKey(name: '_numTP')
@@ -14634,7 +14634,7 @@ mixin _$MolecularSequenceRoc {
 
   /// [numFP] The number of false positives if the GQ score threshold was set
   ///  to "score" field value.
-  List<Integer>? get numFP => throw _privateConstructorUsedError;
+  List<FhirInteger>? get numFP => throw _privateConstructorUsedError;
 
   /// [numFPElement] Extensions for numFP
   @JsonKey(name: '_numFP')
@@ -14642,7 +14642,7 @@ mixin _$MolecularSequenceRoc {
 
   /// [numFN] The number of false negatives if the GQ score threshold was set
   ///  to "score" field value.
-  List<Integer>? get numFN => throw _privateConstructorUsedError;
+  List<FhirInteger>? get numFN => throw _privateConstructorUsedError;
 
   /// [numFNElement] Extensions for numFN
   @JsonKey(name: '_numFN')
@@ -14650,7 +14650,7 @@ mixin _$MolecularSequenceRoc {
 
   /// [precision] Calculated precision if the GQ score threshold was set to
   ///  "score" field value.
-  List<Decimal>? get precision => throw _privateConstructorUsedError;
+  List<FhirDecimal>? get precision => throw _privateConstructorUsedError;
 
   /// [precisionElement] Extensions for precision
   @JsonKey(name: '_precision')
@@ -14658,7 +14658,7 @@ mixin _$MolecularSequenceRoc {
 
   /// [sensitivity] Calculated sensitivity if the GQ score threshold was set to
   ///  "score" field value.
-  List<Decimal>? get sensitivity => throw _privateConstructorUsedError;
+  List<FhirDecimal>? get sensitivity => throw _privateConstructorUsedError;
 
   /// [sensitivityElement] Extensions for sensitivity
   @JsonKey(name: '_sensitivity')
@@ -14666,7 +14666,7 @@ mixin _$MolecularSequenceRoc {
 
   /// [fMeasure] Calculated fScore if the GQ score threshold was set to "score"
   ///  field value.
-  List<Decimal>? get fMeasure => throw _privateConstructorUsedError;
+  List<FhirDecimal>? get fMeasure => throw _privateConstructorUsedError;
 
   /// [fMeasureElement] Extensions for fMeasure
   @JsonKey(name: '_fMeasure')
@@ -14688,19 +14688,19 @@ abstract class $MolecularSequenceRocCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      List<Integer>? score,
+      List<FhirInteger>? score,
       @JsonKey(name: '_score') List<Element?>? scoreElement,
-      List<Integer>? numTP,
+      List<FhirInteger>? numTP,
       @JsonKey(name: '_numTP') List<Element?>? numTPElement,
-      List<Integer>? numFP,
+      List<FhirInteger>? numFP,
       @JsonKey(name: '_numFP') List<Element?>? numFPElement,
-      List<Integer>? numFN,
+      List<FhirInteger>? numFN,
       @JsonKey(name: '_numFN') List<Element?>? numFNElement,
-      List<Decimal>? precision,
+      List<FhirDecimal>? precision,
       @JsonKey(name: '_precision') List<Element?>? precisionElement,
-      List<Decimal>? sensitivity,
+      List<FhirDecimal>? sensitivity,
       @JsonKey(name: '_sensitivity') List<Element?>? sensitivityElement,
-      List<Decimal>? fMeasure,
+      List<FhirDecimal>? fMeasure,
       @JsonKey(name: '_fMeasure') List<Element?>? fMeasureElement});
 }
 
@@ -14752,7 +14752,7 @@ class _$MolecularSequenceRocCopyWithImpl<$Res,
       score: freezed == score
           ? _value.score
           : score // ignore: cast_nullable_to_non_nullable
-              as List<Integer>?,
+              as List<FhirInteger>?,
       scoreElement: freezed == scoreElement
           ? _value.scoreElement
           : scoreElement // ignore: cast_nullable_to_non_nullable
@@ -14760,7 +14760,7 @@ class _$MolecularSequenceRocCopyWithImpl<$Res,
       numTP: freezed == numTP
           ? _value.numTP
           : numTP // ignore: cast_nullable_to_non_nullable
-              as List<Integer>?,
+              as List<FhirInteger>?,
       numTPElement: freezed == numTPElement
           ? _value.numTPElement
           : numTPElement // ignore: cast_nullable_to_non_nullable
@@ -14768,7 +14768,7 @@ class _$MolecularSequenceRocCopyWithImpl<$Res,
       numFP: freezed == numFP
           ? _value.numFP
           : numFP // ignore: cast_nullable_to_non_nullable
-              as List<Integer>?,
+              as List<FhirInteger>?,
       numFPElement: freezed == numFPElement
           ? _value.numFPElement
           : numFPElement // ignore: cast_nullable_to_non_nullable
@@ -14776,7 +14776,7 @@ class _$MolecularSequenceRocCopyWithImpl<$Res,
       numFN: freezed == numFN
           ? _value.numFN
           : numFN // ignore: cast_nullable_to_non_nullable
-              as List<Integer>?,
+              as List<FhirInteger>?,
       numFNElement: freezed == numFNElement
           ? _value.numFNElement
           : numFNElement // ignore: cast_nullable_to_non_nullable
@@ -14784,7 +14784,7 @@ class _$MolecularSequenceRocCopyWithImpl<$Res,
       precision: freezed == precision
           ? _value.precision
           : precision // ignore: cast_nullable_to_non_nullable
-              as List<Decimal>?,
+              as List<FhirDecimal>?,
       precisionElement: freezed == precisionElement
           ? _value.precisionElement
           : precisionElement // ignore: cast_nullable_to_non_nullable
@@ -14792,7 +14792,7 @@ class _$MolecularSequenceRocCopyWithImpl<$Res,
       sensitivity: freezed == sensitivity
           ? _value.sensitivity
           : sensitivity // ignore: cast_nullable_to_non_nullable
-              as List<Decimal>?,
+              as List<FhirDecimal>?,
       sensitivityElement: freezed == sensitivityElement
           ? _value.sensitivityElement
           : sensitivityElement // ignore: cast_nullable_to_non_nullable
@@ -14800,7 +14800,7 @@ class _$MolecularSequenceRocCopyWithImpl<$Res,
       fMeasure: freezed == fMeasure
           ? _value.fMeasure
           : fMeasure // ignore: cast_nullable_to_non_nullable
-              as List<Decimal>?,
+              as List<FhirDecimal>?,
       fMeasureElement: freezed == fMeasureElement
           ? _value.fMeasureElement
           : fMeasureElement // ignore: cast_nullable_to_non_nullable
@@ -14821,19 +14821,19 @@ abstract class _$$_MolecularSequenceRocCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      List<Integer>? score,
+      List<FhirInteger>? score,
       @JsonKey(name: '_score') List<Element?>? scoreElement,
-      List<Integer>? numTP,
+      List<FhirInteger>? numTP,
       @JsonKey(name: '_numTP') List<Element?>? numTPElement,
-      List<Integer>? numFP,
+      List<FhirInteger>? numFP,
       @JsonKey(name: '_numFP') List<Element?>? numFPElement,
-      List<Integer>? numFN,
+      List<FhirInteger>? numFN,
       @JsonKey(name: '_numFN') List<Element?>? numFNElement,
-      List<Decimal>? precision,
+      List<FhirDecimal>? precision,
       @JsonKey(name: '_precision') List<Element?>? precisionElement,
-      List<Decimal>? sensitivity,
+      List<FhirDecimal>? sensitivity,
       @JsonKey(name: '_sensitivity') List<Element?>? sensitivityElement,
-      List<Decimal>? fMeasure,
+      List<FhirDecimal>? fMeasure,
       @JsonKey(name: '_fMeasure') List<Element?>? fMeasureElement});
 }
 
@@ -14882,7 +14882,7 @@ class __$$_MolecularSequenceRocCopyWithImpl<$Res>
       score: freezed == score
           ? _value._score
           : score // ignore: cast_nullable_to_non_nullable
-              as List<Integer>?,
+              as List<FhirInteger>?,
       scoreElement: freezed == scoreElement
           ? _value._scoreElement
           : scoreElement // ignore: cast_nullable_to_non_nullable
@@ -14890,7 +14890,7 @@ class __$$_MolecularSequenceRocCopyWithImpl<$Res>
       numTP: freezed == numTP
           ? _value._numTP
           : numTP // ignore: cast_nullable_to_non_nullable
-              as List<Integer>?,
+              as List<FhirInteger>?,
       numTPElement: freezed == numTPElement
           ? _value._numTPElement
           : numTPElement // ignore: cast_nullable_to_non_nullable
@@ -14898,7 +14898,7 @@ class __$$_MolecularSequenceRocCopyWithImpl<$Res>
       numFP: freezed == numFP
           ? _value._numFP
           : numFP // ignore: cast_nullable_to_non_nullable
-              as List<Integer>?,
+              as List<FhirInteger>?,
       numFPElement: freezed == numFPElement
           ? _value._numFPElement
           : numFPElement // ignore: cast_nullable_to_non_nullable
@@ -14906,7 +14906,7 @@ class __$$_MolecularSequenceRocCopyWithImpl<$Res>
       numFN: freezed == numFN
           ? _value._numFN
           : numFN // ignore: cast_nullable_to_non_nullable
-              as List<Integer>?,
+              as List<FhirInteger>?,
       numFNElement: freezed == numFNElement
           ? _value._numFNElement
           : numFNElement // ignore: cast_nullable_to_non_nullable
@@ -14914,7 +14914,7 @@ class __$$_MolecularSequenceRocCopyWithImpl<$Res>
       precision: freezed == precision
           ? _value._precision
           : precision // ignore: cast_nullable_to_non_nullable
-              as List<Decimal>?,
+              as List<FhirDecimal>?,
       precisionElement: freezed == precisionElement
           ? _value._precisionElement
           : precisionElement // ignore: cast_nullable_to_non_nullable
@@ -14922,7 +14922,7 @@ class __$$_MolecularSequenceRocCopyWithImpl<$Res>
       sensitivity: freezed == sensitivity
           ? _value._sensitivity
           : sensitivity // ignore: cast_nullable_to_non_nullable
-              as List<Decimal>?,
+              as List<FhirDecimal>?,
       sensitivityElement: freezed == sensitivityElement
           ? _value._sensitivityElement
           : sensitivityElement // ignore: cast_nullable_to_non_nullable
@@ -14930,7 +14930,7 @@ class __$$_MolecularSequenceRocCopyWithImpl<$Res>
       fMeasure: freezed == fMeasure
           ? _value._fMeasure
           : fMeasure // ignore: cast_nullable_to_non_nullable
-              as List<Decimal>?,
+              as List<FhirDecimal>?,
       fMeasureElement: freezed == fMeasureElement
           ? _value._fMeasureElement
           : fMeasureElement // ignore: cast_nullable_to_non_nullable
@@ -14946,19 +14946,19 @@ class _$_MolecularSequenceRoc extends _MolecularSequenceRoc {
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final List<Integer>? score,
+      final List<FhirInteger>? score,
       @JsonKey(name: '_score') final List<Element?>? scoreElement,
-      final List<Integer>? numTP,
+      final List<FhirInteger>? numTP,
       @JsonKey(name: '_numTP') final List<Element?>? numTPElement,
-      final List<Integer>? numFP,
+      final List<FhirInteger>? numFP,
       @JsonKey(name: '_numFP') final List<Element?>? numFPElement,
-      final List<Integer>? numFN,
+      final List<FhirInteger>? numFN,
       @JsonKey(name: '_numFN') final List<Element?>? numFNElement,
-      final List<Decimal>? precision,
+      final List<FhirDecimal>? precision,
       @JsonKey(name: '_precision') final List<Element?>? precisionElement,
-      final List<Decimal>? sensitivity,
+      final List<FhirDecimal>? sensitivity,
       @JsonKey(name: '_sensitivity') final List<Element?>? sensitivityElement,
-      final List<Decimal>? fMeasure,
+      final List<FhirDecimal>? fMeasure,
       @JsonKey(name: '_fMeasure') final List<Element?>? fMeasureElement})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -15050,12 +15050,12 @@ class _$_MolecularSequenceRoc extends _MolecularSequenceRoc {
 
   /// [score] Invidual data point representing the GQ (genotype quality) score
   ///  threshold.
-  final List<Integer>? _score;
+  final List<FhirInteger>? _score;
 
   /// [score] Invidual data point representing the GQ (genotype quality) score
   ///  threshold.
   @override
-  List<Integer>? get score {
+  List<FhirInteger>? get score {
     final value = _score;
     if (value == null) return null;
     if (_score is EqualUnmodifiableListView) return _score;
@@ -15079,12 +15079,12 @@ class _$_MolecularSequenceRoc extends _MolecularSequenceRoc {
 
   /// [numTP] The number of true positives if the GQ score threshold was set to
   ///  "score" field value.
-  final List<Integer>? _numTP;
+  final List<FhirInteger>? _numTP;
 
   /// [numTP] The number of true positives if the GQ score threshold was set to
   ///  "score" field value.
   @override
-  List<Integer>? get numTP {
+  List<FhirInteger>? get numTP {
     final value = _numTP;
     if (value == null) return null;
     if (_numTP is EqualUnmodifiableListView) return _numTP;
@@ -15108,12 +15108,12 @@ class _$_MolecularSequenceRoc extends _MolecularSequenceRoc {
 
   /// [numFP] The number of false positives if the GQ score threshold was set
   ///  to "score" field value.
-  final List<Integer>? _numFP;
+  final List<FhirInteger>? _numFP;
 
   /// [numFP] The number of false positives if the GQ score threshold was set
   ///  to "score" field value.
   @override
-  List<Integer>? get numFP {
+  List<FhirInteger>? get numFP {
     final value = _numFP;
     if (value == null) return null;
     if (_numFP is EqualUnmodifiableListView) return _numFP;
@@ -15137,12 +15137,12 @@ class _$_MolecularSequenceRoc extends _MolecularSequenceRoc {
 
   /// [numFN] The number of false negatives if the GQ score threshold was set
   ///  to "score" field value.
-  final List<Integer>? _numFN;
+  final List<FhirInteger>? _numFN;
 
   /// [numFN] The number of false negatives if the GQ score threshold was set
   ///  to "score" field value.
   @override
-  List<Integer>? get numFN {
+  List<FhirInteger>? get numFN {
     final value = _numFN;
     if (value == null) return null;
     if (_numFN is EqualUnmodifiableListView) return _numFN;
@@ -15166,12 +15166,12 @@ class _$_MolecularSequenceRoc extends _MolecularSequenceRoc {
 
   /// [precision] Calculated precision if the GQ score threshold was set to
   ///  "score" field value.
-  final List<Decimal>? _precision;
+  final List<FhirDecimal>? _precision;
 
   /// [precision] Calculated precision if the GQ score threshold was set to
   ///  "score" field value.
   @override
-  List<Decimal>? get precision {
+  List<FhirDecimal>? get precision {
     final value = _precision;
     if (value == null) return null;
     if (_precision is EqualUnmodifiableListView) return _precision;
@@ -15196,12 +15196,12 @@ class _$_MolecularSequenceRoc extends _MolecularSequenceRoc {
 
   /// [sensitivity] Calculated sensitivity if the GQ score threshold was set to
   ///  "score" field value.
-  final List<Decimal>? _sensitivity;
+  final List<FhirDecimal>? _sensitivity;
 
   /// [sensitivity] Calculated sensitivity if the GQ score threshold was set to
   ///  "score" field value.
   @override
-  List<Decimal>? get sensitivity {
+  List<FhirDecimal>? get sensitivity {
     final value = _sensitivity;
     if (value == null) return null;
     if (_sensitivity is EqualUnmodifiableListView) return _sensitivity;
@@ -15226,12 +15226,12 @@ class _$_MolecularSequenceRoc extends _MolecularSequenceRoc {
 
   /// [fMeasure] Calculated fScore if the GQ score threshold was set to "score"
   ///  field value.
-  final List<Decimal>? _fMeasure;
+  final List<FhirDecimal>? _fMeasure;
 
   /// [fMeasure] Calculated fScore if the GQ score threshold was set to "score"
   ///  field value.
   @override
-  List<Decimal>? get fMeasure {
+  List<FhirDecimal>? get fMeasure {
     final value = _fMeasure;
     if (value == null) return null;
     if (_fMeasure is EqualUnmodifiableListView) return _fMeasure;
@@ -15336,25 +15336,25 @@ abstract class _MolecularSequenceRoc extends MolecularSequenceRoc {
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final List<Integer>? score,
+      final List<FhirInteger>? score,
       @JsonKey(name: '_score')
           final List<Element?>? scoreElement,
-      final List<Integer>? numTP,
+      final List<FhirInteger>? numTP,
       @JsonKey(name: '_numTP')
           final List<Element?>? numTPElement,
-      final List<Integer>? numFP,
+      final List<FhirInteger>? numFP,
       @JsonKey(name: '_numFP')
           final List<Element?>? numFPElement,
-      final List<Integer>? numFN,
+      final List<FhirInteger>? numFN,
       @JsonKey(name: '_numFN')
           final List<Element?>? numFNElement,
-      final List<Decimal>? precision,
+      final List<FhirDecimal>? precision,
       @JsonKey(name: '_precision')
           final List<Element?>? precisionElement,
-      final List<Decimal>? sensitivity,
+      final List<FhirDecimal>? sensitivity,
       @JsonKey(name: '_sensitivity')
           final List<Element?>? sensitivityElement,
-      final List<Decimal>? fMeasure,
+      final List<FhirDecimal>? fMeasure,
       @JsonKey(name: '_fMeasure')
           final List<Element?>? fMeasureElement}) = _$_MolecularSequenceRoc;
   _MolecularSequenceRoc._() : super._();
@@ -15397,7 +15397,7 @@ abstract class _MolecularSequenceRoc extends MolecularSequenceRoc {
 
   /// [score] Invidual data point representing the GQ (genotype quality) score
   ///  threshold.
-  List<Integer>? get score;
+  List<FhirInteger>? get score;
   @override
 
   /// [scoreElement] Extensions for score
@@ -15407,7 +15407,7 @@ abstract class _MolecularSequenceRoc extends MolecularSequenceRoc {
 
   /// [numTP] The number of true positives if the GQ score threshold was set to
   ///  "score" field value.
-  List<Integer>? get numTP;
+  List<FhirInteger>? get numTP;
   @override
 
   /// [numTPElement] Extensions for numTP
@@ -15417,7 +15417,7 @@ abstract class _MolecularSequenceRoc extends MolecularSequenceRoc {
 
   /// [numFP] The number of false positives if the GQ score threshold was set
   ///  to "score" field value.
-  List<Integer>? get numFP;
+  List<FhirInteger>? get numFP;
   @override
 
   /// [numFPElement] Extensions for numFP
@@ -15427,7 +15427,7 @@ abstract class _MolecularSequenceRoc extends MolecularSequenceRoc {
 
   /// [numFN] The number of false negatives if the GQ score threshold was set
   ///  to "score" field value.
-  List<Integer>? get numFN;
+  List<FhirInteger>? get numFN;
   @override
 
   /// [numFNElement] Extensions for numFN
@@ -15437,7 +15437,7 @@ abstract class _MolecularSequenceRoc extends MolecularSequenceRoc {
 
   /// [precision] Calculated precision if the GQ score threshold was set to
   ///  "score" field value.
-  List<Decimal>? get precision;
+  List<FhirDecimal>? get precision;
   @override
 
   /// [precisionElement] Extensions for precision
@@ -15447,7 +15447,7 @@ abstract class _MolecularSequenceRoc extends MolecularSequenceRoc {
 
   /// [sensitivity] Calculated sensitivity if the GQ score threshold was set to
   ///  "score" field value.
-  List<Decimal>? get sensitivity;
+  List<FhirDecimal>? get sensitivity;
   @override
 
   /// [sensitivityElement] Extensions for sensitivity
@@ -15457,7 +15457,7 @@ abstract class _MolecularSequenceRoc extends MolecularSequenceRoc {
 
   /// [fMeasure] Calculated fScore if the GQ score threshold was set to "score"
   ///  field value.
-  List<Decimal>? get fMeasure;
+  List<FhirDecimal>? get fMeasure;
   @override
 
   /// [fMeasureElement] Extensions for fMeasure
@@ -18032,7 +18032,7 @@ mixin _$Observation {
   /// [valueTime] The information determined as a result of making the
   ///  observation, if the information has a simple value.
   @HiveField(41)
-  Time? get valueTime => throw _privateConstructorUsedError;
+  FhirTime? get valueTime => throw _privateConstructorUsedError;
 
   /// [valueTimeElement] Extensions for valueTime
   @JsonKey(name: '_valueTime')
@@ -18222,7 +18222,7 @@ abstract class $ObservationCopyWith<$Res> {
       @HiveField(40)
           SampledData? valueSampledData,
       @HiveField(41)
-          Time? valueTime,
+          FhirTime? valueTime,
       @JsonKey(name: '_valueTime')
       @HiveField(42)
           Element? valueTimeElement,
@@ -19039,7 +19039,7 @@ abstract class _$$_ObservationCopyWith<$Res>
       @HiveField(40)
           SampledData? valueSampledData,
       @HiveField(41)
-          Time? valueTime,
+          FhirTime? valueTime,
       @JsonKey(name: '_valueTime')
       @HiveField(42)
           Element? valueTimeElement,
@@ -20770,7 +20770,7 @@ abstract class _Observation extends Observation {
   /// [valueTime] The information determined as a result of making the
   ///  observation, if the information has a simple value.
   @HiveField(41)
-  Time? get valueTime;
+  FhirTime? get valueTime;
   @override
 
   /// [valueTimeElement] Extensions for valueTime
@@ -21597,7 +21597,7 @@ mixin _$ObservationComponent {
 
   /// [valueTime] The information determined as a result of making the
   ///  observation, if the information has a simple value.
-  Time? get valueTime => throw _privateConstructorUsedError;
+  FhirTime? get valueTime => throw _privateConstructorUsedError;
 
   /// [valueTimeElement] Extensions for valueTime
   @JsonKey(name: '_valueTime')
@@ -21657,7 +21657,7 @@ abstract class $ObservationComponentCopyWith<$Res> {
       Range? valueRange,
       Ratio? valueRatio,
       SampledData? valueSampledData,
-      Time? valueTime,
+      FhirTime? valueTime,
       @JsonKey(name: '_valueTime') Element? valueTimeElement,
       FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
@@ -21993,7 +21993,7 @@ abstract class _$$_ObservationComponentCopyWith<$Res>
       Range? valueRange,
       Ratio? valueRatio,
       SampledData? valueSampledData,
-      Time? valueTime,
+      FhirTime? valueTime,
       @JsonKey(name: '_valueTime') Element? valueTimeElement,
       FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
@@ -22611,7 +22611,7 @@ abstract class _ObservationComponent extends ObservationComponent {
 
   /// [valueTime] The information determined as a result of making the
   ///  observation, if the information has a simple value.
-  Time? get valueTime;
+  FhirTime? get valueTime;
   @override
 
   /// [valueTimeElement] Extensions for valueTime
@@ -24788,7 +24788,7 @@ mixin _$QuestionnaireResponseAnswer {
 
   /// [valueTime] The answer (or one of the answers) provided by the respondent
   ///  to the question.
-  Time? get valueTime => throw _privateConstructorUsedError;
+  FhirTime? get valueTime => throw _privateConstructorUsedError;
 
   /// [valueTimeElement] Extensions for valueTime
   @JsonKey(name: '_valueTime')
@@ -24859,7 +24859,7 @@ abstract class $QuestionnaireResponseAnswerCopyWith<$Res> {
       @JsonKey(name: '_valueDate') Element? valueDateElement,
       FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
-      Time? valueTime,
+      FhirTime? valueTime,
       @JsonKey(name: '_valueTime') Element? valueTimeElement,
       String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
@@ -25192,7 +25192,7 @@ abstract class _$$_QuestionnaireResponseAnswerCopyWith<$Res>
       @JsonKey(name: '_valueDate') Element? valueDateElement,
       FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
-      Time? valueTime,
+      FhirTime? valueTime,
       @JsonKey(name: '_valueTime') Element? valueTimeElement,
       String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
@@ -25808,7 +25808,7 @@ abstract class _QuestionnaireResponseAnswer
 
   /// [valueTime] The answer (or one of the answers) provided by the respondent
   ///  to the question.
-  Time? get valueTime;
+  FhirTime? get valueTime;
   @override
 
   /// [valueTimeElement] Extensions for valueTime

@@ -6,7 +6,7 @@ class DeviceUsCore extends Resource {
 
   factory DeviceUsCore({
     String? id,
-    Meta? meta,
+    FhirMeta? meta,
     Narrative? text,
     List<DeviceUdiCarrier>? udiCarrier,
     String? distinctIdentifier,
@@ -67,7 +67,7 @@ class DeviceUsCore extends Resource {
   Device _device;
   Device get value => _device;
   String? get id => _device.id;
-  Meta? get meta => _device.meta;
+  FhirMeta? get meta => _device.meta;
   Narrative? get text => _device.text;
   List<DeviceUdiCarrier>? get udiCarrier => _device.udiCarrier;
   String? get distinctIdentifier => _device.distinctIdentifier;

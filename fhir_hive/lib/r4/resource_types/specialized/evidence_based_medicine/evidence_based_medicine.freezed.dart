@@ -10366,7 +10366,7 @@ mixin _$CitationEntry {
   @JsonKey(name: '_correspondingContact')
   Element? get correspondingContactElement =>
       throw _privateConstructorUsedError;
-  PositiveInt? get listOrder => throw _privateConstructorUsedError;
+  FhirPositiveInt? get listOrder => throw _privateConstructorUsedError;
   @JsonKey(name: '_listOrder')
   Element? get listOrderElement => throw _privateConstructorUsedError;
 
@@ -10404,7 +10404,7 @@ abstract class $CitationEntryCopyWith<$Res> {
       Boolean? correspondingContact,
       @JsonKey(name: '_correspondingContact')
           Element? correspondingContactElement,
-      PositiveInt? listOrder,
+      FhirPositiveInt? listOrder,
       @JsonKey(name: '_listOrder')
           Element? listOrderElement});
 
@@ -10632,7 +10632,7 @@ abstract class _$$_CitationEntryCopyWith<$Res>
       Boolean? correspondingContact,
       @JsonKey(name: '_correspondingContact')
           Element? correspondingContactElement,
-      PositiveInt? listOrder,
+      FhirPositiveInt? listOrder,
       @JsonKey(name: '_listOrder')
           Element? listOrderElement});
 
@@ -11065,7 +11065,7 @@ abstract class _CitationEntry extends CitationEntry {
   @JsonKey(name: '_correspondingContact')
   Element? get correspondingContactElement;
   @override
-  PositiveInt? get listOrder;
+  FhirPositiveInt? get listOrder;
   @override
   @JsonKey(name: '_listOrder')
   Element? get listOrderElement;
@@ -14633,10 +14633,10 @@ mixin _$EvidenceStatistic {
   CodeableConcept? get statisticType => throw _privateConstructorUsedError;
   CodeableConcept? get category => throw _privateConstructorUsedError;
   Quantity? get quantity => throw _privateConstructorUsedError;
-  UnsignedInt? get numberOfEvents => throw _privateConstructorUsedError;
+  FhirUnsignedInt? get numberOfEvents => throw _privateConstructorUsedError;
   @JsonKey(name: '_numberOfEvents')
   Element? get numberOfEventsElement => throw _privateConstructorUsedError;
-  UnsignedInt? get numberAffected => throw _privateConstructorUsedError;
+  FhirUnsignedInt? get numberAffected => throw _privateConstructorUsedError;
   @JsonKey(name: '_numberAffected')
   Element? get numberAffectedElement => throw _privateConstructorUsedError;
   EvidenceSampleSize? get sampleSize => throw _privateConstructorUsedError;
@@ -14667,9 +14667,9 @@ abstract class $EvidenceStatisticCopyWith<$Res> {
       CodeableConcept? statisticType,
       CodeableConcept? category,
       Quantity? quantity,
-      UnsignedInt? numberOfEvents,
+      FhirUnsignedInt? numberOfEvents,
       @JsonKey(name: '_numberOfEvents') Element? numberOfEventsElement,
-      UnsignedInt? numberAffected,
+      FhirUnsignedInt? numberAffected,
       @JsonKey(name: '_numberAffected') Element? numberAffectedElement,
       EvidenceSampleSize? sampleSize,
       List<EvidenceAttributeEstimate>? attributeEstimate,
@@ -14885,9 +14885,9 @@ abstract class _$$_EvidenceStatisticCopyWith<$Res>
       CodeableConcept? statisticType,
       CodeableConcept? category,
       Quantity? quantity,
-      UnsignedInt? numberOfEvents,
+      FhirUnsignedInt? numberOfEvents,
       @JsonKey(name: '_numberOfEvents') Element? numberOfEventsElement,
-      UnsignedInt? numberAffected,
+      FhirUnsignedInt? numberAffected,
       @JsonKey(name: '_numberAffected') Element? numberAffectedElement,
       EvidenceSampleSize? sampleSize,
       List<EvidenceAttributeEstimate>? attributeEstimate,
@@ -15238,12 +15238,12 @@ abstract class _EvidenceStatistic extends EvidenceStatistic {
   @override
   Quantity? get quantity;
   @override
-  UnsignedInt? get numberOfEvents;
+  FhirUnsignedInt? get numberOfEvents;
   @override
   @JsonKey(name: '_numberOfEvents')
   Element? get numberOfEventsElement;
   @override
-  UnsignedInt? get numberAffected;
+  FhirUnsignedInt? get numberAffected;
   @override
   @JsonKey(name: '_numberAffected')
   Element? get numberAffectedElement;
@@ -15274,14 +15274,15 @@ mixin _$EvidenceSampleSize {
   @JsonKey(name: '_description')
   Element? get descriptionElement => throw _privateConstructorUsedError;
   List<Annotation>? get note => throw _privateConstructorUsedError;
-  UnsignedInt? get numberOfStudies => throw _privateConstructorUsedError;
+  FhirUnsignedInt? get numberOfStudies => throw _privateConstructorUsedError;
   @JsonKey(name: '_numberOfStudies')
   Element? get numberOfStudiesElement => throw _privateConstructorUsedError;
-  UnsignedInt? get numberOfParticipants => throw _privateConstructorUsedError;
+  FhirUnsignedInt? get numberOfParticipants =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_numberOfParticipants')
   Element? get numberOfParticipantsElement =>
       throw _privateConstructorUsedError;
-  UnsignedInt? get knownDataCount => throw _privateConstructorUsedError;
+  FhirUnsignedInt? get knownDataCount => throw _privateConstructorUsedError;
   @JsonKey(name: '_knownDataCount')
   Element? get knownDataCountElement => throw _privateConstructorUsedError;
 
@@ -15306,13 +15307,13 @@ abstract class $EvidenceSampleSizeCopyWith<$Res> {
       @JsonKey(name: '_description')
           Element? descriptionElement,
       List<Annotation>? note,
-      UnsignedInt? numberOfStudies,
+      FhirUnsignedInt? numberOfStudies,
       @JsonKey(name: '_numberOfStudies')
           Element? numberOfStudiesElement,
-      UnsignedInt? numberOfParticipants,
+      FhirUnsignedInt? numberOfParticipants,
       @JsonKey(name: '_numberOfParticipants')
           Element? numberOfParticipantsElement,
-      UnsignedInt? knownDataCount,
+      FhirUnsignedInt? knownDataCount,
       @JsonKey(name: '_knownDataCount')
           Element? knownDataCountElement});
 
@@ -15466,13 +15467,13 @@ abstract class _$$_EvidenceSampleSizeCopyWith<$Res>
       @JsonKey(name: '_description')
           Element? descriptionElement,
       List<Annotation>? note,
-      UnsignedInt? numberOfStudies,
+      FhirUnsignedInt? numberOfStudies,
       @JsonKey(name: '_numberOfStudies')
           Element? numberOfStudiesElement,
-      UnsignedInt? numberOfParticipants,
+      FhirUnsignedInt? numberOfParticipants,
       @JsonKey(name: '_numberOfParticipants')
           Element? numberOfParticipantsElement,
-      UnsignedInt? knownDataCount,
+      FhirUnsignedInt? knownDataCount,
       @JsonKey(name: '_knownDataCount')
           Element? knownDataCountElement});
 
@@ -15749,17 +15750,17 @@ abstract class _EvidenceSampleSize extends EvidenceSampleSize {
   @override
   List<Annotation>? get note;
   @override
-  UnsignedInt? get numberOfStudies;
+  FhirUnsignedInt? get numberOfStudies;
   @override
   @JsonKey(name: '_numberOfStudies')
   Element? get numberOfStudiesElement;
   @override
-  UnsignedInt? get numberOfParticipants;
+  FhirUnsignedInt? get numberOfParticipants;
   @override
   @JsonKey(name: '_numberOfParticipants')
   Element? get numberOfParticipantsElement;
   @override
-  UnsignedInt? get knownDataCount;
+  FhirUnsignedInt? get knownDataCount;
   @override
   @JsonKey(name: '_knownDataCount')
   Element? get knownDataCountElement;
@@ -24405,7 +24406,7 @@ mixin _$ResearchDefinition {
       throw _privateConstructorUsedError;
   @HiveField(58)
   @JsonKey(name: 'library')
-  List<Canonical>? get library_ => throw _privateConstructorUsedError;
+  List<FhirCanonical>? get library_ => throw _privateConstructorUsedError;
   @HiveField(59)
   Reference get population => throw _privateConstructorUsedError;
   @HiveField(60)
@@ -24567,7 +24568,7 @@ abstract class $ResearchDefinitionCopyWith<$Res> {
           List<RelatedArtifact>? relatedArtifact,
       @HiveField(58)
       @JsonKey(name: 'library')
-          List<Canonical>? library_,
+          List<FhirCanonical>? library_,
       @HiveField(59)
           Reference population,
       @HiveField(60)
@@ -24919,7 +24920,7 @@ class _$ResearchDefinitionCopyWithImpl<$Res, $Val extends ResearchDefinition>
       library_: freezed == library_
           ? _value.library_
           : library_ // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       population: null == population
           ? _value.population
           : population // ignore: cast_nullable_to_non_nullable
@@ -25409,7 +25410,7 @@ abstract class _$$_ResearchDefinitionCopyWith<$Res>
           List<RelatedArtifact>? relatedArtifact,
       @HiveField(58)
       @JsonKey(name: 'library')
-          List<Canonical>? library_,
+          List<FhirCanonical>? library_,
       @HiveField(59)
           Reference population,
       @HiveField(60)
@@ -25786,7 +25787,7 @@ class __$$_ResearchDefinitionCopyWithImpl<$Res>
       library_: freezed == library_
           ? _value._library_
           : library_ // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       population: null == population
           ? _value.population
           : population // ignore: cast_nullable_to_non_nullable
@@ -25951,7 +25952,7 @@ class _$_ResearchDefinition extends _ResearchDefinition {
           final List<RelatedArtifact>? relatedArtifact,
       @HiveField(58)
       @JsonKey(name: 'library')
-          final List<Canonical>? library_,
+          final List<FhirCanonical>? library_,
       @HiveField(59)
           required this.population,
       @HiveField(60)
@@ -26297,11 +26298,11 @@ class _$_ResearchDefinition extends _ResearchDefinition {
     return EqualUnmodifiableListView(value);
   }
 
-  final List<Canonical>? _library_;
+  final List<FhirCanonical>? _library_;
   @override
   @HiveField(58)
   @JsonKey(name: 'library')
-  List<Canonical>? get library_ {
+  List<FhirCanonical>? get library_ {
     final value = _library_;
     if (value == null) return null;
     if (_library_ is EqualUnmodifiableListView) return _library_;
@@ -26665,7 +26666,7 @@ abstract class _ResearchDefinition extends ResearchDefinition {
           final List<RelatedArtifact>? relatedArtifact,
       @HiveField(58)
       @JsonKey(name: 'library')
-          final List<Canonical>? library_,
+          final List<FhirCanonical>? library_,
       @HiveField(59)
           required final Reference population,
       @HiveField(60)
@@ -26877,7 +26878,7 @@ abstract class _ResearchDefinition extends ResearchDefinition {
   @override
   @HiveField(58)
   @JsonKey(name: 'library')
-  List<Canonical>? get library_;
+  List<FhirCanonical>? get library_;
   @override
   @HiveField(59)
   Reference get population;
@@ -27045,7 +27046,7 @@ mixin _$ResearchElementDefinition {
       throw _privateConstructorUsedError;
   @HiveField(58)
   @JsonKey(name: 'library')
-  List<Canonical>? get library_ => throw _privateConstructorUsedError;
+  List<FhirCanonical>? get library_ => throw _privateConstructorUsedError;
   @HiveField(59)
   Code? get type => throw _privateConstructorUsedError;
   @HiveField(60)
@@ -27212,7 +27213,7 @@ abstract class $ResearchElementDefinitionCopyWith<$Res> {
           List<RelatedArtifact>? relatedArtifact,
       @HiveField(58)
       @JsonKey(name: 'library')
-          List<Canonical>? library_,
+          List<FhirCanonical>? library_,
       @HiveField(59)
           Code? type,
       @HiveField(60)
@@ -27568,7 +27569,7 @@ class _$ResearchElementDefinitionCopyWithImpl<$Res,
       library_: freezed == library_
           ? _value.library_
           : library_ // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
@@ -28043,7 +28044,7 @@ abstract class _$$_ResearchElementDefinitionCopyWith<$Res>
           List<RelatedArtifact>? relatedArtifact,
       @HiveField(58)
       @JsonKey(name: 'library')
-          List<Canonical>? library_,
+          List<FhirCanonical>? library_,
       @HiveField(59)
           Code? type,
       @HiveField(60)
@@ -28423,7 +28424,7 @@ class __$$_ResearchElementDefinitionCopyWithImpl<$Res>
       library_: freezed == library_
           ? _value._library_
           : library_ // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
@@ -28592,7 +28593,7 @@ class _$_ResearchElementDefinition extends _ResearchElementDefinition {
           final List<RelatedArtifact>? relatedArtifact,
       @HiveField(58)
       @JsonKey(name: 'library')
-          final List<Canonical>? library_,
+          final List<FhirCanonical>? library_,
       @HiveField(59)
           this.type,
       @HiveField(60)
@@ -28944,11 +28945,11 @@ class _$_ResearchElementDefinition extends _ResearchElementDefinition {
     return EqualUnmodifiableListView(value);
   }
 
-  final List<Canonical>? _library_;
+  final List<FhirCanonical>? _library_;
   @override
   @HiveField(58)
   @JsonKey(name: 'library')
-  List<Canonical>? get library_ {
+  List<FhirCanonical>? get library_ {
     final value = _library_;
     if (value == null) return null;
     if (_library_ is EqualUnmodifiableListView) return _library_;
@@ -29324,7 +29325,7 @@ abstract class _ResearchElementDefinition extends ResearchElementDefinition {
           final List<RelatedArtifact>? relatedArtifact,
       @HiveField(58)
       @JsonKey(name: 'library')
-          final List<Canonical>? library_,
+          final List<FhirCanonical>? library_,
       @HiveField(59)
           final Code? type,
       @HiveField(60)
@@ -29541,7 +29542,7 @@ abstract class _ResearchElementDefinition extends ResearchElementDefinition {
   @override
   @HiveField(58)
   @JsonKey(name: 'library')
-  List<Canonical>? get library_;
+  List<FhirCanonical>? get library_;
   @override
   @HiveField(59)
   Code? get type;

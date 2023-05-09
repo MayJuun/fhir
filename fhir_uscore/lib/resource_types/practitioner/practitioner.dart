@@ -9,7 +9,7 @@ class PractitionerUsCore extends Resource {
 
   factory PractitionerUsCore({
     String? id,
-    Meta? meta,
+    FhirMeta? meta,
     Narrative? text,
     required List<Identifier> identifier,
     required List<HumanName> name,
@@ -67,7 +67,7 @@ class PractitionerUsCore extends Resource {
   Practitioner _practitioner;
   Practitioner get value => _practitioner;
   String? get id => _practitioner.id;
-  Meta? get meta => _practitioner.meta;
+  FhirMeta? get meta => _practitioner.meta;
   Narrative? get text => _practitioner.text;
   List<Identifier>? get identifier => _practitioner.identifier;
   List<HumanName>? get name => _practitioner.name;
@@ -84,7 +84,7 @@ class PractitionerRoleUsCore {
 
   factory PractitionerRoleUsCore({
     String? id,
-    Meta? meta,
+    FhirMeta? meta,
     Narrative? text,
     required Reference practitioner,
     required Reference organization,
@@ -148,7 +148,7 @@ class PractitionerRoleUsCore {
   PractitionerRole _practitionerRole;
   PractitionerRole get value => _practitionerRole;
   String? get id => _practitionerRole.id;
-  Meta? get meta => _practitionerRole.meta;
+  FhirMeta? get meta => _practitionerRole.meta;
   Narrative? get text => _practitionerRole.text;
   Reference? get practitioner => _practitionerRole.practitioner;
   Reference? get organization => _practitionerRole.organization;

@@ -132,7 +132,7 @@ class Endpoint with Resource, _$Endpoint {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -233,7 +233,7 @@ class Endpoint with Resource, _$Endpoint {
     /// application/fhir+xml, application/fhir+json. If the mime type is not
     /// specified, then the sender could send any content (including no content
     ///  depending on the connectionType).
-    List<Code>? payloadMimeType,
+    List<FhirCode>? payloadMimeType,
 
     /// [payloadMimeTypeElement] Extensions for payloadMimeType
     @JsonKey(name: '_payloadMimeType')
@@ -443,7 +443,7 @@ class HealthcareService with Resource, _$HealthcareService {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -839,7 +839,7 @@ class HealthcareServiceAvailableTime with _$HealthcareServiceAvailableTime {
 
     /// [daysOfWeek] Indicates which days of the week are available between the
     ///  start and end Times.
-    List<Code>? daysOfWeek,
+    List<FhirCode>? daysOfWeek,
 
     /// [daysOfWeekElement] Extensions for daysOfWeek
     @JsonKey(name: '_daysOfWeek') List<Element?>? daysOfWeekElement,
@@ -853,14 +853,14 @@ class HealthcareServiceAvailableTime with _$HealthcareServiceAvailableTime {
 
     /// [availableStartTime] The opening time of day. Note: If the AllDay flag is
     ///  set, then this time is ignored.
-    Time? availableStartTime,
+    FhirTime? availableStartTime,
 
     /// [availableStartTimeElement] Extensions for availableStartTime
     @JsonKey(name: '_availableStartTime') Element? availableStartTimeElement,
 
     /// [availableEndTime] The closing time of day. Note: If the AllDay flag is
     ///  set, then this time is ignored.
-    Time? availableEndTime,
+    FhirTime? availableEndTime,
 
     /// [availableEndTimeElement] Extensions for availableEndTime
     @JsonKey(name: '_availableEndTime') Element? availableEndTimeElement,
@@ -1151,7 +1151,7 @@ class Location with Resource, _$Location {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -1541,7 +1541,7 @@ class LocationHoursOfOperation with _$LocationHoursOfOperation {
 
     /// [daysOfWeek] Indicates which days of the week are available between the
     ///  start and end Times.
-    List<Code>? daysOfWeek,
+    List<FhirCode>? daysOfWeek,
 
     /// [daysOfWeekElement] Extensions for daysOfWeek
     @JsonKey(name: '_daysOfWeek') List<Element?>? daysOfWeekElement,
@@ -1553,13 +1553,13 @@ class LocationHoursOfOperation with _$LocationHoursOfOperation {
     @JsonKey(name: '_allDay') Element? allDayElement,
 
     /// [openingTime] Time that the Location opens.
-    Time? openingTime,
+    FhirTime? openingTime,
 
     /// [openingTimeElement] Extensions for openingTime
     @JsonKey(name: '_openingTime') Element? openingTimeElement,
 
     /// [closingTime] Time that the Location closes.
-    Time? closingTime,
+    FhirTime? closingTime,
 
     /// [closingTimeElement] Extensions for closingTime
     @JsonKey(name: '_closingTime') Element? closingTimeElement,
@@ -1702,7 +1702,7 @@ class Organization with Resource, _$Organization {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -2062,7 +2062,7 @@ class OrganizationAffiliation with Resource, _$OrganizationAffiliation {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the

@@ -117,7 +117,7 @@ class BodyStructure with Resource, _$BodyStructure {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when
@@ -624,7 +624,7 @@ class DiagnosticReport with Resource, _$DiagnosticReport {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when
@@ -1139,7 +1139,7 @@ class GenomicStudy with Resource, _$GenomicStudy {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when
@@ -2055,7 +2055,7 @@ class ImagingSelection with Resource, _$ImagingSelection {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when
@@ -2133,7 +2133,7 @@ class ImagingSelection with Resource, _$ImagingSelection {
     @JsonKey(name: '_seriesUid') Element? seriesUidElement,
 
     /// [seriesNumber] The Series Number for the DICOM Series from which the images were selected.
-    UnsignedInt? seriesNumber,
+    FhirUnsignedInt? seriesNumber,
 
     /// [seriesNumberElement] ("_seriesNumber") Extensions for seriesNumber
     @JsonKey(name: '_seriesNumber') Element? seriesNumberElement,
@@ -2409,7 +2409,7 @@ class ImagingSelectionInstance with _$ImagingSelectionInstance {
     @JsonKey(name: '_uid') Element? uidElement,
 
     /// [number] The Instance Number for the selected DICOM instance.
-    UnsignedInt? number,
+    FhirUnsignedInt? number,
 
     /// [numberElement] ("_number") Extensions for number
     @JsonKey(name: '_number') Element? numberElement,
@@ -2555,7 +2555,7 @@ class ImagingSelectionImageRegion with _$ImagingSelectionImageRegion {
     @JsonKey(name: '_regionType') Element? regionTypeElement,
 
     /// [coordinate] The coordinates describing the image region. Encoded as a set of (column, row) pairs that denote positions in the selected image / frames specified with sub-pixel resolution. The origin at the TLHC of the TLHC pixel is 0.0\0.0, the BRHC of the TLHC pixel is 1.0\1.0, and the BRHC of the BRHC pixel is the number of columns\rows in the image / frames. The values must be within the range 0\0 to the number of columns\rows in the image / frames.
-    List<Decimal>? coordinate,
+    List<FhirDecimal>? coordinate,
 
     /// [coordinateElement] ("_coordinate") Extensions for coordinate
     @JsonKey(name: '_coordinate') List<Element>? coordinateElement,
@@ -2682,7 +2682,7 @@ class ImagingSelectionImageRegion1 with _$ImagingSelectionImageRegion1 {
     @JsonKey(name: '_regionType') Element? regionTypeElement,
 
     /// [coordinate] The coordinates describing the image region. Encoded as an ordered set of (x,y,z) triplets (in mm and may be negative) that define a region of interest in the patient-relative Reference Coordinate System defined by ImagingSelection.frameOfReferenceUid element.
-    List<Decimal>? coordinate,
+    List<FhirDecimal>? coordinate,
 
     /// [coordinateElement] ("_coordinate") Extensions for coordinate
     @JsonKey(name: '_coordinate') List<Element>? coordinateElement,
@@ -2883,7 +2883,7 @@ class ImagingStudy with Resource, _$ImagingStudy {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when
@@ -2949,13 +2949,13 @@ class ImagingStudy with Resource, _$ImagingStudy {
     List<Reference>? endpoint,
 
     /// [numberOfSeries] Number of Series in the Study. This value given may be larger than the number of series elements this Resource contains due to resource availability, security, or other factors. This element should be present if any series elements are present.
-    UnsignedInt? numberOfSeries,
+    FhirUnsignedInt? numberOfSeries,
 
     /// [numberOfSeriesElement] ("_numberOfSeries") Extensions for numberOfSeries
     @JsonKey(name: '_numberOfSeries') Element? numberOfSeriesElement,
 
     /// [numberOfInstances] Number of SOP Instances in Study. This value given may be larger than the number of instance elements this resource contains due to resource availability, security, or other factors. This element should be present if any instance elements are present.
-    UnsignedInt? numberOfInstances,
+    FhirUnsignedInt? numberOfInstances,
 
     /// [numberOfInstancesElement] ("_numberOfInstances") Extensions for numberOfInstances
     @JsonKey(name: '_numberOfInstances') Element? numberOfInstancesElement,
@@ -3148,7 +3148,7 @@ class ImagingStudySeries with _$ImagingStudySeries {
     @JsonKey(name: '_uid') Element? uidElement,
 
     /// [number] The numeric identifier of this series in the study.
-    UnsignedInt? number,
+    FhirUnsignedInt? number,
 
     /// [numberElement] ("_number") Extensions for number
     @JsonKey(name: '_number') Element? numberElement,
@@ -3163,7 +3163,7 @@ class ImagingStudySeries with _$ImagingStudySeries {
     @JsonKey(name: '_description') Element? descriptionElement,
 
     /// [numberOfInstances] Number of SOP Instances in the Study. The value given may be larger than the number of instance elements this resource contains due to resource availability, security, or other factors. This element should be present if any instance elements are present.
-    UnsignedInt? numberOfInstances,
+    FhirUnsignedInt? numberOfInstances,
 
     /// [numberOfInstancesElement] ("_numberOfInstances") Extensions for numberOfInstances
     @JsonKey(name: '_numberOfInstances') Element? numberOfInstancesElement,
@@ -3439,7 +3439,7 @@ class ImagingStudyInstance with _$ImagingStudyInstance {
     required Coding sopClass,
 
     /// [number] The number of instance in the series.
-    UnsignedInt? number,
+    FhirUnsignedInt? number,
 
     /// [numberElement] ("_number") Extensions for number
     @JsonKey(name: '_number') Element? numberElement,
@@ -3581,7 +3581,7 @@ class MolecularSequence with Resource, _$MolecularSequence {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when
@@ -4393,7 +4393,7 @@ class Observation with Resource, _$Observation {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when
@@ -4526,7 +4526,7 @@ class Observation with Resource, _$Observation {
     SampledData? valueSampledData,
 
     /// [valueTime] The information determined as a result of making the observation, if the information has a simple value.
-    Time? valueTime,
+    FhirTime? valueTime,
 
     /// [valueTimeElement] ("_valueTime") Extensions for valueTime
     @JsonKey(name: '_valueTime') Element? valueTimeElement,
@@ -5039,7 +5039,7 @@ class ObservationComponent with _$ObservationComponent {
     SampledData? valueSampledData,
 
     /// [valueTime] The information determined as a result of making the observation, if the information has a simple value.
-    Time? valueTime,
+    FhirTime? valueTime,
 
     /// [valueTimeElement] ("_valueTime") Extensions for valueTime
     @JsonKey(name: '_valueTime') Element? valueTimeElement,
@@ -5221,7 +5221,7 @@ class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when
@@ -5260,7 +5260,7 @@ class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
     List<Reference>? partOf,
 
     /// [questionnaire] The Questionnaire that defines and organizes the questions for which answers are being provided.
-    required Canonical questionnaire,
+    required FhirCanonical questionnaire,
 
     /// [statusElement] ("_questionnaire") Extensions for questionnaire
     @JsonKey(name: '_questionnaire') Element? questionnaireElement,
@@ -5622,7 +5622,7 @@ class QuestionnaireResponseAnswer with _$QuestionnaireResponseAnswer {
     @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
 
     /// [valueTime] The answer (or one of the answers) provided by the respondent to the question.
-    Time? valueTime,
+    FhirTime? valueTime,
 
     /// [valueTimeElement] ("_valueTime") Extensions for valueTime
     @JsonKey(name: '_valueTime') Element? valueTimeElement,
@@ -5817,7 +5817,7 @@ class Specimen with Resource, _$Specimen {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when

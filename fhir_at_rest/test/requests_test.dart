@@ -180,7 +180,7 @@ Future<void> requestsTest() async {
           entry: [
             BundleEntry(
                 request: BundleRequest(
-              method: Code('delete'),
+              method: FhirCode('delete'),
             ))
           ]);
       final request = FhirRequest.transaction(

@@ -152,7 +152,7 @@ class Coverage with Resource, _$Coverage {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -271,7 +271,7 @@ class Coverage with Resource, _$Coverage {
     /// coverages which are currently in force. Note, there may be gaps in the
     /// numbering and this does not imply primary, secondary etc. as the specific
     ///  positioning of coverages depends upon the episode of care.
-    PositiveInt? order,
+    FhirPositiveInt? order,
 
     /// [orderElement] Extensions for order
     @JsonKey(name: '_order')
@@ -806,7 +806,7 @@ class CoverageEligibilityRequest with Resource, _$CoverageEligibilityRequest {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -883,7 +883,7 @@ class CoverageEligibilityRequest with Resource, _$CoverageEligibilityRequest {
     /// coverages specified or discovered; discovery and return of coverages for
     /// the patient; and/or validation that the specified coverage is in-force at
     ///  the date/period specified or 'now' if not specified.
-    List<Code>? purpose,
+    List<FhirCode>? purpose,
 
     /// [purposeElement] Extensions for purpose
     @JsonKey(name: '_purpose')
@@ -1045,7 +1045,7 @@ class CoverageEligibilityRequestSupportingInfo
     List<FhirExtension>? modifierExtension,
 
     /// [sequence] A number to uniquely identify supporting information entries.
-    PositiveInt? sequence,
+    FhirPositiveInt? sequence,
 
     /// [sequenceElement] Extensions for sequence
     @JsonKey(name: '_sequence') Element? sequenceElement,
@@ -1296,7 +1296,7 @@ class CoverageEligibilityRequestItem with _$CoverageEligibilityRequestItem {
 
     /// [supportingInfoSequence] Exceptions, special conditions and supporting
     ///  information applicable for this service or product line.
-    List<PositiveInt>? supportingInfoSequence,
+    List<FhirPositiveInt>? supportingInfoSequence,
     @JsonKey(name: '_supportingInfoSequence')
 
         /// [supportingInfoSequenceElement] Extensions for supportingInfoSequence
@@ -1599,7 +1599,7 @@ class CoverageEligibilityResponse with Resource, _$CoverageEligibilityResponse {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -1672,7 +1672,7 @@ class CoverageEligibilityResponse with Resource, _$CoverageEligibilityResponse {
     /// coverages specified or discovered; discovery and return of coverages for
     /// the patient; and/or validation that the specified coverage is in-force at
     ///  the date/period specified or 'now' if not specified.
-    List<Code>? purpose,
+    List<FhirCode>? purpose,
 
     /// [purposeElement] Extensions for purpose
     @JsonKey(name: '_purpose')
@@ -2201,7 +2201,7 @@ class CoverageEligibilityResponseBenefit
 
     /// [allowedUnsignedInt] The quantity of the benefit which is permitted under
     ///  the coverage.
-    UnsignedInt? allowedUnsignedInt,
+    FhirUnsignedInt? allowedUnsignedInt,
 
     /// [allowedUnsignedIntElement] Extensions for allowedUnsignedInt
     @JsonKey(name: '_allowedUnsignedInt') Element? allowedUnsignedIntElement,
@@ -2219,7 +2219,7 @@ class CoverageEligibilityResponseBenefit
 
     /// [usedUnsignedInt] The quantity of the benefit which have been consumed to
     ///  date.
-    UnsignedInt? usedUnsignedInt,
+    FhirUnsignedInt? usedUnsignedInt,
 
     /// [usedUnsignedIntElement] Extensions for usedUnsignedInt
     @JsonKey(name: '_usedUnsignedInt') Element? usedUnsignedIntElement,
@@ -2439,7 +2439,7 @@ class EnrollmentRequest with Resource, _$EnrollmentRequest {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -2657,7 +2657,7 @@ class EnrollmentResponse with Resource, _$EnrollmentResponse {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the

@@ -175,7 +175,7 @@ mixin _$Annotation {
   String? get authorString => throw _privateConstructorUsedError;
   @JsonKey(name: '_authorString')
   Element? get authorStringElement => throw _privateConstructorUsedError;
-  Time? get time => throw _privateConstructorUsedError;
+  FhirTime? get time => throw _privateConstructorUsedError;
   @JsonKey(name: '_time')
   Element? get timeElement => throw _privateConstructorUsedError;
   String? get text => throw _privateConstructorUsedError;
@@ -198,7 +198,7 @@ abstract class $AnnotationCopyWith<$Res> {
       {Reference? authorReference,
       String? authorString,
       @JsonKey(name: '_authorString') Element? authorStringElement,
-      Time? time,
+      FhirTime? time,
       @JsonKey(name: '_time') Element? timeElement,
       String? text,
       @JsonKey(name: '_text') Element? textElement});
@@ -323,7 +323,7 @@ abstract class _$$_AnnotationCopyWith<$Res>
       {Reference? authorReference,
       String? authorString,
       @JsonKey(name: '_authorString') Element? authorStringElement,
-      Time? time,
+      FhirTime? time,
       @JsonKey(name: '_time') Element? timeElement,
       String? text,
       @JsonKey(name: '_text') Element? textElement});
@@ -489,7 +489,7 @@ abstract class _Annotation extends Annotation {
   @JsonKey(name: '_authorString')
   Element? get authorStringElement;
   @override
-  Time? get time;
+  FhirTime? get time;
   @override
   @JsonKey(name: '_time')
   Element? get timeElement;
@@ -8317,7 +8317,7 @@ mixin _$TimingRepeat {
   List<String>? get dayOfWeek => throw _privateConstructorUsedError;
   @JsonKey(name: '_dayOfWeek')
   List<Element?>? get dayOfWeekElement => throw _privateConstructorUsedError;
-  List<Time>? get timeOfDay => throw _privateConstructorUsedError;
+  List<FhirTime>? get timeOfDay => throw _privateConstructorUsedError;
   @JsonKey(name: '_timeOfDay')
   List<Element?>? get timeOfDayElement => throw _privateConstructorUsedError;
   List<TimingRepeatWhen>? get when => throw _privateConstructorUsedError;
@@ -8365,7 +8365,7 @@ abstract class $TimingRepeatCopyWith<$Res> {
       @JsonKey(name: '_periodUnit') Element? periodUnitElement,
       List<String>? dayOfWeek,
       @JsonKey(name: '_dayOfWeek') List<Element?>? dayOfWeekElement,
-      List<Time>? timeOfDay,
+      List<FhirTime>? timeOfDay,
       @JsonKey(name: '_timeOfDay') List<Element?>? timeOfDayElement,
       List<TimingRepeatWhen>? when,
       @JsonKey(name: '_when') List<Element?>? whenElement,
@@ -8537,7 +8537,7 @@ class _$TimingRepeatCopyWithImpl<$Res, $Val extends TimingRepeat>
       timeOfDay: freezed == timeOfDay
           ? _value.timeOfDay
           : timeOfDay // ignore: cast_nullable_to_non_nullable
-              as List<Time>?,
+              as List<FhirTime>?,
       timeOfDayElement: freezed == timeOfDayElement
           ? _value.timeOfDayElement
           : timeOfDayElement // ignore: cast_nullable_to_non_nullable
@@ -8764,7 +8764,7 @@ abstract class _$$_TimingRepeatCopyWith<$Res>
       @JsonKey(name: '_periodUnit') Element? periodUnitElement,
       List<String>? dayOfWeek,
       @JsonKey(name: '_dayOfWeek') List<Element?>? dayOfWeekElement,
-      List<Time>? timeOfDay,
+      List<FhirTime>? timeOfDay,
       @JsonKey(name: '_timeOfDay') List<Element?>? timeOfDayElement,
       List<TimingRepeatWhen>? when,
       @JsonKey(name: '_when') List<Element?>? whenElement,
@@ -8948,7 +8948,7 @@ class __$$_TimingRepeatCopyWithImpl<$Res>
       timeOfDay: freezed == timeOfDay
           ? _value._timeOfDay
           : timeOfDay // ignore: cast_nullable_to_non_nullable
-              as List<Time>?,
+              as List<FhirTime>?,
       timeOfDayElement: freezed == timeOfDayElement
           ? _value._timeOfDayElement
           : timeOfDayElement // ignore: cast_nullable_to_non_nullable
@@ -9002,7 +9002,7 @@ class _$_TimingRepeat extends _TimingRepeat {
       @JsonKey(name: '_periodUnit') this.periodUnitElement,
       final List<String>? dayOfWeek,
       @JsonKey(name: '_dayOfWeek') final List<Element?>? dayOfWeekElement,
-      final List<Time>? timeOfDay,
+      final List<FhirTime>? timeOfDay,
       @JsonKey(name: '_timeOfDay') final List<Element?>? timeOfDayElement,
       final List<TimingRepeatWhen>? when,
       @JsonKey(name: '_when') final List<Element?>? whenElement,
@@ -9097,9 +9097,9 @@ class _$_TimingRepeat extends _TimingRepeat {
     return EqualUnmodifiableListView(value);
   }
 
-  final List<Time>? _timeOfDay;
+  final List<FhirTime>? _timeOfDay;
   @override
-  List<Time>? get timeOfDay {
+  List<FhirTime>? get timeOfDay {
     final value = _timeOfDay;
     if (value == null) return null;
     if (_timeOfDay is EqualUnmodifiableListView) return _timeOfDay;
@@ -9294,7 +9294,7 @@ abstract class _TimingRepeat extends TimingRepeat {
           @JsonKey(name: '_periodUnit') final Element? periodUnitElement,
           final List<String>? dayOfWeek,
           @JsonKey(name: '_dayOfWeek') final List<Element?>? dayOfWeekElement,
-          final List<Time>? timeOfDay,
+          final List<FhirTime>? timeOfDay,
           @JsonKey(name: '_timeOfDay') final List<Element?>? timeOfDayElement,
           final List<TimingRepeatWhen>? when,
           @JsonKey(name: '_when') final List<Element?>? whenElement,
@@ -9368,7 +9368,7 @@ abstract class _TimingRepeat extends TimingRepeat {
   @JsonKey(name: '_dayOfWeek')
   List<Element?>? get dayOfWeekElement;
   @override
-  List<Time>? get timeOfDay;
+  List<FhirTime>? get timeOfDay;
   @override
   @JsonKey(name: '_timeOfDay')
   List<Element?>? get timeOfDayElement;

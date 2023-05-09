@@ -23,7 +23,7 @@ mixin _$Organization {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Organization)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
   FhirId? get id => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
@@ -65,7 +65,7 @@ abstract class $OrganizationCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Organization)
           Dstu2ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -332,7 +332,7 @@ abstract class _$$_OrganizationCopyWith<$Res>
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Organization)
           Dstu2ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -544,7 +544,7 @@ class _$_Organization extends _Organization {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Organization)
   final Dstu2ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -734,7 +734,7 @@ abstract class _Organization extends Organization {
   factory _Organization(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Organization)
           final Dstu2ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -770,7 +770,7 @@ abstract class _Organization extends Organization {
   @override
   FhirId? get id;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
@@ -1063,7 +1063,7 @@ class _$_OrganizationContact extends _OrganizationContact {
       _$$_OrganizationContactFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -1167,7 +1167,7 @@ class _$_OrganizationContact extends _OrganizationContact {
 
 abstract class _OrganizationContact extends OrganizationContact {
   factory _OrganizationContact(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
@@ -1213,7 +1213,7 @@ mixin _$HealthcareService {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.HealthcareService)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
   FhirId? get id => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
@@ -1280,7 +1280,7 @@ abstract class $HealthcareServiceCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.HealthcareService)
           Dstu2ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -1708,7 +1708,7 @@ abstract class _$$_HealthcareServiceCopyWith<$Res>
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.HealthcareService)
           Dstu2ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -2052,7 +2052,7 @@ class _$_HealthcareService extends _HealthcareService {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.HealthcareService)
   final Dstu2ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -2383,7 +2383,7 @@ abstract class _HealthcareService extends HealthcareService {
   factory _HealthcareService(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.HealthcareService)
           final Dstu2ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -2437,7 +2437,7 @@ abstract class _HealthcareService extends HealthcareService {
   @override
   FhirId? get id;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
@@ -2693,7 +2693,7 @@ class _$_HealthcareServiceServiceType extends _HealthcareServiceServiceType {
       _$$_HealthcareServiceServiceTypeFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -2776,7 +2776,7 @@ class _$_HealthcareServiceServiceType extends _HealthcareServiceServiceType {
 abstract class _HealthcareServiceServiceType
     extends HealthcareServiceServiceType {
   factory _HealthcareServiceServiceType(
-          {final Id? id,
+          {final FhirId? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           required final CodeableConcept type,
@@ -2823,10 +2823,10 @@ mixin _$HealthcareServiceAvailableTime {
   FhirBoolean? get allDay => throw _privateConstructorUsedError;
   @JsonKey(name: '_allDay')
   Element? get allDayElement => throw _privateConstructorUsedError;
-  Time? get availableStartTime => throw _privateConstructorUsedError;
+  FhirTime? get availableStartTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_availableStartTime')
   Element? get availableStartTimeElement => throw _privateConstructorUsedError;
-  Time? get availableEndTime => throw _privateConstructorUsedError;
+  FhirTime? get availableEndTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_availableEndTime')
   Element? get availableEndTimeElement => throw _privateConstructorUsedError;
 
@@ -2852,9 +2852,9 @@ abstract class $HealthcareServiceAvailableTimeCopyWith<$Res> {
       @JsonKey(name: '_daysOfWeek') Element? daysOfWeekElement,
       FhirBoolean? allDay,
       @JsonKey(name: '_allDay') Element? allDayElement,
-      Time? availableStartTime,
+      FhirTime? availableStartTime,
       @JsonKey(name: '_availableStartTime') Element? availableStartTimeElement,
-      Time? availableEndTime,
+      FhirTime? availableEndTime,
       @JsonKey(name: '_availableEndTime') Element? availableEndTimeElement});
 
   $ElementCopyWith<$Res>? get daysOfWeekElement;
@@ -3003,9 +3003,9 @@ abstract class _$$_HealthcareServiceAvailableTimeCopyWith<$Res>
       @JsonKey(name: '_daysOfWeek') Element? daysOfWeekElement,
       FhirBoolean? allDay,
       @JsonKey(name: '_allDay') Element? allDayElement,
-      Time? availableStartTime,
+      FhirTime? availableStartTime,
       @JsonKey(name: '_availableStartTime') Element? availableStartTimeElement,
-      Time? availableEndTime,
+      FhirTime? availableEndTime,
       @JsonKey(name: '_availableEndTime') Element? availableEndTimeElement});
 
   @override
@@ -3118,7 +3118,7 @@ class _$_HealthcareServiceAvailableTime
       _$$_HealthcareServiceAvailableTimeFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -3238,7 +3238,7 @@ class _$_HealthcareServiceAvailableTime
 abstract class _HealthcareServiceAvailableTime
     extends HealthcareServiceAvailableTime {
   factory _HealthcareServiceAvailableTime(
-          {final Id? id,
+          {final FhirId? id,
           @JsonKey(name: 'extension')
               final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -3278,12 +3278,12 @@ abstract class _HealthcareServiceAvailableTime
   @JsonKey(name: '_allDay')
   Element? get allDayElement;
   @override
-  Time? get availableStartTime;
+  FhirTime? get availableStartTime;
   @override
   @JsonKey(name: '_availableStartTime')
   Element? get availableStartTimeElement;
   @override
-  Time? get availableEndTime;
+  FhirTime? get availableEndTime;
   @override
   @JsonKey(name: '_availableEndTime')
   Element? get availableEndTimeElement;
@@ -3501,7 +3501,7 @@ class _$_HealthcareServiceNotAvailable extends _HealthcareServiceNotAvailable {
       _$$_HealthcareServiceNotAvailableFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -3583,7 +3583,7 @@ class _$_HealthcareServiceNotAvailable extends _HealthcareServiceNotAvailable {
 abstract class _HealthcareServiceNotAvailable
     extends HealthcareServiceNotAvailable {
   factory _HealthcareServiceNotAvailable(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final String description,
@@ -3623,7 +3623,7 @@ mixin _$Group {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Group)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
   FhirId? get id => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
@@ -3648,7 +3648,7 @@ mixin _$Group {
   String? get name => throw _privateConstructorUsedError;
   @JsonKey(name: '_name')
   Element? get nameElement => throw _privateConstructorUsedError;
-  UnsignedInt? get quantity => throw _privateConstructorUsedError;
+  FhirUnsignedInt? get quantity => throw _privateConstructorUsedError;
   @JsonKey(name: '_quantity')
   Element? get quantityElement => throw _privateConstructorUsedError;
   List<GroupCharacteristic>? get characteristic =>
@@ -3669,7 +3669,7 @@ abstract class $GroupCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Group)
           Dstu2ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -3693,7 +3693,7 @@ abstract class $GroupCopyWith<$Res> {
       String? name,
       @JsonKey(name: '_name')
           Element? nameElement,
-      UnsignedInt? quantity,
+      FhirUnsignedInt? quantity,
       @JsonKey(name: '_quantity')
           Element? quantityElement,
       List<GroupCharacteristic>? characteristic,
@@ -3962,7 +3962,7 @@ abstract class _$$_GroupCopyWith<$Res> implements $GroupCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Group)
           Dstu2ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -3986,7 +3986,7 @@ abstract class _$$_GroupCopyWith<$Res> implements $GroupCopyWith<$Res> {
       String? name,
       @JsonKey(name: '_name')
           Element? nameElement,
-      UnsignedInt? quantity,
+      FhirUnsignedInt? quantity,
       @JsonKey(name: '_quantity')
           Element? quantityElement,
       List<GroupCharacteristic>? characteristic,
@@ -4193,7 +4193,7 @@ class _$_Group extends _Group {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Group)
   final Dstu2ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -4390,7 +4390,7 @@ abstract class _Group extends Group {
   factory _Group(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Group)
           final Dstu2ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -4430,7 +4430,7 @@ abstract class _Group extends Group {
   @override
   FhirId? get id;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
@@ -4471,7 +4471,7 @@ abstract class _Group extends Group {
   @JsonKey(name: '_name')
   Element? get nameElement;
   @override
-  UnsignedInt? get quantity;
+  FhirUnsignedInt? get quantity;
   @override
   @JsonKey(name: '_quantity')
   Element? get quantityElement;
@@ -4813,7 +4813,7 @@ class _$_GroupCharacteristic extends _GroupCharacteristic {
       _$$_GroupCharacteristicFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -4917,7 +4917,7 @@ class _$_GroupCharacteristic extends _GroupCharacteristic {
 
 abstract class _GroupCharacteristic extends GroupCharacteristic {
   factory _GroupCharacteristic(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final CodeableConcept code,
@@ -5188,7 +5188,7 @@ class _$_GroupMember extends _GroupMember {
       _$$_GroupMemberFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -5272,7 +5272,7 @@ class _$_GroupMember extends _GroupMember {
 
 abstract class _GroupMember extends GroupMember {
   factory _GroupMember(
-          {final Id? id,
+          {final FhirId? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           required final Reference entity,

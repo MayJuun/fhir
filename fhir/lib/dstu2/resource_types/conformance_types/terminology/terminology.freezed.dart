@@ -25,7 +25,7 @@ mixin _$ValueSet {
   FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: '_id')
   Element? get idElement => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
@@ -98,7 +98,7 @@ abstract class $ValueSetCopyWith<$Res> {
       FhirId? id,
       @JsonKey(name: '_id')
           Element? idElement,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -657,7 +657,7 @@ abstract class _$$_ValueSetCopyWith<$Res> implements $ValueSetCopyWith<$Res> {
       FhirId? id,
       @JsonKey(name: '_id')
           Element? idElement,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -1058,7 +1058,7 @@ class _$_ValueSet extends _ValueSet {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.ValueSet)
   final Dstu2ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   @JsonKey(name: '_id')
   final Element? idElement;
@@ -1349,7 +1349,7 @@ abstract class _ValueSet extends ValueSet {
   factory _ValueSet(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ValueSet)
           final Dstu2ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       @JsonKey(name: '_id')
           final Element? idElement,
       final Meta? meta,
@@ -1419,7 +1419,7 @@ abstract class _ValueSet extends ValueSet {
   @JsonKey(name: '_id')
   Element? get idElement;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
@@ -1687,7 +1687,7 @@ class _$_ValueSetContact extends _ValueSetContact {
       _$$_ValueSetContactFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -1781,7 +1781,7 @@ class _$_ValueSetContact extends _ValueSetContact {
 
 abstract class _ValueSetContact extends ValueSetContact {
   factory _ValueSetContact(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
@@ -2103,7 +2103,7 @@ class _$_ValueSetCodeSystem extends _ValueSetCodeSystem {
       _$$_ValueSetCodeSystemFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -2223,7 +2223,7 @@ class _$_ValueSetCodeSystem extends _ValueSetCodeSystem {
 
 abstract class _ValueSetCodeSystem extends ValueSetCodeSystem {
   factory _ValueSetCodeSystem(
-          {final Id? id,
+          {final FhirId? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
@@ -2570,7 +2570,7 @@ class _$_ValueSetCodeSystemConcept extends _ValueSetCodeSystemConcept {
       _$$_ValueSetCodeSystemConceptFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -2705,7 +2705,7 @@ class _$_ValueSetCodeSystemConcept extends _ValueSetCodeSystemConcept {
 
 abstract class _ValueSetCodeSystemConcept extends ValueSetCodeSystemConcept {
   factory _ValueSetCodeSystemConcept(
-          {final Id? id,
+          {final FhirId? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
@@ -3008,7 +3008,7 @@ class _$_ValueSetConceptDesignation extends _ValueSetConceptDesignation {
       _$$_ValueSetConceptDesignationFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -3099,7 +3099,7 @@ class _$_ValueSetConceptDesignation extends _ValueSetConceptDesignation {
 
 abstract class _ValueSetConceptDesignation extends ValueSetConceptDesignation {
   factory _ValueSetConceptDesignation(
-          {final Id? id,
+          {final FhirId? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           final FhirCode? language,
@@ -3327,7 +3327,7 @@ class _$_ValueSetCompose extends _ValueSetCompose {
       _$$_ValueSetComposeFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -3442,7 +3442,7 @@ class _$_ValueSetCompose extends _ValueSetCompose {
 
 abstract class _ValueSetCompose extends ValueSetCompose {
   factory _ValueSetCompose(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
@@ -3742,7 +3742,7 @@ class _$_ValueSetComposeInclude extends _ValueSetComposeInclude {
       _$$_ValueSetComposeIncludeFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -3865,7 +3865,7 @@ class _$_ValueSetComposeInclude extends _ValueSetComposeInclude {
 
 abstract class _ValueSetComposeInclude extends ValueSetComposeInclude {
   factory _ValueSetComposeInclude(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
@@ -4160,7 +4160,7 @@ class _$_ValueSetIncludeConcept extends _ValueSetIncludeConcept {
       _$$_ValueSetIncludeConceptFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -4272,7 +4272,7 @@ class _$_ValueSetIncludeConcept extends _ValueSetIncludeConcept {
 
 abstract class _ValueSetIncludeConcept extends ValueSetIncludeConcept {
   factory _ValueSetIncludeConcept(
-          {final Id? id,
+          {final FhirId? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
@@ -4593,7 +4593,7 @@ class _$_ValueSetIncludeFilter extends _ValueSetIncludeFilter {
       _$$_ValueSetIncludeFilterFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -4705,7 +4705,7 @@ class _$_ValueSetIncludeFilter extends _ValueSetIncludeFilter {
 
 abstract class _ValueSetIncludeFilter extends ValueSetIncludeFilter {
   factory _ValueSetIncludeFilter(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -5109,7 +5109,7 @@ class _$_ValueSetExpansion extends _ValueSetExpansion {
       _$$_ValueSetExpansionFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -5255,7 +5255,7 @@ class _$_ValueSetExpansion extends _ValueSetExpansion {
 
 abstract class _ValueSetExpansion extends ValueSetExpansion {
   factory _ValueSetExpansion(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
@@ -5771,7 +5771,7 @@ class _$_ValueSetExpansionParameter extends _ValueSetExpansionParameter {
       _$$_ValueSetExpansionParameterFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -5927,7 +5927,7 @@ class _$_ValueSetExpansionParameter extends _ValueSetExpansionParameter {
 
 abstract class _ValueSetExpansionParameter extends ValueSetExpansionParameter {
   factory _ValueSetExpansionParameter(
-          {final Id? id,
+          {final FhirId? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
@@ -6387,7 +6387,7 @@ class _$_ValueSetExpansionContains extends _ValueSetExpansionContains {
       _$$_ValueSetExpansionContainsFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -6530,7 +6530,7 @@ class _$_ValueSetExpansionContains extends _ValueSetExpansionContains {
 
 abstract class _ValueSetExpansionContains extends ValueSetExpansionContains {
   factory _ValueSetExpansionContains(
-          {final Id? id,
+          {final FhirId? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
@@ -6604,7 +6604,7 @@ mixin _$ConceptMap {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.ConceptMap)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
   FhirId? get id => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
@@ -6675,7 +6675,7 @@ abstract class $ConceptMapCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ConceptMap)
           Dstu2ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -7196,7 +7196,7 @@ abstract class _$$_ConceptMapCopyWith<$Res>
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ConceptMap)
           Dstu2ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -7580,7 +7580,7 @@ class _$_ConceptMap extends _ConceptMap {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.ConceptMap)
   final Dstu2ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -7868,7 +7868,7 @@ abstract class _ConceptMap extends ConceptMap {
   factory _ConceptMap(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ConceptMap)
           final Dstu2ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -7933,7 +7933,7 @@ abstract class _ConceptMap extends ConceptMap {
   @override
   FhirId? get id;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
@@ -8183,7 +8183,7 @@ class _$_ConceptMapContact extends _ConceptMapContact {
       _$$_ConceptMapContactFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -8264,7 +8264,7 @@ class _$_ConceptMapContact extends _ConceptMapContact {
 
 abstract class _ConceptMapContact extends ConceptMapContact {
   factory _ConceptMapContact(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final String? name,
@@ -8492,7 +8492,7 @@ class _$_ConceptMapElement extends _ConceptMapElement {
       _$$_ConceptMapElementFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -8584,7 +8584,7 @@ class _$_ConceptMapElement extends _ConceptMapElement {
 
 abstract class _ConceptMapElement extends ConceptMapElement {
   factory _ConceptMapElement(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final FhirUri? codeSystem,
@@ -8942,7 +8942,7 @@ class _$_ConceptMapElementTarget extends _ConceptMapElementTarget {
       _$$_ConceptMapElementTargetFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -9071,7 +9071,7 @@ class _$_ConceptMapElementTarget extends _ConceptMapElementTarget {
 
 abstract class _ConceptMapElementTarget extends ConceptMapElementTarget {
   factory _ConceptMapElementTarget(
-          {final Id? id,
+          {final FhirId? id,
           @JsonKey(name: 'extension')
               final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -9301,7 +9301,7 @@ class _$_ConceptMapTargetDependsOn extends _ConceptMapTargetDependsOn {
       _$$_ConceptMapTargetDependsOnFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -9380,7 +9380,7 @@ class _$_ConceptMapTargetDependsOn extends _ConceptMapTargetDependsOn {
 
 abstract class _ConceptMapTargetDependsOn extends ConceptMapTargetDependsOn {
   factory _ConceptMapTargetDependsOn(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final FhirUri element,
@@ -9419,7 +9419,7 @@ mixin _$NamingSystem {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.NamingSystem)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
   FhirId? get id => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
@@ -9480,7 +9480,7 @@ abstract class $NamingSystemCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.NamingSystem)
           Dstu2ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -9899,7 +9899,7 @@ abstract class _$$_NamingSystemCopyWith<$Res>
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.NamingSystem)
           Dstu2ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -10215,7 +10215,7 @@ class _$_NamingSystem extends _NamingSystem {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.NamingSystem)
   final Dstu2ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -10458,7 +10458,7 @@ abstract class _NamingSystem extends NamingSystem {
   factory _NamingSystem(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.NamingSystem)
           final Dstu2ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -10513,7 +10513,7 @@ abstract class _NamingSystem extends NamingSystem {
   @override
   FhirId? get id;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
@@ -10745,7 +10745,7 @@ class _$_NamingSystemContact extends _NamingSystemContact {
       _$$_NamingSystemContactFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -10826,7 +10826,7 @@ class _$_NamingSystemContact extends _NamingSystemContact {
 
 abstract class _NamingSystemContact extends NamingSystemContact {
   factory _NamingSystemContact(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final String? name,
@@ -11143,7 +11143,7 @@ class _$_NamingSystemUniqueId extends _NamingSystemUniqueId {
       _$$_NamingSystemUniqueIdFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -11245,7 +11245,7 @@ class _$_NamingSystemUniqueId extends _NamingSystemUniqueId {
 
 abstract class _NamingSystemUniqueId extends NamingSystemUniqueId {
   factory _NamingSystemUniqueId(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,

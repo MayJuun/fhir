@@ -257,7 +257,7 @@ class Endpoint extends HiveObject with Resource, _$Endpoint {
     /// specified, then the sender could send any content (including no content
     ///  depending on the connectionType).
     @HiveField(21)
-        List<Code>? payloadMimeType,
+        List<FhirCode>? payloadMimeType,
 
     /// [payloadMimeTypeElement] Extensions for payloadMimeType
     @JsonKey(name: '_payloadMimeType')
@@ -911,7 +911,7 @@ class HealthcareServiceAvailableTime with _$HealthcareServiceAvailableTime {
 
     /// [daysOfWeek] Indicates which days of the week are available between the
     ///  start and end Times.
-    List<Code>? daysOfWeek,
+    List<FhirCode>? daysOfWeek,
 
     /// [daysOfWeekElement] Extensions for daysOfWeek
     @JsonKey(name: '_daysOfWeek') List<Element?>? daysOfWeekElement,
@@ -925,14 +925,14 @@ class HealthcareServiceAvailableTime with _$HealthcareServiceAvailableTime {
 
     /// [availableStartTime] The opening time of day. Note: If the AllDay flag is
     ///  set, then this time is ignored.
-    Time? availableStartTime,
+    FhirTime? availableStartTime,
 
     /// [availableStartTimeElement] Extensions for availableStartTime
     @JsonKey(name: '_availableStartTime') Element? availableStartTimeElement,
 
     /// [availableEndTime] The closing time of day. Note: If the AllDay flag is
     ///  set, then this time is ignored.
-    Time? availableEndTime,
+    FhirTime? availableEndTime,
 
     /// [availableEndTimeElement] Extensions for availableEndTime
     @JsonKey(name: '_availableEndTime') Element? availableEndTimeElement,
@@ -1651,7 +1651,7 @@ class LocationHoursOfOperation with _$LocationHoursOfOperation {
 
     /// [daysOfWeek] Indicates which days of the week are available between the
     ///  start and end Times.
-    List<Code>? daysOfWeek,
+    List<FhirCode>? daysOfWeek,
 
     /// [daysOfWeekElement] Extensions for daysOfWeek
     @JsonKey(name: '_daysOfWeek') List<Element?>? daysOfWeekElement,
@@ -1663,13 +1663,13 @@ class LocationHoursOfOperation with _$LocationHoursOfOperation {
     @JsonKey(name: '_allDay') Element? allDayElement,
 
     /// [openingTime] Time that the Location opens.
-    Time? openingTime,
+    FhirTime? openingTime,
 
     /// [openingTimeElement] Extensions for openingTime
     @JsonKey(name: '_openingTime') Element? openingTimeElement,
 
     /// [closingTime] Time that the Location closes.
-    Time? closingTime,
+    FhirTime? closingTime,
 
     /// [closingTimeElement] Extensions for closingTime
     @JsonKey(name: '_closingTime') Element? closingTimeElement,

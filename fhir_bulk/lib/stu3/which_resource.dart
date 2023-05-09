@@ -6,5 +6,5 @@ class WhichResource {
   WhichResource(this.resourceType, this.id);
 
   final Stu3ResourceType? resourceType;
-  final Id? id;
+  final FhirId? id;
 }

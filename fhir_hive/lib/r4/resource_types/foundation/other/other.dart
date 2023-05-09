@@ -509,7 +509,7 @@ class Bundle extends HiveObject with Resource, _$Bundle {
     /// search.mode = 'include' or 'outcome' entries and it does not provide a
     ///  count of the number of entries in the Bundle.
     @HiveField(12)
-        UnsignedInt? total,
+        FhirUnsignedInt? total,
 
     /// [totalElement] Extensions for total
     @JsonKey(name: '_total')
@@ -797,7 +797,7 @@ class BundleEntry with _$BundleEntry {
               ? null
               : FhirUri('$canonicalBaseUrl/$resourcePath'),
           request: BundleRequest(
-            method: Code('GET'),
+            method: FhirCode('GET'),
             url: FhirUri(resourcePath),
           ));
 
@@ -808,7 +808,7 @@ class BundleEntry with _$BundleEntry {
               ? null
               : FhirUri('$canonicalBaseUrl/${resource.path}'),
           request: BundleRequest(
-            method: Code('POST'),
+            method: FhirCode('POST'),
             url: FhirUri(resource.path),
           ));
 
@@ -819,7 +819,7 @@ class BundleEntry with _$BundleEntry {
               ? null
               : FhirUri('$canonicalBaseUrl/${resource.path}'),
           request: BundleRequest(
-            method: Code('PUT'),
+            method: FhirCode('PUT'),
             url: FhirUri(resource.path),
           ));
 
@@ -832,7 +832,7 @@ class BundleEntry with _$BundleEntry {
               ? null
               : FhirUri('$canonicalBaseUrl/$resourcePath'),
           request: BundleRequest(
-            method: Code('DELETE'),
+            method: FhirCode('DELETE'),
             url: FhirUri(resourcePath),
           ));
 
@@ -843,7 +843,7 @@ class BundleEntry with _$BundleEntry {
               ? null
               : FhirUri('$canonicalBaseUrl/${resource.path}'),
           request: BundleRequest(
-            method: Code('PATCH'),
+            method: FhirCode('PATCH'),
             url: FhirUri(resource.path),
           ));
 
@@ -2286,7 +2286,7 @@ class MessageHeaderResponse with _$MessageHeaderResponse {
 
     /// [identifier] The MessageHeader.id of the message to which this message is
     ///  a response.
-    Id? identifier,
+    FhirId? identifier,
 
     /// [identifierElement] Extensions for identifier
     @JsonKey(name: '_identifier') Element? identifierElement,
@@ -3053,7 +3053,7 @@ class ParametersParameter with _$ParametersParameter {
     @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
 
     /// [valueId] If the parameter is a data type.
-    Id? valueId,
+    FhirId? valueId,
 
     /// [valueIdElement] Extensions for valueId
     @JsonKey(name: '_valueId') Element? valueIdElement,
@@ -3077,13 +3077,13 @@ class ParametersParameter with _$ParametersParameter {
     @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
 
     /// [valueOid] If the parameter is a data type.
-    Oid? valueOid,
+    FhirOid? valueOid,
 
     /// [valueOidElement] Extensions for valueOid
     @JsonKey(name: '_valueOid') Element? valueOidElement,
 
     /// [valuePositiveInt] If the parameter is a data type.
-    PositiveInt? valuePositiveInt,
+    FhirPositiveInt? valuePositiveInt,
 
     /// [valuePositiveIntElement] Extensions for valuePositiveInt
     @JsonKey(name: '_valuePositiveInt') Element? valuePositiveIntElement,
@@ -3095,13 +3095,13 @@ class ParametersParameter with _$ParametersParameter {
     @JsonKey(name: '_valueString') Element? valueStringElement,
 
     /// [valueTime] If the parameter is a data type.
-    Time? valueTime,
+    FhirTime? valueTime,
 
     /// [valueTimeElement] Extensions for valueTime
     @JsonKey(name: '_valueTime') Element? valueTimeElement,
 
     /// [valueUnsignedInt] If the parameter is a data type.
-    UnsignedInt? valueUnsignedInt,
+    FhirUnsignedInt? valueUnsignedInt,
 
     /// [valueUnsignedIntElement] Extensions for valueUnsignedInt
     @JsonKey(name: '_valueUnsignedInt') Element? valueUnsignedIntElement,
@@ -3119,7 +3119,7 @@ class ParametersParameter with _$ParametersParameter {
     @JsonKey(name: '_valueUrl') Element? valueUrlElement,
 
     /// [valueUuid] If the parameter is a data type.
-    Uuid? valueUuid,
+    FhirUuid? valueUuid,
 
     /// [valueUuidElement] Extensions for valueUuid
     @JsonKey(name: '_valueUuid') Element? valueUuidElement,
@@ -4090,7 +4090,7 @@ class SubscriptionTopic extends HiveObject with Resource, _$SubscriptionTopic {
 
     /// [titleElement] (_title): Extensions for title;
     @HiveField(17) @JsonKey(name: '_title') Element? titleElement,
-    @HiveField(18) List<Canonical>? derivedFrom,
+    @HiveField(18) List<FhirCanonical>? derivedFrom,
 
     /// [status] The current state of the SubscriptionTopic.;
     @HiveField(19) Code? status,
@@ -4225,7 +4225,7 @@ class SubscriptionTopicResourceTrigger with _$SubscriptionTopicResourceTrigger {
     @JsonKey(name: '_description') Element? descriptionElement,
     FhirUri? resource,
     @JsonKey(name: '_resource') Element? resourceElement,
-    List<Code>? supportedInteraction,
+    List<FhirCode>? supportedInteraction,
     @JsonKey(name: '_supportedInteraction')
         List<Element>? supportedInteractionElement,
     SubscriptionTopicQueryCriteria? queryCriteria,
@@ -4466,7 +4466,7 @@ class SubscriptionTopicCanFilterBy with _$SubscriptionTopicCanFilterBy {
     @JsonKey(name: '_filterParameter') Element? filterParameterElement,
     FhirUri? filterDefinition,
     @JsonKey(name: '_filterDefinition') Element? filterDefinitionElement,
-    List<Code>? modifier,
+    List<FhirCode>? modifier,
     @JsonKey(name: '_modifier') List<Element>? modifierElement,
   }) = _SubscriptionTopicCanFilterBy;
 

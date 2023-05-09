@@ -195,9 +195,9 @@ String applySqlRows(
     final String path =
         '${resourceEntry.expression.replaceFirst("Resource", '\$').replaceFirst(key, '\$').replaceAll("'", "''")}'
             .replaceAll('\$.', '')
-            .replaceAll('List.', 'List_.');
+            .replaceAll('List.', 'FhirList.');
     final field =
-        walkTypePath(key.replaceAll('List', 'List_'), path, '$key.$path');
+        walkTypePath(key.replaceAll('List', 'FhirList'), path, '$key.$path');
     if (field != null && path != 'content' && resourceEntry.code != '_id') {
       if (field.type.toLowerCase().contains('instant')) {
         searchResourceString +=

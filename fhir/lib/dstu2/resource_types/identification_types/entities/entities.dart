@@ -20,7 +20,7 @@ class Location with Resource, _$Location {
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Location)
         Dstu2ResourceType resourceType,
     FhirId? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,
@@ -82,9 +82,9 @@ class LocationPosition with _$LocationPosition {
     FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    required Decimal longitude,
+    required FhirDecimal longitude,
     @JsonKey(name: '_longitude') Element? longitudeElement,
-    required Decimal latitude,
+    required FhirDecimal latitude,
     @JsonKey(name: '_latitude') Element? latitudeElement,
     FhirDecimal? altitude,
     @JsonKey(name: '_altitude') Element? altitudeElement,
@@ -129,7 +129,7 @@ class Substance with Resource, _$Substance {
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Substance)
         Dstu2ResourceType resourceType,
     FhirId? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,
@@ -269,7 +269,7 @@ class Person with Resource, _$Person {
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Person)
         Dstu2ResourceType resourceType,
     FhirId? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,
@@ -371,7 +371,7 @@ class Contract with Resource, _$Contract {
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Contract)
         Dstu2ResourceType resourceType,
     FhirId? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,

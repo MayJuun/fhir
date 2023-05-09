@@ -6,7 +6,7 @@ class EndpointUsCore extends Resource {
 
   factory EndpointUsCore({
     String? id,
-    Meta? meta,
+    FhirMeta? meta,
     Narrative? text,
     List<Resource>? contained,
     List<Identifier>? identifier,
@@ -17,7 +17,7 @@ class EndpointUsCore extends Resource {
     List<ContactPoint>? contact,
     Period? period,
     required List<CodeableConcept> payloadType,
-    List<Code>? payloadMimeType,
+    List<FhirCode>? payloadMimeType,
     FhirUrl? address,
     List<String>? header,
   }) =>
@@ -42,7 +42,7 @@ class EndpointUsCore extends Resource {
   Endpoint _endpoint;
   Endpoint get value => _endpoint;
   String? get id => _endpoint.id;
-  Meta? get meta => _endpoint.meta;
+  FhirMeta? get meta => _endpoint.meta;
   Narrative? get text => _endpoint.text;
   List<Resource>? get contained => _endpoint.contained;
   List<Identifier>? get identifier => _endpoint.identifier;
@@ -53,7 +53,7 @@ class EndpointUsCore extends Resource {
   List<ContactPoint>? get contact => _endpoint.contact;
   Period? get period => _endpoint.period;
   List<CodeableConcept> get payloadType => _endpoint.payloadType;
-  List<Code>? get payloadMimeType => _endpoint.payloadMimeType;
+  List<FhirCode>? get payloadMimeType => _endpoint.payloadMimeType;
   FhirUrl? get address => _endpoint.address;
   List<String>? get header => _endpoint.header;
 }

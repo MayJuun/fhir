@@ -300,7 +300,7 @@ class Coverage extends HiveObject with Resource, _$Coverage {
     /// numbering and this does not imply primary, secondary etc. as the specific
     ///  positioning of coverages depends upon the episode of care.
     @HiveField(26)
-        PositiveInt? order,
+        FhirPositiveInt? order,
 
     /// [orderElement] Extensions for order
     @JsonKey(name: '_order')
@@ -937,7 +937,7 @@ class CoverageEligibilityRequest extends HiveObject
     /// the patient; and/or validation that the specified coverage is in-force at
     ///  the date/period specified or 'now' if not specified.
     @HiveField(15)
-        List<Code>? purpose,
+        List<FhirCode>? purpose,
 
     /// [purposeElement] Extensions for purpose
     @JsonKey(name: '_purpose')
@@ -1114,7 +1114,7 @@ class CoverageEligibilityRequestSupportingInfo
     List<FhirExtension>? modifierExtension,
 
     /// [sequence] A number to uniquely identify supporting information entries.
-    PositiveInt? sequence,
+    FhirPositiveInt? sequence,
 
     /// [sequenceElement] Extensions for sequence
     @JsonKey(name: '_sequence') Element? sequenceElement,
@@ -1365,7 +1365,7 @@ class CoverageEligibilityRequestItem with _$CoverageEligibilityRequestItem {
 
     /// [supportingInfoSequence] Exceptions, special conditions and supporting
     ///  information applicable for this service or product line.
-    List<PositiveInt>? supportingInfoSequence,
+    List<FhirPositiveInt>? supportingInfoSequence,
     @JsonKey(name: '_supportingInfoSequence')
 
         /// [supportingInfoSequenceElement] Extensions for supportingInfoSequence
@@ -1758,7 +1758,7 @@ class CoverageEligibilityResponse extends HiveObject
     /// the patient; and/or validation that the specified coverage is in-force at
     ///  the date/period specified or 'now' if not specified.
     @HiveField(14)
-        List<Code>? purpose,
+        List<FhirCode>? purpose,
 
     /// [purposeElement] Extensions for purpose
     @JsonKey(name: '_purpose')
@@ -2306,7 +2306,7 @@ class CoverageEligibilityResponseBenefit
 
     /// [allowedUnsignedInt] The quantity of the benefit which is permitted under
     ///  the coverage.
-    UnsignedInt? allowedUnsignedInt,
+    FhirUnsignedInt? allowedUnsignedInt,
 
     /// [allowedUnsignedIntElement] Extensions for allowedUnsignedInt
     @JsonKey(name: '_allowedUnsignedInt') Element? allowedUnsignedIntElement,
@@ -2324,7 +2324,7 @@ class CoverageEligibilityResponseBenefit
 
     /// [usedUnsignedInt] The quantity of the benefit which have been consumed to
     ///  date.
-    UnsignedInt? usedUnsignedInt,
+    FhirUnsignedInt? usedUnsignedInt,
 
     /// [usedUnsignedIntElement] Extensions for usedUnsignedInt
     @JsonKey(name: '_usedUnsignedInt') Element? usedUnsignedIntElement,

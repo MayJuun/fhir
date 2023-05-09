@@ -20,7 +20,7 @@ class Organization with Resource, _$Organization {
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Organization)
         Dstu2ResourceType resourceType,
     FhirId? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,
@@ -124,7 +124,7 @@ class HealthcareService with Resource, _$HealthcareService {
     @JsonKey(unknownEnumValue: Dstu2ResourceType.HealthcareService)
         Dstu2ResourceType resourceType,
     FhirId? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,
@@ -243,9 +243,9 @@ class HealthcareServiceAvailableTime with _$HealthcareServiceAvailableTime {
     @JsonKey(name: '_daysOfWeek') Element? daysOfWeekElement,
     FhirBoolean? allDay,
     @JsonKey(name: '_allDay') Element? allDayElement,
-    Time? availableStartTime,
+    FhirTime? availableStartTime,
     @JsonKey(name: '_availableStartTime') Element? availableStartTimeElement,
-    Time? availableEndTime,
+    FhirTime? availableEndTime,
     @JsonKey(name: '_availableEndTime') Element? availableEndTimeElement,
   }) = _HealthcareServiceAvailableTime;
 
@@ -332,7 +332,7 @@ class Group with Resource, _$Group {
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Group)
         Dstu2ResourceType resourceType,
     FhirId? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,
@@ -344,12 +344,12 @@ class Group with Resource, _$Group {
     List<Identifier>? identifier,
     @JsonKey(unknownEnumValue: GroupType.unknown) required GroupType type,
     @JsonKey(name: '_type') Element? typeElement,
-    required Boolean actual,
+    required FhirBoolean actual,
     @JsonKey(name: '_actual') Element? actualElement,
     CodeableConcept? code,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
-    UnsignedInt? quantity,
+    FhirUnsignedInt? quantity,
     @JsonKey(name: '_quantity') Element? quantityElement,
     List<GroupCharacteristic>? characteristic,
     List<GroupMember>? member,
@@ -394,7 +394,7 @@ class GroupCharacteristic with _$GroupCharacteristic {
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
     Quantity? valueQuantity,
     Range? valueRange,
-    required Boolean exclude,
+    required FhirBoolean exclude,
     Period? period,
   }) = _GroupCharacteristic;
 

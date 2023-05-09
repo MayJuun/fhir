@@ -9,7 +9,7 @@ class ImmunizationUsCore extends Resource {
 
   factory ImmunizationUsCore({
     String? id,
-    Meta? meta,
+    FhirMeta? meta,
     Narrative? text,
     required ImmunizationStatus status,
     CodeableConcept? statusReason,
@@ -17,7 +17,7 @@ class ImmunizationUsCore extends Resource {
     required Reference patient,
     FhirDateTime? occurrenceDateTime,
     String? occurrenceString,
-    required Boolean primarySource,
+    required FhirBoolean primarySource,
   }) =>
       ImmunizationUsCore._(Immunization(
         id: id,
@@ -39,7 +39,7 @@ class ImmunizationUsCore extends Resource {
     required Reference patient,
     FhirDateTime? occurrenceDateTime,
     String? occurrenceString,
-    required Boolean primarySource,
+    required FhirBoolean primarySource,
   }) =>
       ImmunizationUsCore(
         status: status,
@@ -57,7 +57,7 @@ class ImmunizationUsCore extends Resource {
     required Reference patient,
     FhirDateTime? occurrenceDateTime,
     String? occurrenceString,
-    required Boolean primarySource,
+    required FhirBoolean primarySource,
   }) =>
       ImmunizationUsCore(
         status: status,
@@ -71,7 +71,7 @@ class ImmunizationUsCore extends Resource {
   Immunization _immunization;
   Immunization get value => _immunization;
   String? get id => _immunization.id;
-  Meta? get meta => _immunization.meta;
+  FhirMeta? get meta => _immunization.meta;
   Narrative? get text => _immunization.text;
   Code? get status => _immunization.status;
   CodeableConcept? get statusReason => _immunization.statusReason;

@@ -9,14 +9,14 @@ class PatientUsCore extends Resource {
 
   factory PatientUsCore({
     String? id,
-    Meta? meta,
+    FhirMeta? meta,
     Narrative? text,
     List<FhirExtension>? extension_,
     required List<Identifier> identifier,
     Boolean? active,
     required List<HumanName> name,
     List<ContactPoint>? telecom,
-    required Code gender,
+    required FhirCode gender,
     Date? birthDate,
     List<Address>? address,
     List<PatientCommunication>? communication,
@@ -48,7 +48,7 @@ class PatientUsCore extends Resource {
     required HumanName patientName,
     List<HumanName>? name,
     List<ContactPoint>? telecom,
-    required Code gender,
+    required FhirCode gender,
     Date? birthDate,
     List<Address>? address,
     List<PatientCommunication>? communication,
@@ -124,7 +124,7 @@ class PatientUsCore extends Resource {
   factory PatientUsCore.minimum({
     required Identifier patientIdentifier,
     required HumanName patientName,
-    required Code gender,
+    required FhirCode gender,
   }) =>
       PatientUsCore(
           identifier: [patientIdentifier], name: [patientName], gender: gender);
@@ -132,7 +132,7 @@ class PatientUsCore extends Resource {
   Patient _patient;
   Patient get value => _patient;
   String? get id => _patient.id;
-  Meta? get meta => _patient.meta;
+  FhirMeta? get meta => _patient.meta;
   Narrative? get text => _patient.text;
   List<FhirExtension>? get extension_ => _patient.extension_;
   List<Identifier>? get identifier => _patient.identifier;

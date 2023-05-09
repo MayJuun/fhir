@@ -31,7 +31,7 @@ mixin _$Coverage {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -120,7 +120,7 @@ mixin _$Coverage {
   List<CoverageClass>? get class_ => throw _privateConstructorUsedError;
 
   /// [order] The order of applicability of this coverage relative to other coverages which are currently in force. Note, there may be gaps in the numbering and this does not imply primary, secondary etc. as the specific positioning of coverages depends upon the episode of care. For example; a patient might have (0) auto insurance (1) their own health insurance and (2) spouse's health insurance. When claiming for treatments which were not the result of an auto accident then only coverages (1) and (2) above would be applicatble and would apply in the order specified in parenthesis.
-  PositiveInt? get order => throw _privateConstructorUsedError;
+  FhirPositiveInt? get order => throw _privateConstructorUsedError;
 
   /// [orderElement] ("_order") Extensions for order
   @JsonKey(name: '_order')
@@ -165,7 +165,7 @@ abstract class $CoverageCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.Coverage)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -198,7 +198,7 @@ abstract class $CoverageCopyWith<$Res> {
       Reference? insurer,
       @JsonKey(name: 'class')
           List<CoverageClass>? class_,
-      PositiveInt? order,
+      FhirPositiveInt? order,
       @JsonKey(name: '_order')
           Element? orderElement,
       String? network,
@@ -658,7 +658,7 @@ abstract class _$$_CoverageCopyWith<$Res> implements $CoverageCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.Coverage)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -691,7 +691,7 @@ abstract class _$$_CoverageCopyWith<$Res> implements $CoverageCopyWith<$Res> {
       Reference? insurer,
       @JsonKey(name: 'class')
           List<CoverageClass>? class_,
-      PositiveInt? order,
+      FhirPositiveInt? order,
       @JsonKey(name: '_order')
           Element? orderElement,
       String? network,
@@ -1018,7 +1018,7 @@ class _$_Coverage extends _Coverage {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -1393,7 +1393,7 @@ abstract class _Coverage extends Coverage {
   factory _Coverage(
       {@JsonKey(unknownEnumValue: R5ResourceType.Coverage)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -1458,7 +1458,7 @@ abstract class _Coverage extends Coverage {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when
@@ -1572,7 +1572,7 @@ abstract class _Coverage extends Coverage {
   @override
 
   /// [order] The order of applicability of this coverage relative to other coverages which are currently in force. Note, there may be gaps in the numbering and this does not imply primary, secondary etc. as the specific positioning of coverages depends upon the episode of care. For example; a patient might have (0) auto insurance (1) their own health insurance and (2) spouse's health insurance. When claiming for treatments which were not the result of an auto accident then only coverages (1) and (2) above would be applicatble and would apply in the order specified in parenthesis.
-  PositiveInt? get order;
+  FhirPositiveInt? get order;
   @override
 
   /// [orderElement] ("_order") Extensions for order
@@ -3510,7 +3510,7 @@ mixin _$CoverageEligibilityRequest {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -3557,7 +3557,7 @@ mixin _$CoverageEligibilityRequest {
   CodeableConcept? get priority => throw _privateConstructorUsedError;
 
   /// [purpose] Code to specify whether requesting: prior authorization requirements for some service categories or billing codes; benefits for coverages specified or discovered; discovery and return of coverages for the patient; and/or validation that the specified coverage is in-force at the date/period specified or 'now' if not specified.
-  List<Code>? get purpose => throw _privateConstructorUsedError;
+  List<FhirCode>? get purpose => throw _privateConstructorUsedError;
 
   /// [purposeElement] ("_purpose") Extensions for purpose
   @JsonKey(name: '_purpose')
@@ -3624,7 +3624,7 @@ abstract class $CoverageEligibilityRequestCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.CoverageEligibilityRequest)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -3641,7 +3641,7 @@ abstract class $CoverageEligibilityRequestCopyWith<$Res> {
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? priority,
-      List<Code>? purpose,
+      List<FhirCode>? purpose,
       @JsonKey(name: '_purpose')
           List<Element>? purposeElement,
       Reference patient,
@@ -3785,7 +3785,7 @@ class _$CoverageEligibilityRequestCopyWithImpl<$Res,
       purpose: freezed == purpose
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as List<Code>?,
+              as List<FhirCode>?,
       purposeElement: freezed == purposeElement
           ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -4019,7 +4019,7 @@ abstract class _$$_CoverageEligibilityRequestCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R5ResourceType.CoverageEligibilityRequest)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -4036,7 +4036,7 @@ abstract class _$$_CoverageEligibilityRequestCopyWith<$Res>
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? priority,
-      List<Code>? purpose,
+      List<FhirCode>? purpose,
       @JsonKey(name: '_purpose')
           List<Element>? purposeElement,
       Reference patient,
@@ -4193,7 +4193,7 @@ class __$$_CoverageEligibilityRequestCopyWithImpl<$Res>
       purpose: freezed == purpose
           ? _value._purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as List<Code>?,
+              as List<FhirCode>?,
       purposeElement: freezed == purposeElement
           ? _value._purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -4278,7 +4278,7 @@ class _$_CoverageEligibilityRequest extends _CoverageEligibilityRequest {
       @JsonKey(name: '_status')
           this.statusElement,
       this.priority,
-      final List<Code>? purpose,
+      final List<FhirCode>? purpose,
       @JsonKey(name: '_purpose')
           final List<Element>? purposeElement,
       required this.patient,
@@ -4318,7 +4318,7 @@ class _$_CoverageEligibilityRequest extends _CoverageEligibilityRequest {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -4419,11 +4419,11 @@ class _$_CoverageEligibilityRequest extends _CoverageEligibilityRequest {
   final CodeableConcept? priority;
 
   /// [purpose] Code to specify whether requesting: prior authorization requirements for some service categories or billing codes; benefits for coverages specified or discovered; discovery and return of coverages for the patient; and/or validation that the specified coverage is in-force at the date/period specified or 'now' if not specified.
-  final List<Code>? _purpose;
+  final List<FhirCode>? _purpose;
 
   /// [purpose] Code to specify whether requesting: prior authorization requirements for some service categories or billing codes; benefits for coverages specified or discovered; discovery and return of coverages for the patient; and/or validation that the specified coverage is in-force at the date/period specified or 'now' if not specified.
   @override
-  List<Code>? get purpose {
+  List<FhirCode>? get purpose {
     final value = _purpose;
     if (value == null) return null;
     if (_purpose is EqualUnmodifiableListView) return _purpose;
@@ -4643,7 +4643,7 @@ abstract class _CoverageEligibilityRequest extends CoverageEligibilityRequest {
   factory _CoverageEligibilityRequest(
           {@JsonKey(unknownEnumValue: R5ResourceType.CoverageEligibilityRequest)
               final R5ResourceType resourceType,
-          final Id? id,
+          final FhirId? id,
           final Meta? meta,
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
@@ -4661,7 +4661,7 @@ abstract class _CoverageEligibilityRequest extends CoverageEligibilityRequest {
           @JsonKey(name: '_status')
               final Element? statusElement,
           final CodeableConcept? priority,
-          final List<Code>? purpose,
+          final List<FhirCode>? purpose,
           @JsonKey(name: '_purpose')
               final List<Element>? purposeElement,
           required final Reference patient,
@@ -4700,7 +4700,7 @@ abstract class _CoverageEligibilityRequest extends CoverageEligibilityRequest {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when
@@ -4759,7 +4759,7 @@ abstract class _CoverageEligibilityRequest extends CoverageEligibilityRequest {
   @override
 
   /// [purpose] Code to specify whether requesting: prior authorization requirements for some service categories or billing codes; benefits for coverages specified or discovered; discovery and return of coverages for the patient; and/or validation that the specified coverage is in-force at the date/period specified or 'now' if not specified.
-  List<Code>? get purpose;
+  List<FhirCode>? get purpose;
   @override
 
   /// [purposeElement] ("_purpose") Extensions for purpose
@@ -4862,7 +4862,7 @@ mixin _$CoverageEligibilityRequestSupportingInfo {
       throw _privateConstructorUsedError;
 
   /// [sequence] A number to uniquely identify supporting information entries.
-  PositiveInt? get sequence => throw _privateConstructorUsedError;
+  FhirPositiveInt? get sequence => throw _privateConstructorUsedError;
 
   /// [sequenceElement] ("_sequence") Extensions for sequence
   @JsonKey(name: '_sequence')
@@ -4897,7 +4897,7 @@ abstract class $CoverageEligibilityRequestSupportingInfoCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      PositiveInt? sequence,
+      FhirPositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       Reference information,
       FhirBoolean? appliesToAll,
@@ -5014,7 +5014,7 @@ abstract class _$$_CoverageEligibilityRequestSupportingInfoCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      PositiveInt? sequence,
+      FhirPositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       Reference information,
       FhirBoolean? appliesToAll,
@@ -5302,7 +5302,7 @@ abstract class _CoverageEligibilityRequestSupportingInfo
   @override
 
   /// [sequence] A number to uniquely identify supporting information entries.
-  PositiveInt? get sequence;
+  FhirPositiveInt? get sequence;
   @override
 
   /// [sequenceElement] ("_sequence") Extensions for sequence
@@ -5875,7 +5875,7 @@ mixin _$CoverageEligibilityRequestItem {
       throw _privateConstructorUsedError;
 
   /// [supportingInfoSequence] Exceptions, special conditions and supporting information applicable for this service or product line.
-  List<PositiveInt>? get supportingInfoSequence =>
+  List<FhirPositiveInt>? get supportingInfoSequence =>
       throw _privateConstructorUsedError;
 
   /// [supportingInfoSequenceElement] ("_supportingInfoSequence") Extensions for supportingInfoSequence
@@ -5930,7 +5930,7 @@ abstract class $CoverageEligibilityRequestItemCopyWith<$Res> {
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      List<PositiveInt>? supportingInfoSequence,
+      List<FhirPositiveInt>? supportingInfoSequence,
       @JsonKey(name: '_supportingInfoSequence')
           List<Element>? supportingInfoSequenceElement,
       CodeableConcept? category,
@@ -5996,7 +5996,7 @@ class _$CoverageEligibilityRequestItemCopyWithImpl<$Res,
       supportingInfoSequence: freezed == supportingInfoSequence
           ? _value.supportingInfoSequence
           : supportingInfoSequence // ignore: cast_nullable_to_non_nullable
-              as List<PositiveInt>?,
+              as List<FhirPositiveInt>?,
       supportingInfoSequenceElement: freezed == supportingInfoSequenceElement
           ? _value.supportingInfoSequenceElement
           : supportingInfoSequenceElement // ignore: cast_nullable_to_non_nullable
@@ -6127,7 +6127,7 @@ abstract class _$$_CoverageEligibilityRequestItemCopyWith<$Res>
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      List<PositiveInt>? supportingInfoSequence,
+      List<FhirPositiveInt>? supportingInfoSequence,
       @JsonKey(name: '_supportingInfoSequence')
           List<Element>? supportingInfoSequenceElement,
       CodeableConcept? category,
@@ -6198,7 +6198,7 @@ class __$$_CoverageEligibilityRequestItemCopyWithImpl<$Res>
       supportingInfoSequence: freezed == supportingInfoSequence
           ? _value._supportingInfoSequence
           : supportingInfoSequence // ignore: cast_nullable_to_non_nullable
-              as List<PositiveInt>?,
+              as List<FhirPositiveInt>?,
       supportingInfoSequenceElement: freezed == supportingInfoSequenceElement
           ? _value._supportingInfoSequenceElement
           : supportingInfoSequenceElement // ignore: cast_nullable_to_non_nullable
@@ -6252,7 +6252,7 @@ class _$_CoverageEligibilityRequestItem
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final List<PositiveInt>? supportingInfoSequence,
+      final List<FhirPositiveInt>? supportingInfoSequence,
       @JsonKey(name: '_supportingInfoSequence')
           final List<Element>? supportingInfoSequenceElement,
       this.category,
@@ -6343,11 +6343,11 @@ class _$_CoverageEligibilityRequestItem
   }
 
   /// [supportingInfoSequence] Exceptions, special conditions and supporting information applicable for this service or product line.
-  final List<PositiveInt>? _supportingInfoSequence;
+  final List<FhirPositiveInt>? _supportingInfoSequence;
 
   /// [supportingInfoSequence] Exceptions, special conditions and supporting information applicable for this service or product line.
   @override
-  List<PositiveInt>? get supportingInfoSequence {
+  List<FhirPositiveInt>? get supportingInfoSequence {
     final value = _supportingInfoSequence;
     if (value == null) return null;
     if (_supportingInfoSequence is EqualUnmodifiableListView)
@@ -6513,7 +6513,7 @@ abstract class _CoverageEligibilityRequestItem
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final List<PositiveInt>? supportingInfoSequence,
+      final List<FhirPositiveInt>? supportingInfoSequence,
       @JsonKey(name: '_supportingInfoSequence')
           final List<Element>? supportingInfoSequenceElement,
       final CodeableConcept? category,
@@ -6563,7 +6563,7 @@ abstract class _CoverageEligibilityRequestItem
   @override
 
   /// [supportingInfoSequence] Exceptions, special conditions and supporting information applicable for this service or product line.
-  List<PositiveInt>? get supportingInfoSequence;
+  List<FhirPositiveInt>? get supportingInfoSequence;
   @override
 
   /// [supportingInfoSequenceElement] ("_supportingInfoSequence") Extensions for supportingInfoSequence
@@ -7032,7 +7032,7 @@ mixin _$CoverageEligibilityResponse {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -7076,7 +7076,7 @@ mixin _$CoverageEligibilityResponse {
   Element? get statusElement => throw _privateConstructorUsedError;
 
   /// [purpose] Code to specify whether requesting: prior authorization requirements for some service categories or billing codes; benefits for coverages specified or discovered; discovery and return of coverages for the patient; and/or validation that the specified coverage is in-force at the date/period specified or 'now' if not specified.
-  List<Code>? get purpose => throw _privateConstructorUsedError;
+  List<FhirCode>? get purpose => throw _privateConstructorUsedError;
 
   /// [purposeElement] ("_purpose") Extensions for purpose
   @JsonKey(name: '_purpose')
@@ -7161,7 +7161,7 @@ abstract class $CoverageEligibilityResponseCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.CoverageEligibilityResponse)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -7177,7 +7177,7 @@ abstract class $CoverageEligibilityResponseCopyWith<$Res> {
       FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      List<Code>? purpose,
+      List<FhirCode>? purpose,
       @JsonKey(name: '_purpose')
           List<Element>? purposeElement,
       Reference patient,
@@ -7331,7 +7331,7 @@ class _$CoverageEligibilityResponseCopyWithImpl<$Res,
       purpose: freezed == purpose
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as List<Code>?,
+              as List<FhirCode>?,
       purposeElement: freezed == purposeElement
           ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -7605,7 +7605,7 @@ abstract class _$$_CoverageEligibilityResponseCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R5ResourceType.CoverageEligibilityResponse)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -7621,7 +7621,7 @@ abstract class _$$_CoverageEligibilityResponseCopyWith<$Res>
       FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      List<Code>? purpose,
+      List<FhirCode>? purpose,
       @JsonKey(name: '_purpose')
           List<Element>? purposeElement,
       Reference patient,
@@ -7790,7 +7790,7 @@ class __$$_CoverageEligibilityResponseCopyWithImpl<$Res>
       purpose: freezed == purpose
           ? _value._purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as List<Code>?,
+              as List<FhirCode>?,
       purposeElement: freezed == purposeElement
           ? _value._purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -7894,7 +7894,7 @@ class _$_CoverageEligibilityResponse extends _CoverageEligibilityResponse {
       this.status,
       @JsonKey(name: '_status')
           this.statusElement,
-      final List<Code>? purpose,
+      final List<FhirCode>? purpose,
       @JsonKey(name: '_purpose')
           final List<Element>? purposeElement,
       required this.patient,
@@ -7941,7 +7941,7 @@ class _$_CoverageEligibilityResponse extends _CoverageEligibilityResponse {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -8038,11 +8038,11 @@ class _$_CoverageEligibilityResponse extends _CoverageEligibilityResponse {
   final Element? statusElement;
 
   /// [purpose] Code to specify whether requesting: prior authorization requirements for some service categories or billing codes; benefits for coverages specified or discovered; discovery and return of coverages for the patient; and/or validation that the specified coverage is in-force at the date/period specified or 'now' if not specified.
-  final List<Code>? _purpose;
+  final List<FhirCode>? _purpose;
 
   /// [purpose] Code to specify whether requesting: prior authorization requirements for some service categories or billing codes; benefits for coverages specified or discovered; discovery and return of coverages for the patient; and/or validation that the specified coverage is in-force at the date/period specified or 'now' if not specified.
   @override
-  List<Code>? get purpose {
+  List<FhirCode>? get purpose {
     final value = _purpose;
     if (value == null) return null;
     if (_purpose is EqualUnmodifiableListView) return _purpose;
@@ -8287,7 +8287,7 @@ abstract class _CoverageEligibilityResponse
   factory _CoverageEligibilityResponse(
       {@JsonKey(unknownEnumValue: R5ResourceType.CoverageEligibilityResponse)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -8304,7 +8304,7 @@ abstract class _CoverageEligibilityResponse
       final FhirCode? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
-      final List<Code>? purpose,
+      final List<FhirCode>? purpose,
       @JsonKey(name: '_purpose')
           final List<Element>? purposeElement,
       required final Reference patient,
@@ -8351,7 +8351,7 @@ abstract class _CoverageEligibilityResponse
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when
@@ -8406,7 +8406,7 @@ abstract class _CoverageEligibilityResponse
   @override
 
   /// [purpose] Code to specify whether requesting: prior authorization requirements for some service categories or billing codes; benefits for coverages specified or discovered; discovery and return of coverages for the patient; and/or validation that the specified coverage is in-force at the date/period specified or 'now' if not specified.
-  List<Code>? get purpose;
+  List<FhirCode>? get purpose;
   @override
 
   /// [purposeElement] ("_purpose") Extensions for purpose
@@ -10123,7 +10123,7 @@ mixin _$CoverageEligibilityResponseBenefit {
   CodeableConcept get type => throw _privateConstructorUsedError;
 
   /// [allowedUnsignedInt] The quantity of the benefit which is permitted under the coverage.
-  UnsignedInt? get allowedUnsignedInt => throw _privateConstructorUsedError;
+  FhirUnsignedInt? get allowedUnsignedInt => throw _privateConstructorUsedError;
 
   /// [allowedUnsignedIntElement] ("_allowedUnsignedInt") Extensions for allowedUnsignedInt
   @JsonKey(name: '_allowedUnsignedInt')
@@ -10140,7 +10140,7 @@ mixin _$CoverageEligibilityResponseBenefit {
   Money? get allowedMoney => throw _privateConstructorUsedError;
 
   /// [usedUnsignedInt] The quantity of the benefit which have been consumed to date.
-  UnsignedInt? get usedUnsignedInt => throw _privateConstructorUsedError;
+  FhirUnsignedInt? get usedUnsignedInt => throw _privateConstructorUsedError;
 
   /// [usedUnsignedIntElement] ("_usedUnsignedInt") Extensions for usedUnsignedInt
   @JsonKey(name: '_usedUnsignedInt')
@@ -10176,12 +10176,12 @@ abstract class $CoverageEligibilityResponseBenefitCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept type,
-      UnsignedInt? allowedUnsignedInt,
+      FhirUnsignedInt? allowedUnsignedInt,
       @JsonKey(name: '_allowedUnsignedInt') Element? allowedUnsignedIntElement,
       String? allowedString,
       @JsonKey(name: '_allowedString') Element? allowedStringElement,
       Money? allowedMoney,
-      UnsignedInt? usedUnsignedInt,
+      FhirUnsignedInt? usedUnsignedInt,
       @JsonKey(name: '_usedUnsignedInt') Element? usedUnsignedIntElement,
       String? usedString,
       @JsonKey(name: '_usedString') Element? usedStringElement,
@@ -10380,12 +10380,12 @@ abstract class _$$_CoverageEligibilityResponseBenefitCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept type,
-      UnsignedInt? allowedUnsignedInt,
+      FhirUnsignedInt? allowedUnsignedInt,
       @JsonKey(name: '_allowedUnsignedInt') Element? allowedUnsignedIntElement,
       String? allowedString,
       @JsonKey(name: '_allowedString') Element? allowedStringElement,
       Money? allowedMoney,
-      UnsignedInt? usedUnsignedInt,
+      FhirUnsignedInt? usedUnsignedInt,
       @JsonKey(name: '_usedUnsignedInt') Element? usedUnsignedIntElement,
       String? usedString,
       @JsonKey(name: '_usedString') Element? usedStringElement,
@@ -10775,7 +10775,7 @@ abstract class _CoverageEligibilityResponseBenefit
   @override
 
   /// [allowedUnsignedInt] The quantity of the benefit which is permitted under the coverage.
-  UnsignedInt? get allowedUnsignedInt;
+  FhirUnsignedInt? get allowedUnsignedInt;
   @override
 
   /// [allowedUnsignedIntElement] ("_allowedUnsignedInt") Extensions for allowedUnsignedInt
@@ -10797,7 +10797,7 @@ abstract class _CoverageEligibilityResponseBenefit
   @override
 
   /// [usedUnsignedInt] The quantity of the benefit which have been consumed to date.
-  UnsignedInt? get usedUnsignedInt;
+  FhirUnsignedInt? get usedUnsignedInt;
   @override
 
   /// [usedUnsignedIntElement] ("_usedUnsignedInt") Extensions for usedUnsignedInt
@@ -11190,7 +11190,7 @@ mixin _$EnrollmentRequest {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -11268,7 +11268,7 @@ abstract class $EnrollmentRequestCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.EnrollmentRequest)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -11555,7 +11555,7 @@ abstract class _$$_EnrollmentRequestCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R5ResourceType.EnrollmentRequest)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -11765,7 +11765,7 @@ class _$_EnrollmentRequest extends _EnrollmentRequest {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -11977,7 +11977,7 @@ abstract class _EnrollmentRequest extends EnrollmentRequest {
   factory _EnrollmentRequest(
       {@JsonKey(unknownEnumValue: R5ResourceType.EnrollmentRequest)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -12021,7 +12021,7 @@ abstract class _EnrollmentRequest extends EnrollmentRequest {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when
@@ -12121,7 +12121,7 @@ mixin _$EnrollmentResponse {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -12210,7 +12210,7 @@ abstract class $EnrollmentResponseCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.EnrollmentResponse)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -12530,7 +12530,7 @@ abstract class _$$_EnrollmentResponseCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R5ResourceType.EnrollmentResponse)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -12767,7 +12767,7 @@ class _$_EnrollmentResponse extends _EnrollmentResponse {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -13001,7 +13001,7 @@ abstract class _EnrollmentResponse extends EnrollmentResponse {
   factory _EnrollmentResponse(
       {@JsonKey(unknownEnumValue: R5ResourceType.EnrollmentResponse)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -13050,7 +13050,7 @@ abstract class _EnrollmentResponse extends EnrollmentResponse {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when

@@ -518,7 +518,7 @@ mixin _$Attachment {
   /// [contentType] Identifies the type of the data in the attachment and
   ///  allows a method to be chosen to interpret or render the data. Includes
   ///  mime type parameters such as charset where appropriate.
-   FhirCode? get contentType => throw _privateConstructorUsedError;
+  FhirCode? get contentType => throw _privateConstructorUsedError;
 
   /// [contentTypeElement] ("_contentType") Extensions for contentType
   @JsonKey(name: '_contentType')
@@ -526,7 +526,7 @@ mixin _$Attachment {
 
   /// [language] The human language of the content. The value can be any
   ///  valid value according to BCP 47.
-   FhirCode? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
@@ -534,7 +534,7 @@ mixin _$Attachment {
 
   /// [data] The actual data of the attachment - a sequence of bytes, base64
   ///  encoded.
-  FhirBase64Binary?? get data => throw _privateConstructorUsedError;
+  FhirBase64Binary? get data => throw _privateConstructorUsedError;
 
   /// [dataElement] ("_data") Extensions for data
   @JsonKey(name: '_data')
@@ -557,7 +557,7 @@ mixin _$Attachment {
 
   /// [hash] The calculated hash of the data using SHA-1. Represented using
   ///  base64.
-  FhirBase64Binary?? get hash => throw _privateConstructorUsedError;
+  FhirBase64Binary? get hash => throw _privateConstructorUsedError;
 
   /// [hashElement] ("_hash") Extensions for hash
   @JsonKey(name: '_hash')
@@ -578,14 +578,14 @@ mixin _$Attachment {
   Element? get creationElement => throw _privateConstructorUsedError;
 
   /// [height] Height of the image in pixels (photo/video).
-  PositiveInt? get height => throw _privateConstructorUsedError;
+  FhirPositiveInt? get height => throw _privateConstructorUsedError;
 
   /// [heightElement] ("_height") Extensions for height
   @JsonKey(name: '_height')
   Element? get heightElement => throw _privateConstructorUsedError;
 
   /// [width] Width of the image in pixels (photo/video).
-  PositiveInt? get width => throw _privateConstructorUsedError;
+  FhirPositiveInt? get width => throw _privateConstructorUsedError;
 
   /// [widthElement] ("_width") Extensions for width
   @JsonKey(name: '_width')
@@ -596,7 +596,7 @@ mixin _$Attachment {
   ///  slices in a single image, or an animated gif. If there is more than
   ///  one frame, this SHALL have a value in order to alert interface
   ///  software that a multi-frame capable rendering widget is required.
-  PositiveInt? get frames => throw _privateConstructorUsedError;
+  FhirPositiveInt? get frames => throw _privateConstructorUsedError;
 
   /// [framesElement] ("_frames") Extensions for frames
   @JsonKey(name: '_frames')
@@ -611,7 +611,7 @@ mixin _$Attachment {
   Element? get durationElement => throw _privateConstructorUsedError;
 
   /// [pages] The number of pages when printed.
-  PositiveInt? get pages => throw _privateConstructorUsedError;
+  FhirPositiveInt? get pages => throw _privateConstructorUsedError;
 
   /// [pagesElement] ("_pages") Extensions for pages
   @JsonKey(name: '_pages')
@@ -632,31 +632,31 @@ abstract class $AttachmentCopyWith<$Res> {
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-       FhirCode? contentType,
+      FhirCode? contentType,
       @JsonKey(name: '_contentType') Element? contentTypeElement,
-       FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language') Element? languageElement,
-  FhirBase64Binary?? data,
+      FhirBase64Binary? data,
       @JsonKey(name: '_data') Element? dataElement,
       FhirUrl? url,
       @JsonKey(name: '_url') Element? urlElement,
       FhirInteger64? size,
       @JsonKey(name: '_size') Element? sizeElement,
-  FhirBase64Binary?? hash,
+      FhirBase64Binary? hash,
       @JsonKey(name: '_hash') Element? hashElement,
       String? title,
       @JsonKey(name: '_title') Element? titleElement,
       FhirDateTime? creation,
       @JsonKey(name: '_creation') Element? creationElement,
-      PositiveInt? height,
+      FhirPositiveInt? height,
       @JsonKey(name: '_height') Element? heightElement,
-      PositiveInt? width,
+      FhirPositiveInt? width,
       @JsonKey(name: '_width') Element? widthElement,
-      PositiveInt? frames,
+      FhirPositiveInt? frames,
       @JsonKey(name: '_frames') Element? framesElement,
       FhirDecimal? duration,
       @JsonKey(name: '_duration') Element? durationElement,
-      PositiveInt? pages,
+      FhirPositiveInt? pages,
       @JsonKey(name: '_pages') Element? pagesElement});
 
   $ElementCopyWith<$Res>? get contentTypeElement;
@@ -728,7 +728,7 @@ class _$AttachmentCopyWithImpl<$Res, $Val extends Attachment>
       contentType: freezed == contentType
           ? _value.contentType
           : contentType // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       contentTypeElement: freezed == contentTypeElement
           ? _value.contentTypeElement
           : contentTypeElement // ignore: cast_nullable_to_non_nullable
@@ -736,7 +736,7 @@ class _$AttachmentCopyWithImpl<$Res, $Val extends Attachment>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -744,7 +744,7 @@ class _$AttachmentCopyWithImpl<$Res, $Val extends Attachment>
       data: freezed == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
-              as  FhirBase64Binary??,
+              as FhirBase64Binary?,
       dataElement: freezed == dataElement
           ? _value.dataElement
           : dataElement // ignore: cast_nullable_to_non_nullable
@@ -768,7 +768,7 @@ class _$AttachmentCopyWithImpl<$Res, $Val extends Attachment>
       hash: freezed == hash
           ? _value.hash
           : hash // ignore: cast_nullable_to_non_nullable
-              as  FhirBase64Binary??,
+              as FhirBase64Binary?,
       hashElement: freezed == hashElement
           ? _value.hashElement
           : hashElement // ignore: cast_nullable_to_non_nullable
@@ -1000,31 +1000,31 @@ abstract class _$$_AttachmentCopyWith<$Res>
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-       FhirCode? contentType,
+      FhirCode? contentType,
       @JsonKey(name: '_contentType') Element? contentTypeElement,
-       FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language') Element? languageElement,
-  FhirBase64Binary?? data,
+      FhirBase64Binary? data,
       @JsonKey(name: '_data') Element? dataElement,
       FhirUrl? url,
       @JsonKey(name: '_url') Element? urlElement,
       FhirInteger64? size,
       @JsonKey(name: '_size') Element? sizeElement,
-  FhirBase64Binary?? hash,
+      FhirBase64Binary? hash,
       @JsonKey(name: '_hash') Element? hashElement,
       String? title,
       @JsonKey(name: '_title') Element? titleElement,
       FhirDateTime? creation,
       @JsonKey(name: '_creation') Element? creationElement,
-      PositiveInt? height,
+      FhirPositiveInt? height,
       @JsonKey(name: '_height') Element? heightElement,
-      PositiveInt? width,
+      FhirPositiveInt? width,
       @JsonKey(name: '_width') Element? widthElement,
-      PositiveInt? frames,
+      FhirPositiveInt? frames,
       @JsonKey(name: '_frames') Element? framesElement,
       FhirDecimal? duration,
       @JsonKey(name: '_duration') Element? durationElement,
-      PositiveInt? pages,
+      FhirPositiveInt? pages,
       @JsonKey(name: '_pages') Element? pagesElement});
 
   @override
@@ -1107,7 +1107,7 @@ class __$$_AttachmentCopyWithImpl<$Res>
       contentType: freezed == contentType
           ? _value.contentType
           : contentType // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       contentTypeElement: freezed == contentTypeElement
           ? _value.contentTypeElement
           : contentTypeElement // ignore: cast_nullable_to_non_nullable
@@ -1115,7 +1115,7 @@ class __$$_AttachmentCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -1123,7 +1123,7 @@ class __$$_AttachmentCopyWithImpl<$Res>
       data: freezed == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
-              as  FhirBase64Binary??,
+              as FhirBase64Binary?,
       dataElement: freezed == dataElement
           ? _value.dataElement
           : dataElement // ignore: cast_nullable_to_non_nullable
@@ -1147,7 +1147,7 @@ class __$$_AttachmentCopyWithImpl<$Res>
       hash: freezed == hash
           ? _value.hash
           : hash // ignore: cast_nullable_to_non_nullable
-              as  FhirBase64Binary??,
+              as FhirBase64Binary?,
       hashElement: freezed == hashElement
           ? _value.hashElement
           : hashElement // ignore: cast_nullable_to_non_nullable
@@ -1285,7 +1285,7 @@ class _$_Attachment extends _Attachment {
   ///  allows a method to be chosen to interpret or render the data. Includes
   ///  mime type parameters such as charset where appropriate.
   @override
-  final  FhirCode? contentType;
+  final FhirCode? contentType;
 
   /// [contentTypeElement] ("_contentType") Extensions for contentType
   @override
@@ -1295,7 +1295,7 @@ class _$_Attachment extends _Attachment {
   /// [language] The human language of the content. The value can be any
   ///  valid value according to BCP 47.
   @override
-  final  FhirCode? language;
+  final FhirCode? language;
 
   /// [languageElement] ("_language") Extensions for language
   @override
@@ -1305,7 +1305,7 @@ class _$_Attachment extends _Attachment {
   /// [data] The actual data of the attachment - a sequence of bytes, base64
   ///  encoded.
   @override
-  final  FhirBase64Binary?? data;
+  final FhirBase64Binary? data;
 
   /// [dataElement] ("_data") Extensions for data
   @override
@@ -1334,7 +1334,7 @@ class _$_Attachment extends _Attachment {
   /// [hash] The calculated hash of the data using SHA-1. Represented using
   ///  base64.
   @override
-  final  FhirBase64Binary?? hash;
+  final FhirBase64Binary? hash;
 
   /// [hashElement] ("_hash") Extensions for hash
   @override
@@ -1519,17 +1519,17 @@ abstract class _Attachment extends Attachment {
   factory _Attachment(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final  FhirCode? contentType,
+      final FhirCode? contentType,
       @JsonKey(name: '_contentType') final Element? contentTypeElement,
-      final  FhirCode? language,
+      final FhirCode? language,
       @JsonKey(name: '_language') final Element? languageElement,
-      final  FhirBase64Binary?? data,
+      final FhirBase64Binary? data,
       @JsonKey(name: '_data') final Element? dataElement,
       final FhirUrl? url,
       @JsonKey(name: '_url') final Element? urlElement,
       final Integer64? size,
       @JsonKey(name: '_size') final Element? sizeElement,
-      final  FhirBase64Binary?? hash,
+      final FhirBase64Binary? hash,
       @JsonKey(name: '_hash') final Element? hashElement,
       final String? title,
       @JsonKey(name: '_title') final Element? titleElement,
@@ -1571,7 +1571,7 @@ abstract class _Attachment extends Attachment {
   /// [contentType] Identifies the type of the data in the attachment and
   ///  allows a method to be chosen to interpret or render the data. Includes
   ///  mime type parameters such as charset where appropriate.
-   FhirCode? get contentType;
+  FhirCode? get contentType;
   @override
 
   /// [contentTypeElement] ("_contentType") Extensions for contentType
@@ -1581,7 +1581,7 @@ abstract class _Attachment extends Attachment {
 
   /// [language] The human language of the content. The value can be any
   ///  valid value according to BCP 47.
-   FhirCode? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] ("_language") Extensions for language
@@ -1591,7 +1591,7 @@ abstract class _Attachment extends Attachment {
 
   /// [data] The actual data of the attachment - a sequence of bytes, base64
   ///  encoded.
-  FhirBase64Binary?? get data;
+  FhirBase64Binary? get data;
   @override
 
   /// [dataElement] ("_data") Extensions for data
@@ -1620,7 +1620,7 @@ abstract class _Attachment extends Attachment {
 
   /// [hash] The calculated hash of the data using SHA-1. Represented using
   ///  base64.
-  FhirBase64Binary?? get hash;
+  FhirBase64Binary? get hash;
   @override
 
   /// [hashElement] ("_hash") Extensions for hash
@@ -1647,7 +1647,7 @@ abstract class _Attachment extends Attachment {
   @override
 
   /// [height] Height of the image in pixels (photo/video).
-  PositiveInt? get height;
+  FhirPositiveInt? get height;
   @override
 
   /// [heightElement] ("_height") Extensions for height
@@ -1656,7 +1656,7 @@ abstract class _Attachment extends Attachment {
   @override
 
   /// [width] Width of the image in pixels (photo/video).
-  PositiveInt? get width;
+  FhirPositiveInt? get width;
   @override
 
   /// [widthElement] ("_width") Extensions for width
@@ -1669,7 +1669,7 @@ abstract class _Attachment extends Attachment {
   ///  slices in a single image, or an animated gif. If there is more than
   ///  one frame, this SHALL have a value in order to alert interface
   ///  software that a multi-frame capable rendering widget is required.
-  PositiveInt? get frames;
+  FhirPositiveInt? get frames;
   @override
 
   /// [framesElement] ("_frames") Extensions for frames
@@ -1688,7 +1688,7 @@ abstract class _Attachment extends Attachment {
   @override
 
   /// [pages] The number of pages when printed.
-  PositiveInt? get pages;
+  FhirPositiveInt? get pages;
   @override
 
   /// [pagesElement] ("_pages") Extensions for pages
@@ -2650,7 +2650,7 @@ mixin _$Coding {
   /// [code] A symbol in syntax defined by the system. The symbol may be a
   ///  predefined code or an expression in a syntax defined by the coding
   ///  system (e.g. post-coordination).
-   FhirCode? get code => throw _privateConstructorUsedError;
+  FhirCode? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] ("_code") Extensions for code
   @JsonKey(name: '_code')
@@ -2666,7 +2666,7 @@ mixin _$Coding {
 
   /// [userSelected] Indicates that this coding was chosen by a user directly
   ///  - e.g. off a pick list of available items (codes or displays).
-   FhirBoolean? get userSelected => throw _privateConstructorUsedError;
+  FhirBoolean? get userSelected => throw _privateConstructorUsedError;
 
   /// [userSelectedElement] ("_userSelected") Extensions for userSelected
   @JsonKey(name: '_userSelected')
@@ -2689,11 +2689,11 @@ abstract class $CodingCopyWith<$Res> {
       @JsonKey(name: '_system') Element? systemElement,
       String? version,
       @JsonKey(name: '_version') Element? versionElement,
-       FhirCode? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement,
       String? display,
       @JsonKey(name: '_display') Element? displayElement,
-       FhirBoolean? userSelected,
+      FhirBoolean? userSelected,
       @JsonKey(name: '_userSelected') Element? userSelectedElement});
 
   $ElementCopyWith<$Res>? get systemElement;
@@ -2757,7 +2757,7 @@ class _$CodingCopyWithImpl<$Res, $Val extends Coding>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -2773,7 +2773,7 @@ class _$CodingCopyWithImpl<$Res, $Val extends Coding>
       userSelected: freezed == userSelected
           ? _value.userSelected
           : userSelected // ignore: cast_nullable_to_non_nullable
-              as  FhirBoolean?,
+              as FhirBoolean?,
       userSelectedElement: freezed == userSelectedElement
           ? _value.userSelectedElement
           : userSelectedElement // ignore: cast_nullable_to_non_nullable
@@ -2855,11 +2855,11 @@ abstract class _$$_CodingCopyWith<$Res> implements $CodingCopyWith<$Res> {
       @JsonKey(name: '_system') Element? systemElement,
       String? version,
       @JsonKey(name: '_version') Element? versionElement,
-       FhirCode? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement,
       String? display,
       @JsonKey(name: '_display') Element? displayElement,
-       FhirBoolean? userSelected,
+      FhirBoolean? userSelected,
       @JsonKey(name: '_userSelected') Element? userSelectedElement});
 
   @override
@@ -2925,7 +2925,7 @@ class __$$_CodingCopyWithImpl<$Res>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -2941,7 +2941,7 @@ class __$$_CodingCopyWithImpl<$Res>
       userSelected: freezed == userSelected
           ? _value.userSelected
           : userSelected // ignore: cast_nullable_to_non_nullable
-              as  FhirBoolean?,
+              as FhirBoolean?,
       userSelectedElement: freezed == userSelectedElement
           ? _value.userSelectedElement
           : userSelectedElement // ignore: cast_nullable_to_non_nullable
@@ -3031,7 +3031,7 @@ class _$_Coding extends _Coding {
   ///  predefined code or an expression in a syntax defined by the coding
   ///  system (e.g. post-coordination).
   @override
-  final  FhirCode? code;
+  final FhirCode? code;
 
   /// [codeElement] ("_code") Extensions for code
   @override
@@ -3051,7 +3051,7 @@ class _$_Coding extends _Coding {
   /// [userSelected] Indicates that this coding was chosen by a user directly
   ///  - e.g. off a pick list of available items (codes or displays).
   @override
-  final  FhirBoolean? userSelected;
+  final FhirBoolean? userSelected;
 
   /// [userSelectedElement] ("_userSelected") Extensions for userSelected
   @override
@@ -3128,11 +3128,11 @@ abstract class _Coding extends Coding {
           @JsonKey(name: '_system') final Element? systemElement,
           final String? version,
           @JsonKey(name: '_version') final Element? versionElement,
-          final  FhirCode? code,
+          final FhirCode? code,
           @JsonKey(name: '_code') final Element? codeElement,
           final String? display,
           @JsonKey(name: '_display') final Element? displayElement,
-          final  FhirBoolean? userSelected,
+          final FhirBoolean? userSelected,
           @JsonKey(name: '_userSelected') final Element? userSelectedElement}) =
       _$_Coding;
   _Coding._() : super._();
@@ -3184,7 +3184,7 @@ abstract class _Coding extends Coding {
   /// [code] A symbol in syntax defined by the system. The symbol may be a
   ///  predefined code or an expression in a syntax defined by the coding
   ///  system (e.g. post-coordination).
-   FhirCode? get code;
+  FhirCode? get code;
   @override
 
   /// [codeElement] ("_code") Extensions for code
@@ -3204,7 +3204,7 @@ abstract class _Coding extends Coding {
 
   /// [userSelected] Indicates that this coding was chosen by a user directly
   ///  - e.g. off a pick list of available items (codes or displays).
-   FhirBoolean? get userSelected;
+  FhirBoolean? get userSelected;
   @override
 
   /// [userSelectedElement] ("_userSelected") Extensions for userSelected
@@ -3271,7 +3271,7 @@ mixin _$Quantity {
 
   /// [code] A computer processable form of the unit in some unit
   ///  representation system.
-   FhirCode? get code => throw _privateConstructorUsedError;
+  FhirCode? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] ("_code") Extensions for code
   @JsonKey(name: '_code')
@@ -3299,7 +3299,7 @@ abstract class $QuantityCopyWith<$Res> {
       @JsonKey(name: '_unit') Element? unitElement,
       FhirUri? system,
       @JsonKey(name: '_system') Element? systemElement,
-       FhirCode? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement});
 
   $ElementCopyWith<$Res>? get valueElement;
@@ -3379,7 +3379,7 @@ class _$QuantityCopyWithImpl<$Res, $Val extends Quantity>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -3466,7 +3466,7 @@ abstract class _$$_QuantityCopyWith<$Res> implements $QuantityCopyWith<$Res> {
       @JsonKey(name: '_unit') Element? unitElement,
       FhirUri? system,
       @JsonKey(name: '_system') Element? systemElement,
-       FhirCode? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement});
 
   @override
@@ -3549,7 +3549,7 @@ class __$$_QuantityCopyWithImpl<$Res>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -3655,7 +3655,7 @@ class _$_Quantity extends _Quantity {
   /// [code] A computer processable form of the unit in some unit
   ///  representation system.
   @override
-  final  FhirCode? code;
+  final FhirCode? code;
 
   /// [codeElement] ("_code") Extensions for code
   @override
@@ -3736,7 +3736,7 @@ abstract class _Quantity extends Quantity {
       @JsonKey(name: '_unit') final Element? unitElement,
       final FhirUri? system,
       @JsonKey(name: '_system') final Element? systemElement,
-      final  FhirCode? code,
+      final FhirCode? code,
       @JsonKey(name: '_code') final Element? codeElement}) = _$_Quantity;
   _Quantity._() : super._();
 
@@ -3803,7 +3803,7 @@ abstract class _Quantity extends Quantity {
 
   /// [code] A computer processable form of the unit in some unit
   ///  representation system.
-   FhirCode? get code;
+  FhirCode? get code;
   @override
 
   /// [codeElement] ("_code") Extensions for code
@@ -3870,7 +3870,7 @@ mixin _$FhirDuration {
 
   /// [code] A computer processable form of the unit in some unit
   ///  representation system.
-   FhirCode? get code => throw _privateConstructorUsedError;
+  FhirCode? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] ("_code") Extensions for code
   @JsonKey(name: '_code')
@@ -3899,7 +3899,7 @@ abstract class $FhirDurationCopyWith<$Res> {
       @JsonKey(name: '_unit') Element? unitElement,
       FhirUri? system,
       @JsonKey(name: '_system') Element? systemElement,
-       FhirCode? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement});
 
   $ElementCopyWith<$Res>? get valueElement;
@@ -3979,7 +3979,7 @@ class _$FhirDurationCopyWithImpl<$Res, $Val extends FhirDuration>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -4067,7 +4067,7 @@ abstract class _$$_FhirDurationCopyWith<$Res>
       @JsonKey(name: '_unit') Element? unitElement,
       FhirUri? system,
       @JsonKey(name: '_system') Element? systemElement,
-       FhirCode? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement});
 
   @override
@@ -4150,7 +4150,7 @@ class __$$_FhirDurationCopyWithImpl<$Res>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -4256,7 +4256,7 @@ class _$_FhirDuration extends _FhirDuration {
   /// [code] A computer processable form of the unit in some unit
   ///  representation system.
   @override
-  final  FhirCode? code;
+  final FhirCode? code;
 
   /// [codeElement] ("_code") Extensions for code
   @override
@@ -4337,7 +4337,7 @@ abstract class _FhirDuration extends FhirDuration {
       @JsonKey(name: '_unit') final Element? unitElement,
       final FhirUri? system,
       @JsonKey(name: '_system') final Element? systemElement,
-      final  FhirCode? code,
+      final FhirCode? code,
       @JsonKey(name: '_code') final Element? codeElement}) = _$_FhirDuration;
   _FhirDuration._() : super._();
 
@@ -4405,7 +4405,7 @@ abstract class _FhirDuration extends FhirDuration {
 
   /// [code] A computer processable form of the unit in some unit
   ///  representation system.
-   FhirCode? get code;
+  FhirCode? get code;
   @override
 
   /// [codeElement] ("_code") Extensions for code
@@ -4472,7 +4472,7 @@ mixin _$Distance {
 
   /// [code] A computer processable form of the unit in some unit
   ///  representation system.
-   FhirCode? get code => throw _privateConstructorUsedError;
+  FhirCode? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] ("_code") Extensions for code
   @JsonKey(name: '_code')
@@ -4500,7 +4500,7 @@ abstract class $DistanceCopyWith<$Res> {
       @JsonKey(name: '_unit') Element? unitElement,
       FhirUri? system,
       @JsonKey(name: '_system') Element? systemElement,
-       FhirCode? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement});
 
   $ElementCopyWith<$Res>? get valueElement;
@@ -4580,7 +4580,7 @@ class _$DistanceCopyWithImpl<$Res, $Val extends Distance>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -4667,7 +4667,7 @@ abstract class _$$_DistanceCopyWith<$Res> implements $DistanceCopyWith<$Res> {
       @JsonKey(name: '_unit') Element? unitElement,
       FhirUri? system,
       @JsonKey(name: '_system') Element? systemElement,
-       FhirCode? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement});
 
   @override
@@ -4750,7 +4750,7 @@ class __$$_DistanceCopyWithImpl<$Res>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -4856,7 +4856,7 @@ class _$_Distance extends _Distance {
   /// [code] A computer processable form of the unit in some unit
   ///  representation system.
   @override
-  final  FhirCode? code;
+  final FhirCode? code;
 
   /// [codeElement] ("_code") Extensions for code
   @override
@@ -4937,7 +4937,7 @@ abstract class _Distance extends Distance {
       @JsonKey(name: '_unit') final Element? unitElement,
       final FhirUri? system,
       @JsonKey(name: '_system') final Element? systemElement,
-      final  FhirCode? code,
+      final FhirCode? code,
       @JsonKey(name: '_code') final Element? codeElement}) = _$_Distance;
   _Distance._() : super._();
 
@@ -5004,7 +5004,7 @@ abstract class _Distance extends Distance {
 
   /// [code] A computer processable form of the unit in some unit
   ///  representation system.
-   FhirCode? get code;
+  FhirCode? get code;
   @override
 
   /// [codeElement] ("_code") Extensions for code
@@ -5071,7 +5071,7 @@ mixin _$Count {
 
   /// [code] A computer processable form of the unit in some unit
   ///  representation system.
-   FhirCode? get code => throw _privateConstructorUsedError;
+  FhirCode? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] ("_code") Extensions for code
   @JsonKey(name: '_code')
@@ -5098,7 +5098,7 @@ abstract class $CountCopyWith<$Res> {
       @JsonKey(name: '_unit') Element? unitElement,
       FhirUri? system,
       @JsonKey(name: '_system') Element? systemElement,
-       FhirCode? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement});
 
   $ElementCopyWith<$Res>? get valueElement;
@@ -5178,7 +5178,7 @@ class _$CountCopyWithImpl<$Res, $Val extends Count>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -5264,7 +5264,7 @@ abstract class _$$_CountCopyWith<$Res> implements $CountCopyWith<$Res> {
       @JsonKey(name: '_unit') Element? unitElement,
       FhirUri? system,
       @JsonKey(name: '_system') Element? systemElement,
-       FhirCode? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement});
 
   @override
@@ -5345,7 +5345,7 @@ class __$$_CountCopyWithImpl<$Res> extends _$CountCopyWithImpl<$Res, _$_Count>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -5451,7 +5451,7 @@ class _$_Count extends _Count {
   /// [code] A computer processable form of the unit in some unit
   ///  representation system.
   @override
-  final  FhirCode? code;
+  final FhirCode? code;
 
   /// [codeElement] ("_code") Extensions for code
   @override
@@ -5532,7 +5532,7 @@ abstract class _Count extends Count {
       @JsonKey(name: '_unit') final Element? unitElement,
       final FhirUri? system,
       @JsonKey(name: '_system') final Element? systemElement,
-      final  FhirCode? code,
+      final FhirCode? code,
       @JsonKey(name: '_code') final Element? codeElement}) = _$_Count;
   _Count._() : super._();
 
@@ -5599,7 +5599,7 @@ abstract class _Count extends Count {
 
   /// [code] A computer processable form of the unit in some unit
   ///  representation system.
-   FhirCode? get code;
+  FhirCode? get code;
   @override
 
   /// [codeElement] ("_code") Extensions for code
@@ -5639,7 +5639,7 @@ mixin _$Money {
   Element? get valueElement => throw _privateConstructorUsedError;
 
   /// [currency] ISO 4217 Currency Code.
-   FhirCode? get currency => throw _privateConstructorUsedError;
+  FhirCode? get currency => throw _privateConstructorUsedError;
 
   /// [currencyElement] ("_currency") Extensions for currency
   @JsonKey(name: '_currency')
@@ -5660,7 +5660,7 @@ abstract class $MoneyCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       FhirDecimal? value,
       @JsonKey(name: '_value') Element? valueElement,
-       FhirCode? currency,
+      FhirCode? currency,
       @JsonKey(name: '_currency') Element? currencyElement});
 
   $ElementCopyWith<$Res>? get valueElement;
@@ -5707,7 +5707,7 @@ class _$MoneyCopyWithImpl<$Res, $Val extends Money>
       currency: freezed == currency
           ? _value.currency
           : currency // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       currencyElement: freezed == currencyElement
           ? _value.currencyElement
           : currencyElement // ignore: cast_nullable_to_non_nullable
@@ -5751,7 +5751,7 @@ abstract class _$$_MoneyCopyWith<$Res> implements $MoneyCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       FhirDecimal? value,
       @JsonKey(name: '_value') Element? valueElement,
-       FhirCode? currency,
+      FhirCode? currency,
       @JsonKey(name: '_currency') Element? currencyElement});
 
   @override
@@ -5796,7 +5796,7 @@ class __$$_MoneyCopyWithImpl<$Res> extends _$MoneyCopyWithImpl<$Res, _$_Money>
       currency: freezed == currency
           ? _value.currency
           : currency // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       currencyElement: freezed == currencyElement
           ? _value.currencyElement
           : currencyElement // ignore: cast_nullable_to_non_nullable
@@ -5863,7 +5863,7 @@ class _$_Money extends _Money {
 
   /// [currency] ISO 4217 Currency Code.
   @override
-  final  FhirCode? currency;
+  final FhirCode? currency;
 
   /// [currencyElement] ("_currency") Extensions for currency
   @override
@@ -5923,7 +5923,7 @@ abstract class _Money extends Money {
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final Decimal? value,
       @JsonKey(name: '_value') final Element? valueElement,
-      final  FhirCode? currency,
+      final FhirCode? currency,
       @JsonKey(name: '_currency') final Element? currencyElement}) = _$_Money;
   _Money._() : super._();
 
@@ -5957,7 +5957,7 @@ abstract class _Money extends Money {
   @override
 
   /// [currency] ISO 4217 Currency Code.
-   FhirCode? get currency;
+  FhirCode? get currency;
   @override
 
   /// [currencyElement] ("_currency") Extensions for currency
@@ -6024,7 +6024,7 @@ mixin _$Age {
 
   /// [code] A computer processable form of the unit in some unit
   ///  representation system.
-   FhirCode? get code => throw _privateConstructorUsedError;
+  FhirCode? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] ("_code") Extensions for code
   @JsonKey(name: '_code')
@@ -6051,7 +6051,7 @@ abstract class $AgeCopyWith<$Res> {
       @JsonKey(name: '_unit') Element? unitElement,
       FhirUri? system,
       @JsonKey(name: '_system') Element? systemElement,
-       FhirCode? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement});
 
   $ElementCopyWith<$Res>? get valueElement;
@@ -6130,7 +6130,7 @@ class _$AgeCopyWithImpl<$Res, $Val extends Age> implements $AgeCopyWith<$Res> {
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -6216,7 +6216,7 @@ abstract class _$$_AgeCopyWith<$Res> implements $AgeCopyWith<$Res> {
       @JsonKey(name: '_unit') Element? unitElement,
       FhirUri? system,
       @JsonKey(name: '_system') Element? systemElement,
-       FhirCode? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement});
 
   @override
@@ -6297,7 +6297,7 @@ class __$$_AgeCopyWithImpl<$Res> extends _$AgeCopyWithImpl<$Res, _$_Age>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -6402,7 +6402,7 @@ class _$_Age extends _Age {
   /// [code] A computer processable form of the unit in some unit
   ///  representation system.
   @override
-  final  FhirCode? code;
+  final FhirCode? code;
 
   /// [codeElement] ("_code") Extensions for code
   @override
@@ -6483,7 +6483,7 @@ abstract class _Age extends Age {
       @JsonKey(name: '_unit') final Element? unitElement,
       final FhirUri? system,
       @JsonKey(name: '_system') final Element? systemElement,
-      final  FhirCode? code,
+      final FhirCode? code,
       @JsonKey(name: '_code') final Element? codeElement}) = _$_Age;
   _Age._() : super._();
 
@@ -6550,7 +6550,7 @@ abstract class _Age extends Age {
 
   /// [code] A computer processable form of the unit in some unit
   ///  representation system.
-   FhirCode? get code;
+  FhirCode? get code;
   @override
 
   /// [codeElement] ("_code") Extensions for code
@@ -7893,7 +7893,7 @@ mixin _$SampledData {
 
   /// [intervalUnit] The measurement unit in which the sample interval is
   ///  expressed.
-   FhirCode? get intervalUnit => throw _privateConstructorUsedError;
+  FhirCode? get intervalUnit => throw _privateConstructorUsedError;
 
   /// [intervalUnitElement] ("_intervalUnit") Extensions for intervalUnit
   @JsonKey(name: '_intervalUnit')
@@ -7928,7 +7928,7 @@ mixin _$SampledData {
   /// [dimensions] The number of sample points at each time point. If this
   ///  value is greater than one, then the dimensions will be interlaced -
   ///  all the sample points for a point in time will be recorded at once.
-  PositiveInt? get dimensions => throw _privateConstructorUsedError;
+  FhirPositiveInt? get dimensions => throw _privateConstructorUsedError;
 
   /// [dimensionsElement] ("_dimensions") Extensions for dimensions
   @JsonKey(name: '_dimensions')
@@ -7962,7 +7962,7 @@ abstract class $SampledDataCopyWith<$Res> {
       Quantity origin,
       FhirDecimal? interval,
       @JsonKey(name: '_interval') Element? intervalElement,
-       FhirCode? intervalUnit,
+      FhirCode? intervalUnit,
       @JsonKey(name: '_intervalUnit') Element? intervalUnitElement,
       FhirDecimal? factor,
       @JsonKey(name: '_factor') Element? factorElement,
@@ -7970,7 +7970,7 @@ abstract class $SampledDataCopyWith<$Res> {
       @JsonKey(name: '_lowerLimit') Element? lowerLimitElement,
       FhirDecimal? upperLimit,
       @JsonKey(name: '_upperLimit') Element? upperLimitElement,
-      PositiveInt? dimensions,
+      FhirPositiveInt? dimensions,
       @JsonKey(name: '_dimensions') Element? dimensionsElement,
       String? data,
       @JsonKey(name: '_data') Element? dataElement});
@@ -8040,7 +8040,7 @@ class _$SampledDataCopyWithImpl<$Res, $Val extends SampledData>
       intervalUnit: freezed == intervalUnit
           ? _value.intervalUnit
           : intervalUnit // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       intervalUnitElement: freezed == intervalUnitElement
           ? _value.intervalUnitElement
           : intervalUnitElement // ignore: cast_nullable_to_non_nullable
@@ -8195,7 +8195,7 @@ abstract class _$$_SampledDataCopyWith<$Res>
       Quantity origin,
       FhirDecimal? interval,
       @JsonKey(name: '_interval') Element? intervalElement,
-       FhirCode? intervalUnit,
+      FhirCode? intervalUnit,
       @JsonKey(name: '_intervalUnit') Element? intervalUnitElement,
       FhirDecimal? factor,
       @JsonKey(name: '_factor') Element? factorElement,
@@ -8203,7 +8203,7 @@ abstract class _$$_SampledDataCopyWith<$Res>
       @JsonKey(name: '_lowerLimit') Element? lowerLimitElement,
       FhirDecimal? upperLimit,
       @JsonKey(name: '_upperLimit') Element? upperLimitElement,
-      PositiveInt? dimensions,
+      FhirPositiveInt? dimensions,
       @JsonKey(name: '_dimensions') Element? dimensionsElement,
       String? data,
       @JsonKey(name: '_data') Element? dataElement});
@@ -8279,7 +8279,7 @@ class __$$_SampledDataCopyWithImpl<$Res>
       intervalUnit: freezed == intervalUnit
           ? _value.intervalUnit
           : intervalUnit // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       intervalUnitElement: freezed == intervalUnitElement
           ? _value.intervalUnitElement
           : intervalUnitElement // ignore: cast_nullable_to_non_nullable
@@ -8404,7 +8404,7 @@ class _$_SampledData extends _SampledData {
   /// [intervalUnit] The measurement unit in which the sample interval is
   ///  expressed.
   @override
-  final  FhirCode? intervalUnit;
+  final FhirCode? intervalUnit;
 
   /// [intervalUnitElement] ("_intervalUnit") Extensions for intervalUnit
   @override
@@ -8551,7 +8551,7 @@ abstract class _SampledData extends SampledData {
       required final Quantity origin,
       final Decimal? interval,
       @JsonKey(name: '_interval') final Element? intervalElement,
-      final  FhirCode? intervalUnit,
+      final FhirCode? intervalUnit,
       @JsonKey(name: '_intervalUnit') final Element? intervalUnitElement,
       final Decimal? factor,
       @JsonKey(name: '_factor') final Element? factorElement,
@@ -8603,7 +8603,7 @@ abstract class _SampledData extends SampledData {
 
   /// [intervalUnit] The measurement unit in which the sample interval is
   ///  expressed.
-   FhirCode? get intervalUnit;
+  FhirCode? get intervalUnit;
   @override
 
   /// [intervalUnitElement] ("_intervalUnit") Extensions for intervalUnit
@@ -8646,7 +8646,7 @@ abstract class _SampledData extends SampledData {
   /// [dimensions] The number of sample points at each time point. If this
   ///  value is greater than one, then the dimensions will be interlaced -
   ///  all the sample points for a point in time will be recorded at once.
-  PositiveInt? get dimensions;
+  FhirPositiveInt? get dimensions;
   @override
 
   /// [dimensionsElement] ("_dimensions") Extensions for dimensions
@@ -8713,7 +8713,7 @@ mixin _$Signature {
 
   /// [targetFormat] A mime type that indicates the technical format of the
   ///  target resources signed by the signature.
-   FhirCode? get targetFormat => throw _privateConstructorUsedError;
+  FhirCode? get targetFormat => throw _privateConstructorUsedError;
 
   /// [targetFormatElement] ("_targetFormat") Extensions for targetFormat
   @JsonKey(name: '_targetFormat')
@@ -8723,7 +8723,7 @@ mixin _$Signature {
   ///  signature. Important mime types are application/signature+xml for X ML
   ///  DigSig, application/jose for JWS, and image/* for a graphical image of
   ///  a signature, etc.
-   FhirCode? get sigFormat => throw _privateConstructorUsedError;
+  FhirCode? get sigFormat => throw _privateConstructorUsedError;
 
   /// [sigFormatElement] ("_sigFormat") Extensions for sigFormat
   @JsonKey(name: '_sigFormat')
@@ -8731,7 +8731,7 @@ mixin _$Signature {
 
   /// [data] The base64 encoding of the Signature content. When signature is
   ///  not recorded electronically this element would be empty.
-  FhirBase64Binary?? get data => throw _privateConstructorUsedError;
+  FhirBase64Binary? get data => throw _privateConstructorUsedError;
 
   /// [dataElement] ("_data") Extensions for data
   @JsonKey(name: '_data')
@@ -8756,11 +8756,11 @@ abstract class $SignatureCopyWith<$Res> {
       @JsonKey(name: '_when') Element? whenElement,
       Reference? who,
       Reference? onBehalfOf,
-       FhirCode? targetFormat,
+      FhirCode? targetFormat,
       @JsonKey(name: '_targetFormat') Element? targetFormatElement,
-       FhirCode? sigFormat,
+      FhirCode? sigFormat,
       @JsonKey(name: '_sigFormat') Element? sigFormatElement,
-  FhirBase64Binary?? data,
+      FhirBase64Binary? data,
       @JsonKey(name: '_data') Element? dataElement});
 
   $ElementCopyWith<$Res>? get whenElement;
@@ -8830,7 +8830,7 @@ class _$SignatureCopyWithImpl<$Res, $Val extends Signature>
       targetFormat: freezed == targetFormat
           ? _value.targetFormat
           : targetFormat // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       targetFormatElement: freezed == targetFormatElement
           ? _value.targetFormatElement
           : targetFormatElement // ignore: cast_nullable_to_non_nullable
@@ -8838,7 +8838,7 @@ class _$SignatureCopyWithImpl<$Res, $Val extends Signature>
       sigFormat: freezed == sigFormat
           ? _value.sigFormat
           : sigFormat // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       sigFormatElement: freezed == sigFormatElement
           ? _value.sigFormatElement
           : sigFormatElement // ignore: cast_nullable_to_non_nullable
@@ -8846,7 +8846,7 @@ class _$SignatureCopyWithImpl<$Res, $Val extends Signature>
       data: freezed == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
-              as  FhirBase64Binary??,
+              as FhirBase64Binary?,
       dataElement: freezed == dataElement
           ? _value.dataElement
           : dataElement // ignore: cast_nullable_to_non_nullable
@@ -8942,11 +8942,11 @@ abstract class _$$_SignatureCopyWith<$Res> implements $SignatureCopyWith<$Res> {
       @JsonKey(name: '_when') Element? whenElement,
       Reference? who,
       Reference? onBehalfOf,
-       FhirCode? targetFormat,
+      FhirCode? targetFormat,
       @JsonKey(name: '_targetFormat') Element? targetFormatElement,
-       FhirCode? sigFormat,
+      FhirCode? sigFormat,
       @JsonKey(name: '_sigFormat') Element? sigFormatElement,
-  FhirBase64Binary?? data,
+      FhirBase64Binary? data,
       @JsonKey(name: '_data') Element? dataElement});
 
   @override
@@ -9020,7 +9020,7 @@ class __$$_SignatureCopyWithImpl<$Res>
       targetFormat: freezed == targetFormat
           ? _value.targetFormat
           : targetFormat // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       targetFormatElement: freezed == targetFormatElement
           ? _value.targetFormatElement
           : targetFormatElement // ignore: cast_nullable_to_non_nullable
@@ -9028,7 +9028,7 @@ class __$$_SignatureCopyWithImpl<$Res>
       sigFormat: freezed == sigFormat
           ? _value.sigFormat
           : sigFormat // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       sigFormatElement: freezed == sigFormatElement
           ? _value.sigFormatElement
           : sigFormatElement // ignore: cast_nullable_to_non_nullable
@@ -9036,7 +9036,7 @@ class __$$_SignatureCopyWithImpl<$Res>
       data: freezed == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
-              as  FhirBase64Binary??,
+              as FhirBase64Binary?,
       dataElement: freezed == dataElement
           ? _value.dataElement
           : dataElement // ignore: cast_nullable_to_non_nullable
@@ -9141,7 +9141,7 @@ class _$_Signature extends _Signature {
   /// [targetFormat] A mime type that indicates the technical format of the
   ///  target resources signed by the signature.
   @override
-  final  FhirCode? targetFormat;
+  final FhirCode? targetFormat;
 
   /// [targetFormatElement] ("_targetFormat") Extensions for targetFormat
   @override
@@ -9153,7 +9153,7 @@ class _$_Signature extends _Signature {
   ///  DigSig, application/jose for JWS, and image/* for a graphical image of
   ///  a signature, etc.
   @override
-  final  FhirCode? sigFormat;
+  final FhirCode? sigFormat;
 
   /// [sigFormatElement] ("_sigFormat") Extensions for sigFormat
   @override
@@ -9163,7 +9163,7 @@ class _$_Signature extends _Signature {
   /// [data] The base64 encoding of the Signature content. When signature is
   ///  not recorded electronically this element would be empty.
   @override
-  final  FhirBase64Binary?? data;
+  final FhirBase64Binary? data;
 
   /// [dataElement] ("_data") Extensions for data
   @override
@@ -9244,11 +9244,11 @@ abstract class _Signature extends Signature {
       @JsonKey(name: '_when') final Element? whenElement,
       final Reference? who,
       final Reference? onBehalfOf,
-      final  FhirCode? targetFormat,
+      final FhirCode? targetFormat,
       @JsonKey(name: '_targetFormat') final Element? targetFormatElement,
-      final  FhirCode? sigFormat,
+      final FhirCode? sigFormat,
       @JsonKey(name: '_sigFormat') final Element? sigFormatElement,
-      final  FhirBase64Binary?? data,
+      final FhirBase64Binary? data,
       @JsonKey(name: '_data') final Element? dataElement}) = _$_Signature;
   _Signature._() : super._();
 
@@ -9301,7 +9301,7 @@ abstract class _Signature extends Signature {
 
   /// [targetFormat] A mime type that indicates the technical format of the
   ///  target resources signed by the signature.
-   FhirCode? get targetFormat;
+  FhirCode? get targetFormat;
   @override
 
   /// [targetFormatElement] ("_targetFormat") Extensions for targetFormat
@@ -9313,7 +9313,7 @@ abstract class _Signature extends Signature {
   ///  signature. Important mime types are application/signature+xml for X ML
   ///  DigSig, application/jose for JWS, and image/* for a graphical image of
   ///  a signature, etc.
-   FhirCode? get sigFormat;
+  FhirCode? get sigFormat;
   @override
 
   /// [sigFormatElement] ("_sigFormat") Extensions for sigFormat
@@ -9323,7 +9323,7 @@ abstract class _Signature extends Signature {
 
   /// [data] The base64 encoding of the Signature content. When signature is
   ///  not recorded electronically this element would be empty.
-  FhirBase64Binary?? get data;
+  FhirBase64Binary? get data;
   @override
 
   /// [dataElement] ("_data") Extensions for data
@@ -11079,7 +11079,7 @@ mixin _$ContactPoint {
   /// [rank] Specifies a preferred order in which to use a set of contacts.
   ///  ContactPoints with lower rank values are more preferred than those
   ///  with higher rank values.
-  PositiveInt? get rank => throw _privateConstructorUsedError;
+  FhirPositiveInt? get rank => throw _privateConstructorUsedError;
 
   /// [rankElement] ("_rank") Extensions for rank
   @JsonKey(name: '_rank')
@@ -11109,7 +11109,7 @@ abstract class $ContactPointCopyWith<$Res> {
       @JsonKey(name: '_value') Element? valueElement,
       ContactPointUse? use,
       @JsonKey(name: '_use') Element? useElement,
-      PositiveInt? rank,
+      FhirPositiveInt? rank,
       @JsonKey(name: '_rank') Element? rankElement,
       Period? period});
 
@@ -11271,7 +11271,7 @@ abstract class _$$_ContactPointCopyWith<$Res>
       @JsonKey(name: '_value') Element? valueElement,
       ContactPointUse? use,
       @JsonKey(name: '_use') Element? useElement,
-      PositiveInt? rank,
+      FhirPositiveInt? rank,
       @JsonKey(name: '_rank') Element? rankElement,
       Period? period});
 
@@ -11583,7 +11583,7 @@ abstract class _ContactPoint extends ContactPoint {
   /// [rank] Specifies a preferred order in which to use a set of contacts.
   ///  ContactPoints with lower rank values are more preferred than those
   ///  with higher rank values.
-  PositiveInt? get rank;
+  FhirPositiveInt? get rank;
   @override
 
   /// [rankElement] ("_rank") Extensions for rank
@@ -12134,7 +12134,7 @@ mixin _$TimingRepeat {
   ///  duration of the entire timing specification. If countMax is present,
   ///  this element indicates the lower bound of the allowed range of count
   ///  values.
-  PositiveInt? get count => throw _privateConstructorUsedError;
+  FhirPositiveInt? get count => throw _privateConstructorUsedError;
 
   /// [countElement] ("_count") Extensions for count
   @JsonKey(name: '_count')
@@ -12142,7 +12142,7 @@ mixin _$TimingRepeat {
 
   /// [countMax] If present, indicates that the count is a range - so to
   ///  perform the action between [count] and [countMax] times.
-  PositiveInt? get countMax => throw _privateConstructorUsedError;
+  FhirPositiveInt? get countMax => throw _privateConstructorUsedError;
 
   /// [countMaxElement] ("_countMax") Extensions for countMax
   @JsonKey(name: '_countMax')
@@ -12178,7 +12178,7 @@ mixin _$TimingRepeat {
   /// [frequency] The number of times to repeat the action within the
   ///  specified period. If frequencyMax is present, this element indicates
   ///  the lower bound of the allowed range of the frequency.
-  PositiveInt? get frequency => throw _privateConstructorUsedError;
+  FhirPositiveInt? get frequency => throw _privateConstructorUsedError;
 
   /// [frequencyElement] ("_frequency") Extensions for frequency
   @JsonKey(name: '_frequency')
@@ -12187,7 +12187,7 @@ mixin _$TimingRepeat {
   /// [frequencyMax] If present, indicates that the frequency is a range - so
   ///  to repeat between [frequency] and [frequencyMax] times within the
   ///  period or period range.
-  PositiveInt? get frequencyMax => throw _privateConstructorUsedError;
+  FhirPositiveInt? get frequencyMax => throw _privateConstructorUsedError;
 
   /// [frequencyMaxElement] ("_frequencyMax") Extensions for frequencyMax
   @JsonKey(name: '_frequencyMax')
@@ -12223,14 +12223,14 @@ mixin _$TimingRepeat {
 
   /// [dayOfWeek] If one or more days of week is provided, then the action
   ///  happens only on the specified day(s).
-  List<Code>? get dayOfWeek => throw _privateConstructorUsedError;
+  List<FhirCode>? get dayOfWeek => throw _privateConstructorUsedError;
 
   /// [dayOfWeekElement] ("_dayOfWeek") Extensions for dayOfWeek
   @JsonKey(name: '_dayOfWeek')
   List<Element>? get dayOfWeekElement => throw _privateConstructorUsedError;
 
   /// [timeOfDay] Specified time of day for action to take place.
-  List<Time>? get timeOfDay => throw _privateConstructorUsedError;
+  List<FhirTime>? get timeOfDay => throw _privateConstructorUsedError;
 
   /// [timeOfDayElement] ("_timeOfDay") Extensions for timeOfDay
   @JsonKey(name: '_timeOfDay')
@@ -12247,7 +12247,7 @@ mixin _$TimingRepeat {
   /// [offset] The number of minutes from the event. If the event code does
   ///  not indicate whether the minutes is before or after the event, then
   ///  the offset is assumed to be after the event.
-  UnsignedInt? get offset => throw _privateConstructorUsedError;
+  FhirUnsignedInt? get offset => throw _privateConstructorUsedError;
 
   /// [offsetElement] ("_offset") Extensions for offset
   @JsonKey(name: '_offset')
@@ -12272,9 +12272,9 @@ abstract class $TimingRepeatCopyWith<$Res> {
       FhirDuration? boundsDuration,
       Range? boundsRange,
       Period? boundsPeriod,
-      PositiveInt? count,
+      FhirPositiveInt? count,
       @JsonKey(name: '_count') Element? countElement,
-      PositiveInt? countMax,
+      FhirPositiveInt? countMax,
       @JsonKey(name: '_countMax') Element? countMaxElement,
       FhirDecimal? duration,
       @JsonKey(name: '_duration') Element? durationElement,
@@ -12282,9 +12282,9 @@ abstract class $TimingRepeatCopyWith<$Res> {
       @JsonKey(name: '_durationMax') Element? durationMaxElement,
       TimingRepeatDurationUnit? durationUnit,
       @JsonKey(name: '_durationUnit') Element? durationUnitElement,
-      PositiveInt? frequency,
+      FhirPositiveInt? frequency,
       @JsonKey(name: '_frequency') Element? frequencyElement,
-      PositiveInt? frequencyMax,
+      FhirPositiveInt? frequencyMax,
       @JsonKey(name: '_frequencyMax') Element? frequencyMaxElement,
       FhirDecimal? period,
       @JsonKey(name: '_period') Element? periodElement,
@@ -12292,13 +12292,13 @@ abstract class $TimingRepeatCopyWith<$Res> {
       @JsonKey(name: '_periodMax') Element? periodMaxElement,
       TimingRepeatPeriodUnit? periodUnit,
       @JsonKey(name: '_periodUnit') Element? periodUnitElement,
-      List<Code>? dayOfWeek,
+      List<FhirCode>? dayOfWeek,
       @JsonKey(name: '_dayOfWeek') List<Element>? dayOfWeekElement,
-      List<Time>? timeOfDay,
+      List<FhirTime>? timeOfDay,
       @JsonKey(name: '_timeOfDay') List<Element>? timeOfDayElement,
       List<TimingRepeatWhen>? when,
       @JsonKey(name: '_when') List<Element>? whenElement,
-      UnsignedInt? offset,
+      FhirUnsignedInt? offset,
       @JsonKey(name: '_offset') Element? offsetElement});
 
   $FhirDurationCopyWith<$Res>? get boundsDuration;
@@ -12473,7 +12473,7 @@ class _$TimingRepeatCopyWithImpl<$Res, $Val extends TimingRepeat>
       dayOfWeek: freezed == dayOfWeek
           ? _value.dayOfWeek
           : dayOfWeek // ignore: cast_nullable_to_non_nullable
-              as List<Code>?,
+              as List<FhirCode>?,
       dayOfWeekElement: freezed == dayOfWeekElement
           ? _value.dayOfWeekElement
           : dayOfWeekElement // ignore: cast_nullable_to_non_nullable
@@ -12481,7 +12481,7 @@ class _$TimingRepeatCopyWithImpl<$Res, $Val extends TimingRepeat>
       timeOfDay: freezed == timeOfDay
           ? _value.timeOfDay
           : timeOfDay // ignore: cast_nullable_to_non_nullable
-              as List<Time>?,
+              as List<FhirTime>?,
       timeOfDayElement: freezed == timeOfDayElement
           ? _value.timeOfDayElement
           : timeOfDayElement // ignore: cast_nullable_to_non_nullable
@@ -12689,9 +12689,9 @@ abstract class _$$_TimingRepeatCopyWith<$Res>
       FhirDuration? boundsDuration,
       Range? boundsRange,
       Period? boundsPeriod,
-      PositiveInt? count,
+      FhirPositiveInt? count,
       @JsonKey(name: '_count') Element? countElement,
-      PositiveInt? countMax,
+      FhirPositiveInt? countMax,
       @JsonKey(name: '_countMax') Element? countMaxElement,
       FhirDecimal? duration,
       @JsonKey(name: '_duration') Element? durationElement,
@@ -12699,9 +12699,9 @@ abstract class _$$_TimingRepeatCopyWith<$Res>
       @JsonKey(name: '_durationMax') Element? durationMaxElement,
       TimingRepeatDurationUnit? durationUnit,
       @JsonKey(name: '_durationUnit') Element? durationUnitElement,
-      PositiveInt? frequency,
+      FhirPositiveInt? frequency,
       @JsonKey(name: '_frequency') Element? frequencyElement,
-      PositiveInt? frequencyMax,
+      FhirPositiveInt? frequencyMax,
       @JsonKey(name: '_frequencyMax') Element? frequencyMaxElement,
       FhirDecimal? period,
       @JsonKey(name: '_period') Element? periodElement,
@@ -12709,13 +12709,13 @@ abstract class _$$_TimingRepeatCopyWith<$Res>
       @JsonKey(name: '_periodMax') Element? periodMaxElement,
       TimingRepeatPeriodUnit? periodUnit,
       @JsonKey(name: '_periodUnit') Element? periodUnitElement,
-      List<Code>? dayOfWeek,
+      List<FhirCode>? dayOfWeek,
       @JsonKey(name: '_dayOfWeek') List<Element>? dayOfWeekElement,
-      List<Time>? timeOfDay,
+      List<FhirTime>? timeOfDay,
       @JsonKey(name: '_timeOfDay') List<Element>? timeOfDayElement,
       List<TimingRepeatWhen>? when,
       @JsonKey(name: '_when') List<Element>? whenElement,
-      UnsignedInt? offset,
+      FhirUnsignedInt? offset,
       @JsonKey(name: '_offset') Element? offsetElement});
 
   @override
@@ -12902,7 +12902,7 @@ class __$$_TimingRepeatCopyWithImpl<$Res>
       dayOfWeek: freezed == dayOfWeek
           ? _value._dayOfWeek
           : dayOfWeek // ignore: cast_nullable_to_non_nullable
-              as List<Code>?,
+              as List<FhirCode>?,
       dayOfWeekElement: freezed == dayOfWeekElement
           ? _value._dayOfWeekElement
           : dayOfWeekElement // ignore: cast_nullable_to_non_nullable
@@ -12910,7 +12910,7 @@ class __$$_TimingRepeatCopyWithImpl<$Res>
       timeOfDay: freezed == timeOfDay
           ? _value._timeOfDay
           : timeOfDay // ignore: cast_nullable_to_non_nullable
-              as List<Time>?,
+              as List<FhirTime>?,
       timeOfDayElement: freezed == timeOfDayElement
           ? _value._timeOfDayElement
           : timeOfDayElement // ignore: cast_nullable_to_non_nullable
@@ -12965,9 +12965,9 @@ class _$_TimingRepeat extends _TimingRepeat {
       @JsonKey(name: '_periodMax') this.periodMaxElement,
       this.periodUnit,
       @JsonKey(name: '_periodUnit') this.periodUnitElement,
-      final List<Code>? dayOfWeek,
+      final List<FhirCode>? dayOfWeek,
       @JsonKey(name: '_dayOfWeek') final List<Element>? dayOfWeekElement,
-      final List<Time>? timeOfDay,
+      final List<FhirTime>? timeOfDay,
       @JsonKey(name: '_timeOfDay') final List<Element>? timeOfDayElement,
       final List<TimingRepeatWhen>? when,
       @JsonKey(name: '_when') final List<Element>? whenElement,
@@ -13185,12 +13185,12 @@ class _$_TimingRepeat extends _TimingRepeat {
 
   /// [dayOfWeek] If one or more days of week is provided, then the action
   ///  happens only on the specified day(s).
-  final List<Code>? _dayOfWeek;
+  final List<FhirCode>? _dayOfWeek;
 
   /// [dayOfWeek] If one or more days of week is provided, then the action
   ///  happens only on the specified day(s).
   @override
-  List<Code>? get dayOfWeek {
+  List<FhirCode>? get dayOfWeek {
     final value = _dayOfWeek;
     if (value == null) return null;
     if (_dayOfWeek is EqualUnmodifiableListView) return _dayOfWeek;
@@ -13214,11 +13214,11 @@ class _$_TimingRepeat extends _TimingRepeat {
   }
 
   /// [timeOfDay] Specified time of day for action to take place.
-  final List<Time>? _timeOfDay;
+  final List<FhirTime>? _timeOfDay;
 
   /// [timeOfDay] Specified time of day for action to take place.
   @override
-  List<Time>? get timeOfDay {
+  List<FhirTime>? get timeOfDay {
     final value = _timeOfDay;
     if (value == null) return null;
     if (_timeOfDay is EqualUnmodifiableListView) return _timeOfDay;
@@ -13438,9 +13438,9 @@ abstract class _TimingRepeat extends TimingRepeat {
           @JsonKey(name: '_periodMax') final Element? periodMaxElement,
           final TimingRepeatPeriodUnit? periodUnit,
           @JsonKey(name: '_periodUnit') final Element? periodUnitElement,
-          final List<Code>? dayOfWeek,
+          final List<FhirCode>? dayOfWeek,
           @JsonKey(name: '_dayOfWeek') final List<Element>? dayOfWeekElement,
-          final List<Time>? timeOfDay,
+          final List<FhirTime>? timeOfDay,
           @JsonKey(name: '_timeOfDay') final List<Element>? timeOfDayElement,
           final List<TimingRepeatWhen>? when,
           @JsonKey(name: '_when') final List<Element>? whenElement,
@@ -13508,7 +13508,7 @@ abstract class _TimingRepeat extends TimingRepeat {
   ///  duration of the entire timing specification. If countMax is present,
   ///  this element indicates the lower bound of the allowed range of count
   ///  values.
-  PositiveInt? get count;
+  FhirPositiveInt? get count;
   @override
 
   /// [countElement] ("_count") Extensions for count
@@ -13518,7 +13518,7 @@ abstract class _TimingRepeat extends TimingRepeat {
 
   /// [countMax] If present, indicates that the count is a range - so to
   ///  perform the action between [count] and [countMax] times.
-  PositiveInt? get countMax;
+  FhirPositiveInt? get countMax;
   @override
 
   /// [countMaxElement] ("_countMax") Extensions for countMax
@@ -13561,7 +13561,7 @@ abstract class _TimingRepeat extends TimingRepeat {
   /// [frequency] The number of times to repeat the action within the
   ///  specified period. If frequencyMax is present, this element indicates
   ///  the lower bound of the allowed range of the frequency.
-  PositiveInt? get frequency;
+  FhirPositiveInt? get frequency;
   @override
 
   /// [frequencyElement] ("_frequency") Extensions for frequency
@@ -13572,7 +13572,7 @@ abstract class _TimingRepeat extends TimingRepeat {
   /// [frequencyMax] If present, indicates that the frequency is a range - so
   ///  to repeat between [frequency] and [frequencyMax] times within the
   ///  period or period range.
-  PositiveInt? get frequencyMax;
+  FhirPositiveInt? get frequencyMax;
   @override
 
   /// [frequencyMaxElement] ("_frequencyMax") Extensions for frequencyMax
@@ -13616,7 +13616,7 @@ abstract class _TimingRepeat extends TimingRepeat {
 
   /// [dayOfWeek] If one or more days of week is provided, then the action
   ///  happens only on the specified day(s).
-  List<Code>? get dayOfWeek;
+  List<FhirCode>? get dayOfWeek;
   @override
 
   /// [dayOfWeekElement] ("_dayOfWeek") Extensions for dayOfWeek
@@ -13625,7 +13625,7 @@ abstract class _TimingRepeat extends TimingRepeat {
   @override
 
   /// [timeOfDay] Specified time of day for action to take place.
-  List<Time>? get timeOfDay;
+  List<FhirTime>? get timeOfDay;
   @override
 
   /// [timeOfDayElement] ("_timeOfDay") Extensions for timeOfDay
@@ -13646,7 +13646,7 @@ abstract class _TimingRepeat extends TimingRepeat {
   /// [offset] The number of minutes from the event. If the event code does
   ///  not indicate whether the minutes is before or after the event, then
   ///  the offset is assumed to be after the event.
-  UnsignedInt? get offset;
+  FhirUnsignedInt? get offset;
   @override
 
   /// [offsetElement] ("_offset") Extensions for offset

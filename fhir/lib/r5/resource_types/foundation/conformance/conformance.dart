@@ -261,7 +261,7 @@ class CapabilityStatement with Resource, _$CapabilityStatement {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when
@@ -391,10 +391,10 @@ class CapabilityStatement with Resource, _$CapabilityStatement {
     @JsonKey(name: '_kind') Element? kindElement,
 
     /// [instantiates] Reference to a canonical URL of another CapabilityStatement that this software implements. This capability statement is a published API description that corresponds to a business service. The server may actually implement a subset of the capability statement it claims to implement, so the capability statement must specify the full capability details.
-    List<Canonical>? instantiates,
+    List<FhirCanonical>? instantiates,
 
     /// [imports] Reference to a canonical URL of another CapabilityStatement that this software adds to. The capability statement automatically includes everything in the other statement, and it is not duplicated, though the server may repeat the same resources, interactions and operations to add additional details to them.
-    List<Canonical>? imports,
+    List<FhirCanonical>? imports,
 
     /// [software] Software that is covered by this capability statement.  It is used when the capability statement describes the capabilities of a particular software version, independent of an installation.
     CapabilityStatementSoftware? software,
@@ -409,25 +409,25 @@ class CapabilityStatement with Resource, _$CapabilityStatement {
     @JsonKey(name: '_fhirVersion') Element? fhirVersionElement,
 
     /// [format] A list of the formats supported by this implementation using their content types.
-    List<Code>? format,
+    List<FhirCode>? format,
 
     /// [formatElement] ("_format") Extensions for format
     @JsonKey(name: '_format') List<Element>? formatElement,
 
     /// [patchFormat] A list of the patch formats supported by this implementation using their content types.
-    List<Code>? patchFormat,
+    List<FhirCode>? patchFormat,
 
     /// [patchFormatElement] ("_patchFormat") Extensions for patchFormat
     @JsonKey(name: '_patchFormat') List<Element>? patchFormatElement,
 
     /// [acceptLanguage] A list of the languages supported by this implementation that are usefully supported in the ```Accept-Language``` header.
-    List<Code>? acceptLanguage,
+    List<FhirCode>? acceptLanguage,
 
     /// [acceptLanguageElement] ("_acceptLanguage") Extensions for acceptLanguage
     @JsonKey(name: '_acceptLanguage') List<Element>? acceptLanguageElement,
 
     /// [implementationGuide] A list of implementation guides that the server does (or should) support in their entirety.
-    List<Canonical>? implementationGuide,
+    List<FhirCanonical>? implementationGuide,
 
     /// [rest] A definition of the restful capabilities of the solution, if any.
     List<CapabilityStatementRest>? rest,
@@ -869,7 +869,7 @@ class CapabilityStatementRest with _$CapabilityStatementRest {
     List<CapabilityStatementOperation>? operation,
 
     /// [compartment] An absolute URI which is a reference to the definition of a compartment that the system supports. The reference is to a CompartmentDefinition resource by its canonical URL .
-    List<Canonical>? compartment,
+    List<FhirCanonical>? compartment,
   }) = _CapabilityStatementRest;
 
   /// Produces a Yaml formatted String version of the object
@@ -1216,7 +1216,7 @@ class CapabilityStatementResource with _$CapabilityStatementResource {
     FhirCanonical? profile,
 
     /// [supportedProfile] A list of profiles representing different use cases the system hosts/produces. A supported profile is a statement about the functionality of the data and services provided by the server (or the client) for supported use cases. For example, a system can define and declare multiple Observation profiles for laboratory observations, vital sign observations, etc. By declaring supported profiles, systems provide a way to determine whether individual resources are conformant. See further discussion in [Using Profiles](profiling.html#profile-uses).
-    List<Canonical>? supportedProfile,
+    List<FhirCanonical>? supportedProfile,
 
     /// [documentation] Additional information about the resource type used by the system.
     FhirMarkdown? documentation,
@@ -1276,7 +1276,7 @@ class CapabilityStatementResource with _$CapabilityStatementResource {
     @JsonKey(name: '_conditionalDelete') Element? conditionalDeleteElement,
 
     /// [referencePolicy] A set of flags that defines how references are supported.
-    List<Code>? referencePolicy,
+    List<FhirCode>? referencePolicy,
 
     /// [referencePolicyElement] ("_referencePolicy") Extensions for referencePolicy
     @JsonKey(name: '_referencePolicy') List<Element>? referencePolicyElement,
@@ -1716,7 +1716,7 @@ class CapabilityStatementOperation with _$CapabilityStatementOperation {
     @JsonKey(name: '_name') Element? nameElement,
 
     /// [definition] Where the formal definition can be found. If a server references the base definition of an Operation (i.e. from the specification itself such as ```http://hl7.org/fhir/OperationDefinition/ValueSet-expand```), that means it supports the full capabilities of the operation - e.g. both GET and POST invocation.  If it only supports a subset, it must define its own custom [OperationDefinition](operationdefinition.html#) with a 'base' of the original OperationDefinition.  The custom definition would describe the specific subset of functionality supported.
-    required Canonical definition,
+    required FhirCanonical definition,
 
     /// [documentation] Documentation that describes anything special about the operation behavior, possibly detailing different behavior for system, type and instance-level invocation of the operation.
     FhirMarkdown? documentation,
@@ -1976,7 +1976,7 @@ class CapabilityStatementMessaging with _$CapabilityStatementMessaging {
     List<CapabilityStatementEndpoint>? endpoint,
 
     /// [reliableCache] Length if the receiver's reliable messaging cache in minutes (if a receiver) or how long the cache length on the receiver should be (if a sender).
-    UnsignedInt? reliableCache,
+    FhirUnsignedInt? reliableCache,
 
     /// [reliableCacheElement] ("_reliableCache") Extensions for reliableCache
     @JsonKey(name: '_reliableCache') Element? reliableCacheElement,
@@ -2230,7 +2230,7 @@ class CapabilityStatementSupportedMessage
     @JsonKey(name: '_mode') Element? modeElement,
 
     /// [definition] Points to a message definition that identifies the messaging event, message structure, allowed responses, etc.
-    required Canonical definition,
+    required FhirCanonical definition,
   }) = _CapabilityStatementSupportedMessage;
 
   /// Produces a Yaml formatted String version of the object
@@ -2364,7 +2364,7 @@ class CapabilityStatementDocument with _$CapabilityStatementDocument {
     @JsonKey(name: '_documentation') Element? documentationElement,
 
     /// [profile] A profile on the document Bundle that constrains which resources are present, and their contents.
-    required Canonical profile,
+    required FhirCanonical profile,
   }) = _CapabilityStatementDocument;
 
   /// Produces a Yaml formatted String version of the object
@@ -2591,7 +2591,7 @@ class CompartmentDefinition with Resource, _$CompartmentDefinition {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when
@@ -3110,7 +3110,7 @@ class GraphDefinition with Resource, _$GraphDefinition {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when
@@ -3976,7 +3976,7 @@ class ImplementationGuide with Resource, _$ImplementationGuide {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when
@@ -4112,7 +4112,7 @@ class ImplementationGuide with Resource, _$ImplementationGuide {
     @JsonKey(name: '_license') Element? licenseElement,
 
     /// [fhirVersion] The version(s) of the FHIR specification that this ImplementationGuide targets - e.g. describes how to use. The value of this element is the formal version of the specification, without the revision number, e.g. [publication].[major].[minor], which is 4.6.0. for this version.
-    List<Code>? fhirVersion,
+    List<FhirCode>? fhirVersion,
 
     /// [fhirVersionElement] ("_fhirVersion") Extensions for fhirVersion
     @JsonKey(name: '_fhirVersion') List<Element>? fhirVersionElement,
@@ -4252,7 +4252,7 @@ class ImplementationGuideDependsOn with _$ImplementationGuideDependsOn {
     List<FhirExtension>? modifierExtension,
 
     /// [uri] A canonical reference to the Implementation guide for the dependency.
-    required Canonical uri,
+    required FhirCanonical uri,
 
     /// [packageId] The NPM package name for the Implementation Guide that this IG depends on.
     FhirId? packageId,
@@ -4389,7 +4389,7 @@ class ImplementationGuideGlobal with _$ImplementationGuideGlobal {
     @JsonKey(name: '_type') Element? typeElement,
 
     /// [profile] A reference to the profile that all instances must conform to.
-    required Canonical profile,
+    required FhirCanonical profile,
   }) = _ImplementationGuideGlobal;
 
   /// Produces a Yaml formatted String version of the object
@@ -4788,7 +4788,7 @@ class ImplementationGuideResource with _$ImplementationGuideResource {
     required Reference reference,
 
     /// [fhirVersion] Indicates the FHIR Version(s) this artifact is intended to apply to. If no versions are specified, the resource is assumed to apply to all the versions stated in ImplementationGuide.fhirVersion.
-    List<Code>? fhirVersion,
+    List<FhirCode>? fhirVersion,
 
     /// [fhirVersionElement] ("_fhirVersion") Extensions for fhirVersion
     @JsonKey(name: '_fhirVersion') List<Element>? fhirVersionElement,
@@ -4812,7 +4812,7 @@ class ImplementationGuideResource with _$ImplementationGuideResource {
     @JsonKey(name: '_isExample') Element? isExampleElement,
 
     /// [profile] If present, indicates profile(s) the instance is valid against.
-    List<Canonical>? profile,
+    List<FhirCanonical>? profile,
 
     /// [groupingId] Reference to the id of the grouping this resource appears in.
     FhirId? groupingId,
@@ -5522,7 +5522,7 @@ class ImplementationGuideResource1 with _$ImplementationGuideResource1 {
     @JsonKey(name: '_isExample') Element? isExampleElement,
 
     /// [profile] If present, indicates profile(s) the instance is valid against.
-    List<Canonical>? profile,
+    List<FhirCanonical>? profile,
 
     /// [relativePath] The relative path for primary page for this resource within the IG.
     FhirUrl? relativePath,
@@ -5917,7 +5917,7 @@ class MessageDefinition with Resource, _$MessageDefinition {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when
@@ -6041,13 +6041,13 @@ class MessageDefinition with Resource, _$MessageDefinition {
     @JsonKey(name: '_copyrightLabel') Element? copyrightLabelElement,
 
     /// [replaces] A MessageDefinition that is superseded by this definition.
-    List<Canonical>? replaces,
+    List<FhirCanonical>? replaces,
 
     /// [base] The MessageDefinition that is the basis for the contents of this resource.
     FhirCanonical? base,
 
     /// [parent] Identifies a protocol or workflow that this MessageDefinition represents a step in.
-    List<Canonical>? parent,
+    List<FhirCanonical>? parent,
 
     /// [eventCoding] Event code or link to the EventDefinition.
     Coding? eventCoding,
@@ -6209,7 +6209,7 @@ class MessageDefinitionFocus with _$MessageDefinitionFocus {
     FhirCanonical? profile,
 
     /// [min] Identifies the minimum number of resources of this type that must be pointed to by a message in order for it to be valid against this MessageDefinition.
-    UnsignedInt? min,
+    FhirUnsignedInt? min,
 
     /// [minElement] ("_min") Extensions for min
     @JsonKey(name: '_min') Element? minElement,
@@ -6329,7 +6329,7 @@ class MessageDefinitionAllowedResponse with _$MessageDefinitionAllowedResponse {
     List<FhirExtension>? modifierExtension,
 
     /// [message] A reference to the message definition that must be adhered to by this supported response.
-    required Canonical message,
+    required FhirCanonical message,
 
     /// [situation] Provides a description of the circumstances in which this response should be used (as opposed to one of the alternative responses).
     FhirMarkdown? situation,
@@ -6612,7 +6612,7 @@ class OperationDefinition with Resource, _$OperationDefinition {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when
@@ -6763,7 +6763,7 @@ class OperationDefinition with Resource, _$OperationDefinition {
     FhirCanonical? base,
 
     /// [resource] The types on which this operation can be executed.
-    List<Code>? resource,
+    List<FhirCode>? resource,
 
     /// [resourceElement] ("_resource") Extensions for resource
     @JsonKey(name: '_resource') List<Element>? resourceElement,
@@ -6968,7 +6968,7 @@ class OperationDefinitionParameter with _$OperationDefinitionParameter {
     @JsonKey(name: '_use') Element? useElement,
 
     /// [scope] If present, indicates that the parameter applies when the operation is being invoked at the specified level.
-    List<Code>? scope,
+    List<FhirCode>? scope,
 
     /// [scopeElement] ("_scope") Extensions for scope
     @JsonKey(name: '_scope') List<Element>? scopeElement,
@@ -6998,13 +6998,13 @@ class OperationDefinitionParameter with _$OperationDefinitionParameter {
     @JsonKey(name: '_type') Element? typeElement,
 
     /// [allowedType] Support for polymorphic types. If the parameter type is abstract, this element lists allowed sub-types for the parameter.
-    List<Code>? allowedType,
+    List<FhirCode>? allowedType,
 
     /// [allowedTypeElement] ("_allowedType") Extensions for allowedType
     @JsonKey(name: '_allowedType') List<Element>? allowedTypeElement,
 
     /// [targetProfile] Used when the type is "Reference" or "canonical", and identifies a profile structure or implementation Guide that applies to the target of the reference this parameter refers to. If any profiles are specified, then the content must conform to at least one of them. The URL can be a local reference - to a contained StructureDefinition, or a reference to another StructureDefinition or Implementation Guide by a canonical URL. When an implementation guide is specified, the target resource SHALL conform to at least one profile defined in the implementation guide.
-    List<Canonical>? targetProfile,
+    List<FhirCanonical>? targetProfile,
 
     /// [searchType] How the parameter is understood if/when it used as search parameter. This is only used if the parameter is a string.
     FhirCode? searchType,
@@ -7134,7 +7134,7 @@ class OperationDefinitionBinding with _$OperationDefinitionBinding {
     @JsonKey(name: '_strength') Element? strengthElement,
 
     /// [valueSet] Points to the value set or external definition (e.g. implicit value set) that identifies the set of codes to be used.
-    required Canonical valueSet,
+    required FhirCanonical valueSet,
   }) = _OperationDefinitionBinding;
 
   /// Produces a Yaml formatted String version of the object
@@ -7664,7 +7664,7 @@ class SearchParameter with Resource, _$SearchParameter {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when
@@ -7797,7 +7797,7 @@ class SearchParameter with Resource, _$SearchParameter {
     @JsonKey(name: '_code') Element? codeElement,
 
     /// [base] The base resource type(s) that this search parameter can be used against.
-    List<Code>? base,
+    List<FhirCode>? base,
 
     /// [baseElement] ("_base") Extensions for base
     @JsonKey(name: '_base') List<Element>? baseElement,
@@ -7827,7 +7827,7 @@ class SearchParameter with Resource, _$SearchParameter {
     @JsonKey(name: '_constraint') Element? constraintElement,
 
     /// [target] Types of resource (if a resource is referenced).
-    List<Code>? target,
+    List<FhirCode>? target,
 
     /// [targetElement] ("_target") Extensions for target
     @JsonKey(name: '_target') List<Element>? targetElement,
@@ -7845,13 +7845,13 @@ class SearchParameter with Resource, _$SearchParameter {
     @JsonKey(name: '_multipleAnd') Element? multipleAndElement,
 
     /// [comparator] Comparators supported for the search parameter.
-    List<Code>? comparator,
+    List<FhirCode>? comparator,
 
     /// [comparatorElement] ("_comparator") Extensions for comparator
     @JsonKey(name: '_comparator') List<Element>? comparatorElement,
 
     /// [modifier] A modifier supported for the search parameter.
-    List<Code>? modifier,
+    List<FhirCode>? modifier,
 
     /// [modifierElement] ("_modifier") Extensions for modifier
     @JsonKey(name: '_modifier') List<Element>? modifierElement,
@@ -7969,7 +7969,7 @@ class SearchParameterComponent with _$SearchParameterComponent {
     List<FhirExtension>? modifierExtension,
 
     /// [definition] The definition of the search parameter that describes this part.
-    required Canonical definition,
+    required FhirCanonical definition,
 
     /// [expression] A sub-expression that defines how to extract values for this component from the output of the main SearchParameter.expression.
     String? expression,
@@ -8257,7 +8257,7 @@ class StructureDefinition with Resource, _$StructureDefinition {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when
@@ -9133,7 +9133,7 @@ class StructureMap with Resource, _$StructureMap {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when
@@ -9260,7 +9260,7 @@ class StructureMap with Resource, _$StructureMap {
     List<StructureMapStructure>? structure,
 
     /// [import_] ("import") Other maps used by this map (canonical URLs).
-    @JsonKey(name: 'import') List<Canonical>? import_,
+    @JsonKey(name: 'import') List<FhirCanonical>? import_,
 
     /// [group] Organizes the mapping into manageable chunks for human review/ease of maintenance.
     required List<StructureMapGroup> group,
@@ -9376,7 +9376,7 @@ class StructureMapStructure with _$StructureMapStructure {
     List<FhirExtension>? modifierExtension,
 
     /// [url] The canonical reference to the structure.
-    required Canonical url,
+    required FhirCanonical url,
 
     /// [mode] How the referenced structure is used in this mapping.
     FhirCode? mode,
@@ -9520,7 +9520,7 @@ class StructureMapGroup with _$StructureMapGroup {
     @JsonKey(name: '_name') Element? nameElement,
 
     /// [extends_] ("extends") Another group that this group adds rules to.
-    @JsonKey(name: 'extends') Id? extends_,
+    @JsonKey(name: 'extends') FhirId? extends_,
 
     /// [extendsElement] ("_extends") Extensions for extends
     @JsonKey(name: '_extends') Element? extendsElement,
@@ -10162,7 +10162,7 @@ class StructureMapTarget with _$StructureMapTarget {
     @JsonKey(name: '_variable') Element? variableElement,
 
     /// [listMode] If field is a list, how to manage the list.
-    List<Code>? listMode,
+    List<FhirCode>? listMode,
 
     /// [listModeElement] ("_listMode") Extensions for listMode
     @JsonKey(name: '_listMode') List<Element>? listModeElement,
@@ -10345,7 +10345,7 @@ class StructureMapParameter with _$StructureMapParameter {
     @JsonKey(name: '_valueDate') Element? valueDateElement,
 
     /// [valueTime] Parameter value - variable or literal.
-    Time? valueTime,
+    FhirTime? valueTime,
 
     /// [valueTimeElement] ("_valueTime") Extensions for valueTime
     @JsonKey(name: '_valueTime') Element? valueTimeElement,

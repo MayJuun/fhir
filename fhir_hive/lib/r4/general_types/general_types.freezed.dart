@@ -544,7 +544,7 @@ mixin _$Attachment {
 
   /// [size] The number of bytes of data that make up this attachment (before
   ///  base64 encoding, if that is done).
-  UnsignedInt? get size => throw _privateConstructorUsedError;
+  FhirUnsignedInt? get size => throw _privateConstructorUsedError;
 
   /// [sizeElement] Extensions for size
   @JsonKey(name: '_size')
@@ -595,7 +595,7 @@ abstract class $AttachmentCopyWith<$Res> {
       @JsonKey(name: '_data') Element? dataElement,
       FhirUrl? url,
       @JsonKey(name: '_url') Element? urlElement,
-      UnsignedInt? size,
+      FhirUnsignedInt? size,
       @JsonKey(name: '_size') Element? sizeElement,
       Base64Binary? hash,
       @JsonKey(name: '_hash') Element? hashElement,
@@ -838,7 +838,7 @@ abstract class _$$_AttachmentCopyWith<$Res>
       @JsonKey(name: '_data') Element? dataElement,
       FhirUrl? url,
       @JsonKey(name: '_url') Element? urlElement,
-      UnsignedInt? size,
+      FhirUnsignedInt? size,
       @JsonKey(name: '_size') Element? sizeElement,
       Base64Binary? hash,
       @JsonKey(name: '_hash') Element? hashElement,
@@ -1271,7 +1271,7 @@ abstract class _Attachment extends Attachment {
 
   /// [size] The number of bytes of data that make up this attachment (before
   ///  base64 encoding, if that is done).
-  UnsignedInt? get size;
+  FhirUnsignedInt? get size;
   @override
 
   /// [sizeElement] Extensions for size
@@ -7523,7 +7523,7 @@ mixin _$SampledData {
   /// [dimensions] The number of sample points at each time point. If this
   /// value is greater than one, then the dimensions will be interlaced - all
   ///  the sample points for a point in time will be recorded at once.
-  PositiveInt? get dimensions => throw _privateConstructorUsedError;
+  FhirPositiveInt? get dimensions => throw _privateConstructorUsedError;
 
   /// [dimensionsElement] Extensions for dimensions
   @JsonKey(name: '_dimensions')
@@ -7563,7 +7563,7 @@ abstract class $SampledDataCopyWith<$Res> {
       @JsonKey(name: '_lowerLimit') Element? lowerLimitElement,
       Decimal? upperLimit,
       @JsonKey(name: '_upperLimit') Element? upperLimitElement,
-      PositiveInt? dimensions,
+      FhirPositiveInt? dimensions,
       @JsonKey(name: '_dimensions') Element? dimensionsElement,
       String? data,
       @JsonKey(name: '_data') Element? dataElement});
@@ -7771,7 +7771,7 @@ abstract class _$$_SampledDataCopyWith<$Res>
       @JsonKey(name: '_lowerLimit') Element? lowerLimitElement,
       Decimal? upperLimit,
       @JsonKey(name: '_upperLimit') Element? upperLimitElement,
-      PositiveInt? dimensions,
+      FhirPositiveInt? dimensions,
       @JsonKey(name: '_dimensions') Element? dimensionsElement,
       String? data,
       @JsonKey(name: '_data') Element? dataElement});
@@ -8168,7 +8168,7 @@ abstract class _SampledData extends SampledData {
   /// [dimensions] The number of sample points at each time point. If this
   /// value is greater than one, then the dimensions will be interlaced - all
   ///  the sample points for a point in time will be recorded at once.
-  PositiveInt? get dimensions;
+  FhirPositiveInt? get dimensions;
   @override
 
   /// [dimensionsElement] Extensions for dimensions
@@ -10586,7 +10586,7 @@ mixin _$ContactPoint {
   /// [rank] Specifies a preferred order in which to use a set of contacts.
   /// ContactPoints with lower rank values are more preferred than those with
   ///  higher rank values.
-  PositiveInt? get rank => throw _privateConstructorUsedError;
+  FhirPositiveInt? get rank => throw _privateConstructorUsedError;
 
   /// [rankElement] Extensions for rank
   @JsonKey(name: '_rank')
@@ -10622,7 +10622,7 @@ abstract class $ContactPointCopyWith<$Res> {
           ContactPointUse? use,
       @JsonKey(name: '_use')
           Element? useElement,
-      PositiveInt? rank,
+      FhirPositiveInt? rank,
       @JsonKey(name: '_rank')
           Element? rankElement,
       Period? period});
@@ -10791,7 +10791,7 @@ abstract class _$$_ContactPointCopyWith<$Res>
           ContactPointUse? use,
       @JsonKey(name: '_use')
           Element? useElement,
-      PositiveInt? rank,
+      FhirPositiveInt? rank,
       @JsonKey(name: '_rank')
           Element? rankElement,
       Period? period});
@@ -11105,7 +11105,7 @@ abstract class _ContactPoint extends ContactPoint {
   /// [rank] Specifies a preferred order in which to use a set of contacts.
   /// ContactPoints with lower rank values are more preferred than those with
   ///  higher rank values.
-  PositiveInt? get rank;
+  FhirPositiveInt? get rank;
   @override
 
   /// [rankElement] Extensions for rank
@@ -11650,7 +11650,7 @@ mixin _$TimingRepeat {
   /// [count] A total count of the desired number of repetitions across the
   /// duration of the entire timing specification. If countMax is present, this
   ///  element indicates the lower bound of the allowed range of count values.
-  PositiveInt? get count => throw _privateConstructorUsedError;
+  FhirPositiveInt? get count => throw _privateConstructorUsedError;
 
   /// [countElement] Extensions for count
   @JsonKey(name: '_count')
@@ -11658,7 +11658,7 @@ mixin _$TimingRepeat {
 
   /// [countMax] If present, indicates that the count is a range - so to
   ///  perform the action between [count] and [countMax] times.
-  PositiveInt? get countMax => throw _privateConstructorUsedError;
+  FhirPositiveInt? get countMax => throw _privateConstructorUsedError;
 
   /// [countMaxElement] Extensions for countMax
   @JsonKey(name: '_countMax')
@@ -11691,7 +11691,7 @@ mixin _$TimingRepeat {
   /// [frequency] The number of times to repeat the action within the specified
   /// period. If frequencyMax is present, this element indicates the lower bound
   ///  of the allowed range of the frequency.
-  PositiveInt? get frequency => throw _privateConstructorUsedError;
+  FhirPositiveInt? get frequency => throw _privateConstructorUsedError;
 
   /// [frequencyElement] Extensions for frequency
   @JsonKey(name: '_frequency')
@@ -11700,7 +11700,7 @@ mixin _$TimingRepeat {
   /// [frequencyMax] If present, indicates that the frequency is a range - so
   /// to repeat between [frequency] and [frequencyMax] times within the period
   ///  or period range.
-  PositiveInt? get frequencyMax => throw _privateConstructorUsedError;
+  FhirPositiveInt? get frequencyMax => throw _privateConstructorUsedError;
 
   /// [frequencyMaxElement] Extensions for frequencyMax
   @JsonKey(name: '_frequencyMax')
@@ -11733,14 +11733,14 @@ mixin _$TimingRepeat {
 
   /// [dayOfWeek] If one or more days of week is provided, then the action
   ///  happens only on the specified day(s).
-  List<Code>? get dayOfWeek => throw _privateConstructorUsedError;
+  List<FhirCode>? get dayOfWeek => throw _privateConstructorUsedError;
 
   /// [dayOfWeekElement] Extensions for dayOfWeek
   @JsonKey(name: '_dayOfWeek')
   List<Element?>? get dayOfWeekElement => throw _privateConstructorUsedError;
 
   /// [timeOfDay] Specified time of day for action to take place.
-  List<Time>? get timeOfDay => throw _privateConstructorUsedError;
+  List<FhirTime>? get timeOfDay => throw _privateConstructorUsedError;
 
   /// [timeOfDayElement] Extensions for timeOfDay
   @JsonKey(name: '_timeOfDay')
@@ -11757,7 +11757,7 @@ mixin _$TimingRepeat {
   /// [offset] The number of minutes from the event. If the event code does not
   /// indicate whether the minutes is before or after the event, then the offset
   ///  is assumed to be after the event.
-  UnsignedInt? get offset => throw _privateConstructorUsedError;
+  FhirUnsignedInt? get offset => throw _privateConstructorUsedError;
 
   /// [offsetElement] Extensions for offset
   @JsonKey(name: '_offset')
@@ -11783,10 +11783,10 @@ abstract class $TimingRepeatCopyWith<$Res> {
       FhirDuration? boundsDuration,
       Range? boundsRange,
       Period? boundsPeriod,
-      PositiveInt? count,
+      FhirPositiveInt? count,
       @JsonKey(name: '_count')
           Element? countElement,
-      PositiveInt? countMax,
+      FhirPositiveInt? countMax,
       @JsonKey(name: '_countMax')
           Element? countMaxElement,
       Decimal? duration,
@@ -11799,10 +11799,10 @@ abstract class $TimingRepeatCopyWith<$Res> {
           TimingRepeatDurationUnit? durationUnit,
       @JsonKey(name: '_durationUnit')
           Element? durationUnitElement,
-      PositiveInt? frequency,
+      FhirPositiveInt? frequency,
       @JsonKey(name: '_frequency')
           Element? frequencyElement,
-      PositiveInt? frequencyMax,
+      FhirPositiveInt? frequencyMax,
       @JsonKey(name: '_frequencyMax')
           Element? frequencyMaxElement,
       Decimal? period,
@@ -11815,16 +11815,16 @@ abstract class $TimingRepeatCopyWith<$Res> {
           TimingRepeatPeriodUnit? periodUnit,
       @JsonKey(name: '_periodUnit')
           Element? periodUnitElement,
-      List<Code>? dayOfWeek,
+      List<FhirCode>? dayOfWeek,
       @JsonKey(name: '_dayOfWeek')
           List<Element?>? dayOfWeekElement,
-      List<Time>? timeOfDay,
+      List<FhirTime>? timeOfDay,
       @JsonKey(name: '_timeOfDay')
           List<Element?>? timeOfDayElement,
       List<TimingRepeatWhen>? when,
       @JsonKey(name: '_when')
           List<Element?>? whenElement,
-      UnsignedInt? offset,
+      FhirUnsignedInt? offset,
       @JsonKey(name: '_offset')
           Element? offsetElement});
 
@@ -12000,7 +12000,7 @@ class _$TimingRepeatCopyWithImpl<$Res, $Val extends TimingRepeat>
       dayOfWeek: freezed == dayOfWeek
           ? _value.dayOfWeek
           : dayOfWeek // ignore: cast_nullable_to_non_nullable
-              as List<Code>?,
+              as List<FhirCode>?,
       dayOfWeekElement: freezed == dayOfWeekElement
           ? _value.dayOfWeekElement
           : dayOfWeekElement // ignore: cast_nullable_to_non_nullable
@@ -12008,7 +12008,7 @@ class _$TimingRepeatCopyWithImpl<$Res, $Val extends TimingRepeat>
       timeOfDay: freezed == timeOfDay
           ? _value.timeOfDay
           : timeOfDay // ignore: cast_nullable_to_non_nullable
-              as List<Time>?,
+              as List<FhirTime>?,
       timeOfDayElement: freezed == timeOfDayElement
           ? _value.timeOfDayElement
           : timeOfDayElement // ignore: cast_nullable_to_non_nullable
@@ -12217,10 +12217,10 @@ abstract class _$$_TimingRepeatCopyWith<$Res>
       FhirDuration? boundsDuration,
       Range? boundsRange,
       Period? boundsPeriod,
-      PositiveInt? count,
+      FhirPositiveInt? count,
       @JsonKey(name: '_count')
           Element? countElement,
-      PositiveInt? countMax,
+      FhirPositiveInt? countMax,
       @JsonKey(name: '_countMax')
           Element? countMaxElement,
       Decimal? duration,
@@ -12233,10 +12233,10 @@ abstract class _$$_TimingRepeatCopyWith<$Res>
           TimingRepeatDurationUnit? durationUnit,
       @JsonKey(name: '_durationUnit')
           Element? durationUnitElement,
-      PositiveInt? frequency,
+      FhirPositiveInt? frequency,
       @JsonKey(name: '_frequency')
           Element? frequencyElement,
-      PositiveInt? frequencyMax,
+      FhirPositiveInt? frequencyMax,
       @JsonKey(name: '_frequencyMax')
           Element? frequencyMaxElement,
       Decimal? period,
@@ -12249,16 +12249,16 @@ abstract class _$$_TimingRepeatCopyWith<$Res>
           TimingRepeatPeriodUnit? periodUnit,
       @JsonKey(name: '_periodUnit')
           Element? periodUnitElement,
-      List<Code>? dayOfWeek,
+      List<FhirCode>? dayOfWeek,
       @JsonKey(name: '_dayOfWeek')
           List<Element?>? dayOfWeekElement,
-      List<Time>? timeOfDay,
+      List<FhirTime>? timeOfDay,
       @JsonKey(name: '_timeOfDay')
           List<Element?>? timeOfDayElement,
       List<TimingRepeatWhen>? when,
       @JsonKey(name: '_when')
           List<Element?>? whenElement,
-      UnsignedInt? offset,
+      FhirUnsignedInt? offset,
       @JsonKey(name: '_offset')
           Element? offsetElement});
 
@@ -12446,7 +12446,7 @@ class __$$_TimingRepeatCopyWithImpl<$Res>
       dayOfWeek: freezed == dayOfWeek
           ? _value._dayOfWeek
           : dayOfWeek // ignore: cast_nullable_to_non_nullable
-              as List<Code>?,
+              as List<FhirCode>?,
       dayOfWeekElement: freezed == dayOfWeekElement
           ? _value._dayOfWeekElement
           : dayOfWeekElement // ignore: cast_nullable_to_non_nullable
@@ -12454,7 +12454,7 @@ class __$$_TimingRepeatCopyWithImpl<$Res>
       timeOfDay: freezed == timeOfDay
           ? _value._timeOfDay
           : timeOfDay // ignore: cast_nullable_to_non_nullable
-              as List<Time>?,
+              as List<FhirTime>?,
       timeOfDayElement: freezed == timeOfDayElement
           ? _value._timeOfDayElement
           : timeOfDayElement // ignore: cast_nullable_to_non_nullable
@@ -12522,10 +12522,10 @@ class _$_TimingRepeat extends _TimingRepeat {
           this.periodUnit,
       @JsonKey(name: '_periodUnit')
           this.periodUnitElement,
-      final List<Code>? dayOfWeek,
+      final List<FhirCode>? dayOfWeek,
       @JsonKey(name: '_dayOfWeek')
           final List<Element?>? dayOfWeekElement,
-      final List<Time>? timeOfDay,
+      final List<FhirTime>? timeOfDay,
       @JsonKey(name: '_timeOfDay')
           final List<Element?>? timeOfDayElement,
       final List<TimingRepeatWhen>? when,
@@ -12737,12 +12737,12 @@ class _$_TimingRepeat extends _TimingRepeat {
 
   /// [dayOfWeek] If one or more days of week is provided, then the action
   ///  happens only on the specified day(s).
-  final List<Code>? _dayOfWeek;
+  final List<FhirCode>? _dayOfWeek;
 
   /// [dayOfWeek] If one or more days of week is provided, then the action
   ///  happens only on the specified day(s).
   @override
-  List<Code>? get dayOfWeek {
+  List<FhirCode>? get dayOfWeek {
     final value = _dayOfWeek;
     if (value == null) return null;
     if (_dayOfWeek is EqualUnmodifiableListView) return _dayOfWeek;
@@ -12766,11 +12766,11 @@ class _$_TimingRepeat extends _TimingRepeat {
   }
 
   /// [timeOfDay] Specified time of day for action to take place.
-  final List<Time>? _timeOfDay;
+  final List<FhirTime>? _timeOfDay;
 
   /// [timeOfDay] Specified time of day for action to take place.
   @override
-  List<Time>? get timeOfDay {
+  List<FhirTime>? get timeOfDay {
     final value = _timeOfDay;
     if (value == null) return null;
     if (_timeOfDay is EqualUnmodifiableListView) return _timeOfDay;
@@ -13003,10 +13003,10 @@ abstract class _TimingRepeat extends TimingRepeat {
           final TimingRepeatPeriodUnit? periodUnit,
       @JsonKey(name: '_periodUnit')
           final Element? periodUnitElement,
-      final List<Code>? dayOfWeek,
+      final List<FhirCode>? dayOfWeek,
       @JsonKey(name: '_dayOfWeek')
           final List<Element?>? dayOfWeekElement,
-      final List<Time>? timeOfDay,
+      final List<FhirTime>? timeOfDay,
       @JsonKey(name: '_timeOfDay')
           final List<Element?>? timeOfDayElement,
       final List<TimingRepeatWhen>? when,
@@ -13074,7 +13074,7 @@ abstract class _TimingRepeat extends TimingRepeat {
   /// [count] A total count of the desired number of repetitions across the
   /// duration of the entire timing specification. If countMax is present, this
   ///  element indicates the lower bound of the allowed range of count values.
-  PositiveInt? get count;
+  FhirPositiveInt? get count;
   @override
 
   /// [countElement] Extensions for count
@@ -13084,7 +13084,7 @@ abstract class _TimingRepeat extends TimingRepeat {
 
   /// [countMax] If present, indicates that the count is a range - so to
   ///  perform the action between [count] and [countMax] times.
-  PositiveInt? get countMax;
+  FhirPositiveInt? get countMax;
   @override
 
   /// [countMaxElement] Extensions for countMax
@@ -13124,7 +13124,7 @@ abstract class _TimingRepeat extends TimingRepeat {
   /// [frequency] The number of times to repeat the action within the specified
   /// period. If frequencyMax is present, this element indicates the lower bound
   ///  of the allowed range of the frequency.
-  PositiveInt? get frequency;
+  FhirPositiveInt? get frequency;
   @override
 
   /// [frequencyElement] Extensions for frequency
@@ -13135,7 +13135,7 @@ abstract class _TimingRepeat extends TimingRepeat {
   /// [frequencyMax] If present, indicates that the frequency is a range - so
   /// to repeat between [frequency] and [frequencyMax] times within the period
   ///  or period range.
-  PositiveInt? get frequencyMax;
+  FhirPositiveInt? get frequencyMax;
   @override
 
   /// [frequencyMaxElement] Extensions for frequencyMax
@@ -13176,7 +13176,7 @@ abstract class _TimingRepeat extends TimingRepeat {
 
   /// [dayOfWeek] If one or more days of week is provided, then the action
   ///  happens only on the specified day(s).
-  List<Code>? get dayOfWeek;
+  List<FhirCode>? get dayOfWeek;
   @override
 
   /// [dayOfWeekElement] Extensions for dayOfWeek
@@ -13185,7 +13185,7 @@ abstract class _TimingRepeat extends TimingRepeat {
   @override
 
   /// [timeOfDay] Specified time of day for action to take place.
-  List<Time>? get timeOfDay;
+  List<FhirTime>? get timeOfDay;
   @override
 
   /// [timeOfDayElement] Extensions for timeOfDay
@@ -13206,7 +13206,7 @@ abstract class _TimingRepeat extends TimingRepeat {
   /// [offset] The number of minutes from the event. If the event code does not
   /// indicate whether the minutes is before or after the event, then the offset
   ///  is assumed to be after the event.
-  UnsignedInt? get offset;
+  FhirUnsignedInt? get offset;
   @override
 
   /// [offsetElement] Extensions for offset

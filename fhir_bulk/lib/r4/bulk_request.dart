@@ -29,7 +29,7 @@ class BulkRequest with _$BulkRequest {
   ///  Group
   const factory BulkRequest.group({
     required Uri base,
-    required Id id,
+    required FhirId id,
     FhirDateTime? since,
     List<WhichResource>? types,
     Client? client,

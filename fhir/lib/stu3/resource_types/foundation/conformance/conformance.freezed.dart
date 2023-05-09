@@ -23,7 +23,7 @@ mixin _$CapabilityStatement {
   @JsonKey(unknownEnumValue: Stu3ResourceType.CapabilityStatement)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
   FhirId? get id => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
@@ -75,7 +75,7 @@ mixin _$CapabilityStatement {
   CapabilityStatementKind? get kind => throw _privateConstructorUsedError;
   @JsonKey(name: '_kind')
   Element? get kindElement => throw _privateConstructorUsedError;
-  List<Instant>? get instantiates => throw _privateConstructorUsedError;
+  List<FhirInstant>? get instantiates => throw _privateConstructorUsedError;
   @JsonKey(name: '_instantiates')
   List<Element?>? get instantiatesElement => throw _privateConstructorUsedError;
   CapabilityStatementSoftware? get software =>
@@ -95,7 +95,7 @@ mixin _$CapabilityStatement {
   List<String>? get patchFormat => throw _privateConstructorUsedError;
   @JsonKey(name: '_patchFormat')
   List<Element?>? get patchFormatElement => throw _privateConstructorUsedError;
-  List<Id>? get implementationGuide => throw _privateConstructorUsedError;
+  List<FhirId>? get implementationGuide => throw _privateConstructorUsedError;
   @JsonKey(name: '_implementationGuide')
   List<Element>? get implementationGuideElement =>
       throw _privateConstructorUsedError;
@@ -122,7 +122,7 @@ abstract class $CapabilityStatementCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: Stu3ResourceType.CapabilityStatement)
           Stu3ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -173,7 +173,7 @@ abstract class $CapabilityStatementCopyWith<$Res> {
       CapabilityStatementKind? kind,
       @JsonKey(name: '_kind')
           Element? kindElement,
-      List<Instant>? instantiates,
+      List<FhirInstant>? instantiates,
       @JsonKey(name: '_instantiates')
           List<Element?>? instantiatesElement,
       CapabilityStatementSoftware? software,
@@ -190,7 +190,7 @@ abstract class $CapabilityStatementCopyWith<$Res> {
       List<String>? patchFormat,
       @JsonKey(name: '_patchFormat')
           List<Element?>? patchFormatElement,
-      List<Id>? implementationGuide,
+      List<FhirId>? implementationGuide,
       @JsonKey(name: '_implementationGuide')
           List<Element>? implementationGuideElement,
       List<Reference>? profile,
@@ -446,7 +446,7 @@ class _$CapabilityStatementCopyWithImpl<$Res, $Val extends CapabilityStatement>
       instantiates: freezed == instantiates
           ? _value.instantiates
           : instantiates // ignore: cast_nullable_to_non_nullable
-              as List<Instant>?,
+              as List<FhirInstant>?,
       instantiatesElement: freezed == instantiatesElement
           ? _value.instantiatesElement
           : instantiatesElement // ignore: cast_nullable_to_non_nullable
@@ -494,7 +494,7 @@ class _$CapabilityStatementCopyWithImpl<$Res, $Val extends CapabilityStatement>
       implementationGuide: freezed == implementationGuide
           ? _value.implementationGuide
           : implementationGuide // ignore: cast_nullable_to_non_nullable
-              as List<Id>?,
+              as List<FhirId>?,
       implementationGuideElement: freezed == implementationGuideElement
           ? _value.implementationGuideElement
           : implementationGuideElement // ignore: cast_nullable_to_non_nullable
@@ -773,7 +773,7 @@ abstract class _$$_CapabilityStatementCopyWith<$Res>
       {@JsonKey(unknownEnumValue: Stu3ResourceType.CapabilityStatement)
           Stu3ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -824,7 +824,7 @@ abstract class _$$_CapabilityStatementCopyWith<$Res>
       CapabilityStatementKind? kind,
       @JsonKey(name: '_kind')
           Element? kindElement,
-      List<Instant>? instantiates,
+      List<FhirInstant>? instantiates,
       @JsonKey(name: '_instantiates')
           List<Element?>? instantiatesElement,
       CapabilityStatementSoftware? software,
@@ -841,7 +841,7 @@ abstract class _$$_CapabilityStatementCopyWith<$Res>
       List<String>? patchFormat,
       @JsonKey(name: '_patchFormat')
           List<Element?>? patchFormatElement,
-      List<Id>? implementationGuide,
+      List<FhirId>? implementationGuide,
       @JsonKey(name: '_implementationGuide')
           List<Element>? implementationGuideElement,
       List<Reference>? profile,
@@ -1115,7 +1115,7 @@ class __$$_CapabilityStatementCopyWithImpl<$Res>
       instantiates: freezed == instantiates
           ? _value._instantiates
           : instantiates // ignore: cast_nullable_to_non_nullable
-              as List<Instant>?,
+              as List<FhirInstant>?,
       instantiatesElement: freezed == instantiatesElement
           ? _value._instantiatesElement
           : instantiatesElement // ignore: cast_nullable_to_non_nullable
@@ -1163,7 +1163,7 @@ class __$$_CapabilityStatementCopyWithImpl<$Res>
       implementationGuide: freezed == implementationGuide
           ? _value._implementationGuide
           : implementationGuide // ignore: cast_nullable_to_non_nullable
-              as List<Id>?,
+              as List<FhirId>?,
       implementationGuideElement: freezed == implementationGuideElement
           ? _value._implementationGuideElement
           : implementationGuideElement // ignore: cast_nullable_to_non_nullable
@@ -1246,7 +1246,7 @@ class _$_CapabilityStatement extends _CapabilityStatement {
       this.kind,
       @JsonKey(name: '_kind')
           this.kindElement,
-      final List<Instant>? instantiates,
+      final List<FhirInstant>? instantiates,
       @JsonKey(name: '_instantiates')
           final List<Element?>? instantiatesElement,
       this.software,
@@ -1263,7 +1263,7 @@ class _$_CapabilityStatement extends _CapabilityStatement {
       final List<String>? patchFormat,
       @JsonKey(name: '_patchFormat')
           final List<Element?>? patchFormatElement,
-      final List<Id>? implementationGuide,
+      final List<FhirId>? implementationGuide,
       @JsonKey(name: '_implementationGuide')
           final List<Element>? implementationGuideElement,
       final List<Reference>? profile,
@@ -1297,7 +1297,7 @@ class _$_CapabilityStatement extends _CapabilityStatement {
   @JsonKey(unknownEnumValue: Stu3ResourceType.CapabilityStatement)
   final Stu3ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -1434,9 +1434,9 @@ class _$_CapabilityStatement extends _CapabilityStatement {
   @override
   @JsonKey(name: '_kind')
   final Element? kindElement;
-  final List<Instant>? _instantiates;
+  final List<FhirInstant>? _instantiates;
   @override
-  List<Instant>? get instantiates {
+  List<FhirInstant>? get instantiates {
     final value = _instantiates;
     if (value == null) return null;
     if (_instantiates is EqualUnmodifiableListView) return _instantiates;
@@ -1513,9 +1513,9 @@ class _$_CapabilityStatement extends _CapabilityStatement {
     return EqualUnmodifiableListView(value);
   }
 
-  final List<Id>? _implementationGuide;
+  final List<FhirId>? _implementationGuide;
   @override
-  List<Id>? get implementationGuide {
+  List<FhirId>? get implementationGuide {
     final value = _implementationGuide;
     if (value == null) return null;
     if (_implementationGuide is EqualUnmodifiableListView)
@@ -1766,7 +1766,7 @@ abstract class _CapabilityStatement extends CapabilityStatement {
   factory _CapabilityStatement(
           {@JsonKey(unknownEnumValue: Stu3ResourceType.CapabilityStatement)
               final Stu3ResourceType resourceType,
-          final Id? id,
+          final FhirId? id,
           final Meta? meta,
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
@@ -1818,7 +1818,7 @@ abstract class _CapabilityStatement extends CapabilityStatement {
           final CapabilityStatementKind? kind,
           @JsonKey(name: '_kind')
               final Element? kindElement,
-          final List<Instant>? instantiates,
+          final List<FhirInstant>? instantiates,
           @JsonKey(name: '_instantiates')
               final List<Element?>? instantiatesElement,
           final CapabilityStatementSoftware? software,
@@ -1835,7 +1835,7 @@ abstract class _CapabilityStatement extends CapabilityStatement {
           final List<String>? patchFormat,
           @JsonKey(name: '_patchFormat')
               final List<Element?>? patchFormatElement,
-          final List<Id>? implementationGuide,
+          final List<FhirId>? implementationGuide,
           @JsonKey(name: '_implementationGuide')
               final List<Element>? implementationGuideElement,
           final List<Reference>? profile,
@@ -1854,7 +1854,7 @@ abstract class _CapabilityStatement extends CapabilityStatement {
   @override
   FhirId? get id;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
@@ -1941,7 +1941,7 @@ abstract class _CapabilityStatement extends CapabilityStatement {
   @JsonKey(name: '_kind')
   Element? get kindElement;
   @override
-  List<Instant>? get instantiates;
+  List<FhirInstant>? get instantiates;
   @override
   @JsonKey(name: '_instantiates')
   List<Element?>? get instantiatesElement;
@@ -1970,7 +1970,7 @@ abstract class _CapabilityStatement extends CapabilityStatement {
   @JsonKey(name: '_patchFormat')
   List<Element?>? get patchFormatElement;
   @override
-  List<Id>? get implementationGuide;
+  List<FhirId>? get implementationGuide;
   @override
   @JsonKey(name: '_implementationGuide')
   List<Element>? get implementationGuideElement;
@@ -7419,7 +7419,7 @@ mixin _$CompartmentDefinition {
   @JsonKey(unknownEnumValue: Stu3ResourceType.CompartmentDefinition)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
   FhirId? get id => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
@@ -7487,7 +7487,7 @@ abstract class $CompartmentDefinitionCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: Stu3ResourceType.CompartmentDefinition)
           Stu3ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -7951,7 +7951,7 @@ abstract class _$$_CompartmentDefinitionCopyWith<$Res>
       {@JsonKey(unknownEnumValue: Stu3ResourceType.CompartmentDefinition)
           Stu3ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -8307,7 +8307,7 @@ class _$_CompartmentDefinition extends _CompartmentDefinition {
   @JsonKey(unknownEnumValue: Stu3ResourceType.CompartmentDefinition)
   final Stu3ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -8584,7 +8584,7 @@ abstract class _CompartmentDefinition extends CompartmentDefinition {
   factory _CompartmentDefinition(
           {@JsonKey(unknownEnumValue: Stu3ResourceType.CompartmentDefinition)
               final Stu3ResourceType resourceType,
-          final Id? id,
+          final FhirId? id,
           final Meta? meta,
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
@@ -8646,7 +8646,7 @@ abstract class _CompartmentDefinition extends CompartmentDefinition {
   @override
   FhirId? get id;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
@@ -9070,7 +9070,7 @@ mixin _$DataElement {
   @JsonKey(unknownEnumValue: Stu3ResourceType.DataElement)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
   FhirId? get id => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
@@ -9136,7 +9136,7 @@ abstract class $DataElementCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: Stu3ResourceType.DataElement)
           Stu3ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -9585,7 +9585,7 @@ abstract class _$$_DataElementCopyWith<$Res>
       {@JsonKey(unknownEnumValue: Stu3ResourceType.DataElement)
           Stu3ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -9939,7 +9939,7 @@ class _$_DataElement extends _DataElement {
   @JsonKey(unknownEnumValue: Stu3ResourceType.DataElement)
   final Stu3ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -10229,7 +10229,7 @@ abstract class _DataElement extends DataElement {
   factory _DataElement(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.DataElement)
           final Stu3ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -10289,7 +10289,7 @@ abstract class _DataElement extends DataElement {
   @override
   FhirId? get id;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
@@ -10634,7 +10634,7 @@ class _$_DataElementMapping extends _DataElementMapping {
       _$$_DataElementMappingFromJson(json);
 
   @override
-  final Id? identity;
+  final FhirId? identity;
   @override
   @JsonKey(name: '_identity')
   final Element? identityElement;
@@ -10701,7 +10701,7 @@ class _$_DataElementMapping extends _DataElementMapping {
 
 abstract class _DataElementMapping extends DataElementMapping {
   factory _DataElementMapping(
-          {final Id? identity,
+          {final FhirId? identity,
           @JsonKey(name: '_identity') final Element? identityElement,
           final String? uri,
           @JsonKey(name: '_uri') final Element? uriElement,
@@ -10750,7 +10750,7 @@ mixin _$GraphDefinition {
   @JsonKey(unknownEnumValue: Stu3ResourceType.GraphDefinition)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
   FhirId? get id => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
@@ -10817,7 +10817,7 @@ abstract class $GraphDefinitionCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: Stu3ResourceType.GraphDefinition)
           Stu3ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -11280,7 +11280,7 @@ abstract class _$$_GraphDefinitionCopyWith<$Res>
       {@JsonKey(unknownEnumValue: Stu3ResourceType.GraphDefinition)
           Stu3ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -11636,7 +11636,7 @@ class _$_GraphDefinition extends _GraphDefinition {
   @JsonKey(unknownEnumValue: Stu3ResourceType.GraphDefinition)
   final Stu3ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -11912,7 +11912,7 @@ abstract class _GraphDefinition extends GraphDefinition {
   factory _GraphDefinition(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.GraphDefinition)
           final Stu3ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -11973,7 +11973,7 @@ abstract class _GraphDefinition extends GraphDefinition {
   @override
   FhirId? get id;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
@@ -13223,7 +13223,7 @@ mixin _$ImplementationGuide {
   @JsonKey(unknownEnumValue: Stu3ResourceType.ImplementationGuide)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
   FhirId? get id => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
@@ -13296,7 +13296,7 @@ abstract class $ImplementationGuideCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ImplementationGuide)
           Stu3ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -13777,7 +13777,7 @@ abstract class _$$_ImplementationGuideCopyWith<$Res>
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ImplementationGuide)
           Stu3ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -14158,7 +14158,7 @@ class _$_ImplementationGuide extends _ImplementationGuide {
   @JsonKey(unknownEnumValue: Stu3ResourceType.ImplementationGuide)
   final Stu3ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -14483,7 +14483,7 @@ abstract class _ImplementationGuide extends ImplementationGuide {
   factory _ImplementationGuide(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ImplementationGuide)
           final Stu3ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -14547,7 +14547,7 @@ abstract class _ImplementationGuide extends ImplementationGuide {
   @override
   FhirId? get id;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
@@ -16451,7 +16451,7 @@ mixin _$MessageDefinition {
   @JsonKey(unknownEnumValue: Stu3ResourceType.MessageDefinition)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
   FhirId? get id => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
@@ -16531,7 +16531,7 @@ abstract class $MessageDefinitionCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: Stu3ResourceType.MessageDefinition)
           Stu3ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -17117,7 +17117,7 @@ abstract class _$$_MessageDefinitionCopyWith<$Res>
       {@JsonKey(unknownEnumValue: Stu3ResourceType.MessageDefinition)
           Stu3ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -17560,7 +17560,7 @@ class _$_MessageDefinition extends _MessageDefinition {
   @JsonKey(unknownEnumValue: Stu3ResourceType.MessageDefinition)
   final Stu3ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -17911,7 +17911,7 @@ abstract class _MessageDefinition extends MessageDefinition {
   factory _MessageDefinition(
           {@JsonKey(unknownEnumValue: Stu3ResourceType.MessageDefinition)
               final Stu3ResourceType resourceType,
-          final Id? id,
+          final FhirId? id,
           final Meta? meta,
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
@@ -17985,7 +17985,7 @@ abstract class _MessageDefinition extends MessageDefinition {
   @override
   FhirId? get id;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
@@ -18677,7 +18677,7 @@ mixin _$OperationDefinition {
   @JsonKey(unknownEnumValue: Stu3ResourceType.OperationDefinition)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
   FhirId? get id => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
@@ -18766,7 +18766,7 @@ abstract class $OperationDefinitionCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: Stu3ResourceType.OperationDefinition)
           Stu3ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -19397,7 +19397,7 @@ abstract class _$$_OperationDefinitionCopyWith<$Res>
       {@JsonKey(unknownEnumValue: Stu3ResourceType.OperationDefinition)
           Stu3ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -19878,7 +19878,7 @@ class _$_OperationDefinition extends _OperationDefinition {
   @JsonKey(unknownEnumValue: Stu3ResourceType.OperationDefinition)
   final Stu3ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -20250,7 +20250,7 @@ abstract class _OperationDefinition extends OperationDefinition {
   factory _OperationDefinition(
           {@JsonKey(unknownEnumValue: Stu3ResourceType.OperationDefinition)
               final Stu3ResourceType resourceType,
-          final Id? id,
+          final FhirId? id,
           final Meta? meta,
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
@@ -20332,7 +20332,7 @@ abstract class _OperationDefinition extends OperationDefinition {
   @override
   FhirId? get id;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
@@ -21737,7 +21737,7 @@ mixin _$SearchParameter {
   @JsonKey(unknownEnumValue: Stu3ResourceType.SearchParameter)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
   FhirId? get id => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
@@ -21835,7 +21835,7 @@ abstract class $SearchParameterCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: Stu3ResourceType.SearchParameter)
           Stu3ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -22467,7 +22467,7 @@ abstract class _$$_SearchParameterCopyWith<$Res>
       {@JsonKey(unknownEnumValue: Stu3ResourceType.SearchParameter)
           Stu3ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -22985,7 +22985,7 @@ class _$_SearchParameter extends _SearchParameter {
   @JsonKey(unknownEnumValue: Stu3ResourceType.SearchParameter)
   final Stu3ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -23437,7 +23437,7 @@ abstract class _SearchParameter extends SearchParameter {
   factory _SearchParameter(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.SearchParameter)
           final Stu3ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -23525,7 +23525,7 @@ abstract class _SearchParameter extends SearchParameter {
   @override
   FhirId? get id;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
@@ -23891,7 +23891,7 @@ mixin _$StructureDefinition {
   @JsonKey(unknownEnumValue: Stu3ResourceType.StructureDefinition)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
   FhirId? get id => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
@@ -23996,7 +23996,7 @@ abstract class $StructureDefinitionCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: Stu3ResourceType.StructureDefinition)
           Stu3ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -24720,7 +24720,7 @@ abstract class _$$_StructureDefinitionCopyWith<$Res>
       {@JsonKey(unknownEnumValue: Stu3ResourceType.StructureDefinition)
           Stu3ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -25274,7 +25274,7 @@ class _$_StructureDefinition extends _StructureDefinition {
   @JsonKey(unknownEnumValue: Stu3ResourceType.StructureDefinition)
   final Stu3ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -25718,7 +25718,7 @@ abstract class _StructureDefinition extends StructureDefinition {
   factory _StructureDefinition(
           {@JsonKey(unknownEnumValue: Stu3ResourceType.StructureDefinition)
               final Stu3ResourceType resourceType,
-          final Id? id,
+          final FhirId? id,
           final Meta? meta,
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
@@ -25812,7 +25812,7 @@ abstract class _StructureDefinition extends StructureDefinition {
   @override
   FhirId? get id;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
@@ -26218,7 +26218,7 @@ class _$_StructureDefinitionMapping extends _StructureDefinitionMapping {
       _$$_StructureDefinitionMappingFromJson(json);
 
   @override
-  final Id? identity;
+  final FhirId? identity;
   @override
   @JsonKey(name: '_identity')
   final Element? identityElement;
@@ -26285,7 +26285,7 @@ class _$_StructureDefinitionMapping extends _StructureDefinitionMapping {
 
 abstract class _StructureDefinitionMapping extends StructureDefinitionMapping {
   factory _StructureDefinitionMapping(
-          {final Id? identity,
+          {final FhirId? identity,
           @JsonKey(name: '_identity') final Element? identityElement,
           final String? uri,
           @JsonKey(name: '_uri') final Element? uriElement,
@@ -26652,7 +26652,7 @@ mixin _$StructureMap {
   @JsonKey(unknownEnumValue: Stu3ResourceType.StructureMap)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
   FhirId? get id => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
@@ -26726,7 +26726,7 @@ abstract class $StructureMapCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: Stu3ResourceType.StructureMap)
           Stu3ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -27215,7 +27215,7 @@ abstract class _$$_StructureMapCopyWith<$Res>
       {@JsonKey(unknownEnumValue: Stu3ResourceType.StructureMap)
           Stu3ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -27607,7 +27607,7 @@ class _$_StructureMap extends _StructureMap {
   @JsonKey(unknownEnumValue: Stu3ResourceType.StructureMap)
   final Stu3ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -27935,7 +27935,7 @@ abstract class _StructureMap extends StructureMap {
   factory _StructureMap(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.StructureMap)
           final Stu3ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -28002,7 +28002,7 @@ abstract class _StructureMap extends StructureMap {
   @override
   FhirId? get id;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
@@ -29685,7 +29685,7 @@ mixin _$StructureMapSource {
   @JsonKey(name: '_defaultValueDateTime')
   Element? get defaultValueDateTimeElement =>
       throw _privateConstructorUsedError;
-  Time? get defaultValueTime => throw _privateConstructorUsedError;
+  FhirTime? get defaultValueTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_defaultValueTime')
   Element? get defaultValueTimeElement => throw _privateConstructorUsedError;
   FhirCode? get defaultValueCode => throw _privateConstructorUsedError;
@@ -29746,7 +29746,7 @@ mixin _$StructureMapSource {
   ContactPoint? get defaultValueContactPoint =>
       throw _privateConstructorUsedError;
   Timing? get defaultValueTiming => throw _privateConstructorUsedError;
-  Meta? get defaultValueMeta => throw _privateConstructorUsedError;
+  FhirMeta? get defaultValueMeta => throw _privateConstructorUsedError;
   ElementDefinition? get defaultValueElementDefinition =>
       throw _privateConstructorUsedError;
   ContactDetail? get defaultValueContactDetail =>
@@ -29833,7 +29833,7 @@ abstract class $StructureMapSourceCopyWith<$Res> {
       FhirDateTime? defaultValueDateTime,
       @JsonKey(name: '_defaultValueDateTime')
           Element? defaultValueDateTimeElement,
-      Time? defaultValueTime,
+      FhirTime? defaultValueTime,
       @JsonKey(name: '_defaultValueTime')
           Element? defaultValueTimeElement,
       FhirCode? defaultValueCode,
@@ -29883,7 +29883,7 @@ abstract class $StructureMapSourceCopyWith<$Res> {
       Address? defaultValueAddress,
       ContactPoint? defaultValueContactPoint,
       Timing? defaultValueTiming,
-      Meta? defaultValueMeta,
+      FhirMeta? defaultValueMeta,
       ElementDefinition? defaultValueElementDefinition,
       ContactDetail? defaultValueContactDetail,
       Contributor? defaultValueContributor,
@@ -31245,7 +31245,7 @@ abstract class _$$_StructureMapSourceCopyWith<$Res>
       FhirDateTime? defaultValueDateTime,
       @JsonKey(name: '_defaultValueDateTime')
           Element? defaultValueDateTimeElement,
-      Time? defaultValueTime,
+      FhirTime? defaultValueTime,
       @JsonKey(name: '_defaultValueTime')
           Element? defaultValueTimeElement,
       FhirCode? defaultValueCode,
@@ -31295,7 +31295,7 @@ abstract class _$$_StructureMapSourceCopyWith<$Res>
       Address? defaultValueAddress,
       ContactPoint? defaultValueContactPoint,
       Timing? defaultValueTiming,
-      Meta? defaultValueMeta,
+      FhirMeta? defaultValueMeta,
       ElementDefinition? defaultValueElementDefinition,
       ContactDetail? defaultValueContactDetail,
       Contributor? defaultValueContributor,
@@ -32105,17 +32105,17 @@ class _$_StructureMapSource extends _StructureMapSource {
   @JsonKey(name: '_defaultValueCode')
   final Element? defaultValueCodeElement;
   @override
-  final Id? defaultValueOid;
+  final FhirId? defaultValueOid;
   @override
   @JsonKey(name: '_defaultValueOid')
   final Element? defaultValueOidElement;
   @override
-  final Id? defaultValueUuid;
+  final FhirId? defaultValueUuid;
   @override
   @JsonKey(name: '_defaultValueUuid')
   final Element? defaultValueUuidElement;
   @override
-  final Id? defaultValueId;
+  final FhirId? defaultValueId;
   @override
   @JsonKey(name: '_defaultValueId')
   final Element? defaultValueIdElement;
@@ -32517,13 +32517,13 @@ abstract class _StructureMapSource extends StructureMapSource {
       final FhirCode? defaultValueCode,
       @JsonKey(name: '_defaultValueCode')
           final Element? defaultValueCodeElement,
-      final Id? defaultValueOid,
+      final FhirId? defaultValueOid,
       @JsonKey(name: '_defaultValueOid')
           final Element? defaultValueOidElement,
-      final Id? defaultValueUuid,
+      final FhirId? defaultValueUuid,
       @JsonKey(name: '_defaultValueUuid')
           final Element? defaultValueUuidElement,
-      final Id? defaultValueId,
+      final FhirId? defaultValueId,
       @JsonKey(name: '_defaultValueId')
           final Element? defaultValueIdElement,
       final Decimal? defaultValueUnsignedInt,
@@ -32657,7 +32657,7 @@ abstract class _StructureMapSource extends StructureMapSource {
   @JsonKey(name: '_defaultValueDateTime')
   Element? get defaultValueDateTimeElement;
   @override
-  Time? get defaultValueTime;
+  FhirTime? get defaultValueTime;
   @override
   @JsonKey(name: '_defaultValueTime')
   Element? get defaultValueTimeElement;
@@ -32749,7 +32749,7 @@ abstract class _StructureMapSource extends StructureMapSource {
   @override
   Timing? get defaultValueTiming;
   @override
-  Meta? get defaultValueMeta;
+  FhirMeta? get defaultValueMeta;
   @override
   ElementDefinition? get defaultValueElementDefinition;
   @override
@@ -33235,7 +33235,7 @@ class _$_StructureMapTarget extends _StructureMapTarget {
   }
 
   @override
-  final Id? listRuleId;
+  final FhirId? listRuleId;
   @override
   @JsonKey(name: '_listRuleId')
   final Element? listRuleIdElement;
@@ -33340,7 +33340,7 @@ abstract class _StructureMapTarget extends StructureMapTarget {
       @JsonKey(name: '_variable') final Element? variableElement,
       final List<StructureMapTargetListMode>? listMode,
       @JsonKey(name: '_listMode') final List<Element?>? listModeElement,
-      final Id? listRuleId,
+      final FhirId? listRuleId,
       @JsonKey(name: '_listRuleId') final Element? listRuleIdElement,
       final StructureMapTargetTransform? transform,
       @JsonKey(name: '_transform') final Element? transformElement,
@@ -33696,7 +33696,7 @@ class _$_StructureMapParameter extends _StructureMapParameter {
       _$$_StructureMapParameterFromJson(json);
 
   @override
-  final Id? valueId;
+  final FhirId? valueId;
   @override
   @JsonKey(name: '_valueId')
   final Element? valueIdElement;
@@ -33784,7 +33784,7 @@ class _$_StructureMapParameter extends _StructureMapParameter {
 
 abstract class _StructureMapParameter extends StructureMapParameter {
   factory _StructureMapParameter(
-          {final Id? valueId,
+          {final FhirId? valueId,
           @JsonKey(name: '_valueId') final Element? valueIdElement,
           final String? valueString,
           @JsonKey(name: '_valueString') final Element? valueStringElement,

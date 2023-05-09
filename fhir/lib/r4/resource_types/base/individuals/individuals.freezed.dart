@@ -30,7 +30,7 @@ mixin _$Group {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -130,7 +130,7 @@ mixin _$Group {
 
   /// [quantity] A count of the number of resource instances that are part of
   ///  the group.
-  UnsignedInt? get quantity => throw _privateConstructorUsedError;
+  FhirUnsignedInt? get quantity => throw _privateConstructorUsedError;
 
   /// [quantityElement] Extensions for quantity
   @JsonKey(name: '_quantity')
@@ -162,7 +162,7 @@ abstract class $GroupCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R4ResourceType.Group)
           R4ResourceType resourceType,
       String? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -188,7 +188,7 @@ abstract class $GroupCopyWith<$Res> {
       String? name,
       @JsonKey(name: '_name')
           Element? nameElement,
-      UnsignedInt? quantity,
+      FhirUnsignedInt? quantity,
       @JsonKey(name: '_quantity')
           Element? quantityElement,
       Reference? managingEntity,
@@ -499,7 +499,7 @@ abstract class _$$_GroupCopyWith<$Res> implements $GroupCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R4ResourceType.Group)
           R4ResourceType resourceType,
       String? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -525,7 +525,7 @@ abstract class _$$_GroupCopyWith<$Res> implements $GroupCopyWith<$Res> {
       String? name,
       @JsonKey(name: '_name')
           Element? nameElement,
-      UnsignedInt? quantity,
+      FhirUnsignedInt? quantity,
       @JsonKey(name: '_quantity')
           Element? quantityElement,
       Reference? managingEntity,
@@ -1134,7 +1134,7 @@ abstract class _Group extends Group {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -1252,7 +1252,7 @@ abstract class _Group extends Group {
 
   /// [quantity] A count of the number of resource instances that are part of
   ///  the group.
-  UnsignedInt? get quantity;
+  FhirUnsignedInt? get quantity;
   @override
 
   /// [quantityElement] Extensions for quantity
@@ -2485,7 +2485,7 @@ mixin _$Patient {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -2654,7 +2654,7 @@ abstract class $PatientCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R4ResourceType.Patient)
           R4ResourceType resourceType,
       String? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -3080,7 +3080,7 @@ abstract class _$$_PatientCopyWith<$Res> implements $PatientCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R4ResourceType.Patient)
           R4ResourceType resourceType,
       String? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -3947,7 +3947,7 @@ abstract class _Patient extends Patient {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -5633,7 +5633,7 @@ mixin _$Person {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -5750,7 +5750,7 @@ abstract class $PersonCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R4ResourceType.Person)
           R4ResourceType resourceType,
       String? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -6047,7 +6047,7 @@ abstract class _$$_PersonCopyWith<$Res> implements $PersonCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R4ResourceType.Person)
           R4ResourceType resourceType,
       String? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -6654,7 +6654,7 @@ abstract class _Person extends Person {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -7216,7 +7216,7 @@ mixin _$Practitioner {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -7344,7 +7344,7 @@ abstract class $PractitionerCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R4ResourceType.Practitioner)
           R4ResourceType resourceType,
       String? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -7617,7 +7617,7 @@ abstract class _$$_PractitionerCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R4ResourceType.Practitioner)
           R4ResourceType resourceType,
       String? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -8258,7 +8258,7 @@ abstract class _Practitioner extends Practitioner {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -8881,7 +8881,7 @@ mixin _$PractitionerRole {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -9017,7 +9017,7 @@ abstract class $PractitionerRoleCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R4ResourceType.PractitionerRole)
           R4ResourceType resourceType,
       String? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -9335,7 +9335,7 @@ abstract class _$$_PractitionerRoleCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R4ResourceType.PractitionerRole)
           R4ResourceType resourceType,
       String? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -10039,7 +10039,7 @@ abstract class _PractitionerRole extends PractitionerRole {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -10222,7 +10222,7 @@ mixin _$PractitionerRoleAvailableTime {
 
   /// [daysOfWeek] Indicates which days of the week are available between the
   ///  start and end Times.
-  List<Code>? get daysOfWeek => throw _privateConstructorUsedError;
+  List<FhirCode>? get daysOfWeek => throw _privateConstructorUsedError;
 
   /// [daysOfWeekElement] Extensions for daysOfWeek
   @JsonKey(name: '_daysOfWeek')
@@ -10238,7 +10238,7 @@ mixin _$PractitionerRoleAvailableTime {
 
   /// [availableStartTime] The opening time of day. Note: If the AllDay flag is
   ///  set, then this time is ignored.
-  Time? get availableStartTime => throw _privateConstructorUsedError;
+  FhirTime? get availableStartTime => throw _privateConstructorUsedError;
 
   /// [availableStartTimeElement] Extensions for availableStartTime
   @JsonKey(name: '_availableStartTime')
@@ -10246,7 +10246,7 @@ mixin _$PractitionerRoleAvailableTime {
 
   /// [availableEndTime] The closing time of day. Note: If the AllDay flag is
   ///  set, then this time is ignored.
-  Time? get availableEndTime => throw _privateConstructorUsedError;
+  FhirTime? get availableEndTime => throw _privateConstructorUsedError;
 
   /// [availableEndTimeElement] Extensions for availableEndTime
   @JsonKey(name: '_availableEndTime')
@@ -10270,13 +10270,13 @@ abstract class $PractitionerRoleAvailableTimeCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      List<Code>? daysOfWeek,
+      List<FhirCode>? daysOfWeek,
       @JsonKey(name: '_daysOfWeek') List<Element?>? daysOfWeekElement,
       FhirBoolean? allDay,
       @JsonKey(name: '_allDay') Element? allDayElement,
-      Time? availableStartTime,
+      FhirTime? availableStartTime,
       @JsonKey(name: '_availableStartTime') Element? availableStartTimeElement,
-      Time? availableEndTime,
+      FhirTime? availableEndTime,
       @JsonKey(name: '_availableEndTime') Element? availableEndTimeElement});
 
   $ElementCopyWith<$Res>? get allDayElement;
@@ -10326,7 +10326,7 @@ class _$PractitionerRoleAvailableTimeCopyWithImpl<$Res,
       daysOfWeek: freezed == daysOfWeek
           ? _value.daysOfWeek
           : daysOfWeek // ignore: cast_nullable_to_non_nullable
-              as List<Code>?,
+              as List<FhirCode>?,
       daysOfWeekElement: freezed == daysOfWeekElement
           ? _value.daysOfWeekElement
           : daysOfWeekElement // ignore: cast_nullable_to_non_nullable
@@ -10408,13 +10408,13 @@ abstract class _$$_PractitionerRoleAvailableTimeCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      List<Code>? daysOfWeek,
+      List<FhirCode>? daysOfWeek,
       @JsonKey(name: '_daysOfWeek') List<Element?>? daysOfWeekElement,
       FhirBoolean? allDay,
       @JsonKey(name: '_allDay') Element? allDayElement,
-      Time? availableStartTime,
+      FhirTime? availableStartTime,
       @JsonKey(name: '_availableStartTime') Element? availableStartTimeElement,
-      Time? availableEndTime,
+      FhirTime? availableEndTime,
       @JsonKey(name: '_availableEndTime') Element? availableEndTimeElement});
 
   @override
@@ -10466,7 +10466,7 @@ class __$$_PractitionerRoleAvailableTimeCopyWithImpl<$Res>
       daysOfWeek: freezed == daysOfWeek
           ? _value._daysOfWeek
           : daysOfWeek // ignore: cast_nullable_to_non_nullable
-              as List<Code>?,
+              as List<FhirCode>?,
       daysOfWeekElement: freezed == daysOfWeekElement
           ? _value._daysOfWeekElement
           : daysOfWeekElement // ignore: cast_nullable_to_non_nullable
@@ -10506,7 +10506,7 @@ class _$_PractitionerRoleAvailableTime extends _PractitionerRoleAvailableTime {
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final List<Code>? daysOfWeek,
+      final List<FhirCode>? daysOfWeek,
       @JsonKey(name: '_daysOfWeek') final List<Element?>? daysOfWeekElement,
       this.allDay,
       @JsonKey(name: '_allDay') this.allDayElement,
@@ -10593,12 +10593,12 @@ class _$_PractitionerRoleAvailableTime extends _PractitionerRoleAvailableTime {
 
   /// [daysOfWeek] Indicates which days of the week are available between the
   ///  start and end Times.
-  final List<Code>? _daysOfWeek;
+  final List<FhirCode>? _daysOfWeek;
 
   /// [daysOfWeek] Indicates which days of the week are available between the
   ///  start and end Times.
   @override
-  List<Code>? get daysOfWeek {
+  List<FhirCode>? get daysOfWeek {
     final value = _daysOfWeek;
     if (value == null) return null;
     if (_daysOfWeek is EqualUnmodifiableListView) return _daysOfWeek;
@@ -10723,7 +10723,7 @@ abstract class _PractitionerRoleAvailableTime
           @JsonKey(name: 'extension')
               final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
-          final List<Code>? daysOfWeek,
+          final List<FhirCode>? daysOfWeek,
           @JsonKey(name: '_daysOfWeek')
               final List<Element?>? daysOfWeekElement,
           final FhirBoolean? allDay,
@@ -10776,7 +10776,7 @@ abstract class _PractitionerRoleAvailableTime
 
   /// [daysOfWeek] Indicates which days of the week are available between the
   ///  start and end Times.
-  List<Code>? get daysOfWeek;
+  List<FhirCode>? get daysOfWeek;
   @override
 
   /// [daysOfWeekElement] Extensions for daysOfWeek
@@ -10796,7 +10796,7 @@ abstract class _PractitionerRoleAvailableTime
 
   /// [availableStartTime] The opening time of day. Note: If the AllDay flag is
   ///  set, then this time is ignored.
-  Time? get availableStartTime;
+  FhirTime? get availableStartTime;
   @override
 
   /// [availableStartTimeElement] Extensions for availableStartTime
@@ -10806,7 +10806,7 @@ abstract class _PractitionerRoleAvailableTime
 
   /// [availableEndTime] The closing time of day. Note: If the AllDay flag is
   ///  set, then this time is ignored.
-  Time? get availableEndTime;
+  FhirTime? get availableEndTime;
   @override
 
   /// [availableEndTimeElement] Extensions for availableEndTime
@@ -11267,7 +11267,7 @@ mixin _$RelatedPerson {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -11395,7 +11395,7 @@ abstract class $RelatedPersonCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R4ResourceType.RelatedPerson)
           R4ResourceType resourceType,
       String? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -11702,7 +11702,7 @@ abstract class _$$_RelatedPersonCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R4ResourceType.RelatedPerson)
           R4ResourceType resourceType,
       String? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -12365,7 +12365,7 @@ abstract class _RelatedPerson extends RelatedPerson {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when the

@@ -40,7 +40,7 @@ class FhirRequest with _$FhirRequest {
     required Dstu2ResourceType type,
 
     /// [id] - the id for the resource
-    required Id id,
+    required FhirId id,
 
     /// [pretty] - pretty print the json formatting in the response
     @Default(false) bool pretty,
@@ -90,8 +90,8 @@ class FhirRequest with _$FhirRequest {
     required Dstu2ResourceType type,
 
     /// [id] - the id for the resource
-    required Id id,
-    required Id vid,
+    required FhirId id,
+    required FhirId vid,
 
     /// [pretty] - pretty print the json formatting in the response
     @Default(false) bool pretty,
@@ -224,7 +224,7 @@ class FhirRequest with _$FhirRequest {
     required Dstu2ResourceType type,
 
     /// [id] - the id for the resource
-    required Id id,
+    required FhirId id,
 
     /// [pretty] - pretty print the json formatting in the response
     @Default(false) bool pretty,
@@ -552,7 +552,7 @@ class FhirRequest with _$FhirRequest {
     required Dstu2ResourceType type,
 
     /// [id] - the id for the resource
-    required Id id,
+    required FhirId id,
 
     /// [pretty] - pretty print the json formatting in the response
     @Default(false) bool pretty,
@@ -754,7 +754,7 @@ class FhirRequest with _$FhirRequest {
     /// [base] - the base URI for the FHIR server
     required Uri base,
     Dstu2ResourceType? type,
-    Id? id,
+    FhirId? id,
 
     /// [pretty] - pretty print the json formatting in the response
     @Default(false) bool pretty,

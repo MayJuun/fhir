@@ -154,7 +154,7 @@ mixin _$Endpoint {
   /// specified, then the sender could send any content (including no content
   ///  depending on the connectionType).
   @HiveField(21)
-  List<Code>? get payloadMimeType => throw _privateConstructorUsedError;
+  List<FhirCode>? get payloadMimeType => throw _privateConstructorUsedError;
 
   /// [payloadMimeTypeElement] Extensions for payloadMimeType
   @JsonKey(name: '_payloadMimeType')
@@ -242,7 +242,7 @@ abstract class $EndpointCopyWith<$Res> {
       @HiveField(20)
           List<CodeableConcept> payloadType,
       @HiveField(21)
-          List<Code>? payloadMimeType,
+          List<FhirCode>? payloadMimeType,
       @JsonKey(name: '_payloadMimeType')
       @HiveField(22)
           List<Element?>? payloadMimeTypeElement,
@@ -398,7 +398,7 @@ class _$EndpointCopyWithImpl<$Res, $Val extends Endpoint>
       payloadMimeType: freezed == payloadMimeType
           ? _value.payloadMimeType
           : payloadMimeType // ignore: cast_nullable_to_non_nullable
-              as List<Code>?,
+              as List<FhirCode>?,
       payloadMimeTypeElement: freezed == payloadMimeTypeElement
           ? _value.payloadMimeTypeElement
           : payloadMimeTypeElement // ignore: cast_nullable_to_non_nullable
@@ -596,7 +596,7 @@ abstract class _$$_EndpointCopyWith<$Res> implements $EndpointCopyWith<$Res> {
       @HiveField(20)
           List<CodeableConcept> payloadType,
       @HiveField(21)
-          List<Code>? payloadMimeType,
+          List<FhirCode>? payloadMimeType,
       @JsonKey(name: '_payloadMimeType')
       @HiveField(22)
           List<Element?>? payloadMimeTypeElement,
@@ -760,7 +760,7 @@ class __$$_EndpointCopyWithImpl<$Res>
       payloadMimeType: freezed == payloadMimeType
           ? _value._payloadMimeType
           : payloadMimeType // ignore: cast_nullable_to_non_nullable
-              as List<Code>?,
+              as List<FhirCode>?,
       payloadMimeTypeElement: freezed == payloadMimeTypeElement
           ? _value._payloadMimeTypeElement
           : payloadMimeTypeElement // ignore: cast_nullable_to_non_nullable
@@ -839,7 +839,7 @@ class _$_Endpoint extends _Endpoint {
       @HiveField(20)
           required final List<CodeableConcept> payloadType,
       @HiveField(21)
-          final List<Code>? payloadMimeType,
+          final List<FhirCode>? payloadMimeType,
       @JsonKey(name: '_payloadMimeType')
       @HiveField(22)
           final List<Element?>? payloadMimeTypeElement,
@@ -1097,7 +1097,7 @@ class _$_Endpoint extends _Endpoint {
   /// application/fhir+xml, application/fhir+json. If the mime type is not
   /// specified, then the sender could send any content (including no content
   ///  depending on the connectionType).
-  final List<Code>? _payloadMimeType;
+  final List<FhirCode>? _payloadMimeType;
 
   /// [payloadMimeType] The mime type to send the payload in - e.g.
   /// application/fhir+xml, application/fhir+json. If the mime type is not
@@ -1105,7 +1105,7 @@ class _$_Endpoint extends _Endpoint {
   ///  depending on the connectionType).
   @override
   @HiveField(21)
-  List<Code>? get payloadMimeType {
+  List<FhirCode>? get payloadMimeType {
     final value = _payloadMimeType;
     if (value == null) return null;
     if (_payloadMimeType is EqualUnmodifiableListView) return _payloadMimeType;
@@ -1326,7 +1326,7 @@ abstract class _Endpoint extends Endpoint {
       @HiveField(20)
           required final List<CodeableConcept> payloadType,
       @HiveField(21)
-          final List<Code>? payloadMimeType,
+          final List<FhirCode>? payloadMimeType,
       @JsonKey(name: '_payloadMimeType')
       @HiveField(22)
           final List<Element?>? payloadMimeTypeElement,
@@ -1499,7 +1499,7 @@ abstract class _Endpoint extends Endpoint {
   /// specified, then the sender could send any content (including no content
   ///  depending on the connectionType).
   @HiveField(21)
-  List<Code>? get payloadMimeType;
+  List<FhirCode>? get payloadMimeType;
   @override
 
   /// [payloadMimeTypeElement] Extensions for payloadMimeType
@@ -4187,7 +4187,7 @@ mixin _$HealthcareServiceAvailableTime {
 
   /// [daysOfWeek] Indicates which days of the week are available between the
   ///  start and end Times.
-  List<Code>? get daysOfWeek => throw _privateConstructorUsedError;
+  List<FhirCode>? get daysOfWeek => throw _privateConstructorUsedError;
 
   /// [daysOfWeekElement] Extensions for daysOfWeek
   @JsonKey(name: '_daysOfWeek')
@@ -4203,7 +4203,7 @@ mixin _$HealthcareServiceAvailableTime {
 
   /// [availableStartTime] The opening time of day. Note: If the AllDay flag is
   ///  set, then this time is ignored.
-  Time? get availableStartTime => throw _privateConstructorUsedError;
+  FhirTime? get availableStartTime => throw _privateConstructorUsedError;
 
   /// [availableStartTimeElement] Extensions for availableStartTime
   @JsonKey(name: '_availableStartTime')
@@ -4211,7 +4211,7 @@ mixin _$HealthcareServiceAvailableTime {
 
   /// [availableEndTime] The closing time of day. Note: If the AllDay flag is
   ///  set, then this time is ignored.
-  Time? get availableEndTime => throw _privateConstructorUsedError;
+  FhirTime? get availableEndTime => throw _privateConstructorUsedError;
 
   /// [availableEndTimeElement] Extensions for availableEndTime
   @JsonKey(name: '_availableEndTime')
@@ -4235,13 +4235,13 @@ abstract class $HealthcareServiceAvailableTimeCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      List<Code>? daysOfWeek,
+      List<FhirCode>? daysOfWeek,
       @JsonKey(name: '_daysOfWeek') List<Element?>? daysOfWeekElement,
       Boolean? allDay,
       @JsonKey(name: '_allDay') Element? allDayElement,
-      Time? availableStartTime,
+      FhirTime? availableStartTime,
       @JsonKey(name: '_availableStartTime') Element? availableStartTimeElement,
-      Time? availableEndTime,
+      FhirTime? availableEndTime,
       @JsonKey(name: '_availableEndTime') Element? availableEndTimeElement});
 
   $ElementCopyWith<$Res>? get allDayElement;
@@ -4291,7 +4291,7 @@ class _$HealthcareServiceAvailableTimeCopyWithImpl<$Res,
       daysOfWeek: freezed == daysOfWeek
           ? _value.daysOfWeek
           : daysOfWeek // ignore: cast_nullable_to_non_nullable
-              as List<Code>?,
+              as List<FhirCode>?,
       daysOfWeekElement: freezed == daysOfWeekElement
           ? _value.daysOfWeekElement
           : daysOfWeekElement // ignore: cast_nullable_to_non_nullable
@@ -4373,13 +4373,13 @@ abstract class _$$_HealthcareServiceAvailableTimeCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      List<Code>? daysOfWeek,
+      List<FhirCode>? daysOfWeek,
       @JsonKey(name: '_daysOfWeek') List<Element?>? daysOfWeekElement,
       Boolean? allDay,
       @JsonKey(name: '_allDay') Element? allDayElement,
-      Time? availableStartTime,
+      FhirTime? availableStartTime,
       @JsonKey(name: '_availableStartTime') Element? availableStartTimeElement,
-      Time? availableEndTime,
+      FhirTime? availableEndTime,
       @JsonKey(name: '_availableEndTime') Element? availableEndTimeElement});
 
   @override
@@ -4431,7 +4431,7 @@ class __$$_HealthcareServiceAvailableTimeCopyWithImpl<$Res>
       daysOfWeek: freezed == daysOfWeek
           ? _value._daysOfWeek
           : daysOfWeek // ignore: cast_nullable_to_non_nullable
-              as List<Code>?,
+              as List<FhirCode>?,
       daysOfWeekElement: freezed == daysOfWeekElement
           ? _value._daysOfWeekElement
           : daysOfWeekElement // ignore: cast_nullable_to_non_nullable
@@ -4472,7 +4472,7 @@ class _$_HealthcareServiceAvailableTime
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final List<Code>? daysOfWeek,
+      final List<FhirCode>? daysOfWeek,
       @JsonKey(name: '_daysOfWeek') final List<Element?>? daysOfWeekElement,
       this.allDay,
       @JsonKey(name: '_allDay') this.allDayElement,
@@ -4559,12 +4559,12 @@ class _$_HealthcareServiceAvailableTime
 
   /// [daysOfWeek] Indicates which days of the week are available between the
   ///  start and end Times.
-  final List<Code>? _daysOfWeek;
+  final List<FhirCode>? _daysOfWeek;
 
   /// [daysOfWeek] Indicates which days of the week are available between the
   ///  start and end Times.
   @override
-  List<Code>? get daysOfWeek {
+  List<FhirCode>? get daysOfWeek {
     final value = _daysOfWeek;
     if (value == null) return null;
     if (_daysOfWeek is EqualUnmodifiableListView) return _daysOfWeek;
@@ -4689,7 +4689,7 @@ abstract class _HealthcareServiceAvailableTime
           @JsonKey(name: 'extension')
               final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
-          final List<Code>? daysOfWeek,
+          final List<FhirCode>? daysOfWeek,
           @JsonKey(name: '_daysOfWeek')
               final List<Element?>? daysOfWeekElement,
           final Boolean? allDay,
@@ -4742,7 +4742,7 @@ abstract class _HealthcareServiceAvailableTime
 
   /// [daysOfWeek] Indicates which days of the week are available between the
   ///  start and end Times.
-  List<Code>? get daysOfWeek;
+  List<FhirCode>? get daysOfWeek;
   @override
 
   /// [daysOfWeekElement] Extensions for daysOfWeek
@@ -4762,7 +4762,7 @@ abstract class _HealthcareServiceAvailableTime
 
   /// [availableStartTime] The opening time of day. Note: If the AllDay flag is
   ///  set, then this time is ignored.
-  Time? get availableStartTime;
+  FhirTime? get availableStartTime;
   @override
 
   /// [availableStartTimeElement] Extensions for availableStartTime
@@ -4772,7 +4772,7 @@ abstract class _HealthcareServiceAvailableTime
 
   /// [availableEndTime] The closing time of day. Note: If the AllDay flag is
   ///  set, then this time is ignored.
-  Time? get availableEndTime;
+  FhirTime? get availableEndTime;
   @override
 
   /// [availableEndTimeElement] Extensions for availableEndTime
@@ -7659,7 +7659,7 @@ mixin _$LocationHoursOfOperation {
 
   /// [daysOfWeek] Indicates which days of the week are available between the
   ///  start and end Times.
-  List<Code>? get daysOfWeek => throw _privateConstructorUsedError;
+  List<FhirCode>? get daysOfWeek => throw _privateConstructorUsedError;
 
   /// [daysOfWeekElement] Extensions for daysOfWeek
   @JsonKey(name: '_daysOfWeek')
@@ -7673,14 +7673,14 @@ mixin _$LocationHoursOfOperation {
   Element? get allDayElement => throw _privateConstructorUsedError;
 
   /// [openingTime] Time that the Location opens.
-  Time? get openingTime => throw _privateConstructorUsedError;
+  FhirTime? get openingTime => throw _privateConstructorUsedError;
 
   /// [openingTimeElement] Extensions for openingTime
   @JsonKey(name: '_openingTime')
   Element? get openingTimeElement => throw _privateConstructorUsedError;
 
   /// [closingTime] Time that the Location closes.
-  Time? get closingTime => throw _privateConstructorUsedError;
+  FhirTime? get closingTime => throw _privateConstructorUsedError;
 
   /// [closingTimeElement] Extensions for closingTime
   @JsonKey(name: '_closingTime')
@@ -7702,13 +7702,13 @@ abstract class $LocationHoursOfOperationCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      List<Code>? daysOfWeek,
+      List<FhirCode>? daysOfWeek,
       @JsonKey(name: '_daysOfWeek') List<Element?>? daysOfWeekElement,
       Boolean? allDay,
       @JsonKey(name: '_allDay') Element? allDayElement,
-      Time? openingTime,
+      FhirTime? openingTime,
       @JsonKey(name: '_openingTime') Element? openingTimeElement,
-      Time? closingTime,
+      FhirTime? closingTime,
       @JsonKey(name: '_closingTime') Element? closingTimeElement});
 
   $ElementCopyWith<$Res>? get allDayElement;
@@ -7758,7 +7758,7 @@ class _$LocationHoursOfOperationCopyWithImpl<$Res,
       daysOfWeek: freezed == daysOfWeek
           ? _value.daysOfWeek
           : daysOfWeek // ignore: cast_nullable_to_non_nullable
-              as List<Code>?,
+              as List<FhirCode>?,
       daysOfWeekElement: freezed == daysOfWeekElement
           ? _value.daysOfWeekElement
           : daysOfWeekElement // ignore: cast_nullable_to_non_nullable
@@ -7840,13 +7840,13 @@ abstract class _$$_LocationHoursOfOperationCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      List<Code>? daysOfWeek,
+      List<FhirCode>? daysOfWeek,
       @JsonKey(name: '_daysOfWeek') List<Element?>? daysOfWeekElement,
       Boolean? allDay,
       @JsonKey(name: '_allDay') Element? allDayElement,
-      Time? openingTime,
+      FhirTime? openingTime,
       @JsonKey(name: '_openingTime') Element? openingTimeElement,
-      Time? closingTime,
+      FhirTime? closingTime,
       @JsonKey(name: '_closingTime') Element? closingTimeElement});
 
   @override
@@ -7897,7 +7897,7 @@ class __$$_LocationHoursOfOperationCopyWithImpl<$Res>
       daysOfWeek: freezed == daysOfWeek
           ? _value._daysOfWeek
           : daysOfWeek // ignore: cast_nullable_to_non_nullable
-              as List<Code>?,
+              as List<FhirCode>?,
       daysOfWeekElement: freezed == daysOfWeekElement
           ? _value._daysOfWeekElement
           : daysOfWeekElement // ignore: cast_nullable_to_non_nullable
@@ -7937,7 +7937,7 @@ class _$_LocationHoursOfOperation extends _LocationHoursOfOperation {
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final List<Code>? daysOfWeek,
+      final List<FhirCode>? daysOfWeek,
       @JsonKey(name: '_daysOfWeek') final List<Element?>? daysOfWeekElement,
       this.allDay,
       @JsonKey(name: '_allDay') this.allDayElement,
@@ -8023,12 +8023,12 @@ class _$_LocationHoursOfOperation extends _LocationHoursOfOperation {
 
   /// [daysOfWeek] Indicates which days of the week are available between the
   ///  start and end Times.
-  final List<Code>? _daysOfWeek;
+  final List<FhirCode>? _daysOfWeek;
 
   /// [daysOfWeek] Indicates which days of the week are available between the
   ///  start and end Times.
   @override
-  List<Code>? get daysOfWeek {
+  List<FhirCode>? get daysOfWeek {
     final value = _daysOfWeek;
     if (value == null) return null;
     if (_daysOfWeek is EqualUnmodifiableListView) return _daysOfWeek;
@@ -8146,7 +8146,7 @@ abstract class _LocationHoursOfOperation extends LocationHoursOfOperation {
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
-          final List<Code>? daysOfWeek,
+          final List<FhirCode>? daysOfWeek,
           @JsonKey(name: '_daysOfWeek') final List<Element?>? daysOfWeekElement,
           final Boolean? allDay,
           @JsonKey(name: '_allDay') final Element? allDayElement,
@@ -8195,7 +8195,7 @@ abstract class _LocationHoursOfOperation extends LocationHoursOfOperation {
 
   /// [daysOfWeek] Indicates which days of the week are available between the
   ///  start and end Times.
-  List<Code>? get daysOfWeek;
+  List<FhirCode>? get daysOfWeek;
   @override
 
   /// [daysOfWeekElement] Extensions for daysOfWeek
@@ -8213,7 +8213,7 @@ abstract class _LocationHoursOfOperation extends LocationHoursOfOperation {
   @override
 
   /// [openingTime] Time that the Location opens.
-  Time? get openingTime;
+  FhirTime? get openingTime;
   @override
 
   /// [openingTimeElement] Extensions for openingTime
@@ -8222,7 +8222,7 @@ abstract class _LocationHoursOfOperation extends LocationHoursOfOperation {
   @override
 
   /// [closingTime] Time that the Location closes.
-  Time? get closingTime;
+  FhirTime? get closingTime;
   @override
 
   /// [closingTimeElement] Extensions for closingTime

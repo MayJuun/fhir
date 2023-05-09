@@ -31,7 +31,7 @@ mixin _$Basic {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -44,7 +44,7 @@ mixin _$Basic {
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-   FhirCode? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
@@ -97,11 +97,11 @@ abstract class $BasicCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.Basic)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-       FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -182,7 +182,7 @@ class _$BasicCopyWithImpl<$Res, $Val extends Basic>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -333,11 +333,11 @@ abstract class _$$_BasicCopyWith<$Res> implements $BasicCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.Basic)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-       FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -422,7 +422,7 @@ class __$$_BasicCopyWithImpl<$Res> extends _$BasicCopyWithImpl<$Res, _$_Basic>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -514,7 +514,7 @@ class _$_Basic extends _Basic {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -536,7 +536,7 @@ class _$_Basic extends _Basic {
 
   /// [language] The base language in which the resource is written.
   @override
-  final  FhirCode? language;
+  final FhirCode? language;
 
   /// [languageElement] ("_language") Extensions for language
   @override
@@ -701,12 +701,12 @@ abstract class _Basic extends Basic {
   factory _Basic(
       {@JsonKey(unknownEnumValue: R5ResourceType.Basic)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final  FhirCode? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -740,7 +740,7 @@ abstract class _Basic extends Basic {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when
@@ -756,7 +756,7 @@ abstract class _Basic extends Basic {
   @override
 
   /// [language] The base language in which the resource is written.
-   FhirCode? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] ("_language") Extensions for language
@@ -827,7 +827,7 @@ mixin _$Binary {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -840,14 +840,14 @@ mixin _$Binary {
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-   FhirCode? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
 
   /// [contentType] MimeType of the binary content represented as a standard MimeType (BCP 13).
-   FhirCode? get contentType => throw _privateConstructorUsedError;
+  FhirCode? get contentType => throw _privateConstructorUsedError;
 
   /// [contentTypeElement] ("_contentType") Extensions for contentType
   @JsonKey(name: '_contentType')
@@ -857,7 +857,7 @@ mixin _$Binary {
   Reference? get securityContext => throw _privateConstructorUsedError;
 
   /// [data] The actual content, base64 encoded.
-  FhirBase64Binary?? get data => throw _privateConstructorUsedError;
+  FhirBase64Binary? get data => throw _privateConstructorUsedError;
 
   /// [dataElement] ("_data") Extensions for data
   @JsonKey(name: '_data')
@@ -877,18 +877,18 @@ abstract class $BinaryCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.Binary)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-       FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
-       FhirCode? contentType,
+      FhirCode? contentType,
       @JsonKey(name: '_contentType')
           Element? contentTypeElement,
       Reference? securityContext,
-  FhirBase64Binary?? data,
+      FhirBase64Binary? data,
       @JsonKey(name: '_data')
           Element? dataElement});
 
@@ -950,7 +950,7 @@ class _$BinaryCopyWithImpl<$Res, $Val extends Binary>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -958,7 +958,7 @@ class _$BinaryCopyWithImpl<$Res, $Val extends Binary>
       contentType: freezed == contentType
           ? _value.contentType
           : contentType // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       contentTypeElement: freezed == contentTypeElement
           ? _value.contentTypeElement
           : contentTypeElement // ignore: cast_nullable_to_non_nullable
@@ -970,7 +970,7 @@ class _$BinaryCopyWithImpl<$Res, $Val extends Binary>
       data: freezed == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
-              as  FhirBase64Binary??,
+              as FhirBase64Binary?,
       dataElement: freezed == dataElement
           ? _value.dataElement
           : dataElement // ignore: cast_nullable_to_non_nullable
@@ -1061,18 +1061,18 @@ abstract class _$$_BinaryCopyWith<$Res> implements $BinaryCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.Binary)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-       FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
-       FhirCode? contentType,
+      FhirCode? contentType,
       @JsonKey(name: '_contentType')
           Element? contentTypeElement,
       Reference? securityContext,
-  FhirBase64Binary?? data,
+      FhirBase64Binary? data,
       @JsonKey(name: '_data')
           Element? dataElement});
 
@@ -1137,7 +1137,7 @@ class __$$_BinaryCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -1145,7 +1145,7 @@ class __$$_BinaryCopyWithImpl<$Res>
       contentType: freezed == contentType
           ? _value.contentType
           : contentType // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       contentTypeElement: freezed == contentTypeElement
           ? _value.contentTypeElement
           : contentTypeElement // ignore: cast_nullable_to_non_nullable
@@ -1157,7 +1157,7 @@ class __$$_BinaryCopyWithImpl<$Res>
       data: freezed == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
-              as  FhirBase64Binary??,
+              as FhirBase64Binary?,
       dataElement: freezed == dataElement
           ? _value.dataElement
           : dataElement // ignore: cast_nullable_to_non_nullable
@@ -1200,7 +1200,7 @@ class _$_Binary extends _Binary {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -1222,7 +1222,7 @@ class _$_Binary extends _Binary {
 
   /// [language] The base language in which the resource is written.
   @override
-  final  FhirCode? language;
+  final FhirCode? language;
 
   /// [languageElement] ("_language") Extensions for language
   @override
@@ -1231,7 +1231,7 @@ class _$_Binary extends _Binary {
 
   /// [contentType] MimeType of the binary content represented as a standard MimeType (BCP 13).
   @override
-  final  FhirCode? contentType;
+  final FhirCode? contentType;
 
   /// [contentTypeElement] ("_contentType") Extensions for contentType
   @override
@@ -1244,7 +1244,7 @@ class _$_Binary extends _Binary {
 
   /// [data] The actual content, base64 encoded.
   @override
-  final  FhirBase64Binary?? data;
+  final FhirBase64Binary? data;
 
   /// [dataElement] ("_data") Extensions for data
   @override
@@ -1319,19 +1319,19 @@ abstract class _Binary extends Binary {
   factory _Binary(
       {@JsonKey(unknownEnumValue: R5ResourceType.Binary)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final  FhirCode? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
-      final  FhirCode? contentType,
+      final FhirCode? contentType,
       @JsonKey(name: '_contentType')
           final Element? contentTypeElement,
       final Reference? securityContext,
-      final  FhirBase64Binary?? data,
+      final FhirBase64Binary? data,
       @JsonKey(name: '_data')
           final Element? dataElement}) = _$_Binary;
   _Binary._() : super._();
@@ -1353,7 +1353,7 @@ abstract class _Binary extends Binary {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when
@@ -1369,7 +1369,7 @@ abstract class _Binary extends Binary {
   @override
 
   /// [language] The base language in which the resource is written.
-   FhirCode? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] ("_language") Extensions for language
@@ -1378,7 +1378,7 @@ abstract class _Binary extends Binary {
   @override
 
   /// [contentType] MimeType of the binary content represented as a standard MimeType (BCP 13).
-   FhirCode? get contentType;
+  FhirCode? get contentType;
   @override
 
   /// [contentTypeElement] ("_contentType") Extensions for contentType
@@ -1391,7 +1391,7 @@ abstract class _Binary extends Binary {
   @override
 
   /// [data] The actual content, base64 encoded.
-  FhirBase64Binary?? get data;
+  FhirBase64Binary? get data;
   @override
 
   /// [dataElement] ("_data") Extensions for data
@@ -1420,7 +1420,7 @@ mixin _$Bundle {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -1433,7 +1433,7 @@ mixin _$Bundle {
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-   FhirCode? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
@@ -1443,7 +1443,7 @@ mixin _$Bundle {
   Identifier? get identifier => throw _privateConstructorUsedError;
 
   /// [type] Indicates the purpose of this bundle - how it is intended to be used.
-   FhirCode? get type => throw _privateConstructorUsedError;
+  FhirCode? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] ("_type") Extensions for type
   @JsonKey(name: '_type')
@@ -1457,7 +1457,7 @@ mixin _$Bundle {
   Element? get timestampElement => throw _privateConstructorUsedError;
 
   /// [total] If a set of search matches, this is the (potentially estimated) total number of entries of type 'match' across all pages in the search.  It does not include search.mode = 'include' or 'outcome' entries and it does not provide a count of the number of entries in the Bundle.
-  UnsignedInt? get total => throw _privateConstructorUsedError;
+  FhirUnsignedInt? get total => throw _privateConstructorUsedError;
 
   /// [totalElement] ("_total") Extensions for total
   @JsonKey(name: '_total')
@@ -1489,21 +1489,21 @@ abstract class $BundleCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.Bundle)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-       FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Identifier? identifier,
-       FhirCode? type,
+      FhirCode? type,
       @JsonKey(name: '_type')
           Element? typeElement,
       FhirInstant? timestamp,
       @JsonKey(name: '_timestamp')
           Element? timestampElement,
-      UnsignedInt? total,
+      FhirUnsignedInt? total,
       @JsonKey(name: '_total')
           Element? totalElement,
       List<BundleLink>? link,
@@ -1577,7 +1577,7 @@ class _$BundleCopyWithImpl<$Res, $Val extends Bundle>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -1589,7 +1589,7 @@ class _$BundleCopyWithImpl<$Res, $Val extends Bundle>
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       typeElement: freezed == typeElement
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -1736,21 +1736,21 @@ abstract class _$$_BundleCopyWith<$Res> implements $BundleCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.Bundle)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-       FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Identifier? identifier,
-       FhirCode? type,
+      FhirCode? type,
       @JsonKey(name: '_type')
           Element? typeElement,
       FhirInstant? timestamp,
       @JsonKey(name: '_timestamp')
           Element? timestampElement,
-      UnsignedInt? total,
+      FhirUnsignedInt? total,
       @JsonKey(name: '_total')
           Element? totalElement,
       List<BundleLink>? link,
@@ -1829,7 +1829,7 @@ class __$$_BundleCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -1841,7 +1841,7 @@ class __$$_BundleCopyWithImpl<$Res>
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       typeElement: freezed == typeElement
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -1925,7 +1925,7 @@ class _$_Bundle extends _Bundle {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -1947,7 +1947,7 @@ class _$_Bundle extends _Bundle {
 
   /// [language] The base language in which the resource is written.
   @override
-  final  FhirCode? language;
+  final FhirCode? language;
 
   /// [languageElement] ("_language") Extensions for language
   @override
@@ -1960,7 +1960,7 @@ class _$_Bundle extends _Bundle {
 
   /// [type] Indicates the purpose of this bundle - how it is intended to be used.
   @override
-  final  FhirCode? type;
+  final FhirCode? type;
 
   /// [typeElement] ("_type") Extensions for type
   @override
@@ -2101,16 +2101,16 @@ abstract class _Bundle extends Bundle {
   factory _Bundle(
       {@JsonKey(unknownEnumValue: R5ResourceType.Bundle)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final  FhirCode? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Identifier? identifier,
-      final  FhirCode? type,
+      final FhirCode? type,
       @JsonKey(name: '_type')
           final Element? typeElement,
       final Instant? timestamp,
@@ -2142,7 +2142,7 @@ abstract class _Bundle extends Bundle {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when
@@ -2158,7 +2158,7 @@ abstract class _Bundle extends Bundle {
   @override
 
   /// [language] The base language in which the resource is written.
-   FhirCode? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] ("_language") Extensions for language
@@ -2171,7 +2171,7 @@ abstract class _Bundle extends Bundle {
   @override
 
   /// [type] Indicates the purpose of this bundle - how it is intended to be used.
-   FhirCode? get type;
+  FhirCode? get type;
   @override
 
   /// [typeElement] ("_type") Extensions for type
@@ -2189,7 +2189,7 @@ abstract class _Bundle extends Bundle {
   @override
 
   /// [total] If a set of search matches, this is the (potentially estimated) total number of entries of type 'match' across all pages in the search.  It does not include search.mode = 'include' or 'outcome' entries and it does not provide a count of the number of entries in the Bundle.
-  UnsignedInt? get total;
+  FhirUnsignedInt? get total;
   @override
 
   /// [totalElement] ("_total") Extensions for total
@@ -2252,7 +2252,7 @@ mixin _$BundleLink {
       throw _privateConstructorUsedError;
 
   /// [relation] A name which details the functional use for this link - see [http://www.iana.org/assignments/link-relations/link-relations.xhtml#link-relations-1](http://www.iana.org/assignments/link-relations/link-relations.xhtml#link-relations-1).
-   FhirCode? get relation => throw _privateConstructorUsedError;
+  FhirCode? get relation => throw _privateConstructorUsedError;
 
   /// [relationElement] ("_relation") Extensions for relation
   @JsonKey(name: '_relation')
@@ -2281,7 +2281,7 @@ abstract class $BundleLinkCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-       FhirCode? relation,
+      FhirCode? relation,
       @JsonKey(name: '_relation') Element? relationElement,
       FhirUri? url,
       @JsonKey(name: '_url') Element? urlElement});
@@ -2327,7 +2327,7 @@ class _$BundleLinkCopyWithImpl<$Res, $Val extends BundleLink>
       relation: freezed == relation
           ? _value.relation
           : relation // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       relationElement: freezed == relationElement
           ? _value.relationElement
           : relationElement // ignore: cast_nullable_to_non_nullable
@@ -2380,7 +2380,7 @@ abstract class _$$_BundleLinkCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-       FhirCode? relation,
+      FhirCode? relation,
       @JsonKey(name: '_relation') Element? relationElement,
       FhirUri? url,
       @JsonKey(name: '_url') Element? urlElement});
@@ -2426,7 +2426,7 @@ class __$$_BundleLinkCopyWithImpl<$Res>
       relation: freezed == relation
           ? _value.relation
           : relation // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       relationElement: freezed == relationElement
           ? _value.relationElement
           : relationElement // ignore: cast_nullable_to_non_nullable
@@ -2528,7 +2528,7 @@ class _$_BundleLink extends _BundleLink {
 
   /// [relation] A name which details the functional use for this link - see [http://www.iana.org/assignments/link-relations/link-relations.xhtml#link-relations-1](http://www.iana.org/assignments/link-relations/link-relations.xhtml#link-relations-1).
   @override
-  final  FhirCode? relation;
+  final FhirCode? relation;
 
   /// [relationElement] ("_relation") Extensions for relation
   @override
@@ -2599,7 +2599,7 @@ abstract class _BundleLink extends BundleLink {
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final  FhirCode? relation,
+      final FhirCode? relation,
       @JsonKey(name: '_relation') final Element? relationElement,
       final FhirUri? url,
       @JsonKey(name: '_url') final Element? urlElement}) = _$_BundleLink;
@@ -2641,7 +2641,7 @@ abstract class _BundleLink extends BundleLink {
   @override
 
   /// [relation] A name which details the functional use for this link - see [http://www.iana.org/assignments/link-relations/link-relations.xhtml#link-relations-1](http://www.iana.org/assignments/link-relations/link-relations.xhtml#link-relations-1).
-   FhirCode? get relation;
+  FhirCode? get relation;
   @override
 
   /// [relationElement] ("_relation") Extensions for relation
@@ -3269,7 +3269,7 @@ mixin _$BundleSearch {
       throw _privateConstructorUsedError;
 
   /// [mode] Why this entry is in the result set - whether it's included as a match or because of an _include requirement, or to convey information or warning information about the search process.
-   FhirCode? get mode => throw _privateConstructorUsedError;
+  FhirCode? get mode => throw _privateConstructorUsedError;
 
   /// [modeElement] ("_mode") Extensions for mode
   @JsonKey(name: '_mode')
@@ -3298,7 +3298,7 @@ abstract class $BundleSearchCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-       FhirCode? mode,
+      FhirCode? mode,
       @JsonKey(name: '_mode') Element? modeElement,
       FhirDecimal? score,
       @JsonKey(name: '_score') Element? scoreElement});
@@ -3344,7 +3344,7 @@ class _$BundleSearchCopyWithImpl<$Res, $Val extends BundleSearch>
       mode: freezed == mode
           ? _value.mode
           : mode // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       modeElement: freezed == modeElement
           ? _value.modeElement
           : modeElement // ignore: cast_nullable_to_non_nullable
@@ -3397,7 +3397,7 @@ abstract class _$$_BundleSearchCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-       FhirCode? mode,
+      FhirCode? mode,
       @JsonKey(name: '_mode') Element? modeElement,
       FhirDecimal? score,
       @JsonKey(name: '_score') Element? scoreElement});
@@ -3443,7 +3443,7 @@ class __$$_BundleSearchCopyWithImpl<$Res>
       mode: freezed == mode
           ? _value.mode
           : mode // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       modeElement: freezed == modeElement
           ? _value.modeElement
           : modeElement // ignore: cast_nullable_to_non_nullable
@@ -3545,7 +3545,7 @@ class _$_BundleSearch extends _BundleSearch {
 
   /// [mode] Why this entry is in the result set - whether it's included as a match or because of an _include requirement, or to convey information or warning information about the search process.
   @override
-  final  FhirCode? mode;
+  final FhirCode? mode;
 
   /// [modeElement] ("_mode") Extensions for mode
   @override
@@ -3615,7 +3615,7 @@ abstract class _BundleSearch extends BundleSearch {
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final  FhirCode? mode,
+      final FhirCode? mode,
       @JsonKey(name: '_mode') final Element? modeElement,
       final Decimal? score,
       @JsonKey(name: '_score') final Element? scoreElement}) = _$_BundleSearch;
@@ -3657,7 +3657,7 @@ abstract class _BundleSearch extends BundleSearch {
   @override
 
   /// [mode] Why this entry is in the result set - whether it's included as a match or because of an _include requirement, or to convey information or warning information about the search process.
-   FhirCode? get mode;
+  FhirCode? get mode;
   @override
 
   /// [modeElement] ("_mode") Extensions for mode
@@ -3713,7 +3713,7 @@ mixin _$BundleRequest {
       throw _privateConstructorUsedError;
 
   /// [method] In a transaction or batch, this is the HTTP action to be executed for this entry. In a history bundle, this indicates the HTTP action that occurred.
-   FhirCode? get method => throw _privateConstructorUsedError;
+  FhirCode? get method => throw _privateConstructorUsedError;
 
   /// [methodElement] ("_method") Extensions for method
   @JsonKey(name: '_method')
@@ -3770,7 +3770,7 @@ abstract class $BundleRequestCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-       FhirCode? method,
+      FhirCode? method,
       @JsonKey(name: '_method') Element? methodElement,
       FhirUri? url,
       @JsonKey(name: '_url') Element? urlElement,
@@ -3836,7 +3836,7 @@ class _$BundleRequestCopyWithImpl<$Res, $Val extends BundleRequest>
       method: freezed == method
           ? _value.method
           : method // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       methodElement: freezed == methodElement
           ? _value.methodElement
           : methodElement // ignore: cast_nullable_to_non_nullable
@@ -3969,7 +3969,7 @@ abstract class _$$_BundleRequestCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-       FhirCode? method,
+      FhirCode? method,
       @JsonKey(name: '_method') Element? methodElement,
       FhirUri? url,
       @JsonKey(name: '_url') Element? urlElement,
@@ -4039,7 +4039,7 @@ class __$$_BundleRequestCopyWithImpl<$Res>
       method: freezed == method
           ? _value.method
           : method // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       methodElement: freezed == methodElement
           ? _value.methodElement
           : methodElement // ignore: cast_nullable_to_non_nullable
@@ -4181,7 +4181,7 @@ class _$_BundleRequest extends _BundleRequest {
 
   /// [method] In a transaction or batch, this is the HTTP action to be executed for this entry. In a history bundle, this indicates the HTTP action that occurred.
   @override
-  final  FhirCode? method;
+  final FhirCode? method;
 
   /// [methodElement] ("_method") Extensions for method
   @override
@@ -4311,7 +4311,7 @@ abstract class _BundleRequest extends BundleRequest {
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final  FhirCode? method,
+      final FhirCode? method,
       @JsonKey(name: '_method')
           final Element? methodElement,
       final FhirUri? url,
@@ -4367,7 +4367,7 @@ abstract class _BundleRequest extends BundleRequest {
   @override
 
   /// [method] In a transaction or batch, this is the HTTP action to be executed for this entry. In a history bundle, this indicates the HTTP action that occurred.
-   FhirCode? get method;
+  FhirCode? get method;
   @override
 
   /// [methodElement] ("_method") Extensions for method
@@ -5060,7 +5060,7 @@ mixin _$Linkage {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -5073,7 +5073,7 @@ mixin _$Linkage {
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-   FhirCode? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
@@ -5094,7 +5094,7 @@ mixin _$Linkage {
       throw _privateConstructorUsedError;
 
   /// [active] Indicates whether the asserted set of linkages are considered to be "in effect".
-   FhirBoolean? get active => throw _privateConstructorUsedError;
+  FhirBoolean? get active => throw _privateConstructorUsedError;
 
   /// [activeElement] ("_active") Extensions for active
   @JsonKey(name: '_active')
@@ -5120,11 +5120,11 @@ abstract class $LinkageCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.Linkage)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-       FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -5132,7 +5132,7 @@ abstract class $LinkageCopyWith<$Res> {
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-       FhirBoolean? active,
+      FhirBoolean? active,
       @JsonKey(name: '_active')
           Element? activeElement,
       Reference? author,
@@ -5199,7 +5199,7 @@ class _$LinkageCopyWithImpl<$Res, $Val extends Linkage>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -5223,7 +5223,7 @@ class _$LinkageCopyWithImpl<$Res, $Val extends Linkage>
       active: freezed == active
           ? _value.active
           : active // ignore: cast_nullable_to_non_nullable
-              as  FhirBoolean?,
+              as FhirBoolean?,
       activeElement: freezed == activeElement
           ? _value.activeElement
           : activeElement // ignore: cast_nullable_to_non_nullable
@@ -5323,11 +5323,11 @@ abstract class _$$_LinkageCopyWith<$Res> implements $LinkageCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.Linkage)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-       FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -5335,7 +5335,7 @@ abstract class _$$_LinkageCopyWith<$Res> implements $LinkageCopyWith<$Res> {
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-       FhirBoolean? active,
+      FhirBoolean? active,
       @JsonKey(name: '_active')
           Element? activeElement,
       Reference? author,
@@ -5405,7 +5405,7 @@ class __$$_LinkageCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -5429,7 +5429,7 @@ class __$$_LinkageCopyWithImpl<$Res>
       active: freezed == active
           ? _value.active
           : active // ignore: cast_nullable_to_non_nullable
-              as  FhirBoolean?,
+              as FhirBoolean?,
       activeElement: freezed == activeElement
           ? _value.activeElement
           : activeElement // ignore: cast_nullable_to_non_nullable
@@ -5487,7 +5487,7 @@ class _$_Linkage extends _Linkage {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -5509,7 +5509,7 @@ class _$_Linkage extends _Linkage {
 
   /// [language] The base language in which the resource is written.
   @override
-  final  FhirCode? language;
+  final FhirCode? language;
 
   /// [languageElement] ("_language") Extensions for language
   @override
@@ -5563,7 +5563,7 @@ class _$_Linkage extends _Linkage {
 
   /// [active] Indicates whether the asserted set of linkages are considered to be "in effect".
   @override
-  final  FhirBoolean? active;
+  final FhirBoolean? active;
 
   /// [activeElement] ("_active") Extensions for active
   @override
@@ -5659,12 +5659,12 @@ abstract class _Linkage extends Linkage {
   factory _Linkage(
       {@JsonKey(unknownEnumValue: R5ResourceType.Linkage)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final  FhirCode? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -5672,7 +5672,7 @@ abstract class _Linkage extends Linkage {
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final  FhirBoolean? active,
+      final FhirBoolean? active,
       @JsonKey(name: '_active')
           final Element? activeElement,
       final Reference? author,
@@ -5696,7 +5696,7 @@ abstract class _Linkage extends Linkage {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when
@@ -5712,7 +5712,7 @@ abstract class _Linkage extends Linkage {
   @override
 
   /// [language] The base language in which the resource is written.
-   FhirCode? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] ("_language") Extensions for language
@@ -5738,7 +5738,7 @@ abstract class _Linkage extends Linkage {
   @override
 
   /// [active] Indicates whether the asserted set of linkages are considered to be "in effect".
-   FhirBoolean? get active;
+  FhirBoolean? get active;
   @override
 
   /// [activeElement] ("_active") Extensions for active
@@ -5793,7 +5793,7 @@ mixin _$LinkageItem {
       throw _privateConstructorUsedError;
 
   /// [type] Distinguishes which item is "source of truth" (if any) and which items are no longer considered to be current representations.
-   FhirCode? get type => throw _privateConstructorUsedError;
+  FhirCode? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] ("_type") Extensions for type
   @JsonKey(name: '_type')
@@ -5818,7 +5818,7 @@ abstract class $LinkageItemCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-       FhirCode? type,
+      FhirCode? type,
       @JsonKey(name: '_type') Element? typeElement,
       Reference resource});
 
@@ -5862,7 +5862,7 @@ class _$LinkageItemCopyWithImpl<$Res, $Val extends LinkageItem>
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       typeElement: freezed == typeElement
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -5907,7 +5907,7 @@ abstract class _$$_LinkageItemCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-       FhirCode? type,
+      FhirCode? type,
       @JsonKey(name: '_type') Element? typeElement,
       Reference resource});
 
@@ -5951,7 +5951,7 @@ class __$$_LinkageItemCopyWithImpl<$Res>
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       typeElement: freezed == typeElement
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -6048,7 +6048,7 @@ class _$_LinkageItem extends _LinkageItem {
 
   /// [type] Distinguishes which item is "source of truth" (if any) and which items are no longer considered to be current representations.
   @override
-  final  FhirCode? type;
+  final FhirCode? type;
 
   /// [typeElement] ("_type") Extensions for type
   @override
@@ -6111,7 +6111,7 @@ abstract class _LinkageItem extends LinkageItem {
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final  FhirCode? type,
+      final FhirCode? type,
       @JsonKey(name: '_type') final Element? typeElement,
       required final Reference resource}) = _$_LinkageItem;
   _LinkageItem._() : super._();
@@ -6152,7 +6152,7 @@ abstract class _LinkageItem extends LinkageItem {
   @override
 
   /// [type] Distinguishes which item is "source of truth" (if any) and which items are no longer considered to be current representations.
-   FhirCode? get type;
+  FhirCode? get type;
   @override
 
   /// [typeElement] ("_type") Extensions for type
@@ -6185,7 +6185,7 @@ mixin _$MessageHeader {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -6198,7 +6198,7 @@ mixin _$MessageHeader {
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-   FhirCode? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
@@ -6222,7 +6222,7 @@ mixin _$MessageHeader {
   Coding? get eventCoding => throw _privateConstructorUsedError;
 
   /// [eventCanonical] Code that identifies the event this message represents and connects it with its definition. Events defined as part of the FHIR specification have the system value "http://terminology.hl7.org/CodeSystem/message-events".  Alternatively a canonical uri to the EventDefinition.
-   FhirCanonical? get eventCanonical => throw _privateConstructorUsedError;
+  FhirCanonical? get eventCanonical => throw _privateConstructorUsedError;
 
   /// [eventCanonicalElement] ("_eventCanonical") Extensions for eventCanonical
   @JsonKey(name: '_eventCanonical')
@@ -6257,7 +6257,7 @@ mixin _$MessageHeader {
   List<Reference>? get focus => throw _privateConstructorUsedError;
 
   /// [definition] Permanent link to the MessageDefinition for this message.
-   FhirCanonical? get definition => throw _privateConstructorUsedError;
+  FhirCanonical? get definition => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -6275,11 +6275,11 @@ abstract class $MessageHeaderCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.MessageHeader)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-       FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -6288,7 +6288,7 @@ abstract class $MessageHeaderCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Coding? eventCoding,
-       FhirCanonical? eventCanonical,
+      FhirCanonical? eventCanonical,
       @JsonKey(name: '_eventCanonical')
           Element? eventCanonicalElement,
       List<MessageHeaderDestination>? destination,
@@ -6300,7 +6300,7 @@ abstract class $MessageHeaderCopyWith<$Res> {
       CodeableConcept? reason,
       MessageHeaderResponse? response,
       List<Reference>? focus,
-       FhirCanonical? definition});
+      FhirCanonical? definition});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -6379,7 +6379,7 @@ class _$MessageHeaderCopyWithImpl<$Res, $Val extends MessageHeader>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -6407,7 +6407,7 @@ class _$MessageHeaderCopyWithImpl<$Res, $Val extends MessageHeader>
       eventCanonical: freezed == eventCanonical
           ? _value.eventCanonical
           : eventCanonical // ignore: cast_nullable_to_non_nullable
-              as  FhirCanonical?,
+              as FhirCanonical?,
       eventCanonicalElement: freezed == eventCanonicalElement
           ? _value.eventCanonicalElement
           : eventCanonicalElement // ignore: cast_nullable_to_non_nullable
@@ -6451,7 +6451,7 @@ class _$MessageHeaderCopyWithImpl<$Res, $Val extends MessageHeader>
       definition: freezed == definition
           ? _value.definition
           : definition // ignore: cast_nullable_to_non_nullable
-              as  FhirCanonical?,
+              as FhirCanonical?,
     ) as $Val);
   }
 
@@ -6620,11 +6620,11 @@ abstract class _$$_MessageHeaderCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R5ResourceType.MessageHeader)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-       FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -6633,7 +6633,7 @@ abstract class _$$_MessageHeaderCopyWith<$Res>
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Coding? eventCoding,
-       FhirCanonical? eventCanonical,
+      FhirCanonical? eventCanonical,
       @JsonKey(name: '_eventCanonical')
           Element? eventCanonicalElement,
       List<MessageHeaderDestination>? destination,
@@ -6645,7 +6645,7 @@ abstract class _$$_MessageHeaderCopyWith<$Res>
       CodeableConcept? reason,
       MessageHeaderResponse? response,
       List<Reference>? focus,
-       FhirCanonical? definition});
+      FhirCanonical? definition});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -6735,7 +6735,7 @@ class __$$_MessageHeaderCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -6763,7 +6763,7 @@ class __$$_MessageHeaderCopyWithImpl<$Res>
       eventCanonical: freezed == eventCanonical
           ? _value.eventCanonical
           : eventCanonical // ignore: cast_nullable_to_non_nullable
-              as  FhirCanonical?,
+              as FhirCanonical?,
       eventCanonicalElement: freezed == eventCanonicalElement
           ? _value.eventCanonicalElement
           : eventCanonicalElement // ignore: cast_nullable_to_non_nullable
@@ -6807,7 +6807,7 @@ class __$$_MessageHeaderCopyWithImpl<$Res>
       definition: freezed == definition
           ? _value.definition
           : definition // ignore: cast_nullable_to_non_nullable
-              as  FhirCanonical?,
+              as FhirCanonical?,
     ));
   }
 }
@@ -6863,7 +6863,7 @@ class _$_MessageHeader extends _MessageHeader {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -6885,7 +6885,7 @@ class _$_MessageHeader extends _MessageHeader {
 
   /// [language] The base language in which the resource is written.
   @override
-  final  FhirCode? language;
+  final FhirCode? language;
 
   /// [languageElement] ("_language") Extensions for language
   @override
@@ -6943,7 +6943,7 @@ class _$_MessageHeader extends _MessageHeader {
 
   /// [eventCanonical] Code that identifies the event this message represents and connects it with its definition. Events defined as part of the FHIR specification have the system value "http://terminology.hl7.org/CodeSystem/message-events".  Alternatively a canonical uri to the EventDefinition.
   @override
-  final  FhirCanonical? eventCanonical;
+  final FhirCanonical? eventCanonical;
 
   /// [eventCanonicalElement] ("_eventCanonical") Extensions for eventCanonical
   @override
@@ -7006,7 +7006,7 @@ class _$_MessageHeader extends _MessageHeader {
 
   /// [definition] Permanent link to the MessageDefinition for this message.
   @override
-  final  FhirCanonical? definition;
+  final FhirCanonical? definition;
 
   @override
   String toString() {
@@ -7107,12 +7107,12 @@ abstract class _MessageHeader extends MessageHeader {
   factory _MessageHeader(
       {@JsonKey(unknownEnumValue: R5ResourceType.MessageHeader)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final  FhirCode? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -7121,7 +7121,7 @@ abstract class _MessageHeader extends MessageHeader {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final Coding? eventCoding,
-      final  FhirCanonical? eventCanonical,
+      final FhirCanonical? eventCanonical,
       @JsonKey(name: '_eventCanonical')
           final Element? eventCanonicalElement,
       final List<MessageHeaderDestination>? destination,
@@ -7133,7 +7133,7 @@ abstract class _MessageHeader extends MessageHeader {
       final CodeableConcept? reason,
       final MessageHeaderResponse? response,
       final List<Reference>? focus,
-      final  FhirCanonical? definition}) = _$_MessageHeader;
+      final FhirCanonical? definition}) = _$_MessageHeader;
   _MessageHeader._() : super._();
 
   factory _MessageHeader.fromJson(Map<String, dynamic> json) =
@@ -7154,7 +7154,7 @@ abstract class _MessageHeader extends MessageHeader {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when
@@ -7170,7 +7170,7 @@ abstract class _MessageHeader extends MessageHeader {
   @override
 
   /// [language] The base language in which the resource is written.
-   FhirCode? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] ("_language") Extensions for language
@@ -7200,7 +7200,7 @@ abstract class _MessageHeader extends MessageHeader {
   @override
 
   /// [eventCanonical] Code that identifies the event this message represents and connects it with its definition. Events defined as part of the FHIR specification have the system value "http://terminology.hl7.org/CodeSystem/message-events".  Alternatively a canonical uri to the EventDefinition.
-   FhirCanonical? get eventCanonical;
+  FhirCanonical? get eventCanonical;
   @override
 
   /// [eventCanonicalElement] ("_eventCanonical") Extensions for eventCanonical
@@ -7245,7 +7245,7 @@ abstract class _MessageHeader extends MessageHeader {
   @override
 
   /// [definition] Permanent link to the MessageDefinition for this message.
-   FhirCanonical? get definition;
+  FhirCanonical? get definition;
   @override
   @JsonKey(ignore: true)
   _$$_MessageHeaderCopyWith<_$_MessageHeader> get copyWith =>
@@ -8462,7 +8462,7 @@ mixin _$MessageHeaderResponse {
   Identifier get identifier => throw _privateConstructorUsedError;
 
   /// [code] Code that identifies the type of response to the message - whether it was successful or not, and whether it should be resent or not.
-   FhirCode? get code => throw _privateConstructorUsedError;
+  FhirCode? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] ("_code") Extensions for code
   @JsonKey(name: '_code')
@@ -8488,7 +8488,7 @@ abstract class $MessageHeaderResponseCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Identifier identifier,
-       FhirCode? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement,
       Reference? details});
 
@@ -8539,7 +8539,7 @@ class _$MessageHeaderResponseCopyWithImpl<$Res,
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -8597,7 +8597,7 @@ abstract class _$$_MessageHeaderResponseCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Identifier identifier,
-       FhirCode? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement,
       Reference? details});
 
@@ -8648,7 +8648,7 @@ class __$$_MessageHeaderResponseCopyWithImpl<$Res>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -8750,7 +8750,7 @@ class _$_MessageHeaderResponse extends _MessageHeaderResponse {
 
   /// [code] Code that identifies the type of response to the message - whether it was successful or not, and whether it should be resent or not.
   @override
-  final  FhirCode? code;
+  final FhirCode? code;
 
   /// [codeElement] ("_code") Extensions for code
   @override
@@ -8817,7 +8817,7 @@ abstract class _MessageHeaderResponse extends MessageHeaderResponse {
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final Identifier identifier,
-      final  FhirCode? code,
+      final FhirCode? code,
       @JsonKey(name: '_code') final Element? codeElement,
       final Reference? details}) = _$_MessageHeaderResponse;
   _MessageHeaderResponse._() : super._();
@@ -8862,7 +8862,7 @@ abstract class _MessageHeaderResponse extends MessageHeaderResponse {
   @override
 
   /// [code] Code that identifies the type of response to the message - whether it was successful or not, and whether it should be resent or not.
-   FhirCode? get code;
+  FhirCode? get code;
   @override
 
   /// [codeElement] ("_code") Extensions for code
@@ -8895,7 +8895,7 @@ mixin _$OperationOutcome {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -8908,7 +8908,7 @@ mixin _$OperationOutcome {
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-   FhirCode? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
@@ -8947,11 +8947,11 @@ abstract class $OperationOutcomeCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.OperationOutcome)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-       FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -9017,7 +9017,7 @@ class _$OperationOutcomeCopyWithImpl<$Res, $Val extends OperationOutcome>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -9106,11 +9106,11 @@ abstract class _$$_OperationOutcomeCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R5ResourceType.OperationOutcome)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-       FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -9178,7 +9178,7 @@ class __$$_OperationOutcomeCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -9244,7 +9244,7 @@ class _$_OperationOutcome extends _OperationOutcome {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -9266,7 +9266,7 @@ class _$_OperationOutcome extends _OperationOutcome {
 
   /// [language] The base language in which the resource is written.
   @override
-  final  FhirCode? language;
+  final FhirCode? language;
 
   /// [languageElement] ("_language") Extensions for language
   @override
@@ -9396,12 +9396,12 @@ abstract class _OperationOutcome extends OperationOutcome {
   factory _OperationOutcome(
       {@JsonKey(unknownEnumValue: R5ResourceType.OperationOutcome)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final  FhirCode? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -9430,7 +9430,7 @@ abstract class _OperationOutcome extends OperationOutcome {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when
@@ -9446,7 +9446,7 @@ abstract class _OperationOutcome extends OperationOutcome {
   @override
 
   /// [language] The base language in which the resource is written.
-   FhirCode? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] ("_language") Extensions for language
@@ -9515,14 +9515,14 @@ mixin _$OperationOutcomeIssue {
       throw _privateConstructorUsedError;
 
   /// [severity] Indicates whether the issue indicates a variation from successful processing.
-   FhirCode? get severity => throw _privateConstructorUsedError;
+  FhirCode? get severity => throw _privateConstructorUsedError;
 
   /// [severityElement] ("_severity") Extensions for severity
   @JsonKey(name: '_severity')
   Element? get severityElement => throw _privateConstructorUsedError;
 
   /// [code] Describes the type of the issue. The system that creates an OperationOutcome SHALL choose the most applicable code from the IssueType value set, and may additional provide its own code for the error in the details element.
-   FhirCode? get code => throw _privateConstructorUsedError;
+  FhirCode? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] ("_code") Extensions for code
   @JsonKey(name: '_code')
@@ -9568,9 +9568,9 @@ abstract class $OperationOutcomeIssueCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-       FhirCode? severity,
+      FhirCode? severity,
       @JsonKey(name: '_severity') Element? severityElement,
-       FhirCode? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement,
       CodeableConcept? details,
       String? diagnostics,
@@ -9631,7 +9631,7 @@ class _$OperationOutcomeIssueCopyWithImpl<$Res,
       severity: freezed == severity
           ? _value.severity
           : severity // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       severityElement: freezed == severityElement
           ? _value.severityElement
           : severityElement // ignore: cast_nullable_to_non_nullable
@@ -9639,7 +9639,7 @@ class _$OperationOutcomeIssueCopyWithImpl<$Res,
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -9736,9 +9736,9 @@ abstract class _$$_OperationOutcomeIssueCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-       FhirCode? severity,
+      FhirCode? severity,
       @JsonKey(name: '_severity') Element? severityElement,
-       FhirCode? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement,
       CodeableConcept? details,
       String? diagnostics,
@@ -9800,7 +9800,7 @@ class __$$_OperationOutcomeIssueCopyWithImpl<$Res>
       severity: freezed == severity
           ? _value.severity
           : severity // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       severityElement: freezed == severityElement
           ? _value.severityElement
           : severityElement // ignore: cast_nullable_to_non_nullable
@@ -9808,7 +9808,7 @@ class __$$_OperationOutcomeIssueCopyWithImpl<$Res>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -9941,7 +9941,7 @@ class _$_OperationOutcomeIssue extends _OperationOutcomeIssue {
 
   /// [severity] Indicates whether the issue indicates a variation from successful processing.
   @override
-  final  FhirCode? severity;
+  final FhirCode? severity;
 
   /// [severityElement] ("_severity") Extensions for severity
   @override
@@ -9950,7 +9950,7 @@ class _$_OperationOutcomeIssue extends _OperationOutcomeIssue {
 
   /// [code] Describes the type of the issue. The system that creates an OperationOutcome SHALL choose the most applicable code from the IssueType value set, and may additional provide its own code for the error in the details element.
   @override
-  final  FhirCode? code;
+  final FhirCode? code;
 
   /// [codeElement] ("_code") Extensions for code
   @override
@@ -10101,10 +10101,10 @@ abstract class _OperationOutcomeIssue extends OperationOutcomeIssue {
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final  FhirCode? severity,
+      final FhirCode? severity,
       @JsonKey(name: '_severity')
           final Element? severityElement,
-      final  FhirCode? code,
+      final FhirCode? code,
       @JsonKey(name: '_code')
           final Element? codeElement,
       final CodeableConcept? details,
@@ -10155,7 +10155,7 @@ abstract class _OperationOutcomeIssue extends OperationOutcomeIssue {
   @override
 
   /// [severity] Indicates whether the issue indicates a variation from successful processing.
-   FhirCode? get severity;
+  FhirCode? get severity;
   @override
 
   /// [severityElement] ("_severity") Extensions for severity
@@ -10164,7 +10164,7 @@ abstract class _OperationOutcomeIssue extends OperationOutcomeIssue {
   @override
 
   /// [code] Describes the type of the issue. The system that creates an OperationOutcome SHALL choose the most applicable code from the IssueType value set, and may additional provide its own code for the error in the details element.
-   FhirCode? get code;
+  FhirCode? get code;
   @override
 
   /// [codeElement] ("_code") Extensions for code
@@ -10224,7 +10224,7 @@ mixin _$Parameters {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -10237,7 +10237,7 @@ mixin _$Parameters {
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-   FhirCode? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
@@ -10263,11 +10263,11 @@ abstract class $ParametersCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.Parameters)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-       FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       List<ParametersParameter>? parameter});
@@ -10323,7 +10323,7 @@ class _$ParametersCopyWithImpl<$Res, $Val extends Parameters>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -10384,11 +10384,11 @@ abstract class _$$_ParametersCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R5ResourceType.Parameters)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-       FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       List<ParametersParameter>? parameter});
@@ -10445,7 +10445,7 @@ class __$$_ParametersCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -10487,7 +10487,7 @@ class _$_Parameters extends _Parameters {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -10509,7 +10509,7 @@ class _$_Parameters extends _Parameters {
 
   /// [language] The base language in which the resource is written.
   @override
-  final  FhirCode? language;
+  final FhirCode? language;
 
   /// [languageElement] ("_language") Extensions for language
   @override
@@ -10586,12 +10586,12 @@ abstract class _Parameters extends Parameters {
   factory _Parameters(
       {@JsonKey(unknownEnumValue: R5ResourceType.Parameters)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final  FhirCode? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final List<ParametersParameter>? parameter}) = _$_Parameters;
@@ -10615,7 +10615,7 @@ abstract class _Parameters extends Parameters {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when
@@ -10631,7 +10631,7 @@ abstract class _Parameters extends Parameters {
   @override
 
   /// [language] The base language in which the resource is written.
-   FhirCode? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] ("_language") Extensions for language
@@ -10689,28 +10689,28 @@ mixin _$ParametersParameter {
   Element? get nameElement => throw _privateConstructorUsedError;
 
   /// [valueBase64Binary] Conveys the content if the parameter is a data type.
-  FhirBase64Binary?? get valueBase64Binary => throw _privateConstructorUsedError;
+  FhirBase64Binary? get valueBase64Binary => throw _privateConstructorUsedError;
 
   /// [valueBase64BinaryElement] ("_valueBase64Binary") Extensions for valueBase64Binary
   @JsonKey(name: '_valueBase64Binary')
   Element? get valueBase64BinaryElement => throw _privateConstructorUsedError;
 
   /// [valueBoolean] Conveys the content if the parameter is a data type.
-   FhirBoolean? get valueBoolean => throw _privateConstructorUsedError;
+  FhirBoolean? get valueBoolean => throw _privateConstructorUsedError;
 
   /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
   @JsonKey(name: '_valueBoolean')
   Element? get valueBooleanElement => throw _privateConstructorUsedError;
 
   /// [valueCanonical] Conveys the content if the parameter is a data type.
-   FhirCanonical? get valueCanonical => throw _privateConstructorUsedError;
+  FhirCanonical? get valueCanonical => throw _privateConstructorUsedError;
 
   /// [valueCanonicalElement] ("_valueCanonical") Extensions for valueCanonical
   @JsonKey(name: '_valueCanonical')
   Element? get valueCanonicalElement => throw _privateConstructorUsedError;
 
   /// [valueCode] Conveys the content if the parameter is a data type.
-   FhirCode? get valueCode => throw _privateConstructorUsedError;
+  FhirCode? get valueCode => throw _privateConstructorUsedError;
 
   /// [valueCodeElement] ("_valueCode") Extensions for valueCode
   @JsonKey(name: '_valueCode')
@@ -10780,7 +10780,7 @@ mixin _$ParametersParameter {
   Element? get valueOidElement => throw _privateConstructorUsedError;
 
   /// [valuePositiveInt] Conveys the content if the parameter is a data type.
-  PositiveInt? get valuePositiveInt => throw _privateConstructorUsedError;
+  FhirPositiveInt? get valuePositiveInt => throw _privateConstructorUsedError;
 
   /// [valuePositiveIntElement] ("_valuePositiveInt") Extensions for valuePositiveInt
   @JsonKey(name: '_valuePositiveInt')
@@ -10794,14 +10794,14 @@ mixin _$ParametersParameter {
   Element? get valueStringElement => throw _privateConstructorUsedError;
 
   /// [valueTime] Conveys the content if the parameter is a data type.
-  Time? get valueTime => throw _privateConstructorUsedError;
+  FhirTime? get valueTime => throw _privateConstructorUsedError;
 
   /// [valueTimeElement] ("_valueTime") Extensions for valueTime
   @JsonKey(name: '_valueTime')
   Element? get valueTimeElement => throw _privateConstructorUsedError;
 
   /// [valueUnsignedInt] Conveys the content if the parameter is a data type.
-  UnsignedInt? get valueUnsignedInt => throw _privateConstructorUsedError;
+  FhirUnsignedInt? get valueUnsignedInt => throw _privateConstructorUsedError;
 
   /// [valueUnsignedIntElement] ("_valueUnsignedInt") Extensions for valueUnsignedInt
   @JsonKey(name: '_valueUnsignedInt')
@@ -10935,7 +10935,7 @@ mixin _$ParametersParameter {
   Dosage? get valueDosage => throw _privateConstructorUsedError;
 
   /// [valueMeta] Conveys the content if the parameter is a data type.
-  Meta? get valueMeta => throw _privateConstructorUsedError;
+  FhirMeta? get valueMeta => throw _privateConstructorUsedError;
 
   /// [resource] Conveys the content if the parameter is a whole resource.
   Resource? get resource => throw _privateConstructorUsedError;
@@ -10962,13 +10962,13 @@ abstract class $ParametersParameterCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
-  FhirBase64Binary?? valueBase64Binary,
+      FhirBase64Binary? valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
-       FhirBoolean? valueBoolean,
+      FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-       FhirCanonical? valueCanonical,
+      FhirCanonical? valueCanonical,
       @JsonKey(name: '_valueCanonical') Element? valueCanonicalElement,
-       FhirCode? valueCode,
+      FhirCode? valueCode,
       @JsonKey(name: '_valueCode') Element? valueCodeElement,
       FhirDate? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
@@ -10988,13 +10988,13 @@ abstract class $ParametersParameterCopyWith<$Res> {
       @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
       FhirId? valueOid,
       @JsonKey(name: '_valueOid') Element? valueOidElement,
-      PositiveInt? valuePositiveInt,
+      FhirPositiveInt? valuePositiveInt,
       @JsonKey(name: '_valuePositiveInt') Element? valuePositiveIntElement,
       String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
-      Time? valueTime,
+      FhirTime? valueTime,
       @JsonKey(name: '_valueTime') Element? valueTimeElement,
-      UnsignedInt? valueUnsignedInt,
+      FhirUnsignedInt? valueUnsignedInt,
       @JsonKey(name: '_valueUnsignedInt') Element? valueUnsignedIntElement,
       FhirUri? valueUri,
       @JsonKey(name: '_valueUri') Element? valueUriElement,
@@ -11035,7 +11035,7 @@ abstract class $ParametersParameterCopyWith<$Res> {
       Availability? valueAvailability,
       ExtendedContactDetail? valueExtendedContactDetail,
       Dosage? valueDosage,
-      Meta? valueMeta,
+      FhirMeta? valueMeta,
       Resource? resource,
       @JsonKey(name: 'part') List<ParametersParameter>? part_});
 
@@ -11215,7 +11215,7 @@ class _$ParametersParameterCopyWithImpl<$Res, $Val extends ParametersParameter>
       valueBase64Binary: freezed == valueBase64Binary
           ? _value.valueBase64Binary
           : valueBase64Binary // ignore: cast_nullable_to_non_nullable
-              as  FhirBase64Binary??,
+              as FhirBase64Binary?,
       valueBase64BinaryElement: freezed == valueBase64BinaryElement
           ? _value.valueBase64BinaryElement
           : valueBase64BinaryElement // ignore: cast_nullable_to_non_nullable
@@ -11223,7 +11223,7 @@ class _$ParametersParameterCopyWithImpl<$Res, $Val extends ParametersParameter>
       valueBoolean: freezed == valueBoolean
           ? _value.valueBoolean
           : valueBoolean // ignore: cast_nullable_to_non_nullable
-              as  FhirBoolean?,
+              as FhirBoolean?,
       valueBooleanElement: freezed == valueBooleanElement
           ? _value.valueBooleanElement
           : valueBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -11231,7 +11231,7 @@ class _$ParametersParameterCopyWithImpl<$Res, $Val extends ParametersParameter>
       valueCanonical: freezed == valueCanonical
           ? _value.valueCanonical
           : valueCanonical // ignore: cast_nullable_to_non_nullable
-              as  FhirCanonical?,
+              as FhirCanonical?,
       valueCanonicalElement: freezed == valueCanonicalElement
           ? _value.valueCanonicalElement
           : valueCanonicalElement // ignore: cast_nullable_to_non_nullable
@@ -11239,7 +11239,7 @@ class _$ParametersParameterCopyWithImpl<$Res, $Val extends ParametersParameter>
       valueCode: freezed == valueCode
           ? _value.valueCode
           : valueCode // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       valueCodeElement: freezed == valueCodeElement
           ? _value.valueCodeElement
           : valueCodeElement // ignore: cast_nullable_to_non_nullable
@@ -12201,13 +12201,13 @@ abstract class _$$_ParametersParameterCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
-  FhirBase64Binary?? valueBase64Binary,
+      FhirBase64Binary? valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
-       FhirBoolean? valueBoolean,
+      FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-       FhirCanonical? valueCanonical,
+      FhirCanonical? valueCanonical,
       @JsonKey(name: '_valueCanonical') Element? valueCanonicalElement,
-       FhirCode? valueCode,
+      FhirCode? valueCode,
       @JsonKey(name: '_valueCode') Element? valueCodeElement,
       FhirDate? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
@@ -12227,13 +12227,13 @@ abstract class _$$_ParametersParameterCopyWith<$Res>
       @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
       FhirId? valueOid,
       @JsonKey(name: '_valueOid') Element? valueOidElement,
-      PositiveInt? valuePositiveInt,
+      FhirPositiveInt? valuePositiveInt,
       @JsonKey(name: '_valuePositiveInt') Element? valuePositiveIntElement,
       String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
-      Time? valueTime,
+      FhirTime? valueTime,
       @JsonKey(name: '_valueTime') Element? valueTimeElement,
-      UnsignedInt? valueUnsignedInt,
+      FhirUnsignedInt? valueUnsignedInt,
       @JsonKey(name: '_valueUnsignedInt') Element? valueUnsignedIntElement,
       FhirUri? valueUri,
       @JsonKey(name: '_valueUri') Element? valueUriElement,
@@ -12274,7 +12274,7 @@ abstract class _$$_ParametersParameterCopyWith<$Res>
       Availability? valueAvailability,
       ExtendedContactDetail? valueExtendedContactDetail,
       Dosage? valueDosage,
-      Meta? valueMeta,
+      FhirMeta? valueMeta,
       Resource? resource,
       @JsonKey(name: 'part') List<ParametersParameter>? part_});
 
@@ -12507,7 +12507,7 @@ class __$$_ParametersParameterCopyWithImpl<$Res>
       valueBase64Binary: freezed == valueBase64Binary
           ? _value.valueBase64Binary
           : valueBase64Binary // ignore: cast_nullable_to_non_nullable
-              as  FhirBase64Binary??,
+              as FhirBase64Binary?,
       valueBase64BinaryElement: freezed == valueBase64BinaryElement
           ? _value.valueBase64BinaryElement
           : valueBase64BinaryElement // ignore: cast_nullable_to_non_nullable
@@ -12515,7 +12515,7 @@ class __$$_ParametersParameterCopyWithImpl<$Res>
       valueBoolean: freezed == valueBoolean
           ? _value.valueBoolean
           : valueBoolean // ignore: cast_nullable_to_non_nullable
-              as  FhirBoolean?,
+              as FhirBoolean?,
       valueBooleanElement: freezed == valueBooleanElement
           ? _value.valueBooleanElement
           : valueBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -12523,7 +12523,7 @@ class __$$_ParametersParameterCopyWithImpl<$Res>
       valueCanonical: freezed == valueCanonical
           ? _value.valueCanonical
           : valueCanonical // ignore: cast_nullable_to_non_nullable
-              as  FhirCanonical?,
+              as FhirCanonical?,
       valueCanonicalElement: freezed == valueCanonicalElement
           ? _value.valueCanonicalElement
           : valueCanonicalElement // ignore: cast_nullable_to_non_nullable
@@ -12531,7 +12531,7 @@ class __$$_ParametersParameterCopyWithImpl<$Res>
       valueCode: freezed == valueCode
           ? _value.valueCode
           : valueCode // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       valueCodeElement: freezed == valueCodeElement
           ? _value.valueCodeElement
           : valueCodeElement // ignore: cast_nullable_to_non_nullable
@@ -12981,7 +12981,7 @@ class _$_ParametersParameter extends _ParametersParameter {
 
   /// [valueBase64Binary] Conveys the content if the parameter is a data type.
   @override
-  final  FhirBase64Binary?? valueBase64Binary;
+  final FhirBase64Binary? valueBase64Binary;
 
   /// [valueBase64BinaryElement] ("_valueBase64Binary") Extensions for valueBase64Binary
   @override
@@ -12990,7 +12990,7 @@ class _$_ParametersParameter extends _ParametersParameter {
 
   /// [valueBoolean] Conveys the content if the parameter is a data type.
   @override
-  final  FhirBoolean? valueBoolean;
+  final FhirBoolean? valueBoolean;
 
   /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
   @override
@@ -12999,7 +12999,7 @@ class _$_ParametersParameter extends _ParametersParameter {
 
   /// [valueCanonical] Conveys the content if the parameter is a data type.
   @override
-  final  FhirCanonical? valueCanonical;
+  final FhirCanonical? valueCanonical;
 
   /// [valueCanonicalElement] ("_valueCanonical") Extensions for valueCanonical
   @override
@@ -13008,7 +13008,7 @@ class _$_ParametersParameter extends _ParametersParameter {
 
   /// [valueCode] Conveys the content if the parameter is a data type.
   @override
-  final  FhirCode? valueCode;
+  final FhirCode? valueCode;
 
   /// [valueCodeElement] ("_valueCode") Extensions for valueCode
   @override
@@ -13044,7 +13044,7 @@ class _$_ParametersParameter extends _ParametersParameter {
 
   /// [valueId] Conveys the content if the parameter is a data type.
   @override
-  final Id? valueId;
+  final FhirId? valueId;
 
   /// [valueIdElement] ("_valueId") Extensions for valueId
   @override
@@ -13089,7 +13089,7 @@ class _$_ParametersParameter extends _ParametersParameter {
 
   /// [valueOid] Conveys the content if the parameter is a data type.
   @override
-  final Id? valueOid;
+  final FhirId? valueOid;
 
   /// [valueOidElement] ("_valueOid") Extensions for valueOid
   @override
@@ -13152,7 +13152,7 @@ class _$_ParametersParameter extends _ParametersParameter {
 
   /// [valueUuid] Conveys the content if the parameter is a data type.
   @override
-  final Id? valueUuid;
+  final FhirId? valueUuid;
 
   /// [valueUuidElement] ("_valueUuid") Extensions for valueUuid
   @override
@@ -13550,16 +13550,16 @@ abstract class _ParametersParameter extends ParametersParameter {
       final String? name,
       @JsonKey(name: '_name')
           final Element? nameElement,
-      final  FhirBase64Binary?? valueBase64Binary,
+      final FhirBase64Binary? valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary')
           final Element? valueBase64BinaryElement,
-      final  FhirBoolean? valueBoolean,
+      final FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean')
           final Element? valueBooleanElement,
-      final  FhirCanonical? valueCanonical,
+      final FhirCanonical? valueCanonical,
       @JsonKey(name: '_valueCanonical')
           final Element? valueCanonicalElement,
-      final  FhirCode? valueCode,
+      final FhirCode? valueCode,
       @JsonKey(name: '_valueCode')
           final Element? valueCodeElement,
       final Date? valueDate,
@@ -13571,7 +13571,7 @@ abstract class _ParametersParameter extends ParametersParameter {
       final Decimal? valueDecimal,
       @JsonKey(name: '_valueDecimal')
           final Element? valueDecimalElement,
-      final Id? valueId,
+      final FhirId? valueId,
       @JsonKey(name: '_valueId')
           final Element? valueIdElement,
       final Instant? valueInstant,
@@ -13586,7 +13586,7 @@ abstract class _ParametersParameter extends ParametersParameter {
       final Markdown? valueMarkdown,
       @JsonKey(name: '_valueMarkdown')
           final Element? valueMarkdownElement,
-      final Id? valueOid,
+      final FhirId? valueOid,
       @JsonKey(name: '_valueOid')
           final Element? valueOidElement,
       final PositiveInt? valuePositiveInt,
@@ -13607,7 +13607,7 @@ abstract class _ParametersParameter extends ParametersParameter {
       final FhirUrl? valueUrl,
       @JsonKey(name: '_valueUrl')
           final Element? valueUrlElement,
-      final Id? valueUuid,
+      final FhirId? valueUuid,
       @JsonKey(name: '_valueUuid')
           final Element? valueUuidElement,
       final Address? valueAddress,
@@ -13694,7 +13694,7 @@ abstract class _ParametersParameter extends ParametersParameter {
   @override
 
   /// [valueBase64Binary] Conveys the content if the parameter is a data type.
-  FhirBase64Binary?? get valueBase64Binary;
+  FhirBase64Binary? get valueBase64Binary;
   @override
 
   /// [valueBase64BinaryElement] ("_valueBase64Binary") Extensions for valueBase64Binary
@@ -13703,7 +13703,7 @@ abstract class _ParametersParameter extends ParametersParameter {
   @override
 
   /// [valueBoolean] Conveys the content if the parameter is a data type.
-   FhirBoolean? get valueBoolean;
+  FhirBoolean? get valueBoolean;
   @override
 
   /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
@@ -13712,7 +13712,7 @@ abstract class _ParametersParameter extends ParametersParameter {
   @override
 
   /// [valueCanonical] Conveys the content if the parameter is a data type.
-   FhirCanonical? get valueCanonical;
+  FhirCanonical? get valueCanonical;
   @override
 
   /// [valueCanonicalElement] ("_valueCanonical") Extensions for valueCanonical
@@ -13721,7 +13721,7 @@ abstract class _ParametersParameter extends ParametersParameter {
   @override
 
   /// [valueCode] Conveys the content if the parameter is a data type.
-   FhirCode? get valueCode;
+  FhirCode? get valueCode;
   @override
 
   /// [valueCodeElement] ("_valueCode") Extensions for valueCode
@@ -13811,7 +13811,7 @@ abstract class _ParametersParameter extends ParametersParameter {
   @override
 
   /// [valuePositiveInt] Conveys the content if the parameter is a data type.
-  PositiveInt? get valuePositiveInt;
+  FhirPositiveInt? get valuePositiveInt;
   @override
 
   /// [valuePositiveIntElement] ("_valuePositiveInt") Extensions for valuePositiveInt
@@ -13829,7 +13829,7 @@ abstract class _ParametersParameter extends ParametersParameter {
   @override
 
   /// [valueTime] Conveys the content if the parameter is a data type.
-  Time? get valueTime;
+  FhirTime? get valueTime;
   @override
 
   /// [valueTimeElement] ("_valueTime") Extensions for valueTime
@@ -13838,7 +13838,7 @@ abstract class _ParametersParameter extends ParametersParameter {
   @override
 
   /// [valueUnsignedInt] Conveys the content if the parameter is a data type.
-  UnsignedInt? get valueUnsignedInt;
+  FhirUnsignedInt? get valueUnsignedInt;
   @override
 
   /// [valueUnsignedIntElement] ("_valueUnsignedInt") Extensions for valueUnsignedInt
@@ -14006,7 +14006,7 @@ abstract class _ParametersParameter extends ParametersParameter {
   @override
 
   /// [valueMeta] Conveys the content if the parameter is a data type.
-  Meta? get valueMeta;
+  FhirMeta? get valueMeta;
   @override
 
   /// [resource] Conveys the content if the parameter is a whole resource.
@@ -14039,7 +14039,7 @@ mixin _$Subscription {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -14052,7 +14052,7 @@ mixin _$Subscription {
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-   FhirCode? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
@@ -14083,7 +14083,7 @@ mixin _$Subscription {
   Element? get nameElement => throw _privateConstructorUsedError;
 
   /// [status] The status of the subscription, which marks the server state for managing the subscription.
-   FhirCode? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
@@ -14134,35 +14134,35 @@ mixin _$Subscription {
   List<Element>? get headerElement => throw _privateConstructorUsedError;
 
   /// [heartbeatPeriod] If present,  a 'hearbeat" notification (keepalive) is sent via this channel with an the interval period equal to this elements integer value in seconds.    If not present, a heartbeat notification is not sent.
-  UnsignedInt? get heartbeatPeriod => throw _privateConstructorUsedError;
+  FhirUnsignedInt? get heartbeatPeriod => throw _privateConstructorUsedError;
 
   /// [heartbeatPeriodElement] ("_heartbeatPeriod") Extensions for heartbeatPeriod
   @JsonKey(name: '_heartbeatPeriod')
   Element? get heartbeatPeriodElement => throw _privateConstructorUsedError;
 
   /// [timeout] If present, the maximum amount of time a server will allow before failing a notification attempt.
-  UnsignedInt? get timeout => throw _privateConstructorUsedError;
+  FhirUnsignedInt? get timeout => throw _privateConstructorUsedError;
 
   /// [timeoutElement] ("_timeout") Extensions for timeout
   @JsonKey(name: '_timeout')
   Element? get timeoutElement => throw _privateConstructorUsedError;
 
   /// [contentType] The mime type to send the payload in - either application/fhir+xml, or application/fhir+json. The MIME types "text/plain" and "text/html" may also be used for Email subscriptions.
-   FhirCode? get contentType => throw _privateConstructorUsedError;
+  FhirCode? get contentType => throw _privateConstructorUsedError;
 
   /// [contentTypeElement] ("_contentType") Extensions for contentType
   @JsonKey(name: '_contentType')
   Element? get contentTypeElement => throw _privateConstructorUsedError;
 
   /// [content] How much of the resource content to deliver in the notification payload. The choices are an empty payload, only the resource id, or the full resource content.
-   FhirCode? get content => throw _privateConstructorUsedError;
+  FhirCode? get content => throw _privateConstructorUsedError;
 
   /// [contentElement] ("_content") Extensions for content
   @JsonKey(name: '_content')
   Element? get contentElement => throw _privateConstructorUsedError;
 
   /// [maxCount] If present, the maximum number of triggering resources that will be included in a notification bundle (e.g., a server will not include more than this number of trigger resources in a single notification).  Note that this is not a strict limit on the number of entries in a bundle, as dependent resources can be included.
-  PositiveInt? get maxCount => throw _privateConstructorUsedError;
+  FhirPositiveInt? get maxCount => throw _privateConstructorUsedError;
 
   /// [maxCountElement] ("_maxCount") Extensions for maxCount
   @JsonKey(name: '_maxCount')
@@ -14184,11 +14184,11 @@ abstract class $SubscriptionCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.Subscription)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-       FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -14200,7 +14200,7 @@ abstract class $SubscriptionCopyWith<$Res> {
       String? name,
       @JsonKey(name: '_name')
           Element? nameElement,
-       FhirCode? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Canonical topic,
@@ -14220,19 +14220,19 @@ abstract class $SubscriptionCopyWith<$Res> {
       List<String>? header,
       @JsonKey(name: '_header')
           List<Element>? headerElement,
-      UnsignedInt? heartbeatPeriod,
+      FhirUnsignedInt? heartbeatPeriod,
       @JsonKey(name: '_heartbeatPeriod')
           Element? heartbeatPeriodElement,
-      UnsignedInt? timeout,
+      FhirUnsignedInt? timeout,
       @JsonKey(name: '_timeout')
           Element? timeoutElement,
-       FhirCode? contentType,
+      FhirCode? contentType,
       @JsonKey(name: '_contentType')
           Element? contentTypeElement,
-       FhirCode? content,
+      FhirCode? content,
       @JsonKey(name: '_content')
           Element? contentElement,
-      PositiveInt? maxCount,
+      FhirPositiveInt? maxCount,
       @JsonKey(name: '_maxCount')
           Element? maxCountElement});
 
@@ -14331,7 +14331,7 @@ class _$SubscriptionCopyWithImpl<$Res, $Val extends Subscription>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -14367,7 +14367,7 @@ class _$SubscriptionCopyWithImpl<$Res, $Val extends Subscription>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -14443,7 +14443,7 @@ class _$SubscriptionCopyWithImpl<$Res, $Val extends Subscription>
       contentType: freezed == contentType
           ? _value.contentType
           : contentType // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       contentTypeElement: freezed == contentTypeElement
           ? _value.contentTypeElement
           : contentTypeElement // ignore: cast_nullable_to_non_nullable
@@ -14451,7 +14451,7 @@ class _$SubscriptionCopyWithImpl<$Res, $Val extends Subscription>
       content: freezed == content
           ? _value.content
           : content // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       contentElement: freezed == contentElement
           ? _value.contentElement
           : contentElement // ignore: cast_nullable_to_non_nullable
@@ -14668,11 +14668,11 @@ abstract class _$$_SubscriptionCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R5ResourceType.Subscription)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-       FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -14684,7 +14684,7 @@ abstract class _$$_SubscriptionCopyWith<$Res>
       String? name,
       @JsonKey(name: '_name')
           Element? nameElement,
-       FhirCode? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Canonical topic,
@@ -14704,19 +14704,19 @@ abstract class _$$_SubscriptionCopyWith<$Res>
       List<String>? header,
       @JsonKey(name: '_header')
           List<Element>? headerElement,
-      UnsignedInt? heartbeatPeriod,
+      FhirUnsignedInt? heartbeatPeriod,
       @JsonKey(name: '_heartbeatPeriod')
           Element? heartbeatPeriodElement,
-      UnsignedInt? timeout,
+      FhirUnsignedInt? timeout,
       @JsonKey(name: '_timeout')
           Element? timeoutElement,
-       FhirCode? contentType,
+      FhirCode? contentType,
       @JsonKey(name: '_contentType')
           Element? contentTypeElement,
-       FhirCode? content,
+      FhirCode? content,
       @JsonKey(name: '_content')
           Element? contentElement,
-      PositiveInt? maxCount,
+      FhirPositiveInt? maxCount,
       @JsonKey(name: '_maxCount')
           Element? maxCountElement});
 
@@ -14829,7 +14829,7 @@ class __$$_SubscriptionCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -14865,7 +14865,7 @@ class __$$_SubscriptionCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -14941,7 +14941,7 @@ class __$$_SubscriptionCopyWithImpl<$Res>
       contentType: freezed == contentType
           ? _value.contentType
           : contentType // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       contentTypeElement: freezed == contentTypeElement
           ? _value.contentTypeElement
           : contentTypeElement // ignore: cast_nullable_to_non_nullable
@@ -14949,7 +14949,7 @@ class __$$_SubscriptionCopyWithImpl<$Res>
       content: freezed == content
           ? _value.content
           : content // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       contentElement: freezed == contentElement
           ? _value.contentElement
           : contentElement // ignore: cast_nullable_to_non_nullable
@@ -15045,7 +15045,7 @@ class _$_Subscription extends _Subscription {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -15067,7 +15067,7 @@ class _$_Subscription extends _Subscription {
 
   /// [language] The base language in which the resource is written.
   @override
-  final  FhirCode? language;
+  final FhirCode? language;
 
   /// [languageElement] ("_language") Extensions for language
   @override
@@ -15143,7 +15143,7 @@ class _$_Subscription extends _Subscription {
 
   /// [status] The status of the subscription, which marks the server state for managing the subscription.
   @override
-  final  FhirCode? status;
+  final FhirCode? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -15262,7 +15262,7 @@ class _$_Subscription extends _Subscription {
 
   /// [contentType] The mime type to send the payload in - either application/fhir+xml, or application/fhir+json. The MIME types "text/plain" and "text/html" may also be used for Email subscriptions.
   @override
-  final  FhirCode? contentType;
+  final FhirCode? contentType;
 
   /// [contentTypeElement] ("_contentType") Extensions for contentType
   @override
@@ -15271,7 +15271,7 @@ class _$_Subscription extends _Subscription {
 
   /// [content] How much of the resource content to deliver in the notification payload. The choices are an empty payload, only the resource id, or the full resource content.
   @override
-  final  FhirCode? content;
+  final FhirCode? content;
 
   /// [contentElement] ("_content") Extensions for content
   @override
@@ -15427,12 +15427,12 @@ abstract class _Subscription extends Subscription {
   factory _Subscription(
       {@JsonKey(unknownEnumValue: R5ResourceType.Subscription)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final  FhirCode? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -15444,7 +15444,7 @@ abstract class _Subscription extends Subscription {
       final String? name,
       @JsonKey(name: '_name')
           final Element? nameElement,
-      final  FhirCode? status,
+      final FhirCode? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
       required final Canonical topic,
@@ -15470,10 +15470,10 @@ abstract class _Subscription extends Subscription {
       final UnsignedInt? timeout,
       @JsonKey(name: '_timeout')
           final Element? timeoutElement,
-      final  FhirCode? contentType,
+      final FhirCode? contentType,
       @JsonKey(name: '_contentType')
           final Element? contentTypeElement,
-      final  FhirCode? content,
+      final FhirCode? content,
       @JsonKey(name: '_content')
           final Element? contentElement,
       final PositiveInt? maxCount,
@@ -15499,7 +15499,7 @@ abstract class _Subscription extends Subscription {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when
@@ -15515,7 +15515,7 @@ abstract class _Subscription extends Subscription {
   @override
 
   /// [language] The base language in which the resource is written.
-   FhirCode? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] ("_language") Extensions for language
@@ -15554,7 +15554,7 @@ abstract class _Subscription extends Subscription {
   @override
 
   /// [status] The status of the subscription, which marks the server state for managing the subscription.
-   FhirCode? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status
@@ -15619,7 +15619,7 @@ abstract class _Subscription extends Subscription {
   @override
 
   /// [heartbeatPeriod] If present,  a 'hearbeat" notification (keepalive) is sent via this channel with an the interval period equal to this elements integer value in seconds.    If not present, a heartbeat notification is not sent.
-  UnsignedInt? get heartbeatPeriod;
+  FhirUnsignedInt? get heartbeatPeriod;
   @override
 
   /// [heartbeatPeriodElement] ("_heartbeatPeriod") Extensions for heartbeatPeriod
@@ -15628,7 +15628,7 @@ abstract class _Subscription extends Subscription {
   @override
 
   /// [timeout] If present, the maximum amount of time a server will allow before failing a notification attempt.
-  UnsignedInt? get timeout;
+  FhirUnsignedInt? get timeout;
   @override
 
   /// [timeoutElement] ("_timeout") Extensions for timeout
@@ -15637,7 +15637,7 @@ abstract class _Subscription extends Subscription {
   @override
 
   /// [contentType] The mime type to send the payload in - either application/fhir+xml, or application/fhir+json. The MIME types "text/plain" and "text/html" may also be used for Email subscriptions.
-   FhirCode? get contentType;
+  FhirCode? get contentType;
   @override
 
   /// [contentTypeElement] ("_contentType") Extensions for contentType
@@ -15646,7 +15646,7 @@ abstract class _Subscription extends Subscription {
   @override
 
   /// [content] How much of the resource content to deliver in the notification payload. The choices are an empty payload, only the resource id, or the full resource content.
-   FhirCode? get content;
+  FhirCode? get content;
   @override
 
   /// [contentElement] ("_content") Extensions for content
@@ -15655,7 +15655,7 @@ abstract class _Subscription extends Subscription {
   @override
 
   /// [maxCount] If present, the maximum number of triggering resources that will be included in a notification bundle (e.g., a server will not include more than this number of trigger resources in a single notification).  Note that this is not a strict limit on the number of entries in a bundle, as dependent resources can be included.
-  PositiveInt? get maxCount;
+  FhirPositiveInt? get maxCount;
   @override
 
   /// [maxCountElement] ("_maxCount") Extensions for maxCount
@@ -15716,7 +15716,7 @@ mixin _$SubscriptionFilterBy {
   Element? get filterParameterElement => throw _privateConstructorUsedError;
 
   /// [modifier] Operator to apply when determining matches (Search Modifiers), from the list of allowed modifiers for this filter in the relevant SubscriptionTopic.
-   FhirCode? get modifier => throw _privateConstructorUsedError;
+  FhirCode? get modifier => throw _privateConstructorUsedError;
 
   /// [modifierElement] ("_modifier") Extensions for modifier
   @JsonKey(name: '_modifier')
@@ -15749,7 +15749,7 @@ abstract class $SubscriptionFilterByCopyWith<$Res> {
       @JsonKey(name: '_resourceType') Element? resourceTypeElement,
       String? filterParameter,
       @JsonKey(name: '_filterParameter') Element? filterParameterElement,
-       FhirCode? modifier,
+      FhirCode? modifier,
       @JsonKey(name: '_modifier') Element? modifierElement,
       String? value,
       @JsonKey(name: '_value') Element? valueElement});
@@ -15818,7 +15818,7 @@ class _$SubscriptionFilterByCopyWithImpl<$Res,
       modifier: freezed == modifier
           ? _value.modifier
           : modifier // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       modifierElement: freezed == modifierElement
           ? _value.modifierElement
           : modifierElement // ignore: cast_nullable_to_non_nullable
@@ -15899,7 +15899,7 @@ abstract class _$$_SubscriptionFilterByCopyWith<$Res>
       @JsonKey(name: '_resourceType') Element? resourceTypeElement,
       String? filterParameter,
       @JsonKey(name: '_filterParameter') Element? filterParameterElement,
-       FhirCode? modifier,
+      FhirCode? modifier,
       @JsonKey(name: '_modifier') Element? modifierElement,
       String? value,
       @JsonKey(name: '_value') Element? valueElement});
@@ -15969,7 +15969,7 @@ class __$$_SubscriptionFilterByCopyWithImpl<$Res>
       modifier: freezed == modifier
           ? _value.modifier
           : modifier // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       modifierElement: freezed == modifierElement
           ? _value.modifierElement
           : modifierElement // ignore: cast_nullable_to_non_nullable
@@ -16093,7 +16093,7 @@ class _$_SubscriptionFilterBy extends _SubscriptionFilterBy {
 
   /// [modifier] Operator to apply when determining matches (Search Modifiers), from the list of allowed modifiers for this filter in the relevant SubscriptionTopic.
   @override
-  final  FhirCode? modifier;
+  final FhirCode? modifier;
 
   /// [modifierElement] ("_modifier") Extensions for modifier
   @override
@@ -16184,7 +16184,7 @@ abstract class _SubscriptionFilterBy extends SubscriptionFilterBy {
       final String? filterParameter,
       @JsonKey(name: '_filterParameter')
           final Element? filterParameterElement,
-      final  FhirCode? modifier,
+      final FhirCode? modifier,
       @JsonKey(name: '_modifier')
           final Element? modifierElement,
       final String? value,
@@ -16246,7 +16246,7 @@ abstract class _SubscriptionFilterBy extends SubscriptionFilterBy {
   @override
 
   /// [modifier] Operator to apply when determining matches (Search Modifiers), from the list of allowed modifiers for this filter in the relevant SubscriptionTopic.
-   FhirCode? get modifier;
+  FhirCode? get modifier;
   @override
 
   /// [modifierElement] ("_modifier") Extensions for modifier
@@ -16284,7 +16284,7 @@ mixin _$SubscriptionStatus {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -16297,7 +16297,7 @@ mixin _$SubscriptionStatus {
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-   FhirCode? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
@@ -16318,14 +16318,14 @@ mixin _$SubscriptionStatus {
       throw _privateConstructorUsedError;
 
   /// [status] The status of the subscription, which marks the server state for managing the subscription.
-   FhirCode? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
 
   /// [type] The type of event being conveyed with this notificaiton.
-   FhirCode? get type => throw _privateConstructorUsedError;
+  FhirCode? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] ("_type") Extensions for type
   @JsonKey(name: '_type')
@@ -16348,7 +16348,7 @@ mixin _$SubscriptionStatus {
   Reference get subscription => throw _privateConstructorUsedError;
 
   /// [topic] The reference to the SubscriptionTopic for the Subscription which generated this notification.
-   FhirCanonical? get topic => throw _privateConstructorUsedError;
+  FhirCanonical? get topic => throw _privateConstructorUsedError;
 
   /// [error] A record of errors that occurred when the server processed a notification.
   List<CodeableConcept>? get error => throw _privateConstructorUsedError;
@@ -16369,11 +16369,11 @@ abstract class $SubscriptionStatusCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.SubscriptionStatus)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-       FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -16381,10 +16381,10 @@ abstract class $SubscriptionStatusCopyWith<$Res> {
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-       FhirCode? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-       FhirCode? type,
+      FhirCode? type,
       @JsonKey(name: '_type')
           Element? typeElement,
       FhirInteger64? eventsSinceSubscriptionStart,
@@ -16392,7 +16392,7 @@ abstract class $SubscriptionStatusCopyWith<$Res> {
           Element? eventsSinceSubscriptionStartElement,
       List<SubscriptionStatusNotificationEvent>? notificationEvent,
       Reference subscription,
-       FhirCanonical? topic,
+      FhirCanonical? topic,
       List<CodeableConcept>? error});
 
   $MetaCopyWith<$Res>? get meta;
@@ -16464,7 +16464,7 @@ class _$SubscriptionStatusCopyWithImpl<$Res, $Val extends SubscriptionStatus>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -16488,7 +16488,7 @@ class _$SubscriptionStatusCopyWithImpl<$Res, $Val extends SubscriptionStatus>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -16496,7 +16496,7 @@ class _$SubscriptionStatusCopyWithImpl<$Res, $Val extends SubscriptionStatus>
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       typeElement: freezed == typeElement
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -16521,7 +16521,7 @@ class _$SubscriptionStatusCopyWithImpl<$Res, $Val extends SubscriptionStatus>
       topic: freezed == topic
           ? _value.topic
           : topic // ignore: cast_nullable_to_non_nullable
-              as  FhirCanonical?,
+              as FhirCanonical?,
       error: freezed == error
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
@@ -16636,11 +16636,11 @@ abstract class _$$_SubscriptionStatusCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R5ResourceType.SubscriptionStatus)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-       FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -16648,10 +16648,10 @@ abstract class _$$_SubscriptionStatusCopyWith<$Res>
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-       FhirCode? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-       FhirCode? type,
+      FhirCode? type,
       @JsonKey(name: '_type')
           Element? typeElement,
       FhirInteger64? eventsSinceSubscriptionStart,
@@ -16659,7 +16659,7 @@ abstract class _$$_SubscriptionStatusCopyWith<$Res>
           Element? eventsSinceSubscriptionStartElement,
       List<SubscriptionStatusNotificationEvent>? notificationEvent,
       Reference subscription,
-       FhirCanonical? topic,
+      FhirCanonical? topic,
       List<CodeableConcept>? error});
 
   @override
@@ -16737,7 +16737,7 @@ class __$$_SubscriptionStatusCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -16761,7 +16761,7 @@ class __$$_SubscriptionStatusCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -16769,7 +16769,7 @@ class __$$_SubscriptionStatusCopyWithImpl<$Res>
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       typeElement: freezed == typeElement
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -16794,7 +16794,7 @@ class __$$_SubscriptionStatusCopyWithImpl<$Res>
       topic: freezed == topic
           ? _value.topic
           : topic // ignore: cast_nullable_to_non_nullable
-              as  FhirCanonical?,
+              as FhirCanonical?,
       error: freezed == error
           ? _value._error
           : error // ignore: cast_nullable_to_non_nullable
@@ -16853,7 +16853,7 @@ class _$_SubscriptionStatus extends _SubscriptionStatus {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -16875,7 +16875,7 @@ class _$_SubscriptionStatus extends _SubscriptionStatus {
 
   /// [language] The base language in which the resource is written.
   @override
-  final  FhirCode? language;
+  final FhirCode? language;
 
   /// [languageElement] ("_language") Extensions for language
   @override
@@ -16929,7 +16929,7 @@ class _$_SubscriptionStatus extends _SubscriptionStatus {
 
   /// [status] The status of the subscription, which marks the server state for managing the subscription.
   @override
-  final  FhirCode? status;
+  final FhirCode? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -16938,7 +16938,7 @@ class _$_SubscriptionStatus extends _SubscriptionStatus {
 
   /// [type] The type of event being conveyed with this notificaiton.
   @override
-  final  FhirCode? type;
+  final FhirCode? type;
 
   /// [typeElement] ("_type") Extensions for type
   @override
@@ -16974,7 +16974,7 @@ class _$_SubscriptionStatus extends _SubscriptionStatus {
 
   /// [topic] The reference to the SubscriptionTopic for the Subscription which generated this notification.
   @override
-  final  FhirCanonical? topic;
+  final FhirCanonical? topic;
 
   /// [error] A record of errors that occurred when the server processed a notification.
   final List<CodeableConcept>? _error;
@@ -17086,12 +17086,12 @@ abstract class _SubscriptionStatus extends SubscriptionStatus {
   factory _SubscriptionStatus(
       {@JsonKey(unknownEnumValue: R5ResourceType.SubscriptionStatus)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final  FhirCode? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -17099,10 +17099,10 @@ abstract class _SubscriptionStatus extends SubscriptionStatus {
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final  FhirCode? status,
+      final FhirCode? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
-      final  FhirCode? type,
+      final FhirCode? type,
       @JsonKey(name: '_type')
           final Element? typeElement,
       final Integer64? eventsSinceSubscriptionStart,
@@ -17110,7 +17110,7 @@ abstract class _SubscriptionStatus extends SubscriptionStatus {
           final Element? eventsSinceSubscriptionStartElement,
       final List<SubscriptionStatusNotificationEvent>? notificationEvent,
       required final Reference subscription,
-      final  FhirCanonical? topic,
+      final FhirCanonical? topic,
       final List<CodeableConcept>? error}) = _$_SubscriptionStatus;
   _SubscriptionStatus._() : super._();
 
@@ -17132,7 +17132,7 @@ abstract class _SubscriptionStatus extends SubscriptionStatus {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when
@@ -17148,7 +17148,7 @@ abstract class _SubscriptionStatus extends SubscriptionStatus {
   @override
 
   /// [language] The base language in which the resource is written.
-   FhirCode? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] ("_language") Extensions for language
@@ -17174,7 +17174,7 @@ abstract class _SubscriptionStatus extends SubscriptionStatus {
   @override
 
   /// [status] The status of the subscription, which marks the server state for managing the subscription.
-   FhirCode? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status
@@ -17183,7 +17183,7 @@ abstract class _SubscriptionStatus extends SubscriptionStatus {
   @override
 
   /// [type] The type of event being conveyed with this notificaiton.
-   FhirCode? get type;
+  FhirCode? get type;
   @override
 
   /// [typeElement] ("_type") Extensions for type
@@ -17209,7 +17209,7 @@ abstract class _SubscriptionStatus extends SubscriptionStatus {
   @override
 
   /// [topic] The reference to the SubscriptionTopic for the Subscription which generated this notification.
-   FhirCanonical? get topic;
+  FhirCanonical? get topic;
   @override
 
   /// [error] A record of errors that occurred when the server processed a notification.
@@ -17780,7 +17780,7 @@ mixin _$SubscriptionTopic {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -17793,7 +17793,7 @@ mixin _$SubscriptionTopic {
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-   FhirCode? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
@@ -17856,14 +17856,14 @@ mixin _$SubscriptionTopic {
   Element? get titleElement => throw _privateConstructorUsedError;
 
   /// [status] The current state of the SubscriptionTopic.
-   FhirCode? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
 
   /// [experimental] A flag to indicate that this TopSubscriptionTopicic is authored for testing purposes (or education/evaluation/marketing), and is not intended to be used for genuine usage.
-   FhirBoolean? get experimental => throw _privateConstructorUsedError;
+  FhirBoolean? get experimental => throw _privateConstructorUsedError;
 
   /// [experimentalElement] ("_experimental") Extensions for experimental
   @JsonKey(name: '_experimental')
@@ -17921,7 +17921,7 @@ mixin _$SubscriptionTopic {
   Element? get copyrightLabelElement => throw _privateConstructorUsedError;
 
   /// [derivedFrom] The canonical URL pointing to another FHIR-defined SubscriptionTopic that is adhered to in whole or in part by this SubscriptionTopic.
-  List<Canonical>? get derivedFrom => throw _privateConstructorUsedError;
+  List<FhirCanonical>? get derivedFrom => throw _privateConstructorUsedError;
 
   /// [approvalDate] The date on which the asset content was approved by the publisher. Approval happens once when the content is officially approved for usage.
   FhirDate? get approvalDate => throw _privateConstructorUsedError;
@@ -17972,11 +17972,11 @@ abstract class $SubscriptionTopicCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.SubscriptionTopic)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-       FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -18001,10 +18001,10 @@ abstract class $SubscriptionTopicCopyWith<$Res> {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-       FhirCode? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-       FhirBoolean? experimental,
+      FhirBoolean? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
       FhirDateTime? date,
@@ -18028,7 +18028,7 @@ abstract class $SubscriptionTopicCopyWith<$Res> {
       String? copyrightLabel,
       @JsonKey(name: '_copyrightLabel')
           Element? copyrightLabelElement,
-      List<Canonical>? derivedFrom,
+      List<FhirCanonical>? derivedFrom,
       FhirDate? approvalDate,
       @JsonKey(name: '_approvalDate')
           Element? approvalDateElement,
@@ -18154,7 +18154,7 @@ class _$SubscriptionTopicCopyWithImpl<$Res, $Val extends SubscriptionTopic>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -18226,7 +18226,7 @@ class _$SubscriptionTopicCopyWithImpl<$Res, $Val extends SubscriptionTopic>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -18234,7 +18234,7 @@ class _$SubscriptionTopicCopyWithImpl<$Res, $Val extends SubscriptionTopic>
       experimental: freezed == experimental
           ? _value.experimental
           : experimental // ignore: cast_nullable_to_non_nullable
-              as  FhirBoolean?,
+              as FhirBoolean?,
       experimentalElement: freezed == experimentalElement
           ? _value.experimentalElement
           : experimentalElement // ignore: cast_nullable_to_non_nullable
@@ -18302,7 +18302,7 @@ class _$SubscriptionTopicCopyWithImpl<$Res, $Val extends SubscriptionTopic>
       derivedFrom: freezed == derivedFrom
           ? _value.derivedFrom
           : derivedFrom // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       approvalDate: freezed == approvalDate
           ? _value.approvalDate
           : approvalDate // ignore: cast_nullable_to_non_nullable
@@ -18609,11 +18609,11 @@ abstract class _$$_SubscriptionTopicCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R5ResourceType.SubscriptionTopic)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-       FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -18638,10 +18638,10 @@ abstract class _$$_SubscriptionTopicCopyWith<$Res>
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-       FhirCode? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-       FhirBoolean? experimental,
+      FhirBoolean? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
       FhirDateTime? date,
@@ -18665,7 +18665,7 @@ abstract class _$$_SubscriptionTopicCopyWith<$Res>
       String? copyrightLabel,
       @JsonKey(name: '_copyrightLabel')
           Element? copyrightLabelElement,
-      List<Canonical>? derivedFrom,
+      List<FhirCanonical>? derivedFrom,
       FhirDate? approvalDate,
       @JsonKey(name: '_approvalDate')
           Element? approvalDateElement,
@@ -18810,7 +18810,7 @@ class __$$_SubscriptionTopicCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -18882,7 +18882,7 @@ class __$$_SubscriptionTopicCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -18890,7 +18890,7 @@ class __$$_SubscriptionTopicCopyWithImpl<$Res>
       experimental: freezed == experimental
           ? _value.experimental
           : experimental // ignore: cast_nullable_to_non_nullable
-              as  FhirBoolean?,
+              as FhirBoolean?,
       experimentalElement: freezed == experimentalElement
           ? _value.experimentalElement
           : experimentalElement // ignore: cast_nullable_to_non_nullable
@@ -18958,7 +18958,7 @@ class __$$_SubscriptionTopicCopyWithImpl<$Res>
       derivedFrom: freezed == derivedFrom
           ? _value._derivedFrom
           : derivedFrom // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       approvalDate: freezed == approvalDate
           ? _value.approvalDate
           : approvalDate // ignore: cast_nullable_to_non_nullable
@@ -19062,7 +19062,7 @@ class _$_SubscriptionTopic extends _SubscriptionTopic {
       this.copyrightLabel,
       @JsonKey(name: '_copyrightLabel')
           this.copyrightLabelElement,
-      final List<Canonical>? derivedFrom,
+      final List<FhirCanonical>? derivedFrom,
       this.approvalDate,
       @JsonKey(name: '_approvalDate')
           this.approvalDateElement,
@@ -19099,7 +19099,7 @@ class _$_SubscriptionTopic extends _SubscriptionTopic {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -19121,7 +19121,7 @@ class _$_SubscriptionTopic extends _SubscriptionTopic {
 
   /// [language] The base language in which the resource is written.
   @override
-  final  FhirCode? language;
+  final FhirCode? language;
 
   /// [languageElement] ("_language") Extensions for language
   @override
@@ -19237,7 +19237,7 @@ class _$_SubscriptionTopic extends _SubscriptionTopic {
 
   /// [status] The current state of the SubscriptionTopic.
   @override
-  final  FhirCode? status;
+  final FhirCode? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -19246,7 +19246,7 @@ class _$_SubscriptionTopic extends _SubscriptionTopic {
 
   /// [experimental] A flag to indicate that this TopSubscriptionTopicic is authored for testing purposes (or education/evaluation/marketing), and is not intended to be used for genuine usage.
   @override
-  final  FhirBoolean? experimental;
+  final FhirBoolean? experimental;
 
   /// [experimentalElement] ("_experimental") Extensions for experimental
   @override
@@ -19347,11 +19347,11 @@ class _$_SubscriptionTopic extends _SubscriptionTopic {
   final Element? copyrightLabelElement;
 
   /// [derivedFrom] The canonical URL pointing to another FHIR-defined SubscriptionTopic that is adhered to in whole or in part by this SubscriptionTopic.
-  final List<Canonical>? _derivedFrom;
+  final List<FhirCanonical>? _derivedFrom;
 
   /// [derivedFrom] The canonical URL pointing to another FHIR-defined SubscriptionTopic that is adhered to in whole or in part by this SubscriptionTopic.
   @override
-  List<Canonical>? get derivedFrom {
+  List<FhirCanonical>? get derivedFrom {
     final value = _derivedFrom;
     if (value == null) return null;
     if (_derivedFrom is EqualUnmodifiableListView) return _derivedFrom;
@@ -19612,12 +19612,12 @@ abstract class _SubscriptionTopic extends SubscriptionTopic {
   factory _SubscriptionTopic(
           {@JsonKey(unknownEnumValue: R5ResourceType.SubscriptionTopic)
               final R5ResourceType resourceType,
-          final Id? id,
+          final FhirId? id,
           final Meta? meta,
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
               final Element? implicitRulesElement,
-          final  FhirCode? language,
+          final FhirCode? language,
           @JsonKey(name: '_language')
               final Element? languageElement,
           final Narrative? text,
@@ -19642,10 +19642,10 @@ abstract class _SubscriptionTopic extends SubscriptionTopic {
           final String? title,
           @JsonKey(name: '_title')
               final Element? titleElement,
-          final  FhirCode? status,
+          final FhirCode? status,
           @JsonKey(name: '_status')
               final Element? statusElement,
-          final  FhirBoolean? experimental,
+          final FhirBoolean? experimental,
           @JsonKey(name: '_experimental')
               final Element? experimentalElement,
           final FhirDateTime? date,
@@ -19669,7 +19669,7 @@ abstract class _SubscriptionTopic extends SubscriptionTopic {
           final String? copyrightLabel,
           @JsonKey(name: '_copyrightLabel')
               final Element? copyrightLabelElement,
-          final List<Canonical>? derivedFrom,
+          final List<FhirCanonical>? derivedFrom,
           final Date? approvalDate,
           @JsonKey(name: '_approvalDate')
               final Element? approvalDateElement,
@@ -19702,7 +19702,7 @@ abstract class _SubscriptionTopic extends SubscriptionTopic {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when
@@ -19718,7 +19718,7 @@ abstract class _SubscriptionTopic extends SubscriptionTopic {
   @override
 
   /// [language] The base language in which the resource is written.
-   FhirCode? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] ("_language") Extensions for language
@@ -19797,7 +19797,7 @@ abstract class _SubscriptionTopic extends SubscriptionTopic {
   @override
 
   /// [status] The current state of the SubscriptionTopic.
-   FhirCode? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status
@@ -19806,7 +19806,7 @@ abstract class _SubscriptionTopic extends SubscriptionTopic {
   @override
 
   /// [experimental] A flag to indicate that this TopSubscriptionTopicic is authored for testing purposes (or education/evaluation/marketing), and is not intended to be used for genuine usage.
-   FhirBoolean? get experimental;
+  FhirBoolean? get experimental;
   @override
 
   /// [experimentalElement] ("_experimental") Extensions for experimental
@@ -19881,7 +19881,7 @@ abstract class _SubscriptionTopic extends SubscriptionTopic {
   @override
 
   /// [derivedFrom] The canonical URL pointing to another FHIR-defined SubscriptionTopic that is adhered to in whole or in part by this SubscriptionTopic.
-  List<Canonical>? get derivedFrom;
+  List<FhirCanonical>? get derivedFrom;
   @override
 
   /// [approvalDate] The date on which the asset content was approved by the publisher. Approval happens once when the content is officially approved for usage.
@@ -19976,7 +19976,8 @@ mixin _$SubscriptionTopicResourceTrigger {
   Element? get resourceElement => throw _privateConstructorUsedError;
 
   /// [supportedInteraction] The FHIR RESTful interaction which can be used to trigger a notification for the SubscriptionTopic. Multiple values are considered OR joined (e.g., CREATE or UPDATE).
-  List<Code>? get supportedInteraction => throw _privateConstructorUsedError;
+  List<FhirCode>? get supportedInteraction =>
+      throw _privateConstructorUsedError;
 
   /// [supportedInteractionElement] ("_supportedInteraction") Extensions for supportedInteraction
   @JsonKey(name: '_supportedInteraction')
@@ -20019,7 +20020,7 @@ abstract class $SubscriptionTopicResourceTriggerCopyWith<$Res> {
       FhirUri? resource,
       @JsonKey(name: '_resource')
           Element? resourceElement,
-      List<Code>? supportedInteraction,
+      List<FhirCode>? supportedInteraction,
       @JsonKey(name: '_supportedInteraction')
           List<Element>? supportedInteractionElement,
       SubscriptionTopicQueryCriteria? queryCriteria,
@@ -20092,7 +20093,7 @@ class _$SubscriptionTopicResourceTriggerCopyWithImpl<$Res,
       supportedInteraction: freezed == supportedInteraction
           ? _value.supportedInteraction
           : supportedInteraction // ignore: cast_nullable_to_non_nullable
-              as List<Code>?,
+              as List<FhirCode>?,
       supportedInteractionElement: freezed == supportedInteractionElement
           ? _value.supportedInteractionElement
           : supportedInteractionElement // ignore: cast_nullable_to_non_nullable
@@ -20182,7 +20183,7 @@ abstract class _$$_SubscriptionTopicResourceTriggerCopyWith<$Res>
       FhirUri? resource,
       @JsonKey(name: '_resource')
           Element? resourceElement,
-      List<Code>? supportedInteraction,
+      List<FhirCode>? supportedInteraction,
       @JsonKey(name: '_supportedInteraction')
           List<Element>? supportedInteractionElement,
       SubscriptionTopicQueryCriteria? queryCriteria,
@@ -20258,7 +20259,7 @@ class __$$_SubscriptionTopicResourceTriggerCopyWithImpl<$Res>
       supportedInteraction: freezed == supportedInteraction
           ? _value._supportedInteraction
           : supportedInteraction // ignore: cast_nullable_to_non_nullable
-              as List<Code>?,
+              as List<FhirCode>?,
       supportedInteractionElement: freezed == supportedInteractionElement
           ? _value._supportedInteractionElement
           : supportedInteractionElement // ignore: cast_nullable_to_non_nullable
@@ -20294,7 +20295,7 @@ class _$_SubscriptionTopicResourceTrigger
       this.resource,
       @JsonKey(name: '_resource')
           this.resourceElement,
-      final List<Code>? supportedInteraction,
+      final List<FhirCode>? supportedInteraction,
       @JsonKey(name: '_supportedInteraction')
           final List<Element>? supportedInteractionElement,
       this.queryCriteria,
@@ -20395,11 +20396,11 @@ class _$_SubscriptionTopicResourceTrigger
   final Element? resourceElement;
 
   /// [supportedInteraction] The FHIR RESTful interaction which can be used to trigger a notification for the SubscriptionTopic. Multiple values are considered OR joined (e.g., CREATE or UPDATE).
-  final List<Code>? _supportedInteraction;
+  final List<FhirCode>? _supportedInteraction;
 
   /// [supportedInteraction] The FHIR RESTful interaction which can be used to trigger a notification for the SubscriptionTopic. Multiple values are considered OR joined (e.g., CREATE or UPDATE).
   @override
-  List<Code>? get supportedInteraction {
+  List<FhirCode>? get supportedInteraction {
     final value = _supportedInteraction;
     if (value == null) return null;
     if (_supportedInteraction is EqualUnmodifiableListView)
@@ -20519,7 +20520,7 @@ abstract class _SubscriptionTopicResourceTrigger
           final FhirUri? resource,
           @JsonKey(name: '_resource')
               final Element? resourceElement,
-          final List<Code>? supportedInteraction,
+          final List<FhirCode>? supportedInteraction,
           @JsonKey(name: '_supportedInteraction')
               final List<Element>? supportedInteractionElement,
           final SubscriptionTopicQueryCriteria? queryCriteria,
@@ -20583,7 +20584,7 @@ abstract class _SubscriptionTopicResourceTrigger
   @override
 
   /// [supportedInteraction] The FHIR RESTful interaction which can be used to trigger a notification for the SubscriptionTopic. Multiple values are considered OR joined (e.g., CREATE or UPDATE).
-  List<Code>? get supportedInteraction;
+  List<FhirCode>? get supportedInteraction;
   @override
 
   /// [supportedInteractionElement] ("_supportedInteraction") Extensions for supportedInteraction
@@ -20652,7 +20653,7 @@ mixin _$SubscriptionTopicQueryCriteria {
   Element? get previousElement => throw _privateConstructorUsedError;
 
   /// [resultForCreate] For "create" interactions, should the "previous" criteria count as an automatic pass or an automatic fail.
-   FhirCode? get resultForCreate => throw _privateConstructorUsedError;
+  FhirCode? get resultForCreate => throw _privateConstructorUsedError;
 
   /// [resultForCreateElement] ("_resultForCreate") Extensions for resultForCreate
   @JsonKey(name: '_resultForCreate')
@@ -20666,14 +20667,14 @@ mixin _$SubscriptionTopicQueryCriteria {
   Element? get currentElement => throw _privateConstructorUsedError;
 
   /// [resultForDelete] For "delete" interactions, should the "current" criteria count as an automatic pass or an automatic fail.
-   FhirCode? get resultForDelete => throw _privateConstructorUsedError;
+  FhirCode? get resultForDelete => throw _privateConstructorUsedError;
 
   /// [resultForDeleteElement] ("_resultForDelete") Extensions for resultForDelete
   @JsonKey(name: '_resultForDelete')
   Element? get resultForDeleteElement => throw _privateConstructorUsedError;
 
   /// [requireBoth] If set to true, both current and previous criteria must evaluate true to  trigger a notification for this topic.  Otherwise a notification for this topic will be triggered if either one evaluates to true.
-   FhirBoolean? get requireBoth => throw _privateConstructorUsedError;
+  FhirBoolean? get requireBoth => throw _privateConstructorUsedError;
 
   /// [requireBothElement] ("_requireBoth") Extensions for requireBoth
   @JsonKey(name: '_requireBoth')
@@ -20699,13 +20700,13 @@ abstract class $SubscriptionTopicQueryCriteriaCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       String? previous,
       @JsonKey(name: '_previous') Element? previousElement,
-       FhirCode? resultForCreate,
+      FhirCode? resultForCreate,
       @JsonKey(name: '_resultForCreate') Element? resultForCreateElement,
       String? current,
       @JsonKey(name: '_current') Element? currentElement,
-       FhirCode? resultForDelete,
+      FhirCode? resultForDelete,
       @JsonKey(name: '_resultForDelete') Element? resultForDeleteElement,
-       FhirBoolean? requireBoth,
+      FhirBoolean? requireBoth,
       @JsonKey(name: '_requireBoth') Element? requireBothElement});
 
   $ElementCopyWith<$Res>? get previousElement;
@@ -20767,7 +20768,7 @@ class _$SubscriptionTopicQueryCriteriaCopyWithImpl<$Res,
       resultForCreate: freezed == resultForCreate
           ? _value.resultForCreate
           : resultForCreate // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       resultForCreateElement: freezed == resultForCreateElement
           ? _value.resultForCreateElement
           : resultForCreateElement // ignore: cast_nullable_to_non_nullable
@@ -20783,7 +20784,7 @@ class _$SubscriptionTopicQueryCriteriaCopyWithImpl<$Res,
       resultForDelete: freezed == resultForDelete
           ? _value.resultForDelete
           : resultForDelete // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       resultForDeleteElement: freezed == resultForDeleteElement
           ? _value.resultForDeleteElement
           : resultForDeleteElement // ignore: cast_nullable_to_non_nullable
@@ -20791,7 +20792,7 @@ class _$SubscriptionTopicQueryCriteriaCopyWithImpl<$Res,
       requireBoth: freezed == requireBoth
           ? _value.requireBoth
           : requireBoth // ignore: cast_nullable_to_non_nullable
-              as  FhirBoolean?,
+              as FhirBoolean?,
       requireBothElement: freezed == requireBothElement
           ? _value.requireBothElement
           : requireBothElement // ignore: cast_nullable_to_non_nullable
@@ -20875,13 +20876,13 @@ abstract class _$$_SubscriptionTopicQueryCriteriaCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       String? previous,
       @JsonKey(name: '_previous') Element? previousElement,
-       FhirCode? resultForCreate,
+      FhirCode? resultForCreate,
       @JsonKey(name: '_resultForCreate') Element? resultForCreateElement,
       String? current,
       @JsonKey(name: '_current') Element? currentElement,
-       FhirCode? resultForDelete,
+      FhirCode? resultForDelete,
       @JsonKey(name: '_resultForDelete') Element? resultForDeleteElement,
-       FhirBoolean? requireBoth,
+      FhirBoolean? requireBoth,
       @JsonKey(name: '_requireBoth') Element? requireBothElement});
 
   @override
@@ -20947,7 +20948,7 @@ class __$$_SubscriptionTopicQueryCriteriaCopyWithImpl<$Res>
       resultForCreate: freezed == resultForCreate
           ? _value.resultForCreate
           : resultForCreate // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       resultForCreateElement: freezed == resultForCreateElement
           ? _value.resultForCreateElement
           : resultForCreateElement // ignore: cast_nullable_to_non_nullable
@@ -20963,7 +20964,7 @@ class __$$_SubscriptionTopicQueryCriteriaCopyWithImpl<$Res>
       resultForDelete: freezed == resultForDelete
           ? _value.resultForDelete
           : resultForDelete // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       resultForDeleteElement: freezed == resultForDeleteElement
           ? _value.resultForDeleteElement
           : resultForDeleteElement // ignore: cast_nullable_to_non_nullable
@@ -20971,7 +20972,7 @@ class __$$_SubscriptionTopicQueryCriteriaCopyWithImpl<$Res>
       requireBoth: freezed == requireBoth
           ? _value.requireBoth
           : requireBoth // ignore: cast_nullable_to_non_nullable
-              as  FhirBoolean?,
+              as FhirBoolean?,
       requireBothElement: freezed == requireBothElement
           ? _value.requireBothElement
           : requireBothElement // ignore: cast_nullable_to_non_nullable
@@ -21082,7 +21083,7 @@ class _$_SubscriptionTopicQueryCriteria
 
   /// [resultForCreate] For "create" interactions, should the "previous" criteria count as an automatic pass or an automatic fail.
   @override
-  final  FhirCode? resultForCreate;
+  final FhirCode? resultForCreate;
 
   /// [resultForCreateElement] ("_resultForCreate") Extensions for resultForCreate
   @override
@@ -21100,7 +21101,7 @@ class _$_SubscriptionTopicQueryCriteria
 
   /// [resultForDelete] For "delete" interactions, should the "current" criteria count as an automatic pass or an automatic fail.
   @override
-  final  FhirCode? resultForDelete;
+  final FhirCode? resultForDelete;
 
   /// [resultForDeleteElement] ("_resultForDelete") Extensions for resultForDelete
   @override
@@ -21109,7 +21110,7 @@ class _$_SubscriptionTopicQueryCriteria
 
   /// [requireBoth] If set to true, both current and previous criteria must evaluate true to  trigger a notification for this topic.  Otherwise a notification for this topic will be triggered if either one evaluates to true.
   @override
-  final  FhirBoolean? requireBoth;
+  final FhirBoolean? requireBoth;
 
   /// [requireBothElement] ("_requireBoth") Extensions for requireBoth
   @override
@@ -21195,16 +21196,16 @@ abstract class _SubscriptionTopicQueryCriteria
           final String? previous,
           @JsonKey(name: '_previous')
               final Element? previousElement,
-          final  FhirCode? resultForCreate,
+          final FhirCode? resultForCreate,
           @JsonKey(name: '_resultForCreate')
               final Element? resultForCreateElement,
           final String? current,
           @JsonKey(name: '_current')
               final Element? currentElement,
-          final  FhirCode? resultForDelete,
+          final FhirCode? resultForDelete,
           @JsonKey(name: '_resultForDelete')
               final Element? resultForDeleteElement,
-          final  FhirBoolean? requireBoth,
+          final FhirBoolean? requireBoth,
           @JsonKey(name: '_requireBoth')
               final Element? requireBothElement}) =
       _$_SubscriptionTopicQueryCriteria;
@@ -21255,7 +21256,7 @@ abstract class _SubscriptionTopicQueryCriteria
   @override
 
   /// [resultForCreate] For "create" interactions, should the "previous" criteria count as an automatic pass or an automatic fail.
-   FhirCode? get resultForCreate;
+  FhirCode? get resultForCreate;
   @override
 
   /// [resultForCreateElement] ("_resultForCreate") Extensions for resultForCreate
@@ -21273,7 +21274,7 @@ abstract class _SubscriptionTopicQueryCriteria
   @override
 
   /// [resultForDelete] For "delete" interactions, should the "current" criteria count as an automatic pass or an automatic fail.
-   FhirCode? get resultForDelete;
+  FhirCode? get resultForDelete;
   @override
 
   /// [resultForDeleteElement] ("_resultForDelete") Extensions for resultForDelete
@@ -21282,7 +21283,7 @@ abstract class _SubscriptionTopicQueryCriteria
   @override
 
   /// [requireBoth] If set to true, both current and previous criteria must evaluate true to  trigger a notification for this topic.  Otherwise a notification for this topic will be triggered if either one evaluates to true.
-   FhirBoolean? get requireBoth;
+  FhirBoolean? get requireBoth;
   @override
 
   /// [requireBothElement] ("_requireBoth") Extensions for requireBoth
@@ -21853,7 +21854,7 @@ mixin _$SubscriptionTopicCanFilterBy {
   Element? get filterDefinitionElement => throw _privateConstructorUsedError;
 
   /// [modifier] Allowable operators to apply when determining matches (Search Modifiers).  If the filterParameter is a SearchParameter, this list of modifiers SHALL be a strict subset of the modifiers defined on that SearchParameter.
-  List<Code>? get modifier => throw _privateConstructorUsedError;
+  List<FhirCode>? get modifier => throw _privateConstructorUsedError;
 
   /// [modifierElement] ("_modifier") Extensions for modifier
   @JsonKey(name: '_modifier')
@@ -21885,7 +21886,7 @@ abstract class $SubscriptionTopicCanFilterByCopyWith<$Res> {
       @JsonKey(name: '_filterParameter') Element? filterParameterElement,
       FhirUri? filterDefinition,
       @JsonKey(name: '_filterDefinition') Element? filterDefinitionElement,
-      List<Code>? modifier,
+      List<FhirCode>? modifier,
       @JsonKey(name: '_modifier') List<Element>? modifierElement});
 
   $ElementCopyWith<$Res>? get descriptionElement;
@@ -21970,7 +21971,7 @@ class _$SubscriptionTopicCanFilterByCopyWithImpl<$Res,
       modifier: freezed == modifier
           ? _value.modifier
           : modifier // ignore: cast_nullable_to_non_nullable
-              as List<Code>?,
+              as List<FhirCode>?,
       modifierElement: freezed == modifierElement
           ? _value.modifierElement
           : modifierElement // ignore: cast_nullable_to_non_nullable
@@ -22048,7 +22049,7 @@ abstract class _$$_SubscriptionTopicCanFilterByCopyWith<$Res>
       @JsonKey(name: '_filterParameter') Element? filterParameterElement,
       FhirUri? filterDefinition,
       @JsonKey(name: '_filterDefinition') Element? filterDefinitionElement,
-      List<Code>? modifier,
+      List<FhirCode>? modifier,
       @JsonKey(name: '_modifier') List<Element>? modifierElement});
 
   @override
@@ -22136,7 +22137,7 @@ class __$$_SubscriptionTopicCanFilterByCopyWithImpl<$Res>
       modifier: freezed == modifier
           ? _value._modifier
           : modifier // ignore: cast_nullable_to_non_nullable
-              as List<Code>?,
+              as List<FhirCode>?,
       modifierElement: freezed == modifierElement
           ? _value._modifierElement
           : modifierElement // ignore: cast_nullable_to_non_nullable
@@ -22160,7 +22161,7 @@ class _$_SubscriptionTopicCanFilterBy extends _SubscriptionTopicCanFilterBy {
       @JsonKey(name: '_filterParameter') this.filterParameterElement,
       this.filterDefinition,
       @JsonKey(name: '_filterDefinition') this.filterDefinitionElement,
-      final List<Code>? modifier,
+      final List<FhirCode>? modifier,
       @JsonKey(name: '_modifier') final List<Element>? modifierElement})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -22273,11 +22274,11 @@ class _$_SubscriptionTopicCanFilterBy extends _SubscriptionTopicCanFilterBy {
   final Element? filterDefinitionElement;
 
   /// [modifier] Allowable operators to apply when determining matches (Search Modifiers).  If the filterParameter is a SearchParameter, this list of modifiers SHALL be a strict subset of the modifiers defined on that SearchParameter.
-  final List<Code>? _modifier;
+  final List<FhirCode>? _modifier;
 
   /// [modifier] Allowable operators to apply when determining matches (Search Modifiers).  If the filterParameter is a SearchParameter, this list of modifiers SHALL be a strict subset of the modifiers defined on that SearchParameter.
   @override
-  List<Code>? get modifier {
+  List<FhirCode>? get modifier {
     final value = _modifier;
     if (value == null) return null;
     if (_modifier is EqualUnmodifiableListView) return _modifier;
@@ -22388,7 +22389,7 @@ abstract class _SubscriptionTopicCanFilterBy
           final FhirUri? filterDefinition,
           @JsonKey(name: '_filterDefinition')
               final Element? filterDefinitionElement,
-          final List<Code>? modifier,
+          final List<FhirCode>? modifier,
           @JsonKey(name: '_modifier')
               final List<Element>? modifierElement}) =
       _$_SubscriptionTopicCanFilterBy;
@@ -22466,7 +22467,7 @@ abstract class _SubscriptionTopicCanFilterBy
   @override
 
   /// [modifier] Allowable operators to apply when determining matches (Search Modifiers).  If the filterParameter is a SearchParameter, this list of modifiers SHALL be a strict subset of the modifiers defined on that SearchParameter.
-  List<Code>? get modifier;
+  List<FhirCode>? get modifier;
   @override
 
   /// [modifierElement] ("_modifier") Extensions for modifier

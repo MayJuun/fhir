@@ -31,7 +31,7 @@ mixin _$ArtifactAssessment {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -156,7 +156,7 @@ abstract class $ArtifactAssessmentCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.ArtifactAssessment)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -593,7 +593,7 @@ abstract class _$$_ArtifactAssessmentCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R5ResourceType.ArtifactAssessment)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -919,7 +919,7 @@ class _$_ArtifactAssessment extends _ArtifactAssessment {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -1240,7 +1240,7 @@ abstract class _ArtifactAssessment extends ArtifactAssessment {
   factory _ArtifactAssessment(
       {@JsonKey(unknownEnumValue: R5ResourceType.ArtifactAssessment)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -1304,7 +1304,7 @@ abstract class _ArtifactAssessment extends ArtifactAssessment {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when
@@ -2267,7 +2267,7 @@ mixin _$Citation {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -2479,7 +2479,7 @@ abstract class $CitationCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.Citation)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -3170,7 +3170,7 @@ abstract class _$$_CitationCopyWith<$Res> implements $CitationCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.Citation)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -3717,7 +3717,7 @@ class _$_Citation extends _Citation {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -4324,7 +4324,7 @@ abstract class _Citation extends Citation {
   factory _Citation(
       {@JsonKey(unknownEnumValue: R5ResourceType.Citation)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -4419,7 +4419,7 @@ abstract class _Citation extends Citation {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when
@@ -13461,7 +13461,7 @@ mixin _$CitationEntry {
       throw _privateConstructorUsedError;
 
   /// [rankingOrder] Provides a numerical ranking to represent the degree of contributorship relative to other contributors, such as 1 for first author and 2 for second author.
-  PositiveInt? get rankingOrder => throw _privateConstructorUsedError;
+  FhirPositiveInt? get rankingOrder => throw _privateConstructorUsedError;
 
   /// [rankingOrderElement] ("_rankingOrder") Extensions for rankingOrder
   @JsonKey(name: '_rankingOrder')
@@ -13495,7 +13495,7 @@ abstract class $CitationEntryCopyWith<$Res> {
       FhirBoolean? correspondingContact,
       @JsonKey(name: '_correspondingContact')
           Element? correspondingContactElement,
-      PositiveInt? rankingOrder,
+      FhirPositiveInt? rankingOrder,
       @JsonKey(name: '_rankingOrder')
           Element? rankingOrderElement});
 
@@ -13675,7 +13675,7 @@ abstract class _$$_CitationEntryCopyWith<$Res>
       FhirBoolean? correspondingContact,
       @JsonKey(name: '_correspondingContact')
           Element? correspondingContactElement,
-      PositiveInt? rankingOrder,
+      FhirPositiveInt? rankingOrder,
       @JsonKey(name: '_rankingOrder')
           Element? rankingOrderElement});
 
@@ -14117,7 +14117,7 @@ abstract class _CitationEntry extends CitationEntry {
   @override
 
   /// [rankingOrder] Provides a numerical ranking to represent the degree of contributorship relative to other contributors, such as 1 for first author and 2 for second author.
-  PositiveInt? get rankingOrder;
+  FhirPositiveInt? get rankingOrder;
   @override
 
   /// [rankingOrderElement] ("_rankingOrder") Extensions for rankingOrder
@@ -15063,7 +15063,7 @@ mixin _$Evidence {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -15290,7 +15290,7 @@ abstract class $EvidenceCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.Evidence)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -16052,7 +16052,7 @@ abstract class _$$_EvidenceCopyWith<$Res> implements $EvidenceCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.Evidence)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -16644,7 +16644,7 @@ class _$_Evidence extends _Evidence {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -17282,7 +17282,7 @@ abstract class _Evidence extends Evidence {
   factory _Evidence(
       {@JsonKey(unknownEnumValue: R5ResourceType.Evidence)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -17384,7 +17384,7 @@ abstract class _Evidence extends Evidence {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when
@@ -18296,14 +18296,14 @@ mixin _$EvidenceStatistic {
   Quantity? get quantity => throw _privateConstructorUsedError;
 
   /// [numberOfEvents] The number of events associated with the statistic, where the unit of analysis is different from numberAffected, sampleSize.knownDataCount and sampleSize.numberOfParticipants.
-  UnsignedInt? get numberOfEvents => throw _privateConstructorUsedError;
+  FhirUnsignedInt? get numberOfEvents => throw _privateConstructorUsedError;
 
   /// [numberOfEventsElement] ("_numberOfEvents") Extensions for numberOfEvents
   @JsonKey(name: '_numberOfEvents')
   Element? get numberOfEventsElement => throw _privateConstructorUsedError;
 
   /// [numberAffected] The number of participants affected where the unit of analysis is the same as sampleSize.knownDataCount and sampleSize.numberOfParticipants.
-  UnsignedInt? get numberAffected => throw _privateConstructorUsedError;
+  FhirUnsignedInt? get numberAffected => throw _privateConstructorUsedError;
 
   /// [numberAffectedElement] ("_numberAffected") Extensions for numberAffected
   @JsonKey(name: '_numberAffected')
@@ -18342,9 +18342,9 @@ abstract class $EvidenceStatisticCopyWith<$Res> {
       CodeableConcept? statisticType,
       CodeableConcept? category,
       Quantity? quantity,
-      UnsignedInt? numberOfEvents,
+      FhirUnsignedInt? numberOfEvents,
       @JsonKey(name: '_numberOfEvents') Element? numberOfEventsElement,
-      UnsignedInt? numberAffected,
+      FhirUnsignedInt? numberAffected,
       @JsonKey(name: '_numberAffected') Element? numberAffectedElement,
       EvidenceSampleSize? sampleSize,
       List<EvidenceAttributeEstimate>? attributeEstimate,
@@ -18560,9 +18560,9 @@ abstract class _$$_EvidenceStatisticCopyWith<$Res>
       CodeableConcept? statisticType,
       CodeableConcept? category,
       Quantity? quantity,
-      UnsignedInt? numberOfEvents,
+      FhirUnsignedInt? numberOfEvents,
       @JsonKey(name: '_numberOfEvents') Element? numberOfEventsElement,
-      UnsignedInt? numberAffected,
+      FhirUnsignedInt? numberAffected,
       @JsonKey(name: '_numberAffected') Element? numberAffectedElement,
       EvidenceSampleSize? sampleSize,
       List<EvidenceAttributeEstimate>? attributeEstimate,
@@ -19020,7 +19020,7 @@ abstract class _EvidenceStatistic extends EvidenceStatistic {
   @override
 
   /// [numberOfEvents] The number of events associated with the statistic, where the unit of analysis is different from numberAffected, sampleSize.knownDataCount and sampleSize.numberOfParticipants.
-  UnsignedInt? get numberOfEvents;
+  FhirUnsignedInt? get numberOfEvents;
   @override
 
   /// [numberOfEventsElement] ("_numberOfEvents") Extensions for numberOfEvents
@@ -19029,7 +19029,7 @@ abstract class _EvidenceStatistic extends EvidenceStatistic {
   @override
 
   /// [numberAffected] The number of participants affected where the unit of analysis is the same as sampleSize.knownDataCount and sampleSize.numberOfParticipants.
-  UnsignedInt? get numberAffected;
+  FhirUnsignedInt? get numberAffected;
   @override
 
   /// [numberAffectedElement] ("_numberAffected") Extensions for numberAffected
@@ -19098,14 +19098,15 @@ mixin _$EvidenceSampleSize {
   List<Annotation>? get note => throw _privateConstructorUsedError;
 
   /// [numberOfStudies] Number of participants in the population.
-  UnsignedInt? get numberOfStudies => throw _privateConstructorUsedError;
+  FhirUnsignedInt? get numberOfStudies => throw _privateConstructorUsedError;
 
   /// [numberOfStudiesElement] ("_numberOfStudies") Extensions for numberOfStudies
   @JsonKey(name: '_numberOfStudies')
   Element? get numberOfStudiesElement => throw _privateConstructorUsedError;
 
   /// [numberOfParticipants] A human-readable string to clarify or explain concepts about the sample size.
-  UnsignedInt? get numberOfParticipants => throw _privateConstructorUsedError;
+  FhirUnsignedInt? get numberOfParticipants =>
+      throw _privateConstructorUsedError;
 
   /// [numberOfParticipantsElement] ("_numberOfParticipants") Extensions for numberOfParticipants
   @JsonKey(name: '_numberOfParticipants')
@@ -19113,7 +19114,7 @@ mixin _$EvidenceSampleSize {
       throw _privateConstructorUsedError;
 
   /// [knownDataCount] Number of participants with known results for measured variables.
-  UnsignedInt? get knownDataCount => throw _privateConstructorUsedError;
+  FhirUnsignedInt? get knownDataCount => throw _privateConstructorUsedError;
 
   /// [knownDataCountElement] ("_knownDataCount") Extensions for knownDataCount
   @JsonKey(name: '_knownDataCount')
@@ -19140,13 +19141,13 @@ abstract class $EvidenceSampleSizeCopyWith<$Res> {
       @JsonKey(name: '_description')
           Element? descriptionElement,
       List<Annotation>? note,
-      UnsignedInt? numberOfStudies,
+      FhirUnsignedInt? numberOfStudies,
       @JsonKey(name: '_numberOfStudies')
           Element? numberOfStudiesElement,
-      UnsignedInt? numberOfParticipants,
+      FhirUnsignedInt? numberOfParticipants,
       @JsonKey(name: '_numberOfParticipants')
           Element? numberOfParticipantsElement,
-      UnsignedInt? knownDataCount,
+      FhirUnsignedInt? knownDataCount,
       @JsonKey(name: '_knownDataCount')
           Element? knownDataCountElement});
 
@@ -19300,13 +19301,13 @@ abstract class _$$_EvidenceSampleSizeCopyWith<$Res>
       @JsonKey(name: '_description')
           Element? descriptionElement,
       List<Annotation>? note,
-      UnsignedInt? numberOfStudies,
+      FhirUnsignedInt? numberOfStudies,
       @JsonKey(name: '_numberOfStudies')
           Element? numberOfStudiesElement,
-      UnsignedInt? numberOfParticipants,
+      FhirUnsignedInt? numberOfParticipants,
       @JsonKey(name: '_numberOfParticipants')
           Element? numberOfParticipantsElement,
-      UnsignedInt? knownDataCount,
+      FhirUnsignedInt? knownDataCount,
       @JsonKey(name: '_knownDataCount')
           Element? knownDataCountElement});
 
@@ -19673,7 +19674,7 @@ abstract class _EvidenceSampleSize extends EvidenceSampleSize {
   @override
 
   /// [numberOfStudies] Number of participants in the population.
-  UnsignedInt? get numberOfStudies;
+  FhirUnsignedInt? get numberOfStudies;
   @override
 
   /// [numberOfStudiesElement] ("_numberOfStudies") Extensions for numberOfStudies
@@ -19682,7 +19683,7 @@ abstract class _EvidenceSampleSize extends EvidenceSampleSize {
   @override
 
   /// [numberOfParticipants] A human-readable string to clarify or explain concepts about the sample size.
-  UnsignedInt? get numberOfParticipants;
+  FhirUnsignedInt? get numberOfParticipants;
   @override
 
   /// [numberOfParticipantsElement] ("_numberOfParticipants") Extensions for numberOfParticipants
@@ -19691,7 +19692,7 @@ abstract class _EvidenceSampleSize extends EvidenceSampleSize {
   @override
 
   /// [knownDataCount] Number of participants with known results for measured variables.
-  UnsignedInt? get knownDataCount;
+  FhirUnsignedInt? get knownDataCount;
   @override
 
   /// [knownDataCountElement] ("_knownDataCount") Extensions for knownDataCount
@@ -21973,7 +21974,7 @@ mixin _$EvidenceReport {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -22195,7 +22196,7 @@ abstract class $EvidenceReportCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.EvidenceReport)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -22941,7 +22942,7 @@ abstract class _$$_EvidenceReportCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R5ResourceType.EvidenceReport)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -23516,7 +23517,7 @@ class _$_EvidenceReport extends _EvidenceReport {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -24134,7 +24135,7 @@ abstract class _EvidenceReport extends EvidenceReport {
   factory _EvidenceReport(
       {@JsonKey(unknownEnumValue: R5ResourceType.EvidenceReport)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -24234,7 +24235,7 @@ abstract class _EvidenceReport extends EvidenceReport {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when
@@ -27395,7 +27396,7 @@ mixin _$EvidenceVariable {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -27626,7 +27627,7 @@ abstract class $EvidenceVariableCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.EvidenceVariable)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -28391,7 +28392,7 @@ abstract class _$$_EvidenceVariableCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R5ResourceType.EvidenceVariable)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -28985,7 +28986,7 @@ class _$_EvidenceVariable extends _EvidenceVariable {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -29608,7 +29609,7 @@ abstract class _EvidenceVariable extends EvidenceVariable {
   factory _EvidenceVariable(
       {@JsonKey(unknownEnumValue: R5ResourceType.EvidenceVariable)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -29713,7 +29714,7 @@ abstract class _EvidenceVariable extends EvidenceVariable {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when
@@ -30623,7 +30624,7 @@ class _$_EvidenceVariableCharacteristic
 
   /// [linkId] Label used for when a characteristic refers to another characteristic.
   @override
-  final Id? linkId;
+  final FhirId? linkId;
 
   /// [linkIdElement] ("_linkId") Extensions for linkId
   @override
@@ -30679,7 +30680,7 @@ class _$_EvidenceVariableCharacteristic
 
   /// [definitionId] Defines the characteristic using id.
   @override
-  final Id? definitionId;
+  final FhirId? definitionId;
 
   /// [definitionIdElement] ("_definitionId") Extensions for definitionId
   @override
@@ -30802,7 +30803,7 @@ abstract class _EvidenceVariableCharacteristic
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final Id? linkId,
+      final FhirId? linkId,
       @JsonKey(name: '_linkId') final Element? linkIdElement,
       final String? description,
       @JsonKey(name: '_description') final Element? descriptionElement,
@@ -30813,7 +30814,7 @@ abstract class _EvidenceVariableCharacteristic
       final FhirCanonical? definitionCanonical,
       final CodeableConcept? definitionCodeableConcept,
       final Expression? definitionExpression,
-      final Id? definitionId,
+      final FhirId? definitionId,
       @JsonKey(name: '_definitionId') final Element? definitionIdElement,
       final EvidenceVariableDefinitionByTypeAndValue? definitionByTypeAndValue,
       final EvidenceVariableDefinitionByCombination? definitionByCombination,
@@ -31529,7 +31530,7 @@ class _$_EvidenceVariableDefinitionByTypeAndValue
 
   /// [valueId] Defines the characteristic when paired with characteristic.type.
   @override
-  final Id? valueId;
+  final FhirId? valueId;
 
   /// [valueIdElement] ("_valueId") Extensions for valueId
   @override
@@ -31627,7 +31628,7 @@ abstract class _EvidenceVariableDefinitionByTypeAndValue
           final Quantity? valueQuantity,
           final Range? valueRange,
           final Reference? valueReference,
-          final Id? valueId,
+          final FhirId? valueId,
           @JsonKey(name: '_valueId') final Element? valueIdElement,
           final CodeableConcept? offset}) =
       _$_EvidenceVariableDefinitionByTypeAndValue;
@@ -31768,7 +31769,7 @@ mixin _$EvidenceVariableDefinitionByCombination {
   Element? get codeElement => throw _privateConstructorUsedError;
 
   /// [threshold] Provides the value of "n" when "at-least" or "at-most" codes are used.
-  PositiveInt? get threshold => throw _privateConstructorUsedError;
+  FhirPositiveInt? get threshold => throw _privateConstructorUsedError;
 
   /// [thresholdElement] ("_threshold") Extensions for threshold
   @JsonKey(name: '_threshold')
@@ -31799,7 +31800,7 @@ abstract class $EvidenceVariableDefinitionByCombinationCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement,
-      PositiveInt? threshold,
+      FhirPositiveInt? threshold,
       @JsonKey(name: '_threshold') Element? thresholdElement,
       List<EvidenceVariableCharacteristic> characteristic});
 
@@ -31907,7 +31908,7 @@ abstract class _$$_EvidenceVariableDefinitionByCombinationCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement,
-      PositiveInt? threshold,
+      FhirPositiveInt? threshold,
       @JsonKey(name: '_threshold') Element? thresholdElement,
       List<EvidenceVariableCharacteristic> characteristic});
 
@@ -32207,7 +32208,7 @@ abstract class _EvidenceVariableDefinitionByCombination
   @override
 
   /// [threshold] Provides the value of "n" when "at-least" or "at-most" codes are used.
-  PositiveInt? get threshold;
+  FhirPositiveInt? get threshold;
   @override
 
   /// [thresholdElement] ("_threshold") Extensions for threshold
@@ -32773,7 +32774,7 @@ class _$_EvidenceVariableTimeFromEvent extends _EvidenceVariableTimeFromEvent {
 
   /// [eventId] The event used as a base point (reference point) in time.
   @override
-  final Id? eventId;
+  final FhirId? eventId;
 
   /// [eventIdElement] ("_eventId") Extensions for eventId
   @override
@@ -32871,7 +32872,7 @@ abstract class _EvidenceVariableTimeFromEvent
       final Reference? eventReference,
       final FhirDateTime? eventDateTime,
       @JsonKey(name: '_eventDateTime') final Element? eventDateTimeElement,
-      final Id? eventId,
+      final FhirId? eventId,
       @JsonKey(name: '_eventId') final Element? eventIdElement,
       final Quantity? quantity,
       final Range? range}) = _$_EvidenceVariableTimeFromEvent;

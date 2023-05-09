@@ -182,7 +182,7 @@ const _$Dstu2ResourceTypeEnumMap = {
   Dstu2ResourceType.Immunization: 'Immunization',
   Dstu2ResourceType.ImmunizationRecommendation: 'ImmunizationRecommendation',
   Dstu2ResourceType.ImplementationGuide: 'ImplementationGuide',
-  Dstu2ResourceType.List_: 'List',
+  Dstu2ResourceType.FhirList: 'List',
   Dstu2ResourceType.Location: 'Location',
   Dstu2ResourceType.Media: 'Media',
   Dstu2ResourceType.Medication: 'Medication',
@@ -955,11 +955,11 @@ Map<String, dynamic> _$$_DocumentReferenceContextRelatedToJson(
   return val;
 }
 
-_$_List_ _$$_List_FromJson(Map<String, dynamic> json) => _$_List_(
+_$_FhirList _$$_FhirListFromJson(Map<String, dynamic> json) => _$_FhirList(
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
-              unknownValue: Dstu2ResourceType.List_) ??
-          Dstu2ResourceType.List_,
+              unknownValue: Dstu2ResourceType.FhirList) ??
+          Dstu2ResourceType.FhirList,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1033,7 +1033,7 @@ _$_List_ _$$_List_FromJson(Map<String, dynamic> json) => _$_List_(
               json['emptyReason'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_List_ToJson(_$_List_ instance) {
+Map<String, dynamic> _$$_FhirListToJson(_$_FhirList instance) {
   final val = <String, dynamic>{
     'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };

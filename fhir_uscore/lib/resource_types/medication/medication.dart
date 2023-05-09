@@ -6,7 +6,7 @@ class MedicationUsCore extends Resource {
 
   factory MedicationUsCore({
     String? id,
-    Meta? meta,
+    FhirMeta? meta,
     Narrative? text,
     required CodeableConcept code,
   }) =>
@@ -19,7 +19,7 @@ class MedicationUsCore extends Resource {
   Medication _medication;
   Medication get value => _medication;
   String? get id => _medication.id;
-  Meta? get meta => _medication.meta;
+  FhirMeta? get meta => _medication.meta;
   Narrative? get text => _medication.text;
   CodeableConcept? get code => _medication.code;
 }

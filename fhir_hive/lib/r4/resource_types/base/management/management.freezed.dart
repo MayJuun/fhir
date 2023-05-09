@@ -3259,7 +3259,7 @@ mixin _$EncounterDiagnosis {
   CodeableConcept? get use => throw _privateConstructorUsedError;
 
   /// [rank] Ranking of the diagnosis (for each role type).
-  PositiveInt? get rank => throw _privateConstructorUsedError;
+  FhirPositiveInt? get rank => throw _privateConstructorUsedError;
 
   /// [rankElement] Extensions for rank
   @JsonKey(name: '_rank')
@@ -3283,7 +3283,7 @@ abstract class $EncounterDiagnosisCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       Reference condition,
       CodeableConcept? use,
-      PositiveInt? rank,
+      FhirPositiveInt? rank,
       @JsonKey(name: '_rank') Element? rankElement});
 
   $ReferenceCopyWith<$Res> get condition;
@@ -3391,7 +3391,7 @@ abstract class _$$_EncounterDiagnosisCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       Reference condition,
       CodeableConcept? use,
-      PositiveInt? rank,
+      FhirPositiveInt? rank,
       @JsonKey(name: '_rank') Element? rankElement});
 
   @override
@@ -3671,7 +3671,7 @@ abstract class _EncounterDiagnosis extends EncounterDiagnosis {
   @override
 
   /// [rank] Ranking of the diagnosis (for each role type).
-  PositiveInt? get rank;
+  FhirPositiveInt? get rank;
   @override
 
   /// [rankElement] Extensions for rank
@@ -6785,7 +6785,7 @@ mixin _$EpisodeOfCareDiagnosis {
   CodeableConcept? get role => throw _privateConstructorUsedError;
 
   /// [rank] Ranking of the diagnosis (for each role type).
-  PositiveInt? get rank => throw _privateConstructorUsedError;
+  FhirPositiveInt? get rank => throw _privateConstructorUsedError;
 
   /// [rankElement] Extensions for rank
   @JsonKey(name: '_rank')
@@ -6809,7 +6809,7 @@ abstract class $EpisodeOfCareDiagnosisCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       Reference condition,
       CodeableConcept? role,
-      PositiveInt? rank,
+      FhirPositiveInt? rank,
       @JsonKey(name: '_rank') Element? rankElement});
 
   $ReferenceCopyWith<$Res> get condition;
@@ -6918,7 +6918,7 @@ abstract class _$$_EpisodeOfCareDiagnosisCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       Reference condition,
       CodeableConcept? role,
-      PositiveInt? rank,
+      FhirPositiveInt? rank,
       @JsonKey(name: '_rank') Element? rankElement});
 
   @override
@@ -7195,7 +7195,7 @@ abstract class _EpisodeOfCareDiagnosis extends EpisodeOfCareDiagnosis {
   @override
 
   /// [rank] Ranking of the diagnosis (for each role type).
-  PositiveInt? get rank;
+  FhirPositiveInt? get rank;
   @override
 
   /// [rankElement] Extensions for rank

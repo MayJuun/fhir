@@ -23,7 +23,7 @@ mixin _$ResearchStudy {
   @JsonKey(unknownEnumValue: Stu3ResourceType.ResearchStudy)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
   FhirId? get id => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
@@ -80,7 +80,7 @@ abstract class $ResearchStudyCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ResearchStudy)
           Stu3ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -465,7 +465,7 @@ abstract class _$$_ResearchStudyCopyWith<$Res>
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ResearchStudy)
           Stu3ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -785,7 +785,7 @@ class _$_ResearchStudy extends _ResearchStudy {
   @JsonKey(unknownEnumValue: Stu3ResourceType.ResearchStudy)
   final Stu3ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -1107,7 +1107,7 @@ abstract class _ResearchStudy extends ResearchStudy {
   factory _ResearchStudy(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ResearchStudy)
           final Stu3ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -1157,7 +1157,7 @@ abstract class _ResearchStudy extends ResearchStudy {
   @override
   FhirId? get id;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
@@ -1521,7 +1521,7 @@ mixin _$ResearchSubject {
   @JsonKey(unknownEnumValue: Stu3ResourceType.ResearchSubject)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
   FhirId? get id => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
@@ -1565,7 +1565,7 @@ abstract class $ResearchSubjectCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ResearchSubject)
           Stu3ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -1883,7 +1883,7 @@ abstract class _$$_ResearchSubjectCopyWith<$Res>
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ResearchSubject)
           Stu3ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -2108,7 +2108,7 @@ class _$_ResearchSubject extends _ResearchSubject {
   @JsonKey(unknownEnumValue: Stu3ResourceType.ResearchSubject)
   final Stu3ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -2276,7 +2276,7 @@ abstract class _ResearchSubject extends ResearchSubject {
   factory _ResearchSubject(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ResearchSubject)
           final Stu3ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -2314,7 +2314,7 @@ abstract class _ResearchSubject extends ResearchSubject {
   @override
   FhirId? get id;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override

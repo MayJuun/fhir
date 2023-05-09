@@ -23,7 +23,7 @@ mixin _$Appointment {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Appointment)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
   FhirId? get id => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
@@ -43,7 +43,7 @@ mixin _$Appointment {
   Element? get statusElement => throw _privateConstructorUsedError;
   CodeableConcept? get type => throw _privateConstructorUsedError;
   CodeableConcept? get reason => throw _privateConstructorUsedError;
-  UnsignedInt? get priority => throw _privateConstructorUsedError;
+  FhirUnsignedInt? get priority => throw _privateConstructorUsedError;
   @JsonKey(name: '_priority')
   Element? get priorityElement => throw _privateConstructorUsedError;
   String? get description => throw _privateConstructorUsedError;
@@ -55,7 +55,7 @@ mixin _$Appointment {
   FhirInstant? get end => throw _privateConstructorUsedError;
   @JsonKey(name: '_end')
   Element? get endElement => throw _privateConstructorUsedError;
-  PositiveInt? get minutesDuration => throw _privateConstructorUsedError;
+  FhirPositiveInt? get minutesDuration => throw _privateConstructorUsedError;
   @JsonKey(name: '_minutesDuration')
   Element? get minutesDurationElement => throw _privateConstructorUsedError;
   List<Reference>? get slot => throw _privateConstructorUsedError;
@@ -81,7 +81,7 @@ abstract class $AppointmentCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Appointment)
           Dstu2ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -100,7 +100,7 @@ abstract class $AppointmentCopyWith<$Res> {
           Element? statusElement,
       CodeableConcept? type,
       CodeableConcept? reason,
-      UnsignedInt? priority,
+      FhirUnsignedInt? priority,
       @JsonKey(name: '_priority')
           Element? priorityElement,
       String? description,
@@ -112,7 +112,7 @@ abstract class $AppointmentCopyWith<$Res> {
       FhirInstant? end,
       @JsonKey(name: '_end')
           Element? endElement,
-      PositiveInt? minutesDuration,
+      FhirPositiveInt? minutesDuration,
       @JsonKey(name: '_minutesDuration')
           Element? minutesDurationElement,
       List<Reference>? slot,
@@ -473,7 +473,7 @@ abstract class _$$_AppointmentCopyWith<$Res>
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Appointment)
           Dstu2ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -492,7 +492,7 @@ abstract class _$$_AppointmentCopyWith<$Res>
           Element? statusElement,
       CodeableConcept? type,
       CodeableConcept? reason,
-      UnsignedInt? priority,
+      FhirUnsignedInt? priority,
       @JsonKey(name: '_priority')
           Element? priorityElement,
       String? description,
@@ -504,7 +504,7 @@ abstract class _$$_AppointmentCopyWith<$Res>
       FhirInstant? end,
       @JsonKey(name: '_end')
           Element? endElement,
-      PositiveInt? minutesDuration,
+      FhirPositiveInt? minutesDuration,
       @JsonKey(name: '_minutesDuration')
           Element? minutesDurationElement,
       List<Reference>? slot,
@@ -769,7 +769,7 @@ class _$_Appointment extends _Appointment {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Appointment)
   final Dstu2ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -1000,7 +1000,7 @@ abstract class _Appointment extends Appointment {
   factory _Appointment(
           {@JsonKey(unknownEnumValue: Dstu2ResourceType.Appointment)
               final Dstu2ResourceType resourceType,
-          final Id? id,
+          final FhirId? id,
           final Meta? meta,
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
@@ -1052,7 +1052,7 @@ abstract class _Appointment extends Appointment {
   @override
   FhirId? get id;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
@@ -1085,7 +1085,7 @@ abstract class _Appointment extends Appointment {
   @override
   CodeableConcept? get reason;
   @override
-  UnsignedInt? get priority;
+  FhirUnsignedInt? get priority;
   @override
   @JsonKey(name: '_priority')
   Element? get priorityElement;
@@ -1105,7 +1105,7 @@ abstract class _Appointment extends Appointment {
   @JsonKey(name: '_end')
   Element? get endElement;
   @override
-  PositiveInt? get minutesDuration;
+  FhirPositiveInt? get minutesDuration;
   @override
   @JsonKey(name: '_minutesDuration')
   Element? get minutesDurationElement;
@@ -1403,7 +1403,7 @@ class _$_AppointmentParticipant extends _AppointmentParticipant {
       _$$_AppointmentParticipantFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -1508,7 +1508,7 @@ class _$_AppointmentParticipant extends _AppointmentParticipant {
 
 abstract class _AppointmentParticipant extends AppointmentParticipant {
   factory _AppointmentParticipant(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -1565,7 +1565,7 @@ mixin _$AppointmentResponse {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.AppointmentResponse)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
   FhirId? get id => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
@@ -1616,7 +1616,7 @@ abstract class $AppointmentResponseCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.AppointmentResponse)
           Dstu2ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -1920,7 +1920,7 @@ abstract class _$$_AppointmentResponseCopyWith<$Res>
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.AppointmentResponse)
           Dstu2ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -2154,7 +2154,7 @@ class _$_AppointmentResponse extends _AppointmentResponse {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.AppointmentResponse)
   final Dstu2ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -2349,7 +2349,7 @@ abstract class _AppointmentResponse extends AppointmentResponse {
   factory _AppointmentResponse(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.AppointmentResponse)
           final Dstu2ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -2390,7 +2390,7 @@ abstract class _AppointmentResponse extends AppointmentResponse {
   @override
   FhirId? get id;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
@@ -2456,7 +2456,7 @@ mixin _$Schedule {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Schedule)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
   FhirId? get id => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
@@ -2492,7 +2492,7 @@ abstract class $ScheduleCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Schedule)
           Dstu2ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -2716,7 +2716,7 @@ abstract class _$$_ScheduleCopyWith<$Res> implements $ScheduleCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Schedule)
           Dstu2ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -2894,7 +2894,7 @@ class _$_Schedule extends _Schedule {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Schedule)
   final Dstu2ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -3051,7 +3051,7 @@ abstract class _Schedule extends Schedule {
   factory _Schedule(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Schedule)
           final Dstu2ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -3081,7 +3081,7 @@ abstract class _Schedule extends Schedule {
   @override
   FhirId? get id;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
@@ -3129,7 +3129,7 @@ mixin _$Slot {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Slot)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
   FhirId? get id => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
@@ -3174,7 +3174,7 @@ abstract class $SlotCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Slot)
           Dstu2ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -3476,7 +3476,7 @@ abstract class _$$_SlotCopyWith<$Res> implements $SlotCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Slot)
           Dstu2ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -3706,7 +3706,7 @@ class _$_Slot extends _Slot {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Slot)
   final Dstu2ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -3889,7 +3889,7 @@ abstract class _Slot extends Slot {
   factory _Slot(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Slot)
           final Dstu2ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -3929,7 +3929,7 @@ abstract class _Slot extends Slot {
   @override
   FhirId? get id;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override

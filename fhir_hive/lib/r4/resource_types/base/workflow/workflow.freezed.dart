@@ -161,7 +161,7 @@ mixin _$Appointment {
   /// decisions if needing to re-prioritize appointments. (The iCal Standard
   ///  specifies 0 as undefined, 1 as highest, 9 as lowest priority).
   @HiveField(21)
-  UnsignedInt? get priority => throw _privateConstructorUsedError;
+  FhirUnsignedInt? get priority => throw _privateConstructorUsedError;
 
   /// [priorityElement] Extensions for priority
   @JsonKey(name: '_priority')
@@ -208,7 +208,7 @@ mixin _$Appointment {
   /// example, where the actual time of appointment is only an estimate or if a
   @HiveField(30)
   @HiveField(31)
-  PositiveInt? get minutesDuration => throw _privateConstructorUsedError;
+  FhirPositiveInt? get minutesDuration => throw _privateConstructorUsedError;
 
   /// [minutesDurationElement] Extensions for minutesDuration
   @JsonKey(name: '_minutesDuration')
@@ -332,7 +332,7 @@ abstract class $AppointmentCopyWith<$Res> {
       @HiveField(20)
           List<Reference>? reasonReference,
       @HiveField(21)
-          UnsignedInt? priority,
+          FhirUnsignedInt? priority,
       @JsonKey(name: '_priority')
       @HiveField(22)
           Element? priorityElement,
@@ -355,7 +355,7 @@ abstract class $AppointmentCopyWith<$Res> {
           Element? endElement,
       @HiveField(30)
       @HiveField(31)
-          PositiveInt? minutesDuration,
+          FhirPositiveInt? minutesDuration,
       @JsonKey(name: '_minutesDuration')
       @HiveField(32)
           Element? minutesDurationElement,
@@ -867,7 +867,7 @@ abstract class _$$_AppointmentCopyWith<$Res>
       @HiveField(20)
           List<Reference>? reasonReference,
       @HiveField(21)
-          UnsignedInt? priority,
+          FhirUnsignedInt? priority,
       @JsonKey(name: '_priority')
       @HiveField(22)
           Element? priorityElement,
@@ -890,7 +890,7 @@ abstract class _$$_AppointmentCopyWith<$Res>
           Element? endElement,
       @HiveField(30)
       @HiveField(31)
-          PositiveInt? minutesDuration,
+          FhirPositiveInt? minutesDuration,
       @JsonKey(name: '_minutesDuration')
       @HiveField(32)
           Element? minutesDurationElement,
@@ -2171,7 +2171,7 @@ abstract class _Appointment extends Appointment {
   /// decisions if needing to re-prioritize appointments. (The iCal Standard
   ///  specifies 0 as undefined, 1 as highest, 9 as lowest priority).
   @HiveField(21)
-  UnsignedInt? get priority;
+  FhirUnsignedInt? get priority;
   @override
 
   /// [priorityElement] Extensions for priority
@@ -2226,7 +2226,7 @@ abstract class _Appointment extends Appointment {
   /// example, where the actual time of appointment is only an estimate or if a
   @HiveField(30)
   @HiveField(31)
-  PositiveInt? get minutesDuration;
+  FhirPositiveInt? get minutesDuration;
   @override
 
   /// [minutesDurationElement] Extensions for minutesDuration
@@ -9582,7 +9582,7 @@ mixin _$TaskRestriction {
 
   /// [repetitions] Indicates the number of times the requested action should
   ///  occur.
-  PositiveInt? get repetitions => throw _privateConstructorUsedError;
+  FhirPositiveInt? get repetitions => throw _privateConstructorUsedError;
 
   /// [repetitionsElement] Extensions for repetitions
   @JsonKey(name: '_repetitions')
@@ -9611,7 +9611,7 @@ abstract class $TaskRestrictionCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      PositiveInt? repetitions,
+      FhirPositiveInt? repetitions,
       @JsonKey(name: '_repetitions') Element? repetitionsElement,
       Period? period,
       List<Reference>? recipient});
@@ -9710,7 +9710,7 @@ abstract class _$$_TaskRestrictionCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      PositiveInt? repetitions,
+      FhirPositiveInt? repetitions,
       @JsonKey(name: '_repetitions') Element? repetitionsElement,
       Period? period,
       List<Reference>? recipient});
@@ -9987,7 +9987,7 @@ abstract class _TaskRestriction extends TaskRestriction {
 
   /// [repetitions] Indicates the number of times the requested action should
   ///  occur.
-  PositiveInt? get repetitions;
+  FhirPositiveInt? get repetitions;
   @override
 
   /// [repetitionsElement] Extensions for repetitions
@@ -10097,7 +10097,7 @@ mixin _$TaskInput {
   Element? get valueDecimalElement => throw _privateConstructorUsedError;
 
   /// [valueId] The value of the input parameter as a basic type.
-  Id? get valueId => throw _privateConstructorUsedError;
+  FhirId? get valueId => throw _privateConstructorUsedError;
 
   /// [valueIdElement] Extensions for valueId
   @JsonKey(name: '_valueId')
@@ -10125,14 +10125,14 @@ mixin _$TaskInput {
   Element? get valueMarkdownElement => throw _privateConstructorUsedError;
 
   /// [valueOid] The value of the input parameter as a basic type.
-  Oid? get valueOid => throw _privateConstructorUsedError;
+  FhirOid? get valueOid => throw _privateConstructorUsedError;
 
   /// [valueOidElement] Extensions for valueOid
   @JsonKey(name: '_valueOid')
   Element? get valueOidElement => throw _privateConstructorUsedError;
 
   /// [valuePositiveInt] The value of the input parameter as a basic type.
-  PositiveInt? get valuePositiveInt => throw _privateConstructorUsedError;
+  FhirPositiveInt? get valuePositiveInt => throw _privateConstructorUsedError;
 
   /// [valuePositiveIntElement] Extensions for valuePositiveInt
   @JsonKey(name: '_valuePositiveInt')
@@ -10146,14 +10146,14 @@ mixin _$TaskInput {
   Element? get valueStringElement => throw _privateConstructorUsedError;
 
   /// [valueTime] The value of the input parameter as a basic type.
-  Time? get valueTime => throw _privateConstructorUsedError;
+  FhirTime? get valueTime => throw _privateConstructorUsedError;
 
   /// [valueTimeElement] Extensions for valueTime
   @JsonKey(name: '_valueTime')
   Element? get valueTimeElement => throw _privateConstructorUsedError;
 
   /// [valueUnsignedInt] The value of the input parameter as a basic type.
-  UnsignedInt? get valueUnsignedInt => throw _privateConstructorUsedError;
+  FhirUnsignedInt? get valueUnsignedInt => throw _privateConstructorUsedError;
 
   /// [valueUnsignedIntElement] Extensions for valueUnsignedInt
   @JsonKey(name: '_valueUnsignedInt')
@@ -10174,7 +10174,7 @@ mixin _$TaskInput {
   Element? get valueUrlElement => throw _privateConstructorUsedError;
 
   /// [valueUuid] The value of the input parameter as a basic type.
-  Uuid? get valueUuid => throw _privateConstructorUsedError;
+  FhirUuid? get valueUuid => throw _privateConstructorUsedError;
 
   /// [valueUuidElement] Extensions for valueUuid
   @JsonKey(name: '_valueUuid')
@@ -10310,7 +10310,7 @@ abstract class $TaskInputCopyWith<$Res> {
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
       Decimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
-      Id? valueId,
+      FhirId? valueId,
       @JsonKey(name: '_valueId') Element? valueIdElement,
       Instant? valueInstant,
       @JsonKey(name: '_valueInstant') Element? valueInstantElement,
@@ -10318,21 +10318,21 @@ abstract class $TaskInputCopyWith<$Res> {
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
       Markdown? valueMarkdown,
       @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
-      Oid? valueOid,
+      FhirOid? valueOid,
       @JsonKey(name: '_valueOid') Element? valueOidElement,
-      PositiveInt? valuePositiveInt,
+      FhirPositiveInt? valuePositiveInt,
       @JsonKey(name: '_valuePositiveInt') Element? valuePositiveIntElement,
       String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
-      Time? valueTime,
+      FhirTime? valueTime,
       @JsonKey(name: '_valueTime') Element? valueTimeElement,
-      UnsignedInt? valueUnsignedInt,
+      FhirUnsignedInt? valueUnsignedInt,
       @JsonKey(name: '_valueUnsignedInt') Element? valueUnsignedIntElement,
       FhirUri? valueUri,
       @JsonKey(name: '_valueUri') Element? valueUriElement,
       FhirUrl? valueUrl,
       @JsonKey(name: '_valueUrl') Element? valueUrlElement,
-      Uuid? valueUuid,
+      FhirUuid? valueUuid,
       @JsonKey(name: '_valueUuid') Element? valueUuidElement,
       Address? valueAddress,
       Age? valueAge,
@@ -11442,7 +11442,7 @@ abstract class _$$_TaskInputCopyWith<$Res> implements $TaskInputCopyWith<$Res> {
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
       Decimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
-      Id? valueId,
+      FhirId? valueId,
       @JsonKey(name: '_valueId') Element? valueIdElement,
       Instant? valueInstant,
       @JsonKey(name: '_valueInstant') Element? valueInstantElement,
@@ -11450,21 +11450,21 @@ abstract class _$$_TaskInputCopyWith<$Res> implements $TaskInputCopyWith<$Res> {
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
       Markdown? valueMarkdown,
       @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
-      Oid? valueOid,
+      FhirOid? valueOid,
       @JsonKey(name: '_valueOid') Element? valueOidElement,
-      PositiveInt? valuePositiveInt,
+      FhirPositiveInt? valuePositiveInt,
       @JsonKey(name: '_valuePositiveInt') Element? valuePositiveIntElement,
       String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
-      Time? valueTime,
+      FhirTime? valueTime,
       @JsonKey(name: '_valueTime') Element? valueTimeElement,
-      UnsignedInt? valueUnsignedInt,
+      FhirUnsignedInt? valueUnsignedInt,
       @JsonKey(name: '_valueUnsignedInt') Element? valueUnsignedIntElement,
       FhirUri? valueUri,
       @JsonKey(name: '_valueUri') Element? valueUriElement,
       FhirUrl? valueUrl,
       @JsonKey(name: '_valueUrl') Element? valueUrlElement,
-      Uuid? valueUuid,
+      FhirUuid? valueUuid,
       @JsonKey(name: '_valueUuid') Element? valueUuidElement,
       Address? valueAddress,
       Age? valueAge,
@@ -12205,7 +12205,7 @@ class _$_TaskInput extends _TaskInput {
 
   /// [valueId] The value of the input parameter as a basic type.
   @override
-  final Id? valueId;
+  final FhirId? valueId;
 
   /// [valueIdElement] Extensions for valueId
   @override
@@ -12675,7 +12675,7 @@ abstract class _TaskInput extends TaskInput {
       final Decimal? valueDecimal,
       @JsonKey(name: '_valueDecimal')
           final Element? valueDecimalElement,
-      final Id? valueId,
+      final FhirId? valueId,
       @JsonKey(name: '_valueId')
           final Element? valueIdElement,
       final Instant? valueInstant,
@@ -12849,7 +12849,7 @@ abstract class _TaskInput extends TaskInput {
   @override
 
   /// [valueId] The value of the input parameter as a basic type.
-  Id? get valueId;
+  FhirId? get valueId;
   @override
 
   /// [valueIdElement] Extensions for valueId
@@ -12885,7 +12885,7 @@ abstract class _TaskInput extends TaskInput {
   @override
 
   /// [valueOid] The value of the input parameter as a basic type.
-  Oid? get valueOid;
+  FhirOid? get valueOid;
   @override
 
   /// [valueOidElement] Extensions for valueOid
@@ -12894,7 +12894,7 @@ abstract class _TaskInput extends TaskInput {
   @override
 
   /// [valuePositiveInt] The value of the input parameter as a basic type.
-  PositiveInt? get valuePositiveInt;
+  FhirPositiveInt? get valuePositiveInt;
   @override
 
   /// [valuePositiveIntElement] Extensions for valuePositiveInt
@@ -12912,7 +12912,7 @@ abstract class _TaskInput extends TaskInput {
   @override
 
   /// [valueTime] The value of the input parameter as a basic type.
-  Time? get valueTime;
+  FhirTime? get valueTime;
   @override
 
   /// [valueTimeElement] Extensions for valueTime
@@ -12921,7 +12921,7 @@ abstract class _TaskInput extends TaskInput {
   @override
 
   /// [valueUnsignedInt] The value of the input parameter as a basic type.
-  UnsignedInt? get valueUnsignedInt;
+  FhirUnsignedInt? get valueUnsignedInt;
   @override
 
   /// [valueUnsignedIntElement] Extensions for valueUnsignedInt
@@ -12948,7 +12948,7 @@ abstract class _TaskInput extends TaskInput {
   @override
 
   /// [valueUuid] The value of the input parameter as a basic type.
-  Uuid? get valueUuid;
+  FhirUuid? get valueUuid;
   @override
 
   /// [valueUuidElement] Extensions for valueUuid
@@ -13174,7 +13174,7 @@ mixin _$TaskOutput {
   Element? get valueDecimalElement => throw _privateConstructorUsedError;
 
   /// [valueId] The value of the Output parameter as a basic type.
-  Id? get valueId => throw _privateConstructorUsedError;
+  FhirId? get valueId => throw _privateConstructorUsedError;
 
   /// [valueIdElement] Extensions for valueId
   @JsonKey(name: '_valueId')
@@ -13202,14 +13202,14 @@ mixin _$TaskOutput {
   Element? get valueMarkdownElement => throw _privateConstructorUsedError;
 
   /// [valueOid] The value of the Output parameter as a basic type.
-  Oid? get valueOid => throw _privateConstructorUsedError;
+  FhirOid? get valueOid => throw _privateConstructorUsedError;
 
   /// [valueOidElement] Extensions for valueOid
   @JsonKey(name: '_valueOid')
   Element? get valueOidElement => throw _privateConstructorUsedError;
 
   /// [valuePositiveInt] The value of the Output parameter as a basic type.
-  PositiveInt? get valuePositiveInt => throw _privateConstructorUsedError;
+  FhirPositiveInt? get valuePositiveInt => throw _privateConstructorUsedError;
 
   /// [valuePositiveIntElement] Extensions for valuePositiveInt
   @JsonKey(name: '_valuePositiveInt')
@@ -13223,14 +13223,14 @@ mixin _$TaskOutput {
   Element? get valueStringElement => throw _privateConstructorUsedError;
 
   /// [valueTime] The value of the Output parameter as a basic type.
-  Time? get valueTime => throw _privateConstructorUsedError;
+  FhirTime? get valueTime => throw _privateConstructorUsedError;
 
   /// [valueTimeElement] Extensions for valueTime
   @JsonKey(name: '_valueTime')
   Element? get valueTimeElement => throw _privateConstructorUsedError;
 
   /// [valueUnsignedInt] The value of the Output parameter as a basic type.
-  UnsignedInt? get valueUnsignedInt => throw _privateConstructorUsedError;
+  FhirUnsignedInt? get valueUnsignedInt => throw _privateConstructorUsedError;
 
   /// [valueUnsignedIntElement] Extensions for valueUnsignedInt
   @JsonKey(name: '_valueUnsignedInt')
@@ -13251,7 +13251,7 @@ mixin _$TaskOutput {
   Element? get valueUrlElement => throw _privateConstructorUsedError;
 
   /// [valueUuid] The value of the Output parameter as a basic type.
-  Uuid? get valueUuid => throw _privateConstructorUsedError;
+  FhirUuid? get valueUuid => throw _privateConstructorUsedError;
 
   /// [valueUuidElement] Extensions for valueUuid
   @JsonKey(name: '_valueUuid')
@@ -13388,7 +13388,7 @@ abstract class $TaskOutputCopyWith<$Res> {
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
       Decimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
-      Id? valueId,
+      FhirId? valueId,
       @JsonKey(name: '_valueId') Element? valueIdElement,
       Instant? valueInstant,
       @JsonKey(name: '_valueInstant') Element? valueInstantElement,
@@ -13396,21 +13396,21 @@ abstract class $TaskOutputCopyWith<$Res> {
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
       Markdown? valueMarkdown,
       @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
-      Oid? valueOid,
+      FhirOid? valueOid,
       @JsonKey(name: '_valueOid') Element? valueOidElement,
-      PositiveInt? valuePositiveInt,
+      FhirPositiveInt? valuePositiveInt,
       @JsonKey(name: '_valuePositiveInt') Element? valuePositiveIntElement,
       String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
-      Time? valueTime,
+      FhirTime? valueTime,
       @JsonKey(name: '_valueTime') Element? valueTimeElement,
-      UnsignedInt? valueUnsignedInt,
+      FhirUnsignedInt? valueUnsignedInt,
       @JsonKey(name: '_valueUnsignedInt') Element? valueUnsignedIntElement,
       FhirUri? valueUri,
       @JsonKey(name: '_valueUri') Element? valueUriElement,
       FhirUrl? valueUrl,
       @JsonKey(name: '_valueUrl') Element? valueUrlElement,
-      Uuid? valueUuid,
+      FhirUuid? valueUuid,
       @JsonKey(name: '_valueUuid') Element? valueUuidElement,
       Address? valueAddress,
       Age? valueAge,
@@ -14521,7 +14521,7 @@ abstract class _$$_TaskOutputCopyWith<$Res>
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
       Decimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
-      Id? valueId,
+      FhirId? valueId,
       @JsonKey(name: '_valueId') Element? valueIdElement,
       Instant? valueInstant,
       @JsonKey(name: '_valueInstant') Element? valueInstantElement,
@@ -14529,21 +14529,21 @@ abstract class _$$_TaskOutputCopyWith<$Res>
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
       Markdown? valueMarkdown,
       @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
-      Oid? valueOid,
+      FhirOid? valueOid,
       @JsonKey(name: '_valueOid') Element? valueOidElement,
-      PositiveInt? valuePositiveInt,
+      FhirPositiveInt? valuePositiveInt,
       @JsonKey(name: '_valuePositiveInt') Element? valuePositiveIntElement,
       String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
-      Time? valueTime,
+      FhirTime? valueTime,
       @JsonKey(name: '_valueTime') Element? valueTimeElement,
-      UnsignedInt? valueUnsignedInt,
+      FhirUnsignedInt? valueUnsignedInt,
       @JsonKey(name: '_valueUnsignedInt') Element? valueUnsignedIntElement,
       FhirUri? valueUri,
       @JsonKey(name: '_valueUri') Element? valueUriElement,
       FhirUrl? valueUrl,
       @JsonKey(name: '_valueUrl') Element? valueUrlElement,
-      Uuid? valueUuid,
+      FhirUuid? valueUuid,
       @JsonKey(name: '_valueUuid') Element? valueUuidElement,
       Address? valueAddress,
       Age? valueAge,
@@ -15283,7 +15283,7 @@ class _$_TaskOutput extends _TaskOutput {
 
   /// [valueId] The value of the Output parameter as a basic type.
   @override
-  final Id? valueId;
+  final FhirId? valueId;
 
   /// [valueIdElement] Extensions for valueId
   @override
@@ -15753,7 +15753,7 @@ abstract class _TaskOutput extends TaskOutput {
       final Decimal? valueDecimal,
       @JsonKey(name: '_valueDecimal')
           final Element? valueDecimalElement,
-      final Id? valueId,
+      final FhirId? valueId,
       @JsonKey(name: '_valueId')
           final Element? valueIdElement,
       final Instant? valueInstant,
@@ -15926,7 +15926,7 @@ abstract class _TaskOutput extends TaskOutput {
   @override
 
   /// [valueId] The value of the Output parameter as a basic type.
-  Id? get valueId;
+  FhirId? get valueId;
   @override
 
   /// [valueIdElement] Extensions for valueId
@@ -15962,7 +15962,7 @@ abstract class _TaskOutput extends TaskOutput {
   @override
 
   /// [valueOid] The value of the Output parameter as a basic type.
-  Oid? get valueOid;
+  FhirOid? get valueOid;
   @override
 
   /// [valueOidElement] Extensions for valueOid
@@ -15971,7 +15971,7 @@ abstract class _TaskOutput extends TaskOutput {
   @override
 
   /// [valuePositiveInt] The value of the Output parameter as a basic type.
-  PositiveInt? get valuePositiveInt;
+  FhirPositiveInt? get valuePositiveInt;
   @override
 
   /// [valuePositiveIntElement] Extensions for valuePositiveInt
@@ -15989,7 +15989,7 @@ abstract class _TaskOutput extends TaskOutput {
   @override
 
   /// [valueTime] The value of the Output parameter as a basic type.
-  Time? get valueTime;
+  FhirTime? get valueTime;
   @override
 
   /// [valueTimeElement] Extensions for valueTime
@@ -15998,7 +15998,7 @@ abstract class _TaskOutput extends TaskOutput {
   @override
 
   /// [valueUnsignedInt] The value of the Output parameter as a basic type.
-  UnsignedInt? get valueUnsignedInt;
+  FhirUnsignedInt? get valueUnsignedInt;
   @override
 
   /// [valueUnsignedIntElement] Extensions for valueUnsignedInt
@@ -16025,7 +16025,7 @@ abstract class _TaskOutput extends TaskOutput {
   @override
 
   /// [valueUuid] The value of the Output parameter as a basic type.
-  Uuid? get valueUuid;
+  FhirUuid? get valueUuid;
   @override
 
   /// [valueUuidElement] Extensions for valueUuid

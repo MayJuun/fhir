@@ -135,7 +135,7 @@ class _$_Element extends _Element {
       _$$_ElementFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -199,7 +199,7 @@ class _$_Element extends _Element {
 
 abstract class _Element extends Element {
   factory _Element(
-          {final Id? id,
+          {final FhirId? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           @JsonKey(name: 'fhir_comments') final List<String>? fhirComments}) =
       _$_Element;

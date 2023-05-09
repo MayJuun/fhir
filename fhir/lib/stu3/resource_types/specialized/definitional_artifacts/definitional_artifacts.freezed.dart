@@ -23,7 +23,7 @@ mixin _$ActivityDefinition {
   @JsonKey(unknownEnumValue: Stu3ResourceType.ActivityDefinition)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
   FhirId? get id => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
@@ -128,7 +128,7 @@ abstract class $ActivityDefinitionCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ActivityDefinition)
           Stu3ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -961,7 +961,7 @@ abstract class _$$_ActivityDefinitionCopyWith<$Res>
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ActivityDefinition)
           Stu3ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -1563,7 +1563,7 @@ class _$_ActivityDefinition extends _ActivityDefinition {
   @JsonKey(unknownEnumValue: Stu3ResourceType.ActivityDefinition)
   final Stu3ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -2041,7 +2041,7 @@ abstract class _ActivityDefinition extends ActivityDefinition {
   factory _ActivityDefinition(
           {@JsonKey(unknownEnumValue: Stu3ResourceType.ActivityDefinition)
               final Stu3ResourceType resourceType,
-          final Id? id,
+          final FhirId? id,
           final Meta? meta,
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
@@ -2137,7 +2137,7 @@ abstract class _ActivityDefinition extends ActivityDefinition {
   @override
   FhirId? get id;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
@@ -2907,7 +2907,7 @@ mixin _$PlanDefinition {
   @JsonKey(unknownEnumValue: Stu3ResourceType.PlanDefinition)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
   FhirId? get id => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
@@ -2993,7 +2993,7 @@ abstract class $PlanDefinitionCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: Stu3ResourceType.PlanDefinition)
           Stu3ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -3609,7 +3609,7 @@ abstract class _$$_PlanDefinitionCopyWith<$Res>
       {@JsonKey(unknownEnumValue: Stu3ResourceType.PlanDefinition)
           Stu3ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -4087,7 +4087,7 @@ class _$_PlanDefinition extends _PlanDefinition {
   @JsonKey(unknownEnumValue: Stu3ResourceType.PlanDefinition)
   final Stu3ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -4481,7 +4481,7 @@ abstract class _PlanDefinition extends PlanDefinition {
   factory _PlanDefinition(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.PlanDefinition)
           final Stu3ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -4560,7 +4560,7 @@ abstract class _PlanDefinition extends PlanDefinition {
   @override
   FhirId? get id;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
@@ -5371,7 +5371,7 @@ mixin _$PlanDefinitionAction {
   List<CodeableConcept>? get reason => throw _privateConstructorUsedError;
   List<RelatedArtifact>? get documentation =>
       throw _privateConstructorUsedError;
-  List<Id>? get goalId => throw _privateConstructorUsedError;
+  List<FhirId>? get goalId => throw _privateConstructorUsedError;
   @JsonKey(name: '_goalId')
   List<Element?>? get goalIdElement => throw _privateConstructorUsedError;
   List<TriggerDefinition>? get triggerDefinition =>
@@ -5446,7 +5446,7 @@ abstract class $PlanDefinitionActionCopyWith<$Res> {
       List<CodeableConcept>? code,
       List<CodeableConcept>? reason,
       List<RelatedArtifact>? documentation,
-      List<Id>? goalId,
+      List<FhirId>? goalId,
       @JsonKey(name: '_goalId')
           List<Element?>? goalIdElement,
       List<TriggerDefinition>? triggerDefinition,
@@ -5605,7 +5605,7 @@ class _$PlanDefinitionActionCopyWithImpl<$Res,
       goalId: freezed == goalId
           ? _value.goalId
           : goalId // ignore: cast_nullable_to_non_nullable
-              as List<Id>?,
+              as List<FhirId>?,
       goalIdElement: freezed == goalIdElement
           ? _value.goalIdElement
           : goalIdElement // ignore: cast_nullable_to_non_nullable
@@ -5950,7 +5950,7 @@ abstract class _$$_PlanDefinitionActionCopyWith<$Res>
       List<CodeableConcept>? code,
       List<CodeableConcept>? reason,
       List<RelatedArtifact>? documentation,
-      List<Id>? goalId,
+      List<FhirId>? goalId,
       @JsonKey(name: '_goalId')
           List<Element?>? goalIdElement,
       List<TriggerDefinition>? triggerDefinition,
@@ -6123,7 +6123,7 @@ class __$$_PlanDefinitionActionCopyWithImpl<$Res>
       goalId: freezed == goalId
           ? _value._goalId
           : goalId // ignore: cast_nullable_to_non_nullable
-              as List<Id>?,
+              as List<FhirId>?,
       goalIdElement: freezed == goalIdElement
           ? _value._goalIdElement
           : goalIdElement // ignore: cast_nullable_to_non_nullable
@@ -6255,7 +6255,7 @@ class _$_PlanDefinitionAction extends _PlanDefinitionAction {
       final List<CodeableConcept>? code,
       final List<CodeableConcept>? reason,
       final List<RelatedArtifact>? documentation,
-      final List<Id>? goalId,
+      final List<FhirId>? goalId,
       @JsonKey(name: '_goalId') final List<Element?>? goalIdElement,
       final List<TriggerDefinition>? triggerDefinition,
       final List<PlanDefinitionCondition>? condition,
@@ -6352,9 +6352,9 @@ class _$_PlanDefinitionAction extends _PlanDefinitionAction {
     return EqualUnmodifiableListView(value);
   }
 
-  final List<Id>? _goalId;
+  final List<FhirId>? _goalId;
   @override
-  List<Id>? get goalId {
+  List<FhirId>? get goalId {
     final value = _goalId;
     if (value == null) return null;
     if (_goalId is EqualUnmodifiableListView) return _goalId;
@@ -6661,7 +6661,7 @@ abstract class _PlanDefinitionAction extends PlanDefinitionAction {
       final List<CodeableConcept>? code,
       final List<CodeableConcept>? reason,
       final List<RelatedArtifact>? documentation,
-      final List<Id>? goalId,
+      final List<FhirId>? goalId,
       @JsonKey(name: '_goalId')
           final List<Element?>? goalIdElement,
       final List<TriggerDefinition>? triggerDefinition,
@@ -6729,7 +6729,7 @@ abstract class _PlanDefinitionAction extends PlanDefinitionAction {
   @override
   List<RelatedArtifact>? get documentation;
   @override
-  List<Id>? get goalId;
+  List<FhirId>? get goalId;
   @override
   @JsonKey(name: '_goalId')
   List<Element?>? get goalIdElement;
@@ -7412,7 +7412,7 @@ class _$_PlanDefinitionRelatedAction extends _PlanDefinitionRelatedAction {
       _$$_PlanDefinitionRelatedActionFromJson(json);
 
   @override
-  final Id? actionId;
+  final FhirId? actionId;
   @override
   @JsonKey(name: '_actionId')
   final Element? actionIdElement;
@@ -7473,7 +7473,7 @@ class _$_PlanDefinitionRelatedAction extends _PlanDefinitionRelatedAction {
 abstract class _PlanDefinitionRelatedAction
     extends PlanDefinitionRelatedAction {
   factory _PlanDefinitionRelatedAction(
-      {final Id? actionId,
+      {final FhirId? actionId,
       @JsonKey(name: '_actionId') final Element? actionIdElement,
       final PlanDefinitionRelatedActionRelationship? relationship,
       @JsonKey(name: '_relationship') final Element? relationshipElement,
@@ -8115,7 +8115,7 @@ mixin _$Questionnaire {
   @JsonKey(unknownEnumValue: Stu3ResourceType.Questionnaire)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
   FhirId? get id => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
@@ -8194,7 +8194,7 @@ abstract class $QuestionnaireCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Questionnaire)
           Stu3ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -8753,7 +8753,7 @@ abstract class _$$_QuestionnaireCopyWith<$Res>
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Questionnaire)
           Stu3ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -9188,7 +9188,7 @@ class _$_Questionnaire extends _Questionnaire {
   @JsonKey(unknownEnumValue: Stu3ResourceType.Questionnaire)
   final Stu3ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -9545,7 +9545,7 @@ abstract class _Questionnaire extends Questionnaire {
   factory _Questionnaire(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Questionnaire)
           final Stu3ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -9618,7 +9618,7 @@ abstract class _Questionnaire extends Questionnaire {
   @override
   FhirId? get id;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
@@ -9784,7 +9784,7 @@ mixin _$QuestionnaireItem {
   FhirDateTime? get initialDateTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_initialDateTime')
   Element? get initialDateTimeElement => throw _privateConstructorUsedError;
-  Time? get initialTime => throw _privateConstructorUsedError;
+  FhirTime? get initialTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_initialTime')
   Element? get initialTimeElement => throw _privateConstructorUsedError;
   String? get initialString => throw _privateConstructorUsedError;
@@ -9845,7 +9845,7 @@ abstract class $QuestionnaireItemCopyWith<$Res> {
       @JsonKey(name: '_initialDate') Element? initialDateElement,
       FhirDateTime? initialDateTime,
       @JsonKey(name: '_initialDateTime') Element? initialDateTimeElement,
-      Time? initialTime,
+      FhirTime? initialTime,
       @JsonKey(name: '_initialTime') Element? initialTimeElement,
       String? initialString,
       @JsonKey(name: '_initialString') Element? initialStringElement,
@@ -10426,7 +10426,7 @@ abstract class _$$_QuestionnaireItemCopyWith<$Res>
       @JsonKey(name: '_initialDate') Element? initialDateElement,
       FhirDateTime? initialDateTime,
       @JsonKey(name: '_initialDateTime') Element? initialDateTimeElement,
-      Time? initialTime,
+      FhirTime? initialTime,
       @JsonKey(name: '_initialTime') Element? initialTimeElement,
       String? initialString,
       @JsonKey(name: '_initialString') Element? initialStringElement,
@@ -11216,7 +11216,7 @@ abstract class _QuestionnaireItem extends QuestionnaireItem {
   @JsonKey(name: '_initialDateTime')
   Element? get initialDateTimeElement;
   @override
-  Time? get initialTime;
+  FhirTime? get initialTime;
   @override
   @JsonKey(name: '_initialTime')
   Element? get initialTimeElement;
@@ -11274,7 +11274,7 @@ mixin _$QuestionnaireEnableWhen {
   FhirDateTime? get answerDateTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_answerDateTime')
   Element? get answerDateTimeElement => throw _privateConstructorUsedError;
-  Time? get answerTime => throw _privateConstructorUsedError;
+  FhirTime? get answerTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_answerTime')
   Element? get answerTimeElement => throw _privateConstructorUsedError;
   String? get answerString => throw _privateConstructorUsedError;
@@ -11315,7 +11315,7 @@ abstract class $QuestionnaireEnableWhenCopyWith<$Res> {
       @JsonKey(name: '_answerDate') Element? answerDateElement,
       FhirDateTime? answerDateTime,
       @JsonKey(name: '_answerDateTime') Element? answerDateTimeElement,
-      Time? answerTime,
+      FhirTime? answerTime,
       @JsonKey(name: '_answerTime') Element? answerTimeElement,
       String? answerString,
       @JsonKey(name: '_answerString') Element? answerStringElement,
@@ -11673,7 +11673,7 @@ abstract class _$$_QuestionnaireEnableWhenCopyWith<$Res>
       @JsonKey(name: '_answerDate') Element? answerDateElement,
       FhirDateTime? answerDateTime,
       @JsonKey(name: '_answerDateTime') Element? answerDateTimeElement,
-      Time? answerTime,
+      FhirTime? answerTime,
       @JsonKey(name: '_answerTime') Element? answerTimeElement,
       String? answerString,
       @JsonKey(name: '_answerString') Element? answerStringElement,
@@ -12117,7 +12117,7 @@ abstract class _QuestionnaireEnableWhen extends QuestionnaireEnableWhen {
   @JsonKey(name: '_answerDateTime')
   Element? get answerDateTimeElement;
   @override
-  Time? get answerTime;
+  FhirTime? get answerTime;
   @override
   @JsonKey(name: '_answerTime')
   Element? get answerTimeElement;
@@ -12157,7 +12157,7 @@ mixin _$QuestionnaireOption {
   FhirDate? get valueDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueDate')
   Element? get valueDateElement => throw _privateConstructorUsedError;
-  Time? get valueTime => throw _privateConstructorUsedError;
+  FhirTime? get valueTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueTime')
   Element? get valueTimeElement => throw _privateConstructorUsedError;
   String? get valueString => throw _privateConstructorUsedError;
@@ -12182,7 +12182,7 @@ abstract class $QuestionnaireOptionCopyWith<$Res> {
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
       FhirDate? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
-      Time? valueTime,
+      FhirTime? valueTime,
       @JsonKey(name: '_valueTime') Element? valueTimeElement,
       String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
@@ -12332,7 +12332,7 @@ abstract class _$$_QuestionnaireOptionCopyWith<$Res>
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
       FhirDate? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
-      Time? valueTime,
+      FhirTime? valueTime,
       @JsonKey(name: '_valueTime') Element? valueTimeElement,
       String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
@@ -12539,7 +12539,7 @@ abstract class _QuestionnaireOption extends QuestionnaireOption {
   @JsonKey(name: '_valueDate')
   Element? get valueDateElement;
   @override
-  Time? get valueTime;
+  FhirTime? get valueTime;
   @override
   @JsonKey(name: '_valueTime')
   Element? get valueTimeElement;
@@ -12565,7 +12565,7 @@ mixin _$ServiceDefinition {
   @JsonKey(unknownEnumValue: Stu3ResourceType.ServiceDefinition)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
   FhirId? get id => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
@@ -12650,7 +12650,7 @@ abstract class $ServiceDefinitionCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ServiceDefinition)
           Stu3ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -13259,7 +13259,7 @@ abstract class _$$_ServiceDefinitionCopyWith<$Res>
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ServiceDefinition)
           Stu3ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -13727,7 +13727,7 @@ class _$_ServiceDefinition extends _ServiceDefinition {
   @JsonKey(unknownEnumValue: Stu3ResourceType.ServiceDefinition)
   final Stu3ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -14112,7 +14112,7 @@ abstract class _ServiceDefinition extends ServiceDefinition {
   factory _ServiceDefinition(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ServiceDefinition)
           final Stu3ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -14189,7 +14189,7 @@ abstract class _ServiceDefinition extends ServiceDefinition {
   @override
   FhirId? get id;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override

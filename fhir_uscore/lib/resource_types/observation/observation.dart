@@ -9,7 +9,7 @@ class ObservationUsCore extends Resource {
 
   factory ObservationUsCore({
     String? id,
-    Meta? meta,
+    FhirMeta? meta,
     Narrative? text,
     List<Identifier>? identifier,
     Code? status,
@@ -27,7 +27,7 @@ class ObservationUsCore extends Resource {
     Range? valueRange,
     Ratio? valueRatio,
     SampledData? valueSampledData,
-    Time? valueTime,
+    FhirTime? valueTime,
     FhirDateTime? valueDateTime,
     Period? valuePeriod,
     CodeableConcept? dataAbsentReason,
@@ -75,7 +75,7 @@ class ObservationUsCore extends Resource {
       ));
 
   factory ObservationUsCore.laboratoryResult({
-    required Code status,
+    required FhirCode status,
     List<CodeableConcept>? category,
     required CodeableConcept code,
     required Reference subject,
@@ -89,7 +89,7 @@ class ObservationUsCore extends Resource {
     Range? valueRange,
     Ratio? valueRatio,
     SampledData? valueSampledData,
-    Time? valueTime,
+    FhirTime? valueTime,
     FhirDateTime? valueDateTime,
     Period? valuePeriod,
     ObservationDataAbsentReason? observationDataAbsentReason,
@@ -133,7 +133,7 @@ class ObservationUsCore extends Resource {
   }
 
   factory ObservationUsCore.laboratoryResultMinimum({
-    required Code status,
+    required FhirCode status,
     required CodeableConcept code,
     required Reference subject,
   }) =>
@@ -586,7 +586,7 @@ class ObservationUsCore extends Resource {
   Observation _observation;
   Observation get value => _observation;
   String? get id => _observation.id;
-  Meta? get meta => _observation.meta;
+  FhirMeta? get meta => _observation.meta;
   Narrative? get text => _observation.text;
   List<Identifier>? get identifier => _observation.identifier;
   Code? get status => _observation.status;
@@ -605,7 +605,7 @@ class ObservationUsCore extends Resource {
   Range? get valueRange => _observation.valueRange;
   Ratio? get valueRatio => _observation.valueRatio;
   SampledData? get valueSampledData => _observation.valueSampledData;
-  Time? get valueTime => _observation.valueTime;
+  FhirTime? get valueTime => _observation.valueTime;
   FhirDateTime? get valueDateTime => _observation.valueDateTime;
   Period? get valuePeriod => _observation.valuePeriod;
   CodeableConcept? get dataAbsentReason => _observation.dataAbsentReason;
@@ -668,7 +668,7 @@ class ObservationComponentUsCore {
     Range? valueRange,
     Ratio? valueRatio,
     SampledData? valueSampledData,
-    Time? valueTime,
+    FhirTime? valueTime,
     FhirDateTime? valueDateTime,
     Period? valuePeriod,
     CodeableConcept? dataAbsentReason,
@@ -712,7 +712,7 @@ class ObservationComponentUsCore {
   Range? get valueRange => _observationComponent.valueRange;
   Ratio? get valueRatio => _observationComponent.valueRatio;
   SampledData? get valueSampledData => _observationComponent.valueSampledData;
-  Time? get valueTime => _observationComponent.valueTime;
+  FhirTime? get valueTime => _observationComponent.valueTime;
   FhirDateTime? get valueDateTime => _observationComponent.valueDateTime;
   Period? get valuePeriod => _observationComponent.valuePeriod;
   CodeableConcept? get dataAbsentReason =>

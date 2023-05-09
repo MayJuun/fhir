@@ -177,7 +177,7 @@ mixin _$Coverage {
   /// numbering and this does not imply primary, secondary etc. as the specific
   ///  positioning of coverages depends upon the episode of care.
   @HiveField(26)
-  PositiveInt? get order => throw _privateConstructorUsedError;
+  FhirPositiveInt? get order => throw _privateConstructorUsedError;
 
   /// [orderElement] Extensions for order
   @JsonKey(name: '_order')
@@ -291,7 +291,7 @@ abstract class $CoverageCopyWith<$Res> {
       @HiveField(25)
           List<CoverageClass>? class_,
       @HiveField(26)
-          PositiveInt? order,
+          FhirPositiveInt? order,
       @JsonKey(name: '_order')
       @HiveField(27)
           Element? orderElement,
@@ -774,7 +774,7 @@ abstract class _$$_CoverageCopyWith<$Res> implements $CoverageCopyWith<$Res> {
       @HiveField(25)
           List<CoverageClass>? class_,
       @HiveField(26)
-          PositiveInt? order,
+          FhirPositiveInt? order,
       @JsonKey(name: '_order')
       @HiveField(27)
           Element? orderElement,
@@ -1827,7 +1827,7 @@ abstract class _Coverage extends Coverage {
   /// numbering and this does not imply primary, secondary etc. as the specific
   ///  positioning of coverages depends upon the episode of care.
   @HiveField(26)
-  PositiveInt? get order;
+  FhirPositiveInt? get order;
   @override
 
   /// [orderElement] Extensions for order
@@ -3346,7 +3346,7 @@ mixin _$CoverageEligibilityRequest {
   /// the patient; and/or validation that the specified coverage is in-force at
   ///  the date/period specified or 'now' if not specified.
   @HiveField(15)
-  List<Code>? get purpose => throw _privateConstructorUsedError;
+  List<FhirCode>? get purpose => throw _privateConstructorUsedError;
 
   /// [purposeElement] Extensions for purpose
   @JsonKey(name: '_purpose')
@@ -3466,7 +3466,7 @@ abstract class $CoverageEligibilityRequestCopyWith<$Res> {
       @HiveField(14)
           CodeableConcept? priority,
       @HiveField(15)
-          List<Code>? purpose,
+          List<FhirCode>? purpose,
       @JsonKey(name: '_purpose')
       @HiveField(16)
           List<Element?>? purposeElement,
@@ -3625,7 +3625,7 @@ class _$CoverageEligibilityRequestCopyWithImpl<$Res,
       purpose: freezed == purpose
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as List<Code>?,
+              as List<FhirCode>?,
       purposeElement: freezed == purposeElement
           ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -3892,7 +3892,7 @@ abstract class _$$_CoverageEligibilityRequestCopyWith<$Res>
       @HiveField(14)
           CodeableConcept? priority,
       @HiveField(15)
-          List<Code>? purpose,
+          List<FhirCode>? purpose,
       @JsonKey(name: '_purpose')
       @HiveField(16)
           List<Element?>? purposeElement,
@@ -4064,7 +4064,7 @@ class __$$_CoverageEligibilityRequestCopyWithImpl<$Res>
       purpose: freezed == purpose
           ? _value._purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as List<Code>?,
+              as List<FhirCode>?,
       purposeElement: freezed == purposeElement
           ? _value._purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -4166,7 +4166,7 @@ class _$_CoverageEligibilityRequest extends _CoverageEligibilityRequest {
       @HiveField(14)
           this.priority,
       @HiveField(15)
-          final List<Code>? purpose,
+          final List<FhirCode>? purpose,
       @JsonKey(name: '_purpose')
       @HiveField(16)
           final List<Element?>? purposeElement,
@@ -4388,7 +4388,7 @@ class _$_CoverageEligibilityRequest extends _CoverageEligibilityRequest {
   /// coverages specified or discovered; discovery and return of coverages for
   /// the patient; and/or validation that the specified coverage is in-force at
   ///  the date/period specified or 'now' if not specified.
-  final List<Code>? _purpose;
+  final List<FhirCode>? _purpose;
 
   /// [purpose] Code to specify whether requesting: prior authorization
   /// requirements for some service categories or billing codes; benefits for
@@ -4397,7 +4397,7 @@ class _$_CoverageEligibilityRequest extends _CoverageEligibilityRequest {
   ///  the date/period specified or 'now' if not specified.
   @override
   @HiveField(15)
-  List<Code>? get purpose {
+  List<FhirCode>? get purpose {
     final value = _purpose;
     if (value == null) return null;
     if (_purpose is EqualUnmodifiableListView) return _purpose;
@@ -4672,7 +4672,7 @@ abstract class _CoverageEligibilityRequest extends CoverageEligibilityRequest {
       @HiveField(14)
           final CodeableConcept? priority,
       @HiveField(15)
-          final List<Code>? purpose,
+          final List<FhirCode>? purpose,
       @JsonKey(name: '_purpose')
       @HiveField(16)
           final List<Element?>? purposeElement,
@@ -4830,7 +4830,7 @@ abstract class _CoverageEligibilityRequest extends CoverageEligibilityRequest {
   /// the patient; and/or validation that the specified coverage is in-force at
   ///  the date/period specified or 'now' if not specified.
   @HiveField(15)
-  List<Code>? get purpose;
+  List<FhirCode>? get purpose;
   @override
 
   /// [purposeElement] Extensions for purpose
@@ -4954,7 +4954,7 @@ mixin _$CoverageEligibilityRequestSupportingInfo {
       throw _privateConstructorUsedError;
 
   /// [sequence] A number to uniquely identify supporting information entries.
-  PositiveInt? get sequence => throw _privateConstructorUsedError;
+  FhirPositiveInt? get sequence => throw _privateConstructorUsedError;
 
   /// [sequenceElement] Extensions for sequence
   @JsonKey(name: '_sequence')
@@ -4992,7 +4992,7 @@ abstract class $CoverageEligibilityRequestSupportingInfoCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      PositiveInt? sequence,
+      FhirPositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       Reference information,
       Boolean? appliesToAll,
@@ -5109,7 +5109,7 @@ abstract class _$$_CoverageEligibilityRequestSupportingInfoCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      PositiveInt? sequence,
+      FhirPositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       Reference information,
       Boolean? appliesToAll,
@@ -5403,7 +5403,7 @@ abstract class _CoverageEligibilityRequestSupportingInfo
   @override
 
   /// [sequence] A number to uniquely identify supporting information entries.
-  PositiveInt? get sequence;
+  FhirPositiveInt? get sequence;
   @override
 
   /// [sequenceElement] Extensions for sequence
@@ -6000,7 +6000,7 @@ mixin _$CoverageEligibilityRequestItem {
 
   /// [supportingInfoSequence] Exceptions, special conditions and supporting
   ///  information applicable for this service or product line.
-  List<PositiveInt>? get supportingInfoSequence =>
+  List<FhirPositiveInt>? get supportingInfoSequence =>
       throw _privateConstructorUsedError;
   @JsonKey(name: '_supportingInfoSequence')
   List<Element>? get supportingInfoSequenceElement =>
@@ -6059,7 +6059,7 @@ abstract class $CoverageEligibilityRequestItemCopyWith<$Res> {
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      List<PositiveInt>? supportingInfoSequence,
+      List<FhirPositiveInt>? supportingInfoSequence,
       @JsonKey(name: '_supportingInfoSequence')
           List<Element>? supportingInfoSequenceElement,
       CodeableConcept? category,
@@ -6125,7 +6125,7 @@ class _$CoverageEligibilityRequestItemCopyWithImpl<$Res,
       supportingInfoSequence: freezed == supportingInfoSequence
           ? _value.supportingInfoSequence
           : supportingInfoSequence // ignore: cast_nullable_to_non_nullable
-              as List<PositiveInt>?,
+              as List<FhirPositiveInt>?,
       supportingInfoSequenceElement: freezed == supportingInfoSequenceElement
           ? _value.supportingInfoSequenceElement
           : supportingInfoSequenceElement // ignore: cast_nullable_to_non_nullable
@@ -6256,7 +6256,7 @@ abstract class _$$_CoverageEligibilityRequestItemCopyWith<$Res>
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      List<PositiveInt>? supportingInfoSequence,
+      List<FhirPositiveInt>? supportingInfoSequence,
       @JsonKey(name: '_supportingInfoSequence')
           List<Element>? supportingInfoSequenceElement,
       CodeableConcept? category,
@@ -6327,7 +6327,7 @@ class __$$_CoverageEligibilityRequestItemCopyWithImpl<$Res>
       supportingInfoSequence: freezed == supportingInfoSequence
           ? _value._supportingInfoSequence
           : supportingInfoSequence // ignore: cast_nullable_to_non_nullable
-              as List<PositiveInt>?,
+              as List<FhirPositiveInt>?,
       supportingInfoSequenceElement: freezed == supportingInfoSequenceElement
           ? _value._supportingInfoSequenceElement
           : supportingInfoSequenceElement // ignore: cast_nullable_to_non_nullable
@@ -6381,7 +6381,7 @@ class _$_CoverageEligibilityRequestItem
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final List<PositiveInt>? supportingInfoSequence,
+      final List<FhirPositiveInt>? supportingInfoSequence,
       @JsonKey(name: '_supportingInfoSequence')
           final List<Element>? supportingInfoSequenceElement,
       this.category,
@@ -6475,12 +6475,12 @@ class _$_CoverageEligibilityRequestItem
 
   /// [supportingInfoSequence] Exceptions, special conditions and supporting
   ///  information applicable for this service or product line.
-  final List<PositiveInt>? _supportingInfoSequence;
+  final List<FhirPositiveInt>? _supportingInfoSequence;
 
   /// [supportingInfoSequence] Exceptions, special conditions and supporting
   ///  information applicable for this service or product line.
   @override
-  List<PositiveInt>? get supportingInfoSequence {
+  List<FhirPositiveInt>? get supportingInfoSequence {
     final value = _supportingInfoSequence;
     if (value == null) return null;
     if (_supportingInfoSequence is EqualUnmodifiableListView)
@@ -6651,7 +6651,7 @@ abstract class _CoverageEligibilityRequestItem
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final List<PositiveInt>? supportingInfoSequence,
+      final List<FhirPositiveInt>? supportingInfoSequence,
       @JsonKey(name: '_supportingInfoSequence')
           final List<Element>? supportingInfoSequenceElement,
       final CodeableConcept? category,
@@ -6703,7 +6703,7 @@ abstract class _CoverageEligibilityRequestItem
 
   /// [supportingInfoSequence] Exceptions, special conditions and supporting
   ///  information applicable for this service or product line.
-  List<PositiveInt>? get supportingInfoSequence;
+  List<FhirPositiveInt>? get supportingInfoSequence;
   @override
   @JsonKey(name: '_supportingInfoSequence')
   List<Element>? get supportingInfoSequenceElement;
@@ -7274,7 +7274,7 @@ mixin _$CoverageEligibilityResponse {
   /// the patient; and/or validation that the specified coverage is in-force at
   ///  the date/period specified or 'now' if not specified.
   @HiveField(14)
-  List<Code>? get purpose => throw _privateConstructorUsedError;
+  List<FhirCode>? get purpose => throw _privateConstructorUsedError;
 
   /// [purposeElement] Extensions for purpose
   @JsonKey(name: '_purpose')
@@ -7417,7 +7417,7 @@ abstract class $CoverageEligibilityResponseCopyWith<$Res> {
       @HiveField(13)
           Element? statusElement,
       @HiveField(14)
-          List<Code>? purpose,
+          List<FhirCode>? purpose,
       @JsonKey(name: '_purpose')
       @HiveField(15)
           List<Element?>? purposeElement,
@@ -7590,7 +7590,7 @@ class _$CoverageEligibilityResponseCopyWithImpl<$Res,
       purpose: freezed == purpose
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as List<Code>?,
+              as List<FhirCode>?,
       purposeElement: freezed == purposeElement
           ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -7895,7 +7895,7 @@ abstract class _$$_CoverageEligibilityResponseCopyWith<$Res>
       @HiveField(13)
           Element? statusElement,
       @HiveField(14)
-          List<Code>? purpose,
+          List<FhirCode>? purpose,
       @JsonKey(name: '_purpose')
       @HiveField(15)
           List<Element?>? purposeElement,
@@ -8083,7 +8083,7 @@ class __$$_CoverageEligibilityResponseCopyWithImpl<$Res>
       purpose: freezed == purpose
           ? _value._purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as List<Code>?,
+              as List<FhirCode>?,
       purposeElement: freezed == purposeElement
           ? _value._purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -8203,7 +8203,7 @@ class _$_CoverageEligibilityResponse extends _CoverageEligibilityResponse {
       @HiveField(13)
           this.statusElement,
       @HiveField(14)
-          final List<Code>? purpose,
+          final List<FhirCode>? purpose,
       @JsonKey(name: '_purpose')
       @HiveField(15)
           final List<Element?>? purposeElement,
@@ -8430,7 +8430,7 @@ class _$_CoverageEligibilityResponse extends _CoverageEligibilityResponse {
   /// coverages specified or discovered; discovery and return of coverages for
   /// the patient; and/or validation that the specified coverage is in-force at
   ///  the date/period specified or 'now' if not specified.
-  final List<Code>? _purpose;
+  final List<FhirCode>? _purpose;
 
   /// [purpose] Code to specify whether requesting: prior authorization
   /// requirements for some service categories or billing codes; benefits for
@@ -8439,7 +8439,7 @@ class _$_CoverageEligibilityResponse extends _CoverageEligibilityResponse {
   ///  the date/period specified or 'now' if not specified.
   @override
   @HiveField(14)
-  List<Code>? get purpose {
+  List<FhirCode>? get purpose {
     final value = _purpose;
     if (value == null) return null;
     if (_purpose is EqualUnmodifiableListView) return _purpose;
@@ -8745,7 +8745,7 @@ abstract class _CoverageEligibilityResponse
           @HiveField(13)
               final Element? statusElement,
           @HiveField(14)
-              final List<Code>? purpose,
+              final List<FhirCode>? purpose,
           @JsonKey(name: '_purpose')
           @HiveField(15)
               final List<Element?>? purposeElement,
@@ -8909,7 +8909,7 @@ abstract class _CoverageEligibilityResponse
   /// the patient; and/or validation that the specified coverage is in-force at
   ///  the date/period specified or 'now' if not specified.
   @HiveField(14)
-  List<Code>? get purpose;
+  List<FhirCode>? get purpose;
   @override
 
   /// [purposeElement] Extensions for purpose
@@ -10711,7 +10711,7 @@ mixin _$CoverageEligibilityResponseBenefit {
 
   /// [allowedUnsignedInt] The quantity of the benefit which is permitted under
   ///  the coverage.
-  UnsignedInt? get allowedUnsignedInt => throw _privateConstructorUsedError;
+  FhirUnsignedInt? get allowedUnsignedInt => throw _privateConstructorUsedError;
 
   /// [allowedUnsignedIntElement] Extensions for allowedUnsignedInt
   @JsonKey(name: '_allowedUnsignedInt')
@@ -10731,7 +10731,7 @@ mixin _$CoverageEligibilityResponseBenefit {
 
   /// [usedUnsignedInt] The quantity of the benefit which have been consumed to
   ///  date.
-  UnsignedInt? get usedUnsignedInt => throw _privateConstructorUsedError;
+  FhirUnsignedInt? get usedUnsignedInt => throw _privateConstructorUsedError;
 
   /// [usedUnsignedIntElement] Extensions for usedUnsignedInt
   @JsonKey(name: '_usedUnsignedInt')
@@ -10768,12 +10768,12 @@ abstract class $CoverageEligibilityResponseBenefitCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept type,
-      UnsignedInt? allowedUnsignedInt,
+      FhirUnsignedInt? allowedUnsignedInt,
       @JsonKey(name: '_allowedUnsignedInt') Element? allowedUnsignedIntElement,
       String? allowedString,
       @JsonKey(name: '_allowedString') Element? allowedStringElement,
       Money? allowedMoney,
-      UnsignedInt? usedUnsignedInt,
+      FhirUnsignedInt? usedUnsignedInt,
       @JsonKey(name: '_usedUnsignedInt') Element? usedUnsignedIntElement,
       String? usedString,
       @JsonKey(name: '_usedString') Element? usedStringElement,
@@ -10972,12 +10972,12 @@ abstract class _$$_CoverageEligibilityResponseBenefitCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept type,
-      UnsignedInt? allowedUnsignedInt,
+      FhirUnsignedInt? allowedUnsignedInt,
       @JsonKey(name: '_allowedUnsignedInt') Element? allowedUnsignedIntElement,
       String? allowedString,
       @JsonKey(name: '_allowedString') Element? allowedStringElement,
       Money? allowedMoney,
-      UnsignedInt? usedUnsignedInt,
+      FhirUnsignedInt? usedUnsignedInt,
       @JsonKey(name: '_usedUnsignedInt') Element? usedUnsignedIntElement,
       String? usedString,
       @JsonKey(name: '_usedString') Element? usedStringElement,
@@ -11376,7 +11376,7 @@ abstract class _CoverageEligibilityResponseBenefit
 
   /// [allowedUnsignedInt] The quantity of the benefit which is permitted under
   ///  the coverage.
-  UnsignedInt? get allowedUnsignedInt;
+  FhirUnsignedInt? get allowedUnsignedInt;
   @override
 
   /// [allowedUnsignedIntElement] Extensions for allowedUnsignedInt
@@ -11401,7 +11401,7 @@ abstract class _CoverageEligibilityResponseBenefit
 
   /// [usedUnsignedInt] The quantity of the benefit which have been consumed to
   ///  date.
-  UnsignedInt? get usedUnsignedInt;
+  FhirUnsignedInt? get usedUnsignedInt;
   @override
 
   /// [usedUnsignedIntElement] Extensions for usedUnsignedInt

@@ -236,7 +236,7 @@ class DataRequirementCodeFilter with _$DataRequirementCodeFilter {
     String? valueSetString,
     @JsonKey(name: '_valueSetString') Element? valueSetStringElement,
     Reference? valueSetReference,
-    List<Code>? valueCode,
+    List<FhirCode>? valueCode,
     @JsonKey(name: '_valueCode') List<Element?>? valueCodeElement,
     List<Coding>? valueCoding,
     List<CodeableConcept>? valueCodeableConcept,

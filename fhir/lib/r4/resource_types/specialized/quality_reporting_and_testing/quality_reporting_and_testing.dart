@@ -293,7 +293,7 @@ class Measure with Resource, _$Measure {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -552,7 +552,7 @@ class Measure with Resource, _$Measure {
     /// [library] A reference to a Library resource containing the formal logic
     ///  used by the measure.
     @JsonKey(name: 'library')
-        List<Canonical>? library_,
+        List<FhirCanonical>? library_,
 
     /// [disclaimer] Notices and disclaimers regarding the use of the measure or
     /// related to intellectual property (such as code systems) referenced by the
@@ -622,7 +622,7 @@ class Measure with Resource, _$Measure {
 
     /// [definition] Provides a description of an individual term used within the
     ///  measure.
-    List<Markdown>? definition,
+    List<FhirMarkdown>? definition,
 
     /// [definitionElement] Extensions for definition
     @JsonKey(name: '_definition')
@@ -1427,7 +1427,7 @@ class MeasureReport with Resource, _$MeasureReport {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -1512,7 +1512,7 @@ class MeasureReport with Resource, _$MeasureReport {
 
     /// [measure] A reference to the Measure that was calculated to produce this
     ///  report.
-    required Canonical measure,
+    required FhirCanonical measure,
 
     /// [subject] Optional subject identifying the individual or individuals the
     ///  report is for.
@@ -2384,7 +2384,7 @@ class TestReport with Resource, _$TestReport {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -3710,7 +3710,7 @@ class TestScript with Resource, _$TestScript {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -4507,7 +4507,7 @@ class TestScriptCapability with _$TestScriptCapability {
     @JsonKey(name: '_description') Element? descriptionElement,
 
     /// [origin] Which origin server these requirements apply to.
-    List<Integer>? origin,
+    List<FhirInteger>? origin,
 
     /// [originElement] Extensions for origin
     @JsonKey(name: '_origin') List<Element?>? originElement,
@@ -4529,7 +4529,7 @@ class TestScriptCapability with _$TestScriptCapability {
     /// execute successfully.   If server does not meet at a minimum the
     /// referenced capability statement, then all tests in this script are
     ///  skipped.
-    required Canonical capabilities,
+    required FhirCanonical capabilities,
   }) = _TestScriptCapability;
 
   /// Produces a Yaml formatted String version of the object

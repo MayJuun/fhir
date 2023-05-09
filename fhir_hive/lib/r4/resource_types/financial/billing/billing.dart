@@ -878,7 +878,7 @@ class ClaimSupportingInfo with _$ClaimSupportingInfo {
     List<FhirExtension>? modifierExtension,
 
     /// [sequence] A number to uniquely identify supporting information entries.
-    PositiveInt? sequence,
+    FhirPositiveInt? sequence,
 
     /// [sequenceElement] Extensions for sequence
     @JsonKey(name: '_sequence') Element? sequenceElement,
@@ -1049,7 +1049,7 @@ class ClaimDiagnosis with _$ClaimDiagnosis {
     List<FhirExtension>? modifierExtension,
 
     /// [sequence] A number to uniquely identify diagnosis entries.
-    PositiveInt? sequence,
+    FhirPositiveInt? sequence,
 
     /// [sequenceElement] Extensions for sequence
     @JsonKey(name: '_sequence') Element? sequenceElement,
@@ -1339,7 +1339,7 @@ class ClaimInsurance with _$ClaimInsurance {
 
     /// [sequence] A number to uniquely identify insurance entries and provide a
     ///  sequence of coverages to convey coordination of benefit order.
-    PositiveInt? sequence,
+    FhirPositiveInt? sequence,
 
     /// [sequenceElement] Extensions for sequence
     @JsonKey(name: '_sequence') Element? sequenceElement,
@@ -1678,28 +1678,28 @@ class ClaimItem with _$ClaimItem {
     List<FhirExtension>? modifierExtension,
 
     /// [sequence] A number to uniquely identify item entries.
-    PositiveInt? sequence,
+    FhirPositiveInt? sequence,
 
     /// [sequenceElement] Extensions for sequence
     @JsonKey(name: '_sequence')
         Element? sequenceElement,
 
     /// [careTeamSequence] CareTeam members related to this service or product.
-    List<PositiveInt>? careTeamSequence,
+    List<FhirPositiveInt>? careTeamSequence,
 
     /// [careTeamSequenceElement] Extensions for careTeamSequence
     @JsonKey(name: '_careTeamSequence')
         List<Element?>? careTeamSequenceElement,
 
     /// [diagnosisSequence] Diagnosis applicable for this service or product.
-    List<PositiveInt>? diagnosisSequence,
+    List<FhirPositiveInt>? diagnosisSequence,
     @JsonKey(name: '_diagnosisSequence')
 
         /// [diagnosisSequenceElement] Extensions for diagnosisSequence
         List<Element>? diagnosisSequenceElement,
 
     /// [procedureSequence] Procedures applicable for this service or product.
-    List<PositiveInt>? procedureSequence,
+    List<FhirPositiveInt>? procedureSequence,
     @JsonKey(name: '_procedureSequence')
 
         /// [procedureSequenceElement] Extensions for procedureSequence
@@ -1707,7 +1707,7 @@ class ClaimItem with _$ClaimItem {
 
     /// [informationSequence] Exceptions, special conditions and supporting
     ///  information applicable for this service or product.
-    List<PositiveInt>? informationSequence,
+    List<FhirPositiveInt>? informationSequence,
     @JsonKey(name: '_informationSequence')
 
         /// [informationSequenceElement] Extensions for informationSequence
@@ -1928,7 +1928,7 @@ class ClaimDetail with _$ClaimDetail {
     List<FhirExtension>? modifierExtension,
 
     /// [sequence] A number to uniquely identify item entries.
-    PositiveInt? sequence,
+    FhirPositiveInt? sequence,
 
     /// [sequenceElement] Extensions for sequence
     @JsonKey(name: '_sequence') Element? sequenceElement,
@@ -2112,7 +2112,7 @@ class ClaimSubDetail with _$ClaimSubDetail {
     List<FhirExtension>? modifierExtension,
 
     /// [sequence] A number to uniquely identify item entries.
-    PositiveInt? sequence,
+    FhirPositiveInt? sequence,
 
     /// [sequenceElement] Extensions for sequence
     @JsonKey(name: '_sequence') Element? sequenceElement,
@@ -2696,14 +2696,14 @@ class ClaimResponseItem with _$ClaimResponseItem {
     List<FhirExtension>? modifierExtension,
 
     /// [itemSequence] A number to uniquely reference the claim item entries.
-    PositiveInt? itemSequence,
+    FhirPositiveInt? itemSequence,
 
     /// [itemSequenceElement] Extensions for itemSequence
     @JsonKey(name: '_itemSequence') Element? itemSequenceElement,
 
     /// [noteNumber] The numbers associated with notes below which apply to the
     ///  adjudication of this item.
-    List<PositiveInt>? noteNumber,
+    List<FhirPositiveInt>? noteNumber,
 
     /// [noteNumberElement] Extensions for noteNumber
     @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
@@ -2952,14 +2952,14 @@ class ClaimResponseDetail with _$ClaimResponseDetail {
     List<FhirExtension>? modifierExtension,
 
     /// [detailSequence] A number to uniquely reference the claim detail entry.
-    PositiveInt? detailSequence,
+    FhirPositiveInt? detailSequence,
 
     /// [detailSequenceElement] Extensions for detailSequence
     @JsonKey(name: '_detailSequence') Element? detailSequenceElement,
 
     /// [noteNumber] The numbers associated with notes below which apply to the
     ///  adjudication of this item.
-    List<PositiveInt>? noteNumber,
+    List<FhirPositiveInt>? noteNumber,
 
     /// [noteNumberElement] Extensions for noteNumber
     @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
@@ -3076,14 +3076,14 @@ class ClaimResponseSubDetail with _$ClaimResponseSubDetail {
 
     /// [subDetailSequence] A number to uniquely reference the claim sub-detail
     ///  entry.
-    PositiveInt? subDetailSequence,
+    FhirPositiveInt? subDetailSequence,
 
     /// [subDetailSequenceElement] Extensions for subDetailSequence
     @JsonKey(name: '_subDetailSequence') Element? subDetailSequenceElement,
 
     /// [noteNumber] The numbers associated with notes below which apply to the
     ///  adjudication of this item.
-    List<PositiveInt>? noteNumber,
+    List<FhirPositiveInt>? noteNumber,
 
     /// [noteNumberElement] Extensions for noteNumber
     @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
@@ -3257,7 +3257,7 @@ class ClaimResponseAddItem with _$ClaimResponseAddItem {
 
     /// [itemSequence] Claim items which this service line is intended to
     ///  replace.
-    List<PositiveInt>? itemSequence,
+    List<FhirPositiveInt>? itemSequence,
 
     /// [itemSequenceElement] Extensions for itemSequence
     @JsonKey(name: '_itemSequence')
@@ -3265,7 +3265,7 @@ class ClaimResponseAddItem with _$ClaimResponseAddItem {
 
     /// [detailSequence] The sequence number of the details within the claim item
     ///  which this line is intended to replace.
-    List<PositiveInt>? detailSequence,
+    List<FhirPositiveInt>? detailSequence,
 
     /// [detailSequenceElement] Extensions for detailSequence
     @JsonKey(name: '_detailSequence')
@@ -3273,7 +3273,7 @@ class ClaimResponseAddItem with _$ClaimResponseAddItem {
 
     /// [subdetailSequence] The sequence number of the sub-details within the
     ///  details within the claim item which this line is intended to replace.
-    List<PositiveInt>? subdetailSequence,
+    List<FhirPositiveInt>? subdetailSequence,
     @JsonKey(name: '_subdetailSequence')
 
         /// [subdetailSequenceElement] Extensions for subdetailSequence
@@ -3347,7 +3347,7 @@ class ClaimResponseAddItem with _$ClaimResponseAddItem {
 
     /// [noteNumber] The numbers associated with notes below which apply to the
     ///  adjudication of this item.
-    List<PositiveInt>? noteNumber,
+    List<FhirPositiveInt>? noteNumber,
 
     /// [noteNumberElement] Extensions for noteNumber
     @JsonKey(name: '_noteNumber')
@@ -3516,7 +3516,7 @@ class ClaimResponseDetail1 with _$ClaimResponseDetail1 {
 
     /// [noteNumber] The numbers associated with notes below which apply to the
     ///  adjudication of this item.
-    List<PositiveInt>? noteNumber,
+    List<FhirPositiveInt>? noteNumber,
 
     /// [noteNumberElement] Extensions for noteNumber
     @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
@@ -3682,7 +3682,7 @@ class ClaimResponseSubDetail1 with _$ClaimResponseSubDetail1 {
 
     /// [noteNumber] The numbers associated with notes below which apply to the
     ///  adjudication of this item.
-    List<PositiveInt>? noteNumber,
+    List<FhirPositiveInt>? noteNumber,
 
     /// [noteNumberElement] Extensions for noteNumber
     @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
@@ -4040,7 +4040,7 @@ class ClaimResponseProcessNote with _$ClaimResponseProcessNote {
     List<FhirExtension>? modifierExtension,
 
     /// [number] A number to uniquely identify a note entry.
-    PositiveInt? number,
+    FhirPositiveInt? number,
 
     /// [numberElement] Extensions for number
     @JsonKey(name: '_number') Element? numberElement,
@@ -4177,7 +4177,7 @@ class ClaimResponseInsurance with _$ClaimResponseInsurance {
 
     /// [sequence] A number to uniquely identify insurance entries and provide a
     ///  sequence of coverages to convey coordination of benefit order.
-    PositiveInt? sequence,
+    FhirPositiveInt? sequence,
 
     /// [sequenceElement] Extensions for sequence
     @JsonKey(name: '_sequence') Element? sequenceElement,
@@ -4322,7 +4322,7 @@ class ClaimResponseError with _$ClaimResponseError {
     /// [itemSequence] The sequence number of the line item submitted which
     /// contains the error. This value is omitted when the error occurs outside of
     ///  the item structure.
-    PositiveInt? itemSequence,
+    FhirPositiveInt? itemSequence,
 
     /// [itemSequenceElement] Extensions for itemSequence
     @JsonKey(name: '_itemSequence') Element? itemSequenceElement,
@@ -4330,7 +4330,7 @@ class ClaimResponseError with _$ClaimResponseError {
     /// [detailSequence] The sequence number of the detail within the line item
     /// submitted which contains the error. This value is omitted when the error
     ///  occurs outside of the item structure.
-    PositiveInt? detailSequence,
+    FhirPositiveInt? detailSequence,
 
     /// [detailSequenceElement] Extensions for detailSequence
     @JsonKey(name: '_detailSequence') Element? detailSequenceElement,
@@ -4338,7 +4338,7 @@ class ClaimResponseError with _$ClaimResponseError {
     /// [subDetailSequence] The sequence number of the sub-detail within the
     /// detail within the line item submitted which contains the error. This value
     ///  is omitted when the error occurs outside of the item structure.
-    PositiveInt? subDetailSequence,
+    FhirPositiveInt? subDetailSequence,
 
     /// [subDetailSequenceElement] Extensions for subDetailSequence
     @JsonKey(name: '_subDetailSequence') Element? subDetailSequenceElement,
@@ -4894,7 +4894,7 @@ class InvoiceLineItem with _$InvoiceLineItem {
     List<FhirExtension>? modifierExtension,
 
     /// [sequence] Sequence in which the items appear on the invoice.
-    PositiveInt? sequence,
+    FhirPositiveInt? sequence,
 
     /// [sequenceElement] Extensions for sequence
     @JsonKey(name: '_sequence') Element? sequenceElement,

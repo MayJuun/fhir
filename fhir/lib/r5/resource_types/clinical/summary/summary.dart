@@ -212,7 +212,7 @@ class AdverseEvent with Resource, _$AdverseEvent {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when
@@ -1518,7 +1518,7 @@ class AllergyIntolerance with Resource, _$AllergyIntolerance {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when
@@ -1560,7 +1560,7 @@ class AllergyIntolerance with Resource, _$AllergyIntolerance {
     CodeableConcept? type,
 
     /// [category] Category of the identified substance.
-    List<Code>? category,
+    List<FhirCode>? category,
 
     /// [categoryElement] ("_category") Extensions for category
     @JsonKey(name: '_category') List<Element>? categoryElement,
@@ -2095,7 +2095,7 @@ class ClinicalImpression with Resource, _$ClinicalImpression {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when
@@ -2544,7 +2544,7 @@ class Condition with Resource, _$Condition {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when
@@ -3055,7 +3055,7 @@ class DetectedIssue with Resource, _$DetectedIssue {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when
@@ -3595,7 +3595,7 @@ class FamilyMemberHistory with Resource, _$FamilyMemberHistory {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when
@@ -3628,7 +3628,7 @@ class FamilyMemberHistory with Resource, _$FamilyMemberHistory {
     List<Identifier>? identifier,
 
     /// [instantiatesCanonical] The URL pointing to a FHIR-defined protocol, guideline, orderset or other definition that is adhered to in whole or in part by this FamilyMemberHistory.
-    List<Canonical>? instantiatesCanonical,
+    List<FhirCanonical>? instantiatesCanonical,
 
     /// [instantiatesUri] The URL pointing to an externally maintained protocol, guideline, orderset or other definition that is adhered to in whole or in part by this FamilyMemberHistory.
     List<FhirUri>? instantiatesUri,
@@ -4470,7 +4470,7 @@ class Procedure with Resource, _$Procedure {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when
@@ -4503,7 +4503,7 @@ class Procedure with Resource, _$Procedure {
     List<Identifier>? identifier,
 
     /// [instantiatesCanonical] The URL pointing to a FHIR-defined protocol, guideline, order set or other definition that is adhered to in whole or in part by this Procedure.
-    List<Canonical>? instantiatesCanonical,
+    List<FhirCanonical>? instantiatesCanonical,
 
     /// [instantiatesUri] The URL pointing to an externally maintained protocol, guideline, order set or other definition that is adhered to in whole or in part by this Procedure.
     List<FhirUri>? instantiatesUri,

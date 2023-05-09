@@ -189,7 +189,7 @@ class Appointment with Resource, _$Appointment {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -296,7 +296,7 @@ class Appointment with Resource, _$Appointment {
     /// [priority] The priority of the appointment. Can be used to make informed
     /// decisions if needing to re-prioritize appointments. (The iCal Standard
     ///  specifies 0 as undefined, 1 as highest, 9 as lowest priority).
-    UnsignedInt? priority,
+    FhirUnsignedInt? priority,
 
     /// [priorityElement] Extensions for priority
     @JsonKey(name: '_priority')
@@ -336,7 +336,7 @@ class Appointment with Resource, _$Appointment {
     /// if there is, for example, a planned 15 minute break in the middle of a
     /// long appointment, the duration may be 15 minutes less than the difference
     ///  between the start and end.
-    PositiveInt? minutesDuration,
+    FhirPositiveInt? minutesDuration,
 
     /// [minutesDurationElement] Extensions for minutesDuration
     @JsonKey(name: '_minutesDuration')
@@ -663,7 +663,7 @@ class AppointmentResponse with Resource, _$AppointmentResponse {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -906,7 +906,7 @@ class Schedule with Resource, _$Schedule {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -1152,7 +1152,7 @@ class Slot with Resource, _$Slot {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -1481,7 +1481,7 @@ class Task with Resource, _$Task {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -1790,7 +1790,7 @@ class TaskRestriction with _$TaskRestriction {
 
     /// [repetitions] Indicates the number of times the requested action should
     ///  occur.
-    PositiveInt? repetitions,
+    FhirPositiveInt? repetitions,
 
     /// [repetitionsElement] Extensions for repetitions
     @JsonKey(name: '_repetitions') Element? repetitionsElement,
@@ -2107,13 +2107,13 @@ class TaskInput with _$TaskInput {
     @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
 
     /// [valueOid] The value of the input parameter as a basic type.
-    Oid? valueOid,
+    FhirOid? valueOid,
 
     /// [valueOidElement] Extensions for valueOid
     @JsonKey(name: '_valueOid') Element? valueOidElement,
 
     /// [valuePositiveInt] The value of the input parameter as a basic type.
-    PositiveInt? valuePositiveInt,
+    FhirPositiveInt? valuePositiveInt,
 
     /// [valuePositiveIntElement] Extensions for valuePositiveInt
     @JsonKey(name: '_valuePositiveInt') Element? valuePositiveIntElement,
@@ -2125,13 +2125,13 @@ class TaskInput with _$TaskInput {
     @JsonKey(name: '_valueString') Element? valueStringElement,
 
     /// [valueTime] The value of the input parameter as a basic type.
-    Time? valueTime,
+    FhirTime? valueTime,
 
     /// [valueTimeElement] Extensions for valueTime
     @JsonKey(name: '_valueTime') Element? valueTimeElement,
 
     /// [valueUnsignedInt] The value of the input parameter as a basic type.
-    UnsignedInt? valueUnsignedInt,
+    FhirUnsignedInt? valueUnsignedInt,
 
     /// [valueUnsignedIntElement] Extensions for valueUnsignedInt
     @JsonKey(name: '_valueUnsignedInt') Element? valueUnsignedIntElement,
@@ -2149,7 +2149,7 @@ class TaskInput with _$TaskInput {
     @JsonKey(name: '_valueUrl') Element? valueUrlElement,
 
     /// [valueUuid] The value of the input parameter as a basic type.
-    Uuid? valueUuid,
+    FhirUuid? valueUuid,
 
     /// [valueUuidElement] Extensions for valueUuid
     @JsonKey(name: '_valueUuid') Element? valueUuidElement,
@@ -2247,7 +2247,7 @@ class TaskInput with _$TaskInput {
     Dosage? valueDosage,
 
     /// [valueMeta] The value of the input parameter as a basic type.
-    Meta? valueMeta,
+    FhirMeta? valueMeta,
   }) = _TaskInput;
 
   /// Produces a Yaml formatted String version of the object
@@ -2552,13 +2552,13 @@ class TaskOutput with _$TaskOutput {
     @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
 
     /// [valueOid] The value of the Output parameter as a basic type.
-    Oid? valueOid,
+    FhirOid? valueOid,
 
     /// [valueOidElement] Extensions for valueOid
     @JsonKey(name: '_valueOid') Element? valueOidElement,
 
     /// [valuePositiveInt] The value of the Output parameter as a basic type.
-    PositiveInt? valuePositiveInt,
+    FhirPositiveInt? valuePositiveInt,
 
     /// [valuePositiveIntElement] Extensions for valuePositiveInt
     @JsonKey(name: '_valuePositiveInt') Element? valuePositiveIntElement,
@@ -2570,13 +2570,13 @@ class TaskOutput with _$TaskOutput {
     @JsonKey(name: '_valueString') Element? valueStringElement,
 
     /// [valueTime] The value of the Output parameter as a basic type.
-    Time? valueTime,
+    FhirTime? valueTime,
 
     /// [valueTimeElement] Extensions for valueTime
     @JsonKey(name: '_valueTime') Element? valueTimeElement,
 
     /// [valueUnsignedInt] The value of the Output parameter as a basic type.
-    UnsignedInt? valueUnsignedInt,
+    FhirUnsignedInt? valueUnsignedInt,
 
     /// [valueUnsignedIntElement] Extensions for valueUnsignedInt
     @JsonKey(name: '_valueUnsignedInt') Element? valueUnsignedIntElement,
@@ -2594,7 +2594,7 @@ class TaskOutput with _$TaskOutput {
     @JsonKey(name: '_valueUrl') Element? valueUrlElement,
 
     /// [valueUuid] The value of the Output parameter as a basic type.
-    Uuid? valueUuid,
+    FhirUuid? valueUuid,
 
     /// [valueUuidElement] Extensions for valueUuid
     @JsonKey(name: '_valueUuid') Element? valueUuidElement,
@@ -2692,7 +2692,7 @@ class TaskOutput with _$TaskOutput {
     Dosage? valueDosage,
 
     /// [valueMeta] The value of the Output parameter as a basic type.
-    Meta? valueMeta,
+    FhirMeta? valueMeta,
   }) = _TaskOutput;
 
   /// Produces a Yaml formatted String version of the object
@@ -2848,7 +2848,7 @@ class VerificationResult with Resource, _$VerificationResult {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the

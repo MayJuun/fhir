@@ -31,7 +31,7 @@ mixin _$Measure {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -237,7 +237,7 @@ mixin _$Measure {
 
   /// [library_] ("library") A reference to a Library resource containing the formal logic used by the measure.
   @JsonKey(name: 'library')
-  List<Canonical>? get library_ => throw _privateConstructorUsedError;
+  List<FhirCanonical>? get library_ => throw _privateConstructorUsedError;
 
   /// [disclaimer] Notices and disclaimers regarding the use of the measure or related to intellectual property (such as code systems) referenced by the measure.
   FhirMarkdown? get disclaimer => throw _privateConstructorUsedError;
@@ -323,7 +323,7 @@ abstract class $MeasureCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.Measure)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -404,7 +404,7 @@ abstract class $MeasureCopyWith<$Res> {
       @JsonKey(name: '_usage')
           Element? usageElement,
       @JsonKey(name: 'library')
-          List<Canonical>? library_,
+          List<FhirCanonical>? library_,
       FhirMarkdown? disclaimer,
       @JsonKey(name: '_disclaimer')
           Element? disclaimerElement,
@@ -814,7 +814,7 @@ class _$MeasureCopyWithImpl<$Res, $Val extends Measure>
       library_: freezed == library_
           ? _value.library_
           : library_ // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       disclaimer: freezed == disclaimer
           ? _value.disclaimer
           : disclaimer // ignore: cast_nullable_to_non_nullable
@@ -1349,7 +1349,7 @@ abstract class _$$_MeasureCopyWith<$Res> implements $MeasureCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.Measure)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -1430,7 +1430,7 @@ abstract class _$$_MeasureCopyWith<$Res> implements $MeasureCopyWith<$Res> {
       @JsonKey(name: '_usage')
           Element? usageElement,
       @JsonKey(name: 'library')
-          List<Canonical>? library_,
+          List<FhirCanonical>? library_,
       FhirMarkdown? disclaimer,
       @JsonKey(name: '_disclaimer')
           Element? disclaimerElement,
@@ -1873,7 +1873,7 @@ class __$$_MeasureCopyWithImpl<$Res>
       library_: freezed == library_
           ? _value._library_
           : library_ // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       disclaimer: freezed == disclaimer
           ? _value.disclaimer
           : disclaimer // ignore: cast_nullable_to_non_nullable
@@ -2048,7 +2048,7 @@ class _$_Measure extends _Measure {
       @JsonKey(name: '_usage')
           this.usageElement,
       @JsonKey(name: 'library')
-          final List<Canonical>? library_,
+          final List<FhirCanonical>? library_,
       this.disclaimer,
       @JsonKey(name: '_disclaimer')
           this.disclaimerElement,
@@ -2106,7 +2106,7 @@ class _$_Measure extends _Measure {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -2489,12 +2489,12 @@ class _$_Measure extends _Measure {
   final Element? usageElement;
 
   /// [library_] ("library") A reference to a Library resource containing the formal logic used by the measure.
-  final List<Canonical>? _library_;
+  final List<FhirCanonical>? _library_;
 
   /// [library_] ("library") A reference to a Library resource containing the formal logic used by the measure.
   @override
   @JsonKey(name: 'library')
-  List<Canonical>? get library_ {
+  List<FhirCanonical>? get library_ {
     final value = _library_;
     if (value == null) return null;
     if (_library_ is EqualUnmodifiableListView) return _library_;
@@ -2862,7 +2862,7 @@ abstract class _Measure extends Measure {
   factory _Measure(
       {@JsonKey(unknownEnumValue: R5ResourceType.Measure)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -2944,7 +2944,7 @@ abstract class _Measure extends Measure {
       @JsonKey(name: '_usage')
           final Element? usageElement,
       @JsonKey(name: 'library')
-          final List<Canonical>? library_,
+          final List<FhirCanonical>? library_,
       final Markdown? disclaimer,
       @JsonKey(name: '_disclaimer')
           final Element? disclaimerElement,
@@ -2990,7 +2990,7 @@ abstract class _Measure extends Measure {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when
@@ -3251,7 +3251,7 @@ abstract class _Measure extends Measure {
 
   /// [library_] ("library") A reference to a Library resource containing the formal logic used by the measure.
   @JsonKey(name: 'library')
-  List<Canonical>? get library_;
+  List<FhirCanonical>? get library_;
   @override
 
   /// [disclaimer] Notices and disclaimers regarding the use of the measure or related to intellectual property (such as code systems) referenced by the measure.
@@ -6524,7 +6524,7 @@ mixin _$MeasureReport {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -6638,7 +6638,7 @@ abstract class $MeasureReportCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.MeasureReport)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -7067,7 +7067,7 @@ abstract class _$$_MeasureReportCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R5ResourceType.MeasureReport)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -7372,7 +7372,7 @@ class _$_MeasureReport extends _MeasureReport {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -7676,7 +7676,7 @@ abstract class _MeasureReport extends MeasureReport {
   factory _MeasureReport(
       {@JsonKey(unknownEnumValue: R5ResourceType.MeasureReport)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -7733,7 +7733,7 @@ abstract class _MeasureReport extends MeasureReport {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when
@@ -11423,7 +11423,7 @@ mixin _$TestReport {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -11533,7 +11533,7 @@ abstract class $TestReportCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.TestReport)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -11917,7 +11917,7 @@ abstract class _$$_TestReportCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R5ResourceType.TestReport)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -12205,7 +12205,7 @@ class _$_TestReport extends _TestReport {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -12487,7 +12487,7 @@ abstract class _TestReport extends TestReport {
   factory _TestReport(
       {@JsonKey(unknownEnumValue: R5ResourceType.TestReport)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -12544,7 +12544,7 @@ abstract class _TestReport extends TestReport {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when
@@ -16498,7 +16498,7 @@ mixin _$TestScript {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -16655,7 +16655,7 @@ mixin _$TestScript {
   List<TestScriptFixture>? get fixture => throw _privateConstructorUsedError;
 
   /// [profile] Reference to the profile to be used for validation.
-  List<Canonical>? get profile => throw _privateConstructorUsedError;
+  List<FhirCanonical>? get profile => throw _privateConstructorUsedError;
 
   /// [variable] Variable is set based either on element value in response body or on header field value in the response headers.
   List<TestScriptVariable>? get variable => throw _privateConstructorUsedError;
@@ -16685,7 +16685,7 @@ abstract class $TestScriptCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.TestScript)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -16746,7 +16746,7 @@ abstract class $TestScriptCopyWith<$Res> {
       TestScriptMetadata? metadata,
       List<TestScriptScope>? scope,
       List<TestScriptFixture>? fixture,
-      List<Canonical>? profile,
+      List<FhirCanonical>? profile,
       List<TestScriptVariable>? variable,
       TestScriptSetup? setup,
       List<TestScriptTest>? test,
@@ -17033,7 +17033,7 @@ class _$TestScriptCopyWithImpl<$Res, $Val extends TestScript>
       profile: freezed == profile
           ? _value.profile
           : profile // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       variable: freezed == variable
           ? _value.variable
           : variable // ignore: cast_nullable_to_non_nullable
@@ -17320,7 +17320,7 @@ abstract class _$$_TestScriptCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R5ResourceType.TestScript)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -17381,7 +17381,7 @@ abstract class _$$_TestScriptCopyWith<$Res>
       TestScriptMetadata? metadata,
       List<TestScriptScope>? scope,
       List<TestScriptFixture>? fixture,
-      List<Canonical>? profile,
+      List<FhirCanonical>? profile,
       List<TestScriptVariable>? variable,
       TestScriptSetup? setup,
       List<TestScriptTest>? test,
@@ -17687,7 +17687,7 @@ class __$$_TestScriptCopyWithImpl<$Res>
       profile: freezed == profile
           ? _value._profile
           : profile // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       variable: freezed == variable
           ? _value._variable
           : variable // ignore: cast_nullable_to_non_nullable
@@ -17776,7 +17776,7 @@ class _$_TestScript extends _TestScript {
       this.metadata,
       final List<TestScriptScope>? scope,
       final List<TestScriptFixture>? fixture,
-      final List<Canonical>? profile,
+      final List<FhirCanonical>? profile,
       final List<TestScriptVariable>? variable,
       this.setup,
       final List<TestScriptTest>? test,
@@ -17808,7 +17808,7 @@ class _$_TestScript extends _TestScript {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -18112,11 +18112,11 @@ class _$_TestScript extends _TestScript {
   }
 
   /// [profile] Reference to the profile to be used for validation.
-  final List<Canonical>? _profile;
+  final List<FhirCanonical>? _profile;
 
   /// [profile] Reference to the profile to be used for validation.
   @override
-  List<Canonical>? get profile {
+  List<FhirCanonical>? get profile {
     final value = _profile;
     if (value == null) return null;
     if (_profile is EqualUnmodifiableListView) return _profile;
@@ -18333,7 +18333,7 @@ abstract class _TestScript extends TestScript {
   factory _TestScript(
       {@JsonKey(unknownEnumValue: R5ResourceType.TestScript)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -18395,7 +18395,7 @@ abstract class _TestScript extends TestScript {
       final TestScriptMetadata? metadata,
       final List<TestScriptScope>? scope,
       final List<TestScriptFixture>? fixture,
-      final List<Canonical>? profile,
+      final List<FhirCanonical>? profile,
       final List<TestScriptVariable>? variable,
       final TestScriptSetup? setup,
       final List<TestScriptTest>? test,
@@ -18420,7 +18420,7 @@ abstract class _TestScript extends TestScript {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when
@@ -18619,7 +18619,7 @@ abstract class _TestScript extends TestScript {
   @override
 
   /// [profile] Reference to the profile to be used for validation.
-  List<Canonical>? get profile;
+  List<FhirCanonical>? get profile;
   @override
 
   /// [variable] Variable is set based either on element value in response body or on header field value in the response headers.
@@ -20528,7 +20528,7 @@ mixin _$TestScriptCapability {
   Element? get descriptionElement => throw _privateConstructorUsedError;
 
   /// [origin] Which origin server these requirements apply to.
-  List<Integer>? get origin => throw _privateConstructorUsedError;
+  List<FhirInteger>? get origin => throw _privateConstructorUsedError;
 
   /// [originElement] ("_origin") Extensions for origin
   @JsonKey(name: '_origin')
@@ -20573,7 +20573,7 @@ abstract class $TestScriptCapabilityCopyWith<$Res> {
       @JsonKey(name: '_validated') Element? validatedElement,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      List<Integer>? origin,
+      List<FhirInteger>? origin,
       @JsonKey(name: '_origin') List<Element>? originElement,
       FhirInteger? destination,
       @JsonKey(name: '_destination') Element? destinationElement,
@@ -20658,7 +20658,7 @@ class _$TestScriptCapabilityCopyWithImpl<$Res,
       origin: freezed == origin
           ? _value.origin
           : origin // ignore: cast_nullable_to_non_nullable
-              as List<Integer>?,
+              as List<FhirInteger>?,
       originElement: freezed == originElement
           ? _value.originElement
           : originElement // ignore: cast_nullable_to_non_nullable
@@ -20753,7 +20753,7 @@ abstract class _$$_TestScriptCapabilityCopyWith<$Res>
       @JsonKey(name: '_validated') Element? validatedElement,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      List<Integer>? origin,
+      List<FhirInteger>? origin,
       @JsonKey(name: '_origin') List<Element>? originElement,
       FhirInteger? destination,
       @JsonKey(name: '_destination') Element? destinationElement,
@@ -20839,7 +20839,7 @@ class __$$_TestScriptCapabilityCopyWithImpl<$Res>
       origin: freezed == origin
           ? _value._origin
           : origin // ignore: cast_nullable_to_non_nullable
-              as List<Integer>?,
+              as List<FhirInteger>?,
       originElement: freezed == originElement
           ? _value._originElement
           : originElement // ignore: cast_nullable_to_non_nullable
@@ -20881,7 +20881,7 @@ class _$_TestScriptCapability extends _TestScriptCapability {
       @JsonKey(name: '_validated') this.validatedElement,
       this.description,
       @JsonKey(name: '_description') this.descriptionElement,
-      final List<Integer>? origin,
+      final List<FhirInteger>? origin,
       @JsonKey(name: '_origin') final List<Element>? originElement,
       this.destination,
       @JsonKey(name: '_destination') this.destinationElement,
@@ -20993,11 +20993,11 @@ class _$_TestScriptCapability extends _TestScriptCapability {
   final Element? descriptionElement;
 
   /// [origin] Which origin server these requirements apply to.
-  final List<Integer>? _origin;
+  final List<FhirInteger>? _origin;
 
   /// [origin] Which origin server these requirements apply to.
   @override
-  List<Integer>? get origin {
+  List<FhirInteger>? get origin {
     final value = _origin;
     if (value == null) return null;
     if (_origin is EqualUnmodifiableListView) return _origin;
@@ -21147,7 +21147,7 @@ abstract class _TestScriptCapability extends TestScriptCapability {
       @JsonKey(name: '_validated') final Element? validatedElement,
       final String? description,
       @JsonKey(name: '_description') final Element? descriptionElement,
-      final List<Integer>? origin,
+      final List<FhirInteger>? origin,
       @JsonKey(name: '_origin') final List<Element>? originElement,
       final Integer? destination,
       @JsonKey(name: '_destination') final Element? destinationElement,
@@ -21220,7 +21220,7 @@ abstract class _TestScriptCapability extends TestScriptCapability {
   @override
 
   /// [origin] Which origin server these requirements apply to.
-  List<Integer>? get origin;
+  List<FhirInteger>? get origin;
   @override
 
   /// [originElement] ("_origin") Extensions for origin
@@ -22817,7 +22817,7 @@ class _$_TestScriptVariable extends _TestScriptVariable {
 
   /// [sourceId] Fixture to evaluate the XPath/JSONPath expression or the headerField  against within this variable.
   @override
-  final Id? sourceId;
+  final FhirId? sourceId;
 
   /// [sourceIdElement] ("_sourceId") Extensions for sourceId
   @override
@@ -22929,7 +22929,7 @@ abstract class _TestScriptVariable extends TestScriptVariable {
           @JsonKey(name: '_hint') final Element? hintElement,
           final String? path,
           @JsonKey(name: '_path') final Element? pathElement,
-          final Id? sourceId,
+          final FhirId? sourceId,
           @JsonKey(name: '_sourceId') final Element? sourceIdElement}) =
       _$_TestScriptVariable;
   _TestScriptVariable._() : super._();
@@ -24854,7 +24854,7 @@ class _$_TestScriptOperation extends _TestScriptOperation {
 
   /// [requestId] The fixture id (maybe new) to map to the request.
   @override
-  final Id? requestId;
+  final FhirId? requestId;
 
   /// [requestIdElement] ("_requestId") Extensions for requestId
   @override
@@ -24863,7 +24863,7 @@ class _$_TestScriptOperation extends _TestScriptOperation {
 
   /// [responseId] The fixture id (maybe new) to map to the response.
   @override
-  final Id? responseId;
+  final FhirId? responseId;
 
   /// [responseIdElement] ("_responseId") Extensions for responseId
   @override
@@ -24872,7 +24872,7 @@ class _$_TestScriptOperation extends _TestScriptOperation {
 
   /// [sourceId] The id of the fixture used as the body of a PUT or POST request.
   @override
-  final Id? sourceId;
+  final FhirId? sourceId;
 
   /// [sourceIdElement] ("_sourceId") Extensions for sourceId
   @override
@@ -24881,7 +24881,7 @@ class _$_TestScriptOperation extends _TestScriptOperation {
 
   /// [targetId] Id of fixture used for extracting the [id],  [type], and [vid] for GET requests.
   @override
-  final Id? targetId;
+  final FhirId? targetId;
 
   /// [targetIdElement] ("_targetId") Extensions for targetId
   @override
@@ -25066,16 +25066,16 @@ abstract class _TestScriptOperation extends TestScriptOperation {
       @JsonKey(name: '_params')
           final Element? paramsElement,
       final List<TestScriptRequestHeader>? requestHeader,
-      final Id? requestId,
+      final FhirId? requestId,
       @JsonKey(name: '_requestId')
           final Element? requestIdElement,
-      final Id? responseId,
+      final FhirId? responseId,
       @JsonKey(name: '_responseId')
           final Element? responseIdElement,
-      final Id? sourceId,
+      final FhirId? sourceId,
       @JsonKey(name: '_sourceId')
           final Element? sourceIdElement,
-      final Id? targetId,
+      final FhirId? targetId,
       @JsonKey(name: '_targetId')
           final Element? targetIdElement,
       final String? url,
@@ -27278,7 +27278,7 @@ class _$_TestScriptAssert extends _TestScriptAssert {
 
   /// [sourceId] Fixture to evaluate the XPath/JSONPath expression or the headerField  against.
   @override
-  final Id? sourceId;
+  final FhirId? sourceId;
 
   /// [sourceIdElement] ("_sourceId") Extensions for sourceId
   @override
@@ -27296,7 +27296,7 @@ class _$_TestScriptAssert extends _TestScriptAssert {
 
   /// [validateProfileId] The ID of the Profile to validate against.
   @override
-  final Id? validateProfileId;
+  final FhirId? validateProfileId;
 
   /// [validateProfileIdElement] ("_validateProfileId") Extensions for validateProfileId
   @override
@@ -27538,13 +27538,13 @@ abstract class _TestScriptAssert extends TestScriptAssert {
       final String? responseCode,
       @JsonKey(name: '_responseCode')
           final Element? responseCodeElement,
-      final Id? sourceId,
+      final FhirId? sourceId,
       @JsonKey(name: '_sourceId')
           final Element? sourceIdElement,
       final FhirBoolean? stopTestOnFail,
       @JsonKey(name: '_stopTestOnFail')
           final Element? stopTestOnFailElement,
-      final Id? validateProfileId,
+      final FhirId? validateProfileId,
       @JsonKey(name: '_validateProfileId')
           final Element? validateProfileIdElement,
       final String? value,

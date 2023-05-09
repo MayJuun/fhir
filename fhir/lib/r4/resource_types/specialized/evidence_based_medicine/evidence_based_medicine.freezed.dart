@@ -22,7 +22,7 @@ Citation _$CitationFromJson(Map<String, dynamic> json) {
 mixin _$Citation {
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   String? get id => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
@@ -110,7 +110,7 @@ abstract class $CitationCopyWith<$Res> {
   $Res call(
       {R4ResourceType resourceType,
       String? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
@@ -705,7 +705,7 @@ abstract class _$$_CitationCopyWith<$Res> implements $CitationCopyWith<$Res> {
   $Res call(
       {R4ResourceType resourceType,
       String? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
@@ -1661,7 +1661,7 @@ abstract class _Citation extends Citation {
   @override
   String? get id;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
@@ -9888,7 +9888,7 @@ mixin _$CitationEntry {
   @JsonKey(name: '_correspondingContact')
   Element? get correspondingContactElement =>
       throw _privateConstructorUsedError;
-  PositiveInt? get listOrder => throw _privateConstructorUsedError;
+  FhirPositiveInt? get listOrder => throw _privateConstructorUsedError;
   @JsonKey(name: '_listOrder')
   Element? get listOrderElement => throw _privateConstructorUsedError;
 
@@ -9926,7 +9926,7 @@ abstract class $CitationEntryCopyWith<$Res> {
       FhirBoolean? correspondingContact,
       @JsonKey(name: '_correspondingContact')
           Element? correspondingContactElement,
-      PositiveInt? listOrder,
+      FhirPositiveInt? listOrder,
       @JsonKey(name: '_listOrder')
           Element? listOrderElement});
 
@@ -10154,7 +10154,7 @@ abstract class _$$_CitationEntryCopyWith<$Res>
       FhirBoolean? correspondingContact,
       @JsonKey(name: '_correspondingContact')
           Element? correspondingContactElement,
-      PositiveInt? listOrder,
+      FhirPositiveInt? listOrder,
       @JsonKey(name: '_listOrder')
           Element? listOrderElement});
 
@@ -10587,7 +10587,7 @@ abstract class _CitationEntry extends CitationEntry {
   @JsonKey(name: '_correspondingContact')
   Element? get correspondingContactElement;
   @override
-  PositiveInt? get listOrder;
+  FhirPositiveInt? get listOrder;
   @override
   @JsonKey(name: '_listOrder')
   Element? get listOrderElement;
@@ -11676,7 +11676,7 @@ mixin _$Evidence {
   @JsonKey(unknownEnumValue: R4ResourceType.Evidence)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   String? get id => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
@@ -11755,7 +11755,7 @@ abstract class $EvidenceCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R4ResourceType.Evidence)
           R4ResourceType resourceType,
       String? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -12322,7 +12322,7 @@ abstract class _$$_EvidenceCopyWith<$Res> implements $EvidenceCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R4ResourceType.Evidence)
           R4ResourceType resourceType,
       String? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -13233,7 +13233,7 @@ abstract class _Evidence extends Evidence {
   @override
   String? get id;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
@@ -13818,10 +13818,10 @@ mixin _$EvidenceStatistic {
   CodeableConcept? get statisticType => throw _privateConstructorUsedError;
   CodeableConcept? get category => throw _privateConstructorUsedError;
   Quantity? get quantity => throw _privateConstructorUsedError;
-  UnsignedInt? get numberOfEvents => throw _privateConstructorUsedError;
+  FhirUnsignedInt? get numberOfEvents => throw _privateConstructorUsedError;
   @JsonKey(name: '_numberOfEvents')
   Element? get numberOfEventsElement => throw _privateConstructorUsedError;
-  UnsignedInt? get numberAffected => throw _privateConstructorUsedError;
+  FhirUnsignedInt? get numberAffected => throw _privateConstructorUsedError;
   @JsonKey(name: '_numberAffected')
   Element? get numberAffectedElement => throw _privateConstructorUsedError;
   EvidenceSampleSize? get sampleSize => throw _privateConstructorUsedError;
@@ -13852,9 +13852,9 @@ abstract class $EvidenceStatisticCopyWith<$Res> {
       CodeableConcept? statisticType,
       CodeableConcept? category,
       Quantity? quantity,
-      UnsignedInt? numberOfEvents,
+      FhirUnsignedInt? numberOfEvents,
       @JsonKey(name: '_numberOfEvents') Element? numberOfEventsElement,
-      UnsignedInt? numberAffected,
+      FhirUnsignedInt? numberAffected,
       @JsonKey(name: '_numberAffected') Element? numberAffectedElement,
       EvidenceSampleSize? sampleSize,
       List<EvidenceAttributeEstimate>? attributeEstimate,
@@ -14070,9 +14070,9 @@ abstract class _$$_EvidenceStatisticCopyWith<$Res>
       CodeableConcept? statisticType,
       CodeableConcept? category,
       Quantity? quantity,
-      UnsignedInt? numberOfEvents,
+      FhirUnsignedInt? numberOfEvents,
       @JsonKey(name: '_numberOfEvents') Element? numberOfEventsElement,
-      UnsignedInt? numberAffected,
+      FhirUnsignedInt? numberAffected,
       @JsonKey(name: '_numberAffected') Element? numberAffectedElement,
       EvidenceSampleSize? sampleSize,
       List<EvidenceAttributeEstimate>? attributeEstimate,
@@ -14423,12 +14423,12 @@ abstract class _EvidenceStatistic extends EvidenceStatistic {
   @override
   Quantity? get quantity;
   @override
-  UnsignedInt? get numberOfEvents;
+  FhirUnsignedInt? get numberOfEvents;
   @override
   @JsonKey(name: '_numberOfEvents')
   Element? get numberOfEventsElement;
   @override
-  UnsignedInt? get numberAffected;
+  FhirUnsignedInt? get numberAffected;
   @override
   @JsonKey(name: '_numberAffected')
   Element? get numberAffectedElement;
@@ -14459,14 +14459,15 @@ mixin _$EvidenceSampleSize {
   @JsonKey(name: '_description')
   Element? get descriptionElement => throw _privateConstructorUsedError;
   List<Annotation>? get note => throw _privateConstructorUsedError;
-  UnsignedInt? get numberOfStudies => throw _privateConstructorUsedError;
+  FhirUnsignedInt? get numberOfStudies => throw _privateConstructorUsedError;
   @JsonKey(name: '_numberOfStudies')
   Element? get numberOfStudiesElement => throw _privateConstructorUsedError;
-  UnsignedInt? get numberOfParticipants => throw _privateConstructorUsedError;
+  FhirUnsignedInt? get numberOfParticipants =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_numberOfParticipants')
   Element? get numberOfParticipantsElement =>
       throw _privateConstructorUsedError;
-  UnsignedInt? get knownDataCount => throw _privateConstructorUsedError;
+  FhirUnsignedInt? get knownDataCount => throw _privateConstructorUsedError;
   @JsonKey(name: '_knownDataCount')
   Element? get knownDataCountElement => throw _privateConstructorUsedError;
 
@@ -14491,13 +14492,13 @@ abstract class $EvidenceSampleSizeCopyWith<$Res> {
       @JsonKey(name: '_description')
           Element? descriptionElement,
       List<Annotation>? note,
-      UnsignedInt? numberOfStudies,
+      FhirUnsignedInt? numberOfStudies,
       @JsonKey(name: '_numberOfStudies')
           Element? numberOfStudiesElement,
-      UnsignedInt? numberOfParticipants,
+      FhirUnsignedInt? numberOfParticipants,
       @JsonKey(name: '_numberOfParticipants')
           Element? numberOfParticipantsElement,
-      UnsignedInt? knownDataCount,
+      FhirUnsignedInt? knownDataCount,
       @JsonKey(name: '_knownDataCount')
           Element? knownDataCountElement});
 
@@ -14651,13 +14652,13 @@ abstract class _$$_EvidenceSampleSizeCopyWith<$Res>
       @JsonKey(name: '_description')
           Element? descriptionElement,
       List<Annotation>? note,
-      UnsignedInt? numberOfStudies,
+      FhirUnsignedInt? numberOfStudies,
       @JsonKey(name: '_numberOfStudies')
           Element? numberOfStudiesElement,
-      UnsignedInt? numberOfParticipants,
+      FhirUnsignedInt? numberOfParticipants,
       @JsonKey(name: '_numberOfParticipants')
           Element? numberOfParticipantsElement,
-      UnsignedInt? knownDataCount,
+      FhirUnsignedInt? knownDataCount,
       @JsonKey(name: '_knownDataCount')
           Element? knownDataCountElement});
 
@@ -14934,17 +14935,17 @@ abstract class _EvidenceSampleSize extends EvidenceSampleSize {
   @override
   List<Annotation>? get note;
   @override
-  UnsignedInt? get numberOfStudies;
+  FhirUnsignedInt? get numberOfStudies;
   @override
   @JsonKey(name: '_numberOfStudies')
   Element? get numberOfStudiesElement;
   @override
-  UnsignedInt? get numberOfParticipants;
+  FhirUnsignedInt? get numberOfParticipants;
   @override
   @JsonKey(name: '_numberOfParticipants')
   Element? get numberOfParticipantsElement;
   @override
-  UnsignedInt? get knownDataCount;
+  FhirUnsignedInt? get knownDataCount;
   @override
   @JsonKey(name: '_knownDataCount')
   Element? get knownDataCountElement;
@@ -16700,7 +16701,7 @@ EvidenceReport _$EvidenceReportFromJson(Map<String, dynamic> json) {
 mixin _$EvidenceReport {
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   String? get id => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
@@ -16759,7 +16760,7 @@ abstract class $EvidenceReportCopyWith<$Res> {
   $Res call(
       {R4ResourceType resourceType,
       String? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
@@ -17133,7 +17134,7 @@ abstract class _$$_EvidenceReportCopyWith<$Res>
   $Res call(
       {R4ResourceType resourceType,
       String? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
@@ -17799,7 +17800,7 @@ abstract class _EvidenceReport extends EvidenceReport {
   @override
   String? get id;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
@@ -19750,7 +19751,7 @@ mixin _$EvidenceVariable {
   @JsonKey(unknownEnumValue: R4ResourceType.EvidenceVariable)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   String? get id => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
@@ -19834,7 +19835,7 @@ abstract class $EvidenceVariableCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R4ResourceType.EvidenceVariable)
           R4ResourceType resourceType,
       String? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -20394,7 +20395,7 @@ abstract class _$$_EvidenceVariableCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R4ResourceType.EvidenceVariable)
           R4ResourceType resourceType,
       String? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -21303,7 +21304,7 @@ abstract class _EvidenceVariable extends EvidenceVariable {
   @override
   String? get id;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
@@ -22846,7 +22847,7 @@ mixin _$ResearchDefinition {
   @JsonKey(unknownEnumValue: R4ResourceType.ResearchDefinition)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   String? get id => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
@@ -22926,7 +22927,7 @@ mixin _$ResearchDefinition {
   List<RelatedArtifact>? get relatedArtifact =>
       throw _privateConstructorUsedError;
   @JsonKey(name: 'library')
-  List<Canonical>? get library_ => throw _privateConstructorUsedError;
+  List<FhirCanonical>? get library_ => throw _privateConstructorUsedError;
   Reference get population => throw _privateConstructorUsedError;
   Reference? get exposure => throw _privateConstructorUsedError;
   Reference? get exposureAlternative => throw _privateConstructorUsedError;
@@ -22948,7 +22949,7 @@ abstract class $ResearchDefinitionCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R4ResourceType.ResearchDefinition)
           R4ResourceType resourceType,
       String? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -23025,7 +23026,7 @@ abstract class $ResearchDefinitionCopyWith<$Res> {
       List<ContactDetail>? endorser,
       List<RelatedArtifact>? relatedArtifact,
       @JsonKey(name: 'library')
-          List<Canonical>? library_,
+          List<FhirCanonical>? library_,
       Reference population,
       Reference? exposure,
       Reference? exposureAlternative,
@@ -23373,7 +23374,7 @@ class _$ResearchDefinitionCopyWithImpl<$Res, $Val extends ResearchDefinition>
       library_: freezed == library_
           ? _value.library_
           : library_ // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       population: null == population
           ? _value.population
           : population // ignore: cast_nullable_to_non_nullable
@@ -23727,7 +23728,7 @@ abstract class _$$_ResearchDefinitionCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R4ResourceType.ResearchDefinition)
           R4ResourceType resourceType,
       String? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -23804,7 +23805,7 @@ abstract class _$$_ResearchDefinitionCopyWith<$Res>
       List<ContactDetail>? endorser,
       List<RelatedArtifact>? relatedArtifact,
       @JsonKey(name: 'library')
-          List<Canonical>? library_,
+          List<FhirCanonical>? library_,
       Reference population,
       Reference? exposure,
       Reference? exposureAlternative,
@@ -24177,7 +24178,7 @@ class __$$_ResearchDefinitionCopyWithImpl<$Res>
       library_: freezed == library_
           ? _value._library_
           : library_ // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       population: null == population
           ? _value.population
           : population // ignore: cast_nullable_to_non_nullable
@@ -24282,7 +24283,7 @@ class _$_ResearchDefinition extends _ResearchDefinition {
       final List<ContactDetail>? endorser,
       final List<RelatedArtifact>? relatedArtifact,
       @JsonKey(name: 'library')
-          final List<Canonical>? library_,
+          final List<FhirCanonical>? library_,
       required this.population,
       this.exposure,
       this.exposureAlternative,
@@ -24566,10 +24567,10 @@ class _$_ResearchDefinition extends _ResearchDefinition {
     return EqualUnmodifiableListView(value);
   }
 
-  final List<Canonical>? _library_;
+  final List<FhirCanonical>? _library_;
   @override
   @JsonKey(name: 'library')
-  List<Canonical>? get library_ {
+  List<FhirCanonical>? get library_ {
     final value = _library_;
     if (value == null) return null;
     if (_library_ is EqualUnmodifiableListView) return _library_;
@@ -24870,7 +24871,7 @@ abstract class _ResearchDefinition extends ResearchDefinition {
       final List<ContactDetail>? endorser,
       final List<RelatedArtifact>? relatedArtifact,
       @JsonKey(name: 'library')
-          final List<Canonical>? library_,
+          final List<FhirCanonical>? library_,
       required final Reference population,
       final Reference? exposure,
       final Reference? exposureAlternative,
@@ -24886,7 +24887,7 @@ abstract class _ResearchDefinition extends ResearchDefinition {
   @override
   String? get id;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
@@ -25019,7 +25020,7 @@ abstract class _ResearchDefinition extends ResearchDefinition {
   List<RelatedArtifact>? get relatedArtifact;
   @override
   @JsonKey(name: 'library')
-  List<Canonical>? get library_;
+  List<FhirCanonical>? get library_;
   @override
   Reference get population;
   @override
@@ -25044,7 +25045,7 @@ mixin _$ResearchElementDefinition {
   @JsonKey(unknownEnumValue: R4ResourceType.ResearchElementDefinition)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   String? get id => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
@@ -25124,7 +25125,7 @@ mixin _$ResearchElementDefinition {
   List<RelatedArtifact>? get relatedArtifact =>
       throw _privateConstructorUsedError;
   @JsonKey(name: 'library')
-  List<Canonical>? get library_ => throw _privateConstructorUsedError;
+  List<FhirCanonical>? get library_ => throw _privateConstructorUsedError;
   FhirCode? get type => throw _privateConstructorUsedError;
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
@@ -25150,7 +25151,7 @@ abstract class $ResearchElementDefinitionCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R4ResourceType.ResearchElementDefinition)
           R4ResourceType resourceType,
       String? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -25227,7 +25228,7 @@ abstract class $ResearchElementDefinitionCopyWith<$Res> {
       List<ContactDetail>? endorser,
       List<RelatedArtifact>? relatedArtifact,
       @JsonKey(name: 'library')
-          List<Canonical>? library_,
+          List<FhirCanonical>? library_,
       FhirCode? type,
       @JsonKey(name: '_type')
           Element? typeElement,
@@ -25578,7 +25579,7 @@ class _$ResearchElementDefinitionCopyWithImpl<$Res,
       library_: freezed == library_
           ? _value.library_
           : library_ // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
@@ -25917,7 +25918,7 @@ abstract class _$$_ResearchElementDefinitionCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R4ResourceType.ResearchElementDefinition)
           R4ResourceType resourceType,
       String? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -25994,7 +25995,7 @@ abstract class _$$_ResearchElementDefinitionCopyWith<$Res>
       List<ContactDetail>? endorser,
       List<RelatedArtifact>? relatedArtifact,
       @JsonKey(name: 'library')
-          List<Canonical>? library_,
+          List<FhirCanonical>? library_,
       FhirCode? type,
       @JsonKey(name: '_type')
           Element? typeElement,
@@ -26369,7 +26370,7 @@ class __$$_ResearchElementDefinitionCopyWithImpl<$Res>
       library_: freezed == library_
           ? _value._library_
           : library_ // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
@@ -26478,7 +26479,7 @@ class _$_ResearchElementDefinition extends _ResearchElementDefinition {
       final List<ContactDetail>? endorser,
       final List<RelatedArtifact>? relatedArtifact,
       @JsonKey(name: 'library')
-          final List<Canonical>? library_,
+          final List<FhirCanonical>? library_,
       this.type,
       @JsonKey(name: '_type')
           this.typeElement,
@@ -26767,10 +26768,10 @@ class _$_ResearchElementDefinition extends _ResearchElementDefinition {
     return EqualUnmodifiableListView(value);
   }
 
-  final List<Canonical>? _library_;
+  final List<FhirCanonical>? _library_;
   @override
   @JsonKey(name: 'library')
-  List<Canonical>? get library_ {
+  List<FhirCanonical>? get library_ {
     final value = _library_;
     if (value == null) return null;
     if (_library_ is EqualUnmodifiableListView) return _library_;
@@ -27082,7 +27083,7 @@ abstract class _ResearchElementDefinition extends ResearchElementDefinition {
       final List<ContactDetail>? endorser,
       final List<RelatedArtifact>? relatedArtifact,
       @JsonKey(name: 'library')
-          final List<Canonical>? library_,
+          final List<FhirCanonical>? library_,
       final FhirCode? type,
       @JsonKey(name: '_type')
           final Element? typeElement,
@@ -27102,7 +27103,7 @@ abstract class _ResearchElementDefinition extends ResearchElementDefinition {
   @override
   String? get id;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
@@ -27235,7 +27236,7 @@ abstract class _ResearchElementDefinition extends ResearchElementDefinition {
   List<RelatedArtifact>? get relatedArtifact;
   @override
   @JsonKey(name: 'library')
-  List<Canonical>? get library_;
+  List<FhirCanonical>? get library_;
   @override
   FhirCode? get type;
   @override

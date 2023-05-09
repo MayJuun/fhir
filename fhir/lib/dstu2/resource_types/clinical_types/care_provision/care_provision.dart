@@ -20,7 +20,7 @@ class CarePlan with Resource, _$CarePlan {
     @JsonKey(unknownEnumValue: Dstu2ResourceType.CarePlan)
         Dstu2ResourceType resourceType,
     FhirId? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,
@@ -223,7 +223,7 @@ class CarePlanActivityDetail with _$CarePlanActivityDetail {
     @JsonKey(unknownEnumValue: DetailStatus.unknown) DetailStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     CodeableConcept? statusReason,
-    required Boolean prohibited,
+    required FhirBoolean prohibited,
     Timing? scheduledTiming,
     Period? scheduledPeriod,
     String? scheduledString,
@@ -277,7 +277,7 @@ class Goal with Resource, _$Goal {
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Goal)
         Dstu2ResourceType resourceType,
     FhirId? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,
@@ -383,7 +383,7 @@ class ReferralRequest with Resource, _$ReferralRequest {
     @JsonKey(unknownEnumValue: Dstu2ResourceType.ReferralRequest)
         Dstu2ResourceType resourceType,
     FhirId? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     FhirCode? language,
     Narrative? text,
@@ -445,7 +445,7 @@ class ProcedureRequest with Resource, _$ProcedureRequest {
     @JsonKey(unknownEnumValue: Dstu2ResourceType.ProcedureRequest)
         Dstu2ResourceType resourceType,
     FhirId? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     FhirCode? language,
     Narrative? text,
@@ -510,7 +510,7 @@ class NutritionOrder with Resource, _$NutritionOrder {
     @JsonKey(unknownEnumValue: Dstu2ResourceType.NutritionOrder)
         Dstu2ResourceType resourceType,
     FhirId? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,
@@ -899,7 +899,7 @@ class VisionPrescription with Resource, _$VisionPrescription {
     @JsonKey(unknownEnumValue: Dstu2ResourceType.VisionPrescription)
         Dstu2ResourceType resourceType,
     FhirId? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,

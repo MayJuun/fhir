@@ -195,7 +195,7 @@ class Citation with Resource, _$Citation {
   factory Citation({
     @Default(R4ResourceType.Citation) R4ResourceType resourceType,
     String? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,
@@ -2105,7 +2105,7 @@ class CitationEntry with _$CitationEntry {
     FhirBoolean? correspondingContact,
     @JsonKey(name: '_correspondingContact')
         Element? correspondingContactElement,
-    PositiveInt? listOrder,
+    FhirPositiveInt? listOrder,
     @JsonKey(name: '_listOrder') Element? listOrderElement,
   }) = _CitationEntry;
 
@@ -2597,7 +2597,7 @@ class Evidence with Resource, _$Evidence {
     @JsonKey(unknownEnumValue: R4ResourceType.Evidence)
         R4ResourceType resourceType,
     String? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,
@@ -2797,9 +2797,9 @@ class EvidenceStatistic with _$EvidenceStatistic {
     CodeableConcept? statisticType,
     CodeableConcept? category,
     Quantity? quantity,
-    UnsignedInt? numberOfEvents,
+    FhirUnsignedInt? numberOfEvents,
     @JsonKey(name: '_numberOfEvents') Element? numberOfEventsElement,
-    UnsignedInt? numberAffected,
+    FhirUnsignedInt? numberAffected,
     @JsonKey(name: '_numberAffected') Element? numberAffectedElement,
     EvidenceSampleSize? sampleSize,
     List<EvidenceAttributeEstimate>? attributeEstimate,
@@ -2876,12 +2876,12 @@ class EvidenceSampleSize with _$EvidenceSampleSize {
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     List<Annotation>? note,
-    UnsignedInt? numberOfStudies,
+    FhirUnsignedInt? numberOfStudies,
     @JsonKey(name: '_numberOfStudies') Element? numberOfStudiesElement,
-    UnsignedInt? numberOfParticipants,
+    FhirUnsignedInt? numberOfParticipants,
     @JsonKey(name: '_numberOfParticipants')
         Element? numberOfParticipantsElement,
-    UnsignedInt? knownDataCount,
+    FhirUnsignedInt? knownDataCount,
     @JsonKey(name: '_knownDataCount') Element? knownDataCountElement,
   }) = _EvidenceSampleSize;
 
@@ -3335,7 +3335,7 @@ class EvidenceReport with Resource, _$EvidenceReport {
   factory EvidenceReport({
     @Default(R4ResourceType.EvidenceReport) R4ResourceType resourceType,
     String? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,
@@ -3900,7 +3900,7 @@ class EvidenceVariable with Resource, _$EvidenceVariable {
     @JsonKey(unknownEnumValue: R4ResourceType.EvidenceVariable)
         R4ResourceType resourceType,
     String? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,
@@ -4517,7 +4517,7 @@ class ResearchDefinition with Resource, _$ResearchDefinition {
     @JsonKey(unknownEnumValue: R4ResourceType.ResearchDefinition)
         R4ResourceType resourceType,
     String? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,
@@ -4573,7 +4573,7 @@ class ResearchDefinition with Resource, _$ResearchDefinition {
     List<ContactDetail>? reviewer,
     List<ContactDetail>? endorser,
     List<RelatedArtifact>? relatedArtifact,
-    @JsonKey(name: 'library') List<Canonical>? library_,
+    @JsonKey(name: 'library') List<FhirCanonical>? library_,
     required Reference population,
     Reference? exposure,
     Reference? exposureAlternative,
@@ -4852,7 +4852,7 @@ class ResearchElementDefinition with Resource, _$ResearchElementDefinition {
     @JsonKey(unknownEnumValue: R4ResourceType.ResearchElementDefinition)
         R4ResourceType resourceType,
     String? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,
@@ -4908,7 +4908,7 @@ class ResearchElementDefinition with Resource, _$ResearchElementDefinition {
     List<ContactDetail>? reviewer,
     List<ContactDetail>? endorser,
     List<RelatedArtifact>? relatedArtifact,
-    @JsonKey(name: 'library') List<Canonical>? library_,
+    @JsonKey(name: 'library') List<FhirCanonical>? library_,
     FhirCode? type,
     @JsonKey(name: '_type') Element? typeElement,
     FhirCode? variableType,

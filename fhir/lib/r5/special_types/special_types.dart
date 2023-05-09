@@ -63,7 +63,7 @@ class Narrative with _$Narrative {
     @JsonKey(name: '_status') Element? statusElement,
 
     /// [div] The actual narrative content, a stripped down version of XHTML.
-    required Markdown div,
+    required FhirMarkdown div,
   }) = _Narrative;
 
   /// Produces a Yaml formatted String version of the object
@@ -298,7 +298,7 @@ class Reference with _$Reference {
   }
 }
 
-/// [Meta] The metadata about a resource. This is content in the resource that
+/// [FhirMeta] The metadata about a resource. This is content in the resource that
 ///  is maintained by the infrastructure. Changes to the content might not
 ///  always be associated with version changes to the resource.
 @freezed
@@ -306,9 +306,9 @@ class FhirMeta with _$FhirMeta {
   /// [Meta] The metadata about a resource. This is content in the resource
   ///  that is maintained by the infrastructure. Changes to the content might
   ///  not always be associated with version changes to the resource.
-  Meta._();
+  FhirMeta._();
 
-  /// [Meta] The metadata about a resource. This is content in the resource
+  /// [FhirMeta] The metadata about a resource. This is content in the resource
   ///  that is maintained by the infrastructure. Changes to the content might
   ///  not always be associated with version changes to the resource.
   ///
@@ -353,7 +353,7 @@ class FhirMeta with _$FhirMeta {
   ///  are not required to consider the tags when interpreting the meaning of a
   ///  resource.
   ///
-  factory Meta({
+  factory FhirMeta({
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -385,37 +385,37 @@ class FhirMeta with _$FhirMeta {
     @JsonKey(name: '_source') Element? sourceElement,
 
     /// [profile] A list of profiles (references to [[[StructureDefinition]]] resources) that this resource claims to conform to. The URL is a reference to [[[StructureDefinition.url]]].
-    List<Canonical>? profile,
+    List<FhirCanonical>? profile,
 
     /// [security] Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure.
     List<Coding>? security,
 
     /// [tag] Tags applied to this resource. Tags are intended to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource.
     List<Coding>? tag,
-  }) = _Meta;
+  }) = _FhirMeta;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory Meta.fromYaml(dynamic yaml) => yaml is String
-      ? Meta.fromJson(
+  factory FhirMeta.fromYaml(dynamic yaml) => yaml is String
+      ? FhirMeta.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? Meta.fromJson(jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          ? FhirMeta.fromJson(jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'Meta cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Meta.fromJson(Map<String, dynamic> json) => _$MetaFromJson(json);
+  factory FhirMeta.fromJson(Map<String, dynamic> json) => _$FhirMetaFromJson(json);
 
   /// Acts like a constructor, returns a [Meta], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
-  factory Meta.fromJsonString(String source) {
+  factory FhirMeta.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
-      return _$MetaFromJson(json);
+      return _$FhirMetaFromJson(json);
     } else {
       throw FormatException('FormatException:\nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
@@ -3304,7 +3304,7 @@ class ElementDefinition with _$ElementDefinition {
     @JsonKey(name: '_alias') List<Element>? aliasElement,
 
     /// [min] The minimum number of times this element SHALL appear in the instance.
-    UnsignedInt? min,
+    FhirUnsignedInt? min,
 
     /// [minElement] ("_min") Extensions for min
     @JsonKey(name: '_min') Element? minElement,
@@ -3411,7 +3411,7 @@ class ElementDefinition with _$ElementDefinition {
     @JsonKey(name: '_defaultValueOid') Element? defaultValueOidElement,
 
     /// [defaultValuePositiveInt] The value that should be used if there is no value stated in the instance (e.g. 'if not otherwise specified, the abstract is false').
-    PositiveInt? defaultValuePositiveInt,
+    FhirPositiveInt? defaultValuePositiveInt,
 
     /// [defaultValuePositiveIntElement] ("_defaultValuePositiveInt") Extensions for defaultValuePositiveInt
     @JsonKey(name: '_defaultValuePositiveInt')
@@ -3424,13 +3424,13 @@ class ElementDefinition with _$ElementDefinition {
     @JsonKey(name: '_defaultValueString') Element? defaultValueStringElement,
 
     /// [defaultValueTime] The value that should be used if there is no value stated in the instance (e.g. 'if not otherwise specified, the abstract is false').
-    Time? defaultValueTime,
+    FhirTime? defaultValueTime,
 
     /// [defaultValueTimeElement] ("_defaultValueTime") Extensions for defaultValueTime
     @JsonKey(name: '_defaultValueTime') Element? defaultValueTimeElement,
 
     /// [defaultValueUnsignedInt] The value that should be used if there is no value stated in the instance (e.g. 'if not otherwise specified, the abstract is false').
-    UnsignedInt? defaultValueUnsignedInt,
+    FhirUnsignedInt? defaultValueUnsignedInt,
 
     /// [defaultValueUnsignedIntElement] ("_defaultValueUnsignedInt") Extensions for defaultValueUnsignedInt
     @JsonKey(name: '_defaultValueUnsignedInt')
@@ -3554,7 +3554,7 @@ class ElementDefinition with _$ElementDefinition {
     Dosage? defaultValueDosage,
 
     /// [defaultValueMeta] The value that should be used if there is no value stated in the instance (e.g. 'if not otherwise specified, the abstract is false').
-    Meta? defaultValueMeta,
+    FhirMeta? defaultValueMeta,
 
     /// [meaningWhenMissing] The Implicit meaning that is to be understood when this element is missing (e.g. 'when this element is missing, the period is ongoing').
     FhirMarkdown? meaningWhenMissing,
@@ -3647,7 +3647,7 @@ class ElementDefinition with _$ElementDefinition {
     @JsonKey(name: '_fixedOid') Element? fixedOidElement,
 
     /// [fixedPositiveInt] Specifies a value that SHALL be exactly the value  for this element in the instance, if present. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.
-    PositiveInt? fixedPositiveInt,
+    FhirPositiveInt? fixedPositiveInt,
 
     /// [fixedPositiveIntElement] ("_fixedPositiveInt") Extensions for fixedPositiveInt
     @JsonKey(name: '_fixedPositiveInt') Element? fixedPositiveIntElement,
@@ -3659,13 +3659,13 @@ class ElementDefinition with _$ElementDefinition {
     @JsonKey(name: '_fixedString') Element? fixedStringElement,
 
     /// [fixedTime] Specifies a value that SHALL be exactly the value  for this element in the instance, if present. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.
-    Time? fixedTime,
+    FhirTime? fixedTime,
 
     /// [fixedTimeElement] ("_fixedTime") Extensions for fixedTime
     @JsonKey(name: '_fixedTime') Element? fixedTimeElement,
 
     /// [fixedUnsignedInt] Specifies a value that SHALL be exactly the value  for this element in the instance, if present. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.
-    UnsignedInt? fixedUnsignedInt,
+    FhirUnsignedInt? fixedUnsignedInt,
 
     /// [fixedUnsignedIntElement] ("_fixedUnsignedInt") Extensions for fixedUnsignedInt
     @JsonKey(name: '_fixedUnsignedInt') Element? fixedUnsignedIntElement,
@@ -3788,7 +3788,7 @@ class ElementDefinition with _$ElementDefinition {
     Dosage? fixedDosage,
 
     /// [fixedMeta] Specifies a value that SHALL be exactly the value  for this element in the instance, if present. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.
-    Meta? fixedMeta,
+    FhirMeta? fixedMeta,
 
     /// [patternBase64Binary] Specifies a value that each occurrence of the element in the instance SHALL follow - that is, any value in the pattern must be found in the instance, if the element has a value. Other additional values may be found too. This is effectively constraint by example.
 
@@ -4037,7 +4037,7 @@ class ElementDefinition with _$ElementDefinition {
     /// 3. If an array: it must match (recursively) the pattern value
     ///
     /// If a pattern[x] is declared on a repeating element, the pattern applies to all repetitions.  If the desire is for a pattern to apply to only one element or a subset of elements, slicing must be used. See [Examples of Patterns](elementdefinition-examples.html#pattern-examples) for examples of pattern usage and the effect it will have.
-    PositiveInt? patternPositiveInt,
+    FhirPositiveInt? patternPositiveInt,
 
     /// [patternPositiveIntElement] ("_patternPositiveInt") Extensions for patternPositiveInt
     @JsonKey(name: '_patternPositiveInt') Element? patternPositiveIntElement,
@@ -4073,7 +4073,7 @@ class ElementDefinition with _$ElementDefinition {
     /// 3. If an array: it must match (recursively) the pattern value
     ///
     /// If a pattern[x] is declared on a repeating element, the pattern applies to all repetitions.  If the desire is for a pattern to apply to only one element or a subset of elements, slicing must be used. See [Examples of Patterns](elementdefinition-examples.html#pattern-examples) for examples of pattern usage and the effect it will have.
-    Time? patternTime,
+    FhirTime? patternTime,
 
     /// [patternTimeElement] ("_patternTime") Extensions for patternTime
     @JsonKey(name: '_patternTime') Element? patternTimeElement,
@@ -4091,7 +4091,7 @@ class ElementDefinition with _$ElementDefinition {
     /// 3. If an array: it must match (recursively) the pattern value
     ///
     /// If a pattern[x] is declared on a repeating element, the pattern applies to all repetitions.  If the desire is for a pattern to apply to only one element or a subset of elements, slicing must be used. See [Examples of Patterns](elementdefinition-examples.html#pattern-examples) for examples of pattern usage and the effect it will have.
-    UnsignedInt? patternUnsignedInt,
+    FhirUnsignedInt? patternUnsignedInt,
 
     /// [patternUnsignedIntElement] ("_patternUnsignedInt") Extensions for patternUnsignedInt
     @JsonKey(name: '_patternUnsignedInt') Element? patternUnsignedIntElement,
@@ -4658,7 +4658,7 @@ class ElementDefinition with _$ElementDefinition {
     /// 3. If an array: it must match (recursively) the pattern value
     ///
     /// If a pattern[x] is declared on a repeating element, the pattern applies to all repetitions.  If the desire is for a pattern to apply to only one element or a subset of elements, slicing must be used. See [Examples of Patterns](elementdefinition-examples.html#pattern-examples) for examples of pattern usage and the effect it will have.
-    Meta? patternMeta,
+    FhirMeta? patternMeta,
 
     /// [example] A sample value for this element demonstrating the type of information that would typically be found in the element.
     List<ElementDefinitionExample>? example,
@@ -4682,7 +4682,7 @@ class ElementDefinition with _$ElementDefinition {
     @JsonKey(name: '_minValueInstant') Element? minValueInstantElement,
 
     /// [minValueTime] The minimum allowed value for the element. The value is inclusive. This is allowed for the types date, dateTime, instant, time, decimal, integer, and Quantity.
-    Time? minValueTime,
+    FhirTime? minValueTime,
 
     /// [minValueTimeElement] ("_minValueTime") Extensions for minValueTime
     @JsonKey(name: '_minValueTime') Element? minValueTimeElement,
@@ -4706,13 +4706,13 @@ class ElementDefinition with _$ElementDefinition {
     @JsonKey(name: '_minValueInteger64') Element? minValueInteger64Element,
 
     /// [minValuePositiveInt] The minimum allowed value for the element. The value is inclusive. This is allowed for the types date, dateTime, instant, time, decimal, integer, and Quantity.
-    PositiveInt? minValuePositiveInt,
+    FhirPositiveInt? minValuePositiveInt,
 
     /// [minValuePositiveIntElement] ("_minValuePositiveInt") Extensions for minValuePositiveInt
     @JsonKey(name: '_minValuePositiveInt') Element? minValuePositiveIntElement,
 
     /// [minValueUnsignedInt] The minimum allowed value for the element. The value is inclusive. This is allowed for the types date, dateTime, instant, time, decimal, integer, and Quantity.
-    UnsignedInt? minValueUnsignedInt,
+    FhirUnsignedInt? minValueUnsignedInt,
 
     /// [minValueUnsignedIntElement] ("_minValueUnsignedInt") Extensions for minValueUnsignedInt
     @JsonKey(name: '_minValueUnsignedInt') Element? minValueUnsignedIntElement,
@@ -4739,7 +4739,7 @@ class ElementDefinition with _$ElementDefinition {
     @JsonKey(name: '_maxValueInstant') Element? maxValueInstantElement,
 
     /// [maxValueTime] The maximum allowed value for the element. The value is inclusive. This is allowed for the types date, dateTime, instant, time, decimal, integer, and Quantity.
-    Time? maxValueTime,
+    FhirTime? maxValueTime,
 
     /// [maxValueTimeElement] ("_maxValueTime") Extensions for maxValueTime
     @JsonKey(name: '_maxValueTime') Element? maxValueTimeElement,
@@ -4763,13 +4763,13 @@ class ElementDefinition with _$ElementDefinition {
     @JsonKey(name: '_maxValueInteger64') Element? maxValueInteger64Element,
 
     /// [maxValuePositiveInt] The maximum allowed value for the element. The value is inclusive. This is allowed for the types date, dateTime, instant, time, decimal, integer, and Quantity.
-    PositiveInt? maxValuePositiveInt,
+    FhirPositiveInt? maxValuePositiveInt,
 
     /// [maxValuePositiveIntElement] ("_maxValuePositiveInt") Extensions for maxValuePositiveInt
     @JsonKey(name: '_maxValuePositiveInt') Element? maxValuePositiveIntElement,
 
     /// [maxValueUnsignedInt] The maximum allowed value for the element. The value is inclusive. This is allowed for the types date, dateTime, instant, time, decimal, integer, and Quantity.
-    UnsignedInt? maxValueUnsignedInt,
+    FhirUnsignedInt? maxValueUnsignedInt,
 
     /// [maxValueUnsignedIntElement] ("_maxValueUnsignedInt") Extensions for maxValueUnsignedInt
     @JsonKey(name: '_maxValueUnsignedInt') Element? maxValueUnsignedIntElement,
@@ -4784,7 +4784,7 @@ class ElementDefinition with _$ElementDefinition {
     @JsonKey(name: '_maxLength') Element? maxLengthElement,
 
     /// [condition] A reference to an invariant that may make additional statements about the cardinality or value in the instance.
-    List<Id>? condition,
+    List<FhirId>? condition,
 
     /// [conditionElement] ("_condition") Extensions for condition
     @JsonKey(name: '_condition') List<Element>? conditionElement,
@@ -4799,7 +4799,7 @@ class ElementDefinition with _$ElementDefinition {
     @JsonKey(name: '_mustHaveValue') Element? mustHaveValueElement,
 
     /// [valueAlternatives] Specifies a list of extensions that can appear in place of a primitive value.
-    List<Canonical>? valueAlternatives,
+    List<FhirCanonical>? valueAlternatives,
 
     /// [mustSupport] If true, implementations that produce or consume resources SHALL provide "support" for the element in some meaningful way. Note that this is being phased out and replaced by obligations (see below).  If false, the element may be ignored and not supported. If false, whether to populate or use the data element in any way is at the discretion of the implementation.
      FhirBoolean? mustSupport,
@@ -5209,7 +5209,7 @@ class ElementDefinitionBase with _$ElementDefinitionBase {
     @JsonKey(name: '_path') Element? pathElement,
 
     /// [min] Minimum cardinality of the base element identified by the path.
-    UnsignedInt? min,
+    FhirUnsignedInt? min,
 
     /// [minElement] ("_min") Extensions for min
     @JsonKey(name: '_min') Element? minElement,
@@ -5358,10 +5358,10 @@ class ElementDefinitionType with _$ElementDefinitionType {
     @JsonKey(name: '_code') Element? codeElement,
 
     /// [profile] Identifies a profile structure or implementation Guide that applies to the datatype this element refers to. If any profiles are specified, then the content must conform to at least one of them. The URL can be a local reference - to a contained StructureDefinition, or a reference to another StructureDefinition or Implementation Guide by a canonical URL. When an implementation guide is specified, the type SHALL conform to at least one profile defined in the implementation guide.
-    List<Canonical>? profile,
+    List<FhirCanonical>? profile,
 
     /// [targetProfile] Used when the type is "Reference" or "canonical", and identifies a profile structure or implementation Guide that applies to the target of the reference this element refers to. If any profiles are specified, then the content must conform to at least one of them. The URL can be a local reference - to a contained StructureDefinition, or a reference to another StructureDefinition or Implementation Guide by a canonical URL. When an implementation guide is specified, the target resource SHALL conform to at least one profile defined in the implementation guide.
-    List<Canonical>? targetProfile,
+    List<FhirCanonical>? targetProfile,
 
     /// [aggregation] If the type is a reference to another resource, how the resource is or can be aggregated - is it a contained resource, or a reference, and if the context is a bundle, is it included in the bundle.
     ElementDefinitionTypeAggregation? aggregation,
@@ -5763,7 +5763,7 @@ class ElementDefinitionExample with _$ElementDefinitionExample {
     @JsonKey(name: '_valueOid') Element? valueOidElement,
 
     /// [valuePositiveInt] The actual value for the element, which must be one of the types allowed for this element.
-    PositiveInt? valuePositiveInt,
+    FhirPositiveInt? valuePositiveInt,
 
     /// [valuePositiveIntElement] ("_valuePositiveInt") Extensions for valuePositiveInt
     @JsonKey(name: '_valuePositiveInt') Element? valuePositiveIntElement,
@@ -5775,13 +5775,13 @@ class ElementDefinitionExample with _$ElementDefinitionExample {
     @JsonKey(name: '_valueString') Element? valueStringElement,
 
     /// [valueTime] The actual value for the element, which must be one of the types allowed for this element.
-    Time? valueTime,
+    FhirTime? valueTime,
 
     /// [valueTimeElement] ("_valueTime") Extensions for valueTime
     @JsonKey(name: '_valueTime') Element? valueTimeElement,
 
     /// [valueUnsignedInt] The actual value for the element, which must be one of the types allowed for this element.
-    UnsignedInt? valueUnsignedInt,
+    FhirUnsignedInt? valueUnsignedInt,
 
     /// [valueUnsignedIntElement] ("_valueUnsignedInt") Extensions for valueUnsignedInt
     @JsonKey(name: '_valueUnsignedInt') Element? valueUnsignedIntElement,
@@ -5904,7 +5904,7 @@ class ElementDefinitionExample with _$ElementDefinitionExample {
     Dosage? valueDosage,
 
     /// [valueMeta] The actual value for the element, which must be one of the types allowed for this element.
-    Meta? valueMeta,
+    FhirMeta? valueMeta,
   }) = _ElementDefinitionExample;
 
   /// Produces a Yaml formatted String version of the object
@@ -6204,7 +6204,7 @@ class ElementDefinitionObligation with _$ElementDefinitionObligation {
     required Coding code,
 
     /// [actor] Actor(s) to which the obligation applies.
-    List<Canonical>? actor,
+    List<FhirCanonical>? actor,
 
     /// [documentation] Human readable documentation of the purpose or application of the obligation.
     FhirMarkdown? documentation,
@@ -6491,7 +6491,7 @@ class ElementDefinitionAdditional with _$ElementDefinitionAdditional {
     @JsonKey(name: '_purpose') Element? purposeElement,
 
     /// [valueSet] The valueSet that is being bound for the purpose.
-    required Canonical valueSet,
+    required FhirCanonical valueSet,
 
     /// [documentation] Documentation of the purpose of use of the bindingproviding additional information about how it is intended to be used.
     FhirMarkdown? documentation,

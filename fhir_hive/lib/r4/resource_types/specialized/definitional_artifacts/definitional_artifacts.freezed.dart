@@ -341,7 +341,7 @@ mixin _$ActivityDefinition {
   ///  used by the activity definition.
   @JsonKey(name: 'library')
   @HiveField(59)
-  List<Canonical>? get library_ => throw _privateConstructorUsedError;
+  List<FhirCanonical>? get library_ => throw _privateConstructorUsedError;
 
   /// [kind] A description of the kind of resource the activity definition is
   /// representing. For example, a MedicationRequest, a ServiceRequest, or a
@@ -651,7 +651,7 @@ abstract class $ActivityDefinitionCopyWith<$Res> {
           List<RelatedArtifact>? relatedArtifact,
       @JsonKey(name: 'library')
       @HiveField(59)
-          List<Canonical>? library_,
+          List<FhirCanonical>? library_,
       @HiveField(60)
           Code? kind,
       @JsonKey(name: '_kind')
@@ -1085,7 +1085,7 @@ class _$ActivityDefinitionCopyWithImpl<$Res, $Val extends ActivityDefinition>
       library_: freezed == library_
           ? _value.library_
           : library_ // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       kind: freezed == kind
           ? _value.kind
           : kind // ignore: cast_nullable_to_non_nullable
@@ -1810,7 +1810,7 @@ abstract class _$$_ActivityDefinitionCopyWith<$Res>
           List<RelatedArtifact>? relatedArtifact,
       @JsonKey(name: 'library')
       @HiveField(59)
-          List<Canonical>? library_,
+          List<FhirCanonical>? library_,
       @HiveField(60)
           Code? kind,
       @JsonKey(name: '_kind')
@@ -2280,7 +2280,7 @@ class __$$_ActivityDefinitionCopyWithImpl<$Res>
       library_: freezed == library_
           ? _value._library_
           : library_ // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       kind: freezed == kind
           ? _value.kind
           : kind // ignore: cast_nullable_to_non_nullable
@@ -2543,7 +2543,7 @@ class _$_ActivityDefinition extends _ActivityDefinition {
           final List<RelatedArtifact>? relatedArtifact,
       @JsonKey(name: 'library')
       @HiveField(59)
-          final List<Canonical>? library_,
+          final List<FhirCanonical>? library_,
       @HiveField(60)
           this.kind,
       @JsonKey(name: '_kind')
@@ -3157,14 +3157,14 @@ class _$_ActivityDefinition extends _ActivityDefinition {
 
   /// [library] A reference to a Library resource containing any formal logic
   ///  used by the activity definition.
-  final List<Canonical>? _library_;
+  final List<FhirCanonical>? _library_;
 
   /// [library] A reference to a Library resource containing any formal logic
   ///  used by the activity definition.
   @override
   @JsonKey(name: 'library')
   @HiveField(59)
-  List<Canonical>? get library_ {
+  List<FhirCanonical>? get library_ {
     final value = _library_;
     if (value == null) return null;
     if (_library_ is EqualUnmodifiableListView) return _library_;
@@ -3812,7 +3812,7 @@ abstract class _ActivityDefinition extends ActivityDefinition {
               final List<RelatedArtifact>? relatedArtifact,
           @JsonKey(name: 'library')
           @HiveField(59)
-              final List<Canonical>? library_,
+              final List<FhirCanonical>? library_,
           @HiveField(60)
               final Code? kind,
           @JsonKey(name: '_kind')
@@ -4258,7 +4258,7 @@ abstract class _ActivityDefinition extends ActivityDefinition {
   ///  used by the activity definition.
   @JsonKey(name: 'library')
   @HiveField(59)
-  List<Canonical>? get library_;
+  List<FhirCanonical>? get library_;
   @override
 
   /// [kind] A description of the kind of resource the activity definition is
@@ -13244,7 +13244,7 @@ mixin _$ObservationDefinition {
   /// [permittedDataType] The data types allowed for the value element of the
   ///  instance observations conforming to this ObservationDefinition.
   @HiveField(14)
-  List<Code>? get permittedDataType => throw _privateConstructorUsedError;
+  List<FhirCode>? get permittedDataType => throw _privateConstructorUsedError;
   @JsonKey(name: '_permittedDataType')
   @HiveField(15)
   List<Element>? get permittedDataTypeElement =>
@@ -13352,7 +13352,7 @@ abstract class $ObservationDefinitionCopyWith<$Res> {
       @HiveField(13)
           List<Identifier>? identifier,
       @HiveField(14)
-          List<Code>? permittedDataType,
+          List<FhirCode>? permittedDataType,
       @JsonKey(name: '_permittedDataType')
       @HiveField(15)
           List<Element>? permittedDataTypeElement,
@@ -13499,7 +13499,7 @@ class _$ObservationDefinitionCopyWithImpl<$Res,
       permittedDataType: freezed == permittedDataType
           ? _value.permittedDataType
           : permittedDataType // ignore: cast_nullable_to_non_nullable
-              as List<Code>?,
+              as List<FhirCode>?,
       permittedDataTypeElement: freezed == permittedDataTypeElement
           ? _value.permittedDataTypeElement
           : permittedDataTypeElement // ignore: cast_nullable_to_non_nullable
@@ -13750,7 +13750,7 @@ abstract class _$$_ObservationDefinitionCopyWith<$Res>
       @HiveField(13)
           List<Identifier>? identifier,
       @HiveField(14)
-          List<Code>? permittedDataType,
+          List<FhirCode>? permittedDataType,
       @JsonKey(name: '_permittedDataType')
       @HiveField(15)
           List<Element>? permittedDataTypeElement,
@@ -13907,7 +13907,7 @@ class __$$_ObservationDefinitionCopyWithImpl<$Res>
       permittedDataType: freezed == permittedDataType
           ? _value._permittedDataType
           : permittedDataType // ignore: cast_nullable_to_non_nullable
-              as List<Code>?,
+              as List<FhirCode>?,
       permittedDataTypeElement: freezed == permittedDataTypeElement
           ? _value._permittedDataTypeElement
           : permittedDataTypeElement // ignore: cast_nullable_to_non_nullable
@@ -13998,7 +13998,7 @@ class _$_ObservationDefinition extends _ObservationDefinition {
       @HiveField(13)
           final List<Identifier>? identifier,
       @HiveField(14)
-          final List<Code>? permittedDataType,
+          final List<FhirCode>? permittedDataType,
       @JsonKey(name: '_permittedDataType')
       @HiveField(15)
           final List<Element>? permittedDataTypeElement,
@@ -14214,13 +14214,13 @@ class _$_ObservationDefinition extends _ObservationDefinition {
 
   /// [permittedDataType] The data types allowed for the value element of the
   ///  instance observations conforming to this ObservationDefinition.
-  final List<Code>? _permittedDataType;
+  final List<FhirCode>? _permittedDataType;
 
   /// [permittedDataType] The data types allowed for the value element of the
   ///  instance observations conforming to this ObservationDefinition.
   @override
   @HiveField(14)
-  List<Code>? get permittedDataType {
+  List<FhirCode>? get permittedDataType {
     final value = _permittedDataType;
     if (value == null) return null;
     if (_permittedDataType is EqualUnmodifiableListView)
@@ -14465,7 +14465,7 @@ abstract class _ObservationDefinition extends ObservationDefinition {
       @HiveField(13)
           final List<Identifier>? identifier,
       @HiveField(14)
-          final List<Code>? permittedDataType,
+          final List<FhirCode>? permittedDataType,
       @JsonKey(name: '_permittedDataType')
       @HiveField(15)
           final List<Element>? permittedDataTypeElement,
@@ -14608,7 +14608,7 @@ abstract class _ObservationDefinition extends ObservationDefinition {
   /// [permittedDataType] The data types allowed for the value element of the
   ///  instance observations conforming to this ObservationDefinition.
   @HiveField(14)
-  List<Code>? get permittedDataType;
+  List<FhirCode>? get permittedDataType;
   @override
   @JsonKey(name: '_permittedDataType')
   @HiveField(15)
@@ -16359,7 +16359,7 @@ mixin _$PlanDefinition {
   ///  used by the plan definition.
   @JsonKey(name: 'library')
   @HiveField(58)
-  List<Canonical>? get library_ => throw _privateConstructorUsedError;
+  List<FhirCanonical>? get library_ => throw _privateConstructorUsedError;
 
   /// [goal] Goals that describe what the activities within the plan are
   /// intended to achieve. For example, weight loss, restoring an activity of
@@ -16522,7 +16522,7 @@ abstract class $PlanDefinitionCopyWith<$Res> {
           List<RelatedArtifact>? relatedArtifact,
       @JsonKey(name: 'library')
       @HiveField(58)
-          List<Canonical>? library_,
+          List<FhirCanonical>? library_,
       @HiveField(59)
           List<PlanDefinitionGoal>? goal,
       @HiveField(60)
@@ -16860,7 +16860,7 @@ class _$PlanDefinitionCopyWithImpl<$Res, $Val extends PlanDefinition>
       library_: freezed == library_
           ? _value.library_
           : library_ // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       goal: freezed == goal
           ? _value.goal
           : goal // ignore: cast_nullable_to_non_nullable
@@ -17308,7 +17308,7 @@ abstract class _$$_PlanDefinitionCopyWith<$Res>
           List<RelatedArtifact>? relatedArtifact,
       @JsonKey(name: 'library')
       @HiveField(58)
-          List<Canonical>? library_,
+          List<FhirCanonical>? library_,
       @HiveField(59)
           List<PlanDefinitionGoal>? goal,
       @HiveField(60)
@@ -17668,7 +17668,7 @@ class __$$_PlanDefinitionCopyWithImpl<$Res>
       library_: freezed == library_
           ? _value._library_
           : library_ // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       goal: freezed == goal
           ? _value._goal
           : goal // ignore: cast_nullable_to_non_nullable
@@ -17823,7 +17823,7 @@ class _$_PlanDefinition extends _PlanDefinition {
           final List<RelatedArtifact>? relatedArtifact,
       @JsonKey(name: 'library')
       @HiveField(58)
-          final List<Canonical>? library_,
+          final List<FhirCanonical>? library_,
       @HiveField(59)
           final List<PlanDefinitionGoal>? goal,
       @HiveField(60)
@@ -18386,14 +18386,14 @@ class _$_PlanDefinition extends _PlanDefinition {
 
   /// [library] A reference to a Library resource containing any formal logic
   ///  used by the plan definition.
-  final List<Canonical>? _library_;
+  final List<FhirCanonical>? _library_;
 
   /// [library] A reference to a Library resource containing any formal logic
   ///  used by the plan definition.
   @override
   @JsonKey(name: 'library')
   @HiveField(58)
-  List<Canonical>? get library_ {
+  List<FhirCanonical>? get library_ {
     final value = _library_;
     if (value == null) return null;
     if (_library_ is EqualUnmodifiableListView) return _library_;
@@ -18765,7 +18765,7 @@ abstract class _PlanDefinition extends PlanDefinition {
           final List<RelatedArtifact>? relatedArtifact,
       @JsonKey(name: 'library')
       @HiveField(58)
-          final List<Canonical>? library_,
+          final List<FhirCanonical>? library_,
       @HiveField(59)
           final List<PlanDefinitionGoal>? goal,
       @HiveField(60)
@@ -19164,7 +19164,7 @@ abstract class _PlanDefinition extends PlanDefinition {
   ///  used by the plan definition.
   @JsonKey(name: 'library')
   @HiveField(58)
-  List<Canonical>? get library_;
+  List<FhirCanonical>? get library_;
   @override
 
   /// [goal] Goals that describe what the activities within the plan are
@@ -20507,7 +20507,7 @@ mixin _$PlanDefinitionAction {
 
   /// [goalId] Identifies goals that this action supports. The reference must
   ///  be to a goal element defined within this plan definition.
-  List<Id>? get goalId => throw _privateConstructorUsedError;
+  List<FhirId>? get goalId => throw _privateConstructorUsedError;
 
   /// [goalIdElement] Extensions for goalId
   @JsonKey(name: '_goalId')
@@ -20693,7 +20693,7 @@ abstract class $PlanDefinitionActionCopyWith<$Res> {
       List<CodeableConcept>? code,
       List<CodeableConcept>? reason,
       List<RelatedArtifact>? documentation,
-      List<Id>? goalId,
+      List<FhirId>? goalId,
       @JsonKey(name: '_goalId')
           List<Element?>? goalIdElement,
       CodeableConcept? subjectCodeableConcept,
@@ -20900,7 +20900,7 @@ class _$PlanDefinitionActionCopyWithImpl<$Res,
       goalId: freezed == goalId
           ? _value.goalId
           : goalId // ignore: cast_nullable_to_non_nullable
-              as List<Id>?,
+              as List<FhirId>?,
       goalIdElement: freezed == goalIdElement
           ? _value.goalIdElement
           : goalIdElement // ignore: cast_nullable_to_non_nullable
@@ -21333,7 +21333,7 @@ abstract class _$$_PlanDefinitionActionCopyWith<$Res>
       List<CodeableConcept>? code,
       List<CodeableConcept>? reason,
       List<RelatedArtifact>? documentation,
-      List<Id>? goalId,
+      List<FhirId>? goalId,
       @JsonKey(name: '_goalId')
           List<Element?>? goalIdElement,
       CodeableConcept? subjectCodeableConcept,
@@ -21558,7 +21558,7 @@ class __$$_PlanDefinitionActionCopyWithImpl<$Res>
       goalId: freezed == goalId
           ? _value._goalId
           : goalId // ignore: cast_nullable_to_non_nullable
-              as List<Id>?,
+              as List<FhirId>?,
       goalIdElement: freezed == goalIdElement
           ? _value._goalIdElement
           : goalIdElement // ignore: cast_nullable_to_non_nullable
@@ -21733,7 +21733,7 @@ class _$_PlanDefinitionAction extends _PlanDefinitionAction {
       final List<CodeableConcept>? code,
       final List<CodeableConcept>? reason,
       final List<RelatedArtifact>? documentation,
-      final List<Id>? goalId,
+      final List<FhirId>? goalId,
       @JsonKey(name: '_goalId')
           final List<Element?>? goalIdElement,
       this.subjectCodeableConcept,
@@ -21967,12 +21967,12 @@ class _$_PlanDefinitionAction extends _PlanDefinitionAction {
 
   /// [goalId] Identifies goals that this action supports. The reference must
   ///  be to a goal element defined within this plan definition.
-  final List<Id>? _goalId;
+  final List<FhirId>? _goalId;
 
   /// [goalId] Identifies goals that this action supports. The reference must
   ///  be to a goal element defined within this plan definition.
   @override
-  List<Id>? get goalId {
+  List<FhirId>? get goalId {
     final value = _goalId;
     if (value == null) return null;
     if (_goalId is EqualUnmodifiableListView) return _goalId;
@@ -22462,7 +22462,7 @@ abstract class _PlanDefinitionAction extends PlanDefinitionAction {
       final List<CodeableConcept>? code,
       final List<CodeableConcept>? reason,
       final List<RelatedArtifact>? documentation,
-      final List<Id>? goalId,
+      final List<FhirId>? goalId,
       @JsonKey(name: '_goalId')
           final List<Element?>? goalIdElement,
       final CodeableConcept? subjectCodeableConcept,
@@ -22615,7 +22615,7 @@ abstract class _PlanDefinitionAction extends PlanDefinitionAction {
 
   /// [goalId] Identifies goals that this action supports. The reference must
   ///  be to a goal element defined within this plan definition.
-  List<Id>? get goalId;
+  List<FhirId>? get goalId;
   @override
 
   /// [goalIdElement] Extensions for goalId
@@ -23299,7 +23299,7 @@ mixin _$PlanDefinitionRelatedAction {
       throw _privateConstructorUsedError;
 
   /// [actionId] The element id of the related action.
-  Id? get actionId => throw _privateConstructorUsedError;
+  FhirId? get actionId => throw _privateConstructorUsedError;
 
   /// [actionIdElement] Extensions for actionId
   @JsonKey(name: '_actionId')
@@ -23338,7 +23338,7 @@ abstract class $PlanDefinitionRelatedActionCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Id? actionId,
+      FhirId? actionId,
       @JsonKey(name: '_actionId') Element? actionIdElement,
       Code? relationship,
       @JsonKey(name: '_relationship') Element? relationshipElement,
@@ -23477,7 +23477,7 @@ abstract class _$$_PlanDefinitionRelatedActionCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Id? actionId,
+      FhirId? actionId,
       @JsonKey(name: '_actionId') Element? actionIdElement,
       Code? relationship,
       @JsonKey(name: '_relationship') Element? relationshipElement,
@@ -23647,7 +23647,7 @@ class _$_PlanDefinitionRelatedAction extends _PlanDefinitionRelatedAction {
 
   /// [actionId] The element id of the related action.
   @override
-  final Id? actionId;
+  final FhirId? actionId;
 
   /// [actionIdElement] Extensions for actionId
   @override
@@ -23737,7 +23737,7 @@ abstract class _PlanDefinitionRelatedAction
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final Id? actionId,
+      final FhirId? actionId,
       @JsonKey(name: '_actionId') final Element? actionIdElement,
       final Code? relationship,
       @JsonKey(name: '_relationship') final Element? relationshipElement,
@@ -23782,7 +23782,7 @@ abstract class _PlanDefinitionRelatedAction
   @override
 
   /// [actionId] The element id of the related action.
-  Id? get actionId;
+  FhirId? get actionId;
   @override
 
   /// [actionIdElement] Extensions for actionId
@@ -24832,7 +24832,7 @@ mixin _$Questionnaire {
   /// [derivedFrom] The URL of a Questionnaire that this Questionnaire is based
   ///  on.
   @HiveField(20)
-  List<Canonical>? get derivedFrom => throw _privateConstructorUsedError;
+  List<FhirCanonical>? get derivedFrom => throw _privateConstructorUsedError;
 
   /// [status] The status of this questionnaire. Enables tracking the
   ///  life-cycle of the content.
@@ -24858,7 +24858,7 @@ mixin _$Questionnaire {
   /// [subjectType] The types of subjects that can be the subject of responses
   ///  created for the questionnaire.
   @HiveField(25)
-  List<Code>? get subjectType => throw _privateConstructorUsedError;
+  List<FhirCode>? get subjectType => throw _privateConstructorUsedError;
 
   /// [subjectTypeElement] Extensions for subjectType
   @JsonKey(name: '_subjectType')
@@ -25035,7 +25035,7 @@ abstract class $QuestionnaireCopyWith<$Res> {
       @HiveField(19)
           Element? titleElement,
       @HiveField(20)
-          List<Canonical>? derivedFrom,
+          List<FhirCanonical>? derivedFrom,
       @HiveField(21)
           Code? status,
       @JsonKey(name: '_status')
@@ -25047,7 +25047,7 @@ abstract class $QuestionnaireCopyWith<$Res> {
       @HiveField(24)
           Element? experimentalElement,
       @HiveField(25)
-          List<Code>? subjectType,
+          List<FhirCode>? subjectType,
       @JsonKey(name: '_subjectType')
       @HiveField(26)
           List<Element?>? subjectTypeElement,
@@ -25264,7 +25264,7 @@ class _$QuestionnaireCopyWithImpl<$Res, $Val extends Questionnaire>
       derivedFrom: freezed == derivedFrom
           ? _value.derivedFrom
           : derivedFrom // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
@@ -25284,7 +25284,7 @@ class _$QuestionnaireCopyWithImpl<$Res, $Val extends Questionnaire>
       subjectType: freezed == subjectType
           ? _value.subjectType
           : subjectType // ignore: cast_nullable_to_non_nullable
-              as List<Code>?,
+              as List<FhirCode>?,
       subjectTypeElement: freezed == subjectTypeElement
           ? _value.subjectTypeElement
           : subjectTypeElement // ignore: cast_nullable_to_non_nullable
@@ -25647,7 +25647,7 @@ abstract class _$$_QuestionnaireCopyWith<$Res>
       @HiveField(19)
           Element? titleElement,
       @HiveField(20)
-          List<Canonical>? derivedFrom,
+          List<FhirCanonical>? derivedFrom,
       @HiveField(21)
           Code? status,
       @JsonKey(name: '_status')
@@ -25659,7 +25659,7 @@ abstract class _$$_QuestionnaireCopyWith<$Res>
       @HiveField(24)
           Element? experimentalElement,
       @HiveField(25)
-          List<Code>? subjectType,
+          List<FhirCode>? subjectType,
       @JsonKey(name: '_subjectType')
       @HiveField(26)
           List<Element?>? subjectTypeElement,
@@ -25892,7 +25892,7 @@ class __$$_QuestionnaireCopyWithImpl<$Res>
       derivedFrom: freezed == derivedFrom
           ? _value._derivedFrom
           : derivedFrom // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
@@ -25912,7 +25912,7 @@ class __$$_QuestionnaireCopyWithImpl<$Res>
       subjectType: freezed == subjectType
           ? _value._subjectType
           : subjectType // ignore: cast_nullable_to_non_nullable
-              as List<Code>?,
+              as List<FhirCode>?,
       subjectTypeElement: freezed == subjectTypeElement
           ? _value._subjectTypeElement
           : subjectTypeElement // ignore: cast_nullable_to_non_nullable
@@ -26055,7 +26055,7 @@ class _$_Questionnaire extends _Questionnaire {
       @HiveField(19)
           this.titleElement,
       @HiveField(20)
-          final List<Canonical>? derivedFrom,
+          final List<FhirCanonical>? derivedFrom,
       @HiveField(21)
           this.status,
       @JsonKey(name: '_status')
@@ -26067,7 +26067,7 @@ class _$_Questionnaire extends _Questionnaire {
       @HiveField(24)
           this.experimentalElement,
       @HiveField(25)
-          final List<Code>? subjectType,
+          final List<FhirCode>? subjectType,
       @JsonKey(name: '_subjectType')
       @HiveField(26)
           final List<Element?>? subjectTypeElement,
@@ -26350,13 +26350,13 @@ class _$_Questionnaire extends _Questionnaire {
 
   /// [derivedFrom] The URL of a Questionnaire that this Questionnaire is based
   ///  on.
-  final List<Canonical>? _derivedFrom;
+  final List<FhirCanonical>? _derivedFrom;
 
   /// [derivedFrom] The URL of a Questionnaire that this Questionnaire is based
   ///  on.
   @override
   @HiveField(20)
-  List<Canonical>? get derivedFrom {
+  List<FhirCanonical>? get derivedFrom {
     final value = _derivedFrom;
     if (value == null) return null;
     if (_derivedFrom is EqualUnmodifiableListView) return _derivedFrom;
@@ -26391,13 +26391,13 @@ class _$_Questionnaire extends _Questionnaire {
 
   /// [subjectType] The types of subjects that can be the subject of responses
   ///  created for the questionnaire.
-  final List<Code>? _subjectType;
+  final List<FhirCode>? _subjectType;
 
   /// [subjectType] The types of subjects that can be the subject of responses
   ///  created for the questionnaire.
   @override
   @HiveField(25)
-  List<Code>? get subjectType {
+  List<FhirCode>? get subjectType {
     final value = _subjectType;
     if (value == null) return null;
     if (_subjectType is EqualUnmodifiableListView) return _subjectType;
@@ -26813,7 +26813,7 @@ abstract class _Questionnaire extends Questionnaire {
       @HiveField(19)
           final Element? titleElement,
       @HiveField(20)
-          final List<Canonical>? derivedFrom,
+          final List<FhirCanonical>? derivedFrom,
       @HiveField(21)
           final Code? status,
       @JsonKey(name: '_status')
@@ -26825,7 +26825,7 @@ abstract class _Questionnaire extends Questionnaire {
       @HiveField(24)
           final Element? experimentalElement,
       @HiveField(25)
-          final List<Code>? subjectType,
+          final List<FhirCode>? subjectType,
       @JsonKey(name: '_subjectType')
       @HiveField(26)
           final List<Element?>? subjectTypeElement,
@@ -27039,7 +27039,7 @@ abstract class _Questionnaire extends Questionnaire {
   /// [derivedFrom] The URL of a Questionnaire that this Questionnaire is based
   ///  on.
   @HiveField(20)
-  List<Canonical>? get derivedFrom;
+  List<FhirCanonical>? get derivedFrom;
   @override
 
   /// [status] The status of this questionnaire. Enables tracking the
@@ -27070,7 +27070,7 @@ abstract class _Questionnaire extends Questionnaire {
   /// [subjectType] The types of subjects that can be the subject of responses
   ///  created for the questionnaire.
   @HiveField(25)
-  List<Code>? get subjectType;
+  List<FhirCode>? get subjectType;
   @override
 
   /// [subjectTypeElement] Extensions for subjectType
@@ -28630,7 +28630,7 @@ mixin _$QuestionnaireEnableWhen {
 
   /// [answerTime] A value that the referenced question is tested using the
   ///  specified operator in order for the item to be enabled.
-  Time? get answerTime => throw _privateConstructorUsedError;
+  FhirTime? get answerTime => throw _privateConstructorUsedError;
 
   /// [answerTimeElement] Extensions for answerTime
   @JsonKey(name: '_answerTime')
@@ -28686,7 +28686,7 @@ abstract class $QuestionnaireEnableWhenCopyWith<$Res> {
       @JsonKey(name: '_answerDate') Element? answerDateElement,
       FhirDateTime? answerDateTime,
       @JsonKey(name: '_answerDateTime') Element? answerDateTimeElement,
-      Time? answerTime,
+      FhirTime? answerTime,
       @JsonKey(name: '_answerTime') Element? answerTimeElement,
       String? answerString,
       @JsonKey(name: '_answerString') Element? answerStringElement,
@@ -29018,7 +29018,7 @@ abstract class _$$_QuestionnaireEnableWhenCopyWith<$Res>
       @JsonKey(name: '_answerDate') Element? answerDateElement,
       FhirDateTime? answerDateTime,
       @JsonKey(name: '_answerDateTime') Element? answerDateTimeElement,
-      Time? answerTime,
+      FhirTime? answerTime,
       @JsonKey(name: '_answerTime') Element? answerTimeElement,
       String? answerString,
       @JsonKey(name: '_answerString') Element? answerStringElement,
@@ -29638,7 +29638,7 @@ abstract class _QuestionnaireEnableWhen extends QuestionnaireEnableWhen {
 
   /// [answerTime] A value that the referenced question is tested using the
   ///  specified operator in order for the item to be enabled.
-  Time? get answerTime;
+  FhirTime? get answerTime;
   @override
 
   /// [answerTimeElement] Extensions for answerTime
@@ -29729,7 +29729,7 @@ mixin _$QuestionnaireAnswerOption {
 
   /// [valueTime] A potential answer that's allowed as the answer to this
   ///  question.
-  Time? get valueTime => throw _privateConstructorUsedError;
+  FhirTime? get valueTime => throw _privateConstructorUsedError;
 
   /// [valueTimeElement] Extensions for valueTime
   @JsonKey(name: '_valueTime')
@@ -29779,7 +29779,7 @@ abstract class $QuestionnaireAnswerOptionCopyWith<$Res> {
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
       Date? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
-      Time? valueTime,
+      FhirTime? valueTime,
       @JsonKey(name: '_valueTime') Element? valueTimeElement,
       String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
@@ -29993,7 +29993,7 @@ abstract class _$$_QuestionnaireAnswerOptionCopyWith<$Res>
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
       Date? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
-      Time? valueTime,
+      FhirTime? valueTime,
       @JsonKey(name: '_valueTime') Element? valueTimeElement,
       String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
@@ -30425,7 +30425,7 @@ abstract class _QuestionnaireAnswerOption extends QuestionnaireAnswerOption {
 
   /// [valueTime] A potential answer that's allowed as the answer to this
   ///  question.
-  Time? get valueTime;
+  FhirTime? get valueTime;
   @override
 
   /// [valueTimeElement] Extensions for valueTime
@@ -30538,7 +30538,7 @@ mixin _$QuestionnaireInitial {
   Element? get valueDateTimeElement => throw _privateConstructorUsedError;
 
   /// [valueTime] The actual value to for an initial answer.
-  Time? get valueTime => throw _privateConstructorUsedError;
+  FhirTime? get valueTime => throw _privateConstructorUsedError;
 
   /// [valueTimeElement] Extensions for valueTime
   @JsonKey(name: '_valueTime')
@@ -30596,7 +30596,7 @@ abstract class $QuestionnaireInitialCopyWith<$Res> {
       @JsonKey(name: '_valueDate') Element? valueDateElement,
       FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
-      Time? valueTime,
+      FhirTime? valueTime,
       @JsonKey(name: '_valueTime') Element? valueTimeElement,
       String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
@@ -30922,7 +30922,7 @@ abstract class _$$_QuestionnaireInitialCopyWith<$Res>
       @JsonKey(name: '_valueDate') Element? valueDateElement,
       FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
-      Time? valueTime,
+      FhirTime? valueTime,
       @JsonKey(name: '_valueTime') Element? valueTimeElement,
       String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
@@ -31490,7 +31490,7 @@ abstract class _QuestionnaireInitial extends QuestionnaireInitial {
   @override
 
   /// [valueTime] The actual value to for an initial answer.
-  Time? get valueTime;
+  FhirTime? get valueTime;
   @override
 
   /// [valueTimeElement] Extensions for valueTime

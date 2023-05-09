@@ -20,7 +20,7 @@ class ProcessRequest with Resource, _$ProcessRequest {
     @JsonKey(unknownEnumValue: Dstu2ResourceType.ProcessRequest)
         Dstu2ResourceType resourceType,
     FhirId? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     FhirCode? language,
     Narrative? text,
@@ -81,7 +81,7 @@ class ProcessRequestItem with _$ProcessRequestItem {
     FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    required Integer sequenceLinkId,
+    required FhirInteger sequenceLinkId,
   }) = _ProcessRequestItem;
 
   /// Produces a Yaml formatted String version of the object
@@ -123,7 +123,7 @@ class ProcessResponse with Resource, _$ProcessResponse {
     @JsonKey(unknownEnumValue: Dstu2ResourceType.ProcessResponse)
         Dstu2ResourceType resourceType,
     FhirId? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     FhirCode? language,
     Narrative? text,
@@ -223,7 +223,7 @@ class SupplyRequest with Resource, _$SupplyRequest {
     @JsonKey(unknownEnumValue: Dstu2ResourceType.SupplyRequest)
         Dstu2ResourceType resourceType,
     FhirId? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,
@@ -325,7 +325,7 @@ class SupplyDelivery with Resource, _$SupplyDelivery {
     @JsonKey(unknownEnumValue: Dstu2ResourceType.SupplyDelivery)
         Dstu2ResourceType resourceType,
     FhirId? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,

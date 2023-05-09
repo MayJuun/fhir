@@ -9,7 +9,7 @@ class ConditionUsCore extends Resource {
 
   factory ConditionUsCore({
     String? id,
-    Meta? meta,
+    FhirMeta? meta,
     Narrative? text,
     CodeableConcept? clinicalStatus,
     CodeableConcept? verificationStatus,
@@ -62,7 +62,7 @@ class ConditionUsCore extends Resource {
   Condition _condition;
   Condition get value => _condition;
   String? get id => _condition.id;
-  Meta? get meta => _condition.meta;
+  FhirMeta? get meta => _condition.meta;
   Narrative? get text => _condition.text;
   CodeableConcept? get clinicalStatus => _condition.clinicalStatus;
   CodeableConcept? get verificationStatus => _condition.verificationStatus;

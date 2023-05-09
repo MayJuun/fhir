@@ -154,8 +154,8 @@ Resource _newId(Resource resource) {
       return (resource as Library).copyWith(id: newIdString());
     case R4ResourceType.Linkage:
       return (resource as Linkage).copyWith(id: newIdString());
-    case R4ResourceType.List_:
-      return (resource as List_).copyWith(id: newIdString());
+    case R4ResourceType.FhirList:
+      return (resource as FhirList).copyWith(id: newIdString());
     case R4ResourceType.Location:
       return (resource as Location).copyWith(id: newIdString());
     case R4ResourceType.ManufacturedItemDefinition:

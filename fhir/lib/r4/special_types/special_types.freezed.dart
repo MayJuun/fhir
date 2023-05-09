@@ -1240,7 +1240,7 @@ mixin _$Meta {
   /// [profile] A list of profiles (references to [[[StructureDefinition]]]
   /// resources) that this resource claims to conform to. The URL is a reference
   ///  to [[[StructureDefinition.url]]].
-  List<Canonical>? get profile => throw _privateConstructorUsedError;
+  List<FhirCanonical>? get profile => throw _privateConstructorUsedError;
 
   /// [security] Security labels applied to this resource. These tags connect
   ///  specific resources to the overall security policy and infrastructure.
@@ -1271,7 +1271,7 @@ abstract class $MetaCopyWith<$Res> {
       @JsonKey(name: '_lastUpdated') Element? lastUpdatedElement,
       FhirUri? source,
       @JsonKey(name: '_source') Element? sourceElement,
-      List<Canonical>? profile,
+      List<FhirCanonical>? profile,
       List<Coding>? security,
       List<Coding>? tag});
 
@@ -1341,7 +1341,7 @@ class _$MetaCopyWithImpl<$Res, $Val extends Meta>
       profile: freezed == profile
           ? _value.profile
           : profile // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       security: freezed == security
           ? _value.security
           : security // ignore: cast_nullable_to_non_nullable
@@ -1405,7 +1405,7 @@ abstract class _$$_MetaCopyWith<$Res> implements $MetaCopyWith<$Res> {
       @JsonKey(name: '_lastUpdated') Element? lastUpdatedElement,
       FhirUri? source,
       @JsonKey(name: '_source') Element? sourceElement,
-      List<Canonical>? profile,
+      List<FhirCanonical>? profile,
       List<Coding>? security,
       List<Coding>? tag});
 
@@ -1474,7 +1474,7 @@ class __$$_MetaCopyWithImpl<$Res> extends _$MetaCopyWithImpl<$Res, _$_Meta>
       profile: freezed == profile
           ? _value._profile
           : profile // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       security: freezed == security
           ? _value._security
           : security // ignore: cast_nullable_to_non_nullable
@@ -1499,7 +1499,7 @@ class _$_Meta extends _Meta {
       @JsonKey(name: '_lastUpdated') this.lastUpdatedElement,
       this.source,
       @JsonKey(name: '_source') this.sourceElement,
-      final List<Canonical>? profile,
+      final List<FhirCanonical>? profile,
       final List<Coding>? security,
       final List<Coding>? tag})
       : _extension_ = extension_,
@@ -1543,7 +1543,7 @@ class _$_Meta extends _Meta {
   /// portion of the URL. This value changes when the resource is created,
   ///  updated, or deleted.
   @override
-  final Id? versionId;
+  final FhirId? versionId;
 
   /// [versionIdElement] Extensions for versionId
   @override
@@ -1576,13 +1576,13 @@ class _$_Meta extends _Meta {
   /// [profile] A list of profiles (references to [[[StructureDefinition]]]
   /// resources) that this resource claims to conform to. The URL is a reference
   ///  to [[[StructureDefinition.url]]].
-  final List<Canonical>? _profile;
+  final List<FhirCanonical>? _profile;
 
   /// [profile] A list of profiles (references to [[[StructureDefinition]]]
   /// resources) that this resource claims to conform to. The URL is a reference
   ///  to [[[StructureDefinition.url]]].
   @override
-  List<Canonical>? get profile {
+  List<FhirCanonical>? get profile {
     final value = _profile;
     if (value == null) return null;
     if (_profile is EqualUnmodifiableListView) return _profile;
@@ -1687,13 +1687,13 @@ abstract class _Meta extends Meta {
   factory _Meta(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final Id? versionId,
+      final FhirId? versionId,
       @JsonKey(name: '_versionId') final Element? versionIdElement,
       final Instant? lastUpdated,
       @JsonKey(name: '_lastUpdated') final Element? lastUpdatedElement,
       final FhirUri? source,
       @JsonKey(name: '_source') final Element? sourceElement,
-      final List<Canonical>? profile,
+      final List<FhirCanonical>? profile,
       final List<Coding>? security,
       final List<Coding>? tag}) = _$_Meta;
   _Meta._() : super._();
@@ -1754,7 +1754,7 @@ abstract class _Meta extends Meta {
   /// [profile] A list of profiles (references to [[[StructureDefinition]]]
   /// resources) that this resource claims to conform to. The URL is a reference
   ///  to [[[StructureDefinition.url]]].
-  List<Canonical>? get profile;
+  List<FhirCanonical>? get profile;
   @override
 
   /// [security] Security labels applied to this resource. These tags connect
@@ -1843,7 +1843,7 @@ mixin _$Dosage {
   /// [asNeededBoolean] Indicates whether the Medication is only taken when
   /// needed within a specific dosing schedule (Boolean option), or it indicates
   ///  the precondition for taking the Medication (CodeableConcept).
-   FhirBoolean? get asNeededBoolean => throw _privateConstructorUsedError;
+  FhirBoolean? get asNeededBoolean => throw _privateConstructorUsedError;
 
   /// [asNeededBooleanElement] Extensions for asNeededBoolean
   @JsonKey(name: '_asNeededBoolean')
@@ -1900,7 +1900,7 @@ abstract class $DosageCopyWith<$Res> {
       String? patientInstruction,
       @JsonKey(name: '_patientInstruction') Element? patientInstructionElement,
       Timing? timing,
-       FhirBoolean? asNeededBoolean,
+      FhirBoolean? asNeededBoolean,
       @JsonKey(name: '_asNeededBoolean') Element? asNeededBooleanElement,
       CodeableConcept? asNeededCodeableConcept,
       CodeableConcept? site,
@@ -2008,7 +2008,7 @@ class _$DosageCopyWithImpl<$Res, $Val extends Dosage>
       asNeededBoolean: freezed == asNeededBoolean
           ? _value.asNeededBoolean
           : asNeededBoolean // ignore: cast_nullable_to_non_nullable
-              as  FhirBoolean?,
+              as FhirBoolean?,
       asNeededBooleanElement: freezed == asNeededBooleanElement
           ? _value.asNeededBooleanElement
           : asNeededBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -2212,7 +2212,7 @@ abstract class _$$_DosageCopyWith<$Res> implements $DosageCopyWith<$Res> {
       String? patientInstruction,
       @JsonKey(name: '_patientInstruction') Element? patientInstructionElement,
       Timing? timing,
-       FhirBoolean? asNeededBoolean,
+      FhirBoolean? asNeededBoolean,
       @JsonKey(name: '_asNeededBoolean') Element? asNeededBooleanElement,
       CodeableConcept? asNeededCodeableConcept,
       CodeableConcept? site,
@@ -2329,7 +2329,7 @@ class __$$_DosageCopyWithImpl<$Res>
       asNeededBoolean: freezed == asNeededBoolean
           ? _value.asNeededBoolean
           : asNeededBoolean // ignore: cast_nullable_to_non_nullable
-              as  FhirBoolean?,
+              as FhirBoolean?,
       asNeededBooleanElement: freezed == asNeededBooleanElement
           ? _value.asNeededBooleanElement
           : asNeededBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -2528,7 +2528,7 @@ class _$_Dosage extends _Dosage {
   /// needed within a specific dosing schedule (Boolean option), or it indicates
   ///  the precondition for taking the Medication (CodeableConcept).
   @override
-  final  FhirBoolean? asNeededBoolean;
+  final FhirBoolean? asNeededBoolean;
 
   /// [asNeededBooleanElement] Extensions for asNeededBoolean
   @override
@@ -2688,7 +2688,7 @@ abstract class _Dosage extends Dosage {
       @JsonKey(name: '_patientInstruction')
           final Element? patientInstructionElement,
       final Timing? timing,
-      final  FhirBoolean? asNeededBoolean,
+      final FhirBoolean? asNeededBoolean,
       @JsonKey(name: '_asNeededBoolean')
           final Element? asNeededBooleanElement,
       final CodeableConcept? asNeededCodeableConcept,
@@ -2779,7 +2779,7 @@ abstract class _Dosage extends Dosage {
   /// [asNeededBoolean] Indicates whether the Medication is only taken when
   /// needed within a specific dosing schedule (Boolean option), or it indicates
   ///  the precondition for taking the Medication (CodeableConcept).
-   FhirBoolean? get asNeededBoolean;
+  FhirBoolean? get asNeededBoolean;
   @override
 
   /// [asNeededBooleanElement] Extensions for asNeededBoolean
@@ -3458,7 +3458,7 @@ mixin _$ElementDefinition {
   /// profile. If false, the slice is not overriding any slice in an inherited
   /// profile. If missing, the slice might or might not be overriding a slice in
   ///  an inherited profile, depending on the sliceName.
-   FhirBoolean? get sliceIsConstraining => throw _privateConstructorUsedError;
+  FhirBoolean? get sliceIsConstraining => throw _privateConstructorUsedError;
 
   /// [sliceIsConstrainingElement] Extensions for sliceIsConstraining
   @JsonKey(name: '_sliceIsConstraining')
@@ -3536,7 +3536,7 @@ mixin _$ElementDefinition {
 
   /// [min] The minimum number of times this element SHALL appear in the
   ///  instance.
-  UnsignedInt? get min => throw _privateConstructorUsedError;
+  FhirUnsignedInt? get min => throw _privateConstructorUsedError;
 
   /// [minElement] Extensions for min
   @JsonKey(name: '_min')
@@ -3578,7 +3578,7 @@ mixin _$ElementDefinition {
   /// [defaultValueBase64Binary] The value that should be used if there is no
   /// value stated in the instance (e.g. 'if not otherwise specified, the
   ///  abstract is false').
-  FhirBase64Binary?? get defaultValueBase64Binary =>
+  FhirBase64Binary? get defaultValueBase64Binary =>
       throw _privateConstructorUsedError;
   @JsonKey(name: '_defaultValueBase64Binary')
   Element? get defaultValueBase64BinaryElement =>
@@ -3587,7 +3587,7 @@ mixin _$ElementDefinition {
   /// [defaultValueBoolean] The value that should be used if there is no value
   /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
   ///  false').
-   FhirBoolean? get defaultValueBoolean => throw _privateConstructorUsedError;
+  FhirBoolean? get defaultValueBoolean => throw _privateConstructorUsedError;
 
   /// [defaultValueBooleanElement] Extensions for defaultValueBoolean
   @JsonKey(name: '_defaultValueBoolean')
@@ -3596,7 +3596,8 @@ mixin _$ElementDefinition {
   /// [defaultValueCanonical] The value that should be used if there is no
   /// value stated in the instance (e.g. 'if not otherwise specified, the
   ///  abstract is false').
-   FhirCanonical? get defaultValueCanonical => throw _privateConstructorUsedError;
+  FhirCanonical? get defaultValueCanonical =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_defaultValueCanonical')
   Element? get defaultValueCanonicalElement =>
       throw _privateConstructorUsedError;
@@ -3604,7 +3605,7 @@ mixin _$ElementDefinition {
   /// [defaultValueCode] The value that should be used if there is no value
   /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
   ///  false').
-   FhirCode? get defaultValueCode => throw _privateConstructorUsedError;
+  FhirCode? get defaultValueCode => throw _privateConstructorUsedError;
 
   /// [defaultValueCodeElement] Extensions for defaultValueCode
   @JsonKey(name: '_defaultValueCode')
@@ -3674,7 +3675,7 @@ mixin _$ElementDefinition {
   /// [defaultValueOid] The value that should be used if there is no value
   /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
   ///  false').
-  Oid? get defaultValueOid => throw _privateConstructorUsedError;
+  FhirOid? get defaultValueOid => throw _privateConstructorUsedError;
 
   /// [defaultValueOidElement] Extensions for defaultValueOid
   @JsonKey(name: '_defaultValueOid')
@@ -3683,7 +3684,7 @@ mixin _$ElementDefinition {
   /// [defaultValuePositiveInt] The value that should be used if there is no
   /// value stated in the instance (e.g. 'if not otherwise specified, the
   ///  abstract is false').
-  PositiveInt? get defaultValuePositiveInt =>
+  FhirPositiveInt? get defaultValuePositiveInt =>
       throw _privateConstructorUsedError;
   @JsonKey(name: '_defaultValuePositiveInt')
   Element? get defaultValuePositiveIntElement =>
@@ -3701,7 +3702,7 @@ mixin _$ElementDefinition {
   /// [defaultValueTime] The value that should be used if there is no value
   /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
   ///  false').
-  Time? get defaultValueTime => throw _privateConstructorUsedError;
+  FhirTime? get defaultValueTime => throw _privateConstructorUsedError;
 
   /// [defaultValueTimeElement] Extensions for defaultValueTime
   @JsonKey(name: '_defaultValueTime')
@@ -3710,7 +3711,7 @@ mixin _$ElementDefinition {
   /// [defaultValueUnsignedInt] The value that should be used if there is no
   /// value stated in the instance (e.g. 'if not otherwise specified, the
   ///  abstract is false').
-  UnsignedInt? get defaultValueUnsignedInt =>
+  FhirUnsignedInt? get defaultValueUnsignedInt =>
       throw _privateConstructorUsedError;
   @JsonKey(name: '_defaultValueUnsignedInt')
   Element? get defaultValueUnsignedIntElement =>
@@ -3737,7 +3738,7 @@ mixin _$ElementDefinition {
   /// [defaultValueUuid] The value that should be used if there is no value
   /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
   ///  false').
-  Uuid? get defaultValueUuid => throw _privateConstructorUsedError;
+  FhirUuid? get defaultValueUuid => throw _privateConstructorUsedError;
 
   /// [defaultValueUuidElement] Extensions for defaultValueUuid
   @JsonKey(name: '_defaultValueUuid')
@@ -3929,7 +3930,7 @@ mixin _$ElementDefinition {
   /// non-significant whitespace is ignored, and all values must be an exact
   /// match (case and accent sensitive). Missing elements/attributes must also
   ///  be missing.
-  FhirBase64Binary?? get fixedBase64Binary => throw _privateConstructorUsedError;
+  FhirBase64Binary? get fixedBase64Binary => throw _privateConstructorUsedError;
 
   /// [fixedBase64BinaryElement] Extensions for fixedBase64Binary
   @JsonKey(name: '_fixedBase64Binary')
@@ -3939,7 +3940,7 @@ mixin _$ElementDefinition {
   /// this element in the instance. For purposes of comparison, non-significant
   /// whitespace is ignored, and all values must be an exact match (case and
   ///  accent sensitive). Missing elements/attributes must also be missing.
-   FhirBoolean? get fixedBoolean => throw _privateConstructorUsedError;
+  FhirBoolean? get fixedBoolean => throw _privateConstructorUsedError;
 
   /// [fixedBooleanElement] Extensions for fixedBoolean
   @JsonKey(name: '_fixedBoolean')
@@ -3949,7 +3950,7 @@ mixin _$ElementDefinition {
   /// this element in the instance. For purposes of comparison, non-significant
   /// whitespace is ignored, and all values must be an exact match (case and
   ///  accent sensitive). Missing elements/attributes must also be missing.
-   FhirCanonical? get fixedCanonical => throw _privateConstructorUsedError;
+  FhirCanonical? get fixedCanonical => throw _privateConstructorUsedError;
 
   /// [fixedCanonicalElement] Extensions for fixedCanonical
   @JsonKey(name: '_fixedCanonical')
@@ -3959,7 +3960,7 @@ mixin _$ElementDefinition {
   /// element in the instance. For purposes of comparison, non-significant
   /// whitespace is ignored, and all values must be an exact match (case and
   ///  accent sensitive). Missing elements/attributes must also be missing.
-   FhirCode? get fixedCode => throw _privateConstructorUsedError;
+  FhirCode? get fixedCode => throw _privateConstructorUsedError;
 
   /// [fixedCodeElement] Extensions for fixedCode
   @JsonKey(name: '_fixedCode')
@@ -4039,7 +4040,7 @@ mixin _$ElementDefinition {
   /// element in the instance. For purposes of comparison, non-significant
   /// whitespace is ignored, and all values must be an exact match (case and
   ///  accent sensitive). Missing elements/attributes must also be missing.
-  Oid? get fixedOid => throw _privateConstructorUsedError;
+  FhirOid? get fixedOid => throw _privateConstructorUsedError;
 
   /// [fixedOidElement] Extensions for fixedOid
   @JsonKey(name: '_fixedOid')
@@ -4049,7 +4050,7 @@ mixin _$ElementDefinition {
   /// this element in the instance. For purposes of comparison, non-significant
   /// whitespace is ignored, and all values must be an exact match (case and
   ///  accent sensitive). Missing elements/attributes must also be missing.
-  PositiveInt? get fixedPositiveInt => throw _privateConstructorUsedError;
+  FhirPositiveInt? get fixedPositiveInt => throw _privateConstructorUsedError;
 
   /// [fixedPositiveIntElement] Extensions for fixedPositiveInt
   @JsonKey(name: '_fixedPositiveInt')
@@ -4069,7 +4070,7 @@ mixin _$ElementDefinition {
   /// element in the instance. For purposes of comparison, non-significant
   /// whitespace is ignored, and all values must be an exact match (case and
   ///  accent sensitive). Missing elements/attributes must also be missing.
-  Time? get fixedTime => throw _privateConstructorUsedError;
+  FhirTime? get fixedTime => throw _privateConstructorUsedError;
 
   /// [fixedTimeElement] Extensions for fixedTime
   @JsonKey(name: '_fixedTime')
@@ -4079,7 +4080,7 @@ mixin _$ElementDefinition {
   /// this element in the instance. For purposes of comparison, non-significant
   /// whitespace is ignored, and all values must be an exact match (case and
   ///  accent sensitive). Missing elements/attributes must also be missing.
-  UnsignedInt? get fixedUnsignedInt => throw _privateConstructorUsedError;
+  FhirUnsignedInt? get fixedUnsignedInt => throw _privateConstructorUsedError;
 
   /// [fixedUnsignedIntElement] Extensions for fixedUnsignedInt
   @JsonKey(name: '_fixedUnsignedInt')
@@ -4109,7 +4110,7 @@ mixin _$ElementDefinition {
   /// element in the instance. For purposes of comparison, non-significant
   /// whitespace is ignored, and all values must be an exact match (case and
   ///  accent sensitive). Missing elements/attributes must also be missing.
-  Uuid? get fixedUuid => throw _privateConstructorUsedError;
+  FhirUuid? get fixedUuid => throw _privateConstructorUsedError;
 
   /// [fixedUuidElement] Extensions for fixedUuid
   @JsonKey(name: '_fixedUuid')
@@ -4326,7 +4327,8 @@ mixin _$ElementDefinition {
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value.
-  FhirBase64Binary?? get patternBase64Binary => throw _privateConstructorUsedError;
+  FhirBase64Binary? get patternBase64Binary =>
+      throw _privateConstructorUsedError;
 
   /// [patternBase64BinaryElement] Extensions for patternBase64Binary
   @JsonKey(name: '_patternBase64Binary')
@@ -4347,7 +4349,7 @@ mixin _$ElementDefinition {
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value.
-   FhirBoolean? get patternBoolean => throw _privateConstructorUsedError;
+  FhirBoolean? get patternBoolean => throw _privateConstructorUsedError;
 
   /// [patternBooleanElement] Extensions for patternBoolean
   @JsonKey(name: '_patternBoolean')
@@ -4368,7 +4370,7 @@ mixin _$ElementDefinition {
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value.
-   FhirCanonical? get patternCanonical => throw _privateConstructorUsedError;
+  FhirCanonical? get patternCanonical => throw _privateConstructorUsedError;
 
   /// [patternCanonicalElement] Extensions for patternCanonical
   @JsonKey(name: '_patternCanonical')
@@ -4389,7 +4391,7 @@ mixin _$ElementDefinition {
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value.
-   FhirCode? get patternCode => throw _privateConstructorUsedError;
+  FhirCode? get patternCode => throw _privateConstructorUsedError;
 
   /// [patternCodeElement] Extensions for patternCode
   @JsonKey(name: '_patternCode')
@@ -4557,7 +4559,7 @@ mixin _$ElementDefinition {
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value.
-  Oid? get patternOid => throw _privateConstructorUsedError;
+  FhirOid? get patternOid => throw _privateConstructorUsedError;
 
   /// [patternOidElement] Extensions for patternOid
   @JsonKey(name: '_patternOid')
@@ -4578,7 +4580,7 @@ mixin _$ElementDefinition {
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value.
-  PositiveInt? get patternPositiveInt => throw _privateConstructorUsedError;
+  FhirPositiveInt? get patternPositiveInt => throw _privateConstructorUsedError;
 
   /// [patternPositiveIntElement] Extensions for patternPositiveInt
   @JsonKey(name: '_patternPositiveInt')
@@ -4620,7 +4622,7 @@ mixin _$ElementDefinition {
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value.
-  Time? get patternTime => throw _privateConstructorUsedError;
+  FhirTime? get patternTime => throw _privateConstructorUsedError;
 
   /// [patternTimeElement] Extensions for patternTime
   @JsonKey(name: '_patternTime')
@@ -4641,7 +4643,7 @@ mixin _$ElementDefinition {
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value.
-  UnsignedInt? get patternUnsignedInt => throw _privateConstructorUsedError;
+  FhirUnsignedInt? get patternUnsignedInt => throw _privateConstructorUsedError;
 
   /// [patternUnsignedIntElement] Extensions for patternUnsignedInt
   @JsonKey(name: '_patternUnsignedInt')
@@ -4704,7 +4706,7 @@ mixin _$ElementDefinition {
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value.
-  Uuid? get patternUuid => throw _privateConstructorUsedError;
+  FhirUuid? get patternUuid => throw _privateConstructorUsedError;
 
   /// [patternUuidElement] Extensions for patternUuid
   @JsonKey(name: '_patternUuid')
@@ -5263,7 +5265,7 @@ mixin _$ElementDefinition {
   /// [minValueTime] The minimum allowed value for the element. The value is
   /// inclusive. This is allowed for the types date, dateTime, instant, time,
   ///  decimal, integer, and Quantity.
-  Time? get minValueTime => throw _privateConstructorUsedError;
+  FhirTime? get minValueTime => throw _privateConstructorUsedError;
 
   /// [minValueTimeElement] Extensions for minValueTime
   @JsonKey(name: '_minValueTime')
@@ -5290,7 +5292,8 @@ mixin _$ElementDefinition {
   /// [minValuePositiveInt] The minimum allowed value for the element. The
   /// value is inclusive. This is allowed for the types date, dateTime, instant,
   ///  time, decimal, integer, and Quantity.
-  PositiveInt? get minValuePositiveInt => throw _privateConstructorUsedError;
+  FhirPositiveInt? get minValuePositiveInt =>
+      throw _privateConstructorUsedError;
 
   /// [minValuePositiveIntElement] Extensions for minValuePositiveInt
   @JsonKey(name: '_minValuePositiveInt')
@@ -5299,7 +5302,8 @@ mixin _$ElementDefinition {
   /// [minValueUnsignedInt] The minimum allowed value for the element. The
   /// value is inclusive. This is allowed for the types date, dateTime, instant,
   ///  time, decimal, integer, and Quantity.
-  UnsignedInt? get minValueUnsignedInt => throw _privateConstructorUsedError;
+  FhirUnsignedInt? get minValueUnsignedInt =>
+      throw _privateConstructorUsedError;
 
   /// [minValueUnsignedIntElement] Extensions for minValueUnsignedInt
   @JsonKey(name: '_minValueUnsignedInt')
@@ -5340,7 +5344,7 @@ mixin _$ElementDefinition {
   /// [maxValueTime] The maximum allowed value for the element. The value is
   /// inclusive. This is allowed for the types date, dateTime, instant, time,
   ///  decimal, integer, and Quantity.
-  Time? get maxValueTime => throw _privateConstructorUsedError;
+  FhirTime? get maxValueTime => throw _privateConstructorUsedError;
 
   /// [maxValueTimeElement] Extensions for maxValueTime
   @JsonKey(name: '_maxValueTime')
@@ -5367,7 +5371,8 @@ mixin _$ElementDefinition {
   /// [maxValuePositiveInt] The maximum allowed value for the element. The
   /// value is inclusive. This is allowed for the types date, dateTime, instant,
   ///  time, decimal, integer, and Quantity.
-  PositiveInt? get maxValuePositiveInt => throw _privateConstructorUsedError;
+  FhirPositiveInt? get maxValuePositiveInt =>
+      throw _privateConstructorUsedError;
 
   /// [maxValuePositiveIntElement] Extensions for maxValuePositiveInt
   @JsonKey(name: '_maxValuePositiveInt')
@@ -5376,7 +5381,8 @@ mixin _$ElementDefinition {
   /// [maxValueUnsignedInt] The maximum allowed value for the element. The
   /// value is inclusive. This is allowed for the types date, dateTime, instant,
   ///  time, decimal, integer, and Quantity.
-  UnsignedInt? get maxValueUnsignedInt => throw _privateConstructorUsedError;
+  FhirUnsignedInt? get maxValueUnsignedInt =>
+      throw _privateConstructorUsedError;
 
   /// [maxValueUnsignedIntElement] Extensions for maxValueUnsignedInt
   @JsonKey(name: '_maxValueUnsignedInt')
@@ -5398,7 +5404,7 @@ mixin _$ElementDefinition {
 
   /// [condition] A reference to an invariant that may make additional
   ///  statements about the cardinality or value in the instance.
-  List<Id>? get condition => throw _privateConstructorUsedError;
+  List<FhirId>? get condition => throw _privateConstructorUsedError;
 
   /// [conditionElement] Extensions for condition
   @JsonKey(name: '_condition')
@@ -5415,7 +5421,7 @@ mixin _$ElementDefinition {
   /// the element may be ignored and not supported. If false, whether to
   /// populate or use the data element in any way is at the discretion of the
   ///  implementation.
-   FhirBoolean? get mustSupport => throw _privateConstructorUsedError;
+  FhirBoolean? get mustSupport => throw _privateConstructorUsedError;
 
   /// [mustSupportElement] Extensions for mustSupport
   @JsonKey(name: '_mustSupport')
@@ -5428,7 +5434,7 @@ mixin _$ElementDefinition {
   /// cannot be ignored by systems: they SHALL either recognize the element and
   /// process it, and/or a pre-determination has been made that it is not
   ///  relevant to their particular system.
-   FhirBoolean? get isModifier => throw _privateConstructorUsedError;
+  FhirBoolean? get isModifier => throw _privateConstructorUsedError;
 
   /// [isModifierElement] Extensions for isModifier
   @JsonKey(name: '_isModifier')
@@ -5444,7 +5450,7 @@ mixin _$ElementDefinition {
 
   /// [isSummary] Whether the element should be included if a client requests a
   ///  search with the parameter _summary=true.
-   FhirBoolean? get isSummary => throw _privateConstructorUsedError;
+  FhirBoolean? get isSummary => throw _privateConstructorUsedError;
 
   /// [isSummaryElement] Extensions for isSummary
   @JsonKey(name: '_isSummary')
@@ -5485,7 +5491,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       String? sliceName,
       @JsonKey(name: '_sliceName')
           Element? sliceNameElement,
-       FhirBoolean? sliceIsConstraining,
+      FhirBoolean? sliceIsConstraining,
       @JsonKey(name: '_sliceIsConstraining')
           Element? sliceIsConstrainingElement,
       String? label,
@@ -5508,7 +5514,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       List<String>? alias,
       @JsonKey(name: '_alias')
           List<Element?>? aliasElement,
-      UnsignedInt? min,
+      FhirUnsignedInt? min,
       @JsonKey(name: '_min')
           Element? minElement,
       String? max,
@@ -5519,16 +5525,16 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       @JsonKey(name: '_contentReference')
           Element? contentReferenceElement,
       List<ElementDefinitionType>? type,
-  FhirBase64Binary?? defaultValueBase64Binary,
+      FhirBase64Binary? defaultValueBase64Binary,
       @JsonKey(name: '_defaultValueBase64Binary')
           Element? defaultValueBase64BinaryElement,
-       FhirBoolean? defaultValueBoolean,
+      FhirBoolean? defaultValueBoolean,
       @JsonKey(name: '_defaultValueBoolean')
           Element? defaultValueBooleanElement,
-       FhirCanonical? defaultValueCanonical,
+      FhirCanonical? defaultValueCanonical,
       @JsonKey(name: '_defaultValueCanonical')
           Element? defaultValueCanonicalElement,
-       FhirCode? defaultValueCode,
+      FhirCode? defaultValueCode,
       @JsonKey(name: '_defaultValueCode')
           Element? defaultValueCodeElement,
       FhirDate? defaultValueDate,
@@ -5552,19 +5558,19 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       FhirMarkdown? defaultValueMarkdown,
       @JsonKey(name: '_defaultValueMarkdown')
           Element? defaultValueMarkdownElement,
-      Oid? defaultValueOid,
+      FhirOid? defaultValueOid,
       @JsonKey(name: '_defaultValueOid')
           Element? defaultValueOidElement,
-      PositiveInt? defaultValuePositiveInt,
+      FhirPositiveInt? defaultValuePositiveInt,
       @JsonKey(name: '_defaultValuePositiveInt')
           Element? defaultValuePositiveIntElement,
       String? defaultValueString,
       @JsonKey(name: '_defaultValueString')
           Element? defaultValueStringElement,
-      Time? defaultValueTime,
+      FhirTime? defaultValueTime,
       @JsonKey(name: '_defaultValueTime')
           Element? defaultValueTimeElement,
-      UnsignedInt? defaultValueUnsignedInt,
+      FhirUnsignedInt? defaultValueUnsignedInt,
       @JsonKey(name: '_defaultValueUnsignedInt')
           Element? defaultValueUnsignedIntElement,
       FhirUri? defaultValueUri,
@@ -5573,7 +5579,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       FhirUrl? defaultValueUrl,
       @JsonKey(name: '_defaultValueUrl')
           Element? defaultValueUrlElement,
-      Uuid? defaultValueUuid,
+      FhirUuid? defaultValueUuid,
       @JsonKey(name: '_defaultValueUuid')
           Element? defaultValueUuidElement,
       Address? defaultValueAddress,
@@ -5614,16 +5620,16 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       String? orderMeaning,
       @JsonKey(name: '_orderMeaning')
           Element? orderMeaningElement,
-  FhirBase64Binary?? fixedBase64Binary,
+      FhirBase64Binary? fixedBase64Binary,
       @JsonKey(name: '_fixedBase64Binary')
           Element? fixedBase64BinaryElement,
-       FhirBoolean? fixedBoolean,
+      FhirBoolean? fixedBoolean,
       @JsonKey(name: '_fixedBoolean')
           Element? fixedBooleanElement,
-       FhirCanonical? fixedCanonical,
+      FhirCanonical? fixedCanonical,
       @JsonKey(name: '_fixedCanonical')
           Element? fixedCanonicalElement,
-       FhirCode? fixedCode,
+      FhirCode? fixedCode,
       @JsonKey(name: '_fixedCode')
           Element? fixedCodeElement,
       FhirDate? fixedDate,
@@ -5647,19 +5653,19 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       FhirMarkdown? fixedMarkdown,
       @JsonKey(name: '_fixedMarkdown')
           Element? fixedMarkdownElement,
-      Oid? fixedOid,
+      FhirOid? fixedOid,
       @JsonKey(name: '_fixedOid')
           Element? fixedOidElement,
-      PositiveInt? fixedPositiveInt,
+      FhirPositiveInt? fixedPositiveInt,
       @JsonKey(name: '_fixedPositiveInt')
           Element? fixedPositiveIntElement,
       String? fixedString,
       @JsonKey(name: '_fixedString')
           Element? fixedStringElement,
-      Time? fixedTime,
+      FhirTime? fixedTime,
       @JsonKey(name: '_fixedTime')
           Element? fixedTimeElement,
-      UnsignedInt? fixedUnsignedInt,
+      FhirUnsignedInt? fixedUnsignedInt,
       @JsonKey(name: '_fixedUnsignedInt')
           Element? fixedUnsignedIntElement,
       FhirUri? fixedUri,
@@ -5668,7 +5674,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       FhirUrl? fixedUrl,
       @JsonKey(name: '_fixedUrl')
           Element? fixedUrlElement,
-      Uuid? fixedUuid,
+      FhirUuid? fixedUuid,
       @JsonKey(name: '_fixedUuid')
           Element? fixedUuidElement,
       Address? fixedAddress,
@@ -5703,16 +5709,16 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       TriggerDefinition? fixedTriggerDefinition,
       UsageContext? fixedUsageContext,
       Dosage? fixedDosage,
-  FhirBase64Binary?? patternBase64Binary,
+      FhirBase64Binary? patternBase64Binary,
       @JsonKey(name: '_patternBase64Binary')
           Element? patternBase64BinaryElement,
-       FhirBoolean? patternBoolean,
+      FhirBoolean? patternBoolean,
       @JsonKey(name: '_patternBoolean')
           Element? patternBooleanElement,
-       FhirCanonical? patternCanonical,
+      FhirCanonical? patternCanonical,
       @JsonKey(name: '_patternCanonical')
           Element? patternCanonicalElement,
-       FhirCode? patternCode,
+      FhirCode? patternCode,
       @JsonKey(name: '_patternCode')
           Element? patternCodeElement,
       FhirDate? patternDate,
@@ -5736,19 +5742,19 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       FhirMarkdown? patternMarkdown,
       @JsonKey(name: '_patternMarkdown')
           Element? patternMarkdownElement,
-      Oid? patternOid,
+      FhirOid? patternOid,
       @JsonKey(name: '_patternOid')
           Element? patternOidElement,
-      PositiveInt? patternPositiveInt,
+      FhirPositiveInt? patternPositiveInt,
       @JsonKey(name: '_patternPositiveInt')
           Element? patternPositiveIntElement,
       String? patternString,
       @JsonKey(name: '_patternString')
           Element? patternStringElement,
-      Time? patternTime,
+      FhirTime? patternTime,
       @JsonKey(name: '_patternTime')
           Element? patternTimeElement,
-      UnsignedInt? patternUnsignedInt,
+      FhirUnsignedInt? patternUnsignedInt,
       @JsonKey(name: '_patternUnsignedInt')
           Element? patternUnsignedIntElement,
       FhirUri? patternUri,
@@ -5757,7 +5763,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       FhirUrl? patternUrl,
       @JsonKey(name: '_patternUrl')
           Element? patternUrlElement,
-      Uuid? patternUuid,
+      FhirUuid? patternUuid,
       @JsonKey(name: '_patternUuid')
           Element? patternUuidElement,
       Address? patternAddress,
@@ -5802,7 +5808,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       FhirInstant? minValueInstant,
       @JsonKey(name: '_minValueInstant')
           Element? minValueInstantElement,
-      Time? minValueTime,
+      FhirTime? minValueTime,
       @JsonKey(name: '_minValueTime')
           Element? minValueTimeElement,
       FhirDecimal? minValueDecimal,
@@ -5811,10 +5817,10 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       FhirInteger? minValueInteger,
       @JsonKey(name: '_minValueInteger')
           Element? minValueIntegerElement,
-      PositiveInt? minValuePositiveInt,
+      FhirPositiveInt? minValuePositiveInt,
       @JsonKey(name: '_minValuePositiveInt')
           Element? minValuePositiveIntElement,
-      UnsignedInt? minValueUnsignedInt,
+      FhirUnsignedInt? minValueUnsignedInt,
       @JsonKey(name: '_minValueUnsignedInt')
           Element? minValueUnsignedIntElement,
       Quantity? minValueQuantity,
@@ -5827,7 +5833,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       FhirInstant? maxValueInstant,
       @JsonKey(name: '_maxValueInstant')
           Element? maxValueInstantElement,
-      Time? maxValueTime,
+      FhirTime? maxValueTime,
       @JsonKey(name: '_maxValueTime')
           Element? maxValueTimeElement,
       FhirDecimal? maxValueDecimal,
@@ -5836,30 +5842,30 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       FhirInteger? maxValueInteger,
       @JsonKey(name: '_maxValueInteger')
           Element? maxValueIntegerElement,
-      PositiveInt? maxValuePositiveInt,
+      FhirPositiveInt? maxValuePositiveInt,
       @JsonKey(name: '_maxValuePositiveInt')
           Element? maxValuePositiveIntElement,
-      UnsignedInt? maxValueUnsignedInt,
+      FhirUnsignedInt? maxValueUnsignedInt,
       @JsonKey(name: '_maxValueUnsignedInt')
           Element? maxValueUnsignedIntElement,
       Quantity? maxValueQuantity,
       FhirInteger? maxLength,
       @JsonKey(name: '_maxLength')
           Element? maxLengthElement,
-      List<Id>? condition,
+      List<FhirId>? condition,
       @JsonKey(name: '_condition')
           List<Element?>? conditionElement,
       List<ElementDefinitionConstraint>? constraint,
-       FhirBoolean? mustSupport,
+      FhirBoolean? mustSupport,
       @JsonKey(name: '_mustSupport')
           Element? mustSupportElement,
-       FhirBoolean? isModifier,
+      FhirBoolean? isModifier,
       @JsonKey(name: '_isModifier')
           Element? isModifierElement,
       String? isModifierReason,
       @JsonKey(name: '_isModifierReason')
           Element? isModifierReasonElement,
-       FhirBoolean? isSummary,
+      FhirBoolean? isSummary,
       @JsonKey(name: '_isSummary')
           Element? isSummaryElement,
       ElementDefinitionBinding? binding,
@@ -6410,7 +6416,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       sliceIsConstraining: freezed == sliceIsConstraining
           ? _value.sliceIsConstraining
           : sliceIsConstraining // ignore: cast_nullable_to_non_nullable
-              as  FhirBoolean?,
+              as FhirBoolean?,
       sliceIsConstrainingElement: freezed == sliceIsConstrainingElement
           ? _value.sliceIsConstrainingElement
           : sliceIsConstrainingElement // ignore: cast_nullable_to_non_nullable
@@ -6506,7 +6512,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       defaultValueBase64Binary: freezed == defaultValueBase64Binary
           ? _value.defaultValueBase64Binary
           : defaultValueBase64Binary // ignore: cast_nullable_to_non_nullable
-              as  FhirBase64Binary??,
+              as FhirBase64Binary?,
       defaultValueBase64BinaryElement: freezed ==
               defaultValueBase64BinaryElement
           ? _value.defaultValueBase64BinaryElement
@@ -6515,7 +6521,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       defaultValueBoolean: freezed == defaultValueBoolean
           ? _value.defaultValueBoolean
           : defaultValueBoolean // ignore: cast_nullable_to_non_nullable
-              as  FhirBoolean?,
+              as FhirBoolean?,
       defaultValueBooleanElement: freezed == defaultValueBooleanElement
           ? _value.defaultValueBooleanElement
           : defaultValueBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -6523,7 +6529,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       defaultValueCanonical: freezed == defaultValueCanonical
           ? _value.defaultValueCanonical
           : defaultValueCanonical // ignore: cast_nullable_to_non_nullable
-              as  FhirCanonical?,
+              as FhirCanonical?,
       defaultValueCanonicalElement: freezed == defaultValueCanonicalElement
           ? _value.defaultValueCanonicalElement
           : defaultValueCanonicalElement // ignore: cast_nullable_to_non_nullable
@@ -6531,7 +6537,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       defaultValueCode: freezed == defaultValueCode
           ? _value.defaultValueCode
           : defaultValueCode // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       defaultValueCodeElement: freezed == defaultValueCodeElement
           ? _value.defaultValueCodeElement
           : defaultValueCodeElement // ignore: cast_nullable_to_non_nullable
@@ -6804,7 +6810,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       fixedBase64Binary: freezed == fixedBase64Binary
           ? _value.fixedBase64Binary
           : fixedBase64Binary // ignore: cast_nullable_to_non_nullable
-              as  FhirBase64Binary??,
+              as FhirBase64Binary?,
       fixedBase64BinaryElement: freezed == fixedBase64BinaryElement
           ? _value.fixedBase64BinaryElement
           : fixedBase64BinaryElement // ignore: cast_nullable_to_non_nullable
@@ -6812,7 +6818,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       fixedBoolean: freezed == fixedBoolean
           ? _value.fixedBoolean
           : fixedBoolean // ignore: cast_nullable_to_non_nullable
-              as  FhirBoolean?,
+              as FhirBoolean?,
       fixedBooleanElement: freezed == fixedBooleanElement
           ? _value.fixedBooleanElement
           : fixedBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -6820,7 +6826,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       fixedCanonical: freezed == fixedCanonical
           ? _value.fixedCanonical
           : fixedCanonical // ignore: cast_nullable_to_non_nullable
-              as  FhirCanonical?,
+              as FhirCanonical?,
       fixedCanonicalElement: freezed == fixedCanonicalElement
           ? _value.fixedCanonicalElement
           : fixedCanonicalElement // ignore: cast_nullable_to_non_nullable
@@ -6828,7 +6834,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       fixedCode: freezed == fixedCode
           ? _value.fixedCode
           : fixedCode // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       fixedCodeElement: freezed == fixedCodeElement
           ? _value.fixedCodeElement
           : fixedCodeElement // ignore: cast_nullable_to_non_nullable
@@ -7084,7 +7090,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       patternBase64Binary: freezed == patternBase64Binary
           ? _value.patternBase64Binary
           : patternBase64Binary // ignore: cast_nullable_to_non_nullable
-              as  FhirBase64Binary??,
+              as FhirBase64Binary?,
       patternBase64BinaryElement: freezed == patternBase64BinaryElement
           ? _value.patternBase64BinaryElement
           : patternBase64BinaryElement // ignore: cast_nullable_to_non_nullable
@@ -7092,7 +7098,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       patternBoolean: freezed == patternBoolean
           ? _value.patternBoolean
           : patternBoolean // ignore: cast_nullable_to_non_nullable
-              as  FhirBoolean?,
+              as FhirBoolean?,
       patternBooleanElement: freezed == patternBooleanElement
           ? _value.patternBooleanElement
           : patternBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -7100,7 +7106,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       patternCanonical: freezed == patternCanonical
           ? _value.patternCanonical
           : patternCanonical // ignore: cast_nullable_to_non_nullable
-              as  FhirCanonical?,
+              as FhirCanonical?,
       patternCanonicalElement: freezed == patternCanonicalElement
           ? _value.patternCanonicalElement
           : patternCanonicalElement // ignore: cast_nullable_to_non_nullable
@@ -7108,7 +7114,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       patternCode: freezed == patternCode
           ? _value.patternCode
           : patternCode // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       patternCodeElement: freezed == patternCodeElement
           ? _value.patternCodeElement
           : patternCodeElement // ignore: cast_nullable_to_non_nullable
@@ -7512,7 +7518,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       condition: freezed == condition
           ? _value.condition
           : condition // ignore: cast_nullable_to_non_nullable
-              as List<Id>?,
+              as List<FhirId>?,
       conditionElement: freezed == conditionElement
           ? _value.conditionElement
           : conditionElement // ignore: cast_nullable_to_non_nullable
@@ -7524,7 +7530,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       mustSupport: freezed == mustSupport
           ? _value.mustSupport
           : mustSupport // ignore: cast_nullable_to_non_nullable
-              as  FhirBoolean?,
+              as FhirBoolean?,
       mustSupportElement: freezed == mustSupportElement
           ? _value.mustSupportElement
           : mustSupportElement // ignore: cast_nullable_to_non_nullable
@@ -7532,7 +7538,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       isModifier: freezed == isModifier
           ? _value.isModifier
           : isModifier // ignore: cast_nullable_to_non_nullable
-              as  FhirBoolean?,
+              as FhirBoolean?,
       isModifierElement: freezed == isModifierElement
           ? _value.isModifierElement
           : isModifierElement // ignore: cast_nullable_to_non_nullable
@@ -7548,7 +7554,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       isSummary: freezed == isSummary
           ? _value.isSummary
           : isSummary // ignore: cast_nullable_to_non_nullable
-              as  FhirBoolean?,
+              as FhirBoolean?,
       isSummaryElement: freezed == isSummaryElement
           ? _value.isSummaryElement
           : isSummaryElement // ignore: cast_nullable_to_non_nullable
@@ -9923,7 +9929,7 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       String? sliceName,
       @JsonKey(name: '_sliceName')
           Element? sliceNameElement,
-       FhirBoolean? sliceIsConstraining,
+      FhirBoolean? sliceIsConstraining,
       @JsonKey(name: '_sliceIsConstraining')
           Element? sliceIsConstrainingElement,
       String? label,
@@ -9946,7 +9952,7 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       List<String>? alias,
       @JsonKey(name: '_alias')
           List<Element?>? aliasElement,
-      UnsignedInt? min,
+      FhirUnsignedInt? min,
       @JsonKey(name: '_min')
           Element? minElement,
       String? max,
@@ -9957,16 +9963,16 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       @JsonKey(name: '_contentReference')
           Element? contentReferenceElement,
       List<ElementDefinitionType>? type,
-  FhirBase64Binary?? defaultValueBase64Binary,
+      FhirBase64Binary? defaultValueBase64Binary,
       @JsonKey(name: '_defaultValueBase64Binary')
           Element? defaultValueBase64BinaryElement,
-       FhirBoolean? defaultValueBoolean,
+      FhirBoolean? defaultValueBoolean,
       @JsonKey(name: '_defaultValueBoolean')
           Element? defaultValueBooleanElement,
-       FhirCanonical? defaultValueCanonical,
+      FhirCanonical? defaultValueCanonical,
       @JsonKey(name: '_defaultValueCanonical')
           Element? defaultValueCanonicalElement,
-       FhirCode? defaultValueCode,
+      FhirCode? defaultValueCode,
       @JsonKey(name: '_defaultValueCode')
           Element? defaultValueCodeElement,
       FhirDate? defaultValueDate,
@@ -9990,19 +9996,19 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       FhirMarkdown? defaultValueMarkdown,
       @JsonKey(name: '_defaultValueMarkdown')
           Element? defaultValueMarkdownElement,
-      Oid? defaultValueOid,
+      FhirOid? defaultValueOid,
       @JsonKey(name: '_defaultValueOid')
           Element? defaultValueOidElement,
-      PositiveInt? defaultValuePositiveInt,
+      FhirPositiveInt? defaultValuePositiveInt,
       @JsonKey(name: '_defaultValuePositiveInt')
           Element? defaultValuePositiveIntElement,
       String? defaultValueString,
       @JsonKey(name: '_defaultValueString')
           Element? defaultValueStringElement,
-      Time? defaultValueTime,
+      FhirTime? defaultValueTime,
       @JsonKey(name: '_defaultValueTime')
           Element? defaultValueTimeElement,
-      UnsignedInt? defaultValueUnsignedInt,
+      FhirUnsignedInt? defaultValueUnsignedInt,
       @JsonKey(name: '_defaultValueUnsignedInt')
           Element? defaultValueUnsignedIntElement,
       FhirUri? defaultValueUri,
@@ -10011,7 +10017,7 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       FhirUrl? defaultValueUrl,
       @JsonKey(name: '_defaultValueUrl')
           Element? defaultValueUrlElement,
-      Uuid? defaultValueUuid,
+      FhirUuid? defaultValueUuid,
       @JsonKey(name: '_defaultValueUuid')
           Element? defaultValueUuidElement,
       Address? defaultValueAddress,
@@ -10052,16 +10058,16 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       String? orderMeaning,
       @JsonKey(name: '_orderMeaning')
           Element? orderMeaningElement,
-  FhirBase64Binary?? fixedBase64Binary,
+      FhirBase64Binary? fixedBase64Binary,
       @JsonKey(name: '_fixedBase64Binary')
           Element? fixedBase64BinaryElement,
-       FhirBoolean? fixedBoolean,
+      FhirBoolean? fixedBoolean,
       @JsonKey(name: '_fixedBoolean')
           Element? fixedBooleanElement,
-       FhirCanonical? fixedCanonical,
+      FhirCanonical? fixedCanonical,
       @JsonKey(name: '_fixedCanonical')
           Element? fixedCanonicalElement,
-       FhirCode? fixedCode,
+      FhirCode? fixedCode,
       @JsonKey(name: '_fixedCode')
           Element? fixedCodeElement,
       FhirDate? fixedDate,
@@ -10085,19 +10091,19 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       FhirMarkdown? fixedMarkdown,
       @JsonKey(name: '_fixedMarkdown')
           Element? fixedMarkdownElement,
-      Oid? fixedOid,
+      FhirOid? fixedOid,
       @JsonKey(name: '_fixedOid')
           Element? fixedOidElement,
-      PositiveInt? fixedPositiveInt,
+      FhirPositiveInt? fixedPositiveInt,
       @JsonKey(name: '_fixedPositiveInt')
           Element? fixedPositiveIntElement,
       String? fixedString,
       @JsonKey(name: '_fixedString')
           Element? fixedStringElement,
-      Time? fixedTime,
+      FhirTime? fixedTime,
       @JsonKey(name: '_fixedTime')
           Element? fixedTimeElement,
-      UnsignedInt? fixedUnsignedInt,
+      FhirUnsignedInt? fixedUnsignedInt,
       @JsonKey(name: '_fixedUnsignedInt')
           Element? fixedUnsignedIntElement,
       FhirUri? fixedUri,
@@ -10106,7 +10112,7 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       FhirUrl? fixedUrl,
       @JsonKey(name: '_fixedUrl')
           Element? fixedUrlElement,
-      Uuid? fixedUuid,
+      FhirUuid? fixedUuid,
       @JsonKey(name: '_fixedUuid')
           Element? fixedUuidElement,
       Address? fixedAddress,
@@ -10141,16 +10147,16 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       TriggerDefinition? fixedTriggerDefinition,
       UsageContext? fixedUsageContext,
       Dosage? fixedDosage,
-  FhirBase64Binary?? patternBase64Binary,
+      FhirBase64Binary? patternBase64Binary,
       @JsonKey(name: '_patternBase64Binary')
           Element? patternBase64BinaryElement,
-       FhirBoolean? patternBoolean,
+      FhirBoolean? patternBoolean,
       @JsonKey(name: '_patternBoolean')
           Element? patternBooleanElement,
-       FhirCanonical? patternCanonical,
+      FhirCanonical? patternCanonical,
       @JsonKey(name: '_patternCanonical')
           Element? patternCanonicalElement,
-       FhirCode? patternCode,
+      FhirCode? patternCode,
       @JsonKey(name: '_patternCode')
           Element? patternCodeElement,
       FhirDate? patternDate,
@@ -10174,19 +10180,19 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       FhirMarkdown? patternMarkdown,
       @JsonKey(name: '_patternMarkdown')
           Element? patternMarkdownElement,
-      Oid? patternOid,
+      FhirOid? patternOid,
       @JsonKey(name: '_patternOid')
           Element? patternOidElement,
-      PositiveInt? patternPositiveInt,
+      FhirPositiveInt? patternPositiveInt,
       @JsonKey(name: '_patternPositiveInt')
           Element? patternPositiveIntElement,
       String? patternString,
       @JsonKey(name: '_patternString')
           Element? patternStringElement,
-      Time? patternTime,
+      FhirTime? patternTime,
       @JsonKey(name: '_patternTime')
           Element? patternTimeElement,
-      UnsignedInt? patternUnsignedInt,
+      FhirUnsignedInt? patternUnsignedInt,
       @JsonKey(name: '_patternUnsignedInt')
           Element? patternUnsignedIntElement,
       FhirUri? patternUri,
@@ -10195,7 +10201,7 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       FhirUrl? patternUrl,
       @JsonKey(name: '_patternUrl')
           Element? patternUrlElement,
-      Uuid? patternUuid,
+      FhirUuid? patternUuid,
       @JsonKey(name: '_patternUuid')
           Element? patternUuidElement,
       Address? patternAddress,
@@ -10240,7 +10246,7 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       FhirInstant? minValueInstant,
       @JsonKey(name: '_minValueInstant')
           Element? minValueInstantElement,
-      Time? minValueTime,
+      FhirTime? minValueTime,
       @JsonKey(name: '_minValueTime')
           Element? minValueTimeElement,
       FhirDecimal? minValueDecimal,
@@ -10249,10 +10255,10 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       FhirInteger? minValueInteger,
       @JsonKey(name: '_minValueInteger')
           Element? minValueIntegerElement,
-      PositiveInt? minValuePositiveInt,
+      FhirPositiveInt? minValuePositiveInt,
       @JsonKey(name: '_minValuePositiveInt')
           Element? minValuePositiveIntElement,
-      UnsignedInt? minValueUnsignedInt,
+      FhirUnsignedInt? minValueUnsignedInt,
       @JsonKey(name: '_minValueUnsignedInt')
           Element? minValueUnsignedIntElement,
       Quantity? minValueQuantity,
@@ -10265,7 +10271,7 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       FhirInstant? maxValueInstant,
       @JsonKey(name: '_maxValueInstant')
           Element? maxValueInstantElement,
-      Time? maxValueTime,
+      FhirTime? maxValueTime,
       @JsonKey(name: '_maxValueTime')
           Element? maxValueTimeElement,
       FhirDecimal? maxValueDecimal,
@@ -10274,30 +10280,30 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       FhirInteger? maxValueInteger,
       @JsonKey(name: '_maxValueInteger')
           Element? maxValueIntegerElement,
-      PositiveInt? maxValuePositiveInt,
+      FhirPositiveInt? maxValuePositiveInt,
       @JsonKey(name: '_maxValuePositiveInt')
           Element? maxValuePositiveIntElement,
-      UnsignedInt? maxValueUnsignedInt,
+      FhirUnsignedInt? maxValueUnsignedInt,
       @JsonKey(name: '_maxValueUnsignedInt')
           Element? maxValueUnsignedIntElement,
       Quantity? maxValueQuantity,
       FhirInteger? maxLength,
       @JsonKey(name: '_maxLength')
           Element? maxLengthElement,
-      List<Id>? condition,
+      List<FhirId>? condition,
       @JsonKey(name: '_condition')
           List<Element?>? conditionElement,
       List<ElementDefinitionConstraint>? constraint,
-       FhirBoolean? mustSupport,
+      FhirBoolean? mustSupport,
       @JsonKey(name: '_mustSupport')
           Element? mustSupportElement,
-       FhirBoolean? isModifier,
+      FhirBoolean? isModifier,
       @JsonKey(name: '_isModifier')
           Element? isModifierElement,
       String? isModifierReason,
       @JsonKey(name: '_isModifierReason')
           Element? isModifierReasonElement,
-       FhirBoolean? isSummary,
+      FhirBoolean? isSummary,
       @JsonKey(name: '_isSummary')
           Element? isSummaryElement,
       ElementDefinitionBinding? binding,
@@ -11038,7 +11044,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       sliceIsConstraining: freezed == sliceIsConstraining
           ? _value.sliceIsConstraining
           : sliceIsConstraining // ignore: cast_nullable_to_non_nullable
-              as  FhirBoolean?,
+              as FhirBoolean?,
       sliceIsConstrainingElement: freezed == sliceIsConstrainingElement
           ? _value.sliceIsConstrainingElement
           : sliceIsConstrainingElement // ignore: cast_nullable_to_non_nullable
@@ -11134,7 +11140,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       defaultValueBase64Binary: freezed == defaultValueBase64Binary
           ? _value.defaultValueBase64Binary
           : defaultValueBase64Binary // ignore: cast_nullable_to_non_nullable
-              as  FhirBase64Binary??,
+              as FhirBase64Binary?,
       defaultValueBase64BinaryElement: freezed ==
               defaultValueBase64BinaryElement
           ? _value.defaultValueBase64BinaryElement
@@ -11143,7 +11149,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       defaultValueBoolean: freezed == defaultValueBoolean
           ? _value.defaultValueBoolean
           : defaultValueBoolean // ignore: cast_nullable_to_non_nullable
-              as  FhirBoolean?,
+              as FhirBoolean?,
       defaultValueBooleanElement: freezed == defaultValueBooleanElement
           ? _value.defaultValueBooleanElement
           : defaultValueBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -11151,7 +11157,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       defaultValueCanonical: freezed == defaultValueCanonical
           ? _value.defaultValueCanonical
           : defaultValueCanonical // ignore: cast_nullable_to_non_nullable
-              as  FhirCanonical?,
+              as FhirCanonical?,
       defaultValueCanonicalElement: freezed == defaultValueCanonicalElement
           ? _value.defaultValueCanonicalElement
           : defaultValueCanonicalElement // ignore: cast_nullable_to_non_nullable
@@ -11159,7 +11165,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       defaultValueCode: freezed == defaultValueCode
           ? _value.defaultValueCode
           : defaultValueCode // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       defaultValueCodeElement: freezed == defaultValueCodeElement
           ? _value.defaultValueCodeElement
           : defaultValueCodeElement // ignore: cast_nullable_to_non_nullable
@@ -11432,7 +11438,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       fixedBase64Binary: freezed == fixedBase64Binary
           ? _value.fixedBase64Binary
           : fixedBase64Binary // ignore: cast_nullable_to_non_nullable
-              as  FhirBase64Binary??,
+              as FhirBase64Binary?,
       fixedBase64BinaryElement: freezed == fixedBase64BinaryElement
           ? _value.fixedBase64BinaryElement
           : fixedBase64BinaryElement // ignore: cast_nullable_to_non_nullable
@@ -11440,7 +11446,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       fixedBoolean: freezed == fixedBoolean
           ? _value.fixedBoolean
           : fixedBoolean // ignore: cast_nullable_to_non_nullable
-              as  FhirBoolean?,
+              as FhirBoolean?,
       fixedBooleanElement: freezed == fixedBooleanElement
           ? _value.fixedBooleanElement
           : fixedBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -11448,7 +11454,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       fixedCanonical: freezed == fixedCanonical
           ? _value.fixedCanonical
           : fixedCanonical // ignore: cast_nullable_to_non_nullable
-              as  FhirCanonical?,
+              as FhirCanonical?,
       fixedCanonicalElement: freezed == fixedCanonicalElement
           ? _value.fixedCanonicalElement
           : fixedCanonicalElement // ignore: cast_nullable_to_non_nullable
@@ -11456,7 +11462,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       fixedCode: freezed == fixedCode
           ? _value.fixedCode
           : fixedCode // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       fixedCodeElement: freezed == fixedCodeElement
           ? _value.fixedCodeElement
           : fixedCodeElement // ignore: cast_nullable_to_non_nullable
@@ -11712,7 +11718,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       patternBase64Binary: freezed == patternBase64Binary
           ? _value.patternBase64Binary
           : patternBase64Binary // ignore: cast_nullable_to_non_nullable
-              as  FhirBase64Binary??,
+              as FhirBase64Binary?,
       patternBase64BinaryElement: freezed == patternBase64BinaryElement
           ? _value.patternBase64BinaryElement
           : patternBase64BinaryElement // ignore: cast_nullable_to_non_nullable
@@ -11720,7 +11726,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       patternBoolean: freezed == patternBoolean
           ? _value.patternBoolean
           : patternBoolean // ignore: cast_nullable_to_non_nullable
-              as  FhirBoolean?,
+              as FhirBoolean?,
       patternBooleanElement: freezed == patternBooleanElement
           ? _value.patternBooleanElement
           : patternBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -11728,7 +11734,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       patternCanonical: freezed == patternCanonical
           ? _value.patternCanonical
           : patternCanonical // ignore: cast_nullable_to_non_nullable
-              as  FhirCanonical?,
+              as FhirCanonical?,
       patternCanonicalElement: freezed == patternCanonicalElement
           ? _value.patternCanonicalElement
           : patternCanonicalElement // ignore: cast_nullable_to_non_nullable
@@ -11736,7 +11742,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       patternCode: freezed == patternCode
           ? _value.patternCode
           : patternCode // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       patternCodeElement: freezed == patternCodeElement
           ? _value.patternCodeElement
           : patternCodeElement // ignore: cast_nullable_to_non_nullable
@@ -12140,7 +12146,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       condition: freezed == condition
           ? _value._condition
           : condition // ignore: cast_nullable_to_non_nullable
-              as List<Id>?,
+              as List<FhirId>?,
       conditionElement: freezed == conditionElement
           ? _value._conditionElement
           : conditionElement // ignore: cast_nullable_to_non_nullable
@@ -12152,7 +12158,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       mustSupport: freezed == mustSupport
           ? _value.mustSupport
           : mustSupport // ignore: cast_nullable_to_non_nullable
-              as  FhirBoolean?,
+              as FhirBoolean?,
       mustSupportElement: freezed == mustSupportElement
           ? _value.mustSupportElement
           : mustSupportElement // ignore: cast_nullable_to_non_nullable
@@ -12160,7 +12166,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       isModifier: freezed == isModifier
           ? _value.isModifier
           : isModifier // ignore: cast_nullable_to_non_nullable
-              as  FhirBoolean?,
+              as FhirBoolean?,
       isModifierElement: freezed == isModifierElement
           ? _value.isModifierElement
           : isModifierElement // ignore: cast_nullable_to_non_nullable
@@ -12176,7 +12182,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       isSummary: freezed == isSummary
           ? _value.isSummary
           : isSummary // ignore: cast_nullable_to_non_nullable
-              as  FhirBoolean?,
+              as FhirBoolean?,
       isSummaryElement: freezed == isSummaryElement
           ? _value.isSummaryElement
           : isSummaryElement // ignore: cast_nullable_to_non_nullable
@@ -12571,7 +12577,7 @@ class _$_ElementDefinition extends _ElementDefinition {
       this.maxLength,
       @JsonKey(name: '_maxLength')
           this.maxLengthElement,
-      final List<Id>? condition,
+      final List<FhirId>? condition,
       @JsonKey(name: '_condition')
           final List<Element?>? conditionElement,
       final List<ElementDefinitionConstraint>? constraint,
@@ -12733,7 +12739,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   /// profile. If missing, the slice might or might not be overriding a slice in
   ///  an inherited profile, depending on the sliceName.
   @override
-  final  FhirBoolean? sliceIsConstraining;
+  final FhirBoolean? sliceIsConstraining;
 
   /// [sliceIsConstrainingElement] Extensions for sliceIsConstraining
   @override
@@ -12916,7 +12922,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   /// value stated in the instance (e.g. 'if not otherwise specified, the
   ///  abstract is false').
   @override
-  final  FhirBase64Binary?? defaultValueBase64Binary;
+  final FhirBase64Binary? defaultValueBase64Binary;
   @override
   @JsonKey(name: '_defaultValueBase64Binary')
   final Element? defaultValueBase64BinaryElement;
@@ -12925,7 +12931,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
   ///  false').
   @override
-  final  FhirBoolean? defaultValueBoolean;
+  final FhirBoolean? defaultValueBoolean;
 
   /// [defaultValueBooleanElement] Extensions for defaultValueBoolean
   @override
@@ -12936,7 +12942,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   /// value stated in the instance (e.g. 'if not otherwise specified, the
   ///  abstract is false').
   @override
-  final  FhirCanonical? defaultValueCanonical;
+  final FhirCanonical? defaultValueCanonical;
   @override
   @JsonKey(name: '_defaultValueCanonical')
   final Element? defaultValueCanonicalElement;
@@ -12945,7 +12951,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
   ///  false').
   @override
-  final  FhirCode? defaultValueCode;
+  final FhirCode? defaultValueCode;
 
   /// [defaultValueCodeElement] Extensions for defaultValueCode
   @override
@@ -12987,7 +12993,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
   ///  false').
   @override
-  final Id? defaultValueId;
+  final FhirId? defaultValueId;
 
   /// [defaultValueIdElement] Extensions for defaultValueId
   @override
@@ -13321,7 +13327,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   /// match (case and accent sensitive). Missing elements/attributes must also
   ///  be missing.
   @override
-  final  FhirBase64Binary?? fixedBase64Binary;
+  final FhirBase64Binary? fixedBase64Binary;
 
   /// [fixedBase64BinaryElement] Extensions for fixedBase64Binary
   @override
@@ -13333,7 +13339,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   /// whitespace is ignored, and all values must be an exact match (case and
   ///  accent sensitive). Missing elements/attributes must also be missing.
   @override
-  final  FhirBoolean? fixedBoolean;
+  final FhirBoolean? fixedBoolean;
 
   /// [fixedBooleanElement] Extensions for fixedBoolean
   @override
@@ -13345,7 +13351,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   /// whitespace is ignored, and all values must be an exact match (case and
   ///  accent sensitive). Missing elements/attributes must also be missing.
   @override
-  final  FhirCanonical? fixedCanonical;
+  final FhirCanonical? fixedCanonical;
 
   /// [fixedCanonicalElement] Extensions for fixedCanonical
   @override
@@ -13357,7 +13363,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   /// whitespace is ignored, and all values must be an exact match (case and
   ///  accent sensitive). Missing elements/attributes must also be missing.
   @override
-  final  FhirCode? fixedCode;
+  final FhirCode? fixedCode;
 
   /// [fixedCodeElement] Extensions for fixedCode
   @override
@@ -13405,7 +13411,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   /// whitespace is ignored, and all values must be an exact match (case and
   ///  accent sensitive). Missing elements/attributes must also be missing.
   @override
-  final Id? fixedId;
+  final FhirId? fixedId;
 
   /// [fixedIdElement] Extensions for fixedId
   @override
@@ -13782,7 +13788,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value.
   @override
-  final  FhirBase64Binary?? patternBase64Binary;
+  final FhirBase64Binary? patternBase64Binary;
 
   /// [patternBase64BinaryElement] Extensions for patternBase64Binary
   @override
@@ -13805,7 +13811,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value.
   @override
-  final  FhirBoolean? patternBoolean;
+  final FhirBoolean? patternBoolean;
 
   /// [patternBooleanElement] Extensions for patternBoolean
   @override
@@ -13828,7 +13834,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value.
   @override
-  final  FhirCanonical? patternCanonical;
+  final FhirCanonical? patternCanonical;
 
   /// [patternCanonicalElement] Extensions for patternCanonical
   @override
@@ -13851,7 +13857,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value.
   @override
-  final  FhirCode? patternCode;
+  final FhirCode? patternCode;
 
   /// [patternCodeElement] Extensions for patternCode
   @override
@@ -13943,7 +13949,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value.
   @override
-  final Id? patternId;
+  final FhirId? patternId;
 
   /// [patternIdElement] Extensions for patternId
   @override
@@ -14963,12 +14969,12 @@ class _$_ElementDefinition extends _ElementDefinition {
 
   /// [condition] A reference to an invariant that may make additional
   ///  statements about the cardinality or value in the instance.
-  final List<Id>? _condition;
+  final List<FhirId>? _condition;
 
   /// [condition] A reference to an invariant that may make additional
   ///  statements about the cardinality or value in the instance.
   @override
-  List<Id>? get condition {
+  List<FhirId>? get condition {
     final value = _condition;
     if (value == null) return null;
     if (_condition is EqualUnmodifiableListView) return _condition;
@@ -15014,7 +15020,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   /// populate or use the data element in any way is at the discretion of the
   ///  implementation.
   @override
-  final  FhirBoolean? mustSupport;
+  final FhirBoolean? mustSupport;
 
   /// [mustSupportElement] Extensions for mustSupport
   @override
@@ -15029,7 +15035,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   /// process it, and/or a pre-determination has been made that it is not
   ///  relevant to their particular system.
   @override
-  final  FhirBoolean? isModifier;
+  final FhirBoolean? isModifier;
 
   /// [isModifierElement] Extensions for isModifier
   @override
@@ -15049,7 +15055,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   /// [isSummary] Whether the element should be included if a client requests a
   ///  search with the parameter _summary=true.
   @override
-  final  FhirBoolean? isSummary;
+  final FhirBoolean? isSummary;
 
   /// [isSummaryElement] Extensions for isSummary
   @override
@@ -15751,7 +15757,7 @@ abstract class _ElementDefinition extends ElementDefinition {
       final String? sliceName,
       @JsonKey(name: '_sliceName')
           final Element? sliceNameElement,
-      final  FhirBoolean? sliceIsConstraining,
+      final FhirBoolean? sliceIsConstraining,
       @JsonKey(name: '_sliceIsConstraining')
           final Element? sliceIsConstrainingElement,
       final String? label,
@@ -15785,16 +15791,16 @@ abstract class _ElementDefinition extends ElementDefinition {
       @JsonKey(name: '_contentReference')
           final Element? contentReferenceElement,
       final List<ElementDefinitionType>? type,
-      final  FhirBase64Binary?? defaultValueBase64Binary,
+      final FhirBase64Binary? defaultValueBase64Binary,
       @JsonKey(name: '_defaultValueBase64Binary')
           final Element? defaultValueBase64BinaryElement,
-      final  FhirBoolean? defaultValueBoolean,
+      final FhirBoolean? defaultValueBoolean,
       @JsonKey(name: '_defaultValueBoolean')
           final Element? defaultValueBooleanElement,
-      final  FhirCanonical? defaultValueCanonical,
+      final FhirCanonical? defaultValueCanonical,
       @JsonKey(name: '_defaultValueCanonical')
           final Element? defaultValueCanonicalElement,
-      final  FhirCode? defaultValueCode,
+      final FhirCode? defaultValueCode,
       @JsonKey(name: '_defaultValueCode')
           final Element? defaultValueCodeElement,
       final Date? defaultValueDate,
@@ -15806,7 +15812,7 @@ abstract class _ElementDefinition extends ElementDefinition {
       final Decimal? defaultValueDecimal,
       @JsonKey(name: '_defaultValueDecimal')
           final Element? defaultValueDecimalElement,
-      final Id? defaultValueId,
+      final FhirId? defaultValueId,
       @JsonKey(name: '_defaultValueId')
           final Element? defaultValueIdElement,
       final Instant? defaultValueInstant,
@@ -15880,16 +15886,16 @@ abstract class _ElementDefinition extends ElementDefinition {
       final String? orderMeaning,
       @JsonKey(name: '_orderMeaning')
           final Element? orderMeaningElement,
-      final  FhirBase64Binary?? fixedBase64Binary,
+      final FhirBase64Binary? fixedBase64Binary,
       @JsonKey(name: '_fixedBase64Binary')
           final Element? fixedBase64BinaryElement,
-      final  FhirBoolean? fixedBoolean,
+      final FhirBoolean? fixedBoolean,
       @JsonKey(name: '_fixedBoolean')
           final Element? fixedBooleanElement,
-      final  FhirCanonical? fixedCanonical,
+      final FhirCanonical? fixedCanonical,
       @JsonKey(name: '_fixedCanonical')
           final Element? fixedCanonicalElement,
-      final  FhirCode? fixedCode,
+      final FhirCode? fixedCode,
       @JsonKey(name: '_fixedCode')
           final Element? fixedCodeElement,
       final Date? fixedDate,
@@ -15901,7 +15907,7 @@ abstract class _ElementDefinition extends ElementDefinition {
       final Decimal? fixedDecimal,
       @JsonKey(name: '_fixedDecimal')
           final Element? fixedDecimalElement,
-      final Id? fixedId,
+      final FhirId? fixedId,
       @JsonKey(name: '_fixedId')
           final Element? fixedIdElement,
       final Instant? fixedInstant,
@@ -15969,16 +15975,16 @@ abstract class _ElementDefinition extends ElementDefinition {
       final TriggerDefinition? fixedTriggerDefinition,
       final UsageContext? fixedUsageContext,
       final Dosage? fixedDosage,
-      final  FhirBase64Binary?? patternBase64Binary,
+      final FhirBase64Binary? patternBase64Binary,
       @JsonKey(name: '_patternBase64Binary')
           final Element? patternBase64BinaryElement,
-      final  FhirBoolean? patternBoolean,
+      final FhirBoolean? patternBoolean,
       @JsonKey(name: '_patternBoolean')
           final Element? patternBooleanElement,
-      final  FhirCanonical? patternCanonical,
+      final FhirCanonical? patternCanonical,
       @JsonKey(name: '_patternCanonical')
           final Element? patternCanonicalElement,
-      final  FhirCode? patternCode,
+      final FhirCode? patternCode,
       @JsonKey(name: '_patternCode')
           final Element? patternCodeElement,
       final Date? patternDate,
@@ -15990,7 +15996,7 @@ abstract class _ElementDefinition extends ElementDefinition {
       final Decimal? patternDecimal,
       @JsonKey(name: '_patternDecimal')
           final Element? patternDecimalElement,
-      final Id? patternId,
+      final FhirId? patternId,
       @JsonKey(name: '_patternId')
           final Element? patternIdElement,
       final Instant? patternInstant,
@@ -16112,20 +16118,20 @@ abstract class _ElementDefinition extends ElementDefinition {
       final Integer? maxLength,
       @JsonKey(name: '_maxLength')
           final Element? maxLengthElement,
-      final List<Id>? condition,
+      final List<FhirId>? condition,
       @JsonKey(name: '_condition')
           final List<Element?>? conditionElement,
       final List<ElementDefinitionConstraint>? constraint,
-      final  FhirBoolean? mustSupport,
+      final FhirBoolean? mustSupport,
       @JsonKey(name: '_mustSupport')
           final Element? mustSupportElement,
-      final  FhirBoolean? isModifier,
+      final FhirBoolean? isModifier,
       @JsonKey(name: '_isModifier')
           final Element? isModifierElement,
       final String? isModifierReason,
       @JsonKey(name: '_isModifierReason')
           final Element? isModifierReasonElement,
-      final  FhirBoolean? isSummary,
+      final FhirBoolean? isSummary,
       @JsonKey(name: '_isSummary')
           final Element? isSummaryElement,
       final ElementDefinitionBinding? binding,
@@ -16206,7 +16212,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   /// profile. If false, the slice is not overriding any slice in an inherited
   /// profile. If missing, the slice might or might not be overriding a slice in
   ///  an inherited profile, depending on the sliceName.
-   FhirBoolean? get sliceIsConstraining;
+  FhirBoolean? get sliceIsConstraining;
   @override
 
   /// [sliceIsConstrainingElement] Extensions for sliceIsConstraining
@@ -16300,7 +16306,7 @@ abstract class _ElementDefinition extends ElementDefinition {
 
   /// [min] The minimum number of times this element SHALL appear in the
   ///  instance.
-  UnsignedInt? get min;
+  FhirUnsignedInt? get min;
   @override
 
   /// [minElement] Extensions for min
@@ -16350,7 +16356,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   /// [defaultValueBase64Binary] The value that should be used if there is no
   /// value stated in the instance (e.g. 'if not otherwise specified, the
   ///  abstract is false').
-  FhirBase64Binary?? get defaultValueBase64Binary;
+  FhirBase64Binary? get defaultValueBase64Binary;
   @override
   @JsonKey(name: '_defaultValueBase64Binary')
   Element? get defaultValueBase64BinaryElement;
@@ -16359,7 +16365,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   /// [defaultValueBoolean] The value that should be used if there is no value
   /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
   ///  false').
-   FhirBoolean? get defaultValueBoolean;
+  FhirBoolean? get defaultValueBoolean;
   @override
 
   /// [defaultValueBooleanElement] Extensions for defaultValueBoolean
@@ -16370,7 +16376,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   /// [defaultValueCanonical] The value that should be used if there is no
   /// value stated in the instance (e.g. 'if not otherwise specified, the
   ///  abstract is false').
-   FhirCanonical? get defaultValueCanonical;
+  FhirCanonical? get defaultValueCanonical;
   @override
   @JsonKey(name: '_defaultValueCanonical')
   Element? get defaultValueCanonicalElement;
@@ -16379,7 +16385,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   /// [defaultValueCode] The value that should be used if there is no value
   /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
   ///  false').
-   FhirCode? get defaultValueCode;
+  FhirCode? get defaultValueCode;
   @override
 
   /// [defaultValueCodeElement] Extensions for defaultValueCode
@@ -16463,7 +16469,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   /// [defaultValueOid] The value that should be used if there is no value
   /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
   ///  false').
-  Oid? get defaultValueOid;
+  FhirOid? get defaultValueOid;
   @override
 
   /// [defaultValueOidElement] Extensions for defaultValueOid
@@ -16474,7 +16480,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   /// [defaultValuePositiveInt] The value that should be used if there is no
   /// value stated in the instance (e.g. 'if not otherwise specified, the
   ///  abstract is false').
-  PositiveInt? get defaultValuePositiveInt;
+  FhirPositiveInt? get defaultValuePositiveInt;
   @override
   @JsonKey(name: '_defaultValuePositiveInt')
   Element? get defaultValuePositiveIntElement;
@@ -16494,7 +16500,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   /// [defaultValueTime] The value that should be used if there is no value
   /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
   ///  false').
-  Time? get defaultValueTime;
+  FhirTime? get defaultValueTime;
   @override
 
   /// [defaultValueTimeElement] Extensions for defaultValueTime
@@ -16505,7 +16511,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   /// [defaultValueUnsignedInt] The value that should be used if there is no
   /// value stated in the instance (e.g. 'if not otherwise specified, the
   ///  abstract is false').
-  UnsignedInt? get defaultValueUnsignedInt;
+  FhirUnsignedInt? get defaultValueUnsignedInt;
   @override
   @JsonKey(name: '_defaultValueUnsignedInt')
   Element? get defaultValueUnsignedIntElement;
@@ -16536,7 +16542,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   /// [defaultValueUuid] The value that should be used if there is no value
   /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
   ///  false').
-  Uuid? get defaultValueUuid;
+  FhirUuid? get defaultValueUuid;
   @override
 
   /// [defaultValueUuidElement] Extensions for defaultValueUuid
@@ -16755,7 +16761,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   /// non-significant whitespace is ignored, and all values must be an exact
   /// match (case and accent sensitive). Missing elements/attributes must also
   ///  be missing.
-  FhirBase64Binary?? get fixedBase64Binary;
+  FhirBase64Binary? get fixedBase64Binary;
   @override
 
   /// [fixedBase64BinaryElement] Extensions for fixedBase64Binary
@@ -16767,7 +16773,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   /// this element in the instance. For purposes of comparison, non-significant
   /// whitespace is ignored, and all values must be an exact match (case and
   ///  accent sensitive). Missing elements/attributes must also be missing.
-   FhirBoolean? get fixedBoolean;
+  FhirBoolean? get fixedBoolean;
   @override
 
   /// [fixedBooleanElement] Extensions for fixedBoolean
@@ -16779,7 +16785,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   /// this element in the instance. For purposes of comparison, non-significant
   /// whitespace is ignored, and all values must be an exact match (case and
   ///  accent sensitive). Missing elements/attributes must also be missing.
-   FhirCanonical? get fixedCanonical;
+  FhirCanonical? get fixedCanonical;
   @override
 
   /// [fixedCanonicalElement] Extensions for fixedCanonical
@@ -16791,7 +16797,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   /// element in the instance. For purposes of comparison, non-significant
   /// whitespace is ignored, and all values must be an exact match (case and
   ///  accent sensitive). Missing elements/attributes must also be missing.
-   FhirCode? get fixedCode;
+  FhirCode? get fixedCode;
   @override
 
   /// [fixedCodeElement] Extensions for fixedCode
@@ -16887,7 +16893,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   /// element in the instance. For purposes of comparison, non-significant
   /// whitespace is ignored, and all values must be an exact match (case and
   ///  accent sensitive). Missing elements/attributes must also be missing.
-  Oid? get fixedOid;
+  FhirOid? get fixedOid;
   @override
 
   /// [fixedOidElement] Extensions for fixedOid
@@ -16899,7 +16905,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   /// this element in the instance. For purposes of comparison, non-significant
   /// whitespace is ignored, and all values must be an exact match (case and
   ///  accent sensitive). Missing elements/attributes must also be missing.
-  PositiveInt? get fixedPositiveInt;
+  FhirPositiveInt? get fixedPositiveInt;
   @override
 
   /// [fixedPositiveIntElement] Extensions for fixedPositiveInt
@@ -16923,7 +16929,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   /// element in the instance. For purposes of comparison, non-significant
   /// whitespace is ignored, and all values must be an exact match (case and
   ///  accent sensitive). Missing elements/attributes must also be missing.
-  Time? get fixedTime;
+  FhirTime? get fixedTime;
   @override
 
   /// [fixedTimeElement] Extensions for fixedTime
@@ -16935,7 +16941,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   /// this element in the instance. For purposes of comparison, non-significant
   /// whitespace is ignored, and all values must be an exact match (case and
   ///  accent sensitive). Missing elements/attributes must also be missing.
-  UnsignedInt? get fixedUnsignedInt;
+  FhirUnsignedInt? get fixedUnsignedInt;
   @override
 
   /// [fixedUnsignedIntElement] Extensions for fixedUnsignedInt
@@ -16971,7 +16977,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   /// element in the instance. For purposes of comparison, non-significant
   /// whitespace is ignored, and all values must be an exact match (case and
   ///  accent sensitive). Missing elements/attributes must also be missing.
-  Uuid? get fixedUuid;
+  FhirUuid? get fixedUuid;
   @override
 
   /// [fixedUuidElement] Extensions for fixedUuid
@@ -17216,7 +17222,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value.
-  FhirBase64Binary?? get patternBase64Binary;
+  FhirBase64Binary? get patternBase64Binary;
   @override
 
   /// [patternBase64BinaryElement] Extensions for patternBase64Binary
@@ -17239,7 +17245,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value.
-   FhirBoolean? get patternBoolean;
+  FhirBoolean? get patternBoolean;
   @override
 
   /// [patternBooleanElement] Extensions for patternBoolean
@@ -17262,7 +17268,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value.
-   FhirCanonical? get patternCanonical;
+  FhirCanonical? get patternCanonical;
   @override
 
   /// [patternCanonicalElement] Extensions for patternCanonical
@@ -17285,7 +17291,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value.
-   FhirCode? get patternCode;
+  FhirCode? get patternCode;
   @override
 
   /// [patternCodeElement] Extensions for patternCode
@@ -17469,7 +17475,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value.
-  Oid? get patternOid;
+  FhirOid? get patternOid;
   @override
 
   /// [patternOidElement] Extensions for patternOid
@@ -17492,7 +17498,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value.
-  PositiveInt? get patternPositiveInt;
+  FhirPositiveInt? get patternPositiveInt;
   @override
 
   /// [patternPositiveIntElement] Extensions for patternPositiveInt
@@ -17538,7 +17544,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value.
-  Time? get patternTime;
+  FhirTime? get patternTime;
   @override
 
   /// [patternTimeElement] Extensions for patternTime
@@ -17561,7 +17567,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value.
-  UnsignedInt? get patternUnsignedInt;
+  FhirUnsignedInt? get patternUnsignedInt;
   @override
 
   /// [patternUnsignedIntElement] Extensions for patternUnsignedInt
@@ -17630,7 +17636,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value.
-  Uuid? get patternUuid;
+  FhirUuid? get patternUuid;
   @override
 
   /// [patternUuidElement] Extensions for patternUuid
@@ -18223,7 +18229,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   /// [minValueTime] The minimum allowed value for the element. The value is
   /// inclusive. This is allowed for the types date, dateTime, instant, time,
   ///  decimal, integer, and Quantity.
-  Time? get minValueTime;
+  FhirTime? get minValueTime;
   @override
 
   /// [minValueTimeElement] Extensions for minValueTime
@@ -18256,7 +18262,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   /// [minValuePositiveInt] The minimum allowed value for the element. The
   /// value is inclusive. This is allowed for the types date, dateTime, instant,
   ///  time, decimal, integer, and Quantity.
-  PositiveInt? get minValuePositiveInt;
+  FhirPositiveInt? get minValuePositiveInt;
   @override
 
   /// [minValuePositiveIntElement] Extensions for minValuePositiveInt
@@ -18267,7 +18273,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   /// [minValueUnsignedInt] The minimum allowed value for the element. The
   /// value is inclusive. This is allowed for the types date, dateTime, instant,
   ///  time, decimal, integer, and Quantity.
-  UnsignedInt? get minValueUnsignedInt;
+  FhirUnsignedInt? get minValueUnsignedInt;
   @override
 
   /// [minValueUnsignedIntElement] Extensions for minValueUnsignedInt
@@ -18317,7 +18323,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   /// [maxValueTime] The maximum allowed value for the element. The value is
   /// inclusive. This is allowed for the types date, dateTime, instant, time,
   ///  decimal, integer, and Quantity.
-  Time? get maxValueTime;
+  FhirTime? get maxValueTime;
   @override
 
   /// [maxValueTimeElement] Extensions for maxValueTime
@@ -18350,7 +18356,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   /// [maxValuePositiveInt] The maximum allowed value for the element. The
   /// value is inclusive. This is allowed for the types date, dateTime, instant,
   ///  time, decimal, integer, and Quantity.
-  PositiveInt? get maxValuePositiveInt;
+  FhirPositiveInt? get maxValuePositiveInt;
   @override
 
   /// [maxValuePositiveIntElement] Extensions for maxValuePositiveInt
@@ -18361,7 +18367,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   /// [maxValueUnsignedInt] The maximum allowed value for the element. The
   /// value is inclusive. This is allowed for the types date, dateTime, instant,
   ///  time, decimal, integer, and Quantity.
-  UnsignedInt? get maxValueUnsignedInt;
+  FhirUnsignedInt? get maxValueUnsignedInt;
   @override
 
   /// [maxValueUnsignedIntElement] Extensions for maxValueUnsignedInt
@@ -18388,7 +18394,7 @@ abstract class _ElementDefinition extends ElementDefinition {
 
   /// [condition] A reference to an invariant that may make additional
   ///  statements about the cardinality or value in the instance.
-  List<Id>? get condition;
+  List<FhirId>? get condition;
   @override
 
   /// [conditionElement] Extensions for condition
@@ -18407,7 +18413,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   /// the element may be ignored and not supported. If false, whether to
   /// populate or use the data element in any way is at the discretion of the
   ///  implementation.
-   FhirBoolean? get mustSupport;
+  FhirBoolean? get mustSupport;
   @override
 
   /// [mustSupportElement] Extensions for mustSupport
@@ -18422,7 +18428,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   /// cannot be ignored by systems: they SHALL either recognize the element and
   /// process it, and/or a pre-determination has been made that it is not
   ///  relevant to their particular system.
-   FhirBoolean? get isModifier;
+  FhirBoolean? get isModifier;
   @override
 
   /// [isModifierElement] Extensions for isModifier
@@ -18442,7 +18448,7 @@ abstract class _ElementDefinition extends ElementDefinition {
 
   /// [isSummary] Whether the element should be included if a client requests a
   ///  search with the parameter _summary=true.
-   FhirBoolean? get isSummary;
+  FhirBoolean? get isSummary;
   @override
 
   /// [isSummaryElement] Extensions for isSummary
@@ -18521,7 +18527,7 @@ mixin _$ElementDefinitionSlicing {
 
   /// [ordered] If the matching elements have to occur in the same order as
   ///  defined in the profile.
-   FhirBoolean? get ordered => throw _privateConstructorUsedError;
+  FhirBoolean? get ordered => throw _privateConstructorUsedError;
 
   /// [orderedElement] Extensions for ordered
   @JsonKey(name: '_ordered')
@@ -18555,7 +18561,7 @@ abstract class $ElementDefinitionSlicingCopyWith<$Res> {
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-       FhirBoolean? ordered,
+      FhirBoolean? ordered,
       @JsonKey(name: '_ordered')
           Element? orderedElement,
       @JsonKey(unknownEnumValue: ElementDefinitionSlicingRules.unknown)
@@ -18621,7 +18627,7 @@ class _$ElementDefinitionSlicingCopyWithImpl<$Res,
       ordered: freezed == ordered
           ? _value.ordered
           : ordered // ignore: cast_nullable_to_non_nullable
-              as  FhirBoolean?,
+              as FhirBoolean?,
       orderedElement: freezed == orderedElement
           ? _value.orderedElement
           : orderedElement // ignore: cast_nullable_to_non_nullable
@@ -18692,7 +18698,7 @@ abstract class _$$_ElementDefinitionSlicingCopyWith<$Res>
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-       FhirBoolean? ordered,
+      FhirBoolean? ordered,
       @JsonKey(name: '_ordered')
           Element? orderedElement,
       @JsonKey(unknownEnumValue: ElementDefinitionSlicingRules.unknown)
@@ -18759,7 +18765,7 @@ class __$$_ElementDefinitionSlicingCopyWithImpl<$Res>
       ordered: freezed == ordered
           ? _value.ordered
           : ordered // ignore: cast_nullable_to_non_nullable
-              as  FhirBoolean?,
+              as FhirBoolean?,
       orderedElement: freezed == orderedElement
           ? _value.orderedElement
           : orderedElement // ignore: cast_nullable_to_non_nullable
@@ -18908,7 +18914,7 @@ class _$_ElementDefinitionSlicing extends _ElementDefinitionSlicing {
   /// [ordered] If the matching elements have to occur in the same order as
   ///  defined in the profile.
   @override
-  final  FhirBoolean? ordered;
+  final FhirBoolean? ordered;
 
   /// [orderedElement] Extensions for ordered
   @override
@@ -18992,7 +18998,7 @@ abstract class _ElementDefinitionSlicing extends ElementDefinitionSlicing {
       final String? description,
       @JsonKey(name: '_description')
           final Element? descriptionElement,
-      final  FhirBoolean? ordered,
+      final FhirBoolean? ordered,
       @JsonKey(name: '_ordered')
           final Element? orderedElement,
       @JsonKey(unknownEnumValue: ElementDefinitionSlicingRules.unknown)
@@ -19060,7 +19066,7 @@ abstract class _ElementDefinitionSlicing extends ElementDefinitionSlicing {
 
   /// [ordered] If the matching elements have to occur in the same order as
   ///  defined in the profile.
-   FhirBoolean? get ordered;
+  FhirBoolean? get ordered;
   @override
 
   /// [orderedElement] Extensions for ordered
@@ -19607,7 +19613,7 @@ mixin _$ElementDefinitionBase {
   Element? get pathElement => throw _privateConstructorUsedError;
 
   /// [min] Minimum cardinality of the base element identified by the path.
-  UnsignedInt? get min => throw _privateConstructorUsedError;
+  FhirUnsignedInt? get min => throw _privateConstructorUsedError;
 
   /// [minElement] Extensions for min
   @JsonKey(name: '_min')
@@ -19638,7 +19644,7 @@ abstract class $ElementDefinitionBaseCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       String? path,
       @JsonKey(name: '_path') Element? pathElement,
-      UnsignedInt? min,
+      FhirUnsignedInt? min,
       @JsonKey(name: '_min') Element? minElement,
       String? max,
       @JsonKey(name: '_max') Element? maxElement});
@@ -19763,7 +19769,7 @@ abstract class _$$_ElementDefinitionBaseCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       String? path,
       @JsonKey(name: '_path') Element? pathElement,
-      UnsignedInt? min,
+      FhirUnsignedInt? min,
       @JsonKey(name: '_min') Element? minElement,
       String? max,
       @JsonKey(name: '_max') Element? maxElement});
@@ -20073,7 +20079,7 @@ abstract class _ElementDefinitionBase extends ElementDefinitionBase {
   @override
 
   /// [min] Minimum cardinality of the base element identified by the path.
-  UnsignedInt? get min;
+  FhirUnsignedInt? get min;
   @override
 
   /// [minElement] Extensions for min
@@ -20148,7 +20154,7 @@ mixin _$ElementDefinitionType {
   /// reference to another StructureDefinition or Implementation Guide by a
   /// canonical URL. When an implementation guide is specified, the type SHALL
   ///  conform to at least one profile defined in the implementation guide.
-  List<Canonical>? get profile => throw _privateConstructorUsedError;
+  List<FhirCanonical>? get profile => throw _privateConstructorUsedError;
   @JsonKey(name: '_profile')
   List<Element?>? get profileElement => throw _privateConstructorUsedError;
 
@@ -20161,7 +20167,7 @@ mixin _$ElementDefinitionType {
   /// canonical URL. When an implementation guide is specified, the target
   /// resource SHALL conform to at least one profile defined in the
   ///  implementation guide.
-  List<Canonical>? get targetProfile => throw _privateConstructorUsedError;
+  List<FhirCanonical>? get targetProfile => throw _privateConstructorUsedError;
 
   /// [aggregation] If the type is a reference to another resource, how the
   /// resource is or can be aggregated - is it a contained resource, or a
@@ -20200,10 +20206,10 @@ abstract class $ElementDefinitionTypeCopyWith<$Res> {
       FhirUri? code,
       @JsonKey(name: '_code')
           Element? codeElement,
-      List<Canonical>? profile,
+      List<FhirCanonical>? profile,
       @JsonKey(name: '_profile')
           List<Element?>? profileElement,
-      List<Canonical>? targetProfile,
+      List<FhirCanonical>? targetProfile,
       List<ElementDefinitionTypeAggregation>? aggregation,
       @JsonKey(name: '_aggregation')
           List<Element?>? aggregationElement,
@@ -20267,7 +20273,7 @@ class _$ElementDefinitionTypeCopyWithImpl<$Res,
       profile: freezed == profile
           ? _value.profile
           : profile // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       profileElement: freezed == profileElement
           ? _value.profileElement
           : profileElement // ignore: cast_nullable_to_non_nullable
@@ -20275,7 +20281,7 @@ class _$ElementDefinitionTypeCopyWithImpl<$Res,
       targetProfile: freezed == targetProfile
           ? _value.targetProfile
           : targetProfile // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       aggregation: freezed == aggregation
           ? _value.aggregation
           : aggregation // ignore: cast_nullable_to_non_nullable
@@ -20336,10 +20342,10 @@ abstract class _$$_ElementDefinitionTypeCopyWith<$Res>
       FhirUri? code,
       @JsonKey(name: '_code')
           Element? codeElement,
-      List<Canonical>? profile,
+      List<FhirCanonical>? profile,
       @JsonKey(name: '_profile')
           List<Element?>? profileElement,
-      List<Canonical>? targetProfile,
+      List<FhirCanonical>? targetProfile,
       List<ElementDefinitionTypeAggregation>? aggregation,
       @JsonKey(name: '_aggregation')
           List<Element?>? aggregationElement,
@@ -20402,7 +20408,7 @@ class __$$_ElementDefinitionTypeCopyWithImpl<$Res>
       profile: freezed == profile
           ? _value._profile
           : profile // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       profileElement: freezed == profileElement
           ? _value._profileElement
           : profileElement // ignore: cast_nullable_to_non_nullable
@@ -20410,7 +20416,7 @@ class __$$_ElementDefinitionTypeCopyWithImpl<$Res>
       targetProfile: freezed == targetProfile
           ? _value._targetProfile
           : targetProfile // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       aggregation: freezed == aggregation
           ? _value._aggregation
           : aggregation // ignore: cast_nullable_to_non_nullable
@@ -20442,10 +20448,10 @@ class _$_ElementDefinitionType extends _ElementDefinitionType {
       this.code,
       @JsonKey(name: '_code')
           this.codeElement,
-      final List<Canonical>? profile,
+      final List<FhirCanonical>? profile,
       @JsonKey(name: '_profile')
           final List<Element?>? profileElement,
-      final List<Canonical>? targetProfile,
+      final List<FhirCanonical>? targetProfile,
       final List<ElementDefinitionTypeAggregation>? aggregation,
       @JsonKey(name: '_aggregation')
           final List<Element?>? aggregationElement,
@@ -20552,7 +20558,7 @@ class _$_ElementDefinitionType extends _ElementDefinitionType {
   /// reference to another StructureDefinition or Implementation Guide by a
   /// canonical URL. When an implementation guide is specified, the type SHALL
   ///  conform to at least one profile defined in the implementation guide.
-  final List<Canonical>? _profile;
+  final List<FhirCanonical>? _profile;
 
   /// [profile] Identifies a profile structure or implementation Guide that
   /// applies to the datatype this element refers to. If any profiles are
@@ -20562,7 +20568,7 @@ class _$_ElementDefinitionType extends _ElementDefinitionType {
   /// canonical URL. When an implementation guide is specified, the type SHALL
   ///  conform to at least one profile defined in the implementation guide.
   @override
-  List<Canonical>? get profile {
+  List<FhirCanonical>? get profile {
     final value = _profile;
     if (value == null) return null;
     if (_profile is EqualUnmodifiableListView) return _profile;
@@ -20590,7 +20596,7 @@ class _$_ElementDefinitionType extends _ElementDefinitionType {
   /// canonical URL. When an implementation guide is specified, the target
   /// resource SHALL conform to at least one profile defined in the
   ///  implementation guide.
-  final List<Canonical>? _targetProfile;
+  final List<FhirCanonical>? _targetProfile;
 
   /// [targetProfile] Used when the type is "Reference" or "canonical", and
   /// identifies a profile structure or implementation Guide that applies to the
@@ -20602,7 +20608,7 @@ class _$_ElementDefinitionType extends _ElementDefinitionType {
   /// resource SHALL conform to at least one profile defined in the
   ///  implementation guide.
   @override
-  List<Canonical>? get targetProfile {
+  List<FhirCanonical>? get targetProfile {
     final value = _targetProfile;
     if (value == null) return null;
     if (_targetProfile is EqualUnmodifiableListView) return _targetProfile;
@@ -20725,10 +20731,10 @@ abstract class _ElementDefinitionType extends ElementDefinitionType {
       final FhirUri? code,
       @JsonKey(name: '_code')
           final Element? codeElement,
-      final List<Canonical>? profile,
+      final List<FhirCanonical>? profile,
       @JsonKey(name: '_profile')
           final List<Element?>? profileElement,
-      final List<Canonical>? targetProfile,
+      final List<FhirCanonical>? targetProfile,
       final List<ElementDefinitionTypeAggregation>? aggregation,
       @JsonKey(name: '_aggregation')
           final List<Element?>? aggregationElement,
@@ -20794,7 +20800,7 @@ abstract class _ElementDefinitionType extends ElementDefinitionType {
   /// reference to another StructureDefinition or Implementation Guide by a
   /// canonical URL. When an implementation guide is specified, the type SHALL
   ///  conform to at least one profile defined in the implementation guide.
-  List<Canonical>? get profile;
+  List<FhirCanonical>? get profile;
   @override
   @JsonKey(name: '_profile')
   List<Element?>? get profileElement;
@@ -20809,7 +20815,7 @@ abstract class _ElementDefinitionType extends ElementDefinitionType {
   /// canonical URL. When an implementation guide is specified, the target
   /// resource SHALL conform to at least one profile defined in the
   ///  implementation guide.
-  List<Canonical>? get targetProfile;
+  List<FhirCanonical>? get targetProfile;
   @override
 
   /// [aggregation] If the type is a reference to another resource, how the
@@ -20880,7 +20886,7 @@ mixin _$ElementDefinitionExample {
 
   /// [valueBase64Binary] The actual value for the element, which must be one
   ///  of the types allowed for this element.
-  FhirBase64Binary?? get valueBase64Binary => throw _privateConstructorUsedError;
+  FhirBase64Binary? get valueBase64Binary => throw _privateConstructorUsedError;
 
   /// [valueBase64BinaryElement] Extensions for valueBase64Binary
   @JsonKey(name: '_valueBase64Binary')
@@ -20888,7 +20894,7 @@ mixin _$ElementDefinitionExample {
 
   /// [valueBoolean] The actual value for the element, which must be one of the
   ///  types allowed for this element.
-   FhirBoolean? get valueBoolean => throw _privateConstructorUsedError;
+  FhirBoolean? get valueBoolean => throw _privateConstructorUsedError;
 
   /// [valueBooleanElement] Extensions for valueBoolean
   @JsonKey(name: '_valueBoolean')
@@ -20896,7 +20902,7 @@ mixin _$ElementDefinitionExample {
 
   /// [valueCanonical] The actual value for the element, which must be one of
   ///  the types allowed for this element.
-   FhirCanonical? get valueCanonical => throw _privateConstructorUsedError;
+  FhirCanonical? get valueCanonical => throw _privateConstructorUsedError;
 
   /// [valueCanonicalElement] Extensions for valueCanonical
   @JsonKey(name: '_valueCanonical')
@@ -20904,7 +20910,7 @@ mixin _$ElementDefinitionExample {
 
   /// [valueCode] The actual value for the element, which must be one of the
   ///  types allowed for this element.
-   FhirCode? get valueCode => throw _privateConstructorUsedError;
+  FhirCode? get valueCode => throw _privateConstructorUsedError;
 
   /// [valueCodeElement] Extensions for valueCode
   @JsonKey(name: '_valueCode')
@@ -20968,7 +20974,7 @@ mixin _$ElementDefinitionExample {
 
   /// [valueOid] The actual value for the element, which must be one of the
   ///  types allowed for this element.
-  Oid? get valueOid => throw _privateConstructorUsedError;
+  FhirOid? get valueOid => throw _privateConstructorUsedError;
 
   /// [valueOidElement] Extensions for valueOid
   @JsonKey(name: '_valueOid')
@@ -20976,7 +20982,7 @@ mixin _$ElementDefinitionExample {
 
   /// [valuePositiveInt] The actual value for the element, which must be one of
   ///  the types allowed for this element.
-  PositiveInt? get valuePositiveInt => throw _privateConstructorUsedError;
+  FhirPositiveInt? get valuePositiveInt => throw _privateConstructorUsedError;
 
   /// [valuePositiveIntElement] Extensions for valuePositiveInt
   @JsonKey(name: '_valuePositiveInt')
@@ -20992,7 +20998,7 @@ mixin _$ElementDefinitionExample {
 
   /// [valueTime] The actual value for the element, which must be one of the
   ///  types allowed for this element.
-  Time? get valueTime => throw _privateConstructorUsedError;
+  FhirTime? get valueTime => throw _privateConstructorUsedError;
 
   /// [valueTimeElement] Extensions for valueTime
   @JsonKey(name: '_valueTime')
@@ -21000,7 +21006,7 @@ mixin _$ElementDefinitionExample {
 
   /// [valueUnsignedInt] The actual value for the element, which must be one of
   ///  the types allowed for this element.
-  UnsignedInt? get valueUnsignedInt => throw _privateConstructorUsedError;
+  FhirUnsignedInt? get valueUnsignedInt => throw _privateConstructorUsedError;
 
   /// [valueUnsignedIntElement] Extensions for valueUnsignedInt
   @JsonKey(name: '_valueUnsignedInt')
@@ -21024,7 +21030,7 @@ mixin _$ElementDefinitionExample {
 
   /// [valueUuid] The actual value for the element, which must be one of the
   ///  types allowed for this element.
-  Uuid? get valueUuid => throw _privateConstructorUsedError;
+  FhirUuid? get valueUuid => throw _privateConstructorUsedError;
 
   /// [valueUuidElement] Extensions for valueUuid
   @JsonKey(name: '_valueUuid')
@@ -21160,7 +21166,7 @@ mixin _$ElementDefinitionExample {
 
   /// [valueMeta] The actual value for the element, which must be one of the
   ///  types allowed for this element.
-  Meta? get valueMeta => throw _privateConstructorUsedError;
+  FhirMeta? get valueMeta => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -21180,13 +21186,13 @@ abstract class $ElementDefinitionExampleCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       String? label,
       @JsonKey(name: '_label') Element? labelElement,
-  FhirBase64Binary?? valueBase64Binary,
+      FhirBase64Binary? valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
-       FhirBoolean? valueBoolean,
+      FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-       FhirCanonical? valueCanonical,
+      FhirCanonical? valueCanonical,
       @JsonKey(name: '_valueCanonical') Element? valueCanonicalElement,
-       FhirCode? valueCode,
+      FhirCode? valueCode,
       @JsonKey(name: '_valueCode') Element? valueCodeElement,
       FhirDate? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
@@ -21202,21 +21208,21 @@ abstract class $ElementDefinitionExampleCopyWith<$Res> {
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
       FhirMarkdown? valueMarkdown,
       @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
-      Oid? valueOid,
+      FhirOid? valueOid,
       @JsonKey(name: '_valueOid') Element? valueOidElement,
-      PositiveInt? valuePositiveInt,
+      FhirPositiveInt? valuePositiveInt,
       @JsonKey(name: '_valuePositiveInt') Element? valuePositiveIntElement,
       String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
-      Time? valueTime,
+      FhirTime? valueTime,
       @JsonKey(name: '_valueTime') Element? valueTimeElement,
-      UnsignedInt? valueUnsignedInt,
+      FhirUnsignedInt? valueUnsignedInt,
       @JsonKey(name: '_valueUnsignedInt') Element? valueUnsignedIntElement,
       FhirUri? valueUri,
       @JsonKey(name: '_valueUri') Element? valueUriElement,
       FhirUrl? valueUrl,
       @JsonKey(name: '_valueUrl') Element? valueUrlElement,
-      Uuid? valueUuid,
+      FhirUuid? valueUuid,
       @JsonKey(name: '_valueUuid') Element? valueUuidElement,
       Address? valueAddress,
       Age? valueAge,
@@ -21250,7 +21256,7 @@ abstract class $ElementDefinitionExampleCopyWith<$Res> {
       TriggerDefinition? valueTriggerDefinition,
       UsageContext? valueUsageContext,
       Dosage? valueDosage,
-      Meta? valueMeta});
+      FhirMeta? valueMeta});
 
   $ElementCopyWith<$Res>? get labelElement;
   $ElementCopyWith<$Res>? get valueBase64BinaryElement;
@@ -21422,7 +21428,7 @@ class _$ElementDefinitionExampleCopyWithImpl<$Res,
       valueBase64Binary: freezed == valueBase64Binary
           ? _value.valueBase64Binary
           : valueBase64Binary // ignore: cast_nullable_to_non_nullable
-              as  FhirBase64Binary??,
+              as FhirBase64Binary?,
       valueBase64BinaryElement: freezed == valueBase64BinaryElement
           ? _value.valueBase64BinaryElement
           : valueBase64BinaryElement // ignore: cast_nullable_to_non_nullable
@@ -21430,7 +21436,7 @@ class _$ElementDefinitionExampleCopyWithImpl<$Res,
       valueBoolean: freezed == valueBoolean
           ? _value.valueBoolean
           : valueBoolean // ignore: cast_nullable_to_non_nullable
-              as  FhirBoolean?,
+              as FhirBoolean?,
       valueBooleanElement: freezed == valueBooleanElement
           ? _value.valueBooleanElement
           : valueBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -21438,7 +21444,7 @@ class _$ElementDefinitionExampleCopyWithImpl<$Res,
       valueCanonical: freezed == valueCanonical
           ? _value.valueCanonical
           : valueCanonical // ignore: cast_nullable_to_non_nullable
-              as  FhirCanonical?,
+              as FhirCanonical?,
       valueCanonicalElement: freezed == valueCanonicalElement
           ? _value.valueCanonicalElement
           : valueCanonicalElement // ignore: cast_nullable_to_non_nullable
@@ -21446,7 +21452,7 @@ class _$ElementDefinitionExampleCopyWithImpl<$Res,
       valueCode: freezed == valueCode
           ? _value.valueCode
           : valueCode // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       valueCodeElement: freezed == valueCodeElement
           ? _value.valueCodeElement
           : valueCodeElement // ignore: cast_nullable_to_non_nullable
@@ -22364,13 +22370,13 @@ abstract class _$$_ElementDefinitionExampleCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       String? label,
       @JsonKey(name: '_label') Element? labelElement,
-  FhirBase64Binary?? valueBase64Binary,
+      FhirBase64Binary? valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
-       FhirBoolean? valueBoolean,
+      FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-       FhirCanonical? valueCanonical,
+      FhirCanonical? valueCanonical,
       @JsonKey(name: '_valueCanonical') Element? valueCanonicalElement,
-       FhirCode? valueCode,
+      FhirCode? valueCode,
       @JsonKey(name: '_valueCode') Element? valueCodeElement,
       FhirDate? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
@@ -22386,21 +22392,21 @@ abstract class _$$_ElementDefinitionExampleCopyWith<$Res>
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
       FhirMarkdown? valueMarkdown,
       @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
-      Oid? valueOid,
+      FhirOid? valueOid,
       @JsonKey(name: '_valueOid') Element? valueOidElement,
-      PositiveInt? valuePositiveInt,
+      FhirPositiveInt? valuePositiveInt,
       @JsonKey(name: '_valuePositiveInt') Element? valuePositiveIntElement,
       String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
-      Time? valueTime,
+      FhirTime? valueTime,
       @JsonKey(name: '_valueTime') Element? valueTimeElement,
-      UnsignedInt? valueUnsignedInt,
+      FhirUnsignedInt? valueUnsignedInt,
       @JsonKey(name: '_valueUnsignedInt') Element? valueUnsignedIntElement,
       FhirUri? valueUri,
       @JsonKey(name: '_valueUri') Element? valueUriElement,
       FhirUrl? valueUrl,
       @JsonKey(name: '_valueUrl') Element? valueUrlElement,
-      Uuid? valueUuid,
+      FhirUuid? valueUuid,
       @JsonKey(name: '_valueUuid') Element? valueUuidElement,
       Address? valueAddress,
       Age? valueAge,
@@ -22434,7 +22440,7 @@ abstract class _$$_ElementDefinitionExampleCopyWith<$Res>
       TriggerDefinition? valueTriggerDefinition,
       UsageContext? valueUsageContext,
       Dosage? valueDosage,
-      Meta? valueMeta});
+      FhirMeta? valueMeta});
 
   @override
   $ElementCopyWith<$Res>? get labelElement;
@@ -22657,7 +22663,7 @@ class __$$_ElementDefinitionExampleCopyWithImpl<$Res>
       valueBase64Binary: freezed == valueBase64Binary
           ? _value.valueBase64Binary
           : valueBase64Binary // ignore: cast_nullable_to_non_nullable
-              as  FhirBase64Binary??,
+              as FhirBase64Binary?,
       valueBase64BinaryElement: freezed == valueBase64BinaryElement
           ? _value.valueBase64BinaryElement
           : valueBase64BinaryElement // ignore: cast_nullable_to_non_nullable
@@ -22665,7 +22671,7 @@ class __$$_ElementDefinitionExampleCopyWithImpl<$Res>
       valueBoolean: freezed == valueBoolean
           ? _value.valueBoolean
           : valueBoolean // ignore: cast_nullable_to_non_nullable
-              as  FhirBoolean?,
+              as FhirBoolean?,
       valueBooleanElement: freezed == valueBooleanElement
           ? _value.valueBooleanElement
           : valueBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -22673,7 +22679,7 @@ class __$$_ElementDefinitionExampleCopyWithImpl<$Res>
       valueCanonical: freezed == valueCanonical
           ? _value.valueCanonical
           : valueCanonical // ignore: cast_nullable_to_non_nullable
-              as  FhirCanonical?,
+              as FhirCanonical?,
       valueCanonicalElement: freezed == valueCanonicalElement
           ? _value.valueCanonicalElement
           : valueCanonicalElement // ignore: cast_nullable_to_non_nullable
@@ -22681,7 +22687,7 @@ class __$$_ElementDefinitionExampleCopyWithImpl<$Res>
       valueCode: freezed == valueCode
           ? _value.valueCode
           : valueCode // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       valueCodeElement: freezed == valueCodeElement
           ? _value.valueCodeElement
           : valueCodeElement // ignore: cast_nullable_to_non_nullable
@@ -23108,7 +23114,7 @@ class _$_ElementDefinitionExample extends _ElementDefinitionExample {
   /// [valueBase64Binary] The actual value for the element, which must be one
   ///  of the types allowed for this element.
   @override
-  final  FhirBase64Binary?? valueBase64Binary;
+  final FhirBase64Binary? valueBase64Binary;
 
   /// [valueBase64BinaryElement] Extensions for valueBase64Binary
   @override
@@ -23118,7 +23124,7 @@ class _$_ElementDefinitionExample extends _ElementDefinitionExample {
   /// [valueBoolean] The actual value for the element, which must be one of the
   ///  types allowed for this element.
   @override
-  final  FhirBoolean? valueBoolean;
+  final FhirBoolean? valueBoolean;
 
   /// [valueBooleanElement] Extensions for valueBoolean
   @override
@@ -23128,7 +23134,7 @@ class _$_ElementDefinitionExample extends _ElementDefinitionExample {
   /// [valueCanonical] The actual value for the element, which must be one of
   ///  the types allowed for this element.
   @override
-  final  FhirCanonical? valueCanonical;
+  final FhirCanonical? valueCanonical;
 
   /// [valueCanonicalElement] Extensions for valueCanonical
   @override
@@ -23138,7 +23144,7 @@ class _$_ElementDefinitionExample extends _ElementDefinitionExample {
   /// [valueCode] The actual value for the element, which must be one of the
   ///  types allowed for this element.
   @override
-  final  FhirCode? valueCode;
+  final FhirCode? valueCode;
 
   /// [valueCodeElement] Extensions for valueCode
   @override
@@ -23178,7 +23184,7 @@ class _$_ElementDefinitionExample extends _ElementDefinitionExample {
   /// [valueId] The actual value for the element, which must be one of the
   ///  types allowed for this element.
   @override
-  final Id? valueId;
+  final FhirId? valueId;
 
   /// [valueIdElement] Extensions for valueId
   @override
@@ -23681,16 +23687,16 @@ abstract class _ElementDefinitionExample extends ElementDefinitionExample {
       final String? label,
       @JsonKey(name: '_label')
           final Element? labelElement,
-      final  FhirBase64Binary?? valueBase64Binary,
+      final FhirBase64Binary? valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary')
           final Element? valueBase64BinaryElement,
-      final  FhirBoolean? valueBoolean,
+      final FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean')
           final Element? valueBooleanElement,
-      final  FhirCanonical? valueCanonical,
+      final FhirCanonical? valueCanonical,
       @JsonKey(name: '_valueCanonical')
           final Element? valueCanonicalElement,
-      final  FhirCode? valueCode,
+      final FhirCode? valueCode,
       @JsonKey(name: '_valueCode')
           final Element? valueCodeElement,
       final Date? valueDate,
@@ -23702,7 +23708,7 @@ abstract class _ElementDefinitionExample extends ElementDefinitionExample {
       final Decimal? valueDecimal,
       @JsonKey(name: '_valueDecimal')
           final Element? valueDecimalElement,
-      final Id? valueId,
+      final FhirId? valueId,
       @JsonKey(name: '_valueId')
           final Element? valueIdElement,
       final Instant? valueInstant,
@@ -23820,7 +23826,7 @@ abstract class _ElementDefinitionExample extends ElementDefinitionExample {
 
   /// [valueBase64Binary] The actual value for the element, which must be one
   ///  of the types allowed for this element.
-  FhirBase64Binary?? get valueBase64Binary;
+  FhirBase64Binary? get valueBase64Binary;
   @override
 
   /// [valueBase64BinaryElement] Extensions for valueBase64Binary
@@ -23830,7 +23836,7 @@ abstract class _ElementDefinitionExample extends ElementDefinitionExample {
 
   /// [valueBoolean] The actual value for the element, which must be one of the
   ///  types allowed for this element.
-   FhirBoolean? get valueBoolean;
+  FhirBoolean? get valueBoolean;
   @override
 
   /// [valueBooleanElement] Extensions for valueBoolean
@@ -23840,7 +23846,7 @@ abstract class _ElementDefinitionExample extends ElementDefinitionExample {
 
   /// [valueCanonical] The actual value for the element, which must be one of
   ///  the types allowed for this element.
-   FhirCanonical? get valueCanonical;
+  FhirCanonical? get valueCanonical;
   @override
 
   /// [valueCanonicalElement] Extensions for valueCanonical
@@ -23850,7 +23856,7 @@ abstract class _ElementDefinitionExample extends ElementDefinitionExample {
 
   /// [valueCode] The actual value for the element, which must be one of the
   ///  types allowed for this element.
-   FhirCode? get valueCode;
+  FhirCode? get valueCode;
   @override
 
   /// [valueCodeElement] Extensions for valueCode
@@ -23930,7 +23936,7 @@ abstract class _ElementDefinitionExample extends ElementDefinitionExample {
 
   /// [valueOid] The actual value for the element, which must be one of the
   ///  types allowed for this element.
-  Oid? get valueOid;
+  FhirOid? get valueOid;
   @override
 
   /// [valueOidElement] Extensions for valueOid
@@ -23940,7 +23946,7 @@ abstract class _ElementDefinitionExample extends ElementDefinitionExample {
 
   /// [valuePositiveInt] The actual value for the element, which must be one of
   ///  the types allowed for this element.
-  PositiveInt? get valuePositiveInt;
+  FhirPositiveInt? get valuePositiveInt;
   @override
 
   /// [valuePositiveIntElement] Extensions for valuePositiveInt
@@ -23960,7 +23966,7 @@ abstract class _ElementDefinitionExample extends ElementDefinitionExample {
 
   /// [valueTime] The actual value for the element, which must be one of the
   ///  types allowed for this element.
-  Time? get valueTime;
+  FhirTime? get valueTime;
   @override
 
   /// [valueTimeElement] Extensions for valueTime
@@ -23970,7 +23976,7 @@ abstract class _ElementDefinitionExample extends ElementDefinitionExample {
 
   /// [valueUnsignedInt] The actual value for the element, which must be one of
   ///  the types allowed for this element.
-  UnsignedInt? get valueUnsignedInt;
+  FhirUnsignedInt? get valueUnsignedInt;
   @override
 
   /// [valueUnsignedIntElement] Extensions for valueUnsignedInt
@@ -24000,7 +24006,7 @@ abstract class _ElementDefinitionExample extends ElementDefinitionExample {
 
   /// [valueUuid] The actual value for the element, which must be one of the
   ///  types allowed for this element.
-  Uuid? get valueUuid;
+  FhirUuid? get valueUuid;
   @override
 
   /// [valueUuidElement] Extensions for valueUuid
@@ -24164,7 +24170,7 @@ abstract class _ElementDefinitionExample extends ElementDefinitionExample {
 
   /// [valueMeta] The actual value for the element, which must be one of the
   ///  types allowed for this element.
-  Meta? get valueMeta;
+  FhirMeta? get valueMeta;
   @override
   @JsonKey(ignore: true)
   _$$_ElementDefinitionExampleCopyWith<_$_ElementDefinitionExample>
@@ -24257,7 +24263,7 @@ mixin _$ElementDefinitionConstraint {
 
   /// [source] A reference to the original source of the constraint, for
   ///  traceability purposes.
-   FhirCanonical? get source => throw _privateConstructorUsedError;
+  FhirCanonical? get source => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -24297,7 +24303,7 @@ abstract class $ElementDefinitionConstraintCopyWith<$Res> {
       String? xpath,
       @JsonKey(name: '_xpath')
           Element? xpathElement,
-       FhirCanonical? source});
+      FhirCanonical? source});
 
   $ElementCopyWith<$Res>? get keyElement;
   $ElementCopyWith<$Res>? get requirementsElement;
@@ -24402,7 +24408,7 @@ class _$ElementDefinitionConstraintCopyWithImpl<$Res,
       source: freezed == source
           ? _value.source
           : source // ignore: cast_nullable_to_non_nullable
-              as  FhirCanonical?,
+              as FhirCanonical?,
     ) as $Val);
   }
 
@@ -24512,7 +24518,7 @@ abstract class _$$_ElementDefinitionConstraintCopyWith<$Res>
       String? xpath,
       @JsonKey(name: '_xpath')
           Element? xpathElement,
-       FhirCanonical? source});
+      FhirCanonical? source});
 
   @override
   $ElementCopyWith<$Res>? get keyElement;
@@ -24622,7 +24628,7 @@ class __$$_ElementDefinitionConstraintCopyWithImpl<$Res>
       source: freezed == source
           ? _value.source
           : source // ignore: cast_nullable_to_non_nullable
-              as  FhirCanonical?,
+              as FhirCanonical?,
     ));
   }
 }
@@ -24733,7 +24739,7 @@ class _$_ElementDefinitionConstraint extends _ElementDefinitionConstraint {
   /// impacted by the constraint.  Will not be referenced for constraints that
   ///  do not affect cardinality.
   @override
-  final Id? key;
+  final FhirId? key;
 
   /// [keyElement] Extensions for key
   @override
@@ -24791,7 +24797,7 @@ class _$_ElementDefinitionConstraint extends _ElementDefinitionConstraint {
   /// [source] A reference to the original source of the constraint, for
   ///  traceability purposes.
   @override
-  final  FhirCanonical? source;
+  final FhirCanonical? source;
 
   @override
   String toString() {
@@ -24875,7 +24881,7 @@ abstract class _ElementDefinitionConstraint
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final Id? key,
+      final FhirId? key,
       @JsonKey(name: '_key')
           final Element? keyElement,
       final String? requirements,
@@ -24894,7 +24900,7 @@ abstract class _ElementDefinitionConstraint
       final String? xpath,
       @JsonKey(name: '_xpath')
           final Element? xpathElement,
-      final  FhirCanonical? source}) = _$_ElementDefinitionConstraint;
+      final FhirCanonical? source}) = _$_ElementDefinitionConstraint;
   _ElementDefinitionConstraint._() : super._();
 
   factory _ElementDefinitionConstraint.fromJson(Map<String, dynamic> json) =
@@ -24994,7 +25000,7 @@ abstract class _ElementDefinitionConstraint
 
   /// [source] A reference to the original source of the constraint, for
   ///  traceability purposes.
-   FhirCanonical? get source;
+  FhirCanonical? get source;
   @override
   @JsonKey(ignore: true)
   _$$_ElementDefinitionConstraintCopyWith<_$_ElementDefinitionConstraint>
@@ -25053,7 +25059,7 @@ mixin _$ElementDefinitionBinding {
 
   /// [valueSet] Refers to the value set that identifies the set of codes the
   ///  binding refers to.
-   FhirCanonical? get valueSet => throw _privateConstructorUsedError;
+  FhirCanonical? get valueSet => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -25079,7 +25085,7 @@ abstract class $ElementDefinitionBindingCopyWith<$Res> {
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-       FhirCanonical? valueSet});
+      FhirCanonical? valueSet});
 
   $ElementCopyWith<$Res>? get strengthElement;
   $ElementCopyWith<$Res>? get descriptionElement;
@@ -25140,7 +25146,7 @@ class _$ElementDefinitionBindingCopyWithImpl<$Res,
       valueSet: freezed == valueSet
           ? _value.valueSet
           : valueSet // ignore: cast_nullable_to_non_nullable
-              as  FhirCanonical?,
+              as FhirCanonical?,
     ) as $Val);
   }
 
@@ -25190,7 +25196,7 @@ abstract class _$$_ElementDefinitionBindingCopyWith<$Res>
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-       FhirCanonical? valueSet});
+      FhirCanonical? valueSet});
 
   @override
   $ElementCopyWith<$Res>? get strengthElement;
@@ -25251,7 +25257,7 @@ class __$$_ElementDefinitionBindingCopyWithImpl<$Res>
       valueSet: freezed == valueSet
           ? _value.valueSet
           : valueSet // ignore: cast_nullable_to_non_nullable
-              as  FhirCanonical?,
+              as FhirCanonical?,
     ));
   }
 }
@@ -25367,7 +25373,7 @@ class _$_ElementDefinitionBinding extends _ElementDefinitionBinding {
   /// [valueSet] Refers to the value set that identifies the set of codes the
   ///  binding refers to.
   @override
-  final  FhirCanonical? valueSet;
+  final FhirCanonical? valueSet;
 
   @override
   String toString() {
@@ -25437,7 +25443,7 @@ abstract class _ElementDefinitionBinding extends ElementDefinitionBinding {
       final String? description,
       @JsonKey(name: '_description')
           final Element? descriptionElement,
-      final  FhirCanonical? valueSet}) = _$_ElementDefinitionBinding;
+      final FhirCanonical? valueSet}) = _$_ElementDefinitionBinding;
   _ElementDefinitionBinding._() : super._();
 
   factory _ElementDefinitionBinding.fromJson(Map<String, dynamic> json) =
@@ -25495,7 +25501,7 @@ abstract class _ElementDefinitionBinding extends ElementDefinitionBinding {
 
   /// [valueSet] Refers to the value set that identifies the set of codes the
   ///  binding refers to.
-   FhirCanonical? get valueSet;
+  FhirCanonical? get valueSet;
   @override
   @JsonKey(ignore: true)
   _$$_ElementDefinitionBindingCopyWith<_$_ElementDefinitionBinding>
@@ -25547,7 +25553,7 @@ mixin _$ElementDefinitionMapping {
 
   /// [language] Identifies the computable language in which mapping.map is
   ///  expressed.
-   FhirCode? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -25586,7 +25592,7 @@ abstract class $ElementDefinitionMappingCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       FhirId? identity,
       @JsonKey(name: '_identity') Element? identityElement,
-       FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language') Element? languageElement,
       String? map,
       @JsonKey(name: '_map') Element? mapElement,
@@ -25649,7 +25655,7 @@ class _$ElementDefinitionMappingCopyWithImpl<$Res,
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -25737,7 +25743,7 @@ abstract class _$$_ElementDefinitionMappingCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       FhirId? identity,
       @JsonKey(name: '_identity') Element? identityElement,
-       FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language') Element? languageElement,
       String? map,
       @JsonKey(name: '_map') Element? mapElement,
@@ -25802,7 +25808,7 @@ class __$$_ElementDefinitionMappingCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -25918,7 +25924,7 @@ class _$_ElementDefinitionMapping extends _ElementDefinitionMapping {
 
   /// [identity] An internal reference to the definition of a mapping.
   @override
-  final Id? identity;
+  final FhirId? identity;
 
   /// [identityElement] Extensions for identity
   @override
@@ -25928,7 +25934,7 @@ class _$_ElementDefinitionMapping extends _ElementDefinitionMapping {
   /// [language] Identifies the computable language in which mapping.map is
   ///  expressed.
   @override
-  final  FhirCode? language;
+  final FhirCode? language;
 
   /// [languageElement] Extensions for language
   @override
@@ -26021,9 +26027,9 @@ abstract class _ElementDefinitionMapping extends ElementDefinitionMapping {
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
-          final Id? identity,
+          final FhirId? identity,
           @JsonKey(name: '_identity') final Element? identityElement,
-          final  FhirCode? language,
+          final FhirCode? language,
           @JsonKey(name: '_language') final Element? languageElement,
           final String? map,
           @JsonKey(name: '_map') final Element? mapElement,
@@ -26079,7 +26085,7 @@ abstract class _ElementDefinitionMapping extends ElementDefinitionMapping {
 
   /// [language] Identifies the computable language in which mapping.map is
   ///  expressed.
-   FhirCode? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language

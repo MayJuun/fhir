@@ -716,7 +716,7 @@ class _$_Meta extends _Meta {
   factory _$_Meta.fromJson(Map<String, dynamic> json) => _$$_MetaFromJson(json);
 
   @override
-  final Id? versionId;
+  final FhirId? versionId;
   @override
   @JsonKey(name: '_versionId')
   final Element? versionIdElement;
@@ -820,7 +820,7 @@ class _$_Meta extends _Meta {
 
 abstract class _Meta extends Meta {
   factory _Meta(
-      {final Id? versionId,
+      {final FhirId? versionId,
       @JsonKey(name: '_versionId') final Element? versionIdElement,
       final Instant? lastUpdated,
       @JsonKey(name: '_lastUpdated') final Element? lastUpdatedElement,
@@ -936,13 +936,13 @@ mixin _$ElementDefinition {
   @JsonKey(name: '_defaultValueDateTime')
   Element? get defaultValueDateTimeElement =>
       throw _privateConstructorUsedError;
-  Time? get defaultValueTime => throw _privateConstructorUsedError;
+  FhirTime? get defaultValueTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_defaultValueTime')
   Element? get defaultValueTimeElement => throw _privateConstructorUsedError;
   FhirCode? get defaultValueCode => throw _privateConstructorUsedError;
   @JsonKey(name: '_defaultValueCode')
   Element? get defaultValueCodeElement => throw _privateConstructorUsedError;
-  Oid? get defaultValueOid => throw _privateConstructorUsedError;
+  FhirOid? get defaultValueOid => throw _privateConstructorUsedError;
   @JsonKey(name: '_defaultValueOid')
   Element? get defaultValueOidElement => throw _privateConstructorUsedError;
   FhirId? get defaultValueUuid => throw _privateConstructorUsedError;
@@ -997,7 +997,7 @@ mixin _$ElementDefinition {
   ContactPoint? get defaultValueContactPoint =>
       throw _privateConstructorUsedError;
   Timing? get defaultValueTiming => throw _privateConstructorUsedError;
-  Meta? get defaultValueMeta => throw _privateConstructorUsedError;
+  FhirMeta? get defaultValueMeta => throw _privateConstructorUsedError;
   ElementDefinition? get defaultValueElementDefinition =>
       throw _privateConstructorUsedError;
   ContactDetail? get defaultValueContactDetail =>
@@ -1048,13 +1048,13 @@ mixin _$ElementDefinition {
   FhirDateTime? get fixedDateTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_fixedDateTime')
   Element? get fixedDateTimeElement => throw _privateConstructorUsedError;
-  Time? get fixedTime => throw _privateConstructorUsedError;
+  FhirTime? get fixedTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_fixedTime')
   Element? get fixedTimeElement => throw _privateConstructorUsedError;
   FhirCode? get fixedCode => throw _privateConstructorUsedError;
   @JsonKey(name: '_fixedCode')
   Element? get fixedCodeElement => throw _privateConstructorUsedError;
-  Oid? get fixedOid => throw _privateConstructorUsedError;
+  FhirOid? get fixedOid => throw _privateConstructorUsedError;
   @JsonKey(name: '_fixedOid')
   Element? get fixedOidElement => throw _privateConstructorUsedError;
   FhirId? get fixedUuid => throw _privateConstructorUsedError;
@@ -1100,7 +1100,7 @@ mixin _$ElementDefinition {
   Address? get fixedAddress => throw _privateConstructorUsedError;
   ContactPoint? get fixedContactPoint => throw _privateConstructorUsedError;
   Timing? get fixedTiming => throw _privateConstructorUsedError;
-  Meta? get fixedMeta => throw _privateConstructorUsedError;
+  FhirMeta? get fixedMeta => throw _privateConstructorUsedError;
   ElementDefinition? get fixedElementDefinition =>
       throw _privateConstructorUsedError;
   ContactDetail? get fixedContactDetail => throw _privateConstructorUsedError;
@@ -1142,13 +1142,13 @@ mixin _$ElementDefinition {
   FhirDateTime? get patternDateTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_patternDateTime')
   Element? get patternDateTimeElement => throw _privateConstructorUsedError;
-  Time? get patternTime => throw _privateConstructorUsedError;
+  FhirTime? get patternTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_patternTime')
   Element? get patternTimeElement => throw _privateConstructorUsedError;
   FhirCode? get patternCode => throw _privateConstructorUsedError;
   @JsonKey(name: '_patternCode')
   Element? get patternCodeElement => throw _privateConstructorUsedError;
-  Oid? get patternOid => throw _privateConstructorUsedError;
+  FhirOid? get patternOid => throw _privateConstructorUsedError;
   @JsonKey(name: '_patternOid')
   Element? get patternOidElement => throw _privateConstructorUsedError;
   FhirId? get patternUuid => throw _privateConstructorUsedError;
@@ -1194,7 +1194,7 @@ mixin _$ElementDefinition {
   Address? get patternAddress => throw _privateConstructorUsedError;
   ContactPoint? get patternContactPoint => throw _privateConstructorUsedError;
   Timing? get patternTiming => throw _privateConstructorUsedError;
-  Meta? get patternMeta => throw _privateConstructorUsedError;
+  FhirMeta? get patternMeta => throw _privateConstructorUsedError;
   ElementDefinition? get patternElementDefinition =>
       throw _privateConstructorUsedError;
   ContactDetail? get patternContactDetail => throw _privateConstructorUsedError;
@@ -1220,7 +1220,7 @@ mixin _$ElementDefinition {
   String? get minValueInstant => throw _privateConstructorUsedError;
   @JsonKey(name: '_minValueInstant')
   Element? get minValueInstantElement => throw _privateConstructorUsedError;
-  Time? get minValueTime => throw _privateConstructorUsedError;
+  FhirTime? get minValueTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_minValueTime')
   Element? get minValueTimeElement => throw _privateConstructorUsedError;
   FhirDecimal? get minValueDecimal => throw _privateConstructorUsedError;
@@ -1245,7 +1245,7 @@ mixin _$ElementDefinition {
   String? get maxValueInstant => throw _privateConstructorUsedError;
   @JsonKey(name: '_maxValueInstant')
   Element? get maxValueInstantElement => throw _privateConstructorUsedError;
-  Time? get maxValueTime => throw _privateConstructorUsedError;
+  FhirTime? get maxValueTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_maxValueTime')
   Element? get maxValueTimeElement => throw _privateConstructorUsedError;
   FhirDecimal? get maxValueDecimal => throw _privateConstructorUsedError;
@@ -1365,13 +1365,13 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       FhirDateTime? defaultValueDateTime,
       @JsonKey(name: '_defaultValueDateTime')
           Element? defaultValueDateTimeElement,
-      Time? defaultValueTime,
+      FhirTime? defaultValueTime,
       @JsonKey(name: '_defaultValueTime')
           Element? defaultValueTimeElement,
       FhirCode? defaultValueCode,
       @JsonKey(name: '_defaultValueCode')
           Element? defaultValueCodeElement,
-      Oid? defaultValueOid,
+      FhirOid? defaultValueOid,
       @JsonKey(name: '_defaultValueOid')
           Element? defaultValueOidElement,
       FhirId? defaultValueUuid,
@@ -1415,7 +1415,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       Address? defaultValueAddress,
       ContactPoint? defaultValueContactPoint,
       Timing? defaultValueTiming,
-      Meta? defaultValueMeta,
+      FhirMeta? defaultValueMeta,
       ElementDefinition? defaultValueElementDefinition,
       ContactDetail? defaultValueContactDetail,
       Contributor? defaultValueContributor,
@@ -1458,13 +1458,13 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       FhirDateTime? fixedDateTime,
       @JsonKey(name: '_fixedDateTime')
           Element? fixedDateTimeElement,
-      Time? fixedTime,
+      FhirTime? fixedTime,
       @JsonKey(name: '_fixedTime')
           Element? fixedTimeElement,
       FhirCode? fixedCode,
       @JsonKey(name: '_fixedCode')
           Element? fixedCodeElement,
-      Oid? fixedOid,
+      FhirOid? fixedOid,
       @JsonKey(name: '_fixedOid')
           Element? fixedOidElement,
       FhirId? fixedUuid,
@@ -1508,7 +1508,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       Address? fixedAddress,
       ContactPoint? fixedContactPoint,
       Timing? fixedTiming,
-      Meta? fixedMeta,
+      FhirMeta? fixedMeta,
       ElementDefinition? fixedElementDefinition,
       ContactDetail? fixedContactDetail,
       Contributor? fixedContributor,
@@ -1545,13 +1545,13 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       FhirDateTime? patternDateTime,
       @JsonKey(name: '_patternDateTime')
           Element? patternDateTimeElement,
-      Time? patternTime,
+      FhirTime? patternTime,
       @JsonKey(name: '_patternTime')
           Element? patternTimeElement,
       FhirCode? patternCode,
       @JsonKey(name: '_patternCode')
           Element? patternCodeElement,
-      Oid? patternOid,
+      FhirOid? patternOid,
       @JsonKey(name: '_patternOid')
           Element? patternOidElement,
       FhirId? patternUuid,
@@ -1595,7 +1595,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       Address? patternAddress,
       ContactPoint? patternContactPoint,
       Timing? patternTiming,
-      Meta? patternMeta,
+      FhirMeta? patternMeta,
       ElementDefinition? patternElementDefinition,
       ContactDetail? patternContactDetail,
       Contributor? patternContributor,
@@ -1615,7 +1615,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       String? minValueInstant,
       @JsonKey(name: '_minValueInstant')
           Element? minValueInstantElement,
-      Time? minValueTime,
+      FhirTime? minValueTime,
       @JsonKey(name: '_minValueTime')
           Element? minValueTimeElement,
       FhirDecimal? minValueDecimal,
@@ -1640,7 +1640,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       String? maxValueInstant,
       @JsonKey(name: '_maxValueInstant')
           Element? maxValueInstantElement,
-      Time? maxValueTime,
+      FhirTime? maxValueTime,
       @JsonKey(name: '_maxValueTime')
           Element? maxValueTimeElement,
       FhirDecimal? maxValueDecimal,
@@ -5818,13 +5818,13 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       FhirDateTime? defaultValueDateTime,
       @JsonKey(name: '_defaultValueDateTime')
           Element? defaultValueDateTimeElement,
-      Time? defaultValueTime,
+      FhirTime? defaultValueTime,
       @JsonKey(name: '_defaultValueTime')
           Element? defaultValueTimeElement,
       FhirCode? defaultValueCode,
       @JsonKey(name: '_defaultValueCode')
           Element? defaultValueCodeElement,
-      Oid? defaultValueOid,
+      FhirOid? defaultValueOid,
       @JsonKey(name: '_defaultValueOid')
           Element? defaultValueOidElement,
       FhirId? defaultValueUuid,
@@ -5868,7 +5868,7 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       Address? defaultValueAddress,
       ContactPoint? defaultValueContactPoint,
       Timing? defaultValueTiming,
-      Meta? defaultValueMeta,
+      FhirMeta? defaultValueMeta,
       ElementDefinition? defaultValueElementDefinition,
       ContactDetail? defaultValueContactDetail,
       Contributor? defaultValueContributor,
@@ -5911,13 +5911,13 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       FhirDateTime? fixedDateTime,
       @JsonKey(name: '_fixedDateTime')
           Element? fixedDateTimeElement,
-      Time? fixedTime,
+      FhirTime? fixedTime,
       @JsonKey(name: '_fixedTime')
           Element? fixedTimeElement,
       FhirCode? fixedCode,
       @JsonKey(name: '_fixedCode')
           Element? fixedCodeElement,
-      Oid? fixedOid,
+      FhirOid? fixedOid,
       @JsonKey(name: '_fixedOid')
           Element? fixedOidElement,
       FhirId? fixedUuid,
@@ -5961,7 +5961,7 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       Address? fixedAddress,
       ContactPoint? fixedContactPoint,
       Timing? fixedTiming,
-      Meta? fixedMeta,
+      FhirMeta? fixedMeta,
       ElementDefinition? fixedElementDefinition,
       ContactDetail? fixedContactDetail,
       Contributor? fixedContributor,
@@ -5998,13 +5998,13 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       FhirDateTime? patternDateTime,
       @JsonKey(name: '_patternDateTime')
           Element? patternDateTimeElement,
-      Time? patternTime,
+      FhirTime? patternTime,
       @JsonKey(name: '_patternTime')
           Element? patternTimeElement,
       FhirCode? patternCode,
       @JsonKey(name: '_patternCode')
           Element? patternCodeElement,
-      Oid? patternOid,
+      FhirOid? patternOid,
       @JsonKey(name: '_patternOid')
           Element? patternOidElement,
       FhirId? patternUuid,
@@ -6048,7 +6048,7 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       Address? patternAddress,
       ContactPoint? patternContactPoint,
       Timing? patternTiming,
-      Meta? patternMeta,
+      FhirMeta? patternMeta,
       ElementDefinition? patternElementDefinition,
       ContactDetail? patternContactDetail,
       Contributor? patternContributor,
@@ -6068,7 +6068,7 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       String? minValueInstant,
       @JsonKey(name: '_minValueInstant')
           Element? minValueInstantElement,
-      Time? minValueTime,
+      FhirTime? minValueTime,
       @JsonKey(name: '_minValueTime')
           Element? minValueTimeElement,
       FhirDecimal? minValueDecimal,
@@ -6093,7 +6093,7 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       String? maxValueInstant,
       @JsonKey(name: '_maxValueInstant')
           Element? maxValueInstantElement,
-      Time? maxValueTime,
+      FhirTime? maxValueTime,
       @JsonKey(name: '_maxValueTime')
           Element? maxValueTimeElement,
       FhirDecimal? maxValueDecimal,
@@ -8592,12 +8592,12 @@ class _$_ElementDefinition extends _ElementDefinition {
   @JsonKey(name: '_defaultValueOid')
   final Element? defaultValueOidElement;
   @override
-  final Id? defaultValueUuid;
+  final FhirId? defaultValueUuid;
   @override
   @JsonKey(name: '_defaultValueUuid')
   final Element? defaultValueUuidElement;
   @override
-  final Id? defaultValueId;
+  final FhirId? defaultValueId;
   @override
   @JsonKey(name: '_defaultValueId')
   final Element? defaultValueIdElement;
@@ -8759,12 +8759,12 @@ class _$_ElementDefinition extends _ElementDefinition {
   @JsonKey(name: '_fixedOid')
   final Element? fixedOidElement;
   @override
-  final Id? fixedUuid;
+  final FhirId? fixedUuid;
   @override
   @JsonKey(name: '_fixedUuid')
   final Element? fixedUuidElement;
   @override
-  final Id? fixedId;
+  final FhirId? fixedId;
   @override
   @JsonKey(name: '_fixedId')
   final Element? fixedIdElement;
@@ -8916,12 +8916,12 @@ class _$_ElementDefinition extends _ElementDefinition {
   @JsonKey(name: '_patternOid')
   final Element? patternOidElement;
   @override
-  final Id? patternUuid;
+  final FhirId? patternUuid;
   @override
   @JsonKey(name: '_patternUuid')
   final Element? patternUuidElement;
   @override
-  final Id? patternId;
+  final FhirId? patternId;
   @override
   @JsonKey(name: '_patternId')
   final Element? patternIdElement;
@@ -9904,10 +9904,10 @@ abstract class _ElementDefinition extends ElementDefinition {
       final Oid? defaultValueOid,
       @JsonKey(name: '_defaultValueOid')
           final Element? defaultValueOidElement,
-      final Id? defaultValueUuid,
+      final FhirId? defaultValueUuid,
       @JsonKey(name: '_defaultValueUuid')
           final Element? defaultValueUuidElement,
-      final Id? defaultValueId,
+      final FhirId? defaultValueId,
       @JsonKey(name: '_defaultValueId')
           final Element? defaultValueIdElement,
       final Decimal? defaultValueUnsignedInt,
@@ -9997,10 +9997,10 @@ abstract class _ElementDefinition extends ElementDefinition {
       final Oid? fixedOid,
       @JsonKey(name: '_fixedOid')
           final Element? fixedOidElement,
-      final Id? fixedUuid,
+      final FhirId? fixedUuid,
       @JsonKey(name: '_fixedUuid')
           final Element? fixedUuidElement,
-      final Id? fixedId,
+      final FhirId? fixedId,
       @JsonKey(name: '_fixedId')
           final Element? fixedIdElement,
       final Decimal? fixedUnsignedInt,
@@ -10084,10 +10084,10 @@ abstract class _ElementDefinition extends ElementDefinition {
       final Oid? patternOid,
       @JsonKey(name: '_patternOid')
           final Element? patternOidElement,
-      final Id? patternUuid,
+      final FhirId? patternUuid,
       @JsonKey(name: '_patternUuid')
           final Element? patternUuidElement,
-      final Id? patternId,
+      final FhirId? patternId,
       @JsonKey(name: '_patternId')
           final Element? patternIdElement,
       final Decimal? patternUnsignedInt,
@@ -10328,7 +10328,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   @JsonKey(name: '_defaultValueDateTime')
   Element? get defaultValueDateTimeElement;
   @override
-  Time? get defaultValueTime;
+  FhirTime? get defaultValueTime;
   @override
   @JsonKey(name: '_defaultValueTime')
   Element? get defaultValueTimeElement;
@@ -10338,7 +10338,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   @JsonKey(name: '_defaultValueCode')
   Element? get defaultValueCodeElement;
   @override
-  Oid? get defaultValueOid;
+  FhirOid? get defaultValueOid;
   @override
   @JsonKey(name: '_defaultValueOid')
   Element? get defaultValueOidElement;
@@ -10420,7 +10420,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   @override
   Timing? get defaultValueTiming;
   @override
-  Meta? get defaultValueMeta;
+  FhirMeta? get defaultValueMeta;
   @override
   ElementDefinition? get defaultValueElementDefinition;
   @override
@@ -10495,7 +10495,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   @JsonKey(name: '_fixedDateTime')
   Element? get fixedDateTimeElement;
   @override
-  Time? get fixedTime;
+  FhirTime? get fixedTime;
   @override
   @JsonKey(name: '_fixedTime')
   Element? get fixedTimeElement;
@@ -10505,7 +10505,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   @JsonKey(name: '_fixedCode')
   Element? get fixedCodeElement;
   @override
-  Oid? get fixedOid;
+  FhirOid? get fixedOid;
   @override
   @JsonKey(name: '_fixedOid')
   Element? get fixedOidElement;
@@ -10587,7 +10587,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   @override
   Timing? get fixedTiming;
   @override
-  Meta? get fixedMeta;
+  FhirMeta? get fixedMeta;
   @override
   ElementDefinition? get fixedElementDefinition;
   @override
@@ -10652,7 +10652,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   @JsonKey(name: '_patternDateTime')
   Element? get patternDateTimeElement;
   @override
-  Time? get patternTime;
+  FhirTime? get patternTime;
   @override
   @JsonKey(name: '_patternTime')
   Element? get patternTimeElement;
@@ -10662,7 +10662,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   @JsonKey(name: '_patternCode')
   Element? get patternCodeElement;
   @override
-  Oid? get patternOid;
+  FhirOid? get patternOid;
   @override
   @JsonKey(name: '_patternOid')
   Element? get patternOidElement;
@@ -10744,7 +10744,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   @override
   Timing? get patternTiming;
   @override
-  Meta? get patternMeta;
+  FhirMeta? get patternMeta;
   @override
   ElementDefinition? get patternElementDefinition;
   @override
@@ -10781,7 +10781,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   @JsonKey(name: '_minValueInstant')
   Element? get minValueInstantElement;
   @override
-  Time? get minValueTime;
+  FhirTime? get minValueTime;
   @override
   @JsonKey(name: '_minValueTime')
   Element? get minValueTimeElement;
@@ -10823,7 +10823,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   @JsonKey(name: '_maxValueInstant')
   Element? get maxValueInstantElement;
   @override
-  Time? get maxValueTime;
+  FhirTime? get maxValueTime;
   @override
   @JsonKey(name: '_maxValueTime')
   Element? get maxValueTimeElement;
@@ -12315,13 +12315,13 @@ mixin _$ElementDefinitionExample {
   FhirDateTime? get valueDateTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueDateTime')
   Element? get valueDateTimeElement => throw _privateConstructorUsedError;
-  Time? get valueTime => throw _privateConstructorUsedError;
+  FhirTime? get valueTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueTime')
   Element? get valueTimeElement => throw _privateConstructorUsedError;
   FhirCode? get valueCode => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueCode')
   Element? get valueCodeElement => throw _privateConstructorUsedError;
-  Oid? get valueOid => throw _privateConstructorUsedError;
+  FhirOid? get valueOid => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueOid')
   Element? get valueOidElement => throw _privateConstructorUsedError;
   FhirId? get valueUuid => throw _privateConstructorUsedError;
@@ -12367,7 +12367,7 @@ mixin _$ElementDefinitionExample {
   Address? get valueAddress => throw _privateConstructorUsedError;
   ContactPoint? get valueContactPoint => throw _privateConstructorUsedError;
   Timing? get valueTiming => throw _privateConstructorUsedError;
-  Meta? get valueMeta => throw _privateConstructorUsedError;
+  FhirMeta? get valueMeta => throw _privateConstructorUsedError;
   ElementDefinition? get valueElementDefinition =>
       throw _privateConstructorUsedError;
   ContactDetail? get valueContactDetail => throw _privateConstructorUsedError;
@@ -12416,11 +12416,11 @@ abstract class $ElementDefinitionExampleCopyWith<$Res> {
       @JsonKey(name: '_valueDate') Element? valueDateElement,
       FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
-      Time? valueTime,
+      FhirTime? valueTime,
       @JsonKey(name: '_valueTime') Element? valueTimeElement,
       FhirCode? valueCode,
       @JsonKey(name: '_valueCode') Element? valueCodeElement,
-      Oid? valueOid,
+      FhirOid? valueOid,
       @JsonKey(name: '_valueOid') Element? valueOidElement,
       FhirId? valueUuid,
       @JsonKey(name: '_valueUuid') Element? valueUuidElement,
@@ -12458,7 +12458,7 @@ abstract class $ElementDefinitionExampleCopyWith<$Res> {
       Address? valueAddress,
       ContactPoint? valueContactPoint,
       Timing? valueTiming,
-      Meta? valueMeta,
+      FhirMeta? valueMeta,
       ElementDefinition? valueElementDefinition,
       ContactDetail? valueContactDetail,
       Contributor? valueContributor,
@@ -13590,11 +13590,11 @@ abstract class _$$_ElementDefinitionExampleCopyWith<$Res>
       @JsonKey(name: '_valueDate') Element? valueDateElement,
       FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
-      Time? valueTime,
+      FhirTime? valueTime,
       @JsonKey(name: '_valueTime') Element? valueTimeElement,
       FhirCode? valueCode,
       @JsonKey(name: '_valueCode') Element? valueCodeElement,
-      Oid? valueOid,
+      FhirOid? valueOid,
       @JsonKey(name: '_valueOid') Element? valueOidElement,
       FhirId? valueUuid,
       @JsonKey(name: '_valueUuid') Element? valueUuidElement,
@@ -13632,7 +13632,7 @@ abstract class _$$_ElementDefinitionExampleCopyWith<$Res>
       Address? valueAddress,
       ContactPoint? valueContactPoint,
       Timing? valueTiming,
-      Meta? valueMeta,
+      FhirMeta? valueMeta,
       ElementDefinition? valueElementDefinition,
       ContactDetail? valueContactDetail,
       Contributor? valueContributor,
@@ -14278,12 +14278,12 @@ class _$_ElementDefinitionExample extends _ElementDefinitionExample {
   @JsonKey(name: '_valueOid')
   final Element? valueOidElement;
   @override
-  final Id? valueUuid;
+  final FhirId? valueUuid;
   @override
   @JsonKey(name: '_valueUuid')
   final Element? valueUuidElement;
   @override
-  final Id? valueId;
+  final FhirId? valueId;
   @override
   @JsonKey(name: '_valueId')
   final Element? valueIdElement;
@@ -14627,10 +14627,10 @@ abstract class _ElementDefinitionExample extends ElementDefinitionExample {
           final Oid? valueOid,
           @JsonKey(name: '_valueOid')
               final Element? valueOidElement,
-          final Id? valueUuid,
+          final FhirId? valueUuid,
           @JsonKey(name: '_valueUuid')
               final Element? valueUuidElement,
-          final Id? valueId,
+          final FhirId? valueId,
           @JsonKey(name: '_valueId')
               final Element? valueIdElement,
           final Decimal? valueUnsignedInt,
@@ -14735,7 +14735,7 @@ abstract class _ElementDefinitionExample extends ElementDefinitionExample {
   @JsonKey(name: '_valueDateTime')
   Element? get valueDateTimeElement;
   @override
-  Time? get valueTime;
+  FhirTime? get valueTime;
   @override
   @JsonKey(name: '_valueTime')
   Element? get valueTimeElement;
@@ -14745,7 +14745,7 @@ abstract class _ElementDefinitionExample extends ElementDefinitionExample {
   @JsonKey(name: '_valueCode')
   Element? get valueCodeElement;
   @override
-  Oid? get valueOid;
+  FhirOid? get valueOid;
   @override
   @JsonKey(name: '_valueOid')
   Element? get valueOidElement;
@@ -14827,7 +14827,7 @@ abstract class _ElementDefinitionExample extends ElementDefinitionExample {
   @override
   Timing? get valueTiming;
   @override
-  Meta? get valueMeta;
+  FhirMeta? get valueMeta;
   @override
   ElementDefinition? get valueElementDefinition;
   @override
@@ -16067,7 +16067,7 @@ class _$_ElementDefinitionMapping extends _ElementDefinitionMapping {
       _$$_ElementDefinitionMappingFromJson(json);
 
   @override
-  final Id? identity;
+  final FhirId? identity;
   @override
   @JsonKey(name: '_identity')
   final Element? identityElement;
@@ -16135,7 +16135,7 @@ class _$_ElementDefinitionMapping extends _ElementDefinitionMapping {
 
 abstract class _ElementDefinitionMapping extends ElementDefinitionMapping {
   factory _ElementDefinitionMapping(
-          {final Id? identity,
+          {final FhirId? identity,
           @JsonKey(name: '_identity') final Element? identityElement,
           final String? language,
           @JsonKey(name: '_language') final Element? languageElement,

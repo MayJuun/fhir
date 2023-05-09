@@ -23,7 +23,7 @@ mixin _$Medication {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Medication)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
   FhirId? get id => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
@@ -58,7 +58,7 @@ abstract class $MedicationCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Medication)
           Dstu2ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -293,7 +293,7 @@ abstract class _$$_MedicationCopyWith<$Res>
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Medication)
           Dstu2ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -462,7 +462,7 @@ class _$_Medication extends _Medication {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Medication)
   final Dstu2ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -596,7 +596,7 @@ abstract class _Medication extends Medication {
   factory _Medication(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Medication)
           final Dstu2ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -625,7 +625,7 @@ abstract class _Medication extends Medication {
   @override
   FhirId? get id;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
@@ -864,7 +864,7 @@ class _$_MedicationProduct extends _MedicationProduct {
       _$$_MedicationProductFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -972,7 +972,7 @@ class _$_MedicationProduct extends _MedicationProduct {
 
 abstract class _MedicationProduct extends MedicationProduct {
   factory _MedicationProduct(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
@@ -1194,7 +1194,7 @@ class _$_MedicationProductIngredient extends _MedicationProductIngredient {
       _$$_MedicationProductIngredientFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -1269,7 +1269,7 @@ class _$_MedicationProductIngredient extends _MedicationProductIngredient {
 abstract class _MedicationProductIngredient
     extends MedicationProductIngredient {
   factory _MedicationProductIngredient(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final Reference item,
@@ -1514,7 +1514,7 @@ class _$_MedicationProductBatch extends _MedicationProductBatch {
       _$$_MedicationProductBatchFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -1602,7 +1602,7 @@ class _$_MedicationProductBatch extends _MedicationProductBatch {
 
 abstract class _MedicationProductBatch extends MedicationProductBatch {
   factory _MedicationProductBatch(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -1828,7 +1828,7 @@ class _$_MedicationPackage extends _MedicationPackage {
       _$$_MedicationPackageFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -1924,7 +1924,7 @@ class _$_MedicationPackage extends _MedicationPackage {
 
 abstract class _MedicationPackage extends MedicationPackage {
   factory _MedicationPackage(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
@@ -2140,7 +2140,7 @@ class _$_MedicationPackageContent extends _MedicationPackageContent {
       _$$_MedicationPackageContentFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -2214,7 +2214,7 @@ class _$_MedicationPackageContent extends _MedicationPackageContent {
 
 abstract class _MedicationPackageContent extends MedicationPackageContent {
   factory _MedicationPackageContent(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final Reference item,
@@ -2252,7 +2252,7 @@ mixin _$MedicationOrder {
   FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: '_id')
   Element? get idElement => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   FhirCode? get language => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -2305,7 +2305,7 @@ abstract class $MedicationOrderCopyWith<$Res> {
       FhirId? id,
       @JsonKey(name: '_id')
           Element? idElement,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       FhirCode? language,
       Narrative? text,
@@ -2708,7 +2708,7 @@ abstract class _$$_MedicationOrderCopyWith<$Res>
       FhirId? id,
       @JsonKey(name: '_id')
           Element? idElement,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       FhirCode? language,
       Narrative? text,
@@ -2977,7 +2977,7 @@ class _$_MedicationOrder extends _MedicationOrder {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationOrder)
   final Dstu2ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   @JsonKey(name: '_id')
   final Element? idElement;
@@ -3192,7 +3192,7 @@ abstract class _MedicationOrder extends MedicationOrder {
   factory _MedicationOrder(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationOrder)
           final Dstu2ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       @JsonKey(name: '_id')
           final Element? idElement,
       final Meta? meta,
@@ -3237,7 +3237,7 @@ abstract class _MedicationOrder extends MedicationOrder {
   @JsonKey(name: '_id')
   Element? get idElement;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
@@ -3812,7 +3812,7 @@ class _$_MedicationOrderDosageInstruction
       _$$_MedicationOrderDosageInstructionFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -3947,7 +3947,7 @@ class _$_MedicationOrderDosageInstruction
 abstract class _MedicationOrderDosageInstruction
     extends MedicationOrderDosageInstruction {
   factory _MedicationOrderDosageInstruction(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final String? text,
@@ -4027,7 +4027,8 @@ mixin _$MedicationOrderDispenseRequest {
       throw _privateConstructorUsedError;
   Reference? get medicationReference => throw _privateConstructorUsedError;
   Period? get validityPeriod => throw _privateConstructorUsedError;
-  PositiveInt? get numberOfRepeatsAllowed => throw _privateConstructorUsedError;
+  FhirPositiveInt? get numberOfRepeatsAllowed =>
+      throw _privateConstructorUsedError;
   Quantity? get quantity => throw _privateConstructorUsedError;
   Quantity? get expectedSupplyDuration => throw _privateConstructorUsedError;
 
@@ -4052,7 +4053,7 @@ abstract class $MedicationOrderDispenseRequestCopyWith<$Res> {
       CodeableConcept? medicationCodeableConcept,
       Reference? medicationReference,
       Period? validityPeriod,
-      PositiveInt? numberOfRepeatsAllowed,
+      FhirPositiveInt? numberOfRepeatsAllowed,
       Quantity? quantity,
       Quantity? expectedSupplyDuration});
 
@@ -4205,7 +4206,7 @@ abstract class _$$_MedicationOrderDispenseRequestCopyWith<$Res>
       CodeableConcept? medicationCodeableConcept,
       Reference? medicationReference,
       Period? validityPeriod,
-      PositiveInt? numberOfRepeatsAllowed,
+      FhirPositiveInt? numberOfRepeatsAllowed,
       Quantity? quantity,
       Quantity? expectedSupplyDuration});
 
@@ -4308,7 +4309,7 @@ class _$_MedicationOrderDispenseRequest
       _$$_MedicationOrderDispenseRequestFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -4406,7 +4407,7 @@ class _$_MedicationOrderDispenseRequest
 abstract class _MedicationOrderDispenseRequest
     extends MedicationOrderDispenseRequest {
   factory _MedicationOrderDispenseRequest(
-          {final Id? id,
+          {final FhirId? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           final CodeableConcept? medicationCodeableConcept,
@@ -4435,7 +4436,7 @@ abstract class _MedicationOrderDispenseRequest
   @override
   Period? get validityPeriod;
   @override
-  PositiveInt? get numberOfRepeatsAllowed;
+  FhirPositiveInt? get numberOfRepeatsAllowed;
   @override
   Quantity? get quantity;
   @override
@@ -4634,7 +4635,7 @@ class _$_MedicationOrderSubstitution extends _MedicationOrderSubstitution {
       _$$_MedicationOrderSubstitutionFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -4709,7 +4710,7 @@ class _$_MedicationOrderSubstitution extends _MedicationOrderSubstitution {
 abstract class _MedicationOrderSubstitution
     extends MedicationOrderSubstitution {
   factory _MedicationOrderSubstitution(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final CodeableConcept type,
@@ -4746,7 +4747,7 @@ mixin _$MedicationAdministration {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationAdministration)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
   FhirId? get id => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
@@ -4802,7 +4803,7 @@ abstract class $MedicationAdministrationCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationAdministration)
           Dstu2ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -5196,7 +5197,7 @@ abstract class _$$_MedicationAdministrationCopyWith<$Res>
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationAdministration)
           Dstu2ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -5479,7 +5480,7 @@ class _$_MedicationAdministration extends _MedicationAdministration {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationAdministration)
   final Dstu2ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -5717,7 +5718,7 @@ abstract class _MedicationAdministration extends MedicationAdministration {
   factory _MedicationAdministration(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationAdministration)
           final Dstu2ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -5762,7 +5763,7 @@ abstract class _MedicationAdministration extends MedicationAdministration {
   @override
   FhirId? get id;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
@@ -6212,7 +6213,7 @@ class _$_MedicationAdministrationDosage
       _$$_MedicationAdministrationDosageFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -6322,7 +6323,7 @@ class _$_MedicationAdministrationDosage
 abstract class _MedicationAdministrationDosage
     extends MedicationAdministrationDosage {
   factory _MedicationAdministrationDosage(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final String? text,
@@ -6380,7 +6381,7 @@ mixin _$MedicationDispense {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationDispense)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
   FhirId? get id => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
@@ -6438,7 +6439,7 @@ abstract class $MedicationDispenseCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationDispense)
           Dstu2ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -6886,7 +6887,7 @@ abstract class _$$_MedicationDispenseCopyWith<$Res>
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationDispense)
           Dstu2ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -7189,7 +7190,7 @@ class _$_MedicationDispense extends _MedicationDispense {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationDispense)
   final Dstu2ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -7430,7 +7431,7 @@ abstract class _MedicationDispense extends MedicationDispense {
   factory _MedicationDispense(
           {@JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationDispense)
               final Dstu2ResourceType resourceType,
-          final Id? id,
+          final FhirId? id,
           final Meta? meta,
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
@@ -7479,7 +7480,7 @@ abstract class _MedicationDispense extends MedicationDispense {
   @override
   FhirId? get id;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
@@ -8067,7 +8068,7 @@ class _$_MedicationDispenseDosageInstruction
       _$$_MedicationDispenseDosageInstructionFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -8202,7 +8203,7 @@ class _$_MedicationDispenseDosageInstruction
 abstract class _MedicationDispenseDosageInstruction
     extends MedicationDispenseDosageInstruction {
   factory _MedicationDispenseDosageInstruction(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final String? text,
@@ -8458,7 +8459,7 @@ class _$_MedicationDispenseSubstitution
       _$$_MedicationDispenseSubstitutionFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -8554,7 +8555,7 @@ class _$_MedicationDispenseSubstitution
 abstract class _MedicationDispenseSubstitution
     extends MedicationDispenseSubstitution {
   factory _MedicationDispenseSubstitution(
-          {final Id? id,
+          {final FhirId? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           required final CodeableConcept type,
@@ -8594,7 +8595,7 @@ mixin _$MedicationStatement {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationStatement)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
   FhirId? get id => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
@@ -8652,7 +8653,7 @@ abstract class $MedicationStatementCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationStatement)
           Dstu2ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -9051,7 +9052,7 @@ abstract class _$$_MedicationStatementCopyWith<$Res>
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationStatement)
           Dstu2ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -9342,7 +9343,7 @@ class _$_MedicationStatement extends _MedicationStatement {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationStatement)
   final Dstu2ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -9588,7 +9589,7 @@ abstract class _MedicationStatement extends MedicationStatement {
   factory _MedicationStatement(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationStatement)
           final Dstu2ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -9635,7 +9636,7 @@ abstract class _MedicationStatement extends MedicationStatement {
   @override
   FhirId? get id;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
@@ -10185,7 +10186,7 @@ class _$_MedicationStatementDosage extends _MedicationStatementDosage {
       _$$_MedicationStatementDosageFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -10313,7 +10314,7 @@ class _$_MedicationStatementDosage extends _MedicationStatementDosage {
 
 abstract class _MedicationStatementDosage extends MedicationStatementDosage {
   factory _MedicationStatementDosage(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final String? text,
@@ -10382,7 +10383,7 @@ mixin _$Immunization {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Immunization)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
   FhirId? get id => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
@@ -10443,7 +10444,7 @@ abstract class $ImmunizationCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Immunization)
           Dstu2ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -10918,7 +10919,7 @@ abstract class _$$_ImmunizationCopyWith<$Res>
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Immunization)
           Dstu2ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -11252,7 +11253,7 @@ class _$_Immunization extends _Immunization {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Immunization)
   final Dstu2ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -11515,7 +11516,7 @@ abstract class _Immunization extends Immunization {
   factory _Immunization(
           {@JsonKey(unknownEnumValue: Dstu2ResourceType.Immunization)
               final Dstu2ResourceType resourceType,
-          final Id? id,
+          final FhirId? id,
           final Meta? meta,
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
@@ -11568,7 +11569,7 @@ abstract class _Immunization extends Immunization {
   @override
   FhirId? get id;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
@@ -11805,7 +11806,7 @@ class _$_ImmunizationExplanation extends _ImmunizationExplanation {
       _$$_ImmunizationExplanationFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -11896,7 +11897,7 @@ class _$_ImmunizationExplanation extends _ImmunizationExplanation {
 
 abstract class _ImmunizationExplanation extends ImmunizationExplanation {
   factory _ImmunizationExplanation(
-          {final Id? id,
+          {final FhirId? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           final List<CodeableConcept>? reason,
@@ -12169,7 +12170,7 @@ class _$_ImmunizationReaction extends _ImmunizationReaction {
       _$$_ImmunizationReactionFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -12260,7 +12261,7 @@ class _$_ImmunizationReaction extends _ImmunizationReaction {
 
 abstract class _ImmunizationReaction extends ImmunizationReaction {
   factory _ImmunizationReaction(
-          {final Id? id,
+          {final FhirId? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           final FhirDateTime? date,
@@ -12311,13 +12312,13 @@ mixin _$ImmunizationVaccinationProtocol {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  PositiveInt get doseSequence => throw _privateConstructorUsedError;
+  FhirPositiveInt? get doseSequence => throw _privateConstructorUsedError;
   String? get description => throw _privateConstructorUsedError;
   Reference? get authority => throw _privateConstructorUsedError;
   String? get series => throw _privateConstructorUsedError;
   @JsonKey(name: '_series')
   Element? get seriesElement => throw _privateConstructorUsedError;
-  PositiveInt? get seriesDoses => throw _privateConstructorUsedError;
+  FhirPositiveInt? get seriesDoses => throw _privateConstructorUsedError;
   List<CodeableConcept>? get targetDisease =>
       throw _privateConstructorUsedError;
   CodeableConcept get doseStatus => throw _privateConstructorUsedError;
@@ -12341,12 +12342,12 @@ abstract class $ImmunizationVaccinationProtocolCopyWith<$Res> {
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      PositiveInt doseSequence,
+      FhirPositiveInt? doseSequence,
       String? description,
       Reference? authority,
       String? series,
       @JsonKey(name: '_series') Element? seriesElement,
-      PositiveInt? seriesDoses,
+      FhirPositiveInt? seriesDoses,
       List<CodeableConcept>? targetDisease,
       CodeableConcept doseStatus,
       CodeableConcept? doseStatusReason});
@@ -12494,12 +12495,12 @@ abstract class _$$_ImmunizationVaccinationProtocolCopyWith<$Res>
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      PositiveInt doseSequence,
+      FhirPositiveInt? doseSequence,
       String? description,
       Reference? authority,
       String? series,
       @JsonKey(name: '_series') Element? seriesElement,
-      PositiveInt? seriesDoses,
+      FhirPositiveInt? seriesDoses,
       List<CodeableConcept>? targetDisease,
       CodeableConcept doseStatus,
       CodeableConcept? doseStatusReason});
@@ -12620,7 +12621,7 @@ class _$_ImmunizationVaccinationProtocol
       _$$_ImmunizationVaccinationProtocolFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -12741,7 +12742,7 @@ class _$_ImmunizationVaccinationProtocol
 abstract class _ImmunizationVaccinationProtocol
     extends ImmunizationVaccinationProtocol {
   factory _ImmunizationVaccinationProtocol(
-          {final Id? id,
+          {final FhirId? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           required final PositiveInt doseSequence,
@@ -12767,7 +12768,7 @@ abstract class _ImmunizationVaccinationProtocol
   @override
   List<FhirExtension>? get modifierExtension;
   @override
-  PositiveInt get doseSequence;
+  FhirPositiveInt? get doseSequence;
   @override
   String? get description;
   @override
@@ -12778,7 +12779,7 @@ abstract class _ImmunizationVaccinationProtocol
   @JsonKey(name: '_series')
   Element? get seriesElement;
   @override
-  PositiveInt? get seriesDoses;
+  FhirPositiveInt? get seriesDoses;
   @override
   List<CodeableConcept>? get targetDisease;
   @override
@@ -12802,7 +12803,7 @@ mixin _$ImmunizationRecommendation {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.ImmunizationRecommendation)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
   FhirId? get id => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
@@ -12838,7 +12839,7 @@ abstract class $ImmunizationRecommendationCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ImmunizationRecommendation)
           Dstu2ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -13021,7 +13022,7 @@ abstract class _$$_ImmunizationRecommendationCopyWith<$Res>
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ImmunizationRecommendation)
           Dstu2ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -13177,7 +13178,7 @@ class _$_ImmunizationRecommendation extends _ImmunizationRecommendation {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.ImmunizationRecommendation)
   final Dstu2ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -13319,7 +13320,7 @@ abstract class _ImmunizationRecommendation extends ImmunizationRecommendation {
   factory _ImmunizationRecommendation(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ImmunizationRecommendation)
           final Dstu2ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -13348,7 +13349,7 @@ abstract class _ImmunizationRecommendation extends ImmunizationRecommendation {
   @override
   FhirId? get id;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
@@ -13396,7 +13397,7 @@ mixin _$ImmunizationRecommendationRecommendation {
       throw _privateConstructorUsedError;
   FhirDateTime get date => throw _privateConstructorUsedError;
   CodeableConcept get vaccineCode => throw _privateConstructorUsedError;
-  PositiveInt? get doseNumber => throw _privateConstructorUsedError;
+  FhirPositiveInt? get doseNumber => throw _privateConstructorUsedError;
   CodeableConcept get forecastStatus => throw _privateConstructorUsedError;
   List<ImmunizationRecommendationRecommendationDateCriterion>?
       get dateCriterion => throw _privateConstructorUsedError;
@@ -13428,7 +13429,7 @@ abstract class $ImmunizationRecommendationRecommendationCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       FhirDateTime date,
       CodeableConcept vaccineCode,
-      PositiveInt? doseNumber,
+      FhirPositiveInt? doseNumber,
       CodeableConcept forecastStatus,
       List<ImmunizationRecommendationRecommendationDateCriterion>?
           dateCriterion,
@@ -13562,7 +13563,7 @@ abstract class _$$_ImmunizationRecommendationRecommendationCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       FhirDateTime date,
       CodeableConcept vaccineCode,
-      PositiveInt? doseNumber,
+      FhirPositiveInt? doseNumber,
       CodeableConcept forecastStatus,
       List<ImmunizationRecommendationRecommendationDateCriterion>?
           dateCriterion,
@@ -13681,7 +13682,7 @@ class _$_ImmunizationRecommendationRecommendation
       _$$_ImmunizationRecommendationRecommendationFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -13816,7 +13817,7 @@ class _$_ImmunizationRecommendationRecommendation
 abstract class _ImmunizationRecommendationRecommendation
     extends ImmunizationRecommendationRecommendation {
   factory _ImmunizationRecommendationRecommendation(
-          {final Id? id,
+          {final FhirId? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           required final FhirDateTime date,
@@ -13847,7 +13848,7 @@ abstract class _ImmunizationRecommendationRecommendation
   @override
   CodeableConcept get vaccineCode;
   @override
-  PositiveInt? get doseNumber;
+  FhirPositiveInt? get doseNumber;
   @override
   CodeableConcept get forecastStatus;
   @override
@@ -14112,7 +14113,7 @@ class _$_ImmunizationRecommendationRecommendationDateCriterion
       _$$_ImmunizationRecommendationRecommendationDateCriterionFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final FhirExtension? extensio;
   @override
@@ -14172,7 +14173,7 @@ class _$_ImmunizationRecommendationRecommendationDateCriterion
 abstract class _ImmunizationRecommendationRecommendationDateCriterion
     extends ImmunizationRecommendationRecommendationDateCriterion {
   factory _ImmunizationRecommendationRecommendationDateCriterion(
-          {final Id? id,
+          {final FhirId? id,
           final FhirExtension? extensio,
           final FhirExtension? modifier,
           required final CodeableConcept code,
@@ -14462,7 +14463,7 @@ class _$_ImmunizationRecommendationRecommendationProtocol
       _$$_ImmunizationRecommendationRecommendationProtocolFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -14548,7 +14549,7 @@ class _$_ImmunizationRecommendationRecommendationProtocol
 abstract class _ImmunizationRecommendationRecommendationProtocol
     extends ImmunizationRecommendationRecommendationProtocol {
   factory _ImmunizationRecommendationRecommendationProtocol(
-          {final Id? id,
+          {final FhirId? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final FhirExtension? modifierExten,
           final Integer? doseSequence,

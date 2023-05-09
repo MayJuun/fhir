@@ -279,7 +279,7 @@ class DataRequirement with _$DataRequirement {
     /// [profile] The profile of the required data, specified as the uri of the
     ///  profile definition.
 
-    List<Canonical>? profile,
+    List<FhirCanonical>? profile,
 
     /// [subjectCodeableConcept] The intended subjects of the data requirement.
     ///  If this element is not provided, a Patient subject is assumed.
@@ -324,7 +324,7 @@ class DataRequirement with _$DataRequirement {
     /// [limit] Specifies a maximum number of results that are required (uses the
     ///  _count search parameter).
 
-    PositiveInt? limit,
+    FhirPositiveInt? limit,
 
     /// [limitElement] Extensions for limit
 
@@ -1477,7 +1477,7 @@ class Expression with _$Expression {
     /// [name] A short name assigned to the expression to allow for multiple
     ///  reuse of the expression in the context where it is defined.
 
-    Id? name,
+    FhirId? name,
 
     /// [nameElement] Extensions for name
     @JsonKey(name: '_name')

@@ -6,11 +6,11 @@ class OrganizationUsCore extends Resource {
 
   factory OrganizationUsCore({
     String? id,
-    Meta? meta,
+    FhirMeta? meta,
     Narrative? text,
     List<Resource>? contained,
     List<Identifier>? identifier,
-    required Boolean active,
+    required FhirBoolean active,
     required String name,
     List<CodeableConcept>? type,
     List<ContactPoint>? telecom,
@@ -33,7 +33,7 @@ class OrganizationUsCore extends Resource {
 
   factory OrganizationUsCore.simple({
     List<Identifier>? identifier,
-    required Boolean active,
+    required FhirBoolean active,
     required String name,
     String? npi,
     String? clia,
@@ -59,7 +59,7 @@ class OrganizationUsCore extends Resource {
   }
 
   factory OrganizationUsCore.minimum({
-    required Boolean active,
+    required FhirBoolean active,
     required String name,
   }) =>
       OrganizationUsCore(active: active, name: name);
@@ -67,7 +67,7 @@ class OrganizationUsCore extends Resource {
   Organization _organization;
   Organization get value => _organization;
   String? get id => _organization.id;
-  Meta? get meta => _organization.meta;
+  FhirMeta? get meta => _organization.meta;
   Narrative? get text => _organization.text;
   List<Resource>? get contained => _organization.contained;
   List<Identifier>? get identifier => _organization.identifier;

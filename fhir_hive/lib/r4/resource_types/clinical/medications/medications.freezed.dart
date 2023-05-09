@@ -4093,7 +4093,8 @@ mixin _$ImmunizationProtocolApplied {
       throw _privateConstructorUsedError;
 
   /// [doseNumberPositiveInt] Nominal position in a series.
-  PositiveInt? get doseNumberPositiveInt => throw _privateConstructorUsedError;
+  FhirPositiveInt? get doseNumberPositiveInt =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_doseNumberPositiveInt')
   Element? get doseNumberPositiveIntElement =>
       throw _privateConstructorUsedError;
@@ -4107,7 +4108,8 @@ mixin _$ImmunizationProtocolApplied {
 
   /// [seriesDosesPositiveInt] The recommended number of doses to achieve
   ///  immunity.
-  PositiveInt? get seriesDosesPositiveInt => throw _privateConstructorUsedError;
+  FhirPositiveInt? get seriesDosesPositiveInt =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_seriesDosesPositiveInt')
   Element? get seriesDosesPositiveIntElement =>
       throw _privateConstructorUsedError;
@@ -4143,13 +4145,13 @@ abstract class $ImmunizationProtocolAppliedCopyWith<$Res> {
           Element? seriesElement,
       Reference? authority,
       List<CodeableConcept>? targetDisease,
-      PositiveInt? doseNumberPositiveInt,
+      FhirPositiveInt? doseNumberPositiveInt,
       @JsonKey(name: '_doseNumberPositiveInt')
           Element? doseNumberPositiveIntElement,
       String? doseNumberString,
       @JsonKey(name: '_doseNumberString')
           Element? doseNumberStringElement,
-      PositiveInt? seriesDosesPositiveInt,
+      FhirPositiveInt? seriesDosesPositiveInt,
       @JsonKey(name: '_seriesDosesPositiveInt')
           Element? seriesDosesPositiveIntElement,
       String? seriesDosesString,
@@ -4354,13 +4356,13 @@ abstract class _$$_ImmunizationProtocolAppliedCopyWith<$Res>
           Element? seriesElement,
       Reference? authority,
       List<CodeableConcept>? targetDisease,
-      PositiveInt? doseNumberPositiveInt,
+      FhirPositiveInt? doseNumberPositiveInt,
       @JsonKey(name: '_doseNumberPositiveInt')
           Element? doseNumberPositiveIntElement,
       String? doseNumberString,
       @JsonKey(name: '_doseNumberString')
           Element? doseNumberStringElement,
-      PositiveInt? seriesDosesPositiveInt,
+      FhirPositiveInt? seriesDosesPositiveInt,
       @JsonKey(name: '_seriesDosesPositiveInt')
           Element? seriesDosesPositiveIntElement,
       String? seriesDosesString,
@@ -4803,7 +4805,7 @@ abstract class _ImmunizationProtocolApplied
   @override
 
   /// [doseNumberPositiveInt] Nominal position in a series.
-  PositiveInt? get doseNumberPositiveInt;
+  FhirPositiveInt? get doseNumberPositiveInt;
   @override
   @JsonKey(name: '_doseNumberPositiveInt')
   Element? get doseNumberPositiveIntElement;
@@ -4820,7 +4822,7 @@ abstract class _ImmunizationProtocolApplied
 
   /// [seriesDosesPositiveInt] The recommended number of doses to achieve
   ///  immunity.
-  PositiveInt? get seriesDosesPositiveInt;
+  FhirPositiveInt? get seriesDosesPositiveInt;
   @override
   @JsonKey(name: '_seriesDosesPositiveInt')
   Element? get seriesDosesPositiveIntElement;
@@ -5001,7 +5003,8 @@ mixin _$ImmunizationEvaluation {
 
   /// [doseNumberPositiveInt] Nominal position in a series.
   @HiveField(26)
-  PositiveInt? get doseNumberPositiveInt => throw _privateConstructorUsedError;
+  FhirPositiveInt? get doseNumberPositiveInt =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_doseNumberPositiveInt')
   @HiveField(27)
   Element? get doseNumberPositiveIntElement =>
@@ -5019,7 +5022,8 @@ mixin _$ImmunizationEvaluation {
   /// [seriesDosesPositiveInt] The recommended number of doses to achieve
   ///  immunity.
   @HiveField(30)
-  PositiveInt? get seriesDosesPositiveInt => throw _privateConstructorUsedError;
+  FhirPositiveInt? get seriesDosesPositiveInt =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_seriesDosesPositiveInt')
   @HiveField(31)
   Element? get seriesDosesPositiveIntElement =>
@@ -5108,7 +5112,7 @@ abstract class $ImmunizationEvaluationCopyWith<$Res> {
       @HiveField(25)
           Element? seriesElement,
       @HiveField(26)
-          PositiveInt? doseNumberPositiveInt,
+          FhirPositiveInt? doseNumberPositiveInt,
       @JsonKey(name: '_doseNumberPositiveInt')
       @HiveField(27)
           Element? doseNumberPositiveIntElement,
@@ -5118,7 +5122,7 @@ abstract class $ImmunizationEvaluationCopyWith<$Res> {
       @HiveField(29)
           Element? doseNumberStringElement,
       @HiveField(30)
-          PositiveInt? seriesDosesPositiveInt,
+          FhirPositiveInt? seriesDosesPositiveInt,
       @JsonKey(name: '_seriesDosesPositiveInt')
       @HiveField(31)
           Element? seriesDosesPositiveIntElement,
@@ -5599,7 +5603,7 @@ abstract class _$$_ImmunizationEvaluationCopyWith<$Res>
       @HiveField(25)
           Element? seriesElement,
       @HiveField(26)
-          PositiveInt? doseNumberPositiveInt,
+          FhirPositiveInt? doseNumberPositiveInt,
       @JsonKey(name: '_doseNumberPositiveInt')
       @HiveField(27)
           Element? doseNumberPositiveIntElement,
@@ -5609,7 +5613,7 @@ abstract class _$$_ImmunizationEvaluationCopyWith<$Res>
       @HiveField(29)
           Element? doseNumberStringElement,
       @HiveField(30)
-          PositiveInt? seriesDosesPositiveInt,
+          FhirPositiveInt? seriesDosesPositiveInt,
       @JsonKey(name: '_seriesDosesPositiveInt')
       @HiveField(31)
           Element? seriesDosesPositiveIntElement,
@@ -6627,7 +6631,7 @@ abstract class _ImmunizationEvaluation extends ImmunizationEvaluation {
 
   /// [doseNumberPositiveInt] Nominal position in a series.
   @HiveField(26)
-  PositiveInt? get doseNumberPositiveInt;
+  FhirPositiveInt? get doseNumberPositiveInt;
   @override
   @JsonKey(name: '_doseNumberPositiveInt')
   @HiveField(27)
@@ -6648,7 +6652,7 @@ abstract class _ImmunizationEvaluation extends ImmunizationEvaluation {
   /// [seriesDosesPositiveInt] The recommended number of doses to achieve
   ///  immunity.
   @HiveField(30)
-  PositiveInt? get seriesDosesPositiveInt;
+  FhirPositiveInt? get seriesDosesPositiveInt;
   @override
   @JsonKey(name: '_seriesDosesPositiveInt')
   @HiveField(31)
@@ -7776,7 +7780,8 @@ mixin _$ImmunizationRecommendationRecommendation {
 
   /// [doseNumberPositiveInt] Nominal position of the recommended dose in a
   ///  series (e.g. dose 2 is the next recommended dose).
-  PositiveInt? get doseNumberPositiveInt => throw _privateConstructorUsedError;
+  FhirPositiveInt? get doseNumberPositiveInt =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_doseNumberPositiveInt')
   Element? get doseNumberPositiveIntElement =>
       throw _privateConstructorUsedError;
@@ -7791,7 +7796,8 @@ mixin _$ImmunizationRecommendationRecommendation {
 
   /// [seriesDosesPositiveInt] The recommended number of doses to achieve
   ///  immunity.
-  PositiveInt? get seriesDosesPositiveInt => throw _privateConstructorUsedError;
+  FhirPositiveInt? get seriesDosesPositiveInt =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_seriesDosesPositiveInt')
   Element? get seriesDosesPositiveIntElement =>
       throw _privateConstructorUsedError;
@@ -7846,13 +7852,13 @@ abstract class $ImmunizationRecommendationRecommendationCopyWith<$Res> {
       String? series,
       @JsonKey(name: '_series')
           Element? seriesElement,
-      PositiveInt? doseNumberPositiveInt,
+      FhirPositiveInt? doseNumberPositiveInt,
       @JsonKey(name: '_doseNumberPositiveInt')
           Element? doseNumberPositiveIntElement,
       String? doseNumberString,
       @JsonKey(name: '_doseNumberString')
           Element? doseNumberStringElement,
-      PositiveInt? seriesDosesPositiveInt,
+      FhirPositiveInt? seriesDosesPositiveInt,
       @JsonKey(name: '_seriesDosesPositiveInt')
           Element? seriesDosesPositiveIntElement,
       String? seriesDosesString,
@@ -8129,13 +8135,13 @@ abstract class _$$_ImmunizationRecommendationRecommendationCopyWith<$Res>
       String? series,
       @JsonKey(name: '_series')
           Element? seriesElement,
-      PositiveInt? doseNumberPositiveInt,
+      FhirPositiveInt? doseNumberPositiveInt,
       @JsonKey(name: '_doseNumberPositiveInt')
           Element? doseNumberPositiveIntElement,
       String? doseNumberString,
       @JsonKey(name: '_doseNumberString')
           Element? doseNumberStringElement,
-      PositiveInt? seriesDosesPositiveInt,
+      FhirPositiveInt? seriesDosesPositiveInt,
       @JsonKey(name: '_seriesDosesPositiveInt')
           Element? seriesDosesPositiveIntElement,
       String? seriesDosesString,
@@ -8800,7 +8806,7 @@ abstract class _ImmunizationRecommendationRecommendation
 
   /// [doseNumberPositiveInt] Nominal position of the recommended dose in a
   ///  series (e.g. dose 2 is the next recommended dose).
-  PositiveInt? get doseNumberPositiveInt;
+  FhirPositiveInt? get doseNumberPositiveInt;
   @override
   @JsonKey(name: '_doseNumberPositiveInt')
   Element? get doseNumberPositiveIntElement;
@@ -8818,7 +8824,7 @@ abstract class _ImmunizationRecommendationRecommendation
 
   /// [seriesDosesPositiveInt] The recommended number of doses to achieve
   ///  immunity.
-  PositiveInt? get seriesDosesPositiveInt;
+  FhirPositiveInt? get seriesDosesPositiveInt;
   @override
   @JsonKey(name: '_seriesDosesPositiveInt')
   Element? get seriesDosesPositiveIntElement;
@@ -27204,7 +27210,7 @@ mixin _$MedicationRequest {
   List<Reference>? get reasonReference => throw _privateConstructorUsedError;
   @HiveField(40)
   @HiveField(41)
-  List<Canonical>? get instantiatesCanonical =>
+  List<FhirCanonical>? get instantiatesCanonical =>
       throw _privateConstructorUsedError;
   @JsonKey(name: '_instantiatesCanonical')
   @HiveField(42)
@@ -27392,7 +27398,7 @@ abstract class $MedicationRequestCopyWith<$Res> {
           List<Reference>? reasonReference,
       @HiveField(40)
       @HiveField(41)
-          List<Canonical>? instantiatesCanonical,
+          List<FhirCanonical>? instantiatesCanonical,
       @JsonKey(name: '_instantiatesCanonical')
       @HiveField(42)
           List<Element>? instantiatesCanonicalElement,
@@ -27675,7 +27681,7 @@ class _$MedicationRequestCopyWithImpl<$Res, $Val extends MedicationRequest>
       instantiatesCanonical: freezed == instantiatesCanonical
           ? _value.instantiatesCanonical
           : instantiatesCanonical // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       instantiatesCanonicalElement: freezed == instantiatesCanonicalElement
           ? _value.instantiatesCanonicalElement
           : instantiatesCanonicalElement // ignore: cast_nullable_to_non_nullable
@@ -28134,7 +28140,7 @@ abstract class _$$_MedicationRequestCopyWith<$Res>
           List<Reference>? reasonReference,
       @HiveField(40)
       @HiveField(41)
-          List<Canonical>? instantiatesCanonical,
+          List<FhirCanonical>? instantiatesCanonical,
       @JsonKey(name: '_instantiatesCanonical')
       @HiveField(42)
           List<Element>? instantiatesCanonicalElement,
@@ -28440,7 +28446,7 @@ class __$$_MedicationRequestCopyWithImpl<$Res>
       instantiatesCanonical: freezed == instantiatesCanonical
           ? _value._instantiatesCanonical
           : instantiatesCanonical // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       instantiatesCanonicalElement: freezed == instantiatesCanonicalElement
           ? _value._instantiatesCanonicalElement
           : instantiatesCanonicalElement // ignore: cast_nullable_to_non_nullable
@@ -28596,7 +28602,7 @@ class _$_MedicationRequest extends _MedicationRequest {
           final List<Reference>? reasonReference,
       @HiveField(40)
       @HiveField(41)
-          final List<Canonical>? instantiatesCanonical,
+          final List<FhirCanonical>? instantiatesCanonical,
       @JsonKey(name: '_instantiatesCanonical')
       @HiveField(42)
           final List<Element>? instantiatesCanonicalElement,
@@ -29010,11 +29016,11 @@ class _$_MedicationRequest extends _MedicationRequest {
     return EqualUnmodifiableListView(value);
   }
 
-  final List<Canonical>? _instantiatesCanonical;
+  final List<FhirCanonical>? _instantiatesCanonical;
   @override
   @HiveField(40)
   @HiveField(41)
-  List<Canonical>? get instantiatesCanonical {
+  List<FhirCanonical>? get instantiatesCanonical {
     final value = _instantiatesCanonical;
     if (value == null) return null;
     if (_instantiatesCanonical is EqualUnmodifiableListView)
@@ -29475,7 +29481,7 @@ abstract class _MedicationRequest extends MedicationRequest {
           final List<Reference>? reasonReference,
       @HiveField(40)
       @HiveField(41)
-          final List<Canonical>? instantiatesCanonical,
+          final List<FhirCanonical>? instantiatesCanonical,
       @JsonKey(name: '_instantiatesCanonical')
       @HiveField(42)
           final List<Element>? instantiatesCanonicalElement,
@@ -29771,7 +29777,7 @@ abstract class _MedicationRequest extends MedicationRequest {
   @override
   @HiveField(40)
   @HiveField(41)
-  List<Canonical>? get instantiatesCanonical;
+  List<FhirCanonical>? get instantiatesCanonical;
   @override
   @JsonKey(name: '_instantiatesCanonical')
   @HiveField(42)
@@ -29926,7 +29932,8 @@ mixin _$MedicationRequestDispenseRequest {
   /// dispensed a total of 4 times and the patient can receive a total of 120
   /// tablets.  A prescriber may explicitly say that zero refills are permitted
   ///  after the initial dispense.
-  UnsignedInt? get numberOfRepeatsAllowed => throw _privateConstructorUsedError;
+  FhirUnsignedInt? get numberOfRepeatsAllowed =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_numberOfRepeatsAllowed')
   Element? get numberOfRepeatsAllowedElement =>
       throw _privateConstructorUsedError;
@@ -29966,7 +29973,7 @@ abstract class $MedicationRequestDispenseRequestCopyWith<$Res> {
       MedicationRequestInitialFill? initialFill,
       FhirDuration? dispenseInterval,
       Period? validityPeriod,
-      UnsignedInt? numberOfRepeatsAllowed,
+      FhirUnsignedInt? numberOfRepeatsAllowed,
       @JsonKey(name: '_numberOfRepeatsAllowed')
           Element? numberOfRepeatsAllowedElement,
       Quantity? quantity,
@@ -30161,7 +30168,7 @@ abstract class _$$_MedicationRequestDispenseRequestCopyWith<$Res>
       MedicationRequestInitialFill? initialFill,
       FhirDuration? dispenseInterval,
       Period? validityPeriod,
-      UnsignedInt? numberOfRepeatsAllowed,
+      FhirUnsignedInt? numberOfRepeatsAllowed,
       @JsonKey(name: '_numberOfRepeatsAllowed')
           Element? numberOfRepeatsAllowedElement,
       Quantity? quantity,
@@ -30539,7 +30546,7 @@ abstract class _MedicationRequestDispenseRequest
   /// dispensed a total of 4 times and the patient can receive a total of 120
   /// tablets.  A prescriber may explicitly say that zero refills are permitted
   ///  after the initial dispense.
-  UnsignedInt? get numberOfRepeatsAllowed;
+  FhirUnsignedInt? get numberOfRepeatsAllowed;
   @override
   @JsonKey(name: '_numberOfRepeatsAllowed')
   Element? get numberOfRepeatsAllowedElement;

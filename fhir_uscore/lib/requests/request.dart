@@ -53,7 +53,7 @@ Future<Resource?> makeRequest(
 
   /// [vid] - the version id of the resource
 
-  Id? vid,
+  FhirId? vid,
 
   /// [client] - if there's a specific client that you're going to be using
 

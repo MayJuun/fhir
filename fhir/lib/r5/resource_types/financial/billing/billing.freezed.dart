@@ -31,7 +31,7 @@ mixin _$Claim {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -182,7 +182,7 @@ abstract class $ClaimCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.Claim)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -800,7 +800,7 @@ abstract class _$$_ClaimCopyWith<$Res> implements $ClaimCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.Claim)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -1216,7 +1216,7 @@ class _$_Claim extends _Claim {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -1658,7 +1658,7 @@ abstract class _Claim extends Claim {
   factory _Claim(
       {@JsonKey(unknownEnumValue: R5ResourceType.Claim)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -1726,7 +1726,7 @@ abstract class _Claim extends Claim {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when
@@ -2745,7 +2745,7 @@ mixin _$ClaimCareTeam {
       throw _privateConstructorUsedError;
 
   /// [sequence] A number to uniquely identify care team entries.
-  PositiveInt? get sequence => throw _privateConstructorUsedError;
+  FhirPositiveInt? get sequence => throw _privateConstructorUsedError;
 
   /// [sequenceElement] ("_sequence") Extensions for sequence
   @JsonKey(name: '_sequence')
@@ -2783,7 +2783,7 @@ abstract class $ClaimCareTeamCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      PositiveInt? sequence,
+      FhirPositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       Reference provider,
       FhirBoolean? responsible,
@@ -2935,7 +2935,7 @@ abstract class _$$_ClaimCareTeamCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      PositiveInt? sequence,
+      FhirPositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       Reference provider,
       FhirBoolean? responsible,
@@ -3247,7 +3247,7 @@ abstract class _ClaimCareTeam extends ClaimCareTeam {
   @override
 
   /// [sequence] A number to uniquely identify care team entries.
-  PositiveInt? get sequence;
+  FhirPositiveInt? get sequence;
   @override
 
   /// [sequenceElement] ("_sequence") Extensions for sequence
@@ -3315,7 +3315,7 @@ mixin _$ClaimSupportingInfo {
       throw _privateConstructorUsedError;
 
   /// [sequence] A number to uniquely identify supporting information entries.
-  PositiveInt? get sequence => throw _privateConstructorUsedError;
+  FhirPositiveInt? get sequence => throw _privateConstructorUsedError;
 
   /// [sequenceElement] ("_sequence") Extensions for sequence
   @JsonKey(name: '_sequence')
@@ -3382,7 +3382,7 @@ abstract class $ClaimSupportingInfoCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      PositiveInt? sequence,
+      FhirPositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       CodeableConcept category,
       CodeableConcept? code,
@@ -3679,7 +3679,7 @@ abstract class _$$_ClaimSupportingInfoCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      PositiveInt? sequence,
+      FhirPositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       CodeableConcept category,
       CodeableConcept? code,
@@ -4143,7 +4143,7 @@ abstract class _ClaimSupportingInfo extends ClaimSupportingInfo {
   @override
 
   /// [sequence] A number to uniquely identify supporting information entries.
-  PositiveInt? get sequence;
+  FhirPositiveInt? get sequence;
   @override
 
   /// [sequenceElement] ("_sequence") Extensions for sequence
@@ -4249,7 +4249,7 @@ mixin _$ClaimDiagnosis {
       throw _privateConstructorUsedError;
 
   /// [sequence] A number to uniquely identify diagnosis entries.
-  PositiveInt? get sequence => throw _privateConstructorUsedError;
+  FhirPositiveInt? get sequence => throw _privateConstructorUsedError;
 
   /// [sequenceElement] ("_sequence") Extensions for sequence
   @JsonKey(name: '_sequence')
@@ -4284,7 +4284,7 @@ abstract class $ClaimDiagnosisCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      PositiveInt? sequence,
+      FhirPositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       CodeableConcept? diagnosisCodeableConcept,
       Reference? diagnosisReference,
@@ -4422,7 +4422,7 @@ abstract class _$$_ClaimDiagnosisCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      PositiveInt? sequence,
+      FhirPositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       CodeableConcept? diagnosisCodeableConcept,
       Reference? diagnosisReference,
@@ -4727,7 +4727,7 @@ abstract class _ClaimDiagnosis extends ClaimDiagnosis {
   @override
 
   /// [sequence] A number to uniquely identify diagnosis entries.
-  PositiveInt? get sequence;
+  FhirPositiveInt? get sequence;
   @override
 
   /// [sequenceElement] ("_sequence") Extensions for sequence
@@ -4790,7 +4790,7 @@ mixin _$ClaimProcedure {
       throw _privateConstructorUsedError;
 
   /// [sequence] A number to uniquely identify procedure entries.
-  PositiveInt? get sequence => throw _privateConstructorUsedError;
+  FhirPositiveInt? get sequence => throw _privateConstructorUsedError;
 
   /// [sequenceElement] ("_sequence") Extensions for sequence
   @JsonKey(name: '_sequence')
@@ -4832,7 +4832,7 @@ abstract class $ClaimProcedureCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      PositiveInt? sequence,
+      FhirPositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       List<CodeableConcept>? type,
       FhirDateTime? date,
@@ -4982,7 +4982,7 @@ abstract class _$$_ClaimProcedureCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      PositiveInt? sequence,
+      FhirPositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       List<CodeableConcept>? type,
       FhirDateTime? date,
@@ -5326,7 +5326,7 @@ abstract class _ClaimProcedure extends ClaimProcedure {
   @override
 
   /// [sequence] A number to uniquely identify procedure entries.
-  PositiveInt? get sequence;
+  FhirPositiveInt? get sequence;
   @override
 
   /// [sequenceElement] ("_sequence") Extensions for sequence
@@ -5398,7 +5398,7 @@ mixin _$ClaimInsurance {
       throw _privateConstructorUsedError;
 
   /// [sequence] A number to uniquely identify insurance entries and provide a sequence of coverages to convey coordination of benefit order.
-  PositiveInt? get sequence => throw _privateConstructorUsedError;
+  FhirPositiveInt? get sequence => throw _privateConstructorUsedError;
 
   /// [sequenceElement] ("_sequence") Extensions for sequence
   @JsonKey(name: '_sequence')
@@ -5451,7 +5451,7 @@ abstract class $ClaimInsuranceCopyWith<$Res> {
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      PositiveInt? sequence,
+      FhirPositiveInt? sequence,
       @JsonKey(name: '_sequence')
           Element? sequenceElement,
       FhirBoolean? focal,
@@ -5645,7 +5645,7 @@ abstract class _$$_ClaimInsuranceCopyWith<$Res>
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      PositiveInt? sequence,
+      FhirPositiveInt? sequence,
       @JsonKey(name: '_sequence')
           Element? sequenceElement,
       FhirBoolean? focal,
@@ -6053,7 +6053,7 @@ abstract class _ClaimInsurance extends ClaimInsurance {
   @override
 
   /// [sequence] A number to uniquely identify insurance entries and provide a sequence of coverages to convey coordination of benefit order.
-  PositiveInt? get sequence;
+  FhirPositiveInt? get sequence;
   @override
 
   /// [sequenceElement] ("_sequence") Extensions for sequence
@@ -6638,14 +6638,15 @@ mixin _$ClaimItem {
       throw _privateConstructorUsedError;
 
   /// [sequence] A number to uniquely identify item entries.
-  PositiveInt? get sequence => throw _privateConstructorUsedError;
+  FhirPositiveInt? get sequence => throw _privateConstructorUsedError;
 
   /// [sequenceElement] ("_sequence") Extensions for sequence
   @JsonKey(name: '_sequence')
   Element? get sequenceElement => throw _privateConstructorUsedError;
 
   /// [careTeamSequence] CareTeam members related to this service or product.
-  List<PositiveInt>? get careTeamSequence => throw _privateConstructorUsedError;
+  List<FhirPositiveInt>? get careTeamSequence =>
+      throw _privateConstructorUsedError;
 
   /// [careTeamSequenceElement] ("_careTeamSequence") Extensions for careTeamSequence
   @JsonKey(name: '_careTeamSequence')
@@ -6653,7 +6654,7 @@ mixin _$ClaimItem {
       throw _privateConstructorUsedError;
 
   /// [diagnosisSequence] Diagnosis applicable for this service or product.
-  List<PositiveInt>? get diagnosisSequence =>
+  List<FhirPositiveInt>? get diagnosisSequence =>
       throw _privateConstructorUsedError;
 
   /// [diagnosisSequenceElement] ("_diagnosisSequence") Extensions for diagnosisSequence
@@ -6662,7 +6663,7 @@ mixin _$ClaimItem {
       throw _privateConstructorUsedError;
 
   /// [procedureSequence] Procedures applicable for this service or product.
-  List<PositiveInt>? get procedureSequence =>
+  List<FhirPositiveInt>? get procedureSequence =>
       throw _privateConstructorUsedError;
 
   /// [procedureSequenceElement] ("_procedureSequence") Extensions for procedureSequence
@@ -6671,7 +6672,7 @@ mixin _$ClaimItem {
       throw _privateConstructorUsedError;
 
   /// [informationSequence] Exceptions, special conditions and supporting information applicable for this service or product.
-  List<PositiveInt>? get informationSequence =>
+  List<FhirPositiveInt>? get informationSequence =>
       throw _privateConstructorUsedError;
 
   /// [informationSequenceElement] ("_informationSequence") Extensions for informationSequence
@@ -6768,19 +6769,19 @@ abstract class $ClaimItemCopyWith<$Res> {
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      PositiveInt? sequence,
+      FhirPositiveInt? sequence,
       @JsonKey(name: '_sequence')
           Element? sequenceElement,
-      List<PositiveInt>? careTeamSequence,
+      List<FhirPositiveInt>? careTeamSequence,
       @JsonKey(name: '_careTeamSequence')
           List<Element>? careTeamSequenceElement,
-      List<PositiveInt>? diagnosisSequence,
+      List<FhirPositiveInt>? diagnosisSequence,
       @JsonKey(name: '_diagnosisSequence')
           List<Element>? diagnosisSequenceElement,
-      List<PositiveInt>? procedureSequence,
+      List<FhirPositiveInt>? procedureSequence,
       @JsonKey(name: '_procedureSequence')
           List<Element>? procedureSequenceElement,
-      List<PositiveInt>? informationSequence,
+      List<FhirPositiveInt>? informationSequence,
       @JsonKey(name: '_informationSequence')
           List<Element>? informationSequenceElement,
       CodeableConcept? revenue,
@@ -6901,7 +6902,7 @@ class _$ClaimItemCopyWithImpl<$Res, $Val extends ClaimItem>
       careTeamSequence: freezed == careTeamSequence
           ? _value.careTeamSequence
           : careTeamSequence // ignore: cast_nullable_to_non_nullable
-              as List<PositiveInt>?,
+              as List<FhirPositiveInt>?,
       careTeamSequenceElement: freezed == careTeamSequenceElement
           ? _value.careTeamSequenceElement
           : careTeamSequenceElement // ignore: cast_nullable_to_non_nullable
@@ -6909,7 +6910,7 @@ class _$ClaimItemCopyWithImpl<$Res, $Val extends ClaimItem>
       diagnosisSequence: freezed == diagnosisSequence
           ? _value.diagnosisSequence
           : diagnosisSequence // ignore: cast_nullable_to_non_nullable
-              as List<PositiveInt>?,
+              as List<FhirPositiveInt>?,
       diagnosisSequenceElement: freezed == diagnosisSequenceElement
           ? _value.diagnosisSequenceElement
           : diagnosisSequenceElement // ignore: cast_nullable_to_non_nullable
@@ -6917,7 +6918,7 @@ class _$ClaimItemCopyWithImpl<$Res, $Val extends ClaimItem>
       procedureSequence: freezed == procedureSequence
           ? _value.procedureSequence
           : procedureSequence // ignore: cast_nullable_to_non_nullable
-              as List<PositiveInt>?,
+              as List<FhirPositiveInt>?,
       procedureSequenceElement: freezed == procedureSequenceElement
           ? _value.procedureSequenceElement
           : procedureSequenceElement // ignore: cast_nullable_to_non_nullable
@@ -6925,7 +6926,7 @@ class _$ClaimItemCopyWithImpl<$Res, $Val extends ClaimItem>
       informationSequence: freezed == informationSequence
           ? _value.informationSequence
           : informationSequence // ignore: cast_nullable_to_non_nullable
-              as List<PositiveInt>?,
+              as List<FhirPositiveInt>?,
       informationSequenceElement: freezed == informationSequenceElement
           ? _value.informationSequenceElement
           : informationSequenceElement // ignore: cast_nullable_to_non_nullable
@@ -7231,19 +7232,19 @@ abstract class _$$_ClaimItemCopyWith<$Res> implements $ClaimItemCopyWith<$Res> {
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      PositiveInt? sequence,
+      FhirPositiveInt? sequence,
       @JsonKey(name: '_sequence')
           Element? sequenceElement,
-      List<PositiveInt>? careTeamSequence,
+      List<FhirPositiveInt>? careTeamSequence,
       @JsonKey(name: '_careTeamSequence')
           List<Element>? careTeamSequenceElement,
-      List<PositiveInt>? diagnosisSequence,
+      List<FhirPositiveInt>? diagnosisSequence,
       @JsonKey(name: '_diagnosisSequence')
           List<Element>? diagnosisSequenceElement,
-      List<PositiveInt>? procedureSequence,
+      List<FhirPositiveInt>? procedureSequence,
       @JsonKey(name: '_procedureSequence')
           List<Element>? procedureSequenceElement,
-      List<PositiveInt>? informationSequence,
+      List<FhirPositiveInt>? informationSequence,
       @JsonKey(name: '_informationSequence')
           List<Element>? informationSequenceElement,
       CodeableConcept? revenue,
@@ -7378,7 +7379,7 @@ class __$$_ClaimItemCopyWithImpl<$Res>
       careTeamSequence: freezed == careTeamSequence
           ? _value._careTeamSequence
           : careTeamSequence // ignore: cast_nullable_to_non_nullable
-              as List<PositiveInt>?,
+              as List<FhirPositiveInt>?,
       careTeamSequenceElement: freezed == careTeamSequenceElement
           ? _value._careTeamSequenceElement
           : careTeamSequenceElement // ignore: cast_nullable_to_non_nullable
@@ -7386,7 +7387,7 @@ class __$$_ClaimItemCopyWithImpl<$Res>
       diagnosisSequence: freezed == diagnosisSequence
           ? _value._diagnosisSequence
           : diagnosisSequence // ignore: cast_nullable_to_non_nullable
-              as List<PositiveInt>?,
+              as List<FhirPositiveInt>?,
       diagnosisSequenceElement: freezed == diagnosisSequenceElement
           ? _value._diagnosisSequenceElement
           : diagnosisSequenceElement // ignore: cast_nullable_to_non_nullable
@@ -7394,7 +7395,7 @@ class __$$_ClaimItemCopyWithImpl<$Res>
       procedureSequence: freezed == procedureSequence
           ? _value._procedureSequence
           : procedureSequence // ignore: cast_nullable_to_non_nullable
-              as List<PositiveInt>?,
+              as List<FhirPositiveInt>?,
       procedureSequenceElement: freezed == procedureSequenceElement
           ? _value._procedureSequenceElement
           : procedureSequenceElement // ignore: cast_nullable_to_non_nullable
@@ -7402,7 +7403,7 @@ class __$$_ClaimItemCopyWithImpl<$Res>
       informationSequence: freezed == informationSequence
           ? _value._informationSequence
           : informationSequence // ignore: cast_nullable_to_non_nullable
-              as List<PositiveInt>?,
+              as List<FhirPositiveInt>?,
       informationSequenceElement: freezed == informationSequenceElement
           ? _value._informationSequenceElement
           : informationSequenceElement // ignore: cast_nullable_to_non_nullable
@@ -7514,16 +7515,16 @@ class _$_ClaimItem extends _ClaimItem {
       this.sequence,
       @JsonKey(name: '_sequence')
           this.sequenceElement,
-      final List<PositiveInt>? careTeamSequence,
+      final List<FhirPositiveInt>? careTeamSequence,
       @JsonKey(name: '_careTeamSequence')
           final List<Element>? careTeamSequenceElement,
-      final List<PositiveInt>? diagnosisSequence,
+      final List<FhirPositiveInt>? diagnosisSequence,
       @JsonKey(name: '_diagnosisSequence')
           final List<Element>? diagnosisSequenceElement,
-      final List<PositiveInt>? procedureSequence,
+      final List<FhirPositiveInt>? procedureSequence,
       @JsonKey(name: '_procedureSequence')
           final List<Element>? procedureSequenceElement,
-      final List<PositiveInt>? informationSequence,
+      final List<FhirPositiveInt>? informationSequence,
       @JsonKey(name: '_informationSequence')
           final List<Element>? informationSequenceElement,
       this.revenue,
@@ -7647,11 +7648,11 @@ class _$_ClaimItem extends _ClaimItem {
   final Element? sequenceElement;
 
   /// [careTeamSequence] CareTeam members related to this service or product.
-  final List<PositiveInt>? _careTeamSequence;
+  final List<FhirPositiveInt>? _careTeamSequence;
 
   /// [careTeamSequence] CareTeam members related to this service or product.
   @override
-  List<PositiveInt>? get careTeamSequence {
+  List<FhirPositiveInt>? get careTeamSequence {
     final value = _careTeamSequence;
     if (value == null) return null;
     if (_careTeamSequence is EqualUnmodifiableListView)
@@ -7676,11 +7677,11 @@ class _$_ClaimItem extends _ClaimItem {
   }
 
   /// [diagnosisSequence] Diagnosis applicable for this service or product.
-  final List<PositiveInt>? _diagnosisSequence;
+  final List<FhirPositiveInt>? _diagnosisSequence;
 
   /// [diagnosisSequence] Diagnosis applicable for this service or product.
   @override
-  List<PositiveInt>? get diagnosisSequence {
+  List<FhirPositiveInt>? get diagnosisSequence {
     final value = _diagnosisSequence;
     if (value == null) return null;
     if (_diagnosisSequence is EqualUnmodifiableListView)
@@ -7705,11 +7706,11 @@ class _$_ClaimItem extends _ClaimItem {
   }
 
   /// [procedureSequence] Procedures applicable for this service or product.
-  final List<PositiveInt>? _procedureSequence;
+  final List<FhirPositiveInt>? _procedureSequence;
 
   /// [procedureSequence] Procedures applicable for this service or product.
   @override
-  List<PositiveInt>? get procedureSequence {
+  List<FhirPositiveInt>? get procedureSequence {
     final value = _procedureSequence;
     if (value == null) return null;
     if (_procedureSequence is EqualUnmodifiableListView)
@@ -7734,11 +7735,11 @@ class _$_ClaimItem extends _ClaimItem {
   }
 
   /// [informationSequence] Exceptions, special conditions and supporting information applicable for this service or product.
-  final List<PositiveInt>? _informationSequence;
+  final List<FhirPositiveInt>? _informationSequence;
 
   /// [informationSequence] Exceptions, special conditions and supporting information applicable for this service or product.
   @override
-  List<PositiveInt>? get informationSequence {
+  List<FhirPositiveInt>? get informationSequence {
     final value = _informationSequence;
     if (value == null) return null;
     if (_informationSequence is EqualUnmodifiableListView)
@@ -8052,16 +8053,16 @@ abstract class _ClaimItem extends ClaimItem {
       final PositiveInt? sequence,
       @JsonKey(name: '_sequence')
           final Element? sequenceElement,
-      final List<PositiveInt>? careTeamSequence,
+      final List<FhirPositiveInt>? careTeamSequence,
       @JsonKey(name: '_careTeamSequence')
           final List<Element>? careTeamSequenceElement,
-      final List<PositiveInt>? diagnosisSequence,
+      final List<FhirPositiveInt>? diagnosisSequence,
       @JsonKey(name: '_diagnosisSequence')
           final List<Element>? diagnosisSequenceElement,
-      final List<PositiveInt>? procedureSequence,
+      final List<FhirPositiveInt>? procedureSequence,
       @JsonKey(name: '_procedureSequence')
           final List<Element>? procedureSequenceElement,
-      final List<PositiveInt>? informationSequence,
+      final List<FhirPositiveInt>? informationSequence,
       @JsonKey(name: '_informationSequence')
           final List<Element>? informationSequenceElement,
       final CodeableConcept? revenue,
@@ -8127,7 +8128,7 @@ abstract class _ClaimItem extends ClaimItem {
   @override
 
   /// [sequence] A number to uniquely identify item entries.
-  PositiveInt? get sequence;
+  FhirPositiveInt? get sequence;
   @override
 
   /// [sequenceElement] ("_sequence") Extensions for sequence
@@ -8136,7 +8137,7 @@ abstract class _ClaimItem extends ClaimItem {
   @override
 
   /// [careTeamSequence] CareTeam members related to this service or product.
-  List<PositiveInt>? get careTeamSequence;
+  List<FhirPositiveInt>? get careTeamSequence;
   @override
 
   /// [careTeamSequenceElement] ("_careTeamSequence") Extensions for careTeamSequence
@@ -8145,7 +8146,7 @@ abstract class _ClaimItem extends ClaimItem {
   @override
 
   /// [diagnosisSequence] Diagnosis applicable for this service or product.
-  List<PositiveInt>? get diagnosisSequence;
+  List<FhirPositiveInt>? get diagnosisSequence;
   @override
 
   /// [diagnosisSequenceElement] ("_diagnosisSequence") Extensions for diagnosisSequence
@@ -8154,7 +8155,7 @@ abstract class _ClaimItem extends ClaimItem {
   @override
 
   /// [procedureSequence] Procedures applicable for this service or product.
-  List<PositiveInt>? get procedureSequence;
+  List<FhirPositiveInt>? get procedureSequence;
   @override
 
   /// [procedureSequenceElement] ("_procedureSequence") Extensions for procedureSequence
@@ -8163,7 +8164,7 @@ abstract class _ClaimItem extends ClaimItem {
   @override
 
   /// [informationSequence] Exceptions, special conditions and supporting information applicable for this service or product.
-  List<PositiveInt>? get informationSequence;
+  List<FhirPositiveInt>? get informationSequence;
   @override
 
   /// [informationSequenceElement] ("_informationSequence") Extensions for informationSequence
@@ -8672,7 +8673,7 @@ mixin _$ClaimDetail {
       throw _privateConstructorUsedError;
 
   /// [sequence] A number to uniquely identify item entries.
-  PositiveInt? get sequence => throw _privateConstructorUsedError;
+  FhirPositiveInt? get sequence => throw _privateConstructorUsedError;
 
   /// [sequenceElement] ("_sequence") Extensions for sequence
   @JsonKey(name: '_sequence')
@@ -8741,7 +8742,7 @@ abstract class $ClaimDetailCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      PositiveInt? sequence,
+      FhirPositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       CodeableConcept? revenue,
       CodeableConcept? category,
@@ -9035,7 +9036,7 @@ abstract class _$$_ClaimDetailCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      PositiveInt? sequence,
+      FhirPositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       CodeableConcept? revenue,
       CodeableConcept? category,
@@ -9545,7 +9546,7 @@ abstract class _ClaimDetail extends ClaimDetail {
   @override
 
   /// [sequence] A number to uniquely identify item entries.
-  PositiveInt? get sequence;
+  FhirPositiveInt? get sequence;
   @override
 
   /// [sequenceElement] ("_sequence") Extensions for sequence
@@ -9653,7 +9654,7 @@ mixin _$ClaimSubDetail {
       throw _privateConstructorUsedError;
 
   /// [sequence] A number to uniquely identify item entries.
-  PositiveInt? get sequence => throw _privateConstructorUsedError;
+  FhirPositiveInt? get sequence => throw _privateConstructorUsedError;
 
   /// [sequenceElement] ("_sequence") Extensions for sequence
   @JsonKey(name: '_sequence')
@@ -9719,7 +9720,7 @@ abstract class $ClaimSubDetailCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      PositiveInt? sequence,
+      FhirPositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       CodeableConcept? revenue,
       CodeableConcept? category,
@@ -10007,7 +10008,7 @@ abstract class _$$_ClaimSubDetailCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      PositiveInt? sequence,
+      FhirPositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       CodeableConcept? revenue,
       CodeableConcept? category,
@@ -10492,7 +10493,7 @@ abstract class _ClaimSubDetail extends ClaimSubDetail {
   @override
 
   /// [sequence] A number to uniquely identify item entries.
-  PositiveInt? get sequence;
+  FhirPositiveInt? get sequence;
   @override
 
   /// [sequenceElement] ("_sequence") Extensions for sequence
@@ -10578,7 +10579,7 @@ mixin _$ClaimResponse {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -10746,7 +10747,7 @@ abstract class $ClaimResponseCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.ClaimResponse)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -11374,7 +11375,7 @@ abstract class _$$_ClaimResponseCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R5ResourceType.ClaimResponse)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -11818,7 +11819,7 @@ class _$_ClaimResponse extends _ClaimResponse {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -12292,7 +12293,7 @@ abstract class _ClaimResponse extends ClaimResponse {
   factory _ClaimResponse(
       {@JsonKey(unknownEnumValue: R5ResourceType.ClaimResponse)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -12367,7 +12368,7 @@ abstract class _ClaimResponse extends ClaimResponse {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when
@@ -12597,14 +12598,14 @@ mixin _$ClaimResponseItem {
       throw _privateConstructorUsedError;
 
   /// [itemSequence] A number to uniquely reference the claim item entries.
-  PositiveInt? get itemSequence => throw _privateConstructorUsedError;
+  FhirPositiveInt? get itemSequence => throw _privateConstructorUsedError;
 
   /// [itemSequenceElement] ("_itemSequence") Extensions for itemSequence
   @JsonKey(name: '_itemSequence')
   Element? get itemSequenceElement => throw _privateConstructorUsedError;
 
   /// [noteNumber] The numbers associated with notes below which apply to the adjudication of this item.
-  List<PositiveInt>? get noteNumber => throw _privateConstructorUsedError;
+  List<FhirPositiveInt>? get noteNumber => throw _privateConstructorUsedError;
 
   /// [noteNumberElement] ("_noteNumber") Extensions for noteNumber
   @JsonKey(name: '_noteNumber')
@@ -12636,9 +12637,9 @@ abstract class $ClaimResponseItemCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      PositiveInt? itemSequence,
+      FhirPositiveInt? itemSequence,
       @JsonKey(name: '_itemSequence') Element? itemSequenceElement,
-      List<PositiveInt>? noteNumber,
+      List<FhirPositiveInt>? noteNumber,
       @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
       CodeableConcept? decision,
       List<ClaimResponseAdjudication>? adjudication,
@@ -12696,7 +12697,7 @@ class _$ClaimResponseItemCopyWithImpl<$Res, $Val extends ClaimResponseItem>
       noteNumber: freezed == noteNumber
           ? _value.noteNumber
           : noteNumber // ignore: cast_nullable_to_non_nullable
-              as List<PositiveInt>?,
+              as List<FhirPositiveInt>?,
       noteNumberElement: freezed == noteNumberElement
           ? _value.noteNumberElement
           : noteNumberElement // ignore: cast_nullable_to_non_nullable
@@ -12753,9 +12754,9 @@ abstract class _$$_ClaimResponseItemCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      PositiveInt? itemSequence,
+      FhirPositiveInt? itemSequence,
       @JsonKey(name: '_itemSequence') Element? itemSequenceElement,
-      List<PositiveInt>? noteNumber,
+      List<FhirPositiveInt>? noteNumber,
       @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
       CodeableConcept? decision,
       List<ClaimResponseAdjudication>? adjudication,
@@ -12813,7 +12814,7 @@ class __$$_ClaimResponseItemCopyWithImpl<$Res>
       noteNumber: freezed == noteNumber
           ? _value._noteNumber
           : noteNumber // ignore: cast_nullable_to_non_nullable
-              as List<PositiveInt>?,
+              as List<FhirPositiveInt>?,
       noteNumberElement: freezed == noteNumberElement
           ? _value._noteNumberElement
           : noteNumberElement // ignore: cast_nullable_to_non_nullable
@@ -12843,7 +12844,7 @@ class _$_ClaimResponseItem extends _ClaimResponseItem {
       final List<FhirExtension>? modifierExtension,
       this.itemSequence,
       @JsonKey(name: '_itemSequence') this.itemSequenceElement,
-      final List<PositiveInt>? noteNumber,
+      final List<FhirPositiveInt>? noteNumber,
       @JsonKey(name: '_noteNumber') final List<Element>? noteNumberElement,
       this.decision,
       final List<ClaimResponseAdjudication>? adjudication,
@@ -12934,11 +12935,11 @@ class _$_ClaimResponseItem extends _ClaimResponseItem {
   final Element? itemSequenceElement;
 
   /// [noteNumber] The numbers associated with notes below which apply to the adjudication of this item.
-  final List<PositiveInt>? _noteNumber;
+  final List<FhirPositiveInt>? _noteNumber;
 
   /// [noteNumber] The numbers associated with notes below which apply to the adjudication of this item.
   @override
-  List<PositiveInt>? get noteNumber {
+  List<FhirPositiveInt>? get noteNumber {
     final value = _noteNumber;
     if (value == null) return null;
     if (_noteNumber is EqualUnmodifiableListView) return _noteNumber;
@@ -13058,7 +13059,7 @@ abstract class _ClaimResponseItem extends ClaimResponseItem {
       final List<FhirExtension>? modifierExtension,
       final PositiveInt? itemSequence,
       @JsonKey(name: '_itemSequence') final Element? itemSequenceElement,
-      final List<PositiveInt>? noteNumber,
+      final List<FhirPositiveInt>? noteNumber,
       @JsonKey(name: '_noteNumber') final List<Element>? noteNumberElement,
       final CodeableConcept? decision,
       final List<ClaimResponseAdjudication>? adjudication,
@@ -13101,7 +13102,7 @@ abstract class _ClaimResponseItem extends ClaimResponseItem {
   @override
 
   /// [itemSequence] A number to uniquely reference the claim item entries.
-  PositiveInt? get itemSequence;
+  FhirPositiveInt? get itemSequence;
   @override
 
   /// [itemSequenceElement] ("_itemSequence") Extensions for itemSequence
@@ -13110,7 +13111,7 @@ abstract class _ClaimResponseItem extends ClaimResponseItem {
   @override
 
   /// [noteNumber] The numbers associated with notes below which apply to the adjudication of this item.
-  List<PositiveInt>? get noteNumber;
+  List<FhirPositiveInt>? get noteNumber;
   @override
 
   /// [noteNumberElement] ("_noteNumber") Extensions for noteNumber
@@ -13670,14 +13671,14 @@ mixin _$ClaimResponseDetail {
       throw _privateConstructorUsedError;
 
   /// [detailSequence] A number to uniquely reference the claim detail entry.
-  PositiveInt? get detailSequence => throw _privateConstructorUsedError;
+  FhirPositiveInt? get detailSequence => throw _privateConstructorUsedError;
 
   /// [detailSequenceElement] ("_detailSequence") Extensions for detailSequence
   @JsonKey(name: '_detailSequence')
   Element? get detailSequenceElement => throw _privateConstructorUsedError;
 
   /// [noteNumber] The numbers associated with notes below which apply to the adjudication of this item.
-  List<PositiveInt>? get noteNumber => throw _privateConstructorUsedError;
+  List<FhirPositiveInt>? get noteNumber => throw _privateConstructorUsedError;
 
   /// [noteNumberElement] ("_noteNumber") Extensions for noteNumber
   @JsonKey(name: '_noteNumber')
@@ -13710,9 +13711,9 @@ abstract class $ClaimResponseDetailCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      PositiveInt? detailSequence,
+      FhirPositiveInt? detailSequence,
       @JsonKey(name: '_detailSequence') Element? detailSequenceElement,
-      List<PositiveInt>? noteNumber,
+      List<FhirPositiveInt>? noteNumber,
       @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
       CodeableConcept? decision,
       List<ClaimResponseAdjudication>? adjudication,
@@ -13770,7 +13771,7 @@ class _$ClaimResponseDetailCopyWithImpl<$Res, $Val extends ClaimResponseDetail>
       noteNumber: freezed == noteNumber
           ? _value.noteNumber
           : noteNumber // ignore: cast_nullable_to_non_nullable
-              as List<PositiveInt>?,
+              as List<FhirPositiveInt>?,
       noteNumberElement: freezed == noteNumberElement
           ? _value.noteNumberElement
           : noteNumberElement // ignore: cast_nullable_to_non_nullable
@@ -13827,9 +13828,9 @@ abstract class _$$_ClaimResponseDetailCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      PositiveInt? detailSequence,
+      FhirPositiveInt? detailSequence,
       @JsonKey(name: '_detailSequence') Element? detailSequenceElement,
-      List<PositiveInt>? noteNumber,
+      List<FhirPositiveInt>? noteNumber,
       @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
       CodeableConcept? decision,
       List<ClaimResponseAdjudication>? adjudication,
@@ -13887,7 +13888,7 @@ class __$$_ClaimResponseDetailCopyWithImpl<$Res>
       noteNumber: freezed == noteNumber
           ? _value._noteNumber
           : noteNumber // ignore: cast_nullable_to_non_nullable
-              as List<PositiveInt>?,
+              as List<FhirPositiveInt>?,
       noteNumberElement: freezed == noteNumberElement
           ? _value._noteNumberElement
           : noteNumberElement // ignore: cast_nullable_to_non_nullable
@@ -13917,7 +13918,7 @@ class _$_ClaimResponseDetail extends _ClaimResponseDetail {
       final List<FhirExtension>? modifierExtension,
       this.detailSequence,
       @JsonKey(name: '_detailSequence') this.detailSequenceElement,
-      final List<PositiveInt>? noteNumber,
+      final List<FhirPositiveInt>? noteNumber,
       @JsonKey(name: '_noteNumber') final List<Element>? noteNumberElement,
       this.decision,
       final List<ClaimResponseAdjudication>? adjudication,
@@ -14008,11 +14009,11 @@ class _$_ClaimResponseDetail extends _ClaimResponseDetail {
   final Element? detailSequenceElement;
 
   /// [noteNumber] The numbers associated with notes below which apply to the adjudication of this item.
-  final List<PositiveInt>? _noteNumber;
+  final List<FhirPositiveInt>? _noteNumber;
 
   /// [noteNumber] The numbers associated with notes below which apply to the adjudication of this item.
   @override
-  List<PositiveInt>? get noteNumber {
+  List<FhirPositiveInt>? get noteNumber {
     final value = _noteNumber;
     if (value == null) return null;
     if (_noteNumber is EqualUnmodifiableListView) return _noteNumber;
@@ -14133,7 +14134,7 @@ abstract class _ClaimResponseDetail extends ClaimResponseDetail {
       final List<FhirExtension>? modifierExtension,
       final PositiveInt? detailSequence,
       @JsonKey(name: '_detailSequence') final Element? detailSequenceElement,
-      final List<PositiveInt>? noteNumber,
+      final List<FhirPositiveInt>? noteNumber,
       @JsonKey(name: '_noteNumber') final List<Element>? noteNumberElement,
       final CodeableConcept? decision,
       final List<ClaimResponseAdjudication>? adjudication,
@@ -14176,7 +14177,7 @@ abstract class _ClaimResponseDetail extends ClaimResponseDetail {
   @override
 
   /// [detailSequence] A number to uniquely reference the claim detail entry.
-  PositiveInt? get detailSequence;
+  FhirPositiveInt? get detailSequence;
   @override
 
   /// [detailSequenceElement] ("_detailSequence") Extensions for detailSequence
@@ -14185,7 +14186,7 @@ abstract class _ClaimResponseDetail extends ClaimResponseDetail {
   @override
 
   /// [noteNumber] The numbers associated with notes below which apply to the adjudication of this item.
-  List<PositiveInt>? get noteNumber;
+  List<FhirPositiveInt>? get noteNumber;
   @override
 
   /// [noteNumberElement] ("_noteNumber") Extensions for noteNumber
@@ -14245,14 +14246,14 @@ mixin _$ClaimResponseSubDetail {
       throw _privateConstructorUsedError;
 
   /// [subDetailSequence] A number to uniquely reference the claim sub-detail entry.
-  PositiveInt? get subDetailSequence => throw _privateConstructorUsedError;
+  FhirPositiveInt? get subDetailSequence => throw _privateConstructorUsedError;
 
   /// [subDetailSequenceElement] ("_subDetailSequence") Extensions for subDetailSequence
   @JsonKey(name: '_subDetailSequence')
   Element? get subDetailSequenceElement => throw _privateConstructorUsedError;
 
   /// [noteNumber] The numbers associated with notes below which apply to the adjudication of this item.
-  List<PositiveInt>? get noteNumber => throw _privateConstructorUsedError;
+  List<FhirPositiveInt>? get noteNumber => throw _privateConstructorUsedError;
 
   /// [noteNumberElement] ("_noteNumber") Extensions for noteNumber
   @JsonKey(name: '_noteNumber')
@@ -14281,9 +14282,9 @@ abstract class $ClaimResponseSubDetailCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      PositiveInt? subDetailSequence,
+      FhirPositiveInt? subDetailSequence,
       @JsonKey(name: '_subDetailSequence') Element? subDetailSequenceElement,
-      List<PositiveInt>? noteNumber,
+      List<FhirPositiveInt>? noteNumber,
       @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
       CodeableConcept? decision,
       List<ClaimResponseAdjudication>? adjudication});
@@ -14340,7 +14341,7 @@ class _$ClaimResponseSubDetailCopyWithImpl<$Res,
       noteNumber: freezed == noteNumber
           ? _value.noteNumber
           : noteNumber // ignore: cast_nullable_to_non_nullable
-              as List<PositiveInt>?,
+              as List<FhirPositiveInt>?,
       noteNumberElement: freezed == noteNumberElement
           ? _value.noteNumberElement
           : noteNumberElement // ignore: cast_nullable_to_non_nullable
@@ -14393,9 +14394,9 @@ abstract class _$$_ClaimResponseSubDetailCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      PositiveInt? subDetailSequence,
+      FhirPositiveInt? subDetailSequence,
       @JsonKey(name: '_subDetailSequence') Element? subDetailSequenceElement,
-      List<PositiveInt>? noteNumber,
+      List<FhirPositiveInt>? noteNumber,
       @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
       CodeableConcept? decision,
       List<ClaimResponseAdjudication>? adjudication});
@@ -14452,7 +14453,7 @@ class __$$_ClaimResponseSubDetailCopyWithImpl<$Res>
       noteNumber: freezed == noteNumber
           ? _value._noteNumber
           : noteNumber // ignore: cast_nullable_to_non_nullable
-              as List<PositiveInt>?,
+              as List<FhirPositiveInt>?,
       noteNumberElement: freezed == noteNumberElement
           ? _value._noteNumberElement
           : noteNumberElement // ignore: cast_nullable_to_non_nullable
@@ -14478,7 +14479,7 @@ class _$_ClaimResponseSubDetail extends _ClaimResponseSubDetail {
       final List<FhirExtension>? modifierExtension,
       this.subDetailSequence,
       @JsonKey(name: '_subDetailSequence') this.subDetailSequenceElement,
-      final List<PositiveInt>? noteNumber,
+      final List<FhirPositiveInt>? noteNumber,
       @JsonKey(name: '_noteNumber') final List<Element>? noteNumberElement,
       this.decision,
       final List<ClaimResponseAdjudication>? adjudication})
@@ -14567,11 +14568,11 @@ class _$_ClaimResponseSubDetail extends _ClaimResponseSubDetail {
   final Element? subDetailSequenceElement;
 
   /// [noteNumber] The numbers associated with notes below which apply to the adjudication of this item.
-  final List<PositiveInt>? _noteNumber;
+  final List<FhirPositiveInt>? _noteNumber;
 
   /// [noteNumber] The numbers associated with notes below which apply to the adjudication of this item.
   @override
-  List<PositiveInt>? get noteNumber {
+  List<FhirPositiveInt>? get noteNumber {
     final value = _noteNumber;
     if (value == null) return null;
     if (_noteNumber is EqualUnmodifiableListView) return _noteNumber;
@@ -14679,7 +14680,7 @@ abstract class _ClaimResponseSubDetail extends ClaimResponseSubDetail {
           final PositiveInt? subDetailSequence,
           @JsonKey(name: '_subDetailSequence')
               final Element? subDetailSequenceElement,
-          final List<PositiveInt>? noteNumber,
+          final List<FhirPositiveInt>? noteNumber,
           @JsonKey(name: '_noteNumber')
               final List<Element>? noteNumberElement,
           final CodeableConcept? decision,
@@ -14723,7 +14724,7 @@ abstract class _ClaimResponseSubDetail extends ClaimResponseSubDetail {
   @override
 
   /// [subDetailSequence] A number to uniquely reference the claim sub-detail entry.
-  PositiveInt? get subDetailSequence;
+  FhirPositiveInt? get subDetailSequence;
   @override
 
   /// [subDetailSequenceElement] ("_subDetailSequence") Extensions for subDetailSequence
@@ -14732,7 +14733,7 @@ abstract class _ClaimResponseSubDetail extends ClaimResponseSubDetail {
   @override
 
   /// [noteNumber] The numbers associated with notes below which apply to the adjudication of this item.
-  List<PositiveInt>? get noteNumber;
+  List<FhirPositiveInt>? get noteNumber;
   @override
 
   /// [noteNumberElement] ("_noteNumber") Extensions for noteNumber
@@ -14787,14 +14788,15 @@ mixin _$ClaimResponseAddItem {
       throw _privateConstructorUsedError;
 
   /// [itemSequence] Claim items which this service line is intended to replace.
-  List<PositiveInt>? get itemSequence => throw _privateConstructorUsedError;
+  List<FhirPositiveInt>? get itemSequence => throw _privateConstructorUsedError;
 
   /// [itemSequenceElement] ("_itemSequence") Extensions for itemSequence
   @JsonKey(name: '_itemSequence')
   List<Element>? get itemSequenceElement => throw _privateConstructorUsedError;
 
   /// [detailSequence] The sequence number of the details within the claim item which this line is intended to replace.
-  List<PositiveInt>? get detailSequence => throw _privateConstructorUsedError;
+  List<FhirPositiveInt>? get detailSequence =>
+      throw _privateConstructorUsedError;
 
   /// [detailSequenceElement] ("_detailSequence") Extensions for detailSequence
   @JsonKey(name: '_detailSequence')
@@ -14802,7 +14804,7 @@ mixin _$ClaimResponseAddItem {
       throw _privateConstructorUsedError;
 
   /// [subdetailSequence] The sequence number of the sub-details within the details within the claim item which this line is intended to replace.
-  List<PositiveInt>? get subdetailSequence =>
+  List<FhirPositiveInt>? get subdetailSequence =>
       throw _privateConstructorUsedError;
 
   /// [subdetailSequenceElement] ("_subdetailSequence") Extensions for subdetailSequence
@@ -14873,7 +14875,7 @@ mixin _$ClaimResponseAddItem {
       throw _privateConstructorUsedError;
 
   /// [noteNumber] The numbers associated with notes below which apply to the adjudication of this item.
-  List<PositiveInt>? get noteNumber => throw _privateConstructorUsedError;
+  List<FhirPositiveInt>? get noteNumber => throw _privateConstructorUsedError;
 
   /// [noteNumberElement] ("_noteNumber") Extensions for noteNumber
   @JsonKey(name: '_noteNumber')
@@ -14906,13 +14908,13 @@ abstract class $ClaimResponseAddItemCopyWith<$Res> {
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      List<PositiveInt>? itemSequence,
+      List<FhirPositiveInt>? itemSequence,
       @JsonKey(name: '_itemSequence')
           List<Element>? itemSequenceElement,
-      List<PositiveInt>? detailSequence,
+      List<FhirPositiveInt>? detailSequence,
       @JsonKey(name: '_detailSequence')
           List<Element>? detailSequenceElement,
-      List<PositiveInt>? subdetailSequence,
+      List<FhirPositiveInt>? subdetailSequence,
       @JsonKey(name: '_subdetailSequence')
           List<Element>? subdetailSequenceElement,
       List<Reference>? provider,
@@ -14936,7 +14938,7 @@ abstract class $ClaimResponseAddItemCopyWith<$Res> {
       Money? tax,
       Money? net,
       List<ClaimResponseBodySite>? bodySite,
-      List<PositiveInt>? noteNumber,
+      List<FhirPositiveInt>? noteNumber,
       @JsonKey(name: '_noteNumber')
           List<Element>? noteNumberElement,
       CodeableConcept? decision,
@@ -15023,7 +15025,7 @@ class _$ClaimResponseAddItemCopyWithImpl<$Res,
       itemSequence: freezed == itemSequence
           ? _value.itemSequence
           : itemSequence // ignore: cast_nullable_to_non_nullable
-              as List<PositiveInt>?,
+              as List<FhirPositiveInt>?,
       itemSequenceElement: freezed == itemSequenceElement
           ? _value.itemSequenceElement
           : itemSequenceElement // ignore: cast_nullable_to_non_nullable
@@ -15031,7 +15033,7 @@ class _$ClaimResponseAddItemCopyWithImpl<$Res,
       detailSequence: freezed == detailSequence
           ? _value.detailSequence
           : detailSequence // ignore: cast_nullable_to_non_nullable
-              as List<PositiveInt>?,
+              as List<FhirPositiveInt>?,
       detailSequenceElement: freezed == detailSequenceElement
           ? _value.detailSequenceElement
           : detailSequenceElement // ignore: cast_nullable_to_non_nullable
@@ -15039,7 +15041,7 @@ class _$ClaimResponseAddItemCopyWithImpl<$Res,
       subdetailSequence: freezed == subdetailSequence
           ? _value.subdetailSequence
           : subdetailSequence // ignore: cast_nullable_to_non_nullable
-              as List<PositiveInt>?,
+              as List<FhirPositiveInt>?,
       subdetailSequenceElement: freezed == subdetailSequenceElement
           ? _value.subdetailSequenceElement
           : subdetailSequenceElement // ignore: cast_nullable_to_non_nullable
@@ -15123,7 +15125,7 @@ class _$ClaimResponseAddItemCopyWithImpl<$Res,
       noteNumber: freezed == noteNumber
           ? _value.noteNumber
           : noteNumber // ignore: cast_nullable_to_non_nullable
-              as List<PositiveInt>?,
+              as List<FhirPositiveInt>?,
       noteNumberElement: freezed == noteNumberElement
           ? _value.noteNumberElement
           : noteNumberElement // ignore: cast_nullable_to_non_nullable
@@ -15326,13 +15328,13 @@ abstract class _$$_ClaimResponseAddItemCopyWith<$Res>
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      List<PositiveInt>? itemSequence,
+      List<FhirPositiveInt>? itemSequence,
       @JsonKey(name: '_itemSequence')
           List<Element>? itemSequenceElement,
-      List<PositiveInt>? detailSequence,
+      List<FhirPositiveInt>? detailSequence,
       @JsonKey(name: '_detailSequence')
           List<Element>? detailSequenceElement,
-      List<PositiveInt>? subdetailSequence,
+      List<FhirPositiveInt>? subdetailSequence,
       @JsonKey(name: '_subdetailSequence')
           List<Element>? subdetailSequenceElement,
       List<Reference>? provider,
@@ -15356,7 +15358,7 @@ abstract class _$$_ClaimResponseAddItemCopyWith<$Res>
       Money? tax,
       Money? net,
       List<ClaimResponseBodySite>? bodySite,
-      List<PositiveInt>? noteNumber,
+      List<FhirPositiveInt>? noteNumber,
       @JsonKey(name: '_noteNumber')
           List<Element>? noteNumberElement,
       CodeableConcept? decision,
@@ -15454,7 +15456,7 @@ class __$$_ClaimResponseAddItemCopyWithImpl<$Res>
       itemSequence: freezed == itemSequence
           ? _value._itemSequence
           : itemSequence // ignore: cast_nullable_to_non_nullable
-              as List<PositiveInt>?,
+              as List<FhirPositiveInt>?,
       itemSequenceElement: freezed == itemSequenceElement
           ? _value._itemSequenceElement
           : itemSequenceElement // ignore: cast_nullable_to_non_nullable
@@ -15462,7 +15464,7 @@ class __$$_ClaimResponseAddItemCopyWithImpl<$Res>
       detailSequence: freezed == detailSequence
           ? _value._detailSequence
           : detailSequence // ignore: cast_nullable_to_non_nullable
-              as List<PositiveInt>?,
+              as List<FhirPositiveInt>?,
       detailSequenceElement: freezed == detailSequenceElement
           ? _value._detailSequenceElement
           : detailSequenceElement // ignore: cast_nullable_to_non_nullable
@@ -15470,7 +15472,7 @@ class __$$_ClaimResponseAddItemCopyWithImpl<$Res>
       subdetailSequence: freezed == subdetailSequence
           ? _value._subdetailSequence
           : subdetailSequence // ignore: cast_nullable_to_non_nullable
-              as List<PositiveInt>?,
+              as List<FhirPositiveInt>?,
       subdetailSequenceElement: freezed == subdetailSequenceElement
           ? _value._subdetailSequenceElement
           : subdetailSequenceElement // ignore: cast_nullable_to_non_nullable
@@ -15554,7 +15556,7 @@ class __$$_ClaimResponseAddItemCopyWithImpl<$Res>
       noteNumber: freezed == noteNumber
           ? _value._noteNumber
           : noteNumber // ignore: cast_nullable_to_non_nullable
-              as List<PositiveInt>?,
+              as List<FhirPositiveInt>?,
       noteNumberElement: freezed == noteNumberElement
           ? _value._noteNumberElement
           : noteNumberElement // ignore: cast_nullable_to_non_nullable
@@ -15583,13 +15585,13 @@ class _$_ClaimResponseAddItem extends _ClaimResponseAddItem {
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final List<PositiveInt>? itemSequence,
+      final List<FhirPositiveInt>? itemSequence,
       @JsonKey(name: '_itemSequence')
           final List<Element>? itemSequenceElement,
-      final List<PositiveInt>? detailSequence,
+      final List<FhirPositiveInt>? detailSequence,
       @JsonKey(name: '_detailSequence')
           final List<Element>? detailSequenceElement,
-      final List<PositiveInt>? subdetailSequence,
+      final List<FhirPositiveInt>? subdetailSequence,
       @JsonKey(name: '_subdetailSequence')
           final List<Element>? subdetailSequenceElement,
       final List<Reference>? provider,
@@ -15613,7 +15615,7 @@ class _$_ClaimResponseAddItem extends _ClaimResponseAddItem {
       this.tax,
       this.net,
       final List<ClaimResponseBodySite>? bodySite,
-      final List<PositiveInt>? noteNumber,
+      final List<FhirPositiveInt>? noteNumber,
       @JsonKey(name: '_noteNumber')
           final List<Element>? noteNumberElement,
       this.decision,
@@ -15706,11 +15708,11 @@ class _$_ClaimResponseAddItem extends _ClaimResponseAddItem {
   }
 
   /// [itemSequence] Claim items which this service line is intended to replace.
-  final List<PositiveInt>? _itemSequence;
+  final List<FhirPositiveInt>? _itemSequence;
 
   /// [itemSequence] Claim items which this service line is intended to replace.
   @override
-  List<PositiveInt>? get itemSequence {
+  List<FhirPositiveInt>? get itemSequence {
     final value = _itemSequence;
     if (value == null) return null;
     if (_itemSequence is EqualUnmodifiableListView) return _itemSequence;
@@ -15734,11 +15736,11 @@ class _$_ClaimResponseAddItem extends _ClaimResponseAddItem {
   }
 
   /// [detailSequence] The sequence number of the details within the claim item which this line is intended to replace.
-  final List<PositiveInt>? _detailSequence;
+  final List<FhirPositiveInt>? _detailSequence;
 
   /// [detailSequence] The sequence number of the details within the claim item which this line is intended to replace.
   @override
-  List<PositiveInt>? get detailSequence {
+  List<FhirPositiveInt>? get detailSequence {
     final value = _detailSequence;
     if (value == null) return null;
     if (_detailSequence is EqualUnmodifiableListView) return _detailSequence;
@@ -15762,11 +15764,11 @@ class _$_ClaimResponseAddItem extends _ClaimResponseAddItem {
   }
 
   /// [subdetailSequence] The sequence number of the sub-details within the details within the claim item which this line is intended to replace.
-  final List<PositiveInt>? _subdetailSequence;
+  final List<FhirPositiveInt>? _subdetailSequence;
 
   /// [subdetailSequence] The sequence number of the sub-details within the details within the claim item which this line is intended to replace.
   @override
-  List<PositiveInt>? get subdetailSequence {
+  List<FhirPositiveInt>? get subdetailSequence {
     final value = _subdetailSequence;
     if (value == null) return null;
     if (_subdetailSequence is EqualUnmodifiableListView)
@@ -15905,11 +15907,11 @@ class _$_ClaimResponseAddItem extends _ClaimResponseAddItem {
   }
 
   /// [noteNumber] The numbers associated with notes below which apply to the adjudication of this item.
-  final List<PositiveInt>? _noteNumber;
+  final List<FhirPositiveInt>? _noteNumber;
 
   /// [noteNumber] The numbers associated with notes below which apply to the adjudication of this item.
   @override
-  List<PositiveInt>? get noteNumber {
+  List<FhirPositiveInt>? get noteNumber {
     final value = _noteNumber;
     if (value == null) return null;
     if (_noteNumber is EqualUnmodifiableListView) return _noteNumber;
@@ -16092,13 +16094,13 @@ abstract class _ClaimResponseAddItem extends ClaimResponseAddItem {
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final List<PositiveInt>? itemSequence,
+      final List<FhirPositiveInt>? itemSequence,
       @JsonKey(name: '_itemSequence')
           final List<Element>? itemSequenceElement,
-      final List<PositiveInt>? detailSequence,
+      final List<FhirPositiveInt>? detailSequence,
       @JsonKey(name: '_detailSequence')
           final List<Element>? detailSequenceElement,
-      final List<PositiveInt>? subdetailSequence,
+      final List<FhirPositiveInt>? subdetailSequence,
       @JsonKey(name: '_subdetailSequence')
           final List<Element>? subdetailSequenceElement,
       final List<Reference>? provider,
@@ -16122,7 +16124,7 @@ abstract class _ClaimResponseAddItem extends ClaimResponseAddItem {
       final Money? tax,
       final Money? net,
       final List<ClaimResponseBodySite>? bodySite,
-      final List<PositiveInt>? noteNumber,
+      final List<FhirPositiveInt>? noteNumber,
       @JsonKey(name: '_noteNumber')
           final List<Element>? noteNumberElement,
       final CodeableConcept? decision,
@@ -16166,7 +16168,7 @@ abstract class _ClaimResponseAddItem extends ClaimResponseAddItem {
   @override
 
   /// [itemSequence] Claim items which this service line is intended to replace.
-  List<PositiveInt>? get itemSequence;
+  List<FhirPositiveInt>? get itemSequence;
   @override
 
   /// [itemSequenceElement] ("_itemSequence") Extensions for itemSequence
@@ -16175,7 +16177,7 @@ abstract class _ClaimResponseAddItem extends ClaimResponseAddItem {
   @override
 
   /// [detailSequence] The sequence number of the details within the claim item which this line is intended to replace.
-  List<PositiveInt>? get detailSequence;
+  List<FhirPositiveInt>? get detailSequence;
   @override
 
   /// [detailSequenceElement] ("_detailSequence") Extensions for detailSequence
@@ -16184,7 +16186,7 @@ abstract class _ClaimResponseAddItem extends ClaimResponseAddItem {
   @override
 
   /// [subdetailSequence] The sequence number of the sub-details within the details within the claim item which this line is intended to replace.
-  List<PositiveInt>? get subdetailSequence;
+  List<FhirPositiveInt>? get subdetailSequence;
   @override
 
   /// [subdetailSequenceElement] ("_subdetailSequence") Extensions for subdetailSequence
@@ -16271,7 +16273,7 @@ abstract class _ClaimResponseAddItem extends ClaimResponseAddItem {
   @override
 
   /// [noteNumber] The numbers associated with notes below which apply to the adjudication of this item.
-  List<PositiveInt>? get noteNumber;
+  List<FhirPositiveInt>? get noteNumber;
   @override
 
   /// [noteNumberElement] ("_noteNumber") Extensions for noteNumber
@@ -16733,7 +16735,7 @@ mixin _$ClaimResponseDetail1 {
   Money? get net => throw _privateConstructorUsedError;
 
   /// [noteNumber] The numbers associated with notes below which apply to the adjudication of this item.
-  List<PositiveInt>? get noteNumber => throw _privateConstructorUsedError;
+  List<FhirPositiveInt>? get noteNumber => throw _privateConstructorUsedError;
 
   /// [noteNumberElement] ("_noteNumber") Extensions for noteNumber
   @JsonKey(name: '_noteNumber')
@@ -16776,7 +16778,7 @@ abstract class $ClaimResponseDetail1CopyWith<$Res> {
       @JsonKey(name: '_factor') Element? factorElement,
       Money? tax,
       Money? net,
-      List<PositiveInt>? noteNumber,
+      List<FhirPositiveInt>? noteNumber,
       @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
       CodeableConcept? decision,
       List<ClaimResponseAdjudication>? adjudication,
@@ -16882,7 +16884,7 @@ class _$ClaimResponseDetail1CopyWithImpl<$Res,
       noteNumber: freezed == noteNumber
           ? _value.noteNumber
           : noteNumber // ignore: cast_nullable_to_non_nullable
-              as List<PositiveInt>?,
+              as List<FhirPositiveInt>?,
       noteNumberElement: freezed == noteNumberElement
           ? _value.noteNumberElement
           : noteNumberElement // ignore: cast_nullable_to_non_nullable
@@ -17033,7 +17035,7 @@ abstract class _$$_ClaimResponseDetail1CopyWith<$Res>
       @JsonKey(name: '_factor') Element? factorElement,
       Money? tax,
       Money? net,
-      List<PositiveInt>? noteNumber,
+      List<FhirPositiveInt>? noteNumber,
       @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
       CodeableConcept? decision,
       List<ClaimResponseAdjudication>? adjudication,
@@ -17145,7 +17147,7 @@ class __$$_ClaimResponseDetail1CopyWithImpl<$Res>
       noteNumber: freezed == noteNumber
           ? _value._noteNumber
           : noteNumber // ignore: cast_nullable_to_non_nullable
-              as List<PositiveInt>?,
+              as List<FhirPositiveInt>?,
       noteNumberElement: freezed == noteNumberElement
           ? _value._noteNumberElement
           : noteNumberElement // ignore: cast_nullable_to_non_nullable
@@ -17183,7 +17185,7 @@ class _$_ClaimResponseDetail1 extends _ClaimResponseDetail1 {
       @JsonKey(name: '_factor') this.factorElement,
       this.tax,
       this.net,
-      final List<PositiveInt>? noteNumber,
+      final List<FhirPositiveInt>? noteNumber,
       @JsonKey(name: '_noteNumber') final List<Element>? noteNumberElement,
       this.decision,
       final List<ClaimResponseAdjudication>? adjudication,
@@ -17316,11 +17318,11 @@ class _$_ClaimResponseDetail1 extends _ClaimResponseDetail1 {
   final Money? net;
 
   /// [noteNumber] The numbers associated with notes below which apply to the adjudication of this item.
-  final List<PositiveInt>? _noteNumber;
+  final List<FhirPositiveInt>? _noteNumber;
 
   /// [noteNumber] The numbers associated with notes below which apply to the adjudication of this item.
   @override
-  List<PositiveInt>? get noteNumber {
+  List<FhirPositiveInt>? get noteNumber {
     final value = _noteNumber;
     if (value == null) return null;
     if (_noteNumber is EqualUnmodifiableListView) return _noteNumber;
@@ -17468,7 +17470,7 @@ abstract class _ClaimResponseDetail1 extends ClaimResponseDetail1 {
           @JsonKey(name: '_factor') final Element? factorElement,
           final Money? tax,
           final Money? net,
-          final List<PositiveInt>? noteNumber,
+          final List<FhirPositiveInt>? noteNumber,
           @JsonKey(name: '_noteNumber') final List<Element>? noteNumberElement,
           final CodeableConcept? decision,
           final List<ClaimResponseAdjudication>? adjudication,
@@ -17553,7 +17555,7 @@ abstract class _ClaimResponseDetail1 extends ClaimResponseDetail1 {
   @override
 
   /// [noteNumber] The numbers associated with notes below which apply to the adjudication of this item.
-  List<PositiveInt>? get noteNumber;
+  List<FhirPositiveInt>? get noteNumber;
   @override
 
   /// [noteNumberElement] ("_noteNumber") Extensions for noteNumber
@@ -17645,7 +17647,7 @@ mixin _$ClaimResponseSubDetail1 {
   Money? get net => throw _privateConstructorUsedError;
 
   /// [noteNumber] The numbers associated with notes below which apply to the adjudication of this item.
-  List<PositiveInt>? get noteNumber => throw _privateConstructorUsedError;
+  List<FhirPositiveInt>? get noteNumber => throw _privateConstructorUsedError;
 
   /// [noteNumberElement] ("_noteNumber") Extensions for noteNumber
   @JsonKey(name: '_noteNumber')
@@ -17684,7 +17686,7 @@ abstract class $ClaimResponseSubDetail1CopyWith<$Res> {
       @JsonKey(name: '_factor') Element? factorElement,
       Money? tax,
       Money? net,
-      List<PositiveInt>? noteNumber,
+      List<FhirPositiveInt>? noteNumber,
       @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
       CodeableConcept? decision,
       List<ClaimResponseAdjudication>? adjudication});
@@ -17788,7 +17790,7 @@ class _$ClaimResponseSubDetail1CopyWithImpl<$Res,
       noteNumber: freezed == noteNumber
           ? _value.noteNumber
           : noteNumber // ignore: cast_nullable_to_non_nullable
-              as List<PositiveInt>?,
+              as List<FhirPositiveInt>?,
       noteNumberElement: freezed == noteNumberElement
           ? _value.noteNumberElement
           : noteNumberElement // ignore: cast_nullable_to_non_nullable
@@ -17935,7 +17937,7 @@ abstract class _$$_ClaimResponseSubDetail1CopyWith<$Res>
       @JsonKey(name: '_factor') Element? factorElement,
       Money? tax,
       Money? net,
-      List<PositiveInt>? noteNumber,
+      List<FhirPositiveInt>? noteNumber,
       @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
       CodeableConcept? decision,
       List<ClaimResponseAdjudication>? adjudication});
@@ -18046,7 +18048,7 @@ class __$$_ClaimResponseSubDetail1CopyWithImpl<$Res>
       noteNumber: freezed == noteNumber
           ? _value._noteNumber
           : noteNumber // ignore: cast_nullable_to_non_nullable
-              as List<PositiveInt>?,
+              as List<FhirPositiveInt>?,
       noteNumberElement: freezed == noteNumberElement
           ? _value._noteNumberElement
           : noteNumberElement // ignore: cast_nullable_to_non_nullable
@@ -18080,7 +18082,7 @@ class _$_ClaimResponseSubDetail1 extends _ClaimResponseSubDetail1 {
       @JsonKey(name: '_factor') this.factorElement,
       this.tax,
       this.net,
-      final List<PositiveInt>? noteNumber,
+      final List<FhirPositiveInt>? noteNumber,
       @JsonKey(name: '_noteNumber') final List<Element>? noteNumberElement,
       this.decision,
       final List<ClaimResponseAdjudication>? adjudication})
@@ -18211,11 +18213,11 @@ class _$_ClaimResponseSubDetail1 extends _ClaimResponseSubDetail1 {
   final Money? net;
 
   /// [noteNumber] The numbers associated with notes below which apply to the adjudication of this item.
-  final List<PositiveInt>? _noteNumber;
+  final List<FhirPositiveInt>? _noteNumber;
 
   /// [noteNumber] The numbers associated with notes below which apply to the adjudication of this item.
   @override
-  List<PositiveInt>? get noteNumber {
+  List<FhirPositiveInt>? get noteNumber {
     final value = _noteNumber;
     if (value == null) return null;
     if (_noteNumber is EqualUnmodifiableListView) return _noteNumber;
@@ -18348,7 +18350,7 @@ abstract class _ClaimResponseSubDetail1 extends ClaimResponseSubDetail1 {
           @JsonKey(name: '_factor') final Element? factorElement,
           final Money? tax,
           final Money? net,
-          final List<PositiveInt>? noteNumber,
+          final List<FhirPositiveInt>? noteNumber,
           @JsonKey(name: '_noteNumber') final List<Element>? noteNumberElement,
           final CodeableConcept? decision,
           final List<ClaimResponseAdjudication>? adjudication}) =
@@ -18432,7 +18434,7 @@ abstract class _ClaimResponseSubDetail1 extends ClaimResponseSubDetail1 {
   @override
 
   /// [noteNumber] The numbers associated with notes below which apply to the adjudication of this item.
-  List<PositiveInt>? get noteNumber;
+  List<FhirPositiveInt>? get noteNumber;
   @override
 
   /// [noteNumberElement] ("_noteNumber") Extensions for noteNumber
@@ -19442,7 +19444,7 @@ mixin _$ClaimResponseProcessNote {
       throw _privateConstructorUsedError;
 
   /// [number] A number to uniquely identify a note entry.
-  PositiveInt? get number => throw _privateConstructorUsedError;
+  FhirPositiveInt? get number => throw _privateConstructorUsedError;
 
   /// [numberElement] ("_number") Extensions for number
   @JsonKey(name: '_number')
@@ -19481,7 +19483,7 @@ abstract class $ClaimResponseProcessNoteCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      PositiveInt? number,
+      FhirPositiveInt? number,
       @JsonKey(name: '_number') Element? numberElement,
       FhirCode? type,
       @JsonKey(name: '_type') Element? typeElement,
@@ -19626,7 +19628,7 @@ abstract class _$$_ClaimResponseProcessNoteCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      PositiveInt? number,
+      FhirPositiveInt? number,
       @JsonKey(name: '_number') Element? numberElement,
       FhirCode? type,
       @JsonKey(name: '_type') Element? typeElement,
@@ -19937,7 +19939,7 @@ abstract class _ClaimResponseProcessNote extends ClaimResponseProcessNote {
   @override
 
   /// [number] A number to uniquely identify a note entry.
-  PositiveInt? get number;
+  FhirPositiveInt? get number;
   @override
 
   /// [numberElement] ("_number") Extensions for number
@@ -20007,7 +20009,7 @@ mixin _$ClaimResponseInsurance {
       throw _privateConstructorUsedError;
 
   /// [sequence] A number to uniquely identify insurance entries and provide a sequence of coverages to convey coordination of benefit order.
-  PositiveInt? get sequence => throw _privateConstructorUsedError;
+  FhirPositiveInt? get sequence => throw _privateConstructorUsedError;
 
   /// [sequenceElement] ("_sequence") Extensions for sequence
   @JsonKey(name: '_sequence')
@@ -20050,7 +20052,7 @@ abstract class $ClaimResponseInsuranceCopyWith<$Res> {
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      PositiveInt? sequence,
+      FhirPositiveInt? sequence,
       @JsonKey(name: '_sequence')
           Element? sequenceElement,
       FhirBoolean? focal,
@@ -20213,7 +20215,7 @@ abstract class _$$_ClaimResponseInsuranceCopyWith<$Res>
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      PositiveInt? sequence,
+      FhirPositiveInt? sequence,
       @JsonKey(name: '_sequence')
           Element? sequenceElement,
       FhirBoolean? focal,
@@ -20552,7 +20554,7 @@ abstract class _ClaimResponseInsurance extends ClaimResponseInsurance {
   @override
 
   /// [sequence] A number to uniquely identify insurance entries and provide a sequence of coverages to convey coordination of benefit order.
-  PositiveInt? get sequence;
+  FhirPositiveInt? get sequence;
   @override
 
   /// [sequenceElement] ("_sequence") Extensions for sequence
@@ -20625,21 +20627,21 @@ mixin _$ClaimResponseError {
       throw _privateConstructorUsedError;
 
   /// [itemSequence] The sequence number of the line item submitted which contains the error. This value is omitted when the error occurs outside of the item structure.
-  PositiveInt? get itemSequence => throw _privateConstructorUsedError;
+  FhirPositiveInt? get itemSequence => throw _privateConstructorUsedError;
 
   /// [itemSequenceElement] ("_itemSequence") Extensions for itemSequence
   @JsonKey(name: '_itemSequence')
   Element? get itemSequenceElement => throw _privateConstructorUsedError;
 
   /// [detailSequence] The sequence number of the detail within the line item submitted which contains the error. This value is omitted when the error occurs outside of the item structure.
-  PositiveInt? get detailSequence => throw _privateConstructorUsedError;
+  FhirPositiveInt? get detailSequence => throw _privateConstructorUsedError;
 
   /// [detailSequenceElement] ("_detailSequence") Extensions for detailSequence
   @JsonKey(name: '_detailSequence')
   Element? get detailSequenceElement => throw _privateConstructorUsedError;
 
   /// [subDetailSequence] The sequence number of the sub-detail within the detail within the line item submitted which contains the error. This value is omitted when the error occurs outside of the item structure.
-  PositiveInt? get subDetailSequence => throw _privateConstructorUsedError;
+  FhirPositiveInt? get subDetailSequence => throw _privateConstructorUsedError;
 
   /// [subDetailSequenceElement] ("_subDetailSequence") Extensions for subDetailSequence
   @JsonKey(name: '_subDetailSequence')
@@ -20664,11 +20666,11 @@ abstract class $ClaimResponseErrorCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      PositiveInt? itemSequence,
+      FhirPositiveInt? itemSequence,
       @JsonKey(name: '_itemSequence') Element? itemSequenceElement,
-      PositiveInt? detailSequence,
+      FhirPositiveInt? detailSequence,
       @JsonKey(name: '_detailSequence') Element? detailSequenceElement,
-      PositiveInt? subDetailSequence,
+      FhirPositiveInt? subDetailSequence,
       @JsonKey(name: '_subDetailSequence') Element? subDetailSequenceElement,
       CodeableConcept code});
 
@@ -20803,11 +20805,11 @@ abstract class _$$_ClaimResponseErrorCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      PositiveInt? itemSequence,
+      FhirPositiveInt? itemSequence,
       @JsonKey(name: '_itemSequence') Element? itemSequenceElement,
-      PositiveInt? detailSequence,
+      FhirPositiveInt? detailSequence,
       @JsonKey(name: '_detailSequence') Element? detailSequenceElement,
-      PositiveInt? subDetailSequence,
+      FhirPositiveInt? subDetailSequence,
       @JsonKey(name: '_subDetailSequence') Element? subDetailSequenceElement,
       CodeableConcept code});
 
@@ -21120,7 +21122,7 @@ abstract class _ClaimResponseError extends ClaimResponseError {
   @override
 
   /// [itemSequence] The sequence number of the line item submitted which contains the error. This value is omitted when the error occurs outside of the item structure.
-  PositiveInt? get itemSequence;
+  FhirPositiveInt? get itemSequence;
   @override
 
   /// [itemSequenceElement] ("_itemSequence") Extensions for itemSequence
@@ -21129,7 +21131,7 @@ abstract class _ClaimResponseError extends ClaimResponseError {
   @override
 
   /// [detailSequence] The sequence number of the detail within the line item submitted which contains the error. This value is omitted when the error occurs outside of the item structure.
-  PositiveInt? get detailSequence;
+  FhirPositiveInt? get detailSequence;
   @override
 
   /// [detailSequenceElement] ("_detailSequence") Extensions for detailSequence
@@ -21138,7 +21140,7 @@ abstract class _ClaimResponseError extends ClaimResponseError {
   @override
 
   /// [subDetailSequence] The sequence number of the sub-detail within the detail within the line item submitted which contains the error. This value is omitted when the error occurs outside of the item structure.
-  PositiveInt? get subDetailSequence;
+  FhirPositiveInt? get subDetailSequence;
   @override
 
   /// [subDetailSequenceElement] ("_subDetailSequence") Extensions for subDetailSequence
@@ -21171,7 +21173,7 @@ mixin _$Invoice {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -21301,7 +21303,7 @@ abstract class $InvoiceCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.Invoice)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -21791,7 +21793,7 @@ abstract class _$$_InvoiceCopyWith<$Res> implements $InvoiceCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.Invoice)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -22140,7 +22142,7 @@ class _$_Invoice extends _Invoice {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -22499,7 +22501,7 @@ abstract class _Invoice extends Invoice {
   factory _Invoice(
       {@JsonKey(unknownEnumValue: R5ResourceType.Invoice)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -22562,7 +22564,7 @@ abstract class _Invoice extends Invoice {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when
@@ -23127,7 +23129,7 @@ mixin _$InvoiceLineItem {
       throw _privateConstructorUsedError;
 
   /// [sequence] Sequence in which the items appear on the invoice.
-  PositiveInt? get sequence => throw _privateConstructorUsedError;
+  FhirPositiveInt? get sequence => throw _privateConstructorUsedError;
 
   /// [sequenceElement] ("_sequence") Extensions for sequence
   @JsonKey(name: '_sequence')
@@ -23170,7 +23172,7 @@ abstract class $InvoiceLineItemCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      PositiveInt? sequence,
+      FhirPositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       FhirDate? servicedDate,
       @JsonKey(name: '_servicedDate') Element? servicedDateElement,
@@ -23333,7 +23335,7 @@ abstract class _$$_InvoiceLineItemCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      PositiveInt? sequence,
+      FhirPositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       FhirDate? servicedDate,
       @JsonKey(name: '_servicedDate') Element? servicedDateElement,
@@ -23672,7 +23674,7 @@ abstract class _InvoiceLineItem extends InvoiceLineItem {
   @override
 
   /// [sequence] Sequence in which the items appear on the invoice.
-  PositiveInt? get sequence;
+  FhirPositiveInt? get sequence;
   @override
 
   /// [sequenceElement] ("_sequence") Extensions for sequence

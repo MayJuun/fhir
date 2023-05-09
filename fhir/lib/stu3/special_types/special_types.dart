@@ -96,8 +96,8 @@ class Reference with _$Reference {
 
 @freezed
 class FhirMeta with _$FhirMeta {
-  Meta._();
-  factory Meta({
+  FhirMeta._();
+  factory FhirMeta({
     FhirId? versionId,
     @JsonKey(name: '_versionId') Element? versionIdElement,
     FhirInstant? lastUpdated,
@@ -106,30 +106,32 @@ class FhirMeta with _$FhirMeta {
     @JsonKey(name: '_profile') List<Element?>? profileElement,
     List<Coding>? security,
     List<Coding>? tag,
-  }) = _Meta;
+  }) = _FhirMeta;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
-  factory Meta.fromYaml(dynamic yaml) => yaml is String
-      ? Meta.fromJson(
+  factory FhirMeta.fromYaml(dynamic yaml) => yaml is String
+      ? FhirMeta.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? Meta.fromJson(jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          ? FhirMeta.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'Meta cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Meta.fromJson(Map<String, dynamic> json) => _$MetaFromJson(json);
+  factory FhirMeta.fromJson(Map<String, dynamic> json) =>
+      _$FhirMetaFromJson(json);
 
   /// Acts like a constructor, returns a [Meta], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
-  factory Meta.fromJsonString(String source) {
+  factory FhirMeta.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
-      return _$MetaFromJson(json);
+      return _$FhirMetaFromJson(json);
     } else {
       throw FormatException('FormatException:\nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
@@ -171,7 +173,7 @@ class ElementDefinition with _$ElementDefinition {
     String? contentReference,
     @JsonKey(name: '_contentReference') Element? contentReferenceElement,
     List<ElementDefinitionType>? type,
-     FhirBoolean? defaultValueBoolean,
+    FhirBoolean? defaultValueBoolean,
     @JsonKey(name: '_defaultValueBoolean') Element? defaultValueBooleanElement,
     FhirDecimal? defaultValueInteger,
     @JsonKey(name: '_defaultValueInteger') Element? defaultValueIntegerElement,
@@ -191,11 +193,11 @@ class ElementDefinition with _$ElementDefinition {
     FhirDateTime? defaultValueDateTime,
     @JsonKey(name: '_defaultValueDateTime')
         Element? defaultValueDateTimeElement,
-    Time? defaultValueTime,
+    FhirTime? defaultValueTime,
     @JsonKey(name: '_defaultValueTime') Element? defaultValueTimeElement,
-     FhirCode? defaultValueCode,
+    FhirCode? defaultValueCode,
     @JsonKey(name: '_defaultValueCode') Element? defaultValueCodeElement,
-    Oid? defaultValueOid,
+    FhirOid? defaultValueOid,
     @JsonKey(name: '_defaultValueOid') Element? defaultValueOidElement,
     FhirId? defaultValueUuid,
     @JsonKey(name: '_defaultValueUuid') Element? defaultValueUuidElement,
@@ -236,7 +238,7 @@ class ElementDefinition with _$ElementDefinition {
     Address? defaultValueAddress,
     ContactPoint? defaultValueContactPoint,
     Timing? defaultValueTiming,
-    Meta? defaultValueMeta,
+    FhirMeta? defaultValueMeta,
     ElementDefinition? defaultValueElementDefinition,
     ContactDetail? defaultValueContactDetail,
     Contributor? defaultValueContributor,
@@ -250,7 +252,7 @@ class ElementDefinition with _$ElementDefinition {
     @JsonKey(name: '_meaningWhenMissing') Element? meaningWhenMissingElement,
     String? orderMeaning,
     @JsonKey(name: '_orderMeaning') Element? orderMeaningElement,
-     FhirBoolean? fixedBoolean,
+    FhirBoolean? fixedBoolean,
     @JsonKey(name: '_fixedBoolean') Element? fixedBooleanElement,
     FhirDecimal? fixedInteger,
     @JsonKey(name: '_fixedInteger') Element? fixedIntegerElement,
@@ -268,11 +270,11 @@ class ElementDefinition with _$ElementDefinition {
     @JsonKey(name: '_fixedDate') Element? fixedDateElement,
     FhirDateTime? fixedDateTime,
     @JsonKey(name: '_fixedDateTime') Element? fixedDateTimeElement,
-    Time? fixedTime,
+    FhirTime? fixedTime,
     @JsonKey(name: '_fixedTime') Element? fixedTimeElement,
-     FhirCode? fixedCode,
+    FhirCode? fixedCode,
     @JsonKey(name: '_fixedCode') Element? fixedCodeElement,
-    Oid? fixedOid,
+    FhirOid? fixedOid,
     @JsonKey(name: '_fixedOid') Element? fixedOidElement,
     FhirId? fixedUuid,
     @JsonKey(name: '_fixedUuid') Element? fixedUuidElement,
@@ -310,7 +312,7 @@ class ElementDefinition with _$ElementDefinition {
     Address? fixedAddress,
     ContactPoint? fixedContactPoint,
     Timing? fixedTiming,
-    Meta? fixedMeta,
+    FhirMeta? fixedMeta,
     ElementDefinition? fixedElementDefinition,
     ContactDetail? fixedContactDetail,
     Contributor? fixedContributor,
@@ -320,7 +322,7 @@ class ElementDefinition with _$ElementDefinition {
     DataRequirement? fixedDataRequirement,
     ParameterDefinition? fixedParameterDefinition,
     TriggerDefinition? fixedTriggerDefinition,
-     FhirBoolean? patternBoolean,
+    FhirBoolean? patternBoolean,
     @JsonKey(name: '_patternBoolean') Element? patternBooleanElement,
     FhirDecimal? patternInteger,
     @JsonKey(name: '_patternInteger') Element? patternIntegerElement,
@@ -338,11 +340,11 @@ class ElementDefinition with _$ElementDefinition {
     @JsonKey(name: '_patternDate') Element? patternDateElement,
     FhirDateTime? patternDateTime,
     @JsonKey(name: '_patternDateTime') Element? patternDateTimeElement,
-    Time? patternTime,
+    FhirTime? patternTime,
     @JsonKey(name: '_patternTime') Element? patternTimeElement,
-     FhirCode? patternCode,
+    FhirCode? patternCode,
     @JsonKey(name: '_patternCode') Element? patternCodeElement,
-    Oid? patternOid,
+    FhirOid? patternOid,
     @JsonKey(name: '_patternOid') Element? patternOidElement,
     FhirId? patternUuid,
     @JsonKey(name: '_patternUuid') Element? patternUuidElement,
@@ -380,7 +382,7 @@ class ElementDefinition with _$ElementDefinition {
     Address? patternAddress,
     ContactPoint? patternContactPoint,
     Timing? patternTiming,
-    Meta? patternMeta,
+    FhirMeta? patternMeta,
     ElementDefinition? patternElementDefinition,
     ContactDetail? patternContactDetail,
     Contributor? patternContributor,
@@ -397,7 +399,7 @@ class ElementDefinition with _$ElementDefinition {
     @JsonKey(name: '_minValueDateTime') Element? minValueDateTimeElement,
     String? minValueInstant,
     @JsonKey(name: '_minValueInstant') Element? minValueInstantElement,
-    Time? minValueTime,
+    FhirTime? minValueTime,
     @JsonKey(name: '_minValueTime') Element? minValueTimeElement,
     FhirDecimal? minValueDecimal,
     @JsonKey(name: '_minValueDecimal') Element? minValueDecimalElement,
@@ -414,7 +416,7 @@ class ElementDefinition with _$ElementDefinition {
     @JsonKey(name: '_maxValueDateTime') Element? maxValueDateTimeElement,
     String? maxValueInstant,
     @JsonKey(name: '_maxValueInstant') Element? maxValueInstantElement,
-    Time? maxValueTime,
+    FhirTime? maxValueTime,
     @JsonKey(name: '_maxValueTime') Element? maxValueTimeElement,
     FhirDecimal? maxValueDecimal,
     @JsonKey(name: '_maxValueDecimal') Element? maxValueDecimalElement,
@@ -430,11 +432,11 @@ class ElementDefinition with _$ElementDefinition {
     List<String>? condition,
     @JsonKey(name: '_condition') List<Element?>? conditionElement,
     List<ElementDefinitionConstraint>? constraint,
-     FhirBoolean? mustSupport,
+    FhirBoolean? mustSupport,
     @JsonKey(name: '_mustSupport') Element? mustSupportElement,
-     FhirBoolean? isModifier,
+    FhirBoolean? isModifier,
     @JsonKey(name: '_isModifier') Element? isModifierElement,
-     FhirBoolean? isSummary,
+    FhirBoolean? isSummary,
     @JsonKey(name: '_isSummary') Element? isSummaryElement,
     ElementDefinitionBinding? binding,
     List<ElementDefinitionMapping>? mapping,
@@ -478,7 +480,7 @@ class ElementDefinitionSlicing with _$ElementDefinitionSlicing {
     List<ElementDefinitionDiscriminator>? discriminator,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-     FhirBoolean? ordered,
+    FhirBoolean? ordered,
     @JsonKey(name: '_ordered') Element? orderedElement,
     ElementDefinitionSlicingRules? rules,
     @JsonKey(name: '_rules') Element? rulesElement,
@@ -654,7 +656,7 @@ class ElementDefinitionExample with _$ElementDefinitionExample {
   factory ElementDefinitionExample({
     String? label,
     @JsonKey(name: '_label') Element? labelElement,
-     FhirBoolean? valueBoolean,
+    FhirBoolean? valueBoolean,
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
     FhirDecimal? valueInteger,
     @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
@@ -672,11 +674,11 @@ class ElementDefinitionExample with _$ElementDefinitionExample {
     @JsonKey(name: '_valueDate') Element? valueDateElement,
     FhirDateTime? valueDateTime,
     @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
-    Time? valueTime,
+    FhirTime? valueTime,
     @JsonKey(name: '_valueTime') Element? valueTimeElement,
-     FhirCode? valueCode,
+    FhirCode? valueCode,
     @JsonKey(name: '_valueCode') Element? valueCodeElement,
-    Oid? valueOid,
+    FhirOid? valueOid,
     @JsonKey(name: '_valueOid') Element? valueOidElement,
     FhirId? valueUuid,
     @JsonKey(name: '_valueUuid') Element? valueUuidElement,
@@ -714,7 +716,7 @@ class ElementDefinitionExample with _$ElementDefinitionExample {
     Address? valueAddress,
     ContactPoint? valueContactPoint,
     Timing? valueTiming,
-    Meta? valueMeta,
+    FhirMeta? valueMeta,
     ElementDefinition? valueElementDefinition,
     ContactDetail? valueContactDetail,
     Contributor? valueContributor,
@@ -910,7 +912,7 @@ class Dosage with _$Dosage {
     String? patientInstruction,
     @JsonKey(name: '_patientInstruction') Element? patientInstructionElement,
     Timing? timing,
-     FhirBoolean? asNeededBoolean,
+    FhirBoolean? asNeededBoolean,
     @JsonKey(name: '_asNeededBoolean') Element? asNeededBooleanElement,
     CodeableConcept? asNeededCodeableConcept,
     CodeableConcept? site,

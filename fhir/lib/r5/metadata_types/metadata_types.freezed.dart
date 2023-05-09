@@ -888,7 +888,7 @@ mixin _$VirtualServiceDetail {
 
   /// [maxParticipants] Maximum number of participants supported by the
   ///  virtual service.
-  PositiveInt? get maxParticipants => throw _privateConstructorUsedError;
+  FhirPositiveInt? get maxParticipants => throw _privateConstructorUsedError;
 
   /// [maxParticipantsElement] ("_maxParticipants") Extensions for
   ///  maxParticipants
@@ -926,7 +926,7 @@ abstract class $VirtualServiceDetailCopyWith<$Res> {
       ExtendedContactDetail? addressExtendedContactDetail,
       List<FhirUrl>? additionalInfo,
       @JsonKey(name: '_additionalInfo') List<Element>? additionalInfoElement,
-      PositiveInt? maxParticipants,
+      FhirPositiveInt? maxParticipants,
       @JsonKey(name: '_maxParticipants') Element? maxParticipantsElement,
       String? sessionKey,
       @JsonKey(name: '_sessionKey') Element? sessionKeyElement});
@@ -1141,7 +1141,7 @@ abstract class _$$_VirtualServiceDetailCopyWith<$Res>
       ExtendedContactDetail? addressExtendedContactDetail,
       List<FhirUrl>? additionalInfo,
       @JsonKey(name: '_additionalInfo') List<Element>? additionalInfoElement,
-      PositiveInt? maxParticipants,
+      FhirPositiveInt? maxParticipants,
       @JsonKey(name: '_maxParticipants') Element? maxParticipantsElement,
       String? sessionKey,
       @JsonKey(name: '_sessionKey') Element? sessionKeyElement});
@@ -1590,7 +1590,7 @@ abstract class _VirtualServiceDetail extends VirtualServiceDetail {
 
   /// [maxParticipants] Maximum number of participants supported by the
   ///  virtual service.
-  PositiveInt? get maxParticipants;
+  FhirPositiveInt? get maxParticipants;
   @override
 
   /// [maxParticipantsElement] ("_maxParticipants") Extensions for
@@ -1950,7 +1950,7 @@ mixin _$AvailabilityAvailableTime {
       throw _privateConstructorUsedError;
 
   /// [daysOfWeek] mon | tue | wed | thu | fri | sat | sun.
-  List<Code>? get daysOfWeek => throw _privateConstructorUsedError;
+  List<FhirCode>? get daysOfWeek => throw _privateConstructorUsedError;
 
   /// [daysOfWeekElement] ("_daysOfWeek") Extensions for daysOfWeek
   @JsonKey(name: '_daysOfWeek')
@@ -1964,7 +1964,7 @@ mixin _$AvailabilityAvailableTime {
   Element? get allDayElement => throw _privateConstructorUsedError;
 
   /// [availableStartTime] Opening time of day (ignored if allDay = true).
-  Time? get availableStartTime => throw _privateConstructorUsedError;
+  FhirTime? get availableStartTime => throw _privateConstructorUsedError;
 
   /// [availableStartTimeElement] ("_availableStartTime") Extensions for
   ///  availableStartTime
@@ -1972,7 +1972,7 @@ mixin _$AvailabilityAvailableTime {
   Element? get availableStartTimeElement => throw _privateConstructorUsedError;
 
   /// [availableEndTime] Closing time of day (ignored if allDay = true).
-  Time? get availableEndTime => throw _privateConstructorUsedError;
+  FhirTime? get availableEndTime => throw _privateConstructorUsedError;
 
   /// [availableEndTimeElement] ("_availableEndTime") Extensions for
   ///  availableEndTime
@@ -1995,13 +1995,13 @@ abstract class $AvailabilityAvailableTimeCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      List<Code>? daysOfWeek,
+      List<FhirCode>? daysOfWeek,
       @JsonKey(name: '_daysOfWeek') List<Element>? daysOfWeekElement,
       FhirBoolean? allDay,
       @JsonKey(name: '_allDay') Element? allDayElement,
-      Time? availableStartTime,
+      FhirTime? availableStartTime,
       @JsonKey(name: '_availableStartTime') Element? availableStartTimeElement,
-      Time? availableEndTime,
+      FhirTime? availableEndTime,
       @JsonKey(name: '_availableEndTime') Element? availableEndTimeElement});
 
   $ElementCopyWith<$Res>? get allDayElement;
@@ -2051,7 +2051,7 @@ class _$AvailabilityAvailableTimeCopyWithImpl<$Res,
       daysOfWeek: freezed == daysOfWeek
           ? _value.daysOfWeek
           : daysOfWeek // ignore: cast_nullable_to_non_nullable
-              as List<Code>?,
+              as List<FhirCode>?,
       daysOfWeekElement: freezed == daysOfWeekElement
           ? _value.daysOfWeekElement
           : daysOfWeekElement // ignore: cast_nullable_to_non_nullable
@@ -2133,13 +2133,13 @@ abstract class _$$_AvailabilityAvailableTimeCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      List<Code>? daysOfWeek,
+      List<FhirCode>? daysOfWeek,
       @JsonKey(name: '_daysOfWeek') List<Element>? daysOfWeekElement,
       FhirBoolean? allDay,
       @JsonKey(name: '_allDay') Element? allDayElement,
-      Time? availableStartTime,
+      FhirTime? availableStartTime,
       @JsonKey(name: '_availableStartTime') Element? availableStartTimeElement,
-      Time? availableEndTime,
+      FhirTime? availableEndTime,
       @JsonKey(name: '_availableEndTime') Element? availableEndTimeElement});
 
   @override
@@ -2191,7 +2191,7 @@ class __$$_AvailabilityAvailableTimeCopyWithImpl<$Res>
       daysOfWeek: freezed == daysOfWeek
           ? _value._daysOfWeek
           : daysOfWeek // ignore: cast_nullable_to_non_nullable
-              as List<Code>?,
+              as List<FhirCode>?,
       daysOfWeekElement: freezed == daysOfWeekElement
           ? _value._daysOfWeekElement
           : daysOfWeekElement // ignore: cast_nullable_to_non_nullable
@@ -2231,7 +2231,7 @@ class _$_AvailabilityAvailableTime extends _AvailabilityAvailableTime {
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final List<Code>? daysOfWeek,
+      final List<FhirCode>? daysOfWeek,
       @JsonKey(name: '_daysOfWeek') final List<Element>? daysOfWeekElement,
       this.allDay,
       @JsonKey(name: '_allDay') this.allDayElement,
@@ -2318,11 +2318,11 @@ class _$_AvailabilityAvailableTime extends _AvailabilityAvailableTime {
   }
 
   /// [daysOfWeek] mon | tue | wed | thu | fri | sat | sun.
-  final List<Code>? _daysOfWeek;
+  final List<FhirCode>? _daysOfWeek;
 
   /// [daysOfWeek] mon | tue | wed | thu | fri | sat | sun.
   @override
-  List<Code>? get daysOfWeek {
+  List<FhirCode>? get daysOfWeek {
     final value = _daysOfWeek;
     if (value == null) return null;
     if (_daysOfWeek is EqualUnmodifiableListView) return _daysOfWeek;
@@ -2445,7 +2445,7 @@ abstract class _AvailabilityAvailableTime extends AvailabilityAvailableTime {
           @JsonKey(name: 'extension')
               final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
-          final List<Code>? daysOfWeek,
+          final List<FhirCode>? daysOfWeek,
           @JsonKey(name: '_daysOfWeek')
               final List<Element>? daysOfWeekElement,
           final FhirBoolean? allDay,
@@ -2498,7 +2498,7 @@ abstract class _AvailabilityAvailableTime extends AvailabilityAvailableTime {
   @override
 
   /// [daysOfWeek] mon | tue | wed | thu | fri | sat | sun.
-  List<Code>? get daysOfWeek;
+  List<FhirCode>? get daysOfWeek;
   @override
 
   /// [daysOfWeekElement] ("_daysOfWeek") Extensions for daysOfWeek
@@ -2516,7 +2516,7 @@ abstract class _AvailabilityAvailableTime extends AvailabilityAvailableTime {
   @override
 
   /// [availableStartTime] Opening time of day (ignored if allDay = true).
-  Time? get availableStartTime;
+  FhirTime? get availableStartTime;
   @override
 
   /// [availableStartTimeElement] ("_availableStartTime") Extensions for
@@ -2526,7 +2526,7 @@ abstract class _AvailabilityAvailableTime extends AvailabilityAvailableTime {
   @override
 
   /// [availableEndTime] Closing time of day (ignored if allDay = true).
-  Time? get availableEndTime;
+  FhirTime? get availableEndTime;
   @override
 
   /// [availableEndTimeElement] ("_availableEndTime") Extensions for
@@ -3864,7 +3864,7 @@ mixin _$DataRequirement {
 
   /// [profile] The profile of the required data, specified as the uri of the
   ///  profile definition.
-  List<Canonical>? get profile => throw _privateConstructorUsedError;
+  List<FhirCanonical>? get profile => throw _privateConstructorUsedError;
 
   /// [subjectCodeableConcept] The intended subjects of the data requirement.
   ///  If this element is not provided, a Patient subject is assumed.
@@ -3914,7 +3914,7 @@ mixin _$DataRequirement {
 
   /// [limit] Specifies a maximum number of results that are required (uses
   ///  the _count search parameter).
-  PositiveInt? get limit => throw _privateConstructorUsedError;
+  FhirPositiveInt? get limit => throw _privateConstructorUsedError;
 
   /// [limitElement] ("_limit") Extensions for limit
   @JsonKey(name: '_limit')
@@ -3940,7 +3940,7 @@ abstract class $DataRequirementCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       FhirCode? type,
       @JsonKey(name: '_type') Element? typeElement,
-      List<Canonical>? profile,
+      List<FhirCanonical>? profile,
       CodeableConcept? subjectCodeableConcept,
       Reference? subjectReference,
       List<String>? mustSupport,
@@ -3948,7 +3948,7 @@ abstract class $DataRequirementCopyWith<$Res> {
       List<DataRequirementCodeFilter>? codeFilter,
       List<DataRequirementDateFilter>? dateFilter,
       List<DataRequirementValueFilter>? valueFilter,
-      PositiveInt? limit,
+      FhirPositiveInt? limit,
       @JsonKey(name: '_limit') Element? limitElement,
       List<DataRequirementSort>? sort});
 
@@ -4007,7 +4007,7 @@ class _$DataRequirementCopyWithImpl<$Res, $Val extends DataRequirement>
       profile: freezed == profile
           ? _value.profile
           : profile // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       subjectCodeableConcept: freezed == subjectCodeableConcept
           ? _value.subjectCodeableConcept
           : subjectCodeableConcept // ignore: cast_nullable_to_non_nullable
@@ -4114,7 +4114,7 @@ abstract class _$$_DataRequirementCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       FhirCode? type,
       @JsonKey(name: '_type') Element? typeElement,
-      List<Canonical>? profile,
+      List<FhirCanonical>? profile,
       CodeableConcept? subjectCodeableConcept,
       Reference? subjectReference,
       List<String>? mustSupport,
@@ -4122,7 +4122,7 @@ abstract class _$$_DataRequirementCopyWith<$Res>
       List<DataRequirementCodeFilter>? codeFilter,
       List<DataRequirementDateFilter>? dateFilter,
       List<DataRequirementValueFilter>? valueFilter,
-      PositiveInt? limit,
+      FhirPositiveInt? limit,
       @JsonKey(name: '_limit') Element? limitElement,
       List<DataRequirementSort>? sort});
 
@@ -4183,7 +4183,7 @@ class __$$_DataRequirementCopyWithImpl<$Res>
       profile: freezed == profile
           ? _value._profile
           : profile // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       subjectCodeableConcept: freezed == subjectCodeableConcept
           ? _value.subjectCodeableConcept
           : subjectCodeableConcept // ignore: cast_nullable_to_non_nullable
@@ -4236,7 +4236,7 @@ class _$_DataRequirement extends _DataRequirement {
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       this.type,
       @JsonKey(name: '_type') this.typeElement,
-      final List<Canonical>? profile,
+      final List<FhirCanonical>? profile,
       this.subjectCodeableConcept,
       this.subjectReference,
       final List<String>? mustSupport,
@@ -4304,12 +4304,12 @@ class _$_DataRequirement extends _DataRequirement {
 
   /// [profile] The profile of the required data, specified as the uri of the
   ///  profile definition.
-  final List<Canonical>? _profile;
+  final List<FhirCanonical>? _profile;
 
   /// [profile] The profile of the required data, specified as the uri of the
   ///  profile definition.
   @override
-  List<Canonical>? get profile {
+  List<FhirCanonical>? get profile {
     final value = _profile;
     if (value == null) return null;
     if (_profile is EqualUnmodifiableListView) return _profile;
@@ -4530,7 +4530,7 @@ abstract class _DataRequirement extends DataRequirement {
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final FhirCode? type,
       @JsonKey(name: '_type') final Element? typeElement,
-      final List<Canonical>? profile,
+      final List<FhirCanonical>? profile,
       final CodeableConcept? subjectCodeableConcept,
       final Reference? subjectReference,
       final List<String>? mustSupport,
@@ -4577,7 +4577,7 @@ abstract class _DataRequirement extends DataRequirement {
 
   /// [profile] The profile of the required data, specified as the uri of the
   ///  profile definition.
-  List<Canonical>? get profile;
+  List<FhirCanonical>? get profile;
   @override
 
   /// [subjectCodeableConcept] The intended subjects of the data requirement.
@@ -4631,7 +4631,7 @@ abstract class _DataRequirement extends DataRequirement {
 
   /// [limit] Specifies a maximum number of results that are required (uses
   ///  the _count search parameter).
-  PositiveInt? get limit;
+  FhirPositiveInt? get limit;
   @override
 
   /// [limitElement] ("_limit") Extensions for limit
@@ -10318,7 +10318,7 @@ class _$_Expression extends _Expression {
   /// [name] A short name assigned to the expression to allow for multiple
   ///  reuse of the expression in the context where it is defined.
   @override
-  final Id? name;
+  final FhirId? name;
 
   /// [nameElement] ("_name") Extensions for name
   @override
@@ -10424,7 +10424,7 @@ abstract class _Expression extends Expression {
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final String? description,
           @JsonKey(name: '_description') final Element? descriptionElement,
-          final Id? name,
+          final FhirId? name,
           @JsonKey(name: '_name') final Element? nameElement,
           final FhirCode? language,
           @JsonKey(name: '_language') final Element? languageElement,

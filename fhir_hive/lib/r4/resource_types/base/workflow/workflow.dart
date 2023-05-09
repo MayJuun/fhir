@@ -320,7 +320,7 @@ class Appointment extends HiveObject with Resource, _$Appointment {
     /// decisions if needing to re-prioritize appointments. (The iCal Standard
     ///  specifies 0 as undefined, 1 as highest, 9 as lowest priority).
     @HiveField(21)
-        UnsignedInt? priority,
+        FhirUnsignedInt? priority,
 
     /// [priorityElement] Extensions for priority
     @JsonKey(name: '_priority')
@@ -371,7 +371,7 @@ class Appointment extends HiveObject with Resource, _$Appointment {
     /// long appointment, the duration may be 15 minutes less than the difference
     ///  between the start and end.
     @HiveField(31)
-        PositiveInt? minutesDuration,
+        FhirPositiveInt? minutesDuration,
 
     /// [minutesDurationElement] Extensions for minutesDuration
     @JsonKey(name: '_minutesDuration')
@@ -1969,7 +1969,7 @@ class TaskRestriction with _$TaskRestriction {
 
     /// [repetitions] Indicates the number of times the requested action should
     ///  occur.
-    PositiveInt? repetitions,
+    FhirPositiveInt? repetitions,
 
     /// [repetitionsElement] Extensions for repetitions
     @JsonKey(name: '_repetitions') Element? repetitionsElement,
@@ -2262,7 +2262,7 @@ class TaskInput with _$TaskInput {
     @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
 
     /// [valueId] The value of the input parameter as a basic type.
-    Id? valueId,
+    FhirId? valueId,
 
     /// [valueIdElement] Extensions for valueId
     @JsonKey(name: '_valueId') Element? valueIdElement,
@@ -2286,13 +2286,13 @@ class TaskInput with _$TaskInput {
     @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
 
     /// [valueOid] The value of the input parameter as a basic type.
-    Oid? valueOid,
+    FhirOid? valueOid,
 
     /// [valueOidElement] Extensions for valueOid
     @JsonKey(name: '_valueOid') Element? valueOidElement,
 
     /// [valuePositiveInt] The value of the input parameter as a basic type.
-    PositiveInt? valuePositiveInt,
+    FhirPositiveInt? valuePositiveInt,
 
     /// [valuePositiveIntElement] Extensions for valuePositiveInt
     @JsonKey(name: '_valuePositiveInt') Element? valuePositiveIntElement,
@@ -2304,13 +2304,13 @@ class TaskInput with _$TaskInput {
     @JsonKey(name: '_valueString') Element? valueStringElement,
 
     /// [valueTime] The value of the input parameter as a basic type.
-    Time? valueTime,
+    FhirTime? valueTime,
 
     /// [valueTimeElement] Extensions for valueTime
     @JsonKey(name: '_valueTime') Element? valueTimeElement,
 
     /// [valueUnsignedInt] The value of the input parameter as a basic type.
-    UnsignedInt? valueUnsignedInt,
+    FhirUnsignedInt? valueUnsignedInt,
 
     /// [valueUnsignedIntElement] Extensions for valueUnsignedInt
     @JsonKey(name: '_valueUnsignedInt') Element? valueUnsignedIntElement,
@@ -2328,7 +2328,7 @@ class TaskInput with _$TaskInput {
     @JsonKey(name: '_valueUrl') Element? valueUrlElement,
 
     /// [valueUuid] The value of the input parameter as a basic type.
-    Uuid? valueUuid,
+    FhirUuid? valueUuid,
 
     /// [valueUuidElement] Extensions for valueUuid
     @JsonKey(name: '_valueUuid') Element? valueUuidElement,
@@ -2707,7 +2707,7 @@ class TaskOutput with _$TaskOutput {
     @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
 
     /// [valueId] The value of the Output parameter as a basic type.
-    Id? valueId,
+    FhirId? valueId,
 
     /// [valueIdElement] Extensions for valueId
     @JsonKey(name: '_valueId') Element? valueIdElement,
@@ -2731,13 +2731,13 @@ class TaskOutput with _$TaskOutput {
     @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
 
     /// [valueOid] The value of the Output parameter as a basic type.
-    Oid? valueOid,
+    FhirOid? valueOid,
 
     /// [valueOidElement] Extensions for valueOid
     @JsonKey(name: '_valueOid') Element? valueOidElement,
 
     /// [valuePositiveInt] The value of the Output parameter as a basic type.
-    PositiveInt? valuePositiveInt,
+    FhirPositiveInt? valuePositiveInt,
 
     /// [valuePositiveIntElement] Extensions for valuePositiveInt
     @JsonKey(name: '_valuePositiveInt') Element? valuePositiveIntElement,
@@ -2749,13 +2749,13 @@ class TaskOutput with _$TaskOutput {
     @JsonKey(name: '_valueString') Element? valueStringElement,
 
     /// [valueTime] The value of the Output parameter as a basic type.
-    Time? valueTime,
+    FhirTime? valueTime,
 
     /// [valueTimeElement] Extensions for valueTime
     @JsonKey(name: '_valueTime') Element? valueTimeElement,
 
     /// [valueUnsignedInt] The value of the Output parameter as a basic type.
-    UnsignedInt? valueUnsignedInt,
+    FhirUnsignedInt? valueUnsignedInt,
 
     /// [valueUnsignedIntElement] Extensions for valueUnsignedInt
     @JsonKey(name: '_valueUnsignedInt') Element? valueUnsignedIntElement,
@@ -2773,7 +2773,7 @@ class TaskOutput with _$TaskOutput {
     @JsonKey(name: '_valueUrl') Element? valueUrlElement,
 
     /// [valueUuid] The value of the Output parameter as a basic type.
-    Uuid? valueUuid,
+    FhirUuid? valueUuid,
 
     /// [valueUuidElement] Extensions for valueUuid
     @JsonKey(name: '_valueUuid') Element? valueUuidElement,

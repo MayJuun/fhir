@@ -106,7 +106,7 @@ mixin _$CarePlan {
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @HiveField(12)
   @HiveField(13)
-  List<Canonical>? get instantiatesCanonical =>
+  List<FhirCanonical>? get instantiatesCanonical =>
       throw _privateConstructorUsedError;
   @HiveField(14)
   @HiveField(15)
@@ -280,7 +280,7 @@ abstract class $CarePlanCopyWith<$Res> {
           List<Identifier>? identifier,
       @HiveField(12)
       @HiveField(13)
-          List<Canonical>? instantiatesCanonical,
+          List<FhirCanonical>? instantiatesCanonical,
       @HiveField(14)
       @HiveField(15)
           List<FhirUri>? instantiatesUri,
@@ -467,7 +467,7 @@ class _$CarePlanCopyWithImpl<$Res, $Val extends CarePlan>
       instantiatesCanonical: freezed == instantiatesCanonical
           ? _value.instantiatesCanonical
           : instantiatesCanonical // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       instantiatesUri: freezed == instantiatesUri
           ? _value.instantiatesUri
           : instantiatesUri // ignore: cast_nullable_to_non_nullable
@@ -770,7 +770,7 @@ abstract class _$$_CarePlanCopyWith<$Res> implements $CarePlanCopyWith<$Res> {
           List<Identifier>? identifier,
       @HiveField(12)
       @HiveField(13)
-          List<Canonical>? instantiatesCanonical,
+          List<FhirCanonical>? instantiatesCanonical,
       @HiveField(14)
       @HiveField(15)
           List<FhirUri>? instantiatesUri,
@@ -968,7 +968,7 @@ class __$$_CarePlanCopyWithImpl<$Res>
       instantiatesCanonical: freezed == instantiatesCanonical
           ? _value._instantiatesCanonical
           : instantiatesCanonical // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       instantiatesUri: freezed == instantiatesUri
           ? _value._instantiatesUri
           : instantiatesUri // ignore: cast_nullable_to_non_nullable
@@ -1116,7 +1116,7 @@ class _$_CarePlan extends _CarePlan {
           final List<Identifier>? identifier,
       @HiveField(12)
       @HiveField(13)
-          final List<Canonical>? instantiatesCanonical,
+          final List<FhirCanonical>? instantiatesCanonical,
       @HiveField(14)
       @HiveField(15)
           final List<FhirUri>? instantiatesUri,
@@ -1359,11 +1359,11 @@ class _$_CarePlan extends _CarePlan {
     return EqualUnmodifiableListView(value);
   }
 
-  final List<Canonical>? _instantiatesCanonical;
+  final List<FhirCanonical>? _instantiatesCanonical;
   @override
   @HiveField(12)
   @HiveField(13)
-  List<Canonical>? get instantiatesCanonical {
+  List<FhirCanonical>? get instantiatesCanonical {
     final value = _instantiatesCanonical;
     if (value == null) return null;
     if (_instantiatesCanonical is EqualUnmodifiableListView)
@@ -1819,7 +1819,7 @@ abstract class _CarePlan extends CarePlan {
           final List<Identifier>? identifier,
       @HiveField(12)
       @HiveField(13)
-          final List<Canonical>? instantiatesCanonical,
+          final List<FhirCanonical>? instantiatesCanonical,
       @HiveField(14)
       @HiveField(15)
           final List<FhirUri>? instantiatesUri,
@@ -1986,7 +1986,7 @@ abstract class _CarePlan extends CarePlan {
   @override
   @HiveField(12)
   @HiveField(13)
-  List<Canonical>? get instantiatesCanonical;
+  List<FhirCanonical>? get instantiatesCanonical;
   @override
   @HiveField(14)
   @HiveField(15)
@@ -2733,7 +2733,7 @@ mixin _$CarePlanDetail {
   /// [instantiatesCanonical] The URL pointing to a FHIR-defined protocol,
   /// guideline, questionnaire or other definition that is adhered to in whole
   ///  or in part by this CarePlan activity.
-  List<Canonical>? get instantiatesCanonical =>
+  List<FhirCanonical>? get instantiatesCanonical =>
       throw _privateConstructorUsedError;
 
   /// [instantiatesUri] The URL pointing to an externally maintained protocol,
@@ -2855,7 +2855,7 @@ abstract class $CarePlanDetailCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       Code? kind,
       @JsonKey(name: '_kind') Element? kindElement,
-      List<Canonical>? instantiatesCanonical,
+      List<FhirCanonical>? instantiatesCanonical,
       List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri') List<Element?>? instantiatesUriElement,
       CodeableConcept? code,
@@ -2963,7 +2963,7 @@ class _$CarePlanDetailCopyWithImpl<$Res, $Val extends CarePlanDetail>
       instantiatesCanonical: freezed == instantiatesCanonical
           ? _value.instantiatesCanonical
           : instantiatesCanonical // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       instantiatesUri: freezed == instantiatesUri
           ? _value.instantiatesUri
           : instantiatesUri // ignore: cast_nullable_to_non_nullable
@@ -3243,7 +3243,7 @@ abstract class _$$_CarePlanDetailCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       Code? kind,
       @JsonKey(name: '_kind') Element? kindElement,
-      List<Canonical>? instantiatesCanonical,
+      List<FhirCanonical>? instantiatesCanonical,
       List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri') List<Element?>? instantiatesUriElement,
       CodeableConcept? code,
@@ -3363,7 +3363,7 @@ class __$$_CarePlanDetailCopyWithImpl<$Res>
       instantiatesCanonical: freezed == instantiatesCanonical
           ? _value._instantiatesCanonical
           : instantiatesCanonical // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       instantiatesUri: freezed == instantiatesUri
           ? _value._instantiatesUri
           : instantiatesUri // ignore: cast_nullable_to_non_nullable
@@ -3471,7 +3471,7 @@ class _$_CarePlanDetail extends _CarePlanDetail {
       this.kind,
       @JsonKey(name: '_kind')
           this.kindElement,
-      final List<Canonical>? instantiatesCanonical,
+      final List<FhirCanonical>? instantiatesCanonical,
       final List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
           final List<Element?>? instantiatesUriElement,
@@ -3597,13 +3597,13 @@ class _$_CarePlanDetail extends _CarePlanDetail {
   /// [instantiatesCanonical] The URL pointing to a FHIR-defined protocol,
   /// guideline, questionnaire or other definition that is adhered to in whole
   ///  or in part by this CarePlan activity.
-  final List<Canonical>? _instantiatesCanonical;
+  final List<FhirCanonical>? _instantiatesCanonical;
 
   /// [instantiatesCanonical] The URL pointing to a FHIR-defined protocol,
   /// guideline, questionnaire or other definition that is adhered to in whole
   ///  or in part by this CarePlan activity.
   @override
-  List<Canonical>? get instantiatesCanonical {
+  List<FhirCanonical>? get instantiatesCanonical {
     final value = _instantiatesCanonical;
     if (value == null) return null;
     if (_instantiatesCanonical is EqualUnmodifiableListView)
@@ -3919,7 +3919,7 @@ abstract class _CarePlanDetail extends CarePlanDetail {
       final Code? kind,
       @JsonKey(name: '_kind')
           final Element? kindElement,
-      final List<Canonical>? instantiatesCanonical,
+      final List<FhirCanonical>? instantiatesCanonical,
       final List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
           final List<Element?>? instantiatesUriElement,
@@ -4002,7 +4002,7 @@ abstract class _CarePlanDetail extends CarePlanDetail {
   /// [instantiatesCanonical] The URL pointing to a FHIR-defined protocol,
   /// guideline, questionnaire or other definition that is adhered to in whole
   ///  or in part by this CarePlan activity.
-  List<Canonical>? get instantiatesCanonical;
+  List<FhirCanonical>? get instantiatesCanonical;
   @override
 
   /// [instantiatesUri] The URL pointing to an externally maintained protocol,
@@ -8879,7 +8879,7 @@ mixin _$NutritionOrder {
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @HiveField(12)
   @HiveField(13)
-  List<Canonical>? get instantiatesCanonical =>
+  List<FhirCanonical>? get instantiatesCanonical =>
       throw _privateConstructorUsedError;
   @HiveField(14)
   @HiveField(15)
@@ -9038,7 +9038,7 @@ abstract class $NutritionOrderCopyWith<$Res> {
           List<Identifier>? identifier,
       @HiveField(12)
       @HiveField(13)
-          List<Canonical>? instantiatesCanonical,
+          List<FhirCanonical>? instantiatesCanonical,
       @HiveField(14)
       @HiveField(15)
           List<FhirUri>? instantiatesUri,
@@ -9200,7 +9200,7 @@ class _$NutritionOrderCopyWithImpl<$Res, $Val extends NutritionOrder>
       instantiatesCanonical: freezed == instantiatesCanonical
           ? _value.instantiatesCanonical
           : instantiatesCanonical // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       instantiatesUri: freezed == instantiatesUri
           ? _value.instantiatesUri
           : instantiatesUri // ignore: cast_nullable_to_non_nullable
@@ -9465,7 +9465,7 @@ abstract class _$$_NutritionOrderCopyWith<$Res>
           List<Identifier>? identifier,
       @HiveField(12)
       @HiveField(13)
-          List<Canonical>? instantiatesCanonical,
+          List<FhirCanonical>? instantiatesCanonical,
       @HiveField(14)
       @HiveField(15)
           List<FhirUri>? instantiatesUri,
@@ -9637,7 +9637,7 @@ class __$$_NutritionOrderCopyWithImpl<$Res>
       instantiatesCanonical: freezed == instantiatesCanonical
           ? _value._instantiatesCanonical
           : instantiatesCanonical // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       instantiatesUri: freezed == instantiatesUri
           ? _value._instantiatesUri
           : instantiatesUri // ignore: cast_nullable_to_non_nullable
@@ -9757,7 +9757,7 @@ class _$_NutritionOrder extends _NutritionOrder {
           final List<Identifier>? identifier,
       @HiveField(12)
       @HiveField(13)
-          final List<Canonical>? instantiatesCanonical,
+          final List<FhirCanonical>? instantiatesCanonical,
       @HiveField(14)
       @HiveField(15)
           final List<FhirUri>? instantiatesUri,
@@ -9977,11 +9977,11 @@ class _$_NutritionOrder extends _NutritionOrder {
     return EqualUnmodifiableListView(value);
   }
 
-  final List<Canonical>? _instantiatesCanonical;
+  final List<FhirCanonical>? _instantiatesCanonical;
   @override
   @HiveField(12)
   @HiveField(13)
-  List<Canonical>? get instantiatesCanonical {
+  List<FhirCanonical>? get instantiatesCanonical {
     final value = _instantiatesCanonical;
     if (value == null) return null;
     if (_instantiatesCanonical is EqualUnmodifiableListView)
@@ -10375,7 +10375,7 @@ abstract class _NutritionOrder extends NutritionOrder {
           final List<Identifier>? identifier,
       @HiveField(12)
       @HiveField(13)
-          final List<Canonical>? instantiatesCanonical,
+          final List<FhirCanonical>? instantiatesCanonical,
       @HiveField(14)
       @HiveField(15)
           final List<FhirUri>? instantiatesUri,
@@ -10525,7 +10525,7 @@ abstract class _NutritionOrder extends NutritionOrder {
   @override
   @HiveField(12)
   @HiveField(13)
-  List<Canonical>? get instantiatesCanonical;
+  List<FhirCanonical>? get instantiatesCanonical;
   @override
   @HiveField(14)
   @HiveField(15)
@@ -14105,7 +14105,7 @@ mixin _$RequestGroup {
   /// protocol, guideline, orderset or other definition that is adhered to in
   ///  whole or in part by this request.
   @HiveField(12)
-  List<Canonical>? get instantiatesCanonical =>
+  List<FhirCanonical>? get instantiatesCanonical =>
       throw _privateConstructorUsedError;
   @JsonKey(name: '_instantiatesCanonical')
   @HiveField(13)
@@ -14253,7 +14253,7 @@ abstract class $RequestGroupCopyWith<$Res> {
       @HiveField(11)
           List<Identifier>? identifier,
       @HiveField(12)
-          List<Canonical>? instantiatesCanonical,
+          List<FhirCanonical>? instantiatesCanonical,
       @JsonKey(name: '_instantiatesCanonical')
       @HiveField(13)
           List<Element>? instantiatesCanonicalElement,
@@ -14422,7 +14422,7 @@ class _$RequestGroupCopyWithImpl<$Res, $Val extends RequestGroup>
       instantiatesCanonical: freezed == instantiatesCanonical
           ? _value.instantiatesCanonical
           : instantiatesCanonical // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       instantiatesCanonicalElement: freezed == instantiatesCanonicalElement
           ? _value.instantiatesCanonicalElement
           : instantiatesCanonicalElement // ignore: cast_nullable_to_non_nullable
@@ -14709,7 +14709,7 @@ abstract class _$$_RequestGroupCopyWith<$Res>
       @HiveField(11)
           List<Identifier>? identifier,
       @HiveField(12)
-          List<Canonical>? instantiatesCanonical,
+          List<FhirCanonical>? instantiatesCanonical,
       @JsonKey(name: '_instantiatesCanonical')
       @HiveField(13)
           List<Element>? instantiatesCanonicalElement,
@@ -14889,7 +14889,7 @@ class __$$_RequestGroupCopyWithImpl<$Res>
       instantiatesCanonical: freezed == instantiatesCanonical
           ? _value._instantiatesCanonical
           : instantiatesCanonical // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       instantiatesCanonicalElement: freezed == instantiatesCanonicalElement
           ? _value._instantiatesCanonicalElement
           : instantiatesCanonicalElement // ignore: cast_nullable_to_non_nullable
@@ -15016,7 +15016,7 @@ class _$_RequestGroup extends _RequestGroup {
       @HiveField(11)
           final List<Identifier>? identifier,
       @HiveField(12)
-          final List<Canonical>? instantiatesCanonical,
+          final List<FhirCanonical>? instantiatesCanonical,
       @JsonKey(name: '_instantiatesCanonical')
       @HiveField(13)
           final List<Element>? instantiatesCanonicalElement,
@@ -15243,14 +15243,14 @@ class _$_RequestGroup extends _RequestGroup {
   /// [instantiatesCanonical] A canonical URL referencing a FHIR-defined
   /// protocol, guideline, orderset or other definition that is adhered to in
   ///  whole or in part by this request.
-  final List<Canonical>? _instantiatesCanonical;
+  final List<FhirCanonical>? _instantiatesCanonical;
 
   /// [instantiatesCanonical] A canonical URL referencing a FHIR-defined
   /// protocol, guideline, orderset or other definition that is adhered to in
   ///  whole or in part by this request.
   @override
   @HiveField(12)
-  List<Canonical>? get instantiatesCanonical {
+  List<FhirCanonical>? get instantiatesCanonical {
     final value = _instantiatesCanonical;
     if (value == null) return null;
     if (_instantiatesCanonical is EqualUnmodifiableListView)
@@ -15625,7 +15625,7 @@ abstract class _RequestGroup extends RequestGroup {
       @HiveField(11)
           final List<Identifier>? identifier,
       @HiveField(12)
-          final List<Canonical>? instantiatesCanonical,
+          final List<FhirCanonical>? instantiatesCanonical,
       @JsonKey(name: '_instantiatesCanonical')
       @HiveField(13)
           final List<Element>? instantiatesCanonicalElement,
@@ -15782,7 +15782,7 @@ abstract class _RequestGroup extends RequestGroup {
   /// protocol, guideline, orderset or other definition that is adhered to in
   ///  whole or in part by this request.
   @HiveField(12)
-  List<Canonical>? get instantiatesCanonical;
+  List<FhirCanonical>? get instantiatesCanonical;
   @override
   @JsonKey(name: '_instantiatesCanonical')
   @HiveField(13)
@@ -18171,7 +18171,7 @@ mixin _$RequestGroupRelatedAction {
       throw _privateConstructorUsedError;
 
   /// [actionId] The element id of the action this is related to.
-  Id? get actionId => throw _privateConstructorUsedError;
+  FhirId? get actionId => throw _privateConstructorUsedError;
 
   /// [actionIdElement] Extensions for actionId
   @JsonKey(name: '_actionId')
@@ -18208,7 +18208,7 @@ abstract class $RequestGroupRelatedActionCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Id? actionId,
+      FhirId? actionId,
       @JsonKey(name: '_actionId') Element? actionIdElement,
       Code? relationship,
       @JsonKey(name: '_relationship') Element? relationshipElement,
@@ -18347,7 +18347,7 @@ abstract class _$$_RequestGroupRelatedActionCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Id? actionId,
+      FhirId? actionId,
       @JsonKey(name: '_actionId') Element? actionIdElement,
       Code? relationship,
       @JsonKey(name: '_relationship') Element? relationshipElement,
@@ -18517,7 +18517,7 @@ class _$_RequestGroupRelatedAction extends _RequestGroupRelatedAction {
 
   /// [actionId] The element id of the action this is related to.
   @override
-  final Id? actionId;
+  final FhirId? actionId;
 
   /// [actionIdElement] Extensions for actionId
   @override
@@ -18606,7 +18606,7 @@ abstract class _RequestGroupRelatedAction extends RequestGroupRelatedAction {
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final Id? actionId,
+      final FhirId? actionId,
       @JsonKey(name: '_actionId') final Element? actionIdElement,
       final Code? relationship,
       @JsonKey(name: '_relationship') final Element? relationshipElement,
@@ -18651,7 +18651,7 @@ abstract class _RequestGroupRelatedAction extends RequestGroupRelatedAction {
   @override
 
   /// [actionId] The element id of the action this is related to.
-  Id? get actionId;
+  FhirId? get actionId;
   @override
 
   /// [actionIdElement] Extensions for actionId
@@ -21303,7 +21303,7 @@ mixin _$ServiceRequest {
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @HiveField(12)
   @HiveField(13)
-  List<Canonical>? get instantiatesCanonical =>
+  List<FhirCanonical>? get instantiatesCanonical =>
       throw _privateConstructorUsedError;
   @HiveField(14)
   @HiveField(15)
@@ -21582,7 +21582,7 @@ abstract class $ServiceRequestCopyWith<$Res> {
           List<Identifier>? identifier,
       @HiveField(12)
       @HiveField(13)
-          List<Canonical>? instantiatesCanonical,
+          List<FhirCanonical>? instantiatesCanonical,
       @HiveField(14)
       @HiveField(15)
           List<FhirUri>? instantiatesUri,
@@ -21841,7 +21841,7 @@ class _$ServiceRequestCopyWithImpl<$Res, $Val extends ServiceRequest>
       instantiatesCanonical: freezed == instantiatesCanonical
           ? _value.instantiatesCanonical
           : instantiatesCanonical // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       instantiatesUri: freezed == instantiatesUri
           ? _value.instantiatesUri
           : instantiatesUri // ignore: cast_nullable_to_non_nullable
@@ -22350,7 +22350,7 @@ abstract class _$$_ServiceRequestCopyWith<$Res>
           List<Identifier>? identifier,
       @HiveField(12)
       @HiveField(13)
-          List<Canonical>? instantiatesCanonical,
+          List<FhirCanonical>? instantiatesCanonical,
       @HiveField(14)
       @HiveField(15)
           List<FhirUri>? instantiatesUri,
@@ -22631,7 +22631,7 @@ class __$$_ServiceRequestCopyWithImpl<$Res>
       instantiatesCanonical: freezed == instantiatesCanonical
           ? _value._instantiatesCanonical
           : instantiatesCanonical // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       instantiatesUri: freezed == instantiatesUri
           ? _value._instantiatesUri
           : instantiatesUri // ignore: cast_nullable_to_non_nullable
@@ -22851,7 +22851,7 @@ class _$_ServiceRequest extends _ServiceRequest {
           final List<Identifier>? identifier,
       @HiveField(12)
       @HiveField(13)
-          final List<Canonical>? instantiatesCanonical,
+          final List<FhirCanonical>? instantiatesCanonical,
       @HiveField(14)
       @HiveField(15)
           final List<FhirUri>? instantiatesUri,
@@ -23139,11 +23139,11 @@ class _$_ServiceRequest extends _ServiceRequest {
     return EqualUnmodifiableListView(value);
   }
 
-  final List<Canonical>? _instantiatesCanonical;
+  final List<FhirCanonical>? _instantiatesCanonical;
   @override
   @HiveField(12)
   @HiveField(13)
-  List<Canonical>? get instantiatesCanonical {
+  List<FhirCanonical>? get instantiatesCanonical {
     final value = _instantiatesCanonical;
     if (value == null) return null;
     if (_instantiatesCanonical is EqualUnmodifiableListView)
@@ -23823,7 +23823,7 @@ abstract class _ServiceRequest extends ServiceRequest {
           final List<Identifier>? identifier,
       @HiveField(12)
       @HiveField(13)
-          final List<Canonical>? instantiatesCanonical,
+          final List<FhirCanonical>? instantiatesCanonical,
       @HiveField(14)
       @HiveField(15)
           final List<FhirUri>? instantiatesUri,
@@ -24033,7 +24033,7 @@ abstract class _ServiceRequest extends ServiceRequest {
   @override
   @HiveField(12)
   @HiveField(13)
-  List<Canonical>? get instantiatesCanonical;
+  List<FhirCanonical>? get instantiatesCanonical;
   @override
   @HiveField(14)
   @HiveField(15)

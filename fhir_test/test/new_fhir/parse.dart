@@ -65,7 +65,7 @@ Future<void> main() async {
 
       /// This is just all the basic class code that is present for all classes
       final className = activeKey == 'List'
-          ? 'List_'
+          ? 'FhirList'
           : activeKey == 'Duration'
               ? 'FhirDuration'
               : activeKey;
@@ -107,8 +107,8 @@ Future<void> main() async {
         if (entryKey == 'resourceType' && allTypes.keys.contains(activeKey)) {
           currentClass += '/// [$entryKey] ${entryValue['description']}\n';
           currentClass +=
-              '@Default(R5ResourceType.${activeKey == "List" ? "List_" : activeKey}) '
-              '@JsonKey(unknownEnumValue: R5ResourceType.${activeKey == "List" ? "List_" : activeKey})';
+              '@Default(R5ResourceType.${activeKey == "List" ? "FhirList" : activeKey}) '
+              '@JsonKey(unknownEnumValue: R5ResourceType.${activeKey == "List" ? "FhirList" : activeKey})';
           currentClass += '\nR5ResourceType resourceType,\n';
         } else {
           var fieldName = getFieldName(entryKey);

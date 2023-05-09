@@ -15,7 +15,7 @@ class CapabilityStatementUsCore extends Resource {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -151,14 +151,14 @@ class CapabilityStatementUsCore extends Resource {
     /// service. The server may actually implement a subset of the capability
     /// statement it claims to implement, so the capability statement must specify
     ///  the full capability details.
-    List<Canonical>? instantiates,
+    List<FhirCanonical>? instantiates,
 
     /// [imports] Reference to a canonical URL of another CapabilityStatement
     /// that this software adds to. The capability statement automatically
     /// includes everything in the other statement, and it is not duplicated,
     /// though the server may repeat the same resources, interactions and
     ///  operations to add additional details to them.
-    List<Canonical>? imports,
+    List<FhirCanonical>? imports,
 
     /// [software] Software that is covered by this capability statement.  It is
     /// used when the capability statement describes the capabilities of a
@@ -177,15 +177,15 @@ class CapabilityStatementUsCore extends Resource {
 
     /// [format] A list of the formats supported by this implementation using
     ///  their content types.
-    List<Code>? format,
+    List<FhirCode>? format,
 
     /// [patchFormat] A list of the patch formats supported by this
     ///  implementation using their content types.
-    List<Code>? patchFormat,
+    List<FhirCode>? patchFormat,
 
     /// [implementationGuide] A list of implementation guides that the server
     ///  does (or should) support in their entirety.
-    List<Canonical>? implementationGuide,
+    List<FhirCanonical>? implementationGuide,
 
     /// [rest] A definition of the restful capabilities of the solution, if any.
     List<CapabilityStatementRest>? rest,
@@ -246,7 +246,7 @@ class CapabilityStatementUsCore extends Resource {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  Meta? get meta => _capabilityStatement.meta;
+  FhirMeta? get meta => _capabilityStatement.meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -383,14 +383,14 @@ class CapabilityStatementUsCore extends Resource {
   /// service. The server may actually implement a subset of the capability
   /// statement it claims to implement, so the capability statement must specify
   ///  the full capability details.
-  List<Canonical>? get instantiates => _capabilityStatement.instantiates;
+  List<FhirCanonical>? get instantiates => _capabilityStatement.instantiates;
 
   /// [imports] Reference to a canonical URL of another CapabilityStatement
   /// that this software adds to. The capability statement automatically
   /// includes everything in the other statement, and it is not duplicated,
   /// though the server may repeat the same resources, interactions and
   ///  operations to add additional details to them.
-  List<Canonical>? get imports => _capabilityStatement.imports;
+  List<FhirCanonical>? get imports => _capabilityStatement.imports;
 
   /// [software] Software that is covered by this capability statement.  It is
   /// used when the capability statement describes the capabilities of a
@@ -410,15 +410,15 @@ class CapabilityStatementUsCore extends Resource {
 
   /// [format] A list of the formats supported by this implementation using
   ///  their content types.
-  List<Code>? get format => _capabilityStatement.format;
+  List<FhirCode>? get format => _capabilityStatement.format;
 
   /// [patchFormat] A list of the patch formats supported by this
   ///  implementation using their content types.
-  List<Code>? get patchFormat => _capabilityStatement.patchFormat;
+  List<FhirCode>? get patchFormat => _capabilityStatement.patchFormat;
 
   /// [implementationGuide] A list of implementation guides that the server
   ///  does (or should) support in their entirety.
-  List<Canonical>? get implementationGuide =>
+  List<FhirCanonical>? get implementationGuide =>
       _capabilityStatement.implementationGuide;
 
   /// [rest] A definition of the restful capabilities of the solution, if any.
@@ -744,7 +744,7 @@ class CapabilityStatementRestUsCore {
     /// [compartment] An absolute URI which is a reference to the definition of a
     /// compartment that the system supports. The reference is to a
     ///  CompartmentDefinition resource by its canonical URL .
-    List<Canonical>? compartment,
+    List<FhirCanonical>? compartment,
   }) =>
       CapabilityStatementRestUsCore._(CapabilityStatementRest(
         id: id,
@@ -838,7 +838,7 @@ class CapabilityStatementRestUsCore {
   /// [compartment] An absolute URI which is a reference to the definition of a
   /// compartment that the system supports. The reference is to a
   ///  CompartmentDefinition resource by its canonical URL .
-  List<Canonical>? get compartment => _capabilityStatementRest.compartment;
+  List<FhirCanonical>? get compartment => _capabilityStatementRest.compartment;
 }
 
 /// [CapabilityStatementSecurityUsCore] A Capability Statement documents a set of
@@ -1009,7 +1009,7 @@ class CapabilityStatementResourceUsCore {
     /// the system will search by this profile and process data according to the
     /// guidance implicit in the profile. See further discussion in [Using
     ///  Profiles](profiling.html#profile-uses).
-    List<Canonical>? supportedProfile,
+    List<FhirCanonical>? supportedProfile,
 
     /// [documentation] Additional information about the resource type used by
     ///  the system.
@@ -1055,7 +1055,7 @@ class CapabilityStatementResourceUsCore {
 
     /// [referencePolicy] A set of flags that defines how references are
     ///  supported.
-    List<Code>? referencePolicy,
+    List<FhirCode>? referencePolicy,
 
     /// [searchInclude] A list of _include values supported by the server.
     List<String>? searchInclude,
@@ -1156,7 +1156,7 @@ class CapabilityStatementResourceUsCore {
   /// the system will search by this profile and process data according to the
   /// guidance implicit in the profile. See further discussion in [Using
   ///  Profiles](profiling.html#profile-uses).
-  List<Canonical>? get supportedProfile =>
+  List<FhirCanonical>? get supportedProfile =>
       _capabilityStatementResource.supportedProfile;
 
   /// [documentation] Additional information about the resource type used by
@@ -1206,7 +1206,7 @@ class CapabilityStatementResourceUsCore {
 
   /// [referencePolicy] A set of flags that defines how references are
   ///  supported.
-  List<Code>? get referencePolicy =>
+  List<FhirCode>? get referencePolicy =>
       _capabilityStatementResource.referencePolicy;
 
   /// [searchInclude] A list of _include values supported by the server.
@@ -1536,7 +1536,7 @@ class CapabilityStatementOperationUsCore {
     /// custom [[[OperationDefinition]]] with a 'base' of the original
     /// OperationDefinition.  The custom definition would describe the specific
     ///  subset of functionality supported.
-    required Canonical definition,
+    required FhirCanonical definition,
 
     /// [documentation] Documentation that describes anything special about the
     /// operation behavior, possibly detailing different behavior for system, type
@@ -1775,7 +1775,7 @@ class CapabilityStatementMessagingUsCore {
     /// [reliableCache] Length if the receiver's reliable messaging cache in
     /// minutes (if a receiver) or how long the cache length on the receiver
     ///  should be (if a sender).
-    UnsignedInt? reliableCache,
+    FhirUnsignedInt? reliableCache,
 
     /// [documentation] Documentation about the system's messaging capabilities
     /// for this endpoint not otherwise documented by the capability statement.
@@ -1846,7 +1846,8 @@ class CapabilityStatementMessagingUsCore {
   /// [reliableCache] Length if the receiver's reliable messaging cache in
   /// minutes (if a receiver) or how long the cache length on the receiver
   ///  should be (if a sender).
-  UnsignedInt? get reliableCache => _capabilityStatementMessaging.reliableCache;
+  FhirUnsignedInt? get reliableCache =>
+      _capabilityStatementMessaging.reliableCache;
 
   /// [documentation] Documentation about the system's messaging capabilities
   /// for this endpoint not otherwise documented by the capability statement.
@@ -2010,7 +2011,7 @@ class CapabilityStatementSupportedMessageUsCore {
 
     /// [definition] Points to a message definition that identifies the messaging
     ///  event, message structure, allowed responses, etc.
-    required Canonical definition,
+    required FhirCanonical definition,
   }) =>
       CapabilityStatementSupportedMessageUsCore._(
           CapabilityStatementSupportedMessage(
@@ -2116,7 +2117,7 @@ class CapabilityStatementDocumentUsCore {
 
     /// [profile] A profile on the document Bundle that constrains which
     ///  resources are present, and their contents.
-    required Canonical profile,
+    required FhirCanonical profile,
   }) =>
       CapabilityStatementDocumentUsCore._(CapabilityStatementDocument(
         id: id,

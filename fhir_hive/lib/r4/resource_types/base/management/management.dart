@@ -809,7 +809,7 @@ class EncounterDiagnosis with _$EncounterDiagnosis {
     CodeableConcept? use,
 
     /// [rank] Ranking of the diagnosis (for each role type).
-    PositiveInt? rank,
+    FhirPositiveInt? rank,
 
     /// [rankElement] Extensions for rank
     @JsonKey(name: '_rank') Element? rankElement,
@@ -1589,7 +1589,7 @@ class EpisodeOfCareDiagnosis with _$EpisodeOfCareDiagnosis {
     CodeableConcept? role,
 
     /// [rank] Ranking of the diagnosis (for each role type).
-    PositiveInt? rank,
+    FhirPositiveInt? rank,
 
     /// [rankElement] Extensions for rank
     @JsonKey(name: '_rank') Element? rankElement,

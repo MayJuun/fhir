@@ -106,7 +106,7 @@ Resource _resourceFromJson(Map<String, dynamic> json) {
     case 'ImplementationGuide':
       return ImplementationGuide.fromJson(json);
     case 'List':
-      return List_.fromJson(json);
+      return FhirList.fromJson(json);
     case 'Location':
       return Location.fromJson(json);
     case 'Media':

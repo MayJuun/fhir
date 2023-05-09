@@ -6,9 +6,9 @@ class GoalUsCore extends Resource {
 
   factory GoalUsCore({
     String? id,
-    Meta? meta,
+    FhirMeta? meta,
     Narrative? text,
-    required Code lifecycleStatus,
+    required FhirCode lifecycleStatus,
     CodeableConcept? achievementStatus,
     required CodeableConcept description,
     required Reference subject,
@@ -26,7 +26,7 @@ class GoalUsCore extends Resource {
       ));
 
   factory GoalUsCore.simple({
-    required Code lifecycleStatus,
+    required FhirCode lifecycleStatus,
     required CodeableConcept description,
     required Reference subject,
     List<GoalTarget>? target,
@@ -39,7 +39,7 @@ class GoalUsCore extends Resource {
       );
 
   factory GoalUsCore.minimum({
-    required Code lifecycleStatus,
+    required FhirCode lifecycleStatus,
     required CodeableConcept description,
     required Reference subject,
   }) =>
@@ -52,7 +52,7 @@ class GoalUsCore extends Resource {
   Goal _goal;
   Goal get value => _goal;
   String? get id => _goal.id;
-  Meta? get meta => _goal.meta;
+  FhirMeta? get meta => _goal.meta;
   Narrative? get text => _goal.text;
   Code? get lifecycleStatus => _goal.lifecycleStatus;
   CodeableConcept? get achievementStatus => _goal.achievementStatus;

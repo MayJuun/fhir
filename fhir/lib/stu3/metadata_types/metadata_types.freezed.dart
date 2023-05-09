@@ -1600,7 +1600,7 @@ mixin _$DataRequirementCodeFilter {
   @JsonKey(name: '_valueSetString')
   Element? get valueSetStringElement => throw _privateConstructorUsedError;
   Reference? get valueSetReference => throw _privateConstructorUsedError;
-  List<Code>? get valueCode => throw _privateConstructorUsedError;
+  List<FhirCode>? get valueCode => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueCode')
   List<Element?>? get valueCodeElement => throw _privateConstructorUsedError;
   List<Coding>? get valueCoding => throw _privateConstructorUsedError;
@@ -1625,7 +1625,7 @@ abstract class $DataRequirementCodeFilterCopyWith<$Res> {
       String? valueSetString,
       @JsonKey(name: '_valueSetString') Element? valueSetStringElement,
       Reference? valueSetReference,
-      List<Code>? valueCode,
+      List<FhirCode>? valueCode,
       @JsonKey(name: '_valueCode') List<Element?>? valueCodeElement,
       List<Coding>? valueCoding,
       List<CodeableConcept>? valueCodeableConcept});
@@ -1683,7 +1683,7 @@ class _$DataRequirementCodeFilterCopyWithImpl<$Res,
       valueCode: freezed == valueCode
           ? _value.valueCode
           : valueCode // ignore: cast_nullable_to_non_nullable
-              as List<Code>?,
+              as List<FhirCode>?,
       valueCodeElement: freezed == valueCodeElement
           ? _value.valueCodeElement
           : valueCodeElement // ignore: cast_nullable_to_non_nullable
@@ -1751,7 +1751,7 @@ abstract class _$$_DataRequirementCodeFilterCopyWith<$Res>
       String? valueSetString,
       @JsonKey(name: '_valueSetString') Element? valueSetStringElement,
       Reference? valueSetReference,
-      List<Code>? valueCode,
+      List<FhirCode>? valueCode,
       @JsonKey(name: '_valueCode') List<Element?>? valueCodeElement,
       List<Coding>? valueCoding,
       List<CodeableConcept>? valueCodeableConcept});
@@ -1811,7 +1811,7 @@ class __$$_DataRequirementCodeFilterCopyWithImpl<$Res>
       valueCode: freezed == valueCode
           ? _value._valueCode
           : valueCode // ignore: cast_nullable_to_non_nullable
-              as List<Code>?,
+              as List<FhirCode>?,
       valueCodeElement: freezed == valueCodeElement
           ? _value._valueCodeElement
           : valueCodeElement // ignore: cast_nullable_to_non_nullable
@@ -1837,7 +1837,7 @@ class _$_DataRequirementCodeFilter extends _DataRequirementCodeFilter {
       this.valueSetString,
       @JsonKey(name: '_valueSetString') this.valueSetStringElement,
       this.valueSetReference,
-      final List<Code>? valueCode,
+      final List<FhirCode>? valueCode,
       @JsonKey(name: '_valueCode') final List<Element?>? valueCodeElement,
       final List<Coding>? valueCoding,
       final List<CodeableConcept>? valueCodeableConcept})
@@ -1862,9 +1862,9 @@ class _$_DataRequirementCodeFilter extends _DataRequirementCodeFilter {
   final Element? valueSetStringElement;
   @override
   final Reference? valueSetReference;
-  final List<Code>? _valueCode;
+  final List<FhirCode>? _valueCode;
   @override
-  List<Code>? get valueCode {
+  List<FhirCode>? get valueCode {
     final value = _valueCode;
     if (value == null) return null;
     if (_valueCode is EqualUnmodifiableListView) return _valueCode;
@@ -1970,7 +1970,7 @@ abstract class _DataRequirementCodeFilter extends DataRequirementCodeFilter {
       final String? valueSetString,
       @JsonKey(name: '_valueSetString') final Element? valueSetStringElement,
       final Reference? valueSetReference,
-      final List<Code>? valueCode,
+      final List<FhirCode>? valueCode,
       @JsonKey(name: '_valueCode') final List<Element?>? valueCodeElement,
       final List<Coding>? valueCoding,
       final List<CodeableConcept>?
@@ -1993,7 +1993,7 @@ abstract class _DataRequirementCodeFilter extends DataRequirementCodeFilter {
   @override
   Reference? get valueSetReference;
   @override
-  List<Code>? get valueCode;
+  List<FhirCode>? get valueCode;
   @override
   @JsonKey(name: '_valueCode')
   List<Element?>? get valueCodeElement;

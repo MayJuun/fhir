@@ -152,7 +152,7 @@ mixin _$Group {
   /// [quantity] A count of the number of resource instances that are part of
   ///  the group.
   @HiveField(21)
-  UnsignedInt? get quantity => throw _privateConstructorUsedError;
+  FhirUnsignedInt? get quantity => throw _privateConstructorUsedError;
 
   /// [quantityElement] Extensions for quantity
   @JsonKey(name: '_quantity')
@@ -236,7 +236,7 @@ abstract class $GroupCopyWith<$Res> {
       @HiveField(20)
           Element? nameElement,
       @HiveField(21)
-          UnsignedInt? quantity,
+          FhirUnsignedInt? quantity,
       @JsonKey(name: '_quantity')
       @HiveField(22)
           Element? quantityElement,
@@ -599,7 +599,7 @@ abstract class _$$_GroupCopyWith<$Res> implements $GroupCopyWith<$Res> {
       @HiveField(20)
           Element? nameElement,
       @HiveField(21)
-          UnsignedInt? quantity,
+          FhirUnsignedInt? quantity,
       @JsonKey(name: '_quantity')
       @HiveField(22)
           Element? quantityElement,
@@ -1431,7 +1431,7 @@ abstract class _Group extends Group {
   /// [quantity] A count of the number of resource instances that are part of
   ///  the group.
   @HiveField(21)
-  UnsignedInt? get quantity;
+  FhirUnsignedInt? get quantity;
   @override
 
   /// [quantityElement] Extensions for quantity
@@ -11204,7 +11204,7 @@ mixin _$PractitionerRoleAvailableTime {
 
   /// [daysOfWeek] Indicates which days of the week are available between the
   ///  start and end Times.
-  List<Code>? get daysOfWeek => throw _privateConstructorUsedError;
+  List<FhirCode>? get daysOfWeek => throw _privateConstructorUsedError;
 
   /// [daysOfWeekElement] Extensions for daysOfWeek
   @JsonKey(name: '_daysOfWeek')
@@ -11220,7 +11220,7 @@ mixin _$PractitionerRoleAvailableTime {
 
   /// [availableStartTime] The opening time of day. Note: If the AllDay flag is
   ///  set, then this time is ignored.
-  Time? get availableStartTime => throw _privateConstructorUsedError;
+  FhirTime? get availableStartTime => throw _privateConstructorUsedError;
 
   /// [availableStartTimeElement] Extensions for availableStartTime
   @JsonKey(name: '_availableStartTime')
@@ -11228,7 +11228,7 @@ mixin _$PractitionerRoleAvailableTime {
 
   /// [availableEndTime] The closing time of day. Note: If the AllDay flag is
   ///  set, then this time is ignored.
-  Time? get availableEndTime => throw _privateConstructorUsedError;
+  FhirTime? get availableEndTime => throw _privateConstructorUsedError;
 
   /// [availableEndTimeElement] Extensions for availableEndTime
   @JsonKey(name: '_availableEndTime')
@@ -11252,13 +11252,13 @@ abstract class $PractitionerRoleAvailableTimeCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      List<Code>? daysOfWeek,
+      List<FhirCode>? daysOfWeek,
       @JsonKey(name: '_daysOfWeek') List<Element?>? daysOfWeekElement,
       Boolean? allDay,
       @JsonKey(name: '_allDay') Element? allDayElement,
-      Time? availableStartTime,
+      FhirTime? availableStartTime,
       @JsonKey(name: '_availableStartTime') Element? availableStartTimeElement,
-      Time? availableEndTime,
+      FhirTime? availableEndTime,
       @JsonKey(name: '_availableEndTime') Element? availableEndTimeElement});
 
   $ElementCopyWith<$Res>? get allDayElement;
@@ -11308,7 +11308,7 @@ class _$PractitionerRoleAvailableTimeCopyWithImpl<$Res,
       daysOfWeek: freezed == daysOfWeek
           ? _value.daysOfWeek
           : daysOfWeek // ignore: cast_nullable_to_non_nullable
-              as List<Code>?,
+              as List<FhirCode>?,
       daysOfWeekElement: freezed == daysOfWeekElement
           ? _value.daysOfWeekElement
           : daysOfWeekElement // ignore: cast_nullable_to_non_nullable
@@ -11390,13 +11390,13 @@ abstract class _$$_PractitionerRoleAvailableTimeCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      List<Code>? daysOfWeek,
+      List<FhirCode>? daysOfWeek,
       @JsonKey(name: '_daysOfWeek') List<Element?>? daysOfWeekElement,
       Boolean? allDay,
       @JsonKey(name: '_allDay') Element? allDayElement,
-      Time? availableStartTime,
+      FhirTime? availableStartTime,
       @JsonKey(name: '_availableStartTime') Element? availableStartTimeElement,
-      Time? availableEndTime,
+      FhirTime? availableEndTime,
       @JsonKey(name: '_availableEndTime') Element? availableEndTimeElement});
 
   @override
@@ -11448,7 +11448,7 @@ class __$$_PractitionerRoleAvailableTimeCopyWithImpl<$Res>
       daysOfWeek: freezed == daysOfWeek
           ? _value._daysOfWeek
           : daysOfWeek // ignore: cast_nullable_to_non_nullable
-              as List<Code>?,
+              as List<FhirCode>?,
       daysOfWeekElement: freezed == daysOfWeekElement
           ? _value._daysOfWeekElement
           : daysOfWeekElement // ignore: cast_nullable_to_non_nullable
@@ -11488,7 +11488,7 @@ class _$_PractitionerRoleAvailableTime extends _PractitionerRoleAvailableTime {
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final List<Code>? daysOfWeek,
+      final List<FhirCode>? daysOfWeek,
       @JsonKey(name: '_daysOfWeek') final List<Element?>? daysOfWeekElement,
       this.allDay,
       @JsonKey(name: '_allDay') this.allDayElement,
@@ -11575,12 +11575,12 @@ class _$_PractitionerRoleAvailableTime extends _PractitionerRoleAvailableTime {
 
   /// [daysOfWeek] Indicates which days of the week are available between the
   ///  start and end Times.
-  final List<Code>? _daysOfWeek;
+  final List<FhirCode>? _daysOfWeek;
 
   /// [daysOfWeek] Indicates which days of the week are available between the
   ///  start and end Times.
   @override
-  List<Code>? get daysOfWeek {
+  List<FhirCode>? get daysOfWeek {
     final value = _daysOfWeek;
     if (value == null) return null;
     if (_daysOfWeek is EqualUnmodifiableListView) return _daysOfWeek;
@@ -11705,7 +11705,7 @@ abstract class _PractitionerRoleAvailableTime
           @JsonKey(name: 'extension')
               final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
-          final List<Code>? daysOfWeek,
+          final List<FhirCode>? daysOfWeek,
           @JsonKey(name: '_daysOfWeek')
               final List<Element?>? daysOfWeekElement,
           final Boolean? allDay,
@@ -11758,7 +11758,7 @@ abstract class _PractitionerRoleAvailableTime
 
   /// [daysOfWeek] Indicates which days of the week are available between the
   ///  start and end Times.
-  List<Code>? get daysOfWeek;
+  List<FhirCode>? get daysOfWeek;
   @override
 
   /// [daysOfWeekElement] Extensions for daysOfWeek
@@ -11778,7 +11778,7 @@ abstract class _PractitionerRoleAvailableTime
 
   /// [availableStartTime] The opening time of day. Note: If the AllDay flag is
   ///  set, then this time is ignored.
-  Time? get availableStartTime;
+  FhirTime? get availableStartTime;
   @override
 
   /// [availableStartTimeElement] Extensions for availableStartTime
@@ -11788,7 +11788,7 @@ abstract class _PractitionerRoleAvailableTime
 
   /// [availableEndTime] The closing time of day. Note: If the AllDay flag is
   ///  set, then this time is ignored.
-  Time? get availableEndTime;
+  FhirTime? get availableEndTime;
   @override
 
   /// [availableEndTimeElement] Extensions for availableEndTime

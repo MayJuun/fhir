@@ -138,7 +138,7 @@ class BiologicallyDerivedProduct with Resource, _$BiologicallyDerivedProduct {
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
     ///  always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     ///  the resource was constructed, and which must be understood when
@@ -798,7 +798,7 @@ class Device with Resource, _$Device {
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
     ///  always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     ///  the resource was constructed, and which must be understood when
@@ -2204,7 +2204,7 @@ class DeviceMetric with Resource, _$DeviceMetric {
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
     ///  always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     ///  the resource was constructed, and which must be understood when
@@ -2595,7 +2595,7 @@ class NutritionProduct with Resource, _$NutritionProduct {
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
     ///  always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     ///  the resource was constructed, and which must be understood when
@@ -3371,7 +3371,7 @@ class Substance with Resource, _$Substance {
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
     ///  always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     ///  the resource was constructed, and which must be understood when

@@ -9,10 +9,10 @@ class DocumentReferenceUsCore extends Resource {
 
   factory DocumentReferenceUsCore({
     String? id,
-    Meta? meta,
+    FhirMeta? meta,
     Narrative? text,
     List<Identifier>? identifier,
-    required Code status,
+    required FhirCode status,
     required CodeableConcept type,
     List<CodeableConcept>? category,
     Reference? subject,
@@ -42,7 +42,7 @@ class DocumentReferenceUsCore extends Resource {
 
   factory DocumentReferenceUsCore.simple({
     List<Identifier>? identifier,
-    required Code status,
+    required FhirCode status,
     required CodeableConcept type,
     List<CodeableConcept>? category,
     required Reference subject,
@@ -85,7 +85,7 @@ class DocumentReferenceUsCore extends Resource {
   }
 
   factory DocumentReferenceUsCore.minimum({
-    required Code status,
+    required FhirCode status,
     required DocumentReferenceType documentReferenceType,
     required Reference subject,
     required Attachment documentReferenceContentAttachment,
@@ -101,7 +101,7 @@ class DocumentReferenceUsCore extends Resource {
   DocumentReference _documentReference;
   DocumentReference get value => _documentReference;
   String? get id => _documentReference.id;
-  Meta? get meta => _documentReference.meta;
+  FhirMeta? get meta => _documentReference.meta;
   Narrative? get text => _documentReference.text;
   List<Identifier>? get identifier => _documentReference.identifier;
   Code? get status => _documentReference.status;

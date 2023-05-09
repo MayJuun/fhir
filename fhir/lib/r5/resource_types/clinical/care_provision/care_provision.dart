@@ -179,7 +179,7 @@ class CarePlan with Resource, _$CarePlan {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when
@@ -212,7 +212,7 @@ class CarePlan with Resource, _$CarePlan {
     List<Identifier>? identifier,
 
     /// [instantiatesCanonical] The URL pointing to a FHIR-defined protocol, guideline, questionnaire or other definition that is adhered to in whole or in part by this CarePlan.
-    List<Canonical>? instantiatesCanonical,
+    List<FhirCanonical>? instantiatesCanonical,
 
     /// [instantiatesUri] The URL pointing to an externally maintained protocol, guideline, questionnaire or other definition that is adhered to in whole or in part by this CarePlan.
     List<FhirUri>? instantiatesUri,
@@ -626,7 +626,7 @@ class CarePlanPlannedActivityDetail with _$CarePlanPlannedActivityDetail {
     @JsonKey(name: '_kind') Element? kindElement,
 
     /// [instantiatesCanonical] The URL pointing to a FHIR-defined protocol, guideline, questionnaire or other definition that is adhered to in whole or in part by this CarePlan activity.
-    List<Canonical>? instantiatesCanonical,
+    List<FhirCanonical>? instantiatesCanonical,
 
     /// [instantiatesUri] The URL pointing to an externally maintained protocol, guideline, questionnaire or other definition that is adhered to in whole or in part by this CarePlan activity.
     List<FhirUri>? instantiatesUri,
@@ -849,7 +849,7 @@ class CareTeam with Resource, _$CareTeam {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when
@@ -1220,7 +1220,7 @@ class Goal with Resource, _$Goal {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when
@@ -1744,7 +1744,7 @@ class NutritionIntake with Resource, _$NutritionIntake {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when
@@ -1777,7 +1777,7 @@ class NutritionIntake with Resource, _$NutritionIntake {
     List<Identifier>? identifier,
 
     /// [instantiatesCanonical] Instantiates FHIR protocol or definition.
-    List<Canonical>? instantiatesCanonical,
+    List<FhirCanonical>? instantiatesCanonical,
 
     /// [instantiatesUri] Instantiates external protocol or definition.
     List<FhirUri>? instantiatesUri,
@@ -2491,7 +2491,7 @@ class NutritionOrder with Resource, _$NutritionOrder {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when
@@ -2524,7 +2524,7 @@ class NutritionOrder with Resource, _$NutritionOrder {
     List<Identifier>? identifier,
 
     /// [instantiatesCanonical] The URL pointing to a FHIR-defined protocol, guideline, orderset or other definition that is adhered to in whole or in part by this NutritionOrder.
-    List<Canonical>? instantiatesCanonical,
+    List<FhirCanonical>? instantiatesCanonical,
 
     /// [instantiatesUri] The URL pointing to an externally maintained protocol, guideline, orderset or other definition that is adhered to in whole or in part by this NutritionOrder.
     List<FhirUri>? instantiatesUri,
@@ -4026,7 +4026,7 @@ class RequestOrchestration with Resource, _$RequestOrchestration {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when
@@ -4059,7 +4059,7 @@ class RequestOrchestration with Resource, _$RequestOrchestration {
     List<Identifier>? identifier,
 
     /// [instantiatesCanonical] A canonical URL referencing a FHIR-defined protocol, guideline, orderset or other definition that is adhered to in whole or in part by this request.
-    List<Canonical>? instantiatesCanonical,
+    List<FhirCanonical>? instantiatesCanonical,
 
     /// [instantiatesCanonicalElement] ("_instantiatesCanonical") Extensions for instantiatesCanonical
     @JsonKey(name: '_instantiatesCanonical')
@@ -5438,7 +5438,7 @@ class RiskAssessment with Resource, _$RiskAssessment {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when
@@ -5955,7 +5955,7 @@ class ServiceRequest with Resource, _$ServiceRequest {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when
@@ -5988,7 +5988,7 @@ class ServiceRequest with Resource, _$ServiceRequest {
     List<Identifier>? identifier,
 
     /// [instantiatesCanonical] The URL pointing to a FHIR-defined protocol, guideline, orderset or other definition that is adhered to in whole or in part by this ServiceRequest.
-    List<Canonical>? instantiatesCanonical,
+    List<FhirCanonical>? instantiatesCanonical,
 
     /// [instantiatesUri] The URL pointing to an externally maintained protocol, guideline, orderset or other definition that is adhered to in whole or in part by this ServiceRequest.
     List<FhirUri>? instantiatesUri,
@@ -6265,7 +6265,7 @@ class VisionPrescription with Resource, _$VisionPrescription {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when

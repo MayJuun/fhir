@@ -221,7 +221,7 @@ class CodeSystem with Resource, _$CodeSystem {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -453,7 +453,7 @@ class CodeSystem with Resource, _$CodeSystem {
     /// [count] The total number of concepts defined by the code system. Where
     /// the code system has a compositional grammar, the basis of this count is
     ///  defined by the system steward.
-    UnsignedInt? count,
+    FhirUnsignedInt? count,
 
     /// [countElement] Extensions for count
     @JsonKey(name: '_count')
@@ -593,7 +593,7 @@ class CodeSystemFilter with _$CodeSystemFilter {
     @JsonKey(name: '_description') Element? descriptionElement,
 
     /// [operator] A list of operators that can be used with the filter.
-    @JsonKey(name: 'operator') List<Code>? operator_,
+    @JsonKey(name: 'operator') List<FhirCode>? operator_,
 
     /// [operatorElement] Extensions for operator
     @JsonKey(name: '_operator') List<Element?>? operatorElement,
@@ -1413,7 +1413,7 @@ class ConceptMap with Resource, _$ConceptMap {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -2532,7 +2532,7 @@ class NamingSystem with Resource, _$NamingSystem {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -3055,7 +3055,7 @@ class TerminologyCapabilities with Resource, _$TerminologyCapabilities {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -3747,7 +3747,7 @@ class TerminologyCapabilitiesVersion with _$TerminologyCapabilitiesVersion {
     @JsonKey(name: '_compositional') Element? compositionalElement,
 
     /// [language] Language Displays supported.
-    List<Code>? language,
+    List<FhirCode>? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language') List<Element?>? languageElement,
@@ -3756,7 +3756,7 @@ class TerminologyCapabilitiesVersion with _$TerminologyCapabilitiesVersion {
     List<TerminologyCapabilitiesFilter>? filter,
 
     /// [property] Properties supported for $lookup.
-    List<Code>? property,
+    List<FhirCode>? property,
 
     /// [propertyElement] Extensions for property
     @JsonKey(name: '_property') List<Element?>? propertyElement,
@@ -3871,7 +3871,7 @@ class TerminologyCapabilitiesFilter with _$TerminologyCapabilitiesFilter {
     @JsonKey(name: '_code') Element? codeElement,
 
     /// [op] Operations supported for the property.
-    List<Code>? op,
+    List<FhirCode>? op,
 
     /// [opElement] Extensions for op
     @JsonKey(name: '_op') List<Element?>? opElement,
@@ -4607,7 +4607,7 @@ class ValueSet with Resource, _$ValueSet {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -5092,7 +5092,7 @@ class ValueSetInclude with _$ValueSetInclude {
     /// value set definition). This is an absolute URI that is a reference to
     /// ValueSet.url.  If multiple value sets are specified this includes the
     ///  union of the contents of all of the referenced value sets.
-    List<Canonical>? valueSet,
+    List<FhirCanonical>? valueSet,
   }) = _ValueSetInclude;
 
   /// Produces a Yaml formatted String version of the object

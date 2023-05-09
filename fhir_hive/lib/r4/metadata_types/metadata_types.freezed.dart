@@ -783,7 +783,7 @@ mixin _$DataRequirement {
 
   /// [profile] The profile of the required data, specified as the uri of the
   ///  profile definition.
-  List<Canonical>? get profile => throw _privateConstructorUsedError;
+  List<FhirCanonical>? get profile => throw _privateConstructorUsedError;
 
   /// [subjectCodeableConcept] The intended subjects of the data requirement.
   ///  If this element is not provided, a Patient subject is assumed.
@@ -825,7 +825,7 @@ mixin _$DataRequirement {
 
   /// [limit] Specifies a maximum number of results that are required (uses the
   ///  _count search parameter).
-  PositiveInt? get limit => throw _privateConstructorUsedError;
+  FhirPositiveInt? get limit => throw _privateConstructorUsedError;
 
   /// [limitElement] Extensions for limit
   @JsonKey(name: '_limit')
@@ -851,14 +851,14 @@ abstract class $DataRequirementCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       Code? type,
       @JsonKey(name: '_type') Element? typeElement,
-      List<Canonical>? profile,
+      List<FhirCanonical>? profile,
       CodeableConcept? subjectCodeableConcept,
       Reference? subjectReference,
       List<String>? mustSupport,
       @JsonKey(name: '_mustSupport') List<Element?>? mustSupportElement,
       List<DataRequirementCodeFilter>? codeFilter,
       List<DataRequirementDateFilter>? dateFilter,
-      PositiveInt? limit,
+      FhirPositiveInt? limit,
       @JsonKey(name: '_limit') Element? limitElement,
       List<DataRequirementSort>? sort});
 
@@ -916,7 +916,7 @@ class _$DataRequirementCopyWithImpl<$Res, $Val extends DataRequirement>
       profile: freezed == profile
           ? _value.profile
           : profile // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       subjectCodeableConcept: freezed == subjectCodeableConcept
           ? _value.subjectCodeableConcept
           : subjectCodeableConcept // ignore: cast_nullable_to_non_nullable
@@ -1019,14 +1019,14 @@ abstract class _$$_DataRequirementCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       Code? type,
       @JsonKey(name: '_type') Element? typeElement,
-      List<Canonical>? profile,
+      List<FhirCanonical>? profile,
       CodeableConcept? subjectCodeableConcept,
       Reference? subjectReference,
       List<String>? mustSupport,
       @JsonKey(name: '_mustSupport') List<Element?>? mustSupportElement,
       List<DataRequirementCodeFilter>? codeFilter,
       List<DataRequirementDateFilter>? dateFilter,
-      PositiveInt? limit,
+      FhirPositiveInt? limit,
       @JsonKey(name: '_limit') Element? limitElement,
       List<DataRequirementSort>? sort});
 
@@ -1086,7 +1086,7 @@ class __$$_DataRequirementCopyWithImpl<$Res>
       profile: freezed == profile
           ? _value._profile
           : profile // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       subjectCodeableConcept: freezed == subjectCodeableConcept
           ? _value.subjectCodeableConcept
           : subjectCodeableConcept // ignore: cast_nullable_to_non_nullable
@@ -1135,7 +1135,7 @@ class _$_DataRequirement extends _DataRequirement {
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       this.type,
       @JsonKey(name: '_type') this.typeElement,
-      final List<Canonical>? profile,
+      final List<FhirCanonical>? profile,
       this.subjectCodeableConcept,
       this.subjectReference,
       final List<String>? mustSupport,
@@ -1199,12 +1199,12 @@ class _$_DataRequirement extends _DataRequirement {
 
   /// [profile] The profile of the required data, specified as the uri of the
   ///  profile definition.
-  final List<Canonical>? _profile;
+  final List<FhirCanonical>? _profile;
 
   /// [profile] The profile of the required data, specified as the uri of the
   ///  profile definition.
   @override
-  List<Canonical>? get profile {
+  List<FhirCanonical>? get profile {
     final value = _profile;
     if (value == null) return null;
     if (_profile is EqualUnmodifiableListView) return _profile;
@@ -1401,7 +1401,7 @@ abstract class _DataRequirement extends DataRequirement {
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final Code? type,
       @JsonKey(name: '_type') final Element? typeElement,
-      final List<Canonical>? profile,
+      final List<FhirCanonical>? profile,
       final CodeableConcept? subjectCodeableConcept,
       final Reference? subjectReference,
       final List<String>? mustSupport,
@@ -1446,7 +1446,7 @@ abstract class _DataRequirement extends DataRequirement {
 
   /// [profile] The profile of the required data, specified as the uri of the
   ///  profile definition.
-  List<Canonical>? get profile;
+  List<FhirCanonical>? get profile;
   @override
 
   /// [subjectCodeableConcept] The intended subjects of the data requirement.
@@ -1492,7 +1492,7 @@ abstract class _DataRequirement extends DataRequirement {
 
   /// [limit] Specifies a maximum number of results that are required (uses the
   ///  _count search parameter).
-  PositiveInt? get limit;
+  FhirPositiveInt? get limit;
   @override
 
   /// [limitElement] Extensions for limit
@@ -5811,7 +5811,7 @@ mixin _$Expression {
 
   /// [name] A short name assigned to the expression to allow for multiple
   ///  reuse of the expression in the context where it is defined.
-  Id? get name => throw _privateConstructorUsedError;
+  FhirId? get name => throw _privateConstructorUsedError;
 
   /// [nameElement] Extensions for name
   @JsonKey(name: '_name')
@@ -5857,7 +5857,7 @@ abstract class $ExpressionCopyWith<$Res> {
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      Id? name,
+      FhirId? name,
       @JsonKey(name: '_name')
           Element? nameElement,
       @JsonKey(unknownEnumValue: ExpressionLanguage.unknown)
@@ -6032,7 +6032,7 @@ abstract class _$$_ExpressionCopyWith<$Res>
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      Id? name,
+      FhirId? name,
       @JsonKey(name: '_name')
           Element? nameElement,
       @JsonKey(unknownEnumValue: ExpressionLanguage.unknown)
@@ -6199,7 +6199,7 @@ class _$_Expression extends _Expression {
   /// [name] A short name assigned to the expression to allow for multiple
   ///  reuse of the expression in the context where it is defined.
   @override
-  final Id? name;
+  final FhirId? name;
 
   /// [nameElement] Extensions for name
   @override
@@ -6306,7 +6306,7 @@ abstract class _Expression extends Expression {
       final String? description,
       @JsonKey(name: '_description')
           final Element? descriptionElement,
-      final Id? name,
+      final FhirId? name,
       @JsonKey(name: '_name')
           final Element? nameElement,
       @JsonKey(unknownEnumValue: ExpressionLanguage.unknown)
@@ -6353,7 +6353,7 @@ abstract class _Expression extends Expression {
 
   /// [name] A short name assigned to the expression to allow for multiple
   ///  reuse of the expression in the context where it is defined.
-  Id? get name;
+  FhirId? get name;
   @override
 
   /// [nameElement] Extensions for name

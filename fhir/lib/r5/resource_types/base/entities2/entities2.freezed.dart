@@ -32,7 +32,7 @@ mixin _$BiologicallyDerivedProduct {
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
   ///  always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   ///  the resource was constructed, and which must be understood when
@@ -46,7 +46,7 @@ mixin _$BiologicallyDerivedProduct {
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-   FhirCode? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
@@ -174,11 +174,11 @@ abstract class $BiologicallyDerivedProductCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.BiologicallyDerivedProduct)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-       FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -283,7 +283,7 @@ class _$BiologicallyDerivedProductCopyWithImpl<$Res,
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -526,11 +526,11 @@ abstract class _$$_BiologicallyDerivedProductCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R5ResourceType.BiologicallyDerivedProduct)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-       FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -646,7 +646,7 @@ class __$$_BiologicallyDerivedProductCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -788,7 +788,7 @@ class _$_BiologicallyDerivedProduct extends _BiologicallyDerivedProduct {
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
@@ -811,7 +811,7 @@ class _$_BiologicallyDerivedProduct extends _BiologicallyDerivedProduct {
 
   /// [language] The base language in which the resource is written.
   @override
-  final  FhirCode? language;
+  final FhirCode? language;
 
   /// [languageElement] ("_language") Extensions for language
   @override
@@ -1150,12 +1150,12 @@ abstract class _BiologicallyDerivedProduct extends BiologicallyDerivedProduct {
   factory _BiologicallyDerivedProduct(
           {@JsonKey(unknownEnumValue: R5ResourceType.BiologicallyDerivedProduct)
               final R5ResourceType resourceType,
-          final Id? id,
+          final FhirId? id,
           final Meta? meta,
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
               final Element? implicitRulesElement,
-          final  FhirCode? language,
+          final FhirCode? language,
           @JsonKey(name: '_language')
               final Element? languageElement,
           final Narrative? text,
@@ -1201,7 +1201,7 @@ abstract class _BiologicallyDerivedProduct extends BiologicallyDerivedProduct {
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
   ///  always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when
@@ -1218,7 +1218,7 @@ abstract class _BiologicallyDerivedProduct extends BiologicallyDerivedProduct {
   @override
 
   /// [language] The base language in which the resource is written.
-   FhirCode? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] ("_language") Extensions for language
@@ -1928,7 +1928,7 @@ mixin _$BiologicallyDerivedProductProperty {
   Coding get type => throw _privateConstructorUsedError;
 
   /// [valueBoolean] Property values.
-   FhirBoolean? get valueBoolean => throw _privateConstructorUsedError;
+  FhirBoolean? get valueBoolean => throw _privateConstructorUsedError;
 
   /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
   @JsonKey(name: '_valueBoolean')
@@ -1987,7 +1987,7 @@ abstract class $BiologicallyDerivedProductPropertyCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Coding type,
-       FhirBoolean? valueBoolean,
+      FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       FhirInteger? valueInteger,
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
@@ -2063,7 +2063,7 @@ class _$BiologicallyDerivedProductPropertyCopyWithImpl<$Res,
       valueBoolean: freezed == valueBoolean
           ? _value.valueBoolean
           : valueBoolean // ignore: cast_nullable_to_non_nullable
-              as  FhirBoolean?,
+              as FhirBoolean?,
       valueBooleanElement: freezed == valueBooleanElement
           ? _value.valueBooleanElement
           : valueBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -2243,7 +2243,7 @@ abstract class _$$_BiologicallyDerivedProductPropertyCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Coding type,
-       FhirBoolean? valueBoolean,
+      FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       FhirInteger? valueInteger,
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
@@ -2328,7 +2328,7 @@ class __$$_BiologicallyDerivedProductPropertyCopyWithImpl<$Res>
       valueBoolean: freezed == valueBoolean
           ? _value.valueBoolean
           : valueBoolean // ignore: cast_nullable_to_non_nullable
-              as  FhirBoolean?,
+              as FhirBoolean?,
       valueBooleanElement: freezed == valueBooleanElement
           ? _value.valueBooleanElement
           : valueBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -2482,7 +2482,7 @@ class _$_BiologicallyDerivedProductProperty
 
   /// [valueBoolean] Property values.
   @override
-  final  FhirBoolean? valueBoolean;
+  final FhirBoolean? valueBoolean;
 
   /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
   @override
@@ -2617,7 +2617,7 @@ abstract class _BiologicallyDerivedProductProperty
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           required final Coding type,
-          final  FhirBoolean? valueBoolean,
+          final FhirBoolean? valueBoolean,
           @JsonKey(name: '_valueBoolean') final Element? valueBooleanElement,
           final Integer? valueInteger,
           @JsonKey(name: '_valueInteger') final Element? valueIntegerElement,
@@ -2676,7 +2676,7 @@ abstract class _BiologicallyDerivedProductProperty
   @override
 
   /// [valueBoolean] Property values.
-   FhirBoolean? get valueBoolean;
+  FhirBoolean? get valueBoolean;
   @override
 
   /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
@@ -2748,7 +2748,7 @@ mixin _$Device {
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
   ///  always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   ///  the resource was constructed, and which must be understood when
@@ -2762,7 +2762,7 @@ mixin _$Device {
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-   FhirCode? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
@@ -2835,7 +2835,7 @@ mixin _$Device {
 
   /// [status] The Device record status. This is not the status of the device
   ///  like availability.
-   FhirCode? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
@@ -2998,11 +2998,11 @@ abstract class $DeviceCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.Device)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-       FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -3016,7 +3016,7 @@ abstract class $DeviceCopyWith<$Res> {
           Element? displayNameElement,
       CodeableReference? definition,
       List<DeviceUdiCarrier>? udiCarrier,
-       FhirCode? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? availabilityStatus,
@@ -3174,7 +3174,7 @@ class _$DeviceCopyWithImpl<$Res, $Val extends Device>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -3218,7 +3218,7 @@ class _$DeviceCopyWithImpl<$Res, $Val extends Device>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -3613,11 +3613,11 @@ abstract class _$$_DeviceCopyWith<$Res> implements $DeviceCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.Device)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-       FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -3631,7 +3631,7 @@ abstract class _$$_DeviceCopyWith<$Res> implements $DeviceCopyWith<$Res> {
           Element? displayNameElement,
       CodeableReference? definition,
       List<DeviceUdiCarrier>? udiCarrier,
-       FhirCode? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? availabilityStatus,
@@ -3806,7 +3806,7 @@ class __$$_DeviceCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -3850,7 +3850,7 @@ class __$$_DeviceCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -4096,7 +4096,7 @@ class _$_Device extends _Device {
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
@@ -4119,7 +4119,7 @@ class _$_Device extends _Device {
 
   /// [language] The base language in which the resource is written.
   @override
-  final  FhirCode? language;
+  final FhirCode? language;
 
   /// [languageElement] ("_language") Extensions for language
   @override
@@ -4274,7 +4274,7 @@ class _$_Device extends _Device {
   /// [status] The Device record status. This is not the status of the device
   ///  like availability.
   @override
-  final  FhirCode? status;
+  final FhirCode? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -4771,12 +4771,12 @@ abstract class _Device extends Device {
   factory _Device(
       {@JsonKey(unknownEnumValue: R5ResourceType.Device)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final  FhirCode? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -4790,7 +4790,7 @@ abstract class _Device extends Device {
           final Element? displayNameElement,
       final CodeableReference? definition,
       final List<DeviceUdiCarrier>? udiCarrier,
-      final  FhirCode? status,
+      final FhirCode? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
       final CodeableConcept? availabilityStatus,
@@ -4854,7 +4854,7 @@ abstract class _Device extends Device {
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
   ///  always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when
@@ -4871,7 +4871,7 @@ abstract class _Device extends Device {
   @override
 
   /// [language] The base language in which the resource is written.
-   FhirCode? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] ("_language") Extensions for language
@@ -4954,7 +4954,7 @@ abstract class _Device extends Device {
 
   /// [status] The Device record status. This is not the status of the device
   ///  like availability.
-   FhirCode? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status
@@ -5222,7 +5222,7 @@ mixin _$DeviceUdiCarrier {
   ///  Because of limitations on character sets in XML and the need to
   ///  round-trip JSON data through XML, AIDC Formats *SHALL* be base64
   ///  encoded.
-  FhirBase64Binary?? get carrierAIDC => throw _privateConstructorUsedError;
+  FhirBase64Binary? get carrierAIDC => throw _privateConstructorUsedError;
 
   /// [carrierAIDCElement] ("_carrierAIDC") Extensions for carrierAIDC
   @JsonKey(name: '_carrierAIDC')
@@ -5238,7 +5238,7 @@ mixin _$DeviceUdiCarrier {
   Element? get carrierHRFElement => throw _privateConstructorUsedError;
 
   /// [entryType] A coded entry to indicate how the data was entered.
-   FhirCode? get entryType => throw _privateConstructorUsedError;
+  FhirCode? get entryType => throw _privateConstructorUsedError;
 
   /// [entryTypeElement] ("_entryType") Extensions for entryType
   @JsonKey(name: '_entryType')
@@ -5266,11 +5266,11 @@ abstract class $DeviceUdiCarrierCopyWith<$Res> {
       @JsonKey(name: '_issuer') Element? issuerElement,
       FhirUri? jurisdiction,
       @JsonKey(name: '_jurisdiction') Element? jurisdictionElement,
-  FhirBase64Binary?? carrierAIDC,
+      FhirBase64Binary? carrierAIDC,
       @JsonKey(name: '_carrierAIDC') Element? carrierAIDCElement,
       String? carrierHRF,
       @JsonKey(name: '_carrierHRF') Element? carrierHRFElement,
-       FhirCode? entryType,
+      FhirCode? entryType,
       @JsonKey(name: '_entryType') Element? entryTypeElement});
 
   $ElementCopyWith<$Res>? get deviceIdentifierElement;
@@ -5350,7 +5350,7 @@ class _$DeviceUdiCarrierCopyWithImpl<$Res, $Val extends DeviceUdiCarrier>
       carrierAIDC: freezed == carrierAIDC
           ? _value.carrierAIDC
           : carrierAIDC // ignore: cast_nullable_to_non_nullable
-              as  FhirBase64Binary??,
+              as FhirBase64Binary?,
       carrierAIDCElement: freezed == carrierAIDCElement
           ? _value.carrierAIDCElement
           : carrierAIDCElement // ignore: cast_nullable_to_non_nullable
@@ -5366,7 +5366,7 @@ class _$DeviceUdiCarrierCopyWithImpl<$Res, $Val extends DeviceUdiCarrier>
       entryType: freezed == entryType
           ? _value.entryType
           : entryType // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       entryTypeElement: freezed == entryTypeElement
           ? _value.entryTypeElement
           : entryTypeElement // ignore: cast_nullable_to_non_nullable
@@ -5465,11 +5465,11 @@ abstract class _$$_DeviceUdiCarrierCopyWith<$Res>
       @JsonKey(name: '_issuer') Element? issuerElement,
       FhirUri? jurisdiction,
       @JsonKey(name: '_jurisdiction') Element? jurisdictionElement,
-  FhirBase64Binary?? carrierAIDC,
+      FhirBase64Binary? carrierAIDC,
       @JsonKey(name: '_carrierAIDC') Element? carrierAIDCElement,
       String? carrierHRF,
       @JsonKey(name: '_carrierHRF') Element? carrierHRFElement,
-       FhirCode? entryType,
+      FhirCode? entryType,
       @JsonKey(name: '_entryType') Element? entryTypeElement});
 
   @override
@@ -5553,7 +5553,7 @@ class __$$_DeviceUdiCarrierCopyWithImpl<$Res>
       carrierAIDC: freezed == carrierAIDC
           ? _value.carrierAIDC
           : carrierAIDC // ignore: cast_nullable_to_non_nullable
-              as  FhirBase64Binary??,
+              as FhirBase64Binary?,
       carrierAIDCElement: freezed == carrierAIDCElement
           ? _value.carrierAIDCElement
           : carrierAIDCElement // ignore: cast_nullable_to_non_nullable
@@ -5569,7 +5569,7 @@ class __$$_DeviceUdiCarrierCopyWithImpl<$Res>
       entryType: freezed == entryType
           ? _value.entryType
           : entryType // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       entryTypeElement: freezed == entryTypeElement
           ? _value.entryTypeElement
           : entryTypeElement // ignore: cast_nullable_to_non_nullable
@@ -5725,7 +5725,7 @@ class _$_DeviceUdiCarrier extends _DeviceUdiCarrier {
   ///  round-trip JSON data through XML, AIDC Formats *SHALL* be base64
   ///  encoded.
   @override
-  final  FhirBase64Binary?? carrierAIDC;
+  final FhirBase64Binary? carrierAIDC;
 
   /// [carrierAIDCElement] ("_carrierAIDC") Extensions for carrierAIDC
   @override
@@ -5745,7 +5745,7 @@ class _$_DeviceUdiCarrier extends _DeviceUdiCarrier {
 
   /// [entryType] A coded entry to indicate how the data was entered.
   @override
-  final  FhirCode? entryType;
+  final FhirCode? entryType;
 
   /// [entryTypeElement] ("_entryType") Extensions for entryType
   @override
@@ -5842,13 +5842,13 @@ abstract class _DeviceUdiCarrier extends DeviceUdiCarrier {
       final FhirUri? jurisdiction,
       @JsonKey(name: '_jurisdiction')
           final Element? jurisdictionElement,
-      final  FhirBase64Binary?? carrierAIDC,
+      final FhirBase64Binary? carrierAIDC,
       @JsonKey(name: '_carrierAIDC')
           final Element? carrierAIDCElement,
       final String? carrierHRF,
       @JsonKey(name: '_carrierHRF')
           final Element? carrierHRFElement,
-      final  FhirCode? entryType,
+      final FhirCode? entryType,
       @JsonKey(name: '_entryType')
           final Element? entryTypeElement}) = _$_DeviceUdiCarrier;
   _DeviceUdiCarrier._() : super._();
@@ -5941,7 +5941,7 @@ abstract class _DeviceUdiCarrier extends DeviceUdiCarrier {
   ///  Because of limitations on character sets in XML and the need to
   ///  round-trip JSON data through XML, AIDC Formats *SHALL* be base64
   ///  encoded.
-  FhirBase64Binary?? get carrierAIDC;
+  FhirBase64Binary? get carrierAIDC;
   @override
 
   /// [carrierAIDCElement] ("_carrierAIDC") Extensions for carrierAIDC
@@ -5961,7 +5961,7 @@ abstract class _DeviceUdiCarrier extends DeviceUdiCarrier {
   @override
 
   /// [entryType] A coded entry to indicate how the data was entered.
-   FhirCode? get entryType;
+  FhirCode? get entryType;
   @override
 
   /// [entryTypeElement] ("_entryType") Extensions for entryType
@@ -6020,7 +6020,7 @@ mixin _$DeviceDeviceName {
   ///  that the name is the name as given by the manufacturer, not the name
   ///  of the manufacturer. RegisteredName | UserFriendlyName |
   ///  PatientReportedName.
-   FhirCode? get type => throw _privateConstructorUsedError;
+  FhirCode? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] ("_type") Extensions for type
   @JsonKey(name: '_type')
@@ -6044,7 +6044,7 @@ abstract class $DeviceDeviceNameCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
-       FhirCode? type,
+      FhirCode? type,
       @JsonKey(name: '_type') Element? typeElement});
 
   $ElementCopyWith<$Res>? get nameElement;
@@ -6096,7 +6096,7 @@ class _$DeviceDeviceNameCopyWithImpl<$Res, $Val extends DeviceDeviceName>
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       typeElement: freezed == typeElement
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -6143,7 +6143,7 @@ abstract class _$$_DeviceDeviceNameCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
-       FhirCode? type,
+      FhirCode? type,
       @JsonKey(name: '_type') Element? typeElement});
 
   @override
@@ -6195,7 +6195,7 @@ class __$$_DeviceDeviceNameCopyWithImpl<$Res>
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       typeElement: freezed == typeElement
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -6305,7 +6305,7 @@ class _$_DeviceDeviceName extends _DeviceDeviceName {
   ///  of the manufacturer. RegisteredName | UserFriendlyName |
   ///  PatientReportedName.
   @override
-  final  FhirCode? type;
+  final FhirCode? type;
 
   /// [typeElement] ("_type") Extensions for type
   @override
@@ -6368,7 +6368,7 @@ abstract class _DeviceDeviceName extends DeviceDeviceName {
           final List<FhirExtension>? modifierExtension,
           final String? name,
           @JsonKey(name: '_name') final Element? nameElement,
-          final  FhirCode? type,
+          final FhirCode? type,
           @JsonKey(name: '_type') final Element? typeElement}) =
       _$_DeviceDeviceName;
   _DeviceDeviceName._() : super._();
@@ -6423,7 +6423,7 @@ abstract class _DeviceDeviceName extends DeviceDeviceName {
   ///  that the name is the name as given by the manufacturer, not the name
   ///  of the manufacturer. RegisteredName | UserFriendlyName |
   ///  PatientReportedName.
-   FhirCode? get type;
+  FhirCode? get type;
   @override
 
   /// [typeElement] ("_type") Extensions for type
@@ -7511,7 +7511,7 @@ mixin _$DeviceProperty {
 
   /// [valueBoolean] Property value - can be a code, quantity, boolean,
   ///  string or attachment.
-   FhirBoolean? get valueBoolean => throw _privateConstructorUsedError;
+  FhirBoolean? get valueBoolean => throw _privateConstructorUsedError;
 
   /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
   @JsonKey(name: '_valueBoolean')
@@ -7554,7 +7554,7 @@ abstract class $DevicePropertyCopyWith<$Res> {
       CodeableConcept? valueCodeableConcept,
       String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
-       FhirBoolean? valueBoolean,
+      FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       FhirInteger? valueInteger,
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
@@ -7635,7 +7635,7 @@ class _$DevicePropertyCopyWithImpl<$Res, $Val extends DeviceProperty>
       valueBoolean: freezed == valueBoolean
           ? _value.valueBoolean
           : valueBoolean // ignore: cast_nullable_to_non_nullable
-              as  FhirBoolean?,
+              as FhirBoolean?,
       valueBooleanElement: freezed == valueBooleanElement
           ? _value.valueBooleanElement
           : valueBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -7770,7 +7770,7 @@ abstract class _$$_DevicePropertyCopyWith<$Res>
       CodeableConcept? valueCodeableConcept,
       String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
-       FhirBoolean? valueBoolean,
+      FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       FhirInteger? valueInteger,
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
@@ -7857,7 +7857,7 @@ class __$$_DevicePropertyCopyWithImpl<$Res>
       valueBoolean: freezed == valueBoolean
           ? _value.valueBoolean
           : valueBoolean // ignore: cast_nullable_to_non_nullable
-              as  FhirBoolean?,
+              as FhirBoolean?,
       valueBooleanElement: freezed == valueBooleanElement
           ? _value.valueBooleanElement
           : valueBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -8005,7 +8005,7 @@ class _$_DeviceProperty extends _DeviceProperty {
   /// [valueBoolean] Property value - can be a code, quantity, boolean,
   ///  string or attachment.
   @override
-  final  FhirBoolean? valueBoolean;
+  final FhirBoolean? valueBoolean;
 
   /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
   @override
@@ -8113,7 +8113,7 @@ abstract class _DeviceProperty extends DeviceProperty {
       final CodeableConcept? valueCodeableConcept,
       final String? valueString,
       @JsonKey(name: '_valueString') final Element? valueStringElement,
-      final  FhirBoolean? valueBoolean,
+      final FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') final Element? valueBooleanElement,
       final Integer? valueInteger,
       @JsonKey(name: '_valueInteger') final Element? valueIntegerElement,
@@ -8186,7 +8186,7 @@ abstract class _DeviceProperty extends DeviceProperty {
 
   /// [valueBoolean] Property value - can be a code, quantity, boolean,
   ///  string or attachment.
-   FhirBoolean? get valueBoolean;
+  FhirBoolean? get valueBoolean;
   @override
 
   /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
@@ -9278,7 +9278,7 @@ mixin _$DeviceMetric {
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
   ///  always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   ///  the resource was constructed, and which must be understood when
@@ -9292,7 +9292,7 @@ mixin _$DeviceMetric {
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-   FhirCode? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
@@ -9369,7 +9369,7 @@ mixin _$DeviceMetric {
 
   /// [operationalStatus] Indicates current operational state of the device.
   ///  For example: On, Off, Standby, etc.
-   FhirCode? get operationalStatus => throw _privateConstructorUsedError;
+  FhirCode? get operationalStatus => throw _privateConstructorUsedError;
 
   /// [operationalStatusElement] ("_operationalStatus") Extensions for
   ///  operationalStatus
@@ -9382,7 +9382,7 @@ mixin _$DeviceMetric {
   ///  Pleth for example; the parameters are displayed in different
   ///  characteristic colors, such as HR-blue, BP-green, and PR and SpO2-
   ///  magenta.
-   FhirCode? get color => throw _privateConstructorUsedError;
+  FhirCode? get color => throw _privateConstructorUsedError;
 
   /// [colorElement] ("_color") Extensions for color
   @JsonKey(name: '_color')
@@ -9391,7 +9391,7 @@ mixin _$DeviceMetric {
   /// [category] Indicates the category of the observation generation
   ///  process. A DeviceMetric can be for example a setting, measurement, or
   ///  calculation.
-   FhirCode? get category => throw _privateConstructorUsedError;
+  FhirCode? get category => throw _privateConstructorUsedError;
 
   /// [categoryElement] ("_category") Extensions for category
   @JsonKey(name: '_category')
@@ -9429,11 +9429,11 @@ abstract class $DeviceMetricCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.DeviceMetric)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-       FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -9446,13 +9446,13 @@ abstract class $DeviceMetricCopyWith<$Res> {
       CodeableConcept? unit,
       Reference? source,
       Reference? parent,
-       FhirCode? operationalStatus,
+      FhirCode? operationalStatus,
       @JsonKey(name: '_operationalStatus')
           Element? operationalStatusElement,
-       FhirCode? color,
+      FhirCode? color,
       @JsonKey(name: '_color')
           Element? colorElement,
-       FhirCode? category,
+      FhirCode? category,
       @JsonKey(name: '_category')
           Element? categoryElement,
       Timing? measurementPeriod,
@@ -9534,7 +9534,7 @@ class _$DeviceMetricCopyWithImpl<$Res, $Val extends DeviceMetric>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -9578,7 +9578,7 @@ class _$DeviceMetricCopyWithImpl<$Res, $Val extends DeviceMetric>
       operationalStatus: freezed == operationalStatus
           ? _value.operationalStatus
           : operationalStatus // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       operationalStatusElement: freezed == operationalStatusElement
           ? _value.operationalStatusElement
           : operationalStatusElement // ignore: cast_nullable_to_non_nullable
@@ -9586,7 +9586,7 @@ class _$DeviceMetricCopyWithImpl<$Res, $Val extends DeviceMetric>
       color: freezed == color
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       colorElement: freezed == colorElement
           ? _value.colorElement
           : colorElement // ignore: cast_nullable_to_non_nullable
@@ -9594,7 +9594,7 @@ class _$DeviceMetricCopyWithImpl<$Res, $Val extends DeviceMetric>
       category: freezed == category
           ? _value.category
           : category // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       categoryElement: freezed == categoryElement
           ? _value.categoryElement
           : categoryElement // ignore: cast_nullable_to_non_nullable
@@ -9763,11 +9763,11 @@ abstract class _$$_DeviceMetricCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R5ResourceType.DeviceMetric)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-       FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -9780,13 +9780,13 @@ abstract class _$$_DeviceMetricCopyWith<$Res>
       CodeableConcept? unit,
       Reference? source,
       Reference? parent,
-       FhirCode? operationalStatus,
+      FhirCode? operationalStatus,
       @JsonKey(name: '_operationalStatus')
           Element? operationalStatusElement,
-       FhirCode? color,
+      FhirCode? color,
       @JsonKey(name: '_color')
           Element? colorElement,
-       FhirCode? category,
+      FhirCode? category,
       @JsonKey(name: '_category')
           Element? categoryElement,
       Timing? measurementPeriod,
@@ -9878,7 +9878,7 @@ class __$$_DeviceMetricCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -9922,7 +9922,7 @@ class __$$_DeviceMetricCopyWithImpl<$Res>
       operationalStatus: freezed == operationalStatus
           ? _value.operationalStatus
           : operationalStatus // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       operationalStatusElement: freezed == operationalStatusElement
           ? _value.operationalStatusElement
           : operationalStatusElement // ignore: cast_nullable_to_non_nullable
@@ -9930,7 +9930,7 @@ class __$$_DeviceMetricCopyWithImpl<$Res>
       color: freezed == color
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       colorElement: freezed == colorElement
           ? _value.colorElement
           : colorElement // ignore: cast_nullable_to_non_nullable
@@ -9938,7 +9938,7 @@ class __$$_DeviceMetricCopyWithImpl<$Res>
       category: freezed == category
           ? _value.category
           : category // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       categoryElement: freezed == categoryElement
           ? _value.categoryElement
           : categoryElement // ignore: cast_nullable_to_non_nullable
@@ -10008,7 +10008,7 @@ class _$_DeviceMetric extends _DeviceMetric {
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
@@ -10031,7 +10031,7 @@ class _$_DeviceMetric extends _DeviceMetric {
 
   /// [language] The base language in which the resource is written.
   @override
-  final  FhirCode? language;
+  final FhirCode? language;
 
   /// [languageElement] ("_language") Extensions for language
   @override
@@ -10179,7 +10179,7 @@ class _$_DeviceMetric extends _DeviceMetric {
   /// [operationalStatus] Indicates current operational state of the device.
   ///  For example: On, Off, Standby, etc.
   @override
-  final  FhirCode? operationalStatus;
+  final FhirCode? operationalStatus;
 
   /// [operationalStatusElement] ("_operationalStatus") Extensions for
   ///  operationalStatus
@@ -10194,7 +10194,7 @@ class _$_DeviceMetric extends _DeviceMetric {
   ///  characteristic colors, such as HR-blue, BP-green, and PR and SpO2-
   ///  magenta.
   @override
-  final  FhirCode? color;
+  final FhirCode? color;
 
   /// [colorElement] ("_color") Extensions for color
   @override
@@ -10205,7 +10205,7 @@ class _$_DeviceMetric extends _DeviceMetric {
   ///  process. A DeviceMetric can be for example a setting, measurement, or
   ///  calculation.
   @override
-  final  FhirCode? category;
+  final FhirCode? category;
 
   /// [categoryElement] ("_category") Extensions for category
   @override
@@ -10340,12 +10340,12 @@ abstract class _DeviceMetric extends DeviceMetric {
   factory _DeviceMetric(
       {@JsonKey(unknownEnumValue: R5ResourceType.DeviceMetric)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final  FhirCode? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -10358,13 +10358,13 @@ abstract class _DeviceMetric extends DeviceMetric {
       final CodeableConcept? unit,
       final Reference? source,
       final Reference? parent,
-      final  FhirCode? operationalStatus,
+      final FhirCode? operationalStatus,
       @JsonKey(name: '_operationalStatus')
           final Element? operationalStatusElement,
-      final  FhirCode? color,
+      final FhirCode? color,
       @JsonKey(name: '_color')
           final Element? colorElement,
-      final  FhirCode? category,
+      final FhirCode? category,
       @JsonKey(name: '_category')
           final Element? categoryElement,
       final Timing? measurementPeriod,
@@ -10389,7 +10389,7 @@ abstract class _DeviceMetric extends DeviceMetric {
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
   ///  always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when
@@ -10406,7 +10406,7 @@ abstract class _DeviceMetric extends DeviceMetric {
   @override
 
   /// [language] The base language in which the resource is written.
-   FhirCode? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] ("_language") Extensions for language
@@ -10493,7 +10493,7 @@ abstract class _DeviceMetric extends DeviceMetric {
 
   /// [operationalStatus] Indicates current operational state of the device.
   ///  For example: On, Off, Standby, etc.
-   FhirCode? get operationalStatus;
+  FhirCode? get operationalStatus;
   @override
 
   /// [operationalStatusElement] ("_operationalStatus") Extensions for
@@ -10508,7 +10508,7 @@ abstract class _DeviceMetric extends DeviceMetric {
   ///  Pleth for example; the parameters are displayed in different
   ///  characteristic colors, such as HR-blue, BP-green, and PR and SpO2-
   ///  magenta.
-   FhirCode? get color;
+  FhirCode? get color;
   @override
 
   /// [colorElement] ("_color") Extensions for color
@@ -10519,7 +10519,7 @@ abstract class _DeviceMetric extends DeviceMetric {
   /// [category] Indicates the category of the observation generation
   ///  process. A DeviceMetric can be for example a setting, measurement, or
   ///  calculation.
-   FhirCode? get category;
+  FhirCode? get category;
   @override
 
   /// [categoryElement] ("_category") Extensions for category
@@ -10586,14 +10586,14 @@ mixin _$DeviceMetricCalibration {
       throw _privateConstructorUsedError;
 
   /// [type] Describes the type of the calibration method.
-   FhirCode? get type => throw _privateConstructorUsedError;
+  FhirCode? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] ("_type") Extensions for type
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
 
   /// [state] Describes the state of the calibration.
-   FhirCode? get state => throw _privateConstructorUsedError;
+  FhirCode? get state => throw _privateConstructorUsedError;
 
   /// [stateElement] ("_state") Extensions for state
   @JsonKey(name: '_state')
@@ -10622,9 +10622,9 @@ abstract class $DeviceMetricCalibrationCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-       FhirCode? type,
+      FhirCode? type,
       @JsonKey(name: '_type') Element? typeElement,
-       FhirCode? state,
+      FhirCode? state,
       @JsonKey(name: '_state') Element? stateElement,
       FhirInstant? time,
       @JsonKey(name: '_time') Element? timeElement});
@@ -10674,7 +10674,7 @@ class _$DeviceMetricCalibrationCopyWithImpl<$Res,
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       typeElement: freezed == typeElement
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -10682,7 +10682,7 @@ class _$DeviceMetricCalibrationCopyWithImpl<$Res,
       state: freezed == state
           ? _value.state
           : state // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       stateElement: freezed == stateElement
           ? _value.stateElement
           : stateElement // ignore: cast_nullable_to_non_nullable
@@ -10747,9 +10747,9 @@ abstract class _$$_DeviceMetricCalibrationCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-       FhirCode? type,
+      FhirCode? type,
       @JsonKey(name: '_type') Element? typeElement,
-       FhirCode? state,
+      FhirCode? state,
       @JsonKey(name: '_state') Element? stateElement,
       FhirInstant? time,
       @JsonKey(name: '_time') Element? timeElement});
@@ -10800,7 +10800,7 @@ class __$$_DeviceMetricCalibrationCopyWithImpl<$Res>
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       typeElement: freezed == typeElement
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -10808,7 +10808,7 @@ class __$$_DeviceMetricCalibrationCopyWithImpl<$Res>
       state: freezed == state
           ? _value.state
           : state // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       stateElement: freezed == stateElement
           ? _value.stateElement
           : stateElement // ignore: cast_nullable_to_non_nullable
@@ -10916,7 +10916,7 @@ class _$_DeviceMetricCalibration extends _DeviceMetricCalibration {
 
   /// [type] Describes the type of the calibration method.
   @override
-  final  FhirCode? type;
+  final FhirCode? type;
 
   /// [typeElement] ("_type") Extensions for type
   @override
@@ -10925,7 +10925,7 @@ class _$_DeviceMetricCalibration extends _DeviceMetricCalibration {
 
   /// [state] Describes the state of the calibration.
   @override
-  final  FhirCode? state;
+  final FhirCode? state;
 
   /// [stateElement] ("_state") Extensions for state
   @override
@@ -11002,9 +11002,9 @@ abstract class _DeviceMetricCalibration extends DeviceMetricCalibration {
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
-          final  FhirCode? type,
+          final FhirCode? type,
           @JsonKey(name: '_type') final Element? typeElement,
-          final  FhirCode? state,
+          final FhirCode? state,
           @JsonKey(name: '_state') final Element? stateElement,
           final Instant? time,
           @JsonKey(name: '_time') final Element? timeElement}) =
@@ -11049,7 +11049,7 @@ abstract class _DeviceMetricCalibration extends DeviceMetricCalibration {
   @override
 
   /// [type] Describes the type of the calibration method.
-   FhirCode? get type;
+  FhirCode? get type;
   @override
 
   /// [typeElement] ("_type") Extensions for type
@@ -11058,7 +11058,7 @@ abstract class _DeviceMetricCalibration extends DeviceMetricCalibration {
   @override
 
   /// [state] Describes the state of the calibration.
-   FhirCode? get state;
+  FhirCode? get state;
   @override
 
   /// [stateElement] ("_state") Extensions for state
@@ -11096,7 +11096,7 @@ mixin _$NutritionProduct {
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
   ///  always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   ///  the resource was constructed, and which must be understood when
@@ -11110,7 +11110,7 @@ mixin _$NutritionProduct {
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-   FhirCode? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
@@ -11163,7 +11163,7 @@ mixin _$NutritionProduct {
   CodeableConcept? get code => throw _privateConstructorUsedError;
 
   /// [status] The current state of the product.
-   FhirCode? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
@@ -11221,11 +11221,11 @@ abstract class $NutritionProductCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.NutritionProduct)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-       FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -11234,7 +11234,7 @@ abstract class $NutritionProductCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept? code,
-       FhirCode? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       List<CodeableConcept>? category,
@@ -11314,7 +11314,7 @@ class _$NutritionProductCopyWithImpl<$Res, $Val extends NutritionProduct>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -11342,7 +11342,7 @@ class _$NutritionProductCopyWithImpl<$Res, $Val extends NutritionProduct>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -11467,11 +11467,11 @@ abstract class _$$_NutritionProductCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R5ResourceType.NutritionProduct)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-       FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -11480,7 +11480,7 @@ abstract class _$$_NutritionProductCopyWith<$Res>
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept? code,
-       FhirCode? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       List<CodeableConcept>? category,
@@ -11564,7 +11564,7 @@ class __$$_NutritionProductCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -11592,7 +11592,7 @@ class __$$_NutritionProductCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -11688,7 +11688,7 @@ class _$_NutritionProduct extends _NutritionProduct {
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
@@ -11711,7 +11711,7 @@ class _$_NutritionProduct extends _NutritionProduct {
 
   /// [language] The base language in which the resource is written.
   @override
-  final  FhirCode? language;
+  final FhirCode? language;
 
   /// [languageElement] ("_language") Extensions for language
   @override
@@ -11820,7 +11820,7 @@ class _$_NutritionProduct extends _NutritionProduct {
 
   /// [status] The current state of the product.
   @override
-  final  FhirCode? status;
+  final FhirCode? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -12038,12 +12038,12 @@ abstract class _NutritionProduct extends NutritionProduct {
   factory _NutritionProduct(
       {@JsonKey(unknownEnumValue: R5ResourceType.NutritionProduct)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final  FhirCode? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -12052,7 +12052,7 @@ abstract class _NutritionProduct extends NutritionProduct {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final CodeableConcept? code,
-      final  FhirCode? status,
+      final FhirCode? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
       final List<CodeableConcept>? category,
@@ -12083,7 +12083,7 @@ abstract class _NutritionProduct extends NutritionProduct {
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
   ///  always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when
@@ -12100,7 +12100,7 @@ abstract class _NutritionProduct extends NutritionProduct {
   @override
 
   /// [language] The base language in which the resource is written.
-   FhirCode? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] ("_language") Extensions for language
@@ -12159,7 +12159,7 @@ abstract class _NutritionProduct extends NutritionProduct {
   @override
 
   /// [status] The current state of the product.
-   FhirCode? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status
@@ -13051,7 +13051,7 @@ mixin _$NutritionProductCharacteristic {
 
   /// [valueBase64Binary] The actual characteristic value corresponding to
   ///  the type.
-  FhirBase64Binary?? get valueBase64Binary => throw _privateConstructorUsedError;
+  FhirBase64Binary? get valueBase64Binary => throw _privateConstructorUsedError;
 
   /// [valueBase64BinaryElement] ("_valueBase64Binary") Extensions for
   ///  valueBase64Binary
@@ -13064,7 +13064,7 @@ mixin _$NutritionProductCharacteristic {
 
   /// [valueBoolean] The actual characteristic value corresponding to the
   ///  type.
-   FhirBoolean? get valueBoolean => throw _privateConstructorUsedError;
+  FhirBoolean? get valueBoolean => throw _privateConstructorUsedError;
 
   /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
   @JsonKey(name: '_valueBoolean')
@@ -13093,10 +13093,10 @@ abstract class $NutritionProductCharacteristicCopyWith<$Res> {
       String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
       Quantity? valueQuantity,
-  FhirBase64Binary?? valueBase64Binary,
+      FhirBase64Binary? valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
       Attachment? valueAttachment,
-       FhirBoolean? valueBoolean,
+      FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement});
 
   $CodeableConceptCopyWith<$Res> get type;
@@ -13172,7 +13172,7 @@ class _$NutritionProductCharacteristicCopyWithImpl<$Res,
       valueBase64Binary: freezed == valueBase64Binary
           ? _value.valueBase64Binary
           : valueBase64Binary // ignore: cast_nullable_to_non_nullable
-              as  FhirBase64Binary??,
+              as FhirBase64Binary?,
       valueBase64BinaryElement: freezed == valueBase64BinaryElement
           ? _value.valueBase64BinaryElement
           : valueBase64BinaryElement // ignore: cast_nullable_to_non_nullable
@@ -13184,7 +13184,7 @@ class _$NutritionProductCharacteristicCopyWithImpl<$Res,
       valueBoolean: freezed == valueBoolean
           ? _value.valueBoolean
           : valueBoolean // ignore: cast_nullable_to_non_nullable
-              as  FhirBoolean?,
+              as FhirBoolean?,
       valueBooleanElement: freezed == valueBooleanElement
           ? _value.valueBooleanElement
           : valueBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -13292,10 +13292,10 @@ abstract class _$$_NutritionProductCharacteristicCopyWith<$Res>
       String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
       Quantity? valueQuantity,
-  FhirBase64Binary?? valueBase64Binary,
+      FhirBase64Binary? valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
       Attachment? valueAttachment,
-       FhirBoolean? valueBoolean,
+      FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement});
 
   @override
@@ -13377,7 +13377,7 @@ class __$$_NutritionProductCharacteristicCopyWithImpl<$Res>
       valueBase64Binary: freezed == valueBase64Binary
           ? _value.valueBase64Binary
           : valueBase64Binary // ignore: cast_nullable_to_non_nullable
-              as  FhirBase64Binary??,
+              as FhirBase64Binary?,
       valueBase64BinaryElement: freezed == valueBase64BinaryElement
           ? _value.valueBase64BinaryElement
           : valueBase64BinaryElement // ignore: cast_nullable_to_non_nullable
@@ -13389,7 +13389,7 @@ class __$$_NutritionProductCharacteristicCopyWithImpl<$Res>
       valueBoolean: freezed == valueBoolean
           ? _value.valueBoolean
           : valueBoolean // ignore: cast_nullable_to_non_nullable
-              as  FhirBoolean?,
+              as FhirBoolean?,
       valueBooleanElement: freezed == valueBooleanElement
           ? _value.valueBooleanElement
           : valueBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -13520,7 +13520,7 @@ class _$_NutritionProductCharacteristic
   /// [valueBase64Binary] The actual characteristic value corresponding to
   ///  the type.
   @override
-  final  FhirBase64Binary?? valueBase64Binary;
+  final FhirBase64Binary? valueBase64Binary;
 
   /// [valueBase64BinaryElement] ("_valueBase64Binary") Extensions for
   ///  valueBase64Binary
@@ -13536,7 +13536,7 @@ class _$_NutritionProductCharacteristic
   /// [valueBoolean] The actual characteristic value corresponding to the
   ///  type.
   @override
-  final  FhirBoolean? valueBoolean;
+  final FhirBoolean? valueBoolean;
 
   /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
   @override
@@ -13626,11 +13626,11 @@ abstract class _NutritionProductCharacteristic
           @JsonKey(name: '_valueString')
               final Element? valueStringElement,
           final Quantity? valueQuantity,
-          final  FhirBase64Binary?? valueBase64Binary,
+          final FhirBase64Binary? valueBase64Binary,
           @JsonKey(name: '_valueBase64Binary')
               final Element? valueBase64BinaryElement,
           final Attachment? valueAttachment,
-          final  FhirBoolean? valueBoolean,
+          final FhirBoolean? valueBoolean,
           @JsonKey(name: '_valueBoolean')
               final Element? valueBooleanElement}) =
       _$_NutritionProductCharacteristic;
@@ -13699,7 +13699,7 @@ abstract class _NutritionProductCharacteristic
 
   /// [valueBase64Binary] The actual characteristic value corresponding to
   ///  the type.
-  FhirBase64Binary?? get valueBase64Binary;
+  FhirBase64Binary? get valueBase64Binary;
   @override
 
   /// [valueBase64BinaryElement] ("_valueBase64Binary") Extensions for
@@ -13715,7 +13715,7 @@ abstract class _NutritionProductCharacteristic
 
   /// [valueBoolean] The actual characteristic value corresponding to the
   ///  type.
-   FhirBoolean? get valueBoolean;
+  FhirBoolean? get valueBoolean;
   @override
 
   /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
@@ -14491,7 +14491,7 @@ mixin _$Substance {
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
   ///  always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   ///  the resource was constructed, and which must be understood when
@@ -14505,7 +14505,7 @@ mixin _$Substance {
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-   FhirCode? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
@@ -14560,14 +14560,14 @@ mixin _$Substance {
 
   /// [instance] A boolean to indicate if this an instance of a substance or
   ///  a kind of one (a definition).
-   FhirBoolean? get instance => throw _privateConstructorUsedError;
+  FhirBoolean? get instance => throw _privateConstructorUsedError;
 
   /// [instanceElement] ("_instance") Extensions for instance
   @JsonKey(name: '_instance')
   Element? get instanceElement => throw _privateConstructorUsedError;
 
   /// [status] A code to indicate if the substance is actively used.
-   FhirCode? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
@@ -14618,11 +14618,11 @@ abstract class $SubstanceCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.Substance)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-       FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -14631,10 +14631,10 @@ abstract class $SubstanceCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-       FhirBoolean? instance,
+      FhirBoolean? instance,
       @JsonKey(name: '_instance')
           Element? instanceElement,
-       FhirCode? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       List<CodeableConcept>? category,
@@ -14722,7 +14722,7 @@ class _$SubstanceCopyWithImpl<$Res, $Val extends Substance>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -14750,7 +14750,7 @@ class _$SubstanceCopyWithImpl<$Res, $Val extends Substance>
       instance: freezed == instance
           ? _value.instance
           : instance // ignore: cast_nullable_to_non_nullable
-              as  FhirBoolean?,
+              as FhirBoolean?,
       instanceElement: freezed == instanceElement
           ? _value.instanceElement
           : instanceElement // ignore: cast_nullable_to_non_nullable
@@ -14758,7 +14758,7 @@ class _$SubstanceCopyWithImpl<$Res, $Val extends Substance>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -14926,11 +14926,11 @@ abstract class _$$_SubstanceCopyWith<$Res> implements $SubstanceCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.Substance)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-       FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -14939,10 +14939,10 @@ abstract class _$$_SubstanceCopyWith<$Res> implements $SubstanceCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-       FhirBoolean? instance,
+      FhirBoolean? instance,
       @JsonKey(name: '_instance')
           Element? instanceElement,
-       FhirCode? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       List<CodeableConcept>? category,
@@ -15038,7 +15038,7 @@ class __$$_SubstanceCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -15066,7 +15066,7 @@ class __$$_SubstanceCopyWithImpl<$Res>
       instance: freezed == instance
           ? _value.instance
           : instance // ignore: cast_nullable_to_non_nullable
-              as  FhirBoolean?,
+              as FhirBoolean?,
       instanceElement: freezed == instanceElement
           ? _value.instanceElement
           : instanceElement // ignore: cast_nullable_to_non_nullable
@@ -15074,7 +15074,7 @@ class __$$_SubstanceCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -15170,7 +15170,7 @@ class _$_Substance extends _Substance {
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
@@ -15193,7 +15193,7 @@ class _$_Substance extends _Substance {
 
   /// [language] The base language in which the resource is written.
   @override
-  final  FhirCode? language;
+  final FhirCode? language;
 
   /// [languageElement] ("_language") Extensions for language
   @override
@@ -15315,7 +15315,7 @@ class _$_Substance extends _Substance {
   /// [instance] A boolean to indicate if this an instance of a substance or
   ///  a kind of one (a definition).
   @override
-  final  FhirBoolean? instance;
+  final FhirBoolean? instance;
 
   /// [instanceElement] ("_instance") Extensions for instance
   @override
@@ -15324,7 +15324,7 @@ class _$_Substance extends _Substance {
 
   /// [status] A code to indicate if the substance is actively used.
   @override
-  final  FhirCode? status;
+  final FhirCode? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -15488,12 +15488,12 @@ abstract class _Substance extends Substance {
   factory _Substance(
       {@JsonKey(unknownEnumValue: R5ResourceType.Substance)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final  FhirCode? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -15502,10 +15502,10 @@ abstract class _Substance extends Substance {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      final  FhirBoolean? instance,
+      final FhirBoolean? instance,
       @JsonKey(name: '_instance')
           final Element? instanceElement,
-      final  FhirCode? status,
+      final FhirCode? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
       final List<CodeableConcept>? category,
@@ -15538,7 +15538,7 @@ abstract class _Substance extends Substance {
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
   ///  always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when
@@ -15555,7 +15555,7 @@ abstract class _Substance extends Substance {
   @override
 
   /// [language] The base language in which the resource is written.
-   FhirCode? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] ("_language") Extensions for language
@@ -15616,7 +15616,7 @@ abstract class _Substance extends Substance {
 
   /// [instance] A boolean to indicate if this an instance of a substance or
   ///  a kind of one (a definition).
-   FhirBoolean? get instance;
+  FhirBoolean? get instance;
   @override
 
   /// [instanceElement] ("_instance") Extensions for instance
@@ -15625,7 +15625,7 @@ abstract class _Substance extends Substance {
   @override
 
   /// [status] A code to indicate if the substance is actively used.
-   FhirCode? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status

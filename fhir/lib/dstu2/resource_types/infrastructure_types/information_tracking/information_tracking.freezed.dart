@@ -25,11 +25,11 @@ mixin _$Questionnaire {
   FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: '_id')
   Element? get idElement => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
-   FhirCode? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -53,7 +53,7 @@ mixin _$Questionnaire {
   @JsonKey(name: '_publisher')
   Element? get publisherElement => throw _privateConstructorUsedError;
   List<ContactPoint>? get telecom => throw _privateConstructorUsedError;
-  List<Code>? get subjectType => throw _privateConstructorUsedError;
+  List<FhirCode>? get subjectType => throw _privateConstructorUsedError;
   @JsonKey(name: '_subjectType')
   List<Element?>? get subjectTypeElement => throw _privateConstructorUsedError;
   QuestionnaireGroup get group => throw _privateConstructorUsedError;
@@ -76,11 +76,11 @@ abstract class $QuestionnaireCopyWith<$Res> {
       FhirId? id,
       @JsonKey(name: '_id')
           Element? idElement,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-       FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -103,7 +103,7 @@ abstract class $QuestionnaireCopyWith<$Res> {
       @JsonKey(name: '_publisher')
           Element? publisherElement,
       List<ContactPoint>? telecom,
-      List<Code>? subjectType,
+      List<FhirCode>? subjectType,
       @JsonKey(name: '_subjectType')
           List<Element?>? subjectTypeElement,
       QuestionnaireGroup group});
@@ -187,7 +187,7 @@ class _$QuestionnaireCopyWithImpl<$Res, $Val extends Questionnaire>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -251,7 +251,7 @@ class _$QuestionnaireCopyWithImpl<$Res, $Val extends Questionnaire>
       subjectType: freezed == subjectType
           ? _value.subjectType
           : subjectType // ignore: cast_nullable_to_non_nullable
-              as List<Code>?,
+              as List<FhirCode>?,
       subjectTypeElement: freezed == subjectTypeElement
           ? _value.subjectTypeElement
           : subjectTypeElement // ignore: cast_nullable_to_non_nullable
@@ -394,11 +394,11 @@ abstract class _$$_QuestionnaireCopyWith<$Res>
       FhirId? id,
       @JsonKey(name: '_id')
           Element? idElement,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-       FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -421,7 +421,7 @@ abstract class _$$_QuestionnaireCopyWith<$Res>
       @JsonKey(name: '_publisher')
           Element? publisherElement,
       List<ContactPoint>? telecom,
-      List<Code>? subjectType,
+      List<FhirCode>? subjectType,
       @JsonKey(name: '_subjectType')
           List<Element?>? subjectTypeElement,
       QuestionnaireGroup group});
@@ -513,7 +513,7 @@ class __$$_QuestionnaireCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -577,7 +577,7 @@ class __$$_QuestionnaireCopyWithImpl<$Res>
       subjectType: freezed == subjectType
           ? _value._subjectType
           : subjectType // ignore: cast_nullable_to_non_nullable
-              as List<Code>?,
+              as List<FhirCode>?,
       subjectTypeElement: freezed == subjectTypeElement
           ? _value._subjectTypeElement
           : subjectTypeElement // ignore: cast_nullable_to_non_nullable
@@ -626,7 +626,7 @@ class _$_Questionnaire extends _Questionnaire {
       @JsonKey(name: '_publisher')
           this.publisherElement,
       final List<ContactPoint>? telecom,
-      final List<Code>? subjectType,
+      final List<FhirCode>? subjectType,
       @JsonKey(name: '_subjectType')
           final List<Element?>? subjectTypeElement,
       required this.group})
@@ -646,7 +646,7 @@ class _$_Questionnaire extends _Questionnaire {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Questionnaire)
   final Dstu2ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   @JsonKey(name: '_id')
   final Element? idElement;
@@ -658,7 +658,7 @@ class _$_Questionnaire extends _Questionnaire {
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
-  final  FhirCode? language;
+  final FhirCode? language;
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
@@ -737,9 +737,9 @@ class _$_Questionnaire extends _Questionnaire {
     return EqualUnmodifiableListView(value);
   }
 
-  final List<Code>? _subjectType;
+  final List<FhirCode>? _subjectType;
   @override
-  List<Code>? get subjectType {
+  List<FhirCode>? get subjectType {
     final value = _subjectType;
     if (value == null) return null;
     if (_subjectType is EqualUnmodifiableListView) return _subjectType;
@@ -865,14 +865,14 @@ abstract class _Questionnaire extends Questionnaire {
   factory _Questionnaire(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Questionnaire)
           final Dstu2ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       @JsonKey(name: '_id')
           final Element? idElement,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final  FhirCode? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -895,7 +895,7 @@ abstract class _Questionnaire extends Questionnaire {
       @JsonKey(name: '_publisher')
           final Element? publisherElement,
       final List<ContactPoint>? telecom,
-      final List<Code>? subjectType,
+      final List<FhirCode>? subjectType,
       @JsonKey(name: '_subjectType')
           final List<Element?>? subjectTypeElement,
       required final QuestionnaireGroup group}) = _$_Questionnaire;
@@ -913,14 +913,14 @@ abstract class _Questionnaire extends Questionnaire {
   @JsonKey(name: '_id')
   Element? get idElement;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
-   FhirCode? get language;
+  FhirCode? get language;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;
@@ -959,7 +959,7 @@ abstract class _Questionnaire extends Questionnaire {
   @override
   List<ContactPoint>? get telecom;
   @override
-  List<Code>? get subjectType;
+  List<FhirCode>? get subjectType;
   @override
   @JsonKey(name: '_subjectType')
   List<Element?>? get subjectTypeElement;
@@ -993,8 +993,8 @@ mixin _$QuestionnaireGroup {
   List<Coding>? get concept => throw _privateConstructorUsedError;
   String? get text => throw _privateConstructorUsedError;
   @JsonKey(name: 'required')
-   FhirBoolean? get required_ => throw _privateConstructorUsedError;
-   FhirBoolean? get repeats => throw _privateConstructorUsedError;
+  FhirBoolean? get required_ => throw _privateConstructorUsedError;
+  FhirBoolean? get repeats => throw _privateConstructorUsedError;
   List<QuestionnaireGroup>? get group => throw _privateConstructorUsedError;
   List<QuestionnaireGroupQuestion>? get question =>
       throw _privateConstructorUsedError;
@@ -1022,8 +1022,8 @@ abstract class $QuestionnaireGroupCopyWith<$Res> {
       @JsonKey(name: '_title') Element? titleElement,
       List<Coding>? concept,
       String? text,
-      @JsonKey(name: 'required')  FhirBoolean? required_,
-       FhirBoolean? repeats,
+      @JsonKey(name: 'required') FhirBoolean? required_,
+      FhirBoolean? repeats,
       List<QuestionnaireGroup>? group,
       List<QuestionnaireGroupQuestion>? question});
 
@@ -1103,11 +1103,11 @@ class _$QuestionnaireGroupCopyWithImpl<$Res, $Val extends QuestionnaireGroup>
       required_: freezed == required_
           ? _value.required_
           : required_ // ignore: cast_nullable_to_non_nullable
-              as  FhirBoolean?,
+              as FhirBoolean?,
       repeats: freezed == repeats
           ? _value.repeats
           : repeats // ignore: cast_nullable_to_non_nullable
-              as  FhirBoolean?,
+              as FhirBoolean?,
       group: freezed == group
           ? _value.group
           : group // ignore: cast_nullable_to_non_nullable
@@ -1163,8 +1163,8 @@ abstract class _$$_QuestionnaireGroupCopyWith<$Res>
       @JsonKey(name: '_title') Element? titleElement,
       List<Coding>? concept,
       String? text,
-      @JsonKey(name: 'required')  FhirBoolean? required_,
-       FhirBoolean? repeats,
+      @JsonKey(name: 'required') FhirBoolean? required_,
+      FhirBoolean? repeats,
       List<QuestionnaireGroup>? group,
       List<QuestionnaireGroupQuestion>? question});
 
@@ -1244,11 +1244,11 @@ class __$$_QuestionnaireGroupCopyWithImpl<$Res>
       required_: freezed == required_
           ? _value.required_
           : required_ // ignore: cast_nullable_to_non_nullable
-              as  FhirBoolean?,
+              as FhirBoolean?,
       repeats: freezed == repeats
           ? _value.repeats
           : repeats // ignore: cast_nullable_to_non_nullable
-              as  FhirBoolean?,
+              as FhirBoolean?,
       group: freezed == group
           ? _value._group
           : group // ignore: cast_nullable_to_non_nullable
@@ -1291,7 +1291,7 @@ class _$_QuestionnaireGroup extends _QuestionnaireGroup {
       _$$_QuestionnaireGroupFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -1349,9 +1349,9 @@ class _$_QuestionnaireGroup extends _QuestionnaireGroup {
   final String? text;
   @override
   @JsonKey(name: 'required')
-  final  FhirBoolean? required_;
+  final FhirBoolean? required_;
   @override
-  final  FhirBoolean? repeats;
+  final FhirBoolean? repeats;
   final List<QuestionnaireGroup>? _group;
   @override
   List<QuestionnaireGroup>? get group {
@@ -1440,7 +1440,7 @@ class _$_QuestionnaireGroup extends _QuestionnaireGroup {
 
 abstract class _QuestionnaireGroup extends QuestionnaireGroup {
   factory _QuestionnaireGroup(
-          {final Id? id,
+          {final FhirId? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
@@ -1450,8 +1450,8 @@ abstract class _QuestionnaireGroup extends QuestionnaireGroup {
           @JsonKey(name: '_title') final Element? titleElement,
           final List<Coding>? concept,
           final String? text,
-          @JsonKey(name: 'required') final  FhirBoolean? required_,
-          final  FhirBoolean? repeats,
+          @JsonKey(name: 'required') final FhirBoolean? required_,
+          final FhirBoolean? repeats,
           final List<QuestionnaireGroup>? group,
           final List<QuestionnaireGroupQuestion>? question}) =
       _$_QuestionnaireGroup;
@@ -1486,9 +1486,9 @@ abstract class _QuestionnaireGroup extends QuestionnaireGroup {
   String? get text;
   @override
   @JsonKey(name: 'required')
-   FhirBoolean? get required_;
+  FhirBoolean? get required_;
   @override
-   FhirBoolean? get repeats;
+  FhirBoolean? get repeats;
   @override
   List<QuestionnaireGroup>? get group;
   @override
@@ -1521,8 +1521,8 @@ mixin _$QuestionnaireGroupQuestion {
   @JsonKey(unknownEnumValue: QuestionType.unknown)
   QuestionType? get type => throw _privateConstructorUsedError;
   @JsonKey(name: 'required')
-   FhirBoolean? get required_ => throw _privateConstructorUsedError;
-   FhirBoolean? get repeats => throw _privateConstructorUsedError;
+  FhirBoolean? get required_ => throw _privateConstructorUsedError;
+  FhirBoolean? get repeats => throw _privateConstructorUsedError;
   Reference? get options => throw _privateConstructorUsedError;
   List<Coding>? get option => throw _privateConstructorUsedError;
   List<QuestionnaireGroup>? get group => throw _privateConstructorUsedError;
@@ -1550,8 +1550,8 @@ abstract class $QuestionnaireGroupQuestionCopyWith<$Res> {
       List<Coding>? concept,
       String? text,
       @JsonKey(unknownEnumValue: QuestionType.unknown) QuestionType? type,
-      @JsonKey(name: 'required')  FhirBoolean? required_,
-       FhirBoolean? repeats,
+      @JsonKey(name: 'required') FhirBoolean? required_,
+      FhirBoolean? repeats,
       Reference? options,
       List<Coding>? option,
       List<QuestionnaireGroup>? group});
@@ -1629,11 +1629,11 @@ class _$QuestionnaireGroupQuestionCopyWithImpl<$Res,
       required_: freezed == required_
           ? _value.required_
           : required_ // ignore: cast_nullable_to_non_nullable
-              as  FhirBoolean?,
+              as FhirBoolean?,
       repeats: freezed == repeats
           ? _value.repeats
           : repeats // ignore: cast_nullable_to_non_nullable
-              as  FhirBoolean?,
+              as FhirBoolean?,
       options: freezed == options
           ? _value.options
           : options // ignore: cast_nullable_to_non_nullable
@@ -1693,8 +1693,8 @@ abstract class _$$_QuestionnaireGroupQuestionCopyWith<$Res>
       List<Coding>? concept,
       String? text,
       @JsonKey(unknownEnumValue: QuestionType.unknown) QuestionType? type,
-      @JsonKey(name: 'required')  FhirBoolean? required_,
-       FhirBoolean? repeats,
+      @JsonKey(name: 'required') FhirBoolean? required_,
+      FhirBoolean? repeats,
       Reference? options,
       List<Coding>? option,
       List<QuestionnaireGroup>? group});
@@ -1773,11 +1773,11 @@ class __$$_QuestionnaireGroupQuestionCopyWithImpl<$Res>
       required_: freezed == required_
           ? _value.required_
           : required_ // ignore: cast_nullable_to_non_nullable
-              as  FhirBoolean?,
+              as FhirBoolean?,
       repeats: freezed == repeats
           ? _value.repeats
           : repeats // ignore: cast_nullable_to_non_nullable
-              as  FhirBoolean?,
+              as FhirBoolean?,
       options: freezed == options
           ? _value.options
           : options // ignore: cast_nullable_to_non_nullable
@@ -1824,7 +1824,7 @@ class _$_QuestionnaireGroupQuestion extends _QuestionnaireGroupQuestion {
       _$$_QuestionnaireGroupQuestionFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -1880,9 +1880,9 @@ class _$_QuestionnaireGroupQuestion extends _QuestionnaireGroupQuestion {
   final QuestionType? type;
   @override
   @JsonKey(name: 'required')
-  final  FhirBoolean? required_;
+  final FhirBoolean? required_;
   @override
-  final  FhirBoolean? repeats;
+  final FhirBoolean? repeats;
   @override
   final Reference? options;
   final List<Coding>? _option;
@@ -1972,7 +1972,7 @@ class _$_QuestionnaireGroupQuestion extends _QuestionnaireGroupQuestion {
 
 abstract class _QuestionnaireGroupQuestion extends QuestionnaireGroupQuestion {
   factory _QuestionnaireGroupQuestion(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
@@ -1981,8 +1981,8 @@ abstract class _QuestionnaireGroupQuestion extends QuestionnaireGroupQuestion {
       final List<Coding>? concept,
       final String? text,
       @JsonKey(unknownEnumValue: QuestionType.unknown) final QuestionType? type,
-      @JsonKey(name: 'required') final  FhirBoolean? required_,
-      final  FhirBoolean? repeats,
+      @JsonKey(name: 'required') final FhirBoolean? required_,
+      final FhirBoolean? repeats,
       final Reference? options,
       final List<Coding>? option,
       final List<QuestionnaireGroup>? group}) = _$_QuestionnaireGroupQuestion;
@@ -2015,9 +2015,9 @@ abstract class _QuestionnaireGroupQuestion extends QuestionnaireGroupQuestion {
   QuestionType? get type;
   @override
   @JsonKey(name: 'required')
-   FhirBoolean? get required_;
+  FhirBoolean? get required_;
   @override
-   FhirBoolean? get repeats;
+  FhirBoolean? get repeats;
   @override
   Reference? get options;
   @override
@@ -2042,11 +2042,11 @@ mixin _$QuestionnaireResponse {
   FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: '_id')
   Element? get idElement => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
-   FhirCode? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -2089,11 +2089,11 @@ abstract class $QuestionnaireResponseCopyWith<$Res> {
       FhirId? id,
       @JsonKey(name: '_id')
           Element? idElement,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-       FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -2198,7 +2198,7 @@ class _$QuestionnaireResponseCopyWithImpl<$Res,
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -2449,11 +2449,11 @@ abstract class _$$_QuestionnaireResponseCopyWith<$Res>
       FhirId? id,
       @JsonKey(name: '_id')
           Element? idElement,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-       FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -2569,7 +2569,7 @@ class __$$_QuestionnaireResponseCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -2685,7 +2685,7 @@ class _$_QuestionnaireResponse extends _QuestionnaireResponse {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.QuestionnaireResponse)
   final Dstu2ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   @JsonKey(name: '_id')
   final Element? idElement;
@@ -2697,7 +2697,7 @@ class _$_QuestionnaireResponse extends _QuestionnaireResponse {
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
-  final  FhirCode? language;
+  final FhirCode? language;
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
@@ -2860,14 +2860,14 @@ abstract class _QuestionnaireResponse extends QuestionnaireResponse {
   factory _QuestionnaireResponse(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.QuestionnaireResponse)
           final Dstu2ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       @JsonKey(name: '_id')
           final Element? idElement,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final  FhirCode? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -2903,14 +2903,14 @@ abstract class _QuestionnaireResponse extends QuestionnaireResponse {
   @JsonKey(name: '_id')
   Element? get idElement;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
-   FhirCode? get language;
+  FhirCode? get language;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;
@@ -3267,7 +3267,7 @@ class _$_QuestionnaireResponseGroup extends _QuestionnaireResponseGroup {
       _$$_QuestionnaireResponseGroupFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -3398,7 +3398,7 @@ class _$_QuestionnaireResponseGroup extends _QuestionnaireResponseGroup {
 
 abstract class _QuestionnaireResponseGroup extends QuestionnaireResponseGroup {
   factory _QuestionnaireResponseGroup(
-          {final Id? id,
+          {final FhirId? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
@@ -3677,7 +3677,7 @@ class _$_QuestionnaireResponseGroupQuestion
       _$$_QuestionnaireResponseGroupQuestionFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -3784,7 +3784,7 @@ class _$_QuestionnaireResponseGroupQuestion
 abstract class _QuestionnaireResponseGroupQuestion
     extends QuestionnaireResponseGroupQuestion {
   factory _QuestionnaireResponseGroupQuestion(
-          {final Id? id,
+          {final FhirId? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
@@ -3839,7 +3839,7 @@ mixin _$QuestionnaireResponseQuestionAnswer {
       throw _privateConstructorUsedError;
   @JsonKey(name: 'fhir_comments')
   List<String>? get fhirComments => throw _privateConstructorUsedError;
-   FhirBoolean? get valueBoolean => throw _privateConstructorUsedError;
+  FhirBoolean? get valueBoolean => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueBoolean')
   Element? get valueBooleanElement => throw _privateConstructorUsedError;
   FhirDecimal? get valueDecimal => throw _privateConstructorUsedError;
@@ -3857,7 +3857,7 @@ mixin _$QuestionnaireResponseQuestionAnswer {
   FhirInstant? get valueInstant => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueInstant')
   Element? get valueInstantElement => throw _privateConstructorUsedError;
-  Time? get valueTime => throw _privateConstructorUsedError;
+  FhirTime? get valueTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueTime')
   Element? get valueTimeElement => throw _privateConstructorUsedError;
   String? get valueString => throw _privateConstructorUsedError;
@@ -3893,7 +3893,7 @@ abstract class $QuestionnaireResponseQuestionAnswerCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-       FhirBoolean? valueBoolean,
+      FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       FhirDecimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
@@ -3905,7 +3905,7 @@ abstract class $QuestionnaireResponseQuestionAnswerCopyWith<$Res> {
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
       FhirInstant? valueInstant,
       @JsonKey(name: '_valueInstant') Element? valueInstantElement,
-      Time? valueTime,
+      FhirTime? valueTime,
       @JsonKey(name: '_valueTime') Element? valueTimeElement,
       String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
@@ -3994,7 +3994,7 @@ class _$QuestionnaireResponseQuestionAnswerCopyWithImpl<$Res,
       valueBoolean: freezed == valueBoolean
           ? _value.valueBoolean
           : valueBoolean // ignore: cast_nullable_to_non_nullable
-              as  FhirBoolean?,
+              as FhirBoolean?,
       valueBooleanElement: freezed == valueBooleanElement
           ? _value.valueBooleanElement
           : valueBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -4257,7 +4257,7 @@ abstract class _$$_QuestionnaireResponseQuestionAnswerCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-       FhirBoolean? valueBoolean,
+      FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       FhirDecimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
@@ -4269,7 +4269,7 @@ abstract class _$$_QuestionnaireResponseQuestionAnswerCopyWith<$Res>
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
       FhirInstant? valueInstant,
       @JsonKey(name: '_valueInstant') Element? valueInstantElement,
-      Time? valueTime,
+      FhirTime? valueTime,
       @JsonKey(name: '_valueTime') Element? valueTimeElement,
       String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
@@ -4370,7 +4370,7 @@ class __$$_QuestionnaireResponseQuestionAnswerCopyWithImpl<$Res>
       valueBoolean: freezed == valueBoolean
           ? _value.valueBoolean
           : valueBoolean // ignore: cast_nullable_to_non_nullable
-              as  FhirBoolean?,
+              as FhirBoolean?,
       valueBooleanElement: freezed == valueBooleanElement
           ? _value.valueBooleanElement
           : valueBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -4506,7 +4506,7 @@ class _$_QuestionnaireResponseQuestionAnswer
       _$$_QuestionnaireResponseQuestionAnswerFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -4541,7 +4541,7 @@ class _$_QuestionnaireResponseQuestionAnswer
   }
 
   @override
-  final  FhirBoolean? valueBoolean;
+  final FhirBoolean? valueBoolean;
   @override
   @JsonKey(name: '_valueBoolean')
   final Element? valueBooleanElement;
@@ -4719,11 +4719,11 @@ class _$_QuestionnaireResponseQuestionAnswer
 abstract class _QuestionnaireResponseQuestionAnswer
     extends QuestionnaireResponseQuestionAnswer {
   factory _QuestionnaireResponseQuestionAnswer(
-          {final Id? id,
+          {final FhirId? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
-          final  FhirBoolean? valueBoolean,
+          final FhirBoolean? valueBoolean,
           @JsonKey(name: '_valueBoolean') final Element? valueBooleanElement,
           final Decimal? valueDecimal,
           @JsonKey(name: '_valueDecimal') final Element? valueDecimalElement,
@@ -4764,7 +4764,7 @@ abstract class _QuestionnaireResponseQuestionAnswer
   @JsonKey(name: 'fhir_comments')
   List<String>? get fhirComments;
   @override
-   FhirBoolean? get valueBoolean;
+  FhirBoolean? get valueBoolean;
   @override
   @JsonKey(name: '_valueBoolean')
   Element? get valueBooleanElement;
@@ -4794,7 +4794,7 @@ abstract class _QuestionnaireResponseQuestionAnswer
   @JsonKey(name: '_valueInstant')
   Element? get valueInstantElement;
   @override
-  Time? get valueTime;
+  FhirTime? get valueTime;
   @override
   @JsonKey(name: '_valueTime')
   Element? get valueTimeElement;
@@ -4834,11 +4834,11 @@ mixin _$Provenance {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Provenance)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
   FhirId? get id => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
-   FhirCode? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -4878,11 +4878,11 @@ abstract class $ProvenanceCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Provenance)
           Dstu2ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-       FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -4976,7 +4976,7 @@ class _$ProvenanceCopyWithImpl<$Res, $Val extends Provenance>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -5157,11 +5157,11 @@ abstract class _$$_ProvenanceCopyWith<$Res>
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Provenance)
           Dstu2ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-       FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -5261,7 +5261,7 @@ class __$$_ProvenanceCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -5386,7 +5386,7 @@ class _$_Provenance extends _Provenance {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Provenance)
   final Dstu2ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -5395,7 +5395,7 @@ class _$_Provenance extends _Provenance {
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
-  final  FhirCode? language;
+  final FhirCode? language;
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
@@ -5609,12 +5609,12 @@ abstract class _Provenance extends Provenance {
   factory _Provenance(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Provenance)
           final Dstu2ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final  FhirCode? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -5647,14 +5647,14 @@ abstract class _Provenance extends Provenance {
   @override
   FhirId? get id;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
-   FhirCode? get language;
+  FhirCode? get language;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;
@@ -5941,7 +5941,7 @@ class _$_ProvenanceAgent extends _ProvenanceAgent {
       _$$_ProvenanceAgentFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -6044,7 +6044,7 @@ class _$_ProvenanceAgent extends _ProvenanceAgent {
 
 abstract class _ProvenanceAgent extends ProvenanceAgent {
   factory _ProvenanceAgent(
-          {final Id? id,
+          {final FhirId? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
@@ -6382,7 +6382,7 @@ class _$_ProvenanceEntity extends _ProvenanceEntity {
       _$$_ProvenanceEntityFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -6495,7 +6495,7 @@ class _$_ProvenanceEntity extends _ProvenanceEntity {
 
 abstract class _ProvenanceEntity extends ProvenanceEntity {
   factory _ProvenanceEntity(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -6722,7 +6722,7 @@ class _$_ProvenanceAgentRelatedAgent extends _ProvenanceAgentRelatedAgent {
       _$$_ProvenanceAgentRelatedAgentFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -6797,7 +6797,7 @@ class _$_ProvenanceAgentRelatedAgent extends _ProvenanceAgentRelatedAgent {
 abstract class _ProvenanceAgentRelatedAgent
     extends ProvenanceAgentRelatedAgent {
   factory _ProvenanceAgentRelatedAgent(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final CodeableConcept type,
@@ -6833,11 +6833,11 @@ mixin _$AuditEvent {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.AuditEvent)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
   FhirId? get id => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
-   FhirCode? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -6868,11 +6868,11 @@ abstract class $AuditEventCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.AuditEvent)
           Dstu2ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-       FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -6946,7 +6946,7 @@ class _$AuditEventCopyWithImpl<$Res, $Val extends AuditEvent>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -7063,11 +7063,11 @@ abstract class _$$_AuditEventCopyWith<$Res>
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.AuditEvent)
           Dstu2ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-       FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -7145,7 +7145,7 @@ class __$$_AuditEventCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -7223,7 +7223,7 @@ class _$_AuditEvent extends _AuditEvent {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.AuditEvent)
   final Dstu2ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -7232,7 +7232,7 @@ class _$_AuditEvent extends _AuditEvent {
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
-  final  FhirCode? language;
+  final FhirCode? language;
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
@@ -7366,12 +7366,12 @@ abstract class _AuditEvent extends AuditEvent {
   factory _AuditEvent(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.AuditEvent)
           final Dstu2ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final  FhirCode? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
       final Narrative? text,
@@ -7394,14 +7394,14 @@ abstract class _AuditEvent extends AuditEvent {
   @override
   FhirId? get id;
   @override
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
-   FhirCode? get language;
+  FhirCode? get language;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;
@@ -7441,9 +7441,9 @@ mixin _$AuditEventEvent {
       throw _privateConstructorUsedError;
   Coding get type => throw _privateConstructorUsedError;
   List<Coding>? get subtype => throw _privateConstructorUsedError;
-   FhirCode? get action => throw _privateConstructorUsedError;
+  FhirCode? get action => throw _privateConstructorUsedError;
   Instant get dateTime => throw _privateConstructorUsedError;
-   FhirCode? get outcome => throw _privateConstructorUsedError;
+  FhirCode? get outcome => throw _privateConstructorUsedError;
   String? get outcomeDesc => throw _privateConstructorUsedError;
   List<Coding>? get purposeOfEvent => throw _privateConstructorUsedError;
 
@@ -7465,9 +7465,9 @@ abstract class $AuditEventEventCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       Coding type,
       List<Coding>? subtype,
-       FhirCode? action,
+      FhirCode? action,
       Instant dateTime,
-       FhirCode? outcome,
+      FhirCode? outcome,
       String? outcomeDesc,
       List<Coding>? purposeOfEvent});
 
@@ -7522,7 +7522,7 @@ class _$AuditEventEventCopyWithImpl<$Res, $Val extends AuditEventEvent>
       action: freezed == action
           ? _value.action
           : action // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       dateTime: null == dateTime
           ? _value.dateTime
           : dateTime // ignore: cast_nullable_to_non_nullable
@@ -7530,7 +7530,7 @@ class _$AuditEventEventCopyWithImpl<$Res, $Val extends AuditEventEvent>
       outcome: freezed == outcome
           ? _value.outcome
           : outcome // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       outcomeDesc: freezed == outcomeDesc
           ? _value.outcomeDesc
           : outcomeDesc // ignore: cast_nullable_to_non_nullable
@@ -7565,9 +7565,9 @@ abstract class _$$_AuditEventEventCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       Coding type,
       List<Coding>? subtype,
-       FhirCode? action,
+      FhirCode? action,
       Instant dateTime,
-       FhirCode? outcome,
+      FhirCode? outcome,
       String? outcomeDesc,
       List<Coding>? purposeOfEvent});
 
@@ -7621,7 +7621,7 @@ class __$$_AuditEventEventCopyWithImpl<$Res>
       action: freezed == action
           ? _value.action
           : action // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       dateTime: null == dateTime
           ? _value.dateTime
           : dateTime // ignore: cast_nullable_to_non_nullable
@@ -7629,7 +7629,7 @@ class __$$_AuditEventEventCopyWithImpl<$Res>
       outcome: freezed == outcome
           ? _value.outcome
           : outcome // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       outcomeDesc: freezed == outcomeDesc
           ? _value.outcomeDesc
           : outcomeDesc // ignore: cast_nullable_to_non_nullable
@@ -7666,7 +7666,7 @@ class _$_AuditEventEvent extends _AuditEventEvent {
       _$$_AuditEventEventFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -7702,11 +7702,11 @@ class _$_AuditEventEvent extends _AuditEventEvent {
   }
 
   @override
-  final  FhirCode? action;
+  final FhirCode? action;
   @override
   final Instant dateTime;
   @override
-  final  FhirCode? outcome;
+  final FhirCode? outcome;
   @override
   final String? outcomeDesc;
   final List<Coding>? _purposeOfEvent;
@@ -7777,14 +7777,14 @@ class _$_AuditEventEvent extends _AuditEventEvent {
 
 abstract class _AuditEventEvent extends AuditEventEvent {
   factory _AuditEventEvent(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final Coding type,
       final List<Coding>? subtype,
-      final  FhirCode? action,
+      final FhirCode? action,
       required final Instant dateTime,
-      final  FhirCode? outcome,
+      final FhirCode? outcome,
       final String? outcomeDesc,
       final List<Coding>? purposeOfEvent}) = _$_AuditEventEvent;
   _AuditEventEvent._() : super._();
@@ -7804,11 +7804,11 @@ abstract class _AuditEventEvent extends AuditEventEvent {
   @override
   List<Coding>? get subtype;
   @override
-   FhirCode? get action;
+  FhirCode? get action;
   @override
   Instant get dateTime;
   @override
-   FhirCode? get outcome;
+  FhirCode? get outcome;
   @override
   String? get outcomeDesc;
   @override
@@ -8212,7 +8212,7 @@ class _$_AuditEventParticipant extends _AuditEventParticipant {
       _$$_AuditEventParticipantFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -8355,7 +8355,7 @@ class _$_AuditEventParticipant extends _AuditEventParticipant {
 
 abstract class _AuditEventParticipant extends AuditEventParticipant {
   factory _AuditEventParticipant(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<CodeableConcept>? role,
@@ -8624,7 +8624,7 @@ class _$_AuditEventSource extends _AuditEventSource {
       _$$_AuditEventSourceFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -8715,7 +8715,7 @@ class _$_AuditEventSource extends _AuditEventSource {
 
 abstract class _AuditEventSource extends AuditEventSource {
   factory _AuditEventSource(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final String? site,
@@ -8768,7 +8768,7 @@ mixin _$AuditEventObject {
   List<Coding>? get securityLabel => throw _privateConstructorUsedError;
   String? get name => throw _privateConstructorUsedError;
   String? get description => throw _privateConstructorUsedError;
-  FhirBase64Binary?? get query => throw _privateConstructorUsedError;
+  FhirBase64Binary? get query => throw _privateConstructorUsedError;
   @JsonKey(name: '_query')
   Element? get queryElement => throw _privateConstructorUsedError;
   List<AuditEventObjectDetail>? get detail =>
@@ -8798,7 +8798,7 @@ abstract class $AuditEventObjectCopyWith<$Res> {
       List<Coding>? securityLabel,
       String? name,
       String? description,
-  FhirBase64Binary?? query,
+      FhirBase64Binary? query,
       @JsonKey(name: '_query') Element? queryElement,
       List<AuditEventObjectDetail>? detail});
 
@@ -8886,7 +8886,7 @@ class _$AuditEventObjectCopyWithImpl<$Res, $Val extends AuditEventObject>
       query: freezed == query
           ? _value.query
           : query // ignore: cast_nullable_to_non_nullable
-              as  FhirBase64Binary??,
+              as FhirBase64Binary?,
       queryElement: freezed == queryElement
           ? _value.queryElement
           : queryElement // ignore: cast_nullable_to_non_nullable
@@ -8991,7 +8991,7 @@ abstract class _$$_AuditEventObjectCopyWith<$Res>
       List<Coding>? securityLabel,
       String? name,
       String? description,
-  FhirBase64Binary?? query,
+      FhirBase64Binary? query,
       @JsonKey(name: '_query') Element? queryElement,
       List<AuditEventObjectDetail>? detail});
 
@@ -9083,7 +9083,7 @@ class __$$_AuditEventObjectCopyWithImpl<$Res>
       query: freezed == query
           ? _value.query
           : query // ignore: cast_nullable_to_non_nullable
-              as  FhirBase64Binary??,
+              as FhirBase64Binary?,
       queryElement: freezed == queryElement
           ? _value.queryElement
           : queryElement // ignore: cast_nullable_to_non_nullable
@@ -9124,7 +9124,7 @@ class _$_AuditEventObject extends _AuditEventObject {
       _$$_AuditEventObjectFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -9172,7 +9172,7 @@ class _$_AuditEventObject extends _AuditEventObject {
   @override
   final String? description;
   @override
-  final  FhirBase64Binary?? query;
+  final FhirBase64Binary? query;
   @override
   @JsonKey(name: '_query')
   final Element? queryElement;
@@ -9255,7 +9255,7 @@ class _$_AuditEventObject extends _AuditEventObject {
 
 abstract class _AuditEventObject extends AuditEventObject {
   factory _AuditEventObject(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final Identifier? identifier,
@@ -9266,7 +9266,7 @@ abstract class _AuditEventObject extends AuditEventObject {
       final List<Coding>? securityLabel,
       final String? name,
       final String? description,
-      final  FhirBase64Binary?? query,
+      final FhirBase64Binary? query,
       @JsonKey(name: '_query') final Element? queryElement,
       final List<AuditEventObjectDetail>? detail}) = _$_AuditEventObject;
   _AuditEventObject._() : super._();
@@ -9298,7 +9298,7 @@ abstract class _AuditEventObject extends AuditEventObject {
   @override
   String? get description;
   @override
-  FhirBase64Binary?? get query;
+  FhirBase64Binary? get query;
   @override
   @JsonKey(name: '_query')
   Element? get queryElement;
@@ -9325,7 +9325,7 @@ mixin _$AuditEventParticipantNetwork {
   String? get address => throw _privateConstructorUsedError;
   @JsonKey(name: '_address')
   Element? get addressElement => throw _privateConstructorUsedError;
-   FhirCode? get type => throw _privateConstructorUsedError;
+  FhirCode? get type => throw _privateConstructorUsedError;
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
 
@@ -9349,7 +9349,7 @@ abstract class $AuditEventParticipantNetworkCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       String? address,
       @JsonKey(name: '_address') Element? addressElement,
-       FhirCode? type,
+      FhirCode? type,
       @JsonKey(name: '_type') Element? typeElement});
 
   $ElementCopyWith<$Res>? get addressElement;
@@ -9402,7 +9402,7 @@ class _$AuditEventParticipantNetworkCopyWithImpl<$Res,
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       typeElement: freezed == typeElement
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -9450,7 +9450,7 @@ abstract class _$$_AuditEventParticipantNetworkCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       String? address,
       @JsonKey(name: '_address') Element? addressElement,
-       FhirCode? type,
+      FhirCode? type,
       @JsonKey(name: '_type') Element? typeElement});
 
   @override
@@ -9504,7 +9504,7 @@ class __$$_AuditEventParticipantNetworkCopyWithImpl<$Res>
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as  FhirCode?,
+              as FhirCode?,
       typeElement: freezed == typeElement
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -9532,7 +9532,7 @@ class _$_AuditEventParticipantNetwork extends _AuditEventParticipantNetwork {
       _$$_AuditEventParticipantNetworkFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -9561,7 +9561,7 @@ class _$_AuditEventParticipantNetwork extends _AuditEventParticipantNetwork {
   @JsonKey(name: '_address')
   final Element? addressElement;
   @override
-  final  FhirCode? type;
+  final FhirCode? type;
   @override
   @JsonKey(name: '_type')
   final Element? typeElement;
@@ -9619,12 +9619,12 @@ class _$_AuditEventParticipantNetwork extends _AuditEventParticipantNetwork {
 abstract class _AuditEventParticipantNetwork
     extends AuditEventParticipantNetwork {
   factory _AuditEventParticipantNetwork(
-          {final Id? id,
+          {final FhirId? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           final String? address,
           @JsonKey(name: '_address') final Element? addressElement,
-          final  FhirCode? type,
+          final FhirCode? type,
           @JsonKey(name: '_type') final Element? typeElement}) =
       _$_AuditEventParticipantNetwork;
   _AuditEventParticipantNetwork._() : super._();
@@ -9645,7 +9645,7 @@ abstract class _AuditEventParticipantNetwork
   @JsonKey(name: '_address')
   Element? get addressElement;
   @override
-   FhirCode? get type;
+  FhirCode? get type;
   @override
   @JsonKey(name: '_type')
   Element? get typeElement;
@@ -9690,7 +9690,7 @@ abstract class $AuditEventObjectDetailCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       String type,
       @JsonKey(name: '_type') Element? typeElement,
-  FhirBase64Binary? value});
+      FhirBase64Binary? value});
 
   $ElementCopyWith<$Res>? get typeElement;
 }
@@ -9740,7 +9740,7 @@ class _$AuditEventObjectDetailCopyWithImpl<$Res,
       value: null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
-              as  FhirBase64Binary?,
+              as FhirBase64Binary?,
     ) as $Val);
   }
 
@@ -9771,7 +9771,7 @@ abstract class _$$_AuditEventObjectDetailCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       String type,
       @JsonKey(name: '_type') Element? typeElement,
-  FhirBase64Binary? value});
+      FhirBase64Binary? value});
 
   @override
   $ElementCopyWith<$Res>? get typeElement;
@@ -9820,7 +9820,7 @@ class __$$_AuditEventObjectDetailCopyWithImpl<$Res>
       value: null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
-              as  FhirBase64Binary?,
+              as FhirBase64Binary?,
     ));
   }
 }
@@ -9843,7 +9843,7 @@ class _$_AuditEventObjectDetail extends _AuditEventObjectDetail {
       _$$_AuditEventObjectDetailFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -9872,7 +9872,7 @@ class _$_AuditEventObjectDetail extends _AuditEventObjectDetail {
   @JsonKey(name: '_type')
   final Element? typeElement;
   @override
-  final  FhirBase64Binary? value;
+  final FhirBase64Binary? value;
 
   @override
   String toString() {
@@ -9923,12 +9923,12 @@ class _$_AuditEventObjectDetail extends _AuditEventObjectDetail {
 
 abstract class _AuditEventObjectDetail extends AuditEventObjectDetail {
   factory _AuditEventObjectDetail(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final String type,
       @JsonKey(name: '_type') final Element? typeElement,
-      required final  FhirBase64Binary? value}) = _$_AuditEventObjectDetail;
+      required final FhirBase64Binary? value}) = _$_AuditEventObjectDetail;
   _AuditEventObjectDetail._() : super._();
 
   factory _AuditEventObjectDetail.fromJson(Map<String, dynamic> json) =

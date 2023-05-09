@@ -9,10 +9,10 @@ class EncounterUsCore extends Resource {
 
   factory EncounterUsCore({
     String? id,
-    Meta? meta,
+    FhirMeta? meta,
     Narrative? text,
     List<Identifier>? identifier,
-    required Code status,
+    required FhirCode status,
     required Coding class_,
     required List<CodeableConcept> type,
     required Reference subject,
@@ -40,7 +40,7 @@ class EncounterUsCore extends Resource {
 
   factory EncounterUsCore.simple({
     List<Identifier>? identifier,
-    required Code status,
+    required FhirCode status,
     required Coding class_,
     required EncounterType encounterType,
     List<CodeableConcept>? type,
@@ -68,7 +68,7 @@ class EncounterUsCore extends Resource {
   }
 
   factory EncounterUsCore.minimum({
-    required Code status,
+    required FhirCode status,
     required Coding class_,
     required EncounterType encounterType,
     required Reference subject,
@@ -83,7 +83,7 @@ class EncounterUsCore extends Resource {
   Encounter _encounter;
   Encounter get value => _encounter;
   String? get id => _encounter.id;
-  Meta? get meta => _encounter.meta;
+  FhirMeta? get meta => _encounter.meta;
   Narrative? get text => _encounter.text;
   List<Identifier>? get identifier => _encounter.identifier;
   Code? get status => _encounter.status;

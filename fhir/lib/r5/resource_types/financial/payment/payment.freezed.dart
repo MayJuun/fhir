@@ -31,7 +31,7 @@ mixin _$PaymentNotice {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -128,7 +128,7 @@ abstract class $PaymentNoticeCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.PaymentNotice)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -505,7 +505,7 @@ abstract class _$$_PaymentNoticeCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R5ResourceType.PaymentNotice)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -769,7 +769,7 @@ class _$_PaymentNotice extends _PaymentNotice {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -1020,7 +1020,7 @@ abstract class _PaymentNotice extends PaymentNotice {
   factory _PaymentNotice(
       {@JsonKey(unknownEnumValue: R5ResourceType.PaymentNotice)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -1071,7 +1071,7 @@ abstract class _PaymentNotice extends PaymentNotice {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when
@@ -1197,7 +1197,7 @@ mixin _$PaymentReconciliation {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -1379,7 +1379,7 @@ abstract class $PaymentReconciliationCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: R5ResourceType.PaymentReconciliation)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -2114,7 +2114,7 @@ abstract class _$$_PaymentReconciliationCopyWith<$Res>
       {@JsonKey(unknownEnumValue: R5ResourceType.PaymentReconciliation)
           R5ResourceType resourceType,
       FhirId? id,
-      Meta? meta,
+      FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
@@ -2601,7 +2601,7 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -3049,7 +3049,7 @@ abstract class _PaymentReconciliation extends PaymentReconciliation {
   factory _PaymentReconciliation(
           {@JsonKey(unknownEnumValue: R5ResourceType.PaymentReconciliation)
               final R5ResourceType resourceType,
-          final Id? id,
+          final FhirId? id,
           final Meta? meta,
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
@@ -3134,7 +3134,7 @@ abstract class _PaymentReconciliation extends PaymentReconciliation {
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when
@@ -3405,7 +3405,8 @@ mixin _$PaymentReconciliationAllocation {
   Identifier? get targetItemIdentifier => throw _privateConstructorUsedError;
 
   /// [targetItemPositiveInt]  Identifies the claim line item, encounter or other sub-element being paid. Note payment may be partial, that is not match the then outstanding balance or amount incurred.
-  PositiveInt? get targetItemPositiveInt => throw _privateConstructorUsedError;
+  FhirPositiveInt? get targetItemPositiveInt =>
+      throw _privateConstructorUsedError;
 
   /// [targetItemPositiveIntElement] ("_targetItemPositiveInt") Extensions for targetItemPositiveInt
   @JsonKey(name: '_targetItemPositiveInt')
@@ -3469,7 +3470,7 @@ abstract class $PaymentReconciliationAllocationCopyWith<$Res> {
       @JsonKey(name: '_targetItemString')
           Element? targetItemStringElement,
       Identifier? targetItemIdentifier,
-      PositiveInt? targetItemPositiveInt,
+      FhirPositiveInt? targetItemPositiveInt,
       @JsonKey(name: '_targetItemPositiveInt')
           Element? targetItemPositiveIntElement,
       Reference? encounter,
@@ -3829,7 +3830,7 @@ abstract class _$$_PaymentReconciliationAllocationCopyWith<$Res>
       @JsonKey(name: '_targetItemString')
           Element? targetItemStringElement,
       Identifier? targetItemIdentifier,
-      PositiveInt? targetItemPositiveInt,
+      FhirPositiveInt? targetItemPositiveInt,
       @JsonKey(name: '_targetItemPositiveInt')
           Element? targetItemPositiveIntElement,
       Reference? encounter,
@@ -4362,7 +4363,7 @@ abstract class _PaymentReconciliationAllocation
   @override
 
   /// [targetItemPositiveInt]  Identifies the claim line item, encounter or other sub-element being paid. Note payment may be partial, that is not match the then outstanding balance or amount incurred.
-  PositiveInt? get targetItemPositiveInt;
+  FhirPositiveInt? get targetItemPositiveInt;
   @override
 
   /// [targetItemPositiveIntElement] ("_targetItemPositiveInt") Extensions for targetItemPositiveInt

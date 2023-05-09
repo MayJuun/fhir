@@ -9,7 +9,7 @@ class DiagnosticReportUsCore extends Resource {
 
   factory DiagnosticReportUsCore({
     String? id,
-    Meta? meta,
+    FhirMeta? meta,
     Narrative? text,
     required DiagnosticReportStatus status,
     required List<CodeableConcept> category,
@@ -46,7 +46,7 @@ class DiagnosticReportUsCore extends Resource {
     required Reference subject,
     FhirDateTime? effectiveDateTime,
     Period? effectivePeriod,
-    required Instant issued,
+    required FhirInstant issued,
     List<Reference>? performer,
     List<Reference>? result,
   }) =>
@@ -102,7 +102,7 @@ class DiagnosticReportUsCore extends Resource {
   DiagnosticReport _diagnosticReport;
   DiagnosticReport get value => _diagnosticReport;
   String? get id => _diagnosticReport.id;
-  Meta? get meta => _diagnosticReport.meta;
+  FhirMeta? get meta => _diagnosticReport.meta;
   Narrative? get text => _diagnosticReport.text;
   Code? get status => _diagnosticReport.status;
   List<CodeableConcept>? get category => _diagnosticReport.category;

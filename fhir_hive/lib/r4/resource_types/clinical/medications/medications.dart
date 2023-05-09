@@ -925,7 +925,7 @@ class ImmunizationProtocolApplied with _$ImmunizationProtocolApplied {
     List<CodeableConcept>? targetDisease,
 
     /// [doseNumberPositiveInt] Nominal position in a series.
-    PositiveInt? doseNumberPositiveInt,
+    FhirPositiveInt? doseNumberPositiveInt,
     @JsonKey(name: '_doseNumberPositiveInt')
 
         /// [doseNumberPositiveIntElement] Extensions for doseNumberPositiveInt
@@ -940,7 +940,7 @@ class ImmunizationProtocolApplied with _$ImmunizationProtocolApplied {
 
     /// [seriesDosesPositiveInt] The recommended number of doses to achieve
     ///  immunity.
-    PositiveInt? seriesDosesPositiveInt,
+    FhirPositiveInt? seriesDosesPositiveInt,
     @JsonKey(name: '_seriesDosesPositiveInt')
 
         /// [seriesDosesPositiveIntElement] Extensions for seriesDosesPositiveInt
@@ -1262,7 +1262,7 @@ class ImmunizationEvaluation extends HiveObject
 
     /// [doseNumberPositiveInt] Nominal position in a series.
     @HiveField(26)
-        PositiveInt? doseNumberPositiveInt,
+        FhirPositiveInt? doseNumberPositiveInt,
     @JsonKey(name: '_doseNumberPositiveInt')
 
     /// [doseNumberPositiveIntElement] Extensions for doseNumberPositiveInt
@@ -1281,7 +1281,7 @@ class ImmunizationEvaluation extends HiveObject
     /// [seriesDosesPositiveInt] The recommended number of doses to achieve
     ///  immunity.
     @HiveField(30)
-        PositiveInt? seriesDosesPositiveInt,
+        FhirPositiveInt? seriesDosesPositiveInt,
     @JsonKey(name: '_seriesDosesPositiveInt')
 
     /// [seriesDosesPositiveIntElement] Extensions for seriesDosesPositiveInt
@@ -1695,7 +1695,7 @@ class ImmunizationRecommendationRecommendation
 
     /// [doseNumberPositiveInt] Nominal position of the recommended dose in a
     ///  series (e.g. dose 2 is the next recommended dose).
-    PositiveInt? doseNumberPositiveInt,
+    FhirPositiveInt? doseNumberPositiveInt,
     @JsonKey(name: '_doseNumberPositiveInt')
 
         /// [doseNumberPositiveIntElement] Extensions for doseNumberPositiveInt
@@ -1711,7 +1711,7 @@ class ImmunizationRecommendationRecommendation
 
     /// [seriesDosesPositiveInt] The recommended number of doses to achieve
     ///  immunity.
-    PositiveInt? seriesDosesPositiveInt,
+    FhirPositiveInt? seriesDosesPositiveInt,
     @JsonKey(name: '_seriesDosesPositiveInt')
 
         /// [seriesDosesPositiveIntElement] Extensions for seriesDosesPositiveInt
@@ -6217,7 +6217,7 @@ class MedicationRequest extends HiveObject with Resource, _$MedicationRequest {
     /// orderset, or other definition that is adhered to in whole or in part by
     ///  this MedicationRequest.
     @HiveField(41)
-        List<Canonical>? instantiatesCanonical,
+        List<FhirCanonical>? instantiatesCanonical,
     @JsonKey(name: '_instantiatesCanonical')
 
     /// [instantiatesCanonicalElement] Extensions for instantiatesCanonical
@@ -6445,7 +6445,7 @@ class MedicationRequestDispenseRequest with _$MedicationRequestDispenseRequest {
     /// dispensed a total of 4 times and the patient can receive a total of 120
     /// tablets.  A prescriber may explicitly say that zero refills are permitted
     ///  after the initial dispense.
-    UnsignedInt? numberOfRepeatsAllowed,
+    FhirUnsignedInt? numberOfRepeatsAllowed,
     @JsonKey(name: '_numberOfRepeatsAllowed')
 
         /// [numberOfRepeatsAllowedElement] Extensions for numberOfRepeatsAllowed

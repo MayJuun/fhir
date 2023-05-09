@@ -317,7 +317,7 @@ class VirtualServiceDetail with _$VirtualServiceDetail {
 
     /// [maxParticipants] Maximum number of participants supported by the
     ///  virtual service.
-    PositiveInt? maxParticipants,
+    FhirPositiveInt? maxParticipants,
 
     /// [maxParticipantsElement] ("_maxParticipants") Extensions for
     ///  maxParticipants
@@ -516,7 +516,7 @@ class AvailabilityAvailableTime with _$AvailabilityAvailableTime {
     List<FhirExtension>? modifierExtension,
 
     /// [daysOfWeek] mon | tue | wed | thu | fri | sat | sun.
-    List<Code>? daysOfWeek,
+    List<FhirCode>? daysOfWeek,
 
     /// [daysOfWeekElement] ("_daysOfWeek") Extensions for daysOfWeek
     @JsonKey(name: '_daysOfWeek') List<Element>? daysOfWeekElement,
@@ -528,14 +528,14 @@ class AvailabilityAvailableTime with _$AvailabilityAvailableTime {
     @JsonKey(name: '_allDay') Element? allDayElement,
 
     /// [availableStartTime] Opening time of day (ignored if allDay = true).
-    Time? availableStartTime,
+    FhirTime? availableStartTime,
 
     /// [availableStartTimeElement] ("_availableStartTime") Extensions for
     ///  availableStartTime
     @JsonKey(name: '_availableStartTime') Element? availableStartTimeElement,
 
     /// [availableEndTime] Closing time of day (ignored if allDay = true).
-    Time? availableEndTime,
+    FhirTime? availableEndTime,
 
     /// [availableEndTimeElement] ("_availableEndTime") Extensions for
     ///  availableEndTime
@@ -970,7 +970,7 @@ class DataRequirement with _$DataRequirement {
 
     /// [profile] The profile of the required data, specified as the uri of the
     ///  profile definition.
-    List<Canonical>? profile,
+    List<FhirCanonical>? profile,
 
     /// [subjectCodeableConcept] The intended subjects of the data requirement.
     ///  If this element is not provided, a Patient subject is assumed.
@@ -1015,7 +1015,7 @@ class DataRequirement with _$DataRequirement {
 
     /// [limit] Specifies a maximum number of results that are required (uses
     ///  the _count search parameter).
-    PositiveInt? limit,
+    FhirPositiveInt? limit,
 
     /// [limitElement] ("_limit") Extensions for limit
     @JsonKey(name: '_limit') Element? limitElement,

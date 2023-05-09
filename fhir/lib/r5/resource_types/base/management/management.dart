@@ -204,7 +204,7 @@ class Encounter with Resource, _$Encounter {
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
     ///  always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     ///  the resource was constructed, and which must be understood when
@@ -217,7 +217,7 @@ class Encounter with Resource, _$Encounter {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-     FhirCode? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -267,7 +267,7 @@ class Encounter with Resource, _$Encounter {
 
     /// [status] planned | in-progress | on-hold | discharged | completed |
     ///  cancelled | discontinued | entered-in-error | unknown.
-     FhirCode? status,
+    FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -516,7 +516,7 @@ class EncounterStatusHistory with _$EncounterStatusHistory {
 
     /// [status] planned | in-progress | on-hold | discharged | completed |
     ///  cancelled | discontinued | entered-in-error | unknown.
-     FhirCode? status,
+    FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -899,7 +899,7 @@ class EncounterDiagnosis with _$EncounterDiagnosis {
     CodeableConcept? use,
 
     /// [rank] Ranking of the diagnosis (for each role type).
-    PositiveInt? rank,
+    FhirPositiveInt? rank,
 
     /// [rankElement] ("_rank") Extensions for rank
     @JsonKey(name: '_rank') Element? rankElement,
@@ -1187,7 +1187,7 @@ class EncounterLocation with _$EncounterLocation {
     /// [status] The status of the participants' presence at the specified
     ///  location during the period specified. If the participant is no longer
     ///  at the location, then the period will have an end date/time.
-     FhirCode? status,
+    FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -1354,7 +1354,7 @@ class EpisodeOfCare with Resource, _$EpisodeOfCare {
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
     ///  always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     ///  the resource was constructed, and which must be understood when
@@ -1367,7 +1367,7 @@ class EpisodeOfCare with Resource, _$EpisodeOfCare {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-     FhirCode? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -1418,7 +1418,7 @@ class EpisodeOfCare with Resource, _$EpisodeOfCare {
     List<Identifier>? identifier,
 
     /// [status] planned | waitlist | active | onhold | finished | cancelled.
-     FhirCode? status,
+    FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -1573,7 +1573,7 @@ class EpisodeOfCareStatusHistory with _$EpisodeOfCareStatusHistory {
     List<FhirExtension>? modifierExtension,
 
     /// [status] planned | waitlist | active | onhold | finished | cancelled.
-     FhirCode? status,
+    FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -1703,7 +1703,7 @@ class EpisodeOfCareDiagnosis with _$EpisodeOfCareDiagnosis {
     CodeableConcept? role,
 
     /// [rank] Ranking of the diagnosis (for each role type).
-    PositiveInt? rank,
+    FhirPositiveInt? rank,
 
     /// [rankElement] ("_rank") Extensions for rank
     @JsonKey(name: '_rank') Element? rankElement,
@@ -1845,7 +1845,7 @@ class Flag with Resource, _$Flag {
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
     ///  always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     ///  the resource was constructed, and which must be understood when
@@ -1858,7 +1858,7 @@ class Flag with Resource, _$Flag {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-     FhirCode? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -1909,7 +1909,7 @@ class Flag with Resource, _$Flag {
     List<Identifier>? identifier,
 
     /// [status] Supports basic workflow.
-     FhirCode? status,
+    FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -2225,7 +2225,7 @@ class Library with Resource, _$Library {
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
     ///  always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     ///  the resource was constructed, and which must be understood when
@@ -2238,7 +2238,7 @@ class Library with Resource, _$Library {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-     FhirCode? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -2347,7 +2347,7 @@ class Library with Resource, _$Library {
 
     /// [status] The status of this library. Enables tracking the life-cycle of
     ///  the content.
-     FhirCode? status,
+    FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -2355,7 +2355,7 @@ class Library with Resource, _$Library {
     /// [experimental] A Boolean value to indicate that this library is
     ///  authored for testing purposes (or education/evaluation/marketing) and
     ///  is not intended to be used for genuine usage.
-     FhirBoolean? experimental,
+    FhirBoolean? experimental,
 
     /// [experimentalElement] ("_experimental") Extensions for experimental
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -2543,15 +2543,15 @@ class Library with Resource, _$Library {
   }
 }
 
-/// [List_] A List is a curated collection of resources, for things such as
+/// [FhirList] A List is a curated collection of resources, for things such as
 ///  problem lists, allergy lists, facility list, organization list, etc.
 @freezed
-class FhirList with Resoure, _$FhirList {
-  /// [List_] A List is a curated collection of resources, for things such as
+class FhirList with Resource, _$FhirList {
+  /// [FhirList] A List is a curated collection of resources, for things such as
   ///  problem lists, allergy lists, facility list, organization list, etc.
-  List_._();
+  FhirList._();
 
-  /// [List_] A List is a curated collection of resources, for things such as
+  /// [FhirList] A List is a curated collection of resources, for things such as
   ///  problem lists, allergy lists, facility list, organization list, etc.
   ///
   /// [resourceType] This is a List resource
@@ -2650,10 +2650,10 @@ class FhirList with Resoure, _$FhirList {
   ///
   /// [emptyReason] If the list is empty, why the list is empty.
   ///
-  factory List_({
+  factory FhirList({
     /// [resourceType] This is a List resource
-    @Default(R5ResourceType.List_)
-    @JsonKey(unknownEnumValue: R5ResourceType.List_)
+    @Default(R5ResourceType.FhirList)
+    @JsonKey(unknownEnumValue: R5ResourceType.FhirList)
         R5ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the
@@ -2663,7 +2663,7 @@ class FhirList with Resoure, _$FhirList {
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
     ///  always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     ///  the resource was constructed, and which must be understood when
@@ -2676,7 +2676,7 @@ class FhirList with Resoure, _$FhirList {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-     FhirCode? language,
+    FhirCode? language,
 
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -2726,7 +2726,7 @@ class FhirList with Resoure, _$FhirList {
     List<Identifier>? identifier,
 
     /// [status] Indicates the current state of this list.
-     FhirCode? status,
+    FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -2736,7 +2736,7 @@ class FhirList with Resoure, _$FhirList {
     ///  represents a snapshot of a list of items from another source, or
     ///  whether it is a prepared list where items may be marked as added,
     ///  modified or deleted.
-     FhirCode? mode,
+    FhirCode? mode,
 
     /// [modeElement] ("_mode") Extensions for mode
     @JsonKey(name: '_mode') Element? modeElement,
@@ -2781,31 +2781,33 @@ class FhirList with Resoure, _$FhirList {
 
     /// [emptyReason] If the list is empty, why the list is empty.
     CodeableConcept? emptyReason,
-  }) = _List_;
+  }) = _FhirList;
 
   /// Produces a Yaml formatted String version of the object
   @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory List_.fromYaml(dynamic yaml) => yaml is String
-      ? List_.fromJson(
+  factory FhirList.fromYaml(dynamic yaml) => yaml is String
+      ? FhirList.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? List_.fromJson(jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          ? FhirList.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
-              'List_ cannot be constructed from input provided,'
+              'FhirList cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory List_.fromJson(Map<String, dynamic> json) => _$List_FromJson(json);
+  factory FhirList.fromJson(Map<String, dynamic> json) =>
+      _$FhirListFromJson(json);
 
-  /// Acts like a constructor, returns a [List_], accepts a
+  /// Acts like a constructor, returns a [FhirList], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
-  factory List_.fromJsonString(String source) {
+  factory FhirList.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
-      return _$List_FromJson(json);
+      return _$FhirListFromJson(json);
     } else {
       throw FormatException('FormatException:\nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
@@ -2895,7 +2897,7 @@ class ListEntry with _$ListEntry {
     CodeableConcept? flag,
 
     /// [deleted] True if this item is marked as deleted in the list.
-     FhirBoolean? deleted,
+    FhirBoolean? deleted,
 
     /// [deletedElement] ("_deleted") Extensions for deleted
     @JsonKey(name: '_deleted') Element? deletedElement,

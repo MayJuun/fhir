@@ -2269,7 +2269,7 @@ mixin _$AllergyIntolerance {
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
   @HiveField(16)
-  List<Code>? get category => throw _privateConstructorUsedError;
+  List<FhirCode>? get category => throw _privateConstructorUsedError;
   @HiveField(17)
   @JsonKey(name: '_category')
   List<Element?>? get categoryElement => throw _privateConstructorUsedError;
@@ -2371,7 +2371,7 @@ abstract class $AllergyIntoleranceCopyWith<$Res> {
       @JsonKey(name: '_type')
           Element? typeElement,
       @HiveField(16)
-          List<Code>? category,
+          List<FhirCode>? category,
       @HiveField(17)
       @JsonKey(name: '_category')
           List<Element?>? categoryElement,
@@ -2563,7 +2563,7 @@ class _$AllergyIntoleranceCopyWithImpl<$Res, $Val extends AllergyIntolerance>
       category: freezed == category
           ? _value.category
           : category // ignore: cast_nullable_to_non_nullable
-              as List<Code>?,
+              as List<FhirCode>?,
       categoryElement: freezed == categoryElement
           ? _value.categoryElement
           : categoryElement // ignore: cast_nullable_to_non_nullable
@@ -2935,7 +2935,7 @@ abstract class _$$_AllergyIntoleranceCopyWith<$Res>
       @JsonKey(name: '_type')
           Element? typeElement,
       @HiveField(16)
-          List<Code>? category,
+          List<FhirCode>? category,
       @HiveField(17)
       @JsonKey(name: '_category')
           List<Element?>? categoryElement,
@@ -3145,7 +3145,7 @@ class __$$_AllergyIntoleranceCopyWithImpl<$Res>
       category: freezed == category
           ? _value._category
           : category // ignore: cast_nullable_to_non_nullable
-              as List<Code>?,
+              as List<FhirCode>?,
       categoryElement: freezed == categoryElement
           ? _value._categoryElement
           : categoryElement // ignore: cast_nullable_to_non_nullable
@@ -3277,7 +3277,7 @@ class _$_AllergyIntolerance extends _AllergyIntolerance {
       @JsonKey(name: '_type')
           this.typeElement,
       @HiveField(16)
-          final List<Code>? category,
+          final List<FhirCode>? category,
       @HiveField(17)
       @JsonKey(name: '_category')
           final List<Element?>? categoryElement,
@@ -3425,10 +3425,10 @@ class _$_AllergyIntolerance extends _AllergyIntolerance {
   @HiveField(15)
   @JsonKey(name: '_type')
   final Element? typeElement;
-  final List<Code>? _category;
+  final List<FhirCode>? _category;
   @override
   @HiveField(16)
-  List<Code>? get category {
+  List<FhirCode>? get category {
     final value = _category;
     if (value == null) return null;
     if (_category is EqualUnmodifiableListView) return _category;
@@ -3707,7 +3707,7 @@ abstract class _AllergyIntolerance extends AllergyIntolerance {
           @JsonKey(name: '_type')
               final Element? typeElement,
           @HiveField(16)
-              final List<Code>? category,
+              final List<FhirCode>? category,
           @HiveField(17)
           @JsonKey(name: '_category')
               final List<Element?>? categoryElement,
@@ -3817,7 +3817,7 @@ abstract class _AllergyIntolerance extends AllergyIntolerance {
   Element? get typeElement;
   @override
   @HiveField(16)
-  List<Code>? get category;
+  List<FhirCode>? get category;
   @override
   @HiveField(17)
   @JsonKey(name: '_category')
@@ -11095,7 +11095,7 @@ mixin _$FamilyMemberHistory {
   @HiveField(11)
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @HiveField(12)
-  List<Canonical>? get instantiatesCanonical =>
+  List<FhirCanonical>? get instantiatesCanonical =>
       throw _privateConstructorUsedError;
   @HiveField(13)
   List<FhirUri>? get instantiatesUri => throw _privateConstructorUsedError;
@@ -11223,7 +11223,7 @@ abstract class $FamilyMemberHistoryCopyWith<$Res> {
       @HiveField(11)
           List<Identifier>? identifier,
       @HiveField(12)
-          List<Canonical>? instantiatesCanonical,
+          List<FhirCanonical>? instantiatesCanonical,
       @HiveField(13)
           List<FhirUri>? instantiatesUri,
       @HiveField(14)
@@ -11445,7 +11445,7 @@ class _$FamilyMemberHistoryCopyWithImpl<$Res, $Val extends FamilyMemberHistory>
       instantiatesCanonical: freezed == instantiatesCanonical
           ? _value.instantiatesCanonical
           : instantiatesCanonical // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       instantiatesUri: freezed == instantiatesUri
           ? _value.instantiatesUri
           : instantiatesUri // ignore: cast_nullable_to_non_nullable
@@ -11896,7 +11896,7 @@ abstract class _$$_FamilyMemberHistoryCopyWith<$Res>
       @HiveField(11)
           List<Identifier>? identifier,
       @HiveField(12)
-          List<Canonical>? instantiatesCanonical,
+          List<FhirCanonical>? instantiatesCanonical,
       @HiveField(13)
           List<FhirUri>? instantiatesUri,
       @HiveField(14)
@@ -12139,7 +12139,7 @@ class __$$_FamilyMemberHistoryCopyWithImpl<$Res>
       instantiatesCanonical: freezed == instantiatesCanonical
           ? _value._instantiatesCanonical
           : instantiatesCanonical // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       instantiatesUri: freezed == instantiatesUri
           ? _value._instantiatesUri
           : instantiatesUri // ignore: cast_nullable_to_non_nullable
@@ -12318,7 +12318,7 @@ class _$_FamilyMemberHistory extends _FamilyMemberHistory {
       @HiveField(11)
           final List<Identifier>? identifier,
       @HiveField(12)
-          final List<Canonical>? instantiatesCanonical,
+          final List<FhirCanonical>? instantiatesCanonical,
       @HiveField(13)
           final List<FhirUri>? instantiatesUri,
       @HiveField(14)
@@ -12489,10 +12489,10 @@ class _$_FamilyMemberHistory extends _FamilyMemberHistory {
     return EqualUnmodifiableListView(value);
   }
 
-  final List<Canonical>? _instantiatesCanonical;
+  final List<FhirCanonical>? _instantiatesCanonical;
   @override
   @HiveField(12)
-  List<Canonical>? get instantiatesCanonical {
+  List<FhirCanonical>? get instantiatesCanonical {
     final value = _instantiatesCanonical;
     if (value == null) return null;
     if (_instantiatesCanonical is EqualUnmodifiableListView)
@@ -12864,7 +12864,7 @@ abstract class _FamilyMemberHistory extends FamilyMemberHistory {
           @HiveField(11)
               final List<Identifier>? identifier,
           @HiveField(12)
-              final List<Canonical>? instantiatesCanonical,
+              final List<FhirCanonical>? instantiatesCanonical,
           @HiveField(13)
               final List<FhirUri>? instantiatesUri,
           @HiveField(14)
@@ -12994,7 +12994,7 @@ abstract class _FamilyMemberHistory extends FamilyMemberHistory {
   List<Identifier>? get identifier;
   @override
   @HiveField(12)
-  List<Canonical>? get instantiatesCanonical;
+  List<FhirCanonical>? get instantiatesCanonical;
   @override
   @HiveField(13)
   List<FhirUri>? get instantiatesUri;
@@ -13812,7 +13812,7 @@ mixin _$Procedure {
   @HiveField(11)
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @HiveField(12)
-  List<Canonical>? get instantiatesCanonical =>
+  List<FhirCanonical>? get instantiatesCanonical =>
       throw _privateConstructorUsedError;
   @HiveField(13)
   List<FhirUri>? get instantiatesUri => throw _privateConstructorUsedError;
@@ -13930,7 +13930,7 @@ abstract class $ProcedureCopyWith<$Res> {
       @HiveField(11)
           List<Identifier>? identifier,
       @HiveField(12)
-          List<Canonical>? instantiatesCanonical,
+          List<FhirCanonical>? instantiatesCanonical,
       @HiveField(13)
           List<FhirUri>? instantiatesUri,
       @HiveField(14)
@@ -14138,7 +14138,7 @@ class _$ProcedureCopyWithImpl<$Res, $Val extends Procedure>
       instantiatesCanonical: freezed == instantiatesCanonical
           ? _value.instantiatesCanonical
           : instantiatesCanonical // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       instantiatesUri: freezed == instantiatesUri
           ? _value.instantiatesUri
           : instantiatesUri // ignore: cast_nullable_to_non_nullable
@@ -14540,7 +14540,7 @@ abstract class _$$_ProcedureCopyWith<$Res> implements $ProcedureCopyWith<$Res> {
       @HiveField(11)
           List<Identifier>? identifier,
       @HiveField(12)
-          List<Canonical>? instantiatesCanonical,
+          List<FhirCanonical>? instantiatesCanonical,
       @HiveField(13)
           List<FhirUri>? instantiatesUri,
       @HiveField(14)
@@ -14765,7 +14765,7 @@ class __$$_ProcedureCopyWithImpl<$Res>
       instantiatesCanonical: freezed == instantiatesCanonical
           ? _value._instantiatesCanonical
           : instantiatesCanonical // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       instantiatesUri: freezed == instantiatesUri
           ? _value._instantiatesUri
           : instantiatesUri // ignore: cast_nullable_to_non_nullable
@@ -14940,7 +14940,7 @@ class _$_Procedure extends _Procedure {
       @HiveField(11)
           final List<Identifier>? identifier,
       @HiveField(12)
-          final List<Canonical>? instantiatesCanonical,
+          final List<FhirCanonical>? instantiatesCanonical,
       @HiveField(13)
           final List<FhirUri>? instantiatesUri,
       @HiveField(14)
@@ -15112,10 +15112,10 @@ class _$_Procedure extends _Procedure {
     return EqualUnmodifiableListView(value);
   }
 
-  final List<Canonical>? _instantiatesCanonical;
+  final List<FhirCanonical>? _instantiatesCanonical;
   @override
   @HiveField(12)
-  List<Canonical>? get instantiatesCanonical {
+  List<FhirCanonical>? get instantiatesCanonical {
     final value = _instantiatesCanonical;
     if (value == null) return null;
     if (_instantiatesCanonical is EqualUnmodifiableListView)
@@ -15551,7 +15551,7 @@ abstract class _Procedure extends Procedure {
       @HiveField(11)
           final List<Identifier>? identifier,
       @HiveField(12)
-          final List<Canonical>? instantiatesCanonical,
+          final List<FhirCanonical>? instantiatesCanonical,
       @HiveField(13)
           final List<FhirUri>? instantiatesUri,
       @HiveField(14)
@@ -15671,7 +15671,7 @@ abstract class _Procedure extends Procedure {
   List<Identifier>? get identifier;
   @override
   @HiveField(12)
-  List<Canonical>? get instantiatesCanonical;
+  List<FhirCanonical>? get instantiatesCanonical;
   @override
   @HiveField(13)
   List<FhirUri>? get instantiatesUri;

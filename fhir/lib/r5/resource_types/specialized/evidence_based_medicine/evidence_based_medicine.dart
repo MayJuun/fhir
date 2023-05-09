@@ -155,7 +155,7 @@ class ArtifactAssessment with Resource, _$ArtifactAssessment {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when
@@ -684,7 +684,7 @@ class Citation with Resource, _$Citation {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when
@@ -3149,7 +3149,7 @@ class CitationEntry with _$CitationEntry {
         Element? correspondingContactElement,
 
     /// [rankingOrder] Provides a numerical ranking to represent the degree of contributorship relative to other contributors, such as 1 for first author and 2 for second author.
-    PositiveInt? rankingOrder,
+    FhirPositiveInt? rankingOrder,
 
     /// [rankingOrderElement] ("_rankingOrder") Extensions for rankingOrder
     @JsonKey(name: '_rankingOrder') Element? rankingOrderElement,
@@ -3685,7 +3685,7 @@ class Evidence with Resource, _$Evidence {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when
@@ -4170,13 +4170,13 @@ class EvidenceStatistic with _$EvidenceStatistic {
     Quantity? quantity,
 
     /// [numberOfEvents] The number of events associated with the statistic, where the unit of analysis is different from numberAffected, sampleSize.knownDataCount and sampleSize.numberOfParticipants.
-    UnsignedInt? numberOfEvents,
+    FhirUnsignedInt? numberOfEvents,
 
     /// [numberOfEventsElement] ("_numberOfEvents") Extensions for numberOfEvents
     @JsonKey(name: '_numberOfEvents') Element? numberOfEventsElement,
 
     /// [numberAffected] The number of participants affected where the unit of analysis is the same as sampleSize.knownDataCount and sampleSize.numberOfParticipants.
-    UnsignedInt? numberAffected,
+    FhirUnsignedInt? numberAffected,
 
     /// [numberAffectedElement] ("_numberAffected") Extensions for numberAffected
     @JsonKey(name: '_numberAffected') Element? numberAffectedElement,
@@ -4325,20 +4325,20 @@ class EvidenceSampleSize with _$EvidenceSampleSize {
     List<Annotation>? note,
 
     /// [numberOfStudies] Number of participants in the population.
-    UnsignedInt? numberOfStudies,
+    FhirUnsignedInt? numberOfStudies,
 
     /// [numberOfStudiesElement] ("_numberOfStudies") Extensions for numberOfStudies
     @JsonKey(name: '_numberOfStudies') Element? numberOfStudiesElement,
 
     /// [numberOfParticipants] A human-readable string to clarify or explain concepts about the sample size.
-    UnsignedInt? numberOfParticipants,
+    FhirUnsignedInt? numberOfParticipants,
 
     /// [numberOfParticipantsElement] ("_numberOfParticipants") Extensions for numberOfParticipants
     @JsonKey(name: '_numberOfParticipants')
         Element? numberOfParticipantsElement,
 
     /// [knownDataCount] Number of participants with known results for measured variables.
-    UnsignedInt? knownDataCount,
+    FhirUnsignedInt? knownDataCount,
 
     /// [knownDataCountElement] ("_knownDataCount") Extensions for knownDataCount
     @JsonKey(name: '_knownDataCount') Element? knownDataCountElement,
@@ -5175,7 +5175,7 @@ class EvidenceReport with Resource, _$EvidenceReport {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when
@@ -6333,7 +6333,7 @@ class EvidenceVariable with Resource, _$EvidenceVariable {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when
@@ -6986,7 +6986,7 @@ class EvidenceVariableDefinitionByCombination
     @JsonKey(name: '_code') Element? codeElement,
 
     /// [threshold] Provides the value of "n" when "at-least" or "at-most" codes are used.
-    PositiveInt? threshold,
+    FhirPositiveInt? threshold,
 
     /// [thresholdElement] ("_threshold") Extensions for threshold
     @JsonKey(name: '_threshold') Element? thresholdElement,

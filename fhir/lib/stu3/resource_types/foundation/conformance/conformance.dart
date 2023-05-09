@@ -20,7 +20,7 @@ class CapabilityStatement with Resource, _$CapabilityStatement {
     @JsonKey(unknownEnumValue: Stu3ResourceType.CapabilityStatement)
         Stu3ResourceType resourceType,
     FhirId? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,
@@ -56,7 +56,7 @@ class CapabilityStatement with Resource, _$CapabilityStatement {
     @JsonKey(name: '_copyright') Element? copyrightElement,
     CapabilityStatementKind? kind,
     @JsonKey(name: '_kind') Element? kindElement,
-    List<Instant>? instantiates,
+    List<FhirInstant>? instantiates,
     @JsonKey(name: '_instantiates') List<Element?>? instantiatesElement,
     CapabilityStatementSoftware? software,
     CapabilityStatementImplementation? implementation,
@@ -68,7 +68,7 @@ class CapabilityStatement with Resource, _$CapabilityStatement {
     @JsonKey(name: '_format') List<Element?>? formatElement,
     List<String>? patchFormat,
     @JsonKey(name: '_patchFormat') List<Element?>? patchFormatElement,
-    List<Id>? implementationGuide,
+    List<FhirId>? implementationGuide,
     @JsonKey(name: '_implementationGuide')
         List<Element>? implementationGuideElement,
     List<Reference>? profile,
@@ -759,7 +759,7 @@ class CompartmentDefinition with Resource, _$CompartmentDefinition {
     @JsonKey(unknownEnumValue: Stu3ResourceType.CompartmentDefinition)
         Stu3ResourceType resourceType,
     FhirId? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,
@@ -875,7 +875,7 @@ class DataElement with Resource, _$DataElement {
     @JsonKey(unknownEnumValue: Stu3ResourceType.DataElement)
         Stu3ResourceType resourceType,
     FhirId? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,
@@ -993,7 +993,7 @@ class GraphDefinition with Resource, _$GraphDefinition {
     @JsonKey(unknownEnumValue: Stu3ResourceType.GraphDefinition)
         Stu3ResourceType resourceType,
     FhirId? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,
@@ -1202,7 +1202,7 @@ class ImplementationGuide with Resource, _$ImplementationGuide {
     @JsonKey(unknownEnumValue: Stu3ResourceType.ImplementationGuide)
         Stu3ResourceType resourceType,
     FhirId? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,
@@ -1500,7 +1500,7 @@ class MessageDefinition with Resource, _$MessageDefinition {
     @JsonKey(unknownEnumValue: Stu3ResourceType.MessageDefinition)
         Stu3ResourceType resourceType,
     FhirId? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,
@@ -1656,7 +1656,7 @@ class OperationDefinition with Resource, _$OperationDefinition {
     @JsonKey(unknownEnumValue: Stu3ResourceType.OperationDefinition)
         Stu3ResourceType resourceType,
     FhirId? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,
@@ -1881,7 +1881,7 @@ class SearchParameter with Resource, _$SearchParameter {
     @JsonKey(unknownEnumValue: Stu3ResourceType.SearchParameter)
         Stu3ResourceType resourceType,
     FhirId? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,
@@ -2012,7 +2012,7 @@ class StructureDefinition with Resource, _$StructureDefinition {
     @JsonKey(unknownEnumValue: Stu3ResourceType.StructureDefinition)
         Stu3ResourceType resourceType,
     FhirId? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,
@@ -2229,7 +2229,7 @@ class StructureMap with Resource, _$StructureMap {
     @JsonKey(unknownEnumValue: Stu3ResourceType.StructureMap)
         Stu3ResourceType resourceType,
     FhirId? id,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,
@@ -2512,7 +2512,7 @@ class StructureMapSource with _$StructureMapSource {
     FhirDateTime? defaultValueDateTime,
     @JsonKey(name: '_defaultValueDateTime')
         Element? defaultValueDateTimeElement,
-    Time? defaultValueTime,
+    FhirTime? defaultValueTime,
     @JsonKey(name: '_defaultValueTime') Element? defaultValueTimeElement,
     FhirCode? defaultValueCode,
     @JsonKey(name: '_defaultValueCode') Element? defaultValueCodeElement,
@@ -2557,7 +2557,7 @@ class StructureMapSource with _$StructureMapSource {
     Address? defaultValueAddress,
     ContactPoint? defaultValueContactPoint,
     Timing? defaultValueTiming,
-    Meta? defaultValueMeta,
+    FhirMeta? defaultValueMeta,
     ElementDefinition? defaultValueElementDefinition,
     ContactDetail? defaultValueContactDetail,
     Contributor? defaultValueContributor,

@@ -1801,7 +1801,7 @@ mixin _$Bundle {
   /// search.mode = 'include' or 'outcome' entries and it does not provide a
   ///  count of the number of entries in the Bundle.
   @HiveField(12)
-  UnsignedInt? get total => throw _privateConstructorUsedError;
+  FhirUnsignedInt? get total => throw _privateConstructorUsedError;
 
   /// [totalElement] Extensions for total
   @JsonKey(name: '_total')
@@ -1862,7 +1862,7 @@ abstract class $BundleCopyWith<$Res> {
       @HiveField(11)
           Element? timestampElement,
       @HiveField(12)
-          UnsignedInt? total,
+          FhirUnsignedInt? total,
       @JsonKey(name: '_total')
       @HiveField(13)
           Element? totalElement,
@@ -2120,7 +2120,7 @@ abstract class _$$_BundleCopyWith<$Res> implements $BundleCopyWith<$Res> {
       @HiveField(11)
           Element? timestampElement,
       @HiveField(12)
-          UnsignedInt? total,
+          FhirUnsignedInt? total,
       @JsonKey(name: '_total')
       @HiveField(13)
           Element? totalElement,
@@ -2625,7 +2625,7 @@ abstract class _Bundle extends Bundle {
   /// search.mode = 'include' or 'outcome' entries and it does not provide a
   ///  count of the number of entries in the Bundle.
   @HiveField(12)
-  UnsignedInt? get total;
+  FhirUnsignedInt? get total;
   @override
 
   /// [totalElement] Extensions for total
@@ -9586,7 +9586,7 @@ mixin _$MessageHeaderResponse {
 
   /// [identifier] The MessageHeader.id of the message to which this message is
   ///  a response.
-  Id? get identifier => throw _privateConstructorUsedError;
+  FhirId? get identifier => throw _privateConstructorUsedError;
 
   /// [identifierElement] Extensions for identifier
   @JsonKey(name: '_identifier')
@@ -9619,7 +9619,7 @@ abstract class $MessageHeaderResponseCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Id? identifier,
+      FhirId? identifier,
       @JsonKey(name: '_identifier') Element? identifierElement,
       Code? code,
       @JsonKey(name: '_code') Element? codeElement,
@@ -9738,7 +9738,7 @@ abstract class _$$_MessageHeaderResponseCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Id? identifier,
+      FhirId? identifier,
       @JsonKey(name: '_identifier') Element? identifierElement,
       Code? code,
       @JsonKey(name: '_code') Element? codeElement,
@@ -9898,7 +9898,7 @@ class _$_MessageHeaderResponse extends _MessageHeaderResponse {
   /// [identifier] The MessageHeader.id of the message to which this message is
   ///  a response.
   @override
-  final Id? identifier;
+  final FhirId? identifier;
 
   /// [identifierElement] Extensions for identifier
   @override
@@ -9977,7 +9977,7 @@ abstract class _MessageHeaderResponse extends MessageHeaderResponse {
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final Id? identifier,
+      final FhirId? identifier,
       @JsonKey(name: '_identifier') final Element? identifierElement,
       final Code? code,
       @JsonKey(name: '_code') final Element? codeElement,
@@ -10022,7 +10022,7 @@ abstract class _MessageHeaderResponse extends MessageHeaderResponse {
 
   /// [identifier] The MessageHeader.id of the message to which this message is
   ///  a response.
-  Id? get identifier;
+  FhirId? get identifier;
   @override
 
   /// [identifierElement] Extensions for identifier
@@ -12198,7 +12198,7 @@ mixin _$ParametersParameter {
   Element? get valueDecimalElement => throw _privateConstructorUsedError;
 
   /// [valueId] If the parameter is a data type.
-  Id? get valueId => throw _privateConstructorUsedError;
+  FhirId? get valueId => throw _privateConstructorUsedError;
 
   /// [valueIdElement] Extensions for valueId
   @JsonKey(name: '_valueId')
@@ -12226,14 +12226,14 @@ mixin _$ParametersParameter {
   Element? get valueMarkdownElement => throw _privateConstructorUsedError;
 
   /// [valueOid] If the parameter is a data type.
-  Oid? get valueOid => throw _privateConstructorUsedError;
+  FhirOid? get valueOid => throw _privateConstructorUsedError;
 
   /// [valueOidElement] Extensions for valueOid
   @JsonKey(name: '_valueOid')
   Element? get valueOidElement => throw _privateConstructorUsedError;
 
   /// [valuePositiveInt] If the parameter is a data type.
-  PositiveInt? get valuePositiveInt => throw _privateConstructorUsedError;
+  FhirPositiveInt? get valuePositiveInt => throw _privateConstructorUsedError;
 
   /// [valuePositiveIntElement] Extensions for valuePositiveInt
   @JsonKey(name: '_valuePositiveInt')
@@ -12247,14 +12247,14 @@ mixin _$ParametersParameter {
   Element? get valueStringElement => throw _privateConstructorUsedError;
 
   /// [valueTime] If the parameter is a data type.
-  Time? get valueTime => throw _privateConstructorUsedError;
+  FhirTime? get valueTime => throw _privateConstructorUsedError;
 
   /// [valueTimeElement] Extensions for valueTime
   @JsonKey(name: '_valueTime')
   Element? get valueTimeElement => throw _privateConstructorUsedError;
 
   /// [valueUnsignedInt] If the parameter is a data type.
-  UnsignedInt? get valueUnsignedInt => throw _privateConstructorUsedError;
+  FhirUnsignedInt? get valueUnsignedInt => throw _privateConstructorUsedError;
 
   /// [valueUnsignedIntElement] Extensions for valueUnsignedInt
   @JsonKey(name: '_valueUnsignedInt')
@@ -12275,7 +12275,7 @@ mixin _$ParametersParameter {
   Element? get valueUrlElement => throw _privateConstructorUsedError;
 
   /// [valueUuid] If the parameter is a data type.
-  Uuid? get valueUuid => throw _privateConstructorUsedError;
+  FhirUuid? get valueUuid => throw _privateConstructorUsedError;
 
   /// [valueUuidElement] Extensions for valueUuid
   @JsonKey(name: '_valueUuid')
@@ -12418,7 +12418,7 @@ abstract class $ParametersParameterCopyWith<$Res> {
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
       Decimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
-      Id? valueId,
+      FhirId? valueId,
       @JsonKey(name: '_valueId') Element? valueIdElement,
       Instant? valueInstant,
       @JsonKey(name: '_valueInstant') Element? valueInstantElement,
@@ -12426,21 +12426,21 @@ abstract class $ParametersParameterCopyWith<$Res> {
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
       Markdown? valueMarkdown,
       @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
-      Oid? valueOid,
+      FhirOid? valueOid,
       @JsonKey(name: '_valueOid') Element? valueOidElement,
-      PositiveInt? valuePositiveInt,
+      FhirPositiveInt? valuePositiveInt,
       @JsonKey(name: '_valuePositiveInt') Element? valuePositiveIntElement,
       String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
-      Time? valueTime,
+      FhirTime? valueTime,
       @JsonKey(name: '_valueTime') Element? valueTimeElement,
-      UnsignedInt? valueUnsignedInt,
+      FhirUnsignedInt? valueUnsignedInt,
       @JsonKey(name: '_valueUnsignedInt') Element? valueUnsignedIntElement,
       FhirUri? valueUri,
       @JsonKey(name: '_valueUri') Element? valueUriElement,
       FhirUrl? valueUrl,
       @JsonKey(name: '_valueUrl') Element? valueUrlElement,
-      Uuid? valueUuid,
+      FhirUuid? valueUuid,
       @JsonKey(name: '_valueUuid') Element? valueUuidElement,
       Address? valueAddress,
       Age? valueAge,
@@ -13573,7 +13573,7 @@ abstract class _$$_ParametersParameterCopyWith<$Res>
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
       Decimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
-      Id? valueId,
+      FhirId? valueId,
       @JsonKey(name: '_valueId') Element? valueIdElement,
       Instant? valueInstant,
       @JsonKey(name: '_valueInstant') Element? valueInstantElement,
@@ -13581,21 +13581,21 @@ abstract class _$$_ParametersParameterCopyWith<$Res>
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
       Markdown? valueMarkdown,
       @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
-      Oid? valueOid,
+      FhirOid? valueOid,
       @JsonKey(name: '_valueOid') Element? valueOidElement,
-      PositiveInt? valuePositiveInt,
+      FhirPositiveInt? valuePositiveInt,
       @JsonKey(name: '_valuePositiveInt') Element? valuePositiveIntElement,
       String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
-      Time? valueTime,
+      FhirTime? valueTime,
       @JsonKey(name: '_valueTime') Element? valueTimeElement,
-      UnsignedInt? valueUnsignedInt,
+      FhirUnsignedInt? valueUnsignedInt,
       @JsonKey(name: '_valueUnsignedInt') Element? valueUnsignedIntElement,
       FhirUri? valueUri,
       @JsonKey(name: '_valueUri') Element? valueUriElement,
       FhirUrl? valueUrl,
       @JsonKey(name: '_valueUrl') Element? valueUrlElement,
-      Uuid? valueUuid,
+      FhirUuid? valueUuid,
       @JsonKey(name: '_valueUuid') Element? valueUuidElement,
       Address? valueAddress,
       Age? valueAge,
@@ -14361,7 +14361,7 @@ class _$_ParametersParameter extends _ParametersParameter {
 
   /// [valueId] If the parameter is a data type.
   @override
-  final Id? valueId;
+  final FhirId? valueId;
 
   /// [valueIdElement] Extensions for valueId
   @override
@@ -14857,7 +14857,7 @@ abstract class _ParametersParameter extends ParametersParameter {
       final Decimal? valueDecimal,
       @JsonKey(name: '_valueDecimal')
           final Element? valueDecimalElement,
-      final Id? valueId,
+      final FhirId? valueId,
       @JsonKey(name: '_valueId')
           final Element? valueIdElement,
       final Instant? valueInstant,
@@ -15038,7 +15038,7 @@ abstract class _ParametersParameter extends ParametersParameter {
   @override
 
   /// [valueId] If the parameter is a data type.
-  Id? get valueId;
+  FhirId? get valueId;
   @override
 
   /// [valueIdElement] Extensions for valueId
@@ -15074,7 +15074,7 @@ abstract class _ParametersParameter extends ParametersParameter {
   @override
 
   /// [valueOid] If the parameter is a data type.
-  Oid? get valueOid;
+  FhirOid? get valueOid;
   @override
 
   /// [valueOidElement] Extensions for valueOid
@@ -15083,7 +15083,7 @@ abstract class _ParametersParameter extends ParametersParameter {
   @override
 
   /// [valuePositiveInt] If the parameter is a data type.
-  PositiveInt? get valuePositiveInt;
+  FhirPositiveInt? get valuePositiveInt;
   @override
 
   /// [valuePositiveIntElement] Extensions for valuePositiveInt
@@ -15101,7 +15101,7 @@ abstract class _ParametersParameter extends ParametersParameter {
   @override
 
   /// [valueTime] If the parameter is a data type.
-  Time? get valueTime;
+  FhirTime? get valueTime;
   @override
 
   /// [valueTimeElement] Extensions for valueTime
@@ -15110,7 +15110,7 @@ abstract class _ParametersParameter extends ParametersParameter {
   @override
 
   /// [valueUnsignedInt] If the parameter is a data type.
-  UnsignedInt? get valueUnsignedInt;
+  FhirUnsignedInt? get valueUnsignedInt;
   @override
 
   /// [valueUnsignedIntElement] Extensions for valueUnsignedInt
@@ -15137,7 +15137,7 @@ abstract class _ParametersParameter extends ParametersParameter {
   @override
 
   /// [valueUuid] If the parameter is a data type.
-  Uuid? get valueUuid;
+  FhirUuid? get valueUuid;
   @override
 
   /// [valueUuidElement] Extensions for valueUuid
@@ -18837,7 +18837,7 @@ mixin _$SubscriptionTopic {
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
   @HiveField(18)
-  List<Canonical>? get derivedFrom => throw _privateConstructorUsedError;
+  List<FhirCanonical>? get derivedFrom => throw _privateConstructorUsedError;
 
   /// [status] The current state of the SubscriptionTopic.;
   @HiveField(19)
@@ -18994,7 +18994,7 @@ abstract class $SubscriptionTopicCopyWith<$Res> {
       @JsonKey(name: '_title')
           Element? titleElement,
       @HiveField(18)
-          List<Canonical>? derivedFrom,
+          List<FhirCanonical>? derivedFrom,
       @HiveField(19)
           Code? status,
       @HiveField(20)
@@ -19211,7 +19211,7 @@ class _$SubscriptionTopicCopyWithImpl<$Res, $Val extends SubscriptionTopic>
       derivedFrom: freezed == derivedFrom
           ? _value.derivedFrom
           : derivedFrom // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
@@ -19576,7 +19576,7 @@ abstract class _$$_SubscriptionTopicCopyWith<$Res>
       @JsonKey(name: '_title')
           Element? titleElement,
       @HiveField(18)
-          List<Canonical>? derivedFrom,
+          List<FhirCanonical>? derivedFrom,
       @HiveField(19)
           Code? status,
       @HiveField(20)
@@ -19808,7 +19808,7 @@ class __$$_SubscriptionTopicCopyWithImpl<$Res>
       derivedFrom: freezed == derivedFrom
           ? _value._derivedFrom
           : derivedFrom // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
+              as List<FhirCanonical>?,
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
@@ -19965,7 +19965,7 @@ class _$_SubscriptionTopic extends _SubscriptionTopic {
       @JsonKey(name: '_title')
           this.titleElement,
       @HiveField(18)
-          final List<Canonical>? derivedFrom,
+          final List<FhirCanonical>? derivedFrom,
       @HiveField(19)
           this.status,
       @HiveField(20)
@@ -20179,10 +20179,10 @@ class _$_SubscriptionTopic extends _SubscriptionTopic {
   @HiveField(17)
   @JsonKey(name: '_title')
   final Element? titleElement;
-  final List<Canonical>? _derivedFrom;
+  final List<FhirCanonical>? _derivedFrom;
   @override
   @HiveField(18)
-  List<Canonical>? get derivedFrom {
+  List<FhirCanonical>? get derivedFrom {
     final value = _derivedFrom;
     if (value == null) return null;
     if (_derivedFrom is EqualUnmodifiableListView) return _derivedFrom;
@@ -20573,7 +20573,7 @@ abstract class _SubscriptionTopic extends SubscriptionTopic {
       @JsonKey(name: '_title')
           final Element? titleElement,
       @HiveField(18)
-          final List<Canonical>? derivedFrom,
+          final List<FhirCanonical>? derivedFrom,
       @HiveField(19)
           final Code? status,
       @HiveField(20)
@@ -20740,7 +20740,7 @@ abstract class _SubscriptionTopic extends SubscriptionTopic {
   Element? get titleElement;
   @override
   @HiveField(18)
-  List<Canonical>? get derivedFrom;
+  List<FhirCanonical>? get derivedFrom;
   @override
 
   /// [status] The current state of the SubscriptionTopic.;
@@ -20886,7 +20886,8 @@ mixin _$SubscriptionTopicResourceTrigger {
   FhirUri? get resource => throw _privateConstructorUsedError;
   @JsonKey(name: '_resource')
   Element? get resourceElement => throw _privateConstructorUsedError;
-  List<Code>? get supportedInteraction => throw _privateConstructorUsedError;
+  List<FhirCode>? get supportedInteraction =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_supportedInteraction')
   List<Element>? get supportedInteractionElement =>
       throw _privateConstructorUsedError;
@@ -20921,7 +20922,7 @@ abstract class $SubscriptionTopicResourceTriggerCopyWith<$Res> {
       FhirUri? resource,
       @JsonKey(name: '_resource')
           Element? resourceElement,
-      List<Code>? supportedInteraction,
+      List<FhirCode>? supportedInteraction,
       @JsonKey(name: '_supportedInteraction')
           List<Element>? supportedInteractionElement,
       SubscriptionTopicQueryCriteria? queryCriteria,
@@ -20994,7 +20995,7 @@ class _$SubscriptionTopicResourceTriggerCopyWithImpl<$Res,
       supportedInteraction: freezed == supportedInteraction
           ? _value.supportedInteraction
           : supportedInteraction // ignore: cast_nullable_to_non_nullable
-              as List<Code>?,
+              as List<FhirCode>?,
       supportedInteractionElement: freezed == supportedInteractionElement
           ? _value.supportedInteractionElement
           : supportedInteractionElement // ignore: cast_nullable_to_non_nullable
@@ -21084,7 +21085,7 @@ abstract class _$$_SubscriptionTopicResourceTriggerCopyWith<$Res>
       FhirUri? resource,
       @JsonKey(name: '_resource')
           Element? resourceElement,
-      List<Code>? supportedInteraction,
+      List<FhirCode>? supportedInteraction,
       @JsonKey(name: '_supportedInteraction')
           List<Element>? supportedInteractionElement,
       SubscriptionTopicQueryCriteria? queryCriteria,
@@ -21160,7 +21161,7 @@ class __$$_SubscriptionTopicResourceTriggerCopyWithImpl<$Res>
       supportedInteraction: freezed == supportedInteraction
           ? _value._supportedInteraction
           : supportedInteraction // ignore: cast_nullable_to_non_nullable
-              as List<Code>?,
+              as List<FhirCode>?,
       supportedInteractionElement: freezed == supportedInteractionElement
           ? _value._supportedInteractionElement
           : supportedInteractionElement // ignore: cast_nullable_to_non_nullable
@@ -21196,7 +21197,7 @@ class _$_SubscriptionTopicResourceTrigger
       this.resource,
       @JsonKey(name: '_resource')
           this.resourceElement,
-      final List<Code>? supportedInteraction,
+      final List<FhirCode>? supportedInteraction,
       @JsonKey(name: '_supportedInteraction')
           final List<Element>? supportedInteractionElement,
       this.queryCriteria,
@@ -21247,9 +21248,9 @@ class _$_SubscriptionTopicResourceTrigger
   @override
   @JsonKey(name: '_resource')
   final Element? resourceElement;
-  final List<Code>? _supportedInteraction;
+  final List<FhirCode>? _supportedInteraction;
   @override
-  List<Code>? get supportedInteraction {
+  List<FhirCode>? get supportedInteraction {
     final value = _supportedInteraction;
     if (value == null) return null;
     if (_supportedInteraction is EqualUnmodifiableListView)
@@ -21361,7 +21362,7 @@ abstract class _SubscriptionTopicResourceTrigger
           final FhirUri? resource,
           @JsonKey(name: '_resource')
               final Element? resourceElement,
-          final List<Code>? supportedInteraction,
+          final List<FhirCode>? supportedInteraction,
           @JsonKey(name: '_supportedInteraction')
               final List<Element>? supportedInteractionElement,
           final SubscriptionTopicQueryCriteria? queryCriteria,
@@ -21392,7 +21393,7 @@ abstract class _SubscriptionTopicResourceTrigger
   @JsonKey(name: '_resource')
   Element? get resourceElement;
   @override
-  List<Code>? get supportedInteraction;
+  List<FhirCode>? get supportedInteraction;
   @override
   @JsonKey(name: '_supportedInteraction')
   List<Element>? get supportedInteractionElement;
@@ -22354,7 +22355,7 @@ mixin _$SubscriptionTopicCanFilterBy {
   FhirUri? get filterDefinition => throw _privateConstructorUsedError;
   @JsonKey(name: '_filterDefinition')
   Element? get filterDefinitionElement => throw _privateConstructorUsedError;
-  List<Code>? get modifier => throw _privateConstructorUsedError;
+  List<FhirCode>? get modifier => throw _privateConstructorUsedError;
   @JsonKey(name: '_modifier')
   List<Element>? get modifierElement => throw _privateConstructorUsedError;
 
@@ -22384,7 +22385,7 @@ abstract class $SubscriptionTopicCanFilterByCopyWith<$Res> {
       @JsonKey(name: '_filterParameter') Element? filterParameterElement,
       FhirUri? filterDefinition,
       @JsonKey(name: '_filterDefinition') Element? filterDefinitionElement,
-      List<Code>? modifier,
+      List<FhirCode>? modifier,
       @JsonKey(name: '_modifier') List<Element>? modifierElement});
 
   $ElementCopyWith<$Res>? get descriptionElement;
@@ -22469,7 +22470,7 @@ class _$SubscriptionTopicCanFilterByCopyWithImpl<$Res,
       modifier: freezed == modifier
           ? _value.modifier
           : modifier // ignore: cast_nullable_to_non_nullable
-              as List<Code>?,
+              as List<FhirCode>?,
       modifierElement: freezed == modifierElement
           ? _value.modifierElement
           : modifierElement // ignore: cast_nullable_to_non_nullable
@@ -22547,7 +22548,7 @@ abstract class _$$_SubscriptionTopicCanFilterByCopyWith<$Res>
       @JsonKey(name: '_filterParameter') Element? filterParameterElement,
       FhirUri? filterDefinition,
       @JsonKey(name: '_filterDefinition') Element? filterDefinitionElement,
-      List<Code>? modifier,
+      List<FhirCode>? modifier,
       @JsonKey(name: '_modifier') List<Element>? modifierElement});
 
   @override
@@ -22635,7 +22636,7 @@ class __$$_SubscriptionTopicCanFilterByCopyWithImpl<$Res>
       modifier: freezed == modifier
           ? _value._modifier
           : modifier // ignore: cast_nullable_to_non_nullable
-              as List<Code>?,
+              as List<FhirCode>?,
       modifierElement: freezed == modifierElement
           ? _value._modifierElement
           : modifierElement // ignore: cast_nullable_to_non_nullable
@@ -22659,7 +22660,7 @@ class _$_SubscriptionTopicCanFilterBy extends _SubscriptionTopicCanFilterBy {
       @JsonKey(name: '_filterParameter') this.filterParameterElement,
       this.filterDefinition,
       @JsonKey(name: '_filterDefinition') this.filterDefinitionElement,
-      final List<Code>? modifier,
+      final List<FhirCode>? modifier,
       @JsonKey(name: '_modifier') final List<Element>? modifierElement})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -22714,9 +22715,9 @@ class _$_SubscriptionTopicCanFilterBy extends _SubscriptionTopicCanFilterBy {
   @override
   @JsonKey(name: '_filterDefinition')
   final Element? filterDefinitionElement;
-  final List<Code>? _modifier;
+  final List<FhirCode>? _modifier;
   @override
-  List<Code>? get modifier {
+  List<FhirCode>? get modifier {
     final value = _modifier;
     if (value == null) return null;
     if (_modifier is EqualUnmodifiableListView) return _modifier;
@@ -22824,7 +22825,7 @@ abstract class _SubscriptionTopicCanFilterBy
           final FhirUri? filterDefinition,
           @JsonKey(name: '_filterDefinition')
               final Element? filterDefinitionElement,
-          final List<Code>? modifier,
+          final List<FhirCode>? modifier,
           @JsonKey(name: '_modifier')
               final List<Element>? modifierElement}) =
       _$_SubscriptionTopicCanFilterBy;
@@ -22861,7 +22862,7 @@ abstract class _SubscriptionTopicCanFilterBy
   @JsonKey(name: '_filterDefinition')
   Element? get filterDefinitionElement;
   @override
-  List<Code>? get modifier;
+  List<FhirCode>? get modifier;
   @override
   @JsonKey(name: '_modifier')
   List<Element>? get modifierElement;

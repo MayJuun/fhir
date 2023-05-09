@@ -247,7 +247,7 @@ const _$R4ResourceTypeEnumMap = {
   R4ResourceType.Invoice: 'Invoice',
   R4ResourceType.Library: 'Library',
   R4ResourceType.Linkage: 'Linkage',
-  R4ResourceType.List_: 'List',
+  R4ResourceType.FhirList: 'List',
   R4ResourceType.Location: 'Location',
   R4ResourceType.ManufacturedItemDefinition: 'ManufacturedItemDefinition',
   R4ResourceType.Measure: 'Measure',
@@ -1119,11 +1119,11 @@ Map<String, dynamic> _$$_LibraryToJson(_$_Library instance) {
   return val;
 }
 
-_$_List_ _$$_List_FromJson(Map<String, dynamic> json) => _$_List_(
+_$_FhirList _$$_FhirListFromJson(Map<String, dynamic> json) => _$_FhirList(
       resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
-              unknownValue: R4ResourceType.List_) ??
-          R4ResourceType.List_,
+              unknownValue: R4ResourceType.FhirList) ??
+          R4ResourceType.FhirList,
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -1197,7 +1197,7 @@ _$_List_ _$$_List_FromJson(Map<String, dynamic> json) => _$_List_(
               json['emptyReason'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_List_ToJson(_$_List_ instance) {
+Map<String, dynamic> _$$_FhirListToJson(_$_FhirList instance) {
   final val = <String, dynamic>{
     'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };

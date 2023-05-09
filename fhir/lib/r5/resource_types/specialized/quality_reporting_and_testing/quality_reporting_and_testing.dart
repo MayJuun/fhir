@@ -326,7 +326,7 @@ class Measure with Resource, _$Measure {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when
@@ -507,7 +507,7 @@ class Measure with Resource, _$Measure {
     @JsonKey(name: '_usage') Element? usageElement,
 
     /// [library_] ("library") A reference to a Library resource containing the formal logic used by the measure.
-    @JsonKey(name: 'library') List<Canonical>? library_,
+    @JsonKey(name: 'library') List<FhirCanonical>? library_,
 
     /// [disclaimer] Notices and disclaimers regarding the use of the measure or related to intellectual property (such as code systems) referenced by the measure.
     FhirMarkdown? disclaimer,
@@ -1553,7 +1553,7 @@ class MeasureReport with Resource, _$MeasureReport {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when
@@ -2644,7 +2644,7 @@ class TestReport with Resource, _$TestReport {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when
@@ -2689,7 +2689,7 @@ class TestReport with Resource, _$TestReport {
     @JsonKey(name: '_status') Element? statusElement,
 
     /// [testScript] Ideally this is an absolute URL that is used to identify the version-specific TestScript that was executed, matching the `TestScript.url`.
-    required Canonical testScript,
+    required FhirCanonical testScript,
 
     /// [result] The overall result from the execution of the TestScript.
     FhirCode? result,
@@ -3967,7 +3967,7 @@ class TestScript with Resource, _$TestScript {
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
     /// always be associated with version changes to the resource.
-    Meta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when
     /// the resource was constructed, and which must be understood when
@@ -4106,7 +4106,7 @@ class TestScript with Resource, _$TestScript {
     List<TestScriptFixture>? fixture,
 
     /// [profile] Reference to the profile to be used for validation.
-    List<Canonical>? profile,
+    List<FhirCanonical>? profile,
 
     /// [variable] Variable is set based either on element value in response body or on header field value in the response headers.
     List<TestScriptVariable>? variable,
@@ -4748,7 +4748,7 @@ class TestScriptCapability with _$TestScriptCapability {
     @JsonKey(name: '_description') Element? descriptionElement,
 
     /// [origin] Which origin server these requirements apply to.
-    List<Integer>? origin,
+    List<FhirInteger>? origin,
 
     /// [originElement] ("_origin") Extensions for origin
     @JsonKey(name: '_origin') List<Element>? originElement,
@@ -4766,7 +4766,7 @@ class TestScriptCapability with _$TestScriptCapability {
     @JsonKey(name: '_link') List<Element>? linkElement,
 
     /// [capabilities] Minimum capabilities required of server for test script to execute successfully.   If server does not meet at a minimum the referenced capability statement, then all tests in this script are skipped.
-    required Canonical capabilities,
+    required FhirCanonical capabilities,
   }) = _TestScriptCapability;
 
   /// Produces a Yaml formatted String version of the object
@@ -4879,7 +4879,7 @@ class TestScriptScope with _$TestScriptScope {
     List<FhirExtension>? modifierExtension,
 
     /// [artifact] The specific conformance artifact being tested. The canonical reference can be version-specific.
-    required Canonical artifact,
+    required FhirCanonical artifact,
 
     /// [conformance] The expectation of whether the test must pass for the system to be considered conformant with the artifact: required - all tests are expected to pass, optional - all test are expected to pass but non-pass status may be allowed, strict - all tests are expected to pass and warnings are treated as a failure.
     CodeableConcept? conformance,
