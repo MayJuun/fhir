@@ -8,10 +8,12 @@ environment:
   sdk: '>=2.19.0 <3.0.0'
 
 dependencies:
+  collection: ^1.17.1
   freezed_annotation: ^2.2.0
   hive: ^2.2.3
   json_annotation: ^4.8.0
-  path_provider: ^2.0.15
+  shelf: ^1.4.1
+  shelf_router: ^1.1.4
   uuid: ^3.0.7
   xml2json: ^5.3.6
   yaml: ^3.1.1

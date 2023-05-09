@@ -1,15 +1,15 @@
 import 'dart:async';
 import 'dart:developer';
 
+import 'package:collection/collection.dart';
 import 'package:hive/hive.dart';
-import 'package:path_provider/path_provider.dart';
 
 import '../r4.dart';
 import 'hive_data.dart';
 
 class FhirHiveDb {
   bool initialized = false;
-  Set<String> types = {};
+  Set<R4ResourceType> types = {};
   StreamController? streamController;
 
   /// To initialize the database as a whole. Configure the path, set initialized
@@ -17,11 +17,11 @@ class FhirHiveDb {
   /// set of all of the types to the variable types
   Future<void> initDb() async {
     streamController = StreamController();
-    Hive.init((await getApplicationDocumentsDirectory()).path);
+    Hive.init('.');
     initialized = true;
     registerResourceTypes();
-    final Box<Set<String>> typesBox = await Hive.openBox('types');
-    types = typesBox.get('types') ?? <String>{};
+    final Box<Set<R4ResourceType>> typesBox = await Hive.openBox('types');
+    types = typesBox.get('types') ?? <R4ResourceType>{};
   }
 
   /// Convenience getter to ensure initialized
@@ -48,14 +48,13 @@ class FhirHiveDb {
   /// it, write it back, and return true.
   Future<bool> addType(R4ResourceType resourceType) async {
     try {
-      final resourceTypeString = resourceTypeToString(resourceType);
-      if (types.contains(resourceTypeString)) {
+      if (types.contains(resourceType)) {
         return true;
       } else {
         await ensureInit;
-        final Box<Set<String>> box = Hive.box('types');
-        final resourceSet = box.get('types') ?? <String>{};
-        resourceSet.add(resourceTypeString);
+        final Box<Set<R4ResourceType>> box = Hive.box('types');
+        final resourceSet = box.get('types') ?? <R4ResourceType>{};
+        resourceSet.add(resourceType);
         box.put('types', resourceSet);
         return true;
       }
@@ -85,15 +84,25 @@ class FhirHiveDb {
   }
 
   Future<void> sinkDataToStream(R4ResourceType resourceType) async {
-    final List<Resource> resources = await readAll(resourceType);
+    final List<Resource> resources = await readAllOneType(resourceType);
     streamController?.sink
         .add(HiveData(isInitialized: initialized, resources: resources));
   }
 
-  Future<List<Resource>> readAll(R4ResourceType resourceType) async {
+  Future<List<Resource>> readAllOneType(R4ResourceType resourceType) async {
     await ensureInit;
     final Box<Resource> box = await getBox(resourceType);
     return box.values.toList();
+  }
+
+  Future<List<Resource>> readAll() async {
+    await ensureInit;
+    final allResources = <Resource>[];
+    for (final type in types) {
+      final Box<Resource> box = await getBox(type);
+      allResources.addAll(box.values);
+    }
+    return allResources;
   }
 
   Future<bool> saveHistory(Resource resource) async {
@@ -115,27 +124,33 @@ class FhirHiveDb {
     }
   }
 
-  // void delete(key) async {
-  //   Box box = await initAndGetBox(resourceType);
-  //   await box.delete(key);
-  //   sinkDataToStream();
-  // }
+  Future<bool> delete(
+    R4ResourceType resourceType,
+    bool Function(Resource) finder,
+  ) async {
+    try {
+      final Box<Resource> box = await getBox(resourceType);
+      final resource =
+          box.values.firstWhereOrNull((element) => finder(element));
+      if (resource != null) {
+        await box.delete(resource.id);
+        sinkDataToStream(resourceType);
+      }
+      return true;
+    } catch (e) {
+      return false;
+    }
+  }
 
-  // Future<Iterable<Map<String, dynamic>>> readAll(String resourceType) async {
-  //   if (!initialized) {
-  //     await initDb();
-  //   }
-  //   Box<Map<String, dynamic>> box = await initAndGetBox(resourceType);
-  //   return box.values;
-  // }
-
-  // void clear() async {
-  //   if (!initialized) {
-  //     Box box = await initAndGetBox(resourceType);
-  //     streamController?.close();
-  //     box.clear();
-  //   }
-  // }
+  Future<bool> deleteType(R4ResourceType resourceType) async {
+    try {
+      final Box<Resource> box = await getBox(resourceType);
+      await box.clear();
+      return true;
+    } catch (e) {
+      return false;
+    }
+  }
 
   Future<List<Resource>> search(
     R4ResourceType resourceType,
