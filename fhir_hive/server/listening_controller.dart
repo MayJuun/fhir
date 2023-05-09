@@ -9,22 +9,12 @@ class ListeningController {
   Handler get handler {
     final router = Router();
 
-    router.post('/fhir/', (Request request) async {
+    router.post('/', (Request request) async {
       final requestString = await request.readAsString();
       final resource =
           Resource.fromJson(jsonDecode(requestString) as Map<String, dynamic>);
-      final resourceType = resourceTypeToStringMap[resource.resourceType];
-      print('post to "/fhir/, resourceType: $resourceType"');
-      return Response.ok('Post Request made, but payload incorrect');
-    });
-
-    router.post('/fhir', (Request request) async {
-      final requestString = await request.readAsString();
-      final resource =
-          Resource.fromJson(jsonDecode(requestString) as Map<String, dynamic>);
-      final resourceType = resourceTypeToStringMap[resource.resourceType];
-      print('post to "/fhir, resourceType: $resourceType"');
-      return Response.ok('Post Request made, but payload incorrect');
+      await FhirHiveDao().save(null, resource);
+      return Response.ok('Received ${resource.path}');
     });
 
     ///You can catch all verbs and use a URL-parameter with a regular expression
