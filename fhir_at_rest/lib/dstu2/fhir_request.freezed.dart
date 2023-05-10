@@ -40,6 +40,10 @@ mixin _$FhirRequest {
   ///   but there are some older systems that won't accept that
   MimeType? get mimeType => throw _privateConstructorUsedError;
 
+  /// [accept] - this will default to fhir+json just so it will stop sending
+  /// me XML - I hate XML
+  String get accept => throw _privateConstructorUsedError;
+
   /// [client] - if there's a specific client that you're going to be using
   Client? get client => throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -47,38 +51,31 @@ mixin _$FhirRequest {
     required TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         read,
     required TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
-            Id vid,
+            FhirId id,
+            FhirId vid,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         vRead,
-    required TResult Function(
-            Uri base,
-            Resource resource,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)
+    required TResult Function(Uri base, Resource resource, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)
         update,
     required TResult Function(
             Uri base,
@@ -89,18 +86,20 @@ mixin _$FhirRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         patch,
     required TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         delete,
     required TResult Function(
@@ -112,6 +111,7 @@ mixin _$FhirRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         create,
     required TResult Function(
@@ -125,112 +125,17 @@ mixin _$FhirRequest {
             bool usePost,
             RestfulRequest restfulRequest,
             MimeType? mimeType,
+            String accept,
             Client? client)
         search,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)
-        searchAll,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Mode mode,
-            MimeType? mimeType,
-            Client? client)
-        capabilities,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)
-        transaction,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)
-        batch,
-    required TResult Function(
-            Uri base,
-            Dstu2ResourceType type,
-            Id id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)
-        history,
-    required TResult Function(
-            Uri base,
-            Dstu2ResourceType type,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)
-        historyType,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)
-        historyAll,
-    required TResult Function(
-            Uri base,
-            Dstu2ResourceType? type,
-            FhirId? id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Map<String, dynamic> fhirParameter,
-            String operation,
-            bool usePost,
-            bool useFormData,
-            MimeType? mimeType,
-            Client? client)
-        operation,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client) searchAll,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Mode mode, MimeType? mimeType, String accept, Client? client) capabilities,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client) transaction,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client) batch,
+    required TResult Function(Uri base, Dstu2ResourceType type, FhirId id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client) history,
+    required TResult Function(Uri base, Dstu2ResourceType type, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client) historyType,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client) historyAll,
+    required TResult Function(Uri base, Dstu2ResourceType? type, FhirId? id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Map<String, dynamic> fhirParameter, String operation, bool usePost, bool useFormData, MimeType? mimeType, String accept, Client? client) operation,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -238,38 +143,31 @@ mixin _$FhirRequest {
     TResult? Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         read,
     TResult? Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
-            Id vid,
+            FhirId id,
+            FhirId vid,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         vRead,
-    TResult? Function(
-            Uri base,
-            Resource resource,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)?
+    TResult? Function(Uri base, Resource resource, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)?
         update,
     TResult? Function(
             Uri base,
@@ -280,18 +178,20 @@ mixin _$FhirRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         patch,
     TResult? Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         delete,
     TResult? Function(
@@ -303,6 +203,7 @@ mixin _$FhirRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         create,
     TResult? Function(
@@ -316,112 +217,17 @@ mixin _$FhirRequest {
             bool usePost,
             RestfulRequest restfulRequest,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         search,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)?
-        searchAll,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Mode mode,
-            MimeType? mimeType,
-            Client? client)?
-        capabilities,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)?
-        transaction,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)?
-        batch,
-    TResult? Function(
-            Uri base,
-            Dstu2ResourceType type,
-            Id id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        history,
-    TResult? Function(
-            Uri base,
-            Dstu2ResourceType type,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        historyType,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        historyAll,
-    TResult? Function(
-            Uri base,
-            Dstu2ResourceType? type,
-            FhirId? id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Map<String, dynamic> fhirParameter,
-            String operation,
-            bool usePost,
-            bool useFormData,
-            MimeType? mimeType,
-            Client? client)?
-        operation,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)? searchAll,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Mode mode, MimeType? mimeType, String accept, Client? client)? capabilities,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client)? transaction,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client)? batch,
+    TResult? Function(Uri base, Dstu2ResourceType type, FhirId id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? history,
+    TResult? Function(Uri base, Dstu2ResourceType type, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? historyType,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? historyAll,
+    TResult? Function(Uri base, Dstu2ResourceType? type, FhirId? id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Map<String, dynamic> fhirParameter, String operation, bool usePost, bool useFormData, MimeType? mimeType, String accept, Client? client)? operation,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -429,38 +235,31 @@ mixin _$FhirRequest {
     TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         read,
     TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
-            Id vid,
+            FhirId id,
+            FhirId vid,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         vRead,
-    TResult Function(
-            Uri base,
-            Resource resource,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)?
+    TResult Function(Uri base, Resource resource, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)?
         update,
     TResult Function(
             Uri base,
@@ -471,18 +270,20 @@ mixin _$FhirRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         patch,
     TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         delete,
     TResult Function(
@@ -494,6 +295,7 @@ mixin _$FhirRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         create,
     TResult Function(
@@ -507,112 +309,17 @@ mixin _$FhirRequest {
             bool usePost,
             RestfulRequest restfulRequest,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         search,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)?
-        searchAll,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Mode mode,
-            MimeType? mimeType,
-            Client? client)?
-        capabilities,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)?
-        transaction,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)?
-        batch,
-    TResult Function(
-            Uri base,
-            Dstu2ResourceType type,
-            Id id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        history,
-    TResult Function(
-            Uri base,
-            Dstu2ResourceType type,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        historyType,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        historyAll,
-    TResult Function(
-            Uri base,
-            Dstu2ResourceType? type,
-            FhirId? id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Map<String, dynamic> fhirParameter,
-            String operation,
-            bool usePost,
-            bool useFormData,
-            MimeType? mimeType,
-            Client? client)?
-        operation,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)? searchAll,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Mode mode, MimeType? mimeType, String accept, Client? client)? capabilities,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client)? transaction,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client)? batch,
+    TResult Function(Uri base, Dstu2ResourceType type, FhirId id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? history,
+    TResult Function(Uri base, Dstu2ResourceType type, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? historyType,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? historyAll,
+    TResult Function(Uri base, Dstu2ResourceType? type, FhirId? id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Map<String, dynamic> fhirParameter, String operation, bool usePost, bool useFormData, MimeType? mimeType, String accept, Client? client)? operation,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -694,6 +401,7 @@ abstract class $FhirRequestCopyWith<$Res> {
       List<String> elements,
       List<String> parameters,
       MimeType? mimeType,
+      String accept,
       Client? client});
 }
 
@@ -717,6 +425,7 @@ class _$FhirRequestCopyWithImpl<$Res, $Val extends FhirRequest>
     Object? elements = null,
     Object? parameters = null,
     Object? mimeType = freezed,
+    Object? accept = null,
     Object? client = freezed,
   }) {
     return _then(_value.copyWith(
@@ -748,6 +457,10 @@ class _$FhirRequestCopyWithImpl<$Res, $Val extends FhirRequest>
           ? _value.mimeType
           : mimeType // ignore: cast_nullable_to_non_nullable
               as MimeType?,
+      accept: null == accept
+          ? _value.accept
+          : accept // ignore: cast_nullable_to_non_nullable
+              as String,
       client: freezed == client
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
@@ -767,13 +480,14 @@ abstract class _$$FhirReadRequestCopyWith<$Res>
   $Res call(
       {Uri base,
       Dstu2ResourceType type,
-      Id id,
+      FhirId id,
       bool pretty,
       Summary summary,
       String format,
       List<String> elements,
       List<String> parameters,
       MimeType? mimeType,
+      String accept,
       Client? client});
 }
 
@@ -797,6 +511,7 @@ class __$$FhirReadRequestCopyWithImpl<$Res>
     Object? elements = null,
     Object? parameters = null,
     Object? mimeType = freezed,
+    Object? accept = null,
     Object? client = freezed,
   }) {
     return _then(_$FhirReadRequest(
@@ -811,7 +526,7 @@ class __$$FhirReadRequestCopyWithImpl<$Res>
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id,
+              as FhirId,
       pretty: null == pretty
           ? _value.pretty
           : pretty // ignore: cast_nullable_to_non_nullable
@@ -836,6 +551,10 @@ class __$$FhirReadRequestCopyWithImpl<$Res>
           ? _value.mimeType
           : mimeType // ignore: cast_nullable_to_non_nullable
               as MimeType?,
+      accept: null == accept
+          ? _value.accept
+          : accept // ignore: cast_nullable_to_non_nullable
+              as String,
       client: freezed == client
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
@@ -857,6 +576,7 @@ class _$FhirReadRequest extends FhirReadRequest {
       final List<String> elements = const <String>[],
       final List<String> parameters = const <String>[],
       this.mimeType,
+      this.accept = 'application/fhir+json',
       this.client})
       : _elements = elements,
         _parameters = parameters,
@@ -872,7 +592,7 @@ class _$FhirReadRequest extends FhirReadRequest {
 
   /// [id] - the id for the resource
   @override
-  final Id id;
+  final FhirId id;
 
   /// [pretty] - pretty print the json formatting in the response
   @override
@@ -920,13 +640,19 @@ class _$FhirReadRequest extends FhirReadRequest {
   @override
   final MimeType? mimeType;
 
+  /// [accept] - this will default to fhir+json just so it will stop sending
+  /// me XML - I hate XML
+  @override
+  @JsonKey()
+  final String accept;
+
   /// [client] - if there's a specific client that you're going to be using
   @override
   final Client? client;
 
   @override
   String toString() {
-    return 'FhirRequest.read(base: $base, type: $type, id: $id, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, mimeType: $mimeType, client: $client)';
+    return 'FhirRequest.read(base: $base, type: $type, id: $id, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, mimeType: $mimeType, accept: $accept, client: $client)';
   }
 
   @override
@@ -945,6 +671,7 @@ class _$FhirReadRequest extends FhirReadRequest {
                 .equals(other._parameters, _parameters) &&
             (identical(other.mimeType, mimeType) ||
                 other.mimeType == mimeType) &&
+            (identical(other.accept, accept) || other.accept == accept) &&
             (identical(other.client, client) || other.client == client));
   }
 
@@ -960,6 +687,7 @@ class _$FhirReadRequest extends FhirReadRequest {
       const DeepCollectionEquality().hash(_elements),
       const DeepCollectionEquality().hash(_parameters),
       mimeType,
+      accept,
       client);
 
   @JsonKey(ignore: true)
@@ -974,38 +702,31 @@ class _$FhirReadRequest extends FhirReadRequest {
     required TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         read,
     required TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
-            Id vid,
+            FhirId id,
+            FhirId vid,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         vRead,
-    required TResult Function(
-            Uri base,
-            Resource resource,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)
+    required TResult Function(Uri base, Resource resource, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)
         update,
     required TResult Function(
             Uri base,
@@ -1016,18 +737,20 @@ class _$FhirReadRequest extends FhirReadRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         patch,
     required TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         delete,
     required TResult Function(
@@ -1039,6 +762,7 @@ class _$FhirReadRequest extends FhirReadRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         create,
     required TResult Function(
@@ -1052,115 +776,20 @@ class _$FhirReadRequest extends FhirReadRequest {
             bool usePost,
             RestfulRequest restfulRequest,
             MimeType? mimeType,
+            String accept,
             Client? client)
         search,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)
-        searchAll,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Mode mode,
-            MimeType? mimeType,
-            Client? client)
-        capabilities,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)
-        transaction,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)
-        batch,
-    required TResult Function(
-            Uri base,
-            Dstu2ResourceType type,
-            Id id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)
-        history,
-    required TResult Function(
-            Uri base,
-            Dstu2ResourceType type,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)
-        historyType,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)
-        historyAll,
-    required TResult Function(
-            Uri base,
-            Dstu2ResourceType? type,
-            FhirId? id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Map<String, dynamic> fhirParameter,
-            String operation,
-            bool usePost,
-            bool useFormData,
-            MimeType? mimeType,
-            Client? client)
-        operation,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client) searchAll,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Mode mode, MimeType? mimeType, String accept, Client? client) capabilities,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client) transaction,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client) batch,
+    required TResult Function(Uri base, Dstu2ResourceType type, FhirId id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client) history,
+    required TResult Function(Uri base, Dstu2ResourceType type, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client) historyType,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client) historyAll,
+    required TResult Function(Uri base, Dstu2ResourceType? type, FhirId? id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Map<String, dynamic> fhirParameter, String operation, bool usePost, bool useFormData, MimeType? mimeType, String accept, Client? client) operation,
   }) {
     return read(base, type, id, pretty, summary, format, elements, parameters,
-        mimeType, client);
+        mimeType, accept, client);
   }
 
   @override
@@ -1169,38 +798,31 @@ class _$FhirReadRequest extends FhirReadRequest {
     TResult? Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         read,
     TResult? Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
-            Id vid,
+            FhirId id,
+            FhirId vid,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         vRead,
-    TResult? Function(
-            Uri base,
-            Resource resource,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)?
+    TResult? Function(Uri base, Resource resource, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)?
         update,
     TResult? Function(
             Uri base,
@@ -1211,18 +833,20 @@ class _$FhirReadRequest extends FhirReadRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         patch,
     TResult? Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         delete,
     TResult? Function(
@@ -1234,6 +858,7 @@ class _$FhirReadRequest extends FhirReadRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         create,
     TResult? Function(
@@ -1247,115 +872,20 @@ class _$FhirReadRequest extends FhirReadRequest {
             bool usePost,
             RestfulRequest restfulRequest,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         search,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)?
-        searchAll,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Mode mode,
-            MimeType? mimeType,
-            Client? client)?
-        capabilities,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)?
-        transaction,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)?
-        batch,
-    TResult? Function(
-            Uri base,
-            Dstu2ResourceType type,
-            Id id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        history,
-    TResult? Function(
-            Uri base,
-            Dstu2ResourceType type,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        historyType,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        historyAll,
-    TResult? Function(
-            Uri base,
-            Dstu2ResourceType? type,
-            FhirId? id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Map<String, dynamic> fhirParameter,
-            String operation,
-            bool usePost,
-            bool useFormData,
-            MimeType? mimeType,
-            Client? client)?
-        operation,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)? searchAll,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Mode mode, MimeType? mimeType, String accept, Client? client)? capabilities,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client)? transaction,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client)? batch,
+    TResult? Function(Uri base, Dstu2ResourceType type, FhirId id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? history,
+    TResult? Function(Uri base, Dstu2ResourceType type, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? historyType,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? historyAll,
+    TResult? Function(Uri base, Dstu2ResourceType? type, FhirId? id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Map<String, dynamic> fhirParameter, String operation, bool usePost, bool useFormData, MimeType? mimeType, String accept, Client? client)? operation,
   }) {
     return read?.call(base, type, id, pretty, summary, format, elements,
-        parameters, mimeType, client);
+        parameters, mimeType, accept, client);
   }
 
   @override
@@ -1364,38 +894,31 @@ class _$FhirReadRequest extends FhirReadRequest {
     TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         read,
     TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
-            Id vid,
+            FhirId id,
+            FhirId vid,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         vRead,
-    TResult Function(
-            Uri base,
-            Resource resource,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)?
+    TResult Function(Uri base, Resource resource, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)?
         update,
     TResult Function(
             Uri base,
@@ -1406,18 +929,20 @@ class _$FhirReadRequest extends FhirReadRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         patch,
     TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         delete,
     TResult Function(
@@ -1429,6 +954,7 @@ class _$FhirReadRequest extends FhirReadRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         create,
     TResult Function(
@@ -1442,117 +968,22 @@ class _$FhirReadRequest extends FhirReadRequest {
             bool usePost,
             RestfulRequest restfulRequest,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         search,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)?
-        searchAll,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Mode mode,
-            MimeType? mimeType,
-            Client? client)?
-        capabilities,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)?
-        transaction,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)?
-        batch,
-    TResult Function(
-            Uri base,
-            Dstu2ResourceType type,
-            Id id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        history,
-    TResult Function(
-            Uri base,
-            Dstu2ResourceType type,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        historyType,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        historyAll,
-    TResult Function(
-            Uri base,
-            Dstu2ResourceType? type,
-            FhirId? id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Map<String, dynamic> fhirParameter,
-            String operation,
-            bool usePost,
-            bool useFormData,
-            MimeType? mimeType,
-            Client? client)?
-        operation,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)? searchAll,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Mode mode, MimeType? mimeType, String accept, Client? client)? capabilities,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client)? transaction,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client)? batch,
+    TResult Function(Uri base, Dstu2ResourceType type, FhirId id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? history,
+    TResult Function(Uri base, Dstu2ResourceType type, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? historyType,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? historyAll,
+    TResult Function(Uri base, Dstu2ResourceType? type, FhirId? id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Map<String, dynamic> fhirParameter, String operation, bool usePost, bool useFormData, MimeType? mimeType, String accept, Client? client)? operation,
     required TResult orElse(),
   }) {
     if (read != null) {
       return read(base, type, id, pretty, summary, format, elements, parameters,
-          mimeType, client);
+          mimeType, accept, client);
     }
     return orElse();
   }
@@ -1632,13 +1063,14 @@ abstract class FhirReadRequest extends FhirRequest {
   const factory FhirReadRequest(
       {required final Uri base,
       required final Dstu2ResourceType type,
-      required final Id id,
+      required final FhirId id,
       final bool pretty,
       final Summary summary,
       final String format,
       final List<String> elements,
       final List<String> parameters,
       final MimeType? mimeType,
+      final String accept,
       final Client? client}) = _$FhirReadRequest;
   const FhirReadRequest._() : super._();
 
@@ -1651,7 +1083,7 @@ abstract class FhirReadRequest extends FhirRequest {
   Dstu2ResourceType get type;
 
   /// [id] - the id for the resource
-  Id get id;
+  FhirId get id;
   @override
 
   /// [pretty] - pretty print the json formatting in the response
@@ -1681,6 +1113,11 @@ abstract class FhirReadRequest extends FhirRequest {
   MimeType? get mimeType;
   @override
 
+  /// [accept] - this will default to fhir+json just so it will stop sending
+  /// me XML - I hate XML
+  String get accept;
+  @override
+
   /// [client] - if there's a specific client that you're going to be using
   Client? get client;
   @override
@@ -1700,14 +1137,15 @@ abstract class _$$FhirVReadRequestCopyWith<$Res>
   $Res call(
       {Uri base,
       Dstu2ResourceType type,
-      Id id,
-      Id vid,
+      FhirId id,
+      FhirId vid,
       bool pretty,
       Summary summary,
       String format,
       List<String> elements,
       List<String> parameters,
       MimeType? mimeType,
+      String accept,
       Client? client});
 }
 
@@ -1732,6 +1170,7 @@ class __$$FhirVReadRequestCopyWithImpl<$Res>
     Object? elements = null,
     Object? parameters = null,
     Object? mimeType = freezed,
+    Object? accept = null,
     Object? client = freezed,
   }) {
     return _then(_$FhirVReadRequest(
@@ -1746,11 +1185,11 @@ class __$$FhirVReadRequestCopyWithImpl<$Res>
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id,
+              as FhirId,
       vid: null == vid
           ? _value.vid
           : vid // ignore: cast_nullable_to_non_nullable
-              as Id,
+              as FhirId,
       pretty: null == pretty
           ? _value.pretty
           : pretty // ignore: cast_nullable_to_non_nullable
@@ -1775,6 +1214,10 @@ class __$$FhirVReadRequestCopyWithImpl<$Res>
           ? _value.mimeType
           : mimeType // ignore: cast_nullable_to_non_nullable
               as MimeType?,
+      accept: null == accept
+          ? _value.accept
+          : accept // ignore: cast_nullable_to_non_nullable
+              as String,
       client: freezed == client
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
@@ -1797,6 +1240,7 @@ class _$FhirVReadRequest extends FhirVReadRequest {
       final List<String> elements = const <String>[],
       final List<String> parameters = const <String>[],
       this.mimeType,
+      this.accept = 'application/fhir+json',
       this.client})
       : _elements = elements,
         _parameters = parameters,
@@ -1812,9 +1256,9 @@ class _$FhirVReadRequest extends FhirVReadRequest {
 
   /// [id] - the id for the resource
   @override
-  final Id id;
+  final FhirId id;
   @override
-  final Id vid;
+  final FhirId vid;
 
   /// [pretty] - pretty print the json formatting in the response
   @override
@@ -1862,13 +1306,19 @@ class _$FhirVReadRequest extends FhirVReadRequest {
   @override
   final MimeType? mimeType;
 
+  /// [accept] - this will default to fhir+json just so it will stop sending
+  /// me XML - I hate XML
+  @override
+  @JsonKey()
+  final String accept;
+
   /// [client] - if there's a specific client that you're going to be using
   @override
   final Client? client;
 
   @override
   String toString() {
-    return 'FhirRequest.vRead(base: $base, type: $type, id: $id, vid: $vid, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, mimeType: $mimeType, client: $client)';
+    return 'FhirRequest.vRead(base: $base, type: $type, id: $id, vid: $vid, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, mimeType: $mimeType, accept: $accept, client: $client)';
   }
 
   @override
@@ -1888,6 +1338,7 @@ class _$FhirVReadRequest extends FhirVReadRequest {
                 .equals(other._parameters, _parameters) &&
             (identical(other.mimeType, mimeType) ||
                 other.mimeType == mimeType) &&
+            (identical(other.accept, accept) || other.accept == accept) &&
             (identical(other.client, client) || other.client == client));
   }
 
@@ -1904,6 +1355,7 @@ class _$FhirVReadRequest extends FhirVReadRequest {
       const DeepCollectionEquality().hash(_elements),
       const DeepCollectionEquality().hash(_parameters),
       mimeType,
+      accept,
       client);
 
   @JsonKey(ignore: true)
@@ -1918,38 +1370,31 @@ class _$FhirVReadRequest extends FhirVReadRequest {
     required TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         read,
     required TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
-            Id vid,
+            FhirId id,
+            FhirId vid,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         vRead,
-    required TResult Function(
-            Uri base,
-            Resource resource,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)
+    required TResult Function(Uri base, Resource resource, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)
         update,
     required TResult Function(
             Uri base,
@@ -1960,18 +1405,20 @@ class _$FhirVReadRequest extends FhirVReadRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         patch,
     required TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         delete,
     required TResult Function(
@@ -1983,6 +1430,7 @@ class _$FhirVReadRequest extends FhirVReadRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         create,
     required TResult Function(
@@ -1996,115 +1444,20 @@ class _$FhirVReadRequest extends FhirVReadRequest {
             bool usePost,
             RestfulRequest restfulRequest,
             MimeType? mimeType,
+            String accept,
             Client? client)
         search,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)
-        searchAll,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Mode mode,
-            MimeType? mimeType,
-            Client? client)
-        capabilities,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)
-        transaction,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)
-        batch,
-    required TResult Function(
-            Uri base,
-            Dstu2ResourceType type,
-            Id id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)
-        history,
-    required TResult Function(
-            Uri base,
-            Dstu2ResourceType type,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)
-        historyType,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)
-        historyAll,
-    required TResult Function(
-            Uri base,
-            Dstu2ResourceType? type,
-            FhirId? id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Map<String, dynamic> fhirParameter,
-            String operation,
-            bool usePost,
-            bool useFormData,
-            MimeType? mimeType,
-            Client? client)
-        operation,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client) searchAll,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Mode mode, MimeType? mimeType, String accept, Client? client) capabilities,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client) transaction,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client) batch,
+    required TResult Function(Uri base, Dstu2ResourceType type, FhirId id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client) history,
+    required TResult Function(Uri base, Dstu2ResourceType type, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client) historyType,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client) historyAll,
+    required TResult Function(Uri base, Dstu2ResourceType? type, FhirId? id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Map<String, dynamic> fhirParameter, String operation, bool usePost, bool useFormData, MimeType? mimeType, String accept, Client? client) operation,
   }) {
     return vRead(base, type, id, vid, pretty, summary, format, elements,
-        parameters, mimeType, client);
+        parameters, mimeType, accept, client);
   }
 
   @override
@@ -2113,38 +1466,31 @@ class _$FhirVReadRequest extends FhirVReadRequest {
     TResult? Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         read,
     TResult? Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
-            Id vid,
+            FhirId id,
+            FhirId vid,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         vRead,
-    TResult? Function(
-            Uri base,
-            Resource resource,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)?
+    TResult? Function(Uri base, Resource resource, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)?
         update,
     TResult? Function(
             Uri base,
@@ -2155,18 +1501,20 @@ class _$FhirVReadRequest extends FhirVReadRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         patch,
     TResult? Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         delete,
     TResult? Function(
@@ -2178,6 +1526,7 @@ class _$FhirVReadRequest extends FhirVReadRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         create,
     TResult? Function(
@@ -2191,115 +1540,20 @@ class _$FhirVReadRequest extends FhirVReadRequest {
             bool usePost,
             RestfulRequest restfulRequest,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         search,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)?
-        searchAll,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Mode mode,
-            MimeType? mimeType,
-            Client? client)?
-        capabilities,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)?
-        transaction,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)?
-        batch,
-    TResult? Function(
-            Uri base,
-            Dstu2ResourceType type,
-            Id id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        history,
-    TResult? Function(
-            Uri base,
-            Dstu2ResourceType type,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        historyType,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        historyAll,
-    TResult? Function(
-            Uri base,
-            Dstu2ResourceType? type,
-            FhirId? id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Map<String, dynamic> fhirParameter,
-            String operation,
-            bool usePost,
-            bool useFormData,
-            MimeType? mimeType,
-            Client? client)?
-        operation,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)? searchAll,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Mode mode, MimeType? mimeType, String accept, Client? client)? capabilities,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client)? transaction,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client)? batch,
+    TResult? Function(Uri base, Dstu2ResourceType type, FhirId id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? history,
+    TResult? Function(Uri base, Dstu2ResourceType type, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? historyType,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? historyAll,
+    TResult? Function(Uri base, Dstu2ResourceType? type, FhirId? id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Map<String, dynamic> fhirParameter, String operation, bool usePost, bool useFormData, MimeType? mimeType, String accept, Client? client)? operation,
   }) {
     return vRead?.call(base, type, id, vid, pretty, summary, format, elements,
-        parameters, mimeType, client);
+        parameters, mimeType, accept, client);
   }
 
   @override
@@ -2308,38 +1562,31 @@ class _$FhirVReadRequest extends FhirVReadRequest {
     TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         read,
     TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
-            Id vid,
+            FhirId id,
+            FhirId vid,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         vRead,
-    TResult Function(
-            Uri base,
-            Resource resource,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)?
+    TResult Function(Uri base, Resource resource, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)?
         update,
     TResult Function(
             Uri base,
@@ -2350,18 +1597,20 @@ class _$FhirVReadRequest extends FhirVReadRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         patch,
     TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         delete,
     TResult Function(
@@ -2373,6 +1622,7 @@ class _$FhirVReadRequest extends FhirVReadRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         create,
     TResult Function(
@@ -2386,117 +1636,22 @@ class _$FhirVReadRequest extends FhirVReadRequest {
             bool usePost,
             RestfulRequest restfulRequest,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         search,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)?
-        searchAll,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Mode mode,
-            MimeType? mimeType,
-            Client? client)?
-        capabilities,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)?
-        transaction,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)?
-        batch,
-    TResult Function(
-            Uri base,
-            Dstu2ResourceType type,
-            Id id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        history,
-    TResult Function(
-            Uri base,
-            Dstu2ResourceType type,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        historyType,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        historyAll,
-    TResult Function(
-            Uri base,
-            Dstu2ResourceType? type,
-            FhirId? id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Map<String, dynamic> fhirParameter,
-            String operation,
-            bool usePost,
-            bool useFormData,
-            MimeType? mimeType,
-            Client? client)?
-        operation,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)? searchAll,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Mode mode, MimeType? mimeType, String accept, Client? client)? capabilities,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client)? transaction,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client)? batch,
+    TResult Function(Uri base, Dstu2ResourceType type, FhirId id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? history,
+    TResult Function(Uri base, Dstu2ResourceType type, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? historyType,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? historyAll,
+    TResult Function(Uri base, Dstu2ResourceType? type, FhirId? id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Map<String, dynamic> fhirParameter, String operation, bool usePost, bool useFormData, MimeType? mimeType, String accept, Client? client)? operation,
     required TResult orElse(),
   }) {
     if (vRead != null) {
       return vRead(base, type, id, vid, pretty, summary, format, elements,
-          parameters, mimeType, client);
+          parameters, mimeType, accept, client);
     }
     return orElse();
   }
@@ -2576,14 +1731,15 @@ abstract class FhirVReadRequest extends FhirRequest {
   const factory FhirVReadRequest(
       {required final Uri base,
       required final Dstu2ResourceType type,
-      required final Id id,
-      required final Id vid,
+      required final FhirId id,
+      required final FhirId vid,
       final bool pretty,
       final Summary summary,
       final String format,
       final List<String> elements,
       final List<String> parameters,
       final MimeType? mimeType,
+      final String accept,
       final Client? client}) = _$FhirVReadRequest;
   const FhirVReadRequest._() : super._();
 
@@ -2596,8 +1752,8 @@ abstract class FhirVReadRequest extends FhirRequest {
   Dstu2ResourceType get type;
 
   /// [id] - the id for the resource
-  Id get id;
-  Id get vid;
+  FhirId get id;
+  FhirId get vid;
   @override
 
   /// [pretty] - pretty print the json formatting in the response
@@ -2627,6 +1783,11 @@ abstract class FhirVReadRequest extends FhirRequest {
   MimeType? get mimeType;
   @override
 
+  /// [accept] - this will default to fhir+json just so it will stop sending
+  /// me XML - I hate XML
+  String get accept;
+  @override
+
   /// [client] - if there's a specific client that you're going to be using
   Client? get client;
   @override
@@ -2652,6 +1813,7 @@ abstract class _$$FhirUpdateRequestCopyWith<$Res>
       List<String> elements,
       List<String> parameters,
       MimeType? mimeType,
+      String accept,
       Client? client});
 }
 
@@ -2674,6 +1836,7 @@ class __$$FhirUpdateRequestCopyWithImpl<$Res>
     Object? elements = null,
     Object? parameters = null,
     Object? mimeType = freezed,
+    Object? accept = null,
     Object? client = freezed,
   }) {
     return _then(_$FhirUpdateRequest(
@@ -2709,6 +1872,10 @@ class __$$FhirUpdateRequestCopyWithImpl<$Res>
           ? _value.mimeType
           : mimeType // ignore: cast_nullable_to_non_nullable
               as MimeType?,
+      accept: null == accept
+          ? _value.accept
+          : accept // ignore: cast_nullable_to_non_nullable
+              as String,
       client: freezed == client
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
@@ -2729,6 +1896,7 @@ class _$FhirUpdateRequest extends FhirUpdateRequest {
       final List<String> elements = const <String>[],
       final List<String> parameters = const <String>[],
       this.mimeType,
+      this.accept = 'application/fhir+json',
       this.client})
       : _elements = elements,
         _parameters = parameters,
@@ -2786,13 +1954,19 @@ class _$FhirUpdateRequest extends FhirUpdateRequest {
   @override
   final MimeType? mimeType;
 
+  /// [accept] - this will default to fhir+json just so it will stop sending
+  /// me XML - I hate XML
+  @override
+  @JsonKey()
+  final String accept;
+
   /// [client] - if there's a specific client that you're going to be using
   @override
   final Client? client;
 
   @override
   String toString() {
-    return 'FhirRequest.update(base: $base, resource: $resource, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, mimeType: $mimeType, client: $client)';
+    return 'FhirRequest.update(base: $base, resource: $resource, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, mimeType: $mimeType, accept: $accept, client: $client)';
   }
 
   @override
@@ -2811,6 +1985,7 @@ class _$FhirUpdateRequest extends FhirUpdateRequest {
                 .equals(other._parameters, _parameters) &&
             (identical(other.mimeType, mimeType) ||
                 other.mimeType == mimeType) &&
+            (identical(other.accept, accept) || other.accept == accept) &&
             (identical(other.client, client) || other.client == client));
   }
 
@@ -2825,6 +2000,7 @@ class _$FhirUpdateRequest extends FhirUpdateRequest {
       const DeepCollectionEquality().hash(_elements),
       const DeepCollectionEquality().hash(_parameters),
       mimeType,
+      accept,
       client);
 
   @JsonKey(ignore: true)
@@ -2839,38 +2015,31 @@ class _$FhirUpdateRequest extends FhirUpdateRequest {
     required TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         read,
     required TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
-            Id vid,
+            FhirId id,
+            FhirId vid,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         vRead,
-    required TResult Function(
-            Uri base,
-            Resource resource,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)
+    required TResult Function(Uri base, Resource resource, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)
         update,
     required TResult Function(
             Uri base,
@@ -2881,18 +2050,20 @@ class _$FhirUpdateRequest extends FhirUpdateRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         patch,
     required TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         delete,
     required TResult Function(
@@ -2904,6 +2075,7 @@ class _$FhirUpdateRequest extends FhirUpdateRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         create,
     required TResult Function(
@@ -2917,115 +2089,20 @@ class _$FhirUpdateRequest extends FhirUpdateRequest {
             bool usePost,
             RestfulRequest restfulRequest,
             MimeType? mimeType,
+            String accept,
             Client? client)
         search,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)
-        searchAll,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Mode mode,
-            MimeType? mimeType,
-            Client? client)
-        capabilities,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)
-        transaction,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)
-        batch,
-    required TResult Function(
-            Uri base,
-            Dstu2ResourceType type,
-            Id id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)
-        history,
-    required TResult Function(
-            Uri base,
-            Dstu2ResourceType type,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)
-        historyType,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)
-        historyAll,
-    required TResult Function(
-            Uri base,
-            Dstu2ResourceType? type,
-            FhirId? id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Map<String, dynamic> fhirParameter,
-            String operation,
-            bool usePost,
-            bool useFormData,
-            MimeType? mimeType,
-            Client? client)
-        operation,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client) searchAll,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Mode mode, MimeType? mimeType, String accept, Client? client) capabilities,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client) transaction,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client) batch,
+    required TResult Function(Uri base, Dstu2ResourceType type, FhirId id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client) history,
+    required TResult Function(Uri base, Dstu2ResourceType type, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client) historyType,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client) historyAll,
+    required TResult Function(Uri base, Dstu2ResourceType? type, FhirId? id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Map<String, dynamic> fhirParameter, String operation, bool usePost, bool useFormData, MimeType? mimeType, String accept, Client? client) operation,
   }) {
     return update(base, resource, pretty, summary, format, elements, parameters,
-        mimeType, client);
+        mimeType, accept, client);
   }
 
   @override
@@ -3034,38 +2111,31 @@ class _$FhirUpdateRequest extends FhirUpdateRequest {
     TResult? Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         read,
     TResult? Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
-            Id vid,
+            FhirId id,
+            FhirId vid,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         vRead,
-    TResult? Function(
-            Uri base,
-            Resource resource,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)?
+    TResult? Function(Uri base, Resource resource, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)?
         update,
     TResult? Function(
             Uri base,
@@ -3076,18 +2146,20 @@ class _$FhirUpdateRequest extends FhirUpdateRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         patch,
     TResult? Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         delete,
     TResult? Function(
@@ -3099,6 +2171,7 @@ class _$FhirUpdateRequest extends FhirUpdateRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         create,
     TResult? Function(
@@ -3112,115 +2185,20 @@ class _$FhirUpdateRequest extends FhirUpdateRequest {
             bool usePost,
             RestfulRequest restfulRequest,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         search,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)?
-        searchAll,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Mode mode,
-            MimeType? mimeType,
-            Client? client)?
-        capabilities,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)?
-        transaction,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)?
-        batch,
-    TResult? Function(
-            Uri base,
-            Dstu2ResourceType type,
-            Id id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        history,
-    TResult? Function(
-            Uri base,
-            Dstu2ResourceType type,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        historyType,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        historyAll,
-    TResult? Function(
-            Uri base,
-            Dstu2ResourceType? type,
-            FhirId? id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Map<String, dynamic> fhirParameter,
-            String operation,
-            bool usePost,
-            bool useFormData,
-            MimeType? mimeType,
-            Client? client)?
-        operation,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)? searchAll,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Mode mode, MimeType? mimeType, String accept, Client? client)? capabilities,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client)? transaction,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client)? batch,
+    TResult? Function(Uri base, Dstu2ResourceType type, FhirId id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? history,
+    TResult? Function(Uri base, Dstu2ResourceType type, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? historyType,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? historyAll,
+    TResult? Function(Uri base, Dstu2ResourceType? type, FhirId? id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Map<String, dynamic> fhirParameter, String operation, bool usePost, bool useFormData, MimeType? mimeType, String accept, Client? client)? operation,
   }) {
     return update?.call(base, resource, pretty, summary, format, elements,
-        parameters, mimeType, client);
+        parameters, mimeType, accept, client);
   }
 
   @override
@@ -3229,38 +2207,31 @@ class _$FhirUpdateRequest extends FhirUpdateRequest {
     TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         read,
     TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
-            Id vid,
+            FhirId id,
+            FhirId vid,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         vRead,
-    TResult Function(
-            Uri base,
-            Resource resource,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)?
+    TResult Function(Uri base, Resource resource, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)?
         update,
     TResult Function(
             Uri base,
@@ -3271,18 +2242,20 @@ class _$FhirUpdateRequest extends FhirUpdateRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         patch,
     TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         delete,
     TResult Function(
@@ -3294,6 +2267,7 @@ class _$FhirUpdateRequest extends FhirUpdateRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         create,
     TResult Function(
@@ -3307,117 +2281,22 @@ class _$FhirUpdateRequest extends FhirUpdateRequest {
             bool usePost,
             RestfulRequest restfulRequest,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         search,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)?
-        searchAll,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Mode mode,
-            MimeType? mimeType,
-            Client? client)?
-        capabilities,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)?
-        transaction,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)?
-        batch,
-    TResult Function(
-            Uri base,
-            Dstu2ResourceType type,
-            Id id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        history,
-    TResult Function(
-            Uri base,
-            Dstu2ResourceType type,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        historyType,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        historyAll,
-    TResult Function(
-            Uri base,
-            Dstu2ResourceType? type,
-            FhirId? id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Map<String, dynamic> fhirParameter,
-            String operation,
-            bool usePost,
-            bool useFormData,
-            MimeType? mimeType,
-            Client? client)?
-        operation,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)? searchAll,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Mode mode, MimeType? mimeType, String accept, Client? client)? capabilities,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client)? transaction,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client)? batch,
+    TResult Function(Uri base, Dstu2ResourceType type, FhirId id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? history,
+    TResult Function(Uri base, Dstu2ResourceType type, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? historyType,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? historyAll,
+    TResult Function(Uri base, Dstu2ResourceType? type, FhirId? id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Map<String, dynamic> fhirParameter, String operation, bool usePost, bool useFormData, MimeType? mimeType, String accept, Client? client)? operation,
     required TResult orElse(),
   }) {
     if (update != null) {
       return update(base, resource, pretty, summary, format, elements,
-          parameters, mimeType, client);
+          parameters, mimeType, accept, client);
     }
     return orElse();
   }
@@ -3503,6 +2382,7 @@ abstract class FhirUpdateRequest extends FhirRequest {
       final List<String> elements,
       final List<String> parameters,
       final MimeType? mimeType,
+      final String accept,
       final Client? client}) = _$FhirUpdateRequest;
   const FhirUpdateRequest._() : super._();
 
@@ -3540,6 +2420,11 @@ abstract class FhirUpdateRequest extends FhirRequest {
   MimeType? get mimeType;
   @override
 
+  /// [accept] - this will default to fhir+json just so it will stop sending
+  /// me XML - I hate XML
+  String get accept;
+  @override
+
   /// [client] - if there's a specific client that you're going to be using
   Client? get client;
   @override
@@ -3565,6 +2450,7 @@ abstract class _$$FhirPatchRequestCopyWith<$Res>
       List<String> elements,
       List<String> parameters,
       MimeType? mimeType,
+      String accept,
       Client? client});
 }
 
@@ -3587,6 +2473,7 @@ class __$$FhirPatchRequestCopyWithImpl<$Res>
     Object? elements = null,
     Object? parameters = null,
     Object? mimeType = freezed,
+    Object? accept = null,
     Object? client = freezed,
   }) {
     return _then(_$FhirPatchRequest(
@@ -3622,6 +2509,10 @@ class __$$FhirPatchRequestCopyWithImpl<$Res>
           ? _value.mimeType
           : mimeType // ignore: cast_nullable_to_non_nullable
               as MimeType?,
+      accept: null == accept
+          ? _value.accept
+          : accept // ignore: cast_nullable_to_non_nullable
+              as String,
       client: freezed == client
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
@@ -3642,6 +2533,7 @@ class _$FhirPatchRequest extends FhirPatchRequest {
       final List<String> elements = const <String>[],
       final List<String> parameters = const <String>[],
       this.mimeType,
+      this.accept = 'application/fhir+json',
       this.client})
       : _elements = elements,
         _parameters = parameters,
@@ -3699,13 +2591,19 @@ class _$FhirPatchRequest extends FhirPatchRequest {
   @override
   final MimeType? mimeType;
 
+  /// [accept] - this will default to fhir+json just so it will stop sending
+  /// me XML - I hate XML
+  @override
+  @JsonKey()
+  final String accept;
+
   /// [client] - if there's a specific client that you're going to be using
   @override
   final Client? client;
 
   @override
   String toString() {
-    return 'FhirRequest.patch(base: $base, resource: $resource, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, mimeType: $mimeType, client: $client)';
+    return 'FhirRequest.patch(base: $base, resource: $resource, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, mimeType: $mimeType, accept: $accept, client: $client)';
   }
 
   @override
@@ -3724,6 +2622,7 @@ class _$FhirPatchRequest extends FhirPatchRequest {
                 .equals(other._parameters, _parameters) &&
             (identical(other.mimeType, mimeType) ||
                 other.mimeType == mimeType) &&
+            (identical(other.accept, accept) || other.accept == accept) &&
             (identical(other.client, client) || other.client == client));
   }
 
@@ -3738,6 +2637,7 @@ class _$FhirPatchRequest extends FhirPatchRequest {
       const DeepCollectionEquality().hash(_elements),
       const DeepCollectionEquality().hash(_parameters),
       mimeType,
+      accept,
       client);
 
   @JsonKey(ignore: true)
@@ -3752,38 +2652,31 @@ class _$FhirPatchRequest extends FhirPatchRequest {
     required TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         read,
     required TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
-            Id vid,
+            FhirId id,
+            FhirId vid,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         vRead,
-    required TResult Function(
-            Uri base,
-            Resource resource,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)
+    required TResult Function(Uri base, Resource resource, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)
         update,
     required TResult Function(
             Uri base,
@@ -3794,18 +2687,20 @@ class _$FhirPatchRequest extends FhirPatchRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         patch,
     required TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         delete,
     required TResult Function(
@@ -3817,6 +2712,7 @@ class _$FhirPatchRequest extends FhirPatchRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         create,
     required TResult Function(
@@ -3830,115 +2726,20 @@ class _$FhirPatchRequest extends FhirPatchRequest {
             bool usePost,
             RestfulRequest restfulRequest,
             MimeType? mimeType,
+            String accept,
             Client? client)
         search,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)
-        searchAll,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Mode mode,
-            MimeType? mimeType,
-            Client? client)
-        capabilities,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)
-        transaction,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)
-        batch,
-    required TResult Function(
-            Uri base,
-            Dstu2ResourceType type,
-            Id id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)
-        history,
-    required TResult Function(
-            Uri base,
-            Dstu2ResourceType type,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)
-        historyType,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)
-        historyAll,
-    required TResult Function(
-            Uri base,
-            Dstu2ResourceType? type,
-            FhirId? id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Map<String, dynamic> fhirParameter,
-            String operation,
-            bool usePost,
-            bool useFormData,
-            MimeType? mimeType,
-            Client? client)
-        operation,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client) searchAll,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Mode mode, MimeType? mimeType, String accept, Client? client) capabilities,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client) transaction,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client) batch,
+    required TResult Function(Uri base, Dstu2ResourceType type, FhirId id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client) history,
+    required TResult Function(Uri base, Dstu2ResourceType type, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client) historyType,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client) historyAll,
+    required TResult Function(Uri base, Dstu2ResourceType? type, FhirId? id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Map<String, dynamic> fhirParameter, String operation, bool usePost, bool useFormData, MimeType? mimeType, String accept, Client? client) operation,
   }) {
     return patch(base, resource, pretty, summary, format, elements, parameters,
-        mimeType, client);
+        mimeType, accept, client);
   }
 
   @override
@@ -3947,38 +2748,31 @@ class _$FhirPatchRequest extends FhirPatchRequest {
     TResult? Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         read,
     TResult? Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
-            Id vid,
+            FhirId id,
+            FhirId vid,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         vRead,
-    TResult? Function(
-            Uri base,
-            Resource resource,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)?
+    TResult? Function(Uri base, Resource resource, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)?
         update,
     TResult? Function(
             Uri base,
@@ -3989,18 +2783,20 @@ class _$FhirPatchRequest extends FhirPatchRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         patch,
     TResult? Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         delete,
     TResult? Function(
@@ -4012,6 +2808,7 @@ class _$FhirPatchRequest extends FhirPatchRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         create,
     TResult? Function(
@@ -4025,115 +2822,20 @@ class _$FhirPatchRequest extends FhirPatchRequest {
             bool usePost,
             RestfulRequest restfulRequest,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         search,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)?
-        searchAll,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Mode mode,
-            MimeType? mimeType,
-            Client? client)?
-        capabilities,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)?
-        transaction,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)?
-        batch,
-    TResult? Function(
-            Uri base,
-            Dstu2ResourceType type,
-            Id id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        history,
-    TResult? Function(
-            Uri base,
-            Dstu2ResourceType type,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        historyType,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        historyAll,
-    TResult? Function(
-            Uri base,
-            Dstu2ResourceType? type,
-            FhirId? id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Map<String, dynamic> fhirParameter,
-            String operation,
-            bool usePost,
-            bool useFormData,
-            MimeType? mimeType,
-            Client? client)?
-        operation,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)? searchAll,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Mode mode, MimeType? mimeType, String accept, Client? client)? capabilities,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client)? transaction,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client)? batch,
+    TResult? Function(Uri base, Dstu2ResourceType type, FhirId id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? history,
+    TResult? Function(Uri base, Dstu2ResourceType type, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? historyType,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? historyAll,
+    TResult? Function(Uri base, Dstu2ResourceType? type, FhirId? id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Map<String, dynamic> fhirParameter, String operation, bool usePost, bool useFormData, MimeType? mimeType, String accept, Client? client)? operation,
   }) {
     return patch?.call(base, resource, pretty, summary, format, elements,
-        parameters, mimeType, client);
+        parameters, mimeType, accept, client);
   }
 
   @override
@@ -4142,38 +2844,31 @@ class _$FhirPatchRequest extends FhirPatchRequest {
     TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         read,
     TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
-            Id vid,
+            FhirId id,
+            FhirId vid,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         vRead,
-    TResult Function(
-            Uri base,
-            Resource resource,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)?
+    TResult Function(Uri base, Resource resource, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)?
         update,
     TResult Function(
             Uri base,
@@ -4184,18 +2879,20 @@ class _$FhirPatchRequest extends FhirPatchRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         patch,
     TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         delete,
     TResult Function(
@@ -4207,6 +2904,7 @@ class _$FhirPatchRequest extends FhirPatchRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         create,
     TResult Function(
@@ -4220,117 +2918,22 @@ class _$FhirPatchRequest extends FhirPatchRequest {
             bool usePost,
             RestfulRequest restfulRequest,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         search,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)?
-        searchAll,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Mode mode,
-            MimeType? mimeType,
-            Client? client)?
-        capabilities,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)?
-        transaction,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)?
-        batch,
-    TResult Function(
-            Uri base,
-            Dstu2ResourceType type,
-            Id id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        history,
-    TResult Function(
-            Uri base,
-            Dstu2ResourceType type,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        historyType,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        historyAll,
-    TResult Function(
-            Uri base,
-            Dstu2ResourceType? type,
-            FhirId? id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Map<String, dynamic> fhirParameter,
-            String operation,
-            bool usePost,
-            bool useFormData,
-            MimeType? mimeType,
-            Client? client)?
-        operation,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)? searchAll,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Mode mode, MimeType? mimeType, String accept, Client? client)? capabilities,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client)? transaction,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client)? batch,
+    TResult Function(Uri base, Dstu2ResourceType type, FhirId id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? history,
+    TResult Function(Uri base, Dstu2ResourceType type, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? historyType,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? historyAll,
+    TResult Function(Uri base, Dstu2ResourceType? type, FhirId? id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Map<String, dynamic> fhirParameter, String operation, bool usePost, bool useFormData, MimeType? mimeType, String accept, Client? client)? operation,
     required TResult orElse(),
   }) {
     if (patch != null) {
       return patch(base, resource, pretty, summary, format, elements,
-          parameters, mimeType, client);
+          parameters, mimeType, accept, client);
     }
     return orElse();
   }
@@ -4416,6 +3019,7 @@ abstract class FhirPatchRequest extends FhirRequest {
       final List<String> elements,
       final List<String> parameters,
       final MimeType? mimeType,
+      final String accept,
       final Client? client}) = _$FhirPatchRequest;
   const FhirPatchRequest._() : super._();
 
@@ -4453,6 +3057,11 @@ abstract class FhirPatchRequest extends FhirRequest {
   MimeType? get mimeType;
   @override
 
+  /// [accept] - this will default to fhir+json just so it will stop sending
+  /// me XML - I hate XML
+  String get accept;
+  @override
+
   /// [client] - if there's a specific client that you're going to be using
   Client? get client;
   @override
@@ -4472,13 +3081,14 @@ abstract class _$$FhirDeleteRequestCopyWith<$Res>
   $Res call(
       {Uri base,
       Dstu2ResourceType type,
-      Id id,
+      FhirId id,
       bool pretty,
       Summary summary,
       String format,
       List<String> elements,
       List<String> parameters,
       MimeType? mimeType,
+      String accept,
       Client? client});
 }
 
@@ -4502,6 +3112,7 @@ class __$$FhirDeleteRequestCopyWithImpl<$Res>
     Object? elements = null,
     Object? parameters = null,
     Object? mimeType = freezed,
+    Object? accept = null,
     Object? client = freezed,
   }) {
     return _then(_$FhirDeleteRequest(
@@ -4516,7 +3127,7 @@ class __$$FhirDeleteRequestCopyWithImpl<$Res>
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id,
+              as FhirId,
       pretty: null == pretty
           ? _value.pretty
           : pretty // ignore: cast_nullable_to_non_nullable
@@ -4541,6 +3152,10 @@ class __$$FhirDeleteRequestCopyWithImpl<$Res>
           ? _value.mimeType
           : mimeType // ignore: cast_nullable_to_non_nullable
               as MimeType?,
+      accept: null == accept
+          ? _value.accept
+          : accept // ignore: cast_nullable_to_non_nullable
+              as String,
       client: freezed == client
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
@@ -4562,6 +3177,7 @@ class _$FhirDeleteRequest extends FhirDeleteRequest {
       final List<String> elements = const <String>[],
       final List<String> parameters = const <String>[],
       this.mimeType,
+      this.accept = 'application/fhir+json',
       this.client})
       : _elements = elements,
         _parameters = parameters,
@@ -4577,7 +3193,7 @@ class _$FhirDeleteRequest extends FhirDeleteRequest {
 
   /// [id] - the id for the resource
   @override
-  final Id id;
+  final FhirId id;
 
   /// [pretty] - pretty print the json formatting in the response
   @override
@@ -4625,13 +3241,19 @@ class _$FhirDeleteRequest extends FhirDeleteRequest {
   @override
   final MimeType? mimeType;
 
+  /// [accept] - this will default to fhir+json just so it will stop sending
+  /// me XML - I hate XML
+  @override
+  @JsonKey()
+  final String accept;
+
   /// [client] - if there's a specific client that you're going to be using
   @override
   final Client? client;
 
   @override
   String toString() {
-    return 'FhirRequest.delete(base: $base, type: $type, id: $id, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, mimeType: $mimeType, client: $client)';
+    return 'FhirRequest.delete(base: $base, type: $type, id: $id, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, mimeType: $mimeType, accept: $accept, client: $client)';
   }
 
   @override
@@ -4650,6 +3272,7 @@ class _$FhirDeleteRequest extends FhirDeleteRequest {
                 .equals(other._parameters, _parameters) &&
             (identical(other.mimeType, mimeType) ||
                 other.mimeType == mimeType) &&
+            (identical(other.accept, accept) || other.accept == accept) &&
             (identical(other.client, client) || other.client == client));
   }
 
@@ -4665,6 +3288,7 @@ class _$FhirDeleteRequest extends FhirDeleteRequest {
       const DeepCollectionEquality().hash(_elements),
       const DeepCollectionEquality().hash(_parameters),
       mimeType,
+      accept,
       client);
 
   @JsonKey(ignore: true)
@@ -4679,38 +3303,31 @@ class _$FhirDeleteRequest extends FhirDeleteRequest {
     required TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         read,
     required TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
-            Id vid,
+            FhirId id,
+            FhirId vid,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         vRead,
-    required TResult Function(
-            Uri base,
-            Resource resource,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)
+    required TResult Function(Uri base, Resource resource, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)
         update,
     required TResult Function(
             Uri base,
@@ -4721,18 +3338,20 @@ class _$FhirDeleteRequest extends FhirDeleteRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         patch,
     required TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         delete,
     required TResult Function(
@@ -4744,6 +3363,7 @@ class _$FhirDeleteRequest extends FhirDeleteRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         create,
     required TResult Function(
@@ -4757,115 +3377,20 @@ class _$FhirDeleteRequest extends FhirDeleteRequest {
             bool usePost,
             RestfulRequest restfulRequest,
             MimeType? mimeType,
+            String accept,
             Client? client)
         search,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)
-        searchAll,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Mode mode,
-            MimeType? mimeType,
-            Client? client)
-        capabilities,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)
-        transaction,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)
-        batch,
-    required TResult Function(
-            Uri base,
-            Dstu2ResourceType type,
-            Id id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)
-        history,
-    required TResult Function(
-            Uri base,
-            Dstu2ResourceType type,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)
-        historyType,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)
-        historyAll,
-    required TResult Function(
-            Uri base,
-            Dstu2ResourceType? type,
-            FhirId? id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Map<String, dynamic> fhirParameter,
-            String operation,
-            bool usePost,
-            bool useFormData,
-            MimeType? mimeType,
-            Client? client)
-        operation,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client) searchAll,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Mode mode, MimeType? mimeType, String accept, Client? client) capabilities,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client) transaction,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client) batch,
+    required TResult Function(Uri base, Dstu2ResourceType type, FhirId id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client) history,
+    required TResult Function(Uri base, Dstu2ResourceType type, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client) historyType,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client) historyAll,
+    required TResult Function(Uri base, Dstu2ResourceType? type, FhirId? id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Map<String, dynamic> fhirParameter, String operation, bool usePost, bool useFormData, MimeType? mimeType, String accept, Client? client) operation,
   }) {
     return delete(base, type, id, pretty, summary, format, elements, parameters,
-        mimeType, client);
+        mimeType, accept, client);
   }
 
   @override
@@ -4874,38 +3399,31 @@ class _$FhirDeleteRequest extends FhirDeleteRequest {
     TResult? Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         read,
     TResult? Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
-            Id vid,
+            FhirId id,
+            FhirId vid,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         vRead,
-    TResult? Function(
-            Uri base,
-            Resource resource,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)?
+    TResult? Function(Uri base, Resource resource, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)?
         update,
     TResult? Function(
             Uri base,
@@ -4916,18 +3434,20 @@ class _$FhirDeleteRequest extends FhirDeleteRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         patch,
     TResult? Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         delete,
     TResult? Function(
@@ -4939,6 +3459,7 @@ class _$FhirDeleteRequest extends FhirDeleteRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         create,
     TResult? Function(
@@ -4952,115 +3473,20 @@ class _$FhirDeleteRequest extends FhirDeleteRequest {
             bool usePost,
             RestfulRequest restfulRequest,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         search,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)?
-        searchAll,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Mode mode,
-            MimeType? mimeType,
-            Client? client)?
-        capabilities,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)?
-        transaction,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)?
-        batch,
-    TResult? Function(
-            Uri base,
-            Dstu2ResourceType type,
-            Id id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        history,
-    TResult? Function(
-            Uri base,
-            Dstu2ResourceType type,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        historyType,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        historyAll,
-    TResult? Function(
-            Uri base,
-            Dstu2ResourceType? type,
-            FhirId? id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Map<String, dynamic> fhirParameter,
-            String operation,
-            bool usePost,
-            bool useFormData,
-            MimeType? mimeType,
-            Client? client)?
-        operation,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)? searchAll,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Mode mode, MimeType? mimeType, String accept, Client? client)? capabilities,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client)? transaction,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client)? batch,
+    TResult? Function(Uri base, Dstu2ResourceType type, FhirId id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? history,
+    TResult? Function(Uri base, Dstu2ResourceType type, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? historyType,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? historyAll,
+    TResult? Function(Uri base, Dstu2ResourceType? type, FhirId? id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Map<String, dynamic> fhirParameter, String operation, bool usePost, bool useFormData, MimeType? mimeType, String accept, Client? client)? operation,
   }) {
     return delete?.call(base, type, id, pretty, summary, format, elements,
-        parameters, mimeType, client);
+        parameters, mimeType, accept, client);
   }
 
   @override
@@ -5069,38 +3495,31 @@ class _$FhirDeleteRequest extends FhirDeleteRequest {
     TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         read,
     TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
-            Id vid,
+            FhirId id,
+            FhirId vid,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         vRead,
-    TResult Function(
-            Uri base,
-            Resource resource,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)?
+    TResult Function(Uri base, Resource resource, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)?
         update,
     TResult Function(
             Uri base,
@@ -5111,18 +3530,20 @@ class _$FhirDeleteRequest extends FhirDeleteRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         patch,
     TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         delete,
     TResult Function(
@@ -5134,6 +3555,7 @@ class _$FhirDeleteRequest extends FhirDeleteRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         create,
     TResult Function(
@@ -5147,117 +3569,22 @@ class _$FhirDeleteRequest extends FhirDeleteRequest {
             bool usePost,
             RestfulRequest restfulRequest,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         search,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)?
-        searchAll,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Mode mode,
-            MimeType? mimeType,
-            Client? client)?
-        capabilities,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)?
-        transaction,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)?
-        batch,
-    TResult Function(
-            Uri base,
-            Dstu2ResourceType type,
-            Id id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        history,
-    TResult Function(
-            Uri base,
-            Dstu2ResourceType type,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        historyType,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        historyAll,
-    TResult Function(
-            Uri base,
-            Dstu2ResourceType? type,
-            FhirId? id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Map<String, dynamic> fhirParameter,
-            String operation,
-            bool usePost,
-            bool useFormData,
-            MimeType? mimeType,
-            Client? client)?
-        operation,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)? searchAll,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Mode mode, MimeType? mimeType, String accept, Client? client)? capabilities,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client)? transaction,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client)? batch,
+    TResult Function(Uri base, Dstu2ResourceType type, FhirId id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? history,
+    TResult Function(Uri base, Dstu2ResourceType type, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? historyType,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? historyAll,
+    TResult Function(Uri base, Dstu2ResourceType? type, FhirId? id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Map<String, dynamic> fhirParameter, String operation, bool usePost, bool useFormData, MimeType? mimeType, String accept, Client? client)? operation,
     required TResult orElse(),
   }) {
     if (delete != null) {
       return delete(base, type, id, pretty, summary, format, elements,
-          parameters, mimeType, client);
+          parameters, mimeType, accept, client);
     }
     return orElse();
   }
@@ -5337,13 +3664,14 @@ abstract class FhirDeleteRequest extends FhirRequest {
   const factory FhirDeleteRequest(
       {required final Uri base,
       required final Dstu2ResourceType type,
-      required final Id id,
+      required final FhirId id,
       final bool pretty,
       final Summary summary,
       final String format,
       final List<String> elements,
       final List<String> parameters,
       final MimeType? mimeType,
+      final String accept,
       final Client? client}) = _$FhirDeleteRequest;
   const FhirDeleteRequest._() : super._();
 
@@ -5356,7 +3684,7 @@ abstract class FhirDeleteRequest extends FhirRequest {
   Dstu2ResourceType get type;
 
   /// [id] - the id for the resource
-  Id get id;
+  FhirId get id;
   @override
 
   /// [pretty] - pretty print the json formatting in the response
@@ -5386,6 +3714,11 @@ abstract class FhirDeleteRequest extends FhirRequest {
   MimeType? get mimeType;
   @override
 
+  /// [accept] - this will default to fhir+json just so it will stop sending
+  /// me XML - I hate XML
+  String get accept;
+  @override
+
   /// [client] - if there's a specific client that you're going to be using
   Client? get client;
   @override
@@ -5411,6 +3744,7 @@ abstract class _$$FhirCreateRequestCopyWith<$Res>
       List<String> elements,
       List<String> parameters,
       MimeType? mimeType,
+      String accept,
       Client? client});
 }
 
@@ -5433,6 +3767,7 @@ class __$$FhirCreateRequestCopyWithImpl<$Res>
     Object? elements = null,
     Object? parameters = null,
     Object? mimeType = freezed,
+    Object? accept = null,
     Object? client = freezed,
   }) {
     return _then(_$FhirCreateRequest(
@@ -5468,6 +3803,10 @@ class __$$FhirCreateRequestCopyWithImpl<$Res>
           ? _value.mimeType
           : mimeType // ignore: cast_nullable_to_non_nullable
               as MimeType?,
+      accept: null == accept
+          ? _value.accept
+          : accept // ignore: cast_nullable_to_non_nullable
+              as String,
       client: freezed == client
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
@@ -5488,6 +3827,7 @@ class _$FhirCreateRequest extends FhirCreateRequest {
       final List<String> elements = const <String>[],
       final List<String> parameters = const <String>[],
       this.mimeType,
+      this.accept = 'application/fhir+json',
       this.client})
       : _elements = elements,
         _parameters = parameters,
@@ -5545,13 +3885,19 @@ class _$FhirCreateRequest extends FhirCreateRequest {
   @override
   final MimeType? mimeType;
 
+  /// [accept] - this will default to fhir+json just so it will stop sending
+  /// me XML - I hate XML
+  @override
+  @JsonKey()
+  final String accept;
+
   /// [client] - if there's a specific client that you're going to be using
   @override
   final Client? client;
 
   @override
   String toString() {
-    return 'FhirRequest.create(base: $base, resource: $resource, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, mimeType: $mimeType, client: $client)';
+    return 'FhirRequest.create(base: $base, resource: $resource, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, mimeType: $mimeType, accept: $accept, client: $client)';
   }
 
   @override
@@ -5570,6 +3916,7 @@ class _$FhirCreateRequest extends FhirCreateRequest {
                 .equals(other._parameters, _parameters) &&
             (identical(other.mimeType, mimeType) ||
                 other.mimeType == mimeType) &&
+            (identical(other.accept, accept) || other.accept == accept) &&
             (identical(other.client, client) || other.client == client));
   }
 
@@ -5584,6 +3931,7 @@ class _$FhirCreateRequest extends FhirCreateRequest {
       const DeepCollectionEquality().hash(_elements),
       const DeepCollectionEquality().hash(_parameters),
       mimeType,
+      accept,
       client);
 
   @JsonKey(ignore: true)
@@ -5598,38 +3946,31 @@ class _$FhirCreateRequest extends FhirCreateRequest {
     required TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         read,
     required TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
-            Id vid,
+            FhirId id,
+            FhirId vid,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         vRead,
-    required TResult Function(
-            Uri base,
-            Resource resource,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)
+    required TResult Function(Uri base, Resource resource, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)
         update,
     required TResult Function(
             Uri base,
@@ -5640,18 +3981,20 @@ class _$FhirCreateRequest extends FhirCreateRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         patch,
     required TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         delete,
     required TResult Function(
@@ -5663,6 +4006,7 @@ class _$FhirCreateRequest extends FhirCreateRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         create,
     required TResult Function(
@@ -5676,115 +4020,20 @@ class _$FhirCreateRequest extends FhirCreateRequest {
             bool usePost,
             RestfulRequest restfulRequest,
             MimeType? mimeType,
+            String accept,
             Client? client)
         search,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)
-        searchAll,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Mode mode,
-            MimeType? mimeType,
-            Client? client)
-        capabilities,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)
-        transaction,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)
-        batch,
-    required TResult Function(
-            Uri base,
-            Dstu2ResourceType type,
-            Id id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)
-        history,
-    required TResult Function(
-            Uri base,
-            Dstu2ResourceType type,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)
-        historyType,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)
-        historyAll,
-    required TResult Function(
-            Uri base,
-            Dstu2ResourceType? type,
-            FhirId? id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Map<String, dynamic> fhirParameter,
-            String operation,
-            bool usePost,
-            bool useFormData,
-            MimeType? mimeType,
-            Client? client)
-        operation,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client) searchAll,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Mode mode, MimeType? mimeType, String accept, Client? client) capabilities,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client) transaction,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client) batch,
+    required TResult Function(Uri base, Dstu2ResourceType type, FhirId id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client) history,
+    required TResult Function(Uri base, Dstu2ResourceType type, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client) historyType,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client) historyAll,
+    required TResult Function(Uri base, Dstu2ResourceType? type, FhirId? id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Map<String, dynamic> fhirParameter, String operation, bool usePost, bool useFormData, MimeType? mimeType, String accept, Client? client) operation,
   }) {
     return create(base, resource, pretty, summary, format, elements, parameters,
-        mimeType, client);
+        mimeType, accept, client);
   }
 
   @override
@@ -5793,38 +4042,31 @@ class _$FhirCreateRequest extends FhirCreateRequest {
     TResult? Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         read,
     TResult? Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
-            Id vid,
+            FhirId id,
+            FhirId vid,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         vRead,
-    TResult? Function(
-            Uri base,
-            Resource resource,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)?
+    TResult? Function(Uri base, Resource resource, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)?
         update,
     TResult? Function(
             Uri base,
@@ -5835,18 +4077,20 @@ class _$FhirCreateRequest extends FhirCreateRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         patch,
     TResult? Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         delete,
     TResult? Function(
@@ -5858,6 +4102,7 @@ class _$FhirCreateRequest extends FhirCreateRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         create,
     TResult? Function(
@@ -5871,115 +4116,20 @@ class _$FhirCreateRequest extends FhirCreateRequest {
             bool usePost,
             RestfulRequest restfulRequest,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         search,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)?
-        searchAll,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Mode mode,
-            MimeType? mimeType,
-            Client? client)?
-        capabilities,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)?
-        transaction,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)?
-        batch,
-    TResult? Function(
-            Uri base,
-            Dstu2ResourceType type,
-            Id id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        history,
-    TResult? Function(
-            Uri base,
-            Dstu2ResourceType type,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        historyType,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        historyAll,
-    TResult? Function(
-            Uri base,
-            Dstu2ResourceType? type,
-            FhirId? id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Map<String, dynamic> fhirParameter,
-            String operation,
-            bool usePost,
-            bool useFormData,
-            MimeType? mimeType,
-            Client? client)?
-        operation,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)? searchAll,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Mode mode, MimeType? mimeType, String accept, Client? client)? capabilities,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client)? transaction,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client)? batch,
+    TResult? Function(Uri base, Dstu2ResourceType type, FhirId id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? history,
+    TResult? Function(Uri base, Dstu2ResourceType type, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? historyType,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? historyAll,
+    TResult? Function(Uri base, Dstu2ResourceType? type, FhirId? id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Map<String, dynamic> fhirParameter, String operation, bool usePost, bool useFormData, MimeType? mimeType, String accept, Client? client)? operation,
   }) {
     return create?.call(base, resource, pretty, summary, format, elements,
-        parameters, mimeType, client);
+        parameters, mimeType, accept, client);
   }
 
   @override
@@ -5988,38 +4138,31 @@ class _$FhirCreateRequest extends FhirCreateRequest {
     TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         read,
     TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
-            Id vid,
+            FhirId id,
+            FhirId vid,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         vRead,
-    TResult Function(
-            Uri base,
-            Resource resource,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)?
+    TResult Function(Uri base, Resource resource, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)?
         update,
     TResult Function(
             Uri base,
@@ -6030,18 +4173,20 @@ class _$FhirCreateRequest extends FhirCreateRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         patch,
     TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         delete,
     TResult Function(
@@ -6053,6 +4198,7 @@ class _$FhirCreateRequest extends FhirCreateRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         create,
     TResult Function(
@@ -6066,117 +4212,22 @@ class _$FhirCreateRequest extends FhirCreateRequest {
             bool usePost,
             RestfulRequest restfulRequest,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         search,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)?
-        searchAll,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Mode mode,
-            MimeType? mimeType,
-            Client? client)?
-        capabilities,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)?
-        transaction,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)?
-        batch,
-    TResult Function(
-            Uri base,
-            Dstu2ResourceType type,
-            Id id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        history,
-    TResult Function(
-            Uri base,
-            Dstu2ResourceType type,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        historyType,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        historyAll,
-    TResult Function(
-            Uri base,
-            Dstu2ResourceType? type,
-            FhirId? id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Map<String, dynamic> fhirParameter,
-            String operation,
-            bool usePost,
-            bool useFormData,
-            MimeType? mimeType,
-            Client? client)?
-        operation,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)? searchAll,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Mode mode, MimeType? mimeType, String accept, Client? client)? capabilities,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client)? transaction,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client)? batch,
+    TResult Function(Uri base, Dstu2ResourceType type, FhirId id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? history,
+    TResult Function(Uri base, Dstu2ResourceType type, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? historyType,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? historyAll,
+    TResult Function(Uri base, Dstu2ResourceType? type, FhirId? id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Map<String, dynamic> fhirParameter, String operation, bool usePost, bool useFormData, MimeType? mimeType, String accept, Client? client)? operation,
     required TResult orElse(),
   }) {
     if (create != null) {
       return create(base, resource, pretty, summary, format, elements,
-          parameters, mimeType, client);
+          parameters, mimeType, accept, client);
     }
     return orElse();
   }
@@ -6262,6 +4313,7 @@ abstract class FhirCreateRequest extends FhirRequest {
       final List<String> elements,
       final List<String> parameters,
       final MimeType? mimeType,
+      final String accept,
       final Client? client}) = _$FhirCreateRequest;
   const FhirCreateRequest._() : super._();
 
@@ -6299,6 +4351,11 @@ abstract class FhirCreateRequest extends FhirRequest {
   MimeType? get mimeType;
   @override
 
+  /// [accept] - this will default to fhir+json just so it will stop sending
+  /// me XML - I hate XML
+  String get accept;
+  @override
+
   /// [client] - if there's a specific client that you're going to be using
   Client? get client;
   @override
@@ -6326,6 +4383,7 @@ abstract class _$$FhirSearchRequestCopyWith<$Res>
       bool usePost,
       RestfulRequest restfulRequest,
       MimeType? mimeType,
+      String accept,
       Client? client});
 }
 
@@ -6350,6 +4408,7 @@ class __$$FhirSearchRequestCopyWithImpl<$Res>
     Object? usePost = null,
     Object? restfulRequest = null,
     Object? mimeType = freezed,
+    Object? accept = null,
     Object? client = freezed,
   }) {
     return _then(_$FhirSearchRequest(
@@ -6393,6 +4452,10 @@ class __$$FhirSearchRequestCopyWithImpl<$Res>
           ? _value.mimeType
           : mimeType // ignore: cast_nullable_to_non_nullable
               as MimeType?,
+      accept: null == accept
+          ? _value.accept
+          : accept // ignore: cast_nullable_to_non_nullable
+              as String,
       client: freezed == client
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
@@ -6415,6 +4478,7 @@ class _$FhirSearchRequest extends FhirSearchRequest {
       this.usePost = false,
       this.restfulRequest = RestfulRequest.get_,
       this.mimeType,
+      this.accept = 'application/fhir+json',
       this.client})
       : _elements = elements,
         _parameters = parameters,
@@ -6483,13 +4547,19 @@ class _$FhirSearchRequest extends FhirSearchRequest {
   @override
   final MimeType? mimeType;
 
+  /// [accept] - this will default to fhir+json just so it will stop sending
+  /// me XML - I hate XML
+  @override
+  @JsonKey()
+  final String accept;
+
   /// [client] - if there's a specific client that you're going to be using
   @override
   final Client? client;
 
   @override
   String toString() {
-    return 'FhirRequest.search(base: $base, type: $type, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, usePost: $usePost, restfulRequest: $restfulRequest, mimeType: $mimeType, client: $client)';
+    return 'FhirRequest.search(base: $base, type: $type, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, usePost: $usePost, restfulRequest: $restfulRequest, mimeType: $mimeType, accept: $accept, client: $client)';
   }
 
   @override
@@ -6510,6 +4580,7 @@ class _$FhirSearchRequest extends FhirSearchRequest {
                 other.restfulRequest == restfulRequest) &&
             (identical(other.mimeType, mimeType) ||
                 other.mimeType == mimeType) &&
+            (identical(other.accept, accept) || other.accept == accept) &&
             (identical(other.client, client) || other.client == client));
   }
 
@@ -6526,6 +4597,7 @@ class _$FhirSearchRequest extends FhirSearchRequest {
       usePost,
       restfulRequest,
       mimeType,
+      accept,
       client);
 
   @JsonKey(ignore: true)
@@ -6540,38 +4612,31 @@ class _$FhirSearchRequest extends FhirSearchRequest {
     required TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         read,
     required TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
-            Id vid,
+            FhirId id,
+            FhirId vid,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         vRead,
-    required TResult Function(
-            Uri base,
-            Resource resource,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)
+    required TResult Function(Uri base, Resource resource, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)
         update,
     required TResult Function(
             Uri base,
@@ -6582,18 +4647,20 @@ class _$FhirSearchRequest extends FhirSearchRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         patch,
     required TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         delete,
     required TResult Function(
@@ -6605,6 +4672,7 @@ class _$FhirSearchRequest extends FhirSearchRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         create,
     required TResult Function(
@@ -6618,115 +4686,20 @@ class _$FhirSearchRequest extends FhirSearchRequest {
             bool usePost,
             RestfulRequest restfulRequest,
             MimeType? mimeType,
+            String accept,
             Client? client)
         search,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)
-        searchAll,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Mode mode,
-            MimeType? mimeType,
-            Client? client)
-        capabilities,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)
-        transaction,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)
-        batch,
-    required TResult Function(
-            Uri base,
-            Dstu2ResourceType type,
-            Id id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)
-        history,
-    required TResult Function(
-            Uri base,
-            Dstu2ResourceType type,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)
-        historyType,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)
-        historyAll,
-    required TResult Function(
-            Uri base,
-            Dstu2ResourceType? type,
-            FhirId? id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Map<String, dynamic> fhirParameter,
-            String operation,
-            bool usePost,
-            bool useFormData,
-            MimeType? mimeType,
-            Client? client)
-        operation,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client) searchAll,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Mode mode, MimeType? mimeType, String accept, Client? client) capabilities,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client) transaction,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client) batch,
+    required TResult Function(Uri base, Dstu2ResourceType type, FhirId id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client) history,
+    required TResult Function(Uri base, Dstu2ResourceType type, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client) historyType,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client) historyAll,
+    required TResult Function(Uri base, Dstu2ResourceType? type, FhirId? id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Map<String, dynamic> fhirParameter, String operation, bool usePost, bool useFormData, MimeType? mimeType, String accept, Client? client) operation,
   }) {
     return search(base, type, pretty, summary, format, elements, parameters,
-        usePost, restfulRequest, mimeType, client);
+        usePost, restfulRequest, mimeType, accept, client);
   }
 
   @override
@@ -6735,38 +4708,31 @@ class _$FhirSearchRequest extends FhirSearchRequest {
     TResult? Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         read,
     TResult? Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
-            Id vid,
+            FhirId id,
+            FhirId vid,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         vRead,
-    TResult? Function(
-            Uri base,
-            Resource resource,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)?
+    TResult? Function(Uri base, Resource resource, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)?
         update,
     TResult? Function(
             Uri base,
@@ -6777,18 +4743,20 @@ class _$FhirSearchRequest extends FhirSearchRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         patch,
     TResult? Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         delete,
     TResult? Function(
@@ -6800,6 +4768,7 @@ class _$FhirSearchRequest extends FhirSearchRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         create,
     TResult? Function(
@@ -6813,115 +4782,20 @@ class _$FhirSearchRequest extends FhirSearchRequest {
             bool usePost,
             RestfulRequest restfulRequest,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         search,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)?
-        searchAll,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Mode mode,
-            MimeType? mimeType,
-            Client? client)?
-        capabilities,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)?
-        transaction,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)?
-        batch,
-    TResult? Function(
-            Uri base,
-            Dstu2ResourceType type,
-            Id id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        history,
-    TResult? Function(
-            Uri base,
-            Dstu2ResourceType type,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        historyType,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        historyAll,
-    TResult? Function(
-            Uri base,
-            Dstu2ResourceType? type,
-            FhirId? id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Map<String, dynamic> fhirParameter,
-            String operation,
-            bool usePost,
-            bool useFormData,
-            MimeType? mimeType,
-            Client? client)?
-        operation,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)? searchAll,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Mode mode, MimeType? mimeType, String accept, Client? client)? capabilities,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client)? transaction,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client)? batch,
+    TResult? Function(Uri base, Dstu2ResourceType type, FhirId id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? history,
+    TResult? Function(Uri base, Dstu2ResourceType type, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? historyType,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? historyAll,
+    TResult? Function(Uri base, Dstu2ResourceType? type, FhirId? id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Map<String, dynamic> fhirParameter, String operation, bool usePost, bool useFormData, MimeType? mimeType, String accept, Client? client)? operation,
   }) {
     return search?.call(base, type, pretty, summary, format, elements,
-        parameters, usePost, restfulRequest, mimeType, client);
+        parameters, usePost, restfulRequest, mimeType, accept, client);
   }
 
   @override
@@ -6930,38 +4804,31 @@ class _$FhirSearchRequest extends FhirSearchRequest {
     TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         read,
     TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
-            Id vid,
+            FhirId id,
+            FhirId vid,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         vRead,
-    TResult Function(
-            Uri base,
-            Resource resource,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)?
+    TResult Function(Uri base, Resource resource, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)?
         update,
     TResult Function(
             Uri base,
@@ -6972,18 +4839,20 @@ class _$FhirSearchRequest extends FhirSearchRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         patch,
     TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         delete,
     TResult Function(
@@ -6995,6 +4864,7 @@ class _$FhirSearchRequest extends FhirSearchRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         create,
     TResult Function(
@@ -7008,117 +4878,22 @@ class _$FhirSearchRequest extends FhirSearchRequest {
             bool usePost,
             RestfulRequest restfulRequest,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         search,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)?
-        searchAll,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Mode mode,
-            MimeType? mimeType,
-            Client? client)?
-        capabilities,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)?
-        transaction,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)?
-        batch,
-    TResult Function(
-            Uri base,
-            Dstu2ResourceType type,
-            Id id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        history,
-    TResult Function(
-            Uri base,
-            Dstu2ResourceType type,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        historyType,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        historyAll,
-    TResult Function(
-            Uri base,
-            Dstu2ResourceType? type,
-            FhirId? id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Map<String, dynamic> fhirParameter,
-            String operation,
-            bool usePost,
-            bool useFormData,
-            MimeType? mimeType,
-            Client? client)?
-        operation,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)? searchAll,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Mode mode, MimeType? mimeType, String accept, Client? client)? capabilities,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client)? transaction,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client)? batch,
+    TResult Function(Uri base, Dstu2ResourceType type, FhirId id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? history,
+    TResult Function(Uri base, Dstu2ResourceType type, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? historyType,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? historyAll,
+    TResult Function(Uri base, Dstu2ResourceType? type, FhirId? id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Map<String, dynamic> fhirParameter, String operation, bool usePost, bool useFormData, MimeType? mimeType, String accept, Client? client)? operation,
     required TResult orElse(),
   }) {
     if (search != null) {
       return search(base, type, pretty, summary, format, elements, parameters,
-          usePost, restfulRequest, mimeType, client);
+          usePost, restfulRequest, mimeType, accept, client);
     }
     return orElse();
   }
@@ -7206,6 +4981,7 @@ abstract class FhirSearchRequest extends FhirRequest {
       final bool usePost,
       final RestfulRequest restfulRequest,
       final MimeType? mimeType,
+      final String accept,
       final Client? client}) = _$FhirSearchRequest;
   const FhirSearchRequest._() : super._();
 
@@ -7250,6 +5026,11 @@ abstract class FhirSearchRequest extends FhirRequest {
   MimeType? get mimeType;
   @override
 
+  /// [accept] - this will default to fhir+json just so it will stop sending
+  /// me XML - I hate XML
+  String get accept;
+  @override
+
   /// [client] - if there's a specific client that you're going to be using
   Client? get client;
   @override
@@ -7274,6 +5055,7 @@ abstract class _$$FhirSearchAllRequestCopyWith<$Res>
       List<String> elements,
       List<String> parameters,
       MimeType? mimeType,
+      String accept,
       Client? client});
 }
 
@@ -7295,6 +5077,7 @@ class __$$FhirSearchAllRequestCopyWithImpl<$Res>
     Object? elements = null,
     Object? parameters = null,
     Object? mimeType = freezed,
+    Object? accept = null,
     Object? client = freezed,
   }) {
     return _then(_$FhirSearchAllRequest(
@@ -7326,6 +5109,10 @@ class __$$FhirSearchAllRequestCopyWithImpl<$Res>
           ? _value.mimeType
           : mimeType // ignore: cast_nullable_to_non_nullable
               as MimeType?,
+      accept: null == accept
+          ? _value.accept
+          : accept // ignore: cast_nullable_to_non_nullable
+              as String,
       client: freezed == client
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
@@ -7345,6 +5132,7 @@ class _$FhirSearchAllRequest extends FhirSearchAllRequest {
       final List<String> elements = const <String>[],
       final List<String> parameters = const <String>[],
       this.mimeType,
+      this.accept = 'application/fhir+json',
       this.client})
       : _elements = elements,
         _parameters = parameters,
@@ -7400,13 +5188,19 @@ class _$FhirSearchAllRequest extends FhirSearchAllRequest {
   @override
   final MimeType? mimeType;
 
+  /// [accept] - this will default to fhir+json just so it will stop sending
+  /// me XML - I hate XML
+  @override
+  @JsonKey()
+  final String accept;
+
   /// [client] - if there's a specific client that you're going to be using
   @override
   final Client? client;
 
   @override
   String toString() {
-    return 'FhirRequest.searchAll(base: $base, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, mimeType: $mimeType, client: $client)';
+    return 'FhirRequest.searchAll(base: $base, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, mimeType: $mimeType, accept: $accept, client: $client)';
   }
 
   @override
@@ -7423,6 +5217,7 @@ class _$FhirSearchAllRequest extends FhirSearchAllRequest {
                 .equals(other._parameters, _parameters) &&
             (identical(other.mimeType, mimeType) ||
                 other.mimeType == mimeType) &&
+            (identical(other.accept, accept) || other.accept == accept) &&
             (identical(other.client, client) || other.client == client));
   }
 
@@ -7436,6 +5231,7 @@ class _$FhirSearchAllRequest extends FhirSearchAllRequest {
       const DeepCollectionEquality().hash(_elements),
       const DeepCollectionEquality().hash(_parameters),
       mimeType,
+      accept,
       client);
 
   @JsonKey(ignore: true)
@@ -7451,38 +5247,31 @@ class _$FhirSearchAllRequest extends FhirSearchAllRequest {
     required TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         read,
     required TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
-            Id vid,
+            FhirId id,
+            FhirId vid,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         vRead,
-    required TResult Function(
-            Uri base,
-            Resource resource,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)
+    required TResult Function(Uri base, Resource resource, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)
         update,
     required TResult Function(
             Uri base,
@@ -7493,18 +5282,20 @@ class _$FhirSearchAllRequest extends FhirSearchAllRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         patch,
     required TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         delete,
     required TResult Function(
@@ -7516,6 +5307,7 @@ class _$FhirSearchAllRequest extends FhirSearchAllRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         create,
     required TResult Function(
@@ -7529,115 +5321,20 @@ class _$FhirSearchAllRequest extends FhirSearchAllRequest {
             bool usePost,
             RestfulRequest restfulRequest,
             MimeType? mimeType,
+            String accept,
             Client? client)
         search,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)
-        searchAll,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Mode mode,
-            MimeType? mimeType,
-            Client? client)
-        capabilities,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)
-        transaction,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)
-        batch,
-    required TResult Function(
-            Uri base,
-            Dstu2ResourceType type,
-            Id id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)
-        history,
-    required TResult Function(
-            Uri base,
-            Dstu2ResourceType type,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)
-        historyType,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)
-        historyAll,
-    required TResult Function(
-            Uri base,
-            Dstu2ResourceType? type,
-            FhirId? id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Map<String, dynamic> fhirParameter,
-            String operation,
-            bool usePost,
-            bool useFormData,
-            MimeType? mimeType,
-            Client? client)
-        operation,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client) searchAll,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Mode mode, MimeType? mimeType, String accept, Client? client) capabilities,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client) transaction,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client) batch,
+    required TResult Function(Uri base, Dstu2ResourceType type, FhirId id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client) history,
+    required TResult Function(Uri base, Dstu2ResourceType type, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client) historyType,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client) historyAll,
+    required TResult Function(Uri base, Dstu2ResourceType? type, FhirId? id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Map<String, dynamic> fhirParameter, String operation, bool usePost, bool useFormData, MimeType? mimeType, String accept, Client? client) operation,
   }) {
-    return searchAll(
-        base, pretty, summary, format, elements, parameters, mimeType, client);
+    return searchAll(base, pretty, summary, format, elements, parameters,
+        mimeType, accept, client);
   }
 
   @override
@@ -7646,38 +5343,31 @@ class _$FhirSearchAllRequest extends FhirSearchAllRequest {
     TResult? Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         read,
     TResult? Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
-            Id vid,
+            FhirId id,
+            FhirId vid,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         vRead,
-    TResult? Function(
-            Uri base,
-            Resource resource,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)?
+    TResult? Function(Uri base, Resource resource, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)?
         update,
     TResult? Function(
             Uri base,
@@ -7688,18 +5378,20 @@ class _$FhirSearchAllRequest extends FhirSearchAllRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         patch,
     TResult? Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         delete,
     TResult? Function(
@@ -7711,6 +5403,7 @@ class _$FhirSearchAllRequest extends FhirSearchAllRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         create,
     TResult? Function(
@@ -7724,115 +5417,20 @@ class _$FhirSearchAllRequest extends FhirSearchAllRequest {
             bool usePost,
             RestfulRequest restfulRequest,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         search,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)?
-        searchAll,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Mode mode,
-            MimeType? mimeType,
-            Client? client)?
-        capabilities,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)?
-        transaction,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)?
-        batch,
-    TResult? Function(
-            Uri base,
-            Dstu2ResourceType type,
-            Id id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        history,
-    TResult? Function(
-            Uri base,
-            Dstu2ResourceType type,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        historyType,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        historyAll,
-    TResult? Function(
-            Uri base,
-            Dstu2ResourceType? type,
-            FhirId? id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Map<String, dynamic> fhirParameter,
-            String operation,
-            bool usePost,
-            bool useFormData,
-            MimeType? mimeType,
-            Client? client)?
-        operation,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)? searchAll,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Mode mode, MimeType? mimeType, String accept, Client? client)? capabilities,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client)? transaction,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client)? batch,
+    TResult? Function(Uri base, Dstu2ResourceType type, FhirId id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? history,
+    TResult? Function(Uri base, Dstu2ResourceType type, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? historyType,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? historyAll,
+    TResult? Function(Uri base, Dstu2ResourceType? type, FhirId? id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Map<String, dynamic> fhirParameter, String operation, bool usePost, bool useFormData, MimeType? mimeType, String accept, Client? client)? operation,
   }) {
-    return searchAll?.call(
-        base, pretty, summary, format, elements, parameters, mimeType, client);
+    return searchAll?.call(base, pretty, summary, format, elements, parameters,
+        mimeType, accept, client);
   }
 
   @override
@@ -7841,38 +5439,31 @@ class _$FhirSearchAllRequest extends FhirSearchAllRequest {
     TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         read,
     TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
-            Id vid,
+            FhirId id,
+            FhirId vid,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         vRead,
-    TResult Function(
-            Uri base,
-            Resource resource,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)?
+    TResult Function(Uri base, Resource resource, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)?
         update,
     TResult Function(
             Uri base,
@@ -7883,18 +5474,20 @@ class _$FhirSearchAllRequest extends FhirSearchAllRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         patch,
     TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         delete,
     TResult Function(
@@ -7906,6 +5499,7 @@ class _$FhirSearchAllRequest extends FhirSearchAllRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         create,
     TResult Function(
@@ -7919,117 +5513,22 @@ class _$FhirSearchAllRequest extends FhirSearchAllRequest {
             bool usePost,
             RestfulRequest restfulRequest,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         search,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)?
-        searchAll,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Mode mode,
-            MimeType? mimeType,
-            Client? client)?
-        capabilities,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)?
-        transaction,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)?
-        batch,
-    TResult Function(
-            Uri base,
-            Dstu2ResourceType type,
-            Id id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        history,
-    TResult Function(
-            Uri base,
-            Dstu2ResourceType type,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        historyType,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        historyAll,
-    TResult Function(
-            Uri base,
-            Dstu2ResourceType? type,
-            FhirId? id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Map<String, dynamic> fhirParameter,
-            String operation,
-            bool usePost,
-            bool useFormData,
-            MimeType? mimeType,
-            Client? client)?
-        operation,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)? searchAll,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Mode mode, MimeType? mimeType, String accept, Client? client)? capabilities,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client)? transaction,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client)? batch,
+    TResult Function(Uri base, Dstu2ResourceType type, FhirId id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? history,
+    TResult Function(Uri base, Dstu2ResourceType type, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? historyType,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? historyAll,
+    TResult Function(Uri base, Dstu2ResourceType? type, FhirId? id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Map<String, dynamic> fhirParameter, String operation, bool usePost, bool useFormData, MimeType? mimeType, String accept, Client? client)? operation,
     required TResult orElse(),
   }) {
     if (searchAll != null) {
       return searchAll(base, pretty, summary, format, elements, parameters,
-          mimeType, client);
+          mimeType, accept, client);
     }
     return orElse();
   }
@@ -8114,6 +5613,7 @@ abstract class FhirSearchAllRequest extends FhirRequest {
       final List<String> elements,
       final List<String> parameters,
       final MimeType? mimeType,
+      final String accept,
       final Client? client}) = _$FhirSearchAllRequest;
   const FhirSearchAllRequest._() : super._();
 
@@ -8150,6 +5650,11 @@ abstract class FhirSearchAllRequest extends FhirRequest {
   MimeType? get mimeType;
   @override
 
+  /// [accept] - this will default to fhir+json just so it will stop sending
+  /// me XML - I hate XML
+  String get accept;
+  @override
+
   /// [client] - if there's a specific client that you're going to be using
   Client? get client;
   @override
@@ -8175,6 +5680,7 @@ abstract class _$$FhirCapabilitiesRequestCopyWith<$Res>
       List<String> parameters,
       Mode mode,
       MimeType? mimeType,
+      String accept,
       Client? client});
 }
 
@@ -8197,6 +5703,7 @@ class __$$FhirCapabilitiesRequestCopyWithImpl<$Res>
     Object? parameters = null,
     Object? mode = null,
     Object? mimeType = freezed,
+    Object? accept = null,
     Object? client = freezed,
   }) {
     return _then(_$FhirCapabilitiesRequest(
@@ -8232,6 +5739,10 @@ class __$$FhirCapabilitiesRequestCopyWithImpl<$Res>
           ? _value.mimeType
           : mimeType // ignore: cast_nullable_to_non_nullable
               as MimeType?,
+      accept: null == accept
+          ? _value.accept
+          : accept // ignore: cast_nullable_to_non_nullable
+              as String,
       client: freezed == client
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
@@ -8252,6 +5763,7 @@ class _$FhirCapabilitiesRequest extends FhirCapabilitiesRequest {
       final List<String> parameters = const <String>[],
       this.mode = Mode.full,
       this.mimeType,
+      this.accept = 'application/fhir+json',
       this.client})
       : _elements = elements,
         _parameters = parameters,
@@ -8312,13 +5824,19 @@ class _$FhirCapabilitiesRequest extends FhirCapabilitiesRequest {
   @override
   final MimeType? mimeType;
 
+  /// [accept] - this will default to fhir+json just so it will stop sending
+  /// me XML - I hate XML
+  @override
+  @JsonKey()
+  final String accept;
+
   /// [client] - if there's a specific client that you're going to be using
   @override
   final Client? client;
 
   @override
   String toString() {
-    return 'FhirRequest.capabilities(base: $base, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, mode: $mode, mimeType: $mimeType, client: $client)';
+    return 'FhirRequest.capabilities(base: $base, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, mode: $mode, mimeType: $mimeType, accept: $accept, client: $client)';
   }
 
   @override
@@ -8336,6 +5854,7 @@ class _$FhirCapabilitiesRequest extends FhirCapabilitiesRequest {
             (identical(other.mode, mode) || other.mode == mode) &&
             (identical(other.mimeType, mimeType) ||
                 other.mimeType == mimeType) &&
+            (identical(other.accept, accept) || other.accept == accept) &&
             (identical(other.client, client) || other.client == client));
   }
 
@@ -8350,6 +5869,7 @@ class _$FhirCapabilitiesRequest extends FhirCapabilitiesRequest {
       const DeepCollectionEquality().hash(_parameters),
       mode,
       mimeType,
+      accept,
       client);
 
   @JsonKey(ignore: true)
@@ -8365,38 +5885,31 @@ class _$FhirCapabilitiesRequest extends FhirCapabilitiesRequest {
     required TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         read,
     required TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
-            Id vid,
+            FhirId id,
+            FhirId vid,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         vRead,
-    required TResult Function(
-            Uri base,
-            Resource resource,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)
+    required TResult Function(Uri base, Resource resource, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)
         update,
     required TResult Function(
             Uri base,
@@ -8407,18 +5920,20 @@ class _$FhirCapabilitiesRequest extends FhirCapabilitiesRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         patch,
     required TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         delete,
     required TResult Function(
@@ -8430,6 +5945,7 @@ class _$FhirCapabilitiesRequest extends FhirCapabilitiesRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         create,
     required TResult Function(
@@ -8443,115 +5959,20 @@ class _$FhirCapabilitiesRequest extends FhirCapabilitiesRequest {
             bool usePost,
             RestfulRequest restfulRequest,
             MimeType? mimeType,
+            String accept,
             Client? client)
         search,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)
-        searchAll,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Mode mode,
-            MimeType? mimeType,
-            Client? client)
-        capabilities,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)
-        transaction,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)
-        batch,
-    required TResult Function(
-            Uri base,
-            Dstu2ResourceType type,
-            Id id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)
-        history,
-    required TResult Function(
-            Uri base,
-            Dstu2ResourceType type,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)
-        historyType,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)
-        historyAll,
-    required TResult Function(
-            Uri base,
-            Dstu2ResourceType? type,
-            FhirId? id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Map<String, dynamic> fhirParameter,
-            String operation,
-            bool usePost,
-            bool useFormData,
-            MimeType? mimeType,
-            Client? client)
-        operation,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client) searchAll,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Mode mode, MimeType? mimeType, String accept, Client? client) capabilities,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client) transaction,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client) batch,
+    required TResult Function(Uri base, Dstu2ResourceType type, FhirId id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client) history,
+    required TResult Function(Uri base, Dstu2ResourceType type, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client) historyType,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client) historyAll,
+    required TResult Function(Uri base, Dstu2ResourceType? type, FhirId? id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Map<String, dynamic> fhirParameter, String operation, bool usePost, bool useFormData, MimeType? mimeType, String accept, Client? client) operation,
   }) {
     return capabilities(base, pretty, summary, format, elements, parameters,
-        mode, mimeType, client);
+        mode, mimeType, accept, client);
   }
 
   @override
@@ -8560,38 +5981,31 @@ class _$FhirCapabilitiesRequest extends FhirCapabilitiesRequest {
     TResult? Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         read,
     TResult? Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
-            Id vid,
+            FhirId id,
+            FhirId vid,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         vRead,
-    TResult? Function(
-            Uri base,
-            Resource resource,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)?
+    TResult? Function(Uri base, Resource resource, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)?
         update,
     TResult? Function(
             Uri base,
@@ -8602,18 +6016,20 @@ class _$FhirCapabilitiesRequest extends FhirCapabilitiesRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         patch,
     TResult? Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         delete,
     TResult? Function(
@@ -8625,6 +6041,7 @@ class _$FhirCapabilitiesRequest extends FhirCapabilitiesRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         create,
     TResult? Function(
@@ -8638,115 +6055,20 @@ class _$FhirCapabilitiesRequest extends FhirCapabilitiesRequest {
             bool usePost,
             RestfulRequest restfulRequest,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         search,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)?
-        searchAll,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Mode mode,
-            MimeType? mimeType,
-            Client? client)?
-        capabilities,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)?
-        transaction,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)?
-        batch,
-    TResult? Function(
-            Uri base,
-            Dstu2ResourceType type,
-            Id id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        history,
-    TResult? Function(
-            Uri base,
-            Dstu2ResourceType type,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        historyType,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        historyAll,
-    TResult? Function(
-            Uri base,
-            Dstu2ResourceType? type,
-            FhirId? id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Map<String, dynamic> fhirParameter,
-            String operation,
-            bool usePost,
-            bool useFormData,
-            MimeType? mimeType,
-            Client? client)?
-        operation,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)? searchAll,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Mode mode, MimeType? mimeType, String accept, Client? client)? capabilities,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client)? transaction,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client)? batch,
+    TResult? Function(Uri base, Dstu2ResourceType type, FhirId id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? history,
+    TResult? Function(Uri base, Dstu2ResourceType type, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? historyType,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? historyAll,
+    TResult? Function(Uri base, Dstu2ResourceType? type, FhirId? id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Map<String, dynamic> fhirParameter, String operation, bool usePost, bool useFormData, MimeType? mimeType, String accept, Client? client)? operation,
   }) {
     return capabilities?.call(base, pretty, summary, format, elements,
-        parameters, mode, mimeType, client);
+        parameters, mode, mimeType, accept, client);
   }
 
   @override
@@ -8755,38 +6077,31 @@ class _$FhirCapabilitiesRequest extends FhirCapabilitiesRequest {
     TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         read,
     TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
-            Id vid,
+            FhirId id,
+            FhirId vid,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         vRead,
-    TResult Function(
-            Uri base,
-            Resource resource,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)?
+    TResult Function(Uri base, Resource resource, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)?
         update,
     TResult Function(
             Uri base,
@@ -8797,18 +6112,20 @@ class _$FhirCapabilitiesRequest extends FhirCapabilitiesRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         patch,
     TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         delete,
     TResult Function(
@@ -8820,6 +6137,7 @@ class _$FhirCapabilitiesRequest extends FhirCapabilitiesRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         create,
     TResult Function(
@@ -8833,117 +6151,22 @@ class _$FhirCapabilitiesRequest extends FhirCapabilitiesRequest {
             bool usePost,
             RestfulRequest restfulRequest,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         search,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)?
-        searchAll,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Mode mode,
-            MimeType? mimeType,
-            Client? client)?
-        capabilities,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)?
-        transaction,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)?
-        batch,
-    TResult Function(
-            Uri base,
-            Dstu2ResourceType type,
-            Id id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        history,
-    TResult Function(
-            Uri base,
-            Dstu2ResourceType type,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        historyType,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        historyAll,
-    TResult Function(
-            Uri base,
-            Dstu2ResourceType? type,
-            FhirId? id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Map<String, dynamic> fhirParameter,
-            String operation,
-            bool usePost,
-            bool useFormData,
-            MimeType? mimeType,
-            Client? client)?
-        operation,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)? searchAll,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Mode mode, MimeType? mimeType, String accept, Client? client)? capabilities,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client)? transaction,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client)? batch,
+    TResult Function(Uri base, Dstu2ResourceType type, FhirId id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? history,
+    TResult Function(Uri base, Dstu2ResourceType type, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? historyType,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? historyAll,
+    TResult Function(Uri base, Dstu2ResourceType? type, FhirId? id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Map<String, dynamic> fhirParameter, String operation, bool usePost, bool useFormData, MimeType? mimeType, String accept, Client? client)? operation,
     required TResult orElse(),
   }) {
     if (capabilities != null) {
       return capabilities(base, pretty, summary, format, elements, parameters,
-          mode, mimeType, client);
+          mode, mimeType, accept, client);
     }
     return orElse();
   }
@@ -9029,6 +6252,7 @@ abstract class FhirCapabilitiesRequest extends FhirRequest {
       final List<String> parameters,
       final Mode mode,
       final MimeType? mimeType,
+      final String accept,
       final Client? client}) = _$FhirCapabilitiesRequest;
   const FhirCapabilitiesRequest._() : super._();
 
@@ -9068,6 +6292,11 @@ abstract class FhirCapabilitiesRequest extends FhirRequest {
   MimeType? get mimeType;
   @override
 
+  /// [accept] - this will default to fhir+json just so it will stop sending
+  /// me XML - I hate XML
+  String get accept;
+  @override
+
   /// [client] - if there's a specific client that you're going to be using
   Client? get client;
   @override
@@ -9093,6 +6322,7 @@ abstract class _$$FhirTransactionRequestCopyWith<$Res>
       List<String> parameters,
       Bundle bundle,
       MimeType? mimeType,
+      String accept,
       Client? client});
 
   $BundleCopyWith<$Res> get bundle;
@@ -9117,6 +6347,7 @@ class __$$FhirTransactionRequestCopyWithImpl<$Res>
     Object? parameters = null,
     Object? bundle = null,
     Object? mimeType = freezed,
+    Object? accept = null,
     Object? client = freezed,
   }) {
     return _then(_$FhirTransactionRequest(
@@ -9152,6 +6383,10 @@ class __$$FhirTransactionRequestCopyWithImpl<$Res>
           ? _value.mimeType
           : mimeType // ignore: cast_nullable_to_non_nullable
               as MimeType?,
+      accept: null == accept
+          ? _value.accept
+          : accept // ignore: cast_nullable_to_non_nullable
+              as String,
       client: freezed == client
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
@@ -9180,6 +6415,7 @@ class _$FhirTransactionRequest extends FhirTransactionRequest {
       final List<String> parameters = const <String>[],
       required this.bundle,
       this.mimeType,
+      this.accept = 'application/fhir+json',
       this.client})
       : _elements = elements,
         _parameters = parameters,
@@ -9239,13 +6475,19 @@ class _$FhirTransactionRequest extends FhirTransactionRequest {
   @override
   final MimeType? mimeType;
 
+  /// [accept] - this will default to fhir+json just so it will stop sending
+  /// me XML - I hate XML
+  @override
+  @JsonKey()
+  final String accept;
+
   /// [client] - if there's a specific client that you're going to be using
   @override
   final Client? client;
 
   @override
   String toString() {
-    return 'FhirRequest.transaction(base: $base, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, bundle: $bundle, mimeType: $mimeType, client: $client)';
+    return 'FhirRequest.transaction(base: $base, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, bundle: $bundle, mimeType: $mimeType, accept: $accept, client: $client)';
   }
 
   @override
@@ -9263,6 +6505,7 @@ class _$FhirTransactionRequest extends FhirTransactionRequest {
             (identical(other.bundle, bundle) || other.bundle == bundle) &&
             (identical(other.mimeType, mimeType) ||
                 other.mimeType == mimeType) &&
+            (identical(other.accept, accept) || other.accept == accept) &&
             (identical(other.client, client) || other.client == client));
   }
 
@@ -9277,6 +6520,7 @@ class _$FhirTransactionRequest extends FhirTransactionRequest {
       const DeepCollectionEquality().hash(_parameters),
       bundle,
       mimeType,
+      accept,
       client);
 
   @JsonKey(ignore: true)
@@ -9292,38 +6536,31 @@ class _$FhirTransactionRequest extends FhirTransactionRequest {
     required TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         read,
     required TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
-            Id vid,
+            FhirId id,
+            FhirId vid,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         vRead,
-    required TResult Function(
-            Uri base,
-            Resource resource,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)
+    required TResult Function(Uri base, Resource resource, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)
         update,
     required TResult Function(
             Uri base,
@@ -9334,18 +6571,20 @@ class _$FhirTransactionRequest extends FhirTransactionRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         patch,
     required TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         delete,
     required TResult Function(
@@ -9357,6 +6596,7 @@ class _$FhirTransactionRequest extends FhirTransactionRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         create,
     required TResult Function(
@@ -9370,115 +6610,20 @@ class _$FhirTransactionRequest extends FhirTransactionRequest {
             bool usePost,
             RestfulRequest restfulRequest,
             MimeType? mimeType,
+            String accept,
             Client? client)
         search,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)
-        searchAll,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Mode mode,
-            MimeType? mimeType,
-            Client? client)
-        capabilities,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)
-        transaction,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)
-        batch,
-    required TResult Function(
-            Uri base,
-            Dstu2ResourceType type,
-            Id id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)
-        history,
-    required TResult Function(
-            Uri base,
-            Dstu2ResourceType type,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)
-        historyType,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)
-        historyAll,
-    required TResult Function(
-            Uri base,
-            Dstu2ResourceType? type,
-            FhirId? id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Map<String, dynamic> fhirParameter,
-            String operation,
-            bool usePost,
-            bool useFormData,
-            MimeType? mimeType,
-            Client? client)
-        operation,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client) searchAll,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Mode mode, MimeType? mimeType, String accept, Client? client) capabilities,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client) transaction,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client) batch,
+    required TResult Function(Uri base, Dstu2ResourceType type, FhirId id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client) history,
+    required TResult Function(Uri base, Dstu2ResourceType type, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client) historyType,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client) historyAll,
+    required TResult Function(Uri base, Dstu2ResourceType? type, FhirId? id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Map<String, dynamic> fhirParameter, String operation, bool usePost, bool useFormData, MimeType? mimeType, String accept, Client? client) operation,
   }) {
     return transaction(base, pretty, summary, format, elements, parameters,
-        bundle, mimeType, client);
+        bundle, mimeType, accept, client);
   }
 
   @override
@@ -9487,38 +6632,31 @@ class _$FhirTransactionRequest extends FhirTransactionRequest {
     TResult? Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         read,
     TResult? Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
-            Id vid,
+            FhirId id,
+            FhirId vid,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         vRead,
-    TResult? Function(
-            Uri base,
-            Resource resource,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)?
+    TResult? Function(Uri base, Resource resource, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)?
         update,
     TResult? Function(
             Uri base,
@@ -9529,18 +6667,20 @@ class _$FhirTransactionRequest extends FhirTransactionRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         patch,
     TResult? Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         delete,
     TResult? Function(
@@ -9552,6 +6692,7 @@ class _$FhirTransactionRequest extends FhirTransactionRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         create,
     TResult? Function(
@@ -9565,115 +6706,20 @@ class _$FhirTransactionRequest extends FhirTransactionRequest {
             bool usePost,
             RestfulRequest restfulRequest,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         search,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)?
-        searchAll,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Mode mode,
-            MimeType? mimeType,
-            Client? client)?
-        capabilities,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)?
-        transaction,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)?
-        batch,
-    TResult? Function(
-            Uri base,
-            Dstu2ResourceType type,
-            Id id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        history,
-    TResult? Function(
-            Uri base,
-            Dstu2ResourceType type,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        historyType,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        historyAll,
-    TResult? Function(
-            Uri base,
-            Dstu2ResourceType? type,
-            FhirId? id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Map<String, dynamic> fhirParameter,
-            String operation,
-            bool usePost,
-            bool useFormData,
-            MimeType? mimeType,
-            Client? client)?
-        operation,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)? searchAll,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Mode mode, MimeType? mimeType, String accept, Client? client)? capabilities,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client)? transaction,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client)? batch,
+    TResult? Function(Uri base, Dstu2ResourceType type, FhirId id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? history,
+    TResult? Function(Uri base, Dstu2ResourceType type, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? historyType,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? historyAll,
+    TResult? Function(Uri base, Dstu2ResourceType? type, FhirId? id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Map<String, dynamic> fhirParameter, String operation, bool usePost, bool useFormData, MimeType? mimeType, String accept, Client? client)? operation,
   }) {
     return transaction?.call(base, pretty, summary, format, elements,
-        parameters, bundle, mimeType, client);
+        parameters, bundle, mimeType, accept, client);
   }
 
   @override
@@ -9682,38 +6728,31 @@ class _$FhirTransactionRequest extends FhirTransactionRequest {
     TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         read,
     TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
-            Id vid,
+            FhirId id,
+            FhirId vid,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         vRead,
-    TResult Function(
-            Uri base,
-            Resource resource,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)?
+    TResult Function(Uri base, Resource resource, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)?
         update,
     TResult Function(
             Uri base,
@@ -9724,18 +6763,20 @@ class _$FhirTransactionRequest extends FhirTransactionRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         patch,
     TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         delete,
     TResult Function(
@@ -9747,6 +6788,7 @@ class _$FhirTransactionRequest extends FhirTransactionRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         create,
     TResult Function(
@@ -9760,117 +6802,22 @@ class _$FhirTransactionRequest extends FhirTransactionRequest {
             bool usePost,
             RestfulRequest restfulRequest,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         search,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)?
-        searchAll,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Mode mode,
-            MimeType? mimeType,
-            Client? client)?
-        capabilities,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)?
-        transaction,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)?
-        batch,
-    TResult Function(
-            Uri base,
-            Dstu2ResourceType type,
-            Id id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        history,
-    TResult Function(
-            Uri base,
-            Dstu2ResourceType type,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        historyType,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        historyAll,
-    TResult Function(
-            Uri base,
-            Dstu2ResourceType? type,
-            FhirId? id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Map<String, dynamic> fhirParameter,
-            String operation,
-            bool usePost,
-            bool useFormData,
-            MimeType? mimeType,
-            Client? client)?
-        operation,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)? searchAll,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Mode mode, MimeType? mimeType, String accept, Client? client)? capabilities,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client)? transaction,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client)? batch,
+    TResult Function(Uri base, Dstu2ResourceType type, FhirId id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? history,
+    TResult Function(Uri base, Dstu2ResourceType type, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? historyType,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? historyAll,
+    TResult Function(Uri base, Dstu2ResourceType? type, FhirId? id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Map<String, dynamic> fhirParameter, String operation, bool usePost, bool useFormData, MimeType? mimeType, String accept, Client? client)? operation,
     required TResult orElse(),
   }) {
     if (transaction != null) {
       return transaction(base, pretty, summary, format, elements, parameters,
-          bundle, mimeType, client);
+          bundle, mimeType, accept, client);
     }
     return orElse();
   }
@@ -9956,6 +6903,7 @@ abstract class FhirTransactionRequest extends FhirRequest {
       final List<String> parameters,
       required final Bundle bundle,
       final MimeType? mimeType,
+      final String accept,
       final Client? client}) = _$FhirTransactionRequest;
   const FhirTransactionRequest._() : super._();
 
@@ -9995,6 +6943,11 @@ abstract class FhirTransactionRequest extends FhirRequest {
   MimeType? get mimeType;
   @override
 
+  /// [accept] - this will default to fhir+json just so it will stop sending
+  /// me XML - I hate XML
+  String get accept;
+  @override
+
   /// [client] - if there's a specific client that you're going to be using
   Client? get client;
   @override
@@ -10020,6 +6973,7 @@ abstract class _$$FhirBatchRequestCopyWith<$Res>
       List<String> parameters,
       Bundle bundle,
       MimeType? mimeType,
+      String accept,
       Client? client});
 
   $BundleCopyWith<$Res> get bundle;
@@ -10044,6 +6998,7 @@ class __$$FhirBatchRequestCopyWithImpl<$Res>
     Object? parameters = null,
     Object? bundle = null,
     Object? mimeType = freezed,
+    Object? accept = null,
     Object? client = freezed,
   }) {
     return _then(_$FhirBatchRequest(
@@ -10079,6 +7034,10 @@ class __$$FhirBatchRequestCopyWithImpl<$Res>
           ? _value.mimeType
           : mimeType // ignore: cast_nullable_to_non_nullable
               as MimeType?,
+      accept: null == accept
+          ? _value.accept
+          : accept // ignore: cast_nullable_to_non_nullable
+              as String,
       client: freezed == client
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
@@ -10107,6 +7066,7 @@ class _$FhirBatchRequest extends FhirBatchRequest {
       final List<String> parameters = const <String>[],
       required this.bundle,
       this.mimeType,
+      this.accept = 'application/fhir+json',
       this.client})
       : _elements = elements,
         _parameters = parameters,
@@ -10166,13 +7126,19 @@ class _$FhirBatchRequest extends FhirBatchRequest {
   @override
   final MimeType? mimeType;
 
+  /// [accept] - this will default to fhir+json just so it will stop sending
+  /// me XML - I hate XML
+  @override
+  @JsonKey()
+  final String accept;
+
   /// [client] - if there's a specific client that you're going to be using
   @override
   final Client? client;
 
   @override
   String toString() {
-    return 'FhirRequest.batch(base: $base, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, bundle: $bundle, mimeType: $mimeType, client: $client)';
+    return 'FhirRequest.batch(base: $base, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, bundle: $bundle, mimeType: $mimeType, accept: $accept, client: $client)';
   }
 
   @override
@@ -10190,6 +7156,7 @@ class _$FhirBatchRequest extends FhirBatchRequest {
             (identical(other.bundle, bundle) || other.bundle == bundle) &&
             (identical(other.mimeType, mimeType) ||
                 other.mimeType == mimeType) &&
+            (identical(other.accept, accept) || other.accept == accept) &&
             (identical(other.client, client) || other.client == client));
   }
 
@@ -10204,6 +7171,7 @@ class _$FhirBatchRequest extends FhirBatchRequest {
       const DeepCollectionEquality().hash(_parameters),
       bundle,
       mimeType,
+      accept,
       client);
 
   @JsonKey(ignore: true)
@@ -10218,38 +7186,31 @@ class _$FhirBatchRequest extends FhirBatchRequest {
     required TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         read,
     required TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
-            Id vid,
+            FhirId id,
+            FhirId vid,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         vRead,
-    required TResult Function(
-            Uri base,
-            Resource resource,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)
+    required TResult Function(Uri base, Resource resource, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)
         update,
     required TResult Function(
             Uri base,
@@ -10260,18 +7221,20 @@ class _$FhirBatchRequest extends FhirBatchRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         patch,
     required TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         delete,
     required TResult Function(
@@ -10283,6 +7246,7 @@ class _$FhirBatchRequest extends FhirBatchRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         create,
     required TResult Function(
@@ -10296,115 +7260,20 @@ class _$FhirBatchRequest extends FhirBatchRequest {
             bool usePost,
             RestfulRequest restfulRequest,
             MimeType? mimeType,
+            String accept,
             Client? client)
         search,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)
-        searchAll,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Mode mode,
-            MimeType? mimeType,
-            Client? client)
-        capabilities,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)
-        transaction,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)
-        batch,
-    required TResult Function(
-            Uri base,
-            Dstu2ResourceType type,
-            Id id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)
-        history,
-    required TResult Function(
-            Uri base,
-            Dstu2ResourceType type,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)
-        historyType,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)
-        historyAll,
-    required TResult Function(
-            Uri base,
-            Dstu2ResourceType? type,
-            FhirId? id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Map<String, dynamic> fhirParameter,
-            String operation,
-            bool usePost,
-            bool useFormData,
-            MimeType? mimeType,
-            Client? client)
-        operation,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client) searchAll,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Mode mode, MimeType? mimeType, String accept, Client? client) capabilities,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client) transaction,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client) batch,
+    required TResult Function(Uri base, Dstu2ResourceType type, FhirId id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client) history,
+    required TResult Function(Uri base, Dstu2ResourceType type, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client) historyType,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client) historyAll,
+    required TResult Function(Uri base, Dstu2ResourceType? type, FhirId? id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Map<String, dynamic> fhirParameter, String operation, bool usePost, bool useFormData, MimeType? mimeType, String accept, Client? client) operation,
   }) {
     return batch(base, pretty, summary, format, elements, parameters, bundle,
-        mimeType, client);
+        mimeType, accept, client);
   }
 
   @override
@@ -10413,38 +7282,31 @@ class _$FhirBatchRequest extends FhirBatchRequest {
     TResult? Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         read,
     TResult? Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
-            Id vid,
+            FhirId id,
+            FhirId vid,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         vRead,
-    TResult? Function(
-            Uri base,
-            Resource resource,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)?
+    TResult? Function(Uri base, Resource resource, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)?
         update,
     TResult? Function(
             Uri base,
@@ -10455,18 +7317,20 @@ class _$FhirBatchRequest extends FhirBatchRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         patch,
     TResult? Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         delete,
     TResult? Function(
@@ -10478,6 +7342,7 @@ class _$FhirBatchRequest extends FhirBatchRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         create,
     TResult? Function(
@@ -10491,115 +7356,20 @@ class _$FhirBatchRequest extends FhirBatchRequest {
             bool usePost,
             RestfulRequest restfulRequest,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         search,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)?
-        searchAll,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Mode mode,
-            MimeType? mimeType,
-            Client? client)?
-        capabilities,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)?
-        transaction,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)?
-        batch,
-    TResult? Function(
-            Uri base,
-            Dstu2ResourceType type,
-            Id id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        history,
-    TResult? Function(
-            Uri base,
-            Dstu2ResourceType type,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        historyType,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        historyAll,
-    TResult? Function(
-            Uri base,
-            Dstu2ResourceType? type,
-            FhirId? id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Map<String, dynamic> fhirParameter,
-            String operation,
-            bool usePost,
-            bool useFormData,
-            MimeType? mimeType,
-            Client? client)?
-        operation,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)? searchAll,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Mode mode, MimeType? mimeType, String accept, Client? client)? capabilities,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client)? transaction,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client)? batch,
+    TResult? Function(Uri base, Dstu2ResourceType type, FhirId id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? history,
+    TResult? Function(Uri base, Dstu2ResourceType type, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? historyType,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? historyAll,
+    TResult? Function(Uri base, Dstu2ResourceType? type, FhirId? id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Map<String, dynamic> fhirParameter, String operation, bool usePost, bool useFormData, MimeType? mimeType, String accept, Client? client)? operation,
   }) {
     return batch?.call(base, pretty, summary, format, elements, parameters,
-        bundle, mimeType, client);
+        bundle, mimeType, accept, client);
   }
 
   @override
@@ -10608,38 +7378,31 @@ class _$FhirBatchRequest extends FhirBatchRequest {
     TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         read,
     TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
-            Id vid,
+            FhirId id,
+            FhirId vid,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         vRead,
-    TResult Function(
-            Uri base,
-            Resource resource,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)?
+    TResult Function(Uri base, Resource resource, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)?
         update,
     TResult Function(
             Uri base,
@@ -10650,18 +7413,20 @@ class _$FhirBatchRequest extends FhirBatchRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         patch,
     TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         delete,
     TResult Function(
@@ -10673,6 +7438,7 @@ class _$FhirBatchRequest extends FhirBatchRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         create,
     TResult Function(
@@ -10686,117 +7452,22 @@ class _$FhirBatchRequest extends FhirBatchRequest {
             bool usePost,
             RestfulRequest restfulRequest,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         search,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)?
-        searchAll,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Mode mode,
-            MimeType? mimeType,
-            Client? client)?
-        capabilities,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)?
-        transaction,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)?
-        batch,
-    TResult Function(
-            Uri base,
-            Dstu2ResourceType type,
-            Id id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        history,
-    TResult Function(
-            Uri base,
-            Dstu2ResourceType type,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        historyType,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        historyAll,
-    TResult Function(
-            Uri base,
-            Dstu2ResourceType? type,
-            FhirId? id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Map<String, dynamic> fhirParameter,
-            String operation,
-            bool usePost,
-            bool useFormData,
-            MimeType? mimeType,
-            Client? client)?
-        operation,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)? searchAll,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Mode mode, MimeType? mimeType, String accept, Client? client)? capabilities,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client)? transaction,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client)? batch,
+    TResult Function(Uri base, Dstu2ResourceType type, FhirId id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? history,
+    TResult Function(Uri base, Dstu2ResourceType type, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? historyType,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? historyAll,
+    TResult Function(Uri base, Dstu2ResourceType? type, FhirId? id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Map<String, dynamic> fhirParameter, String operation, bool usePost, bool useFormData, MimeType? mimeType, String accept, Client? client)? operation,
     required TResult orElse(),
   }) {
     if (batch != null) {
       return batch(base, pretty, summary, format, elements, parameters, bundle,
-          mimeType, client);
+          mimeType, accept, client);
     }
     return orElse();
   }
@@ -10882,6 +7553,7 @@ abstract class FhirBatchRequest extends FhirRequest {
       final List<String> parameters,
       required final Bundle bundle,
       final MimeType? mimeType,
+      final String accept,
       final Client? client}) = _$FhirBatchRequest;
   const FhirBatchRequest._() : super._();
 
@@ -10921,6 +7593,11 @@ abstract class FhirBatchRequest extends FhirRequest {
   MimeType? get mimeType;
   @override
 
+  /// [accept] - this will default to fhir+json just so it will stop sending
+  /// me XML - I hate XML
+  String get accept;
+  @override
+
   /// [client] - if there's a specific client that you're going to be using
   Client? get client;
   @override
@@ -10940,17 +7617,18 @@ abstract class _$$FhirHistoryRequestCopyWith<$Res>
   $Res call(
       {Uri base,
       Dstu2ResourceType type,
-      Id id,
+      FhirId id,
       bool pretty,
       Summary summary,
       String format,
       List<String> elements,
       List<String> parameters,
       int? count,
-      Instant? since,
+      FhirInstant? since,
       FhirDateTime? at,
       String? reference,
       MimeType? mimeType,
+      String accept,
       Client? client});
 }
 
@@ -10978,6 +7656,7 @@ class __$$FhirHistoryRequestCopyWithImpl<$Res>
     Object? at = freezed,
     Object? reference = freezed,
     Object? mimeType = freezed,
+    Object? accept = null,
     Object? client = freezed,
   }) {
     return _then(_$FhirHistoryRequest(
@@ -10992,7 +7671,7 @@ class __$$FhirHistoryRequestCopyWithImpl<$Res>
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id,
+              as FhirId,
       pretty: null == pretty
           ? _value.pretty
           : pretty // ignore: cast_nullable_to_non_nullable
@@ -11020,7 +7699,7 @@ class __$$FhirHistoryRequestCopyWithImpl<$Res>
       since: freezed == since
           ? _value.since
           : since // ignore: cast_nullable_to_non_nullable
-              as Instant?,
+              as FhirInstant?,
       at: freezed == at
           ? _value.at
           : at // ignore: cast_nullable_to_non_nullable
@@ -11033,6 +7712,10 @@ class __$$FhirHistoryRequestCopyWithImpl<$Res>
           ? _value.mimeType
           : mimeType // ignore: cast_nullable_to_non_nullable
               as MimeType?,
+      accept: null == accept
+          ? _value.accept
+          : accept // ignore: cast_nullable_to_non_nullable
+              as String,
       client: freezed == client
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
@@ -11058,6 +7741,7 @@ class _$FhirHistoryRequest extends FhirHistoryRequest {
       this.at,
       this.reference,
       this.mimeType,
+      this.accept = 'application/fhir+json',
       this.client})
       : _elements = elements,
         _parameters = parameters,
@@ -11073,7 +7757,7 @@ class _$FhirHistoryRequest extends FhirHistoryRequest {
 
   /// [id] - the id for the resource
   @override
-  final Id id;
+  final FhirId id;
 
   /// [pretty] - pretty print the json formatting in the response
   @override
@@ -11125,7 +7809,7 @@ class _$FhirHistoryRequest extends FhirHistoryRequest {
   /// [since] - Only include resource versions that were created at or after the
   ///   given instant in time
   @override
-  final Instant? since;
+  final FhirInstant? since;
 
   /// [at] - Only include resource versions that were current at some point
   ///   during the time period specified in the date time value
@@ -11142,13 +7826,19 @@ class _$FhirHistoryRequest extends FhirHistoryRequest {
   @override
   final MimeType? mimeType;
 
+  /// [accept] - this will default to fhir+json just so it will stop sending
+  /// me XML - I hate XML
+  @override
+  @JsonKey()
+  final String accept;
+
   /// [client] - if there's a specific client that you're going to be using
   @override
   final Client? client;
 
   @override
   String toString() {
-    return 'FhirRequest.history(base: $base, type: $type, id: $id, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, count: $count, since: $since, at: $at, reference: $reference, mimeType: $mimeType, client: $client)';
+    return 'FhirRequest.history(base: $base, type: $type, id: $id, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, count: $count, since: $since, at: $at, reference: $reference, mimeType: $mimeType, accept: $accept, client: $client)';
   }
 
   @override
@@ -11172,6 +7862,7 @@ class _$FhirHistoryRequest extends FhirHistoryRequest {
                 other.reference == reference) &&
             (identical(other.mimeType, mimeType) ||
                 other.mimeType == mimeType) &&
+            (identical(other.accept, accept) || other.accept == accept) &&
             (identical(other.client, client) || other.client == client));
   }
 
@@ -11191,6 +7882,7 @@ class _$FhirHistoryRequest extends FhirHistoryRequest {
       at,
       reference,
       mimeType,
+      accept,
       client);
 
   @JsonKey(ignore: true)
@@ -11206,38 +7898,31 @@ class _$FhirHistoryRequest extends FhirHistoryRequest {
     required TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         read,
     required TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
-            Id vid,
+            FhirId id,
+            FhirId vid,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         vRead,
-    required TResult Function(
-            Uri base,
-            Resource resource,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)
+    required TResult Function(Uri base, Resource resource, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)
         update,
     required TResult Function(
             Uri base,
@@ -11248,18 +7933,20 @@ class _$FhirHistoryRequest extends FhirHistoryRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         patch,
     required TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         delete,
     required TResult Function(
@@ -11271,6 +7958,7 @@ class _$FhirHistoryRequest extends FhirHistoryRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         create,
     required TResult Function(
@@ -11284,115 +7972,20 @@ class _$FhirHistoryRequest extends FhirHistoryRequest {
             bool usePost,
             RestfulRequest restfulRequest,
             MimeType? mimeType,
+            String accept,
             Client? client)
         search,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)
-        searchAll,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Mode mode,
-            MimeType? mimeType,
-            Client? client)
-        capabilities,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)
-        transaction,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)
-        batch,
-    required TResult Function(
-            Uri base,
-            Dstu2ResourceType type,
-            Id id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)
-        history,
-    required TResult Function(
-            Uri base,
-            Dstu2ResourceType type,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)
-        historyType,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)
-        historyAll,
-    required TResult Function(
-            Uri base,
-            Dstu2ResourceType? type,
-            FhirId? id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Map<String, dynamic> fhirParameter,
-            String operation,
-            bool usePost,
-            bool useFormData,
-            MimeType? mimeType,
-            Client? client)
-        operation,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client) searchAll,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Mode mode, MimeType? mimeType, String accept, Client? client) capabilities,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client) transaction,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client) batch,
+    required TResult Function(Uri base, Dstu2ResourceType type, FhirId id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client) history,
+    required TResult Function(Uri base, Dstu2ResourceType type, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client) historyType,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client) historyAll,
+    required TResult Function(Uri base, Dstu2ResourceType? type, FhirId? id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Map<String, dynamic> fhirParameter, String operation, bool usePost, bool useFormData, MimeType? mimeType, String accept, Client? client) operation,
   }) {
     return history(base, type, id, pretty, summary, format, elements,
-        parameters, count, since, at, reference, mimeType, client);
+        parameters, count, since, at, reference, mimeType, accept, client);
   }
 
   @override
@@ -11401,38 +7994,31 @@ class _$FhirHistoryRequest extends FhirHistoryRequest {
     TResult? Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         read,
     TResult? Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
-            Id vid,
+            FhirId id,
+            FhirId vid,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         vRead,
-    TResult? Function(
-            Uri base,
-            Resource resource,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)?
+    TResult? Function(Uri base, Resource resource, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)?
         update,
     TResult? Function(
             Uri base,
@@ -11443,18 +8029,20 @@ class _$FhirHistoryRequest extends FhirHistoryRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         patch,
     TResult? Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         delete,
     TResult? Function(
@@ -11466,6 +8054,7 @@ class _$FhirHistoryRequest extends FhirHistoryRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         create,
     TResult? Function(
@@ -11479,115 +8068,20 @@ class _$FhirHistoryRequest extends FhirHistoryRequest {
             bool usePost,
             RestfulRequest restfulRequest,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         search,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)?
-        searchAll,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Mode mode,
-            MimeType? mimeType,
-            Client? client)?
-        capabilities,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)?
-        transaction,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)?
-        batch,
-    TResult? Function(
-            Uri base,
-            Dstu2ResourceType type,
-            Id id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        history,
-    TResult? Function(
-            Uri base,
-            Dstu2ResourceType type,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        historyType,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        historyAll,
-    TResult? Function(
-            Uri base,
-            Dstu2ResourceType? type,
-            FhirId? id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Map<String, dynamic> fhirParameter,
-            String operation,
-            bool usePost,
-            bool useFormData,
-            MimeType? mimeType,
-            Client? client)?
-        operation,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)? searchAll,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Mode mode, MimeType? mimeType, String accept, Client? client)? capabilities,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client)? transaction,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client)? batch,
+    TResult? Function(Uri base, Dstu2ResourceType type, FhirId id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? history,
+    TResult? Function(Uri base, Dstu2ResourceType type, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? historyType,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? historyAll,
+    TResult? Function(Uri base, Dstu2ResourceType? type, FhirId? id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Map<String, dynamic> fhirParameter, String operation, bool usePost, bool useFormData, MimeType? mimeType, String accept, Client? client)? operation,
   }) {
     return history?.call(base, type, id, pretty, summary, format, elements,
-        parameters, count, since, at, reference, mimeType, client);
+        parameters, count, since, at, reference, mimeType, accept, client);
   }
 
   @override
@@ -11596,38 +8090,31 @@ class _$FhirHistoryRequest extends FhirHistoryRequest {
     TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         read,
     TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
-            Id vid,
+            FhirId id,
+            FhirId vid,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         vRead,
-    TResult Function(
-            Uri base,
-            Resource resource,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)?
+    TResult Function(Uri base, Resource resource, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)?
         update,
     TResult Function(
             Uri base,
@@ -11638,18 +8125,20 @@ class _$FhirHistoryRequest extends FhirHistoryRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         patch,
     TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         delete,
     TResult Function(
@@ -11661,6 +8150,7 @@ class _$FhirHistoryRequest extends FhirHistoryRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         create,
     TResult Function(
@@ -11674,117 +8164,22 @@ class _$FhirHistoryRequest extends FhirHistoryRequest {
             bool usePost,
             RestfulRequest restfulRequest,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         search,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)?
-        searchAll,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Mode mode,
-            MimeType? mimeType,
-            Client? client)?
-        capabilities,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)?
-        transaction,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)?
-        batch,
-    TResult Function(
-            Uri base,
-            Dstu2ResourceType type,
-            Id id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        history,
-    TResult Function(
-            Uri base,
-            Dstu2ResourceType type,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        historyType,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        historyAll,
-    TResult Function(
-            Uri base,
-            Dstu2ResourceType? type,
-            FhirId? id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Map<String, dynamic> fhirParameter,
-            String operation,
-            bool usePost,
-            bool useFormData,
-            MimeType? mimeType,
-            Client? client)?
-        operation,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)? searchAll,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Mode mode, MimeType? mimeType, String accept, Client? client)? capabilities,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client)? transaction,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client)? batch,
+    TResult Function(Uri base, Dstu2ResourceType type, FhirId id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? history,
+    TResult Function(Uri base, Dstu2ResourceType type, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? historyType,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? historyAll,
+    TResult Function(Uri base, Dstu2ResourceType? type, FhirId? id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Map<String, dynamic> fhirParameter, String operation, bool usePost, bool useFormData, MimeType? mimeType, String accept, Client? client)? operation,
     required TResult orElse(),
   }) {
     if (history != null) {
       return history(base, type, id, pretty, summary, format, elements,
-          parameters, count, since, at, reference, mimeType, client);
+          parameters, count, since, at, reference, mimeType, accept, client);
     }
     return orElse();
   }
@@ -11864,17 +8259,18 @@ abstract class FhirHistoryRequest extends FhirRequest {
   const factory FhirHistoryRequest(
       {required final Uri base,
       required final Dstu2ResourceType type,
-      required final Id id,
+      required final FhirId id,
       final bool pretty,
       final Summary summary,
       final String format,
       final List<String> elements,
       final List<String> parameters,
       final int? count,
-      final Instant? since,
+      final FhirInstant? since,
       final FhirDateTime? at,
       final String? reference,
       final MimeType? mimeType,
+      final String accept,
       final Client? client}) = _$FhirHistoryRequest;
   const FhirHistoryRequest._() : super._();
 
@@ -11887,7 +8283,7 @@ abstract class FhirHistoryRequest extends FhirRequest {
   Dstu2ResourceType get type;
 
   /// [id] - the id for the resource
-  Id get id;
+  FhirId get id;
   @override
 
   /// [pretty] - pretty print the json formatting in the response
@@ -11918,7 +8314,7 @@ abstract class FhirHistoryRequest extends FhirRequest {
 
   /// [since] - Only include resource versions that were created at or after the
   ///   given instant in time
-  Instant? get since;
+  FhirInstant? get since;
 
   /// [at] - Only include resource versions that were current at some point
   ///   during the time period specified in the date time value
@@ -11932,6 +8328,11 @@ abstract class FhirHistoryRequest extends FhirRequest {
   /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
   ///   but there are some older systems that won't accept that
   MimeType? get mimeType;
+  @override
+
+  /// [accept] - this will default to fhir+json just so it will stop sending
+  /// me XML - I hate XML
+  String get accept;
   @override
 
   /// [client] - if there's a specific client that you're going to be using
@@ -11959,10 +8360,11 @@ abstract class _$$FhirHistoryTypeRequestCopyWith<$Res>
       List<String> elements,
       List<String> parameters,
       int? count,
-      Instant? since,
+      FhirInstant? since,
       FhirDateTime? at,
       String? reference,
       MimeType? mimeType,
+      String accept,
       Client? client});
 }
 
@@ -11989,6 +8391,7 @@ class __$$FhirHistoryTypeRequestCopyWithImpl<$Res>
     Object? at = freezed,
     Object? reference = freezed,
     Object? mimeType = freezed,
+    Object? accept = null,
     Object? client = freezed,
   }) {
     return _then(_$FhirHistoryTypeRequest(
@@ -12027,7 +8430,7 @@ class __$$FhirHistoryTypeRequestCopyWithImpl<$Res>
       since: freezed == since
           ? _value.since
           : since // ignore: cast_nullable_to_non_nullable
-              as Instant?,
+              as FhirInstant?,
       at: freezed == at
           ? _value.at
           : at // ignore: cast_nullable_to_non_nullable
@@ -12040,6 +8443,10 @@ class __$$FhirHistoryTypeRequestCopyWithImpl<$Res>
           ? _value.mimeType
           : mimeType // ignore: cast_nullable_to_non_nullable
               as MimeType?,
+      accept: null == accept
+          ? _value.accept
+          : accept // ignore: cast_nullable_to_non_nullable
+              as String,
       client: freezed == client
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
@@ -12064,6 +8471,7 @@ class _$FhirHistoryTypeRequest extends FhirHistoryTypeRequest {
       this.at,
       this.reference,
       this.mimeType,
+      this.accept = 'application/fhir+json',
       this.client})
       : _elements = elements,
         _parameters = parameters,
@@ -12127,7 +8535,7 @@ class _$FhirHistoryTypeRequest extends FhirHistoryTypeRequest {
   /// [since] - Only include resource versions that were created at or after the
   ///   given instant in time
   @override
-  final Instant? since;
+  final FhirInstant? since;
 
   /// [at] - Only include resource versions that were current at some point
   ///   during the time period specified in the date time value
@@ -12144,13 +8552,19 @@ class _$FhirHistoryTypeRequest extends FhirHistoryTypeRequest {
   @override
   final MimeType? mimeType;
 
+  /// [accept] - this will default to fhir+json just so it will stop sending
+  /// me XML - I hate XML
+  @override
+  @JsonKey()
+  final String accept;
+
   /// [client] - if there's a specific client that you're going to be using
   @override
   final Client? client;
 
   @override
   String toString() {
-    return 'FhirRequest.historyType(base: $base, type: $type, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, count: $count, since: $since, at: $at, reference: $reference, mimeType: $mimeType, client: $client)';
+    return 'FhirRequest.historyType(base: $base, type: $type, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, count: $count, since: $since, at: $at, reference: $reference, mimeType: $mimeType, accept: $accept, client: $client)';
   }
 
   @override
@@ -12173,6 +8587,7 @@ class _$FhirHistoryTypeRequest extends FhirHistoryTypeRequest {
                 other.reference == reference) &&
             (identical(other.mimeType, mimeType) ||
                 other.mimeType == mimeType) &&
+            (identical(other.accept, accept) || other.accept == accept) &&
             (identical(other.client, client) || other.client == client));
   }
 
@@ -12191,6 +8606,7 @@ class _$FhirHistoryTypeRequest extends FhirHistoryTypeRequest {
       at,
       reference,
       mimeType,
+      accept,
       client);
 
   @JsonKey(ignore: true)
@@ -12206,38 +8622,31 @@ class _$FhirHistoryTypeRequest extends FhirHistoryTypeRequest {
     required TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         read,
     required TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
-            Id vid,
+            FhirId id,
+            FhirId vid,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         vRead,
-    required TResult Function(
-            Uri base,
-            Resource resource,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)
+    required TResult Function(Uri base, Resource resource, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)
         update,
     required TResult Function(
             Uri base,
@@ -12248,18 +8657,20 @@ class _$FhirHistoryTypeRequest extends FhirHistoryTypeRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         patch,
     required TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         delete,
     required TResult Function(
@@ -12271,6 +8682,7 @@ class _$FhirHistoryTypeRequest extends FhirHistoryTypeRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         create,
     required TResult Function(
@@ -12284,115 +8696,20 @@ class _$FhirHistoryTypeRequest extends FhirHistoryTypeRequest {
             bool usePost,
             RestfulRequest restfulRequest,
             MimeType? mimeType,
+            String accept,
             Client? client)
         search,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)
-        searchAll,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Mode mode,
-            MimeType? mimeType,
-            Client? client)
-        capabilities,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)
-        transaction,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)
-        batch,
-    required TResult Function(
-            Uri base,
-            Dstu2ResourceType type,
-            Id id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)
-        history,
-    required TResult Function(
-            Uri base,
-            Dstu2ResourceType type,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)
-        historyType,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)
-        historyAll,
-    required TResult Function(
-            Uri base,
-            Dstu2ResourceType? type,
-            FhirId? id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Map<String, dynamic> fhirParameter,
-            String operation,
-            bool usePost,
-            bool useFormData,
-            MimeType? mimeType,
-            Client? client)
-        operation,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client) searchAll,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Mode mode, MimeType? mimeType, String accept, Client? client) capabilities,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client) transaction,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client) batch,
+    required TResult Function(Uri base, Dstu2ResourceType type, FhirId id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client) history,
+    required TResult Function(Uri base, Dstu2ResourceType type, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client) historyType,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client) historyAll,
+    required TResult Function(Uri base, Dstu2ResourceType? type, FhirId? id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Map<String, dynamic> fhirParameter, String operation, bool usePost, bool useFormData, MimeType? mimeType, String accept, Client? client) operation,
   }) {
     return historyType(base, type, pretty, summary, format, elements,
-        parameters, count, since, at, reference, mimeType, client);
+        parameters, count, since, at, reference, mimeType, accept, client);
   }
 
   @override
@@ -12401,38 +8718,31 @@ class _$FhirHistoryTypeRequest extends FhirHistoryTypeRequest {
     TResult? Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         read,
     TResult? Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
-            Id vid,
+            FhirId id,
+            FhirId vid,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         vRead,
-    TResult? Function(
-            Uri base,
-            Resource resource,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)?
+    TResult? Function(Uri base, Resource resource, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)?
         update,
     TResult? Function(
             Uri base,
@@ -12443,18 +8753,20 @@ class _$FhirHistoryTypeRequest extends FhirHistoryTypeRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         patch,
     TResult? Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         delete,
     TResult? Function(
@@ -12466,6 +8778,7 @@ class _$FhirHistoryTypeRequest extends FhirHistoryTypeRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         create,
     TResult? Function(
@@ -12479,115 +8792,20 @@ class _$FhirHistoryTypeRequest extends FhirHistoryTypeRequest {
             bool usePost,
             RestfulRequest restfulRequest,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         search,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)?
-        searchAll,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Mode mode,
-            MimeType? mimeType,
-            Client? client)?
-        capabilities,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)?
-        transaction,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)?
-        batch,
-    TResult? Function(
-            Uri base,
-            Dstu2ResourceType type,
-            Id id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        history,
-    TResult? Function(
-            Uri base,
-            Dstu2ResourceType type,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        historyType,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        historyAll,
-    TResult? Function(
-            Uri base,
-            Dstu2ResourceType? type,
-            FhirId? id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Map<String, dynamic> fhirParameter,
-            String operation,
-            bool usePost,
-            bool useFormData,
-            MimeType? mimeType,
-            Client? client)?
-        operation,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)? searchAll,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Mode mode, MimeType? mimeType, String accept, Client? client)? capabilities,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client)? transaction,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client)? batch,
+    TResult? Function(Uri base, Dstu2ResourceType type, FhirId id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? history,
+    TResult? Function(Uri base, Dstu2ResourceType type, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? historyType,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? historyAll,
+    TResult? Function(Uri base, Dstu2ResourceType? type, FhirId? id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Map<String, dynamic> fhirParameter, String operation, bool usePost, bool useFormData, MimeType? mimeType, String accept, Client? client)? operation,
   }) {
     return historyType?.call(base, type, pretty, summary, format, elements,
-        parameters, count, since, at, reference, mimeType, client);
+        parameters, count, since, at, reference, mimeType, accept, client);
   }
 
   @override
@@ -12596,38 +8814,31 @@ class _$FhirHistoryTypeRequest extends FhirHistoryTypeRequest {
     TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         read,
     TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
-            Id vid,
+            FhirId id,
+            FhirId vid,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         vRead,
-    TResult Function(
-            Uri base,
-            Resource resource,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)?
+    TResult Function(Uri base, Resource resource, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)?
         update,
     TResult Function(
             Uri base,
@@ -12638,18 +8849,20 @@ class _$FhirHistoryTypeRequest extends FhirHistoryTypeRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         patch,
     TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         delete,
     TResult Function(
@@ -12661,6 +8874,7 @@ class _$FhirHistoryTypeRequest extends FhirHistoryTypeRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         create,
     TResult Function(
@@ -12674,117 +8888,22 @@ class _$FhirHistoryTypeRequest extends FhirHistoryTypeRequest {
             bool usePost,
             RestfulRequest restfulRequest,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         search,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)?
-        searchAll,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Mode mode,
-            MimeType? mimeType,
-            Client? client)?
-        capabilities,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)?
-        transaction,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)?
-        batch,
-    TResult Function(
-            Uri base,
-            Dstu2ResourceType type,
-            Id id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        history,
-    TResult Function(
-            Uri base,
-            Dstu2ResourceType type,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        historyType,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        historyAll,
-    TResult Function(
-            Uri base,
-            Dstu2ResourceType? type,
-            FhirId? id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Map<String, dynamic> fhirParameter,
-            String operation,
-            bool usePost,
-            bool useFormData,
-            MimeType? mimeType,
-            Client? client)?
-        operation,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)? searchAll,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Mode mode, MimeType? mimeType, String accept, Client? client)? capabilities,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client)? transaction,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client)? batch,
+    TResult Function(Uri base, Dstu2ResourceType type, FhirId id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? history,
+    TResult Function(Uri base, Dstu2ResourceType type, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? historyType,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? historyAll,
+    TResult Function(Uri base, Dstu2ResourceType? type, FhirId? id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Map<String, dynamic> fhirParameter, String operation, bool usePost, bool useFormData, MimeType? mimeType, String accept, Client? client)? operation,
     required TResult orElse(),
   }) {
     if (historyType != null) {
       return historyType(base, type, pretty, summary, format, elements,
-          parameters, count, since, at, reference, mimeType, client);
+          parameters, count, since, at, reference, mimeType, accept, client);
     }
     return orElse();
   }
@@ -12870,10 +8989,11 @@ abstract class FhirHistoryTypeRequest extends FhirRequest {
       final List<String> elements,
       final List<String> parameters,
       final int? count,
-      final Instant? since,
+      final FhirInstant? since,
       final FhirDateTime? at,
       final String? reference,
       final MimeType? mimeType,
+      final String accept,
       final Client? client}) = _$FhirHistoryTypeRequest;
   const FhirHistoryTypeRequest._() : super._();
 
@@ -12914,7 +9034,7 @@ abstract class FhirHistoryTypeRequest extends FhirRequest {
 
   /// [since] - Only include resource versions that were created at or after the
   ///   given instant in time
-  Instant? get since;
+  FhirInstant? get since;
 
   /// [at] - Only include resource versions that were current at some point
   ///   during the time period specified in the date time value
@@ -12928,6 +9048,11 @@ abstract class FhirHistoryTypeRequest extends FhirRequest {
   /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
   ///   but there are some older systems that won't accept that
   MimeType? get mimeType;
+  @override
+
+  /// [accept] - this will default to fhir+json just so it will stop sending
+  /// me XML - I hate XML
+  String get accept;
   @override
 
   /// [client] - if there's a specific client that you're going to be using
@@ -12954,10 +9079,11 @@ abstract class _$$FhirHistoryAllRequestCopyWith<$Res>
       List<String> elements,
       List<String> parameters,
       int? count,
-      Instant? since,
+      FhirInstant? since,
       FhirDateTime? at,
       String? reference,
       MimeType? mimeType,
+      String accept,
       Client? client});
 }
 
@@ -12983,6 +9109,7 @@ class __$$FhirHistoryAllRequestCopyWithImpl<$Res>
     Object? at = freezed,
     Object? reference = freezed,
     Object? mimeType = freezed,
+    Object? accept = null,
     Object? client = freezed,
   }) {
     return _then(_$FhirHistoryAllRequest(
@@ -13017,7 +9144,7 @@ class __$$FhirHistoryAllRequestCopyWithImpl<$Res>
       since: freezed == since
           ? _value.since
           : since // ignore: cast_nullable_to_non_nullable
-              as Instant?,
+              as FhirInstant?,
       at: freezed == at
           ? _value.at
           : at // ignore: cast_nullable_to_non_nullable
@@ -13030,6 +9157,10 @@ class __$$FhirHistoryAllRequestCopyWithImpl<$Res>
           ? _value.mimeType
           : mimeType // ignore: cast_nullable_to_non_nullable
               as MimeType?,
+      accept: null == accept
+          ? _value.accept
+          : accept // ignore: cast_nullable_to_non_nullable
+              as String,
       client: freezed == client
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
@@ -13053,6 +9184,7 @@ class _$FhirHistoryAllRequest extends FhirHistoryAllRequest {
       this.at,
       this.reference,
       this.mimeType,
+      this.accept = 'application/fhir+json',
       this.client})
       : _elements = elements,
         _parameters = parameters,
@@ -13112,7 +9244,7 @@ class _$FhirHistoryAllRequest extends FhirHistoryAllRequest {
   /// [since] - Only include resource versions that were created at or after the
   ///   given instant in time
   @override
-  final Instant? since;
+  final FhirInstant? since;
 
   /// [at] - Only include resource versions that were current at some point
   ///   during the time period specified in the date time value
@@ -13129,13 +9261,19 @@ class _$FhirHistoryAllRequest extends FhirHistoryAllRequest {
   @override
   final MimeType? mimeType;
 
+  /// [accept] - this will default to fhir+json just so it will stop sending
+  /// me XML - I hate XML
+  @override
+  @JsonKey()
+  final String accept;
+
   /// [client] - if there's a specific client that you're going to be using
   @override
   final Client? client;
 
   @override
   String toString() {
-    return 'FhirRequest.historyAll(base: $base, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, count: $count, since: $since, at: $at, reference: $reference, mimeType: $mimeType, client: $client)';
+    return 'FhirRequest.historyAll(base: $base, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, count: $count, since: $since, at: $at, reference: $reference, mimeType: $mimeType, accept: $accept, client: $client)';
   }
 
   @override
@@ -13157,6 +9295,7 @@ class _$FhirHistoryAllRequest extends FhirHistoryAllRequest {
                 other.reference == reference) &&
             (identical(other.mimeType, mimeType) ||
                 other.mimeType == mimeType) &&
+            (identical(other.accept, accept) || other.accept == accept) &&
             (identical(other.client, client) || other.client == client));
   }
 
@@ -13174,6 +9313,7 @@ class _$FhirHistoryAllRequest extends FhirHistoryAllRequest {
       at,
       reference,
       mimeType,
+      accept,
       client);
 
   @JsonKey(ignore: true)
@@ -13189,38 +9329,31 @@ class _$FhirHistoryAllRequest extends FhirHistoryAllRequest {
     required TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         read,
     required TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
-            Id vid,
+            FhirId id,
+            FhirId vid,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         vRead,
-    required TResult Function(
-            Uri base,
-            Resource resource,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)
+    required TResult Function(Uri base, Resource resource, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)
         update,
     required TResult Function(
             Uri base,
@@ -13231,18 +9364,20 @@ class _$FhirHistoryAllRequest extends FhirHistoryAllRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         patch,
     required TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         delete,
     required TResult Function(
@@ -13254,6 +9389,7 @@ class _$FhirHistoryAllRequest extends FhirHistoryAllRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         create,
     required TResult Function(
@@ -13267,115 +9403,20 @@ class _$FhirHistoryAllRequest extends FhirHistoryAllRequest {
             bool usePost,
             RestfulRequest restfulRequest,
             MimeType? mimeType,
+            String accept,
             Client? client)
         search,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)
-        searchAll,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Mode mode,
-            MimeType? mimeType,
-            Client? client)
-        capabilities,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)
-        transaction,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)
-        batch,
-    required TResult Function(
-            Uri base,
-            Dstu2ResourceType type,
-            Id id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)
-        history,
-    required TResult Function(
-            Uri base,
-            Dstu2ResourceType type,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)
-        historyType,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)
-        historyAll,
-    required TResult Function(
-            Uri base,
-            Dstu2ResourceType? type,
-            FhirId? id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Map<String, dynamic> fhirParameter,
-            String operation,
-            bool usePost,
-            bool useFormData,
-            MimeType? mimeType,
-            Client? client)
-        operation,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client) searchAll,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Mode mode, MimeType? mimeType, String accept, Client? client) capabilities,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client) transaction,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client) batch,
+    required TResult Function(Uri base, Dstu2ResourceType type, FhirId id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client) history,
+    required TResult Function(Uri base, Dstu2ResourceType type, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client) historyType,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client) historyAll,
+    required TResult Function(Uri base, Dstu2ResourceType? type, FhirId? id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Map<String, dynamic> fhirParameter, String operation, bool usePost, bool useFormData, MimeType? mimeType, String accept, Client? client) operation,
   }) {
     return historyAll(base, pretty, summary, format, elements, parameters,
-        count, since, at, reference, mimeType, client);
+        count, since, at, reference, mimeType, accept, client);
   }
 
   @override
@@ -13384,38 +9425,31 @@ class _$FhirHistoryAllRequest extends FhirHistoryAllRequest {
     TResult? Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         read,
     TResult? Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
-            Id vid,
+            FhirId id,
+            FhirId vid,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         vRead,
-    TResult? Function(
-            Uri base,
-            Resource resource,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)?
+    TResult? Function(Uri base, Resource resource, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)?
         update,
     TResult? Function(
             Uri base,
@@ -13426,18 +9460,20 @@ class _$FhirHistoryAllRequest extends FhirHistoryAllRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         patch,
     TResult? Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         delete,
     TResult? Function(
@@ -13449,6 +9485,7 @@ class _$FhirHistoryAllRequest extends FhirHistoryAllRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         create,
     TResult? Function(
@@ -13462,115 +9499,20 @@ class _$FhirHistoryAllRequest extends FhirHistoryAllRequest {
             bool usePost,
             RestfulRequest restfulRequest,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         search,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)?
-        searchAll,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Mode mode,
-            MimeType? mimeType,
-            Client? client)?
-        capabilities,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)?
-        transaction,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)?
-        batch,
-    TResult? Function(
-            Uri base,
-            Dstu2ResourceType type,
-            Id id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        history,
-    TResult? Function(
-            Uri base,
-            Dstu2ResourceType type,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        historyType,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        historyAll,
-    TResult? Function(
-            Uri base,
-            Dstu2ResourceType? type,
-            FhirId? id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Map<String, dynamic> fhirParameter,
-            String operation,
-            bool usePost,
-            bool useFormData,
-            MimeType? mimeType,
-            Client? client)?
-        operation,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)? searchAll,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Mode mode, MimeType? mimeType, String accept, Client? client)? capabilities,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client)? transaction,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client)? batch,
+    TResult? Function(Uri base, Dstu2ResourceType type, FhirId id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? history,
+    TResult? Function(Uri base, Dstu2ResourceType type, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? historyType,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? historyAll,
+    TResult? Function(Uri base, Dstu2ResourceType? type, FhirId? id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Map<String, dynamic> fhirParameter, String operation, bool usePost, bool useFormData, MimeType? mimeType, String accept, Client? client)? operation,
   }) {
     return historyAll?.call(base, pretty, summary, format, elements, parameters,
-        count, since, at, reference, mimeType, client);
+        count, since, at, reference, mimeType, accept, client);
   }
 
   @override
@@ -13579,38 +9521,31 @@ class _$FhirHistoryAllRequest extends FhirHistoryAllRequest {
     TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         read,
     TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
-            Id vid,
+            FhirId id,
+            FhirId vid,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         vRead,
-    TResult Function(
-            Uri base,
-            Resource resource,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)?
+    TResult Function(Uri base, Resource resource, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)?
         update,
     TResult Function(
             Uri base,
@@ -13621,18 +9556,20 @@ class _$FhirHistoryAllRequest extends FhirHistoryAllRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         patch,
     TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         delete,
     TResult Function(
@@ -13644,6 +9581,7 @@ class _$FhirHistoryAllRequest extends FhirHistoryAllRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         create,
     TResult Function(
@@ -13657,117 +9595,22 @@ class _$FhirHistoryAllRequest extends FhirHistoryAllRequest {
             bool usePost,
             RestfulRequest restfulRequest,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         search,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)?
-        searchAll,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Mode mode,
-            MimeType? mimeType,
-            Client? client)?
-        capabilities,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)?
-        transaction,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)?
-        batch,
-    TResult Function(
-            Uri base,
-            Dstu2ResourceType type,
-            Id id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        history,
-    TResult Function(
-            Uri base,
-            Dstu2ResourceType type,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        historyType,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        historyAll,
-    TResult Function(
-            Uri base,
-            Dstu2ResourceType? type,
-            FhirId? id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Map<String, dynamic> fhirParameter,
-            String operation,
-            bool usePost,
-            bool useFormData,
-            MimeType? mimeType,
-            Client? client)?
-        operation,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)? searchAll,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Mode mode, MimeType? mimeType, String accept, Client? client)? capabilities,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client)? transaction,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client)? batch,
+    TResult Function(Uri base, Dstu2ResourceType type, FhirId id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? history,
+    TResult Function(Uri base, Dstu2ResourceType type, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? historyType,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? historyAll,
+    TResult Function(Uri base, Dstu2ResourceType? type, FhirId? id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Map<String, dynamic> fhirParameter, String operation, bool usePost, bool useFormData, MimeType? mimeType, String accept, Client? client)? operation,
     required TResult orElse(),
   }) {
     if (historyAll != null) {
       return historyAll(base, pretty, summary, format, elements, parameters,
-          count, since, at, reference, mimeType, client);
+          count, since, at, reference, mimeType, accept, client);
     }
     return orElse();
   }
@@ -13852,10 +9695,11 @@ abstract class FhirHistoryAllRequest extends FhirRequest {
       final List<String> elements,
       final List<String> parameters,
       final int? count,
-      final Instant? since,
+      final FhirInstant? since,
       final FhirDateTime? at,
       final String? reference,
       final MimeType? mimeType,
+      final String accept,
       final Client? client}) = _$FhirHistoryAllRequest;
   const FhirHistoryAllRequest._() : super._();
 
@@ -13893,7 +9737,7 @@ abstract class FhirHistoryAllRequest extends FhirRequest {
 
   /// [since] - Only include resource versions that were created at or after the
   ///   given instant in time
-  Instant? get since;
+  FhirInstant? get since;
 
   /// [at] - Only include resource versions that were current at some point
   ///   during the time period specified in the date time value
@@ -13907,6 +9751,11 @@ abstract class FhirHistoryAllRequest extends FhirRequest {
   /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
   ///   but there are some older systems that won't accept that
   MimeType? get mimeType;
+  @override
+
+  /// [accept] - this will default to fhir+json just so it will stop sending
+  /// me XML - I hate XML
+  String get accept;
   @override
 
   /// [client] - if there's a specific client that you're going to be using
@@ -13939,6 +9788,7 @@ abstract class _$$FhirOperationRequestCopyWith<$Res>
       bool usePost,
       bool useFormData,
       MimeType? mimeType,
+      String accept,
       Client? client});
 }
 
@@ -13966,6 +9816,7 @@ class __$$FhirOperationRequestCopyWithImpl<$Res>
     Object? usePost = null,
     Object? useFormData = null,
     Object? mimeType = freezed,
+    Object? accept = null,
     Object? client = freezed,
   }) {
     return _then(_$FhirOperationRequest(
@@ -13980,7 +9831,7 @@ class __$$FhirOperationRequestCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       pretty: null == pretty
           ? _value.pretty
           : pretty // ignore: cast_nullable_to_non_nullable
@@ -14021,6 +9872,10 @@ class __$$FhirOperationRequestCopyWithImpl<$Res>
           ? _value.mimeType
           : mimeType // ignore: cast_nullable_to_non_nullable
               as MimeType?,
+      accept: null == accept
+          ? _value.accept
+          : accept // ignore: cast_nullable_to_non_nullable
+              as String,
       client: freezed == client
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
@@ -14046,6 +9901,7 @@ class _$FhirOperationRequest extends FhirOperationRequest {
       this.usePost = false,
       this.useFormData = false,
       this.mimeType,
+      this.accept = 'application/fhir+json',
       this.client})
       : _elements = elements,
         _parameters = parameters,
@@ -14130,13 +9986,19 @@ class _$FhirOperationRequest extends FhirOperationRequest {
   @override
   final MimeType? mimeType;
 
+  /// [accept] - this will default to fhir+json just so it will stop sending
+  /// me XML - I hate XML
+  @override
+  @JsonKey()
+  final String accept;
+
   /// [client] - if there's a specific client that you're going to be using
   @override
   final Client? client;
 
   @override
   String toString() {
-    return 'FhirRequest.operation(base: $base, type: $type, id: $id, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, fhirParameter: $fhirParameter, operation: $operation, usePost: $usePost, useFormData: $useFormData, mimeType: $mimeType, client: $client)';
+    return 'FhirRequest.operation(base: $base, type: $type, id: $id, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, fhirParameter: $fhirParameter, operation: $operation, usePost: $usePost, useFormData: $useFormData, mimeType: $mimeType, accept: $accept, client: $client)';
   }
 
   @override
@@ -14162,6 +10024,7 @@ class _$FhirOperationRequest extends FhirOperationRequest {
                 other.useFormData == useFormData) &&
             (identical(other.mimeType, mimeType) ||
                 other.mimeType == mimeType) &&
+            (identical(other.accept, accept) || other.accept == accept) &&
             (identical(other.client, client) || other.client == client));
   }
 
@@ -14181,6 +10044,7 @@ class _$FhirOperationRequest extends FhirOperationRequest {
       usePost,
       useFormData,
       mimeType,
+      accept,
       client);
 
   @JsonKey(ignore: true)
@@ -14196,38 +10060,31 @@ class _$FhirOperationRequest extends FhirOperationRequest {
     required TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         read,
     required TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
-            Id vid,
+            FhirId id,
+            FhirId vid,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         vRead,
-    required TResult Function(
-            Uri base,
-            Resource resource,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)
+    required TResult Function(Uri base, Resource resource, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)
         update,
     required TResult Function(
             Uri base,
@@ -14238,18 +10095,20 @@ class _$FhirOperationRequest extends FhirOperationRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         patch,
     required TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         delete,
     required TResult Function(
@@ -14261,6 +10120,7 @@ class _$FhirOperationRequest extends FhirOperationRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)
         create,
     required TResult Function(
@@ -14274,112 +10134,17 @@ class _$FhirOperationRequest extends FhirOperationRequest {
             bool usePost,
             RestfulRequest restfulRequest,
             MimeType? mimeType,
+            String accept,
             Client? client)
         search,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)
-        searchAll,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Mode mode,
-            MimeType? mimeType,
-            Client? client)
-        capabilities,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)
-        transaction,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)
-        batch,
-    required TResult Function(
-            Uri base,
-            Dstu2ResourceType type,
-            Id id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)
-        history,
-    required TResult Function(
-            Uri base,
-            Dstu2ResourceType type,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)
-        historyType,
-    required TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)
-        historyAll,
-    required TResult Function(
-            Uri base,
-            Dstu2ResourceType? type,
-            FhirId? id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Map<String, dynamic> fhirParameter,
-            String operation,
-            bool usePost,
-            bool useFormData,
-            MimeType? mimeType,
-            Client? client)
-        operation,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client) searchAll,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Mode mode, MimeType? mimeType, String accept, Client? client) capabilities,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client) transaction,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client) batch,
+    required TResult Function(Uri base, Dstu2ResourceType type, FhirId id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client) history,
+    required TResult Function(Uri base, Dstu2ResourceType type, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client) historyType,
+    required TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client) historyAll,
+    required TResult Function(Uri base, Dstu2ResourceType? type, FhirId? id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Map<String, dynamic> fhirParameter, String operation, bool usePost, bool useFormData, MimeType? mimeType, String accept, Client? client) operation,
   }) {
     return operation(
         base,
@@ -14395,6 +10160,7 @@ class _$FhirOperationRequest extends FhirOperationRequest {
         usePost,
         useFormData,
         mimeType,
+        accept,
         client);
   }
 
@@ -14404,38 +10170,31 @@ class _$FhirOperationRequest extends FhirOperationRequest {
     TResult? Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         read,
     TResult? Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
-            Id vid,
+            FhirId id,
+            FhirId vid,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         vRead,
-    TResult? Function(
-            Uri base,
-            Resource resource,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)?
+    TResult? Function(Uri base, Resource resource, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)?
         update,
     TResult? Function(
             Uri base,
@@ -14446,18 +10205,20 @@ class _$FhirOperationRequest extends FhirOperationRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         patch,
     TResult? Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         delete,
     TResult? Function(
@@ -14469,6 +10230,7 @@ class _$FhirOperationRequest extends FhirOperationRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         create,
     TResult? Function(
@@ -14482,112 +10244,17 @@ class _$FhirOperationRequest extends FhirOperationRequest {
             bool usePost,
             RestfulRequest restfulRequest,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         search,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)?
-        searchAll,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Mode mode,
-            MimeType? mimeType,
-            Client? client)?
-        capabilities,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)?
-        transaction,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)?
-        batch,
-    TResult? Function(
-            Uri base,
-            Dstu2ResourceType type,
-            Id id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        history,
-    TResult? Function(
-            Uri base,
-            Dstu2ResourceType type,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        historyType,
-    TResult? Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        historyAll,
-    TResult? Function(
-            Uri base,
-            Dstu2ResourceType? type,
-            FhirId? id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Map<String, dynamic> fhirParameter,
-            String operation,
-            bool usePost,
-            bool useFormData,
-            MimeType? mimeType,
-            Client? client)?
-        operation,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)? searchAll,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Mode mode, MimeType? mimeType, String accept, Client? client)? capabilities,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client)? transaction,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client)? batch,
+    TResult? Function(Uri base, Dstu2ResourceType type, FhirId id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? history,
+    TResult? Function(Uri base, Dstu2ResourceType type, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? historyType,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? historyAll,
+    TResult? Function(Uri base, Dstu2ResourceType? type, FhirId? id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Map<String, dynamic> fhirParameter, String operation, bool usePost, bool useFormData, MimeType? mimeType, String accept, Client? client)? operation,
   }) {
     return operation?.call(
         base,
@@ -14603,6 +10270,7 @@ class _$FhirOperationRequest extends FhirOperationRequest {
         usePost,
         useFormData,
         mimeType,
+        accept,
         client);
   }
 
@@ -14612,38 +10280,31 @@ class _$FhirOperationRequest extends FhirOperationRequest {
     TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         read,
     TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
-            Id vid,
+            FhirId id,
+            FhirId vid,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         vRead,
-    TResult Function(
-            Uri base,
-            Resource resource,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)?
+    TResult Function(Uri base, Resource resource, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)?
         update,
     TResult Function(
             Uri base,
@@ -14654,18 +10315,20 @@ class _$FhirOperationRequest extends FhirOperationRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         patch,
     TResult Function(
             Uri base,
             Dstu2ResourceType type,
-            Id id,
+            FhirId id,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         delete,
     TResult Function(
@@ -14677,6 +10340,7 @@ class _$FhirOperationRequest extends FhirOperationRequest {
             List<String> elements,
             List<String> parameters,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         create,
     TResult Function(
@@ -14690,112 +10354,17 @@ class _$FhirOperationRequest extends FhirOperationRequest {
             bool usePost,
             RestfulRequest restfulRequest,
             MimeType? mimeType,
+            String accept,
             Client? client)?
         search,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            MimeType? mimeType,
-            Client? client)?
-        searchAll,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Mode mode,
-            MimeType? mimeType,
-            Client? client)?
-        capabilities,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)?
-        transaction,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Bundle bundle,
-            MimeType? mimeType,
-            Client? client)?
-        batch,
-    TResult Function(
-            Uri base,
-            Dstu2ResourceType type,
-            Id id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        history,
-    TResult Function(
-            Uri base,
-            Dstu2ResourceType type,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        historyType,
-    TResult Function(
-            Uri base,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            int? count,
-            Instant? since,
-            FhirDateTime? at,
-            String? reference,
-            MimeType? mimeType,
-            Client? client)?
-        historyAll,
-    TResult Function(
-            Uri base,
-            Dstu2ResourceType? type,
-            FhirId? id,
-            bool pretty,
-            Summary summary,
-            String format,
-            List<String> elements,
-            List<String> parameters,
-            Map<String, dynamic> fhirParameter,
-            String operation,
-            bool usePost,
-            bool useFormData,
-            MimeType? mimeType,
-            Client? client)?
-        operation,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, MimeType? mimeType, String accept, Client? client)? searchAll,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Mode mode, MimeType? mimeType, String accept, Client? client)? capabilities,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client)? transaction,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Bundle bundle, MimeType? mimeType, String accept, Client? client)? batch,
+    TResult Function(Uri base, Dstu2ResourceType type, FhirId id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? history,
+    TResult Function(Uri base, Dstu2ResourceType type, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? historyType,
+    TResult Function(Uri base, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, int? count, FhirInstant? since, FhirDateTime? at, String? reference, MimeType? mimeType, String accept, Client? client)? historyAll,
+    TResult Function(Uri base, Dstu2ResourceType? type, FhirId? id, bool pretty, Summary summary, String format, List<String> elements, List<String> parameters, Map<String, dynamic> fhirParameter, String operation, bool usePost, bool useFormData, MimeType? mimeType, String accept, Client? client)? operation,
     required TResult orElse(),
   }) {
     if (operation != null) {
@@ -14813,6 +10382,7 @@ class _$FhirOperationRequest extends FhirOperationRequest {
           usePost,
           useFormData,
           mimeType,
+          accept,
           client);
     }
     return orElse();
@@ -14904,6 +10474,7 @@ abstract class FhirOperationRequest extends FhirRequest {
       final bool usePost,
       final bool useFormData,
       final MimeType? mimeType,
+      final String accept,
       final Client? client}) = _$FhirOperationRequest;
   const FhirOperationRequest._() : super._();
 
@@ -14949,6 +10520,11 @@ abstract class FhirOperationRequest extends FhirRequest {
   /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
   ///   but there are some older systems that won't accept that
   MimeType? get mimeType;
+  @override
+
+  /// [accept] - this will default to fhir+json just so it will stop sending
+  /// me XML - I hate XML
+  String get accept;
   @override
 
   /// [client] - if there's a specific client that you're going to be using

@@ -18,40 +18,40 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$SearchParamToken {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(FhirUri? system, Code? code) equal,
-    required TResult Function(FhirUri? system, Code? code) text,
-    required TResult Function(FhirUri? system, Code? code) not,
-    required TResult Function(FhirUri? system, Code? code) above,
-    required TResult Function(FhirUri? system, Code? code) below,
-    required TResult Function(FhirUri? system, Code? code) in_,
-    required TResult Function(FhirUri? system, Code? code) notIn,
-    required TResult Function(FhirUri? system, Code? code) ofType,
+    required TResult Function(FhirUri? system, FhirCode? code) equal,
+    required TResult Function(FhirUri? system, FhirCode? code) text,
+    required TResult Function(FhirUri? system, FhirCode? code) not,
+    required TResult Function(FhirUri? system, FhirCode? code) above,
+    required TResult Function(FhirUri? system, FhirCode? code) below,
+    required TResult Function(FhirUri? system, FhirCode? code) in_,
+    required TResult Function(FhirUri? system, FhirCode? code) notIn,
+    required TResult Function(FhirUri? system, FhirCode? code) ofType,
     required TResult Function(bool missing) missing,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(FhirUri? system, Code? code)? equal,
-    TResult? Function(FhirUri? system, Code? code)? text,
-    TResult? Function(FhirUri? system, Code? code)? not,
-    TResult? Function(FhirUri? system, Code? code)? above,
-    TResult? Function(FhirUri? system, Code? code)? below,
-    TResult? Function(FhirUri? system, Code? code)? in_,
-    TResult? Function(FhirUri? system, Code? code)? notIn,
-    TResult? Function(FhirUri? system, Code? code)? ofType,
+    TResult? Function(FhirUri? system, FhirCode? code)? equal,
+    TResult? Function(FhirUri? system, FhirCode? code)? text,
+    TResult? Function(FhirUri? system, FhirCode? code)? not,
+    TResult? Function(FhirUri? system, FhirCode? code)? above,
+    TResult? Function(FhirUri? system, FhirCode? code)? below,
+    TResult? Function(FhirUri? system, FhirCode? code)? in_,
+    TResult? Function(FhirUri? system, FhirCode? code)? notIn,
+    TResult? Function(FhirUri? system, FhirCode? code)? ofType,
     TResult? Function(bool missing)? missing,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(FhirUri? system, Code? code)? equal,
-    TResult Function(FhirUri? system, Code? code)? text,
-    TResult Function(FhirUri? system, Code? code)? not,
-    TResult Function(FhirUri? system, Code? code)? above,
-    TResult Function(FhirUri? system, Code? code)? below,
-    TResult Function(FhirUri? system, Code? code)? in_,
-    TResult Function(FhirUri? system, Code? code)? notIn,
-    TResult Function(FhirUri? system, Code? code)? ofType,
+    TResult Function(FhirUri? system, FhirCode? code)? equal,
+    TResult Function(FhirUri? system, FhirCode? code)? text,
+    TResult Function(FhirUri? system, FhirCode? code)? not,
+    TResult Function(FhirUri? system, FhirCode? code)? above,
+    TResult Function(FhirUri? system, FhirCode? code)? below,
+    TResult Function(FhirUri? system, FhirCode? code)? in_,
+    TResult Function(FhirUri? system, FhirCode? code)? notIn,
+    TResult Function(FhirUri? system, FhirCode? code)? ofType,
     TResult Function(bool missing)? missing,
     required TResult orElse(),
   }) =>
@@ -122,7 +122,7 @@ abstract class _$$_SearchParamTokenEqualCopyWith<$Res> {
           $Res Function(_$_SearchParamTokenEqual) then) =
       __$$_SearchParamTokenEqualCopyWithImpl<$Res>;
   @useResult
-  $Res call({FhirUri? system, Code? code});
+  $Res call({FhirUri? system, FhirCode? code});
 }
 
 /// @nodoc
@@ -147,7 +147,7 @@ class __$$_SearchParamTokenEqualCopyWithImpl<$Res>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
     ));
   }
 }
@@ -160,7 +160,7 @@ class _$_SearchParamTokenEqual extends _SearchParamTokenEqual {
   @override
   final FhirUri? system;
   @override
-  final Code? code;
+  final FhirCode? code;
 
   @override
   String toString() {
@@ -189,14 +189,14 @@ class _$_SearchParamTokenEqual extends _SearchParamTokenEqual {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(FhirUri? system, Code? code) equal,
-    required TResult Function(FhirUri? system, Code? code) text,
-    required TResult Function(FhirUri? system, Code? code) not,
-    required TResult Function(FhirUri? system, Code? code) above,
-    required TResult Function(FhirUri? system, Code? code) below,
-    required TResult Function(FhirUri? system, Code? code) in_,
-    required TResult Function(FhirUri? system, Code? code) notIn,
-    required TResult Function(FhirUri? system, Code? code) ofType,
+    required TResult Function(FhirUri? system, FhirCode? code) equal,
+    required TResult Function(FhirUri? system, FhirCode? code) text,
+    required TResult Function(FhirUri? system, FhirCode? code) not,
+    required TResult Function(FhirUri? system, FhirCode? code) above,
+    required TResult Function(FhirUri? system, FhirCode? code) below,
+    required TResult Function(FhirUri? system, FhirCode? code) in_,
+    required TResult Function(FhirUri? system, FhirCode? code) notIn,
+    required TResult Function(FhirUri? system, FhirCode? code) ofType,
     required TResult Function(bool missing) missing,
   }) {
     return equal(system, code);
@@ -205,14 +205,14 @@ class _$_SearchParamTokenEqual extends _SearchParamTokenEqual {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(FhirUri? system, Code? code)? equal,
-    TResult? Function(FhirUri? system, Code? code)? text,
-    TResult? Function(FhirUri? system, Code? code)? not,
-    TResult? Function(FhirUri? system, Code? code)? above,
-    TResult? Function(FhirUri? system, Code? code)? below,
-    TResult? Function(FhirUri? system, Code? code)? in_,
-    TResult? Function(FhirUri? system, Code? code)? notIn,
-    TResult? Function(FhirUri? system, Code? code)? ofType,
+    TResult? Function(FhirUri? system, FhirCode? code)? equal,
+    TResult? Function(FhirUri? system, FhirCode? code)? text,
+    TResult? Function(FhirUri? system, FhirCode? code)? not,
+    TResult? Function(FhirUri? system, FhirCode? code)? above,
+    TResult? Function(FhirUri? system, FhirCode? code)? below,
+    TResult? Function(FhirUri? system, FhirCode? code)? in_,
+    TResult? Function(FhirUri? system, FhirCode? code)? notIn,
+    TResult? Function(FhirUri? system, FhirCode? code)? ofType,
     TResult? Function(bool missing)? missing,
   }) {
     return equal?.call(system, code);
@@ -221,14 +221,14 @@ class _$_SearchParamTokenEqual extends _SearchParamTokenEqual {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(FhirUri? system, Code? code)? equal,
-    TResult Function(FhirUri? system, Code? code)? text,
-    TResult Function(FhirUri? system, Code? code)? not,
-    TResult Function(FhirUri? system, Code? code)? above,
-    TResult Function(FhirUri? system, Code? code)? below,
-    TResult Function(FhirUri? system, Code? code)? in_,
-    TResult Function(FhirUri? system, Code? code)? notIn,
-    TResult Function(FhirUri? system, Code? code)? ofType,
+    TResult Function(FhirUri? system, FhirCode? code)? equal,
+    TResult Function(FhirUri? system, FhirCode? code)? text,
+    TResult Function(FhirUri? system, FhirCode? code)? not,
+    TResult Function(FhirUri? system, FhirCode? code)? above,
+    TResult Function(FhirUri? system, FhirCode? code)? below,
+    TResult Function(FhirUri? system, FhirCode? code)? in_,
+    TResult Function(FhirUri? system, FhirCode? code)? notIn,
+    TResult Function(FhirUri? system, FhirCode? code)? ofType,
     TResult Function(bool missing)? missing,
     required TResult orElse(),
   }) {
@@ -293,7 +293,7 @@ class _$_SearchParamTokenEqual extends _SearchParamTokenEqual {
 
 abstract class _SearchParamTokenEqual extends SearchParamToken {
   const factory _SearchParamTokenEqual(
-      {final FhirUri? system, final Code? code}) = _$_SearchParamTokenEqual;
+      {final FhirUri? system, final FhirCode? code}) = _$_SearchParamTokenEqual;
   const _SearchParamTokenEqual._() : super._();
 
   FhirUri? get system;
@@ -309,7 +309,7 @@ abstract class _$$_SearchParamTokenTextCopyWith<$Res> {
           $Res Function(_$_SearchParamTokenText) then) =
       __$$_SearchParamTokenTextCopyWithImpl<$Res>;
   @useResult
-  $Res call({FhirUri? system, Code? code});
+  $Res call({FhirUri? system, FhirCode? code});
 }
 
 /// @nodoc
@@ -334,7 +334,7 @@ class __$$_SearchParamTokenTextCopyWithImpl<$Res>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
     ));
   }
 }
@@ -347,7 +347,7 @@ class _$_SearchParamTokenText extends _SearchParamTokenText {
   @override
   final FhirUri? system;
   @override
-  final Code? code;
+  final FhirCode? code;
 
   @override
   String toString() {
@@ -376,14 +376,14 @@ class _$_SearchParamTokenText extends _SearchParamTokenText {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(FhirUri? system, Code? code) equal,
-    required TResult Function(FhirUri? system, Code? code) text,
-    required TResult Function(FhirUri? system, Code? code) not,
-    required TResult Function(FhirUri? system, Code? code) above,
-    required TResult Function(FhirUri? system, Code? code) below,
-    required TResult Function(FhirUri? system, Code? code) in_,
-    required TResult Function(FhirUri? system, Code? code) notIn,
-    required TResult Function(FhirUri? system, Code? code) ofType,
+    required TResult Function(FhirUri? system, FhirCode? code) equal,
+    required TResult Function(FhirUri? system, FhirCode? code) text,
+    required TResult Function(FhirUri? system, FhirCode? code) not,
+    required TResult Function(FhirUri? system, FhirCode? code) above,
+    required TResult Function(FhirUri? system, FhirCode? code) below,
+    required TResult Function(FhirUri? system, FhirCode? code) in_,
+    required TResult Function(FhirUri? system, FhirCode? code) notIn,
+    required TResult Function(FhirUri? system, FhirCode? code) ofType,
     required TResult Function(bool missing) missing,
   }) {
     return text(system, code);
@@ -392,14 +392,14 @@ class _$_SearchParamTokenText extends _SearchParamTokenText {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(FhirUri? system, Code? code)? equal,
-    TResult? Function(FhirUri? system, Code? code)? text,
-    TResult? Function(FhirUri? system, Code? code)? not,
-    TResult? Function(FhirUri? system, Code? code)? above,
-    TResult? Function(FhirUri? system, Code? code)? below,
-    TResult? Function(FhirUri? system, Code? code)? in_,
-    TResult? Function(FhirUri? system, Code? code)? notIn,
-    TResult? Function(FhirUri? system, Code? code)? ofType,
+    TResult? Function(FhirUri? system, FhirCode? code)? equal,
+    TResult? Function(FhirUri? system, FhirCode? code)? text,
+    TResult? Function(FhirUri? system, FhirCode? code)? not,
+    TResult? Function(FhirUri? system, FhirCode? code)? above,
+    TResult? Function(FhirUri? system, FhirCode? code)? below,
+    TResult? Function(FhirUri? system, FhirCode? code)? in_,
+    TResult? Function(FhirUri? system, FhirCode? code)? notIn,
+    TResult? Function(FhirUri? system, FhirCode? code)? ofType,
     TResult? Function(bool missing)? missing,
   }) {
     return text?.call(system, code);
@@ -408,14 +408,14 @@ class _$_SearchParamTokenText extends _SearchParamTokenText {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(FhirUri? system, Code? code)? equal,
-    TResult Function(FhirUri? system, Code? code)? text,
-    TResult Function(FhirUri? system, Code? code)? not,
-    TResult Function(FhirUri? system, Code? code)? above,
-    TResult Function(FhirUri? system, Code? code)? below,
-    TResult Function(FhirUri? system, Code? code)? in_,
-    TResult Function(FhirUri? system, Code? code)? notIn,
-    TResult Function(FhirUri? system, Code? code)? ofType,
+    TResult Function(FhirUri? system, FhirCode? code)? equal,
+    TResult Function(FhirUri? system, FhirCode? code)? text,
+    TResult Function(FhirUri? system, FhirCode? code)? not,
+    TResult Function(FhirUri? system, FhirCode? code)? above,
+    TResult Function(FhirUri? system, FhirCode? code)? below,
+    TResult Function(FhirUri? system, FhirCode? code)? in_,
+    TResult Function(FhirUri? system, FhirCode? code)? notIn,
+    TResult Function(FhirUri? system, FhirCode? code)? ofType,
     TResult Function(bool missing)? missing,
     required TResult orElse(),
   }) {
@@ -480,7 +480,7 @@ class _$_SearchParamTokenText extends _SearchParamTokenText {
 
 abstract class _SearchParamTokenText extends SearchParamToken {
   const factory _SearchParamTokenText(
-      {final FhirUri? system, final Code? code}) = _$_SearchParamTokenText;
+      {final FhirUri? system, final FhirCode? code}) = _$_SearchParamTokenText;
   const _SearchParamTokenText._() : super._();
 
   FhirUri? get system;
@@ -496,7 +496,7 @@ abstract class _$$_SearchParamTokenNotCopyWith<$Res> {
           $Res Function(_$_SearchParamTokenNot) then) =
       __$$_SearchParamTokenNotCopyWithImpl<$Res>;
   @useResult
-  $Res call({FhirUri? system, Code? code});
+  $Res call({FhirUri? system, FhirCode? code});
 }
 
 /// @nodoc
@@ -521,7 +521,7 @@ class __$$_SearchParamTokenNotCopyWithImpl<$Res>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
     ));
   }
 }
@@ -534,7 +534,7 @@ class _$_SearchParamTokenNot extends _SearchParamTokenNot {
   @override
   final FhirUri? system;
   @override
-  final Code? code;
+  final FhirCode? code;
 
   @override
   String toString() {
@@ -563,14 +563,14 @@ class _$_SearchParamTokenNot extends _SearchParamTokenNot {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(FhirUri? system, Code? code) equal,
-    required TResult Function(FhirUri? system, Code? code) text,
-    required TResult Function(FhirUri? system, Code? code) not,
-    required TResult Function(FhirUri? system, Code? code) above,
-    required TResult Function(FhirUri? system, Code? code) below,
-    required TResult Function(FhirUri? system, Code? code) in_,
-    required TResult Function(FhirUri? system, Code? code) notIn,
-    required TResult Function(FhirUri? system, Code? code) ofType,
+    required TResult Function(FhirUri? system, FhirCode? code) equal,
+    required TResult Function(FhirUri? system, FhirCode? code) text,
+    required TResult Function(FhirUri? system, FhirCode? code) not,
+    required TResult Function(FhirUri? system, FhirCode? code) above,
+    required TResult Function(FhirUri? system, FhirCode? code) below,
+    required TResult Function(FhirUri? system, FhirCode? code) in_,
+    required TResult Function(FhirUri? system, FhirCode? code) notIn,
+    required TResult Function(FhirUri? system, FhirCode? code) ofType,
     required TResult Function(bool missing) missing,
   }) {
     return not(system, code);
@@ -579,14 +579,14 @@ class _$_SearchParamTokenNot extends _SearchParamTokenNot {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(FhirUri? system, Code? code)? equal,
-    TResult? Function(FhirUri? system, Code? code)? text,
-    TResult? Function(FhirUri? system, Code? code)? not,
-    TResult? Function(FhirUri? system, Code? code)? above,
-    TResult? Function(FhirUri? system, Code? code)? below,
-    TResult? Function(FhirUri? system, Code? code)? in_,
-    TResult? Function(FhirUri? system, Code? code)? notIn,
-    TResult? Function(FhirUri? system, Code? code)? ofType,
+    TResult? Function(FhirUri? system, FhirCode? code)? equal,
+    TResult? Function(FhirUri? system, FhirCode? code)? text,
+    TResult? Function(FhirUri? system, FhirCode? code)? not,
+    TResult? Function(FhirUri? system, FhirCode? code)? above,
+    TResult? Function(FhirUri? system, FhirCode? code)? below,
+    TResult? Function(FhirUri? system, FhirCode? code)? in_,
+    TResult? Function(FhirUri? system, FhirCode? code)? notIn,
+    TResult? Function(FhirUri? system, FhirCode? code)? ofType,
     TResult? Function(bool missing)? missing,
   }) {
     return not?.call(system, code);
@@ -595,14 +595,14 @@ class _$_SearchParamTokenNot extends _SearchParamTokenNot {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(FhirUri? system, Code? code)? equal,
-    TResult Function(FhirUri? system, Code? code)? text,
-    TResult Function(FhirUri? system, Code? code)? not,
-    TResult Function(FhirUri? system, Code? code)? above,
-    TResult Function(FhirUri? system, Code? code)? below,
-    TResult Function(FhirUri? system, Code? code)? in_,
-    TResult Function(FhirUri? system, Code? code)? notIn,
-    TResult Function(FhirUri? system, Code? code)? ofType,
+    TResult Function(FhirUri? system, FhirCode? code)? equal,
+    TResult Function(FhirUri? system, FhirCode? code)? text,
+    TResult Function(FhirUri? system, FhirCode? code)? not,
+    TResult Function(FhirUri? system, FhirCode? code)? above,
+    TResult Function(FhirUri? system, FhirCode? code)? below,
+    TResult Function(FhirUri? system, FhirCode? code)? in_,
+    TResult Function(FhirUri? system, FhirCode? code)? notIn,
+    TResult Function(FhirUri? system, FhirCode? code)? ofType,
     TResult Function(bool missing)? missing,
     required TResult orElse(),
   }) {
@@ -667,7 +667,7 @@ class _$_SearchParamTokenNot extends _SearchParamTokenNot {
 
 abstract class _SearchParamTokenNot extends SearchParamToken {
   const factory _SearchParamTokenNot(
-      {final FhirUri? system, final Code? code}) = _$_SearchParamTokenNot;
+      {final FhirUri? system, final FhirCode? code}) = _$_SearchParamTokenNot;
   const _SearchParamTokenNot._() : super._();
 
   FhirUri? get system;
@@ -683,7 +683,7 @@ abstract class _$$_SearchParamTokenAboveCopyWith<$Res> {
           $Res Function(_$_SearchParamTokenAbove) then) =
       __$$_SearchParamTokenAboveCopyWithImpl<$Res>;
   @useResult
-  $Res call({FhirUri? system, Code? code});
+  $Res call({FhirUri? system, FhirCode? code});
 }
 
 /// @nodoc
@@ -708,7 +708,7 @@ class __$$_SearchParamTokenAboveCopyWithImpl<$Res>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
     ));
   }
 }
@@ -721,7 +721,7 @@ class _$_SearchParamTokenAbove extends _SearchParamTokenAbove {
   @override
   final FhirUri? system;
   @override
-  final Code? code;
+  final FhirCode? code;
 
   @override
   String toString() {
@@ -750,14 +750,14 @@ class _$_SearchParamTokenAbove extends _SearchParamTokenAbove {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(FhirUri? system, Code? code) equal,
-    required TResult Function(FhirUri? system, Code? code) text,
-    required TResult Function(FhirUri? system, Code? code) not,
-    required TResult Function(FhirUri? system, Code? code) above,
-    required TResult Function(FhirUri? system, Code? code) below,
-    required TResult Function(FhirUri? system, Code? code) in_,
-    required TResult Function(FhirUri? system, Code? code) notIn,
-    required TResult Function(FhirUri? system, Code? code) ofType,
+    required TResult Function(FhirUri? system, FhirCode? code) equal,
+    required TResult Function(FhirUri? system, FhirCode? code) text,
+    required TResult Function(FhirUri? system, FhirCode? code) not,
+    required TResult Function(FhirUri? system, FhirCode? code) above,
+    required TResult Function(FhirUri? system, FhirCode? code) below,
+    required TResult Function(FhirUri? system, FhirCode? code) in_,
+    required TResult Function(FhirUri? system, FhirCode? code) notIn,
+    required TResult Function(FhirUri? system, FhirCode? code) ofType,
     required TResult Function(bool missing) missing,
   }) {
     return above(system, code);
@@ -766,14 +766,14 @@ class _$_SearchParamTokenAbove extends _SearchParamTokenAbove {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(FhirUri? system, Code? code)? equal,
-    TResult? Function(FhirUri? system, Code? code)? text,
-    TResult? Function(FhirUri? system, Code? code)? not,
-    TResult? Function(FhirUri? system, Code? code)? above,
-    TResult? Function(FhirUri? system, Code? code)? below,
-    TResult? Function(FhirUri? system, Code? code)? in_,
-    TResult? Function(FhirUri? system, Code? code)? notIn,
-    TResult? Function(FhirUri? system, Code? code)? ofType,
+    TResult? Function(FhirUri? system, FhirCode? code)? equal,
+    TResult? Function(FhirUri? system, FhirCode? code)? text,
+    TResult? Function(FhirUri? system, FhirCode? code)? not,
+    TResult? Function(FhirUri? system, FhirCode? code)? above,
+    TResult? Function(FhirUri? system, FhirCode? code)? below,
+    TResult? Function(FhirUri? system, FhirCode? code)? in_,
+    TResult? Function(FhirUri? system, FhirCode? code)? notIn,
+    TResult? Function(FhirUri? system, FhirCode? code)? ofType,
     TResult? Function(bool missing)? missing,
   }) {
     return above?.call(system, code);
@@ -782,14 +782,14 @@ class _$_SearchParamTokenAbove extends _SearchParamTokenAbove {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(FhirUri? system, Code? code)? equal,
-    TResult Function(FhirUri? system, Code? code)? text,
-    TResult Function(FhirUri? system, Code? code)? not,
-    TResult Function(FhirUri? system, Code? code)? above,
-    TResult Function(FhirUri? system, Code? code)? below,
-    TResult Function(FhirUri? system, Code? code)? in_,
-    TResult Function(FhirUri? system, Code? code)? notIn,
-    TResult Function(FhirUri? system, Code? code)? ofType,
+    TResult Function(FhirUri? system, FhirCode? code)? equal,
+    TResult Function(FhirUri? system, FhirCode? code)? text,
+    TResult Function(FhirUri? system, FhirCode? code)? not,
+    TResult Function(FhirUri? system, FhirCode? code)? above,
+    TResult Function(FhirUri? system, FhirCode? code)? below,
+    TResult Function(FhirUri? system, FhirCode? code)? in_,
+    TResult Function(FhirUri? system, FhirCode? code)? notIn,
+    TResult Function(FhirUri? system, FhirCode? code)? ofType,
     TResult Function(bool missing)? missing,
     required TResult orElse(),
   }) {
@@ -854,7 +854,7 @@ class _$_SearchParamTokenAbove extends _SearchParamTokenAbove {
 
 abstract class _SearchParamTokenAbove extends SearchParamToken {
   const factory _SearchParamTokenAbove(
-      {final FhirUri? system, final Code? code}) = _$_SearchParamTokenAbove;
+      {final FhirUri? system, final FhirCode? code}) = _$_SearchParamTokenAbove;
   const _SearchParamTokenAbove._() : super._();
 
   FhirUri? get system;
@@ -870,7 +870,7 @@ abstract class _$$_SearchParamTokenBelowCopyWith<$Res> {
           $Res Function(_$_SearchParamTokenBelow) then) =
       __$$_SearchParamTokenBelowCopyWithImpl<$Res>;
   @useResult
-  $Res call({FhirUri? system, Code? code});
+  $Res call({FhirUri? system, FhirCode? code});
 }
 
 /// @nodoc
@@ -895,7 +895,7 @@ class __$$_SearchParamTokenBelowCopyWithImpl<$Res>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
     ));
   }
 }
@@ -908,7 +908,7 @@ class _$_SearchParamTokenBelow extends _SearchParamTokenBelow {
   @override
   final FhirUri? system;
   @override
-  final Code? code;
+  final FhirCode? code;
 
   @override
   String toString() {
@@ -937,14 +937,14 @@ class _$_SearchParamTokenBelow extends _SearchParamTokenBelow {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(FhirUri? system, Code? code) equal,
-    required TResult Function(FhirUri? system, Code? code) text,
-    required TResult Function(FhirUri? system, Code? code) not,
-    required TResult Function(FhirUri? system, Code? code) above,
-    required TResult Function(FhirUri? system, Code? code) below,
-    required TResult Function(FhirUri? system, Code? code) in_,
-    required TResult Function(FhirUri? system, Code? code) notIn,
-    required TResult Function(FhirUri? system, Code? code) ofType,
+    required TResult Function(FhirUri? system, FhirCode? code) equal,
+    required TResult Function(FhirUri? system, FhirCode? code) text,
+    required TResult Function(FhirUri? system, FhirCode? code) not,
+    required TResult Function(FhirUri? system, FhirCode? code) above,
+    required TResult Function(FhirUri? system, FhirCode? code) below,
+    required TResult Function(FhirUri? system, FhirCode? code) in_,
+    required TResult Function(FhirUri? system, FhirCode? code) notIn,
+    required TResult Function(FhirUri? system, FhirCode? code) ofType,
     required TResult Function(bool missing) missing,
   }) {
     return below(system, code);
@@ -953,14 +953,14 @@ class _$_SearchParamTokenBelow extends _SearchParamTokenBelow {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(FhirUri? system, Code? code)? equal,
-    TResult? Function(FhirUri? system, Code? code)? text,
-    TResult? Function(FhirUri? system, Code? code)? not,
-    TResult? Function(FhirUri? system, Code? code)? above,
-    TResult? Function(FhirUri? system, Code? code)? below,
-    TResult? Function(FhirUri? system, Code? code)? in_,
-    TResult? Function(FhirUri? system, Code? code)? notIn,
-    TResult? Function(FhirUri? system, Code? code)? ofType,
+    TResult? Function(FhirUri? system, FhirCode? code)? equal,
+    TResult? Function(FhirUri? system, FhirCode? code)? text,
+    TResult? Function(FhirUri? system, FhirCode? code)? not,
+    TResult? Function(FhirUri? system, FhirCode? code)? above,
+    TResult? Function(FhirUri? system, FhirCode? code)? below,
+    TResult? Function(FhirUri? system, FhirCode? code)? in_,
+    TResult? Function(FhirUri? system, FhirCode? code)? notIn,
+    TResult? Function(FhirUri? system, FhirCode? code)? ofType,
     TResult? Function(bool missing)? missing,
   }) {
     return below?.call(system, code);
@@ -969,14 +969,14 @@ class _$_SearchParamTokenBelow extends _SearchParamTokenBelow {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(FhirUri? system, Code? code)? equal,
-    TResult Function(FhirUri? system, Code? code)? text,
-    TResult Function(FhirUri? system, Code? code)? not,
-    TResult Function(FhirUri? system, Code? code)? above,
-    TResult Function(FhirUri? system, Code? code)? below,
-    TResult Function(FhirUri? system, Code? code)? in_,
-    TResult Function(FhirUri? system, Code? code)? notIn,
-    TResult Function(FhirUri? system, Code? code)? ofType,
+    TResult Function(FhirUri? system, FhirCode? code)? equal,
+    TResult Function(FhirUri? system, FhirCode? code)? text,
+    TResult Function(FhirUri? system, FhirCode? code)? not,
+    TResult Function(FhirUri? system, FhirCode? code)? above,
+    TResult Function(FhirUri? system, FhirCode? code)? below,
+    TResult Function(FhirUri? system, FhirCode? code)? in_,
+    TResult Function(FhirUri? system, FhirCode? code)? notIn,
+    TResult Function(FhirUri? system, FhirCode? code)? ofType,
     TResult Function(bool missing)? missing,
     required TResult orElse(),
   }) {
@@ -1041,7 +1041,7 @@ class _$_SearchParamTokenBelow extends _SearchParamTokenBelow {
 
 abstract class _SearchParamTokenBelow extends SearchParamToken {
   const factory _SearchParamTokenBelow(
-      {final FhirUri? system, final Code? code}) = _$_SearchParamTokenBelow;
+      {final FhirUri? system, final FhirCode? code}) = _$_SearchParamTokenBelow;
   const _SearchParamTokenBelow._() : super._();
 
   FhirUri? get system;
@@ -1057,7 +1057,7 @@ abstract class _$$_SearchParamTokenInCopyWith<$Res> {
           $Res Function(_$_SearchParamTokenIn) then) =
       __$$_SearchParamTokenInCopyWithImpl<$Res>;
   @useResult
-  $Res call({FhirUri? system, Code? code});
+  $Res call({FhirUri? system, FhirCode? code});
 }
 
 /// @nodoc
@@ -1082,7 +1082,7 @@ class __$$_SearchParamTokenInCopyWithImpl<$Res>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
     ));
   }
 }
@@ -1095,7 +1095,7 @@ class _$_SearchParamTokenIn extends _SearchParamTokenIn {
   @override
   final FhirUri? system;
   @override
-  final Code? code;
+  final FhirCode? code;
 
   @override
   String toString() {
@@ -1124,14 +1124,14 @@ class _$_SearchParamTokenIn extends _SearchParamTokenIn {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(FhirUri? system, Code? code) equal,
-    required TResult Function(FhirUri? system, Code? code) text,
-    required TResult Function(FhirUri? system, Code? code) not,
-    required TResult Function(FhirUri? system, Code? code) above,
-    required TResult Function(FhirUri? system, Code? code) below,
-    required TResult Function(FhirUri? system, Code? code) in_,
-    required TResult Function(FhirUri? system, Code? code) notIn,
-    required TResult Function(FhirUri? system, Code? code) ofType,
+    required TResult Function(FhirUri? system, FhirCode? code) equal,
+    required TResult Function(FhirUri? system, FhirCode? code) text,
+    required TResult Function(FhirUri? system, FhirCode? code) not,
+    required TResult Function(FhirUri? system, FhirCode? code) above,
+    required TResult Function(FhirUri? system, FhirCode? code) below,
+    required TResult Function(FhirUri? system, FhirCode? code) in_,
+    required TResult Function(FhirUri? system, FhirCode? code) notIn,
+    required TResult Function(FhirUri? system, FhirCode? code) ofType,
     required TResult Function(bool missing) missing,
   }) {
     return in_(system, code);
@@ -1140,14 +1140,14 @@ class _$_SearchParamTokenIn extends _SearchParamTokenIn {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(FhirUri? system, Code? code)? equal,
-    TResult? Function(FhirUri? system, Code? code)? text,
-    TResult? Function(FhirUri? system, Code? code)? not,
-    TResult? Function(FhirUri? system, Code? code)? above,
-    TResult? Function(FhirUri? system, Code? code)? below,
-    TResult? Function(FhirUri? system, Code? code)? in_,
-    TResult? Function(FhirUri? system, Code? code)? notIn,
-    TResult? Function(FhirUri? system, Code? code)? ofType,
+    TResult? Function(FhirUri? system, FhirCode? code)? equal,
+    TResult? Function(FhirUri? system, FhirCode? code)? text,
+    TResult? Function(FhirUri? system, FhirCode? code)? not,
+    TResult? Function(FhirUri? system, FhirCode? code)? above,
+    TResult? Function(FhirUri? system, FhirCode? code)? below,
+    TResult? Function(FhirUri? system, FhirCode? code)? in_,
+    TResult? Function(FhirUri? system, FhirCode? code)? notIn,
+    TResult? Function(FhirUri? system, FhirCode? code)? ofType,
     TResult? Function(bool missing)? missing,
   }) {
     return in_?.call(system, code);
@@ -1156,14 +1156,14 @@ class _$_SearchParamTokenIn extends _SearchParamTokenIn {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(FhirUri? system, Code? code)? equal,
-    TResult Function(FhirUri? system, Code? code)? text,
-    TResult Function(FhirUri? system, Code? code)? not,
-    TResult Function(FhirUri? system, Code? code)? above,
-    TResult Function(FhirUri? system, Code? code)? below,
-    TResult Function(FhirUri? system, Code? code)? in_,
-    TResult Function(FhirUri? system, Code? code)? notIn,
-    TResult Function(FhirUri? system, Code? code)? ofType,
+    TResult Function(FhirUri? system, FhirCode? code)? equal,
+    TResult Function(FhirUri? system, FhirCode? code)? text,
+    TResult Function(FhirUri? system, FhirCode? code)? not,
+    TResult Function(FhirUri? system, FhirCode? code)? above,
+    TResult Function(FhirUri? system, FhirCode? code)? below,
+    TResult Function(FhirUri? system, FhirCode? code)? in_,
+    TResult Function(FhirUri? system, FhirCode? code)? notIn,
+    TResult Function(FhirUri? system, FhirCode? code)? ofType,
     TResult Function(bool missing)? missing,
     required TResult orElse(),
   }) {
@@ -1227,8 +1227,8 @@ class _$_SearchParamTokenIn extends _SearchParamTokenIn {
 }
 
 abstract class _SearchParamTokenIn extends SearchParamToken {
-  const factory _SearchParamTokenIn({final FhirUri? system, final Code? code}) =
-      _$_SearchParamTokenIn;
+  const factory _SearchParamTokenIn(
+      {final FhirUri? system, final FhirCode? code}) = _$_SearchParamTokenIn;
   const _SearchParamTokenIn._() : super._();
 
   FhirUri? get system;
@@ -1244,7 +1244,7 @@ abstract class _$$_SearchParamTokenNotInCopyWith<$Res> {
           $Res Function(_$_SearchParamTokenNotIn) then) =
       __$$_SearchParamTokenNotInCopyWithImpl<$Res>;
   @useResult
-  $Res call({FhirUri? system, Code? code});
+  $Res call({FhirUri? system, FhirCode? code});
 }
 
 /// @nodoc
@@ -1269,7 +1269,7 @@ class __$$_SearchParamTokenNotInCopyWithImpl<$Res>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
     ));
   }
 }
@@ -1282,7 +1282,7 @@ class _$_SearchParamTokenNotIn extends _SearchParamTokenNotIn {
   @override
   final FhirUri? system;
   @override
-  final Code? code;
+  final FhirCode? code;
 
   @override
   String toString() {
@@ -1311,14 +1311,14 @@ class _$_SearchParamTokenNotIn extends _SearchParamTokenNotIn {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(FhirUri? system, Code? code) equal,
-    required TResult Function(FhirUri? system, Code? code) text,
-    required TResult Function(FhirUri? system, Code? code) not,
-    required TResult Function(FhirUri? system, Code? code) above,
-    required TResult Function(FhirUri? system, Code? code) below,
-    required TResult Function(FhirUri? system, Code? code) in_,
-    required TResult Function(FhirUri? system, Code? code) notIn,
-    required TResult Function(FhirUri? system, Code? code) ofType,
+    required TResult Function(FhirUri? system, FhirCode? code) equal,
+    required TResult Function(FhirUri? system, FhirCode? code) text,
+    required TResult Function(FhirUri? system, FhirCode? code) not,
+    required TResult Function(FhirUri? system, FhirCode? code) above,
+    required TResult Function(FhirUri? system, FhirCode? code) below,
+    required TResult Function(FhirUri? system, FhirCode? code) in_,
+    required TResult Function(FhirUri? system, FhirCode? code) notIn,
+    required TResult Function(FhirUri? system, FhirCode? code) ofType,
     required TResult Function(bool missing) missing,
   }) {
     return notIn(system, code);
@@ -1327,14 +1327,14 @@ class _$_SearchParamTokenNotIn extends _SearchParamTokenNotIn {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(FhirUri? system, Code? code)? equal,
-    TResult? Function(FhirUri? system, Code? code)? text,
-    TResult? Function(FhirUri? system, Code? code)? not,
-    TResult? Function(FhirUri? system, Code? code)? above,
-    TResult? Function(FhirUri? system, Code? code)? below,
-    TResult? Function(FhirUri? system, Code? code)? in_,
-    TResult? Function(FhirUri? system, Code? code)? notIn,
-    TResult? Function(FhirUri? system, Code? code)? ofType,
+    TResult? Function(FhirUri? system, FhirCode? code)? equal,
+    TResult? Function(FhirUri? system, FhirCode? code)? text,
+    TResult? Function(FhirUri? system, FhirCode? code)? not,
+    TResult? Function(FhirUri? system, FhirCode? code)? above,
+    TResult? Function(FhirUri? system, FhirCode? code)? below,
+    TResult? Function(FhirUri? system, FhirCode? code)? in_,
+    TResult? Function(FhirUri? system, FhirCode? code)? notIn,
+    TResult? Function(FhirUri? system, FhirCode? code)? ofType,
     TResult? Function(bool missing)? missing,
   }) {
     return notIn?.call(system, code);
@@ -1343,14 +1343,14 @@ class _$_SearchParamTokenNotIn extends _SearchParamTokenNotIn {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(FhirUri? system, Code? code)? equal,
-    TResult Function(FhirUri? system, Code? code)? text,
-    TResult Function(FhirUri? system, Code? code)? not,
-    TResult Function(FhirUri? system, Code? code)? above,
-    TResult Function(FhirUri? system, Code? code)? below,
-    TResult Function(FhirUri? system, Code? code)? in_,
-    TResult Function(FhirUri? system, Code? code)? notIn,
-    TResult Function(FhirUri? system, Code? code)? ofType,
+    TResult Function(FhirUri? system, FhirCode? code)? equal,
+    TResult Function(FhirUri? system, FhirCode? code)? text,
+    TResult Function(FhirUri? system, FhirCode? code)? not,
+    TResult Function(FhirUri? system, FhirCode? code)? above,
+    TResult Function(FhirUri? system, FhirCode? code)? below,
+    TResult Function(FhirUri? system, FhirCode? code)? in_,
+    TResult Function(FhirUri? system, FhirCode? code)? notIn,
+    TResult Function(FhirUri? system, FhirCode? code)? ofType,
     TResult Function(bool missing)? missing,
     required TResult orElse(),
   }) {
@@ -1415,7 +1415,7 @@ class _$_SearchParamTokenNotIn extends _SearchParamTokenNotIn {
 
 abstract class _SearchParamTokenNotIn extends SearchParamToken {
   const factory _SearchParamTokenNotIn(
-      {final FhirUri? system, final Code? code}) = _$_SearchParamTokenNotIn;
+      {final FhirUri? system, final FhirCode? code}) = _$_SearchParamTokenNotIn;
   const _SearchParamTokenNotIn._() : super._();
 
   FhirUri? get system;
@@ -1431,7 +1431,7 @@ abstract class _$$_SearchParamTokenOfTypeCopyWith<$Res> {
           $Res Function(_$_SearchParamTokenOfType) then) =
       __$$_SearchParamTokenOfTypeCopyWithImpl<$Res>;
   @useResult
-  $Res call({FhirUri? system, Code? code});
+  $Res call({FhirUri? system, FhirCode? code});
 }
 
 /// @nodoc
@@ -1456,7 +1456,7 @@ class __$$_SearchParamTokenOfTypeCopyWithImpl<$Res>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
     ));
   }
 }
@@ -1469,7 +1469,7 @@ class _$_SearchParamTokenOfType extends _SearchParamTokenOfType {
   @override
   final FhirUri? system;
   @override
-  final Code? code;
+  final FhirCode? code;
 
   @override
   String toString() {
@@ -1498,14 +1498,14 @@ class _$_SearchParamTokenOfType extends _SearchParamTokenOfType {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(FhirUri? system, Code? code) equal,
-    required TResult Function(FhirUri? system, Code? code) text,
-    required TResult Function(FhirUri? system, Code? code) not,
-    required TResult Function(FhirUri? system, Code? code) above,
-    required TResult Function(FhirUri? system, Code? code) below,
-    required TResult Function(FhirUri? system, Code? code) in_,
-    required TResult Function(FhirUri? system, Code? code) notIn,
-    required TResult Function(FhirUri? system, Code? code) ofType,
+    required TResult Function(FhirUri? system, FhirCode? code) equal,
+    required TResult Function(FhirUri? system, FhirCode? code) text,
+    required TResult Function(FhirUri? system, FhirCode? code) not,
+    required TResult Function(FhirUri? system, FhirCode? code) above,
+    required TResult Function(FhirUri? system, FhirCode? code) below,
+    required TResult Function(FhirUri? system, FhirCode? code) in_,
+    required TResult Function(FhirUri? system, FhirCode? code) notIn,
+    required TResult Function(FhirUri? system, FhirCode? code) ofType,
     required TResult Function(bool missing) missing,
   }) {
     return ofType(system, code);
@@ -1514,14 +1514,14 @@ class _$_SearchParamTokenOfType extends _SearchParamTokenOfType {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(FhirUri? system, Code? code)? equal,
-    TResult? Function(FhirUri? system, Code? code)? text,
-    TResult? Function(FhirUri? system, Code? code)? not,
-    TResult? Function(FhirUri? system, Code? code)? above,
-    TResult? Function(FhirUri? system, Code? code)? below,
-    TResult? Function(FhirUri? system, Code? code)? in_,
-    TResult? Function(FhirUri? system, Code? code)? notIn,
-    TResult? Function(FhirUri? system, Code? code)? ofType,
+    TResult? Function(FhirUri? system, FhirCode? code)? equal,
+    TResult? Function(FhirUri? system, FhirCode? code)? text,
+    TResult? Function(FhirUri? system, FhirCode? code)? not,
+    TResult? Function(FhirUri? system, FhirCode? code)? above,
+    TResult? Function(FhirUri? system, FhirCode? code)? below,
+    TResult? Function(FhirUri? system, FhirCode? code)? in_,
+    TResult? Function(FhirUri? system, FhirCode? code)? notIn,
+    TResult? Function(FhirUri? system, FhirCode? code)? ofType,
     TResult? Function(bool missing)? missing,
   }) {
     return ofType?.call(system, code);
@@ -1530,14 +1530,14 @@ class _$_SearchParamTokenOfType extends _SearchParamTokenOfType {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(FhirUri? system, Code? code)? equal,
-    TResult Function(FhirUri? system, Code? code)? text,
-    TResult Function(FhirUri? system, Code? code)? not,
-    TResult Function(FhirUri? system, Code? code)? above,
-    TResult Function(FhirUri? system, Code? code)? below,
-    TResult Function(FhirUri? system, Code? code)? in_,
-    TResult Function(FhirUri? system, Code? code)? notIn,
-    TResult Function(FhirUri? system, Code? code)? ofType,
+    TResult Function(FhirUri? system, FhirCode? code)? equal,
+    TResult Function(FhirUri? system, FhirCode? code)? text,
+    TResult Function(FhirUri? system, FhirCode? code)? not,
+    TResult Function(FhirUri? system, FhirCode? code)? above,
+    TResult Function(FhirUri? system, FhirCode? code)? below,
+    TResult Function(FhirUri? system, FhirCode? code)? in_,
+    TResult Function(FhirUri? system, FhirCode? code)? notIn,
+    TResult Function(FhirUri? system, FhirCode? code)? ofType,
     TResult Function(bool missing)? missing,
     required TResult orElse(),
   }) {
@@ -1602,7 +1602,8 @@ class _$_SearchParamTokenOfType extends _SearchParamTokenOfType {
 
 abstract class _SearchParamTokenOfType extends SearchParamToken {
   const factory _SearchParamTokenOfType(
-      {final FhirUri? system, final Code? code}) = _$_SearchParamTokenOfType;
+      {final FhirUri? system,
+      final FhirCode? code}) = _$_SearchParamTokenOfType;
   const _SearchParamTokenOfType._() : super._();
 
   FhirUri? get system;
@@ -1678,14 +1679,14 @@ class _$_SearchParamTokenMissing extends _SearchParamTokenMissing {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(FhirUri? system, Code? code) equal,
-    required TResult Function(FhirUri? system, Code? code) text,
-    required TResult Function(FhirUri? system, Code? code) not,
-    required TResult Function(FhirUri? system, Code? code) above,
-    required TResult Function(FhirUri? system, Code? code) below,
-    required TResult Function(FhirUri? system, Code? code) in_,
-    required TResult Function(FhirUri? system, Code? code) notIn,
-    required TResult Function(FhirUri? system, Code? code) ofType,
+    required TResult Function(FhirUri? system, FhirCode? code) equal,
+    required TResult Function(FhirUri? system, FhirCode? code) text,
+    required TResult Function(FhirUri? system, FhirCode? code) not,
+    required TResult Function(FhirUri? system, FhirCode? code) above,
+    required TResult Function(FhirUri? system, FhirCode? code) below,
+    required TResult Function(FhirUri? system, FhirCode? code) in_,
+    required TResult Function(FhirUri? system, FhirCode? code) notIn,
+    required TResult Function(FhirUri? system, FhirCode? code) ofType,
     required TResult Function(bool missing) missing,
   }) {
     return missing(this.missing);
@@ -1694,14 +1695,14 @@ class _$_SearchParamTokenMissing extends _SearchParamTokenMissing {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(FhirUri? system, Code? code)? equal,
-    TResult? Function(FhirUri? system, Code? code)? text,
-    TResult? Function(FhirUri? system, Code? code)? not,
-    TResult? Function(FhirUri? system, Code? code)? above,
-    TResult? Function(FhirUri? system, Code? code)? below,
-    TResult? Function(FhirUri? system, Code? code)? in_,
-    TResult? Function(FhirUri? system, Code? code)? notIn,
-    TResult? Function(FhirUri? system, Code? code)? ofType,
+    TResult? Function(FhirUri? system, FhirCode? code)? equal,
+    TResult? Function(FhirUri? system, FhirCode? code)? text,
+    TResult? Function(FhirUri? system, FhirCode? code)? not,
+    TResult? Function(FhirUri? system, FhirCode? code)? above,
+    TResult? Function(FhirUri? system, FhirCode? code)? below,
+    TResult? Function(FhirUri? system, FhirCode? code)? in_,
+    TResult? Function(FhirUri? system, FhirCode? code)? notIn,
+    TResult? Function(FhirUri? system, FhirCode? code)? ofType,
     TResult? Function(bool missing)? missing,
   }) {
     return missing?.call(this.missing);
@@ -1710,14 +1711,14 @@ class _$_SearchParamTokenMissing extends _SearchParamTokenMissing {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(FhirUri? system, Code? code)? equal,
-    TResult Function(FhirUri? system, Code? code)? text,
-    TResult Function(FhirUri? system, Code? code)? not,
-    TResult Function(FhirUri? system, Code? code)? above,
-    TResult Function(FhirUri? system, Code? code)? below,
-    TResult Function(FhirUri? system, Code? code)? in_,
-    TResult Function(FhirUri? system, Code? code)? notIn,
-    TResult Function(FhirUri? system, Code? code)? ofType,
+    TResult Function(FhirUri? system, FhirCode? code)? equal,
+    TResult Function(FhirUri? system, FhirCode? code)? text,
+    TResult Function(FhirUri? system, FhirCode? code)? not,
+    TResult Function(FhirUri? system, FhirCode? code)? above,
+    TResult Function(FhirUri? system, FhirCode? code)? below,
+    TResult Function(FhirUri? system, FhirCode? code)? in_,
+    TResult Function(FhirUri? system, FhirCode? code)? notIn,
+    TResult Function(FhirUri? system, FhirCode? code)? ofType,
     TResult Function(bool missing)? missing,
     required TResult orElse(),
   }) {

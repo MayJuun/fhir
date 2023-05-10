@@ -63,6 +63,10 @@ class FhirRequest with _$FhirRequest {
     ///   but there are some older systems that won't accept that
     MimeType? mimeType,
 
+    /// [accept] - this will default to fhir+json just so it will stop sending
+    /// me XML - I hate XML
+    @Default('application/fhir+json') String accept,
+
     /// [client] - if there's a specific client that you're going to be using
     Client? client,
   }) = FhirReadRequest;
@@ -116,6 +120,10 @@ class FhirRequest with _$FhirRequest {
     ///   but there are some older systems that won't accept that
     MimeType? mimeType,
 
+    /// [accept] - this will default to fhir+json just so it will stop sending
+    /// me XML - I hate XML
+    @Default('application/fhir+json') String accept,
+
     /// [client] - if there's a specific client that you're going to be using
     Client? client,
   }) = FhirVReadRequest;
@@ -158,6 +166,10 @@ class FhirRequest with _$FhirRequest {
     ///   but there are some older systems that won't accept that
     MimeType? mimeType,
 
+    /// [accept] - this will default to fhir+json just so it will stop sending
+    /// me XML - I hate XML
+    @Default('application/fhir+json') String accept,
+
     /// [client] - if there's a specific client that you're going to be using
     Client? client,
   }) = FhirUpdateRequest;
@@ -199,6 +211,10 @@ class FhirRequest with _$FhirRequest {
     /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
     ///   but there are some older systems that won't accept that
     MimeType? mimeType,
+
+    /// [accept] - this will default to fhir+json just so it will stop sending
+    /// me XML - I hate XML
+    @Default('application/fhir+json') String accept,
 
     /// [client] - if there's a specific client that you're going to be using
     Client? client,
@@ -249,6 +265,10 @@ class FhirRequest with _$FhirRequest {
     ///   but there are some older systems that won't accept that
     MimeType? mimeType,
 
+    /// [accept] - this will default to fhir+json just so it will stop sending
+    /// me XML - I hate XML
+    @Default('application/fhir+json') String accept,
+
     /// [client] - if there's a specific client that you're going to be using
     Client? client,
   }) = FhirDeleteRequest;
@@ -290,6 +310,10 @@ class FhirRequest with _$FhirRequest {
     /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
     ///   but there are some older systems that won't accept that
     MimeType? mimeType,
+
+    /// [accept] - this will default to fhir+json just so it will stop sending
+    /// me XML - I hate XML
+    @Default('application/fhir+json') String accept,
 
     /// [client] - if there's a specific client that you're going to be using
     Client? client,
@@ -343,6 +367,10 @@ class FhirRequest with _$FhirRequest {
     ///   but there are some older systems that won't accept that
     MimeType? mimeType,
 
+    /// [accept] - this will default to fhir+json just so it will stop sending
+    /// me XML - I hate XML
+    @Default('application/fhir+json') String accept,
+
     /// [client] - if there's a specific client that you're going to be using
     Client? client,
   }) = FhirSearchRequest;
@@ -383,6 +411,10 @@ class FhirRequest with _$FhirRequest {
     /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
     ///   but there are some older systems that won't accept that
     MimeType? mimeType,
+
+    /// [accept] - this will default to fhir+json just so it will stop sending
+    /// me XML - I hate XML
+    @Default('application/fhir+json') String accept,
 
     /// [client] - if there's a specific client that you're going to be using
     Client? client,
@@ -429,6 +461,10 @@ class FhirRequest with _$FhirRequest {
     ///   but there are some older systems that won't accept that
     MimeType? mimeType,
 
+    /// [accept] - this will default to fhir+json just so it will stop sending
+    /// me XML - I hate XML
+    @Default('application/fhir+json') String accept,
+
     /// [client] - if there's a specific client that you're going to be using
     Client? client,
   }) = FhirCapabilitiesRequest;
@@ -472,6 +508,10 @@ class FhirRequest with _$FhirRequest {
     ///   but there are some older systems that won't accept that
     MimeType? mimeType,
 
+    /// [accept] - this will default to fhir+json just so it will stop sending
+    /// me XML - I hate XML
+    @Default('application/fhir+json') String accept,
+
     /// [client] - if there's a specific client that you're going to be using
     Client? client,
   }) = FhirTransactionRequest;
@@ -514,6 +554,10 @@ class FhirRequest with _$FhirRequest {
     /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
     ///   but there are some older systems that won't accept that
     MimeType? mimeType,
+
+    /// [accept] - this will default to fhir+json just so it will stop sending
+    /// me XML - I hate XML
+    @Default('application/fhir+json') String accept,
 
     /// [client] - if there's a specific client that you're going to be using
     Client? client,
@@ -590,6 +634,10 @@ class FhirRequest with _$FhirRequest {
     ///   but there are some older systems that won't accept that
     MimeType? mimeType,
 
+    /// [accept] - this will default to fhir+json just so it will stop sending
+    /// me XML - I hate XML
+    @Default('application/fhir+json') String accept,
+
     /// [client] - if there's a specific client that you're going to be using
     Client? client,
   }) = FhirHistoryRequest;
@@ -661,6 +709,10 @@ class FhirRequest with _$FhirRequest {
     ///   but there are some older systems that won't accept that
     MimeType? mimeType,
 
+    /// [accept] - this will default to fhir+json just so it will stop sending
+    /// me XML - I hate XML
+    @Default('application/fhir+json') String accept,
+
     /// [client] - if there's a specific client that you're going to be using
     Client? client,
   }) = FhirHistoryTypeRequest;
@@ -728,6 +780,10 @@ class FhirRequest with _$FhirRequest {
     ///   but there are some older systems that won't accept that
     MimeType? mimeType,
 
+    /// [accept] - this will default to fhir+json just so it will stop sending
+    /// me XML - I hate XML
+    @Default('application/fhir+json') String accept,
+
     /// [client] - if there's a specific client that you're going to be using
     Client? client,
   }) = FhirHistoryAllRequest;
@@ -783,6 +839,10 @@ class FhirRequest with _$FhirRequest {
     /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
     ///   but there are some older systems that won't accept that
     MimeType? mimeType,
+
+    /// [accept] - this will default to fhir+json just so it will stop sending
+    /// me XML - I hate XML
+    @Default('application/fhir+json') String accept,
 
     /// [client] - if there's a specific client that you're going to be using
     Client? client,
@@ -881,7 +941,7 @@ class FhirRequest with _$FhirRequest {
 
       /// TRANSACTION
       transaction: (m) async {
-        if (m.bundle.type != Code('transaction')) {
+        if (m.bundle.type != FhirCode('transaction')) {
           return _operationOutcome(
               'A Transaction request was made, but no Bundle was included.');
         }
@@ -910,7 +970,7 @@ class FhirRequest with _$FhirRequest {
 
       /// BATCH
       batch: (m) async {
-        if (m.bundle.type != Code('batch')) {
+        if (m.bundle.type != FhirCode('batch')) {
           return _operationOutcome(
               'A Batch request was made, but the included Bundle is not a'
               ' batch type.');
@@ -1316,8 +1376,8 @@ class FhirRequest with _$FhirRequest {
     if (_errorCodes.containsKey(result.statusCode)) {
       return OperationOutcome(issue: [
         OperationOutcomeIssue(
-          severity: Code('error'),
-          code: Code('unknown'),
+          severity: FhirCode('error'),
+          code: FhirCode('unknown'),
           details: CodeableConcept(
               text: 'Failed to complete a restful request.\n'
                   'The request was made, and a failing status code of some kind was returned.\n'
@@ -1333,8 +1393,8 @@ class FhirRequest with _$FhirRequest {
         if (result.statusCode == 200 || result.statusCode == 201) {
           return OperationOutcome(issue: [
             OperationOutcomeIssue(
-                severity: Code('information'),
-                code: Code('informational'),
+                severity: FhirCode('information'),
+                code: FhirCode('informational'),
                 diagnostics: 'Your request succeeded with a status of '
                     '${result.statusCode}\nbut the result did not have a body\n'
                     'Your request was: \n'
@@ -1347,8 +1407,8 @@ class FhirRequest with _$FhirRequest {
         } else {
           return OperationOutcome(issue: [
             OperationOutcomeIssue(
-                severity: Code('information'),
-                code: Code('informational'),
+                severity: FhirCode('information'),
+                code: FhirCode('informational'),
                 diagnostics: 'Your request succeeded with a status of '
                     '${result.statusCode}\nbut the result did not have a body\n'
                     'Your request was: \n'
@@ -1364,8 +1424,8 @@ class FhirRequest with _$FhirRequest {
         if (body?['resourceType'] == null) {
           return OperationOutcome(issue: [
             OperationOutcomeIssue(
-              severity: Code('error'),
-              code: Code('unknown'),
+              severity: FhirCode('error'),
+              code: FhirCode('unknown'),
               details: CodeableConcept(
                   text:
                       'Request was made, but the result body had no defined response'),
@@ -1394,8 +1454,8 @@ class FhirRequest with _$FhirRequest {
           if (newResource.resourceType == null) {
             return OperationOutcome(issue: [
               OperationOutcomeIssue(
-                severity: Code('error'),
-                code: Code('unknown'),
+                severity: FhirCode('error'),
+                code: FhirCode('unknown'),
                 details: CodeableConcept(
                     text: 'Request was made and seemed to return a Resource,\n'
                         'but the ResourceType returned was unrecognized'),
@@ -1418,8 +1478,8 @@ class FhirRequest with _$FhirRequest {
   OperationOutcome _operationOutcome(String issue, {String? diagnostics}) =>
       OperationOutcome(issue: [
         OperationOutcomeIssue(
-          severity: Code('error'),
-          code: Code('value'),
+          severity: FhirCode('error'),
+          code: FhirCode('value'),
           details: CodeableConcept(text: issue),
           diagnostics: diagnostics,
         )

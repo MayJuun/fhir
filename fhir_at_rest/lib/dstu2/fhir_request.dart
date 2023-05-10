@@ -63,6 +63,10 @@ class FhirRequest with _$FhirRequest {
     ///   but there are some older systems that won't accept that
     MimeType? mimeType,
 
+    /// [accept] - this will default to fhir+json just so it will stop sending
+    /// me XML - I hate XML
+    @Default('application/fhir+json') String accept,
+
     /// [client] - if there's a specific client that you're going to be using
     Client? client,
   }) = FhirReadRequest;
@@ -114,6 +118,10 @@ class FhirRequest with _$FhirRequest {
     ///   but there are some older systems that won't accept that
     MimeType? mimeType,
 
+    /// [accept] - this will default to fhir+json just so it will stop sending
+    /// me XML - I hate XML
+    @Default('application/fhir+json') String accept,
+
     /// [client] - if there's a specific client that you're going to be using
     Client? client,
   }) = FhirVReadRequest;
@@ -156,6 +164,10 @@ class FhirRequest with _$FhirRequest {
     ///   but there are some older systems that won't accept that
     MimeType? mimeType,
 
+    /// [accept] - this will default to fhir+json just so it will stop sending
+    /// me XML - I hate XML
+    @Default('application/fhir+json') String accept,
+
     /// [client] - if there's a specific client that you're going to be using
     Client? client,
   }) = FhirUpdateRequest;
@@ -197,6 +209,10 @@ class FhirRequest with _$FhirRequest {
     /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
     ///   but there are some older systems that won't accept that
     MimeType? mimeType,
+
+    /// [accept] - this will default to fhir+json just so it will stop sending
+    /// me XML - I hate XML
+    @Default('application/fhir+json') String accept,
 
     /// [client] - if there's a specific client that you're going to be using
     Client? client,
@@ -247,6 +263,10 @@ class FhirRequest with _$FhirRequest {
     ///   but there are some older systems that won't accept that
     MimeType? mimeType,
 
+    /// [accept] - this will default to fhir+json just so it will stop sending
+    /// me XML - I hate XML
+    @Default('application/fhir+json') String accept,
+
     /// [client] - if there's a specific client that you're going to be using
     Client? client,
   }) = FhirDeleteRequest;
@@ -288,6 +308,10 @@ class FhirRequest with _$FhirRequest {
     /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
     ///   but there are some older systems that won't accept that
     MimeType? mimeType,
+
+    /// [accept] - this will default to fhir+json just so it will stop sending
+    /// me XML - I hate XML
+    @Default('application/fhir+json') String accept,
 
     /// [client] - if there's a specific client that you're going to be using
     Client? client,
@@ -341,6 +365,10 @@ class FhirRequest with _$FhirRequest {
     ///   but there are some older systems that won't accept that
     MimeType? mimeType,
 
+    /// [accept] - this will default to fhir+json just so it will stop sending
+    /// me XML - I hate XML
+    @Default('application/fhir+json') String accept,
+
     /// [client] - if there's a specific client that you're going to be using
     Client? client,
   }) = FhirSearchRequest;
@@ -381,6 +409,10 @@ class FhirRequest with _$FhirRequest {
     /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
     ///   but there are some older systems that won't accept that
     MimeType? mimeType,
+
+    /// [accept] - this will default to fhir+json just so it will stop sending
+    /// me XML - I hate XML
+    @Default('application/fhir+json') String accept,
 
     /// [client] - if there's a specific client that you're going to be using
     Client? client,
@@ -427,6 +459,10 @@ class FhirRequest with _$FhirRequest {
     ///   but there are some older systems that won't accept that
     MimeType? mimeType,
 
+    /// [accept] - this will default to fhir+json just so it will stop sending
+    /// me XML - I hate XML
+    @Default('application/fhir+json') String accept,
+
     /// [client] - if there's a specific client that you're going to be using
     Client? client,
   }) = FhirCapabilitiesRequest;
@@ -472,6 +508,10 @@ class FhirRequest with _$FhirRequest {
     ///   but there are some older systems that won't accept that
     MimeType? mimeType,
 
+    /// [accept] - this will default to fhir+json just so it will stop sending
+    /// me XML - I hate XML
+    @Default('application/fhir+json') String accept,
+
     /// [client] - if there's a specific client that you're going to be using
     Client? client,
   }) = FhirTransactionRequest;
@@ -516,6 +556,10 @@ class FhirRequest with _$FhirRequest {
     /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
     ///   but there are some older systems that won't accept that
     MimeType? mimeType,
+
+    /// [accept] - this will default to fhir+json just so it will stop sending
+    /// me XML - I hate XML
+    @Default('application/fhir+json') String accept,
 
     /// [client] - if there's a specific client that you're going to be using
     Client? client,
@@ -578,7 +622,7 @@ class FhirRequest with _$FhirRequest {
 
     /// [since] - Only include resource versions that were created at or after the
     ///   given instant in time
-    Instant? since,
+    FhirInstant? since,
 
     /// [at] - Only include resource versions that were current at some point
     ///   during the time period specified in the date time value
@@ -591,6 +635,10 @@ class FhirRequest with _$FhirRequest {
     /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
     ///   but there are some older systems that won't accept that
     MimeType? mimeType,
+
+    /// [accept] - this will default to fhir+json just so it will stop sending
+    /// me XML - I hate XML
+    @Default('application/fhir+json') String accept,
 
     /// [client] - if there's a specific client that you're going to be using
     Client? client,
@@ -649,7 +697,7 @@ class FhirRequest with _$FhirRequest {
 
     /// [since] - Only include resource versions that were created at or after the
     ///   given instant in time
-    Instant? since,
+    FhirInstant? since,
 
     /// [at] - Only include resource versions that were current at some point
     ///   during the time period specified in the date time value
@@ -662,6 +710,10 @@ class FhirRequest with _$FhirRequest {
     /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
     ///   but there are some older systems that won't accept that
     MimeType? mimeType,
+
+    /// [accept] - this will default to fhir+json just so it will stop sending
+    /// me XML - I hate XML
+    @Default('application/fhir+json') String accept,
 
     /// [client] - if there's a specific client that you're going to be using
     Client? client,
@@ -716,7 +768,7 @@ class FhirRequest with _$FhirRequest {
 
     /// [since] - Only include resource versions that were created at or after the
     ///   given instant in time
-    Instant? since,
+    FhirInstant? since,
 
     /// [at] - Only include resource versions that were current at some point
     ///   during the time period specified in the date time value
@@ -729,6 +781,10 @@ class FhirRequest with _$FhirRequest {
     /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
     ///   but there are some older systems that won't accept that
     MimeType? mimeType,
+
+    /// [accept] - this will default to fhir+json just so it will stop sending
+    /// me XML - I hate XML
+    @Default('application/fhir+json') String accept,
 
     /// [client] - if there's a specific client that you're going to be using
     Client? client,
@@ -786,6 +842,10 @@ class FhirRequest with _$FhirRequest {
     ///   but there are some older systems that won't accept that
     MimeType? mimeType,
 
+    /// [accept] - this will default to fhir+json just so it will stop sending
+    /// me XML - I hate XML
+    @Default('application/fhir+json') String accept,
+
     /// [client] - if there's a specific client that you're going to be using
     Client? client,
   }) = FhirOperationRequest;
@@ -802,6 +862,7 @@ class FhirRequest with _$FhirRequest {
         uri(parameters: m.parameters),
         headers,
         'Read',
+        accept,
         mimeType: m.mimeType,
       ),
 
@@ -811,6 +872,7 @@ class FhirRequest with _$FhirRequest {
         uri(parameters: m.parameters),
         headers,
         'Vread',
+        accept,
         mimeType: m.mimeType,
       ),
 
@@ -820,6 +882,7 @@ class FhirRequest with _$FhirRequest {
         uri(parameters: m.parameters),
         headers,
         'Update',
+        accept,
         resource: m.resource,
         mimeType: m.mimeType,
       ),
@@ -830,6 +893,7 @@ class FhirRequest with _$FhirRequest {
         uri(parameters: m.parameters),
         headers,
         'Patch',
+        accept,
         resource: m.resource,
         mimeType: m.mimeType,
       ),
@@ -840,6 +904,7 @@ class FhirRequest with _$FhirRequest {
         uri(parameters: m.parameters),
         headers,
         'Delete',
+        accept,
         mimeType: m.mimeType,
       ),
 
@@ -849,6 +914,7 @@ class FhirRequest with _$FhirRequest {
         uri(parameters: m.parameters),
         headers,
         'Create',
+        accept,
         resource: m.resource,
         mimeType: m.mimeType,
       ),
@@ -859,6 +925,7 @@ class FhirRequest with _$FhirRequest {
         m.usePost ? url : uri(parameters: m.parameters),
         headers,
         'Search',
+        accept,
         formData: m.usePost ? m.formData(parameters: m.parameters) : null,
         mimeType: m.mimeType,
       ),
@@ -869,6 +936,7 @@ class FhirRequest with _$FhirRequest {
         uri(parameters: m.parameters),
         headers,
         'Search All',
+        accept,
         mimeType: m.mimeType,
       ),
 
@@ -878,6 +946,7 @@ class FhirRequest with _$FhirRequest {
         uri(parameters: m.parameters),
         headers,
         'Capabilities',
+        accept,
         mimeType: m.mimeType,
       ),
 
@@ -905,6 +974,7 @@ class FhirRequest with _$FhirRequest {
           uri(),
           headers,
           'Transaction',
+          accept,
           resource: m.bundle,
           mimeType: m.mimeType,
         );
@@ -935,6 +1005,7 @@ class FhirRequest with _$FhirRequest {
           uri(),
           headers,
           'Batch',
+          accept,
           resource: m.bundle,
           mimeType: m.mimeType,
         );
@@ -957,6 +1028,7 @@ class FhirRequest with _$FhirRequest {
           uri(parameters: parameterList),
           headers,
           'History',
+          accept,
           mimeType: m.mimeType,
         );
       },
@@ -978,6 +1050,7 @@ class FhirRequest with _$FhirRequest {
           uri(parameters: parameterList),
           headers,
           'History Type',
+          accept,
           mimeType: m.mimeType,
         );
       },
@@ -999,6 +1072,7 @@ class FhirRequest with _$FhirRequest {
           uri(parameters: parameterList),
           headers,
           'History all',
+          accept,
           mimeType: m.mimeType,
         );
       },
@@ -1009,6 +1083,7 @@ class FhirRequest with _$FhirRequest {
         m.usePost ? url : uri(parameters: parameters),
         headers,
         'Operation',
+        accept,
         resource: m.usePost && m.useFormData
             ? null
             : Resource.fromJson(m.fhirParameter),
@@ -1032,7 +1107,7 @@ class FhirRequest with _$FhirRequest {
 
     /// [since] - Only include resource versions that were created at or after the
     ///   given instant in time
-    Instant? since,
+    FhirInstant? since,
 
     /// [at] - Only include resource versions that were current at some point
     ///   during the time period specified in the date time value
@@ -1066,7 +1141,8 @@ class FhirRequest with _$FhirRequest {
     RestfulRequest type,
     String uri,
     Map<String, String>? headers,
-    String requestType, {
+    String requestType,
+    String accept, {
     Resource? resource,
     String? formData,
 
@@ -1080,6 +1156,7 @@ class FhirRequest with _$FhirRequest {
         thisRequest: uri,
         client: client,
         headers: headers,
+        accept: accept,
         resource: resource == null ? null : resource.toJson(),
         mimeType: mimeType,
       );
@@ -1229,6 +1306,7 @@ class FhirRequest with _$FhirRequest {
     Map<String, dynamic>? resource,
     String? formData,
     Encoding? encoding,
+    required String accept,
 
     /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
     ///   but there are some older systems that won't accept that
@@ -1238,6 +1316,7 @@ class FhirRequest with _$FhirRequest {
     Client? client,
   }) async {
     headers ??= <String, String>{};
+    headers['Accept'] = accept;
     Response result;
     client ??= Client();
 
@@ -1319,7 +1398,7 @@ class FhirRequest with _$FhirRequest {
       return OperationOutcome(issue: [
         OperationOutcomeIssue(
           severity: IssueSeverity.error,
-          code: Code('unknown'),
+          code: FhirCode('unknown'),
           details: CodeableConcept(
               text: 'Failed to complete a restful request.\n'
                   'The request was made, and a failing status code of some kind was returned.\n'
@@ -1336,7 +1415,7 @@ class FhirRequest with _$FhirRequest {
           return OperationOutcome(issue: [
             OperationOutcomeIssue(
                 severity: IssueSeverity.information,
-                code: Code('informational'),
+                code: FhirCode('informational'),
                 diagnostics: 'Your request succeeded with a status of '
                     '${result.statusCode}\nbut the result did not have a body\n'
                     'Your request was: \n'
@@ -1350,7 +1429,7 @@ class FhirRequest with _$FhirRequest {
           return OperationOutcome(issue: [
             OperationOutcomeIssue(
                 severity: IssueSeverity.information,
-                code: Code('informational'),
+                code: FhirCode('informational'),
                 diagnostics: 'Your request succeeded with a status of '
                     '${result.statusCode}\nbut the result did not have a body\n'
                     'Your request was: \n'
@@ -1367,7 +1446,7 @@ class FhirRequest with _$FhirRequest {
           return OperationOutcome(issue: [
             OperationOutcomeIssue(
               severity: IssueSeverity.error,
-              code: Code('unknown'),
+              code: FhirCode('unknown'),
               details: CodeableConcept(
                   text:
                       'Request was made, but the result body had no defined response'),
@@ -1386,7 +1465,7 @@ class FhirRequest with _$FhirRequest {
                   ...operationOutcome.issue,
                 OperationOutcomeIssue(
                     severity: IssueSeverity.error,
-                    code: Code('unknown'),
+                    code: FhirCode('unknown'),
                     diagnostics:
                         'Status: ${body?['status']}\nMessage: ${body?['message']}\n'),
               ],
@@ -1399,7 +1478,7 @@ class FhirRequest with _$FhirRequest {
             return OperationOutcome(issue: [
               OperationOutcomeIssue(
                 severity: IssueSeverity.error,
-                code: Code('unknown'),
+                code: FhirCode('unknown'),
                 details: CodeableConcept(
                     text: 'Request was made and seemed to return a Resource,\n'
                         'but the ResourceType returned was unrecognized'),
@@ -1423,7 +1502,7 @@ class FhirRequest with _$FhirRequest {
       OperationOutcome(issue: [
         OperationOutcomeIssue(
           severity: IssueSeverity.error,
-          code: Code('value'),
+          code: FhirCode('value'),
           details: CodeableConcept(text: issue),
           diagnostics: diagnostics,
         )

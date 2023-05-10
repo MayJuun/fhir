@@ -64,6 +64,10 @@ class FhirRequest with _$FhirRequest {
     ///   but there are some older systems that won't accept that
     MimeType? mimeType,
 
+    /// [accept] - this will default to fhir+json just so it will stop sending
+    /// me XML - I hate XML
+    @Default('application/fhir+json') String accept,
+
     /// [client] - if there's a specific client that you're going to be using
     Client? client,
   }) = FhirReadRequest;
@@ -117,6 +121,10 @@ class FhirRequest with _$FhirRequest {
     ///   but there are some older systems that won't accept that
     MimeType? mimeType,
 
+    /// [accept] - this will default to fhir+json just so it will stop sending
+    /// me XML - I hate XML
+    @Default('application/fhir+json') String accept,
+
     /// [client] - if there's a specific client that you're going to be using
     Client? client,
   }) = FhirVReadRequest;
@@ -159,6 +167,10 @@ class FhirRequest with _$FhirRequest {
     ///   but there are some older systems that won't accept that
     MimeType? mimeType,
 
+    /// [accept] - this will default to fhir+json just so it will stop sending
+    /// me XML - I hate XML
+    @Default('application/fhir+json') String accept,
+
     /// [client] - if there's a specific client that you're going to be using
     Client? client,
   }) = FhirUpdateRequest;
@@ -200,6 +212,10 @@ class FhirRequest with _$FhirRequest {
     /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
     ///   but there are some older systems that won't accept that
     MimeType? mimeType,
+
+    /// [accept] - this will default to fhir+json just so it will stop sending
+    /// me XML - I hate XML
+    @Default('application/fhir+json') String accept,
 
     /// [client] - if there's a specific client that you're going to be using
     Client? client,
@@ -250,6 +266,10 @@ class FhirRequest with _$FhirRequest {
     ///   but there are some older systems that won't accept that
     MimeType? mimeType,
 
+    /// [accept] - this will default to fhir+json just so it will stop sending
+    /// me XML - I hate XML
+    @Default('application/fhir+json') String accept,
+
     /// [client] - if there's a specific client that you're going to be using
     Client? client,
   }) = FhirDeleteRequest;
@@ -291,6 +311,10 @@ class FhirRequest with _$FhirRequest {
     /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
     ///   but there are some older systems that won't accept that
     MimeType? mimeType,
+
+    /// [accept] - this will default to fhir+json just so it will stop sending
+    /// me XML - I hate XML
+    @Default('application/fhir+json') String accept,
 
     /// [client] - if there's a specific client that you're going to be using
     Client? client,
@@ -344,6 +368,10 @@ class FhirRequest with _$FhirRequest {
     ///   but there are some older systems that won't accept that
     MimeType? mimeType,
 
+    /// [accept] - this will default to fhir+json just so it will stop sending
+    /// me XML - I hate XML
+    @Default('application/fhir+json') String accept,
+
     /// [client] - if there's a specific client that you're going to be using
     Client? client,
   }) = FhirSearchRequest;
@@ -384,6 +412,10 @@ class FhirRequest with _$FhirRequest {
     /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
     ///   but there are some older systems that won't accept that
     MimeType? mimeType,
+
+    /// [accept] - this will default to fhir+json just so it will stop sending
+    /// me XML - I hate XML
+    @Default('application/fhir+json') String accept,
 
     /// [client] - if there's a specific client that you're going to be using
     Client? client,
@@ -431,6 +463,10 @@ class FhirRequest with _$FhirRequest {
     ///   but there are some older systems that won't accept that
     MimeType? mimeType,
 
+    /// [accept] - this will default to fhir+json just so it will stop sending
+    /// me XML - I hate XML
+    @Default('application/fhir+json') String accept,
+
     /// [client] - if there's a specific client that you're going to be using
     Client? client,
   }) = FhirCapabilitiesRequest;
@@ -476,6 +512,10 @@ class FhirRequest with _$FhirRequest {
     ///   but there are some older systems that won't accept that
     MimeType? mimeType,
 
+    /// [accept] - this will default to fhir+json just so it will stop sending
+    /// me XML - I hate XML
+    @Default('application/fhir+json') String accept,
+
     /// [client] - if there's a specific client that you're going to be using
     Client? client,
   }) = FhirTransactionRequest;
@@ -518,6 +558,10 @@ class FhirRequest with _$FhirRequest {
     /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
     ///   but there are some older systems that won't accept that
     MimeType? mimeType,
+
+    /// [accept] - this will default to fhir+json just so it will stop sending
+    /// me XML - I hate XML
+    @Default('application/fhir+json') String accept,
 
     /// [client] - if there's a specific client that you're going to be using
     Client? client,
@@ -580,7 +624,7 @@ class FhirRequest with _$FhirRequest {
 
     /// [since] - Only include resource versions that were created at or after the
     /// given instant in time
-    Instant? since,
+    FhirInstant? since,
 
     /// [at] - Only include resource versions that were current at some point
     ///   during the time period specified in the date time value
@@ -593,6 +637,10 @@ class FhirRequest with _$FhirRequest {
     /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
     ///   but there are some older systems that won't accept that
     MimeType? mimeType,
+
+    /// [accept] - this will default to fhir+json just so it will stop sending
+    /// me XML - I hate XML
+    @Default('application/fhir+json') String accept,
 
     /// [client] - if there's a specific client that you're going to be using
     Client? client,
@@ -651,7 +699,7 @@ class FhirRequest with _$FhirRequest {
 
     /// [since] - Only include resource versions that were created at or after the
     ///   given instant in time
-    Instant? since,
+    FhirInstant? since,
 
     /// [at] - Only include resource versions that were current at some point
     ///   during the time period specified in the date time value
@@ -664,6 +712,10 @@ class FhirRequest with _$FhirRequest {
     /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
     ///   but there are some older systems that won't accept that
     MimeType? mimeType,
+
+    /// [accept] - this will default to fhir+json just so it will stop sending
+    /// me XML - I hate XML
+    @Default('application/fhir+json') String accept,
 
     /// [client] - if there's a specific client that you're going to be using
     Client? client,
@@ -718,7 +770,7 @@ class FhirRequest with _$FhirRequest {
 
     /// [since] - Only include resource versions that were created at or after the
     ///   given instant in time
-    Instant? since,
+    FhirInstant? since,
 
     /// [at] - Only include resource versions that were current at some point
     ///   during the time period specified in the date time value
@@ -731,6 +783,10 @@ class FhirRequest with _$FhirRequest {
     /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
     ///   but there are some older systems that won't accept that
     MimeType? mimeType,
+
+    /// [accept] - this will default to fhir+json just so it will stop sending
+    /// me XML - I hate XML
+    @Default('application/fhir+json') String accept,
 
     /// [client] - if there's a specific client that you're going to be using
     Client? client,
@@ -787,6 +843,10 @@ class FhirRequest with _$FhirRequest {
     /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
     ///   but there are some older systems that won't accept that
     MimeType? mimeType,
+
+    /// [accept] - this will default to fhir+json just so it will stop sending
+    /// me XML - I hate XML
+    @Default('application/fhir+json') String accept,
 
     /// [client] - if there's a specific client that you're going to be using
     Client? client,
@@ -1034,7 +1094,7 @@ class FhirRequest with _$FhirRequest {
 
     /// [since] - Only include resource versions that were created at or after the
     ///   given instant in time
-    Instant? since,
+    FhirInstant? since,
 
     /// [at] - Only include resource versions that were current at some point
     ///   during the time period specified in the date time value

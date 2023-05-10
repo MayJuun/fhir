@@ -97,7 +97,7 @@ Future<void> fhirUriTest() async {
         base: Uri.parse('http://hapi.fhir.org/baseR4'),
         type: R4ResourceType.Patient,
         id: '12345',
-        vid: Id('6789'),
+        vid: FhirId('6789'),
       );
       expect(
         request.uri(),
@@ -110,7 +110,7 @@ Future<void> fhirUriTest() async {
         base: Uri.parse('http://hapi.fhir.org/baseR4'),
         type: R4ResourceType.Patient,
         id: '12345',
-        vid: Id('6789'),
+        vid: FhirId('6789'),
         pretty: true,
       );
       expect(
@@ -124,7 +124,7 @@ Future<void> fhirUriTest() async {
         base: Uri.parse('http://hapi.fhir.org/baseR4'),
         type: R4ResourceType.Patient,
         id: '12345',
-        vid: Id('6789'),
+        vid: FhirId('6789'),
         pretty: true,
         summary: Summary.true_,
       );
@@ -139,7 +139,7 @@ Future<void> fhirUriTest() async {
         base: Uri.parse('http://hapi.fhir.org/baseR4'),
         type: R4ResourceType.Patient,
         id: '12345',
-        vid: Id('6789'),
+        vid: FhirId('6789'),
         summary: Summary.count,
       );
       expect(
@@ -308,7 +308,7 @@ Future<void> fhirUriTest() async {
       final request = FhirRequest.operation(
         base: Uri.parse('http://hapi.fhir.org/baseR4'),
         type: R4ResourceType.Patient,
-        id: Id('744742'),
+        id: FhirId('744742'),
         operation: 'everything',
         parameters: parameters,
       );

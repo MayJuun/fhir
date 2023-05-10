@@ -56,7 +56,7 @@ ReturnResults parseBundle(Bundle bundle) {
             issue: [
               OperationOutcomeIssue(
                 severity: IssueSeverity.information,
-                code: Code('informational'),
+                code: FhirCode('informational'),
                 diagnostics: 'Status: ${entry.response?.status ?? "none"}'
                     '\nLocation: ${entry.response?.location ?? "none"}',
               ),
@@ -112,7 +112,7 @@ ReturnResults<T> parseBundleForType<T>(Bundle bundle) {
             issue: [
               OperationOutcomeIssue(
                 severity: IssueSeverity.information,
-                code: Code('informational'),
+                code: FhirCode('informational'),
                 diagnostics: 'Status: ${entry.response?.status ?? "none"}'
                     '\nLocation: ${entry.response?.location ?? "none"}',
               ),
@@ -132,7 +132,7 @@ OperationOutcome incorrectResultType<T>(Resource result) => OperationOutcome(
       issue: [
         OperationOutcomeIssue(
           severity: IssueSeverity.error,
-          code: Code('structure'),
+          code: FhirCode('structure'),
           diagnostics:
               'This request returned a bundle, and should have been a $T but '
               'is a ${result.resourceTypeString}. The resource is contained in '

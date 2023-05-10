@@ -36,7 +36,7 @@ ReturnResults parseRequestResult(Resource result) => result is Bundle
 /// OperationOutcomes that don't contain a Resource
 ReturnResults parseBundle(Bundle bundle) {
   final returnResults = ReturnResults();
-  if (bundle.type == Code('transaction-response')) {
+  if (bundle.type == FhirCode('transaction-response')) {
     for (var entry in bundle.entry ?? <BundleEntry>[]) {
       if (entry.resource != null) {
         if (entry.resource is OperationOutcome) {
@@ -67,7 +67,7 @@ ReturnResults parseBundle(Bundle bundle) {
           OperationOutcome(
             issue: [
               OperationOutcomeIssue(
-                code: Code('informational'),
+                code: FhirCode('informational'),
                 diagnostics: 'Status: ${entry.response?.status ?? "none"}'
                     '\nLocation: ${entry.response?.location ?? "none"}',
               ),
@@ -100,7 +100,7 @@ ReturnResults<T> parseRequestResultForType<T>(Resource result) =>
 /// are of type T
 ReturnResults<T> parseBundleForType<T>(Bundle bundle) {
   final returnResults = ReturnResults<T>();
-  if (bundle.type == Code('transaction-response')) {
+  if (bundle.type == FhirCode('transaction-response')) {
     for (var entry in bundle.entry ?? <BundleEntry>[]) {
       if (entry.resource != null) {
         if (entry.resource is OperationOutcome) {
@@ -137,7 +137,7 @@ ReturnResults<T> parseBundleForType<T>(Bundle bundle) {
           OperationOutcome(
             issue: [
               OperationOutcomeIssue(
-                code: Code('informational'),
+                code: FhirCode('informational'),
                 diagnostics: 'Status: ${entry.response?.status ?? "none"}'
                     '\nLocation: ${entry.response?.location ?? "none"}',
               ),
@@ -156,7 +156,7 @@ OperationOutcome incorrectResultType<T>(Resource result) => OperationOutcome(
       contained: [result],
       issue: [
         OperationOutcomeIssue(
-          code: Code('structure'),
+          code: FhirCode('structure'),
           diagnostics:
               'This request returned a bundle, and should have been a $T but '
               'is a ${result.resourceTypeString}. The resource is contained in '

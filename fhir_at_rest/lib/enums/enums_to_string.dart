@@ -16,13 +16,15 @@ String? enumToString<T>(T enumValue) {
     case Summary:
       return SummaryEnumMap[enumValue];
     case dstu2.Dstu2ResourceType:
-      return dstu2.ResourceUtils.resourceTypeToStringMap[enumValue];
+      return dstu2.Resource.resourceTypeToString(
+          enumValue as dstu2.Dstu2ResourceType);
     case stu3.Stu3ResourceType:
-      return stu3.ResourceUtils.resourceTypeToStringMap[enumValue];
+      return stu3.Resource.resourceTypeToString(
+          enumValue as stu3.Stu3ResourceType);
     case r4.R4ResourceType:
-      return r4.ResourceUtils.resourceTypeToStringMap[enumValue];
+      return r4.Resource.resourceTypeToString(enumValue as r4.R4ResourceType);
     case r5.R5ResourceType:
-      return r5.ResourceUtils.resourceTypeToStringMap[enumValue];
+      return r5.Resource.resourceTypeToString(enumValue as r5.R5ResourceType);
     case Mode:
       return ModeEnumMap[enumValue];
     default:
