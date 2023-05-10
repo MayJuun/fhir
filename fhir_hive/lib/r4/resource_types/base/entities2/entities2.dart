@@ -147,7 +147,7 @@ class BiologicallyDerivedProduct extends HiveObject
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -206,7 +206,7 @@ class BiologicallyDerivedProduct extends HiveObject
 
     /// [productCategory] Broad category of this product.
     @HiveField(12)
-        Code? productCategory,
+        FhirCode? productCategory,
 
     /// [productCategoryElement] Extensions for productCategory
     @JsonKey(name: '_productCategory')
@@ -220,7 +220,7 @@ class BiologicallyDerivedProduct extends HiveObject
 
     /// [status] Whether the product is currently available.
     @HiveField(15)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -706,13 +706,13 @@ class BiologicallyDerivedProductStorage
     @JsonKey(name: '_description') Element? descriptionElement,
 
     /// [temperature] Storage temperature.
-    Decimal? temperature,
+    FhirDecimal? temperature,
 
     /// [temperatureElement] Extensions for temperature
     @JsonKey(name: '_temperature') Element? temperatureElement,
 
     /// [scale] Temperature scale used.
-    Code? scale,
+    FhirCode? scale,
 
     /// [scaleElement] Extensions for scale
     @JsonKey(name: '_scale') Element? scaleElement,
@@ -929,7 +929,7 @@ class Device extends HiveObject with Resource, _$Device {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -996,7 +996,7 @@ class Device extends HiveObject with Resource, _$Device {
 
     /// [status] Status of the Device availability.
     @HiveField(14)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -1324,7 +1324,7 @@ class DeviceUdiCarrier with _$DeviceUdiCarrier {
     /// printed on the packaging of the device - e.g., a barcode or RFID.
     /// Because of limitations on character sets in XML and the need to round-trip
     ///  JSON data through XML, AIDC Formats *SHALL* be base64 encoded.
-    Base64Binary? carrierAIDC,
+    FhirBase64Binary? carrierAIDC,
 
     /// [carrierAIDCElement] Extensions for carrierAIDC
     @JsonKey(name: '_carrierAIDC') Element? carrierAIDCElement,
@@ -1338,7 +1338,7 @@ class DeviceUdiCarrier with _$DeviceUdiCarrier {
     @JsonKey(name: '_carrierHRF') Element? carrierHRFElement,
 
     /// [entryType] A coded entry to indicate how the data was entered.
-    Code? entryType,
+    FhirCode? entryType,
 
     /// [entryTypeElement] Extensions for entryType
     @JsonKey(name: '_entryType') Element? entryTypeElement,
@@ -1455,7 +1455,7 @@ class DeviceDeviceName with _$DeviceDeviceName {
     /// [type] The type of deviceName.
     /// UDILabelName | UserFriendlyName | PatientReportedName |
     ///  ManufactureDeviceName | ModelName.
-    Code? type,
+    FhirCode? type,
 
     /// [typeElement] Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
@@ -1972,7 +1972,7 @@ class DeviceMetric extends HiveObject with Resource, _$DeviceMetric {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -2055,7 +2055,7 @@ class DeviceMetric extends HiveObject with Resource, _$DeviceMetric {
     /// [operationalStatus] Indicates current operational state of the device.
     ///  For example: On, Off, Standby, etc.
     @HiveField(16)
-        Code? operationalStatus,
+        FhirCode? operationalStatus,
 
     /// [operationalStatusElement] Extensions for operationalStatus
     @JsonKey(name: '_operationalStatus')
@@ -2070,7 +2070,7 @@ class DeviceMetric extends HiveObject with Resource, _$DeviceMetric {
     /// example; the parameters are displayed in different characteristic colors,
     ///  such as HR-blue, BP-green, and PR and SpO2- magenta.
     @HiveField(19)
-        Code? color,
+        FhirCode? color,
 
     /// [colorElement] Extensions for color
     @JsonKey(name: '_color')
@@ -2080,7 +2080,7 @@ class DeviceMetric extends HiveObject with Resource, _$DeviceMetric {
     /// [category] Indicates the category of the observation generation process.
     ///  A DeviceMetric can be for example a setting, measurement, or calculation.
     @HiveField(21)
-        Code? category,
+        FhirCode? category,
 
     /// [categoryElement] Extensions for category
     @JsonKey(name: '_category')
@@ -2206,13 +2206,13 @@ class DeviceMetricCalibration with _$DeviceMetricCalibration {
     List<FhirExtension>? modifierExtension,
 
     /// [type] Describes the type of the calibration method.
-    Code? type,
+    FhirCode? type,
 
     /// [typeElement] Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
 
     /// [state] Describes the state of the calibration.
-    Code? state,
+    FhirCode? state,
 
     /// [stateElement] Extensions for state
     @JsonKey(name: '_state') Element? stateElement,
@@ -2617,7 +2617,7 @@ class NutritionProductCharacteristic with _$NutritionProductCharacteristic {
 
     /// [valueBase64Binary] The actual characteristic value corresponding to the type.;
 
-    Base64Binary? valueBase64Binary,
+    FhirBase64Binary? valueBase64Binary,
 
     /// [valueBase64BinaryElement] (_valueBase64Binary): Extensions for valueBase64Binary;
 

@@ -32,7 +32,7 @@ mixin _$Citation {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @HiveField(6)
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
@@ -69,7 +69,7 @@ mixin _$Citation {
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
   @HiveField(20)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
   @HiveField(21)
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -173,7 +173,7 @@ abstract class $CitationCopyWith<$Res> {
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @HiveField(6)
       @JsonKey(name: '_language')
           Element? languageElement,
@@ -209,7 +209,7 @@ abstract class $CitationCopyWith<$Res> {
       @JsonKey(name: '_title')
           Element? titleElement,
       @HiveField(20)
-          Code? status,
+          FhirCode? status,
       @HiveField(21)
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -839,7 +839,7 @@ abstract class _$$_CitationCopyWith<$Res> implements $CitationCopyWith<$Res> {
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @HiveField(6)
       @JsonKey(name: '_language')
           Element? languageElement,
@@ -875,7 +875,7 @@ abstract class _$$_CitationCopyWith<$Res> implements $CitationCopyWith<$Res> {
       @JsonKey(name: '_title')
           Element? titleElement,
       @HiveField(20)
-          Code? status,
+          FhirCode? status,
       @HiveField(21)
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -2063,7 +2063,7 @@ abstract class _Citation extends Citation {
   Element? get implicitRulesElement;
   @override
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
   @HiveField(6)
   @JsonKey(name: '_language')
@@ -2114,7 +2114,7 @@ abstract class _Citation extends Citation {
   Element? get titleElement;
   @override
   @HiveField(20)
-  Code? get status;
+  FhirCode? get status;
   @override
   @HiveField(21)
   @JsonKey(name: '_status')
@@ -12164,7 +12164,7 @@ mixin _$Evidence {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @HiveField(6)
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
@@ -12203,7 +12203,7 @@ mixin _$Evidence {
   @JsonKey(name: '_citeAsMarkdown')
   Element? get citeAsMarkdownElement => throw _privateConstructorUsedError;
   @HiveField(21)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
   @HiveField(22)
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -12291,7 +12291,7 @@ abstract class $EvidenceCopyWith<$Res> {
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @HiveField(6)
       @JsonKey(name: '_language')
           Element? languageElement,
@@ -12329,7 +12329,7 @@ abstract class $EvidenceCopyWith<$Res> {
       @JsonKey(name: '_citeAsMarkdown')
           Element? citeAsMarkdownElement,
       @HiveField(21)
-          Code? status,
+          FhirCode? status,
       @HiveField(22)
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -12906,7 +12906,7 @@ abstract class _$$_EvidenceCopyWith<$Res> implements $EvidenceCopyWith<$Res> {
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @HiveField(6)
       @JsonKey(name: '_language')
           Element? languageElement,
@@ -12944,7 +12944,7 @@ abstract class _$$_EvidenceCopyWith<$Res> implements $EvidenceCopyWith<$Res> {
       @JsonKey(name: '_citeAsMarkdown')
           Element? citeAsMarkdownElement,
       @HiveField(21)
-          Code? status,
+          FhirCode? status,
       @HiveField(22)
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -14013,7 +14013,7 @@ abstract class _Evidence extends Evidence {
   Element? get implicitRulesElement;
   @override
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
   @HiveField(6)
   @JsonKey(name: '_language')
@@ -14067,7 +14067,7 @@ abstract class _Evidence extends Evidence {
   Element? get citeAsMarkdownElement;
   @override
   @HiveField(21)
-  Code? get status;
+  FhirCode? get status;
   @override
   @HiveField(22)
   @JsonKey(name: '_status')
@@ -15788,7 +15788,7 @@ mixin _$EvidenceAttributeEstimate {
   List<Annotation>? get note => throw _privateConstructorUsedError;
   CodeableConcept? get type => throw _privateConstructorUsedError;
   Quantity? get quantity => throw _privateConstructorUsedError;
-  Decimal? get level => throw _privateConstructorUsedError;
+  FhirDecimal? get level => throw _privateConstructorUsedError;
   @JsonKey(name: '_level')
   Element? get levelElement => throw _privateConstructorUsedError;
   Range? get range => throw _privateConstructorUsedError;
@@ -15816,7 +15816,7 @@ abstract class $EvidenceAttributeEstimateCopyWith<$Res> {
       List<Annotation>? note,
       CodeableConcept? type,
       Quantity? quantity,
-      Decimal? level,
+      FhirDecimal? level,
       @JsonKey(name: '_level') Element? levelElement,
       Range? range,
       List<EvidenceAttributeEstimate>? attributeEstimate});
@@ -15986,7 +15986,7 @@ abstract class _$$_EvidenceAttributeEstimateCopyWith<$Res>
       List<Annotation>? note,
       CodeableConcept? type,
       Quantity? quantity,
-      Decimal? level,
+      FhirDecimal? level,
       @JsonKey(name: '_level') Element? levelElement,
       Range? range,
       List<EvidenceAttributeEstimate>? attributeEstimate});
@@ -16270,7 +16270,7 @@ abstract class _EvidenceAttributeEstimate extends EvidenceAttributeEstimate {
   @override
   Quantity? get quantity;
   @override
-  Decimal? get level;
+  FhirDecimal? get level;
   @override
   @JsonKey(name: '_level')
   Element? get levelElement;
@@ -16649,7 +16649,7 @@ mixin _$EvidenceVar {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   Reference get variableDefinition => throw _privateConstructorUsedError;
-  Code? get handling => throw _privateConstructorUsedError;
+  FhirCode? get handling => throw _privateConstructorUsedError;
   @JsonKey(name: '_handling')
   Element? get handlingElement => throw _privateConstructorUsedError;
   List<CodeableConcept>? get valueCategory =>
@@ -16674,7 +16674,7 @@ abstract class $EvidenceVarCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Reference variableDefinition,
-      Code? handling,
+      FhirCode? handling,
       @JsonKey(name: '_handling') Element? handlingElement,
       List<CodeableConcept>? valueCategory,
       List<Quantity>? valueQuantity,
@@ -16781,7 +16781,7 @@ abstract class _$$_EvidenceVarCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Reference variableDefinition,
-      Code? handling,
+      FhirCode? handling,
       @JsonKey(name: '_handling') Element? handlingElement,
       List<CodeableConcept>? valueCategory,
       List<Quantity>? valueQuantity,
@@ -17022,7 +17022,7 @@ abstract class _EvidenceVar extends EvidenceVar {
   @override
   Reference get variableDefinition;
   @override
-  Code? get handling;
+  FhirCode? get handling;
   @override
   @JsonKey(name: '_handling')
   Element? get handlingElement;
@@ -17526,7 +17526,7 @@ mixin _$EvidenceReport {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @HiveField(6)
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
@@ -17546,7 +17546,7 @@ mixin _$EvidenceReport {
   @JsonKey(name: '_url')
   Element? get urlElement => throw _privateConstructorUsedError;
   @HiveField(13)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
   @HiveField(14)
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -17619,7 +17619,7 @@ abstract class $EvidenceReportCopyWith<$Res> {
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @HiveField(6)
       @JsonKey(name: '_language')
           Element? languageElement,
@@ -17638,7 +17638,7 @@ abstract class $EvidenceReportCopyWith<$Res> {
       @JsonKey(name: '_url')
           Element? urlElement,
       @HiveField(13)
-          Code? status,
+          FhirCode? status,
       @HiveField(14)
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -18034,7 +18034,7 @@ abstract class _$$_EvidenceReportCopyWith<$Res>
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @HiveField(6)
       @JsonKey(name: '_language')
           Element? languageElement,
@@ -18053,7 +18053,7 @@ abstract class _$$_EvidenceReportCopyWith<$Res>
       @JsonKey(name: '_url')
           Element? urlElement,
       @HiveField(13)
-          Code? status,
+          FhirCode? status,
       @HiveField(14)
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -18861,7 +18861,7 @@ abstract class _EvidenceReport extends EvidenceReport {
   Element? get implicitRulesElement;
   @override
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
   @HiveField(6)
   @JsonKey(name: '_language')
@@ -18888,7 +18888,7 @@ abstract class _EvidenceReport extends EvidenceReport {
   Element? get urlElement;
   @override
   @HiveField(13)
-  Code? get status;
+  FhirCode? get status;
   @override
   @HiveField(14)
   @JsonKey(name: '_status')
@@ -19808,7 +19808,7 @@ mixin _$EvidenceReportRelatesTo {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  Code? get code => throw _privateConstructorUsedError;
+  FhirCode? get code => throw _privateConstructorUsedError;
   @JsonKey(name: '_code')
   Element? get codeElement => throw _privateConstructorUsedError;
   Identifier? get targetIdentifier => throw _privateConstructorUsedError;
@@ -19830,7 +19830,7 @@ abstract class $EvidenceReportRelatesToCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement,
       Identifier? targetIdentifier,
       Reference? targetReference});
@@ -19943,7 +19943,7 @@ abstract class _$$_EvidenceReportRelatesToCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement,
       Identifier? targetIdentifier,
       Reference? targetReference});
@@ -20135,7 +20135,7 @@ abstract class _EvidenceReportRelatesTo extends EvidenceReportRelatesTo {
   @override
   List<FhirExtension>? get modifierExtension;
   @override
-  Code? get code;
+  FhirCode? get code;
   @override
   @JsonKey(name: '_code')
   Element? get codeElement;
@@ -20168,7 +20168,7 @@ mixin _$EvidenceReportSection {
   Reference? get focusReference => throw _privateConstructorUsedError;
   List<Reference>? get author => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
-  Code? get mode => throw _privateConstructorUsedError;
+  FhirCode? get mode => throw _privateConstructorUsedError;
   @JsonKey(name: '_mode')
   Element? get modeElement => throw _privateConstructorUsedError;
   CodeableConcept? get orderedBy => throw _privateConstructorUsedError;
@@ -20202,7 +20202,7 @@ abstract class $EvidenceReportSectionCopyWith<$Res> {
       Reference? focusReference,
       List<Reference>? author,
       Narrative? text,
-      Code? mode,
+      FhirCode? mode,
       @JsonKey(name: '_mode') Element? modeElement,
       CodeableConcept? orderedBy,
       List<CodeableConcept>? entryClassifier,
@@ -20427,7 +20427,7 @@ abstract class _$$_EvidenceReportSectionCopyWith<$Res>
       Reference? focusReference,
       List<Reference>? author,
       Narrative? text,
-      Code? mode,
+      FhirCode? mode,
       @JsonKey(name: '_mode') Element? modeElement,
       CodeableConcept? orderedBy,
       List<CodeableConcept>? entryClassifier,
@@ -20802,7 +20802,7 @@ abstract class _EvidenceReportSection extends EvidenceReportSection {
   @override
   Narrative? get text;
   @override
-  Code? get mode;
+  FhirCode? get mode;
   @override
   @JsonKey(name: '_mode')
   Element? get modeElement;
@@ -20843,7 +20843,7 @@ mixin _$EvidenceVariable {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @HiveField(6)
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
@@ -20890,7 +20890,7 @@ mixin _$EvidenceVariable {
   @JsonKey(name: '_subtitle')
   Element? get subtitleElement => throw _privateConstructorUsedError;
   @HiveField(24)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
   @HiveField(25)
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -20932,7 +20932,7 @@ mixin _$EvidenceVariable {
   @JsonKey(name: '_actual')
   Element? get actualElement => throw _privateConstructorUsedError;
   @HiveField(42)
-  Code? get characteristicCombination => throw _privateConstructorUsedError;
+  FhirCode? get characteristicCombination => throw _privateConstructorUsedError;
   @JsonKey(name: '_characteristicCombination')
   @HiveField(43)
   Element? get characteristicCombinationElement =>
@@ -20941,7 +20941,7 @@ mixin _$EvidenceVariable {
   List<EvidenceVariableCharacteristic> get characteristic =>
       throw _privateConstructorUsedError;
   @HiveField(45)
-  Code? get handling => throw _privateConstructorUsedError;
+  FhirCode? get handling => throw _privateConstructorUsedError;
   @HiveField(46)
   @JsonKey(name: '_handling')
   Element? get handlingElement => throw _privateConstructorUsedError;
@@ -20975,7 +20975,7 @@ abstract class $EvidenceVariableCopyWith<$Res> {
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @HiveField(6)
       @JsonKey(name: '_language')
           Element? languageElement,
@@ -21021,7 +21021,7 @@ abstract class $EvidenceVariableCopyWith<$Res> {
       @JsonKey(name: '_subtitle')
           Element? subtitleElement,
       @HiveField(24)
-          Code? status,
+          FhirCode? status,
       @HiveField(25)
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -21062,14 +21062,14 @@ abstract class $EvidenceVariableCopyWith<$Res> {
       @JsonKey(name: '_actual')
           Element? actualElement,
       @HiveField(42)
-          Code? characteristicCombination,
+          FhirCode? characteristicCombination,
       @JsonKey(name: '_characteristicCombination')
       @HiveField(43)
           Element? characteristicCombinationElement,
       @HiveField(44)
           List<EvidenceVariableCharacteristic> characteristic,
       @HiveField(45)
-          Code? handling,
+          FhirCode? handling,
       @HiveField(46)
       @JsonKey(name: '_handling')
           Element? handlingElement,
@@ -21583,7 +21583,7 @@ abstract class _$$_EvidenceVariableCopyWith<$Res>
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @HiveField(6)
       @JsonKey(name: '_language')
           Element? languageElement,
@@ -21629,7 +21629,7 @@ abstract class _$$_EvidenceVariableCopyWith<$Res>
       @JsonKey(name: '_subtitle')
           Element? subtitleElement,
       @HiveField(24)
-          Code? status,
+          FhirCode? status,
       @HiveField(25)
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -21670,14 +21670,14 @@ abstract class _$$_EvidenceVariableCopyWith<$Res>
       @JsonKey(name: '_actual')
           Element? actualElement,
       @HiveField(42)
-          Code? characteristicCombination,
+          FhirCode? characteristicCombination,
       @JsonKey(name: '_characteristicCombination')
       @HiveField(43)
           Element? characteristicCombinationElement,
       @HiveField(44)
           List<EvidenceVariableCharacteristic> characteristic,
       @HiveField(45)
-          Code? handling,
+          FhirCode? handling,
       @HiveField(46)
       @JsonKey(name: '_handling')
           Element? handlingElement,
@@ -22689,7 +22689,7 @@ abstract class _EvidenceVariable extends EvidenceVariable {
   Element? get implicitRulesElement;
   @override
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
   @HiveField(6)
   @JsonKey(name: '_language')
@@ -22754,7 +22754,7 @@ abstract class _EvidenceVariable extends EvidenceVariable {
   Element? get subtitleElement;
   @override
   @HiveField(24)
-  Code? get status;
+  FhirCode? get status;
   @override
   @HiveField(25)
   @JsonKey(name: '_status')
@@ -22813,7 +22813,7 @@ abstract class _EvidenceVariable extends EvidenceVariable {
   Element? get actualElement;
   @override
   @HiveField(42)
-  Code? get characteristicCombination;
+  FhirCode? get characteristicCombination;
   @override
   @JsonKey(name: '_characteristicCombination')
   @HiveField(43)
@@ -22823,7 +22823,7 @@ abstract class _EvidenceVariable extends EvidenceVariable {
   List<EvidenceVariableCharacteristic> get characteristic;
   @override
   @HiveField(45)
-  Code? get handling;
+  FhirCode? get handling;
   @override
   @HiveField(46)
   @JsonKey(name: '_handling')
@@ -22864,7 +22864,7 @@ mixin _$EvidenceVariableCharacteristic {
   Element? get excludeElement => throw _privateConstructorUsedError;
   EvidenceVariableTimeFromStart? get timeFromStart =>
       throw _privateConstructorUsedError;
-  Code? get groupMeasure => throw _privateConstructorUsedError;
+  FhirCode? get groupMeasure => throw _privateConstructorUsedError;
   @JsonKey(name: '_groupMeasure')
   Element? get groupMeasureElement => throw _privateConstructorUsedError;
 
@@ -22900,7 +22900,7 @@ abstract class $EvidenceVariableCharacteristicCopyWith<$Res> {
       @JsonKey(name: '_exclude')
           Element? excludeElement,
       EvidenceVariableTimeFromStart? timeFromStart,
-      Code? groupMeasure,
+      FhirCode? groupMeasure,
       @JsonKey(name: '_groupMeasure')
           Element? groupMeasureElement});
 
@@ -23134,7 +23134,7 @@ abstract class _$$_EvidenceVariableCharacteristicCopyWith<$Res>
       @JsonKey(name: '_exclude')
           Element? excludeElement,
       EvidenceVariableTimeFromStart? timeFromStart,
-      Code? groupMeasure,
+      FhirCode? groupMeasure,
       @JsonKey(name: '_groupMeasure')
           Element? groupMeasureElement});
 
@@ -23469,7 +23469,7 @@ abstract class _EvidenceVariableCharacteristic
   @override
   EvidenceVariableTimeFromStart? get timeFromStart;
   @override
-  Code? get groupMeasure;
+  FhirCode? get groupMeasure;
   @override
   @JsonKey(name: '_groupMeasure')
   Element? get groupMeasureElement;
@@ -24277,7 +24277,7 @@ mixin _$ResearchDefinition {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @HiveField(6)
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
@@ -24324,7 +24324,7 @@ mixin _$ResearchDefinition {
   @JsonKey(name: '_subtitle')
   Element? get subtitleElement => throw _privateConstructorUsedError;
   @HiveField(24)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
   @HiveField(25)
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -24442,7 +24442,7 @@ abstract class $ResearchDefinitionCopyWith<$Res> {
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @HiveField(6)
       @JsonKey(name: '_language')
           Element? languageElement,
@@ -24488,7 +24488,7 @@ abstract class $ResearchDefinitionCopyWith<$Res> {
       @JsonKey(name: '_subtitle')
           Element? subtitleElement,
       @HiveField(24)
-          Code? status,
+          FhirCode? status,
       @HiveField(25)
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -25284,7 +25284,7 @@ abstract class _$$_ResearchDefinitionCopyWith<$Res>
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @HiveField(6)
       @JsonKey(name: '_language')
           Element? languageElement,
@@ -25330,7 +25330,7 @@ abstract class _$$_ResearchDefinitionCopyWith<$Res>
       @JsonKey(name: '_subtitle')
           Element? subtitleElement,
       @HiveField(24)
-          Code? status,
+          FhirCode? status,
       @HiveField(25)
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -26699,7 +26699,7 @@ abstract class _ResearchDefinition extends ResearchDefinition {
   Element? get implicitRulesElement;
   @override
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
   @HiveField(6)
   @JsonKey(name: '_language')
@@ -26764,7 +26764,7 @@ abstract class _ResearchDefinition extends ResearchDefinition {
   Element? get subtitleElement;
   @override
   @HiveField(24)
-  Code? get status;
+  FhirCode? get status;
   @override
   @HiveField(25)
   @JsonKey(name: '_status')
@@ -26917,7 +26917,7 @@ mixin _$ResearchElementDefinition {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @HiveField(6)
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
@@ -26964,7 +26964,7 @@ mixin _$ResearchElementDefinition {
   @JsonKey(name: '_subtitle')
   Element? get subtitleElement => throw _privateConstructorUsedError;
   @HiveField(24)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
   @HiveField(25)
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -27048,12 +27048,12 @@ mixin _$ResearchElementDefinition {
   @JsonKey(name: 'library')
   List<FhirCanonical>? get library_ => throw _privateConstructorUsedError;
   @HiveField(59)
-  Code? get type => throw _privateConstructorUsedError;
+  FhirCode? get type => throw _privateConstructorUsedError;
   @HiveField(60)
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
   @HiveField(61)
-  Code? get variableType => throw _privateConstructorUsedError;
+  FhirCode? get variableType => throw _privateConstructorUsedError;
   @HiveField(62)
   @JsonKey(name: '_variableType')
   Element? get variableTypeElement => throw _privateConstructorUsedError;
@@ -27087,7 +27087,7 @@ abstract class $ResearchElementDefinitionCopyWith<$Res> {
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @HiveField(6)
       @JsonKey(name: '_language')
           Element? languageElement,
@@ -27133,7 +27133,7 @@ abstract class $ResearchElementDefinitionCopyWith<$Res> {
       @JsonKey(name: '_subtitle')
           Element? subtitleElement,
       @HiveField(24)
-          Code? status,
+          FhirCode? status,
       @HiveField(25)
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -27215,12 +27215,12 @@ abstract class $ResearchElementDefinitionCopyWith<$Res> {
       @JsonKey(name: 'library')
           List<FhirCanonical>? library_,
       @HiveField(59)
-          Code? type,
+          FhirCode? type,
       @HiveField(60)
       @JsonKey(name: '_type')
           Element? typeElement,
       @HiveField(61)
-          Code? variableType,
+          FhirCode? variableType,
       @HiveField(62)
       @JsonKey(name: '_variableType')
           Element? variableTypeElement,
@@ -27918,7 +27918,7 @@ abstract class _$$_ResearchElementDefinitionCopyWith<$Res>
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @HiveField(6)
       @JsonKey(name: '_language')
           Element? languageElement,
@@ -27964,7 +27964,7 @@ abstract class _$$_ResearchElementDefinitionCopyWith<$Res>
       @JsonKey(name: '_subtitle')
           Element? subtitleElement,
       @HiveField(24)
-          Code? status,
+          FhirCode? status,
       @HiveField(25)
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -28046,12 +28046,12 @@ abstract class _$$_ResearchElementDefinitionCopyWith<$Res>
       @JsonKey(name: 'library')
           List<FhirCanonical>? library_,
       @HiveField(59)
-          Code? type,
+          FhirCode? type,
       @HiveField(60)
       @JsonKey(name: '_type')
           Element? typeElement,
       @HiveField(61)
-          Code? variableType,
+          FhirCode? variableType,
       @HiveField(62)
       @JsonKey(name: '_variableType')
           Element? variableTypeElement,
@@ -29363,7 +29363,7 @@ abstract class _ResearchElementDefinition extends ResearchElementDefinition {
   Element? get implicitRulesElement;
   @override
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
   @HiveField(6)
   @JsonKey(name: '_language')
@@ -29428,7 +29428,7 @@ abstract class _ResearchElementDefinition extends ResearchElementDefinition {
   Element? get subtitleElement;
   @override
   @HiveField(24)
-  Code? get status;
+  FhirCode? get status;
   @override
   @HiveField(25)
   @JsonKey(name: '_status')
@@ -29545,14 +29545,14 @@ abstract class _ResearchElementDefinition extends ResearchElementDefinition {
   List<FhirCanonical>? get library_;
   @override
   @HiveField(59)
-  Code? get type;
+  FhirCode? get type;
   @override
   @HiveField(60)
   @JsonKey(name: '_type')
   Element? get typeElement;
   @override
   @HiveField(61)
-  Code? get variableType;
+  FhirCode? get variableType;
   @override
   @HiveField(62)
   @JsonKey(name: '_variableType')
@@ -29607,7 +29607,8 @@ mixin _$ResearchElementDefinitionCharacteristic {
   Timing? get studyEffectiveTiming => throw _privateConstructorUsedError;
   FhirDuration? get studyEffectiveTimeFromStart =>
       throw _privateConstructorUsedError;
-  Code? get studyEffectiveGroupMeasure => throw _privateConstructorUsedError;
+  FhirCode? get studyEffectiveGroupMeasure =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_studyEffectiveGroupMeasure')
   Element? get studyEffectiveGroupMeasureElement =>
       throw _privateConstructorUsedError;
@@ -29627,7 +29628,7 @@ mixin _$ResearchElementDefinitionCharacteristic {
   Timing? get participantEffectiveTiming => throw _privateConstructorUsedError;
   FhirDuration? get participantEffectiveTimeFromStart =>
       throw _privateConstructorUsedError;
-  Code? get participantEffectiveGroupMeasure =>
+  FhirCode? get participantEffectiveGroupMeasure =>
       throw _privateConstructorUsedError;
   @JsonKey(name: '_participantEffectiveGroupMeasure')
   Element? get participantEffectiveGroupMeasureElement =>
@@ -29674,7 +29675,7 @@ abstract class $ResearchElementDefinitionCharacteristicCopyWith<$Res> {
       FhirDuration? studyEffectiveDuration,
       Timing? studyEffectiveTiming,
       FhirDuration? studyEffectiveTimeFromStart,
-      Code? studyEffectiveGroupMeasure,
+      FhirCode? studyEffectiveGroupMeasure,
       @JsonKey(name: '_studyEffectiveGroupMeasure')
           Element? studyEffectiveGroupMeasureElement,
       String? participantEffectiveDescription,
@@ -29687,7 +29688,7 @@ abstract class $ResearchElementDefinitionCharacteristicCopyWith<$Res> {
       FhirDuration? participantEffectiveDuration,
       Timing? participantEffectiveTiming,
       FhirDuration? participantEffectiveTimeFromStart,
-      Code? participantEffectiveGroupMeasure,
+      FhirCode? participantEffectiveGroupMeasure,
       @JsonKey(name: '_participantEffectiveGroupMeasure')
           Element? participantEffectiveGroupMeasureElement});
 
@@ -30196,7 +30197,7 @@ abstract class _$$_ResearchElementDefinitionCharacteristicCopyWith<$Res>
       FhirDuration? studyEffectiveDuration,
       Timing? studyEffectiveTiming,
       FhirDuration? studyEffectiveTimeFromStart,
-      Code? studyEffectiveGroupMeasure,
+      FhirCode? studyEffectiveGroupMeasure,
       @JsonKey(name: '_studyEffectiveGroupMeasure')
           Element? studyEffectiveGroupMeasureElement,
       String? participantEffectiveDescription,
@@ -30209,7 +30210,7 @@ abstract class _$$_ResearchElementDefinitionCharacteristicCopyWith<$Res>
       FhirDuration? participantEffectiveDuration,
       Timing? participantEffectiveTiming,
       FhirDuration? participantEffectiveTimeFromStart,
-      Code? participantEffectiveGroupMeasure,
+      FhirCode? participantEffectiveGroupMeasure,
       @JsonKey(name: '_participantEffectiveGroupMeasure')
           Element? participantEffectiveGroupMeasureElement});
 
@@ -30816,7 +30817,7 @@ abstract class _ResearchElementDefinitionCharacteristic
   @override
   FhirDuration? get studyEffectiveTimeFromStart;
   @override
-  Code? get studyEffectiveGroupMeasure;
+  FhirCode? get studyEffectiveGroupMeasure;
   @override
   @JsonKey(name: '_studyEffectiveGroupMeasure')
   Element? get studyEffectiveGroupMeasureElement;
@@ -30839,7 +30840,7 @@ abstract class _ResearchElementDefinitionCharacteristic
   @override
   FhirDuration? get participantEffectiveTimeFromStart;
   @override
-  Code? get participantEffectiveGroupMeasure;
+  FhirCode? get participantEffectiveGroupMeasure;
   @override
   @JsonKey(name: '_participantEffectiveGroupMeasure')
   Element? get participantEffectiveGroupMeasureElement;

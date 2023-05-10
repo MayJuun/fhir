@@ -49,7 +49,7 @@ mixin _$Coverage {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -105,7 +105,7 @@ mixin _$Coverage {
 
   /// [status] The status of the resource instance.
   @HiveField(12)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -243,7 +243,7 @@ abstract class $CoverageCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -259,7 +259,7 @@ abstract class $CoverageCopyWith<$Res> {
       @HiveField(11)
           List<Identifier>? identifier,
       @HiveField(12)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(13)
           Element? statusElement,
@@ -726,7 +726,7 @@ abstract class _$$_CoverageCopyWith<$Res> implements $CoverageCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -742,7 +742,7 @@ abstract class _$$_CoverageCopyWith<$Res> implements $CoverageCopyWith<$Res> {
       @HiveField(11)
           List<Identifier>? identifier,
       @HiveField(12)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(13)
           Element? statusElement,
@@ -1679,7 +1679,7 @@ abstract class _Coverage extends Coverage {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -1741,7 +1741,7 @@ abstract class _Coverage extends Coverage {
 
   /// [status] The status of the resource instance.
   @HiveField(12)
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -3271,7 +3271,7 @@ mixin _$CoverageEligibilityRequest {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -3328,7 +3328,7 @@ mixin _$CoverageEligibilityRequest {
 
   /// [status] The status of the resource instance.
   @HiveField(12)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -3443,7 +3443,7 @@ abstract class $CoverageEligibilityRequestCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -3459,7 +3459,7 @@ abstract class $CoverageEligibilityRequestCopyWith<$Res> {
       @HiveField(11)
           List<Identifier>? identifier,
       @HiveField(12)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(13)
           Element? statusElement,
@@ -3869,7 +3869,7 @@ abstract class _$$_CoverageEligibilityRequestCopyWith<$Res>
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -3885,7 +3885,7 @@ abstract class _$$_CoverageEligibilityRequestCopyWith<$Res>
       @HiveField(11)
           List<Identifier>? identifier,
       @HiveField(12)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(13)
           Element? statusElement,
@@ -4746,7 +4746,7 @@ abstract class _CoverageEligibilityRequest extends CoverageEligibilityRequest {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -4809,7 +4809,7 @@ abstract class _CoverageEligibilityRequest extends CoverageEligibilityRequest {
 
   /// [status] The status of the resource instance.
   @HiveField(12)
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -7204,7 +7204,7 @@ mixin _$CoverageEligibilityResponse {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -7261,7 +7261,7 @@ mixin _$CoverageEligibilityResponse {
 
   /// [status] The status of the resource instance.
   @HiveField(12)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -7320,7 +7320,7 @@ mixin _$CoverageEligibilityResponse {
 
   /// [outcome] The outcome of the request processing.
   @HiveField(24)
-  Code? get outcome => throw _privateConstructorUsedError;
+  FhirCode? get outcome => throw _privateConstructorUsedError;
 
   /// [outcomeElement] Extensions for outcome
   @JsonKey(name: '_outcome')
@@ -7396,7 +7396,7 @@ abstract class $CoverageEligibilityResponseCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -7412,7 +7412,7 @@ abstract class $CoverageEligibilityResponseCopyWith<$Res> {
       @HiveField(11)
           List<Identifier>? identifier,
       @HiveField(12)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(13)
           Element? statusElement,
@@ -7440,7 +7440,7 @@ abstract class $CoverageEligibilityResponseCopyWith<$Res> {
       @HiveField(23)
           Reference request,
       @HiveField(24)
-          Code? outcome,
+          FhirCode? outcome,
       @JsonKey(name: '_outcome')
       @HiveField(25)
           Element? outcomeElement,
@@ -7874,7 +7874,7 @@ abstract class _$$_CoverageEligibilityResponseCopyWith<$Res>
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -7890,7 +7890,7 @@ abstract class _$$_CoverageEligibilityResponseCopyWith<$Res>
       @HiveField(11)
           List<Identifier>? identifier,
       @HiveField(12)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(13)
           Element? statusElement,
@@ -7918,7 +7918,7 @@ abstract class _$$_CoverageEligibilityResponseCopyWith<$Res>
       @HiveField(23)
           Reference request,
       @HiveField(24)
-          Code? outcome,
+          FhirCode? outcome,
       @JsonKey(name: '_outcome')
       @HiveField(25)
           Element? outcomeElement,
@@ -8831,7 +8831,7 @@ abstract class _CoverageEligibilityResponse
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -8894,7 +8894,7 @@ abstract class _CoverageEligibilityResponse
 
   /// [status] The status of the resource instance.
   @HiveField(12)
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -8965,7 +8965,7 @@ abstract class _CoverageEligibilityResponse
 
   /// [outcome] The outcome of the request processing.
   @HiveField(24)
-  Code? get outcome;
+  FhirCode? get outcome;
   @override
 
   /// [outcomeElement] Extensions for outcome
@@ -11820,7 +11820,7 @@ mixin _$EnrollmentRequest {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -11876,7 +11876,7 @@ mixin _$EnrollmentRequest {
 
   /// [status] The status of the resource instance.
   @HiveField(12)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -11936,7 +11936,7 @@ abstract class $EnrollmentRequestCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -11952,7 +11952,7 @@ abstract class $EnrollmentRequestCopyWith<$Res> {
       @HiveField(11)
           List<Identifier>? identifier,
       @HiveField(12)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(13)
           Element? statusElement,
@@ -12243,7 +12243,7 @@ abstract class _$$_EnrollmentRequestCopyWith<$Res>
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -12259,7 +12259,7 @@ abstract class _$$_EnrollmentRequestCopyWith<$Res>
       @HiveField(11)
           List<Identifier>? identifier,
       @HiveField(12)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(13)
           Element? statusElement,
@@ -12846,7 +12846,7 @@ abstract class _EnrollmentRequest extends EnrollmentRequest {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -12908,7 +12908,7 @@ abstract class _EnrollmentRequest extends EnrollmentRequest {
 
   /// [status] The status of the resource instance.
   @HiveField(12)
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -12989,7 +12989,7 @@ mixin _$EnrollmentResponse {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -13045,7 +13045,7 @@ mixin _$EnrollmentResponse {
 
   /// [status] The status of the resource instance.
   @HiveField(12)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -13058,7 +13058,7 @@ mixin _$EnrollmentResponse {
 
   /// [outcome] Processing status: error, complete.
   @HiveField(15)
-  Code? get outcome => throw _privateConstructorUsedError;
+  FhirCode? get outcome => throw _privateConstructorUsedError;
 
   /// [outcomeElement] Extensions for outcome
   @JsonKey(name: '_outcome')
@@ -13119,7 +13119,7 @@ abstract class $EnrollmentResponseCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -13135,14 +13135,14 @@ abstract class $EnrollmentResponseCopyWith<$Res> {
       @HiveField(11)
           List<Identifier>? identifier,
       @HiveField(12)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(13)
           Element? statusElement,
       @HiveField(14)
           Reference? request,
       @HiveField(15)
-          Code? outcome,
+          FhirCode? outcome,
       @JsonKey(name: '_outcome')
       @HiveField(16)
           Element? outcomeElement,
@@ -13462,7 +13462,7 @@ abstract class _$$_EnrollmentResponseCopyWith<$Res>
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -13478,14 +13478,14 @@ abstract class _$$_EnrollmentResponseCopyWith<$Res>
       @HiveField(11)
           List<Identifier>? identifier,
       @HiveField(12)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(13)
           Element? statusElement,
       @HiveField(14)
           Reference? request,
       @HiveField(15)
-          Code? outcome,
+          FhirCode? outcome,
       @JsonKey(name: '_outcome')
       @HiveField(16)
           Element? outcomeElement,
@@ -14131,7 +14131,7 @@ abstract class _EnrollmentResponse extends EnrollmentResponse {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -14193,7 +14193,7 @@ abstract class _EnrollmentResponse extends EnrollmentResponse {
 
   /// [status] The status of the resource instance.
   @HiveField(12)
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -14209,7 +14209,7 @@ abstract class _EnrollmentResponse extends EnrollmentResponse {
 
   /// [outcome] Processing status: error, complete.
   @HiveField(15)
-  Code? get outcome;
+  FhirCode? get outcome;
   @override
 
   /// [outcomeElement] Extensions for outcome

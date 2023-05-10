@@ -49,7 +49,7 @@ mixin _$CapabilityStatement {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -149,7 +149,7 @@ mixin _$CapabilityStatement {
   /// [status] The status of this capability statement. Enables tracking the
   ///  life-cycle of the content.
   @HiveField(21)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -244,7 +244,7 @@ mixin _$CapabilityStatement {
   /// instance of software) or a class of implementation (e.g. a desired
   ///  purchase).
   @HiveField(39)
-  Code? get kind => throw _privateConstructorUsedError;
+  FhirCode? get kind => throw _privateConstructorUsedError;
 
   /// [kindElement] Extensions for kind
   @JsonKey(name: '_kind')
@@ -283,7 +283,7 @@ mixin _$CapabilityStatement {
   /// CapabilityStatement describes (which SHALL be the same as the FHIR version
   ///  of the CapabilityStatement itself). There is no default value.
   @HiveField(47)
-  Code? get fhirVersion => throw _privateConstructorUsedError;
+  FhirCode? get fhirVersion => throw _privateConstructorUsedError;
 
   /// [fhirVersionElement] Extensions for fhirVersion
   @JsonKey(name: '_fhirVersion')
@@ -356,7 +356,7 @@ abstract class $CapabilityStatementCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -392,7 +392,7 @@ abstract class $CapabilityStatementCopyWith<$Res> {
       @HiveField(20)
           Element? titleElement,
       @HiveField(21)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(22)
           Element? statusElement,
@@ -434,7 +434,7 @@ abstract class $CapabilityStatementCopyWith<$Res> {
       @HiveField(38)
           Element? copyrightElement,
       @HiveField(39)
-          Code? kind,
+          FhirCode? kind,
       @JsonKey(name: '_kind')
       @HiveField(40)
           Element? kindElement,
@@ -449,7 +449,7 @@ abstract class $CapabilityStatementCopyWith<$Res> {
       @HiveField(46)
           CapabilityStatementImplementation? implementation,
       @HiveField(47)
-          Code? fhirVersion,
+          FhirCode? fhirVersion,
       @JsonKey(name: '_fhirVersion')
       @HiveField(48)
           Element? fhirVersionElement,
@@ -1024,7 +1024,7 @@ abstract class _$$_CapabilityStatementCopyWith<$Res>
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -1060,7 +1060,7 @@ abstract class _$$_CapabilityStatementCopyWith<$Res>
       @HiveField(20)
           Element? titleElement,
       @HiveField(21)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(22)
           Element? statusElement,
@@ -1102,7 +1102,7 @@ abstract class _$$_CapabilityStatementCopyWith<$Res>
       @HiveField(38)
           Element? copyrightElement,
       @HiveField(39)
-          Code? kind,
+          FhirCode? kind,
       @JsonKey(name: '_kind')
       @HiveField(40)
           Element? kindElement,
@@ -1117,7 +1117,7 @@ abstract class _$$_CapabilityStatementCopyWith<$Res>
       @HiveField(46)
           CapabilityStatementImplementation? implementation,
       @HiveField(47)
-          Code? fhirVersion,
+          FhirCode? fhirVersion,
       @JsonKey(name: '_fhirVersion')
       @HiveField(48)
           Element? fhirVersionElement,
@@ -2493,7 +2493,7 @@ abstract class _CapabilityStatement extends CapabilityStatement {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -2606,7 +2606,7 @@ abstract class _CapabilityStatement extends CapabilityStatement {
   /// [status] The status of this capability statement. Enables tracking the
   ///  life-cycle of the content.
   @HiveField(21)
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -2718,7 +2718,7 @@ abstract class _CapabilityStatement extends CapabilityStatement {
   /// instance of software) or a class of implementation (e.g. a desired
   ///  purchase).
   @HiveField(39)
-  Code? get kind;
+  FhirCode? get kind;
   @override
 
   /// [kindElement] Extensions for kind
@@ -2761,7 +2761,7 @@ abstract class _CapabilityStatement extends CapabilityStatement {
   /// CapabilityStatement describes (which SHALL be the same as the FHIR version
   ///  of the CapabilityStatement itself). There is no default value.
   @HiveField(47)
-  Code? get fhirVersion;
+  FhirCode? get fhirVersion;
   @override
 
   /// [fhirVersionElement] Extensions for fhirVersion
@@ -3907,7 +3907,7 @@ mixin _$CapabilityStatementRest {
 
   /// [mode] Identifies whether this portion of the statement is describing the
   ///  ability to initiate or receive restful operations.
-  Code? get mode => throw _privateConstructorUsedError;
+  FhirCode? get mode => throw _privateConstructorUsedError;
 
   /// [modeElement] Extensions for mode
   @JsonKey(name: '_mode')
@@ -3969,7 +3969,7 @@ abstract class $CapabilityStatementRestCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? mode,
+      FhirCode? mode,
       @JsonKey(name: '_mode') Element? modeElement,
       Markdown? documentation,
       @JsonKey(name: '_documentation') Element? documentationElement,
@@ -4119,7 +4119,7 @@ abstract class _$$_CapabilityStatementRestCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? mode,
+      FhirCode? mode,
       @JsonKey(name: '_mode') Element? modeElement,
       Markdown? documentation,
       @JsonKey(name: '_documentation') Element? documentationElement,
@@ -4547,7 +4547,7 @@ abstract class _CapabilityStatementRest extends CapabilityStatementRest {
 
   /// [mode] Identifies whether this portion of the statement is describing the
   ///  ability to initiate or receive restful operations.
-  Code? get mode;
+  FhirCode? get mode;
   @override
 
   /// [modeElement] Extensions for mode
@@ -5142,7 +5142,7 @@ mixin _$CapabilityStatementResource {
       throw _privateConstructorUsedError;
 
   /// [type] A type of resource exposed via the restful interface.
-  Code? get type => throw _privateConstructorUsedError;
+  FhirCode? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
@@ -5183,7 +5183,7 @@ mixin _$CapabilityStatementResource {
   /// track and populate the versionId meta-property on resources. If the value
   /// is 'versioned-update', then the server supports all the versioning
   ///  features, including using e-tags for version integrity in the API.
-  Code? get versioning => throw _privateConstructorUsedError;
+  FhirCode? get versioning => throw _privateConstructorUsedError;
 
   /// [versioningElement] Extensions for versioning
   @JsonKey(name: '_versioning')
@@ -5218,7 +5218,7 @@ mixin _$CapabilityStatementResource {
 
   /// [conditionalRead] A code that indicates how the server supports
   ///  conditional read.
-  Code? get conditionalRead => throw _privateConstructorUsedError;
+  FhirCode? get conditionalRead => throw _privateConstructorUsedError;
 
   /// [conditionalReadElement] Extensions for conditionalRead
   @JsonKey(name: '_conditionalRead')
@@ -5234,7 +5234,7 @@ mixin _$CapabilityStatementResource {
 
   /// [conditionalDelete] A code that indicates how the server supports
   ///  conditional delete.
-  Code? get conditionalDelete => throw _privateConstructorUsedError;
+  FhirCode? get conditionalDelete => throw _privateConstructorUsedError;
 
   /// [conditionalDeleteElement] Extensions for conditionalDelete
   @JsonKey(name: '_conditionalDelete')
@@ -5298,7 +5298,7 @@ abstract class $CapabilityStatementResourceCopyWith<$Res> {
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? type,
+      FhirCode? type,
       @JsonKey(name: '_type')
           Element? typeElement,
       Canonical? profile,
@@ -5307,7 +5307,7 @@ abstract class $CapabilityStatementResourceCopyWith<$Res> {
       @JsonKey(name: '_documentation')
           Element? documentationElement,
       List<CapabilityStatementInteraction>? interaction,
-      Code? versioning,
+      FhirCode? versioning,
       @JsonKey(name: '_versioning')
           Element? versioningElement,
       Boolean? readHistory,
@@ -5319,13 +5319,13 @@ abstract class $CapabilityStatementResourceCopyWith<$Res> {
       Boolean? conditionalCreate,
       @JsonKey(name: '_conditionalCreate')
           Element? conditionalCreateElement,
-      Code? conditionalRead,
+      FhirCode? conditionalRead,
       @JsonKey(name: '_conditionalRead')
           Element? conditionalReadElement,
       Boolean? conditionalUpdate,
       @JsonKey(name: '_conditionalUpdate')
           Element? conditionalUpdateElement,
-      Code? conditionalDelete,
+      FhirCode? conditionalDelete,
       @JsonKey(name: '_conditionalDelete')
           Element? conditionalDeleteElement,
       List<FhirCode>? referencePolicy,
@@ -5653,7 +5653,7 @@ abstract class _$$_CapabilityStatementResourceCopyWith<$Res>
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? type,
+      FhirCode? type,
       @JsonKey(name: '_type')
           Element? typeElement,
       Canonical? profile,
@@ -5662,7 +5662,7 @@ abstract class _$$_CapabilityStatementResourceCopyWith<$Res>
       @JsonKey(name: '_documentation')
           Element? documentationElement,
       List<CapabilityStatementInteraction>? interaction,
-      Code? versioning,
+      FhirCode? versioning,
       @JsonKey(name: '_versioning')
           Element? versioningElement,
       Boolean? readHistory,
@@ -5674,13 +5674,13 @@ abstract class _$$_CapabilityStatementResourceCopyWith<$Res>
       Boolean? conditionalCreate,
       @JsonKey(name: '_conditionalCreate')
           Element? conditionalCreateElement,
-      Code? conditionalRead,
+      FhirCode? conditionalRead,
       @JsonKey(name: '_conditionalRead')
           Element? conditionalReadElement,
       Boolean? conditionalUpdate,
       @JsonKey(name: '_conditionalUpdate')
           Element? conditionalUpdateElement,
-      Code? conditionalDelete,
+      FhirCode? conditionalDelete,
       @JsonKey(name: '_conditionalDelete')
           Element? conditionalDeleteElement,
       List<FhirCode>? referencePolicy,
@@ -6513,7 +6513,7 @@ abstract class _CapabilityStatementResource
   @override
 
   /// [type] A type of resource exposed via the restful interface.
-  Code? get type;
+  FhirCode? get type;
   @override
 
   /// [typeElement] Extensions for type
@@ -6559,7 +6559,7 @@ abstract class _CapabilityStatementResource
   /// track and populate the versionId meta-property on resources. If the value
   /// is 'versioned-update', then the server supports all the versioning
   ///  features, including using e-tags for version integrity in the API.
-  Code? get versioning;
+  FhirCode? get versioning;
   @override
 
   /// [versioningElement] Extensions for versioning
@@ -6602,7 +6602,7 @@ abstract class _CapabilityStatementResource
 
   /// [conditionalRead] A code that indicates how the server supports
   ///  conditional read.
-  Code? get conditionalRead;
+  FhirCode? get conditionalRead;
   @override
 
   /// [conditionalReadElement] Extensions for conditionalRead
@@ -6622,7 +6622,7 @@ abstract class _CapabilityStatementResource
 
   /// [conditionalDelete] A code that indicates how the server supports
   ///  conditional delete.
-  Code? get conditionalDelete;
+  FhirCode? get conditionalDelete;
   @override
 
   /// [conditionalDeleteElement] Extensions for conditionalDelete
@@ -6714,7 +6714,7 @@ mixin _$CapabilityStatementInteraction {
 
   /// [code] Coded identifier of the operation, supported by the system
   ///  resource.
-  Code? get code => throw _privateConstructorUsedError;
+  FhirCode? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] Extensions for code
   @JsonKey(name: '_code')
@@ -6748,7 +6748,7 @@ abstract class $CapabilityStatementInteractionCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement,
       Markdown? documentation,
       @JsonKey(name: '_documentation') Element? documentationElement});
@@ -6849,7 +6849,7 @@ abstract class _$$_CapabilityStatementInteractionCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement,
       Markdown? documentation,
       @JsonKey(name: '_documentation') Element? documentationElement});
@@ -7128,7 +7128,7 @@ abstract class _CapabilityStatementInteraction
 
   /// [code] Coded identifier of the operation, supported by the system
   ///  resource.
-  Code? get code;
+  FhirCode? get code;
   @override
 
   /// [codeElement] Extensions for code
@@ -7202,7 +7202,7 @@ mixin _$CapabilityStatementSearchParam {
 
   /// [type] The type of value a search parameter refers to, and how the
   ///  content is interpreted.
-  Code? get type => throw _privateConstructorUsedError;
+  FhirCode? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
@@ -7237,7 +7237,7 @@ abstract class $CapabilityStatementSearchParamCopyWith<$Res> {
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
       Canonical? definition,
-      Code? type,
+      FhirCode? type,
       @JsonKey(name: '_type') Element? typeElement,
       Markdown? documentation,
       @JsonKey(name: '_documentation') Element? documentationElement});
@@ -7369,7 +7369,7 @@ abstract class _$$_CapabilityStatementSearchParamCopyWith<$Res>
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
       Canonical? definition,
-      Code? type,
+      FhirCode? type,
       @JsonKey(name: '_type') Element? typeElement,
       Markdown? documentation,
       @JsonKey(name: '_documentation') Element? documentationElement});
@@ -7708,7 +7708,7 @@ abstract class _CapabilityStatementSearchParam
 
   /// [type] The type of value a search parameter refers to, and how the
   ///  content is interpreted.
-  Code? get type;
+  FhirCode? get type;
   @override
 
   /// [typeElement] Extensions for type
@@ -8293,7 +8293,7 @@ mixin _$CapabilityStatementInteraction1 {
       throw _privateConstructorUsedError;
 
   /// [code] A coded identifier of the operation, supported by the system.
-  Code? get code => throw _privateConstructorUsedError;
+  FhirCode? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] Extensions for code
   @JsonKey(name: '_code')
@@ -8326,7 +8326,7 @@ abstract class $CapabilityStatementInteraction1CopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement,
       Markdown? documentation,
       @JsonKey(name: '_documentation') Element? documentationElement});
@@ -8427,7 +8427,7 @@ abstract class _$$_CapabilityStatementInteraction1CopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement,
       Markdown? documentation,
       @JsonKey(name: '_documentation') Element? documentationElement});
@@ -8704,7 +8704,7 @@ abstract class _CapabilityStatementInteraction1
   @override
 
   /// [code] A coded identifier of the operation, supported by the system.
-  Code? get code;
+  FhirCode? get code;
   @override
 
   /// [codeElement] Extensions for code
@@ -9788,7 +9788,7 @@ mixin _$CapabilityStatementSupportedMessage {
 
   /// [mode] The mode of this event declaration - whether application is sender
   ///  or receiver.
-  Code? get mode => throw _privateConstructorUsedError;
+  FhirCode? get mode => throw _privateConstructorUsedError;
 
   /// [modeElement] Extensions for mode
   @JsonKey(name: '_mode')
@@ -9817,7 +9817,7 @@ abstract class $CapabilityStatementSupportedMessageCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? mode,
+      FhirCode? mode,
       @JsonKey(name: '_mode') Element? modeElement,
       Canonical definition});
 
@@ -9899,7 +9899,7 @@ abstract class _$$_CapabilityStatementSupportedMessageCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? mode,
+      FhirCode? mode,
       @JsonKey(name: '_mode') Element? modeElement,
       Canonical definition});
 
@@ -10157,7 +10157,7 @@ abstract class _CapabilityStatementSupportedMessage
 
   /// [mode] The mode of this event declaration - whether application is sender
   ///  or receiver.
-  Code? get mode;
+  FhirCode? get mode;
   @override
 
   /// [modeElement] Extensions for mode
@@ -10213,7 +10213,7 @@ mixin _$CapabilityStatementDocument {
 
   /// [mode] Mode of this document declaration - whether an application is a
   ///  producer or consumer.
-  Code? get mode => throw _privateConstructorUsedError;
+  FhirCode? get mode => throw _privateConstructorUsedError;
 
   /// [modeElement] Extensions for mode
   @JsonKey(name: '_mode')
@@ -10250,7 +10250,7 @@ abstract class $CapabilityStatementDocumentCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? mode,
+      FhirCode? mode,
       @JsonKey(name: '_mode') Element? modeElement,
       Markdown? documentation,
       @JsonKey(name: '_documentation') Element? documentationElement,
@@ -10357,7 +10357,7 @@ abstract class _$$_CapabilityStatementDocumentCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? mode,
+      FhirCode? mode,
       @JsonKey(name: '_mode') Element? modeElement,
       Markdown? documentation,
       @JsonKey(name: '_documentation') Element? documentationElement,
@@ -10644,7 +10644,7 @@ abstract class _CapabilityStatementDocument
 
   /// [mode] Mode of this document declaration - whether an application is a
   ///  producer or consumer.
-  Code? get mode;
+  FhirCode? get mode;
   @override
 
   /// [modeElement] Extensions for mode
@@ -10708,7 +10708,7 @@ mixin _$CompartmentDefinition {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -10798,7 +10798,7 @@ mixin _$CompartmentDefinition {
   /// [status] The status of this compartment definition. Enables tracking the
   ///  life-cycle of the content.
   @HiveField(19)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -10874,7 +10874,7 @@ mixin _$CompartmentDefinition {
 
   /// [code] Which compartment this definition describes.
   @HiveField(33)
-  Code? get code => throw _privateConstructorUsedError;
+  FhirCode? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] Extensions for code
   @JsonKey(name: '_code')
@@ -10922,7 +10922,7 @@ abstract class $CompartmentDefinitionCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -10953,7 +10953,7 @@ abstract class $CompartmentDefinitionCopyWith<$Res> {
       @HiveField(18)
           Element? nameElement,
       @HiveField(19)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(20)
           Element? statusElement,
@@ -10987,7 +10987,7 @@ abstract class $CompartmentDefinitionCopyWith<$Res> {
       @HiveField(32)
           Element? purposeElement,
       @HiveField(33)
-          Code? code,
+          FhirCode? code,
       @JsonKey(name: '_code')
       @HiveField(34)
           Element? codeElement,
@@ -11418,7 +11418,7 @@ abstract class _$$_CompartmentDefinitionCopyWith<$Res>
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -11449,7 +11449,7 @@ abstract class _$$_CompartmentDefinitionCopyWith<$Res>
       @HiveField(18)
           Element? nameElement,
       @HiveField(19)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(20)
           Element? statusElement,
@@ -11483,7 +11483,7 @@ abstract class _$$_CompartmentDefinitionCopyWith<$Res>
       @HiveField(32)
           Element? purposeElement,
       @HiveField(33)
-          Code? code,
+          FhirCode? code,
       @JsonKey(name: '_code')
       @HiveField(34)
           Element? codeElement,
@@ -12421,7 +12421,7 @@ abstract class _CompartmentDefinition extends CompartmentDefinition {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -12522,7 +12522,7 @@ abstract class _CompartmentDefinition extends CompartmentDefinition {
   /// [status] The status of this compartment definition. Enables tracking the
   ///  life-cycle of the content.
   @HiveField(19)
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -12612,7 +12612,7 @@ abstract class _CompartmentDefinition extends CompartmentDefinition {
 
   /// [code] Which compartment this definition describes.
   @HiveField(33)
-  Code? get code;
+  FhirCode? get code;
   @override
 
   /// [codeElement] Extensions for code
@@ -12679,7 +12679,7 @@ mixin _$CompartmentDefinitionResource {
       throw _privateConstructorUsedError;
 
   /// [code] The name of a resource supported by the server.
-  Code? get code => throw _privateConstructorUsedError;
+  FhirCode? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] Extensions for code
   @JsonKey(name: '_code')
@@ -12720,7 +12720,7 @@ abstract class $CompartmentDefinitionResourceCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement,
       List<String>? param,
       @JsonKey(name: '_param') List<Element?>? paramElement,
@@ -12833,7 +12833,7 @@ abstract class _$$_CompartmentDefinitionResourceCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement,
       List<String>? param,
       @JsonKey(name: '_param') List<Element?>? paramElement,
@@ -13162,7 +13162,7 @@ abstract class _CompartmentDefinitionResource
   @override
 
   /// [code] The name of a resource supported by the server.
-  Code? get code;
+  FhirCode? get code;
   @override
 
   /// [codeElement] Extensions for code
@@ -13230,7 +13230,7 @@ mixin _$ExampleScenario {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -13330,7 +13330,7 @@ mixin _$ExampleScenario {
   /// [status] The status of this example scenario. Enables tracking the
   ///  life-cycle of the content.
   @HiveField(18)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -13456,7 +13456,7 @@ abstract class $ExampleScenarioCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -13487,7 +13487,7 @@ abstract class $ExampleScenarioCopyWith<$Res> {
       @HiveField(17)
           Element? nameElement,
       @HiveField(18)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(19)
           Element? statusElement,
@@ -13928,7 +13928,7 @@ abstract class _$$_ExampleScenarioCopyWith<$Res>
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -13959,7 +13959,7 @@ abstract class _$$_ExampleScenarioCopyWith<$Res>
       @HiveField(17)
           Element? nameElement,
       @HiveField(18)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(19)
           Element? statusElement,
@@ -14991,7 +14991,7 @@ abstract class _ExampleScenario extends ExampleScenario {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -15103,7 +15103,7 @@ abstract class _ExampleScenario extends ExampleScenario {
   /// [status] The status of this example scenario. Enables tracking the
   ///  life-cycle of the content.
   @HiveField(18)
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -15267,7 +15267,7 @@ mixin _$ExampleScenarioActor {
   Element? get actorIdElement => throw _privateConstructorUsedError;
 
   /// [type] The type of actor - person or system.
-  Code? get type => throw _privateConstructorUsedError;
+  FhirCode? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
@@ -15305,7 +15305,7 @@ abstract class $ExampleScenarioActorCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       String? actorId,
       @JsonKey(name: '_actorId') Element? actorIdElement,
-      Code? type,
+      FhirCode? type,
       @JsonKey(name: '_type') Element? typeElement,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
@@ -15455,7 +15455,7 @@ abstract class _$$_ExampleScenarioActorCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       String? actorId,
       @JsonKey(name: '_actorId') Element? actorIdElement,
-      Code? type,
+      FhirCode? type,
       @JsonKey(name: '_type') Element? typeElement,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
@@ -15792,7 +15792,7 @@ abstract class _ExampleScenarioActor extends ExampleScenarioActor {
   @override
 
   /// [type] The type of actor - person or system.
-  Code? get type;
+  FhirCode? get type;
   @override
 
   /// [typeElement] Extensions for type
@@ -15866,7 +15866,7 @@ mixin _$ExampleScenarioInstance {
   Element? get resourceIdElement => throw _privateConstructorUsedError;
 
   /// [resourceType] The type of the resource.
-  Code? get resourceType => throw _privateConstructorUsedError;
+  FhirCode? get resourceType => throw _privateConstructorUsedError;
 
   /// [resourceTypeElement] Extensions for resourceType
   @JsonKey(name: '_resourceType')
@@ -15913,7 +15913,7 @@ abstract class $ExampleScenarioInstanceCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       String? resourceId,
       @JsonKey(name: '_resourceId') Element? resourceIdElement,
-      Code? resourceType,
+      FhirCode? resourceType,
       @JsonKey(name: '_resourceType') Element? resourceTypeElement,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
@@ -16075,7 +16075,7 @@ abstract class _$$_ExampleScenarioInstanceCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       String? resourceId,
       @JsonKey(name: '_resourceId') Element? resourceIdElement,
-      Code? resourceType,
+      FhirCode? resourceType,
       @JsonKey(name: '_resourceType') Element? resourceTypeElement,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
@@ -16468,7 +16468,7 @@ abstract class _ExampleScenarioInstance extends ExampleScenarioInstance {
   @override
 
   /// [resourceType] The type of the resource.
-  Code? get resourceType;
+  FhirCode? get resourceType;
   @override
 
   /// [resourceTypeElement] Extensions for resourceType
@@ -20092,7 +20092,7 @@ mixin _$GraphDefinition {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -20186,7 +20186,7 @@ mixin _$GraphDefinition {
   /// [status] The status of this graph definition. Enables tracking the
   ///  life-cycle of the content.
   @HiveField(17)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -20266,7 +20266,7 @@ mixin _$GraphDefinition {
 
   /// [start] The type of FHIR resource at which instances of this graph start.
   @HiveField(32)
-  Code? get start => throw _privateConstructorUsedError;
+  FhirCode? get start => throw _privateConstructorUsedError;
 
   /// [startElement] Extensions for start
   @JsonKey(name: '_start')
@@ -20307,7 +20307,7 @@ abstract class $GraphDefinitionCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -20336,7 +20336,7 @@ abstract class $GraphDefinitionCopyWith<$Res> {
       @HiveField(16)
           Element? nameElement,
       @HiveField(17)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(18)
           Element? statusElement,
@@ -20372,7 +20372,7 @@ abstract class $GraphDefinitionCopyWith<$Res> {
       @HiveField(31)
           Element? purposeElement,
       @HiveField(32)
-          Code? start,
+          FhirCode? start,
       @JsonKey(name: '_start')
       @HiveField(33)
           Element? startElement,
@@ -20786,7 +20786,7 @@ abstract class _$$_GraphDefinitionCopyWith<$Res>
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -20815,7 +20815,7 @@ abstract class _$$_GraphDefinitionCopyWith<$Res>
       @HiveField(16)
           Element? nameElement,
       @HiveField(17)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(18)
           Element? statusElement,
@@ -20851,7 +20851,7 @@ abstract class _$$_GraphDefinitionCopyWith<$Res>
       @HiveField(31)
           Element? purposeElement,
       @HiveField(32)
-          Code? start,
+          FhirCode? start,
       @JsonKey(name: '_start')
       @HiveField(33)
           Element? startElement,
@@ -21788,7 +21788,7 @@ abstract class _GraphDefinition extends GraphDefinition {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -21893,7 +21893,7 @@ abstract class _GraphDefinition extends GraphDefinition {
   /// [status] The status of this graph definition. Enables tracking the
   ///  life-cycle of the content.
   @HiveField(17)
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -21988,7 +21988,7 @@ abstract class _GraphDefinition extends GraphDefinition {
 
   /// [start] The type of FHIR resource at which instances of this graph start.
   @HiveField(32)
-  Code? get start;
+  FhirCode? get start;
   @override
 
   /// [startElement] Extensions for start
@@ -22761,7 +22761,7 @@ mixin _$GraphDefinitionTarget {
       throw _privateConstructorUsedError;
 
   /// [type] Type of resource this link refers to.
-  Code? get type => throw _privateConstructorUsedError;
+  FhirCode? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
@@ -22800,7 +22800,7 @@ abstract class $GraphDefinitionTargetCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? type,
+      FhirCode? type,
       @JsonKey(name: '_type') Element? typeElement,
       String? params,
       @JsonKey(name: '_params') Element? paramsElement,
@@ -22918,7 +22918,7 @@ abstract class _$$_GraphDefinitionTargetCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? type,
+      FhirCode? type,
       @JsonKey(name: '_type') Element? typeElement,
       String? params,
       @JsonKey(name: '_params') Element? paramsElement,
@@ -23245,7 +23245,7 @@ abstract class _GraphDefinitionTarget extends GraphDefinitionTarget {
   @override
 
   /// [type] Type of resource this link refers to.
-  Code? get type;
+  FhirCode? get type;
   @override
 
   /// [typeElement] Extensions for type
@@ -23317,21 +23317,21 @@ mixin _$GraphDefinitionCompartment {
   /// [use] Defines how the compartment rule is used - whether it it is used to
   /// test whether resources are subject to the rule, or whether it is a rule
   ///  that must be followed.
-  Code? get use => throw _privateConstructorUsedError;
+  FhirCode? get use => throw _privateConstructorUsedError;
 
   /// [useElement] Extensions for use
   @JsonKey(name: '_use')
   Element? get useElement => throw _privateConstructorUsedError;
 
   /// [code] Identifies the compartment.
-  Code? get code => throw _privateConstructorUsedError;
+  FhirCode? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] Extensions for code
   @JsonKey(name: '_code')
   Element? get codeElement => throw _privateConstructorUsedError;
 
   /// [rule] identical | matching | different | no-rule | custom.
-  Code? get rule => throw _privateConstructorUsedError;
+  FhirCode? get rule => throw _privateConstructorUsedError;
 
   /// [ruleElement] Extensions for rule
   @JsonKey(name: '_rule')
@@ -23368,11 +23368,11 @@ abstract class $GraphDefinitionCompartmentCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? use,
+      FhirCode? use,
       @JsonKey(name: '_use') Element? useElement,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement,
-      Code? rule,
+      FhirCode? rule,
       @JsonKey(name: '_rule') Element? ruleElement,
       String? expression,
       @JsonKey(name: '_expression') Element? expressionElement,
@@ -23544,11 +23544,11 @@ abstract class _$$_GraphDefinitionCompartmentCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? use,
+      FhirCode? use,
       @JsonKey(name: '_use') Element? useElement,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement,
-      Code? rule,
+      FhirCode? rule,
       @JsonKey(name: '_rule') Element? ruleElement,
       String? expression,
       @JsonKey(name: '_expression') Element? expressionElement,
@@ -23913,7 +23913,7 @@ abstract class _GraphDefinitionCompartment extends GraphDefinitionCompartment {
   /// [use] Defines how the compartment rule is used - whether it it is used to
   /// test whether resources are subject to the rule, or whether it is a rule
   ///  that must be followed.
-  Code? get use;
+  FhirCode? get use;
   @override
 
   /// [useElement] Extensions for use
@@ -23922,7 +23922,7 @@ abstract class _GraphDefinitionCompartment extends GraphDefinitionCompartment {
   @override
 
   /// [code] Identifies the compartment.
-  Code? get code;
+  FhirCode? get code;
   @override
 
   /// [codeElement] Extensions for code
@@ -23931,7 +23931,7 @@ abstract class _GraphDefinitionCompartment extends GraphDefinitionCompartment {
   @override
 
   /// [rule] identical | matching | different | no-rule | custom.
-  Code? get rule;
+  FhirCode? get rule;
   @override
 
   /// [ruleElement] Extensions for rule
@@ -23996,7 +23996,7 @@ mixin _$ImplementationGuide {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -24095,7 +24095,7 @@ mixin _$ImplementationGuide {
   /// [status] The status of this implementation guide. Enables tracking the
   ///  life-cycle of the content.
   @HiveField(20)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -24188,7 +24188,7 @@ mixin _$ImplementationGuide {
   /// [license] The license that applies to this Implementation Guide, using an
   ///  SPDX license code, or 'not-open-source'.
   @HiveField(38)
-  Code? get license => throw _privateConstructorUsedError;
+  FhirCode? get license => throw _privateConstructorUsedError;
 
   /// [licenseElement] Extensions for license
   @JsonKey(name: '_license')
@@ -24259,7 +24259,7 @@ abstract class $ImplementationGuideCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -24294,7 +24294,7 @@ abstract class $ImplementationGuideCopyWith<$Res> {
       @HiveField(19)
           Element? titleElement,
       @HiveField(20)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(21)
           Element? statusElement,
@@ -24336,7 +24336,7 @@ abstract class $ImplementationGuideCopyWith<$Res> {
       @HiveField(37)
           Element? packageIdElement,
       @HiveField(38)
-          Code? license,
+          FhirCode? license,
       @JsonKey(name: '_license')
       @HiveField(39)
           Element? licenseElement,
@@ -24853,7 +24853,7 @@ abstract class _$$_ImplementationGuideCopyWith<$Res>
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -24888,7 +24888,7 @@ abstract class _$$_ImplementationGuideCopyWith<$Res>
       @HiveField(19)
           Element? titleElement,
       @HiveField(20)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(21)
           Element? statusElement,
@@ -24930,7 +24930,7 @@ abstract class _$$_ImplementationGuideCopyWith<$Res>
       @HiveField(37)
           Element? packageIdElement,
       @HiveField(38)
-          Code? license,
+          FhirCode? license,
       @JsonKey(name: '_license')
       @HiveField(39)
           Element? licenseElement,
@@ -26083,7 +26083,7 @@ abstract class _ImplementationGuide extends ImplementationGuide {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -26195,7 +26195,7 @@ abstract class _ImplementationGuide extends ImplementationGuide {
   /// [status] The status of this implementation guide. Enables tracking the
   ///  life-cycle of the content.
   @HiveField(20)
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -26305,7 +26305,7 @@ abstract class _ImplementationGuide extends ImplementationGuide {
   /// [license] The license that applies to this Implementation Guide, using an
   ///  SPDX license code, or 'not-open-source'.
   @HiveField(38)
-  Code? get license;
+  FhirCode? get license;
   @override
 
   /// [licenseElement] Extensions for license
@@ -26890,7 +26890,7 @@ mixin _$ImplementationGuideGlobal {
       throw _privateConstructorUsedError;
 
   /// [type] The type of resource that all instances must conform to.
-  Code? get type => throw _privateConstructorUsedError;
+  FhirCode? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
@@ -26915,7 +26915,7 @@ abstract class $ImplementationGuideGlobalCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? type,
+      FhirCode? type,
       @JsonKey(name: '_type') Element? typeElement,
       Canonical profile});
 
@@ -26997,7 +26997,7 @@ abstract class _$$_ImplementationGuideGlobalCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? type,
+      FhirCode? type,
       @JsonKey(name: '_type') Element? typeElement,
       Canonical profile});
 
@@ -27245,7 +27245,7 @@ abstract class _ImplementationGuideGlobal extends ImplementationGuideGlobal {
   @override
 
   /// [type] The type of resource that all instances must conform to.
-  Code? get type;
+  FhirCode? get type;
   @override
 
   /// [typeElement] Extensions for type
@@ -29142,7 +29142,7 @@ mixin _$ImplementationGuidePage {
   Element? get titleElement => throw _privateConstructorUsedError;
 
   /// [generation] A code that indicates how the page is generated.
-  Code? get generation => throw _privateConstructorUsedError;
+  FhirCode? get generation => throw _privateConstructorUsedError;
 
   /// [generationElement] Extensions for generation
   @JsonKey(name: '_generation')
@@ -29172,7 +29172,7 @@ abstract class $ImplementationGuidePageCopyWith<$Res> {
       Reference? nameReference,
       String? title,
       @JsonKey(name: '_title') Element? titleElement,
-      Code? generation,
+      FhirCode? generation,
       @JsonKey(name: '_generation') Element? generationElement,
       List<ImplementationGuidePage>? page});
 
@@ -29322,7 +29322,7 @@ abstract class _$$_ImplementationGuidePageCopyWith<$Res>
       Reference? nameReference,
       String? title,
       @JsonKey(name: '_title') Element? titleElement,
-      Code? generation,
+      FhirCode? generation,
       @JsonKey(name: '_generation') Element? generationElement,
       List<ImplementationGuidePage>? page});
 
@@ -29681,7 +29681,7 @@ abstract class _ImplementationGuidePage extends ImplementationGuidePage {
   @override
 
   /// [generation] A code that indicates how the page is generated.
-  Code? get generation;
+  FhirCode? get generation;
   @override
 
   /// [generationElement] Extensions for generation
@@ -29736,7 +29736,7 @@ mixin _$ImplementationGuideParameter {
   /// [code] apply | path-resource | path-pages | path-tx-cache |
   /// expansion-parameter | rule-broken-links | generate-xml | generate-json |
   ///  generate-turtle | html-template.
-  Code? get code => throw _privateConstructorUsedError;
+  FhirCode? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] Extensions for code
   @JsonKey(name: '_code')
@@ -29767,7 +29767,7 @@ abstract class $ImplementationGuideParameterCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement,
       String? value,
       @JsonKey(name: '_value') Element? valueElement});
@@ -29868,7 +29868,7 @@ abstract class _$$_ImplementationGuideParameterCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement,
       String? value,
       @JsonKey(name: '_value') Element? valueElement});
@@ -30140,7 +30140,7 @@ abstract class _ImplementationGuideParameter
   /// [code] apply | path-resource | path-pages | path-tx-cache |
   /// expansion-parameter | rule-broken-links | generate-xml | generate-json |
   ///  generate-turtle | html-template.
-  Code? get code;
+  FhirCode? get code;
   @override
 
   /// [codeElement] Extensions for code
@@ -30198,7 +30198,7 @@ mixin _$ImplementationGuideTemplate {
       throw _privateConstructorUsedError;
 
   /// [code] Type of template specified.
-  Code? get code => throw _privateConstructorUsedError;
+  FhirCode? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] Extensions for code
   @JsonKey(name: '_code')
@@ -30236,7 +30236,7 @@ abstract class $ImplementationGuideTemplateCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement,
       String? source,
       @JsonKey(name: '_source') Element? sourceElement,
@@ -30362,7 +30362,7 @@ abstract class _$$_ImplementationGuideTemplateCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement,
       String? source,
       @JsonKey(name: '_source') Element? sourceElement,
@@ -30662,7 +30662,7 @@ abstract class _ImplementationGuideTemplate
   @override
 
   /// [code] Type of template specified.
-  Code? get code;
+  FhirCode? get code;
   @override
 
   /// [codeElement] Extensions for code
@@ -32491,7 +32491,7 @@ mixin _$MessageDefinition {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -32601,7 +32601,7 @@ mixin _$MessageDefinition {
   /// [status] The status of this message definition. Enables tracking the
   ///  life-cycle of the content.
   @HiveField(21)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -32715,7 +32715,7 @@ mixin _$MessageDefinition {
 
   /// [category] The impact of the content of the message.
   @HiveField(43)
-  Code? get category => throw _privateConstructorUsedError;
+  FhirCode? get category => throw _privateConstructorUsedError;
 
   /// [categoryElement] Extensions for category
   @JsonKey(name: '_category')
@@ -32731,7 +32731,7 @@ mixin _$MessageDefinition {
   /// [responseRequired] Declare at a message definition level whether a
   ///  response is required or only upon error or success, or never.
   @HiveField(46)
-  Code? get responseRequired => throw _privateConstructorUsedError;
+  FhirCode? get responseRequired => throw _privateConstructorUsedError;
 
   /// [responseRequiredElement] Extensions for responseRequired
   @JsonKey(name: '_responseRequired')
@@ -32773,7 +32773,7 @@ abstract class $MessageDefinitionCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -32811,7 +32811,7 @@ abstract class $MessageDefinitionCopyWith<$Res> {
       @HiveField(20)
           List<FhirCanonical>? replaces,
       @HiveField(21)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(22)
           Element? statusElement,
@@ -32863,14 +32863,14 @@ abstract class $MessageDefinitionCopyWith<$Res> {
       @HiveField(42)
           Element? eventUriElement,
       @HiveField(43)
-          Code? category,
+          FhirCode? category,
       @JsonKey(name: '_category')
       @HiveField(44)
           Element? categoryElement,
       @HiveField(45)
           List<MessageDefinitionFocus>? focus,
       @HiveField(46)
-          Code? responseRequired,
+          FhirCode? responseRequired,
       @JsonKey(name: '_responseRequired')
       @HiveField(47)
           Element? responseRequiredElement,
@@ -33420,7 +33420,7 @@ abstract class _$$_MessageDefinitionCopyWith<$Res>
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -33458,7 +33458,7 @@ abstract class _$$_MessageDefinitionCopyWith<$Res>
       @HiveField(20)
           List<FhirCanonical>? replaces,
       @HiveField(21)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(22)
           Element? statusElement,
@@ -33510,14 +33510,14 @@ abstract class _$$_MessageDefinitionCopyWith<$Res>
       @HiveField(42)
           Element? eventUriElement,
       @HiveField(43)
-          Code? category,
+          FhirCode? category,
       @JsonKey(name: '_category')
       @HiveField(44)
           Element? categoryElement,
       @HiveField(45)
           List<MessageDefinitionFocus>? focus,
       @HiveField(46)
-          Code? responseRequired,
+          FhirCode? responseRequired,
       @JsonKey(name: '_responseRequired')
       @HiveField(47)
           Element? responseRequiredElement,
@@ -34777,7 +34777,7 @@ abstract class _MessageDefinition extends MessageDefinition {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -34902,7 +34902,7 @@ abstract class _MessageDefinition extends MessageDefinition {
   /// [status] The status of this message definition. Enables tracking the
   ///  life-cycle of the content.
   @HiveField(21)
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -35038,7 +35038,7 @@ abstract class _MessageDefinition extends MessageDefinition {
 
   /// [category] The impact of the content of the message.
   @HiveField(43)
-  Code? get category;
+  FhirCode? get category;
   @override
 
   /// [categoryElement] Extensions for category
@@ -35057,7 +35057,7 @@ abstract class _MessageDefinition extends MessageDefinition {
   /// [responseRequired] Declare at a message definition level whether a
   ///  response is required or only upon error or success, or never.
   @HiveField(46)
-  Code? get responseRequired;
+  FhirCode? get responseRequired;
   @override
 
   /// [responseRequiredElement] Extensions for responseRequired
@@ -35117,7 +35117,7 @@ mixin _$MessageDefinitionFocus {
       throw _privateConstructorUsedError;
 
   /// [code] The kind of resource that must be the focus for this message.
-  Code? get code => throw _privateConstructorUsedError;
+  FhirCode? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] Extensions for code
   @JsonKey(name: '_code')
@@ -35161,7 +35161,7 @@ abstract class $MessageDefinitionFocusCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement,
       Canonical? profile,
       FhirUnsignedInt? min,
@@ -35292,7 +35292,7 @@ abstract class _$$_MessageDefinitionFocusCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement,
       Canonical? profile,
       FhirUnsignedInt? min,
@@ -35609,7 +35609,7 @@ abstract class _MessageDefinitionFocus extends MessageDefinitionFocus {
   @override
 
   /// [code] The kind of resource that must be the focus for this message.
-  Code? get code;
+  FhirCode? get code;
   @override
 
   /// [codeElement] Extensions for code
@@ -36106,7 +36106,7 @@ mixin _$OperationDefinition {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -36206,7 +36206,7 @@ mixin _$OperationDefinition {
   /// [status] The status of this operation definition. Enables tracking the
   ///  life-cycle of the content.
   @HiveField(21)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -36215,7 +36215,7 @@ mixin _$OperationDefinition {
 
   /// [kind] Whether this is an operation or a named query.
   @HiveField(23)
-  Code? get kind => throw _privateConstructorUsedError;
+  FhirCode? get kind => throw _privateConstructorUsedError;
 
   /// [kindElement] Extensions for kind
   @JsonKey(name: '_kind')
@@ -36305,7 +36305,7 @@ mixin _$OperationDefinition {
 
   /// [code] The name used to invoke the operation.
   @HiveField(40)
-  Code? get code => throw _privateConstructorUsedError;
+  FhirCode? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] Extensions for code
   @JsonKey(name: '_code')
@@ -36418,7 +36418,7 @@ abstract class $OperationDefinitionCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -36454,12 +36454,12 @@ abstract class $OperationDefinitionCopyWith<$Res> {
       @HiveField(20)
           Element? titleElement,
       @HiveField(21)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(22)
           Element? statusElement,
       @HiveField(23)
-          Code? kind,
+          FhirCode? kind,
       @JsonKey(name: '_kind')
       @HiveField(24)
           Element? kindElement,
@@ -36500,7 +36500,7 @@ abstract class $OperationDefinitionCopyWith<$Res> {
       @HiveField(39)
           Element? affectsStateElement,
       @HiveField(40)
-          Code? code,
+          FhirCode? code,
       @JsonKey(name: '_code')
       @HiveField(41)
           Element? codeElement,
@@ -37131,7 +37131,7 @@ abstract class _$$_OperationDefinitionCopyWith<$Res>
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -37167,12 +37167,12 @@ abstract class _$$_OperationDefinitionCopyWith<$Res>
       @HiveField(20)
           Element? titleElement,
       @HiveField(21)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(22)
           Element? statusElement,
       @HiveField(23)
-          Code? kind,
+          FhirCode? kind,
       @JsonKey(name: '_kind')
       @HiveField(24)
           Element? kindElement,
@@ -37213,7 +37213,7 @@ abstract class _$$_OperationDefinitionCopyWith<$Res>
       @HiveField(39)
           Element? affectsStateElement,
       @HiveField(40)
-          Code? code,
+          FhirCode? code,
       @JsonKey(name: '_code')
       @HiveField(41)
           Element? codeElement,
@@ -38585,7 +38585,7 @@ abstract class _OperationDefinition extends OperationDefinition {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -38698,7 +38698,7 @@ abstract class _OperationDefinition extends OperationDefinition {
   /// [status] The status of this operation definition. Enables tracking the
   ///  life-cycle of the content.
   @HiveField(21)
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -38709,7 +38709,7 @@ abstract class _OperationDefinition extends OperationDefinition {
 
   /// [kind] Whether this is an operation or a named query.
   @HiveField(23)
-  Code? get kind;
+  FhirCode? get kind;
   @override
 
   /// [kindElement] Extensions for kind
@@ -38816,7 +38816,7 @@ abstract class _OperationDefinition extends OperationDefinition {
 
   /// [code] The name used to invoke the operation.
   @HiveField(40)
-  Code? get code;
+  FhirCode? get code;
   @override
 
   /// [codeElement] Extensions for code
@@ -38959,14 +38959,14 @@ mixin _$OperationDefinitionParameter {
       throw _privateConstructorUsedError;
 
   /// [name] The name of used to identify the parameter.
-  Code? get name => throw _privateConstructorUsedError;
+  FhirCode? get name => throw _privateConstructorUsedError;
 
   /// [nameElement] Extensions for name
   @JsonKey(name: '_name')
   Element? get nameElement => throw _privateConstructorUsedError;
 
   /// [use] Whether this is an input or an output parameter.
-  Code? get use => throw _privateConstructorUsedError;
+  FhirCode? get use => throw _privateConstructorUsedError;
 
   /// [useElement] Extensions for use
   @JsonKey(name: '_use')
@@ -38996,7 +38996,7 @@ mixin _$OperationDefinitionParameter {
   Element? get documentationElement => throw _privateConstructorUsedError;
 
   /// [type] The type for this parameter.
-  Code? get type => throw _privateConstructorUsedError;
+  FhirCode? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
@@ -39015,7 +39015,7 @@ mixin _$OperationDefinitionParameter {
 
   /// [searchType] How the parameter is understood as a search parameter. This
   ///  is only used if the parameter type is 'string'.
-  Code? get searchType => throw _privateConstructorUsedError;
+  FhirCode? get searchType => throw _privateConstructorUsedError;
 
   /// [searchTypeElement] Extensions for searchType
   @JsonKey(name: '_searchType')
@@ -39053,9 +39053,9 @@ abstract class $OperationDefinitionParameterCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? name,
+      FhirCode? name,
       @JsonKey(name: '_name') Element? nameElement,
-      Code? use,
+      FhirCode? use,
       @JsonKey(name: '_use') Element? useElement,
       Integer? min,
       @JsonKey(name: '_min') Element? minElement,
@@ -39063,10 +39063,10 @@ abstract class $OperationDefinitionParameterCopyWith<$Res> {
       @JsonKey(name: '_max') Element? maxElement,
       String? documentation,
       @JsonKey(name: '_documentation') Element? documentationElement,
-      Code? type,
+      FhirCode? type,
       @JsonKey(name: '_type') Element? typeElement,
       List<FhirCanonical>? targetProfile,
-      Code? searchType,
+      FhirCode? searchType,
       @JsonKey(name: '_searchType') Element? searchTypeElement,
       OperationDefinitionBinding? binding,
       List<OperationDefinitionReferencedFrom>? referencedFrom,
@@ -39316,9 +39316,9 @@ abstract class _$$_OperationDefinitionParameterCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? name,
+      FhirCode? name,
       @JsonKey(name: '_name') Element? nameElement,
-      Code? use,
+      FhirCode? use,
       @JsonKey(name: '_use') Element? useElement,
       Integer? min,
       @JsonKey(name: '_min') Element? minElement,
@@ -39326,10 +39326,10 @@ abstract class _$$_OperationDefinitionParameterCopyWith<$Res>
       @JsonKey(name: '_max') Element? maxElement,
       String? documentation,
       @JsonKey(name: '_documentation') Element? documentationElement,
-      Code? type,
+      FhirCode? type,
       @JsonKey(name: '_type') Element? typeElement,
       List<FhirCanonical>? targetProfile,
-      Code? searchType,
+      FhirCode? searchType,
       @JsonKey(name: '_searchType') Element? searchTypeElement,
       OperationDefinitionBinding? binding,
       List<OperationDefinitionReferencedFrom>? referencedFrom,
@@ -39869,7 +39869,7 @@ abstract class _OperationDefinitionParameter
   @override
 
   /// [name] The name of used to identify the parameter.
-  Code? get name;
+  FhirCode? get name;
   @override
 
   /// [nameElement] Extensions for name
@@ -39878,7 +39878,7 @@ abstract class _OperationDefinitionParameter
   @override
 
   /// [use] Whether this is an input or an output parameter.
-  Code? get use;
+  FhirCode? get use;
   @override
 
   /// [useElement] Extensions for use
@@ -39916,7 +39916,7 @@ abstract class _OperationDefinitionParameter
   @override
 
   /// [type] The type for this parameter.
-  Code? get type;
+  FhirCode? get type;
   @override
 
   /// [typeElement] Extensions for type
@@ -39938,7 +39938,7 @@ abstract class _OperationDefinitionParameter
 
   /// [searchType] How the parameter is understood as a search parameter. This
   ///  is only used if the parameter type is 'string'.
-  Code? get searchType;
+  FhirCode? get searchType;
   @override
 
   /// [searchTypeElement] Extensions for searchType
@@ -40004,7 +40004,7 @@ mixin _$OperationDefinitionBinding {
   /// [strength] Indicates the degree of conformance expectations associated
   /// with this binding - that is, the degree to which the provided value set
   ///  must be adhered to in the instances.
-  Code? get strength => throw _privateConstructorUsedError;
+  FhirCode? get strength => throw _privateConstructorUsedError;
 
   /// [strengthElement] Extensions for strength
   @JsonKey(name: '_strength')
@@ -40031,7 +40031,7 @@ abstract class $OperationDefinitionBindingCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? strength,
+      FhirCode? strength,
       @JsonKey(name: '_strength') Element? strengthElement,
       Canonical valueSet});
 
@@ -40113,7 +40113,7 @@ abstract class _$$_OperationDefinitionBindingCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? strength,
+      FhirCode? strength,
       @JsonKey(name: '_strength') Element? strengthElement,
       Canonical valueSet});
 
@@ -40368,7 +40368,7 @@ abstract class _OperationDefinitionBinding extends OperationDefinitionBinding {
   /// [strength] Indicates the degree of conformance expectations associated
   /// with this binding - that is, the degree to which the provided value set
   ///  must be adhered to in the instances.
-  Code? get strength;
+  FhirCode? get strength;
   @override
 
   /// [strengthElement] Extensions for strength
@@ -41364,7 +41364,7 @@ mixin _$SearchParameter {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -41466,7 +41466,7 @@ mixin _$SearchParameter {
   /// [status] The status of this search parameter. Enables tracking the
   ///  life-cycle of the content.
   @HiveField(18)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -41546,7 +41546,7 @@ mixin _$SearchParameter {
   /// [code] The code used in the URL or the parameter name in a parameters
   ///  resource for this search parameter.
   @HiveField(33)
-  Code? get code => throw _privateConstructorUsedError;
+  FhirCode? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] Extensions for code
   @JsonKey(name: '_code')
@@ -41566,7 +41566,7 @@ mixin _$SearchParameter {
   /// [type] The type of value that a search parameter may contain, and how the
   ///  content is interpreted.
   @HiveField(37)
-  Code? get type => throw _privateConstructorUsedError;
+  FhirCode? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
@@ -41596,7 +41596,7 @@ mixin _$SearchParameter {
   /// [xpathUsage] How the search parameter relates to the set of elements
   ///  returned by evaluating the xpath query.
   @HiveField(43)
-  Code? get xpathUsage => throw _privateConstructorUsedError;
+  FhirCode? get xpathUsage => throw _privateConstructorUsedError;
 
   /// [xpathUsageElement] Extensions for xpathUsage
   @JsonKey(name: '_xpathUsage')
@@ -41697,7 +41697,7 @@ abstract class $SearchParameterCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -41728,7 +41728,7 @@ abstract class $SearchParameterCopyWith<$Res> {
       @HiveField(17)
           Canonical? derivedFrom,
       @HiveField(18)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(19)
           Element? statusElement,
@@ -41764,7 +41764,7 @@ abstract class $SearchParameterCopyWith<$Res> {
       @HiveField(32)
           Element? purposeElement,
       @HiveField(33)
-          Code? code,
+          FhirCode? code,
       @JsonKey(name: '_code')
       @HiveField(34)
           Element? codeElement,
@@ -41774,7 +41774,7 @@ abstract class $SearchParameterCopyWith<$Res> {
       @HiveField(36)
           List<Element?>? baseElement,
       @HiveField(37)
-          Code? type,
+          FhirCode? type,
       @JsonKey(name: '_type')
       @HiveField(38)
           Element? typeElement,
@@ -41789,7 +41789,7 @@ abstract class $SearchParameterCopyWith<$Res> {
       @HiveField(42)
           Element? xpathElement,
       @HiveField(43)
-          Code? xpathUsage,
+          FhirCode? xpathUsage,
       @JsonKey(name: '_xpathUsage')
       @HiveField(44)
           Element? xpathUsageElement,
@@ -42419,7 +42419,7 @@ abstract class _$$_SearchParameterCopyWith<$Res>
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -42450,7 +42450,7 @@ abstract class _$$_SearchParameterCopyWith<$Res>
       @HiveField(17)
           Canonical? derivedFrom,
       @HiveField(18)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(19)
           Element? statusElement,
@@ -42486,7 +42486,7 @@ abstract class _$$_SearchParameterCopyWith<$Res>
       @HiveField(32)
           Element? purposeElement,
       @HiveField(33)
-          Code? code,
+          FhirCode? code,
       @JsonKey(name: '_code')
       @HiveField(34)
           Element? codeElement,
@@ -42496,7 +42496,7 @@ abstract class _$$_SearchParameterCopyWith<$Res>
       @HiveField(36)
           List<Element?>? baseElement,
       @HiveField(37)
-          Code? type,
+          FhirCode? type,
       @JsonKey(name: '_type')
       @HiveField(38)
           Element? typeElement,
@@ -42511,7 +42511,7 @@ abstract class _$$_SearchParameterCopyWith<$Res>
       @HiveField(42)
           Element? xpathElement,
       @HiveField(43)
-          Code? xpathUsage,
+          FhirCode? xpathUsage,
       @JsonKey(name: '_xpathUsage')
       @HiveField(44)
           Element? xpathUsageElement,
@@ -44017,7 +44017,7 @@ abstract class _SearchParameter extends SearchParameter {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -44131,7 +44131,7 @@ abstract class _SearchParameter extends SearchParameter {
   /// [status] The status of this search parameter. Enables tracking the
   ///  life-cycle of the content.
   @HiveField(18)
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -44226,7 +44226,7 @@ abstract class _SearchParameter extends SearchParameter {
   /// [code] The code used in the URL or the parameter name in a parameters
   ///  resource for this search parameter.
   @HiveField(33)
-  Code? get code;
+  FhirCode? get code;
   @override
 
   /// [codeElement] Extensions for code
@@ -44250,7 +44250,7 @@ abstract class _SearchParameter extends SearchParameter {
   /// [type] The type of value that a search parameter may contain, and how the
   ///  content is interpreted.
   @HiveField(37)
-  Code? get type;
+  FhirCode? get type;
   @override
 
   /// [typeElement] Extensions for type
@@ -44286,7 +44286,7 @@ abstract class _SearchParameter extends SearchParameter {
   /// [xpathUsage] How the search parameter relates to the set of elements
   ///  returned by evaluating the xpath query.
   @HiveField(43)
-  Code? get xpathUsage;
+  FhirCode? get xpathUsage;
   @override
 
   /// [xpathUsageElement] Extensions for xpathUsage
@@ -44830,7 +44830,7 @@ mixin _$StructureDefinition {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -44936,7 +44936,7 @@ mixin _$StructureDefinition {
   /// [status] The status of this structure definition. Enables tracking the
   ///  life-cycle of the content.
   @HiveField(22)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -45037,7 +45037,7 @@ mixin _$StructureDefinition {
   /// specification, without the revision number, e.g.
   ///  [publication].[major].[minor], which is 4.0.1. for this version.
   @HiveField(40)
-  Code? get fhirVersion => throw _privateConstructorUsedError;
+  FhirCode? get fhirVersion => throw _privateConstructorUsedError;
 
   /// [fhirVersionElement] Extensions for fhirVersion
   @JsonKey(name: '_fhirVersion')
@@ -45051,7 +45051,7 @@ mixin _$StructureDefinition {
 
   /// [kind] Defines the kind of structure that this definition is describing.
   @HiveField(43)
-  Code? get kind => throw _privateConstructorUsedError;
+  FhirCode? get kind => throw _privateConstructorUsedError;
 
   /// [kindElement] Extensions for kind
   @JsonKey(name: '_kind')
@@ -45116,7 +45116,7 @@ mixin _$StructureDefinition {
 
   /// [derivation] How the type relates to the baseDefinition.
   @HiveField(54)
-  Code? get derivation => throw _privateConstructorUsedError;
+  FhirCode? get derivation => throw _privateConstructorUsedError;
 
   /// [derivationElement] Extensions for derivation
   @JsonKey(name: '_derivation')
@@ -45161,7 +45161,7 @@ abstract class $StructureDefinitionCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -45199,7 +45199,7 @@ abstract class $StructureDefinitionCopyWith<$Res> {
       @HiveField(21)
           Element? titleElement,
       @HiveField(22)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(23)
           Element? statusElement,
@@ -45242,14 +45242,14 @@ abstract class $StructureDefinitionCopyWith<$Res> {
       @HiveField(39)
           List<Coding>? keyword,
       @HiveField(40)
-          Code? fhirVersion,
+          FhirCode? fhirVersion,
       @JsonKey(name: '_fhirVersion')
       @HiveField(41)
           Element? fhirVersionElement,
       @HiveField(42)
           List<StructureDefinitionMapping>? mapping,
       @HiveField(43)
-          Code? kind,
+          FhirCode? kind,
       @JsonKey(name: '_kind')
       @HiveField(44)
           Element? kindElement,
@@ -45277,7 +45277,7 @@ abstract class $StructureDefinitionCopyWith<$Res> {
       @HiveField(53)
           Element? baseDefinitionElement,
       @HiveField(54)
-          Code? derivation,
+          FhirCode? derivation,
       @JsonKey(name: '_derivation')
       @HiveField(55)
           Element? derivationElement,
@@ -45910,7 +45910,7 @@ abstract class _$$_StructureDefinitionCopyWith<$Res>
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -45948,7 +45948,7 @@ abstract class _$$_StructureDefinitionCopyWith<$Res>
       @HiveField(21)
           Element? titleElement,
       @HiveField(22)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(23)
           Element? statusElement,
@@ -45991,14 +45991,14 @@ abstract class _$$_StructureDefinitionCopyWith<$Res>
       @HiveField(39)
           List<Coding>? keyword,
       @HiveField(40)
-          Code? fhirVersion,
+          FhirCode? fhirVersion,
       @JsonKey(name: '_fhirVersion')
       @HiveField(41)
           Element? fhirVersionElement,
       @HiveField(42)
           List<StructureDefinitionMapping>? mapping,
       @HiveField(43)
-          Code? kind,
+          FhirCode? kind,
       @JsonKey(name: '_kind')
       @HiveField(44)
           Element? kindElement,
@@ -46026,7 +46026,7 @@ abstract class _$$_StructureDefinitionCopyWith<$Res>
       @HiveField(53)
           Element? baseDefinitionElement,
       @HiveField(54)
-          Code? derivation,
+          FhirCode? derivation,
       @JsonKey(name: '_derivation')
       @HiveField(55)
           Element? derivationElement,
@@ -47433,7 +47433,7 @@ abstract class _StructureDefinition extends StructureDefinition {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -47553,7 +47553,7 @@ abstract class _StructureDefinition extends StructureDefinition {
   /// [status] The status of this structure definition. Enables tracking the
   ///  life-cycle of the content.
   @HiveField(22)
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -47672,7 +47672,7 @@ abstract class _StructureDefinition extends StructureDefinition {
   /// specification, without the revision number, e.g.
   ///  [publication].[major].[minor], which is 4.0.1. for this version.
   @HiveField(40)
-  Code? get fhirVersion;
+  FhirCode? get fhirVersion;
   @override
 
   /// [fhirVersionElement] Extensions for fhirVersion
@@ -47688,7 +47688,7 @@ abstract class _StructureDefinition extends StructureDefinition {
 
   /// [kind] Defines the kind of structure that this definition is describing.
   @HiveField(43)
-  Code? get kind;
+  FhirCode? get kind;
   @override
 
   /// [kindElement] Extensions for kind
@@ -47762,7 +47762,7 @@ abstract class _StructureDefinition extends StructureDefinition {
 
   /// [derivation] How the type relates to the baseDefinition.
   @HiveField(54)
-  Code? get derivation;
+  FhirCode? get derivation;
   @override
 
   /// [derivationElement] Extensions for derivation
@@ -48437,7 +48437,7 @@ mixin _$StructureDefinitionContext {
 
   /// [type] Defines how to interpret the expression that defines what the
   ///  context of the extension is.
-  Code? get type => throw _privateConstructorUsedError;
+  FhirCode? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
@@ -48468,7 +48468,7 @@ abstract class $StructureDefinitionContextCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? type,
+      FhirCode? type,
       @JsonKey(name: '_type') Element? typeElement,
       String? expression,
       @JsonKey(name: '_expression') Element? expressionElement});
@@ -48569,7 +48569,7 @@ abstract class _$$_StructureDefinitionContextCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? type,
+      FhirCode? type,
       @JsonKey(name: '_type') Element? typeElement,
       String? expression,
       @JsonKey(name: '_expression') Element? expressionElement});
@@ -48840,7 +48840,7 @@ abstract class _StructureDefinitionContext extends StructureDefinitionContext {
 
   /// [type] Defines how to interpret the expression that defines what the
   ///  context of the extension is.
-  Code? get type;
+  FhirCode? get type;
   @override
 
   /// [typeElement] Extensions for type
@@ -49591,7 +49591,7 @@ mixin _$StructureMap {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -49700,7 +49700,7 @@ mixin _$StructureMap {
   /// [status] The status of this structure map. Enables tracking the
   ///  life-cycle of the content.
   @HiveField(20)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -49832,7 +49832,7 @@ abstract class $StructureMapCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -49868,7 +49868,7 @@ abstract class $StructureMapCopyWith<$Res> {
       @HiveField(19)
           Element? titleElement,
       @HiveField(20)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(21)
           Element? statusElement,
@@ -50354,7 +50354,7 @@ abstract class _$$_StructureMapCopyWith<$Res>
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -50390,7 +50390,7 @@ abstract class _$$_StructureMapCopyWith<$Res>
       @HiveField(19)
           Element? titleElement,
       @HiveField(20)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(21)
           Element? statusElement,
@@ -51482,7 +51482,7 @@ abstract class _StructureMap extends StructureMap {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -51605,7 +51605,7 @@ abstract class _StructureMap extends StructureMap {
   /// [status] The status of this structure map. Enables tracking the
   ///  life-cycle of the content.
   @HiveField(20)
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -51774,7 +51774,7 @@ mixin _$StructureMapStructure {
   Canonical get url => throw _privateConstructorUsedError;
 
   /// [mode] How the referenced structure is used in this mapping.
-  Code? get mode => throw _privateConstructorUsedError;
+  FhirCode? get mode => throw _privateConstructorUsedError;
 
   /// [modeElement] Extensions for mode
   @JsonKey(name: '_mode')
@@ -51812,7 +51812,7 @@ abstract class $StructureMapStructureCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Canonical url,
-      Code? mode,
+      FhirCode? mode,
       @JsonKey(name: '_mode') Element? modeElement,
       String? alias,
       @JsonKey(name: '_alias') Element? aliasElement,
@@ -51943,7 +51943,7 @@ abstract class _$$_StructureMapStructureCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Canonical url,
-      Code? mode,
+      FhirCode? mode,
       @JsonKey(name: '_mode') Element? modeElement,
       String? alias,
       @JsonKey(name: '_alias') Element? aliasElement,
@@ -52262,7 +52262,7 @@ abstract class _StructureMapStructure extends StructureMapStructure {
   @override
 
   /// [mode] How the referenced structure is used in this mapping.
-  Code? get mode;
+  FhirCode? get mode;
   @override
 
   /// [modeElement] Extensions for mode
@@ -52353,7 +52353,7 @@ mixin _$StructureMapGroup {
   /// [typeMode] If this is the default rule set to apply for the source type
   ///  or this combination of types.
   @HiveField(7)
-  Code? get typeMode => throw _privateConstructorUsedError;
+  FhirCode? get typeMode => throw _privateConstructorUsedError;
 
   /// [typeModeElement] Extensions for typeMode
   @HiveField(8)
@@ -52411,7 +52411,7 @@ abstract class $StructureMapGroupCopyWith<$Res> {
       @JsonKey(name: '_extends')
           Element? extendsElement,
       @HiveField(7)
-          Code? typeMode,
+          FhirCode? typeMode,
       @HiveField(8)
       @JsonKey(name: '_typeMode')
           Element? typeModeElement,
@@ -52591,7 +52591,7 @@ abstract class _$$_StructureMapGroupCopyWith<$Res>
       @JsonKey(name: '_extends')
           Element? extendsElement,
       @HiveField(7)
-          Code? typeMode,
+          FhirCode? typeMode,
       @HiveField(8)
       @JsonKey(name: '_typeMode')
           Element? typeModeElement,
@@ -53054,7 +53054,7 @@ abstract class _StructureMapGroup extends StructureMapGroup {
   /// [typeMode] If this is the default rule set to apply for the source type
   ///  or this combination of types.
   @HiveField(7)
-  Code? get typeMode;
+  FhirCode? get typeMode;
   @override
 
   /// [typeModeElement] Extensions for typeMode
@@ -53140,7 +53140,7 @@ mixin _$StructureMapInput {
   Element? get typeElement => throw _privateConstructorUsedError;
 
   /// [mode] Mode for this instance of data.
-  Code? get mode => throw _privateConstructorUsedError;
+  FhirCode? get mode => throw _privateConstructorUsedError;
 
   /// [modeElement] Extensions for mode
   @JsonKey(name: '_mode')
@@ -53173,7 +53173,7 @@ abstract class $StructureMapInputCopyWith<$Res> {
       @JsonKey(name: '_name') Element? nameElement,
       String? type,
       @JsonKey(name: '_type') Element? typeElement,
-      Code? mode,
+      FhirCode? mode,
       @JsonKey(name: '_mode') Element? modeElement,
       String? documentation,
       @JsonKey(name: '_documentation') Element? documentationElement});
@@ -53322,7 +53322,7 @@ abstract class _$$_StructureMapInputCopyWith<$Res>
       @JsonKey(name: '_name') Element? nameElement,
       String? type,
       @JsonKey(name: '_type') Element? typeElement,
-      Code? mode,
+      FhirCode? mode,
       @JsonKey(name: '_mode') Element? modeElement,
       String? documentation,
       @JsonKey(name: '_documentation') Element? documentationElement});
@@ -53670,7 +53670,7 @@ abstract class _StructureMapInput extends StructureMapInput {
   @override
 
   /// [mode] Mode for this instance of data.
-  Code? get mode;
+  FhirCode? get mode;
   @override
 
   /// [modeElement] Extensions for mode
@@ -54360,7 +54360,7 @@ mixin _$StructureMapSource {
 
   /// [defaultValueBase64Binary] A value to use if there is no existing value
   ///  in the source object.
-  Base64Binary? get defaultValueBase64Binary =>
+  FhirBase64Binary? get defaultValueBase64Binary =>
       throw _privateConstructorUsedError;
   @JsonKey(name: '_defaultValueBase64Binary')
   Element? get defaultValueBase64BinaryElement =>
@@ -54383,7 +54383,7 @@ mixin _$StructureMapSource {
 
   /// [defaultValueCode] A value to use if there is no existing value in the
   ///  source object.
-  Code? get defaultValueCode => throw _privateConstructorUsedError;
+  FhirCode? get defaultValueCode => throw _privateConstructorUsedError;
 
   /// [defaultValueCodeElement] Extensions for defaultValueCode
   @JsonKey(name: '_defaultValueCode')
@@ -54406,7 +54406,7 @@ mixin _$StructureMapSource {
 
   /// [defaultValueDecimal] A value to use if there is no existing value in the
   ///  source object.
-  Decimal? get defaultValueDecimal => throw _privateConstructorUsedError;
+  FhirDecimal? get defaultValueDecimal => throw _privateConstructorUsedError;
 
   /// [defaultValueDecimalElement] Extensions for defaultValueDecimal
   @JsonKey(name: '_defaultValueDecimal')
@@ -54649,7 +54649,7 @@ mixin _$StructureMapSource {
   Element? get elementElement => throw _privateConstructorUsedError;
 
   /// [listMode] How to handle the list mode for this element.
-  Code? get listMode => throw _privateConstructorUsedError;
+  FhirCode? get listMode => throw _privateConstructorUsedError;
 
   /// [listModeElement] Extensions for listMode
   @JsonKey(name: '_listMode')
@@ -54715,7 +54715,7 @@ abstract class $StructureMapSourceCopyWith<$Res> {
       String? type,
       @JsonKey(name: '_type')
           Element? typeElement,
-      Base64Binary? defaultValueBase64Binary,
+      FhirBase64Binary? defaultValueBase64Binary,
       @JsonKey(name: '_defaultValueBase64Binary')
           Element? defaultValueBase64BinaryElement,
       Boolean? defaultValueBoolean,
@@ -54724,7 +54724,7 @@ abstract class $StructureMapSourceCopyWith<$Res> {
       Canonical? defaultValueCanonical,
       @JsonKey(name: '_defaultValueCanonical')
           Element? defaultValueCanonicalElement,
-      Code? defaultValueCode,
+      FhirCode? defaultValueCode,
       @JsonKey(name: '_defaultValueCode')
           Element? defaultValueCodeElement,
       Date? defaultValueDate,
@@ -54733,7 +54733,7 @@ abstract class $StructureMapSourceCopyWith<$Res> {
       FhirDateTime? defaultValueDateTime,
       @JsonKey(name: '_defaultValueDateTime')
           Element? defaultValueDateTimeElement,
-      Decimal? defaultValueDecimal,
+      FhirDecimal? defaultValueDecimal,
       @JsonKey(name: '_defaultValueDecimal')
           Element? defaultValueDecimalElement,
       FhirId? defaultValueId,
@@ -54806,7 +54806,7 @@ abstract class $StructureMapSourceCopyWith<$Res> {
       String? element,
       @JsonKey(name: '_element')
           Element? elementElement,
-      Code? listMode,
+      FhirCode? listMode,
       @JsonKey(name: '_listMode')
           Element? listModeElement,
       FhirId? variable,
@@ -56128,7 +56128,7 @@ abstract class _$$_StructureMapSourceCopyWith<$Res>
       String? type,
       @JsonKey(name: '_type')
           Element? typeElement,
-      Base64Binary? defaultValueBase64Binary,
+      FhirBase64Binary? defaultValueBase64Binary,
       @JsonKey(name: '_defaultValueBase64Binary')
           Element? defaultValueBase64BinaryElement,
       Boolean? defaultValueBoolean,
@@ -56137,7 +56137,7 @@ abstract class _$$_StructureMapSourceCopyWith<$Res>
       Canonical? defaultValueCanonical,
       @JsonKey(name: '_defaultValueCanonical')
           Element? defaultValueCanonicalElement,
-      Code? defaultValueCode,
+      FhirCode? defaultValueCode,
       @JsonKey(name: '_defaultValueCode')
           Element? defaultValueCodeElement,
       Date? defaultValueDate,
@@ -56146,7 +56146,7 @@ abstract class _$$_StructureMapSourceCopyWith<$Res>
       FhirDateTime? defaultValueDateTime,
       @JsonKey(name: '_defaultValueDateTime')
           Element? defaultValueDateTimeElement,
-      Decimal? defaultValueDecimal,
+      FhirDecimal? defaultValueDecimal,
       @JsonKey(name: '_defaultValueDecimal')
           Element? defaultValueDecimalElement,
       FhirId? defaultValueId,
@@ -56219,7 +56219,7 @@ abstract class _$$_StructureMapSourceCopyWith<$Res>
       String? element,
       @JsonKey(name: '_element')
           Element? elementElement,
-      Code? listMode,
+      FhirCode? listMode,
       @JsonKey(name: '_listMode')
           Element? listModeElement,
       FhirId? variable,
@@ -57912,7 +57912,7 @@ abstract class _StructureMapSource extends StructureMapSource {
 
   /// [defaultValueBase64Binary] A value to use if there is no existing value
   ///  in the source object.
-  Base64Binary? get defaultValueBase64Binary;
+  FhirBase64Binary? get defaultValueBase64Binary;
   @override
   @JsonKey(name: '_defaultValueBase64Binary')
   Element? get defaultValueBase64BinaryElement;
@@ -57938,7 +57938,7 @@ abstract class _StructureMapSource extends StructureMapSource {
 
   /// [defaultValueCode] A value to use if there is no existing value in the
   ///  source object.
-  Code? get defaultValueCode;
+  FhirCode? get defaultValueCode;
   @override
 
   /// [defaultValueCodeElement] Extensions for defaultValueCode
@@ -57966,7 +57966,7 @@ abstract class _StructureMapSource extends StructureMapSource {
 
   /// [defaultValueDecimal] A value to use if there is no existing value in the
   ///  source object.
-  Decimal? get defaultValueDecimal;
+  FhirDecimal? get defaultValueDecimal;
   @override
 
   /// [defaultValueDecimalElement] Extensions for defaultValueDecimal
@@ -58253,7 +58253,7 @@ abstract class _StructureMapSource extends StructureMapSource {
   @override
 
   /// [listMode] How to handle the list mode for this element.
-  Code? get listMode;
+  FhirCode? get listMode;
   @override
 
   /// [listModeElement] Extensions for listMode
@@ -58347,7 +58347,7 @@ mixin _$StructureMapTarget {
   Element? get contextElement => throw _privateConstructorUsedError;
 
   /// [contextType] How to interpret the context.
-  Code? get contextType => throw _privateConstructorUsedError;
+  FhirCode? get contextType => throw _privateConstructorUsedError;
 
   /// [contextTypeElement] Extensions for contextType
   @JsonKey(name: '_contextType')
@@ -58382,7 +58382,7 @@ mixin _$StructureMapTarget {
   Element? get listRuleIdElement => throw _privateConstructorUsedError;
 
   /// [transform] How the data is copied / created.
-  Code? get transform => throw _privateConstructorUsedError;
+  FhirCode? get transform => throw _privateConstructorUsedError;
 
   /// [transformElement] Extensions for transform
   @JsonKey(name: '_transform')
@@ -58410,7 +58410,7 @@ abstract class $StructureMapTargetCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       FhirId? context,
       @JsonKey(name: '_context') Element? contextElement,
-      Code? contextType,
+      FhirCode? contextType,
       @JsonKey(name: '_contextType') Element? contextTypeElement,
       String? element,
       @JsonKey(name: '_element') Element? elementElement,
@@ -58420,7 +58420,7 @@ abstract class $StructureMapTargetCopyWith<$Res> {
       @JsonKey(name: '_listMode') List<Element?>? listModeElement,
       FhirId? listRuleId,
       @JsonKey(name: '_listRuleId') Element? listRuleIdElement,
-      Code? transform,
+      FhirCode? transform,
       @JsonKey(name: '_transform') Element? transformElement,
       List<StructureMapParameter>? parameter});
 
@@ -58627,7 +58627,7 @@ abstract class _$$_StructureMapTargetCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       FhirId? context,
       @JsonKey(name: '_context') Element? contextElement,
-      Code? contextType,
+      FhirCode? contextType,
       @JsonKey(name: '_contextType') Element? contextTypeElement,
       String? element,
       @JsonKey(name: '_element') Element? elementElement,
@@ -58637,7 +58637,7 @@ abstract class _$$_StructureMapTargetCopyWith<$Res>
       @JsonKey(name: '_listMode') List<Element?>? listModeElement,
       FhirId? listRuleId,
       @JsonKey(name: '_listRuleId') Element? listRuleIdElement,
-      Code? transform,
+      FhirCode? transform,
       @JsonKey(name: '_transform') Element? transformElement,
       List<StructureMapParameter>? parameter});
 
@@ -59105,7 +59105,7 @@ abstract class _StructureMapTarget extends StructureMapTarget {
   @override
 
   /// [contextType] How to interpret the context.
-  Code? get contextType;
+  FhirCode? get contextType;
   @override
 
   /// [contextTypeElement] Extensions for contextType
@@ -59150,7 +59150,7 @@ abstract class _StructureMapTarget extends StructureMapTarget {
   @override
 
   /// [transform] How the data is copied / created.
-  Code? get transform;
+  FhirCode? get transform;
   @override
 
   /// [transformElement] Extensions for transform
@@ -59231,7 +59231,7 @@ mixin _$StructureMapParameter {
   Element? get valueIntegerElement => throw _privateConstructorUsedError;
 
   /// [valueDecimal] Parameter value - variable or literal.
-  Decimal? get valueDecimal => throw _privateConstructorUsedError;
+  FhirDecimal? get valueDecimal => throw _privateConstructorUsedError;
 
   /// [valueDecimalElement] Extensions for valueDecimal
   @JsonKey(name: '_valueDecimal')
@@ -59261,7 +59261,7 @@ abstract class $StructureMapParameterCopyWith<$Res> {
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       Integer? valueInteger,
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
-      Decimal? valueDecimal,
+      FhirDecimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement});
 
   $ElementCopyWith<$Res>? get valueIdElement;
@@ -59436,7 +59436,7 @@ abstract class _$$_StructureMapParameterCopyWith<$Res>
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       Integer? valueInteger,
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
-      Decimal? valueDecimal,
+      FhirDecimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement});
 
   @override
@@ -59829,7 +59829,7 @@ abstract class _StructureMapParameter extends StructureMapParameter {
   @override
 
   /// [valueDecimal] Parameter value - variable or literal.
-  Decimal? get valueDecimal;
+  FhirDecimal? get valueDecimal;
   @override
 
   /// [valueDecimalElement] Extensions for valueDecimal

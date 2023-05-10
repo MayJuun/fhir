@@ -10,35 +10,35 @@ class SearchParamToken with SearchParam, _$SearchParamToken {
   const SearchParamToken._();
   const factory SearchParamToken.equal({
     FhirUri? system,
-    Code? code,
+    FhirCode? code,
   }) = _SearchParamTokenEqual;
   const factory SearchParamToken.text({
     FhirUri? system,
-    Code? code,
+    FhirCode? code,
   }) = _SearchParamTokenText;
   const factory SearchParamToken.not({
     FhirUri? system,
-    Code? code,
+    FhirCode? code,
   }) = _SearchParamTokenNot;
   const factory SearchParamToken.above({
     FhirUri? system,
-    Code? code,
+    FhirCode? code,
   }) = _SearchParamTokenAbove;
   const factory SearchParamToken.below({
     FhirUri? system,
-    Code? code,
+    FhirCode? code,
   }) = _SearchParamTokenBelow;
   const factory SearchParamToken.in_({
     FhirUri? system,
-    Code? code,
+    FhirCode? code,
   }) = _SearchParamTokenIn;
   const factory SearchParamToken.notIn({
     FhirUri? system,
-    Code? code,
+    FhirCode? code,
   }) = _SearchParamTokenNotIn;
   const factory SearchParamToken.ofType({
     FhirUri? system,
-    Code? code,
+    FhirCode? code,
   }) = _SearchParamTokenOfType;
   const factory SearchParamToken.missing(bool missing) =
       _SearchParamTokenMissing;

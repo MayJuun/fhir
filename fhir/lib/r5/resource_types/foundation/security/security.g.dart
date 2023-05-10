@@ -690,10 +690,14 @@ _$_Consent _$$_ConsentFromJson(Map<String, dynamic> json) => _$_Consent(
       verification: (json['verification'] as List<dynamic>?)
           ?.map((e) => ConsentVerification.fromJson(e as Map<String, dynamic>))
           .toList(),
-      provision: json['provision'] == null
+      decision:
+          json['decision'] == null ? null : FhirCode.fromJson(json['decision']),
+      decisionElement: json['_decision'] == null
           ? null
-          : ConsentProvision.fromJson(
-              json['provision'] as Map<String, dynamic>),
+          : Element.fromJson(json['_decision'] as Map<String, dynamic>),
+      provision: (json['provision'] as List<dynamic>?)
+          ?.map((e) => ConsentProvision.fromJson(e as Map<String, dynamic>))
+          .toList(),
     );
 
 Map<String, dynamic> _$$_ConsentToJson(_$_Consent instance) {
@@ -745,7 +749,10 @@ Map<String, dynamic> _$$_ConsentToJson(_$_Consent instance) {
       'policyText', instance.policyText?.map((e) => e.toJson()).toList());
   writeNotNull(
       'verification', instance.verification?.map((e) => e.toJson()).toList());
-  writeNotNull('provision', instance.provision?.toJson());
+  writeNotNull('decision', instance.decision?.toJson());
+  writeNotNull('_decision', instance.decisionElement?.toJson());
+  writeNotNull(
+      'provision', instance.provision?.map((e) => e.toJson()).toList());
   return val;
 }
 
@@ -859,10 +866,6 @@ _$_ConsentProvision _$$_ConsentProvisionFromJson(Map<String, dynamic> json) =>
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      type: json['type'] == null ? null : FhirCode.fromJson(json['type']),
-      typeElement: json['_type'] == null
-          ? null
-          : Element.fromJson(json['_type'] as Map<String, dynamic>),
       period: json['period'] == null
           ? null
           : Period.fromJson(json['period'] as Map<String, dynamic>),
@@ -915,8 +918,6 @@ Map<String, dynamic> _$$_ConsentProvisionToJson(_$_ConsentProvision instance) {
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('type', instance.type?.toJson());
-  writeNotNull('_type', instance.typeElement?.toJson());
   writeNotNull('period', instance.period?.toJson());
   writeNotNull('actor', instance.actor?.map((e) => e.toJson()).toList());
   writeNotNull('action', instance.action?.map((e) => e.toJson()).toList());

@@ -1,7 +1,7 @@
 import 'dart:io';
 
 Future<void> main() async {
-  final dir = Directory('.');
+  final dir = Directory('../lib/r5');
   final fileList =
       await dir.list(recursive: true).map((event) => event.path).toList();
   for (final file in fileList) {
@@ -9,7 +9,7 @@ Future<void> main() async {
     if (!file.contains('freezed') &&
         !file.contains('.g.') &&
         !file.contains('enum') &&
-        !file.contains('comment.dart') &&
+        !file.contains('comments.dart') &&
         file.endsWith('.dart')) {
       final fileString = await File(file).readAsString();
       final stringList = fileString.split('\n');

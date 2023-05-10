@@ -165,9 +165,6 @@ Resource _updateMeta(Resource resource, {FhirMeta? meta}) {
     case R5ResourceType.DiagnosticReport:
       return (resource as DiagnosticReport)
           .copyWith(meta: _updateFhirMetaVersion(meta ?? resource.meta));
-    case R5ResourceType.DocumentManifest:
-      return (resource as DocumentManifest)
-          .copyWith(meta: _updateFhirMetaVersion(meta ?? resource.meta));
     case R5ResourceType.DocumentReference:
       return (resource as DocumentReference)
           .copyWith(meta: _updateFhirMetaVersion(meta ?? resource.meta));
@@ -296,9 +293,6 @@ Resource _updateMeta(Resource resource, {FhirMeta? meta}) {
           .copyWith(meta: _updateFhirMetaVersion(meta ?? resource.meta));
     case R5ResourceType.MedicationRequest:
       return (resource as MedicationRequest)
-          .copyWith(meta: _updateFhirMetaVersion(meta ?? resource.meta));
-    case R5ResourceType.MedicationUsage:
-      return (resource as MedicationUsage)
           .copyWith(meta: _updateFhirMetaVersion(meta ?? resource.meta));
     case R5ResourceType.MedicinalProductDefinition:
       return (resource as MedicinalProductDefinition)

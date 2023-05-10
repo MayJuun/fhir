@@ -203,7 +203,7 @@ class Immunization extends HiveObject with Resource, _$Immunization {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -258,7 +258,7 @@ class Immunization extends HiveObject with Resource, _$Immunization {
 
     /// [status] Indicates the current status of the immunization event.
     @HiveField(12)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -1138,7 +1138,7 @@ class ImmunizationEvaluation extends HiveObject
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -1195,7 +1195,7 @@ class ImmunizationEvaluation extends HiveObject
     /// [status] Indicates the current status of the evaluation of the
     ///  vaccination administration event.
     @HiveField(12)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -1437,7 +1437,7 @@ class ImmunizationRecommendation extends HiveObject
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -1978,7 +1978,7 @@ class Medication extends HiveObject with Resource, _$Medication {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -2041,7 +2041,7 @@ class Medication extends HiveObject with Resource, _$Medication {
 
     /// [status] A code to indicate if the medication is in active use.
     @HiveField(13)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -2529,7 +2529,7 @@ class MedicationAdministration extends HiveObject
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -2607,7 +2607,7 @@ class MedicationAdministration extends HiveObject
     /// possible for an administration to be started but not completed or it may
     ///  be paused while some other process is under way.
     @HiveField(15)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -3207,7 +3207,7 @@ class MedicationDispense extends HiveObject
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -3271,7 +3271,7 @@ class MedicationDispense extends HiveObject
 
     /// [status] A code specifying the state of the set of dispense events.
     @HiveField(13)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -3854,7 +3854,7 @@ class MedicationKnowledge extends HiveObject
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -3915,7 +3915,7 @@ class MedicationKnowledge extends HiveObject
     /// status refers to the validity about the information of the medication and
     ///  not to its medicinal properties.
     @HiveField(12)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -5210,7 +5210,7 @@ class MedicationKnowledgeDrugCharacteristic
     Quantity? valueQuantity,
 
     /// [valueBase64Binary] Description of the characteristic.
-    Base64Binary? valueBase64Binary,
+    FhirBase64Binary? valueBase64Binary,
 
     /// [valueBase64BinaryElement] Extensions for valueBase64Binary
     @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
@@ -6016,7 +6016,7 @@ class MedicationRequest extends HiveObject with Resource, _$MedicationRequest {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -6078,7 +6078,7 @@ class MedicationRequest extends HiveObject with Resource, _$MedicationRequest {
     /// [status] A code specifying the current state of the order.  Generally,
     ///  this will be active or completed state.
     @HiveField(13)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -6092,7 +6092,7 @@ class MedicationRequest extends HiveObject with Resource, _$MedicationRequest {
 
     /// [intent] Whether the request is a proposal, plan, or an original order.
     @HiveField(16)
-        Code? intent,
+        FhirCode? intent,
 
     /// [intentElement] Extensions for intent
     @JsonKey(name: '_intent')
@@ -6108,7 +6108,7 @@ class MedicationRequest extends HiveObject with Resource, _$MedicationRequest {
     /// [priority] Indicates how quickly the Medication Request should be
     ///  addressed with respect to other requests.
     @HiveField(19)
-        Code? priority,
+        FhirCode? priority,
 
     /// [priorityElement] Extensions for priority
     @JsonKey(name: '_priority')
@@ -6908,7 +6908,7 @@ class MedicationStatement extends HiveObject
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -6982,7 +6982,7 @@ class MedicationStatement extends HiveObject
     /// the state of the medication used that this statement is about.  Generally,
     ///  this will be active or completed.
     @HiveField(15)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')

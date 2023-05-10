@@ -242,7 +242,7 @@ class CodeSystem extends HiveObject with Resource, _$CodeSystem {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -351,7 +351,7 @@ class CodeSystem extends HiveObject with Resource, _$CodeSystem {
     /// [status] The date (and optionally time) when the code system resource was
     ///  created or revised.
     @HiveField(20)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -458,7 +458,7 @@ class CodeSystem extends HiveObject with Resource, _$CodeSystem {
     /// [hierarchyMeaning] The meaning of the hierarchy of concepts as
     ///  represented in this resource.
     @HiveField(40)
-        Code? hierarchyMeaning,
+        FhirCode? hierarchyMeaning,
 
     /// [hierarchyMeaningElement] Extensions for hierarchyMeaning
     @JsonKey(name: '_hierarchyMeaning')
@@ -489,7 +489,7 @@ class CodeSystem extends HiveObject with Resource, _$CodeSystem {
     /// [content] The extent of the content of the code system (the concepts and
     ///  codes it defines) are represented in this resource instance.
     @HiveField(46)
-        Code? content,
+        FhirCode? content,
 
     /// [contentElement] Extensions for content
     @JsonKey(name: '_content')
@@ -637,7 +637,7 @@ class CodeSystemFilter with _$CodeSystemFilter {
 
     /// [code] The code that identifies this filter when it is used as a filter
     ///  in [[[ValueSet]]].compose.include.filter.
-    Code? code,
+    FhirCode? code,
 
     /// [codeElement] Extensions for code
     @JsonKey(name: '_code') Element? codeElement,
@@ -779,7 +779,7 @@ class CodeSystemProperty with _$CodeSystemProperty {
     /// [code] A code that is used to identify the property. The code is used
     /// internally (in CodeSystem.concept.property.code) and also externally, such
     ///  as in property filters.
-    Code? code,
+    FhirCode? code,
 
     /// [codeElement] Extensions for code
     @JsonKey(name: '_code') Element? codeElement,
@@ -802,7 +802,7 @@ class CodeSystemProperty with _$CodeSystemProperty {
     /// [type] The type of the property value. Properties of type "code" contain
     /// a code defined by the code system (e.g. a reference to another defined
     ///  concept).
-    Code? type,
+    FhirCode? type,
 
     /// [typeElement] Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
@@ -929,7 +929,7 @@ class CodeSystemConcept with _$CodeSystemConcept {
 
     /// [code] A code - a text symbol - that uniquely identifies the concept
     ///  within the code system.
-    Code? code,
+    FhirCode? code,
 
     /// [codeElement] Extensions for code
     @JsonKey(name: '_code') Element? codeElement,
@@ -1067,7 +1067,7 @@ class CodeSystemDesignation with _$CodeSystemDesignation {
     List<FhirExtension>? modifierExtension,
 
     /// [language] The language this designation is defined for.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -1205,13 +1205,13 @@ class CodeSystemProperty1 with _$CodeSystemProperty1 {
     List<FhirExtension>? modifierExtension,
 
     /// [code] A code that is a reference to CodeSystem.property.code.
-    Code? code,
+    FhirCode? code,
 
     /// [codeElement] Extensions for code
     @JsonKey(name: '_code') Element? codeElement,
 
     /// [valueCode] The value of this property.
-    Code? valueCode,
+    FhirCode? valueCode,
 
     /// [valueCodeElement] Extensions for valueCode
     @JsonKey(name: '_valueCode') Element? valueCodeElement,
@@ -1244,7 +1244,7 @@ class CodeSystemProperty1 with _$CodeSystemProperty1 {
     @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
 
     /// [valueDecimal] The value of this property.
-    Decimal? valueDecimal,
+    FhirDecimal? valueDecimal,
 
     /// [valueDecimalElement] Extensions for valueDecimal
     @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
@@ -1489,7 +1489,7 @@ class ConceptMap extends HiveObject with Resource, _$ConceptMap {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -1597,7 +1597,7 @@ class ConceptMap extends HiveObject with Resource, _$ConceptMap {
     /// [status] The status of this concept map. Enables tracking the life-cycle
     ///  of the content.
     @HiveField(20)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -2003,7 +2003,7 @@ class ConceptMapElement with _$ConceptMapElement {
     List<FhirExtension>? modifierExtension,
 
     /// [code] Identity (code or path) or the element/item being mapped.
-    Code? code,
+    FhirCode? code,
 
     /// [codeElement] Extensions for code
     @JsonKey(name: '_code') Element? codeElement,
@@ -2144,7 +2144,7 @@ class ConceptMapTarget with _$ConceptMapTarget {
 
     /// [code] Identity (code or path) or the element/item that the map refers
     ///  to.
-    Code? code,
+    FhirCode? code,
 
     /// [codeElement] Extensions for code
     @JsonKey(name: '_code') Element? codeElement,
@@ -2159,7 +2159,7 @@ class ConceptMapTarget with _$ConceptMapTarget {
     /// [equivalence] The equivalence between the source and target concepts
     /// (counting for the dependencies and products). The equivalence is read from
     ///  target to source (e.g. the target is 'wider' than the source).
-    Code? equivalence,
+    FhirCode? equivalence,
 
     /// [equivalenceElement] Extensions for equivalence
     @JsonKey(name: '_equivalence') Element? equivalenceElement,
@@ -2447,14 +2447,14 @@ class ConceptMapUnmapped with _$ConceptMapUnmapped {
     /// between versions, and only a few codes have changed), use a fixed code (a
     /// default code), or alternatively, a reference to a different concept map
     ///  can be provided (by canonical URL).
-    Code? mode,
+    FhirCode? mode,
 
     /// [modeElement] Extensions for mode
     @JsonKey(name: '_mode') Element? modeElement,
 
     /// [code] The fixed code to use when the mode = 'fixed'  - all unmapped
     ///  codes are mapped to a single fixed code.
-    Code? code,
+    FhirCode? code,
 
     /// [codeElement] Extensions for code
     @JsonKey(name: '_code') Element? codeElement,
@@ -2662,7 +2662,7 @@ class NamingSystem extends HiveObject with Resource, _$NamingSystem {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -2725,7 +2725,7 @@ class NamingSystem extends HiveObject with Resource, _$NamingSystem {
     /// [status] The status of this naming system. Enables tracking the
     ///  life-cycle of the content.
     @HiveField(13)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -2735,7 +2735,7 @@ class NamingSystem extends HiveObject with Resource, _$NamingSystem {
     /// [kind] Indicates the purpose for the naming system - what kinds of things
     ///  does it make unique?
     @HiveField(15)
-        Code? kind,
+        FhirCode? kind,
 
     /// [kindElement] Extensions for kind
     @JsonKey(name: '_kind')
@@ -2940,7 +2940,7 @@ class NamingSystemUniqueId with _$NamingSystemUniqueId {
 
     /// [type] Identifies the unique identifier scheme used for this particular
     ///  identifier.
-    Code? type,
+    FhirCode? type,
 
     /// [typeElement] Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
@@ -3219,7 +3219,7 @@ class TerminologyCapabilities extends HiveObject
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -3324,7 +3324,7 @@ class TerminologyCapabilities extends HiveObject
     /// [status] The status of this terminology capabilities. Enables tracking
     ///  the life-cycle of the content.
     @HiveField(20)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -3422,7 +3422,7 @@ class TerminologyCapabilities extends HiveObject
     /// instance of software) or a class of implementation (e.g. a desired
     ///  purchase).
     @HiveField(37)
-        Code? kind,
+        FhirCode? kind,
 
     /// [kindElement] Extensions for kind
     @JsonKey(name: '_kind')
@@ -3464,7 +3464,7 @@ class TerminologyCapabilities extends HiveObject
     /// [codeSearch] The degree to which the server supports the code search
     ///  parameter on ValueSet, if it is supported.
     @HiveField(45)
-        Code? codeSearch,
+        FhirCode? codeSearch,
 
     /// [codeSearchElement] Extensions for codeSearch
     @JsonKey(name: '_codeSearch')
@@ -4062,7 +4062,7 @@ class TerminologyCapabilitiesFilter with _$TerminologyCapabilitiesFilter {
     List<FhirExtension>? modifierExtension,
 
     /// [code] Code of the property supported.
-    Code? code,
+    FhirCode? code,
 
     /// [codeElement] Extensions for code
     @JsonKey(name: '_code') Element? codeElement,
@@ -4304,7 +4304,7 @@ class TerminologyCapabilitiesParameter with _$TerminologyCapabilitiesParameter {
     List<FhirExtension>? modifierExtension,
 
     /// [name] Expansion Parameter name.
-    Code? name,
+    FhirCode? name,
 
     /// [nameElement] Extensions for name
     @JsonKey(name: '_name') Element? nameElement,
@@ -4824,7 +4824,7 @@ class ValueSet extends HiveObject with Resource, _$ValueSet {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -4936,7 +4936,7 @@ class ValueSet extends HiveObject with Resource, _$ValueSet {
     /// definition (ValueSet.compose) and the associated ValueSet metadata.
     ///  Expansions do not have a state.
     @HiveField(21)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -5446,7 +5446,7 @@ class ValueSetConcept with _$ValueSetConcept {
     List<FhirExtension>? modifierExtension,
 
     /// [code] Specifies a code for the concept to be included or excluded.
-    Code? code,
+    FhirCode? code,
 
     /// [codeElement] Extensions for code
     @JsonKey(name: '_code') Element? codeElement,
@@ -5569,7 +5569,7 @@ class ValueSetDesignation with _$ValueSetDesignation {
     List<FhirExtension>? modifierExtension,
 
     /// [language] The language this designation is defined for.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
@@ -5697,13 +5697,13 @@ class ValueSetFilter with _$ValueSetFilter {
 
     /// [property] A code that identifies a property or a filter defined in the
     ///  code system.
-    Code? property,
+    FhirCode? property,
 
     /// [propertyElement] Extensions for property
     @JsonKey(name: '_property') Element? propertyElement,
 
     /// [op] The kind of operation to perform as a part of the filter criteria.
-    Code? op,
+    FhirCode? op,
 
     /// [opElement] Extensions for op
     @JsonKey(name: '_op') Element? opElement,
@@ -6044,7 +6044,7 @@ class ValueSetParameter with _$ValueSetParameter {
     @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
 
     /// [valueDecimal] The value of the parameter.
-    Decimal? valueDecimal,
+    FhirDecimal? valueDecimal,
 
     /// [valueDecimalElement] Extensions for valueDecimal
     @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
@@ -6056,7 +6056,7 @@ class ValueSetParameter with _$ValueSetParameter {
     @JsonKey(name: '_valueUri') Element? valueUriElement,
 
     /// [valueCode] The value of the parameter.
-    Code? valueCode,
+    FhirCode? valueCode,
 
     /// [valueCodeElement] Extensions for valueCode
     @JsonKey(name: '_valueCode') Element? valueCodeElement,
@@ -6244,7 +6244,7 @@ class ValueSetContains with _$ValueSetContains {
     /// [code] The code for this item in the expansion hierarchy. If this code is
     /// missing the entry in the hierarchy is a place holder (abstract) and does
     ///  not represent a valid code in the value set.
-    Code? code,
+    FhirCode? code,
 
     /// [codeElement] Extensions for code
     @JsonKey(name: '_code') Element? codeElement,

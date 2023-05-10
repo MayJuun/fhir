@@ -12,7 +12,7 @@ class ObservationUsCore extends Resource {
     FhirMeta? meta,
     Narrative? text,
     List<Identifier>? identifier,
-    Code? status,
+    FhirCode? status,
     List<CodeableConcept>? category,
     required CodeableConcept code,
     Reference? subject,
@@ -589,7 +589,7 @@ class ObservationUsCore extends Resource {
   FhirMeta? get meta => _observation.meta;
   Narrative? get text => _observation.text;
   List<Identifier>? get identifier => _observation.identifier;
-  Code? get status => _observation.status;
+  FhirCode? get status => _observation.status;
   List<CodeableConcept>? get category => _observation.category;
   CodeableConcept get code => _observation.code;
   Reference? get subject => _observation.subject;

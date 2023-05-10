@@ -229,11 +229,11 @@ class CarePlanUsCore extends Resource {
 
   /// [status] Indicates whether the plan is currently being acted upon,
   ///  represents future intentions or is now a historical record.
-  Code? get status => _carePlan.status;
+  FhirCode? get status => _carePlan.status;
 
   /// [intent] Indicates the level of authority/intentionality associated with
   ///  the care plan and where the care plan fits into the workflow chain.
-  Code? get intent => _carePlan.intent;
+  FhirCode? get intent => _carePlan.intent;
 
   /// [category] Identifies what "kind" of plan this is to support
   /// differentiation between multiple co-existing plans; e.g. "Home health",

@@ -69,14 +69,8 @@ _$_Endpoint _$$_EndpointFromJson(Map<String, dynamic> json) => _$_Endpoint(
       period: json['period'] == null
           ? null
           : Period.fromJson(json['period'] as Map<String, dynamic>),
-      payloadType: (json['payloadType'] as List<dynamic>?)
-          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      payloadMimeType: (json['payloadMimeType'] as List<dynamic>?)
-          ?.map(FhirCode.fromJson)
-          .toList(),
-      payloadMimeTypeElement: (json['_payloadMimeType'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+      payload: (json['payload'] as List<dynamic>?)
+          ?.map((e) => EndpointPayload.fromJson(e as Map<String, dynamic>))
           .toList(),
       address:
           json['address'] == null ? null : FhirUrl.fromJson(json['address']),
@@ -129,12 +123,7 @@ Map<String, dynamic> _$$_EndpointToJson(_$_Endpoint instance) {
   writeNotNull('managingOrganization', instance.managingOrganization?.toJson());
   writeNotNull('contact', instance.contact?.map((e) => e.toJson()).toList());
   writeNotNull('period', instance.period?.toJson());
-  writeNotNull(
-      'payloadType', instance.payloadType?.map((e) => e.toJson()).toList());
-  writeNotNull('payloadMimeType',
-      instance.payloadMimeType?.map((e) => e.toJson()).toList());
-  writeNotNull('_payloadMimeType',
-      instance.payloadMimeTypeElement?.map((e) => e.toJson()).toList());
+  writeNotNull('payload', instance.payload?.map((e) => e.toJson()).toList());
   writeNotNull('address', instance.address?.toJson());
   writeNotNull('_address', instance.addressElement?.toJson());
   writeNotNull('header', instance.header);
@@ -301,6 +290,46 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.VisionPrescription: 'VisionPrescription',
 };
 
+_$_EndpointPayload _$$_EndpointPayloadFromJson(Map<String, dynamic> json) =>
+    _$_EndpointPayload(
+      id: json['id'] as String?,
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      type: (json['type'] as List<dynamic>?)
+          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      mimeType:
+          (json['mimeType'] as List<dynamic>?)?.map(FhirCode.fromJson).toList(),
+      mimeTypeElement: (json['_mimeType'] as List<dynamic>?)
+          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
+
+Map<String, dynamic> _$$_EndpointPayloadToJson(_$_EndpointPayload instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
+  writeNotNull('type', instance.type?.map((e) => e.toJson()).toList());
+  writeNotNull('mimeType', instance.mimeType?.map((e) => e.toJson()).toList());
+  writeNotNull(
+      '_mimeType', instance.mimeTypeElement?.map((e) => e.toJson()).toList());
+  return val;
+}
+
 _$_HealthcareService _$$_HealthcareServiceFromJson(Map<String, dynamic> json) =>
     _$_HealthcareService(
       resourceType: $enumDecodeNullable(
@@ -364,7 +393,9 @@ _$_HealthcareService _$$_HealthcareServiceFromJson(Map<String, dynamic> json) =>
       nameElement: json['_name'] == null
           ? null
           : Element.fromJson(json['_name'] as Map<String, dynamic>),
-      comment: json['comment'] as String?,
+      comment: json['comment'] == null
+          ? null
+          : FhirMarkdown.fromJson(json['comment']),
       commentElement: json['_comment'] == null
           ? null
           : Element.fromJson(json['_comment'] as Map<String, dynamic>),
@@ -457,7 +488,7 @@ Map<String, dynamic> _$$_HealthcareServiceToJson(
   writeNotNull('location', instance.location?.map((e) => e.toJson()).toList());
   writeNotNull('name', instance.name);
   writeNotNull('_name', instance.nameElement?.toJson());
-  writeNotNull('comment', instance.comment);
+  writeNotNull('comment', instance.comment?.toJson());
   writeNotNull('_comment', instance.commentElement?.toJson());
   writeNotNull('extraDetails', instance.extraDetails?.toJson());
   writeNotNull('_extraDetails', instance.extraDetailsElement?.toJson());
@@ -578,7 +609,9 @@ _$_Location _$$_LocationFromJson(Map<String, dynamic> json) => _$_Location(
       aliasElement: (json['_alias'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
           .toList(),
-      description: json['description'] as String?,
+      description: json['description'] == null
+          ? null
+          : FhirMarkdown.fromJson(json['description']),
       descriptionElement: json['_description'] == null
           ? null
           : Element.fromJson(json['_description'] as Map<String, dynamic>),
@@ -657,7 +690,7 @@ Map<String, dynamic> _$$_LocationToJson(_$_Location instance) {
   writeNotNull('alias', instance.alias);
   writeNotNull(
       '_alias', instance.aliasElement?.map((e) => e.toJson()).toList());
-  writeNotNull('description', instance.description);
+  writeNotNull('description', instance.description?.toJson());
   writeNotNull('_description', instance.descriptionElement?.toJson());
   writeNotNull('mode', instance.mode?.toJson());
   writeNotNull('_mode', instance.modeElement?.toJson());
@@ -783,7 +816,9 @@ _$_Organization _$$_OrganizationFromJson(Map<String, dynamic> json) =>
       aliasElement: (json['_alias'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
           .toList(),
-      description: json['description'] as String?,
+      description: json['description'] == null
+          ? null
+          : FhirMarkdown.fromJson(json['description']),
       descriptionElement: json['_description'] == null
           ? null
           : Element.fromJson(json['_description'] as Map<String, dynamic>),
@@ -837,7 +872,7 @@ Map<String, dynamic> _$$_OrganizationToJson(_$_Organization instance) {
   writeNotNull('alias', instance.alias);
   writeNotNull(
       '_alias', instance.aliasElement?.map((e) => e.toJson()).toList());
-  writeNotNull('description', instance.description);
+  writeNotNull('description', instance.description?.toJson());
   writeNotNull('_description', instance.descriptionElement?.toJson());
   writeNotNull('contact', instance.contact?.map((e) => e.toJson()).toList());
   writeNotNull('partOf', instance.partOf?.toJson());

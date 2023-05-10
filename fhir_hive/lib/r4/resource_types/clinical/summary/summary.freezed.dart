@@ -33,7 +33,7 @@ mixin _$AdverseEvent {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @HiveField(6)
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
@@ -50,7 +50,7 @@ mixin _$AdverseEvent {
   @HiveField(11)
   Identifier? get identifier => throw _privateConstructorUsedError;
   @HiveField(12)
-  Code? get actuality => throw _privateConstructorUsedError;
+  FhirCode? get actuality => throw _privateConstructorUsedError;
   @HiveField(13)
   @JsonKey(name: '_actuality')
   Element? get actualityElement => throw _privateConstructorUsedError;
@@ -128,7 +128,7 @@ abstract class $AdverseEventCopyWith<$Res> {
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @HiveField(6)
       @JsonKey(name: '_language')
           Element? languageElement,
@@ -144,7 +144,7 @@ abstract class $AdverseEventCopyWith<$Res> {
       @HiveField(11)
           Identifier? identifier,
       @HiveField(12)
-          Code? actuality,
+          FhirCode? actuality,
       @HiveField(13)
       @JsonKey(name: '_actuality')
           Element? actualityElement,
@@ -629,7 +629,7 @@ abstract class _$$_AdverseEventCopyWith<$Res>
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @HiveField(6)
       @JsonKey(name: '_language')
           Element? languageElement,
@@ -645,7 +645,7 @@ abstract class _$$_AdverseEventCopyWith<$Res>
       @HiveField(11)
           Identifier? identifier,
       @HiveField(12)
-          Code? actuality,
+          FhirCode? actuality,
       @HiveField(13)
       @JsonKey(name: '_actuality')
           Element? actualityElement,
@@ -1450,7 +1450,7 @@ abstract class _AdverseEvent extends AdverseEvent {
   Element? get implicitRulesElement;
   @override
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
   @HiveField(6)
   @JsonKey(name: '_language')
@@ -1473,7 +1473,7 @@ abstract class _AdverseEvent extends AdverseEvent {
   Identifier? get identifier;
   @override
   @HiveField(12)
-  Code? get actuality;
+  FhirCode? get actuality;
   @override
   @HiveField(13)
   @JsonKey(name: '_actuality')
@@ -2243,7 +2243,7 @@ mixin _$AllergyIntolerance {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @HiveField(6)
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
@@ -2264,7 +2264,7 @@ mixin _$AllergyIntolerance {
   @HiveField(13)
   CodeableConcept? get verificationStatus => throw _privateConstructorUsedError;
   @HiveField(14)
-  Code? get type => throw _privateConstructorUsedError;
+  FhirCode? get type => throw _privateConstructorUsedError;
   @HiveField(15)
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
@@ -2274,7 +2274,7 @@ mixin _$AllergyIntolerance {
   @JsonKey(name: '_category')
   List<Element?>? get categoryElement => throw _privateConstructorUsedError;
   @HiveField(18)
-  Code? get criticality => throw _privateConstructorUsedError;
+  FhirCode? get criticality => throw _privateConstructorUsedError;
   @HiveField(19)
   @JsonKey(name: '_criticality')
   Element? get criticalityElement => throw _privateConstructorUsedError;
@@ -2346,7 +2346,7 @@ abstract class $AllergyIntoleranceCopyWith<$Res> {
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @HiveField(6)
       @JsonKey(name: '_language')
           Element? languageElement,
@@ -2366,7 +2366,7 @@ abstract class $AllergyIntoleranceCopyWith<$Res> {
       @HiveField(13)
           CodeableConcept? verificationStatus,
       @HiveField(14)
-          Code? type,
+          FhirCode? type,
       @HiveField(15)
       @JsonKey(name: '_type')
           Element? typeElement,
@@ -2376,7 +2376,7 @@ abstract class $AllergyIntoleranceCopyWith<$Res> {
       @JsonKey(name: '_category')
           List<Element?>? categoryElement,
       @HiveField(18)
-          Code? criticality,
+          FhirCode? criticality,
       @HiveField(19)
       @JsonKey(name: '_criticality')
           Element? criticalityElement,
@@ -2910,7 +2910,7 @@ abstract class _$$_AllergyIntoleranceCopyWith<$Res>
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @HiveField(6)
       @JsonKey(name: '_language')
           Element? languageElement,
@@ -2930,7 +2930,7 @@ abstract class _$$_AllergyIntoleranceCopyWith<$Res>
       @HiveField(13)
           CodeableConcept? verificationStatus,
       @HiveField(14)
-          Code? type,
+          FhirCode? type,
       @HiveField(15)
       @JsonKey(name: '_type')
           Element? typeElement,
@@ -2940,7 +2940,7 @@ abstract class _$$_AllergyIntoleranceCopyWith<$Res>
       @JsonKey(name: '_category')
           List<Element?>? categoryElement,
       @HiveField(18)
-          Code? criticality,
+          FhirCode? criticality,
       @HiveField(19)
       @JsonKey(name: '_criticality')
           Element? criticalityElement,
@@ -3781,7 +3781,7 @@ abstract class _AllergyIntolerance extends AllergyIntolerance {
   Element? get implicitRulesElement;
   @override
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
   @HiveField(6)
   @JsonKey(name: '_language')
@@ -3810,7 +3810,7 @@ abstract class _AllergyIntolerance extends AllergyIntolerance {
   CodeableConcept? get verificationStatus;
   @override
   @HiveField(14)
-  Code? get type;
+  FhirCode? get type;
   @override
   @HiveField(15)
   @JsonKey(name: '_type')
@@ -3824,7 +3824,7 @@ abstract class _AllergyIntolerance extends AllergyIntolerance {
   List<Element?>? get categoryElement;
   @override
   @HiveField(18)
-  Code? get criticality;
+  FhirCode? get criticality;
   @override
   @HiveField(19)
   @JsonKey(name: '_criticality')
@@ -3913,7 +3913,7 @@ mixin _$AllergyIntoleranceReaction {
   FhirDateTime? get onset => throw _privateConstructorUsedError;
   @JsonKey(name: '_onset')
   Element? get onsetElement => throw _privateConstructorUsedError;
-  Code? get severity => throw _privateConstructorUsedError;
+  FhirCode? get severity => throw _privateConstructorUsedError;
   @JsonKey(name: '_severity')
   Element? get severityElement => throw _privateConstructorUsedError;
   CodeableConcept? get exposureRoute => throw _privateConstructorUsedError;
@@ -3942,7 +3942,7 @@ abstract class $AllergyIntoleranceReactionCopyWith<$Res> {
       @JsonKey(name: '_description') Element? descriptionElement,
       FhirDateTime? onset,
       @JsonKey(name: '_onset') Element? onsetElement,
-      Code? severity,
+      FhirCode? severity,
       @JsonKey(name: '_severity') Element? severityElement,
       CodeableConcept? exposureRoute,
       List<Annotation>? note});
@@ -4118,7 +4118,7 @@ abstract class _$$_AllergyIntoleranceReactionCopyWith<$Res>
       @JsonKey(name: '_description') Element? descriptionElement,
       FhirDateTime? onset,
       @JsonKey(name: '_onset') Element? onsetElement,
-      Code? severity,
+      FhirCode? severity,
       @JsonKey(name: '_severity') Element? severityElement,
       CodeableConcept? exposureRoute,
       List<Annotation>? note});
@@ -4416,7 +4416,7 @@ abstract class _AllergyIntoleranceReaction extends AllergyIntoleranceReaction {
   @JsonKey(name: '_onset')
   Element? get onsetElement;
   @override
-  Code? get severity;
+  FhirCode? get severity;
   @override
   @JsonKey(name: '_severity')
   Element? get severityElement;
@@ -4449,7 +4449,7 @@ mixin _$ClinicalImpression {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @HiveField(6)
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
@@ -4466,7 +4466,7 @@ mixin _$ClinicalImpression {
   @HiveField(11)
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @HiveField(12)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
   @HiveField(13)
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -4553,7 +4553,7 @@ abstract class $ClinicalImpressionCopyWith<$Res> {
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @HiveField(6)
       @JsonKey(name: '_language')
           Element? languageElement,
@@ -4569,7 +4569,7 @@ abstract class $ClinicalImpressionCopyWith<$Res> {
       @HiveField(11)
           List<Identifier>? identifier,
       @HiveField(12)
-          Code? status,
+          FhirCode? status,
       @HiveField(13)
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -5064,7 +5064,7 @@ abstract class _$$_ClinicalImpressionCopyWith<$Res>
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @HiveField(6)
       @JsonKey(name: '_language')
           Element? languageElement,
@@ -5080,7 +5080,7 @@ abstract class _$$_ClinicalImpressionCopyWith<$Res>
       @HiveField(11)
           List<Identifier>? identifier,
       @HiveField(12)
-          Code? status,
+          FhirCode? status,
       @HiveField(13)
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -5967,7 +5967,7 @@ abstract class _ClinicalImpression extends ClinicalImpression {
   Element? get implicitRulesElement;
   @override
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
   @HiveField(6)
   @JsonKey(name: '_language')
@@ -5990,7 +5990,7 @@ abstract class _ClinicalImpression extends ClinicalImpression {
   List<Identifier>? get identifier;
   @override
   @HiveField(12)
-  Code? get status;
+  FhirCode? get status;
   @override
   @HiveField(13)
   @JsonKey(name: '_status')
@@ -6740,7 +6740,7 @@ mixin _$Condition {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @HiveField(6)
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
@@ -6845,7 +6845,7 @@ abstract class $ConditionCopyWith<$Res> {
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @HiveField(6)
       @JsonKey(name: '_language')
           Element? languageElement,
@@ -7466,7 +7466,7 @@ abstract class _$$_ConditionCopyWith<$Res> implements $ConditionCopyWith<$Res> {
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @HiveField(6)
       @JsonKey(name: '_language')
           Element? languageElement,
@@ -8393,7 +8393,7 @@ abstract class _Condition extends Condition {
   Element? get implicitRulesElement;
   @override
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
   @HiveField(6)
   @JsonKey(name: '_language')
@@ -9146,7 +9146,7 @@ mixin _$DetectedIssue {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @HiveField(6)
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
@@ -9163,14 +9163,14 @@ mixin _$DetectedIssue {
   @HiveField(11)
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @HiveField(12)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
   @HiveField(13)
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   @HiveField(14)
   CodeableConcept? get code => throw _privateConstructorUsedError;
   @HiveField(15)
-  Code? get severity => throw _privateConstructorUsedError;
+  FhirCode? get severity => throw _privateConstructorUsedError;
   @HiveField(16)
   @JsonKey(name: '_severity')
   Element? get severityElement => throw _privateConstructorUsedError;
@@ -9230,7 +9230,7 @@ abstract class $DetectedIssueCopyWith<$Res> {
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @HiveField(6)
       @JsonKey(name: '_language')
           Element? languageElement,
@@ -9246,14 +9246,14 @@ abstract class $DetectedIssueCopyWith<$Res> {
       @HiveField(11)
           List<Identifier>? identifier,
       @HiveField(12)
-          Code? status,
+          FhirCode? status,
       @HiveField(13)
       @JsonKey(name: '_status')
           Element? statusElement,
       @HiveField(14)
           CodeableConcept? code,
       @HiveField(15)
-          Code? severity,
+          FhirCode? severity,
       @HiveField(16)
       @JsonKey(name: '_severity')
           Element? severityElement,
@@ -9642,7 +9642,7 @@ abstract class _$$_DetectedIssueCopyWith<$Res>
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @HiveField(6)
       @JsonKey(name: '_language')
           Element? languageElement,
@@ -9658,14 +9658,14 @@ abstract class _$$_DetectedIssueCopyWith<$Res>
       @HiveField(11)
           List<Identifier>? identifier,
       @HiveField(12)
-          Code? status,
+          FhirCode? status,
       @HiveField(13)
       @JsonKey(name: '_status')
           Element? statusElement,
       @HiveField(14)
           CodeableConcept? code,
       @HiveField(15)
-          Code? severity,
+          FhirCode? severity,
       @HiveField(16)
       @JsonKey(name: '_severity')
           Element? severityElement,
@@ -10328,7 +10328,7 @@ abstract class _DetectedIssue extends DetectedIssue {
   Element? get implicitRulesElement;
   @override
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
   @HiveField(6)
   @JsonKey(name: '_language')
@@ -10351,7 +10351,7 @@ abstract class _DetectedIssue extends DetectedIssue {
   List<Identifier>? get identifier;
   @override
   @HiveField(12)
-  Code? get status;
+  FhirCode? get status;
   @override
   @HiveField(13)
   @JsonKey(name: '_status')
@@ -10361,7 +10361,7 @@ abstract class _DetectedIssue extends DetectedIssue {
   CodeableConcept? get code;
   @override
   @HiveField(15)
-  Code? get severity;
+  FhirCode? get severity;
   @override
   @HiveField(16)
   @JsonKey(name: '_severity')
@@ -11078,7 +11078,7 @@ mixin _$FamilyMemberHistory {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @HiveField(6)
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
@@ -11104,7 +11104,7 @@ mixin _$FamilyMemberHistory {
   List<Element?>? get instantiatesUriElement =>
       throw _privateConstructorUsedError;
   @HiveField(15)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
   @HiveField(16)
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -11207,7 +11207,7 @@ abstract class $FamilyMemberHistoryCopyWith<$Res> {
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @HiveField(6)
       @JsonKey(name: '_language')
           Element? languageElement,
@@ -11230,7 +11230,7 @@ abstract class $FamilyMemberHistoryCopyWith<$Res> {
       @JsonKey(name: '_instantiatesUri')
           List<Element?>? instantiatesUriElement,
       @HiveField(15)
-          Code? status,
+          FhirCode? status,
       @HiveField(16)
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -11880,7 +11880,7 @@ abstract class _$$_FamilyMemberHistoryCopyWith<$Res>
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @HiveField(6)
       @JsonKey(name: '_language')
           Element? languageElement,
@@ -11903,7 +11903,7 @@ abstract class _$$_FamilyMemberHistoryCopyWith<$Res>
       @JsonKey(name: '_instantiatesUri')
           List<Element?>? instantiatesUriElement,
       @HiveField(15)
-          Code? status,
+          FhirCode? status,
       @HiveField(16)
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -12971,7 +12971,7 @@ abstract class _FamilyMemberHistory extends FamilyMemberHistory {
   Element? get implicitRulesElement;
   @override
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
   @HiveField(6)
   @JsonKey(name: '_language')
@@ -13004,7 +13004,7 @@ abstract class _FamilyMemberHistory extends FamilyMemberHistory {
   List<Element?>? get instantiatesUriElement;
   @override
   @HiveField(15)
-  Code? get status;
+  FhirCode? get status;
   @override
   @HiveField(16)
   @JsonKey(name: '_status')
@@ -13795,7 +13795,7 @@ mixin _$Procedure {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @HiveField(6)
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
@@ -13825,7 +13825,7 @@ mixin _$Procedure {
   @HiveField(16)
   List<Reference>? get partOf => throw _privateConstructorUsedError;
   @HiveField(17)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
   @HiveField(18)
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -13914,7 +13914,7 @@ abstract class $ProcedureCopyWith<$Res> {
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @HiveField(6)
       @JsonKey(name: '_language')
           Element? languageElement,
@@ -13941,7 +13941,7 @@ abstract class $ProcedureCopyWith<$Res> {
       @HiveField(16)
           List<Reference>? partOf,
       @HiveField(17)
-          Code? status,
+          FhirCode? status,
       @HiveField(18)
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -14524,7 +14524,7 @@ abstract class _$$_ProcedureCopyWith<$Res> implements $ProcedureCopyWith<$Res> {
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @HiveField(6)
       @JsonKey(name: '_language')
           Element? languageElement,
@@ -14551,7 +14551,7 @@ abstract class _$$_ProcedureCopyWith<$Res> implements $ProcedureCopyWith<$Res> {
       @HiveField(16)
           List<Reference>? partOf,
       @HiveField(17)
-          Code? status,
+          FhirCode? status,
       @HiveField(18)
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -15648,7 +15648,7 @@ abstract class _Procedure extends Procedure {
   Element? get implicitRulesElement;
   @override
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
   @HiveField(6)
   @JsonKey(name: '_language')
@@ -15687,7 +15687,7 @@ abstract class _Procedure extends Procedure {
   List<Reference>? get partOf;
   @override
   @HiveField(17)
-  Code? get status;
+  FhirCode? get status;
   @override
   @HiveField(18)
   @JsonKey(name: '_status')

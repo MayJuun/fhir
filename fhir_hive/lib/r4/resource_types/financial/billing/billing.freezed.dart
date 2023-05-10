@@ -49,7 +49,7 @@ mixin _$Claim {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -105,7 +105,7 @@ mixin _$Claim {
 
   /// [status] The status of the resource instance.
   @HiveField(12)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -127,7 +127,7 @@ mixin _$Claim {
   /// the non-binding adjudication of the listed products and services which
   ///  could be provided in the future.
   @HiveField(17)
-  Code? get use => throw _privateConstructorUsedError;
+  FhirCode? get use => throw _privateConstructorUsedError;
 
   /// [useElement] Extensions for use
   @JsonKey(name: '_use')
@@ -264,7 +264,7 @@ abstract class $ClaimCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -280,7 +280,7 @@ abstract class $ClaimCopyWith<$Res> {
       @HiveField(11)
           List<Identifier>? identifier,
       @HiveField(12)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(13)
           Element? statusElement,
@@ -290,7 +290,7 @@ abstract class $ClaimCopyWith<$Res> {
       @HiveField(16)
           CodeableConcept? subType,
       @HiveField(17)
-          Code? use,
+          FhirCode? use,
       @JsonKey(name: '_use')
       @HiveField(18)
           Element? useElement,
@@ -874,7 +874,7 @@ abstract class _$$_ClaimCopyWith<$Res> implements $ClaimCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -890,7 +890,7 @@ abstract class _$$_ClaimCopyWith<$Res> implements $ClaimCopyWith<$Res> {
       @HiveField(11)
           List<Identifier>? identifier,
       @HiveField(12)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(13)
           Element? statusElement,
@@ -900,7 +900,7 @@ abstract class _$$_ClaimCopyWith<$Res> implements $ClaimCopyWith<$Res> {
       @HiveField(16)
           CodeableConcept? subType,
       @HiveField(17)
-          Code? use,
+          FhirCode? use,
       @JsonKey(name: '_use')
       @HiveField(18)
           Element? useElement,
@@ -1991,7 +1991,7 @@ abstract class _Claim extends Claim {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -2053,7 +2053,7 @@ abstract class _Claim extends Claim {
 
   /// [status] The status of the resource instance.
   @HiveField(12)
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -2079,7 +2079,7 @@ abstract class _Claim extends Claim {
   /// the non-binding adjudication of the listed products and services which
   ///  could be provided in the future.
   @HiveField(17)
-  Code? get use;
+  FhirCode? get use;
   @override
 
   /// [useElement] Extensions for use
@@ -7313,7 +7313,7 @@ mixin _$ClaimItem {
   /// the overall value of services delivered and/or goods received. The concept
   /// of a Factor allows for a discount or surcharge multiplier to be applied to
   ///  a monetary amount.
-  Decimal? get factor => throw _privateConstructorUsedError;
+  FhirDecimal? get factor => throw _privateConstructorUsedError;
 
   /// [factorElement] Extensions for factor
   @JsonKey(name: '_factor')
@@ -7386,7 +7386,7 @@ abstract class $ClaimItemCopyWith<$Res> {
       Reference? locationReference,
       Quantity? quantity,
       Money? unitPrice,
-      Decimal? factor,
+      FhirDecimal? factor,
       @JsonKey(name: '_factor')
           Element? factorElement,
       Money? net,
@@ -7807,7 +7807,7 @@ abstract class _$$_ClaimItemCopyWith<$Res> implements $ClaimItemCopyWith<$Res> {
       Reference? locationReference,
       Quantity? quantity,
       Money? unitPrice,
-      Decimal? factor,
+      FhirDecimal? factor,
       @JsonKey(name: '_factor')
           Element? factorElement,
       Money? net,
@@ -8762,7 +8762,7 @@ abstract class _ClaimItem extends ClaimItem {
   /// the overall value of services delivered and/or goods received. The concept
   /// of a Factor allows for a discount or surcharge multiplier to be applied to
   ///  a monetary amount.
-  Decimal? get factor;
+  FhirDecimal? get factor;
   @override
 
   /// [factorElement] Extensions for factor
@@ -8876,7 +8876,7 @@ mixin _$ClaimDetail {
   /// the overall value of services delivered and/or goods received. The concept
   /// of a Factor allows for a discount or surcharge multiplier to be applied to
   ///  a monetary amount.
-  Decimal? get factor => throw _privateConstructorUsedError;
+  FhirDecimal? get factor => throw _privateConstructorUsedError;
 
   /// [factorElement] Extensions for factor
   @JsonKey(name: '_factor')
@@ -8918,7 +8918,7 @@ abstract class $ClaimDetailCopyWith<$Res> {
       List<CodeableConcept>? programCode,
       Quantity? quantity,
       Money? unitPrice,
-      Decimal? factor,
+      FhirDecimal? factor,
       @JsonKey(name: '_factor') Element? factorElement,
       Money? net,
       List<Reference>? udi,
@@ -9151,7 +9151,7 @@ abstract class _$$_ClaimDetailCopyWith<$Res>
       List<CodeableConcept>? programCode,
       Quantity? quantity,
       Money? unitPrice,
-      Decimal? factor,
+      FhirDecimal? factor,
       @JsonKey(name: '_factor') Element? factorElement,
       Money? net,
       List<Reference>? udi,
@@ -9665,7 +9665,7 @@ abstract class _ClaimDetail extends ClaimDetail {
   /// the overall value of services delivered and/or goods received. The concept
   /// of a Factor allows for a discount or surcharge multiplier to be applied to
   ///  a monetary amount.
-  Decimal? get factor;
+  FhirDecimal? get factor;
   @override
 
   /// [factorElement] Extensions for factor
@@ -9765,7 +9765,7 @@ mixin _$ClaimSubDetail {
   /// the overall value of services delivered and/or goods received. The concept
   /// of a Factor allows for a discount or surcharge multiplier to be applied to
   ///  a monetary amount.
-  Decimal? get factor => throw _privateConstructorUsedError;
+  FhirDecimal? get factor => throw _privateConstructorUsedError;
 
   /// [factorElement] Extensions for factor
   @JsonKey(name: '_factor')
@@ -9803,7 +9803,7 @@ abstract class $ClaimSubDetailCopyWith<$Res> {
       List<CodeableConcept>? programCode,
       Quantity? quantity,
       Money? unitPrice,
-      Decimal? factor,
+      FhirDecimal? factor,
       @JsonKey(name: '_factor') Element? factorElement,
       Money? net,
       List<Reference>? udi});
@@ -10030,7 +10030,7 @@ abstract class _$$_ClaimSubDetailCopyWith<$Res>
       List<CodeableConcept>? programCode,
       Quantity? quantity,
       Money? unitPrice,
-      Decimal? factor,
+      FhirDecimal? factor,
       @JsonKey(name: '_factor') Element? factorElement,
       Money? net,
       List<Reference>? udi});
@@ -10517,7 +10517,7 @@ abstract class _ClaimSubDetail extends ClaimSubDetail {
   /// the overall value of services delivered and/or goods received. The concept
   /// of a Factor allows for a discount or surcharge multiplier to be applied to
   ///  a monetary amount.
-  Decimal? get factor;
+  FhirDecimal? get factor;
   @override
 
   /// [factorElement] Extensions for factor
@@ -10573,7 +10573,7 @@ mixin _$ClaimResponse {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -10629,7 +10629,7 @@ mixin _$ClaimResponse {
 
   /// [status] The status of the resource instance.
   @HiveField(12)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -10654,7 +10654,7 @@ mixin _$ClaimResponse {
   /// the non-binding adjudication of the listed products and services which
   ///  could be provided in the future.
   @HiveField(16)
-  Code? get use => throw _privateConstructorUsedError;
+  FhirCode? get use => throw _privateConstructorUsedError;
 
   /// [useElement] Extensions for use
   @JsonKey(name: '_use')
@@ -10691,7 +10691,7 @@ mixin _$ClaimResponse {
   /// [outcome] The outcome of the claim, predetermination, or preauthorization
   ///  processing.
   @HiveField(25)
-  Code? get outcome => throw _privateConstructorUsedError;
+  FhirCode? get outcome => throw _privateConstructorUsedError;
 
   /// [outcomeElement] Extensions for outcome
   @JsonKey(name: '_outcome')
@@ -10813,7 +10813,7 @@ abstract class $ClaimResponseCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -10829,7 +10829,7 @@ abstract class $ClaimResponseCopyWith<$Res> {
       @HiveField(11)
           List<Identifier>? identifier,
       @HiveField(12)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(13)
           Element? statusElement,
@@ -10838,7 +10838,7 @@ abstract class $ClaimResponseCopyWith<$Res> {
       @HiveField(15)
           CodeableConcept? subType,
       @HiveField(16)
-          Code? use,
+          FhirCode? use,
       @JsonKey(name: '_use')
       @HiveField(17)
           Element? useElement,
@@ -10857,7 +10857,7 @@ abstract class $ClaimResponseCopyWith<$Res> {
       @HiveField(24)
           Reference? request,
       @HiveField(25)
-          Code? outcome,
+          FhirCode? outcome,
       @JsonKey(name: '_outcome')
       @HiveField(26)
           Element? outcomeElement,
@@ -11437,7 +11437,7 @@ abstract class _$$_ClaimResponseCopyWith<$Res>
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -11453,7 +11453,7 @@ abstract class _$$_ClaimResponseCopyWith<$Res>
       @HiveField(11)
           List<Identifier>? identifier,
       @HiveField(12)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(13)
           Element? statusElement,
@@ -11462,7 +11462,7 @@ abstract class _$$_ClaimResponseCopyWith<$Res>
       @HiveField(15)
           CodeableConcept? subType,
       @HiveField(16)
-          Code? use,
+          FhirCode? use,
       @JsonKey(name: '_use')
       @HiveField(17)
           Element? useElement,
@@ -11481,7 +11481,7 @@ abstract class _$$_ClaimResponseCopyWith<$Res>
       @HiveField(24)
           Reference? request,
       @HiveField(25)
-          Code? outcome,
+          FhirCode? outcome,
       @JsonKey(name: '_outcome')
       @HiveField(26)
           Element? outcomeElement,
@@ -12633,7 +12633,7 @@ abstract class _ClaimResponse extends ClaimResponse {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -12695,7 +12695,7 @@ abstract class _ClaimResponse extends ClaimResponse {
 
   /// [status] The status of the resource instance.
   @HiveField(12)
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -12724,7 +12724,7 @@ abstract class _ClaimResponse extends ClaimResponse {
   /// the non-binding adjudication of the listed products and services which
   ///  could be provided in the future.
   @HiveField(16)
-  Code? get use;
+  FhirCode? get use;
   @override
 
   /// [useElement] Extensions for use
@@ -12769,7 +12769,7 @@ abstract class _ClaimResponse extends ClaimResponse {
   /// [outcome] The outcome of the claim, predetermination, or preauthorization
   ///  processing.
   @HiveField(25)
-  Code? get outcome;
+  FhirCode? get outcome;
   @override
 
   /// [outcomeElement] Extensions for outcome
@@ -13484,7 +13484,7 @@ mixin _$ClaimResponseAdjudication {
 
   /// [value] A non-monetary value associated with the category. Mutually
   ///  exclusive to the amount element above.
-  Decimal? get value => throw _privateConstructorUsedError;
+  FhirDecimal? get value => throw _privateConstructorUsedError;
 
   /// [valueElement] Extensions for value
   @JsonKey(name: '_value')
@@ -13509,7 +13509,7 @@ abstract class $ClaimResponseAdjudicationCopyWith<$Res> {
       CodeableConcept category,
       CodeableConcept? reason,
       Money? amount,
-      Decimal? value,
+      FhirDecimal? value,
       @JsonKey(name: '_value') Element? valueElement});
 
   $CodeableConceptCopyWith<$Res> get category;
@@ -13638,7 +13638,7 @@ abstract class _$$_ClaimResponseAdjudicationCopyWith<$Res>
       CodeableConcept category,
       CodeableConcept? reason,
       Money? amount,
-      Decimal? value,
+      FhirDecimal? value,
       @JsonKey(name: '_value') Element? valueElement});
 
   @override
@@ -13943,7 +13943,7 @@ abstract class _ClaimResponseAdjudication extends ClaimResponseAdjudication {
 
   /// [value] A non-monetary value associated with the category. Mutually
   ///  exclusive to the amount element above.
-  Decimal? get value;
+  FhirDecimal? get value;
   @override
 
   /// [valueElement] Extensions for value
@@ -15114,7 +15114,7 @@ mixin _$ClaimResponseAddItem {
   /// the overall value of services delivered and/or goods received. The concept
   /// of a Factor allows for a discount or surcharge multiplier to be applied to
   ///  a monetary amount.
-  Decimal? get factor => throw _privateConstructorUsedError;
+  FhirDecimal? get factor => throw _privateConstructorUsedError;
 
   /// [factorElement] Extensions for factor
   @JsonKey(name: '_factor')
@@ -15185,7 +15185,7 @@ abstract class $ClaimResponseAddItemCopyWith<$Res> {
       Reference? locationReference,
       Quantity? quantity,
       Money? unitPrice,
-      Decimal? factor,
+      FhirDecimal? factor,
       @JsonKey(name: '_factor')
           Element? factorElement,
       Money? net,
@@ -15544,7 +15544,7 @@ abstract class _$$_ClaimResponseAddItemCopyWith<$Res>
       Reference? locationReference,
       Quantity? quantity,
       Money? unitPrice,
-      Decimal? factor,
+      FhirDecimal? factor,
       @JsonKey(name: '_factor')
           Element? factorElement,
       Money? net,
@@ -16423,7 +16423,7 @@ abstract class _ClaimResponseAddItem extends ClaimResponseAddItem {
   /// the overall value of services delivered and/or goods received. The concept
   /// of a Factor allows for a discount or surcharge multiplier to be applied to
   ///  a monetary amount.
-  Decimal? get factor;
+  FhirDecimal? get factor;
   @override
 
   /// [factorElement] Extensions for factor
@@ -16523,7 +16523,7 @@ mixin _$ClaimResponseDetail1 {
   /// the overall value of services delivered and/or goods received. The concept
   /// of a Factor allows for a discount or surcharge multiplier to be applied to
   ///  a monetary amount.
-  Decimal? get factor => throw _privateConstructorUsedError;
+  FhirDecimal? get factor => throw _privateConstructorUsedError;
 
   /// [factorElement] Extensions for factor
   @JsonKey(name: '_factor')
@@ -16570,7 +16570,7 @@ abstract class $ClaimResponseDetail1CopyWith<$Res> {
       List<CodeableConcept>? modifier,
       Quantity? quantity,
       Money? unitPrice,
-      Decimal? factor,
+      FhirDecimal? factor,
       @JsonKey(name: '_factor') Element? factorElement,
       Money? net,
       List<FhirPositiveInt>? noteNumber,
@@ -16747,7 +16747,7 @@ abstract class _$$_ClaimResponseDetail1CopyWith<$Res>
       List<CodeableConcept>? modifier,
       Quantity? quantity,
       Money? unitPrice,
-      Decimal? factor,
+      FhirDecimal? factor,
       @JsonKey(name: '_factor') Element? factorElement,
       Money? net,
       List<FhirPositiveInt>? noteNumber,
@@ -17205,7 +17205,7 @@ abstract class _ClaimResponseDetail1 extends ClaimResponseDetail1 {
   /// the overall value of services delivered and/or goods received. The concept
   /// of a Factor allows for a discount or surcharge multiplier to be applied to
   ///  a monetary amount.
-  Decimal? get factor;
+  FhirDecimal? get factor;
   @override
 
   /// [factorElement] Extensions for factor
@@ -17298,7 +17298,7 @@ mixin _$ClaimResponseSubDetail1 {
   /// the overall value of services delivered and/or goods received. The concept
   /// of a Factor allows for a discount or surcharge multiplier to be applied to
   ///  a monetary amount.
-  Decimal? get factor => throw _privateConstructorUsedError;
+  FhirDecimal? get factor => throw _privateConstructorUsedError;
 
   /// [factorElement] Extensions for factor
   @JsonKey(name: '_factor')
@@ -17340,7 +17340,7 @@ abstract class $ClaimResponseSubDetail1CopyWith<$Res> {
       List<CodeableConcept>? modifier,
       Quantity? quantity,
       Money? unitPrice,
-      Decimal? factor,
+      FhirDecimal? factor,
       @JsonKey(name: '_factor') Element? factorElement,
       Money? net,
       List<FhirPositiveInt>? noteNumber,
@@ -17511,7 +17511,7 @@ abstract class _$$_ClaimResponseSubDetail1CopyWith<$Res>
       List<CodeableConcept>? modifier,
       Quantity? quantity,
       Money? unitPrice,
-      Decimal? factor,
+      FhirDecimal? factor,
       @JsonKey(name: '_factor') Element? factorElement,
       Money? net,
       List<FhirPositiveInt>? noteNumber,
@@ -17944,7 +17944,7 @@ abstract class _ClaimResponseSubDetail1 extends ClaimResponseSubDetail1 {
   /// the overall value of services delivered and/or goods received. The concept
   /// of a Factor allows for a discount or surcharge multiplier to be applied to
   ///  a monetary amount.
-  Decimal? get factor;
+  FhirDecimal? get factor;
   @override
 
   /// [factorElement] Extensions for factor
@@ -19002,7 +19002,7 @@ mixin _$ClaimResponseProcessNote {
   Element? get numberElement => throw _privateConstructorUsedError;
 
   /// [type] The business purpose of the note text.
-  Code? get type => throw _privateConstructorUsedError;
+  FhirCode? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
@@ -19036,7 +19036,7 @@ abstract class $ClaimResponseProcessNoteCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       FhirPositiveInt? number,
       @JsonKey(name: '_number') Element? numberElement,
-      Code? type,
+      FhirCode? type,
       @JsonKey(name: '_type') Element? typeElement,
       String? text,
       @JsonKey(name: '_text') Element? textElement,
@@ -19181,7 +19181,7 @@ abstract class _$$_ClaimResponseProcessNoteCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       FhirPositiveInt? number,
       @JsonKey(name: '_number') Element? numberElement,
-      Code? type,
+      FhirCode? type,
       @JsonKey(name: '_type') Element? typeElement,
       String? text,
       @JsonKey(name: '_text') Element? textElement,
@@ -19502,7 +19502,7 @@ abstract class _ClaimResponseProcessNote extends ClaimResponseProcessNote {
   @override
 
   /// [type] The business purpose of the note text.
-  Code? get type;
+  FhirCode? get type;
   @override
 
   /// [typeElement] Extensions for type
@@ -20795,7 +20795,7 @@ mixin _$Invoice {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -20852,7 +20852,7 @@ mixin _$Invoice {
 
   /// [status] The current state of the Invoice.
   @HiveField(12)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -20969,7 +20969,7 @@ abstract class $InvoiceCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -20985,7 +20985,7 @@ abstract class $InvoiceCopyWith<$Res> {
       @HiveField(11)
           List<Identifier>? identifier,
       @HiveField(12)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(13)
           Element? statusElement,
@@ -21419,7 +21419,7 @@ abstract class _$$_InvoiceCopyWith<$Res> implements $InvoiceCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -21435,7 +21435,7 @@ abstract class _$$_InvoiceCopyWith<$Res> implements $InvoiceCopyWith<$Res> {
       @HiveField(11)
           List<Identifier>? identifier,
       @HiveField(12)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(13)
           Element? statusElement,
@@ -22303,7 +22303,7 @@ abstract class _Invoice extends Invoice {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -22366,7 +22366,7 @@ abstract class _Invoice extends Invoice {
 
   /// [status] The current state of the Invoice.
   @HiveField(12)
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -23451,7 +23451,7 @@ mixin _$InvoicePriceComponent {
       throw _privateConstructorUsedError;
 
   /// [type] This code identifies the type of the component.
-  Code? get type => throw _privateConstructorUsedError;
+  FhirCode? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
@@ -23463,7 +23463,7 @@ mixin _$InvoicePriceComponent {
 
   /// [factor] The factor that has been applied on the base price for
   ///  calculating this component.
-  Decimal? get factor => throw _privateConstructorUsedError;
+  FhirDecimal? get factor => throw _privateConstructorUsedError;
 
   /// [factorElement] Extensions for factor
   @JsonKey(name: '_factor')
@@ -23488,10 +23488,10 @@ abstract class $InvoicePriceComponentCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? type,
+      FhirCode? type,
       @JsonKey(name: '_type') Element? typeElement,
       CodeableConcept? code,
-      Decimal? factor,
+      FhirDecimal? factor,
       @JsonKey(name: '_factor') Element? factorElement,
       Money? amount});
 
@@ -23626,10 +23626,10 @@ abstract class _$$_InvoicePriceComponentCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? type,
+      FhirCode? type,
       @JsonKey(name: '_type') Element? typeElement,
       CodeableConcept? code,
-      Decimal? factor,
+      FhirDecimal? factor,
       @JsonKey(name: '_factor') Element? factorElement,
       Money? amount});
 
@@ -23924,7 +23924,7 @@ abstract class _InvoicePriceComponent extends InvoicePriceComponent {
   @override
 
   /// [type] This code identifies the type of the component.
-  Code? get type;
+  FhirCode? get type;
   @override
 
   /// [typeElement] Extensions for type
@@ -23939,7 +23939,7 @@ abstract class _InvoicePriceComponent extends InvoicePriceComponent {
 
   /// [factor] The factor that has been applied on the base price for
   ///  calculating this component.
-  Decimal? get factor;
+  FhirDecimal? get factor;
   @override
 
   /// [factorElement] Extensions for factor

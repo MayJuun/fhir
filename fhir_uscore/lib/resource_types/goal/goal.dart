@@ -54,7 +54,7 @@ class GoalUsCore extends Resource {
   String? get id => _goal.id;
   FhirMeta? get meta => _goal.meta;
   Narrative? get text => _goal.text;
-  Code? get lifecycleStatus => _goal.lifecycleStatus;
+  FhirCode? get lifecycleStatus => _goal.lifecycleStatus;
   CodeableConcept? get achievementStatus => _goal.achievementStatus;
   CodeableConcept get description => _goal.description;
   Reference get subject => _goal.subject;

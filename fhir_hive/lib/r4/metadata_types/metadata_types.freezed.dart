@@ -775,7 +775,7 @@ mixin _$DataRequirement {
   /// [type] The type of the required data, specified as the type name of a
   /// resource. For profiles, this value is set to the type of the base resource
   ///  of the profile.
-  Code? get type => throw _privateConstructorUsedError;
+  FhirCode? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
@@ -849,7 +849,7 @@ abstract class $DataRequirementCopyWith<$Res> {
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      Code? type,
+      FhirCode? type,
       @JsonKey(name: '_type') Element? typeElement,
       List<FhirCanonical>? profile,
       CodeableConcept? subjectCodeableConcept,
@@ -1017,7 +1017,7 @@ abstract class _$$_DataRequirementCopyWith<$Res>
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      Code? type,
+      FhirCode? type,
       @JsonKey(name: '_type') Element? typeElement,
       List<FhirCanonical>? profile,
       CodeableConcept? subjectCodeableConcept,
@@ -1436,7 +1436,7 @@ abstract class _DataRequirement extends DataRequirement {
   /// [type] The type of the required data, specified as the type name of a
   /// resource. For profiles, this value is set to the type of the base resource
   ///  of the profile.
-  Code? get type;
+  FhirCode? get type;
   @override
 
   /// [typeElement] Extensions for type
@@ -3264,14 +3264,14 @@ mixin _$ParameterDefinition {
 
   /// [name] The name of the parameter used to allow access to the value of the
   ///  parameter in evaluation contexts.
-  Code? get name => throw _privateConstructorUsedError;
+  FhirCode? get name => throw _privateConstructorUsedError;
 
   /// [nameElement] Extensions for name
   @JsonKey(name: '_name')
   Element? get nameElement => throw _privateConstructorUsedError;
 
   /// [use] Whether the parameter is input or output for the module.
-  Code? get use => throw _privateConstructorUsedError;
+  FhirCode? get use => throw _privateConstructorUsedError;
 
   /// [useElement] Extensions for use
   @JsonKey(name: '_use')
@@ -3302,7 +3302,7 @@ mixin _$ParameterDefinition {
   Element? get documentationElement => throw _privateConstructorUsedError;
 
   /// [type] The type of the parameter.
-  Code? get type => throw _privateConstructorUsedError;
+  FhirCode? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
@@ -3327,9 +3327,9 @@ abstract class $ParameterDefinitionCopyWith<$Res> {
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      Code? name,
+      FhirCode? name,
       @JsonKey(name: '_name') Element? nameElement,
-      Code? use,
+      FhirCode? use,
       @JsonKey(name: '_use') Element? useElement,
       Integer? min,
       @JsonKey(name: '_min') Element? minElement,
@@ -3337,7 +3337,7 @@ abstract class $ParameterDefinitionCopyWith<$Res> {
       @JsonKey(name: '_max') Element? maxElement,
       String? documentation,
       @JsonKey(name: '_documentation') Element? documentationElement,
-      Code? type,
+      FhirCode? type,
       @JsonKey(name: '_type') Element? typeElement,
       Canonical? profile});
 
@@ -3526,9 +3526,9 @@ abstract class _$$_ParameterDefinitionCopyWith<$Res>
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      Code? name,
+      FhirCode? name,
       @JsonKey(name: '_name') Element? nameElement,
-      Code? use,
+      FhirCode? use,
       @JsonKey(name: '_use') Element? useElement,
       Integer? min,
       @JsonKey(name: '_min') Element? minElement,
@@ -3536,7 +3536,7 @@ abstract class _$$_ParameterDefinitionCopyWith<$Res>
       @JsonKey(name: '_max') Element? maxElement,
       String? documentation,
       @JsonKey(name: '_documentation') Element? documentationElement,
-      Code? type,
+      FhirCode? type,
       @JsonKey(name: '_type') Element? typeElement,
       Canonical? profile});
 
@@ -3874,7 +3874,7 @@ abstract class _ParameterDefinition extends ParameterDefinition {
 
   /// [name] The name of the parameter used to allow access to the value of the
   ///  parameter in evaluation contexts.
-  Code? get name;
+  FhirCode? get name;
   @override
 
   /// [nameElement] Extensions for name
@@ -3883,7 +3883,7 @@ abstract class _ParameterDefinition extends ParameterDefinition {
   @override
 
   /// [use] Whether the parameter is input or output for the module.
-  Code? get use;
+  FhirCode? get use;
   @override
 
   /// [useElement] Extensions for use
@@ -3922,7 +3922,7 @@ abstract class _ParameterDefinition extends ParameterDefinition {
   @override
 
   /// [type] The type of the parameter.
-  Code? get type;
+  FhirCode? get type;
   @override
 
   /// [typeElement] Extensions for type

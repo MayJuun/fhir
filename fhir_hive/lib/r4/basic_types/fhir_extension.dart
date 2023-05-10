@@ -275,7 +275,7 @@ class FhirExtension with _$FhirExtension {
 
     /// [valueBase64Binary] Value of extension - must be one of a constrained set
     ///  of the data types (see [Extensibility](extensibility.html) for a list).
-    Base64Binary? valueBase64Binary,
+    FhirBase64Binary? valueBase64Binary,
 
     /// [valueBase64BinaryElement] Extensions for valueBase64Binary
 
@@ -298,7 +298,7 @@ class FhirExtension with _$FhirExtension {
 
     /// [valueCode] Value of extension - must be one of a constrained set of the
     ///  data types (see [Extensibility](extensibility.html) for a list).
-    Code? valueCode,
+    FhirCode? valueCode,
 
     /// [valueCodeElement] Extensions for valueCode
     @JsonKey(name: '_valueCode') Element? valueCodeElement,
@@ -320,7 +320,7 @@ class FhirExtension with _$FhirExtension {
 
     /// [valueDecimal] Value of extension - must be one of a constrained set of
     ///  the data types (see [Extensibility](extensibility.html) for a list).
-    Decimal? valueDecimal,
+    FhirDecimal? valueDecimal,
 
     /// [valueDecimalElement] Extensions for valueDecimal
     @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,

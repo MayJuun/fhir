@@ -49,7 +49,7 @@ mixin _$Communication {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -134,7 +134,7 @@ mixin _$Communication {
 
   /// [status] The status of the transmission.
   @HiveField(20)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -152,7 +152,7 @@ mixin _$Communication {
   /// [priority] Characterizes how quickly the planned or in progress
   @HiveField(25)
   @HiveField(26)
-  Code? get priority => throw _privateConstructorUsedError;
+  FhirCode? get priority => throw _privateConstructorUsedError;
 
   /// [priorityElement] Extensions for priority
   @JsonKey(name: '_priority')
@@ -259,7 +259,7 @@ abstract class $CommunicationCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -290,7 +290,7 @@ abstract class $CommunicationCopyWith<$Res> {
       @HiveField(19)
           List<Reference>? inResponseTo,
       @HiveField(20)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(21)
           Element? statusElement,
@@ -301,7 +301,7 @@ abstract class $CommunicationCopyWith<$Res> {
           List<CodeableConcept>? category,
       @HiveField(25)
       @HiveField(26)
-          Code? priority,
+          FhirCode? priority,
       @JsonKey(name: '_priority')
       @HiveField(27)
           Element? priorityElement,
@@ -746,7 +746,7 @@ abstract class _$$_CommunicationCopyWith<$Res>
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -777,7 +777,7 @@ abstract class _$$_CommunicationCopyWith<$Res>
       @HiveField(19)
           List<Reference>? inResponseTo,
       @HiveField(20)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(21)
           Element? statusElement,
@@ -788,7 +788,7 @@ abstract class _$$_CommunicationCopyWith<$Res>
           List<CodeableConcept>? category,
       @HiveField(25)
       @HiveField(26)
-          Code? priority,
+          FhirCode? priority,
       @JsonKey(name: '_priority')
       @HiveField(27)
           Element? priorityElement,
@@ -1896,7 +1896,7 @@ abstract class _Communication extends Communication {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -1991,7 +1991,7 @@ abstract class _Communication extends Communication {
 
   /// [status] The status of the transmission.
   @HiveField(20)
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -2013,7 +2013,7 @@ abstract class _Communication extends Communication {
   /// [priority] Characterizes how quickly the planned or in progress
   @HiveField(25)
   @HiveField(26)
-  Code? get priority;
+  FhirCode? get priority;
   @override
 
   /// [priorityElement] Extensions for priority
@@ -2623,7 +2623,7 @@ mixin _$CommunicationRequest {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -2697,7 +2697,7 @@ mixin _$CommunicationRequest {
 
   /// [status] The status of the proposal or order.
   @HiveField(15)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -2715,7 +2715,7 @@ mixin _$CommunicationRequest {
   /// [priority] Characterizes how quickly the proposed act must be initiated.
   ///  Includes concepts such as stat, urgent, routine.
   @HiveField(20)
-  Code? get priority => throw _privateConstructorUsedError;
+  FhirCode? get priority => throw _privateConstructorUsedError;
 
   /// [priorityElement] Extensions for priority
   @JsonKey(name: '_priority')
@@ -2834,7 +2834,7 @@ abstract class $CommunicationRequestCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -2856,7 +2856,7 @@ abstract class $CommunicationRequestCopyWith<$Res> {
       @HiveField(14)
           Identifier? groupIdentifier,
       @HiveField(15)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(16)
           Element? statusElement,
@@ -2866,7 +2866,7 @@ abstract class $CommunicationRequestCopyWith<$Res> {
       @HiveField(19)
           List<CodeableConcept>? category,
       @HiveField(20)
-          Code? priority,
+          FhirCode? priority,
       @JsonKey(name: '_priority')
       @HiveField(21)
           Element? priorityElement,
@@ -3359,7 +3359,7 @@ abstract class _$$_CommunicationRequestCopyWith<$Res>
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -3381,7 +3381,7 @@ abstract class _$$_CommunicationRequestCopyWith<$Res>
       @HiveField(14)
           Identifier? groupIdentifier,
       @HiveField(15)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(16)
           Element? statusElement,
@@ -3391,7 +3391,7 @@ abstract class _$$_CommunicationRequestCopyWith<$Res>
       @HiveField(19)
           List<CodeableConcept>? category,
       @HiveField(20)
-          Code? priority,
+          FhirCode? priority,
       @JsonKey(name: '_priority')
       @HiveField(21)
           Element? priorityElement,
@@ -4470,7 +4470,7 @@ abstract class _CommunicationRequest extends CommunicationRequest {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -4553,7 +4553,7 @@ abstract class _CommunicationRequest extends CommunicationRequest {
 
   /// [status] The status of the proposal or order.
   @HiveField(15)
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -4575,7 +4575,7 @@ abstract class _CommunicationRequest extends CommunicationRequest {
   /// [priority] Characterizes how quickly the proposed act must be initiated.
   ///  Includes concepts such as stat, urgent, routine.
   @HiveField(20)
-  Code? get priority;
+  FhirCode? get priority;
   @override
 
   /// [priorityElement] Extensions for priority
@@ -5206,7 +5206,7 @@ mixin _$DeviceRequest {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -5289,7 +5289,7 @@ mixin _$DeviceRequest {
 
   /// [status] The status of the request.
   @HiveField(20)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -5299,7 +5299,7 @@ mixin _$DeviceRequest {
   /// [intent] Whether the request is a proposal, plan, an original order or a
   ///  reflex order.
   @HiveField(22)
-  Code? get intent => throw _privateConstructorUsedError;
+  FhirCode? get intent => throw _privateConstructorUsedError;
 
   /// [intentElement] Extensions for intent
   @JsonKey(name: '_intent')
@@ -5309,7 +5309,7 @@ mixin _$DeviceRequest {
   /// [priority] Indicates how quickly the {{title}} should be addressed with
   ///  respect to other requests.
   @HiveField(24)
-  Code? get priority => throw _privateConstructorUsedError;
+  FhirCode? get priority => throw _privateConstructorUsedError;
 
   /// [priorityElement] Extensions for priority
   @JsonKey(name: '_priority')
@@ -5446,7 +5446,7 @@ abstract class $DeviceRequestCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -5477,17 +5477,17 @@ abstract class $DeviceRequestCopyWith<$Res> {
       @HiveField(19)
           Identifier? groupIdentifier,
       @HiveField(20)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(21)
           Element? statusElement,
       @HiveField(22)
-          Code? intent,
+          FhirCode? intent,
       @JsonKey(name: '_intent')
       @HiveField(23)
           Element? intentElement,
       @HiveField(24)
-          Code? priority,
+          FhirCode? priority,
       @JsonKey(name: '_priority')
       @HiveField(25)
           Element? priorityElement,
@@ -6040,7 +6040,7 @@ abstract class _$$_DeviceRequestCopyWith<$Res>
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -6071,17 +6071,17 @@ abstract class _$$_DeviceRequestCopyWith<$Res>
       @HiveField(19)
           Identifier? groupIdentifier,
       @HiveField(20)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(21)
           Element? statusElement,
       @HiveField(22)
-          Code? intent,
+          FhirCode? intent,
       @JsonKey(name: '_intent')
       @HiveField(23)
           Element? intentElement,
       @HiveField(24)
-          Code? priority,
+          FhirCode? priority,
       @JsonKey(name: '_priority')
       @HiveField(25)
           Element? priorityElement,
@@ -7287,7 +7287,7 @@ abstract class _DeviceRequest extends DeviceRequest {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -7380,7 +7380,7 @@ abstract class _DeviceRequest extends DeviceRequest {
 
   /// [status] The status of the request.
   @HiveField(20)
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -7392,7 +7392,7 @@ abstract class _DeviceRequest extends DeviceRequest {
   /// [intent] Whether the request is a proposal, plan, an original order or a
   ///  reflex order.
   @HiveField(22)
-  Code? get intent;
+  FhirCode? get intent;
   @override
 
   /// [intentElement] Extensions for intent
@@ -7404,7 +7404,7 @@ abstract class _DeviceRequest extends DeviceRequest {
   /// [priority] Indicates how quickly the {{title}} should be addressed with
   ///  respect to other requests.
   @HiveField(24)
-  Code? get priority;
+  FhirCode? get priority;
   @override
 
   /// [priorityElement] Extensions for priority
@@ -8128,7 +8128,7 @@ mixin _$DeviceUseStatement {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -8191,7 +8191,7 @@ mixin _$DeviceUseStatement {
   /// the state of the device used that this statement is about.  Generally this
   ///  will be active or completed.
   @HiveField(13)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -8289,7 +8289,7 @@ abstract class $DeviceUseStatementCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -8307,7 +8307,7 @@ abstract class $DeviceUseStatementCopyWith<$Res> {
       @HiveField(12)
           List<Reference>? basedOn,
       @HiveField(13)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(14)
           Element? statusElement,
@@ -8691,7 +8691,7 @@ abstract class _$$_DeviceUseStatementCopyWith<$Res>
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -8709,7 +8709,7 @@ abstract class _$$_DeviceUseStatementCopyWith<$Res>
       @HiveField(12)
           List<Reference>? basedOn,
       @HiveField(13)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(14)
           Element? statusElement,
@@ -9537,7 +9537,7 @@ abstract class _DeviceUseStatement extends DeviceUseStatement {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -9607,7 +9607,7 @@ abstract class _DeviceUseStatement extends DeviceUseStatement {
   /// the state of the device used that this statement is about.  Generally this
   ///  will be active or completed.
   @HiveField(13)
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -9734,7 +9734,7 @@ mixin _$GuidanceResponse {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -9832,7 +9832,7 @@ mixin _$GuidanceResponse {
   /// will be data-requested, and the response will contain a description of the
   ///  additional requested information.
   @HiveField(18)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -9934,7 +9934,7 @@ abstract class $GuidanceResponseCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -9964,7 +9964,7 @@ abstract class $GuidanceResponseCopyWith<$Res> {
       @HiveField(17)
           CodeableConcept? moduleCodeableConcept,
       @HiveField(18)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(19)
           Element? statusElement,
@@ -10393,7 +10393,7 @@ abstract class _$$_GuidanceResponseCopyWith<$Res>
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -10423,7 +10423,7 @@ abstract class _$$_GuidanceResponseCopyWith<$Res>
       @HiveField(17)
           CodeableConcept? moduleCodeableConcept,
       @HiveField(18)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(19)
           Element? statusElement,
@@ -11337,7 +11337,7 @@ abstract class _GuidanceResponse extends GuidanceResponse {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -11446,7 +11446,7 @@ abstract class _GuidanceResponse extends GuidanceResponse {
   /// will be data-requested, and the response will contain a description of the
   ///  additional requested information.
   @HiveField(18)
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -11574,7 +11574,7 @@ mixin _$SupplyDelivery {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -11641,7 +11641,7 @@ mixin _$SupplyDelivery {
 
   /// [status] A code specifying the state of the dispense event.
   @HiveField(14)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -11718,7 +11718,7 @@ abstract class $SupplyDeliveryCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -11738,7 +11738,7 @@ abstract class $SupplyDeliveryCopyWith<$Res> {
       @HiveField(13)
           List<Reference>? partOf,
       @HiveField(14)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(15)
           Element? statusElement,
@@ -12109,7 +12109,7 @@ abstract class _$$_SupplyDeliveryCopyWith<$Res>
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -12129,7 +12129,7 @@ abstract class _$$_SupplyDeliveryCopyWith<$Res>
       @HiveField(13)
           List<Reference>? partOf,
       @HiveField(14)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(15)
           Element? statusElement,
@@ -12871,7 +12871,7 @@ abstract class _SupplyDelivery extends SupplyDelivery {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -12946,7 +12946,7 @@ abstract class _SupplyDelivery extends SupplyDelivery {
 
   /// [status] A code specifying the state of the dispense event.
   @HiveField(14)
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -13501,7 +13501,7 @@ mixin _$SupplyRequest {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -13559,7 +13559,7 @@ mixin _$SupplyRequest {
 
   /// [status] Status of the supply request.
   @HiveField(12)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -13574,7 +13574,7 @@ mixin _$SupplyRequest {
   /// [priority] Indicates how quickly this SupplyRequest should be addressed
   ///  with respect to other requests.
   @HiveField(15)
-  Code? get priority => throw _privateConstructorUsedError;
+  FhirCode? get priority => throw _privateConstructorUsedError;
 
   /// [priorityElement] Extensions for priority
   @JsonKey(name: '_priority')
@@ -13680,7 +13680,7 @@ abstract class $SupplyRequestCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -13696,14 +13696,14 @@ abstract class $SupplyRequestCopyWith<$Res> {
       @HiveField(11)
           List<Identifier>? identifier,
       @HiveField(12)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(13)
           Element? statusElement,
       @HiveField(14)
           CodeableConcept? category,
       @HiveField(15)
-          Code? priority,
+          FhirCode? priority,
       @JsonKey(name: '_priority')
       @HiveField(16)
           Element? priorityElement,
@@ -14167,7 +14167,7 @@ abstract class _$$_SupplyRequestCopyWith<$Res>
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -14183,14 +14183,14 @@ abstract class _$$_SupplyRequestCopyWith<$Res>
       @HiveField(11)
           List<Identifier>? identifier,
       @HiveField(12)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(13)
           Element? statusElement,
       @HiveField(14)
           CodeableConcept? category,
       @HiveField(15)
-          Code? priority,
+          FhirCode? priority,
       @JsonKey(name: '_priority')
       @HiveField(16)
           Element? priorityElement,
@@ -15090,7 +15090,7 @@ abstract class _SupplyRequest extends SupplyRequest {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -15154,7 +15154,7 @@ abstract class _SupplyRequest extends SupplyRequest {
 
   /// [status] Status of the supply request.
   @HiveField(12)
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -15172,7 +15172,7 @@ abstract class _SupplyRequest extends SupplyRequest {
   /// [priority] Indicates how quickly this SupplyRequest should be addressed
   ///  with respect to other requests.
   @HiveField(15)
-  Code? get priority;
+  FhirCode? get priority;
   @override
 
   /// [priorityElement] Extensions for priority

@@ -270,7 +270,7 @@ class DataRequirement with _$DataRequirement {
     /// resource. For profiles, this value is set to the type of the base resource
     ///  of the profile.
 
-    Code? type,
+    FhirCode? type,
 
     /// [typeElement] Extensions for type
 
@@ -925,13 +925,13 @@ class ParameterDefinition with _$ParameterDefinition {
 
     /// [name] The name of the parameter used to allow access to the value of the
     ///  parameter in evaluation contexts.
-    Code? name,
+    FhirCode? name,
 
     /// [nameElement] Extensions for name
     @JsonKey(name: '_name') Element? nameElement,
 
     /// [use] Whether the parameter is input or output for the module.
-    Code? use,
+    FhirCode? use,
 
     /// [useElement] Extensions for use
     @JsonKey(name: '_use') Element? useElement,
@@ -959,7 +959,7 @@ class ParameterDefinition with _$ParameterDefinition {
     @JsonKey(name: '_documentation') Element? documentationElement,
 
     /// [type] The type of the parameter.
-    Code? type,
+    FhirCode? type,
 
     /// [typeElement] Extensions for type
     @JsonKey(name: '_type') Element? typeElement,

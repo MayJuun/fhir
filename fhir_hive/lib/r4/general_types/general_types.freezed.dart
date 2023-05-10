@@ -513,7 +513,7 @@ mixin _$Attachment {
   /// [contentType] Identifies the type of the data in the attachment and
   /// allows a method to be chosen to interpret or render the data. Includes
   ///  mime type parameters such as charset where appropriate.
-  Code? get contentType => throw _privateConstructorUsedError;
+  FhirCode? get contentType => throw _privateConstructorUsedError;
 
   /// [contentTypeElement] Extensions for contentType
   @JsonKey(name: '_contentType')
@@ -521,7 +521,7 @@ mixin _$Attachment {
 
   /// [language] The human language of the content. The value can be any valid
   ///  value according to BCP 47.
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -529,7 +529,7 @@ mixin _$Attachment {
 
   /// [data] The actual data of the attachment - a sequence of bytes, base64
   ///  encoded.
-  Base64Binary? get data => throw _privateConstructorUsedError;
+  FhirBase64Binary? get data => throw _privateConstructorUsedError;
 
   /// [dataElement] Extensions for data
   @JsonKey(name: '_data')
@@ -552,7 +552,7 @@ mixin _$Attachment {
 
   /// [hash] The calculated hash of the data using SHA-1. Represented using
   ///  base64.
-  Base64Binary? get hash => throw _privateConstructorUsedError;
+  FhirBase64Binary? get hash => throw _privateConstructorUsedError;
 
   /// [hashElement] Extensions for hash
   @JsonKey(name: '_hash')
@@ -587,17 +587,17 @@ abstract class $AttachmentCopyWith<$Res> {
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      Code? contentType,
+      FhirCode? contentType,
       @JsonKey(name: '_contentType') Element? contentTypeElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language') Element? languageElement,
-      Base64Binary? data,
+      FhirBase64Binary? data,
       @JsonKey(name: '_data') Element? dataElement,
       FhirUrl? url,
       @JsonKey(name: '_url') Element? urlElement,
       FhirUnsignedInt? size,
       @JsonKey(name: '_size') Element? sizeElement,
-      Base64Binary? hash,
+      FhirBase64Binary? hash,
       @JsonKey(name: '_hash') Element? hashElement,
       String? title,
       @JsonKey(name: '_title') Element? titleElement,
@@ -830,17 +830,17 @@ abstract class _$$_AttachmentCopyWith<$Res>
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      Code? contentType,
+      FhirCode? contentType,
       @JsonKey(name: '_contentType') Element? contentTypeElement,
-      Code? language,
+      FhirCode? language,
       @JsonKey(name: '_language') Element? languageElement,
-      Base64Binary? data,
+      FhirBase64Binary? data,
       @JsonKey(name: '_data') Element? dataElement,
       FhirUrl? url,
       @JsonKey(name: '_url') Element? urlElement,
       FhirUnsignedInt? size,
       @JsonKey(name: '_size') Element? sizeElement,
-      Base64Binary? hash,
+      FhirBase64Binary? hash,
       @JsonKey(name: '_hash') Element? hashElement,
       String? title,
       @JsonKey(name: '_title') Element? titleElement,
@@ -1232,7 +1232,7 @@ abstract class _Attachment extends Attachment {
   /// [contentType] Identifies the type of the data in the attachment and
   /// allows a method to be chosen to interpret or render the data. Includes
   ///  mime type parameters such as charset where appropriate.
-  Code? get contentType;
+  FhirCode? get contentType;
   @override
 
   /// [contentTypeElement] Extensions for contentType
@@ -1242,7 +1242,7 @@ abstract class _Attachment extends Attachment {
 
   /// [language] The human language of the content. The value can be any valid
   ///  value according to BCP 47.
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -1252,7 +1252,7 @@ abstract class _Attachment extends Attachment {
 
   /// [data] The actual data of the attachment - a sequence of bytes, base64
   ///  encoded.
-  Base64Binary? get data;
+  FhirBase64Binary? get data;
   @override
 
   /// [dataElement] Extensions for data
@@ -1281,7 +1281,7 @@ abstract class _Attachment extends Attachment {
 
   /// [hash] The calculated hash of the data using SHA-1. Represented using
   ///  base64.
-  Base64Binary? get hash;
+  FhirBase64Binary? get hash;
   @override
 
   /// [hashElement] Extensions for hash
@@ -2260,7 +2260,7 @@ mixin _$Coding {
   /// [code] A symbol in syntax defined by the system. The symbol may be a
   /// predefined code or an expression in a syntax defined by the coding system
   ///  (e.g. post-coordination).
-  Code? get code => throw _privateConstructorUsedError;
+  FhirCode? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] Extensions for code
   @JsonKey(name: '_code')
@@ -2299,7 +2299,7 @@ abstract class $CodingCopyWith<$Res> {
       @JsonKey(name: '_system') Element? systemElement,
       String? version,
       @JsonKey(name: '_version') Element? versionElement,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement,
       String? display,
       @JsonKey(name: '_display') Element? displayElement,
@@ -2465,7 +2465,7 @@ abstract class _$$_CodingCopyWith<$Res> implements $CodingCopyWith<$Res> {
       @JsonKey(name: '_system') Element? systemElement,
       String? version,
       @JsonKey(name: '_version') Element? versionElement,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement,
       String? display,
       @JsonKey(name: '_display') Element? displayElement,
@@ -2791,7 +2791,7 @@ abstract class _Coding extends Coding {
   /// [code] A symbol in syntax defined by the system. The symbol may be a
   /// predefined code or an expression in a syntax defined by the coding system
   ///  (e.g. post-coordination).
-  Code? get code;
+  FhirCode? get code;
   @override
 
   /// [codeElement] Extensions for code
@@ -2844,7 +2844,7 @@ mixin _$Quantity {
 
   /// [value] The value of the measured amount. The value includes an implicit
   ///  precision in the presentation of the value.
-  Decimal? get value => throw _privateConstructorUsedError;
+  FhirDecimal? get value => throw _privateConstructorUsedError;
 
   /// [valueElement] Extensions for value
   @JsonKey(name: '_value')
@@ -2873,7 +2873,7 @@ mixin _$Quantity {
 
   /// [code] A computer processable form of the unit in some unit
   ///  representation system.
-  Code? get code => throw _privateConstructorUsedError;
+  FhirCode? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] Extensions for code
   @JsonKey(name: '_code')
@@ -2894,7 +2894,7 @@ abstract class $QuantityCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
-      Decimal? value,
+      FhirDecimal? value,
       @JsonKey(name: '_value')
           Element? valueElement,
       @JsonKey(unknownEnumValue: QuantityComparator.unknown)
@@ -2907,7 +2907,7 @@ abstract class $QuantityCopyWith<$Res> {
       FhirUri? system,
       @JsonKey(name: '_system')
           Element? systemElement,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code')
           Element? codeElement});
 
@@ -3068,7 +3068,7 @@ abstract class _$$_QuantityCopyWith<$Res> implements $QuantityCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
-      Decimal? value,
+      FhirDecimal? value,
       @JsonKey(name: '_value')
           Element? valueElement,
       @JsonKey(unknownEnumValue: QuantityComparator.unknown)
@@ -3081,7 +3081,7 @@ abstract class _$$_QuantityCopyWith<$Res> implements $QuantityCopyWith<$Res> {
       FhirUri? system,
       @JsonKey(name: '_system')
           Element? systemElement,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code')
           Element? codeElement});
 
@@ -3378,7 +3378,7 @@ abstract class _Quantity extends Quantity {
 
   /// [value] The value of the measured amount. The value includes an implicit
   ///  precision in the presentation of the value.
-  Decimal? get value;
+  FhirDecimal? get value;
   @override
 
   /// [valueElement] Extensions for value
@@ -3415,7 +3415,7 @@ abstract class _Quantity extends Quantity {
 
   /// [code] A computer processable form of the unit in some unit
   ///  representation system.
-  Code? get code;
+  FhirCode? get code;
   @override
 
   /// [codeElement] Extensions for code
@@ -3448,7 +3448,7 @@ mixin _$FhirDuration {
 
   /// [value] The value of the measured amount. The value includes an implicit
   ///  precision in the presentation of the value.
-  Decimal? get value => throw _privateConstructorUsedError;
+  FhirDecimal? get value => throw _privateConstructorUsedError;
 
   /// [valueElement] Extensions for value
   @JsonKey(name: '_value')
@@ -3477,7 +3477,7 @@ mixin _$FhirDuration {
 
   /// [code] A computer processable form of the unit in some unit
   ///  representation system.
-  Code? get code => throw _privateConstructorUsedError;
+  FhirCode? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] Extensions for code
   @JsonKey(name: '_code')
@@ -3499,7 +3499,7 @@ abstract class $FhirDurationCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
-      Decimal? value,
+      FhirDecimal? value,
       @JsonKey(name: '_value')
           Element? valueElement,
       @JsonKey(unknownEnumValue: DurationComparator.unknown)
@@ -3512,7 +3512,7 @@ abstract class $FhirDurationCopyWith<$Res> {
       FhirUri? system,
       @JsonKey(name: '_system')
           Element? systemElement,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code')
           Element? codeElement});
 
@@ -3674,7 +3674,7 @@ abstract class _$$_FhirDurationCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
-      Decimal? value,
+      FhirDecimal? value,
       @JsonKey(name: '_value')
           Element? valueElement,
       @JsonKey(unknownEnumValue: DurationComparator.unknown)
@@ -3687,7 +3687,7 @@ abstract class _$$_FhirDurationCopyWith<$Res>
       FhirUri? system,
       @JsonKey(name: '_system')
           Element? systemElement,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code')
           Element? codeElement});
 
@@ -3985,7 +3985,7 @@ abstract class _FhirDuration extends FhirDuration {
 
   /// [value] The value of the measured amount. The value includes an implicit
   ///  precision in the presentation of the value.
-  Decimal? get value;
+  FhirDecimal? get value;
   @override
 
   /// [valueElement] Extensions for value
@@ -4022,7 +4022,7 @@ abstract class _FhirDuration extends FhirDuration {
 
   /// [code] A computer processable form of the unit in some unit
   ///  representation system.
-  Code? get code;
+  FhirCode? get code;
   @override
 
   /// [codeElement] Extensions for code
@@ -4055,7 +4055,7 @@ mixin _$Distance {
 
   /// [value] The value of the measured amount. The value includes an implicit
   ///  precision in the presentation of the value.
-  Decimal? get value => throw _privateConstructorUsedError;
+  FhirDecimal? get value => throw _privateConstructorUsedError;
 
   /// [valueElement] Extensions for value
   @JsonKey(name: '_value')
@@ -4084,7 +4084,7 @@ mixin _$Distance {
 
   /// [code] A computer processable form of the unit in some unit
   ///  representation system.
-  Code? get code => throw _privateConstructorUsedError;
+  FhirCode? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] Extensions for code
   @JsonKey(name: '_code')
@@ -4105,7 +4105,7 @@ abstract class $DistanceCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
-      Decimal? value,
+      FhirDecimal? value,
       @JsonKey(name: '_value')
           Element? valueElement,
       @JsonKey(unknownEnumValue: DistanceComparator.unknown)
@@ -4118,7 +4118,7 @@ abstract class $DistanceCopyWith<$Res> {
       FhirUri? system,
       @JsonKey(name: '_system')
           Element? systemElement,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code')
           Element? codeElement});
 
@@ -4279,7 +4279,7 @@ abstract class _$$_DistanceCopyWith<$Res> implements $DistanceCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
-      Decimal? value,
+      FhirDecimal? value,
       @JsonKey(name: '_value')
           Element? valueElement,
       @JsonKey(unknownEnumValue: DistanceComparator.unknown)
@@ -4292,7 +4292,7 @@ abstract class _$$_DistanceCopyWith<$Res> implements $DistanceCopyWith<$Res> {
       FhirUri? system,
       @JsonKey(name: '_system')
           Element? systemElement,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code')
           Element? codeElement});
 
@@ -4589,7 +4589,7 @@ abstract class _Distance extends Distance {
 
   /// [value] The value of the measured amount. The value includes an implicit
   ///  precision in the presentation of the value.
-  Decimal? get value;
+  FhirDecimal? get value;
   @override
 
   /// [valueElement] Extensions for value
@@ -4626,7 +4626,7 @@ abstract class _Distance extends Distance {
 
   /// [code] A computer processable form of the unit in some unit
   ///  representation system.
-  Code? get code;
+  FhirCode? get code;
   @override
 
   /// [codeElement] Extensions for code
@@ -4659,7 +4659,7 @@ mixin _$Count {
 
   /// [value] The value of the measured amount. The value includes an implicit
   ///  precision in the presentation of the value.
-  Decimal? get value => throw _privateConstructorUsedError;
+  FhirDecimal? get value => throw _privateConstructorUsedError;
 
   /// [valueElement] Extensions for value
   @JsonKey(name: '_value')
@@ -4688,7 +4688,7 @@ mixin _$Count {
 
   /// [code] A computer processable form of the unit in some unit
   ///  representation system.
-  Code? get code => throw _privateConstructorUsedError;
+  FhirCode? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] Extensions for code
   @JsonKey(name: '_code')
@@ -4708,7 +4708,7 @@ abstract class $CountCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
-      Decimal? value,
+      FhirDecimal? value,
       @JsonKey(name: '_value')
           Element? valueElement,
       @JsonKey(unknownEnumValue: CountComparator.unknown)
@@ -4721,7 +4721,7 @@ abstract class $CountCopyWith<$Res> {
       FhirUri? system,
       @JsonKey(name: '_system')
           Element? systemElement,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code')
           Element? codeElement});
 
@@ -4881,7 +4881,7 @@ abstract class _$$_CountCopyWith<$Res> implements $CountCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
-      Decimal? value,
+      FhirDecimal? value,
       @JsonKey(name: '_value')
           Element? valueElement,
       @JsonKey(unknownEnumValue: CountComparator.unknown)
@@ -4894,7 +4894,7 @@ abstract class _$$_CountCopyWith<$Res> implements $CountCopyWith<$Res> {
       FhirUri? system,
       @JsonKey(name: '_system')
           Element? systemElement,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code')
           Element? codeElement});
 
@@ -5189,7 +5189,7 @@ abstract class _Count extends Count {
 
   /// [value] The value of the measured amount. The value includes an implicit
   ///  precision in the presentation of the value.
-  Decimal? get value;
+  FhirDecimal? get value;
   @override
 
   /// [valueElement] Extensions for value
@@ -5226,7 +5226,7 @@ abstract class _Count extends Count {
 
   /// [code] A computer processable form of the unit in some unit
   ///  representation system.
-  Code? get code;
+  FhirCode? get code;
   @override
 
   /// [codeElement] Extensions for code
@@ -5258,14 +5258,14 @@ mixin _$Money {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [value] Numerical value (with implicit precision).
-  Decimal? get value => throw _privateConstructorUsedError;
+  FhirDecimal? get value => throw _privateConstructorUsedError;
 
   /// [valueElement] Extensions for value
   @JsonKey(name: '_value')
   Element? get valueElement => throw _privateConstructorUsedError;
 
   /// [currency] ISO 4217 Currency Code.
-  Code? get currency => throw _privateConstructorUsedError;
+  FhirCode? get currency => throw _privateConstructorUsedError;
 
   /// [currencyElement] Extensions for currency
   @JsonKey(name: '_currency')
@@ -5284,9 +5284,9 @@ abstract class $MoneyCopyWith<$Res> {
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      Decimal? value,
+      FhirDecimal? value,
       @JsonKey(name: '_value') Element? valueElement,
-      Code? currency,
+      FhirCode? currency,
       @JsonKey(name: '_currency') Element? currencyElement});
 
   $ElementCopyWith<$Res>? get valueElement;
@@ -5375,9 +5375,9 @@ abstract class _$$_MoneyCopyWith<$Res> implements $MoneyCopyWith<$Res> {
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      Decimal? value,
+      FhirDecimal? value,
       @JsonKey(name: '_value') Element? valueElement,
-      Code? currency,
+      FhirCode? currency,
       @JsonKey(name: '_currency') Element? currencyElement});
 
   @override
@@ -5571,7 +5571,7 @@ abstract class _Money extends Money {
   @override
 
   /// [value] Numerical value (with implicit precision).
-  Decimal? get value;
+  FhirDecimal? get value;
   @override
 
   /// [valueElement] Extensions for value
@@ -5580,7 +5580,7 @@ abstract class _Money extends Money {
   @override
 
   /// [currency] ISO 4217 Currency Code.
-  Code? get currency;
+  FhirCode? get currency;
   @override
 
   /// [currencyElement] Extensions for currency
@@ -5613,7 +5613,7 @@ mixin _$Age {
 
   /// [value] The value of the measured amount. The value includes an implicit
   ///  precision in the presentation of the value.
-  Decimal? get value => throw _privateConstructorUsedError;
+  FhirDecimal? get value => throw _privateConstructorUsedError;
 
   /// [valueElement] Extensions for value
   @JsonKey(name: '_value')
@@ -5647,7 +5647,7 @@ mixin _$Age {
 
   /// [code] A computer processable form of the unit in some unit
   ///  representation system.
-  Code? get code => throw _privateConstructorUsedError;
+  FhirCode? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] Extensions for code
   @JsonKey(name: '_code')
@@ -5667,7 +5667,7 @@ abstract class $AgeCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
-      Decimal? value,
+      FhirDecimal? value,
       @JsonKey(name: '_value')
           Element? valueElement,
       @JsonKey(unknownEnumValue: AgeComparator.unknown)
@@ -5680,7 +5680,7 @@ abstract class $AgeCopyWith<$Res> {
       FhirUri? system,
       @JsonKey(name: '_system')
           Element? systemElement,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code')
           Element? codeElement});
 
@@ -5839,7 +5839,7 @@ abstract class _$$_AgeCopyWith<$Res> implements $AgeCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
-      Decimal? value,
+      FhirDecimal? value,
       @JsonKey(name: '_value')
           Element? valueElement,
       @JsonKey(unknownEnumValue: AgeComparator.unknown)
@@ -5852,7 +5852,7 @@ abstract class _$$_AgeCopyWith<$Res> implements $AgeCopyWith<$Res> {
       FhirUri? system,
       @JsonKey(name: '_system')
           Element? systemElement,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code')
           Element? codeElement});
 
@@ -6151,7 +6151,7 @@ abstract class _Age extends Age {
 
   /// [value] The value of the measured amount. The value includes an implicit
   ///  precision in the presentation of the value.
-  Decimal? get value;
+  FhirDecimal? get value;
   @override
 
   /// [valueElement] Extensions for value
@@ -6193,7 +6193,7 @@ abstract class _Age extends Age {
 
   /// [code] A computer processable form of the unit in some unit
   ///  representation system.
-  Code? get code;
+  FhirCode? get code;
   @override
 
   /// [codeElement] Extensions for code
@@ -7488,7 +7488,7 @@ mixin _$SampledData {
 
   /// [period] The length of time between sampling times, measured in
   ///  milliseconds.
-  Decimal? get period => throw _privateConstructorUsedError;
+  FhirDecimal? get period => throw _privateConstructorUsedError;
 
   /// [periodElement] Extensions for period
   @JsonKey(name: '_period')
@@ -7496,7 +7496,7 @@ mixin _$SampledData {
 
   /// [factor] A correction factor that is applied to the sampled data points
   ///  before they are added to the origin.
-  Decimal? get factor => throw _privateConstructorUsedError;
+  FhirDecimal? get factor => throw _privateConstructorUsedError;
 
   /// [factorElement] Extensions for factor
   @JsonKey(name: '_factor')
@@ -7505,7 +7505,7 @@ mixin _$SampledData {
   /// [lowerLimit] The lower limit of detection of the measured points. This is
   /// needed if any of the data points have the value "L" (lower than detection
   ///  limit).
-  Decimal? get lowerLimit => throw _privateConstructorUsedError;
+  FhirDecimal? get lowerLimit => throw _privateConstructorUsedError;
 
   /// [lowerLimitElement] Extensions for lowerLimit
   @JsonKey(name: '_lowerLimit')
@@ -7514,7 +7514,7 @@ mixin _$SampledData {
   /// [upperLimit] The upper limit of detection of the measured points. This is
   /// needed if any of the data points have the value "U" (higher than detection
   ///  limit).
-  Decimal? get upperLimit => throw _privateConstructorUsedError;
+  FhirDecimal? get upperLimit => throw _privateConstructorUsedError;
 
   /// [upperLimitElement] Extensions for upperLimit
   @JsonKey(name: '_upperLimit')
@@ -7555,13 +7555,13 @@ abstract class $SampledDataCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       Quantity origin,
-      Decimal? period,
+      FhirDecimal? period,
       @JsonKey(name: '_period') Element? periodElement,
-      Decimal? factor,
+      FhirDecimal? factor,
       @JsonKey(name: '_factor') Element? factorElement,
-      Decimal? lowerLimit,
+      FhirDecimal? lowerLimit,
       @JsonKey(name: '_lowerLimit') Element? lowerLimitElement,
-      Decimal? upperLimit,
+      FhirDecimal? upperLimit,
       @JsonKey(name: '_upperLimit') Element? upperLimitElement,
       FhirPositiveInt? dimensions,
       @JsonKey(name: '_dimensions') Element? dimensionsElement,
@@ -7763,13 +7763,13 @@ abstract class _$$_SampledDataCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       Quantity origin,
-      Decimal? period,
+      FhirDecimal? period,
       @JsonKey(name: '_period') Element? periodElement,
-      Decimal? factor,
+      FhirDecimal? factor,
       @JsonKey(name: '_factor') Element? factorElement,
-      Decimal? lowerLimit,
+      FhirDecimal? lowerLimit,
       @JsonKey(name: '_lowerLimit') Element? lowerLimitElement,
-      Decimal? upperLimit,
+      FhirDecimal? upperLimit,
       @JsonKey(name: '_upperLimit') Element? upperLimitElement,
       FhirPositiveInt? dimensions,
       @JsonKey(name: '_dimensions') Element? dimensionsElement,
@@ -8125,7 +8125,7 @@ abstract class _SampledData extends SampledData {
 
   /// [period] The length of time between sampling times, measured in
   ///  milliseconds.
-  Decimal? get period;
+  FhirDecimal? get period;
   @override
 
   /// [periodElement] Extensions for period
@@ -8135,7 +8135,7 @@ abstract class _SampledData extends SampledData {
 
   /// [factor] A correction factor that is applied to the sampled data points
   ///  before they are added to the origin.
-  Decimal? get factor;
+  FhirDecimal? get factor;
   @override
 
   /// [factorElement] Extensions for factor
@@ -8146,7 +8146,7 @@ abstract class _SampledData extends SampledData {
   /// [lowerLimit] The lower limit of detection of the measured points. This is
   /// needed if any of the data points have the value "L" (lower than detection
   ///  limit).
-  Decimal? get lowerLimit;
+  FhirDecimal? get lowerLimit;
   @override
 
   /// [lowerLimitElement] Extensions for lowerLimit
@@ -8157,7 +8157,7 @@ abstract class _SampledData extends SampledData {
   /// [upperLimit] The upper limit of detection of the measured points. This is
   /// needed if any of the data points have the value "U" (higher than detection
   ///  limit).
-  Decimal? get upperLimit;
+  FhirDecimal? get upperLimit;
   @override
 
   /// [upperLimitElement] Extensions for upperLimit
@@ -8234,7 +8234,7 @@ mixin _$Signature {
 
   /// [targetFormat] A mime type that indicates the technical format of the
   ///  target resources signed by the signature.
-  Code? get targetFormat => throw _privateConstructorUsedError;
+  FhirCode? get targetFormat => throw _privateConstructorUsedError;
 
   /// [targetFormatElement] Extensions for targetFormat
   @JsonKey(name: '_targetFormat')
@@ -8244,7 +8244,7 @@ mixin _$Signature {
   /// signature. Important mime types are application/signature+xml for X ML
   /// DigSig, application/jose for JWS, and image/* for a graphical image of a
   ///  signature, etc.
-  Code? get sigFormat => throw _privateConstructorUsedError;
+  FhirCode? get sigFormat => throw _privateConstructorUsedError;
 
   /// [sigFormatElement] Extensions for sigFormat
   @JsonKey(name: '_sigFormat')
@@ -8252,7 +8252,7 @@ mixin _$Signature {
 
   /// [data] The base64 encoding of the Signature content. When signature is
   ///  not recorded electronically this element would be empty.
-  Base64Binary? get data => throw _privateConstructorUsedError;
+  FhirBase64Binary? get data => throw _privateConstructorUsedError;
 
   /// [dataElement] Extensions for data
   @JsonKey(name: '_data')
@@ -8277,11 +8277,11 @@ abstract class $SignatureCopyWith<$Res> {
       @JsonKey(name: '_when') Element? whenElement,
       Reference who,
       Reference? onBehalfOf,
-      Code? targetFormat,
+      FhirCode? targetFormat,
       @JsonKey(name: '_targetFormat') Element? targetFormatElement,
-      Code? sigFormat,
+      FhirCode? sigFormat,
       @JsonKey(name: '_sigFormat') Element? sigFormatElement,
-      Base64Binary? data,
+      FhirBase64Binary? data,
       @JsonKey(name: '_data') Element? dataElement});
 
   $ElementCopyWith<$Res>? get whenElement;
@@ -8459,11 +8459,11 @@ abstract class _$$_SignatureCopyWith<$Res> implements $SignatureCopyWith<$Res> {
       @JsonKey(name: '_when') Element? whenElement,
       Reference who,
       Reference? onBehalfOf,
-      Code? targetFormat,
+      FhirCode? targetFormat,
       @JsonKey(name: '_targetFormat') Element? targetFormatElement,
-      Code? sigFormat,
+      FhirCode? sigFormat,
       @JsonKey(name: '_sigFormat') Element? sigFormatElement,
-      Base64Binary? data,
+      FhirBase64Binary? data,
       @JsonKey(name: '_data') Element? dataElement});
 
   @override
@@ -8813,7 +8813,7 @@ abstract class _Signature extends Signature {
 
   /// [targetFormat] A mime type that indicates the technical format of the
   ///  target resources signed by the signature.
-  Code? get targetFormat;
+  FhirCode? get targetFormat;
   @override
 
   /// [targetFormatElement] Extensions for targetFormat
@@ -8825,7 +8825,7 @@ abstract class _Signature extends Signature {
   /// signature. Important mime types are application/signature+xml for X ML
   /// DigSig, application/jose for JWS, and image/* for a graphical image of a
   ///  signature, etc.
-  Code? get sigFormat;
+  FhirCode? get sigFormat;
   @override
 
   /// [sigFormatElement] Extensions for sigFormat
@@ -8835,7 +8835,7 @@ abstract class _Signature extends Signature {
 
   /// [data] The base64 encoding of the Signature content. When signature is
   ///  not recorded electronically this element would be empty.
-  Base64Binary? get data;
+  FhirBase64Binary? get data;
   @override
 
   /// [dataElement] Extensions for data
@@ -11667,7 +11667,7 @@ mixin _$TimingRepeat {
   /// [duration] How long this thing happens for when it happens. If
   /// durationMax is present, this element indicates the lower bound of the
   ///  allowed range of the duration.
-  Decimal? get duration => throw _privateConstructorUsedError;
+  FhirDecimal? get duration => throw _privateConstructorUsedError;
 
   /// [durationElement] Extensions for duration
   @JsonKey(name: '_duration')
@@ -11675,7 +11675,7 @@ mixin _$TimingRepeat {
 
   /// [durationMax] If present, indicates that the duration is a range - so to
   ///  perform the action between [duration] and [durationMax] time length.
-  Decimal? get durationMax => throw _privateConstructorUsedError;
+  FhirDecimal? get durationMax => throw _privateConstructorUsedError;
 
   /// [durationMaxElement] Extensions for durationMax
   @JsonKey(name: '_durationMax')
@@ -11710,7 +11710,7 @@ mixin _$TimingRepeat {
   /// occur; e.g. to express "3 times per day", 3 would be the frequency and "1
   /// day" would be the period. If periodMax is present, this element indicates
   ///  the lower bound of the allowed range of the period length.
-  Decimal? get period => throw _privateConstructorUsedError;
+  FhirDecimal? get period => throw _privateConstructorUsedError;
 
   /// [periodElement] Extensions for period
   @JsonKey(name: '_period')
@@ -11719,7 +11719,7 @@ mixin _$TimingRepeat {
   /// [periodMax] If present, indicates that the period is a range from [period]
   /// to [periodMax], allowing expressing concepts such as "do this once every
   /// 3-5 days.
-  Decimal? get periodMax => throw _privateConstructorUsedError;
+  FhirDecimal? get periodMax => throw _privateConstructorUsedError;
 
   /// [periodMaxElement] Extensions for periodMax
   @JsonKey(name: '_periodMax')
@@ -11789,10 +11789,10 @@ abstract class $TimingRepeatCopyWith<$Res> {
       FhirPositiveInt? countMax,
       @JsonKey(name: '_countMax')
           Element? countMaxElement,
-      Decimal? duration,
+      FhirDecimal? duration,
       @JsonKey(name: '_duration')
           Element? durationElement,
-      Decimal? durationMax,
+      FhirDecimal? durationMax,
       @JsonKey(name: '_durationMax')
           Element? durationMaxElement,
       @JsonKey(unknownEnumValue: TimingRepeatDurationUnit.unknown)
@@ -11805,10 +11805,10 @@ abstract class $TimingRepeatCopyWith<$Res> {
       FhirPositiveInt? frequencyMax,
       @JsonKey(name: '_frequencyMax')
           Element? frequencyMaxElement,
-      Decimal? period,
+      FhirDecimal? period,
       @JsonKey(name: '_period')
           Element? periodElement,
-      Decimal? periodMax,
+      FhirDecimal? periodMax,
       @JsonKey(name: '_periodMax')
           Element? periodMaxElement,
       @JsonKey(unknownEnumValue: TimingRepeatPeriodUnit.unknown)
@@ -12223,10 +12223,10 @@ abstract class _$$_TimingRepeatCopyWith<$Res>
       FhirPositiveInt? countMax,
       @JsonKey(name: '_countMax')
           Element? countMaxElement,
-      Decimal? duration,
+      FhirDecimal? duration,
       @JsonKey(name: '_duration')
           Element? durationElement,
-      Decimal? durationMax,
+      FhirDecimal? durationMax,
       @JsonKey(name: '_durationMax')
           Element? durationMaxElement,
       @JsonKey(unknownEnumValue: TimingRepeatDurationUnit.unknown)
@@ -12239,10 +12239,10 @@ abstract class _$$_TimingRepeatCopyWith<$Res>
       FhirPositiveInt? frequencyMax,
       @JsonKey(name: '_frequencyMax')
           Element? frequencyMaxElement,
-      Decimal? period,
+      FhirDecimal? period,
       @JsonKey(name: '_period')
           Element? periodElement,
-      Decimal? periodMax,
+      FhirDecimal? periodMax,
       @JsonKey(name: '_periodMax')
           Element? periodMaxElement,
       @JsonKey(unknownEnumValue: TimingRepeatPeriodUnit.unknown)
@@ -13095,7 +13095,7 @@ abstract class _TimingRepeat extends TimingRepeat {
   /// [duration] How long this thing happens for when it happens. If
   /// durationMax is present, this element indicates the lower bound of the
   ///  allowed range of the duration.
-  Decimal? get duration;
+  FhirDecimal? get duration;
   @override
 
   /// [durationElement] Extensions for duration
@@ -13105,7 +13105,7 @@ abstract class _TimingRepeat extends TimingRepeat {
 
   /// [durationMax] If present, indicates that the duration is a range - so to
   ///  perform the action between [duration] and [durationMax] time length.
-  Decimal? get durationMax;
+  FhirDecimal? get durationMax;
   @override
 
   /// [durationMaxElement] Extensions for durationMax
@@ -13147,7 +13147,7 @@ abstract class _TimingRepeat extends TimingRepeat {
   /// occur; e.g. to express "3 times per day", 3 would be the frequency and "1
   /// day" would be the period. If periodMax is present, this element indicates
   ///  the lower bound of the allowed range of the period length.
-  Decimal? get period;
+  FhirDecimal? get period;
   @override
 
   /// [periodElement] Extensions for period
@@ -13158,7 +13158,7 @@ abstract class _TimingRepeat extends TimingRepeat {
   /// [periodMax] If present, indicates that the period is a range from [period]
   /// to [periodMax], allowing expressing concepts such as "do this once every
   /// 3-5 days.
-  Decimal? get periodMax;
+  FhirDecimal? get periodMax;
   @override
 
   /// [periodMaxElement] Extensions for periodMax

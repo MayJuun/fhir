@@ -121,7 +121,7 @@ class AllergyIntoleranceUsCore extends Resource {
 
     /// [criticality] Estimate of the potential clinical harm, or seriousness, of
     ///  the reaction to the identified substance.
-    Code? criticality,
+    FhirCode? criticality,
 
     /// [onsetDateTime] Estimated or actual date,  date-time, or age when allergy
     ///  or intolerance was identified.
@@ -267,7 +267,7 @@ class AllergyIntoleranceUsCore extends Resource {
 
   /// [criticality] Estimate of the potential clinical harm, or seriousness, of
   ///  the reaction to the identified substance.
-  Code? get criticality => _allergyIntolerance.criticality;
+  FhirCode? get criticality => _allergyIntolerance.criticality;
 
   /// [onsetDateTime] Estimated or actual date,  date-time, or age when allergy
   ///  or intolerance was identified.
@@ -295,7 +295,7 @@ class AllergyIntoleranceReactionUsCore {
 
     /// [severity] Clinical assessment of the severity of the reaction event as a
     ///  whole, potentially considering multiple different manifestations.
-    Code? severity,
+    FhirCode? severity,
 
     /// [onset] Record of the date and/or time of the onset of the Reaction.
     FhirDateTime? onset,
@@ -316,7 +316,7 @@ class AllergyIntoleranceReactionUsCore {
 
   /// [severity] Clinical assessment of the severity of the reaction event as a
   ///  whole, potentially considering multiple different manifestations.
-  Code? get severity => _allergyIntoleranceReaction.severity;
+  FhirCode? get severity => _allergyIntoleranceReaction.severity;
 
   /// [onset] Record of the date and/or time of the onset of the Reaction.
   FhirDateTime? get onset => _allergyIntoleranceReaction.onset;

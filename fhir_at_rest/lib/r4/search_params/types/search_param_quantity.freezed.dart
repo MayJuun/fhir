@@ -344,7 +344,7 @@ abstract class _SearchParamQuantityEqual extends SearchParamQuantity {
   const _SearchParamQuantityEqual._() : super._();
 
   FhirUri? get system;
-  Code? get code;
+  FhirCode? get code;
   num get value;
   @JsonKey(ignore: true)
   _$$_SearchParamQuantityEqualCopyWith<_$_SearchParamQuantityEqual>
@@ -564,7 +564,7 @@ abstract class _SearchParamQuantityNotEqual extends SearchParamQuantity {
   const _SearchParamQuantityNotEqual._() : super._();
 
   FhirUri? get system;
-  Code? get code;
+  FhirCode? get code;
   num get value;
   @JsonKey(ignore: true)
   _$$_SearchParamQuantityNotEqualCopyWith<_$_SearchParamQuantityNotEqual>
@@ -785,7 +785,7 @@ abstract class _SearchParamQuantityGreaterThan extends SearchParamQuantity {
   const _SearchParamQuantityGreaterThan._() : super._();
 
   FhirUri? get system;
-  Code? get code;
+  FhirCode? get code;
   num get value;
   @JsonKey(ignore: true)
   _$$_SearchParamQuantityGreaterThanCopyWith<_$_SearchParamQuantityGreaterThan>
@@ -1005,7 +1005,7 @@ abstract class _SearchParamQuantityLessThan extends SearchParamQuantity {
   const _SearchParamQuantityLessThan._() : super._();
 
   FhirUri? get system;
-  Code? get code;
+  FhirCode? get code;
   num get value;
   @JsonKey(ignore: true)
   _$$_SearchParamQuantityLessThanCopyWith<_$_SearchParamQuantityLessThan>
@@ -1227,7 +1227,7 @@ abstract class _SearchParamQuantityGreaterOrEqual extends SearchParamQuantity {
   const _SearchParamQuantityGreaterOrEqual._() : super._();
 
   FhirUri? get system;
-  Code? get code;
+  FhirCode? get code;
   num get value;
   @JsonKey(ignore: true)
   _$$_SearchParamQuantityGreaterOrEqualCopyWith<
@@ -1449,7 +1449,7 @@ abstract class _SearchParamQuantityLessOrEqual extends SearchParamQuantity {
   const _SearchParamQuantityLessOrEqual._() : super._();
 
   FhirUri? get system;
-  Code? get code;
+  FhirCode? get code;
   num get value;
   @JsonKey(ignore: true)
   _$$_SearchParamQuantityLessOrEqualCopyWith<_$_SearchParamQuantityLessOrEqual>
@@ -1670,7 +1670,7 @@ abstract class _SearchParamQuantityStartsAfter extends SearchParamQuantity {
   const _SearchParamQuantityStartsAfter._() : super._();
 
   FhirUri? get system;
-  Code? get code;
+  FhirCode? get code;
   num get value;
   @JsonKey(ignore: true)
   _$$_SearchParamQuantityStartsAfterCopyWith<_$_SearchParamQuantityStartsAfter>
@@ -1890,7 +1890,7 @@ abstract class _SearchParamQuantityEndsBefore extends SearchParamQuantity {
   const _SearchParamQuantityEndsBefore._() : super._();
 
   FhirUri? get system;
-  Code? get code;
+  FhirCode? get code;
   num get value;
   @JsonKey(ignore: true)
   _$$_SearchParamQuantityEndsBeforeCopyWith<_$_SearchParamQuantityEndsBefore>
@@ -2112,7 +2112,7 @@ abstract class _SearchParamQuantityApproximately extends SearchParamQuantity {
   const _SearchParamQuantityApproximately._() : super._();
 
   FhirUri? get system;
-  Code? get code;
+  FhirCode? get code;
   num get value;
   @JsonKey(ignore: true)
   _$$_SearchParamQuantityApproximatelyCopyWith<

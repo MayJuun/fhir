@@ -24,7 +24,7 @@ class CapabilityStatementUsCore extends Resource {
     FhirUri? implicitRules,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    FhirCode? language,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
@@ -92,7 +92,7 @@ class CapabilityStatementUsCore extends Resource {
 
     /// [status] The status of this capability statement. Enables tracking the
     ///  life-cycle of the content.
-    Code? status,
+    FhirCode? status,
 
     /// [experimental] A Boolean value to indicate that this capability statement
     /// is authored for testing purposes (or education/evaluation/marketing) and
@@ -143,7 +143,7 @@ class CapabilityStatementUsCore extends Resource {
     /// actual running instance of software, a particular product (kind, not
     /// instance of software) or a class of implementation (e.g. a desired
     ///  purchase).
-    Code? kind,
+    FhirCode? kind,
 
     /// [instantiates] Reference to a canonical URL of another
     /// CapabilityStatement that this software implements. This capability
@@ -173,7 +173,7 @@ class CapabilityStatementUsCore extends Resource {
     /// [fhirVersion] The version of the FHIR specification that this
     /// CapabilityStatement describes (which SHALL be the same as the FHIR version
     ///  of the CapabilityStatement itself). There is no default value.
-    Code? fhirVersion,
+    FhirCode? fhirVersion,
 
     /// [format] A list of the formats supported by this implementation using
     ///  their content types.
@@ -255,7 +255,7 @@ class CapabilityStatementUsCore extends Resource {
   FhirUri? get implicitRules => _capabilityStatement.implicitRules;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => _capabilityStatement.language;
+  FhirCode? get language => _capabilityStatement.language;
 
   /// [contained] These resources do not have an independent existence apart
   /// from the resource that contains them - they cannot be identified
@@ -324,7 +324,7 @@ class CapabilityStatementUsCore extends Resource {
 
   /// [status] The status of this capability statement. Enables tracking the
   ///  life-cycle of the content.
-  Code? get status => _capabilityStatement.status;
+  FhirCode? get status => _capabilityStatement.status;
 
   /// [experimental] A Boolean value to indicate that this capability statement
   /// is authored for testing purposes (or education/evaluation/marketing) and
@@ -375,7 +375,7 @@ class CapabilityStatementUsCore extends Resource {
   /// actual running instance of software, a particular product (kind, not
   /// instance of software) or a class of implementation (e.g. a desired
   ///  purchase).
-  Code? get kind => _capabilityStatement.kind;
+  FhirCode? get kind => _capabilityStatement.kind;
 
   /// [instantiates] Reference to a canonical URL of another
   /// CapabilityStatement that this software implements. This capability
@@ -406,7 +406,7 @@ class CapabilityStatementUsCore extends Resource {
   /// [fhirVersion] The version of the FHIR specification that this
   /// CapabilityStatement describes (which SHALL be the same as the FHIR version
   ///  of the CapabilityStatement itself). There is no default value.
-  Code? get fhirVersion => _capabilityStatement.fhirVersion;
+  FhirCode? get fhirVersion => _capabilityStatement.fhirVersion;
 
   /// [format] A list of the formats supported by this implementation using
   ///  their content types.
@@ -713,7 +713,7 @@ class CapabilityStatementRestUsCore {
 
     /// [mode] Identifies whether this portion of the statement is describing the
     ///  ability to initiate or receive restful operations.
-    Code? mode,
+    FhirCode? mode,
 
     /// [documentation] Information about the system's restful capabilities that
     ///  apply across all applications, such as security.
@@ -802,7 +802,7 @@ class CapabilityStatementRestUsCore {
 
   /// [mode] Identifies whether this portion of the statement is describing the
   ///  ability to initiate or receive restful operations.
-  Code? get mode => _capabilityStatementRest.mode;
+  FhirCode? get mode => _capabilityStatementRest.mode;
 
   /// [documentation] Information about the system's restful capabilities that
   ///  apply across all applications, such as security.
@@ -993,7 +993,7 @@ class CapabilityStatementResourceUsCore {
     List<FhirExtension>? modifierExtension,
 
     /// [type] A type of resource exposed via the restful interface.
-    Code? type,
+    FhirCode? type,
 
     /// [profile] A specification of the profile that describes the solution's
     /// overall support for the resource, including any constraints on
@@ -1024,7 +1024,7 @@ class CapabilityStatementResourceUsCore {
     /// track and populate the versionId meta-property on resources. If the value
     /// is 'versioned-update', then the server supports all the versioning
     ///  features, including using e-tags for version integrity in the API.
-    Code? versioning,
+    FhirCode? versioning,
 
     /// [readHistory] A flag for whether the server is able to return past
     ///  versions as part of the vRead operation.
@@ -1043,7 +1043,7 @@ class CapabilityStatementResourceUsCore {
 
     /// [conditionalRead] A code that indicates how the server supports
     ///  conditional read.
-    Code? conditionalRead,
+    FhirCode? conditionalRead,
 
     /// [conditionalUpdate] A flag that indicates that the server supports
     ///  conditional update.
@@ -1051,7 +1051,7 @@ class CapabilityStatementResourceUsCore {
 
     /// [conditionalDelete] A code that indicates how the server supports
     ///  conditional delete.
-    Code? conditionalDelete,
+    FhirCode? conditionalDelete,
 
     /// [referencePolicy] A set of flags that defines how references are
     ///  supported.
@@ -1140,7 +1140,7 @@ class CapabilityStatementResourceUsCore {
       _capabilityStatementResource.modifierExtension;
 
   /// [type] A type of resource exposed via the restful interface.
-  Code? get type => _capabilityStatementResource.type;
+  FhirCode? get type => _capabilityStatementResource.type;
 
   /// [profile] A specification of the profile that describes the solution's
   /// overall support for the resource, including any constraints on
@@ -1173,7 +1173,7 @@ class CapabilityStatementResourceUsCore {
   /// track and populate the versionId meta-property on resources. If the value
   /// is 'versioned-update', then the server supports all the versioning
   ///  features, including using e-tags for version integrity in the API.
-  Code? get versioning => _capabilityStatementResource.versioning;
+  FhirCode? get versioning => _capabilityStatementResource.versioning;
 
   /// [readHistory] A flag for whether the server is able to return past
   ///  versions as part of the vRead operation.
@@ -1193,7 +1193,7 @@ class CapabilityStatementResourceUsCore {
 
   /// [conditionalRead] A code that indicates how the server supports
   ///  conditional read.
-  Code? get conditionalRead => _capabilityStatementResource.conditionalRead;
+  FhirCode? get conditionalRead => _capabilityStatementResource.conditionalRead;
 
   /// [conditionalUpdate] A flag that indicates that the server supports
   ///  conditional update.
@@ -1202,7 +1202,8 @@ class CapabilityStatementResourceUsCore {
 
   /// [conditionalDelete] A code that indicates how the server supports
   ///  conditional delete.
-  Code? get conditionalDelete => _capabilityStatementResource.conditionalDelete;
+  FhirCode? get conditionalDelete =>
+      _capabilityStatementResource.conditionalDelete;
 
   /// [referencePolicy] A set of flags that defines how references are
   ///  supported.
@@ -1276,7 +1277,7 @@ class CapabilityStatementInteractionUsCore {
 
     /// [code] Coded identifier of the operation, supported by the system
     ///  resource.
-    Code? code,
+    FhirCode? code,
 
     /// [documentation] Guidance specific to the implementation of this
     /// operation, such as 'delete is a logical delete' or 'updates are only
@@ -1335,7 +1336,7 @@ class CapabilityStatementInteractionUsCore {
 
   /// [code] Coded identifier of the operation, supported by the system
   ///  resource.
-  Code? get code => _capabilityStatementInteraction.code;
+  FhirCode? get code => _capabilityStatementInteraction.code;
 
   /// [documentation] Guidance specific to the implementation of this
   /// operation, such as 'delete is a logical delete' or 'updates are only
@@ -1401,7 +1402,7 @@ class CapabilityStatementSearchParamUsCore {
 
     /// [type] The type of value a search parameter refers to, and how the
     ///  content is interpreted.
-    Code? type,
+    FhirCode? type,
 
     /// [documentation] This allows documentation of any distinct behaviors about
     ///  how the search parameter is used.  For example, text matching algorithms.
@@ -1472,7 +1473,7 @@ class CapabilityStatementSearchParamUsCore {
 
   /// [type] The type of value a search parameter refers to, and how the
   ///  content is interpreted.
-  Code? get type => _capabilityStatementSearchParam.type;
+  FhirCode? get type => _capabilityStatementSearchParam.type;
 
   /// [documentation] This allows documentation of any distinct behaviors about
   ///  how the search parameter is used.  For example, text matching algorithms.
@@ -1660,7 +1661,7 @@ class CapabilityStatementInteraction1UsCore {
     List<FhirExtension>? modifierExtension,
 
     /// [code] A coded identifier of the operation, supported by the system.
-    Code? code,
+    FhirCode? code,
 
     /// [documentation] Guidance specific to the implementation of this
     /// operation, such as limitations on the kind of transactions allowed, or
@@ -1717,7 +1718,7 @@ class CapabilityStatementInteraction1UsCore {
       _capabilityStatementInteraction1.modifierExtension;
 
   /// [code] A coded identifier of the operation, supported by the system.
-  Code? get code => _capabilityStatementInteraction1.code;
+  FhirCode? get code => _capabilityStatementInteraction1.code;
 
   /// [documentation] Guidance specific to the implementation of this
   /// operation, such as limitations on the kind of transactions allowed, or
@@ -2007,7 +2008,7 @@ class CapabilityStatementSupportedMessageUsCore {
 
     /// [mode] The mode of this event declaration - whether application is sender
     ///  or receiver.
-    Code? mode,
+    FhirCode? mode,
 
     /// [definition] Points to a message definition that identifies the messaging
     ///  event, message structure, allowed responses, etc.
@@ -2056,7 +2057,7 @@ class CapabilityStatementSupportedMessageUsCore {
 
   /// [mode] The mode of this event declaration - whether application is sender
   ///  or receiver.
-  Code? get mode => _capabilityStatementSupportedMessage.mode;
+  FhirCode? get mode => _capabilityStatementSupportedMessage.mode;
 
   /// [definition] Points to a message definition that identifies the messaging
   ///  event, message structure, allowed responses, etc.
@@ -2108,7 +2109,7 @@ class CapabilityStatementDocumentUsCore {
 
     /// [mode] Mode of this document declaration - whether an application is a
     ///  producer or consumer.
-    Code? mode,
+    FhirCode? mode,
 
     /// [documentation] A description of how the application supports or uses the
     /// specified document profile.  For example, when documents are created, what
@@ -2171,7 +2172,7 @@ class CapabilityStatementDocumentUsCore {
 
   /// [mode] Mode of this document declaration - whether an application is a
   ///  producer or consumer.
-  Code? get mode => _capabilityStatementDocument.mode;
+  FhirCode? get mode => _capabilityStatementDocument.mode;
 
   /// [documentation] A description of how the application supports or uses the
   /// specified document profile.  For example, when documents are created, what

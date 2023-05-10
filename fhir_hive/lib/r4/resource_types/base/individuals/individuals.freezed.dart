@@ -49,7 +49,7 @@ mixin _$Group {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -116,7 +116,7 @@ mixin _$Group {
   /// [type] Identifies the broad classification of the kind of resources the
   ///  group includes.
   @HiveField(14)
-  Code? get type => throw _privateConstructorUsedError;
+  FhirCode? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
@@ -198,7 +198,7 @@ abstract class $GroupCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -219,7 +219,7 @@ abstract class $GroupCopyWith<$Res> {
       @HiveField(13)
           Element? activeElement,
       @HiveField(14)
-          Code? type,
+          FhirCode? type,
       @JsonKey(name: '_type')
       @HiveField(15)
           Element? typeElement,
@@ -561,7 +561,7 @@ abstract class _$$_GroupCopyWith<$Res> implements $GroupCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -582,7 +582,7 @@ abstract class _$$_GroupCopyWith<$Res> implements $GroupCopyWith<$Res> {
       @HiveField(13)
           Element? activeElement,
       @HiveField(14)
-          Code? type,
+          FhirCode? type,
       @JsonKey(name: '_type')
       @HiveField(15)
           Element? typeElement,
@@ -1313,7 +1313,7 @@ abstract class _Group extends Group {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -1388,7 +1388,7 @@ abstract class _Group extends Group {
   /// [type] Identifies the broad classification of the kind of resources the
   ///  group includes.
   @HiveField(14)
-  Code? get type;
+  FhirCode? get type;
   @override
 
   /// [typeElement] Extensions for type
@@ -2687,7 +2687,7 @@ mixin _$Patient {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -2768,7 +2768,7 @@ mixin _$Patient {
   /// [gender] Administrative Gender - the gender that the patient is
   ///  considered to have for administration and record keeping purposes.
   @HiveField(16)
-  Code? get gender => throw _privateConstructorUsedError;
+  FhirCode? get gender => throw _privateConstructorUsedError;
 
   /// [genderElement] Extensions for gender
   @JsonKey(name: '_gender')
@@ -2883,7 +2883,7 @@ abstract class $PatientCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -2908,7 +2908,7 @@ abstract class $PatientCopyWith<$Res> {
       @HiveField(15)
           List<ContactPoint>? telecom,
       @HiveField(16)
-          Code? gender,
+          FhirCode? gender,
       @JsonKey(name: '_gender')
       @HiveField(17)
           Element? genderElement,
@@ -3345,7 +3345,7 @@ abstract class _$$_PatientCopyWith<$Res> implements $PatientCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -3370,7 +3370,7 @@ abstract class _$$_PatientCopyWith<$Res> implements $PatientCopyWith<$Res> {
       @HiveField(15)
           List<ContactPoint>? telecom,
       @HiveField(16)
-          Code? gender,
+          FhirCode? gender,
       @JsonKey(name: '_gender')
       @HiveField(17)
           Element? genderElement,
@@ -4369,7 +4369,7 @@ abstract class _Patient extends Patient {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -4460,7 +4460,7 @@ abstract class _Patient extends Patient {
   /// [gender] Administrative Gender - the gender that the patient is
   ///  considered to have for administration and record keeping purposes.
   @HiveField(16)
-  Code? get gender;
+  FhirCode? get gender;
   @override
 
   /// [genderElement] Extensions for gender
@@ -4622,7 +4622,7 @@ mixin _$PatientContact {
 
   /// [gender] Administrative Gender - the gender that the contact person is
   ///  considered to have for administration and record keeping purposes.
-  Code? get gender => throw _privateConstructorUsedError;
+  FhirCode? get gender => throw _privateConstructorUsedError;
 
   /// [genderElement] Extensions for gender
   @JsonKey(name: '_gender')
@@ -4656,7 +4656,7 @@ abstract class $PatientContactCopyWith<$Res> {
       HumanName? name,
       List<ContactPoint>? telecom,
       Address? address,
-      Code? gender,
+      FhirCode? gender,
       @JsonKey(name: '_gender') Element? genderElement,
       Reference? organization,
       Period? period});
@@ -4818,7 +4818,7 @@ abstract class _$$_PatientContactCopyWith<$Res>
       HumanName? name,
       List<ContactPoint>? telecom,
       Address? address,
-      Code? gender,
+      FhirCode? gender,
       @JsonKey(name: '_gender') Element? genderElement,
       Reference? organization,
       Period? period});
@@ -5185,7 +5185,7 @@ abstract class _PatientContact extends PatientContact {
 
   /// [gender] Administrative Gender - the gender that the contact person is
   ///  considered to have for administration and record keeping purposes.
-  Code? get gender;
+  FhirCode? get gender;
   @override
 
   /// [genderElement] Extensions for gender
@@ -5702,7 +5702,7 @@ mixin _$PatientLink {
 
   /// [type] The type of link between this patient resource and another patient
   ///  resource.
-  Code? get type => throw _privateConstructorUsedError;
+  FhirCode? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
@@ -5725,7 +5725,7 @@ abstract class $PatientLinkCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Reference other,
-      Code? type,
+      FhirCode? type,
       @JsonKey(name: '_type') Element? typeElement});
 
   $ReferenceCopyWith<$Res> get other;
@@ -5814,7 +5814,7 @@ abstract class _$$_PatientLinkCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Reference other,
-      Code? type,
+      FhirCode? type,
       @JsonKey(name: '_type') Element? typeElement});
 
   @override
@@ -6066,7 +6066,7 @@ abstract class _PatientLink extends PatientLink {
 
   /// [type] The type of link between this patient resource and another patient
   ///  resource.
-  Code? get type;
+  FhirCode? get type;
   @override
 
   /// [typeElement] Extensions for type
@@ -6113,7 +6113,7 @@ mixin _$Person {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -6178,7 +6178,7 @@ mixin _$Person {
 
   /// [gender] Administrative Gender.
   @HiveField(14)
-  Code? get gender => throw _privateConstructorUsedError;
+  FhirCode? get gender => throw _privateConstructorUsedError;
 
   /// [genderElement] Extensions for gender
   @JsonKey(name: '_gender')
@@ -6245,7 +6245,7 @@ abstract class $PersonCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -6265,7 +6265,7 @@ abstract class $PersonCopyWith<$Res> {
       @HiveField(13)
           List<ContactPoint>? telecom,
       @HiveField(14)
-          Code? gender,
+          FhirCode? gender,
       @JsonKey(name: '_gender')
       @HiveField(15)
           Element? genderElement,
@@ -6566,7 +6566,7 @@ abstract class _$$_PersonCopyWith<$Res> implements $PersonCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -6586,7 +6586,7 @@ abstract class _$$_PersonCopyWith<$Res> implements $PersonCopyWith<$Res> {
       @HiveField(13)
           List<ContactPoint>? telecom,
       @HiveField(14)
-          Code? gender,
+          FhirCode? gender,
       @JsonKey(name: '_gender')
       @HiveField(15)
           Element? genderElement,
@@ -7282,7 +7282,7 @@ abstract class _Person extends Person {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -7355,7 +7355,7 @@ abstract class _Person extends Person {
 
   /// [gender] Administrative Gender.
   @HiveField(14)
-  Code? get gender;
+  FhirCode? get gender;
   @override
 
   /// [genderElement] Extensions for gender
@@ -7452,7 +7452,7 @@ mixin _$PersonLink {
 
   /// [assurance] Level of assurance that this link is associated with the
   ///  target resource.
-  Code? get assurance => throw _privateConstructorUsedError;
+  FhirCode? get assurance => throw _privateConstructorUsedError;
 
   /// [assuranceElement] Extensions for assurance
   @JsonKey(name: '_assurance')
@@ -7475,7 +7475,7 @@ abstract class $PersonLinkCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Reference target,
-      Code? assurance,
+      FhirCode? assurance,
       @JsonKey(name: '_assurance') Element? assuranceElement});
 
   $ReferenceCopyWith<$Res> get target;
@@ -7564,7 +7564,7 @@ abstract class _$$_PersonLinkCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Reference target,
-      Code? assurance,
+      FhirCode? assurance,
       @JsonKey(name: '_assurance') Element? assuranceElement});
 
   @override
@@ -7818,7 +7818,7 @@ abstract class _PersonLink extends PersonLink {
 
   /// [assurance] Level of assurance that this link is associated with the
   ///  target resource.
-  Code? get assurance;
+  FhirCode? get assurance;
   @override
 
   /// [assuranceElement] Extensions for assurance
@@ -7865,7 +7865,7 @@ mixin _$Practitioner {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -7947,7 +7947,7 @@ mixin _$Practitioner {
   /// [gender] Administrative Gender - the gender that the person is considered
   ///  to have for administration and record keeping purposes.
   @HiveField(17)
-  Code? get gender => throw _privateConstructorUsedError;
+  FhirCode? get gender => throw _privateConstructorUsedError;
 
   /// [genderElement] Extensions for gender
   @JsonKey(name: '_gender')
@@ -8008,7 +8008,7 @@ abstract class $PractitionerCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -8035,7 +8035,7 @@ abstract class $PractitionerCopyWith<$Res> {
       @HiveField(16)
           List<Address>? address,
       @HiveField(17)
-          Code? gender,
+          FhirCode? gender,
       @JsonKey(name: '_gender')
       @HiveField(18)
           Element? genderElement,
@@ -8305,7 +8305,7 @@ abstract class _$$_PractitionerCopyWith<$Res>
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -8332,7 +8332,7 @@ abstract class _$$_PractitionerCopyWith<$Res>
       @HiveField(16)
           List<Address>? address,
       @HiveField(17)
-          Code? gender,
+          FhirCode? gender,
       @JsonKey(name: '_gender')
       @HiveField(18)
           Element? genderElement,
@@ -9055,7 +9055,7 @@ abstract class _Practitioner extends Practitioner {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -9148,7 +9148,7 @@ abstract class _Practitioner extends Practitioner {
   /// [gender] Administrative Gender - the gender that the person is considered
   ///  to have for administration and record keeping purposes.
   @HiveField(17)
-  Code? get gender;
+  FhirCode? get gender;
   @override
 
   /// [genderElement] Extensions for gender
@@ -9699,7 +9699,7 @@ mixin _$PractitionerRole {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -9849,7 +9849,7 @@ abstract class $PractitionerRoleCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -10195,7 +10195,7 @@ abstract class _$$_PractitionerRoleCopyWith<$Res>
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -11020,7 +11020,7 @@ abstract class _PractitionerRole extends PractitionerRole {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -12268,7 +12268,7 @@ mixin _$RelatedPerson {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -12352,7 +12352,7 @@ mixin _$RelatedPerson {
   /// [gender] Administrative Gender - the gender that the person is considered
   ///  to have for administration and record keeping purposes.
   @HiveField(18)
-  Code? get gender => throw _privateConstructorUsedError;
+  FhirCode? get gender => throw _privateConstructorUsedError;
 
   /// [genderElement] Extensions for gender
   @JsonKey(name: '_gender')
@@ -12413,7 +12413,7 @@ abstract class $RelatedPersonCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -12442,7 +12442,7 @@ abstract class $RelatedPersonCopyWith<$Res> {
       @HiveField(17)
           List<ContactPoint>? telecom,
       @HiveField(18)
-          Code? gender,
+          FhirCode? gender,
       @JsonKey(name: '_gender')
       @HiveField(19)
           Element? genderElement,
@@ -12746,7 +12746,7 @@ abstract class _$$_RelatedPersonCopyWith<$Res>
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -12775,7 +12775,7 @@ abstract class _$$_RelatedPersonCopyWith<$Res>
       @HiveField(17)
           List<ContactPoint>? telecom,
       @HiveField(18)
-          Code? gender,
+          FhirCode? gender,
       @JsonKey(name: '_gender')
       @HiveField(19)
           Element? genderElement,
@@ -13526,7 +13526,7 @@ abstract class _RelatedPerson extends RelatedPerson {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -13622,7 +13622,7 @@ abstract class _RelatedPerson extends RelatedPerson {
   /// [gender] Administrative Gender - the gender that the person is considered
   ///  to have for administration and record keeping purposes.
   @HiveField(18)
-  Code? get gender;
+  FhirCode? get gender;
   @override
 
   /// [genderElement] Extensions for gender

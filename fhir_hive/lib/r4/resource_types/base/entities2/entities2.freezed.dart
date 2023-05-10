@@ -50,7 +50,7 @@ mixin _$BiologicallyDerivedProduct {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -110,7 +110,7 @@ mixin _$BiologicallyDerivedProduct {
 
   /// [productCategory] Broad category of this product.
   @HiveField(12)
-  Code? get productCategory => throw _privateConstructorUsedError;
+  FhirCode? get productCategory => throw _privateConstructorUsedError;
 
   /// [productCategoryElement] Extensions for productCategory
   @JsonKey(name: '_productCategory')
@@ -124,7 +124,7 @@ mixin _$BiologicallyDerivedProduct {
 
   /// [status] Whether the product is currently available.
   @HiveField(15)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -200,7 +200,7 @@ abstract class $BiologicallyDerivedProductCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -216,14 +216,14 @@ abstract class $BiologicallyDerivedProductCopyWith<$Res> {
       @HiveField(11)
           List<Identifier>? identifier,
       @HiveField(12)
-          Code? productCategory,
+          FhirCode? productCategory,
       @JsonKey(name: '_productCategory')
       @HiveField(13)
           Element? productCategoryElement,
       @HiveField(14)
           CodeableConcept? productCode,
       @HiveField(15)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(16)
           Element? statusElement,
@@ -547,7 +547,7 @@ abstract class _$$_BiologicallyDerivedProductCopyWith<$Res>
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -563,14 +563,14 @@ abstract class _$$_BiologicallyDerivedProductCopyWith<$Res>
       @HiveField(11)
           List<Identifier>? identifier,
       @HiveField(12)
-          Code? productCategory,
+          FhirCode? productCategory,
       @JsonKey(name: '_productCategory')
       @HiveField(13)
           Element? productCategoryElement,
       @HiveField(14)
           CodeableConcept? productCode,
       @HiveField(15)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(16)
           Element? statusElement,
@@ -1305,7 +1305,7 @@ abstract class _BiologicallyDerivedProduct extends BiologicallyDerivedProduct {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -1371,7 +1371,7 @@ abstract class _BiologicallyDerivedProduct extends BiologicallyDerivedProduct {
 
   /// [productCategory] Broad category of this product.
   @HiveField(12)
-  Code? get productCategory;
+  FhirCode? get productCategory;
   @override
 
   /// [productCategoryElement] Extensions for productCategory
@@ -1388,7 +1388,7 @@ abstract class _BiologicallyDerivedProduct extends BiologicallyDerivedProduct {
 
   /// [status] Whether the product is currently available.
   @HiveField(15)
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -3119,14 +3119,14 @@ mixin _$BiologicallyDerivedProductStorage {
   Element? get descriptionElement => throw _privateConstructorUsedError;
 
   /// [temperature] Storage temperature.
-  Decimal? get temperature => throw _privateConstructorUsedError;
+  FhirDecimal? get temperature => throw _privateConstructorUsedError;
 
   /// [temperatureElement] Extensions for temperature
   @JsonKey(name: '_temperature')
   Element? get temperatureElement => throw _privateConstructorUsedError;
 
   /// [scale] Temperature scale used.
-  Code? get scale => throw _privateConstructorUsedError;
+  FhirCode? get scale => throw _privateConstructorUsedError;
 
   /// [scaleElement] Extensions for scale
   @JsonKey(name: '_scale')
@@ -3155,9 +3155,9 @@ abstract class $BiologicallyDerivedProductStorageCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      Decimal? temperature,
+      FhirDecimal? temperature,
       @JsonKey(name: '_temperature') Element? temperatureElement,
-      Code? scale,
+      FhirCode? scale,
       @JsonKey(name: '_scale') Element? scaleElement,
       Period? duration});
 
@@ -3300,9 +3300,9 @@ abstract class _$$_BiologicallyDerivedProductStorageCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      Decimal? temperature,
+      FhirDecimal? temperature,
       @JsonKey(name: '_temperature') Element? temperatureElement,
-      Code? scale,
+      FhirCode? scale,
       @JsonKey(name: '_scale') Element? scaleElement,
       Period? duration});
 
@@ -3629,7 +3629,7 @@ abstract class _BiologicallyDerivedProductStorage
   @override
 
   /// [temperature] Storage temperature.
-  Decimal? get temperature;
+  FhirDecimal? get temperature;
   @override
 
   /// [temperatureElement] Extensions for temperature
@@ -3638,7 +3638,7 @@ abstract class _BiologicallyDerivedProductStorage
   @override
 
   /// [scale] Temperature scale used.
-  Code? get scale;
+  FhirCode? get scale;
   @override
 
   /// [scaleElement] Extensions for scale
@@ -3690,7 +3690,7 @@ mixin _$Device {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -3758,7 +3758,7 @@ mixin _$Device {
 
   /// [status] Status of the Device availability.
   @HiveField(14)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -3939,7 +3939,7 @@ abstract class $DeviceCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -3959,7 +3959,7 @@ abstract class $DeviceCopyWith<$Res> {
       @HiveField(13)
           List<DeviceUdiCarrier>? udiCarrier,
       @HiveField(14)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(15)
           Element? statusElement,
@@ -4571,7 +4571,7 @@ abstract class _$$_DeviceCopyWith<$Res> implements $DeviceCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -4591,7 +4591,7 @@ abstract class _$$_DeviceCopyWith<$Res> implements $DeviceCopyWith<$Res> {
       @HiveField(13)
           List<DeviceUdiCarrier>? udiCarrier,
       @HiveField(14)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(15)
           Element? statusElement,
@@ -5852,7 +5852,7 @@ abstract class _Device extends Device {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -5928,7 +5928,7 @@ abstract class _Device extends Device {
 
   /// [status] Status of the Device availability.
   @HiveField(14)
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -6197,7 +6197,7 @@ mixin _$DeviceUdiCarrier {
   /// printed on the packaging of the device - e.g., a barcode or RFID.
   /// Because of limitations on character sets in XML and the need to round-trip
   ///  JSON data through XML, AIDC Formats *SHALL* be base64 encoded.
-  Base64Binary? get carrierAIDC => throw _privateConstructorUsedError;
+  FhirBase64Binary? get carrierAIDC => throw _privateConstructorUsedError;
 
   /// [carrierAIDCElement] Extensions for carrierAIDC
   @JsonKey(name: '_carrierAIDC')
@@ -6213,7 +6213,7 @@ mixin _$DeviceUdiCarrier {
   Element? get carrierHRFElement => throw _privateConstructorUsedError;
 
   /// [entryType] A coded entry to indicate how the data was entered.
-  Code? get entryType => throw _privateConstructorUsedError;
+  FhirCode? get entryType => throw _privateConstructorUsedError;
 
   /// [entryTypeElement] Extensions for entryType
   @JsonKey(name: '_entryType')
@@ -6241,11 +6241,11 @@ abstract class $DeviceUdiCarrierCopyWith<$Res> {
       @JsonKey(name: '_issuer') Element? issuerElement,
       FhirUri? jurisdiction,
       @JsonKey(name: '_jurisdiction') Element? jurisdictionElement,
-      Base64Binary? carrierAIDC,
+      FhirBase64Binary? carrierAIDC,
       @JsonKey(name: '_carrierAIDC') Element? carrierAIDCElement,
       String? carrierHRF,
       @JsonKey(name: '_carrierHRF') Element? carrierHRFElement,
-      Code? entryType,
+      FhirCode? entryType,
       @JsonKey(name: '_entryType') Element? entryTypeElement});
 
   $ElementCopyWith<$Res>? get deviceIdentifierElement;
@@ -6440,11 +6440,11 @@ abstract class _$$_DeviceUdiCarrierCopyWith<$Res>
       @JsonKey(name: '_issuer') Element? issuerElement,
       FhirUri? jurisdiction,
       @JsonKey(name: '_jurisdiction') Element? jurisdictionElement,
-      Base64Binary? carrierAIDC,
+      FhirBase64Binary? carrierAIDC,
       @JsonKey(name: '_carrierAIDC') Element? carrierAIDCElement,
       String? carrierHRF,
       @JsonKey(name: '_carrierHRF') Element? carrierHRFElement,
-      Code? entryType,
+      FhirCode? entryType,
       @JsonKey(name: '_entryType') Element? entryTypeElement});
 
   @override
@@ -6905,7 +6905,7 @@ abstract class _DeviceUdiCarrier extends DeviceUdiCarrier {
   /// printed on the packaging of the device - e.g., a barcode or RFID.
   /// Because of limitations on character sets in XML and the need to round-trip
   ///  JSON data through XML, AIDC Formats *SHALL* be base64 encoded.
-  Base64Binary? get carrierAIDC;
+  FhirBase64Binary? get carrierAIDC;
   @override
 
   /// [carrierAIDCElement] Extensions for carrierAIDC
@@ -6925,7 +6925,7 @@ abstract class _DeviceUdiCarrier extends DeviceUdiCarrier {
   @override
 
   /// [entryType] A coded entry to indicate how the data was entered.
-  Code? get entryType;
+  FhirCode? get entryType;
   @override
 
   /// [entryTypeElement] Extensions for entryType
@@ -6982,7 +6982,7 @@ mixin _$DeviceDeviceName {
   /// [type] The type of deviceName.
   /// UDILabelName | UserFriendlyName | PatientReportedName |
   ///  ManufactureDeviceName | ModelName.
-  Code? get type => throw _privateConstructorUsedError;
+  FhirCode? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
@@ -7006,7 +7006,7 @@ abstract class $DeviceDeviceNameCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
-      Code? type,
+      FhirCode? type,
       @JsonKey(name: '_type') Element? typeElement});
 
   $ElementCopyWith<$Res>? get nameElement;
@@ -7105,7 +7105,7 @@ abstract class _$$_DeviceDeviceNameCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
-      Code? type,
+      FhirCode? type,
       @JsonKey(name: '_type') Element? typeElement});
 
   @override
@@ -7380,7 +7380,7 @@ abstract class _DeviceDeviceName extends DeviceDeviceName {
   /// [type] The type of deviceName.
   /// UDILabelName | UserFriendlyName | PatientReportedName |
   ///  ManufactureDeviceName | ModelName.
-  Code? get type;
+  FhirCode? get type;
   @override
 
   /// [typeElement] Extensions for type
@@ -8726,7 +8726,7 @@ mixin _$DeviceMetric {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -8810,7 +8810,7 @@ mixin _$DeviceMetric {
   /// [operationalStatus] Indicates current operational state of the device.
   ///  For example: On, Off, Standby, etc.
   @HiveField(16)
-  Code? get operationalStatus => throw _privateConstructorUsedError;
+  FhirCode? get operationalStatus => throw _privateConstructorUsedError;
 
   /// [operationalStatusElement] Extensions for operationalStatus
   @JsonKey(name: '_operationalStatus')
@@ -8822,7 +8822,7 @@ mixin _$DeviceMetric {
   /// practice, consider a Patient Monitor that has ECG/HR and Pleth for
   @HiveField(18)
   @HiveField(19)
-  Code? get color => throw _privateConstructorUsedError;
+  FhirCode? get color => throw _privateConstructorUsedError;
 
   /// [colorElement] Extensions for color
   @JsonKey(name: '_color')
@@ -8832,7 +8832,7 @@ mixin _$DeviceMetric {
   /// [category] Indicates the category of the observation generation process.
   ///  A DeviceMetric can be for example a setting, measurement, or calculation.
   @HiveField(21)
-  Code? get category => throw _privateConstructorUsedError;
+  FhirCode? get category => throw _privateConstructorUsedError;
 
   /// [categoryElement] Extensions for category
   @JsonKey(name: '_category')
@@ -8883,7 +8883,7 @@ abstract class $DeviceMetricCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -8907,18 +8907,18 @@ abstract class $DeviceMetricCopyWith<$Res> {
       @HiveField(15)
           Reference? parent,
       @HiveField(16)
-          Code? operationalStatus,
+          FhirCode? operationalStatus,
       @JsonKey(name: '_operationalStatus')
       @HiveField(17)
           Element? operationalStatusElement,
       @HiveField(18)
       @HiveField(19)
-          Code? color,
+          FhirCode? color,
       @JsonKey(name: '_color')
       @HiveField(20)
           Element? colorElement,
       @HiveField(21)
-          Code? category,
+          FhirCode? category,
       @JsonKey(name: '_category')
       @HiveField(22)
           Element? categoryElement,
@@ -9242,7 +9242,7 @@ abstract class _$$_DeviceMetricCopyWith<$Res>
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -9266,18 +9266,18 @@ abstract class _$$_DeviceMetricCopyWith<$Res>
       @HiveField(15)
           Reference? parent,
       @HiveField(16)
-          Code? operationalStatus,
+          FhirCode? operationalStatus,
       @JsonKey(name: '_operationalStatus')
       @HiveField(17)
           Element? operationalStatusElement,
       @HiveField(18)
       @HiveField(19)
-          Code? color,
+          FhirCode? color,
       @JsonKey(name: '_color')
       @HiveField(20)
           Element? colorElement,
       @HiveField(21)
-          Code? category,
+          FhirCode? category,
       @JsonKey(name: '_category')
       @HiveField(22)
           Element? categoryElement,
@@ -9966,7 +9966,7 @@ abstract class _DeviceMetric extends DeviceMetric {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -10060,7 +10060,7 @@ abstract class _DeviceMetric extends DeviceMetric {
   /// [operationalStatus] Indicates current operational state of the device.
   ///  For example: On, Off, Standby, etc.
   @HiveField(16)
-  Code? get operationalStatus;
+  FhirCode? get operationalStatus;
   @override
 
   /// [operationalStatusElement] Extensions for operationalStatus
@@ -10074,7 +10074,7 @@ abstract class _DeviceMetric extends DeviceMetric {
   /// practice, consider a Patient Monitor that has ECG/HR and Pleth for
   @HiveField(18)
   @HiveField(19)
-  Code? get color;
+  FhirCode? get color;
   @override
 
   /// [colorElement] Extensions for color
@@ -10086,7 +10086,7 @@ abstract class _DeviceMetric extends DeviceMetric {
   /// [category] Indicates the category of the observation generation process.
   ///  A DeviceMetric can be for example a setting, measurement, or calculation.
   @HiveField(21)
-  Code? get category;
+  FhirCode? get category;
   @override
 
   /// [categoryElement] Extensions for category
@@ -10155,14 +10155,14 @@ mixin _$DeviceMetricCalibration {
       throw _privateConstructorUsedError;
 
   /// [type] Describes the type of the calibration method.
-  Code? get type => throw _privateConstructorUsedError;
+  FhirCode? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
 
   /// [state] Describes the state of the calibration.
-  Code? get state => throw _privateConstructorUsedError;
+  FhirCode? get state => throw _privateConstructorUsedError;
 
   /// [stateElement] Extensions for state
   @JsonKey(name: '_state')
@@ -10191,9 +10191,9 @@ abstract class $DeviceMetricCalibrationCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? type,
+      FhirCode? type,
       @JsonKey(name: '_type') Element? typeElement,
-      Code? state,
+      FhirCode? state,
       @JsonKey(name: '_state') Element? stateElement,
       Instant? time,
       @JsonKey(name: '_time') Element? timeElement});
@@ -10316,9 +10316,9 @@ abstract class _$$_DeviceMetricCalibrationCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? type,
+      FhirCode? type,
       @JsonKey(name: '_type') Element? typeElement,
-      Code? state,
+      FhirCode? state,
       @JsonKey(name: '_state') Element? stateElement,
       Instant? time,
       @JsonKey(name: '_time') Element? timeElement});
@@ -10615,7 +10615,7 @@ abstract class _DeviceMetricCalibration extends DeviceMetricCalibration {
   @override
 
   /// [type] Describes the type of the calibration method.
-  Code? get type;
+  FhirCode? get type;
   @override
 
   /// [typeElement] Extensions for type
@@ -10624,7 +10624,7 @@ abstract class _DeviceMetricCalibration extends DeviceMetricCalibration {
   @override
 
   /// [state] Describes the state of the calibration.
-  Code? get state;
+  FhirCode? get state;
   @override
 
   /// [stateElement] Extensions for state
@@ -10674,7 +10674,7 @@ mixin _$NutritionProduct {
 
   /// [language] The base language in which the resource is written.;
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] (_language): Extensions for language;
   @HiveField(6)
@@ -10700,7 +10700,7 @@ mixin _$NutritionProduct {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   @HiveField(11)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
   @HiveField(12)
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -10767,7 +10767,7 @@ abstract class $NutritionProductCopyWith<$Res> {
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @HiveField(6)
       @JsonKey(name: '_language')
           Element? languageElement,
@@ -10781,7 +10781,7 @@ abstract class $NutritionProductCopyWith<$Res> {
       @HiveField(10)
           List<FhirExtension>? modifierExtension,
       @HiveField(11)
-          Code? status,
+          FhirCode? status,
       @HiveField(12)
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -11034,7 +11034,7 @@ abstract class _$$_NutritionProductCopyWith<$Res>
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @HiveField(6)
       @JsonKey(name: '_language')
           Element? languageElement,
@@ -11048,7 +11048,7 @@ abstract class _$$_NutritionProductCopyWith<$Res>
       @HiveField(10)
           List<FhirExtension>? modifierExtension,
       @HiveField(11)
-          Code? status,
+          FhirCode? status,
       @HiveField(12)
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -11663,7 +11663,7 @@ abstract class _NutritionProduct extends NutritionProduct {
 
   /// [language] The base language in which the resource is written.;
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] (_language): Extensions for language;
@@ -11694,7 +11694,7 @@ abstract class _NutritionProduct extends NutritionProduct {
   List<FhirExtension>? get modifierExtension;
   @override
   @HiveField(11)
-  Code? get status;
+  FhirCode? get status;
   @override
   @HiveField(12)
   @JsonKey(name: '_status')
@@ -12446,7 +12446,7 @@ mixin _$NutritionProductCharacteristic {
   Quantity? get valueQuantity => throw _privateConstructorUsedError;
 
   /// [valueBase64Binary] The actual characteristic value corresponding to the type.;
-  Base64Binary? get valueBase64Binary => throw _privateConstructorUsedError;
+  FhirBase64Binary? get valueBase64Binary => throw _privateConstructorUsedError;
 
   /// [valueBase64BinaryElement] (_valueBase64Binary): Extensions for valueBase64Binary;
   @JsonKey(name: '_valueBase64Binary')
@@ -12485,7 +12485,7 @@ abstract class $NutritionProductCharacteristicCopyWith<$Res> {
       Markdown? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
       Quantity? valueQuantity,
-      Base64Binary? valueBase64Binary,
+      FhirBase64Binary? valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
       Attachment? valueAttachment,
       Boolean? valueBoolean,
@@ -12684,7 +12684,7 @@ abstract class _$$_NutritionProductCharacteristicCopyWith<$Res>
       Markdown? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
       Quantity? valueQuantity,
-      Base64Binary? valueBase64Binary,
+      FhirBase64Binary? valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
       Attachment? valueAttachment,
       Boolean? valueBoolean,
@@ -13024,7 +13024,7 @@ abstract class _NutritionProductCharacteristic
   @override
 
   /// [valueBase64Binary] The actual characteristic value corresponding to the type.;
-  Base64Binary? get valueBase64Binary;
+  FhirBase64Binary? get valueBase64Binary;
   @override
 
   /// [valueBase64BinaryElement] (_valueBase64Binary): Extensions for valueBase64Binary;
@@ -13636,7 +13636,7 @@ mixin _$Substance {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
   @HiveField(6)
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
@@ -13655,7 +13655,7 @@ mixin _$Substance {
 
   /// [status] The current state of the product.;
   @HiveField(12)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] (_status): Extensions for status;
   @HiveField(13)
@@ -13703,7 +13703,7 @@ abstract class $SubstanceCopyWith<$Res> {
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @HiveField(6)
       @JsonKey(name: '_language')
           Element? languageElement,
@@ -13719,7 +13719,7 @@ abstract class $SubstanceCopyWith<$Res> {
       @HiveField(11)
           List<Identifier>? identifier,
       @HiveField(12)
-          Code? status,
+          FhirCode? status,
       @HiveField(13)
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -13966,7 +13966,7 @@ abstract class _$$_SubstanceCopyWith<$Res> implements $SubstanceCopyWith<$Res> {
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @HiveField(6)
       @JsonKey(name: '_language')
           Element? languageElement,
@@ -13982,7 +13982,7 @@ abstract class _$$_SubstanceCopyWith<$Res> implements $SubstanceCopyWith<$Res> {
       @HiveField(11)
           List<Identifier>? identifier,
       @HiveField(12)
-          Code? status,
+          FhirCode? status,
       @HiveField(13)
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -14483,7 +14483,7 @@ abstract class _Substance extends Substance {
   Element? get implicitRulesElement;
   @override
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
   @HiveField(6)
   @JsonKey(name: '_language')
@@ -14508,7 +14508,7 @@ abstract class _Substance extends Substance {
 
   /// [status] The current state of the product.;
   @HiveField(12)
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] (_status): Extensions for status;

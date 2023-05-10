@@ -592,9 +592,10 @@ _$_ResearchStudyComparisonGroup _$$_ResearchStudyComparisonGroupFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      identifier: (json['identifier'] as List<dynamic>?)
-          ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
-          .toList(),
+      linkId: json['linkId'] == null ? null : FhirId.fromJson(json['linkId']),
+      linkIdElement: json['_linkId'] == null
+          ? null
+          : Element.fromJson(json['_linkId'] as Map<String, dynamic>),
       name: json['name'] as String?,
       nameElement: json['_name'] == null
           ? null
@@ -631,8 +632,8 @@ Map<String, dynamic> _$$_ResearchStudyComparisonGroupToJson(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'identifier', instance.identifier?.map((e) => e.toJson()).toList());
+  writeNotNull('linkId', instance.linkId?.toJson());
+  writeNotNull('_linkId', instance.linkIdElement?.toJson());
   writeNotNull('name', instance.name);
   writeNotNull('_name', instance.nameElement?.toJson());
   writeNotNull('type', instance.type?.toJson());
@@ -793,17 +794,23 @@ _$_ResearchSubject _$$_ResearchSubjectFromJson(Map<String, dynamic> json) =>
           : Period.fromJson(json['period'] as Map<String, dynamic>),
       study: Reference.fromJson(json['study'] as Map<String, dynamic>),
       subject: Reference.fromJson(json['subject'] as Map<String, dynamic>),
-      assignedArm: json['assignedArm'] as String?,
-      assignedArmElement: json['_assignedArm'] == null
+      assignedComparisonGroup: json['assignedComparisonGroup'] == null
           ? null
-          : Element.fromJson(json['_assignedArm'] as Map<String, dynamic>),
-      actualArm: json['actualArm'] as String?,
-      actualArmElement: json['_actualArm'] == null
+          : FhirId.fromJson(json['assignedComparisonGroup']),
+      assignedComparisonGroupElement: json['_assignedComparisonGroup'] == null
           ? null
-          : Element.fromJson(json['_actualArm'] as Map<String, dynamic>),
-      consent: json['consent'] == null
+          : Element.fromJson(
+              json['_assignedComparisonGroup'] as Map<String, dynamic>),
+      actualComparisonGroup: json['actualComparisonGroup'] == null
           ? null
-          : Reference.fromJson(json['consent'] as Map<String, dynamic>),
+          : FhirId.fromJson(json['actualComparisonGroup']),
+      actualComparisonGroupElement: json['_actualComparisonGroup'] == null
+          ? null
+          : Element.fromJson(
+              json['_actualComparisonGroup'] as Map<String, dynamic>),
+      consent: (json['consent'] as List<dynamic>?)
+          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+          .toList(),
     );
 
 Map<String, dynamic> _$$_ResearchSubjectToJson(_$_ResearchSubject instance) {
@@ -838,11 +845,15 @@ Map<String, dynamic> _$$_ResearchSubjectToJson(_$_ResearchSubject instance) {
   writeNotNull('period', instance.period?.toJson());
   val['study'] = instance.study.toJson();
   val['subject'] = instance.subject.toJson();
-  writeNotNull('assignedArm', instance.assignedArm);
-  writeNotNull('_assignedArm', instance.assignedArmElement?.toJson());
-  writeNotNull('actualArm', instance.actualArm);
-  writeNotNull('_actualArm', instance.actualArmElement?.toJson());
-  writeNotNull('consent', instance.consent?.toJson());
+  writeNotNull(
+      'assignedComparisonGroup', instance.assignedComparisonGroup?.toJson());
+  writeNotNull('_assignedComparisonGroup',
+      instance.assignedComparisonGroupElement?.toJson());
+  writeNotNull(
+      'actualComparisonGroup', instance.actualComparisonGroup?.toJson());
+  writeNotNull('_actualComparisonGroup',
+      instance.actualComparisonGroupElement?.toJson());
+  writeNotNull('consent', instance.consent?.map((e) => e.toJson()).toList());
   return val;
 }
 

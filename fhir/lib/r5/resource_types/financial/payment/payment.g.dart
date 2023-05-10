@@ -58,10 +58,12 @@ _$_PaymentNotice _$$_PaymentNoticeFromJson(Map<String, dynamic> json) =>
       createdElement: json['_created'] == null
           ? null
           : Element.fromJson(json['_created'] as Map<String, dynamic>),
-      provider: json['provider'] == null
+      reporter: json['reporter'] == null
           ? null
-          : Reference.fromJson(json['provider'] as Map<String, dynamic>),
-      payment: Reference.fromJson(json['payment'] as Map<String, dynamic>),
+          : Reference.fromJson(json['reporter'] as Map<String, dynamic>),
+      payment: json['payment'] == null
+          ? null
+          : Reference.fromJson(json['payment'] as Map<String, dynamic>),
       paymentDate: json['paymentDate'] == null
           ? null
           : FhirDate.fromJson(json['paymentDate']),
@@ -111,8 +113,8 @@ Map<String, dynamic> _$$_PaymentNoticeToJson(_$_PaymentNotice instance) {
   writeNotNull('response', instance.response?.toJson());
   writeNotNull('created', instance.created?.toJson());
   writeNotNull('_created', instance.createdElement?.toJson());
-  writeNotNull('provider', instance.provider?.toJson());
-  val['payment'] = instance.payment.toJson();
+  writeNotNull('reporter', instance.reporter?.toJson());
+  writeNotNull('payment', instance.payment?.toJson());
   writeNotNull('paymentDate', instance.paymentDate?.toJson());
   writeNotNull('_paymentDate', instance.paymentDateElement?.toJson());
   writeNotNull('payee', instance.payee?.toJson());

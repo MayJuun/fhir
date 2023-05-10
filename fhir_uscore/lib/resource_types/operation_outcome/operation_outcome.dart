@@ -8,7 +8,7 @@ class OperationOutcomeUsCore extends Resource {
     String? id,
     FhirMeta? meta,
     Narrative? text,
-    Code? language,
+    FhirCode? language,
     List<Resource>? contained,
     required List<OperationOutcomeIssue> issue,
   }) =>
@@ -29,7 +29,7 @@ class OperationOutcomeUsCore extends Resource {
   String? get id => _operationOutcome.id;
   FhirMeta? get meta => _operationOutcome.meta;
   Narrative? get text => _operationOutcome.text;
-  Code? get language => _operationOutcome.language;
+  FhirCode? get language => _operationOutcome.language;
   List<Resource>? get contained => _operationOutcome.contained;
   List<OperationOutcomeIssue> get issue => _operationOutcome.issue;
 }
@@ -39,8 +39,8 @@ class OperationOutcomeIssueUsCore {
 
   factory OperationOutcomeIssueUsCore({
     String? id,
-    Code? severity,
-    Code? code,
+    FhirCode? severity,
+    FhirCode? code,
     CodeableConcept? details,
     String? diagnostics,
     List<String>? location,
@@ -59,8 +59,8 @@ class OperationOutcomeIssueUsCore {
   OperationOutcomeIssue _operationOutcomeIssue;
   OperationOutcomeIssue get value => _operationOutcomeIssue;
   String? get id => _operationOutcomeIssue.id;
-  Code? get severity => _operationOutcomeIssue.severity;
-  Code? get code => _operationOutcomeIssue.code;
+  FhirCode? get severity => _operationOutcomeIssue.severity;
+  FhirCode? get code => _operationOutcomeIssue.code;
   CodeableConcept? get details => _operationOutcomeIssue.details;
   String? get diagnostics => _operationOutcomeIssue.diagnostics;
   List<String>? get location => _operationOutcomeIssue.location;

@@ -20,17 +20,10 @@ Annotation _$AnnotationFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Annotation {
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
@@ -309,27 +302,14 @@ class _$_Annotation extends _Annotation {
   factory _$_Annotation.fromJson(Map<String, dynamic> json) =>
       _$$_AnnotationFromJson(json);
 
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   @override
   final String? id;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -444,18 +424,11 @@ abstract class _Annotation extends Annotation {
 
   @override
 
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id;
   @override
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
@@ -501,39 +474,28 @@ Attachment _$AttachmentFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Attachment {
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
-  /// [contentType] Identifies the type of the data in the attachment and
-  ///  allows a method to be chosen to interpret or render the data. Includes
-  ///  mime type parameters such as charset where appropriate.
+  /// [contentType] Identifies the type of the data in the attachment and allows a method to be chosen to interpret or render the data. Includes mime type parameters such as charset where appropriate.
   FhirCode? get contentType => throw _privateConstructorUsedError;
 
   /// [contentTypeElement] ("_contentType") Extensions for contentType
   @JsonKey(name: '_contentType')
   Element? get contentTypeElement => throw _privateConstructorUsedError;
 
-  /// [language] The human language of the content. The value can be any
-  ///  valid value according to BCP 47.
+  /// [language] The human language of the content. The value can be any valid value according to BCP 47.
   FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
 
-  /// [data] The actual data of the attachment - a sequence of bytes, base64
-  ///  encoded.
+  /// [data] The actual data of the attachment - a sequence of bytes, base64 encoded.
   FhirBase64Binary? get data => throw _privateConstructorUsedError;
 
   /// [dataElement] ("_data") Extensions for data
@@ -547,16 +509,14 @@ mixin _$Attachment {
   @JsonKey(name: '_url')
   Element? get urlElement => throw _privateConstructorUsedError;
 
-  /// [size] The number of bytes of data that make up this attachment (before
-  ///  base64 encoding, if that is done).
+  /// [size] The number of bytes of data that make up this attachment (before base64 encoding, if that is done).
   FhirInteger64? get size => throw _privateConstructorUsedError;
 
   /// [sizeElement] ("_size") Extensions for size
   @JsonKey(name: '_size')
   Element? get sizeElement => throw _privateConstructorUsedError;
 
-  /// [hash] The calculated hash of the data using SHA-1. Represented using
-  ///  base64.
+  /// [hash] The calculated hash of the data using SHA-1. Represented using base64.
   FhirBase64Binary? get hash => throw _privateConstructorUsedError;
 
   /// [hashElement] ("_hash") Extensions for hash
@@ -591,19 +551,14 @@ mixin _$Attachment {
   @JsonKey(name: '_width')
   Element? get widthElement => throw _privateConstructorUsedError;
 
-  /// [frames] The number of frames in a photo. This is used with a
-  ///  multi-page fax, or an imaging acquisition context that takes multiple
-  ///  slices in a single image, or an animated gif. If there is more than
-  ///  one frame, this SHALL have a value in order to alert interface
-  ///  software that a multi-frame capable rendering widget is required.
+  /// [frames] The number of frames in a photo. This is used with a multi-page fax, or an imaging acquisition context that takes multiple slices in a single image, or an animated gif. If there is more than one frame, this SHALL have a value in order to alert interface software that a multi-frame capable rendering widget is required.
   FhirPositiveInt? get frames => throw _privateConstructorUsedError;
 
   /// [framesElement] ("_frames") Extensions for frames
   @JsonKey(name: '_frames')
   Element? get framesElement => throw _privateConstructorUsedError;
 
-  /// [duration] The duration of the recording in seconds - for audio and
-  ///  video.
+  /// [duration] The duration of the recording in seconds - for audio and video.
   FhirDecimal? get duration => throw _privateConstructorUsedError;
 
   /// [durationElement] ("_duration") Extensions for duration
@@ -1250,27 +1205,14 @@ class _$_Attachment extends _Attachment {
   factory _$_Attachment.fromJson(Map<String, dynamic> json) =>
       _$$_AttachmentFromJson(json);
 
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   @override
   final String? id;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -1281,9 +1223,7 @@ class _$_Attachment extends _Attachment {
     return EqualUnmodifiableListView(value);
   }
 
-  /// [contentType] Identifies the type of the data in the attachment and
-  ///  allows a method to be chosen to interpret or render the data. Includes
-  ///  mime type parameters such as charset where appropriate.
+  /// [contentType] Identifies the type of the data in the attachment and allows a method to be chosen to interpret or render the data. Includes mime type parameters such as charset where appropriate.
   @override
   final FhirCode? contentType;
 
@@ -1292,8 +1232,7 @@ class _$_Attachment extends _Attachment {
   @JsonKey(name: '_contentType')
   final Element? contentTypeElement;
 
-  /// [language] The human language of the content. The value can be any
-  ///  valid value according to BCP 47.
+  /// [language] The human language of the content. The value can be any valid value according to BCP 47.
   @override
   final FhirCode? language;
 
@@ -1302,8 +1241,7 @@ class _$_Attachment extends _Attachment {
   @JsonKey(name: '_language')
   final Element? languageElement;
 
-  /// [data] The actual data of the attachment - a sequence of bytes, base64
-  ///  encoded.
+  /// [data] The actual data of the attachment - a sequence of bytes, base64 encoded.
   @override
   final FhirBase64Binary? data;
 
@@ -1321,8 +1259,7 @@ class _$_Attachment extends _Attachment {
   @JsonKey(name: '_url')
   final Element? urlElement;
 
-  /// [size] The number of bytes of data that make up this attachment (before
-  ///  base64 encoding, if that is done).
+  /// [size] The number of bytes of data that make up this attachment (before base64 encoding, if that is done).
   @override
   final FhirInteger64? size;
 
@@ -1331,8 +1268,7 @@ class _$_Attachment extends _Attachment {
   @JsonKey(name: '_size')
   final Element? sizeElement;
 
-  /// [hash] The calculated hash of the data using SHA-1. Represented using
-  ///  base64.
+  /// [hash] The calculated hash of the data using SHA-1. Represented using base64.
   @override
   final FhirBase64Binary? hash;
 
@@ -1377,11 +1313,7 @@ class _$_Attachment extends _Attachment {
   @JsonKey(name: '_width')
   final Element? widthElement;
 
-  /// [frames] The number of frames in a photo. This is used with a
-  ///  multi-page fax, or an imaging acquisition context that takes multiple
-  ///  slices in a single image, or an animated gif. If there is more than
-  ///  one frame, this SHALL have a value in order to alert interface
-  ///  software that a multi-frame capable rendering widget is required.
+  /// [frames] The number of frames in a photo. This is used with a multi-page fax, or an imaging acquisition context that takes multiple slices in a single image, or an animated gif. If there is more than one frame, this SHALL have a value in order to alert interface software that a multi-frame capable rendering widget is required.
   @override
   final FhirPositiveInt? frames;
 
@@ -1390,8 +1322,7 @@ class _$_Attachment extends _Attachment {
   @JsonKey(name: '_frames')
   final Element? framesElement;
 
-  /// [duration] The duration of the recording in seconds - for audio and
-  ///  video.
+  /// [duration] The duration of the recording in seconds - for audio and video.
   @override
   final FhirDecimal? duration;
 
@@ -1552,25 +1483,16 @@ abstract class _Attachment extends Attachment {
 
   @override
 
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id;
   @override
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
 
-  /// [contentType] Identifies the type of the data in the attachment and
-  ///  allows a method to be chosen to interpret or render the data. Includes
-  ///  mime type parameters such as charset where appropriate.
+  /// [contentType] Identifies the type of the data in the attachment and allows a method to be chosen to interpret or render the data. Includes mime type parameters such as charset where appropriate.
   FhirCode? get contentType;
   @override
 
@@ -1579,8 +1501,7 @@ abstract class _Attachment extends Attachment {
   Element? get contentTypeElement;
   @override
 
-  /// [language] The human language of the content. The value can be any
-  ///  valid value according to BCP 47.
+  /// [language] The human language of the content. The value can be any valid value according to BCP 47.
   FhirCode? get language;
   @override
 
@@ -1589,8 +1510,7 @@ abstract class _Attachment extends Attachment {
   Element? get languageElement;
   @override
 
-  /// [data] The actual data of the attachment - a sequence of bytes, base64
-  ///  encoded.
+  /// [data] The actual data of the attachment - a sequence of bytes, base64 encoded.
   FhirBase64Binary? get data;
   @override
 
@@ -1608,8 +1528,7 @@ abstract class _Attachment extends Attachment {
   Element? get urlElement;
   @override
 
-  /// [size] The number of bytes of data that make up this attachment (before
-  ///  base64 encoding, if that is done).
+  /// [size] The number of bytes of data that make up this attachment (before base64 encoding, if that is done).
   FhirInteger64? get size;
   @override
 
@@ -1618,8 +1537,7 @@ abstract class _Attachment extends Attachment {
   Element? get sizeElement;
   @override
 
-  /// [hash] The calculated hash of the data using SHA-1. Represented using
-  ///  base64.
+  /// [hash] The calculated hash of the data using SHA-1. Represented using base64.
   FhirBase64Binary? get hash;
   @override
 
@@ -1664,11 +1582,7 @@ abstract class _Attachment extends Attachment {
   Element? get widthElement;
   @override
 
-  /// [frames] The number of frames in a photo. This is used with a
-  ///  multi-page fax, or an imaging acquisition context that takes multiple
-  ///  slices in a single image, or an animated gif. If there is more than
-  ///  one frame, this SHALL have a value in order to alert interface
-  ///  software that a multi-frame capable rendering widget is required.
+  /// [frames] The number of frames in a photo. This is used with a multi-page fax, or an imaging acquisition context that takes multiple slices in a single image, or an animated gif. If there is more than one frame, this SHALL have a value in order to alert interface software that a multi-frame capable rendering widget is required.
   FhirPositiveInt? get frames;
   @override
 
@@ -1677,8 +1591,7 @@ abstract class _Attachment extends Attachment {
   Element? get framesElement;
   @override
 
-  /// [duration] The duration of the recording in seconds - for audio and
-  ///  video.
+  /// [duration] The duration of the recording in seconds - for audio and video.
   FhirDecimal? get duration;
   @override
 
@@ -1706,17 +1619,10 @@ Identifier _$IdentifierFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Identifier {
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
@@ -1727,20 +1633,17 @@ mixin _$Identifier {
   @JsonKey(name: '_use')
   Element? get useElement => throw _privateConstructorUsedError;
 
-  /// [type] A coded type for the identifier that can be used to determine
-  ///  which identifier to use for a specific purpose.
+  /// [type] A coded type for the identifier that can be used to determine which identifier to use for a specific purpose.
   CodeableConcept? get type => throw _privateConstructorUsedError;
 
-  /// [system] Establishes the namespace for the value - that is, a absolute
-  ///  URL that describes a set values that are unique.
+  /// [system] Establishes the namespace for the value - that is, an absolute URL that describes a set values that are unique.
   FhirUri? get system => throw _privateConstructorUsedError;
 
   /// [systemElement] ("_system") Extensions for system
   @JsonKey(name: '_system')
   Element? get systemElement => throw _privateConstructorUsedError;
 
-  /// [value] The portion of the identifier typically relevant to the user
-  ///  and which is unique within the context of the system.
+  /// [value] The portion of the identifier typically relevant to the user and which is unique within the context of the system.
   String? get value => throw _privateConstructorUsedError;
 
   /// [valueElement] ("_value") Extensions for value
@@ -2060,27 +1963,14 @@ class _$_Identifier extends _Identifier {
   factory _$_Identifier.fromJson(Map<String, dynamic> json) =>
       _$$_IdentifierFromJson(json);
 
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   @override
   final String? id;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -2100,13 +1990,11 @@ class _$_Identifier extends _Identifier {
   @JsonKey(name: '_use')
   final Element? useElement;
 
-  /// [type] A coded type for the identifier that can be used to determine
-  ///  which identifier to use for a specific purpose.
+  /// [type] A coded type for the identifier that can be used to determine which identifier to use for a specific purpose.
   @override
   final CodeableConcept? type;
 
-  /// [system] Establishes the namespace for the value - that is, a absolute
-  ///  URL that describes a set values that are unique.
+  /// [system] Establishes the namespace for the value - that is, an absolute URL that describes a set values that are unique.
   @override
   final FhirUri? system;
 
@@ -2115,8 +2003,7 @@ class _$_Identifier extends _Identifier {
   @JsonKey(name: '_system')
   final Element? systemElement;
 
-  /// [value] The portion of the identifier typically relevant to the user
-  ///  and which is unique within the context of the system.
+  /// [value] The portion of the identifier typically relevant to the user and which is unique within the context of the system.
   @override
   final String? value;
 
@@ -2211,18 +2098,11 @@ abstract class _Identifier extends Identifier {
 
   @override
 
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id;
   @override
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
@@ -2236,13 +2116,11 @@ abstract class _Identifier extends Identifier {
   Element? get useElement;
   @override
 
-  /// [type] A coded type for the identifier that can be used to determine
-  ///  which identifier to use for a specific purpose.
+  /// [type] A coded type for the identifier that can be used to determine which identifier to use for a specific purpose.
   CodeableConcept? get type;
   @override
 
-  /// [system] Establishes the namespace for the value - that is, a absolute
-  ///  URL that describes a set values that are unique.
+  /// [system] Establishes the namespace for the value - that is, an absolute URL that describes a set values that are unique.
   FhirUri? get system;
   @override
 
@@ -2251,8 +2129,7 @@ abstract class _Identifier extends Identifier {
   Element? get systemElement;
   @override
 
-  /// [value] The portion of the identifier typically relevant to the user
-  ///  and which is unique within the context of the system.
+  /// [value] The portion of the identifier typically relevant to the user and which is unique within the context of the system.
   String? get value;
   @override
 
@@ -2279,26 +2156,17 @@ CodeableConcept _$CodeableConceptFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$CodeableConcept {
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [coding] A reference to a code defined by a terminology system.
   List<Coding>? get coding => throw _privateConstructorUsedError;
 
-  /// [text] A human language representation of the concept as
-  ///  seen/selected/uttered by the user who entered the data and/or which
-  ///  represents the intended meaning of the user.
+  /// [text] A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.
   String? get text => throw _privateConstructorUsedError;
 
   /// [textElement] ("_text") Extensions for text
@@ -2460,27 +2328,14 @@ class _$_CodeableConcept extends _CodeableConcept {
   factory _$_CodeableConcept.fromJson(Map<String, dynamic> json) =>
       _$$_CodeableConceptFromJson(json);
 
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   @override
   final String? id;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -2504,9 +2359,7 @@ class _$_CodeableConcept extends _CodeableConcept {
     return EqualUnmodifiableListView(value);
   }
 
-  /// [text] A human language representation of the concept as
-  ///  seen/selected/uttered by the user who entered the data and/or which
-  ///  represents the intended meaning of the user.
+  /// [text] A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.
   @override
   final String? text;
 
@@ -2572,18 +2425,11 @@ abstract class _CodeableConcept extends CodeableConcept {
 
   @override
 
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id;
   @override
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
@@ -2592,9 +2438,7 @@ abstract class _CodeableConcept extends CodeableConcept {
   List<Coding>? get coding;
   @override
 
-  /// [text] A human language representation of the concept as
-  ///  seen/selected/uttered by the user who entered the data and/or which
-  ///  represents the intended meaning of the user.
+  /// [text] A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.
   String? get text;
   @override
 
@@ -2613,59 +2457,42 @@ Coding _$CodingFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Coding {
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
-  /// [system] The identification of the code system that defines the meaning
-  ///  of the symbol in the code.
+  /// [system] The identification of the code system that defines the meaning of the symbol in the code.
   FhirUri? get system => throw _privateConstructorUsedError;
 
   /// [systemElement] ("_system") Extensions for system
   @JsonKey(name: '_system')
   Element? get systemElement => throw _privateConstructorUsedError;
 
-  /// [version] The version of the code system which was used when choosing
-  ///  this code. Note that a well-maintained code system does not need the
-  ///  version reported, because the meaning of codes is consistent across
-  ///  versions. However this cannot consistently be assured, and when the
-  ///  meaning is not guaranteed to be consistent, the version SHOULD be
-  ///  exchanged.
+  /// [version] The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured, and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged.
   String? get version => throw _privateConstructorUsedError;
 
   /// [versionElement] ("_version") Extensions for version
   @JsonKey(name: '_version')
   Element? get versionElement => throw _privateConstructorUsedError;
 
-  /// [code] A symbol in syntax defined by the system. The symbol may be a
-  ///  predefined code or an expression in a syntax defined by the coding
-  ///  system (e.g. post-coordination).
+  /// [code] A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination).
   FhirCode? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] ("_code") Extensions for code
   @JsonKey(name: '_code')
   Element? get codeElement => throw _privateConstructorUsedError;
 
-  /// [display] A representation of the meaning of the code in the system,
-  ///  following the rules of the system.
+  /// [display] A representation of the meaning of the code in the system, following the rules of the system.
   String? get display => throw _privateConstructorUsedError;
 
   /// [displayElement] ("_display") Extensions for display
   @JsonKey(name: '_display')
   Element? get displayElement => throw _privateConstructorUsedError;
 
-  /// [userSelected] Indicates that this coding was chosen by a user directly
-  ///  - e.g. off a pick list of available items (codes or displays).
+  /// [userSelected] Indicates that this coding was chosen by a user directly - e.g. off a pick list of available items (codes or displays).
   FhirBoolean? get userSelected => throw _privateConstructorUsedError;
 
   /// [userSelectedElement] ("_userSelected") Extensions for userSelected
@@ -2972,27 +2799,14 @@ class _$_Coding extends _Coding {
   factory _$_Coding.fromJson(Map<String, dynamic> json) =>
       _$$_CodingFromJson(json);
 
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   @override
   final String? id;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -3003,8 +2817,7 @@ class _$_Coding extends _Coding {
     return EqualUnmodifiableListView(value);
   }
 
-  /// [system] The identification of the code system that defines the meaning
-  ///  of the symbol in the code.
+  /// [system] The identification of the code system that defines the meaning of the symbol in the code.
   @override
   final FhirUri? system;
 
@@ -3013,12 +2826,7 @@ class _$_Coding extends _Coding {
   @JsonKey(name: '_system')
   final Element? systemElement;
 
-  /// [version] The version of the code system which was used when choosing
-  ///  this code. Note that a well-maintained code system does not need the
-  ///  version reported, because the meaning of codes is consistent across
-  ///  versions. However this cannot consistently be assured, and when the
-  ///  meaning is not guaranteed to be consistent, the version SHOULD be
-  ///  exchanged.
+  /// [version] The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured, and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged.
   @override
   final String? version;
 
@@ -3027,9 +2835,7 @@ class _$_Coding extends _Coding {
   @JsonKey(name: '_version')
   final Element? versionElement;
 
-  /// [code] A symbol in syntax defined by the system. The symbol may be a
-  ///  predefined code or an expression in a syntax defined by the coding
-  ///  system (e.g. post-coordination).
+  /// [code] A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination).
   @override
   final FhirCode? code;
 
@@ -3038,8 +2844,7 @@ class _$_Coding extends _Coding {
   @JsonKey(name: '_code')
   final Element? codeElement;
 
-  /// [display] A representation of the meaning of the code in the system,
-  ///  following the rules of the system.
+  /// [display] A representation of the meaning of the code in the system, following the rules of the system.
   @override
   final String? display;
 
@@ -3048,8 +2853,7 @@ class _$_Coding extends _Coding {
   @JsonKey(name: '_display')
   final Element? displayElement;
 
-  /// [userSelected] Indicates that this coding was chosen by a user directly
-  ///  - e.g. off a pick list of available items (codes or displays).
+  /// [userSelected] Indicates that this coding was chosen by a user directly - e.g. off a pick list of available items (codes or displays).
   @override
   final FhirBoolean? userSelected;
 
@@ -3141,24 +2945,16 @@ abstract class _Coding extends Coding {
 
   @override
 
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id;
   @override
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
 
-  /// [system] The identification of the code system that defines the meaning
-  ///  of the symbol in the code.
+  /// [system] The identification of the code system that defines the meaning of the symbol in the code.
   FhirUri? get system;
   @override
 
@@ -3167,12 +2963,7 @@ abstract class _Coding extends Coding {
   Element? get systemElement;
   @override
 
-  /// [version] The version of the code system which was used when choosing
-  ///  this code. Note that a well-maintained code system does not need the
-  ///  version reported, because the meaning of codes is consistent across
-  ///  versions. However this cannot consistently be assured, and when the
-  ///  meaning is not guaranteed to be consistent, the version SHOULD be
-  ///  exchanged.
+  /// [version] The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured, and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged.
   String? get version;
   @override
 
@@ -3181,9 +2972,7 @@ abstract class _Coding extends Coding {
   Element? get versionElement;
   @override
 
-  /// [code] A symbol in syntax defined by the system. The symbol may be a
-  ///  predefined code or an expression in a syntax defined by the coding
-  ///  system (e.g. post-coordination).
+  /// [code] A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination).
   FhirCode? get code;
   @override
 
@@ -3192,8 +2981,7 @@ abstract class _Coding extends Coding {
   Element? get codeElement;
   @override
 
-  /// [display] A representation of the meaning of the code in the system,
-  ///  following the rules of the system.
+  /// [display] A representation of the meaning of the code in the system, following the rules of the system.
   String? get display;
   @override
 
@@ -3202,8 +2990,7 @@ abstract class _Coding extends Coding {
   Element? get displayElement;
   @override
 
-  /// [userSelected] Indicates that this coding was chosen by a user directly
-  ///  - e.g. off a pick list of available items (codes or displays).
+  /// [userSelected] Indicates that this coding was chosen by a user directly - e.g. off a pick list of available items (codes or displays).
   FhirBoolean? get userSelected;
   @override
 
@@ -3222,32 +3009,21 @@ Quantity _$QuantityFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Quantity {
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
-  /// [value] The value of the measured amount. The value includes an
-  ///  implicit precision in the presentation of the value.
+  /// [value] The value of the measured amount. The value includes an implicit precision in the presentation of the value.
   FhirDecimal? get value => throw _privateConstructorUsedError;
 
   /// [valueElement] ("_value") Extensions for value
   @JsonKey(name: '_value')
   Element? get valueElement => throw _privateConstructorUsedError;
 
-  /// [comparator] How the value should be understood and represented -
-  ///  whether the actual value is greater or less than the stated value due
-  ///  to measurement issues; e.g. if the comparator is "<" , then the real
-  ///  value is < stated value.
+  /// [comparator] How the value should be understood and represented - whether the actual value is greater or less than the stated value due to measurement issues; e.g. if the comparator is "<" , then the real value is < stated value.
   QuantityComparator? get comparator => throw _privateConstructorUsedError;
 
   /// [comparatorElement] ("_comparator") Extensions for comparator
@@ -3261,16 +3037,14 @@ mixin _$Quantity {
   @JsonKey(name: '_unit')
   Element? get unitElement => throw _privateConstructorUsedError;
 
-  /// [system] The identification of the system that provides the coded form
-  ///  of the unit.
+  /// [system] The identification of the system that provides the coded form of the unit.
   FhirUri? get system => throw _privateConstructorUsedError;
 
   /// [systemElement] ("_system") Extensions for system
   @JsonKey(name: '_system')
   Element? get systemElement => throw _privateConstructorUsedError;
 
-  /// [code] A computer processable form of the unit in some unit
-  ///  representation system.
+  /// [code] A computer processable form of the unit in some unit representation system.
   FhirCode? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] ("_code") Extensions for code
@@ -3580,27 +3354,14 @@ class _$_Quantity extends _Quantity {
   factory _$_Quantity.fromJson(Map<String, dynamic> json) =>
       _$$_QuantityFromJson(json);
 
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   @override
   final String? id;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -3611,8 +3372,7 @@ class _$_Quantity extends _Quantity {
     return EqualUnmodifiableListView(value);
   }
 
-  /// [value] The value of the measured amount. The value includes an
-  ///  implicit precision in the presentation of the value.
+  /// [value] The value of the measured amount. The value includes an implicit precision in the presentation of the value.
   @override
   final FhirDecimal? value;
 
@@ -3621,10 +3381,7 @@ class _$_Quantity extends _Quantity {
   @JsonKey(name: '_value')
   final Element? valueElement;
 
-  /// [comparator] How the value should be understood and represented -
-  ///  whether the actual value is greater or less than the stated value due
-  ///  to measurement issues; e.g. if the comparator is "<" , then the real
-  ///  value is < stated value.
+  /// [comparator] How the value should be understood and represented - whether the actual value is greater or less than the stated value due to measurement issues; e.g. if the comparator is "<" , then the real value is < stated value.
   @override
   final QuantityComparator? comparator;
 
@@ -3642,8 +3399,7 @@ class _$_Quantity extends _Quantity {
   @JsonKey(name: '_unit')
   final Element? unitElement;
 
-  /// [system] The identification of the system that provides the coded form
-  ///  of the unit.
+  /// [system] The identification of the system that provides the coded form of the unit.
   @override
   final FhirUri? system;
 
@@ -3652,8 +3408,7 @@ class _$_Quantity extends _Quantity {
   @JsonKey(name: '_system')
   final Element? systemElement;
 
-  /// [code] A computer processable form of the unit in some unit
-  ///  representation system.
+  /// [code] A computer processable form of the unit in some unit representation system.
   @override
   final FhirCode? code;
 
@@ -3744,24 +3499,16 @@ abstract class _Quantity extends Quantity {
 
   @override
 
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id;
   @override
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
 
-  /// [value] The value of the measured amount. The value includes an
-  ///  implicit precision in the presentation of the value.
+  /// [value] The value of the measured amount. The value includes an implicit precision in the presentation of the value.
   FhirDecimal? get value;
   @override
 
@@ -3770,10 +3517,7 @@ abstract class _Quantity extends Quantity {
   Element? get valueElement;
   @override
 
-  /// [comparator] How the value should be understood and represented -
-  ///  whether the actual value is greater or less than the stated value due
-  ///  to measurement issues; e.g. if the comparator is "<" , then the real
-  ///  value is < stated value.
+  /// [comparator] How the value should be understood and represented - whether the actual value is greater or less than the stated value due to measurement issues; e.g. if the comparator is "<" , then the real value is < stated value.
   QuantityComparator? get comparator;
   @override
 
@@ -3791,8 +3535,7 @@ abstract class _Quantity extends Quantity {
   Element? get unitElement;
   @override
 
-  /// [system] The identification of the system that provides the coded form
-  ///  of the unit.
+  /// [system] The identification of the system that provides the coded form of the unit.
   FhirUri? get system;
   @override
 
@@ -3801,8 +3544,7 @@ abstract class _Quantity extends Quantity {
   Element? get systemElement;
   @override
 
-  /// [code] A computer processable form of the unit in some unit
-  ///  representation system.
+  /// [code] A computer processable form of the unit in some unit representation system.
   FhirCode? get code;
   @override
 
@@ -3821,32 +3563,21 @@ FhirDuration _$FhirDurationFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$FhirDuration {
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
-  /// [value] The value of the measured amount. The value includes an
-  ///  implicit precision in the presentation of the value.
+  /// [value] The value of the measured amount. The value includes an implicit precision in the presentation of the value.
   FhirDecimal? get value => throw _privateConstructorUsedError;
 
   /// [valueElement] ("_value") Extensions for value
   @JsonKey(name: '_value')
   Element? get valueElement => throw _privateConstructorUsedError;
 
-  /// [comparator] How the value should be understood and represented -
-  ///  whether the actual value is greater or less than the stated value due
-  ///  to measurement issues; e.g. if the comparator is "<" , then the real
-  ///  value is < stated value.
+  /// [comparator] How the value should be understood and represented - whether the actual value is greater or less than the stated value due to measurement issues; e.g. if the comparator is "<" , then the real value is < stated value.
   DurationComparator? get comparator => throw _privateConstructorUsedError;
 
   /// [comparatorElement] ("_comparator") Extensions for comparator
@@ -3860,16 +3591,14 @@ mixin _$FhirDuration {
   @JsonKey(name: '_unit')
   Element? get unitElement => throw _privateConstructorUsedError;
 
-  /// [system] The identification of the system that provides the coded form
-  ///  of the unit.
+  /// [system] The identification of the system that provides the coded form of the unit.
   FhirUri? get system => throw _privateConstructorUsedError;
 
   /// [systemElement] ("_system") Extensions for system
   @JsonKey(name: '_system')
   Element? get systemElement => throw _privateConstructorUsedError;
 
-  /// [code] A computer processable form of the unit in some unit
-  ///  representation system.
+  /// [code] A computer processable form of the unit in some unit representation system.
   FhirCode? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] ("_code") Extensions for code
@@ -4181,27 +3910,14 @@ class _$_FhirDuration extends _FhirDuration {
   factory _$_FhirDuration.fromJson(Map<String, dynamic> json) =>
       _$$_FhirDurationFromJson(json);
 
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   @override
   final String? id;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -4212,8 +3928,7 @@ class _$_FhirDuration extends _FhirDuration {
     return EqualUnmodifiableListView(value);
   }
 
-  /// [value] The value of the measured amount. The value includes an
-  ///  implicit precision in the presentation of the value.
+  /// [value] The value of the measured amount. The value includes an implicit precision in the presentation of the value.
   @override
   final FhirDecimal? value;
 
@@ -4222,10 +3937,7 @@ class _$_FhirDuration extends _FhirDuration {
   @JsonKey(name: '_value')
   final Element? valueElement;
 
-  /// [comparator] How the value should be understood and represented -
-  ///  whether the actual value is greater or less than the stated value due
-  ///  to measurement issues; e.g. if the comparator is "<" , then the real
-  ///  value is < stated value.
+  /// [comparator] How the value should be understood and represented - whether the actual value is greater or less than the stated value due to measurement issues; e.g. if the comparator is "<" , then the real value is < stated value.
   @override
   final DurationComparator? comparator;
 
@@ -4243,8 +3955,7 @@ class _$_FhirDuration extends _FhirDuration {
   @JsonKey(name: '_unit')
   final Element? unitElement;
 
-  /// [system] The identification of the system that provides the coded form
-  ///  of the unit.
+  /// [system] The identification of the system that provides the coded form of the unit.
   @override
   final FhirUri? system;
 
@@ -4253,8 +3964,7 @@ class _$_FhirDuration extends _FhirDuration {
   @JsonKey(name: '_system')
   final Element? systemElement;
 
-  /// [code] A computer processable form of the unit in some unit
-  ///  representation system.
+  /// [code] A computer processable form of the unit in some unit representation system.
   @override
   final FhirCode? code;
 
@@ -4346,24 +4056,16 @@ abstract class _FhirDuration extends FhirDuration {
 
   @override
 
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id;
   @override
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
 
-  /// [value] The value of the measured amount. The value includes an
-  ///  implicit precision in the presentation of the value.
+  /// [value] The value of the measured amount. The value includes an implicit precision in the presentation of the value.
   FhirDecimal? get value;
   @override
 
@@ -4372,10 +4074,7 @@ abstract class _FhirDuration extends FhirDuration {
   Element? get valueElement;
   @override
 
-  /// [comparator] How the value should be understood and represented -
-  ///  whether the actual value is greater or less than the stated value due
-  ///  to measurement issues; e.g. if the comparator is "<" , then the real
-  ///  value is < stated value.
+  /// [comparator] How the value should be understood and represented - whether the actual value is greater or less than the stated value due to measurement issues; e.g. if the comparator is "<" , then the real value is < stated value.
   DurationComparator? get comparator;
   @override
 
@@ -4393,8 +4092,7 @@ abstract class _FhirDuration extends FhirDuration {
   Element? get unitElement;
   @override
 
-  /// [system] The identification of the system that provides the coded form
-  ///  of the unit.
+  /// [system] The identification of the system that provides the coded form of the unit.
   FhirUri? get system;
   @override
 
@@ -4403,8 +4101,7 @@ abstract class _FhirDuration extends FhirDuration {
   Element? get systemElement;
   @override
 
-  /// [code] A computer processable form of the unit in some unit
-  ///  representation system.
+  /// [code] A computer processable form of the unit in some unit representation system.
   FhirCode? get code;
   @override
 
@@ -4423,32 +4120,21 @@ Distance _$DistanceFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Distance {
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
-  /// [value] The value of the measured amount. The value includes an
-  ///  implicit precision in the presentation of the value.
+  /// [value] The value of the measured amount. The value includes an implicit precision in the presentation of the value.
   FhirDecimal? get value => throw _privateConstructorUsedError;
 
   /// [valueElement] ("_value") Extensions for value
   @JsonKey(name: '_value')
   Element? get valueElement => throw _privateConstructorUsedError;
 
-  /// [comparator] How the value should be understood and represented -
-  ///  whether the actual value is greater or less than the stated value due
-  ///  to measurement issues; e.g. if the comparator is "<" , then the real
-  ///  value is < stated value.
+  /// [comparator] How the value should be understood and represented - whether the actual value is greater or less than the stated value due to measurement issues; e.g. if the comparator is "<" , then the real value is < stated value.
   DistanceComparator? get comparator => throw _privateConstructorUsedError;
 
   /// [comparatorElement] ("_comparator") Extensions for comparator
@@ -4462,16 +4148,14 @@ mixin _$Distance {
   @JsonKey(name: '_unit')
   Element? get unitElement => throw _privateConstructorUsedError;
 
-  /// [system] The identification of the system that provides the coded form
-  ///  of the unit.
+  /// [system] The identification of the system that provides the coded form of the unit.
   FhirUri? get system => throw _privateConstructorUsedError;
 
   /// [systemElement] ("_system") Extensions for system
   @JsonKey(name: '_system')
   Element? get systemElement => throw _privateConstructorUsedError;
 
-  /// [code] A computer processable form of the unit in some unit
-  ///  representation system.
+  /// [code] A computer processable form of the unit in some unit representation system.
   FhirCode? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] ("_code") Extensions for code
@@ -4781,27 +4465,14 @@ class _$_Distance extends _Distance {
   factory _$_Distance.fromJson(Map<String, dynamic> json) =>
       _$$_DistanceFromJson(json);
 
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   @override
   final String? id;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -4812,8 +4483,7 @@ class _$_Distance extends _Distance {
     return EqualUnmodifiableListView(value);
   }
 
-  /// [value] The value of the measured amount. The value includes an
-  ///  implicit precision in the presentation of the value.
+  /// [value] The value of the measured amount. The value includes an implicit precision in the presentation of the value.
   @override
   final FhirDecimal? value;
 
@@ -4822,10 +4492,7 @@ class _$_Distance extends _Distance {
   @JsonKey(name: '_value')
   final Element? valueElement;
 
-  /// [comparator] How the value should be understood and represented -
-  ///  whether the actual value is greater or less than the stated value due
-  ///  to measurement issues; e.g. if the comparator is "<" , then the real
-  ///  value is < stated value.
+  /// [comparator] How the value should be understood and represented - whether the actual value is greater or less than the stated value due to measurement issues; e.g. if the comparator is "<" , then the real value is < stated value.
   @override
   final DistanceComparator? comparator;
 
@@ -4843,8 +4510,7 @@ class _$_Distance extends _Distance {
   @JsonKey(name: '_unit')
   final Element? unitElement;
 
-  /// [system] The identification of the system that provides the coded form
-  ///  of the unit.
+  /// [system] The identification of the system that provides the coded form of the unit.
   @override
   final FhirUri? system;
 
@@ -4853,8 +4519,7 @@ class _$_Distance extends _Distance {
   @JsonKey(name: '_system')
   final Element? systemElement;
 
-  /// [code] A computer processable form of the unit in some unit
-  ///  representation system.
+  /// [code] A computer processable form of the unit in some unit representation system.
   @override
   final FhirCode? code;
 
@@ -4945,24 +4610,16 @@ abstract class _Distance extends Distance {
 
   @override
 
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id;
   @override
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
 
-  /// [value] The value of the measured amount. The value includes an
-  ///  implicit precision in the presentation of the value.
+  /// [value] The value of the measured amount. The value includes an implicit precision in the presentation of the value.
   FhirDecimal? get value;
   @override
 
@@ -4971,10 +4628,7 @@ abstract class _Distance extends Distance {
   Element? get valueElement;
   @override
 
-  /// [comparator] How the value should be understood and represented -
-  ///  whether the actual value is greater or less than the stated value due
-  ///  to measurement issues; e.g. if the comparator is "<" , then the real
-  ///  value is < stated value.
+  /// [comparator] How the value should be understood and represented - whether the actual value is greater or less than the stated value due to measurement issues; e.g. if the comparator is "<" , then the real value is < stated value.
   DistanceComparator? get comparator;
   @override
 
@@ -4992,8 +4646,7 @@ abstract class _Distance extends Distance {
   Element? get unitElement;
   @override
 
-  /// [system] The identification of the system that provides the coded form
-  ///  of the unit.
+  /// [system] The identification of the system that provides the coded form of the unit.
   FhirUri? get system;
   @override
 
@@ -5002,8 +4655,7 @@ abstract class _Distance extends Distance {
   Element? get systemElement;
   @override
 
-  /// [code] A computer processable form of the unit in some unit
-  ///  representation system.
+  /// [code] A computer processable form of the unit in some unit representation system.
   FhirCode? get code;
   @override
 
@@ -5022,32 +4674,21 @@ Count _$CountFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Count {
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
-  /// [value] The value of the measured amount. The value includes an
-  ///  implicit precision in the presentation of the value.
+  /// [value] The value of the measured amount. The value includes an implicit precision in the presentation of the value.
   FhirDecimal? get value => throw _privateConstructorUsedError;
 
   /// [valueElement] ("_value") Extensions for value
   @JsonKey(name: '_value')
   Element? get valueElement => throw _privateConstructorUsedError;
 
-  /// [comparator] How the value should be understood and represented -
-  ///  whether the actual value is greater or less than the stated value due
-  ///  to measurement issues; e.g. if the comparator is "<" , then the real
-  ///  value is < stated value.
+  /// [comparator] How the value should be understood and represented - whether the actual value is greater or less than the stated value due to measurement issues; e.g. if the comparator is "<" , then the real value is < stated value.
   CountComparator? get comparator => throw _privateConstructorUsedError;
 
   /// [comparatorElement] ("_comparator") Extensions for comparator
@@ -5061,16 +4702,14 @@ mixin _$Count {
   @JsonKey(name: '_unit')
   Element? get unitElement => throw _privateConstructorUsedError;
 
-  /// [system] The identification of the system that provides the coded form
-  ///  of the unit.
+  /// [system] The identification of the system that provides the coded form of the unit.
   FhirUri? get system => throw _privateConstructorUsedError;
 
   /// [systemElement] ("_system") Extensions for system
   @JsonKey(name: '_system')
   Element? get systemElement => throw _privateConstructorUsedError;
 
-  /// [code] A computer processable form of the unit in some unit
-  ///  representation system.
+  /// [code] A computer processable form of the unit in some unit representation system.
   FhirCode? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] ("_code") Extensions for code
@@ -5376,27 +5015,14 @@ class _$_Count extends _Count {
   factory _$_Count.fromJson(Map<String, dynamic> json) =>
       _$$_CountFromJson(json);
 
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   @override
   final String? id;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -5407,8 +5033,7 @@ class _$_Count extends _Count {
     return EqualUnmodifiableListView(value);
   }
 
-  /// [value] The value of the measured amount. The value includes an
-  ///  implicit precision in the presentation of the value.
+  /// [value] The value of the measured amount. The value includes an implicit precision in the presentation of the value.
   @override
   final FhirDecimal? value;
 
@@ -5417,10 +5042,7 @@ class _$_Count extends _Count {
   @JsonKey(name: '_value')
   final Element? valueElement;
 
-  /// [comparator] How the value should be understood and represented -
-  ///  whether the actual value is greater or less than the stated value due
-  ///  to measurement issues; e.g. if the comparator is "<" , then the real
-  ///  value is < stated value.
+  /// [comparator] How the value should be understood and represented - whether the actual value is greater or less than the stated value due to measurement issues; e.g. if the comparator is "<" , then the real value is < stated value.
   @override
   final CountComparator? comparator;
 
@@ -5438,8 +5060,7 @@ class _$_Count extends _Count {
   @JsonKey(name: '_unit')
   final Element? unitElement;
 
-  /// [system] The identification of the system that provides the coded form
-  ///  of the unit.
+  /// [system] The identification of the system that provides the coded form of the unit.
   @override
   final FhirUri? system;
 
@@ -5448,8 +5069,7 @@ class _$_Count extends _Count {
   @JsonKey(name: '_system')
   final Element? systemElement;
 
-  /// [code] A computer processable form of the unit in some unit
-  ///  representation system.
+  /// [code] A computer processable form of the unit in some unit representation system.
   @override
   final FhirCode? code;
 
@@ -5540,24 +5160,16 @@ abstract class _Count extends Count {
 
   @override
 
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id;
   @override
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
 
-  /// [value] The value of the measured amount. The value includes an
-  ///  implicit precision in the presentation of the value.
+  /// [value] The value of the measured amount. The value includes an implicit precision in the presentation of the value.
   FhirDecimal? get value;
   @override
 
@@ -5566,10 +5178,7 @@ abstract class _Count extends Count {
   Element? get valueElement;
   @override
 
-  /// [comparator] How the value should be understood and represented -
-  ///  whether the actual value is greater or less than the stated value due
-  ///  to measurement issues; e.g. if the comparator is "<" , then the real
-  ///  value is < stated value.
+  /// [comparator] How the value should be understood and represented - whether the actual value is greater or less than the stated value due to measurement issues; e.g. if the comparator is "<" , then the real value is < stated value.
   CountComparator? get comparator;
   @override
 
@@ -5587,8 +5196,7 @@ abstract class _Count extends Count {
   Element? get unitElement;
   @override
 
-  /// [system] The identification of the system that provides the coded form
-  ///  of the unit.
+  /// [system] The identification of the system that provides the coded form of the unit.
   FhirUri? get system;
   @override
 
@@ -5597,8 +5205,7 @@ abstract class _Count extends Count {
   Element? get systemElement;
   @override
 
-  /// [code] A computer processable form of the unit in some unit
-  ///  representation system.
+  /// [code] A computer processable form of the unit in some unit representation system.
   FhirCode? get code;
   @override
 
@@ -5617,17 +5224,10 @@ Money _$MoneyFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Money {
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
@@ -5821,27 +5421,14 @@ class _$_Money extends _Money {
   factory _$_Money.fromJson(Map<String, dynamic> json) =>
       _$$_MoneyFromJson(json);
 
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   @override
   final String? id;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -5931,18 +5518,11 @@ abstract class _Money extends Money {
 
   @override
 
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id;
   @override
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
@@ -5975,32 +5555,21 @@ Age _$AgeFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Age {
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
-  /// [value] The value of the measured amount. The value includes an
-  ///  implicit precision in the presentation of the value.
+  /// [value] The value of the measured amount. The value includes an implicit precision in the presentation of the value.
   FhirDecimal? get value => throw _privateConstructorUsedError;
 
   /// [valueElement] ("_value") Extensions for value
   @JsonKey(name: '_value')
   Element? get valueElement => throw _privateConstructorUsedError;
 
-  /// [comparator] How the value should be understood and represented -
-  ///  whether the actual value is greater or less than the stated value due
-  ///  to measurement issues; e.g. if the comparator is "<" , then the real
-  ///  value is < stated value.
+  /// [comparator] How the value should be understood and represented - whether the actual value is greater or less than the stated value due to measurement issues; e.g. if the comparator is "<" , then the real value is < stated value.
   AgeComparator? get comparator => throw _privateConstructorUsedError;
 
   /// [comparatorElement] ("_comparator") Extensions for comparator
@@ -6014,16 +5583,14 @@ mixin _$Age {
   @JsonKey(name: '_unit')
   Element? get unitElement => throw _privateConstructorUsedError;
 
-  /// [system] The identification of the system that provides the coded form
-  ///  of the unit.
+  /// [system] The identification of the system that provides the coded form of the unit.
   FhirUri? get system => throw _privateConstructorUsedError;
 
   /// [systemElement] ("_system") Extensions for system
   @JsonKey(name: '_system')
   Element? get systemElement => throw _privateConstructorUsedError;
 
-  /// [code] A computer processable form of the unit in some unit
-  ///  representation system.
+  /// [code] A computer processable form of the unit in some unit representation system.
   FhirCode? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] ("_code") Extensions for code
@@ -6327,27 +5894,14 @@ class _$_Age extends _Age {
 
   factory _$_Age.fromJson(Map<String, dynamic> json) => _$$_AgeFromJson(json);
 
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   @override
   final String? id;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -6358,8 +5912,7 @@ class _$_Age extends _Age {
     return EqualUnmodifiableListView(value);
   }
 
-  /// [value] The value of the measured amount. The value includes an
-  ///  implicit precision in the presentation of the value.
+  /// [value] The value of the measured amount. The value includes an implicit precision in the presentation of the value.
   @override
   final FhirDecimal? value;
 
@@ -6368,10 +5921,7 @@ class _$_Age extends _Age {
   @JsonKey(name: '_value')
   final Element? valueElement;
 
-  /// [comparator] How the value should be understood and represented -
-  ///  whether the actual value is greater or less than the stated value due
-  ///  to measurement issues; e.g. if the comparator is "<" , then the real
-  ///  value is < stated value.
+  /// [comparator] How the value should be understood and represented - whether the actual value is greater or less than the stated value due to measurement issues; e.g. if the comparator is "<" , then the real value is < stated value.
   @override
   final AgeComparator? comparator;
 
@@ -6389,8 +5939,7 @@ class _$_Age extends _Age {
   @JsonKey(name: '_unit')
   final Element? unitElement;
 
-  /// [system] The identification of the system that provides the coded form
-  ///  of the unit.
+  /// [system] The identification of the system that provides the coded form of the unit.
   @override
   final FhirUri? system;
 
@@ -6399,8 +5948,7 @@ class _$_Age extends _Age {
   @JsonKey(name: '_system')
   final Element? systemElement;
 
-  /// [code] A computer processable form of the unit in some unit
-  ///  representation system.
+  /// [code] A computer processable form of the unit in some unit representation system.
   @override
   final FhirCode? code;
 
@@ -6491,24 +6039,16 @@ abstract class _Age extends Age {
 
   @override
 
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id;
   @override
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
 
-  /// [value] The value of the measured amount. The value includes an
-  ///  implicit precision in the presentation of the value.
+  /// [value] The value of the measured amount. The value includes an implicit precision in the presentation of the value.
   FhirDecimal? get value;
   @override
 
@@ -6517,10 +6057,7 @@ abstract class _Age extends Age {
   Element? get valueElement;
   @override
 
-  /// [comparator] How the value should be understood and represented -
-  ///  whether the actual value is greater or less than the stated value due
-  ///  to measurement issues; e.g. if the comparator is "<" , then the real
-  ///  value is < stated value.
+  /// [comparator] How the value should be understood and represented - whether the actual value is greater or less than the stated value due to measurement issues; e.g. if the comparator is "<" , then the real value is < stated value.
   AgeComparator? get comparator;
   @override
 
@@ -6538,8 +6075,7 @@ abstract class _Age extends Age {
   Element? get unitElement;
   @override
 
-  /// [system] The identification of the system that provides the coded form
-  ///  of the unit.
+  /// [system] The identification of the system that provides the coded form of the unit.
   FhirUri? get system;
   @override
 
@@ -6548,8 +6084,7 @@ abstract class _Age extends Age {
   Element? get systemElement;
   @override
 
-  /// [code] A computer processable form of the unit in some unit
-  ///  representation system.
+  /// [code] A computer processable form of the unit in some unit representation system.
   FhirCode? get code;
   @override
 
@@ -6567,17 +6102,10 @@ Range _$RangeFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Range {
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
@@ -6737,27 +6265,14 @@ class _$_Range extends _Range {
   factory _$_Range.fromJson(Map<String, dynamic> json) =>
       _$$_RangeFromJson(json);
 
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   @override
   final String? id;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -6824,18 +6339,11 @@ abstract class _Range extends Range {
 
   @override
 
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id;
   @override
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
@@ -6858,17 +6366,10 @@ Period _$PeriodFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Period {
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
@@ -6879,10 +6380,7 @@ mixin _$Period {
   @JsonKey(name: '_start')
   Element? get startElement => throw _privateConstructorUsedError;
 
-  /// [end] The end of the period. If the end of the period is missing, it
-  ///  means no end was known or planned at the time the instance was
-  ///  created. The start may be in the past, and the end date in the future,
-  ///  which means that period is expected/planned to end at that time.
+  /// [end] The end of the period. If the end of the period is missing, it means no end was known or planned at the time the instance was created. The start may be in the past, and the end date in the future, which means that period is expected/planned to end at that time.
   FhirDateTime? get end => throw _privateConstructorUsedError;
 
   /// [endElement] ("_end") Extensions for end
@@ -7066,27 +6564,14 @@ class _$_Period extends _Period {
   factory _$_Period.fromJson(Map<String, dynamic> json) =>
       _$$_PeriodFromJson(json);
 
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   @override
   final String? id;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -7106,10 +6591,7 @@ class _$_Period extends _Period {
   @JsonKey(name: '_start')
   final Element? startElement;
 
-  /// [end] The end of the period. If the end of the period is missing, it
-  ///  means no end was known or planned at the time the instance was
-  ///  created. The start may be in the past, and the end date in the future,
-  ///  which means that period is expected/planned to end at that time.
+  /// [end] The end of the period. If the end of the period is missing, it means no end was known or planned at the time the instance was created. The start may be in the past, and the end date in the future, which means that period is expected/planned to end at that time.
   @override
   final FhirDateTime? end;
 
@@ -7178,18 +6660,11 @@ abstract class _Period extends Period {
 
   @override
 
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id;
   @override
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
@@ -7203,10 +6678,7 @@ abstract class _Period extends Period {
   Element? get startElement;
   @override
 
-  /// [end] The end of the period. If the end of the period is missing, it
-  ///  means no end was known or planned at the time the instance was
-  ///  created. The start may be in the past, and the end date in the future,
-  ///  which means that period is expected/planned to end at that time.
+  /// [end] The end of the period. If the end of the period is missing, it means no end was known or planned at the time the instance was created. The start may be in the past, and the end date in the future, which means that period is expected/planned to end at that time.
   FhirDateTime? get end;
   @override
 
@@ -7225,17 +6697,10 @@ Ratio _$RatioFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Ratio {
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
@@ -7395,27 +6860,14 @@ class _$_Ratio extends _Ratio {
   factory _$_Ratio.fromJson(Map<String, dynamic> json) =>
       _$$_RatioFromJson(json);
 
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   @override
   final String? id;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -7484,18 +6936,11 @@ abstract class _Ratio extends Ratio {
 
   @override
 
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id;
   @override
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
@@ -7518,17 +6963,10 @@ RatioRange _$RatioRangeFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$RatioRange {
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
@@ -7725,27 +7163,14 @@ class _$_RatioRange extends _RatioRange {
   factory _$_RatioRange.fromJson(Map<String, dynamic> json) =>
       _$$_RatioRangeFromJson(json);
 
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   @override
   final String? id;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -7827,18 +7252,11 @@ abstract class _RatioRange extends RatioRange {
 
   @override
 
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id;
   @override
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
@@ -7865,79 +7283,69 @@ SampledData _$SampledDataFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$SampledData {
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
-  /// [origin] The base quantity that a measured value of zero represents. In
-  ///  addition, this provides the units of the entire measurement series.
+  /// [origin] The base quantity that a measured value of zero represents. In addition, this provides the units of the entire measurement series.
   Quantity get origin => throw _privateConstructorUsedError;
 
-  /// [interval] Amount of intervalUnits between samples, eg. milliseconds
-  ///  for time-based sampling.
+  /// [interval] Amount of intervalUnits between samples, e.g. milliseconds for time-based sampling.
   FhirDecimal? get interval => throw _privateConstructorUsedError;
 
   /// [intervalElement] ("_interval") Extensions for interval
   @JsonKey(name: '_interval')
   Element? get intervalElement => throw _privateConstructorUsedError;
 
-  /// [intervalUnit] The measurement unit in which the sample interval is
-  ///  expressed.
+  /// [intervalUnit] The measurement unit in which the sample interval is expressed.
   FhirCode? get intervalUnit => throw _privateConstructorUsedError;
 
   /// [intervalUnitElement] ("_intervalUnit") Extensions for intervalUnit
   @JsonKey(name: '_intervalUnit')
   Element? get intervalUnitElement => throw _privateConstructorUsedError;
 
-  /// [factor] A correction factor that is applied to the sampled data points
-  ///  before they are added to the origin.
+  /// [factor] A correction factor that is applied to the sampled data points before they are added to the origin.
   FhirDecimal? get factor => throw _privateConstructorUsedError;
 
   /// [factorElement] ("_factor") Extensions for factor
   @JsonKey(name: '_factor')
   Element? get factorElement => throw _privateConstructorUsedError;
 
-  /// [lowerLimit] The lower limit of detection of the measured points. This
-  ///  is needed if any of the data points have the value "L" (lower than
-  ///  detection limit).
+  /// [lowerLimit] The lower limit of detection of the measured points. This is needed if any of the data points have the value "L" (lower than detection limit).
   FhirDecimal? get lowerLimit => throw _privateConstructorUsedError;
 
   /// [lowerLimitElement] ("_lowerLimit") Extensions for lowerLimit
   @JsonKey(name: '_lowerLimit')
   Element? get lowerLimitElement => throw _privateConstructorUsedError;
 
-  /// [upperLimit] The upper limit of detection of the measured points. This
-  ///  is needed if any of the data points have the value "U" (higher than
-  ///  detection limit).
+  /// [upperLimit] The upper limit of detection of the measured points. This is needed if any of the data points have the value "U" (higher than detection limit).
   FhirDecimal? get upperLimit => throw _privateConstructorUsedError;
 
   /// [upperLimitElement] ("_upperLimit") Extensions for upperLimit
   @JsonKey(name: '_upperLimit')
   Element? get upperLimitElement => throw _privateConstructorUsedError;
 
-  /// [dimensions] The number of sample points at each time point. If this
-  ///  value is greater than one, then the dimensions will be interlaced -
-  ///  all the sample points for a point in time will be recorded at once.
+  /// [dimensions] The number of sample points at each time point. If this value is greater than one, then the dimensions will be interlaced - all the sample points for a point in time will be recorded at once.
   FhirPositiveInt? get dimensions => throw _privateConstructorUsedError;
 
   /// [dimensionsElement] ("_dimensions") Extensions for dimensions
   @JsonKey(name: '_dimensions')
   Element? get dimensionsElement => throw _privateConstructorUsedError;
 
-  /// [data] A series of data points which are decimal values separated by a
-  ///  single space (character u20). The special values "E" (error), "L"
-  ///  (below detection limit) and "U" (above detection limit) can also be
-  ///  used in place of a decimal value.
+  /// [codeMap] Reference to ConceptMap that defines the codes used in the data.
+  FhirCanonical? get codeMap => throw _privateConstructorUsedError;
+
+  /// [offsets] A series of data points which are decimal values separated by a single space (character u20).  The units in which the offsets are expressed are found in intervalUnit.  The absolute point at which the measurements begin SHALL be conveyed outside the scope of this datatype, e.g. Observation.effectiveDateTime for a timing offset.
+  String? get offsets => throw _privateConstructorUsedError;
+
+  /// [offsetsElement] ("_offsets") Extensions for offsets
+  @JsonKey(name: '_offsets')
+  Element? get offsetsElement => throw _privateConstructorUsedError;
+
+  /// [data] A series of data points which are decimal values or codes separated by a single space (character u20). The special codes "E" (error), "L" (below detection limit) and "U" (above detection limit) are also defined for used in place of decimal values.
   String? get data => throw _privateConstructorUsedError;
 
   /// [dataElement] ("_data") Extensions for data
@@ -7972,6 +7380,9 @@ abstract class $SampledDataCopyWith<$Res> {
       @JsonKey(name: '_upperLimit') Element? upperLimitElement,
       FhirPositiveInt? dimensions,
       @JsonKey(name: '_dimensions') Element? dimensionsElement,
+      FhirCanonical? codeMap,
+      String? offsets,
+      @JsonKey(name: '_offsets') Element? offsetsElement,
       String? data,
       @JsonKey(name: '_data') Element? dataElement});
 
@@ -7982,6 +7393,7 @@ abstract class $SampledDataCopyWith<$Res> {
   $ElementCopyWith<$Res>? get lowerLimitElement;
   $ElementCopyWith<$Res>? get upperLimitElement;
   $ElementCopyWith<$Res>? get dimensionsElement;
+  $ElementCopyWith<$Res>? get offsetsElement;
   $ElementCopyWith<$Res>? get dataElement;
 }
 
@@ -8013,6 +7425,9 @@ class _$SampledDataCopyWithImpl<$Res, $Val extends SampledData>
     Object? upperLimitElement = freezed,
     Object? dimensions = freezed,
     Object? dimensionsElement = freezed,
+    Object? codeMap = freezed,
+    Object? offsets = freezed,
+    Object? offsetsElement = freezed,
     Object? data = freezed,
     Object? dataElement = freezed,
   }) {
@@ -8076,6 +7491,18 @@ class _$SampledDataCopyWithImpl<$Res, $Val extends SampledData>
       dimensionsElement: freezed == dimensionsElement
           ? _value.dimensionsElement
           : dimensionsElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      codeMap: freezed == codeMap
+          ? _value.codeMap
+          : codeMap // ignore: cast_nullable_to_non_nullable
+              as FhirCanonical?,
+      offsets: freezed == offsets
+          ? _value.offsets
+          : offsets // ignore: cast_nullable_to_non_nullable
+              as String?,
+      offsetsElement: freezed == offsetsElement
+          ? _value.offsetsElement
+          : offsetsElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       data: freezed == data
           ? _value.data
@@ -8170,6 +7597,18 @@ class _$SampledDataCopyWithImpl<$Res, $Val extends SampledData>
 
   @override
   @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get offsetsElement {
+    if (_value.offsetsElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.offsetsElement!, (value) {
+      return _then(_value.copyWith(offsetsElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get dataElement {
     if (_value.dataElement == null) {
       return null;
@@ -8205,6 +7644,9 @@ abstract class _$$_SampledDataCopyWith<$Res>
       @JsonKey(name: '_upperLimit') Element? upperLimitElement,
       FhirPositiveInt? dimensions,
       @JsonKey(name: '_dimensions') Element? dimensionsElement,
+      FhirCanonical? codeMap,
+      String? offsets,
+      @JsonKey(name: '_offsets') Element? offsetsElement,
       String? data,
       @JsonKey(name: '_data') Element? dataElement});
 
@@ -8222,6 +7664,8 @@ abstract class _$$_SampledDataCopyWith<$Res>
   $ElementCopyWith<$Res>? get upperLimitElement;
   @override
   $ElementCopyWith<$Res>? get dimensionsElement;
+  @override
+  $ElementCopyWith<$Res>? get offsetsElement;
   @override
   $ElementCopyWith<$Res>? get dataElement;
 }
@@ -8252,6 +7696,9 @@ class __$$_SampledDataCopyWithImpl<$Res>
     Object? upperLimitElement = freezed,
     Object? dimensions = freezed,
     Object? dimensionsElement = freezed,
+    Object? codeMap = freezed,
+    Object? offsets = freezed,
+    Object? offsetsElement = freezed,
     Object? data = freezed,
     Object? dataElement = freezed,
   }) {
@@ -8316,6 +7763,18 @@ class __$$_SampledDataCopyWithImpl<$Res>
           ? _value.dimensionsElement
           : dimensionsElement // ignore: cast_nullable_to_non_nullable
               as Element?,
+      codeMap: freezed == codeMap
+          ? _value.codeMap
+          : codeMap // ignore: cast_nullable_to_non_nullable
+              as FhirCanonical?,
+      offsets: freezed == offsets
+          ? _value.offsets
+          : offsets // ignore: cast_nullable_to_non_nullable
+              as String?,
+      offsetsElement: freezed == offsetsElement
+          ? _value.offsetsElement
+          : offsetsElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       data: freezed == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
@@ -8347,6 +7806,9 @@ class _$_SampledData extends _SampledData {
       @JsonKey(name: '_upperLimit') this.upperLimitElement,
       this.dimensions,
       @JsonKey(name: '_dimensions') this.dimensionsElement,
+      this.codeMap,
+      this.offsets,
+      @JsonKey(name: '_offsets') this.offsetsElement,
       this.data,
       @JsonKey(name: '_data') this.dataElement})
       : _extension_ = extension_,
@@ -8355,27 +7817,14 @@ class _$_SampledData extends _SampledData {
   factory _$_SampledData.fromJson(Map<String, dynamic> json) =>
       _$$_SampledDataFromJson(json);
 
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   @override
   final String? id;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -8386,13 +7835,11 @@ class _$_SampledData extends _SampledData {
     return EqualUnmodifiableListView(value);
   }
 
-  /// [origin] The base quantity that a measured value of zero represents. In
-  ///  addition, this provides the units of the entire measurement series.
+  /// [origin] The base quantity that a measured value of zero represents. In addition, this provides the units of the entire measurement series.
   @override
   final Quantity origin;
 
-  /// [interval] Amount of intervalUnits between samples, eg. milliseconds
-  ///  for time-based sampling.
+  /// [interval] Amount of intervalUnits between samples, e.g. milliseconds for time-based sampling.
   @override
   final FhirDecimal? interval;
 
@@ -8401,8 +7848,7 @@ class _$_SampledData extends _SampledData {
   @JsonKey(name: '_interval')
   final Element? intervalElement;
 
-  /// [intervalUnit] The measurement unit in which the sample interval is
-  ///  expressed.
+  /// [intervalUnit] The measurement unit in which the sample interval is expressed.
   @override
   final FhirCode? intervalUnit;
 
@@ -8411,8 +7857,7 @@ class _$_SampledData extends _SampledData {
   @JsonKey(name: '_intervalUnit')
   final Element? intervalUnitElement;
 
-  /// [factor] A correction factor that is applied to the sampled data points
-  ///  before they are added to the origin.
+  /// [factor] A correction factor that is applied to the sampled data points before they are added to the origin.
   @override
   final FhirDecimal? factor;
 
@@ -8421,9 +7866,7 @@ class _$_SampledData extends _SampledData {
   @JsonKey(name: '_factor')
   final Element? factorElement;
 
-  /// [lowerLimit] The lower limit of detection of the measured points. This
-  ///  is needed if any of the data points have the value "L" (lower than
-  ///  detection limit).
+  /// [lowerLimit] The lower limit of detection of the measured points. This is needed if any of the data points have the value "L" (lower than detection limit).
   @override
   final FhirDecimal? lowerLimit;
 
@@ -8432,9 +7875,7 @@ class _$_SampledData extends _SampledData {
   @JsonKey(name: '_lowerLimit')
   final Element? lowerLimitElement;
 
-  /// [upperLimit] The upper limit of detection of the measured points. This
-  ///  is needed if any of the data points have the value "U" (higher than
-  ///  detection limit).
+  /// [upperLimit] The upper limit of detection of the measured points. This is needed if any of the data points have the value "U" (higher than detection limit).
   @override
   final FhirDecimal? upperLimit;
 
@@ -8443,9 +7884,7 @@ class _$_SampledData extends _SampledData {
   @JsonKey(name: '_upperLimit')
   final Element? upperLimitElement;
 
-  /// [dimensions] The number of sample points at each time point. If this
-  ///  value is greater than one, then the dimensions will be interlaced -
-  ///  all the sample points for a point in time will be recorded at once.
+  /// [dimensions] The number of sample points at each time point. If this value is greater than one, then the dimensions will be interlaced - all the sample points for a point in time will be recorded at once.
   @override
   final FhirPositiveInt? dimensions;
 
@@ -8454,10 +7893,20 @@ class _$_SampledData extends _SampledData {
   @JsonKey(name: '_dimensions')
   final Element? dimensionsElement;
 
-  /// [data] A series of data points which are decimal values separated by a
-  ///  single space (character u20). The special values "E" (error), "L"
-  ///  (below detection limit) and "U" (above detection limit) can also be
-  ///  used in place of a decimal value.
+  /// [codeMap] Reference to ConceptMap that defines the codes used in the data.
+  @override
+  final FhirCanonical? codeMap;
+
+  /// [offsets] A series of data points which are decimal values separated by a single space (character u20).  The units in which the offsets are expressed are found in intervalUnit.  The absolute point at which the measurements begin SHALL be conveyed outside the scope of this datatype, e.g. Observation.effectiveDateTime for a timing offset.
+  @override
+  final String? offsets;
+
+  /// [offsetsElement] ("_offsets") Extensions for offsets
+  @override
+  @JsonKey(name: '_offsets')
+  final Element? offsetsElement;
+
+  /// [data] A series of data points which are decimal values or codes separated by a single space (character u20). The special codes "E" (error), "L" (below detection limit) and "U" (above detection limit) are also defined for used in place of decimal values.
   @override
   final String? data;
 
@@ -8468,7 +7917,7 @@ class _$_SampledData extends _SampledData {
 
   @override
   String toString() {
-    return 'SampledData(id: $id, extension_: $extension_, origin: $origin, interval: $interval, intervalElement: $intervalElement, intervalUnit: $intervalUnit, intervalUnitElement: $intervalUnitElement, factor: $factor, factorElement: $factorElement, lowerLimit: $lowerLimit, lowerLimitElement: $lowerLimitElement, upperLimit: $upperLimit, upperLimitElement: $upperLimitElement, dimensions: $dimensions, dimensionsElement: $dimensionsElement, data: $data, dataElement: $dataElement)';
+    return 'SampledData(id: $id, extension_: $extension_, origin: $origin, interval: $interval, intervalElement: $intervalElement, intervalUnit: $intervalUnit, intervalUnitElement: $intervalUnitElement, factor: $factor, factorElement: $factorElement, lowerLimit: $lowerLimit, lowerLimitElement: $lowerLimitElement, upperLimit: $upperLimit, upperLimitElement: $upperLimitElement, dimensions: $dimensions, dimensionsElement: $dimensionsElement, codeMap: $codeMap, offsets: $offsets, offsetsElement: $offsetsElement, data: $data, dataElement: $dataElement)';
   }
 
   @override
@@ -8503,6 +7952,10 @@ class _$_SampledData extends _SampledData {
                 other.dimensions == dimensions) &&
             (identical(other.dimensionsElement, dimensionsElement) ||
                 other.dimensionsElement == dimensionsElement) &&
+            (identical(other.codeMap, codeMap) || other.codeMap == codeMap) &&
+            (identical(other.offsets, offsets) || other.offsets == offsets) &&
+            (identical(other.offsetsElement, offsetsElement) ||
+                other.offsetsElement == offsetsElement) &&
             (identical(other.data, data) || other.data == data) &&
             (identical(other.dataElement, dataElement) ||
                 other.dataElement == dataElement));
@@ -8510,25 +7963,29 @@ class _$_SampledData extends _SampledData {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      id,
-      const DeepCollectionEquality().hash(_extension_),
-      origin,
-      interval,
-      intervalElement,
-      intervalUnit,
-      intervalUnitElement,
-      factor,
-      factorElement,
-      lowerLimit,
-      lowerLimitElement,
-      upperLimit,
-      upperLimitElement,
-      dimensions,
-      dimensionsElement,
-      data,
-      dataElement);
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        id,
+        const DeepCollectionEquality().hash(_extension_),
+        origin,
+        interval,
+        intervalElement,
+        intervalUnit,
+        intervalUnitElement,
+        factor,
+        factorElement,
+        lowerLimit,
+        lowerLimitElement,
+        upperLimit,
+        upperLimitElement,
+        dimensions,
+        dimensionsElement,
+        codeMap,
+        offsets,
+        offsetsElement,
+        data,
+        dataElement
+      ]);
 
   @JsonKey(ignore: true)
   @override
@@ -8561,6 +8018,9 @@ abstract class _SampledData extends SampledData {
       @JsonKey(name: '_upperLimit') final Element? upperLimitElement,
       final FhirPositiveInt? dimensions,
       @JsonKey(name: '_dimensions') final Element? dimensionsElement,
+      final FhirCanonical? codeMap,
+      final String? offsets,
+      @JsonKey(name: '_offsets') final Element? offsetsElement,
       final String? data,
       @JsonKey(name: '_data') final Element? dataElement}) = _$_SampledData;
   _SampledData._() : super._();
@@ -8570,29 +8030,20 @@ abstract class _SampledData extends SampledData {
 
   @override
 
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id;
   @override
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
 
-  /// [origin] The base quantity that a measured value of zero represents. In
-  ///  addition, this provides the units of the entire measurement series.
+  /// [origin] The base quantity that a measured value of zero represents. In addition, this provides the units of the entire measurement series.
   Quantity get origin;
   @override
 
-  /// [interval] Amount of intervalUnits between samples, eg. milliseconds
-  ///  for time-based sampling.
+  /// [interval] Amount of intervalUnits between samples, e.g. milliseconds for time-based sampling.
   FhirDecimal? get interval;
   @override
 
@@ -8601,8 +8052,7 @@ abstract class _SampledData extends SampledData {
   Element? get intervalElement;
   @override
 
-  /// [intervalUnit] The measurement unit in which the sample interval is
-  ///  expressed.
+  /// [intervalUnit] The measurement unit in which the sample interval is expressed.
   FhirCode? get intervalUnit;
   @override
 
@@ -8611,8 +8061,7 @@ abstract class _SampledData extends SampledData {
   Element? get intervalUnitElement;
   @override
 
-  /// [factor] A correction factor that is applied to the sampled data points
-  ///  before they are added to the origin.
+  /// [factor] A correction factor that is applied to the sampled data points before they are added to the origin.
   FhirDecimal? get factor;
   @override
 
@@ -8621,9 +8070,7 @@ abstract class _SampledData extends SampledData {
   Element? get factorElement;
   @override
 
-  /// [lowerLimit] The lower limit of detection of the measured points. This
-  ///  is needed if any of the data points have the value "L" (lower than
-  ///  detection limit).
+  /// [lowerLimit] The lower limit of detection of the measured points. This is needed if any of the data points have the value "L" (lower than detection limit).
   FhirDecimal? get lowerLimit;
   @override
 
@@ -8632,9 +8079,7 @@ abstract class _SampledData extends SampledData {
   Element? get lowerLimitElement;
   @override
 
-  /// [upperLimit] The upper limit of detection of the measured points. This
-  ///  is needed if any of the data points have the value "U" (higher than
-  ///  detection limit).
+  /// [upperLimit] The upper limit of detection of the measured points. This is needed if any of the data points have the value "U" (higher than detection limit).
   FhirDecimal? get upperLimit;
   @override
 
@@ -8643,9 +8088,7 @@ abstract class _SampledData extends SampledData {
   Element? get upperLimitElement;
   @override
 
-  /// [dimensions] The number of sample points at each time point. If this
-  ///  value is greater than one, then the dimensions will be interlaced -
-  ///  all the sample points for a point in time will be recorded at once.
+  /// [dimensions] The number of sample points at each time point. If this value is greater than one, then the dimensions will be interlaced - all the sample points for a point in time will be recorded at once.
   FhirPositiveInt? get dimensions;
   @override
 
@@ -8654,10 +8097,20 @@ abstract class _SampledData extends SampledData {
   Element? get dimensionsElement;
   @override
 
-  /// [data] A series of data points which are decimal values separated by a
-  ///  single space (character u20). The special values "E" (error), "L"
-  ///  (below detection limit) and "U" (above detection limit) can also be
-  ///  used in place of a decimal value.
+  /// [codeMap] Reference to ConceptMap that defines the codes used in the data.
+  FhirCanonical? get codeMap;
+  @override
+
+  /// [offsets] A series of data points which are decimal values separated by a single space (character u20).  The units in which the offsets are expressed are found in intervalUnit.  The absolute point at which the measurements begin SHALL be conveyed outside the scope of this datatype, e.g. Observation.effectiveDateTime for a timing offset.
+  String? get offsets;
+  @override
+
+  /// [offsetsElement] ("_offsets") Extensions for offsets
+  @JsonKey(name: '_offsets')
+  Element? get offsetsElement;
+  @override
+
+  /// [data] A series of data points which are decimal values or codes separated by a single space (character u20). The special codes "E" (error), "L" (below detection limit) and "U" (above detection limit) are also defined for used in place of decimal values.
   String? get data;
   @override
 
@@ -8676,24 +8129,14 @@ Signature _$SignatureFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Signature {
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
-  /// [type] An indication of the reason that the entity signed this
-  ///  document. This may be explicitly included as part of the signature
-  ///  information and can be used when determining accountability for
-  ///  various actions concerning the document.
+  /// [type] An indication of the reason that the entity signed this document. This may be explicitly included as part of the signature information and can be used when determining accountability for various actions concerning the document.
   List<Coding>? get type => throw _privateConstructorUsedError;
 
   /// [when] When the digital signature was signed.
@@ -8703,34 +8146,27 @@ mixin _$Signature {
   @JsonKey(name: '_when')
   Element? get whenElement => throw _privateConstructorUsedError;
 
-  /// [who] A reference to an application-usable description of the identity
-  ///  that signed  (e.g. the signature used their private key).
+  /// [who] A reference to an application-usable description of the identity that signed  (e.g. the signature used their private key).
   Reference? get who => throw _privateConstructorUsedError;
 
-  /// [onBehalfOf] A reference to an application-usable description of the
-  ///  identity that is represented by the signature.
+  /// [onBehalfOf] A reference to an application-usable description of the identity that is represented by the signature.
   Reference? get onBehalfOf => throw _privateConstructorUsedError;
 
-  /// [targetFormat] A mime type that indicates the technical format of the
-  ///  target resources signed by the signature.
+  /// [targetFormat] A mime type that indicates the technical format of the target resources signed by the signature.
   FhirCode? get targetFormat => throw _privateConstructorUsedError;
 
   /// [targetFormatElement] ("_targetFormat") Extensions for targetFormat
   @JsonKey(name: '_targetFormat')
   Element? get targetFormatElement => throw _privateConstructorUsedError;
 
-  /// [sigFormat] A mime type that indicates the technical format of the
-  ///  signature. Important mime types are application/signature+xml for X ML
-  ///  DigSig, application/jose for JWS, and image/* for a graphical image of
-  ///  a signature, etc.
+  /// [sigFormat] A mime type that indicates the technical format of the signature. Important mime types are application/signature+xml for X ML DigSig, application/jose for JWS, and image/* for a graphical image of a signature, etc.
   FhirCode? get sigFormat => throw _privateConstructorUsedError;
 
   /// [sigFormatElement] ("_sigFormat") Extensions for sigFormat
   @JsonKey(name: '_sigFormat')
   Element? get sigFormatElement => throw _privateConstructorUsedError;
 
-  /// [data] The base64 encoding of the Signature content. When signature is
-  ///  not recorded electronically this element would be empty.
+  /// [data] The base64 encoding of the Signature content. When signature is not recorded electronically this element would be empty.
   FhirBase64Binary? get data => throw _privateConstructorUsedError;
 
   /// [dataElement] ("_data") Extensions for data
@@ -9069,27 +8505,14 @@ class _$_Signature extends _Signature {
   factory _$_Signature.fromJson(Map<String, dynamic> json) =>
       _$$_SignatureFromJson(json);
 
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   @override
   final String? id;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -9100,16 +8523,10 @@ class _$_Signature extends _Signature {
     return EqualUnmodifiableListView(value);
   }
 
-  /// [type] An indication of the reason that the entity signed this
-  ///  document. This may be explicitly included as part of the signature
-  ///  information and can be used when determining accountability for
-  ///  various actions concerning the document.
+  /// [type] An indication of the reason that the entity signed this document. This may be explicitly included as part of the signature information and can be used when determining accountability for various actions concerning the document.
   final List<Coding>? _type;
 
-  /// [type] An indication of the reason that the entity signed this
-  ///  document. This may be explicitly included as part of the signature
-  ///  information and can be used when determining accountability for
-  ///  various actions concerning the document.
+  /// [type] An indication of the reason that the entity signed this document. This may be explicitly included as part of the signature information and can be used when determining accountability for various actions concerning the document.
   @override
   List<Coding>? get type {
     final value = _type;
@@ -9128,18 +8545,15 @@ class _$_Signature extends _Signature {
   @JsonKey(name: '_when')
   final Element? whenElement;
 
-  /// [who] A reference to an application-usable description of the identity
-  ///  that signed  (e.g. the signature used their private key).
+  /// [who] A reference to an application-usable description of the identity that signed  (e.g. the signature used their private key).
   @override
   final Reference? who;
 
-  /// [onBehalfOf] A reference to an application-usable description of the
-  ///  identity that is represented by the signature.
+  /// [onBehalfOf] A reference to an application-usable description of the identity that is represented by the signature.
   @override
   final Reference? onBehalfOf;
 
-  /// [targetFormat] A mime type that indicates the technical format of the
-  ///  target resources signed by the signature.
+  /// [targetFormat] A mime type that indicates the technical format of the target resources signed by the signature.
   @override
   final FhirCode? targetFormat;
 
@@ -9148,10 +8562,7 @@ class _$_Signature extends _Signature {
   @JsonKey(name: '_targetFormat')
   final Element? targetFormatElement;
 
-  /// [sigFormat] A mime type that indicates the technical format of the
-  ///  signature. Important mime types are application/signature+xml for X ML
-  ///  DigSig, application/jose for JWS, and image/* for a graphical image of
-  ///  a signature, etc.
+  /// [sigFormat] A mime type that indicates the technical format of the signature. Important mime types are application/signature+xml for X ML DigSig, application/jose for JWS, and image/* for a graphical image of a signature, etc.
   @override
   final FhirCode? sigFormat;
 
@@ -9160,8 +8571,7 @@ class _$_Signature extends _Signature {
   @JsonKey(name: '_sigFormat')
   final Element? sigFormatElement;
 
-  /// [data] The base64 encoding of the Signature content. When signature is
-  ///  not recorded electronically this element would be empty.
+  /// [data] The base64 encoding of the Signature content. When signature is not recorded electronically this element would be empty.
   @override
   final FhirBase64Binary? data;
 
@@ -9257,26 +8667,16 @@ abstract class _Signature extends Signature {
 
   @override
 
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id;
   @override
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
 
-  /// [type] An indication of the reason that the entity signed this
-  ///  document. This may be explicitly included as part of the signature
-  ///  information and can be used when determining accountability for
-  ///  various actions concerning the document.
+  /// [type] An indication of the reason that the entity signed this document. This may be explicitly included as part of the signature information and can be used when determining accountability for various actions concerning the document.
   List<Coding>? get type;
   @override
 
@@ -9289,18 +8689,15 @@ abstract class _Signature extends Signature {
   Element? get whenElement;
   @override
 
-  /// [who] A reference to an application-usable description of the identity
-  ///  that signed  (e.g. the signature used their private key).
+  /// [who] A reference to an application-usable description of the identity that signed  (e.g. the signature used their private key).
   Reference? get who;
   @override
 
-  /// [onBehalfOf] A reference to an application-usable description of the
-  ///  identity that is represented by the signature.
+  /// [onBehalfOf] A reference to an application-usable description of the identity that is represented by the signature.
   Reference? get onBehalfOf;
   @override
 
-  /// [targetFormat] A mime type that indicates the technical format of the
-  ///  target resources signed by the signature.
+  /// [targetFormat] A mime type that indicates the technical format of the target resources signed by the signature.
   FhirCode? get targetFormat;
   @override
 
@@ -9309,10 +8706,7 @@ abstract class _Signature extends Signature {
   Element? get targetFormatElement;
   @override
 
-  /// [sigFormat] A mime type that indicates the technical format of the
-  ///  signature. Important mime types are application/signature+xml for X ML
-  ///  DigSig, application/jose for JWS, and image/* for a graphical image of
-  ///  a signature, etc.
+  /// [sigFormat] A mime type that indicates the technical format of the signature. Important mime types are application/signature+xml for X ML DigSig, application/jose for JWS, and image/* for a graphical image of a signature, etc.
   FhirCode? get sigFormat;
   @override
 
@@ -9321,8 +8715,7 @@ abstract class _Signature extends Signature {
   Element? get sigFormatElement;
   @override
 
-  /// [data] The base64 encoding of the Signature content. When signature is
-  ///  not recorded electronically this element would be empty.
+  /// [data] The base64 encoding of the Signature content. When signature is not recorded electronically this element would be empty.
   FhirBase64Binary? get data;
   @override
 
@@ -9341,17 +8734,10 @@ HumanName _$HumanNameFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$HumanName {
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
@@ -9362,18 +8748,14 @@ mixin _$HumanName {
   @JsonKey(name: '_use')
   Element? get useElement => throw _privateConstructorUsedError;
 
-  /// [text] Specifies the entire name as it should be displayed e.g. on an
-  ///  application UI. This may be provided instead of or as well as the
-  ///  specific parts.
+  /// [text] Specifies the entire name as it should be displayed e.g. on an application UI. This may be provided instead of or as well as the specific parts.
   String? get text => throw _privateConstructorUsedError;
 
   /// [textElement] ("_text") Extensions for text
   @JsonKey(name: '_text')
   Element? get textElement => throw _privateConstructorUsedError;
 
-  /// [family] The part of a name that links to the genealogy. In some
-  ///  cultures (e.g. Eritrea) the family name of a son is the first name of
-  ///  his father.
+  /// [family] The part of a name that links to the genealogy. In some cultures (e.g. Eritrea) the family name of a son is the first name of his father.
   String? get family => throw _privateConstructorUsedError;
 
   /// [familyElement] ("_family") Extensions for family
@@ -9387,26 +8769,21 @@ mixin _$HumanName {
   @JsonKey(name: '_given')
   List<Element>? get givenElement => throw _privateConstructorUsedError;
 
-  /// [prefix] Part of the name that is acquired as a title due to academic,
-  ///  legal, employment or nobility status, etc. and that appears at the
-  ///  start of the name.
+  /// [prefix] Part of the name that is acquired as a title due to academic, legal, employment or nobility status, etc. and that appears at the start of the name.
   List<String>? get prefix => throw _privateConstructorUsedError;
 
   /// [prefixElement] ("_prefix") Extensions for prefix
   @JsonKey(name: '_prefix')
   List<Element>? get prefixElement => throw _privateConstructorUsedError;
 
-  /// [suffix] Part of the name that is acquired as a title due to academic,
-  ///  legal, employment or nobility status, etc. and that appears at the end
-  ///  of the name.
+  /// [suffix] Part of the name that is acquired as a title due to academic, legal, employment or nobility status, etc. and that appears at the end of the name.
   List<String>? get suffix => throw _privateConstructorUsedError;
 
   /// [suffixElement] ("_suffix") Extensions for suffix
   @JsonKey(name: '_suffix')
   List<Element>? get suffixElement => throw _privateConstructorUsedError;
 
-  /// [period] Indicates the period of time when this name was valid for the
-  ///  named person.
+  /// [period] Indicates the period of time when this name was valid for the named person.
   Period? get period => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -9742,27 +9119,14 @@ class _$_HumanName extends _HumanName {
   factory _$_HumanName.fromJson(Map<String, dynamic> json) =>
       _$$_HumanNameFromJson(json);
 
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   @override
   final String? id;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -9782,9 +9146,7 @@ class _$_HumanName extends _HumanName {
   @JsonKey(name: '_use')
   final Element? useElement;
 
-  /// [text] Specifies the entire name as it should be displayed e.g. on an
-  ///  application UI. This may be provided instead of or as well as the
-  ///  specific parts.
+  /// [text] Specifies the entire name as it should be displayed e.g. on an application UI. This may be provided instead of or as well as the specific parts.
   @override
   final String? text;
 
@@ -9793,9 +9155,7 @@ class _$_HumanName extends _HumanName {
   @JsonKey(name: '_text')
   final Element? textElement;
 
-  /// [family] The part of a name that links to the genealogy. In some
-  ///  cultures (e.g. Eritrea) the family name of a son is the first name of
-  ///  his father.
+  /// [family] The part of a name that links to the genealogy. In some cultures (e.g. Eritrea) the family name of a son is the first name of his father.
   @override
   final String? family;
 
@@ -9831,14 +9191,10 @@ class _$_HumanName extends _HumanName {
     return EqualUnmodifiableListView(value);
   }
 
-  /// [prefix] Part of the name that is acquired as a title due to academic,
-  ///  legal, employment or nobility status, etc. and that appears at the
-  ///  start of the name.
+  /// [prefix] Part of the name that is acquired as a title due to academic, legal, employment or nobility status, etc. and that appears at the start of the name.
   final List<String>? _prefix;
 
-  /// [prefix] Part of the name that is acquired as a title due to academic,
-  ///  legal, employment or nobility status, etc. and that appears at the
-  ///  start of the name.
+  /// [prefix] Part of the name that is acquired as a title due to academic, legal, employment or nobility status, etc. and that appears at the start of the name.
   @override
   List<String>? get prefix {
     final value = _prefix;
@@ -9862,14 +9218,10 @@ class _$_HumanName extends _HumanName {
     return EqualUnmodifiableListView(value);
   }
 
-  /// [suffix] Part of the name that is acquired as a title due to academic,
-  ///  legal, employment or nobility status, etc. and that appears at the end
-  ///  of the name.
+  /// [suffix] Part of the name that is acquired as a title due to academic, legal, employment or nobility status, etc. and that appears at the end of the name.
   final List<String>? _suffix;
 
-  /// [suffix] Part of the name that is acquired as a title due to academic,
-  ///  legal, employment or nobility status, etc. and that appears at the end
-  ///  of the name.
+  /// [suffix] Part of the name that is acquired as a title due to academic, legal, employment or nobility status, etc. and that appears at the end of the name.
   @override
   List<String>? get suffix {
     final value = _suffix;
@@ -9893,8 +9245,7 @@ class _$_HumanName extends _HumanName {
     return EqualUnmodifiableListView(value);
   }
 
-  /// [period] Indicates the period of time when this name was valid for the
-  ///  named person.
+  /// [period] Indicates the period of time when this name was valid for the named person.
   @override
   final Period? period;
 
@@ -9990,18 +9341,11 @@ abstract class _HumanName extends HumanName {
 
   @override
 
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id;
   @override
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
@@ -10015,9 +9359,7 @@ abstract class _HumanName extends HumanName {
   Element? get useElement;
   @override
 
-  /// [text] Specifies the entire name as it should be displayed e.g. on an
-  ///  application UI. This may be provided instead of or as well as the
-  ///  specific parts.
+  /// [text] Specifies the entire name as it should be displayed e.g. on an application UI. This may be provided instead of or as well as the specific parts.
   String? get text;
   @override
 
@@ -10026,9 +9368,7 @@ abstract class _HumanName extends HumanName {
   Element? get textElement;
   @override
 
-  /// [family] The part of a name that links to the genealogy. In some
-  ///  cultures (e.g. Eritrea) the family name of a son is the first name of
-  ///  his father.
+  /// [family] The part of a name that links to the genealogy. In some cultures (e.g. Eritrea) the family name of a son is the first name of his father.
   String? get family;
   @override
 
@@ -10046,9 +9386,7 @@ abstract class _HumanName extends HumanName {
   List<Element>? get givenElement;
   @override
 
-  /// [prefix] Part of the name that is acquired as a title due to academic,
-  ///  legal, employment or nobility status, etc. and that appears at the
-  ///  start of the name.
+  /// [prefix] Part of the name that is acquired as a title due to academic, legal, employment or nobility status, etc. and that appears at the start of the name.
   List<String>? get prefix;
   @override
 
@@ -10057,9 +9395,7 @@ abstract class _HumanName extends HumanName {
   List<Element>? get prefixElement;
   @override
 
-  /// [suffix] Part of the name that is acquired as a title due to academic,
-  ///  legal, employment or nobility status, etc. and that appears at the end
-  ///  of the name.
+  /// [suffix] Part of the name that is acquired as a title due to academic, legal, employment or nobility status, etc. and that appears at the end of the name.
   List<String>? get suffix;
   @override
 
@@ -10068,8 +9404,7 @@ abstract class _HumanName extends HumanName {
   List<Element>? get suffixElement;
   @override
 
-  /// [period] Indicates the period of time when this name was valid for the
-  ///  named person.
+  /// [period] Indicates the period of time when this name was valid for the named person.
   Period? get period;
   @override
   @JsonKey(ignore: true)
@@ -10083,17 +9418,10 @@ Address _$AddressFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Address {
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
@@ -10104,35 +9432,28 @@ mixin _$Address {
   @JsonKey(name: '_use')
   Element? get useElement => throw _privateConstructorUsedError;
 
-  /// [type] Distinguishes between physical addresses (those you can visit)
-  ///  and mailing addresses (e.g. PO Boxes and care-of addresses). Most
-  ///  addresses are both.
+  /// [type] Distinguishes between physical addresses (those you can visit) and mailing addresses (e.g. PO Boxes and care-of addresses). Most addresses are both.
   AddressType? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] ("_type") Extensions for type
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
 
-  /// [text] Specifies the entire address as it should be displayed e.g. on a
-  ///  postal label. This may be provided instead of or as well as the
-  ///  specific parts.
+  /// [text] Specifies the entire address as it should be displayed e.g. on a postal label. This may be provided instead of or as well as the specific parts.
   String? get text => throw _privateConstructorUsedError;
 
   /// [textElement] ("_text") Extensions for text
   @JsonKey(name: '_text')
   Element? get textElement => throw _privateConstructorUsedError;
 
-  /// [line] This component contains the house number, apartment number,
-  ///  street name, street direction,  P.O. Box number, delivery hints, and
-  ///  similar address information.
+  /// [line] This component contains the house number, apartment number, street name, street direction,  P.O. Box number, delivery hints, and similar address information.
   List<String>? get line => throw _privateConstructorUsedError;
 
   /// [lineElement] ("_line") Extensions for line
   @JsonKey(name: '_line')
   List<Element>? get lineElement => throw _privateConstructorUsedError;
 
-  /// [city] The name of the city, town, suburb, village or other community
-  ///  or delivery center.
+  /// [city] The name of the city, town, suburb, village or other community or delivery center.
   String? get city => throw _privateConstructorUsedError;
 
   /// [cityElement] ("_city") Extensions for city
@@ -10146,25 +9467,21 @@ mixin _$Address {
   @JsonKey(name: '_district')
   Element? get districtElement => throw _privateConstructorUsedError;
 
-  /// [state] Sub-unit of a country with limited sovereignty in a federally
-  ///  organized country. A code may be used if codes are in common use (e.g.
-  ///  US 2 letter state codes).
+  /// [state] Sub-unit of a country with limited sovereignty in a federally organized country. A code may be used if codes are in common use (e.g. US 2 letter state codes).
   String? get state => throw _privateConstructorUsedError;
 
   /// [stateElement] ("_state") Extensions for state
   @JsonKey(name: '_state')
   Element? get stateElement => throw _privateConstructorUsedError;
 
-  /// [postalCode] A postal code designating a region defined by the postal
-  ///  service.
+  /// [postalCode] A postal code designating a region defined by the postal service.
   String? get postalCode => throw _privateConstructorUsedError;
 
   /// [postalCodeElement] ("_postalCode") Extensions for postalCode
   @JsonKey(name: '_postalCode')
   Element? get postalCodeElement => throw _privateConstructorUsedError;
 
-  /// [country] Country - a nation as commonly understood or generally
-  ///  accepted.
+  /// [country] Country - a nation as commonly understood or generally accepted.
   String? get country => throw _privateConstructorUsedError;
 
   /// [countryElement] ("_country") Extensions for country
@@ -10654,27 +9971,14 @@ class _$_Address extends _Address {
   factory _$_Address.fromJson(Map<String, dynamic> json) =>
       _$$_AddressFromJson(json);
 
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   @override
   final String? id;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -10694,9 +9998,7 @@ class _$_Address extends _Address {
   @JsonKey(name: '_use')
   final Element? useElement;
 
-  /// [type] Distinguishes between physical addresses (those you can visit)
-  ///  and mailing addresses (e.g. PO Boxes and care-of addresses). Most
-  ///  addresses are both.
+  /// [type] Distinguishes between physical addresses (those you can visit) and mailing addresses (e.g. PO Boxes and care-of addresses). Most addresses are both.
   @override
   final AddressType? type;
 
@@ -10705,9 +10007,7 @@ class _$_Address extends _Address {
   @JsonKey(name: '_type')
   final Element? typeElement;
 
-  /// [text] Specifies the entire address as it should be displayed e.g. on a
-  ///  postal label. This may be provided instead of or as well as the
-  ///  specific parts.
+  /// [text] Specifies the entire address as it should be displayed e.g. on a postal label. This may be provided instead of or as well as the specific parts.
   @override
   final String? text;
 
@@ -10716,14 +10016,10 @@ class _$_Address extends _Address {
   @JsonKey(name: '_text')
   final Element? textElement;
 
-  /// [line] This component contains the house number, apartment number,
-  ///  street name, street direction,  P.O. Box number, delivery hints, and
-  ///  similar address information.
+  /// [line] This component contains the house number, apartment number, street name, street direction,  P.O. Box number, delivery hints, and similar address information.
   final List<String>? _line;
 
-  /// [line] This component contains the house number, apartment number,
-  ///  street name, street direction,  P.O. Box number, delivery hints, and
-  ///  similar address information.
+  /// [line] This component contains the house number, apartment number, street name, street direction,  P.O. Box number, delivery hints, and similar address information.
   @override
   List<String>? get line {
     final value = _line;
@@ -10747,8 +10043,7 @@ class _$_Address extends _Address {
     return EqualUnmodifiableListView(value);
   }
 
-  /// [city] The name of the city, town, suburb, village or other community
-  ///  or delivery center.
+  /// [city] The name of the city, town, suburb, village or other community or delivery center.
   @override
   final String? city;
 
@@ -10766,9 +10061,7 @@ class _$_Address extends _Address {
   @JsonKey(name: '_district')
   final Element? districtElement;
 
-  /// [state] Sub-unit of a country with limited sovereignty in a federally
-  ///  organized country. A code may be used if codes are in common use (e.g.
-  ///  US 2 letter state codes).
+  /// [state] Sub-unit of a country with limited sovereignty in a federally organized country. A code may be used if codes are in common use (e.g. US 2 letter state codes).
   @override
   final String? state;
 
@@ -10777,8 +10070,7 @@ class _$_Address extends _Address {
   @JsonKey(name: '_state')
   final Element? stateElement;
 
-  /// [postalCode] A postal code designating a region defined by the postal
-  ///  service.
+  /// [postalCode] A postal code designating a region defined by the postal service.
   @override
   final String? postalCode;
 
@@ -10787,8 +10079,7 @@ class _$_Address extends _Address {
   @JsonKey(name: '_postalCode')
   final Element? postalCodeElement;
 
-  /// [country] Country - a nation as commonly understood or generally
-  ///  accepted.
+  /// [country] Country - a nation as commonly understood or generally accepted.
   @override
   final String? country;
 
@@ -10916,18 +10207,11 @@ abstract class _Address extends Address {
 
   @override
 
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id;
   @override
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
@@ -10941,9 +10225,7 @@ abstract class _Address extends Address {
   Element? get useElement;
   @override
 
-  /// [type] Distinguishes between physical addresses (those you can visit)
-  ///  and mailing addresses (e.g. PO Boxes and care-of addresses). Most
-  ///  addresses are both.
+  /// [type] Distinguishes between physical addresses (those you can visit) and mailing addresses (e.g. PO Boxes and care-of addresses). Most addresses are both.
   AddressType? get type;
   @override
 
@@ -10952,9 +10234,7 @@ abstract class _Address extends Address {
   Element? get typeElement;
   @override
 
-  /// [text] Specifies the entire address as it should be displayed e.g. on a
-  ///  postal label. This may be provided instead of or as well as the
-  ///  specific parts.
+  /// [text] Specifies the entire address as it should be displayed e.g. on a postal label. This may be provided instead of or as well as the specific parts.
   String? get text;
   @override
 
@@ -10963,9 +10243,7 @@ abstract class _Address extends Address {
   Element? get textElement;
   @override
 
-  /// [line] This component contains the house number, apartment number,
-  ///  street name, street direction,  P.O. Box number, delivery hints, and
-  ///  similar address information.
+  /// [line] This component contains the house number, apartment number, street name, street direction,  P.O. Box number, delivery hints, and similar address information.
   List<String>? get line;
   @override
 
@@ -10974,8 +10252,7 @@ abstract class _Address extends Address {
   List<Element>? get lineElement;
   @override
 
-  /// [city] The name of the city, town, suburb, village or other community
-  ///  or delivery center.
+  /// [city] The name of the city, town, suburb, village or other community or delivery center.
   String? get city;
   @override
 
@@ -10993,9 +10270,7 @@ abstract class _Address extends Address {
   Element? get districtElement;
   @override
 
-  /// [state] Sub-unit of a country with limited sovereignty in a federally
-  ///  organized country. A code may be used if codes are in common use (e.g.
-  ///  US 2 letter state codes).
+  /// [state] Sub-unit of a country with limited sovereignty in a federally organized country. A code may be used if codes are in common use (e.g. US 2 letter state codes).
   String? get state;
   @override
 
@@ -11004,8 +10279,7 @@ abstract class _Address extends Address {
   Element? get stateElement;
   @override
 
-  /// [postalCode] A postal code designating a region defined by the postal
-  ///  service.
+  /// [postalCode] A postal code designating a region defined by the postal service.
   String? get postalCode;
   @override
 
@@ -11014,8 +10288,7 @@ abstract class _Address extends Address {
   Element? get postalCodeElement;
   @override
 
-  /// [country] Country - a nation as commonly understood or generally
-  ///  accepted.
+  /// [country] Country - a nation as commonly understood or generally accepted.
   String? get country;
   @override
 
@@ -11038,31 +10311,21 @@ ContactPoint _$ContactPointFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ContactPoint {
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
-  /// [system] Telecommunications form for contact point - what
-  ///  communications system is required to make use of the contact.
+  /// [system] Telecommunications form for contact point - what communications system is required to make use of the contact.
   ContactPointSystem? get system => throw _privateConstructorUsedError;
 
   /// [systemElement] ("_system") Extensions for system
   @JsonKey(name: '_system')
   Element? get systemElement => throw _privateConstructorUsedError;
 
-  /// [value] The actual contact point details, in a form that is meaningful
-  ///  to the designated communication system (i.e. phone number or email
-  ///  address).
+  /// [value] The actual contact point details, in a form that is meaningful to the designated communication system (i.e. phone number or email address).
   String? get value => throw _privateConstructorUsedError;
 
   /// [valueElement] ("_value") Extensions for value
@@ -11076,9 +10339,7 @@ mixin _$ContactPoint {
   @JsonKey(name: '_use')
   Element? get useElement => throw _privateConstructorUsedError;
 
-  /// [rank] Specifies a preferred order in which to use a set of contacts.
-  ///  ContactPoints with lower rank values are more preferred than those
-  ///  with higher rank values.
+  /// [rank] Specifies a preferred order in which to use a set of contacts. ContactPoints with lower rank values are more preferred than those with higher rank values.
   FhirPositiveInt? get rank => throw _privateConstructorUsedError;
 
   /// [rankElement] ("_rank") Extensions for rank
@@ -11380,27 +10641,14 @@ class _$_ContactPoint extends _ContactPoint {
   factory _$_ContactPoint.fromJson(Map<String, dynamic> json) =>
       _$$_ContactPointFromJson(json);
 
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   @override
   final String? id;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -11411,8 +10659,7 @@ class _$_ContactPoint extends _ContactPoint {
     return EqualUnmodifiableListView(value);
   }
 
-  /// [system] Telecommunications form for contact point - what
-  ///  communications system is required to make use of the contact.
+  /// [system] Telecommunications form for contact point - what communications system is required to make use of the contact.
   @override
   final ContactPointSystem? system;
 
@@ -11421,9 +10668,7 @@ class _$_ContactPoint extends _ContactPoint {
   @JsonKey(name: '_system')
   final Element? systemElement;
 
-  /// [value] The actual contact point details, in a form that is meaningful
-  ///  to the designated communication system (i.e. phone number or email
-  ///  address).
+  /// [value] The actual contact point details, in a form that is meaningful to the designated communication system (i.e. phone number or email address).
   @override
   final String? value;
 
@@ -11441,9 +10686,7 @@ class _$_ContactPoint extends _ContactPoint {
   @JsonKey(name: '_use')
   final Element? useElement;
 
-  /// [rank] Specifies a preferred order in which to use a set of contacts.
-  ///  ContactPoints with lower rank values are more preferred than those
-  ///  with higher rank values.
+  /// [rank] Specifies a preferred order in which to use a set of contacts. ContactPoints with lower rank values are more preferred than those with higher rank values.
   @override
   final FhirPositiveInt? rank;
 
@@ -11534,24 +10777,16 @@ abstract class _ContactPoint extends ContactPoint {
 
   @override
 
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id;
   @override
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
 
-  /// [system] Telecommunications form for contact point - what
-  ///  communications system is required to make use of the contact.
+  /// [system] Telecommunications form for contact point - what communications system is required to make use of the contact.
   ContactPointSystem? get system;
   @override
 
@@ -11560,9 +10795,7 @@ abstract class _ContactPoint extends ContactPoint {
   Element? get systemElement;
   @override
 
-  /// [value] The actual contact point details, in a form that is meaningful
-  ///  to the designated communication system (i.e. phone number or email
-  ///  address).
+  /// [value] The actual contact point details, in a form that is meaningful to the designated communication system (i.e. phone number or email address).
   String? get value;
   @override
 
@@ -11580,9 +10813,7 @@ abstract class _ContactPoint extends ContactPoint {
   Element? get useElement;
   @override
 
-  /// [rank] Specifies a preferred order in which to use a set of contacts.
-  ///  ContactPoints with lower rank values are more preferred than those
-  ///  with higher rank values.
+  /// [rank] Specifies a preferred order in which to use a set of contacts. ContactPoints with lower rank values are more preferred than those with higher rank values.
   FhirPositiveInt? get rank;
   @override
 
@@ -11605,33 +10836,14 @@ Timing _$TimingFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Timing {
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
-  /// [modifierExtension] May be used to represent additional information
-  ///  that is not part of the basic definition of the element and that
-  ///  modifies the understanding of the element in which it is contained
-  ///  and/or the understanding of the containing element's descendants.
-  ///  Usually modifier elements provide negation or qualification. To make
-  ///  the use of extensions safe and manageable, there is a strict set of
-  ///  governance applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements
-  ///  that SHALL be met as part of the definition of the extension.
-  ///  Applications processing a resource are required to check for modifier
-  ///  extensions.Modifier extensions SHALL NOT change the meaning of any
-  ///  elements on Resource or DomainResource (including cannot change the
-  ///  meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
@@ -11645,13 +10857,7 @@ mixin _$Timing {
   /// [repeat] A set of rules that describe when the event is scheduled.
   TimingRepeat? get repeat => throw _privateConstructorUsedError;
 
-  /// [code] A code for the timing schedule (or just text in code.text). Some
-  ///  codes such as BID are ubiquitous, but many institutions define their
-  ///  own additional codes. If a code is provided, the code is understood to
-  ///  be a complete statement of whatever is specified in the structured
-  ///  timing data, and either the code or the data may be used to interpret
-  ///  the Timing, with the exception that .repeat.bounds still applies over
-  ///  the code (and is not contained in the code).
+  /// [code] A code for the timing schedule (or just text in code.text). Some codes such as BID are ubiquitous, but many institutions define their own additional codes. If a code is provided, the code is understood to be a complete statement of whatever is specified in the structured timing data, and either the code or the data may be used to interpret the Timing, with the exception that .repeat.bounds still applies over the code (and is not contained in the code).
   CodeableConcept? get code => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -11847,27 +11053,14 @@ class _$_Timing extends _Timing {
   factory _$_Timing.fromJson(Map<String, dynamic> json) =>
       _$$_TimingFromJson(json);
 
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   @override
   final String? id;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -11878,34 +11071,10 @@ class _$_Timing extends _Timing {
     return EqualUnmodifiableListView(value);
   }
 
-  /// [modifierExtension] May be used to represent additional information
-  ///  that is not part of the basic definition of the element and that
-  ///  modifies the understanding of the element in which it is contained
-  ///  and/or the understanding of the containing element's descendants.
-  ///  Usually modifier elements provide negation or qualification. To make
-  ///  the use of extensions safe and manageable, there is a strict set of
-  ///  governance applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements
-  ///  that SHALL be met as part of the definition of the extension.
-  ///  Applications processing a resource are required to check for modifier
-  ///  extensions.Modifier extensions SHALL NOT change the meaning of any
-  ///  elements on Resource or DomainResource (including cannot change the
-  ///  meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
 
-  /// [modifierExtension] May be used to represent additional information
-  ///  that is not part of the basic definition of the element and that
-  ///  modifies the understanding of the element in which it is contained
-  ///  and/or the understanding of the containing element's descendants.
-  ///  Usually modifier elements provide negation or qualification. To make
-  ///  the use of extensions safe and manageable, there is a strict set of
-  ///  governance applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements
-  ///  that SHALL be met as part of the definition of the extension.
-  ///  Applications processing a resource are required to check for modifier
-  ///  extensions.Modifier extensions SHALL NOT change the meaning of any
-  ///  elements on Resource or DomainResource (including cannot change the
-  ///  meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -11947,13 +11116,7 @@ class _$_Timing extends _Timing {
   @override
   final TimingRepeat? repeat;
 
-  /// [code] A code for the timing schedule (or just text in code.text). Some
-  ///  codes such as BID are ubiquitous, but many institutions define their
-  ///  own additional codes. If a code is provided, the code is understood to
-  ///  be a complete statement of whatever is specified in the structured
-  ///  timing data, and either the code or the data may be used to interpret
-  ///  the Timing, with the exception that .repeat.bounds still applies over
-  ///  the code (and is not contained in the code).
+  /// [code] A code for the timing schedule (or just text in code.text). Some codes such as BID are ubiquitous, but many institutions define their own additional codes. If a code is provided, the code is understood to be a complete statement of whatever is specified in the structured timing data, and either the code or the data may be used to interpret the Timing, with the exception that .repeat.bounds still applies over the code (and is not contained in the code).
   @override
   final CodeableConcept? code;
 
@@ -12020,35 +11183,16 @@ abstract class _Timing extends Timing {
 
   @override
 
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id;
   @override
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
 
-  /// [modifierExtension] May be used to represent additional information
-  ///  that is not part of the basic definition of the element and that
-  ///  modifies the understanding of the element in which it is contained
-  ///  and/or the understanding of the containing element's descendants.
-  ///  Usually modifier elements provide negation or qualification. To make
-  ///  the use of extensions safe and manageable, there is a strict set of
-  ///  governance applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements
-  ///  that SHALL be met as part of the definition of the extension.
-  ///  Applications processing a resource are required to check for modifier
-  ///  extensions.Modifier extensions SHALL NOT change the meaning of any
-  ///  elements on Resource or DomainResource (including cannot change the
-  ///  meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
 
@@ -12065,13 +11209,7 @@ abstract class _Timing extends Timing {
   TimingRepeat? get repeat;
   @override
 
-  /// [code] A code for the timing schedule (or just text in code.text). Some
-  ///  codes such as BID are ubiquitous, but many institutions define their
-  ///  own additional codes. If a code is provided, the code is understood to
-  ///  be a complete statement of whatever is specified in the structured
-  ///  timing data, and either the code or the data may be used to interpret
-  ///  the Timing, with the exception that .repeat.bounds still applies over
-  ///  the code (and is not contained in the code).
+  /// [code] A code for the timing schedule (or just text in code.text). Some codes such as BID are ubiquitous, but many institutions define their own additional codes. If a code is provided, the code is understood to be a complete statement of whatever is specified in the structured timing data, and either the code or the data may be used to interpret the Timing, with the exception that .repeat.bounds still applies over the code (and is not contained in the code).
   CodeableConcept? get code;
   @override
   @JsonKey(ignore: true)
@@ -12085,89 +11223,55 @@ TimingRepeat _$TimingRepeatFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$TimingRepeat {
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
-  /// [modifierExtension] May be used to represent additional information
-  ///  that is not part of the basic definition of the element and that
-  ///  modifies the understanding of the element in which it is contained
-  ///  and/or the understanding of the containing element's descendants.
-  ///  Usually modifier elements provide negation or qualification. To make
-  ///  the use of extensions safe and manageable, there is a strict set of
-  ///  governance applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements
-  ///  that SHALL be met as part of the definition of the extension.
-  ///  Applications processing a resource are required to check for modifier
-  ///  extensions.Modifier extensions SHALL NOT change the meaning of any
-  ///  elements on Resource or DomainResource (including cannot change the
-  ///  meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
-  /// [boundsDuration] Either a duration for the length of the timing
-  ///  schedule, a range of possible length, or outer bounds for start and/or
-  ///  end limits of the timing schedule.
+  /// [boundsDuration] Either a duration for the length of the timing schedule, a range of possible length, or outer bounds for start and/or end limits of the timing schedule.
   FhirDuration? get boundsDuration => throw _privateConstructorUsedError;
 
-  /// [boundsRange] Either a duration for the length of the timing schedule,
-  ///  a range of possible length, or outer bounds for start and/or end
-  ///  limits of the timing schedule.
+  /// [boundsRange] Either a duration for the length of the timing schedule, a range of possible length, or outer bounds for start and/or end limits of the timing schedule.
   Range? get boundsRange => throw _privateConstructorUsedError;
 
-  /// [boundsPeriod] Either a duration for the length of the timing schedule,
-  ///  a range of possible length, or outer bounds for start and/or end
-  ///  limits of the timing schedule.
+  /// [boundsPeriod] Either a duration for the length of the timing schedule, a range of possible length, or outer bounds for start and/or end limits of the timing schedule.
   Period? get boundsPeriod => throw _privateConstructorUsedError;
 
-  /// [count] A total count of the desired number of repetitions across the
-  ///  duration of the entire timing specification. If countMax is present,
-  ///  this element indicates the lower bound of the allowed range of count
-  ///  values.
+  /// [count] A total count of the desired number of repetitions across the duration of the entire timing specification. If countMax is present, this element indicates the lower bound of the allowed range of count values.
   FhirPositiveInt? get count => throw _privateConstructorUsedError;
 
   /// [countElement] ("_count") Extensions for count
   @JsonKey(name: '_count')
   Element? get countElement => throw _privateConstructorUsedError;
 
-  /// [countMax] If present, indicates that the count is a range - so to
-  ///  perform the action between [count] and [countMax] times.
+  /// [countMax] If present, indicates that the count is a range - so to perform the action between [count] and [countMax] times.
   FhirPositiveInt? get countMax => throw _privateConstructorUsedError;
 
   /// [countMaxElement] ("_countMax") Extensions for countMax
   @JsonKey(name: '_countMax')
   Element? get countMaxElement => throw _privateConstructorUsedError;
 
-  /// [duration] How long this thing happens for when it happens. If
-  ///  durationMax is present, this element indicates the lower bound of the
-  ///  allowed range of the duration.
+  /// [duration] How long this thing happens for when it happens. If durationMax is present, this element indicates the lower bound of the allowed range of the duration.
   FhirDecimal? get duration => throw _privateConstructorUsedError;
 
   /// [durationElement] ("_duration") Extensions for duration
   @JsonKey(name: '_duration')
   Element? get durationElement => throw _privateConstructorUsedError;
 
-  /// [durationMax] If present, indicates that the duration is a range - so
-  ///  to perform the action between [duration] and [durationMax] time length.
+  /// [durationMax] If present, indicates that the duration is a range - so to perform the action between [duration] and [durationMax] time length.
   FhirDecimal? get durationMax => throw _privateConstructorUsedError;
 
   /// [durationMaxElement] ("_durationMax") Extensions for durationMax
   @JsonKey(name: '_durationMax')
   Element? get durationMaxElement => throw _privateConstructorUsedError;
 
-  /// [durationUnit] The units of time for the duration, in UCUM units Normal
-  ///  practice is to use the 'mo' code as a calendar month when calculating
-  ///  the next occurrence.
+  /// [durationUnit] The units of time for the duration, in UCUM units Normal practice is to use the 'mo' code as a calendar month when calculating the next occurrence.
   TimingRepeatDurationUnit? get durationUnit =>
       throw _privateConstructorUsedError;
 
@@ -12175,54 +11279,42 @@ mixin _$TimingRepeat {
   @JsonKey(name: '_durationUnit')
   Element? get durationUnitElement => throw _privateConstructorUsedError;
 
-  /// [frequency] The number of times to repeat the action within the
-  ///  specified period. If frequencyMax is present, this element indicates
-  ///  the lower bound of the allowed range of the frequency.
+  /// [frequency] The number of times to repeat the action within the specified period. If frequencyMax is present, this element indicates the lower bound of the allowed range of the frequency.
   FhirPositiveInt? get frequency => throw _privateConstructorUsedError;
 
   /// [frequencyElement] ("_frequency") Extensions for frequency
   @JsonKey(name: '_frequency')
   Element? get frequencyElement => throw _privateConstructorUsedError;
 
-  /// [frequencyMax] If present, indicates that the frequency is a range - so
-  ///  to repeat between [frequency] and [frequencyMax] times within the
-  ///  period or period range.
+  /// [frequencyMax] If present, indicates that the frequency is a range - so to repeat between [frequency] and [frequencyMax] times within the period or period range.
   FhirPositiveInt? get frequencyMax => throw _privateConstructorUsedError;
 
   /// [frequencyMaxElement] ("_frequencyMax") Extensions for frequencyMax
   @JsonKey(name: '_frequencyMax')
   Element? get frequencyMaxElement => throw _privateConstructorUsedError;
 
-  /// [period] Indicates the duration of time over which repetitions are to
-  ///  occur; e.g. to express "3 times per day", 3 would be the frequency and
-  ///  "1 day" would be the period. If periodMax is present, this element
-  ///  indicates the lower bound of the allowed range of the period length.
+  /// [period] Indicates the duration of time over which repetitions are to occur; e.g. to express "3 times per day", 3 would be the frequency and "1 day" would be the period. If periodMax is present, this element indicates the lower bound of the allowed range of the period length.
   FhirDecimal? get period => throw _privateConstructorUsedError;
 
   /// [periodElement] ("_period") Extensions for period
   @JsonKey(name: '_period')
   Element? get periodElement => throw _privateConstructorUsedError;
 
-  /// [periodMax] If present, indicates that the period is a range from
-  ///  [period] to [periodMax], allowing expressing concepts such as "do this
-  ///  once every 3-5 days.
+  /// [periodMax] If present, indicates that the period is a range from [period] to [periodMax], allowing expressing concepts such as "do this once every 3-5 days.
   FhirDecimal? get periodMax => throw _privateConstructorUsedError;
 
   /// [periodMaxElement] ("_periodMax") Extensions for periodMax
   @JsonKey(name: '_periodMax')
   Element? get periodMaxElement => throw _privateConstructorUsedError;
 
-  /// [periodUnit] The units of time for the period in UCUM units Normal
-  ///  practice is to use the 'mo' code as a calendar month when calculating
-  ///  the next occurrence.
+  /// [periodUnit] The units of time for the period in UCUM units Normal practice is to use the 'mo' code as a calendar month when calculating the next occurrence.
   TimingRepeatPeriodUnit? get periodUnit => throw _privateConstructorUsedError;
 
   /// [periodUnitElement] ("_periodUnit") Extensions for periodUnit
   @JsonKey(name: '_periodUnit')
   Element? get periodUnitElement => throw _privateConstructorUsedError;
 
-  /// [dayOfWeek] If one or more days of week is provided, then the action
-  ///  happens only on the specified day(s).
+  /// [dayOfWeek] If one or more days of week is provided, then the action happens only on the specified day(s).
   List<FhirCode>? get dayOfWeek => throw _privateConstructorUsedError;
 
   /// [dayOfWeekElement] ("_dayOfWeek") Extensions for dayOfWeek
@@ -12236,17 +11328,14 @@ mixin _$TimingRepeat {
   @JsonKey(name: '_timeOfDay')
   List<Element>? get timeOfDayElement => throw _privateConstructorUsedError;
 
-  /// [when] An approximate time period during the day, potentially linked to
-  ///  an event of daily living that indicates when the action should occur.
-  List<TimingRepeatWhen>? get when => throw _privateConstructorUsedError;
+  /// [when] An approximate time period during the day, potentially linked to an event of daily living that indicates when the action should occur.
+  TimingRepeatWhen? get when => throw _privateConstructorUsedError;
 
   /// [whenElement] ("_when") Extensions for when
   @JsonKey(name: '_when')
   List<Element>? get whenElement => throw _privateConstructorUsedError;
 
-  /// [offset] The number of minutes from the event. If the event code does
-  ///  not indicate whether the minutes is before or after the event, then
-  ///  the offset is assumed to be after the event.
+  /// [offset] The number of minutes from the event. If the event code does not indicate whether the minutes is before or after the event, then the offset is assumed to be after the event.
   FhirUnsignedInt? get offset => throw _privateConstructorUsedError;
 
   /// [offsetElement] ("_offset") Extensions for offset
@@ -12296,7 +11385,7 @@ abstract class $TimingRepeatCopyWith<$Res> {
       @JsonKey(name: '_dayOfWeek') List<Element>? dayOfWeekElement,
       List<FhirTime>? timeOfDay,
       @JsonKey(name: '_timeOfDay') List<Element>? timeOfDayElement,
-      List<TimingRepeatWhen>? when,
+      TimingRepeatWhen? when,
       @JsonKey(name: '_when') List<Element>? whenElement,
       FhirUnsignedInt? offset,
       @JsonKey(name: '_offset') Element? offsetElement});
@@ -12489,7 +11578,7 @@ class _$TimingRepeatCopyWithImpl<$Res, $Val extends TimingRepeat>
       when: freezed == when
           ? _value.when
           : when // ignore: cast_nullable_to_non_nullable
-              as List<TimingRepeatWhen>?,
+              as TimingRepeatWhen?,
       whenElement: freezed == whenElement
           ? _value.whenElement
           : whenElement // ignore: cast_nullable_to_non_nullable
@@ -12713,7 +11802,7 @@ abstract class _$$_TimingRepeatCopyWith<$Res>
       @JsonKey(name: '_dayOfWeek') List<Element>? dayOfWeekElement,
       List<FhirTime>? timeOfDay,
       @JsonKey(name: '_timeOfDay') List<Element>? timeOfDayElement,
-      List<TimingRepeatWhen>? when,
+      TimingRepeatWhen? when,
       @JsonKey(name: '_when') List<Element>? whenElement,
       FhirUnsignedInt? offset,
       @JsonKey(name: '_offset') Element? offsetElement});
@@ -12916,9 +12005,9 @@ class __$$_TimingRepeatCopyWithImpl<$Res>
           : timeOfDayElement // ignore: cast_nullable_to_non_nullable
               as List<Element>?,
       when: freezed == when
-          ? _value._when
+          ? _value.when
           : when // ignore: cast_nullable_to_non_nullable
-              as List<TimingRepeatWhen>?,
+              as TimingRepeatWhen?,
       whenElement: freezed == whenElement
           ? _value._whenElement
           : whenElement // ignore: cast_nullable_to_non_nullable
@@ -12969,7 +12058,7 @@ class _$_TimingRepeat extends _TimingRepeat {
       @JsonKey(name: '_dayOfWeek') final List<Element>? dayOfWeekElement,
       final List<FhirTime>? timeOfDay,
       @JsonKey(name: '_timeOfDay') final List<Element>? timeOfDayElement,
-      final List<TimingRepeatWhen>? when,
+      this.when,
       @JsonKey(name: '_when') final List<Element>? whenElement,
       this.offset,
       @JsonKey(name: '_offset') this.offsetElement})
@@ -12979,34 +12068,20 @@ class _$_TimingRepeat extends _TimingRepeat {
         _dayOfWeekElement = dayOfWeekElement,
         _timeOfDay = timeOfDay,
         _timeOfDayElement = timeOfDayElement,
-        _when = when,
         _whenElement = whenElement,
         super._();
 
   factory _$_TimingRepeat.fromJson(Map<String, dynamic> json) =>
       _$$_TimingRepeatFromJson(json);
 
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   @override
   final String? id;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -13017,34 +12092,10 @@ class _$_TimingRepeat extends _TimingRepeat {
     return EqualUnmodifiableListView(value);
   }
 
-  /// [modifierExtension] May be used to represent additional information
-  ///  that is not part of the basic definition of the element and that
-  ///  modifies the understanding of the element in which it is contained
-  ///  and/or the understanding of the containing element's descendants.
-  ///  Usually modifier elements provide negation or qualification. To make
-  ///  the use of extensions safe and manageable, there is a strict set of
-  ///  governance applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements
-  ///  that SHALL be met as part of the definition of the extension.
-  ///  Applications processing a resource are required to check for modifier
-  ///  extensions.Modifier extensions SHALL NOT change the meaning of any
-  ///  elements on Resource or DomainResource (including cannot change the
-  ///  meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
 
-  /// [modifierExtension] May be used to represent additional information
-  ///  that is not part of the basic definition of the element and that
-  ///  modifies the understanding of the element in which it is contained
-  ///  and/or the understanding of the containing element's descendants.
-  ///  Usually modifier elements provide negation or qualification. To make
-  ///  the use of extensions safe and manageable, there is a strict set of
-  ///  governance applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements
-  ///  that SHALL be met as part of the definition of the extension.
-  ///  Applications processing a resource are required to check for modifier
-  ///  extensions.Modifier extensions SHALL NOT change the meaning of any
-  ///  elements on Resource or DomainResource (including cannot change the
-  ///  meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -13055,28 +12106,19 @@ class _$_TimingRepeat extends _TimingRepeat {
     return EqualUnmodifiableListView(value);
   }
 
-  /// [boundsDuration] Either a duration for the length of the timing
-  ///  schedule, a range of possible length, or outer bounds for start and/or
-  ///  end limits of the timing schedule.
+  /// [boundsDuration] Either a duration for the length of the timing schedule, a range of possible length, or outer bounds for start and/or end limits of the timing schedule.
   @override
   final FhirDuration? boundsDuration;
 
-  /// [boundsRange] Either a duration for the length of the timing schedule,
-  ///  a range of possible length, or outer bounds for start and/or end
-  ///  limits of the timing schedule.
+  /// [boundsRange] Either a duration for the length of the timing schedule, a range of possible length, or outer bounds for start and/or end limits of the timing schedule.
   @override
   final Range? boundsRange;
 
-  /// [boundsPeriod] Either a duration for the length of the timing schedule,
-  ///  a range of possible length, or outer bounds for start and/or end
-  ///  limits of the timing schedule.
+  /// [boundsPeriod] Either a duration for the length of the timing schedule, a range of possible length, or outer bounds for start and/or end limits of the timing schedule.
   @override
   final Period? boundsPeriod;
 
-  /// [count] A total count of the desired number of repetitions across the
-  ///  duration of the entire timing specification. If countMax is present,
-  ///  this element indicates the lower bound of the allowed range of count
-  ///  values.
+  /// [count] A total count of the desired number of repetitions across the duration of the entire timing specification. If countMax is present, this element indicates the lower bound of the allowed range of count values.
   @override
   final FhirPositiveInt? count;
 
@@ -13085,8 +12127,7 @@ class _$_TimingRepeat extends _TimingRepeat {
   @JsonKey(name: '_count')
   final Element? countElement;
 
-  /// [countMax] If present, indicates that the count is a range - so to
-  ///  perform the action between [count] and [countMax] times.
+  /// [countMax] If present, indicates that the count is a range - so to perform the action between [count] and [countMax] times.
   @override
   final FhirPositiveInt? countMax;
 
@@ -13095,9 +12136,7 @@ class _$_TimingRepeat extends _TimingRepeat {
   @JsonKey(name: '_countMax')
   final Element? countMaxElement;
 
-  /// [duration] How long this thing happens for when it happens. If
-  ///  durationMax is present, this element indicates the lower bound of the
-  ///  allowed range of the duration.
+  /// [duration] How long this thing happens for when it happens. If durationMax is present, this element indicates the lower bound of the allowed range of the duration.
   @override
   final FhirDecimal? duration;
 
@@ -13106,8 +12145,7 @@ class _$_TimingRepeat extends _TimingRepeat {
   @JsonKey(name: '_duration')
   final Element? durationElement;
 
-  /// [durationMax] If present, indicates that the duration is a range - so
-  ///  to perform the action between [duration] and [durationMax] time length.
+  /// [durationMax] If present, indicates that the duration is a range - so to perform the action between [duration] and [durationMax] time length.
   @override
   final FhirDecimal? durationMax;
 
@@ -13116,9 +12154,7 @@ class _$_TimingRepeat extends _TimingRepeat {
   @JsonKey(name: '_durationMax')
   final Element? durationMaxElement;
 
-  /// [durationUnit] The units of time for the duration, in UCUM units Normal
-  ///  practice is to use the 'mo' code as a calendar month when calculating
-  ///  the next occurrence.
+  /// [durationUnit] The units of time for the duration, in UCUM units Normal practice is to use the 'mo' code as a calendar month when calculating the next occurrence.
   @override
   final TimingRepeatDurationUnit? durationUnit;
 
@@ -13127,9 +12163,7 @@ class _$_TimingRepeat extends _TimingRepeat {
   @JsonKey(name: '_durationUnit')
   final Element? durationUnitElement;
 
-  /// [frequency] The number of times to repeat the action within the
-  ///  specified period. If frequencyMax is present, this element indicates
-  ///  the lower bound of the allowed range of the frequency.
+  /// [frequency] The number of times to repeat the action within the specified period. If frequencyMax is present, this element indicates the lower bound of the allowed range of the frequency.
   @override
   final FhirPositiveInt? frequency;
 
@@ -13138,9 +12172,7 @@ class _$_TimingRepeat extends _TimingRepeat {
   @JsonKey(name: '_frequency')
   final Element? frequencyElement;
 
-  /// [frequencyMax] If present, indicates that the frequency is a range - so
-  ///  to repeat between [frequency] and [frequencyMax] times within the
-  ///  period or period range.
+  /// [frequencyMax] If present, indicates that the frequency is a range - so to repeat between [frequency] and [frequencyMax] times within the period or period range.
   @override
   final FhirPositiveInt? frequencyMax;
 
@@ -13149,10 +12181,7 @@ class _$_TimingRepeat extends _TimingRepeat {
   @JsonKey(name: '_frequencyMax')
   final Element? frequencyMaxElement;
 
-  /// [period] Indicates the duration of time over which repetitions are to
-  ///  occur; e.g. to express "3 times per day", 3 would be the frequency and
-  ///  "1 day" would be the period. If periodMax is present, this element
-  ///  indicates the lower bound of the allowed range of the period length.
+  /// [period] Indicates the duration of time over which repetitions are to occur; e.g. to express "3 times per day", 3 would be the frequency and "1 day" would be the period. If periodMax is present, this element indicates the lower bound of the allowed range of the period length.
   @override
   final FhirDecimal? period;
 
@@ -13161,9 +12190,7 @@ class _$_TimingRepeat extends _TimingRepeat {
   @JsonKey(name: '_period')
   final Element? periodElement;
 
-  /// [periodMax] If present, indicates that the period is a range from
-  ///  [period] to [periodMax], allowing expressing concepts such as "do this
-  ///  once every 3-5 days.
+  /// [periodMax] If present, indicates that the period is a range from [period] to [periodMax], allowing expressing concepts such as "do this once every 3-5 days.
   @override
   final FhirDecimal? periodMax;
 
@@ -13172,9 +12199,7 @@ class _$_TimingRepeat extends _TimingRepeat {
   @JsonKey(name: '_periodMax')
   final Element? periodMaxElement;
 
-  /// [periodUnit] The units of time for the period in UCUM units Normal
-  ///  practice is to use the 'mo' code as a calendar month when calculating
-  ///  the next occurrence.
+  /// [periodUnit] The units of time for the period in UCUM units Normal practice is to use the 'mo' code as a calendar month when calculating the next occurrence.
   @override
   final TimingRepeatPeriodUnit? periodUnit;
 
@@ -13183,12 +12208,10 @@ class _$_TimingRepeat extends _TimingRepeat {
   @JsonKey(name: '_periodUnit')
   final Element? periodUnitElement;
 
-  /// [dayOfWeek] If one or more days of week is provided, then the action
-  ///  happens only on the specified day(s).
+  /// [dayOfWeek] If one or more days of week is provided, then the action happens only on the specified day(s).
   final List<FhirCode>? _dayOfWeek;
 
-  /// [dayOfWeek] If one or more days of week is provided, then the action
-  ///  happens only on the specified day(s).
+  /// [dayOfWeek] If one or more days of week is provided, then the action happens only on the specified day(s).
   @override
   List<FhirCode>? get dayOfWeek {
     final value = _dayOfWeek;
@@ -13241,20 +12264,9 @@ class _$_TimingRepeat extends _TimingRepeat {
     return EqualUnmodifiableListView(value);
   }
 
-  /// [when] An approximate time period during the day, potentially linked to
-  ///  an event of daily living that indicates when the action should occur.
-  final List<TimingRepeatWhen>? _when;
-
-  /// [when] An approximate time period during the day, potentially linked to
-  ///  an event of daily living that indicates when the action should occur.
+  /// [when] An approximate time period during the day, potentially linked to an event of daily living that indicates when the action should occur.
   @override
-  List<TimingRepeatWhen>? get when {
-    final value = _when;
-    if (value == null) return null;
-    if (_when is EqualUnmodifiableListView) return _when;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final TimingRepeatWhen? when;
 
   /// [whenElement] ("_when") Extensions for when
   final List<Element>? _whenElement;
@@ -13270,9 +12282,7 @@ class _$_TimingRepeat extends _TimingRepeat {
     return EqualUnmodifiableListView(value);
   }
 
-  /// [offset] The number of minutes from the event. If the event code does
-  ///  not indicate whether the minutes is before or after the event, then
-  ///  the offset is assumed to be after the event.
+  /// [offset] The number of minutes from the event. If the event code does not indicate whether the minutes is before or after the event, then the offset is assumed to be after the event.
   @override
   final FhirUnsignedInt? offset;
 
@@ -13348,7 +12358,7 @@ class _$_TimingRepeat extends _TimingRepeat {
                 .equals(other._timeOfDay, _timeOfDay) &&
             const DeepCollectionEquality()
                 .equals(other._timeOfDayElement, _timeOfDayElement) &&
-            const DeepCollectionEquality().equals(other._when, _when) &&
+            (identical(other.when, when) || other.when == when) &&
             const DeepCollectionEquality()
                 .equals(other._whenElement, _whenElement) &&
             (identical(other.offset, offset) || other.offset == offset) &&
@@ -13390,7 +12400,7 @@ class _$_TimingRepeat extends _TimingRepeat {
         const DeepCollectionEquality().hash(_dayOfWeekElement),
         const DeepCollectionEquality().hash(_timeOfDay),
         const DeepCollectionEquality().hash(_timeOfDayElement),
-        const DeepCollectionEquality().hash(_when),
+        when,
         const DeepCollectionEquality().hash(_whenElement),
         offset,
         offsetElement
@@ -13442,7 +12452,7 @@ abstract class _TimingRepeat extends TimingRepeat {
           @JsonKey(name: '_dayOfWeek') final List<Element>? dayOfWeekElement,
           final List<FhirTime>? timeOfDay,
           @JsonKey(name: '_timeOfDay') final List<Element>? timeOfDayElement,
-          final List<TimingRepeatWhen>? when,
+          final TimingRepeatWhen? when,
           @JsonKey(name: '_when') final List<Element>? whenElement,
           final FhirUnsignedInt? offset,
           @JsonKey(name: '_offset') final Element? offsetElement}) =
@@ -13454,60 +12464,32 @@ abstract class _TimingRepeat extends TimingRepeat {
 
   @override
 
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   String? get id;
   @override
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and manageable, there is a strict
-  ///  set of governance  applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
 
-  /// [modifierExtension] May be used to represent additional information
-  ///  that is not part of the basic definition of the element and that
-  ///  modifies the understanding of the element in which it is contained
-  ///  and/or the understanding of the containing element's descendants.
-  ///  Usually modifier elements provide negation or qualification. To make
-  ///  the use of extensions safe and manageable, there is a strict set of
-  ///  governance applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements
-  ///  that SHALL be met as part of the definition of the extension.
-  ///  Applications processing a resource are required to check for modifier
-  ///  extensions.Modifier extensions SHALL NOT change the meaning of any
-  ///  elements on Resource or DomainResource (including cannot change the
-  ///  meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
 
-  /// [boundsDuration] Either a duration for the length of the timing
-  ///  schedule, a range of possible length, or outer bounds for start and/or
-  ///  end limits of the timing schedule.
+  /// [boundsDuration] Either a duration for the length of the timing schedule, a range of possible length, or outer bounds for start and/or end limits of the timing schedule.
   FhirDuration? get boundsDuration;
   @override
 
-  /// [boundsRange] Either a duration for the length of the timing schedule,
-  ///  a range of possible length, or outer bounds for start and/or end
-  ///  limits of the timing schedule.
+  /// [boundsRange] Either a duration for the length of the timing schedule, a range of possible length, or outer bounds for start and/or end limits of the timing schedule.
   Range? get boundsRange;
   @override
 
-  /// [boundsPeriod] Either a duration for the length of the timing schedule,
-  ///  a range of possible length, or outer bounds for start and/or end
-  ///  limits of the timing schedule.
+  /// [boundsPeriod] Either a duration for the length of the timing schedule, a range of possible length, or outer bounds for start and/or end limits of the timing schedule.
   Period? get boundsPeriod;
   @override
 
-  /// [count] A total count of the desired number of repetitions across the
-  ///  duration of the entire timing specification. If countMax is present,
-  ///  this element indicates the lower bound of the allowed range of count
-  ///  values.
+  /// [count] A total count of the desired number of repetitions across the duration of the entire timing specification. If countMax is present, this element indicates the lower bound of the allowed range of count values.
   FhirPositiveInt? get count;
   @override
 
@@ -13516,8 +12498,7 @@ abstract class _TimingRepeat extends TimingRepeat {
   Element? get countElement;
   @override
 
-  /// [countMax] If present, indicates that the count is a range - so to
-  ///  perform the action between [count] and [countMax] times.
+  /// [countMax] If present, indicates that the count is a range - so to perform the action between [count] and [countMax] times.
   FhirPositiveInt? get countMax;
   @override
 
@@ -13526,9 +12507,7 @@ abstract class _TimingRepeat extends TimingRepeat {
   Element? get countMaxElement;
   @override
 
-  /// [duration] How long this thing happens for when it happens. If
-  ///  durationMax is present, this element indicates the lower bound of the
-  ///  allowed range of the duration.
+  /// [duration] How long this thing happens for when it happens. If durationMax is present, this element indicates the lower bound of the allowed range of the duration.
   FhirDecimal? get duration;
   @override
 
@@ -13537,8 +12516,7 @@ abstract class _TimingRepeat extends TimingRepeat {
   Element? get durationElement;
   @override
 
-  /// [durationMax] If present, indicates that the duration is a range - so
-  ///  to perform the action between [duration] and [durationMax] time length.
+  /// [durationMax] If present, indicates that the duration is a range - so to perform the action between [duration] and [durationMax] time length.
   FhirDecimal? get durationMax;
   @override
 
@@ -13547,9 +12525,7 @@ abstract class _TimingRepeat extends TimingRepeat {
   Element? get durationMaxElement;
   @override
 
-  /// [durationUnit] The units of time for the duration, in UCUM units Normal
-  ///  practice is to use the 'mo' code as a calendar month when calculating
-  ///  the next occurrence.
+  /// [durationUnit] The units of time for the duration, in UCUM units Normal practice is to use the 'mo' code as a calendar month when calculating the next occurrence.
   TimingRepeatDurationUnit? get durationUnit;
   @override
 
@@ -13558,9 +12534,7 @@ abstract class _TimingRepeat extends TimingRepeat {
   Element? get durationUnitElement;
   @override
 
-  /// [frequency] The number of times to repeat the action within the
-  ///  specified period. If frequencyMax is present, this element indicates
-  ///  the lower bound of the allowed range of the frequency.
+  /// [frequency] The number of times to repeat the action within the specified period. If frequencyMax is present, this element indicates the lower bound of the allowed range of the frequency.
   FhirPositiveInt? get frequency;
   @override
 
@@ -13569,9 +12543,7 @@ abstract class _TimingRepeat extends TimingRepeat {
   Element? get frequencyElement;
   @override
 
-  /// [frequencyMax] If present, indicates that the frequency is a range - so
-  ///  to repeat between [frequency] and [frequencyMax] times within the
-  ///  period or period range.
+  /// [frequencyMax] If present, indicates that the frequency is a range - so to repeat between [frequency] and [frequencyMax] times within the period or period range.
   FhirPositiveInt? get frequencyMax;
   @override
 
@@ -13580,10 +12552,7 @@ abstract class _TimingRepeat extends TimingRepeat {
   Element? get frequencyMaxElement;
   @override
 
-  /// [period] Indicates the duration of time over which repetitions are to
-  ///  occur; e.g. to express "3 times per day", 3 would be the frequency and
-  ///  "1 day" would be the period. If periodMax is present, this element
-  ///  indicates the lower bound of the allowed range of the period length.
+  /// [period] Indicates the duration of time over which repetitions are to occur; e.g. to express "3 times per day", 3 would be the frequency and "1 day" would be the period. If periodMax is present, this element indicates the lower bound of the allowed range of the period length.
   FhirDecimal? get period;
   @override
 
@@ -13592,9 +12561,7 @@ abstract class _TimingRepeat extends TimingRepeat {
   Element? get periodElement;
   @override
 
-  /// [periodMax] If present, indicates that the period is a range from
-  ///  [period] to [periodMax], allowing expressing concepts such as "do this
-  ///  once every 3-5 days.
+  /// [periodMax] If present, indicates that the period is a range from [period] to [periodMax], allowing expressing concepts such as "do this once every 3-5 days.
   FhirDecimal? get periodMax;
   @override
 
@@ -13603,9 +12570,7 @@ abstract class _TimingRepeat extends TimingRepeat {
   Element? get periodMaxElement;
   @override
 
-  /// [periodUnit] The units of time for the period in UCUM units Normal
-  ///  practice is to use the 'mo' code as a calendar month when calculating
-  ///  the next occurrence.
+  /// [periodUnit] The units of time for the period in UCUM units Normal practice is to use the 'mo' code as a calendar month when calculating the next occurrence.
   TimingRepeatPeriodUnit? get periodUnit;
   @override
 
@@ -13614,8 +12579,7 @@ abstract class _TimingRepeat extends TimingRepeat {
   Element? get periodUnitElement;
   @override
 
-  /// [dayOfWeek] If one or more days of week is provided, then the action
-  ///  happens only on the specified day(s).
+  /// [dayOfWeek] If one or more days of week is provided, then the action happens only on the specified day(s).
   List<FhirCode>? get dayOfWeek;
   @override
 
@@ -13633,9 +12597,8 @@ abstract class _TimingRepeat extends TimingRepeat {
   List<Element>? get timeOfDayElement;
   @override
 
-  /// [when] An approximate time period during the day, potentially linked to
-  ///  an event of daily living that indicates when the action should occur.
-  List<TimingRepeatWhen>? get when;
+  /// [when] An approximate time period during the day, potentially linked to an event of daily living that indicates when the action should occur.
+  TimingRepeatWhen? get when;
   @override
 
   /// [whenElement] ("_when") Extensions for when
@@ -13643,9 +12606,7 @@ abstract class _TimingRepeat extends TimingRepeat {
   List<Element>? get whenElement;
   @override
 
-  /// [offset] The number of minutes from the event. If the event code does
-  ///  not indicate whether the minutes is before or after the event, then
-  ///  the offset is assumed to be after the event.
+  /// [offset] The number of minutes from the event. If the event code does not indicate whether the minutes is before or after the event, then the offset is assumed to be after the event.
   FhirUnsignedInt? get offset;
   @override
 

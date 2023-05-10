@@ -11,32 +11,21 @@ import '../../../../r5.dart';
 part 'payment.freezed.dart';
 part 'payment.g.dart';
 
-/// [PaymentNotice] This resource provides the status of the payment for goods
-///  and services rendered, and the request and response resource references.
+/// [PaymentNotice] This resource provides the status of the payment for goods and services rendered, and the request and response resource references.
 @freezed
 class PaymentNotice with Resource, _$PaymentNotice {
-  /// [PaymentNotice] This resource provides the status of the payment for
-  ///  goods and services rendered, and the request and response resource
-  ///  references.
+  /// [PaymentNotice] This resource provides the status of the payment for goods and services rendered, and the request and response resource references.
   PaymentNotice._();
 
-  /// [PaymentNotice] This resource provides the status of the payment for
-  ///  goods and services rendered, and the request and response resource
-  ///  references.
+  /// [PaymentNotice] This resource provides the status of the payment for goods and services rendered, and the request and response resource references.
   ///
   /// [resourceType] This is a PaymentNotice resource
   ///
-  /// [id] The logical id of the resource, as used in the URL for the resource.
-  ///  Once assigned, this value never changes.
+  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.
   ///
-  /// [meta] The metadata about the resource. This is content that is
-  ///  maintained by the infrastructure. Changes to the content might not
-  ///  always be associated with version changes to the resource.
+  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
   ///
-  /// [implicitRules] A reference to a set of rules that were followed when the
-  ///  resource was constructed, and which must be understood when processing
-  ///  the content. Often, this is a reference to an implementation guide that
-  ///  defines the special rules along with other profiles etc.
+  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.
   ///
   /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
   ///
@@ -44,39 +33,13 @@ class PaymentNotice with Resource, _$PaymentNotice {
   ///
   /// [languageElement] ("_language") Extensions for language
   ///
-  /// [text] A human-readable narrative that contains a summary of the resource
-  ///  and can be used to represent the content of the resource to a human. The
-  ///  narrative need not encode all the structured data, but is required to
-  ///  contain sufficient detail to make it "clinically safe" for a human to
-  ///  just read the narrative. Resource definitions may define what content
-  ///  should be represented in the narrative to ensure clinical safety.
+  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
   ///
-  /// [contained] These resources do not have an independent existence apart
-  ///  from the resource that contains them - they cannot be identified
-  ///  independently, nor can they have their own independent transaction
-  ///  scope. This is allowed to be a Parameters resource if and only if it is
-  ///  referenced by a resource that provides context/meaning.
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
   ///
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the resource. To
-  ///  make the use of extensions safe and manageable, there is a strict set of
-  ///  governance  applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements that
-  ///  SHALL be met as part of the definition of the extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that
-  ///  is not part of the basic definition of the resource and that modifies
-  ///  the understanding of the element that contains it and/or the
-  ///  understanding of the containing element's descendants. Usually modifier
-  ///  elements provide negation or qualification. To make the use of
-  ///  extensions safe and manageable, there is a strict set of governance
-  ///  applied to the definition and use of extensions. Though any implementer
-  ///  is allowed to define an extension, there is a set of requirements that
-  ///  SHALL be met as part of the definition of the extension. Applications
-  ///  processing a resource are required to check for modifier
-  ///  extensions.Modifier extensions SHALL NOT change the meaning of any
-  ///  elements on Resource or DomainResource (including cannot change the
-  ///  meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   ///
   /// [identifier] A unique identifier assigned to this payment notice.
   ///
@@ -86,15 +49,13 @@ class PaymentNotice with Resource, _$PaymentNotice {
   ///
   /// [request] Reference of resource for which payment is being made.
   ///
-  /// [response] Reference of response to resource for which payment is being
-  ///  made.
+  /// [response] Reference of response to resource for which payment is being made.
   ///
   /// [created] The date when this resource was created.
   ///
   /// [createdElement] ("_created") Extensions for created
   ///
-  /// [provider] The practitioner who is responsible for the services rendered
-  ///  to the patient.
+  /// [reporter] The party who reports the payment notice.
   ///
   /// [payment] A reference to the payment which is the subject of this notice.
   ///
@@ -102,15 +63,13 @@ class PaymentNotice with Resource, _$PaymentNotice {
   ///
   /// [paymentDateElement] ("_paymentDate") Extensions for paymentDate
   ///
-  /// [payee] The party who will receive or has received payment that is the
-  ///  subject of this notification.
+  /// [payee] The party who will receive or has received payment that is the subject of this notification.
   ///
   /// [recipient] The party who is notified of the payment status.
   ///
   /// [amount] The amount sent to the payee.
   ///
-  /// [paymentStatus] A code indicating whether payment has been sent or
-  ///  cleared.
+  /// [paymentStatus] A code indicating whether payment has been sent or cleared.
   ///
   factory PaymentNotice({
     /// [resourceType] This is a PaymentNotice resource
@@ -118,19 +77,13 @@ class PaymentNotice with Resource, _$PaymentNotice {
     @JsonKey(unknownEnumValue: R5ResourceType.PaymentNotice)
         R5ResourceType resourceType,
 
-    /// [id] The logical id of the resource, as used in the URL for the resource.
-    /// Once assigned, this value never changes.
+    /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.
     FhirId? id,
 
-    /// [meta] The metadata about the resource. This is content that is
-    /// maintained by the infrastructure. Changes to the content might not
-    /// always be associated with version changes to the resource.
+    /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
     FhirMeta? meta,
 
-    /// [implicitRules] A reference to a set of rules that were followed when
-    /// the resource was constructed, and which must be understood when
-    /// processing the content. Often, this is a reference to an implementation
-    /// guide that defines the special rules along with other profiles etc.
+    /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
@@ -148,10 +101,10 @@ class PaymentNotice with Resource, _$PaymentNotice {
     /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
     List<Resource>? contained,
 
-    /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+    /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
-    /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+    /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
     /// [identifier] A unique identifier assigned to this payment notice.
@@ -175,11 +128,11 @@ class PaymentNotice with Resource, _$PaymentNotice {
     /// [createdElement] ("_created") Extensions for created
     @JsonKey(name: '_created') Element? createdElement,
 
-    /// [provider] The practitioner who is responsible for the services rendered to the patient.
-    Reference? provider,
+    /// [reporter] The party who reports the payment notice.
+    Reference? reporter,
 
     /// [payment] A reference to the payment which is the subject of this notice.
-    required Reference payment,
+    Reference? payment,
 
     /// [paymentDate] The date when the above payment action occurred.
     FhirDate? paymentDate,
@@ -232,30 +185,21 @@ class PaymentNotice with Resource, _$PaymentNotice {
   }
 }
 
-/// [PaymentReconciliation] This resource provides the details including amount
-///  of a payment and allocates the payment items being paid.
+/// [PaymentReconciliation] This resource provides the details including amount of a payment and allocates the payment items being paid.
 @freezed
 class PaymentReconciliation with Resource, _$PaymentReconciliation {
-  /// [PaymentReconciliation] This resource provides the details including
-  ///  amount of a payment and allocates the payment items being paid.
+  /// [PaymentReconciliation] This resource provides the details including amount of a payment and allocates the payment items being paid.
   PaymentReconciliation._();
 
-  /// [PaymentReconciliation] This resource provides the details including
-  ///  amount of a payment and allocates the payment items being paid.
+  /// [PaymentReconciliation] This resource provides the details including amount of a payment and allocates the payment items being paid.
   ///
   /// [resourceType] This is a PaymentReconciliation resource
   ///
-  /// [id] The logical id of the resource, as used in the URL for the resource.
-  ///  Once assigned, this value never changes.
+  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.
   ///
-  /// [meta] The metadata about the resource. This is content that is
-  ///  maintained by the infrastructure. Changes to the content might not
-  ///  always be associated with version changes to the resource.
+  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
   ///
-  /// [implicitRules] A reference to a set of rules that were followed when the
-  ///  resource was constructed, and which must be understood when processing
-  ///  the content. Often, this is a reference to an implementation guide that
-  ///  defines the special rules along with other profiles etc.
+  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.
   ///
   /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
   ///
@@ -263,55 +207,25 @@ class PaymentReconciliation with Resource, _$PaymentReconciliation {
   ///
   /// [languageElement] ("_language") Extensions for language
   ///
-  /// [text] A human-readable narrative that contains a summary of the resource
-  ///  and can be used to represent the content of the resource to a human. The
-  ///  narrative need not encode all the structured data, but is required to
-  ///  contain sufficient detail to make it "clinically safe" for a human to
-  ///  just read the narrative. Resource definitions may define what content
-  ///  should be represented in the narrative to ensure clinical safety.
+  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
   ///
-  /// [contained] These resources do not have an independent existence apart
-  ///  from the resource that contains them - they cannot be identified
-  ///  independently, nor can they have their own independent transaction
-  ///  scope. This is allowed to be a Parameters resource if and only if it is
-  ///  referenced by a resource that provides context/meaning.
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
   ///
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the resource. To
-  ///  make the use of extensions safe and manageable, there is a strict set of
-  ///  governance  applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements that
-  ///  SHALL be met as part of the definition of the extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that
-  ///  is not part of the basic definition of the resource and that modifies
-  ///  the understanding of the element that contains it and/or the
-  ///  understanding of the containing element's descendants. Usually modifier
-  ///  elements provide negation or qualification. To make the use of
-  ///  extensions safe and manageable, there is a strict set of governance
-  ///  applied to the definition and use of extensions. Though any implementer
-  ///  is allowed to define an extension, there is a set of requirements that
-  ///  SHALL be met as part of the definition of the extension. Applications
-  ///  processing a resource are required to check for modifier
-  ///  extensions.Modifier extensions SHALL NOT change the meaning of any
-  ///  elements on Resource or DomainResource (including cannot change the
-  ///  meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   ///
   /// [identifier] A unique identifier assigned to this payment reconciliation.
   ///
-  /// [type] Code to indicate the nature of the payment such as payment,
-  ///  adjustment.
+  /// [type] Code to indicate the nature of the payment such as payment, adjustment.
   ///
   /// [status] The status of the resource instance.
   ///
   /// [statusElement] ("_status") Extensions for status
   ///
-  /// [kind] The workflow or activity which gave rise to or during which the
-  ///  payment ocurred such as a kiosk, deposit on account, periodic payment
-  ///  etc.
+  /// [kind] The workflow or activity which gave rise to or during which the payment ocurred such as a kiosk, deposit on account, periodic payment etc.
   ///
-  /// [period] The period of time for which payments have been gathered into
-  ///  this bulk payment for settlement.
+  /// [period] The period of time for which payments have been gathered into this bulk payment for settlement.
   ///
   /// [created] The date when the resource was created.
   ///
@@ -325,15 +239,13 @@ class PaymentReconciliation with Resource, _$PaymentReconciliation {
   ///
   /// [request] Original request resource reference.
   ///
-  /// [requestor] The practitioner who is responsible for the services rendered
-  ///  to the patient.
+  /// [requestor] The practitioner who is responsible for the services rendered to the patient.
   ///
   /// [outcome] The outcome of a request for a reconciliation.
   ///
   /// [outcomeElement] ("_outcome") Extensions for outcome
   ///
-  /// [disposition] A human readable description of the status of the request
-  ///  for the reconciliation.
+  /// [disposition] A human readable description of the status of the request for the reconciliation.
   ///
   /// [dispositionElement] ("_disposition") Extensions for disposition
   ///
@@ -341,61 +253,47 @@ class PaymentReconciliation with Resource, _$PaymentReconciliation {
   ///
   /// [dateElement] ("_date") Extensions for date
   ///
-  /// [location] The location of the site or device for electronic transfers or
-  ///  physical location for cash payments.
+  /// [location] The location of the site or device for electronic transfers or physical location for cash payments.
   ///
-  /// [method] The means of payment such as check, card cash, or electronic
-  ///  funds transfer.
+  /// [method] The means of payment such as check, card cash, or electronic funds transfer.
   ///
-  /// [cardBrand] The card brand such as debit, Visa, Amex etc. used if a card
-  ///  is the method of payment.
+  /// [cardBrand] The card brand such as debit, Visa, Amex etc. used if a card is the method of payment.
   ///
   /// [cardBrandElement] ("_cardBrand") Extensions for cardBrand
   ///
-  /// [accountNumber] A portion of the account number, often the last 4 digits,
-  ///  used for verification not charging purposes.
+  /// [accountNumber] A portion of the account number, often the last 4 digits, used for verification not charging purposes.
   ///
   /// [accountNumberElement] ("_accountNumber") Extensions for accountNumber
   ///
-  /// [expirationDate] The year and month (YYYY-MM) when the instrument,
-  ///  typically card, expires.
+  /// [expirationDate] The year and month (YYYY-MM) when the instrument, typically card, expires.
   ///
   /// [expirationDateElement] ("_expirationDate") Extensions for expirationDate
   ///
-  /// [processor] The name of the card processor, etf processor, bank for
-  ///  checks.
+  /// [processor] The name of the card processor, etf processor, bank for checks.
   ///
   /// [processorElement] ("_processor") Extensions for processor
   ///
-  /// [referenceNumber] The check number, eft reference, car processor
-  ///  reference.
+  /// [referenceNumber] The check number, eft reference, car processor reference.
   ///
-  /// [referenceNumberElement] ("_referenceNumber") Extensions for
-  ///  referenceNumber
+  /// [referenceNumberElement] ("_referenceNumber") Extensions for referenceNumber
   ///
-  /// [authorization] An alphanumeric issued by the processor to confirm the
-  ///  successful issuance of payment.
+  /// [authorization] An alphanumeric issued by the processor to confirm the successful issuance of payment.
   ///
   /// [authorizationElement] ("_authorization") Extensions for authorization
   ///
-  /// [tenderedAmount] The amount offered by the issuer, typically applies to
-  ///  cash when the issuer provides an amount in bank note denominations equal
-  ///  to or excess of the amount actually being paid.
+  /// [tenderedAmount] The amount offered by the issuer, typically applies to cash when the issuer provides an amount in bank note denominations equal to or excess of the amount actually being paid.
   ///
-  /// [returnedAmount] The amount returned by the receiver which is excess to
-  ///  the amount payable, often referred to as 'change'.
+  /// [returnedAmount] The amount returned by the receiver which is excess to the amount payable, often referred to as 'change'.
   ///
   /// [amount] Total payment amount as indicated on the financial instrument.
   ///
   /// [paymentIdentifier] Issuer's unique identifier for the payment instrument.
   ///
-  /// [allocation] Distribution of the payment amount for a previously
-  ///  acknowledged payable.
+  /// [allocation] Distribution of the payment amount for a previously acknowledged payable.
   ///
   /// [formCode] A code for the form to be used for printing the content.
   ///
-  /// [processNote] A note that describes or explains the processing in a human
-  ///  readable form.
+  /// [processNote] A note that describes or explains the processing in a human readable form.
   ///
   factory PaymentReconciliation({
     /// [resourceType] This is a PaymentReconciliation resource
@@ -403,19 +301,13 @@ class PaymentReconciliation with Resource, _$PaymentReconciliation {
     @JsonKey(unknownEnumValue: R5ResourceType.PaymentReconciliation)
         R5ResourceType resourceType,
 
-    /// [id] The logical id of the resource, as used in the URL for the resource.
-    /// Once assigned, this value never changes.
+    /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.
     FhirId? id,
 
-    /// [meta] The metadata about the resource. This is content that is
-    /// maintained by the infrastructure. Changes to the content might not
-    /// always be associated with version changes to the resource.
+    /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
     FhirMeta? meta,
 
-    /// [implicitRules] A reference to a set of rules that were followed when
-    /// the resource was constructed, and which must be understood when
-    /// processing the content. Often, this is a reference to an implementation
-    /// guide that defines the special rules along with other profiles etc.
+    /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
@@ -433,10 +325,10 @@ class PaymentReconciliation with Resource, _$PaymentReconciliation {
     /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
     List<Resource>? contained,
 
-    /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+    /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
-    /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+    /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
     /// [identifier] A unique identifier assigned to this payment reconciliation.
@@ -592,118 +484,64 @@ class PaymentReconciliation with Resource, _$PaymentReconciliation {
   }
 }
 
-/// [PaymentReconciliationAllocation] This resource provides the details
-///  including amount of a payment and allocates the payment items being paid.
+/// [PaymentReconciliationAllocation] This resource provides the details including amount of a payment and allocates the payment items being paid.
 @freezed
 class PaymentReconciliationAllocation with _$PaymentReconciliationAllocation {
-  /// [PaymentReconciliationAllocation] This resource provides the details
-  ///  including amount of a payment and allocates the payment items being paid.
+  /// [PaymentReconciliationAllocation] This resource provides the details including amount of a payment and allocates the payment items being paid.
   PaymentReconciliationAllocation._();
 
-  /// [PaymentReconciliationAllocation] This resource provides the details
-  ///  including amount of a payment and allocates the payment items being paid.
+  /// [PaymentReconciliationAllocation] This resource provides the details including amount of a payment and allocates the payment items being paid.
   ///
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element. To
-  ///  make the use of extensions safe and manageable, there is a strict set of
-  ///  governance  applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements that
-  ///  SHALL be met as part of the definition of the extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that
-  ///  is not part of the basic definition of the element and that modifies the
-  ///  understanding of the element in which it is contained and/or the
-  ///  understanding of the containing element's descendants. Usually modifier
-  ///  elements provide negation or qualification. To make the use of
-  ///  extensions safe and manageable, there is a strict set of governance
-  ///  applied to the definition and use of extensions. Though any implementer
-  ///  can define an extension, there is a set of requirements that SHALL be
-  ///  met as part of the definition of the extension. Applications processing
-  ///  a resource are required to check for modifier extensions.Modifier
-  ///  extensions SHALL NOT change the meaning of any elements on Resource or
-  ///  DomainResource (including cannot change the meaning of modifierExtension
-  ///  itself).
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   ///
-  /// [identifier] Unique identifier for the current payment item for the
-  ///  referenced payable.
+  /// [identifier] Unique identifier for the current payment item for the referenced payable.
   ///
-  /// [predecessor] Unique identifier for the prior payment item for the
-  ///  referenced payable.
+  /// [predecessor] Unique identifier for the prior payment item for the referenced payable.
   ///
-  /// [target] Specific resource to which the payment/adjustment/advance
-  ///  applies.
+  /// [target] Specific resource to which the payment/adjustment/advance applies.
   ///
-  /// [targetItemString]  Identifies the claim line item, encounter or other
-  ///  sub-element being paid. Note payment may be partial, that is not match
-  ///  the then outstanding balance or amount incurred.
+  /// [targetItemString]  Identifies the claim line item, encounter or other sub-element being paid. Note payment may be partial, that is not match the then outstanding balance or amount incurred.
   ///
-  /// [targetItemStringElement] ("_targetItemString") Extensions for
-  ///  targetItemString
+  /// [targetItemStringElement] ("_targetItemString") Extensions for targetItemString
   ///
-  /// [targetItemIdentifier]  Identifies the claim line item, encounter or
-  ///  other sub-element being paid. Note payment may be partial, that is not
-  ///  match the then outstanding balance or amount incurred.
+  /// [targetItemIdentifier]  Identifies the claim line item, encounter or other sub-element being paid. Note payment may be partial, that is not match the then outstanding balance or amount incurred.
   ///
-  /// [targetItemPositiveInt]  Identifies the claim line item, encounter or
-  ///  other sub-element being paid. Note payment may be partial, that is not
-  ///  match the then outstanding balance or amount incurred.
+  /// [targetItemPositiveInt]  Identifies the claim line item, encounter or other sub-element being paid. Note payment may be partial, that is not match the then outstanding balance or amount incurred.
   ///
-  /// [targetItemPositiveIntElement] ("_targetItemPositiveInt") Extensions for
-  ///  targetItemPositiveInt
+  /// [targetItemPositiveIntElement] ("_targetItemPositiveInt") Extensions for targetItemPositiveInt
   ///
-  /// [encounter] The Encounter to which this payment applies, may be completed
-  ///  by the receiver, used for search.
+  /// [encounter] The Encounter to which this payment applies, may be completed by the receiver, used for search.
   ///
-  /// [account] The Account to which this payment applies, may be completed by
-  ///  the receiver, used for search.
+  /// [account] The Account to which this payment applies, may be completed by the receiver, used for search.
   ///
   /// [type] Code to indicate the nature of the payment.
   ///
   /// [submitter] The party which submitted the claim or financial transaction.
   ///
-  /// [response] A resource, such as a ClaimResponse, which contains a
-  ///  commitment to payment.
+  /// [response] A resource, such as a ClaimResponse, which contains a commitment to payment.
   ///
   /// [date] The date from the response resource containing a commitment to pay.
   ///
   /// [dateElement] ("_date") Extensions for date
   ///
-  /// [responsible] A reference to the individual who is responsible for
-  ///  inquiries regarding the response and its payment.
+  /// [responsible] A reference to the individual who is responsible for inquiries regarding the response and its payment.
   ///
   /// [payee] The party which is receiving the payment.
   ///
-  /// [amount] The monetary amount allocated from the total payment to the
-  ///  payable.
+  /// [amount] The monetary amount allocated from the total payment to the payable.
   ///
   factory PaymentReconciliationAllocation({
-    /// [id] Unique id for the element within a resource (for internal
-    /// references). This may be any string value that does not contain spaces.
+    /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
     String? id,
 
-    /// [extension_] ("extension") May be used to represent additional
-    /// information that is not part of the basic definition of the element.
-    /// To make the use of extensions safe and manageable, there is a strict set
-    /// of governance  applied to the definition and use of extensions. Though
-    /// any implementer can define an extension, there is a set of requirements
-    /// that SHALL be met as part of the definition of the extension.
+    /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
-    /// [modifierExtension] May be used to represent additional information that
-    /// is not part of the basic definition of the element and that modifies
-    /// the understanding of the element in which it is contained and/or the
-    /// understanding of the containing element's descendants. Usually modifier
-    /// elements provide negation or qualification. To make the use of extensions
-    /// safe and manageable, there is a strict set of governance applied to the
-    /// definition and use of extensions. Though any implementer can define an
-    /// extension, there is a set of requirements that SHALL be met as part of
-    /// the definition of the extension. Applications processing a resource are
-    /// required to check for modifier extensions.Modifier extensions SHALL NOT
-    /// change the meaning of any elements on Resource or DomainResource
-    /// (including cannot change the meaning of modifierExtension itself).
+    /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
     /// [identifier] Unique identifier for the current payment item for the referenced payable.
@@ -763,6 +601,7 @@ class PaymentReconciliationAllocation with _$PaymentReconciliationAllocation {
   }) = _PaymentReconciliationAllocation;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -781,8 +620,7 @@ class PaymentReconciliationAllocation with _$PaymentReconciliationAllocation {
   factory PaymentReconciliationAllocation.fromJson(Map<String, dynamic> json) =>
       _$PaymentReconciliationAllocationFromJson(json);
 
-  /// Acts like a constructor, returns a [PaymentReconciliationAllocation],
-  ///  accepts a
+  /// Acts like a constructor, returns a [PaymentReconciliationAllocation], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory PaymentReconciliationAllocation.fromJsonString(String source) {
     final json = jsonDecode(source);
@@ -795,40 +633,19 @@ class PaymentReconciliationAllocation with _$PaymentReconciliationAllocation {
   }
 }
 
-/// [PaymentReconciliationProcessNote] This resource provides the details
-///  including amount of a payment and allocates the payment items being paid.
+/// [PaymentReconciliationProcessNote] This resource provides the details including amount of a payment and allocates the payment items being paid.
 @freezed
 class PaymentReconciliationProcessNote with _$PaymentReconciliationProcessNote {
-  /// [PaymentReconciliationProcessNote] This resource provides the details
-  ///  including amount of a payment and allocates the payment items being paid.
+  /// [PaymentReconciliationProcessNote] This resource provides the details including amount of a payment and allocates the payment items being paid.
   PaymentReconciliationProcessNote._();
 
-  /// [PaymentReconciliationProcessNote] This resource provides the details
-  ///  including amount of a payment and allocates the payment items being paid.
+  /// [PaymentReconciliationProcessNote] This resource provides the details including amount of a payment and allocates the payment items being paid.
   ///
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element. To
-  ///  make the use of extensions safe and manageable, there is a strict set of
-  ///  governance  applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements that
-  ///  SHALL be met as part of the definition of the extension.
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that
-  ///  is not part of the basic definition of the element and that modifies the
-  ///  understanding of the element in which it is contained and/or the
-  ///  understanding of the containing element's descendants. Usually modifier
-  ///  elements provide negation or qualification. To make the use of
-  ///  extensions safe and manageable, there is a strict set of governance
-  ///  applied to the definition and use of extensions. Though any implementer
-  ///  can define an extension, there is a set of requirements that SHALL be
-  ///  met as part of the definition of the extension. Applications processing
-  ///  a resource are required to check for modifier extensions.Modifier
-  ///  extensions SHALL NOT change the meaning of any elements on Resource or
-  ///  DomainResource (including cannot change the meaning of modifierExtension
-  ///  itself).
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   ///
   /// [type] The business purpose of the note text.
   ///
@@ -839,30 +656,13 @@ class PaymentReconciliationProcessNote with _$PaymentReconciliationProcessNote {
   /// [textElement] ("_text") Extensions for text
   ///
   factory PaymentReconciliationProcessNote({
-    /// [id] Unique id for the element within a resource (for internal
-    /// references). This may be any string value that does not contain spaces.
+    /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
     String? id,
 
-    /// [extension_] ("extension") May be used to represent additional
-    /// information that is not part of the basic definition of the element.
-    /// To make the use of extensions safe and manageable, there is a strict set
-    /// of governance  applied to the definition and use of extensions. Though
-    /// any implementer can define an extension, there is a set of requirements
-    /// that SHALL be met as part of the definition of the extension.
+    /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
-    /// [modifierExtension] May be used to represent additional information that
-    /// is not part of the basic definition of the element and that modifies
-    /// the understanding of the element in which it is contained and/or the
-    /// understanding of the containing element's descendants. Usually modifier
-    /// elements provide negation or qualification. To make the use of extensions
-    /// safe and manageable, there is a strict set of governance applied to the
-    /// definition and use of extensions. Though any implementer can define an
-    /// extension, there is a set of requirements that SHALL be met as part of
-    /// the definition of the extension. Applications processing a resource are
-    /// required to check for modifier extensions.Modifier extensions SHALL NOT
-    /// change the meaning of any elements on Resource or DomainResource
-    /// (including cannot change the meaning of modifierExtension itself).
+    /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
     /// [type] The business purpose of the note text.
@@ -879,6 +679,7 @@ class PaymentReconciliationProcessNote with _$PaymentReconciliationProcessNote {
   }) = _PaymentReconciliationProcessNote;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -898,8 +699,7 @@ class PaymentReconciliationProcessNote with _$PaymentReconciliationProcessNote {
           Map<String, dynamic> json) =>
       _$PaymentReconciliationProcessNoteFromJson(json);
 
-  /// Acts like a constructor, returns a [PaymentReconciliationProcessNote],
-  ///  accepts a
+  /// Acts like a constructor, returns a [PaymentReconciliationProcessNote], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory PaymentReconciliationProcessNote.fromJsonString(String source) {
     final json = jsonDecode(source);

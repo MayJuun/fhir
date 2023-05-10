@@ -10,7 +10,7 @@ class SearchParamQuantity with SearchParam, _$SearchParamQuantity {
   const SearchParamQuantity._();
   const factory SearchParamQuantity.equal({
     FhirUri? system,
-    Code? code,
+    FhirCode? code,
     required num value,
   }) = _SearchParamQuantityEqual;
   factory SearchParamQuantity.equalFromQuantity(Quantity quantity) =>
@@ -21,7 +21,7 @@ class SearchParamQuantity with SearchParam, _$SearchParamQuantity {
       );
   const factory SearchParamQuantity.notEqual({
     FhirUri? system,
-    Code? code,
+    FhirCode? code,
     required num value,
   }) = _SearchParamQuantityNotEqual;
   factory SearchParamQuantity.notEqualFromQuantity(Quantity quantity) =>
@@ -32,7 +32,7 @@ class SearchParamQuantity with SearchParam, _$SearchParamQuantity {
       );
   const factory SearchParamQuantity.greaterThan({
     FhirUri? system,
-    Code? code,
+    FhirCode? code,
     required num value,
   }) = _SearchParamQuantityGreaterThan;
   factory SearchParamQuantity.greaterThanFromQuantity(Quantity quantity) =>
@@ -43,7 +43,7 @@ class SearchParamQuantity with SearchParam, _$SearchParamQuantity {
       );
   const factory SearchParamQuantity.lessThan({
     FhirUri? system,
-    Code? code,
+    FhirCode? code,
     required num value,
   }) = _SearchParamQuantityLessThan;
   factory SearchParamQuantity.lessThanFromQuantity(Quantity quantity) =>
@@ -54,7 +54,7 @@ class SearchParamQuantity with SearchParam, _$SearchParamQuantity {
       );
   const factory SearchParamQuantity.greaterOrEqual({
     FhirUri? system,
-    Code? code,
+    FhirCode? code,
     required num value,
   }) = _SearchParamQuantityGreaterOrEqual;
   factory SearchParamQuantity.greaterOrEqualFromQuantity(Quantity quantity) =>
@@ -65,7 +65,7 @@ class SearchParamQuantity with SearchParam, _$SearchParamQuantity {
       );
   const factory SearchParamQuantity.lessOrEqual({
     FhirUri? system,
-    Code? code,
+    FhirCode? code,
     required num value,
   }) = _SearchParamQuantityLessOrEqual;
   factory SearchParamQuantity.lessOrEqualFromQuantity(Quantity quantity) =>
@@ -76,7 +76,7 @@ class SearchParamQuantity with SearchParam, _$SearchParamQuantity {
       );
   const factory SearchParamQuantity.startsAfter({
     FhirUri? system,
-    Code? code,
+    FhirCode? code,
     required num value,
   }) = _SearchParamQuantityStartsAfter;
   factory SearchParamQuantity.startsAfterFromQuantity(Quantity quantity) =>
@@ -87,7 +87,7 @@ class SearchParamQuantity with SearchParam, _$SearchParamQuantity {
       );
   const factory SearchParamQuantity.endsBefore({
     FhirUri? system,
-    Code? code,
+    FhirCode? code,
     required num value,
   }) = _SearchParamQuantityEndsBefore;
   factory SearchParamQuantity.endsBeforeFromQuantity(Quantity quantity) =>
@@ -98,7 +98,7 @@ class SearchParamQuantity with SearchParam, _$SearchParamQuantity {
       );
   const factory SearchParamQuantity.approximately({
     FhirUri? system,
-    Code? code,
+    FhirCode? code,
     required num value,
   }) = _SearchParamQuantityApproximately;
   factory SearchParamQuantity.approximatelyFromQuantity(Quantity quantity) =>

@@ -58,7 +58,7 @@ class CareTeamUsCore extends Resource {
   FhirMeta? get meta => _careTeam.meta;
   Narrative? get text => _careTeam.text;
   String? get name => _careTeam.name;
-  Code? get status => _careTeam.status;
+  FhirCode? get status => _careTeam.status;
   Reference? get subject => _careTeam.subject;
   List<CareTeamParticipant>? get participant => _careTeam.participant;
 }

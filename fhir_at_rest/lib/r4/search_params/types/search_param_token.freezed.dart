@@ -297,7 +297,7 @@ abstract class _SearchParamTokenEqual extends SearchParamToken {
   const _SearchParamTokenEqual._() : super._();
 
   FhirUri? get system;
-  Code? get code;
+  FhirCode? get code;
   @JsonKey(ignore: true)
   _$$_SearchParamTokenEqualCopyWith<_$_SearchParamTokenEqual> get copyWith =>
       throw _privateConstructorUsedError;
@@ -484,7 +484,7 @@ abstract class _SearchParamTokenText extends SearchParamToken {
   const _SearchParamTokenText._() : super._();
 
   FhirUri? get system;
-  Code? get code;
+  FhirCode? get code;
   @JsonKey(ignore: true)
   _$$_SearchParamTokenTextCopyWith<_$_SearchParamTokenText> get copyWith =>
       throw _privateConstructorUsedError;
@@ -671,7 +671,7 @@ abstract class _SearchParamTokenNot extends SearchParamToken {
   const _SearchParamTokenNot._() : super._();
 
   FhirUri? get system;
-  Code? get code;
+  FhirCode? get code;
   @JsonKey(ignore: true)
   _$$_SearchParamTokenNotCopyWith<_$_SearchParamTokenNot> get copyWith =>
       throw _privateConstructorUsedError;
@@ -858,7 +858,7 @@ abstract class _SearchParamTokenAbove extends SearchParamToken {
   const _SearchParamTokenAbove._() : super._();
 
   FhirUri? get system;
-  Code? get code;
+  FhirCode? get code;
   @JsonKey(ignore: true)
   _$$_SearchParamTokenAboveCopyWith<_$_SearchParamTokenAbove> get copyWith =>
       throw _privateConstructorUsedError;
@@ -1045,7 +1045,7 @@ abstract class _SearchParamTokenBelow extends SearchParamToken {
   const _SearchParamTokenBelow._() : super._();
 
   FhirUri? get system;
-  Code? get code;
+  FhirCode? get code;
   @JsonKey(ignore: true)
   _$$_SearchParamTokenBelowCopyWith<_$_SearchParamTokenBelow> get copyWith =>
       throw _privateConstructorUsedError;
@@ -1232,7 +1232,7 @@ abstract class _SearchParamTokenIn extends SearchParamToken {
   const _SearchParamTokenIn._() : super._();
 
   FhirUri? get system;
-  Code? get code;
+  FhirCode? get code;
   @JsonKey(ignore: true)
   _$$_SearchParamTokenInCopyWith<_$_SearchParamTokenIn> get copyWith =>
       throw _privateConstructorUsedError;
@@ -1419,7 +1419,7 @@ abstract class _SearchParamTokenNotIn extends SearchParamToken {
   const _SearchParamTokenNotIn._() : super._();
 
   FhirUri? get system;
-  Code? get code;
+  FhirCode? get code;
   @JsonKey(ignore: true)
   _$$_SearchParamTokenNotInCopyWith<_$_SearchParamTokenNotIn> get copyWith =>
       throw _privateConstructorUsedError;
@@ -1606,7 +1606,7 @@ abstract class _SearchParamTokenOfType extends SearchParamToken {
   const _SearchParamTokenOfType._() : super._();
 
   FhirUri? get system;
-  Code? get code;
+  FhirCode? get code;
   @JsonKey(ignore: true)
   _$$_SearchParamTokenOfTypeCopyWith<_$_SearchParamTokenOfType> get copyWith =>
       throw _privateConstructorUsedError;

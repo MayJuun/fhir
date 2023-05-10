@@ -44,7 +44,7 @@ class BundleUsCore extends Resource {
 
     /// [type] Indicates the purpose of this bundle - how it is intended to be
     ///  used.
-    Code? type,
+    FhirCode? type,
 
     /// [timestamp] The date/time that the bundle was assembled - i.e. when the
     ///  resources were placed in the bundle.
@@ -94,7 +94,7 @@ class BundleUsCore extends Resource {
 
   /// [type] Indicates the purpose of this bundle - how it is intended to be
   ///  used.
-  Code? get type => _bundle.type;
+  FhirCode? get type => _bundle.type;
 
   /// [timestamp] The date/time that the bundle was assembled - i.e. when the
   ///  resources were placed in the bundle.
@@ -311,10 +311,10 @@ class BundleSearchUsCore {
     /// [mode] Why this entry is in the result set - whether it's included as a
     /// match or because of an _include requirement, or to convey information or
     ///  warning information about the search process.
-    Code? mode,
+    FhirCode? mode,
 
     /// [score] When searching, the server's search ranking score for the entry.
-    Decimal? score,
+    FhirDecimal? score,
   }) =>
       BundleSearchUsCore._(BundleSearch(id: id, mode: mode, score: score));
 
@@ -331,10 +331,10 @@ class BundleSearchUsCore {
   /// [mode] Why this entry is in the result set - whether it's included as a
   /// match or because of an _include requirement, or to convey information or
   ///  warning information about the search process.
-  Code? get mode => _bundleSearch.mode;
+  FhirCode? get mode => _bundleSearch.mode;
 
   /// [score] When searching, the server's search ranking score for the entry.
-  Decimal? get score => _bundleSearch.score;
+  FhirDecimal? get score => _bundleSearch.score;
 }
 
 /// [BundleRequestUsCore] A container for a collection of resources.
@@ -378,7 +378,7 @@ class BundleRequestUsCore {
     /// [method] In a transaction or batch, this is the HTTP action to be
     /// executed for this entry. In a history bundle, this indicates the HTTP
     ///  action that occurred.
-    Code? method,
+    FhirCode? method,
 
     /// [url] The URL for this entry, relative to the root (the address to which
     ///  the request is posted).
@@ -425,7 +425,7 @@ class BundleRequestUsCore {
   /// [method] In a transaction or batch, this is the HTTP action to be
   /// executed for this entry. In a history bundle, this indicates the HTTP
   ///  action that occurred.
-  Code? get method => _bundleRequest.method;
+  FhirCode? get method => _bundleRequest.method;
 
   /// [url] The URL for this entry, relative to the root (the address to which
   ///  the request is posted).

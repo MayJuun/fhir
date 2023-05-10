@@ -830,6 +830,13 @@ _$_SampledData _$$_SampledDataFromJson(Map<String, dynamic> json) =>
       dimensionsElement: json['_dimensions'] == null
           ? null
           : Element.fromJson(json['_dimensions'] as Map<String, dynamic>),
+      codeMap: json['codeMap'] == null
+          ? null
+          : FhirCanonical.fromJson(json['codeMap']),
+      offsets: json['offsets'] as String?,
+      offsetsElement: json['_offsets'] == null
+          ? null
+          : Element.fromJson(json['_offsets'] as Map<String, dynamic>),
       data: json['data'] as String?,
       dataElement: json['_data'] == null
           ? null
@@ -861,6 +868,9 @@ Map<String, dynamic> _$$_SampledDataToJson(_$_SampledData instance) {
   writeNotNull('_upperLimit', instance.upperLimitElement?.toJson());
   writeNotNull('dimensions', instance.dimensions?.toJson());
   writeNotNull('_dimensions', instance.dimensionsElement?.toJson());
+  writeNotNull('codeMap', instance.codeMap?.toJson());
+  writeNotNull('offsets', instance.offsets);
+  writeNotNull('_offsets', instance.offsetsElement?.toJson());
   writeNotNull('data', instance.data);
   writeNotNull('_data', instance.dataElement?.toJson());
   return val;
@@ -1303,9 +1313,7 @@ _$_TimingRepeat _$$_TimingRepeatFromJson(Map<String, dynamic> json) =>
       timeOfDayElement: (json['_timeOfDay'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
           .toList(),
-      when: (json['when'] as List<dynamic>?)
-          ?.map((e) => $enumDecode(_$TimingRepeatWhenEnumMap, e))
-          .toList(),
+      when: $enumDecodeNullable(_$TimingRepeatWhenEnumMap, json['when']),
       whenElement: (json['_when'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1364,8 +1372,7 @@ Map<String, dynamic> _$$_TimingRepeatToJson(_$_TimingRepeat instance) {
       'timeOfDay', instance.timeOfDay?.map((e) => e.toJson()).toList());
   writeNotNull(
       '_timeOfDay', instance.timeOfDayElement?.map((e) => e.toJson()).toList());
-  writeNotNull('when',
-      instance.when?.map((e) => _$TimingRepeatWhenEnumMap[e]!).toList());
+  writeNotNull('when', _$TimingRepeatWhenEnumMap[instance.when]);
   writeNotNull('_when', instance.whenElement?.map((e) => e.toJson()).toList());
   writeNotNull('offset', instance.offset?.toJson());
   writeNotNull('_offset', instance.offsetElement?.toJson());

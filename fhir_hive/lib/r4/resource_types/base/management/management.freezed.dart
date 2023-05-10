@@ -49,7 +49,7 @@ mixin _$Encounter {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -106,7 +106,7 @@ mixin _$Encounter {
   /// [status] planned | arrived | triaged | in-progress | onleave | finished |
   ///  cancelled +.
   @HiveField(12)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -254,7 +254,7 @@ abstract class $EncounterCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -270,7 +270,7 @@ abstract class $EncounterCopyWith<$Res> {
       @HiveField(11)
           List<Identifier>? identifier,
       @HiveField(12)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(13)
           Element? statusElement,
@@ -715,7 +715,7 @@ abstract class _$$_EncounterCopyWith<$Res> implements $EncounterCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -731,7 +731,7 @@ abstract class _$$_EncounterCopyWith<$Res> implements $EncounterCopyWith<$Res> {
       @HiveField(11)
           List<Identifier>? identifier,
       @HiveField(12)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(13)
           Element? statusElement,
@@ -1768,7 +1768,7 @@ abstract class _Encounter extends Encounter {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -1831,7 +1831,7 @@ abstract class _Encounter extends Encounter {
   /// [status] planned | arrived | triaged | in-progress | onleave | finished |
   ///  cancelled +.
   @HiveField(12)
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -2015,7 +2015,7 @@ mixin _$EncounterStatusHistory {
 
   /// [status] planned | arrived | triaged | in-progress | onleave | finished |
   ///  cancelled +.
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -2040,7 +2040,7 @@ abstract class $EncounterStatusHistoryCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status') Element? statusElement,
       Period period});
 
@@ -2130,7 +2130,7 @@ abstract class _$$_EncounterStatusHistoryCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status') Element? statusElement,
       Period period});
 
@@ -2381,7 +2381,7 @@ abstract class _EncounterStatusHistory extends EncounterStatusHistory {
 
   /// [status] planned | arrived | triaged | in-progress | onleave | finished |
   ///  cancelled +.
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -4431,7 +4431,7 @@ mixin _$EncounterLocation {
   /// location during the period specified. If the participant is no longer at
   ///  the location, then the period will have an end date/time.
   @HiveField(4)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @HiveField(5)
@@ -4919,7 +4919,7 @@ abstract class _EncounterLocation extends EncounterLocation {
   /// location during the period specified. If the participant is no longer at
   ///  the location, then the period will have an end date/time.
   @HiveField(4)
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -4980,7 +4980,7 @@ mixin _$EpisodeOfCare {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -5038,7 +5038,7 @@ mixin _$EpisodeOfCare {
 
   /// [status] planned | waitlist | active | onhold | finished | cancelled.
   @HiveField(12)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -5121,7 +5121,7 @@ abstract class $EpisodeOfCareCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -5137,7 +5137,7 @@ abstract class $EpisodeOfCareCopyWith<$Res> {
       @HiveField(11)
           List<Identifier>? identifier,
       @HiveField(12)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(13)
           Element? statusElement,
@@ -5438,7 +5438,7 @@ abstract class _$$_EpisodeOfCareCopyWith<$Res>
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -5454,7 +5454,7 @@ abstract class _$$_EpisodeOfCareCopyWith<$Res>
       @HiveField(11)
           List<Identifier>? identifier,
       @HiveField(12)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(13)
           Element? statusElement,
@@ -6182,7 +6182,7 @@ abstract class _EpisodeOfCare extends EpisodeOfCare {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -6246,7 +6246,7 @@ abstract class _EpisodeOfCare extends EpisodeOfCare {
 
   /// [status] planned | waitlist | active | onhold | finished | cancelled.
   @HiveField(12)
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -6354,7 +6354,7 @@ mixin _$EpisodeOfCareStatusHistory {
       throw _privateConstructorUsedError;
 
   /// [status] planned | waitlist | active | onhold | finished | cancelled.
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -6381,7 +6381,7 @@ abstract class $EpisodeOfCareStatusHistoryCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status') Element? statusElement,
       Period period});
 
@@ -6472,7 +6472,7 @@ abstract class _$$_EpisodeOfCareStatusHistoryCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status') Element? statusElement,
       Period period});
 
@@ -6723,7 +6723,7 @@ abstract class _EpisodeOfCareStatusHistory extends EpisodeOfCareStatusHistory {
   @override
 
   /// [status] planned | waitlist | active | onhold | finished | cancelled.
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -7242,7 +7242,7 @@ mixin _$Flag {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -7300,7 +7300,7 @@ mixin _$Flag {
 
   /// [status] Supports basic workflow.
   @HiveField(12)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -7361,7 +7361,7 @@ abstract class $FlagCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -7377,7 +7377,7 @@ abstract class $FlagCopyWith<$Res> {
       @HiveField(11)
           List<Identifier>? identifier,
       @HiveField(12)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(13)
           Element? statusElement,
@@ -7657,7 +7657,7 @@ abstract class _$$_FlagCopyWith<$Res> implements $FlagCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -7673,7 +7673,7 @@ abstract class _$$_FlagCopyWith<$Res> implements $FlagCopyWith<$Res> {
       @HiveField(11)
           List<Identifier>? identifier,
       @HiveField(12)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(13)
           Element? statusElement,
@@ -8268,7 +8268,7 @@ abstract class _Flag extends Flag {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -8332,7 +8332,7 @@ abstract class _Flag extends Flag {
 
   /// [status] Supports basic workflow.
   @HiveField(12)
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -8415,7 +8415,7 @@ mixin _$Library {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -8537,7 +8537,7 @@ mixin _$Library {
   /// [status] The status of this library. Enables tracking the life-cycle of
   ///  the content.
   @HiveField(23)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -8752,7 +8752,7 @@ abstract class $LibraryCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -8794,7 +8794,7 @@ abstract class $LibraryCopyWith<$Res> {
       @HiveField(22)
           Element? subtitleElement,
       @HiveField(23)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(24)
           Element? statusElement,
@@ -9505,7 +9505,7 @@ abstract class _$$_LibraryCopyWith<$Res> implements $LibraryCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -9547,7 +9547,7 @@ abstract class _$$_LibraryCopyWith<$Res> implements $LibraryCopyWith<$Res> {
       @HiveField(22)
           Element? subtitleElement,
       @HiveField(23)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(24)
           Element? statusElement,
@@ -11088,7 +11088,7 @@ abstract class _Library extends Library {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -11226,7 +11226,7 @@ abstract class _Library extends Library {
   /// [status] The status of this library. Enables tracking the life-cycle of
   ///  the content.
   @HiveField(23)
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -11488,7 +11488,7 @@ mixin _$FhirList {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @HiveField(6)
@@ -11545,7 +11545,7 @@ mixin _$FhirList {
 
   /// [status] Indicates the current state of this list.
   @HiveField(12)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @HiveField(13)
@@ -11557,7 +11557,7 @@ mixin _$FhirList {
   /// snapshot of a list of items from another source, or whether it is a
   ///  prepared list where items may be marked as added, modified or deleted.
   @HiveField(14)
-  Code? get mode => throw _privateConstructorUsedError;
+  FhirCode? get mode => throw _privateConstructorUsedError;
 
   /// [modeElement] Extensions for mode
   @HiveField(15)
@@ -11643,7 +11643,7 @@ abstract class $FhirListCopyWith<$Res> {
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @HiveField(6)
       @JsonKey(name: '_language')
           Element? languageElement,
@@ -11659,12 +11659,12 @@ abstract class $FhirListCopyWith<$Res> {
       @HiveField(11)
           List<Identifier>? identifier,
       @HiveField(12)
-          Code? status,
+          FhirCode? status,
       @HiveField(13)
       @JsonKey(name: '_status')
           Element? statusElement,
       @HiveField(14)
-          Code? mode,
+          FhirCode? mode,
       @HiveField(15)
       @JsonKey(name: '_mode')
           Element? modeElement,
@@ -12059,7 +12059,7 @@ abstract class _$$_FhirListCopyWith<$Res> implements $FhirListCopyWith<$Res> {
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @HiveField(6)
       @JsonKey(name: '_language')
           Element? languageElement,
@@ -12075,12 +12075,12 @@ abstract class _$$_FhirListCopyWith<$Res> implements $FhirListCopyWith<$Res> {
       @HiveField(11)
           List<Identifier>? identifier,
       @HiveField(12)
-          Code? status,
+          FhirCode? status,
       @HiveField(13)
       @JsonKey(name: '_status')
           Element? statusElement,
       @HiveField(14)
-          Code? mode,
+          FhirCode? mode,
       @HiveField(15)
       @JsonKey(name: '_mode')
           Element? modeElement,
@@ -12849,7 +12849,7 @@ abstract class _FhirList extends FhirList {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -12912,7 +12912,7 @@ abstract class _FhirList extends FhirList {
 
   /// [status] Indicates the current state of this list.
   @HiveField(12)
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -12926,7 +12926,7 @@ abstract class _FhirList extends FhirList {
   /// snapshot of a list of items from another source, or whether it is a
   ///  prepared list where items may be marked as added, modified or deleted.
   @HiveField(14)
-  Code? get mode;
+  FhirCode? get mode;
   @override
 
   /// [modeElement] Extensions for mode

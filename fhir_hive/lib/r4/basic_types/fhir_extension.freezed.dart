@@ -43,7 +43,7 @@ mixin _$FhirExtension {
 
   /// [valueBase64Binary] Value of extension - must be one of a constrained set
   ///  of the data types (see [Extensibility](extensibility.html) for a list).
-  Base64Binary? get valueBase64Binary => throw _privateConstructorUsedError;
+  FhirBase64Binary? get valueBase64Binary => throw _privateConstructorUsedError;
 
   /// [valueBase64BinaryElement] Extensions for valueBase64Binary
   @JsonKey(name: '_valueBase64Binary')
@@ -67,7 +67,7 @@ mixin _$FhirExtension {
 
   /// [valueCode] Value of extension - must be one of a constrained set of the
   ///  data types (see [Extensibility](extensibility.html) for a list).
-  Code? get valueCode => throw _privateConstructorUsedError;
+  FhirCode? get valueCode => throw _privateConstructorUsedError;
 
   /// [valueCodeElement] Extensions for valueCode
   @JsonKey(name: '_valueCode')
@@ -91,7 +91,7 @@ mixin _$FhirExtension {
 
   /// [valueDecimal] Value of extension - must be one of a constrained set of
   ///  the data types (see [Extensibility](extensibility.html) for a list).
-  Decimal? get valueDecimal => throw _privateConstructorUsedError;
+  FhirDecimal? get valueDecimal => throw _privateConstructorUsedError;
 
   /// [valueDecimalElement] Extensions for valueDecimal
   @JsonKey(name: '_valueDecimal')
@@ -348,19 +348,19 @@ abstract class $FhirExtensionCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       FhirUri? url,
       @JsonKey(name: '_url') Element? urlElement,
-      Base64Binary? valueBase64Binary,
+      FhirBase64Binary? valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
       Boolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       Canonical? valueCanonical,
       @JsonKey(name: '_valueCanonical') Element? valueCanonicalElement,
-      Code? valueCode,
+      FhirCode? valueCode,
       @JsonKey(name: '_valueCode') Element? valueCodeElement,
       Date? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
       FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
-      Decimal? valueDecimal,
+      FhirDecimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
       FhirId? valueId,
       @JsonKey(name: '_valueId') Element? valueIdElement,
@@ -1505,19 +1505,19 @@ abstract class _$$_FhirExtensionCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       FhirUri? url,
       @JsonKey(name: '_url') Element? urlElement,
-      Base64Binary? valueBase64Binary,
+      FhirBase64Binary? valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
       Boolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       Canonical? valueCanonical,
       @JsonKey(name: '_valueCanonical') Element? valueCanonicalElement,
-      Code? valueCode,
+      FhirCode? valueCode,
       @JsonKey(name: '_valueCode') Element? valueCodeElement,
       Date? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
       FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
-      Decimal? valueDecimal,
+      FhirDecimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
       FhirId? valueId,
       @JsonKey(name: '_valueId') Element? valueIdElement,
@@ -2889,7 +2889,7 @@ abstract class _FhirExtension extends FhirExtension {
 
   /// [valueBase64Binary] Value of extension - must be one of a constrained set
   ///  of the data types (see [Extensibility](extensibility.html) for a list).
-  Base64Binary? get valueBase64Binary;
+  FhirBase64Binary? get valueBase64Binary;
   @override
 
   /// [valueBase64BinaryElement] Extensions for valueBase64Binary
@@ -2919,7 +2919,7 @@ abstract class _FhirExtension extends FhirExtension {
 
   /// [valueCode] Value of extension - must be one of a constrained set of the
   ///  data types (see [Extensibility](extensibility.html) for a list).
-  Code? get valueCode;
+  FhirCode? get valueCode;
   @override
 
   /// [valueCodeElement] Extensions for valueCode
@@ -2949,7 +2949,7 @@ abstract class _FhirExtension extends FhirExtension {
 
   /// [valueDecimal] Value of extension - must be one of a constrained set of
   ///  the data types (see [Extensibility](extensibility.html) for a list).
-  Decimal? get valueDecimal;
+  FhirDecimal? get valueDecimal;
   @override
 
   /// [valueDecimalElement] Extensions for valueDecimal

@@ -1001,7 +1001,8 @@ _$_Practitioner _$$_PractitionerFromJson(Map<String, dynamic> json) =>
               PractitionerQualification.fromJson(e as Map<String, dynamic>))
           .toList(),
       communication: (json['communication'] as List<dynamic>?)
-          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              PractitionerCommunication.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
@@ -1097,6 +1098,47 @@ Map<String, dynamic> _$$_PractitionerQualificationToJson(
   return val;
 }
 
+_$_PractitionerCommunication _$$_PractitionerCommunicationFromJson(
+        Map<String, dynamic> json) =>
+    _$_PractitionerCommunication(
+      id: json['id'] as String?,
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      language:
+          CodeableConcept.fromJson(json['language'] as Map<String, dynamic>),
+      preferred: json['preferred'] == null
+          ? null
+          : FhirBoolean.fromJson(json['preferred']),
+      preferredElement: json['_preferred'] == null
+          ? null
+          : Element.fromJson(json['_preferred'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$$_PractitionerCommunicationToJson(
+    _$_PractitionerCommunication instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
+  val['language'] = instance.language.toJson();
+  writeNotNull('preferred', instance.preferred?.toJson());
+  writeNotNull('_preferred', instance.preferredElement?.toJson());
+  return val;
+}
+
 _$_PractitionerRole _$$_PractitionerRoleFromJson(Map<String, dynamic> json) =>
     _$_PractitionerRole(
       resourceType: $enumDecodeNullable(
@@ -1163,6 +1205,12 @@ _$_PractitionerRole _$$_PractitionerRoleFromJson(Map<String, dynamic> json) =>
           ?.map(
               (e) => ExtendedContactDetail.fromJson(e as Map<String, dynamic>))
           .toList(),
+      characteristic: (json['characteristic'] as List<dynamic>?)
+          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      communication: (json['communication'] as List<dynamic>?)
+          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
+          .toList(),
       availability: (json['availability'] as List<dynamic>?)
           ?.map((e) => Availability.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1209,6 +1257,10 @@ Map<String, dynamic> _$$_PractitionerRoleToJson(_$_PractitionerRole instance) {
   writeNotNull('healthcareService',
       instance.healthcareService?.map((e) => e.toJson()).toList());
   writeNotNull('contact', instance.contact?.map((e) => e.toJson()).toList());
+  writeNotNull('characteristic',
+      instance.characteristic?.map((e) => e.toJson()).toList());
+  writeNotNull(
+      'communication', instance.communication?.map((e) => e.toJson()).toList());
   writeNotNull(
       'availability', instance.availability?.map((e) => e.toJson()).toList());
   writeNotNull('endpoint', instance.endpoint?.map((e) => e.toJson()).toList());

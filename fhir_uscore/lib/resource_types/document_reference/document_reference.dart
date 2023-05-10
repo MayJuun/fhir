@@ -104,7 +104,7 @@ class DocumentReferenceUsCore extends Resource {
   FhirMeta? get meta => _documentReference.meta;
   Narrative? get text => _documentReference.text;
   List<Identifier>? get identifier => _documentReference.identifier;
-  Code? get status => _documentReference.status;
+  FhirCode? get status => _documentReference.status;
   CodeableConcept? get type => _documentReference.type;
   List<CodeableConcept>? get category => _documentReference.category;
   Reference? get subject => _documentReference.subject;

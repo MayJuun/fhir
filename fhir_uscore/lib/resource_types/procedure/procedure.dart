@@ -40,7 +40,7 @@ class ProcedureUsCore extends Resource {
   FhirMeta? get meta => _procedure.meta;
   Narrative? get text => _procedure.text;
   List<Identifier>? get identifier => _procedure.identifier;
-  Code? get status => _procedure.status;
+  FhirCode? get status => _procedure.status;
   CodeableConcept? get code => _procedure.code;
   Reference get subject => _procedure.subject;
   FhirDateTime? get performedDateTime => _procedure.performedDateTime;

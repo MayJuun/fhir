@@ -2667,7 +2667,7 @@ class ElementDefinition with _$ElementDefinition {
     /// value stated in the instance (e.g. 'if not otherwise specified, the
     ///  abstract is false').
 
-    Base64Binary? defaultValueBase64Binary,
+    FhirBase64Binary? defaultValueBase64Binary,
     @JsonKey(name: '_defaultValueBase64Binary')
 
         /// [defaultValueBase64BinaryElement] Extensions for defaultValueBase64Binary
@@ -2699,7 +2699,7 @@ class ElementDefinition with _$ElementDefinition {
     /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
     ///  false').
 
-    Code? defaultValueCode,
+    FhirCode? defaultValueCode,
 
     /// [defaultValueCodeElement] Extensions for defaultValueCode
     @JsonKey(name: '_defaultValueCode')
@@ -2730,7 +2730,7 @@ class ElementDefinition with _$ElementDefinition {
     /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
     ///  false').
 
-    Decimal? defaultValueDecimal,
+    FhirDecimal? defaultValueDecimal,
 
     /// [defaultValueDecimalElement] Extensions for defaultValueDecimal
     @JsonKey(name: '_defaultValueDecimal')
@@ -3068,7 +3068,7 @@ class ElementDefinition with _$ElementDefinition {
     /// match (case and accent sensitive). Missing elements/attributes must also
     ///  be missing.
 
-    Base64Binary? fixedBase64Binary,
+    FhirBase64Binary? fixedBase64Binary,
 
     /// [fixedBase64BinaryElement] Extensions for fixedBase64Binary
     @JsonKey(name: '_fixedBase64Binary')
@@ -3101,7 +3101,7 @@ class ElementDefinition with _$ElementDefinition {
     /// whitespace is ignored, and all values must be an exact match (case and
     ///  accent sensitive). Missing elements/attributes must also be missing.
 
-    Code? fixedCode,
+    FhirCode? fixedCode,
 
     /// [fixedCodeElement] Extensions for fixedCode
     @JsonKey(name: '_fixedCode')
@@ -3134,7 +3134,7 @@ class ElementDefinition with _$ElementDefinition {
     /// whitespace is ignored, and all values must be an exact match (case and
     ///  accent sensitive). Missing elements/attributes must also be missing.
 
-    Decimal? fixedDecimal,
+    FhirDecimal? fixedDecimal,
 
     /// [fixedDecimalElement] Extensions for fixedDecimal
     @JsonKey(name: '_fixedDecimal')
@@ -3517,7 +3517,7 @@ class ElementDefinition with _$ElementDefinition {
     /// 2. If a complex object: it must match (recursively) the pattern value
     /// 3. If an array: it must match (recursively) the pattern value.
 
-    Base64Binary? patternBase64Binary,
+    FhirBase64Binary? patternBase64Binary,
 
     /// [patternBase64BinaryElement] Extensions for patternBase64Binary
     @JsonKey(name: '_patternBase64Binary')
@@ -3586,7 +3586,7 @@ class ElementDefinition with _$ElementDefinition {
     /// 2. If a complex object: it must match (recursively) the pattern value
     /// 3. If an array: it must match (recursively) the pattern value.
 
-    Code? patternCode,
+    FhirCode? patternCode,
 
     /// [patternCodeElement] Extensions for patternCode
     @JsonKey(name: '_patternCode')
@@ -3655,7 +3655,7 @@ class ElementDefinition with _$ElementDefinition {
     /// 2. If a complex object: it must match (recursively) the pattern value
     /// 3. If an array: it must match (recursively) the pattern value.
 
-    Decimal? patternDecimal,
+    FhirDecimal? patternDecimal,
 
     /// [patternDecimalElement] Extensions for patternDecimal
     @JsonKey(name: '_patternDecimal')
@@ -4563,7 +4563,7 @@ class ElementDefinition with _$ElementDefinition {
     /// inclusive. This is allowed for the types date, dateTime, instant, time,
     ///  decimal, integer, and Quantity.
 
-    Decimal? minValueDecimal,
+    FhirDecimal? minValueDecimal,
 
     /// [minValueDecimalElement] Extensions for minValueDecimal
     @JsonKey(name: '_minValueDecimal')
@@ -4658,7 +4658,7 @@ class ElementDefinition with _$ElementDefinition {
     /// inclusive. This is allowed for the types date, dateTime, instant, time,
     ///  decimal, integer, and Quantity.
 
-    Decimal? maxValueDecimal,
+    FhirDecimal? maxValueDecimal,
 
     /// [maxValueDecimalElement] Extensions for maxValueDecimal
     @JsonKey(name: '_maxValueDecimal')
@@ -5688,7 +5688,7 @@ class ElementDefinitionExample extends HiveObject
 
     /// [valueBase64Binary] The actual value for the element, which must be one
     ///  of the types allowed for this element.
-    Base64Binary? valueBase64Binary,
+    FhirBase64Binary? valueBase64Binary,
 
     /// [valueBase64BinaryElement] Extensions for valueBase64Binary
 
@@ -5711,7 +5711,7 @@ class ElementDefinitionExample extends HiveObject
 
     /// [valueCode] The actual value for the element, which must be one of the
     ///  types allowed for this element.
-    Code? valueCode,
+    FhirCode? valueCode,
 
     /// [valueCodeElement] Extensions for valueCode
     @JsonKey(name: '_valueCode') Element? valueCodeElement,
@@ -5733,7 +5733,7 @@ class ElementDefinitionExample extends HiveObject
 
     /// [valueDecimal] The actual value for the element, which must be one of the
     ///  types allowed for this element.
-    Decimal? valueDecimal,
+    FhirDecimal? valueDecimal,
 
     /// [valueDecimalElement] Extensions for valueDecimal
     @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
@@ -6397,7 +6397,7 @@ class ElementDefinitionMapping extends HiveObject
 
     /// [language] Identifies the computable language in which mapping.map is
     ///  expressed.
-    Code? language,
+    FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language') Element? languageElement,

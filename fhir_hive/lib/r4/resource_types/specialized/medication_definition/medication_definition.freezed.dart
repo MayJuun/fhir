@@ -43,7 +43,7 @@ mixin _$AdministrableProductDefinition {
 
   /// [language] The base language in which the resource is written.;
   @HiveField(7)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] (_language): Extensions for language;
   @JsonKey(name: '_language')
@@ -74,7 +74,7 @@ mixin _$AdministrableProductDefinition {
 
   /// [status] The status of this ingredient. Enables tracking the life-cycle of the content.;
   @HiveField(14)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] (_status): Extensions for status;
   @JsonKey(name: '_status')
@@ -129,7 +129,7 @@ abstract class $AdministrableProductDefinitionCopyWith<$Res> {
       @HiveField(6)
           Element? implicitRulesElement,
       @HiveField(7)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(8)
           Element? languageElement,
@@ -145,7 +145,7 @@ abstract class $AdministrableProductDefinitionCopyWith<$Res> {
       @HiveField(13)
           List<Identifier>? identifier,
       @HiveField(14)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(15)
           Element? statusElement,
@@ -428,7 +428,7 @@ abstract class _$$_AdministrableProductDefinitionCopyWith<$Res>
       @HiveField(6)
           Element? implicitRulesElement,
       @HiveField(7)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(8)
           Element? languageElement,
@@ -444,7 +444,7 @@ abstract class _$$_AdministrableProductDefinitionCopyWith<$Res>
       @HiveField(13)
           List<Identifier>? identifier,
       @HiveField(14)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(15)
           Element? statusElement,
@@ -1041,7 +1041,7 @@ abstract class _AdministrableProductDefinition
 
   /// [language] The base language in which the resource is written.;
   @HiveField(7)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] (_language): Extensions for language;
@@ -1078,7 +1078,7 @@ abstract class _AdministrableProductDefinition
 
   /// [status] The status of this ingredient. Enables tracking the life-cycle of the content.;
   @HiveField(14)
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] (_status): Extensions for status;
@@ -3061,7 +3061,7 @@ mixin _$Ingredient {
 
   /// [language] The base language in which the resource is written.;
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] (_language): Extensions for language;
   @HiveField(6)
@@ -3093,7 +3093,7 @@ mixin _$Ingredient {
 
   /// [status] The status of this ingredient. Enables tracking the life-cycle of the content.;
   @HiveField(12)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] (_status): Extensions for status;
   @HiveField(13)
@@ -3160,7 +3160,7 @@ abstract class $IngredientCopyWith<$Res> {
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @HiveField(6)
       @JsonKey(name: '_language')
           Element? languageElement,
@@ -3176,7 +3176,7 @@ abstract class $IngredientCopyWith<$Res> {
       @HiveField(11)
           Identifier? identifier,
       @HiveField(12)
-          Code? status,
+          FhirCode? status,
       @HiveField(13)
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -3473,7 +3473,7 @@ abstract class _$$_IngredientCopyWith<$Res>
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @HiveField(6)
       @JsonKey(name: '_language')
           Element? languageElement,
@@ -3489,7 +3489,7 @@ abstract class _$$_IngredientCopyWith<$Res>
       @HiveField(11)
           Identifier? identifier,
       @HiveField(12)
-          Code? status,
+          FhirCode? status,
       @HiveField(13)
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -4080,7 +4080,7 @@ abstract class _Ingredient extends Ingredient {
 
   /// [language] The base language in which the resource is written.;
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] (_language): Extensions for language;
@@ -4118,7 +4118,7 @@ abstract class _Ingredient extends Ingredient {
 
   /// [status] The status of this ingredient. Enables tracking the life-cycle of the content.;
   @HiveField(12)
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] (_status): Extensions for status;
@@ -4192,7 +4192,7 @@ mixin _$IngredientManufacturer {
       throw _privateConstructorUsedError;
 
   /// [role] The way in which this manufacturer is associated with the ingredient. For example whether it is a possible one (others allowed), or an exclusive authorized one for this ingredient. Note that this is not the manufacturing process role.;
-  Code? get role => throw _privateConstructorUsedError;
+  FhirCode? get role => throw _privateConstructorUsedError;
 
   /// [roleElement] (_role): Extensions for role;
   @JsonKey(name: '_role')
@@ -4217,7 +4217,7 @@ abstract class $IngredientManufacturerCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? role,
+      FhirCode? role,
       @JsonKey(name: '_role') Element? roleElement,
       Reference manufacturer});
 
@@ -4307,7 +4307,7 @@ abstract class _$$_IngredientManufacturerCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? role,
+      FhirCode? role,
       @JsonKey(name: '_role') Element? roleElement,
       Reference manufacturer});
 
@@ -4504,7 +4504,7 @@ abstract class _IngredientManufacturer extends IngredientManufacturer {
   @override
 
   /// [role] The way in which this manufacturer is associated with the ingredient. For example whether it is a possible one (others allowed), or an exclusive authorized one for this ingredient. Note that this is not the manufacturing process role.;
-  Code? get role;
+  FhirCode? get role;
   @override
 
   /// [roleElement] (_role): Extensions for role;
@@ -6135,7 +6135,7 @@ mixin _$ClinicalUseDefinition {
 
   /// [language] The base language in which the resource is written.;
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] (_language): Extensions for language;
   @HiveField(6)
@@ -6166,7 +6166,7 @@ mixin _$ClinicalUseDefinition {
 
   /// [type] indication | contraindication | interaction | undesirable-effect | warning.;
   @HiveField(12)
-  Code? get type => throw _privateConstructorUsedError;
+  FhirCode? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] (_type): Extensions for type;
   @HiveField(13)
@@ -6239,7 +6239,7 @@ abstract class $ClinicalUseDefinitionCopyWith<$Res> {
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @HiveField(6)
       @JsonKey(name: '_language')
           Element? languageElement,
@@ -6255,7 +6255,7 @@ abstract class $ClinicalUseDefinitionCopyWith<$Res> {
       @HiveField(11)
           List<Identifier>? identifier,
       @HiveField(12)
-          Code? type,
+          FhirCode? type,
       @HiveField(13)
       @JsonKey(name: '_type')
           Element? typeElement,
@@ -6584,7 +6584,7 @@ abstract class _$$_ClinicalUseDefinitionCopyWith<$Res>
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @HiveField(6)
       @JsonKey(name: '_language')
           Element? languageElement,
@@ -6600,7 +6600,7 @@ abstract class _$$_ClinicalUseDefinitionCopyWith<$Res>
       @HiveField(11)
           List<Identifier>? identifier,
       @HiveField(12)
-          Code? type,
+          FhirCode? type,
       @HiveField(13)
       @JsonKey(name: '_type')
           Element? typeElement,
@@ -7212,7 +7212,7 @@ abstract class _ClinicalUseDefinition extends ClinicalUseDefinition {
 
   /// [language] The base language in which the resource is written.;
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] (_language): Extensions for language;
@@ -7249,7 +7249,7 @@ abstract class _ClinicalUseDefinition extends ClinicalUseDefinition {
 
   /// [type] indication | contraindication | interaction | undesirable-effect | warning.;
   @HiveField(12)
-  Code? get type;
+  FhirCode? get type;
   @override
 
   /// [typeElement] (_type): Extensions for type;
@@ -10240,7 +10240,7 @@ mixin _$ManufacturedItemDefinition {
 
   /// [language] The base language in which the resource is written.;
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] (_language): Extensions for language;
   @JsonKey(name: '_language')
@@ -10272,7 +10272,7 @@ mixin _$ManufacturedItemDefinition {
 
   /// [status] The status of this item. Enables tracking the life-cycle of the content.;
   @HiveField(12)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] (_status): Extensions for status;
   @JsonKey(name: '_status')
@@ -10327,7 +10327,7 @@ abstract class $ManufacturedItemDefinitionCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -10343,7 +10343,7 @@ abstract class $ManufacturedItemDefinitionCopyWith<$Res> {
       @HiveField(11)
           List<Identifier>? identifier,
       @HiveField(12)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(13)
           Element? statusElement,
@@ -10584,7 +10584,7 @@ abstract class _$$_ManufacturedItemDefinitionCopyWith<$Res>
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -10600,7 +10600,7 @@ abstract class _$$_ManufacturedItemDefinitionCopyWith<$Res>
       @HiveField(11)
           List<Identifier>? identifier,
       @HiveField(12)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(13)
           Element? statusElement,
@@ -11132,7 +11132,7 @@ abstract class _ManufacturedItemDefinition extends ManufacturedItemDefinition {
 
   /// [language] The base language in which the resource is written.;
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] (_language): Extensions for language;
@@ -11170,7 +11170,7 @@ abstract class _ManufacturedItemDefinition extends ManufacturedItemDefinition {
 
   /// [status] The status of this item. Enables tracking the life-cycle of the content.;
   @HiveField(12)
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] (_status): Extensions for status;
@@ -11805,7 +11805,7 @@ mixin _$MedicinalProductDefinition {
 
   /// [language] The base language in which the resource is written.;
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] (_language): Extensions for language;
   @JsonKey(name: '_language')
@@ -12002,7 +12002,7 @@ abstract class $MedicinalProductDefinitionCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -12543,7 +12543,7 @@ abstract class _$$_MedicinalProductDefinitionCopyWith<$Res>
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -13700,7 +13700,7 @@ abstract class _MedicinalProductDefinition extends MedicinalProductDefinition {
 
   /// [language] The base language in which the resource is written.;
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] (_language): Extensions for language;
@@ -16759,7 +16759,7 @@ mixin _$PackagedProductDefinition {
 
   /// [language] The base language in which the resource is written.;
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] (_language): Extensions for language;
   @JsonKey(name: '_language')
@@ -16891,7 +16891,7 @@ abstract class $PackagedProductDefinitionCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -17279,7 +17279,7 @@ abstract class _$$_PackagedProductDefinitionCopyWith<$Res>
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -18073,7 +18073,7 @@ abstract class _PackagedProductDefinition extends PackagedProductDefinition {
 
   /// [language] The base language in which the resource is written.;
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] (_language): Extensions for language;
@@ -20750,7 +20750,7 @@ mixin _$RegulatedAuthorization {
 
   /// [language] The base language in which the resource is written.;
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] (_language): Extensions for language;
   @HiveField(6)
@@ -20868,7 +20868,7 @@ abstract class $RegulatedAuthorizationCopyWith<$Res> {
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @HiveField(6)
       @JsonKey(name: '_language')
           Element? languageElement,
@@ -21277,7 +21277,7 @@ abstract class _$$_RegulatedAuthorizationCopyWith<$Res>
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @HiveField(6)
       @JsonKey(name: '_language')
           Element? languageElement,
@@ -21995,7 +21995,7 @@ abstract class _RegulatedAuthorization extends RegulatedAuthorization {
 
   /// [language] The base language in which the resource is written.;
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] (_language): Extensions for language;
@@ -22668,7 +22668,7 @@ mixin _$SubstanceDefinition {
 
   /// [language] The base language in which the resource is written.;
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] (_language): Extensions for language;
   @HiveField(6)
@@ -22812,7 +22812,7 @@ abstract class $SubstanceDefinitionCopyWith<$Res> {
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @HiveField(6)
       @JsonKey(name: '_language')
           Element? languageElement,
@@ -23204,7 +23204,7 @@ abstract class _$$_SubstanceDefinitionCopyWith<$Res>
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @HiveField(6)
       @JsonKey(name: '_language')
           Element? languageElement,
@@ -24093,7 +24093,7 @@ abstract class _SubstanceDefinition extends SubstanceDefinition {
 
   /// [language] The base language in which the resource is written.;
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] (_language): Extensions for language;

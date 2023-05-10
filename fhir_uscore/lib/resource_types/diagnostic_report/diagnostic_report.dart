@@ -104,7 +104,7 @@ class DiagnosticReportUsCore extends Resource {
   String? get id => _diagnosticReport.id;
   FhirMeta? get meta => _diagnosticReport.meta;
   Narrative? get text => _diagnosticReport.text;
-  Code? get status => _diagnosticReport.status;
+  FhirCode? get status => _diagnosticReport.status;
   List<CodeableConcept>? get category => _diagnosticReport.category;
   CodeableConcept get code => _diagnosticReport.code;
   Reference? get subject => _diagnosticReport.subject;

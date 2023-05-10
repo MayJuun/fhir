@@ -164,7 +164,8 @@ _$_Measure _$$_MeasureFromJson(Map<String, dynamic> json) => _$_Measure(
       basisElement: json['_basis'] == null
           ? null
           : Element.fromJson(json['_basis'] as Map<String, dynamic>),
-      usage: json['usage'] as String?,
+      usage:
+          json['usage'] == null ? null : FhirMarkdown.fromJson(json['usage']),
       usageElement: json['_usage'] == null
           ? null
           : Element.fromJson(json['_usage'] as Map<String, dynamic>),
@@ -191,11 +192,15 @@ _$_Measure _$$_MeasureFromJson(Map<String, dynamic> json) => _$_Measure(
       type: (json['type'] as List<dynamic>?)
           ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
           .toList(),
-      riskAdjustment: json['riskAdjustment'] as String?,
+      riskAdjustment: json['riskAdjustment'] == null
+          ? null
+          : FhirMarkdown.fromJson(json['riskAdjustment']),
       riskAdjustmentElement: json['_riskAdjustment'] == null
           ? null
           : Element.fromJson(json['_riskAdjustment'] as Map<String, dynamic>),
-      rateAggregation: json['rateAggregation'] as String?,
+      rateAggregation: json['rateAggregation'] == null
+          ? null
+          : FhirMarkdown.fromJson(json['rateAggregation']),
       rateAggregationElement: json['_rateAggregation'] == null
           ? null
           : Element.fromJson(json['_rateAggregation'] as Map<String, dynamic>),
@@ -315,7 +320,7 @@ Map<String, dynamic> _$$_MeasureToJson(_$_Measure instance) {
   writeNotNull('subjectReference', instance.subjectReference?.toJson());
   writeNotNull('basis', instance.basis?.toJson());
   writeNotNull('_basis', instance.basisElement?.toJson());
-  writeNotNull('usage', instance.usage);
+  writeNotNull('usage', instance.usage?.toJson());
   writeNotNull('_usage', instance.usageElement?.toJson());
   writeNotNull('library', instance.library_?.map((e) => e.toJson()).toList());
   writeNotNull('disclaimer', instance.disclaimer?.toJson());
@@ -324,9 +329,9 @@ Map<String, dynamic> _$$_MeasureToJson(_$_Measure instance) {
   writeNotNull('scoringUnit', instance.scoringUnit?.toJson());
   writeNotNull('compositeScoring', instance.compositeScoring?.toJson());
   writeNotNull('type', instance.type?.map((e) => e.toJson()).toList());
-  writeNotNull('riskAdjustment', instance.riskAdjustment);
+  writeNotNull('riskAdjustment', instance.riskAdjustment?.toJson());
   writeNotNull('_riskAdjustment', instance.riskAdjustmentElement?.toJson());
-  writeNotNull('rateAggregation', instance.rateAggregation);
+  writeNotNull('rateAggregation', instance.rateAggregation?.toJson());
   writeNotNull('_rateAggregation', instance.rateAggregationElement?.toJson());
   writeNotNull('rationale', instance.rationale?.toJson());
   writeNotNull('_rationale', instance.rationaleElement?.toJson());
@@ -551,16 +556,30 @@ _$_MeasureGroup _$$_MeasureGroupFromJson(Map<String, dynamic> json) =>
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
+      linkId: json['linkId'] as String?,
+      linkIdElement: json['_linkId'] == null
+          ? null
+          : Element.fromJson(json['_linkId'] as Map<String, dynamic>),
       code: json['code'] == null
           ? null
           : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
-      description: json['description'] as String?,
+      description: json['description'] == null
+          ? null
+          : FhirMarkdown.fromJson(json['description']),
       descriptionElement: json['_description'] == null
           ? null
           : Element.fromJson(json['_description'] as Map<String, dynamic>),
       type: (json['type'] as List<dynamic>?)
           ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
           .toList(),
+      subjectCodeableConcept: json['subjectCodeableConcept'] == null
+          ? null
+          : CodeableConcept.fromJson(
+              json['subjectCodeableConcept'] as Map<String, dynamic>),
+      subjectReference: json['subjectReference'] == null
+          ? null
+          : Reference.fromJson(
+              json['subjectReference'] as Map<String, dynamic>),
       basis: json['basis'] == null ? null : FhirCode.fromJson(json['basis']),
       basisElement: json['_basis'] == null
           ? null
@@ -572,10 +591,19 @@ _$_MeasureGroup _$$_MeasureGroupFromJson(Map<String, dynamic> json) =>
           ? null
           : CodeableConcept.fromJson(
               json['scoringUnit'] as Map<String, dynamic>),
+      rateAggregation: json['rateAggregation'] == null
+          ? null
+          : FhirMarkdown.fromJson(json['rateAggregation']),
+      rateAggregationElement: json['_rateAggregation'] == null
+          ? null
+          : Element.fromJson(json['_rateAggregation'] as Map<String, dynamic>),
       improvementNotation: json['improvementNotation'] == null
           ? null
           : CodeableConcept.fromJson(
               json['improvementNotation'] as Map<String, dynamic>),
+      library_: (json['library'] as List<dynamic>?)
+          ?.map(FhirCanonical.fromJson)
+          .toList(),
       population: (json['population'] as List<dynamic>?)
           ?.map((e) => MeasurePopulation.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -598,15 +626,23 @@ Map<String, dynamic> _$$_MeasureGroupToJson(_$_MeasureGroup instance) {
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
+  writeNotNull('linkId', instance.linkId);
+  writeNotNull('_linkId', instance.linkIdElement?.toJson());
   writeNotNull('code', instance.code?.toJson());
-  writeNotNull('description', instance.description);
+  writeNotNull('description', instance.description?.toJson());
   writeNotNull('_description', instance.descriptionElement?.toJson());
   writeNotNull('type', instance.type?.map((e) => e.toJson()).toList());
+  writeNotNull(
+      'subjectCodeableConcept', instance.subjectCodeableConcept?.toJson());
+  writeNotNull('subjectReference', instance.subjectReference?.toJson());
   writeNotNull('basis', instance.basis?.toJson());
   writeNotNull('_basis', instance.basisElement?.toJson());
   writeNotNull('scoring', instance.scoring?.toJson());
   writeNotNull('scoringUnit', instance.scoringUnit?.toJson());
+  writeNotNull('rateAggregation', instance.rateAggregation?.toJson());
+  writeNotNull('_rateAggregation', instance.rateAggregationElement?.toJson());
   writeNotNull('improvementNotation', instance.improvementNotation?.toJson());
+  writeNotNull('library', instance.library_?.map((e) => e.toJson()).toList());
   writeNotNull(
       'population', instance.population?.map((e) => e.toJson()).toList());
   writeNotNull(
@@ -623,14 +659,25 @@ _$_MeasurePopulation _$$_MeasurePopulationFromJson(Map<String, dynamic> json) =>
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
+      linkId: json['linkId'] as String?,
+      linkIdElement: json['_linkId'] == null
+          ? null
+          : Element.fromJson(json['_linkId'] as Map<String, dynamic>),
       code: json['code'] == null
           ? null
           : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
-      description: json['description'] as String?,
+      description: json['description'] == null
+          ? null
+          : FhirMarkdown.fromJson(json['description']),
       descriptionElement: json['_description'] == null
           ? null
           : Element.fromJson(json['_description'] as Map<String, dynamic>),
-      criteria: Expression.fromJson(json['criteria'] as Map<String, dynamic>),
+      criteria: json['criteria'] == null
+          ? null
+          : Expression.fromJson(json['criteria'] as Map<String, dynamic>),
+      groupDefinition: json['groupDefinition'] == null
+          ? null
+          : Reference.fromJson(json['groupDefinition'] as Map<String, dynamic>),
       inputPopulationId: json['inputPopulationId'] as String?,
       inputPopulationIdElement: json['_inputPopulationId'] == null
           ? null
@@ -657,10 +704,13 @@ Map<String, dynamic> _$$_MeasurePopulationToJson(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
+  writeNotNull('linkId', instance.linkId);
+  writeNotNull('_linkId', instance.linkIdElement?.toJson());
   writeNotNull('code', instance.code?.toJson());
-  writeNotNull('description', instance.description);
+  writeNotNull('description', instance.description?.toJson());
   writeNotNull('_description', instance.descriptionElement?.toJson());
-  val['criteria'] = instance.criteria.toJson();
+  writeNotNull('criteria', instance.criteria?.toJson());
+  writeNotNull('groupDefinition', instance.groupDefinition?.toJson());
   writeNotNull('inputPopulationId', instance.inputPopulationId);
   writeNotNull(
       '_inputPopulationId', instance.inputPopulationIdElement?.toJson());
@@ -677,16 +727,25 @@ _$_MeasureStratifier _$$_MeasureStratifierFromJson(Map<String, dynamic> json) =>
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
+      linkId: json['linkId'] as String?,
+      linkIdElement: json['_linkId'] == null
+          ? null
+          : Element.fromJson(json['_linkId'] as Map<String, dynamic>),
       code: json['code'] == null
           ? null
           : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
-      description: json['description'] as String?,
+      description: json['description'] == null
+          ? null
+          : FhirMarkdown.fromJson(json['description']),
       descriptionElement: json['_description'] == null
           ? null
           : Element.fromJson(json['_description'] as Map<String, dynamic>),
       criteria: json['criteria'] == null
           ? null
           : Expression.fromJson(json['criteria'] as Map<String, dynamic>),
+      groupDefinition: json['groupDefinition'] == null
+          ? null
+          : Reference.fromJson(json['groupDefinition'] as Map<String, dynamic>),
       component: (json['component'] as List<dynamic>?)
           ?.map((e) => MeasureComponent.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -707,10 +766,13 @@ Map<String, dynamic> _$$_MeasureStratifierToJson(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
+  writeNotNull('linkId', instance.linkId);
+  writeNotNull('_linkId', instance.linkIdElement?.toJson());
   writeNotNull('code', instance.code?.toJson());
-  writeNotNull('description', instance.description);
+  writeNotNull('description', instance.description?.toJson());
   writeNotNull('_description', instance.descriptionElement?.toJson());
   writeNotNull('criteria', instance.criteria?.toJson());
+  writeNotNull('groupDefinition', instance.groupDefinition?.toJson());
   writeNotNull(
       'component', instance.component?.map((e) => e.toJson()).toList());
   return val;
@@ -725,14 +787,25 @@ _$_MeasureComponent _$$_MeasureComponentFromJson(Map<String, dynamic> json) =>
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
+      linkId: json['linkId'] as String?,
+      linkIdElement: json['_linkId'] == null
+          ? null
+          : Element.fromJson(json['_linkId'] as Map<String, dynamic>),
       code: json['code'] == null
           ? null
           : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
-      description: json['description'] as String?,
+      description: json['description'] == null
+          ? null
+          : FhirMarkdown.fromJson(json['description']),
       descriptionElement: json['_description'] == null
           ? null
           : Element.fromJson(json['_description'] as Map<String, dynamic>),
-      criteria: Expression.fromJson(json['criteria'] as Map<String, dynamic>),
+      criteria: json['criteria'] == null
+          ? null
+          : Expression.fromJson(json['criteria'] as Map<String, dynamic>),
+      groupDefinition: json['groupDefinition'] == null
+          ? null
+          : Reference.fromJson(json['groupDefinition'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$_MeasureComponentToJson(_$_MeasureComponent instance) {
@@ -749,10 +822,13 @@ Map<String, dynamic> _$$_MeasureComponentToJson(_$_MeasureComponent instance) {
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
+  writeNotNull('linkId', instance.linkId);
+  writeNotNull('_linkId', instance.linkIdElement?.toJson());
   writeNotNull('code', instance.code?.toJson());
-  writeNotNull('description', instance.description);
+  writeNotNull('description', instance.description?.toJson());
   writeNotNull('_description', instance.descriptionElement?.toJson());
-  val['criteria'] = instance.criteria.toJson();
+  writeNotNull('criteria', instance.criteria?.toJson());
+  writeNotNull('groupDefinition', instance.groupDefinition?.toJson());
   return val;
 }
 
@@ -766,13 +842,19 @@ _$_MeasureSupplementalData _$$_MeasureSupplementalDataFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
+      linkId: json['linkId'] as String?,
+      linkIdElement: json['_linkId'] == null
+          ? null
+          : Element.fromJson(json['_linkId'] as Map<String, dynamic>),
       code: json['code'] == null
           ? null
           : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
       usage: (json['usage'] as List<dynamic>?)
           ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
           .toList(),
-      description: json['description'] as String?,
+      description: json['description'] == null
+          ? null
+          : FhirMarkdown.fromJson(json['description']),
       descriptionElement: json['_description'] == null
           ? null
           : Element.fromJson(json['_description'] as Map<String, dynamic>),
@@ -794,9 +876,11 @@ Map<String, dynamic> _$$_MeasureSupplementalDataToJson(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
+  writeNotNull('linkId', instance.linkId);
+  writeNotNull('_linkId', instance.linkIdElement?.toJson());
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('usage', instance.usage?.map((e) => e.toJson()).toList());
-  writeNotNull('description', instance.description);
+  writeNotNull('description', instance.description?.toJson());
   writeNotNull('_description', instance.descriptionElement?.toJson());
   val['criteria'] = instance.criteria.toJson();
   return val;
@@ -885,6 +969,9 @@ _$_MeasureReport _$$_MeasureReportFromJson(Map<String, dynamic> json) =>
       group: (json['group'] as List<dynamic>?)
           ?.map((e) => MeasureReportGroup.fromJson(e as Map<String, dynamic>))
           .toList(),
+      supplementalData: (json['supplementalData'] as List<dynamic>?)
+          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+          .toList(),
       evaluatedResource: (json['evaluatedResource'] as List<dynamic>?)
           ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -934,6 +1021,8 @@ Map<String, dynamic> _$$_MeasureReportToJson(_$_MeasureReport instance) {
   writeNotNull('scoring', instance.scoring?.toJson());
   writeNotNull('improvementNotation', instance.improvementNotation?.toJson());
   writeNotNull('group', instance.group?.map((e) => e.toJson()).toList());
+  writeNotNull('supplementalData',
+      instance.supplementalData?.map((e) => e.toJson()).toList());
   writeNotNull('evaluatedResource',
       instance.evaluatedResource?.map((e) => e.toJson()).toList());
   return val;
@@ -949,9 +1038,16 @@ _$_MeasureReportGroup _$$_MeasureReportGroupFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
+      linkId: json['linkId'] as String?,
+      linkIdElement: json['_linkId'] == null
+          ? null
+          : Element.fromJson(json['_linkId'] as Map<String, dynamic>),
       code: json['code'] == null
           ? null
           : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
+      subject: json['subject'] == null
+          ? null
+          : Reference.fromJson(json['subject'] as Map<String, dynamic>),
       population: (json['population'] as List<dynamic>?)
           ?.map((e) =>
               MeasureReportPopulation.fromJson(e as Map<String, dynamic>))
@@ -1002,7 +1098,10 @@ Map<String, dynamic> _$$_MeasureReportGroupToJson(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
+  writeNotNull('linkId', instance.linkId);
+  writeNotNull('_linkId', instance.linkIdElement?.toJson());
   writeNotNull('code', instance.code?.toJson());
+  writeNotNull('subject', instance.subject?.toJson());
   writeNotNull(
       'population', instance.population?.map((e) => e.toJson()).toList());
   writeNotNull('measureScoreQuantity', instance.measureScoreQuantity?.toJson());
@@ -1029,6 +1128,10 @@ _$_MeasureReportPopulation _$$_MeasureReportPopulationFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
+      linkId: json['linkId'] as String?,
+      linkIdElement: json['_linkId'] == null
+          ? null
+          : Element.fromJson(json['_linkId'] as Map<String, dynamic>),
       code: json['code'] == null
           ? null
           : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
@@ -1039,6 +1142,12 @@ _$_MeasureReportPopulation _$$_MeasureReportPopulationFromJson(
       subjectResults: json['subjectResults'] == null
           ? null
           : Reference.fromJson(json['subjectResults'] as Map<String, dynamic>),
+      subjectReport: (json['subjectReport'] as List<dynamic>?)
+          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      subjects: json['subjects'] == null
+          ? null
+          : Reference.fromJson(json['subjects'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$_MeasureReportPopulationToJson(
@@ -1056,10 +1165,15 @@ Map<String, dynamic> _$$_MeasureReportPopulationToJson(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
+  writeNotNull('linkId', instance.linkId);
+  writeNotNull('_linkId', instance.linkIdElement?.toJson());
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('count', instance.count?.toJson());
   writeNotNull('_count', instance.countElement?.toJson());
   writeNotNull('subjectResults', instance.subjectResults?.toJson());
+  writeNotNull(
+      'subjectReport', instance.subjectReport?.map((e) => e.toJson()).toList());
+  writeNotNull('subjects', instance.subjects?.toJson());
   return val;
 }
 
@@ -1073,6 +1187,10 @@ _$_MeasureReportStratifier _$$_MeasureReportStratifierFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
+      linkId: json['linkId'] as String?,
+      linkIdElement: json['_linkId'] == null
+          ? null
+          : Element.fromJson(json['_linkId'] as Map<String, dynamic>),
       code: json['code'] == null
           ? null
           : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
@@ -1096,6 +1214,8 @@ Map<String, dynamic> _$$_MeasureReportStratifierToJson(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
+  writeNotNull('linkId', instance.linkId);
+  writeNotNull('_linkId', instance.linkIdElement?.toJson());
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('stratum', instance.stratum?.map((e) => e.toJson()).toList());
   return val;
@@ -1212,6 +1332,10 @@ _$_MeasureReportComponent _$$_MeasureReportComponentFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
+      linkId: json['linkId'] as String?,
+      linkIdElement: json['_linkId'] == null
+          ? null
+          : Element.fromJson(json['_linkId'] as Map<String, dynamic>),
       code: CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
       valueCodeableConcept: json['valueCodeableConcept'] == null
           ? null
@@ -1249,6 +1373,8 @@ Map<String, dynamic> _$$_MeasureReportComponentToJson(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
+  writeNotNull('linkId', instance.linkId);
+  writeNotNull('_linkId', instance.linkIdElement?.toJson());
   val['code'] = instance.code.toJson();
   writeNotNull('valueCodeableConcept', instance.valueCodeableConcept?.toJson());
   writeNotNull('valueBoolean', instance.valueBoolean?.toJson());
@@ -1269,6 +1395,10 @@ _$_MeasureReportPopulation1 _$$_MeasureReportPopulation1FromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
+      linkId: json['linkId'] as String?,
+      linkIdElement: json['_linkId'] == null
+          ? null
+          : Element.fromJson(json['_linkId'] as Map<String, dynamic>),
       code: json['code'] == null
           ? null
           : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
@@ -1279,6 +1409,12 @@ _$_MeasureReportPopulation1 _$$_MeasureReportPopulation1FromJson(
       subjectResults: json['subjectResults'] == null
           ? null
           : Reference.fromJson(json['subjectResults'] as Map<String, dynamic>),
+      subjectReport: (json['subjectReport'] as List<dynamic>?)
+          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      subjects: json['subjects'] == null
+          ? null
+          : Reference.fromJson(json['subjects'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$_MeasureReportPopulation1ToJson(
@@ -1296,10 +1432,15 @@ Map<String, dynamic> _$$_MeasureReportPopulation1ToJson(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
+  writeNotNull('linkId', instance.linkId);
+  writeNotNull('_linkId', instance.linkIdElement?.toJson());
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('count', instance.count?.toJson());
   writeNotNull('_count', instance.countElement?.toJson());
   writeNotNull('subjectResults', instance.subjectResults?.toJson());
+  writeNotNull(
+      'subjectReport', instance.subjectReport?.map((e) => e.toJson()).toList());
+  writeNotNull('subjects', instance.subjects?.toJson());
   return val;
 }
 
@@ -1617,6 +1758,10 @@ _$_TestReportAssert _$$_TestReportAssertFromJson(Map<String, dynamic> json) =>
       detailElement: json['_detail'] == null
           ? null
           : Element.fromJson(json['_detail'] as Map<String, dynamic>),
+      requirement: (json['requirement'] as List<dynamic>?)
+          ?.map(
+              (e) => TestReportRequirement.fromJson(e as Map<String, dynamic>))
+          .toList(),
     );
 
 Map<String, dynamic> _$$_TestReportAssertToJson(_$_TestReportAssert instance) {
@@ -1639,6 +1784,53 @@ Map<String, dynamic> _$$_TestReportAssertToJson(_$_TestReportAssert instance) {
   writeNotNull('_message', instance.messageElement?.toJson());
   writeNotNull('detail', instance.detail);
   writeNotNull('_detail', instance.detailElement?.toJson());
+  writeNotNull(
+      'requirement', instance.requirement?.map((e) => e.toJson()).toList());
+  return val;
+}
+
+_$_TestReportRequirement _$$_TestReportRequirementFromJson(
+        Map<String, dynamic> json) =>
+    _$_TestReportRequirement(
+      id: json['id'] as String?,
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      linkUri:
+          json['linkUri'] == null ? null : FhirUri.fromJson(json['linkUri']),
+      linkUriElement: json['_linkUri'] == null
+          ? null
+          : Element.fromJson(json['_linkUri'] as Map<String, dynamic>),
+      linkCanonical: json['linkCanonical'] == null
+          ? null
+          : FhirCanonical.fromJson(json['linkCanonical']),
+      linkCanonicalElement: json['_linkCanonical'] == null
+          ? null
+          : Element.fromJson(json['_linkCanonical'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$$_TestReportRequirementToJson(
+    _$_TestReportRequirement instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
+  writeNotNull('linkUri', instance.linkUri?.toJson());
+  writeNotNull('_linkUri', instance.linkUriElement?.toJson());
+  writeNotNull('linkCanonical', instance.linkCanonical?.toJson());
+  writeNotNull('_linkCanonical', instance.linkCanonicalElement?.toJson());
   return val;
 }
 
@@ -2023,9 +2215,6 @@ _$_TestScriptOrigin _$$_TestScriptOriginFromJson(Map<String, dynamic> json) =>
           ? null
           : Element.fromJson(json['_index'] as Map<String, dynamic>),
       profile: Coding.fromJson(json['profile'] as Map<String, dynamic>),
-      profileElement: json['profileElement'] == null
-          ? null
-          : Element.fromJson(json['profileElement'] as Map<String, dynamic>),
       url: json['url'] == null ? null : FhirUrl.fromJson(json['url']),
       urlElement: json['_url'] == null
           ? null
@@ -2049,7 +2238,6 @@ Map<String, dynamic> _$$_TestScriptOriginToJson(_$_TestScriptOrigin instance) {
   writeNotNull('index', instance.index?.toJson());
   writeNotNull('_index', instance.indexElement?.toJson());
   val['profile'] = instance.profile.toJson();
-  writeNotNull('profileElement', instance.profileElement?.toJson());
   writeNotNull('url', instance.url?.toJson());
   writeNotNull('_url', instance.urlElement?.toJson());
   return val;
@@ -2720,6 +2908,13 @@ _$_TestScriptAssert _$$_TestScriptAssertFromJson(Map<String, dynamic> json) =>
       contentTypeElement: json['_contentType'] == null
           ? null
           : Element.fromJson(json['_contentType'] as Map<String, dynamic>),
+      defaultManualCompletion: json['defaultManualCompletion'] == null
+          ? null
+          : FhirCode.fromJson(json['defaultManualCompletion']),
+      defaultManualCompletionElement: json['_defaultManualCompletion'] == null
+          ? null
+          : Element.fromJson(
+              json['_defaultManualCompletion'] as Map<String, dynamic>),
       expression: json['expression'] as String?,
       expressionElement: json['_expression'] == null
           ? null
@@ -2799,6 +2994,10 @@ _$_TestScriptAssert _$$_TestScriptAssertFromJson(Map<String, dynamic> json) =>
       warningOnlyElement: json['_warningOnly'] == null
           ? null
           : Element.fromJson(json['_warningOnly'] as Map<String, dynamic>),
+      requirement: (json['requirement'] as List<dynamic>?)
+          ?.map(
+              (e) => TestScriptRequirement.fromJson(e as Map<String, dynamic>))
+          .toList(),
     );
 
 Map<String, dynamic> _$$_TestScriptAssertToJson(_$_TestScriptAssert instance) {
@@ -2832,6 +3031,10 @@ Map<String, dynamic> _$$_TestScriptAssertToJson(_$_TestScriptAssert instance) {
       '_compareToSourcePath', instance.compareToSourcePathElement?.toJson());
   writeNotNull('contentType', instance.contentType?.toJson());
   writeNotNull('_contentType', instance.contentTypeElement?.toJson());
+  writeNotNull(
+      'defaultManualCompletion', instance.defaultManualCompletion?.toJson());
+  writeNotNull('_defaultManualCompletion',
+      instance.defaultManualCompletionElement?.toJson());
   writeNotNull('expression', instance.expression);
   writeNotNull('_expression', instance.expressionElement?.toJson());
   writeNotNull('headerField', instance.headerField);
@@ -2865,6 +3068,53 @@ Map<String, dynamic> _$$_TestScriptAssertToJson(_$_TestScriptAssert instance) {
   writeNotNull('_value', instance.valueElement?.toJson());
   writeNotNull('warningOnly', instance.warningOnly?.toJson());
   writeNotNull('_warningOnly', instance.warningOnlyElement?.toJson());
+  writeNotNull(
+      'requirement', instance.requirement?.map((e) => e.toJson()).toList());
+  return val;
+}
+
+_$_TestScriptRequirement _$$_TestScriptRequirementFromJson(
+        Map<String, dynamic> json) =>
+    _$_TestScriptRequirement(
+      id: json['id'] as String?,
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      linkUri:
+          json['linkUri'] == null ? null : FhirUri.fromJson(json['linkUri']),
+      linkUriElement: json['_linkUri'] == null
+          ? null
+          : Element.fromJson(json['_linkUri'] as Map<String, dynamic>),
+      linkCanonical: json['linkCanonical'] == null
+          ? null
+          : FhirCanonical.fromJson(json['linkCanonical']),
+      linkCanonicalElement: json['_linkCanonical'] == null
+          ? null
+          : Element.fromJson(json['_linkCanonical'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$$_TestScriptRequirementToJson(
+    _$_TestScriptRequirement instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
+  writeNotNull('linkUri', instance.linkUri?.toJson());
+  writeNotNull('_linkUri', instance.linkUriElement?.toJson());
+  writeNotNull('linkCanonical', instance.linkCanonical?.toJson());
+  writeNotNull('_linkCanonical', instance.linkCanonicalElement?.toJson());
   return val;
 }
 

@@ -49,7 +49,7 @@ mixin _$ResearchStudy {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -125,7 +125,7 @@ mixin _$ResearchStudy {
 
   /// [status] The current state of the study.
   @HiveField(16)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -259,7 +259,7 @@ abstract class $ResearchStudyCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -284,7 +284,7 @@ abstract class $ResearchStudyCopyWith<$Res> {
       @HiveField(15)
           List<Reference>? partOf,
       @HiveField(16)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(17)
           Element? statusElement,
@@ -734,7 +734,7 @@ abstract class _$$_ResearchStudyCopyWith<$Res>
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -759,7 +759,7 @@ abstract class _$$_ResearchStudyCopyWith<$Res>
       @HiveField(15)
           List<Reference>? partOf,
       @HiveField(16)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(17)
           Element? statusElement,
@@ -1856,7 +1856,7 @@ abstract class _ResearchStudy extends ResearchStudy {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -1942,7 +1942,7 @@ abstract class _ResearchStudy extends ResearchStudy {
 
   /// [status] The current state of the study.
   @HiveField(16)
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -3028,7 +3028,7 @@ mixin _$ResearchSubject {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -3084,7 +3084,7 @@ mixin _$ResearchSubject {
 
   /// [status] The current state of the subject.
   @HiveField(12)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -3156,7 +3156,7 @@ abstract class $ResearchSubjectCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -3172,7 +3172,7 @@ abstract class $ResearchSubjectCopyWith<$Res> {
       @HiveField(11)
           List<Identifier>? identifier,
       @HiveField(12)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(13)
           Element? statusElement,
@@ -3483,7 +3483,7 @@ abstract class _$$_ResearchSubjectCopyWith<$Res>
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -3499,7 +3499,7 @@ abstract class _$$_ResearchSubjectCopyWith<$Res>
       @HiveField(11)
           List<Identifier>? identifier,
       @HiveField(12)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(13)
           Element? statusElement,
@@ -4131,7 +4131,7 @@ abstract class _ResearchSubject extends ResearchSubject {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -4193,7 +4193,7 @@ abstract class _ResearchSubject extends ResearchSubject {
 
   /// [status] The current state of the subject.
   @HiveField(12)
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status

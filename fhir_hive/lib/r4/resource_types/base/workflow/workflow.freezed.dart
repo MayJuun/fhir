@@ -49,7 +49,7 @@ mixin _$Appointment {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -110,7 +110,7 @@ mixin _$Appointment {
   /// has their own participation status which indicates their involvement in
   ///  the process, however this status indicates the shared status.
   @HiveField(12)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -297,7 +297,7 @@ abstract class $AppointmentCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -313,7 +313,7 @@ abstract class $AppointmentCopyWith<$Res> {
       @HiveField(11)
           List<Identifier>? identifier,
       @HiveField(12)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(13)
           Element? statusElement,
@@ -832,7 +832,7 @@ abstract class _$$_AppointmentCopyWith<$Res>
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -848,7 +848,7 @@ abstract class _$$_AppointmentCopyWith<$Res>
       @HiveField(11)
           List<Identifier>? identifier,
       @HiveField(12)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(13)
           Element? statusElement,
@@ -2045,7 +2045,7 @@ abstract class _Appointment extends Appointment {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -2112,7 +2112,7 @@ abstract class _Appointment extends Appointment {
   /// has their own participation status which indicates their involvement in
   ///  the process, however this status indicates the shared status.
   @HiveField(12)
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -2352,14 +2352,14 @@ mixin _$AppointmentParticipant {
   /// the results for a specific patient, and the patient is not required to be
   ///  present.
   @JsonKey(name: 'required')
-  Code? get required_ => throw _privateConstructorUsedError;
+  FhirCode? get required_ => throw _privateConstructorUsedError;
 
   /// [requiredElement] Extensions for required
   @JsonKey(name: '_required')
   Element? get requiredElement => throw _privateConstructorUsedError;
 
   /// [status] Participation status of the actor.
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -2388,7 +2388,7 @@ abstract class $AppointmentParticipantCopyWith<$Res> {
       Reference? actor,
       @JsonKey(name: 'required') Code? required_,
       @JsonKey(name: '_required') Element? requiredElement,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status') Element? statusElement,
       Period? period});
 
@@ -2532,7 +2532,7 @@ abstract class _$$_AppointmentParticipantCopyWith<$Res>
       Reference? actor,
       @JsonKey(name: 'required') Code? required_,
       @JsonKey(name: '_required') Element? requiredElement,
-      Code? status,
+      FhirCode? status,
       @JsonKey(name: '_status') Element? statusElement,
       Period? period});
 
@@ -2868,7 +2868,7 @@ abstract class _AppointmentParticipant extends AppointmentParticipant {
   /// the results for a specific patient, and the patient is not required to be
   ///  present.
   @JsonKey(name: 'required')
-  Code? get required_;
+  FhirCode? get required_;
   @override
 
   /// [requiredElement] Extensions for required
@@ -2877,7 +2877,7 @@ abstract class _AppointmentParticipant extends AppointmentParticipant {
   @override
 
   /// [status] Participation status of the actor.
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -2928,7 +2928,7 @@ mixin _$AppointmentResponse {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -3026,7 +3026,7 @@ mixin _$AppointmentResponse {
   /// time change. When the status is accepted, the times can either be the time
   ///  of the appointment (as a confirmation of the time) or can be empty.
   @HiveField(19)
-  Code? get participantStatus => throw _privateConstructorUsedError;
+  FhirCode? get participantStatus => throw _privateConstructorUsedError;
 
   /// [participantStatusElement] Extensions for participantStatus
   @JsonKey(name: '_participantStatus')
@@ -3068,7 +3068,7 @@ abstract class $AppointmentResponseCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -3100,7 +3100,7 @@ abstract class $AppointmentResponseCopyWith<$Res> {
       @HiveField(18)
           Reference? actor,
       @HiveField(19)
-          Code? participantStatus,
+          FhirCode? participantStatus,
       @JsonKey(name: '_participantStatus')
       @HiveField(20)
           Element? participantStatusElement,
@@ -3394,7 +3394,7 @@ abstract class _$$_AppointmentResponseCopyWith<$Res>
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -3426,7 +3426,7 @@ abstract class _$$_AppointmentResponseCopyWith<$Res>
       @HiveField(18)
           Reference? actor,
       @HiveField(19)
-          Code? participantStatus,
+          FhirCode? participantStatus,
       @JsonKey(name: '_participantStatus')
       @HiveField(20)
           Element? participantStatusElement,
@@ -4084,7 +4084,7 @@ abstract class _AppointmentResponse extends AppointmentResponse {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -4194,7 +4194,7 @@ abstract class _AppointmentResponse extends AppointmentResponse {
   /// time change. When the status is accepted, the times can either be the time
   ///  of the appointment (as a confirmation of the time) or can be empty.
   @HiveField(19)
-  Code? get participantStatus;
+  FhirCode? get participantStatus;
   @override
 
   /// [participantStatusElement] Extensions for participantStatus
@@ -4253,7 +4253,7 @@ mixin _$Schedule {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -4382,7 +4382,7 @@ abstract class $ScheduleCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -4656,7 +4656,7 @@ abstract class _$$_ScheduleCopyWith<$Res> implements $ScheduleCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -5321,7 +5321,7 @@ abstract class _Schedule extends Schedule {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -5478,7 +5478,7 @@ mixin _$Slot {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -5561,7 +5561,7 @@ mixin _$Slot {
   /// [status] busy | free | busy-unavailable | busy-tentative |
   ///  entered-in-error.
   @HiveField(18)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -5630,7 +5630,7 @@ abstract class $SlotCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -5657,7 +5657,7 @@ abstract class $SlotCopyWith<$Res> {
       @HiveField(17)
           Reference schedule,
       @HiveField(18)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(19)
           Element? statusElement,
@@ -5997,7 +5997,7 @@ abstract class _$$_SlotCopyWith<$Res> implements $SlotCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -6024,7 +6024,7 @@ abstract class _$$_SlotCopyWith<$Res> implements $SlotCopyWith<$Res> {
       @HiveField(17)
           Reference schedule,
       @HiveField(18)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(19)
           Element? statusElement,
@@ -6782,7 +6782,7 @@ abstract class _Slot extends Slot {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -6875,7 +6875,7 @@ abstract class _Slot extends Slot {
   /// [status] busy | free | busy-unavailable | busy-tentative |
   ///  entered-in-error.
   @HiveField(18)
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -6968,7 +6968,7 @@ mixin _$Task {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -7057,7 +7057,7 @@ mixin _$Task {
 
   /// [status] The current status of the task.
   @HiveField(19)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -7076,7 +7076,7 @@ mixin _$Task {
   @HiveField(23)
   @HiveField(24)
   @HiveField(25)
-  Code? get intent => throw _privateConstructorUsedError;
+  FhirCode? get intent => throw _privateConstructorUsedError;
 
   /// [intentElement] Extensions for intent
   @JsonKey(name: '_intent')
@@ -7086,7 +7086,7 @@ mixin _$Task {
   /// [priority] Indicates how quickly the Task should be addressed with
   ///  respect to other requests.
   @HiveField(27)
-  Code? get priority => throw _privateConstructorUsedError;
+  FhirCode? get priority => throw _privateConstructorUsedError;
 
   /// [priorityElement] Extensions for priority
   @JsonKey(name: '_priority')
@@ -7230,7 +7230,7 @@ abstract class $TaskCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -7260,7 +7260,7 @@ abstract class $TaskCopyWith<$Res> {
       @HiveField(18)
           List<Reference>? partOf,
       @HiveField(19)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(20)
           Element? statusElement,
@@ -7271,12 +7271,12 @@ abstract class $TaskCopyWith<$Res> {
       @HiveField(23)
       @HiveField(24)
       @HiveField(25)
-          Code? intent,
+          FhirCode? intent,
       @JsonKey(name: '_intent')
       @HiveField(26)
           Element? intentElement,
       @HiveField(27)
-          Code? priority,
+          FhirCode? priority,
       @JsonKey(name: '_priority')
       @HiveField(28)
           Element? priorityElement,
@@ -7942,7 +7942,7 @@ abstract class _$$_TaskCopyWith<$Res> implements $TaskCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -7972,7 +7972,7 @@ abstract class _$$_TaskCopyWith<$Res> implements $TaskCopyWith<$Res> {
       @HiveField(18)
           List<Reference>? partOf,
       @HiveField(19)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(20)
           Element? statusElement,
@@ -7983,12 +7983,12 @@ abstract class _$$_TaskCopyWith<$Res> implements $TaskCopyWith<$Res> {
       @HiveField(23)
       @HiveField(24)
       @HiveField(25)
-          Code? intent,
+          FhirCode? intent,
       @JsonKey(name: '_intent')
       @HiveField(26)
           Element? intentElement,
       @HiveField(27)
-          Code? priority,
+          FhirCode? priority,
       @JsonKey(name: '_priority')
       @HiveField(28)
           Element? priorityElement,
@@ -9262,7 +9262,7 @@ abstract class _Task extends Task {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -9363,7 +9363,7 @@ abstract class _Task extends Task {
 
   /// [status] The current status of the task.
   @HiveField(19)
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -9386,7 +9386,7 @@ abstract class _Task extends Task {
   @HiveField(23)
   @HiveField(24)
   @HiveField(25)
-  Code? get intent;
+  FhirCode? get intent;
   @override
 
   /// [intentElement] Extensions for intent
@@ -9398,7 +9398,7 @@ abstract class _Task extends Task {
   /// [priority] Indicates how quickly the Task should be addressed with
   ///  respect to other requests.
   @HiveField(27)
-  Code? get priority;
+  FhirCode? get priority;
   @override
 
   /// [priorityElement] Extensions for priority
@@ -10048,7 +10048,7 @@ mixin _$TaskInput {
   CodeableConcept get type => throw _privateConstructorUsedError;
 
   /// [valueBase64Binary] The value of the input parameter as a basic type.
-  Base64Binary? get valueBase64Binary => throw _privateConstructorUsedError;
+  FhirBase64Binary? get valueBase64Binary => throw _privateConstructorUsedError;
 
   /// [valueBase64BinaryElement] Extensions for valueBase64Binary
   @JsonKey(name: '_valueBase64Binary')
@@ -10069,7 +10069,7 @@ mixin _$TaskInput {
   Element? get valueCanonicalElement => throw _privateConstructorUsedError;
 
   /// [valueCode] The value of the input parameter as a basic type.
-  Code? get valueCode => throw _privateConstructorUsedError;
+  FhirCode? get valueCode => throw _privateConstructorUsedError;
 
   /// [valueCodeElement] Extensions for valueCode
   @JsonKey(name: '_valueCode')
@@ -10090,7 +10090,7 @@ mixin _$TaskInput {
   Element? get valueDateTimeElement => throw _privateConstructorUsedError;
 
   /// [valueDecimal] The value of the input parameter as a basic type.
-  Decimal? get valueDecimal => throw _privateConstructorUsedError;
+  FhirDecimal? get valueDecimal => throw _privateConstructorUsedError;
 
   /// [valueDecimalElement] Extensions for valueDecimal
   @JsonKey(name: '_valueDecimal')
@@ -10296,19 +10296,19 @@ abstract class $TaskInputCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept type,
-      Base64Binary? valueBase64Binary,
+      FhirBase64Binary? valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
       Boolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       Canonical? valueCanonical,
       @JsonKey(name: '_valueCanonical') Element? valueCanonicalElement,
-      Code? valueCode,
+      FhirCode? valueCode,
       @JsonKey(name: '_valueCode') Element? valueCodeElement,
       Date? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
       FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
-      Decimal? valueDecimal,
+      FhirDecimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
       FhirId? valueId,
       @JsonKey(name: '_valueId') Element? valueIdElement,
@@ -11428,19 +11428,19 @@ abstract class _$$_TaskInputCopyWith<$Res> implements $TaskInputCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept type,
-      Base64Binary? valueBase64Binary,
+      FhirBase64Binary? valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
       Boolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       Canonical? valueCanonical,
       @JsonKey(name: '_valueCanonical') Element? valueCanonicalElement,
-      Code? valueCode,
+      FhirCode? valueCode,
       @JsonKey(name: '_valueCode') Element? valueCodeElement,
       Date? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
       FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
-      Decimal? valueDecimal,
+      FhirDecimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
       FhirId? valueId,
       @JsonKey(name: '_valueId') Element? valueIdElement,
@@ -12786,7 +12786,7 @@ abstract class _TaskInput extends TaskInput {
   @override
 
   /// [valueBase64Binary] The value of the input parameter as a basic type.
-  Base64Binary? get valueBase64Binary;
+  FhirBase64Binary? get valueBase64Binary;
   @override
 
   /// [valueBase64BinaryElement] Extensions for valueBase64Binary
@@ -12813,7 +12813,7 @@ abstract class _TaskInput extends TaskInput {
   @override
 
   /// [valueCode] The value of the input parameter as a basic type.
-  Code? get valueCode;
+  FhirCode? get valueCode;
   @override
 
   /// [valueCodeElement] Extensions for valueCode
@@ -12840,7 +12840,7 @@ abstract class _TaskInput extends TaskInput {
   @override
 
   /// [valueDecimal] The value of the input parameter as a basic type.
-  Decimal? get valueDecimal;
+  FhirDecimal? get valueDecimal;
   @override
 
   /// [valueDecimalElement] Extensions for valueDecimal
@@ -13125,7 +13125,7 @@ mixin _$TaskOutput {
   CodeableConcept get type => throw _privateConstructorUsedError;
 
   /// [valueBase64Binary] The value of the Output parameter as a basic type.
-  Base64Binary? get valueBase64Binary => throw _privateConstructorUsedError;
+  FhirBase64Binary? get valueBase64Binary => throw _privateConstructorUsedError;
 
   /// [valueBase64BinaryElement] Extensions for valueBase64Binary
   @JsonKey(name: '_valueBase64Binary')
@@ -13146,7 +13146,7 @@ mixin _$TaskOutput {
   Element? get valueCanonicalElement => throw _privateConstructorUsedError;
 
   /// [valueCode] The value of the Output parameter as a basic type.
-  Code? get valueCode => throw _privateConstructorUsedError;
+  FhirCode? get valueCode => throw _privateConstructorUsedError;
 
   /// [valueCodeElement] Extensions for valueCode
   @JsonKey(name: '_valueCode')
@@ -13167,7 +13167,7 @@ mixin _$TaskOutput {
   Element? get valueDateTimeElement => throw _privateConstructorUsedError;
 
   /// [valueDecimal] The value of the Output parameter as a basic type.
-  Decimal? get valueDecimal => throw _privateConstructorUsedError;
+  FhirDecimal? get valueDecimal => throw _privateConstructorUsedError;
 
   /// [valueDecimalElement] Extensions for valueDecimal
   @JsonKey(name: '_valueDecimal')
@@ -13374,19 +13374,19 @@ abstract class $TaskOutputCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept type,
-      Base64Binary? valueBase64Binary,
+      FhirBase64Binary? valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
       Boolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       Canonical? valueCanonical,
       @JsonKey(name: '_valueCanonical') Element? valueCanonicalElement,
-      Code? valueCode,
+      FhirCode? valueCode,
       @JsonKey(name: '_valueCode') Element? valueCodeElement,
       Date? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
       FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
-      Decimal? valueDecimal,
+      FhirDecimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
       FhirId? valueId,
       @JsonKey(name: '_valueId') Element? valueIdElement,
@@ -14507,19 +14507,19 @@ abstract class _$$_TaskOutputCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept type,
-      Base64Binary? valueBase64Binary,
+      FhirBase64Binary? valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
       Boolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       Canonical? valueCanonical,
       @JsonKey(name: '_valueCanonical') Element? valueCanonicalElement,
-      Code? valueCode,
+      FhirCode? valueCode,
       @JsonKey(name: '_valueCode') Element? valueCodeElement,
       Date? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
       FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
-      Decimal? valueDecimal,
+      FhirDecimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
       FhirId? valueId,
       @JsonKey(name: '_valueId') Element? valueIdElement,
@@ -15863,7 +15863,7 @@ abstract class _TaskOutput extends TaskOutput {
   @override
 
   /// [valueBase64Binary] The value of the Output parameter as a basic type.
-  Base64Binary? get valueBase64Binary;
+  FhirBase64Binary? get valueBase64Binary;
   @override
 
   /// [valueBase64BinaryElement] Extensions for valueBase64Binary
@@ -15890,7 +15890,7 @@ abstract class _TaskOutput extends TaskOutput {
   @override
 
   /// [valueCode] The value of the Output parameter as a basic type.
-  Code? get valueCode;
+  FhirCode? get valueCode;
   @override
 
   /// [valueCodeElement] Extensions for valueCode
@@ -15917,7 +15917,7 @@ abstract class _TaskOutput extends TaskOutput {
   @override
 
   /// [valueDecimal] The value of the Output parameter as a basic type.
-  Decimal? get valueDecimal;
+  FhirDecimal? get valueDecimal;
   @override
 
   /// [valueDecimalElement] Extensions for valueDecimal
@@ -16198,7 +16198,7 @@ mixin _$VerificationResult {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -16271,7 +16271,7 @@ mixin _$VerificationResult {
   /// [status] The validation status of the target (attested; validated; in
   ///  process; requires revalidation; validation failed; revalidation failed).
   @HiveField(15)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -16369,7 +16369,7 @@ abstract class $VerificationResultCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -16392,7 +16392,7 @@ abstract class $VerificationResultCopyWith<$Res> {
       @HiveField(14)
           CodeableConcept? need,
       @HiveField(15)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(16)
           Element? statusElement,
@@ -16789,7 +16789,7 @@ abstract class _$$_VerificationResultCopyWith<$Res>
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -16812,7 +16812,7 @@ abstract class _$$_VerificationResultCopyWith<$Res>
       @HiveField(14)
           CodeableConcept? need,
       @HiveField(15)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(16)
           Element? statusElement,
@@ -17664,7 +17664,7 @@ abstract class _VerificationResult extends VerificationResult {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -17745,7 +17745,7 @@ abstract class _VerificationResult extends VerificationResult {
   /// [status] The validation status of the target (attested; validated; in
   ///  process; requires revalidation; validation failed; revalidation failed).
   @HiveField(15)
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status

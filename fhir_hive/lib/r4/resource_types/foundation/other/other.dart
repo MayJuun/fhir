@@ -124,7 +124,7 @@ class Basic extends HiveObject with Resource, _$Basic {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -314,7 +314,7 @@ class Binary extends HiveObject with Resource, _$Binary {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -324,7 +324,7 @@ class Binary extends HiveObject with Resource, _$Binary {
     /// [contentType] MimeType of the binary content represented as a standard
     ///  MimeType (BCP 13).
     @HiveField(7)
-        Code? contentType,
+        FhirCode? contentType,
 
     /// [contentTypeElement] Extensions for contentType
     @JsonKey(name: '_contentType')
@@ -349,7 +349,7 @@ class Binary extends HiveObject with Resource, _$Binary {
 
     /// [data] The actual content, base64 encoded.
     @HiveField(11)
-        Base64Binary? data,
+        FhirBase64Binary? data,
 
     /// [dataElement] Extensions for data
     @JsonKey(name: '_data')
@@ -472,7 +472,7 @@ class Bundle extends HiveObject with Resource, _$Bundle {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -487,7 +487,7 @@ class Bundle extends HiveObject with Resource, _$Bundle {
     /// [type] Indicates the purpose of this bundle - how it is intended to be
     ///  used.
     @HiveField(8)
-        Code? type,
+        FhirCode? type,
 
     /// [typeElement] Extensions for type
     @JsonKey(name: '_type')
@@ -950,13 +950,13 @@ class BundleSearch with _$BundleSearch {
     /// [mode] Why this entry is in the result set - whether it's included as a
     /// match or because of an _include requirement, or to convey information or
     ///  warning information about the search process.
-    Code? mode,
+    FhirCode? mode,
 
     /// [modeElement] Extensions for mode
     @JsonKey(name: '_mode') Element? modeElement,
 
     /// [score] When searching, the server's search ranking score for the entry.
-    Decimal? score,
+    FhirDecimal? score,
 
     /// [scoreElement] Extensions for score
     @JsonKey(name: '_score') Element? scoreElement,
@@ -1091,7 +1091,7 @@ class BundleRequest with _$BundleRequest {
     /// [method] In a transaction or batch, this is the HTTP action to be
     /// executed for this entry. In a history bundle, this indicates the HTTP
     ///  action that occurred.
-    Code? method,
+    FhirCode? method,
 
     /// [methodElement] Extensions for method
     @JsonKey(name: '_method') Element? methodElement,
@@ -1428,7 +1428,7 @@ class Linkage extends HiveObject with Resource, _$Linkage {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -1597,7 +1597,7 @@ class LinkageItem with _$LinkageItem {
 
     /// [type] Distinguishes which item is "source of truth" (if any) and which
     ///  items are no longer considered to be current representations.
-    Code? type,
+    FhirCode? type,
 
     /// [typeElement] Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
@@ -1781,7 +1781,7 @@ class MessageHeader extends HiveObject with Resource, _$MessageHeader {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -2293,7 +2293,7 @@ class MessageHeaderResponse with _$MessageHeaderResponse {
 
     /// [code] Code that identifies the type of response to the message - whether
     ///  it was successful or not, and whether it should be resent or not.
-    Code? code,
+    FhirCode? code,
 
     /// [codeElement] Extensions for code
     @JsonKey(name: '_code') Element? codeElement,
@@ -2431,7 +2431,7 @@ class OperationOutcome extends HiveObject with Resource, _$OperationOutcome {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -2615,7 +2615,7 @@ class OperationOutcomeIssue with _$OperationOutcomeIssue {
 
     /// [severity] Indicates whether the issue indicates a variation from
     ///  successful processing.
-    Code? severity,
+    FhirCode? severity,
 
     /// [severityElement] Extensions for severity
     @JsonKey(name: '_severity') Element? severityElement,
@@ -2624,7 +2624,7 @@ class OperationOutcomeIssue with _$OperationOutcomeIssue {
     /// OperationOutcome SHALL choose the most applicable code from the IssueType
     /// value set, and may additional provide its own code for the error in the
     ///  details element.
-    Code? code,
+    FhirCode? code,
 
     /// [codeElement] Extensions for code
     @JsonKey(name: '_code') Element? codeElement,
@@ -2757,7 +2757,7 @@ class Parameters extends HiveObject with Resource, _$Parameters {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -3011,7 +3011,7 @@ class ParametersParameter with _$ParametersParameter {
     @JsonKey(name: '_name') Element? nameElement,
 
     /// [valueBase64Binary] If the parameter is a data type.
-    Base64Binary? valueBase64Binary,
+    FhirBase64Binary? valueBase64Binary,
 
     /// [valueBase64BinaryElement] Extensions for valueBase64Binary
     @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
@@ -3029,7 +3029,7 @@ class ParametersParameter with _$ParametersParameter {
     @JsonKey(name: '_valueCanonical') Element? valueCanonicalElement,
 
     /// [valueCode] If the parameter is a data type.
-    Code? valueCode,
+    FhirCode? valueCode,
 
     /// [valueCodeElement] Extensions for valueCode
     @JsonKey(name: '_valueCode') Element? valueCodeElement,
@@ -3047,7 +3047,7 @@ class ParametersParameter with _$ParametersParameter {
     @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
 
     /// [valueDecimal] If the parameter is a data type.
-    Decimal? valueDecimal,
+    FhirDecimal? valueDecimal,
 
     /// [valueDecimalElement] Extensions for valueDecimal
     @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
@@ -3383,7 +3383,7 @@ class Subscription extends HiveObject with Resource, _$Subscription {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -3435,7 +3435,7 @@ class Subscription extends HiveObject with Resource, _$Subscription {
     /// [status] The status of the subscription, which marks the server state for
     ///  managing the subscription.
     @HiveField(11)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -3606,7 +3606,7 @@ class SubscriptionChannel with _$SubscriptionChannel {
     List<FhirExtension>? modifierExtension,
 
     /// [type] The type of channel to send notifications on.
-    Code? type,
+    FhirCode? type,
 
     /// [typeElement] Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
@@ -3623,7 +3623,7 @@ class SubscriptionChannel with _$SubscriptionChannel {
     /// present, then there is no payload in the notification, just a
     /// notification. The mime type "text/plain" may also be used for Email and
     ///  SMS subscriptions.
-    Code? payload,
+    FhirCode? payload,
 
     /// [payloadElement] Extensions for payload
     @JsonKey(name: '_payload') Element? payloadElement,
@@ -3746,7 +3746,7 @@ class SubscriptionStatus extends HiveObject
 
     /// [language] The base language in which the resource is written.;
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] (_language): Extensions for language;
     @JsonKey(name: '_language')
@@ -3773,7 +3773,7 @@ class SubscriptionStatus extends HiveObject
 
     /// [status] The status of the subscription, which marks the server state for managing the subscription.;
     @HiveField(11)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] (_status): Extensions for status;
     @JsonKey(name: '_status')
@@ -3782,7 +3782,7 @@ class SubscriptionStatus extends HiveObject
 
     /// [type] The type of event being conveyed with this notificaiton.;
     @HiveField(13)
-        Code? type,
+        FhirCode? type,
 
     /// [typeElement] (_type): Extensions for type;
     @JsonKey(name: '_type')
@@ -3791,7 +3791,7 @@ class SubscriptionStatus extends HiveObject
 
     /// [eventsSinceSubscriptionStart] The total number of actual events which have been generated since the Subscription was created (inclusive of this notification) - regardless of how many have been successfully communicated.  This number is NOT incremented for handshake and heartbeat notifications.;
     @HiveField(15)
-        Integer64? eventsSinceSubscriptionStart,
+        FhirInteger64? eventsSinceSubscriptionStart,
     @JsonKey(name: '_eventsSinceSubscriptionStart')
 
     /// [eventsSinceSubscriptionStartElement] (_eventsSinceSubscriptionStart): Extensions for eventsSinceSubscriptionStart;
@@ -3879,7 +3879,7 @@ class SubscriptionStatusNotificationEvent
     List<FhirExtension>? modifierExtension,
 
     /// [eventNumber] The sequential number of this event in this subscription context.;
-    Integer64? eventNumber,
+    FhirInteger64? eventNumber,
 
     /// [eventNumberElement] (_eventNumber): Extensions for eventNumber;
     @JsonKey(name: '_eventNumber') Element? eventNumberElement,
@@ -4308,11 +4308,11 @@ class SubscriptionTopicQueryCriteria with _$SubscriptionTopicQueryCriteria {
     List<FhirExtension>? modifierExtension,
     String? previous,
     @JsonKey(name: '_previous') Element? previousElement,
-    Code? resultForCreate,
+    FhirCode? resultForCreate,
     @JsonKey(name: '_resultForCreate') Element? resultForCreateElement,
     String? current,
     @JsonKey(name: '_current') Element? currentElement,
-    Code? resultForDelete,
+    FhirCode? resultForDelete,
     @JsonKey(name: '_resultForDelete') Element? resultForDeleteElement,
     Boolean? requireBoth,
     @JsonKey(name: '_requireBoth') Element? requireBothElement,

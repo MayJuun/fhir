@@ -208,7 +208,7 @@ class Citation extends HiveObject with Resource, _$Citation {
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
     @HiveField(6)
     @JsonKey(name: '_language')
         Element? languageElement,
@@ -244,7 +244,7 @@ class Citation extends HiveObject with Resource, _$Citation {
     @JsonKey(name: '_title')
         Element? titleElement,
     @HiveField(20)
-        Code? status,
+        FhirCode? status,
     @HiveField(21)
     @JsonKey(name: '_status')
         Element? statusElement,
@@ -3040,7 +3040,7 @@ class EvidenceAttributeEstimate with _$EvidenceAttributeEstimate {
     List<Annotation>? note,
     CodeableConcept? type,
     Quantity? quantity,
-    Decimal? level,
+    FhirDecimal? level,
     @JsonKey(name: '_level') Element? levelElement,
     Range? range,
     List<EvidenceAttributeEstimate>? attributeEstimate,
@@ -3179,7 +3179,7 @@ class EvidenceVar with _$EvidenceVar {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Reference variableDefinition,
-    Code? handling,
+    FhirCode? handling,
     @JsonKey(name: '_handling') Element? handlingElement,
     List<CodeableConcept>? valueCategory,
     List<Quantity>? valueQuantity,
@@ -3655,7 +3655,7 @@ class EvidenceReportRelatesTo with _$EvidenceReportRelatesTo {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    Code? code,
+    FhirCode? code,
     @JsonKey(name: '_code') Element? codeElement,
     Identifier? targetIdentifier,
     Reference? targetReference,
@@ -3746,7 +3746,7 @@ class EvidenceReportSection with _$EvidenceReportSection {
     Reference? focusReference,
     List<Reference>? author,
     Narrative? text,
-    Code? mode,
+    FhirCode? mode,
     @JsonKey(name: '_mode') Element? modeElement,
     CodeableConcept? orderedBy,
     List<CodeableConcept>? entryClassifier,
@@ -4186,7 +4186,7 @@ class EvidenceVariableCharacteristic with _$EvidenceVariableCharacteristic {
     Boolean? exclude,
     @JsonKey(name: '_exclude') Element? excludeElement,
     EvidenceVariableTimeFromStart? timeFromStart,
-    Code? groupMeasure,
+    FhirCode? groupMeasure,
     @JsonKey(name: '_groupMeasure') Element? groupMeasureElement,
   }) = _EvidenceVariableCharacteristic;
 
@@ -5196,7 +5196,7 @@ class ResearchElementDefinitionCharacteristic
     FhirDuration? studyEffectiveDuration,
     Timing? studyEffectiveTiming,
     FhirDuration? studyEffectiveTimeFromStart,
-    Code? studyEffectiveGroupMeasure,
+    FhirCode? studyEffectiveGroupMeasure,
     @JsonKey(name: '_studyEffectiveGroupMeasure')
         Element? studyEffectiveGroupMeasureElement,
     String? participantEffectiveDescription,
@@ -5209,7 +5209,7 @@ class ResearchElementDefinitionCharacteristic
     FhirDuration? participantEffectiveDuration,
     Timing? participantEffectiveTiming,
     FhirDuration? participantEffectiveTimeFromStart,
-    Code? participantEffectiveGroupMeasure,
+    FhirCode? participantEffectiveGroupMeasure,
     @JsonKey(name: '_participantEffectiveGroupMeasure')
         Element? participantEffectiveGroupMeasureElement,
   }) = _ResearchElementDefinitionCharacteristic;

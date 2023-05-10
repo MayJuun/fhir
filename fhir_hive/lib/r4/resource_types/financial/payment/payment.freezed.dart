@@ -49,7 +49,7 @@ mixin _$PaymentNotice {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -105,7 +105,7 @@ mixin _$PaymentNotice {
 
   /// [status] The status of the resource instance.
   @HiveField(12)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -192,7 +192,7 @@ abstract class $PaymentNoticeCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -208,7 +208,7 @@ abstract class $PaymentNoticeCopyWith<$Res> {
       @HiveField(11)
           List<Identifier>? identifier,
       @HiveField(12)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(13)
           Element? statusElement,
@@ -595,7 +595,7 @@ abstract class _$$_PaymentNoticeCopyWith<$Res>
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -611,7 +611,7 @@ abstract class _$$_PaymentNoticeCopyWith<$Res>
       @HiveField(11)
           List<Identifier>? identifier,
       @HiveField(12)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(13)
           Element? statusElement,
@@ -1324,7 +1324,7 @@ abstract class _PaymentNotice extends PaymentNotice {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -1386,7 +1386,7 @@ abstract class _PaymentNotice extends PaymentNotice {
 
   /// [status] The status of the resource instance.
   @HiveField(12)
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -1501,7 +1501,7 @@ mixin _$PaymentReconciliation {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -1557,7 +1557,7 @@ mixin _$PaymentReconciliation {
 
   /// [status] The status of the resource instance.
   @HiveField(12)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -1593,7 +1593,7 @@ mixin _$PaymentReconciliation {
 
   /// [outcome] The outcome of a request for a reconciliation.
   @HiveField(20)
-  Code? get outcome => throw _privateConstructorUsedError;
+  FhirCode? get outcome => throw _privateConstructorUsedError;
 
   /// [outcomeElement] Extensions for outcome
   @JsonKey(name: '_outcome')
@@ -1672,7 +1672,7 @@ abstract class $PaymentReconciliationCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -1688,7 +1688,7 @@ abstract class $PaymentReconciliationCopyWith<$Res> {
       @HiveField(11)
           List<Identifier>? identifier,
       @HiveField(12)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(13)
           Element? statusElement,
@@ -1706,7 +1706,7 @@ abstract class $PaymentReconciliationCopyWith<$Res> {
       @HiveField(19)
           Reference? requestor,
       @HiveField(20)
-          Code? outcome,
+          FhirCode? outcome,
       @JsonKey(name: '_outcome')
       @HiveField(21)
           Element? outcomeElement,
@@ -2134,7 +2134,7 @@ abstract class _$$_PaymentReconciliationCopyWith<$Res>
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -2150,7 +2150,7 @@ abstract class _$$_PaymentReconciliationCopyWith<$Res>
       @HiveField(11)
           List<Identifier>? identifier,
       @HiveField(12)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(13)
           Element? statusElement,
@@ -2168,7 +2168,7 @@ abstract class _$$_PaymentReconciliationCopyWith<$Res>
       @HiveField(19)
           Reference? requestor,
       @HiveField(20)
-          Code? outcome,
+          FhirCode? outcome,
       @JsonKey(name: '_outcome')
       @HiveField(21)
           Element? outcomeElement,
@@ -2996,7 +2996,7 @@ abstract class _PaymentReconciliation extends PaymentReconciliation {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -3058,7 +3058,7 @@ abstract class _PaymentReconciliation extends PaymentReconciliation {
 
   /// [status] The status of the resource instance.
   @HiveField(12)
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -3102,7 +3102,7 @@ abstract class _PaymentReconciliation extends PaymentReconciliation {
 
   /// [outcome] The outcome of a request for a reconciliation.
   @HiveField(20)
-  Code? get outcome;
+  FhirCode? get outcome;
   @override
 
   /// [outcomeElement] Extensions for outcome
@@ -3989,7 +3989,7 @@ mixin _$PaymentReconciliationProcessNote {
       throw _privateConstructorUsedError;
 
   /// [type] The business purpose of the note text.
-  Code? get type => throw _privateConstructorUsedError;
+  FhirCode? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
@@ -4020,7 +4020,7 @@ abstract class $PaymentReconciliationProcessNoteCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? type,
+      FhirCode? type,
       @JsonKey(name: '_type') Element? typeElement,
       String? text,
       @JsonKey(name: '_text') Element? textElement});
@@ -4121,7 +4121,7 @@ abstract class _$$_PaymentReconciliationProcessNoteCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? type,
+      FhirCode? type,
       @JsonKey(name: '_type') Element? typeElement,
       String? text,
       @JsonKey(name: '_text') Element? textElement});
@@ -4392,7 +4392,7 @@ abstract class _PaymentReconciliationProcessNote
   @override
 
   /// [type] The business purpose of the note text.
-  Code? get type;
+  FhirCode? get type;
   @override
 
   /// [typeElement] Extensions for type

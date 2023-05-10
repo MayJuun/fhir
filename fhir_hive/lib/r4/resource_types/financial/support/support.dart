@@ -173,7 +173,7 @@ class Coverage extends HiveObject with Resource, _$Coverage {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -228,7 +228,7 @@ class Coverage extends HiveObject with Resource, _$Coverage {
 
     /// [status] The status of the resource instance.
     @HiveField(12)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -863,7 +863,7 @@ class CoverageEligibilityRequest extends HiveObject
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -919,7 +919,7 @@ class CoverageEligibilityRequest extends HiveObject
 
     /// [status] The status of the resource instance.
     @HiveField(12)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -1689,7 +1689,7 @@ class CoverageEligibilityResponse extends HiveObject
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -1745,7 +1745,7 @@ class CoverageEligibilityResponse extends HiveObject
 
     /// [status] The status of the resource instance.
     @HiveField(12)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -1804,7 +1804,7 @@ class CoverageEligibilityResponse extends HiveObject
 
     /// [outcome] The outcome of the request processing.
     @HiveField(24)
-        Code? outcome,
+        FhirCode? outcome,
 
     /// [outcomeElement] Extensions for outcome
     @JsonKey(name: '_outcome')
@@ -2564,7 +2564,7 @@ class EnrollmentRequest extends HiveObject with Resource, _$EnrollmentRequest {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -2619,7 +2619,7 @@ class EnrollmentRequest extends HiveObject with Resource, _$EnrollmentRequest {
 
     /// [status] The status of the resource instance.
     @HiveField(12)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -2804,7 +2804,7 @@ class EnrollmentResponse extends HiveObject
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -2859,7 +2859,7 @@ class EnrollmentResponse extends HiveObject
 
     /// [status] The status of the resource instance.
     @HiveField(12)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -2872,7 +2872,7 @@ class EnrollmentResponse extends HiveObject
 
     /// [outcome] Processing status: error, complete.
     @HiveField(15)
-        Code? outcome,
+        FhirCode? outcome,
 
     /// [outcomeElement] Extensions for outcome
     @JsonKey(name: '_outcome')

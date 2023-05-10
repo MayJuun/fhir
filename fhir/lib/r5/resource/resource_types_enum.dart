@@ -27,6 +27,8 @@ enum R5ResourceType {
   Binary,
   @JsonValue('BiologicallyDerivedProduct')
   BiologicallyDerivedProduct,
+  @JsonValue('BiologicallyDerivedProductDispense')
+  BiologicallyDerivedProductDispense,
   @JsonValue('BodyStructure')
   BodyStructure,
   @JsonValue('Bundle')
@@ -81,6 +83,8 @@ enum R5ResourceType {
   DetectedIssue,
   @JsonValue('Device')
   Device,
+  @JsonValue('DeviceAssociation')
+  DeviceAssociation,
   @JsonValue('DeviceDefinition')
   DeviceDefinition,
   @JsonValue('DeviceDispense')
@@ -93,12 +97,12 @@ enum R5ResourceType {
   DeviceUsage,
   @JsonValue('DiagnosticReport')
   DiagnosticReport,
-  @JsonValue('DocumentManifest')
-  DocumentManifest,
   @JsonValue('DocumentReference')
   DocumentReference,
   @JsonValue('Encounter')
   Encounter,
+  @JsonValue('EncounterHistory')
+  EncounterHistory,
   @JsonValue('Endpoint')
   Endpoint,
   @JsonValue('EnrollmentRequest')
@@ -153,6 +157,8 @@ enum R5ResourceType {
   Ingredient,
   @JsonValue('InsurancePlan')
   InsurancePlan,
+  @JsonValue('InventoryItem')
+  InventoryItem,
   @JsonValue('InventoryReport')
   InventoryReport,
   @JsonValue('Invoice')
@@ -181,8 +187,8 @@ enum R5ResourceType {
   MedicationKnowledge,
   @JsonValue('MedicationRequest')
   MedicationRequest,
-  @JsonValue('MedicationUsage')
-  MedicationUsage,
+  @JsonValue('MedicationStatement')
+  MedicationStatement,
   @JsonValue('MedicinalProductDefinition')
   MedicinalProductDefinition,
   @JsonValue('MessageDefinition')
@@ -297,6 +303,8 @@ enum R5ResourceType {
   Task,
   @JsonValue('TerminologyCapabilities')
   TerminologyCapabilities,
+  @JsonValue('TestPlan')
+  TestPlan,
   @JsonValue('TestReport')
   TestReport,
   @JsonValue('TestScript')

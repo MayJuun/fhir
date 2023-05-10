@@ -153,7 +153,7 @@ class Endpoint extends HiveObject with Resource, _$Endpoint {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -209,7 +209,7 @@ class Endpoint extends HiveObject with Resource, _$Endpoint {
 
     /// [status] active | suspended | error | off | test.
     @HiveField(12)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -492,7 +492,7 @@ class HealthcareService extends HiveObject with Resource, _$HealthcareService {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -1243,7 +1243,7 @@ class Location extends HiveObject with Resource, _$Location {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -1301,7 +1301,7 @@ class Location extends HiveObject with Resource, _$Location {
     /// operationStatus, or by a schedule/slots if they are configured for the
     ///  location.
     @HiveField(12)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -1348,7 +1348,7 @@ class Location extends HiveObject with Resource, _$Location {
     /// [mode] Indicates whether a resource instance represents a specific
     ///  location or a class of locations.
     @HiveField(21)
-        Code? mode,
+        FhirCode? mode,
 
     /// [modeElement] Extensions for mode
     @JsonKey(name: '_mode')
@@ -1520,21 +1520,21 @@ class LocationPosition with _$LocationPosition {
 
     /// [longitude] Longitude. The value domain and the interpretation are the
     ///  same as for the text of the longitude element in KML (see notes below).
-    Decimal? longitude,
+    FhirDecimal? longitude,
 
     /// [longitudeElement] Extensions for longitude
     @JsonKey(name: '_longitude') Element? longitudeElement,
 
     /// [latitude] Latitude. The value domain and the interpretation are the same
     ///  as for the text of the latitude element in KML (see notes below).
-    Decimal? latitude,
+    FhirDecimal? latitude,
 
     /// [latitudeElement] Extensions for latitude
     @JsonKey(name: '_latitude') Element? latitudeElement,
 
     /// [altitude] Altitude. The value domain and the interpretation are the same
     ///  as for the text of the altitude element in KML (see notes below).
-    Decimal? altitude,
+    FhirDecimal? altitude,
 
     /// [altitudeElement] Extensions for altitude
     @JsonKey(name: '_altitude') Element? altitudeElement,
@@ -1832,7 +1832,7 @@ class Organization extends HiveObject with Resource, _$Organization {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -2218,7 +2218,7 @@ class OrganizationAffiliation extends HiveObject
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')

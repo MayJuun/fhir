@@ -549,6 +549,10 @@ _$_CoverageEligibilityRequest _$$_CoverageEligibilityRequestFromJson(
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       patient: Reference.fromJson(json['patient'] as Map<String, dynamic>),
+      event: (json['event'] as List<dynamic>?)
+          ?.map((e) => CoverageEligibilityRequestEvent.fromJson(
+              e as Map<String, dynamic>))
+          .toList(),
       servicedDate: json['servicedDate'] == null
           ? null
           : FhirDate.fromJson(json['servicedDate']),
@@ -622,6 +626,7 @@ Map<String, dynamic> _$$_CoverageEligibilityRequestToJson(
   writeNotNull(
       '_purpose', instance.purposeElement?.map((e) => e.toJson()).toList());
   val['patient'] = instance.patient.toJson();
+  writeNotNull('event', instance.event?.map((e) => e.toJson()).toList());
   writeNotNull('servicedDate', instance.servicedDate?.toJson());
   writeNotNull('_servicedDate', instance.servicedDateElement?.toJson());
   writeNotNull('servicedPeriod', instance.servicedPeriod?.toJson());
@@ -636,6 +641,50 @@ Map<String, dynamic> _$$_CoverageEligibilityRequestToJson(
   writeNotNull(
       'insurance', instance.insurance?.map((e) => e.toJson()).toList());
   writeNotNull('item', instance.item?.map((e) => e.toJson()).toList());
+  return val;
+}
+
+_$_CoverageEligibilityRequestEvent _$$_CoverageEligibilityRequestEventFromJson(
+        Map<String, dynamic> json) =>
+    _$_CoverageEligibilityRequestEvent(
+      id: json['id'] as String?,
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      type: CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
+      whenDateTime: json['whenDateTime'] == null
+          ? null
+          : FhirDateTime.fromJson(json['whenDateTime']),
+      whenDateTimeElement: json['_whenDateTime'] == null
+          ? null
+          : Element.fromJson(json['_whenDateTime'] as Map<String, dynamic>),
+      whenPeriod: json['whenPeriod'] == null
+          ? null
+          : Period.fromJson(json['whenPeriod'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$$_CoverageEligibilityRequestEventToJson(
+    _$_CoverageEligibilityRequestEvent instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
+  val['type'] = instance.type.toJson();
+  writeNotNull('whenDateTime', instance.whenDateTime?.toJson());
+  writeNotNull('_whenDateTime', instance.whenDateTimeElement?.toJson());
+  writeNotNull('whenPeriod', instance.whenPeriod?.toJson());
   return val;
 }
 
@@ -908,6 +957,10 @@ _$_CoverageEligibilityResponse _$$_CoverageEligibilityResponseFromJson(
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       patient: Reference.fromJson(json['patient'] as Map<String, dynamic>),
+      event: (json['event'] as List<dynamic>?)
+          ?.map((e) => CoverageEligibilityResponseEvent.fromJson(
+              e as Map<String, dynamic>))
+          .toList(),
       servicedDate: json['servicedDate'] == null
           ? null
           : FhirDate.fromJson(json['servicedDate']),
@@ -987,6 +1040,7 @@ Map<String, dynamic> _$$_CoverageEligibilityResponseToJson(
   writeNotNull(
       '_purpose', instance.purposeElement?.map((e) => e.toJson()).toList());
   val['patient'] = instance.patient.toJson();
+  writeNotNull('event', instance.event?.map((e) => e.toJson()).toList());
   writeNotNull('servicedDate', instance.servicedDate?.toJson());
   writeNotNull('_servicedDate', instance.servicedDateElement?.toJson());
   writeNotNull('servicedPeriod', instance.servicedPeriod?.toJson());
@@ -1005,6 +1059,50 @@ Map<String, dynamic> _$$_CoverageEligibilityResponseToJson(
   writeNotNull('_preAuthRef', instance.preAuthRefElement?.toJson());
   writeNotNull('form', instance.form?.toJson());
   writeNotNull('error', instance.error?.map((e) => e.toJson()).toList());
+  return val;
+}
+
+_$_CoverageEligibilityResponseEvent
+    _$$_CoverageEligibilityResponseEventFromJson(Map<String, dynamic> json) =>
+        _$_CoverageEligibilityResponseEvent(
+          id: json['id'] as String?,
+          extension_: (json['extension'] as List<dynamic>?)
+              ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+              ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          type: CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
+          whenDateTime: json['whenDateTime'] == null
+              ? null
+              : FhirDateTime.fromJson(json['whenDateTime']),
+          whenDateTimeElement: json['_whenDateTime'] == null
+              ? null
+              : Element.fromJson(json['_whenDateTime'] as Map<String, dynamic>),
+          whenPeriod: json['whenPeriod'] == null
+              ? null
+              : Period.fromJson(json['whenPeriod'] as Map<String, dynamic>),
+        );
+
+Map<String, dynamic> _$$_CoverageEligibilityResponseEventToJson(
+    _$_CoverageEligibilityResponseEvent instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
+  val['type'] = instance.type.toJson();
+  writeNotNull('whenDateTime', instance.whenDateTime?.toJson());
+  writeNotNull('_whenDateTime', instance.whenDateTimeElement?.toJson());
+  writeNotNull('whenPeriod', instance.whenPeriod?.toJson());
   return val;
 }
 
@@ -1251,6 +1349,12 @@ _$_CoverageEligibilityResponseError
               ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
               .toList(),
           code: CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
+          expression: (json['expression'] as List<dynamic>?)
+              ?.map((e) => e as String)
+              .toList(),
+          expressionElement: (json['_expression'] as List<dynamic>?)
+              ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+              .toList(),
         );
 
 Map<String, dynamic> _$$_CoverageEligibilityResponseErrorToJson(
@@ -1269,6 +1373,9 @@ Map<String, dynamic> _$$_CoverageEligibilityResponseErrorToJson(
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   val['code'] = instance.code.toJson();
+  writeNotNull('expression', instance.expression);
+  writeNotNull('_expression',
+      instance.expressionElement?.map((e) => e.toJson()).toList());
   return val;
 }
 

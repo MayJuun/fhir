@@ -10,7 +10,7 @@ class EndpointUsCore extends Resource {
     Narrative? text,
     List<Resource>? contained,
     List<Identifier>? identifier,
-    Code? status,
+    FhirCode? status,
     required Coding connectionType,
     String? name,
     Reference? managingOrganization,
@@ -46,7 +46,7 @@ class EndpointUsCore extends Resource {
   Narrative? get text => _endpoint.text;
   List<Resource>? get contained => _endpoint.contained;
   List<Identifier>? get identifier => _endpoint.identifier;
-  Code? get status => _endpoint.status;
+  FhirCode? get status => _endpoint.status;
   Coding get connectionType => _endpoint.connectionType;
   String? get name => _endpoint.name;
   Reference? get managingOrganization => _endpoint.managingOrganization;

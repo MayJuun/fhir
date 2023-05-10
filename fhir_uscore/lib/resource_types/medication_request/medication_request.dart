@@ -98,8 +98,8 @@ class MedicationRequestUsCore extends Resource {
   FhirMeta? get meta => _medicationRequest.meta;
   Narrative? get text => _medicationRequest.text;
   List<Identifier>? get identifier => _medicationRequest.identifier;
-  Code? get status => _medicationRequest.status;
-  Code? get intent => _medicationRequest.intent;
+  FhirCode? get status => _medicationRequest.status;
+  FhirCode? get intent => _medicationRequest.intent;
   List<Resource>? get contained => _medicationRequest.contained;
   Boolean? get reportedBoolean => _medicationRequest.reportedBoolean;
   Reference? get reportedReference => _medicationRequest.reportedReference;

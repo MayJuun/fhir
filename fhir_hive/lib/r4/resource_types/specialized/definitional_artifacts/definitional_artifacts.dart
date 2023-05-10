@@ -343,7 +343,7 @@ class ActivityDefinition extends HiveObject
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -470,7 +470,7 @@ class ActivityDefinition extends HiveObject
     /// [status] The status of this activity definition. Enables tracking the
     ///  life-cycle of the content.
     @HiveField(24)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -654,7 +654,7 @@ class ActivityDefinition extends HiveObject
     /// CommunicationRequest. Typically, but not always, this is a Request
     ///  resource.
     @HiveField(60)
-        Code? kind,
+        FhirCode? kind,
 
     /// [kindElement] Extensions for kind
     @JsonKey(name: '_kind')
@@ -675,7 +675,7 @@ class ActivityDefinition extends HiveObject
     /// [intent] Indicates the level of authority/intentionality associated with
     ///  the activity and where the request should fit into the workflow chain.
     @HiveField(65)
-        Code? intent,
+        FhirCode? intent,
 
     /// [intentElement] Extensions for intent
     @JsonKey(name: '_intent')
@@ -685,7 +685,7 @@ class ActivityDefinition extends HiveObject
     /// [priority] Indicates how quickly the activity  should be addressed with
     ///  respect to other requests.
     @HiveField(67)
-        Code? priority,
+        FhirCode? priority,
 
     /// [priorityElement] Extensions for priority
     @JsonKey(name: '_priority')
@@ -902,7 +902,7 @@ class ActivityDefinitionParticipant with _$ActivityDefinitionParticipant {
     List<FhirExtension>? modifierExtension,
 
     /// [type] The type of participant in the action.
-    Code? type,
+    FhirCode? type,
 
     /// [typeElement] Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
@@ -1234,7 +1234,7 @@ class DeviceDefinition extends HiveObject with Resource, _$DeviceDefinition {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -1638,7 +1638,7 @@ class DeviceDefinitionDeviceName with _$DeviceDefinitionDeviceName {
     /// [type] The type of deviceName.
     /// UDILabelName | UserFriendlyName | PatientReportedName |
     ///  ManufactureDeviceName | ModelName.
-    Code? type,
+    FhirCode? type,
 
     /// [typeElement] Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
@@ -2355,7 +2355,7 @@ class EventDefinition extends HiveObject with Resource, _$EventDefinition {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -2474,7 +2474,7 @@ class EventDefinition extends HiveObject with Resource, _$EventDefinition {
     /// [status] The status of this event definition. Enables tracking the
     ///  life-cycle of the content.
     @HiveField(22)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -2818,7 +2818,7 @@ class ObservationDefinition extends HiveObject
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -3061,7 +3061,7 @@ class ObservationDefinitionQuantitativeDetails
 
     /// [conversionFactor] Factor for converting value expressed with SI unit to
     ///  value expressed with customary unit.
-    Decimal? conversionFactor,
+    FhirDecimal? conversionFactor,
 
     /// [conversionFactorElement] Extensions for conversionFactor
     @JsonKey(name: '_conversionFactor') Element? conversionFactorElement,
@@ -3184,7 +3184,7 @@ class ObservationDefinitionQualifiedInterval
 
     /// [category] The category of interval of values for continuous or ordinal
     ///  observations conforming to this ObservationDefinition.
-    Code? category,
+    FhirCode? category,
 
     /// [categoryElement] Extensions for category
     @JsonKey(name: '_category') Element? categoryElement,
@@ -3202,7 +3202,7 @@ class ObservationDefinitionQualifiedInterval
     List<CodeableConcept>? appliesTo,
 
     /// [gender] Sex of the population the range applies to.
-    Code? gender,
+    FhirCode? gender,
 
     /// [genderElement] Extensions for gender
     @JsonKey(name: '_gender') Element? genderElement,
@@ -3493,7 +3493,7 @@ class PlanDefinition extends HiveObject with Resource, _$PlanDefinition {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -3621,7 +3621,7 @@ class PlanDefinition extends HiveObject with Resource, _$PlanDefinition {
     /// [status] The status of this plan definition. Enables tracking the
     ///  life-cycle of the content.
     @HiveField(23)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -4367,7 +4367,7 @@ class PlanDefinitionAction with _$PlanDefinitionAction {
 
     /// [priority] Indicates how quickly the action should be addressed with
     ///  respect to other actions.
-    Code? priority,
+    FhirCode? priority,
 
     /// [priorityElement] Extensions for priority
     @JsonKey(name: '_priority') Element? priorityElement,
@@ -4455,34 +4455,34 @@ class PlanDefinitionAction with _$PlanDefinitionAction {
 
     /// [groupingBehavior] Defines the grouping behavior for the action and its
     ///  children.
-    Code? groupingBehavior,
+    FhirCode? groupingBehavior,
 
     /// [groupingBehaviorElement] Extensions for groupingBehavior
     @JsonKey(name: '_groupingBehavior') Element? groupingBehaviorElement,
 
     /// [selectionBehavior] Defines the selection behavior for the action and its
     ///  children.
-    Code? selectionBehavior,
+    FhirCode? selectionBehavior,
 
     /// [selectionBehaviorElement] Extensions for selectionBehavior
     @JsonKey(name: '_selectionBehavior') Element? selectionBehaviorElement,
 
     /// [requiredBehavior] Defines the required behavior for the action.
-    Code? requiredBehavior,
+    FhirCode? requiredBehavior,
 
     /// [requiredBehaviorElement] Extensions for requiredBehavior
     @JsonKey(name: '_requiredBehavior') Element? requiredBehaviorElement,
 
     /// [precheckBehavior] Defines whether the action should usually be
     ///  preselected.
-    Code? precheckBehavior,
+    FhirCode? precheckBehavior,
 
     /// [precheckBehaviorElement] Extensions for precheckBehavior
     @JsonKey(name: '_precheckBehavior') Element? precheckBehaviorElement,
 
     /// [cardinalityBehavior] Defines whether the action can be selected multiple
     ///  times.
-    Code? cardinalityBehavior,
+    FhirCode? cardinalityBehavior,
 
     /// [cardinalityBehaviorElement] Extensions for cardinalityBehavior
     @JsonKey(name: '_cardinalityBehavior') Element? cardinalityBehaviorElement,
@@ -4751,7 +4751,7 @@ class PlanDefinitionRelatedAction with _$PlanDefinitionRelatedAction {
     @JsonKey(name: '_actionId') Element? actionIdElement,
 
     /// [relationship] The relationship of this action to the related action.
-    Code? relationship,
+    FhirCode? relationship,
 
     /// [relationshipElement] Extensions for relationship
     @JsonKey(name: '_relationship') Element? relationshipElement,
@@ -4867,7 +4867,7 @@ class PlanDefinitionParticipant with _$PlanDefinitionParticipant {
     List<FhirExtension>? modifierExtension,
 
     /// [type] The type of participant in the action.
-    Code? type,
+    FhirCode? type,
 
     /// [typeElement] Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
@@ -5245,7 +5245,7 @@ class Questionnaire extends HiveObject with Resource, _$Questionnaire {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -5358,7 +5358,7 @@ class Questionnaire extends HiveObject with Resource, _$Questionnaire {
     /// [status] The status of this questionnaire. Enables tracking the
     ///  life-cycle of the content.
     @HiveField(21)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -5719,7 +5719,7 @@ class QuestionnaireItem with _$QuestionnaireItem {
 
     /// [enableBehavior] Controls how multiple enableWhen values are interpreted
     ///  -  whether all or any must be true.
-    Code? enableBehavior,
+    FhirCode? enableBehavior,
 
     /// [enableBehaviorElement] Extensions for enableBehavior
     @JsonKey(name: '_enableBehavior') Element? enableBehaviorElement,
@@ -5939,7 +5939,7 @@ class QuestionnaireEnableWhen with _$QuestionnaireEnableWhen {
 
     /// [answerDecimal] A value that the referenced question is tested using the
     ///  specified operator in order for the item to be enabled.
-    Decimal? answerDecimal,
+    FhirDecimal? answerDecimal,
 
     /// [answerDecimalElement] Extensions for answerDecimal
     @JsonKey(name: '_answerDecimal') Element? answerDecimalElement,
@@ -6300,7 +6300,7 @@ class QuestionnaireInitial with _$QuestionnaireInitial {
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
 
     /// [valueDecimal] The actual value to for an initial answer.
-    Decimal? valueDecimal,
+    FhirDecimal? valueDecimal,
 
     /// [valueDecimalElement] Extensions for valueDecimal
     @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
@@ -6496,7 +6496,7 @@ class SpecimenDefinition extends HiveObject
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -6701,7 +6701,7 @@ class SpecimenDefinitionTypeTested with _$SpecimenDefinitionTypeTested {
     CodeableConcept? type,
 
     /// [preference] The preference for this type of conditioned specimen.
-    Code? preference,
+    FhirCode? preference,
 
     /// [preferenceElement] Extensions for preference
     @JsonKey(name: '_preference') Element? preferenceElement,

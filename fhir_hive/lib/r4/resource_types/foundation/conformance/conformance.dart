@@ -247,7 +247,7 @@ class CapabilityStatement extends HiveObject
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -354,7 +354,7 @@ class CapabilityStatement extends HiveObject
     /// [status] The status of this capability statement. Enables tracking the
     ///  life-cycle of the content.
     @HiveField(21)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -452,7 +452,7 @@ class CapabilityStatement extends HiveObject
     /// instance of software) or a class of implementation (e.g. a desired
     ///  purchase).
     @HiveField(39)
-        Code? kind,
+        FhirCode? kind,
 
     /// [kindElement] Extensions for kind
     @JsonKey(name: '_kind')
@@ -496,7 +496,7 @@ class CapabilityStatement extends HiveObject
     /// CapabilityStatement describes (which SHALL be the same as the FHIR version
     ///  of the CapabilityStatement itself). There is no default value.
     @HiveField(47)
-        Code? fhirVersion,
+        FhirCode? fhirVersion,
 
     /// [fhirVersionElement] Extensions for fhirVersion
     @JsonKey(name: '_fhirVersion')
@@ -909,7 +909,7 @@ class CapabilityStatementRest with _$CapabilityStatementRest {
 
     /// [mode] Identifies whether this portion of the statement is describing the
     ///  ability to initiate or receive restful operations.
-    Code? mode,
+    FhirCode? mode,
 
     /// [modeElement] Extensions for mode
     @JsonKey(name: '_mode') Element? modeElement,
@@ -1268,7 +1268,7 @@ class CapabilityStatementResource with _$CapabilityStatementResource {
     List<FhirExtension>? modifierExtension,
 
     /// [type] A type of resource exposed via the restful interface.
-    Code? type,
+    FhirCode? type,
 
     /// [typeElement] Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
@@ -1305,7 +1305,7 @@ class CapabilityStatementResource with _$CapabilityStatementResource {
     /// track and populate the versionId meta-property on resources. If the value
     /// is 'versioned-update', then the server supports all the versioning
     ///  features, including using e-tags for version integrity in the API.
-    Code? versioning,
+    FhirCode? versioning,
 
     /// [versioningElement] Extensions for versioning
     @JsonKey(name: '_versioning') Element? versioningElement,
@@ -1336,7 +1336,7 @@ class CapabilityStatementResource with _$CapabilityStatementResource {
 
     /// [conditionalRead] A code that indicates how the server supports
     ///  conditional read.
-    Code? conditionalRead,
+    FhirCode? conditionalRead,
 
     /// [conditionalReadElement] Extensions for conditionalRead
     @JsonKey(name: '_conditionalRead') Element? conditionalReadElement,
@@ -1350,7 +1350,7 @@ class CapabilityStatementResource with _$CapabilityStatementResource {
 
     /// [conditionalDelete] A code that indicates how the server supports
     ///  conditional delete.
-    Code? conditionalDelete,
+    FhirCode? conditionalDelete,
 
     /// [conditionalDeleteElement] Extensions for conditionalDelete
     @JsonKey(name: '_conditionalDelete') Element? conditionalDeleteElement,
@@ -1500,7 +1500,7 @@ class CapabilityStatementInteraction with _$CapabilityStatementInteraction {
 
     /// [code] Coded identifier of the operation, supported by the system
     ///  resource.
-    Code? code,
+    FhirCode? code,
 
     /// [codeElement] Extensions for code
     @JsonKey(name: '_code') Element? codeElement,
@@ -1650,7 +1650,7 @@ class CapabilityStatementSearchParam with _$CapabilityStatementSearchParam {
 
     /// [type] The type of value a search parameter refers to, and how the
     ///  content is interpreted.
-    Code? type,
+    FhirCode? type,
 
     /// [typeElement] Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
@@ -1923,7 +1923,7 @@ class CapabilityStatementInteraction1 with _$CapabilityStatementInteraction1 {
     List<FhirExtension>? modifierExtension,
 
     /// [code] A coded identifier of the operation, supported by the system.
-    Code? code,
+    FhirCode? code,
 
     /// [codeElement] Extensions for code
     @JsonKey(name: '_code') Element? codeElement,
@@ -2321,7 +2321,7 @@ class CapabilityStatementSupportedMessage
 
     /// [mode] The mode of this event declaration - whether application is sender
     ///  or receiver.
-    Code? mode,
+    FhirCode? mode,
 
     /// [modeElement] Extensions for mode
     @JsonKey(name: '_mode') Element? modeElement,
@@ -2435,7 +2435,7 @@ class CapabilityStatementDocument with _$CapabilityStatementDocument {
 
     /// [mode] Mode of this document declaration - whether an application is a
     ///  producer or consumer.
-    Code? mode,
+    FhirCode? mode,
 
     /// [modeElement] Extensions for mode
     @JsonKey(name: '_mode') Element? modeElement,
@@ -2660,7 +2660,7 @@ class CompartmentDefinition extends HiveObject
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -2757,7 +2757,7 @@ class CompartmentDefinition extends HiveObject
     /// [status] The status of this compartment definition. Enables tracking the
     ///  life-cycle of the content.
     @HiveField(19)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -2833,7 +2833,7 @@ class CompartmentDefinition extends HiveObject
 
     /// [code] Which compartment this definition describes.
     @HiveField(33)
-        Code? code,
+        FhirCode? code,
 
     /// [codeElement] Extensions for code
     @JsonKey(name: '_code')
@@ -2959,7 +2959,7 @@ class CompartmentDefinitionResource with _$CompartmentDefinitionResource {
     List<FhirExtension>? modifierExtension,
 
     /// [code] The name of a resource supported by the server.
-    Code? code,
+    FhirCode? code,
 
     /// [codeElement] Extensions for code
     @JsonKey(name: '_code') Element? codeElement,
@@ -3192,7 +3192,7 @@ class ExampleScenario extends HiveObject with Resource, _$ExampleScenario {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -3291,7 +3291,7 @@ class ExampleScenario extends HiveObject with Resource, _$ExampleScenario {
     /// [status] The status of this example scenario. Enables tracking the
     ///  life-cycle of the content.
     @HiveField(18)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -3500,7 +3500,7 @@ class ExampleScenarioActor with _$ExampleScenarioActor {
     @JsonKey(name: '_actorId') Element? actorIdElement,
 
     /// [type] The type of actor - person or system.
-    Code? type,
+    FhirCode? type,
 
     /// [typeElement] Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
@@ -3636,7 +3636,7 @@ class ExampleScenarioInstance with _$ExampleScenarioInstance {
     @JsonKey(name: '_resourceId') Element? resourceIdElement,
 
     /// [resourceType] The type of the resource.
-    Code? resourceType,
+    FhirCode? resourceType,
 
     /// [resourceTypeElement] Extensions for resourceType
     @JsonKey(name: '_resourceType') Element? resourceTypeElement,
@@ -4638,7 +4638,7 @@ class GraphDefinition extends HiveObject with Resource, _$GraphDefinition {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -4731,7 +4731,7 @@ class GraphDefinition extends HiveObject with Resource, _$GraphDefinition {
     /// [status] The status of this graph definition. Enables tracking the
     ///  life-cycle of the content.
     @HiveField(17)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -4811,7 +4811,7 @@ class GraphDefinition extends HiveObject with Resource, _$GraphDefinition {
 
     /// [start] The type of FHIR resource at which instances of this graph start.
     @HiveField(32)
-        Code? start,
+        FhirCode? start,
 
     /// [startElement] Extensions for start
     @JsonKey(name: '_start')
@@ -5085,7 +5085,7 @@ class GraphDefinitionTarget with _$GraphDefinitionTarget {
     List<FhirExtension>? modifierExtension,
 
     /// [type] Type of resource this link refers to.
-    Code? type,
+    FhirCode? type,
 
     /// [typeElement] Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
@@ -5224,19 +5224,19 @@ class GraphDefinitionCompartment with _$GraphDefinitionCompartment {
     /// [use] Defines how the compartment rule is used - whether it it is used to
     /// test whether resources are subject to the rule, or whether it is a rule
     ///  that must be followed.
-    Code? use,
+    FhirCode? use,
 
     /// [useElement] Extensions for use
     @JsonKey(name: '_use') Element? useElement,
 
     /// [code] Identifies the compartment.
-    Code? code,
+    FhirCode? code,
 
     /// [codeElement] Extensions for code
     @JsonKey(name: '_code') Element? codeElement,
 
     /// [rule] identical | matching | different | no-rule | custom.
-    Code? rule,
+    FhirCode? rule,
 
     /// [ruleElement] Extensions for rule
     @JsonKey(name: '_rule') Element? ruleElement,
@@ -5494,7 +5494,7 @@ class ImplementationGuide extends HiveObject
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -5599,7 +5599,7 @@ class ImplementationGuide extends HiveObject
     /// [status] The status of this implementation guide. Enables tracking the
     ///  life-cycle of the content.
     @HiveField(20)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -5695,7 +5695,7 @@ class ImplementationGuide extends HiveObject
     /// [license] The license that applies to this Implementation Guide, using an
     ///  SPDX license code, or 'not-open-source'.
     @HiveField(38)
-        Code? license,
+        FhirCode? license,
 
     /// [licenseElement] Extensions for license
     @JsonKey(name: '_license')
@@ -5961,7 +5961,7 @@ class ImplementationGuideGlobal with _$ImplementationGuideGlobal {
     List<FhirExtension>? modifierExtension,
 
     /// [type] The type of resource that all instances must conform to.
-    Code? type,
+    FhirCode? type,
 
     /// [typeElement] Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
@@ -6525,7 +6525,7 @@ class ImplementationGuidePage with _$ImplementationGuidePage {
     @JsonKey(name: '_title') Element? titleElement,
 
     /// [generation] A code that indicates how the page is generated.
-    Code? generation,
+    FhirCode? generation,
 
     /// [generationElement] Extensions for generation
     @JsonKey(name: '_generation') Element? generationElement,
@@ -6641,7 +6641,7 @@ class ImplementationGuideParameter with _$ImplementationGuideParameter {
     /// [code] apply | path-resource | path-pages | path-tx-cache |
     /// expansion-parameter | rule-broken-links | generate-xml | generate-json |
     ///  generate-turtle | html-template.
-    Code? code,
+    FhirCode? code,
 
     /// [codeElement] Extensions for code
     @JsonKey(name: '_code') Element? codeElement,
@@ -6760,7 +6760,7 @@ class ImplementationGuideTemplate with _$ImplementationGuideTemplate {
     List<FhirExtension>? modifierExtension,
 
     /// [code] Type of template specified.
-    Code? code,
+    FhirCode? code,
 
     /// [codeElement] Extensions for code
     @JsonKey(name: '_code') Element? codeElement,
@@ -7436,7 +7436,7 @@ class MessageDefinition extends HiveObject with Resource, _$MessageDefinition {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -7545,7 +7545,7 @@ class MessageDefinition extends HiveObject with Resource, _$MessageDefinition {
     /// [status] The status of this message definition. Enables tracking the
     ///  life-cycle of the content.
     @HiveField(21)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -7659,7 +7659,7 @@ class MessageDefinition extends HiveObject with Resource, _$MessageDefinition {
 
     /// [category] The impact of the content of the message.
     @HiveField(43)
-        Code? category,
+        FhirCode? category,
 
     /// [categoryElement] Extensions for category
     @JsonKey(name: '_category')
@@ -7675,7 +7675,7 @@ class MessageDefinition extends HiveObject with Resource, _$MessageDefinition {
     /// [responseRequired] Declare at a message definition level whether a
     ///  response is required or only upon error or success, or never.
     @HiveField(46)
-        Code? responseRequired,
+        FhirCode? responseRequired,
 
     /// [responseRequiredElement] Extensions for responseRequired
     @JsonKey(name: '_responseRequired')
@@ -7807,7 +7807,7 @@ class MessageDefinitionFocus with _$MessageDefinitionFocus {
     List<FhirExtension>? modifierExtension,
 
     /// [code] The kind of resource that must be the focus for this message.
-    Code? code,
+    FhirCode? code,
 
     /// [codeElement] Extensions for code
     @JsonKey(name: '_code') Element? codeElement,
@@ -8194,7 +8194,7 @@ class OperationDefinition extends HiveObject
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -8301,7 +8301,7 @@ class OperationDefinition extends HiveObject
     /// [status] The status of this operation definition. Enables tracking the
     ///  life-cycle of the content.
     @HiveField(21)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -8310,7 +8310,7 @@ class OperationDefinition extends HiveObject
 
     /// [kind] Whether this is an operation or a named query.
     @HiveField(23)
-        Code? kind,
+        FhirCode? kind,
 
     /// [kindElement] Extensions for kind
     @JsonKey(name: '_kind')
@@ -8400,7 +8400,7 @@ class OperationDefinition extends HiveObject
 
     /// [code] The name used to invoke the operation.
     @HiveField(40)
-        Code? code,
+        FhirCode? code,
 
     /// [codeElement] Extensions for code
     @JsonKey(name: '_code')
@@ -8625,13 +8625,13 @@ class OperationDefinitionParameter with _$OperationDefinitionParameter {
     List<FhirExtension>? modifierExtension,
 
     /// [name] The name of used to identify the parameter.
-    Code? name,
+    FhirCode? name,
 
     /// [nameElement] Extensions for name
     @JsonKey(name: '_name') Element? nameElement,
 
     /// [use] Whether this is an input or an output parameter.
-    Code? use,
+    FhirCode? use,
 
     /// [useElement] Extensions for use
     @JsonKey(name: '_use') Element? useElement,
@@ -8657,7 +8657,7 @@ class OperationDefinitionParameter with _$OperationDefinitionParameter {
     @JsonKey(name: '_documentation') Element? documentationElement,
 
     /// [type] The type for this parameter.
-    Code? type,
+    FhirCode? type,
 
     /// [typeElement] Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
@@ -8675,7 +8675,7 @@ class OperationDefinitionParameter with _$OperationDefinitionParameter {
 
     /// [searchType] How the parameter is understood as a search parameter. This
     ///  is only used if the parameter type is 'string'.
-    Code? searchType,
+    FhirCode? searchType,
 
     /// [searchTypeElement] Extensions for searchType
     @JsonKey(name: '_searchType') Element? searchTypeElement,
@@ -8796,7 +8796,7 @@ class OperationDefinitionBinding with _$OperationDefinitionBinding {
     /// [strength] Indicates the degree of conformance expectations associated
     /// with this binding - that is, the degree to which the provided value set
     ///  must be adhered to in the instances.
-    Code? strength,
+    FhirCode? strength,
 
     /// [strengthElement] Extensions for strength
     @JsonKey(name: '_strength') Element? strengthElement,
@@ -9293,7 +9293,7 @@ class SearchParameter extends HiveObject with Resource, _$SearchParameter {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -9394,7 +9394,7 @@ class SearchParameter extends HiveObject with Resource, _$SearchParameter {
     /// [status] The status of this search parameter. Enables tracking the
     ///  life-cycle of the content.
     @HiveField(18)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -9474,7 +9474,7 @@ class SearchParameter extends HiveObject with Resource, _$SearchParameter {
     /// [code] The code used in the URL or the parameter name in a parameters
     ///  resource for this search parameter.
     @HiveField(33)
-        Code? code,
+        FhirCode? code,
 
     /// [codeElement] Extensions for code
     @JsonKey(name: '_code')
@@ -9494,7 +9494,7 @@ class SearchParameter extends HiveObject with Resource, _$SearchParameter {
     /// [type] The type of value that a search parameter may contain, and how the
     ///  content is interpreted.
     @HiveField(37)
-        Code? type,
+        FhirCode? type,
 
     /// [typeElement] Extensions for type
     @JsonKey(name: '_type')
@@ -9524,7 +9524,7 @@ class SearchParameter extends HiveObject with Resource, _$SearchParameter {
     /// [xpathUsage] How the search parameter relates to the set of elements
     ///  returned by evaluating the xpath query.
     @HiveField(43)
-        Code? xpathUsage,
+        FhirCode? xpathUsage,
 
     /// [xpathUsageElement] Extensions for xpathUsage
     @JsonKey(name: '_xpathUsage')
@@ -9981,7 +9981,7 @@ class StructureDefinition extends HiveObject
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -10094,7 +10094,7 @@ class StructureDefinition extends HiveObject
     /// [status] The status of this structure definition. Enables tracking the
     ///  life-cycle of the content.
     @HiveField(22)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -10195,7 +10195,7 @@ class StructureDefinition extends HiveObject
     /// specification, without the revision number, e.g.
     ///  [publication].[major].[minor], which is 4.0.1. for this version.
     @HiveField(40)
-        Code? fhirVersion,
+        FhirCode? fhirVersion,
 
     /// [fhirVersionElement] Extensions for fhirVersion
     @JsonKey(name: '_fhirVersion')
@@ -10208,7 +10208,7 @@ class StructureDefinition extends HiveObject
 
     /// [kind] Defines the kind of structure that this definition is describing.
     @HiveField(43)
-        Code? kind,
+        FhirCode? kind,
 
     /// [kindElement] Extensions for kind
     @JsonKey(name: '_kind')
@@ -10271,7 +10271,7 @@ class StructureDefinition extends HiveObject
 
     /// [derivation] How the type relates to the baseDefinition.
     @HiveField(54)
-        Code? derivation,
+        FhirCode? derivation,
 
     /// [derivationElement] Extensions for derivation
     @JsonKey(name: '_derivation')
@@ -10531,7 +10531,7 @@ class StructureDefinitionContext with _$StructureDefinitionContext {
 
     /// [type] Defines how to interpret the expression that defines what the
     ///  context of the extension is.
-    Code? type,
+    FhirCode? type,
 
     /// [typeElement] Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
@@ -10963,7 +10963,7 @@ class StructureMap extends HiveObject with Resource, _$StructureMap {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -11071,7 +11071,7 @@ class StructureMap extends HiveObject with Resource, _$StructureMap {
     /// [status] The status of this structure map. Enables tracking the
     ///  life-cycle of the content.
     @HiveField(20)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -11284,7 +11284,7 @@ class StructureMapStructure with _$StructureMapStructure {
     required FhirCanonical url,
 
     /// [mode] How the referenced structure is used in this mapping.
-    Code? mode,
+    FhirCode? mode,
 
     /// [modeElement] Extensions for mode
     @JsonKey(name: '_mode') Element? modeElement,
@@ -11574,7 +11574,7 @@ class StructureMapInput with _$StructureMapInput {
     @JsonKey(name: '_type') Element? typeElement,
 
     /// [mode] Mode for this instance of data.
-    Code? mode,
+    FhirCode? mode,
 
     /// [modeElement] Extensions for mode
     @JsonKey(name: '_mode') Element? modeElement,
@@ -12079,7 +12079,7 @@ class StructureMapSource with _$StructureMapSource {
 
     /// [defaultValueBase64Binary] A value to use if there is no existing value
     ///  in the source object.
-    Base64Binary? defaultValueBase64Binary,
+    FhirBase64Binary? defaultValueBase64Binary,
     @JsonKey(name: '_defaultValueBase64Binary')
 
         /// [defaultValueBase64BinaryElement] Extensions for defaultValueBase64Binary
@@ -12103,7 +12103,7 @@ class StructureMapSource with _$StructureMapSource {
 
     /// [defaultValueCode] A value to use if there is no existing value in the
     ///  source object.
-    Code? defaultValueCode,
+    FhirCode? defaultValueCode,
 
     /// [defaultValueCodeElement] Extensions for defaultValueCode
     @JsonKey(name: '_defaultValueCode')
@@ -12127,7 +12127,7 @@ class StructureMapSource with _$StructureMapSource {
 
     /// [defaultValueDecimal] A value to use if there is no existing value in the
     ///  source object.
-    Decimal? defaultValueDecimal,
+    FhirDecimal? defaultValueDecimal,
 
     /// [defaultValueDecimalElement] Extensions for defaultValueDecimal
     @JsonKey(name: '_defaultValueDecimal')
@@ -12361,7 +12361,7 @@ class StructureMapSource with _$StructureMapSource {
         Element? elementElement,
 
     /// [listMode] How to handle the list mode for this element.
-    Code? listMode,
+    FhirCode? listMode,
 
     /// [listModeElement] Extensions for listMode
     @JsonKey(name: '_listMode')
@@ -12527,7 +12527,7 @@ class StructureMapTarget with _$StructureMapTarget {
     @JsonKey(name: '_context') Element? contextElement,
 
     /// [contextType] How to interpret the context.
-    Code? contextType,
+    FhirCode? contextType,
 
     /// [contextTypeElement] Extensions for contextType
     @JsonKey(name: '_contextType') Element? contextTypeElement,
@@ -12557,7 +12557,7 @@ class StructureMapTarget with _$StructureMapTarget {
     @JsonKey(name: '_listRuleId') Element? listRuleIdElement,
 
     /// [transform] How the data is copied / created.
-    Code? transform,
+    FhirCode? transform,
 
     /// [transformElement] Extensions for transform
     @JsonKey(name: '_transform') Element? transformElement,
@@ -12702,7 +12702,7 @@ class StructureMapParameter with _$StructureMapParameter {
     @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
 
     /// [valueDecimal] Parameter value - variable or literal.
-    Decimal? valueDecimal,
+    FhirDecimal? valueDecimal,
 
     /// [valueDecimalElement] Extensions for valueDecimal
     @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,

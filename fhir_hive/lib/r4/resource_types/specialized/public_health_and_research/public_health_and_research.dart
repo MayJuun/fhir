@@ -193,7 +193,7 @@ class ResearchStudy extends HiveObject with Resource, _$ResearchStudy {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -268,7 +268,7 @@ class ResearchStudy extends HiveObject with Resource, _$ResearchStudy {
 
     /// [status] The current state of the study.
     @HiveField(16)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -772,7 +772,7 @@ class ResearchSubject extends HiveObject with Resource, _$ResearchSubject {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -827,7 +827,7 @@ class ResearchSubject extends HiveObject with Resource, _$ResearchSubject {
 
     /// [status] The current state of the subject.
     @HiveField(12)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')

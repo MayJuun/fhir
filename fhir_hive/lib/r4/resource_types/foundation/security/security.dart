@@ -143,7 +143,7 @@ class AuditEvent extends HiveObject with Resource, _$AuditEvent {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -206,7 +206,7 @@ class AuditEvent extends HiveObject with Resource, _$AuditEvent {
     /// [action] Indicator for type of action performed during the event that
     ///  generated the audit.
     @HiveField(14)
-        Code? action,
+        FhirCode? action,
 
     /// [actionElement] Extensions for action
     @JsonKey(name: '_action')
@@ -228,7 +228,7 @@ class AuditEvent extends HiveObject with Resource, _$AuditEvent {
 
     /// [outcome] Indicates whether the event succeeded or failed.
     @HiveField(19)
-        Code? outcome,
+        FhirCode? outcome,
 
     /// [outcomeElement] Extensions for outcome
     @JsonKey(name: '_outcome')
@@ -565,7 +565,7 @@ class AuditEventNetwork with _$AuditEventNetwork {
 
     /// [type] An identifier for the type of network access point that originated
     ///  the audit event.
-    Code? type,
+    FhirCode? type,
 
     /// [typeElement] Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
@@ -837,7 +837,7 @@ class AuditEventEntity with _$AuditEventEntity {
     @JsonKey(name: '_description') Element? descriptionElement,
 
     /// [query] The query parameters for a query-type entities.
-    Base64Binary? query,
+    FhirBase64Binary? query,
 
     /// [queryElement] Extensions for query
     @JsonKey(name: '_query') Element? queryElement,
@@ -964,7 +964,7 @@ class AuditEventDetail with _$AuditEventDetail {
     @JsonKey(name: '_valueString') Element? valueStringElement,
 
     /// [valueBase64Binary] The  value of the extra detail.
-    Base64Binary? valueBase64Binary,
+    FhirBase64Binary? valueBase64Binary,
 
     /// [valueBase64BinaryElement] Extensions for valueBase64Binary
     @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
@@ -1150,7 +1150,7 @@ class Consent extends HiveObject with Resource, _$Consent {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -1205,7 +1205,7 @@ class Consent extends HiveObject with Resource, _$Consent {
 
     /// [status] Indicates the current state of this consent.
     @HiveField(12)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -1653,7 +1653,7 @@ class ConsentProvision with _$ConsentProvision {
 
     /// [type] Action  to take - permit or deny - when the rule conditions are
     ///  met.  Not permitted in root rule, required in all nested rules.
-    Code? type,
+    FhirCode? type,
 
     /// [typeElement] Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
@@ -1910,7 +1910,7 @@ class ConsentData with _$ConsentData {
 
     /// [meaning] How the resource reference is interpreted when testing consent
     ///  restrictions.
-    Code? meaning,
+    FhirCode? meaning,
 
     /// [meaningElement] Extensions for meaning
     @JsonKey(name: '_meaning') Element? meaningElement,
@@ -2091,7 +2091,7 @@ class Provenance extends HiveObject with Resource, _$Provenance {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -2446,7 +2446,7 @@ class ProvenanceEntity with _$ProvenanceEntity {
     List<FhirExtension>? modifierExtension,
 
     /// [role] How the entity was used during the activity.
-    Code? role,
+    FhirCode? role,
 
     /// [roleElement] Extensions for role
     @JsonKey(name: '_role') Element? roleElement,

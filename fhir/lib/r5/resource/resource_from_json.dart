@@ -97,8 +97,6 @@ Resource _resourceFromJson(Map<String, dynamic> json) {
       return DeviceUsage.fromJson(json);
     case 'DiagnosticReport':
       return DiagnosticReport.fromJson(json);
-    case 'DocumentManifest':
-      return DocumentManifest.fromJson(json);
     case 'DocumentReference':
       return DocumentReference.fromJson(json);
     case 'Encounter':
@@ -185,8 +183,6 @@ Resource _resourceFromJson(Map<String, dynamic> json) {
       return MedicationKnowledge.fromJson(json);
     case 'MedicationRequest':
       return MedicationRequest.fromJson(json);
-    case 'MedicationUsage':
-      return MedicationUsage.fromJson(json);
     case 'MedicinalProductDefinition':
       return MedicinalProductDefinition.fromJson(json);
     case 'MessageDefinition':

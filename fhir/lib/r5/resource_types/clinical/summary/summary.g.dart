@@ -1435,6 +1435,9 @@ _$_DetectedIssue _$$_DetectedIssueFromJson(Map<String, dynamic> json) =>
       subject: json['subject'] == null
           ? null
           : Reference.fromJson(json['subject'] as Map<String, dynamic>),
+      encounter: json['encounter'] == null
+          ? null
+          : Reference.fromJson(json['encounter'] as Map<String, dynamic>),
       identifiedDateTime: json['identifiedDateTime'] == null
           ? null
           : FhirDateTime.fromJson(json['identifiedDateTime']),
@@ -1455,7 +1458,8 @@ _$_DetectedIssue _$$_DetectedIssueFromJson(Map<String, dynamic> json) =>
           ?.map(
               (e) => DetectedIssueEvidence.fromJson(e as Map<String, dynamic>))
           .toList(),
-      detail: json['detail'] as String?,
+      detail:
+          json['detail'] == null ? null : FhirMarkdown.fromJson(json['detail']),
       detailElement: json['_detail'] == null
           ? null
           : Element.fromJson(json['_detail'] as Map<String, dynamic>),
@@ -1504,6 +1508,7 @@ Map<String, dynamic> _$$_DetectedIssueToJson(_$_DetectedIssue instance) {
   writeNotNull('severity', instance.severity?.toJson());
   writeNotNull('_severity', instance.severityElement?.toJson());
   writeNotNull('subject', instance.subject?.toJson());
+  writeNotNull('encounter', instance.encounter?.toJson());
   writeNotNull('identifiedDateTime', instance.identifiedDateTime?.toJson());
   writeNotNull(
       '_identifiedDateTime', instance.identifiedDateTimeElement?.toJson());
@@ -1512,7 +1517,7 @@ Map<String, dynamic> _$$_DetectedIssueToJson(_$_DetectedIssue instance) {
   writeNotNull(
       'implicated', instance.implicated?.map((e) => e.toJson()).toList());
   writeNotNull('evidence', instance.evidence?.map((e) => e.toJson()).toList());
-  writeNotNull('detail', instance.detail);
+  writeNotNull('detail', instance.detail?.toJson());
   writeNotNull('_detail', instance.detailElement?.toJson());
   writeNotNull('reference', instance.reference?.toJson());
   writeNotNull('_reference', instance.referenceElement?.toJson());
@@ -1577,6 +1582,9 @@ _$_DetectedIssueMitigation _$$_DetectedIssueMitigationFromJson(
       author: json['author'] == null
           ? null
           : Reference.fromJson(json['author'] as Map<String, dynamic>),
+      note: (json['note'] as List<dynamic>?)
+          ?.map((e) => Annotation.fromJson(e as Map<String, dynamic>))
+          .toList(),
     );
 
 Map<String, dynamic> _$$_DetectedIssueMitigationToJson(
@@ -1598,6 +1606,7 @@ Map<String, dynamic> _$$_DetectedIssueMitigationToJson(
   writeNotNull('date', instance.date?.toJson());
   writeNotNull('_date', instance.dateElement?.toJson());
   writeNotNull('author', instance.author?.toJson());
+  writeNotNull('note', instance.note?.map((e) => e.toJson()).toList());
   return val;
 }
 

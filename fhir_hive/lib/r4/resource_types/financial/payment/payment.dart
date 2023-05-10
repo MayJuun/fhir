@@ -142,7 +142,7 @@ class PaymentNotice extends HiveObject with Resource, _$PaymentNotice {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -197,7 +197,7 @@ class PaymentNotice extends HiveObject with Resource, _$PaymentNotice {
 
     /// [status] The status of the resource instance.
     @HiveField(12)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -431,7 +431,7 @@ class PaymentReconciliation extends HiveObject
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -486,7 +486,7 @@ class PaymentReconciliation extends HiveObject
 
     /// [status] The status of the resource instance.
     @HiveField(12)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -522,7 +522,7 @@ class PaymentReconciliation extends HiveObject
 
     /// [outcome] The outcome of a request for a reconciliation.
     @HiveField(20)
-        Code? outcome,
+        FhirCode? outcome,
 
     /// [outcomeElement] Extensions for outcome
     @JsonKey(name: '_outcome')
@@ -832,7 +832,7 @@ class PaymentReconciliationProcessNote with _$PaymentReconciliationProcessNote {
     List<FhirExtension>? modifierExtension,
 
     /// [type] The business purpose of the note text.
-    Code? type,
+    FhirCode? type,
 
     /// [typeElement] Extensions for type
     @JsonKey(name: '_type') Element? typeElement,

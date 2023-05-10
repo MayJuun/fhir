@@ -86,7 +86,7 @@ class EncounterUsCore extends Resource {
   FhirMeta? get meta => _encounter.meta;
   Narrative? get text => _encounter.text;
   List<Identifier>? get identifier => _encounter.identifier;
-  Code? get status => _encounter.status;
+  FhirCode? get status => _encounter.status;
   Coding get class_ => _encounter.class_;
   List<CodeableConcept>? get type => _encounter.type;
   Reference? get subject => _encounter.subject;

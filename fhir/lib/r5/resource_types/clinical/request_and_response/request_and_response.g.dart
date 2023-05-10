@@ -667,6 +667,9 @@ _$_DeviceDispense _$$_DeviceDispenseFromJson(Map<String, dynamic> json) =>
       device:
           CodeableReference.fromJson(json['device'] as Map<String, dynamic>),
       subject: Reference.fromJson(json['subject'] as Map<String, dynamic>),
+      receiver: json['receiver'] == null
+          ? null
+          : Reference.fromJson(json['receiver'] as Map<String, dynamic>),
       encounter: json['encounter'] == null
           ? null
           : Reference.fromJson(json['encounter'] as Map<String, dynamic>),
@@ -704,7 +707,9 @@ _$_DeviceDispense _$$_DeviceDispenseFromJson(Map<String, dynamic> json) =>
       note: (json['note'] as List<dynamic>?)
           ?.map((e) => Annotation.fromJson(e as Map<String, dynamic>))
           .toList(),
-      usageInstruction: json['usageInstruction'] as String?,
+      usageInstruction: json['usageInstruction'] == null
+          ? null
+          : FhirMarkdown.fromJson(json['usageInstruction']),
       usageInstructionElement: json['_usageInstruction'] == null
           ? null
           : Element.fromJson(json['_usageInstruction'] as Map<String, dynamic>),
@@ -747,6 +752,7 @@ Map<String, dynamic> _$$_DeviceDispenseToJson(_$_DeviceDispense instance) {
   writeNotNull('category', instance.category?.map((e) => e.toJson()).toList());
   val['device'] = instance.device.toJson();
   val['subject'] = instance.subject.toJson();
+  writeNotNull('receiver', instance.receiver?.toJson());
   writeNotNull('encounter', instance.encounter?.toJson());
   writeNotNull('supportingInformation',
       instance.supportingInformation?.map((e) => e.toJson()).toList());
@@ -761,7 +767,7 @@ Map<String, dynamic> _$$_DeviceDispenseToJson(_$_DeviceDispense instance) {
   writeNotNull('_whenHandedOver', instance.whenHandedOverElement?.toJson());
   writeNotNull('destination', instance.destination?.toJson());
   writeNotNull('note', instance.note?.map((e) => e.toJson()).toList());
-  writeNotNull('usageInstruction', instance.usageInstruction);
+  writeNotNull('usageInstruction', instance.usageInstruction?.toJson());
   writeNotNull('_usageInstruction', instance.usageInstructionElement?.toJson());
   writeNotNull(
       'eventHistory', instance.eventHistory?.map((e) => e.toJson()).toList());
@@ -915,13 +921,10 @@ _$_DeviceRequest _$$_DeviceRequestFromJson(Map<String, dynamic> json) =>
       requester: json['requester'] == null
           ? null
           : Reference.fromJson(json['requester'] as Map<String, dynamic>),
-      performerType: json['performerType'] == null
-          ? null
-          : CodeableConcept.fromJson(
-              json['performerType'] as Map<String, dynamic>),
       performer: json['performer'] == null
           ? null
-          : Reference.fromJson(json['performer'] as Map<String, dynamic>),
+          : CodeableReference.fromJson(
+              json['performer'] as Map<String, dynamic>),
       reason: (json['reason'] as List<dynamic>?)
           ?.map((e) => CodeableReference.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1007,7 +1010,6 @@ Map<String, dynamic> _$$_DeviceRequestToJson(_$_DeviceRequest instance) {
   writeNotNull('authoredOn', instance.authoredOn?.toJson());
   writeNotNull('_authoredOn', instance.authoredOnElement?.toJson());
   writeNotNull('requester', instance.requester?.toJson());
-  writeNotNull('performerType', instance.performerType?.toJson());
   writeNotNull('performer', instance.performer?.toJson());
   writeNotNull('reason', instance.reason?.map((e) => e.toJson()).toList());
   writeNotNull('asNeeded', instance.asNeeded?.toJson());
@@ -1348,16 +1350,17 @@ _$_GuidanceResponse _$$_GuidanceResponseFromJson(Map<String, dynamic> json) =>
       note: (json['note'] as List<dynamic>?)
           ?.map((e) => Annotation.fromJson(e as Map<String, dynamic>))
           .toList(),
-      evaluationMessage: (json['evaluationMessage'] as List<dynamic>?)
-          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
-          .toList(),
+      evaluationMessage: json['evaluationMessage'] == null
+          ? null
+          : Reference.fromJson(
+              json['evaluationMessage'] as Map<String, dynamic>),
       outputParameters: json['outputParameters'] == null
           ? null
           : Reference.fromJson(
               json['outputParameters'] as Map<String, dynamic>),
-      result: json['result'] == null
-          ? null
-          : Reference.fromJson(json['result'] as Map<String, dynamic>),
+      result: (json['result'] as List<dynamic>?)
+          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+          .toList(),
       dataRequirement: (json['dataRequirement'] as List<dynamic>?)
           ?.map((e) => DataRequirement.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1406,10 +1409,9 @@ Map<String, dynamic> _$$_GuidanceResponseToJson(_$_GuidanceResponse instance) {
   writeNotNull('performer', instance.performer?.toJson());
   writeNotNull('reason', instance.reason?.map((e) => e.toJson()).toList());
   writeNotNull('note', instance.note?.map((e) => e.toJson()).toList());
-  writeNotNull('evaluationMessage',
-      instance.evaluationMessage?.map((e) => e.toJson()).toList());
+  writeNotNull('evaluationMessage', instance.evaluationMessage?.toJson());
   writeNotNull('outputParameters', instance.outputParameters?.toJson());
-  writeNotNull('result', instance.result?.toJson());
+  writeNotNull('result', instance.result?.map((e) => e.toJson()).toList());
   writeNotNull('dataRequirement',
       instance.dataRequirement?.map((e) => e.toJson()).toList());
   return val;
@@ -1485,9 +1487,9 @@ _$_InventoryReport _$$_InventoryReportFromJson(Map<String, dynamic> json) =>
           ?.map((e) => InventoryReportInventoryListing.fromJson(
               e as Map<String, dynamic>))
           .toList(),
-      note: json['note'] == null
-          ? null
-          : Annotation.fromJson(json['note'] as Map<String, dynamic>),
+      note: (json['note'] as List<dynamic>?)
+          ?.map((e) => Annotation.fromJson(e as Map<String, dynamic>))
+          .toList(),
     );
 
 Map<String, dynamic> _$$_InventoryReportToJson(_$_InventoryReport instance) {
@@ -1528,7 +1530,7 @@ Map<String, dynamic> _$$_InventoryReportToJson(_$_InventoryReport instance) {
   writeNotNull('reportingPeriod', instance.reportingPeriod?.toJson());
   writeNotNull('inventoryListing',
       instance.inventoryListing?.map((e) => e.toJson()).toList());
-  writeNotNull('note', instance.note?.toJson());
+  writeNotNull('note', instance.note?.map((e) => e.toJson()).toList());
   return val;
 }
 
@@ -1555,8 +1557,8 @@ _$_InventoryReportInventoryListing _$$_InventoryReportInventoryListingFromJson(
       countingDateTimeElement: json['_countingDateTime'] == null
           ? null
           : Element.fromJson(json['_countingDateTime'] as Map<String, dynamic>),
-      items: (json['items'] as List<dynamic>?)
-          ?.map((e) => InventoryReportItems.fromJson(e as Map<String, dynamic>))
+      item: (json['item'] as List<dynamic>?)
+          ?.map((e) => InventoryReportItem.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
@@ -1579,13 +1581,13 @@ Map<String, dynamic> _$$_InventoryReportInventoryListingToJson(
   writeNotNull('itemStatus', instance.itemStatus?.toJson());
   writeNotNull('countingDateTime', instance.countingDateTime?.toJson());
   writeNotNull('_countingDateTime', instance.countingDateTimeElement?.toJson());
-  writeNotNull('items', instance.items?.map((e) => e.toJson()).toList());
+  writeNotNull('item', instance.item?.map((e) => e.toJson()).toList());
   return val;
 }
 
-_$_InventoryReportItems _$$_InventoryReportItemsFromJson(
+_$_InventoryReportItem _$$_InventoryReportItemFromJson(
         Map<String, dynamic> json) =>
-    _$_InventoryReportItems(
+    _$_InventoryReportItem(
       id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -1598,30 +1600,10 @@ _$_InventoryReportItems _$$_InventoryReportItemsFromJson(
           : CodeableConcept.fromJson(json['category'] as Map<String, dynamic>),
       quantity: Quantity.fromJson(json['quantity'] as Map<String, dynamic>),
       item: CodeableReference.fromJson(json['item'] as Map<String, dynamic>),
-      lot: json['lot'] as String?,
-      lotElement: json['_lot'] == null
-          ? null
-          : Element.fromJson(json['_lot'] as Map<String, dynamic>),
-      serial: json['serial'] as String?,
-      serialElement: json['_serial'] == null
-          ? null
-          : Element.fromJson(json['_serial'] as Map<String, dynamic>),
-      expiry:
-          json['expiry'] == null ? null : FhirDateTime.fromJson(json['expiry']),
-      expiryElement: json['_expiry'] == null
-          ? null
-          : Element.fromJson(json['_expiry'] as Map<String, dynamic>),
-      manufacturingDate: json['manufacturingDate'] == null
-          ? null
-          : FhirDateTime.fromJson(json['manufacturingDate']),
-      manufacturingDateElement: json['_manufacturingDate'] == null
-          ? null
-          : Element.fromJson(
-              json['_manufacturingDate'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_InventoryReportItemsToJson(
-    _$_InventoryReportItems instance) {
+Map<String, dynamic> _$$_InventoryReportItemToJson(
+    _$_InventoryReportItem instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1638,15 +1620,6 @@ Map<String, dynamic> _$$_InventoryReportItemsToJson(
   writeNotNull('category', instance.category?.toJson());
   val['quantity'] = instance.quantity.toJson();
   val['item'] = instance.item.toJson();
-  writeNotNull('lot', instance.lot);
-  writeNotNull('_lot', instance.lotElement?.toJson());
-  writeNotNull('serial', instance.serial);
-  writeNotNull('_serial', instance.serialElement?.toJson());
-  writeNotNull('expiry', instance.expiry?.toJson());
-  writeNotNull('_expiry', instance.expiryElement?.toJson());
-  writeNotNull('manufacturingDate', instance.manufacturingDate?.toJson());
-  writeNotNull(
-      '_manufacturingDate', instance.manufacturingDateElement?.toJson());
   return val;
 }
 

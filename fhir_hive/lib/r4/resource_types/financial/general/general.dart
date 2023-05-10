@@ -145,7 +145,7 @@ class Account extends HiveObject with Resource, _$Account {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -201,7 +201,7 @@ class Account extends HiveObject with Resource, _$Account {
 
     /// [status] Indicates whether the account is presently used/usable or not.
     @HiveField(12)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -714,7 +714,7 @@ class ChargeItem extends HiveObject with Resource, _$ChargeItem {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -786,7 +786,7 @@ class ChargeItem extends HiveObject with Resource, _$ChargeItem {
 
     /// [status] The current state of the ChargeItem.
     @HiveField(16)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -862,7 +862,7 @@ class ChargeItem extends HiveObject with Resource, _$ChargeItem {
     /// [factorOverride] Factor overriding the factor determined by the rules
     ///  associated with the code.
     @HiveField(32)
-        Decimal? factorOverride,
+        FhirDecimal? factorOverride,
 
     /// [factorOverrideElement] Extensions for factorOverride
     @JsonKey(name: '_factorOverride')
@@ -1285,7 +1285,7 @@ class ChargeItemDefinition extends HiveObject
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -1410,7 +1410,7 @@ class ChargeItemDefinition extends HiveObject
 
     /// [status] The current state of the ChargeItemDefinition.
     @HiveField(24)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -1875,7 +1875,7 @@ class ChargeItemDefinitionPriceComponent
     List<FhirExtension>? modifierExtension,
 
     /// [type] This code identifies the type of the component.
-    Code? type,
+    FhirCode? type,
 
     /// [typeElement] Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
@@ -1886,7 +1886,7 @@ class ChargeItemDefinitionPriceComponent
 
     /// [factor] The factor that has been applied on the base price for
     ///  calculating this component.
-    Decimal? factor,
+    FhirDecimal? factor,
 
     /// [factorElement] Extensions for factor
     @JsonKey(name: '_factor') Element? factorElement,
@@ -2162,7 +2162,7 @@ class Contract extends HiveObject with Resource, _$Contract {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -2238,7 +2238,7 @@ class Contract extends HiveObject with Resource, _$Contract {
 
     /// [status] The status of the resource instance.
     @HiveField(16)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -2612,7 +2612,7 @@ class ContractContentDefinition with _$ContractContentDefinition {
     /// [publicationStatus] amended | appended | cancelled | disputed |
     /// entered-in-error | executable | executed | negotiable | offered | policy |
     ///  rejected | renewed | revoked | resolved | terminated.
-    Code? publicationStatus,
+    FhirCode? publicationStatus,
 
     /// [publicationStatusElement] Extensions for publicationStatus
     @JsonKey(name: '_publicationStatus') Element? publicationStatusElement,
@@ -3387,7 +3387,7 @@ class ContractAnswer with _$ContractAnswer {
     /// enables selection of values to be agreed to, e.g., the period of
     /// participation, the date of occupancy of a rental, warrently duration, or
     ///  whether biospecimen may be used for further research.
-    Decimal? valueDecimal,
+    FhirDecimal? valueDecimal,
 
     /// [valueDecimalElement] Extensions for valueDecimal
     @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
@@ -3977,7 +3977,7 @@ class ContractValuedItem with _$ContractValuedItem {
     /// the overall value of the Contract Valued Item delivered. The concept of a
     /// Factor allows for a discount or surcharge multiplier to be applied to a
     ///  monetary amount.
-    Decimal? factor,
+    FhirDecimal? factor,
 
     /// [factorElement] Extensions for factor
     @JsonKey(name: '_factor')
@@ -3988,7 +3988,7 @@ class ContractValuedItem with _$ContractValuedItem {
     /// Item delivered. The concept of Points allows for assignment of point
     /// values for a Contract Valued Item, such that a monetary amount can be
     ///  assigned to each point.
-    Decimal? points,
+    FhirDecimal? points,
 
     /// [pointsElement] Extensions for points
     @JsonKey(name: '_points')
@@ -5137,7 +5137,7 @@ class ExplanationOfBenefit extends HiveObject
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -5192,7 +5192,7 @@ class ExplanationOfBenefit extends HiveObject
 
     /// [status] The status of the resource instance.
     @HiveField(12)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -5217,7 +5217,7 @@ class ExplanationOfBenefit extends HiveObject
     /// the non-binding adjudication of the listed products and services which
     ///  could be provided in the future.
     @HiveField(17)
-        Code? use,
+        FhirCode? use,
 
     /// [useElement] Extensions for use
     @JsonKey(name: '_use')
@@ -5319,7 +5319,7 @@ class ExplanationOfBenefit extends HiveObject
     /// [outcome] The outcome of the claim, predetermination, or preauthorization
     ///  processing.
     @HiveField(39)
-        Code? outcome,
+        FhirCode? outcome,
 
     /// [outcomeElement] Extensions for outcome
     @JsonKey(name: '_outcome')
@@ -6778,7 +6778,7 @@ class ExplanationOfBenefitItem with _$ExplanationOfBenefitItem {
     /// the overall value of services delivered and/or goods received. The concept
     /// of a Factor allows for a discount or surcharge multiplier to be applied to
     ///  a monetary amount.
-    Decimal? factor,
+    FhirDecimal? factor,
 
     /// [factorElement] Extensions for factor
     @JsonKey(name: '_factor')
@@ -6944,7 +6944,7 @@ class ExplanationOfBenefitAdjudication with _$ExplanationOfBenefitAdjudication {
 
     /// [value] A non-monetary value associated with the category. Mutually
     ///  exclusive to the amount element above.
-    Decimal? value,
+    FhirDecimal? value,
 
     /// [valueElement] Extensions for value
     @JsonKey(name: '_value') Element? valueElement,
@@ -7118,7 +7118,7 @@ class ExplanationOfBenefitDetail with _$ExplanationOfBenefitDetail {
     /// the overall value of services delivered and/or goods received. The concept
     /// of a Factor allows for a discount or surcharge multiplier to be applied to
     ///  a monetary amount.
-    Decimal? factor,
+    FhirDecimal? factor,
 
     /// [factorElement] Extensions for factor
     @JsonKey(name: '_factor') Element? factorElement,
@@ -7321,7 +7321,7 @@ class ExplanationOfBenefitSubDetail with _$ExplanationOfBenefitSubDetail {
     /// the overall value of services delivered and/or goods received. The concept
     /// of a Factor allows for a discount or surcharge multiplier to be applied to
     ///  a monetary amount.
-    Decimal? factor,
+    FhirDecimal? factor,
 
     /// [factorElement] Extensions for factor
     @JsonKey(name: '_factor') Element? factorElement,
@@ -7582,7 +7582,7 @@ class ExplanationOfBenefitAddItem with _$ExplanationOfBenefitAddItem {
     /// the overall value of services delivered and/or goods received. The concept
     /// of a Factor allows for a discount or surcharge multiplier to be applied to
     ///  a monetary amount.
-    Decimal? factor,
+    FhirDecimal? factor,
 
     /// [factorElement] Extensions for factor
     @JsonKey(name: '_factor')
@@ -7761,7 +7761,7 @@ class ExplanationOfBenefitDetail1 with _$ExplanationOfBenefitDetail1 {
     /// the overall value of services delivered and/or goods received. The concept
     /// of a Factor allows for a discount or surcharge multiplier to be applied to
     ///  a monetary amount.
-    Decimal? factor,
+    FhirDecimal? factor,
 
     /// [factorElement] Extensions for factor
     @JsonKey(name: '_factor') Element? factorElement,
@@ -7929,7 +7929,7 @@ class ExplanationOfBenefitSubDetail1 with _$ExplanationOfBenefitSubDetail1 {
     /// the overall value of services delivered and/or goods received. The concept
     /// of a Factor allows for a discount or surcharge multiplier to be applied to
     ///  a monetary amount.
-    Decimal? factor,
+    FhirDecimal? factor,
 
     /// [factorElement] Extensions for factor
     @JsonKey(name: '_factor') Element? factorElement,
@@ -8311,7 +8311,7 @@ class ExplanationOfBenefitProcessNote with _$ExplanationOfBenefitProcessNote {
     @JsonKey(name: '_number') Element? numberElement,
 
     /// [type] The business purpose of the note text.
-    Code? type,
+    FhirCode? type,
 
     /// [typeElement] Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
@@ -8795,7 +8795,7 @@ class InsurancePlan extends HiveObject with Resource, _$InsurancePlan {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -8852,7 +8852,7 @@ class InsurancePlan extends HiveObject with Resource, _$InsurancePlan {
 
     /// [status] The current state of the health insurance product.
     @HiveField(12)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')

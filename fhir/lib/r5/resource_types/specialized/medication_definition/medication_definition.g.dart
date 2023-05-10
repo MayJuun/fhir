@@ -67,6 +67,12 @@ _$_AdministrableProductDefinition _$$_AdministrableProductDefinitionFromJson(
       device: json['device'] == null
           ? null
           : Reference.fromJson(json['device'] as Map<String, dynamic>),
+      description: json['description'] == null
+          ? null
+          : FhirMarkdown.fromJson(json['description']),
+      descriptionElement: json['_description'] == null
+          ? null
+          : Element.fromJson(json['_description'] as Map<String, dynamic>),
       property: (json['property'] as List<dynamic>?)
           ?.map((e) => AdministrableProductDefinitionProperty.fromJson(
               e as Map<String, dynamic>))
@@ -116,6 +122,8 @@ Map<String, dynamic> _$$_AdministrableProductDefinitionToJson(
   writeNotNull(
       'ingredient', instance.ingredient?.map((e) => e.toJson()).toList());
   writeNotNull('device', instance.device?.toJson());
+  writeNotNull('description', instance.description?.toJson());
+  writeNotNull('_description', instance.descriptionElement?.toJson());
   writeNotNull('property', instance.property?.map((e) => e.toJson()).toList());
   val['routeOfAdministration'] =
       instance.routeOfAdministration.map((e) => e.toJson()).toList();
@@ -312,10 +320,21 @@ _$_AdministrableProductDefinitionProperty
           valueBooleanElement: json['_valueBoolean'] == null
               ? null
               : Element.fromJson(json['_valueBoolean'] as Map<String, dynamic>),
+          valueMarkdown: json['valueMarkdown'] == null
+              ? null
+              : FhirMarkdown.fromJson(json['valueMarkdown']),
+          valueMarkdownElement: json['_valueMarkdown'] == null
+              ? null
+              : Element.fromJson(
+                  json['_valueMarkdown'] as Map<String, dynamic>),
           valueAttachment: json['valueAttachment'] == null
               ? null
               : Attachment.fromJson(
                   json['valueAttachment'] as Map<String, dynamic>),
+          valueReference: json['valueReference'] == null
+              ? null
+              : Reference.fromJson(
+                  json['valueReference'] as Map<String, dynamic>),
           status: json['status'] == null
               ? null
               : CodeableConcept.fromJson(
@@ -344,7 +363,10 @@ Map<String, dynamic> _$$_AdministrableProductDefinitionPropertyToJson(
   writeNotNull('_valueDate', instance.valueDateElement?.toJson());
   writeNotNull('valueBoolean', instance.valueBoolean?.toJson());
   writeNotNull('_valueBoolean', instance.valueBooleanElement?.toJson());
+  writeNotNull('valueMarkdown', instance.valueMarkdown?.toJson());
+  writeNotNull('_valueMarkdown', instance.valueMarkdownElement?.toJson());
   writeNotNull('valueAttachment', instance.valueAttachment?.toJson());
+  writeNotNull('valueReference', instance.valueReference?.toJson());
   writeNotNull('status', instance.status?.toJson());
   return val;
 }
@@ -1037,6 +1059,12 @@ _$_Ingredient _$$_IngredientFromJson(Map<String, dynamic> json) =>
           ? null
           : Element.fromJson(
               json['_allergenicIndicator'] as Map<String, dynamic>),
+      comment: json['comment'] == null
+          ? null
+          : FhirMarkdown.fromJson(json['comment']),
+      commentElement: json['_comment'] == null
+          ? null
+          : Element.fromJson(json['_comment'] as Map<String, dynamic>),
       manufacturer: (json['manufacturer'] as List<dynamic>?)
           ?.map(
               (e) => IngredientManufacturer.fromJson(e as Map<String, dynamic>))
@@ -1079,6 +1107,8 @@ Map<String, dynamic> _$$_IngredientToJson(_$_Ingredient instance) {
   writeNotNull('allergenicIndicator', instance.allergenicIndicator?.toJson());
   writeNotNull(
       '_allergenicIndicator', instance.allergenicIndicatorElement?.toJson());
+  writeNotNull('comment', instance.comment?.toJson());
+  writeNotNull('_comment', instance.commentElement?.toJson());
   writeNotNull(
       'manufacturer', instance.manufacturer?.map((e) => e.toJson()).toList());
   val['substance'] = instance.substance.toJson();
@@ -1277,10 +1307,8 @@ _$_IngredientReferenceStrength _$$_IngredientReferenceStrengthFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      substance: json['substance'] == null
-          ? null
-          : CodeableReference.fromJson(
-              json['substance'] as Map<String, dynamic>),
+      substance:
+          CodeableReference.fromJson(json['substance'] as Map<String, dynamic>),
       strengthRatio: json['strengthRatio'] == null
           ? null
           : Ratio.fromJson(json['strengthRatio'] as Map<String, dynamic>),
@@ -1315,7 +1343,7 @@ Map<String, dynamic> _$$_IngredientReferenceStrengthToJson(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('substance', instance.substance?.toJson());
+  val['substance'] = instance.substance.toJson();
   writeNotNull('strengthRatio', instance.strengthRatio?.toJson());
   writeNotNull('strengthRatioRange', instance.strengthRatioRange?.toJson());
   writeNotNull('strengthQuantity', instance.strengthQuantity?.toJson());
@@ -1471,10 +1499,21 @@ _$_ManufacturedItemDefinitionProperty
           valueBooleanElement: json['_valueBoolean'] == null
               ? null
               : Element.fromJson(json['_valueBoolean'] as Map<String, dynamic>),
+          valueMarkdown: json['valueMarkdown'] == null
+              ? null
+              : FhirMarkdown.fromJson(json['valueMarkdown']),
+          valueMarkdownElement: json['_valueMarkdown'] == null
+              ? null
+              : Element.fromJson(
+                  json['_valueMarkdown'] as Map<String, dynamic>),
           valueAttachment: json['valueAttachment'] == null
               ? null
               : Attachment.fromJson(
                   json['valueAttachment'] as Map<String, dynamic>),
+          valueReference: json['valueReference'] == null
+              ? null
+              : Reference.fromJson(
+                  json['valueReference'] as Map<String, dynamic>),
         );
 
 Map<String, dynamic> _$$_ManufacturedItemDefinitionPropertyToJson(
@@ -1499,7 +1538,10 @@ Map<String, dynamic> _$$_ManufacturedItemDefinitionPropertyToJson(
   writeNotNull('_valueDate', instance.valueDateElement?.toJson());
   writeNotNull('valueBoolean', instance.valueBoolean?.toJson());
   writeNotNull('_valueBoolean', instance.valueBooleanElement?.toJson());
+  writeNotNull('valueMarkdown', instance.valueMarkdown?.toJson());
+  writeNotNull('_valueMarkdown', instance.valueMarkdownElement?.toJson());
   writeNotNull('valueAttachment', instance.valueAttachment?.toJson());
+  writeNotNull('valueReference', instance.valueReference?.toJson());
   return val;
 }
 
@@ -2102,10 +2144,13 @@ _$_MedicinalProductDefinitionCharacteristic
               ? null
               : CodeableConcept.fromJson(
                   json['valueCodeableConcept'] as Map<String, dynamic>),
-          valueString: json['valueString'] as String?,
-          valueStringElement: json['_valueString'] == null
+          valueMarkdown: json['valueMarkdown'] == null
               ? null
-              : Element.fromJson(json['_valueString'] as Map<String, dynamic>),
+              : FhirMarkdown.fromJson(json['valueMarkdown']),
+          valueMarkdownElement: json['_valueMarkdown'] == null
+              ? null
+              : Element.fromJson(
+                  json['_valueMarkdown'] as Map<String, dynamic>),
           valueQuantity: json['valueQuantity'] == null
               ? null
               : Quantity.fromJson(
@@ -2151,8 +2196,8 @@ Map<String, dynamic> _$$_MedicinalProductDefinitionCharacteristicToJson(
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   val['type'] = instance.type.toJson();
   writeNotNull('valueCodeableConcept', instance.valueCodeableConcept?.toJson());
-  writeNotNull('valueString', instance.valueString);
-  writeNotNull('_valueString', instance.valueStringElement?.toJson());
+  writeNotNull('valueMarkdown', instance.valueMarkdown?.toJson());
+  writeNotNull('_valueMarkdown', instance.valueMarkdownElement?.toJson());
   writeNotNull('valueQuantity', instance.valueQuantity?.toJson());
   writeNotNull('valueInteger', instance.valueInteger?.toJson());
   writeNotNull('_valueInteger', instance.valueIntegerElement?.toJson());

@@ -190,7 +190,7 @@ class Communication extends HiveObject with Resource, _$Communication {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -280,7 +280,7 @@ class Communication extends HiveObject with Resource, _$Communication {
 
     /// [status] The status of the transmission.
     @HiveField(20)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -304,7 +304,7 @@ class Communication extends HiveObject with Resource, _$Communication {
     /// communication must be addressed. Includes concepts such as stat, urgent,
     ///  routine.
     @HiveField(26)
-        Code? priority,
+        FhirCode? priority,
 
     /// [priorityElement] Extensions for priority
     @JsonKey(name: '_priority')
@@ -713,7 +713,7 @@ class CommunicationRequest extends HiveObject
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -786,7 +786,7 @@ class CommunicationRequest extends HiveObject
 
     /// [status] The status of the proposal or order.
     @HiveField(15)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -807,7 +807,7 @@ class CommunicationRequest extends HiveObject
     /// [priority] Characterizes how quickly the proposed act must be initiated.
     ///  Includes concepts such as stat, urgent, routine.
     @HiveField(20)
-        Code? priority,
+        FhirCode? priority,
 
     /// [priorityElement] Extensions for priority
     @JsonKey(name: '_priority')
@@ -1244,7 +1244,7 @@ class DeviceRequest extends HiveObject with Resource, _$DeviceRequest {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -1332,7 +1332,7 @@ class DeviceRequest extends HiveObject with Resource, _$DeviceRequest {
 
     /// [status] The status of the request.
     @HiveField(20)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -1342,7 +1342,7 @@ class DeviceRequest extends HiveObject with Resource, _$DeviceRequest {
     /// [intent] Whether the request is a proposal, plan, an original order or a
     ///  reflex order.
     @HiveField(22)
-        Code? intent,
+        FhirCode? intent,
 
     /// [intentElement] Extensions for intent
     @JsonKey(name: '_intent')
@@ -1352,7 +1352,7 @@ class DeviceRequest extends HiveObject with Resource, _$DeviceRequest {
     /// [priority] Indicates how quickly the {{title}} should be addressed with
     ///  respect to other requests.
     @HiveField(24)
-        Code? priority,
+        FhirCode? priority,
 
     /// [priorityElement] Extensions for priority
     @JsonKey(name: '_priority')
@@ -1756,7 +1756,7 @@ class DeviceUseStatement extends HiveObject
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -1818,7 +1818,7 @@ class DeviceUseStatement extends HiveObject
     /// the state of the device used that this statement is about.  Generally this
     ///  will be active or completed.
     @HiveField(13)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -2092,7 +2092,7 @@ class GuidanceResponse extends HiveObject with Resource, _$GuidanceResponse {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -2188,7 +2188,7 @@ class GuidanceResponse extends HiveObject with Resource, _$GuidanceResponse {
     /// will be data-requested, and the response will contain a description of the
     ///  additional requested information.
     @HiveField(18)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -2424,7 +2424,7 @@ class SupplyDelivery extends HiveObject with Resource, _$SupplyDelivery {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -2490,7 +2490,7 @@ class SupplyDelivery extends HiveObject with Resource, _$SupplyDelivery {
 
     /// [status] A code specifying the state of the dispense event.
     @HiveField(14)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -2839,7 +2839,7 @@ class SupplyRequest extends HiveObject with Resource, _$SupplyRequest {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -2896,7 +2896,7 @@ class SupplyRequest extends HiveObject with Resource, _$SupplyRequest {
 
     /// [status] Status of the supply request.
     @HiveField(12)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -2911,7 +2911,7 @@ class SupplyRequest extends HiveObject with Resource, _$SupplyRequest {
     /// [priority] Indicates how quickly this SupplyRequest should be addressed
     ///  with respect to other requests.
     @HiveField(15)
-        Code? priority,
+        FhirCode? priority,
 
     /// [priorityElement] Extensions for priority
     @JsonKey(name: '_priority')

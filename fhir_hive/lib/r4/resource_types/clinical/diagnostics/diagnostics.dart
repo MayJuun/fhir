@@ -134,7 +134,7 @@ class BodyStructure extends HiveObject with Resource, _$BodyStructure {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -437,7 +437,7 @@ class DiagnosticReport extends HiveObject with Resource, _$DiagnosticReport {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -497,7 +497,7 @@ class DiagnosticReport extends HiveObject with Resource, _$DiagnosticReport {
 
     /// [status] The status of the diagnostic report.
     @HiveField(13)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -932,7 +932,7 @@ class ImagingStudy extends HiveObject with Resource, _$ImagingStudy {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -988,7 +988,7 @@ class ImagingStudy extends HiveObject with Resource, _$ImagingStudy {
 
     /// [status] The current state of the ImagingStudy.
     @HiveField(12)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -1768,7 +1768,7 @@ class Media extends HiveObject with Resource, _$Media {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -1836,7 +1836,7 @@ class Media extends HiveObject with Resource, _$Media {
 
     /// [status] The current state of the {{title}}.
     @HiveField(14)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -1952,7 +1952,7 @@ class Media extends HiveObject with Resource, _$Media {
     /// [duration] The duration of the recording in seconds - for audio and
     ///  video.
     @HiveField(38)
-        Decimal? duration,
+        FhirDecimal? duration,
 
     /// [durationElement] Extensions for duration
     @JsonKey(name: '_duration')
@@ -2149,7 +2149,7 @@ class MolecularSequence extends HiveObject with Resource, _$MolecularSequence {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -2205,7 +2205,7 @@ class MolecularSequence extends HiveObject with Resource, _$MolecularSequence {
 
     /// [type] Amino Acid Sequence/ DNA Sequence / RNA Sequence.
     @HiveField(12)
-        Code? type,
+        FhirCode? type,
 
     /// [typeElement] Extensions for type
     @JsonKey(name: '_type')
@@ -2457,7 +2457,7 @@ class MolecularSequenceReferenceSeq with _$MolecularSequenceReferenceSeq {
     /// orientation. The strand that contains the open reading frame of the gene
     /// is the "sense" strand, and the opposite complementary strand is the
     ///  "antisense" strand.
-    Code? orientation,
+    FhirCode? orientation,
 
     /// [orientationElement] Extensions for orientation
     @JsonKey(name: '_orientation') Element? orientationElement,
@@ -2481,7 +2481,7 @@ class MolecularSequenceReferenceSeq with _$MolecularSequenceReferenceSeq {
     /// [strand] An absolute reference to a strand. The Watson strand is the
     /// strand whose 5'-end is on the short arm of the chromosome, and the Crick
     ///  strand as the one whose 5'-end is on the long arm.
-    Code? strand,
+    FhirCode? strand,
 
     /// [strandElement] Extensions for strand
     @JsonKey(name: '_strand') Element? strandElement,
@@ -2857,7 +2857,7 @@ class MolecularSequenceQuality with _$MolecularSequenceQuality {
     List<FhirExtension>? modifierExtension,
 
     /// [type] INDEL / SNP / Undefined variant.
-    Code? type,
+    FhirCode? type,
 
     /// [typeElement] Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
@@ -2893,7 +2893,7 @@ class MolecularSequenceQuality with _$MolecularSequenceQuality {
     /// through the Query Call Set that are consistent with all of the alleles at
     /// this site, and for which there is an accurate genotype call for the
     ///  event.
-    Decimal? truthTP,
+    FhirDecimal? truthTP,
 
     /// [truthTPElement] Extensions for truthTP
     @JsonKey(name: '_truthTP') Element? truthTPElement,
@@ -2903,7 +2903,7 @@ class MolecularSequenceQuality with _$MolecularSequenceQuality {
     /// through the Truth Call Set that are consistent with all of the alleles at
     /// this site, and for which there is an accurate genotype call for the
     ///  event.
-    Decimal? queryTP,
+    FhirDecimal? queryTP,
 
     /// [queryTPElement] Extensions for queryTP
     @JsonKey(name: '_queryTP') Element? queryTPElement,
@@ -2913,7 +2913,7 @@ class MolecularSequenceQuality with _$MolecularSequenceQuality {
     /// with all of the alleles at this site, or sites for which there is an
     /// inaccurate genotype call for the event. Sites with correct variant but
     ///  incorrect genotype are counted here.
-    Decimal? truthFN,
+    FhirDecimal? truthFN,
 
     /// [truthFNElement] Extensions for truthFN
     @JsonKey(name: '_truthFN') Element? truthFNElement,
@@ -2922,7 +2922,7 @@ class MolecularSequenceQuality with _$MolecularSequenceQuality {
     /// for which there is no path through the Truth Call Set that is consistent
     /// with this site. Sites with correct variant but incorrect genotype are
     ///  counted here.
-    Decimal? queryFP,
+    FhirDecimal? queryFP,
 
     /// [queryFPElement] Extensions for queryFP
     @JsonKey(name: '_queryFP') Element? queryFPElement,
@@ -2930,26 +2930,26 @@ class MolecularSequenceQuality with _$MolecularSequenceQuality {
     /// [gtFP] The number of false positives where the non-REF alleles in the
     /// Truth and Query Call Sets match (i.e. cases where the truth is 1/1 and the
     ///  query is 0/1 or similar).
-    Decimal? gtFP,
+    FhirDecimal? gtFP,
 
     /// [gtFPElement] Extensions for gtFP
     @JsonKey(name: '_gtFP') Element? gtFPElement,
 
     /// [precision] QUERY.TP / (QUERY.TP + QUERY.FP).
-    Decimal? precision,
+    FhirDecimal? precision,
 
     /// [precisionElement] Extensions for precision
     @JsonKey(name: '_precision') Element? precisionElement,
 
     /// [recall] TRUTH.TP / (TRUTH.TP + TRUTH.FN).
-    Decimal? recall,
+    FhirDecimal? recall,
 
     /// [recallElement] Extensions for recall
     @JsonKey(name: '_recall') Element? recallElement,
 
     /// [fScore] Harmonic mean of Recall and Precision, computed as: 2 *
     ///  precision * recall / (precision + recall).
-    Decimal? fScore,
+    FhirDecimal? fScore,
 
     /// [fScoreElement] Extensions for fScore
     @JsonKey(name: '_fScore') Element? fScoreElement,
@@ -3257,7 +3257,7 @@ class MolecularSequenceRepository with _$MolecularSequenceRepository {
 
     /// [type] Click and see / RESTful API / Need login to see / RESTful API with
     ///  authentication / Other ways to see resource.
-    Code? type,
+    FhirCode? type,
 
     /// [typeElement] Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
@@ -3938,7 +3938,7 @@ class Observation extends HiveObject with Resource, _$Observation {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -4004,7 +4004,7 @@ class Observation extends HiveObject with Resource, _$Observation {
 
     /// [status] The status of the result value.
     @HiveField(14)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -4793,7 +4793,7 @@ class QuestionnaireResponse extends HiveObject
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -4873,7 +4873,7 @@ class QuestionnaireResponse extends HiveObject
     /// [status] The position of the questionnaire response within its overall
     ///  lifecycle.
     @HiveField(16)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -5210,7 +5210,7 @@ class QuestionnaireResponseAnswer with _$QuestionnaireResponseAnswer {
 
     /// [valueDecimal] The answer (or one of the answers) provided by the
     ///  respondent to the question.
-    Decimal? valueDecimal,
+    FhirDecimal? valueDecimal,
 
     /// [valueDecimalElement] Extensions for valueDecimal
     @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
@@ -5444,7 +5444,7 @@ class Specimen extends HiveObject with Resource, _$Specimen {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -5505,7 +5505,7 @@ class Specimen extends HiveObject with Resource, _$Specimen {
 
     /// [status] The availability of the specimen.
     @HiveField(13)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')

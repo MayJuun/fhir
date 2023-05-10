@@ -95,8 +95,6 @@ Resource _newId(Resource resource) {
       return (resource as DeviceUsage).copyWith(id: newId());
     case R5ResourceType.DiagnosticReport:
       return (resource as DiagnosticReport).copyWith(id: newId());
-    case R5ResourceType.DocumentManifest:
-      return (resource as DocumentManifest).copyWith(id: newId());
     case R5ResourceType.DocumentReference:
       return (resource as DocumentReference).copyWith(id: newId());
     case R5ResourceType.Encounter:
@@ -183,8 +181,6 @@ Resource _newId(Resource resource) {
       return (resource as MedicationKnowledge).copyWith(id: newId());
     case R5ResourceType.MedicationRequest:
       return (resource as MedicationRequest).copyWith(id: newId());
-    case R5ResourceType.MedicationUsage:
-      return (resource as MedicationUsage).copyWith(id: newId());
     case R5ResourceType.MedicinalProductDefinition:
       return (resource as MedicinalProductDefinition).copyWith(id: newId());
     case R5ResourceType.MessageDefinition:

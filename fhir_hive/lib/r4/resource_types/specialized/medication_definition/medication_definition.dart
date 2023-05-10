@@ -77,7 +77,7 @@ class AdministrableProductDefinition extends HiveObject
 
     /// [language] The base language in which the resource is written.;
     @HiveField(7)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] (_language): Extensions for language;
     @JsonKey(name: '_language')
@@ -107,7 +107,7 @@ class AdministrableProductDefinition extends HiveObject
 
     /// [status] The status of this ingredient. Enables tracking the life-cycle of the content.;
     @HiveField(14)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] (_status): Extensions for status;
     @JsonKey(name: '_status')
@@ -708,7 +708,7 @@ class IngredientManufacturer with _$IngredientManufacturer {
     List<FhirExtension>? modifierExtension,
 
     /// [role] The way in which this manufacturer is associated with the ingredient. For example whether it is a possible one (others allowed), or an exclusive authorized one for this ingredient. Note that this is not the manufacturing process role.;
-    Code? role,
+    FhirCode? role,
 
     /// [roleElement] (_role): Extensions for role;
     @JsonKey(name: '_role') Element? roleElement,
@@ -1811,7 +1811,7 @@ class ManufacturedItemDefinition extends HiveObject
 
     /// [language] The base language in which the resource is written.;
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] (_language): Extensions for language;
     @JsonKey(name: '_language')
@@ -1842,7 +1842,7 @@ class ManufacturedItemDefinition extends HiveObject
 
     /// [status] The status of this item. Enables tracking the life-cycle of the content.;
     @HiveField(12)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] (_status): Extensions for status;
     @JsonKey(name: '_status')
@@ -2121,7 +2121,7 @@ class MedicinalProductDefinition extends HiveObject
 
     /// [language] The base language in which the resource is written.;
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] (_language): Extensions for language;
     @JsonKey(name: '_language')
@@ -2961,7 +2961,7 @@ class PackagedProductDefinition extends HiveObject
 
     /// [language] The base language in which the resource is written.;
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] (_language): Extensions for language;
     @JsonKey(name: '_language')

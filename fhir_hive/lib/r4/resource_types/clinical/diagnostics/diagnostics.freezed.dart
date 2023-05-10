@@ -49,7 +49,7 @@ mixin _$BodyStructure {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -173,7 +173,7 @@ abstract class $BodyStructureCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -471,7 +471,7 @@ abstract class _$$_BodyStructureCopyWith<$Res>
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -1117,7 +1117,7 @@ abstract class _BodyStructure extends BodyStructure {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -1268,7 +1268,7 @@ mixin _$DiagnosticReport {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -1329,7 +1329,7 @@ mixin _$DiagnosticReport {
 
   /// [status] The status of the diagnostic report.
   @HiveField(13)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -1469,7 +1469,7 @@ abstract class $DiagnosticReportCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -1487,7 +1487,7 @@ abstract class $DiagnosticReportCopyWith<$Res> {
       @HiveField(12)
           List<Reference>? basedOn,
       @HiveField(13)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(14)
           Element? statusElement,
@@ -1899,7 +1899,7 @@ abstract class _$$_DiagnosticReportCopyWith<$Res>
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -1917,7 +1917,7 @@ abstract class _$$_DiagnosticReportCopyWith<$Res>
       @HiveField(12)
           List<Reference>? basedOn,
       @HiveField(13)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(14)
           Element? statusElement,
@@ -2918,7 +2918,7 @@ abstract class _DiagnosticReport extends DiagnosticReport {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -2986,7 +2986,7 @@ abstract class _DiagnosticReport extends DiagnosticReport {
 
   /// [status] The status of the diagnostic report.
   @HiveField(13)
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -3616,7 +3616,7 @@ mixin _$ImagingStudy {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -3673,7 +3673,7 @@ mixin _$ImagingStudy {
 
   /// [status] The current state of the ImagingStudy.
   @HiveField(12)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -3822,7 +3822,7 @@ abstract class $ImagingStudyCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -3838,7 +3838,7 @@ abstract class $ImagingStudyCopyWith<$Res> {
       @HiveField(11)
           List<Identifier>? identifier,
       @HiveField(12)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(13)
           Element? statusElement,
@@ -4292,7 +4292,7 @@ abstract class _$$_ImagingStudyCopyWith<$Res>
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -4308,7 +4308,7 @@ abstract class _$$_ImagingStudyCopyWith<$Res>
       @HiveField(11)
           List<Identifier>? identifier,
       @HiveField(12)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(13)
           Element? statusElement,
@@ -5340,7 +5340,7 @@ abstract class _ImagingStudy extends ImagingStudy {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -5403,7 +5403,7 @@ abstract class _ImagingStudy extends ImagingStudy {
 
   /// [status] The current state of the ImagingStudy.
   @HiveField(12)
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -7548,7 +7548,7 @@ mixin _$Media {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -7617,7 +7617,7 @@ mixin _$Media {
 
   /// [status] The current state of the {{title}}.
   @HiveField(14)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -7733,7 +7733,7 @@ mixin _$Media {
   /// [duration] The duration of the recording in seconds - for audio and
   ///  video.
   @HiveField(38)
-  Decimal? get duration => throw _privateConstructorUsedError;
+  FhirDecimal? get duration => throw _privateConstructorUsedError;
 
   /// [durationElement] Extensions for duration
   @JsonKey(name: '_duration')
@@ -7774,7 +7774,7 @@ abstract class $MediaCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -7794,7 +7794,7 @@ abstract class $MediaCopyWith<$Res> {
       @HiveField(13)
           List<Reference>? partOf,
       @HiveField(14)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(15)
           Element? statusElement,
@@ -7850,7 +7850,7 @@ abstract class $MediaCopyWith<$Res> {
       @HiveField(37)
           Element? framesElement,
       @HiveField(38)
-          Decimal? duration,
+          FhirDecimal? duration,
       @JsonKey(name: '_duration')
       @HiveField(39)
           Element? durationElement,
@@ -8392,7 +8392,7 @@ abstract class _$$_MediaCopyWith<$Res> implements $MediaCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -8412,7 +8412,7 @@ abstract class _$$_MediaCopyWith<$Res> implements $MediaCopyWith<$Res> {
       @HiveField(13)
           List<Reference>? partOf,
       @HiveField(14)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(15)
           Element? statusElement,
@@ -8468,7 +8468,7 @@ abstract class _$$_MediaCopyWith<$Res> implements $MediaCopyWith<$Res> {
       @HiveField(37)
           Element? framesElement,
       @HiveField(38)
-          Decimal? duration,
+          FhirDecimal? duration,
       @JsonKey(name: '_duration')
       @HiveField(39)
           Element? durationElement,
@@ -9514,7 +9514,7 @@ abstract class _Media extends Media {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -9591,7 +9591,7 @@ abstract class _Media extends Media {
 
   /// [status] The current state of the {{title}}.
   @HiveField(14)
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -9731,7 +9731,7 @@ abstract class _Media extends Media {
   /// [duration] The duration of the recording in seconds - for audio and
   ///  video.
   @HiveField(38)
-  Decimal? get duration;
+  FhirDecimal? get duration;
   @override
 
   /// [durationElement] Extensions for duration
@@ -9791,7 +9791,7 @@ mixin _$MolecularSequence {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -9848,7 +9848,7 @@ mixin _$MolecularSequence {
 
   /// [type] Amino Acid Sequence/ DNA Sequence / RNA Sequence.
   @HiveField(12)
-  Code? get type => throw _privateConstructorUsedError;
+  FhirCode? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
@@ -9975,7 +9975,7 @@ abstract class $MolecularSequenceCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -9991,7 +9991,7 @@ abstract class $MolecularSequenceCopyWith<$Res> {
       @HiveField(11)
           List<Identifier>? identifier,
       @HiveField(12)
-          Code? type,
+          FhirCode? type,
       @JsonKey(name: '_type')
       @HiveField(13)
           Element? typeElement,
@@ -10414,7 +10414,7 @@ abstract class _$$_MolecularSequenceCopyWith<$Res>
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -10430,7 +10430,7 @@ abstract class _$$_MolecularSequenceCopyWith<$Res>
       @HiveField(11)
           List<Identifier>? identifier,
       @HiveField(12)
-          Code? type,
+          FhirCode? type,
       @JsonKey(name: '_type')
       @HiveField(13)
           Element? typeElement,
@@ -11320,7 +11320,7 @@ abstract class _MolecularSequence extends MolecularSequence {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -11383,7 +11383,7 @@ abstract class _MolecularSequence extends MolecularSequence {
 
   /// [type] Amino Acid Sequence/ DNA Sequence / RNA Sequence.
   @HiveField(12)
-  Code? get type;
+  FhirCode? get type;
   @override
 
   /// [typeElement] Extensions for type
@@ -11557,7 +11557,7 @@ mixin _$MolecularSequenceReferenceSeq {
   /// orientation. The strand that contains the open reading frame of the gene
   /// is the "sense" strand, and the opposite complementary strand is the
   ///  "antisense" strand.
-  Code? get orientation => throw _privateConstructorUsedError;
+  FhirCode? get orientation => throw _privateConstructorUsedError;
 
   /// [orientationElement] Extensions for orientation
   @JsonKey(name: '_orientation')
@@ -11583,7 +11583,7 @@ mixin _$MolecularSequenceReferenceSeq {
   /// [strand] An absolute reference to a strand. The Watson strand is the
   /// strand whose 5'-end is on the short arm of the chromosome, and the Crick
   ///  strand as the one whose 5'-end is on the long arm.
-  Code? get strand => throw _privateConstructorUsedError;
+  FhirCode? get strand => throw _privateConstructorUsedError;
 
   /// [strandElement] Extensions for strand
   @JsonKey(name: '_strand')
@@ -11629,13 +11629,13 @@ abstract class $MolecularSequenceReferenceSeqCopyWith<$Res> {
       CodeableConcept? chromosome,
       String? genomeBuild,
       @JsonKey(name: '_genomeBuild') Element? genomeBuildElement,
-      Code? orientation,
+      FhirCode? orientation,
       @JsonKey(name: '_orientation') Element? orientationElement,
       CodeableConcept? referenceSeqId,
       Reference? referenceSeqPointer,
       String? referenceSeqString,
       @JsonKey(name: '_referenceSeqString') Element? referenceSeqStringElement,
-      Code? strand,
+      FhirCode? strand,
       @JsonKey(name: '_strand') Element? strandElement,
       Integer? windowStart,
       @JsonKey(name: '_windowStart') Element? windowStartElement,
@@ -11887,13 +11887,13 @@ abstract class _$$_MolecularSequenceReferenceSeqCopyWith<$Res>
       CodeableConcept? chromosome,
       String? genomeBuild,
       @JsonKey(name: '_genomeBuild') Element? genomeBuildElement,
-      Code? orientation,
+      FhirCode? orientation,
       @JsonKey(name: '_orientation') Element? orientationElement,
       CodeableConcept? referenceSeqId,
       Reference? referenceSeqPointer,
       String? referenceSeqString,
       @JsonKey(name: '_referenceSeqString') Element? referenceSeqStringElement,
-      Code? strand,
+      FhirCode? strand,
       @JsonKey(name: '_strand') Element? strandElement,
       Integer? windowStart,
       @JsonKey(name: '_windowStart') Element? windowStartElement,
@@ -12384,7 +12384,7 @@ abstract class _MolecularSequenceReferenceSeq
   /// orientation. The strand that contains the open reading frame of the gene
   /// is the "sense" strand, and the opposite complementary strand is the
   ///  "antisense" strand.
-  Code? get orientation;
+  FhirCode? get orientation;
   @override
 
   /// [orientationElement] Extensions for orientation
@@ -12416,7 +12416,7 @@ abstract class _MolecularSequenceReferenceSeq
   /// [strand] An absolute reference to a strand. The Watson strand is the
   /// strand whose 5'-end is on the short arm of the chromosome, and the Crick
   ///  strand as the one whose 5'-end is on the long arm.
-  Code? get strand;
+  FhirCode? get strand;
   @override
 
   /// [strandElement] Extensions for strand
@@ -13265,7 +13265,7 @@ mixin _$MolecularSequenceQuality {
       throw _privateConstructorUsedError;
 
   /// [type] INDEL / SNP / Undefined variant.
-  Code? get type => throw _privateConstructorUsedError;
+  FhirCode? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
@@ -13304,7 +13304,7 @@ mixin _$MolecularSequenceQuality {
   /// through the Query Call Set that are consistent with all of the alleles at
   /// this site, and for which there is an accurate genotype call for the
   ///  event.
-  Decimal? get truthTP => throw _privateConstructorUsedError;
+  FhirDecimal? get truthTP => throw _privateConstructorUsedError;
 
   /// [truthTPElement] Extensions for truthTP
   @JsonKey(name: '_truthTP')
@@ -13315,7 +13315,7 @@ mixin _$MolecularSequenceQuality {
   /// through the Truth Call Set that are consistent with all of the alleles at
   /// this site, and for which there is an accurate genotype call for the
   ///  event.
-  Decimal? get queryTP => throw _privateConstructorUsedError;
+  FhirDecimal? get queryTP => throw _privateConstructorUsedError;
 
   /// [queryTPElement] Extensions for queryTP
   @JsonKey(name: '_queryTP')
@@ -13326,7 +13326,7 @@ mixin _$MolecularSequenceQuality {
   /// with all of the alleles at this site, or sites for which there is an
   /// inaccurate genotype call for the event. Sites with correct variant but
   ///  incorrect genotype are counted here.
-  Decimal? get truthFN => throw _privateConstructorUsedError;
+  FhirDecimal? get truthFN => throw _privateConstructorUsedError;
 
   /// [truthFNElement] Extensions for truthFN
   @JsonKey(name: '_truthFN')
@@ -13336,7 +13336,7 @@ mixin _$MolecularSequenceQuality {
   /// for which there is no path through the Truth Call Set that is consistent
   /// with this site. Sites with correct variant but incorrect genotype are
   ///  counted here.
-  Decimal? get queryFP => throw _privateConstructorUsedError;
+  FhirDecimal? get queryFP => throw _privateConstructorUsedError;
 
   /// [queryFPElement] Extensions for queryFP
   @JsonKey(name: '_queryFP')
@@ -13345,21 +13345,21 @@ mixin _$MolecularSequenceQuality {
   /// [gtFP] The number of false positives where the non-REF alleles in the
   /// Truth and Query Call Sets match (i.e. cases where the truth is 1/1 and the
   ///  query is 0/1 or similar).
-  Decimal? get gtFP => throw _privateConstructorUsedError;
+  FhirDecimal? get gtFP => throw _privateConstructorUsedError;
 
   /// [gtFPElement] Extensions for gtFP
   @JsonKey(name: '_gtFP')
   Element? get gtFPElement => throw _privateConstructorUsedError;
 
   /// [precision] QUERY.TP / (QUERY.TP + QUERY.FP).
-  Decimal? get precision => throw _privateConstructorUsedError;
+  FhirDecimal? get precision => throw _privateConstructorUsedError;
 
   /// [precisionElement] Extensions for precision
   @JsonKey(name: '_precision')
   Element? get precisionElement => throw _privateConstructorUsedError;
 
   /// [recall] TRUTH.TP / (TRUTH.TP + TRUTH.FN).
-  Decimal? get recall => throw _privateConstructorUsedError;
+  FhirDecimal? get recall => throw _privateConstructorUsedError;
 
   /// [recallElement] Extensions for recall
   @JsonKey(name: '_recall')
@@ -13367,7 +13367,7 @@ mixin _$MolecularSequenceQuality {
 
   /// [fScore] Harmonic mean of Recall and Precision, computed as: 2 *
   ///  precision * recall / (precision + recall).
-  Decimal? get fScore => throw _privateConstructorUsedError;
+  FhirDecimal? get fScore => throw _privateConstructorUsedError;
 
   /// [fScoreElement] Extensions for fScore
   @JsonKey(name: '_fScore')
@@ -13393,7 +13393,7 @@ abstract class $MolecularSequenceQualityCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? type,
+      FhirCode? type,
       @JsonKey(name: '_type') Element? typeElement,
       CodeableConcept? standardSequence,
       Integer? start,
@@ -13402,21 +13402,21 @@ abstract class $MolecularSequenceQualityCopyWith<$Res> {
       @JsonKey(name: '_end') Element? endElement,
       Quantity? score,
       CodeableConcept? method,
-      Decimal? truthTP,
+      FhirDecimal? truthTP,
       @JsonKey(name: '_truthTP') Element? truthTPElement,
-      Decimal? queryTP,
+      FhirDecimal? queryTP,
       @JsonKey(name: '_queryTP') Element? queryTPElement,
-      Decimal? truthFN,
+      FhirDecimal? truthFN,
       @JsonKey(name: '_truthFN') Element? truthFNElement,
-      Decimal? queryFP,
+      FhirDecimal? queryFP,
       @JsonKey(name: '_queryFP') Element? queryFPElement,
-      Decimal? gtFP,
+      FhirDecimal? gtFP,
       @JsonKey(name: '_gtFP') Element? gtFPElement,
-      Decimal? precision,
+      FhirDecimal? precision,
       @JsonKey(name: '_precision') Element? precisionElement,
-      Decimal? recall,
+      FhirDecimal? recall,
       @JsonKey(name: '_recall') Element? recallElement,
-      Decimal? fScore,
+      FhirDecimal? fScore,
       @JsonKey(name: '_fScore') Element? fScoreElement,
       MolecularSequenceRoc? roc});
 
@@ -13795,7 +13795,7 @@ abstract class _$$_MolecularSequenceQualityCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? type,
+      FhirCode? type,
       @JsonKey(name: '_type') Element? typeElement,
       CodeableConcept? standardSequence,
       Integer? start,
@@ -13804,21 +13804,21 @@ abstract class _$$_MolecularSequenceQualityCopyWith<$Res>
       @JsonKey(name: '_end') Element? endElement,
       Quantity? score,
       CodeableConcept? method,
-      Decimal? truthTP,
+      FhirDecimal? truthTP,
       @JsonKey(name: '_truthTP') Element? truthTPElement,
-      Decimal? queryTP,
+      FhirDecimal? queryTP,
       @JsonKey(name: '_queryTP') Element? queryTPElement,
-      Decimal? truthFN,
+      FhirDecimal? truthFN,
       @JsonKey(name: '_truthFN') Element? truthFNElement,
-      Decimal? queryFP,
+      FhirDecimal? queryFP,
       @JsonKey(name: '_queryFP') Element? queryFPElement,
-      Decimal? gtFP,
+      FhirDecimal? gtFP,
       @JsonKey(name: '_gtFP') Element? gtFPElement,
-      Decimal? precision,
+      FhirDecimal? precision,
       @JsonKey(name: '_precision') Element? precisionElement,
-      Decimal? recall,
+      FhirDecimal? recall,
       @JsonKey(name: '_recall') Element? recallElement,
-      Decimal? fScore,
+      FhirDecimal? fScore,
       @JsonKey(name: '_fScore') Element? fScoreElement,
       MolecularSequenceRoc? roc});
 
@@ -14439,7 +14439,7 @@ abstract class _MolecularSequenceQuality extends MolecularSequenceQuality {
   @override
 
   /// [type] INDEL / SNP / Undefined variant.
-  Code? get type;
+  FhirCode? get type;
   @override
 
   /// [typeElement] Extensions for type
@@ -14487,7 +14487,7 @@ abstract class _MolecularSequenceQuality extends MolecularSequenceQuality {
   /// through the Query Call Set that are consistent with all of the alleles at
   /// this site, and for which there is an accurate genotype call for the
   ///  event.
-  Decimal? get truthTP;
+  FhirDecimal? get truthTP;
   @override
 
   /// [truthTPElement] Extensions for truthTP
@@ -14500,7 +14500,7 @@ abstract class _MolecularSequenceQuality extends MolecularSequenceQuality {
   /// through the Truth Call Set that are consistent with all of the alleles at
   /// this site, and for which there is an accurate genotype call for the
   ///  event.
-  Decimal? get queryTP;
+  FhirDecimal? get queryTP;
   @override
 
   /// [queryTPElement] Extensions for queryTP
@@ -14513,7 +14513,7 @@ abstract class _MolecularSequenceQuality extends MolecularSequenceQuality {
   /// with all of the alleles at this site, or sites for which there is an
   /// inaccurate genotype call for the event. Sites with correct variant but
   ///  incorrect genotype are counted here.
-  Decimal? get truthFN;
+  FhirDecimal? get truthFN;
   @override
 
   /// [truthFNElement] Extensions for truthFN
@@ -14525,7 +14525,7 @@ abstract class _MolecularSequenceQuality extends MolecularSequenceQuality {
   /// for which there is no path through the Truth Call Set that is consistent
   /// with this site. Sites with correct variant but incorrect genotype are
   ///  counted here.
-  Decimal? get queryFP;
+  FhirDecimal? get queryFP;
   @override
 
   /// [queryFPElement] Extensions for queryFP
@@ -14536,7 +14536,7 @@ abstract class _MolecularSequenceQuality extends MolecularSequenceQuality {
   /// [gtFP] The number of false positives where the non-REF alleles in the
   /// Truth and Query Call Sets match (i.e. cases where the truth is 1/1 and the
   ///  query is 0/1 or similar).
-  Decimal? get gtFP;
+  FhirDecimal? get gtFP;
   @override
 
   /// [gtFPElement] Extensions for gtFP
@@ -14545,7 +14545,7 @@ abstract class _MolecularSequenceQuality extends MolecularSequenceQuality {
   @override
 
   /// [precision] QUERY.TP / (QUERY.TP + QUERY.FP).
-  Decimal? get precision;
+  FhirDecimal? get precision;
   @override
 
   /// [precisionElement] Extensions for precision
@@ -14554,7 +14554,7 @@ abstract class _MolecularSequenceQuality extends MolecularSequenceQuality {
   @override
 
   /// [recall] TRUTH.TP / (TRUTH.TP + TRUTH.FN).
-  Decimal? get recall;
+  FhirDecimal? get recall;
   @override
 
   /// [recallElement] Extensions for recall
@@ -14564,7 +14564,7 @@ abstract class _MolecularSequenceQuality extends MolecularSequenceQuality {
 
   /// [fScore] Harmonic mean of Recall and Precision, computed as: 2 *
   ///  precision * recall / (precision + recall).
-  Decimal? get fScore;
+  FhirDecimal? get fScore;
   @override
 
   /// [fScoreElement] Extensions for fScore
@@ -15507,7 +15507,7 @@ mixin _$MolecularSequenceRepository {
 
   /// [type] Click and see / RESTful API / Need login to see / RESTful API with
   ///  authentication / Other ways to see resource.
-  Code? get type => throw _privateConstructorUsedError;
+  FhirCode? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
@@ -15572,7 +15572,7 @@ abstract class $MolecularSequenceRepositoryCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? type,
+      FhirCode? type,
       @JsonKey(name: '_type') Element? typeElement,
       FhirUri? url,
       @JsonKey(name: '_url') Element? urlElement,
@@ -15773,7 +15773,7 @@ abstract class _$$_MolecularSequenceRepositoryCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? type,
+      FhirCode? type,
       @JsonKey(name: '_type') Element? typeElement,
       FhirUri? url,
       @JsonKey(name: '_url') Element? urlElement,
@@ -16180,7 +16180,7 @@ abstract class _MolecularSequenceRepository
 
   /// [type] Click and see / RESTful API / Need login to see / RESTful API with
   ///  authentication / Other ways to see resource.
-  Code? get type;
+  FhirCode? get type;
   @override
 
   /// [typeElement] Extensions for type
@@ -17804,7 +17804,7 @@ mixin _$Observation {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -17871,7 +17871,7 @@ mixin _$Observation {
 
   /// [status] The status of the result value.
   @HiveField(14)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -18141,7 +18141,7 @@ abstract class $ObservationCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -18161,7 +18161,7 @@ abstract class $ObservationCopyWith<$Res> {
       @HiveField(13)
           List<Reference>? partOf,
       @HiveField(14)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(15)
           Element? statusElement,
@@ -18958,7 +18958,7 @@ abstract class _$$_ObservationCopyWith<$Res>
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -18978,7 +18978,7 @@ abstract class _$$_ObservationCopyWith<$Res>
       @HiveField(13)
           List<Reference>? partOf,
       @HiveField(14)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(15)
           Element? statusElement,
@@ -20508,7 +20508,7 @@ abstract class _Observation extends Observation {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -20583,7 +20583,7 @@ abstract class _Observation extends Observation {
 
   /// [status] The status of the result value.
   @HiveField(14)
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -22689,7 +22689,7 @@ mixin _$QuestionnaireResponse {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -22770,7 +22770,7 @@ mixin _$QuestionnaireResponse {
   /// [status] The position of the questionnaire response within its overall
   ///  lifecycle.
   @HiveField(16)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -22839,7 +22839,7 @@ abstract class $QuestionnaireResponseCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -22864,7 +22864,7 @@ abstract class $QuestionnaireResponseCopyWith<$Res> {
       @HiveField(15)
           Element? questionnaireElement,
       @HiveField(16)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(17)
           Element? statusElement,
@@ -23209,7 +23209,7 @@ abstract class _$$_QuestionnaireResponseCopyWith<$Res>
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -23234,7 +23234,7 @@ abstract class _$$_QuestionnaireResponseCopyWith<$Res>
       @HiveField(15)
           Element? questionnaireElement,
       @HiveField(16)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(17)
           Element? statusElement,
@@ -23950,7 +23950,7 @@ abstract class _QuestionnaireResponse extends QuestionnaireResponse {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -24041,7 +24041,7 @@ abstract class _QuestionnaireResponse extends QuestionnaireResponse {
   /// [status] The position of the questionnaire response within its overall
   ///  lifecycle.
   @HiveField(16)
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -24756,7 +24756,7 @@ mixin _$QuestionnaireResponseAnswer {
 
   /// [valueDecimal] The answer (or one of the answers) provided by the
   ///  respondent to the question.
-  Decimal? get valueDecimal => throw _privateConstructorUsedError;
+  FhirDecimal? get valueDecimal => throw _privateConstructorUsedError;
 
   /// [valueDecimalElement] Extensions for valueDecimal
   @JsonKey(name: '_valueDecimal')
@@ -24851,7 +24851,7 @@ abstract class $QuestionnaireResponseAnswerCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       Boolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-      Decimal? valueDecimal,
+      FhirDecimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
       Integer? valueInteger,
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
@@ -25184,7 +25184,7 @@ abstract class _$$_QuestionnaireResponseAnswerCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       Boolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-      Decimal? valueDecimal,
+      FhirDecimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
       Integer? valueInteger,
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
@@ -25768,7 +25768,7 @@ abstract class _QuestionnaireResponseAnswer
 
   /// [valueDecimal] The answer (or one of the answers) provided by the
   ///  respondent to the question.
-  Decimal? get valueDecimal;
+  FhirDecimal? get valueDecimal;
   @override
 
   /// [valueDecimalElement] Extensions for valueDecimal
@@ -25900,7 +25900,7 @@ mixin _$Specimen {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -25962,7 +25962,7 @@ mixin _$Specimen {
 
   /// [status] The availability of the specimen.
   @HiveField(13)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -26048,7 +26048,7 @@ abstract class $SpecimenCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -26066,7 +26066,7 @@ abstract class $SpecimenCopyWith<$Res> {
       @HiveField(12)
           Identifier? accessionIdentifier,
       @HiveField(13)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(14)
           Element? statusElement,
@@ -26397,7 +26397,7 @@ abstract class _$$_SpecimenCopyWith<$Res> implements $SpecimenCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -26415,7 +26415,7 @@ abstract class _$$_SpecimenCopyWith<$Res> implements $SpecimenCopyWith<$Res> {
       @HiveField(12)
           Identifier? accessionIdentifier,
       @HiveField(13)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(14)
           Element? statusElement,
@@ -27185,7 +27185,7 @@ abstract class _Specimen extends Specimen {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -27254,7 +27254,7 @@ abstract class _Specimen extends Specimen {
 
   /// [status] The availability of the specimen.
   @HiveField(13)
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status

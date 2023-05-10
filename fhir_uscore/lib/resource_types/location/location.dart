@@ -8,7 +8,7 @@ class LocationUsCore extends Resource {
     FhirMeta? meta,
     Narrative? text,
     List<Identifier>? identifier,
-    Code? status,
+    FhirCode? status,
     required String name,
     List<ContactPoint>? telecom,
     Address? address,
@@ -30,7 +30,7 @@ class LocationUsCore extends Resource {
       ));
 
   factory LocationUsCore.simple({
-    Code? status,
+    FhirCode? status,
     required String name,
     List<ContactPoint>? telecom,
     Address? address,
@@ -52,7 +52,7 @@ class LocationUsCore extends Resource {
   FhirMeta? get meta => _location.meta;
   Narrative? get text => _location.text;
   List<Identifier>? get identifier => _location.identifier;
-  Code? get status => _location.status;
+  FhirCode? get status => _location.status;
   String? get name => _location.name;
   List<ContactPoint>? get telecom => _location.telecom;
   Address? get address => _location.address;
@@ -66,9 +66,9 @@ class LocationPositionUsCore {
 
   factory LocationPositionUsCore({
     String? id,
-    Decimal? longitude,
-    Decimal? latitude,
-    Decimal? altitude,
+    FhirDecimal? longitude,
+    FhirDecimal? latitude,
+    FhirDecimal? altitude,
   }) =>
       LocationPositionUsCore._(LocationPosition(
           id: id,
@@ -79,7 +79,7 @@ class LocationPositionUsCore {
   LocationPosition _locationPosition;
   LocationPosition get value => _locationPosition;
   String? get id => _locationPosition.id;
-  Decimal? get longitute => _locationPosition.longitude;
-  Decimal? get latitude => _locationPosition.latitude;
-  Decimal? get altitude => _locationPosition.altitude;
+  FhirDecimal? get longitute => _locationPosition.longitude;
+  FhirDecimal? get latitude => _locationPosition.latitude;
+  FhirDecimal? get altitude => _locationPosition.altitude;
 }

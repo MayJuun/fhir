@@ -314,7 +314,7 @@ class Measure extends HiveObject with Resource, _$Measure {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -438,7 +438,7 @@ class Measure extends HiveObject with Resource, _$Measure {
     /// [status] The status of this measure. Enables tracking the life-cycle of
     ///  the content.
     @HiveField(23)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -1533,7 +1533,7 @@ class MeasureReport extends HiveObject with Resource, _$MeasureReport {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -1591,7 +1591,7 @@ class MeasureReport extends HiveObject with Resource, _$MeasureReport {
     /// [status] The MeasureReport status. No data will be available until the
     ///  MeasureReport status is complete.
     @HiveField(12)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -1607,7 +1607,7 @@ class MeasureReport extends HiveObject with Resource, _$MeasureReport {
     /// data-collection, which enables the MeasureReport to be used to exchange
     ///  the data-of-interest for a quality measure.
     @HiveField(15)
-        Code? type,
+        FhirCode? type,
 
     /// [typeElement] Extensions for type
     @JsonKey(name: '_type')
@@ -2518,7 +2518,7 @@ class TestReport extends HiveObject with Resource, _$TestReport {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -2584,7 +2584,7 @@ class TestReport extends HiveObject with Resource, _$TestReport {
 
     /// [status] The current state of this test report.
     @HiveField(14)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -2599,7 +2599,7 @@ class TestReport extends HiveObject with Resource, _$TestReport {
 
     /// [result] The overall result from the execution of the TestScript.
     @HiveField(17)
-        Code? result,
+        FhirCode? result,
 
     /// [resultElement] Extensions for result
     @JsonKey(name: '_result')
@@ -2609,7 +2609,7 @@ class TestReport extends HiveObject with Resource, _$TestReport {
     /// [score] The final score (percentage of tests passed) resulting from the
     ///  execution of the TestScript.
     @HiveField(19)
-        Decimal? score,
+        FhirDecimal? score,
 
     /// [scoreElement] Extensions for score
     @JsonKey(name: '_score')
@@ -2757,7 +2757,7 @@ class TestReportParticipant with _$TestReportParticipant {
     List<FhirExtension>? modifierExtension,
 
     /// [type] The type of participant.
-    Code? type,
+    FhirCode? type,
 
     /// [typeElement] Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
@@ -3080,7 +3080,7 @@ class TestReportOperation with _$TestReportOperation {
     List<FhirExtension>? modifierExtension,
 
     /// [result] The result of this operation.
-    Code? result,
+    FhirCode? result,
 
     /// [resultElement] Extensions for result
     @JsonKey(name: '_result') Element? resultElement,
@@ -3202,7 +3202,7 @@ class TestReportAssert with _$TestReportAssert {
     List<FhirExtension>? modifierExtension,
 
     /// [result] The result of this assertion.
-    Code? result,
+    FhirCode? result,
 
     /// [resultElement] Extensions for result
     @JsonKey(name: '_result') Element? resultElement,
@@ -3874,7 +3874,7 @@ class TestScript extends HiveObject with Resource, _$TestScript {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -3982,7 +3982,7 @@ class TestScript extends HiveObject with Resource, _$TestScript {
     /// [status] The status of this test script. Enables tracking the life-cycle
     ///  of the content.
     @HiveField(20)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -5424,7 +5424,7 @@ class TestScriptOperation with _$TestScriptOperation {
 
     /// [resource] The type of the resource.  See
     ///  http://build.fhir.org/resourcelist.html.
-    Code? resource,
+    FhirCode? resource,
 
     /// [resourceElement] Extensions for resource
     @JsonKey(name: '_resource') Element? resourceElement,
@@ -5445,14 +5445,14 @@ class TestScriptOperation with _$TestScriptOperation {
 
     /// [accept] The mime-type to use for RESTful operation in the 'Accept'
     ///  header.
-    Code? accept,
+    FhirCode? accept,
 
     /// [acceptElement] Extensions for accept
     @JsonKey(name: '_accept') Element? acceptElement,
 
     /// [contentType] The mime-type to use for RESTful operation in the
     ///  'Content-Type' header.
-    Code? contentType,
+    FhirCode? contentType,
 
     /// [contentTypeElement] Extensions for contentType
     @JsonKey(name: '_contentType') Element? contentTypeElement,
@@ -5475,7 +5475,7 @@ class TestScriptOperation with _$TestScriptOperation {
 
     /// [method] The HTTP method the test engine MUST use for this operation
     ///  regardless of any other operation details.
-    Code? method,
+    FhirCode? method,
 
     /// [methodElement] Extensions for method
     @JsonKey(name: '_method') Element? methodElement,
@@ -5864,7 +5864,7 @@ class TestScriptAssert with _$TestScriptAssert {
         Element? descriptionElement,
 
     /// [direction] The direction to use for the assertion.
-    Code? direction,
+    FhirCode? direction,
 
     /// [directionElement] Extensions for direction
     @JsonKey(name: '_direction')
@@ -5901,7 +5901,7 @@ class TestScriptAssert with _$TestScriptAssert {
 
     /// [contentType] The mime-type contents to compare against the request or
     ///  response message 'Content-Type' header.
-    Code? contentType,
+    FhirCode? contentType,
 
     /// [contentTypeElement] Extensions for contentType
     @JsonKey(name: '_contentType')
@@ -5941,7 +5941,7 @@ class TestScriptAssert with _$TestScriptAssert {
     /// [operator] The operator type defines the conditional behavior of the
     ///  assert. If not defined, the default is equals.
     @JsonKey(name: 'operator')
-        Code? operator_,
+        FhirCode? operator_,
 
     /// [operatorElement] Extensions for operator
     @JsonKey(name: '_operator')
@@ -5957,7 +5957,7 @@ class TestScriptAssert with _$TestScriptAssert {
 
     /// [requestMethod] The request method or HTTP operation code to compare
     ///  against that used by the client system under test.
-    Code? requestMethod,
+    FhirCode? requestMethod,
 
     /// [requestMethodElement] Extensions for requestMethod
     @JsonKey(name: '_requestMethod')
@@ -5973,7 +5973,7 @@ class TestScriptAssert with _$TestScriptAssert {
 
     /// [resource] The type of the resource.  See
     ///  http://build.fhir.org/resourcelist.html.
-    Code? resource,
+    FhirCode? resource,
 
     /// [resourceElement] Extensions for resource
     @JsonKey(name: '_resource')
@@ -5982,7 +5982,7 @@ class TestScriptAssert with _$TestScriptAssert {
     /// [response] okay | created | noContent | notModified | bad | forbidden |
     /// notFound | methodNotAllowed | conflict | gone | preconditionFailed |
     ///  unprocessable.
-    Code? response,
+    FhirCode? response,
 
     /// [responseElement] Extensions for response
     @JsonKey(name: '_response')

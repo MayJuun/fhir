@@ -73,7 +73,7 @@ class ImmunizationUsCore extends Resource {
   String? get id => _immunization.id;
   FhirMeta? get meta => _immunization.meta;
   Narrative? get text => _immunization.text;
-  Code? get status => _immunization.status;
+  FhirCode? get status => _immunization.status;
   CodeableConcept? get statusReason => _immunization.statusReason;
   CodeableConcept get vaccineCode => _immunization.vaccineCode;
   Reference get patient => _immunization.patient;

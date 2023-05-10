@@ -49,7 +49,7 @@ mixin _$CatalogEntry {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -133,7 +133,7 @@ mixin _$CatalogEntry {
       throw _privateConstructorUsedError;
   @HiveField(18)
   @HiveField(19)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -208,7 +208,7 @@ abstract class $CatalogEntryCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -238,7 +238,7 @@ abstract class $CatalogEntryCopyWith<$Res> {
           List<CodeableConcept>? classification,
       @HiveField(18)
       @HiveField(19)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(20)
           Element? statusElement,
@@ -583,7 +583,7 @@ abstract class _$$_CatalogEntryCopyWith<$Res>
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -613,7 +613,7 @@ abstract class _$$_CatalogEntryCopyWith<$Res>
           List<CodeableConcept>? classification,
       @HiveField(18)
       @HiveField(19)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(20)
           Element? statusElement,
@@ -1413,7 +1413,7 @@ abstract class _CatalogEntry extends CatalogEntry {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -1507,7 +1507,7 @@ abstract class _CatalogEntry extends CatalogEntry {
   @override
   @HiveField(18)
   @HiveField(19)
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -1605,7 +1605,7 @@ mixin _$CatalogEntryRelatedEntry {
 
   /// [relationtype] The type of relation to the related item: child, parent,
   ///  packageContent, containerPackage, usedIn, uses, requires, etc.
-  Code? get relationtype => throw _privateConstructorUsedError;
+  FhirCode? get relationtype => throw _privateConstructorUsedError;
 
   /// [relationtypeElement] Extensions for relationtype
   @JsonKey(name: '_relationtype')
@@ -1630,7 +1630,7 @@ abstract class $CatalogEntryRelatedEntryCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? relationtype,
+      FhirCode? relationtype,
       @JsonKey(name: '_relationtype') Element? relationtypeElement,
       Reference item});
 
@@ -1721,7 +1721,7 @@ abstract class _$$_CatalogEntryRelatedEntryCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? relationtype,
+      FhirCode? relationtype,
       @JsonKey(name: '_relationtype') Element? relationtypeElement,
       Reference item});
 
@@ -1973,7 +1973,7 @@ abstract class _CatalogEntryRelatedEntry extends CatalogEntryRelatedEntry {
 
   /// [relationtype] The type of relation to the related item: child, parent,
   ///  packageContent, containerPackage, usedIn, uses, requires, etc.
-  Code? get relationtype;
+  FhirCode? get relationtype;
   @override
 
   /// [relationtypeElement] Extensions for relationtype
@@ -2024,7 +2024,7 @@ mixin _$Composition {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -2082,7 +2082,7 @@ mixin _$Composition {
   /// [status] The workflow/clinical status of this composition. The status is
   ///  a marker for the clinical standing of the document.
   @HiveField(12)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -2140,7 +2140,7 @@ mixin _$Composition {
   /// [confidentiality] The code specifying the level of confidentiality of the
   ///  Composition.
   @HiveField(23)
-  Code? get confidentiality => throw _privateConstructorUsedError;
+  FhirCode? get confidentiality => throw _privateConstructorUsedError;
 
   /// [confidentialityElement] Extensions for confidentiality
   @JsonKey(name: '_confidentiality')
@@ -2197,7 +2197,7 @@ abstract class $CompositionCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -2213,7 +2213,7 @@ abstract class $CompositionCopyWith<$Res> {
       @HiveField(11)
           Identifier? identifier,
       @HiveField(12)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(13)
           Element? statusElement,
@@ -2238,7 +2238,7 @@ abstract class $CompositionCopyWith<$Res> {
       @HiveField(22)
           Element? titleElement,
       @HiveField(23)
-          Code? confidentiality,
+          FhirCode? confidentiality,
       @JsonKey(name: '_confidentiality')
       @HiveField(24)
           Element? confidentialityElement,
@@ -2612,7 +2612,7 @@ abstract class _$$_CompositionCopyWith<$Res>
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -2628,7 +2628,7 @@ abstract class _$$_CompositionCopyWith<$Res>
       @HiveField(11)
           Identifier? identifier,
       @HiveField(12)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(13)
           Element? statusElement,
@@ -2653,7 +2653,7 @@ abstract class _$$_CompositionCopyWith<$Res>
       @HiveField(22)
           Element? titleElement,
       @HiveField(23)
-          Code? confidentiality,
+          FhirCode? confidentiality,
       @JsonKey(name: '_confidentiality')
       @HiveField(24)
           Element? confidentialityElement,
@@ -3480,7 +3480,7 @@ abstract class _Composition extends Composition {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -3544,7 +3544,7 @@ abstract class _Composition extends Composition {
   /// [status] The workflow/clinical status of this composition. The status is
   ///  a marker for the clinical standing of the document.
   @HiveField(12)
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -3613,7 +3613,7 @@ abstract class _Composition extends Composition {
   /// [confidentiality] The code specifying the level of confidentiality of the
   ///  Composition.
   @HiveField(23)
-  Code? get confidentiality;
+  FhirCode? get confidentiality;
   @override
 
   /// [confidentialityElement] Extensions for confidentiality
@@ -3690,7 +3690,7 @@ mixin _$CompositionAttester {
       throw _privateConstructorUsedError;
 
   /// [mode] The type of attestation the authenticator offers.
-  Code? get mode => throw _privateConstructorUsedError;
+  FhirCode? get mode => throw _privateConstructorUsedError;
 
   /// [modeElement] Extensions for mode
   @JsonKey(name: '_mode')
@@ -3722,7 +3722,7 @@ abstract class $CompositionAttesterCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? mode,
+      FhirCode? mode,
       @JsonKey(name: '_mode') Element? modeElement,
       FhirDateTime? time,
       @JsonKey(name: '_time') Element? timeElement,
@@ -3840,7 +3840,7 @@ abstract class _$$_CompositionAttesterCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? mode,
+      FhirCode? mode,
       @JsonKey(name: '_mode') Element? modeElement,
       FhirDateTime? time,
       @JsonKey(name: '_time') Element? timeElement,
@@ -4120,7 +4120,7 @@ abstract class _CompositionAttester extends CompositionAttester {
   @override
 
   /// [mode] The type of attestation the authenticator offers.
-  Code? get mode;
+  FhirCode? get mode;
   @override
 
   /// [modeElement] Extensions for mode
@@ -4182,7 +4182,7 @@ mixin _$CompositionRelatesTo {
 
   /// [code] The type of relationship that this composition has with anther
   ///  composition or document.
-  Code? get code => throw _privateConstructorUsedError;
+  FhirCode? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] Extensions for code
   @JsonKey(name: '_code')
@@ -4210,7 +4210,7 @@ abstract class $CompositionRelatesToCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement,
       Identifier? targetIdentifier,
       Reference? targetReference});
@@ -4323,7 +4323,7 @@ abstract class _$$_CompositionRelatesToCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement,
       Identifier? targetIdentifier,
       Reference? targetReference});
@@ -4591,7 +4591,7 @@ abstract class _CompositionRelatesTo extends CompositionRelatesTo {
 
   /// [code] The type of relationship that this composition has with anther
   ///  composition or document.
-  Code? get code;
+  FhirCode? get code;
   @override
 
   /// [codeElement] Extensions for code
@@ -5133,7 +5133,7 @@ mixin _$CompositionSection {
   /// represents a snapshot of a list of items from another source, or whether
   /// it is a prepared list where items may be marked as added, modified or
   ///  deleted.
-  Code? get mode => throw _privateConstructorUsedError;
+  FhirCode? get mode => throw _privateConstructorUsedError;
 
   /// [modeElement] Extensions for mode
   @JsonKey(name: '_mode')
@@ -5176,7 +5176,7 @@ abstract class $CompositionSectionCopyWith<$Res> {
       List<Reference>? author,
       Reference? focus,
       Narrative? text,
-      Code? mode,
+      FhirCode? mode,
       @JsonKey(name: '_mode') Element? modeElement,
       CodeableConcept? orderedBy,
       List<Reference>? entry,
@@ -5388,7 +5388,7 @@ abstract class _$$_CompositionSectionCopyWith<$Res>
       List<Reference>? author,
       Reference? focus,
       Narrative? text,
-      Code? mode,
+      FhirCode? mode,
       @JsonKey(name: '_mode') Element? modeElement,
       CodeableConcept? orderedBy,
       List<Reference>? entry,
@@ -5868,7 +5868,7 @@ abstract class _CompositionSection extends CompositionSection {
   /// represents a snapshot of a list of items from another source, or whether
   /// it is a prepared list where items may be marked as added, modified or
   ///  deleted.
-  Code? get mode;
+  FhirCode? get mode;
   @override
 
   /// [modeElement] Extensions for mode
@@ -5934,7 +5934,7 @@ mixin _$DocumentManifest {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -5994,7 +5994,7 @@ mixin _$DocumentManifest {
 
   /// [status] The status of this document manifest.
   @HiveField(14)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -6093,7 +6093,7 @@ abstract class $DocumentManifestCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -6112,7 +6112,7 @@ abstract class $DocumentManifestCopyWith<$Res> {
       @HiveField(13)
           List<Identifier>? identifier,
       @HiveField(14)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(15)
           Element? statusElement,
@@ -6465,7 +6465,7 @@ abstract class _$$_DocumentManifestCopyWith<$Res>
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -6484,7 +6484,7 @@ abstract class _$$_DocumentManifestCopyWith<$Res>
       @HiveField(13)
           List<Identifier>? identifier,
       @HiveField(14)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(15)
           Element? statusElement,
@@ -7260,7 +7260,7 @@ abstract class _DocumentManifest extends DocumentManifest {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -7327,7 +7327,7 @@ abstract class _DocumentManifest extends DocumentManifest {
 
   /// [status] The status of this document manifest.
   @HiveField(14)
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -7850,7 +7850,7 @@ mixin _$DocumentReference {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -7914,7 +7914,7 @@ mixin _$DocumentReference {
 
   /// [status] The status of this document reference.
   @HiveField(13)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -7923,7 +7923,7 @@ mixin _$DocumentReference {
 
   /// [docStatus] The status of the underlying document.
   @HiveField(15)
-  Code? get docStatus => throw _privateConstructorUsedError;
+  FhirCode? get docStatus => throw _privateConstructorUsedError;
 
   /// [docStatusElement] Extensions for docStatus
   @JsonKey(name: '_docStatus')
@@ -8033,7 +8033,7 @@ abstract class $DocumentReferenceCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -8051,12 +8051,12 @@ abstract class $DocumentReferenceCopyWith<$Res> {
       @HiveField(12)
           List<Identifier>? identifier,
       @HiveField(13)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(14)
           Element? statusElement,
       @HiveField(15)
-          Code? docStatus,
+          FhirCode? docStatus,
       @JsonKey(name: '_docStatus')
       @HiveField(16)
           Element? docStatusElement,
@@ -8472,7 +8472,7 @@ abstract class _$$_DocumentReferenceCopyWith<$Res>
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -8490,12 +8490,12 @@ abstract class _$$_DocumentReferenceCopyWith<$Res>
       @HiveField(12)
           List<Identifier>? identifier,
       @HiveField(13)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(14)
           Element? statusElement,
       @HiveField(15)
-          Code? docStatus,
+          FhirCode? docStatus,
       @JsonKey(name: '_docStatus')
       @HiveField(16)
           Element? docStatusElement,
@@ -9375,7 +9375,7 @@ abstract class _DocumentReference extends DocumentReference {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -9446,7 +9446,7 @@ abstract class _DocumentReference extends DocumentReference {
 
   /// [status] The status of this document reference.
   @HiveField(13)
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -9457,7 +9457,7 @@ abstract class _DocumentReference extends DocumentReference {
 
   /// [docStatus] The status of the underlying document.
   @HiveField(15)
-  Code? get docStatus;
+  FhirCode? get docStatus;
   @override
 
   /// [docStatusElement] Extensions for docStatus
@@ -9596,7 +9596,7 @@ mixin _$DocumentReferenceRelatesTo {
 
   /// [code] The type of relationship that this document has with anther
   ///  document.
-  Code? get code => throw _privateConstructorUsedError;
+  FhirCode? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] Extensions for code
   @JsonKey(name: '_code')
@@ -9622,7 +9622,7 @@ abstract class $DocumentReferenceRelatesToCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement,
       Reference target});
 
@@ -9713,7 +9713,7 @@ abstract class _$$_DocumentReferenceRelatesToCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
+      FhirCode? code,
       @JsonKey(name: '_code') Element? codeElement,
       Reference target});
 
@@ -9965,7 +9965,7 @@ abstract class _DocumentReferenceRelatesTo extends DocumentReferenceRelatesTo {
 
   /// [code] The type of relationship that this document has with anther
   ///  document.
-  Code? get code;
+  FhirCode? get code;
   @override
 
   /// [codeElement] Extensions for code

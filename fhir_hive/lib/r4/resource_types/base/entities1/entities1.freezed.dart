@@ -49,7 +49,7 @@ mixin _$Endpoint {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -106,7 +106,7 @@ mixin _$Endpoint {
 
   /// [status] active | suspended | error | off | test.
   @HiveField(12)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -206,7 +206,7 @@ abstract class $EndpointCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -222,7 +222,7 @@ abstract class $EndpointCopyWith<$Res> {
       @HiveField(11)
           List<Identifier>? identifier,
       @HiveField(12)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(13)
           Element? statusElement,
@@ -560,7 +560,7 @@ abstract class _$$_EndpointCopyWith<$Res> implements $EndpointCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -576,7 +576,7 @@ abstract class _$$_EndpointCopyWith<$Res> implements $EndpointCopyWith<$Res> {
       @HiveField(11)
           List<Identifier>? identifier,
       @HiveField(12)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(13)
           Element? statusElement,
@@ -1379,7 +1379,7 @@ abstract class _Endpoint extends Endpoint {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -1442,7 +1442,7 @@ abstract class _Endpoint extends Endpoint {
 
   /// [status] active | suspended | error | off | test.
   @HiveField(12)
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -1570,7 +1570,7 @@ mixin _$HealthcareService {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -1799,7 +1799,7 @@ abstract class $HealthcareServiceCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -2286,7 +2286,7 @@ abstract class _$$_HealthcareServiceCopyWith<$Res>
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -3488,7 +3488,7 @@ abstract class _HealthcareService extends HealthcareService {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -5253,7 +5253,7 @@ mixin _$Location {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -5312,7 +5312,7 @@ mixin _$Location {
   /// operationStatus, or by a schedule/slots if they are configured for the
   ///  location.
   @HiveField(12)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -5359,7 +5359,7 @@ mixin _$Location {
   /// [mode] Indicates whether a resource instance represents a specific
   ///  location or a class of locations.
   @HiveField(21)
-  Code? get mode => throw _privateConstructorUsedError;
+  FhirCode? get mode => throw _privateConstructorUsedError;
 
   /// [modeElement] Extensions for mode
   @JsonKey(name: '_mode')
@@ -5443,7 +5443,7 @@ abstract class $LocationCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -5459,7 +5459,7 @@ abstract class $LocationCopyWith<$Res> {
       @HiveField(11)
           List<Identifier>? identifier,
       @HiveField(12)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(13)
           Element? statusElement,
@@ -5481,7 +5481,7 @@ abstract class $LocationCopyWith<$Res> {
       @HiveField(20)
           Element? descriptionElement,
       @HiveField(21)
-          Code? mode,
+          FhirCode? mode,
       @JsonKey(name: '_mode')
       @HiveField(22)
           Element? modeElement,
@@ -5920,7 +5920,7 @@ abstract class _$$_LocationCopyWith<$Res> implements $LocationCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -5936,7 +5936,7 @@ abstract class _$$_LocationCopyWith<$Res> implements $LocationCopyWith<$Res> {
       @HiveField(11)
           List<Identifier>? identifier,
       @HiveField(12)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(13)
           Element? statusElement,
@@ -5958,7 +5958,7 @@ abstract class _$$_LocationCopyWith<$Res> implements $LocationCopyWith<$Res> {
       @HiveField(20)
           Element? descriptionElement,
       @HiveField(21)
-          Code? mode,
+          FhirCode? mode,
       @JsonKey(name: '_mode')
       @HiveField(22)
           Element? modeElement,
@@ -6892,7 +6892,7 @@ abstract class _Location extends Location {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -6957,7 +6957,7 @@ abstract class _Location extends Location {
   /// operationStatus, or by a schedule/slots if they are configured for the
   ///  location.
   @HiveField(12)
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -7013,7 +7013,7 @@ abstract class _Location extends Location {
   /// [mode] Indicates whether a resource instance represents a specific
   ///  location or a class of locations.
   @HiveField(21)
-  Code? get mode;
+  FhirCode? get mode;
   @override
 
   /// [modeElement] Extensions for mode
@@ -7124,7 +7124,7 @@ mixin _$LocationPosition {
 
   /// [longitude] Longitude. The value domain and the interpretation are the
   ///  same as for the text of the longitude element in KML (see notes below).
-  Decimal? get longitude => throw _privateConstructorUsedError;
+  FhirDecimal? get longitude => throw _privateConstructorUsedError;
 
   /// [longitudeElement] Extensions for longitude
   @JsonKey(name: '_longitude')
@@ -7132,7 +7132,7 @@ mixin _$LocationPosition {
 
   /// [latitude] Latitude. The value domain and the interpretation are the same
   ///  as for the text of the latitude element in KML (see notes below).
-  Decimal? get latitude => throw _privateConstructorUsedError;
+  FhirDecimal? get latitude => throw _privateConstructorUsedError;
 
   /// [latitudeElement] Extensions for latitude
   @JsonKey(name: '_latitude')
@@ -7140,7 +7140,7 @@ mixin _$LocationPosition {
 
   /// [altitude] Altitude. The value domain and the interpretation are the same
   ///  as for the text of the altitude element in KML (see notes below).
-  Decimal? get altitude => throw _privateConstructorUsedError;
+  FhirDecimal? get altitude => throw _privateConstructorUsedError;
 
   /// [altitudeElement] Extensions for altitude
   @JsonKey(name: '_altitude')
@@ -7162,11 +7162,11 @@ abstract class $LocationPositionCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Decimal? longitude,
+      FhirDecimal? longitude,
       @JsonKey(name: '_longitude') Element? longitudeElement,
-      Decimal? latitude,
+      FhirDecimal? latitude,
       @JsonKey(name: '_latitude') Element? latitudeElement,
-      Decimal? altitude,
+      FhirDecimal? altitude,
       @JsonKey(name: '_altitude') Element? altitudeElement});
 
   $ElementCopyWith<$Res>? get longitudeElement;
@@ -7286,11 +7286,11 @@ abstract class _$$_LocationPositionCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Decimal? longitude,
+      FhirDecimal? longitude,
       @JsonKey(name: '_longitude') Element? longitudeElement,
-      Decimal? latitude,
+      FhirDecimal? latitude,
       @JsonKey(name: '_latitude') Element? latitudeElement,
-      Decimal? altitude,
+      FhirDecimal? altitude,
       @JsonKey(name: '_altitude') Element? altitudeElement});
 
   @override
@@ -7589,7 +7589,7 @@ abstract class _LocationPosition extends LocationPosition {
 
   /// [longitude] Longitude. The value domain and the interpretation are the
   ///  same as for the text of the longitude element in KML (see notes below).
-  Decimal? get longitude;
+  FhirDecimal? get longitude;
   @override
 
   /// [longitudeElement] Extensions for longitude
@@ -7599,7 +7599,7 @@ abstract class _LocationPosition extends LocationPosition {
 
   /// [latitude] Latitude. The value domain and the interpretation are the same
   ///  as for the text of the latitude element in KML (see notes below).
-  Decimal? get latitude;
+  FhirDecimal? get latitude;
   @override
 
   /// [latitudeElement] Extensions for latitude
@@ -7609,7 +7609,7 @@ abstract class _LocationPosition extends LocationPosition {
 
   /// [altitude] Altitude. The value domain and the interpretation are the same
   ///  as for the text of the altitude element in KML (see notes below).
-  Decimal? get altitude;
+  FhirDecimal? get altitude;
   @override
 
   /// [altitudeElement] Extensions for altitude
@@ -8269,7 +8269,7 @@ mixin _$Organization {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -8403,7 +8403,7 @@ abstract class $OrganizationCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -8700,7 +8700,7 @@ abstract class _$$_OrganizationCopyWith<$Res>
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -9444,7 +9444,7 @@ abstract class _Organization extends Organization {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -10080,7 +10080,7 @@ mixin _$OrganizationAffiliation {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -10220,7 +10220,7 @@ abstract class $OrganizationAffiliationCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -10529,7 +10529,7 @@ abstract class _$$_OrganizationAffiliationCopyWith<$Res>
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -11284,7 +11284,7 @@ abstract class _OrganizationAffiliation extends OrganizationAffiliation {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language

@@ -692,7 +692,7 @@ class AllergyIntoleranceReaction with _$AllergyIntoleranceReaction {
     @JsonKey(name: '_description') Element? descriptionElement,
     FhirDateTime? onset,
     @JsonKey(name: '_onset') Element? onsetElement,
-    Code? severity,
+    FhirCode? severity,
     @JsonKey(name: '_severity') Element? severityElement,
     CodeableConcept? exposureRoute,
     List<Annotation>? note,

@@ -49,7 +49,7 @@ mixin _$ActivityDefinition {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -165,7 +165,7 @@ mixin _$ActivityDefinition {
   /// [status] The status of this activity definition. Enables tracking the
   ///  life-cycle of the content.
   @HiveField(24)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -348,7 +348,7 @@ mixin _$ActivityDefinition {
   /// CommunicationRequest. Typically, but not always, this is a Request
   ///  resource.
   @HiveField(60)
-  Code? get kind => throw _privateConstructorUsedError;
+  FhirCode? get kind => throw _privateConstructorUsedError;
 
   /// [kindElement] Extensions for kind
   @JsonKey(name: '_kind')
@@ -366,7 +366,7 @@ mixin _$ActivityDefinition {
   /// [intent] Indicates the level of authority/intentionality associated with
   ///  the activity and where the request should fit into the workflow chain.
   @HiveField(65)
-  Code? get intent => throw _privateConstructorUsedError;
+  FhirCode? get intent => throw _privateConstructorUsedError;
 
   /// [intentElement] Extensions for intent
   @JsonKey(name: '_intent')
@@ -376,7 +376,7 @@ mixin _$ActivityDefinition {
   /// [priority] Indicates how quickly the activity  should be addressed with
   ///  respect to other requests.
   @HiveField(67)
-  Code? get priority => throw _privateConstructorUsedError;
+  FhirCode? get priority => throw _privateConstructorUsedError;
 
   /// [priorityElement] Extensions for priority
   @JsonKey(name: '_priority')
@@ -527,7 +527,7 @@ abstract class $ActivityDefinitionCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -570,7 +570,7 @@ abstract class $ActivityDefinitionCopyWith<$Res> {
       @HiveField(23)
           Element? subtitleElement,
       @HiveField(24)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(25)
           Element? statusElement,
@@ -653,7 +653,7 @@ abstract class $ActivityDefinitionCopyWith<$Res> {
       @HiveField(59)
           List<FhirCanonical>? library_,
       @HiveField(60)
-          Code? kind,
+          FhirCode? kind,
       @JsonKey(name: '_kind')
       @HiveField(61)
           Element? kindElement,
@@ -663,12 +663,12 @@ abstract class $ActivityDefinitionCopyWith<$Res> {
       @HiveField(64)
           CodeableConcept? code,
       @HiveField(65)
-          Code? intent,
+          FhirCode? intent,
       @JsonKey(name: '_intent')
       @HiveField(66)
           Element? intentElement,
       @HiveField(67)
-          Code? priority,
+          FhirCode? priority,
       @JsonKey(name: '_priority')
       @HiveField(68)
           Element? priorityElement,
@@ -1686,7 +1686,7 @@ abstract class _$$_ActivityDefinitionCopyWith<$Res>
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -1729,7 +1729,7 @@ abstract class _$$_ActivityDefinitionCopyWith<$Res>
       @HiveField(23)
           Element? subtitleElement,
       @HiveField(24)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(25)
           Element? statusElement,
@@ -1812,7 +1812,7 @@ abstract class _$$_ActivityDefinitionCopyWith<$Res>
       @HiveField(59)
           List<FhirCanonical>? library_,
       @HiveField(60)
-          Code? kind,
+          FhirCode? kind,
       @JsonKey(name: '_kind')
       @HiveField(61)
           Element? kindElement,
@@ -1822,12 +1822,12 @@ abstract class _$$_ActivityDefinitionCopyWith<$Res>
       @HiveField(64)
           CodeableConcept? code,
       @HiveField(65)
-          Code? intent,
+          FhirCode? intent,
       @JsonKey(name: '_intent')
       @HiveField(66)
           Element? intentElement,
       @HiveField(67)
-          Code? priority,
+          FhirCode? priority,
       @JsonKey(name: '_priority')
       @HiveField(68)
           Element? priorityElement,
@@ -3918,7 +3918,7 @@ abstract class _ActivityDefinition extends ActivityDefinition {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -4050,7 +4050,7 @@ abstract class _ActivityDefinition extends ActivityDefinition {
   /// [status] The status of this activity definition. Enables tracking the
   ///  life-cycle of the content.
   @HiveField(24)
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -4266,7 +4266,7 @@ abstract class _ActivityDefinition extends ActivityDefinition {
   /// CommunicationRequest. Typically, but not always, this is a Request
   ///  resource.
   @HiveField(60)
-  Code? get kind;
+  FhirCode? get kind;
   @override
 
   /// [kindElement] Extensions for kind
@@ -4288,7 +4288,7 @@ abstract class _ActivityDefinition extends ActivityDefinition {
   /// [intent] Indicates the level of authority/intentionality associated with
   ///  the activity and where the request should fit into the workflow chain.
   @HiveField(65)
-  Code? get intent;
+  FhirCode? get intent;
   @override
 
   /// [intentElement] Extensions for intent
@@ -4300,7 +4300,7 @@ abstract class _ActivityDefinition extends ActivityDefinition {
   /// [priority] Indicates how quickly the activity  should be addressed with
   ///  respect to other requests.
   @HiveField(67)
-  Code? get priority;
+  FhirCode? get priority;
   @override
 
   /// [priorityElement] Extensions for priority
@@ -4483,7 +4483,7 @@ mixin _$ActivityDefinitionParticipant {
       throw _privateConstructorUsedError;
 
   /// [type] The type of participant in the action.
-  Code? get type => throw _privateConstructorUsedError;
+  FhirCode? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
@@ -4511,7 +4511,7 @@ abstract class $ActivityDefinitionParticipantCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? type,
+      FhirCode? type,
       @JsonKey(name: '_type') Element? typeElement,
       CodeableConcept? role});
 
@@ -4606,7 +4606,7 @@ abstract class _$$_ActivityDefinitionParticipantCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? type,
+      FhirCode? type,
       @JsonKey(name: '_type') Element? typeElement,
       CodeableConcept? role});
 
@@ -4859,7 +4859,7 @@ abstract class _ActivityDefinitionParticipant
   @override
 
   /// [type] The type of participant in the action.
-  Code? get type;
+  FhirCode? get type;
   @override
 
   /// [typeElement] Extensions for type
@@ -5361,7 +5361,7 @@ mixin _$DeviceDefinition {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -5577,7 +5577,7 @@ abstract class $DeviceDefinitionCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -6073,7 +6073,7 @@ abstract class _$$_DeviceDefinitionCopyWith<$Res>
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -7211,7 +7211,7 @@ abstract class _DeviceDefinition extends DeviceDefinition {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -8026,7 +8026,7 @@ mixin _$DeviceDefinitionDeviceName {
   /// [type] The type of deviceName.
   /// UDILabelName | UserFriendlyName | PatientReportedName |
   ///  ManufactureDeviceName | ModelName.
-  Code? get type => throw _privateConstructorUsedError;
+  FhirCode? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
@@ -8051,7 +8051,7 @@ abstract class $DeviceDefinitionDeviceNameCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
-      Code? type,
+      FhirCode? type,
       @JsonKey(name: '_type') Element? typeElement});
 
   $ElementCopyWith<$Res>? get nameElement;
@@ -8152,7 +8152,7 @@ abstract class _$$_DeviceDefinitionDeviceNameCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
-      Code? type,
+      FhirCode? type,
       @JsonKey(name: '_type') Element? typeElement});
 
   @override
@@ -8430,7 +8430,7 @@ abstract class _DeviceDefinitionDeviceName extends DeviceDefinitionDeviceName {
   /// [type] The type of deviceName.
   /// UDILabelName | UserFriendlyName | PatientReportedName |
   ///  ManufactureDeviceName | ModelName.
-  Code? get type;
+  FhirCode? get type;
   @override
 
   /// [typeElement] Extensions for type
@@ -10260,7 +10260,7 @@ mixin _$EventDefinition {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -10380,7 +10380,7 @@ mixin _$EventDefinition {
   /// [status] The status of this event definition. Enables tracking the
   ///  life-cycle of the content.
   @HiveField(22)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -10579,7 +10579,7 @@ abstract class $EventDefinitionCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -10620,7 +10620,7 @@ abstract class $EventDefinitionCopyWith<$Res> {
       @HiveField(21)
           Element? subtitleElement,
       @HiveField(22)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(23)
           Element? statusElement,
@@ -11302,7 +11302,7 @@ abstract class _$$_EventDefinitionCopyWith<$Res>
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -11343,7 +11343,7 @@ abstract class _$$_EventDefinitionCopyWith<$Res>
       @HiveField(21)
           Element? subtitleElement,
       @HiveField(22)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(23)
           Element? statusElement,
@@ -12797,7 +12797,7 @@ abstract class _EventDefinition extends EventDefinition {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -12933,7 +12933,7 @@ abstract class _EventDefinition extends EventDefinition {
   /// [status] The status of this event definition. Enables tracking the
   ///  life-cycle of the content.
   @HiveField(22)
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -13177,7 +13177,7 @@ mixin _$ObservationDefinition {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -13332,7 +13332,7 @@ abstract class $ObservationDefinitionCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -13730,7 +13730,7 @@ abstract class _$$_ObservationDefinitionCopyWith<$Res>
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -14533,7 +14533,7 @@ abstract class _ObservationDefinition extends ObservationDefinition {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -14730,7 +14730,7 @@ mixin _$ObservationDefinitionQuantitativeDetails {
 
   /// [conversionFactor] Factor for converting value expressed with SI unit to
   ///  value expressed with customary unit.
-  Decimal? get conversionFactor => throw _privateConstructorUsedError;
+  FhirDecimal? get conversionFactor => throw _privateConstructorUsedError;
 
   /// [conversionFactorElement] Extensions for conversionFactor
   @JsonKey(name: '_conversionFactor')
@@ -14765,7 +14765,7 @@ abstract class $ObservationDefinitionQuantitativeDetailsCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       CodeableConcept? customaryUnit,
       CodeableConcept? unit,
-      Decimal? conversionFactor,
+      FhirDecimal? conversionFactor,
       @JsonKey(name: '_conversionFactor') Element? conversionFactorElement,
       Integer? decimalPrecision,
       @JsonKey(name: '_decimalPrecision') Element? decimalPrecisionElement});
@@ -14905,7 +14905,7 @@ abstract class _$$_ObservationDefinitionQuantitativeDetailsCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       CodeableConcept? customaryUnit,
       CodeableConcept? unit,
-      Decimal? conversionFactor,
+      FhirDecimal? conversionFactor,
       @JsonKey(name: '_conversionFactor') Element? conversionFactorElement,
       Integer? decimalPrecision,
       @JsonKey(name: '_decimalPrecision') Element? decimalPrecisionElement});
@@ -15230,7 +15230,7 @@ abstract class _ObservationDefinitionQuantitativeDetails
 
   /// [conversionFactor] Factor for converting value expressed with SI unit to
   ///  value expressed with customary unit.
-  Decimal? get conversionFactor;
+  FhirDecimal? get conversionFactor;
   @override
 
   /// [conversionFactorElement] Extensions for conversionFactor
@@ -15292,7 +15292,7 @@ mixin _$ObservationDefinitionQualifiedInterval {
 
   /// [category] The category of interval of values for continuous or ordinal
   ///  observations conforming to this ObservationDefinition.
-  Code? get category => throw _privateConstructorUsedError;
+  FhirCode? get category => throw _privateConstructorUsedError;
 
   /// [categoryElement] Extensions for category
   @JsonKey(name: '_category')
@@ -15311,7 +15311,7 @@ mixin _$ObservationDefinitionQualifiedInterval {
   List<CodeableConcept>? get appliesTo => throw _privateConstructorUsedError;
 
   /// [gender] Sex of the population the range applies to.
-  Code? get gender => throw _privateConstructorUsedError;
+  FhirCode? get gender => throw _privateConstructorUsedError;
 
   /// [genderElement] Extensions for gender
   @JsonKey(name: '_gender')
@@ -15351,12 +15351,12 @@ abstract class $ObservationDefinitionQualifiedIntervalCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? category,
+      FhirCode? category,
       @JsonKey(name: '_category') Element? categoryElement,
       Range? range,
       CodeableConcept? context,
       List<CodeableConcept>? appliesTo,
-      Code? gender,
+      FhirCode? gender,
       @JsonKey(name: '_gender') Element? genderElement,
       Range? age,
       Range? gestationalAge,
@@ -15559,12 +15559,12 @@ abstract class _$$_ObservationDefinitionQualifiedIntervalCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? category,
+      FhirCode? category,
       @JsonKey(name: '_category') Element? categoryElement,
       Range? range,
       CodeableConcept? context,
       List<CodeableConcept>? appliesTo,
-      Code? gender,
+      FhirCode? gender,
       @JsonKey(name: '_gender') Element? genderElement,
       Range? age,
       Range? gestationalAge,
@@ -15963,7 +15963,7 @@ abstract class _ObservationDefinitionQualifiedInterval
 
   /// [category] The category of interval of values for continuous or ordinal
   ///  observations conforming to this ObservationDefinition.
-  Code? get category;
+  FhirCode? get category;
   @override
 
   /// [categoryElement] Extensions for category
@@ -15987,7 +15987,7 @@ abstract class _ObservationDefinitionQualifiedInterval
   @override
 
   /// [gender] Sex of the population the range applies to.
-  Code? get gender;
+  FhirCode? get gender;
   @override
 
   /// [genderElement] Extensions for gender
@@ -16054,7 +16054,7 @@ mixin _$PlanDefinition {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -16183,7 +16183,7 @@ mixin _$PlanDefinition {
   /// [status] The status of this plan definition. Enables tracking the
   ///  life-cycle of the content.
   @HiveField(23)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -16398,7 +16398,7 @@ abstract class $PlanDefinitionCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -16441,7 +16441,7 @@ abstract class $PlanDefinitionCopyWith<$Res> {
       @HiveField(22)
           CodeableConcept? type,
       @HiveField(23)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(24)
           Element? statusElement,
@@ -17184,7 +17184,7 @@ abstract class _$$_PlanDefinitionCopyWith<$Res>
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -17227,7 +17227,7 @@ abstract class _$$_PlanDefinitionCopyWith<$Res>
       @HiveField(22)
           CodeableConcept? type,
       @HiveField(23)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(24)
           Element? statusElement,
@@ -18810,7 +18810,7 @@ abstract class _PlanDefinition extends PlanDefinition {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -18956,7 +18956,7 @@ abstract class _PlanDefinition extends PlanDefinition {
   /// [status] The status of this plan definition. Enables tracking the
   ///  life-cycle of the content.
   @HiveField(23)
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -20485,7 +20485,7 @@ mixin _$PlanDefinitionAction {
 
   /// [priority] Indicates how quickly the action should be addressed with
   ///  respect to other actions.
-  Code? get priority => throw _privateConstructorUsedError;
+  FhirCode? get priority => throw _privateConstructorUsedError;
 
   /// [priorityElement] Extensions for priority
   @JsonKey(name: '_priority')
@@ -20583,7 +20583,7 @@ mixin _$PlanDefinitionAction {
 
   /// [groupingBehavior] Defines the grouping behavior for the action and its
   ///  children.
-  Code? get groupingBehavior => throw _privateConstructorUsedError;
+  FhirCode? get groupingBehavior => throw _privateConstructorUsedError;
 
   /// [groupingBehaviorElement] Extensions for groupingBehavior
   @JsonKey(name: '_groupingBehavior')
@@ -20591,14 +20591,14 @@ mixin _$PlanDefinitionAction {
 
   /// [selectionBehavior] Defines the selection behavior for the action and its
   ///  children.
-  Code? get selectionBehavior => throw _privateConstructorUsedError;
+  FhirCode? get selectionBehavior => throw _privateConstructorUsedError;
 
   /// [selectionBehaviorElement] Extensions for selectionBehavior
   @JsonKey(name: '_selectionBehavior')
   Element? get selectionBehaviorElement => throw _privateConstructorUsedError;
 
   /// [requiredBehavior] Defines the required behavior for the action.
-  Code? get requiredBehavior => throw _privateConstructorUsedError;
+  FhirCode? get requiredBehavior => throw _privateConstructorUsedError;
 
   /// [requiredBehaviorElement] Extensions for requiredBehavior
   @JsonKey(name: '_requiredBehavior')
@@ -20606,7 +20606,7 @@ mixin _$PlanDefinitionAction {
 
   /// [precheckBehavior] Defines whether the action should usually be
   ///  preselected.
-  Code? get precheckBehavior => throw _privateConstructorUsedError;
+  FhirCode? get precheckBehavior => throw _privateConstructorUsedError;
 
   /// [precheckBehaviorElement] Extensions for precheckBehavior
   @JsonKey(name: '_precheckBehavior')
@@ -20614,7 +20614,7 @@ mixin _$PlanDefinitionAction {
 
   /// [cardinalityBehavior] Defines whether the action can be selected multiple
   ///  times.
-  Code? get cardinalityBehavior => throw _privateConstructorUsedError;
+  FhirCode? get cardinalityBehavior => throw _privateConstructorUsedError;
 
   /// [cardinalityBehaviorElement] Extensions for cardinalityBehavior
   @JsonKey(name: '_cardinalityBehavior')
@@ -20687,7 +20687,7 @@ abstract class $PlanDefinitionActionCopyWith<$Res> {
       String? textEquivalent,
       @JsonKey(name: '_textEquivalent')
           Element? textEquivalentElement,
-      Code? priority,
+      FhirCode? priority,
       @JsonKey(name: '_priority')
           Element? priorityElement,
       List<CodeableConcept>? code,
@@ -20716,19 +20716,19 @@ abstract class $PlanDefinitionActionCopyWith<$Res> {
       Timing? timingTiming,
       List<PlanDefinitionParticipant>? participant,
       CodeableConcept? type,
-      Code? groupingBehavior,
+      FhirCode? groupingBehavior,
       @JsonKey(name: '_groupingBehavior')
           Element? groupingBehaviorElement,
-      Code? selectionBehavior,
+      FhirCode? selectionBehavior,
       @JsonKey(name: '_selectionBehavior')
           Element? selectionBehaviorElement,
-      Code? requiredBehavior,
+      FhirCode? requiredBehavior,
       @JsonKey(name: '_requiredBehavior')
           Element? requiredBehaviorElement,
-      Code? precheckBehavior,
+      FhirCode? precheckBehavior,
       @JsonKey(name: '_precheckBehavior')
           Element? precheckBehaviorElement,
-      Code? cardinalityBehavior,
+      FhirCode? cardinalityBehavior,
       @JsonKey(name: '_cardinalityBehavior')
           Element? cardinalityBehaviorElement,
       Canonical? definitionCanonical,
@@ -21327,7 +21327,7 @@ abstract class _$$_PlanDefinitionActionCopyWith<$Res>
       String? textEquivalent,
       @JsonKey(name: '_textEquivalent')
           Element? textEquivalentElement,
-      Code? priority,
+      FhirCode? priority,
       @JsonKey(name: '_priority')
           Element? priorityElement,
       List<CodeableConcept>? code,
@@ -21356,19 +21356,19 @@ abstract class _$$_PlanDefinitionActionCopyWith<$Res>
       Timing? timingTiming,
       List<PlanDefinitionParticipant>? participant,
       CodeableConcept? type,
-      Code? groupingBehavior,
+      FhirCode? groupingBehavior,
       @JsonKey(name: '_groupingBehavior')
           Element? groupingBehaviorElement,
-      Code? selectionBehavior,
+      FhirCode? selectionBehavior,
       @JsonKey(name: '_selectionBehavior')
           Element? selectionBehaviorElement,
-      Code? requiredBehavior,
+      FhirCode? requiredBehavior,
       @JsonKey(name: '_requiredBehavior')
           Element? requiredBehaviorElement,
-      Code? precheckBehavior,
+      FhirCode? precheckBehavior,
       @JsonKey(name: '_precheckBehavior')
           Element? precheckBehaviorElement,
-      Code? cardinalityBehavior,
+      FhirCode? cardinalityBehavior,
       @JsonKey(name: '_cardinalityBehavior')
           Element? cardinalityBehaviorElement,
       Canonical? definitionCanonical,
@@ -22589,7 +22589,7 @@ abstract class _PlanDefinitionAction extends PlanDefinitionAction {
 
   /// [priority] Indicates how quickly the action should be addressed with
   ///  respect to other actions.
-  Code? get priority;
+  FhirCode? get priority;
   @override
 
   /// [priorityElement] Extensions for priority
@@ -22706,7 +22706,7 @@ abstract class _PlanDefinitionAction extends PlanDefinitionAction {
 
   /// [groupingBehavior] Defines the grouping behavior for the action and its
   ///  children.
-  Code? get groupingBehavior;
+  FhirCode? get groupingBehavior;
   @override
 
   /// [groupingBehaviorElement] Extensions for groupingBehavior
@@ -22716,7 +22716,7 @@ abstract class _PlanDefinitionAction extends PlanDefinitionAction {
 
   /// [selectionBehavior] Defines the selection behavior for the action and its
   ///  children.
-  Code? get selectionBehavior;
+  FhirCode? get selectionBehavior;
   @override
 
   /// [selectionBehaviorElement] Extensions for selectionBehavior
@@ -22725,7 +22725,7 @@ abstract class _PlanDefinitionAction extends PlanDefinitionAction {
   @override
 
   /// [requiredBehavior] Defines the required behavior for the action.
-  Code? get requiredBehavior;
+  FhirCode? get requiredBehavior;
   @override
 
   /// [requiredBehaviorElement] Extensions for requiredBehavior
@@ -22735,7 +22735,7 @@ abstract class _PlanDefinitionAction extends PlanDefinitionAction {
 
   /// [precheckBehavior] Defines whether the action should usually be
   ///  preselected.
-  Code? get precheckBehavior;
+  FhirCode? get precheckBehavior;
   @override
 
   /// [precheckBehaviorElement] Extensions for precheckBehavior
@@ -22745,7 +22745,7 @@ abstract class _PlanDefinitionAction extends PlanDefinitionAction {
 
   /// [cardinalityBehavior] Defines whether the action can be selected multiple
   ///  times.
-  Code? get cardinalityBehavior;
+  FhirCode? get cardinalityBehavior;
   @override
 
   /// [cardinalityBehaviorElement] Extensions for cardinalityBehavior
@@ -22842,7 +22842,7 @@ mixin _$PlanDefinitionCondition {
 
   /// [kind] The kind of condition.
   @HiveField(3)
-  Code? get kind => throw _privateConstructorUsedError;
+  FhirCode? get kind => throw _privateConstructorUsedError;
 
   /// [kindElement] Extensions for kind
   @HiveField(4)
@@ -23243,7 +23243,7 @@ abstract class _PlanDefinitionCondition extends PlanDefinitionCondition {
 
   /// [kind] The kind of condition.
   @HiveField(3)
-  Code? get kind;
+  FhirCode? get kind;
   @override
 
   /// [kindElement] Extensions for kind
@@ -23306,7 +23306,7 @@ mixin _$PlanDefinitionRelatedAction {
   Element? get actionIdElement => throw _privateConstructorUsedError;
 
   /// [relationship] The relationship of this action to the related action.
-  Code? get relationship => throw _privateConstructorUsedError;
+  FhirCode? get relationship => throw _privateConstructorUsedError;
 
   /// [relationshipElement] Extensions for relationship
   @JsonKey(name: '_relationship')
@@ -23340,7 +23340,7 @@ abstract class $PlanDefinitionRelatedActionCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       FhirId? actionId,
       @JsonKey(name: '_actionId') Element? actionIdElement,
-      Code? relationship,
+      FhirCode? relationship,
       @JsonKey(name: '_relationship') Element? relationshipElement,
       FhirDuration? offsetDuration,
       Range? offsetRange});
@@ -23479,7 +23479,7 @@ abstract class _$$_PlanDefinitionRelatedActionCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       FhirId? actionId,
       @JsonKey(name: '_actionId') Element? actionIdElement,
-      Code? relationship,
+      FhirCode? relationship,
       @JsonKey(name: '_relationship') Element? relationshipElement,
       FhirDuration? offsetDuration,
       Range? offsetRange});
@@ -23791,7 +23791,7 @@ abstract class _PlanDefinitionRelatedAction
   @override
 
   /// [relationship] The relationship of this action to the related action.
-  Code? get relationship;
+  FhirCode? get relationship;
   @override
 
   /// [relationshipElement] Extensions for relationship
@@ -23850,7 +23850,7 @@ mixin _$PlanDefinitionParticipant {
       throw _privateConstructorUsedError;
 
   /// [type] The type of participant in the action.
-  Code? get type => throw _privateConstructorUsedError;
+  FhirCode? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
@@ -23876,7 +23876,7 @@ abstract class $PlanDefinitionParticipantCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? type,
+      FhirCode? type,
       @JsonKey(name: '_type') Element? typeElement,
       CodeableConcept? role});
 
@@ -23971,7 +23971,7 @@ abstract class _$$_PlanDefinitionParticipantCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? type,
+      FhirCode? type,
       @JsonKey(name: '_type') Element? typeElement,
       CodeableConcept? role});
 
@@ -24222,7 +24222,7 @@ abstract class _PlanDefinitionParticipant extends PlanDefinitionParticipant {
   @override
 
   /// [type] The type of participant in the action.
-  Code? get type;
+  FhirCode? get type;
   @override
 
   /// [typeElement] Extensions for type
@@ -24723,7 +24723,7 @@ mixin _$Questionnaire {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -24837,7 +24837,7 @@ mixin _$Questionnaire {
   /// [status] The status of this questionnaire. Enables tracking the
   ///  life-cycle of the content.
   @HiveField(21)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -24999,7 +24999,7 @@ abstract class $QuestionnaireCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -25037,7 +25037,7 @@ abstract class $QuestionnaireCopyWith<$Res> {
       @HiveField(20)
           List<FhirCanonical>? derivedFrom,
       @HiveField(21)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(22)
           Element? statusElement,
@@ -25611,7 +25611,7 @@ abstract class _$$_QuestionnaireCopyWith<$Res>
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -25649,7 +25649,7 @@ abstract class _$$_QuestionnaireCopyWith<$Res>
       @HiveField(20)
           List<FhirCanonical>? derivedFrom,
       @HiveField(21)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(22)
           Element? statusElement,
@@ -26916,7 +26916,7 @@ abstract class _Questionnaire extends Questionnaire {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -27045,7 +27045,7 @@ abstract class _Questionnaire extends Questionnaire {
   /// [status] The status of this questionnaire. Enables tracking the
   ///  life-cycle of the content.
   @HiveField(21)
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -27299,7 +27299,7 @@ mixin _$QuestionnaireItem {
 
   /// [enableBehavior] Controls how multiple enableWhen values are interpreted
   ///  -  whether all or any must be true.
-  Code? get enableBehavior => throw _privateConstructorUsedError;
+  FhirCode? get enableBehavior => throw _privateConstructorUsedError;
 
   /// [enableBehaviorElement] Extensions for enableBehavior
   @JsonKey(name: '_enableBehavior')
@@ -27385,7 +27385,7 @@ abstract class $QuestionnaireItemCopyWith<$Res> {
       Code type,
       @JsonKey(name: '_type') Element? typeElement,
       List<QuestionnaireEnableWhen>? enableWhen,
-      Code? enableBehavior,
+      FhirCode? enableBehavior,
       @JsonKey(name: '_enableBehavior') Element? enableBehaviorElement,
       @JsonKey(name: 'required') Boolean? required_,
       @JsonKey(name: '_required') Element? requiredElement,
@@ -27720,7 +27720,7 @@ abstract class _$$_QuestionnaireItemCopyWith<$Res>
       Code type,
       @JsonKey(name: '_type') Element? typeElement,
       List<QuestionnaireEnableWhen>? enableWhen,
-      Code? enableBehavior,
+      FhirCode? enableBehavior,
       @JsonKey(name: '_enableBehavior') Element? enableBehaviorElement,
       @JsonKey(name: 'required') Boolean? required_,
       @JsonKey(name: '_required') Element? requiredElement,
@@ -28461,7 +28461,7 @@ abstract class _QuestionnaireItem extends QuestionnaireItem {
 
   /// [enableBehavior] Controls how multiple enableWhen values are interpreted
   ///  -  whether all or any must be true.
-  Code? get enableBehavior;
+  FhirCode? get enableBehavior;
   @override
 
   /// [enableBehaviorElement] Extensions for enableBehavior
@@ -28582,7 +28582,7 @@ mixin _$QuestionnaireEnableWhen {
 
   /// [operator] Specifies the criteria by which the question is enabled.
   @JsonKey(name: 'operator')
-  Code? get operator_ => throw _privateConstructorUsedError;
+  FhirCode? get operator_ => throw _privateConstructorUsedError;
 
   /// [operatorElement] Extensions for operator
   @JsonKey(name: '_operator')
@@ -28598,7 +28598,7 @@ mixin _$QuestionnaireEnableWhen {
 
   /// [answerDecimal] A value that the referenced question is tested using the
   ///  specified operator in order for the item to be enabled.
-  Decimal? get answerDecimal => throw _privateConstructorUsedError;
+  FhirDecimal? get answerDecimal => throw _privateConstructorUsedError;
 
   /// [answerDecimalElement] Extensions for answerDecimal
   @JsonKey(name: '_answerDecimal')
@@ -28678,7 +28678,7 @@ abstract class $QuestionnaireEnableWhenCopyWith<$Res> {
       @JsonKey(name: '_operator') Element? operatorElement,
       Boolean? answerBoolean,
       @JsonKey(name: '_answerBoolean') Element? answerBooleanElement,
-      Decimal? answerDecimal,
+      FhirDecimal? answerDecimal,
       @JsonKey(name: '_answerDecimal') Element? answerDecimalElement,
       Integer? answerInteger,
       @JsonKey(name: '_answerInteger') Element? answerIntegerElement,
@@ -29010,7 +29010,7 @@ abstract class _$$_QuestionnaireEnableWhenCopyWith<$Res>
       @JsonKey(name: '_operator') Element? operatorElement,
       Boolean? answerBoolean,
       @JsonKey(name: '_answerBoolean') Element? answerBooleanElement,
-      Decimal? answerDecimal,
+      FhirDecimal? answerDecimal,
       @JsonKey(name: '_answerDecimal') Element? answerDecimalElement,
       Integer? answerInteger,
       @JsonKey(name: '_answerInteger') Element? answerIntegerElement,
@@ -29578,7 +29578,7 @@ abstract class _QuestionnaireEnableWhen extends QuestionnaireEnableWhen {
 
   /// [operator] Specifies the criteria by which the question is enabled.
   @JsonKey(name: 'operator')
-  Code? get operator_;
+  FhirCode? get operator_;
   @override
 
   /// [operatorElement] Extensions for operator
@@ -29598,7 +29598,7 @@ abstract class _QuestionnaireEnableWhen extends QuestionnaireEnableWhen {
 
   /// [answerDecimal] A value that the referenced question is tested using the
   ///  specified operator in order for the item to be enabled.
-  Decimal? get answerDecimal;
+  FhirDecimal? get answerDecimal;
   @override
 
   /// [answerDecimalElement] Extensions for answerDecimal
@@ -30510,7 +30510,7 @@ mixin _$QuestionnaireInitial {
   Element? get valueBooleanElement => throw _privateConstructorUsedError;
 
   /// [valueDecimal] The actual value to for an initial answer.
-  Decimal? get valueDecimal => throw _privateConstructorUsedError;
+  FhirDecimal? get valueDecimal => throw _privateConstructorUsedError;
 
   /// [valueDecimalElement] Extensions for valueDecimal
   @JsonKey(name: '_valueDecimal')
@@ -30588,7 +30588,7 @@ abstract class $QuestionnaireInitialCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       Boolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-      Decimal? valueDecimal,
+      FhirDecimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
       Integer? valueInteger,
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
@@ -30914,7 +30914,7 @@ abstract class _$$_QuestionnaireInitialCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       Boolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-      Decimal? valueDecimal,
+      FhirDecimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
       Integer? valueInteger,
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
@@ -31454,7 +31454,7 @@ abstract class _QuestionnaireInitial extends QuestionnaireInitial {
   @override
 
   /// [valueDecimal] The actual value to for an initial answer.
-  Decimal? get valueDecimal;
+  FhirDecimal? get valueDecimal;
   @override
 
   /// [valueDecimalElement] Extensions for valueDecimal
@@ -31571,7 +31571,7 @@ mixin _$SpecimenDefinition {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -31679,7 +31679,7 @@ abstract class $SpecimenDefinitionCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -31932,7 +31932,7 @@ abstract class _$$_SpecimenDefinitionCopyWith<$Res>
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -32511,7 +32511,7 @@ abstract class _SpecimenDefinition extends SpecimenDefinition {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -32654,7 +32654,7 @@ mixin _$SpecimenDefinitionTypeTested {
   CodeableConcept? get type => throw _privateConstructorUsedError;
 
   /// [preference] The preference for this type of conditioned specimen.
-  Code? get preference => throw _privateConstructorUsedError;
+  FhirCode? get preference => throw _privateConstructorUsedError;
 
   /// [preferenceElement] Extensions for preference
   @JsonKey(name: '_preference')
@@ -32708,7 +32708,7 @@ abstract class $SpecimenDefinitionTypeTestedCopyWith<$Res> {
       Boolean? isDerived,
       @JsonKey(name: '_isDerived') Element? isDerivedElement,
       CodeableConcept? type,
-      Code? preference,
+      FhirCode? preference,
       @JsonKey(name: '_preference') Element? preferenceElement,
       SpecimenDefinitionContainer? container,
       String? requirement,
@@ -32904,7 +32904,7 @@ abstract class _$$_SpecimenDefinitionTypeTestedCopyWith<$Res>
       Boolean? isDerived,
       @JsonKey(name: '_isDerived') Element? isDerivedElement,
       CodeableConcept? type,
-      Code? preference,
+      FhirCode? preference,
       @JsonKey(name: '_preference') Element? preferenceElement,
       SpecimenDefinitionContainer? container,
       String? requirement,
@@ -33324,7 +33324,7 @@ abstract class _SpecimenDefinitionTypeTested
   @override
 
   /// [preference] The preference for this type of conditioned specimen.
-  Code? get preference;
+  FhirCode? get preference;
   @override
 
   /// [preferenceElement] Extensions for preference

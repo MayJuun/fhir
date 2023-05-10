@@ -192,7 +192,7 @@ class CarePlan extends HiveObject with Resource, _$CarePlan {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -285,7 +285,7 @@ class CarePlan extends HiveObject with Resource, _$CarePlan {
     /// [status] Indicates whether the plan is currently being acted upon,
     ///  represents future intentions or is now a historical record.
     @HiveField(21)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -295,7 +295,7 @@ class CarePlan extends HiveObject with Resource, _$CarePlan {
     /// [intent] Indicates the level of authority/intentionality associated with
     ///  the care plan and where the care plan fits into the workflow chain.
     @HiveField(23)
-        Code? intent,
+        FhirCode? intent,
 
     /// [intentElement] Extensions for intent
     @JsonKey(name: '_intent')
@@ -711,7 +711,7 @@ class CarePlanDetail with _$CarePlanDetail {
     /// in-line definition when a resource is not referenced using
     /// CarePlan.activity.reference.  For example, a MedicationRequest, a
     ///  ServiceRequest, or a CommunicationRequest.
-    Code? kind,
+    FhirCode? kind,
 
     /// [kindElement] Extensions for kind
     @JsonKey(name: '_kind') Element? kindElement,
@@ -749,7 +749,7 @@ class CarePlanDetail with _$CarePlanDetail {
 
     /// [status] Identifies what progress is being made for the specific
     ///  activity.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -983,7 +983,7 @@ class CareTeam extends HiveObject with Resource, _$CareTeam {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -1040,7 +1040,7 @@ class CareTeam extends HiveObject with Resource, _$CareTeam {
 
     /// [status] Indicates the current state of the care team.
     @HiveField(12)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -1406,7 +1406,7 @@ class Goal extends HiveObject with Resource, _$Goal {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -1463,7 +1463,7 @@ class Goal extends HiveObject with Resource, _$Goal {
 
     /// [lifecycleStatus] The state of the goal throughout its lifecycle.
     @HiveField(12)
-        Code? lifecycleStatus,
+        FhirCode? lifecycleStatus,
 
     /// [lifecycleStatusElement] Extensions for lifecycleStatus
     @JsonKey(name: '_lifecycleStatus')
@@ -1995,7 +1995,7 @@ class NutritionOrder extends HiveObject with Resource, _$NutritionOrder {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -2081,7 +2081,7 @@ class NutritionOrder extends HiveObject with Resource, _$NutritionOrder {
 
     /// [status] The workflow status of the nutrition order/request.
     @HiveField(19)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -2091,7 +2091,7 @@ class NutritionOrder extends HiveObject with Resource, _$NutritionOrder {
     /// [intent] Indicates the level of authority/intentionality associated with
     ///  the NutrionOrder and where the request fits into the workflow chain.
     @HiveField(21)
-        Code? intent,
+        FhirCode? intent,
 
     /// [intentElement] Extensions for intent
     @JsonKey(name: '_intent')
@@ -3161,7 +3161,7 @@ class RequestGroup extends HiveObject with Resource, _$RequestGroup {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -3257,7 +3257,7 @@ class RequestGroup extends HiveObject with Resource, _$RequestGroup {
     /// [status] The current state of the request. For request groups, the status
     ///  reflects the status of all the requests in the group.
     @HiveField(20)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -3267,7 +3267,7 @@ class RequestGroup extends HiveObject with Resource, _$RequestGroup {
     /// [intent] Indicates the level of authority/intentionality associated with
     ///  the request and where the request fits into the workflow chain.
     @HiveField(22)
-        Code? intent,
+        FhirCode? intent,
 
     /// [intentElement] Extensions for intent
     @JsonKey(name: '_intent')
@@ -3277,7 +3277,7 @@ class RequestGroup extends HiveObject with Resource, _$RequestGroup {
     /// [priority] Indicates how quickly the request should be addressed with
     ///  respect to other requests.
     @HiveField(24)
-        Code? priority,
+        FhirCode? priority,
 
     /// [priorityElement] Extensions for priority
     @JsonKey(name: '_priority')
@@ -3542,7 +3542,7 @@ class RequestGroupAction with _$RequestGroupAction {
 
     /// [priority] Indicates how quickly the action should be addressed with
     ///  respect to other actions.
-    Code? priority,
+    FhirCode? priority,
 
     /// [priorityElement] Extensions for priority
     @JsonKey(name: '_priority') Element? priorityElement,
@@ -3601,35 +3601,35 @@ class RequestGroupAction with _$RequestGroupAction {
 
     /// [groupingBehavior] Defines the grouping behavior for the action and its
     ///  children.
-    Code? groupingBehavior,
+    FhirCode? groupingBehavior,
 
     /// [groupingBehaviorElement] Extensions for groupingBehavior
     @JsonKey(name: '_groupingBehavior') Element? groupingBehaviorElement,
 
     /// [selectionBehavior] Defines the selection behavior for the action and its
     ///  children.
-    Code? selectionBehavior,
+    FhirCode? selectionBehavior,
 
     /// [selectionBehaviorElement] Extensions for selectionBehavior
     @JsonKey(name: '_selectionBehavior') Element? selectionBehaviorElement,
 
     /// [requiredBehavior] Defines expectations around whether an action is
     ///  required.
-    Code? requiredBehavior,
+    FhirCode? requiredBehavior,
 
     /// [requiredBehaviorElement] Extensions for requiredBehavior
     @JsonKey(name: '_requiredBehavior') Element? requiredBehaviorElement,
 
     /// [precheckBehavior] Defines whether the action should usually be
     ///  preselected.
-    Code? precheckBehavior,
+    FhirCode? precheckBehavior,
 
     /// [precheckBehaviorElement] Extensions for precheckBehavior
     @JsonKey(name: '_precheckBehavior') Element? precheckBehaviorElement,
 
     /// [cardinalityBehavior] Defines whether the action can be selected multiple
     ///  times.
-    Code? cardinalityBehavior,
+    FhirCode? cardinalityBehavior,
 
     /// [cardinalityBehaviorElement] Extensions for cardinalityBehavior
     @JsonKey(name: '_cardinalityBehavior') Element? cardinalityBehaviorElement,
@@ -3866,7 +3866,7 @@ class RequestGroupRelatedAction with _$RequestGroupRelatedAction {
     @JsonKey(name: '_actionId') Element? actionIdElement,
 
     /// [relationship] The relationship of this action to the related action.
-    Code? relationship,
+    FhirCode? relationship,
 
     /// [relationshipElement] Extensions for relationship
     @JsonKey(name: '_relationship') Element? relationshipElement,
@@ -4058,7 +4058,7 @@ class RiskAssessment extends HiveObject with Resource, _$RiskAssessment {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -4125,7 +4125,7 @@ class RiskAssessment extends HiveObject with Resource, _$RiskAssessment {
     /// [status] The status of the RiskAssessment, using the same statuses as an
     ///  Observation.
     @HiveField(15)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -4332,7 +4332,7 @@ class RiskAssessmentPrediction with _$RiskAssessmentPrediction {
 
     /// [probabilityDecimal] Indicates how likely the outcome is (in the
     ///  specified timeframe).
-    Decimal? probabilityDecimal,
+    FhirDecimal? probabilityDecimal,
 
     /// [probabilityDecimalElement] Extensions for probabilityDecimal
     @JsonKey(name: '_probabilityDecimal') Element? probabilityDecimalElement,
@@ -4349,7 +4349,7 @@ class RiskAssessmentPrediction with _$RiskAssessmentPrediction {
     /// specific characteristics) divided by the risk of the population in
     /// general.  (Numbers greater than 1 = higher risk than the population,
     ///  numbers less than 1 = lower risk.).
-    Decimal? relativeRisk,
+    FhirDecimal? relativeRisk,
 
     /// [relativeRiskElement] Extensions for relativeRisk
     @JsonKey(name: '_relativeRisk') Element? relativeRiskElement,
@@ -4648,7 +4648,7 @@ class ServiceRequest extends HiveObject with Resource, _$ServiceRequest {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -4740,7 +4740,7 @@ class ServiceRequest extends HiveObject with Resource, _$ServiceRequest {
 
     /// [status] The status of the order.
     @HiveField(21)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -4750,7 +4750,7 @@ class ServiceRequest extends HiveObject with Resource, _$ServiceRequest {
     /// [intent] Whether the request is a proposal, plan, an original order or a
     ///  reflex order.
     @HiveField(23)
-        Code? intent,
+        FhirCode? intent,
 
     /// [intentElement] Extensions for intent
     @JsonKey(name: '_intent')
@@ -4765,7 +4765,7 @@ class ServiceRequest extends HiveObject with Resource, _$ServiceRequest {
     /// [priority] Indicates how quickly the ServiceRequest should be addressed
     ///  with respect to other requests.
     @HiveField(26)
-        Code? priority,
+        FhirCode? priority,
 
     /// [priorityElement] Extensions for priority
     @JsonKey(name: '_priority')
@@ -5121,7 +5121,7 @@ class VisionPrescription extends HiveObject
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -5176,7 +5176,7 @@ class VisionPrescription extends HiveObject
 
     /// [status] The status of the resource instance.
     @HiveField(12)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -5369,20 +5369,20 @@ class VisionPrescriptionLensSpecification
     required CodeableConcept product,
 
     /// [eye] The eye for which the lens specification applies.
-    Code? eye,
+    FhirCode? eye,
 
     /// [eyeElement] Extensions for eye
     @JsonKey(name: '_eye') Element? eyeElement,
 
     /// [sphere] Lens power measured in dioptres (0.25 units).
-    Decimal? sphere,
+    FhirDecimal? sphere,
 
     /// [sphereElement] Extensions for sphere
     @JsonKey(name: '_sphere') Element? sphereElement,
 
     /// [cylinder] Power adjustment for astigmatism measured in dioptres (0.25
     ///  units).
-    Decimal? cylinder,
+    FhirDecimal? cylinder,
 
     /// [cylinderElement] Extensions for cylinder
     @JsonKey(name: '_cylinder') Element? cylinderElement,
@@ -5398,25 +5398,25 @@ class VisionPrescriptionLensSpecification
 
     /// [add] Power adjustment for multifocal lenses measured in dioptres (0.25
     ///  units).
-    Decimal? add,
+    FhirDecimal? add,
 
     /// [addElement] Extensions for add
     @JsonKey(name: '_add') Element? addElement,
 
     /// [power] Contact lens power measured in dioptres (0.25 units).
-    Decimal? power,
+    FhirDecimal? power,
 
     /// [powerElement] Extensions for power
     @JsonKey(name: '_power') Element? powerElement,
 
     /// [backCurve] Back curvature measured in millimetres.
-    Decimal? backCurve,
+    FhirDecimal? backCurve,
 
     /// [backCurveElement] Extensions for backCurve
     @JsonKey(name: '_backCurve') Element? backCurveElement,
 
     /// [diameter] Contact lens diameter measured in millimetres.
-    Decimal? diameter,
+    FhirDecimal? diameter,
 
     /// [diameterElement] Extensions for diameter
     @JsonKey(name: '_diameter') Element? diameterElement,
@@ -5532,13 +5532,13 @@ class VisionPrescriptionPrism with _$VisionPrescriptionPrism {
 
     /// [amount] Amount of prism to compensate for eye alignment in fractional
     ///  units.
-    Decimal? amount,
+    FhirDecimal? amount,
 
     /// [amountElement] Extensions for amount
     @JsonKey(name: '_amount') Element? amountElement,
 
     /// [base] The relative base, or reference lens edge, for the prism.
-    Code? base,
+    FhirCode? base,
 
     /// [baseElement] Extensions for base
     @JsonKey(name: '_base') Element? baseElement,

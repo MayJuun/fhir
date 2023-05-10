@@ -190,7 +190,7 @@ class Encounter extends HiveObject with Resource, _$Encounter {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -246,7 +246,7 @@ class Encounter extends HiveObject with Resource, _$Encounter {
     /// [status] planned | arrived | triaged | in-progress | onleave | finished |
     ///  cancelled +.
     @HiveField(12)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -470,7 +470,7 @@ class EncounterStatusHistory with _$EncounterStatusHistory {
 
     /// [status] planned | arrived | triaged | in-progress | onleave | finished |
     ///  cancelled +.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -1256,7 +1256,7 @@ class EpisodeOfCare extends HiveObject with Resource, _$EpisodeOfCare {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -1313,7 +1313,7 @@ class EpisodeOfCare extends HiveObject with Resource, _$EpisodeOfCare {
 
     /// [status] planned | waitlist | active | onhold | finished | cancelled.
     @HiveField(12)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -1467,7 +1467,7 @@ class EpisodeOfCareStatusHistory with _$EpisodeOfCareStatusHistory {
     List<FhirExtension>? modifierExtension,
 
     /// [status] planned | waitlist | active | onhold | finished | cancelled.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -1747,7 +1747,7 @@ class Flag extends HiveObject with Resource, _$Flag {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -1804,7 +1804,7 @@ class Flag extends HiveObject with Resource, _$Flag {
 
     /// [status] Supports basic workflow.
     @HiveField(12)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -2120,7 +2120,7 @@ class Library extends HiveObject with Resource, _$Library {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -2246,7 +2246,7 @@ class Library extends HiveObject with Resource, _$Library {
     /// [status] The status of this library. Enables tracking the life-cycle of
     ///  the content.
     @HiveField(23)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -2601,7 +2601,7 @@ class FhirList extends HiveObject with Resource, _$FhirList {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @HiveField(6)
@@ -2657,7 +2657,7 @@ class FhirList extends HiveObject with Resource, _$FhirList {
 
     /// [status] Indicates the current state of this list.
     @HiveField(12)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @HiveField(13)
@@ -2669,7 +2669,7 @@ class FhirList extends HiveObject with Resource, _$FhirList {
     /// snapshot of a list of items from another source, or whether it is a
     ///  prepared list where items may be marked as added, modified or deleted.
     @HiveField(14)
-        Code? mode,
+        FhirCode? mode,
 
     /// [modeElement] Extensions for mode
     @HiveField(15)

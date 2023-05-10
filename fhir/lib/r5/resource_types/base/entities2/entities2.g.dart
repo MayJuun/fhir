@@ -359,7 +359,7 @@ _$_BiologicallyDerivedProductProperty
           modifierExtension: (json['modifierExtension'] as List<dynamic>?)
               ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
               .toList(),
-          type: Coding.fromJson(json['type'] as Map<String, dynamic>),
+          type: CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
           valueBoolean: json['valueBoolean'] == null
               ? null
               : FhirBoolean.fromJson(json['valueBoolean']),
@@ -512,8 +512,8 @@ _$_Device _$$_DeviceFromJson(Map<String, dynamic> json) => _$_Device(
       serialNumberElement: json['_serialNumber'] == null
           ? null
           : Element.fromJson(json['_serialNumber'] as Map<String, dynamic>),
-      deviceName: (json['deviceName'] as List<dynamic>?)
-          ?.map((e) => DeviceDeviceName.fromJson(e as Map<String, dynamic>))
+      name: (json['name'] as List<dynamic>?)
+          ?.map((e) => DeviceName.fromJson(e as Map<String, dynamic>))
           .toList(),
       modelNumber: json['modelNumber'] as String?,
       modelNumberElement: json['_modelNumber'] == null
@@ -532,18 +532,21 @@ _$_Device _$$_DeviceFromJson(Map<String, dynamic> json) => _$_Device(
       version: (json['version'] as List<dynamic>?)
           ?.map((e) => DeviceVersion.fromJson(e as Map<String, dynamic>))
           .toList(),
-      specialization: (json['specialization'] as List<dynamic>?)
-          ?.map((e) => DeviceSpecialization.fromJson(e as Map<String, dynamic>))
+      conformsTo: (json['conformsTo'] as List<dynamic>?)
+          ?.map((e) => DeviceConformsTo.fromJson(e as Map<String, dynamic>))
           .toList(),
       property: (json['property'] as List<dynamic>?)
           ?.map((e) => DeviceProperty.fromJson(e as Map<String, dynamic>))
           .toList(),
-      operation: (json['operation'] as List<dynamic>?)
-          ?.map((e) => DeviceOperation.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      association: (json['association'] as List<dynamic>?)
-          ?.map((e) => DeviceAssociation.fromJson(e as Map<String, dynamic>))
-          .toList(),
+      mode: json['mode'] == null
+          ? null
+          : CodeableConcept.fromJson(json['mode'] as Map<String, dynamic>),
+      cycle: json['cycle'] == null
+          ? null
+          : Count.fromJson(json['cycle'] as Map<String, dynamic>),
+      duration: json['duration'] == null
+          ? null
+          : FhirDuration.fromJson(json['duration'] as Map<String, dynamic>),
       owner: json['owner'] == null
           ? null
           : Reference.fromJson(json['owner'] as Map<String, dynamic>),
@@ -620,8 +623,7 @@ Map<String, dynamic> _$$_DeviceToJson(_$_Device instance) {
   writeNotNull('_lotNumber', instance.lotNumberElement?.toJson());
   writeNotNull('serialNumber', instance.serialNumber);
   writeNotNull('_serialNumber', instance.serialNumberElement?.toJson());
-  writeNotNull(
-      'deviceName', instance.deviceName?.map((e) => e.toJson()).toList());
+  writeNotNull('name', instance.name?.map((e) => e.toJson()).toList());
   writeNotNull('modelNumber', instance.modelNumber);
   writeNotNull('_modelNumber', instance.modelNumberElement?.toJson());
   writeNotNull('partNumber', instance.partNumber);
@@ -629,13 +631,12 @@ Map<String, dynamic> _$$_DeviceToJson(_$_Device instance) {
   writeNotNull('category', instance.category?.map((e) => e.toJson()).toList());
   writeNotNull('type', instance.type?.map((e) => e.toJson()).toList());
   writeNotNull('version', instance.version?.map((e) => e.toJson()).toList());
-  writeNotNull('specialization',
-      instance.specialization?.map((e) => e.toJson()).toList());
+  writeNotNull(
+      'conformsTo', instance.conformsTo?.map((e) => e.toJson()).toList());
   writeNotNull('property', instance.property?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'operation', instance.operation?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'association', instance.association?.map((e) => e.toJson()).toList());
+  writeNotNull('mode', instance.mode?.toJson());
+  writeNotNull('cycle', instance.cycle?.toJson());
+  writeNotNull('duration', instance.duration?.toJson());
   writeNotNull('owner', instance.owner?.toJson());
   writeNotNull('contact', instance.contact?.map((e) => e.toJson()).toList());
   writeNotNull('location', instance.location?.toJson());
@@ -719,8 +720,8 @@ Map<String, dynamic> _$$_DeviceUdiCarrierToJson(_$_DeviceUdiCarrier instance) {
   return val;
 }
 
-_$_DeviceDeviceName _$$_DeviceDeviceNameFromJson(Map<String, dynamic> json) =>
-    _$_DeviceDeviceName(
+_$_DeviceName _$$_DeviceNameFromJson(Map<String, dynamic> json) =>
+    _$_DeviceName(
       id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -728,17 +729,23 @@ _$_DeviceDeviceName _$$_DeviceDeviceNameFromJson(Map<String, dynamic> json) =>
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      name: json['name'] as String?,
-      nameElement: json['_name'] == null
+      value: json['value'] as String?,
+      valueElement: json['_value'] == null
           ? null
-          : Element.fromJson(json['_name'] as Map<String, dynamic>),
+          : Element.fromJson(json['_value'] as Map<String, dynamic>),
       type: json['type'] == null ? null : FhirCode.fromJson(json['type']),
       typeElement: json['_type'] == null
           ? null
           : Element.fromJson(json['_type'] as Map<String, dynamic>),
+      display: json['display'] == null
+          ? null
+          : FhirBoolean.fromJson(json['display']),
+      displayElement: json['_display'] == null
+          ? null
+          : Element.fromJson(json['_display'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_DeviceDeviceNameToJson(_$_DeviceDeviceName instance) {
+Map<String, dynamic> _$$_DeviceNameToJson(_$_DeviceName instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -752,10 +759,12 @@ Map<String, dynamic> _$$_DeviceDeviceNameToJson(_$_DeviceDeviceName instance) {
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('name', instance.name);
-  writeNotNull('_name', instance.nameElement?.toJson());
+  writeNotNull('value', instance.value);
+  writeNotNull('_value', instance.valueElement?.toJson());
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('_type', instance.typeElement?.toJson());
+  writeNotNull('display', instance.display?.toJson());
+  writeNotNull('_display', instance.displayElement?.toJson());
   return val;
 }
 
@@ -809,9 +818,8 @@ Map<String, dynamic> _$$_DeviceVersionToJson(_$_DeviceVersion instance) {
   return val;
 }
 
-_$_DeviceSpecialization _$$_DeviceSpecializationFromJson(
-        Map<String, dynamic> json) =>
-    _$_DeviceSpecialization(
+_$_DeviceConformsTo _$$_DeviceConformsToFromJson(Map<String, dynamic> json) =>
+    _$_DeviceConformsTo(
       id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -819,19 +827,18 @@ _$_DeviceSpecialization _$$_DeviceSpecializationFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      systemType:
-          CodeableConcept.fromJson(json['systemType'] as Map<String, dynamic>),
+      category: json['category'] == null
+          ? null
+          : CodeableConcept.fromJson(json['category'] as Map<String, dynamic>),
+      specification: CodeableConcept.fromJson(
+          json['specification'] as Map<String, dynamic>),
       version: json['version'] as String?,
       versionElement: json['_version'] == null
           ? null
           : Element.fromJson(json['_version'] as Map<String, dynamic>),
-      category: json['category'] == null
-          ? null
-          : Coding.fromJson(json['category'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_DeviceSpecializationToJson(
-    _$_DeviceSpecialization instance) {
+Map<String, dynamic> _$$_DeviceConformsToToJson(_$_DeviceConformsTo instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -845,10 +852,10 @@ Map<String, dynamic> _$$_DeviceSpecializationToJson(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  val['systemType'] = instance.systemType.toJson();
+  writeNotNull('category', instance.category?.toJson());
+  val['specification'] = instance.specification.toJson();
   writeNotNull('version', instance.version);
   writeNotNull('_version', instance.versionElement?.toJson());
-  writeNotNull('category', instance.category?.toJson());
   return val;
 }
 
@@ -922,102 +929,6 @@ Map<String, dynamic> _$$_DevicePropertyToJson(_$_DeviceProperty instance) {
   return val;
 }
 
-_$_DeviceOperation _$$_DeviceOperationFromJson(Map<String, dynamic> json) =>
-    _$_DeviceOperation(
-      id: json['id'] as String?,
-      extension_: (json['extension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      status: CodeableConcept.fromJson(json['status'] as Map<String, dynamic>),
-      statusReason: (json['statusReason'] as List<dynamic>?)
-          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      operator_: (json['operator'] as List<dynamic>?)
-          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      mode: json['mode'] == null
-          ? null
-          : CodeableConcept.fromJson(json['mode'] as Map<String, dynamic>),
-      cycle: json['cycle'] == null
-          ? null
-          : Count.fromJson(json['cycle'] as Map<String, dynamic>),
-      duration: json['duration'] == null
-          ? null
-          : FhirDuration.fromJson(json['duration'] as Map<String, dynamic>),
-    );
-
-Map<String, dynamic> _$$_DeviceOperationToJson(_$_DeviceOperation instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  val['status'] = instance.status.toJson();
-  writeNotNull(
-      'statusReason', instance.statusReason?.map((e) => e.toJson()).toList());
-  writeNotNull('operator', instance.operator_?.map((e) => e.toJson()).toList());
-  writeNotNull('mode', instance.mode?.toJson());
-  writeNotNull('cycle', instance.cycle?.toJson());
-  writeNotNull('duration', instance.duration?.toJson());
-  return val;
-}
-
-_$_DeviceAssociation _$$_DeviceAssociationFromJson(Map<String, dynamic> json) =>
-    _$_DeviceAssociation(
-      id: json['id'] as String?,
-      extension_: (json['extension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      status: CodeableConcept.fromJson(json['status'] as Map<String, dynamic>),
-      statusReason: (json['statusReason'] as List<dynamic>?)
-          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      humanSubject: json['humanSubject'] == null
-          ? null
-          : Reference.fromJson(json['humanSubject'] as Map<String, dynamic>),
-      bodyStructure: json['bodyStructure'] == null
-          ? null
-          : CodeableReference.fromJson(
-              json['bodyStructure'] as Map<String, dynamic>),
-    );
-
-Map<String, dynamic> _$$_DeviceAssociationToJson(
-    _$_DeviceAssociation instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  val['status'] = instance.status.toJson();
-  writeNotNull(
-      'statusReason', instance.statusReason?.map((e) => e.toJson()).toList());
-  writeNotNull('humanSubject', instance.humanSubject?.toJson());
-  writeNotNull('bodyStructure', instance.bodyStructure?.toJson());
-  return val;
-}
-
 _$_DeviceMetric _$$_DeviceMetricFromJson(Map<String, dynamic> json) =>
     _$_DeviceMetric(
       resourceType: $enumDecodeNullable(
@@ -1058,12 +969,7 @@ _$_DeviceMetric _$$_DeviceMetricFromJson(Map<String, dynamic> json) =>
       unit: json['unit'] == null
           ? null
           : CodeableConcept.fromJson(json['unit'] as Map<String, dynamic>),
-      source: json['source'] == null
-          ? null
-          : Reference.fromJson(json['source'] as Map<String, dynamic>),
-      parent: json['parent'] == null
-          ? null
-          : Reference.fromJson(json['parent'] as Map<String, dynamic>),
+      device: Reference.fromJson(json['device'] as Map<String, dynamic>),
       operationalStatus: json['operationalStatus'] == null
           ? null
           : FhirCode.fromJson(json['operationalStatus']),
@@ -1080,9 +986,10 @@ _$_DeviceMetric _$$_DeviceMetricFromJson(Map<String, dynamic> json) =>
       categoryElement: json['_category'] == null
           ? null
           : Element.fromJson(json['_category'] as Map<String, dynamic>),
-      measurementPeriod: json['measurementPeriod'] == null
+      measurementFrequency: json['measurementFrequency'] == null
           ? null
-          : Timing.fromJson(json['measurementPeriod'] as Map<String, dynamic>),
+          : Quantity.fromJson(
+              json['measurementFrequency'] as Map<String, dynamic>),
       calibration: (json['calibration'] as List<dynamic>?)
           ?.map((e) =>
               DeviceMetricCalibration.fromJson(e as Map<String, dynamic>))
@@ -1117,8 +1024,7 @@ Map<String, dynamic> _$$_DeviceMetricToJson(_$_DeviceMetric instance) {
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
   val['type'] = instance.type.toJson();
   writeNotNull('unit', instance.unit?.toJson());
-  writeNotNull('source', instance.source?.toJson());
-  writeNotNull('parent', instance.parent?.toJson());
+  val['device'] = instance.device.toJson();
   writeNotNull('operationalStatus', instance.operationalStatus?.toJson());
   writeNotNull(
       '_operationalStatus', instance.operationalStatusElement?.toJson());
@@ -1126,7 +1032,7 @@ Map<String, dynamic> _$$_DeviceMetricToJson(_$_DeviceMetric instance) {
   writeNotNull('_color', instance.colorElement?.toJson());
   writeNotNull('category', instance.category?.toJson());
   writeNotNull('_category', instance.categoryElement?.toJson());
-  writeNotNull('measurementPeriod', instance.measurementPeriod?.toJson());
+  writeNotNull('measurementFrequency', instance.measurementFrequency?.toJson());
   writeNotNull(
       'calibration', instance.calibration?.map((e) => e.toJson()).toList());
   return val;
@@ -1556,7 +1462,9 @@ _$_Substance _$$_SubstanceFromJson(Map<String, dynamic> json) => _$_Substance(
           ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
           .toList(),
       code: CodeableReference.fromJson(json['code'] as Map<String, dynamic>),
-      description: json['description'] as String?,
+      description: json['description'] == null
+          ? null
+          : FhirMarkdown.fromJson(json['description']),
       descriptionElement: json['_description'] == null
           ? null
           : Element.fromJson(json['_description'] as Map<String, dynamic>),
@@ -1605,7 +1513,7 @@ Map<String, dynamic> _$$_SubstanceToJson(_$_Substance instance) {
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('category', instance.category?.map((e) => e.toJson()).toList());
   val['code'] = instance.code.toJson();
-  writeNotNull('description', instance.description);
+  writeNotNull('description', instance.description?.toJson());
   writeNotNull('_description', instance.descriptionElement?.toJson());
   writeNotNull('expiry', instance.expiry?.toJson());
   writeNotNull('_expiry', instance.expiryElement?.toJson());

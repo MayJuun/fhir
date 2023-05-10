@@ -148,7 +148,7 @@ class Group extends HiveObject with Resource, _$Group {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -214,7 +214,7 @@ class Group extends HiveObject with Resource, _$Group {
     /// [type] Identifies the broad classification of the kind of resources the
     ///  group includes.
     @HiveField(14)
-        Code? type,
+        FhirCode? type,
 
     /// [typeElement] Extensions for type
     @JsonKey(name: '_type')
@@ -736,7 +736,7 @@ class Patient extends HiveObject with Resource, _$Patient {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -816,7 +816,7 @@ class Patient extends HiveObject with Resource, _$Patient {
     /// [gender] Administrative Gender - the gender that the patient is
     ///  considered to have for administration and record keeping purposes.
     @HiveField(16)
-        Code? gender,
+        FhirCode? gender,
 
     /// [genderElement] Extensions for gender
     @JsonKey(name: '_gender')
@@ -1033,7 +1033,7 @@ class PatientContact with _$PatientContact {
 
     /// [gender] Administrative Gender - the gender that the contact person is
     ///  considered to have for administration and record keeping purposes.
-    Code? gender,
+    FhirCode? gender,
 
     /// [genderElement] Extensions for gender
     @JsonKey(name: '_gender') Element? genderElement,
@@ -1276,7 +1276,7 @@ class PatientLink with _$PatientLink {
 
     /// [type] The type of link between this patient resource and another patient
     ///  resource.
-    Code? type,
+    FhirCode? type,
 
     /// [typeElement] Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
@@ -1437,7 +1437,7 @@ class Person extends HiveObject with Resource, _$Person {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -1501,7 +1501,7 @@ class Person extends HiveObject with Resource, _$Person {
 
     /// [gender] Administrative Gender.
     @HiveField(14)
-        Code? gender,
+        FhirCode? gender,
 
     /// [genderElement] Extensions for gender
     @JsonKey(name: '_gender')
@@ -1644,7 +1644,7 @@ class PersonLink with _$PersonLink {
 
     /// [assurance] Level of assurance that this link is associated with the
     ///  target resource.
-    Code? assurance,
+    FhirCode? assurance,
 
     /// [assuranceElement] Extensions for assurance
     @JsonKey(name: '_assurance') Element? assuranceElement,
@@ -1812,7 +1812,7 @@ class Practitioner extends HiveObject with Resource, _$Practitioner {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -1893,7 +1893,7 @@ class Practitioner extends HiveObject with Resource, _$Practitioner {
     /// [gender] Administrative Gender - the gender that the person is considered
     ///  to have for administration and record keeping purposes.
     @HiveField(17)
-        Code? gender,
+        FhirCode? gender,
 
     /// [genderElement] Extensions for gender
     @JsonKey(name: '_gender')
@@ -2207,7 +2207,7 @@ class PractitionerRole extends HiveObject with Resource, _$PractitionerRole {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -2747,7 +2747,7 @@ class RelatedPerson extends HiveObject with Resource, _$RelatedPerson {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -2830,7 +2830,7 @@ class RelatedPerson extends HiveObject with Resource, _$RelatedPerson {
     /// [gender] Administrative Gender - the gender that the person is considered
     ///  to have for administration and record keeping purposes.
     @HiveField(18)
-        Code? gender,
+        FhirCode? gender,
 
     /// [genderElement] Extensions for gender
     @JsonKey(name: '_gender')

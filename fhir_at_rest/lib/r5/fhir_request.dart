@@ -576,7 +576,7 @@ class FhirRequest with _$FhirRequest {
 
     /// [since] - Only include resource versions that were created at or after the
     ///   given instant in time
-    Instant? since,
+    FhirInstant? since,
 
     /// [at] - Only include resource versions that were current at some point
     ///   during the time period specified in the date time value
@@ -647,7 +647,7 @@ class FhirRequest with _$FhirRequest {
 
     /// [since] - Only include resource versions that were created at or after the
     ///   given instant in time
-    Instant? since,
+    FhirInstant? since,
 
     /// [at] - Only include resource versions that were current at some point
     ///   during the time period specified in the date time value
@@ -714,7 +714,7 @@ class FhirRequest with _$FhirRequest {
 
     /// [since] - Only include resource versions that were created at or after the
     ///   given instant in time
-    Instant? since,
+    FhirInstant? since,
 
     /// [at] - Only include resource versions that were current at some point
     ///   during the time period specified in the date time value
@@ -1030,7 +1030,7 @@ class FhirRequest with _$FhirRequest {
 
     /// [since] - Only include resource versions that were created at or after the
     ///   given instant in time
-    Instant? since,
+    FhirInstant? since,
 
     /// [at] - Only include resource versions that were current at some point
     ///   during the time period specified in the date time value

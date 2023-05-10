@@ -15,7 +15,7 @@ class PractitionerUsCore extends Resource {
     required List<HumanName> name,
     List<Address>? address,
     List<ContactPoint>? telecom,
-    Code? gender,
+    FhirCode? gender,
     Date? birthDate,
     List<PractitionerQualification>? qualification,
   }) =>
@@ -73,7 +73,7 @@ class PractitionerUsCore extends Resource {
   List<HumanName>? get name => _practitioner.name;
   List<Address>? get address => _practitioner.address;
   List<ContactPoint>? get telecom => _practitioner.telecom;
-  Code? get gender => _practitioner.gender;
+  FhirCode? get gender => _practitioner.gender;
   Date? get birthDate => _practitioner.birthDate;
   List<PractitionerQualification>? get qualification =>
       _practitioner.qualification;

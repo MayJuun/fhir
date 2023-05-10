@@ -15,7 +15,7 @@ class DeviceUsCore extends Resource {
     FhirDateTime? expirationDate,
     String? lotNumber,
     String? serialNumber,
-    Code? status,
+    FhirCode? status,
     List<DeviceDeviceName>? deviceName,
     String? modelNumber,
     required CodeableConcept type,
@@ -76,7 +76,7 @@ class DeviceUsCore extends Resource {
   FhirDateTime? get expirationDate => _device.expirationDate;
   String? get lotNumber => _device.lotNumber;
   String? get serialNumber => _device.serialNumber;
-  Code? get status => _device.status;
+  FhirCode? get status => _device.status;
   List<DeviceDeviceName>? get deviceName => _device.deviceName;
   String? get modelNumber => _device.modelNumber;
   CodeableConcept? get type => _device.type;
@@ -89,9 +89,9 @@ class DeviceUdiCarrierUsCore {
   factory DeviceUdiCarrierUsCore({
     String? id,
     String? deviceIdentifier,
-    Base64Binary? carrierAIDC,
+    FhirBase64Binary? carrierAIDC,
     String? carrierHRF,
-    Code? entryType,
+    FhirCode? entryType,
   }) =>
       DeviceUdiCarrierUsCore._(DeviceUdiCarrier(
         id: id,
@@ -105,9 +105,9 @@ class DeviceUdiCarrierUsCore {
   DeviceUdiCarrier get value => _deviceUdiCarrier;
   String? get id => _deviceUdiCarrier.id;
   String? get deviceIdentifier => _deviceUdiCarrier.deviceIdentifier;
-  Base64Binary? get carrierAIDC => _deviceUdiCarrier.carrierAIDC;
+  FhirBase64Binary? get carrierAIDC => _deviceUdiCarrier.carrierAIDC;
   String? get carrierHRF => _deviceUdiCarrier.carrierHRF;
-  Code? get entryType => _deviceUdiCarrier.entryType;
+  FhirCode? get entryType => _deviceUdiCarrier.entryType;
 }
 
 class DeviceDeviceNameUsCore {
@@ -116,7 +116,7 @@ class DeviceDeviceNameUsCore {
   factory DeviceDeviceNameUsCore({
     String? id,
     String? name,
-    Code? type,
+    FhirCode? type,
   }) =>
       DeviceDeviceNameUsCore._(
           DeviceDeviceName(id: id, name: name, type: type));
@@ -125,5 +125,5 @@ class DeviceDeviceNameUsCore {
   DeviceDeviceName get value => _deviceDeviceName;
   String? get id => _deviceDeviceName.id;
   String? get name => _deviceDeviceName.name;
-  Code? get type => _deviceDeviceName.type;
+  FhirCode? get type => _deviceDeviceName.type;
 }

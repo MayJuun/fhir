@@ -193,7 +193,7 @@ class Claim extends HiveObject with Resource, _$Claim {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -248,7 +248,7 @@ class Claim extends HiveObject with Resource, _$Claim {
 
     /// [status] The status of the resource instance.
     @HiveField(12)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -273,7 +273,7 @@ class Claim extends HiveObject with Resource, _$Claim {
     /// the non-binding adjudication of the listed products and services which
     ///  could be provided in the future.
     @HiveField(17)
-        Code? use,
+        FhirCode? use,
 
     /// [useElement] Extensions for use
     @JsonKey(name: '_use')
@@ -1766,7 +1766,7 @@ class ClaimItem with _$ClaimItem {
     /// the overall value of services delivered and/or goods received. The concept
     /// of a Factor allows for a discount or surcharge multiplier to be applied to
     ///  a monetary amount.
-    Decimal? factor,
+    FhirDecimal? factor,
 
     /// [factorElement] Extensions for factor
     @JsonKey(name: '_factor')
@@ -1965,7 +1965,7 @@ class ClaimDetail with _$ClaimDetail {
     /// the overall value of services delivered and/or goods received. The concept
     /// of a Factor allows for a discount or surcharge multiplier to be applied to
     ///  a monetary amount.
-    Decimal? factor,
+    FhirDecimal? factor,
 
     /// [factorElement] Extensions for factor
     @JsonKey(name: '_factor') Element? factorElement,
@@ -2149,7 +2149,7 @@ class ClaimSubDetail with _$ClaimSubDetail {
     /// the overall value of services delivered and/or goods received. The concept
     /// of a Factor allows for a discount or surcharge multiplier to be applied to
     ///  a monetary amount.
-    Decimal? factor,
+    FhirDecimal? factor,
 
     /// [factorElement] Extensions for factor
     @JsonKey(name: '_factor') Element? factorElement,
@@ -2378,7 +2378,7 @@ class ClaimResponse extends HiveObject with Resource, _$ClaimResponse {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -2433,7 +2433,7 @@ class ClaimResponse extends HiveObject with Resource, _$ClaimResponse {
 
     /// [status] The status of the resource instance.
     @HiveField(12)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -2458,7 +2458,7 @@ class ClaimResponse extends HiveObject with Resource, _$ClaimResponse {
     /// the non-binding adjudication of the listed products and services which
     ///  could be provided in the future.
     @HiveField(16)
-        Code? use,
+        FhirCode? use,
 
     /// [useElement] Extensions for use
     @JsonKey(name: '_use')
@@ -2498,7 +2498,7 @@ class ClaimResponse extends HiveObject with Resource, _$ClaimResponse {
     /// [outcome] The outcome of the claim, predetermination, or preauthorization
     ///  processing.
     @HiveField(25)
-        Code? outcome,
+        FhirCode? outcome,
 
     /// [outcomeElement] Extensions for outcome
     @JsonKey(name: '_outcome')
@@ -2841,7 +2841,7 @@ class ClaimResponseAdjudication with _$ClaimResponseAdjudication {
 
     /// [value] A non-monetary value associated with the category. Mutually
     ///  exclusive to the amount element above.
-    Decimal? value,
+    FhirDecimal? value,
 
     /// [valueElement] Extensions for value
     @JsonKey(name: '_value') Element? valueElement,
@@ -3328,7 +3328,7 @@ class ClaimResponseAddItem with _$ClaimResponseAddItem {
     /// the overall value of services delivered and/or goods received. The concept
     /// of a Factor allows for a discount or surcharge multiplier to be applied to
     ///  a monetary amount.
-    Decimal? factor,
+    FhirDecimal? factor,
 
     /// [factorElement] Extensions for factor
     @JsonKey(name: '_factor')
@@ -3505,7 +3505,7 @@ class ClaimResponseDetail1 with _$ClaimResponseDetail1 {
     /// the overall value of services delivered and/or goods received. The concept
     /// of a Factor allows for a discount or surcharge multiplier to be applied to
     ///  a monetary amount.
-    Decimal? factor,
+    FhirDecimal? factor,
 
     /// [factorElement] Extensions for factor
     @JsonKey(name: '_factor') Element? factorElement,
@@ -3671,7 +3671,7 @@ class ClaimResponseSubDetail1 with _$ClaimResponseSubDetail1 {
     /// the overall value of services delivered and/or goods received. The concept
     /// of a Factor allows for a discount or surcharge multiplier to be applied to
     ///  a monetary amount.
-    Decimal? factor,
+    FhirDecimal? factor,
 
     /// [factorElement] Extensions for factor
     @JsonKey(name: '_factor') Element? factorElement,
@@ -4046,7 +4046,7 @@ class ClaimResponseProcessNote with _$ClaimResponseProcessNote {
     @JsonKey(name: '_number') Element? numberElement,
 
     /// [type] The business purpose of the note text.
-    Code? type,
+    FhirCode? type,
 
     /// [typeElement] Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
@@ -4528,7 +4528,7 @@ class Invoice extends HiveObject with Resource, _$Invoice {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -4584,7 +4584,7 @@ class Invoice extends HiveObject with Resource, _$Invoice {
 
     /// [status] The current state of the Invoice.
     @HiveField(12)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -5026,7 +5026,7 @@ class InvoicePriceComponent with _$InvoicePriceComponent {
     List<FhirExtension>? modifierExtension,
 
     /// [type] This code identifies the type of the component.
-    Code? type,
+    FhirCode? type,
 
     /// [typeElement] Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
@@ -5037,7 +5037,7 @@ class InvoicePriceComponent with _$InvoicePriceComponent {
 
     /// [factor] The factor that has been applied on the base price for
     ///  calculating this component.
-    Decimal? factor,
+    FhirDecimal? factor,
 
     /// [factorElement] Extensions for factor
     @JsonKey(name: '_factor') Element? factorElement,

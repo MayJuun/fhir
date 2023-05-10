@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 
-import '../parse.dart';
+import 'parse.dart';
 
 Future<void> main() async {
   final longString = jsonDecode(await File('fhir.schema.json').readAsString())

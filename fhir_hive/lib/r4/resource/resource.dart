@@ -32,7 +32,7 @@ class Resource {
   R4ResourceType? resourceType;
   FhirMeta? meta;
   FhirUri? implicitRules;
-  Code? language;
+  FhirCode? language;
   Narrative? text;
   List<Resource>? contained;
   @JsonKey(name: 'extension')
@@ -76,7 +76,7 @@ class Resource {
     R4ResourceType? resourceType,
     FhirMeta? meta,
     FhirUri? implicitRules,
-    Code? language,
+    FhirCode? language,
     Narrative? text,
     List<Resource>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,

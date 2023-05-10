@@ -139,7 +139,7 @@ class PatientUsCore extends Resource {
   Boolean? get active => _patient.active;
   List<HumanName>? get name => _patient.name;
   List<ContactPoint>? get telecom => _patient.telecom;
-  Code? get gender => _patient.gender;
+  FhirCode? get gender => _patient.gender;
   Date? get birthDate => _patient.birthDate;
   List<Address>? get address => _patient.address;
   List<PatientCommunication>? get communication => _patient.communication;

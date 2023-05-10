@@ -49,7 +49,7 @@ mixin _$Immunization {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -105,7 +105,7 @@ mixin _$Immunization {
 
   /// [status] Indicates the current status of the immunization event.
   @HiveField(12)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -308,7 +308,7 @@ abstract class $ImmunizationCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -324,7 +324,7 @@ abstract class $ImmunizationCopyWith<$Res> {
       @HiveField(11)
           List<Identifier>? identifier,
       @HiveField(12)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(13)
           Element? statusElement,
@@ -978,7 +978,7 @@ abstract class _$$_ImmunizationCopyWith<$Res>
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -994,7 +994,7 @@ abstract class _$$_ImmunizationCopyWith<$Res>
       @HiveField(11)
           List<Identifier>? identifier,
       @HiveField(12)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(13)
           Element? statusElement,
@@ -2270,7 +2270,7 @@ abstract class _Immunization extends Immunization {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -2332,7 +2332,7 @@ abstract class _Immunization extends Immunization {
 
   /// [status] Indicates the current status of the immunization event.
   @HiveField(12)
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -4877,7 +4877,7 @@ mixin _$ImmunizationEvaluation {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -4935,7 +4935,7 @@ mixin _$ImmunizationEvaluation {
   /// [status] Indicates the current status of the evaluation of the
   ///  vaccination administration event.
   @HiveField(12)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -5064,7 +5064,7 @@ abstract class $ImmunizationEvaluationCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -5080,7 +5080,7 @@ abstract class $ImmunizationEvaluationCopyWith<$Res> {
       @HiveField(11)
           List<Identifier>? identifier,
       @HiveField(12)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(13)
           Element? statusElement,
@@ -5555,7 +5555,7 @@ abstract class _$$_ImmunizationEvaluationCopyWith<$Res>
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -5571,7 +5571,7 @@ abstract class _$$_ImmunizationEvaluationCopyWith<$Res>
       @HiveField(11)
           List<Identifier>? identifier,
       @HiveField(12)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(13)
           Element? statusElement,
@@ -6486,7 +6486,7 @@ abstract class _ImmunizationEvaluation extends ImmunizationEvaluation {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -6550,7 +6550,7 @@ abstract class _ImmunizationEvaluation extends ImmunizationEvaluation {
   /// [status] Indicates the current status of the evaluation of the
   ///  vaccination administration event.
   @HiveField(12)
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -6710,7 +6710,7 @@ mixin _$ImmunizationRecommendation {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -6815,7 +6815,7 @@ abstract class $ImmunizationRecommendationCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -7059,7 +7059,7 @@ abstract class _$$_ImmunizationRecommendationCopyWith<$Res>
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -7608,7 +7608,7 @@ abstract class _ImmunizationRecommendation extends ImmunizationRecommendation {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -9324,7 +9324,7 @@ mixin _$Medication {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -9388,7 +9388,7 @@ mixin _$Medication {
 
   /// [status] A code to indicate if the medication is in active use.
   @HiveField(13)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -9449,7 +9449,7 @@ abstract class $MedicationCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -9467,7 +9467,7 @@ abstract class $MedicationCopyWith<$Res> {
       @HiveField(12)
           CodeableConcept? code,
       @HiveField(13)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(14)
           Element? statusElement,
@@ -9755,7 +9755,7 @@ abstract class _$$_MedicationCopyWith<$Res>
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -9773,7 +9773,7 @@ abstract class _$$_MedicationCopyWith<$Res>
       @HiveField(12)
           CodeableConcept? code,
       @HiveField(13)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(14)
           Element? statusElement,
@@ -10371,7 +10371,7 @@ abstract class _Medication extends Medication {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -10442,7 +10442,7 @@ abstract class _Medication extends Medication {
 
   /// [status] A code to indicate if the medication is in active use.
   @HiveField(13)
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -11544,7 +11544,7 @@ mixin _$MedicationAdministration {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -11623,7 +11623,7 @@ mixin _$MedicationAdministration {
   /// possible for an administration to be started but not completed or it may
   ///  be paused while some other process is under way.
   @HiveField(15)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -11753,7 +11753,7 @@ abstract class $MedicationAdministrationCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -11776,7 +11776,7 @@ abstract class $MedicationAdministrationCopyWith<$Res> {
       @HiveField(14)
           List<Reference>? partOf,
       @HiveField(15)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(16)
           Element? statusElement,
@@ -12220,7 +12220,7 @@ abstract class _$$_MedicationAdministrationCopyWith<$Res>
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -12243,7 +12243,7 @@ abstract class _$$_MedicationAdministrationCopyWith<$Res>
       @HiveField(14)
           List<Reference>? partOf,
       @HiveField(15)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(16)
           Element? statusElement,
@@ -13276,7 +13276,7 @@ abstract class _MedicationAdministration extends MedicationAdministration {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -13364,7 +13364,7 @@ abstract class _MedicationAdministration extends MedicationAdministration {
   /// possible for an administration to be started but not completed or it may
   ///  be paused while some other process is under way.
   @HiveField(15)
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -14623,7 +14623,7 @@ mixin _$MedicationDispense {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -14688,7 +14688,7 @@ mixin _$MedicationDispense {
 
   /// [status] A code specifying the state of the set of dispense events.
   @HiveField(13)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -14858,7 +14858,7 @@ abstract class $MedicationDispenseCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -14876,7 +14876,7 @@ abstract class $MedicationDispenseCopyWith<$Res> {
       @HiveField(12)
           List<Reference>? partOf,
       @HiveField(13)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(14)
           Element? statusElement,
@@ -15441,7 +15441,7 @@ abstract class _$$_MedicationDispenseCopyWith<$Res>
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -15459,7 +15459,7 @@ abstract class _$$_MedicationDispenseCopyWith<$Res>
       @HiveField(12)
           List<Reference>? partOf,
       @HiveField(13)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(14)
           Element? statusElement,
@@ -16588,7 +16588,7 @@ abstract class _MedicationDispense extends MedicationDispense {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -16660,7 +16660,7 @@ abstract class _MedicationDispense extends MedicationDispense {
 
   /// [status] A code specifying the state of the set of dispense events.
   @HiveField(13)
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -17782,7 +17782,7 @@ mixin _$MedicationKnowledge {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -17844,7 +17844,7 @@ mixin _$MedicationKnowledge {
   /// status refers to the validity about the information of the medication and
   ///  not to its medicinal properties.
   @HiveField(12)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -17996,7 +17996,7 @@ abstract class $MedicationKnowledgeCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -18012,7 +18012,7 @@ abstract class $MedicationKnowledgeCopyWith<$Res> {
       @HiveField(11)
           CodeableConcept? code,
       @HiveField(12)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(13)
           Element? statusElement,
@@ -18438,7 +18438,7 @@ abstract class _$$_MedicationKnowledgeCopyWith<$Res>
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -18454,7 +18454,7 @@ abstract class _$$_MedicationKnowledgeCopyWith<$Res>
       @HiveField(11)
           CodeableConcept? code,
       @HiveField(12)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(13)
           Element? statusElement,
@@ -19561,7 +19561,7 @@ abstract class _MedicationKnowledge extends MedicationKnowledge {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -19629,7 +19629,7 @@ abstract class _MedicationKnowledge extends MedicationKnowledge {
   /// status refers to the validity about the information of the medication and
   ///  not to its medicinal properties.
   @HiveField(12)
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -24314,7 +24314,7 @@ mixin _$MedicationKnowledgeDrugCharacteristic {
   Quantity? get valueQuantity => throw _privateConstructorUsedError;
 
   /// [valueBase64Binary] Description of the characteristic.
-  Base64Binary? get valueBase64Binary => throw _privateConstructorUsedError;
+  FhirBase64Binary? get valueBase64Binary => throw _privateConstructorUsedError;
 
   /// [valueBase64BinaryElement] Extensions for valueBase64Binary
   @JsonKey(name: '_valueBase64Binary')
@@ -24344,7 +24344,7 @@ abstract class $MedicationKnowledgeDrugCharacteristicCopyWith<$Res> {
       String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
       Quantity? valueQuantity,
-      Base64Binary? valueBase64Binary,
+      FhirBase64Binary? valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement});
 
   $CodeableConceptCopyWith<$Res>? get type;
@@ -24503,7 +24503,7 @@ abstract class _$$_MedicationKnowledgeDrugCharacteristicCopyWith<$Res>
       String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
       Quantity? valueQuantity,
-      Base64Binary? valueBase64Binary,
+      FhirBase64Binary? valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement});
 
   @override
@@ -24849,7 +24849,7 @@ abstract class _MedicationKnowledgeDrugCharacteristic
   @override
 
   /// [valueBase64Binary] Description of the characteristic.
-  Base64Binary? get valueBase64Binary;
+  FhirBase64Binary? get valueBase64Binary;
   @override
 
   /// [valueBase64BinaryElement] Extensions for valueBase64Binary
@@ -27016,7 +27016,7 @@ mixin _$MedicationRequest {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -27076,7 +27076,7 @@ mixin _$MedicationRequest {
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @HiveField(12)
   @HiveField(13)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -27090,7 +27090,7 @@ mixin _$MedicationRequest {
 
   /// [intent] Whether the request is a proposal, plan, or an original order.
   @HiveField(16)
-  Code? get intent => throw _privateConstructorUsedError;
+  FhirCode? get intent => throw _privateConstructorUsedError;
 
   /// [intentElement] Extensions for intent
   @JsonKey(name: '_intent')
@@ -27106,7 +27106,7 @@ mixin _$MedicationRequest {
   /// [priority] Indicates how quickly the Medication Request should be
   ///  addressed with respect to other requests.
   @HiveField(19)
-  Code? get priority => throw _privateConstructorUsedError;
+  FhirCode? get priority => throw _privateConstructorUsedError;
 
   /// [priorityElement] Extensions for priority
   @JsonKey(name: '_priority')
@@ -27321,7 +27321,7 @@ abstract class $MedicationRequestCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -27338,21 +27338,21 @@ abstract class $MedicationRequestCopyWith<$Res> {
           List<Identifier>? identifier,
       @HiveField(12)
       @HiveField(13)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(14)
           Element? statusElement,
       @HiveField(15)
           CodeableConcept? statusReason,
       @HiveField(16)
-          Code? intent,
+          FhirCode? intent,
       @JsonKey(name: '_intent')
       @HiveField(17)
           Element? intentElement,
       @HiveField(18)
           List<CodeableConcept>? category,
       @HiveField(19)
-          Code? priority,
+          FhirCode? priority,
       @JsonKey(name: '_priority')
       @HiveField(20)
           Element? priorityElement,
@@ -28063,7 +28063,7 @@ abstract class _$$_MedicationRequestCopyWith<$Res>
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -28080,21 +28080,21 @@ abstract class _$$_MedicationRequestCopyWith<$Res>
           List<Identifier>? identifier,
       @HiveField(12)
       @HiveField(13)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(14)
           Element? statusElement,
       @HiveField(15)
           CodeableConcept? statusReason,
       @HiveField(16)
-          Code? intent,
+          FhirCode? intent,
       @JsonKey(name: '_intent')
       @HiveField(17)
           Element? intentElement,
       @HiveField(18)
           List<CodeableConcept>? category,
       @HiveField(19)
-          Code? priority,
+          FhirCode? priority,
       @JsonKey(name: '_priority')
       @HiveField(20)
           Element? priorityElement,
@@ -29553,7 +29553,7 @@ abstract class _MedicationRequest extends MedicationRequest {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -29619,7 +29619,7 @@ abstract class _MedicationRequest extends MedicationRequest {
   @override
   @HiveField(12)
   @HiveField(13)
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -29636,7 +29636,7 @@ abstract class _MedicationRequest extends MedicationRequest {
 
   /// [intent] Whether the request is a proposal, plan, or an original order.
   @HiveField(16)
-  Code? get intent;
+  FhirCode? get intent;
   @override
 
   /// [intentElement] Extensions for intent
@@ -29655,7 +29655,7 @@ abstract class _MedicationRequest extends MedicationRequest {
   /// [priority] Indicates how quickly the Medication Request should be
   ///  addressed with respect to other requests.
   @HiveField(19)
-  Code? get priority;
+  FhirCode? get priority;
   @override
 
   /// [priorityElement] Extensions for priority
@@ -31492,7 +31492,7 @@ mixin _$MedicationStatement {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -31564,7 +31564,7 @@ mixin _$MedicationStatement {
   /// [status] A code representing the patient or other source's judgment about
   @HiveField(14)
   @HiveField(15)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -31689,7 +31689,7 @@ abstract class $MedicationStatementCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -31710,7 +31710,7 @@ abstract class $MedicationStatementCopyWith<$Res> {
           List<Reference>? partOf,
       @HiveField(14)
       @HiveField(15)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(16)
           Element? statusElement,
@@ -32139,7 +32139,7 @@ abstract class _$$_MedicationStatementCopyWith<$Res>
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -32160,7 +32160,7 @@ abstract class _$$_MedicationStatementCopyWith<$Res>
           List<Reference>? partOf,
       @HiveField(14)
       @HiveField(15)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(16)
           Element? statusElement,
@@ -33125,7 +33125,7 @@ abstract class _MedicationStatement extends MedicationStatement {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -33205,7 +33205,7 @@ abstract class _MedicationStatement extends MedicationStatement {
   /// [status] A code representing the patient or other source's judgment about
   @HiveField(14)
   @HiveField(15)
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status

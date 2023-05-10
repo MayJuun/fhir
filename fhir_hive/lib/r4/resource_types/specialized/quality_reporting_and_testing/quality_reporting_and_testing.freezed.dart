@@ -49,7 +49,7 @@ mixin _$Measure {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -171,7 +171,7 @@ mixin _$Measure {
   /// [status] The status of this measure. Enables tracking the life-cycle of
   ///  the content.
   @HiveField(23)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -470,7 +470,7 @@ abstract class $MeasureCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -512,7 +512,7 @@ abstract class $MeasureCopyWith<$Res> {
       @HiveField(22)
           Element? subtitleElement,
       @HiveField(23)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(24)
           Element? statusElement,
@@ -1466,7 +1466,7 @@ abstract class _$$_MeasureCopyWith<$Res> implements $MeasureCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -1508,7 +1508,7 @@ abstract class _$$_MeasureCopyWith<$Res> implements $MeasureCopyWith<$Res> {
       @HiveField(22)
           Element? subtitleElement,
       @HiveField(23)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(24)
           Element? statusElement,
@@ -3457,7 +3457,7 @@ abstract class _Measure extends Measure {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -3595,7 +3595,7 @@ abstract class _Measure extends Measure {
   /// [status] The status of this measure. Enables tracking the life-cycle of
   ///  the content.
   @HiveField(23)
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -6507,7 +6507,7 @@ mixin _$MeasureReport {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -6566,7 +6566,7 @@ mixin _$MeasureReport {
   /// [status] The MeasureReport status. No data will be available until the
   ///  MeasureReport status is complete.
   @HiveField(12)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -6574,7 +6574,7 @@ mixin _$MeasureReport {
   Element? get statusElement => throw _privateConstructorUsedError;
   @HiveField(14)
   @HiveField(15)
-  Code? get type => throw _privateConstructorUsedError;
+  FhirCode? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
@@ -6651,7 +6651,7 @@ abstract class $MeasureReportCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -6667,13 +6667,13 @@ abstract class $MeasureReportCopyWith<$Res> {
       @HiveField(11)
           List<Identifier>? identifier,
       @HiveField(12)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(13)
           Element? statusElement,
       @HiveField(14)
       @HiveField(15)
-          Code? type,
+          FhirCode? type,
       @JsonKey(name: '_type')
       @HiveField(16)
           Element? typeElement,
@@ -7004,7 +7004,7 @@ abstract class _$$_MeasureReportCopyWith<$Res>
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -7020,13 +7020,13 @@ abstract class _$$_MeasureReportCopyWith<$Res>
       @HiveField(11)
           List<Identifier>? identifier,
       @HiveField(12)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(13)
           Element? statusElement,
       @HiveField(14)
       @HiveField(15)
-          Code? type,
+          FhirCode? type,
       @JsonKey(name: '_type')
       @HiveField(16)
           Element? typeElement,
@@ -7737,7 +7737,7 @@ abstract class _MeasureReport extends MeasureReport {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -7802,7 +7802,7 @@ abstract class _MeasureReport extends MeasureReport {
   /// [status] The MeasureReport status. No data will be available until the
   ///  MeasureReport status is complete.
   @HiveField(12)
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -7812,7 +7812,7 @@ abstract class _MeasureReport extends MeasureReport {
   @override
   @HiveField(14)
   @HiveField(15)
-  Code? get type;
+  FhirCode? get type;
   @override
 
   /// [typeElement] Extensions for type
@@ -10629,7 +10629,7 @@ mixin _$TestReport {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -10696,7 +10696,7 @@ mixin _$TestReport {
 
   /// [status] The current state of this test report.
   @HiveField(14)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -10711,7 +10711,7 @@ mixin _$TestReport {
 
   /// [result] The overall result from the execution of the TestScript.
   @HiveField(17)
-  Code? get result => throw _privateConstructorUsedError;
+  FhirCode? get result => throw _privateConstructorUsedError;
 
   /// [resultElement] Extensions for result
   @JsonKey(name: '_result')
@@ -10721,7 +10721,7 @@ mixin _$TestReport {
   /// [score] The final score (percentage of tests passed) resulting from the
   ///  execution of the TestScript.
   @HiveField(19)
-  Decimal? get score => throw _privateConstructorUsedError;
+  FhirDecimal? get score => throw _privateConstructorUsedError;
 
   /// [scoreElement] Extensions for score
   @JsonKey(name: '_score')
@@ -10794,7 +10794,7 @@ abstract class $TestReportCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -10815,19 +10815,19 @@ abstract class $TestReportCopyWith<$Res> {
       @HiveField(13)
           Element? nameElement,
       @HiveField(14)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(15)
           Element? statusElement,
       @HiveField(16)
           Reference testScript,
       @HiveField(17)
-          Code? result,
+          FhirCode? result,
       @JsonKey(name: '_result')
       @HiveField(18)
           Element? resultElement,
       @HiveField(19)
-          Decimal? score,
+          FhirDecimal? score,
       @JsonKey(name: '_score')
       @HiveField(20)
           Element? scoreElement,
@@ -11216,7 +11216,7 @@ abstract class _$$_TestReportCopyWith<$Res>
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -11237,19 +11237,19 @@ abstract class _$$_TestReportCopyWith<$Res>
       @HiveField(13)
           Element? nameElement,
       @HiveField(14)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(15)
           Element? statusElement,
       @HiveField(16)
           Reference testScript,
       @HiveField(17)
-          Code? result,
+          FhirCode? result,
       @JsonKey(name: '_result')
       @HiveField(18)
           Element? resultElement,
       @HiveField(19)
-          Decimal? score,
+          FhirDecimal? score,
       @JsonKey(name: '_score')
       @HiveField(20)
           Element? scoreElement,
@@ -12027,7 +12027,7 @@ abstract class _TestReport extends TestReport {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -12102,7 +12102,7 @@ abstract class _TestReport extends TestReport {
 
   /// [status] The current state of this test report.
   @HiveField(14)
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -12120,7 +12120,7 @@ abstract class _TestReport extends TestReport {
 
   /// [result] The overall result from the execution of the TestScript.
   @HiveField(17)
-  Code? get result;
+  FhirCode? get result;
   @override
 
   /// [resultElement] Extensions for result
@@ -12132,7 +12132,7 @@ abstract class _TestReport extends TestReport {
   /// [score] The final score (percentage of tests passed) resulting from the
   ///  execution of the TestScript.
   @HiveField(19)
-  Decimal? get score;
+  FhirDecimal? get score;
   @override
 
   /// [scoreElement] Extensions for score
@@ -12229,7 +12229,7 @@ mixin _$TestReportParticipant {
       throw _privateConstructorUsedError;
 
   /// [type] The type of participant.
-  Code? get type => throw _privateConstructorUsedError;
+  FhirCode? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
@@ -12265,7 +12265,7 @@ abstract class $TestReportParticipantCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? type,
+      FhirCode? type,
       @JsonKey(name: '_type') Element? typeElement,
       FhirUri? uri,
       @JsonKey(name: '_uri') Element? uriElement,
@@ -12390,7 +12390,7 @@ abstract class _$$_TestReportParticipantCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? type,
+      FhirCode? type,
       @JsonKey(name: '_type') Element? typeElement,
       FhirUri? uri,
       @JsonKey(name: '_uri') Element? uriElement,
@@ -12687,7 +12687,7 @@ abstract class _TestReportParticipant extends TestReportParticipant {
   @override
 
   /// [type] The type of participant.
-  Code? get type;
+  FhirCode? get type;
   @override
 
   /// [typeElement] Extensions for type
@@ -13482,7 +13482,7 @@ mixin _$TestReportOperation {
       throw _privateConstructorUsedError;
 
   /// [result] The result of this operation.
-  Code? get result => throw _privateConstructorUsedError;
+  FhirCode? get result => throw _privateConstructorUsedError;
 
   /// [resultElement] Extensions for result
   @JsonKey(name: '_result')
@@ -13518,7 +13518,7 @@ abstract class $TestReportOperationCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? result,
+      FhirCode? result,
       @JsonKey(name: '_result') Element? resultElement,
       Markdown? message,
       @JsonKey(name: '_message') Element? messageElement,
@@ -13642,7 +13642,7 @@ abstract class _$$_TestReportOperationCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? result,
+      FhirCode? result,
       @JsonKey(name: '_result') Element? resultElement,
       Markdown? message,
       @JsonKey(name: '_message') Element? messageElement,
@@ -13939,7 +13939,7 @@ abstract class _TestReportOperation extends TestReportOperation {
   @override
 
   /// [result] The result of this operation.
-  Code? get result;
+  FhirCode? get result;
   @override
 
   /// [resultElement] Extensions for result
@@ -14005,7 +14005,7 @@ mixin _$TestReportAssert {
       throw _privateConstructorUsedError;
 
   /// [result] The result of this assertion.
-  Code? get result => throw _privateConstructorUsedError;
+  FhirCode? get result => throw _privateConstructorUsedError;
 
   /// [resultElement] Extensions for result
   @JsonKey(name: '_result')
@@ -14041,7 +14041,7 @@ abstract class $TestReportAssertCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? result,
+      FhirCode? result,
       @JsonKey(name: '_result') Element? resultElement,
       Markdown? message,
       @JsonKey(name: '_message') Element? messageElement,
@@ -14165,7 +14165,7 @@ abstract class _$$_TestReportAssertCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? result,
+      FhirCode? result,
       @JsonKey(name: '_result') Element? resultElement,
       Markdown? message,
       @JsonKey(name: '_message') Element? messageElement,
@@ -14461,7 +14461,7 @@ abstract class _TestReportAssert extends TestReportAssert {
   @override
 
   /// [result] The result of this assertion.
-  Code? get result;
+  FhirCode? get result;
   @override
 
   /// [resultElement] Extensions for result
@@ -16089,7 +16089,7 @@ mixin _$TestScript {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language => throw _privateConstructorUsedError;
+  FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -16198,7 +16198,7 @@ mixin _$TestScript {
   /// [status] The status of this test script. Enables tracking the life-cycle
   ///  of the content.
   @HiveField(20)
-  Code? get status => throw _privateConstructorUsedError;
+  FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -16356,7 +16356,7 @@ abstract class $TestScriptCopyWith<$Res> {
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -16392,7 +16392,7 @@ abstract class $TestScriptCopyWith<$Res> {
       @HiveField(19)
           Element? titleElement,
       @HiveField(20)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(21)
           Element? statusElement,
@@ -16971,7 +16971,7 @@ abstract class _$$_TestScriptCopyWith<$Res>
       @HiveField(4)
           Element? implicitRulesElement,
       @HiveField(5)
-          Code? language,
+          FhirCode? language,
       @JsonKey(name: '_language')
       @HiveField(6)
           Element? languageElement,
@@ -17007,7 +17007,7 @@ abstract class _$$_TestScriptCopyWith<$Res>
       @HiveField(19)
           Element? titleElement,
       @HiveField(20)
-          Code? status,
+          FhirCode? status,
       @JsonKey(name: '_status')
       @HiveField(21)
           Element? statusElement,
@@ -18237,7 +18237,7 @@ abstract class _TestScript extends TestScript {
 
   /// [language] The base language in which the resource is written.
   @HiveField(5)
-  Code? get language;
+  FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -18360,7 +18360,7 @@ abstract class _TestScript extends TestScript {
   /// [status] The status of this test script. Enables tracking the life-cycle
   ///  of the content.
   @HiveField(20)
-  Code? get status;
+  FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -23206,7 +23206,7 @@ mixin _$TestScriptOperation {
 
   /// [resource] The type of the resource.  See
   ///  http://build.fhir.org/resourcelist.html.
-  Code? get resource => throw _privateConstructorUsedError;
+  FhirCode? get resource => throw _privateConstructorUsedError;
 
   /// [resourceElement] Extensions for resource
   @JsonKey(name: '_resource')
@@ -23230,7 +23230,7 @@ mixin _$TestScriptOperation {
 
   /// [accept] The mime-type to use for RESTful operation in the 'Accept'
   ///  header.
-  Code? get accept => throw _privateConstructorUsedError;
+  FhirCode? get accept => throw _privateConstructorUsedError;
 
   /// [acceptElement] Extensions for accept
   @JsonKey(name: '_accept')
@@ -23238,7 +23238,7 @@ mixin _$TestScriptOperation {
 
   /// [contentType] The mime-type to use for RESTful operation in the
   ///  'Content-Type' header.
-  Code? get contentType => throw _privateConstructorUsedError;
+  FhirCode? get contentType => throw _privateConstructorUsedError;
 
   /// [contentTypeElement] Extensions for contentType
   @JsonKey(name: '_contentType')
@@ -23264,7 +23264,7 @@ mixin _$TestScriptOperation {
 
   /// [method] The HTTP method the test engine MUST use for this operation
   ///  regardless of any other operation details.
-  Code? get method => throw _privateConstructorUsedError;
+  FhirCode? get method => throw _privateConstructorUsedError;
 
   /// [methodElement] Extensions for method
   @JsonKey(name: '_method')
@@ -23344,21 +23344,21 @@ abstract class $TestScriptOperationCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Coding? type,
-      Code? resource,
+      FhirCode? resource,
       @JsonKey(name: '_resource') Element? resourceElement,
       String? label,
       @JsonKey(name: '_label') Element? labelElement,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      Code? accept,
+      FhirCode? accept,
       @JsonKey(name: '_accept') Element? acceptElement,
-      Code? contentType,
+      FhirCode? contentType,
       @JsonKey(name: '_contentType') Element? contentTypeElement,
       Integer? destination,
       @JsonKey(name: '_destination') Element? destinationElement,
       Boolean? encodeRequestUrl,
       @JsonKey(name: '_encodeRequestUrl') Element? encodeRequestUrlElement,
-      Code? method,
+      FhirCode? method,
       @JsonKey(name: '_method') Element? methodElement,
       Integer? origin,
       @JsonKey(name: '_origin') Element? originElement,
@@ -23793,21 +23793,21 @@ abstract class _$$_TestScriptOperationCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Coding? type,
-      Code? resource,
+      FhirCode? resource,
       @JsonKey(name: '_resource') Element? resourceElement,
       String? label,
       @JsonKey(name: '_label') Element? labelElement,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      Code? accept,
+      FhirCode? accept,
       @JsonKey(name: '_accept') Element? acceptElement,
-      Code? contentType,
+      FhirCode? contentType,
       @JsonKey(name: '_contentType') Element? contentTypeElement,
       Integer? destination,
       @JsonKey(name: '_destination') Element? destinationElement,
       Boolean? encodeRequestUrl,
       @JsonKey(name: '_encodeRequestUrl') Element? encodeRequestUrlElement,
-      Code? method,
+      FhirCode? method,
       @JsonKey(name: '_method') Element? methodElement,
       Integer? origin,
       @JsonKey(name: '_origin') Element? originElement,
@@ -24559,7 +24559,7 @@ abstract class _TestScriptOperation extends TestScriptOperation {
 
   /// [resource] The type of the resource.  See
   ///  http://build.fhir.org/resourcelist.html.
-  Code? get resource;
+  FhirCode? get resource;
   @override
 
   /// [resourceElement] Extensions for resource
@@ -24589,7 +24589,7 @@ abstract class _TestScriptOperation extends TestScriptOperation {
 
   /// [accept] The mime-type to use for RESTful operation in the 'Accept'
   ///  header.
-  Code? get accept;
+  FhirCode? get accept;
   @override
 
   /// [acceptElement] Extensions for accept
@@ -24599,7 +24599,7 @@ abstract class _TestScriptOperation extends TestScriptOperation {
 
   /// [contentType] The mime-type to use for RESTful operation in the
   ///  'Content-Type' header.
-  Code? get contentType;
+  FhirCode? get contentType;
   @override
 
   /// [contentTypeElement] Extensions for contentType
@@ -24631,7 +24631,7 @@ abstract class _TestScriptOperation extends TestScriptOperation {
 
   /// [method] The HTTP method the test engine MUST use for this operation
   ///  regardless of any other operation details.
-  Code? get method;
+  FhirCode? get method;
   @override
 
   /// [methodElement] Extensions for method
@@ -25220,7 +25220,7 @@ mixin _$TestScriptAssert {
   Element? get descriptionElement => throw _privateConstructorUsedError;
 
   /// [direction] The direction to use for the assertion.
-  Code? get direction => throw _privateConstructorUsedError;
+  FhirCode? get direction => throw _privateConstructorUsedError;
 
   /// [directionElement] Extensions for direction
   @JsonKey(name: '_direction')
@@ -25256,7 +25256,7 @@ mixin _$TestScriptAssert {
 
   /// [contentType] The mime-type contents to compare against the request or
   ///  response message 'Content-Type' header.
-  Code? get contentType => throw _privateConstructorUsedError;
+  FhirCode? get contentType => throw _privateConstructorUsedError;
 
   /// [contentTypeElement] Extensions for contentType
   @JsonKey(name: '_contentType')
@@ -25296,7 +25296,7 @@ mixin _$TestScriptAssert {
   /// [operator] The operator type defines the conditional behavior of the
   ///  assert. If not defined, the default is equals.
   @JsonKey(name: 'operator')
-  Code? get operator_ => throw _privateConstructorUsedError;
+  FhirCode? get operator_ => throw _privateConstructorUsedError;
 
   /// [operatorElement] Extensions for operator
   @JsonKey(name: '_operator')
@@ -25312,7 +25312,7 @@ mixin _$TestScriptAssert {
 
   /// [requestMethod] The request method or HTTP operation code to compare
   ///  against that used by the client system under test.
-  Code? get requestMethod => throw _privateConstructorUsedError;
+  FhirCode? get requestMethod => throw _privateConstructorUsedError;
 
   /// [requestMethodElement] Extensions for requestMethod
   @JsonKey(name: '_requestMethod')
@@ -25328,7 +25328,7 @@ mixin _$TestScriptAssert {
 
   /// [resource] The type of the resource.  See
   ///  http://build.fhir.org/resourcelist.html.
-  Code? get resource => throw _privateConstructorUsedError;
+  FhirCode? get resource => throw _privateConstructorUsedError;
 
   /// [resourceElement] Extensions for resource
   @JsonKey(name: '_resource')
@@ -25337,7 +25337,7 @@ mixin _$TestScriptAssert {
   /// [response] okay | created | noContent | notModified | bad | forbidden |
   /// notFound | methodNotAllowed | conflict | gone | preconditionFailed |
   ///  unprocessable.
-  Code? get response => throw _privateConstructorUsedError;
+  FhirCode? get response => throw _privateConstructorUsedError;
 
   /// [responseElement] Extensions for response
   @JsonKey(name: '_response')
@@ -25403,7 +25403,7 @@ abstract class $TestScriptAssertCopyWith<$Res> {
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      Code? direction,
+      FhirCode? direction,
       @JsonKey(name: '_direction')
           Element? directionElement,
       String? compareToSourceId,
@@ -25415,7 +25415,7 @@ abstract class $TestScriptAssertCopyWith<$Res> {
       String? compareToSourcePath,
       @JsonKey(name: '_compareToSourcePath')
           Element? compareToSourcePathElement,
-      Code? contentType,
+      FhirCode? contentType,
       @JsonKey(name: '_contentType')
           Element? contentTypeElement,
       String? expression,
@@ -25431,22 +25431,22 @@ abstract class $TestScriptAssertCopyWith<$Res> {
       @JsonKey(name: '_navigationLinks')
           Element? navigationLinksElement,
       @JsonKey(name: 'operator')
-          Code? operator_,
+          FhirCode? operator_,
       @JsonKey(name: '_operator')
           Element? operatorElement,
       String? path,
       @JsonKey(name: '_path')
           Element? pathElement,
-      Code? requestMethod,
+      FhirCode? requestMethod,
       @JsonKey(name: '_requestMethod')
           Element? requestMethodElement,
       String? requestURL,
       @JsonKey(name: '_requestURL')
           Element? requestURLElement,
-      Code? resource,
+      FhirCode? resource,
       @JsonKey(name: '_resource')
           Element? resourceElement,
-      Code? response,
+      FhirCode? response,
       @JsonKey(name: '_response')
           Element? responseElement,
       String? responseCode,
@@ -26029,7 +26029,7 @@ abstract class _$$_TestScriptAssertCopyWith<$Res>
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      Code? direction,
+      FhirCode? direction,
       @JsonKey(name: '_direction')
           Element? directionElement,
       String? compareToSourceId,
@@ -26041,7 +26041,7 @@ abstract class _$$_TestScriptAssertCopyWith<$Res>
       String? compareToSourcePath,
       @JsonKey(name: '_compareToSourcePath')
           Element? compareToSourcePathElement,
-      Code? contentType,
+      FhirCode? contentType,
       @JsonKey(name: '_contentType')
           Element? contentTypeElement,
       String? expression,
@@ -26057,22 +26057,22 @@ abstract class _$$_TestScriptAssertCopyWith<$Res>
       @JsonKey(name: '_navigationLinks')
           Element? navigationLinksElement,
       @JsonKey(name: 'operator')
-          Code? operator_,
+          FhirCode? operator_,
       @JsonKey(name: '_operator')
           Element? operatorElement,
       String? path,
       @JsonKey(name: '_path')
           Element? pathElement,
-      Code? requestMethod,
+      FhirCode? requestMethod,
       @JsonKey(name: '_requestMethod')
           Element? requestMethodElement,
       String? requestURL,
       @JsonKey(name: '_requestURL')
           Element? requestURLElement,
-      Code? resource,
+      FhirCode? resource,
       @JsonKey(name: '_resource')
           Element? resourceElement,
-      Code? response,
+      FhirCode? response,
       @JsonKey(name: '_response')
           Element? responseElement,
       String? responseCode,
@@ -27043,7 +27043,7 @@ abstract class _TestScriptAssert extends TestScriptAssert {
   @override
 
   /// [direction] The direction to use for the assertion.
-  Code? get direction;
+  FhirCode? get direction;
   @override
 
   /// [directionElement] Extensions for direction
@@ -27086,7 +27086,7 @@ abstract class _TestScriptAssert extends TestScriptAssert {
 
   /// [contentType] The mime-type contents to compare against the request or
   ///  response message 'Content-Type' header.
-  Code? get contentType;
+  FhirCode? get contentType;
   @override
 
   /// [contentTypeElement] Extensions for contentType
@@ -27136,7 +27136,7 @@ abstract class _TestScriptAssert extends TestScriptAssert {
   /// [operator] The operator type defines the conditional behavior of the
   ///  assert. If not defined, the default is equals.
   @JsonKey(name: 'operator')
-  Code? get operator_;
+  FhirCode? get operator_;
   @override
 
   /// [operatorElement] Extensions for operator
@@ -27156,7 +27156,7 @@ abstract class _TestScriptAssert extends TestScriptAssert {
 
   /// [requestMethod] The request method or HTTP operation code to compare
   ///  against that used by the client system under test.
-  Code? get requestMethod;
+  FhirCode? get requestMethod;
   @override
 
   /// [requestMethodElement] Extensions for requestMethod
@@ -27176,7 +27176,7 @@ abstract class _TestScriptAssert extends TestScriptAssert {
 
   /// [resource] The type of the resource.  See
   ///  http://build.fhir.org/resourcelist.html.
-  Code? get resource;
+  FhirCode? get resource;
   @override
 
   /// [resourceElement] Extensions for resource
@@ -27187,7 +27187,7 @@ abstract class _TestScriptAssert extends TestScriptAssert {
   /// [response] okay | created | noContent | notModified | bad | forbidden |
   /// notFound | methodNotAllowed | conflict | gone | preconditionFailed |
   ///  unprocessable.
-  Code? get response;
+  FhirCode? get response;
   @override
 
   /// [responseElement] Extensions for response

@@ -210,7 +210,7 @@ class Appointment extends HiveObject with Resource, _$Appointment {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -270,7 +270,7 @@ class Appointment extends HiveObject with Resource, _$Appointment {
     /// has their own participation status which indicates their involvement in
     ///  the process, however this status indicates the shared status.
     @HiveField(12)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -561,7 +561,7 @@ class AppointmentParticipant with _$AppointmentParticipant {
     @JsonKey(name: '_required') Element? requiredElement,
 
     /// [status] Participation status of the actor.
-    Code? status,
+    FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -732,7 +732,7 @@ class AppointmentResponse extends HiveObject
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -828,7 +828,7 @@ class AppointmentResponse extends HiveObject
     /// time change. When the status is accepted, the times can either be the time
     ///  of the appointment (as a confirmation of the time) or can be empty.
     @HiveField(19)
-        Code? participantStatus,
+        FhirCode? participantStatus,
 
     /// [participantStatusElement] Extensions for participantStatus
     @JsonKey(name: '_participantStatus')
@@ -999,7 +999,7 @@ class Schedule extends HiveObject with Resource, _$Schedule {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -1267,7 +1267,7 @@ class Slot extends HiveObject with Resource, _$Slot {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -1352,7 +1352,7 @@ class Slot extends HiveObject with Resource, _$Slot {
     /// [status] busy | free | busy-unavailable | busy-tentative |
     ///  entered-in-error.
     @HiveField(18)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -1626,7 +1626,7 @@ class Task extends HiveObject with Resource, _$Task {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -1718,7 +1718,7 @@ class Task extends HiveObject with Resource, _$Task {
 
     /// [status] The current status of the task.
     @HiveField(19)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -1742,7 +1742,7 @@ class Task extends HiveObject with Resource, _$Task {
     /// i.e. i+R[9]Cs this a proposed task, a planned task, an actionable task,
     ///  etc.
     @HiveField(25)
-        Code? intent,
+        FhirCode? intent,
 
     /// [intentElement] Extensions for intent
     @JsonKey(name: '_intent')
@@ -1752,7 +1752,7 @@ class Task extends HiveObject with Resource, _$Task {
     /// [priority] Indicates how quickly the Task should be addressed with
     ///  respect to other requests.
     @HiveField(27)
-        Code? priority,
+        FhirCode? priority,
 
     /// [priorityElement] Extensions for priority
     @JsonKey(name: '_priority')
@@ -2220,7 +2220,7 @@ class TaskInput with _$TaskInput {
     required CodeableConcept type,
 
     /// [valueBase64Binary] The value of the input parameter as a basic type.
-    Base64Binary? valueBase64Binary,
+    FhirBase64Binary? valueBase64Binary,
 
     /// [valueBase64BinaryElement] Extensions for valueBase64Binary
     @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
@@ -2238,7 +2238,7 @@ class TaskInput with _$TaskInput {
     @JsonKey(name: '_valueCanonical') Element? valueCanonicalElement,
 
     /// [valueCode] The value of the input parameter as a basic type.
-    Code? valueCode,
+    FhirCode? valueCode,
 
     /// [valueCodeElement] Extensions for valueCode
     @JsonKey(name: '_valueCode') Element? valueCodeElement,
@@ -2256,7 +2256,7 @@ class TaskInput with _$TaskInput {
     @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
 
     /// [valueDecimal] The value of the input parameter as a basic type.
-    Decimal? valueDecimal,
+    FhirDecimal? valueDecimal,
 
     /// [valueDecimalElement] Extensions for valueDecimal
     @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
@@ -2665,7 +2665,7 @@ class TaskOutput with _$TaskOutput {
     required CodeableConcept type,
 
     /// [valueBase64Binary] The value of the Output parameter as a basic type.
-    Base64Binary? valueBase64Binary,
+    FhirBase64Binary? valueBase64Binary,
 
     /// [valueBase64BinaryElement] Extensions for valueBase64Binary
     @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
@@ -2683,7 +2683,7 @@ class TaskOutput with _$TaskOutput {
     @JsonKey(name: '_valueCanonical') Element? valueCanonicalElement,
 
     /// [valueCode] The value of the Output parameter as a basic type.
-    Code? valueCode,
+    FhirCode? valueCode,
 
     /// [valueCodeElement] Extensions for valueCode
     @JsonKey(name: '_valueCode') Element? valueCodeElement,
@@ -2701,7 +2701,7 @@ class TaskOutput with _$TaskOutput {
     @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
 
     /// [valueDecimal] The value of the Output parameter as a basic type.
-    Decimal? valueDecimal,
+    FhirDecimal? valueDecimal,
 
     /// [valueDecimalElement] Extensions for valueDecimal
     @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
@@ -3048,7 +3048,7 @@ class VerificationResult extends HiveObject
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-        Code? language,
+        FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -3119,7 +3119,7 @@ class VerificationResult extends HiveObject
     /// [status] The validation status of the target (attested; validated; in
     ///  process; requires revalidation; validation failed; revalidation failed).
     @HiveField(15)
-        Code? status,
+        FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
