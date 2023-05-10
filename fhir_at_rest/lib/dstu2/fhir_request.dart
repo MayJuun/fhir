@@ -830,7 +830,7 @@ class FhirRequest with _$FhirRequest {
     @Default(<String>[]) List<String> parameters,
 
     /// [fhirParameter] any extra fhirParameters
-    @Default(<String, dynamic>{}) Map<String, dynamic> fhirParameter,
+    Parameters? fhirParameter,
     required String operation,
 
     /// [usePost] - defines if you would prefer to use a post request instead of
@@ -1079,14 +1079,18 @@ class FhirRequest with _$FhirRequest {
 
       /// OPERATION
       operation: (m) async => await _request(
-        m.usePost ? RestfulRequest.post_ : RestfulRequest.get_,
-        m.usePost ? url : uri(parameters: parameters),
+        m.usePost || m.fhirParameter != null
+            ? RestfulRequest.post_
+            : RestfulRequest.get_,
+        m.usePost || m.fhirParameter != null
+            ? url
+            : uri(parameters: parameters),
         headers,
         'Operation',
         accept,
-        resource: m.usePost && m.useFormData
-            ? null
-            : Resource.fromJson(m.fhirParameter),
+        resource: (m.usePost && !m.useFormData) || m.fhirParameter != null
+            ? m.fhirParameter
+            : null,
         formData: m.usePost && m.useFormData
             ? m.formData(parameters: parameters)
             : null,
@@ -1417,10 +1421,15 @@ class FhirRequest with _$FhirRequest {
                 severity: IssueSeverity.information,
                 code: FhirCode('informational'),
                 diagnostics: 'Your request succeeded with a status of '
-                    '${result.statusCode}\nbut the result did not have a body\n'
-                    'Your request was: \n'
-                    'Type: $type\nRequestUrl: $thisRequest\nHeaders: $headers\n'
-                    'Body: ${formData ?? jsonEncode(resource)}',
+                    '${result.statusCode}\n, but the request result did not have '
+                    'did not include a body/had no information in its body\n'
+                    'Your request was:'
+                    '\nRequestType: $type'
+                    '\nRequestUrl: $thisRequest'
+                    '\nRequestHeaders: $headers'
+                    '\nRequestBody: ${formData ?? jsonEncode(resource)}'
+                    '\nYour result was:'
+                    '\nResultHeaders: ${result.headers}',
                 location: result.headers['Location'] == null
                     ? null
                     : [result.headers['Location']!]),
@@ -1431,10 +1440,15 @@ class FhirRequest with _$FhirRequest {
                 severity: IssueSeverity.information,
                 code: FhirCode('informational'),
                 diagnostics: 'Your request succeeded with a status of '
-                    '${result.statusCode}\nbut the result did not have a body\n'
-                    'Your request was: \n'
-                    'Type: $type\nRequestUrl: $thisRequest\nHeaders: $headers\n'
-                    'Body: ${formData ?? jsonEncode(resource)}',
+                    '${result.statusCode}\n, but the request result did not have '
+                    'did not include a body/had no information in its body\n'
+                    'Your request was:'
+                    '\nRequestType: $type'
+                    '\nRequestUrl: $thisRequest'
+                    '\nRequestHeaders: $headers'
+                    '\nRequestBody: ${formData ?? jsonEncode(resource)}'
+                    '\nYour result was:'
+                    '\nResultHeaders: ${result.headers}',
                 location: result.headers['Location'] == null
                     ? null
                     : [result.headers['Location']!]),
@@ -1452,8 +1466,8 @@ class FhirRequest with _$FhirRequest {
                       'Request was made, but the result body had no defined response'),
               diagnostics: '\nStatus Code: ${result.statusCode} -'
                   ' ${_errorCodes[result.statusCode]}'
-                  '\nResult headers: ${result.headers}'
-                  '\nResult body: ${result.body}',
+                  '\nResultHeaders: ${result.headers}'
+                  '\nResultBody: ${result.body}',
             )
           ]);
         } else if (body['resourceType'] == 'OperationOutcome') {
@@ -1484,8 +1498,8 @@ class FhirRequest with _$FhirRequest {
                         'but the ResourceType returned was unrecognized'),
                 diagnostics: '\nStatus Code: ${result.statusCode} -'
                     ' ${_errorCodes[result.statusCode]}'
-                    '\nResult headers: ${result.headers}'
-                    '\nResult body: ${result.body}',
+                    '\nResultHeaders: ${result.headers}'
+                    '\nResultBody: ${result.body}',
               )
             ]);
           } else {

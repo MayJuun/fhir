@@ -16,6 +16,7 @@ part 'fhir_request.freezed.dart';
 
 /// The class for making requests to a FHIR server
 class FhirRequest with _$FhirRequest {
+  /// Private constructor
   const FhirRequest._();
 
   /// READ constructor
@@ -502,6 +503,8 @@ class FhirRequest with _$FhirRequest {
 
     /// [parameters] - any extra parameters
     @Default(<String>[]) List<String> parameters,
+
+    /// [bundle] - the bundle to be uploaded
     required Bundle bundle,
 
     /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
@@ -549,6 +552,8 @@ class FhirRequest with _$FhirRequest {
 
     /// [parameters] - any extra parameters
     @Default(<String>[]) List<String> parameters,
+
+    /// [bundle] - the bundle to be uploaded
     required Bundle bundle,
 
     /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
@@ -827,8 +832,8 @@ class FhirRequest with _$FhirRequest {
     /// [parameters] - any extra parameters
     @Default(<String>[]) List<String> parameters,
 
-    /// [fhirParameter] - any extra fhirParameters
-    @Default(<String, dynamic>{}) Map<String, dynamic> fhirParameter,
+    /// [fhirParameter] any extra fhirParameters
+    Parameters? fhirParameter,
     required String operation,
 
     /// [usePost] - defines if you would prefer to use a post request instead of
@@ -860,6 +865,7 @@ class FhirRequest with _$FhirRequest {
         uri(parameters: m.parameters),
         headers,
         'Read',
+        accept,
         mimeType: m.mimeType,
       ),
 
@@ -869,6 +875,7 @@ class FhirRequest with _$FhirRequest {
         uri(parameters: m.parameters),
         headers,
         'Vread',
+        accept,
         mimeType: m.mimeType,
       ),
 
@@ -878,6 +885,7 @@ class FhirRequest with _$FhirRequest {
         uri(parameters: m.parameters),
         headers,
         'Update',
+        accept,
         resource: m.resource,
         mimeType: m.mimeType,
       ),
@@ -888,6 +896,7 @@ class FhirRequest with _$FhirRequest {
         uri(parameters: m.parameters),
         headers,
         'Patch',
+        accept,
         resource: m.resource,
         mimeType: m.mimeType,
       ),
@@ -898,6 +907,7 @@ class FhirRequest with _$FhirRequest {
         uri(parameters: m.parameters),
         headers,
         'Delete',
+        accept,
         mimeType: m.mimeType,
       ),
 
@@ -907,6 +917,7 @@ class FhirRequest with _$FhirRequest {
         uri(parameters: m.parameters),
         headers,
         'Create',
+        accept,
         resource: m.resource,
         mimeType: m.mimeType,
       ),
@@ -917,6 +928,7 @@ class FhirRequest with _$FhirRequest {
         m.usePost ? url : uri(parameters: m.parameters),
         headers,
         'Search',
+        accept,
         formData: m.usePost ? m.formData(parameters: m.parameters) : null,
         mimeType: m.mimeType,
       ),
@@ -927,6 +939,7 @@ class FhirRequest with _$FhirRequest {
         uri(parameters: m.parameters),
         headers,
         'Search All',
+        accept,
         mimeType: m.mimeType,
       ),
 
@@ -936,12 +949,13 @@ class FhirRequest with _$FhirRequest {
         uri(parameters: m.parameters),
         headers,
         'Capabilities',
+        accept,
         mimeType: m.mimeType,
       ),
 
       /// TRANSACTION
       transaction: (m) async {
-        if (m.bundle.type != FhirCode('transaction')) {
+        if (m.bundle.type.toString() != 'transaction') {
           return _operationOutcome(
               'A Transaction request was made, but no Bundle was included.');
         }
@@ -963,6 +977,7 @@ class FhirRequest with _$FhirRequest {
           uri(),
           headers,
           'Transaction',
+          accept,
           resource: m.bundle,
           mimeType: m.mimeType,
         );
@@ -970,7 +985,7 @@ class FhirRequest with _$FhirRequest {
 
       /// BATCH
       batch: (m) async {
-        if (m.bundle.type != FhirCode('batch')) {
+        if (m.bundle.type.toString() != 'batch') {
           return _operationOutcome(
               'A Batch request was made, but the included Bundle is not a'
               ' batch type.');
@@ -993,6 +1008,7 @@ class FhirRequest with _$FhirRequest {
           uri(),
           headers,
           'Batch',
+          accept,
           resource: m.bundle,
           mimeType: m.mimeType,
         );
@@ -1015,6 +1031,7 @@ class FhirRequest with _$FhirRequest {
           uri(parameters: parameterList),
           headers,
           'History',
+          accept,
           mimeType: m.mimeType,
         );
       },
@@ -1036,6 +1053,7 @@ class FhirRequest with _$FhirRequest {
           uri(parameters: parameterList),
           headers,
           'History Type',
+          accept,
           mimeType: m.mimeType,
         );
       },
@@ -1057,19 +1075,25 @@ class FhirRequest with _$FhirRequest {
           uri(parameters: parameterList),
           headers,
           'History all',
+          accept,
           mimeType: m.mimeType,
         );
       },
 
       /// OPERATION
       operation: (m) async => await _request(
-        m.usePost ? RestfulRequest.post_ : RestfulRequest.get_,
-        m.usePost ? url : uri(parameters: parameters),
+        m.usePost || m.fhirParameter != null
+            ? RestfulRequest.post_
+            : RestfulRequest.get_,
+        m.usePost || m.fhirParameter != null
+            ? url
+            : uri(parameters: parameters),
         headers,
         'Operation',
-        resource: m.usePost && m.useFormData
-            ? null
-            : Resource.fromJson(m.fhirParameter),
+        accept,
+        resource: (m.usePost && !m.useFormData) || m.fhirParameter != null
+            ? m.fhirParameter
+            : null,
         formData: m.usePost && m.useFormData
             ? m.formData(parameters: parameters)
             : null,
@@ -1124,7 +1148,8 @@ class FhirRequest with _$FhirRequest {
     RestfulRequest type,
     String uri,
     Map<String, String>? headers,
-    String requestType, {
+    String requestType,
+    String accept, {
     Resource? resource,
     String? formData,
 
@@ -1138,6 +1163,7 @@ class FhirRequest with _$FhirRequest {
         thisRequest: uri,
         client: client,
         headers: headers,
+        accept: accept,
         resource: resource == null ? null : resource.toJson(),
         mimeType: mimeType,
       );
@@ -1287,6 +1313,7 @@ class FhirRequest with _$FhirRequest {
     Map<String, dynamic>? resource,
     String? formData,
     Encoding? encoding,
+    required String accept,
 
     /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
     ///   but there are some older systems that won't accept that
@@ -1296,6 +1323,7 @@ class FhirRequest with _$FhirRequest {
     Client? client,
   }) async {
     headers ??= <String, String>{};
+    headers['Accept'] = accept;
     Response result;
     client ??= Client();
 
@@ -1396,10 +1424,15 @@ class FhirRequest with _$FhirRequest {
                 severity: FhirCode('information'),
                 code: FhirCode('informational'),
                 diagnostics: 'Your request succeeded with a status of '
-                    '${result.statusCode}\nbut the result did not have a body\n'
-                    'Your request was: \n'
-                    'Type: $type\nRequestUrl: $thisRequest\nHeaders: $headers\n'
-                    'Body: ${formData ?? jsonEncode(resource)}',
+                    '${result.statusCode}\n, but the request result did not have '
+                    'did not include a body/had no information in its body\n'
+                    'Your request was:'
+                    '\nRequestType: $type'
+                    '\nRequestUrl: $thisRequest'
+                    '\nRequestHeaders: $headers'
+                    '\nRequestBody: ${formData ?? jsonEncode(resource)}'
+                    '\nYour result was:'
+                    '\nResultHeaders: ${result.headers}',
                 location: result.headers['Location'] == null
                     ? null
                     : [result.headers['Location']!]),
@@ -1410,10 +1443,15 @@ class FhirRequest with _$FhirRequest {
                 severity: FhirCode('information'),
                 code: FhirCode('informational'),
                 diagnostics: 'Your request succeeded with a status of '
-                    '${result.statusCode}\nbut the result did not have a body\n'
-                    'Your request was: \n'
-                    'Type: $type\nRequestUrl: $thisRequest\nHeaders: $headers\n'
-                    'Body: ${formData ?? jsonEncode(resource)}',
+                    '${result.statusCode}\n, but the request result did not have '
+                    'did not include a body/had no information in its body\n'
+                    'Your request was:'
+                    '\nRequestType: $type'
+                    '\nRequestUrl: $thisRequest'
+                    '\nRequestHeaders: $headers'
+                    '\nRequestBody: ${formData ?? jsonEncode(resource)}'
+                    '\nYour result was:'
+                    '\nResultHeaders: ${result.headers}',
                 location: result.headers['Location'] == null
                     ? null
                     : [result.headers['Location']!]),
@@ -1431,8 +1469,8 @@ class FhirRequest with _$FhirRequest {
                       'Request was made, but the result body had no defined response'),
               diagnostics: '\nStatus Code: ${result.statusCode} -'
                   ' ${_errorCodes[result.statusCode]}'
-                  '\nResult headers: ${result.headers}'
-                  '\nResult body: ${result.body}',
+                  '\nResultHeaders: ${result.headers}'
+                  '\nResultBody: ${result.body}',
             )
           ]);
         } else if (body['resourceType'] == 'OperationOutcome') {
@@ -1461,8 +1499,8 @@ class FhirRequest with _$FhirRequest {
                         'but the ResourceType returned was unrecognized'),
                 diagnostics: '\nStatus Code: ${result.statusCode} -'
                     ' ${_errorCodes[result.statusCode]}'
-                    '\nResult headers: ${result.headers}'
-                    '\nResult body: ${result.body}',
+                    '\nResultHeaders: ${result.headers}'
+                    '\nResultBody: ${result.body}',
               )
             ]);
           } else {

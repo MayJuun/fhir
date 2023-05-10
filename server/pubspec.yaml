@@ -1,0 +1,24 @@
+name: example
+description: Interactively evaluate FHIRPath expressions
+publish_to: "none"
+
+environment:
+  sdk: ">=2.19.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  fhir: ^0.9.4
+  # fhir:
+  #   path: ../../fhir
+  fhir_path:
+    path: ../../fhir_path
+  google_fonts: ^4.0.3
+  url_launcher: ^6.1.9
+  yaml_writer: ^1.0.3
+
+dev_dependencies:
+  flutter_lints: ^2.0.1
+
+flutter:
+  uses-material-design: true
