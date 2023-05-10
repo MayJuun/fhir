@@ -86,7 +86,7 @@ This is very similar to a read request. The difference is that we specify which 
         base: Uri.parse('http://hapi.fhir.org/baseR4'),
         type: R4ResourceType.Patient,
         id: Id('12345'),
-        vid: Id('6789'),
+        vid: FhirId('6789'),
   );
   var makeReq2 = await request.request();
 ```

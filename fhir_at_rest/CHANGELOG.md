@@ -1,5 +1,12 @@
 # fhir_at_rest
 
+## [0.10.0]
+
+* Update error messages
+* Added ability to include a Parameters resource for operations
+* Updated dependencies
+* All requests will now request Json as return type unless specified
+
 ## [0.9.5]
 
 * Updates for parsing bundles
