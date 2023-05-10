@@ -48,6 +48,8 @@ class Resource {
   static Resource fromJson(Map<String, dynamic> json) =>
       _resourceFromJson(json);
 
+  static String aString() => 'string';
+
   /// Acts like a constructor, returns a [Resource], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   static Resource fromJsonString(String source) {
@@ -120,7 +122,8 @@ class Resource {
   String toYaml() => json2yaml(toJson());
 
   /// produce a string of the [resourceType]
-  String? get resourceTypeString => resourceTypeToStringMap[resourceType];
+  String? get resourceTypeString =>
+      ResourceUtils.resourceTypeToStringMap[resourceType];
 
   /// Convenience method to return a [Reference] referring to that [Resource]
   Reference get thisReference => Reference(
@@ -139,6 +142,6 @@ class Resource {
 
   /// Updates the [meta] field of this Resource, updates the meta.lastUpdated
   /// field, adds 1 to the version number
-  Resource updateVersion({FhirMeta? oldFhirMeta}) =>
-      _updateFhirMeta(this, meta: oldFhirMeta);
+  Resource updateVersion({FhirMeta? oldMeta}) =>
+      _updateMeta(this, meta: oldMeta);
 }
