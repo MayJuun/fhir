@@ -4,9 +4,8 @@ import 'dart:io';
 import 'types.dart';
 
 Future<void> main() async {
-  final longString =
-      jsonDecode(await File('new_fhir/fhir.schema.json').readAsString())
-          as Map<String, dynamic>;
+  final longString = jsonDecode(await File('fhir.schema.json').readAsString())
+      as Map<String, dynamic>;
   final definitions = longString['definitions'] as Map<String, dynamic>;
   definitions.remove('ResourceList');
   final typeMap = {
@@ -324,7 +323,7 @@ part '$key.g.dart';\n\n${typeMap[key]}\n''';
           fileString = fileString.replaceAll(key, replaceStrings[key]!);
         }
         // fileString = formatComments(fileString);
-        await File('lib/r5/$key/$key.dart').writeAsString(fileString);
+        await File('../lib/r5/$key/$key.dart').writeAsString(fileString);
       } else {
         ///
         /// Partial map of resourceStrings from the Map initially defined for this
@@ -367,7 +366,7 @@ part '$subKey.g.dart';\n\n${(resourceTypeMap[resourceKey] as Map<String, dynamic
             }
             // fileString = formatComments(fileString);
             await File(
-                    'lib/r5/resource_types/$resourceKey/$subKey/$subKey.dart')
+                    '../lib/r5/resource_types/$resourceKey/$subKey/$subKey.dart')
                 .writeAsString(fileString);
           }
         }
