@@ -4044,6 +4044,1271 @@ abstract class _CommunicationRequestPayload
       get copyWith => throw _privateConstructorUsedError;
 }
 
+DeviceAssociation _$DeviceAssociationFromJson(Map<String, dynamic> json) {
+  return _DeviceAssociation.fromJson(json);
+}
+
+/// @nodoc
+mixin _$DeviceAssociation {
+  /// [resourceType] This is a DeviceAssociation resource
+  @JsonKey(unknownEnumValue: R5ResourceType.DeviceAssociation)
+  R5ResourceType get resourceType => throw _privateConstructorUsedError;
+
+  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.
+  FhirId? get id => throw _privateConstructorUsedError;
+
+  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
+  FhirMeta? get meta => throw _privateConstructorUsedError;
+
+  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+
+  /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
+  @JsonKey(name: '_implicitRules')
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+
+  /// [language] The base language in which the resource is written.
+  FhirCode? get language => throw _privateConstructorUsedError;
+
+  /// [languageElement] ("_language") Extensions for language
+  @JsonKey(name: '_language')
+  Element? get languageElement => throw _privateConstructorUsedError;
+
+  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
+  Narrative? get text => throw _privateConstructorUsedError;
+
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
+  List<Resource>? get contained => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+
+  /// [identifier] Instance identifier.
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+
+  /// [device] Reference to the devices associated with the patient or group.
+  Reference get device => throw _privateConstructorUsedError;
+
+  /// [category] Describes the relationship between the device and subject.
+  List<CodeableConcept>? get category => throw _privateConstructorUsedError;
+
+  /// [status] Indicates the state of the Device association.
+  CodeableConcept get status => throw _privateConstructorUsedError;
+
+  /// [statusReason] The reasons given for the current association status.
+  List<CodeableConcept>? get statusReason => throw _privateConstructorUsedError;
+
+  /// [subject] The individual, group of individuals or device that the device is on or associated with.
+  Reference? get subject => throw _privateConstructorUsedError;
+
+  /// [bodyStructure] Current anatomical location of the device in/on subject.
+  Reference? get bodyStructure => throw _privateConstructorUsedError;
+
+  /// [period] Begin and end dates and times for the device association.
+  Period? get period => throw _privateConstructorUsedError;
+
+  /// [operation] The details about the device when it is in use to describe its operation.
+  List<DeviceAssociationOperation>? get operation =>
+      throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $DeviceAssociationCopyWith<DeviceAssociation> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $DeviceAssociationCopyWith<$Res> {
+  factory $DeviceAssociationCopyWith(
+          DeviceAssociation value, $Res Function(DeviceAssociation) then) =
+      _$DeviceAssociationCopyWithImpl<$Res, DeviceAssociation>;
+  @useResult
+  $Res call(
+      {@JsonKey(unknownEnumValue: R5ResourceType.DeviceAssociation)
+          R5ResourceType resourceType,
+      FhirId? id,
+      FhirMeta? meta,
+      FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element? implicitRulesElement,
+      FhirCode? language,
+      @JsonKey(name: '_language')
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      Reference device,
+      List<CodeableConcept>? category,
+      CodeableConcept status,
+      List<CodeableConcept>? statusReason,
+      Reference? subject,
+      Reference? bodyStructure,
+      Period? period,
+      List<DeviceAssociationOperation>? operation});
+
+  $FhirMetaCopyWith<$Res>? get meta;
+  $ElementCopyWith<$Res>? get implicitRulesElement;
+  $ElementCopyWith<$Res>? get languageElement;
+  $NarrativeCopyWith<$Res>? get text;
+  $ReferenceCopyWith<$Res> get device;
+  $CodeableConceptCopyWith<$Res> get status;
+  $ReferenceCopyWith<$Res>? get subject;
+  $ReferenceCopyWith<$Res>? get bodyStructure;
+  $PeriodCopyWith<$Res>? get period;
+}
+
+/// @nodoc
+class _$DeviceAssociationCopyWithImpl<$Res, $Val extends DeviceAssociation>
+    implements $DeviceAssociationCopyWith<$Res> {
+  _$DeviceAssociationCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? resourceType = null,
+    Object? id = freezed,
+    Object? meta = freezed,
+    Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
+    Object? language = freezed,
+    Object? languageElement = freezed,
+    Object? text = freezed,
+    Object? contained = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? identifier = freezed,
+    Object? device = null,
+    Object? category = freezed,
+    Object? status = null,
+    Object? statusReason = freezed,
+    Object? subject = freezed,
+    Object? bodyStructure = freezed,
+    Object? period = freezed,
+    Object? operation = freezed,
+  }) {
+    return _then(_value.copyWith(
+      resourceType: null == resourceType
+          ? _value.resourceType
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R5ResourceType,
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as FhirId?,
+      meta: freezed == meta
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as FhirMeta?,
+      implicitRules: freezed == implicitRules
+          ? _value.implicitRules
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      implicitRulesElement: freezed == implicitRulesElement
+          ? _value.implicitRulesElement
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: freezed == language
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as FhirCode?,
+      languageElement: freezed == languageElement
+          ? _value.languageElement
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: freezed == text
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
+      contained: freezed == contained
+          ? _value.contained
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
+      extension_: freezed == extension_
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: freezed == modifierExtension
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      identifier: freezed == identifier
+          ? _value.identifier
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      device: null == device
+          ? _value.device
+          : device // ignore: cast_nullable_to_non_nullable
+              as Reference,
+      category: freezed == category
+          ? _value.category
+          : category // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      status: null == status
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      statusReason: freezed == statusReason
+          ? _value.statusReason
+          : statusReason // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      subject: freezed == subject
+          ? _value.subject
+          : subject // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      bodyStructure: freezed == bodyStructure
+          ? _value.bodyStructure
+          : bodyStructure // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      period: freezed == period
+          ? _value.period
+          : period // ignore: cast_nullable_to_non_nullable
+              as Period?,
+      operation: freezed == operation
+          ? _value.operation
+          : operation // ignore: cast_nullable_to_non_nullable
+              as List<DeviceAssociationOperation>?,
+    ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $FhirMetaCopyWith<$Res>? get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
+      return _then(_value.copyWith(meta: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get implicitRulesElement {
+    if (_value.implicitRulesElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement!, (value) {
+      return _then(_value.copyWith(implicitRulesElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get languageElement {
+    if (_value.languageElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.languageElement!, (value) {
+      return _then(_value.copyWith(languageElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $NarrativeCopyWith<$Res>? get text {
+    if (_value.text == null) {
+      return null;
+    }
+
+    return $NarrativeCopyWith<$Res>(_value.text!, (value) {
+      return _then(_value.copyWith(text: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ReferenceCopyWith<$Res> get device {
+    return $ReferenceCopyWith<$Res>(_value.device, (value) {
+      return _then(_value.copyWith(device: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CodeableConceptCopyWith<$Res> get status {
+    return $CodeableConceptCopyWith<$Res>(_value.status, (value) {
+      return _then(_value.copyWith(status: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ReferenceCopyWith<$Res>? get subject {
+    if (_value.subject == null) {
+      return null;
+    }
+
+    return $ReferenceCopyWith<$Res>(_value.subject!, (value) {
+      return _then(_value.copyWith(subject: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ReferenceCopyWith<$Res>? get bodyStructure {
+    if (_value.bodyStructure == null) {
+      return null;
+    }
+
+    return $ReferenceCopyWith<$Res>(_value.bodyStructure!, (value) {
+      return _then(_value.copyWith(bodyStructure: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $PeriodCopyWith<$Res>? get period {
+    if (_value.period == null) {
+      return null;
+    }
+
+    return $PeriodCopyWith<$Res>(_value.period!, (value) {
+      return _then(_value.copyWith(period: value) as $Val);
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_DeviceAssociationCopyWith<$Res>
+    implements $DeviceAssociationCopyWith<$Res> {
+  factory _$$_DeviceAssociationCopyWith(_$_DeviceAssociation value,
+          $Res Function(_$_DeviceAssociation) then) =
+      __$$_DeviceAssociationCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {@JsonKey(unknownEnumValue: R5ResourceType.DeviceAssociation)
+          R5ResourceType resourceType,
+      FhirId? id,
+      FhirMeta? meta,
+      FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element? implicitRulesElement,
+      FhirCode? language,
+      @JsonKey(name: '_language')
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      Reference device,
+      List<CodeableConcept>? category,
+      CodeableConcept status,
+      List<CodeableConcept>? statusReason,
+      Reference? subject,
+      Reference? bodyStructure,
+      Period? period,
+      List<DeviceAssociationOperation>? operation});
+
+  @override
+  $FhirMetaCopyWith<$Res>? get meta;
+  @override
+  $ElementCopyWith<$Res>? get implicitRulesElement;
+  @override
+  $ElementCopyWith<$Res>? get languageElement;
+  @override
+  $NarrativeCopyWith<$Res>? get text;
+  @override
+  $ReferenceCopyWith<$Res> get device;
+  @override
+  $CodeableConceptCopyWith<$Res> get status;
+  @override
+  $ReferenceCopyWith<$Res>? get subject;
+  @override
+  $ReferenceCopyWith<$Res>? get bodyStructure;
+  @override
+  $PeriodCopyWith<$Res>? get period;
+}
+
+/// @nodoc
+class __$$_DeviceAssociationCopyWithImpl<$Res>
+    extends _$DeviceAssociationCopyWithImpl<$Res, _$_DeviceAssociation>
+    implements _$$_DeviceAssociationCopyWith<$Res> {
+  __$$_DeviceAssociationCopyWithImpl(
+      _$_DeviceAssociation _value, $Res Function(_$_DeviceAssociation) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? resourceType = null,
+    Object? id = freezed,
+    Object? meta = freezed,
+    Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
+    Object? language = freezed,
+    Object? languageElement = freezed,
+    Object? text = freezed,
+    Object? contained = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? identifier = freezed,
+    Object? device = null,
+    Object? category = freezed,
+    Object? status = null,
+    Object? statusReason = freezed,
+    Object? subject = freezed,
+    Object? bodyStructure = freezed,
+    Object? period = freezed,
+    Object? operation = freezed,
+  }) {
+    return _then(_$_DeviceAssociation(
+      resourceType: null == resourceType
+          ? _value.resourceType
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R5ResourceType,
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as FhirId?,
+      meta: freezed == meta
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as FhirMeta?,
+      implicitRules: freezed == implicitRules
+          ? _value.implicitRules
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      implicitRulesElement: freezed == implicitRulesElement
+          ? _value.implicitRulesElement
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: freezed == language
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as FhirCode?,
+      languageElement: freezed == languageElement
+          ? _value.languageElement
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: freezed == text
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
+      contained: freezed == contained
+          ? _value._contained
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
+      extension_: freezed == extension_
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: freezed == modifierExtension
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      identifier: freezed == identifier
+          ? _value._identifier
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      device: null == device
+          ? _value.device
+          : device // ignore: cast_nullable_to_non_nullable
+              as Reference,
+      category: freezed == category
+          ? _value._category
+          : category // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      status: null == status
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      statusReason: freezed == statusReason
+          ? _value._statusReason
+          : statusReason // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      subject: freezed == subject
+          ? _value.subject
+          : subject // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      bodyStructure: freezed == bodyStructure
+          ? _value.bodyStructure
+          : bodyStructure // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      period: freezed == period
+          ? _value.period
+          : period // ignore: cast_nullable_to_non_nullable
+              as Period?,
+      operation: freezed == operation
+          ? _value._operation
+          : operation // ignore: cast_nullable_to_non_nullable
+              as List<DeviceAssociationOperation>?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_DeviceAssociation extends _DeviceAssociation {
+  _$_DeviceAssociation(
+      {@JsonKey(unknownEnumValue: R5ResourceType.DeviceAssociation)
+          this.resourceType = R5ResourceType.DeviceAssociation,
+      this.id,
+      this.meta,
+      this.implicitRules,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
+      this.language,
+      @JsonKey(name: '_language')
+          this.languageElement,
+      this.text,
+      final List<Resource>? contained,
+      @JsonKey(name: 'extension')
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      required this.device,
+      final List<CodeableConcept>? category,
+      required this.status,
+      final List<CodeableConcept>? statusReason,
+      this.subject,
+      this.bodyStructure,
+      this.period,
+      final List<DeviceAssociationOperation>? operation})
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _identifier = identifier,
+        _category = category,
+        _statusReason = statusReason,
+        _operation = operation,
+        super._();
+
+  factory _$_DeviceAssociation.fromJson(Map<String, dynamic> json) =>
+      _$$_DeviceAssociationFromJson(json);
+
+  /// [resourceType] This is a DeviceAssociation resource
+  @override
+  @JsonKey(unknownEnumValue: R5ResourceType.DeviceAssociation)
+  final R5ResourceType resourceType;
+
+  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.
+  @override
+  final FhirId? id;
+
+  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
+  @override
+  final FhirMeta? meta;
+
+  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.
+  @override
+  final FhirUri? implicitRules;
+
+  /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
+  @override
+  @JsonKey(name: '_implicitRules')
+  final Element? implicitRulesElement;
+
+  /// [language] The base language in which the resource is written.
+  @override
+  final FhirCode? language;
+
+  /// [languageElement] ("_language") Extensions for language
+  @override
+  @JsonKey(name: '_language')
+  final Element? languageElement;
+
+  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
+  @override
+  final Narrative? text;
+
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
+  final List<Resource>? _contained;
+
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
+  @override
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    if (_contained is EqualUnmodifiableListView) return _contained;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [identifier] Instance identifier.
+  final List<Identifier>? _identifier;
+
+  /// [identifier] Instance identifier.
+  @override
+  List<Identifier>? get identifier {
+    final value = _identifier;
+    if (value == null) return null;
+    if (_identifier is EqualUnmodifiableListView) return _identifier;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [device] Reference to the devices associated with the patient or group.
+  @override
+  final Reference device;
+
+  /// [category] Describes the relationship between the device and subject.
+  final List<CodeableConcept>? _category;
+
+  /// [category] Describes the relationship between the device and subject.
+  @override
+  List<CodeableConcept>? get category {
+    final value = _category;
+    if (value == null) return null;
+    if (_category is EqualUnmodifiableListView) return _category;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [status] Indicates the state of the Device association.
+  @override
+  final CodeableConcept status;
+
+  /// [statusReason] The reasons given for the current association status.
+  final List<CodeableConcept>? _statusReason;
+
+  /// [statusReason] The reasons given for the current association status.
+  @override
+  List<CodeableConcept>? get statusReason {
+    final value = _statusReason;
+    if (value == null) return null;
+    if (_statusReason is EqualUnmodifiableListView) return _statusReason;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [subject] The individual, group of individuals or device that the device is on or associated with.
+  @override
+  final Reference? subject;
+
+  /// [bodyStructure] Current anatomical location of the device in/on subject.
+  @override
+  final Reference? bodyStructure;
+
+  /// [period] Begin and end dates and times for the device association.
+  @override
+  final Period? period;
+
+  /// [operation] The details about the device when it is in use to describe its operation.
+  final List<DeviceAssociationOperation>? _operation;
+
+  /// [operation] The details about the device when it is in use to describe its operation.
+  @override
+  List<DeviceAssociationOperation>? get operation {
+    final value = _operation;
+    if (value == null) return null;
+    if (_operation is EqualUnmodifiableListView) return _operation;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  String toString() {
+    return 'DeviceAssociation(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, device: $device, category: $category, status: $status, statusReason: $statusReason, subject: $subject, bodyStructure: $bodyStructure, period: $period, operation: $operation)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_DeviceAssociation &&
+            (identical(other.resourceType, resourceType) ||
+                other.resourceType == resourceType) &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.meta, meta) || other.meta == meta) &&
+            (identical(other.implicitRules, implicitRules) ||
+                other.implicitRules == implicitRules) &&
+            (identical(other.implicitRulesElement, implicitRulesElement) ||
+                other.implicitRulesElement == implicitRulesElement) &&
+            (identical(other.language, language) ||
+                other.language == language) &&
+            (identical(other.languageElement, languageElement) ||
+                other.languageElement == languageElement) &&
+            (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality()
+                .equals(other._contained, _contained) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other._identifier, _identifier) &&
+            (identical(other.device, device) || other.device == device) &&
+            const DeepCollectionEquality().equals(other._category, _category) &&
+            (identical(other.status, status) || other.status == status) &&
+            const DeepCollectionEquality()
+                .equals(other._statusReason, _statusReason) &&
+            (identical(other.subject, subject) || other.subject == subject) &&
+            (identical(other.bodyStructure, bodyStructure) ||
+                other.bodyStructure == bodyStructure) &&
+            (identical(other.period, period) || other.period == period) &&
+            const DeepCollectionEquality()
+                .equals(other._operation, _operation));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        resourceType,
+        id,
+        meta,
+        implicitRules,
+        implicitRulesElement,
+        language,
+        languageElement,
+        text,
+        const DeepCollectionEquality().hash(_contained),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(_identifier),
+        device,
+        const DeepCollectionEquality().hash(_category),
+        status,
+        const DeepCollectionEquality().hash(_statusReason),
+        subject,
+        bodyStructure,
+        period,
+        const DeepCollectionEquality().hash(_operation)
+      ]);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_DeviceAssociationCopyWith<_$_DeviceAssociation> get copyWith =>
+      __$$_DeviceAssociationCopyWithImpl<_$_DeviceAssociation>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_DeviceAssociationToJson(
+      this,
+    );
+  }
+}
+
+abstract class _DeviceAssociation extends DeviceAssociation {
+  factory _DeviceAssociation(
+          {@JsonKey(unknownEnumValue: R5ResourceType.DeviceAssociation)
+              final R5ResourceType resourceType,
+          final FhirId? id,
+          final FhirMeta? meta,
+          final FhirUri? implicitRules,
+          @JsonKey(name: '_implicitRules')
+              final Element? implicitRulesElement,
+          final FhirCode? language,
+          @JsonKey(name: '_language')
+              final Element? languageElement,
+          final Narrative? text,
+          final List<Resource>? contained,
+          @JsonKey(name: 'extension')
+              final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final List<Identifier>? identifier,
+          required final Reference device,
+          final List<CodeableConcept>? category,
+          required final CodeableConcept status,
+          final List<CodeableConcept>? statusReason,
+          final Reference? subject,
+          final Reference? bodyStructure,
+          final Period? period,
+          final List<DeviceAssociationOperation>? operation}) =
+      _$_DeviceAssociation;
+  _DeviceAssociation._() : super._();
+
+  factory _DeviceAssociation.fromJson(Map<String, dynamic> json) =
+      _$_DeviceAssociation.fromJson;
+
+  @override
+
+  /// [resourceType] This is a DeviceAssociation resource
+  @JsonKey(unknownEnumValue: R5ResourceType.DeviceAssociation)
+  R5ResourceType get resourceType;
+  @override
+
+  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.
+  FhirId? get id;
+  @override
+
+  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
+  FhirMeta? get meta;
+  @override
+
+  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.
+  FhirUri? get implicitRules;
+  @override
+
+  /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
+  @JsonKey(name: '_implicitRules')
+  Element? get implicitRulesElement;
+  @override
+
+  /// [language] The base language in which the resource is written.
+  FhirCode? get language;
+  @override
+
+  /// [languageElement] ("_language") Extensions for language
+  @JsonKey(name: '_language')
+  Element? get languageElement;
+  @override
+
+  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
+  Narrative? get text;
+  @override
+
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
+  List<Resource>? get contained;
+  @override
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_;
+  @override
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  List<FhirExtension>? get modifierExtension;
+  @override
+
+  /// [identifier] Instance identifier.
+  List<Identifier>? get identifier;
+  @override
+
+  /// [device] Reference to the devices associated with the patient or group.
+  Reference get device;
+  @override
+
+  /// [category] Describes the relationship between the device and subject.
+  List<CodeableConcept>? get category;
+  @override
+
+  /// [status] Indicates the state of the Device association.
+  CodeableConcept get status;
+  @override
+
+  /// [statusReason] The reasons given for the current association status.
+  List<CodeableConcept>? get statusReason;
+  @override
+
+  /// [subject] The individual, group of individuals or device that the device is on or associated with.
+  Reference? get subject;
+  @override
+
+  /// [bodyStructure] Current anatomical location of the device in/on subject.
+  Reference? get bodyStructure;
+  @override
+
+  /// [period] Begin and end dates and times for the device association.
+  Period? get period;
+  @override
+
+  /// [operation] The details about the device when it is in use to describe its operation.
+  List<DeviceAssociationOperation>? get operation;
+  @override
+  @JsonKey(ignore: true)
+  _$$_DeviceAssociationCopyWith<_$_DeviceAssociation> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+DeviceAssociationOperation _$DeviceAssociationOperationFromJson(
+    Map<String, dynamic> json) {
+  return _DeviceAssociationOperation.fromJson(json);
+}
+
+/// @nodoc
+mixin _$DeviceAssociationOperation {
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+
+  /// [status] Device operational condition corresponding to the association.
+  CodeableConcept get status => throw _privateConstructorUsedError;
+
+  /// [operator_] ("operator") The individual performing the action enabled by the device.
+  @JsonKey(name: 'operator')
+  List<Reference>? get operator_ => throw _privateConstructorUsedError;
+
+  /// [period] Begin and end dates and times for the device's operation.
+  Period? get period => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $DeviceAssociationOperationCopyWith<DeviceAssociationOperation>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $DeviceAssociationOperationCopyWith<$Res> {
+  factory $DeviceAssociationOperationCopyWith(DeviceAssociationOperation value,
+          $Res Function(DeviceAssociationOperation) then) =
+      _$DeviceAssociationOperationCopyWithImpl<$Res,
+          DeviceAssociationOperation>;
+  @useResult
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept status,
+      @JsonKey(name: 'operator') List<Reference>? operator_,
+      Period? period});
+
+  $CodeableConceptCopyWith<$Res> get status;
+  $PeriodCopyWith<$Res>? get period;
+}
+
+/// @nodoc
+class _$DeviceAssociationOperationCopyWithImpl<$Res,
+        $Val extends DeviceAssociationOperation>
+    implements $DeviceAssociationOperationCopyWith<$Res> {
+  _$DeviceAssociationOperationCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? status = null,
+    Object? operator_ = freezed,
+    Object? period = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: freezed == extension_
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: freezed == modifierExtension
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      status: null == status
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      operator_: freezed == operator_
+          ? _value.operator_
+          : operator_ // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      period: freezed == period
+          ? _value.period
+          : period // ignore: cast_nullable_to_non_nullable
+              as Period?,
+    ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CodeableConceptCopyWith<$Res> get status {
+    return $CodeableConceptCopyWith<$Res>(_value.status, (value) {
+      return _then(_value.copyWith(status: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $PeriodCopyWith<$Res>? get period {
+    if (_value.period == null) {
+      return null;
+    }
+
+    return $PeriodCopyWith<$Res>(_value.period!, (value) {
+      return _then(_value.copyWith(period: value) as $Val);
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_DeviceAssociationOperationCopyWith<$Res>
+    implements $DeviceAssociationOperationCopyWith<$Res> {
+  factory _$$_DeviceAssociationOperationCopyWith(
+          _$_DeviceAssociationOperation value,
+          $Res Function(_$_DeviceAssociationOperation) then) =
+      __$$_DeviceAssociationOperationCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept status,
+      @JsonKey(name: 'operator') List<Reference>? operator_,
+      Period? period});
+
+  @override
+  $CodeableConceptCopyWith<$Res> get status;
+  @override
+  $PeriodCopyWith<$Res>? get period;
+}
+
+/// @nodoc
+class __$$_DeviceAssociationOperationCopyWithImpl<$Res>
+    extends _$DeviceAssociationOperationCopyWithImpl<$Res,
+        _$_DeviceAssociationOperation>
+    implements _$$_DeviceAssociationOperationCopyWith<$Res> {
+  __$$_DeviceAssociationOperationCopyWithImpl(
+      _$_DeviceAssociationOperation _value,
+      $Res Function(_$_DeviceAssociationOperation) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? status = null,
+    Object? operator_ = freezed,
+    Object? period = freezed,
+  }) {
+    return _then(_$_DeviceAssociationOperation(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: freezed == extension_
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: freezed == modifierExtension
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      status: null == status
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      operator_: freezed == operator_
+          ? _value._operator_
+          : operator_ // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      period: freezed == period
+          ? _value.period
+          : period // ignore: cast_nullable_to_non_nullable
+              as Period?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_DeviceAssociationOperation extends _DeviceAssociationOperation {
+  _$_DeviceAssociationOperation(
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      required this.status,
+      @JsonKey(name: 'operator') final List<Reference>? operator_,
+      this.period})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _operator_ = operator_,
+        super._();
+
+  factory _$_DeviceAssociationOperation.fromJson(Map<String, dynamic> json) =>
+      _$$_DeviceAssociationOperationFromJson(json);
+
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  @override
+  final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [status] Device operational condition corresponding to the association.
+  @override
+  final CodeableConcept status;
+
+  /// [operator_] ("operator") The individual performing the action enabled by the device.
+  final List<Reference>? _operator_;
+
+  /// [operator_] ("operator") The individual performing the action enabled by the device.
+  @override
+  @JsonKey(name: 'operator')
+  List<Reference>? get operator_ {
+    final value = _operator_;
+    if (value == null) return null;
+    if (_operator_ is EqualUnmodifiableListView) return _operator_;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [period] Begin and end dates and times for the device's operation.
+  @override
+  final Period? period;
+
+  @override
+  String toString() {
+    return 'DeviceAssociationOperation(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, status: $status, operator_: $operator_, period: $period)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_DeviceAssociationOperation &&
+            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            (identical(other.status, status) || other.status == status) &&
+            const DeepCollectionEquality()
+                .equals(other._operator_, _operator_) &&
+            (identical(other.period, period) || other.period == period));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      status,
+      const DeepCollectionEquality().hash(_operator_),
+      period);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_DeviceAssociationOperationCopyWith<_$_DeviceAssociationOperation>
+      get copyWith => __$$_DeviceAssociationOperationCopyWithImpl<
+          _$_DeviceAssociationOperation>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_DeviceAssociationOperationToJson(
+      this,
+    );
+  }
+}
+
+abstract class _DeviceAssociationOperation extends DeviceAssociationOperation {
+  factory _DeviceAssociationOperation(
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      required final CodeableConcept status,
+      @JsonKey(name: 'operator') final List<Reference>? operator_,
+      final Period? period}) = _$_DeviceAssociationOperation;
+  _DeviceAssociationOperation._() : super._();
+
+  factory _DeviceAssociationOperation.fromJson(Map<String, dynamic> json) =
+      _$_DeviceAssociationOperation.fromJson;
+
+  @override
+
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  String? get id;
+  @override
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_;
+  @override
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  List<FhirExtension>? get modifierExtension;
+  @override
+
+  /// [status] Device operational condition corresponding to the association.
+  CodeableConcept get status;
+  @override
+
+  /// [operator_] ("operator") The individual performing the action enabled by the device.
+  @JsonKey(name: 'operator')
+  List<Reference>? get operator_;
+  @override
+
+  /// [period] Begin and end dates and times for the device's operation.
+  Period? get period;
+  @override
+  @JsonKey(ignore: true)
+  _$$_DeviceAssociationOperationCopyWith<_$_DeviceAssociationOperation>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
 DeviceDispense _$DeviceDispenseFromJson(Map<String, dynamic> json) {
   return _DeviceDispense.fromJson(json);
 }
@@ -11474,6 +12739,4168 @@ abstract class _GuidanceResponse extends GuidanceResponse {
   @override
   @JsonKey(ignore: true)
   _$$_GuidanceResponseCopyWith<_$_GuidanceResponse> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+InventoryItem _$InventoryItemFromJson(Map<String, dynamic> json) {
+  return _InventoryItem.fromJson(json);
+}
+
+/// @nodoc
+mixin _$InventoryItem {
+  /// [resourceType] This is a InventoryItem resource
+  @JsonKey(unknownEnumValue: R5ResourceType.InventoryItem)
+  R5ResourceType get resourceType => throw _privateConstructorUsedError;
+
+  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.
+  FhirId? get id => throw _privateConstructorUsedError;
+
+  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
+  FhirMeta? get meta => throw _privateConstructorUsedError;
+
+  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+
+  /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
+  @JsonKey(name: '_implicitRules')
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+
+  /// [language] The base language in which the resource is written.
+  FhirCode? get language => throw _privateConstructorUsedError;
+
+  /// [languageElement] ("_language") Extensions for language
+  @JsonKey(name: '_language')
+  Element? get languageElement => throw _privateConstructorUsedError;
+
+  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
+  Narrative? get text => throw _privateConstructorUsedError;
+
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
+  List<Resource>? get contained => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+
+  /// [identifier] Business identifier for the inventory item.
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+
+  /// [status] Status of the item entry.
+  FhirCode? get status => throw _privateConstructorUsedError;
+
+  /// [statusElement] ("_status") Extensions for status
+  @JsonKey(name: '_status')
+  Element? get statusElement => throw _privateConstructorUsedError;
+
+  /// [category] Category or class of the item.
+  List<CodeableConcept>? get category => throw _privateConstructorUsedError;
+
+  /// [code] Code designating the specific type of item.
+  List<CodeableConcept>? get code => throw _privateConstructorUsedError;
+
+  /// [name] The item name(s) - the brand name, or common name, functional name, generic name.
+  List<InventoryItemName>? get name => throw _privateConstructorUsedError;
+
+  /// [responsibleOrganization] Organization(s) responsible for the product.
+  List<InventoryItemResponsibleOrganization>? get responsibleOrganization =>
+      throw _privateConstructorUsedError;
+
+  /// [description] The descriptive characteristics of the inventory item.
+  InventoryItemDescription? get description =>
+      throw _privateConstructorUsedError;
+
+  /// [inventoryStatus] The usage status e.g. recalled, in use, discarded... This can be used to indicate that the items have been taken out of inventory, or are in use, etc.
+  List<CodeableConcept>? get inventoryStatus =>
+      throw _privateConstructorUsedError;
+
+  /// [baseUnit] The base unit of measure - the unit in which the product is used or counted.
+  CodeableConcept? get baseUnit => throw _privateConstructorUsedError;
+
+  /// [netContent] Net content or amount present in the item.
+  Quantity? get netContent => throw _privateConstructorUsedError;
+
+  /// [association] Association with other items or products.
+  List<InventoryItemAssociation>? get association =>
+      throw _privateConstructorUsedError;
+
+  /// [characteristic] The descriptive or identifying characteristics of the item.
+  List<InventoryItemCharacteristic>? get characteristic =>
+      throw _privateConstructorUsedError;
+
+  /// [instance] Instances or occurrences of the product.
+  InventoryItemInstance? get instance => throw _privateConstructorUsedError;
+
+  /// [productReference] Link to a product resource used in clinical workflows.
+  Reference? get productReference => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $InventoryItemCopyWith<InventoryItem> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $InventoryItemCopyWith<$Res> {
+  factory $InventoryItemCopyWith(
+          InventoryItem value, $Res Function(InventoryItem) then) =
+      _$InventoryItemCopyWithImpl<$Res, InventoryItem>;
+  @useResult
+  $Res call(
+      {@JsonKey(unknownEnumValue: R5ResourceType.InventoryItem)
+          R5ResourceType resourceType,
+      FhirId? id,
+      FhirMeta? meta,
+      FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element? implicitRulesElement,
+      FhirCode? language,
+      @JsonKey(name: '_language')
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      FhirCode? status,
+      @JsonKey(name: '_status')
+          Element? statusElement,
+      List<CodeableConcept>? category,
+      List<CodeableConcept>? code,
+      List<InventoryItemName>? name,
+      List<InventoryItemResponsibleOrganization>? responsibleOrganization,
+      InventoryItemDescription? description,
+      List<CodeableConcept>? inventoryStatus,
+      CodeableConcept? baseUnit,
+      Quantity? netContent,
+      List<InventoryItemAssociation>? association,
+      List<InventoryItemCharacteristic>? characteristic,
+      InventoryItemInstance? instance,
+      Reference? productReference});
+
+  $FhirMetaCopyWith<$Res>? get meta;
+  $ElementCopyWith<$Res>? get implicitRulesElement;
+  $ElementCopyWith<$Res>? get languageElement;
+  $NarrativeCopyWith<$Res>? get text;
+  $ElementCopyWith<$Res>? get statusElement;
+  $InventoryItemDescriptionCopyWith<$Res>? get description;
+  $CodeableConceptCopyWith<$Res>? get baseUnit;
+  $QuantityCopyWith<$Res>? get netContent;
+  $InventoryItemInstanceCopyWith<$Res>? get instance;
+  $ReferenceCopyWith<$Res>? get productReference;
+}
+
+/// @nodoc
+class _$InventoryItemCopyWithImpl<$Res, $Val extends InventoryItem>
+    implements $InventoryItemCopyWith<$Res> {
+  _$InventoryItemCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? resourceType = null,
+    Object? id = freezed,
+    Object? meta = freezed,
+    Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
+    Object? language = freezed,
+    Object? languageElement = freezed,
+    Object? text = freezed,
+    Object? contained = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? identifier = freezed,
+    Object? status = freezed,
+    Object? statusElement = freezed,
+    Object? category = freezed,
+    Object? code = freezed,
+    Object? name = freezed,
+    Object? responsibleOrganization = freezed,
+    Object? description = freezed,
+    Object? inventoryStatus = freezed,
+    Object? baseUnit = freezed,
+    Object? netContent = freezed,
+    Object? association = freezed,
+    Object? characteristic = freezed,
+    Object? instance = freezed,
+    Object? productReference = freezed,
+  }) {
+    return _then(_value.copyWith(
+      resourceType: null == resourceType
+          ? _value.resourceType
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R5ResourceType,
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as FhirId?,
+      meta: freezed == meta
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as FhirMeta?,
+      implicitRules: freezed == implicitRules
+          ? _value.implicitRules
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      implicitRulesElement: freezed == implicitRulesElement
+          ? _value.implicitRulesElement
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: freezed == language
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as FhirCode?,
+      languageElement: freezed == languageElement
+          ? _value.languageElement
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: freezed == text
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
+      contained: freezed == contained
+          ? _value.contained
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
+      extension_: freezed == extension_
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: freezed == modifierExtension
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      identifier: freezed == identifier
+          ? _value.identifier
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      status: freezed == status
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as FhirCode?,
+      statusElement: freezed == statusElement
+          ? _value.statusElement
+          : statusElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      category: freezed == category
+          ? _value.category
+          : category // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      code: freezed == code
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      name: freezed == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as List<InventoryItemName>?,
+      responsibleOrganization: freezed == responsibleOrganization
+          ? _value.responsibleOrganization
+          : responsibleOrganization // ignore: cast_nullable_to_non_nullable
+              as List<InventoryItemResponsibleOrganization>?,
+      description: freezed == description
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as InventoryItemDescription?,
+      inventoryStatus: freezed == inventoryStatus
+          ? _value.inventoryStatus
+          : inventoryStatus // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      baseUnit: freezed == baseUnit
+          ? _value.baseUnit
+          : baseUnit // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      netContent: freezed == netContent
+          ? _value.netContent
+          : netContent // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
+      association: freezed == association
+          ? _value.association
+          : association // ignore: cast_nullable_to_non_nullable
+              as List<InventoryItemAssociation>?,
+      characteristic: freezed == characteristic
+          ? _value.characteristic
+          : characteristic // ignore: cast_nullable_to_non_nullable
+              as List<InventoryItemCharacteristic>?,
+      instance: freezed == instance
+          ? _value.instance
+          : instance // ignore: cast_nullable_to_non_nullable
+              as InventoryItemInstance?,
+      productReference: freezed == productReference
+          ? _value.productReference
+          : productReference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+    ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $FhirMetaCopyWith<$Res>? get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
+      return _then(_value.copyWith(meta: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get implicitRulesElement {
+    if (_value.implicitRulesElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement!, (value) {
+      return _then(_value.copyWith(implicitRulesElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get languageElement {
+    if (_value.languageElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.languageElement!, (value) {
+      return _then(_value.copyWith(languageElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $NarrativeCopyWith<$Res>? get text {
+    if (_value.text == null) {
+      return null;
+    }
+
+    return $NarrativeCopyWith<$Res>(_value.text!, (value) {
+      return _then(_value.copyWith(text: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get statusElement {
+    if (_value.statusElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.statusElement!, (value) {
+      return _then(_value.copyWith(statusElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $InventoryItemDescriptionCopyWith<$Res>? get description {
+    if (_value.description == null) {
+      return null;
+    }
+
+    return $InventoryItemDescriptionCopyWith<$Res>(_value.description!,
+        (value) {
+      return _then(_value.copyWith(description: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CodeableConceptCopyWith<$Res>? get baseUnit {
+    if (_value.baseUnit == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.baseUnit!, (value) {
+      return _then(_value.copyWith(baseUnit: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $QuantityCopyWith<$Res>? get netContent {
+    if (_value.netContent == null) {
+      return null;
+    }
+
+    return $QuantityCopyWith<$Res>(_value.netContent!, (value) {
+      return _then(_value.copyWith(netContent: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $InventoryItemInstanceCopyWith<$Res>? get instance {
+    if (_value.instance == null) {
+      return null;
+    }
+
+    return $InventoryItemInstanceCopyWith<$Res>(_value.instance!, (value) {
+      return _then(_value.copyWith(instance: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ReferenceCopyWith<$Res>? get productReference {
+    if (_value.productReference == null) {
+      return null;
+    }
+
+    return $ReferenceCopyWith<$Res>(_value.productReference!, (value) {
+      return _then(_value.copyWith(productReference: value) as $Val);
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_InventoryItemCopyWith<$Res>
+    implements $InventoryItemCopyWith<$Res> {
+  factory _$$_InventoryItemCopyWith(
+          _$_InventoryItem value, $Res Function(_$_InventoryItem) then) =
+      __$$_InventoryItemCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {@JsonKey(unknownEnumValue: R5ResourceType.InventoryItem)
+          R5ResourceType resourceType,
+      FhirId? id,
+      FhirMeta? meta,
+      FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element? implicitRulesElement,
+      FhirCode? language,
+      @JsonKey(name: '_language')
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      FhirCode? status,
+      @JsonKey(name: '_status')
+          Element? statusElement,
+      List<CodeableConcept>? category,
+      List<CodeableConcept>? code,
+      List<InventoryItemName>? name,
+      List<InventoryItemResponsibleOrganization>? responsibleOrganization,
+      InventoryItemDescription? description,
+      List<CodeableConcept>? inventoryStatus,
+      CodeableConcept? baseUnit,
+      Quantity? netContent,
+      List<InventoryItemAssociation>? association,
+      List<InventoryItemCharacteristic>? characteristic,
+      InventoryItemInstance? instance,
+      Reference? productReference});
+
+  @override
+  $FhirMetaCopyWith<$Res>? get meta;
+  @override
+  $ElementCopyWith<$Res>? get implicitRulesElement;
+  @override
+  $ElementCopyWith<$Res>? get languageElement;
+  @override
+  $NarrativeCopyWith<$Res>? get text;
+  @override
+  $ElementCopyWith<$Res>? get statusElement;
+  @override
+  $InventoryItemDescriptionCopyWith<$Res>? get description;
+  @override
+  $CodeableConceptCopyWith<$Res>? get baseUnit;
+  @override
+  $QuantityCopyWith<$Res>? get netContent;
+  @override
+  $InventoryItemInstanceCopyWith<$Res>? get instance;
+  @override
+  $ReferenceCopyWith<$Res>? get productReference;
+}
+
+/// @nodoc
+class __$$_InventoryItemCopyWithImpl<$Res>
+    extends _$InventoryItemCopyWithImpl<$Res, _$_InventoryItem>
+    implements _$$_InventoryItemCopyWith<$Res> {
+  __$$_InventoryItemCopyWithImpl(
+      _$_InventoryItem _value, $Res Function(_$_InventoryItem) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? resourceType = null,
+    Object? id = freezed,
+    Object? meta = freezed,
+    Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
+    Object? language = freezed,
+    Object? languageElement = freezed,
+    Object? text = freezed,
+    Object? contained = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? identifier = freezed,
+    Object? status = freezed,
+    Object? statusElement = freezed,
+    Object? category = freezed,
+    Object? code = freezed,
+    Object? name = freezed,
+    Object? responsibleOrganization = freezed,
+    Object? description = freezed,
+    Object? inventoryStatus = freezed,
+    Object? baseUnit = freezed,
+    Object? netContent = freezed,
+    Object? association = freezed,
+    Object? characteristic = freezed,
+    Object? instance = freezed,
+    Object? productReference = freezed,
+  }) {
+    return _then(_$_InventoryItem(
+      resourceType: null == resourceType
+          ? _value.resourceType
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R5ResourceType,
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as FhirId?,
+      meta: freezed == meta
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as FhirMeta?,
+      implicitRules: freezed == implicitRules
+          ? _value.implicitRules
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      implicitRulesElement: freezed == implicitRulesElement
+          ? _value.implicitRulesElement
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: freezed == language
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as FhirCode?,
+      languageElement: freezed == languageElement
+          ? _value.languageElement
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: freezed == text
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
+      contained: freezed == contained
+          ? _value._contained
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
+      extension_: freezed == extension_
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: freezed == modifierExtension
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      identifier: freezed == identifier
+          ? _value._identifier
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      status: freezed == status
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as FhirCode?,
+      statusElement: freezed == statusElement
+          ? _value.statusElement
+          : statusElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      category: freezed == category
+          ? _value._category
+          : category // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      code: freezed == code
+          ? _value._code
+          : code // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      name: freezed == name
+          ? _value._name
+          : name // ignore: cast_nullable_to_non_nullable
+              as List<InventoryItemName>?,
+      responsibleOrganization: freezed == responsibleOrganization
+          ? _value._responsibleOrganization
+          : responsibleOrganization // ignore: cast_nullable_to_non_nullable
+              as List<InventoryItemResponsibleOrganization>?,
+      description: freezed == description
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as InventoryItemDescription?,
+      inventoryStatus: freezed == inventoryStatus
+          ? _value._inventoryStatus
+          : inventoryStatus // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      baseUnit: freezed == baseUnit
+          ? _value.baseUnit
+          : baseUnit // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      netContent: freezed == netContent
+          ? _value.netContent
+          : netContent // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
+      association: freezed == association
+          ? _value._association
+          : association // ignore: cast_nullable_to_non_nullable
+              as List<InventoryItemAssociation>?,
+      characteristic: freezed == characteristic
+          ? _value._characteristic
+          : characteristic // ignore: cast_nullable_to_non_nullable
+              as List<InventoryItemCharacteristic>?,
+      instance: freezed == instance
+          ? _value.instance
+          : instance // ignore: cast_nullable_to_non_nullable
+              as InventoryItemInstance?,
+      productReference: freezed == productReference
+          ? _value.productReference
+          : productReference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_InventoryItem extends _InventoryItem {
+  _$_InventoryItem(
+      {@JsonKey(unknownEnumValue: R5ResourceType.InventoryItem)
+          this.resourceType = R5ResourceType.InventoryItem,
+      this.id,
+      this.meta,
+      this.implicitRules,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
+      this.language,
+      @JsonKey(name: '_language')
+          this.languageElement,
+      this.text,
+      final List<Resource>? contained,
+      @JsonKey(name: 'extension')
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      this.status,
+      @JsonKey(name: '_status')
+          this.statusElement,
+      final List<CodeableConcept>? category,
+      final List<CodeableConcept>? code,
+      final List<InventoryItemName>? name,
+      final List<InventoryItemResponsibleOrganization>? responsibleOrganization,
+      this.description,
+      final List<CodeableConcept>? inventoryStatus,
+      this.baseUnit,
+      this.netContent,
+      final List<InventoryItemAssociation>? association,
+      final List<InventoryItemCharacteristic>? characteristic,
+      this.instance,
+      this.productReference})
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _identifier = identifier,
+        _category = category,
+        _code = code,
+        _name = name,
+        _responsibleOrganization = responsibleOrganization,
+        _inventoryStatus = inventoryStatus,
+        _association = association,
+        _characteristic = characteristic,
+        super._();
+
+  factory _$_InventoryItem.fromJson(Map<String, dynamic> json) =>
+      _$$_InventoryItemFromJson(json);
+
+  /// [resourceType] This is a InventoryItem resource
+  @override
+  @JsonKey(unknownEnumValue: R5ResourceType.InventoryItem)
+  final R5ResourceType resourceType;
+
+  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.
+  @override
+  final FhirId? id;
+
+  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
+  @override
+  final FhirMeta? meta;
+
+  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.
+  @override
+  final FhirUri? implicitRules;
+
+  /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
+  @override
+  @JsonKey(name: '_implicitRules')
+  final Element? implicitRulesElement;
+
+  /// [language] The base language in which the resource is written.
+  @override
+  final FhirCode? language;
+
+  /// [languageElement] ("_language") Extensions for language
+  @override
+  @JsonKey(name: '_language')
+  final Element? languageElement;
+
+  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
+  @override
+  final Narrative? text;
+
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
+  final List<Resource>? _contained;
+
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
+  @override
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    if (_contained is EqualUnmodifiableListView) return _contained;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [identifier] Business identifier for the inventory item.
+  final List<Identifier>? _identifier;
+
+  /// [identifier] Business identifier for the inventory item.
+  @override
+  List<Identifier>? get identifier {
+    final value = _identifier;
+    if (value == null) return null;
+    if (_identifier is EqualUnmodifiableListView) return _identifier;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [status] Status of the item entry.
+  @override
+  final FhirCode? status;
+
+  /// [statusElement] ("_status") Extensions for status
+  @override
+  @JsonKey(name: '_status')
+  final Element? statusElement;
+
+  /// [category] Category or class of the item.
+  final List<CodeableConcept>? _category;
+
+  /// [category] Category or class of the item.
+  @override
+  List<CodeableConcept>? get category {
+    final value = _category;
+    if (value == null) return null;
+    if (_category is EqualUnmodifiableListView) return _category;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [code] Code designating the specific type of item.
+  final List<CodeableConcept>? _code;
+
+  /// [code] Code designating the specific type of item.
+  @override
+  List<CodeableConcept>? get code {
+    final value = _code;
+    if (value == null) return null;
+    if (_code is EqualUnmodifiableListView) return _code;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [name] The item name(s) - the brand name, or common name, functional name, generic name.
+  final List<InventoryItemName>? _name;
+
+  /// [name] The item name(s) - the brand name, or common name, functional name, generic name.
+  @override
+  List<InventoryItemName>? get name {
+    final value = _name;
+    if (value == null) return null;
+    if (_name is EqualUnmodifiableListView) return _name;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [responsibleOrganization] Organization(s) responsible for the product.
+  final List<InventoryItemResponsibleOrganization>? _responsibleOrganization;
+
+  /// [responsibleOrganization] Organization(s) responsible for the product.
+  @override
+  List<InventoryItemResponsibleOrganization>? get responsibleOrganization {
+    final value = _responsibleOrganization;
+    if (value == null) return null;
+    if (_responsibleOrganization is EqualUnmodifiableListView)
+      return _responsibleOrganization;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [description] The descriptive characteristics of the inventory item.
+  @override
+  final InventoryItemDescription? description;
+
+  /// [inventoryStatus] The usage status e.g. recalled, in use, discarded... This can be used to indicate that the items have been taken out of inventory, or are in use, etc.
+  final List<CodeableConcept>? _inventoryStatus;
+
+  /// [inventoryStatus] The usage status e.g. recalled, in use, discarded... This can be used to indicate that the items have been taken out of inventory, or are in use, etc.
+  @override
+  List<CodeableConcept>? get inventoryStatus {
+    final value = _inventoryStatus;
+    if (value == null) return null;
+    if (_inventoryStatus is EqualUnmodifiableListView) return _inventoryStatus;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [baseUnit] The base unit of measure - the unit in which the product is used or counted.
+  @override
+  final CodeableConcept? baseUnit;
+
+  /// [netContent] Net content or amount present in the item.
+  @override
+  final Quantity? netContent;
+
+  /// [association] Association with other items or products.
+  final List<InventoryItemAssociation>? _association;
+
+  /// [association] Association with other items or products.
+  @override
+  List<InventoryItemAssociation>? get association {
+    final value = _association;
+    if (value == null) return null;
+    if (_association is EqualUnmodifiableListView) return _association;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [characteristic] The descriptive or identifying characteristics of the item.
+  final List<InventoryItemCharacteristic>? _characteristic;
+
+  /// [characteristic] The descriptive or identifying characteristics of the item.
+  @override
+  List<InventoryItemCharacteristic>? get characteristic {
+    final value = _characteristic;
+    if (value == null) return null;
+    if (_characteristic is EqualUnmodifiableListView) return _characteristic;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [instance] Instances or occurrences of the product.
+  @override
+  final InventoryItemInstance? instance;
+
+  /// [productReference] Link to a product resource used in clinical workflows.
+  @override
+  final Reference? productReference;
+
+  @override
+  String toString() {
+    return 'InventoryItem(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, category: $category, code: $code, name: $name, responsibleOrganization: $responsibleOrganization, description: $description, inventoryStatus: $inventoryStatus, baseUnit: $baseUnit, netContent: $netContent, association: $association, characteristic: $characteristic, instance: $instance, productReference: $productReference)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_InventoryItem &&
+            (identical(other.resourceType, resourceType) ||
+                other.resourceType == resourceType) &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.meta, meta) || other.meta == meta) &&
+            (identical(other.implicitRules, implicitRules) ||
+                other.implicitRules == implicitRules) &&
+            (identical(other.implicitRulesElement, implicitRulesElement) ||
+                other.implicitRulesElement == implicitRulesElement) &&
+            (identical(other.language, language) ||
+                other.language == language) &&
+            (identical(other.languageElement, languageElement) ||
+                other.languageElement == languageElement) &&
+            (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality()
+                .equals(other._contained, _contained) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other._identifier, _identifier) &&
+            (identical(other.status, status) || other.status == status) &&
+            (identical(other.statusElement, statusElement) ||
+                other.statusElement == statusElement) &&
+            const DeepCollectionEquality().equals(other._category, _category) &&
+            const DeepCollectionEquality().equals(other._code, _code) &&
+            const DeepCollectionEquality().equals(other._name, _name) &&
+            const DeepCollectionEquality().equals(
+                other._responsibleOrganization, _responsibleOrganization) &&
+            (identical(other.description, description) ||
+                other.description == description) &&
+            const DeepCollectionEquality()
+                .equals(other._inventoryStatus, _inventoryStatus) &&
+            (identical(other.baseUnit, baseUnit) ||
+                other.baseUnit == baseUnit) &&
+            (identical(other.netContent, netContent) ||
+                other.netContent == netContent) &&
+            const DeepCollectionEquality()
+                .equals(other._association, _association) &&
+            const DeepCollectionEquality()
+                .equals(other._characteristic, _characteristic) &&
+            (identical(other.instance, instance) ||
+                other.instance == instance) &&
+            (identical(other.productReference, productReference) ||
+                other.productReference == productReference));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        resourceType,
+        id,
+        meta,
+        implicitRules,
+        implicitRulesElement,
+        language,
+        languageElement,
+        text,
+        const DeepCollectionEquality().hash(_contained),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(_identifier),
+        status,
+        statusElement,
+        const DeepCollectionEquality().hash(_category),
+        const DeepCollectionEquality().hash(_code),
+        const DeepCollectionEquality().hash(_name),
+        const DeepCollectionEquality().hash(_responsibleOrganization),
+        description,
+        const DeepCollectionEquality().hash(_inventoryStatus),
+        baseUnit,
+        netContent,
+        const DeepCollectionEquality().hash(_association),
+        const DeepCollectionEquality().hash(_characteristic),
+        instance,
+        productReference
+      ]);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_InventoryItemCopyWith<_$_InventoryItem> get copyWith =>
+      __$$_InventoryItemCopyWithImpl<_$_InventoryItem>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_InventoryItemToJson(
+      this,
+    );
+  }
+}
+
+abstract class _InventoryItem extends InventoryItem {
+  factory _InventoryItem(
+      {@JsonKey(unknownEnumValue: R5ResourceType.InventoryItem)
+          final R5ResourceType resourceType,
+      final FhirId? id,
+      final FhirMeta? meta,
+      final FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules')
+          final Element? implicitRulesElement,
+      final FhirCode? language,
+      @JsonKey(name: '_language')
+          final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
+      @JsonKey(name: 'extension')
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final FhirCode? status,
+      @JsonKey(name: '_status')
+          final Element? statusElement,
+      final List<CodeableConcept>? category,
+      final List<CodeableConcept>? code,
+      final List<InventoryItemName>? name,
+      final List<InventoryItemResponsibleOrganization>? responsibleOrganization,
+      final InventoryItemDescription? description,
+      final List<CodeableConcept>? inventoryStatus,
+      final CodeableConcept? baseUnit,
+      final Quantity? netContent,
+      final List<InventoryItemAssociation>? association,
+      final List<InventoryItemCharacteristic>? characteristic,
+      final InventoryItemInstance? instance,
+      final Reference? productReference}) = _$_InventoryItem;
+  _InventoryItem._() : super._();
+
+  factory _InventoryItem.fromJson(Map<String, dynamic> json) =
+      _$_InventoryItem.fromJson;
+
+  @override
+
+  /// [resourceType] This is a InventoryItem resource
+  @JsonKey(unknownEnumValue: R5ResourceType.InventoryItem)
+  R5ResourceType get resourceType;
+  @override
+
+  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.
+  FhirId? get id;
+  @override
+
+  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
+  FhirMeta? get meta;
+  @override
+
+  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.
+  FhirUri? get implicitRules;
+  @override
+
+  /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
+  @JsonKey(name: '_implicitRules')
+  Element? get implicitRulesElement;
+  @override
+
+  /// [language] The base language in which the resource is written.
+  FhirCode? get language;
+  @override
+
+  /// [languageElement] ("_language") Extensions for language
+  @JsonKey(name: '_language')
+  Element? get languageElement;
+  @override
+
+  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
+  Narrative? get text;
+  @override
+
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
+  List<Resource>? get contained;
+  @override
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_;
+  @override
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  List<FhirExtension>? get modifierExtension;
+  @override
+
+  /// [identifier] Business identifier for the inventory item.
+  List<Identifier>? get identifier;
+  @override
+
+  /// [status] Status of the item entry.
+  FhirCode? get status;
+  @override
+
+  /// [statusElement] ("_status") Extensions for status
+  @JsonKey(name: '_status')
+  Element? get statusElement;
+  @override
+
+  /// [category] Category or class of the item.
+  List<CodeableConcept>? get category;
+  @override
+
+  /// [code] Code designating the specific type of item.
+  List<CodeableConcept>? get code;
+  @override
+
+  /// [name] The item name(s) - the brand name, or common name, functional name, generic name.
+  List<InventoryItemName>? get name;
+  @override
+
+  /// [responsibleOrganization] Organization(s) responsible for the product.
+  List<InventoryItemResponsibleOrganization>? get responsibleOrganization;
+  @override
+
+  /// [description] The descriptive characteristics of the inventory item.
+  InventoryItemDescription? get description;
+  @override
+
+  /// [inventoryStatus] The usage status e.g. recalled, in use, discarded... This can be used to indicate that the items have been taken out of inventory, or are in use, etc.
+  List<CodeableConcept>? get inventoryStatus;
+  @override
+
+  /// [baseUnit] The base unit of measure - the unit in which the product is used or counted.
+  CodeableConcept? get baseUnit;
+  @override
+
+  /// [netContent] Net content or amount present in the item.
+  Quantity? get netContent;
+  @override
+
+  /// [association] Association with other items or products.
+  List<InventoryItemAssociation>? get association;
+  @override
+
+  /// [characteristic] The descriptive or identifying characteristics of the item.
+  List<InventoryItemCharacteristic>? get characteristic;
+  @override
+
+  /// [instance] Instances or occurrences of the product.
+  InventoryItemInstance? get instance;
+  @override
+
+  /// [productReference] Link to a product resource used in clinical workflows.
+  Reference? get productReference;
+  @override
+  @JsonKey(ignore: true)
+  _$$_InventoryItemCopyWith<_$_InventoryItem> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+InventoryItemName _$InventoryItemNameFromJson(Map<String, dynamic> json) {
+  return _InventoryItemName.fromJson(json);
+}
+
+/// @nodoc
+mixin _$InventoryItemName {
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+
+  /// [nameType] The type of name e.g. 'brand-name', 'functional-name', 'common-name'.
+  Coding get nameType => throw _privateConstructorUsedError;
+
+  /// [language] The language that the item name is expressed in.
+  FhirCode? get language => throw _privateConstructorUsedError;
+
+  /// [languageElement] ("_language") Extensions for language
+  @JsonKey(name: '_language')
+  Element? get languageElement => throw _privateConstructorUsedError;
+
+  /// [name] The name or designation that the item is given.
+  String? get name => throw _privateConstructorUsedError;
+
+  /// [nameElement] ("_name") Extensions for name
+  @JsonKey(name: '_name')
+  Element? get nameElement => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $InventoryItemNameCopyWith<InventoryItemName> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $InventoryItemNameCopyWith<$Res> {
+  factory $InventoryItemNameCopyWith(
+          InventoryItemName value, $Res Function(InventoryItemName) then) =
+      _$InventoryItemNameCopyWithImpl<$Res, InventoryItemName>;
+  @useResult
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Coding nameType,
+      FhirCode? language,
+      @JsonKey(name: '_language') Element? languageElement,
+      String? name,
+      @JsonKey(name: '_name') Element? nameElement});
+
+  $CodingCopyWith<$Res> get nameType;
+  $ElementCopyWith<$Res>? get languageElement;
+  $ElementCopyWith<$Res>? get nameElement;
+}
+
+/// @nodoc
+class _$InventoryItemNameCopyWithImpl<$Res, $Val extends InventoryItemName>
+    implements $InventoryItemNameCopyWith<$Res> {
+  _$InventoryItemNameCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? nameType = null,
+    Object? language = freezed,
+    Object? languageElement = freezed,
+    Object? name = freezed,
+    Object? nameElement = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: freezed == extension_
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: freezed == modifierExtension
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      nameType: null == nameType
+          ? _value.nameType
+          : nameType // ignore: cast_nullable_to_non_nullable
+              as Coding,
+      language: freezed == language
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as FhirCode?,
+      languageElement: freezed == languageElement
+          ? _value.languageElement
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      name: freezed == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      nameElement: freezed == nameElement
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+    ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CodingCopyWith<$Res> get nameType {
+    return $CodingCopyWith<$Res>(_value.nameType, (value) {
+      return _then(_value.copyWith(nameType: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get languageElement {
+    if (_value.languageElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.languageElement!, (value) {
+      return _then(_value.copyWith(languageElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get nameElement {
+    if (_value.nameElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.nameElement!, (value) {
+      return _then(_value.copyWith(nameElement: value) as $Val);
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_InventoryItemNameCopyWith<$Res>
+    implements $InventoryItemNameCopyWith<$Res> {
+  factory _$$_InventoryItemNameCopyWith(_$_InventoryItemName value,
+          $Res Function(_$_InventoryItemName) then) =
+      __$$_InventoryItemNameCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Coding nameType,
+      FhirCode? language,
+      @JsonKey(name: '_language') Element? languageElement,
+      String? name,
+      @JsonKey(name: '_name') Element? nameElement});
+
+  @override
+  $CodingCopyWith<$Res> get nameType;
+  @override
+  $ElementCopyWith<$Res>? get languageElement;
+  @override
+  $ElementCopyWith<$Res>? get nameElement;
+}
+
+/// @nodoc
+class __$$_InventoryItemNameCopyWithImpl<$Res>
+    extends _$InventoryItemNameCopyWithImpl<$Res, _$_InventoryItemName>
+    implements _$$_InventoryItemNameCopyWith<$Res> {
+  __$$_InventoryItemNameCopyWithImpl(
+      _$_InventoryItemName _value, $Res Function(_$_InventoryItemName) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? nameType = null,
+    Object? language = freezed,
+    Object? languageElement = freezed,
+    Object? name = freezed,
+    Object? nameElement = freezed,
+  }) {
+    return _then(_$_InventoryItemName(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: freezed == extension_
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: freezed == modifierExtension
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      nameType: null == nameType
+          ? _value.nameType
+          : nameType // ignore: cast_nullable_to_non_nullable
+              as Coding,
+      language: freezed == language
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as FhirCode?,
+      languageElement: freezed == languageElement
+          ? _value.languageElement
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      name: freezed == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      nameElement: freezed == nameElement
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_InventoryItemName extends _InventoryItemName {
+  _$_InventoryItemName(
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      required this.nameType,
+      this.language,
+      @JsonKey(name: '_language') this.languageElement,
+      this.name,
+      @JsonKey(name: '_name') this.nameElement})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
+
+  factory _$_InventoryItemName.fromJson(Map<String, dynamic> json) =>
+      _$$_InventoryItemNameFromJson(json);
+
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  @override
+  final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [nameType] The type of name e.g. 'brand-name', 'functional-name', 'common-name'.
+  @override
+  final Coding nameType;
+
+  /// [language] The language that the item name is expressed in.
+  @override
+  final FhirCode? language;
+
+  /// [languageElement] ("_language") Extensions for language
+  @override
+  @JsonKey(name: '_language')
+  final Element? languageElement;
+
+  /// [name] The name or designation that the item is given.
+  @override
+  final String? name;
+
+  /// [nameElement] ("_name") Extensions for name
+  @override
+  @JsonKey(name: '_name')
+  final Element? nameElement;
+
+  @override
+  String toString() {
+    return 'InventoryItemName(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, nameType: $nameType, language: $language, languageElement: $languageElement, name: $name, nameElement: $nameElement)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_InventoryItemName &&
+            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            (identical(other.nameType, nameType) ||
+                other.nameType == nameType) &&
+            (identical(other.language, language) ||
+                other.language == language) &&
+            (identical(other.languageElement, languageElement) ||
+                other.languageElement == languageElement) &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.nameElement, nameElement) ||
+                other.nameElement == nameElement));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      nameType,
+      language,
+      languageElement,
+      name,
+      nameElement);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_InventoryItemNameCopyWith<_$_InventoryItemName> get copyWith =>
+      __$$_InventoryItemNameCopyWithImpl<_$_InventoryItemName>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_InventoryItemNameToJson(
+      this,
+    );
+  }
+}
+
+abstract class _InventoryItemName extends InventoryItemName {
+  factory _InventoryItemName(
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          required final Coding nameType,
+          final FhirCode? language,
+          @JsonKey(name: '_language') final Element? languageElement,
+          final String? name,
+          @JsonKey(name: '_name') final Element? nameElement}) =
+      _$_InventoryItemName;
+  _InventoryItemName._() : super._();
+
+  factory _InventoryItemName.fromJson(Map<String, dynamic> json) =
+      _$_InventoryItemName.fromJson;
+
+  @override
+
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  String? get id;
+  @override
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_;
+  @override
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  List<FhirExtension>? get modifierExtension;
+  @override
+
+  /// [nameType] The type of name e.g. 'brand-name', 'functional-name', 'common-name'.
+  Coding get nameType;
+  @override
+
+  /// [language] The language that the item name is expressed in.
+  FhirCode? get language;
+  @override
+
+  /// [languageElement] ("_language") Extensions for language
+  @JsonKey(name: '_language')
+  Element? get languageElement;
+  @override
+
+  /// [name] The name or designation that the item is given.
+  String? get name;
+  @override
+
+  /// [nameElement] ("_name") Extensions for name
+  @JsonKey(name: '_name')
+  Element? get nameElement;
+  @override
+  @JsonKey(ignore: true)
+  _$$_InventoryItemNameCopyWith<_$_InventoryItemName> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+InventoryItemResponsibleOrganization
+    _$InventoryItemResponsibleOrganizationFromJson(Map<String, dynamic> json) {
+  return _InventoryItemResponsibleOrganization.fromJson(json);
+}
+
+/// @nodoc
+mixin _$InventoryItemResponsibleOrganization {
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+
+  /// [role] The role of the organization e.g. manufacturer, distributor, etc.
+  CodeableConcept get role => throw _privateConstructorUsedError;
+
+  /// [organization] An organization that has an association with the item, e.g. manufacturer, distributor, responsible, etc.
+  Reference get organization => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $InventoryItemResponsibleOrganizationCopyWith<
+          InventoryItemResponsibleOrganization>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $InventoryItemResponsibleOrganizationCopyWith<$Res> {
+  factory $InventoryItemResponsibleOrganizationCopyWith(
+          InventoryItemResponsibleOrganization value,
+          $Res Function(InventoryItemResponsibleOrganization) then) =
+      _$InventoryItemResponsibleOrganizationCopyWithImpl<$Res,
+          InventoryItemResponsibleOrganization>;
+  @useResult
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept role,
+      Reference organization});
+
+  $CodeableConceptCopyWith<$Res> get role;
+  $ReferenceCopyWith<$Res> get organization;
+}
+
+/// @nodoc
+class _$InventoryItemResponsibleOrganizationCopyWithImpl<$Res,
+        $Val extends InventoryItemResponsibleOrganization>
+    implements $InventoryItemResponsibleOrganizationCopyWith<$Res> {
+  _$InventoryItemResponsibleOrganizationCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? role = null,
+    Object? organization = null,
+  }) {
+    return _then(_value.copyWith(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: freezed == extension_
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: freezed == modifierExtension
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      role: null == role
+          ? _value.role
+          : role // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      organization: null == organization
+          ? _value.organization
+          : organization // ignore: cast_nullable_to_non_nullable
+              as Reference,
+    ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CodeableConceptCopyWith<$Res> get role {
+    return $CodeableConceptCopyWith<$Res>(_value.role, (value) {
+      return _then(_value.copyWith(role: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ReferenceCopyWith<$Res> get organization {
+    return $ReferenceCopyWith<$Res>(_value.organization, (value) {
+      return _then(_value.copyWith(organization: value) as $Val);
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_InventoryItemResponsibleOrganizationCopyWith<$Res>
+    implements $InventoryItemResponsibleOrganizationCopyWith<$Res> {
+  factory _$$_InventoryItemResponsibleOrganizationCopyWith(
+          _$_InventoryItemResponsibleOrganization value,
+          $Res Function(_$_InventoryItemResponsibleOrganization) then) =
+      __$$_InventoryItemResponsibleOrganizationCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept role,
+      Reference organization});
+
+  @override
+  $CodeableConceptCopyWith<$Res> get role;
+  @override
+  $ReferenceCopyWith<$Res> get organization;
+}
+
+/// @nodoc
+class __$$_InventoryItemResponsibleOrganizationCopyWithImpl<$Res>
+    extends _$InventoryItemResponsibleOrganizationCopyWithImpl<$Res,
+        _$_InventoryItemResponsibleOrganization>
+    implements _$$_InventoryItemResponsibleOrganizationCopyWith<$Res> {
+  __$$_InventoryItemResponsibleOrganizationCopyWithImpl(
+      _$_InventoryItemResponsibleOrganization _value,
+      $Res Function(_$_InventoryItemResponsibleOrganization) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? role = null,
+    Object? organization = null,
+  }) {
+    return _then(_$_InventoryItemResponsibleOrganization(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: freezed == extension_
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: freezed == modifierExtension
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      role: null == role
+          ? _value.role
+          : role // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      organization: null == organization
+          ? _value.organization
+          : organization // ignore: cast_nullable_to_non_nullable
+              as Reference,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_InventoryItemResponsibleOrganization
+    extends _InventoryItemResponsibleOrganization {
+  _$_InventoryItemResponsibleOrganization(
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      required this.role,
+      required this.organization})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
+
+  factory _$_InventoryItemResponsibleOrganization.fromJson(
+          Map<String, dynamic> json) =>
+      _$$_InventoryItemResponsibleOrganizationFromJson(json);
+
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  @override
+  final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [role] The role of the organization e.g. manufacturer, distributor, etc.
+  @override
+  final CodeableConcept role;
+
+  /// [organization] An organization that has an association with the item, e.g. manufacturer, distributor, responsible, etc.
+  @override
+  final Reference organization;
+
+  @override
+  String toString() {
+    return 'InventoryItemResponsibleOrganization(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, role: $role, organization: $organization)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_InventoryItemResponsibleOrganization &&
+            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            (identical(other.role, role) || other.role == role) &&
+            (identical(other.organization, organization) ||
+                other.organization == organization));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      role,
+      organization);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_InventoryItemResponsibleOrganizationCopyWith<
+          _$_InventoryItemResponsibleOrganization>
+      get copyWith => __$$_InventoryItemResponsibleOrganizationCopyWithImpl<
+          _$_InventoryItemResponsibleOrganization>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_InventoryItemResponsibleOrganizationToJson(
+      this,
+    );
+  }
+}
+
+abstract class _InventoryItemResponsibleOrganization
+    extends InventoryItemResponsibleOrganization {
+  factory _InventoryItemResponsibleOrganization(
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          required final CodeableConcept role,
+          required final Reference organization}) =
+      _$_InventoryItemResponsibleOrganization;
+  _InventoryItemResponsibleOrganization._() : super._();
+
+  factory _InventoryItemResponsibleOrganization.fromJson(
+          Map<String, dynamic> json) =
+      _$_InventoryItemResponsibleOrganization.fromJson;
+
+  @override
+
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  String? get id;
+  @override
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_;
+  @override
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  List<FhirExtension>? get modifierExtension;
+  @override
+
+  /// [role] The role of the organization e.g. manufacturer, distributor, etc.
+  CodeableConcept get role;
+  @override
+
+  /// [organization] An organization that has an association with the item, e.g. manufacturer, distributor, responsible, etc.
+  Reference get organization;
+  @override
+  @JsonKey(ignore: true)
+  _$$_InventoryItemResponsibleOrganizationCopyWith<
+          _$_InventoryItemResponsibleOrganization>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+InventoryItemDescription _$InventoryItemDescriptionFromJson(
+    Map<String, dynamic> json) {
+  return _InventoryItemDescription.fromJson(json);
+}
+
+/// @nodoc
+mixin _$InventoryItemDescription {
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+
+  /// [language] The language for the item description, when an item must be described in different languages and those languages may be authoritative and not translations of a 'main' language.
+  FhirCode? get language => throw _privateConstructorUsedError;
+
+  /// [languageElement] ("_language") Extensions for language
+  @JsonKey(name: '_language')
+  Element? get languageElement => throw _privateConstructorUsedError;
+
+  /// [description] Textual description of the item.
+  String? get description => throw _privateConstructorUsedError;
+
+  /// [descriptionElement] ("_description") Extensions for description
+  @JsonKey(name: '_description')
+  Element? get descriptionElement => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $InventoryItemDescriptionCopyWith<InventoryItemDescription> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $InventoryItemDescriptionCopyWith<$Res> {
+  factory $InventoryItemDescriptionCopyWith(InventoryItemDescription value,
+          $Res Function(InventoryItemDescription) then) =
+      _$InventoryItemDescriptionCopyWithImpl<$Res, InventoryItemDescription>;
+  @useResult
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      FhirCode? language,
+      @JsonKey(name: '_language') Element? languageElement,
+      String? description,
+      @JsonKey(name: '_description') Element? descriptionElement});
+
+  $ElementCopyWith<$Res>? get languageElement;
+  $ElementCopyWith<$Res>? get descriptionElement;
+}
+
+/// @nodoc
+class _$InventoryItemDescriptionCopyWithImpl<$Res,
+        $Val extends InventoryItemDescription>
+    implements $InventoryItemDescriptionCopyWith<$Res> {
+  _$InventoryItemDescriptionCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? language = freezed,
+    Object? languageElement = freezed,
+    Object? description = freezed,
+    Object? descriptionElement = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: freezed == extension_
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: freezed == modifierExtension
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      language: freezed == language
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as FhirCode?,
+      languageElement: freezed == languageElement
+          ? _value.languageElement
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      description: freezed == description
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String?,
+      descriptionElement: freezed == descriptionElement
+          ? _value.descriptionElement
+          : descriptionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+    ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get languageElement {
+    if (_value.languageElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.languageElement!, (value) {
+      return _then(_value.copyWith(languageElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get descriptionElement {
+    if (_value.descriptionElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.descriptionElement!, (value) {
+      return _then(_value.copyWith(descriptionElement: value) as $Val);
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_InventoryItemDescriptionCopyWith<$Res>
+    implements $InventoryItemDescriptionCopyWith<$Res> {
+  factory _$$_InventoryItemDescriptionCopyWith(
+          _$_InventoryItemDescription value,
+          $Res Function(_$_InventoryItemDescription) then) =
+      __$$_InventoryItemDescriptionCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      FhirCode? language,
+      @JsonKey(name: '_language') Element? languageElement,
+      String? description,
+      @JsonKey(name: '_description') Element? descriptionElement});
+
+  @override
+  $ElementCopyWith<$Res>? get languageElement;
+  @override
+  $ElementCopyWith<$Res>? get descriptionElement;
+}
+
+/// @nodoc
+class __$$_InventoryItemDescriptionCopyWithImpl<$Res>
+    extends _$InventoryItemDescriptionCopyWithImpl<$Res,
+        _$_InventoryItemDescription>
+    implements _$$_InventoryItemDescriptionCopyWith<$Res> {
+  __$$_InventoryItemDescriptionCopyWithImpl(_$_InventoryItemDescription _value,
+      $Res Function(_$_InventoryItemDescription) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? language = freezed,
+    Object? languageElement = freezed,
+    Object? description = freezed,
+    Object? descriptionElement = freezed,
+  }) {
+    return _then(_$_InventoryItemDescription(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: freezed == extension_
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: freezed == modifierExtension
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      language: freezed == language
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as FhirCode?,
+      languageElement: freezed == languageElement
+          ? _value.languageElement
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      description: freezed == description
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String?,
+      descriptionElement: freezed == descriptionElement
+          ? _value.descriptionElement
+          : descriptionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_InventoryItemDescription extends _InventoryItemDescription {
+  _$_InventoryItemDescription(
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      this.language,
+      @JsonKey(name: '_language') this.languageElement,
+      this.description,
+      @JsonKey(name: '_description') this.descriptionElement})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
+
+  factory _$_InventoryItemDescription.fromJson(Map<String, dynamic> json) =>
+      _$$_InventoryItemDescriptionFromJson(json);
+
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  @override
+  final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [language] The language for the item description, when an item must be described in different languages and those languages may be authoritative and not translations of a 'main' language.
+  @override
+  final FhirCode? language;
+
+  /// [languageElement] ("_language") Extensions for language
+  @override
+  @JsonKey(name: '_language')
+  final Element? languageElement;
+
+  /// [description] Textual description of the item.
+  @override
+  final String? description;
+
+  /// [descriptionElement] ("_description") Extensions for description
+  @override
+  @JsonKey(name: '_description')
+  final Element? descriptionElement;
+
+  @override
+  String toString() {
+    return 'InventoryItemDescription(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, language: $language, languageElement: $languageElement, description: $description, descriptionElement: $descriptionElement)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_InventoryItemDescription &&
+            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            (identical(other.language, language) ||
+                other.language == language) &&
+            (identical(other.languageElement, languageElement) ||
+                other.languageElement == languageElement) &&
+            (identical(other.description, description) ||
+                other.description == description) &&
+            (identical(other.descriptionElement, descriptionElement) ||
+                other.descriptionElement == descriptionElement));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      language,
+      languageElement,
+      description,
+      descriptionElement);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_InventoryItemDescriptionCopyWith<_$_InventoryItemDescription>
+      get copyWith => __$$_InventoryItemDescriptionCopyWithImpl<
+          _$_InventoryItemDescription>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_InventoryItemDescriptionToJson(
+      this,
+    );
+  }
+}
+
+abstract class _InventoryItemDescription extends InventoryItemDescription {
+  factory _InventoryItemDescription(
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final FhirCode? language,
+          @JsonKey(name: '_language') final Element? languageElement,
+          final String? description,
+          @JsonKey(name: '_description') final Element? descriptionElement}) =
+      _$_InventoryItemDescription;
+  _InventoryItemDescription._() : super._();
+
+  factory _InventoryItemDescription.fromJson(Map<String, dynamic> json) =
+      _$_InventoryItemDescription.fromJson;
+
+  @override
+
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  String? get id;
+  @override
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_;
+  @override
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  List<FhirExtension>? get modifierExtension;
+  @override
+
+  /// [language] The language for the item description, when an item must be described in different languages and those languages may be authoritative and not translations of a 'main' language.
+  FhirCode? get language;
+  @override
+
+  /// [languageElement] ("_language") Extensions for language
+  @JsonKey(name: '_language')
+  Element? get languageElement;
+  @override
+
+  /// [description] Textual description of the item.
+  String? get description;
+  @override
+
+  /// [descriptionElement] ("_description") Extensions for description
+  @JsonKey(name: '_description')
+  Element? get descriptionElement;
+  @override
+  @JsonKey(ignore: true)
+  _$$_InventoryItemDescriptionCopyWith<_$_InventoryItemDescription>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+InventoryItemAssociation _$InventoryItemAssociationFromJson(
+    Map<String, dynamic> json) {
+  return _InventoryItemAssociation.fromJson(json);
+}
+
+/// @nodoc
+mixin _$InventoryItemAssociation {
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+
+  /// [associationType] This attribute defined the type of association when establishing associations or relations between items, e.g. 'packaged within' or 'used with' or 'to be mixed with.
+  CodeableConcept get associationType => throw _privateConstructorUsedError;
+
+  /// [relatedItem] The related item or product.
+  Reference get relatedItem => throw _privateConstructorUsedError;
+
+  /// [quantity] The quantity of the related product in this product - Numerator is the quantity of the related product. Denominator is the quantity of the present product. For example a value of 20 means that this product contains 20 units of the related product; a value of 1:20 means the inverse - that the contained product contains 20 units of the present product.
+  Ratio get quantity => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $InventoryItemAssociationCopyWith<InventoryItemAssociation> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $InventoryItemAssociationCopyWith<$Res> {
+  factory $InventoryItemAssociationCopyWith(InventoryItemAssociation value,
+          $Res Function(InventoryItemAssociation) then) =
+      _$InventoryItemAssociationCopyWithImpl<$Res, InventoryItemAssociation>;
+  @useResult
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept associationType,
+      Reference relatedItem,
+      Ratio quantity});
+
+  $CodeableConceptCopyWith<$Res> get associationType;
+  $ReferenceCopyWith<$Res> get relatedItem;
+  $RatioCopyWith<$Res> get quantity;
+}
+
+/// @nodoc
+class _$InventoryItemAssociationCopyWithImpl<$Res,
+        $Val extends InventoryItemAssociation>
+    implements $InventoryItemAssociationCopyWith<$Res> {
+  _$InventoryItemAssociationCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? associationType = null,
+    Object? relatedItem = null,
+    Object? quantity = null,
+  }) {
+    return _then(_value.copyWith(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: freezed == extension_
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: freezed == modifierExtension
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      associationType: null == associationType
+          ? _value.associationType
+          : associationType // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      relatedItem: null == relatedItem
+          ? _value.relatedItem
+          : relatedItem // ignore: cast_nullable_to_non_nullable
+              as Reference,
+      quantity: null == quantity
+          ? _value.quantity
+          : quantity // ignore: cast_nullable_to_non_nullable
+              as Ratio,
+    ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CodeableConceptCopyWith<$Res> get associationType {
+    return $CodeableConceptCopyWith<$Res>(_value.associationType, (value) {
+      return _then(_value.copyWith(associationType: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ReferenceCopyWith<$Res> get relatedItem {
+    return $ReferenceCopyWith<$Res>(_value.relatedItem, (value) {
+      return _then(_value.copyWith(relatedItem: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $RatioCopyWith<$Res> get quantity {
+    return $RatioCopyWith<$Res>(_value.quantity, (value) {
+      return _then(_value.copyWith(quantity: value) as $Val);
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_InventoryItemAssociationCopyWith<$Res>
+    implements $InventoryItemAssociationCopyWith<$Res> {
+  factory _$$_InventoryItemAssociationCopyWith(
+          _$_InventoryItemAssociation value,
+          $Res Function(_$_InventoryItemAssociation) then) =
+      __$$_InventoryItemAssociationCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept associationType,
+      Reference relatedItem,
+      Ratio quantity});
+
+  @override
+  $CodeableConceptCopyWith<$Res> get associationType;
+  @override
+  $ReferenceCopyWith<$Res> get relatedItem;
+  @override
+  $RatioCopyWith<$Res> get quantity;
+}
+
+/// @nodoc
+class __$$_InventoryItemAssociationCopyWithImpl<$Res>
+    extends _$InventoryItemAssociationCopyWithImpl<$Res,
+        _$_InventoryItemAssociation>
+    implements _$$_InventoryItemAssociationCopyWith<$Res> {
+  __$$_InventoryItemAssociationCopyWithImpl(_$_InventoryItemAssociation _value,
+      $Res Function(_$_InventoryItemAssociation) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? associationType = null,
+    Object? relatedItem = null,
+    Object? quantity = null,
+  }) {
+    return _then(_$_InventoryItemAssociation(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: freezed == extension_
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: freezed == modifierExtension
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      associationType: null == associationType
+          ? _value.associationType
+          : associationType // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      relatedItem: null == relatedItem
+          ? _value.relatedItem
+          : relatedItem // ignore: cast_nullable_to_non_nullable
+              as Reference,
+      quantity: null == quantity
+          ? _value.quantity
+          : quantity // ignore: cast_nullable_to_non_nullable
+              as Ratio,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_InventoryItemAssociation extends _InventoryItemAssociation {
+  _$_InventoryItemAssociation(
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      required this.associationType,
+      required this.relatedItem,
+      required this.quantity})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
+
+  factory _$_InventoryItemAssociation.fromJson(Map<String, dynamic> json) =>
+      _$$_InventoryItemAssociationFromJson(json);
+
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  @override
+  final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [associationType] This attribute defined the type of association when establishing associations or relations between items, e.g. 'packaged within' or 'used with' or 'to be mixed with.
+  @override
+  final CodeableConcept associationType;
+
+  /// [relatedItem] The related item or product.
+  @override
+  final Reference relatedItem;
+
+  /// [quantity] The quantity of the related product in this product - Numerator is the quantity of the related product. Denominator is the quantity of the present product. For example a value of 20 means that this product contains 20 units of the related product; a value of 1:20 means the inverse - that the contained product contains 20 units of the present product.
+  @override
+  final Ratio quantity;
+
+  @override
+  String toString() {
+    return 'InventoryItemAssociation(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, associationType: $associationType, relatedItem: $relatedItem, quantity: $quantity)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_InventoryItemAssociation &&
+            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            (identical(other.associationType, associationType) ||
+                other.associationType == associationType) &&
+            (identical(other.relatedItem, relatedItem) ||
+                other.relatedItem == relatedItem) &&
+            (identical(other.quantity, quantity) ||
+                other.quantity == quantity));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      associationType,
+      relatedItem,
+      quantity);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_InventoryItemAssociationCopyWith<_$_InventoryItemAssociation>
+      get copyWith => __$$_InventoryItemAssociationCopyWithImpl<
+          _$_InventoryItemAssociation>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_InventoryItemAssociationToJson(
+      this,
+    );
+  }
+}
+
+abstract class _InventoryItemAssociation extends InventoryItemAssociation {
+  factory _InventoryItemAssociation(
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      required final CodeableConcept associationType,
+      required final Reference relatedItem,
+      required final Ratio quantity}) = _$_InventoryItemAssociation;
+  _InventoryItemAssociation._() : super._();
+
+  factory _InventoryItemAssociation.fromJson(Map<String, dynamic> json) =
+      _$_InventoryItemAssociation.fromJson;
+
+  @override
+
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  String? get id;
+  @override
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_;
+  @override
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  List<FhirExtension>? get modifierExtension;
+  @override
+
+  /// [associationType] This attribute defined the type of association when establishing associations or relations between items, e.g. 'packaged within' or 'used with' or 'to be mixed with.
+  CodeableConcept get associationType;
+  @override
+
+  /// [relatedItem] The related item or product.
+  Reference get relatedItem;
+  @override
+
+  /// [quantity] The quantity of the related product in this product - Numerator is the quantity of the related product. Denominator is the quantity of the present product. For example a value of 20 means that this product contains 20 units of the related product; a value of 1:20 means the inverse - that the contained product contains 20 units of the present product.
+  Ratio get quantity;
+  @override
+  @JsonKey(ignore: true)
+  _$$_InventoryItemAssociationCopyWith<_$_InventoryItemAssociation>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+InventoryItemCharacteristic _$InventoryItemCharacteristicFromJson(
+    Map<String, dynamic> json) {
+  return _InventoryItemCharacteristic.fromJson(json);
+}
+
+/// @nodoc
+mixin _$InventoryItemCharacteristic {
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+
+  /// [characteristicType] The type of characteristic that is being defined.
+  CodeableConcept get characteristicType => throw _privateConstructorUsedError;
+
+  /// [valueString] The value of the attribute.
+  String? get valueString => throw _privateConstructorUsedError;
+
+  /// [valueStringElement] ("_valueString") Extensions for valueString
+  @JsonKey(name: '_valueString')
+  Element? get valueStringElement => throw _privateConstructorUsedError;
+
+  /// [valueInteger] The value of the attribute.
+  FhirInteger? get valueInteger => throw _privateConstructorUsedError;
+
+  /// [valueIntegerElement] ("_valueInteger") Extensions for valueInteger
+  @JsonKey(name: '_valueInteger')
+  Element? get valueIntegerElement => throw _privateConstructorUsedError;
+
+  /// [valueDecimal] The value of the attribute.
+  FhirDecimal? get valueDecimal => throw _privateConstructorUsedError;
+
+  /// [valueDecimalElement] ("_valueDecimal") Extensions for valueDecimal
+  @JsonKey(name: '_valueDecimal')
+  Element? get valueDecimalElement => throw _privateConstructorUsedError;
+
+  /// [valueBoolean] The value of the attribute.
+  FhirBoolean? get valueBoolean => throw _privateConstructorUsedError;
+
+  /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
+  @JsonKey(name: '_valueBoolean')
+  Element? get valueBooleanElement => throw _privateConstructorUsedError;
+
+  /// [valueUrl] The value of the attribute.
+  FhirUrl? get valueUrl => throw _privateConstructorUsedError;
+
+  /// [valueUrlElement] ("_valueUrl") Extensions for valueUrl
+  @JsonKey(name: '_valueUrl')
+  Element? get valueUrlElement => throw _privateConstructorUsedError;
+
+  /// [valueDateTime] The value of the attribute.
+  FhirDateTime? get valueDateTime => throw _privateConstructorUsedError;
+
+  /// [valueDateTimeElement] ("_valueDateTime") Extensions for valueDateTime
+  @JsonKey(name: '_valueDateTime')
+  Element? get valueDateTimeElement => throw _privateConstructorUsedError;
+
+  /// [valueQuantity] The value of the attribute.
+  Quantity? get valueQuantity => throw _privateConstructorUsedError;
+
+  /// [valueRange] The value of the attribute.
+  Range? get valueRange => throw _privateConstructorUsedError;
+
+  /// [valueRatio] The value of the attribute.
+  Ratio? get valueRatio => throw _privateConstructorUsedError;
+
+  /// [valueAnnotation] The value of the attribute.
+  Annotation? get valueAnnotation => throw _privateConstructorUsedError;
+
+  /// [valueAddress] The value of the attribute.
+  Address? get valueAddress => throw _privateConstructorUsedError;
+
+  /// [valueDuration] The value of the attribute.
+  FhirDuration? get valueDuration => throw _privateConstructorUsedError;
+
+  /// [valueCodeableConcept] The value of the attribute.
+  CodeableConcept? get valueCodeableConcept =>
+      throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $InventoryItemCharacteristicCopyWith<InventoryItemCharacteristic>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $InventoryItemCharacteristicCopyWith<$Res> {
+  factory $InventoryItemCharacteristicCopyWith(
+          InventoryItemCharacteristic value,
+          $Res Function(InventoryItemCharacteristic) then) =
+      _$InventoryItemCharacteristicCopyWithImpl<$Res,
+          InventoryItemCharacteristic>;
+  @useResult
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept characteristicType,
+      String? valueString,
+      @JsonKey(name: '_valueString') Element? valueStringElement,
+      FhirInteger? valueInteger,
+      @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
+      FhirDecimal? valueDecimal,
+      @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
+      FhirBoolean? valueBoolean,
+      @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
+      FhirUrl? valueUrl,
+      @JsonKey(name: '_valueUrl') Element? valueUrlElement,
+      FhirDateTime? valueDateTime,
+      @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
+      Quantity? valueQuantity,
+      Range? valueRange,
+      Ratio? valueRatio,
+      Annotation? valueAnnotation,
+      Address? valueAddress,
+      FhirDuration? valueDuration,
+      CodeableConcept? valueCodeableConcept});
+
+  $CodeableConceptCopyWith<$Res> get characteristicType;
+  $ElementCopyWith<$Res>? get valueStringElement;
+  $ElementCopyWith<$Res>? get valueIntegerElement;
+  $ElementCopyWith<$Res>? get valueDecimalElement;
+  $ElementCopyWith<$Res>? get valueBooleanElement;
+  $ElementCopyWith<$Res>? get valueUrlElement;
+  $ElementCopyWith<$Res>? get valueDateTimeElement;
+  $QuantityCopyWith<$Res>? get valueQuantity;
+  $RangeCopyWith<$Res>? get valueRange;
+  $RatioCopyWith<$Res>? get valueRatio;
+  $AnnotationCopyWith<$Res>? get valueAnnotation;
+  $AddressCopyWith<$Res>? get valueAddress;
+  $FhirDurationCopyWith<$Res>? get valueDuration;
+  $CodeableConceptCopyWith<$Res>? get valueCodeableConcept;
+}
+
+/// @nodoc
+class _$InventoryItemCharacteristicCopyWithImpl<$Res,
+        $Val extends InventoryItemCharacteristic>
+    implements $InventoryItemCharacteristicCopyWith<$Res> {
+  _$InventoryItemCharacteristicCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? characteristicType = null,
+    Object? valueString = freezed,
+    Object? valueStringElement = freezed,
+    Object? valueInteger = freezed,
+    Object? valueIntegerElement = freezed,
+    Object? valueDecimal = freezed,
+    Object? valueDecimalElement = freezed,
+    Object? valueBoolean = freezed,
+    Object? valueBooleanElement = freezed,
+    Object? valueUrl = freezed,
+    Object? valueUrlElement = freezed,
+    Object? valueDateTime = freezed,
+    Object? valueDateTimeElement = freezed,
+    Object? valueQuantity = freezed,
+    Object? valueRange = freezed,
+    Object? valueRatio = freezed,
+    Object? valueAnnotation = freezed,
+    Object? valueAddress = freezed,
+    Object? valueDuration = freezed,
+    Object? valueCodeableConcept = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: freezed == extension_
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: freezed == modifierExtension
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      characteristicType: null == characteristicType
+          ? _value.characteristicType
+          : characteristicType // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      valueString: freezed == valueString
+          ? _value.valueString
+          : valueString // ignore: cast_nullable_to_non_nullable
+              as String?,
+      valueStringElement: freezed == valueStringElement
+          ? _value.valueStringElement
+          : valueStringElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueInteger: freezed == valueInteger
+          ? _value.valueInteger
+          : valueInteger // ignore: cast_nullable_to_non_nullable
+              as FhirInteger?,
+      valueIntegerElement: freezed == valueIntegerElement
+          ? _value.valueIntegerElement
+          : valueIntegerElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueDecimal: freezed == valueDecimal
+          ? _value.valueDecimal
+          : valueDecimal // ignore: cast_nullable_to_non_nullable
+              as FhirDecimal?,
+      valueDecimalElement: freezed == valueDecimalElement
+          ? _value.valueDecimalElement
+          : valueDecimalElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueBoolean: freezed == valueBoolean
+          ? _value.valueBoolean
+          : valueBoolean // ignore: cast_nullable_to_non_nullable
+              as FhirBoolean?,
+      valueBooleanElement: freezed == valueBooleanElement
+          ? _value.valueBooleanElement
+          : valueBooleanElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueUrl: freezed == valueUrl
+          ? _value.valueUrl
+          : valueUrl // ignore: cast_nullable_to_non_nullable
+              as FhirUrl?,
+      valueUrlElement: freezed == valueUrlElement
+          ? _value.valueUrlElement
+          : valueUrlElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueDateTime: freezed == valueDateTime
+          ? _value.valueDateTime
+          : valueDateTime // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      valueDateTimeElement: freezed == valueDateTimeElement
+          ? _value.valueDateTimeElement
+          : valueDateTimeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueQuantity: freezed == valueQuantity
+          ? _value.valueQuantity
+          : valueQuantity // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
+      valueRange: freezed == valueRange
+          ? _value.valueRange
+          : valueRange // ignore: cast_nullable_to_non_nullable
+              as Range?,
+      valueRatio: freezed == valueRatio
+          ? _value.valueRatio
+          : valueRatio // ignore: cast_nullable_to_non_nullable
+              as Ratio?,
+      valueAnnotation: freezed == valueAnnotation
+          ? _value.valueAnnotation
+          : valueAnnotation // ignore: cast_nullable_to_non_nullable
+              as Annotation?,
+      valueAddress: freezed == valueAddress
+          ? _value.valueAddress
+          : valueAddress // ignore: cast_nullable_to_non_nullable
+              as Address?,
+      valueDuration: freezed == valueDuration
+          ? _value.valueDuration
+          : valueDuration // ignore: cast_nullable_to_non_nullable
+              as FhirDuration?,
+      valueCodeableConcept: freezed == valueCodeableConcept
+          ? _value.valueCodeableConcept
+          : valueCodeableConcept // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+    ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CodeableConceptCopyWith<$Res> get characteristicType {
+    return $CodeableConceptCopyWith<$Res>(_value.characteristicType, (value) {
+      return _then(_value.copyWith(characteristicType: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get valueStringElement {
+    if (_value.valueStringElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.valueStringElement!, (value) {
+      return _then(_value.copyWith(valueStringElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get valueIntegerElement {
+    if (_value.valueIntegerElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.valueIntegerElement!, (value) {
+      return _then(_value.copyWith(valueIntegerElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get valueDecimalElement {
+    if (_value.valueDecimalElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.valueDecimalElement!, (value) {
+      return _then(_value.copyWith(valueDecimalElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get valueBooleanElement {
+    if (_value.valueBooleanElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.valueBooleanElement!, (value) {
+      return _then(_value.copyWith(valueBooleanElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get valueUrlElement {
+    if (_value.valueUrlElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.valueUrlElement!, (value) {
+      return _then(_value.copyWith(valueUrlElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get valueDateTimeElement {
+    if (_value.valueDateTimeElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.valueDateTimeElement!, (value) {
+      return _then(_value.copyWith(valueDateTimeElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $QuantityCopyWith<$Res>? get valueQuantity {
+    if (_value.valueQuantity == null) {
+      return null;
+    }
+
+    return $QuantityCopyWith<$Res>(_value.valueQuantity!, (value) {
+      return _then(_value.copyWith(valueQuantity: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $RangeCopyWith<$Res>? get valueRange {
+    if (_value.valueRange == null) {
+      return null;
+    }
+
+    return $RangeCopyWith<$Res>(_value.valueRange!, (value) {
+      return _then(_value.copyWith(valueRange: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $RatioCopyWith<$Res>? get valueRatio {
+    if (_value.valueRatio == null) {
+      return null;
+    }
+
+    return $RatioCopyWith<$Res>(_value.valueRatio!, (value) {
+      return _then(_value.copyWith(valueRatio: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $AnnotationCopyWith<$Res>? get valueAnnotation {
+    if (_value.valueAnnotation == null) {
+      return null;
+    }
+
+    return $AnnotationCopyWith<$Res>(_value.valueAnnotation!, (value) {
+      return _then(_value.copyWith(valueAnnotation: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $AddressCopyWith<$Res>? get valueAddress {
+    if (_value.valueAddress == null) {
+      return null;
+    }
+
+    return $AddressCopyWith<$Res>(_value.valueAddress!, (value) {
+      return _then(_value.copyWith(valueAddress: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $FhirDurationCopyWith<$Res>? get valueDuration {
+    if (_value.valueDuration == null) {
+      return null;
+    }
+
+    return $FhirDurationCopyWith<$Res>(_value.valueDuration!, (value) {
+      return _then(_value.copyWith(valueDuration: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CodeableConceptCopyWith<$Res>? get valueCodeableConcept {
+    if (_value.valueCodeableConcept == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.valueCodeableConcept!,
+        (value) {
+      return _then(_value.copyWith(valueCodeableConcept: value) as $Val);
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_InventoryItemCharacteristicCopyWith<$Res>
+    implements $InventoryItemCharacteristicCopyWith<$Res> {
+  factory _$$_InventoryItemCharacteristicCopyWith(
+          _$_InventoryItemCharacteristic value,
+          $Res Function(_$_InventoryItemCharacteristic) then) =
+      __$$_InventoryItemCharacteristicCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept characteristicType,
+      String? valueString,
+      @JsonKey(name: '_valueString') Element? valueStringElement,
+      FhirInteger? valueInteger,
+      @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
+      FhirDecimal? valueDecimal,
+      @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
+      FhirBoolean? valueBoolean,
+      @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
+      FhirUrl? valueUrl,
+      @JsonKey(name: '_valueUrl') Element? valueUrlElement,
+      FhirDateTime? valueDateTime,
+      @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
+      Quantity? valueQuantity,
+      Range? valueRange,
+      Ratio? valueRatio,
+      Annotation? valueAnnotation,
+      Address? valueAddress,
+      FhirDuration? valueDuration,
+      CodeableConcept? valueCodeableConcept});
+
+  @override
+  $CodeableConceptCopyWith<$Res> get characteristicType;
+  @override
+  $ElementCopyWith<$Res>? get valueStringElement;
+  @override
+  $ElementCopyWith<$Res>? get valueIntegerElement;
+  @override
+  $ElementCopyWith<$Res>? get valueDecimalElement;
+  @override
+  $ElementCopyWith<$Res>? get valueBooleanElement;
+  @override
+  $ElementCopyWith<$Res>? get valueUrlElement;
+  @override
+  $ElementCopyWith<$Res>? get valueDateTimeElement;
+  @override
+  $QuantityCopyWith<$Res>? get valueQuantity;
+  @override
+  $RangeCopyWith<$Res>? get valueRange;
+  @override
+  $RatioCopyWith<$Res>? get valueRatio;
+  @override
+  $AnnotationCopyWith<$Res>? get valueAnnotation;
+  @override
+  $AddressCopyWith<$Res>? get valueAddress;
+  @override
+  $FhirDurationCopyWith<$Res>? get valueDuration;
+  @override
+  $CodeableConceptCopyWith<$Res>? get valueCodeableConcept;
+}
+
+/// @nodoc
+class __$$_InventoryItemCharacteristicCopyWithImpl<$Res>
+    extends _$InventoryItemCharacteristicCopyWithImpl<$Res,
+        _$_InventoryItemCharacteristic>
+    implements _$$_InventoryItemCharacteristicCopyWith<$Res> {
+  __$$_InventoryItemCharacteristicCopyWithImpl(
+      _$_InventoryItemCharacteristic _value,
+      $Res Function(_$_InventoryItemCharacteristic) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? characteristicType = null,
+    Object? valueString = freezed,
+    Object? valueStringElement = freezed,
+    Object? valueInteger = freezed,
+    Object? valueIntegerElement = freezed,
+    Object? valueDecimal = freezed,
+    Object? valueDecimalElement = freezed,
+    Object? valueBoolean = freezed,
+    Object? valueBooleanElement = freezed,
+    Object? valueUrl = freezed,
+    Object? valueUrlElement = freezed,
+    Object? valueDateTime = freezed,
+    Object? valueDateTimeElement = freezed,
+    Object? valueQuantity = freezed,
+    Object? valueRange = freezed,
+    Object? valueRatio = freezed,
+    Object? valueAnnotation = freezed,
+    Object? valueAddress = freezed,
+    Object? valueDuration = freezed,
+    Object? valueCodeableConcept = freezed,
+  }) {
+    return _then(_$_InventoryItemCharacteristic(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: freezed == extension_
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: freezed == modifierExtension
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      characteristicType: null == characteristicType
+          ? _value.characteristicType
+          : characteristicType // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      valueString: freezed == valueString
+          ? _value.valueString
+          : valueString // ignore: cast_nullable_to_non_nullable
+              as String?,
+      valueStringElement: freezed == valueStringElement
+          ? _value.valueStringElement
+          : valueStringElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueInteger: freezed == valueInteger
+          ? _value.valueInteger
+          : valueInteger // ignore: cast_nullable_to_non_nullable
+              as FhirInteger?,
+      valueIntegerElement: freezed == valueIntegerElement
+          ? _value.valueIntegerElement
+          : valueIntegerElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueDecimal: freezed == valueDecimal
+          ? _value.valueDecimal
+          : valueDecimal // ignore: cast_nullable_to_non_nullable
+              as FhirDecimal?,
+      valueDecimalElement: freezed == valueDecimalElement
+          ? _value.valueDecimalElement
+          : valueDecimalElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueBoolean: freezed == valueBoolean
+          ? _value.valueBoolean
+          : valueBoolean // ignore: cast_nullable_to_non_nullable
+              as FhirBoolean?,
+      valueBooleanElement: freezed == valueBooleanElement
+          ? _value.valueBooleanElement
+          : valueBooleanElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueUrl: freezed == valueUrl
+          ? _value.valueUrl
+          : valueUrl // ignore: cast_nullable_to_non_nullable
+              as FhirUrl?,
+      valueUrlElement: freezed == valueUrlElement
+          ? _value.valueUrlElement
+          : valueUrlElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueDateTime: freezed == valueDateTime
+          ? _value.valueDateTime
+          : valueDateTime // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      valueDateTimeElement: freezed == valueDateTimeElement
+          ? _value.valueDateTimeElement
+          : valueDateTimeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueQuantity: freezed == valueQuantity
+          ? _value.valueQuantity
+          : valueQuantity // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
+      valueRange: freezed == valueRange
+          ? _value.valueRange
+          : valueRange // ignore: cast_nullable_to_non_nullable
+              as Range?,
+      valueRatio: freezed == valueRatio
+          ? _value.valueRatio
+          : valueRatio // ignore: cast_nullable_to_non_nullable
+              as Ratio?,
+      valueAnnotation: freezed == valueAnnotation
+          ? _value.valueAnnotation
+          : valueAnnotation // ignore: cast_nullable_to_non_nullable
+              as Annotation?,
+      valueAddress: freezed == valueAddress
+          ? _value.valueAddress
+          : valueAddress // ignore: cast_nullable_to_non_nullable
+              as Address?,
+      valueDuration: freezed == valueDuration
+          ? _value.valueDuration
+          : valueDuration // ignore: cast_nullable_to_non_nullable
+              as FhirDuration?,
+      valueCodeableConcept: freezed == valueCodeableConcept
+          ? _value.valueCodeableConcept
+          : valueCodeableConcept // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_InventoryItemCharacteristic extends _InventoryItemCharacteristic {
+  _$_InventoryItemCharacteristic(
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      required this.characteristicType,
+      this.valueString,
+      @JsonKey(name: '_valueString') this.valueStringElement,
+      this.valueInteger,
+      @JsonKey(name: '_valueInteger') this.valueIntegerElement,
+      this.valueDecimal,
+      @JsonKey(name: '_valueDecimal') this.valueDecimalElement,
+      this.valueBoolean,
+      @JsonKey(name: '_valueBoolean') this.valueBooleanElement,
+      this.valueUrl,
+      @JsonKey(name: '_valueUrl') this.valueUrlElement,
+      this.valueDateTime,
+      @JsonKey(name: '_valueDateTime') this.valueDateTimeElement,
+      this.valueQuantity,
+      this.valueRange,
+      this.valueRatio,
+      this.valueAnnotation,
+      this.valueAddress,
+      this.valueDuration,
+      this.valueCodeableConcept})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
+
+  factory _$_InventoryItemCharacteristic.fromJson(Map<String, dynamic> json) =>
+      _$$_InventoryItemCharacteristicFromJson(json);
+
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  @override
+  final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [characteristicType] The type of characteristic that is being defined.
+  @override
+  final CodeableConcept characteristicType;
+
+  /// [valueString] The value of the attribute.
+  @override
+  final String? valueString;
+
+  /// [valueStringElement] ("_valueString") Extensions for valueString
+  @override
+  @JsonKey(name: '_valueString')
+  final Element? valueStringElement;
+
+  /// [valueInteger] The value of the attribute.
+  @override
+  final FhirInteger? valueInteger;
+
+  /// [valueIntegerElement] ("_valueInteger") Extensions for valueInteger
+  @override
+  @JsonKey(name: '_valueInteger')
+  final Element? valueIntegerElement;
+
+  /// [valueDecimal] The value of the attribute.
+  @override
+  final FhirDecimal? valueDecimal;
+
+  /// [valueDecimalElement] ("_valueDecimal") Extensions for valueDecimal
+  @override
+  @JsonKey(name: '_valueDecimal')
+  final Element? valueDecimalElement;
+
+  /// [valueBoolean] The value of the attribute.
+  @override
+  final FhirBoolean? valueBoolean;
+
+  /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
+  @override
+  @JsonKey(name: '_valueBoolean')
+  final Element? valueBooleanElement;
+
+  /// [valueUrl] The value of the attribute.
+  @override
+  final FhirUrl? valueUrl;
+
+  /// [valueUrlElement] ("_valueUrl") Extensions for valueUrl
+  @override
+  @JsonKey(name: '_valueUrl')
+  final Element? valueUrlElement;
+
+  /// [valueDateTime] The value of the attribute.
+  @override
+  final FhirDateTime? valueDateTime;
+
+  /// [valueDateTimeElement] ("_valueDateTime") Extensions for valueDateTime
+  @override
+  @JsonKey(name: '_valueDateTime')
+  final Element? valueDateTimeElement;
+
+  /// [valueQuantity] The value of the attribute.
+  @override
+  final Quantity? valueQuantity;
+
+  /// [valueRange] The value of the attribute.
+  @override
+  final Range? valueRange;
+
+  /// [valueRatio] The value of the attribute.
+  @override
+  final Ratio? valueRatio;
+
+  /// [valueAnnotation] The value of the attribute.
+  @override
+  final Annotation? valueAnnotation;
+
+  /// [valueAddress] The value of the attribute.
+  @override
+  final Address? valueAddress;
+
+  /// [valueDuration] The value of the attribute.
+  @override
+  final FhirDuration? valueDuration;
+
+  /// [valueCodeableConcept] The value of the attribute.
+  @override
+  final CodeableConcept? valueCodeableConcept;
+
+  @override
+  String toString() {
+    return 'InventoryItemCharacteristic(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, characteristicType: $characteristicType, valueString: $valueString, valueStringElement: $valueStringElement, valueInteger: $valueInteger, valueIntegerElement: $valueIntegerElement, valueDecimal: $valueDecimal, valueDecimalElement: $valueDecimalElement, valueBoolean: $valueBoolean, valueBooleanElement: $valueBooleanElement, valueUrl: $valueUrl, valueUrlElement: $valueUrlElement, valueDateTime: $valueDateTime, valueDateTimeElement: $valueDateTimeElement, valueQuantity: $valueQuantity, valueRange: $valueRange, valueRatio: $valueRatio, valueAnnotation: $valueAnnotation, valueAddress: $valueAddress, valueDuration: $valueDuration, valueCodeableConcept: $valueCodeableConcept)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_InventoryItemCharacteristic &&
+            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            (identical(other.characteristicType, characteristicType) ||
+                other.characteristicType == characteristicType) &&
+            (identical(other.valueString, valueString) ||
+                other.valueString == valueString) &&
+            (identical(other.valueStringElement, valueStringElement) ||
+                other.valueStringElement == valueStringElement) &&
+            (identical(other.valueInteger, valueInteger) ||
+                other.valueInteger == valueInteger) &&
+            (identical(other.valueIntegerElement, valueIntegerElement) ||
+                other.valueIntegerElement == valueIntegerElement) &&
+            (identical(other.valueDecimal, valueDecimal) ||
+                other.valueDecimal == valueDecimal) &&
+            (identical(other.valueDecimalElement, valueDecimalElement) ||
+                other.valueDecimalElement == valueDecimalElement) &&
+            (identical(other.valueBoolean, valueBoolean) ||
+                other.valueBoolean == valueBoolean) &&
+            (identical(other.valueBooleanElement, valueBooleanElement) ||
+                other.valueBooleanElement == valueBooleanElement) &&
+            (identical(other.valueUrl, valueUrl) ||
+                other.valueUrl == valueUrl) &&
+            (identical(other.valueUrlElement, valueUrlElement) ||
+                other.valueUrlElement == valueUrlElement) &&
+            (identical(other.valueDateTime, valueDateTime) ||
+                other.valueDateTime == valueDateTime) &&
+            (identical(other.valueDateTimeElement, valueDateTimeElement) ||
+                other.valueDateTimeElement == valueDateTimeElement) &&
+            (identical(other.valueQuantity, valueQuantity) ||
+                other.valueQuantity == valueQuantity) &&
+            (identical(other.valueRange, valueRange) ||
+                other.valueRange == valueRange) &&
+            (identical(other.valueRatio, valueRatio) ||
+                other.valueRatio == valueRatio) &&
+            (identical(other.valueAnnotation, valueAnnotation) ||
+                other.valueAnnotation == valueAnnotation) &&
+            (identical(other.valueAddress, valueAddress) ||
+                other.valueAddress == valueAddress) &&
+            (identical(other.valueDuration, valueDuration) ||
+                other.valueDuration == valueDuration) &&
+            (identical(other.valueCodeableConcept, valueCodeableConcept) ||
+                other.valueCodeableConcept == valueCodeableConcept));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        id,
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
+        characteristicType,
+        valueString,
+        valueStringElement,
+        valueInteger,
+        valueIntegerElement,
+        valueDecimal,
+        valueDecimalElement,
+        valueBoolean,
+        valueBooleanElement,
+        valueUrl,
+        valueUrlElement,
+        valueDateTime,
+        valueDateTimeElement,
+        valueQuantity,
+        valueRange,
+        valueRatio,
+        valueAnnotation,
+        valueAddress,
+        valueDuration,
+        valueCodeableConcept
+      ]);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_InventoryItemCharacteristicCopyWith<_$_InventoryItemCharacteristic>
+      get copyWith => __$$_InventoryItemCharacteristicCopyWithImpl<
+          _$_InventoryItemCharacteristic>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_InventoryItemCharacteristicToJson(
+      this,
+    );
+  }
+}
+
+abstract class _InventoryItemCharacteristic
+    extends InventoryItemCharacteristic {
+  factory _InventoryItemCharacteristic(
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          required final CodeableConcept characteristicType,
+          final String? valueString,
+          @JsonKey(name: '_valueString') final Element? valueStringElement,
+          final FhirInteger? valueInteger,
+          @JsonKey(name: '_valueInteger') final Element? valueIntegerElement,
+          final FhirDecimal? valueDecimal,
+          @JsonKey(name: '_valueDecimal') final Element? valueDecimalElement,
+          final FhirBoolean? valueBoolean,
+          @JsonKey(name: '_valueBoolean') final Element? valueBooleanElement,
+          final FhirUrl? valueUrl,
+          @JsonKey(name: '_valueUrl') final Element? valueUrlElement,
+          final FhirDateTime? valueDateTime,
+          @JsonKey(name: '_valueDateTime') final Element? valueDateTimeElement,
+          final Quantity? valueQuantity,
+          final Range? valueRange,
+          final Ratio? valueRatio,
+          final Annotation? valueAnnotation,
+          final Address? valueAddress,
+          final FhirDuration? valueDuration,
+          final CodeableConcept? valueCodeableConcept}) =
+      _$_InventoryItemCharacteristic;
+  _InventoryItemCharacteristic._() : super._();
+
+  factory _InventoryItemCharacteristic.fromJson(Map<String, dynamic> json) =
+      _$_InventoryItemCharacteristic.fromJson;
+
+  @override
+
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  String? get id;
+  @override
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_;
+  @override
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  List<FhirExtension>? get modifierExtension;
+  @override
+
+  /// [characteristicType] The type of characteristic that is being defined.
+  CodeableConcept get characteristicType;
+  @override
+
+  /// [valueString] The value of the attribute.
+  String? get valueString;
+  @override
+
+  /// [valueStringElement] ("_valueString") Extensions for valueString
+  @JsonKey(name: '_valueString')
+  Element? get valueStringElement;
+  @override
+
+  /// [valueInteger] The value of the attribute.
+  FhirInteger? get valueInteger;
+  @override
+
+  /// [valueIntegerElement] ("_valueInteger") Extensions for valueInteger
+  @JsonKey(name: '_valueInteger')
+  Element? get valueIntegerElement;
+  @override
+
+  /// [valueDecimal] The value of the attribute.
+  FhirDecimal? get valueDecimal;
+  @override
+
+  /// [valueDecimalElement] ("_valueDecimal") Extensions for valueDecimal
+  @JsonKey(name: '_valueDecimal')
+  Element? get valueDecimalElement;
+  @override
+
+  /// [valueBoolean] The value of the attribute.
+  FhirBoolean? get valueBoolean;
+  @override
+
+  /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
+  @JsonKey(name: '_valueBoolean')
+  Element? get valueBooleanElement;
+  @override
+
+  /// [valueUrl] The value of the attribute.
+  FhirUrl? get valueUrl;
+  @override
+
+  /// [valueUrlElement] ("_valueUrl") Extensions for valueUrl
+  @JsonKey(name: '_valueUrl')
+  Element? get valueUrlElement;
+  @override
+
+  /// [valueDateTime] The value of the attribute.
+  FhirDateTime? get valueDateTime;
+  @override
+
+  /// [valueDateTimeElement] ("_valueDateTime") Extensions for valueDateTime
+  @JsonKey(name: '_valueDateTime')
+  Element? get valueDateTimeElement;
+  @override
+
+  /// [valueQuantity] The value of the attribute.
+  Quantity? get valueQuantity;
+  @override
+
+  /// [valueRange] The value of the attribute.
+  Range? get valueRange;
+  @override
+
+  /// [valueRatio] The value of the attribute.
+  Ratio? get valueRatio;
+  @override
+
+  /// [valueAnnotation] The value of the attribute.
+  Annotation? get valueAnnotation;
+  @override
+
+  /// [valueAddress] The value of the attribute.
+  Address? get valueAddress;
+  @override
+
+  /// [valueDuration] The value of the attribute.
+  FhirDuration? get valueDuration;
+  @override
+
+  /// [valueCodeableConcept] The value of the attribute.
+  CodeableConcept? get valueCodeableConcept;
+  @override
+  @JsonKey(ignore: true)
+  _$$_InventoryItemCharacteristicCopyWith<_$_InventoryItemCharacteristic>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+InventoryItemInstance _$InventoryItemInstanceFromJson(
+    Map<String, dynamic> json) {
+  return _InventoryItemInstance.fromJson(json);
+}
+
+/// @nodoc
+mixin _$InventoryItemInstance {
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+
+  /// [identifier] The identifier for the physical instance, typically a serial number.
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+
+  /// [lotNumber] The lot or batch number of the item.
+  String? get lotNumber => throw _privateConstructorUsedError;
+
+  /// [lotNumberElement] ("_lotNumber") Extensions for lotNumber
+  @JsonKey(name: '_lotNumber')
+  Element? get lotNumberElement => throw _privateConstructorUsedError;
+
+  /// [expiry] The expiry date or date and time for the product.
+  FhirDateTime? get expiry => throw _privateConstructorUsedError;
+
+  /// [expiryElement] ("_expiry") Extensions for expiry
+  @JsonKey(name: '_expiry')
+  Element? get expiryElement => throw _privateConstructorUsedError;
+
+  /// [subject] The subject that the item is associated with.
+  Reference? get subject => throw _privateConstructorUsedError;
+
+  /// [location] The location that the item is associated with.
+  Reference? get location => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $InventoryItemInstanceCopyWith<InventoryItemInstance> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $InventoryItemInstanceCopyWith<$Res> {
+  factory $InventoryItemInstanceCopyWith(InventoryItemInstance value,
+          $Res Function(InventoryItemInstance) then) =
+      _$InventoryItemInstanceCopyWithImpl<$Res, InventoryItemInstance>;
+  @useResult
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      String? lotNumber,
+      @JsonKey(name: '_lotNumber') Element? lotNumberElement,
+      FhirDateTime? expiry,
+      @JsonKey(name: '_expiry') Element? expiryElement,
+      Reference? subject,
+      Reference? location});
+
+  $ElementCopyWith<$Res>? get lotNumberElement;
+  $ElementCopyWith<$Res>? get expiryElement;
+  $ReferenceCopyWith<$Res>? get subject;
+  $ReferenceCopyWith<$Res>? get location;
+}
+
+/// @nodoc
+class _$InventoryItemInstanceCopyWithImpl<$Res,
+        $Val extends InventoryItemInstance>
+    implements $InventoryItemInstanceCopyWith<$Res> {
+  _$InventoryItemInstanceCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? identifier = freezed,
+    Object? lotNumber = freezed,
+    Object? lotNumberElement = freezed,
+    Object? expiry = freezed,
+    Object? expiryElement = freezed,
+    Object? subject = freezed,
+    Object? location = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: freezed == extension_
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: freezed == modifierExtension
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      identifier: freezed == identifier
+          ? _value.identifier
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      lotNumber: freezed == lotNumber
+          ? _value.lotNumber
+          : lotNumber // ignore: cast_nullable_to_non_nullable
+              as String?,
+      lotNumberElement: freezed == lotNumberElement
+          ? _value.lotNumberElement
+          : lotNumberElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      expiry: freezed == expiry
+          ? _value.expiry
+          : expiry // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      expiryElement: freezed == expiryElement
+          ? _value.expiryElement
+          : expiryElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      subject: freezed == subject
+          ? _value.subject
+          : subject // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      location: freezed == location
+          ? _value.location
+          : location // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+    ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get lotNumberElement {
+    if (_value.lotNumberElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.lotNumberElement!, (value) {
+      return _then(_value.copyWith(lotNumberElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get expiryElement {
+    if (_value.expiryElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.expiryElement!, (value) {
+      return _then(_value.copyWith(expiryElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ReferenceCopyWith<$Res>? get subject {
+    if (_value.subject == null) {
+      return null;
+    }
+
+    return $ReferenceCopyWith<$Res>(_value.subject!, (value) {
+      return _then(_value.copyWith(subject: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ReferenceCopyWith<$Res>? get location {
+    if (_value.location == null) {
+      return null;
+    }
+
+    return $ReferenceCopyWith<$Res>(_value.location!, (value) {
+      return _then(_value.copyWith(location: value) as $Val);
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_InventoryItemInstanceCopyWith<$Res>
+    implements $InventoryItemInstanceCopyWith<$Res> {
+  factory _$$_InventoryItemInstanceCopyWith(_$_InventoryItemInstance value,
+          $Res Function(_$_InventoryItemInstance) then) =
+      __$$_InventoryItemInstanceCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      String? lotNumber,
+      @JsonKey(name: '_lotNumber') Element? lotNumberElement,
+      FhirDateTime? expiry,
+      @JsonKey(name: '_expiry') Element? expiryElement,
+      Reference? subject,
+      Reference? location});
+
+  @override
+  $ElementCopyWith<$Res>? get lotNumberElement;
+  @override
+  $ElementCopyWith<$Res>? get expiryElement;
+  @override
+  $ReferenceCopyWith<$Res>? get subject;
+  @override
+  $ReferenceCopyWith<$Res>? get location;
+}
+
+/// @nodoc
+class __$$_InventoryItemInstanceCopyWithImpl<$Res>
+    extends _$InventoryItemInstanceCopyWithImpl<$Res, _$_InventoryItemInstance>
+    implements _$$_InventoryItemInstanceCopyWith<$Res> {
+  __$$_InventoryItemInstanceCopyWithImpl(_$_InventoryItemInstance _value,
+      $Res Function(_$_InventoryItemInstance) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? identifier = freezed,
+    Object? lotNumber = freezed,
+    Object? lotNumberElement = freezed,
+    Object? expiry = freezed,
+    Object? expiryElement = freezed,
+    Object? subject = freezed,
+    Object? location = freezed,
+  }) {
+    return _then(_$_InventoryItemInstance(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: freezed == extension_
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: freezed == modifierExtension
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      identifier: freezed == identifier
+          ? _value._identifier
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      lotNumber: freezed == lotNumber
+          ? _value.lotNumber
+          : lotNumber // ignore: cast_nullable_to_non_nullable
+              as String?,
+      lotNumberElement: freezed == lotNumberElement
+          ? _value.lotNumberElement
+          : lotNumberElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      expiry: freezed == expiry
+          ? _value.expiry
+          : expiry // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      expiryElement: freezed == expiryElement
+          ? _value.expiryElement
+          : expiryElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      subject: freezed == subject
+          ? _value.subject
+          : subject // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      location: freezed == location
+          ? _value.location
+          : location // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_InventoryItemInstance extends _InventoryItemInstance {
+  _$_InventoryItemInstance(
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      this.lotNumber,
+      @JsonKey(name: '_lotNumber') this.lotNumberElement,
+      this.expiry,
+      @JsonKey(name: '_expiry') this.expiryElement,
+      this.subject,
+      this.location})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _identifier = identifier,
+        super._();
+
+  factory _$_InventoryItemInstance.fromJson(Map<String, dynamic> json) =>
+      _$$_InventoryItemInstanceFromJson(json);
+
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  @override
+  final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [identifier] The identifier for the physical instance, typically a serial number.
+  final List<Identifier>? _identifier;
+
+  /// [identifier] The identifier for the physical instance, typically a serial number.
+  @override
+  List<Identifier>? get identifier {
+    final value = _identifier;
+    if (value == null) return null;
+    if (_identifier is EqualUnmodifiableListView) return _identifier;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [lotNumber] The lot or batch number of the item.
+  @override
+  final String? lotNumber;
+
+  /// [lotNumberElement] ("_lotNumber") Extensions for lotNumber
+  @override
+  @JsonKey(name: '_lotNumber')
+  final Element? lotNumberElement;
+
+  /// [expiry] The expiry date or date and time for the product.
+  @override
+  final FhirDateTime? expiry;
+
+  /// [expiryElement] ("_expiry") Extensions for expiry
+  @override
+  @JsonKey(name: '_expiry')
+  final Element? expiryElement;
+
+  /// [subject] The subject that the item is associated with.
+  @override
+  final Reference? subject;
+
+  /// [location] The location that the item is associated with.
+  @override
+  final Reference? location;
+
+  @override
+  String toString() {
+    return 'InventoryItemInstance(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, lotNumber: $lotNumber, lotNumberElement: $lotNumberElement, expiry: $expiry, expiryElement: $expiryElement, subject: $subject, location: $location)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_InventoryItemInstance &&
+            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other._identifier, _identifier) &&
+            (identical(other.lotNumber, lotNumber) ||
+                other.lotNumber == lotNumber) &&
+            (identical(other.lotNumberElement, lotNumberElement) ||
+                other.lotNumberElement == lotNumberElement) &&
+            (identical(other.expiry, expiry) || other.expiry == expiry) &&
+            (identical(other.expiryElement, expiryElement) ||
+                other.expiryElement == expiryElement) &&
+            (identical(other.subject, subject) || other.subject == subject) &&
+            (identical(other.location, location) ||
+                other.location == location));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(_identifier),
+      lotNumber,
+      lotNumberElement,
+      expiry,
+      expiryElement,
+      subject,
+      location);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_InventoryItemInstanceCopyWith<_$_InventoryItemInstance> get copyWith =>
+      __$$_InventoryItemInstanceCopyWithImpl<_$_InventoryItemInstance>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_InventoryItemInstanceToJson(
+      this,
+    );
+  }
+}
+
+abstract class _InventoryItemInstance extends InventoryItemInstance {
+  factory _InventoryItemInstance(
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final String? lotNumber,
+      @JsonKey(name: '_lotNumber') final Element? lotNumberElement,
+      final FhirDateTime? expiry,
+      @JsonKey(name: '_expiry') final Element? expiryElement,
+      final Reference? subject,
+      final Reference? location}) = _$_InventoryItemInstance;
+  _InventoryItemInstance._() : super._();
+
+  factory _InventoryItemInstance.fromJson(Map<String, dynamic> json) =
+      _$_InventoryItemInstance.fromJson;
+
+  @override
+
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  String? get id;
+  @override
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_;
+  @override
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  List<FhirExtension>? get modifierExtension;
+  @override
+
+  /// [identifier] The identifier for the physical instance, typically a serial number.
+  List<Identifier>? get identifier;
+  @override
+
+  /// [lotNumber] The lot or batch number of the item.
+  String? get lotNumber;
+  @override
+
+  /// [lotNumberElement] ("_lotNumber") Extensions for lotNumber
+  @JsonKey(name: '_lotNumber')
+  Element? get lotNumberElement;
+  @override
+
+  /// [expiry] The expiry date or date and time for the product.
+  FhirDateTime? get expiry;
+  @override
+
+  /// [expiryElement] ("_expiry") Extensions for expiry
+  @JsonKey(name: '_expiry')
+  Element? get expiryElement;
+  @override
+
+  /// [subject] The subject that the item is associated with.
+  Reference? get subject;
+  @override
+
+  /// [location] The location that the item is associated with.
+  Reference? get location;
+  @override
+  @JsonKey(ignore: true)
+  _$$_InventoryItemInstanceCopyWith<_$_InventoryItemInstance> get copyWith =>
       throw _privateConstructorUsedError;
 }
 

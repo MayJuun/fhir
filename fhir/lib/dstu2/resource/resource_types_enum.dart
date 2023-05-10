@@ -1,194 +1,290 @@
 part of 'resource.dart';
 
+@HiveType(typeId: 1)
 enum Dstu2ResourceType {
+  @HiveField(0)
   @JsonValue('Account')
   Account,
+  @HiveField(1)
   @JsonValue('AllergyIntolerance')
   AllergyIntolerance,
+  @HiveField(2)
   @JsonValue('Appointment')
   Appointment,
+  @HiveField(3)
   @JsonValue('AppointmentResponse')
   AppointmentResponse,
+  @HiveField(4)
   @JsonValue('AuditEvent')
   AuditEvent,
+  @HiveField(5)
   @JsonValue('Basic')
   Basic,
+  @HiveField(6)
   @JsonValue('Binary')
   Binary,
+  @HiveField(7)
   @JsonValue('BodySite')
   BodySite,
+  @HiveField(8)
   @JsonValue('Bundle')
   Bundle,
+  @HiveField(9)
   @JsonValue('CapabilityStatement')
   CapabilityStatement,
+  @HiveField(10)
   @JsonValue('CarePlan')
   CarePlan,
+  @HiveField(11)
   @JsonValue('Claim')
   Claim,
+  @HiveField(12)
   @JsonValue('ClaimResponse')
   ClaimResponse,
+  @HiveField(13)
   @JsonValue('ClinicalImpression')
   ClinicalImpression,
+  @HiveField(14)
   @JsonValue('Communication')
   Communication,
+  @HiveField(15)
   @JsonValue('CommunicationRequest')
   CommunicationRequest,
+  @HiveField(16)
   @JsonValue('Composition')
   Composition,
+  @HiveField(17)
   @JsonValue('ConceptMap')
   ConceptMap,
+  @HiveField(18)
   @JsonValue('Condition')
   Condition,
+  @HiveField(19)
   @JsonValue('Conformance')
   Conformance,
+  @HiveField(20)
   @JsonValue('Contract')
   Contract,
+  @HiveField(21)
   @JsonValue('Coverage')
   Coverage,
+  @HiveField(22)
   @JsonValue('DataElement')
   DataElement,
+  @HiveField(23)
   @JsonValue('DetectedIssue')
   DetectedIssue,
+  @HiveField(24)
   @JsonValue('Device')
   Device,
+  @HiveField(25)
   @JsonValue('DeviceComponent')
   DeviceComponent,
+  @HiveField(26)
   @JsonValue('DeviceMetric')
   DeviceMetric,
+  @HiveField(27)
   @JsonValue('DeviceUseRequest')
   DeviceUseRequest,
+  @HiveField(28)
   @JsonValue('DeviceUseStatement')
   DeviceUseStatement,
+  @HiveField(29)
   @JsonValue('DiagnosticOrder')
   DiagnosticOrder,
+  @HiveField(30)
   @JsonValue('DiagnosticReport')
   DiagnosticReport,
+  @HiveField(31)
   @JsonValue('DocumentManifest')
   DocumentManifest,
+  @HiveField(32)
   @JsonValue('DocumentReference')
   DocumentReference,
+  @HiveField(33)
   @JsonValue('EligibilityRequest')
   EligibilityRequest,
+  @HiveField(34)
   @JsonValue('EligibilityResponse')
   EligibilityResponse,
+  @HiveField(35)
   @JsonValue('Encounter')
   Encounter,
+  @HiveField(36)
   @JsonValue('EnrollmentRequest')
   EnrollmentRequest,
+  @HiveField(37)
   @JsonValue('EnrollmentResponse')
   EnrollmentResponse,
+  @HiveField(38)
   @JsonValue('EpisodeOfCare')
   EpisodeOfCare,
+  @HiveField(39)
   @JsonValue('ExplanationOfBenefit')
   ExplanationOfBenefit,
+  @HiveField(40)
   @JsonValue('FamilyMemberHistory')
   FamilyMemberHistory,
+  @HiveField(41)
   @JsonValue('Flag')
   Flag,
+  @HiveField(42)
   @JsonValue('Goal')
   Goal,
+  @HiveField(43)
   @JsonValue('Group')
   Group,
+  @HiveField(44)
   @JsonValue('HealthcareService')
   HealthcareService,
+  @HiveField(45)
   @JsonValue('ImagingObjectSelection')
   ImagingObjectSelection,
+  @HiveField(46)
   @JsonValue('ImagingStudy')
   ImagingStudy,
+  @HiveField(47)
   @JsonValue('Immunization')
   Immunization,
+  @HiveField(48)
   @JsonValue('ImmunizationRecommendation')
   ImmunizationRecommendation,
+  @HiveField(49)
   @JsonValue('ImplementationGuide')
   ImplementationGuide,
+  @HiveField(50)
   @JsonValue('List')
   FhirList,
+  @HiveField(51)
   @JsonValue('Location')
   Location,
+  @HiveField(52)
   @JsonValue('Media')
   Media,
+  @HiveField(53)
   @JsonValue('Medication')
   Medication,
+  @HiveField(54)
   @JsonValue('MedicationAdministration')
   MedicationAdministration,
+  @HiveField(55)
   @JsonValue('MedicationDispense')
   MedicationDispense,
+  @HiveField(56)
   @JsonValue('MedicationOrder')
   MedicationOrder,
+  @HiveField(57)
   @JsonValue('MedicationStatement')
   MedicationStatement,
+  @HiveField(58)
   @JsonValue('MessageHeader')
   MessageHeader,
+  @HiveField(59)
   @JsonValue('NamingSystem')
   NamingSystem,
+  @HiveField(60)
   @JsonValue('NutritionOrder')
   NutritionOrder,
+  @HiveField(61)
   @JsonValue('Observation')
   Observation,
+  @HiveField(62)
   @JsonValue('OperationDefinition')
   OperationDefinition,
+  @HiveField(63)
   @JsonValue('OperationOutcome')
   OperationOutcome,
+  @HiveField(64)
   @JsonValue('Order')
   Order,
+  @HiveField(65)
   @JsonValue('OrderResponse')
   OrderResponse,
+  @HiveField(66)
   @JsonValue('Organization')
   Organization,
+  @HiveField(67)
   @JsonValue('Parameters')
   Parameters,
+  @HiveField(68)
   @JsonValue('Patient')
   Patient,
+  @HiveField(69)
   @JsonValue('PaymentNotice')
   PaymentNotice,
+  @HiveField(70)
   @JsonValue('PaymentReconciliation')
   PaymentReconciliation,
+  @HiveField(71)
   @JsonValue('Person')
   Person,
+  @HiveField(72)
   @JsonValue('Practitioner')
   Practitioner,
+  @HiveField(73)
   @JsonValue('Procedure')
   Procedure,
+  @HiveField(74)
   @JsonValue('ProcedureRequest')
   ProcedureRequest,
+  @HiveField(75)
   @JsonValue('ProcessRequest')
   ProcessRequest,
+  @HiveField(76)
   @JsonValue('ProcessResponse')
   ProcessResponse,
+  @HiveField(77)
   @JsonValue('Provenance')
   Provenance,
+  @HiveField(78)
   @JsonValue('Questionnaire')
   Questionnaire,
+  @HiveField(79)
   @JsonValue('QuestionnaireResponse')
   QuestionnaireResponse,
+  @HiveField(80)
   @JsonValue('ReferralRequest')
   ReferralRequest,
+  @HiveField(81)
   @JsonValue('RelatedPerson')
   RelatedPerson,
+  @HiveField(82)
   @JsonValue('RiskAssessment')
   RiskAssessment,
+  @HiveField(83)
   @JsonValue('Schedule')
   Schedule,
+  @HiveField(84)
   @JsonValue('SearchParameter')
   SearchParameter,
+  @HiveField(85)
   @JsonValue('Slot')
   Slot,
+  @HiveField(86)
   @JsonValue('Specimen')
   Specimen,
+  @HiveField(87)
   @JsonValue('StructureDefinition')
   StructureDefinition,
+  @HiveField(88)
   @JsonValue('Subscription')
   Subscription,
+  @HiveField(89)
   @JsonValue('Substance')
   Substance,
+  @HiveField(90)
   @JsonValue('SupplyDelivery')
   SupplyDelivery,
+  @HiveField(91)
   @JsonValue('SupplyRequest')
   SupplyRequest,
+  @HiveField(92)
   @JsonValue('TestScript')
   TestScript,
+  @HiveField(93)
   @JsonValue('ValueSet')
   ValueSet,
+  @HiveField(94)
   @JsonValue('VisionPrescription')
   VisionPrescription,
 }

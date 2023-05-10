@@ -216,6 +216,8 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.Basic: 'Basic',
   R5ResourceType.Binary: 'Binary',
   R5ResourceType.BiologicallyDerivedProduct: 'BiologicallyDerivedProduct',
+  R5ResourceType.BiologicallyDerivedProductDispense:
+      'BiologicallyDerivedProductDispense',
   R5ResourceType.BodyStructure: 'BodyStructure',
   R5ResourceType.Bundle: 'Bundle',
   R5ResourceType.CapabilityStatement: 'CapabilityStatement',
@@ -243,15 +245,16 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.CoverageEligibilityResponse: 'CoverageEligibilityResponse',
   R5ResourceType.DetectedIssue: 'DetectedIssue',
   R5ResourceType.Device: 'Device',
+  R5ResourceType.DeviceAssociation: 'DeviceAssociation',
   R5ResourceType.DeviceDefinition: 'DeviceDefinition',
   R5ResourceType.DeviceDispense: 'DeviceDispense',
   R5ResourceType.DeviceMetric: 'DeviceMetric',
   R5ResourceType.DeviceRequest: 'DeviceRequest',
   R5ResourceType.DeviceUsage: 'DeviceUsage',
   R5ResourceType.DiagnosticReport: 'DiagnosticReport',
-  R5ResourceType.DocumentManifest: 'DocumentManifest',
   R5ResourceType.DocumentReference: 'DocumentReference',
   R5ResourceType.Encounter: 'Encounter',
+  R5ResourceType.EncounterHistory: 'EncounterHistory',
   R5ResourceType.Endpoint: 'Endpoint',
   R5ResourceType.EnrollmentRequest: 'EnrollmentRequest',
   R5ResourceType.EnrollmentResponse: 'EnrollmentResponse',
@@ -279,6 +282,7 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.ImplementationGuide: 'ImplementationGuide',
   R5ResourceType.Ingredient: 'Ingredient',
   R5ResourceType.InsurancePlan: 'InsurancePlan',
+  R5ResourceType.InventoryItem: 'InventoryItem',
   R5ResourceType.InventoryReport: 'InventoryReport',
   R5ResourceType.Invoice: 'Invoice',
   R5ResourceType.Library: 'Library',
@@ -293,7 +297,7 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.MedicationDispense: 'MedicationDispense',
   R5ResourceType.MedicationKnowledge: 'MedicationKnowledge',
   R5ResourceType.MedicationRequest: 'MedicationRequest',
-  R5ResourceType.MedicationUsage: 'MedicationUsage',
+  R5ResourceType.MedicationStatement: 'MedicationStatement',
   R5ResourceType.MedicinalProductDefinition: 'MedicinalProductDefinition',
   R5ResourceType.MessageDefinition: 'MessageDefinition',
   R5ResourceType.MessageHeader: 'MessageHeader',
@@ -351,6 +355,7 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.SupplyRequest: 'SupplyRequest',
   R5ResourceType.Task: 'Task',
   R5ResourceType.TerminologyCapabilities: 'TerminologyCapabilities',
+  R5ResourceType.TestPlan: 'TestPlan',
   R5ResourceType.TestReport: 'TestReport',
   R5ResourceType.TestScript: 'TestScript',
   R5ResourceType.Transport: 'Transport',
@@ -577,6 +582,168 @@ Map<String, dynamic> _$$_EncounterLocationToJson(
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('form', instance.form?.toJson());
   writeNotNull('period', instance.period?.toJson());
+  return val;
+}
+
+_$_EncounterHistory _$$_EncounterHistoryFromJson(Map<String, dynamic> json) =>
+    _$_EncounterHistory(
+      resourceType: $enumDecodeNullable(
+              _$R5ResourceTypeEnumMap, json['resourceType'],
+              unknownValue: R5ResourceType.EncounterHistory) ??
+          R5ResourceType.EncounterHistory,
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
+      meta: json['meta'] == null
+          ? null
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
+      implicitRules: json['implicitRules'] == null
+          ? null
+          : FhirUri.fromJson(json['implicitRules']),
+      implicitRulesElement: json['_implicitRules'] == null
+          ? null
+          : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
+      language:
+          json['language'] == null ? null : FhirCode.fromJson(json['language']),
+      languageElement: json['_language'] == null
+          ? null
+          : Element.fromJson(json['_language'] as Map<String, dynamic>),
+      text: json['text'] == null
+          ? null
+          : Narrative.fromJson(json['text'] as Map<String, dynamic>),
+      contained: (json['contained'] as List<dynamic>?)
+          ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      encounter: json['encounter'] == null
+          ? null
+          : Reference.fromJson(json['encounter'] as Map<String, dynamic>),
+      identifier: (json['identifier'] as List<dynamic>?)
+          ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      status: json['status'] == null ? null : FhirCode.fromJson(json['status']),
+      statusElement: json['_status'] == null
+          ? null
+          : Element.fromJson(json['_status'] as Map<String, dynamic>),
+      class_: CodeableConcept.fromJson(json['class'] as Map<String, dynamic>),
+      type: (json['type'] as List<dynamic>?)
+          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      serviceType: (json['serviceType'] as List<dynamic>?)
+          ?.map((e) => CodeableReference.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      subject: json['subject'] == null
+          ? null
+          : Reference.fromJson(json['subject'] as Map<String, dynamic>),
+      subjectStatus: json['subjectStatus'] == null
+          ? null
+          : CodeableConcept.fromJson(
+              json['subjectStatus'] as Map<String, dynamic>),
+      actualPeriod: json['actualPeriod'] == null
+          ? null
+          : Period.fromJson(json['actualPeriod'] as Map<String, dynamic>),
+      plannedStartDate: json['plannedStartDate'] == null
+          ? null
+          : FhirDateTime.fromJson(json['plannedStartDate']),
+      plannedStartDateElement: json['_plannedStartDate'] == null
+          ? null
+          : Element.fromJson(json['_plannedStartDate'] as Map<String, dynamic>),
+      plannedEndDate: json['plannedEndDate'] == null
+          ? null
+          : FhirDateTime.fromJson(json['plannedEndDate']),
+      plannedEndDateElement: json['_plannedEndDate'] == null
+          ? null
+          : Element.fromJson(json['_plannedEndDate'] as Map<String, dynamic>),
+      length: json['length'] == null
+          ? null
+          : FhirDuration.fromJson(json['length'] as Map<String, dynamic>),
+      location: (json['location'] as List<dynamic>?)
+          ?.map((e) =>
+              EncounterHistoryLocation.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
+
+Map<String, dynamic> _$$_EncounterHistoryToJson(_$_EncounterHistory instance) {
+  final val = <String, dynamic>{
+    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('meta', instance.meta?.toJson());
+  writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
+  writeNotNull('language', instance.language?.toJson());
+  writeNotNull('_language', instance.languageElement?.toJson());
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull(
+      'contained', instance.contained?.map((e) => e.toJson()).toList());
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
+  writeNotNull('encounter', instance.encounter?.toJson());
+  writeNotNull(
+      'identifier', instance.identifier?.map((e) => e.toJson()).toList());
+  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('_status', instance.statusElement?.toJson());
+  val['class'] = instance.class_.toJson();
+  writeNotNull('type', instance.type?.map((e) => e.toJson()).toList());
+  writeNotNull(
+      'serviceType', instance.serviceType?.map((e) => e.toJson()).toList());
+  writeNotNull('subject', instance.subject?.toJson());
+  writeNotNull('subjectStatus', instance.subjectStatus?.toJson());
+  writeNotNull('actualPeriod', instance.actualPeriod?.toJson());
+  writeNotNull('plannedStartDate', instance.plannedStartDate?.toJson());
+  writeNotNull('_plannedStartDate', instance.plannedStartDateElement?.toJson());
+  writeNotNull('plannedEndDate', instance.plannedEndDate?.toJson());
+  writeNotNull('_plannedEndDate', instance.plannedEndDateElement?.toJson());
+  writeNotNull('length', instance.length?.toJson());
+  writeNotNull('location', instance.location?.map((e) => e.toJson()).toList());
+  return val;
+}
+
+_$_EncounterHistoryLocation _$$_EncounterHistoryLocationFromJson(
+        Map<String, dynamic> json) =>
+    _$_EncounterHistoryLocation(
+      id: json['id'] as String?,
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      location: Reference.fromJson(json['location'] as Map<String, dynamic>),
+      form: json['form'] == null
+          ? null
+          : CodeableConcept.fromJson(json['form'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$$_EncounterHistoryLocationToJson(
+    _$_EncounterHistoryLocation instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
+  val['location'] = instance.location.toJson();
+  writeNotNull('form', instance.form?.toJson());
   return val;
 }
 

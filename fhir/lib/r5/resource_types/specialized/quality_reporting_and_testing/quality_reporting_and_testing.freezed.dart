@@ -11883,6 +11883,4761 @@ abstract class _MeasureReportPopulation1 extends MeasureReportPopulation1 {
       get copyWith => throw _privateConstructorUsedError;
 }
 
+TestPlan _$TestPlanFromJson(Map<String, dynamic> json) {
+  return _TestPlan.fromJson(json);
+}
+
+/// @nodoc
+mixin _$TestPlan {
+  /// [resourceType] This is a TestPlan resource
+  @JsonKey(unknownEnumValue: R5ResourceType.TestPlan)
+  R5ResourceType get resourceType => throw _privateConstructorUsedError;
+
+  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.
+  FhirId? get id => throw _privateConstructorUsedError;
+
+  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
+  FhirMeta? get meta => throw _privateConstructorUsedError;
+
+  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+
+  /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
+  @JsonKey(name: '_implicitRules')
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+
+  /// [language] The base language in which the resource is written.
+  FhirCode? get language => throw _privateConstructorUsedError;
+
+  /// [languageElement] ("_language") Extensions for language
+  @JsonKey(name: '_language')
+  Element? get languageElement => throw _privateConstructorUsedError;
+
+  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
+  Narrative? get text => throw _privateConstructorUsedError;
+
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
+  List<Resource>? get contained => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+
+  /// [url] An absolute URI that is used to identify this test plan when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which an authoritative instance of this test plan is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the test plan is stored on different servers.
+  FhirUri? get url => throw _privateConstructorUsedError;
+
+  /// [urlElement] ("_url") Extensions for url
+  @JsonKey(name: '_url')
+  Element? get urlElement => throw _privateConstructorUsedError;
+
+  /// [identifier] A formal identifier that is used to identify this test plan when it is represented in other formats, or referenced in a specification, model, design or an instance.
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+
+  /// [version] The identifier that is used to identify this version of the test plan when it is referenced in a specification, model, design or instance.  This is an arbitrary value managed by the test plan author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence.
+  String? get version => throw _privateConstructorUsedError;
+
+  /// [versionElement] ("_version") Extensions for version
+  @JsonKey(name: '_version')
+  Element? get versionElement => throw _privateConstructorUsedError;
+
+  /// [versionAlgorithmString] Indicates the mechanism used to compare versions to determine which is more current.
+  String? get versionAlgorithmString => throw _privateConstructorUsedError;
+
+  /// [versionAlgorithmStringElement] ("_versionAlgorithmString") Extensions for versionAlgorithmString
+  @JsonKey(name: '_versionAlgorithmString')
+  Element? get versionAlgorithmStringElement =>
+      throw _privateConstructorUsedError;
+
+  /// [versionAlgorithmCoding] Indicates the mechanism used to compare versions to determine which is more current.
+  Coding? get versionAlgorithmCoding => throw _privateConstructorUsedError;
+
+  /// [name] A natural language name identifying the test plan. This name should be usable as an identifier for the module by machine processing applications such as code generation.
+  String? get name => throw _privateConstructorUsedError;
+
+  /// [nameElement] ("_name") Extensions for name
+  @JsonKey(name: '_name')
+  Element? get nameElement => throw _privateConstructorUsedError;
+
+  /// [title] A short, descriptive, user-friendly title for the test plan.
+  String? get title => throw _privateConstructorUsedError;
+
+  /// [titleElement] ("_title") Extensions for title
+  @JsonKey(name: '_title')
+  Element? get titleElement => throw _privateConstructorUsedError;
+
+  /// [status] The status of this test plan. Enables tracking the life-cycle of the content.
+  FhirCode? get status => throw _privateConstructorUsedError;
+
+  /// [statusElement] ("_status") Extensions for status
+  @JsonKey(name: '_status')
+  Element? get statusElement => throw _privateConstructorUsedError;
+
+  /// [experimental] A Boolean value to indicate that this test plan is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.
+  FhirBoolean? get experimental => throw _privateConstructorUsedError;
+
+  /// [experimentalElement] ("_experimental") Extensions for experimental
+  @JsonKey(name: '_experimental')
+  Element? get experimentalElement => throw _privateConstructorUsedError;
+
+  /// [date] The date (and optionally time) when the test plan was last significantly changed. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the test plan changes.
+  FhirDateTime? get date => throw _privateConstructorUsedError;
+
+  /// [dateElement] ("_date") Extensions for date
+  @JsonKey(name: '_date')
+  Element? get dateElement => throw _privateConstructorUsedError;
+
+  /// [publisher] The name of the organization or individual responsible for the release and ongoing maintenance of the test plan.
+  String? get publisher => throw _privateConstructorUsedError;
+
+  /// [publisherElement] ("_publisher") Extensions for publisher
+  @JsonKey(name: '_publisher')
+  Element? get publisherElement => throw _privateConstructorUsedError;
+
+  /// [contact] Contact details to assist a user in finding and communicating with the publisher.
+  List<ContactDetail>? get contact => throw _privateConstructorUsedError;
+
+  /// [description] A free text natural language description of the test plan from a consumer's perspective.
+  FhirMarkdown? get description => throw _privateConstructorUsedError;
+
+  /// [descriptionElement] ("_description") Extensions for description
+  @JsonKey(name: '_description')
+  Element? get descriptionElement => throw _privateConstructorUsedError;
+
+  /// [useContext] The content was developed with a focus and intent of supporting the contexts that are listed. These contexts may be general categories (gender, age, ...) or may be references to specific programs (insurance plans, studies, ...) and may be used to assist with indexing and searching for appropriate test plan instances.
+  List<UsageContext>? get useContext => throw _privateConstructorUsedError;
+
+  /// [jurisdiction] A legal or geographic region in which the test plan is intended to be used.
+  List<CodeableConcept>? get jurisdiction => throw _privateConstructorUsedError;
+
+  /// [purpose] Explanation of why this test plan is needed and why it has been designed as it has.
+  FhirMarkdown? get purpose => throw _privateConstructorUsedError;
+
+  /// [purposeElement] ("_purpose") Extensions for purpose
+  @JsonKey(name: '_purpose')
+  Element? get purposeElement => throw _privateConstructorUsedError;
+
+  /// [copyright] A copyright statement relating to the test plan and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the test plan. The short copyright declaration (e.g. (c) '2015+ xyz organization' should be sent in the copyrightLabel element.
+  FhirMarkdown? get copyright => throw _privateConstructorUsedError;
+
+  /// [copyrightElement] ("_copyright") Extensions for copyright
+  @JsonKey(name: '_copyright')
+  Element? get copyrightElement => throw _privateConstructorUsedError;
+
+  /// [copyrightLabel] A short string (<50 characters), suitable for inclusion in a page footer that identifies the copyright holder, effective period, and optionally whether rights are resctricted. (e.g. 'All rights reserved', 'Some rights reserved').
+  String? get copyrightLabel => throw _privateConstructorUsedError;
+
+  /// [copyrightLabelElement] ("_copyrightLabel") Extensions for copyrightLabel
+  @JsonKey(name: '_copyrightLabel')
+  Element? get copyrightLabelElement => throw _privateConstructorUsedError;
+
+  /// [category] The category of the Test Plan - can be acceptance, unit, performance, etc.
+  List<CodeableConcept>? get category => throw _privateConstructorUsedError;
+
+  /// [scope] What is being tested with this Test Plan - a conformance resource, or narrative criteria, or an external reference...
+  List<Reference>? get scope => throw _privateConstructorUsedError;
+
+  /// [testTools] A description of test tools to be used in the test plan.
+  FhirMarkdown? get testTools => throw _privateConstructorUsedError;
+
+  /// [testToolsElement] ("_testTools") Extensions for testTools
+  @JsonKey(name: '_testTools')
+  Element? get testToolsElement => throw _privateConstructorUsedError;
+
+  /// [dependency] The required criteria to execute the test plan - e.g. preconditions, previous tests...
+  List<TestPlanDependency>? get dependency =>
+      throw _privateConstructorUsedError;
+
+  /// [exitCriteria] The threshold or criteria for the test plan to be considered successfully executed - narrative.
+  FhirMarkdown? get exitCriteria => throw _privateConstructorUsedError;
+
+  /// [exitCriteriaElement] ("_exitCriteria") Extensions for exitCriteria
+  @JsonKey(name: '_exitCriteria')
+  Element? get exitCriteriaElement => throw _privateConstructorUsedError;
+
+  /// [testCase] The individual test cases that are part of this plan, when they they are made explicit.
+  List<TestPlanTestCase>? get testCase => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $TestPlanCopyWith<TestPlan> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $TestPlanCopyWith<$Res> {
+  factory $TestPlanCopyWith(TestPlan value, $Res Function(TestPlan) then) =
+      _$TestPlanCopyWithImpl<$Res, TestPlan>;
+  @useResult
+  $Res call(
+      {@JsonKey(unknownEnumValue: R5ResourceType.TestPlan)
+          R5ResourceType resourceType,
+      FhirId? id,
+      FhirMeta? meta,
+      FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element? implicitRulesElement,
+      FhirCode? language,
+      @JsonKey(name: '_language')
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      FhirUri? url,
+      @JsonKey(name: '_url')
+          Element? urlElement,
+      List<Identifier>? identifier,
+      String? version,
+      @JsonKey(name: '_version')
+          Element? versionElement,
+      String? versionAlgorithmString,
+      @JsonKey(name: '_versionAlgorithmString')
+          Element? versionAlgorithmStringElement,
+      Coding? versionAlgorithmCoding,
+      String? name,
+      @JsonKey(name: '_name')
+          Element? nameElement,
+      String? title,
+      @JsonKey(name: '_title')
+          Element? titleElement,
+      FhirCode? status,
+      @JsonKey(name: '_status')
+          Element? statusElement,
+      FhirBoolean? experimental,
+      @JsonKey(name: '_experimental')
+          Element? experimentalElement,
+      FhirDateTime? date,
+      @JsonKey(name: '_date')
+          Element? dateElement,
+      String? publisher,
+      @JsonKey(name: '_publisher')
+          Element? publisherElement,
+      List<ContactDetail>? contact,
+      FhirMarkdown? description,
+      @JsonKey(name: '_description')
+          Element? descriptionElement,
+      List<UsageContext>? useContext,
+      List<CodeableConcept>? jurisdiction,
+      FhirMarkdown? purpose,
+      @JsonKey(name: '_purpose')
+          Element? purposeElement,
+      FhirMarkdown? copyright,
+      @JsonKey(name: '_copyright')
+          Element? copyrightElement,
+      String? copyrightLabel,
+      @JsonKey(name: '_copyrightLabel')
+          Element? copyrightLabelElement,
+      List<CodeableConcept>? category,
+      List<Reference>? scope,
+      FhirMarkdown? testTools,
+      @JsonKey(name: '_testTools')
+          Element? testToolsElement,
+      List<TestPlanDependency>? dependency,
+      FhirMarkdown? exitCriteria,
+      @JsonKey(name: '_exitCriteria')
+          Element? exitCriteriaElement,
+      List<TestPlanTestCase>? testCase});
+
+  $FhirMetaCopyWith<$Res>? get meta;
+  $ElementCopyWith<$Res>? get implicitRulesElement;
+  $ElementCopyWith<$Res>? get languageElement;
+  $NarrativeCopyWith<$Res>? get text;
+  $ElementCopyWith<$Res>? get urlElement;
+  $ElementCopyWith<$Res>? get versionElement;
+  $ElementCopyWith<$Res>? get versionAlgorithmStringElement;
+  $CodingCopyWith<$Res>? get versionAlgorithmCoding;
+  $ElementCopyWith<$Res>? get nameElement;
+  $ElementCopyWith<$Res>? get titleElement;
+  $ElementCopyWith<$Res>? get statusElement;
+  $ElementCopyWith<$Res>? get experimentalElement;
+  $ElementCopyWith<$Res>? get dateElement;
+  $ElementCopyWith<$Res>? get publisherElement;
+  $ElementCopyWith<$Res>? get descriptionElement;
+  $ElementCopyWith<$Res>? get purposeElement;
+  $ElementCopyWith<$Res>? get copyrightElement;
+  $ElementCopyWith<$Res>? get copyrightLabelElement;
+  $ElementCopyWith<$Res>? get testToolsElement;
+  $ElementCopyWith<$Res>? get exitCriteriaElement;
+}
+
+/// @nodoc
+class _$TestPlanCopyWithImpl<$Res, $Val extends TestPlan>
+    implements $TestPlanCopyWith<$Res> {
+  _$TestPlanCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? resourceType = null,
+    Object? id = freezed,
+    Object? meta = freezed,
+    Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
+    Object? language = freezed,
+    Object? languageElement = freezed,
+    Object? text = freezed,
+    Object? contained = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? url = freezed,
+    Object? urlElement = freezed,
+    Object? identifier = freezed,
+    Object? version = freezed,
+    Object? versionElement = freezed,
+    Object? versionAlgorithmString = freezed,
+    Object? versionAlgorithmStringElement = freezed,
+    Object? versionAlgorithmCoding = freezed,
+    Object? name = freezed,
+    Object? nameElement = freezed,
+    Object? title = freezed,
+    Object? titleElement = freezed,
+    Object? status = freezed,
+    Object? statusElement = freezed,
+    Object? experimental = freezed,
+    Object? experimentalElement = freezed,
+    Object? date = freezed,
+    Object? dateElement = freezed,
+    Object? publisher = freezed,
+    Object? publisherElement = freezed,
+    Object? contact = freezed,
+    Object? description = freezed,
+    Object? descriptionElement = freezed,
+    Object? useContext = freezed,
+    Object? jurisdiction = freezed,
+    Object? purpose = freezed,
+    Object? purposeElement = freezed,
+    Object? copyright = freezed,
+    Object? copyrightElement = freezed,
+    Object? copyrightLabel = freezed,
+    Object? copyrightLabelElement = freezed,
+    Object? category = freezed,
+    Object? scope = freezed,
+    Object? testTools = freezed,
+    Object? testToolsElement = freezed,
+    Object? dependency = freezed,
+    Object? exitCriteria = freezed,
+    Object? exitCriteriaElement = freezed,
+    Object? testCase = freezed,
+  }) {
+    return _then(_value.copyWith(
+      resourceType: null == resourceType
+          ? _value.resourceType
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R5ResourceType,
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as FhirId?,
+      meta: freezed == meta
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as FhirMeta?,
+      implicitRules: freezed == implicitRules
+          ? _value.implicitRules
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      implicitRulesElement: freezed == implicitRulesElement
+          ? _value.implicitRulesElement
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: freezed == language
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as FhirCode?,
+      languageElement: freezed == languageElement
+          ? _value.languageElement
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: freezed == text
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
+      contained: freezed == contained
+          ? _value.contained
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
+      extension_: freezed == extension_
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: freezed == modifierExtension
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      url: freezed == url
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      urlElement: freezed == urlElement
+          ? _value.urlElement
+          : urlElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      identifier: freezed == identifier
+          ? _value.identifier
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      version: freezed == version
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as String?,
+      versionElement: freezed == versionElement
+          ? _value.versionElement
+          : versionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      versionAlgorithmString: freezed == versionAlgorithmString
+          ? _value.versionAlgorithmString
+          : versionAlgorithmString // ignore: cast_nullable_to_non_nullable
+              as String?,
+      versionAlgorithmStringElement: freezed == versionAlgorithmStringElement
+          ? _value.versionAlgorithmStringElement
+          : versionAlgorithmStringElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      versionAlgorithmCoding: freezed == versionAlgorithmCoding
+          ? _value.versionAlgorithmCoding
+          : versionAlgorithmCoding // ignore: cast_nullable_to_non_nullable
+              as Coding?,
+      name: freezed == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      nameElement: freezed == nameElement
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      title: freezed == title
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String?,
+      titleElement: freezed == titleElement
+          ? _value.titleElement
+          : titleElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      status: freezed == status
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as FhirCode?,
+      statusElement: freezed == statusElement
+          ? _value.statusElement
+          : statusElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      experimental: freezed == experimental
+          ? _value.experimental
+          : experimental // ignore: cast_nullable_to_non_nullable
+              as FhirBoolean?,
+      experimentalElement: freezed == experimentalElement
+          ? _value.experimentalElement
+          : experimentalElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      date: freezed == date
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      dateElement: freezed == dateElement
+          ? _value.dateElement
+          : dateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      publisher: freezed == publisher
+          ? _value.publisher
+          : publisher // ignore: cast_nullable_to_non_nullable
+              as String?,
+      publisherElement: freezed == publisherElement
+          ? _value.publisherElement
+          : publisherElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      contact: freezed == contact
+          ? _value.contact
+          : contact // ignore: cast_nullable_to_non_nullable
+              as List<ContactDetail>?,
+      description: freezed == description
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as FhirMarkdown?,
+      descriptionElement: freezed == descriptionElement
+          ? _value.descriptionElement
+          : descriptionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      useContext: freezed == useContext
+          ? _value.useContext
+          : useContext // ignore: cast_nullable_to_non_nullable
+              as List<UsageContext>?,
+      jurisdiction: freezed == jurisdiction
+          ? _value.jurisdiction
+          : jurisdiction // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      purpose: freezed == purpose
+          ? _value.purpose
+          : purpose // ignore: cast_nullable_to_non_nullable
+              as FhirMarkdown?,
+      purposeElement: freezed == purposeElement
+          ? _value.purposeElement
+          : purposeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      copyright: freezed == copyright
+          ? _value.copyright
+          : copyright // ignore: cast_nullable_to_non_nullable
+              as FhirMarkdown?,
+      copyrightElement: freezed == copyrightElement
+          ? _value.copyrightElement
+          : copyrightElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      copyrightLabel: freezed == copyrightLabel
+          ? _value.copyrightLabel
+          : copyrightLabel // ignore: cast_nullable_to_non_nullable
+              as String?,
+      copyrightLabelElement: freezed == copyrightLabelElement
+          ? _value.copyrightLabelElement
+          : copyrightLabelElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      category: freezed == category
+          ? _value.category
+          : category // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      scope: freezed == scope
+          ? _value.scope
+          : scope // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      testTools: freezed == testTools
+          ? _value.testTools
+          : testTools // ignore: cast_nullable_to_non_nullable
+              as FhirMarkdown?,
+      testToolsElement: freezed == testToolsElement
+          ? _value.testToolsElement
+          : testToolsElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      dependency: freezed == dependency
+          ? _value.dependency
+          : dependency // ignore: cast_nullable_to_non_nullable
+              as List<TestPlanDependency>?,
+      exitCriteria: freezed == exitCriteria
+          ? _value.exitCriteria
+          : exitCriteria // ignore: cast_nullable_to_non_nullable
+              as FhirMarkdown?,
+      exitCriteriaElement: freezed == exitCriteriaElement
+          ? _value.exitCriteriaElement
+          : exitCriteriaElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      testCase: freezed == testCase
+          ? _value.testCase
+          : testCase // ignore: cast_nullable_to_non_nullable
+              as List<TestPlanTestCase>?,
+    ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $FhirMetaCopyWith<$Res>? get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
+      return _then(_value.copyWith(meta: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get implicitRulesElement {
+    if (_value.implicitRulesElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement!, (value) {
+      return _then(_value.copyWith(implicitRulesElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get languageElement {
+    if (_value.languageElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.languageElement!, (value) {
+      return _then(_value.copyWith(languageElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $NarrativeCopyWith<$Res>? get text {
+    if (_value.text == null) {
+      return null;
+    }
+
+    return $NarrativeCopyWith<$Res>(_value.text!, (value) {
+      return _then(_value.copyWith(text: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get urlElement {
+    if (_value.urlElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.urlElement!, (value) {
+      return _then(_value.copyWith(urlElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get versionElement {
+    if (_value.versionElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.versionElement!, (value) {
+      return _then(_value.copyWith(versionElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get versionAlgorithmStringElement {
+    if (_value.versionAlgorithmStringElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.versionAlgorithmStringElement!,
+        (value) {
+      return _then(
+          _value.copyWith(versionAlgorithmStringElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CodingCopyWith<$Res>? get versionAlgorithmCoding {
+    if (_value.versionAlgorithmCoding == null) {
+      return null;
+    }
+
+    return $CodingCopyWith<$Res>(_value.versionAlgorithmCoding!, (value) {
+      return _then(_value.copyWith(versionAlgorithmCoding: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get nameElement {
+    if (_value.nameElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.nameElement!, (value) {
+      return _then(_value.copyWith(nameElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get titleElement {
+    if (_value.titleElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.titleElement!, (value) {
+      return _then(_value.copyWith(titleElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get statusElement {
+    if (_value.statusElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.statusElement!, (value) {
+      return _then(_value.copyWith(statusElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get experimentalElement {
+    if (_value.experimentalElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.experimentalElement!, (value) {
+      return _then(_value.copyWith(experimentalElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get dateElement {
+    if (_value.dateElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.dateElement!, (value) {
+      return _then(_value.copyWith(dateElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get publisherElement {
+    if (_value.publisherElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.publisherElement!, (value) {
+      return _then(_value.copyWith(publisherElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get descriptionElement {
+    if (_value.descriptionElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.descriptionElement!, (value) {
+      return _then(_value.copyWith(descriptionElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get purposeElement {
+    if (_value.purposeElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.purposeElement!, (value) {
+      return _then(_value.copyWith(purposeElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get copyrightElement {
+    if (_value.copyrightElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.copyrightElement!, (value) {
+      return _then(_value.copyWith(copyrightElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get copyrightLabelElement {
+    if (_value.copyrightLabelElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.copyrightLabelElement!, (value) {
+      return _then(_value.copyWith(copyrightLabelElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get testToolsElement {
+    if (_value.testToolsElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.testToolsElement!, (value) {
+      return _then(_value.copyWith(testToolsElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get exitCriteriaElement {
+    if (_value.exitCriteriaElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.exitCriteriaElement!, (value) {
+      return _then(_value.copyWith(exitCriteriaElement: value) as $Val);
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_TestPlanCopyWith<$Res> implements $TestPlanCopyWith<$Res> {
+  factory _$$_TestPlanCopyWith(
+          _$_TestPlan value, $Res Function(_$_TestPlan) then) =
+      __$$_TestPlanCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {@JsonKey(unknownEnumValue: R5ResourceType.TestPlan)
+          R5ResourceType resourceType,
+      FhirId? id,
+      FhirMeta? meta,
+      FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element? implicitRulesElement,
+      FhirCode? language,
+      @JsonKey(name: '_language')
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      FhirUri? url,
+      @JsonKey(name: '_url')
+          Element? urlElement,
+      List<Identifier>? identifier,
+      String? version,
+      @JsonKey(name: '_version')
+          Element? versionElement,
+      String? versionAlgorithmString,
+      @JsonKey(name: '_versionAlgorithmString')
+          Element? versionAlgorithmStringElement,
+      Coding? versionAlgorithmCoding,
+      String? name,
+      @JsonKey(name: '_name')
+          Element? nameElement,
+      String? title,
+      @JsonKey(name: '_title')
+          Element? titleElement,
+      FhirCode? status,
+      @JsonKey(name: '_status')
+          Element? statusElement,
+      FhirBoolean? experimental,
+      @JsonKey(name: '_experimental')
+          Element? experimentalElement,
+      FhirDateTime? date,
+      @JsonKey(name: '_date')
+          Element? dateElement,
+      String? publisher,
+      @JsonKey(name: '_publisher')
+          Element? publisherElement,
+      List<ContactDetail>? contact,
+      FhirMarkdown? description,
+      @JsonKey(name: '_description')
+          Element? descriptionElement,
+      List<UsageContext>? useContext,
+      List<CodeableConcept>? jurisdiction,
+      FhirMarkdown? purpose,
+      @JsonKey(name: '_purpose')
+          Element? purposeElement,
+      FhirMarkdown? copyright,
+      @JsonKey(name: '_copyright')
+          Element? copyrightElement,
+      String? copyrightLabel,
+      @JsonKey(name: '_copyrightLabel')
+          Element? copyrightLabelElement,
+      List<CodeableConcept>? category,
+      List<Reference>? scope,
+      FhirMarkdown? testTools,
+      @JsonKey(name: '_testTools')
+          Element? testToolsElement,
+      List<TestPlanDependency>? dependency,
+      FhirMarkdown? exitCriteria,
+      @JsonKey(name: '_exitCriteria')
+          Element? exitCriteriaElement,
+      List<TestPlanTestCase>? testCase});
+
+  @override
+  $FhirMetaCopyWith<$Res>? get meta;
+  @override
+  $ElementCopyWith<$Res>? get implicitRulesElement;
+  @override
+  $ElementCopyWith<$Res>? get languageElement;
+  @override
+  $NarrativeCopyWith<$Res>? get text;
+  @override
+  $ElementCopyWith<$Res>? get urlElement;
+  @override
+  $ElementCopyWith<$Res>? get versionElement;
+  @override
+  $ElementCopyWith<$Res>? get versionAlgorithmStringElement;
+  @override
+  $CodingCopyWith<$Res>? get versionAlgorithmCoding;
+  @override
+  $ElementCopyWith<$Res>? get nameElement;
+  @override
+  $ElementCopyWith<$Res>? get titleElement;
+  @override
+  $ElementCopyWith<$Res>? get statusElement;
+  @override
+  $ElementCopyWith<$Res>? get experimentalElement;
+  @override
+  $ElementCopyWith<$Res>? get dateElement;
+  @override
+  $ElementCopyWith<$Res>? get publisherElement;
+  @override
+  $ElementCopyWith<$Res>? get descriptionElement;
+  @override
+  $ElementCopyWith<$Res>? get purposeElement;
+  @override
+  $ElementCopyWith<$Res>? get copyrightElement;
+  @override
+  $ElementCopyWith<$Res>? get copyrightLabelElement;
+  @override
+  $ElementCopyWith<$Res>? get testToolsElement;
+  @override
+  $ElementCopyWith<$Res>? get exitCriteriaElement;
+}
+
+/// @nodoc
+class __$$_TestPlanCopyWithImpl<$Res>
+    extends _$TestPlanCopyWithImpl<$Res, _$_TestPlan>
+    implements _$$_TestPlanCopyWith<$Res> {
+  __$$_TestPlanCopyWithImpl(
+      _$_TestPlan _value, $Res Function(_$_TestPlan) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? resourceType = null,
+    Object? id = freezed,
+    Object? meta = freezed,
+    Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
+    Object? language = freezed,
+    Object? languageElement = freezed,
+    Object? text = freezed,
+    Object? contained = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? url = freezed,
+    Object? urlElement = freezed,
+    Object? identifier = freezed,
+    Object? version = freezed,
+    Object? versionElement = freezed,
+    Object? versionAlgorithmString = freezed,
+    Object? versionAlgorithmStringElement = freezed,
+    Object? versionAlgorithmCoding = freezed,
+    Object? name = freezed,
+    Object? nameElement = freezed,
+    Object? title = freezed,
+    Object? titleElement = freezed,
+    Object? status = freezed,
+    Object? statusElement = freezed,
+    Object? experimental = freezed,
+    Object? experimentalElement = freezed,
+    Object? date = freezed,
+    Object? dateElement = freezed,
+    Object? publisher = freezed,
+    Object? publisherElement = freezed,
+    Object? contact = freezed,
+    Object? description = freezed,
+    Object? descriptionElement = freezed,
+    Object? useContext = freezed,
+    Object? jurisdiction = freezed,
+    Object? purpose = freezed,
+    Object? purposeElement = freezed,
+    Object? copyright = freezed,
+    Object? copyrightElement = freezed,
+    Object? copyrightLabel = freezed,
+    Object? copyrightLabelElement = freezed,
+    Object? category = freezed,
+    Object? scope = freezed,
+    Object? testTools = freezed,
+    Object? testToolsElement = freezed,
+    Object? dependency = freezed,
+    Object? exitCriteria = freezed,
+    Object? exitCriteriaElement = freezed,
+    Object? testCase = freezed,
+  }) {
+    return _then(_$_TestPlan(
+      resourceType: null == resourceType
+          ? _value.resourceType
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R5ResourceType,
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as FhirId?,
+      meta: freezed == meta
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as FhirMeta?,
+      implicitRules: freezed == implicitRules
+          ? _value.implicitRules
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      implicitRulesElement: freezed == implicitRulesElement
+          ? _value.implicitRulesElement
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: freezed == language
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as FhirCode?,
+      languageElement: freezed == languageElement
+          ? _value.languageElement
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: freezed == text
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
+      contained: freezed == contained
+          ? _value._contained
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
+      extension_: freezed == extension_
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: freezed == modifierExtension
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      url: freezed == url
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      urlElement: freezed == urlElement
+          ? _value.urlElement
+          : urlElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      identifier: freezed == identifier
+          ? _value._identifier
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      version: freezed == version
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as String?,
+      versionElement: freezed == versionElement
+          ? _value.versionElement
+          : versionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      versionAlgorithmString: freezed == versionAlgorithmString
+          ? _value.versionAlgorithmString
+          : versionAlgorithmString // ignore: cast_nullable_to_non_nullable
+              as String?,
+      versionAlgorithmStringElement: freezed == versionAlgorithmStringElement
+          ? _value.versionAlgorithmStringElement
+          : versionAlgorithmStringElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      versionAlgorithmCoding: freezed == versionAlgorithmCoding
+          ? _value.versionAlgorithmCoding
+          : versionAlgorithmCoding // ignore: cast_nullable_to_non_nullable
+              as Coding?,
+      name: freezed == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      nameElement: freezed == nameElement
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      title: freezed == title
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String?,
+      titleElement: freezed == titleElement
+          ? _value.titleElement
+          : titleElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      status: freezed == status
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as FhirCode?,
+      statusElement: freezed == statusElement
+          ? _value.statusElement
+          : statusElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      experimental: freezed == experimental
+          ? _value.experimental
+          : experimental // ignore: cast_nullable_to_non_nullable
+              as FhirBoolean?,
+      experimentalElement: freezed == experimentalElement
+          ? _value.experimentalElement
+          : experimentalElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      date: freezed == date
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      dateElement: freezed == dateElement
+          ? _value.dateElement
+          : dateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      publisher: freezed == publisher
+          ? _value.publisher
+          : publisher // ignore: cast_nullable_to_non_nullable
+              as String?,
+      publisherElement: freezed == publisherElement
+          ? _value.publisherElement
+          : publisherElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      contact: freezed == contact
+          ? _value._contact
+          : contact // ignore: cast_nullable_to_non_nullable
+              as List<ContactDetail>?,
+      description: freezed == description
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as FhirMarkdown?,
+      descriptionElement: freezed == descriptionElement
+          ? _value.descriptionElement
+          : descriptionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      useContext: freezed == useContext
+          ? _value._useContext
+          : useContext // ignore: cast_nullable_to_non_nullable
+              as List<UsageContext>?,
+      jurisdiction: freezed == jurisdiction
+          ? _value._jurisdiction
+          : jurisdiction // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      purpose: freezed == purpose
+          ? _value.purpose
+          : purpose // ignore: cast_nullable_to_non_nullable
+              as FhirMarkdown?,
+      purposeElement: freezed == purposeElement
+          ? _value.purposeElement
+          : purposeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      copyright: freezed == copyright
+          ? _value.copyright
+          : copyright // ignore: cast_nullable_to_non_nullable
+              as FhirMarkdown?,
+      copyrightElement: freezed == copyrightElement
+          ? _value.copyrightElement
+          : copyrightElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      copyrightLabel: freezed == copyrightLabel
+          ? _value.copyrightLabel
+          : copyrightLabel // ignore: cast_nullable_to_non_nullable
+              as String?,
+      copyrightLabelElement: freezed == copyrightLabelElement
+          ? _value.copyrightLabelElement
+          : copyrightLabelElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      category: freezed == category
+          ? _value._category
+          : category // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      scope: freezed == scope
+          ? _value._scope
+          : scope // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      testTools: freezed == testTools
+          ? _value.testTools
+          : testTools // ignore: cast_nullable_to_non_nullable
+              as FhirMarkdown?,
+      testToolsElement: freezed == testToolsElement
+          ? _value.testToolsElement
+          : testToolsElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      dependency: freezed == dependency
+          ? _value._dependency
+          : dependency // ignore: cast_nullable_to_non_nullable
+              as List<TestPlanDependency>?,
+      exitCriteria: freezed == exitCriteria
+          ? _value.exitCriteria
+          : exitCriteria // ignore: cast_nullable_to_non_nullable
+              as FhirMarkdown?,
+      exitCriteriaElement: freezed == exitCriteriaElement
+          ? _value.exitCriteriaElement
+          : exitCriteriaElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      testCase: freezed == testCase
+          ? _value._testCase
+          : testCase // ignore: cast_nullable_to_non_nullable
+              as List<TestPlanTestCase>?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_TestPlan extends _TestPlan {
+  _$_TestPlan(
+      {@JsonKey(unknownEnumValue: R5ResourceType.TestPlan)
+          this.resourceType = R5ResourceType.TestPlan,
+      this.id,
+      this.meta,
+      this.implicitRules,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
+      this.language,
+      @JsonKey(name: '_language')
+          this.languageElement,
+      this.text,
+      final List<Resource>? contained,
+      @JsonKey(name: 'extension')
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      this.url,
+      @JsonKey(name: '_url')
+          this.urlElement,
+      final List<Identifier>? identifier,
+      this.version,
+      @JsonKey(name: '_version')
+          this.versionElement,
+      this.versionAlgorithmString,
+      @JsonKey(name: '_versionAlgorithmString')
+          this.versionAlgorithmStringElement,
+      this.versionAlgorithmCoding,
+      this.name,
+      @JsonKey(name: '_name')
+          this.nameElement,
+      this.title,
+      @JsonKey(name: '_title')
+          this.titleElement,
+      this.status,
+      @JsonKey(name: '_status')
+          this.statusElement,
+      this.experimental,
+      @JsonKey(name: '_experimental')
+          this.experimentalElement,
+      this.date,
+      @JsonKey(name: '_date')
+          this.dateElement,
+      this.publisher,
+      @JsonKey(name: '_publisher')
+          this.publisherElement,
+      final List<ContactDetail>? contact,
+      this.description,
+      @JsonKey(name: '_description')
+          this.descriptionElement,
+      final List<UsageContext>? useContext,
+      final List<CodeableConcept>? jurisdiction,
+      this.purpose,
+      @JsonKey(name: '_purpose')
+          this.purposeElement,
+      this.copyright,
+      @JsonKey(name: '_copyright')
+          this.copyrightElement,
+      this.copyrightLabel,
+      @JsonKey(name: '_copyrightLabel')
+          this.copyrightLabelElement,
+      final List<CodeableConcept>? category,
+      final List<Reference>? scope,
+      this.testTools,
+      @JsonKey(name: '_testTools')
+          this.testToolsElement,
+      final List<TestPlanDependency>? dependency,
+      this.exitCriteria,
+      @JsonKey(name: '_exitCriteria')
+          this.exitCriteriaElement,
+      final List<TestPlanTestCase>? testCase})
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _identifier = identifier,
+        _contact = contact,
+        _useContext = useContext,
+        _jurisdiction = jurisdiction,
+        _category = category,
+        _scope = scope,
+        _dependency = dependency,
+        _testCase = testCase,
+        super._();
+
+  factory _$_TestPlan.fromJson(Map<String, dynamic> json) =>
+      _$$_TestPlanFromJson(json);
+
+  /// [resourceType] This is a TestPlan resource
+  @override
+  @JsonKey(unknownEnumValue: R5ResourceType.TestPlan)
+  final R5ResourceType resourceType;
+
+  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.
+  @override
+  final FhirId? id;
+
+  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
+  @override
+  final FhirMeta? meta;
+
+  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.
+  @override
+  final FhirUri? implicitRules;
+
+  /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
+  @override
+  @JsonKey(name: '_implicitRules')
+  final Element? implicitRulesElement;
+
+  /// [language] The base language in which the resource is written.
+  @override
+  final FhirCode? language;
+
+  /// [languageElement] ("_language") Extensions for language
+  @override
+  @JsonKey(name: '_language')
+  final Element? languageElement;
+
+  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
+  @override
+  final Narrative? text;
+
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
+  final List<Resource>? _contained;
+
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
+  @override
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    if (_contained is EqualUnmodifiableListView) return _contained;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [url] An absolute URI that is used to identify this test plan when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which an authoritative instance of this test plan is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the test plan is stored on different servers.
+  @override
+  final FhirUri? url;
+
+  /// [urlElement] ("_url") Extensions for url
+  @override
+  @JsonKey(name: '_url')
+  final Element? urlElement;
+
+  /// [identifier] A formal identifier that is used to identify this test plan when it is represented in other formats, or referenced in a specification, model, design or an instance.
+  final List<Identifier>? _identifier;
+
+  /// [identifier] A formal identifier that is used to identify this test plan when it is represented in other formats, or referenced in a specification, model, design or an instance.
+  @override
+  List<Identifier>? get identifier {
+    final value = _identifier;
+    if (value == null) return null;
+    if (_identifier is EqualUnmodifiableListView) return _identifier;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [version] The identifier that is used to identify this version of the test plan when it is referenced in a specification, model, design or instance.  This is an arbitrary value managed by the test plan author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence.
+  @override
+  final String? version;
+
+  /// [versionElement] ("_version") Extensions for version
+  @override
+  @JsonKey(name: '_version')
+  final Element? versionElement;
+
+  /// [versionAlgorithmString] Indicates the mechanism used to compare versions to determine which is more current.
+  @override
+  final String? versionAlgorithmString;
+
+  /// [versionAlgorithmStringElement] ("_versionAlgorithmString") Extensions for versionAlgorithmString
+  @override
+  @JsonKey(name: '_versionAlgorithmString')
+  final Element? versionAlgorithmStringElement;
+
+  /// [versionAlgorithmCoding] Indicates the mechanism used to compare versions to determine which is more current.
+  @override
+  final Coding? versionAlgorithmCoding;
+
+  /// [name] A natural language name identifying the test plan. This name should be usable as an identifier for the module by machine processing applications such as code generation.
+  @override
+  final String? name;
+
+  /// [nameElement] ("_name") Extensions for name
+  @override
+  @JsonKey(name: '_name')
+  final Element? nameElement;
+
+  /// [title] A short, descriptive, user-friendly title for the test plan.
+  @override
+  final String? title;
+
+  /// [titleElement] ("_title") Extensions for title
+  @override
+  @JsonKey(name: '_title')
+  final Element? titleElement;
+
+  /// [status] The status of this test plan. Enables tracking the life-cycle of the content.
+  @override
+  final FhirCode? status;
+
+  /// [statusElement] ("_status") Extensions for status
+  @override
+  @JsonKey(name: '_status')
+  final Element? statusElement;
+
+  /// [experimental] A Boolean value to indicate that this test plan is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.
+  @override
+  final FhirBoolean? experimental;
+
+  /// [experimentalElement] ("_experimental") Extensions for experimental
+  @override
+  @JsonKey(name: '_experimental')
+  final Element? experimentalElement;
+
+  /// [date] The date (and optionally time) when the test plan was last significantly changed. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the test plan changes.
+  @override
+  final FhirDateTime? date;
+
+  /// [dateElement] ("_date") Extensions for date
+  @override
+  @JsonKey(name: '_date')
+  final Element? dateElement;
+
+  /// [publisher] The name of the organization or individual responsible for the release and ongoing maintenance of the test plan.
+  @override
+  final String? publisher;
+
+  /// [publisherElement] ("_publisher") Extensions for publisher
+  @override
+  @JsonKey(name: '_publisher')
+  final Element? publisherElement;
+
+  /// [contact] Contact details to assist a user in finding and communicating with the publisher.
+  final List<ContactDetail>? _contact;
+
+  /// [contact] Contact details to assist a user in finding and communicating with the publisher.
+  @override
+  List<ContactDetail>? get contact {
+    final value = _contact;
+    if (value == null) return null;
+    if (_contact is EqualUnmodifiableListView) return _contact;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [description] A free text natural language description of the test plan from a consumer's perspective.
+  @override
+  final FhirMarkdown? description;
+
+  /// [descriptionElement] ("_description") Extensions for description
+  @override
+  @JsonKey(name: '_description')
+  final Element? descriptionElement;
+
+  /// [useContext] The content was developed with a focus and intent of supporting the contexts that are listed. These contexts may be general categories (gender, age, ...) or may be references to specific programs (insurance plans, studies, ...) and may be used to assist with indexing and searching for appropriate test plan instances.
+  final List<UsageContext>? _useContext;
+
+  /// [useContext] The content was developed with a focus and intent of supporting the contexts that are listed. These contexts may be general categories (gender, age, ...) or may be references to specific programs (insurance plans, studies, ...) and may be used to assist with indexing and searching for appropriate test plan instances.
+  @override
+  List<UsageContext>? get useContext {
+    final value = _useContext;
+    if (value == null) return null;
+    if (_useContext is EqualUnmodifiableListView) return _useContext;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [jurisdiction] A legal or geographic region in which the test plan is intended to be used.
+  final List<CodeableConcept>? _jurisdiction;
+
+  /// [jurisdiction] A legal or geographic region in which the test plan is intended to be used.
+  @override
+  List<CodeableConcept>? get jurisdiction {
+    final value = _jurisdiction;
+    if (value == null) return null;
+    if (_jurisdiction is EqualUnmodifiableListView) return _jurisdiction;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [purpose] Explanation of why this test plan is needed and why it has been designed as it has.
+  @override
+  final FhirMarkdown? purpose;
+
+  /// [purposeElement] ("_purpose") Extensions for purpose
+  @override
+  @JsonKey(name: '_purpose')
+  final Element? purposeElement;
+
+  /// [copyright] A copyright statement relating to the test plan and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the test plan. The short copyright declaration (e.g. (c) '2015+ xyz organization' should be sent in the copyrightLabel element.
+  @override
+  final FhirMarkdown? copyright;
+
+  /// [copyrightElement] ("_copyright") Extensions for copyright
+  @override
+  @JsonKey(name: '_copyright')
+  final Element? copyrightElement;
+
+  /// [copyrightLabel] A short string (<50 characters), suitable for inclusion in a page footer that identifies the copyright holder, effective period, and optionally whether rights are resctricted. (e.g. 'All rights reserved', 'Some rights reserved').
+  @override
+  final String? copyrightLabel;
+
+  /// [copyrightLabelElement] ("_copyrightLabel") Extensions for copyrightLabel
+  @override
+  @JsonKey(name: '_copyrightLabel')
+  final Element? copyrightLabelElement;
+
+  /// [category] The category of the Test Plan - can be acceptance, unit, performance, etc.
+  final List<CodeableConcept>? _category;
+
+  /// [category] The category of the Test Plan - can be acceptance, unit, performance, etc.
+  @override
+  List<CodeableConcept>? get category {
+    final value = _category;
+    if (value == null) return null;
+    if (_category is EqualUnmodifiableListView) return _category;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [scope] What is being tested with this Test Plan - a conformance resource, or narrative criteria, or an external reference...
+  final List<Reference>? _scope;
+
+  /// [scope] What is being tested with this Test Plan - a conformance resource, or narrative criteria, or an external reference...
+  @override
+  List<Reference>? get scope {
+    final value = _scope;
+    if (value == null) return null;
+    if (_scope is EqualUnmodifiableListView) return _scope;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [testTools] A description of test tools to be used in the test plan.
+  @override
+  final FhirMarkdown? testTools;
+
+  /// [testToolsElement] ("_testTools") Extensions for testTools
+  @override
+  @JsonKey(name: '_testTools')
+  final Element? testToolsElement;
+
+  /// [dependency] The required criteria to execute the test plan - e.g. preconditions, previous tests...
+  final List<TestPlanDependency>? _dependency;
+
+  /// [dependency] The required criteria to execute the test plan - e.g. preconditions, previous tests...
+  @override
+  List<TestPlanDependency>? get dependency {
+    final value = _dependency;
+    if (value == null) return null;
+    if (_dependency is EqualUnmodifiableListView) return _dependency;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [exitCriteria] The threshold or criteria for the test plan to be considered successfully executed - narrative.
+  @override
+  final FhirMarkdown? exitCriteria;
+
+  /// [exitCriteriaElement] ("_exitCriteria") Extensions for exitCriteria
+  @override
+  @JsonKey(name: '_exitCriteria')
+  final Element? exitCriteriaElement;
+
+  /// [testCase] The individual test cases that are part of this plan, when they they are made explicit.
+  final List<TestPlanTestCase>? _testCase;
+
+  /// [testCase] The individual test cases that are part of this plan, when they they are made explicit.
+  @override
+  List<TestPlanTestCase>? get testCase {
+    final value = _testCase;
+    if (value == null) return null;
+    if (_testCase is EqualUnmodifiableListView) return _testCase;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  String toString() {
+    return 'TestPlan(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, versionAlgorithmString: $versionAlgorithmString, versionAlgorithmStringElement: $versionAlgorithmStringElement, versionAlgorithmCoding: $versionAlgorithmCoding, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, copyright: $copyright, copyrightElement: $copyrightElement, copyrightLabel: $copyrightLabel, copyrightLabelElement: $copyrightLabelElement, category: $category, scope: $scope, testTools: $testTools, testToolsElement: $testToolsElement, dependency: $dependency, exitCriteria: $exitCriteria, exitCriteriaElement: $exitCriteriaElement, testCase: $testCase)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_TestPlan &&
+            (identical(other.resourceType, resourceType) ||
+                other.resourceType == resourceType) &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.meta, meta) || other.meta == meta) &&
+            (identical(other.implicitRules, implicitRules) ||
+                other.implicitRules == implicitRules) &&
+            (identical(other.implicitRulesElement, implicitRulesElement) ||
+                other.implicitRulesElement == implicitRulesElement) &&
+            (identical(other.language, language) ||
+                other.language == language) &&
+            (identical(other.languageElement, languageElement) ||
+                other.languageElement == languageElement) &&
+            (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality()
+                .equals(other._contained, _contained) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            (identical(other.url, url) || other.url == url) &&
+            (identical(other.urlElement, urlElement) ||
+                other.urlElement == urlElement) &&
+            const DeepCollectionEquality()
+                .equals(other._identifier, _identifier) &&
+            (identical(other.version, version) || other.version == version) &&
+            (identical(other.versionElement, versionElement) ||
+                other.versionElement == versionElement) &&
+            (identical(other.versionAlgorithmString, versionAlgorithmString) ||
+                other.versionAlgorithmString == versionAlgorithmString) &&
+            (identical(other.versionAlgorithmStringElement, versionAlgorithmStringElement) ||
+                other.versionAlgorithmStringElement ==
+                    versionAlgorithmStringElement) &&
+            (identical(other.versionAlgorithmCoding, versionAlgorithmCoding) ||
+                other.versionAlgorithmCoding == versionAlgorithmCoding) &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.nameElement, nameElement) ||
+                other.nameElement == nameElement) &&
+            (identical(other.title, title) || other.title == title) &&
+            (identical(other.titleElement, titleElement) ||
+                other.titleElement == titleElement) &&
+            (identical(other.status, status) || other.status == status) &&
+            (identical(other.statusElement, statusElement) ||
+                other.statusElement == statusElement) &&
+            (identical(other.experimental, experimental) ||
+                other.experimental == experimental) &&
+            (identical(other.experimentalElement, experimentalElement) ||
+                other.experimentalElement == experimentalElement) &&
+            (identical(other.date, date) || other.date == date) &&
+            (identical(other.dateElement, dateElement) ||
+                other.dateElement == dateElement) &&
+            (identical(other.publisher, publisher) ||
+                other.publisher == publisher) &&
+            (identical(other.publisherElement, publisherElement) ||
+                other.publisherElement == publisherElement) &&
+            const DeepCollectionEquality().equals(other._contact, _contact) &&
+            (identical(other.description, description) ||
+                other.description == description) &&
+            (identical(other.descriptionElement, descriptionElement) ||
+                other.descriptionElement == descriptionElement) &&
+            const DeepCollectionEquality()
+                .equals(other._useContext, _useContext) &&
+            const DeepCollectionEquality()
+                .equals(other._jurisdiction, _jurisdiction) &&
+            (identical(other.purpose, purpose) || other.purpose == purpose) &&
+            (identical(other.purposeElement, purposeElement) ||
+                other.purposeElement == purposeElement) &&
+            (identical(other.copyright, copyright) ||
+                other.copyright == copyright) &&
+            (identical(other.copyrightElement, copyrightElement) ||
+                other.copyrightElement == copyrightElement) &&
+            (identical(other.copyrightLabel, copyrightLabel) ||
+                other.copyrightLabel == copyrightLabel) &&
+            (identical(other.copyrightLabelElement, copyrightLabelElement) ||
+                other.copyrightLabelElement == copyrightLabelElement) &&
+            const DeepCollectionEquality().equals(other._category, _category) &&
+            const DeepCollectionEquality().equals(other._scope, _scope) &&
+            (identical(other.testTools, testTools) ||
+                other.testTools == testTools) &&
+            (identical(other.testToolsElement, testToolsElement) ||
+                other.testToolsElement == testToolsElement) &&
+            const DeepCollectionEquality()
+                .equals(other._dependency, _dependency) &&
+            (identical(other.exitCriteria, exitCriteria) ||
+                other.exitCriteria == exitCriteria) &&
+            (identical(other.exitCriteriaElement, exitCriteriaElement) ||
+                other.exitCriteriaElement == exitCriteriaElement) &&
+            const DeepCollectionEquality().equals(other._testCase, _testCase));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        resourceType,
+        id,
+        meta,
+        implicitRules,
+        implicitRulesElement,
+        language,
+        languageElement,
+        text,
+        const DeepCollectionEquality().hash(_contained),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
+        url,
+        urlElement,
+        const DeepCollectionEquality().hash(_identifier),
+        version,
+        versionElement,
+        versionAlgorithmString,
+        versionAlgorithmStringElement,
+        versionAlgorithmCoding,
+        name,
+        nameElement,
+        title,
+        titleElement,
+        status,
+        statusElement,
+        experimental,
+        experimentalElement,
+        date,
+        dateElement,
+        publisher,
+        publisherElement,
+        const DeepCollectionEquality().hash(_contact),
+        description,
+        descriptionElement,
+        const DeepCollectionEquality().hash(_useContext),
+        const DeepCollectionEquality().hash(_jurisdiction),
+        purpose,
+        purposeElement,
+        copyright,
+        copyrightElement,
+        copyrightLabel,
+        copyrightLabelElement,
+        const DeepCollectionEquality().hash(_category),
+        const DeepCollectionEquality().hash(_scope),
+        testTools,
+        testToolsElement,
+        const DeepCollectionEquality().hash(_dependency),
+        exitCriteria,
+        exitCriteriaElement,
+        const DeepCollectionEquality().hash(_testCase)
+      ]);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_TestPlanCopyWith<_$_TestPlan> get copyWith =>
+      __$$_TestPlanCopyWithImpl<_$_TestPlan>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_TestPlanToJson(
+      this,
+    );
+  }
+}
+
+abstract class _TestPlan extends TestPlan {
+  factory _TestPlan(
+      {@JsonKey(unknownEnumValue: R5ResourceType.TestPlan)
+          final R5ResourceType resourceType,
+      final FhirId? id,
+      final FhirMeta? meta,
+      final FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules')
+          final Element? implicitRulesElement,
+      final FhirCode? language,
+      @JsonKey(name: '_language')
+          final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
+      @JsonKey(name: 'extension')
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final FhirUri? url,
+      @JsonKey(name: '_url')
+          final Element? urlElement,
+      final List<Identifier>? identifier,
+      final String? version,
+      @JsonKey(name: '_version')
+          final Element? versionElement,
+      final String? versionAlgorithmString,
+      @JsonKey(name: '_versionAlgorithmString')
+          final Element? versionAlgorithmStringElement,
+      final Coding? versionAlgorithmCoding,
+      final String? name,
+      @JsonKey(name: '_name')
+          final Element? nameElement,
+      final String? title,
+      @JsonKey(name: '_title')
+          final Element? titleElement,
+      final FhirCode? status,
+      @JsonKey(name: '_status')
+          final Element? statusElement,
+      final FhirBoolean? experimental,
+      @JsonKey(name: '_experimental')
+          final Element? experimentalElement,
+      final FhirDateTime? date,
+      @JsonKey(name: '_date')
+          final Element? dateElement,
+      final String? publisher,
+      @JsonKey(name: '_publisher')
+          final Element? publisherElement,
+      final List<ContactDetail>? contact,
+      final FhirMarkdown? description,
+      @JsonKey(name: '_description')
+          final Element? descriptionElement,
+      final List<UsageContext>? useContext,
+      final List<CodeableConcept>? jurisdiction,
+      final FhirMarkdown? purpose,
+      @JsonKey(name: '_purpose')
+          final Element? purposeElement,
+      final FhirMarkdown? copyright,
+      @JsonKey(name: '_copyright')
+          final Element? copyrightElement,
+      final String? copyrightLabel,
+      @JsonKey(name: '_copyrightLabel')
+          final Element? copyrightLabelElement,
+      final List<CodeableConcept>? category,
+      final List<Reference>? scope,
+      final FhirMarkdown? testTools,
+      @JsonKey(name: '_testTools')
+          final Element? testToolsElement,
+      final List<TestPlanDependency>? dependency,
+      final FhirMarkdown? exitCriteria,
+      @JsonKey(name: '_exitCriteria')
+          final Element? exitCriteriaElement,
+      final List<TestPlanTestCase>? testCase}) = _$_TestPlan;
+  _TestPlan._() : super._();
+
+  factory _TestPlan.fromJson(Map<String, dynamic> json) = _$_TestPlan.fromJson;
+
+  @override
+
+  /// [resourceType] This is a TestPlan resource
+  @JsonKey(unknownEnumValue: R5ResourceType.TestPlan)
+  R5ResourceType get resourceType;
+  @override
+
+  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.
+  FhirId? get id;
+  @override
+
+  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
+  FhirMeta? get meta;
+  @override
+
+  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.
+  FhirUri? get implicitRules;
+  @override
+
+  /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
+  @JsonKey(name: '_implicitRules')
+  Element? get implicitRulesElement;
+  @override
+
+  /// [language] The base language in which the resource is written.
+  FhirCode? get language;
+  @override
+
+  /// [languageElement] ("_language") Extensions for language
+  @JsonKey(name: '_language')
+  Element? get languageElement;
+  @override
+
+  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
+  Narrative? get text;
+  @override
+
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
+  List<Resource>? get contained;
+  @override
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_;
+  @override
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  List<FhirExtension>? get modifierExtension;
+  @override
+
+  /// [url] An absolute URI that is used to identify this test plan when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which an authoritative instance of this test plan is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the test plan is stored on different servers.
+  FhirUri? get url;
+  @override
+
+  /// [urlElement] ("_url") Extensions for url
+  @JsonKey(name: '_url')
+  Element? get urlElement;
+  @override
+
+  /// [identifier] A formal identifier that is used to identify this test plan when it is represented in other formats, or referenced in a specification, model, design or an instance.
+  List<Identifier>? get identifier;
+  @override
+
+  /// [version] The identifier that is used to identify this version of the test plan when it is referenced in a specification, model, design or instance.  This is an arbitrary value managed by the test plan author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence.
+  String? get version;
+  @override
+
+  /// [versionElement] ("_version") Extensions for version
+  @JsonKey(name: '_version')
+  Element? get versionElement;
+  @override
+
+  /// [versionAlgorithmString] Indicates the mechanism used to compare versions to determine which is more current.
+  String? get versionAlgorithmString;
+  @override
+
+  /// [versionAlgorithmStringElement] ("_versionAlgorithmString") Extensions for versionAlgorithmString
+  @JsonKey(name: '_versionAlgorithmString')
+  Element? get versionAlgorithmStringElement;
+  @override
+
+  /// [versionAlgorithmCoding] Indicates the mechanism used to compare versions to determine which is more current.
+  Coding? get versionAlgorithmCoding;
+  @override
+
+  /// [name] A natural language name identifying the test plan. This name should be usable as an identifier for the module by machine processing applications such as code generation.
+  String? get name;
+  @override
+
+  /// [nameElement] ("_name") Extensions for name
+  @JsonKey(name: '_name')
+  Element? get nameElement;
+  @override
+
+  /// [title] A short, descriptive, user-friendly title for the test plan.
+  String? get title;
+  @override
+
+  /// [titleElement] ("_title") Extensions for title
+  @JsonKey(name: '_title')
+  Element? get titleElement;
+  @override
+
+  /// [status] The status of this test plan. Enables tracking the life-cycle of the content.
+  FhirCode? get status;
+  @override
+
+  /// [statusElement] ("_status") Extensions for status
+  @JsonKey(name: '_status')
+  Element? get statusElement;
+  @override
+
+  /// [experimental] A Boolean value to indicate that this test plan is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.
+  FhirBoolean? get experimental;
+  @override
+
+  /// [experimentalElement] ("_experimental") Extensions for experimental
+  @JsonKey(name: '_experimental')
+  Element? get experimentalElement;
+  @override
+
+  /// [date] The date (and optionally time) when the test plan was last significantly changed. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the test plan changes.
+  FhirDateTime? get date;
+  @override
+
+  /// [dateElement] ("_date") Extensions for date
+  @JsonKey(name: '_date')
+  Element? get dateElement;
+  @override
+
+  /// [publisher] The name of the organization or individual responsible for the release and ongoing maintenance of the test plan.
+  String? get publisher;
+  @override
+
+  /// [publisherElement] ("_publisher") Extensions for publisher
+  @JsonKey(name: '_publisher')
+  Element? get publisherElement;
+  @override
+
+  /// [contact] Contact details to assist a user in finding and communicating with the publisher.
+  List<ContactDetail>? get contact;
+  @override
+
+  /// [description] A free text natural language description of the test plan from a consumer's perspective.
+  FhirMarkdown? get description;
+  @override
+
+  /// [descriptionElement] ("_description") Extensions for description
+  @JsonKey(name: '_description')
+  Element? get descriptionElement;
+  @override
+
+  /// [useContext] The content was developed with a focus and intent of supporting the contexts that are listed. These contexts may be general categories (gender, age, ...) or may be references to specific programs (insurance plans, studies, ...) and may be used to assist with indexing and searching for appropriate test plan instances.
+  List<UsageContext>? get useContext;
+  @override
+
+  /// [jurisdiction] A legal or geographic region in which the test plan is intended to be used.
+  List<CodeableConcept>? get jurisdiction;
+  @override
+
+  /// [purpose] Explanation of why this test plan is needed and why it has been designed as it has.
+  FhirMarkdown? get purpose;
+  @override
+
+  /// [purposeElement] ("_purpose") Extensions for purpose
+  @JsonKey(name: '_purpose')
+  Element? get purposeElement;
+  @override
+
+  /// [copyright] A copyright statement relating to the test plan and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the test plan. The short copyright declaration (e.g. (c) '2015+ xyz organization' should be sent in the copyrightLabel element.
+  FhirMarkdown? get copyright;
+  @override
+
+  /// [copyrightElement] ("_copyright") Extensions for copyright
+  @JsonKey(name: '_copyright')
+  Element? get copyrightElement;
+  @override
+
+  /// [copyrightLabel] A short string (<50 characters), suitable for inclusion in a page footer that identifies the copyright holder, effective period, and optionally whether rights are resctricted. (e.g. 'All rights reserved', 'Some rights reserved').
+  String? get copyrightLabel;
+  @override
+
+  /// [copyrightLabelElement] ("_copyrightLabel") Extensions for copyrightLabel
+  @JsonKey(name: '_copyrightLabel')
+  Element? get copyrightLabelElement;
+  @override
+
+  /// [category] The category of the Test Plan - can be acceptance, unit, performance, etc.
+  List<CodeableConcept>? get category;
+  @override
+
+  /// [scope] What is being tested with this Test Plan - a conformance resource, or narrative criteria, or an external reference...
+  List<Reference>? get scope;
+  @override
+
+  /// [testTools] A description of test tools to be used in the test plan.
+  FhirMarkdown? get testTools;
+  @override
+
+  /// [testToolsElement] ("_testTools") Extensions for testTools
+  @JsonKey(name: '_testTools')
+  Element? get testToolsElement;
+  @override
+
+  /// [dependency] The required criteria to execute the test plan - e.g. preconditions, previous tests...
+  List<TestPlanDependency>? get dependency;
+  @override
+
+  /// [exitCriteria] The threshold or criteria for the test plan to be considered successfully executed - narrative.
+  FhirMarkdown? get exitCriteria;
+  @override
+
+  /// [exitCriteriaElement] ("_exitCriteria") Extensions for exitCriteria
+  @JsonKey(name: '_exitCriteria')
+  Element? get exitCriteriaElement;
+  @override
+
+  /// [testCase] The individual test cases that are part of this plan, when they they are made explicit.
+  List<TestPlanTestCase>? get testCase;
+  @override
+  @JsonKey(ignore: true)
+  _$$_TestPlanCopyWith<_$_TestPlan> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+TestPlanDependency _$TestPlanDependencyFromJson(Map<String, dynamic> json) {
+  return _TestPlanDependency.fromJson(json);
+}
+
+/// @nodoc
+mixin _$TestPlanDependency {
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+
+  /// [description] A textual description of the criterium - what is needed for the dependency to be considered met.
+  FhirMarkdown? get description => throw _privateConstructorUsedError;
+
+  /// [descriptionElement] ("_description") Extensions for description
+  @JsonKey(name: '_description')
+  Element? get descriptionElement => throw _privateConstructorUsedError;
+
+  /// [predecessor] Predecessor test plans - those that are expected to be successfully performed as a dependency for the execution of this test plan.
+  Reference? get predecessor => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $TestPlanDependencyCopyWith<TestPlanDependency> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $TestPlanDependencyCopyWith<$Res> {
+  factory $TestPlanDependencyCopyWith(
+          TestPlanDependency value, $Res Function(TestPlanDependency) then) =
+      _$TestPlanDependencyCopyWithImpl<$Res, TestPlanDependency>;
+  @useResult
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      FhirMarkdown? description,
+      @JsonKey(name: '_description') Element? descriptionElement,
+      Reference? predecessor});
+
+  $ElementCopyWith<$Res>? get descriptionElement;
+  $ReferenceCopyWith<$Res>? get predecessor;
+}
+
+/// @nodoc
+class _$TestPlanDependencyCopyWithImpl<$Res, $Val extends TestPlanDependency>
+    implements $TestPlanDependencyCopyWith<$Res> {
+  _$TestPlanDependencyCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? description = freezed,
+    Object? descriptionElement = freezed,
+    Object? predecessor = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: freezed == extension_
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: freezed == modifierExtension
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      description: freezed == description
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as FhirMarkdown?,
+      descriptionElement: freezed == descriptionElement
+          ? _value.descriptionElement
+          : descriptionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      predecessor: freezed == predecessor
+          ? _value.predecessor
+          : predecessor // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+    ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get descriptionElement {
+    if (_value.descriptionElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.descriptionElement!, (value) {
+      return _then(_value.copyWith(descriptionElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ReferenceCopyWith<$Res>? get predecessor {
+    if (_value.predecessor == null) {
+      return null;
+    }
+
+    return $ReferenceCopyWith<$Res>(_value.predecessor!, (value) {
+      return _then(_value.copyWith(predecessor: value) as $Val);
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_TestPlanDependencyCopyWith<$Res>
+    implements $TestPlanDependencyCopyWith<$Res> {
+  factory _$$_TestPlanDependencyCopyWith(_$_TestPlanDependency value,
+          $Res Function(_$_TestPlanDependency) then) =
+      __$$_TestPlanDependencyCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      FhirMarkdown? description,
+      @JsonKey(name: '_description') Element? descriptionElement,
+      Reference? predecessor});
+
+  @override
+  $ElementCopyWith<$Res>? get descriptionElement;
+  @override
+  $ReferenceCopyWith<$Res>? get predecessor;
+}
+
+/// @nodoc
+class __$$_TestPlanDependencyCopyWithImpl<$Res>
+    extends _$TestPlanDependencyCopyWithImpl<$Res, _$_TestPlanDependency>
+    implements _$$_TestPlanDependencyCopyWith<$Res> {
+  __$$_TestPlanDependencyCopyWithImpl(
+      _$_TestPlanDependency _value, $Res Function(_$_TestPlanDependency) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? description = freezed,
+    Object? descriptionElement = freezed,
+    Object? predecessor = freezed,
+  }) {
+    return _then(_$_TestPlanDependency(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: freezed == extension_
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: freezed == modifierExtension
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      description: freezed == description
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as FhirMarkdown?,
+      descriptionElement: freezed == descriptionElement
+          ? _value.descriptionElement
+          : descriptionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      predecessor: freezed == predecessor
+          ? _value.predecessor
+          : predecessor // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_TestPlanDependency extends _TestPlanDependency {
+  _$_TestPlanDependency(
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      this.description,
+      @JsonKey(name: '_description') this.descriptionElement,
+      this.predecessor})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
+
+  factory _$_TestPlanDependency.fromJson(Map<String, dynamic> json) =>
+      _$$_TestPlanDependencyFromJson(json);
+
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  @override
+  final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [description] A textual description of the criterium - what is needed for the dependency to be considered met.
+  @override
+  final FhirMarkdown? description;
+
+  /// [descriptionElement] ("_description") Extensions for description
+  @override
+  @JsonKey(name: '_description')
+  final Element? descriptionElement;
+
+  /// [predecessor] Predecessor test plans - those that are expected to be successfully performed as a dependency for the execution of this test plan.
+  @override
+  final Reference? predecessor;
+
+  @override
+  String toString() {
+    return 'TestPlanDependency(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, description: $description, descriptionElement: $descriptionElement, predecessor: $predecessor)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_TestPlanDependency &&
+            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            (identical(other.description, description) ||
+                other.description == description) &&
+            (identical(other.descriptionElement, descriptionElement) ||
+                other.descriptionElement == descriptionElement) &&
+            (identical(other.predecessor, predecessor) ||
+                other.predecessor == predecessor));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      description,
+      descriptionElement,
+      predecessor);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_TestPlanDependencyCopyWith<_$_TestPlanDependency> get copyWith =>
+      __$$_TestPlanDependencyCopyWithImpl<_$_TestPlanDependency>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_TestPlanDependencyToJson(
+      this,
+    );
+  }
+}
+
+abstract class _TestPlanDependency extends TestPlanDependency {
+  factory _TestPlanDependency(
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final FhirMarkdown? description,
+      @JsonKey(name: '_description') final Element? descriptionElement,
+      final Reference? predecessor}) = _$_TestPlanDependency;
+  _TestPlanDependency._() : super._();
+
+  factory _TestPlanDependency.fromJson(Map<String, dynamic> json) =
+      _$_TestPlanDependency.fromJson;
+
+  @override
+
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  String? get id;
+  @override
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_;
+  @override
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  List<FhirExtension>? get modifierExtension;
+  @override
+
+  /// [description] A textual description of the criterium - what is needed for the dependency to be considered met.
+  FhirMarkdown? get description;
+  @override
+
+  /// [descriptionElement] ("_description") Extensions for description
+  @JsonKey(name: '_description')
+  Element? get descriptionElement;
+  @override
+
+  /// [predecessor] Predecessor test plans - those that are expected to be successfully performed as a dependency for the execution of this test plan.
+  Reference? get predecessor;
+  @override
+  @JsonKey(ignore: true)
+  _$$_TestPlanDependencyCopyWith<_$_TestPlanDependency> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+TestPlanTestCase _$TestPlanTestCaseFromJson(Map<String, dynamic> json) {
+  return _TestPlanTestCase.fromJson(json);
+}
+
+/// @nodoc
+mixin _$TestPlanTestCase {
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+
+  /// [sequence] Sequence of test case - an ordinal number that indicates the order for the present test case in the test plan.
+  FhirInteger? get sequence => throw _privateConstructorUsedError;
+
+  /// [sequenceElement] ("_sequence") Extensions for sequence
+  @JsonKey(name: '_sequence')
+  Element? get sequenceElement => throw _privateConstructorUsedError;
+
+  /// [scope] The scope or artifact covered by the case, when the individual test case is associated with a testable artifact.
+  List<Reference>? get scope => throw _privateConstructorUsedError;
+
+  /// [dependency] The required criteria to execute the test case - e.g. preconditions, previous tests.
+  List<TestPlanDependency1>? get dependency =>
+      throw _privateConstructorUsedError;
+
+  /// [testRun] The actual test to be executed.
+  List<TestPlanTestRun>? get testRun => throw _privateConstructorUsedError;
+
+  /// [testData] The test data used in the test case.
+  List<TestPlanTestData>? get testData => throw _privateConstructorUsedError;
+
+  /// [assertion] The test assertions - the expectations of test results from the execution of the test case.
+  List<TestPlanAssertion>? get assertion => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $TestPlanTestCaseCopyWith<TestPlanTestCase> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $TestPlanTestCaseCopyWith<$Res> {
+  factory $TestPlanTestCaseCopyWith(
+          TestPlanTestCase value, $Res Function(TestPlanTestCase) then) =
+      _$TestPlanTestCaseCopyWithImpl<$Res, TestPlanTestCase>;
+  @useResult
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      FhirInteger? sequence,
+      @JsonKey(name: '_sequence') Element? sequenceElement,
+      List<Reference>? scope,
+      List<TestPlanDependency1>? dependency,
+      List<TestPlanTestRun>? testRun,
+      List<TestPlanTestData>? testData,
+      List<TestPlanAssertion>? assertion});
+
+  $ElementCopyWith<$Res>? get sequenceElement;
+}
+
+/// @nodoc
+class _$TestPlanTestCaseCopyWithImpl<$Res, $Val extends TestPlanTestCase>
+    implements $TestPlanTestCaseCopyWith<$Res> {
+  _$TestPlanTestCaseCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? sequence = freezed,
+    Object? sequenceElement = freezed,
+    Object? scope = freezed,
+    Object? dependency = freezed,
+    Object? testRun = freezed,
+    Object? testData = freezed,
+    Object? assertion = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: freezed == extension_
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: freezed == modifierExtension
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      sequence: freezed == sequence
+          ? _value.sequence
+          : sequence // ignore: cast_nullable_to_non_nullable
+              as FhirInteger?,
+      sequenceElement: freezed == sequenceElement
+          ? _value.sequenceElement
+          : sequenceElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      scope: freezed == scope
+          ? _value.scope
+          : scope // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      dependency: freezed == dependency
+          ? _value.dependency
+          : dependency // ignore: cast_nullable_to_non_nullable
+              as List<TestPlanDependency1>?,
+      testRun: freezed == testRun
+          ? _value.testRun
+          : testRun // ignore: cast_nullable_to_non_nullable
+              as List<TestPlanTestRun>?,
+      testData: freezed == testData
+          ? _value.testData
+          : testData // ignore: cast_nullable_to_non_nullable
+              as List<TestPlanTestData>?,
+      assertion: freezed == assertion
+          ? _value.assertion
+          : assertion // ignore: cast_nullable_to_non_nullable
+              as List<TestPlanAssertion>?,
+    ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get sequenceElement {
+    if (_value.sequenceElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.sequenceElement!, (value) {
+      return _then(_value.copyWith(sequenceElement: value) as $Val);
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_TestPlanTestCaseCopyWith<$Res>
+    implements $TestPlanTestCaseCopyWith<$Res> {
+  factory _$$_TestPlanTestCaseCopyWith(
+          _$_TestPlanTestCase value, $Res Function(_$_TestPlanTestCase) then) =
+      __$$_TestPlanTestCaseCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      FhirInteger? sequence,
+      @JsonKey(name: '_sequence') Element? sequenceElement,
+      List<Reference>? scope,
+      List<TestPlanDependency1>? dependency,
+      List<TestPlanTestRun>? testRun,
+      List<TestPlanTestData>? testData,
+      List<TestPlanAssertion>? assertion});
+
+  @override
+  $ElementCopyWith<$Res>? get sequenceElement;
+}
+
+/// @nodoc
+class __$$_TestPlanTestCaseCopyWithImpl<$Res>
+    extends _$TestPlanTestCaseCopyWithImpl<$Res, _$_TestPlanTestCase>
+    implements _$$_TestPlanTestCaseCopyWith<$Res> {
+  __$$_TestPlanTestCaseCopyWithImpl(
+      _$_TestPlanTestCase _value, $Res Function(_$_TestPlanTestCase) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? sequence = freezed,
+    Object? sequenceElement = freezed,
+    Object? scope = freezed,
+    Object? dependency = freezed,
+    Object? testRun = freezed,
+    Object? testData = freezed,
+    Object? assertion = freezed,
+  }) {
+    return _then(_$_TestPlanTestCase(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: freezed == extension_
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: freezed == modifierExtension
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      sequence: freezed == sequence
+          ? _value.sequence
+          : sequence // ignore: cast_nullable_to_non_nullable
+              as FhirInteger?,
+      sequenceElement: freezed == sequenceElement
+          ? _value.sequenceElement
+          : sequenceElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      scope: freezed == scope
+          ? _value._scope
+          : scope // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      dependency: freezed == dependency
+          ? _value._dependency
+          : dependency // ignore: cast_nullable_to_non_nullable
+              as List<TestPlanDependency1>?,
+      testRun: freezed == testRun
+          ? _value._testRun
+          : testRun // ignore: cast_nullable_to_non_nullable
+              as List<TestPlanTestRun>?,
+      testData: freezed == testData
+          ? _value._testData
+          : testData // ignore: cast_nullable_to_non_nullable
+              as List<TestPlanTestData>?,
+      assertion: freezed == assertion
+          ? _value._assertion
+          : assertion // ignore: cast_nullable_to_non_nullable
+              as List<TestPlanAssertion>?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_TestPlanTestCase extends _TestPlanTestCase {
+  _$_TestPlanTestCase(
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      this.sequence,
+      @JsonKey(name: '_sequence') this.sequenceElement,
+      final List<Reference>? scope,
+      final List<TestPlanDependency1>? dependency,
+      final List<TestPlanTestRun>? testRun,
+      final List<TestPlanTestData>? testData,
+      final List<TestPlanAssertion>? assertion})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _scope = scope,
+        _dependency = dependency,
+        _testRun = testRun,
+        _testData = testData,
+        _assertion = assertion,
+        super._();
+
+  factory _$_TestPlanTestCase.fromJson(Map<String, dynamic> json) =>
+      _$$_TestPlanTestCaseFromJson(json);
+
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  @override
+  final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [sequence] Sequence of test case - an ordinal number that indicates the order for the present test case in the test plan.
+  @override
+  final FhirInteger? sequence;
+
+  /// [sequenceElement] ("_sequence") Extensions for sequence
+  @override
+  @JsonKey(name: '_sequence')
+  final Element? sequenceElement;
+
+  /// [scope] The scope or artifact covered by the case, when the individual test case is associated with a testable artifact.
+  final List<Reference>? _scope;
+
+  /// [scope] The scope or artifact covered by the case, when the individual test case is associated with a testable artifact.
+  @override
+  List<Reference>? get scope {
+    final value = _scope;
+    if (value == null) return null;
+    if (_scope is EqualUnmodifiableListView) return _scope;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [dependency] The required criteria to execute the test case - e.g. preconditions, previous tests.
+  final List<TestPlanDependency1>? _dependency;
+
+  /// [dependency] The required criteria to execute the test case - e.g. preconditions, previous tests.
+  @override
+  List<TestPlanDependency1>? get dependency {
+    final value = _dependency;
+    if (value == null) return null;
+    if (_dependency is EqualUnmodifiableListView) return _dependency;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [testRun] The actual test to be executed.
+  final List<TestPlanTestRun>? _testRun;
+
+  /// [testRun] The actual test to be executed.
+  @override
+  List<TestPlanTestRun>? get testRun {
+    final value = _testRun;
+    if (value == null) return null;
+    if (_testRun is EqualUnmodifiableListView) return _testRun;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [testData] The test data used in the test case.
+  final List<TestPlanTestData>? _testData;
+
+  /// [testData] The test data used in the test case.
+  @override
+  List<TestPlanTestData>? get testData {
+    final value = _testData;
+    if (value == null) return null;
+    if (_testData is EqualUnmodifiableListView) return _testData;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [assertion] The test assertions - the expectations of test results from the execution of the test case.
+  final List<TestPlanAssertion>? _assertion;
+
+  /// [assertion] The test assertions - the expectations of test results from the execution of the test case.
+  @override
+  List<TestPlanAssertion>? get assertion {
+    final value = _assertion;
+    if (value == null) return null;
+    if (_assertion is EqualUnmodifiableListView) return _assertion;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  String toString() {
+    return 'TestPlanTestCase(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, sequence: $sequence, sequenceElement: $sequenceElement, scope: $scope, dependency: $dependency, testRun: $testRun, testData: $testData, assertion: $assertion)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_TestPlanTestCase &&
+            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            (identical(other.sequence, sequence) ||
+                other.sequence == sequence) &&
+            (identical(other.sequenceElement, sequenceElement) ||
+                other.sequenceElement == sequenceElement) &&
+            const DeepCollectionEquality().equals(other._scope, _scope) &&
+            const DeepCollectionEquality()
+                .equals(other._dependency, _dependency) &&
+            const DeepCollectionEquality().equals(other._testRun, _testRun) &&
+            const DeepCollectionEquality().equals(other._testData, _testData) &&
+            const DeepCollectionEquality()
+                .equals(other._assertion, _assertion));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      sequence,
+      sequenceElement,
+      const DeepCollectionEquality().hash(_scope),
+      const DeepCollectionEquality().hash(_dependency),
+      const DeepCollectionEquality().hash(_testRun),
+      const DeepCollectionEquality().hash(_testData),
+      const DeepCollectionEquality().hash(_assertion));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_TestPlanTestCaseCopyWith<_$_TestPlanTestCase> get copyWith =>
+      __$$_TestPlanTestCaseCopyWithImpl<_$_TestPlanTestCase>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_TestPlanTestCaseToJson(
+      this,
+    );
+  }
+}
+
+abstract class _TestPlanTestCase extends TestPlanTestCase {
+  factory _TestPlanTestCase(
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final FhirInteger? sequence,
+      @JsonKey(name: '_sequence') final Element? sequenceElement,
+      final List<Reference>? scope,
+      final List<TestPlanDependency1>? dependency,
+      final List<TestPlanTestRun>? testRun,
+      final List<TestPlanTestData>? testData,
+      final List<TestPlanAssertion>? assertion}) = _$_TestPlanTestCase;
+  _TestPlanTestCase._() : super._();
+
+  factory _TestPlanTestCase.fromJson(Map<String, dynamic> json) =
+      _$_TestPlanTestCase.fromJson;
+
+  @override
+
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  String? get id;
+  @override
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_;
+  @override
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  List<FhirExtension>? get modifierExtension;
+  @override
+
+  /// [sequence] Sequence of test case - an ordinal number that indicates the order for the present test case in the test plan.
+  FhirInteger? get sequence;
+  @override
+
+  /// [sequenceElement] ("_sequence") Extensions for sequence
+  @JsonKey(name: '_sequence')
+  Element? get sequenceElement;
+  @override
+
+  /// [scope] The scope or artifact covered by the case, when the individual test case is associated with a testable artifact.
+  List<Reference>? get scope;
+  @override
+
+  /// [dependency] The required criteria to execute the test case - e.g. preconditions, previous tests.
+  List<TestPlanDependency1>? get dependency;
+  @override
+
+  /// [testRun] The actual test to be executed.
+  List<TestPlanTestRun>? get testRun;
+  @override
+
+  /// [testData] The test data used in the test case.
+  List<TestPlanTestData>? get testData;
+  @override
+
+  /// [assertion] The test assertions - the expectations of test results from the execution of the test case.
+  List<TestPlanAssertion>? get assertion;
+  @override
+  @JsonKey(ignore: true)
+  _$$_TestPlanTestCaseCopyWith<_$_TestPlanTestCase> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+TestPlanDependency1 _$TestPlanDependency1FromJson(Map<String, dynamic> json) {
+  return _TestPlanDependency1.fromJson(json);
+}
+
+/// @nodoc
+mixin _$TestPlanDependency1 {
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+
+  /// [description] Description of the criteria.
+  FhirMarkdown? get description => throw _privateConstructorUsedError;
+
+  /// [descriptionElement] ("_description") Extensions for description
+  @JsonKey(name: '_description')
+  Element? get descriptionElement => throw _privateConstructorUsedError;
+
+  /// [predecessor] Link to predecessor test plans.
+  Reference? get predecessor => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $TestPlanDependency1CopyWith<TestPlanDependency1> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $TestPlanDependency1CopyWith<$Res> {
+  factory $TestPlanDependency1CopyWith(
+          TestPlanDependency1 value, $Res Function(TestPlanDependency1) then) =
+      _$TestPlanDependency1CopyWithImpl<$Res, TestPlanDependency1>;
+  @useResult
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      FhirMarkdown? description,
+      @JsonKey(name: '_description') Element? descriptionElement,
+      Reference? predecessor});
+
+  $ElementCopyWith<$Res>? get descriptionElement;
+  $ReferenceCopyWith<$Res>? get predecessor;
+}
+
+/// @nodoc
+class _$TestPlanDependency1CopyWithImpl<$Res, $Val extends TestPlanDependency1>
+    implements $TestPlanDependency1CopyWith<$Res> {
+  _$TestPlanDependency1CopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? description = freezed,
+    Object? descriptionElement = freezed,
+    Object? predecessor = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: freezed == extension_
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: freezed == modifierExtension
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      description: freezed == description
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as FhirMarkdown?,
+      descriptionElement: freezed == descriptionElement
+          ? _value.descriptionElement
+          : descriptionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      predecessor: freezed == predecessor
+          ? _value.predecessor
+          : predecessor // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+    ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get descriptionElement {
+    if (_value.descriptionElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.descriptionElement!, (value) {
+      return _then(_value.copyWith(descriptionElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ReferenceCopyWith<$Res>? get predecessor {
+    if (_value.predecessor == null) {
+      return null;
+    }
+
+    return $ReferenceCopyWith<$Res>(_value.predecessor!, (value) {
+      return _then(_value.copyWith(predecessor: value) as $Val);
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_TestPlanDependency1CopyWith<$Res>
+    implements $TestPlanDependency1CopyWith<$Res> {
+  factory _$$_TestPlanDependency1CopyWith(_$_TestPlanDependency1 value,
+          $Res Function(_$_TestPlanDependency1) then) =
+      __$$_TestPlanDependency1CopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      FhirMarkdown? description,
+      @JsonKey(name: '_description') Element? descriptionElement,
+      Reference? predecessor});
+
+  @override
+  $ElementCopyWith<$Res>? get descriptionElement;
+  @override
+  $ReferenceCopyWith<$Res>? get predecessor;
+}
+
+/// @nodoc
+class __$$_TestPlanDependency1CopyWithImpl<$Res>
+    extends _$TestPlanDependency1CopyWithImpl<$Res, _$_TestPlanDependency1>
+    implements _$$_TestPlanDependency1CopyWith<$Res> {
+  __$$_TestPlanDependency1CopyWithImpl(_$_TestPlanDependency1 _value,
+      $Res Function(_$_TestPlanDependency1) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? description = freezed,
+    Object? descriptionElement = freezed,
+    Object? predecessor = freezed,
+  }) {
+    return _then(_$_TestPlanDependency1(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: freezed == extension_
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: freezed == modifierExtension
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      description: freezed == description
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as FhirMarkdown?,
+      descriptionElement: freezed == descriptionElement
+          ? _value.descriptionElement
+          : descriptionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      predecessor: freezed == predecessor
+          ? _value.predecessor
+          : predecessor // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_TestPlanDependency1 extends _TestPlanDependency1 {
+  _$_TestPlanDependency1(
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      this.description,
+      @JsonKey(name: '_description') this.descriptionElement,
+      this.predecessor})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
+
+  factory _$_TestPlanDependency1.fromJson(Map<String, dynamic> json) =>
+      _$$_TestPlanDependency1FromJson(json);
+
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  @override
+  final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [description] Description of the criteria.
+  @override
+  final FhirMarkdown? description;
+
+  /// [descriptionElement] ("_description") Extensions for description
+  @override
+  @JsonKey(name: '_description')
+  final Element? descriptionElement;
+
+  /// [predecessor] Link to predecessor test plans.
+  @override
+  final Reference? predecessor;
+
+  @override
+  String toString() {
+    return 'TestPlanDependency1(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, description: $description, descriptionElement: $descriptionElement, predecessor: $predecessor)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_TestPlanDependency1 &&
+            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            (identical(other.description, description) ||
+                other.description == description) &&
+            (identical(other.descriptionElement, descriptionElement) ||
+                other.descriptionElement == descriptionElement) &&
+            (identical(other.predecessor, predecessor) ||
+                other.predecessor == predecessor));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      description,
+      descriptionElement,
+      predecessor);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_TestPlanDependency1CopyWith<_$_TestPlanDependency1> get copyWith =>
+      __$$_TestPlanDependency1CopyWithImpl<_$_TestPlanDependency1>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_TestPlanDependency1ToJson(
+      this,
+    );
+  }
+}
+
+abstract class _TestPlanDependency1 extends TestPlanDependency1 {
+  factory _TestPlanDependency1(
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final FhirMarkdown? description,
+      @JsonKey(name: '_description') final Element? descriptionElement,
+      final Reference? predecessor}) = _$_TestPlanDependency1;
+  _TestPlanDependency1._() : super._();
+
+  factory _TestPlanDependency1.fromJson(Map<String, dynamic> json) =
+      _$_TestPlanDependency1.fromJson;
+
+  @override
+
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  String? get id;
+  @override
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_;
+  @override
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  List<FhirExtension>? get modifierExtension;
+  @override
+
+  /// [description] Description of the criteria.
+  FhirMarkdown? get description;
+  @override
+
+  /// [descriptionElement] ("_description") Extensions for description
+  @JsonKey(name: '_description')
+  Element? get descriptionElement;
+  @override
+
+  /// [predecessor] Link to predecessor test plans.
+  Reference? get predecessor;
+  @override
+  @JsonKey(ignore: true)
+  _$$_TestPlanDependency1CopyWith<_$_TestPlanDependency1> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+TestPlanTestRun _$TestPlanTestRunFromJson(Map<String, dynamic> json) {
+  return _TestPlanTestRun.fromJson(json);
+}
+
+/// @nodoc
+mixin _$TestPlanTestRun {
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+
+  /// [narrative] The narrative description of the tests.
+  FhirMarkdown? get narrative => throw _privateConstructorUsedError;
+
+  /// [narrativeElement] ("_narrative") Extensions for narrative
+  @JsonKey(name: '_narrative')
+  Element? get narrativeElement => throw _privateConstructorUsedError;
+
+  /// [script] The test cases in a structured language e.g. gherkin, Postman, or FHIR TestScript.
+  TestPlanScript? get script => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $TestPlanTestRunCopyWith<TestPlanTestRun> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $TestPlanTestRunCopyWith<$Res> {
+  factory $TestPlanTestRunCopyWith(
+          TestPlanTestRun value, $Res Function(TestPlanTestRun) then) =
+      _$TestPlanTestRunCopyWithImpl<$Res, TestPlanTestRun>;
+  @useResult
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      FhirMarkdown? narrative,
+      @JsonKey(name: '_narrative') Element? narrativeElement,
+      TestPlanScript? script});
+
+  $ElementCopyWith<$Res>? get narrativeElement;
+  $TestPlanScriptCopyWith<$Res>? get script;
+}
+
+/// @nodoc
+class _$TestPlanTestRunCopyWithImpl<$Res, $Val extends TestPlanTestRun>
+    implements $TestPlanTestRunCopyWith<$Res> {
+  _$TestPlanTestRunCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? narrative = freezed,
+    Object? narrativeElement = freezed,
+    Object? script = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: freezed == extension_
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: freezed == modifierExtension
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      narrative: freezed == narrative
+          ? _value.narrative
+          : narrative // ignore: cast_nullable_to_non_nullable
+              as FhirMarkdown?,
+      narrativeElement: freezed == narrativeElement
+          ? _value.narrativeElement
+          : narrativeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      script: freezed == script
+          ? _value.script
+          : script // ignore: cast_nullable_to_non_nullable
+              as TestPlanScript?,
+    ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get narrativeElement {
+    if (_value.narrativeElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.narrativeElement!, (value) {
+      return _then(_value.copyWith(narrativeElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $TestPlanScriptCopyWith<$Res>? get script {
+    if (_value.script == null) {
+      return null;
+    }
+
+    return $TestPlanScriptCopyWith<$Res>(_value.script!, (value) {
+      return _then(_value.copyWith(script: value) as $Val);
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_TestPlanTestRunCopyWith<$Res>
+    implements $TestPlanTestRunCopyWith<$Res> {
+  factory _$$_TestPlanTestRunCopyWith(
+          _$_TestPlanTestRun value, $Res Function(_$_TestPlanTestRun) then) =
+      __$$_TestPlanTestRunCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      FhirMarkdown? narrative,
+      @JsonKey(name: '_narrative') Element? narrativeElement,
+      TestPlanScript? script});
+
+  @override
+  $ElementCopyWith<$Res>? get narrativeElement;
+  @override
+  $TestPlanScriptCopyWith<$Res>? get script;
+}
+
+/// @nodoc
+class __$$_TestPlanTestRunCopyWithImpl<$Res>
+    extends _$TestPlanTestRunCopyWithImpl<$Res, _$_TestPlanTestRun>
+    implements _$$_TestPlanTestRunCopyWith<$Res> {
+  __$$_TestPlanTestRunCopyWithImpl(
+      _$_TestPlanTestRun _value, $Res Function(_$_TestPlanTestRun) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? narrative = freezed,
+    Object? narrativeElement = freezed,
+    Object? script = freezed,
+  }) {
+    return _then(_$_TestPlanTestRun(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: freezed == extension_
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: freezed == modifierExtension
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      narrative: freezed == narrative
+          ? _value.narrative
+          : narrative // ignore: cast_nullable_to_non_nullable
+              as FhirMarkdown?,
+      narrativeElement: freezed == narrativeElement
+          ? _value.narrativeElement
+          : narrativeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      script: freezed == script
+          ? _value.script
+          : script // ignore: cast_nullable_to_non_nullable
+              as TestPlanScript?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_TestPlanTestRun extends _TestPlanTestRun {
+  _$_TestPlanTestRun(
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      this.narrative,
+      @JsonKey(name: '_narrative') this.narrativeElement,
+      this.script})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
+
+  factory _$_TestPlanTestRun.fromJson(Map<String, dynamic> json) =>
+      _$$_TestPlanTestRunFromJson(json);
+
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  @override
+  final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [narrative] The narrative description of the tests.
+  @override
+  final FhirMarkdown? narrative;
+
+  /// [narrativeElement] ("_narrative") Extensions for narrative
+  @override
+  @JsonKey(name: '_narrative')
+  final Element? narrativeElement;
+
+  /// [script] The test cases in a structured language e.g. gherkin, Postman, or FHIR TestScript.
+  @override
+  final TestPlanScript? script;
+
+  @override
+  String toString() {
+    return 'TestPlanTestRun(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, narrative: $narrative, narrativeElement: $narrativeElement, script: $script)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_TestPlanTestRun &&
+            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            (identical(other.narrative, narrative) ||
+                other.narrative == narrative) &&
+            (identical(other.narrativeElement, narrativeElement) ||
+                other.narrativeElement == narrativeElement) &&
+            (identical(other.script, script) || other.script == script));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      narrative,
+      narrativeElement,
+      script);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_TestPlanTestRunCopyWith<_$_TestPlanTestRun> get copyWith =>
+      __$$_TestPlanTestRunCopyWithImpl<_$_TestPlanTestRun>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_TestPlanTestRunToJson(
+      this,
+    );
+  }
+}
+
+abstract class _TestPlanTestRun extends TestPlanTestRun {
+  factory _TestPlanTestRun(
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final FhirMarkdown? narrative,
+      @JsonKey(name: '_narrative') final Element? narrativeElement,
+      final TestPlanScript? script}) = _$_TestPlanTestRun;
+  _TestPlanTestRun._() : super._();
+
+  factory _TestPlanTestRun.fromJson(Map<String, dynamic> json) =
+      _$_TestPlanTestRun.fromJson;
+
+  @override
+
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  String? get id;
+  @override
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_;
+  @override
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  List<FhirExtension>? get modifierExtension;
+  @override
+
+  /// [narrative] The narrative description of the tests.
+  FhirMarkdown? get narrative;
+  @override
+
+  /// [narrativeElement] ("_narrative") Extensions for narrative
+  @JsonKey(name: '_narrative')
+  Element? get narrativeElement;
+  @override
+
+  /// [script] The test cases in a structured language e.g. gherkin, Postman, or FHIR TestScript.
+  TestPlanScript? get script;
+  @override
+  @JsonKey(ignore: true)
+  _$$_TestPlanTestRunCopyWith<_$_TestPlanTestRun> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+TestPlanScript _$TestPlanScriptFromJson(Map<String, dynamic> json) {
+  return _TestPlanScript.fromJson(json);
+}
+
+/// @nodoc
+mixin _$TestPlanScript {
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+
+  /// [language] The language for the test cases e.g. 'gherkin', 'testscript'.
+  CodeableConcept? get language => throw _privateConstructorUsedError;
+
+  /// [sourceString] The actual content of the cases - references to TestScripts or externally defined content.
+  String? get sourceString => throw _privateConstructorUsedError;
+
+  /// [sourceStringElement] ("_sourceString") Extensions for sourceString
+  @JsonKey(name: '_sourceString')
+  Element? get sourceStringElement => throw _privateConstructorUsedError;
+
+  /// [sourceReference] The actual content of the cases - references to TestScripts or externally defined content.
+  Reference? get sourceReference => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $TestPlanScriptCopyWith<TestPlanScript> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $TestPlanScriptCopyWith<$Res> {
+  factory $TestPlanScriptCopyWith(
+          TestPlanScript value, $Res Function(TestPlanScript) then) =
+      _$TestPlanScriptCopyWithImpl<$Res, TestPlanScript>;
+  @useResult
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept? language,
+      String? sourceString,
+      @JsonKey(name: '_sourceString') Element? sourceStringElement,
+      Reference? sourceReference});
+
+  $CodeableConceptCopyWith<$Res>? get language;
+  $ElementCopyWith<$Res>? get sourceStringElement;
+  $ReferenceCopyWith<$Res>? get sourceReference;
+}
+
+/// @nodoc
+class _$TestPlanScriptCopyWithImpl<$Res, $Val extends TestPlanScript>
+    implements $TestPlanScriptCopyWith<$Res> {
+  _$TestPlanScriptCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? language = freezed,
+    Object? sourceString = freezed,
+    Object? sourceStringElement = freezed,
+    Object? sourceReference = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: freezed == extension_
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: freezed == modifierExtension
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      language: freezed == language
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      sourceString: freezed == sourceString
+          ? _value.sourceString
+          : sourceString // ignore: cast_nullable_to_non_nullable
+              as String?,
+      sourceStringElement: freezed == sourceStringElement
+          ? _value.sourceStringElement
+          : sourceStringElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      sourceReference: freezed == sourceReference
+          ? _value.sourceReference
+          : sourceReference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+    ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CodeableConceptCopyWith<$Res>? get language {
+    if (_value.language == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.language!, (value) {
+      return _then(_value.copyWith(language: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get sourceStringElement {
+    if (_value.sourceStringElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.sourceStringElement!, (value) {
+      return _then(_value.copyWith(sourceStringElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ReferenceCopyWith<$Res>? get sourceReference {
+    if (_value.sourceReference == null) {
+      return null;
+    }
+
+    return $ReferenceCopyWith<$Res>(_value.sourceReference!, (value) {
+      return _then(_value.copyWith(sourceReference: value) as $Val);
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_TestPlanScriptCopyWith<$Res>
+    implements $TestPlanScriptCopyWith<$Res> {
+  factory _$$_TestPlanScriptCopyWith(
+          _$_TestPlanScript value, $Res Function(_$_TestPlanScript) then) =
+      __$$_TestPlanScriptCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept? language,
+      String? sourceString,
+      @JsonKey(name: '_sourceString') Element? sourceStringElement,
+      Reference? sourceReference});
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get language;
+  @override
+  $ElementCopyWith<$Res>? get sourceStringElement;
+  @override
+  $ReferenceCopyWith<$Res>? get sourceReference;
+}
+
+/// @nodoc
+class __$$_TestPlanScriptCopyWithImpl<$Res>
+    extends _$TestPlanScriptCopyWithImpl<$Res, _$_TestPlanScript>
+    implements _$$_TestPlanScriptCopyWith<$Res> {
+  __$$_TestPlanScriptCopyWithImpl(
+      _$_TestPlanScript _value, $Res Function(_$_TestPlanScript) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? language = freezed,
+    Object? sourceString = freezed,
+    Object? sourceStringElement = freezed,
+    Object? sourceReference = freezed,
+  }) {
+    return _then(_$_TestPlanScript(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: freezed == extension_
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: freezed == modifierExtension
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      language: freezed == language
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      sourceString: freezed == sourceString
+          ? _value.sourceString
+          : sourceString // ignore: cast_nullable_to_non_nullable
+              as String?,
+      sourceStringElement: freezed == sourceStringElement
+          ? _value.sourceStringElement
+          : sourceStringElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      sourceReference: freezed == sourceReference
+          ? _value.sourceReference
+          : sourceReference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_TestPlanScript extends _TestPlanScript {
+  _$_TestPlanScript(
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      this.language,
+      this.sourceString,
+      @JsonKey(name: '_sourceString') this.sourceStringElement,
+      this.sourceReference})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
+
+  factory _$_TestPlanScript.fromJson(Map<String, dynamic> json) =>
+      _$$_TestPlanScriptFromJson(json);
+
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  @override
+  final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [language] The language for the test cases e.g. 'gherkin', 'testscript'.
+  @override
+  final CodeableConcept? language;
+
+  /// [sourceString] The actual content of the cases - references to TestScripts or externally defined content.
+  @override
+  final String? sourceString;
+
+  /// [sourceStringElement] ("_sourceString") Extensions for sourceString
+  @override
+  @JsonKey(name: '_sourceString')
+  final Element? sourceStringElement;
+
+  /// [sourceReference] The actual content of the cases - references to TestScripts or externally defined content.
+  @override
+  final Reference? sourceReference;
+
+  @override
+  String toString() {
+    return 'TestPlanScript(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, language: $language, sourceString: $sourceString, sourceStringElement: $sourceStringElement, sourceReference: $sourceReference)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_TestPlanScript &&
+            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            (identical(other.language, language) ||
+                other.language == language) &&
+            (identical(other.sourceString, sourceString) ||
+                other.sourceString == sourceString) &&
+            (identical(other.sourceStringElement, sourceStringElement) ||
+                other.sourceStringElement == sourceStringElement) &&
+            (identical(other.sourceReference, sourceReference) ||
+                other.sourceReference == sourceReference));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      language,
+      sourceString,
+      sourceStringElement,
+      sourceReference);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_TestPlanScriptCopyWith<_$_TestPlanScript> get copyWith =>
+      __$$_TestPlanScriptCopyWithImpl<_$_TestPlanScript>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_TestPlanScriptToJson(
+      this,
+    );
+  }
+}
+
+abstract class _TestPlanScript extends TestPlanScript {
+  factory _TestPlanScript(
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final CodeableConcept? language,
+      final String? sourceString,
+      @JsonKey(name: '_sourceString') final Element? sourceStringElement,
+      final Reference? sourceReference}) = _$_TestPlanScript;
+  _TestPlanScript._() : super._();
+
+  factory _TestPlanScript.fromJson(Map<String, dynamic> json) =
+      _$_TestPlanScript.fromJson;
+
+  @override
+
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  String? get id;
+  @override
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_;
+  @override
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  List<FhirExtension>? get modifierExtension;
+  @override
+
+  /// [language] The language for the test cases e.g. 'gherkin', 'testscript'.
+  CodeableConcept? get language;
+  @override
+
+  /// [sourceString] The actual content of the cases - references to TestScripts or externally defined content.
+  String? get sourceString;
+  @override
+
+  /// [sourceStringElement] ("_sourceString") Extensions for sourceString
+  @JsonKey(name: '_sourceString')
+  Element? get sourceStringElement;
+  @override
+
+  /// [sourceReference] The actual content of the cases - references to TestScripts or externally defined content.
+  Reference? get sourceReference;
+  @override
+  @JsonKey(ignore: true)
+  _$$_TestPlanScriptCopyWith<_$_TestPlanScript> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+TestPlanTestData _$TestPlanTestDataFromJson(Map<String, dynamic> json) {
+  return _TestPlanTestData.fromJson(json);
+}
+
+/// @nodoc
+mixin _$TestPlanTestData {
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+
+  /// [type] The type of test data description, e.g. 'synthea'.
+  Coding get type => throw _privateConstructorUsedError;
+
+  /// [content] The actual test resources when they exist.
+  Reference? get content => throw _privateConstructorUsedError;
+
+  /// [sourceString] Pointer to a definition of test resources - narrative or structured e.g. synthetic data generation, etc.
+  String? get sourceString => throw _privateConstructorUsedError;
+
+  /// [sourceStringElement] ("_sourceString") Extensions for sourceString
+  @JsonKey(name: '_sourceString')
+  Element? get sourceStringElement => throw _privateConstructorUsedError;
+
+  /// [sourceReference] Pointer to a definition of test resources - narrative or structured e.g. synthetic data generation, etc.
+  Reference? get sourceReference => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $TestPlanTestDataCopyWith<TestPlanTestData> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $TestPlanTestDataCopyWith<$Res> {
+  factory $TestPlanTestDataCopyWith(
+          TestPlanTestData value, $Res Function(TestPlanTestData) then) =
+      _$TestPlanTestDataCopyWithImpl<$Res, TestPlanTestData>;
+  @useResult
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Coding type,
+      Reference? content,
+      String? sourceString,
+      @JsonKey(name: '_sourceString') Element? sourceStringElement,
+      Reference? sourceReference});
+
+  $CodingCopyWith<$Res> get type;
+  $ReferenceCopyWith<$Res>? get content;
+  $ElementCopyWith<$Res>? get sourceStringElement;
+  $ReferenceCopyWith<$Res>? get sourceReference;
+}
+
+/// @nodoc
+class _$TestPlanTestDataCopyWithImpl<$Res, $Val extends TestPlanTestData>
+    implements $TestPlanTestDataCopyWith<$Res> {
+  _$TestPlanTestDataCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? type = null,
+    Object? content = freezed,
+    Object? sourceString = freezed,
+    Object? sourceStringElement = freezed,
+    Object? sourceReference = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: freezed == extension_
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: freezed == modifierExtension
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      type: null == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as Coding,
+      content: freezed == content
+          ? _value.content
+          : content // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      sourceString: freezed == sourceString
+          ? _value.sourceString
+          : sourceString // ignore: cast_nullable_to_non_nullable
+              as String?,
+      sourceStringElement: freezed == sourceStringElement
+          ? _value.sourceStringElement
+          : sourceStringElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      sourceReference: freezed == sourceReference
+          ? _value.sourceReference
+          : sourceReference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+    ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CodingCopyWith<$Res> get type {
+    return $CodingCopyWith<$Res>(_value.type, (value) {
+      return _then(_value.copyWith(type: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ReferenceCopyWith<$Res>? get content {
+    if (_value.content == null) {
+      return null;
+    }
+
+    return $ReferenceCopyWith<$Res>(_value.content!, (value) {
+      return _then(_value.copyWith(content: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get sourceStringElement {
+    if (_value.sourceStringElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.sourceStringElement!, (value) {
+      return _then(_value.copyWith(sourceStringElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ReferenceCopyWith<$Res>? get sourceReference {
+    if (_value.sourceReference == null) {
+      return null;
+    }
+
+    return $ReferenceCopyWith<$Res>(_value.sourceReference!, (value) {
+      return _then(_value.copyWith(sourceReference: value) as $Val);
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_TestPlanTestDataCopyWith<$Res>
+    implements $TestPlanTestDataCopyWith<$Res> {
+  factory _$$_TestPlanTestDataCopyWith(
+          _$_TestPlanTestData value, $Res Function(_$_TestPlanTestData) then) =
+      __$$_TestPlanTestDataCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Coding type,
+      Reference? content,
+      String? sourceString,
+      @JsonKey(name: '_sourceString') Element? sourceStringElement,
+      Reference? sourceReference});
+
+  @override
+  $CodingCopyWith<$Res> get type;
+  @override
+  $ReferenceCopyWith<$Res>? get content;
+  @override
+  $ElementCopyWith<$Res>? get sourceStringElement;
+  @override
+  $ReferenceCopyWith<$Res>? get sourceReference;
+}
+
+/// @nodoc
+class __$$_TestPlanTestDataCopyWithImpl<$Res>
+    extends _$TestPlanTestDataCopyWithImpl<$Res, _$_TestPlanTestData>
+    implements _$$_TestPlanTestDataCopyWith<$Res> {
+  __$$_TestPlanTestDataCopyWithImpl(
+      _$_TestPlanTestData _value, $Res Function(_$_TestPlanTestData) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? type = null,
+    Object? content = freezed,
+    Object? sourceString = freezed,
+    Object? sourceStringElement = freezed,
+    Object? sourceReference = freezed,
+  }) {
+    return _then(_$_TestPlanTestData(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: freezed == extension_
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: freezed == modifierExtension
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      type: null == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as Coding,
+      content: freezed == content
+          ? _value.content
+          : content // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      sourceString: freezed == sourceString
+          ? _value.sourceString
+          : sourceString // ignore: cast_nullable_to_non_nullable
+              as String?,
+      sourceStringElement: freezed == sourceStringElement
+          ? _value.sourceStringElement
+          : sourceStringElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      sourceReference: freezed == sourceReference
+          ? _value.sourceReference
+          : sourceReference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_TestPlanTestData extends _TestPlanTestData {
+  _$_TestPlanTestData(
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      required this.type,
+      this.content,
+      this.sourceString,
+      @JsonKey(name: '_sourceString') this.sourceStringElement,
+      this.sourceReference})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
+
+  factory _$_TestPlanTestData.fromJson(Map<String, dynamic> json) =>
+      _$$_TestPlanTestDataFromJson(json);
+
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  @override
+  final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [type] The type of test data description, e.g. 'synthea'.
+  @override
+  final Coding type;
+
+  /// [content] The actual test resources when they exist.
+  @override
+  final Reference? content;
+
+  /// [sourceString] Pointer to a definition of test resources - narrative or structured e.g. synthetic data generation, etc.
+  @override
+  final String? sourceString;
+
+  /// [sourceStringElement] ("_sourceString") Extensions for sourceString
+  @override
+  @JsonKey(name: '_sourceString')
+  final Element? sourceStringElement;
+
+  /// [sourceReference] Pointer to a definition of test resources - narrative or structured e.g. synthetic data generation, etc.
+  @override
+  final Reference? sourceReference;
+
+  @override
+  String toString() {
+    return 'TestPlanTestData(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, content: $content, sourceString: $sourceString, sourceStringElement: $sourceStringElement, sourceReference: $sourceReference)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_TestPlanTestData &&
+            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.content, content) || other.content == content) &&
+            (identical(other.sourceString, sourceString) ||
+                other.sourceString == sourceString) &&
+            (identical(other.sourceStringElement, sourceStringElement) ||
+                other.sourceStringElement == sourceStringElement) &&
+            (identical(other.sourceReference, sourceReference) ||
+                other.sourceReference == sourceReference));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      type,
+      content,
+      sourceString,
+      sourceStringElement,
+      sourceReference);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_TestPlanTestDataCopyWith<_$_TestPlanTestData> get copyWith =>
+      __$$_TestPlanTestDataCopyWithImpl<_$_TestPlanTestData>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_TestPlanTestDataToJson(
+      this,
+    );
+  }
+}
+
+abstract class _TestPlanTestData extends TestPlanTestData {
+  factory _TestPlanTestData(
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      required final Coding type,
+      final Reference? content,
+      final String? sourceString,
+      @JsonKey(name: '_sourceString') final Element? sourceStringElement,
+      final Reference? sourceReference}) = _$_TestPlanTestData;
+  _TestPlanTestData._() : super._();
+
+  factory _TestPlanTestData.fromJson(Map<String, dynamic> json) =
+      _$_TestPlanTestData.fromJson;
+
+  @override
+
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  String? get id;
+  @override
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_;
+  @override
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  List<FhirExtension>? get modifierExtension;
+  @override
+
+  /// [type] The type of test data description, e.g. 'synthea'.
+  Coding get type;
+  @override
+
+  /// [content] The actual test resources when they exist.
+  Reference? get content;
+  @override
+
+  /// [sourceString] Pointer to a definition of test resources - narrative or structured e.g. synthetic data generation, etc.
+  String? get sourceString;
+  @override
+
+  /// [sourceStringElement] ("_sourceString") Extensions for sourceString
+  @JsonKey(name: '_sourceString')
+  Element? get sourceStringElement;
+  @override
+
+  /// [sourceReference] Pointer to a definition of test resources - narrative or structured e.g. synthetic data generation, etc.
+  Reference? get sourceReference;
+  @override
+  @JsonKey(ignore: true)
+  _$$_TestPlanTestDataCopyWith<_$_TestPlanTestData> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+TestPlanAssertion _$TestPlanAssertionFromJson(Map<String, dynamic> json) {
+  return _TestPlanAssertion.fromJson(json);
+}
+
+/// @nodoc
+mixin _$TestPlanAssertion {
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+
+  /// [type] The test assertion type - this can be used to group assertions as 'required' or 'optional', or can be used for other classification of the assertion.
+  List<CodeableConcept>? get type => throw _privateConstructorUsedError;
+
+  /// [object] The focus or object of the assertion i.e. a resource.
+  List<CodeableReference>? get object => throw _privateConstructorUsedError;
+
+  /// [result] The test assertion - the expected outcome from the test case execution.
+  List<CodeableReference>? get result => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $TestPlanAssertionCopyWith<TestPlanAssertion> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $TestPlanAssertionCopyWith<$Res> {
+  factory $TestPlanAssertionCopyWith(
+          TestPlanAssertion value, $Res Function(TestPlanAssertion) then) =
+      _$TestPlanAssertionCopyWithImpl<$Res, TestPlanAssertion>;
+  @useResult
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<CodeableConcept>? type,
+      List<CodeableReference>? object,
+      List<CodeableReference>? result});
+}
+
+/// @nodoc
+class _$TestPlanAssertionCopyWithImpl<$Res, $Val extends TestPlanAssertion>
+    implements $TestPlanAssertionCopyWith<$Res> {
+  _$TestPlanAssertionCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? type = freezed,
+    Object? object = freezed,
+    Object? result = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: freezed == extension_
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: freezed == modifierExtension
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      type: freezed == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      object: freezed == object
+          ? _value.object
+          : object // ignore: cast_nullable_to_non_nullable
+              as List<CodeableReference>?,
+      result: freezed == result
+          ? _value.result
+          : result // ignore: cast_nullable_to_non_nullable
+              as List<CodeableReference>?,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$_TestPlanAssertionCopyWith<$Res>
+    implements $TestPlanAssertionCopyWith<$Res> {
+  factory _$$_TestPlanAssertionCopyWith(_$_TestPlanAssertion value,
+          $Res Function(_$_TestPlanAssertion) then) =
+      __$$_TestPlanAssertionCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<CodeableConcept>? type,
+      List<CodeableReference>? object,
+      List<CodeableReference>? result});
+}
+
+/// @nodoc
+class __$$_TestPlanAssertionCopyWithImpl<$Res>
+    extends _$TestPlanAssertionCopyWithImpl<$Res, _$_TestPlanAssertion>
+    implements _$$_TestPlanAssertionCopyWith<$Res> {
+  __$$_TestPlanAssertionCopyWithImpl(
+      _$_TestPlanAssertion _value, $Res Function(_$_TestPlanAssertion) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? type = freezed,
+    Object? object = freezed,
+    Object? result = freezed,
+  }) {
+    return _then(_$_TestPlanAssertion(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: freezed == extension_
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: freezed == modifierExtension
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      type: freezed == type
+          ? _value._type
+          : type // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      object: freezed == object
+          ? _value._object
+          : object // ignore: cast_nullable_to_non_nullable
+              as List<CodeableReference>?,
+      result: freezed == result
+          ? _value._result
+          : result // ignore: cast_nullable_to_non_nullable
+              as List<CodeableReference>?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_TestPlanAssertion extends _TestPlanAssertion {
+  _$_TestPlanAssertion(
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<CodeableConcept>? type,
+      final List<CodeableReference>? object,
+      final List<CodeableReference>? result})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _type = type,
+        _object = object,
+        _result = result,
+        super._();
+
+  factory _$_TestPlanAssertion.fromJson(Map<String, dynamic> json) =>
+      _$$_TestPlanAssertionFromJson(json);
+
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  @override
+  final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [type] The test assertion type - this can be used to group assertions as 'required' or 'optional', or can be used for other classification of the assertion.
+  final List<CodeableConcept>? _type;
+
+  /// [type] The test assertion type - this can be used to group assertions as 'required' or 'optional', or can be used for other classification of the assertion.
+  @override
+  List<CodeableConcept>? get type {
+    final value = _type;
+    if (value == null) return null;
+    if (_type is EqualUnmodifiableListView) return _type;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [object] The focus or object of the assertion i.e. a resource.
+  final List<CodeableReference>? _object;
+
+  /// [object] The focus or object of the assertion i.e. a resource.
+  @override
+  List<CodeableReference>? get object {
+    final value = _object;
+    if (value == null) return null;
+    if (_object is EqualUnmodifiableListView) return _object;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [result] The test assertion - the expected outcome from the test case execution.
+  final List<CodeableReference>? _result;
+
+  /// [result] The test assertion - the expected outcome from the test case execution.
+  @override
+  List<CodeableReference>? get result {
+    final value = _result;
+    if (value == null) return null;
+    if (_result is EqualUnmodifiableListView) return _result;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  String toString() {
+    return 'TestPlanAssertion(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, object: $object, result: $result)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_TestPlanAssertion &&
+            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality().equals(other._type, _type) &&
+            const DeepCollectionEquality().equals(other._object, _object) &&
+            const DeepCollectionEquality().equals(other._result, _result));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(_type),
+      const DeepCollectionEquality().hash(_object),
+      const DeepCollectionEquality().hash(_result));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_TestPlanAssertionCopyWith<_$_TestPlanAssertion> get copyWith =>
+      __$$_TestPlanAssertionCopyWithImpl<_$_TestPlanAssertion>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_TestPlanAssertionToJson(
+      this,
+    );
+  }
+}
+
+abstract class _TestPlanAssertion extends TestPlanAssertion {
+  factory _TestPlanAssertion(
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<CodeableConcept>? type,
+      final List<CodeableReference>? object,
+      final List<CodeableReference>? result}) = _$_TestPlanAssertion;
+  _TestPlanAssertion._() : super._();
+
+  factory _TestPlanAssertion.fromJson(Map<String, dynamic> json) =
+      _$_TestPlanAssertion.fromJson;
+
+  @override
+
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  String? get id;
+  @override
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_;
+  @override
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  List<FhirExtension>? get modifierExtension;
+  @override
+
+  /// [type] The test assertion type - this can be used to group assertions as 'required' or 'optional', or can be used for other classification of the assertion.
+  List<CodeableConcept>? get type;
+  @override
+
+  /// [object] The focus or object of the assertion i.e. a resource.
+  List<CodeableReference>? get object;
+  @override
+
+  /// [result] The test assertion - the expected outcome from the test case execution.
+  List<CodeableReference>? get result;
+  @override
+  @JsonKey(ignore: true)
+  _$$_TestPlanAssertionCopyWith<_$_TestPlanAssertion> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
 TestReport _$TestReportFromJson(Map<String, dynamic> json) {
   return _TestReport.fromJson(json);
 }

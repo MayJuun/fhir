@@ -4,9 +4,8 @@ import 'dart:io';
 import 'types.dart';
 
 Future<void> main() async {
-  final longString =
-      jsonDecode(await File('new_fhir/fhir.schema.json').readAsString())
-          as Map<String, dynamic>;
+  final longString = jsonDecode(await File('fhir.schema.json').readAsString())
+      as Map<String, dynamic>;
   final definitions = longString['definitions'] as Map<String, dynamic>;
   definitions.remove('ResourceList');
   final typeMap = {

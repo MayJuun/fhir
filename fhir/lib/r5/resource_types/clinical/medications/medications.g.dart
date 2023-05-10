@@ -98,6 +98,8 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.Basic: 'Basic',
   R5ResourceType.Binary: 'Binary',
   R5ResourceType.BiologicallyDerivedProduct: 'BiologicallyDerivedProduct',
+  R5ResourceType.BiologicallyDerivedProductDispense:
+      'BiologicallyDerivedProductDispense',
   R5ResourceType.BodyStructure: 'BodyStructure',
   R5ResourceType.Bundle: 'Bundle',
   R5ResourceType.CapabilityStatement: 'CapabilityStatement',
@@ -125,15 +127,16 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.CoverageEligibilityResponse: 'CoverageEligibilityResponse',
   R5ResourceType.DetectedIssue: 'DetectedIssue',
   R5ResourceType.Device: 'Device',
+  R5ResourceType.DeviceAssociation: 'DeviceAssociation',
   R5ResourceType.DeviceDefinition: 'DeviceDefinition',
   R5ResourceType.DeviceDispense: 'DeviceDispense',
   R5ResourceType.DeviceMetric: 'DeviceMetric',
   R5ResourceType.DeviceRequest: 'DeviceRequest',
   R5ResourceType.DeviceUsage: 'DeviceUsage',
   R5ResourceType.DiagnosticReport: 'DiagnosticReport',
-  R5ResourceType.DocumentManifest: 'DocumentManifest',
   R5ResourceType.DocumentReference: 'DocumentReference',
   R5ResourceType.Encounter: 'Encounter',
+  R5ResourceType.EncounterHistory: 'EncounterHistory',
   R5ResourceType.Endpoint: 'Endpoint',
   R5ResourceType.EnrollmentRequest: 'EnrollmentRequest',
   R5ResourceType.EnrollmentResponse: 'EnrollmentResponse',
@@ -161,6 +164,7 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.ImplementationGuide: 'ImplementationGuide',
   R5ResourceType.Ingredient: 'Ingredient',
   R5ResourceType.InsurancePlan: 'InsurancePlan',
+  R5ResourceType.InventoryItem: 'InventoryItem',
   R5ResourceType.InventoryReport: 'InventoryReport',
   R5ResourceType.Invoice: 'Invoice',
   R5ResourceType.Library: 'Library',
@@ -175,7 +179,7 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.MedicationDispense: 'MedicationDispense',
   R5ResourceType.MedicationKnowledge: 'MedicationKnowledge',
   R5ResourceType.MedicationRequest: 'MedicationRequest',
-  R5ResourceType.MedicationUsage: 'MedicationUsage',
+  R5ResourceType.MedicationStatement: 'MedicationStatement',
   R5ResourceType.MedicinalProductDefinition: 'MedicinalProductDefinition',
   R5ResourceType.MessageDefinition: 'MessageDefinition',
   R5ResourceType.MessageHeader: 'MessageHeader',
@@ -233,6 +237,7 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.SupplyRequest: 'SupplyRequest',
   R5ResourceType.Task: 'Task',
   R5ResourceType.TerminologyCapabilities: 'TerminologyCapabilities',
+  R5ResourceType.TestPlan: 'TestPlan',
   R5ResourceType.TestReport: 'TestReport',
   R5ResourceType.TestScript: 'TestScript',
   R5ResourceType.Transport: 'Transport',
@@ -3304,6 +3309,205 @@ Map<String, dynamic> _$$_MedicationRequestSubstitutionToJson(
   writeNotNull('_allowedBoolean', instance.allowedBooleanElement?.toJson());
   writeNotNull(
       'allowedCodeableConcept', instance.allowedCodeableConcept?.toJson());
+  writeNotNull('reason', instance.reason?.toJson());
+  return val;
+}
+
+_$_MedicationStatement _$$_MedicationStatementFromJson(
+        Map<String, dynamic> json) =>
+    _$_MedicationStatement(
+      resourceType: $enumDecodeNullable(
+              _$R5ResourceTypeEnumMap, json['resourceType'],
+              unknownValue: R5ResourceType.MedicationStatement) ??
+          R5ResourceType.MedicationStatement,
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
+      meta: json['meta'] == null
+          ? null
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
+      implicitRules: json['implicitRules'] == null
+          ? null
+          : FhirUri.fromJson(json['implicitRules']),
+      implicitRulesElement: json['_implicitRules'] == null
+          ? null
+          : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
+      language:
+          json['language'] == null ? null : FhirCode.fromJson(json['language']),
+      languageElement: json['_language'] == null
+          ? null
+          : Element.fromJson(json['_language'] as Map<String, dynamic>),
+      text: json['text'] == null
+          ? null
+          : Narrative.fromJson(json['text'] as Map<String, dynamic>),
+      contained: (json['contained'] as List<dynamic>?)
+          ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      identifier: (json['identifier'] as List<dynamic>?)
+          ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      partOf: (json['partOf'] as List<dynamic>?)
+          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      status: json['status'] == null ? null : FhirCode.fromJson(json['status']),
+      statusElement: json['_status'] == null
+          ? null
+          : Element.fromJson(json['_status'] as Map<String, dynamic>),
+      category: (json['category'] as List<dynamic>?)
+          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      medication: CodeableReference.fromJson(
+          json['medication'] as Map<String, dynamic>),
+      subject: Reference.fromJson(json['subject'] as Map<String, dynamic>),
+      encounter: json['encounter'] == null
+          ? null
+          : Reference.fromJson(json['encounter'] as Map<String, dynamic>),
+      effectiveDateTime: json['effectiveDateTime'] == null
+          ? null
+          : FhirDateTime.fromJson(json['effectiveDateTime']),
+      effectiveDateTimeElement: json['_effectiveDateTime'] == null
+          ? null
+          : Element.fromJson(
+              json['_effectiveDateTime'] as Map<String, dynamic>),
+      effectivePeriod: json['effectivePeriod'] == null
+          ? null
+          : Period.fromJson(json['effectivePeriod'] as Map<String, dynamic>),
+      effectiveTiming: json['effectiveTiming'] == null
+          ? null
+          : Timing.fromJson(json['effectiveTiming'] as Map<String, dynamic>),
+      dateAsserted: json['dateAsserted'] == null
+          ? null
+          : FhirDateTime.fromJson(json['dateAsserted']),
+      dateAssertedElement: json['_dateAsserted'] == null
+          ? null
+          : Element.fromJson(json['_dateAsserted'] as Map<String, dynamic>),
+      informationSource: (json['informationSource'] as List<dynamic>?)
+          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      derivedFrom: (json['derivedFrom'] as List<dynamic>?)
+          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      reason: (json['reason'] as List<dynamic>?)
+          ?.map((e) => CodeableReference.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      note: (json['note'] as List<dynamic>?)
+          ?.map((e) => Annotation.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      relatedClinicalInformation:
+          (json['relatedClinicalInformation'] as List<dynamic>?)
+              ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+              .toList(),
+      renderedDosageInstruction: json['renderedDosageInstruction'] == null
+          ? null
+          : FhirMarkdown.fromJson(json['renderedDosageInstruction']),
+      renderedDosageInstructionElement:
+          json['_renderedDosageInstruction'] == null
+              ? null
+              : Element.fromJson(
+                  json['_renderedDosageInstruction'] as Map<String, dynamic>),
+      dosage: (json['dosage'] as List<dynamic>?)
+          ?.map((e) => Dosage.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      adherence: json['adherence'] == null
+          ? null
+          : MedicationStatementAdherence.fromJson(
+              json['adherence'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$$_MedicationStatementToJson(
+    _$_MedicationStatement instance) {
+  final val = <String, dynamic>{
+    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('meta', instance.meta?.toJson());
+  writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
+  writeNotNull('language', instance.language?.toJson());
+  writeNotNull('_language', instance.languageElement?.toJson());
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull(
+      'contained', instance.contained?.map((e) => e.toJson()).toList());
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
+  writeNotNull(
+      'identifier', instance.identifier?.map((e) => e.toJson()).toList());
+  writeNotNull('partOf', instance.partOf?.map((e) => e.toJson()).toList());
+  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('_status', instance.statusElement?.toJson());
+  writeNotNull('category', instance.category?.map((e) => e.toJson()).toList());
+  val['medication'] = instance.medication.toJson();
+  val['subject'] = instance.subject.toJson();
+  writeNotNull('encounter', instance.encounter?.toJson());
+  writeNotNull('effectiveDateTime', instance.effectiveDateTime?.toJson());
+  writeNotNull(
+      '_effectiveDateTime', instance.effectiveDateTimeElement?.toJson());
+  writeNotNull('effectivePeriod', instance.effectivePeriod?.toJson());
+  writeNotNull('effectiveTiming', instance.effectiveTiming?.toJson());
+  writeNotNull('dateAsserted', instance.dateAsserted?.toJson());
+  writeNotNull('_dateAsserted', instance.dateAssertedElement?.toJson());
+  writeNotNull('informationSource',
+      instance.informationSource?.map((e) => e.toJson()).toList());
+  writeNotNull(
+      'derivedFrom', instance.derivedFrom?.map((e) => e.toJson()).toList());
+  writeNotNull('reason', instance.reason?.map((e) => e.toJson()).toList());
+  writeNotNull('note', instance.note?.map((e) => e.toJson()).toList());
+  writeNotNull('relatedClinicalInformation',
+      instance.relatedClinicalInformation?.map((e) => e.toJson()).toList());
+  writeNotNull('renderedDosageInstruction',
+      instance.renderedDosageInstruction?.toJson());
+  writeNotNull('_renderedDosageInstruction',
+      instance.renderedDosageInstructionElement?.toJson());
+  writeNotNull('dosage', instance.dosage?.map((e) => e.toJson()).toList());
+  writeNotNull('adherence', instance.adherence?.toJson());
+  return val;
+}
+
+_$_MedicationStatementAdherence _$$_MedicationStatementAdherenceFromJson(
+        Map<String, dynamic> json) =>
+    _$_MedicationStatementAdherence(
+      id: json['id'] as String?,
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      code: CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
+      reason: json['reason'] == null
+          ? null
+          : CodeableConcept.fromJson(json['reason'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$$_MedicationStatementAdherenceToJson(
+    _$_MedicationStatementAdherence instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
+  val['code'] = instance.code.toJson();
   writeNotNull('reason', instance.reason?.toJson());
   return val;
 }

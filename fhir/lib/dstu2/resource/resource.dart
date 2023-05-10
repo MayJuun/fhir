@@ -4,6 +4,7 @@
 import 'dart:convert';
 
 // Package imports:
+import 'package:hive/hive.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:yaml/yaml.dart';
 

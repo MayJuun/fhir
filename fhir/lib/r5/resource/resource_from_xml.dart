@@ -5,7 +5,6 @@ Resource _resourceFromXml(String xmlString) {
   myTransformer.parse(xmlString);
   final json = myTransformer.toBadgerfish();
   final map = jsonDecode(json) as Map<String, dynamic>;
-  // print(jsonEncode(map));
   if (map.keys.length == 1 &&
       ResourceUtils.resourceTypeFromStringMap.keys.contains(map.keys.first)) {
     (map[map.keys.first] as Map<String, dynamic>)['resourceType'] =
@@ -18,7 +17,6 @@ Resource _resourceFromXml(String xmlString) {
         map[map.keys.first] as Map<String, dynamic>,
         fhirObjectMap,
       );
-      // print(jsonEncode(newMap));
       return Resource.fromJson(newMap);
     }
   } else {

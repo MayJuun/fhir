@@ -66,6 +66,9 @@ Resource _updateMeta(Resource resource, {FhirMeta? meta}) {
     case R5ResourceType.BiologicallyDerivedProduct:
       return (resource as BiologicallyDerivedProduct)
           .copyWith(meta: _updateFhirMetaVersion(meta ?? resource.meta));
+    case R5ResourceType.BiologicallyDerivedProductDispense:
+      return (resource as BiologicallyDerivedProductDispense)
+          .copyWith(meta: _updateFhirMetaVersion(meta ?? resource.meta));
     case R5ResourceType.BodyStructure:
       return (resource as BodyStructure)
           .copyWith(meta: _updateFhirMetaVersion(meta ?? resource.meta));
@@ -147,6 +150,9 @@ Resource _updateMeta(Resource resource, {FhirMeta? meta}) {
     case R5ResourceType.Device:
       return (resource as Device)
           .copyWith(meta: _updateFhirMetaVersion(meta ?? resource.meta));
+    case R5ResourceType.DeviceAssociation:
+      return (resource as DeviceAssociation)
+          .copyWith(meta: _updateFhirMetaVersion(meta ?? resource.meta));
     case R5ResourceType.DeviceDefinition:
       return (resource as DeviceDefinition)
           .copyWith(meta: _updateFhirMetaVersion(meta ?? resource.meta));
@@ -170,6 +176,9 @@ Resource _updateMeta(Resource resource, {FhirMeta? meta}) {
           .copyWith(meta: _updateFhirMetaVersion(meta ?? resource.meta));
     case R5ResourceType.Encounter:
       return (resource as Encounter)
+          .copyWith(meta: _updateFhirMetaVersion(meta ?? resource.meta));
+    case R5ResourceType.EncounterHistory:
+      return (resource as EncounterHistory)
           .copyWith(meta: _updateFhirMetaVersion(meta ?? resource.meta));
     case R5ResourceType.Endpoint:
       return (resource as Endpoint)
@@ -252,6 +261,9 @@ Resource _updateMeta(Resource resource, {FhirMeta? meta}) {
     case R5ResourceType.InsurancePlan:
       return (resource as InsurancePlan)
           .copyWith(meta: _updateFhirMetaVersion(meta ?? resource.meta));
+    case R5ResourceType.InventoryItem:
+      return (resource as InventoryItem)
+          .copyWith(meta: _updateFhirMetaVersion(meta ?? resource.meta));
     case R5ResourceType.InventoryReport:
       return (resource as InventoryReport)
           .copyWith(meta: _updateFhirMetaVersion(meta ?? resource.meta));
@@ -293,6 +305,9 @@ Resource _updateMeta(Resource resource, {FhirMeta? meta}) {
           .copyWith(meta: _updateFhirMetaVersion(meta ?? resource.meta));
     case R5ResourceType.MedicationRequest:
       return (resource as MedicationRequest)
+          .copyWith(meta: _updateFhirMetaVersion(meta ?? resource.meta));
+    case R5ResourceType.MedicationStatement:
+      return (resource as MedicationStatement)
           .copyWith(meta: _updateFhirMetaVersion(meta ?? resource.meta));
     case R5ResourceType.MedicinalProductDefinition:
       return (resource as MedicinalProductDefinition)
@@ -465,6 +480,9 @@ Resource _updateMeta(Resource resource, {FhirMeta? meta}) {
     case R5ResourceType.TerminologyCapabilities:
       return (resource as TerminologyCapabilities)
           .copyWith(meta: _updateFhirMetaVersion(meta ?? resource.meta));
+    case R5ResourceType.TestPlan:
+      return (resource as TestPlan)
+          .copyWith(meta: _updateFhirMetaVersion(meta ?? resource.meta));
     case R5ResourceType.TestReport:
       return (resource as TestReport)
           .copyWith(meta: _updateFhirMetaVersion(meta ?? resource.meta));
@@ -483,7 +501,6 @@ Resource _updateMeta(Resource resource, {FhirMeta? meta}) {
     case R5ResourceType.VisionPrescription:
       return (resource as VisionPrescription)
           .copyWith(meta: _updateFhirMetaVersion(meta ?? resource.meta));
-
     default:
       throw FormatException(
           '${resource.resourceType} is not a defined resourceType');

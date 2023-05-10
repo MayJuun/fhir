@@ -31,6 +31,8 @@ Resource _resourceFromJson(Map<String, dynamic> json) {
       return Binary.fromJson(json);
     case 'BiologicallyDerivedProduct':
       return BiologicallyDerivedProduct.fromJson(json);
+    case 'BiologicallyDerivedProductDispense':
+      return BiologicallyDerivedProductDispense.fromJson(json);
     case 'BodyStructure':
       return BodyStructure.fromJson(json);
     case 'Bundle':
@@ -85,6 +87,8 @@ Resource _resourceFromJson(Map<String, dynamic> json) {
       return DetectedIssue.fromJson(json);
     case 'Device':
       return Device.fromJson(json);
+    case 'DeviceAssociation':
+      return DeviceAssociation.fromJson(json);
     case 'DeviceDefinition':
       return DeviceDefinition.fromJson(json);
     case 'DeviceDispense':
@@ -101,6 +105,8 @@ Resource _resourceFromJson(Map<String, dynamic> json) {
       return DocumentReference.fromJson(json);
     case 'Encounter':
       return Encounter.fromJson(json);
+    case 'EncounterHistory':
+      return EncounterHistory.fromJson(json);
     case 'Endpoint':
       return Endpoint.fromJson(json);
     case 'EnrollmentRequest':
@@ -155,6 +161,8 @@ Resource _resourceFromJson(Map<String, dynamic> json) {
       return Ingredient.fromJson(json);
     case 'InsurancePlan':
       return InsurancePlan.fromJson(json);
+    case 'InventoryItem':
+      return InventoryItem.fromJson(json);
     case 'InventoryReport':
       return InventoryReport.fromJson(json);
     case 'Invoice':
@@ -163,7 +171,7 @@ Resource _resourceFromJson(Map<String, dynamic> json) {
       return Library.fromJson(json);
     case 'Linkage':
       return Linkage.fromJson(json);
-    case 'List':
+    case 'FhirList':
       return FhirList.fromJson(json);
     case 'Location':
       return Location.fromJson(json);
@@ -183,6 +191,8 @@ Resource _resourceFromJson(Map<String, dynamic> json) {
       return MedicationKnowledge.fromJson(json);
     case 'MedicationRequest':
       return MedicationRequest.fromJson(json);
+    case 'MedicationStatement':
+      return MedicationStatement.fromJson(json);
     case 'MedicinalProductDefinition':
       return MedicinalProductDefinition.fromJson(json);
     case 'MessageDefinition':
@@ -297,6 +307,8 @@ Resource _resourceFromJson(Map<String, dynamic> json) {
       return Task.fromJson(json);
     case 'TerminologyCapabilities':
       return TerminologyCapabilities.fromJson(json);
+    case 'TestPlan':
+      return TestPlan.fromJson(json);
     case 'TestReport':
       return TestReport.fromJson(json);
     case 'TestScript':

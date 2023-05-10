@@ -29,6 +29,9 @@ Resource _newId(Resource resource) {
       return (resource as Binary).copyWith(id: newId());
     case R5ResourceType.BiologicallyDerivedProduct:
       return (resource as BiologicallyDerivedProduct).copyWith(id: newId());
+    case R5ResourceType.BiologicallyDerivedProductDispense:
+      return (resource as BiologicallyDerivedProductDispense)
+          .copyWith(id: newId());
     case R5ResourceType.BodyStructure:
       return (resource as BodyStructure).copyWith(id: newId());
     case R5ResourceType.Bundle:
@@ -83,6 +86,8 @@ Resource _newId(Resource resource) {
       return (resource as DetectedIssue).copyWith(id: newId());
     case R5ResourceType.Device:
       return (resource as Device).copyWith(id: newId());
+    case R5ResourceType.DeviceAssociation:
+      return (resource as DeviceAssociation).copyWith(id: newId());
     case R5ResourceType.DeviceDefinition:
       return (resource as DeviceDefinition).copyWith(id: newId());
     case R5ResourceType.DeviceDispense:
@@ -99,6 +104,8 @@ Resource _newId(Resource resource) {
       return (resource as DocumentReference).copyWith(id: newId());
     case R5ResourceType.Encounter:
       return (resource as Encounter).copyWith(id: newId());
+    case R5ResourceType.EncounterHistory:
+      return (resource as EncounterHistory).copyWith(id: newId());
     case R5ResourceType.Endpoint:
       return (resource as Endpoint).copyWith(id: newId());
     case R5ResourceType.EnrollmentRequest:
@@ -153,6 +160,8 @@ Resource _newId(Resource resource) {
       return (resource as Ingredient).copyWith(id: newId());
     case R5ResourceType.InsurancePlan:
       return (resource as InsurancePlan).copyWith(id: newId());
+    case R5ResourceType.InventoryItem:
+      return (resource as InventoryItem).copyWith(id: newId());
     case R5ResourceType.InventoryReport:
       return (resource as InventoryReport).copyWith(id: newId());
     case R5ResourceType.Invoice:
@@ -181,6 +190,8 @@ Resource _newId(Resource resource) {
       return (resource as MedicationKnowledge).copyWith(id: newId());
     case R5ResourceType.MedicationRequest:
       return (resource as MedicationRequest).copyWith(id: newId());
+    case R5ResourceType.MedicationStatement:
+      return (resource as MedicationStatement).copyWith(id: newId());
     case R5ResourceType.MedicinalProductDefinition:
       return (resource as MedicinalProductDefinition).copyWith(id: newId());
     case R5ResourceType.MessageDefinition:
@@ -295,6 +306,8 @@ Resource _newId(Resource resource) {
       return (resource as Task).copyWith(id: newId());
     case R5ResourceType.TerminologyCapabilities:
       return (resource as TerminologyCapabilities).copyWith(id: newId());
+    case R5ResourceType.TestPlan:
+      return (resource as TestPlan).copyWith(id: newId());
     case R5ResourceType.TestReport:
       return (resource as TestReport).copyWith(id: newId());
     case R5ResourceType.TestScript:
