@@ -217,7 +217,8 @@ mixin _$FhirExtension {
   ///  of the data types (see [Extensibility](extensibility.html) for a list).
   Attachment? get valueAttachment => throw _privateConstructorUsedError;
 
-  /// [valueAvailability] Value of extension - must be one of a constrained set
+  /// [valueAvailability] Value of extension - must be one of a constrained
+  ///  set
   ///  of the data types (see [Extensibility](extensibility.html) for a list).
   Availability? get valueAvailability => throw _privateConstructorUsedError;
 
@@ -2509,7 +2510,8 @@ class _$_FhirExtension extends _FhirExtension {
   @override
   final Attachment? valueAttachment;
 
-  /// [valueAvailability] Value of extension - must be one of a constrained set
+  /// [valueAvailability] Value of extension - must be one of a constrained
+  ///  set
   ///  of the data types (see [Extensibility](extensibility.html) for a list).
   @override
   final Availability? valueAvailability;
@@ -3243,7 +3245,8 @@ abstract class _FhirExtension extends FhirExtension {
   Attachment? get valueAttachment;
   @override
 
-  /// [valueAvailability] Value of extension - must be one of a constrained set
+  /// [valueAvailability] Value of extension - must be one of a constrained
+  ///  set
   ///  of the data types (see [Extensibility](extensibility.html) for a list).
   Availability? get valueAvailability;
   @override

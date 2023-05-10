@@ -2,10 +2,11 @@
 
 ## [0.10.0]
 
-* Been trying to do type generation for some DBs, mostly unsuccessful. Did leave in the TypeAdapter Generator for Hive, because it's only useful for the enum R4ResourceType
 * There are a number of classes with the same name in the Db/Server packages I've been using
 * To avoid any difficulties, I'm renaming all primitive classes to start with Fhir, and also Meta and List
-* Dependencies updated, Hive added
+* Dependencies updated
+* Added hive annotations to ResourceType enums
+* Updated R5 to current official version
 
 ## [0.9.5]
 

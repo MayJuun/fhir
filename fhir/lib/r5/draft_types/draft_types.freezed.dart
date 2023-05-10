@@ -35,9 +35,11 @@ mixin _$Population {
   ///  extension.
   /// [extension_] ("extension") May be used to represent additional
   ///  information that is not part of the basic definition of the element. To
-  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  make the use of extensions safe and manageable, there is a strict set
+  ///  of
   ///  governance  applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements that
+  ///  implementer can define an extension, there is a set of requirements
+  ///  that
   ///  SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
@@ -56,7 +58,8 @@ mixin _$Population {
   ///  elements on Resource or DomainResource (including cannot change the
   ///  meaning of modifierExtension itself).
   /// [modifierExtension] May be used to represent additional information that
-  ///  is not part of the basic definition of the element and that modifies the
+  ///  is not part of the basic definition of the element and that modifies
+  ///  the
   ///  understanding of the element in which it is contained and/or the
   ///  understanding of the containing element's descendants. Usually modifier
   ///  elements provide negation or qualification. To make the use of
@@ -66,7 +69,8 @@ mixin _$Population {
   ///  met as part of the definition of the extension. Applications processing
   ///  a resource are required to check for modifier extensions.Modifier
   ///  extensions SHALL NOT change the meaning of any elements on Resource or
-  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  DomainResource (including cannot change the meaning of
+  ///  modifierExtension
   ///  itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
@@ -365,9 +369,11 @@ class _$_Population extends _Population {
   ///  extension.
   /// [extension_] ("extension") May be used to represent additional
   ///  information that is not part of the basic definition of the element. To
-  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  make the use of extensions safe and manageable, there is a strict set
+  ///  of
   ///  governance  applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements that
+  ///  implementer can define an extension, there is a set of requirements
+  ///  that
   ///  SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
 
@@ -380,9 +386,11 @@ class _$_Population extends _Population {
   ///  extension.
   /// [extension_] ("extension") May be used to represent additional
   ///  information that is not part of the basic definition of the element. To
-  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  make the use of extensions safe and manageable, there is a strict set
+  ///  of
   ///  governance  applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements that
+  ///  implementer can define an extension, there is a set of requirements
+  ///  that
   ///  SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
@@ -408,7 +416,8 @@ class _$_Population extends _Population {
   ///  elements on Resource or DomainResource (including cannot change the
   ///  meaning of modifierExtension itself).
   /// [modifierExtension] May be used to represent additional information that
-  ///  is not part of the basic definition of the element and that modifies the
+  ///  is not part of the basic definition of the element and that modifies
+  ///  the
   ///  understanding of the element in which it is contained and/or the
   ///  understanding of the containing element's descendants. Usually modifier
   ///  elements provide negation or qualification. To make the use of
@@ -418,7 +427,8 @@ class _$_Population extends _Population {
   ///  met as part of the definition of the extension. Applications processing
   ///  a resource are required to check for modifier extensions.Modifier
   ///  extensions SHALL NOT change the meaning of any elements on Resource or
-  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  DomainResource (including cannot change the meaning of
+  ///  modifierExtension
   ///  itself).
   final List<FhirExtension>? _modifierExtension;
 
@@ -436,7 +446,8 @@ class _$_Population extends _Population {
   ///  elements on Resource or DomainResource (including cannot change the
   ///  meaning of modifierExtension itself).
   /// [modifierExtension] May be used to represent additional information that
-  ///  is not part of the basic definition of the element and that modifies the
+  ///  is not part of the basic definition of the element and that modifies
+  ///  the
   ///  understanding of the element in which it is contained and/or the
   ///  understanding of the containing element's descendants. Usually modifier
   ///  elements provide negation or qualification. To make the use of
@@ -446,7 +457,8 @@ class _$_Population extends _Population {
   ///  met as part of the definition of the extension. Applications processing
   ///  a resource are required to check for modifier extensions.Modifier
   ///  extensions SHALL NOT change the meaning of any elements on Resource or
-  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  DomainResource (including cannot change the meaning of
+  ///  modifierExtension
   ///  itself).
   @override
   List<FhirExtension>? get modifierExtension {
@@ -570,9 +582,11 @@ abstract class _Population extends Population {
   ///  extension.
   /// [extension_] ("extension") May be used to represent additional
   ///  information that is not part of the basic definition of the element. To
-  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  make the use of extensions safe and manageable, there is a strict set
+  ///  of
   ///  governance  applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements that
+  ///  implementer can define an extension, there is a set of requirements
+  ///  that
   ///  SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -592,7 +606,8 @@ abstract class _Population extends Population {
   ///  elements on Resource or DomainResource (including cannot change the
   ///  meaning of modifierExtension itself).
   /// [modifierExtension] May be used to represent additional information that
-  ///  is not part of the basic definition of the element and that modifies the
+  ///  is not part of the basic definition of the element and that modifies
+  ///  the
   ///  understanding of the element in which it is contained and/or the
   ///  understanding of the containing element's descendants. Usually modifier
   ///  elements provide negation or qualification. To make the use of
@@ -602,7 +617,8 @@ abstract class _Population extends Population {
   ///  met as part of the definition of the extension. Applications processing
   ///  a resource are required to check for modifier extensions.Modifier
   ///  extensions SHALL NOT change the meaning of any elements on Resource or
-  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  DomainResource (including cannot change the meaning of
+  ///  modifierExtension
   ///  itself).
   List<FhirExtension>? get modifierExtension;
   @override
@@ -659,9 +675,11 @@ mixin _$ProductShelfLife {
   ///  extension.
   /// [extension_] ("extension") May be used to represent additional
   ///  information that is not part of the basic definition of the element. To
-  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  make the use of extensions safe and manageable, there is a strict set
+  ///  of
   ///  governance  applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements that
+  ///  implementer can define an extension, there is a set of requirements
+  ///  that
   ///  SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
@@ -680,7 +698,8 @@ mixin _$ProductShelfLife {
   ///  elements on Resource or DomainResource (including cannot change the
   ///  meaning of modifierExtension itself).
   /// [modifierExtension] May be used to represent additional information that
-  ///  is not part of the basic definition of the element and that modifies the
+  ///  is not part of the basic definition of the element and that modifies
+  ///  the
   ///  understanding of the element in which it is contained and/or the
   ///  understanding of the containing element's descendants. Usually modifier
   ///  elements provide negation or qualification. To make the use of
@@ -690,7 +709,8 @@ mixin _$ProductShelfLife {
   ///  met as part of the definition of the extension. Applications processing
   ///  a resource are required to check for modifier extensions.Modifier
   ///  extensions SHALL NOT change the meaning of any elements on Resource or
-  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  DomainResource (including cannot change the meaning of
+  ///  modifierExtension
   ///  itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
@@ -703,7 +723,8 @@ mixin _$ProductShelfLife {
   ///  term and the controlled term identifier shall be specified.
   /// [type] This describes the shelf life, taking into account various
   ///  scenarios such as shelf life of the packaged Medicinal Product itself,
-  ///  shelf life after transformation where necessary and shelf life after the
+  ///  shelf life after transformation where necessary and shelf life after
+  ///  the
   ///  first opening of a bottle, etc. The shelf life type shall be specified
   ///  using an appropriate controlled vocabulary The controlled term and the
   ///  controlled term identifier shall be specified.
@@ -717,7 +738,8 @@ mixin _$ProductShelfLife {
   /// [periodDuration] The shelf life time period can be specified using a
   ///  numerical value for the period of time and its unit of time measurement
   ///  The unit of measurement shall be specified in accordance with ISO 11240
-  ///  and the resulting terminology The symbol and the symbol identifier shall
+  ///  and the resulting terminology The symbol and the symbol identifier
+  ///  shall
   ///  be used.
   FhirDuration? get periodDuration => throw _privateConstructorUsedError;
 
@@ -729,7 +751,8 @@ mixin _$ProductShelfLife {
   /// [periodString] The shelf life time period can be specified using a
   ///  numerical value for the period of time and its unit of time measurement
   ///  The unit of measurement shall be specified in accordance with ISO 11240
-  ///  and the resulting terminology The symbol and the symbol identifier shall
+  ///  and the resulting terminology The symbol and the symbol identifier
+  ///  shall
   ///  be used.
   String? get periodString => throw _privateConstructorUsedError;
 
@@ -988,9 +1011,11 @@ class _$_ProductShelfLife extends _ProductShelfLife {
   ///  extension.
   /// [extension_] ("extension") May be used to represent additional
   ///  information that is not part of the basic definition of the element. To
-  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  make the use of extensions safe and manageable, there is a strict set
+  ///  of
   ///  governance  applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements that
+  ///  implementer can define an extension, there is a set of requirements
+  ///  that
   ///  SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
 
@@ -1003,9 +1028,11 @@ class _$_ProductShelfLife extends _ProductShelfLife {
   ///  extension.
   /// [extension_] ("extension") May be used to represent additional
   ///  information that is not part of the basic definition of the element. To
-  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  make the use of extensions safe and manageable, there is a strict set
+  ///  of
   ///  governance  applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements that
+  ///  implementer can define an extension, there is a set of requirements
+  ///  that
   ///  SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
@@ -1031,7 +1058,8 @@ class _$_ProductShelfLife extends _ProductShelfLife {
   ///  elements on Resource or DomainResource (including cannot change the
   ///  meaning of modifierExtension itself).
   /// [modifierExtension] May be used to represent additional information that
-  ///  is not part of the basic definition of the element and that modifies the
+  ///  is not part of the basic definition of the element and that modifies
+  ///  the
   ///  understanding of the element in which it is contained and/or the
   ///  understanding of the containing element's descendants. Usually modifier
   ///  elements provide negation or qualification. To make the use of
@@ -1041,7 +1069,8 @@ class _$_ProductShelfLife extends _ProductShelfLife {
   ///  met as part of the definition of the extension. Applications processing
   ///  a resource are required to check for modifier extensions.Modifier
   ///  extensions SHALL NOT change the meaning of any elements on Resource or
-  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  DomainResource (including cannot change the meaning of
+  ///  modifierExtension
   ///  itself).
   final List<FhirExtension>? _modifierExtension;
 
@@ -1059,7 +1088,8 @@ class _$_ProductShelfLife extends _ProductShelfLife {
   ///  elements on Resource or DomainResource (including cannot change the
   ///  meaning of modifierExtension itself).
   /// [modifierExtension] May be used to represent additional information that
-  ///  is not part of the basic definition of the element and that modifies the
+  ///  is not part of the basic definition of the element and that modifies
+  ///  the
   ///  understanding of the element in which it is contained and/or the
   ///  understanding of the containing element's descendants. Usually modifier
   ///  elements provide negation or qualification. To make the use of
@@ -1069,7 +1099,8 @@ class _$_ProductShelfLife extends _ProductShelfLife {
   ///  met as part of the definition of the extension. Applications processing
   ///  a resource are required to check for modifier extensions.Modifier
   ///  extensions SHALL NOT change the meaning of any elements on Resource or
-  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  DomainResource (including cannot change the meaning of
+  ///  modifierExtension
   ///  itself).
   @override
   List<FhirExtension>? get modifierExtension {
@@ -1089,7 +1120,8 @@ class _$_ProductShelfLife extends _ProductShelfLife {
   ///  term and the controlled term identifier shall be specified.
   /// [type] This describes the shelf life, taking into account various
   ///  scenarios such as shelf life of the packaged Medicinal Product itself,
-  ///  shelf life after transformation where necessary and shelf life after the
+  ///  shelf life after transformation where necessary and shelf life after
+  ///  the
   ///  first opening of a bottle, etc. The shelf life type shall be specified
   ///  using an appropriate controlled vocabulary The controlled term and the
   ///  controlled term identifier shall be specified.
@@ -1104,7 +1136,8 @@ class _$_ProductShelfLife extends _ProductShelfLife {
   /// [periodDuration] The shelf life time period can be specified using a
   ///  numerical value for the period of time and its unit of time measurement
   ///  The unit of measurement shall be specified in accordance with ISO 11240
-  ///  and the resulting terminology The symbol and the symbol identifier shall
+  ///  and the resulting terminology The symbol and the symbol identifier
+  ///  shall
   ///  be used.
   @override
   final FhirDuration? periodDuration;
@@ -1117,7 +1150,8 @@ class _$_ProductShelfLife extends _ProductShelfLife {
   /// [periodString] The shelf life time period can be specified using a
   ///  numerical value for the period of time and its unit of time measurement
   ///  The unit of measurement shall be specified in accordance with ISO 11240
-  ///  and the resulting terminology The symbol and the symbol identifier shall
+  ///  and the resulting terminology The symbol and the symbol identifier
+  ///  shall
   ///  be used.
   @override
   final String? periodString;
@@ -1240,9 +1274,11 @@ abstract class _ProductShelfLife extends ProductShelfLife {
   ///  extension.
   /// [extension_] ("extension") May be used to represent additional
   ///  information that is not part of the basic definition of the element. To
-  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  make the use of extensions safe and manageable, there is a strict set
+  ///  of
   ///  governance  applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements that
+  ///  implementer can define an extension, there is a set of requirements
+  ///  that
   ///  SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -1262,7 +1298,8 @@ abstract class _ProductShelfLife extends ProductShelfLife {
   ///  elements on Resource or DomainResource (including cannot change the
   ///  meaning of modifierExtension itself).
   /// [modifierExtension] May be used to represent additional information that
-  ///  is not part of the basic definition of the element and that modifies the
+  ///  is not part of the basic definition of the element and that modifies
+  ///  the
   ///  understanding of the element in which it is contained and/or the
   ///  understanding of the containing element's descendants. Usually modifier
   ///  elements provide negation or qualification. To make the use of
@@ -1272,7 +1309,8 @@ abstract class _ProductShelfLife extends ProductShelfLife {
   ///  met as part of the definition of the extension. Applications processing
   ///  a resource are required to check for modifier extensions.Modifier
   ///  extensions SHALL NOT change the meaning of any elements on Resource or
-  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  DomainResource (including cannot change the meaning of
+  ///  modifierExtension
   ///  itself).
   List<FhirExtension>? get modifierExtension;
   @override
@@ -1285,7 +1323,8 @@ abstract class _ProductShelfLife extends ProductShelfLife {
   ///  term and the controlled term identifier shall be specified.
   /// [type] This describes the shelf life, taking into account various
   ///  scenarios such as shelf life of the packaged Medicinal Product itself,
-  ///  shelf life after transformation where necessary and shelf life after the
+  ///  shelf life after transformation where necessary and shelf life after
+  ///  the
   ///  first opening of a bottle, etc. The shelf life type shall be specified
   ///  using an appropriate controlled vocabulary The controlled term and the
   ///  controlled term identifier shall be specified.
@@ -1300,7 +1339,8 @@ abstract class _ProductShelfLife extends ProductShelfLife {
   /// [periodDuration] The shelf life time period can be specified using a
   ///  numerical value for the period of time and its unit of time measurement
   ///  The unit of measurement shall be specified in accordance with ISO 11240
-  ///  and the resulting terminology The symbol and the symbol identifier shall
+  ///  and the resulting terminology The symbol and the symbol identifier
+  ///  shall
   ///  be used.
   FhirDuration? get periodDuration;
   @override
@@ -1313,7 +1353,8 @@ abstract class _ProductShelfLife extends ProductShelfLife {
   /// [periodString] The shelf life time period can be specified using a
   ///  numerical value for the period of time and its unit of time measurement
   ///  The unit of measurement shall be specified in accordance with ISO 11240
-  ///  and the resulting terminology The symbol and the symbol identifier shall
+  ///  and the resulting terminology The symbol and the symbol identifier
+  ///  shall
   ///  be used.
   String? get periodString;
   @override
@@ -1358,9 +1399,11 @@ mixin _$MarketingStatus {
   ///  extension.
   /// [extension_] ("extension") May be used to represent additional
   ///  information that is not part of the basic definition of the element. To
-  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  make the use of extensions safe and manageable, there is a strict set
+  ///  of
   ///  governance  applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements that
+  ///  implementer can define an extension, there is a set of requirements
+  ///  that
   ///  SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
@@ -1379,7 +1422,8 @@ mixin _$MarketingStatus {
   ///  elements on Resource or DomainResource (including cannot change the
   ///  meaning of modifierExtension itself).
   /// [modifierExtension] May be used to represent additional information that
-  ///  is not part of the basic definition of the element and that modifies the
+  ///  is not part of the basic definition of the element and that modifies
+  ///  the
   ///  understanding of the element in which it is contained and/or the
   ///  understanding of the containing element's descendants. Usually modifier
   ///  elements provide negation or qualification. To make the use of
@@ -1389,7 +1433,8 @@ mixin _$MarketingStatus {
   ///  met as part of the definition of the extension. Applications processing
   ///  a resource are required to check for modifier extensions.Modifier
   ///  extensions SHALL NOT change the meaning of any elements on Resource or
-  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  DomainResource (including cannot change the meaning of
+  ///  modifierExtension
   ///  itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
@@ -1398,7 +1443,8 @@ mixin _$MarketingStatus {
   ///  granted shall be specified It should be specified using the ISO 3166 ‑
   ///  1 alpha-2 code elements.
   /// [country] The country in which the marketing authorisation has been
-  ///  granted shall be specified It should be specified using the ISO 3166 ‑ 1
+  ///  granted shall be specified It should be specified using the ISO 3166 ‑
+  ///  1
   ///  alpha-2 code elements.
   CodeableConcept? get country => throw _privateConstructorUsedError;
 
@@ -1418,7 +1464,8 @@ mixin _$MarketingStatus {
   ///  marketing of the medicinal product See ISO/TS 20443 for more
   ///  information and examples.
   /// [status] This attribute provides information on the status of the
-  ///  marketing of the medicinal product See ISO/TS 20443 for more information
+  ///  marketing of the medicinal product See ISO/TS 20443 for more
+  ///  information
   ///  and examples.
   CodeableConcept get status => throw _privateConstructorUsedError;
 
@@ -1445,7 +1492,8 @@ mixin _$MarketingStatus {
   ///  specified using the ISO 8601 date format NOTE “Placed on the market”
   ///  refers to the release of the Medicinal Product into the distribution
   ///  chain.
-  /// [restoreDate] The date when the Medicinal Product is placed on the market
+  /// [restoreDate] The date when the Medicinal Product is placed on the
+  ///  market
   ///  by the Marketing Authorisation Holder (or where applicable, the
   ///  manufacturer/distributor) in a country and/or jurisdiction shall be
   ///  provided A complete date consisting of day, month and year shall be
@@ -1738,9 +1786,11 @@ class _$_MarketingStatus extends _MarketingStatus {
   ///  extension.
   /// [extension_] ("extension") May be used to represent additional
   ///  information that is not part of the basic definition of the element. To
-  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  make the use of extensions safe and manageable, there is a strict set
+  ///  of
   ///  governance  applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements that
+  ///  implementer can define an extension, there is a set of requirements
+  ///  that
   ///  SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
 
@@ -1753,9 +1803,11 @@ class _$_MarketingStatus extends _MarketingStatus {
   ///  extension.
   /// [extension_] ("extension") May be used to represent additional
   ///  information that is not part of the basic definition of the element. To
-  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  make the use of extensions safe and manageable, there is a strict set
+  ///  of
   ///  governance  applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements that
+  ///  implementer can define an extension, there is a set of requirements
+  ///  that
   ///  SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
@@ -1781,7 +1833,8 @@ class _$_MarketingStatus extends _MarketingStatus {
   ///  elements on Resource or DomainResource (including cannot change the
   ///  meaning of modifierExtension itself).
   /// [modifierExtension] May be used to represent additional information that
-  ///  is not part of the basic definition of the element and that modifies the
+  ///  is not part of the basic definition of the element and that modifies
+  ///  the
   ///  understanding of the element in which it is contained and/or the
   ///  understanding of the containing element's descendants. Usually modifier
   ///  elements provide negation or qualification. To make the use of
@@ -1791,7 +1844,8 @@ class _$_MarketingStatus extends _MarketingStatus {
   ///  met as part of the definition of the extension. Applications processing
   ///  a resource are required to check for modifier extensions.Modifier
   ///  extensions SHALL NOT change the meaning of any elements on Resource or
-  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  DomainResource (including cannot change the meaning of
+  ///  modifierExtension
   ///  itself).
   final List<FhirExtension>? _modifierExtension;
 
@@ -1809,7 +1863,8 @@ class _$_MarketingStatus extends _MarketingStatus {
   ///  elements on Resource or DomainResource (including cannot change the
   ///  meaning of modifierExtension itself).
   /// [modifierExtension] May be used to represent additional information that
-  ///  is not part of the basic definition of the element and that modifies the
+  ///  is not part of the basic definition of the element and that modifies
+  ///  the
   ///  understanding of the element in which it is contained and/or the
   ///  understanding of the containing element's descendants. Usually modifier
   ///  elements provide negation or qualification. To make the use of
@@ -1819,7 +1874,8 @@ class _$_MarketingStatus extends _MarketingStatus {
   ///  met as part of the definition of the extension. Applications processing
   ///  a resource are required to check for modifier extensions.Modifier
   ///  extensions SHALL NOT change the meaning of any elements on Resource or
-  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  DomainResource (including cannot change the meaning of
+  ///  modifierExtension
   ///  itself).
   @override
   List<FhirExtension>? get modifierExtension {
@@ -1835,7 +1891,8 @@ class _$_MarketingStatus extends _MarketingStatus {
   ///  granted shall be specified It should be specified using the ISO 3166 ‑
   ///  1 alpha-2 code elements.
   /// [country] The country in which the marketing authorisation has been
-  ///  granted shall be specified It should be specified using the ISO 3166 ‑ 1
+  ///  granted shall be specified It should be specified using the ISO 3166 ‑
+  ///  1
   ///  alpha-2 code elements.
   @override
   final CodeableConcept? country;
@@ -1857,7 +1914,8 @@ class _$_MarketingStatus extends _MarketingStatus {
   ///  marketing of the medicinal product See ISO/TS 20443 for more
   ///  information and examples.
   /// [status] This attribute provides information on the status of the
-  ///  marketing of the medicinal product See ISO/TS 20443 for more information
+  ///  marketing of the medicinal product See ISO/TS 20443 for more
+  ///  information
   ///  and examples.
   @override
   final CodeableConcept status;
@@ -1886,7 +1944,8 @@ class _$_MarketingStatus extends _MarketingStatus {
   ///  specified using the ISO 8601 date format NOTE “Placed on the market”
   ///  refers to the release of the Medicinal Product into the distribution
   ///  chain.
-  /// [restoreDate] The date when the Medicinal Product is placed on the market
+  /// [restoreDate] The date when the Medicinal Product is placed on the
+  ///  market
   ///  by the Marketing Authorisation Holder (or where applicable, the
   ///  manufacturer/distributor) in a country and/or jurisdiction shall be
   ///  provided A complete date consisting of day, month and year shall be
@@ -1992,9 +2051,11 @@ abstract class _MarketingStatus extends MarketingStatus {
   ///  extension.
   /// [extension_] ("extension") May be used to represent additional
   ///  information that is not part of the basic definition of the element. To
-  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  make the use of extensions safe and manageable, there is a strict set
+  ///  of
   ///  governance  applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements that
+  ///  implementer can define an extension, there is a set of requirements
+  ///  that
   ///  SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -2014,7 +2075,8 @@ abstract class _MarketingStatus extends MarketingStatus {
   ///  elements on Resource or DomainResource (including cannot change the
   ///  meaning of modifierExtension itself).
   /// [modifierExtension] May be used to represent additional information that
-  ///  is not part of the basic definition of the element and that modifies the
+  ///  is not part of the basic definition of the element and that modifies
+  ///  the
   ///  understanding of the element in which it is contained and/or the
   ///  understanding of the containing element's descendants. Usually modifier
   ///  elements provide negation or qualification. To make the use of
@@ -2024,7 +2086,8 @@ abstract class _MarketingStatus extends MarketingStatus {
   ///  met as part of the definition of the extension. Applications processing
   ///  a resource are required to check for modifier extensions.Modifier
   ///  extensions SHALL NOT change the meaning of any elements on Resource or
-  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  DomainResource (including cannot change the meaning of
+  ///  modifierExtension
   ///  itself).
   List<FhirExtension>? get modifierExtension;
   @override
@@ -2033,7 +2096,8 @@ abstract class _MarketingStatus extends MarketingStatus {
   ///  granted shall be specified It should be specified using the ISO 3166 ‑
   ///  1 alpha-2 code elements.
   /// [country] The country in which the marketing authorisation has been
-  ///  granted shall be specified It should be specified using the ISO 3166 ‑ 1
+  ///  granted shall be specified It should be specified using the ISO 3166 ‑
+  ///  1
   ///  alpha-2 code elements.
   CodeableConcept? get country;
   @override
@@ -2055,7 +2119,8 @@ abstract class _MarketingStatus extends MarketingStatus {
   ///  marketing of the medicinal product See ISO/TS 20443 for more
   ///  information and examples.
   /// [status] This attribute provides information on the status of the
-  ///  marketing of the medicinal product See ISO/TS 20443 for more information
+  ///  marketing of the medicinal product See ISO/TS 20443 for more
+  ///  information
   ///  and examples.
   CodeableConcept get status;
   @override
@@ -2084,7 +2149,8 @@ abstract class _MarketingStatus extends MarketingStatus {
   ///  specified using the ISO 8601 date format NOTE “Placed on the market”
   ///  refers to the release of the Medicinal Product into the distribution
   ///  chain.
-  /// [restoreDate] The date when the Medicinal Product is placed on the market
+  /// [restoreDate] The date when the Medicinal Product is placed on the
+  ///  market
   ///  by the Marketing Authorisation Holder (or where applicable, the
   ///  manufacturer/distributor) in a country and/or jurisdiction shall be
   ///  provided A complete date consisting of day, month and year shall be
