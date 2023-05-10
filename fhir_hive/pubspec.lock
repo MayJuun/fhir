@@ -161,14 +161,13 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.3.1"
-  ffi:
-    dependency: transitive
+  fhir:
+    dependency: "direct main"
     description:
-      name: ffi
-      sha256: ed5337a5660c506388a9f012be0288fb38b49020ce2b45fe1f8b8323fe429f99
-      url: "https://pub.dev"
-    source: hosted
-    version: "2.0.2"
+      path: "../fhir"
+      relative: true
+    source: path
+    version: "0.10.0"
   file:
     dependency: transitive
     description:
@@ -185,24 +184,8 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.1.0"
-  flat_buffers:
-    dependency: transitive
-    description:
-      name: flat_buffers
-      sha256: "23e2ced0d8e8ecdffbd9f267f49a668c74438393b9acaeac1c724123e3764263"
-      url: "https://pub.dev"
-    source: hosted
-    version: "2.0.5"
-  freezed:
-    dependency: "direct dev"
-    description:
-      name: freezed
-      sha256: "73b58fe836dc05594451d8f740d97d5167886962d628b9f60a1fe945aa0a891f"
-      url: "https://pub.dev"
-    source: hosted
-    version: "2.3.3"
   freezed_annotation:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: freezed_annotation
       sha256: aeac15850ef1b38ee368d4c53ba9a847e900bb2c53a4db3f6881cbb3cb684338
@@ -241,14 +224,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.2.3"
-  hive_generator:
-    dependency: "direct dev"
-    description:
-      name: hive_generator
-      sha256: "65998cc4d2cd9680a3d9709d893d2f6bb15e6c1f92626c3f1fa650b4b3281521"
-      url: "https://pub.dev"
-    source: hosted
-    version: "2.0.0"
   http_methods:
     dependency: transitive
     description:
@@ -298,21 +273,13 @@ packages:
     source: hosted
     version: "0.6.7"
   json_annotation:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: json_annotation
       sha256: b10a7b2ff83d83c777edba3c6a0f97045ddadd56c944e1a23a3fdf43a1bf4467
       url: "https://pub.dev"
     source: hosted
     version: "4.8.1"
-  json_serializable:
-    dependency: "direct dev"
-    description:
-      name: json_serializable
-      sha256: "43793352f90efa5d8b251893a63d767b2f7c833120e3cc02adad55eefec04dc7"
-      url: "https://pub.dev"
-    source: hosted
-    version: "6.6.2"
   logging:
     dependency: transitive
     description:
@@ -353,14 +320,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.0.2"
-  objectbox:
-    dependency: "direct main"
-    description:
-      name: objectbox
-      sha256: a8a3052e430a1e6f91496dc4ffe7c2accab12d24ddfd09412f19541e9f2fe124
-      url: "https://pub.dev"
-    source: hosted
-    version: "2.0.0"
   package_config:
     dependency: transitive
     description:
@@ -449,22 +408,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.4"
-  source_gen:
-    dependency: transitive
-    description:
-      name: source_gen
-      sha256: b20e191de6964e98032573cecb1d2b169d96ba63fdb586d24dcd1003ba7e94f6
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.3.0"
-  source_helper:
-    dependency: transitive
-    description:
-      name: source_helper
-      sha256: "3b67aade1d52416149c633ba1bb36df44d97c6b51830c2198e934e3fca87ca1f"
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.3.3"
   source_map_stack_trace:
     dependency: transitive
     description:
@@ -578,7 +521,7 @@ packages:
     source: hosted
     version: "1.3.1"
   uuid:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: uuid
       sha256: "648e103079f7c64a36dc7d39369cabb358d377078a051d6ae2ad3aa539519313"
@@ -626,7 +569,7 @@ packages:
     source: hosted
     version: "6.3.0"
   xml2json:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: xml2json
       sha256: c8cb35b83cce879c2ea86951fd257f4e765b0030a0298b35cf94f2b3d0f32095
@@ -634,7 +577,7 @@ packages:
     source: hosted
     version: "5.3.6"
   yaml:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: yaml
       sha256: "75769501ea3489fca56601ff33454fe45507ea3bfb014161abc3b43ae25989d5"

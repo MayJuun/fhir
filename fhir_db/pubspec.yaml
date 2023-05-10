@@ -1,6 +1,6 @@
 name: fhir_db
 description: A wrapper for Sembast and SQFlite to enable easy, local and secure storage of fhir resources
-version: 0.9.5
+version: 0.10.0
 homepage: https://www.fhirfli.dev/
 repository: https://github.com/MayJuun/fhir/tree/main/fhir_db
 
@@ -8,15 +8,13 @@ environment:
   sdk: '>=2.19.0 <3.0.0'
 
 dependencies:
+  collection: ^1.17.0
   crypto: ^3.0.2
   encrypt: ^5.0.1
-  fhir: ^0.9.5
-  # fhir:
-  #   path: ../fhir
-  flutter:
-    sdk: flutter
+  # fhir: ^0.9.5
+  fhir:
+    path: ../fhir
   hive: ^2.2.3
-  hive_flutter: ^1.1.0
   path: ^1.8.3
   path_provider: ^2.0.13
   sembast: ^3.4.1+1

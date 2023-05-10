@@ -48,9 +48,9 @@ class ResourceDao {
   Future _addResourceType(String? password, R4ResourceType resourceType) async {
     final resourceTypes = await _getResourceTypes(password);
 
-    final type = ResourceUtils.resourceTypeToStringMap[resourceType];
+    final type = Resource.resourceTypeToString(resourceType);
 
-    if (!resourceTypes.contains(type) && type != null) {
+    if (!resourceTypes.contains(type)) {
       resourceTypes.add(type);
     }
 
@@ -103,7 +103,7 @@ class ResourceDao {
         if (dbResource != null) {
           final oldResource = Resource.fromJson(dbResource);
           final historyId =
-              '${ResourceUtils.resourceTypeToStringMap[oldResource.resourceType]}'
+              '${Resource.resourceTypeToString(oldResource.resourceType!)}'
               '/${resource.id}/_history/${oldResource.meta?.versionId}';
           await _history
               .record(historyId)
@@ -167,9 +167,17 @@ class ResourceDao {
         finder = Finder(filter: Filter.equals(field!, value));
       }
 
-      _setStoreType(ResourceUtils
-          .resourceTypeToStringMap[resource?.resourceType ?? resourceType]!);
-      return await _search(password, finder);
+      final type = Resource.resourceTypeToString(
+          resource?.resourceType ?? resourceType!);
+      if (type == null) {
+        throw const FormatException('Must have either: '
+            '\n1) a resource with a resourceType'
+            '\n2) a resourceType and an Id'
+            '\n3) a resourceType, a specific field, and the value of interest');
+      } else {
+        _setStoreType(type);
+        return await _search(password, finder);
+      }
     } else {
       throw const FormatException('Must have either: '
           '\n1) a resource with a resourceType'
@@ -196,19 +204,17 @@ class ResourceDao {
     }
     if (resourceTypeStrings != null) {
       for (final type in resourceTypeStrings) {
-        if (ResourceUtils.resourceTypeFromStringMap[type] != null) {
-          typeList.add(ResourceUtils.resourceTypeFromStringMap[type]!);
+        if (Resource.resourceTypeFromString(type) != null) {
+          typeList.add(Resource.resourceTypeFromString(type)!);
         }
       }
     }
 
     final List<Resource> resourceList = [];
     for (final type in typeList) {
-      if (ResourceUtils.resourceTypeToStringMap[type] != null) {
-        _setStoreType(ResourceUtils.resourceTypeToStringMap[type]!);
-        final finder = Finder(sortOrders: [SortOrder('id')]);
-        resourceList.addAll(await _search(password, finder));
-      }
+      _setStoreType(Resource.resourceTypeToString(type));
+      final finder = Finder(sortOrders: [SortOrder('id')]);
+      resourceList.addAll(await _search(password, finder));
     }
     return resourceList;
   }
@@ -242,8 +248,8 @@ class ResourceDao {
       } else {
         finder = Finder(filter: Filter.equals(field!, value));
       }
-      _setStoreType(ResourceUtils
-          .resourceTypeToStringMap[resource?.resourceType ?? resourceType]!);
+      _setStoreType(Resource.resourceTypeToString(
+          resource?.resourceType ?? resourceType!));
       return await _resourceStore.delete(await _db(password), finder: finder);
     } else {
       throw const FormatException('Must have either: '
@@ -259,13 +265,12 @@ class ResourceDao {
   Future deleteSingleType(String? password,
       {R4ResourceType? resourceType, Resource? resource}) async {
     if (resourceType != null || resource?.resourceType != null) {
-      final String? deleteType = ResourceUtils
-          .resourceTypeToStringMap[resourceType ?? resource?.resourceType];
-      if (deleteType != null) {
-        _setStoreType(deleteType);
-        await _resourceStore.delete(await _db(password));
-        await _removeResourceTypes(password, [deleteType]);
-      }
+      final String deleteType = Resource.resourceTypeToString(
+          resourceType ?? resource!.resourceType!);
+
+      _setStoreType(deleteType);
+      await _resourceStore.delete(await _db(password));
+      await _removeResourceTypes(password, [deleteType]);
     }
   }
 

@@ -19,6 +19,7 @@ part 'resource_from_xml.dart';
 part 'resource_new_id.dart';
 part 'resource_new_version.dart';
 part 'resource_types_enum.dart';
+part 'resource_utils.dart';
 
 /// This class ends up functioning mostly like an abstract superclass. Some of
 /// the fields in other classes contain a generic resource, so in order for
@@ -121,8 +122,7 @@ class Resource {
   String toYaml() => json2yaml(toJson());
 
   /// produce a string of the [resourceType]
-  String? get resourceTypeString =>
-      ResourceUtils.resourceTypeToStringMap[resourceType];
+  String? get resourceTypeString => resourceTypeToStringMap[resourceType];
 
   /// Convenience method to return a [Reference] referring to that [Resource]
   Reference get thisReference => Reference(
@@ -143,4 +143,10 @@ class Resource {
   /// field, adds 1 to the version number
   Resource updateVersion({FhirMeta? oldMeta}) =>
       _updateMeta(this, meta: oldMeta);
+
+  static R5ResourceType? resourceTypeFromString(String type) =>
+      resourceTypeFromStringMap[type];
+
+  static String resourceTypeToString(R5ResourceType type) =>
+      resourceTypeToStringMap[type]!;
 }

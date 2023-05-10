@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:fhir_hive/r4.dart';
+import 'package:fhir_hive/hive.dart';
 import 'package:shelf/shelf_io.dart' as shelf_io;
 
 import 'listening_controller.dart';

@@ -48,9 +48,9 @@ class ResourceDao {
   Future _addResourceType(String? password, R5ResourceType resourceType) async {
     final resourceTypes = await _getResourceTypes(password);
 
-    final type = ResourceUtils.resourceTypeToStringMap[resourceType];
+    final type = Resource.resourceTypeToString(resourceType);
 
-    if (!resourceTypes.contains(type) && type != null) {
+    if (!resourceTypes.contains(type)) {
       resourceTypes.add(type);
     }
 
@@ -72,7 +72,8 @@ class ResourceDao {
         return resource.id == null
             ? await _insert(password, resource)
             : (await find(null,
-                        resourceType: resource.resourceType, id: resource.id))
+                        resourceType: resource.resourceType,
+                        id: resource.id.toString()))
                     .isEmpty
                 ? await _insert(password, resource)
                 : await _update(password, resource);
@@ -90,47 +91,46 @@ class ResourceDao {
     await _resourceStore
         .record(newResource.id.toString())
         .put(await _db(password), newResource.toJson());
-
     return newResource;
   }
 
   /// functions used to update a resource who has already been saved into the
   /// db, will also save the old version
   Future<Resource> _update(String? password, Resource resource) async {
-    final String id = resource.id.toString();
-    final dbResource = await _resourceStore.record(id).get(await _db(password));
-    if (dbResource == null) {
-      return _insert(password, resource);
-    } else {
-      final oldResource = Resource.fromJson(dbResource);
-      final historyId =
-          '${ResourceUtils.resourceTypeToStringMap[oldResource.resourceType]}'
-          '/${resource.id}/_history/${oldResource.meta?.versionId}';
-      await _history
-          .record(historyId)
-          .put(await _db(password), oldResource.toJson());
-
-      Resource newResource;
-
-      switch (databaseMode) {
-        case mode.DatabaseMode.PERSISTENCE_DB:
-          newResource = oldResource.meta == null
-              ? resource.updateVersion().newIdIfNoId()
-              : oldResource.meta == null
-                  ? resource.updateVersion().newIdIfNoId()
-                  : resource
-                      .updateVersion(oldMeta: oldResource.meta)
-                      .newIdIfNoId();
-          break;
-        case mode.DatabaseMode.CACHE_DB:
-          newResource = resource;
-          break;
+    if (resource.resourceTypeString != null) {
+      if (resource.id != null) {
+        final dbResource = await _resourceStore
+            .record(resource.id!.toString())
+            .get(await _db(password));
+        if (dbResource != null) {
+          final oldResource = Resource.fromJson(dbResource);
+          final historyId =
+              '${Resource.resourceTypeToString(oldResource.resourceType!)}'
+              '/${resource.id}/_history/${oldResource.meta?.versionId}';
+          await _history
+              .record(historyId)
+              .put(await _db(password), oldResource.toJson());
+          Resource newResource;
+          switch (databaseMode) {
+            case mode.DatabaseMode.PERSISTENCE_DB:
+              newResource = resource.updateVersion(oldMeta: oldResource.meta);
+              break;
+            case mode.DatabaseMode.CACHE_DB:
+              newResource = resource;
+              break;
+          }
+          await _resourceStore
+              .record(resource.id!.toString())
+              .put(await _db(password), newResource.toJson(), merge: true);
+          return newResource;
+        } else {
+          return _insert(password, resource);
+        }
+      } else {
+        return _insert(password, resource);
       }
-
-      await _resourceStore
-          .record(id)
-          .put(await _db(password), newResource.toJson(), merge: true);
-      return newResource;
+    } else {
+      throw const FormatException('Resource passed must have a resourceType');
     }
   }
 
@@ -153,7 +153,7 @@ class ResourceDao {
     String? password, {
     Resource? resource,
     R5ResourceType? resourceType,
-    FhirId? id,
+    String? id,
     String? field,
     String? value,
   }) async {
@@ -164,14 +164,22 @@ class ResourceDao {
       if (resource != null) {
         finder = Finder(filter: Filter.equals('id', '${resource.id}'));
       } else if (resourceType != null && id != null) {
-        finder = Finder(filter: Filter.equals('id', '$id'));
+        finder = Finder(filter: Filter.equals('id', id));
       } else {
         finder = Finder(filter: Filter.equals(field!, value));
       }
 
-      _setStoreType(ResourceUtils
-          .resourceTypeToStringMap[resource?.resourceType ?? resourceType]!);
-      return await _search(password, finder);
+      final type = Resource.resourceTypeToString(
+          resource?.resourceType ?? resourceType!);
+      if (type == null) {
+        throw const FormatException('Must have either: '
+            '\n1) a resource with a resourceType'
+            '\n2) a resourceType and an Id'
+            '\n3) a resourceType, a specific field, and the value of interest');
+      } else {
+        _setStoreType(type);
+        return await _search(password, finder);
+      }
     } else {
       throw const FormatException('Must have either: '
           '\n1) a resource with a resourceType'
@@ -198,19 +206,17 @@ class ResourceDao {
     }
     if (resourceTypeStrings != null) {
       for (final type in resourceTypeStrings) {
-        if (ResourceUtils.resourceTypeFromStringMap[type] != null) {
-          typeList.add(ResourceUtils.resourceTypeFromStringMap[type]!);
+        if (Resource.resourceTypeFromString(type) != null) {
+          typeList.add(Resource.resourceTypeFromString(type)!);
         }
       }
     }
 
     final List<Resource> resourceList = [];
     for (final type in typeList) {
-      if (ResourceUtils.resourceTypeToStringMap[type] != null) {
-        _setStoreType(ResourceUtils.resourceTypeToStringMap[type]!);
-        final finder = Finder(sortOrders: [SortOrder('id')]);
-        resourceList.addAll(await _search(password, finder));
-      }
+      _setStoreType(Resource.resourceTypeToString(type));
+      final finder = Finder(sortOrders: [SortOrder('id')]);
+      resourceList.addAll(await _search(password, finder));
     }
     return resourceList;
   }
@@ -229,7 +235,7 @@ class ResourceDao {
     String? password,
     Resource? resource,
     R5ResourceType? resourceType,
-    FhirId? id,
+    String? id,
     String? field,
     String? value,
   ) async {
@@ -240,12 +246,12 @@ class ResourceDao {
       if (resource != null) {
         finder = Finder(filter: Filter.equals('id', '${resource.id}'));
       } else if (resourceType != null && id != null) {
-        finder = Finder(filter: Filter.equals('id', '$id'));
+        finder = Finder(filter: Filter.equals('id', id));
       } else {
         finder = Finder(filter: Filter.equals(field!, value));
       }
-      _setStoreType(ResourceUtils
-          .resourceTypeToStringMap[resource?.resourceType ?? resourceType]!);
+      _setStoreType(Resource.resourceTypeToString(
+          resource?.resourceType ?? resourceType!));
       return await _resourceStore.delete(await _db(password), finder: finder);
     } else {
       throw const FormatException('Must have either: '
@@ -261,13 +267,12 @@ class ResourceDao {
   Future deleteSingleType(String? password,
       {R5ResourceType? resourceType, Resource? resource}) async {
     if (resourceType != null || resource?.resourceType != null) {
-      final String? deleteType = ResourceUtils
-          .resourceTypeToStringMap[resourceType ?? resource?.resourceType];
-      if (deleteType != null) {
-        _setStoreType(deleteType);
-        await _resourceStore.delete(await _db(password));
-        await _removeResourceTypes(password, [deleteType]);
-      }
+      final String deleteType = Resource.resourceTypeToString(
+          resourceType ?? resource!.resourceType!);
+
+      _setStoreType(deleteType);
+      await _resourceStore.delete(await _db(password));
+      await _removeResourceTypes(password, [deleteType]);
     }
   }
 
