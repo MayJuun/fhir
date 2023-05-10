@@ -8,7 +8,7 @@ part of 'resource.dart';
 
 class R4ResourceTypeAdapter extends TypeAdapter<R4ResourceType> {
   @override
-  final int typeId = 1;
+  final int typeId = 0;
 
   @override
   R4ResourceType read(BinaryReader reader) {
@@ -754,7 +754,8 @@ Resource _$ResourceFromJson(Map<String, dynamic> json) => Resource()
   ..implicitRules = json['implicitRules'] == null
       ? null
       : FhirUri.fromJson(json['implicitRules'])
-  ..language = json['language'] == null ? null : Code.fromJson(json['language'])
+  ..language =
+      json['language'] == null ? null : FhirCode.fromJson(json['language'])
   ..text = json['text'] == null
       ? null
       : Narrative.fromJson(json['text'] as Map<String, dynamic>)

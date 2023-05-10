@@ -21,39 +21,32 @@ Claim _$ClaimFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Claim {
   @JsonKey(unknownEnumValue: R4ResourceType.Claim)
-  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
-  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  @HiveField(2)
   FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
-  @HiveField(4)
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  @HiveField(5)
   FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
-  @HiveField(6)
   Element? get languageElement => throw _privateConstructorUsedError;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -62,14 +55,12 @@ mixin _$Claim {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
-  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
 
   /// [contained] These resources do not have an independent existence apart
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
-  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -79,7 +70,6 @@ mixin _$Claim {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
-  @HiveField(9)
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [modifierExtension] May be used to represent additional information that
@@ -95,30 +85,26 @@ mixin _$Claim {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
   /// [identifier] A unique identifier assigned to this claim.
-  @HiveField(11)
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [status] The status of the resource instance.
-  @HiveField(12)
   FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
-  @HiveField(13)
   Element? get statusElement => throw _privateConstructorUsedError;
-  @HiveField(14)
-  @HiveField(15)
+
+  /// [type] The category of claim, e.g. oral, pharmacy, vision, institutional,
+  ///  professional.
   CodeableConcept get type => throw _privateConstructorUsedError;
 
   /// [subType] A finer grained suite of claim type codes which may convey
   /// additional information such as Inpatient vs Outpatient and/or a specialty
   ///  service.
-  @HiveField(16)
   CodeableConcept? get subType => throw _privateConstructorUsedError;
 
   /// [use] A code to indicate whether the nature of the request is: to request
@@ -126,118 +112,99 @@ mixin _$Claim {
   /// authorization and adjudication for provision in the future; or requesting
   /// the non-binding adjudication of the listed products and services which
   ///  could be provided in the future.
-  @HiveField(17)
   FhirCode? get use => throw _privateConstructorUsedError;
 
   /// [useElement] Extensions for use
   @JsonKey(name: '_use')
-  @HiveField(18)
   Element? get useElement => throw _privateConstructorUsedError;
 
   /// [patient] The party to whom the professional services and/or products
   /// have been supplied or are being considered and for whom actual or forecast
   ///  reimbursement is sought.
-  @HiveField(19)
   Reference get patient => throw _privateConstructorUsedError;
 
   /// [billablePeriod] The period for which charges are being submitted.
-  @HiveField(20)
   Period? get billablePeriod => throw _privateConstructorUsedError;
 
   /// [created] The date this resource was created.
-  @HiveField(21)
   FhirDateTime? get created => throw _privateConstructorUsedError;
 
   /// [createdElement] Extensions for created
   @JsonKey(name: '_created')
-  @HiveField(22)
   Element? get createdElement => throw _privateConstructorUsedError;
 
   /// [enterer] Individual who created the claim, predetermination or
   ///  preauthorization.
-  @HiveField(23)
   Reference? get enterer => throw _privateConstructorUsedError;
 
   /// [insurer] The Insurer who is target of the request.
-  @HiveField(24)
   Reference? get insurer => throw _privateConstructorUsedError;
-  @HiveField(25)
-  @HiveField(26)
+
+  /// [provider] The provider which is responsible for the claim,
+  ///  predetermination or preauthorization.
   Reference get provider => throw _privateConstructorUsedError;
 
   /// [priority] The provider-required urgency of processing the request.
   ///  Typical values include: stat, routine deferred.
-  @HiveField(27)
   CodeableConcept get priority => throw _privateConstructorUsedError;
 
   /// [fundsReserve] A code to indicate whether and for whom funds are to be
   ///  reserved for future claims.
-  @HiveField(28)
   CodeableConcept? get fundsReserve => throw _privateConstructorUsedError;
 
   /// [related] Other claims which are related to this claim such as prior
   ///  submissions or claims for related services or for the same event.
-  @HiveField(29)
   List<ClaimRelated>? get related => throw _privateConstructorUsedError;
 
   /// [prescription] Prescription to support the dispensing of pharmacy, device
   ///  or vision products.
-  @HiveField(30)
   Reference? get prescription => throw _privateConstructorUsedError;
 
   /// [originalPrescription] Original prescription which has been superseded by
-  @HiveField(31)
-  @HiveField(32)
+  /// this prescription to support the dispensing of pharmacy services,
+  ///  medications or products.
   Reference? get originalPrescription => throw _privateConstructorUsedError;
 
   /// [payee] The party to be reimbursed for cost of the products and services
   ///  according to the terms of the policy.
-  @HiveField(33)
   ClaimPayee? get payee => throw _privateConstructorUsedError;
 
   /// [referral] A reference to a referral resource.
-  @HiveField(34)
   Reference? get referral => throw _privateConstructorUsedError;
 
   /// [facility] Facility where the services were provided.
-  @HiveField(35)
   Reference? get facility => throw _privateConstructorUsedError;
 
   /// [careTeam] The members of the team who provided the products and
   ///  services.
-  @HiveField(36)
   List<ClaimCareTeam>? get careTeam => throw _privateConstructorUsedError;
-  @HiveField(37)
-  @HiveField(38)
+
+  /// [supportingInfo] Additional information codes regarding exceptions,
+  /// special considerations, the condition, situation, prior or concurrent
+  ///  issues.
   List<ClaimSupportingInfo>? get supportingInfo =>
       throw _privateConstructorUsedError;
 
   /// [diagnosis] Information about diagnoses relevant to the claim items.
-  @HiveField(39)
   List<ClaimDiagnosis>? get diagnosis => throw _privateConstructorUsedError;
 
   /// [procedure] Procedures performed on the patient relevant to the billing
   ///  items with the claim.
-  @HiveField(40)
   List<ClaimProcedure>? get procedure => throw _privateConstructorUsedError;
 
   /// [insurance] Financial instruments for reimbursement for the health care
   ///  products and services specified on the claim.
-  @HiveField(41)
   List<ClaimInsurance> get insurance => throw _privateConstructorUsedError;
 
   /// [accident] Details of an accident which resulted in injuries which
   ///  required the products and services listed in the claim.
-  @HiveField(42)
   ClaimAccident? get accident => throw _privateConstructorUsedError;
 
   /// [item] A claim line. Either a simple  product or service or a 'group' of
   ///  details which can each be a simple items or groups of sub-details.
-  @HiveField(43)
   List<ClaimItem>? get item => throw _privateConstructorUsedError;
 
   /// [total] The total value of the all the items in the claim.
-  @HiveField(44)
   Money? get total => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -252,98 +219,53 @@ abstract class $ClaimCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Claim)
-      @HiveField(0)
           R4ResourceType resourceType,
-      @HiveField(1)
-          String? id,
-      @HiveField(2)
-          FhirMeta? meta,
-      @HiveField(3)
-          FhirUri? implicitRules,
+      String? id,
+      FhirMeta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           Element? implicitRulesElement,
-      @HiveField(5)
-          FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           Element? languageElement,
-      @HiveField(7)
-          Narrative? text,
-      @HiveField(8)
-          List<Resource>? contained,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           List<FhirExtension>? extension_,
-      @HiveField(10)
-          List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          List<Identifier>? identifier,
-      @HiveField(12)
-          FhirCode? status,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      FhirCode? status,
       @JsonKey(name: '_status')
-      @HiveField(13)
           Element? statusElement,
-      @HiveField(14)
-      @HiveField(15)
-          CodeableConcept type,
-      @HiveField(16)
-          CodeableConcept? subType,
-      @HiveField(17)
-          FhirCode? use,
+      CodeableConcept type,
+      CodeableConcept? subType,
+      FhirCode? use,
       @JsonKey(name: '_use')
-      @HiveField(18)
           Element? useElement,
-      @HiveField(19)
-          Reference patient,
-      @HiveField(20)
-          Period? billablePeriod,
-      @HiveField(21)
-          FhirDateTime? created,
+      Reference patient,
+      Period? billablePeriod,
+      FhirDateTime? created,
       @JsonKey(name: '_created')
-      @HiveField(22)
           Element? createdElement,
-      @HiveField(23)
-          Reference? enterer,
-      @HiveField(24)
-          Reference? insurer,
-      @HiveField(25)
-      @HiveField(26)
-          Reference provider,
-      @HiveField(27)
-          CodeableConcept priority,
-      @HiveField(28)
-          CodeableConcept? fundsReserve,
-      @HiveField(29)
-          List<ClaimRelated>? related,
-      @HiveField(30)
-          Reference? prescription,
-      @HiveField(31)
-      @HiveField(32)
-          Reference? originalPrescription,
-      @HiveField(33)
-          ClaimPayee? payee,
-      @HiveField(34)
-          Reference? referral,
-      @HiveField(35)
-          Reference? facility,
-      @HiveField(36)
-          List<ClaimCareTeam>? careTeam,
-      @HiveField(37)
-      @HiveField(38)
-          List<ClaimSupportingInfo>? supportingInfo,
-      @HiveField(39)
-          List<ClaimDiagnosis>? diagnosis,
-      @HiveField(40)
-          List<ClaimProcedure>? procedure,
-      @HiveField(41)
-          List<ClaimInsurance> insurance,
-      @HiveField(42)
-          ClaimAccident? accident,
-      @HiveField(43)
-          List<ClaimItem>? item,
-      @HiveField(44)
-          Money? total});
+      Reference? enterer,
+      Reference? insurer,
+      Reference provider,
+      CodeableConcept priority,
+      CodeableConcept? fundsReserve,
+      List<ClaimRelated>? related,
+      Reference? prescription,
+      Reference? originalPrescription,
+      ClaimPayee? payee,
+      Reference? referral,
+      Reference? facility,
+      List<ClaimCareTeam>? careTeam,
+      List<ClaimSupportingInfo>? supportingInfo,
+      List<ClaimDiagnosis>? diagnosis,
+      List<ClaimProcedure>? procedure,
+      List<ClaimInsurance> insurance,
+      ClaimAccident? accident,
+      List<ClaimItem>? item,
+      Money? total});
 
   $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -449,7 +371,7 @@ class _$ClaimCopyWithImpl<$Res, $Val extends Claim>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -477,7 +399,7 @@ class _$ClaimCopyWithImpl<$Res, $Val extends Claim>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -493,7 +415,7 @@ class _$ClaimCopyWithImpl<$Res, $Val extends Claim>
       use: freezed == use
           ? _value.use
           : use // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       useElement: freezed == useElement
           ? _value.useElement
           : useElement // ignore: cast_nullable_to_non_nullable
@@ -862,98 +784,53 @@ abstract class _$$_ClaimCopyWith<$Res> implements $ClaimCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Claim)
-      @HiveField(0)
           R4ResourceType resourceType,
-      @HiveField(1)
-          String? id,
-      @HiveField(2)
-          FhirMeta? meta,
-      @HiveField(3)
-          FhirUri? implicitRules,
+      String? id,
+      FhirMeta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           Element? implicitRulesElement,
-      @HiveField(5)
-          FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           Element? languageElement,
-      @HiveField(7)
-          Narrative? text,
-      @HiveField(8)
-          List<Resource>? contained,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           List<FhirExtension>? extension_,
-      @HiveField(10)
-          List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          List<Identifier>? identifier,
-      @HiveField(12)
-          FhirCode? status,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      FhirCode? status,
       @JsonKey(name: '_status')
-      @HiveField(13)
           Element? statusElement,
-      @HiveField(14)
-      @HiveField(15)
-          CodeableConcept type,
-      @HiveField(16)
-          CodeableConcept? subType,
-      @HiveField(17)
-          FhirCode? use,
+      CodeableConcept type,
+      CodeableConcept? subType,
+      FhirCode? use,
       @JsonKey(name: '_use')
-      @HiveField(18)
           Element? useElement,
-      @HiveField(19)
-          Reference patient,
-      @HiveField(20)
-          Period? billablePeriod,
-      @HiveField(21)
-          FhirDateTime? created,
+      Reference patient,
+      Period? billablePeriod,
+      FhirDateTime? created,
       @JsonKey(name: '_created')
-      @HiveField(22)
           Element? createdElement,
-      @HiveField(23)
-          Reference? enterer,
-      @HiveField(24)
-          Reference? insurer,
-      @HiveField(25)
-      @HiveField(26)
-          Reference provider,
-      @HiveField(27)
-          CodeableConcept priority,
-      @HiveField(28)
-          CodeableConcept? fundsReserve,
-      @HiveField(29)
-          List<ClaimRelated>? related,
-      @HiveField(30)
-          Reference? prescription,
-      @HiveField(31)
-      @HiveField(32)
-          Reference? originalPrescription,
-      @HiveField(33)
-          ClaimPayee? payee,
-      @HiveField(34)
-          Reference? referral,
-      @HiveField(35)
-          Reference? facility,
-      @HiveField(36)
-          List<ClaimCareTeam>? careTeam,
-      @HiveField(37)
-      @HiveField(38)
-          List<ClaimSupportingInfo>? supportingInfo,
-      @HiveField(39)
-          List<ClaimDiagnosis>? diagnosis,
-      @HiveField(40)
-          List<ClaimProcedure>? procedure,
-      @HiveField(41)
-          List<ClaimInsurance> insurance,
-      @HiveField(42)
-          ClaimAccident? accident,
-      @HiveField(43)
-          List<ClaimItem>? item,
-      @HiveField(44)
-          Money? total});
+      Reference? enterer,
+      Reference? insurer,
+      Reference provider,
+      CodeableConcept priority,
+      CodeableConcept? fundsReserve,
+      List<ClaimRelated>? related,
+      Reference? prescription,
+      Reference? originalPrescription,
+      ClaimPayee? payee,
+      Reference? referral,
+      Reference? facility,
+      List<ClaimCareTeam>? careTeam,
+      List<ClaimSupportingInfo>? supportingInfo,
+      List<ClaimDiagnosis>? diagnosis,
+      List<ClaimProcedure>? procedure,
+      List<ClaimInsurance> insurance,
+      ClaimAccident? accident,
+      List<ClaimItem>? item,
+      Money? total});
 
   @override
   $FhirMetaCopyWith<$Res>? get meta;
@@ -1078,7 +955,7 @@ class __$$_ClaimCopyWithImpl<$Res> extends _$ClaimCopyWithImpl<$Res, _$_Claim>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -1106,7 +983,7 @@ class __$$_ClaimCopyWithImpl<$Res> extends _$ClaimCopyWithImpl<$Res, _$_Claim>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -1122,7 +999,7 @@ class __$$_ClaimCopyWithImpl<$Res> extends _$ClaimCopyWithImpl<$Res, _$_Claim>
       use: freezed == use
           ? _value.use
           : use // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       useElement: freezed == useElement
           ? _value.useElement
           : useElement // ignore: cast_nullable_to_non_nullable
@@ -1225,102 +1102,56 @@ class __$$_ClaimCopyWithImpl<$Res> extends _$ClaimCopyWithImpl<$Res, _$_Claim>
 
 /// @nodoc
 @JsonSerializable()
-@HiveType(typeId: 159)
 class _$_Claim extends _Claim {
   _$_Claim(
       {@JsonKey(unknownEnumValue: R4ResourceType.Claim)
-      @HiveField(0)
           this.resourceType = R4ResourceType.Claim,
-      @HiveField(1)
-          this.id,
-      @HiveField(2)
-          this.meta,
-      @HiveField(3)
-          this.implicitRules,
+      this.id,
+      this.meta,
+      this.implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           this.implicitRulesElement,
-      @HiveField(5)
-          this.language,
+      this.language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           this.languageElement,
-      @HiveField(7)
-          this.text,
-      @HiveField(8)
-          final List<Resource>? contained,
+      this.text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           final List<FhirExtension>? extension_,
-      @HiveField(10)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          final List<Identifier>? identifier,
-      @HiveField(12)
-          this.status,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      this.status,
       @JsonKey(name: '_status')
-      @HiveField(13)
           this.statusElement,
-      @HiveField(14)
-      @HiveField(15)
-          required this.type,
-      @HiveField(16)
-          this.subType,
-      @HiveField(17)
-          this.use,
+      required this.type,
+      this.subType,
+      this.use,
       @JsonKey(name: '_use')
-      @HiveField(18)
           this.useElement,
-      @HiveField(19)
-          required this.patient,
-      @HiveField(20)
-          this.billablePeriod,
-      @HiveField(21)
-          this.created,
+      required this.patient,
+      this.billablePeriod,
+      this.created,
       @JsonKey(name: '_created')
-      @HiveField(22)
           this.createdElement,
-      @HiveField(23)
-          this.enterer,
-      @HiveField(24)
-          this.insurer,
-      @HiveField(25)
-      @HiveField(26)
-          required this.provider,
-      @HiveField(27)
-          required this.priority,
-      @HiveField(28)
-          this.fundsReserve,
-      @HiveField(29)
-          final List<ClaimRelated>? related,
-      @HiveField(30)
-          this.prescription,
-      @HiveField(31)
-      @HiveField(32)
-          this.originalPrescription,
-      @HiveField(33)
-          this.payee,
-      @HiveField(34)
-          this.referral,
-      @HiveField(35)
-          this.facility,
-      @HiveField(36)
-          final List<ClaimCareTeam>? careTeam,
-      @HiveField(37)
-      @HiveField(38)
-          final List<ClaimSupportingInfo>? supportingInfo,
-      @HiveField(39)
-          final List<ClaimDiagnosis>? diagnosis,
-      @HiveField(40)
-          final List<ClaimProcedure>? procedure,
-      @HiveField(41)
-          required final List<ClaimInsurance> insurance,
-      @HiveField(42)
-          this.accident,
-      @HiveField(43)
-          final List<ClaimItem>? item,
-      @HiveField(44)
-          this.total})
+      this.enterer,
+      this.insurer,
+      required this.provider,
+      required this.priority,
+      this.fundsReserve,
+      final List<ClaimRelated>? related,
+      this.prescription,
+      this.originalPrescription,
+      this.payee,
+      this.referral,
+      this.facility,
+      final List<ClaimCareTeam>? careTeam,
+      final List<ClaimSupportingInfo>? supportingInfo,
+      final List<ClaimDiagnosis>? diagnosis,
+      final List<ClaimProcedure>? procedure,
+      required final List<ClaimInsurance> insurance,
+      this.accident,
+      final List<ClaimItem>? item,
+      this.total})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -1339,20 +1170,17 @@ class _$_Claim extends _Claim {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Claim)
-  @HiveField(0)
   final R4ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
   @override
-  @HiveField(1)
   final String? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
-  @HiveField(2)
   final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -1360,24 +1188,20 @@ class _$_Claim extends _Claim {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   @override
-  @HiveField(3)
   final FhirUri? implicitRules;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
-  @HiveField(4)
   final Element? implicitRulesElement;
 
   /// [language] The base language in which the resource is written.
   @override
-  @HiveField(5)
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] Extensions for language
   @override
   @JsonKey(name: '_language')
-  @HiveField(6)
   final Element? languageElement;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -1387,7 +1211,6 @@ class _$_Claim extends _Claim {
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
   @override
-  @HiveField(7)
   final Narrative? text;
 
   /// [contained] These resources do not have an independent existence apart
@@ -1401,7 +1224,6 @@ class _$_Claim extends _Claim {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   @override
-  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -1426,7 +1248,6 @@ class _$_Claim extends _Claim {
   ///  as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
-  @HiveField(9)
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
@@ -1464,7 +1285,6 @@ class _$_Claim extends _Claim {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   @override
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -1479,7 +1299,6 @@ class _$_Claim extends _Claim {
 
   /// [identifier] A unique identifier assigned to this claim.
   @override
-  @HiveField(11)
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
@@ -1490,24 +1309,22 @@ class _$_Claim extends _Claim {
 
   /// [status] The status of the resource instance.
   @override
-  @HiveField(12)
-  final Code? status;
+  final FhirCode? status;
 
   /// [statusElement] Extensions for status
   @override
   @JsonKey(name: '_status')
-  @HiveField(13)
   final Element? statusElement;
+
+  /// [type] The category of claim, e.g. oral, pharmacy, vision, institutional,
+  ///  professional.
   @override
-  @HiveField(14)
-  @HiveField(15)
   final CodeableConcept type;
 
   /// [subType] A finer grained suite of claim type codes which may convey
   /// additional information such as Inpatient vs Outpatient and/or a specialty
   ///  service.
   @override
-  @HiveField(16)
   final CodeableConcept? subType;
 
   /// [use] A code to indicate whether the nature of the request is: to request
@@ -1516,63 +1333,54 @@ class _$_Claim extends _Claim {
   /// the non-binding adjudication of the listed products and services which
   ///  could be provided in the future.
   @override
-  @HiveField(17)
-  final Code? use;
+  final FhirCode? use;
 
   /// [useElement] Extensions for use
   @override
   @JsonKey(name: '_use')
-  @HiveField(18)
   final Element? useElement;
 
   /// [patient] The party to whom the professional services and/or products
   /// have been supplied or are being considered and for whom actual or forecast
   ///  reimbursement is sought.
   @override
-  @HiveField(19)
   final Reference patient;
 
   /// [billablePeriod] The period for which charges are being submitted.
   @override
-  @HiveField(20)
   final Period? billablePeriod;
 
   /// [created] The date this resource was created.
   @override
-  @HiveField(21)
   final FhirDateTime? created;
 
   /// [createdElement] Extensions for created
   @override
   @JsonKey(name: '_created')
-  @HiveField(22)
   final Element? createdElement;
 
   /// [enterer] Individual who created the claim, predetermination or
   ///  preauthorization.
   @override
-  @HiveField(23)
   final Reference? enterer;
 
   /// [insurer] The Insurer who is target of the request.
   @override
-  @HiveField(24)
   final Reference? insurer;
+
+  /// [provider] The provider which is responsible for the claim,
+  ///  predetermination or preauthorization.
   @override
-  @HiveField(25)
-  @HiveField(26)
   final Reference provider;
 
   /// [priority] The provider-required urgency of processing the request.
   ///  Typical values include: stat, routine deferred.
   @override
-  @HiveField(27)
   final CodeableConcept priority;
 
   /// [fundsReserve] A code to indicate whether and for whom funds are to be
   ///  reserved for future claims.
   @override
-  @HiveField(28)
   final CodeableConcept? fundsReserve;
 
   /// [related] Other claims which are related to this claim such as prior
@@ -1582,7 +1390,6 @@ class _$_Claim extends _Claim {
   /// [related] Other claims which are related to this claim such as prior
   ///  submissions or claims for related services or for the same event.
   @override
-  @HiveField(29)
   List<ClaimRelated>? get related {
     final value = _related;
     if (value == null) return null;
@@ -1594,29 +1401,25 @@ class _$_Claim extends _Claim {
   /// [prescription] Prescription to support the dispensing of pharmacy, device
   ///  or vision products.
   @override
-  @HiveField(30)
   final Reference? prescription;
 
   /// [originalPrescription] Original prescription which has been superseded by
+  /// this prescription to support the dispensing of pharmacy services,
+  ///  medications or products.
   @override
-  @HiveField(31)
-  @HiveField(32)
   final Reference? originalPrescription;
 
   /// [payee] The party to be reimbursed for cost of the products and services
   ///  according to the terms of the policy.
   @override
-  @HiveField(33)
   final ClaimPayee? payee;
 
   /// [referral] A reference to a referral resource.
   @override
-  @HiveField(34)
   final Reference? referral;
 
   /// [facility] Facility where the services were provided.
   @override
-  @HiveField(35)
   final Reference? facility;
 
   /// [careTeam] The members of the team who provided the products and
@@ -1626,7 +1429,6 @@ class _$_Claim extends _Claim {
   /// [careTeam] The members of the team who provided the products and
   ///  services.
   @override
-  @HiveField(36)
   List<ClaimCareTeam>? get careTeam {
     final value = _careTeam;
     if (value == null) return null;
@@ -1635,10 +1437,15 @@ class _$_Claim extends _Claim {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [supportingInfo] Additional information codes regarding exceptions,
+  /// special considerations, the condition, situation, prior or concurrent
+  ///  issues.
   final List<ClaimSupportingInfo>? _supportingInfo;
+
+  /// [supportingInfo] Additional information codes regarding exceptions,
+  /// special considerations, the condition, situation, prior or concurrent
+  ///  issues.
   @override
-  @HiveField(37)
-  @HiveField(38)
   List<ClaimSupportingInfo>? get supportingInfo {
     final value = _supportingInfo;
     if (value == null) return null;
@@ -1652,7 +1459,6 @@ class _$_Claim extends _Claim {
 
   /// [diagnosis] Information about diagnoses relevant to the claim items.
   @override
-  @HiveField(39)
   List<ClaimDiagnosis>? get diagnosis {
     final value = _diagnosis;
     if (value == null) return null;
@@ -1668,7 +1474,6 @@ class _$_Claim extends _Claim {
   /// [procedure] Procedures performed on the patient relevant to the billing
   ///  items with the claim.
   @override
-  @HiveField(40)
   List<ClaimProcedure>? get procedure {
     final value = _procedure;
     if (value == null) return null;
@@ -1684,7 +1489,6 @@ class _$_Claim extends _Claim {
   /// [insurance] Financial instruments for reimbursement for the health care
   ///  products and services specified on the claim.
   @override
-  @HiveField(41)
   List<ClaimInsurance> get insurance {
     if (_insurance is EqualUnmodifiableListView) return _insurance;
     // ignore: implicit_dynamic_type
@@ -1694,7 +1498,6 @@ class _$_Claim extends _Claim {
   /// [accident] Details of an accident which resulted in injuries which
   ///  required the products and services listed in the claim.
   @override
-  @HiveField(42)
   final ClaimAccident? accident;
 
   /// [item] A claim line. Either a simple  product or service or a 'group' of
@@ -1704,7 +1507,6 @@ class _$_Claim extends _Claim {
   /// [item] A claim line. Either a simple  product or service or a 'group' of
   ///  details which can each be a simple items or groups of sub-details.
   @override
-  @HiveField(43)
   List<ClaimItem>? get item {
     final value = _item;
     if (value == null) return null;
@@ -1715,7 +1517,6 @@ class _$_Claim extends _Claim {
 
   /// [total] The total value of the all the items in the claim.
   @override
-  @HiveField(44)
   final Money? total;
 
   @override
@@ -1860,118 +1661,70 @@ class _$_Claim extends _Claim {
 abstract class _Claim extends Claim {
   factory _Claim(
       {@JsonKey(unknownEnumValue: R4ResourceType.Claim)
-      @HiveField(0)
           final R4ResourceType resourceType,
-      @HiveField(1)
-          final String? id,
-      @HiveField(2)
-          final FhirMeta? meta,
-      @HiveField(3)
-          final FhirUri? implicitRules,
+      final String? id,
+      final FhirMeta? meta,
+      final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           final Element? implicitRulesElement,
-      @HiveField(5)
-          final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           final Element? languageElement,
-      @HiveField(7)
-          final Narrative? text,
-      @HiveField(8)
-          final List<Resource>? contained,
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           final List<FhirExtension>? extension_,
-      @HiveField(10)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          final List<Identifier>? identifier,
-      @HiveField(12)
-          final Code? status,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final FhirCode? status,
       @JsonKey(name: '_status')
-      @HiveField(13)
           final Element? statusElement,
-      @HiveField(14)
-      @HiveField(15)
-          required final CodeableConcept type,
-      @HiveField(16)
-          final CodeableConcept? subType,
-      @HiveField(17)
-          final Code? use,
+      required final CodeableConcept type,
+      final CodeableConcept? subType,
+      final FhirCode? use,
       @JsonKey(name: '_use')
-      @HiveField(18)
           final Element? useElement,
-      @HiveField(19)
-          required final Reference patient,
-      @HiveField(20)
-          final Period? billablePeriod,
-      @HiveField(21)
-          final FhirDateTime? created,
+      required final Reference patient,
+      final Period? billablePeriod,
+      final FhirDateTime? created,
       @JsonKey(name: '_created')
-      @HiveField(22)
           final Element? createdElement,
-      @HiveField(23)
-          final Reference? enterer,
-      @HiveField(24)
-          final Reference? insurer,
-      @HiveField(25)
-      @HiveField(26)
-          required final Reference provider,
-      @HiveField(27)
-          required final CodeableConcept priority,
-      @HiveField(28)
-          final CodeableConcept? fundsReserve,
-      @HiveField(29)
-          final List<ClaimRelated>? related,
-      @HiveField(30)
-          final Reference? prescription,
-      @HiveField(31)
-      @HiveField(32)
-          final Reference? originalPrescription,
-      @HiveField(33)
-          final ClaimPayee? payee,
-      @HiveField(34)
-          final Reference? referral,
-      @HiveField(35)
-          final Reference? facility,
-      @HiveField(36)
-          final List<ClaimCareTeam>? careTeam,
-      @HiveField(37)
-      @HiveField(38)
-          final List<ClaimSupportingInfo>? supportingInfo,
-      @HiveField(39)
-          final List<ClaimDiagnosis>? diagnosis,
-      @HiveField(40)
-          final List<ClaimProcedure>? procedure,
-      @HiveField(41)
-          required final List<ClaimInsurance> insurance,
-      @HiveField(42)
-          final ClaimAccident? accident,
-      @HiveField(43)
-          final List<ClaimItem>? item,
-      @HiveField(44)
-          final Money? total}) = _$_Claim;
+      final Reference? enterer,
+      final Reference? insurer,
+      required final Reference provider,
+      required final CodeableConcept priority,
+      final CodeableConcept? fundsReserve,
+      final List<ClaimRelated>? related,
+      final Reference? prescription,
+      final Reference? originalPrescription,
+      final ClaimPayee? payee,
+      final Reference? referral,
+      final Reference? facility,
+      final List<ClaimCareTeam>? careTeam,
+      final List<ClaimSupportingInfo>? supportingInfo,
+      final List<ClaimDiagnosis>? diagnosis,
+      final List<ClaimProcedure>? procedure,
+      required final List<ClaimInsurance> insurance,
+      final ClaimAccident? accident,
+      final List<ClaimItem>? item,
+      final Money? total}) = _$_Claim;
   _Claim._() : super._();
 
   factory _Claim.fromJson(Map<String, dynamic> json) = _$_Claim.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Claim)
-  @HiveField(0)
   R4ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
-  @HiveField(1)
   String? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  @HiveField(2)
   FhirMeta? get meta;
   @override
 
@@ -1979,24 +1732,20 @@ abstract class _Claim extends Claim {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  @HiveField(3)
   FhirUri? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
-  @HiveField(4)
   Element? get implicitRulesElement;
   @override
 
   /// [language] The base language in which the resource is written.
-  @HiveField(5)
   FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
-  @HiveField(6)
   Element? get languageElement;
   @override
 
@@ -2006,7 +1755,6 @@ abstract class _Claim extends Claim {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
-  @HiveField(7)
   Narrative? get text;
   @override
 
@@ -2014,7 +1762,6 @@ abstract class _Claim extends Claim {
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
-  @HiveField(8)
   List<Resource>? get contained;
   @override
 
@@ -2025,7 +1772,6 @@ abstract class _Claim extends Claim {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
-  @HiveField(9)
   List<FhirExtension>? get extension_;
   @override
 
@@ -2042,34 +1788,30 @@ abstract class _Claim extends Claim {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
 
   /// [identifier] A unique identifier assigned to this claim.
-  @HiveField(11)
   List<Identifier>? get identifier;
   @override
 
   /// [status] The status of the resource instance.
-  @HiveField(12)
   FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
-  @HiveField(13)
   Element? get statusElement;
   @override
-  @HiveField(14)
-  @HiveField(15)
+
+  /// [type] The category of claim, e.g. oral, pharmacy, vision, institutional,
+  ///  professional.
   CodeableConcept get type;
   @override
 
   /// [subType] A finer grained suite of claim type codes which may convey
   /// additional information such as Inpatient vs Outpatient and/or a specialty
   ///  service.
-  @HiveField(16)
   CodeableConcept? get subType;
   @override
 
@@ -2078,141 +1820,122 @@ abstract class _Claim extends Claim {
   /// authorization and adjudication for provision in the future; or requesting
   /// the non-binding adjudication of the listed products and services which
   ///  could be provided in the future.
-  @HiveField(17)
   FhirCode? get use;
   @override
 
   /// [useElement] Extensions for use
   @JsonKey(name: '_use')
-  @HiveField(18)
   Element? get useElement;
   @override
 
   /// [patient] The party to whom the professional services and/or products
   /// have been supplied or are being considered and for whom actual or forecast
   ///  reimbursement is sought.
-  @HiveField(19)
   Reference get patient;
   @override
 
   /// [billablePeriod] The period for which charges are being submitted.
-  @HiveField(20)
   Period? get billablePeriod;
   @override
 
   /// [created] The date this resource was created.
-  @HiveField(21)
   FhirDateTime? get created;
   @override
 
   /// [createdElement] Extensions for created
   @JsonKey(name: '_created')
-  @HiveField(22)
   Element? get createdElement;
   @override
 
   /// [enterer] Individual who created the claim, predetermination or
   ///  preauthorization.
-  @HiveField(23)
   Reference? get enterer;
   @override
 
   /// [insurer] The Insurer who is target of the request.
-  @HiveField(24)
   Reference? get insurer;
   @override
-  @HiveField(25)
-  @HiveField(26)
+
+  /// [provider] The provider which is responsible for the claim,
+  ///  predetermination or preauthorization.
   Reference get provider;
   @override
 
   /// [priority] The provider-required urgency of processing the request.
   ///  Typical values include: stat, routine deferred.
-  @HiveField(27)
   CodeableConcept get priority;
   @override
 
   /// [fundsReserve] A code to indicate whether and for whom funds are to be
   ///  reserved for future claims.
-  @HiveField(28)
   CodeableConcept? get fundsReserve;
   @override
 
   /// [related] Other claims which are related to this claim such as prior
   ///  submissions or claims for related services or for the same event.
-  @HiveField(29)
   List<ClaimRelated>? get related;
   @override
 
   /// [prescription] Prescription to support the dispensing of pharmacy, device
   ///  or vision products.
-  @HiveField(30)
   Reference? get prescription;
   @override
 
   /// [originalPrescription] Original prescription which has been superseded by
-  @HiveField(31)
-  @HiveField(32)
+  /// this prescription to support the dispensing of pharmacy services,
+  ///  medications or products.
   Reference? get originalPrescription;
   @override
 
   /// [payee] The party to be reimbursed for cost of the products and services
   ///  according to the terms of the policy.
-  @HiveField(33)
   ClaimPayee? get payee;
   @override
 
   /// [referral] A reference to a referral resource.
-  @HiveField(34)
   Reference? get referral;
   @override
 
   /// [facility] Facility where the services were provided.
-  @HiveField(35)
   Reference? get facility;
   @override
 
   /// [careTeam] The members of the team who provided the products and
   ///  services.
-  @HiveField(36)
   List<ClaimCareTeam>? get careTeam;
   @override
-  @HiveField(37)
-  @HiveField(38)
+
+  /// [supportingInfo] Additional information codes regarding exceptions,
+  /// special considerations, the condition, situation, prior or concurrent
+  ///  issues.
   List<ClaimSupportingInfo>? get supportingInfo;
   @override
 
   /// [diagnosis] Information about diagnoses relevant to the claim items.
-  @HiveField(39)
   List<ClaimDiagnosis>? get diagnosis;
   @override
 
   /// [procedure] Procedures performed on the patient relevant to the billing
   ///  items with the claim.
-  @HiveField(40)
   List<ClaimProcedure>? get procedure;
   @override
 
   /// [insurance] Financial instruments for reimbursement for the health care
   ///  products and services specified on the claim.
-  @HiveField(41)
   List<ClaimInsurance> get insurance;
   @override
 
   /// [accident] Details of an accident which resulted in injuries which
   ///  required the products and services listed in the claim.
-  @HiveField(42)
   ClaimAccident? get accident;
   @override
 
   /// [item] A claim line. Either a simple  product or service or a 'group' of
   ///  details which can each be a simple items or groups of sub-details.
-  @HiveField(43)
   List<ClaimItem>? get item;
   @override
 
   /// [total] The total value of the all the items in the claim.
-  @HiveField(44)
   Money? get total;
   @override
   @JsonKey(ignore: true)
@@ -3046,7 +2769,6 @@ ClaimCareTeam _$ClaimCareTeamFromJson(Map<String, dynamic> json) {
 mixin _$ClaimCareTeam {
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
-  @HiveField(0)
   String? get id => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -3055,7 +2777,6 @@ mixin _$ClaimCareTeam {
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
-  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
@@ -3072,41 +2793,33 @@ mixin _$ClaimCareTeam {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
-  @HiveField(2)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
   /// [sequence] A number to uniquely identify care team entries.
-  @HiveField(3)
   FhirPositiveInt? get sequence => throw _privateConstructorUsedError;
 
   /// [sequenceElement] Extensions for sequence
-  @HiveField(4)
   @JsonKey(name: '_sequence')
   Element? get sequenceElement => throw _privateConstructorUsedError;
 
   /// [provider] Member of the team who provided the product or service.
-  @HiveField(5)
   Reference get provider => throw _privateConstructorUsedError;
 
   /// [responsible] The party who is billing and/or responsible for the claimed
   ///  products or services.
-  @HiveField(6)
-  Boolean? get responsible => throw _privateConstructorUsedError;
+  FhirBoolean? get responsible => throw _privateConstructorUsedError;
 
   /// [responsibleElement] Extensions for responsible
-  @HiveField(7)
   @JsonKey(name: '_responsible')
   Element? get responsibleElement => throw _privateConstructorUsedError;
 
   /// [role] The lead, assisting or supervising practitioner and their
   ///  discipline if a multidisciplinary team.
-  @HiveField(8)
   CodeableConcept? get role => throw _privateConstructorUsedError;
 
   /// [qualification] The qualification of the practitioner which is applicable
   ///  for this service.
-  @HiveField(9)
   CodeableConcept? get qualification => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -3122,16 +2835,16 @@ abstract class $ClaimCareTeamCopyWith<$Res> {
       _$ClaimCareTeamCopyWithImpl<$Res, ClaimCareTeam>;
   @useResult
   $Res call(
-      {@HiveField(0) String? id,
-      @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      @HiveField(2) List<FhirExtension>? modifierExtension,
-      @HiveField(3) PositiveInt? sequence,
-      @HiveField(4) @JsonKey(name: '_sequence') Element? sequenceElement,
-      @HiveField(5) Reference provider,
-      @HiveField(6) Boolean? responsible,
-      @HiveField(7) @JsonKey(name: '_responsible') Element? responsibleElement,
-      @HiveField(8) CodeableConcept? role,
-      @HiveField(9) CodeableConcept? qualification});
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      FhirPositiveInt? sequence,
+      @JsonKey(name: '_sequence') Element? sequenceElement,
+      Reference provider,
+      FhirBoolean? responsible,
+      @JsonKey(name: '_responsible') Element? responsibleElement,
+      CodeableConcept? role,
+      CodeableConcept? qualification});
 
   $ElementCopyWith<$Res>? get sequenceElement;
   $ReferenceCopyWith<$Res> get provider;
@@ -3180,7 +2893,7 @@ class _$ClaimCareTeamCopyWithImpl<$Res, $Val extends ClaimCareTeam>
       sequence: freezed == sequence
           ? _value.sequence
           : sequence // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       sequenceElement: freezed == sequenceElement
           ? _value.sequenceElement
           : sequenceElement // ignore: cast_nullable_to_non_nullable
@@ -3192,7 +2905,7 @@ class _$ClaimCareTeamCopyWithImpl<$Res, $Val extends ClaimCareTeam>
       responsible: freezed == responsible
           ? _value.responsible
           : responsible // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       responsibleElement: freezed == responsibleElement
           ? _value.responsibleElement
           : responsibleElement // ignore: cast_nullable_to_non_nullable
@@ -3274,16 +2987,16 @@ abstract class _$$_ClaimCareTeamCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@HiveField(0) String? id,
-      @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      @HiveField(2) List<FhirExtension>? modifierExtension,
-      @HiveField(3) PositiveInt? sequence,
-      @HiveField(4) @JsonKey(name: '_sequence') Element? sequenceElement,
-      @HiveField(5) Reference provider,
-      @HiveField(6) Boolean? responsible,
-      @HiveField(7) @JsonKey(name: '_responsible') Element? responsibleElement,
-      @HiveField(8) CodeableConcept? role,
-      @HiveField(9) CodeableConcept? qualification});
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      FhirPositiveInt? sequence,
+      @JsonKey(name: '_sequence') Element? sequenceElement,
+      Reference provider,
+      FhirBoolean? responsible,
+      @JsonKey(name: '_responsible') Element? responsibleElement,
+      CodeableConcept? role,
+      CodeableConcept? qualification});
 
   @override
   $ElementCopyWith<$Res>? get sequenceElement;
@@ -3335,7 +3048,7 @@ class __$$_ClaimCareTeamCopyWithImpl<$Res>
       sequence: freezed == sequence
           ? _value.sequence
           : sequence // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       sequenceElement: freezed == sequenceElement
           ? _value.sequenceElement
           : sequenceElement // ignore: cast_nullable_to_non_nullable
@@ -3347,7 +3060,7 @@ class __$$_ClaimCareTeamCopyWithImpl<$Res>
       responsible: freezed == responsible
           ? _value.responsible
           : responsible // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       responsibleElement: freezed == responsibleElement
           ? _value.responsibleElement
           : responsibleElement // ignore: cast_nullable_to_non_nullable
@@ -3366,32 +3079,18 @@ class __$$_ClaimCareTeamCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@HiveType(typeId: 160)
 class _$_ClaimCareTeam extends _ClaimCareTeam {
   _$_ClaimCareTeam(
-      {@HiveField(0)
-          this.id,
-      @HiveField(1)
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      @HiveField(2)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(3)
-          this.sequence,
-      @HiveField(4)
-      @JsonKey(name: '_sequence')
-          this.sequenceElement,
-      @HiveField(5)
-          required this.provider,
-      @HiveField(6)
-          this.responsible,
-      @HiveField(7)
-      @JsonKey(name: '_responsible')
-          this.responsibleElement,
-      @HiveField(8)
-          this.role,
-      @HiveField(9)
-          this.qualification})
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      this.sequence,
+      @JsonKey(name: '_sequence') this.sequenceElement,
+      required this.provider,
+      this.responsible,
+      @JsonKey(name: '_responsible') this.responsibleElement,
+      this.role,
+      this.qualification})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
         super._();
@@ -3402,7 +3101,6 @@ class _$_ClaimCareTeam extends _ClaimCareTeam {
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   @override
-  @HiveField(0)
   final String? id;
 
   /// [extension_] May be used to represent additional information that is not
@@ -3420,7 +3118,6 @@ class _$_ClaimCareTeam extends _ClaimCareTeam {
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   @override
-  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
     final value = _extension_;
@@ -3459,7 +3156,6 @@ class _$_ClaimCareTeam extends _ClaimCareTeam {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   @override
-  @HiveField(2)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -3471,42 +3167,35 @@ class _$_ClaimCareTeam extends _ClaimCareTeam {
 
   /// [sequence] A number to uniquely identify care team entries.
   @override
-  @HiveField(3)
-  final PositiveInt? sequence;
+  final FhirPositiveInt? sequence;
 
   /// [sequenceElement] Extensions for sequence
   @override
-  @HiveField(4)
   @JsonKey(name: '_sequence')
   final Element? sequenceElement;
 
   /// [provider] Member of the team who provided the product or service.
   @override
-  @HiveField(5)
   final Reference provider;
 
   /// [responsible] The party who is billing and/or responsible for the claimed
   ///  products or services.
   @override
-  @HiveField(6)
-  final Boolean? responsible;
+  final FhirBoolean? responsible;
 
   /// [responsibleElement] Extensions for responsible
   @override
-  @HiveField(7)
   @JsonKey(name: '_responsible')
   final Element? responsibleElement;
 
   /// [role] The lead, assisting or supervising practitioner and their
   ///  discipline if a multidisciplinary team.
   @override
-  @HiveField(8)
   final CodeableConcept? role;
 
   /// [qualification] The qualification of the practitioner which is applicable
   ///  for this service.
   @override
-  @HiveField(9)
   final CodeableConcept? qualification;
 
   @override
@@ -3570,29 +3259,16 @@ class _$_ClaimCareTeam extends _ClaimCareTeam {
 
 abstract class _ClaimCareTeam extends ClaimCareTeam {
   factory _ClaimCareTeam(
-      {@HiveField(0)
-          final String? id,
-      @HiveField(1)
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      @HiveField(2)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(3)
-          final PositiveInt? sequence,
-      @HiveField(4)
-      @JsonKey(name: '_sequence')
-          final Element? sequenceElement,
-      @HiveField(5)
-          required final Reference provider,
-      @HiveField(6)
-          final Boolean? responsible,
-      @HiveField(7)
-      @JsonKey(name: '_responsible')
-          final Element? responsibleElement,
-      @HiveField(8)
-          final CodeableConcept? role,
-      @HiveField(9)
-          final CodeableConcept? qualification}) = _$_ClaimCareTeam;
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final FhirPositiveInt? sequence,
+      @JsonKey(name: '_sequence') final Element? sequenceElement,
+      required final Reference provider,
+      final FhirBoolean? responsible,
+      @JsonKey(name: '_responsible') final Element? responsibleElement,
+      final CodeableConcept? role,
+      final CodeableConcept? qualification}) = _$_ClaimCareTeam;
   _ClaimCareTeam._() : super._();
 
   factory _ClaimCareTeam.fromJson(Map<String, dynamic> json) =
@@ -3602,7 +3278,6 @@ abstract class _ClaimCareTeam extends ClaimCareTeam {
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
-  @HiveField(0)
   String? get id;
   @override
 
@@ -3612,7 +3287,6 @@ abstract class _ClaimCareTeam extends ClaimCareTeam {
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
-  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
@@ -3630,47 +3304,39 @@ abstract class _ClaimCareTeam extends ClaimCareTeam {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
-  @HiveField(2)
   List<FhirExtension>? get modifierExtension;
   @override
 
   /// [sequence] A number to uniquely identify care team entries.
-  @HiveField(3)
   FhirPositiveInt? get sequence;
   @override
 
   /// [sequenceElement] Extensions for sequence
-  @HiveField(4)
   @JsonKey(name: '_sequence')
   Element? get sequenceElement;
   @override
 
   /// [provider] Member of the team who provided the product or service.
-  @HiveField(5)
   Reference get provider;
   @override
 
   /// [responsible] The party who is billing and/or responsible for the claimed
   ///  products or services.
-  @HiveField(6)
-  Boolean? get responsible;
+  FhirBoolean? get responsible;
   @override
 
   /// [responsibleElement] Extensions for responsible
-  @HiveField(7)
   @JsonKey(name: '_responsible')
   Element? get responsibleElement;
   @override
 
   /// [role] The lead, assisting or supervising practitioner and their
   ///  discipline if a multidisciplinary team.
-  @HiveField(8)
   CodeableConcept? get role;
   @override
 
   /// [qualification] The qualification of the practitioner which is applicable
   ///  for this service.
-  @HiveField(9)
   CodeableConcept? get qualification;
   @override
   @JsonKey(ignore: true)
@@ -3730,7 +3396,7 @@ mixin _$ClaimSupportingInfo {
   CodeableConcept? get code => throw _privateConstructorUsedError;
 
   /// [timingDate] The date when or period to which this information refers.
-  Date? get timingDate => throw _privateConstructorUsedError;
+  FhirDate? get timingDate => throw _privateConstructorUsedError;
 
   /// [timingDateElement] Extensions for timingDate
   @JsonKey(name: '_timingDate')
@@ -3742,7 +3408,7 @@ mixin _$ClaimSupportingInfo {
   /// [valueBoolean] Additional data or information such as resources,
   /// documents, images etc. including references to the data or the actual
   ///  inclusion of the data.
-  Boolean? get valueBoolean => throw _privateConstructorUsedError;
+  FhirBoolean? get valueBoolean => throw _privateConstructorUsedError;
 
   /// [valueBooleanElement] Extensions for valueBoolean
   @JsonKey(name: '_valueBoolean')
@@ -3796,10 +3462,10 @@ abstract class $ClaimSupportingInfoCopyWith<$Res> {
       @JsonKey(name: '_sequence') Element? sequenceElement,
       CodeableConcept category,
       CodeableConcept? code,
-      Date? timingDate,
+      FhirDate? timingDate,
       @JsonKey(name: '_timingDate') Element? timingDateElement,
       Period? timingPeriod,
-      Boolean? valueBoolean,
+      FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
@@ -3869,7 +3535,7 @@ class _$ClaimSupportingInfoCopyWithImpl<$Res, $Val extends ClaimSupportingInfo>
       sequence: freezed == sequence
           ? _value.sequence
           : sequence // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       sequenceElement: freezed == sequenceElement
           ? _value.sequenceElement
           : sequenceElement // ignore: cast_nullable_to_non_nullable
@@ -3885,7 +3551,7 @@ class _$ClaimSupportingInfoCopyWithImpl<$Res, $Val extends ClaimSupportingInfo>
       timingDate: freezed == timingDate
           ? _value.timingDate
           : timingDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       timingDateElement: freezed == timingDateElement
           ? _value.timingDateElement
           : timingDateElement // ignore: cast_nullable_to_non_nullable
@@ -3897,7 +3563,7 @@ class _$ClaimSupportingInfoCopyWithImpl<$Res, $Val extends ClaimSupportingInfo>
       valueBoolean: freezed == valueBoolean
           ? _value.valueBoolean
           : valueBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       valueBooleanElement: freezed == valueBooleanElement
           ? _value.valueBooleanElement
           : valueBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -4074,10 +3740,10 @@ abstract class _$$_ClaimSupportingInfoCopyWith<$Res>
       @JsonKey(name: '_sequence') Element? sequenceElement,
       CodeableConcept category,
       CodeableConcept? code,
-      Date? timingDate,
+      FhirDate? timingDate,
       @JsonKey(name: '_timingDate') Element? timingDateElement,
       Period? timingPeriod,
-      Boolean? valueBoolean,
+      FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
@@ -4156,7 +3822,7 @@ class __$$_ClaimSupportingInfoCopyWithImpl<$Res>
       sequence: freezed == sequence
           ? _value.sequence
           : sequence // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       sequenceElement: freezed == sequenceElement
           ? _value.sequenceElement
           : sequenceElement // ignore: cast_nullable_to_non_nullable
@@ -4172,7 +3838,7 @@ class __$$_ClaimSupportingInfoCopyWithImpl<$Res>
       timingDate: freezed == timingDate
           ? _value.timingDate
           : timingDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       timingDateElement: freezed == timingDateElement
           ? _value.timingDateElement
           : timingDateElement // ignore: cast_nullable_to_non_nullable
@@ -4184,7 +3850,7 @@ class __$$_ClaimSupportingInfoCopyWithImpl<$Res>
       valueBoolean: freezed == valueBoolean
           ? _value.valueBoolean
           : valueBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       valueBooleanElement: freezed == valueBooleanElement
           ? _value.valueBooleanElement
           : valueBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -4315,7 +3981,7 @@ class _$_ClaimSupportingInfo extends _ClaimSupportingInfo {
 
   /// [sequence] A number to uniquely identify supporting information entries.
   @override
-  final PositiveInt? sequence;
+  final FhirPositiveInt? sequence;
 
   /// [sequenceElement] Extensions for sequence
   @override
@@ -4335,7 +4001,7 @@ class _$_ClaimSupportingInfo extends _ClaimSupportingInfo {
 
   /// [timingDate] The date when or period to which this information refers.
   @override
-  final Date? timingDate;
+  final FhirDate? timingDate;
 
   /// [timingDateElement] Extensions for timingDate
   @override
@@ -4350,7 +4016,7 @@ class _$_ClaimSupportingInfo extends _ClaimSupportingInfo {
   /// documents, images etc. including references to the data or the actual
   ///  inclusion of the data.
   @override
-  final Boolean? valueBoolean;
+  final FhirBoolean? valueBoolean;
 
   /// [valueBooleanElement] Extensions for valueBoolean
   @override
@@ -4479,14 +4145,14 @@ abstract class _ClaimSupportingInfo extends ClaimSupportingInfo {
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final PositiveInt? sequence,
+      final FhirPositiveInt? sequence,
       @JsonKey(name: '_sequence') final Element? sequenceElement,
       required final CodeableConcept category,
       final CodeableConcept? code,
-      final Date? timingDate,
+      final FhirDate? timingDate,
       @JsonKey(name: '_timingDate') final Element? timingDateElement,
       final Period? timingPeriod,
-      final Boolean? valueBoolean,
+      final FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') final Element? valueBooleanElement,
       final String? valueString,
       @JsonKey(name: '_valueString') final Element? valueStringElement,
@@ -4553,7 +4219,7 @@ abstract class _ClaimSupportingInfo extends ClaimSupportingInfo {
   @override
 
   /// [timingDate] The date when or period to which this information refers.
-  Date? get timingDate;
+  FhirDate? get timingDate;
   @override
 
   /// [timingDateElement] Extensions for timingDate
@@ -4568,7 +4234,7 @@ abstract class _ClaimSupportingInfo extends ClaimSupportingInfo {
   /// [valueBoolean] Additional data or information such as resources,
   /// documents, images etc. including references to the data or the actual
   ///  inclusion of the data.
-  Boolean? get valueBoolean;
+  FhirBoolean? get valueBoolean;
   @override
 
   /// [valueBooleanElement] Extensions for valueBoolean
@@ -4748,7 +4414,7 @@ class _$ClaimDiagnosisCopyWithImpl<$Res, $Val extends ClaimDiagnosis>
       sequence: freezed == sequence
           ? _value.sequence
           : sequence // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       sequenceElement: freezed == sequenceElement
           ? _value.sequenceElement
           : sequenceElement // ignore: cast_nullable_to_non_nullable
@@ -4908,7 +4574,7 @@ class __$$_ClaimDiagnosisCopyWithImpl<$Res>
       sequence: freezed == sequence
           ? _value.sequence
           : sequence // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       sequenceElement: freezed == sequenceElement
           ? _value.sequenceElement
           : sequenceElement // ignore: cast_nullable_to_non_nullable
@@ -5028,7 +4694,7 @@ class _$_ClaimDiagnosis extends _ClaimDiagnosis {
 
   /// [sequence] A number to uniquely identify diagnosis entries.
   @override
-  final PositiveInt? sequence;
+  final FhirPositiveInt? sequence;
 
   /// [sequenceElement] Extensions for sequence
   @override
@@ -5134,7 +4800,7 @@ abstract class _ClaimDiagnosis extends ClaimDiagnosis {
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final PositiveInt? sequence,
+      final FhirPositiveInt? sequence,
       @JsonKey(name: '_sequence') final Element? sequenceElement,
       final CodeableConcept? diagnosisCodeableConcept,
       final Reference? diagnosisReference,
@@ -5225,7 +4891,6 @@ ClaimProcedure _$ClaimProcedureFromJson(Map<String, dynamic> json) {
 mixin _$ClaimProcedure {
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
-  @HiveField(0)
   String? get id => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -5234,7 +4899,6 @@ mixin _$ClaimProcedure {
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
-  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
@@ -5251,45 +4915,36 @@ mixin _$ClaimProcedure {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
-  @HiveField(2)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
   /// [sequence] A number to uniquely identify procedure entries.
-  @HiveField(3)
   FhirPositiveInt? get sequence => throw _privateConstructorUsedError;
 
   /// [sequenceElement] Extensions for sequence
-  @HiveField(4)
   @JsonKey(name: '_sequence')
   Element? get sequenceElement => throw _privateConstructorUsedError;
 
   /// [type] When the condition was observed or the relative ranking.
-  @HiveField(5)
   List<CodeableConcept>? get type => throw _privateConstructorUsedError;
 
   /// [date] Date and optionally time the procedure was performed.
-  @HiveField(6)
   FhirDateTime? get date => throw _privateConstructorUsedError;
 
   /// [dateElement] Extensions for date
-  @HiveField(7)
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
 
   /// [procedureCodeableConcept] The code or reference to a Procedure resource
   ///  which identifies the clinical intervention performed.
-  @HiveField(8)
   CodeableConcept? get procedureCodeableConcept =>
       throw _privateConstructorUsedError;
 
   /// [procedureReference] The code or reference to a Procedure resource which
   ///  identifies the clinical intervention performed.
-  @HiveField(9)
   Reference? get procedureReference => throw _privateConstructorUsedError;
 
   /// [udi] Unique Device Identifiers associated with this line item.
-  @HiveField(10)
   List<Reference>? get udi => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -5305,17 +4960,17 @@ abstract class $ClaimProcedureCopyWith<$Res> {
       _$ClaimProcedureCopyWithImpl<$Res, ClaimProcedure>;
   @useResult
   $Res call(
-      {@HiveField(0) String? id,
-      @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      @HiveField(2) List<FhirExtension>? modifierExtension,
-      @HiveField(3) PositiveInt? sequence,
-      @HiveField(4) @JsonKey(name: '_sequence') Element? sequenceElement,
-      @HiveField(5) List<CodeableConcept>? type,
-      @HiveField(6) FhirDateTime? date,
-      @HiveField(7) @JsonKey(name: '_date') Element? dateElement,
-      @HiveField(8) CodeableConcept? procedureCodeableConcept,
-      @HiveField(9) Reference? procedureReference,
-      @HiveField(10) List<Reference>? udi});
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      FhirPositiveInt? sequence,
+      @JsonKey(name: '_sequence') Element? sequenceElement,
+      List<CodeableConcept>? type,
+      FhirDateTime? date,
+      @JsonKey(name: '_date') Element? dateElement,
+      CodeableConcept? procedureCodeableConcept,
+      Reference? procedureReference,
+      List<Reference>? udi});
 
   $ElementCopyWith<$Res>? get sequenceElement;
   $ElementCopyWith<$Res>? get dateElement;
@@ -5364,7 +5019,7 @@ class _$ClaimProcedureCopyWithImpl<$Res, $Val extends ClaimProcedure>
       sequence: freezed == sequence
           ? _value.sequence
           : sequence // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       sequenceElement: freezed == sequenceElement
           ? _value.sequenceElement
           : sequenceElement // ignore: cast_nullable_to_non_nullable
@@ -5455,17 +5110,17 @@ abstract class _$$_ClaimProcedureCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@HiveField(0) String? id,
-      @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      @HiveField(2) List<FhirExtension>? modifierExtension,
-      @HiveField(3) PositiveInt? sequence,
-      @HiveField(4) @JsonKey(name: '_sequence') Element? sequenceElement,
-      @HiveField(5) List<CodeableConcept>? type,
-      @HiveField(6) FhirDateTime? date,
-      @HiveField(7) @JsonKey(name: '_date') Element? dateElement,
-      @HiveField(8) CodeableConcept? procedureCodeableConcept,
-      @HiveField(9) Reference? procedureReference,
-      @HiveField(10) List<Reference>? udi});
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      FhirPositiveInt? sequence,
+      @JsonKey(name: '_sequence') Element? sequenceElement,
+      List<CodeableConcept>? type,
+      FhirDateTime? date,
+      @JsonKey(name: '_date') Element? dateElement,
+      CodeableConcept? procedureCodeableConcept,
+      Reference? procedureReference,
+      List<Reference>? udi});
 
   @override
   $ElementCopyWith<$Res>? get sequenceElement;
@@ -5516,7 +5171,7 @@ class __$$_ClaimProcedureCopyWithImpl<$Res>
       sequence: freezed == sequence
           ? _value.sequence
           : sequence // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       sequenceElement: freezed == sequenceElement
           ? _value.sequenceElement
           : sequenceElement // ignore: cast_nullable_to_non_nullable
@@ -5551,34 +5206,19 @@ class __$$_ClaimProcedureCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@HiveType(typeId: 161)
 class _$_ClaimProcedure extends _ClaimProcedure {
   _$_ClaimProcedure(
-      {@HiveField(0)
-          this.id,
-      @HiveField(1)
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      @HiveField(2)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(3)
-          this.sequence,
-      @HiveField(4)
-      @JsonKey(name: '_sequence')
-          this.sequenceElement,
-      @HiveField(5)
-          final List<CodeableConcept>? type,
-      @HiveField(6)
-          this.date,
-      @HiveField(7)
-      @JsonKey(name: '_date')
-          this.dateElement,
-      @HiveField(8)
-          this.procedureCodeableConcept,
-      @HiveField(9)
-          this.procedureReference,
-      @HiveField(10)
-          final List<Reference>? udi})
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      this.sequence,
+      @JsonKey(name: '_sequence') this.sequenceElement,
+      final List<CodeableConcept>? type,
+      this.date,
+      @JsonKey(name: '_date') this.dateElement,
+      this.procedureCodeableConcept,
+      this.procedureReference,
+      final List<Reference>? udi})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
         _type = type,
@@ -5591,7 +5231,6 @@ class _$_ClaimProcedure extends _ClaimProcedure {
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   @override
-  @HiveField(0)
   final String? id;
 
   /// [extension_] May be used to represent additional information that is not
@@ -5609,7 +5248,6 @@ class _$_ClaimProcedure extends _ClaimProcedure {
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   @override
-  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
     final value = _extension_;
@@ -5648,7 +5286,6 @@ class _$_ClaimProcedure extends _ClaimProcedure {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   @override
-  @HiveField(2)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -5660,12 +5297,10 @@ class _$_ClaimProcedure extends _ClaimProcedure {
 
   /// [sequence] A number to uniquely identify procedure entries.
   @override
-  @HiveField(3)
-  final PositiveInt? sequence;
+  final FhirPositiveInt? sequence;
 
   /// [sequenceElement] Extensions for sequence
   @override
-  @HiveField(4)
   @JsonKey(name: '_sequence')
   final Element? sequenceElement;
 
@@ -5674,7 +5309,6 @@ class _$_ClaimProcedure extends _ClaimProcedure {
 
   /// [type] When the condition was observed or the relative ranking.
   @override
-  @HiveField(5)
   List<CodeableConcept>? get type {
     final value = _type;
     if (value == null) return null;
@@ -5685,25 +5319,21 @@ class _$_ClaimProcedure extends _ClaimProcedure {
 
   /// [date] Date and optionally time the procedure was performed.
   @override
-  @HiveField(6)
   final FhirDateTime? date;
 
   /// [dateElement] Extensions for date
   @override
-  @HiveField(7)
   @JsonKey(name: '_date')
   final Element? dateElement;
 
   /// [procedureCodeableConcept] The code or reference to a Procedure resource
   ///  which identifies the clinical intervention performed.
   @override
-  @HiveField(8)
   final CodeableConcept? procedureCodeableConcept;
 
   /// [procedureReference] The code or reference to a Procedure resource which
   ///  identifies the clinical intervention performed.
   @override
-  @HiveField(9)
   final Reference? procedureReference;
 
   /// [udi] Unique Device Identifiers associated with this line item.
@@ -5711,7 +5341,6 @@ class _$_ClaimProcedure extends _ClaimProcedure {
 
   /// [udi] Unique Device Identifiers associated with this line item.
   @override
-  @HiveField(10)
   List<Reference>? get udi {
     final value = _udi;
     if (value == null) return null;
@@ -5783,31 +5412,17 @@ class _$_ClaimProcedure extends _ClaimProcedure {
 
 abstract class _ClaimProcedure extends ClaimProcedure {
   factory _ClaimProcedure(
-      {@HiveField(0)
-          final String? id,
-      @HiveField(1)
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      @HiveField(2)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(3)
-          final PositiveInt? sequence,
-      @HiveField(4)
-      @JsonKey(name: '_sequence')
-          final Element? sequenceElement,
-      @HiveField(5)
-          final List<CodeableConcept>? type,
-      @HiveField(6)
-          final FhirDateTime? date,
-      @HiveField(7)
-      @JsonKey(name: '_date')
-          final Element? dateElement,
-      @HiveField(8)
-          final CodeableConcept? procedureCodeableConcept,
-      @HiveField(9)
-          final Reference? procedureReference,
-      @HiveField(10)
-          final List<Reference>? udi}) = _$_ClaimProcedure;
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final FhirPositiveInt? sequence,
+      @JsonKey(name: '_sequence') final Element? sequenceElement,
+      final List<CodeableConcept>? type,
+      final FhirDateTime? date,
+      @JsonKey(name: '_date') final Element? dateElement,
+      final CodeableConcept? procedureCodeableConcept,
+      final Reference? procedureReference,
+      final List<Reference>? udi}) = _$_ClaimProcedure;
   _ClaimProcedure._() : super._();
 
   factory _ClaimProcedure.fromJson(Map<String, dynamic> json) =
@@ -5817,7 +5432,6 @@ abstract class _ClaimProcedure extends ClaimProcedure {
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
-  @HiveField(0)
   String? get id;
   @override
 
@@ -5827,7 +5441,6 @@ abstract class _ClaimProcedure extends ClaimProcedure {
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
-  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
@@ -5845,51 +5458,42 @@ abstract class _ClaimProcedure extends ClaimProcedure {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
-  @HiveField(2)
   List<FhirExtension>? get modifierExtension;
   @override
 
   /// [sequence] A number to uniquely identify procedure entries.
-  @HiveField(3)
   FhirPositiveInt? get sequence;
   @override
 
   /// [sequenceElement] Extensions for sequence
-  @HiveField(4)
   @JsonKey(name: '_sequence')
   Element? get sequenceElement;
   @override
 
   /// [type] When the condition was observed or the relative ranking.
-  @HiveField(5)
   List<CodeableConcept>? get type;
   @override
 
   /// [date] Date and optionally time the procedure was performed.
-  @HiveField(6)
   FhirDateTime? get date;
   @override
 
   /// [dateElement] Extensions for date
-  @HiveField(7)
   @JsonKey(name: '_date')
   Element? get dateElement;
   @override
 
   /// [procedureCodeableConcept] The code or reference to a Procedure resource
   ///  which identifies the clinical intervention performed.
-  @HiveField(8)
   CodeableConcept? get procedureCodeableConcept;
   @override
 
   /// [procedureReference] The code or reference to a Procedure resource which
   ///  identifies the clinical intervention performed.
-  @HiveField(9)
   Reference? get procedureReference;
   @override
 
   /// [udi] Unique Device Identifiers associated with this line item.
-  @HiveField(10)
   List<Reference>? get udi;
   @override
   @JsonKey(ignore: true)
@@ -5942,7 +5546,7 @@ mixin _$ClaimInsurance {
 
   /// [focal] A flag to indicate that this Coverage is to be used for
   ///  adjudication of this claim when set to true.
-  Boolean? get focal => throw _privateConstructorUsedError;
+  FhirBoolean? get focal => throw _privateConstructorUsedError;
 
   /// [focalElement] Extensions for focal
   @JsonKey(name: '_focal')
@@ -5999,7 +5603,7 @@ abstract class $ClaimInsuranceCopyWith<$Res> {
       FhirPositiveInt? sequence,
       @JsonKey(name: '_sequence')
           Element? sequenceElement,
-      Boolean? focal,
+      FhirBoolean? focal,
       @JsonKey(name: '_focal')
           Element? focalElement,
       Identifier? identifier,
@@ -6064,7 +5668,7 @@ class _$ClaimInsuranceCopyWithImpl<$Res, $Val extends ClaimInsurance>
       sequence: freezed == sequence
           ? _value.sequence
           : sequence // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       sequenceElement: freezed == sequenceElement
           ? _value.sequenceElement
           : sequenceElement // ignore: cast_nullable_to_non_nullable
@@ -6072,7 +5676,7 @@ class _$ClaimInsuranceCopyWithImpl<$Res, $Val extends ClaimInsurance>
       focal: freezed == focal
           ? _value.focal
           : focal // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       focalElement: freezed == focalElement
           ? _value.focalElement
           : focalElement // ignore: cast_nullable_to_non_nullable
@@ -6193,7 +5797,7 @@ abstract class _$$_ClaimInsuranceCopyWith<$Res>
       FhirPositiveInt? sequence,
       @JsonKey(name: '_sequence')
           Element? sequenceElement,
-      Boolean? focal,
+      FhirBoolean? focal,
       @JsonKey(name: '_focal')
           Element? focalElement,
       Identifier? identifier,
@@ -6262,7 +5866,7 @@ class __$$_ClaimInsuranceCopyWithImpl<$Res>
       sequence: freezed == sequence
           ? _value.sequence
           : sequence // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       sequenceElement: freezed == sequenceElement
           ? _value.sequenceElement
           : sequenceElement // ignore: cast_nullable_to_non_nullable
@@ -6270,7 +5874,7 @@ class __$$_ClaimInsuranceCopyWithImpl<$Res>
       focal: freezed == focal
           ? _value.focal
           : focal // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       focalElement: freezed == focalElement
           ? _value.focalElement
           : focalElement // ignore: cast_nullable_to_non_nullable
@@ -6404,7 +6008,7 @@ class _$_ClaimInsurance extends _ClaimInsurance {
   /// [sequence] A number to uniquely identify insurance entries and provide a
   ///  sequence of coverages to convey coordination of benefit order.
   @override
-  final PositiveInt? sequence;
+  final FhirPositiveInt? sequence;
 
   /// [sequenceElement] Extensions for sequence
   @override
@@ -6414,7 +6018,7 @@ class _$_ClaimInsurance extends _ClaimInsurance {
   /// [focal] A flag to indicate that this Coverage is to be used for
   ///  adjudication of this claim when set to true.
   @override
-  final Boolean? focal;
+  final FhirBoolean? focal;
 
   /// [focalElement] Extensions for focal
   @override
@@ -6559,10 +6163,10 @@ abstract class _ClaimInsurance extends ClaimInsurance {
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final PositiveInt? sequence,
+      final FhirPositiveInt? sequence,
       @JsonKey(name: '_sequence')
           final Element? sequenceElement,
-      final Boolean? focal,
+      final FhirBoolean? focal,
       @JsonKey(name: '_focal')
           final Element? focalElement,
       final Identifier? identifier,
@@ -6624,7 +6228,7 @@ abstract class _ClaimInsurance extends ClaimInsurance {
 
   /// [focal] A flag to indicate that this Coverage is to be used for
   ///  adjudication of this claim when set to true.
-  Boolean? get focal;
+  FhirBoolean? get focal;
   @override
 
   /// [focalElement] Extensions for focal
@@ -6711,7 +6315,7 @@ mixin _$ClaimAccident {
 
   /// [date] Date of an accident event  related to the products and services
   ///  contained in the claim.
-  Date? get date => throw _privateConstructorUsedError;
+  FhirDate? get date => throw _privateConstructorUsedError;
 
   /// [dateElement] Extensions for date
   @JsonKey(name: '_date')
@@ -6744,7 +6348,7 @@ abstract class $ClaimAccidentCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Date? date,
+      FhirDate? date,
       @JsonKey(name: '_date') Element? dateElement,
       CodeableConcept? type,
       Address? locationAddress,
@@ -6794,7 +6398,7 @@ class _$ClaimAccidentCopyWithImpl<$Res, $Val extends ClaimAccident>
       date: freezed == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       dateElement: freezed == dateElement
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -6875,7 +6479,7 @@ abstract class _$$_ClaimAccidentCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Date? date,
+      FhirDate? date,
       @JsonKey(name: '_date') Element? dateElement,
       CodeableConcept? type,
       Address? locationAddress,
@@ -6927,7 +6531,7 @@ class __$$_ClaimAccidentCopyWithImpl<$Res>
       date: freezed == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       dateElement: freezed == dateElement
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -7037,7 +6641,7 @@ class _$_ClaimAccident extends _ClaimAccident {
   /// [date] Date of an accident event  related to the products and services
   ///  contained in the claim.
   @override
-  final Date? date;
+  final FhirDate? date;
 
   /// [dateElement] Extensions for date
   @override
@@ -7115,7 +6719,7 @@ abstract class _ClaimAccident extends ClaimAccident {
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final Date? date,
+      final FhirDate? date,
       @JsonKey(name: '_date') final Element? dateElement,
       final CodeableConcept? type,
       final Address? locationAddress,
@@ -7160,7 +6764,7 @@ abstract class _ClaimAccident extends ClaimAccident {
 
   /// [date] Date of an accident event  related to the products and services
   ///  contained in the claim.
-  Date? get date;
+  FhirDate? get date;
   @override
 
   /// [dateElement] Extensions for date
@@ -7281,7 +6885,7 @@ mixin _$ClaimItem {
 
   /// [servicedDate] The date or dates when the service or product was
   ///  supplied, performed or completed.
-  Date? get servicedDate => throw _privateConstructorUsedError;
+  FhirDate? get servicedDate => throw _privateConstructorUsedError;
 
   /// [servicedDateElement] Extensions for servicedDate
   @JsonKey(name: '_servicedDate')
@@ -7377,7 +6981,7 @@ abstract class $ClaimItemCopyWith<$Res> {
       CodeableConcept productOrService,
       List<CodeableConcept>? modifier,
       List<CodeableConcept>? programCode,
-      Date? servicedDate,
+      FhirDate? servicedDate,
       @JsonKey(name: '_servicedDate')
           Element? servicedDateElement,
       Period? servicedPeriod,
@@ -7476,7 +7080,7 @@ class _$ClaimItemCopyWithImpl<$Res, $Val extends ClaimItem>
       sequence: freezed == sequence
           ? _value.sequence
           : sequence // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       sequenceElement: freezed == sequenceElement
           ? _value.sequenceElement
           : sequenceElement // ignore: cast_nullable_to_non_nullable
@@ -7536,7 +7140,7 @@ class _$ClaimItemCopyWithImpl<$Res, $Val extends ClaimItem>
       servicedDate: freezed == servicedDate
           ? _value.servicedDate
           : servicedDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       servicedDateElement: freezed == servicedDateElement
           ? _value.servicedDateElement
           : servicedDateElement // ignore: cast_nullable_to_non_nullable
@@ -7568,7 +7172,7 @@ class _$ClaimItemCopyWithImpl<$Res, $Val extends ClaimItem>
       factor: freezed == factor
           ? _value.factor
           : factor // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       factorElement: freezed == factorElement
           ? _value.factorElement
           : factorElement // ignore: cast_nullable_to_non_nullable
@@ -7798,7 +7402,7 @@ abstract class _$$_ClaimItemCopyWith<$Res> implements $ClaimItemCopyWith<$Res> {
       CodeableConcept productOrService,
       List<CodeableConcept>? modifier,
       List<CodeableConcept>? programCode,
-      Date? servicedDate,
+      FhirDate? servicedDate,
       @JsonKey(name: '_servicedDate')
           Element? servicedDateElement,
       Period? servicedPeriod,
@@ -7909,7 +7513,7 @@ class __$$_ClaimItemCopyWithImpl<$Res>
       sequence: freezed == sequence
           ? _value.sequence
           : sequence // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       sequenceElement: freezed == sequenceElement
           ? _value.sequenceElement
           : sequenceElement // ignore: cast_nullable_to_non_nullable
@@ -7969,7 +7573,7 @@ class __$$_ClaimItemCopyWithImpl<$Res>
       servicedDate: freezed == servicedDate
           ? _value.servicedDate
           : servicedDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       servicedDateElement: freezed == servicedDateElement
           ? _value.servicedDateElement
           : servicedDateElement // ignore: cast_nullable_to_non_nullable
@@ -8001,7 +7605,7 @@ class __$$_ClaimItemCopyWithImpl<$Res>
       factor: freezed == factor
           ? _value.factor
           : factor // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       factorElement: freezed == factorElement
           ? _value.factorElement
           : factorElement // ignore: cast_nullable_to_non_nullable
@@ -8170,7 +7774,7 @@ class _$_ClaimItem extends _ClaimItem {
 
   /// [sequence] A number to uniquely identify item entries.
   @override
-  final PositiveInt? sequence;
+  final FhirPositiveInt? sequence;
 
   /// [sequenceElement] Extensions for sequence
   @override
@@ -8333,7 +7937,7 @@ class _$_ClaimItem extends _ClaimItem {
   /// [servicedDate] The date or dates when the service or product was
   ///  supplied, performed or completed.
   @override
-  final Date? servicedDate;
+  final FhirDate? servicedDate;
 
   /// [servicedDateElement] Extensions for servicedDate
   @override
@@ -8372,7 +7976,7 @@ class _$_ClaimItem extends _ClaimItem {
   /// of a Factor allows for a discount or surcharge multiplier to be applied to
   ///  a monetary amount.
   @override
-  final Decimal? factor;
+  final FhirDecimal? factor;
 
   /// [factorElement] Extensions for factor
   @override
@@ -8580,7 +8184,7 @@ abstract class _ClaimItem extends ClaimItem {
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final PositiveInt? sequence,
+      final FhirPositiveInt? sequence,
       @JsonKey(name: '_sequence')
           final Element? sequenceElement,
       final List<FhirPositiveInt>? careTeamSequence,
@@ -8600,7 +8204,7 @@ abstract class _ClaimItem extends ClaimItem {
       required final CodeableConcept productOrService,
       final List<CodeableConcept>? modifier,
       final List<CodeableConcept>? programCode,
-      final Date? servicedDate,
+      final FhirDate? servicedDate,
       @JsonKey(name: '_servicedDate')
           final Element? servicedDateElement,
       final Period? servicedPeriod,
@@ -8609,7 +8213,7 @@ abstract class _ClaimItem extends ClaimItem {
       final Reference? locationReference,
       final Quantity? quantity,
       final Money? unitPrice,
-      final Decimal? factor,
+      final FhirDecimal? factor,
       @JsonKey(name: '_factor')
           final Element? factorElement,
       final Money? net,
@@ -8723,7 +8327,7 @@ abstract class _ClaimItem extends ClaimItem {
 
   /// [servicedDate] The date or dates when the service or product was
   ///  supplied, performed or completed.
-  Date? get servicedDate;
+  FhirDate? get servicedDate;
   @override
 
   /// [servicedDateElement] Extensions for servicedDate
@@ -8981,7 +8585,7 @@ class _$ClaimDetailCopyWithImpl<$Res, $Val extends ClaimDetail>
       sequence: freezed == sequence
           ? _value.sequence
           : sequence // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       sequenceElement: freezed == sequenceElement
           ? _value.sequenceElement
           : sequenceElement // ignore: cast_nullable_to_non_nullable
@@ -9017,7 +8621,7 @@ class _$ClaimDetailCopyWithImpl<$Res, $Val extends ClaimDetail>
       factor: freezed == factor
           ? _value.factor
           : factor // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       factorElement: freezed == factorElement
           ? _value.factorElement
           : factorElement // ignore: cast_nullable_to_non_nullable
@@ -9220,7 +8824,7 @@ class __$$_ClaimDetailCopyWithImpl<$Res>
       sequence: freezed == sequence
           ? _value.sequence
           : sequence // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       sequenceElement: freezed == sequenceElement
           ? _value.sequenceElement
           : sequenceElement // ignore: cast_nullable_to_non_nullable
@@ -9256,7 +8860,7 @@ class __$$_ClaimDetailCopyWithImpl<$Res>
       factor: freezed == factor
           ? _value.factor
           : factor // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       factorElement: freezed == factorElement
           ? _value.factorElement
           : factorElement // ignore: cast_nullable_to_non_nullable
@@ -9378,7 +8982,7 @@ class _$_ClaimDetail extends _ClaimDetail {
 
   /// [sequence] A number to uniquely identify item entries.
   @override
-  final PositiveInt? sequence;
+  final FhirPositiveInt? sequence;
 
   /// [sequenceElement] Extensions for sequence
   @override
@@ -9444,7 +9048,7 @@ class _$_ClaimDetail extends _ClaimDetail {
   /// of a Factor allows for a discount or surcharge multiplier to be applied to
   ///  a monetary amount.
   @override
-  final Decimal? factor;
+  final FhirDecimal? factor;
 
   /// [factorElement] Extensions for factor
   @override
@@ -9565,7 +9169,7 @@ abstract class _ClaimDetail extends ClaimDetail {
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final PositiveInt? sequence,
+      final FhirPositiveInt? sequence,
       @JsonKey(name: '_sequence') final Element? sequenceElement,
       final CodeableConcept? revenue,
       final CodeableConcept? category,
@@ -9574,7 +9178,7 @@ abstract class _ClaimDetail extends ClaimDetail {
       final List<CodeableConcept>? programCode,
       final Quantity? quantity,
       final Money? unitPrice,
-      final Decimal? factor,
+      final FhirDecimal? factor,
       @JsonKey(name: '_factor') final Element? factorElement,
       final Money? net,
       final List<Reference>? udi,
@@ -9864,7 +9468,7 @@ class _$ClaimSubDetailCopyWithImpl<$Res, $Val extends ClaimSubDetail>
       sequence: freezed == sequence
           ? _value.sequence
           : sequence // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       sequenceElement: freezed == sequenceElement
           ? _value.sequenceElement
           : sequenceElement // ignore: cast_nullable_to_non_nullable
@@ -9900,7 +9504,7 @@ class _$ClaimSubDetailCopyWithImpl<$Res, $Val extends ClaimSubDetail>
       factor: freezed == factor
           ? _value.factor
           : factor // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       factorElement: freezed == factorElement
           ? _value.factorElement
           : factorElement // ignore: cast_nullable_to_non_nullable
@@ -10097,7 +9701,7 @@ class __$$_ClaimSubDetailCopyWithImpl<$Res>
       sequence: freezed == sequence
           ? _value.sequence
           : sequence // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       sequenceElement: freezed == sequenceElement
           ? _value.sequenceElement
           : sequenceElement // ignore: cast_nullable_to_non_nullable
@@ -10133,7 +9737,7 @@ class __$$_ClaimSubDetailCopyWithImpl<$Res>
       factor: freezed == factor
           ? _value.factor
           : factor // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       factorElement: freezed == factorElement
           ? _value.factorElement
           : factorElement // ignore: cast_nullable_to_non_nullable
@@ -10249,7 +9853,7 @@ class _$_ClaimSubDetail extends _ClaimSubDetail {
 
   /// [sequence] A number to uniquely identify item entries.
   @override
-  final PositiveInt? sequence;
+  final FhirPositiveInt? sequence;
 
   /// [sequenceElement] Extensions for sequence
   @override
@@ -10315,7 +9919,7 @@ class _$_ClaimSubDetail extends _ClaimSubDetail {
   /// of a Factor allows for a discount or surcharge multiplier to be applied to
   ///  a monetary amount.
   @override
-  final Decimal? factor;
+  final FhirDecimal? factor;
 
   /// [factorElement] Extensions for factor
   @override
@@ -10418,7 +10022,7 @@ abstract class _ClaimSubDetail extends ClaimSubDetail {
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final PositiveInt? sequence,
+      final FhirPositiveInt? sequence,
       @JsonKey(name: '_sequence') final Element? sequenceElement,
       final CodeableConcept? revenue,
       final CodeableConcept? category,
@@ -10427,7 +10031,7 @@ abstract class _ClaimSubDetail extends ClaimSubDetail {
       final List<CodeableConcept>? programCode,
       final Quantity? quantity,
       final Money? unitPrice,
-      final Decimal? factor,
+      final FhirDecimal? factor,
       @JsonKey(name: '_factor') final Element? factorElement,
       final Money? net,
       final List<Reference>? udi}) = _$_ClaimSubDetail;
@@ -10545,39 +10149,32 @@ ClaimResponse _$ClaimResponseFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$ClaimResponse {
   @JsonKey(unknownEnumValue: R4ResourceType.ClaimResponse)
-  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
-  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  @HiveField(2)
   FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
-  @HiveField(4)
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  @HiveField(5)
   FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
-  @HiveField(6)
   Element? get languageElement => throw _privateConstructorUsedError;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -10586,14 +10183,12 @@ mixin _$ClaimResponse {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
-  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
 
   /// [contained] These resources do not have an independent existence apart
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
-  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -10603,7 +10198,6 @@ mixin _$ClaimResponse {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
-  @HiveField(9)
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [modifierExtension] May be used to represent additional information that
@@ -10619,33 +10213,27 @@ mixin _$ClaimResponse {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
   /// [identifier] A unique identifier assigned to this claim response.
-  @HiveField(11)
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [status] The status of the resource instance.
-  @HiveField(12)
   FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
-  @HiveField(13)
   Element? get statusElement => throw _privateConstructorUsedError;
 
   /// [type] A finer grained suite of claim type codes which may convey
   /// additional information such as Inpatient vs Outpatient and/or a specialty
   ///  service.
-  @HiveField(14)
   CodeableConcept get type => throw _privateConstructorUsedError;
 
   /// [subType] A finer grained suite of claim type codes which may convey
   /// additional information such as Inpatient vs Outpatient and/or a specialty
   ///  service.
-  @HiveField(15)
   CodeableConcept? get subType => throw _privateConstructorUsedError;
 
   /// [use] A code to indicate whether the nature of the request is: to request
@@ -10653,138 +10241,112 @@ mixin _$ClaimResponse {
   /// authorization and adjudication for provision in the future; or requesting
   /// the non-binding adjudication of the listed products and services which
   ///  could be provided in the future.
-  @HiveField(16)
   FhirCode? get use => throw _privateConstructorUsedError;
 
   /// [useElement] Extensions for use
   @JsonKey(name: '_use')
-  @HiveField(17)
   Element? get useElement => throw _privateConstructorUsedError;
 
   /// [patient] The party to whom the professional services and/or products
   /// have been supplied or are being considered and for whom actual for facast
   ///  reimbursement is sought.
-  @HiveField(18)
   Reference get patient => throw _privateConstructorUsedError;
 
   /// [created] The date this resource was created.
-  @HiveField(19)
   FhirDateTime? get created => throw _privateConstructorUsedError;
 
   /// [createdElement] Extensions for created
   @JsonKey(name: '_created')
-  @HiveField(20)
   Element? get createdElement => throw _privateConstructorUsedError;
 
   /// [insurer] The party responsible for authorization, adjudication and
   ///  reimbursement.
-  @HiveField(21)
   Reference get insurer => throw _privateConstructorUsedError;
-  @HiveField(22)
-  @HiveField(23)
+
+  /// [requestor] The provider which is responsible for the claim,
+  ///  predetermination or preauthorization.
   Reference? get requestor => throw _privateConstructorUsedError;
 
   /// [request] Original request resource reference.
-  @HiveField(24)
   Reference? get request => throw _privateConstructorUsedError;
 
   /// [outcome] The outcome of the claim, predetermination, or preauthorization
   ///  processing.
-  @HiveField(25)
   FhirCode? get outcome => throw _privateConstructorUsedError;
 
   /// [outcomeElement] Extensions for outcome
   @JsonKey(name: '_outcome')
-  @HiveField(26)
   Element? get outcomeElement => throw _privateConstructorUsedError;
 
   /// [disposition] A human readable description of the status of the
   ///  adjudication.
-  @HiveField(27)
   String? get disposition => throw _privateConstructorUsedError;
 
   /// [dispositionElement] Extensions for disposition
   @JsonKey(name: '_disposition')
-  @HiveField(28)
   Element? get dispositionElement => throw _privateConstructorUsedError;
 
   /// [preAuthRef] Reference from the Insurer which is used in later
   ///  communications which refers to this adjudication.
-  @HiveField(29)
   String? get preAuthRef => throw _privateConstructorUsedError;
 
   /// [preAuthRefElement] Extensions for preAuthRef
   @JsonKey(name: '_preAuthRef')
-  @HiveField(30)
   Element? get preAuthRefElement => throw _privateConstructorUsedError;
 
   /// [preAuthPeriod] The time frame during which this authorization is
   ///  effective.
-  @HiveField(31)
   Period? get preAuthPeriod => throw _privateConstructorUsedError;
 
   /// [payeeType] Type of Party to be reimbursed: subscriber, provider, other.
-  @HiveField(32)
   CodeableConcept? get payeeType => throw _privateConstructorUsedError;
 
   /// [item] A claim line. Either a simple (a product or service) or a 'group'
   ///  of details which can also be a simple items or groups of sub-details.
-  @HiveField(33)
   List<ClaimResponseItem>? get item => throw _privateConstructorUsedError;
 
   /// [addItem] The first-tier service adjudications for payor added product or
   ///  service lines.
-  @HiveField(34)
   List<ClaimResponseAddItem>? get addItem => throw _privateConstructorUsedError;
 
   /// [adjudication] The adjudication results which are presented at the header
   ///  level rather than at the line-item or add-item levels.
-  @HiveField(35)
   List<ClaimResponseAdjudication>? get adjudication =>
       throw _privateConstructorUsedError;
 
   /// [total] Categorized monetary totals for the adjudication.
-  @HiveField(36)
   List<ClaimResponseTotal>? get total => throw _privateConstructorUsedError;
 
   /// [payment] Payment details for the adjudication of the claim.
-  @HiveField(37)
   ClaimResponsePayment? get payment => throw _privateConstructorUsedError;
 
   /// [fundsReserve] A code, used only on a response to a preauthorization, to
   ///  indicate whether the benefits payable have been reserved and for whom.
-  @HiveField(38)
   CodeableConcept? get fundsReserve => throw _privateConstructorUsedError;
 
   /// [formCode] A code for the form to be used for printing the content.
-  @HiveField(39)
   CodeableConcept? get formCode => throw _privateConstructorUsedError;
 
   /// [form] The actual form, by reference or inclusion, for printing the
   ///  content or an EOB.
-  @HiveField(40)
   Attachment? get form => throw _privateConstructorUsedError;
 
   /// [processNote] A note that describes or explains adjudication results in a
   ///  human readable form.
-  @HiveField(41)
   List<ClaimResponseProcessNote>? get processNote =>
       throw _privateConstructorUsedError;
 
   /// [communicationRequest] Request for additional supporting or authorizing
   ///  information.
-  @HiveField(42)
   List<Reference>? get communicationRequest =>
       throw _privateConstructorUsedError;
 
   /// [insurance] Financial instruments for reimbursement for the health care
   ///  products and services specified on the claim.
-  @HiveField(43)
   List<ClaimResponseInsurance>? get insurance =>
       throw _privateConstructorUsedError;
 
   /// [error] Errors encountered during the processing of the adjudication.
-  @HiveField(44)
   List<ClaimResponseError>? get error => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -10801,104 +10363,59 @@ abstract class $ClaimResponseCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.ClaimResponse)
-      @HiveField(0)
           R4ResourceType resourceType,
-      @HiveField(1)
-          String? id,
-      @HiveField(2)
-          FhirMeta? meta,
-      @HiveField(3)
-          FhirUri? implicitRules,
+      String? id,
+      FhirMeta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           Element? implicitRulesElement,
-      @HiveField(5)
-          FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           Element? languageElement,
-      @HiveField(7)
-          Narrative? text,
-      @HiveField(8)
-          List<Resource>? contained,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           List<FhirExtension>? extension_,
-      @HiveField(10)
-          List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          List<Identifier>? identifier,
-      @HiveField(12)
-          FhirCode? status,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      FhirCode? status,
       @JsonKey(name: '_status')
-      @HiveField(13)
           Element? statusElement,
-      @HiveField(14)
-          CodeableConcept type,
-      @HiveField(15)
-          CodeableConcept? subType,
-      @HiveField(16)
-          FhirCode? use,
+      CodeableConcept type,
+      CodeableConcept? subType,
+      FhirCode? use,
       @JsonKey(name: '_use')
-      @HiveField(17)
           Element? useElement,
-      @HiveField(18)
-          Reference patient,
-      @HiveField(19)
-          FhirDateTime? created,
+      Reference patient,
+      FhirDateTime? created,
       @JsonKey(name: '_created')
-      @HiveField(20)
           Element? createdElement,
-      @HiveField(21)
-          Reference insurer,
-      @HiveField(22)
-      @HiveField(23)
-          Reference? requestor,
-      @HiveField(24)
-          Reference? request,
-      @HiveField(25)
-          FhirCode? outcome,
+      Reference insurer,
+      Reference? requestor,
+      Reference? request,
+      FhirCode? outcome,
       @JsonKey(name: '_outcome')
-      @HiveField(26)
           Element? outcomeElement,
-      @HiveField(27)
-          String? disposition,
+      String? disposition,
       @JsonKey(name: '_disposition')
-      @HiveField(28)
           Element? dispositionElement,
-      @HiveField(29)
-          String? preAuthRef,
+      String? preAuthRef,
       @JsonKey(name: '_preAuthRef')
-      @HiveField(30)
           Element? preAuthRefElement,
-      @HiveField(31)
-          Period? preAuthPeriod,
-      @HiveField(32)
-          CodeableConcept? payeeType,
-      @HiveField(33)
-          List<ClaimResponseItem>? item,
-      @HiveField(34)
-          List<ClaimResponseAddItem>? addItem,
-      @HiveField(35)
-          List<ClaimResponseAdjudication>? adjudication,
-      @HiveField(36)
-          List<ClaimResponseTotal>? total,
-      @HiveField(37)
-          ClaimResponsePayment? payment,
-      @HiveField(38)
-          CodeableConcept? fundsReserve,
-      @HiveField(39)
-          CodeableConcept? formCode,
-      @HiveField(40)
-          Attachment? form,
-      @HiveField(41)
-          List<ClaimResponseProcessNote>? processNote,
-      @HiveField(42)
-          List<Reference>? communicationRequest,
-      @HiveField(43)
-          List<ClaimResponseInsurance>? insurance,
-      @HiveField(44)
-          List<ClaimResponseError>? error});
+      Period? preAuthPeriod,
+      CodeableConcept? payeeType,
+      List<ClaimResponseItem>? item,
+      List<ClaimResponseAddItem>? addItem,
+      List<ClaimResponseAdjudication>? adjudication,
+      List<ClaimResponseTotal>? total,
+      ClaimResponsePayment? payment,
+      CodeableConcept? fundsReserve,
+      CodeableConcept? formCode,
+      Attachment? form,
+      List<ClaimResponseProcessNote>? processNote,
+      List<Reference>? communicationRequest,
+      List<ClaimResponseInsurance>? insurance,
+      List<ClaimResponseError>? error});
 
   $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -11006,7 +10523,7 @@ class _$ClaimResponseCopyWithImpl<$Res, $Val extends ClaimResponse>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -11034,7 +10551,7 @@ class _$ClaimResponseCopyWithImpl<$Res, $Val extends ClaimResponse>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -11050,7 +10567,7 @@ class _$ClaimResponseCopyWithImpl<$Res, $Val extends ClaimResponse>
       use: freezed == use
           ? _value.use
           : use // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       useElement: freezed == useElement
           ? _value.useElement
           : useElement // ignore: cast_nullable_to_non_nullable
@@ -11082,7 +10599,7 @@ class _$ClaimResponseCopyWithImpl<$Res, $Val extends ClaimResponse>
       outcome: freezed == outcome
           ? _value.outcome
           : outcome // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       outcomeElement: freezed == outcomeElement
           ? _value.outcomeElement
           : outcomeElement // ignore: cast_nullable_to_non_nullable
@@ -11425,104 +10942,59 @@ abstract class _$$_ClaimResponseCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.ClaimResponse)
-      @HiveField(0)
           R4ResourceType resourceType,
-      @HiveField(1)
-          String? id,
-      @HiveField(2)
-          FhirMeta? meta,
-      @HiveField(3)
-          FhirUri? implicitRules,
+      String? id,
+      FhirMeta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           Element? implicitRulesElement,
-      @HiveField(5)
-          FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           Element? languageElement,
-      @HiveField(7)
-          Narrative? text,
-      @HiveField(8)
-          List<Resource>? contained,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           List<FhirExtension>? extension_,
-      @HiveField(10)
-          List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          List<Identifier>? identifier,
-      @HiveField(12)
-          FhirCode? status,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      FhirCode? status,
       @JsonKey(name: '_status')
-      @HiveField(13)
           Element? statusElement,
-      @HiveField(14)
-          CodeableConcept type,
-      @HiveField(15)
-          CodeableConcept? subType,
-      @HiveField(16)
-          FhirCode? use,
+      CodeableConcept type,
+      CodeableConcept? subType,
+      FhirCode? use,
       @JsonKey(name: '_use')
-      @HiveField(17)
           Element? useElement,
-      @HiveField(18)
-          Reference patient,
-      @HiveField(19)
-          FhirDateTime? created,
+      Reference patient,
+      FhirDateTime? created,
       @JsonKey(name: '_created')
-      @HiveField(20)
           Element? createdElement,
-      @HiveField(21)
-          Reference insurer,
-      @HiveField(22)
-      @HiveField(23)
-          Reference? requestor,
-      @HiveField(24)
-          Reference? request,
-      @HiveField(25)
-          FhirCode? outcome,
+      Reference insurer,
+      Reference? requestor,
+      Reference? request,
+      FhirCode? outcome,
       @JsonKey(name: '_outcome')
-      @HiveField(26)
           Element? outcomeElement,
-      @HiveField(27)
-          String? disposition,
+      String? disposition,
       @JsonKey(name: '_disposition')
-      @HiveField(28)
           Element? dispositionElement,
-      @HiveField(29)
-          String? preAuthRef,
+      String? preAuthRef,
       @JsonKey(name: '_preAuthRef')
-      @HiveField(30)
           Element? preAuthRefElement,
-      @HiveField(31)
-          Period? preAuthPeriod,
-      @HiveField(32)
-          CodeableConcept? payeeType,
-      @HiveField(33)
-          List<ClaimResponseItem>? item,
-      @HiveField(34)
-          List<ClaimResponseAddItem>? addItem,
-      @HiveField(35)
-          List<ClaimResponseAdjudication>? adjudication,
-      @HiveField(36)
-          List<ClaimResponseTotal>? total,
-      @HiveField(37)
-          ClaimResponsePayment? payment,
-      @HiveField(38)
-          CodeableConcept? fundsReserve,
-      @HiveField(39)
-          CodeableConcept? formCode,
-      @HiveField(40)
-          Attachment? form,
-      @HiveField(41)
-          List<ClaimResponseProcessNote>? processNote,
-      @HiveField(42)
-          List<Reference>? communicationRequest,
-      @HiveField(43)
-          List<ClaimResponseInsurance>? insurance,
-      @HiveField(44)
-          List<ClaimResponseError>? error});
+      Period? preAuthPeriod,
+      CodeableConcept? payeeType,
+      List<ClaimResponseItem>? item,
+      List<ClaimResponseAddItem>? addItem,
+      List<ClaimResponseAdjudication>? adjudication,
+      List<ClaimResponseTotal>? total,
+      ClaimResponsePayment? payment,
+      CodeableConcept? fundsReserve,
+      CodeableConcept? formCode,
+      Attachment? form,
+      List<ClaimResponseProcessNote>? processNote,
+      List<Reference>? communicationRequest,
+      List<ClaimResponseInsurance>? insurance,
+      List<ClaimResponseError>? error});
 
   @override
   $FhirMetaCopyWith<$Res>? get meta;
@@ -11650,7 +11122,7 @@ class __$$_ClaimResponseCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -11678,7 +11150,7 @@ class __$$_ClaimResponseCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -11694,7 +11166,7 @@ class __$$_ClaimResponseCopyWithImpl<$Res>
       use: freezed == use
           ? _value.use
           : use // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       useElement: freezed == useElement
           ? _value.useElement
           : useElement // ignore: cast_nullable_to_non_nullable
@@ -11726,7 +11198,7 @@ class __$$_ClaimResponseCopyWithImpl<$Res>
       outcome: freezed == outcome
           ? _value.outcome
           : outcome // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       outcomeElement: freezed == outcomeElement
           ? _value.outcomeElement
           : outcomeElement // ignore: cast_nullable_to_non_nullable
@@ -11809,108 +11281,62 @@ class __$$_ClaimResponseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@HiveType(typeId: 162)
 class _$_ClaimResponse extends _ClaimResponse {
   _$_ClaimResponse(
       {@JsonKey(unknownEnumValue: R4ResourceType.ClaimResponse)
-      @HiveField(0)
           this.resourceType = R4ResourceType.ClaimResponse,
-      @HiveField(1)
-          this.id,
-      @HiveField(2)
-          this.meta,
-      @HiveField(3)
-          this.implicitRules,
+      this.id,
+      this.meta,
+      this.implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           this.implicitRulesElement,
-      @HiveField(5)
-          this.language,
+      this.language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           this.languageElement,
-      @HiveField(7)
-          this.text,
-      @HiveField(8)
-          final List<Resource>? contained,
+      this.text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           final List<FhirExtension>? extension_,
-      @HiveField(10)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          final List<Identifier>? identifier,
-      @HiveField(12)
-          this.status,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      this.status,
       @JsonKey(name: '_status')
-      @HiveField(13)
           this.statusElement,
-      @HiveField(14)
-          required this.type,
-      @HiveField(15)
-          this.subType,
-      @HiveField(16)
-          this.use,
+      required this.type,
+      this.subType,
+      this.use,
       @JsonKey(name: '_use')
-      @HiveField(17)
           this.useElement,
-      @HiveField(18)
-          required this.patient,
-      @HiveField(19)
-          this.created,
+      required this.patient,
+      this.created,
       @JsonKey(name: '_created')
-      @HiveField(20)
           this.createdElement,
-      @HiveField(21)
-          required this.insurer,
-      @HiveField(22)
-      @HiveField(23)
-          this.requestor,
-      @HiveField(24)
-          this.request,
-      @HiveField(25)
-          this.outcome,
+      required this.insurer,
+      this.requestor,
+      this.request,
+      this.outcome,
       @JsonKey(name: '_outcome')
-      @HiveField(26)
           this.outcomeElement,
-      @HiveField(27)
-          this.disposition,
+      this.disposition,
       @JsonKey(name: '_disposition')
-      @HiveField(28)
           this.dispositionElement,
-      @HiveField(29)
-          this.preAuthRef,
+      this.preAuthRef,
       @JsonKey(name: '_preAuthRef')
-      @HiveField(30)
           this.preAuthRefElement,
-      @HiveField(31)
-          this.preAuthPeriod,
-      @HiveField(32)
-          this.payeeType,
-      @HiveField(33)
-          final List<ClaimResponseItem>? item,
-      @HiveField(34)
-          final List<ClaimResponseAddItem>? addItem,
-      @HiveField(35)
-          final List<ClaimResponseAdjudication>? adjudication,
-      @HiveField(36)
-          final List<ClaimResponseTotal>? total,
-      @HiveField(37)
-          this.payment,
-      @HiveField(38)
-          this.fundsReserve,
-      @HiveField(39)
-          this.formCode,
-      @HiveField(40)
-          this.form,
-      @HiveField(41)
-          final List<ClaimResponseProcessNote>? processNote,
-      @HiveField(42)
-          final List<Reference>? communicationRequest,
-      @HiveField(43)
-          final List<ClaimResponseInsurance>? insurance,
-      @HiveField(44)
-          final List<ClaimResponseError>? error})
+      this.preAuthPeriod,
+      this.payeeType,
+      final List<ClaimResponseItem>? item,
+      final List<ClaimResponseAddItem>? addItem,
+      final List<ClaimResponseAdjudication>? adjudication,
+      final List<ClaimResponseTotal>? total,
+      this.payment,
+      this.fundsReserve,
+      this.formCode,
+      this.form,
+      final List<ClaimResponseProcessNote>? processNote,
+      final List<Reference>? communicationRequest,
+      final List<ClaimResponseInsurance>? insurance,
+      final List<ClaimResponseError>? error})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -11930,20 +11356,17 @@ class _$_ClaimResponse extends _ClaimResponse {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.ClaimResponse)
-  @HiveField(0)
   final R4ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
   @override
-  @HiveField(1)
   final String? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
-  @HiveField(2)
   final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -11951,24 +11374,20 @@ class _$_ClaimResponse extends _ClaimResponse {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   @override
-  @HiveField(3)
   final FhirUri? implicitRules;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
-  @HiveField(4)
   final Element? implicitRulesElement;
 
   /// [language] The base language in which the resource is written.
   @override
-  @HiveField(5)
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] Extensions for language
   @override
   @JsonKey(name: '_language')
-  @HiveField(6)
   final Element? languageElement;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -11978,7 +11397,6 @@ class _$_ClaimResponse extends _ClaimResponse {
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
   @override
-  @HiveField(7)
   final Narrative? text;
 
   /// [contained] These resources do not have an independent existence apart
@@ -11992,7 +11410,6 @@ class _$_ClaimResponse extends _ClaimResponse {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   @override
-  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -12017,7 +11434,6 @@ class _$_ClaimResponse extends _ClaimResponse {
   ///  as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
-  @HiveField(9)
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
@@ -12055,7 +11471,6 @@ class _$_ClaimResponse extends _ClaimResponse {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   @override
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -12070,7 +11485,6 @@ class _$_ClaimResponse extends _ClaimResponse {
 
   /// [identifier] A unique identifier assigned to this claim response.
   @override
-  @HiveField(11)
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
@@ -12081,27 +11495,23 @@ class _$_ClaimResponse extends _ClaimResponse {
 
   /// [status] The status of the resource instance.
   @override
-  @HiveField(12)
-  final Code? status;
+  final FhirCode? status;
 
   /// [statusElement] Extensions for status
   @override
   @JsonKey(name: '_status')
-  @HiveField(13)
   final Element? statusElement;
 
   /// [type] A finer grained suite of claim type codes which may convey
   /// additional information such as Inpatient vs Outpatient and/or a specialty
   ///  service.
   @override
-  @HiveField(14)
   final CodeableConcept type;
 
   /// [subType] A finer grained suite of claim type codes which may convey
   /// additional information such as Inpatient vs Outpatient and/or a specialty
   ///  service.
   @override
-  @HiveField(15)
   final CodeableConcept? subType;
 
   /// [use] A code to indicate whether the nature of the request is: to request
@@ -12110,93 +11520,79 @@ class _$_ClaimResponse extends _ClaimResponse {
   /// the non-binding adjudication of the listed products and services which
   ///  could be provided in the future.
   @override
-  @HiveField(16)
-  final Code? use;
+  final FhirCode? use;
 
   /// [useElement] Extensions for use
   @override
   @JsonKey(name: '_use')
-  @HiveField(17)
   final Element? useElement;
 
   /// [patient] The party to whom the professional services and/or products
   /// have been supplied or are being considered and for whom actual for facast
   ///  reimbursement is sought.
   @override
-  @HiveField(18)
   final Reference patient;
 
   /// [created] The date this resource was created.
   @override
-  @HiveField(19)
   final FhirDateTime? created;
 
   /// [createdElement] Extensions for created
   @override
   @JsonKey(name: '_created')
-  @HiveField(20)
   final Element? createdElement;
 
   /// [insurer] The party responsible for authorization, adjudication and
   ///  reimbursement.
   @override
-  @HiveField(21)
   final Reference insurer;
+
+  /// [requestor] The provider which is responsible for the claim,
+  ///  predetermination or preauthorization.
   @override
-  @HiveField(22)
-  @HiveField(23)
   final Reference? requestor;
 
   /// [request] Original request resource reference.
   @override
-  @HiveField(24)
   final Reference? request;
 
   /// [outcome] The outcome of the claim, predetermination, or preauthorization
   ///  processing.
   @override
-  @HiveField(25)
-  final Code? outcome;
+  final FhirCode? outcome;
 
   /// [outcomeElement] Extensions for outcome
   @override
   @JsonKey(name: '_outcome')
-  @HiveField(26)
   final Element? outcomeElement;
 
   /// [disposition] A human readable description of the status of the
   ///  adjudication.
   @override
-  @HiveField(27)
   final String? disposition;
 
   /// [dispositionElement] Extensions for disposition
   @override
   @JsonKey(name: '_disposition')
-  @HiveField(28)
   final Element? dispositionElement;
 
   /// [preAuthRef] Reference from the Insurer which is used in later
   ///  communications which refers to this adjudication.
   @override
-  @HiveField(29)
   final String? preAuthRef;
 
   /// [preAuthRefElement] Extensions for preAuthRef
   @override
   @JsonKey(name: '_preAuthRef')
-  @HiveField(30)
   final Element? preAuthRefElement;
 
   /// [preAuthPeriod] The time frame during which this authorization is
   ///  effective.
   @override
-  @HiveField(31)
   final Period? preAuthPeriod;
 
   /// [payeeType] Type of Party to be reimbursed: subscriber, provider, other.
   @override
-  @HiveField(32)
   final CodeableConcept? payeeType;
 
   /// [item] A claim line. Either a simple (a product or service) or a 'group'
@@ -12206,7 +11602,6 @@ class _$_ClaimResponse extends _ClaimResponse {
   /// [item] A claim line. Either a simple (a product or service) or a 'group'
   ///  of details which can also be a simple items or groups of sub-details.
   @override
-  @HiveField(33)
   List<ClaimResponseItem>? get item {
     final value = _item;
     if (value == null) return null;
@@ -12222,7 +11617,6 @@ class _$_ClaimResponse extends _ClaimResponse {
   /// [addItem] The first-tier service adjudications for payor added product or
   ///  service lines.
   @override
-  @HiveField(34)
   List<ClaimResponseAddItem>? get addItem {
     final value = _addItem;
     if (value == null) return null;
@@ -12238,7 +11632,6 @@ class _$_ClaimResponse extends _ClaimResponse {
   /// [adjudication] The adjudication results which are presented at the header
   ///  level rather than at the line-item or add-item levels.
   @override
-  @HiveField(35)
   List<ClaimResponseAdjudication>? get adjudication {
     final value = _adjudication;
     if (value == null) return null;
@@ -12252,7 +11645,6 @@ class _$_ClaimResponse extends _ClaimResponse {
 
   /// [total] Categorized monetary totals for the adjudication.
   @override
-  @HiveField(36)
   List<ClaimResponseTotal>? get total {
     final value = _total;
     if (value == null) return null;
@@ -12263,24 +11655,20 @@ class _$_ClaimResponse extends _ClaimResponse {
 
   /// [payment] Payment details for the adjudication of the claim.
   @override
-  @HiveField(37)
   final ClaimResponsePayment? payment;
 
   /// [fundsReserve] A code, used only on a response to a preauthorization, to
   ///  indicate whether the benefits payable have been reserved and for whom.
   @override
-  @HiveField(38)
   final CodeableConcept? fundsReserve;
 
   /// [formCode] A code for the form to be used for printing the content.
   @override
-  @HiveField(39)
   final CodeableConcept? formCode;
 
   /// [form] The actual form, by reference or inclusion, for printing the
   ///  content or an EOB.
   @override
-  @HiveField(40)
   final Attachment? form;
 
   /// [processNote] A note that describes or explains adjudication results in a
@@ -12290,7 +11678,6 @@ class _$_ClaimResponse extends _ClaimResponse {
   /// [processNote] A note that describes or explains adjudication results in a
   ///  human readable form.
   @override
-  @HiveField(41)
   List<ClaimResponseProcessNote>? get processNote {
     final value = _processNote;
     if (value == null) return null;
@@ -12306,7 +11693,6 @@ class _$_ClaimResponse extends _ClaimResponse {
   /// [communicationRequest] Request for additional supporting or authorizing
   ///  information.
   @override
-  @HiveField(42)
   List<Reference>? get communicationRequest {
     final value = _communicationRequest;
     if (value == null) return null;
@@ -12323,7 +11709,6 @@ class _$_ClaimResponse extends _ClaimResponse {
   /// [insurance] Financial instruments for reimbursement for the health care
   ///  products and services specified on the claim.
   @override
-  @HiveField(43)
   List<ClaimResponseInsurance>? get insurance {
     final value = _insurance;
     if (value == null) return null;
@@ -12337,7 +11722,6 @@ class _$_ClaimResponse extends _ClaimResponse {
 
   /// [error] Errors encountered during the processing of the adjudication.
   @override
-  @HiveField(44)
   List<ClaimResponseError>? get error {
     final value = _error;
     if (value == null) return null;
@@ -12495,104 +11879,59 @@ class _$_ClaimResponse extends _ClaimResponse {
 abstract class _ClaimResponse extends ClaimResponse {
   factory _ClaimResponse(
       {@JsonKey(unknownEnumValue: R4ResourceType.ClaimResponse)
-      @HiveField(0)
           final R4ResourceType resourceType,
-      @HiveField(1)
-          final String? id,
-      @HiveField(2)
-          final FhirMeta? meta,
-      @HiveField(3)
-          final FhirUri? implicitRules,
+      final String? id,
+      final FhirMeta? meta,
+      final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           final Element? implicitRulesElement,
-      @HiveField(5)
-          final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           final Element? languageElement,
-      @HiveField(7)
-          final Narrative? text,
-      @HiveField(8)
-          final List<Resource>? contained,
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           final List<FhirExtension>? extension_,
-      @HiveField(10)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          final List<Identifier>? identifier,
-      @HiveField(12)
-          final Code? status,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final FhirCode? status,
       @JsonKey(name: '_status')
-      @HiveField(13)
           final Element? statusElement,
-      @HiveField(14)
-          required final CodeableConcept type,
-      @HiveField(15)
-          final CodeableConcept? subType,
-      @HiveField(16)
-          final Code? use,
+      required final CodeableConcept type,
+      final CodeableConcept? subType,
+      final FhirCode? use,
       @JsonKey(name: '_use')
-      @HiveField(17)
           final Element? useElement,
-      @HiveField(18)
-          required final Reference patient,
-      @HiveField(19)
-          final FhirDateTime? created,
+      required final Reference patient,
+      final FhirDateTime? created,
       @JsonKey(name: '_created')
-      @HiveField(20)
           final Element? createdElement,
-      @HiveField(21)
-          required final Reference insurer,
-      @HiveField(22)
-      @HiveField(23)
-          final Reference? requestor,
-      @HiveField(24)
-          final Reference? request,
-      @HiveField(25)
-          final Code? outcome,
+      required final Reference insurer,
+      final Reference? requestor,
+      final Reference? request,
+      final FhirCode? outcome,
       @JsonKey(name: '_outcome')
-      @HiveField(26)
           final Element? outcomeElement,
-      @HiveField(27)
-          final String? disposition,
+      final String? disposition,
       @JsonKey(name: '_disposition')
-      @HiveField(28)
           final Element? dispositionElement,
-      @HiveField(29)
-          final String? preAuthRef,
+      final String? preAuthRef,
       @JsonKey(name: '_preAuthRef')
-      @HiveField(30)
           final Element? preAuthRefElement,
-      @HiveField(31)
-          final Period? preAuthPeriod,
-      @HiveField(32)
-          final CodeableConcept? payeeType,
-      @HiveField(33)
-          final List<ClaimResponseItem>? item,
-      @HiveField(34)
-          final List<ClaimResponseAddItem>? addItem,
-      @HiveField(35)
-          final List<ClaimResponseAdjudication>? adjudication,
-      @HiveField(36)
-          final List<ClaimResponseTotal>? total,
-      @HiveField(37)
-          final ClaimResponsePayment? payment,
-      @HiveField(38)
-          final CodeableConcept? fundsReserve,
-      @HiveField(39)
-          final CodeableConcept? formCode,
-      @HiveField(40)
-          final Attachment? form,
-      @HiveField(41)
-          final List<ClaimResponseProcessNote>? processNote,
-      @HiveField(42)
-          final List<Reference>? communicationRequest,
-      @HiveField(43)
-          final List<ClaimResponseInsurance>? insurance,
-      @HiveField(44)
-          final List<ClaimResponseError>? error}) = _$_ClaimResponse;
+      final Period? preAuthPeriod,
+      final CodeableConcept? payeeType,
+      final List<ClaimResponseItem>? item,
+      final List<ClaimResponseAddItem>? addItem,
+      final List<ClaimResponseAdjudication>? adjudication,
+      final List<ClaimResponseTotal>? total,
+      final ClaimResponsePayment? payment,
+      final CodeableConcept? fundsReserve,
+      final CodeableConcept? formCode,
+      final Attachment? form,
+      final List<ClaimResponseProcessNote>? processNote,
+      final List<Reference>? communicationRequest,
+      final List<ClaimResponseInsurance>? insurance,
+      final List<ClaimResponseError>? error}) = _$_ClaimResponse;
   _ClaimResponse._() : super._();
 
   factory _ClaimResponse.fromJson(Map<String, dynamic> json) =
@@ -12600,20 +11939,17 @@ abstract class _ClaimResponse extends ClaimResponse {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.ClaimResponse)
-  @HiveField(0)
   R4ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
-  @HiveField(1)
   String? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  @HiveField(2)
   FhirMeta? get meta;
   @override
 
@@ -12621,24 +11957,20 @@ abstract class _ClaimResponse extends ClaimResponse {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  @HiveField(3)
   FhirUri? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
-  @HiveField(4)
   Element? get implicitRulesElement;
   @override
 
   /// [language] The base language in which the resource is written.
-  @HiveField(5)
   FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
-  @HiveField(6)
   Element? get languageElement;
   @override
 
@@ -12648,7 +11980,6 @@ abstract class _ClaimResponse extends ClaimResponse {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
-  @HiveField(7)
   Narrative? get text;
   @override
 
@@ -12656,7 +11987,6 @@ abstract class _ClaimResponse extends ClaimResponse {
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
-  @HiveField(8)
   List<Resource>? get contained;
   @override
 
@@ -12667,7 +11997,6 @@ abstract class _ClaimResponse extends ClaimResponse {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
-  @HiveField(9)
   List<FhirExtension>? get extension_;
   @override
 
@@ -12684,37 +12013,31 @@ abstract class _ClaimResponse extends ClaimResponse {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
 
   /// [identifier] A unique identifier assigned to this claim response.
-  @HiveField(11)
   List<Identifier>? get identifier;
   @override
 
   /// [status] The status of the resource instance.
-  @HiveField(12)
   FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
-  @HiveField(13)
   Element? get statusElement;
   @override
 
   /// [type] A finer grained suite of claim type codes which may convey
   /// additional information such as Inpatient vs Outpatient and/or a specialty
   ///  service.
-  @HiveField(14)
   CodeableConcept get type;
   @override
 
   /// [subType] A finer grained suite of claim type codes which may convey
   /// additional information such as Inpatient vs Outpatient and/or a specialty
   ///  service.
-  @HiveField(15)
   CodeableConcept? get subType;
   @override
 
@@ -12723,161 +12046,135 @@ abstract class _ClaimResponse extends ClaimResponse {
   /// authorization and adjudication for provision in the future; or requesting
   /// the non-binding adjudication of the listed products and services which
   ///  could be provided in the future.
-  @HiveField(16)
   FhirCode? get use;
   @override
 
   /// [useElement] Extensions for use
   @JsonKey(name: '_use')
-  @HiveField(17)
   Element? get useElement;
   @override
 
   /// [patient] The party to whom the professional services and/or products
   /// have been supplied or are being considered and for whom actual for facast
   ///  reimbursement is sought.
-  @HiveField(18)
   Reference get patient;
   @override
 
   /// [created] The date this resource was created.
-  @HiveField(19)
   FhirDateTime? get created;
   @override
 
   /// [createdElement] Extensions for created
   @JsonKey(name: '_created')
-  @HiveField(20)
   Element? get createdElement;
   @override
 
   /// [insurer] The party responsible for authorization, adjudication and
   ///  reimbursement.
-  @HiveField(21)
   Reference get insurer;
   @override
-  @HiveField(22)
-  @HiveField(23)
+
+  /// [requestor] The provider which is responsible for the claim,
+  ///  predetermination or preauthorization.
   Reference? get requestor;
   @override
 
   /// [request] Original request resource reference.
-  @HiveField(24)
   Reference? get request;
   @override
 
   /// [outcome] The outcome of the claim, predetermination, or preauthorization
   ///  processing.
-  @HiveField(25)
   FhirCode? get outcome;
   @override
 
   /// [outcomeElement] Extensions for outcome
   @JsonKey(name: '_outcome')
-  @HiveField(26)
   Element? get outcomeElement;
   @override
 
   /// [disposition] A human readable description of the status of the
   ///  adjudication.
-  @HiveField(27)
   String? get disposition;
   @override
 
   /// [dispositionElement] Extensions for disposition
   @JsonKey(name: '_disposition')
-  @HiveField(28)
   Element? get dispositionElement;
   @override
 
   /// [preAuthRef] Reference from the Insurer which is used in later
   ///  communications which refers to this adjudication.
-  @HiveField(29)
   String? get preAuthRef;
   @override
 
   /// [preAuthRefElement] Extensions for preAuthRef
   @JsonKey(name: '_preAuthRef')
-  @HiveField(30)
   Element? get preAuthRefElement;
   @override
 
   /// [preAuthPeriod] The time frame during which this authorization is
   ///  effective.
-  @HiveField(31)
   Period? get preAuthPeriod;
   @override
 
   /// [payeeType] Type of Party to be reimbursed: subscriber, provider, other.
-  @HiveField(32)
   CodeableConcept? get payeeType;
   @override
 
   /// [item] A claim line. Either a simple (a product or service) or a 'group'
   ///  of details which can also be a simple items or groups of sub-details.
-  @HiveField(33)
   List<ClaimResponseItem>? get item;
   @override
 
   /// [addItem] The first-tier service adjudications for payor added product or
   ///  service lines.
-  @HiveField(34)
   List<ClaimResponseAddItem>? get addItem;
   @override
 
   /// [adjudication] The adjudication results which are presented at the header
   ///  level rather than at the line-item or add-item levels.
-  @HiveField(35)
   List<ClaimResponseAdjudication>? get adjudication;
   @override
 
   /// [total] Categorized monetary totals for the adjudication.
-  @HiveField(36)
   List<ClaimResponseTotal>? get total;
   @override
 
   /// [payment] Payment details for the adjudication of the claim.
-  @HiveField(37)
   ClaimResponsePayment? get payment;
   @override
 
   /// [fundsReserve] A code, used only on a response to a preauthorization, to
   ///  indicate whether the benefits payable have been reserved and for whom.
-  @HiveField(38)
   CodeableConcept? get fundsReserve;
   @override
 
   /// [formCode] A code for the form to be used for printing the content.
-  @HiveField(39)
   CodeableConcept? get formCode;
   @override
 
   /// [form] The actual form, by reference or inclusion, for printing the
   ///  content or an EOB.
-  @HiveField(40)
   Attachment? get form;
   @override
 
   /// [processNote] A note that describes or explains adjudication results in a
   ///  human readable form.
-  @HiveField(41)
   List<ClaimResponseProcessNote>? get processNote;
   @override
 
   /// [communicationRequest] Request for additional supporting or authorizing
   ///  information.
-  @HiveField(42)
   List<Reference>? get communicationRequest;
   @override
 
   /// [insurance] Financial instruments for reimbursement for the health care
   ///  products and services specified on the claim.
-  @HiveField(43)
   List<ClaimResponseInsurance>? get insurance;
   @override
 
   /// [error] Errors encountered during the processing of the adjudication.
-  @HiveField(44)
   List<ClaimResponseError>? get error;
   @override
   @JsonKey(ignore: true)
@@ -13010,7 +12307,7 @@ class _$ClaimResponseItemCopyWithImpl<$Res, $Val extends ClaimResponseItem>
       itemSequence: freezed == itemSequence
           ? _value.itemSequence
           : itemSequence // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       itemSequenceElement: freezed == itemSequenceElement
           ? _value.itemSequenceElement
           : itemSequenceElement // ignore: cast_nullable_to_non_nullable
@@ -13107,7 +12404,7 @@ class __$$_ClaimResponseItemCopyWithImpl<$Res>
       itemSequence: freezed == itemSequence
           ? _value.itemSequence
           : itemSequence // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       itemSequenceElement: freezed == itemSequenceElement
           ? _value.itemSequenceElement
           : itemSequenceElement // ignore: cast_nullable_to_non_nullable
@@ -13225,7 +12522,7 @@ class _$_ClaimResponseItem extends _ClaimResponseItem {
 
   /// [itemSequence] A number to uniquely reference the claim item entries.
   @override
-  final PositiveInt? itemSequence;
+  final FhirPositiveInt? itemSequence;
 
   /// [itemSequenceElement] Extensions for itemSequence
   @override
@@ -13354,7 +12651,7 @@ abstract class _ClaimResponseItem extends ClaimResponseItem {
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final PositiveInt? itemSequence,
+      final FhirPositiveInt? itemSequence,
       @JsonKey(name: '_itemSequence') final Element? itemSequenceElement,
       final List<FhirPositiveInt>? noteNumber,
       @JsonKey(name: '_noteNumber') final List<Element?>? noteNumberElement,
@@ -13569,7 +12866,7 @@ class _$ClaimResponseAdjudicationCopyWithImpl<$Res,
       value: freezed == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       valueElement: freezed == valueElement
           ? _value.valueElement
           : valueElement // ignore: cast_nullable_to_non_nullable
@@ -13701,7 +12998,7 @@ class __$$_ClaimResponseAdjudicationCopyWithImpl<$Res>
       value: freezed == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       valueElement: freezed == valueElement
           ? _value.valueElement
           : valueElement // ignore: cast_nullable_to_non_nullable
@@ -13816,7 +13113,7 @@ class _$_ClaimResponseAdjudication extends _ClaimResponseAdjudication {
   /// [value] A non-monetary value associated with the category. Mutually
   ///  exclusive to the amount element above.
   @override
-  final Decimal? value;
+  final FhirDecimal? value;
 
   /// [valueElement] Extensions for value
   @override
@@ -13883,7 +13180,7 @@ abstract class _ClaimResponseAdjudication extends ClaimResponseAdjudication {
           required final CodeableConcept category,
           final CodeableConcept? reason,
           final Money? amount,
-          final Decimal? value,
+          final FhirDecimal? value,
           @JsonKey(name: '_value') final Element? valueElement}) =
       _$_ClaimResponseAdjudication;
   _ClaimResponseAdjudication._() : super._();
@@ -14078,7 +13375,7 @@ class _$ClaimResponseDetailCopyWithImpl<$Res, $Val extends ClaimResponseDetail>
       detailSequence: freezed == detailSequence
           ? _value.detailSequence
           : detailSequence // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       detailSequenceElement: freezed == detailSequenceElement
           ? _value.detailSequenceElement
           : detailSequenceElement // ignore: cast_nullable_to_non_nullable
@@ -14175,7 +13472,7 @@ class __$$_ClaimResponseDetailCopyWithImpl<$Res>
       detailSequence: freezed == detailSequence
           ? _value.detailSequence
           : detailSequence // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       detailSequenceElement: freezed == detailSequenceElement
           ? _value.detailSequenceElement
           : detailSequenceElement // ignore: cast_nullable_to_non_nullable
@@ -14293,7 +13590,7 @@ class _$_ClaimResponseDetail extends _ClaimResponseDetail {
 
   /// [detailSequence] A number to uniquely reference the claim detail entry.
   @override
-  final PositiveInt? detailSequence;
+  final FhirPositiveInt? detailSequence;
 
   /// [detailSequenceElement] Extensions for detailSequence
   @override
@@ -14417,7 +13714,7 @@ abstract class _ClaimResponseDetail extends ClaimResponseDetail {
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final PositiveInt? detailSequence,
+      final FhirPositiveInt? detailSequence,
       @JsonKey(name: '_detailSequence') final Element? detailSequenceElement,
       final List<FhirPositiveInt>? noteNumber,
       @JsonKey(name: '_noteNumber') final List<Element?>? noteNumberElement,
@@ -14612,7 +13909,7 @@ class _$ClaimResponseSubDetailCopyWithImpl<$Res,
       subDetailSequence: freezed == subDetailSequence
           ? _value.subDetailSequence
           : subDetailSequence // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       subDetailSequenceElement: freezed == subDetailSequenceElement
           ? _value.subDetailSequenceElement
           : subDetailSequenceElement // ignore: cast_nullable_to_non_nullable
@@ -14704,7 +14001,7 @@ class __$$_ClaimResponseSubDetailCopyWithImpl<$Res>
       subDetailSequence: freezed == subDetailSequence
           ? _value.subDetailSequence
           : subDetailSequence // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       subDetailSequenceElement: freezed == subDetailSequenceElement
           ? _value.subDetailSequenceElement
           : subDetailSequenceElement // ignore: cast_nullable_to_non_nullable
@@ -14817,7 +14114,7 @@ class _$_ClaimResponseSubDetail extends _ClaimResponseSubDetail {
   /// [subDetailSequence] A number to uniquely reference the claim sub-detail
   ///  entry.
   @override
-  final PositiveInt? subDetailSequence;
+  final FhirPositiveInt? subDetailSequence;
 
   /// [subDetailSequenceElement] Extensions for subDetailSequence
   @override
@@ -14929,7 +14226,7 @@ abstract class _ClaimResponseSubDetail extends ClaimResponseSubDetail {
           @JsonKey(name: 'extension')
               final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
-          final PositiveInt? subDetailSequence,
+          final FhirPositiveInt? subDetailSequence,
           @JsonKey(name: '_subDetailSequence')
               final Element? subDetailSequenceElement,
           final List<FhirPositiveInt>? noteNumber,
@@ -15082,7 +14379,7 @@ mixin _$ClaimResponseAddItem {
 
   /// [servicedDate] The date or dates when the service or product was
   ///  supplied, performed or completed.
-  Date? get servicedDate => throw _privateConstructorUsedError;
+  FhirDate? get servicedDate => throw _privateConstructorUsedError;
 
   /// [servicedDateElement] Extensions for servicedDate
   @JsonKey(name: '_servicedDate')
@@ -15176,7 +14473,7 @@ abstract class $ClaimResponseAddItemCopyWith<$Res> {
       CodeableConcept productOrService,
       List<CodeableConcept>? modifier,
       List<CodeableConcept>? programCode,
-      Date? servicedDate,
+      FhirDate? servicedDate,
       @JsonKey(name: '_servicedDate')
           Element? servicedDateElement,
       Period? servicedPeriod,
@@ -15311,7 +14608,7 @@ class _$ClaimResponseAddItemCopyWithImpl<$Res,
       servicedDate: freezed == servicedDate
           ? _value.servicedDate
           : servicedDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       servicedDateElement: freezed == servicedDateElement
           ? _value.servicedDateElement
           : servicedDateElement // ignore: cast_nullable_to_non_nullable
@@ -15343,7 +14640,7 @@ class _$ClaimResponseAddItemCopyWithImpl<$Res,
       factor: freezed == factor
           ? _value.factor
           : factor // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       factorElement: freezed == factorElement
           ? _value.factorElement
           : factorElement // ignore: cast_nullable_to_non_nullable
@@ -15535,7 +14832,7 @@ abstract class _$$_ClaimResponseAddItemCopyWith<$Res>
       CodeableConcept productOrService,
       List<CodeableConcept>? modifier,
       List<CodeableConcept>? programCode,
-      Date? servicedDate,
+      FhirDate? servicedDate,
       @JsonKey(name: '_servicedDate')
           Element? servicedDateElement,
       Period? servicedPeriod,
@@ -15678,7 +14975,7 @@ class __$$_ClaimResponseAddItemCopyWithImpl<$Res>
       servicedDate: freezed == servicedDate
           ? _value.servicedDate
           : servicedDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       servicedDateElement: freezed == servicedDateElement
           ? _value.servicedDateElement
           : servicedDateElement // ignore: cast_nullable_to_non_nullable
@@ -15710,7 +15007,7 @@ class __$$_ClaimResponseAddItemCopyWithImpl<$Res>
       factor: freezed == factor
           ? _value.factor
           : factor // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       factorElement: freezed == factorElement
           ? _value.factorElement
           : factorElement // ignore: cast_nullable_to_non_nullable
@@ -16016,7 +15313,7 @@ class _$_ClaimResponseAddItem extends _ClaimResponseAddItem {
   /// [servicedDate] The date or dates when the service or product was
   ///  supplied, performed or completed.
   @override
-  final Date? servicedDate;
+  final FhirDate? servicedDate;
 
   /// [servicedDateElement] Extensions for servicedDate
   @override
@@ -16055,7 +15352,7 @@ class _$_ClaimResponseAddItem extends _ClaimResponseAddItem {
   /// of a Factor allows for a discount or surcharge multiplier to be applied to
   ///  a monetary amount.
   @override
-  final Decimal? factor;
+  final FhirDecimal? factor;
 
   /// [factorElement] Extensions for factor
   @override
@@ -16276,7 +15573,7 @@ abstract class _ClaimResponseAddItem extends ClaimResponseAddItem {
       required final CodeableConcept productOrService,
       final List<CodeableConcept>? modifier,
       final List<CodeableConcept>? programCode,
-      final Date? servicedDate,
+      final FhirDate? servicedDate,
       @JsonKey(name: '_servicedDate')
           final Element? servicedDateElement,
       final Period? servicedPeriod,
@@ -16285,7 +15582,7 @@ abstract class _ClaimResponseAddItem extends ClaimResponseAddItem {
       final Reference? locationReference,
       final Quantity? quantity,
       final Money? unitPrice,
-      final Decimal? factor,
+      final FhirDecimal? factor,
       @JsonKey(name: '_factor')
           final Element? factorElement,
       final Money? net,
@@ -16384,7 +15681,7 @@ abstract class _ClaimResponseAddItem extends ClaimResponseAddItem {
 
   /// [servicedDate] The date or dates when the service or product was
   ///  supplied, performed or completed.
-  Date? get servicedDate;
+  FhirDate? get servicedDate;
   @override
 
   /// [servicedDateElement] Extensions for servicedDate
@@ -16646,7 +15943,7 @@ class _$ClaimResponseDetail1CopyWithImpl<$Res,
       factor: freezed == factor
           ? _value.factor
           : factor // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       factorElement: freezed == factorElement
           ? _value.factorElement
           : factorElement // ignore: cast_nullable_to_non_nullable
@@ -16825,7 +16122,7 @@ class __$$_ClaimResponseDetail1CopyWithImpl<$Res>
       factor: freezed == factor
           ? _value.factor
           : factor // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       factorElement: freezed == factorElement
           ? _value.factorElement
           : factorElement // ignore: cast_nullable_to_non_nullable
@@ -16987,7 +16284,7 @@ class _$_ClaimResponseDetail1 extends _ClaimResponseDetail1 {
   /// of a Factor allows for a discount or surcharge multiplier to be applied to
   ///  a monetary amount.
   @override
-  final Decimal? factor;
+  final FhirDecimal? factor;
 
   /// [factorElement] Extensions for factor
   @override
@@ -17134,7 +16431,7 @@ abstract class _ClaimResponseDetail1 extends ClaimResponseDetail1 {
           final List<CodeableConcept>? modifier,
           final Quantity? quantity,
           final Money? unitPrice,
-          final Decimal? factor,
+          final FhirDecimal? factor,
           @JsonKey(name: '_factor') final Element? factorElement,
           final Money? net,
           final List<FhirPositiveInt>? noteNumber,
@@ -17414,7 +16711,7 @@ class _$ClaimResponseSubDetail1CopyWithImpl<$Res,
       factor: freezed == factor
           ? _value.factor
           : factor // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       factorElement: freezed == factorElement
           ? _value.factorElement
           : factorElement // ignore: cast_nullable_to_non_nullable
@@ -17588,7 +16885,7 @@ class __$$_ClaimResponseSubDetail1CopyWithImpl<$Res>
       factor: freezed == factor
           ? _value.factor
           : factor // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       factorElement: freezed == factorElement
           ? _value.factorElement
           : factorElement // ignore: cast_nullable_to_non_nullable
@@ -17744,7 +17041,7 @@ class _$_ClaimResponseSubDetail1 extends _ClaimResponseSubDetail1 {
   /// of a Factor allows for a discount or surcharge multiplier to be applied to
   ///  a monetary amount.
   @override
-  final Decimal? factor;
+  final FhirDecimal? factor;
 
   /// [factorElement] Extensions for factor
   @override
@@ -17874,7 +17171,7 @@ abstract class _ClaimResponseSubDetail1 extends ClaimResponseSubDetail1 {
           final List<CodeableConcept>? modifier,
           final Quantity? quantity,
           final Money? unitPrice,
-          final Decimal? factor,
+          final FhirDecimal? factor,
           @JsonKey(name: '_factor') final Element? factorElement,
           final Money? net,
           final List<FhirPositiveInt>? noteNumber,
@@ -18415,7 +17712,7 @@ mixin _$ClaimResponsePayment {
 
   /// [date] Estimated date the payment will be issued or the actual issue date
   ///  of payment.
-  Date? get date => throw _privateConstructorUsedError;
+  FhirDate? get date => throw _privateConstructorUsedError;
 
   /// [dateElement] Extensions for date
   @JsonKey(name: '_date')
@@ -18446,7 +17743,7 @@ abstract class $ClaimResponsePaymentCopyWith<$Res> {
       CodeableConcept type,
       Money? adjustment,
       CodeableConcept? adjustmentReason,
-      Date? date,
+      FhirDate? date,
       @JsonKey(name: '_date') Element? dateElement,
       Money amount,
       Identifier? identifier});
@@ -18512,7 +17809,7 @@ class _$ClaimResponsePaymentCopyWithImpl<$Res,
       date: freezed == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       dateElement: freezed == dateElement
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -18608,7 +17905,7 @@ abstract class _$$_ClaimResponsePaymentCopyWith<$Res>
       CodeableConcept type,
       Money? adjustment,
       CodeableConcept? adjustmentReason,
-      Date? date,
+      FhirDate? date,
       @JsonKey(name: '_date') Element? dateElement,
       Money amount,
       Identifier? identifier});
@@ -18677,7 +17974,7 @@ class __$$_ClaimResponsePaymentCopyWithImpl<$Res>
       date: freezed == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       dateElement: freezed == dateElement
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -18799,7 +18096,7 @@ class _$_ClaimResponsePayment extends _ClaimResponsePayment {
   /// [date] Estimated date the payment will be issued or the actual issue date
   ///  of payment.
   @override
-  final Date? date;
+  final FhirDate? date;
 
   /// [dateElement] Extensions for date
   @override
@@ -18880,7 +18177,7 @@ abstract class _ClaimResponsePayment extends ClaimResponsePayment {
       required final CodeableConcept type,
       final Money? adjustment,
       final CodeableConcept? adjustmentReason,
-      final Date? date,
+      final FhirDate? date,
       @JsonKey(name: '_date') final Element? dateElement,
       required final Money amount,
       final Identifier? identifier}) = _$_ClaimResponsePayment;
@@ -18938,7 +18235,7 @@ abstract class _ClaimResponsePayment extends ClaimResponsePayment {
 
   /// [date] Estimated date the payment will be issued or the actual issue date
   ///  of payment.
-  Date? get date;
+  FhirDate? get date;
   @override
 
   /// [dateElement] Extensions for date
@@ -19089,7 +18386,7 @@ class _$ClaimResponseProcessNoteCopyWithImpl<$Res,
       number: freezed == number
           ? _value.number
           : number // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       numberElement: freezed == numberElement
           ? _value.numberElement
           : numberElement // ignore: cast_nullable_to_non_nullable
@@ -19097,7 +18394,7 @@ class _$ClaimResponseProcessNoteCopyWithImpl<$Res,
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       typeElement: freezed == typeElement
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -19236,7 +18533,7 @@ class __$$_ClaimResponseProcessNoteCopyWithImpl<$Res>
       number: freezed == number
           ? _value.number
           : number // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       numberElement: freezed == numberElement
           ? _value.numberElement
           : numberElement // ignore: cast_nullable_to_non_nullable
@@ -19244,7 +18541,7 @@ class __$$_ClaimResponseProcessNoteCopyWithImpl<$Res>
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       typeElement: freezed == typeElement
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -19355,7 +18652,7 @@ class _$_ClaimResponseProcessNote extends _ClaimResponseProcessNote {
 
   /// [number] A number to uniquely identify a note entry.
   @override
-  final PositiveInt? number;
+  final FhirPositiveInt? number;
 
   /// [numberElement] Extensions for number
   @override
@@ -19364,7 +18661,7 @@ class _$_ClaimResponseProcessNote extends _ClaimResponseProcessNote {
 
   /// [type] The business purpose of the note text.
   @override
-  final Code? type;
+  final FhirCode? type;
 
   /// [typeElement] Extensions for type
   @override
@@ -19447,9 +18744,9 @@ abstract class _ClaimResponseProcessNote extends ClaimResponseProcessNote {
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final PositiveInt? number,
+      final FhirPositiveInt? number,
       @JsonKey(name: '_number') final Element? numberElement,
-      final Code? type,
+      final FhirCode? type,
       @JsonKey(name: '_type') final Element? typeElement,
       final String? text,
       @JsonKey(name: '_text') final Element? textElement,
@@ -19573,7 +18870,7 @@ mixin _$ClaimResponseInsurance {
 
   /// [focal] A flag to indicate that this Coverage is to be used for
   ///  adjudication of this claim when set to true.
-  Boolean? get focal => throw _privateConstructorUsedError;
+  FhirBoolean? get focal => throw _privateConstructorUsedError;
 
   /// [focalElement] Extensions for focal
   @JsonKey(name: '_focal')
@@ -19617,7 +18914,7 @@ abstract class $ClaimResponseInsuranceCopyWith<$Res> {
       FhirPositiveInt? sequence,
       @JsonKey(name: '_sequence')
           Element? sequenceElement,
-      Boolean? focal,
+      FhirBoolean? focal,
       @JsonKey(name: '_focal')
           Element? focalElement,
       Reference coverage,
@@ -19675,7 +18972,7 @@ class _$ClaimResponseInsuranceCopyWithImpl<$Res,
       sequence: freezed == sequence
           ? _value.sequence
           : sequence // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       sequenceElement: freezed == sequenceElement
           ? _value.sequenceElement
           : sequenceElement // ignore: cast_nullable_to_non_nullable
@@ -19683,7 +18980,7 @@ class _$ClaimResponseInsuranceCopyWithImpl<$Res,
       focal: freezed == focal
           ? _value.focal
           : focal // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       focalElement: freezed == focalElement
           ? _value.focalElement
           : focalElement // ignore: cast_nullable_to_non_nullable
@@ -19780,7 +19077,7 @@ abstract class _$$_ClaimResponseInsuranceCopyWith<$Res>
       FhirPositiveInt? sequence,
       @JsonKey(name: '_sequence')
           Element? sequenceElement,
-      Boolean? focal,
+      FhirBoolean? focal,
       @JsonKey(name: '_focal')
           Element? focalElement,
       Reference coverage,
@@ -19841,7 +19138,7 @@ class __$$_ClaimResponseInsuranceCopyWithImpl<$Res>
       sequence: freezed == sequence
           ? _value.sequence
           : sequence // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       sequenceElement: freezed == sequenceElement
           ? _value.sequenceElement
           : sequenceElement // ignore: cast_nullable_to_non_nullable
@@ -19849,7 +19146,7 @@ class __$$_ClaimResponseInsuranceCopyWithImpl<$Res>
       focal: freezed == focal
           ? _value.focal
           : focal // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       focalElement: freezed == focalElement
           ? _value.focalElement
           : focalElement // ignore: cast_nullable_to_non_nullable
@@ -19966,7 +19263,7 @@ class _$_ClaimResponseInsurance extends _ClaimResponseInsurance {
   /// [sequence] A number to uniquely identify insurance entries and provide a
   ///  sequence of coverages to convey coordination of benefit order.
   @override
-  final PositiveInt? sequence;
+  final FhirPositiveInt? sequence;
 
   /// [sequenceElement] Extensions for sequence
   @override
@@ -19976,7 +19273,7 @@ class _$_ClaimResponseInsurance extends _ClaimResponseInsurance {
   /// [focal] A flag to indicate that this Coverage is to be used for
   ///  adjudication of this claim when set to true.
   @override
-  final Boolean? focal;
+  final FhirBoolean? focal;
 
   /// [focalElement] Extensions for focal
   @override
@@ -20076,10 +19373,10 @@ abstract class _ClaimResponseInsurance extends ClaimResponseInsurance {
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final PositiveInt? sequence,
+      final FhirPositiveInt? sequence,
       @JsonKey(name: '_sequence')
           final Element? sequenceElement,
-      final Boolean? focal,
+      final FhirBoolean? focal,
       @JsonKey(name: '_focal')
           final Element? focalElement,
       required final Reference coverage,
@@ -20137,7 +19434,7 @@ abstract class _ClaimResponseInsurance extends ClaimResponseInsurance {
 
   /// [focal] A flag to indicate that this Coverage is to be used for
   ///  adjudication of this claim when set to true.
-  Boolean? get focal;
+  FhirBoolean? get focal;
   @override
 
   /// [focalElement] Extensions for focal
@@ -20307,7 +19604,7 @@ class _$ClaimResponseErrorCopyWithImpl<$Res, $Val extends ClaimResponseError>
       itemSequence: freezed == itemSequence
           ? _value.itemSequence
           : itemSequence // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       itemSequenceElement: freezed == itemSequenceElement
           ? _value.itemSequenceElement
           : itemSequenceElement // ignore: cast_nullable_to_non_nullable
@@ -20315,7 +19612,7 @@ class _$ClaimResponseErrorCopyWithImpl<$Res, $Val extends ClaimResponseError>
       detailSequence: freezed == detailSequence
           ? _value.detailSequence
           : detailSequence // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       detailSequenceElement: freezed == detailSequenceElement
           ? _value.detailSequenceElement
           : detailSequenceElement // ignore: cast_nullable_to_non_nullable
@@ -20323,7 +19620,7 @@ class _$ClaimResponseErrorCopyWithImpl<$Res, $Val extends ClaimResponseError>
       subDetailSequence: freezed == subDetailSequence
           ? _value.subDetailSequence
           : subDetailSequence // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       subDetailSequenceElement: freezed == subDetailSequenceElement
           ? _value.subDetailSequenceElement
           : subDetailSequenceElement // ignore: cast_nullable_to_non_nullable
@@ -20448,7 +19745,7 @@ class __$$_ClaimResponseErrorCopyWithImpl<$Res>
       itemSequence: freezed == itemSequence
           ? _value.itemSequence
           : itemSequence // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       itemSequenceElement: freezed == itemSequenceElement
           ? _value.itemSequenceElement
           : itemSequenceElement // ignore: cast_nullable_to_non_nullable
@@ -20456,7 +19753,7 @@ class __$$_ClaimResponseErrorCopyWithImpl<$Res>
       detailSequence: freezed == detailSequence
           ? _value.detailSequence
           : detailSequence // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       detailSequenceElement: freezed == detailSequenceElement
           ? _value.detailSequenceElement
           : detailSequenceElement // ignore: cast_nullable_to_non_nullable
@@ -20464,7 +19761,7 @@ class __$$_ClaimResponseErrorCopyWithImpl<$Res>
       subDetailSequence: freezed == subDetailSequence
           ? _value.subDetailSequence
           : subDetailSequence // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       subDetailSequenceElement: freezed == subDetailSequenceElement
           ? _value.subDetailSequenceElement
           : subDetailSequenceElement // ignore: cast_nullable_to_non_nullable
@@ -20569,7 +19866,7 @@ class _$_ClaimResponseError extends _ClaimResponseError {
   /// contains the error. This value is omitted when the error occurs outside of
   ///  the item structure.
   @override
-  final PositiveInt? itemSequence;
+  final FhirPositiveInt? itemSequence;
 
   /// [itemSequenceElement] Extensions for itemSequence
   @override
@@ -20580,7 +19877,7 @@ class _$_ClaimResponseError extends _ClaimResponseError {
   /// submitted which contains the error. This value is omitted when the error
   ///  occurs outside of the item structure.
   @override
-  final PositiveInt? detailSequence;
+  final FhirPositiveInt? detailSequence;
 
   /// [detailSequenceElement] Extensions for detailSequence
   @override
@@ -20591,7 +19888,7 @@ class _$_ClaimResponseError extends _ClaimResponseError {
   /// detail within the line item submitted which contains the error. This value
   ///  is omitted when the error occurs outside of the item structure.
   @override
-  final PositiveInt? subDetailSequence;
+  final FhirPositiveInt? subDetailSequence;
 
   /// [subDetailSequenceElement] Extensions for subDetailSequence
   @override
@@ -20670,13 +19967,13 @@ abstract class _ClaimResponseError extends ClaimResponseError {
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final PositiveInt? itemSequence,
+      final FhirPositiveInt? itemSequence,
       @JsonKey(name: '_itemSequence')
           final Element? itemSequenceElement,
-      final PositiveInt? detailSequence,
+      final FhirPositiveInt? detailSequence,
       @JsonKey(name: '_detailSequence')
           final Element? detailSequenceElement,
-      final PositiveInt? subDetailSequence,
+      final FhirPositiveInt? subDetailSequence,
       @JsonKey(name: '_subDetailSequence')
           final Element? subDetailSequenceElement,
       required final CodeableConcept code}) = _$_ClaimResponseError;
@@ -20767,39 +20064,32 @@ Invoice _$InvoiceFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Invoice {
   @JsonKey(unknownEnumValue: R4ResourceType.Invoice)
-  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
-  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  @HiveField(2)
   FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
-  @HiveField(4)
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  @HiveField(5)
   FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
-  @HiveField(6)
   Element? get languageElement => throw _privateConstructorUsedError;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -20808,14 +20098,12 @@ mixin _$Invoice {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
-  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
 
   /// [contained] These resources do not have an independent existence apart
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
-  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -20825,7 +20113,6 @@ mixin _$Invoice {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
-  @HiveField(9)
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [modifierExtension] May be used to represent additional information that
@@ -20841,76 +20128,61 @@ mixin _$Invoice {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
   /// [identifier] Identifier of this Invoice, often used for reference in
   ///  correspondence about this invoice or for tracking of payments.
-  @HiveField(11)
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [status] The current state of the Invoice.
-  @HiveField(12)
   FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
-  @HiveField(13)
   Element? get statusElement => throw _privateConstructorUsedError;
 
   /// [cancelledReason] In case of Invoice cancellation a reason must be given
   ///  (entered in error, superseded by corrected invoice etc.).
-  @HiveField(14)
   String? get cancelledReason => throw _privateConstructorUsedError;
 
   /// [cancelledReasonElement] Extensions for cancelledReason
   @JsonKey(name: '_cancelledReason')
-  @HiveField(15)
   Element? get cancelledReasonElement => throw _privateConstructorUsedError;
 
   /// [type] Type of Invoice depending on domain, realm an usage (e.g.
   ///  internal/external, dental, preliminary).
-  @HiveField(16)
   CodeableConcept? get type => throw _privateConstructorUsedError;
 
   /// [subject] The individual or set of individuals receiving the goods and
   ///  services billed in this invoice.
-  @HiveField(17)
   Reference? get subject => throw _privateConstructorUsedError;
 
   /// [recipient] The individual or Organization responsible for balancing of
   ///  this invoice.
-  @HiveField(18)
   Reference? get recipient => throw _privateConstructorUsedError;
 
   /// [date] Date/time(s) of when this Invoice was posted.
-  @HiveField(19)
   FhirDateTime? get date => throw _privateConstructorUsedError;
 
   /// [dateElement] Extensions for date
   @JsonKey(name: '_date')
-  @HiveField(20)
   Element? get dateElement => throw _privateConstructorUsedError;
 
   /// [participant] Indicates who or what performed or participated in the
   ///  charged service.
-  @HiveField(21)
   List<InvoiceParticipant>? get participant =>
       throw _privateConstructorUsedError;
 
   /// [issuer] The organizationissuing the Invoice.
-  @HiveField(22)
   Reference? get issuer => throw _privateConstructorUsedError;
 
   /// [account] Account which is supposed to be balanced with this Invoice.
-  @HiveField(23)
   Reference? get account => throw _privateConstructorUsedError;
 
   /// [lineItem] Each line item represents one charge for goods and services
   /// rendered. Details such as date, code and amount are found in the
   ///  referenced ChargeItem resource.
-  @HiveField(24)
   List<InvoiceLineItem>? get lineItem => throw _privateConstructorUsedError;
 
   /// [totalPriceComponent] The total amount for the Invoice may be calculated
@@ -20918,31 +20190,25 @@ mixin _$Invoice {
   /// certain conditions.  The priceComponent element can be used to offer
   /// transparency to the recipient of the Invoice of how the total price was
   ///  calculated.
-  @HiveField(25)
   List<InvoicePriceComponent>? get totalPriceComponent =>
       throw _privateConstructorUsedError;
 
   /// [totalNet] Invoice total , taxes excluded.
-  @HiveField(26)
   Money? get totalNet => throw _privateConstructorUsedError;
 
   /// [totalGross] Invoice total, tax included.
-  @HiveField(27)
   Money? get totalGross => throw _privateConstructorUsedError;
 
   /// [paymentTerms] Payment details such as banking details, period of
   ///  payment, deductibles, methods of payment.
-  @HiveField(28)
-  Markdown? get paymentTerms => throw _privateConstructorUsedError;
+  FhirMarkdown? get paymentTerms => throw _privateConstructorUsedError;
 
   /// [paymentTermsElement] Extensions for paymentTerms
   @JsonKey(name: '_paymentTerms')
-  @HiveField(29)
   Element? get paymentTermsElement => throw _privateConstructorUsedError;
 
   /// [note] Comments made about the invoice by the issuer, subject, or other
   ///  participants.
-  @HiveField(30)
   List<Annotation>? get note => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -20957,75 +20223,44 @@ abstract class $InvoiceCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Invoice)
-      @HiveField(0)
           R4ResourceType resourceType,
-      @HiveField(1)
-          String? id,
-      @HiveField(2)
-          FhirMeta? meta,
-      @HiveField(3)
-          FhirUri? implicitRules,
+      String? id,
+      FhirMeta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           Element? implicitRulesElement,
-      @HiveField(5)
-          FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           Element? languageElement,
-      @HiveField(7)
-          Narrative? text,
-      @HiveField(8)
-          List<Resource>? contained,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           List<FhirExtension>? extension_,
-      @HiveField(10)
-          List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          List<Identifier>? identifier,
-      @HiveField(12)
-          FhirCode? status,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      FhirCode? status,
       @JsonKey(name: '_status')
-      @HiveField(13)
           Element? statusElement,
-      @HiveField(14)
-          String? cancelledReason,
+      String? cancelledReason,
       @JsonKey(name: '_cancelledReason')
-      @HiveField(15)
           Element? cancelledReasonElement,
-      @HiveField(16)
-          CodeableConcept? type,
-      @HiveField(17)
-          Reference? subject,
-      @HiveField(18)
-          Reference? recipient,
-      @HiveField(19)
-          FhirDateTime? date,
+      CodeableConcept? type,
+      Reference? subject,
+      Reference? recipient,
+      FhirDateTime? date,
       @JsonKey(name: '_date')
-      @HiveField(20)
           Element? dateElement,
-      @HiveField(21)
-          List<InvoiceParticipant>? participant,
-      @HiveField(22)
-          Reference? issuer,
-      @HiveField(23)
-          Reference? account,
-      @HiveField(24)
-          List<InvoiceLineItem>? lineItem,
-      @HiveField(25)
-          List<InvoicePriceComponent>? totalPriceComponent,
-      @HiveField(26)
-          Money? totalNet,
-      @HiveField(27)
-          Money? totalGross,
-      @HiveField(28)
-          Markdown? paymentTerms,
+      List<InvoiceParticipant>? participant,
+      Reference? issuer,
+      Reference? account,
+      List<InvoiceLineItem>? lineItem,
+      List<InvoicePriceComponent>? totalPriceComponent,
+      Money? totalNet,
+      Money? totalGross,
+      FhirMarkdown? paymentTerms,
       @JsonKey(name: '_paymentTerms')
-      @HiveField(29)
           Element? paymentTermsElement,
-      @HiveField(30)
-          List<Annotation>? note});
+      List<Annotation>? note});
 
   $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -21113,7 +20348,7 @@ class _$InvoiceCopyWithImpl<$Res, $Val extends Invoice>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -21141,7 +20376,7 @@ class _$InvoiceCopyWithImpl<$Res, $Val extends Invoice>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -21205,7 +20440,7 @@ class _$InvoiceCopyWithImpl<$Res, $Val extends Invoice>
       paymentTerms: freezed == paymentTerms
           ? _value.paymentTerms
           : paymentTerms // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       paymentTermsElement: freezed == paymentTermsElement
           ? _value.paymentTermsElement
           : paymentTermsElement // ignore: cast_nullable_to_non_nullable
@@ -21407,75 +20642,44 @@ abstract class _$$_InvoiceCopyWith<$Res> implements $InvoiceCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Invoice)
-      @HiveField(0)
           R4ResourceType resourceType,
-      @HiveField(1)
-          String? id,
-      @HiveField(2)
-          FhirMeta? meta,
-      @HiveField(3)
-          FhirUri? implicitRules,
+      String? id,
+      FhirMeta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           Element? implicitRulesElement,
-      @HiveField(5)
-          FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           Element? languageElement,
-      @HiveField(7)
-          Narrative? text,
-      @HiveField(8)
-          List<Resource>? contained,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           List<FhirExtension>? extension_,
-      @HiveField(10)
-          List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          List<Identifier>? identifier,
-      @HiveField(12)
-          FhirCode? status,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      FhirCode? status,
       @JsonKey(name: '_status')
-      @HiveField(13)
           Element? statusElement,
-      @HiveField(14)
-          String? cancelledReason,
+      String? cancelledReason,
       @JsonKey(name: '_cancelledReason')
-      @HiveField(15)
           Element? cancelledReasonElement,
-      @HiveField(16)
-          CodeableConcept? type,
-      @HiveField(17)
-          Reference? subject,
-      @HiveField(18)
-          Reference? recipient,
-      @HiveField(19)
-          FhirDateTime? date,
+      CodeableConcept? type,
+      Reference? subject,
+      Reference? recipient,
+      FhirDateTime? date,
       @JsonKey(name: '_date')
-      @HiveField(20)
           Element? dateElement,
-      @HiveField(21)
-          List<InvoiceParticipant>? participant,
-      @HiveField(22)
-          Reference? issuer,
-      @HiveField(23)
-          Reference? account,
-      @HiveField(24)
-          List<InvoiceLineItem>? lineItem,
-      @HiveField(25)
-          List<InvoicePriceComponent>? totalPriceComponent,
-      @HiveField(26)
-          Money? totalNet,
-      @HiveField(27)
-          Money? totalGross,
-      @HiveField(28)
-          Markdown? paymentTerms,
+      List<InvoiceParticipant>? participant,
+      Reference? issuer,
+      Reference? account,
+      List<InvoiceLineItem>? lineItem,
+      List<InvoicePriceComponent>? totalPriceComponent,
+      Money? totalNet,
+      Money? totalGross,
+      FhirMarkdown? paymentTerms,
       @JsonKey(name: '_paymentTerms')
-      @HiveField(29)
           Element? paymentTermsElement,
-      @HiveField(30)
-          List<Annotation>? note});
+      List<Annotation>? note});
 
   @override
   $FhirMetaCopyWith<$Res>? get meta;
@@ -21575,7 +20779,7 @@ class __$$_InvoiceCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -21603,7 +20807,7 @@ class __$$_InvoiceCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -21667,7 +20871,7 @@ class __$$_InvoiceCopyWithImpl<$Res>
       paymentTerms: freezed == paymentTerms
           ? _value.paymentTerms
           : paymentTerms // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       paymentTermsElement: freezed == paymentTermsElement
           ? _value.paymentTermsElement
           : paymentTermsElement // ignore: cast_nullable_to_non_nullable
@@ -21682,79 +20886,47 @@ class __$$_InvoiceCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@HiveType(typeId: 163)
 class _$_Invoice extends _Invoice {
   _$_Invoice(
       {@JsonKey(unknownEnumValue: R4ResourceType.Invoice)
-      @HiveField(0)
           this.resourceType = R4ResourceType.Invoice,
-      @HiveField(1)
-          this.id,
-      @HiveField(2)
-          this.meta,
-      @HiveField(3)
-          this.implicitRules,
+      this.id,
+      this.meta,
+      this.implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           this.implicitRulesElement,
-      @HiveField(5)
-          this.language,
+      this.language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           this.languageElement,
-      @HiveField(7)
-          this.text,
-      @HiveField(8)
-          final List<Resource>? contained,
+      this.text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           final List<FhirExtension>? extension_,
-      @HiveField(10)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          final List<Identifier>? identifier,
-      @HiveField(12)
-          this.status,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      this.status,
       @JsonKey(name: '_status')
-      @HiveField(13)
           this.statusElement,
-      @HiveField(14)
-          this.cancelledReason,
+      this.cancelledReason,
       @JsonKey(name: '_cancelledReason')
-      @HiveField(15)
           this.cancelledReasonElement,
-      @HiveField(16)
-          this.type,
-      @HiveField(17)
-          this.subject,
-      @HiveField(18)
-          this.recipient,
-      @HiveField(19)
-          this.date,
+      this.type,
+      this.subject,
+      this.recipient,
+      this.date,
       @JsonKey(name: '_date')
-      @HiveField(20)
           this.dateElement,
-      @HiveField(21)
-          final List<InvoiceParticipant>? participant,
-      @HiveField(22)
-          this.issuer,
-      @HiveField(23)
-          this.account,
-      @HiveField(24)
-          final List<InvoiceLineItem>? lineItem,
-      @HiveField(25)
-          final List<InvoicePriceComponent>? totalPriceComponent,
-      @HiveField(26)
-          this.totalNet,
-      @HiveField(27)
-          this.totalGross,
-      @HiveField(28)
-          this.paymentTerms,
+      final List<InvoiceParticipant>? participant,
+      this.issuer,
+      this.account,
+      final List<InvoiceLineItem>? lineItem,
+      final List<InvoicePriceComponent>? totalPriceComponent,
+      this.totalNet,
+      this.totalGross,
+      this.paymentTerms,
       @JsonKey(name: '_paymentTerms')
-      @HiveField(29)
           this.paymentTermsElement,
-      @HiveField(30)
-          final List<Annotation>? note})
+      final List<Annotation>? note})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -21770,20 +20942,17 @@ class _$_Invoice extends _Invoice {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Invoice)
-  @HiveField(0)
   final R4ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
   @override
-  @HiveField(1)
   final String? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
-  @HiveField(2)
   final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -21791,24 +20960,20 @@ class _$_Invoice extends _Invoice {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   @override
-  @HiveField(3)
   final FhirUri? implicitRules;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
-  @HiveField(4)
   final Element? implicitRulesElement;
 
   /// [language] The base language in which the resource is written.
   @override
-  @HiveField(5)
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] Extensions for language
   @override
   @JsonKey(name: '_language')
-  @HiveField(6)
   final Element? languageElement;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -21818,7 +20983,6 @@ class _$_Invoice extends _Invoice {
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
   @override
-  @HiveField(7)
   final Narrative? text;
 
   /// [contained] These resources do not have an independent existence apart
@@ -21832,7 +20996,6 @@ class _$_Invoice extends _Invoice {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   @override
-  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -21857,7 +21020,6 @@ class _$_Invoice extends _Invoice {
   ///  as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
-  @HiveField(9)
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
@@ -21895,7 +21057,6 @@ class _$_Invoice extends _Invoice {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   @override
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -21912,7 +21073,6 @@ class _$_Invoice extends _Invoice {
   /// [identifier] Identifier of this Invoice, often used for reference in
   ///  correspondence about this invoice or for tracking of payments.
   @override
-  @HiveField(11)
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
@@ -21923,54 +21083,45 @@ class _$_Invoice extends _Invoice {
 
   /// [status] The current state of the Invoice.
   @override
-  @HiveField(12)
-  final Code? status;
+  final FhirCode? status;
 
   /// [statusElement] Extensions for status
   @override
   @JsonKey(name: '_status')
-  @HiveField(13)
   final Element? statusElement;
 
   /// [cancelledReason] In case of Invoice cancellation a reason must be given
   ///  (entered in error, superseded by corrected invoice etc.).
   @override
-  @HiveField(14)
   final String? cancelledReason;
 
   /// [cancelledReasonElement] Extensions for cancelledReason
   @override
   @JsonKey(name: '_cancelledReason')
-  @HiveField(15)
   final Element? cancelledReasonElement;
 
   /// [type] Type of Invoice depending on domain, realm an usage (e.g.
   ///  internal/external, dental, preliminary).
   @override
-  @HiveField(16)
   final CodeableConcept? type;
 
   /// [subject] The individual or set of individuals receiving the goods and
   ///  services billed in this invoice.
   @override
-  @HiveField(17)
   final Reference? subject;
 
   /// [recipient] The individual or Organization responsible for balancing of
   ///  this invoice.
   @override
-  @HiveField(18)
   final Reference? recipient;
 
   /// [date] Date/time(s) of when this Invoice was posted.
   @override
-  @HiveField(19)
   final FhirDateTime? date;
 
   /// [dateElement] Extensions for date
   @override
   @JsonKey(name: '_date')
-  @HiveField(20)
   final Element? dateElement;
 
   /// [participant] Indicates who or what performed or participated in the
@@ -21980,7 +21131,6 @@ class _$_Invoice extends _Invoice {
   /// [participant] Indicates who or what performed or participated in the
   ///  charged service.
   @override
-  @HiveField(21)
   List<InvoiceParticipant>? get participant {
     final value = _participant;
     if (value == null) return null;
@@ -21991,12 +21141,10 @@ class _$_Invoice extends _Invoice {
 
   /// [issuer] The organizationissuing the Invoice.
   @override
-  @HiveField(22)
   final Reference? issuer;
 
   /// [account] Account which is supposed to be balanced with this Invoice.
   @override
-  @HiveField(23)
   final Reference? account;
 
   /// [lineItem] Each line item represents one charge for goods and services
@@ -22008,7 +21156,6 @@ class _$_Invoice extends _Invoice {
   /// rendered. Details such as date, code and amount are found in the
   ///  referenced ChargeItem resource.
   @override
-  @HiveField(24)
   List<InvoiceLineItem>? get lineItem {
     final value = _lineItem;
     if (value == null) return null;
@@ -22030,7 +21177,6 @@ class _$_Invoice extends _Invoice {
   /// transparency to the recipient of the Invoice of how the total price was
   ///  calculated.
   @override
-  @HiveField(25)
   List<InvoicePriceComponent>? get totalPriceComponent {
     final value = _totalPriceComponent;
     if (value == null) return null;
@@ -22042,24 +21188,20 @@ class _$_Invoice extends _Invoice {
 
   /// [totalNet] Invoice total , taxes excluded.
   @override
-  @HiveField(26)
   final Money? totalNet;
 
   /// [totalGross] Invoice total, tax included.
   @override
-  @HiveField(27)
   final Money? totalGross;
 
   /// [paymentTerms] Payment details such as banking details, period of
   ///  payment, deductibles, methods of payment.
   @override
-  @HiveField(28)
-  final Markdown? paymentTerms;
+  final FhirMarkdown? paymentTerms;
 
   /// [paymentTermsElement] Extensions for paymentTerms
   @override
   @JsonKey(name: '_paymentTerms')
-  @HiveField(29)
   final Element? paymentTermsElement;
 
   /// [note] Comments made about the invoice by the issuer, subject, or other
@@ -22069,7 +21211,6 @@ class _$_Invoice extends _Invoice {
   /// [note] Comments made about the invoice by the issuer, subject, or other
   ///  participants.
   @override
-  @HiveField(30)
   List<Annotation>? get note {
     final value = _note;
     if (value == null) return null;
@@ -22195,95 +21336,61 @@ class _$_Invoice extends _Invoice {
 abstract class _Invoice extends Invoice {
   factory _Invoice(
       {@JsonKey(unknownEnumValue: R4ResourceType.Invoice)
-      @HiveField(0)
           final R4ResourceType resourceType,
-      @HiveField(1)
-          final String? id,
-      @HiveField(2)
-          final FhirMeta? meta,
-      @HiveField(3)
-          final FhirUri? implicitRules,
+      final String? id,
+      final FhirMeta? meta,
+      final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           final Element? implicitRulesElement,
-      @HiveField(5)
-          final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           final Element? languageElement,
-      @HiveField(7)
-          final Narrative? text,
-      @HiveField(8)
-          final List<Resource>? contained,
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           final List<FhirExtension>? extension_,
-      @HiveField(10)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          final List<Identifier>? identifier,
-      @HiveField(12)
-          final Code? status,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final FhirCode? status,
       @JsonKey(name: '_status')
-      @HiveField(13)
           final Element? statusElement,
-      @HiveField(14)
-          final String? cancelledReason,
+      final String? cancelledReason,
       @JsonKey(name: '_cancelledReason')
-      @HiveField(15)
           final Element? cancelledReasonElement,
-      @HiveField(16)
-          final CodeableConcept? type,
-      @HiveField(17)
-          final Reference? subject,
-      @HiveField(18)
-          final Reference? recipient,
-      @HiveField(19)
-          final FhirDateTime? date,
+      final CodeableConcept? type,
+      final Reference? subject,
+      final Reference? recipient,
+      final FhirDateTime? date,
       @JsonKey(name: '_date')
-      @HiveField(20)
           final Element? dateElement,
-      @HiveField(21)
-          final List<InvoiceParticipant>? participant,
-      @HiveField(22)
-          final Reference? issuer,
-      @HiveField(23)
-          final Reference? account,
-      @HiveField(24)
-          final List<InvoiceLineItem>? lineItem,
-      @HiveField(25)
-          final List<InvoicePriceComponent>? totalPriceComponent,
-      @HiveField(26)
-          final Money? totalNet,
-      @HiveField(27)
-          final Money? totalGross,
-      @HiveField(28)
-          final Markdown? paymentTerms,
+      final List<InvoiceParticipant>? participant,
+      final Reference? issuer,
+      final Reference? account,
+      final List<InvoiceLineItem>? lineItem,
+      final List<InvoicePriceComponent>? totalPriceComponent,
+      final Money? totalNet,
+      final Money? totalGross,
+      final FhirMarkdown? paymentTerms,
       @JsonKey(name: '_paymentTerms')
-      @HiveField(29)
           final Element? paymentTermsElement,
-      @HiveField(30)
-          final List<Annotation>? note}) = _$_Invoice;
+      final List<Annotation>? note}) = _$_Invoice;
   _Invoice._() : super._();
 
   factory _Invoice.fromJson(Map<String, dynamic> json) = _$_Invoice.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Invoice)
-  @HiveField(0)
   R4ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
-  @HiveField(1)
   String? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  @HiveField(2)
   FhirMeta? get meta;
   @override
 
@@ -22291,24 +21398,20 @@ abstract class _Invoice extends Invoice {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  @HiveField(3)
   FhirUri? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
-  @HiveField(4)
   Element? get implicitRulesElement;
   @override
 
   /// [language] The base language in which the resource is written.
-  @HiveField(5)
   FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
-  @HiveField(6)
   Element? get languageElement;
   @override
 
@@ -22318,7 +21421,6 @@ abstract class _Invoice extends Invoice {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
-  @HiveField(7)
   Narrative? get text;
   @override
 
@@ -22326,7 +21428,6 @@ abstract class _Invoice extends Invoice {
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
-  @HiveField(8)
   List<Resource>? get contained;
   @override
 
@@ -22337,7 +21438,6 @@ abstract class _Invoice extends Invoice {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
-  @HiveField(9)
   List<FhirExtension>? get extension_;
   @override
 
@@ -22354,88 +21454,73 @@ abstract class _Invoice extends Invoice {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
 
   /// [identifier] Identifier of this Invoice, often used for reference in
   ///  correspondence about this invoice or for tracking of payments.
-  @HiveField(11)
   List<Identifier>? get identifier;
   @override
 
   /// [status] The current state of the Invoice.
-  @HiveField(12)
   FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
-  @HiveField(13)
   Element? get statusElement;
   @override
 
   /// [cancelledReason] In case of Invoice cancellation a reason must be given
   ///  (entered in error, superseded by corrected invoice etc.).
-  @HiveField(14)
   String? get cancelledReason;
   @override
 
   /// [cancelledReasonElement] Extensions for cancelledReason
   @JsonKey(name: '_cancelledReason')
-  @HiveField(15)
   Element? get cancelledReasonElement;
   @override
 
   /// [type] Type of Invoice depending on domain, realm an usage (e.g.
   ///  internal/external, dental, preliminary).
-  @HiveField(16)
   CodeableConcept? get type;
   @override
 
   /// [subject] The individual or set of individuals receiving the goods and
   ///  services billed in this invoice.
-  @HiveField(17)
   Reference? get subject;
   @override
 
   /// [recipient] The individual or Organization responsible for balancing of
   ///  this invoice.
-  @HiveField(18)
   Reference? get recipient;
   @override
 
   /// [date] Date/time(s) of when this Invoice was posted.
-  @HiveField(19)
   FhirDateTime? get date;
   @override
 
   /// [dateElement] Extensions for date
   @JsonKey(name: '_date')
-  @HiveField(20)
   Element? get dateElement;
   @override
 
   /// [participant] Indicates who or what performed or participated in the
   ///  charged service.
-  @HiveField(21)
   List<InvoiceParticipant>? get participant;
   @override
 
   /// [issuer] The organizationissuing the Invoice.
-  @HiveField(22)
   Reference? get issuer;
   @override
 
   /// [account] Account which is supposed to be balanced with this Invoice.
-  @HiveField(23)
   Reference? get account;
   @override
 
   /// [lineItem] Each line item represents one charge for goods and services
   /// rendered. Details such as date, code and amount are found in the
   ///  referenced ChargeItem resource.
-  @HiveField(24)
   List<InvoiceLineItem>? get lineItem;
   @override
 
@@ -22444,35 +21529,29 @@ abstract class _Invoice extends Invoice {
   /// certain conditions.  The priceComponent element can be used to offer
   /// transparency to the recipient of the Invoice of how the total price was
   ///  calculated.
-  @HiveField(25)
   List<InvoicePriceComponent>? get totalPriceComponent;
   @override
 
   /// [totalNet] Invoice total , taxes excluded.
-  @HiveField(26)
   Money? get totalNet;
   @override
 
   /// [totalGross] Invoice total, tax included.
-  @HiveField(27)
   Money? get totalGross;
   @override
 
   /// [paymentTerms] Payment details such as banking details, period of
   ///  payment, deductibles, methods of payment.
-  @HiveField(28)
-  Markdown? get paymentTerms;
+  FhirMarkdown? get paymentTerms;
   @override
 
   /// [paymentTermsElement] Extensions for paymentTerms
   @JsonKey(name: '_paymentTerms')
-  @HiveField(29)
   Element? get paymentTermsElement;
   @override
 
   /// [note] Comments made about the invoice by the issuer, subject, or other
   ///  participants.
-  @HiveField(30)
   List<Annotation>? get note;
   @override
   @JsonKey(ignore: true)
@@ -23001,7 +22080,7 @@ class _$InvoiceLineItemCopyWithImpl<$Res, $Val extends InvoiceLineItem>
       sequence: freezed == sequence
           ? _value.sequence
           : sequence // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       sequenceElement: freezed == sequenceElement
           ? _value.sequenceElement
           : sequenceElement // ignore: cast_nullable_to_non_nullable
@@ -23121,7 +22200,7 @@ class __$$_InvoiceLineItemCopyWithImpl<$Res>
       sequence: freezed == sequence
           ? _value.sequence
           : sequence // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       sequenceElement: freezed == sequenceElement
           ? _value.sequenceElement
           : sequenceElement // ignore: cast_nullable_to_non_nullable
@@ -23231,7 +22310,7 @@ class _$_InvoiceLineItem extends _InvoiceLineItem {
 
   /// [sequence] Sequence in which the items appear on the invoice.
   @override
-  final PositiveInt? sequence;
+  final FhirPositiveInt? sequence;
 
   /// [sequenceElement] Extensions for sequence
   @override
@@ -23335,7 +22414,7 @@ abstract class _InvoiceLineItem extends InvoiceLineItem {
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final PositiveInt? sequence,
+      final FhirPositiveInt? sequence,
       @JsonKey(name: '_sequence') final Element? sequenceElement,
       final Reference? chargeItemReference,
       final CodeableConcept? chargeItemCodeableConcept,
@@ -23541,7 +22620,7 @@ class _$InvoicePriceComponentCopyWithImpl<$Res,
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       typeElement: freezed == typeElement
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -23553,7 +22632,7 @@ class _$InvoicePriceComponentCopyWithImpl<$Res,
       factor: freezed == factor
           ? _value.factor
           : factor // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       factorElement: freezed == factorElement
           ? _value.factorElement
           : factorElement // ignore: cast_nullable_to_non_nullable
@@ -23680,7 +22759,7 @@ class __$$_InvoicePriceComponentCopyWithImpl<$Res>
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       typeElement: freezed == typeElement
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -23692,7 +22771,7 @@ class __$$_InvoicePriceComponentCopyWithImpl<$Res>
       factor: freezed == factor
           ? _value.factor
           : factor // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       factorElement: freezed == factorElement
           ? _value.factorElement
           : factorElement // ignore: cast_nullable_to_non_nullable
@@ -23794,7 +22873,7 @@ class _$_InvoicePriceComponent extends _InvoicePriceComponent {
 
   /// [type] This code identifies the type of the component.
   @override
-  final Code? type;
+  final FhirCode? type;
 
   /// [typeElement] Extensions for type
   @override
@@ -23809,7 +22888,7 @@ class _$_InvoicePriceComponent extends _InvoicePriceComponent {
   /// [factor] The factor that has been applied on the base price for
   ///  calculating this component.
   @override
-  final Decimal? factor;
+  final FhirDecimal? factor;
 
   /// [factorElement] Extensions for factor
   @override
@@ -23879,10 +22958,10 @@ abstract class _InvoicePriceComponent extends InvoicePriceComponent {
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final Code? type,
+      final FhirCode? type,
       @JsonKey(name: '_type') final Element? typeElement,
       final CodeableConcept? code,
-      final Decimal? factor,
+      final FhirDecimal? factor,
       @JsonKey(name: '_factor') final Element? factorElement,
       final Money? amount}) = _$_InvoicePriceComponent;
   _InvoicePriceComponent._() : super._();

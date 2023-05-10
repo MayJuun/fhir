@@ -3,7 +3,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:hive/hive.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -14,7 +13,7 @@ part 'terminology.g.dart';
 
 /// [CodeSystem] The CodeSystem resource is used to declare the existence of
 @freezed
-class CodeSystem extends HiveObject with Resource, _$CodeSystem {
+class CodeSystem with Resource, _$CodeSystem {
   /// [CodeSystem] The CodeSystem resource is used to declare the existence of
   CodeSystem._();
 
@@ -208,45 +207,37 @@ class CodeSystem extends HiveObject with Resource, _$CodeSystem {
   /// [concept] Concepts that are in the code system. The concept definitions
   /// are inherently hierarchical, but the definitions must be consulted to
   ///  determine what the meanings of the hierarchical relationships are.
-  @HiveType(typeId: 100)
   factory CodeSystem({
     @Default(R4ResourceType.CodeSystem)
     @JsonKey(unknownEnumValue: R4ResourceType.CodeSystem)
 
-    /// [resourceType] This is a CodeSystem resource
-    @HiveField(0)
+        /// [resourceType] This is a CodeSystem resource
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @HiveField(1)
-        String? id,
+    String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    @HiveField(2)
-        FhirMeta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    @HiveField(3)
-        FhirUri? implicitRules,
+    FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
-    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    @HiveField(5)
-        FhirCode? language,
+    FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
-    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
@@ -255,15 +246,13 @@ class CodeSystem extends HiveObject with Resource, _$CodeSystem {
     /// contain sufficient detail to make it "clinically safe" for a human to just
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
-    @HiveField(7)
-        Narrative? text,
+    Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
-    @HiveField(8)
-        List<Resource>? contained,
+    List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -272,7 +261,6 @@ class CodeSystem extends HiveObject with Resource, _$CodeSystem {
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
     @JsonKey(name: 'extension')
-    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -288,8 +276,7 @@ class CodeSystem extends HiveObject with Resource, _$CodeSystem {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    @HiveField(10)
-        List<FhirExtension>? modifierExtension,
+    List<FhirExtension>? modifierExtension,
 
     /// [url] An absolute URI that is used to identify this code system when it
     /// is referenced in a specification, model, design or an instance; also
@@ -299,19 +286,16 @@ class CodeSystem extends HiveObject with Resource, _$CodeSystem {
     /// canonical reference. It SHALL remain the same when the code system is
     /// stored on different servers. This is used in
     ///  [Coding](datatypes.html#Coding).system.
-    @HiveField(11)
-        FhirUri? url,
+    FhirUri? url,
 
     /// [urlElement] Extensions for url
     @JsonKey(name: '_url')
-    @HiveField(12)
         Element? urlElement,
 
     /// [identifier] A formal identifier that is used to identify this code
     /// system when it is represented in other formats, or referenced in a
     ///  specification, model, design or an instance.
-    @HiveField(13)
-        List<Identifier>? identifier,
+    List<Identifier>? identifier,
 
     /// [version] The identifier that is used to identify this version of the
     /// code system when it is referenced in a specification, model, design or
@@ -320,90 +304,73 @@ class CodeSystem extends HiveObject with Resource, _$CodeSystem {
     /// timestamp (e.g. yyyymmdd) if a managed version is not available. There is
     /// also no expectation that versions can be placed in a lexicographical
     ///  sequence. This is used in [Coding](datatypes.html#Coding).version.
-    @HiveField(14)
-        String? version,
+    String? version,
 
     /// [versionElement] Extensions for version
     @JsonKey(name: '_version')
-    @HiveField(15)
         Element? versionElement,
 
     /// [name] A natural language name identifying the code system. This name
     /// should be usable as an identifier for the module by machine processing
     ///  applications such as code generation.
-    @HiveField(16)
-        String? name,
+    String? name,
 
     /// [nameElement] Extensions for name
     @JsonKey(name: '_name')
-    @HiveField(17)
         Element? nameElement,
 
     /// [title] A short, descriptive, user-friendly title for the code system.
-    @HiveField(18)
-        String? title,
+    String? title,
 
     /// [titleElement] Extensions for title
     @JsonKey(name: '_title')
-    @HiveField(19)
         Element? titleElement,
 
     /// [status] The date (and optionally time) when the code system resource was
     ///  created or revised.
-    @HiveField(20)
-        FhirCode? status,
+    FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
-    @HiveField(21)
         Element? statusElement,
 
     /// [experimental] A Boolean value to indicate that this code system is
     /// authored for testing purposes (or education/evaluation/marketing) and is
     ///  not intended to be used for genuine usage.
-    @HiveField(22)
-        Boolean? experimental,
+    FhirBoolean? experimental,
 
     /// [experimentalElement] Extensions for experimental
     @JsonKey(name: '_experimental')
-    @HiveField(23)
         Element? experimentalElement,
 
     /// [date] The date  (and optionally time) when the code system was
     /// published. The date must change when the business version changes and it
     /// must change if the status code changes. In addition, it should change when
     ///  the substantive content of the code system changes.
-    @HiveField(24)
-        FhirDateTime? date,
+    FhirDateTime? date,
 
     /// [dateElement] Extensions for date
     @JsonKey(name: '_date')
-    @HiveField(25)
         Element? dateElement,
 
     /// [publisher] The name of the organization or individual that published the
     ///  code system.
-    @HiveField(26)
-        String? publisher,
+    String? publisher,
 
     /// [publisherElement] Extensions for publisher
     @JsonKey(name: '_publisher')
-    @HiveField(27)
         Element? publisherElement,
 
     /// [contact] Contact details to assist a user in finding and communicating
     ///  with the publisher.
-    @HiveField(28)
-        List<ContactDetail>? contact,
+    List<ContactDetail>? contact,
 
     /// [description] A free text natural language description of the code system
     ///  from a consumer's perspective.
-    @HiveField(29)
-        Markdown? description,
+    FhirMarkdown? description,
 
     /// [descriptionElement] Extensions for description
     @JsonKey(name: '_description')
-    @HiveField(30)
         Element? descriptionElement,
 
     /// [useContext] The content was developed with a focus and intent of
@@ -411,122 +378,99 @@ class CodeSystem extends HiveObject with Resource, _$CodeSystem {
     /// categories (gender, age, ...) or may be references to specific programs
     /// (insurance plans, studies, ...) and may be used to assist with indexing
     ///  and searching for appropriate code system instances.
-    @HiveField(31)
-        List<UsageContext>? useContext,
+    List<UsageContext>? useContext,
 
     /// [jurisdiction] A legal or geographic region in which the code system is
     ///  intended to be used.
-    @HiveField(32)
-        List<CodeableConcept>? jurisdiction,
+    List<CodeableConcept>? jurisdiction,
 
     /// [purpose] Explanation of why this code system is needed and why it has
     ///  been designed as it has.
-    @HiveField(33)
-        Markdown? purpose,
+    FhirMarkdown? purpose,
 
     /// [purposeElement] Extensions for purpose
     @JsonKey(name: '_purpose')
-    @HiveField(34)
         Element? purposeElement,
 
     /// [copyright] A copyright statement relating to the code system and/or its
     /// contents. Copyright statements are generally legal restrictions on the use
     ///  and publishing of the code system.
-    @HiveField(35)
-        Markdown? copyright,
+    FhirMarkdown? copyright,
 
     /// [copyrightElement] Extensions for copyright
     @JsonKey(name: '_copyright')
-    @HiveField(36)
         Element? copyrightElement,
 
     /// [caseSensitive] If code comparison is case sensitive when codes within
     ///  this system are compared to each other.
-    @HiveField(37)
-        Boolean? caseSensitive,
+    FhirBoolean? caseSensitive,
 
     /// [caseSensitiveElement] Extensions for caseSensitive
     @JsonKey(name: '_caseSensitive')
-    @HiveField(38)
         Element? caseSensitiveElement,
 
     /// [valueSet] Canonical reference to the value set that contains the entire
     ///  code system.
-    @HiveField(39)
-        Canonical? valueSet,
+    FhirCanonical? valueSet,
 
     /// [hierarchyMeaning] The meaning of the hierarchy of concepts as
     ///  represented in this resource.
-    @HiveField(40)
-        FhirCode? hierarchyMeaning,
+    FhirCode? hierarchyMeaning,
 
     /// [hierarchyMeaningElement] Extensions for hierarchyMeaning
     @JsonKey(name: '_hierarchyMeaning')
-    @HiveField(41)
         Element? hierarchyMeaningElement,
 
     /// [compositional] The code system defines a compositional
     ///  (post-coordination) grammar.
-    @HiveField(42)
-        Boolean? compositional,
+    FhirBoolean? compositional,
 
     /// [compositionalElement] Extensions for compositional
     @JsonKey(name: '_compositional')
-    @HiveField(43)
         Element? compositionalElement,
 
     /// [versionNeeded] This flag is used to signify that the code system does
     /// not commit to concept permanence across versions. If true, a version must
     ///  be specified when referencing this code system.
-    @HiveField(44)
-        Boolean? versionNeeded,
+    FhirBoolean? versionNeeded,
 
     /// [versionNeededElement] Extensions for versionNeeded
     @JsonKey(name: '_versionNeeded')
-    @HiveField(45)
         Element? versionNeededElement,
 
     /// [content] The extent of the content of the code system (the concepts and
     ///  codes it defines) are represented in this resource instance.
-    @HiveField(46)
-        FhirCode? content,
+    FhirCode? content,
 
     /// [contentElement] Extensions for content
     @JsonKey(name: '_content')
-    @HiveField(47)
         Element? contentElement,
 
     /// [supplements] The canonical URL of the code system that this code system
     ///  supplement is adding designations and properties to.
-    @HiveField(48)
-        Canonical? supplements,
+    FhirCanonical? supplements,
 
     /// [count] The total number of concepts defined by the code system. Where
     /// the code system has a compositional grammar, the basis of this count is
     ///  defined by the system steward.
-    @HiveField(49)
-        FhirUnsignedInt? count,
+    FhirUnsignedInt? count,
 
     /// [countElement] Extensions for count
     @JsonKey(name: '_count')
-    @HiveField(50)
         Element? countElement,
 
     /// [filter] A filter that can be used in a value set compose statement when
     ///  selecting concepts using a filter.
-    @HiveField(51)
-        List<CodeSystemFilter>? filter,
+    List<CodeSystemFilter>? filter,
 
     /// [property] A property defines an additional slot through which additional
     ///  information can be provided about a concept.
-    @HiveField(52)
-        List<CodeSystemProperty>? property,
+    List<CodeSystemProperty>? property,
 
     /// [concept] Concepts that are in the code system. The concept definitions
     /// are inherently hierarchical, but the definitions must be consulted to
     ///  determine what the meanings of the hierarchical relationships are.
-    @HiveField(53)
-        List<CodeSystemConcept>? concept,
+    List<CodeSystemConcept>? concept,
   }) = _CodeSystem;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1226,13 +1170,13 @@ class CodeSystemProperty1 with _$CodeSystemProperty1 {
     @JsonKey(name: '_valueString') Element? valueStringElement,
 
     /// [valueInteger] The value of this property.
-    Integer? valueInteger,
+    FhirInteger? valueInteger,
 
     /// [valueIntegerElement] Extensions for valueInteger
     @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
 
     /// [valueBoolean] The value of this property.
-    Boolean? valueBoolean,
+    FhirBoolean? valueBoolean,
 
     /// [valueBooleanElement] Extensions for valueBoolean
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
@@ -1283,7 +1227,7 @@ class CodeSystemProperty1 with _$CodeSystemProperty1 {
 
 /// [ConceptMap] A statement of relationships from one set of concepts to one
 @freezed
-class ConceptMap extends HiveObject with Resource, _$ConceptMap {
+class ConceptMap with Resource, _$ConceptMap {
   /// [ConceptMap] A statement of relationships from one set of concepts to one
   ConceptMap._();
 
@@ -1455,45 +1399,37 @@ class ConceptMap extends HiveObject with Resource, _$ConceptMap {
   ///
   /// [group] A group of mappings that all have the same source and target
   ///  system.
-  @HiveType(typeId: 101)
   factory ConceptMap({
     @Default(R4ResourceType.ConceptMap)
     @JsonKey(unknownEnumValue: R4ResourceType.ConceptMap)
 
-    /// [resourceType] This is a ConceptMap resource
-    @HiveField(0)
+        /// [resourceType] This is a ConceptMap resource
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @HiveField(1)
-        String? id,
+    String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    @HiveField(2)
-        FhirMeta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    @HiveField(3)
-        FhirUri? implicitRules,
+    FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
-    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    @HiveField(5)
-        FhirCode? language,
+    FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
-    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
@@ -1502,15 +1438,13 @@ class ConceptMap extends HiveObject with Resource, _$ConceptMap {
     /// contain sufficient detail to make it "clinically safe" for a human to just
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
-    @HiveField(7)
-        Narrative? text,
+    Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
-    @HiveField(8)
-        List<Resource>? contained,
+    List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -1519,7 +1453,6 @@ class ConceptMap extends HiveObject with Resource, _$ConceptMap {
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
     @JsonKey(name: 'extension')
-    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -1535,8 +1468,7 @@ class ConceptMap extends HiveObject with Resource, _$ConceptMap {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    @HiveField(10)
-        List<FhirExtension>? modifierExtension,
+    List<FhirExtension>? modifierExtension,
 
     /// [url] An absolute URI that is used to identify this concept map when it
     /// is referenced in a specification, model, design or an instance; also
@@ -1545,19 +1477,16 @@ class ConceptMap extends HiveObject with Resource, _$ConceptMap {
     /// concept map is (or will be) published. This URL can be the target of a
     /// canonical reference. It SHALL remain the same when the concept map is
     ///  stored on different servers.
-    @HiveField(11)
-        FhirUri? url,
+    FhirUri? url,
 
     /// [urlElement] Extensions for url
     @JsonKey(name: '_url')
-    @HiveField(12)
         Element? urlElement,
 
     /// [identifier] A formal identifier that is used to identify this concept
     /// map when it is represented in other formats, or referenced in a
     ///  specification, model, design or an instance.
-    @HiveField(13)
-        Identifier? identifier,
+    Identifier? identifier,
 
     /// [version] The identifier that is used to identify this version of the
     /// concept map when it is referenced in a specification, model, design or
@@ -1566,90 +1495,73 @@ class ConceptMap extends HiveObject with Resource, _$ConceptMap {
     /// timestamp (e.g. yyyymmdd) if a managed version is not available. There is
     /// also no expectation that versions can be placed in a lexicographical
     ///  sequence.
-    @HiveField(14)
-        String? version,
+    String? version,
 
     /// [versionElement] Extensions for version
     @JsonKey(name: '_version')
-    @HiveField(15)
         Element? versionElement,
 
     /// [name] A natural language name identifying the concept map. This name
     /// should be usable as an identifier for the module by machine processing
     ///  applications such as code generation.
-    @HiveField(16)
-        String? name,
+    String? name,
 
     /// [nameElement] Extensions for name
     @JsonKey(name: '_name')
-    @HiveField(17)
         Element? nameElement,
 
     /// [title] A short, descriptive, user-friendly title for the concept map.
-    @HiveField(18)
-        String? title,
+    String? title,
 
     /// [titleElement] Extensions for title
     @JsonKey(name: '_title')
-    @HiveField(19)
         Element? titleElement,
 
     /// [status] The status of this concept map. Enables tracking the life-cycle
     ///  of the content.
-    @HiveField(20)
-        FhirCode? status,
+    FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
-    @HiveField(21)
         Element? statusElement,
 
     /// [experimental] A Boolean value to indicate that this concept map is
     /// authored for testing purposes (or education/evaluation/marketing) and is
     ///  not intended to be used for genuine usage.
-    @HiveField(22)
-        Boolean? experimental,
+    FhirBoolean? experimental,
 
     /// [experimentalElement] Extensions for experimental
     @JsonKey(name: '_experimental')
-    @HiveField(23)
         Element? experimentalElement,
 
     /// [date] The date  (and optionally time) when the concept map was
     /// published. The date must change when the business version changes and it
     /// must change if the status code changes. In addition, it should change when
     ///  the substantive content of the concept map changes.
-    @HiveField(24)
-        FhirDateTime? date,
+    FhirDateTime? date,
 
     /// [dateElement] Extensions for date
     @JsonKey(name: '_date')
-    @HiveField(25)
         Element? dateElement,
 
     /// [publisher] The name of the organization or individual that published the
     ///  concept map.
-    @HiveField(26)
-        String? publisher,
+    String? publisher,
 
     /// [publisherElement] Extensions for publisher
     @JsonKey(name: '_publisher')
-    @HiveField(27)
         Element? publisherElement,
 
     /// [contact] Contact details to assist a user in finding and communicating
     ///  with the publisher.
-    @HiveField(28)
-        List<ContactDetail>? contact,
+    List<ContactDetail>? contact,
 
     /// [description] A free text natural language description of the concept map
     ///  from a consumer's perspective.
-    @HiveField(29)
-        Markdown? description,
+    FhirMarkdown? description,
 
     /// [descriptionElement] Extensions for description
     @JsonKey(name: '_description')
-    @HiveField(30)
         Element? descriptionElement,
 
     /// [useContext] The content was developed with a focus and intent of
@@ -1657,85 +1569,68 @@ class ConceptMap extends HiveObject with Resource, _$ConceptMap {
     /// categories (gender, age, ...) or may be references to specific programs
     /// (insurance plans, studies, ...) and may be used to assist with indexing
     ///  and searching for appropriate concept map instances.
-    @HiveField(31)
-        List<UsageContext>? useContext,
+    List<UsageContext>? useContext,
 
     /// [jurisdiction] A legal or geographic region in which the concept map is
     ///  intended to be used.
-    @HiveField(32)
-        List<CodeableConcept>? jurisdiction,
+    List<CodeableConcept>? jurisdiction,
 
     /// [purpose] Explanation of why this concept map is needed and why it has
     ///  been designed as it has.
-    @HiveField(33)
-        Markdown? purpose,
+    FhirMarkdown? purpose,
 
     /// [purposeElement] Extensions for purpose
     @JsonKey(name: '_purpose')
-    @HiveField(34)
         Element? purposeElement,
 
     /// [copyright] A copyright statement relating to the concept map and/or its
     /// contents. Copyright statements are generally legal restrictions on the use
     ///  and publishing of the concept map.
-    @HiveField(35)
-        Markdown? copyright,
+    FhirMarkdown? copyright,
 
     /// [copyrightElement] Extensions for copyright
     @JsonKey(name: '_copyright')
-    @HiveField(36)
         Element? copyrightElement,
 
     /// [sourceUri] Identifier for the source value set that contains the
     ///  concepts that are being mapped and provides context for the mappings.
-    @HiveField(37)
-        FhirUri? sourceUri,
+    FhirUri? sourceUri,
 
     /// [sourceUriElement] Extensions for sourceUri
     @JsonKey(name: '_sourceUri')
-    @HiveField(38)
         Element? sourceUriElement,
 
     /// [sourceCanonical] Identifier for the source value set that contains the
     ///  concepts that are being mapped and provides context for the mappings.
-    @HiveField(39)
-        Canonical? sourceCanonical,
+    FhirCanonical? sourceCanonical,
 
     /// [sourceCanonicalElement] Extensions for sourceCanonical
     @JsonKey(name: '_sourceCanonical')
-    @HiveField(40)
         Element? sourceCanonicalElement,
 
     /// [targetUri] The target value set provides context for the mappings. Note
     /// that the mapping is made between concepts, not between value sets, but the
     /// value set provides important context about how the concept mapping choices
     ///  are made.
-    @HiveField(41)
-        FhirUri? targetUri,
+    FhirUri? targetUri,
 
     /// [targetUriElement] Extensions for targetUri
     @JsonKey(name: '_targetUri')
-    @HiveField(42)
         Element? targetUriElement,
 
     /// [targetCanonical] The target value set provides context for the mappings.
-    @HiveField(43)
-
     /// Note that the mapping is made between concepts, not between value sets,
     /// but the value set provides important context about how the concept mapping
     ///  choices are made.
-    @HiveField(44)
-        Canonical? targetCanonical,
+    FhirCanonical? targetCanonical,
 
     /// [targetCanonicalElement] Extensions for targetCanonical
     @JsonKey(name: '_targetCanonical')
-    @HiveField(45)
         Element? targetCanonicalElement,
 
     /// [group] A group of mappings that all have the same source and target
     ///  system.
-    @HiveField(46)
-        List<ConceptMapGroup>? group,
+    List<ConceptMapGroup>? group,
   }) = _ConceptMap;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1827,11 +1722,10 @@ class ConceptMapGroup with _$ConceptMapGroup {
   /// "Unmapped" does not include codes that are unmatched, and the unmapped
   /// element is ignored in a code is specified to have equivalence =
   ///  unmatched.
-  @HiveType(typeId: 102)
   factory ConceptMapGroup({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    @HiveField(0) String? id,
+    String? id,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -1839,7 +1733,7 @@ class ConceptMapGroup with _$ConceptMapGroup {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the element and that modifies the
@@ -1854,49 +1748,45 @@ class ConceptMapGroup with _$ConceptMapGroup {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    @HiveField(2) List<FhirExtension>? modifierExtension,
+    List<FhirExtension>? modifierExtension,
 
     /// [source] An absolute URI that identifies the source system where the
     ///  concepts to be mapped are defined.
-    @HiveField(3) FhirUri? source,
+    FhirUri? source,
 
     /// [sourceElement] Extensions for source
-    @HiveField(4) @JsonKey(name: '_source') Element? sourceElement,
+    @JsonKey(name: '_source') Element? sourceElement,
 
     /// [sourceVersion] The specific version of the code system, as determined by
     ///  the code system authority.
-    @HiveField(5) String? sourceVersion,
+    String? sourceVersion,
 
     /// [sourceVersionElement] Extensions for sourceVersion
-    @HiveField(6)
-    @JsonKey(name: '_sourceVersion')
-        Element? sourceVersionElement,
+    @JsonKey(name: '_sourceVersion') Element? sourceVersionElement,
 
     /// [target] An absolute URI that identifies the target system that the
     ///  concepts will be mapped to.
-    @HiveField(7) FhirUri? target,
+    FhirUri? target,
 
     /// [targetElement] Extensions for target
-    @HiveField(8) @JsonKey(name: '_target') Element? targetElement,
+    @JsonKey(name: '_target') Element? targetElement,
 
     /// [targetVersion] The specific version of the code system, as determined by
     ///  the code system authority.
-    @HiveField(9) String? targetVersion,
+    String? targetVersion,
 
     /// [targetVersionElement] Extensions for targetVersion
-    @HiveField(10)
-    @JsonKey(name: '_targetVersion')
-        Element? targetVersionElement,
+    @JsonKey(name: '_targetVersion') Element? targetVersionElement,
 
     /// [element] Mappings for an individual concept in the source to one or more
     ///  concepts in the target.
-    @HiveField(11) required List<ConceptMapElement> element,
+    required List<ConceptMapElement> element,
 
     /// [unmapped] What to do when there is no mapping for the source concept.
     /// "Unmapped" does not include codes that are unmatched, and the unmapped
     /// element is ignored in a code is specified to have equivalence =
     ///  unmatched.
-    @HiveField(12) ConceptMapUnmapped? unmapped,
+    ConceptMapUnmapped? unmapped,
   }) = _ConceptMapGroup;
 
   /// Produces a Yaml formatted String version of the object
@@ -2309,7 +2199,7 @@ class ConceptMapDependsOn with _$ConceptMapDependsOn {
     /// [system] An absolute URI that identifies the code system of the
     /// dependency code (if the source/dependency is a value set that crosses code
     ///  systems).
-    Canonical? system,
+    FhirCanonical? system,
 
     /// [value] Identity (code or path) or the element/item/ValueSet/text that
     ///  the map depends on / refers to.
@@ -2469,7 +2359,7 @@ class ConceptMapUnmapped with _$ConceptMapUnmapped {
     /// [url] The canonical reference to an additional ConceptMap resource
     /// instance to use for mapping if this ConceptMap resource contains no
     ///  matching mapping for the source concept.
-    Canonical? url,
+    FhirCanonical? url,
   }) = _ConceptMapUnmapped;
 
   /// Produces a Yaml formatted String version of the object
@@ -2505,7 +2395,7 @@ class ConceptMapUnmapped with _$ConceptMapUnmapped {
 
 /// [NamingSystem] A curated namespace that issues unique symbols within that
 @freezed
-class NamingSystem extends HiveObject with Resource, _$NamingSystem {
+class NamingSystem with Resource, _$NamingSystem {
   /// [NamingSystem] A curated namespace that issues unique symbols within that
   NamingSystem._();
 
@@ -2628,45 +2518,37 @@ class NamingSystem extends HiveObject with Resource, _$NamingSystem {
   ///
   /// [uniqueId] Indicates how the system may be identified when referenced in
   ///  electronic exchange.
-  @HiveType(typeId: 103)
   factory NamingSystem({
     @Default(R4ResourceType.NamingSystem)
     @JsonKey(unknownEnumValue: R4ResourceType.NamingSystem)
 
-    /// [resourceType] This is a NamingSystem resource
-    @HiveField(0)
+        /// [resourceType] This is a NamingSystem resource
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @HiveField(1)
-        String? id,
+    String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    @HiveField(2)
-        FhirMeta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    @HiveField(3)
-        FhirUri? implicitRules,
+    FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
-    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    @HiveField(5)
-        FhirCode? language,
+    FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
-    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
@@ -2675,15 +2557,13 @@ class NamingSystem extends HiveObject with Resource, _$NamingSystem {
     /// contain sufficient detail to make it "clinically safe" for a human to just
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
-    @HiveField(7)
-        Narrative? text,
+    Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
-    @HiveField(8)
-        List<Resource>? contained,
+    List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -2692,7 +2572,6 @@ class NamingSystem extends HiveObject with Resource, _$NamingSystem {
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
     @JsonKey(name: 'extension')
-    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -2708,92 +2587,75 @@ class NamingSystem extends HiveObject with Resource, _$NamingSystem {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    @HiveField(10)
-        List<FhirExtension>? modifierExtension,
+    List<FhirExtension>? modifierExtension,
 
     /// [name] A natural language name identifying the naming system. This name
     /// should be usable as an identifier for the module by machine processing
     ///  applications such as code generation.
-    @HiveField(11)
-        String? name,
+    String? name,
 
     /// [nameElement] Extensions for name
     @JsonKey(name: '_name')
-    @HiveField(12)
         Element? nameElement,
 
     /// [status] The status of this naming system. Enables tracking the
     ///  life-cycle of the content.
-    @HiveField(13)
-        FhirCode? status,
+    FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
-    @HiveField(14)
         Element? statusElement,
 
     /// [kind] Indicates the purpose for the naming system - what kinds of things
     ///  does it make unique?
-    @HiveField(15)
-        FhirCode? kind,
+    FhirCode? kind,
 
     /// [kindElement] Extensions for kind
     @JsonKey(name: '_kind')
-    @HiveField(16)
         Element? kindElement,
 
     /// [date] The date  (and optionally time) when the naming system was
     /// published. The date must change when the business version changes and it
     /// must change if the status code changes. In addition, it should change when
     ///  the substantive content of the naming system changes.
-    @HiveField(17)
-        FhirDateTime? date,
+    FhirDateTime? date,
 
     /// [dateElement] Extensions for date
     @JsonKey(name: '_date')
-    @HiveField(18)
         Element? dateElement,
 
     /// [publisher] The name of the organization or individual that published the
     ///  naming system.
-    @HiveField(19)
-        String? publisher,
+    String? publisher,
 
     /// [publisherElement] Extensions for publisher
     @JsonKey(name: '_publisher')
-    @HiveField(20)
         Element? publisherElement,
 
     /// [contact] Contact details to assist a user in finding and communicating
     ///  with the publisher.
-    @HiveField(21)
-        List<ContactDetail>? contact,
+    List<ContactDetail>? contact,
 
     /// [responsible] The name of the organization that is responsible for
     /// issuing identifiers or codes for this namespace and ensuring their
     ///  non-collision.
-    @HiveField(22)
-        String? responsible,
+    String? responsible,
 
     /// [responsibleElement] Extensions for responsible
     @JsonKey(name: '_responsible')
-    @HiveField(23)
         Element? responsibleElement,
 
     /// [type] Categorizes a naming system for easier search by grouping related
     ///  naming systems.
-    @HiveField(24)
-        CodeableConcept? type,
+    CodeableConcept? type,
 
     /// [description] A free text natural language description of the naming
     /// system from a consumer's perspective. Details about what the namespace
     ///  identifies including scope, granularity, version labeling, etc.
-    @HiveField(25)
-        Markdown? description,
+    FhirMarkdown? description,
 
     /// [descriptionElement] Extensions for description
     @JsonKey(name: '_description')
-    @HiveField(26)
         Element? descriptionElement,
 
     /// [useContext] The content was developed with a focus and intent of
@@ -2801,28 +2663,23 @@ class NamingSystem extends HiveObject with Resource, _$NamingSystem {
     /// categories (gender, age, ...) or may be references to specific programs
     /// (insurance plans, studies, ...) and may be used to assist with indexing
     ///  and searching for appropriate naming system instances.
-    @HiveField(27)
-        List<UsageContext>? useContext,
+    List<UsageContext>? useContext,
 
     /// [jurisdiction] A legal or geographic region in which the naming system is
     ///  intended to be used.
-    @HiveField(28)
-        List<CodeableConcept>? jurisdiction,
+    List<CodeableConcept>? jurisdiction,
 
     /// [usage] Provides guidance on the use of the namespace, including the
     ///  handling of formatting characters, use of upper vs. lower case, etc.
-    @HiveField(29)
-        String? usage,
+    String? usage,
 
     /// [usageElement] Extensions for usage
     @JsonKey(name: '_usage')
-    @HiveField(30)
         Element? usageElement,
 
     /// [uniqueId] Indicates how the system may be identified when referenced in
     ///  electronic exchange.
-    @HiveField(31)
-        required List<NamingSystemUniqueId> uniqueId,
+    required List<NamingSystemUniqueId> uniqueId,
   }) = _NamingSystem;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2954,7 +2811,7 @@ class NamingSystemUniqueId with _$NamingSystemUniqueId {
 
     /// [preferred] Indicates whether this identifier is the "preferred"
     ///  identifier of this type.
-    Boolean? preferred,
+    FhirBoolean? preferred,
 
     /// [preferredElement] Extensions for preferred
     @JsonKey(name: '_preferred') Element? preferredElement,
@@ -3004,8 +2861,7 @@ class NamingSystemUniqueId with _$NamingSystemUniqueId {
 
 /// [TerminologyCapabilities] A TerminologyCapabilities resource documents a
 @freezed
-class TerminologyCapabilities extends HiveObject
-    with Resource, _$TerminologyCapabilities {
+class TerminologyCapabilities with Resource, _$TerminologyCapabilities {
   /// [TerminologyCapabilities] A TerminologyCapabilities resource documents a
   TerminologyCapabilities._();
 
@@ -3185,45 +3041,37 @@ class TerminologyCapabilities extends HiveObject
   /// [codeSearchElement] Extensions for codeSearch
   ///
   /// [validateCode] Information about the
-  @HiveType(typeId: 104)
   factory TerminologyCapabilities({
     @Default(R4ResourceType.TerminologyCapabilities)
     @JsonKey(unknownEnumValue: R4ResourceType.TerminologyCapabilities)
 
-    /// [resourceType] This is a TerminologyCapabilities resource
-    @HiveField(0)
+        /// [resourceType] This is a TerminologyCapabilities resource
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @HiveField(1)
-        String? id,
+    String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    @HiveField(2)
-        FhirMeta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    @HiveField(3)
-        FhirUri? implicitRules,
+    FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
-    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    @HiveField(5)
-        FhirCode? language,
+    FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
-    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
@@ -3232,15 +3080,13 @@ class TerminologyCapabilities extends HiveObject
     /// contain sufficient detail to make it "clinically safe" for a human to just
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
-    @HiveField(7)
-        Narrative? text,
+    Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
-    @HiveField(8)
-        List<Resource>? contained,
+    List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -3249,7 +3095,6 @@ class TerminologyCapabilities extends HiveObject
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
     @JsonKey(name: 'extension')
-    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -3265,8 +3110,7 @@ class TerminologyCapabilities extends HiveObject
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    @HiveField(10)
-        List<FhirExtension>? modifierExtension,
+    List<FhirExtension>? modifierExtension,
 
     /// [url] An absolute URI that is used to identify this terminology
     /// capabilities when it is referenced in a specification, model, design or an
@@ -3275,112 +3119,91 @@ class TerminologyCapabilities extends HiveObject
     /// instance of this terminology capabilities is (or will be) published. This
     /// URL can be the target of a canonical reference. It SHALL remain the same
     ///  when the terminology capabilities is stored on different servers.
-    @HiveField(11)
-        FhirUri? url,
+    FhirUri? url,
 
     /// [urlElement] Extensions for url
     @JsonKey(name: '_url')
-    @HiveField(12)
         Element? urlElement,
 
     /// [version] The identifier that is used to identify this version of the
-    @HiveField(13)
-
     /// terminology capabilities when it is referenced in a specification, model,
     /// design or instance. This is an arbitrary value managed by the terminology
     /// capabilities author and is not expected to be globally unique. For
     /// example, it might be a timestamp (e.g. yyyymmdd) if a managed version is
     /// not available. There is also no expectation that versions can be placed in
     ///  a lexicographical sequence.
-    @HiveField(14)
-        String? version,
+    String? version,
 
     /// [versionElement] Extensions for version
     @JsonKey(name: '_version')
-    @HiveField(15)
         Element? versionElement,
 
     /// [name] A natural language name identifying the terminology capabilities.
     /// This name should be usable as an identifier for the module by machine
     ///  processing applications such as code generation.
-    @HiveField(16)
-        String? name,
+    String? name,
 
     /// [nameElement] Extensions for name
     @JsonKey(name: '_name')
-    @HiveField(17)
         Element? nameElement,
 
     /// [title] A short, descriptive, user-friendly title for the terminology
     ///  capabilities.
-    @HiveField(18)
-        String? title,
+    String? title,
 
     /// [titleElement] Extensions for title
     @JsonKey(name: '_title')
-    @HiveField(19)
         Element? titleElement,
 
     /// [status] The status of this terminology capabilities. Enables tracking
     ///  the life-cycle of the content.
-    @HiveField(20)
-        FhirCode? status,
+    FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
-    @HiveField(21)
         Element? statusElement,
 
     /// [experimental] A Boolean value to indicate that this terminology
     /// capabilities is authored for testing purposes (or
     /// education/evaluation/marketing) and is not intended to be used for genuine
     ///  usage.
-    @HiveField(22)
-        Boolean? experimental,
+    FhirBoolean? experimental,
 
     /// [experimentalElement] Extensions for experimental
     @JsonKey(name: '_experimental')
-    @HiveField(23)
         Element? experimentalElement,
 
     /// [date] The date  (and optionally time) when the terminology capabilities
     /// was published. The date must change when the business version changes and
     /// it must change if the status code changes. In addition, it should change
     ///  when the substantive content of the terminology capabilities changes.
-    @HiveField(24)
-        FhirDateTime? date,
+    FhirDateTime? date,
 
     /// [dateElement] Extensions for date
     @JsonKey(name: '_date')
-    @HiveField(25)
         Element? dateElement,
 
     /// [publisher] The name of the organization or individual that published the
     ///  terminology capabilities.
-    @HiveField(26)
-        String? publisher,
+    String? publisher,
 
     /// [publisherElement] Extensions for publisher
     @JsonKey(name: '_publisher')
-    @HiveField(27)
         Element? publisherElement,
 
     /// [contact] Contact details to assist a user in finding and communicating
     ///  with the publisher.
-    @HiveField(28)
-        List<ContactDetail>? contact,
+    List<ContactDetail>? contact,
 
     /// [description] A free text natural language description of the terminology
     /// capabilities from a consumer's perspective. Typically, this is used when
     /// the capability statement describes a desired rather than an actual
     /// solution, for example as a formal expression of requirements as part of an
     ///  RFP.
-    @HiveField(29)
-        Markdown? description,
+    FhirMarkdown? description,
 
     /// [descriptionElement] Extensions for description
     @JsonKey(name: '_description')
-    @HiveField(30)
         Element? descriptionElement,
 
     /// [useContext] The content was developed with a focus and intent of
@@ -3388,96 +3211,77 @@ class TerminologyCapabilities extends HiveObject
     /// categories (gender, age, ...) or may be references to specific programs
     /// (insurance plans, studies, ...) and may be used to assist with indexing
     ///  and searching for appropriate terminology capabilities instances.
-    @HiveField(31)
-        List<UsageContext>? useContext,
+    List<UsageContext>? useContext,
 
     /// [jurisdiction] A legal or geographic region in which the terminology
     ///  capabilities is intended to be used.
-    @HiveField(32)
-        List<CodeableConcept>? jurisdiction,
+    List<CodeableConcept>? jurisdiction,
 
     /// [purpose] Explanation of why this terminology capabilities is needed and
     ///  why it has been designed as it has.
-    @HiveField(33)
-        Markdown? purpose,
+    FhirMarkdown? purpose,
 
     /// [purposeElement] Extensions for purpose
     @JsonKey(name: '_purpose')
-    @HiveField(34)
         Element? purposeElement,
 
     /// [copyright] A copyright statement relating to the terminology
     /// capabilities and/or its contents. Copyright statements are generally legal
     ///  restrictions on the use and publishing of the terminology capabilities.
-    @HiveField(35)
-        Markdown? copyright,
+    FhirMarkdown? copyright,
 
     /// [copyrightElement] Extensions for copyright
     @JsonKey(name: '_copyright')
-    @HiveField(36)
         Element? copyrightElement,
 
     /// [kind] The way that this statement is intended to be used, to describe an
     /// actual running instance of software, a particular product (kind, not
     /// instance of software) or a class of implementation (e.g. a desired
     ///  purchase).
-    @HiveField(37)
-        FhirCode? kind,
+    FhirCode? kind,
 
     /// [kindElement] Extensions for kind
     @JsonKey(name: '_kind')
-    @HiveField(38)
         Element? kindElement,
 
     /// [software] Software that is covered by this terminology capability
     /// statement.  It is used when the statement describes the capabilities of a
     ///  particular software version, independent of an installation.
-    @HiveField(39)
-        TerminologyCapabilitiesSoftware? software,
+    TerminologyCapabilitiesSoftware? software,
 
     /// [implementation] Identifies a specific implementation instance that is
     /// described by the terminology capability statement - i.e. a particular
     ///  installation, rather than the capabilities of a software program.
-    @HiveField(40)
-        TerminologyCapabilitiesImplementation? implementation,
+    TerminologyCapabilitiesImplementation? implementation,
 
     /// [lockedDate] Whether the server supports lockedDate.
-    @HiveField(41)
-        Boolean? lockedDate,
+    FhirBoolean? lockedDate,
 
     /// [lockedDateElement] Extensions for lockedDate
     @JsonKey(name: '_lockedDate')
-    @HiveField(42)
         Element? lockedDateElement,
 
     /// [codeSystem] Identifies a code system that is supported by the server. If
     /// there is a no code system URL, then this declares the general assumptions
     ///  a client can make about support for any CodeSystem resource.
-    @HiveField(43)
-        List<TerminologyCapabilitiesCodeSystem>? codeSystem,
+    List<TerminologyCapabilitiesCodeSystem>? codeSystem,
 
     /// [expansion] Information about the
     ///  [ValueSet/$expand](valueset-operation-expand.html) operation.
-    @HiveField(44)
-        TerminologyCapabilitiesExpansion? expansion,
+    TerminologyCapabilitiesExpansion? expansion,
 
     /// [codeSearch] The degree to which the server supports the code search
     ///  parameter on ValueSet, if it is supported.
-    @HiveField(45)
-        FhirCode? codeSearch,
+    FhirCode? codeSearch,
 
     /// [codeSearchElement] Extensions for codeSearch
     @JsonKey(name: '_codeSearch')
-    @HiveField(46)
         Element? codeSearchElement,
 
     /// [validateCode] Information about the
-    @HiveField(47)
-        TerminologyCapabilitiesValidateCode? validateCode,
-    @HiveField(48)
-        TerminologyCapabilitiesTranslation? translation,
-    @HiveField(49)
-        TerminologyCapabilitiesClosure? closure,
+    TerminologyCapabilitiesValidateCode? validateCode,
+    TerminologyCapabilitiesTranslation? translation,
+    TerminologyCapabilitiesClosure? closure,
   }) = _TerminologyCapabilities;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -3773,11 +3577,10 @@ class TerminologyCapabilitiesCodeSystem
   ///  code system.
   ///
   /// [subsumptionElement] Extensions for subsumption
-  @HiveType(typeId: 105)
   factory TerminologyCapabilitiesCodeSystem({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    @HiveField(0) String? id,
+    String? id,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -3785,7 +3588,7 @@ class TerminologyCapabilitiesCodeSystem
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the element and that modifies the
@@ -3800,21 +3603,21 @@ class TerminologyCapabilitiesCodeSystem
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    @HiveField(2) List<FhirExtension>? modifierExtension,
+    List<FhirExtension>? modifierExtension,
 
     /// [uri] URI for the Code System.
-    @HiveField(3) Canonical? uri,
+    FhirCanonical? uri,
 
     /// [version] For the code system, a list of versions that are supported by
     ///  the server.
-    @HiveField(4) List<TerminologyCapabilitiesVersion>? version,
+    List<TerminologyCapabilitiesVersion>? version,
 
     /// [subsumption] True if subsumption is supported for this version of the
     ///  code system.
-    @HiveField(5) Boolean? subsumption,
+    FhirBoolean? subsumption,
 
     /// [subsumptionElement] Extensions for subsumption
-    @HiveField(6) @JsonKey(name: '_subsumption') Element? subsumptionElement,
+    @JsonKey(name: '_subsumption') Element? subsumptionElement,
   }) = _TerminologyCapabilitiesCodeSystem;
 
   /// Produces a Yaml formatted String version of the object
@@ -3931,14 +3734,14 @@ class TerminologyCapabilitiesVersion with _$TerminologyCapabilitiesVersion {
     @JsonKey(name: '_code') Element? codeElement,
 
     /// [isDefault] If this is the default version for this code system.
-    Boolean? isDefault,
+    FhirBoolean? isDefault,
 
     /// [isDefaultElement] Extensions for isDefault
     @JsonKey(name: '_isDefault') Element? isDefaultElement,
 
     /// [compositional] If the compositional grammar defined by the code system
     ///  is supported.
-    Boolean? compositional,
+    FhirBoolean? compositional,
 
     /// [compositionalElement] Extensions for compositional
     @JsonKey(name: '_compositional') Element? compositionalElement,
@@ -4186,19 +3989,19 @@ class TerminologyCapabilitiesExpansion with _$TerminologyCapabilitiesExpansion {
     List<FhirExtension>? modifierExtension,
 
     /// [hierarchical] Whether the server can return nested value sets.
-    Boolean? hierarchical,
+    FhirBoolean? hierarchical,
 
     /// [hierarchicalElement] Extensions for hierarchical
     @JsonKey(name: '_hierarchical') Element? hierarchicalElement,
 
     /// [paging] Whether the server supports paging on expansion.
-    Boolean? paging,
+    FhirBoolean? paging,
 
     /// [pagingElement] Extensions for paging
     @JsonKey(name: '_paging') Element? pagingElement,
 
     /// [incomplete] Allow request for incomplete expansions?
-    Boolean? incomplete,
+    FhirBoolean? incomplete,
 
     /// [incompleteElement] Extensions for incomplete
     @JsonKey(name: '_incomplete') Element? incompleteElement,
@@ -4207,7 +4010,7 @@ class TerminologyCapabilitiesExpansion with _$TerminologyCapabilitiesExpansion {
     List<TerminologyCapabilitiesParameter>? parameter,
 
     /// [textFilter] Documentation about text searching works.
-    Markdown? textFilter,
+    FhirMarkdown? textFilter,
 
     /// [textFilterElement] Extensions for textFilter
     @JsonKey(name: '_textFilter') Element? textFilterElement,
@@ -4402,7 +4205,7 @@ class TerminologyCapabilitiesValidateCode
     List<FhirExtension>? modifierExtension,
 
     /// [translations] Whether translations are validated.
-    Boolean? translations,
+    FhirBoolean? translations,
 
     /// [translationsElement] Extensions for translations
     @JsonKey(name: '_translations') Element? translationsElement,
@@ -4494,7 +4297,7 @@ class TerminologyCapabilitiesTranslation
     List<FhirExtension>? modifierExtension,
 
     /// [needsMap] Whether the client must identify the map.
-    Boolean? needsMap,
+    FhirBoolean? needsMap,
 
     /// [needsMapElement] Extensions for needsMap
     @JsonKey(name: '_needsMap') Element? needsMapElement,
@@ -4587,7 +4390,7 @@ class TerminologyCapabilitiesClosure with _$TerminologyCapabilitiesClosure {
     List<FhirExtension>? modifierExtension,
 
     /// [translation] If cross-system closure is supported.
-    Boolean? translation,
+    FhirBoolean? translation,
 
     /// [translationElement] Extensions for translation
     @JsonKey(name: '_translation') Element? translationElement,
@@ -4627,7 +4430,7 @@ class TerminologyCapabilitiesClosure with _$TerminologyCapabilitiesClosure {
 
 /// [ValueSet] A ValueSet resource instance specifies a set of codes drawn
 @freezed
-class ValueSet extends HiveObject with Resource, _$ValueSet {
+class ValueSet with Resource, _$ValueSet {
   /// [ValueSet] A ValueSet resource instance specifies a set of codes drawn
   ValueSet._();
 
@@ -4790,45 +4593,37 @@ class ValueSet extends HiveObject with Resource, _$ValueSet {
   /// [expansion] A value set can also be "expanded", where the value set is
   /// turned into a simple collection of enumerated codes. This element holds
   ///  the expansion, if it has been performed.
-  @HiveType(typeId: 106)
   factory ValueSet({
     @Default(R4ResourceType.ValueSet)
     @JsonKey(unknownEnumValue: R4ResourceType.ValueSet)
 
-    /// [resourceType] This is a ValueSet resource
-    @HiveField(0)
+        /// [resourceType] This is a ValueSet resource
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @HiveField(1)
-        String? id,
+    String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    @HiveField(2)
-        FhirMeta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    @HiveField(3)
-        FhirUri? implicitRules,
+    FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
-    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    @HiveField(5)
-        FhirCode? language,
+    FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
-    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
@@ -4837,15 +4632,13 @@ class ValueSet extends HiveObject with Resource, _$ValueSet {
     /// contain sufficient detail to make it "clinically safe" for a human to just
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
-    @HiveField(7)
-        Narrative? text,
+    Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
-    @HiveField(8)
-        List<Resource>? contained,
+    List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -4854,7 +4647,6 @@ class ValueSet extends HiveObject with Resource, _$ValueSet {
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
     @JsonKey(name: 'extension')
-    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -4870,8 +4662,7 @@ class ValueSet extends HiveObject with Resource, _$ValueSet {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    @HiveField(10)
-        List<FhirExtension>? modifierExtension,
+    List<FhirExtension>? modifierExtension,
 
     /// [url] An absolute URI that is used to identify this value set when it is
     /// referenced in a specification, model, design or an instance; also called
@@ -4880,21 +4671,16 @@ class ValueSet extends HiveObject with Resource, _$ValueSet {
     /// set is (or will be) published. This URL can be the target of a canonical
     /// reference. It SHALL remain the same when the value set is stored on
     ///  different servers.
-    @HiveField(11)
-        FhirUri? url,
+    FhirUri? url,
 
     /// [urlElement] Extensions for url
     @JsonKey(name: '_url')
-    @HiveField(12)
         Element? urlElement,
 
     /// [identifier] A formal identifier that is used to identify this value set
-    @HiveField(13)
-
     /// when it is represented in other formats, or referenced in a specification,
     ///  model, design or an instance.
-    @HiveField(14)
-        List<Identifier>? identifier,
+    List<Identifier>? identifier,
 
     /// [version] The identifier that is used to identify this version of the
     /// value set when it is referenced in a specification, model, design or
@@ -4903,94 +4689,75 @@ class ValueSet extends HiveObject with Resource, _$ValueSet {
     /// timestamp (e.g. yyyymmdd) if a managed version is not available. There is
     /// also no expectation that versions can be placed in a lexicographical
     ///  sequence.
-    @HiveField(15)
-        String? version,
+    String? version,
 
     /// [versionElement] Extensions for version
     @JsonKey(name: '_version')
-    @HiveField(16)
         Element? versionElement,
 
     /// [name] A natural language name identifying the value set. This name
     /// should be usable as an identifier for the module by machine processing
     ///  applications such as code generation.
-    @HiveField(17)
-        String? name,
+    String? name,
 
     /// [nameElement] Extensions for name
     @JsonKey(name: '_name')
-    @HiveField(18)
         Element? nameElement,
 
     /// [title] A short, descriptive, user-friendly title for the value set.
-    @HiveField(19)
-        String? title,
+    String? title,
 
     /// [titleElement] Extensions for title
     @JsonKey(name: '_title')
-    @HiveField(20)
         Element? titleElement,
 
     /// [status] The status of this value set. Enables tracking the life-cycle of
     /// the content. The status of the value set applies to the value set
     /// definition (ValueSet.compose) and the associated ValueSet metadata.
     ///  Expansions do not have a state.
-    @HiveField(21)
-        FhirCode? status,
+    FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
-    @HiveField(22)
         Element? statusElement,
 
     /// [experimental] A Boolean value to indicate that this value set is
     /// authored for testing purposes (or education/evaluation/marketing) and is
     ///  not intended to be used for genuine usage.
-    @HiveField(23)
-        Boolean? experimental,
+    FhirBoolean? experimental,
 
     /// [experimentalElement] Extensions for experimental
     @JsonKey(name: '_experimental')
-    @HiveField(24)
         Element? experimentalElement,
 
     /// [date] The date (and optionally time) when the value set was created or
     ///  revised (e.g. the 'content logical definition').
-    @HiveField(25)
-        FhirDateTime? date,
+    FhirDateTime? date,
 
     /// [dateElement] Extensions for date
     @JsonKey(name: '_date')
-    @HiveField(26)
         Element? dateElement,
 
     /// [publisher] The name of the organization or individual that published the
     ///  value set.
-    @HiveField(27)
-        String? publisher,
+    String? publisher,
 
     /// [publisherElement] Extensions for publisher
     @JsonKey(name: '_publisher')
-    @HiveField(28)
         Element? publisherElement,
 
     /// [contact] Contact details to assist a user in finding and communicating
     ///  with the publisher.
-    @HiveField(29)
-        List<ContactDetail>? contact,
+    List<ContactDetail>? contact,
 
     /// [description] A free text natural language description of the value set
     /// from a consumer's perspective. The textual description specifies the span
-    @HiveField(30)
-
     /// of meanings for concepts to be included within the Value Set Expansion,
     ///  and also may specify the intended use and limitations of the Value Set.
-    @HiveField(31)
-        Markdown? description,
+    FhirMarkdown? description,
 
     /// [descriptionElement] Extensions for description
     @JsonKey(name: '_description')
-    @HiveField(32)
         Element? descriptionElement,
 
     /// [useContext] The content was developed with a focus and intent of
@@ -4998,58 +4765,48 @@ class ValueSet extends HiveObject with Resource, _$ValueSet {
     /// categories (gender, age, ...) or may be references to specific programs
     /// (insurance plans, studies, ...) and may be used to assist with indexing
     ///  and searching for appropriate value set instances.
-    @HiveField(33)
-        List<UsageContext>? useContext,
+    List<UsageContext>? useContext,
 
     /// [jurisdiction] A legal or geographic region in which the value set is
     ///  intended to be used.
-    @HiveField(34)
-        List<CodeableConcept>? jurisdiction,
+    List<CodeableConcept>? jurisdiction,
 
     /// [immutable] If this is set to 'true', then no new versions of the content
     /// logical definition can be created.  Note: Other metadata might still
     ///  change.
-    @HiveField(35)
-        Boolean? immutable,
+    FhirBoolean? immutable,
 
     /// [immutableElement] Extensions for immutable
     @JsonKey(name: '_immutable')
-    @HiveField(36)
         Element? immutableElement,
 
     /// [purpose] Explanation of why this value set is needed and why it has been
     ///  designed as it has.
-    @HiveField(37)
-        Markdown? purpose,
+    FhirMarkdown? purpose,
 
     /// [purposeElement] Extensions for purpose
     @JsonKey(name: '_purpose')
-    @HiveField(38)
         Element? purposeElement,
 
     /// [copyright] A copyright statement relating to the value set and/or its
     /// contents. Copyright statements are generally legal restrictions on the use
     ///  and publishing of the value set.
-    @HiveField(39)
-        Markdown? copyright,
+    FhirMarkdown? copyright,
 
     /// [copyrightElement] Extensions for copyright
     @JsonKey(name: '_copyright')
-    @HiveField(40)
         Element? copyrightElement,
 
     /// [compose] A set of criteria that define the contents of the value set by
     /// including or excluding codes selected from the specified code system(s)
     /// that the value set draws from. This is also known as the Content Logical
     ///  Definition (CLD).
-    @HiveField(41)
-        ValueSetCompose? compose,
+    ValueSetCompose? compose,
 
     /// [expansion] A value set can also be "expanded", where the value set is
     /// turned into a simple collection of enumerated codes. This element holds
     ///  the expansion, if it has been performed.
-    @HiveField(42)
-        ValueSetExpansion? expansion,
+    ValueSetExpansion? expansion,
   }) = _ValueSet;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -5168,7 +4925,7 @@ class ValueSetCompose with _$ValueSetCompose {
     /// determine the version of all referenced Code Systems and Value Set
     /// Definitions included in the compose that are not already tied to a
     ///  specific version.
-    Date? lockedDate,
+    FhirDate? lockedDate,
 
     /// [lockedDateElement] Extensions for lockedDate
     @JsonKey(name: '_lockedDate') Element? lockedDateElement,
@@ -5179,7 +4936,7 @@ class ValueSetCompose with _$ValueSetCompose {
     /// will not be included in the expansion. If absent, the behavior is
     /// determined by the implementation, or by the applicable $expand parameters
     ///  (but generally, inactive codes would be expected to be included).
-    Boolean? inactive,
+    FhirBoolean? inactive,
 
     /// [inactiveElement] Extensions for inactive
     @JsonKey(name: '_inactive') Element? inactiveElement,
@@ -5867,7 +5624,7 @@ class ValueSetExpansion with _$ValueSetExpansion {
     /// [total] The total number of concepts in the expansion. If the number of
     /// concept nodes in this resource is less than the stated number, then the
     ///  server can return more using the offset parameter.
-    Integer? total,
+    FhirInteger? total,
 
     /// [totalElement] Extensions for total
     @JsonKey(name: '_total') Element? totalElement,
@@ -5875,7 +5632,7 @@ class ValueSetExpansion with _$ValueSetExpansion {
     /// [offset] If paging is being used, the offset at which this resource
     /// starts.  I.e. this resource is a partial view into the expansion. If
     ///  paging is not being used, this element SHALL NOT be present.
-    Integer? offset,
+    FhirInteger? offset,
 
     /// [offsetElement] Extensions for offset
     @JsonKey(name: '_offset') Element? offsetElement,
@@ -6032,13 +5789,13 @@ class ValueSetParameter with _$ValueSetParameter {
     @JsonKey(name: '_valueString') Element? valueStringElement,
 
     /// [valueBoolean] The value of the parameter.
-    Boolean? valueBoolean,
+    FhirBoolean? valueBoolean,
 
     /// [valueBooleanElement] Extensions for valueBoolean
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
 
     /// [valueInteger] The value of the parameter.
-    Integer? valueInteger,
+    FhirInteger? valueInteger,
 
     /// [valueIntegerElement] Extensions for valueInteger
     @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
@@ -6216,7 +5973,7 @@ class ValueSetContains with _$ValueSetContains {
     /// [abstract] If true, this entry is included in the expansion for
     /// navigational purposes, and the user cannot select the code directly as a
     ///  proper value.
-    @JsonKey(name: 'abstract') Boolean? abstract_,
+    @JsonKey(name: 'abstract') FhirBoolean? abstract_,
 
     /// [abstractElement] Extensions for abstract
     @JsonKey(name: '_abstract') Element? abstractElement,
@@ -6226,7 +5983,7 @@ class ValueSetContains with _$ValueSetContains {
     /// by the code system for understanding legacy data. It might not be known or
     /// specified whether an concept is inactive (and it may depend on the context
     ///  of use).
-    Boolean? inactive,
+    FhirBoolean? inactive,
 
     /// [inactiveElement] Extensions for inactive
     @JsonKey(name: '_inactive') Element? inactiveElement,

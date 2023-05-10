@@ -3,1260 +3,6 @@
 part of 'general.dart';
 
 // **************************************************************************
-// TypeAdapterGenerator
-// **************************************************************************
-
-class AccountAdapter extends TypeAdapter<_$_Account> {
-  @override
-  final int typeId = 166;
-
-  @override
-  _$_Account read(BinaryReader reader) {
-    final numOfFields = reader.readByte();
-    final fields = <int, dynamic>{
-      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
-    };
-    return _$_Account(
-      resourceType: fields[0] as R4ResourceType,
-      id: fields[1] as String?,
-      meta: fields[2] as FhirMeta?,
-      implicitRules: fields[3] as FhirUri?,
-      implicitRulesElement: fields[4] as Element?,
-      language: fields[5] as Code?,
-      languageElement: fields[6] as Element?,
-      text: fields[7] as Narrative?,
-      contained: (fields[8] as List?)?.cast<Resource>(),
-      extension_: (fields[9] as List?)?.cast<FhirExtension>(),
-      modifierExtension: (fields[10] as List?)?.cast<FhirExtension>(),
-      identifier: (fields[11] as List?)?.cast<Identifier>(),
-      status: fields[12] as Code?,
-      statusElement: fields[13] as Element?,
-      type: fields[14] as CodeableConcept?,
-      name: fields[15] as String?,
-      nameElement: fields[17] as Element?,
-      subject: (fields[18] as List?)?.cast<Reference>(),
-      servicePeriod: fields[19] as Period?,
-      coverage: (fields[20] as List?)?.cast<AccountCoverage>(),
-      owner: fields[21] as Reference?,
-      description: fields[22] as String?,
-      descriptionElement: fields[23] as Element?,
-      guarantor: (fields[24] as List?)?.cast<AccountGuarantor>(),
-      partOf: fields[25] as Reference?,
-    );
-  }
-
-  @override
-  void write(BinaryWriter writer, _$_Account obj) {
-    writer
-      ..writeByte(25)
-      ..writeByte(0)
-      ..write(obj.resourceType)
-      ..writeByte(1)
-      ..write(obj.id)
-      ..writeByte(2)
-      ..write(obj.meta)
-      ..writeByte(3)
-      ..write(obj.implicitRules)
-      ..writeByte(4)
-      ..write(obj.implicitRulesElement)
-      ..writeByte(5)
-      ..write(obj.language)
-      ..writeByte(6)
-      ..write(obj.languageElement)
-      ..writeByte(7)
-      ..write(obj.text)
-      ..writeByte(12)
-      ..write(obj.status)
-      ..writeByte(13)
-      ..write(obj.statusElement)
-      ..writeByte(14)
-      ..write(obj.type)
-      ..writeByte(15)
-      ..write(obj.name)
-      ..writeByte(17)
-      ..write(obj.nameElement)
-      ..writeByte(19)
-      ..write(obj.servicePeriod)
-      ..writeByte(21)
-      ..write(obj.owner)
-      ..writeByte(22)
-      ..write(obj.description)
-      ..writeByte(23)
-      ..write(obj.descriptionElement)
-      ..writeByte(25)
-      ..write(obj.partOf)
-      ..writeByte(8)
-      ..write(obj.contained)
-      ..writeByte(9)
-      ..write(obj.extension_)
-      ..writeByte(10)
-      ..write(obj.modifierExtension)
-      ..writeByte(11)
-      ..write(obj.identifier)
-      ..writeByte(18)
-      ..write(obj.subject)
-      ..writeByte(20)
-      ..write(obj.coverage)
-      ..writeByte(24)
-      ..write(obj.guarantor);
-  }
-
-  @override
-  int get hashCode => typeId.hashCode;
-
-  @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is AccountAdapter &&
-          runtimeType == other.runtimeType &&
-          typeId == other.typeId;
-}
-
-class AccountCoverageAdapter extends TypeAdapter<_$_AccountCoverage> {
-  @override
-  final int typeId = 167;
-
-  @override
-  _$_AccountCoverage read(BinaryReader reader) {
-    final numOfFields = reader.readByte();
-    final fields = <int, dynamic>{
-      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
-    };
-    return _$_AccountCoverage(
-      id: fields[0] as String?,
-      extension_: (fields[1] as List?)?.cast<FhirExtension>(),
-      modifierExtension: (fields[2] as List?)?.cast<FhirExtension>(),
-      coverage: fields[3] as Reference,
-      priority: fields[4] as PositiveInt?,
-      priorityElement: fields[5] as Element?,
-    );
-  }
-
-  @override
-  void write(BinaryWriter writer, _$_AccountCoverage obj) {
-    writer
-      ..writeByte(6)
-      ..writeByte(0)
-      ..write(obj.id)
-      ..writeByte(3)
-      ..write(obj.coverage)
-      ..writeByte(4)
-      ..write(obj.priority)
-      ..writeByte(5)
-      ..write(obj.priorityElement)
-      ..writeByte(1)
-      ..write(obj.extension_)
-      ..writeByte(2)
-      ..write(obj.modifierExtension);
-  }
-
-  @override
-  int get hashCode => typeId.hashCode;
-
-  @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is AccountCoverageAdapter &&
-          runtimeType == other.runtimeType &&
-          typeId == other.typeId;
-}
-
-class ChargeItemAdapter extends TypeAdapter<_$_ChargeItem> {
-  @override
-  final int typeId = 168;
-
-  @override
-  _$_ChargeItem read(BinaryReader reader) {
-    final numOfFields = reader.readByte();
-    final fields = <int, dynamic>{
-      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
-    };
-    return _$_ChargeItem(
-      resourceType: fields[0] as R4ResourceType,
-      id: fields[1] as String?,
-      meta: fields[2] as FhirMeta?,
-      implicitRules: fields[3] as FhirUri?,
-      implicitRulesElement: fields[4] as Element?,
-      language: fields[5] as Code?,
-      languageElement: fields[6] as Element?,
-      text: fields[7] as Narrative?,
-      contained: (fields[8] as List?)?.cast<Resource>(),
-      extension_: (fields[9] as List?)?.cast<FhirExtension>(),
-      modifierExtension: (fields[10] as List?)?.cast<FhirExtension>(),
-      identifier: (fields[11] as List?)?.cast<Identifier>(),
-      definitionUri: (fields[12] as List?)?.cast<FhirUri>(),
-      definitionUriElement: (fields[14] as List?)?.cast<Element?>(),
-      definitionCanonical: (fields[15] as List?)?.cast<Canonical>(),
-      status: fields[16] as Code?,
-      statusElement: fields[17] as Element?,
-      partOf: (fields[18] as List?)?.cast<Reference>(),
-      code: fields[19] as CodeableConcept,
-      subject: fields[20] as Reference,
-      context: fields[21] as Reference?,
-      occurrenceDateTime: fields[22] as FhirDateTime?,
-      occurrenceDateTimeElement: fields[23] as Element?,
-      occurrencePeriod: fields[24] as Period?,
-      occurrenceTiming: fields[25] as Timing?,
-      performer: (fields[26] as List?)?.cast<ChargeItemPerformer>(),
-      performingOrganization: fields[27] as Reference?,
-      requestingOrganization: fields[28] as Reference?,
-      costCenter: fields[29] as Reference?,
-      quantity: fields[30] as Quantity?,
-      bodysite: (fields[31] as List?)?.cast<CodeableConcept>(),
-      factorOverride: fields[32] as Decimal?,
-      factorOverrideElement: fields[33] as Element?,
-      priceOverride: fields[34] as Money?,
-      overrideReason: fields[35] as String?,
-      overrideReasonElement: fields[36] as Element?,
-      enterer: fields[37] as Reference?,
-      enteredDate: fields[38] as FhirDateTime?,
-      enteredDateElement: fields[39] as Element?,
-      reason: (fields[40] as List?)?.cast<CodeableConcept>(),
-      service: (fields[41] as List?)?.cast<Reference>(),
-      productReference: fields[42] as Reference?,
-      productCodeableConcept: fields[43] as CodeableConcept?,
-      account: (fields[44] as List?)?.cast<Reference>(),
-      note: (fields[45] as List?)?.cast<Annotation>(),
-      supportingInformation: (fields[46] as List?)?.cast<Reference>(),
-    );
-  }
-
-  @override
-  void write(BinaryWriter writer, _$_ChargeItem obj) {
-    writer
-      ..writeByte(46)
-      ..writeByte(0)
-      ..write(obj.resourceType)
-      ..writeByte(1)
-      ..write(obj.id)
-      ..writeByte(2)
-      ..write(obj.meta)
-      ..writeByte(3)
-      ..write(obj.implicitRules)
-      ..writeByte(4)
-      ..write(obj.implicitRulesElement)
-      ..writeByte(5)
-      ..write(obj.language)
-      ..writeByte(6)
-      ..write(obj.languageElement)
-      ..writeByte(7)
-      ..write(obj.text)
-      ..writeByte(16)
-      ..write(obj.status)
-      ..writeByte(17)
-      ..write(obj.statusElement)
-      ..writeByte(19)
-      ..write(obj.code)
-      ..writeByte(20)
-      ..write(obj.subject)
-      ..writeByte(21)
-      ..write(obj.context)
-      ..writeByte(22)
-      ..write(obj.occurrenceDateTime)
-      ..writeByte(23)
-      ..write(obj.occurrenceDateTimeElement)
-      ..writeByte(24)
-      ..write(obj.occurrencePeriod)
-      ..writeByte(25)
-      ..write(obj.occurrenceTiming)
-      ..writeByte(27)
-      ..write(obj.performingOrganization)
-      ..writeByte(28)
-      ..write(obj.requestingOrganization)
-      ..writeByte(29)
-      ..write(obj.costCenter)
-      ..writeByte(30)
-      ..write(obj.quantity)
-      ..writeByte(32)
-      ..write(obj.factorOverride)
-      ..writeByte(33)
-      ..write(obj.factorOverrideElement)
-      ..writeByte(34)
-      ..write(obj.priceOverride)
-      ..writeByte(35)
-      ..write(obj.overrideReason)
-      ..writeByte(36)
-      ..write(obj.overrideReasonElement)
-      ..writeByte(37)
-      ..write(obj.enterer)
-      ..writeByte(38)
-      ..write(obj.enteredDate)
-      ..writeByte(39)
-      ..write(obj.enteredDateElement)
-      ..writeByte(42)
-      ..write(obj.productReference)
-      ..writeByte(43)
-      ..write(obj.productCodeableConcept)
-      ..writeByte(8)
-      ..write(obj.contained)
-      ..writeByte(9)
-      ..write(obj.extension_)
-      ..writeByte(10)
-      ..write(obj.modifierExtension)
-      ..writeByte(11)
-      ..write(obj.identifier)
-      ..writeByte(12)
-      ..write(obj.definitionUri)
-      ..writeByte(14)
-      ..write(obj.definitionUriElement)
-      ..writeByte(15)
-      ..write(obj.definitionCanonical)
-      ..writeByte(18)
-      ..write(obj.partOf)
-      ..writeByte(26)
-      ..write(obj.performer)
-      ..writeByte(31)
-      ..write(obj.bodysite)
-      ..writeByte(40)
-      ..write(obj.reason)
-      ..writeByte(41)
-      ..write(obj.service)
-      ..writeByte(44)
-      ..write(obj.account)
-      ..writeByte(45)
-      ..write(obj.note)
-      ..writeByte(46)
-      ..write(obj.supportingInformation);
-  }
-
-  @override
-  int get hashCode => typeId.hashCode;
-
-  @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is ChargeItemAdapter &&
-          runtimeType == other.runtimeType &&
-          typeId == other.typeId;
-}
-
-class ChargeItemDefinitionAdapter extends TypeAdapter<_$_ChargeItemDefinition> {
-  @override
-  final int typeId = 169;
-
-  @override
-  _$_ChargeItemDefinition read(BinaryReader reader) {
-    final numOfFields = reader.readByte();
-    final fields = <int, dynamic>{
-      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
-    };
-    return _$_ChargeItemDefinition(
-      resourceType: fields[0] as R4ResourceType,
-      id: fields[1] as String?,
-      meta: fields[2] as FhirMeta?,
-      implicitRules: fields[3] as FhirUri?,
-      implicitRulesElement: fields[4] as Element?,
-      language: fields[5] as Code?,
-      languageElement: fields[6] as Element?,
-      text: fields[7] as Narrative?,
-      contained: (fields[8] as List?)?.cast<Resource>(),
-      extension_: (fields[9] as List?)?.cast<FhirExtension>(),
-      modifierExtension: (fields[10] as List?)?.cast<FhirExtension>(),
-      url: fields[11] as FhirUri?,
-      urlElement: fields[12] as Element?,
-      identifier: (fields[13] as List?)?.cast<Identifier>(),
-      version: fields[14] as String?,
-      versionElement: fields[17] as Element?,
-      title: fields[18] as String?,
-      titleElement: fields[19] as Element?,
-      derivedFromUri: (fields[20] as List?)?.cast<FhirUri>(),
-      derivedFromUriElement: (fields[21] as List?)?.cast<Element?>(),
-      partOf: (fields[22] as List?)?.cast<Canonical>(),
-      replaces: (fields[23] as List?)?.cast<Canonical>(),
-      status: fields[24] as Code?,
-      statusElement: fields[25] as Element?,
-      experimental: fields[26] as Boolean?,
-      experimentalElement: fields[27] as Element?,
-      date: fields[28] as FhirDateTime?,
-      dateElement: fields[29] as Element?,
-      publisher: fields[30] as String?,
-      publisherElement: fields[31] as Element?,
-      contact: (fields[32] as List?)?.cast<ContactDetail>(),
-      description: fields[33] as Markdown?,
-      descriptionElement: fields[34] as Element?,
-      useContext: (fields[35] as List?)?.cast<UsageContext>(),
-      jurisdiction: (fields[36] as List?)?.cast<CodeableConcept>(),
-      copyright: fields[37] as Markdown?,
-      copyrightElement: fields[38] as Element?,
-      approvalDate: fields[39] as Date?,
-      approvalDateElement: fields[40] as Element?,
-      lastReviewDate: fields[41] as Date?,
-      lastReviewDateElement: fields[42] as Element?,
-      effectivePeriod: fields[43] as Period?,
-      code: fields[44] as CodeableConcept?,
-      instance: (fields[45] as List?)?.cast<Reference>(),
-      applicability:
-          (fields[46] as List?)?.cast<ChargeItemDefinitionApplicability>(),
-      propertyGroup:
-          (fields[47] as List?)?.cast<ChargeItemDefinitionPropertyGroup>(),
-    );
-  }
-
-  @override
-  void write(BinaryWriter writer, _$_ChargeItemDefinition obj) {
-    writer
-      ..writeByte(46)
-      ..writeByte(0)
-      ..write(obj.resourceType)
-      ..writeByte(1)
-      ..write(obj.id)
-      ..writeByte(2)
-      ..write(obj.meta)
-      ..writeByte(3)
-      ..write(obj.implicitRules)
-      ..writeByte(4)
-      ..write(obj.implicitRulesElement)
-      ..writeByte(5)
-      ..write(obj.language)
-      ..writeByte(6)
-      ..write(obj.languageElement)
-      ..writeByte(7)
-      ..write(obj.text)
-      ..writeByte(11)
-      ..write(obj.url)
-      ..writeByte(12)
-      ..write(obj.urlElement)
-      ..writeByte(14)
-      ..write(obj.version)
-      ..writeByte(17)
-      ..write(obj.versionElement)
-      ..writeByte(18)
-      ..write(obj.title)
-      ..writeByte(19)
-      ..write(obj.titleElement)
-      ..writeByte(24)
-      ..write(obj.status)
-      ..writeByte(25)
-      ..write(obj.statusElement)
-      ..writeByte(26)
-      ..write(obj.experimental)
-      ..writeByte(27)
-      ..write(obj.experimentalElement)
-      ..writeByte(28)
-      ..write(obj.date)
-      ..writeByte(29)
-      ..write(obj.dateElement)
-      ..writeByte(30)
-      ..write(obj.publisher)
-      ..writeByte(31)
-      ..write(obj.publisherElement)
-      ..writeByte(33)
-      ..write(obj.description)
-      ..writeByte(34)
-      ..write(obj.descriptionElement)
-      ..writeByte(37)
-      ..write(obj.copyright)
-      ..writeByte(38)
-      ..write(obj.copyrightElement)
-      ..writeByte(39)
-      ..write(obj.approvalDate)
-      ..writeByte(40)
-      ..write(obj.approvalDateElement)
-      ..writeByte(41)
-      ..write(obj.lastReviewDate)
-      ..writeByte(42)
-      ..write(obj.lastReviewDateElement)
-      ..writeByte(43)
-      ..write(obj.effectivePeriod)
-      ..writeByte(44)
-      ..write(obj.code)
-      ..writeByte(8)
-      ..write(obj.contained)
-      ..writeByte(9)
-      ..write(obj.extension_)
-      ..writeByte(10)
-      ..write(obj.modifierExtension)
-      ..writeByte(13)
-      ..write(obj.identifier)
-      ..writeByte(20)
-      ..write(obj.derivedFromUri)
-      ..writeByte(21)
-      ..write(obj.derivedFromUriElement)
-      ..writeByte(22)
-      ..write(obj.partOf)
-      ..writeByte(23)
-      ..write(obj.replaces)
-      ..writeByte(32)
-      ..write(obj.contact)
-      ..writeByte(35)
-      ..write(obj.useContext)
-      ..writeByte(36)
-      ..write(obj.jurisdiction)
-      ..writeByte(45)
-      ..write(obj.instance)
-      ..writeByte(46)
-      ..write(obj.applicability)
-      ..writeByte(47)
-      ..write(obj.propertyGroup);
-  }
-
-  @override
-  int get hashCode => typeId.hashCode;
-
-  @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is ChargeItemDefinitionAdapter &&
-          runtimeType == other.runtimeType &&
-          typeId == other.typeId;
-}
-
-class ChargeItemDefinitionPropertyGroupAdapter
-    extends TypeAdapter<_$_ChargeItemDefinitionPropertyGroup> {
-  @override
-  final int typeId = 170;
-
-  @override
-  _$_ChargeItemDefinitionPropertyGroup read(BinaryReader reader) {
-    final numOfFields = reader.readByte();
-    final fields = <int, dynamic>{
-      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
-    };
-    return _$_ChargeItemDefinitionPropertyGroup(
-      id: fields[0] as String?,
-      extension_: (fields[1] as List?)?.cast<FhirExtension>(),
-      modifierExtension: (fields[2] as List?)?.cast<FhirExtension>(),
-      applicability:
-          (fields[3] as List?)?.cast<ChargeItemDefinitionApplicability>(),
-      priceComponent:
-          (fields[4] as List?)?.cast<ChargeItemDefinitionPriceComponent>(),
-    );
-  }
-
-  @override
-  void write(BinaryWriter writer, _$_ChargeItemDefinitionPropertyGroup obj) {
-    writer
-      ..writeByte(5)
-      ..writeByte(0)
-      ..write(obj.id)
-      ..writeByte(1)
-      ..write(obj.extension_)
-      ..writeByte(2)
-      ..write(obj.modifierExtension)
-      ..writeByte(3)
-      ..write(obj.applicability)
-      ..writeByte(4)
-      ..write(obj.priceComponent);
-  }
-
-  @override
-  int get hashCode => typeId.hashCode;
-
-  @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is ChargeItemDefinitionPropertyGroupAdapter &&
-          runtimeType == other.runtimeType &&
-          typeId == other.typeId;
-}
-
-class ContractAdapter extends TypeAdapter<_$_Contract> {
-  @override
-  final int typeId = 171;
-
-  @override
-  _$_Contract read(BinaryReader reader) {
-    final numOfFields = reader.readByte();
-    final fields = <int, dynamic>{
-      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
-    };
-    return _$_Contract(
-      resourceType: fields[0] as R4ResourceType,
-      id: fields[1] as String?,
-      meta: fields[2] as FhirMeta?,
-      implicitRules: fields[3] as FhirUri?,
-      implicitRulesElement: fields[4] as Element?,
-      language: fields[5] as Code?,
-      languageElement: fields[6] as Element?,
-      text: fields[7] as Narrative?,
-      contained: (fields[8] as List?)?.cast<Resource>(),
-      extension_: (fields[9] as List?)?.cast<FhirExtension>(),
-      modifierExtension: (fields[10] as List?)?.cast<FhirExtension>(),
-      identifier: (fields[11] as List?)?.cast<Identifier>(),
-      url: fields[12] as FhirUri?,
-      urlElement: fields[13] as Element?,
-      version: fields[14] as String?,
-      versionElement: fields[15] as Element?,
-      status: fields[16] as Code?,
-      statusElement: fields[17] as Element?,
-      legalState: fields[18] as CodeableConcept?,
-      instantiatesCanonical: fields[20] as Reference?,
-      instantiatesUri: fields[21] as FhirUri?,
-      instantiatesUriElement: fields[22] as Element?,
-      contentDerivative: fields[23] as CodeableConcept?,
-      issued: fields[24] as FhirDateTime?,
-      issuedElement: fields[25] as Element?,
-      applies: fields[26] as Period?,
-      expirationType: fields[27] as CodeableConcept?,
-      subject: (fields[28] as List?)?.cast<Reference>(),
-      authority: (fields[29] as List?)?.cast<Reference>(),
-      domain: (fields[32] as List?)?.cast<Reference>(),
-      site: (fields[34] as List?)?.cast<Reference>(),
-      name: fields[35] as String?,
-      nameElement: fields[37] as Element?,
-      title: fields[38] as String?,
-      titleElement: fields[39] as Element?,
-      subtitle: fields[40] as String?,
-      subtitleElement: fields[41] as Element?,
-      alias: (fields[42] as List?)?.cast<String>(),
-      aliasElement: (fields[43] as List?)?.cast<Element?>(),
-      author: fields[44] as Reference?,
-      scope: fields[45] as CodeableConcept?,
-      topicCodeableConcept: fields[47] as CodeableConcept?,
-      topicReference: fields[48] as Reference?,
-      type: fields[49] as CodeableConcept?,
-      subType: (fields[50] as List?)?.cast<CodeableConcept>(),
-      contentDefinition: fields[51] as ContractContentDefinition?,
-      term: (fields[52] as List?)?.cast<ContractTerm>(),
-      supportingInfo: (fields[53] as List?)?.cast<Reference>(),
-      relevantHistory: (fields[54] as List?)?.cast<Reference>(),
-      signer: (fields[55] as List?)?.cast<ContractSigner>(),
-      friendly: (fields[56] as List?)?.cast<ContractFriendly>(),
-      legal: (fields[58] as List?)?.cast<ContractLegal>(),
-      rule: (fields[59] as List?)?.cast<ContractRule>(),
-      legallyBindingAttachment: fields[60] as Attachment?,
-      legallyBindingReference: fields[61] as Reference?,
-    );
-  }
-
-  @override
-  void write(BinaryWriter writer, _$_Contract obj) {
-    writer
-      ..writeByte(55)
-      ..writeByte(0)
-      ..write(obj.resourceType)
-      ..writeByte(1)
-      ..write(obj.id)
-      ..writeByte(2)
-      ..write(obj.meta)
-      ..writeByte(3)
-      ..write(obj.implicitRules)
-      ..writeByte(4)
-      ..write(obj.implicitRulesElement)
-      ..writeByte(5)
-      ..write(obj.language)
-      ..writeByte(6)
-      ..write(obj.languageElement)
-      ..writeByte(7)
-      ..write(obj.text)
-      ..writeByte(12)
-      ..write(obj.url)
-      ..writeByte(13)
-      ..write(obj.urlElement)
-      ..writeByte(14)
-      ..write(obj.version)
-      ..writeByte(15)
-      ..write(obj.versionElement)
-      ..writeByte(16)
-      ..write(obj.status)
-      ..writeByte(17)
-      ..write(obj.statusElement)
-      ..writeByte(18)
-      ..write(obj.legalState)
-      ..writeByte(20)
-      ..write(obj.instantiatesCanonical)
-      ..writeByte(21)
-      ..write(obj.instantiatesUri)
-      ..writeByte(22)
-      ..write(obj.instantiatesUriElement)
-      ..writeByte(23)
-      ..write(obj.contentDerivative)
-      ..writeByte(24)
-      ..write(obj.issued)
-      ..writeByte(25)
-      ..write(obj.issuedElement)
-      ..writeByte(26)
-      ..write(obj.applies)
-      ..writeByte(27)
-      ..write(obj.expirationType)
-      ..writeByte(35)
-      ..write(obj.name)
-      ..writeByte(37)
-      ..write(obj.nameElement)
-      ..writeByte(38)
-      ..write(obj.title)
-      ..writeByte(39)
-      ..write(obj.titleElement)
-      ..writeByte(40)
-      ..write(obj.subtitle)
-      ..writeByte(41)
-      ..write(obj.subtitleElement)
-      ..writeByte(44)
-      ..write(obj.author)
-      ..writeByte(45)
-      ..write(obj.scope)
-      ..writeByte(47)
-      ..write(obj.topicCodeableConcept)
-      ..writeByte(48)
-      ..write(obj.topicReference)
-      ..writeByte(49)
-      ..write(obj.type)
-      ..writeByte(51)
-      ..write(obj.contentDefinition)
-      ..writeByte(60)
-      ..write(obj.legallyBindingAttachment)
-      ..writeByte(61)
-      ..write(obj.legallyBindingReference)
-      ..writeByte(8)
-      ..write(obj.contained)
-      ..writeByte(9)
-      ..write(obj.extension_)
-      ..writeByte(10)
-      ..write(obj.modifierExtension)
-      ..writeByte(11)
-      ..write(obj.identifier)
-      ..writeByte(28)
-      ..write(obj.subject)
-      ..writeByte(29)
-      ..write(obj.authority)
-      ..writeByte(32)
-      ..write(obj.domain)
-      ..writeByte(34)
-      ..write(obj.site)
-      ..writeByte(42)
-      ..write(obj.alias)
-      ..writeByte(43)
-      ..write(obj.aliasElement)
-      ..writeByte(50)
-      ..write(obj.subType)
-      ..writeByte(52)
-      ..write(obj.term)
-      ..writeByte(53)
-      ..write(obj.supportingInfo)
-      ..writeByte(54)
-      ..write(obj.relevantHistory)
-      ..writeByte(55)
-      ..write(obj.signer)
-      ..writeByte(56)
-      ..write(obj.friendly)
-      ..writeByte(58)
-      ..write(obj.legal)
-      ..writeByte(59)
-      ..write(obj.rule);
-  }
-
-  @override
-  int get hashCode => typeId.hashCode;
-
-  @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is ContractAdapter &&
-          runtimeType == other.runtimeType &&
-          typeId == other.typeId;
-}
-
-class ExplanationOfBenefitAdapter extends TypeAdapter<_$_ExplanationOfBenefit> {
-  @override
-  final int typeId = 172;
-
-  @override
-  _$_ExplanationOfBenefit read(BinaryReader reader) {
-    final numOfFields = reader.readByte();
-    final fields = <int, dynamic>{
-      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
-    };
-    return _$_ExplanationOfBenefit(
-      resourceType: fields[0] as R4ResourceType,
-      id: fields[1] as String?,
-      meta: fields[2] as FhirMeta?,
-      implicitRules: fields[3] as FhirUri?,
-      implicitRulesElement: fields[4] as Element?,
-      language: fields[5] as Code?,
-      languageElement: fields[6] as Element?,
-      text: fields[7] as Narrative?,
-      contained: (fields[8] as List?)?.cast<Resource>(),
-      extension_: (fields[9] as List?)?.cast<FhirExtension>(),
-      modifierExtension: (fields[10] as List?)?.cast<FhirExtension>(),
-      identifier: (fields[11] as List?)?.cast<Identifier>(),
-      status: fields[12] as Code?,
-      statusElement: fields[13] as Element?,
-      type: fields[14] as CodeableConcept,
-      subType: fields[16] as CodeableConcept?,
-      use: fields[17] as Code?,
-      useElement: fields[18] as Element?,
-      patient: fields[19] as Reference,
-      billablePeriod: fields[20] as Period?,
-      created: fields[21] as FhirDateTime?,
-      createdElement: fields[22] as Element?,
-      enterer: fields[23] as Reference?,
-      insurer: fields[24] as Reference,
-      provider: fields[25] as Reference,
-      priority: fields[27] as CodeableConcept?,
-      fundsReserveRequested: fields[28] as CodeableConcept?,
-      fundsReserve: fields[29] as CodeableConcept?,
-      related: (fields[30] as List?)?.cast<ExplanationOfBenefitRelated>(),
-      prescription: fields[31] as Reference?,
-      originalPrescription: fields[32] as Reference?,
-      payee: fields[34] as ExplanationOfBenefitPayee?,
-      referral: fields[35] as Reference?,
-      facility: fields[36] as Reference?,
-      claim: fields[37] as Reference?,
-      claimResponse: fields[38] as Reference?,
-      outcome: fields[39] as Code?,
-      outcomeElement: fields[40] as Element?,
-      disposition: fields[41] as String?,
-      dispositionElement: fields[42] as Element?,
-      preAuthRef: (fields[43] as List?)?.cast<String>(),
-      preAuthRefElement: (fields[44] as List?)?.cast<Element?>(),
-      preAuthRefPeriod: (fields[45] as List?)?.cast<Period>(),
-      careTeam: (fields[46] as List?)?.cast<ExplanationOfBenefitCareTeam>(),
-      supportingInfo:
-          (fields[47] as List?)?.cast<ExplanationOfBenefitSupportingInfo>(),
-      diagnosis: (fields[49] as List?)?.cast<ExplanationOfBenefitDiagnosis>(),
-      procedure: (fields[50] as List?)?.cast<ExplanationOfBenefitProcedure>(),
-      precedence: fields[51] as PositiveInt?,
-      precedenceElement: fields[52] as Element?,
-      insurance: (fields[53] as List).cast<ExplanationOfBenefitInsurance>(),
-      accident: fields[54] as ExplanationOfBenefitAccident?,
-      item: (fields[55] as List?)?.cast<ExplanationOfBenefitItem>(),
-      addItem: (fields[56] as List?)?.cast<ExplanationOfBenefitAddItem>(),
-      adjudication:
-          (fields[57] as List?)?.cast<ExplanationOfBenefitAdjudication>(),
-      total: (fields[58] as List?)?.cast<ExplanationOfBenefitTotal>(),
-      payment: fields[59] as ExplanationOfBenefitPayment?,
-      formCode: fields[60] as CodeableConcept?,
-      form: fields[61] as Attachment?,
-      processNote:
-          (fields[62] as List?)?.cast<ExplanationOfBenefitProcessNote>(),
-      benefitPeriod: fields[63] as Period?,
-      benefitBalance:
-          (fields[64] as List?)?.cast<ExplanationOfBenefitBenefitBalance>(),
-    );
-  }
-
-  @override
-  void write(BinaryWriter writer, _$_ExplanationOfBenefit obj) {
-    writer
-      ..writeByte(61)
-      ..writeByte(0)
-      ..write(obj.resourceType)
-      ..writeByte(1)
-      ..write(obj.id)
-      ..writeByte(2)
-      ..write(obj.meta)
-      ..writeByte(3)
-      ..write(obj.implicitRules)
-      ..writeByte(4)
-      ..write(obj.implicitRulesElement)
-      ..writeByte(5)
-      ..write(obj.language)
-      ..writeByte(6)
-      ..write(obj.languageElement)
-      ..writeByte(7)
-      ..write(obj.text)
-      ..writeByte(12)
-      ..write(obj.status)
-      ..writeByte(13)
-      ..write(obj.statusElement)
-      ..writeByte(14)
-      ..write(obj.type)
-      ..writeByte(16)
-      ..write(obj.subType)
-      ..writeByte(17)
-      ..write(obj.use)
-      ..writeByte(18)
-      ..write(obj.useElement)
-      ..writeByte(19)
-      ..write(obj.patient)
-      ..writeByte(20)
-      ..write(obj.billablePeriod)
-      ..writeByte(21)
-      ..write(obj.created)
-      ..writeByte(22)
-      ..write(obj.createdElement)
-      ..writeByte(23)
-      ..write(obj.enterer)
-      ..writeByte(24)
-      ..write(obj.insurer)
-      ..writeByte(25)
-      ..write(obj.provider)
-      ..writeByte(27)
-      ..write(obj.priority)
-      ..writeByte(28)
-      ..write(obj.fundsReserveRequested)
-      ..writeByte(29)
-      ..write(obj.fundsReserve)
-      ..writeByte(31)
-      ..write(obj.prescription)
-      ..writeByte(32)
-      ..write(obj.originalPrescription)
-      ..writeByte(34)
-      ..write(obj.payee)
-      ..writeByte(35)
-      ..write(obj.referral)
-      ..writeByte(36)
-      ..write(obj.facility)
-      ..writeByte(37)
-      ..write(obj.claim)
-      ..writeByte(38)
-      ..write(obj.claimResponse)
-      ..writeByte(39)
-      ..write(obj.outcome)
-      ..writeByte(40)
-      ..write(obj.outcomeElement)
-      ..writeByte(41)
-      ..write(obj.disposition)
-      ..writeByte(42)
-      ..write(obj.dispositionElement)
-      ..writeByte(51)
-      ..write(obj.precedence)
-      ..writeByte(52)
-      ..write(obj.precedenceElement)
-      ..writeByte(54)
-      ..write(obj.accident)
-      ..writeByte(59)
-      ..write(obj.payment)
-      ..writeByte(60)
-      ..write(obj.formCode)
-      ..writeByte(61)
-      ..write(obj.form)
-      ..writeByte(63)
-      ..write(obj.benefitPeriod)
-      ..writeByte(8)
-      ..write(obj.contained)
-      ..writeByte(9)
-      ..write(obj.extension_)
-      ..writeByte(10)
-      ..write(obj.modifierExtension)
-      ..writeByte(11)
-      ..write(obj.identifier)
-      ..writeByte(30)
-      ..write(obj.related)
-      ..writeByte(43)
-      ..write(obj.preAuthRef)
-      ..writeByte(44)
-      ..write(obj.preAuthRefElement)
-      ..writeByte(45)
-      ..write(obj.preAuthRefPeriod)
-      ..writeByte(46)
-      ..write(obj.careTeam)
-      ..writeByte(47)
-      ..write(obj.supportingInfo)
-      ..writeByte(49)
-      ..write(obj.diagnosis)
-      ..writeByte(50)
-      ..write(obj.procedure)
-      ..writeByte(53)
-      ..write(obj.insurance)
-      ..writeByte(55)
-      ..write(obj.item)
-      ..writeByte(56)
-      ..write(obj.addItem)
-      ..writeByte(57)
-      ..write(obj.adjudication)
-      ..writeByte(58)
-      ..write(obj.total)
-      ..writeByte(62)
-      ..write(obj.processNote)
-      ..writeByte(64)
-      ..write(obj.benefitBalance);
-  }
-
-  @override
-  int get hashCode => typeId.hashCode;
-
-  @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is ExplanationOfBenefitAdapter &&
-          runtimeType == other.runtimeType &&
-          typeId == other.typeId;
-}
-
-class ExplanationOfBenefitCareTeamAdapter
-    extends TypeAdapter<_$_ExplanationOfBenefitCareTeam> {
-  @override
-  final int typeId = 173;
-
-  @override
-  _$_ExplanationOfBenefitCareTeam read(BinaryReader reader) {
-    final numOfFields = reader.readByte();
-    final fields = <int, dynamic>{
-      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
-    };
-    return _$_ExplanationOfBenefitCareTeam(
-      id: fields[0] as String?,
-      extension_: (fields[1] as List?)?.cast<FhirExtension>(),
-      modifierExtension: (fields[2] as List?)?.cast<FhirExtension>(),
-      sequence: fields[3] as PositiveInt?,
-      sequenceElement: fields[4] as Element?,
-      provider: fields[5] as Reference,
-      responsible: fields[6] as Boolean?,
-      responsibleElement: fields[7] as Element?,
-      role: fields[8] as CodeableConcept?,
-      qualification: fields[9] as CodeableConcept?,
-    );
-  }
-
-  @override
-  void write(BinaryWriter writer, _$_ExplanationOfBenefitCareTeam obj) {
-    writer
-      ..writeByte(10)
-      ..writeByte(0)
-      ..write(obj.id)
-      ..writeByte(3)
-      ..write(obj.sequence)
-      ..writeByte(4)
-      ..write(obj.sequenceElement)
-      ..writeByte(5)
-      ..write(obj.provider)
-      ..writeByte(6)
-      ..write(obj.responsible)
-      ..writeByte(7)
-      ..write(obj.responsibleElement)
-      ..writeByte(8)
-      ..write(obj.role)
-      ..writeByte(9)
-      ..write(obj.qualification)
-      ..writeByte(1)
-      ..write(obj.extension_)
-      ..writeByte(2)
-      ..write(obj.modifierExtension);
-  }
-
-  @override
-  int get hashCode => typeId.hashCode;
-
-  @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is ExplanationOfBenefitCareTeamAdapter &&
-          runtimeType == other.runtimeType &&
-          typeId == other.typeId;
-}
-
-class ExplanationOfBenefitProcedureAdapter
-    extends TypeAdapter<_$_ExplanationOfBenefitProcedure> {
-  @override
-  final int typeId = 174;
-
-  @override
-  _$_ExplanationOfBenefitProcedure read(BinaryReader reader) {
-    final numOfFields = reader.readByte();
-    final fields = <int, dynamic>{
-      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
-    };
-    return _$_ExplanationOfBenefitProcedure(
-      id: fields[0] as String?,
-      extension_: (fields[1] as List?)?.cast<FhirExtension>(),
-      modifierExtension: (fields[2] as List?)?.cast<FhirExtension>(),
-      sequence: fields[3] as PositiveInt?,
-      sequenceElement: fields[4] as Element?,
-      type: (fields[5] as List?)?.cast<CodeableConcept>(),
-      date: fields[6] as FhirDateTime?,
-      dateElement: fields[7] as Element?,
-      procedureCodeableConcept: fields[8] as CodeableConcept?,
-      procedureReference: fields[9] as Reference?,
-      udi: (fields[10] as List?)?.cast<Reference>(),
-    );
-  }
-
-  @override
-  void write(BinaryWriter writer, _$_ExplanationOfBenefitProcedure obj) {
-    writer
-      ..writeByte(11)
-      ..writeByte(0)
-      ..write(obj.id)
-      ..writeByte(3)
-      ..write(obj.sequence)
-      ..writeByte(4)
-      ..write(obj.sequenceElement)
-      ..writeByte(6)
-      ..write(obj.date)
-      ..writeByte(7)
-      ..write(obj.dateElement)
-      ..writeByte(8)
-      ..write(obj.procedureCodeableConcept)
-      ..writeByte(9)
-      ..write(obj.procedureReference)
-      ..writeByte(1)
-      ..write(obj.extension_)
-      ..writeByte(2)
-      ..write(obj.modifierExtension)
-      ..writeByte(5)
-      ..write(obj.type)
-      ..writeByte(10)
-      ..write(obj.udi);
-  }
-
-  @override
-  int get hashCode => typeId.hashCode;
-
-  @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is ExplanationOfBenefitProcedureAdapter &&
-          runtimeType == other.runtimeType &&
-          typeId == other.typeId;
-}
-
-class InsurancePlanAdapter extends TypeAdapter<_$_InsurancePlan> {
-  @override
-  final int typeId = 175;
-
-  @override
-  _$_InsurancePlan read(BinaryReader reader) {
-    final numOfFields = reader.readByte();
-    final fields = <int, dynamic>{
-      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
-    };
-    return _$_InsurancePlan(
-      resourceType: fields[0] as R4ResourceType,
-      id: fields[1] as String?,
-      meta: fields[2] as FhirMeta?,
-      implicitRules: fields[3] as FhirUri?,
-      implicitRulesElement: fields[4] as Element?,
-      language: fields[5] as Code?,
-      languageElement: fields[6] as Element?,
-      text: fields[7] as Narrative?,
-      contained: (fields[8] as List?)?.cast<Resource>(),
-      extension_: (fields[9] as List?)?.cast<FhirExtension>(),
-      modifierExtension: (fields[10] as List?)?.cast<FhirExtension>(),
-      identifier: (fields[11] as List?)?.cast<Identifier>(),
-      status: fields[12] as Code?,
-      statusElement: fields[13] as Element?,
-      type: (fields[14] as List?)?.cast<CodeableConcept>(),
-      name: fields[15] as String?,
-      nameElement: fields[16] as Element?,
-      alias: (fields[17] as List?)?.cast<String>(),
-      aliasElement: (fields[18] as List?)?.cast<Element?>(),
-      period: fields[19] as Period?,
-      ownedBy: fields[20] as Reference?,
-      administeredBy: fields[21] as Reference?,
-      coverageArea: (fields[22] as List?)?.cast<Reference>(),
-      contact: (fields[23] as List?)?.cast<InsurancePlanContact>(),
-      endpoint: (fields[24] as List?)?.cast<Reference>(),
-      network: (fields[25] as List?)?.cast<Reference>(),
-      coverage: (fields[26] as List?)?.cast<InsurancePlanCoverage>(),
-      plan: (fields[27] as List?)?.cast<InsurancePlanPlan>(),
-    );
-  }
-
-  @override
-  void write(BinaryWriter writer, _$_InsurancePlan obj) {
-    writer
-      ..writeByte(28)
-      ..writeByte(0)
-      ..write(obj.resourceType)
-      ..writeByte(1)
-      ..write(obj.id)
-      ..writeByte(2)
-      ..write(obj.meta)
-      ..writeByte(3)
-      ..write(obj.implicitRules)
-      ..writeByte(4)
-      ..write(obj.implicitRulesElement)
-      ..writeByte(5)
-      ..write(obj.language)
-      ..writeByte(6)
-      ..write(obj.languageElement)
-      ..writeByte(7)
-      ..write(obj.text)
-      ..writeByte(12)
-      ..write(obj.status)
-      ..writeByte(13)
-      ..write(obj.statusElement)
-      ..writeByte(15)
-      ..write(obj.name)
-      ..writeByte(16)
-      ..write(obj.nameElement)
-      ..writeByte(19)
-      ..write(obj.period)
-      ..writeByte(20)
-      ..write(obj.ownedBy)
-      ..writeByte(21)
-      ..write(obj.administeredBy)
-      ..writeByte(8)
-      ..write(obj.contained)
-      ..writeByte(9)
-      ..write(obj.extension_)
-      ..writeByte(10)
-      ..write(obj.modifierExtension)
-      ..writeByte(11)
-      ..write(obj.identifier)
-      ..writeByte(14)
-      ..write(obj.type)
-      ..writeByte(17)
-      ..write(obj.alias)
-      ..writeByte(18)
-      ..write(obj.aliasElement)
-      ..writeByte(22)
-      ..write(obj.coverageArea)
-      ..writeByte(23)
-      ..write(obj.contact)
-      ..writeByte(24)
-      ..write(obj.endpoint)
-      ..writeByte(25)
-      ..write(obj.network)
-      ..writeByte(26)
-      ..write(obj.coverage)
-      ..writeByte(27)
-      ..write(obj.plan);
-  }
-
-  @override
-  int get hashCode => typeId.hashCode;
-
-  @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is InsurancePlanAdapter &&
-          runtimeType == other.runtimeType &&
-          typeId == other.typeId;
-}
-
-class InsurancePlanCoverageAdapter
-    extends TypeAdapter<_$_InsurancePlanCoverage> {
-  @override
-  final int typeId = 176;
-
-  @override
-  _$_InsurancePlanCoverage read(BinaryReader reader) {
-    final numOfFields = reader.readByte();
-    final fields = <int, dynamic>{
-      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
-    };
-    return _$_InsurancePlanCoverage(
-      id: fields[0] as String?,
-      extension_: (fields[1] as List?)?.cast<FhirExtension>(),
-      modifierExtension: (fields[2] as List?)?.cast<FhirExtension>(),
-      type: fields[3] as CodeableConcept,
-      network: (fields[4] as List?)?.cast<Reference>(),
-      benefit: (fields[5] as List).cast<InsurancePlanBenefit>(),
-    );
-  }
-
-  @override
-  void write(BinaryWriter writer, _$_InsurancePlanCoverage obj) {
-    writer
-      ..writeByte(6)
-      ..writeByte(0)
-      ..write(obj.id)
-      ..writeByte(3)
-      ..write(obj.type)
-      ..writeByte(1)
-      ..write(obj.extension_)
-      ..writeByte(2)
-      ..write(obj.modifierExtension)
-      ..writeByte(4)
-      ..write(obj.network)
-      ..writeByte(5)
-      ..write(obj.benefit);
-  }
-
-  @override
-  int get hashCode => typeId.hashCode;
-
-  @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is InsurancePlanCoverageAdapter &&
-          runtimeType == other.runtimeType &&
-          typeId == other.typeId;
-}
-
-// **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
@@ -1276,7 +22,7 @@ _$_Account _$$_AccountFromJson(Map<String, dynamic> json) => _$_Account(
           ? null
           : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
       language:
-          json['language'] == null ? null : Code.fromJson(json['language']),
+          json['language'] == null ? null : FhirCode.fromJson(json['language']),
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -1295,7 +41,7 @@ _$_Account _$$_AccountFromJson(Map<String, dynamic> json) => _$_Account(
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: json['status'] == null ? null : Code.fromJson(json['status']),
+      status: json['status'] == null ? null : FhirCode.fromJson(json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -1530,7 +276,7 @@ _$_AccountCoverage _$$_AccountCoverageFromJson(Map<String, dynamic> json) =>
       coverage: Reference.fromJson(json['coverage'] as Map<String, dynamic>),
       priority: json['priority'] == null
           ? null
-          : PositiveInt.fromJson(json['priority']),
+          : FhirPositiveInt.fromJson(json['priority']),
       priorityElement: json['_priority'] == null
           ? null
           : Element.fromJson(json['_priority'] as Map<String, dynamic>),
@@ -1566,7 +312,8 @@ _$_AccountGuarantor _$$_AccountGuarantorFromJson(Map<String, dynamic> json) =>
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
       party: Reference.fromJson(json['party'] as Map<String, dynamic>),
-      onHold: json['onHold'] == null ? null : Boolean.fromJson(json['onHold']),
+      onHold:
+          json['onHold'] == null ? null : FhirBoolean.fromJson(json['onHold']),
       onHoldElement: json['_onHold'] == null
           ? null
           : Element.fromJson(json['_onHold'] as Map<String, dynamic>),
@@ -1613,7 +360,7 @@ _$_ChargeItem _$$_ChargeItemFromJson(Map<String, dynamic> json) =>
           ? null
           : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
       language:
-          json['language'] == null ? null : Code.fromJson(json['language']),
+          json['language'] == null ? null : FhirCode.fromJson(json['language']),
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -1633,16 +380,16 @@ _$_ChargeItem _$$_ChargeItemFromJson(Map<String, dynamic> json) =>
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
       definitionUri: (json['definitionUri'] as List<dynamic>?)
-          ?.map((e) => FhirUri.fromJson(e))
+          ?.map(FhirUri.fromJson)
           .toList(),
       definitionUriElement: (json['_definitionUri'] as List<dynamic>?)
           ?.map((e) =>
               e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       definitionCanonical: (json['definitionCanonical'] as List<dynamic>?)
-          ?.map((e) => Canonical.fromJson(e))
+          ?.map(FhirCanonical.fromJson)
           .toList(),
-      status: json['status'] == null ? null : Code.fromJson(json['status']),
+      status: json['status'] == null ? null : FhirCode.fromJson(json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -1689,7 +436,7 @@ _$_ChargeItem _$$_ChargeItemFromJson(Map<String, dynamic> json) =>
           .toList(),
       factorOverride: json['factorOverride'] == null
           ? null
-          : Decimal.fromJson(json['factorOverride']),
+          : FhirDecimal.fromJson(json['factorOverride']),
       factorOverrideElement: json['_factorOverride'] == null
           ? null
           : Element.fromJson(json['_factorOverride'] as Map<String, dynamic>),
@@ -1860,7 +607,7 @@ _$_ChargeItemDefinition _$$_ChargeItemDefinitionFromJson(
           ? null
           : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
       language:
-          json['language'] == null ? null : Code.fromJson(json['language']),
+          json['language'] == null ? null : FhirCode.fromJson(json['language']),
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -1892,25 +639,25 @@ _$_ChargeItemDefinition _$$_ChargeItemDefinitionFromJson(
           ? null
           : Element.fromJson(json['_title'] as Map<String, dynamic>),
       derivedFromUri: (json['derivedFromUri'] as List<dynamic>?)
-          ?.map((e) => FhirUri.fromJson(e))
+          ?.map(FhirUri.fromJson)
           .toList(),
       derivedFromUriElement: (json['_derivedFromUri'] as List<dynamic>?)
           ?.map((e) =>
               e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       partOf: (json['partOf'] as List<dynamic>?)
-          ?.map((e) => Canonical.fromJson(e))
+          ?.map(FhirCanonical.fromJson)
           .toList(),
       replaces: (json['replaces'] as List<dynamic>?)
-          ?.map((e) => Canonical.fromJson(e))
+          ?.map(FhirCanonical.fromJson)
           .toList(),
-      status: json['status'] == null ? null : Code.fromJson(json['status']),
+      status: json['status'] == null ? null : FhirCode.fromJson(json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
       experimental: json['experimental'] == null
           ? null
-          : Boolean.fromJson(json['experimental']),
+          : FhirBoolean.fromJson(json['experimental']),
       experimentalElement: json['_experimental'] == null
           ? null
           : Element.fromJson(json['_experimental'] as Map<String, dynamic>),
@@ -1927,7 +674,7 @@ _$_ChargeItemDefinition _$$_ChargeItemDefinitionFromJson(
           .toList(),
       description: json['description'] == null
           ? null
-          : Markdown.fromJson(json['description']),
+          : FhirMarkdown.fromJson(json['description']),
       descriptionElement: json['_description'] == null
           ? null
           : Element.fromJson(json['_description'] as Map<String, dynamic>),
@@ -1939,19 +686,19 @@ _$_ChargeItemDefinition _$$_ChargeItemDefinitionFromJson(
           .toList(),
       copyright: json['copyright'] == null
           ? null
-          : Markdown.fromJson(json['copyright']),
+          : FhirMarkdown.fromJson(json['copyright']),
       copyrightElement: json['_copyright'] == null
           ? null
           : Element.fromJson(json['_copyright'] as Map<String, dynamic>),
       approvalDate: json['approvalDate'] == null
           ? null
-          : Date.fromJson(json['approvalDate']),
+          : FhirDate.fromJson(json['approvalDate']),
       approvalDateElement: json['_approvalDate'] == null
           ? null
           : Element.fromJson(json['_approvalDate'] as Map<String, dynamic>),
       lastReviewDate: json['lastReviewDate'] == null
           ? null
-          : Date.fromJson(json['lastReviewDate']),
+          : FhirDate.fromJson(json['lastReviewDate']),
       lastReviewDateElement: json['_lastReviewDate'] == null
           ? null
           : Element.fromJson(json['_lastReviewDate'] as Map<String, dynamic>),
@@ -2144,15 +891,16 @@ _$_ChargeItemDefinitionPriceComponent
           modifierExtension: (json['modifierExtension'] as List<dynamic>?)
               ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
               .toList(),
-          type: json['type'] == null ? null : Code.fromJson(json['type']),
+          type: json['type'] == null ? null : FhirCode.fromJson(json['type']),
           typeElement: json['_type'] == null
               ? null
               : Element.fromJson(json['_type'] as Map<String, dynamic>),
           code: json['code'] == null
               ? null
               : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
-          factor:
-              json['factor'] == null ? null : Decimal.fromJson(json['factor']),
+          factor: json['factor'] == null
+              ? null
+              : FhirDecimal.fromJson(json['factor']),
           factorElement: json['_factor'] == null
               ? null
               : Element.fromJson(json['_factor'] as Map<String, dynamic>),
@@ -2201,7 +949,7 @@ _$_Contract _$$_ContractFromJson(Map<String, dynamic> json) => _$_Contract(
           ? null
           : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
       language:
-          json['language'] == null ? null : Code.fromJson(json['language']),
+          json['language'] == null ? null : FhirCode.fromJson(json['language']),
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -2228,7 +976,7 @@ _$_Contract _$$_ContractFromJson(Map<String, dynamic> json) => _$_Contract(
       versionElement: json['_version'] == null
           ? null
           : Element.fromJson(json['_version'] as Map<String, dynamic>),
-      status: json['status'] == null ? null : Code.fromJson(json['status']),
+      status: json['status'] == null ? null : FhirCode.fromJson(json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -2450,14 +1198,14 @@ _$_ContractContentDefinition _$$_ContractContentDefinitionFromJson(
           : Element.fromJson(json['_publicationDate'] as Map<String, dynamic>),
       publicationStatus: json['publicationStatus'] == null
           ? null
-          : Code.fromJson(json['publicationStatus']),
+          : FhirCode.fromJson(json['publicationStatus']),
       publicationStatusElement: json['_publicationStatus'] == null
           ? null
           : Element.fromJson(
               json['_publicationStatus'] as Map<String, dynamic>),
       copyright: json['copyright'] == null
           ? null
-          : Markdown.fromJson(json['copyright']),
+          : FhirMarkdown.fromJson(json['copyright']),
       copyrightElement: json['_copyright'] == null
           ? null
           : Element.fromJson(json['_copyright'] as Map<String, dynamic>),
@@ -2588,7 +1336,7 @@ _$_ContractSecurityLabel _$$_ContractSecurityLabelFromJson(
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
       number: (json['number'] as List<dynamic>?)
-          ?.map((e) => UnsignedInt.fromJson(e))
+          ?.map(FhirUnsignedInt.fromJson)
           .toList(),
       numberElement: (json['_number'] as List<dynamic>?)
           ?.map((e) =>
@@ -2669,7 +1417,7 @@ _$_ContractOffer _$$_ContractOfferFromJson(Map<String, dynamic> json) =>
               e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       securityLabelNumber: (json['securityLabelNumber'] as List<dynamic>?)
-          ?.map((e) => UnsignedInt.fromJson(e))
+          ?.map(FhirUnsignedInt.fromJson)
           .toList(),
       securityLabelNumberElement:
           (json['_securityLabelNumber'] as List<dynamic>?)
@@ -2757,24 +1505,25 @@ _$_ContractAnswer _$$_ContractAnswerFromJson(Map<String, dynamic> json) =>
           .toList(),
       valueBoolean: json['valueBoolean'] == null
           ? null
-          : Boolean.fromJson(json['valueBoolean']),
+          : FhirBoolean.fromJson(json['valueBoolean']),
       valueBooleanElement: json['_valueBoolean'] == null
           ? null
           : Element.fromJson(json['_valueBoolean'] as Map<String, dynamic>),
       valueDecimal: json['valueDecimal'] == null
           ? null
-          : Decimal.fromJson(json['valueDecimal']),
+          : FhirDecimal.fromJson(json['valueDecimal']),
       valueDecimalElement: json['_valueDecimal'] == null
           ? null
           : Element.fromJson(json['_valueDecimal'] as Map<String, dynamic>),
       valueInteger: json['valueInteger'] == null
           ? null
-          : Integer.fromJson(json['valueInteger']),
+          : FhirInteger.fromJson(json['valueInteger']),
       valueIntegerElement: json['_valueInteger'] == null
           ? null
           : Element.fromJson(json['_valueInteger'] as Map<String, dynamic>),
-      valueDate:
-          json['valueDate'] == null ? null : Date.fromJson(json['valueDate']),
+      valueDate: json['valueDate'] == null
+          ? null
+          : FhirDate.fromJson(json['valueDate']),
       valueDateElement: json['_valueDate'] == null
           ? null
           : Element.fromJson(json['_valueDate'] as Map<String, dynamic>),
@@ -2784,8 +1533,9 @@ _$_ContractAnswer _$$_ContractAnswerFromJson(Map<String, dynamic> json) =>
       valueDateTimeElement: json['_valueDateTime'] == null
           ? null
           : Element.fromJson(json['_valueDateTime'] as Map<String, dynamic>),
-      valueTime:
-          json['valueTime'] == null ? null : Time.fromJson(json['valueTime']),
+      valueTime: json['valueTime'] == null
+          ? null
+          : FhirTime.fromJson(json['valueTime']),
       valueTimeElement: json['_valueTime'] == null
           ? null
           : Element.fromJson(json['_valueTime'] as Map<String, dynamic>),
@@ -2904,7 +1654,7 @@ _$_ContractAsset _$$_ContractAssetFromJson(Map<String, dynamic> json) =>
           ?.map((e) => ContractAnswer.fromJson(e as Map<String, dynamic>))
           .toList(),
       securityLabelNumber: (json['securityLabelNumber'] as List<dynamic>?)
-          ?.map((e) => UnsignedInt.fromJson(e))
+          ?.map(FhirUnsignedInt.fromJson)
           .toList(),
       securityLabelNumberElement:
           (json['_securityLabelNumber'] as List<dynamic>?)
@@ -3032,11 +1782,13 @@ _$_ContractValuedItem _$$_ContractValuedItemFromJson(
       unitPrice: json['unitPrice'] == null
           ? null
           : Money.fromJson(json['unitPrice'] as Map<String, dynamic>),
-      factor: json['factor'] == null ? null : Decimal.fromJson(json['factor']),
+      factor:
+          json['factor'] == null ? null : FhirDecimal.fromJson(json['factor']),
       factorElement: json['_factor'] == null
           ? null
           : Element.fromJson(json['_factor'] as Map<String, dynamic>),
-      points: json['points'] == null ? null : Decimal.fromJson(json['points']),
+      points:
+          json['points'] == null ? null : FhirDecimal.fromJson(json['points']),
       pointsElement: json['_points'] == null
           ? null
           : Element.fromJson(json['_points'] as Map<String, dynamic>),
@@ -3066,7 +1818,7 @@ _$_ContractValuedItem _$$_ContractValuedItemFromJson(
               e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       securityLabelNumber: (json['securityLabelNumber'] as List<dynamic>?)
-          ?.map((e) => UnsignedInt.fromJson(e))
+          ?.map(FhirUnsignedInt.fromJson)
           .toList(),
       securityLabelNumberElement:
           (json['_securityLabelNumber'] as List<dynamic>?)
@@ -3129,7 +1881,7 @@ _$_ContractAction _$$_ContractActionFromJson(Map<String, dynamic> json) =>
           .toList(),
       doNotPerform: json['doNotPerform'] == null
           ? null
-          : Boolean.fromJson(json['doNotPerform']),
+          : FhirBoolean.fromJson(json['doNotPerform']),
       doNotPerformElement: json['_doNotPerform'] == null
           ? null
           : Element.fromJson(json['_doNotPerform'] as Map<String, dynamic>),
@@ -3218,7 +1970,7 @@ _$_ContractAction _$$_ContractActionFromJson(Map<String, dynamic> json) =>
           ?.map((e) => Annotation.fromJson(e as Map<String, dynamic>))
           .toList(),
       securityLabelNumber: (json['securityLabelNumber'] as List<dynamic>?)
-          ?.map((e) => UnsignedInt.fromJson(e))
+          ?.map(FhirUnsignedInt.fromJson)
           .toList(),
       securityLabelNumberElement:
           (json['_securityLabelNumber'] as List<dynamic>?)
@@ -3492,7 +2244,7 @@ _$_ExplanationOfBenefit _$$_ExplanationOfBenefitFromJson(
           ? null
           : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
       language:
-          json['language'] == null ? null : Code.fromJson(json['language']),
+          json['language'] == null ? null : FhirCode.fromJson(json['language']),
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -3511,7 +2263,7 @@ _$_ExplanationOfBenefit _$$_ExplanationOfBenefitFromJson(
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: json['status'] == null ? null : Code.fromJson(json['status']),
+      status: json['status'] == null ? null : FhirCode.fromJson(json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -3519,7 +2271,7 @@ _$_ExplanationOfBenefit _$$_ExplanationOfBenefitFromJson(
       subType: json['subType'] == null
           ? null
           : CodeableConcept.fromJson(json['subType'] as Map<String, dynamic>),
-      use: json['use'] == null ? null : Code.fromJson(json['use']),
+      use: json['use'] == null ? null : FhirCode.fromJson(json['use']),
       useElement: json['_use'] == null
           ? null
           : Element.fromJson(json['_use'] as Map<String, dynamic>),
@@ -3576,7 +2328,8 @@ _$_ExplanationOfBenefit _$$_ExplanationOfBenefitFromJson(
       claimResponse: json['claimResponse'] == null
           ? null
           : Reference.fromJson(json['claimResponse'] as Map<String, dynamic>),
-      outcome: json['outcome'] == null ? null : Code.fromJson(json['outcome']),
+      outcome:
+          json['outcome'] == null ? null : FhirCode.fromJson(json['outcome']),
       outcomeElement: json['_outcome'] == null
           ? null
           : Element.fromJson(json['_outcome'] as Map<String, dynamic>),
@@ -3612,7 +2365,7 @@ _$_ExplanationOfBenefit _$$_ExplanationOfBenefitFromJson(
           .toList(),
       precedence: json['precedence'] == null
           ? null
-          : PositiveInt.fromJson(json['precedence']),
+          : FhirPositiveInt.fromJson(json['precedence']),
       precedenceElement: json['_precedence'] == null
           ? null
           : Element.fromJson(json['_precedence'] as Map<String, dynamic>),
@@ -3844,14 +2597,14 @@ _$_ExplanationOfBenefitCareTeam _$$_ExplanationOfBenefitCareTeamFromJson(
           .toList(),
       sequence: json['sequence'] == null
           ? null
-          : PositiveInt.fromJson(json['sequence']),
+          : FhirPositiveInt.fromJson(json['sequence']),
       sequenceElement: json['_sequence'] == null
           ? null
           : Element.fromJson(json['_sequence'] as Map<String, dynamic>),
       provider: Reference.fromJson(json['provider'] as Map<String, dynamic>),
       responsible: json['responsible'] == null
           ? null
-          : Boolean.fromJson(json['responsible']),
+          : FhirBoolean.fromJson(json['responsible']),
       responsibleElement: json['_responsible'] == null
           ? null
           : Element.fromJson(json['_responsible'] as Map<String, dynamic>),
@@ -3901,7 +2654,7 @@ _$_ExplanationOfBenefitSupportingInfo
               .toList(),
           sequence: json['sequence'] == null
               ? null
-              : PositiveInt.fromJson(json['sequence']),
+              : FhirPositiveInt.fromJson(json['sequence']),
           sequenceElement: json['_sequence'] == null
               ? null
               : Element.fromJson(json['_sequence'] as Map<String, dynamic>),
@@ -3912,7 +2665,7 @@ _$_ExplanationOfBenefitSupportingInfo
               : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
           timingDate: json['timingDate'] == null
               ? null
-              : Date.fromJson(json['timingDate']),
+              : FhirDate.fromJson(json['timingDate']),
           timingDateElement: json['_timingDate'] == null
               ? null
               : Element.fromJson(json['_timingDate'] as Map<String, dynamic>),
@@ -3921,7 +2674,7 @@ _$_ExplanationOfBenefitSupportingInfo
               : Period.fromJson(json['timingPeriod'] as Map<String, dynamic>),
           valueBoolean: json['valueBoolean'] == null
               ? null
-              : Boolean.fromJson(json['valueBoolean']),
+              : FhirBoolean.fromJson(json['valueBoolean']),
           valueBooleanElement: json['_valueBoolean'] == null
               ? null
               : Element.fromJson(json['_valueBoolean'] as Map<String, dynamic>),
@@ -3991,7 +2744,7 @@ _$_ExplanationOfBenefitDiagnosis _$$_ExplanationOfBenefitDiagnosisFromJson(
           .toList(),
       sequence: json['sequence'] == null
           ? null
-          : PositiveInt.fromJson(json['sequence']),
+          : FhirPositiveInt.fromJson(json['sequence']),
       sequenceElement: json['_sequence'] == null
           ? null
           : Element.fromJson(json['_sequence'] as Map<String, dynamic>),
@@ -4054,7 +2807,7 @@ _$_ExplanationOfBenefitProcedure _$$_ExplanationOfBenefitProcedureFromJson(
           .toList(),
       sequence: json['sequence'] == null
           ? null
-          : PositiveInt.fromJson(json['sequence']),
+          : FhirPositiveInt.fromJson(json['sequence']),
       sequenceElement: json['_sequence'] == null
           ? null
           : Element.fromJson(json['_sequence'] as Map<String, dynamic>),
@@ -4115,7 +2868,7 @@ _$_ExplanationOfBenefitInsurance _$$_ExplanationOfBenefitInsuranceFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      focal: json['focal'] == null ? null : Boolean.fromJson(json['focal']),
+      focal: json['focal'] == null ? null : FhirBoolean.fromJson(json['focal']),
       focalElement: json['_focal'] == null
           ? null
           : Element.fromJson(json['_focal'] as Map<String, dynamic>),
@@ -4163,7 +2916,7 @@ _$_ExplanationOfBenefitAccident _$$_ExplanationOfBenefitAccidentFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      date: json['date'] == null ? null : Date.fromJson(json['date']),
+      date: json['date'] == null ? null : FhirDate.fromJson(json['date']),
       dateElement: json['_date'] == null
           ? null
           : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -4214,31 +2967,31 @@ _$_ExplanationOfBenefitItem _$$_ExplanationOfBenefitItemFromJson(
           .toList(),
       sequence: json['sequence'] == null
           ? null
-          : PositiveInt.fromJson(json['sequence']),
+          : FhirPositiveInt.fromJson(json['sequence']),
       sequenceElement: json['_sequence'] == null
           ? null
           : Element.fromJson(json['_sequence'] as Map<String, dynamic>),
       careTeamSequence: (json['careTeamSequence'] as List<dynamic>?)
-          ?.map((e) => PositiveInt.fromJson(e))
+          ?.map(FhirPositiveInt.fromJson)
           .toList(),
       careTeamSequenceElement: (json['_careTeamSequence'] as List<dynamic>?)
           ?.map((e) =>
               e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       diagnosisSequence: (json['diagnosisSequence'] as List<dynamic>?)
-          ?.map((e) => PositiveInt.fromJson(e))
+          ?.map(FhirPositiveInt.fromJson)
           .toList(),
       diagnosisSequenceElement: (json['_diagnosisSequence'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       procedureSequence: (json['procedureSequence'] as List<dynamic>?)
-          ?.map((e) => PositiveInt.fromJson(e))
+          ?.map(FhirPositiveInt.fromJson)
           .toList(),
       procedureSequenceElement: (json['_procedureSequence'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       informationSequence: (json['informationSequence'] as List<dynamic>?)
-          ?.map((e) => PositiveInt.fromJson(e))
+          ?.map(FhirPositiveInt.fromJson)
           .toList(),
       informationSequenceElement:
           (json['_informationSequence'] as List<dynamic>?)
@@ -4260,7 +3013,7 @@ _$_ExplanationOfBenefitItem _$$_ExplanationOfBenefitItemFromJson(
           .toList(),
       servicedDate: json['servicedDate'] == null
           ? null
-          : Date.fromJson(json['servicedDate']),
+          : FhirDate.fromJson(json['servicedDate']),
       servicedDateElement: json['_servicedDate'] == null
           ? null
           : Element.fromJson(json['_servicedDate'] as Map<String, dynamic>),
@@ -4284,7 +3037,8 @@ _$_ExplanationOfBenefitItem _$$_ExplanationOfBenefitItemFromJson(
       unitPrice: json['unitPrice'] == null
           ? null
           : Money.fromJson(json['unitPrice'] as Map<String, dynamic>),
-      factor: json['factor'] == null ? null : Decimal.fromJson(json['factor']),
+      factor:
+          json['factor'] == null ? null : FhirDecimal.fromJson(json['factor']),
       factorElement: json['_factor'] == null
           ? null
           : Element.fromJson(json['_factor'] as Map<String, dynamic>),
@@ -4304,7 +3058,7 @@ _$_ExplanationOfBenefitItem _$$_ExplanationOfBenefitItemFromJson(
           ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
           .toList(),
       noteNumber: (json['noteNumber'] as List<dynamic>?)
-          ?.map((e) => PositiveInt.fromJson(e))
+          ?.map(FhirPositiveInt.fromJson)
           .toList(),
       noteNumberElement: (json['_noteNumber'] as List<dynamic>?)
           ?.map((e) =>
@@ -4405,7 +3159,9 @@ _$_ExplanationOfBenefitAdjudication
           amount: json['amount'] == null
               ? null
               : Money.fromJson(json['amount'] as Map<String, dynamic>),
-          value: json['value'] == null ? null : Decimal.fromJson(json['value']),
+          value: json['value'] == null
+              ? null
+              : FhirDecimal.fromJson(json['value']),
           valueElement: json['_value'] == null
               ? null
               : Element.fromJson(json['_value'] as Map<String, dynamic>),
@@ -4446,7 +3202,7 @@ _$_ExplanationOfBenefitDetail _$$_ExplanationOfBenefitDetailFromJson(
           .toList(),
       sequence: json['sequence'] == null
           ? null
-          : PositiveInt.fromJson(json['sequence']),
+          : FhirPositiveInt.fromJson(json['sequence']),
       sequenceElement: json['_sequence'] == null
           ? null
           : Element.fromJson(json['_sequence'] as Map<String, dynamic>),
@@ -4470,7 +3226,8 @@ _$_ExplanationOfBenefitDetail _$$_ExplanationOfBenefitDetailFromJson(
       unitPrice: json['unitPrice'] == null
           ? null
           : Money.fromJson(json['unitPrice'] as Map<String, dynamic>),
-      factor: json['factor'] == null ? null : Decimal.fromJson(json['factor']),
+      factor:
+          json['factor'] == null ? null : FhirDecimal.fromJson(json['factor']),
       factorElement: json['_factor'] == null
           ? null
           : Element.fromJson(json['_factor'] as Map<String, dynamic>),
@@ -4481,7 +3238,7 @@ _$_ExplanationOfBenefitDetail _$$_ExplanationOfBenefitDetailFromJson(
           ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
           .toList(),
       noteNumber: (json['noteNumber'] as List<dynamic>?)
-          ?.map((e) => PositiveInt.fromJson(e))
+          ?.map(FhirPositiveInt.fromJson)
           .toList(),
       noteNumberElement: (json['_noteNumber'] as List<dynamic>?)
           ?.map((e) =>
@@ -4549,7 +3306,7 @@ _$_ExplanationOfBenefitSubDetail _$$_ExplanationOfBenefitSubDetailFromJson(
           .toList(),
       sequence: json['sequence'] == null
           ? null
-          : PositiveInt.fromJson(json['sequence']),
+          : FhirPositiveInt.fromJson(json['sequence']),
       sequenceElement: json['_sequence'] == null
           ? null
           : Element.fromJson(json['_sequence'] as Map<String, dynamic>),
@@ -4573,7 +3330,8 @@ _$_ExplanationOfBenefitSubDetail _$$_ExplanationOfBenefitSubDetailFromJson(
       unitPrice: json['unitPrice'] == null
           ? null
           : Money.fromJson(json['unitPrice'] as Map<String, dynamic>),
-      factor: json['factor'] == null ? null : Decimal.fromJson(json['factor']),
+      factor:
+          json['factor'] == null ? null : FhirDecimal.fromJson(json['factor']),
       factorElement: json['_factor'] == null
           ? null
           : Element.fromJson(json['_factor'] as Map<String, dynamic>),
@@ -4584,7 +3342,7 @@ _$_ExplanationOfBenefitSubDetail _$$_ExplanationOfBenefitSubDetailFromJson(
           ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
           .toList(),
       noteNumber: (json['noteNumber'] as List<dynamic>?)
-          ?.map((e) => PositiveInt.fromJson(e))
+          ?.map(FhirPositiveInt.fromJson)
           .toList(),
       noteNumberElement: (json['_noteNumber'] as List<dynamic>?)
           ?.map((e) =>
@@ -4645,21 +3403,21 @@ _$_ExplanationOfBenefitAddItem _$$_ExplanationOfBenefitAddItemFromJson(
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
       itemSequence: (json['itemSequence'] as List<dynamic>?)
-          ?.map((e) => PositiveInt.fromJson(e))
+          ?.map(FhirPositiveInt.fromJson)
           .toList(),
       itemSequenceElement: (json['_itemSequence'] as List<dynamic>?)
           ?.map((e) =>
               e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       detailSequence: (json['detailSequence'] as List<dynamic>?)
-          ?.map((e) => PositiveInt.fromJson(e))
+          ?.map(FhirPositiveInt.fromJson)
           .toList(),
       detailSequenceElement: (json['_detailSequence'] as List<dynamic>?)
           ?.map((e) =>
               e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       subDetailSequence: (json['subDetailSequence'] as List<dynamic>?)
-          ?.map((e) => PositiveInt.fromJson(e))
+          ?.map(FhirPositiveInt.fromJson)
           .toList(),
       subDetailSequenceElement: (json['_subDetailSequence'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
@@ -4677,7 +3435,7 @@ _$_ExplanationOfBenefitAddItem _$$_ExplanationOfBenefitAddItemFromJson(
           .toList(),
       servicedDate: json['servicedDate'] == null
           ? null
-          : Date.fromJson(json['servicedDate']),
+          : FhirDate.fromJson(json['servicedDate']),
       servicedDateElement: json['_servicedDate'] == null
           ? null
           : Element.fromJson(json['_servicedDate'] as Map<String, dynamic>),
@@ -4701,7 +3459,8 @@ _$_ExplanationOfBenefitAddItem _$$_ExplanationOfBenefitAddItemFromJson(
       unitPrice: json['unitPrice'] == null
           ? null
           : Money.fromJson(json['unitPrice'] as Map<String, dynamic>),
-      factor: json['factor'] == null ? null : Decimal.fromJson(json['factor']),
+      factor:
+          json['factor'] == null ? null : FhirDecimal.fromJson(json['factor']),
       factorElement: json['_factor'] == null
           ? null
           : Element.fromJson(json['_factor'] as Map<String, dynamic>),
@@ -4715,7 +3474,7 @@ _$_ExplanationOfBenefitAddItem _$$_ExplanationOfBenefitAddItemFromJson(
           ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
           .toList(),
       noteNumber: (json['noteNumber'] as List<dynamic>?)
-          ?.map((e) => PositiveInt.fromJson(e))
+          ?.map(FhirPositiveInt.fromJson)
           .toList(),
       noteNumberElement: (json['_noteNumber'] as List<dynamic>?)
           ?.map((e) =>
@@ -4808,7 +3567,8 @@ _$_ExplanationOfBenefitDetail1 _$$_ExplanationOfBenefitDetail1FromJson(
       unitPrice: json['unitPrice'] == null
           ? null
           : Money.fromJson(json['unitPrice'] as Map<String, dynamic>),
-      factor: json['factor'] == null ? null : Decimal.fromJson(json['factor']),
+      factor:
+          json['factor'] == null ? null : FhirDecimal.fromJson(json['factor']),
       factorElement: json['_factor'] == null
           ? null
           : Element.fromJson(json['_factor'] as Map<String, dynamic>),
@@ -4816,7 +3576,7 @@ _$_ExplanationOfBenefitDetail1 _$$_ExplanationOfBenefitDetail1FromJson(
           ? null
           : Money.fromJson(json['net'] as Map<String, dynamic>),
       noteNumber: (json['noteNumber'] as List<dynamic>?)
-          ?.map((e) => PositiveInt.fromJson(e))
+          ?.map(FhirPositiveInt.fromJson)
           .toList(),
       noteNumberElement: (json['_noteNumber'] as List<dynamic>?)
           ?.map((e) =>
@@ -4886,7 +3646,8 @@ _$_ExplanationOfBenefitSubDetail1 _$$_ExplanationOfBenefitSubDetail1FromJson(
       unitPrice: json['unitPrice'] == null
           ? null
           : Money.fromJson(json['unitPrice'] as Map<String, dynamic>),
-      factor: json['factor'] == null ? null : Decimal.fromJson(json['factor']),
+      factor:
+          json['factor'] == null ? null : FhirDecimal.fromJson(json['factor']),
       factorElement: json['_factor'] == null
           ? null
           : Element.fromJson(json['_factor'] as Map<String, dynamic>),
@@ -4894,7 +3655,7 @@ _$_ExplanationOfBenefitSubDetail1 _$$_ExplanationOfBenefitSubDetail1FromJson(
           ? null
           : Money.fromJson(json['net'] as Map<String, dynamic>),
       noteNumber: (json['noteNumber'] as List<dynamic>?)
-          ?.map((e) => PositiveInt.fromJson(e))
+          ?.map(FhirPositiveInt.fromJson)
           .toList(),
       noteNumberElement: (json['_noteNumber'] as List<dynamic>?)
           ?.map((e) =>
@@ -4992,7 +3753,7 @@ _$_ExplanationOfBenefitPayment _$$_ExplanationOfBenefitPaymentFromJson(
           ? null
           : CodeableConcept.fromJson(
               json['adjustmentReason'] as Map<String, dynamic>),
-      date: json['date'] == null ? null : Date.fromJson(json['date']),
+      date: json['date'] == null ? null : FhirDate.fromJson(json['date']),
       dateElement: json['_date'] == null
           ? null
           : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -5039,12 +3800,13 @@ _$_ExplanationOfBenefitProcessNote _$$_ExplanationOfBenefitProcessNoteFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      number:
-          json['number'] == null ? null : PositiveInt.fromJson(json['number']),
+      number: json['number'] == null
+          ? null
+          : FhirPositiveInt.fromJson(json['number']),
       numberElement: json['_number'] == null
           ? null
           : Element.fromJson(json['_number'] as Map<String, dynamic>),
-      type: json['type'] == null ? null : Code.fromJson(json['type']),
+      type: json['type'] == null ? null : FhirCode.fromJson(json['type']),
       typeElement: json['_type'] == null
           ? null
           : Element.fromJson(json['_type'] as Map<String, dynamic>),
@@ -5096,7 +3858,7 @@ _$_ExplanationOfBenefitBenefitBalance
               json['category'] as Map<String, dynamic>),
           excluded: json['excluded'] == null
               ? null
-              : Boolean.fromJson(json['excluded']),
+              : FhirBoolean.fromJson(json['excluded']),
           excludedElement: json['_excluded'] == null
               ? null
               : Element.fromJson(json['_excluded'] as Map<String, dynamic>),
@@ -5167,7 +3929,7 @@ _$_ExplanationOfBenefitFinancial _$$_ExplanationOfBenefitFinancialFromJson(
       type: CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
       allowedUnsignedInt: json['allowedUnsignedInt'] == null
           ? null
-          : UnsignedInt.fromJson(json['allowedUnsignedInt']),
+          : FhirUnsignedInt.fromJson(json['allowedUnsignedInt']),
       allowedUnsignedIntElement: json['_allowedUnsignedInt'] == null
           ? null
           : Element.fromJson(
@@ -5181,7 +3943,7 @@ _$_ExplanationOfBenefitFinancial _$$_ExplanationOfBenefitFinancialFromJson(
           : Money.fromJson(json['allowedMoney'] as Map<String, dynamic>),
       usedUnsignedInt: json['usedUnsignedInt'] == null
           ? null
-          : UnsignedInt.fromJson(json['usedUnsignedInt']),
+          : FhirUnsignedInt.fromJson(json['usedUnsignedInt']),
       usedUnsignedIntElement: json['_usedUnsignedInt'] == null
           ? null
           : Element.fromJson(json['_usedUnsignedInt'] as Map<String, dynamic>),
@@ -5235,7 +3997,7 @@ _$_InsurancePlan _$$_InsurancePlanFromJson(Map<String, dynamic> json) =>
           ? null
           : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
       language:
-          json['language'] == null ? null : Code.fromJson(json['language']),
+          json['language'] == null ? null : FhirCode.fromJson(json['language']),
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -5254,7 +4016,7 @@ _$_InsurancePlan _$$_InsurancePlanFromJson(Map<String, dynamic> json) =>
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: json['status'] == null ? null : Code.fromJson(json['status']),
+      status: json['status'] == null ? null : FhirCode.fromJson(json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -5588,7 +4350,7 @@ _$_InsurancePlanGeneralCost _$$_InsurancePlanGeneralCostFromJson(
           : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
       groupSize: json['groupSize'] == null
           ? null
-          : PositiveInt.fromJson(json['groupSize']),
+          : FhirPositiveInt.fromJson(json['groupSize']),
       groupSizeElement: json['_groupSize'] == null
           ? null
           : Element.fromJson(json['_groupSize'] as Map<String, dynamic>),

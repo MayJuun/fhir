@@ -3,7 +3,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:hive/hive.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -14,7 +13,7 @@ part 'care_provision.g.dart';
 
 /// [CarePlan] Describes the intention of how one or more practitioners
 @freezed
-class CarePlan extends HiveObject with Resource, _$CarePlan {
+class CarePlan with Resource, _$CarePlan {
   /// [CarePlan] Describes the intention of how one or more practitioners
   CarePlan._();
 
@@ -158,45 +157,37 @@ class CarePlan extends HiveObject with Resource, _$CarePlan {
   ///  education, etc.
   ///
   /// [note] General notes about the care plan not covered elsewhere.
-  @HiveType(typeId: 204)
   factory CarePlan({
     @Default(R4ResourceType.CarePlan)
     @JsonKey(unknownEnumValue: R4ResourceType.CarePlan)
 
-    /// [resourceType] This is a CarePlan resource
-    @HiveField(0)
+        /// [resourceType] This is a CarePlan resource
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @HiveField(1)
-        String? id,
+    String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    @HiveField(2)
-        FhirMeta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    @HiveField(3)
-        FhirUri? implicitRules,
+    FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
-    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    @HiveField(5)
-        FhirCode? language,
+    FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
-    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
@@ -205,15 +196,13 @@ class CarePlan extends HiveObject with Resource, _$CarePlan {
     /// contain sufficient detail to make it "clinically safe" for a human to just
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
-    @HiveField(7)
-        Narrative? text,
+    Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
-    @HiveField(8)
-        List<Resource>? contained,
+    List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -222,7 +211,6 @@ class CarePlan extends HiveObject with Resource, _$CarePlan {
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
     @JsonKey(name: 'extension')
-    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -238,162 +226,125 @@ class CarePlan extends HiveObject with Resource, _$CarePlan {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    @HiveField(10)
-        List<FhirExtension>? modifierExtension,
+    List<FhirExtension>? modifierExtension,
 
     /// [identifier] Business identifiers assigned to this care plan by the
     /// performer or other systems which remain constant as the resource is
     ///  updated and propagates from server to server.
-    @HiveField(11)
-        List<Identifier>? identifier,
-    @HiveField(12)
+    List<Identifier>? identifier,
 
     /// [instantiatesCanonical] The URL pointing to a FHIR-defined protocol,
     /// guideline, questionnaire or other definition that is adhered to in whole
     ///  or in part by this CarePlan.
-    @HiveField(13)
-        List<FhirCanonical>? instantiatesCanonical,
-    @HiveField(14)
+    List<FhirCanonical>? instantiatesCanonical,
 
     /// [instantiatesUri] The URL pointing to an externally maintained protocol,
     /// guideline, questionnaire or other definition that is adhered to in whole
     ///  or in part by this CarePlan.
-    @HiveField(15)
-        List<FhirUri>? instantiatesUri,
+    List<FhirUri>? instantiatesUri,
 
     /// [instantiatesUriElement] Extensions for instantiatesUri
     @JsonKey(name: '_instantiatesUri')
-    @HiveField(16)
         List<Element?>? instantiatesUriElement,
 
     /// [basedOn] A care plan that is fulfilled in whole or in part by this care
     ///  plan.
-    @HiveField(17)
-        List<Reference>? basedOn,
+    List<Reference>? basedOn,
 
     /// [replaces] Completed or terminated care plan whose function is taken by
     ///  this new care plan.
-    @HiveField(18)
-        List<Reference>? replaces,
+    List<Reference>? replaces,
 
     /// [partOf] A larger care plan of which this particular care plan is a
     ///  component or step.
-    @HiveField(19)
-        List<Reference>? partOf,
-    @HiveField(20)
+    List<Reference>? partOf,
 
     /// [status] Indicates whether the plan is currently being acted upon,
     ///  represents future intentions or is now a historical record.
-    @HiveField(21)
-        FhirCode? status,
+    FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
-    @HiveField(22)
         Element? statusElement,
 
     /// [intent] Indicates the level of authority/intentionality associated with
     ///  the care plan and where the care plan fits into the workflow chain.
-    @HiveField(23)
-        FhirCode? intent,
+    FhirCode? intent,
 
     /// [intentElement] Extensions for intent
     @JsonKey(name: '_intent')
-    @HiveField(24)
         Element? intentElement,
 
     /// [category] Identifies what "kind" of plan this is to support
-    @HiveField(25)
-
     /// differentiation between multiple co-existing plans; e.g. "Home health",
     ///  "psychiatric", "asthma", "disease management", "wellness plan", etc.
-    @HiveField(26)
-        List<CodeableConcept>? category,
+    List<CodeableConcept>? category,
 
     /// [title] Human-friendly name for the care plan.
-    @HiveField(27)
-        String? title,
+    String? title,
 
     /// [titleElement] Extensions for title
     @JsonKey(name: '_title')
-    @HiveField(28)
         Element? titleElement,
 
     /// [description] A description of the scope and nature of the plan.
-    @HiveField(29)
-        String? description,
+    String? description,
 
     /// [descriptionElement] Extensions for description
     @JsonKey(name: '_description')
-    @HiveField(30)
         Element? descriptionElement,
 
     /// [subject] Identifies the patient or group whose intended care is
     ///  described by the plan.
-    @HiveField(31)
-        required Reference subject,
+    required Reference subject,
 
     /// [encounter] The Encounter during which this CarePlan was created or to
     ///  which the creation of this record is tightly associated.
-    @HiveField(32)
-        Reference? encounter,
+    Reference? encounter,
 
     /// [period] Indicates when the plan did (or is intended to) come into effect
     ///  and end.
-    @HiveField(33)
-        Period? period,
+    Period? period,
 
     /// [created] Represents when this particular CarePlan record was created in
     ///  the system, which is often a system-generated date.
-    @HiveField(34)
-        FhirDateTime? created,
+    FhirDateTime? created,
 
     /// [createdElement] Extensions for created
     @JsonKey(name: '_created')
-    @HiveField(35)
         Element? createdElement,
 
     /// [author] When populated, the author is responsible for the care plan.
     ///  The care plan is attributed to the author.
-    @HiveField(36)
-        Reference? author,
+    Reference? author,
 
     /// [contributor] Identifies the individual(s) or organization who provided
     ///  the contents of the care plan.
-    @HiveField(37)
-        List<Reference>? contributor,
+    List<Reference>? contributor,
 
     /// [careTeam] Identifies all people and organizations who are expected to be
     ///  involved in the care envisioned by this plan.
-    @HiveField(38)
-        List<Reference>? careTeam,
+    List<Reference>? careTeam,
 
     /// [addresses] Identifies the conditions/problems/concerns/diagnoses/etc.
     ///  whose management and/or mitigation are handled by this plan.
-    @HiveField(39)
-        List<Reference>? addresses,
+    List<Reference>? addresses,
 
     /// [supportingInfo] Identifies portions of the patient's record that
     /// specifically influenced the formation of the plan.  These might include
     ///  comorbidities, recent procedures, limitations, recent assessments, etc.
-    @HiveField(40)
-        List<Reference>? supportingInfo,
+    List<Reference>? supportingInfo,
 
     /// [goal] Describes the intended objective(s) of carrying out the care plan.
-    @HiveField(41)
-        List<Reference>? goal,
+    List<Reference>? goal,
 
     /// [activity] Identifies a planned action to occur as part of the plan.  For
-    @HiveField(42)
-
     /// example, a medication to be used, lab tests to perform, self-monitoring,
     ///  education, etc.
-    @HiveField(43)
-        List<CarePlanActivity>? activity,
+    List<CarePlanActivity>? activity,
 
     /// [note] General notes about the care plan not covered elsewhere.
-    @HiveField(44)
-        List<Annotation>? note,
+    List<Annotation>? note,
   }) = _CarePlan;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -762,7 +713,7 @@ class CarePlanDetail with _$CarePlanDetail {
     /// must NOT be engaged in when following the plan.  If false, or missing,
     /// indicates that the described activity is one that should be engaged in
     ///  when following the plan.
-    Boolean? doNotPerform,
+    FhirBoolean? doNotPerform,
 
     /// [doNotPerformElement] Extensions for doNotPerform
     @JsonKey(name: '_doNotPerform') Element? doNotPerformElement,
@@ -849,7 +800,7 @@ class CarePlanDetail with _$CarePlanDetail {
 
 /// [CareTeam] The Care Team includes all the people and organizations who
 @freezed
-class CareTeam extends HiveObject with Resource, _$CareTeam {
+class CareTeam with Resource, _$CareTeam {
   /// [CareTeam] The Care Team includes all the people and organizations who
   CareTeam._();
 
@@ -949,45 +900,37 @@ class CareTeam extends HiveObject with Resource, _$CareTeam {
   ///  members).
   ///
   /// [note] Comments made about the CareTeam.
-  @HiveType(typeId: 205)
   factory CareTeam({
     @Default(R4ResourceType.CareTeam)
     @JsonKey(unknownEnumValue: R4ResourceType.CareTeam)
 
-    /// [resourceType] This is a CareTeam resource
-    @HiveField(0)
+        /// [resourceType] This is a CareTeam resource
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @HiveField(1)
-        String? id,
+    String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    @HiveField(2)
-        FhirMeta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    @HiveField(3)
-        FhirUri? implicitRules,
+    FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
-    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    @HiveField(5)
-        FhirCode? language,
+    FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
-    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
@@ -996,15 +939,13 @@ class CareTeam extends HiveObject with Resource, _$CareTeam {
     /// contain sufficient detail to make it "clinically safe" for a human to just
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
-    @HiveField(7)
-        Narrative? text,
+    Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
-    @HiveField(8)
-        List<Resource>? contained,
+    List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -1013,7 +954,6 @@ class CareTeam extends HiveObject with Resource, _$CareTeam {
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
     @JsonKey(name: 'extension')
-    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -1029,80 +969,64 @@ class CareTeam extends HiveObject with Resource, _$CareTeam {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    @HiveField(10)
-        List<FhirExtension>? modifierExtension,
+    List<FhirExtension>? modifierExtension,
 
     /// [identifier] Business identifiers assigned to this care team by the
     /// performer or other systems which remain constant as the resource is
     ///  updated and propagates from server to server.
-    @HiveField(11)
-        List<Identifier>? identifier,
+    List<Identifier>? identifier,
 
     /// [status] Indicates the current state of the care team.
-    @HiveField(12)
-        FhirCode? status,
+    FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
-    @HiveField(13)
         Element? statusElement,
 
     /// [category] Identifies what kind of team.  This is to support
     /// differentiation between multiple co-existing teams, such as care plan
     ///  team, episode of care team, longitudinal care team.
-    @HiveField(14)
-        List<CodeableConcept>? category,
+    List<CodeableConcept>? category,
 
     /// [name] A label for human use intended to distinguish like teams.  E.g.
     ///  the "red" vs. "green" trauma teams.
-    @HiveField(15)
-        String? name,
+    String? name,
 
     /// [nameElement] Extensions for name
     @JsonKey(name: '_name')
-    @HiveField(16)
         Element? nameElement,
 
     /// [subject] Identifies the patient or group whose intended care is handled
     ///  by the team.
-    @HiveField(17)
-        Reference? subject,
+    Reference? subject,
 
     /// [encounter] The Encounter during which this CareTeam was created or to
     ///  which the creation of this record is tightly associated.
-    @HiveField(18)
-        Reference? encounter,
+    Reference? encounter,
 
     /// [period] Indicates when the team did (or is intended to) come into effect
     ///  and end.
-    @HiveField(19)
-        Period? period,
+    Period? period,
 
     /// [participant] Identifies all people and organizations who are expected to
     ///  be involved in the care team.
-    @HiveField(20)
-        List<CareTeamParticipant>? participant,
+    List<CareTeamParticipant>? participant,
 
     /// [reasonCode] Describes why the care team exists.
-    @HiveField(21)
-        List<CodeableConcept>? reasonCode,
+    List<CodeableConcept>? reasonCode,
 
     /// [reasonReference] Condition(s) that this care team addresses.
-    @HiveField(22)
-        List<Reference>? reasonReference,
+    List<Reference>? reasonReference,
 
     /// [managingOrganization] The organization responsible for the care team.
-    @HiveField(23)
-        List<Reference>? managingOrganization,
+    List<Reference>? managingOrganization,
 
     /// [telecom] A central contact detail for the care team (that applies to all
     ///  members).
-    @HiveField(24)
-        List<ContactPoint>? telecom,
+    List<ContactPoint>? telecom,
 
     /// [note] Comments made about the CareTeam.
-    @HiveField(25)
-        List<Annotation>? note,
+    List<Annotation>? note,
   }) = _CareTeam;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1256,7 +1180,7 @@ class CareTeamParticipant with _$CareTeamParticipant {
 
 /// [Goal] Describes the intended objective(s) for a patient, group or
 @freezed
-class Goal extends HiveObject with Resource, _$Goal {
+class Goal with Resource, _$Goal {
   /// [Goal] Describes the intended objective(s) for a patient, group or
   Goal._();
 
@@ -1372,45 +1296,37 @@ class Goal extends HiveObject with Resource, _$Goal {
   ///  the status of the goal is assessed.
   ///
   /// [outcomeReference] Details of what's changed (or not changed).
-  @HiveType(typeId: 206)
   factory Goal({
     @Default(R4ResourceType.Goal)
     @JsonKey(unknownEnumValue: R4ResourceType.Goal)
 
-    /// [resourceType] This is a Goal resource
-    @HiveField(0)
+        /// [resourceType] This is a Goal resource
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @HiveField(1)
-        String? id,
+    String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    @HiveField(2)
-        FhirMeta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    @HiveField(3)
-        FhirUri? implicitRules,
+    FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
-    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    @HiveField(5)
-        FhirCode? language,
+    FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
-    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
@@ -1419,15 +1335,13 @@ class Goal extends HiveObject with Resource, _$Goal {
     /// contain sufficient detail to make it "clinically safe" for a human to just
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
-    @HiveField(7)
-        Narrative? text,
+    Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
-    @HiveField(8)
-        List<Resource>? contained,
+    List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -1436,7 +1350,6 @@ class Goal extends HiveObject with Resource, _$Goal {
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
     @JsonKey(name: 'extension')
-    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -1452,109 +1365,87 @@ class Goal extends HiveObject with Resource, _$Goal {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    @HiveField(10)
-        List<FhirExtension>? modifierExtension,
+    List<FhirExtension>? modifierExtension,
 
     /// [identifier] Business identifiers assigned to this goal by the performer
     /// or other systems which remain constant as the resource is updated and
     ///  propagates from server to server.
-    @HiveField(11)
-        List<Identifier>? identifier,
+    List<Identifier>? identifier,
 
     /// [lifecycleStatus] The state of the goal throughout its lifecycle.
-    @HiveField(12)
-        FhirCode? lifecycleStatus,
+    FhirCode? lifecycleStatus,
 
     /// [lifecycleStatusElement] Extensions for lifecycleStatus
     @JsonKey(name: '_lifecycleStatus')
-    @HiveField(13)
         Element? lifecycleStatusElement,
 
     /// [achievementStatus] Describes the progression, or lack thereof, towards
     ///  the goal against the target.
-    @HiveField(14)
-        CodeableConcept? achievementStatus,
+    CodeableConcept? achievementStatus,
 
     /// [category] Indicates a category the goal falls within.
-    @HiveField(15)
-        List<CodeableConcept>? category,
+    List<CodeableConcept>? category,
 
     /// [priority] Identifies the mutually agreed level of importance associated
     ///  with reaching/sustaining the goal.
-    @HiveField(16)
-        CodeableConcept? priority,
+    CodeableConcept? priority,
 
     /// [description] Human-readable and/or coded description of a specific
     /// desired objective of care, such as "control blood pressure" or "negotiate
     ///  an obstacle course" or "dance with child at wedding".
-    @HiveField(17)
-        required CodeableConcept description,
+    required CodeableConcept description,
 
     /// [subject] Identifies the patient, group or organization for whom the goal
     ///  is being established.
-    @HiveField(18)
-        required Reference subject,
+    required Reference subject,
 
     /// [startDate] The date or event after which the goal should begin being
     ///  pursued.
-    @HiveField(19)
-        Date? startDate,
+    FhirDate? startDate,
 
     /// [startDateElement] Extensions for startDate
     @JsonKey(name: '_startDate')
-    @HiveField(20)
         Element? startDateElement,
 
     /// [startCodeableConcept] The date or event after which the goal should
     ///  begin being pursued.
-    @HiveField(21)
-        CodeableConcept? startCodeableConcept,
+    CodeableConcept? startCodeableConcept,
 
     /// [target] Indicates what should be done by when.
-    @HiveField(22)
-        List<GoalTarget>? target,
+    List<GoalTarget>? target,
 
     /// [statusDate] Identifies when the current status.  I.e. When initially
     ///  created, when achieved, when cancelled, etc.
-    @HiveField(23)
-        Date? statusDate,
+    FhirDate? statusDate,
 
     /// [statusDateElement] Extensions for statusDate
     @JsonKey(name: '_statusDate')
-    @HiveField(24)
         Element? statusDateElement,
 
     /// [statusReason] Captures the reason for the current status.
-    @HiveField(25)
-        String? statusReason,
+    String? statusReason,
 
     /// [statusReasonElement] Extensions for statusReason
     @JsonKey(name: '_statusReason')
-    @HiveField(26)
         Element? statusReasonElement,
 
     /// [expressedBy] Indicates whose goal this is - patient goal, practitioner
     ///  goal, etc.
-    @HiveField(27)
-        Reference? expressedBy,
+    Reference? expressedBy,
 
     /// [addresses] The identified conditions and other health record elements
     ///  that are intended to be addressed by the goal.
-    @HiveField(28)
-        List<Reference>? addresses,
+    List<Reference>? addresses,
 
     /// [note] Any comments related to the goal.
-    @HiveField(29)
-        List<Annotation>? note,
+    List<Annotation>? note,
 
     /// [outcomeCode] Identifies the change (or lack of change) at the point when
     ///  the status of the goal is assessed.
-    @HiveField(30)
-        List<CodeableConcept>? outcomeCode,
+    List<CodeableConcept>? outcomeCode,
 
     /// [outcomeReference] Details of what's changed (or not changed).
-    @HiveField(31)
-        List<Reference>? outcomeReference,
+    List<Reference>? outcomeReference,
   }) = _Goal;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1758,7 +1649,7 @@ class GoalTarget with _$GoalTarget {
     /// it indicates that the goal is achieved at any focus value at or below the
     /// high value. Similarly, if the high value is missing, it indicates that the
     ///  goal is achieved at any focus value at or above the low value.
-    Boolean? detailBoolean,
+    FhirBoolean? detailBoolean,
 
     /// [detailBooleanElement] Extensions for detailBoolean
     @JsonKey(name: '_detailBoolean') Element? detailBooleanElement,
@@ -1769,7 +1660,7 @@ class GoalTarget with _$GoalTarget {
     /// it indicates that the goal is achieved at any focus value at or below the
     /// high value. Similarly, if the high value is missing, it indicates that the
     ///  goal is achieved at any focus value at or above the low value.
-    Integer? detailInteger,
+    FhirInteger? detailInteger,
 
     /// [detailIntegerElement] Extensions for detailInteger
     @JsonKey(name: '_detailInteger') Element? detailIntegerElement,
@@ -1784,7 +1675,7 @@ class GoalTarget with _$GoalTarget {
 
     /// [dueDate] Indicates either the date or the duration after start by which
     ///  the goal should be met.
-    Date? dueDate,
+    FhirDate? dueDate,
 
     /// [dueDateElement] Extensions for dueDate
     @JsonKey(name: '_dueDate') Element? dueDateElement,
@@ -1827,7 +1718,7 @@ class GoalTarget with _$GoalTarget {
 
 /// [NutritionOrder] A request to supply a diet, formula feeding (enteral) or
 @freezed
-class NutritionOrder extends HiveObject with Resource, _$NutritionOrder {
+class NutritionOrder with Resource, _$NutritionOrder {
   /// [NutritionOrder] A request to supply a diet, formula feeding (enteral) or
   NutritionOrder._();
 
@@ -1961,45 +1852,37 @@ class NutritionOrder extends HiveObject with Resource, _$NutritionOrder {
   ///
   /// [note] Comments made about the {{title}} by the requester, performer,
   ///  subject or other participants.
-  @HiveType(typeId: 207)
   factory NutritionOrder({
     @Default(R4ResourceType.NutritionOrder)
     @JsonKey(unknownEnumValue: R4ResourceType.NutritionOrder)
 
-    /// [resourceType] This is a NutritionOrder resource
-    @HiveField(0)
+        /// [resourceType] This is a NutritionOrder resource
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @HiveField(1)
-        String? id,
+    String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    @HiveField(2)
-        FhirMeta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    @HiveField(3)
-        FhirUri? implicitRules,
+    FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
-    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    @HiveField(5)
-        FhirCode? language,
+    FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
-    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
@@ -2008,15 +1891,13 @@ class NutritionOrder extends HiveObject with Resource, _$NutritionOrder {
     /// contain sufficient detail to make it "clinically safe" for a human to just
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
-    @HiveField(7)
-        Narrative? text,
+    Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
-    @HiveField(8)
-        List<Resource>? contained,
+    List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -2025,7 +1906,6 @@ class NutritionOrder extends HiveObject with Resource, _$NutritionOrder {
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
     @JsonKey(name: 'extension')
-    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -2041,91 +1921,72 @@ class NutritionOrder extends HiveObject with Resource, _$NutritionOrder {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    @HiveField(10)
-        List<FhirExtension>? modifierExtension,
+    List<FhirExtension>? modifierExtension,
 
     /// [identifier] Identifiers assigned to this order by the order sender or by
     ///  the order receiver.
-    @HiveField(11)
-        List<Identifier>? identifier,
-    @HiveField(12)
+    List<Identifier>? identifier,
 
     /// [instantiatesCanonical] The URL pointing to a FHIR-defined protocol,
     /// guideline, orderset or other definition that is adhered to in whole or in
     ///  part by this NutritionOrder.
-    @HiveField(13)
-        List<FhirCanonical>? instantiatesCanonical,
-    @HiveField(14)
+    List<FhirCanonical>? instantiatesCanonical,
 
     /// [instantiatesUri] The URL pointing to an externally maintained protocol,
     /// guideline, orderset or other definition that is adhered to in whole or in
     ///  part by this NutritionOrder.
-    @HiveField(15)
-        List<FhirUri>? instantiatesUri,
+    List<FhirUri>? instantiatesUri,
 
     /// [instantiatesUriElement] Extensions for instantiatesUri
     @JsonKey(name: '_instantiatesUri')
-    @HiveField(16)
         List<Element?>? instantiatesUriElement,
 
     /// [instantiates] The URL pointing to a protocol, guideline, orderset or
     /// other definition that is adhered to in whole or in part by this
     ///  NutritionOrder.
-    @HiveField(17)
-        List<FhirUri>? instantiates,
+    List<FhirUri>? instantiates,
 
     /// [instantiatesElement] Extensions for instantiates
     @JsonKey(name: '_instantiates')
-    @HiveField(18)
         List<Element?>? instantiatesElement,
 
     /// [status] The workflow status of the nutrition order/request.
-    @HiveField(19)
-        FhirCode? status,
+    FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
-    @HiveField(20)
         Element? statusElement,
 
     /// [intent] Indicates the level of authority/intentionality associated with
     ///  the NutrionOrder and where the request fits into the workflow chain.
-    @HiveField(21)
-        FhirCode? intent,
+    FhirCode? intent,
 
     /// [intentElement] Extensions for intent
     @JsonKey(name: '_intent')
-    @HiveField(22)
         Element? intentElement,
 
     /// [patient] The person (patient) who needs the nutrition order for an oral
     ///  diet, nutritional supplement and/or enteral or formula feeding.
-    @HiveField(23)
-        required Reference patient,
+    required Reference patient,
 
     /// [encounter] An encounter that provides additional information about the
     ///  healthcare context in which this request is made.
-    @HiveField(24)
-        Reference? encounter,
+    Reference? encounter,
 
     /// [dateTime] The date and time that this nutrition order was requested.
-    @HiveField(25)
-        FhirDateTime? dateTime,
+    FhirDateTime? dateTime,
 
     /// [dateTimeElement] Extensions for dateTime
     @JsonKey(name: '_dateTime')
-    @HiveField(26)
         Element? dateTimeElement,
 
     /// [orderer] The practitioner that holds legal responsibility for ordering
     ///  the diet, nutritional supplement, or formula feedings.
-    @HiveField(27)
-        Reference? orderer,
+    Reference? orderer,
 
     /// [allergyIntolerance] A link to a record of allergies or intolerances
     ///  which should be included in the nutrition order.
-    @HiveField(28)
-        List<Reference>? allergyIntolerance,
+    List<Reference>? allergyIntolerance,
 
     /// [foodPreferenceModifier] This modifier is used to convey order-specific
     /// modifiers about the type of food that should be given. These can be
@@ -2133,8 +1994,7 @@ class NutritionOrder extends HiveObject with Resource, _$NutritionOrder {
     /// Halal, Vegan or Kosher. This modifier applies to the entire nutrition
     /// order inclusive of the oral diet, nutritional supplements and enteral
     ///  formula feedings.
-    @HiveField(29)
-        List<CodeableConcept>? foodPreferenceModifier,
+    List<CodeableConcept>? foodPreferenceModifier,
 
     /// [excludeFoodModifier] This modifier is used to convey Order-specific
     /// modifier about the type of oral food or oral fluids that should not be
@@ -2147,29 +2007,23 @@ class NutritionOrder extends HiveObject with Resource, _$NutritionOrder {
     /// diet for any reason.  This modifier applies to the entire nutrition order
     /// inclusive of the oral diet, nutritional supplements and enteral formula
     ///  feedings.
-    @HiveField(30)
-        List<CodeableConcept>? excludeFoodModifier,
+    List<CodeableConcept>? excludeFoodModifier,
 
     /// [oralDiet] Diet given orally in contrast to enteral (tube) feeding.
-    @HiveField(31)
-        NutritionOrderOralDiet? oralDiet,
+    NutritionOrderOralDiet? oralDiet,
 
     /// [supplement] Oral nutritional products given in order to add further
     ///  nutritional value to the patient's diet.
-    @HiveField(32)
-        List<NutritionOrderSupplement>? supplement,
+    List<NutritionOrderSupplement>? supplement,
 
     /// [enteralFormula] Feeding provided through the gastrointestinal tract via
     /// a tube, catheter, or stoma that delivers nutrition distal to the oral
     ///  cavity.
-    @HiveField(33)
-        NutritionOrderEnteralFormula? enteralFormula,
-    @HiveField(34)
+    NutritionOrderEnteralFormula? enteralFormula,
 
     /// [note] Comments made about the {{title}} by the requester, performer,
     ///  subject or other participants.
-    @HiveField(35)
-        List<Annotation>? note,
+    List<Annotation>? note,
   }) = _NutritionOrder;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -3004,7 +2858,7 @@ class NutritionOrderAdministration with _$NutritionOrderAdministration {
 
 /// [RequestGroup] A group of related requests that can be used to capture
 @freezed
-class RequestGroup extends HiveObject with Resource, _$RequestGroup {
+class RequestGroup with Resource, _$RequestGroup {
   /// [RequestGroup] A group of related requests that can be used to capture
   RequestGroup._();
 
@@ -3127,45 +2981,37 @@ class RequestGroup extends HiveObject with Resource, _$RequestGroup {
   ///  the response.
   ///
   /// [action] The actions, if any, produced by the evaluation of the artifact.
-  @HiveType(typeId: 208)
   factory RequestGroup({
     @Default(R4ResourceType.RequestGroup)
     @JsonKey(unknownEnumValue: R4ResourceType.RequestGroup)
 
-    /// [resourceType] This is a RequestGroup resource
-    @HiveField(0)
+        /// [resourceType] This is a RequestGroup resource
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @HiveField(1)
-        String? id,
+    String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    @HiveField(2)
-        FhirMeta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    @HiveField(3)
-        FhirUri? implicitRules,
+    FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
-    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    @HiveField(5)
-        FhirCode? language,
+    FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
-    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
@@ -3174,15 +3020,13 @@ class RequestGroup extends HiveObject with Resource, _$RequestGroup {
     /// contain sufficient detail to make it "clinically safe" for a human to just
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
-    @HiveField(7)
-        Narrative? text,
+    Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
-    @HiveField(8)
-        List<Resource>? contained,
+    List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -3191,7 +3035,6 @@ class RequestGroup extends HiveObject with Resource, _$RequestGroup {
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
     @JsonKey(name: 'extension')
-    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -3207,126 +3050,100 @@ class RequestGroup extends HiveObject with Resource, _$RequestGroup {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    @HiveField(10)
-        List<FhirExtension>? modifierExtension,
+    List<FhirExtension>? modifierExtension,
 
     /// [identifier] Allows a service to provide a unique, business identifier
     ///  for the request.
-    @HiveField(11)
-        List<Identifier>? identifier,
+    List<Identifier>? identifier,
 
     /// [instantiatesCanonical] A canonical URL referencing a FHIR-defined
     /// protocol, guideline, orderset or other definition that is adhered to in
     ///  whole or in part by this request.
-    @HiveField(12)
-        List<FhirCanonical>? instantiatesCanonical,
+    List<FhirCanonical>? instantiatesCanonical,
     @JsonKey(name: '_instantiatesCanonical')
 
-    /// [instantiatesCanonicalElement] Extensions for instantiatesCanonical
-    @HiveField(13)
+        /// [instantiatesCanonicalElement] Extensions for instantiatesCanonical
         List<Element>? instantiatesCanonicalElement,
-    @HiveField(14)
 
     /// [instantiatesUri] A URL referencing an externally defined protocol,
     /// guideline, orderset or other definition that is adhered to in whole or in
     ///  part by this request.
-    @HiveField(15)
-        List<FhirUri>? instantiatesUri,
+    List<FhirUri>? instantiatesUri,
 
     /// [instantiatesUriElement] Extensions for instantiatesUri
     @JsonKey(name: '_instantiatesUri')
-    @HiveField(16)
         List<Element?>? instantiatesUriElement,
 
     /// [basedOn] A plan, proposal or order that is fulfilled in whole or in part
     ///  by this request.
-    @HiveField(17)
-        List<Reference>? basedOn,
+    List<Reference>? basedOn,
 
     /// [replaces] Completed or terminated request(s) whose function is taken by
     ///  this new request.
-    @HiveField(18)
-        List<Reference>? replaces,
+    List<Reference>? replaces,
 
     /// [groupIdentifier] A shared identifier common to all requests that were
     /// authorized more or less simultaneously by a single author, representing
     ///  the identifier of the requisition, prescription or similar form.
-    @HiveField(19)
-        Identifier? groupIdentifier,
+    Identifier? groupIdentifier,
 
     /// [status] The current state of the request. For request groups, the status
     ///  reflects the status of all the requests in the group.
-    @HiveField(20)
-        FhirCode? status,
+    FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
-    @HiveField(21)
         Element? statusElement,
 
     /// [intent] Indicates the level of authority/intentionality associated with
     ///  the request and where the request fits into the workflow chain.
-    @HiveField(22)
-        FhirCode? intent,
+    FhirCode? intent,
 
     /// [intentElement] Extensions for intent
     @JsonKey(name: '_intent')
-    @HiveField(23)
         Element? intentElement,
 
     /// [priority] Indicates how quickly the request should be addressed with
     ///  respect to other requests.
-    @HiveField(24)
-        FhirCode? priority,
+    FhirCode? priority,
 
     /// [priorityElement] Extensions for priority
     @JsonKey(name: '_priority')
-    @HiveField(25)
         Element? priorityElement,
 
     /// [code] A code that identifies what the overall request group is.
-    @HiveField(26)
-        CodeableConcept? code,
+    CodeableConcept? code,
 
     /// [subject] The subject for which the request group was created.
-    @HiveField(27)
-        Reference? subject,
+    Reference? subject,
 
     /// [encounter] Describes the context of the request group, if any.
-    @HiveField(28)
-        Reference? encounter,
+    Reference? encounter,
 
     /// [authoredOn] Indicates when the request group was created.
-    @HiveField(29)
-        FhirDateTime? authoredOn,
+    FhirDateTime? authoredOn,
 
     /// [authoredOnElement] Extensions for authoredOn
     @JsonKey(name: '_authoredOn')
-    @HiveField(30)
         Element? authoredOnElement,
 
     /// [author] Provides a reference to the author of the request group.
-    @HiveField(31)
-        Reference? author,
+    Reference? author,
 
     /// [reasonCode] Describes the reason for the request group in coded or
     ///  textual form.
-    @HiveField(32)
-        List<CodeableConcept>? reasonCode,
+    List<CodeableConcept>? reasonCode,
 
     /// [reasonReference] Indicates another resource whose existence justifies
     ///  this request group.
-    @HiveField(33)
-        List<Reference>? reasonReference,
+    List<Reference>? reasonReference,
 
     /// [note] Provides a mechanism to communicate additional information about
     ///  the response.
-    @HiveField(34)
-        List<Annotation>? note,
+    List<Annotation>? note,
 
     /// [action] The actions, if any, produced by the evaluation of the artifact.
-    @HiveField(35)
-        List<RequestGroupAction>? action,
+    List<RequestGroupAction>? action,
   }) = _RequestGroup;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -3713,11 +3530,10 @@ class RequestGroupCondition with _$RequestGroupCondition {
   ///
   /// [expression] An expression that returns true or false, indicating whether
   ///  or not the condition is satisfied.
-  @HiveType(typeId: 209)
   factory RequestGroupCondition({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    @HiveField(0) String? id,
+    String? id,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -3725,7 +3541,7 @@ class RequestGroupCondition with _$RequestGroupCondition {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the element and that modifies the
@@ -3740,17 +3556,17 @@ class RequestGroupCondition with _$RequestGroupCondition {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    @HiveField(2) List<FhirExtension>? modifierExtension,
+    List<FhirExtension>? modifierExtension,
 
     /// [kind] The kind of condition.
-    @HiveField(3) Code? kind,
+    FhirCode? kind,
 
     /// [kindElement] Extensions for kind
-    @HiveField(4) @JsonKey(name: '_kind') Element? kindElement,
+    @JsonKey(name: '_kind') Element? kindElement,
 
     /// [expression] An expression that returns true or false, indicating whether
     ///  or not the condition is satisfied.
-    @HiveField(5) Expression? expression,
+    Expression? expression,
   }) = _RequestGroupCondition;
 
   /// Produces a Yaml formatted String version of the object
@@ -3913,7 +3729,7 @@ class RequestGroupRelatedAction with _$RequestGroupRelatedAction {
 
 /// [RiskAssessment] An assessment of the likely outcome(s) for a patient or
 @freezed
-class RiskAssessment extends HiveObject with Resource, _$RiskAssessment {
+class RiskAssessment with Resource, _$RiskAssessment {
   /// [RiskAssessment] An assessment of the likely outcome(s) for a patient or
   RiskAssessment._();
 
@@ -4024,45 +3840,37 @@ class RiskAssessment extends HiveObject with Resource, _$RiskAssessment {
   /// [mitigationElement] Extensions for mitigation
   ///
   /// [note] Additional comments about the risk assessment.
-  @HiveType(typeId: 210)
   factory RiskAssessment({
     @Default(R4ResourceType.RiskAssessment)
     @JsonKey(unknownEnumValue: R4ResourceType.RiskAssessment)
 
-    /// [resourceType] This is a RiskAssessment resource
-    @HiveField(0)
+        /// [resourceType] This is a RiskAssessment resource
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @HiveField(1)
-        String? id,
+    String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    @HiveField(2)
-        FhirMeta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    @HiveField(3)
-        FhirUri? implicitRules,
+    FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
-    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    @HiveField(5)
-        FhirCode? language,
+    FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
-    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
@@ -4071,15 +3879,13 @@ class RiskAssessment extends HiveObject with Resource, _$RiskAssessment {
     /// contain sufficient detail to make it "clinically safe" for a human to just
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
-    @HiveField(7)
-        Narrative? text,
+    Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
-    @HiveField(8)
-        List<Resource>? contained,
+    List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -4088,7 +3894,6 @@ class RiskAssessment extends HiveObject with Resource, _$RiskAssessment {
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
     @JsonKey(name: 'extension')
-    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -4104,106 +3909,83 @@ class RiskAssessment extends HiveObject with Resource, _$RiskAssessment {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    @HiveField(10)
-        List<FhirExtension>? modifierExtension,
+    List<FhirExtension>? modifierExtension,
 
     /// [identifier] Business identifier assigned to the risk assessment.
-    @HiveField(11)
-        List<Identifier>? identifier,
+    List<Identifier>? identifier,
 
     /// [basedOn] A reference to the request that is fulfilled by this risk
     ///  assessment.
-    @HiveField(12)
-        Reference? basedOn,
-    @HiveField(13)
+    Reference? basedOn,
 
     /// [parent] A reference to a resource that this risk assessment is part of,
     ///  such as a Procedure.
-    @HiveField(14)
-        Reference? parent,
+    Reference? parent,
 
     /// [status] The status of the RiskAssessment, using the same statuses as an
     ///  Observation.
-    @HiveField(15)
-        FhirCode? status,
+    FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
-    @HiveField(16)
         Element? statusElement,
 
     /// [method] The algorithm, process or mechanism used to evaluate the risk.
-    @HiveField(17)
-        CodeableConcept? method,
+    CodeableConcept? method,
 
     /// [code] The type of the risk assessment performed.
-    @HiveField(18)
-        CodeableConcept? code,
+    CodeableConcept? code,
 
     /// [subject] The patient or group the risk assessment applies to.
-    @HiveField(19)
-        required Reference subject,
+    required Reference subject,
 
     /// [encounter] The encounter where the assessment was performed.
-    @HiveField(20)
-        Reference? encounter,
+    Reference? encounter,
 
     /// [occurrenceDateTime] The date (and possibly time) the risk assessment was
     ///  performed.
-    @HiveField(21)
-        FhirDateTime? occurrenceDateTime,
+    FhirDateTime? occurrenceDateTime,
 
     /// [occurrenceDateTimeElement] Extensions for occurrenceDateTime
     @JsonKey(name: '_occurrenceDateTime')
-    @HiveField(22)
         Element? occurrenceDateTimeElement,
 
     /// [occurrencePeriod] The date (and possibly time) the risk assessment was
     ///  performed.
-    @HiveField(23)
-        Period? occurrencePeriod,
+    Period? occurrencePeriod,
 
     /// [condition] For assessments or prognosis specific to a particular
     ///  condition, indicates the condition being assessed.
-    @HiveField(24)
-        Reference? condition,
+    Reference? condition,
 
     /// [performer] The provider or software application that performed the
     ///  assessment.
-    @HiveField(25)
-        Reference? performer,
+    Reference? performer,
 
     /// [reasonCode] The reason the risk assessment was performed.
-    @HiveField(26)
-        List<CodeableConcept>? reasonCode,
+    List<CodeableConcept>? reasonCode,
 
     /// [reasonReference] Resources supporting the reason the risk assessment was
     ///  performed.
-    @HiveField(27)
-        List<Reference>? reasonReference,
+    List<Reference>? reasonReference,
 
     /// [basis] Indicates the source data considered as part of the assessment
     ///  (for example, FamilyHistory, Observations, Procedures, Conditions, etc.).
-    @HiveField(28)
-        List<Reference>? basis,
+    List<Reference>? basis,
 
     /// [prediction] Describes the expected outcome for the subject.
-    @HiveField(29)
-        List<RiskAssessmentPrediction>? prediction,
+    List<RiskAssessmentPrediction>? prediction,
 
     /// [mitigation] A description of the steps that might be taken to reduce the
     ///  identified risk(s).
-    @HiveField(30)
-        String? mitigation,
+    String? mitigation,
 
     /// [mitigationElement] Extensions for mitigation
     @JsonKey(name: '_mitigation')
-    @HiveField(31)
         Element? mitigationElement,
 
     /// [note] Additional comments about the risk assessment.
-    @HiveField(32)
-        List<Annotation>? note,
+    List<Annotation>? note,
   }) = _RiskAssessment;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -4403,7 +4185,7 @@ class RiskAssessmentPrediction with _$RiskAssessmentPrediction {
 
 /// [ServiceRequest] A record of a request for service such as diagnostic
 @freezed
-class ServiceRequest extends HiveObject with Resource, _$ServiceRequest {
+class ServiceRequest with Resource, _$ServiceRequest {
   /// [ServiceRequest] A record of a request for service such as diagnostic
   ServiceRequest._();
 
@@ -4614,45 +4396,37 @@ class ServiceRequest extends HiveObject with Resource, _$ServiceRequest {
   /// [patientInstructionElement] Extensions for patientInstruction
   ///
   /// [relevantHistory] Key events in the history of the request.
-  @HiveType(typeId: 211)
   factory ServiceRequest({
     @Default(R4ResourceType.ServiceRequest)
     @JsonKey(unknownEnumValue: R4ResourceType.ServiceRequest)
 
-    /// [resourceType] This is a ServiceRequest resource
-    @HiveField(0)
+        /// [resourceType] This is a ServiceRequest resource
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @HiveField(1)
-        String? id,
+    String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    @HiveField(2)
-        FhirMeta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    @HiveField(3)
-        FhirUri? implicitRules,
+    FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
-    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    @HiveField(5)
-        FhirCode? language,
+    FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
-    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
@@ -4661,15 +4435,13 @@ class ServiceRequest extends HiveObject with Resource, _$ServiceRequest {
     /// contain sufficient detail to make it "clinically safe" for a human to just
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
-    @HiveField(7)
-        Narrative? text,
+    Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
-    @HiveField(8)
-        List<Resource>? contained,
+    List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -4678,7 +4450,6 @@ class ServiceRequest extends HiveObject with Resource, _$ServiceRequest {
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
     @JsonKey(name: 'extension')
-    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -4694,237 +4465,183 @@ class ServiceRequest extends HiveObject with Resource, _$ServiceRequest {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    @HiveField(10)
-        List<FhirExtension>? modifierExtension,
+    List<FhirExtension>? modifierExtension,
 
     /// [identifier] Identifiers assigned to this order instance by the orderer
     ///  and/or the receiver and/or order fulfiller.
-    @HiveField(11)
-        List<Identifier>? identifier,
-    @HiveField(12)
+    List<Identifier>? identifier,
 
     /// [instantiatesCanonical] The URL pointing to a FHIR-defined protocol,
     /// guideline, orderset or other definition that is adhered to in whole or in
     ///  part by this ServiceRequest.
-    @HiveField(13)
-        List<FhirCanonical>? instantiatesCanonical,
-    @HiveField(14)
+    List<FhirCanonical>? instantiatesCanonical,
 
     /// [instantiatesUri] The URL pointing to an externally maintained protocol,
     /// guideline, orderset or other definition that is adhered to in whole or in
     ///  part by this ServiceRequest.
-    @HiveField(15)
-        List<FhirUri>? instantiatesUri,
+    List<FhirUri>? instantiatesUri,
 
     /// [instantiatesUriElement] Extensions for instantiatesUri
     @JsonKey(name: '_instantiatesUri')
-    @HiveField(16)
         List<Element?>? instantiatesUriElement,
 
     /// [basedOn] Plan/proposal/order fulfilled by this request.
-    @HiveField(17)
-        List<Reference>? basedOn,
+    List<Reference>? basedOn,
 
     /// [replaces] The request takes the place of the referenced completed or
     ///  terminated request(s).
-    @HiveField(18)
-        List<Reference>? replaces,
+    List<Reference>? replaces,
 
     /// [requisition] A shared identifier common to all service requests that
-    @HiveField(19)
-
     /// were authorized more or less simultaneously by a single author,
     ///  representing the composite or group identifier.
-    @HiveField(20)
-        Identifier? requisition,
+    Identifier? requisition,
 
     /// [status] The status of the order.
-    @HiveField(21)
-        FhirCode? status,
+    FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
-    @HiveField(22)
         Element? statusElement,
 
     /// [intent] Whether the request is a proposal, plan, an original order or a
     ///  reflex order.
-    @HiveField(23)
-        FhirCode? intent,
+    FhirCode? intent,
 
     /// [intentElement] Extensions for intent
     @JsonKey(name: '_intent')
-    @HiveField(24)
         Element? intentElement,
 
     /// [category] A code that classifies the service for searching, sorting and
     ///  display purposes (e.g. "Surgical Procedure").
-    @HiveField(25)
-        List<CodeableConcept>? category,
+    List<CodeableConcept>? category,
 
     /// [priority] Indicates how quickly the ServiceRequest should be addressed
     ///  with respect to other requests.
-    @HiveField(26)
-        FhirCode? priority,
+    FhirCode? priority,
 
     /// [priorityElement] Extensions for priority
     @JsonKey(name: '_priority')
-    @HiveField(27)
         Element? priorityElement,
 
     /// [doNotPerform] Set this to true if the record is saying that the
     ///  service/procedure should NOT be performed.
-    @HiveField(28)
-        Boolean? doNotPerform,
+    FhirBoolean? doNotPerform,
 
     /// [doNotPerformElement] Extensions for doNotPerform
     @JsonKey(name: '_doNotPerform')
-    @HiveField(29)
         Element? doNotPerformElement,
-    @HiveField(30)
 
     /// [code] A code that identifies a particular service (i.e., procedure,
     /// diagnostic investigation, or panel of investigations) that have been
     ///  requested.
-    @HiveField(31)
-        CodeableConcept? code,
+    CodeableConcept? code,
 
     /// [orderDetail] Additional details and instructions about the how the
     /// services are to be delivered.   For example, and order for a urinary
-    @HiveField(32)
-
     /// catheter may have an order detail for an external or indwelling catheter,
     /// or an order for a bandage may require additional instructions specifying
     ///  how the bandage should be applied.
-    @HiveField(33)
-        List<CodeableConcept>? orderDetail,
+    List<CodeableConcept>? orderDetail,
 
     /// [quantityQuantity] An amount of service being requested which can be a
-    @HiveField(34)
-
     /// quantity ( for example $1,500 home modification), a ratio ( for example,
     ///  20 half day visits per month), or a range (2.0 to 1.8 Gy per fraction).
-    @HiveField(35)
-        Quantity? quantityQuantity,
+    Quantity? quantityQuantity,
 
     /// [quantityRatio] An amount of service being requested which can be a
-    @HiveField(36)
-
     /// quantity ( for example $1,500 home modification), a ratio ( for example,
     ///  20 half day visits per month), or a range (2.0 to 1.8 Gy per fraction).
-    @HiveField(37)
-        Ratio? quantityRatio,
+    Ratio? quantityRatio,
 
     /// [quantityRange] An amount of service being requested which can be a
-    @HiveField(38)
-
     /// quantity ( for example $1,500 home modification), a ratio ( for example,
     ///  20 half day visits per month), or a range (2.0 to 1.8 Gy per fraction).
-    @HiveField(39)
-        Range? quantityRange,
+    Range? quantityRange,
 
     /// [subject] On whom or what the service is to be performed. This is usually
     /// a human patient, but can also be requested on animals, groups of humans or
     /// animals, devices such as dialysis machines, or even locations (typically
     ///  for environmental scans).
-    @HiveField(40)
-        required Reference subject,
+    required Reference subject,
 
     /// [encounter] An encounter that provides additional information about the
     ///  healthcare context in which this request is made.
-    @HiveField(41)
-        Reference? encounter,
+    Reference? encounter,
 
     /// [occurrenceDateTime] The date/time at which the requested service should
     ///  occur.
-    @HiveField(42)
-        FhirDateTime? occurrenceDateTime,
+    FhirDateTime? occurrenceDateTime,
 
     /// [occurrenceDateTimeElement] Extensions for occurrenceDateTime
     @JsonKey(name: '_occurrenceDateTime')
-    @HiveField(43)
         Element? occurrenceDateTimeElement,
 
     /// [occurrencePeriod] The date/time at which the requested service should
     ///  occur.
-    @HiveField(44)
-        Period? occurrencePeriod,
+    Period? occurrencePeriod,
 
     /// [occurrenceTiming] The date/time at which the requested service should
     ///  occur.
-    @HiveField(45)
-        Timing? occurrenceTiming,
+    Timing? occurrenceTiming,
 
     /// [asNeededBoolean] If a CodeableConcept is present, it indicates the
     /// pre-condition for performing the service.  For example "pain", "on
     ///  flare-up", etc.
-    @HiveField(46)
-        Boolean? asNeededBoolean,
+    FhirBoolean? asNeededBoolean,
 
     /// [asNeededBooleanElement] Extensions for asNeededBoolean
     @JsonKey(name: '_asNeededBoolean')
-    @HiveField(47)
         Element? asNeededBooleanElement,
 
     /// [asNeededCodeableConcept] If a CodeableConcept is present, it indicates
     /// the pre-condition for performing the service.  For example "pain", "on
     ///  flare-up", etc.
-    @HiveField(48)
-        CodeableConcept? asNeededCodeableConcept,
+    CodeableConcept? asNeededCodeableConcept,
 
     /// [authoredOn] When the request transitioned to being actionable.
-    @HiveField(49)
-        FhirDateTime? authoredOn,
+    FhirDateTime? authoredOn,
 
     /// [authoredOnElement] Extensions for authoredOn
     @JsonKey(name: '_authoredOn')
-    @HiveField(50)
         Element? authoredOnElement,
 
     /// [requester] The individual who initiated the request and has
     ///  responsibility for its activation.
-    @HiveField(51)
-        Reference? requester,
+    Reference? requester,
 
     /// [performerType] Desired type of performer for doing the requested
     ///  service.
-    @HiveField(52)
-        CodeableConcept? performerType,
+    CodeableConcept? performerType,
 
     /// [performer] The desired performer for doing the requested service.  For
     ///  example, the surgeon, dermatopathologist, endoscopist, etc.
-    @HiveField(53)
-        List<Reference>? performer,
+    List<Reference>? performer,
 
     /// [locationCode] The preferred location(s) where the procedure should
     /// actually happen in coded or free text form. E.g. at home or nursing day
     ///  care center.
-    @HiveField(54)
-        List<CodeableConcept>? locationCode,
+    List<CodeableConcept>? locationCode,
 
     /// [locationReference] A reference to the the preferred location(s) where
     /// the procedure should actually happen. E.g. at home or nursing day care
     ///  center.
-    @HiveField(55)
-        List<Reference>? locationReference,
+    List<Reference>? locationReference,
 
     /// [reasonCode] An explanation or justification for why this service is
     /// being requested in coded or textual form.   This is often for billing
     ///  purposes.  May relate to the resources referred to in `supportingInfo`.
-    @HiveField(56)
-        List<CodeableConcept>? reasonCode,
+    List<CodeableConcept>? reasonCode,
 
     /// [reasonReference] Indicates another resource that provides a
     /// justification for why this service is being requested.   May relate to the
     ///  resources referred to in `supportingInfo`.
-    @HiveField(57)
-        List<Reference>? reasonReference,
+    List<Reference>? reasonReference,
 
     /// [insurance] Insurance plans, coverage extensions, pre-authorizations
     /// and/or pre-determinations that may be needed for delivering the requested
     ///  service.
-    @HiveField(58)
-        List<Reference>? insurance,
+    List<Reference>? insurance,
 
     /// [supportingInfo] Additional clinical information about the patient or
     /// specimen that may influence the services or their interpretations.
@@ -4932,40 +4649,31 @@ class ServiceRequest extends HiveObject with Resource, _$ServiceRequest {
     /// observations.  In laboratory ordering these are typically referred to as
     /// "ask at order entry questions (AOEs)".  This includes observations
     /// explicitly requested by the producer (filler) to provide context or
-    @HiveField(59)
-
     /// supporting information needed to complete the order. For example,
     ///  reporting the amount of inspired oxygen for blood gas measurements.
-    @HiveField(60)
-        List<Reference>? supportingInfo,
+    List<Reference>? supportingInfo,
 
     /// [specimen] One or more specimens that the laboratory procedure will use.
-    @HiveField(61)
-        List<Reference>? specimen,
+    List<Reference>? specimen,
 
     /// [bodySite] Anatomic location where the procedure should be performed.
     ///  This is the target site.
-    @HiveField(62)
-        List<CodeableConcept>? bodySite,
+    List<CodeableConcept>? bodySite,
 
     /// [note] Any other notes and comments made about the service request. For
     ///  example, internal billing notes.
-    @HiveField(63)
-        List<Annotation>? note,
+    List<Annotation>? note,
 
     /// [patientInstruction] Instructions in terms that are understood by the
     ///  patient or consumer.
-    @HiveField(64)
-        String? patientInstruction,
+    String? patientInstruction,
 
     /// [patientInstructionElement] Extensions for patientInstruction
     @JsonKey(name: '_patientInstruction')
-    @HiveField(65)
         Element? patientInstructionElement,
 
     /// [relevantHistory] Key events in the history of the request.
-    @HiveField(66)
-        List<Reference>? relevantHistory,
+    List<Reference>? relevantHistory,
   }) = _ServiceRequest;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -4998,8 +4706,7 @@ class ServiceRequest extends HiveObject with Resource, _$ServiceRequest {
 
 /// [VisionPrescription] An authorization for the provision of glasses and/or
 @freezed
-class VisionPrescription extends HiveObject
-    with Resource, _$VisionPrescription {
+class VisionPrescription with Resource, _$VisionPrescription {
   /// [VisionPrescription] An authorization for the provision of glasses and/or
   VisionPrescription._();
 
@@ -5087,45 +4794,37 @@ class VisionPrescription extends HiveObject
   /// [lensSpecification] Contain the details of  the individual lens
   /// specifications and serves as the authorization for the fullfillment by
   ///  certified professionals.
-  @HiveType(typeId: 212)
   factory VisionPrescription({
     @Default(R4ResourceType.VisionPrescription)
     @JsonKey(unknownEnumValue: R4ResourceType.VisionPrescription)
 
-    /// [resourceType] This is a VisionPrescription resource
-    @HiveField(0)
+        /// [resourceType] This is a VisionPrescription resource
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @HiveField(1)
-        String? id,
+    String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    @HiveField(2)
-        FhirMeta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    @HiveField(3)
-        FhirUri? implicitRules,
+    FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
-    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    @HiveField(5)
-        FhirCode? language,
+    FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
-    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
@@ -5134,15 +4833,13 @@ class VisionPrescription extends HiveObject
     /// contain sufficient detail to make it "clinically safe" for a human to just
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
-    @HiveField(7)
-        Narrative? text,
+    Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
-    @HiveField(8)
-        List<Resource>? contained,
+    List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -5151,7 +4848,6 @@ class VisionPrescription extends HiveObject
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
     @JsonKey(name: 'extension')
-    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -5167,62 +4863,50 @@ class VisionPrescription extends HiveObject
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    @HiveField(10)
-        List<FhirExtension>? modifierExtension,
+    List<FhirExtension>? modifierExtension,
 
     /// [identifier] A unique identifier assigned to this vision prescription.
-    @HiveField(11)
-        List<Identifier>? identifier,
+    List<Identifier>? identifier,
 
     /// [status] The status of the resource instance.
-    @HiveField(12)
-        FhirCode? status,
+    FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
-    @HiveField(13)
         Element? statusElement,
 
     /// [created] The date this resource was created.
-    @HiveField(14)
-        FhirDateTime? created,
+    FhirDateTime? created,
 
     /// [createdElement] Extensions for created
     @JsonKey(name: '_created')
-    @HiveField(15)
         Element? createdElement,
 
     /// [patient] A resource reference to the person to whom the vision
     ///  prescription applies.
-    @HiveField(16)
-        required Reference patient,
+    required Reference patient,
 
     /// [encounter] A reference to a resource that identifies the particular
     /// occurrence of contact between patient and health care provider during
     ///  which the prescription was issued.
-    @HiveField(17)
-        Reference? encounter,
+    Reference? encounter,
 
     /// [dateWritten] The date (and perhaps time) when the prescription was
     ///  written.
-    @HiveField(18)
-        FhirDateTime? dateWritten,
+    FhirDateTime? dateWritten,
 
     /// [dateWrittenElement] Extensions for dateWritten
     @JsonKey(name: '_dateWritten')
-    @HiveField(19)
         Element? dateWrittenElement,
 
     /// [prescriber] The healthcare professional responsible for authorizing the
     ///  prescription.
-    @HiveField(20)
-        required Reference prescriber,
+    required Reference prescriber,
 
     /// [lensSpecification] Contain the details of  the individual lens
     /// specifications and serves as the authorization for the fullfillment by
     ///  certified professionals.
-    @HiveField(21)
-        required List<VisionPrescriptionLensSpecification> lensSpecification,
+    required List<VisionPrescriptionLensSpecification> lensSpecification,
   }) = _VisionPrescription;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -5388,7 +5072,7 @@ class VisionPrescriptionLensSpecification
     @JsonKey(name: '_cylinder') Element? cylinderElement,
 
     /// [axis] Adjustment for astigmatism measured in integer degrees.
-    Integer? axis,
+    FhirInteger? axis,
 
     /// [axisElement] Extensions for axis
     @JsonKey(name: '_axis') Element? axisElement,

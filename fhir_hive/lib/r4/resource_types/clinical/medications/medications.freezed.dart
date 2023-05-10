@@ -21,39 +21,32 @@ Immunization _$ImmunizationFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Immunization {
   @JsonKey(unknownEnumValue: R4ResourceType.Immunization)
-  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
-  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  @HiveField(2)
   FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
-  @HiveField(4)
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  @HiveField(5)
   FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
-  @HiveField(6)
   Element? get languageElement => throw _privateConstructorUsedError;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -62,14 +55,12 @@ mixin _$Immunization {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
-  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
 
   /// [contained] These resources do not have an independent existence apart
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
-  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -79,7 +70,6 @@ mixin _$Immunization {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
-  @HiveField(9)
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [modifierExtension] May be used to represent additional information that
@@ -95,170 +85,135 @@ mixin _$Immunization {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
   /// [identifier] A unique identifier assigned to this immunization record.
-  @HiveField(11)
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [status] Indicates the current status of the immunization event.
-  @HiveField(12)
   FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
-  @HiveField(13)
   Element? get statusElement => throw _privateConstructorUsedError;
 
   /// [statusReason] Indicates the reason the immunization event was not
   ///  performed.
-  @HiveField(14)
   CodeableConcept? get statusReason => throw _privateConstructorUsedError;
 
   /// [vaccineCode] Vaccine that was administered or was to be administered.
-  @HiveField(15)
   CodeableConcept get vaccineCode => throw _privateConstructorUsedError;
 
   /// [patient] The patient who either received or did not receive the
   ///  immunization.
-  @HiveField(16)
   Reference get patient => throw _privateConstructorUsedError;
 
   /// [encounter] The visit or admission or other contact between patient and
   ///  health care provider the immunization was performed as part of.
-  @HiveField(17)
   Reference? get encounter => throw _privateConstructorUsedError;
 
   /// [occurrenceDateTime] Date vaccine administered or was to be administered.
-  @HiveField(18)
   FhirDateTime? get occurrenceDateTime => throw _privateConstructorUsedError;
 
   /// [occurrenceDateTimeElement] Extensions for occurrenceDateTime
   @JsonKey(name: '_occurrenceDateTime')
-  @HiveField(19)
   Element? get occurrenceDateTimeElement => throw _privateConstructorUsedError;
 
   /// [occurrenceString] Date vaccine administered or was to be administered.
-  @HiveField(20)
   String? get occurrenceString => throw _privateConstructorUsedError;
 
   /// [occurrenceStringElement] Extensions for occurrenceString
   @JsonKey(name: '_occurrenceString')
-  @HiveField(21)
   Element? get occurrenceStringElement => throw _privateConstructorUsedError;
 
   /// [recorded] The date the occurrence of the immunization was first captured
   /// in the record - potentially significantly after the occurrence of the
   ///  event.
-  @HiveField(22)
   FhirDateTime? get recorded => throw _privateConstructorUsedError;
 
   /// [recordedElement] Extensions for recorded
   @JsonKey(name: '_recorded')
-  @HiveField(23)
   Element? get recordedElement => throw _privateConstructorUsedError;
 
   /// [primarySource] An indication that the content of the record is based on
   /// information from the person who administered the vaccine. This reflects
   ///  the context under which the data was originally recorded.
-  @HiveField(24)
-  Boolean? get primarySource => throw _privateConstructorUsedError;
+  FhirBoolean? get primarySource => throw _privateConstructorUsedError;
 
   /// [primarySourceElement] Extensions for primarySource
   @JsonKey(name: '_primarySource')
-  @HiveField(25)
   Element? get primarySourceElement => throw _privateConstructorUsedError;
 
   /// [reportOrigin] The source of the data when the report of the immunization
   /// event is not based on information from the person who administered the
   ///  vaccine.
-  @HiveField(26)
   CodeableConcept? get reportOrigin => throw _privateConstructorUsedError;
 
   /// [location] The service delivery location where the vaccine administration
   ///  occurred.
-  @HiveField(27)
   Reference? get location => throw _privateConstructorUsedError;
 
   /// [manufacturer] Name of vaccine manufacturer.
-  @HiveField(28)
   Reference? get manufacturer => throw _privateConstructorUsedError;
 
   /// [lotNumber] Lot number of the  vaccine product.
-  @HiveField(29)
   String? get lotNumber => throw _privateConstructorUsedError;
 
   /// [lotNumberElement] Extensions for lotNumber
   @JsonKey(name: '_lotNumber')
-  @HiveField(30)
   Element? get lotNumberElement => throw _privateConstructorUsedError;
 
   /// [expirationDate] Date vaccine batch expires.
-  @HiveField(31)
-  Date? get expirationDate => throw _privateConstructorUsedError;
+  FhirDate? get expirationDate => throw _privateConstructorUsedError;
 
   /// [expirationDateElement] Extensions for expirationDate
   @JsonKey(name: '_expirationDate')
-  @HiveField(32)
   Element? get expirationDateElement => throw _privateConstructorUsedError;
 
   /// [site] Body site where vaccine was administered.
-  @HiveField(33)
   CodeableConcept? get site => throw _privateConstructorUsedError;
 
   /// [route] The path by which the vaccine product is taken into the body.
-  @HiveField(34)
   CodeableConcept? get route => throw _privateConstructorUsedError;
 
   /// [doseQuantity] The quantity of vaccine product that was administered.
-  @HiveField(35)
   Quantity? get doseQuantity => throw _privateConstructorUsedError;
 
   /// [performer] Indicates who performed the immunization event.
-  @HiveField(36)
   List<ImmunizationPerformer>? get performer =>
       throw _privateConstructorUsedError;
 
   /// [note] Extra information about the immunization that is not conveyed by
   ///  the other attributes.
-  @HiveField(37)
   List<Annotation>? get note => throw _privateConstructorUsedError;
 
   /// [reasonCode] Reasons why the vaccine was administered.
-  @HiveField(38)
   List<CodeableConcept>? get reasonCode => throw _privateConstructorUsedError;
 
   /// [reasonReference] Condition, Observation or DiagnosticReport that
   ///  supports why the immunization was administered.
-  @HiveField(39)
   List<Reference>? get reasonReference => throw _privateConstructorUsedError;
 
   /// [isSubpotent] Indication if a dose is considered to be subpotent. By
   ///  default, a dose should be considered to be potent.
-  @HiveField(40)
-  Boolean? get isSubpotent => throw _privateConstructorUsedError;
+  FhirBoolean? get isSubpotent => throw _privateConstructorUsedError;
 
   /// [isSubpotentElement] Extensions for isSubpotent
   @JsonKey(name: '_isSubpotent')
-  @HiveField(41)
   Element? get isSubpotentElement => throw _privateConstructorUsedError;
 
   /// [subpotentReason] Reason why a dose is considered to be subpotent.
-  @HiveField(42)
   List<CodeableConcept>? get subpotentReason =>
       throw _privateConstructorUsedError;
 
   /// [education] Educational material presented to the patient (or guardian)
   ///  at the time of vaccine administration.
-  @HiveField(43)
   List<ImmunizationEducation>? get education =>
       throw _privateConstructorUsedError;
 
   /// [programEligibility] Indicates a patient's eligibility for a funding
   ///  program.
-  @HiveField(44)
   List<CodeableConcept>? get programEligibility =>
       throw _privateConstructorUsedError;
 
@@ -267,18 +222,15 @@ mixin _$Immunization {
   /// patient may be eligible for a publically purchased vaccine but due to
   /// inventory issues, vaccine purchased with private funds was actually
   ///  administered).
-  @HiveField(45)
   CodeableConcept? get fundingSource => throw _privateConstructorUsedError;
 
   /// [reaction] Categorical data indicating that an adverse event is
   ///  associated in time to an immunization.
-  @HiveField(46)
   List<ImmunizationReaction>? get reaction =>
       throw _privateConstructorUsedError;
 
   /// [protocolApplied] The protocol (set of recommendations) being followed by
   ///  the provider who administered the dose.
-  @HiveField(47)
   List<ImmunizationProtocolApplied>? get protocolApplied =>
       throw _privateConstructorUsedError;
 
@@ -296,113 +248,65 @@ abstract class $ImmunizationCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Immunization)
-      @HiveField(0)
           R4ResourceType resourceType,
-      @HiveField(1)
-          String? id,
-      @HiveField(2)
-          FhirMeta? meta,
-      @HiveField(3)
-          FhirUri? implicitRules,
+      String? id,
+      FhirMeta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           Element? implicitRulesElement,
-      @HiveField(5)
-          FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           Element? languageElement,
-      @HiveField(7)
-          Narrative? text,
-      @HiveField(8)
-          List<Resource>? contained,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           List<FhirExtension>? extension_,
-      @HiveField(10)
-          List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          List<Identifier>? identifier,
-      @HiveField(12)
-          FhirCode? status,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      FhirCode? status,
       @JsonKey(name: '_status')
-      @HiveField(13)
           Element? statusElement,
-      @HiveField(14)
-          CodeableConcept? statusReason,
-      @HiveField(15)
-          CodeableConcept vaccineCode,
-      @HiveField(16)
-          Reference patient,
-      @HiveField(17)
-          Reference? encounter,
-      @HiveField(18)
-          FhirDateTime? occurrenceDateTime,
+      CodeableConcept? statusReason,
+      CodeableConcept vaccineCode,
+      Reference patient,
+      Reference? encounter,
+      FhirDateTime? occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
-      @HiveField(19)
           Element? occurrenceDateTimeElement,
-      @HiveField(20)
-          String? occurrenceString,
+      String? occurrenceString,
       @JsonKey(name: '_occurrenceString')
-      @HiveField(21)
           Element? occurrenceStringElement,
-      @HiveField(22)
-          FhirDateTime? recorded,
+      FhirDateTime? recorded,
       @JsonKey(name: '_recorded')
-      @HiveField(23)
           Element? recordedElement,
-      @HiveField(24)
-          Boolean? primarySource,
+      FhirBoolean? primarySource,
       @JsonKey(name: '_primarySource')
-      @HiveField(25)
           Element? primarySourceElement,
-      @HiveField(26)
-          CodeableConcept? reportOrigin,
-      @HiveField(27)
-          Reference? location,
-      @HiveField(28)
-          Reference? manufacturer,
-      @HiveField(29)
-          String? lotNumber,
+      CodeableConcept? reportOrigin,
+      Reference? location,
+      Reference? manufacturer,
+      String? lotNumber,
       @JsonKey(name: '_lotNumber')
-      @HiveField(30)
           Element? lotNumberElement,
-      @HiveField(31)
-          Date? expirationDate,
+      FhirDate? expirationDate,
       @JsonKey(name: '_expirationDate')
-      @HiveField(32)
           Element? expirationDateElement,
-      @HiveField(33)
-          CodeableConcept? site,
-      @HiveField(34)
-          CodeableConcept? route,
-      @HiveField(35)
-          Quantity? doseQuantity,
-      @HiveField(36)
-          List<ImmunizationPerformer>? performer,
-      @HiveField(37)
-          List<Annotation>? note,
-      @HiveField(38)
-          List<CodeableConcept>? reasonCode,
-      @HiveField(39)
-          List<Reference>? reasonReference,
-      @HiveField(40)
-          Boolean? isSubpotent,
+      CodeableConcept? site,
+      CodeableConcept? route,
+      Quantity? doseQuantity,
+      List<ImmunizationPerformer>? performer,
+      List<Annotation>? note,
+      List<CodeableConcept>? reasonCode,
+      List<Reference>? reasonReference,
+      FhirBoolean? isSubpotent,
       @JsonKey(name: '_isSubpotent')
-      @HiveField(41)
           Element? isSubpotentElement,
-      @HiveField(42)
-          List<CodeableConcept>? subpotentReason,
-      @HiveField(43)
-          List<ImmunizationEducation>? education,
-      @HiveField(44)
-          List<CodeableConcept>? programEligibility,
-      @HiveField(45)
-          CodeableConcept? fundingSource,
-      @HiveField(46)
-          List<ImmunizationReaction>? reaction,
-      @HiveField(47)
-          List<ImmunizationProtocolApplied>? protocolApplied});
+      List<CodeableConcept>? subpotentReason,
+      List<ImmunizationEducation>? education,
+      List<CodeableConcept>? programEligibility,
+      CodeableConcept? fundingSource,
+      List<ImmunizationReaction>? reaction,
+      List<ImmunizationProtocolApplied>? protocolApplied});
 
   $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -515,7 +419,7 @@ class _$ImmunizationCopyWithImpl<$Res, $Val extends Immunization>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -543,7 +447,7 @@ class _$ImmunizationCopyWithImpl<$Res, $Val extends Immunization>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -591,7 +495,7 @@ class _$ImmunizationCopyWithImpl<$Res, $Val extends Immunization>
       primarySource: freezed == primarySource
           ? _value.primarySource
           : primarySource // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       primarySourceElement: freezed == primarySourceElement
           ? _value.primarySourceElement
           : primarySourceElement // ignore: cast_nullable_to_non_nullable
@@ -619,7 +523,7 @@ class _$ImmunizationCopyWithImpl<$Res, $Val extends Immunization>
       expirationDate: freezed == expirationDate
           ? _value.expirationDate
           : expirationDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       expirationDateElement: freezed == expirationDateElement
           ? _value.expirationDateElement
           : expirationDateElement // ignore: cast_nullable_to_non_nullable
@@ -655,7 +559,7 @@ class _$ImmunizationCopyWithImpl<$Res, $Val extends Immunization>
       isSubpotent: freezed == isSubpotent
           ? _value.isSubpotent
           : isSubpotent // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       isSubpotentElement: freezed == isSubpotentElement
           ? _value.isSubpotentElement
           : isSubpotentElement // ignore: cast_nullable_to_non_nullable
@@ -966,113 +870,65 @@ abstract class _$$_ImmunizationCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Immunization)
-      @HiveField(0)
           R4ResourceType resourceType,
-      @HiveField(1)
-          String? id,
-      @HiveField(2)
-          FhirMeta? meta,
-      @HiveField(3)
-          FhirUri? implicitRules,
+      String? id,
+      FhirMeta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           Element? implicitRulesElement,
-      @HiveField(5)
-          FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           Element? languageElement,
-      @HiveField(7)
-          Narrative? text,
-      @HiveField(8)
-          List<Resource>? contained,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           List<FhirExtension>? extension_,
-      @HiveField(10)
-          List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          List<Identifier>? identifier,
-      @HiveField(12)
-          FhirCode? status,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      FhirCode? status,
       @JsonKey(name: '_status')
-      @HiveField(13)
           Element? statusElement,
-      @HiveField(14)
-          CodeableConcept? statusReason,
-      @HiveField(15)
-          CodeableConcept vaccineCode,
-      @HiveField(16)
-          Reference patient,
-      @HiveField(17)
-          Reference? encounter,
-      @HiveField(18)
-          FhirDateTime? occurrenceDateTime,
+      CodeableConcept? statusReason,
+      CodeableConcept vaccineCode,
+      Reference patient,
+      Reference? encounter,
+      FhirDateTime? occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
-      @HiveField(19)
           Element? occurrenceDateTimeElement,
-      @HiveField(20)
-          String? occurrenceString,
+      String? occurrenceString,
       @JsonKey(name: '_occurrenceString')
-      @HiveField(21)
           Element? occurrenceStringElement,
-      @HiveField(22)
-          FhirDateTime? recorded,
+      FhirDateTime? recorded,
       @JsonKey(name: '_recorded')
-      @HiveField(23)
           Element? recordedElement,
-      @HiveField(24)
-          Boolean? primarySource,
+      FhirBoolean? primarySource,
       @JsonKey(name: '_primarySource')
-      @HiveField(25)
           Element? primarySourceElement,
-      @HiveField(26)
-          CodeableConcept? reportOrigin,
-      @HiveField(27)
-          Reference? location,
-      @HiveField(28)
-          Reference? manufacturer,
-      @HiveField(29)
-          String? lotNumber,
+      CodeableConcept? reportOrigin,
+      Reference? location,
+      Reference? manufacturer,
+      String? lotNumber,
       @JsonKey(name: '_lotNumber')
-      @HiveField(30)
           Element? lotNumberElement,
-      @HiveField(31)
-          Date? expirationDate,
+      FhirDate? expirationDate,
       @JsonKey(name: '_expirationDate')
-      @HiveField(32)
           Element? expirationDateElement,
-      @HiveField(33)
-          CodeableConcept? site,
-      @HiveField(34)
-          CodeableConcept? route,
-      @HiveField(35)
-          Quantity? doseQuantity,
-      @HiveField(36)
-          List<ImmunizationPerformer>? performer,
-      @HiveField(37)
-          List<Annotation>? note,
-      @HiveField(38)
-          List<CodeableConcept>? reasonCode,
-      @HiveField(39)
-          List<Reference>? reasonReference,
-      @HiveField(40)
-          Boolean? isSubpotent,
+      CodeableConcept? site,
+      CodeableConcept? route,
+      Quantity? doseQuantity,
+      List<ImmunizationPerformer>? performer,
+      List<Annotation>? note,
+      List<CodeableConcept>? reasonCode,
+      List<Reference>? reasonReference,
+      FhirBoolean? isSubpotent,
       @JsonKey(name: '_isSubpotent')
-      @HiveField(41)
           Element? isSubpotentElement,
-      @HiveField(42)
-          List<CodeableConcept>? subpotentReason,
-      @HiveField(43)
-          List<ImmunizationEducation>? education,
-      @HiveField(44)
-          List<CodeableConcept>? programEligibility,
-      @HiveField(45)
-          CodeableConcept? fundingSource,
-      @HiveField(46)
-          List<ImmunizationReaction>? reaction,
-      @HiveField(47)
-          List<ImmunizationProtocolApplied>? protocolApplied});
+      List<CodeableConcept>? subpotentReason,
+      List<ImmunizationEducation>? education,
+      List<CodeableConcept>? programEligibility,
+      CodeableConcept? fundingSource,
+      List<ImmunizationReaction>? reaction,
+      List<ImmunizationProtocolApplied>? protocolApplied});
 
   @override
   $FhirMetaCopyWith<$Res>? get meta;
@@ -1206,7 +1062,7 @@ class __$$_ImmunizationCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -1234,7 +1090,7 @@ class __$$_ImmunizationCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -1282,7 +1138,7 @@ class __$$_ImmunizationCopyWithImpl<$Res>
       primarySource: freezed == primarySource
           ? _value.primarySource
           : primarySource // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       primarySourceElement: freezed == primarySourceElement
           ? _value.primarySourceElement
           : primarySourceElement // ignore: cast_nullable_to_non_nullable
@@ -1310,7 +1166,7 @@ class __$$_ImmunizationCopyWithImpl<$Res>
       expirationDate: freezed == expirationDate
           ? _value.expirationDate
           : expirationDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       expirationDateElement: freezed == expirationDateElement
           ? _value.expirationDateElement
           : expirationDateElement // ignore: cast_nullable_to_non_nullable
@@ -1346,7 +1202,7 @@ class __$$_ImmunizationCopyWithImpl<$Res>
       isSubpotent: freezed == isSubpotent
           ? _value.isSubpotent
           : isSubpotent // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       isSubpotentElement: freezed == isSubpotentElement
           ? _value.isSubpotentElement
           : isSubpotentElement // ignore: cast_nullable_to_non_nullable
@@ -1381,117 +1237,68 @@ class __$$_ImmunizationCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@HiveType(typeId: 213)
 class _$_Immunization extends _Immunization {
   _$_Immunization(
       {@JsonKey(unknownEnumValue: R4ResourceType.Immunization)
-      @HiveField(0)
           this.resourceType = R4ResourceType.Immunization,
-      @HiveField(1)
-          this.id,
-      @HiveField(2)
-          this.meta,
-      @HiveField(3)
-          this.implicitRules,
+      this.id,
+      this.meta,
+      this.implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           this.implicitRulesElement,
-      @HiveField(5)
-          this.language,
+      this.language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           this.languageElement,
-      @HiveField(7)
-          this.text,
-      @HiveField(8)
-          final List<Resource>? contained,
+      this.text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           final List<FhirExtension>? extension_,
-      @HiveField(10)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          final List<Identifier>? identifier,
-      @HiveField(12)
-          this.status,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      this.status,
       @JsonKey(name: '_status')
-      @HiveField(13)
           this.statusElement,
-      @HiveField(14)
-          this.statusReason,
-      @HiveField(15)
-          required this.vaccineCode,
-      @HiveField(16)
-          required this.patient,
-      @HiveField(17)
-          this.encounter,
-      @HiveField(18)
-          this.occurrenceDateTime,
+      this.statusReason,
+      required this.vaccineCode,
+      required this.patient,
+      this.encounter,
+      this.occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
-      @HiveField(19)
           this.occurrenceDateTimeElement,
-      @HiveField(20)
-          this.occurrenceString,
+      this.occurrenceString,
       @JsonKey(name: '_occurrenceString')
-      @HiveField(21)
           this.occurrenceStringElement,
-      @HiveField(22)
-          this.recorded,
+      this.recorded,
       @JsonKey(name: '_recorded')
-      @HiveField(23)
           this.recordedElement,
-      @HiveField(24)
-          this.primarySource,
+      this.primarySource,
       @JsonKey(name: '_primarySource')
-      @HiveField(25)
           this.primarySourceElement,
-      @HiveField(26)
-          this.reportOrigin,
-      @HiveField(27)
-          this.location,
-      @HiveField(28)
-          this.manufacturer,
-      @HiveField(29)
-          this.lotNumber,
+      this.reportOrigin,
+      this.location,
+      this.manufacturer,
+      this.lotNumber,
       @JsonKey(name: '_lotNumber')
-      @HiveField(30)
           this.lotNumberElement,
-      @HiveField(31)
-          this.expirationDate,
+      this.expirationDate,
       @JsonKey(name: '_expirationDate')
-      @HiveField(32)
           this.expirationDateElement,
-      @HiveField(33)
-          this.site,
-      @HiveField(34)
-          this.route,
-      @HiveField(35)
-          this.doseQuantity,
-      @HiveField(36)
-          final List<ImmunizationPerformer>? performer,
-      @HiveField(37)
-          final List<Annotation>? note,
-      @HiveField(38)
-          final List<CodeableConcept>? reasonCode,
-      @HiveField(39)
-          final List<Reference>? reasonReference,
-      @HiveField(40)
-          this.isSubpotent,
+      this.site,
+      this.route,
+      this.doseQuantity,
+      final List<ImmunizationPerformer>? performer,
+      final List<Annotation>? note,
+      final List<CodeableConcept>? reasonCode,
+      final List<Reference>? reasonReference,
+      this.isSubpotent,
       @JsonKey(name: '_isSubpotent')
-      @HiveField(41)
           this.isSubpotentElement,
-      @HiveField(42)
-          final List<CodeableConcept>? subpotentReason,
-      @HiveField(43)
-          final List<ImmunizationEducation>? education,
-      @HiveField(44)
-          final List<CodeableConcept>? programEligibility,
-      @HiveField(45)
-          this.fundingSource,
-      @HiveField(46)
-          final List<ImmunizationReaction>? reaction,
-      @HiveField(47)
-          final List<ImmunizationProtocolApplied>? protocolApplied})
+      final List<CodeableConcept>? subpotentReason,
+      final List<ImmunizationEducation>? education,
+      final List<CodeableConcept>? programEligibility,
+      this.fundingSource,
+      final List<ImmunizationReaction>? reaction,
+      final List<ImmunizationProtocolApplied>? protocolApplied})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -1512,20 +1319,17 @@ class _$_Immunization extends _Immunization {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Immunization)
-  @HiveField(0)
   final R4ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
   @override
-  @HiveField(1)
   final String? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
-  @HiveField(2)
   final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -1533,24 +1337,20 @@ class _$_Immunization extends _Immunization {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   @override
-  @HiveField(3)
   final FhirUri? implicitRules;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
-  @HiveField(4)
   final Element? implicitRulesElement;
 
   /// [language] The base language in which the resource is written.
   @override
-  @HiveField(5)
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] Extensions for language
   @override
   @JsonKey(name: '_language')
-  @HiveField(6)
   final Element? languageElement;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -1560,7 +1360,6 @@ class _$_Immunization extends _Immunization {
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
   @override
-  @HiveField(7)
   final Narrative? text;
 
   /// [contained] These resources do not have an independent existence apart
@@ -1574,7 +1373,6 @@ class _$_Immunization extends _Immunization {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   @override
-  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -1599,7 +1397,6 @@ class _$_Immunization extends _Immunization {
   ///  as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
-  @HiveField(9)
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
@@ -1637,7 +1434,6 @@ class _$_Immunization extends _Immunization {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   @override
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -1652,7 +1448,6 @@ class _$_Immunization extends _Immunization {
 
   /// [identifier] A unique identifier assigned to this immunization record.
   @override
-  @HiveField(11)
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
@@ -1663,139 +1458,115 @@ class _$_Immunization extends _Immunization {
 
   /// [status] Indicates the current status of the immunization event.
   @override
-  @HiveField(12)
-  final Code? status;
+  final FhirCode? status;
 
   /// [statusElement] Extensions for status
   @override
   @JsonKey(name: '_status')
-  @HiveField(13)
   final Element? statusElement;
 
   /// [statusReason] Indicates the reason the immunization event was not
   ///  performed.
   @override
-  @HiveField(14)
   final CodeableConcept? statusReason;
 
   /// [vaccineCode] Vaccine that was administered or was to be administered.
   @override
-  @HiveField(15)
   final CodeableConcept vaccineCode;
 
   /// [patient] The patient who either received or did not receive the
   ///  immunization.
   @override
-  @HiveField(16)
   final Reference patient;
 
   /// [encounter] The visit or admission or other contact between patient and
   ///  health care provider the immunization was performed as part of.
   @override
-  @HiveField(17)
   final Reference? encounter;
 
   /// [occurrenceDateTime] Date vaccine administered or was to be administered.
   @override
-  @HiveField(18)
   final FhirDateTime? occurrenceDateTime;
 
   /// [occurrenceDateTimeElement] Extensions for occurrenceDateTime
   @override
   @JsonKey(name: '_occurrenceDateTime')
-  @HiveField(19)
   final Element? occurrenceDateTimeElement;
 
   /// [occurrenceString] Date vaccine administered or was to be administered.
   @override
-  @HiveField(20)
   final String? occurrenceString;
 
   /// [occurrenceStringElement] Extensions for occurrenceString
   @override
   @JsonKey(name: '_occurrenceString')
-  @HiveField(21)
   final Element? occurrenceStringElement;
 
   /// [recorded] The date the occurrence of the immunization was first captured
   /// in the record - potentially significantly after the occurrence of the
   ///  event.
   @override
-  @HiveField(22)
   final FhirDateTime? recorded;
 
   /// [recordedElement] Extensions for recorded
   @override
   @JsonKey(name: '_recorded')
-  @HiveField(23)
   final Element? recordedElement;
 
   /// [primarySource] An indication that the content of the record is based on
   /// information from the person who administered the vaccine. This reflects
   ///  the context under which the data was originally recorded.
   @override
-  @HiveField(24)
-  final Boolean? primarySource;
+  final FhirBoolean? primarySource;
 
   /// [primarySourceElement] Extensions for primarySource
   @override
   @JsonKey(name: '_primarySource')
-  @HiveField(25)
   final Element? primarySourceElement;
 
   /// [reportOrigin] The source of the data when the report of the immunization
   /// event is not based on information from the person who administered the
   ///  vaccine.
   @override
-  @HiveField(26)
   final CodeableConcept? reportOrigin;
 
   /// [location] The service delivery location where the vaccine administration
   ///  occurred.
   @override
-  @HiveField(27)
   final Reference? location;
 
   /// [manufacturer] Name of vaccine manufacturer.
   @override
-  @HiveField(28)
   final Reference? manufacturer;
 
   /// [lotNumber] Lot number of the  vaccine product.
   @override
-  @HiveField(29)
   final String? lotNumber;
 
   /// [lotNumberElement] Extensions for lotNumber
   @override
   @JsonKey(name: '_lotNumber')
-  @HiveField(30)
   final Element? lotNumberElement;
 
   /// [expirationDate] Date vaccine batch expires.
   @override
-  @HiveField(31)
-  final Date? expirationDate;
+  final FhirDate? expirationDate;
 
   /// [expirationDateElement] Extensions for expirationDate
   @override
   @JsonKey(name: '_expirationDate')
-  @HiveField(32)
   final Element? expirationDateElement;
 
   /// [site] Body site where vaccine was administered.
   @override
-  @HiveField(33)
   final CodeableConcept? site;
 
   /// [route] The path by which the vaccine product is taken into the body.
   @override
-  @HiveField(34)
   final CodeableConcept? route;
 
   /// [doseQuantity] The quantity of vaccine product that was administered.
   @override
-  @HiveField(35)
   final Quantity? doseQuantity;
 
   /// [performer] Indicates who performed the immunization event.
@@ -1803,7 +1574,6 @@ class _$_Immunization extends _Immunization {
 
   /// [performer] Indicates who performed the immunization event.
   @override
-  @HiveField(36)
   List<ImmunizationPerformer>? get performer {
     final value = _performer;
     if (value == null) return null;
@@ -1819,7 +1589,6 @@ class _$_Immunization extends _Immunization {
   /// [note] Extra information about the immunization that is not conveyed by
   ///  the other attributes.
   @override
-  @HiveField(37)
   List<Annotation>? get note {
     final value = _note;
     if (value == null) return null;
@@ -1833,7 +1602,6 @@ class _$_Immunization extends _Immunization {
 
   /// [reasonCode] Reasons why the vaccine was administered.
   @override
-  @HiveField(38)
   List<CodeableConcept>? get reasonCode {
     final value = _reasonCode;
     if (value == null) return null;
@@ -1849,7 +1617,6 @@ class _$_Immunization extends _Immunization {
   /// [reasonReference] Condition, Observation or DiagnosticReport that
   ///  supports why the immunization was administered.
   @override
-  @HiveField(39)
   List<Reference>? get reasonReference {
     final value = _reasonReference;
     if (value == null) return null;
@@ -1861,13 +1628,11 @@ class _$_Immunization extends _Immunization {
   /// [isSubpotent] Indication if a dose is considered to be subpotent. By
   ///  default, a dose should be considered to be potent.
   @override
-  @HiveField(40)
-  final Boolean? isSubpotent;
+  final FhirBoolean? isSubpotent;
 
   /// [isSubpotentElement] Extensions for isSubpotent
   @override
   @JsonKey(name: '_isSubpotent')
-  @HiveField(41)
   final Element? isSubpotentElement;
 
   /// [subpotentReason] Reason why a dose is considered to be subpotent.
@@ -1875,7 +1640,6 @@ class _$_Immunization extends _Immunization {
 
   /// [subpotentReason] Reason why a dose is considered to be subpotent.
   @override
-  @HiveField(42)
   List<CodeableConcept>? get subpotentReason {
     final value = _subpotentReason;
     if (value == null) return null;
@@ -1891,7 +1655,6 @@ class _$_Immunization extends _Immunization {
   /// [education] Educational material presented to the patient (or guardian)
   ///  at the time of vaccine administration.
   @override
-  @HiveField(43)
   List<ImmunizationEducation>? get education {
     final value = _education;
     if (value == null) return null;
@@ -1907,7 +1670,6 @@ class _$_Immunization extends _Immunization {
   /// [programEligibility] Indicates a patient's eligibility for a funding
   ///  program.
   @override
-  @HiveField(44)
   List<CodeableConcept>? get programEligibility {
     final value = _programEligibility;
     if (value == null) return null;
@@ -1923,7 +1685,6 @@ class _$_Immunization extends _Immunization {
   /// inventory issues, vaccine purchased with private funds was actually
   ///  administered).
   @override
-  @HiveField(45)
   final CodeableConcept? fundingSource;
 
   /// [reaction] Categorical data indicating that an adverse event is
@@ -1933,7 +1694,6 @@ class _$_Immunization extends _Immunization {
   /// [reaction] Categorical data indicating that an adverse event is
   ///  associated in time to an immunization.
   @override
-  @HiveField(46)
   List<ImmunizationReaction>? get reaction {
     final value = _reaction;
     if (value == null) return null;
@@ -1949,7 +1709,6 @@ class _$_Immunization extends _Immunization {
   /// [protocolApplied] The protocol (set of recommendations) being followed by
   ///  the provider who administered the dose.
   @override
-  @HiveField(47)
   List<ImmunizationProtocolApplied>? get protocolApplied {
     final value = _protocolApplied;
     if (value == null) return null;
@@ -2122,113 +1881,65 @@ class _$_Immunization extends _Immunization {
 abstract class _Immunization extends Immunization {
   factory _Immunization(
           {@JsonKey(unknownEnumValue: R4ResourceType.Immunization)
-          @HiveField(0)
               final R4ResourceType resourceType,
-          @HiveField(1)
-              final String? id,
-          @HiveField(2)
-              final FhirMeta? meta,
-          @HiveField(3)
-              final FhirUri? implicitRules,
+          final String? id,
+          final FhirMeta? meta,
+          final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
-          @HiveField(4)
               final Element? implicitRulesElement,
-          @HiveField(5)
-              final Code? language,
+          final FhirCode? language,
           @JsonKey(name: '_language')
-          @HiveField(6)
               final Element? languageElement,
-          @HiveField(7)
-              final Narrative? text,
-          @HiveField(8)
-              final List<Resource>? contained,
+          final Narrative? text,
+          final List<Resource>? contained,
           @JsonKey(name: 'extension')
-          @HiveField(9)
               final List<FhirExtension>? extension_,
-          @HiveField(10)
-              final List<FhirExtension>? modifierExtension,
-          @HiveField(11)
-              final List<Identifier>? identifier,
-          @HiveField(12)
-              final Code? status,
+          final List<FhirExtension>? modifierExtension,
+          final List<Identifier>? identifier,
+          final FhirCode? status,
           @JsonKey(name: '_status')
-          @HiveField(13)
               final Element? statusElement,
-          @HiveField(14)
-              final CodeableConcept? statusReason,
-          @HiveField(15)
-              required final CodeableConcept vaccineCode,
-          @HiveField(16)
-              required final Reference patient,
-          @HiveField(17)
-              final Reference? encounter,
-          @HiveField(18)
-              final FhirDateTime? occurrenceDateTime,
+          final CodeableConcept? statusReason,
+          required final CodeableConcept vaccineCode,
+          required final Reference patient,
+          final Reference? encounter,
+          final FhirDateTime? occurrenceDateTime,
           @JsonKey(name: '_occurrenceDateTime')
-          @HiveField(19)
               final Element? occurrenceDateTimeElement,
-          @HiveField(20)
-              final String? occurrenceString,
+          final String? occurrenceString,
           @JsonKey(name: '_occurrenceString')
-          @HiveField(21)
               final Element? occurrenceStringElement,
-          @HiveField(22)
-              final FhirDateTime? recorded,
+          final FhirDateTime? recorded,
           @JsonKey(name: '_recorded')
-          @HiveField(23)
               final Element? recordedElement,
-          @HiveField(24)
-              final Boolean? primarySource,
+          final FhirBoolean? primarySource,
           @JsonKey(name: '_primarySource')
-          @HiveField(25)
               final Element? primarySourceElement,
-          @HiveField(26)
-              final CodeableConcept? reportOrigin,
-          @HiveField(27)
-              final Reference? location,
-          @HiveField(28)
-              final Reference? manufacturer,
-          @HiveField(29)
-              final String? lotNumber,
+          final CodeableConcept? reportOrigin,
+          final Reference? location,
+          final Reference? manufacturer,
+          final String? lotNumber,
           @JsonKey(name: '_lotNumber')
-          @HiveField(30)
               final Element? lotNumberElement,
-          @HiveField(31)
-              final Date? expirationDate,
+          final FhirDate? expirationDate,
           @JsonKey(name: '_expirationDate')
-          @HiveField(32)
               final Element? expirationDateElement,
-          @HiveField(33)
-              final CodeableConcept? site,
-          @HiveField(34)
-              final CodeableConcept? route,
-          @HiveField(35)
-              final Quantity? doseQuantity,
-          @HiveField(36)
-              final List<ImmunizationPerformer>? performer,
-          @HiveField(37)
-              final List<Annotation>? note,
-          @HiveField(38)
-              final List<CodeableConcept>? reasonCode,
-          @HiveField(39)
-              final List<Reference>? reasonReference,
-          @HiveField(40)
-              final Boolean? isSubpotent,
+          final CodeableConcept? site,
+          final CodeableConcept? route,
+          final Quantity? doseQuantity,
+          final List<ImmunizationPerformer>? performer,
+          final List<Annotation>? note,
+          final List<CodeableConcept>? reasonCode,
+          final List<Reference>? reasonReference,
+          final FhirBoolean? isSubpotent,
           @JsonKey(name: '_isSubpotent')
-          @HiveField(41)
               final Element? isSubpotentElement,
-          @HiveField(42)
-              final List<CodeableConcept>? subpotentReason,
-          @HiveField(43)
-              final List<ImmunizationEducation>? education,
-          @HiveField(44)
-              final List<CodeableConcept>? programEligibility,
-          @HiveField(45)
-              final CodeableConcept? fundingSource,
-          @HiveField(46)
-              final List<ImmunizationReaction>? reaction,
-          @HiveField(47)
-              final List<ImmunizationProtocolApplied>? protocolApplied}) =
+          final List<CodeableConcept>? subpotentReason,
+          final List<ImmunizationEducation>? education,
+          final List<CodeableConcept>? programEligibility,
+          final CodeableConcept? fundingSource,
+          final List<ImmunizationReaction>? reaction,
+          final List<ImmunizationProtocolApplied>? protocolApplied}) =
       _$_Immunization;
   _Immunization._() : super._();
 
@@ -2237,20 +1948,17 @@ abstract class _Immunization extends Immunization {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Immunization)
-  @HiveField(0)
   R4ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
-  @HiveField(1)
   String? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  @HiveField(2)
   FhirMeta? get meta;
   @override
 
@@ -2258,24 +1966,20 @@ abstract class _Immunization extends Immunization {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  @HiveField(3)
   FhirUri? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
-  @HiveField(4)
   Element? get implicitRulesElement;
   @override
 
   /// [language] The base language in which the resource is written.
-  @HiveField(5)
   FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
-  @HiveField(6)
   Element? get languageElement;
   @override
 
@@ -2285,7 +1989,6 @@ abstract class _Immunization extends Immunization {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
-  @HiveField(7)
   Narrative? get text;
   @override
 
@@ -2293,7 +1996,6 @@ abstract class _Immunization extends Immunization {
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
-  @HiveField(8)
   List<Resource>? get contained;
   @override
 
@@ -2304,7 +2006,6 @@ abstract class _Immunization extends Immunization {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
-  @HiveField(9)
   List<FhirExtension>? get extension_;
   @override
 
@@ -2321,200 +2022,165 @@ abstract class _Immunization extends Immunization {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
 
   /// [identifier] A unique identifier assigned to this immunization record.
-  @HiveField(11)
   List<Identifier>? get identifier;
   @override
 
   /// [status] Indicates the current status of the immunization event.
-  @HiveField(12)
   FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
-  @HiveField(13)
   Element? get statusElement;
   @override
 
   /// [statusReason] Indicates the reason the immunization event was not
   ///  performed.
-  @HiveField(14)
   CodeableConcept? get statusReason;
   @override
 
   /// [vaccineCode] Vaccine that was administered or was to be administered.
-  @HiveField(15)
   CodeableConcept get vaccineCode;
   @override
 
   /// [patient] The patient who either received or did not receive the
   ///  immunization.
-  @HiveField(16)
   Reference get patient;
   @override
 
   /// [encounter] The visit or admission or other contact between patient and
   ///  health care provider the immunization was performed as part of.
-  @HiveField(17)
   Reference? get encounter;
   @override
 
   /// [occurrenceDateTime] Date vaccine administered or was to be administered.
-  @HiveField(18)
   FhirDateTime? get occurrenceDateTime;
   @override
 
   /// [occurrenceDateTimeElement] Extensions for occurrenceDateTime
   @JsonKey(name: '_occurrenceDateTime')
-  @HiveField(19)
   Element? get occurrenceDateTimeElement;
   @override
 
   /// [occurrenceString] Date vaccine administered or was to be administered.
-  @HiveField(20)
   String? get occurrenceString;
   @override
 
   /// [occurrenceStringElement] Extensions for occurrenceString
   @JsonKey(name: '_occurrenceString')
-  @HiveField(21)
   Element? get occurrenceStringElement;
   @override
 
   /// [recorded] The date the occurrence of the immunization was first captured
   /// in the record - potentially significantly after the occurrence of the
   ///  event.
-  @HiveField(22)
   FhirDateTime? get recorded;
   @override
 
   /// [recordedElement] Extensions for recorded
   @JsonKey(name: '_recorded')
-  @HiveField(23)
   Element? get recordedElement;
   @override
 
   /// [primarySource] An indication that the content of the record is based on
   /// information from the person who administered the vaccine. This reflects
   ///  the context under which the data was originally recorded.
-  @HiveField(24)
-  Boolean? get primarySource;
+  FhirBoolean? get primarySource;
   @override
 
   /// [primarySourceElement] Extensions for primarySource
   @JsonKey(name: '_primarySource')
-  @HiveField(25)
   Element? get primarySourceElement;
   @override
 
   /// [reportOrigin] The source of the data when the report of the immunization
   /// event is not based on information from the person who administered the
   ///  vaccine.
-  @HiveField(26)
   CodeableConcept? get reportOrigin;
   @override
 
   /// [location] The service delivery location where the vaccine administration
   ///  occurred.
-  @HiveField(27)
   Reference? get location;
   @override
 
   /// [manufacturer] Name of vaccine manufacturer.
-  @HiveField(28)
   Reference? get manufacturer;
   @override
 
   /// [lotNumber] Lot number of the  vaccine product.
-  @HiveField(29)
   String? get lotNumber;
   @override
 
   /// [lotNumberElement] Extensions for lotNumber
   @JsonKey(name: '_lotNumber')
-  @HiveField(30)
   Element? get lotNumberElement;
   @override
 
   /// [expirationDate] Date vaccine batch expires.
-  @HiveField(31)
-  Date? get expirationDate;
+  FhirDate? get expirationDate;
   @override
 
   /// [expirationDateElement] Extensions for expirationDate
   @JsonKey(name: '_expirationDate')
-  @HiveField(32)
   Element? get expirationDateElement;
   @override
 
   /// [site] Body site where vaccine was administered.
-  @HiveField(33)
   CodeableConcept? get site;
   @override
 
   /// [route] The path by which the vaccine product is taken into the body.
-  @HiveField(34)
   CodeableConcept? get route;
   @override
 
   /// [doseQuantity] The quantity of vaccine product that was administered.
-  @HiveField(35)
   Quantity? get doseQuantity;
   @override
 
   /// [performer] Indicates who performed the immunization event.
-  @HiveField(36)
   List<ImmunizationPerformer>? get performer;
   @override
 
   /// [note] Extra information about the immunization that is not conveyed by
   ///  the other attributes.
-  @HiveField(37)
   List<Annotation>? get note;
   @override
 
   /// [reasonCode] Reasons why the vaccine was administered.
-  @HiveField(38)
   List<CodeableConcept>? get reasonCode;
   @override
 
   /// [reasonReference] Condition, Observation or DiagnosticReport that
   ///  supports why the immunization was administered.
-  @HiveField(39)
   List<Reference>? get reasonReference;
   @override
 
   /// [isSubpotent] Indication if a dose is considered to be subpotent. By
   ///  default, a dose should be considered to be potent.
-  @HiveField(40)
-  Boolean? get isSubpotent;
+  FhirBoolean? get isSubpotent;
   @override
 
   /// [isSubpotentElement] Extensions for isSubpotent
   @JsonKey(name: '_isSubpotent')
-  @HiveField(41)
   Element? get isSubpotentElement;
   @override
 
   /// [subpotentReason] Reason why a dose is considered to be subpotent.
-  @HiveField(42)
   List<CodeableConcept>? get subpotentReason;
   @override
 
   /// [education] Educational material presented to the patient (or guardian)
   ///  at the time of vaccine administration.
-  @HiveField(43)
   List<ImmunizationEducation>? get education;
   @override
 
   /// [programEligibility] Indicates a patient's eligibility for a funding
   ///  program.
-  @HiveField(44)
   List<CodeableConcept>? get programEligibility;
   @override
 
@@ -2523,19 +2189,16 @@ abstract class _Immunization extends Immunization {
   /// patient may be eligible for a publically purchased vaccine but due to
   /// inventory issues, vaccine purchased with private funds was actually
   ///  administered).
-  @HiveField(45)
   CodeableConcept? get fundingSource;
   @override
 
   /// [reaction] Categorical data indicating that an adverse event is
   ///  associated in time to an immunization.
-  @HiveField(46)
   List<ImmunizationReaction>? get reaction;
   @override
 
   /// [protocolApplied] The protocol (set of recommendations) being followed by
   ///  the provider who administered the dose.
-  @HiveField(47)
   List<ImmunizationProtocolApplied>? get protocolApplied;
   @override
   @JsonKey(ignore: true)
@@ -3591,7 +3254,7 @@ mixin _$ImmunizationReaction {
   Reference? get detail => throw _privateConstructorUsedError;
 
   /// [reported] Self-reported indicator.
-  Boolean? get reported => throw _privateConstructorUsedError;
+  FhirBoolean? get reported => throw _privateConstructorUsedError;
 
   /// [reportedElement] Extensions for reported
   @JsonKey(name: '_reported')
@@ -3616,7 +3279,7 @@ abstract class $ImmunizationReactionCopyWith<$Res> {
       FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       Reference? detail,
-      Boolean? reported,
+      FhirBoolean? reported,
       @JsonKey(name: '_reported') Element? reportedElement});
 
   $ElementCopyWith<$Res>? get dateElement;
@@ -3675,7 +3338,7 @@ class _$ImmunizationReactionCopyWithImpl<$Res,
       reported: freezed == reported
           ? _value.reported
           : reported // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       reportedElement: freezed == reportedElement
           ? _value.reportedElement
           : reportedElement // ignore: cast_nullable_to_non_nullable
@@ -3735,7 +3398,7 @@ abstract class _$$_ImmunizationReactionCopyWith<$Res>
       FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       Reference? detail,
-      Boolean? reported,
+      FhirBoolean? reported,
       @JsonKey(name: '_reported') Element? reportedElement});
 
   @override
@@ -3794,7 +3457,7 @@ class __$$_ImmunizationReactionCopyWithImpl<$Res>
       reported: freezed == reported
           ? _value.reported
           : reported // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       reportedElement: freezed == reportedElement
           ? _value.reportedElement
           : reportedElement // ignore: cast_nullable_to_non_nullable
@@ -3904,7 +3567,7 @@ class _$_ImmunizationReaction extends _ImmunizationReaction {
 
   /// [reported] Self-reported indicator.
   @override
-  final Boolean? reported;
+  final FhirBoolean? reported;
 
   /// [reportedElement] Extensions for reported
   @override
@@ -3972,7 +3635,7 @@ abstract class _ImmunizationReaction extends ImmunizationReaction {
           final FhirDateTime? date,
           @JsonKey(name: '_date') final Element? dateElement,
           final Reference? detail,
-          final Boolean? reported,
+          final FhirBoolean? reported,
           @JsonKey(name: '_reported') final Element? reportedElement}) =
       _$_ImmunizationReaction;
   _ImmunizationReaction._() : super._();
@@ -4027,7 +3690,7 @@ abstract class _ImmunizationReaction extends ImmunizationReaction {
   @override
 
   /// [reported] Self-reported indicator.
-  Boolean? get reported;
+  FhirBoolean? get reported;
   @override
 
   /// [reportedElement] Extensions for reported
@@ -4228,7 +3891,7 @@ class _$ImmunizationProtocolAppliedCopyWithImpl<$Res,
       doseNumberPositiveInt: freezed == doseNumberPositiveInt
           ? _value.doseNumberPositiveInt
           : doseNumberPositiveInt // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       doseNumberPositiveIntElement: freezed == doseNumberPositiveIntElement
           ? _value.doseNumberPositiveIntElement
           : doseNumberPositiveIntElement // ignore: cast_nullable_to_non_nullable
@@ -4244,7 +3907,7 @@ class _$ImmunizationProtocolAppliedCopyWithImpl<$Res,
       seriesDosesPositiveInt: freezed == seriesDosesPositiveInt
           ? _value.seriesDosesPositiveInt
           : seriesDosesPositiveInt // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       seriesDosesPositiveIntElement: freezed == seriesDosesPositiveIntElement
           ? _value.seriesDosesPositiveIntElement
           : seriesDosesPositiveIntElement // ignore: cast_nullable_to_non_nullable
@@ -4444,7 +4107,7 @@ class __$$_ImmunizationProtocolAppliedCopyWithImpl<$Res>
       doseNumberPositiveInt: freezed == doseNumberPositiveInt
           ? _value.doseNumberPositiveInt
           : doseNumberPositiveInt // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       doseNumberPositiveIntElement: freezed == doseNumberPositiveIntElement
           ? _value.doseNumberPositiveIntElement
           : doseNumberPositiveIntElement // ignore: cast_nullable_to_non_nullable
@@ -4460,7 +4123,7 @@ class __$$_ImmunizationProtocolAppliedCopyWithImpl<$Res>
       seriesDosesPositiveInt: freezed == seriesDosesPositiveInt
           ? _value.seriesDosesPositiveInt
           : seriesDosesPositiveInt // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       seriesDosesPositiveIntElement: freezed == seriesDosesPositiveIntElement
           ? _value.seriesDosesPositiveIntElement
           : seriesDosesPositiveIntElement // ignore: cast_nullable_to_non_nullable
@@ -4609,7 +4272,7 @@ class _$_ImmunizationProtocolApplied extends _ImmunizationProtocolApplied {
 
   /// [doseNumberPositiveInt] Nominal position in a series.
   @override
-  final PositiveInt? doseNumberPositiveInt;
+  final FhirPositiveInt? doseNumberPositiveInt;
   @override
   @JsonKey(name: '_doseNumberPositiveInt')
   final Element? doseNumberPositiveIntElement;
@@ -4626,7 +4289,7 @@ class _$_ImmunizationProtocolApplied extends _ImmunizationProtocolApplied {
   /// [seriesDosesPositiveInt] The recommended number of doses to achieve
   ///  immunity.
   @override
-  final PositiveInt? seriesDosesPositiveInt;
+  final FhirPositiveInt? seriesDosesPositiveInt;
   @override
   @JsonKey(name: '_seriesDosesPositiveInt')
   final Element? seriesDosesPositiveIntElement;
@@ -4733,13 +4396,13 @@ abstract class _ImmunizationProtocolApplied
               final Element? seriesElement,
           final Reference? authority,
           final List<CodeableConcept>? targetDisease,
-          final PositiveInt? doseNumberPositiveInt,
+          final FhirPositiveInt? doseNumberPositiveInt,
           @JsonKey(name: '_doseNumberPositiveInt')
               final Element? doseNumberPositiveIntElement,
           final String? doseNumberString,
           @JsonKey(name: '_doseNumberString')
               final Element? doseNumberStringElement,
-          final PositiveInt? seriesDosesPositiveInt,
+          final FhirPositiveInt? seriesDosesPositiveInt,
           @JsonKey(name: '_seriesDosesPositiveInt')
               final Element? seriesDosesPositiveIntElement,
           final String? seriesDosesString,
@@ -4849,39 +4512,32 @@ ImmunizationEvaluation _$ImmunizationEvaluationFromJson(
 /// @nodoc
 mixin _$ImmunizationEvaluation {
   @JsonKey(unknownEnumValue: R4ResourceType.ImmunizationEvaluation)
-  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
-  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  @HiveField(2)
   FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
-  @HiveField(4)
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  @HiveField(5)
   FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
-  @HiveField(6)
   Element? get languageElement => throw _privateConstructorUsedError;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -4890,14 +4546,12 @@ mixin _$ImmunizationEvaluation {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
-  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
 
   /// [contained] These resources do not have an independent existence apart
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
-  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -4907,7 +4561,6 @@ mixin _$ImmunizationEvaluation {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
-  @HiveField(9)
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [modifierExtension] May be used to represent additional information that
@@ -4923,119 +4576,95 @@ mixin _$ImmunizationEvaluation {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
   /// [identifier] A unique identifier assigned to this immunization evaluation
   ///  record.
-  @HiveField(11)
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [status] Indicates the current status of the evaluation of the
   ///  vaccination administration event.
-  @HiveField(12)
   FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
-  @HiveField(13)
   Element? get statusElement => throw _privateConstructorUsedError;
 
   /// [patient] The individual for whom the evaluation is being done.
-  @HiveField(14)
   Reference get patient => throw _privateConstructorUsedError;
 
   /// [date] The date the evaluation of the vaccine administration event was
   ///  performed.
-  @HiveField(15)
   FhirDateTime? get date => throw _privateConstructorUsedError;
 
   /// [dateElement] Extensions for date
   @JsonKey(name: '_date')
-  @HiveField(16)
   Element? get dateElement => throw _privateConstructorUsedError;
 
   /// [authority] Indicates the authority who published the protocol (e.g.
   ///  ACIP).
-  @HiveField(17)
   Reference? get authority => throw _privateConstructorUsedError;
 
   /// [targetDisease] The vaccine preventable disease the dose is being
   ///  evaluated against.
-  @HiveField(18)
   CodeableConcept get targetDisease => throw _privateConstructorUsedError;
 
   /// [immunizationEvent] The vaccine administration event being evaluated.
-  @HiveField(19)
   Reference get immunizationEvent => throw _privateConstructorUsedError;
 
   /// [doseStatus] Indicates if the dose is valid or not valid with respect to
   ///  the published recommendations.
-  @HiveField(20)
   CodeableConcept get doseStatus => throw _privateConstructorUsedError;
 
   /// [doseStatusReason] Provides an explanation as to why the vaccine
   /// administration event is valid or not relative to the published
   ///  recommendations.
-  @HiveField(21)
   List<CodeableConcept>? get doseStatusReason =>
       throw _privateConstructorUsedError;
 
   /// [description] Additional information about the evaluation.
-  @HiveField(22)
   String? get description => throw _privateConstructorUsedError;
 
   /// [descriptionElement] Extensions for description
   @JsonKey(name: '_description')
-  @HiveField(23)
   Element? get descriptionElement => throw _privateConstructorUsedError;
 
   /// [series] One possible path to achieve presumed immunity against a disease
   ///  - within the context of an authority.
-  @HiveField(24)
   String? get series => throw _privateConstructorUsedError;
 
   /// [seriesElement] Extensions for series
   @JsonKey(name: '_series')
-  @HiveField(25)
   Element? get seriesElement => throw _privateConstructorUsedError;
 
   /// [doseNumberPositiveInt] Nominal position in a series.
-  @HiveField(26)
   FhirPositiveInt? get doseNumberPositiveInt =>
       throw _privateConstructorUsedError;
   @JsonKey(name: '_doseNumberPositiveInt')
-  @HiveField(27)
   Element? get doseNumberPositiveIntElement =>
       throw _privateConstructorUsedError;
 
   /// [doseNumberString] Nominal position in a series.
-  @HiveField(28)
   String? get doseNumberString => throw _privateConstructorUsedError;
 
   /// [doseNumberStringElement] Extensions for doseNumberString
   @JsonKey(name: '_doseNumberString')
-  @HiveField(29)
   Element? get doseNumberStringElement => throw _privateConstructorUsedError;
 
   /// [seriesDosesPositiveInt] The recommended number of doses to achieve
   ///  immunity.
-  @HiveField(30)
   FhirPositiveInt? get seriesDosesPositiveInt =>
       throw _privateConstructorUsedError;
   @JsonKey(name: '_seriesDosesPositiveInt')
-  @HiveField(31)
   Element? get seriesDosesPositiveIntElement =>
       throw _privateConstructorUsedError;
 
   /// [seriesDosesString] The recommended number of doses to achieve immunity.
-  @HiveField(32)
   String? get seriesDosesString => throw _privateConstructorUsedError;
 
   /// [seriesDosesStringElement] Extensions for seriesDosesString
   @JsonKey(name: '_seriesDosesString')
-  @HiveField(33)
   Element? get seriesDosesStringElement => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -5052,84 +4681,50 @@ abstract class $ImmunizationEvaluationCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.ImmunizationEvaluation)
-      @HiveField(0)
           R4ResourceType resourceType,
-      @HiveField(1)
-          String? id,
-      @HiveField(2)
-          FhirMeta? meta,
-      @HiveField(3)
-          FhirUri? implicitRules,
+      String? id,
+      FhirMeta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           Element? implicitRulesElement,
-      @HiveField(5)
-          FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           Element? languageElement,
-      @HiveField(7)
-          Narrative? text,
-      @HiveField(8)
-          List<Resource>? contained,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           List<FhirExtension>? extension_,
-      @HiveField(10)
-          List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          List<Identifier>? identifier,
-      @HiveField(12)
-          FhirCode? status,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      FhirCode? status,
       @JsonKey(name: '_status')
-      @HiveField(13)
           Element? statusElement,
-      @HiveField(14)
-          Reference patient,
-      @HiveField(15)
-          FhirDateTime? date,
+      Reference patient,
+      FhirDateTime? date,
       @JsonKey(name: '_date')
-      @HiveField(16)
           Element? dateElement,
-      @HiveField(17)
-          Reference? authority,
-      @HiveField(18)
-          CodeableConcept targetDisease,
-      @HiveField(19)
-          Reference immunizationEvent,
-      @HiveField(20)
-          CodeableConcept doseStatus,
-      @HiveField(21)
-          List<CodeableConcept>? doseStatusReason,
-      @HiveField(22)
-          String? description,
+      Reference? authority,
+      CodeableConcept targetDisease,
+      Reference immunizationEvent,
+      CodeableConcept doseStatus,
+      List<CodeableConcept>? doseStatusReason,
+      String? description,
       @JsonKey(name: '_description')
-      @HiveField(23)
           Element? descriptionElement,
-      @HiveField(24)
-          String? series,
+      String? series,
       @JsonKey(name: '_series')
-      @HiveField(25)
           Element? seriesElement,
-      @HiveField(26)
-          FhirPositiveInt? doseNumberPositiveInt,
+      FhirPositiveInt? doseNumberPositiveInt,
       @JsonKey(name: '_doseNumberPositiveInt')
-      @HiveField(27)
           Element? doseNumberPositiveIntElement,
-      @HiveField(28)
-          String? doseNumberString,
+      String? doseNumberString,
       @JsonKey(name: '_doseNumberString')
-      @HiveField(29)
           Element? doseNumberStringElement,
-      @HiveField(30)
-          FhirPositiveInt? seriesDosesPositiveInt,
+      FhirPositiveInt? seriesDosesPositiveInt,
       @JsonKey(name: '_seriesDosesPositiveInt')
-      @HiveField(31)
           Element? seriesDosesPositiveIntElement,
-      @HiveField(32)
-          String? seriesDosesString,
+      String? seriesDosesString,
       @JsonKey(name: '_seriesDosesString')
-      @HiveField(33)
           Element? seriesDosesStringElement});
 
   $FhirMetaCopyWith<$Res>? get meta;
@@ -5224,7 +4819,7 @@ class _$ImmunizationEvaluationCopyWithImpl<$Res,
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -5252,7 +4847,7 @@ class _$ImmunizationEvaluationCopyWithImpl<$Res,
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -5308,7 +4903,7 @@ class _$ImmunizationEvaluationCopyWithImpl<$Res,
       doseNumberPositiveInt: freezed == doseNumberPositiveInt
           ? _value.doseNumberPositiveInt
           : doseNumberPositiveInt // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       doseNumberPositiveIntElement: freezed == doseNumberPositiveIntElement
           ? _value.doseNumberPositiveIntElement
           : doseNumberPositiveIntElement // ignore: cast_nullable_to_non_nullable
@@ -5324,7 +4919,7 @@ class _$ImmunizationEvaluationCopyWithImpl<$Res,
       seriesDosesPositiveInt: freezed == seriesDosesPositiveInt
           ? _value.seriesDosesPositiveInt
           : seriesDosesPositiveInt // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       seriesDosesPositiveIntElement: freezed == seriesDosesPositiveIntElement
           ? _value.seriesDosesPositiveIntElement
           : seriesDosesPositiveIntElement // ignore: cast_nullable_to_non_nullable
@@ -5543,84 +5138,50 @@ abstract class _$$_ImmunizationEvaluationCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.ImmunizationEvaluation)
-      @HiveField(0)
           R4ResourceType resourceType,
-      @HiveField(1)
-          String? id,
-      @HiveField(2)
-          FhirMeta? meta,
-      @HiveField(3)
-          FhirUri? implicitRules,
+      String? id,
+      FhirMeta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           Element? implicitRulesElement,
-      @HiveField(5)
-          FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           Element? languageElement,
-      @HiveField(7)
-          Narrative? text,
-      @HiveField(8)
-          List<Resource>? contained,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           List<FhirExtension>? extension_,
-      @HiveField(10)
-          List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          List<Identifier>? identifier,
-      @HiveField(12)
-          FhirCode? status,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      FhirCode? status,
       @JsonKey(name: '_status')
-      @HiveField(13)
           Element? statusElement,
-      @HiveField(14)
-          Reference patient,
-      @HiveField(15)
-          FhirDateTime? date,
+      Reference patient,
+      FhirDateTime? date,
       @JsonKey(name: '_date')
-      @HiveField(16)
           Element? dateElement,
-      @HiveField(17)
-          Reference? authority,
-      @HiveField(18)
-          CodeableConcept targetDisease,
-      @HiveField(19)
-          Reference immunizationEvent,
-      @HiveField(20)
-          CodeableConcept doseStatus,
-      @HiveField(21)
-          List<CodeableConcept>? doseStatusReason,
-      @HiveField(22)
-          String? description,
+      Reference? authority,
+      CodeableConcept targetDisease,
+      Reference immunizationEvent,
+      CodeableConcept doseStatus,
+      List<CodeableConcept>? doseStatusReason,
+      String? description,
       @JsonKey(name: '_description')
-      @HiveField(23)
           Element? descriptionElement,
-      @HiveField(24)
-          String? series,
+      String? series,
       @JsonKey(name: '_series')
-      @HiveField(25)
           Element? seriesElement,
-      @HiveField(26)
-          FhirPositiveInt? doseNumberPositiveInt,
+      FhirPositiveInt? doseNumberPositiveInt,
       @JsonKey(name: '_doseNumberPositiveInt')
-      @HiveField(27)
           Element? doseNumberPositiveIntElement,
-      @HiveField(28)
-          String? doseNumberString,
+      String? doseNumberString,
       @JsonKey(name: '_doseNumberString')
-      @HiveField(29)
           Element? doseNumberStringElement,
-      @HiveField(30)
-          FhirPositiveInt? seriesDosesPositiveInt,
+      FhirPositiveInt? seriesDosesPositiveInt,
       @JsonKey(name: '_seriesDosesPositiveInt')
-      @HiveField(31)
           Element? seriesDosesPositiveIntElement,
-      @HiveField(32)
-          String? seriesDosesString,
+      String? seriesDosesString,
       @JsonKey(name: '_seriesDosesString')
-      @HiveField(33)
           Element? seriesDosesStringElement});
 
   @override
@@ -5730,7 +5291,7 @@ class __$$_ImmunizationEvaluationCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -5758,7 +5319,7 @@ class __$$_ImmunizationEvaluationCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -5814,7 +5375,7 @@ class __$$_ImmunizationEvaluationCopyWithImpl<$Res>
       doseNumberPositiveInt: freezed == doseNumberPositiveInt
           ? _value.doseNumberPositiveInt
           : doseNumberPositiveInt // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       doseNumberPositiveIntElement: freezed == doseNumberPositiveIntElement
           ? _value.doseNumberPositiveIntElement
           : doseNumberPositiveIntElement // ignore: cast_nullable_to_non_nullable
@@ -5830,7 +5391,7 @@ class __$$_ImmunizationEvaluationCopyWithImpl<$Res>
       seriesDosesPositiveInt: freezed == seriesDosesPositiveInt
           ? _value.seriesDosesPositiveInt
           : seriesDosesPositiveInt // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       seriesDosesPositiveIntElement: freezed == seriesDosesPositiveIntElement
           ? _value.seriesDosesPositiveIntElement
           : seriesDosesPositiveIntElement // ignore: cast_nullable_to_non_nullable
@@ -5849,88 +5410,53 @@ class __$$_ImmunizationEvaluationCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@HiveType(typeId: 214)
 class _$_ImmunizationEvaluation extends _ImmunizationEvaluation {
   _$_ImmunizationEvaluation(
       {@JsonKey(unknownEnumValue: R4ResourceType.ImmunizationEvaluation)
-      @HiveField(0)
           this.resourceType = R4ResourceType.ImmunizationEvaluation,
-      @HiveField(1)
-          this.id,
-      @HiveField(2)
-          this.meta,
-      @HiveField(3)
-          this.implicitRules,
+      this.id,
+      this.meta,
+      this.implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           this.implicitRulesElement,
-      @HiveField(5)
-          this.language,
+      this.language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           this.languageElement,
-      @HiveField(7)
-          this.text,
-      @HiveField(8)
-          final List<Resource>? contained,
+      this.text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           final List<FhirExtension>? extension_,
-      @HiveField(10)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          final List<Identifier>? identifier,
-      @HiveField(12)
-          this.status,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      this.status,
       @JsonKey(name: '_status')
-      @HiveField(13)
           this.statusElement,
-      @HiveField(14)
-          required this.patient,
-      @HiveField(15)
-          this.date,
+      required this.patient,
+      this.date,
       @JsonKey(name: '_date')
-      @HiveField(16)
           this.dateElement,
-      @HiveField(17)
-          this.authority,
-      @HiveField(18)
-          required this.targetDisease,
-      @HiveField(19)
-          required this.immunizationEvent,
-      @HiveField(20)
-          required this.doseStatus,
-      @HiveField(21)
-          final List<CodeableConcept>? doseStatusReason,
-      @HiveField(22)
-          this.description,
+      this.authority,
+      required this.targetDisease,
+      required this.immunizationEvent,
+      required this.doseStatus,
+      final List<CodeableConcept>? doseStatusReason,
+      this.description,
       @JsonKey(name: '_description')
-      @HiveField(23)
           this.descriptionElement,
-      @HiveField(24)
-          this.series,
+      this.series,
       @JsonKey(name: '_series')
-      @HiveField(25)
           this.seriesElement,
-      @HiveField(26)
-          this.doseNumberPositiveInt,
+      this.doseNumberPositiveInt,
       @JsonKey(name: '_doseNumberPositiveInt')
-      @HiveField(27)
           this.doseNumberPositiveIntElement,
-      @HiveField(28)
-          this.doseNumberString,
+      this.doseNumberString,
       @JsonKey(name: '_doseNumberString')
-      @HiveField(29)
           this.doseNumberStringElement,
-      @HiveField(30)
-          this.seriesDosesPositiveInt,
+      this.seriesDosesPositiveInt,
       @JsonKey(name: '_seriesDosesPositiveInt')
-      @HiveField(31)
           this.seriesDosesPositiveIntElement,
-      @HiveField(32)
-          this.seriesDosesString,
+      this.seriesDosesString,
       @JsonKey(name: '_seriesDosesString')
-      @HiveField(33)
           this.seriesDosesStringElement})
       : _contained = contained,
         _extension_ = extension_,
@@ -5944,20 +5470,17 @@ class _$_ImmunizationEvaluation extends _ImmunizationEvaluation {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.ImmunizationEvaluation)
-  @HiveField(0)
   final R4ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
   @override
-  @HiveField(1)
   final String? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
-  @HiveField(2)
   final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -5965,24 +5488,20 @@ class _$_ImmunizationEvaluation extends _ImmunizationEvaluation {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   @override
-  @HiveField(3)
   final FhirUri? implicitRules;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
-  @HiveField(4)
   final Element? implicitRulesElement;
 
   /// [language] The base language in which the resource is written.
   @override
-  @HiveField(5)
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] Extensions for language
   @override
   @JsonKey(name: '_language')
-  @HiveField(6)
   final Element? languageElement;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -5992,7 +5511,6 @@ class _$_ImmunizationEvaluation extends _ImmunizationEvaluation {
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
   @override
-  @HiveField(7)
   final Narrative? text;
 
   /// [contained] These resources do not have an independent existence apart
@@ -6006,7 +5524,6 @@ class _$_ImmunizationEvaluation extends _ImmunizationEvaluation {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   @override
-  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -6031,7 +5548,6 @@ class _$_ImmunizationEvaluation extends _ImmunizationEvaluation {
   ///  as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
-  @HiveField(9)
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
@@ -6069,7 +5585,6 @@ class _$_ImmunizationEvaluation extends _ImmunizationEvaluation {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   @override
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -6086,7 +5601,6 @@ class _$_ImmunizationEvaluation extends _ImmunizationEvaluation {
   /// [identifier] A unique identifier assigned to this immunization evaluation
   ///  record.
   @override
-  @HiveField(11)
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
@@ -6098,53 +5612,44 @@ class _$_ImmunizationEvaluation extends _ImmunizationEvaluation {
   /// [status] Indicates the current status of the evaluation of the
   ///  vaccination administration event.
   @override
-  @HiveField(12)
-  final Code? status;
+  final FhirCode? status;
 
   /// [statusElement] Extensions for status
   @override
   @JsonKey(name: '_status')
-  @HiveField(13)
   final Element? statusElement;
 
   /// [patient] The individual for whom the evaluation is being done.
   @override
-  @HiveField(14)
   final Reference patient;
 
   /// [date] The date the evaluation of the vaccine administration event was
   ///  performed.
   @override
-  @HiveField(15)
   final FhirDateTime? date;
 
   /// [dateElement] Extensions for date
   @override
   @JsonKey(name: '_date')
-  @HiveField(16)
   final Element? dateElement;
 
   /// [authority] Indicates the authority who published the protocol (e.g.
   ///  ACIP).
   @override
-  @HiveField(17)
   final Reference? authority;
 
   /// [targetDisease] The vaccine preventable disease the dose is being
   ///  evaluated against.
   @override
-  @HiveField(18)
   final CodeableConcept targetDisease;
 
   /// [immunizationEvent] The vaccine administration event being evaluated.
   @override
-  @HiveField(19)
   final Reference immunizationEvent;
 
   /// [doseStatus] Indicates if the dose is valid or not valid with respect to
   ///  the published recommendations.
   @override
-  @HiveField(20)
   final CodeableConcept doseStatus;
 
   /// [doseStatusReason] Provides an explanation as to why the vaccine
@@ -6156,7 +5661,6 @@ class _$_ImmunizationEvaluation extends _ImmunizationEvaluation {
   /// administration event is valid or not relative to the published
   ///  recommendations.
   @override
-  @HiveField(21)
   List<CodeableConcept>? get doseStatusReason {
     final value = _doseStatusReason;
     if (value == null) return null;
@@ -6168,66 +5672,54 @@ class _$_ImmunizationEvaluation extends _ImmunizationEvaluation {
 
   /// [description] Additional information about the evaluation.
   @override
-  @HiveField(22)
   final String? description;
 
   /// [descriptionElement] Extensions for description
   @override
   @JsonKey(name: '_description')
-  @HiveField(23)
   final Element? descriptionElement;
 
   /// [series] One possible path to achieve presumed immunity against a disease
   ///  - within the context of an authority.
   @override
-  @HiveField(24)
   final String? series;
 
   /// [seriesElement] Extensions for series
   @override
   @JsonKey(name: '_series')
-  @HiveField(25)
   final Element? seriesElement;
 
   /// [doseNumberPositiveInt] Nominal position in a series.
   @override
-  @HiveField(26)
-  final PositiveInt? doseNumberPositiveInt;
+  final FhirPositiveInt? doseNumberPositiveInt;
   @override
   @JsonKey(name: '_doseNumberPositiveInt')
-  @HiveField(27)
   final Element? doseNumberPositiveIntElement;
 
   /// [doseNumberString] Nominal position in a series.
   @override
-  @HiveField(28)
   final String? doseNumberString;
 
   /// [doseNumberStringElement] Extensions for doseNumberString
   @override
   @JsonKey(name: '_doseNumberString')
-  @HiveField(29)
   final Element? doseNumberStringElement;
 
   /// [seriesDosesPositiveInt] The recommended number of doses to achieve
   ///  immunity.
   @override
-  @HiveField(30)
-  final PositiveInt? seriesDosesPositiveInt;
+  final FhirPositiveInt? seriesDosesPositiveInt;
   @override
   @JsonKey(name: '_seriesDosesPositiveInt')
-  @HiveField(31)
   final Element? seriesDosesPositiveIntElement;
 
   /// [seriesDosesString] The recommended number of doses to achieve immunity.
   @override
-  @HiveField(32)
   final String? seriesDosesString;
 
   /// [seriesDosesStringElement] Extensions for seriesDosesString
   @override
   @JsonKey(name: '_seriesDosesString')
-  @HiveField(33)
   final Element? seriesDosesStringElement;
 
   @override
@@ -6367,84 +5859,50 @@ class _$_ImmunizationEvaluation extends _ImmunizationEvaluation {
 abstract class _ImmunizationEvaluation extends ImmunizationEvaluation {
   factory _ImmunizationEvaluation(
       {@JsonKey(unknownEnumValue: R4ResourceType.ImmunizationEvaluation)
-      @HiveField(0)
           final R4ResourceType resourceType,
-      @HiveField(1)
-          final String? id,
-      @HiveField(2)
-          final FhirMeta? meta,
-      @HiveField(3)
-          final FhirUri? implicitRules,
+      final String? id,
+      final FhirMeta? meta,
+      final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           final Element? implicitRulesElement,
-      @HiveField(5)
-          final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           final Element? languageElement,
-      @HiveField(7)
-          final Narrative? text,
-      @HiveField(8)
-          final List<Resource>? contained,
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           final List<FhirExtension>? extension_,
-      @HiveField(10)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          final List<Identifier>? identifier,
-      @HiveField(12)
-          final Code? status,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final FhirCode? status,
       @JsonKey(name: '_status')
-      @HiveField(13)
           final Element? statusElement,
-      @HiveField(14)
-          required final Reference patient,
-      @HiveField(15)
-          final FhirDateTime? date,
+      required final Reference patient,
+      final FhirDateTime? date,
       @JsonKey(name: '_date')
-      @HiveField(16)
           final Element? dateElement,
-      @HiveField(17)
-          final Reference? authority,
-      @HiveField(18)
-          required final CodeableConcept targetDisease,
-      @HiveField(19)
-          required final Reference immunizationEvent,
-      @HiveField(20)
-          required final CodeableConcept doseStatus,
-      @HiveField(21)
-          final List<CodeableConcept>? doseStatusReason,
-      @HiveField(22)
-          final String? description,
+      final Reference? authority,
+      required final CodeableConcept targetDisease,
+      required final Reference immunizationEvent,
+      required final CodeableConcept doseStatus,
+      final List<CodeableConcept>? doseStatusReason,
+      final String? description,
       @JsonKey(name: '_description')
-      @HiveField(23)
           final Element? descriptionElement,
-      @HiveField(24)
-          final String? series,
+      final String? series,
       @JsonKey(name: '_series')
-      @HiveField(25)
           final Element? seriesElement,
-      @HiveField(26)
-          final PositiveInt? doseNumberPositiveInt,
+      final FhirPositiveInt? doseNumberPositiveInt,
       @JsonKey(name: '_doseNumberPositiveInt')
-      @HiveField(27)
           final Element? doseNumberPositiveIntElement,
-      @HiveField(28)
-          final String? doseNumberString,
+      final String? doseNumberString,
       @JsonKey(name: '_doseNumberString')
-      @HiveField(29)
           final Element? doseNumberStringElement,
-      @HiveField(30)
-          final PositiveInt? seriesDosesPositiveInt,
+      final FhirPositiveInt? seriesDosesPositiveInt,
       @JsonKey(name: '_seriesDosesPositiveInt')
-      @HiveField(31)
           final Element? seriesDosesPositiveIntElement,
-      @HiveField(32)
-          final String? seriesDosesString,
+      final String? seriesDosesString,
       @JsonKey(name: '_seriesDosesString')
-      @HiveField(33)
           final Element? seriesDosesStringElement}) = _$_ImmunizationEvaluation;
   _ImmunizationEvaluation._() : super._();
 
@@ -6453,20 +5911,17 @@ abstract class _ImmunizationEvaluation extends ImmunizationEvaluation {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.ImmunizationEvaluation)
-  @HiveField(0)
   R4ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
-  @HiveField(1)
   String? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  @HiveField(2)
   FhirMeta? get meta;
   @override
 
@@ -6474,24 +5929,20 @@ abstract class _ImmunizationEvaluation extends ImmunizationEvaluation {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  @HiveField(3)
   FhirUri? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
-  @HiveField(4)
   Element? get implicitRulesElement;
   @override
 
   /// [language] The base language in which the resource is written.
-  @HiveField(5)
   FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
-  @HiveField(6)
   Element? get languageElement;
   @override
 
@@ -6501,7 +5952,6 @@ abstract class _ImmunizationEvaluation extends ImmunizationEvaluation {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
-  @HiveField(7)
   Narrative? get text;
   @override
 
@@ -6509,7 +5959,6 @@ abstract class _ImmunizationEvaluation extends ImmunizationEvaluation {
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
-  @HiveField(8)
   List<Resource>? get contained;
   @override
 
@@ -6520,7 +5969,6 @@ abstract class _ImmunizationEvaluation extends ImmunizationEvaluation {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
-  @HiveField(9)
   List<FhirExtension>? get extension_;
   @override
 
@@ -6537,136 +5985,112 @@ abstract class _ImmunizationEvaluation extends ImmunizationEvaluation {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
 
   /// [identifier] A unique identifier assigned to this immunization evaluation
   ///  record.
-  @HiveField(11)
   List<Identifier>? get identifier;
   @override
 
   /// [status] Indicates the current status of the evaluation of the
   ///  vaccination administration event.
-  @HiveField(12)
   FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
-  @HiveField(13)
   Element? get statusElement;
   @override
 
   /// [patient] The individual for whom the evaluation is being done.
-  @HiveField(14)
   Reference get patient;
   @override
 
   /// [date] The date the evaluation of the vaccine administration event was
   ///  performed.
-  @HiveField(15)
   FhirDateTime? get date;
   @override
 
   /// [dateElement] Extensions for date
   @JsonKey(name: '_date')
-  @HiveField(16)
   Element? get dateElement;
   @override
 
   /// [authority] Indicates the authority who published the protocol (e.g.
   ///  ACIP).
-  @HiveField(17)
   Reference? get authority;
   @override
 
   /// [targetDisease] The vaccine preventable disease the dose is being
   ///  evaluated against.
-  @HiveField(18)
   CodeableConcept get targetDisease;
   @override
 
   /// [immunizationEvent] The vaccine administration event being evaluated.
-  @HiveField(19)
   Reference get immunizationEvent;
   @override
 
   /// [doseStatus] Indicates if the dose is valid or not valid with respect to
   ///  the published recommendations.
-  @HiveField(20)
   CodeableConcept get doseStatus;
   @override
 
   /// [doseStatusReason] Provides an explanation as to why the vaccine
   /// administration event is valid or not relative to the published
   ///  recommendations.
-  @HiveField(21)
   List<CodeableConcept>? get doseStatusReason;
   @override
 
   /// [description] Additional information about the evaluation.
-  @HiveField(22)
   String? get description;
   @override
 
   /// [descriptionElement] Extensions for description
   @JsonKey(name: '_description')
-  @HiveField(23)
   Element? get descriptionElement;
   @override
 
   /// [series] One possible path to achieve presumed immunity against a disease
   ///  - within the context of an authority.
-  @HiveField(24)
   String? get series;
   @override
 
   /// [seriesElement] Extensions for series
   @JsonKey(name: '_series')
-  @HiveField(25)
   Element? get seriesElement;
   @override
 
   /// [doseNumberPositiveInt] Nominal position in a series.
-  @HiveField(26)
   FhirPositiveInt? get doseNumberPositiveInt;
   @override
   @JsonKey(name: '_doseNumberPositiveInt')
-  @HiveField(27)
   Element? get doseNumberPositiveIntElement;
   @override
 
   /// [doseNumberString] Nominal position in a series.
-  @HiveField(28)
   String? get doseNumberString;
   @override
 
   /// [doseNumberStringElement] Extensions for doseNumberString
   @JsonKey(name: '_doseNumberString')
-  @HiveField(29)
   Element? get doseNumberStringElement;
   @override
 
   /// [seriesDosesPositiveInt] The recommended number of doses to achieve
   ///  immunity.
-  @HiveField(30)
   FhirPositiveInt? get seriesDosesPositiveInt;
   @override
   @JsonKey(name: '_seriesDosesPositiveInt')
-  @HiveField(31)
   Element? get seriesDosesPositiveIntElement;
   @override
 
   /// [seriesDosesString] The recommended number of doses to achieve immunity.
-  @HiveField(32)
   String? get seriesDosesString;
   @override
 
   /// [seriesDosesStringElement] Extensions for seriesDosesString
   @JsonKey(name: '_seriesDosesString')
-  @HiveField(33)
   Element? get seriesDosesStringElement;
   @override
   @JsonKey(ignore: true)
@@ -6682,39 +6106,32 @@ ImmunizationRecommendation _$ImmunizationRecommendationFromJson(
 /// @nodoc
 mixin _$ImmunizationRecommendation {
   @JsonKey(unknownEnumValue: R4ResourceType.ImmunizationRecommendation)
-  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
-  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  @HiveField(2)
   FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
-  @HiveField(4)
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  @HiveField(5)
   FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
-  @HiveField(6)
   Element? get languageElement => throw _privateConstructorUsedError;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -6723,14 +6140,12 @@ mixin _$ImmunizationRecommendation {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
-  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
 
   /// [contained] These resources do not have an independent existence apart
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
-  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -6740,7 +6155,6 @@ mixin _$ImmunizationRecommendation {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
-  @HiveField(9)
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [modifierExtension] May be used to represent additional information that
@@ -6756,35 +6170,28 @@ mixin _$ImmunizationRecommendation {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
   /// [identifier] A unique identifier assigned to this particular
   ///  recommendation record.
-  @HiveField(11)
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [patient] The patient the recommendation(s) are for.
-  @HiveField(12)
   Reference get patient => throw _privateConstructorUsedError;
 
   /// [date] The date the immunization recommendation(s) were created.
-  @HiveField(13)
   FhirDateTime? get date => throw _privateConstructorUsedError;
 
   /// [dateElement] Extensions for date
   @JsonKey(name: '_date')
-  @HiveField(14)
   Element? get dateElement => throw _privateConstructorUsedError;
 
   /// [authority] Indicates the authority who published the protocol (e.g.
   ///  ACIP).
-  @HiveField(15)
   Reference? get authority => throw _privateConstructorUsedError;
 
   /// [recommendation] Vaccine administration recommendations.
-  @HiveField(16)
   List<ImmunizationRecommendationRecommendation> get recommendation =>
       throw _privateConstructorUsedError;
 
@@ -6803,44 +6210,27 @@ abstract class $ImmunizationRecommendationCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.ImmunizationRecommendation)
-      @HiveField(0)
           R4ResourceType resourceType,
-      @HiveField(1)
-          String? id,
-      @HiveField(2)
-          FhirMeta? meta,
-      @HiveField(3)
-          FhirUri? implicitRules,
+      String? id,
+      FhirMeta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           Element? implicitRulesElement,
-      @HiveField(5)
-          FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           Element? languageElement,
-      @HiveField(7)
-          Narrative? text,
-      @HiveField(8)
-          List<Resource>? contained,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           List<FhirExtension>? extension_,
-      @HiveField(10)
-          List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          List<Identifier>? identifier,
-      @HiveField(12)
-          Reference patient,
-      @HiveField(13)
-          FhirDateTime? date,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      Reference patient,
+      FhirDateTime? date,
       @JsonKey(name: '_date')
-      @HiveField(14)
           Element? dateElement,
-      @HiveField(15)
-          Reference? authority,
-      @HiveField(16)
-          List<ImmunizationRecommendationRecommendation> recommendation});
+      Reference? authority,
+      List<ImmunizationRecommendationRecommendation> recommendation});
 
   $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -6907,7 +6297,7 @@ class _$ImmunizationRecommendationCopyWithImpl<$Res,
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -7047,44 +6437,27 @@ abstract class _$$_ImmunizationRecommendationCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.ImmunizationRecommendation)
-      @HiveField(0)
           R4ResourceType resourceType,
-      @HiveField(1)
-          String? id,
-      @HiveField(2)
-          FhirMeta? meta,
-      @HiveField(3)
-          FhirUri? implicitRules,
+      String? id,
+      FhirMeta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           Element? implicitRulesElement,
-      @HiveField(5)
-          FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           Element? languageElement,
-      @HiveField(7)
-          Narrative? text,
-      @HiveField(8)
-          List<Resource>? contained,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           List<FhirExtension>? extension_,
-      @HiveField(10)
-          List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          List<Identifier>? identifier,
-      @HiveField(12)
-          Reference patient,
-      @HiveField(13)
-          FhirDateTime? date,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      Reference patient,
+      FhirDateTime? date,
       @JsonKey(name: '_date')
-      @HiveField(14)
           Element? dateElement,
-      @HiveField(15)
-          Reference? authority,
-      @HiveField(16)
-          List<ImmunizationRecommendationRecommendation> recommendation});
+      Reference? authority,
+      List<ImmunizationRecommendationRecommendation> recommendation});
 
   @override
   $FhirMetaCopyWith<$Res>? get meta;
@@ -7157,7 +6530,7 @@ class __$$_ImmunizationRecommendationCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -7208,49 +6581,31 @@ class __$$_ImmunizationRecommendationCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@HiveType(typeId: 215)
 class _$_ImmunizationRecommendation extends _ImmunizationRecommendation {
   _$_ImmunizationRecommendation(
       {@JsonKey(unknownEnumValue: R4ResourceType.ImmunizationRecommendation)
-      @HiveField(0)
           this.resourceType = R4ResourceType.ImmunizationRecommendation,
-      @HiveField(1)
-          this.id,
-      @HiveField(2)
-          this.meta,
-      @HiveField(3)
-          this.implicitRules,
+      this.id,
+      this.meta,
+      this.implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           this.implicitRulesElement,
-      @HiveField(5)
-          this.language,
+      this.language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           this.languageElement,
-      @HiveField(7)
-          this.text,
-      @HiveField(8)
-          final List<Resource>? contained,
+      this.text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           final List<FhirExtension>? extension_,
-      @HiveField(10)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          final List<Identifier>? identifier,
-      @HiveField(12)
-          required this.patient,
-      @HiveField(13)
-          this.date,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      required this.patient,
+      this.date,
       @JsonKey(name: '_date')
-      @HiveField(14)
           this.dateElement,
-      @HiveField(15)
-          this.authority,
-      @HiveField(16)
-          required final List<ImmunizationRecommendationRecommendation>
-              recommendation})
+      this.authority,
+      required final List<ImmunizationRecommendationRecommendation>
+          recommendation})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -7263,20 +6618,17 @@ class _$_ImmunizationRecommendation extends _ImmunizationRecommendation {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.ImmunizationRecommendation)
-  @HiveField(0)
   final R4ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
   @override
-  @HiveField(1)
   final String? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
-  @HiveField(2)
   final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -7284,24 +6636,20 @@ class _$_ImmunizationRecommendation extends _ImmunizationRecommendation {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   @override
-  @HiveField(3)
   final FhirUri? implicitRules;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
-  @HiveField(4)
   final Element? implicitRulesElement;
 
   /// [language] The base language in which the resource is written.
   @override
-  @HiveField(5)
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] Extensions for language
   @override
   @JsonKey(name: '_language')
-  @HiveField(6)
   final Element? languageElement;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -7311,7 +6659,6 @@ class _$_ImmunizationRecommendation extends _ImmunizationRecommendation {
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
   @override
-  @HiveField(7)
   final Narrative? text;
 
   /// [contained] These resources do not have an independent existence apart
@@ -7325,7 +6672,6 @@ class _$_ImmunizationRecommendation extends _ImmunizationRecommendation {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   @override
-  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -7350,7 +6696,6 @@ class _$_ImmunizationRecommendation extends _ImmunizationRecommendation {
   ///  as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
-  @HiveField(9)
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
@@ -7388,7 +6733,6 @@ class _$_ImmunizationRecommendation extends _ImmunizationRecommendation {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   @override
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -7405,7 +6749,6 @@ class _$_ImmunizationRecommendation extends _ImmunizationRecommendation {
   /// [identifier] A unique identifier assigned to this particular
   ///  recommendation record.
   @override
-  @HiveField(11)
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
@@ -7416,24 +6759,20 @@ class _$_ImmunizationRecommendation extends _ImmunizationRecommendation {
 
   /// [patient] The patient the recommendation(s) are for.
   @override
-  @HiveField(12)
   final Reference patient;
 
   /// [date] The date the immunization recommendation(s) were created.
   @override
-  @HiveField(13)
   final FhirDateTime? date;
 
   /// [dateElement] Extensions for date
   @override
   @JsonKey(name: '_date')
-  @HiveField(14)
   final Element? dateElement;
 
   /// [authority] Indicates the authority who published the protocol (e.g.
   ///  ACIP).
   @override
-  @HiveField(15)
   final Reference? authority;
 
   /// [recommendation] Vaccine administration recommendations.
@@ -7441,7 +6780,6 @@ class _$_ImmunizationRecommendation extends _ImmunizationRecommendation {
 
   /// [recommendation] Vaccine administration recommendations.
   @override
-  @HiveField(16)
   List<ImmunizationRecommendationRecommendation> get recommendation {
     if (_recommendation is EqualUnmodifiableListView) return _recommendation;
     // ignore: implicit_dynamic_type
@@ -7529,45 +6867,28 @@ class _$_ImmunizationRecommendation extends _ImmunizationRecommendation {
 abstract class _ImmunizationRecommendation extends ImmunizationRecommendation {
   factory _ImmunizationRecommendation(
       {@JsonKey(unknownEnumValue: R4ResourceType.ImmunizationRecommendation)
-      @HiveField(0)
           final R4ResourceType resourceType,
-      @HiveField(1)
-          final String? id,
-      @HiveField(2)
-          final FhirMeta? meta,
-      @HiveField(3)
-          final FhirUri? implicitRules,
+      final String? id,
+      final FhirMeta? meta,
+      final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           final Element? implicitRulesElement,
-      @HiveField(5)
-          final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           final Element? languageElement,
-      @HiveField(7)
-          final Narrative? text,
-      @HiveField(8)
-          final List<Resource>? contained,
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           final List<FhirExtension>? extension_,
-      @HiveField(10)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          final List<Identifier>? identifier,
-      @HiveField(12)
-          required final Reference patient,
-      @HiveField(13)
-          final FhirDateTime? date,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      required final Reference patient,
+      final FhirDateTime? date,
       @JsonKey(name: '_date')
-      @HiveField(14)
           final Element? dateElement,
-      @HiveField(15)
-          final Reference? authority,
-      @HiveField(16)
-          required final List<ImmunizationRecommendationRecommendation>
-              recommendation}) = _$_ImmunizationRecommendation;
+      final Reference? authority,
+      required final List<ImmunizationRecommendationRecommendation>
+          recommendation}) = _$_ImmunizationRecommendation;
   _ImmunizationRecommendation._() : super._();
 
   factory _ImmunizationRecommendation.fromJson(Map<String, dynamic> json) =
@@ -7575,20 +6896,17 @@ abstract class _ImmunizationRecommendation extends ImmunizationRecommendation {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.ImmunizationRecommendation)
-  @HiveField(0)
   R4ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
-  @HiveField(1)
   String? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  @HiveField(2)
   FhirMeta? get meta;
   @override
 
@@ -7596,24 +6914,20 @@ abstract class _ImmunizationRecommendation extends ImmunizationRecommendation {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  @HiveField(3)
   FhirUri? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
-  @HiveField(4)
   Element? get implicitRulesElement;
   @override
 
   /// [language] The base language in which the resource is written.
-  @HiveField(5)
   FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
-  @HiveField(6)
   Element? get languageElement;
   @override
 
@@ -7623,7 +6937,6 @@ abstract class _ImmunizationRecommendation extends ImmunizationRecommendation {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
-  @HiveField(7)
   Narrative? get text;
   @override
 
@@ -7631,7 +6944,6 @@ abstract class _ImmunizationRecommendation extends ImmunizationRecommendation {
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
-  @HiveField(8)
   List<Resource>? get contained;
   @override
 
@@ -7642,7 +6954,6 @@ abstract class _ImmunizationRecommendation extends ImmunizationRecommendation {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
-  @HiveField(9)
   List<FhirExtension>? get extension_;
   @override
 
@@ -7659,40 +6970,33 @@ abstract class _ImmunizationRecommendation extends ImmunizationRecommendation {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
 
   /// [identifier] A unique identifier assigned to this particular
   ///  recommendation record.
-  @HiveField(11)
   List<Identifier>? get identifier;
   @override
 
   /// [patient] The patient the recommendation(s) are for.
-  @HiveField(12)
   Reference get patient;
   @override
 
   /// [date] The date the immunization recommendation(s) were created.
-  @HiveField(13)
   FhirDateTime? get date;
   @override
 
   /// [dateElement] Extensions for date
   @JsonKey(name: '_date')
-  @HiveField(14)
   Element? get dateElement;
   @override
 
   /// [authority] Indicates the authority who published the protocol (e.g.
   ///  ACIP).
-  @HiveField(15)
   Reference? get authority;
   @override
 
   /// [recommendation] Vaccine administration recommendations.
-  @HiveField(16)
   List<ImmunizationRecommendationRecommendation> get recommendation;
   @override
   @JsonKey(ignore: true)
@@ -7972,7 +7276,7 @@ class _$ImmunizationRecommendationRecommendationCopyWithImpl<$Res,
       doseNumberPositiveInt: freezed == doseNumberPositiveInt
           ? _value.doseNumberPositiveInt
           : doseNumberPositiveInt // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       doseNumberPositiveIntElement: freezed == doseNumberPositiveIntElement
           ? _value.doseNumberPositiveIntElement
           : doseNumberPositiveIntElement // ignore: cast_nullable_to_non_nullable
@@ -7988,7 +7292,7 @@ class _$ImmunizationRecommendationRecommendationCopyWithImpl<$Res,
       seriesDosesPositiveInt: freezed == seriesDosesPositiveInt
           ? _value.seriesDosesPositiveInt
           : seriesDosesPositiveInt // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       seriesDosesPositiveIntElement: freezed == seriesDosesPositiveIntElement
           ? _value.seriesDosesPositiveIntElement
           : seriesDosesPositiveIntElement // ignore: cast_nullable_to_non_nullable
@@ -8261,7 +7565,7 @@ class __$$_ImmunizationRecommendationRecommendationCopyWithImpl<$Res>
       doseNumberPositiveInt: freezed == doseNumberPositiveInt
           ? _value.doseNumberPositiveInt
           : doseNumberPositiveInt // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       doseNumberPositiveIntElement: freezed == doseNumberPositiveIntElement
           ? _value.doseNumberPositiveIntElement
           : doseNumberPositiveIntElement // ignore: cast_nullable_to_non_nullable
@@ -8277,7 +7581,7 @@ class __$$_ImmunizationRecommendationRecommendationCopyWithImpl<$Res>
       seriesDosesPositiveInt: freezed == seriesDosesPositiveInt
           ? _value.seriesDosesPositiveInt
           : seriesDosesPositiveInt // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       seriesDosesPositiveIntElement: freezed == seriesDosesPositiveIntElement
           ? _value.seriesDosesPositiveIntElement
           : seriesDosesPositiveIntElement // ignore: cast_nullable_to_non_nullable
@@ -8509,7 +7813,7 @@ class _$_ImmunizationRecommendationRecommendation
   /// [doseNumberPositiveInt] Nominal position of the recommended dose in a
   ///  series (e.g. dose 2 is the next recommended dose).
   @override
-  final PositiveInt? doseNumberPositiveInt;
+  final FhirPositiveInt? doseNumberPositiveInt;
   @override
   @JsonKey(name: '_doseNumberPositiveInt')
   final Element? doseNumberPositiveIntElement;
@@ -8527,7 +7831,7 @@ class _$_ImmunizationRecommendationRecommendation
   /// [seriesDosesPositiveInt] The recommended number of doses to achieve
   ///  immunity.
   @override
-  final PositiveInt? seriesDosesPositiveInt;
+  final FhirPositiveInt? seriesDosesPositiveInt;
   @override
   @JsonKey(name: '_seriesDosesPositiveInt')
   final Element? seriesDosesPositiveIntElement;
@@ -8702,13 +8006,13 @@ abstract class _ImmunizationRecommendationRecommendation
           final String? series,
           @JsonKey(name: '_series')
               final Element? seriesElement,
-          final PositiveInt? doseNumberPositiveInt,
+          final FhirPositiveInt? doseNumberPositiveInt,
           @JsonKey(name: '_doseNumberPositiveInt')
               final Element? doseNumberPositiveIntElement,
           final String? doseNumberString,
           @JsonKey(name: '_doseNumberString')
               final Element? doseNumberStringElement,
-          final PositiveInt? seriesDosesPositiveInt,
+          final FhirPositiveInt? seriesDosesPositiveInt,
           @JsonKey(name: '_seriesDosesPositiveInt')
               final Element? seriesDosesPositiveIntElement,
           final String? seriesDosesString,
@@ -9296,39 +8600,32 @@ Medication _$MedicationFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Medication {
   @JsonKey(unknownEnumValue: R4ResourceType.Medication)
-  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
-  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  @HiveField(2)
   FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
-  @HiveField(4)
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  @HiveField(5)
   FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
-  @HiveField(6)
   Element? get languageElement => throw _privateConstructorUsedError;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -9337,14 +8634,12 @@ mixin _$Medication {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
-  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
 
   /// [contained] These resources do not have an independent existence apart
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
-  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -9354,7 +8649,6 @@ mixin _$Medication {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
-  @HiveField(9)
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [modifierExtension] May be used to represent additional information that
@@ -9370,12 +8664,10 @@ mixin _$Medication {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
   /// [identifier] Business identifier for this medication.
-  @HiveField(11)
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [code] A code (or set of codes) that specify this medication, or a
@@ -9383,26 +8675,21 @@ mixin _$Medication {
   /// standard medication code such as a code from RxNorm, SNOMED CT, IDMP etc.
   /// It could also be a national or local formulary code, optionally with
   ///  translations to other code systems.
-  @HiveField(12)
   CodeableConcept? get code => throw _privateConstructorUsedError;
 
   /// [status] A code to indicate if the medication is in active use.
-  @HiveField(13)
   FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
-  @HiveField(14)
   Element? get statusElement => throw _privateConstructorUsedError;
 
   /// [manufacturer] Describes the details of the manufacturer of the
   /// medication product.  This is not intended to represent the distributor of
   ///  a medication product.
-  @HiveField(15)
   Reference? get manufacturer => throw _privateConstructorUsedError;
 
   /// [form] Describes the form of the item.  Powder; tablets; capsule.
-  @HiveField(16)
   CodeableConcept? get form => throw _privateConstructorUsedError;
 
   /// [amount] Specific amount of the drug in the packaged product.  For
@@ -9410,17 +8697,14 @@ mixin _$Medication {
   /// example, Insulin glargine 100 unit per mL solution for injection), this
   /// attribute provides additional clarification of the package amount (For
   ///  example, 3 mL, 10mL, etc.).
-  @HiveField(17)
   Ratio? get amount => throw _privateConstructorUsedError;
 
   /// [ingredient] Identifies a particular constituent of interest in the
   ///  product.
-  @HiveField(18)
   List<MedicationIngredient>? get ingredient =>
       throw _privateConstructorUsedError;
 
   /// [batch] Information that only applies to packages (not products).
-  @HiveField(19)
   MedicationBatch? get batch => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -9437,50 +8721,30 @@ abstract class $MedicationCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Medication)
-      @HiveField(0)
           R4ResourceType resourceType,
-      @HiveField(1)
-          String? id,
-      @HiveField(2)
-          FhirMeta? meta,
-      @HiveField(3)
-          FhirUri? implicitRules,
+      String? id,
+      FhirMeta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           Element? implicitRulesElement,
-      @HiveField(5)
-          FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           Element? languageElement,
-      @HiveField(7)
-          Narrative? text,
-      @HiveField(8)
-          List<Resource>? contained,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           List<FhirExtension>? extension_,
-      @HiveField(10)
-          List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          List<Identifier>? identifier,
-      @HiveField(12)
-          CodeableConcept? code,
-      @HiveField(13)
-          FhirCode? status,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      CodeableConcept? code,
+      FhirCode? status,
       @JsonKey(name: '_status')
-      @HiveField(14)
           Element? statusElement,
-      @HiveField(15)
-          Reference? manufacturer,
-      @HiveField(16)
-          CodeableConcept? form,
-      @HiveField(17)
-          Ratio? amount,
-      @HiveField(18)
-          List<MedicationIngredient>? ingredient,
-      @HiveField(19)
-          MedicationBatch? batch});
+      Reference? manufacturer,
+      CodeableConcept? form,
+      Ratio? amount,
+      List<MedicationIngredient>? ingredient,
+      MedicationBatch? batch});
 
   $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -9552,7 +8816,7 @@ class _$MedicationCopyWithImpl<$Res, $Val extends Medication>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -9584,7 +8848,7 @@ class _$MedicationCopyWithImpl<$Res, $Val extends Medication>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -9743,50 +9007,30 @@ abstract class _$$_MedicationCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Medication)
-      @HiveField(0)
           R4ResourceType resourceType,
-      @HiveField(1)
-          String? id,
-      @HiveField(2)
-          FhirMeta? meta,
-      @HiveField(3)
-          FhirUri? implicitRules,
+      String? id,
+      FhirMeta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           Element? implicitRulesElement,
-      @HiveField(5)
-          FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           Element? languageElement,
-      @HiveField(7)
-          Narrative? text,
-      @HiveField(8)
-          List<Resource>? contained,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           List<FhirExtension>? extension_,
-      @HiveField(10)
-          List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          List<Identifier>? identifier,
-      @HiveField(12)
-          CodeableConcept? code,
-      @HiveField(13)
-          FhirCode? status,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      CodeableConcept? code,
+      FhirCode? status,
       @JsonKey(name: '_status')
-      @HiveField(14)
           Element? statusElement,
-      @HiveField(15)
-          Reference? manufacturer,
-      @HiveField(16)
-          CodeableConcept? form,
-      @HiveField(17)
-          Ratio? amount,
-      @HiveField(18)
-          List<MedicationIngredient>? ingredient,
-      @HiveField(19)
-          MedicationBatch? batch});
+      Reference? manufacturer,
+      CodeableConcept? form,
+      Ratio? amount,
+      List<MedicationIngredient>? ingredient,
+      MedicationBatch? batch});
 
   @override
   $FhirMetaCopyWith<$Res>? get meta;
@@ -9866,7 +9110,7 @@ class __$$_MedicationCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -9898,7 +9142,7 @@ class __$$_MedicationCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -9929,54 +9173,33 @@ class __$$_MedicationCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@HiveType(typeId: 216)
 class _$_Medication extends _Medication {
   _$_Medication(
       {@JsonKey(unknownEnumValue: R4ResourceType.Medication)
-      @HiveField(0)
           this.resourceType = R4ResourceType.Medication,
-      @HiveField(1)
-          this.id,
-      @HiveField(2)
-          this.meta,
-      @HiveField(3)
-          this.implicitRules,
+      this.id,
+      this.meta,
+      this.implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           this.implicitRulesElement,
-      @HiveField(5)
-          this.language,
+      this.language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           this.languageElement,
-      @HiveField(7)
-          this.text,
-      @HiveField(8)
-          final List<Resource>? contained,
+      this.text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           final List<FhirExtension>? extension_,
-      @HiveField(10)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          final List<Identifier>? identifier,
-      @HiveField(12)
-          this.code,
-      @HiveField(13)
-          this.status,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      this.code,
+      this.status,
       @JsonKey(name: '_status')
-      @HiveField(14)
           this.statusElement,
-      @HiveField(15)
-          this.manufacturer,
-      @HiveField(16)
-          this.form,
-      @HiveField(17)
-          this.amount,
-      @HiveField(18)
-          final List<MedicationIngredient>? ingredient,
-      @HiveField(19)
-          this.batch})
+      this.manufacturer,
+      this.form,
+      this.amount,
+      final List<MedicationIngredient>? ingredient,
+      this.batch})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -9989,20 +9212,17 @@ class _$_Medication extends _Medication {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Medication)
-  @HiveField(0)
   final R4ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
   @override
-  @HiveField(1)
   final String? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
-  @HiveField(2)
   final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -10010,24 +9230,20 @@ class _$_Medication extends _Medication {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   @override
-  @HiveField(3)
   final FhirUri? implicitRules;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
-  @HiveField(4)
   final Element? implicitRulesElement;
 
   /// [language] The base language in which the resource is written.
   @override
-  @HiveField(5)
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] Extensions for language
   @override
   @JsonKey(name: '_language')
-  @HiveField(6)
   final Element? languageElement;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -10037,7 +9253,6 @@ class _$_Medication extends _Medication {
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
   @override
-  @HiveField(7)
   final Narrative? text;
 
   /// [contained] These resources do not have an independent existence apart
@@ -10051,7 +9266,6 @@ class _$_Medication extends _Medication {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   @override
-  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -10076,7 +9290,6 @@ class _$_Medication extends _Medication {
   ///  as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
-  @HiveField(9)
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
@@ -10114,7 +9327,6 @@ class _$_Medication extends _Medication {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   @override
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -10129,7 +9341,6 @@ class _$_Medication extends _Medication {
 
   /// [identifier] Business identifier for this medication.
   @override
-  @HiveField(11)
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
@@ -10144,30 +9355,25 @@ class _$_Medication extends _Medication {
   /// It could also be a national or local formulary code, optionally with
   ///  translations to other code systems.
   @override
-  @HiveField(12)
   final CodeableConcept? code;
 
   /// [status] A code to indicate if the medication is in active use.
   @override
-  @HiveField(13)
-  final Code? status;
+  final FhirCode? status;
 
   /// [statusElement] Extensions for status
   @override
   @JsonKey(name: '_status')
-  @HiveField(14)
   final Element? statusElement;
 
   /// [manufacturer] Describes the details of the manufacturer of the
   /// medication product.  This is not intended to represent the distributor of
   ///  a medication product.
   @override
-  @HiveField(15)
   final Reference? manufacturer;
 
   /// [form] Describes the form of the item.  Powder; tablets; capsule.
   @override
-  @HiveField(16)
   final CodeableConcept? form;
 
   /// [amount] Specific amount of the drug in the packaged product.  For
@@ -10176,7 +9382,6 @@ class _$_Medication extends _Medication {
   /// attribute provides additional clarification of the package amount (For
   ///  example, 3 mL, 10mL, etc.).
   @override
-  @HiveField(17)
   final Ratio? amount;
 
   /// [ingredient] Identifies a particular constituent of interest in the
@@ -10186,7 +9391,6 @@ class _$_Medication extends _Medication {
   /// [ingredient] Identifies a particular constituent of interest in the
   ///  product.
   @override
-  @HiveField(18)
   List<MedicationIngredient>? get ingredient {
     final value = _ingredient;
     if (value == null) return null;
@@ -10197,7 +9401,6 @@ class _$_Medication extends _Medication {
 
   /// [batch] Information that only applies to packages (not products).
   @override
-  @HiveField(19)
   final MedicationBatch? batch;
 
   @override
@@ -10287,50 +9490,30 @@ class _$_Medication extends _Medication {
 abstract class _Medication extends Medication {
   factory _Medication(
       {@JsonKey(unknownEnumValue: R4ResourceType.Medication)
-      @HiveField(0)
           final R4ResourceType resourceType,
-      @HiveField(1)
-          final String? id,
-      @HiveField(2)
-          final FhirMeta? meta,
-      @HiveField(3)
-          final FhirUri? implicitRules,
+      final String? id,
+      final FhirMeta? meta,
+      final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           final Element? implicitRulesElement,
-      @HiveField(5)
-          final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           final Element? languageElement,
-      @HiveField(7)
-          final Narrative? text,
-      @HiveField(8)
-          final List<Resource>? contained,
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           final List<FhirExtension>? extension_,
-      @HiveField(10)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          final List<Identifier>? identifier,
-      @HiveField(12)
-          final CodeableConcept? code,
-      @HiveField(13)
-          final Code? status,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final CodeableConcept? code,
+      final FhirCode? status,
       @JsonKey(name: '_status')
-      @HiveField(14)
           final Element? statusElement,
-      @HiveField(15)
-          final Reference? manufacturer,
-      @HiveField(16)
-          final CodeableConcept? form,
-      @HiveField(17)
-          final Ratio? amount,
-      @HiveField(18)
-          final List<MedicationIngredient>? ingredient,
-      @HiveField(19)
-          final MedicationBatch? batch}) = _$_Medication;
+      final Reference? manufacturer,
+      final CodeableConcept? form,
+      final Ratio? amount,
+      final List<MedicationIngredient>? ingredient,
+      final MedicationBatch? batch}) = _$_Medication;
   _Medication._() : super._();
 
   factory _Medication.fromJson(Map<String, dynamic> json) =
@@ -10338,20 +9521,17 @@ abstract class _Medication extends Medication {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Medication)
-  @HiveField(0)
   R4ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
-  @HiveField(1)
   String? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  @HiveField(2)
   FhirMeta? get meta;
   @override
 
@@ -10359,24 +9539,20 @@ abstract class _Medication extends Medication {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  @HiveField(3)
   FhirUri? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
-  @HiveField(4)
   Element? get implicitRulesElement;
   @override
 
   /// [language] The base language in which the resource is written.
-  @HiveField(5)
   FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
-  @HiveField(6)
   Element? get languageElement;
   @override
 
@@ -10386,7 +9562,6 @@ abstract class _Medication extends Medication {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
-  @HiveField(7)
   Narrative? get text;
   @override
 
@@ -10394,7 +9569,6 @@ abstract class _Medication extends Medication {
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
-  @HiveField(8)
   List<Resource>? get contained;
   @override
 
@@ -10405,7 +9579,6 @@ abstract class _Medication extends Medication {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
-  @HiveField(9)
   List<FhirExtension>? get extension_;
   @override
 
@@ -10422,12 +9595,10 @@ abstract class _Medication extends Medication {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
 
   /// [identifier] Business identifier for this medication.
-  @HiveField(11)
   List<Identifier>? get identifier;
   @override
 
@@ -10436,30 +9607,25 @@ abstract class _Medication extends Medication {
   /// standard medication code such as a code from RxNorm, SNOMED CT, IDMP etc.
   /// It could also be a national or local formulary code, optionally with
   ///  translations to other code systems.
-  @HiveField(12)
   CodeableConcept? get code;
   @override
 
   /// [status] A code to indicate if the medication is in active use.
-  @HiveField(13)
   FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
-  @HiveField(14)
   Element? get statusElement;
   @override
 
   /// [manufacturer] Describes the details of the manufacturer of the
   /// medication product.  This is not intended to represent the distributor of
   ///  a medication product.
-  @HiveField(15)
   Reference? get manufacturer;
   @override
 
   /// [form] Describes the form of the item.  Powder; tablets; capsule.
-  @HiveField(16)
   CodeableConcept? get form;
   @override
 
@@ -10468,18 +9634,15 @@ abstract class _Medication extends Medication {
   /// example, Insulin glargine 100 unit per mL solution for injection), this
   /// attribute provides additional clarification of the package amount (For
   ///  example, 3 mL, 10mL, etc.).
-  @HiveField(17)
   Ratio? get amount;
   @override
 
   /// [ingredient] Identifies a particular constituent of interest in the
   ///  product.
-  @HiveField(18)
   List<MedicationIngredient>? get ingredient;
   @override
 
   /// [batch] Information that only applies to packages (not products).
-  @HiveField(19)
   MedicationBatch? get batch;
   @override
   @JsonKey(ignore: true)
@@ -10495,7 +9658,6 @@ MedicationIngredient _$MedicationIngredientFromJson(Map<String, dynamic> json) {
 mixin _$MedicationIngredient {
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
-  @HiveField(0)
   String? get id => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -10504,7 +9666,6 @@ mixin _$MedicationIngredient {
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
-  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
@@ -10521,35 +9682,29 @@ mixin _$MedicationIngredient {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
-  @HiveField(2)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
   /// [itemCodeableConcept] The actual ingredient - either a substance (simple
   ///  ingredient) or another medication of a medication.
-  @HiveField(3)
   CodeableConcept? get itemCodeableConcept =>
       throw _privateConstructorUsedError;
 
   /// [itemReference] The actual ingredient - either a substance (simple
   ///  ingredient) or another medication of a medication.
-  @HiveField(4)
   Reference? get itemReference => throw _privateConstructorUsedError;
 
   /// [isActive] Indication of whether this ingredient affects the therapeutic
   ///  action of the drug.
-  @HiveField(5)
-  Boolean? get isActive => throw _privateConstructorUsedError;
+  FhirBoolean? get isActive => throw _privateConstructorUsedError;
 
   /// [isActiveElement] Extensions for isActive
-  @HiveField(6)
   @JsonKey(name: '_isActive')
   Element? get isActiveElement => throw _privateConstructorUsedError;
 
   /// [strength] Specifies how many (or how much) of the items there are in
   /// this Medication.  For example, 250 mg per tablet.  This is expressed as a
   ///  ratio where the numerator is 250mg and the denominator is 1 tablet.
-  @HiveField(7)
   Ratio? get strength => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -10565,14 +9720,14 @@ abstract class $MedicationIngredientCopyWith<$Res> {
       _$MedicationIngredientCopyWithImpl<$Res, MedicationIngredient>;
   @useResult
   $Res call(
-      {@HiveField(0) String? id,
-      @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      @HiveField(2) List<FhirExtension>? modifierExtension,
-      @HiveField(3) CodeableConcept? itemCodeableConcept,
-      @HiveField(4) Reference? itemReference,
-      @HiveField(5) Boolean? isActive,
-      @HiveField(6) @JsonKey(name: '_isActive') Element? isActiveElement,
-      @HiveField(7) Ratio? strength});
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept? itemCodeableConcept,
+      Reference? itemReference,
+      FhirBoolean? isActive,
+      @JsonKey(name: '_isActive') Element? isActiveElement,
+      Ratio? strength});
 
   $CodeableConceptCopyWith<$Res>? get itemCodeableConcept;
   $ReferenceCopyWith<$Res>? get itemReference;
@@ -10627,7 +9782,7 @@ class _$MedicationIngredientCopyWithImpl<$Res,
       isActive: freezed == isActive
           ? _value.isActive
           : isActive // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       isActiveElement: freezed == isActiveElement
           ? _value.isActiveElement
           : isActiveElement // ignore: cast_nullable_to_non_nullable
@@ -10697,14 +9852,14 @@ abstract class _$$_MedicationIngredientCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@HiveField(0) String? id,
-      @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      @HiveField(2) List<FhirExtension>? modifierExtension,
-      @HiveField(3) CodeableConcept? itemCodeableConcept,
-      @HiveField(4) Reference? itemReference,
-      @HiveField(5) Boolean? isActive,
-      @HiveField(6) @JsonKey(name: '_isActive') Element? isActiveElement,
-      @HiveField(7) Ratio? strength});
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept? itemCodeableConcept,
+      Reference? itemReference,
+      FhirBoolean? isActive,
+      @JsonKey(name: '_isActive') Element? isActiveElement,
+      Ratio? strength});
 
   @override
   $CodeableConceptCopyWith<$Res>? get itemCodeableConcept;
@@ -10760,7 +9915,7 @@ class __$$_MedicationIngredientCopyWithImpl<$Res>
       isActive: freezed == isActive
           ? _value.isActive
           : isActive // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       isActiveElement: freezed == isActiveElement
           ? _value.isActiveElement
           : isActiveElement // ignore: cast_nullable_to_non_nullable
@@ -10775,27 +9930,16 @@ class __$$_MedicationIngredientCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@HiveType(typeId: 217)
 class _$_MedicationIngredient extends _MedicationIngredient {
   _$_MedicationIngredient(
-      {@HiveField(0)
-          this.id,
-      @HiveField(1)
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      @HiveField(2)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(3)
-          this.itemCodeableConcept,
-      @HiveField(4)
-          this.itemReference,
-      @HiveField(5)
-          this.isActive,
-      @HiveField(6)
-      @JsonKey(name: '_isActive')
-          this.isActiveElement,
-      @HiveField(7)
-          this.strength})
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      this.itemCodeableConcept,
+      this.itemReference,
+      this.isActive,
+      @JsonKey(name: '_isActive') this.isActiveElement,
+      this.strength})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
         super._();
@@ -10806,7 +9950,6 @@ class _$_MedicationIngredient extends _MedicationIngredient {
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   @override
-  @HiveField(0)
   final String? id;
 
   /// [extension_] May be used to represent additional information that is not
@@ -10824,7 +9967,6 @@ class _$_MedicationIngredient extends _MedicationIngredient {
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   @override
-  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
     final value = _extension_;
@@ -10863,7 +10005,6 @@ class _$_MedicationIngredient extends _MedicationIngredient {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   @override
-  @HiveField(2)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -10876,24 +10017,20 @@ class _$_MedicationIngredient extends _MedicationIngredient {
   /// [itemCodeableConcept] The actual ingredient - either a substance (simple
   ///  ingredient) or another medication of a medication.
   @override
-  @HiveField(3)
   final CodeableConcept? itemCodeableConcept;
 
   /// [itemReference] The actual ingredient - either a substance (simple
   ///  ingredient) or another medication of a medication.
   @override
-  @HiveField(4)
   final Reference? itemReference;
 
   /// [isActive] Indication of whether this ingredient affects the therapeutic
   ///  action of the drug.
   @override
-  @HiveField(5)
-  final Boolean? isActive;
+  final FhirBoolean? isActive;
 
   /// [isActiveElement] Extensions for isActive
   @override
-  @HiveField(6)
   @JsonKey(name: '_isActive')
   final Element? isActiveElement;
 
@@ -10901,7 +10038,6 @@ class _$_MedicationIngredient extends _MedicationIngredient {
   /// this Medication.  For example, 250 mg per tablet.  This is expressed as a
   ///  ratio where the numerator is 250mg and the denominator is 1 tablet.
   @override
-  @HiveField(7)
   final Ratio? strength;
 
   @override
@@ -10961,24 +10097,14 @@ class _$_MedicationIngredient extends _MedicationIngredient {
 
 abstract class _MedicationIngredient extends MedicationIngredient {
   factory _MedicationIngredient(
-      {@HiveField(0)
-          final String? id,
-      @HiveField(1)
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      @HiveField(2)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(3)
-          final CodeableConcept? itemCodeableConcept,
-      @HiveField(4)
-          final Reference? itemReference,
-      @HiveField(5)
-          final Boolean? isActive,
-      @HiveField(6)
-      @JsonKey(name: '_isActive')
-          final Element? isActiveElement,
-      @HiveField(7)
-          final Ratio? strength}) = _$_MedicationIngredient;
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final CodeableConcept? itemCodeableConcept,
+      final Reference? itemReference,
+      final FhirBoolean? isActive,
+      @JsonKey(name: '_isActive') final Element? isActiveElement,
+      final Ratio? strength}) = _$_MedicationIngredient;
   _MedicationIngredient._() : super._();
 
   factory _MedicationIngredient.fromJson(Map<String, dynamic> json) =
@@ -10988,7 +10114,6 @@ abstract class _MedicationIngredient extends MedicationIngredient {
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
-  @HiveField(0)
   String? get id;
   @override
 
@@ -10998,7 +10123,6 @@ abstract class _MedicationIngredient extends MedicationIngredient {
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
-  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
@@ -11016,30 +10140,25 @@ abstract class _MedicationIngredient extends MedicationIngredient {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
-  @HiveField(2)
   List<FhirExtension>? get modifierExtension;
   @override
 
   /// [itemCodeableConcept] The actual ingredient - either a substance (simple
   ///  ingredient) or another medication of a medication.
-  @HiveField(3)
   CodeableConcept? get itemCodeableConcept;
   @override
 
   /// [itemReference] The actual ingredient - either a substance (simple
   ///  ingredient) or another medication of a medication.
-  @HiveField(4)
   Reference? get itemReference;
   @override
 
   /// [isActive] Indication of whether this ingredient affects the therapeutic
   ///  action of the drug.
-  @HiveField(5)
-  Boolean? get isActive;
+  FhirBoolean? get isActive;
   @override
 
   /// [isActiveElement] Extensions for isActive
-  @HiveField(6)
   @JsonKey(name: '_isActive')
   Element? get isActiveElement;
   @override
@@ -11047,7 +10166,6 @@ abstract class _MedicationIngredient extends MedicationIngredient {
   /// [strength] Specifies how many (or how much) of the items there are in
   /// this Medication.  For example, 250 mg per tablet.  This is expressed as a
   ///  ratio where the numerator is 250mg and the denominator is 1 tablet.
-  @HiveField(7)
   Ratio? get strength;
   @override
   @JsonKey(ignore: true)
@@ -11516,39 +10634,32 @@ MedicationAdministration _$MedicationAdministrationFromJson(
 /// @nodoc
 mixin _$MedicationAdministration {
   @JsonKey(unknownEnumValue: R4ResourceType.MedicationAdministration)
-  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
-  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  @HiveField(2)
   FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
-  @HiveField(4)
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  @HiveField(5)
   FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
-  @HiveField(6)
   Element? get languageElement => throw _privateConstructorUsedError;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -11557,14 +10668,12 @@ mixin _$MedicationAdministration {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
-  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
 
   /// [contained] These resources do not have an independent existence apart
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
-  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -11574,7 +10683,6 @@ mixin _$MedicationAdministration {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
-  @HiveField(9)
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [modifierExtension] May be used to represent additional information that
@@ -11590,7 +10698,6 @@ mixin _$MedicationAdministration {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
@@ -11600,51 +10707,42 @@ mixin _$MedicationAdministration {
   /// business identifiers assigned to this resource by the performer or other
   /// systems and remain constant as the resource is updated and propagates from
   ///  server to server.
-  @HiveField(11)
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [instantiates] A protocol, guideline, orderset, or other definition that
   ///  was adhered to in whole or in part by this event.
-  @HiveField(12)
   List<FhirUri>? get instantiates => throw _privateConstructorUsedError;
 
   /// [instantiatesElement] Extensions for instantiates
   @JsonKey(name: '_instantiates')
-  @HiveField(13)
   List<Element?>? get instantiatesElement => throw _privateConstructorUsedError;
 
   /// [partOf] A larger event of which this particular event is a component or
   ///  step.
-  @HiveField(14)
   List<Reference>? get partOf => throw _privateConstructorUsedError;
 
   /// [status] Will generally be set to show that the administration has been
   /// completed.  For some long running administrations such as infusions, it is
   /// possible for an administration to be started but not completed or it may
   ///  be paused while some other process is under way.
-  @HiveField(15)
   FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
-  @HiveField(16)
   Element? get statusElement => throw _privateConstructorUsedError;
 
   /// [statusReason] A code indicating why the administration was not
   ///  performed.
-  @HiveField(17)
   List<CodeableConcept>? get statusReason => throw _privateConstructorUsedError;
 
   /// [category] Indicates where the medication is expected to be consumed or
   ///  administered.
-  @HiveField(18)
   CodeableConcept? get category => throw _privateConstructorUsedError;
 
   /// [medicationCodeableConcept] Identifies the medication that was
   /// administered. This is either a link to a resource representing the details
   /// of the medication or a simple attribute carrying a code that identifies
   ///  the medication from a known list of medications.
-  @HiveField(19)
   CodeableConcept? get medicationCodeableConcept =>
       throw _privateConstructorUsedError;
 
@@ -11652,22 +10750,18 @@ mixin _$MedicationAdministration {
   /// This is either a link to a resource representing the details of the
   /// medication or a simple attribute carrying a code that identifies the
   ///  medication from a known list of medications.
-  @HiveField(20)
   Reference? get medicationReference => throw _privateConstructorUsedError;
 
   /// [subject] The person or animal or group receiving the medication.
-  @HiveField(21)
   Reference get subject => throw _privateConstructorUsedError;
 
   /// [context] The visit, admission, or other contact between patient and
   /// health care provider during which the medication administration was
   ///  performed.
-  @HiveField(22)
   Reference? get context => throw _privateConstructorUsedError;
 
   /// [supportingInformation] Additional information (for example, patient
   ///  height and weight) that supports the administration of the medication.
-  @HiveField(23)
   List<Reference>? get supportingInformation =>
       throw _privateConstructorUsedError;
 
@@ -11675,56 +10769,49 @@ mixin _$MedicationAdministration {
   /// the administration took place (or did not take place, when the 'notGiven'
   /// attribute is true). For many administrations, such as swallowing a tablet
   ///  the use of dateTime is more appropriate.
-  @HiveField(24)
   FhirDateTime? get effectiveDateTime => throw _privateConstructorUsedError;
 
   /// [effectiveDateTimeElement] Extensions for effectiveDateTime
   @JsonKey(name: '_effectiveDateTime')
-  @HiveField(25)
   Element? get effectiveDateTimeElement => throw _privateConstructorUsedError;
 
   /// [effectivePeriod] A specific date/time or interval of time during which
   /// the administration took place (or did not take place, when the 'notGiven'
   /// attribute is true). For many administrations, such as swallowing a tablet
   ///  the use of dateTime is more appropriate.
-  @HiveField(26)
   Period? get effectivePeriod => throw _privateConstructorUsedError;
 
   /// [performer] Indicates who or what performed the medication administration
   ///  and how they were involved.
-  @HiveField(27)
   List<MedicationAdministrationPerformer>? get performer =>
       throw _privateConstructorUsedError;
 
   /// [reasonCode] A code indicating why the medication was given.
-  @HiveField(28)
   List<CodeableConcept>? get reasonCode => throw _privateConstructorUsedError;
 
   /// [reasonReference] Condition or observation that supports why the
   ///  medication was administered.
-  @HiveField(29)
   List<Reference>? get reasonReference => throw _privateConstructorUsedError;
 
   /// [request] The original request, instruction or authority to perform the
   ///  administration.
-  @HiveField(30)
   Reference? get request => throw _privateConstructorUsedError;
 
   /// [device] The device used in administering the medication to the patient.
   ///  For example, a particular infusion pump.
-  @HiveField(31)
   List<Reference>? get device => throw _privateConstructorUsedError;
 
   /// [note] Extra information about the medication administration that is not
   ///  conveyed by the other attributes.
-  @HiveField(32)
   List<Annotation>? get note => throw _privateConstructorUsedError;
-  @HiveField(33)
-  @HiveField(34)
+
+  /// [dosage] Describes the medication dosage information details e.g. dose,
+  ///  rate, site, route, etc.
   MedicationAdministrationDosage? get dosage =>
       throw _privateConstructorUsedError;
-  @HiveField(35)
-  @HiveField(36)
+
+  /// [eventHistory] A summary of the events of interest that have occurred,
+  ///  such as when the administration was verified.
   List<Reference>? get eventHistory => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -11741,84 +10828,47 @@ abstract class $MedicationAdministrationCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.MedicationAdministration)
-      @HiveField(0)
           R4ResourceType resourceType,
-      @HiveField(1)
-          String? id,
-      @HiveField(2)
-          FhirMeta? meta,
-      @HiveField(3)
-          FhirUri? implicitRules,
+      String? id,
+      FhirMeta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           Element? implicitRulesElement,
-      @HiveField(5)
-          FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           Element? languageElement,
-      @HiveField(7)
-          Narrative? text,
-      @HiveField(8)
-          List<Resource>? contained,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           List<FhirExtension>? extension_,
-      @HiveField(10)
-          List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          List<Identifier>? identifier,
-      @HiveField(12)
-          List<FhirUri>? instantiates,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      List<FhirUri>? instantiates,
       @JsonKey(name: '_instantiates')
-      @HiveField(13)
           List<Element?>? instantiatesElement,
-      @HiveField(14)
-          List<Reference>? partOf,
-      @HiveField(15)
-          FhirCode? status,
+      List<Reference>? partOf,
+      FhirCode? status,
       @JsonKey(name: '_status')
-      @HiveField(16)
           Element? statusElement,
-      @HiveField(17)
-          List<CodeableConcept>? statusReason,
-      @HiveField(18)
-          CodeableConcept? category,
-      @HiveField(19)
-          CodeableConcept? medicationCodeableConcept,
-      @HiveField(20)
-          Reference? medicationReference,
-      @HiveField(21)
-          Reference subject,
-      @HiveField(22)
-          Reference? context,
-      @HiveField(23)
-          List<Reference>? supportingInformation,
-      @HiveField(24)
-          FhirDateTime? effectiveDateTime,
+      List<CodeableConcept>? statusReason,
+      CodeableConcept? category,
+      CodeableConcept? medicationCodeableConcept,
+      Reference? medicationReference,
+      Reference subject,
+      Reference? context,
+      List<Reference>? supportingInformation,
+      FhirDateTime? effectiveDateTime,
       @JsonKey(name: '_effectiveDateTime')
-      @HiveField(25)
           Element? effectiveDateTimeElement,
-      @HiveField(26)
-          Period? effectivePeriod,
-      @HiveField(27)
-          List<MedicationAdministrationPerformer>? performer,
-      @HiveField(28)
-          List<CodeableConcept>? reasonCode,
-      @HiveField(29)
-          List<Reference>? reasonReference,
-      @HiveField(30)
-          Reference? request,
-      @HiveField(31)
-          List<Reference>? device,
-      @HiveField(32)
-          List<Annotation>? note,
-      @HiveField(33)
-      @HiveField(34)
-          MedicationAdministrationDosage? dosage,
-      @HiveField(35)
-      @HiveField(36)
-          List<Reference>? eventHistory});
+      Period? effectivePeriod,
+      List<MedicationAdministrationPerformer>? performer,
+      List<CodeableConcept>? reasonCode,
+      List<Reference>? reasonReference,
+      Reference? request,
+      List<Reference>? device,
+      List<Annotation>? note,
+      MedicationAdministrationDosage? dosage,
+      List<Reference>? eventHistory});
 
   $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -11910,7 +10960,7 @@ class _$MedicationAdministrationCopyWithImpl<$Res,
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -11950,7 +11000,7 @@ class _$MedicationAdministrationCopyWithImpl<$Res,
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -12208,84 +11258,47 @@ abstract class _$$_MedicationAdministrationCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.MedicationAdministration)
-      @HiveField(0)
           R4ResourceType resourceType,
-      @HiveField(1)
-          String? id,
-      @HiveField(2)
-          FhirMeta? meta,
-      @HiveField(3)
-          FhirUri? implicitRules,
+      String? id,
+      FhirMeta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           Element? implicitRulesElement,
-      @HiveField(5)
-          FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           Element? languageElement,
-      @HiveField(7)
-          Narrative? text,
-      @HiveField(8)
-          List<Resource>? contained,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           List<FhirExtension>? extension_,
-      @HiveField(10)
-          List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          List<Identifier>? identifier,
-      @HiveField(12)
-          List<FhirUri>? instantiates,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      List<FhirUri>? instantiates,
       @JsonKey(name: '_instantiates')
-      @HiveField(13)
           List<Element?>? instantiatesElement,
-      @HiveField(14)
-          List<Reference>? partOf,
-      @HiveField(15)
-          FhirCode? status,
+      List<Reference>? partOf,
+      FhirCode? status,
       @JsonKey(name: '_status')
-      @HiveField(16)
           Element? statusElement,
-      @HiveField(17)
-          List<CodeableConcept>? statusReason,
-      @HiveField(18)
-          CodeableConcept? category,
-      @HiveField(19)
-          CodeableConcept? medicationCodeableConcept,
-      @HiveField(20)
-          Reference? medicationReference,
-      @HiveField(21)
-          Reference subject,
-      @HiveField(22)
-          Reference? context,
-      @HiveField(23)
-          List<Reference>? supportingInformation,
-      @HiveField(24)
-          FhirDateTime? effectiveDateTime,
+      List<CodeableConcept>? statusReason,
+      CodeableConcept? category,
+      CodeableConcept? medicationCodeableConcept,
+      Reference? medicationReference,
+      Reference subject,
+      Reference? context,
+      List<Reference>? supportingInformation,
+      FhirDateTime? effectiveDateTime,
       @JsonKey(name: '_effectiveDateTime')
-      @HiveField(25)
           Element? effectiveDateTimeElement,
-      @HiveField(26)
-          Period? effectivePeriod,
-      @HiveField(27)
-          List<MedicationAdministrationPerformer>? performer,
-      @HiveField(28)
-          List<CodeableConcept>? reasonCode,
-      @HiveField(29)
-          List<Reference>? reasonReference,
-      @HiveField(30)
-          Reference? request,
-      @HiveField(31)
-          List<Reference>? device,
-      @HiveField(32)
-          List<Annotation>? note,
-      @HiveField(33)
-      @HiveField(34)
-          MedicationAdministrationDosage? dosage,
-      @HiveField(35)
-      @HiveField(36)
-          List<Reference>? eventHistory});
+      Period? effectivePeriod,
+      List<MedicationAdministrationPerformer>? performer,
+      List<CodeableConcept>? reasonCode,
+      List<Reference>? reasonReference,
+      Reference? request,
+      List<Reference>? device,
+      List<Annotation>? note,
+      MedicationAdministrationDosage? dosage,
+      List<Reference>? eventHistory});
 
   @override
   $FhirMetaCopyWith<$Res>? get meta;
@@ -12389,7 +11402,7 @@ class __$$_MedicationAdministrationCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -12429,7 +11442,7 @@ class __$$_MedicationAdministrationCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -12512,88 +11525,50 @@ class __$$_MedicationAdministrationCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@HiveType(typeId: 218)
 class _$_MedicationAdministration extends _MedicationAdministration {
   _$_MedicationAdministration(
       {@JsonKey(unknownEnumValue: R4ResourceType.MedicationAdministration)
-      @HiveField(0)
           this.resourceType = R4ResourceType.MedicationAdministration,
-      @HiveField(1)
-          this.id,
-      @HiveField(2)
-          this.meta,
-      @HiveField(3)
-          this.implicitRules,
+      this.id,
+      this.meta,
+      this.implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           this.implicitRulesElement,
-      @HiveField(5)
-          this.language,
+      this.language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           this.languageElement,
-      @HiveField(7)
-          this.text,
-      @HiveField(8)
-          final List<Resource>? contained,
+      this.text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           final List<FhirExtension>? extension_,
-      @HiveField(10)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          final List<Identifier>? identifier,
-      @HiveField(12)
-          final List<FhirUri>? instantiates,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final List<FhirUri>? instantiates,
       @JsonKey(name: '_instantiates')
-      @HiveField(13)
           final List<Element?>? instantiatesElement,
-      @HiveField(14)
-          final List<Reference>? partOf,
-      @HiveField(15)
-          this.status,
+      final List<Reference>? partOf,
+      this.status,
       @JsonKey(name: '_status')
-      @HiveField(16)
           this.statusElement,
-      @HiveField(17)
-          final List<CodeableConcept>? statusReason,
-      @HiveField(18)
-          this.category,
-      @HiveField(19)
-          this.medicationCodeableConcept,
-      @HiveField(20)
-          this.medicationReference,
-      @HiveField(21)
-          required this.subject,
-      @HiveField(22)
-          this.context,
-      @HiveField(23)
-          final List<Reference>? supportingInformation,
-      @HiveField(24)
-          this.effectiveDateTime,
+      final List<CodeableConcept>? statusReason,
+      this.category,
+      this.medicationCodeableConcept,
+      this.medicationReference,
+      required this.subject,
+      this.context,
+      final List<Reference>? supportingInformation,
+      this.effectiveDateTime,
       @JsonKey(name: '_effectiveDateTime')
-      @HiveField(25)
           this.effectiveDateTimeElement,
-      @HiveField(26)
-          this.effectivePeriod,
-      @HiveField(27)
-          final List<MedicationAdministrationPerformer>? performer,
-      @HiveField(28)
-          final List<CodeableConcept>? reasonCode,
-      @HiveField(29)
-          final List<Reference>? reasonReference,
-      @HiveField(30)
-          this.request,
-      @HiveField(31)
-          final List<Reference>? device,
-      @HiveField(32)
-          final List<Annotation>? note,
-      @HiveField(33)
-      @HiveField(34)
-          this.dosage,
-      @HiveField(35)
-      @HiveField(36)
-          final List<Reference>? eventHistory})
+      this.effectivePeriod,
+      final List<MedicationAdministrationPerformer>? performer,
+      final List<CodeableConcept>? reasonCode,
+      final List<Reference>? reasonReference,
+      this.request,
+      final List<Reference>? device,
+      final List<Annotation>? note,
+      this.dosage,
+      final List<Reference>? eventHistory})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -12616,20 +11591,17 @@ class _$_MedicationAdministration extends _MedicationAdministration {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.MedicationAdministration)
-  @HiveField(0)
   final R4ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
   @override
-  @HiveField(1)
   final String? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
-  @HiveField(2)
   final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -12637,24 +11609,20 @@ class _$_MedicationAdministration extends _MedicationAdministration {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   @override
-  @HiveField(3)
   final FhirUri? implicitRules;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
-  @HiveField(4)
   final Element? implicitRulesElement;
 
   /// [language] The base language in which the resource is written.
   @override
-  @HiveField(5)
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] Extensions for language
   @override
   @JsonKey(name: '_language')
-  @HiveField(6)
   final Element? languageElement;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -12664,7 +11632,6 @@ class _$_MedicationAdministration extends _MedicationAdministration {
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
   @override
-  @HiveField(7)
   final Narrative? text;
 
   /// [contained] These resources do not have an independent existence apart
@@ -12678,7 +11645,6 @@ class _$_MedicationAdministration extends _MedicationAdministration {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   @override
-  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -12703,7 +11669,6 @@ class _$_MedicationAdministration extends _MedicationAdministration {
   ///  as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
-  @HiveField(9)
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
@@ -12741,7 +11706,6 @@ class _$_MedicationAdministration extends _MedicationAdministration {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   @override
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -12766,7 +11730,6 @@ class _$_MedicationAdministration extends _MedicationAdministration {
   /// systems and remain constant as the resource is updated and propagates from
   ///  server to server.
   @override
-  @HiveField(11)
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
@@ -12782,7 +11745,6 @@ class _$_MedicationAdministration extends _MedicationAdministration {
   /// [instantiates] A protocol, guideline, orderset, or other definition that
   ///  was adhered to in whole or in part by this event.
   @override
-  @HiveField(12)
   List<FhirUri>? get instantiates {
     final value = _instantiates;
     if (value == null) return null;
@@ -12797,7 +11759,6 @@ class _$_MedicationAdministration extends _MedicationAdministration {
   /// [instantiatesElement] Extensions for instantiates
   @override
   @JsonKey(name: '_instantiates')
-  @HiveField(13)
   List<Element?>? get instantiatesElement {
     final value = _instantiatesElement;
     if (value == null) return null;
@@ -12814,7 +11775,6 @@ class _$_MedicationAdministration extends _MedicationAdministration {
   /// [partOf] A larger event of which this particular event is a component or
   ///  step.
   @override
-  @HiveField(14)
   List<Reference>? get partOf {
     final value = _partOf;
     if (value == null) return null;
@@ -12828,13 +11788,11 @@ class _$_MedicationAdministration extends _MedicationAdministration {
   /// possible for an administration to be started but not completed or it may
   ///  be paused while some other process is under way.
   @override
-  @HiveField(15)
-  final Code? status;
+  final FhirCode? status;
 
   /// [statusElement] Extensions for status
   @override
   @JsonKey(name: '_status')
-  @HiveField(16)
   final Element? statusElement;
 
   /// [statusReason] A code indicating why the administration was not
@@ -12844,7 +11802,6 @@ class _$_MedicationAdministration extends _MedicationAdministration {
   /// [statusReason] A code indicating why the administration was not
   ///  performed.
   @override
-  @HiveField(17)
   List<CodeableConcept>? get statusReason {
     final value = _statusReason;
     if (value == null) return null;
@@ -12856,7 +11813,6 @@ class _$_MedicationAdministration extends _MedicationAdministration {
   /// [category] Indicates where the medication is expected to be consumed or
   ///  administered.
   @override
-  @HiveField(18)
   final CodeableConcept? category;
 
   /// [medicationCodeableConcept] Identifies the medication that was
@@ -12864,7 +11820,6 @@ class _$_MedicationAdministration extends _MedicationAdministration {
   /// of the medication or a simple attribute carrying a code that identifies
   ///  the medication from a known list of medications.
   @override
-  @HiveField(19)
   final CodeableConcept? medicationCodeableConcept;
 
   /// [medicationReference] Identifies the medication that was administered.
@@ -12872,19 +11827,16 @@ class _$_MedicationAdministration extends _MedicationAdministration {
   /// medication or a simple attribute carrying a code that identifies the
   ///  medication from a known list of medications.
   @override
-  @HiveField(20)
   final Reference? medicationReference;
 
   /// [subject] The person or animal or group receiving the medication.
   @override
-  @HiveField(21)
   final Reference subject;
 
   /// [context] The visit, admission, or other contact between patient and
   /// health care provider during which the medication administration was
   ///  performed.
   @override
-  @HiveField(22)
   final Reference? context;
 
   /// [supportingInformation] Additional information (for example, patient
@@ -12894,7 +11846,6 @@ class _$_MedicationAdministration extends _MedicationAdministration {
   /// [supportingInformation] Additional information (for example, patient
   ///  height and weight) that supports the administration of the medication.
   @override
-  @HiveField(23)
   List<Reference>? get supportingInformation {
     final value = _supportingInformation;
     if (value == null) return null;
@@ -12909,13 +11860,11 @@ class _$_MedicationAdministration extends _MedicationAdministration {
   /// attribute is true). For many administrations, such as swallowing a tablet
   ///  the use of dateTime is more appropriate.
   @override
-  @HiveField(24)
   final FhirDateTime? effectiveDateTime;
 
   /// [effectiveDateTimeElement] Extensions for effectiveDateTime
   @override
   @JsonKey(name: '_effectiveDateTime')
-  @HiveField(25)
   final Element? effectiveDateTimeElement;
 
   /// [effectivePeriod] A specific date/time or interval of time during which
@@ -12923,7 +11872,6 @@ class _$_MedicationAdministration extends _MedicationAdministration {
   /// attribute is true). For many administrations, such as swallowing a tablet
   ///  the use of dateTime is more appropriate.
   @override
-  @HiveField(26)
   final Period? effectivePeriod;
 
   /// [performer] Indicates who or what performed the medication administration
@@ -12933,7 +11881,6 @@ class _$_MedicationAdministration extends _MedicationAdministration {
   /// [performer] Indicates who or what performed the medication administration
   ///  and how they were involved.
   @override
-  @HiveField(27)
   List<MedicationAdministrationPerformer>? get performer {
     final value = _performer;
     if (value == null) return null;
@@ -12947,7 +11894,6 @@ class _$_MedicationAdministration extends _MedicationAdministration {
 
   /// [reasonCode] A code indicating why the medication was given.
   @override
-  @HiveField(28)
   List<CodeableConcept>? get reasonCode {
     final value = _reasonCode;
     if (value == null) return null;
@@ -12963,7 +11909,6 @@ class _$_MedicationAdministration extends _MedicationAdministration {
   /// [reasonReference] Condition or observation that supports why the
   ///  medication was administered.
   @override
-  @HiveField(29)
   List<Reference>? get reasonReference {
     final value = _reasonReference;
     if (value == null) return null;
@@ -12975,7 +11920,6 @@ class _$_MedicationAdministration extends _MedicationAdministration {
   /// [request] The original request, instruction or authority to perform the
   ///  administration.
   @override
-  @HiveField(30)
   final Reference? request;
 
   /// [device] The device used in administering the medication to the patient.
@@ -12985,7 +11929,6 @@ class _$_MedicationAdministration extends _MedicationAdministration {
   /// [device] The device used in administering the medication to the patient.
   ///  For example, a particular infusion pump.
   @override
-  @HiveField(31)
   List<Reference>? get device {
     final value = _device;
     if (value == null) return null;
@@ -13001,7 +11944,6 @@ class _$_MedicationAdministration extends _MedicationAdministration {
   /// [note] Extra information about the medication administration that is not
   ///  conveyed by the other attributes.
   @override
-  @HiveField(32)
   List<Annotation>? get note {
     final value = _note;
     if (value == null) return null;
@@ -13010,14 +11952,18 @@ class _$_MedicationAdministration extends _MedicationAdministration {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [dosage] Describes the medication dosage information details e.g. dose,
+  ///  rate, site, route, etc.
   @override
-  @HiveField(33)
-  @HiveField(34)
   final MedicationAdministrationDosage? dosage;
+
+  /// [eventHistory] A summary of the events of interest that have occurred,
+  ///  such as when the administration was verified.
   final List<Reference>? _eventHistory;
+
+  /// [eventHistory] A summary of the events of interest that have occurred,
+  ///  such as when the administration was verified.
   @override
-  @HiveField(35)
-  @HiveField(36)
   List<Reference>? get eventHistory {
     final value = _eventHistory;
     if (value == null) return null;
@@ -13158,84 +12104,47 @@ class _$_MedicationAdministration extends _MedicationAdministration {
 abstract class _MedicationAdministration extends MedicationAdministration {
   factory _MedicationAdministration(
       {@JsonKey(unknownEnumValue: R4ResourceType.MedicationAdministration)
-      @HiveField(0)
           final R4ResourceType resourceType,
-      @HiveField(1)
-          final String? id,
-      @HiveField(2)
-          final FhirMeta? meta,
-      @HiveField(3)
-          final FhirUri? implicitRules,
+      final String? id,
+      final FhirMeta? meta,
+      final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           final Element? implicitRulesElement,
-      @HiveField(5)
-          final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           final Element? languageElement,
-      @HiveField(7)
-          final Narrative? text,
-      @HiveField(8)
-          final List<Resource>? contained,
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           final List<FhirExtension>? extension_,
-      @HiveField(10)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          final List<Identifier>? identifier,
-      @HiveField(12)
-          final List<FhirUri>? instantiates,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final List<FhirUri>? instantiates,
       @JsonKey(name: '_instantiates')
-      @HiveField(13)
           final List<Element?>? instantiatesElement,
-      @HiveField(14)
-          final List<Reference>? partOf,
-      @HiveField(15)
-          final Code? status,
+      final List<Reference>? partOf,
+      final FhirCode? status,
       @JsonKey(name: '_status')
-      @HiveField(16)
           final Element? statusElement,
-      @HiveField(17)
-          final List<CodeableConcept>? statusReason,
-      @HiveField(18)
-          final CodeableConcept? category,
-      @HiveField(19)
-          final CodeableConcept? medicationCodeableConcept,
-      @HiveField(20)
-          final Reference? medicationReference,
-      @HiveField(21)
-          required final Reference subject,
-      @HiveField(22)
-          final Reference? context,
-      @HiveField(23)
-          final List<Reference>? supportingInformation,
-      @HiveField(24)
-          final FhirDateTime? effectiveDateTime,
+      final List<CodeableConcept>? statusReason,
+      final CodeableConcept? category,
+      final CodeableConcept? medicationCodeableConcept,
+      final Reference? medicationReference,
+      required final Reference subject,
+      final Reference? context,
+      final List<Reference>? supportingInformation,
+      final FhirDateTime? effectiveDateTime,
       @JsonKey(name: '_effectiveDateTime')
-      @HiveField(25)
           final Element? effectiveDateTimeElement,
-      @HiveField(26)
-          final Period? effectivePeriod,
-      @HiveField(27)
-          final List<MedicationAdministrationPerformer>? performer,
-      @HiveField(28)
-          final List<CodeableConcept>? reasonCode,
-      @HiveField(29)
-          final List<Reference>? reasonReference,
-      @HiveField(30)
-          final Reference? request,
-      @HiveField(31)
-          final List<Reference>? device,
-      @HiveField(32)
-          final List<Annotation>? note,
-      @HiveField(33)
-      @HiveField(34)
-          final MedicationAdministrationDosage? dosage,
-      @HiveField(35)
-      @HiveField(36)
-          final List<Reference>? eventHistory}) = _$_MedicationAdministration;
+      final Period? effectivePeriod,
+      final List<MedicationAdministrationPerformer>? performer,
+      final List<CodeableConcept>? reasonCode,
+      final List<Reference>? reasonReference,
+      final Reference? request,
+      final List<Reference>? device,
+      final List<Annotation>? note,
+      final MedicationAdministrationDosage? dosage,
+      final List<Reference>? eventHistory}) = _$_MedicationAdministration;
   _MedicationAdministration._() : super._();
 
   factory _MedicationAdministration.fromJson(Map<String, dynamic> json) =
@@ -13243,20 +12152,17 @@ abstract class _MedicationAdministration extends MedicationAdministration {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.MedicationAdministration)
-  @HiveField(0)
   R4ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
-  @HiveField(1)
   String? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  @HiveField(2)
   FhirMeta? get meta;
   @override
 
@@ -13264,24 +12170,20 @@ abstract class _MedicationAdministration extends MedicationAdministration {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  @HiveField(3)
   FhirUri? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
-  @HiveField(4)
   Element? get implicitRulesElement;
   @override
 
   /// [language] The base language in which the resource is written.
-  @HiveField(5)
   FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
-  @HiveField(6)
   Element? get languageElement;
   @override
 
@@ -13291,7 +12193,6 @@ abstract class _MedicationAdministration extends MedicationAdministration {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
-  @HiveField(7)
   Narrative? get text;
   @override
 
@@ -13299,7 +12200,6 @@ abstract class _MedicationAdministration extends MedicationAdministration {
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
-  @HiveField(8)
   List<Resource>? get contained;
   @override
 
@@ -13310,7 +12210,6 @@ abstract class _MedicationAdministration extends MedicationAdministration {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
-  @HiveField(9)
   List<FhirExtension>? get extension_;
   @override
 
@@ -13327,7 +12226,6 @@ abstract class _MedicationAdministration extends MedicationAdministration {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
 
@@ -13337,25 +12235,21 @@ abstract class _MedicationAdministration extends MedicationAdministration {
   /// business identifiers assigned to this resource by the performer or other
   /// systems and remain constant as the resource is updated and propagates from
   ///  server to server.
-  @HiveField(11)
   List<Identifier>? get identifier;
   @override
 
   /// [instantiates] A protocol, guideline, orderset, or other definition that
   ///  was adhered to in whole or in part by this event.
-  @HiveField(12)
   List<FhirUri>? get instantiates;
   @override
 
   /// [instantiatesElement] Extensions for instantiates
   @JsonKey(name: '_instantiates')
-  @HiveField(13)
   List<Element?>? get instantiatesElement;
   @override
 
   /// [partOf] A larger event of which this particular event is a component or
   ///  step.
-  @HiveField(14)
   List<Reference>? get partOf;
   @override
 
@@ -13363,25 +12257,21 @@ abstract class _MedicationAdministration extends MedicationAdministration {
   /// completed.  For some long running administrations such as infusions, it is
   /// possible for an administration to be started but not completed or it may
   ///  be paused while some other process is under way.
-  @HiveField(15)
   FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
-  @HiveField(16)
   Element? get statusElement;
   @override
 
   /// [statusReason] A code indicating why the administration was not
   ///  performed.
-  @HiveField(17)
   List<CodeableConcept>? get statusReason;
   @override
 
   /// [category] Indicates where the medication is expected to be consumed or
   ///  administered.
-  @HiveField(18)
   CodeableConcept? get category;
   @override
 
@@ -13389,7 +12279,6 @@ abstract class _MedicationAdministration extends MedicationAdministration {
   /// administered. This is either a link to a resource representing the details
   /// of the medication or a simple attribute carrying a code that identifies
   ///  the medication from a known list of medications.
-  @HiveField(19)
   CodeableConcept? get medicationCodeableConcept;
   @override
 
@@ -13397,25 +12286,21 @@ abstract class _MedicationAdministration extends MedicationAdministration {
   /// This is either a link to a resource representing the details of the
   /// medication or a simple attribute carrying a code that identifies the
   ///  medication from a known list of medications.
-  @HiveField(20)
   Reference? get medicationReference;
   @override
 
   /// [subject] The person or animal or group receiving the medication.
-  @HiveField(21)
   Reference get subject;
   @override
 
   /// [context] The visit, admission, or other contact between patient and
   /// health care provider during which the medication administration was
   ///  performed.
-  @HiveField(22)
   Reference? get context;
   @override
 
   /// [supportingInformation] Additional information (for example, patient
   ///  height and weight) that supports the administration of the medication.
-  @HiveField(23)
   List<Reference>? get supportingInformation;
   @override
 
@@ -13423,13 +12308,11 @@ abstract class _MedicationAdministration extends MedicationAdministration {
   /// the administration took place (or did not take place, when the 'notGiven'
   /// attribute is true). For many administrations, such as swallowing a tablet
   ///  the use of dateTime is more appropriate.
-  @HiveField(24)
   FhirDateTime? get effectiveDateTime;
   @override
 
   /// [effectiveDateTimeElement] Extensions for effectiveDateTime
   @JsonKey(name: '_effectiveDateTime')
-  @HiveField(25)
   Element? get effectiveDateTimeElement;
   @override
 
@@ -13437,50 +12320,45 @@ abstract class _MedicationAdministration extends MedicationAdministration {
   /// the administration took place (or did not take place, when the 'notGiven'
   /// attribute is true). For many administrations, such as swallowing a tablet
   ///  the use of dateTime is more appropriate.
-  @HiveField(26)
   Period? get effectivePeriod;
   @override
 
   /// [performer] Indicates who or what performed the medication administration
   ///  and how they were involved.
-  @HiveField(27)
   List<MedicationAdministrationPerformer>? get performer;
   @override
 
   /// [reasonCode] A code indicating why the medication was given.
-  @HiveField(28)
   List<CodeableConcept>? get reasonCode;
   @override
 
   /// [reasonReference] Condition or observation that supports why the
   ///  medication was administered.
-  @HiveField(29)
   List<Reference>? get reasonReference;
   @override
 
   /// [request] The original request, instruction or authority to perform the
   ///  administration.
-  @HiveField(30)
   Reference? get request;
   @override
 
   /// [device] The device used in administering the medication to the patient.
   ///  For example, a particular infusion pump.
-  @HiveField(31)
   List<Reference>? get device;
   @override
 
   /// [note] Extra information about the medication administration that is not
   ///  conveyed by the other attributes.
-  @HiveField(32)
   List<Annotation>? get note;
   @override
-  @HiveField(33)
-  @HiveField(34)
+
+  /// [dosage] Describes the medication dosage information details e.g. dose,
+  ///  rate, site, route, etc.
   MedicationAdministrationDosage? get dosage;
   @override
-  @HiveField(35)
-  @HiveField(36)
+
+  /// [eventHistory] A summary of the events of interest that have occurred,
+  ///  such as when the administration was verified.
   List<Reference>? get eventHistory;
   @override
   @JsonKey(ignore: true)
@@ -14595,39 +13473,32 @@ MedicationDispense _$MedicationDispenseFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$MedicationDispense {
   @JsonKey(unknownEnumValue: R4ResourceType.MedicationDispense)
-  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
-  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  @HiveField(2)
   FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
-  @HiveField(4)
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  @HiveField(5)
   FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
-  @HiveField(6)
   Element? get languageElement => throw _privateConstructorUsedError;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -14636,14 +13507,12 @@ mixin _$MedicationDispense {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
-  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
 
   /// [contained] These resources do not have an independent existence apart
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
-  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -14653,7 +13522,6 @@ mixin _$MedicationDispense {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
-  @HiveField(9)
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [modifierExtension] May be used to represent additional information that
@@ -14669,7 +13537,6 @@ mixin _$MedicationDispense {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
@@ -14679,44 +13546,36 @@ mixin _$MedicationDispense {
   /// identifiers assigned to this resource by the performer or other systems
   /// and remain constant as the resource is updated and propagates from server
   ///  to server.
-  @HiveField(11)
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [partOf] The procedure that trigger the dispense.
-  @HiveField(12)
   List<Reference>? get partOf => throw _privateConstructorUsedError;
 
   /// [status] A code specifying the state of the set of dispense events.
-  @HiveField(13)
   FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
-  @HiveField(14)
   Element? get statusElement => throw _privateConstructorUsedError;
 
   /// [statusReasonCodeableConcept] Indicates the reason why a dispense was not
   ///  performed.
-  @HiveField(15)
   CodeableConcept? get statusReasonCodeableConcept =>
       throw _privateConstructorUsedError;
 
   /// [statusReasonReference] Indicates the reason why a dispense was not
   ///  performed.
-  @HiveField(16)
   Reference? get statusReasonReference => throw _privateConstructorUsedError;
 
   /// [category] Indicates the type of medication dispense (for example, where
   /// the medication is expected to be consumed or administered (i.e. inpatient
   ///  or outpatient)).
-  @HiveField(17)
   CodeableConcept? get category => throw _privateConstructorUsedError;
 
   /// [medicationCodeableConcept] Identifies the medication being administered.
   /// This is either a link to a resource representing the details of the
   /// medication or a simple attribute carrying a code that identifies the
   ///  medication from a known list of medications.
-  @HiveField(18)
   CodeableConcept? get medicationCodeableConcept =>
       throw _privateConstructorUsedError;
 
@@ -14724,94 +13583,77 @@ mixin _$MedicationDispense {
   /// is either a link to a resource representing the details of the medication
   /// or a simple attribute carrying a code that identifies the medication from
   ///  a known list of medications.
-  @HiveField(19)
   Reference? get medicationReference => throw _privateConstructorUsedError;
 
   /// [subject] A link to a resource representing the person or the group to
   ///  whom the medication will be given.
-  @HiveField(20)
   Reference? get subject => throw _privateConstructorUsedError;
 
   /// [context] The encounter or episode of care that establishes the context
   ///  for this event.
-  @HiveField(21)
   Reference? get context => throw _privateConstructorUsedError;
 
   /// [supportingInformation] Additional information that supports the
   ///  medication being dispensed.
-  @HiveField(22)
   List<Reference>? get supportingInformation =>
       throw _privateConstructorUsedError;
 
   /// [performer] Indicates who or what performed the event.
-  @HiveField(23)
   List<MedicationDispensePerformer>? get performer =>
       throw _privateConstructorUsedError;
 
   /// [location] The principal physical location where the dispense was
   ///  performed.
-  @HiveField(24)
   Reference? get location => throw _privateConstructorUsedError;
 
   /// [authorizingPrescription] Indicates the medication order that is being
   ///  dispensed against.
-  @HiveField(25)
   List<Reference>? get authorizingPrescription =>
       throw _privateConstructorUsedError;
 
   /// [type] Indicates the type of dispensing event that is performed. For
-  @HiveField(26)
-  @HiveField(27)
+  /// example, Trial Fill, Completion of Trial, Partial Fill, Emergency Fill,
+  ///  Samples, etc.
   CodeableConcept? get type => throw _privateConstructorUsedError;
 
   /// [quantity] The amount of medication that has been dispensed. Includes
   ///  unit of measure.
-  @HiveField(28)
   Quantity? get quantity => throw _privateConstructorUsedError;
 
   /// [daysSupply] The amount of medication expressed as a timing amount.
-  @HiveField(29)
   Quantity? get daysSupply => throw _privateConstructorUsedError;
 
   /// [whenPrepared] The time when the dispensed product was packaged and
   ///  reviewed.
-  @HiveField(30)
   FhirDateTime? get whenPrepared => throw _privateConstructorUsedError;
 
   /// [whenPreparedElement] Extensions for whenPrepared
   @JsonKey(name: '_whenPrepared')
-  @HiveField(31)
   Element? get whenPreparedElement => throw _privateConstructorUsedError;
 
   /// [whenHandedOver] The time the dispensed product was provided to the
   ///  patient or their representative.
-  @HiveField(32)
   FhirDateTime? get whenHandedOver => throw _privateConstructorUsedError;
 
   /// [whenHandedOverElement] Extensions for whenHandedOver
   @JsonKey(name: '_whenHandedOver')
-  @HiveField(33)
   Element? get whenHandedOverElement => throw _privateConstructorUsedError;
 
   /// [destination] Identification of the facility/location where the
   ///  medication was shipped to, as part of the dispense event.
-  @HiveField(34)
   Reference? get destination => throw _privateConstructorUsedError;
 
   /// [receiver] Identifies the person who picked up the medication.  This will
   /// usually be a patient or their caregiver, but some cases exist where it can
   ///  be a healthcare professional.
-  @HiveField(35)
   List<Reference>? get receiver => throw _privateConstructorUsedError;
 
   /// [note] Extra information about the dispense that could not be conveyed in
   ///  the other attributes.
-  @HiveField(36)
   List<Annotation>? get note => throw _privateConstructorUsedError;
 
   /// [dosageInstruction] Indicates how the medication is to be used by the
   ///  patient.
-  @HiveField(37)
   List<Dosage>? get dosageInstruction => throw _privateConstructorUsedError;
 
   /// [substitution] Indicates whether or not substitution was made as part of
@@ -14819,17 +13661,16 @@ mixin _$MedicationDispense {
   /// happen, in other cases substitution is not expected but does happen.  This
   /// block explains what substitution did or did not happen and why.  If
   ///  nothing is specified, substitution was not done.
-  @HiveField(38)
   MedicationDispenseSubstitution? get substitution =>
       throw _privateConstructorUsedError;
 
   /// [detectedIssue] Indicates an actual or potential clinical issue with or
   /// between one or more active or proposed clinical actions for a patient;
   ///  e.g. drug-drug interaction, duplicate therapy, dosage alert etc.
-  @HiveField(39)
   List<Reference>? get detectedIssue => throw _privateConstructorUsedError;
-  @HiveField(40)
-  @HiveField(41)
+
+  /// [eventHistory] A summary of the events of interest that have occurred,
+  ///  such as when the dispense was verified.
   List<Reference>? get eventHistory => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -14846,94 +13687,52 @@ abstract class $MedicationDispenseCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.MedicationDispense)
-      @HiveField(0)
           R4ResourceType resourceType,
-      @HiveField(1)
-          String? id,
-      @HiveField(2)
-          FhirMeta? meta,
-      @HiveField(3)
-          FhirUri? implicitRules,
+      String? id,
+      FhirMeta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           Element? implicitRulesElement,
-      @HiveField(5)
-          FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           Element? languageElement,
-      @HiveField(7)
-          Narrative? text,
-      @HiveField(8)
-          List<Resource>? contained,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           List<FhirExtension>? extension_,
-      @HiveField(10)
-          List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          List<Identifier>? identifier,
-      @HiveField(12)
-          List<Reference>? partOf,
-      @HiveField(13)
-          FhirCode? status,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      List<Reference>? partOf,
+      FhirCode? status,
       @JsonKey(name: '_status')
-      @HiveField(14)
           Element? statusElement,
-      @HiveField(15)
-          CodeableConcept? statusReasonCodeableConcept,
-      @HiveField(16)
-          Reference? statusReasonReference,
-      @HiveField(17)
-          CodeableConcept? category,
-      @HiveField(18)
-          CodeableConcept? medicationCodeableConcept,
-      @HiveField(19)
-          Reference? medicationReference,
-      @HiveField(20)
-          Reference? subject,
-      @HiveField(21)
-          Reference? context,
-      @HiveField(22)
-          List<Reference>? supportingInformation,
-      @HiveField(23)
-          List<MedicationDispensePerformer>? performer,
-      @HiveField(24)
-          Reference? location,
-      @HiveField(25)
-          List<Reference>? authorizingPrescription,
-      @HiveField(26)
-      @HiveField(27)
-          CodeableConcept? type,
-      @HiveField(28)
-          Quantity? quantity,
-      @HiveField(29)
-          Quantity? daysSupply,
-      @HiveField(30)
-          FhirDateTime? whenPrepared,
+      CodeableConcept? statusReasonCodeableConcept,
+      Reference? statusReasonReference,
+      CodeableConcept? category,
+      CodeableConcept? medicationCodeableConcept,
+      Reference? medicationReference,
+      Reference? subject,
+      Reference? context,
+      List<Reference>? supportingInformation,
+      List<MedicationDispensePerformer>? performer,
+      Reference? location,
+      List<Reference>? authorizingPrescription,
+      CodeableConcept? type,
+      Quantity? quantity,
+      Quantity? daysSupply,
+      FhirDateTime? whenPrepared,
       @JsonKey(name: '_whenPrepared')
-      @HiveField(31)
           Element? whenPreparedElement,
-      @HiveField(32)
-          FhirDateTime? whenHandedOver,
+      FhirDateTime? whenHandedOver,
       @JsonKey(name: '_whenHandedOver')
-      @HiveField(33)
           Element? whenHandedOverElement,
-      @HiveField(34)
-          Reference? destination,
-      @HiveField(35)
-          List<Reference>? receiver,
-      @HiveField(36)
-          List<Annotation>? note,
-      @HiveField(37)
-          List<Dosage>? dosageInstruction,
-      @HiveField(38)
-          MedicationDispenseSubstitution? substitution,
-      @HiveField(39)
-          List<Reference>? detectedIssue,
-      @HiveField(40)
-      @HiveField(41)
-          List<Reference>? eventHistory});
+      Reference? destination,
+      List<Reference>? receiver,
+      List<Annotation>? note,
+      List<Dosage>? dosageInstruction,
+      MedicationDispenseSubstitution? substitution,
+      List<Reference>? detectedIssue,
+      List<Reference>? eventHistory});
 
   $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -15035,7 +13834,7 @@ class _$MedicationDispenseCopyWithImpl<$Res, $Val extends MedicationDispense>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -15067,7 +13866,7 @@ class _$MedicationDispenseCopyWithImpl<$Res, $Val extends MedicationDispense>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -15429,94 +14228,52 @@ abstract class _$$_MedicationDispenseCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.MedicationDispense)
-      @HiveField(0)
           R4ResourceType resourceType,
-      @HiveField(1)
-          String? id,
-      @HiveField(2)
-          FhirMeta? meta,
-      @HiveField(3)
-          FhirUri? implicitRules,
+      String? id,
+      FhirMeta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           Element? implicitRulesElement,
-      @HiveField(5)
-          FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           Element? languageElement,
-      @HiveField(7)
-          Narrative? text,
-      @HiveField(8)
-          List<Resource>? contained,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           List<FhirExtension>? extension_,
-      @HiveField(10)
-          List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          List<Identifier>? identifier,
-      @HiveField(12)
-          List<Reference>? partOf,
-      @HiveField(13)
-          FhirCode? status,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      List<Reference>? partOf,
+      FhirCode? status,
       @JsonKey(name: '_status')
-      @HiveField(14)
           Element? statusElement,
-      @HiveField(15)
-          CodeableConcept? statusReasonCodeableConcept,
-      @HiveField(16)
-          Reference? statusReasonReference,
-      @HiveField(17)
-          CodeableConcept? category,
-      @HiveField(18)
-          CodeableConcept? medicationCodeableConcept,
-      @HiveField(19)
-          Reference? medicationReference,
-      @HiveField(20)
-          Reference? subject,
-      @HiveField(21)
-          Reference? context,
-      @HiveField(22)
-          List<Reference>? supportingInformation,
-      @HiveField(23)
-          List<MedicationDispensePerformer>? performer,
-      @HiveField(24)
-          Reference? location,
-      @HiveField(25)
-          List<Reference>? authorizingPrescription,
-      @HiveField(26)
-      @HiveField(27)
-          CodeableConcept? type,
-      @HiveField(28)
-          Quantity? quantity,
-      @HiveField(29)
-          Quantity? daysSupply,
-      @HiveField(30)
-          FhirDateTime? whenPrepared,
+      CodeableConcept? statusReasonCodeableConcept,
+      Reference? statusReasonReference,
+      CodeableConcept? category,
+      CodeableConcept? medicationCodeableConcept,
+      Reference? medicationReference,
+      Reference? subject,
+      Reference? context,
+      List<Reference>? supportingInformation,
+      List<MedicationDispensePerformer>? performer,
+      Reference? location,
+      List<Reference>? authorizingPrescription,
+      CodeableConcept? type,
+      Quantity? quantity,
+      Quantity? daysSupply,
+      FhirDateTime? whenPrepared,
       @JsonKey(name: '_whenPrepared')
-      @HiveField(31)
           Element? whenPreparedElement,
-      @HiveField(32)
-          FhirDateTime? whenHandedOver,
+      FhirDateTime? whenHandedOver,
       @JsonKey(name: '_whenHandedOver')
-      @HiveField(33)
           Element? whenHandedOverElement,
-      @HiveField(34)
-          Reference? destination,
-      @HiveField(35)
-          List<Reference>? receiver,
-      @HiveField(36)
-          List<Annotation>? note,
-      @HiveField(37)
-          List<Dosage>? dosageInstruction,
-      @HiveField(38)
-          MedicationDispenseSubstitution? substitution,
-      @HiveField(39)
-          List<Reference>? detectedIssue,
-      @HiveField(40)
-      @HiveField(41)
-          List<Reference>? eventHistory});
+      Reference? destination,
+      List<Reference>? receiver,
+      List<Annotation>? note,
+      List<Dosage>? dosageInstruction,
+      MedicationDispenseSubstitution? substitution,
+      List<Reference>? detectedIssue,
+      List<Reference>? eventHistory});
 
   @override
   $FhirMetaCopyWith<$Res>? get meta;
@@ -15636,7 +14393,7 @@ class __$$_MedicationDispenseCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -15668,7 +14425,7 @@ class __$$_MedicationDispenseCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -15779,98 +14536,55 @@ class __$$_MedicationDispenseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@HiveType(typeId: 219)
 class _$_MedicationDispense extends _MedicationDispense {
   _$_MedicationDispense(
       {@JsonKey(unknownEnumValue: R4ResourceType.MedicationDispense)
-      @HiveField(0)
           this.resourceType = R4ResourceType.MedicationDispense,
-      @HiveField(1)
-          this.id,
-      @HiveField(2)
-          this.meta,
-      @HiveField(3)
-          this.implicitRules,
+      this.id,
+      this.meta,
+      this.implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           this.implicitRulesElement,
-      @HiveField(5)
-          this.language,
+      this.language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           this.languageElement,
-      @HiveField(7)
-          this.text,
-      @HiveField(8)
-          final List<Resource>? contained,
+      this.text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           final List<FhirExtension>? extension_,
-      @HiveField(10)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          final List<Identifier>? identifier,
-      @HiveField(12)
-          final List<Reference>? partOf,
-      @HiveField(13)
-          this.status,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final List<Reference>? partOf,
+      this.status,
       @JsonKey(name: '_status')
-      @HiveField(14)
           this.statusElement,
-      @HiveField(15)
-          this.statusReasonCodeableConcept,
-      @HiveField(16)
-          this.statusReasonReference,
-      @HiveField(17)
-          this.category,
-      @HiveField(18)
-          this.medicationCodeableConcept,
-      @HiveField(19)
-          this.medicationReference,
-      @HiveField(20)
-          this.subject,
-      @HiveField(21)
-          this.context,
-      @HiveField(22)
-          final List<Reference>? supportingInformation,
-      @HiveField(23)
-          final List<MedicationDispensePerformer>? performer,
-      @HiveField(24)
-          this.location,
-      @HiveField(25)
-          final List<Reference>? authorizingPrescription,
-      @HiveField(26)
-      @HiveField(27)
-          this.type,
-      @HiveField(28)
-          this.quantity,
-      @HiveField(29)
-          this.daysSupply,
-      @HiveField(30)
-          this.whenPrepared,
+      this.statusReasonCodeableConcept,
+      this.statusReasonReference,
+      this.category,
+      this.medicationCodeableConcept,
+      this.medicationReference,
+      this.subject,
+      this.context,
+      final List<Reference>? supportingInformation,
+      final List<MedicationDispensePerformer>? performer,
+      this.location,
+      final List<Reference>? authorizingPrescription,
+      this.type,
+      this.quantity,
+      this.daysSupply,
+      this.whenPrepared,
       @JsonKey(name: '_whenPrepared')
-      @HiveField(31)
           this.whenPreparedElement,
-      @HiveField(32)
-          this.whenHandedOver,
+      this.whenHandedOver,
       @JsonKey(name: '_whenHandedOver')
-      @HiveField(33)
           this.whenHandedOverElement,
-      @HiveField(34)
-          this.destination,
-      @HiveField(35)
-          final List<Reference>? receiver,
-      @HiveField(36)
-          final List<Annotation>? note,
-      @HiveField(37)
-          final List<Dosage>? dosageInstruction,
-      @HiveField(38)
-          this.substitution,
-      @HiveField(39)
-          final List<Reference>? detectedIssue,
-      @HiveField(40)
-      @HiveField(41)
-          final List<Reference>? eventHistory})
+      this.destination,
+      final List<Reference>? receiver,
+      final List<Annotation>? note,
+      final List<Dosage>? dosageInstruction,
+      this.substitution,
+      final List<Reference>? detectedIssue,
+      final List<Reference>? eventHistory})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -15891,20 +14605,17 @@ class _$_MedicationDispense extends _MedicationDispense {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.MedicationDispense)
-  @HiveField(0)
   final R4ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
   @override
-  @HiveField(1)
   final String? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
-  @HiveField(2)
   final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -15912,24 +14623,20 @@ class _$_MedicationDispense extends _MedicationDispense {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   @override
-  @HiveField(3)
   final FhirUri? implicitRules;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
-  @HiveField(4)
   final Element? implicitRulesElement;
 
   /// [language] The base language in which the resource is written.
   @override
-  @HiveField(5)
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] Extensions for language
   @override
   @JsonKey(name: '_language')
-  @HiveField(6)
   final Element? languageElement;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -15939,7 +14646,6 @@ class _$_MedicationDispense extends _MedicationDispense {
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
   @override
-  @HiveField(7)
   final Narrative? text;
 
   /// [contained] These resources do not have an independent existence apart
@@ -15953,7 +14659,6 @@ class _$_MedicationDispense extends _MedicationDispense {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   @override
-  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -15978,7 +14683,6 @@ class _$_MedicationDispense extends _MedicationDispense {
   ///  as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
-  @HiveField(9)
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
@@ -16016,7 +14720,6 @@ class _$_MedicationDispense extends _MedicationDispense {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   @override
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -16041,7 +14744,6 @@ class _$_MedicationDispense extends _MedicationDispense {
   /// and remain constant as the resource is updated and propagates from server
   ///  to server.
   @override
-  @HiveField(11)
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
@@ -16055,7 +14757,6 @@ class _$_MedicationDispense extends _MedicationDispense {
 
   /// [partOf] The procedure that trigger the dispense.
   @override
-  @HiveField(12)
   List<Reference>? get partOf {
     final value = _partOf;
     if (value == null) return null;
@@ -16066,32 +14767,27 @@ class _$_MedicationDispense extends _MedicationDispense {
 
   /// [status] A code specifying the state of the set of dispense events.
   @override
-  @HiveField(13)
-  final Code? status;
+  final FhirCode? status;
 
   /// [statusElement] Extensions for status
   @override
   @JsonKey(name: '_status')
-  @HiveField(14)
   final Element? statusElement;
 
   /// [statusReasonCodeableConcept] Indicates the reason why a dispense was not
   ///  performed.
   @override
-  @HiveField(15)
   final CodeableConcept? statusReasonCodeableConcept;
 
   /// [statusReasonReference] Indicates the reason why a dispense was not
   ///  performed.
   @override
-  @HiveField(16)
   final Reference? statusReasonReference;
 
   /// [category] Indicates the type of medication dispense (for example, where
   /// the medication is expected to be consumed or administered (i.e. inpatient
   ///  or outpatient)).
   @override
-  @HiveField(17)
   final CodeableConcept? category;
 
   /// [medicationCodeableConcept] Identifies the medication being administered.
@@ -16099,7 +14795,6 @@ class _$_MedicationDispense extends _MedicationDispense {
   /// medication or a simple attribute carrying a code that identifies the
   ///  medication from a known list of medications.
   @override
-  @HiveField(18)
   final CodeableConcept? medicationCodeableConcept;
 
   /// [medicationReference] Identifies the medication being administered. This
@@ -16107,19 +14802,16 @@ class _$_MedicationDispense extends _MedicationDispense {
   /// or a simple attribute carrying a code that identifies the medication from
   ///  a known list of medications.
   @override
-  @HiveField(19)
   final Reference? medicationReference;
 
   /// [subject] A link to a resource representing the person or the group to
   ///  whom the medication will be given.
   @override
-  @HiveField(20)
   final Reference? subject;
 
   /// [context] The encounter or episode of care that establishes the context
   ///  for this event.
   @override
-  @HiveField(21)
   final Reference? context;
 
   /// [supportingInformation] Additional information that supports the
@@ -16129,7 +14821,6 @@ class _$_MedicationDispense extends _MedicationDispense {
   /// [supportingInformation] Additional information that supports the
   ///  medication being dispensed.
   @override
-  @HiveField(22)
   List<Reference>? get supportingInformation {
     final value = _supportingInformation;
     if (value == null) return null;
@@ -16144,7 +14835,6 @@ class _$_MedicationDispense extends _MedicationDispense {
 
   /// [performer] Indicates who or what performed the event.
   @override
-  @HiveField(23)
   List<MedicationDispensePerformer>? get performer {
     final value = _performer;
     if (value == null) return null;
@@ -16156,7 +14846,6 @@ class _$_MedicationDispense extends _MedicationDispense {
   /// [location] The principal physical location where the dispense was
   ///  performed.
   @override
-  @HiveField(24)
   final Reference? location;
 
   /// [authorizingPrescription] Indicates the medication order that is being
@@ -16166,7 +14855,6 @@ class _$_MedicationDispense extends _MedicationDispense {
   /// [authorizingPrescription] Indicates the medication order that is being
   ///  dispensed against.
   @override
-  @HiveField(25)
   List<Reference>? get authorizingPrescription {
     final value = _authorizingPrescription;
     if (value == null) return null;
@@ -16177,50 +14865,43 @@ class _$_MedicationDispense extends _MedicationDispense {
   }
 
   /// [type] Indicates the type of dispensing event that is performed. For
+  /// example, Trial Fill, Completion of Trial, Partial Fill, Emergency Fill,
+  ///  Samples, etc.
   @override
-  @HiveField(26)
-  @HiveField(27)
   final CodeableConcept? type;
 
   /// [quantity] The amount of medication that has been dispensed. Includes
   ///  unit of measure.
   @override
-  @HiveField(28)
   final Quantity? quantity;
 
   /// [daysSupply] The amount of medication expressed as a timing amount.
   @override
-  @HiveField(29)
   final Quantity? daysSupply;
 
   /// [whenPrepared] The time when the dispensed product was packaged and
   ///  reviewed.
   @override
-  @HiveField(30)
   final FhirDateTime? whenPrepared;
 
   /// [whenPreparedElement] Extensions for whenPrepared
   @override
   @JsonKey(name: '_whenPrepared')
-  @HiveField(31)
   final Element? whenPreparedElement;
 
   /// [whenHandedOver] The time the dispensed product was provided to the
   ///  patient or their representative.
   @override
-  @HiveField(32)
   final FhirDateTime? whenHandedOver;
 
   /// [whenHandedOverElement] Extensions for whenHandedOver
   @override
   @JsonKey(name: '_whenHandedOver')
-  @HiveField(33)
   final Element? whenHandedOverElement;
 
   /// [destination] Identification of the facility/location where the
   ///  medication was shipped to, as part of the dispense event.
   @override
-  @HiveField(34)
   final Reference? destination;
 
   /// [receiver] Identifies the person who picked up the medication.  This will
@@ -16232,7 +14913,6 @@ class _$_MedicationDispense extends _MedicationDispense {
   /// usually be a patient or their caregiver, but some cases exist where it can
   ///  be a healthcare professional.
   @override
-  @HiveField(35)
   List<Reference>? get receiver {
     final value = _receiver;
     if (value == null) return null;
@@ -16248,7 +14928,6 @@ class _$_MedicationDispense extends _MedicationDispense {
   /// [note] Extra information about the dispense that could not be conveyed in
   ///  the other attributes.
   @override
-  @HiveField(36)
   List<Annotation>? get note {
     final value = _note;
     if (value == null) return null;
@@ -16264,7 +14943,6 @@ class _$_MedicationDispense extends _MedicationDispense {
   /// [dosageInstruction] Indicates how the medication is to be used by the
   ///  patient.
   @override
-  @HiveField(37)
   List<Dosage>? get dosageInstruction {
     final value = _dosageInstruction;
     if (value == null) return null;
@@ -16280,7 +14958,6 @@ class _$_MedicationDispense extends _MedicationDispense {
   /// block explains what substitution did or did not happen and why.  If
   ///  nothing is specified, substitution was not done.
   @override
-  @HiveField(38)
   final MedicationDispenseSubstitution? substitution;
 
   /// [detectedIssue] Indicates an actual or potential clinical issue with or
@@ -16292,7 +14969,6 @@ class _$_MedicationDispense extends _MedicationDispense {
   /// between one or more active or proposed clinical actions for a patient;
   ///  e.g. drug-drug interaction, duplicate therapy, dosage alert etc.
   @override
-  @HiveField(39)
   List<Reference>? get detectedIssue {
     final value = _detectedIssue;
     if (value == null) return null;
@@ -16301,10 +14977,13 @@ class _$_MedicationDispense extends _MedicationDispense {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [eventHistory] A summary of the events of interest that have occurred,
+  ///  such as when the dispense was verified.
   final List<Reference>? _eventHistory;
+
+  /// [eventHistory] A summary of the events of interest that have occurred,
+  ///  such as when the dispense was verified.
   @override
-  @HiveField(40)
-  @HiveField(41)
   List<Reference>? get eventHistory {
     final value = _eventHistory;
     if (value == null) return null;
@@ -16460,94 +15139,52 @@ class _$_MedicationDispense extends _MedicationDispense {
 abstract class _MedicationDispense extends MedicationDispense {
   factory _MedicationDispense(
       {@JsonKey(unknownEnumValue: R4ResourceType.MedicationDispense)
-      @HiveField(0)
           final R4ResourceType resourceType,
-      @HiveField(1)
-          final String? id,
-      @HiveField(2)
-          final FhirMeta? meta,
-      @HiveField(3)
-          final FhirUri? implicitRules,
+      final String? id,
+      final FhirMeta? meta,
+      final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           final Element? implicitRulesElement,
-      @HiveField(5)
-          final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           final Element? languageElement,
-      @HiveField(7)
-          final Narrative? text,
-      @HiveField(8)
-          final List<Resource>? contained,
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           final List<FhirExtension>? extension_,
-      @HiveField(10)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          final List<Identifier>? identifier,
-      @HiveField(12)
-          final List<Reference>? partOf,
-      @HiveField(13)
-          final Code? status,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final List<Reference>? partOf,
+      final FhirCode? status,
       @JsonKey(name: '_status')
-      @HiveField(14)
           final Element? statusElement,
-      @HiveField(15)
-          final CodeableConcept? statusReasonCodeableConcept,
-      @HiveField(16)
-          final Reference? statusReasonReference,
-      @HiveField(17)
-          final CodeableConcept? category,
-      @HiveField(18)
-          final CodeableConcept? medicationCodeableConcept,
-      @HiveField(19)
-          final Reference? medicationReference,
-      @HiveField(20)
-          final Reference? subject,
-      @HiveField(21)
-          final Reference? context,
-      @HiveField(22)
-          final List<Reference>? supportingInformation,
-      @HiveField(23)
-          final List<MedicationDispensePerformer>? performer,
-      @HiveField(24)
-          final Reference? location,
-      @HiveField(25)
-          final List<Reference>? authorizingPrescription,
-      @HiveField(26)
-      @HiveField(27)
-          final CodeableConcept? type,
-      @HiveField(28)
-          final Quantity? quantity,
-      @HiveField(29)
-          final Quantity? daysSupply,
-      @HiveField(30)
-          final FhirDateTime? whenPrepared,
+      final CodeableConcept? statusReasonCodeableConcept,
+      final Reference? statusReasonReference,
+      final CodeableConcept? category,
+      final CodeableConcept? medicationCodeableConcept,
+      final Reference? medicationReference,
+      final Reference? subject,
+      final Reference? context,
+      final List<Reference>? supportingInformation,
+      final List<MedicationDispensePerformer>? performer,
+      final Reference? location,
+      final List<Reference>? authorizingPrescription,
+      final CodeableConcept? type,
+      final Quantity? quantity,
+      final Quantity? daysSupply,
+      final FhirDateTime? whenPrepared,
       @JsonKey(name: '_whenPrepared')
-      @HiveField(31)
           final Element? whenPreparedElement,
-      @HiveField(32)
-          final FhirDateTime? whenHandedOver,
+      final FhirDateTime? whenHandedOver,
       @JsonKey(name: '_whenHandedOver')
-      @HiveField(33)
           final Element? whenHandedOverElement,
-      @HiveField(34)
-          final Reference? destination,
-      @HiveField(35)
-          final List<Reference>? receiver,
-      @HiveField(36)
-          final List<Annotation>? note,
-      @HiveField(37)
-          final List<Dosage>? dosageInstruction,
-      @HiveField(38)
-          final MedicationDispenseSubstitution? substitution,
-      @HiveField(39)
-          final List<Reference>? detectedIssue,
-      @HiveField(40)
-      @HiveField(41)
-          final List<Reference>? eventHistory}) = _$_MedicationDispense;
+      final Reference? destination,
+      final List<Reference>? receiver,
+      final List<Annotation>? note,
+      final List<Dosage>? dosageInstruction,
+      final MedicationDispenseSubstitution? substitution,
+      final List<Reference>? detectedIssue,
+      final List<Reference>? eventHistory}) = _$_MedicationDispense;
   _MedicationDispense._() : super._();
 
   factory _MedicationDispense.fromJson(Map<String, dynamic> json) =
@@ -16555,20 +15192,17 @@ abstract class _MedicationDispense extends MedicationDispense {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.MedicationDispense)
-  @HiveField(0)
   R4ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
-  @HiveField(1)
   String? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  @HiveField(2)
   FhirMeta? get meta;
   @override
 
@@ -16576,24 +15210,20 @@ abstract class _MedicationDispense extends MedicationDispense {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  @HiveField(3)
   FhirUri? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
-  @HiveField(4)
   Element? get implicitRulesElement;
   @override
 
   /// [language] The base language in which the resource is written.
-  @HiveField(5)
   FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
-  @HiveField(6)
   Element? get languageElement;
   @override
 
@@ -16603,7 +15233,6 @@ abstract class _MedicationDispense extends MedicationDispense {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
-  @HiveField(7)
   Narrative? get text;
   @override
 
@@ -16611,7 +15240,6 @@ abstract class _MedicationDispense extends MedicationDispense {
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
-  @HiveField(8)
   List<Resource>? get contained;
   @override
 
@@ -16622,7 +15250,6 @@ abstract class _MedicationDispense extends MedicationDispense {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
-  @HiveField(9)
   List<FhirExtension>? get extension_;
   @override
 
@@ -16639,7 +15266,6 @@ abstract class _MedicationDispense extends MedicationDispense {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
 
@@ -16649,42 +15275,35 @@ abstract class _MedicationDispense extends MedicationDispense {
   /// identifiers assigned to this resource by the performer or other systems
   /// and remain constant as the resource is updated and propagates from server
   ///  to server.
-  @HiveField(11)
   List<Identifier>? get identifier;
   @override
 
   /// [partOf] The procedure that trigger the dispense.
-  @HiveField(12)
   List<Reference>? get partOf;
   @override
 
   /// [status] A code specifying the state of the set of dispense events.
-  @HiveField(13)
   FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
-  @HiveField(14)
   Element? get statusElement;
   @override
 
   /// [statusReasonCodeableConcept] Indicates the reason why a dispense was not
   ///  performed.
-  @HiveField(15)
   CodeableConcept? get statusReasonCodeableConcept;
   @override
 
   /// [statusReasonReference] Indicates the reason why a dispense was not
   ///  performed.
-  @HiveField(16)
   Reference? get statusReasonReference;
   @override
 
   /// [category] Indicates the type of medication dispense (for example, where
   /// the medication is expected to be consumed or administered (i.e. inpatient
   ///  or outpatient)).
-  @HiveField(17)
   CodeableConcept? get category;
   @override
 
@@ -16692,7 +15311,6 @@ abstract class _MedicationDispense extends MedicationDispense {
   /// This is either a link to a resource representing the details of the
   /// medication or a simple attribute carrying a code that identifies the
   ///  medication from a known list of medications.
-  @HiveField(18)
   CodeableConcept? get medicationCodeableConcept;
   @override
 
@@ -16700,108 +15318,91 @@ abstract class _MedicationDispense extends MedicationDispense {
   /// is either a link to a resource representing the details of the medication
   /// or a simple attribute carrying a code that identifies the medication from
   ///  a known list of medications.
-  @HiveField(19)
   Reference? get medicationReference;
   @override
 
   /// [subject] A link to a resource representing the person or the group to
   ///  whom the medication will be given.
-  @HiveField(20)
   Reference? get subject;
   @override
 
   /// [context] The encounter or episode of care that establishes the context
   ///  for this event.
-  @HiveField(21)
   Reference? get context;
   @override
 
   /// [supportingInformation] Additional information that supports the
   ///  medication being dispensed.
-  @HiveField(22)
   List<Reference>? get supportingInformation;
   @override
 
   /// [performer] Indicates who or what performed the event.
-  @HiveField(23)
   List<MedicationDispensePerformer>? get performer;
   @override
 
   /// [location] The principal physical location where the dispense was
   ///  performed.
-  @HiveField(24)
   Reference? get location;
   @override
 
   /// [authorizingPrescription] Indicates the medication order that is being
   ///  dispensed against.
-  @HiveField(25)
   List<Reference>? get authorizingPrescription;
   @override
 
   /// [type] Indicates the type of dispensing event that is performed. For
-  @HiveField(26)
-  @HiveField(27)
+  /// example, Trial Fill, Completion of Trial, Partial Fill, Emergency Fill,
+  ///  Samples, etc.
   CodeableConcept? get type;
   @override
 
   /// [quantity] The amount of medication that has been dispensed. Includes
   ///  unit of measure.
-  @HiveField(28)
   Quantity? get quantity;
   @override
 
   /// [daysSupply] The amount of medication expressed as a timing amount.
-  @HiveField(29)
   Quantity? get daysSupply;
   @override
 
   /// [whenPrepared] The time when the dispensed product was packaged and
   ///  reviewed.
-  @HiveField(30)
   FhirDateTime? get whenPrepared;
   @override
 
   /// [whenPreparedElement] Extensions for whenPrepared
   @JsonKey(name: '_whenPrepared')
-  @HiveField(31)
   Element? get whenPreparedElement;
   @override
 
   /// [whenHandedOver] The time the dispensed product was provided to the
   ///  patient or their representative.
-  @HiveField(32)
   FhirDateTime? get whenHandedOver;
   @override
 
   /// [whenHandedOverElement] Extensions for whenHandedOver
   @JsonKey(name: '_whenHandedOver')
-  @HiveField(33)
   Element? get whenHandedOverElement;
   @override
 
   /// [destination] Identification of the facility/location where the
   ///  medication was shipped to, as part of the dispense event.
-  @HiveField(34)
   Reference? get destination;
   @override
 
   /// [receiver] Identifies the person who picked up the medication.  This will
   /// usually be a patient or their caregiver, but some cases exist where it can
   ///  be a healthcare professional.
-  @HiveField(35)
   List<Reference>? get receiver;
   @override
 
   /// [note] Extra information about the dispense that could not be conveyed in
   ///  the other attributes.
-  @HiveField(36)
   List<Annotation>? get note;
   @override
 
   /// [dosageInstruction] Indicates how the medication is to be used by the
   ///  patient.
-  @HiveField(37)
   List<Dosage>? get dosageInstruction;
   @override
 
@@ -16810,18 +15411,17 @@ abstract class _MedicationDispense extends MedicationDispense {
   /// happen, in other cases substitution is not expected but does happen.  This
   /// block explains what substitution did or did not happen and why.  If
   ///  nothing is specified, substitution was not done.
-  @HiveField(38)
   MedicationDispenseSubstitution? get substitution;
   @override
 
   /// [detectedIssue] Indicates an actual or potential clinical issue with or
   /// between one or more active or proposed clinical actions for a patient;
   ///  e.g. drug-drug interaction, duplicate therapy, dosage alert etc.
-  @HiveField(39)
   List<Reference>? get detectedIssue;
   @override
-  @HiveField(40)
-  @HiveField(41)
+
+  /// [eventHistory] A summary of the events of interest that have occurred,
+  ///  such as when the dispense was verified.
   List<Reference>? get eventHistory;
   @override
   @JsonKey(ignore: true)
@@ -17265,7 +15865,7 @@ mixin _$MedicationDispenseSubstitution {
 
   /// [wasSubstituted] True if the dispenser dispensed a different drug or
   ///  product from what was prescribed.
-  Boolean? get wasSubstituted => throw _privateConstructorUsedError;
+  FhirBoolean? get wasSubstituted => throw _privateConstructorUsedError;
 
   /// [wasSubstitutedElement] Extensions for wasSubstituted
   @JsonKey(name: '_wasSubstituted')
@@ -17301,7 +15901,7 @@ abstract class $MedicationDispenseSubstitutionCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Boolean? wasSubstituted,
+      FhirBoolean? wasSubstituted,
       @JsonKey(name: '_wasSubstituted') Element? wasSubstitutedElement,
       CodeableConcept? type,
       List<CodeableConcept>? reason,
@@ -17350,7 +15950,7 @@ class _$MedicationDispenseSubstitutionCopyWithImpl<$Res,
       wasSubstituted: freezed == wasSubstituted
           ? _value.wasSubstituted
           : wasSubstituted // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       wasSubstitutedElement: freezed == wasSubstitutedElement
           ? _value.wasSubstitutedElement
           : wasSubstitutedElement // ignore: cast_nullable_to_non_nullable
@@ -17408,7 +16008,7 @@ abstract class _$$_MedicationDispenseSubstitutionCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Boolean? wasSubstituted,
+      FhirBoolean? wasSubstituted,
       @JsonKey(name: '_wasSubstituted') Element? wasSubstitutedElement,
       CodeableConcept? type,
       List<CodeableConcept>? reason,
@@ -17458,7 +16058,7 @@ class __$$_MedicationDispenseSubstitutionCopyWithImpl<$Res>
       wasSubstituted: freezed == wasSubstituted
           ? _value.wasSubstituted
           : wasSubstituted // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       wasSubstitutedElement: freezed == wasSubstitutedElement
           ? _value.wasSubstitutedElement
           : wasSubstitutedElement // ignore: cast_nullable_to_non_nullable
@@ -17572,7 +16172,7 @@ class _$_MedicationDispenseSubstitution
   /// [wasSubstituted] True if the dispenser dispensed a different drug or
   ///  product from what was prescribed.
   @override
-  final Boolean? wasSubstituted;
+  final FhirBoolean? wasSubstituted;
 
   /// [wasSubstitutedElement] Extensions for wasSubstituted
   @override
@@ -17674,7 +16274,7 @@ abstract class _MedicationDispenseSubstitution
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final Boolean? wasSubstituted,
+      final FhirBoolean? wasSubstituted,
       @JsonKey(name: '_wasSubstituted') final Element? wasSubstitutedElement,
       final CodeableConcept? type,
       final List<CodeableConcept>? reason,
@@ -17720,7 +16320,7 @@ abstract class _MedicationDispenseSubstitution
 
   /// [wasSubstituted] True if the dispenser dispensed a different drug or
   ///  product from what was prescribed.
-  Boolean? get wasSubstituted;
+  FhirBoolean? get wasSubstituted;
   @override
 
   /// [wasSubstitutedElement] Extensions for wasSubstituted
@@ -17754,39 +16354,32 @@ MedicationKnowledge _$MedicationKnowledgeFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$MedicationKnowledge {
   @JsonKey(unknownEnumValue: R4ResourceType.MedicationKnowledge)
-  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
-  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  @HiveField(2)
   FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
-  @HiveField(4)
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  @HiveField(5)
   FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
-  @HiveField(6)
   Element? get languageElement => throw _privateConstructorUsedError;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -17795,14 +16388,12 @@ mixin _$MedicationKnowledge {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
-  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
 
   /// [contained] These resources do not have an independent existence apart
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
-  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -17812,7 +16403,6 @@ mixin _$MedicationKnowledge {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
-  @HiveField(9)
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [modifierExtension] May be used to represent additional information that
@@ -17828,7 +16418,6 @@ mixin _$MedicationKnowledge {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
@@ -17837,28 +16426,23 @@ mixin _$MedicationKnowledge {
   /// such as a code from RxNorm, SNOMED CT, IDMP etc. It could also be a
   /// national or local formulary code, optionally with translations to other
   ///  code systems.
-  @HiveField(11)
   CodeableConcept? get code => throw _privateConstructorUsedError;
 
   /// [status] A code to indicate if the medication is in active use.  The
   /// status refers to the validity about the information of the medication and
   ///  not to its medicinal properties.
-  @HiveField(12)
   FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
-  @HiveField(13)
   Element? get statusElement => throw _privateConstructorUsedError;
 
   /// [manufacturer] Describes the details of the manufacturer of the
   /// medication product.  This is not intended to represent the distributor of
   ///  a medication product.
-  @HiveField(14)
   Reference? get manufacturer => throw _privateConstructorUsedError;
 
   /// [doseForm] Describes the form of the item.  Powder; tablets; capsule.
-  @HiveField(15)
   CodeableConcept? get doseForm => throw _privateConstructorUsedError;
 
   /// [amount] Specific amount of the drug in the packaged product.  For
@@ -17866,23 +16450,16 @@ mixin _$MedicationKnowledge {
   /// example, Insulin glargine 100 unit per mL solution for injection), this
   /// attribute provides additional clarification of the package amount (For
   ///  example, 3 mL, 10mL, etc.).
-  @HiveField(16)
   Quantity? get amount => throw _privateConstructorUsedError;
 
   /// [synonym] Additional names for a medication, for example, the name(s)
   /// given to a medication in different countries.  For example, acetaminophen
   ///  and paracetamol or salbutamol and albuterol.
-  @HiveField(17)
   List<String>? get synonym => throw _privateConstructorUsedError;
 
   /// [synonymElement] Extensions for synonym
-  @HiveField(18)
   @JsonKey(name: '_synonym')
   List<Element?>? get synonymElement => throw _privateConstructorUsedError;
-
-  /// [relatedMedicationKnowledge] Associated or related knowledge about a
-  ///  medication.
-  @HiveField(19)
   List<MedicationKnowledgeRelatedMedicationKnowledge>?
       get relatedMedicationKnowledge => throw _privateConstructorUsedError;
 
@@ -17890,83 +16467,70 @@ mixin _$MedicationKnowledge {
   /// if the medication is a branded product (e.g. Crestor), this is the
   /// Therapeutic Moeity (e.g. Rosuvastatin) or if this is a generic medication
   ///  (e.g. Rosuvastatin), this would link to a branded product (e.g. Crestor).
-  @HiveField(20)
-  @HiveField(21)
   List<Reference>? get associatedMedication =>
       throw _privateConstructorUsedError;
 
   /// [productType] Category of the medication or product (e.g. branded
   ///  product, therapeutic moeity, generic product, innovator product, etc.).
-  @HiveField(22)
   List<CodeableConcept>? get productType => throw _privateConstructorUsedError;
 
   /// [monograph] Associated documentation about the medication.
-  @HiveField(23)
   List<MedicationKnowledgeMonograph>? get monograph =>
       throw _privateConstructorUsedError;
 
   /// [ingredient] Identifies a particular constituent of interest in the
   ///  product.
-  @HiveField(24)
   List<MedicationKnowledgeIngredient>? get ingredient =>
       throw _privateConstructorUsedError;
 
   /// [preparationInstruction] The instructions for preparing the medication.
-  @HiveField(25)
-  Markdown? get preparationInstruction => throw _privateConstructorUsedError;
+  FhirMarkdown? get preparationInstruction =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_preparationInstruction')
-  @HiveField(26)
   Element? get preparationInstructionElement =>
       throw _privateConstructorUsedError;
 
   /// [intendedRoute] The intended or approved route of administration.
-  @HiveField(27)
   List<CodeableConcept>? get intendedRoute =>
       throw _privateConstructorUsedError;
 
   /// [cost] The price of the medication.
-  @HiveField(28)
   List<MedicationKnowledgeCost>? get cost => throw _privateConstructorUsedError;
 
   /// [monitoringProgram] The program under which the medication is reviewed.
-  @HiveField(29)
   List<MedicationKnowledgeMonitoringProgram>? get monitoringProgram =>
       throw _privateConstructorUsedError;
 
   /// [administrationGuidelines] Guidelines for the administration of the
   ///  medication.
-  @HiveField(30)
   List<MedicationKnowledgeAdministrationGuidelines>?
       get administrationGuidelines => throw _privateConstructorUsedError;
 
   /// [medicineClassification] Categorization of the medication within a
   ///  formulary or classification system.
-  @HiveField(31)
   List<MedicationKnowledgeMedicineClassification>? get medicineClassification =>
       throw _privateConstructorUsedError;
 
   /// [packaging] Information that only applies to packages (not products).
-  @HiveField(32)
   MedicationKnowledgePackaging? get packaging =>
       throw _privateConstructorUsedError;
-  @HiveField(33)
-  @HiveField(34)
+
+  /// [drugCharacteristic] Specifies descriptive properties of the medicine,
+  ///  such as color, shape, imprints, etc.
   List<MedicationKnowledgeDrugCharacteristic>? get drugCharacteristic =>
       throw _privateConstructorUsedError;
 
   /// [contraindication] Potential clinical issue with or between medication(s)
-  @HiveField(35)
-  @HiveField(36)
+  /// (for example, drug-drug interaction, drug-disease contraindication,
+  ///  drug-allergy interaction, etc.).
   List<Reference>? get contraindication => throw _privateConstructorUsedError;
 
   /// [regulatory] Regulatory information about a medication.
-  @HiveField(37)
   List<MedicationKnowledgeRegulatory>? get regulatory =>
       throw _privateConstructorUsedError;
 
   /// [kinetics] The time course of drug absorption, distribution, metabolism
   ///  and excretion of a medication from the body.
-  @HiveField(38)
   List<MedicationKnowledgeKinetics>? get kinetics =>
       throw _privateConstructorUsedError;
 
@@ -17984,90 +16548,50 @@ abstract class $MedicationKnowledgeCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.MedicationKnowledge)
-      @HiveField(0)
           R4ResourceType resourceType,
-      @HiveField(1)
-          String? id,
-      @HiveField(2)
-          FhirMeta? meta,
-      @HiveField(3)
-          FhirUri? implicitRules,
+      String? id,
+      FhirMeta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           Element? implicitRulesElement,
-      @HiveField(5)
-          FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           Element? languageElement,
-      @HiveField(7)
-          Narrative? text,
-      @HiveField(8)
-          List<Resource>? contained,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           List<FhirExtension>? extension_,
-      @HiveField(10)
-          List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          CodeableConcept? code,
-      @HiveField(12)
-          FhirCode? status,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept? code,
+      FhirCode? status,
       @JsonKey(name: '_status')
-      @HiveField(13)
           Element? statusElement,
-      @HiveField(14)
-          Reference? manufacturer,
-      @HiveField(15)
-          CodeableConcept? doseForm,
-      @HiveField(16)
-          Quantity? amount,
-      @HiveField(17)
-          List<String>? synonym,
-      @HiveField(18)
+      Reference? manufacturer,
+      CodeableConcept? doseForm,
+      Quantity? amount,
+      List<String>? synonym,
       @JsonKey(name: '_synonym')
           List<Element?>? synonymElement,
-      @HiveField(19)
-          List<MedicationKnowledgeRelatedMedicationKnowledge>?
-              relatedMedicationKnowledge,
-      @HiveField(20)
-      @HiveField(21)
-          List<Reference>? associatedMedication,
-      @HiveField(22)
-          List<CodeableConcept>? productType,
-      @HiveField(23)
-          List<MedicationKnowledgeMonograph>? monograph,
-      @HiveField(24)
-          List<MedicationKnowledgeIngredient>? ingredient,
-      @HiveField(25)
-          Markdown? preparationInstruction,
+      List<MedicationKnowledgeRelatedMedicationKnowledge>?
+          relatedMedicationKnowledge,
+      List<Reference>? associatedMedication,
+      List<CodeableConcept>? productType,
+      List<MedicationKnowledgeMonograph>? monograph,
+      List<MedicationKnowledgeIngredient>? ingredient,
+      FhirMarkdown? preparationInstruction,
       @JsonKey(name: '_preparationInstruction')
-      @HiveField(26)
           Element? preparationInstructionElement,
-      @HiveField(27)
-          List<CodeableConcept>? intendedRoute,
-      @HiveField(28)
-          List<MedicationKnowledgeCost>? cost,
-      @HiveField(29)
-          List<MedicationKnowledgeMonitoringProgram>? monitoringProgram,
-      @HiveField(30)
-          List<MedicationKnowledgeAdministrationGuidelines>?
-              administrationGuidelines,
-      @HiveField(31)
-          List<MedicationKnowledgeMedicineClassification>?
-              medicineClassification,
-      @HiveField(32)
-          MedicationKnowledgePackaging? packaging,
-      @HiveField(33)
-      @HiveField(34)
-          List<MedicationKnowledgeDrugCharacteristic>? drugCharacteristic,
-      @HiveField(35)
-      @HiveField(36)
-          List<Reference>? contraindication,
-      @HiveField(37)
-          List<MedicationKnowledgeRegulatory>? regulatory,
-      @HiveField(38)
-          List<MedicationKnowledgeKinetics>? kinetics});
+      List<CodeableConcept>? intendedRoute,
+      List<MedicationKnowledgeCost>? cost,
+      List<MedicationKnowledgeMonitoringProgram>? monitoringProgram,
+      List<MedicationKnowledgeAdministrationGuidelines>?
+          administrationGuidelines,
+      List<MedicationKnowledgeMedicineClassification>? medicineClassification,
+      MedicationKnowledgePackaging? packaging,
+      List<MedicationKnowledgeDrugCharacteristic>? drugCharacteristic,
+      List<Reference>? contraindication,
+      List<MedicationKnowledgeRegulatory>? regulatory,
+      List<MedicationKnowledgeKinetics>? kinetics});
 
   $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -18156,7 +16680,7 @@ class _$MedicationKnowledgeCopyWithImpl<$Res, $Val extends MedicationKnowledge>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -18184,7 +16708,7 @@ class _$MedicationKnowledgeCopyWithImpl<$Res, $Val extends MedicationKnowledge>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -18232,7 +16756,7 @@ class _$MedicationKnowledgeCopyWithImpl<$Res, $Val extends MedicationKnowledge>
       preparationInstruction: freezed == preparationInstruction
           ? _value.preparationInstruction
           : preparationInstruction // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       preparationInstructionElement: freezed == preparationInstructionElement
           ? _value.preparationInstructionElement
           : preparationInstructionElement // ignore: cast_nullable_to_non_nullable
@@ -18426,90 +16950,50 @@ abstract class _$$_MedicationKnowledgeCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.MedicationKnowledge)
-      @HiveField(0)
           R4ResourceType resourceType,
-      @HiveField(1)
-          String? id,
-      @HiveField(2)
-          FhirMeta? meta,
-      @HiveField(3)
-          FhirUri? implicitRules,
+      String? id,
+      FhirMeta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           Element? implicitRulesElement,
-      @HiveField(5)
-          FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           Element? languageElement,
-      @HiveField(7)
-          Narrative? text,
-      @HiveField(8)
-          List<Resource>? contained,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           List<FhirExtension>? extension_,
-      @HiveField(10)
-          List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          CodeableConcept? code,
-      @HiveField(12)
-          FhirCode? status,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept? code,
+      FhirCode? status,
       @JsonKey(name: '_status')
-      @HiveField(13)
           Element? statusElement,
-      @HiveField(14)
-          Reference? manufacturer,
-      @HiveField(15)
-          CodeableConcept? doseForm,
-      @HiveField(16)
-          Quantity? amount,
-      @HiveField(17)
-          List<String>? synonym,
-      @HiveField(18)
+      Reference? manufacturer,
+      CodeableConcept? doseForm,
+      Quantity? amount,
+      List<String>? synonym,
       @JsonKey(name: '_synonym')
           List<Element?>? synonymElement,
-      @HiveField(19)
-          List<MedicationKnowledgeRelatedMedicationKnowledge>?
-              relatedMedicationKnowledge,
-      @HiveField(20)
-      @HiveField(21)
-          List<Reference>? associatedMedication,
-      @HiveField(22)
-          List<CodeableConcept>? productType,
-      @HiveField(23)
-          List<MedicationKnowledgeMonograph>? monograph,
-      @HiveField(24)
-          List<MedicationKnowledgeIngredient>? ingredient,
-      @HiveField(25)
-          Markdown? preparationInstruction,
+      List<MedicationKnowledgeRelatedMedicationKnowledge>?
+          relatedMedicationKnowledge,
+      List<Reference>? associatedMedication,
+      List<CodeableConcept>? productType,
+      List<MedicationKnowledgeMonograph>? monograph,
+      List<MedicationKnowledgeIngredient>? ingredient,
+      FhirMarkdown? preparationInstruction,
       @JsonKey(name: '_preparationInstruction')
-      @HiveField(26)
           Element? preparationInstructionElement,
-      @HiveField(27)
-          List<CodeableConcept>? intendedRoute,
-      @HiveField(28)
-          List<MedicationKnowledgeCost>? cost,
-      @HiveField(29)
-          List<MedicationKnowledgeMonitoringProgram>? monitoringProgram,
-      @HiveField(30)
-          List<MedicationKnowledgeAdministrationGuidelines>?
-              administrationGuidelines,
-      @HiveField(31)
-          List<MedicationKnowledgeMedicineClassification>?
-              medicineClassification,
-      @HiveField(32)
-          MedicationKnowledgePackaging? packaging,
-      @HiveField(33)
-      @HiveField(34)
-          List<MedicationKnowledgeDrugCharacteristic>? drugCharacteristic,
-      @HiveField(35)
-      @HiveField(36)
-          List<Reference>? contraindication,
-      @HiveField(37)
-          List<MedicationKnowledgeRegulatory>? regulatory,
-      @HiveField(38)
-          List<MedicationKnowledgeKinetics>? kinetics});
+      List<CodeableConcept>? intendedRoute,
+      List<MedicationKnowledgeCost>? cost,
+      List<MedicationKnowledgeMonitoringProgram>? monitoringProgram,
+      List<MedicationKnowledgeAdministrationGuidelines>?
+          administrationGuidelines,
+      List<MedicationKnowledgeMedicineClassification>? medicineClassification,
+      MedicationKnowledgePackaging? packaging,
+      List<MedicationKnowledgeDrugCharacteristic>? drugCharacteristic,
+      List<Reference>? contraindication,
+      List<MedicationKnowledgeRegulatory>? regulatory,
+      List<MedicationKnowledgeKinetics>? kinetics});
 
   @override
   $FhirMetaCopyWith<$Res>? get meta;
@@ -18607,7 +17091,7 @@ class __$$_MedicationKnowledgeCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -18635,7 +17119,7 @@ class __$$_MedicationKnowledgeCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -18683,7 +17167,7 @@ class __$$_MedicationKnowledgeCopyWithImpl<$Res>
       preparationInstruction: freezed == preparationInstruction
           ? _value.preparationInstruction
           : preparationInstruction // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       preparationInstructionElement: freezed == preparationInstructionElement
           ? _value.preparationInstructionElement
           : preparationInstructionElement // ignore: cast_nullable_to_non_nullable
@@ -18734,94 +17218,54 @@ class __$$_MedicationKnowledgeCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@HiveType(typeId: 16)
 class _$_MedicationKnowledge extends _MedicationKnowledge {
   _$_MedicationKnowledge(
       {@JsonKey(unknownEnumValue: R4ResourceType.MedicationKnowledge)
-      @HiveField(0)
           this.resourceType = R4ResourceType.MedicationKnowledge,
-      @HiveField(1)
-          this.id,
-      @HiveField(2)
-          this.meta,
-      @HiveField(3)
-          this.implicitRules,
+      this.id,
+      this.meta,
+      this.implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           this.implicitRulesElement,
-      @HiveField(5)
-          this.language,
+      this.language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           this.languageElement,
-      @HiveField(7)
-          this.text,
-      @HiveField(8)
-          final List<Resource>? contained,
+      this.text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           final List<FhirExtension>? extension_,
-      @HiveField(10)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          this.code,
-      @HiveField(12)
-          this.status,
+      final List<FhirExtension>? modifierExtension,
+      this.code,
+      this.status,
       @JsonKey(name: '_status')
-      @HiveField(13)
           this.statusElement,
-      @HiveField(14)
-          this.manufacturer,
-      @HiveField(15)
-          this.doseForm,
-      @HiveField(16)
-          this.amount,
-      @HiveField(17)
-          final List<String>? synonym,
-      @HiveField(18)
+      this.manufacturer,
+      this.doseForm,
+      this.amount,
+      final List<String>? synonym,
       @JsonKey(name: '_synonym')
           final List<Element?>? synonymElement,
-      @HiveField(19)
-          final List<MedicationKnowledgeRelatedMedicationKnowledge>?
-              relatedMedicationKnowledge,
-      @HiveField(20)
-      @HiveField(21)
-          final List<Reference>? associatedMedication,
-      @HiveField(22)
-          final List<CodeableConcept>? productType,
-      @HiveField(23)
-          final List<MedicationKnowledgeMonograph>? monograph,
-      @HiveField(24)
-          final List<MedicationKnowledgeIngredient>? ingredient,
-      @HiveField(25)
-          this.preparationInstruction,
+      final List<MedicationKnowledgeRelatedMedicationKnowledge>?
+          relatedMedicationKnowledge,
+      final List<Reference>? associatedMedication,
+      final List<CodeableConcept>? productType,
+      final List<MedicationKnowledgeMonograph>? monograph,
+      final List<MedicationKnowledgeIngredient>? ingredient,
+      this.preparationInstruction,
       @JsonKey(name: '_preparationInstruction')
-      @HiveField(26)
           this.preparationInstructionElement,
-      @HiveField(27)
-          final List<CodeableConcept>? intendedRoute,
-      @HiveField(28)
-          final List<MedicationKnowledgeCost>? cost,
-      @HiveField(29)
-          final List<MedicationKnowledgeMonitoringProgram>? monitoringProgram,
-      @HiveField(30)
-          final List<MedicationKnowledgeAdministrationGuidelines>?
-              administrationGuidelines,
-      @HiveField(31)
-          final List<MedicationKnowledgeMedicineClassification>?
-              medicineClassification,
-      @HiveField(32)
-          this.packaging,
-      @HiveField(33)
-      @HiveField(34)
-          final List<MedicationKnowledgeDrugCharacteristic>? drugCharacteristic,
-      @HiveField(35)
-      @HiveField(36)
-          final List<Reference>? contraindication,
-      @HiveField(37)
-          final List<MedicationKnowledgeRegulatory>? regulatory,
-      @HiveField(38)
-          final List<MedicationKnowledgeKinetics>? kinetics})
+      final List<CodeableConcept>? intendedRoute,
+      final List<MedicationKnowledgeCost>? cost,
+      final List<MedicationKnowledgeMonitoringProgram>? monitoringProgram,
+      final List<MedicationKnowledgeAdministrationGuidelines>?
+          administrationGuidelines,
+      final List<MedicationKnowledgeMedicineClassification>?
+          medicineClassification,
+      this.packaging,
+      final List<MedicationKnowledgeDrugCharacteristic>? drugCharacteristic,
+      final List<Reference>? contraindication,
+      final List<MedicationKnowledgeRegulatory>? regulatory,
+      final List<MedicationKnowledgeKinetics>? kinetics})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -18848,20 +17292,17 @@ class _$_MedicationKnowledge extends _MedicationKnowledge {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.MedicationKnowledge)
-  @HiveField(0)
   final R4ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
   @override
-  @HiveField(1)
   final String? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
-  @HiveField(2)
   final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -18869,24 +17310,20 @@ class _$_MedicationKnowledge extends _MedicationKnowledge {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   @override
-  @HiveField(3)
   final FhirUri? implicitRules;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
-  @HiveField(4)
   final Element? implicitRulesElement;
 
   /// [language] The base language in which the resource is written.
   @override
-  @HiveField(5)
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] Extensions for language
   @override
   @JsonKey(name: '_language')
-  @HiveField(6)
   final Element? languageElement;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -18896,7 +17333,6 @@ class _$_MedicationKnowledge extends _MedicationKnowledge {
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
   @override
-  @HiveField(7)
   final Narrative? text;
 
   /// [contained] These resources do not have an independent existence apart
@@ -18910,7 +17346,6 @@ class _$_MedicationKnowledge extends _MedicationKnowledge {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   @override
-  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -18935,7 +17370,6 @@ class _$_MedicationKnowledge extends _MedicationKnowledge {
   ///  as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
-  @HiveField(9)
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
@@ -18973,7 +17407,6 @@ class _$_MedicationKnowledge extends _MedicationKnowledge {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   @override
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -18989,32 +17422,27 @@ class _$_MedicationKnowledge extends _MedicationKnowledge {
   /// national or local formulary code, optionally with translations to other
   ///  code systems.
   @override
-  @HiveField(11)
   final CodeableConcept? code;
 
   /// [status] A code to indicate if the medication is in active use.  The
   /// status refers to the validity about the information of the medication and
   ///  not to its medicinal properties.
   @override
-  @HiveField(12)
-  final Code? status;
+  final FhirCode? status;
 
   /// [statusElement] Extensions for status
   @override
   @JsonKey(name: '_status')
-  @HiveField(13)
   final Element? statusElement;
 
   /// [manufacturer] Describes the details of the manufacturer of the
   /// medication product.  This is not intended to represent the distributor of
   ///  a medication product.
   @override
-  @HiveField(14)
   final Reference? manufacturer;
 
   /// [doseForm] Describes the form of the item.  Powder; tablets; capsule.
   @override
-  @HiveField(15)
   final CodeableConcept? doseForm;
 
   /// [amount] Specific amount of the drug in the packaged product.  For
@@ -19023,7 +17451,6 @@ class _$_MedicationKnowledge extends _MedicationKnowledge {
   /// attribute provides additional clarification of the package amount (For
   ///  example, 3 mL, 10mL, etc.).
   @override
-  @HiveField(16)
   final Quantity? amount;
 
   /// [synonym] Additional names for a medication, for example, the name(s)
@@ -19035,7 +17462,6 @@ class _$_MedicationKnowledge extends _MedicationKnowledge {
   /// given to a medication in different countries.  For example, acetaminophen
   ///  and paracetamol or salbutamol and albuterol.
   @override
-  @HiveField(17)
   List<String>? get synonym {
     final value = _synonym;
     if (value == null) return null;
@@ -19049,7 +17475,6 @@ class _$_MedicationKnowledge extends _MedicationKnowledge {
 
   /// [synonymElement] Extensions for synonym
   @override
-  @HiveField(18)
   @JsonKey(name: '_synonym')
   List<Element?>? get synonymElement {
     final value = _synonymElement;
@@ -19059,15 +17484,9 @@ class _$_MedicationKnowledge extends _MedicationKnowledge {
     return EqualUnmodifiableListView(value);
   }
 
-  /// [relatedMedicationKnowledge] Associated or related knowledge about a
-  ///  medication.
   final List<MedicationKnowledgeRelatedMedicationKnowledge>?
       _relatedMedicationKnowledge;
-
-  /// [relatedMedicationKnowledge] Associated or related knowledge about a
-  ///  medication.
   @override
-  @HiveField(19)
   List<MedicationKnowledgeRelatedMedicationKnowledge>?
       get relatedMedicationKnowledge {
     final value = _relatedMedicationKnowledge;
@@ -19089,8 +17508,6 @@ class _$_MedicationKnowledge extends _MedicationKnowledge {
   /// Therapeutic Moeity (e.g. Rosuvastatin) or if this is a generic medication
   ///  (e.g. Rosuvastatin), this would link to a branded product (e.g. Crestor).
   @override
-  @HiveField(20)
-  @HiveField(21)
   List<Reference>? get associatedMedication {
     final value = _associatedMedication;
     if (value == null) return null;
@@ -19107,7 +17524,6 @@ class _$_MedicationKnowledge extends _MedicationKnowledge {
   /// [productType] Category of the medication or product (e.g. branded
   ///  product, therapeutic moeity, generic product, innovator product, etc.).
   @override
-  @HiveField(22)
   List<CodeableConcept>? get productType {
     final value = _productType;
     if (value == null) return null;
@@ -19121,7 +17537,6 @@ class _$_MedicationKnowledge extends _MedicationKnowledge {
 
   /// [monograph] Associated documentation about the medication.
   @override
-  @HiveField(23)
   List<MedicationKnowledgeMonograph>? get monograph {
     final value = _monograph;
     if (value == null) return null;
@@ -19137,7 +17552,6 @@ class _$_MedicationKnowledge extends _MedicationKnowledge {
   /// [ingredient] Identifies a particular constituent of interest in the
   ///  product.
   @override
-  @HiveField(24)
   List<MedicationKnowledgeIngredient>? get ingredient {
     final value = _ingredient;
     if (value == null) return null;
@@ -19148,11 +17562,9 @@ class _$_MedicationKnowledge extends _MedicationKnowledge {
 
   /// [preparationInstruction] The instructions for preparing the medication.
   @override
-  @HiveField(25)
-  final Markdown? preparationInstruction;
+  final FhirMarkdown? preparationInstruction;
   @override
   @JsonKey(name: '_preparationInstruction')
-  @HiveField(26)
   final Element? preparationInstructionElement;
 
   /// [intendedRoute] The intended or approved route of administration.
@@ -19160,7 +17572,6 @@ class _$_MedicationKnowledge extends _MedicationKnowledge {
 
   /// [intendedRoute] The intended or approved route of administration.
   @override
-  @HiveField(27)
   List<CodeableConcept>? get intendedRoute {
     final value = _intendedRoute;
     if (value == null) return null;
@@ -19174,7 +17585,6 @@ class _$_MedicationKnowledge extends _MedicationKnowledge {
 
   /// [cost] The price of the medication.
   @override
-  @HiveField(28)
   List<MedicationKnowledgeCost>? get cost {
     final value = _cost;
     if (value == null) return null;
@@ -19188,7 +17598,6 @@ class _$_MedicationKnowledge extends _MedicationKnowledge {
 
   /// [monitoringProgram] The program under which the medication is reviewed.
   @override
-  @HiveField(29)
   List<MedicationKnowledgeMonitoringProgram>? get monitoringProgram {
     final value = _monitoringProgram;
     if (value == null) return null;
@@ -19206,7 +17615,6 @@ class _$_MedicationKnowledge extends _MedicationKnowledge {
   /// [administrationGuidelines] Guidelines for the administration of the
   ///  medication.
   @override
-  @HiveField(30)
   List<MedicationKnowledgeAdministrationGuidelines>?
       get administrationGuidelines {
     final value = _administrationGuidelines;
@@ -19225,7 +17633,6 @@ class _$_MedicationKnowledge extends _MedicationKnowledge {
   /// [medicineClassification] Categorization of the medication within a
   ///  formulary or classification system.
   @override
-  @HiveField(31)
   List<MedicationKnowledgeMedicineClassification>? get medicineClassification {
     final value = _medicineClassification;
     if (value == null) return null;
@@ -19237,12 +17644,15 @@ class _$_MedicationKnowledge extends _MedicationKnowledge {
 
   /// [packaging] Information that only applies to packages (not products).
   @override
-  @HiveField(32)
   final MedicationKnowledgePackaging? packaging;
+
+  /// [drugCharacteristic] Specifies descriptive properties of the medicine,
+  ///  such as color, shape, imprints, etc.
   final List<MedicationKnowledgeDrugCharacteristic>? _drugCharacteristic;
+
+  /// [drugCharacteristic] Specifies descriptive properties of the medicine,
+  ///  such as color, shape, imprints, etc.
   @override
-  @HiveField(33)
-  @HiveField(34)
   List<MedicationKnowledgeDrugCharacteristic>? get drugCharacteristic {
     final value = _drugCharacteristic;
     if (value == null) return null;
@@ -19253,12 +17663,14 @@ class _$_MedicationKnowledge extends _MedicationKnowledge {
   }
 
   /// [contraindication] Potential clinical issue with or between medication(s)
+  /// (for example, drug-drug interaction, drug-disease contraindication,
+  ///  drug-allergy interaction, etc.).
   final List<Reference>? _contraindication;
 
   /// [contraindication] Potential clinical issue with or between medication(s)
+  /// (for example, drug-drug interaction, drug-disease contraindication,
+  ///  drug-allergy interaction, etc.).
   @override
-  @HiveField(35)
-  @HiveField(36)
   List<Reference>? get contraindication {
     final value = _contraindication;
     if (value == null) return null;
@@ -19273,7 +17685,6 @@ class _$_MedicationKnowledge extends _MedicationKnowledge {
 
   /// [regulatory] Regulatory information about a medication.
   @override
-  @HiveField(37)
   List<MedicationKnowledgeRegulatory>? get regulatory {
     final value = _regulatory;
     if (value == null) return null;
@@ -19289,7 +17700,6 @@ class _$_MedicationKnowledge extends _MedicationKnowledge {
   /// [kinetics] The time course of drug absorption, distribution, metabolism
   ///  and excretion of a medication from the body.
   @override
-  @HiveField(38)
   List<MedicationKnowledgeKinetics>? get kinetics {
     final value = _kinetics;
     if (value == null) return null;
@@ -19435,92 +17845,53 @@ class _$_MedicationKnowledge extends _MedicationKnowledge {
 
 abstract class _MedicationKnowledge extends MedicationKnowledge {
   factory _MedicationKnowledge(
-      {@JsonKey(unknownEnumValue: R4ResourceType.MedicationKnowledge)
-      @HiveField(0)
-          final R4ResourceType resourceType,
-      @HiveField(1)
+          {@JsonKey(unknownEnumValue: R4ResourceType.MedicationKnowledge)
+              final R4ResourceType resourceType,
           final String? id,
-      @HiveField(2)
           final FhirMeta? meta,
-      @HiveField(3)
           final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-      @HiveField(4)
-          final Element? implicitRulesElement,
-      @HiveField(5)
-          final Code? language,
-      @JsonKey(name: '_language')
-      @HiveField(6)
-          final Element? languageElement,
-      @HiveField(7)
+          @JsonKey(name: '_implicitRules')
+              final Element? implicitRulesElement,
+          final FhirCode? language,
+          @JsonKey(name: '_language')
+              final Element? languageElement,
           final Narrative? text,
-      @HiveField(8)
           final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-      @HiveField(9)
-          final List<FhirExtension>? extension_,
-      @HiveField(10)
+          @JsonKey(name: 'extension')
+              final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
-      @HiveField(11)
           final CodeableConcept? code,
-      @HiveField(12)
-          final Code? status,
-      @JsonKey(name: '_status')
-      @HiveField(13)
-          final Element? statusElement,
-      @HiveField(14)
+          final FhirCode? status,
+          @JsonKey(name: '_status')
+              final Element? statusElement,
           final Reference? manufacturer,
-      @HiveField(15)
           final CodeableConcept? doseForm,
-      @HiveField(16)
           final Quantity? amount,
-      @HiveField(17)
           final List<String>? synonym,
-      @HiveField(18)
-      @JsonKey(name: '_synonym')
-          final List<Element?>? synonymElement,
-      @HiveField(19)
+          @JsonKey(name: '_synonym')
+              final List<Element?>? synonymElement,
           final List<MedicationKnowledgeRelatedMedicationKnowledge>?
               relatedMedicationKnowledge,
-      @HiveField(20)
-      @HiveField(21)
           final List<Reference>? associatedMedication,
-      @HiveField(22)
           final List<CodeableConcept>? productType,
-      @HiveField(23)
           final List<MedicationKnowledgeMonograph>? monograph,
-      @HiveField(24)
           final List<MedicationKnowledgeIngredient>? ingredient,
-      @HiveField(25)
-          final Markdown? preparationInstruction,
-      @JsonKey(name: '_preparationInstruction')
-      @HiveField(26)
-          final Element? preparationInstructionElement,
-      @HiveField(27)
+          final FhirMarkdown? preparationInstruction,
+          @JsonKey(name: '_preparationInstruction')
+              final Element? preparationInstructionElement,
           final List<CodeableConcept>? intendedRoute,
-      @HiveField(28)
           final List<MedicationKnowledgeCost>? cost,
-      @HiveField(29)
           final List<MedicationKnowledgeMonitoringProgram>? monitoringProgram,
-      @HiveField(30)
           final List<MedicationKnowledgeAdministrationGuidelines>?
               administrationGuidelines,
-      @HiveField(31)
           final List<MedicationKnowledgeMedicineClassification>?
               medicineClassification,
-      @HiveField(32)
           final MedicationKnowledgePackaging? packaging,
-      @HiveField(33)
-      @HiveField(34)
           final List<MedicationKnowledgeDrugCharacteristic>? drugCharacteristic,
-      @HiveField(35)
-      @HiveField(36)
           final List<Reference>? contraindication,
-      @HiveField(37)
           final List<MedicationKnowledgeRegulatory>? regulatory,
-      @HiveField(38)
-          final List<MedicationKnowledgeKinetics>?
-              kinetics}) = _$_MedicationKnowledge;
+          final List<MedicationKnowledgeKinetics>? kinetics}) =
+      _$_MedicationKnowledge;
   _MedicationKnowledge._() : super._();
 
   factory _MedicationKnowledge.fromJson(Map<String, dynamic> json) =
@@ -19528,20 +17899,17 @@ abstract class _MedicationKnowledge extends MedicationKnowledge {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.MedicationKnowledge)
-  @HiveField(0)
   R4ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
-  @HiveField(1)
   String? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  @HiveField(2)
   FhirMeta? get meta;
   @override
 
@@ -19549,24 +17917,20 @@ abstract class _MedicationKnowledge extends MedicationKnowledge {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  @HiveField(3)
   FhirUri? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
-  @HiveField(4)
   Element? get implicitRulesElement;
   @override
 
   /// [language] The base language in which the resource is written.
-  @HiveField(5)
   FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
-  @HiveField(6)
   Element? get languageElement;
   @override
 
@@ -19576,7 +17940,6 @@ abstract class _MedicationKnowledge extends MedicationKnowledge {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
-  @HiveField(7)
   Narrative? get text;
   @override
 
@@ -19584,7 +17947,6 @@ abstract class _MedicationKnowledge extends MedicationKnowledge {
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
-  @HiveField(8)
   List<Resource>? get contained;
   @override
 
@@ -19595,7 +17957,6 @@ abstract class _MedicationKnowledge extends MedicationKnowledge {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
-  @HiveField(9)
   List<FhirExtension>? get extension_;
   @override
 
@@ -19612,7 +17973,6 @@ abstract class _MedicationKnowledge extends MedicationKnowledge {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
 
@@ -19621,32 +17981,27 @@ abstract class _MedicationKnowledge extends MedicationKnowledge {
   /// such as a code from RxNorm, SNOMED CT, IDMP etc. It could also be a
   /// national or local formulary code, optionally with translations to other
   ///  code systems.
-  @HiveField(11)
   CodeableConcept? get code;
   @override
 
   /// [status] A code to indicate if the medication is in active use.  The
   /// status refers to the validity about the information of the medication and
   ///  not to its medicinal properties.
-  @HiveField(12)
   FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
-  @HiveField(13)
   Element? get statusElement;
   @override
 
   /// [manufacturer] Describes the details of the manufacturer of the
   /// medication product.  This is not intended to represent the distributor of
   ///  a medication product.
-  @HiveField(14)
   Reference? get manufacturer;
   @override
 
   /// [doseForm] Describes the form of the item.  Powder; tablets; capsule.
-  @HiveField(15)
   CodeableConcept? get doseForm;
   @override
 
@@ -19655,26 +18010,19 @@ abstract class _MedicationKnowledge extends MedicationKnowledge {
   /// example, Insulin glargine 100 unit per mL solution for injection), this
   /// attribute provides additional clarification of the package amount (For
   ///  example, 3 mL, 10mL, etc.).
-  @HiveField(16)
   Quantity? get amount;
   @override
 
   /// [synonym] Additional names for a medication, for example, the name(s)
   /// given to a medication in different countries.  For example, acetaminophen
   ///  and paracetamol or salbutamol and albuterol.
-  @HiveField(17)
   List<String>? get synonym;
   @override
 
   /// [synonymElement] Extensions for synonym
-  @HiveField(18)
   @JsonKey(name: '_synonym')
   List<Element?>? get synonymElement;
   @override
-
-  /// [relatedMedicationKnowledge] Associated or related knowledge about a
-  ///  medication.
-  @HiveField(19)
   List<MedicationKnowledgeRelatedMedicationKnowledge>?
       get relatedMedicationKnowledge;
   @override
@@ -19683,88 +18031,74 @@ abstract class _MedicationKnowledge extends MedicationKnowledge {
   /// if the medication is a branded product (e.g. Crestor), this is the
   /// Therapeutic Moeity (e.g. Rosuvastatin) or if this is a generic medication
   ///  (e.g. Rosuvastatin), this would link to a branded product (e.g. Crestor).
-  @HiveField(20)
-  @HiveField(21)
   List<Reference>? get associatedMedication;
   @override
 
   /// [productType] Category of the medication or product (e.g. branded
   ///  product, therapeutic moeity, generic product, innovator product, etc.).
-  @HiveField(22)
   List<CodeableConcept>? get productType;
   @override
 
   /// [monograph] Associated documentation about the medication.
-  @HiveField(23)
   List<MedicationKnowledgeMonograph>? get monograph;
   @override
 
   /// [ingredient] Identifies a particular constituent of interest in the
   ///  product.
-  @HiveField(24)
   List<MedicationKnowledgeIngredient>? get ingredient;
   @override
 
   /// [preparationInstruction] The instructions for preparing the medication.
-  @HiveField(25)
-  Markdown? get preparationInstruction;
+  FhirMarkdown? get preparationInstruction;
   @override
   @JsonKey(name: '_preparationInstruction')
-  @HiveField(26)
   Element? get preparationInstructionElement;
   @override
 
   /// [intendedRoute] The intended or approved route of administration.
-  @HiveField(27)
   List<CodeableConcept>? get intendedRoute;
   @override
 
   /// [cost] The price of the medication.
-  @HiveField(28)
   List<MedicationKnowledgeCost>? get cost;
   @override
 
   /// [monitoringProgram] The program under which the medication is reviewed.
-  @HiveField(29)
   List<MedicationKnowledgeMonitoringProgram>? get monitoringProgram;
   @override
 
   /// [administrationGuidelines] Guidelines for the administration of the
   ///  medication.
-  @HiveField(30)
   List<MedicationKnowledgeAdministrationGuidelines>?
       get administrationGuidelines;
   @override
 
   /// [medicineClassification] Categorization of the medication within a
   ///  formulary or classification system.
-  @HiveField(31)
   List<MedicationKnowledgeMedicineClassification>? get medicineClassification;
   @override
 
   /// [packaging] Information that only applies to packages (not products).
-  @HiveField(32)
   MedicationKnowledgePackaging? get packaging;
   @override
-  @HiveField(33)
-  @HiveField(34)
+
+  /// [drugCharacteristic] Specifies descriptive properties of the medicine,
+  ///  such as color, shape, imprints, etc.
   List<MedicationKnowledgeDrugCharacteristic>? get drugCharacteristic;
   @override
 
   /// [contraindication] Potential clinical issue with or between medication(s)
-  @HiveField(35)
-  @HiveField(36)
+  /// (for example, drug-drug interaction, drug-disease contraindication,
+  ///  drug-allergy interaction, etc.).
   List<Reference>? get contraindication;
   @override
 
   /// [regulatory] Regulatory information about a medication.
-  @HiveField(37)
   List<MedicationKnowledgeRegulatory>? get regulatory;
   @override
 
   /// [kinetics] The time course of drug absorption, distribution, metabolism
   ///  and excretion of a medication from the body.
-  @HiveField(38)
   List<MedicationKnowledgeKinetics>? get kinetics;
   @override
   @JsonKey(ignore: true)
@@ -19782,7 +18116,6 @@ MedicationKnowledgeRelatedMedicationKnowledge
 mixin _$MedicationKnowledgeRelatedMedicationKnowledge {
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
-  @HiveField(0)
   String? get id => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -19791,7 +18124,6 @@ mixin _$MedicationKnowledgeRelatedMedicationKnowledge {
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
-  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
@@ -19808,17 +18140,14 @@ mixin _$MedicationKnowledgeRelatedMedicationKnowledge {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
-  @HiveField(2)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
   /// [type] The category of the associated medication knowledge reference.
-  @HiveField(3)
   CodeableConcept get type => throw _privateConstructorUsedError;
 
   /// [reference] Associated documentation about the associated medication
   ///  knowledge.
-  @HiveField(4)
   List<Reference> get reference => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -19837,11 +18166,11 @@ abstract class $MedicationKnowledgeRelatedMedicationKnowledgeCopyWith<$Res> {
           MedicationKnowledgeRelatedMedicationKnowledge>;
   @useResult
   $Res call(
-      {@HiveField(0) String? id,
-      @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      @HiveField(2) List<FhirExtension>? modifierExtension,
-      @HiveField(3) CodeableConcept type,
-      @HiveField(4) List<Reference> reference});
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept type,
+      List<Reference> reference});
 
   $CodeableConceptCopyWith<$Res> get type;
 }
@@ -19911,11 +18240,11 @@ abstract class _$$_MedicationKnowledgeRelatedMedicationKnowledgeCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@HiveField(0) String? id,
-      @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      @HiveField(2) List<FhirExtension>? modifierExtension,
-      @HiveField(3) CodeableConcept type,
-      @HiveField(4) List<Reference> reference});
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept type,
+      List<Reference> reference});
 
   @override
   $CodeableConceptCopyWith<$Res> get type;
@@ -19967,21 +18296,14 @@ class __$$_MedicationKnowledgeRelatedMedicationKnowledgeCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@HiveType(typeId: 17)
 class _$_MedicationKnowledgeRelatedMedicationKnowledge
     extends _MedicationKnowledgeRelatedMedicationKnowledge {
   _$_MedicationKnowledgeRelatedMedicationKnowledge(
-      {@HiveField(0)
-          this.id,
-      @HiveField(1)
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      @HiveField(2)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(3)
-          required this.type,
-      @HiveField(4)
-          required final List<Reference> reference})
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      required this.type,
+      required final List<Reference> reference})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
         _reference = reference,
@@ -19994,7 +18316,6 @@ class _$_MedicationKnowledgeRelatedMedicationKnowledge
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   @override
-  @HiveField(0)
   final String? id;
 
   /// [extension_] May be used to represent additional information that is not
@@ -20012,7 +18333,6 @@ class _$_MedicationKnowledgeRelatedMedicationKnowledge
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   @override
-  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
     final value = _extension_;
@@ -20051,7 +18371,6 @@ class _$_MedicationKnowledgeRelatedMedicationKnowledge
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   @override
-  @HiveField(2)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -20063,7 +18382,6 @@ class _$_MedicationKnowledgeRelatedMedicationKnowledge
 
   /// [type] The category of the associated medication knowledge reference.
   @override
-  @HiveField(3)
   final CodeableConcept type;
 
   /// [reference] Associated documentation about the associated medication
@@ -20073,7 +18391,6 @@ class _$_MedicationKnowledgeRelatedMedicationKnowledge
   /// [reference] Associated documentation about the associated medication
   ///  knowledge.
   @override
-  @HiveField(4)
   List<Reference> get reference {
     if (_reference is EqualUnmodifiableListView) return _reference;
     // ignore: implicit_dynamic_type
@@ -20131,17 +18448,11 @@ class _$_MedicationKnowledgeRelatedMedicationKnowledge
 abstract class _MedicationKnowledgeRelatedMedicationKnowledge
     extends MedicationKnowledgeRelatedMedicationKnowledge {
   factory _MedicationKnowledgeRelatedMedicationKnowledge(
-          {@HiveField(0)
-              final String? id,
-          @HiveField(1)
-          @JsonKey(name: 'extension')
-              final List<FhirExtension>? extension_,
-          @HiveField(2)
-              final List<FhirExtension>? modifierExtension,
-          @HiveField(3)
-              required final CodeableConcept type,
-          @HiveField(4)
-              required final List<Reference> reference}) =
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          required final CodeableConcept type,
+          required final List<Reference> reference}) =
       _$_MedicationKnowledgeRelatedMedicationKnowledge;
   _MedicationKnowledgeRelatedMedicationKnowledge._() : super._();
 
@@ -20153,7 +18464,6 @@ abstract class _MedicationKnowledgeRelatedMedicationKnowledge
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
-  @HiveField(0)
   String? get id;
   @override
 
@@ -20163,7 +18473,6 @@ abstract class _MedicationKnowledgeRelatedMedicationKnowledge
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
-  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
@@ -20181,18 +18490,15 @@ abstract class _MedicationKnowledgeRelatedMedicationKnowledge
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
-  @HiveField(2)
   List<FhirExtension>? get modifierExtension;
   @override
 
   /// [type] The category of the associated medication knowledge reference.
-  @HiveField(3)
   CodeableConcept get type;
   @override
 
   /// [reference] Associated documentation about the associated medication
   ///  knowledge.
-  @HiveField(4)
   List<Reference> get reference;
   @override
   @JsonKey(ignore: true)
@@ -20608,7 +18914,6 @@ MedicationKnowledgeIngredient _$MedicationKnowledgeIngredientFromJson(
 mixin _$MedicationKnowledgeIngredient {
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
-  @HiveField(0)
   String? get id => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -20617,7 +18922,6 @@ mixin _$MedicationKnowledgeIngredient {
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
-  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
@@ -20634,35 +18938,29 @@ mixin _$MedicationKnowledgeIngredient {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
-  @HiveField(2)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
   /// [itemCodeableConcept] The actual ingredient - either a substance (simple
   ///  ingredient) or another medication.
-  @HiveField(3)
   CodeableConcept? get itemCodeableConcept =>
       throw _privateConstructorUsedError;
 
   /// [itemReference] The actual ingredient - either a substance (simple
   ///  ingredient) or another medication.
-  @HiveField(4)
   Reference? get itemReference => throw _privateConstructorUsedError;
 
   /// [isActive] Indication of whether this ingredient affects the therapeutic
   ///  action of the drug.
-  @HiveField(5)
-  Boolean? get isActive => throw _privateConstructorUsedError;
+  FhirBoolean? get isActive => throw _privateConstructorUsedError;
 
   /// [isActiveElement] Extensions for isActive
-  @HiveField(6)
   @JsonKey(name: '_isActive')
   Element? get isActiveElement => throw _privateConstructorUsedError;
 
   /// [strength] Specifies how many (or how much) of the items there are in
   /// this Medication.  For example, 250 mg per tablet.  This is expressed as a
   ///  ratio where the numerator is 250mg and the denominator is 1 tablet.
-  @HiveField(7)
   Ratio? get strength => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -20680,14 +18978,14 @@ abstract class $MedicationKnowledgeIngredientCopyWith<$Res> {
           MedicationKnowledgeIngredient>;
   @useResult
   $Res call(
-      {@HiveField(0) String? id,
-      @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      @HiveField(2) List<FhirExtension>? modifierExtension,
-      @HiveField(3) CodeableConcept? itemCodeableConcept,
-      @HiveField(4) Reference? itemReference,
-      @HiveField(5) Boolean? isActive,
-      @HiveField(6) @JsonKey(name: '_isActive') Element? isActiveElement,
-      @HiveField(7) Ratio? strength});
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept? itemCodeableConcept,
+      Reference? itemReference,
+      FhirBoolean? isActive,
+      @JsonKey(name: '_isActive') Element? isActiveElement,
+      Ratio? strength});
 
   $CodeableConceptCopyWith<$Res>? get itemCodeableConcept;
   $ReferenceCopyWith<$Res>? get itemReference;
@@ -20742,7 +19040,7 @@ class _$MedicationKnowledgeIngredientCopyWithImpl<$Res,
       isActive: freezed == isActive
           ? _value.isActive
           : isActive // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       isActiveElement: freezed == isActiveElement
           ? _value.isActiveElement
           : isActiveElement // ignore: cast_nullable_to_non_nullable
@@ -20813,14 +19111,14 @@ abstract class _$$_MedicationKnowledgeIngredientCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@HiveField(0) String? id,
-      @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      @HiveField(2) List<FhirExtension>? modifierExtension,
-      @HiveField(3) CodeableConcept? itemCodeableConcept,
-      @HiveField(4) Reference? itemReference,
-      @HiveField(5) Boolean? isActive,
-      @HiveField(6) @JsonKey(name: '_isActive') Element? isActiveElement,
-      @HiveField(7) Ratio? strength});
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept? itemCodeableConcept,
+      Reference? itemReference,
+      FhirBoolean? isActive,
+      @JsonKey(name: '_isActive') Element? isActiveElement,
+      Ratio? strength});
 
   @override
   $CodeableConceptCopyWith<$Res>? get itemCodeableConcept;
@@ -20878,7 +19176,7 @@ class __$$_MedicationKnowledgeIngredientCopyWithImpl<$Res>
       isActive: freezed == isActive
           ? _value.isActive
           : isActive // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       isActiveElement: freezed == isActiveElement
           ? _value.isActiveElement
           : isActiveElement // ignore: cast_nullable_to_non_nullable
@@ -20893,27 +19191,16 @@ class __$$_MedicationKnowledgeIngredientCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@HiveType(typeId: 18)
 class _$_MedicationKnowledgeIngredient extends _MedicationKnowledgeIngredient {
   _$_MedicationKnowledgeIngredient(
-      {@HiveField(0)
-          this.id,
-      @HiveField(1)
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      @HiveField(2)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(3)
-          this.itemCodeableConcept,
-      @HiveField(4)
-          this.itemReference,
-      @HiveField(5)
-          this.isActive,
-      @HiveField(6)
-      @JsonKey(name: '_isActive')
-          this.isActiveElement,
-      @HiveField(7)
-          this.strength})
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      this.itemCodeableConcept,
+      this.itemReference,
+      this.isActive,
+      @JsonKey(name: '_isActive') this.isActiveElement,
+      this.strength})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
         super._();
@@ -20925,7 +19212,6 @@ class _$_MedicationKnowledgeIngredient extends _MedicationKnowledgeIngredient {
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   @override
-  @HiveField(0)
   final String? id;
 
   /// [extension_] May be used to represent additional information that is not
@@ -20943,7 +19229,6 @@ class _$_MedicationKnowledgeIngredient extends _MedicationKnowledgeIngredient {
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   @override
-  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
     final value = _extension_;
@@ -20982,7 +19267,6 @@ class _$_MedicationKnowledgeIngredient extends _MedicationKnowledgeIngredient {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   @override
-  @HiveField(2)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -20995,24 +19279,20 @@ class _$_MedicationKnowledgeIngredient extends _MedicationKnowledgeIngredient {
   /// [itemCodeableConcept] The actual ingredient - either a substance (simple
   ///  ingredient) or another medication.
   @override
-  @HiveField(3)
   final CodeableConcept? itemCodeableConcept;
 
   /// [itemReference] The actual ingredient - either a substance (simple
   ///  ingredient) or another medication.
   @override
-  @HiveField(4)
   final Reference? itemReference;
 
   /// [isActive] Indication of whether this ingredient affects the therapeutic
   ///  action of the drug.
   @override
-  @HiveField(5)
-  final Boolean? isActive;
+  final FhirBoolean? isActive;
 
   /// [isActiveElement] Extensions for isActive
   @override
-  @HiveField(6)
   @JsonKey(name: '_isActive')
   final Element? isActiveElement;
 
@@ -21020,7 +19300,6 @@ class _$_MedicationKnowledgeIngredient extends _MedicationKnowledgeIngredient {
   /// this Medication.  For example, 250 mg per tablet.  This is expressed as a
   ///  ratio where the numerator is 250mg and the denominator is 1 tablet.
   @override
-  @HiveField(7)
   final Ratio? strength;
 
   @override
@@ -21081,24 +19360,14 @@ class _$_MedicationKnowledgeIngredient extends _MedicationKnowledgeIngredient {
 abstract class _MedicationKnowledgeIngredient
     extends MedicationKnowledgeIngredient {
   factory _MedicationKnowledgeIngredient(
-      {@HiveField(0)
-          final String? id,
-      @HiveField(1)
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      @HiveField(2)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(3)
-          final CodeableConcept? itemCodeableConcept,
-      @HiveField(4)
-          final Reference? itemReference,
-      @HiveField(5)
-          final Boolean? isActive,
-      @HiveField(6)
-      @JsonKey(name: '_isActive')
-          final Element? isActiveElement,
-      @HiveField(7)
-          final Ratio? strength}) = _$_MedicationKnowledgeIngredient;
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final CodeableConcept? itemCodeableConcept,
+      final Reference? itemReference,
+      final FhirBoolean? isActive,
+      @JsonKey(name: '_isActive') final Element? isActiveElement,
+      final Ratio? strength}) = _$_MedicationKnowledgeIngredient;
   _MedicationKnowledgeIngredient._() : super._();
 
   factory _MedicationKnowledgeIngredient.fromJson(Map<String, dynamic> json) =
@@ -21108,7 +19377,6 @@ abstract class _MedicationKnowledgeIngredient
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
-  @HiveField(0)
   String? get id;
   @override
 
@@ -21118,7 +19386,6 @@ abstract class _MedicationKnowledgeIngredient
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
-  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
@@ -21136,30 +19403,25 @@ abstract class _MedicationKnowledgeIngredient
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
-  @HiveField(2)
   List<FhirExtension>? get modifierExtension;
   @override
 
   /// [itemCodeableConcept] The actual ingredient - either a substance (simple
   ///  ingredient) or another medication.
-  @HiveField(3)
   CodeableConcept? get itemCodeableConcept;
   @override
 
   /// [itemReference] The actual ingredient - either a substance (simple
   ///  ingredient) or another medication.
-  @HiveField(4)
   Reference? get itemReference;
   @override
 
   /// [isActive] Indication of whether this ingredient affects the therapeutic
   ///  action of the drug.
-  @HiveField(5)
-  Boolean? get isActive;
+  FhirBoolean? get isActive;
   @override
 
   /// [isActiveElement] Extensions for isActive
-  @HiveField(6)
   @JsonKey(name: '_isActive')
   Element? get isActiveElement;
   @override
@@ -21167,7 +19429,6 @@ abstract class _MedicationKnowledgeIngredient
   /// [strength] Specifies how many (or how much) of the items there are in
   /// this Medication.  For example, 250 mg per tablet.  This is expressed as a
   ///  ratio where the numerator is 250mg and the denominator is 1 tablet.
-  @HiveField(7)
   Ratio? get strength;
   @override
   @JsonKey(ignore: true)
@@ -24415,7 +22676,7 @@ class _$MedicationKnowledgeDrugCharacteristicCopyWithImpl<$Res,
       valueBase64Binary: freezed == valueBase64Binary
           ? _value.valueBase64Binary
           : valueBase64Binary // ignore: cast_nullable_to_non_nullable
-              as Base64Binary?,
+              as FhirBase64Binary?,
       valueBase64BinaryElement: freezed == valueBase64BinaryElement
           ? _value.valueBase64BinaryElement
           : valueBase64BinaryElement // ignore: cast_nullable_to_non_nullable
@@ -24578,7 +22839,7 @@ class __$$_MedicationKnowledgeDrugCharacteristicCopyWithImpl<$Res>
       valueBase64Binary: freezed == valueBase64Binary
           ? _value.valueBase64Binary
           : valueBase64Binary // ignore: cast_nullable_to_non_nullable
-              as Base64Binary?,
+              as FhirBase64Binary?,
       valueBase64BinaryElement: freezed == valueBase64BinaryElement
           ? _value.valueBase64BinaryElement
           : valueBase64BinaryElement // ignore: cast_nullable_to_non_nullable
@@ -24701,7 +22962,7 @@ class _$_MedicationKnowledgeDrugCharacteristic
 
   /// [valueBase64Binary] Description of the characteristic.
   @override
-  final Base64Binary? valueBase64Binary;
+  final FhirBase64Binary? valueBase64Binary;
 
   /// [valueBase64BinaryElement] Extensions for valueBase64Binary
   @override
@@ -24783,7 +23044,7 @@ abstract class _MedicationKnowledgeDrugCharacteristic
           @JsonKey(name: '_valueString')
               final Element? valueStringElement,
           final Quantity? valueQuantity,
-          final Base64Binary? valueBase64Binary,
+          final FhirBase64Binary? valueBase64Binary,
           @JsonKey(name: '_valueBase64Binary')
               final Element? valueBase64BinaryElement}) =
       _$_MedicationKnowledgeDrugCharacteristic;
@@ -25384,7 +23645,7 @@ mixin _$MedicationKnowledgeSubstitution {
 
   /// [allowed] Specifies if regulation allows for changes in the medication
   ///  when dispensing.
-  Boolean? get allowed => throw _privateConstructorUsedError;
+  FhirBoolean? get allowed => throw _privateConstructorUsedError;
 
   /// [allowedElement] Extensions for allowed
   @JsonKey(name: '_allowed')
@@ -25409,7 +23670,7 @@ abstract class $MedicationKnowledgeSubstitutionCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept type,
-      Boolean? allowed,
+      FhirBoolean? allowed,
       @JsonKey(name: '_allowed') Element? allowedElement});
 
   $CodeableConceptCopyWith<$Res> get type;
@@ -25457,7 +23718,7 @@ class _$MedicationKnowledgeSubstitutionCopyWithImpl<$Res,
       allowed: freezed == allowed
           ? _value.allowed
           : allowed // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       allowedElement: freezed == allowedElement
           ? _value.allowedElement
           : allowedElement // ignore: cast_nullable_to_non_nullable
@@ -25500,7 +23761,7 @@ abstract class _$$_MedicationKnowledgeSubstitutionCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept type,
-      Boolean? allowed,
+      FhirBoolean? allowed,
       @JsonKey(name: '_allowed') Element? allowedElement});
 
   @override
@@ -25549,7 +23810,7 @@ class __$$_MedicationKnowledgeSubstitutionCopyWithImpl<$Res>
       allowed: freezed == allowed
           ? _value.allowed
           : allowed // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       allowedElement: freezed == allowedElement
           ? _value.allowedElement
           : allowedElement // ignore: cast_nullable_to_non_nullable
@@ -25651,7 +23912,7 @@ class _$_MedicationKnowledgeSubstitution
   /// [allowed] Specifies if regulation allows for changes in the medication
   ///  when dispensing.
   @override
-  final Boolean? allowed;
+  final FhirBoolean? allowed;
 
   /// [allowedElement] Extensions for allowed
   @override
@@ -25713,7 +23974,7 @@ abstract class _MedicationKnowledgeSubstitution
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           required final CodeableConcept type,
-          final Boolean? allowed,
+          final FhirBoolean? allowed,
           @JsonKey(name: '_allowed') final Element? allowedElement}) =
       _$_MedicationKnowledgeSubstitution;
   _MedicationKnowledgeSubstitution._() : super._();
@@ -25760,7 +24021,7 @@ abstract class _MedicationKnowledgeSubstitution
 
   /// [allowed] Specifies if regulation allows for changes in the medication
   ///  when dispensing.
-  Boolean? get allowed;
+  FhirBoolean? get allowed;
   @override
 
   /// [allowedElement] Extensions for allowed
@@ -25782,7 +24043,6 @@ MedicationKnowledgeSchedule _$MedicationKnowledgeScheduleFromJson(
 mixin _$MedicationKnowledgeSchedule {
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
-  @HiveField(0)
   String? get id => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -25791,7 +24051,6 @@ mixin _$MedicationKnowledgeSchedule {
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
-  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
@@ -25808,12 +24067,10 @@ mixin _$MedicationKnowledgeSchedule {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
-  @HiveField(2)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
   /// [schedule] Specifies the specific drug schedule.
-  @HiveField(3)
   CodeableConcept get schedule => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -25831,10 +24088,10 @@ abstract class $MedicationKnowledgeScheduleCopyWith<$Res> {
           MedicationKnowledgeSchedule>;
   @useResult
   $Res call(
-      {@HiveField(0) String? id,
-      @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      @HiveField(2) List<FhirExtension>? modifierExtension,
-      @HiveField(3) CodeableConcept schedule});
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept schedule});
 
   $CodeableConceptCopyWith<$Res> get schedule;
 }
@@ -25897,10 +24154,10 @@ abstract class _$$_MedicationKnowledgeScheduleCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@HiveField(0) String? id,
-      @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      @HiveField(2) List<FhirExtension>? modifierExtension,
-      @HiveField(3) CodeableConcept schedule});
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept schedule});
 
   @override
   $CodeableConceptCopyWith<$Res> get schedule;
@@ -25947,18 +24204,12 @@ class __$$_MedicationKnowledgeScheduleCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@HiveType(typeId: 19)
 class _$_MedicationKnowledgeSchedule extends _MedicationKnowledgeSchedule {
   _$_MedicationKnowledgeSchedule(
-      {@HiveField(0)
-          this.id,
-      @HiveField(1)
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      @HiveField(2)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(3)
-          required this.schedule})
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      required this.schedule})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
         super._();
@@ -25969,7 +24220,6 @@ class _$_MedicationKnowledgeSchedule extends _MedicationKnowledgeSchedule {
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   @override
-  @HiveField(0)
   final String? id;
 
   /// [extension_] May be used to represent additional information that is not
@@ -25987,7 +24237,6 @@ class _$_MedicationKnowledgeSchedule extends _MedicationKnowledgeSchedule {
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   @override
-  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
     final value = _extension_;
@@ -26026,7 +24275,6 @@ class _$_MedicationKnowledgeSchedule extends _MedicationKnowledgeSchedule {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   @override
-  @HiveField(2)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -26038,7 +24286,6 @@ class _$_MedicationKnowledgeSchedule extends _MedicationKnowledgeSchedule {
 
   /// [schedule] Specifies the specific drug schedule.
   @override
-  @HiveField(3)
   final CodeableConcept schedule;
 
   @override
@@ -26087,15 +24334,10 @@ class _$_MedicationKnowledgeSchedule extends _MedicationKnowledgeSchedule {
 abstract class _MedicationKnowledgeSchedule
     extends MedicationKnowledgeSchedule {
   factory _MedicationKnowledgeSchedule(
-          {@HiveField(0)
-              final String? id,
-          @HiveField(1)
-          @JsonKey(name: 'extension')
-              final List<FhirExtension>? extension_,
-          @HiveField(2)
-              final List<FhirExtension>? modifierExtension,
-          @HiveField(3)
-              required final CodeableConcept schedule}) =
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          required final CodeableConcept schedule}) =
       _$_MedicationKnowledgeSchedule;
   _MedicationKnowledgeSchedule._() : super._();
 
@@ -26106,7 +24348,6 @@ abstract class _MedicationKnowledgeSchedule
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
-  @HiveField(0)
   String? get id;
   @override
 
@@ -26116,7 +24357,6 @@ abstract class _MedicationKnowledgeSchedule
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
-  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
@@ -26134,12 +24374,10 @@ abstract class _MedicationKnowledgeSchedule
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
-  @HiveField(2)
   List<FhirExtension>? get modifierExtension;
   @override
 
   /// [schedule] Specifies the specific drug schedule.
-  @HiveField(3)
   CodeableConcept get schedule;
   @override
   @JsonKey(ignore: true)
@@ -26988,39 +25226,32 @@ MedicationRequest _$MedicationRequestFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$MedicationRequest {
   @JsonKey(unknownEnumValue: R4ResourceType.MedicationRequest)
-  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
-  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  @HiveField(2)
   FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
-  @HiveField(4)
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  @HiveField(5)
   FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
-  @HiveField(6)
   Element? get languageElement => throw _privateConstructorUsedError;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -27029,14 +25260,12 @@ mixin _$MedicationRequest {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
-  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
 
   /// [contained] These resources do not have an independent existence apart
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
-  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -27046,7 +25275,6 @@ mixin _$MedicationRequest {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
-  @HiveField(9)
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [modifierExtension] May be used to represent additional information that
@@ -27062,7 +25290,6 @@ mixin _$MedicationRequest {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
@@ -27072,79 +25299,66 @@ mixin _$MedicationRequest {
   /// identifiers assigned to this resource by the performer or other systems
   /// and remain constant as the resource is updated and propagates from server
   ///  to server.
-  @HiveField(11)
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
-  @HiveField(12)
-  @HiveField(13)
+
+  /// [status] A code specifying the current state of the order.  Generally,
+  ///  this will be active or completed state.
   FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
-  @HiveField(14)
   Element? get statusElement => throw _privateConstructorUsedError;
 
   /// [statusReason] Captures the reason for the current state of the
   ///  MedicationRequest.
-  @HiveField(15)
   CodeableConcept? get statusReason => throw _privateConstructorUsedError;
 
   /// [intent] Whether the request is a proposal, plan, or an original order.
-  @HiveField(16)
   FhirCode? get intent => throw _privateConstructorUsedError;
 
   /// [intentElement] Extensions for intent
   @JsonKey(name: '_intent')
-  @HiveField(17)
   Element? get intentElement => throw _privateConstructorUsedError;
 
   /// [category] Indicates the type of medication request (for example, where
   /// the medication is expected to be consumed or administered (i.e. inpatient
   ///  or outpatient)).
-  @HiveField(18)
   List<CodeableConcept>? get category => throw _privateConstructorUsedError;
 
   /// [priority] Indicates how quickly the Medication Request should be
   ///  addressed with respect to other requests.
-  @HiveField(19)
   FhirCode? get priority => throw _privateConstructorUsedError;
 
   /// [priorityElement] Extensions for priority
   @JsonKey(name: '_priority')
-  @HiveField(20)
   Element? get priorityElement => throw _privateConstructorUsedError;
 
   /// [doNotPerform] If true indicates that the provider is asking for the
   ///  medication request not to occur.
-  @HiveField(21)
-  Boolean? get doNotPerform => throw _privateConstructorUsedError;
+  FhirBoolean? get doNotPerform => throw _privateConstructorUsedError;
 
   /// [doNotPerformElement] Extensions for doNotPerform
   @JsonKey(name: '_doNotPerform')
-  @HiveField(22)
   Element? get doNotPerformElement => throw _privateConstructorUsedError;
 
   /// [reportedBoolean] Indicates if this record was captured as a secondary
   /// 'reported' record rather than as an original primary source-of-truth
   ///  record.  It may also indicate the source of the report.
-  @HiveField(23)
-  Boolean? get reportedBoolean => throw _privateConstructorUsedError;
+  FhirBoolean? get reportedBoolean => throw _privateConstructorUsedError;
 
   /// [reportedBooleanElement] Extensions for reportedBoolean
   @JsonKey(name: '_reportedBoolean')
-  @HiveField(24)
   Element? get reportedBooleanElement => throw _privateConstructorUsedError;
 
   /// [reportedReference] Indicates if this record was captured as a secondary
   /// 'reported' record rather than as an original primary source-of-truth
   ///  record.  It may also indicate the source of the report.
-  @HiveField(25)
   Reference? get reportedReference => throw _privateConstructorUsedError;
 
   /// [medicationCodeableConcept] Identifies the medication being requested.
   /// This is a link to a resource that represents the medication which may be
   /// the details of the medication or simply an attribute carrying a code that
   ///  identifies the medication from a known list of medications.
-  @HiveField(26)
   CodeableConcept? get medicationCodeableConcept =>
       throw _privateConstructorUsedError;
 
@@ -27152,111 +25366,97 @@ mixin _$MedicationRequest {
   /// a link to a resource that represents the medication which may be the
   /// details of the medication or simply an attribute carrying a code that
   ///  identifies the medication from a known list of medications.
-  @HiveField(27)
   Reference? get medicationReference => throw _privateConstructorUsedError;
 
   /// [subject] A link to a resource representing the person or set of
   ///  individuals to whom the medication will be given.
-  @HiveField(28)
   Reference get subject => throw _privateConstructorUsedError;
 
   /// [encounter] The Encounter during which this [x] was created or to which
   ///  the creation of this record is tightly associated.
-  @HiveField(29)
   Reference? get encounter => throw _privateConstructorUsedError;
-  @HiveField(30)
-  @HiveField(31)
+
+  /// [supportingInformation] Include additional information (for example,
+  ///  patient height and weight) that supports the ordering of the medication.
   List<Reference>? get supportingInformation =>
       throw _privateConstructorUsedError;
 
   /// [authoredOn] The date (and perhaps time) when the prescription was
   ///  initially written or authored on.
-  @HiveField(32)
   FhirDateTime? get authoredOn => throw _privateConstructorUsedError;
 
   /// [authoredOnElement] Extensions for authoredOn
   @JsonKey(name: '_authoredOn')
-  @HiveField(33)
   Element? get authoredOnElement => throw _privateConstructorUsedError;
 
   /// [requester] The individual, organization, or device that initiated the
   ///  request and has responsibility for its activation.
-  @HiveField(34)
   Reference? get requester => throw _privateConstructorUsedError;
 
   /// [performer] The specified desired performer of the medication treatment
   ///  (e.g. the performer of the medication administration).
-  @HiveField(35)
   Reference? get performer => throw _privateConstructorUsedError;
 
   /// [performerType] Indicates the type of performer of the administration of
   ///  the medication.
-  @HiveField(36)
   CodeableConcept? get performerType => throw _privateConstructorUsedError;
 
   /// [recorder] The person who entered the order on behalf of another
   ///  individual for example in the case of a verbal or a telephone order.
-  @HiveField(37)
   Reference? get recorder => throw _privateConstructorUsedError;
 
   /// [reasonCode] The reason or the indication for ordering or not ordering
   ///  the medication.
-  @HiveField(38)
   List<CodeableConcept>? get reasonCode => throw _privateConstructorUsedError;
 
   /// [reasonReference] Condition or observation that supports why the
   ///  medication was ordered.
-  @HiveField(39)
   List<Reference>? get reasonReference => throw _privateConstructorUsedError;
-  @HiveField(40)
-  @HiveField(41)
+
+  /// [instantiatesCanonical] The URL pointing to a protocol, guideline,
+  /// orderset, or other definition that is adhered to in whole or in part by
+  ///  this MedicationRequest.
   List<FhirCanonical>? get instantiatesCanonical =>
       throw _privateConstructorUsedError;
   @JsonKey(name: '_instantiatesCanonical')
-  @HiveField(42)
   List<Element>? get instantiatesCanonicalElement =>
       throw _privateConstructorUsedError;
-  @HiveField(43)
-  @HiveField(44)
+
+  /// [instantiatesUri] The URL pointing to an externally maintained protocol,
+  /// guideline, orderset or other definition that is adhered to in whole or in
+  ///  part by this MedicationRequest.
   List<FhirUri>? get instantiatesUri => throw _privateConstructorUsedError;
 
   /// [instantiatesUriElement] Extensions for instantiatesUri
   @JsonKey(name: '_instantiatesUri')
-  @HiveField(45)
   List<Element?>? get instantiatesUriElement =>
       throw _privateConstructorUsedError;
 
   /// [basedOn] A plan or request that is fulfilled in whole or in part by this
   ///  medication request.
-  @HiveField(46)
   List<Reference>? get basedOn => throw _privateConstructorUsedError;
 
   /// [groupIdentifier] A shared identifier common to all requests that were
   /// authorized more or less simultaneously by a single author, representing
   ///  the identifier of the requisition or prescription.
-  @HiveField(47)
   Identifier? get groupIdentifier => throw _privateConstructorUsedError;
 
   /// [courseOfTherapyType] The description of the overall patte3rn of the
   ///  administration of the medication to the patient.
-  @HiveField(48)
   CodeableConcept? get courseOfTherapyType =>
       throw _privateConstructorUsedError;
 
   /// [insurance] Insurance plans, coverage extensions, pre-authorizations
   /// and/or pre-determinations that may be required for delivering the
   ///  requested service.
-  @HiveField(49)
   List<Reference>? get insurance => throw _privateConstructorUsedError;
 
   /// [note] Extra information about the prescription that could not be
   ///  conveyed by the other attributes.
-  @HiveField(50)
   List<Annotation>? get note => throw _privateConstructorUsedError;
 
   /// [dosageInstruction] Indicates how the medication is to be used by the
   ///  patient.
-  @HiveField(51)
   List<Dosage>? get dosageInstruction => throw _privateConstructorUsedError;
 
   /// [dispenseRequest] Indicates the specific details for the dispense or
@@ -27265,7 +25465,6 @@ mixin _$MedicationRequest {
   /// always sent with the order.  There may be in some settings (e.g.
   /// hospitals) institutional or system support for completing the dispense
   ///  details in the pharmacy department.
-  @HiveField(52)
   MedicationRequestDispenseRequest? get dispenseRequest =>
       throw _privateConstructorUsedError;
 
@@ -27273,26 +25472,22 @@ mixin _$MedicationRequest {
   /// part of the dispense. In some cases, substitution must happen, in other
   /// cases substitution must not happen. This block explains the prescriber's
   ///  intent. If nothing is specified substitution may be done.
-  @HiveField(53)
   MedicationRequestSubstitution? get substitution =>
       throw _privateConstructorUsedError;
 
   /// [priorPrescription] A link to a resource representing an earlier order
   ///  related order or prescription.
-  @HiveField(54)
   Reference? get priorPrescription => throw _privateConstructorUsedError;
 
   /// [detectedIssue] Indicates an actual or potential clinical issue with or
   /// between one or more active or proposed clinical actions for a patient;
   ///  e.g. Drug-drug interaction, duplicate therapy, dosage alert etc.
-  @HiveField(55)
   List<Reference>? get detectedIssue => throw _privateConstructorUsedError;
 
   /// [eventHistory] Links to Provenance records for past versions of this
   /// resource or fulfilling request or event resources that identify key state
   /// transitions or updates that are likely to be relevant to a user looking at
   ///  the current version of the resource.
-  @HiveField(56)
   List<Reference>? get eventHistory => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -27309,127 +25504,70 @@ abstract class $MedicationRequestCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.MedicationRequest)
-      @HiveField(0)
           R4ResourceType resourceType,
-      @HiveField(1)
-          String? id,
-      @HiveField(2)
-          FhirMeta? meta,
-      @HiveField(3)
-          FhirUri? implicitRules,
+      String? id,
+      FhirMeta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           Element? implicitRulesElement,
-      @HiveField(5)
-          FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           Element? languageElement,
-      @HiveField(7)
-          Narrative? text,
-      @HiveField(8)
-          List<Resource>? contained,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           List<FhirExtension>? extension_,
-      @HiveField(10)
-          List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          List<Identifier>? identifier,
-      @HiveField(12)
-      @HiveField(13)
-          FhirCode? status,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      FhirCode? status,
       @JsonKey(name: '_status')
-      @HiveField(14)
           Element? statusElement,
-      @HiveField(15)
-          CodeableConcept? statusReason,
-      @HiveField(16)
-          FhirCode? intent,
+      CodeableConcept? statusReason,
+      FhirCode? intent,
       @JsonKey(name: '_intent')
-      @HiveField(17)
           Element? intentElement,
-      @HiveField(18)
-          List<CodeableConcept>? category,
-      @HiveField(19)
-          FhirCode? priority,
+      List<CodeableConcept>? category,
+      FhirCode? priority,
       @JsonKey(name: '_priority')
-      @HiveField(20)
           Element? priorityElement,
-      @HiveField(21)
-          Boolean? doNotPerform,
+      FhirBoolean? doNotPerform,
       @JsonKey(name: '_doNotPerform')
-      @HiveField(22)
           Element? doNotPerformElement,
-      @HiveField(23)
-          Boolean? reportedBoolean,
+      FhirBoolean? reportedBoolean,
       @JsonKey(name: '_reportedBoolean')
-      @HiveField(24)
           Element? reportedBooleanElement,
-      @HiveField(25)
-          Reference? reportedReference,
-      @HiveField(26)
-          CodeableConcept? medicationCodeableConcept,
-      @HiveField(27)
-          Reference? medicationReference,
-      @HiveField(28)
-          Reference subject,
-      @HiveField(29)
-          Reference? encounter,
-      @HiveField(30)
-      @HiveField(31)
-          List<Reference>? supportingInformation,
-      @HiveField(32)
-          FhirDateTime? authoredOn,
+      Reference? reportedReference,
+      CodeableConcept? medicationCodeableConcept,
+      Reference? medicationReference,
+      Reference subject,
+      Reference? encounter,
+      List<Reference>? supportingInformation,
+      FhirDateTime? authoredOn,
       @JsonKey(name: '_authoredOn')
-      @HiveField(33)
           Element? authoredOnElement,
-      @HiveField(34)
-          Reference? requester,
-      @HiveField(35)
-          Reference? performer,
-      @HiveField(36)
-          CodeableConcept? performerType,
-      @HiveField(37)
-          Reference? recorder,
-      @HiveField(38)
-          List<CodeableConcept>? reasonCode,
-      @HiveField(39)
-          List<Reference>? reasonReference,
-      @HiveField(40)
-      @HiveField(41)
-          List<FhirCanonical>? instantiatesCanonical,
+      Reference? requester,
+      Reference? performer,
+      CodeableConcept? performerType,
+      Reference? recorder,
+      List<CodeableConcept>? reasonCode,
+      List<Reference>? reasonReference,
+      List<FhirCanonical>? instantiatesCanonical,
       @JsonKey(name: '_instantiatesCanonical')
-      @HiveField(42)
           List<Element>? instantiatesCanonicalElement,
-      @HiveField(43)
-      @HiveField(44)
-          List<FhirUri>? instantiatesUri,
+      List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
-      @HiveField(45)
           List<Element?>? instantiatesUriElement,
-      @HiveField(46)
-          List<Reference>? basedOn,
-      @HiveField(47)
-          Identifier? groupIdentifier,
-      @HiveField(48)
-          CodeableConcept? courseOfTherapyType,
-      @HiveField(49)
-          List<Reference>? insurance,
-      @HiveField(50)
-          List<Annotation>? note,
-      @HiveField(51)
-          List<Dosage>? dosageInstruction,
-      @HiveField(52)
-          MedicationRequestDispenseRequest? dispenseRequest,
-      @HiveField(53)
-          MedicationRequestSubstitution? substitution,
-      @HiveField(54)
-          Reference? priorPrescription,
-      @HiveField(55)
-          List<Reference>? detectedIssue,
-      @HiveField(56)
-          List<Reference>? eventHistory});
+      List<Reference>? basedOn,
+      Identifier? groupIdentifier,
+      CodeableConcept? courseOfTherapyType,
+      List<Reference>? insurance,
+      List<Annotation>? note,
+      List<Dosage>? dosageInstruction,
+      MedicationRequestDispenseRequest? dispenseRequest,
+      MedicationRequestSubstitution? substitution,
+      Reference? priorPrescription,
+      List<Reference>? detectedIssue,
+      List<Reference>? eventHistory});
 
   $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -27549,7 +25687,7 @@ class _$MedicationRequestCopyWithImpl<$Res, $Val extends MedicationRequest>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -27577,7 +25715,7 @@ class _$MedicationRequestCopyWithImpl<$Res, $Val extends MedicationRequest>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -27589,7 +25727,7 @@ class _$MedicationRequestCopyWithImpl<$Res, $Val extends MedicationRequest>
       intent: freezed == intent
           ? _value.intent
           : intent // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       intentElement: freezed == intentElement
           ? _value.intentElement
           : intentElement // ignore: cast_nullable_to_non_nullable
@@ -27601,7 +25739,7 @@ class _$MedicationRequestCopyWithImpl<$Res, $Val extends MedicationRequest>
       priority: freezed == priority
           ? _value.priority
           : priority // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       priorityElement: freezed == priorityElement
           ? _value.priorityElement
           : priorityElement // ignore: cast_nullable_to_non_nullable
@@ -27609,7 +25747,7 @@ class _$MedicationRequestCopyWithImpl<$Res, $Val extends MedicationRequest>
       doNotPerform: freezed == doNotPerform
           ? _value.doNotPerform
           : doNotPerform // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       doNotPerformElement: freezed == doNotPerformElement
           ? _value.doNotPerformElement
           : doNotPerformElement // ignore: cast_nullable_to_non_nullable
@@ -27617,7 +25755,7 @@ class _$MedicationRequestCopyWithImpl<$Res, $Val extends MedicationRequest>
       reportedBoolean: freezed == reportedBoolean
           ? _value.reportedBoolean
           : reportedBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       reportedBooleanElement: freezed == reportedBooleanElement
           ? _value.reportedBooleanElement
           : reportedBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -28051,127 +26189,70 @@ abstract class _$$_MedicationRequestCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.MedicationRequest)
-      @HiveField(0)
           R4ResourceType resourceType,
-      @HiveField(1)
-          String? id,
-      @HiveField(2)
-          FhirMeta? meta,
-      @HiveField(3)
-          FhirUri? implicitRules,
+      String? id,
+      FhirMeta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           Element? implicitRulesElement,
-      @HiveField(5)
-          FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           Element? languageElement,
-      @HiveField(7)
-          Narrative? text,
-      @HiveField(8)
-          List<Resource>? contained,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           List<FhirExtension>? extension_,
-      @HiveField(10)
-          List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          List<Identifier>? identifier,
-      @HiveField(12)
-      @HiveField(13)
-          FhirCode? status,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      FhirCode? status,
       @JsonKey(name: '_status')
-      @HiveField(14)
           Element? statusElement,
-      @HiveField(15)
-          CodeableConcept? statusReason,
-      @HiveField(16)
-          FhirCode? intent,
+      CodeableConcept? statusReason,
+      FhirCode? intent,
       @JsonKey(name: '_intent')
-      @HiveField(17)
           Element? intentElement,
-      @HiveField(18)
-          List<CodeableConcept>? category,
-      @HiveField(19)
-          FhirCode? priority,
+      List<CodeableConcept>? category,
+      FhirCode? priority,
       @JsonKey(name: '_priority')
-      @HiveField(20)
           Element? priorityElement,
-      @HiveField(21)
-          Boolean? doNotPerform,
+      FhirBoolean? doNotPerform,
       @JsonKey(name: '_doNotPerform')
-      @HiveField(22)
           Element? doNotPerformElement,
-      @HiveField(23)
-          Boolean? reportedBoolean,
+      FhirBoolean? reportedBoolean,
       @JsonKey(name: '_reportedBoolean')
-      @HiveField(24)
           Element? reportedBooleanElement,
-      @HiveField(25)
-          Reference? reportedReference,
-      @HiveField(26)
-          CodeableConcept? medicationCodeableConcept,
-      @HiveField(27)
-          Reference? medicationReference,
-      @HiveField(28)
-          Reference subject,
-      @HiveField(29)
-          Reference? encounter,
-      @HiveField(30)
-      @HiveField(31)
-          List<Reference>? supportingInformation,
-      @HiveField(32)
-          FhirDateTime? authoredOn,
+      Reference? reportedReference,
+      CodeableConcept? medicationCodeableConcept,
+      Reference? medicationReference,
+      Reference subject,
+      Reference? encounter,
+      List<Reference>? supportingInformation,
+      FhirDateTime? authoredOn,
       @JsonKey(name: '_authoredOn')
-      @HiveField(33)
           Element? authoredOnElement,
-      @HiveField(34)
-          Reference? requester,
-      @HiveField(35)
-          Reference? performer,
-      @HiveField(36)
-          CodeableConcept? performerType,
-      @HiveField(37)
-          Reference? recorder,
-      @HiveField(38)
-          List<CodeableConcept>? reasonCode,
-      @HiveField(39)
-          List<Reference>? reasonReference,
-      @HiveField(40)
-      @HiveField(41)
-          List<FhirCanonical>? instantiatesCanonical,
+      Reference? requester,
+      Reference? performer,
+      CodeableConcept? performerType,
+      Reference? recorder,
+      List<CodeableConcept>? reasonCode,
+      List<Reference>? reasonReference,
+      List<FhirCanonical>? instantiatesCanonical,
       @JsonKey(name: '_instantiatesCanonical')
-      @HiveField(42)
           List<Element>? instantiatesCanonicalElement,
-      @HiveField(43)
-      @HiveField(44)
-          List<FhirUri>? instantiatesUri,
+      List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
-      @HiveField(45)
           List<Element?>? instantiatesUriElement,
-      @HiveField(46)
-          List<Reference>? basedOn,
-      @HiveField(47)
-          Identifier? groupIdentifier,
-      @HiveField(48)
-          CodeableConcept? courseOfTherapyType,
-      @HiveField(49)
-          List<Reference>? insurance,
-      @HiveField(50)
-          List<Annotation>? note,
-      @HiveField(51)
-          List<Dosage>? dosageInstruction,
-      @HiveField(52)
-          MedicationRequestDispenseRequest? dispenseRequest,
-      @HiveField(53)
-          MedicationRequestSubstitution? substitution,
-      @HiveField(54)
-          Reference? priorPrescription,
-      @HiveField(55)
-          List<Reference>? detectedIssue,
-      @HiveField(56)
-          List<Reference>? eventHistory});
+      List<Reference>? basedOn,
+      Identifier? groupIdentifier,
+      CodeableConcept? courseOfTherapyType,
+      List<Reference>? insurance,
+      List<Annotation>? note,
+      List<Dosage>? dosageInstruction,
+      MedicationRequestDispenseRequest? dispenseRequest,
+      MedicationRequestSubstitution? substitution,
+      Reference? priorPrescription,
+      List<Reference>? detectedIssue,
+      List<Reference>? eventHistory});
 
   @override
   $FhirMetaCopyWith<$Res>? get meta;
@@ -28314,7 +26395,7 @@ class __$$_MedicationRequestCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -28342,7 +26423,7 @@ class __$$_MedicationRequestCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -28354,7 +26435,7 @@ class __$$_MedicationRequestCopyWithImpl<$Res>
       intent: freezed == intent
           ? _value.intent
           : intent // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       intentElement: freezed == intentElement
           ? _value.intentElement
           : intentElement // ignore: cast_nullable_to_non_nullable
@@ -28366,7 +26447,7 @@ class __$$_MedicationRequestCopyWithImpl<$Res>
       priority: freezed == priority
           ? _value.priority
           : priority // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       priorityElement: freezed == priorityElement
           ? _value.priorityElement
           : priorityElement // ignore: cast_nullable_to_non_nullable
@@ -28374,7 +26455,7 @@ class __$$_MedicationRequestCopyWithImpl<$Res>
       doNotPerform: freezed == doNotPerform
           ? _value.doNotPerform
           : doNotPerform // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       doNotPerformElement: freezed == doNotPerformElement
           ? _value.doNotPerformElement
           : doNotPerformElement // ignore: cast_nullable_to_non_nullable
@@ -28382,7 +26463,7 @@ class __$$_MedicationRequestCopyWithImpl<$Res>
       reportedBoolean: freezed == reportedBoolean
           ? _value.reportedBoolean
           : reportedBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       reportedBooleanElement: freezed == reportedBooleanElement
           ? _value.reportedBooleanElement
           : reportedBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -28509,131 +26590,73 @@ class __$$_MedicationRequestCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@HiveType(typeId: 20)
 class _$_MedicationRequest extends _MedicationRequest {
   _$_MedicationRequest(
       {@JsonKey(unknownEnumValue: R4ResourceType.MedicationRequest)
-      @HiveField(0)
           this.resourceType = R4ResourceType.MedicationRequest,
-      @HiveField(1)
-          this.id,
-      @HiveField(2)
-          this.meta,
-      @HiveField(3)
-          this.implicitRules,
+      this.id,
+      this.meta,
+      this.implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           this.implicitRulesElement,
-      @HiveField(5)
-          this.language,
+      this.language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           this.languageElement,
-      @HiveField(7)
-          this.text,
-      @HiveField(8)
-          final List<Resource>? contained,
+      this.text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           final List<FhirExtension>? extension_,
-      @HiveField(10)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          final List<Identifier>? identifier,
-      @HiveField(12)
-      @HiveField(13)
-          this.status,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      this.status,
       @JsonKey(name: '_status')
-      @HiveField(14)
           this.statusElement,
-      @HiveField(15)
-          this.statusReason,
-      @HiveField(16)
-          this.intent,
+      this.statusReason,
+      this.intent,
       @JsonKey(name: '_intent')
-      @HiveField(17)
           this.intentElement,
-      @HiveField(18)
-          final List<CodeableConcept>? category,
-      @HiveField(19)
-          this.priority,
+      final List<CodeableConcept>? category,
+      this.priority,
       @JsonKey(name: '_priority')
-      @HiveField(20)
           this.priorityElement,
-      @HiveField(21)
-          this.doNotPerform,
+      this.doNotPerform,
       @JsonKey(name: '_doNotPerform')
-      @HiveField(22)
           this.doNotPerformElement,
-      @HiveField(23)
-          this.reportedBoolean,
+      this.reportedBoolean,
       @JsonKey(name: '_reportedBoolean')
-      @HiveField(24)
           this.reportedBooleanElement,
-      @HiveField(25)
-          this.reportedReference,
-      @HiveField(26)
-          this.medicationCodeableConcept,
-      @HiveField(27)
-          this.medicationReference,
-      @HiveField(28)
-          required this.subject,
-      @HiveField(29)
-          this.encounter,
-      @HiveField(30)
-      @HiveField(31)
-          final List<Reference>? supportingInformation,
-      @HiveField(32)
-          this.authoredOn,
+      this.reportedReference,
+      this.medicationCodeableConcept,
+      this.medicationReference,
+      required this.subject,
+      this.encounter,
+      final List<Reference>? supportingInformation,
+      this.authoredOn,
       @JsonKey(name: '_authoredOn')
-      @HiveField(33)
           this.authoredOnElement,
-      @HiveField(34)
-          this.requester,
-      @HiveField(35)
-          this.performer,
-      @HiveField(36)
-          this.performerType,
-      @HiveField(37)
-          this.recorder,
-      @HiveField(38)
-          final List<CodeableConcept>? reasonCode,
-      @HiveField(39)
-          final List<Reference>? reasonReference,
-      @HiveField(40)
-      @HiveField(41)
-          final List<FhirCanonical>? instantiatesCanonical,
+      this.requester,
+      this.performer,
+      this.performerType,
+      this.recorder,
+      final List<CodeableConcept>? reasonCode,
+      final List<Reference>? reasonReference,
+      final List<FhirCanonical>? instantiatesCanonical,
       @JsonKey(name: '_instantiatesCanonical')
-      @HiveField(42)
           final List<Element>? instantiatesCanonicalElement,
-      @HiveField(43)
-      @HiveField(44)
-          final List<FhirUri>? instantiatesUri,
+      final List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
-      @HiveField(45)
           final List<Element?>? instantiatesUriElement,
-      @HiveField(46)
-          final List<Reference>? basedOn,
-      @HiveField(47)
-          this.groupIdentifier,
-      @HiveField(48)
-          this.courseOfTherapyType,
-      @HiveField(49)
-          final List<Reference>? insurance,
-      @HiveField(50)
-          final List<Annotation>? note,
-      @HiveField(51)
-          final List<Dosage>? dosageInstruction,
-      @HiveField(52)
-          this.dispenseRequest,
-      @HiveField(53)
-          this.substitution,
-      @HiveField(54)
-          this.priorPrescription,
-      @HiveField(55)
-          final List<Reference>? detectedIssue,
-      @HiveField(56)
-          final List<Reference>? eventHistory})
+      final List<Reference>? basedOn,
+      this.groupIdentifier,
+      this.courseOfTherapyType,
+      final List<Reference>? insurance,
+      final List<Annotation>? note,
+      final List<Dosage>? dosageInstruction,
+      this.dispenseRequest,
+      this.substitution,
+      this.priorPrescription,
+      final List<Reference>? detectedIssue,
+      final List<Reference>? eventHistory})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -28659,20 +26682,17 @@ class _$_MedicationRequest extends _MedicationRequest {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.MedicationRequest)
-  @HiveField(0)
   final R4ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
   @override
-  @HiveField(1)
   final String? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
-  @HiveField(2)
   final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -28680,24 +26700,20 @@ class _$_MedicationRequest extends _MedicationRequest {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   @override
-  @HiveField(3)
   final FhirUri? implicitRules;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
-  @HiveField(4)
   final Element? implicitRulesElement;
 
   /// [language] The base language in which the resource is written.
   @override
-  @HiveField(5)
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] Extensions for language
   @override
   @JsonKey(name: '_language')
-  @HiveField(6)
   final Element? languageElement;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -28707,7 +26723,6 @@ class _$_MedicationRequest extends _MedicationRequest {
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
   @override
-  @HiveField(7)
   final Narrative? text;
 
   /// [contained] These resources do not have an independent existence apart
@@ -28721,7 +26736,6 @@ class _$_MedicationRequest extends _MedicationRequest {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   @override
-  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -28746,7 +26760,6 @@ class _$_MedicationRequest extends _MedicationRequest {
   ///  as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
-  @HiveField(9)
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
@@ -28784,7 +26797,6 @@ class _$_MedicationRequest extends _MedicationRequest {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   @override
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -28809,7 +26821,6 @@ class _$_MedicationRequest extends _MedicationRequest {
   /// and remain constant as the resource is updated and propagates from server
   ///  to server.
   @override
-  @HiveField(11)
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
@@ -28818,32 +26829,28 @@ class _$_MedicationRequest extends _MedicationRequest {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [status] A code specifying the current state of the order.  Generally,
+  ///  this will be active or completed state.
   @override
-  @HiveField(12)
-  @HiveField(13)
-  final Code? status;
+  final FhirCode? status;
 
   /// [statusElement] Extensions for status
   @override
   @JsonKey(name: '_status')
-  @HiveField(14)
   final Element? statusElement;
 
   /// [statusReason] Captures the reason for the current state of the
   ///  MedicationRequest.
   @override
-  @HiveField(15)
   final CodeableConcept? statusReason;
 
   /// [intent] Whether the request is a proposal, plan, or an original order.
   @override
-  @HiveField(16)
-  final Code? intent;
+  final FhirCode? intent;
 
   /// [intentElement] Extensions for intent
   @override
   @JsonKey(name: '_intent')
-  @HiveField(17)
   final Element? intentElement;
 
   /// [category] Indicates the type of medication request (for example, where
@@ -28855,7 +26862,6 @@ class _$_MedicationRequest extends _MedicationRequest {
   /// the medication is expected to be consumed or administered (i.e. inpatient
   ///  or outpatient)).
   @override
-  @HiveField(18)
   List<CodeableConcept>? get category {
     final value = _category;
     if (value == null) return null;
@@ -28867,45 +26873,38 @@ class _$_MedicationRequest extends _MedicationRequest {
   /// [priority] Indicates how quickly the Medication Request should be
   ///  addressed with respect to other requests.
   @override
-  @HiveField(19)
-  final Code? priority;
+  final FhirCode? priority;
 
   /// [priorityElement] Extensions for priority
   @override
   @JsonKey(name: '_priority')
-  @HiveField(20)
   final Element? priorityElement;
 
   /// [doNotPerform] If true indicates that the provider is asking for the
   ///  medication request not to occur.
   @override
-  @HiveField(21)
-  final Boolean? doNotPerform;
+  final FhirBoolean? doNotPerform;
 
   /// [doNotPerformElement] Extensions for doNotPerform
   @override
   @JsonKey(name: '_doNotPerform')
-  @HiveField(22)
   final Element? doNotPerformElement;
 
   /// [reportedBoolean] Indicates if this record was captured as a secondary
   /// 'reported' record rather than as an original primary source-of-truth
   ///  record.  It may also indicate the source of the report.
   @override
-  @HiveField(23)
-  final Boolean? reportedBoolean;
+  final FhirBoolean? reportedBoolean;
 
   /// [reportedBooleanElement] Extensions for reportedBoolean
   @override
   @JsonKey(name: '_reportedBoolean')
-  @HiveField(24)
   final Element? reportedBooleanElement;
 
   /// [reportedReference] Indicates if this record was captured as a secondary
   /// 'reported' record rather than as an original primary source-of-truth
   ///  record.  It may also indicate the source of the report.
   @override
-  @HiveField(25)
   final Reference? reportedReference;
 
   /// [medicationCodeableConcept] Identifies the medication being requested.
@@ -28913,7 +26912,6 @@ class _$_MedicationRequest extends _MedicationRequest {
   /// the details of the medication or simply an attribute carrying a code that
   ///  identifies the medication from a known list of medications.
   @override
-  @HiveField(26)
   final CodeableConcept? medicationCodeableConcept;
 
   /// [medicationReference] Identifies the medication being requested. This is
@@ -28921,24 +26919,25 @@ class _$_MedicationRequest extends _MedicationRequest {
   /// details of the medication or simply an attribute carrying a code that
   ///  identifies the medication from a known list of medications.
   @override
-  @HiveField(27)
   final Reference? medicationReference;
 
   /// [subject] A link to a resource representing the person or set of
   ///  individuals to whom the medication will be given.
   @override
-  @HiveField(28)
   final Reference subject;
 
   /// [encounter] The Encounter during which this [x] was created or to which
   ///  the creation of this record is tightly associated.
   @override
-  @HiveField(29)
   final Reference? encounter;
+
+  /// [supportingInformation] Include additional information (for example,
+  ///  patient height and weight) that supports the ordering of the medication.
   final List<Reference>? _supportingInformation;
+
+  /// [supportingInformation] Include additional information (for example,
+  ///  patient height and weight) that supports the ordering of the medication.
   @override
-  @HiveField(30)
-  @HiveField(31)
   List<Reference>? get supportingInformation {
     final value = _supportingInformation;
     if (value == null) return null;
@@ -28951,37 +26950,31 @@ class _$_MedicationRequest extends _MedicationRequest {
   /// [authoredOn] The date (and perhaps time) when the prescription was
   ///  initially written or authored on.
   @override
-  @HiveField(32)
   final FhirDateTime? authoredOn;
 
   /// [authoredOnElement] Extensions for authoredOn
   @override
   @JsonKey(name: '_authoredOn')
-  @HiveField(33)
   final Element? authoredOnElement;
 
   /// [requester] The individual, organization, or device that initiated the
   ///  request and has responsibility for its activation.
   @override
-  @HiveField(34)
   final Reference? requester;
 
   /// [performer] The specified desired performer of the medication treatment
   ///  (e.g. the performer of the medication administration).
   @override
-  @HiveField(35)
   final Reference? performer;
 
   /// [performerType] Indicates the type of performer of the administration of
   ///  the medication.
   @override
-  @HiveField(36)
   final CodeableConcept? performerType;
 
   /// [recorder] The person who entered the order on behalf of another
   ///  individual for example in the case of a verbal or a telephone order.
   @override
-  @HiveField(37)
   final Reference? recorder;
 
   /// [reasonCode] The reason or the indication for ordering or not ordering
@@ -28991,7 +26984,6 @@ class _$_MedicationRequest extends _MedicationRequest {
   /// [reasonCode] The reason or the indication for ordering or not ordering
   ///  the medication.
   @override
-  @HiveField(38)
   List<CodeableConcept>? get reasonCode {
     final value = _reasonCode;
     if (value == null) return null;
@@ -29007,7 +26999,6 @@ class _$_MedicationRequest extends _MedicationRequest {
   /// [reasonReference] Condition or observation that supports why the
   ///  medication was ordered.
   @override
-  @HiveField(39)
   List<Reference>? get reasonReference {
     final value = _reasonReference;
     if (value == null) return null;
@@ -29016,10 +27007,15 @@ class _$_MedicationRequest extends _MedicationRequest {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [instantiatesCanonical] The URL pointing to a protocol, guideline,
+  /// orderset, or other definition that is adhered to in whole or in part by
+  ///  this MedicationRequest.
   final List<FhirCanonical>? _instantiatesCanonical;
+
+  /// [instantiatesCanonical] The URL pointing to a protocol, guideline,
+  /// orderset, or other definition that is adhered to in whole or in part by
+  ///  this MedicationRequest.
   @override
-  @HiveField(40)
-  @HiveField(41)
   List<FhirCanonical>? get instantiatesCanonical {
     final value = _instantiatesCanonical;
     if (value == null) return null;
@@ -29032,7 +27028,6 @@ class _$_MedicationRequest extends _MedicationRequest {
   final List<Element>? _instantiatesCanonicalElement;
   @override
   @JsonKey(name: '_instantiatesCanonical')
-  @HiveField(42)
   List<Element>? get instantiatesCanonicalElement {
     final value = _instantiatesCanonicalElement;
     if (value == null) return null;
@@ -29042,10 +27037,15 @@ class _$_MedicationRequest extends _MedicationRequest {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [instantiatesUri] The URL pointing to an externally maintained protocol,
+  /// guideline, orderset or other definition that is adhered to in whole or in
+  ///  part by this MedicationRequest.
   final List<FhirUri>? _instantiatesUri;
+
+  /// [instantiatesUri] The URL pointing to an externally maintained protocol,
+  /// guideline, orderset or other definition that is adhered to in whole or in
+  ///  part by this MedicationRequest.
   @override
-  @HiveField(43)
-  @HiveField(44)
   List<FhirUri>? get instantiatesUri {
     final value = _instantiatesUri;
     if (value == null) return null;
@@ -29060,7 +27060,6 @@ class _$_MedicationRequest extends _MedicationRequest {
   /// [instantiatesUriElement] Extensions for instantiatesUri
   @override
   @JsonKey(name: '_instantiatesUri')
-  @HiveField(45)
   List<Element?>? get instantiatesUriElement {
     final value = _instantiatesUriElement;
     if (value == null) return null;
@@ -29077,7 +27076,6 @@ class _$_MedicationRequest extends _MedicationRequest {
   /// [basedOn] A plan or request that is fulfilled in whole or in part by this
   ///  medication request.
   @override
-  @HiveField(46)
   List<Reference>? get basedOn {
     final value = _basedOn;
     if (value == null) return null;
@@ -29090,13 +27088,11 @@ class _$_MedicationRequest extends _MedicationRequest {
   /// authorized more or less simultaneously by a single author, representing
   ///  the identifier of the requisition or prescription.
   @override
-  @HiveField(47)
   final Identifier? groupIdentifier;
 
   /// [courseOfTherapyType] The description of the overall patte3rn of the
   ///  administration of the medication to the patient.
   @override
-  @HiveField(48)
   final CodeableConcept? courseOfTherapyType;
 
   /// [insurance] Insurance plans, coverage extensions, pre-authorizations
@@ -29108,7 +27104,6 @@ class _$_MedicationRequest extends _MedicationRequest {
   /// and/or pre-determinations that may be required for delivering the
   ///  requested service.
   @override
-  @HiveField(49)
   List<Reference>? get insurance {
     final value = _insurance;
     if (value == null) return null;
@@ -29124,7 +27119,6 @@ class _$_MedicationRequest extends _MedicationRequest {
   /// [note] Extra information about the prescription that could not be
   ///  conveyed by the other attributes.
   @override
-  @HiveField(50)
   List<Annotation>? get note {
     final value = _note;
     if (value == null) return null;
@@ -29140,7 +27134,6 @@ class _$_MedicationRequest extends _MedicationRequest {
   /// [dosageInstruction] Indicates how the medication is to be used by the
   ///  patient.
   @override
-  @HiveField(51)
   List<Dosage>? get dosageInstruction {
     final value = _dosageInstruction;
     if (value == null) return null;
@@ -29157,7 +27150,6 @@ class _$_MedicationRequest extends _MedicationRequest {
   /// hospitals) institutional or system support for completing the dispense
   ///  details in the pharmacy department.
   @override
-  @HiveField(52)
   final MedicationRequestDispenseRequest? dispenseRequest;
 
   /// [substitution] Indicates whether or not substitution can or should be
@@ -29165,13 +27157,11 @@ class _$_MedicationRequest extends _MedicationRequest {
   /// cases substitution must not happen. This block explains the prescriber's
   ///  intent. If nothing is specified substitution may be done.
   @override
-  @HiveField(53)
   final MedicationRequestSubstitution? substitution;
 
   /// [priorPrescription] A link to a resource representing an earlier order
   ///  related order or prescription.
   @override
-  @HiveField(54)
   final Reference? priorPrescription;
 
   /// [detectedIssue] Indicates an actual or potential clinical issue with or
@@ -29183,7 +27173,6 @@ class _$_MedicationRequest extends _MedicationRequest {
   /// between one or more active or proposed clinical actions for a patient;
   ///  e.g. Drug-drug interaction, duplicate therapy, dosage alert etc.
   @override
-  @HiveField(55)
   List<Reference>? get detectedIssue {
     final value = _detectedIssue;
     if (value == null) return null;
@@ -29203,7 +27192,6 @@ class _$_MedicationRequest extends _MedicationRequest {
   /// transitions or updates that are likely to be relevant to a user looking at
   ///  the current version of the resource.
   @override
-  @HiveField(56)
   List<Reference>? get eventHistory {
     final value = _eventHistory;
     if (value == null) return null;
@@ -29392,127 +27380,70 @@ class _$_MedicationRequest extends _MedicationRequest {
 abstract class _MedicationRequest extends MedicationRequest {
   factory _MedicationRequest(
       {@JsonKey(unknownEnumValue: R4ResourceType.MedicationRequest)
-      @HiveField(0)
           final R4ResourceType resourceType,
-      @HiveField(1)
-          final String? id,
-      @HiveField(2)
-          final FhirMeta? meta,
-      @HiveField(3)
-          final FhirUri? implicitRules,
+      final String? id,
+      final FhirMeta? meta,
+      final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           final Element? implicitRulesElement,
-      @HiveField(5)
-          final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           final Element? languageElement,
-      @HiveField(7)
-          final Narrative? text,
-      @HiveField(8)
-          final List<Resource>? contained,
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           final List<FhirExtension>? extension_,
-      @HiveField(10)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          final List<Identifier>? identifier,
-      @HiveField(12)
-      @HiveField(13)
-          final Code? status,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final FhirCode? status,
       @JsonKey(name: '_status')
-      @HiveField(14)
           final Element? statusElement,
-      @HiveField(15)
-          final CodeableConcept? statusReason,
-      @HiveField(16)
-          final Code? intent,
+      final CodeableConcept? statusReason,
+      final FhirCode? intent,
       @JsonKey(name: '_intent')
-      @HiveField(17)
           final Element? intentElement,
-      @HiveField(18)
-          final List<CodeableConcept>? category,
-      @HiveField(19)
-          final Code? priority,
+      final List<CodeableConcept>? category,
+      final FhirCode? priority,
       @JsonKey(name: '_priority')
-      @HiveField(20)
           final Element? priorityElement,
-      @HiveField(21)
-          final Boolean? doNotPerform,
+      final FhirBoolean? doNotPerform,
       @JsonKey(name: '_doNotPerform')
-      @HiveField(22)
           final Element? doNotPerformElement,
-      @HiveField(23)
-          final Boolean? reportedBoolean,
+      final FhirBoolean? reportedBoolean,
       @JsonKey(name: '_reportedBoolean')
-      @HiveField(24)
           final Element? reportedBooleanElement,
-      @HiveField(25)
-          final Reference? reportedReference,
-      @HiveField(26)
-          final CodeableConcept? medicationCodeableConcept,
-      @HiveField(27)
-          final Reference? medicationReference,
-      @HiveField(28)
-          required final Reference subject,
-      @HiveField(29)
-          final Reference? encounter,
-      @HiveField(30)
-      @HiveField(31)
-          final List<Reference>? supportingInformation,
-      @HiveField(32)
-          final FhirDateTime? authoredOn,
+      final Reference? reportedReference,
+      final CodeableConcept? medicationCodeableConcept,
+      final Reference? medicationReference,
+      required final Reference subject,
+      final Reference? encounter,
+      final List<Reference>? supportingInformation,
+      final FhirDateTime? authoredOn,
       @JsonKey(name: '_authoredOn')
-      @HiveField(33)
           final Element? authoredOnElement,
-      @HiveField(34)
-          final Reference? requester,
-      @HiveField(35)
-          final Reference? performer,
-      @HiveField(36)
-          final CodeableConcept? performerType,
-      @HiveField(37)
-          final Reference? recorder,
-      @HiveField(38)
-          final List<CodeableConcept>? reasonCode,
-      @HiveField(39)
-          final List<Reference>? reasonReference,
-      @HiveField(40)
-      @HiveField(41)
-          final List<FhirCanonical>? instantiatesCanonical,
+      final Reference? requester,
+      final Reference? performer,
+      final CodeableConcept? performerType,
+      final Reference? recorder,
+      final List<CodeableConcept>? reasonCode,
+      final List<Reference>? reasonReference,
+      final List<FhirCanonical>? instantiatesCanonical,
       @JsonKey(name: '_instantiatesCanonical')
-      @HiveField(42)
           final List<Element>? instantiatesCanonicalElement,
-      @HiveField(43)
-      @HiveField(44)
-          final List<FhirUri>? instantiatesUri,
+      final List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
-      @HiveField(45)
           final List<Element?>? instantiatesUriElement,
-      @HiveField(46)
-          final List<Reference>? basedOn,
-      @HiveField(47)
-          final Identifier? groupIdentifier,
-      @HiveField(48)
-          final CodeableConcept? courseOfTherapyType,
-      @HiveField(49)
-          final List<Reference>? insurance,
-      @HiveField(50)
-          final List<Annotation>? note,
-      @HiveField(51)
-          final List<Dosage>? dosageInstruction,
-      @HiveField(52)
-          final MedicationRequestDispenseRequest? dispenseRequest,
-      @HiveField(53)
-          final MedicationRequestSubstitution? substitution,
-      @HiveField(54)
-          final Reference? priorPrescription,
-      @HiveField(55)
-          final List<Reference>? detectedIssue,
-      @HiveField(56)
-          final List<Reference>? eventHistory}) = _$_MedicationRequest;
+      final List<Reference>? basedOn,
+      final Identifier? groupIdentifier,
+      final CodeableConcept? courseOfTherapyType,
+      final List<Reference>? insurance,
+      final List<Annotation>? note,
+      final List<Dosage>? dosageInstruction,
+      final MedicationRequestDispenseRequest? dispenseRequest,
+      final MedicationRequestSubstitution? substitution,
+      final Reference? priorPrescription,
+      final List<Reference>? detectedIssue,
+      final List<Reference>? eventHistory}) = _$_MedicationRequest;
   _MedicationRequest._() : super._();
 
   factory _MedicationRequest.fromJson(Map<String, dynamic> json) =
@@ -29520,20 +27451,17 @@ abstract class _MedicationRequest extends MedicationRequest {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.MedicationRequest)
-  @HiveField(0)
   R4ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
-  @HiveField(1)
   String? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  @HiveField(2)
   FhirMeta? get meta;
   @override
 
@@ -29541,24 +27469,20 @@ abstract class _MedicationRequest extends MedicationRequest {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  @HiveField(3)
   FhirUri? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
-  @HiveField(4)
   Element? get implicitRulesElement;
   @override
 
   /// [language] The base language in which the resource is written.
-  @HiveField(5)
   FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
-  @HiveField(6)
   Element? get languageElement;
   @override
 
@@ -29568,7 +27492,6 @@ abstract class _MedicationRequest extends MedicationRequest {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
-  @HiveField(7)
   Narrative? get text;
   @override
 
@@ -29576,7 +27499,6 @@ abstract class _MedicationRequest extends MedicationRequest {
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
-  @HiveField(8)
   List<Resource>? get contained;
   @override
 
@@ -29587,7 +27509,6 @@ abstract class _MedicationRequest extends MedicationRequest {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
-  @HiveField(9)
   List<FhirExtension>? get extension_;
   @override
 
@@ -29604,7 +27525,6 @@ abstract class _MedicationRequest extends MedicationRequest {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
 
@@ -29614,85 +27534,73 @@ abstract class _MedicationRequest extends MedicationRequest {
   /// identifiers assigned to this resource by the performer or other systems
   /// and remain constant as the resource is updated and propagates from server
   ///  to server.
-  @HiveField(11)
   List<Identifier>? get identifier;
   @override
-  @HiveField(12)
-  @HiveField(13)
+
+  /// [status] A code specifying the current state of the order.  Generally,
+  ///  this will be active or completed state.
   FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
-  @HiveField(14)
   Element? get statusElement;
   @override
 
   /// [statusReason] Captures the reason for the current state of the
   ///  MedicationRequest.
-  @HiveField(15)
   CodeableConcept? get statusReason;
   @override
 
   /// [intent] Whether the request is a proposal, plan, or an original order.
-  @HiveField(16)
   FhirCode? get intent;
   @override
 
   /// [intentElement] Extensions for intent
   @JsonKey(name: '_intent')
-  @HiveField(17)
   Element? get intentElement;
   @override
 
   /// [category] Indicates the type of medication request (for example, where
   /// the medication is expected to be consumed or administered (i.e. inpatient
   ///  or outpatient)).
-  @HiveField(18)
   List<CodeableConcept>? get category;
   @override
 
   /// [priority] Indicates how quickly the Medication Request should be
   ///  addressed with respect to other requests.
-  @HiveField(19)
   FhirCode? get priority;
   @override
 
   /// [priorityElement] Extensions for priority
   @JsonKey(name: '_priority')
-  @HiveField(20)
   Element? get priorityElement;
   @override
 
   /// [doNotPerform] If true indicates that the provider is asking for the
   ///  medication request not to occur.
-  @HiveField(21)
-  Boolean? get doNotPerform;
+  FhirBoolean? get doNotPerform;
   @override
 
   /// [doNotPerformElement] Extensions for doNotPerform
   @JsonKey(name: '_doNotPerform')
-  @HiveField(22)
   Element? get doNotPerformElement;
   @override
 
   /// [reportedBoolean] Indicates if this record was captured as a secondary
   /// 'reported' record rather than as an original primary source-of-truth
   ///  record.  It may also indicate the source of the report.
-  @HiveField(23)
-  Boolean? get reportedBoolean;
+  FhirBoolean? get reportedBoolean;
   @override
 
   /// [reportedBooleanElement] Extensions for reportedBoolean
   @JsonKey(name: '_reportedBoolean')
-  @HiveField(24)
   Element? get reportedBooleanElement;
   @override
 
   /// [reportedReference] Indicates if this record was captured as a secondary
   /// 'reported' record rather than as an original primary source-of-truth
   ///  record.  It may also indicate the source of the report.
-  @HiveField(25)
   Reference? get reportedReference;
   @override
 
@@ -29700,7 +27608,6 @@ abstract class _MedicationRequest extends MedicationRequest {
   /// This is a link to a resource that represents the medication which may be
   /// the details of the medication or simply an attribute carrying a code that
   ///  identifies the medication from a known list of medications.
-  @HiveField(26)
   CodeableConcept? get medicationCodeableConcept;
   @override
 
@@ -29708,127 +27615,113 @@ abstract class _MedicationRequest extends MedicationRequest {
   /// a link to a resource that represents the medication which may be the
   /// details of the medication or simply an attribute carrying a code that
   ///  identifies the medication from a known list of medications.
-  @HiveField(27)
   Reference? get medicationReference;
   @override
 
   /// [subject] A link to a resource representing the person or set of
   ///  individuals to whom the medication will be given.
-  @HiveField(28)
   Reference get subject;
   @override
 
   /// [encounter] The Encounter during which this [x] was created or to which
   ///  the creation of this record is tightly associated.
-  @HiveField(29)
   Reference? get encounter;
   @override
-  @HiveField(30)
-  @HiveField(31)
+
+  /// [supportingInformation] Include additional information (for example,
+  ///  patient height and weight) that supports the ordering of the medication.
   List<Reference>? get supportingInformation;
   @override
 
   /// [authoredOn] The date (and perhaps time) when the prescription was
   ///  initially written or authored on.
-  @HiveField(32)
   FhirDateTime? get authoredOn;
   @override
 
   /// [authoredOnElement] Extensions for authoredOn
   @JsonKey(name: '_authoredOn')
-  @HiveField(33)
   Element? get authoredOnElement;
   @override
 
   /// [requester] The individual, organization, or device that initiated the
   ///  request and has responsibility for its activation.
-  @HiveField(34)
   Reference? get requester;
   @override
 
   /// [performer] The specified desired performer of the medication treatment
   ///  (e.g. the performer of the medication administration).
-  @HiveField(35)
   Reference? get performer;
   @override
 
   /// [performerType] Indicates the type of performer of the administration of
   ///  the medication.
-  @HiveField(36)
   CodeableConcept? get performerType;
   @override
 
   /// [recorder] The person who entered the order on behalf of another
   ///  individual for example in the case of a verbal or a telephone order.
-  @HiveField(37)
   Reference? get recorder;
   @override
 
   /// [reasonCode] The reason or the indication for ordering or not ordering
   ///  the medication.
-  @HiveField(38)
   List<CodeableConcept>? get reasonCode;
   @override
 
   /// [reasonReference] Condition or observation that supports why the
   ///  medication was ordered.
-  @HiveField(39)
   List<Reference>? get reasonReference;
   @override
-  @HiveField(40)
-  @HiveField(41)
+
+  /// [instantiatesCanonical] The URL pointing to a protocol, guideline,
+  /// orderset, or other definition that is adhered to in whole or in part by
+  ///  this MedicationRequest.
   List<FhirCanonical>? get instantiatesCanonical;
   @override
   @JsonKey(name: '_instantiatesCanonical')
-  @HiveField(42)
   List<Element>? get instantiatesCanonicalElement;
   @override
-  @HiveField(43)
-  @HiveField(44)
+
+  /// [instantiatesUri] The URL pointing to an externally maintained protocol,
+  /// guideline, orderset or other definition that is adhered to in whole or in
+  ///  part by this MedicationRequest.
   List<FhirUri>? get instantiatesUri;
   @override
 
   /// [instantiatesUriElement] Extensions for instantiatesUri
   @JsonKey(name: '_instantiatesUri')
-  @HiveField(45)
   List<Element?>? get instantiatesUriElement;
   @override
 
   /// [basedOn] A plan or request that is fulfilled in whole or in part by this
   ///  medication request.
-  @HiveField(46)
   List<Reference>? get basedOn;
   @override
 
   /// [groupIdentifier] A shared identifier common to all requests that were
   /// authorized more or less simultaneously by a single author, representing
   ///  the identifier of the requisition or prescription.
-  @HiveField(47)
   Identifier? get groupIdentifier;
   @override
 
   /// [courseOfTherapyType] The description of the overall patte3rn of the
   ///  administration of the medication to the patient.
-  @HiveField(48)
   CodeableConcept? get courseOfTherapyType;
   @override
 
   /// [insurance] Insurance plans, coverage extensions, pre-authorizations
   /// and/or pre-determinations that may be required for delivering the
   ///  requested service.
-  @HiveField(49)
   List<Reference>? get insurance;
   @override
 
   /// [note] Extra information about the prescription that could not be
   ///  conveyed by the other attributes.
-  @HiveField(50)
   List<Annotation>? get note;
   @override
 
   /// [dosageInstruction] Indicates how the medication is to be used by the
   ///  patient.
-  @HiveField(51)
   List<Dosage>? get dosageInstruction;
   @override
 
@@ -29838,7 +27731,6 @@ abstract class _MedicationRequest extends MedicationRequest {
   /// always sent with the order.  There may be in some settings (e.g.
   /// hospitals) institutional or system support for completing the dispense
   ///  details in the pharmacy department.
-  @HiveField(52)
   MedicationRequestDispenseRequest? get dispenseRequest;
   @override
 
@@ -29846,20 +27738,17 @@ abstract class _MedicationRequest extends MedicationRequest {
   /// part of the dispense. In some cases, substitution must happen, in other
   /// cases substitution must not happen. This block explains the prescriber's
   ///  intent. If nothing is specified substitution may be done.
-  @HiveField(53)
   MedicationRequestSubstitution? get substitution;
   @override
 
   /// [priorPrescription] A link to a resource representing an earlier order
   ///  related order or prescription.
-  @HiveField(54)
   Reference? get priorPrescription;
   @override
 
   /// [detectedIssue] Indicates an actual or potential clinical issue with or
   /// between one or more active or proposed clinical actions for a patient;
   ///  e.g. Drug-drug interaction, duplicate therapy, dosage alert etc.
-  @HiveField(55)
   List<Reference>? get detectedIssue;
   @override
 
@@ -29867,7 +27756,6 @@ abstract class _MedicationRequest extends MedicationRequest {
   /// resource or fulfilling request or event resources that identify key state
   /// transitions or updates that are likely to be relevant to a user looking at
   ///  the current version of the resource.
-  @HiveField(56)
   List<Reference>? get eventHistory;
   @override
   @JsonKey(ignore: true)
@@ -30043,7 +27931,7 @@ class _$MedicationRequestDispenseRequestCopyWithImpl<$Res,
       numberOfRepeatsAllowed: freezed == numberOfRepeatsAllowed
           ? _value.numberOfRepeatsAllowed
           : numberOfRepeatsAllowed // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt?,
+              as FhirUnsignedInt?,
       numberOfRepeatsAllowedElement: freezed == numberOfRepeatsAllowedElement
           ? _value.numberOfRepeatsAllowedElement
           : numberOfRepeatsAllowedElement // ignore: cast_nullable_to_non_nullable
@@ -30244,7 +28132,7 @@ class __$$_MedicationRequestDispenseRequestCopyWithImpl<$Res>
       numberOfRepeatsAllowed: freezed == numberOfRepeatsAllowed
           ? _value.numberOfRepeatsAllowed
           : numberOfRepeatsAllowed // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt?,
+              as FhirUnsignedInt?,
       numberOfRepeatsAllowedElement: freezed == numberOfRepeatsAllowedElement
           ? _value.numberOfRepeatsAllowedElement
           : numberOfRepeatsAllowedElement // ignore: cast_nullable_to_non_nullable
@@ -30382,7 +28270,7 @@ class _$_MedicationRequestDispenseRequest
   /// tablets.  A prescriber may explicitly say that zero refills are permitted
   ///  after the initial dispense.
   @override
-  final UnsignedInt? numberOfRepeatsAllowed;
+  final FhirUnsignedInt? numberOfRepeatsAllowed;
   @override
   @JsonKey(name: '_numberOfRepeatsAllowed')
   final Element? numberOfRepeatsAllowedElement;
@@ -30479,7 +28367,7 @@ abstract class _MedicationRequestDispenseRequest
       final MedicationRequestInitialFill? initialFill,
       final FhirDuration? dispenseInterval,
       final Period? validityPeriod,
-      final UnsignedInt? numberOfRepeatsAllowed,
+      final FhirUnsignedInt? numberOfRepeatsAllowed,
       @JsonKey(name: '_numberOfRepeatsAllowed')
           final Element? numberOfRepeatsAllowedElement,
       final Quantity? quantity,
@@ -31013,7 +28901,7 @@ mixin _$MedicationRequestSubstitution {
 
   /// [allowedBoolean] True if the prescriber allows a different drug to be
   ///  dispensed from what was prescribed.
-  Boolean? get allowedBoolean => throw _privateConstructorUsedError;
+  FhirBoolean? get allowedBoolean => throw _privateConstructorUsedError;
 
   /// [allowedBooleanElement] Extensions for allowedBoolean
   @JsonKey(name: '_allowedBoolean')
@@ -31046,7 +28934,7 @@ abstract class $MedicationRequestSubstitutionCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Boolean? allowedBoolean,
+      FhirBoolean? allowedBoolean,
       @JsonKey(name: '_allowedBoolean') Element? allowedBooleanElement,
       CodeableConcept? allowedCodeableConcept,
       CodeableConcept? reason});
@@ -31094,7 +28982,7 @@ class _$MedicationRequestSubstitutionCopyWithImpl<$Res,
       allowedBoolean: freezed == allowedBoolean
           ? _value.allowedBoolean
           : allowedBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       allowedBooleanElement: freezed == allowedBooleanElement
           ? _value.allowedBooleanElement
           : allowedBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -31161,7 +29049,7 @@ abstract class _$$_MedicationRequestSubstitutionCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Boolean? allowedBoolean,
+      FhirBoolean? allowedBoolean,
       @JsonKey(name: '_allowedBoolean') Element? allowedBooleanElement,
       CodeableConcept? allowedCodeableConcept,
       CodeableConcept? reason});
@@ -31211,7 +29099,7 @@ class __$$_MedicationRequestSubstitutionCopyWithImpl<$Res>
       allowedBoolean: freezed == allowedBoolean
           ? _value.allowedBoolean
           : allowedBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       allowedBooleanElement: freezed == allowedBooleanElement
           ? _value.allowedBooleanElement
           : allowedBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -31317,7 +29205,7 @@ class _$_MedicationRequestSubstitution extends _MedicationRequestSubstitution {
   /// [allowedBoolean] True if the prescriber allows a different drug to be
   ///  dispensed from what was prescribed.
   @override
-  final Boolean? allowedBoolean;
+  final FhirBoolean? allowedBoolean;
 
   /// [allowedBooleanElement] Extensions for allowedBoolean
   @override
@@ -31391,7 +29279,7 @@ abstract class _MedicationRequestSubstitution
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final Boolean? allowedBoolean,
+      final FhirBoolean? allowedBoolean,
       @JsonKey(name: '_allowedBoolean') final Element? allowedBooleanElement,
       final CodeableConcept? allowedCodeableConcept,
       final CodeableConcept? reason}) = _$_MedicationRequestSubstitution;
@@ -31435,7 +29323,7 @@ abstract class _MedicationRequestSubstitution
 
   /// [allowedBoolean] True if the prescriber allows a different drug to be
   ///  dispensed from what was prescribed.
-  Boolean? get allowedBoolean;
+  FhirBoolean? get allowedBoolean;
   @override
 
   /// [allowedBooleanElement] Extensions for allowedBoolean
@@ -31464,39 +29352,32 @@ MedicationStatement _$MedicationStatementFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$MedicationStatement {
   @JsonKey(unknownEnumValue: R4ResourceType.MedicationStatement)
-  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
-  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  @HiveField(2)
   FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
-  @HiveField(4)
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  @HiveField(5)
   FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
-  @HiveField(6)
   Element? get languageElement => throw _privateConstructorUsedError;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -31505,14 +29386,12 @@ mixin _$MedicationStatement {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
-  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
 
   /// [contained] These resources do not have an independent existence apart
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
-  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -31522,7 +29401,6 @@ mixin _$MedicationStatement {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
-  @HiveField(9)
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [modifierExtension] May be used to represent additional information that
@@ -31538,7 +29416,6 @@ mixin _$MedicationStatement {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
@@ -31548,44 +29425,37 @@ mixin _$MedicationStatement {
   /// identifiers assigned to this resource by the performer or other systems
   /// and remain constant as the resource is updated and propagates from server
   ///  to server.
-  @HiveField(11)
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [basedOn] A plan, proposal or order that is fulfilled in whole or in part
   ///  by this event.
-  @HiveField(12)
   List<Reference>? get basedOn => throw _privateConstructorUsedError;
 
   /// [partOf] A larger event of which this particular event is a component or
   ///  step.
-  @HiveField(13)
   List<Reference>? get partOf => throw _privateConstructorUsedError;
 
   /// [status] A code representing the patient or other source's judgment about
-  @HiveField(14)
-  @HiveField(15)
+  /// the state of the medication used that this statement is about.  Generally,
+  ///  this will be active or completed.
   FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
-  @HiveField(16)
   Element? get statusElement => throw _privateConstructorUsedError;
 
   /// [statusReason] Captures the reason for the current state of the
   ///  MedicationStatement.
-  @HiveField(17)
   List<CodeableConcept>? get statusReason => throw _privateConstructorUsedError;
 
   /// [category] Indicates where the medication is expected to be consumed or
   ///  administered.
-  @HiveField(18)
   CodeableConcept? get category => throw _privateConstructorUsedError;
 
   /// [medicationCodeableConcept] Identifies the medication being administered.
   /// This is either a link to a resource representing the details of the
   /// medication or a simple attribute carrying a code that identifies the
   ///  medication from a known list of medications.
-  @HiveField(19)
   CodeableConcept? get medicationCodeableConcept =>
       throw _privateConstructorUsedError;
 
@@ -31593,74 +29463,61 @@ mixin _$MedicationStatement {
   /// is either a link to a resource representing the details of the medication
   /// or a simple attribute carrying a code that identifies the medication from
   ///  a known list of medications.
-  @HiveField(20)
   Reference? get medicationReference => throw _privateConstructorUsedError;
 
   /// [subject] The person, animal or group who is/was taking the medication.
-  @HiveField(21)
   Reference get subject => throw _privateConstructorUsedError;
 
   /// [context] The encounter or episode of care that establishes the context
   ///  for this MedicationStatement.
-  @HiveField(22)
   Reference? get context => throw _privateConstructorUsedError;
 
   /// [effectiveDateTime] The interval of time during which it is being
   /// asserted that the patient is/was/will be taking the medication (or was not
   ///  taking, when the MedicationStatement.taken element is No).
-  @HiveField(23)
   FhirDateTime? get effectiveDateTime => throw _privateConstructorUsedError;
 
   /// [effectiveDateTimeElement] Extensions for effectiveDateTime
   @JsonKey(name: '_effectiveDateTime')
-  @HiveField(24)
   Element? get effectiveDateTimeElement => throw _privateConstructorUsedError;
 
   /// [effectivePeriod] The interval of time during which it is being asserted
-  @HiveField(25)
-  @HiveField(26)
+  /// that the patient is/was/will be taking the medication (or was not taking,
+  ///  when the MedicationStatement.taken element is No).
   Period? get effectivePeriod => throw _privateConstructorUsedError;
 
   /// [dateAsserted] The date when the medication statement was asserted by the
   ///  information source.
-  @HiveField(27)
   FhirDateTime? get dateAsserted => throw _privateConstructorUsedError;
 
   /// [dateAssertedElement] Extensions for dateAsserted
   @JsonKey(name: '_dateAsserted')
-  @HiveField(28)
   Element? get dateAssertedElement => throw _privateConstructorUsedError;
 
   /// [informationSource] The person or organization that provided the
   /// information about the taking of this medication. Note: Use derivedFrom
   /// when a MedicationStatement is derived from other resources, e.g. Claim or
   ///  MedicationRequest.
-  @HiveField(29)
   Reference? get informationSource => throw _privateConstructorUsedError;
 
   /// [derivedFrom] Allows linking the MedicationStatement to the underlying
   /// MedicationRequest, or to other information that supports or is used to
   ///  derive the MedicationStatement.
-  @HiveField(30)
   List<Reference>? get derivedFrom => throw _privateConstructorUsedError;
 
   /// [reasonCode] A reason for why the medication is being/was taken.
-  @HiveField(31)
   List<CodeableConcept>? get reasonCode => throw _privateConstructorUsedError;
 
   /// [reasonReference] Condition or observation that supports why the
   ///  medication is being/was taken.
-  @HiveField(32)
   List<Reference>? get reasonReference => throw _privateConstructorUsedError;
 
   /// [note] Provides extra information about the medication statement that is
   ///  not conveyed by the other attributes.
-  @HiveField(33)
   List<Annotation>? get note => throw _privateConstructorUsedError;
 
   /// [dosage] Indicates how the medication is/was or should be taken by the
   ///  patient.
-  @HiveField(34)
   List<Dosage>? get dosage => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -31677,80 +29534,45 @@ abstract class $MedicationStatementCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.MedicationStatement)
-      @HiveField(0)
           R4ResourceType resourceType,
-      @HiveField(1)
-          String? id,
-      @HiveField(2)
-          FhirMeta? meta,
-      @HiveField(3)
-          FhirUri? implicitRules,
+      String? id,
+      FhirMeta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           Element? implicitRulesElement,
-      @HiveField(5)
-          FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           Element? languageElement,
-      @HiveField(7)
-          Narrative? text,
-      @HiveField(8)
-          List<Resource>? contained,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           List<FhirExtension>? extension_,
-      @HiveField(10)
-          List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          List<Identifier>? identifier,
-      @HiveField(12)
-          List<Reference>? basedOn,
-      @HiveField(13)
-          List<Reference>? partOf,
-      @HiveField(14)
-      @HiveField(15)
-          FhirCode? status,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      List<Reference>? basedOn,
+      List<Reference>? partOf,
+      FhirCode? status,
       @JsonKey(name: '_status')
-      @HiveField(16)
           Element? statusElement,
-      @HiveField(17)
-          List<CodeableConcept>? statusReason,
-      @HiveField(18)
-          CodeableConcept? category,
-      @HiveField(19)
-          CodeableConcept? medicationCodeableConcept,
-      @HiveField(20)
-          Reference? medicationReference,
-      @HiveField(21)
-          Reference subject,
-      @HiveField(22)
-          Reference? context,
-      @HiveField(23)
-          FhirDateTime? effectiveDateTime,
+      List<CodeableConcept>? statusReason,
+      CodeableConcept? category,
+      CodeableConcept? medicationCodeableConcept,
+      Reference? medicationReference,
+      Reference subject,
+      Reference? context,
+      FhirDateTime? effectiveDateTime,
       @JsonKey(name: '_effectiveDateTime')
-      @HiveField(24)
           Element? effectiveDateTimeElement,
-      @HiveField(25)
-      @HiveField(26)
-          Period? effectivePeriod,
-      @HiveField(27)
-          FhirDateTime? dateAsserted,
+      Period? effectivePeriod,
+      FhirDateTime? dateAsserted,
       @JsonKey(name: '_dateAsserted')
-      @HiveField(28)
           Element? dateAssertedElement,
-      @HiveField(29)
-          Reference? informationSource,
-      @HiveField(30)
-          List<Reference>? derivedFrom,
-      @HiveField(31)
-          List<CodeableConcept>? reasonCode,
-      @HiveField(32)
-          List<Reference>? reasonReference,
-      @HiveField(33)
-          List<Annotation>? note,
-      @HiveField(34)
-          List<Dosage>? dosage});
+      Reference? informationSource,
+      List<Reference>? derivedFrom,
+      List<CodeableConcept>? reasonCode,
+      List<Reference>? reasonReference,
+      List<Annotation>? note,
+      List<Dosage>? dosage});
 
   $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -31839,7 +29661,7 @@ class _$MedicationStatementCopyWithImpl<$Res, $Val extends MedicationStatement>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -31875,7 +29697,7 @@ class _$MedicationStatementCopyWithImpl<$Res, $Val extends MedicationStatement>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -32127,80 +29949,45 @@ abstract class _$$_MedicationStatementCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.MedicationStatement)
-      @HiveField(0)
           R4ResourceType resourceType,
-      @HiveField(1)
-          String? id,
-      @HiveField(2)
-          FhirMeta? meta,
-      @HiveField(3)
-          FhirUri? implicitRules,
+      String? id,
+      FhirMeta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           Element? implicitRulesElement,
-      @HiveField(5)
-          FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           Element? languageElement,
-      @HiveField(7)
-          Narrative? text,
-      @HiveField(8)
-          List<Resource>? contained,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           List<FhirExtension>? extension_,
-      @HiveField(10)
-          List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          List<Identifier>? identifier,
-      @HiveField(12)
-          List<Reference>? basedOn,
-      @HiveField(13)
-          List<Reference>? partOf,
-      @HiveField(14)
-      @HiveField(15)
-          FhirCode? status,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      List<Reference>? basedOn,
+      List<Reference>? partOf,
+      FhirCode? status,
       @JsonKey(name: '_status')
-      @HiveField(16)
           Element? statusElement,
-      @HiveField(17)
-          List<CodeableConcept>? statusReason,
-      @HiveField(18)
-          CodeableConcept? category,
-      @HiveField(19)
-          CodeableConcept? medicationCodeableConcept,
-      @HiveField(20)
-          Reference? medicationReference,
-      @HiveField(21)
-          Reference subject,
-      @HiveField(22)
-          Reference? context,
-      @HiveField(23)
-          FhirDateTime? effectiveDateTime,
+      List<CodeableConcept>? statusReason,
+      CodeableConcept? category,
+      CodeableConcept? medicationCodeableConcept,
+      Reference? medicationReference,
+      Reference subject,
+      Reference? context,
+      FhirDateTime? effectiveDateTime,
       @JsonKey(name: '_effectiveDateTime')
-      @HiveField(24)
           Element? effectiveDateTimeElement,
-      @HiveField(25)
-      @HiveField(26)
-          Period? effectivePeriod,
-      @HiveField(27)
-          FhirDateTime? dateAsserted,
+      Period? effectivePeriod,
+      FhirDateTime? dateAsserted,
       @JsonKey(name: '_dateAsserted')
-      @HiveField(28)
           Element? dateAssertedElement,
-      @HiveField(29)
-          Reference? informationSource,
-      @HiveField(30)
-          List<Reference>? derivedFrom,
-      @HiveField(31)
-          List<CodeableConcept>? reasonCode,
-      @HiveField(32)
-          List<Reference>? reasonReference,
-      @HiveField(33)
-          List<Annotation>? note,
-      @HiveField(34)
-          List<Dosage>? dosage});
+      Reference? informationSource,
+      List<Reference>? derivedFrom,
+      List<CodeableConcept>? reasonCode,
+      List<Reference>? reasonReference,
+      List<Annotation>? note,
+      List<Dosage>? dosage});
 
   @override
   $FhirMetaCopyWith<$Res>? get meta;
@@ -32301,7 +30088,7 @@ class __$$_MedicationStatementCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -32337,7 +30124,7 @@ class __$$_MedicationStatementCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -32416,84 +30203,48 @@ class __$$_MedicationStatementCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@HiveType(typeId: 21)
 class _$_MedicationStatement extends _MedicationStatement {
   _$_MedicationStatement(
       {@JsonKey(unknownEnumValue: R4ResourceType.MedicationStatement)
-      @HiveField(0)
           this.resourceType = R4ResourceType.MedicationStatement,
-      @HiveField(1)
-          this.id,
-      @HiveField(2)
-          this.meta,
-      @HiveField(3)
-          this.implicitRules,
+      this.id,
+      this.meta,
+      this.implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           this.implicitRulesElement,
-      @HiveField(5)
-          this.language,
+      this.language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           this.languageElement,
-      @HiveField(7)
-          this.text,
-      @HiveField(8)
-          final List<Resource>? contained,
+      this.text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           final List<FhirExtension>? extension_,
-      @HiveField(10)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          final List<Identifier>? identifier,
-      @HiveField(12)
-          final List<Reference>? basedOn,
-      @HiveField(13)
-          final List<Reference>? partOf,
-      @HiveField(14)
-      @HiveField(15)
-          this.status,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final List<Reference>? basedOn,
+      final List<Reference>? partOf,
+      this.status,
       @JsonKey(name: '_status')
-      @HiveField(16)
           this.statusElement,
-      @HiveField(17)
-          final List<CodeableConcept>? statusReason,
-      @HiveField(18)
-          this.category,
-      @HiveField(19)
-          this.medicationCodeableConcept,
-      @HiveField(20)
-          this.medicationReference,
-      @HiveField(21)
-          required this.subject,
-      @HiveField(22)
-          this.context,
-      @HiveField(23)
-          this.effectiveDateTime,
+      final List<CodeableConcept>? statusReason,
+      this.category,
+      this.medicationCodeableConcept,
+      this.medicationReference,
+      required this.subject,
+      this.context,
+      this.effectiveDateTime,
       @JsonKey(name: '_effectiveDateTime')
-      @HiveField(24)
           this.effectiveDateTimeElement,
-      @HiveField(25)
-      @HiveField(26)
-          this.effectivePeriod,
-      @HiveField(27)
-          this.dateAsserted,
+      this.effectivePeriod,
+      this.dateAsserted,
       @JsonKey(name: '_dateAsserted')
-      @HiveField(28)
           this.dateAssertedElement,
-      @HiveField(29)
-          this.informationSource,
-      @HiveField(30)
-          final List<Reference>? derivedFrom,
-      @HiveField(31)
-          final List<CodeableConcept>? reasonCode,
-      @HiveField(32)
-          final List<Reference>? reasonReference,
-      @HiveField(33)
-          final List<Annotation>? note,
-      @HiveField(34)
-          final List<Dosage>? dosage})
+      this.informationSource,
+      final List<Reference>? derivedFrom,
+      final List<CodeableConcept>? reasonCode,
+      final List<Reference>? reasonReference,
+      final List<Annotation>? note,
+      final List<Dosage>? dosage})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -32513,20 +30264,17 @@ class _$_MedicationStatement extends _MedicationStatement {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.MedicationStatement)
-  @HiveField(0)
   final R4ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
   @override
-  @HiveField(1)
   final String? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
-  @HiveField(2)
   final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -32534,24 +30282,20 @@ class _$_MedicationStatement extends _MedicationStatement {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   @override
-  @HiveField(3)
   final FhirUri? implicitRules;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
-  @HiveField(4)
   final Element? implicitRulesElement;
 
   /// [language] The base language in which the resource is written.
   @override
-  @HiveField(5)
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] Extensions for language
   @override
   @JsonKey(name: '_language')
-  @HiveField(6)
   final Element? languageElement;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -32561,7 +30305,6 @@ class _$_MedicationStatement extends _MedicationStatement {
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
   @override
-  @HiveField(7)
   final Narrative? text;
 
   /// [contained] These resources do not have an independent existence apart
@@ -32575,7 +30318,6 @@ class _$_MedicationStatement extends _MedicationStatement {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   @override
-  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -32600,7 +30342,6 @@ class _$_MedicationStatement extends _MedicationStatement {
   ///  as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
-  @HiveField(9)
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
@@ -32638,7 +30379,6 @@ class _$_MedicationStatement extends _MedicationStatement {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   @override
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -32663,7 +30403,6 @@ class _$_MedicationStatement extends _MedicationStatement {
   /// and remain constant as the resource is updated and propagates from server
   ///  to server.
   @override
-  @HiveField(11)
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
@@ -32679,7 +30418,6 @@ class _$_MedicationStatement extends _MedicationStatement {
   /// [basedOn] A plan, proposal or order that is fulfilled in whole or in part
   ///  by this event.
   @override
-  @HiveField(12)
   List<Reference>? get basedOn {
     final value = _basedOn;
     if (value == null) return null;
@@ -32695,7 +30433,6 @@ class _$_MedicationStatement extends _MedicationStatement {
   /// [partOf] A larger event of which this particular event is a component or
   ///  step.
   @override
-  @HiveField(13)
   List<Reference>? get partOf {
     final value = _partOf;
     if (value == null) return null;
@@ -32705,15 +30442,14 @@ class _$_MedicationStatement extends _MedicationStatement {
   }
 
   /// [status] A code representing the patient or other source's judgment about
+  /// the state of the medication used that this statement is about.  Generally,
+  ///  this will be active or completed.
   @override
-  @HiveField(14)
-  @HiveField(15)
-  final Code? status;
+  final FhirCode? status;
 
   /// [statusElement] Extensions for status
   @override
   @JsonKey(name: '_status')
-  @HiveField(16)
   final Element? statusElement;
 
   /// [statusReason] Captures the reason for the current state of the
@@ -32723,7 +30459,6 @@ class _$_MedicationStatement extends _MedicationStatement {
   /// [statusReason] Captures the reason for the current state of the
   ///  MedicationStatement.
   @override
-  @HiveField(17)
   List<CodeableConcept>? get statusReason {
     final value = _statusReason;
     if (value == null) return null;
@@ -32735,7 +30470,6 @@ class _$_MedicationStatement extends _MedicationStatement {
   /// [category] Indicates where the medication is expected to be consumed or
   ///  administered.
   @override
-  @HiveField(18)
   final CodeableConcept? category;
 
   /// [medicationCodeableConcept] Identifies the medication being administered.
@@ -32743,7 +30477,6 @@ class _$_MedicationStatement extends _MedicationStatement {
   /// medication or a simple attribute carrying a code that identifies the
   ///  medication from a known list of medications.
   @override
-  @HiveField(19)
   final CodeableConcept? medicationCodeableConcept;
 
   /// [medicationReference] Identifies the medication being administered. This
@@ -32751,49 +30484,42 @@ class _$_MedicationStatement extends _MedicationStatement {
   /// or a simple attribute carrying a code that identifies the medication from
   ///  a known list of medications.
   @override
-  @HiveField(20)
   final Reference? medicationReference;
 
   /// [subject] The person, animal or group who is/was taking the medication.
   @override
-  @HiveField(21)
   final Reference subject;
 
   /// [context] The encounter or episode of care that establishes the context
   ///  for this MedicationStatement.
   @override
-  @HiveField(22)
   final Reference? context;
 
   /// [effectiveDateTime] The interval of time during which it is being
   /// asserted that the patient is/was/will be taking the medication (or was not
   ///  taking, when the MedicationStatement.taken element is No).
   @override
-  @HiveField(23)
   final FhirDateTime? effectiveDateTime;
 
   /// [effectiveDateTimeElement] Extensions for effectiveDateTime
   @override
   @JsonKey(name: '_effectiveDateTime')
-  @HiveField(24)
   final Element? effectiveDateTimeElement;
 
   /// [effectivePeriod] The interval of time during which it is being asserted
+  /// that the patient is/was/will be taking the medication (or was not taking,
+  ///  when the MedicationStatement.taken element is No).
   @override
-  @HiveField(25)
-  @HiveField(26)
   final Period? effectivePeriod;
 
   /// [dateAsserted] The date when the medication statement was asserted by the
   ///  information source.
   @override
-  @HiveField(27)
   final FhirDateTime? dateAsserted;
 
   /// [dateAssertedElement] Extensions for dateAsserted
   @override
   @JsonKey(name: '_dateAsserted')
-  @HiveField(28)
   final Element? dateAssertedElement;
 
   /// [informationSource] The person or organization that provided the
@@ -32801,7 +30527,6 @@ class _$_MedicationStatement extends _MedicationStatement {
   /// when a MedicationStatement is derived from other resources, e.g. Claim or
   ///  MedicationRequest.
   @override
-  @HiveField(29)
   final Reference? informationSource;
 
   /// [derivedFrom] Allows linking the MedicationStatement to the underlying
@@ -32813,7 +30538,6 @@ class _$_MedicationStatement extends _MedicationStatement {
   /// MedicationRequest, or to other information that supports or is used to
   ///  derive the MedicationStatement.
   @override
-  @HiveField(30)
   List<Reference>? get derivedFrom {
     final value = _derivedFrom;
     if (value == null) return null;
@@ -32827,7 +30551,6 @@ class _$_MedicationStatement extends _MedicationStatement {
 
   /// [reasonCode] A reason for why the medication is being/was taken.
   @override
-  @HiveField(31)
   List<CodeableConcept>? get reasonCode {
     final value = _reasonCode;
     if (value == null) return null;
@@ -32843,7 +30566,6 @@ class _$_MedicationStatement extends _MedicationStatement {
   /// [reasonReference] Condition or observation that supports why the
   ///  medication is being/was taken.
   @override
-  @HiveField(32)
   List<Reference>? get reasonReference {
     final value = _reasonReference;
     if (value == null) return null;
@@ -32859,7 +30581,6 @@ class _$_MedicationStatement extends _MedicationStatement {
   /// [note] Provides extra information about the medication statement that is
   ///  not conveyed by the other attributes.
   @override
-  @HiveField(33)
   List<Annotation>? get note {
     final value = _note;
     if (value == null) return null;
@@ -32875,7 +30596,6 @@ class _$_MedicationStatement extends _MedicationStatement {
   /// [dosage] Indicates how the medication is/was or should be taken by the
   ///  patient.
   @override
-  @HiveField(34)
   List<Dosage>? get dosage {
     final value = _dosage;
     if (value == null) return null;
@@ -33011,80 +30731,45 @@ class _$_MedicationStatement extends _MedicationStatement {
 abstract class _MedicationStatement extends MedicationStatement {
   factory _MedicationStatement(
       {@JsonKey(unknownEnumValue: R4ResourceType.MedicationStatement)
-      @HiveField(0)
           final R4ResourceType resourceType,
-      @HiveField(1)
-          final String? id,
-      @HiveField(2)
-          final FhirMeta? meta,
-      @HiveField(3)
-          final FhirUri? implicitRules,
+      final String? id,
+      final FhirMeta? meta,
+      final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           final Element? implicitRulesElement,
-      @HiveField(5)
-          final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           final Element? languageElement,
-      @HiveField(7)
-          final Narrative? text,
-      @HiveField(8)
-          final List<Resource>? contained,
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           final List<FhirExtension>? extension_,
-      @HiveField(10)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          final List<Identifier>? identifier,
-      @HiveField(12)
-          final List<Reference>? basedOn,
-      @HiveField(13)
-          final List<Reference>? partOf,
-      @HiveField(14)
-      @HiveField(15)
-          final Code? status,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final List<Reference>? basedOn,
+      final List<Reference>? partOf,
+      final FhirCode? status,
       @JsonKey(name: '_status')
-      @HiveField(16)
           final Element? statusElement,
-      @HiveField(17)
-          final List<CodeableConcept>? statusReason,
-      @HiveField(18)
-          final CodeableConcept? category,
-      @HiveField(19)
-          final CodeableConcept? medicationCodeableConcept,
-      @HiveField(20)
-          final Reference? medicationReference,
-      @HiveField(21)
-          required final Reference subject,
-      @HiveField(22)
-          final Reference? context,
-      @HiveField(23)
-          final FhirDateTime? effectiveDateTime,
+      final List<CodeableConcept>? statusReason,
+      final CodeableConcept? category,
+      final CodeableConcept? medicationCodeableConcept,
+      final Reference? medicationReference,
+      required final Reference subject,
+      final Reference? context,
+      final FhirDateTime? effectiveDateTime,
       @JsonKey(name: '_effectiveDateTime')
-      @HiveField(24)
           final Element? effectiveDateTimeElement,
-      @HiveField(25)
-      @HiveField(26)
-          final Period? effectivePeriod,
-      @HiveField(27)
-          final FhirDateTime? dateAsserted,
+      final Period? effectivePeriod,
+      final FhirDateTime? dateAsserted,
       @JsonKey(name: '_dateAsserted')
-      @HiveField(28)
           final Element? dateAssertedElement,
-      @HiveField(29)
-          final Reference? informationSource,
-      @HiveField(30)
-          final List<Reference>? derivedFrom,
-      @HiveField(31)
-          final List<CodeableConcept>? reasonCode,
-      @HiveField(32)
-          final List<Reference>? reasonReference,
-      @HiveField(33)
-          final List<Annotation>? note,
-      @HiveField(34)
-          final List<Dosage>? dosage}) = _$_MedicationStatement;
+      final Reference? informationSource,
+      final List<Reference>? derivedFrom,
+      final List<CodeableConcept>? reasonCode,
+      final List<Reference>? reasonReference,
+      final List<Annotation>? note,
+      final List<Dosage>? dosage}) = _$_MedicationStatement;
   _MedicationStatement._() : super._();
 
   factory _MedicationStatement.fromJson(Map<String, dynamic> json) =
@@ -33092,20 +30777,17 @@ abstract class _MedicationStatement extends MedicationStatement {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.MedicationStatement)
-  @HiveField(0)
   R4ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
-  @HiveField(1)
   String? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  @HiveField(2)
   FhirMeta? get meta;
   @override
 
@@ -33113,24 +30795,20 @@ abstract class _MedicationStatement extends MedicationStatement {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  @HiveField(3)
   FhirUri? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
-  @HiveField(4)
   Element? get implicitRulesElement;
   @override
 
   /// [language] The base language in which the resource is written.
-  @HiveField(5)
   FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
-  @HiveField(6)
   Element? get languageElement;
   @override
 
@@ -33140,7 +30818,6 @@ abstract class _MedicationStatement extends MedicationStatement {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
-  @HiveField(7)
   Narrative? get text;
   @override
 
@@ -33148,7 +30825,6 @@ abstract class _MedicationStatement extends MedicationStatement {
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
-  @HiveField(8)
   List<Resource>? get contained;
   @override
 
@@ -33159,7 +30835,6 @@ abstract class _MedicationStatement extends MedicationStatement {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
-  @HiveField(9)
   List<FhirExtension>? get extension_;
   @override
 
@@ -33176,7 +30851,6 @@ abstract class _MedicationStatement extends MedicationStatement {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
 
@@ -33186,43 +30860,37 @@ abstract class _MedicationStatement extends MedicationStatement {
   /// identifiers assigned to this resource by the performer or other systems
   /// and remain constant as the resource is updated and propagates from server
   ///  to server.
-  @HiveField(11)
   List<Identifier>? get identifier;
   @override
 
   /// [basedOn] A plan, proposal or order that is fulfilled in whole or in part
   ///  by this event.
-  @HiveField(12)
   List<Reference>? get basedOn;
   @override
 
   /// [partOf] A larger event of which this particular event is a component or
   ///  step.
-  @HiveField(13)
   List<Reference>? get partOf;
   @override
 
   /// [status] A code representing the patient or other source's judgment about
-  @HiveField(14)
-  @HiveField(15)
+  /// the state of the medication used that this statement is about.  Generally,
+  ///  this will be active or completed.
   FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
-  @HiveField(16)
   Element? get statusElement;
   @override
 
   /// [statusReason] Captures the reason for the current state of the
   ///  MedicationStatement.
-  @HiveField(17)
   List<CodeableConcept>? get statusReason;
   @override
 
   /// [category] Indicates where the medication is expected to be consumed or
   ///  administered.
-  @HiveField(18)
   CodeableConcept? get category;
   @override
 
@@ -33230,7 +30898,6 @@ abstract class _MedicationStatement extends MedicationStatement {
   /// This is either a link to a resource representing the details of the
   /// medication or a simple attribute carrying a code that identifies the
   ///  medication from a known list of medications.
-  @HiveField(19)
   CodeableConcept? get medicationCodeableConcept;
   @override
 
@@ -33238,49 +30905,42 @@ abstract class _MedicationStatement extends MedicationStatement {
   /// is either a link to a resource representing the details of the medication
   /// or a simple attribute carrying a code that identifies the medication from
   ///  a known list of medications.
-  @HiveField(20)
   Reference? get medicationReference;
   @override
 
   /// [subject] The person, animal or group who is/was taking the medication.
-  @HiveField(21)
   Reference get subject;
   @override
 
   /// [context] The encounter or episode of care that establishes the context
   ///  for this MedicationStatement.
-  @HiveField(22)
   Reference? get context;
   @override
 
   /// [effectiveDateTime] The interval of time during which it is being
   /// asserted that the patient is/was/will be taking the medication (or was not
   ///  taking, when the MedicationStatement.taken element is No).
-  @HiveField(23)
   FhirDateTime? get effectiveDateTime;
   @override
 
   /// [effectiveDateTimeElement] Extensions for effectiveDateTime
   @JsonKey(name: '_effectiveDateTime')
-  @HiveField(24)
   Element? get effectiveDateTimeElement;
   @override
 
   /// [effectivePeriod] The interval of time during which it is being asserted
-  @HiveField(25)
-  @HiveField(26)
+  /// that the patient is/was/will be taking the medication (or was not taking,
+  ///  when the MedicationStatement.taken element is No).
   Period? get effectivePeriod;
   @override
 
   /// [dateAsserted] The date when the medication statement was asserted by the
   ///  information source.
-  @HiveField(27)
   FhirDateTime? get dateAsserted;
   @override
 
   /// [dateAssertedElement] Extensions for dateAsserted
   @JsonKey(name: '_dateAsserted')
-  @HiveField(28)
   Element? get dateAssertedElement;
   @override
 
@@ -33288,37 +30948,31 @@ abstract class _MedicationStatement extends MedicationStatement {
   /// information about the taking of this medication. Note: Use derivedFrom
   /// when a MedicationStatement is derived from other resources, e.g. Claim or
   ///  MedicationRequest.
-  @HiveField(29)
   Reference? get informationSource;
   @override
 
   /// [derivedFrom] Allows linking the MedicationStatement to the underlying
   /// MedicationRequest, or to other information that supports or is used to
   ///  derive the MedicationStatement.
-  @HiveField(30)
   List<Reference>? get derivedFrom;
   @override
 
   /// [reasonCode] A reason for why the medication is being/was taken.
-  @HiveField(31)
   List<CodeableConcept>? get reasonCode;
   @override
 
   /// [reasonReference] Condition or observation that supports why the
   ///  medication is being/was taken.
-  @HiveField(32)
   List<Reference>? get reasonReference;
   @override
 
   /// [note] Provides extra information about the medication statement that is
   ///  not conveyed by the other attributes.
-  @HiveField(33)
   List<Annotation>? get note;
   @override
 
   /// [dosage] Indicates how the medication is/was or should be taken by the
   ///  patient.
-  @HiveField(34)
   List<Dosage>? get dosage;
   @override
   @JsonKey(ignore: true)

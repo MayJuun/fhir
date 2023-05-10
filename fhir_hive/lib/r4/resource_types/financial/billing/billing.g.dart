@@ -3,576 +3,6 @@
 part of 'billing.dart';
 
 // **************************************************************************
-// TypeAdapterGenerator
-// **************************************************************************
-
-class ClaimAdapter extends TypeAdapter<_$_Claim> {
-  @override
-  final int typeId = 159;
-
-  @override
-  _$_Claim read(BinaryReader reader) {
-    final numOfFields = reader.readByte();
-    final fields = <int, dynamic>{
-      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
-    };
-    return _$_Claim(
-      resourceType: fields[0] as R4ResourceType,
-      id: fields[1] as String?,
-      meta: fields[2] as FhirMeta?,
-      implicitRules: fields[3] as FhirUri?,
-      implicitRulesElement: fields[4] as Element?,
-      language: fields[5] as Code?,
-      languageElement: fields[6] as Element?,
-      text: fields[7] as Narrative?,
-      contained: (fields[8] as List?)?.cast<Resource>(),
-      extension_: (fields[9] as List?)?.cast<FhirExtension>(),
-      modifierExtension: (fields[10] as List?)?.cast<FhirExtension>(),
-      identifier: (fields[11] as List?)?.cast<Identifier>(),
-      status: fields[12] as Code?,
-      statusElement: fields[13] as Element?,
-      type: fields[14] as CodeableConcept,
-      subType: fields[16] as CodeableConcept?,
-      use: fields[17] as Code?,
-      useElement: fields[18] as Element?,
-      patient: fields[19] as Reference,
-      billablePeriod: fields[20] as Period?,
-      created: fields[21] as FhirDateTime?,
-      createdElement: fields[22] as Element?,
-      enterer: fields[23] as Reference?,
-      insurer: fields[24] as Reference?,
-      provider: fields[25] as Reference,
-      priority: fields[27] as CodeableConcept,
-      fundsReserve: fields[28] as CodeableConcept?,
-      related: (fields[29] as List?)?.cast<ClaimRelated>(),
-      prescription: fields[30] as Reference?,
-      originalPrescription: fields[31] as Reference?,
-      payee: fields[33] as ClaimPayee?,
-      referral: fields[34] as Reference?,
-      facility: fields[35] as Reference?,
-      careTeam: (fields[36] as List?)?.cast<ClaimCareTeam>(),
-      supportingInfo: (fields[37] as List?)?.cast<ClaimSupportingInfo>(),
-      diagnosis: (fields[39] as List?)?.cast<ClaimDiagnosis>(),
-      procedure: (fields[40] as List?)?.cast<ClaimProcedure>(),
-      insurance: (fields[41] as List).cast<ClaimInsurance>(),
-      accident: fields[42] as ClaimAccident?,
-      item: (fields[43] as List?)?.cast<ClaimItem>(),
-      total: fields[44] as Money?,
-    );
-  }
-
-  @override
-  void write(BinaryWriter writer, _$_Claim obj) {
-    writer
-      ..writeByte(41)
-      ..writeByte(0)
-      ..write(obj.resourceType)
-      ..writeByte(1)
-      ..write(obj.id)
-      ..writeByte(2)
-      ..write(obj.meta)
-      ..writeByte(3)
-      ..write(obj.implicitRules)
-      ..writeByte(4)
-      ..write(obj.implicitRulesElement)
-      ..writeByte(5)
-      ..write(obj.language)
-      ..writeByte(6)
-      ..write(obj.languageElement)
-      ..writeByte(7)
-      ..write(obj.text)
-      ..writeByte(12)
-      ..write(obj.status)
-      ..writeByte(13)
-      ..write(obj.statusElement)
-      ..writeByte(14)
-      ..write(obj.type)
-      ..writeByte(16)
-      ..write(obj.subType)
-      ..writeByte(17)
-      ..write(obj.use)
-      ..writeByte(18)
-      ..write(obj.useElement)
-      ..writeByte(19)
-      ..write(obj.patient)
-      ..writeByte(20)
-      ..write(obj.billablePeriod)
-      ..writeByte(21)
-      ..write(obj.created)
-      ..writeByte(22)
-      ..write(obj.createdElement)
-      ..writeByte(23)
-      ..write(obj.enterer)
-      ..writeByte(24)
-      ..write(obj.insurer)
-      ..writeByte(25)
-      ..write(obj.provider)
-      ..writeByte(27)
-      ..write(obj.priority)
-      ..writeByte(28)
-      ..write(obj.fundsReserve)
-      ..writeByte(30)
-      ..write(obj.prescription)
-      ..writeByte(31)
-      ..write(obj.originalPrescription)
-      ..writeByte(33)
-      ..write(obj.payee)
-      ..writeByte(34)
-      ..write(obj.referral)
-      ..writeByte(35)
-      ..write(obj.facility)
-      ..writeByte(42)
-      ..write(obj.accident)
-      ..writeByte(44)
-      ..write(obj.total)
-      ..writeByte(8)
-      ..write(obj.contained)
-      ..writeByte(9)
-      ..write(obj.extension_)
-      ..writeByte(10)
-      ..write(obj.modifierExtension)
-      ..writeByte(11)
-      ..write(obj.identifier)
-      ..writeByte(29)
-      ..write(obj.related)
-      ..writeByte(36)
-      ..write(obj.careTeam)
-      ..writeByte(37)
-      ..write(obj.supportingInfo)
-      ..writeByte(39)
-      ..write(obj.diagnosis)
-      ..writeByte(40)
-      ..write(obj.procedure)
-      ..writeByte(41)
-      ..write(obj.insurance)
-      ..writeByte(43)
-      ..write(obj.item);
-  }
-
-  @override
-  int get hashCode => typeId.hashCode;
-
-  @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is ClaimAdapter &&
-          runtimeType == other.runtimeType &&
-          typeId == other.typeId;
-}
-
-class ClaimCareTeamAdapter extends TypeAdapter<_$_ClaimCareTeam> {
-  @override
-  final int typeId = 160;
-
-  @override
-  _$_ClaimCareTeam read(BinaryReader reader) {
-    final numOfFields = reader.readByte();
-    final fields = <int, dynamic>{
-      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
-    };
-    return _$_ClaimCareTeam(
-      id: fields[0] as String?,
-      extension_: (fields[1] as List?)?.cast<FhirExtension>(),
-      modifierExtension: (fields[2] as List?)?.cast<FhirExtension>(),
-      sequence: fields[3] as PositiveInt?,
-      sequenceElement: fields[4] as Element?,
-      provider: fields[5] as Reference,
-      responsible: fields[6] as Boolean?,
-      responsibleElement: fields[7] as Element?,
-      role: fields[8] as CodeableConcept?,
-      qualification: fields[9] as CodeableConcept?,
-    );
-  }
-
-  @override
-  void write(BinaryWriter writer, _$_ClaimCareTeam obj) {
-    writer
-      ..writeByte(10)
-      ..writeByte(0)
-      ..write(obj.id)
-      ..writeByte(3)
-      ..write(obj.sequence)
-      ..writeByte(4)
-      ..write(obj.sequenceElement)
-      ..writeByte(5)
-      ..write(obj.provider)
-      ..writeByte(6)
-      ..write(obj.responsible)
-      ..writeByte(7)
-      ..write(obj.responsibleElement)
-      ..writeByte(8)
-      ..write(obj.role)
-      ..writeByte(9)
-      ..write(obj.qualification)
-      ..writeByte(1)
-      ..write(obj.extension_)
-      ..writeByte(2)
-      ..write(obj.modifierExtension);
-  }
-
-  @override
-  int get hashCode => typeId.hashCode;
-
-  @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is ClaimCareTeamAdapter &&
-          runtimeType == other.runtimeType &&
-          typeId == other.typeId;
-}
-
-class ClaimProcedureAdapter extends TypeAdapter<_$_ClaimProcedure> {
-  @override
-  final int typeId = 161;
-
-  @override
-  _$_ClaimProcedure read(BinaryReader reader) {
-    final numOfFields = reader.readByte();
-    final fields = <int, dynamic>{
-      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
-    };
-    return _$_ClaimProcedure(
-      id: fields[0] as String?,
-      extension_: (fields[1] as List?)?.cast<FhirExtension>(),
-      modifierExtension: (fields[2] as List?)?.cast<FhirExtension>(),
-      sequence: fields[3] as PositiveInt?,
-      sequenceElement: fields[4] as Element?,
-      type: (fields[5] as List?)?.cast<CodeableConcept>(),
-      date: fields[6] as FhirDateTime?,
-      dateElement: fields[7] as Element?,
-      procedureCodeableConcept: fields[8] as CodeableConcept?,
-      procedureReference: fields[9] as Reference?,
-      udi: (fields[10] as List?)?.cast<Reference>(),
-    );
-  }
-
-  @override
-  void write(BinaryWriter writer, _$_ClaimProcedure obj) {
-    writer
-      ..writeByte(11)
-      ..writeByte(0)
-      ..write(obj.id)
-      ..writeByte(3)
-      ..write(obj.sequence)
-      ..writeByte(4)
-      ..write(obj.sequenceElement)
-      ..writeByte(6)
-      ..write(obj.date)
-      ..writeByte(7)
-      ..write(obj.dateElement)
-      ..writeByte(8)
-      ..write(obj.procedureCodeableConcept)
-      ..writeByte(9)
-      ..write(obj.procedureReference)
-      ..writeByte(1)
-      ..write(obj.extension_)
-      ..writeByte(2)
-      ..write(obj.modifierExtension)
-      ..writeByte(5)
-      ..write(obj.type)
-      ..writeByte(10)
-      ..write(obj.udi);
-  }
-
-  @override
-  int get hashCode => typeId.hashCode;
-
-  @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is ClaimProcedureAdapter &&
-          runtimeType == other.runtimeType &&
-          typeId == other.typeId;
-}
-
-class ClaimResponseAdapter extends TypeAdapter<_$_ClaimResponse> {
-  @override
-  final int typeId = 162;
-
-  @override
-  _$_ClaimResponse read(BinaryReader reader) {
-    final numOfFields = reader.readByte();
-    final fields = <int, dynamic>{
-      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
-    };
-    return _$_ClaimResponse(
-      resourceType: fields[0] as R4ResourceType,
-      id: fields[1] as String?,
-      meta: fields[2] as FhirMeta?,
-      implicitRules: fields[3] as FhirUri?,
-      implicitRulesElement: fields[4] as Element?,
-      language: fields[5] as Code?,
-      languageElement: fields[6] as Element?,
-      text: fields[7] as Narrative?,
-      contained: (fields[8] as List?)?.cast<Resource>(),
-      extension_: (fields[9] as List?)?.cast<FhirExtension>(),
-      modifierExtension: (fields[10] as List?)?.cast<FhirExtension>(),
-      identifier: (fields[11] as List?)?.cast<Identifier>(),
-      status: fields[12] as Code?,
-      statusElement: fields[13] as Element?,
-      type: fields[14] as CodeableConcept,
-      subType: fields[15] as CodeableConcept?,
-      use: fields[16] as Code?,
-      useElement: fields[17] as Element?,
-      patient: fields[18] as Reference,
-      created: fields[19] as FhirDateTime?,
-      createdElement: fields[20] as Element?,
-      insurer: fields[21] as Reference,
-      requestor: fields[22] as Reference?,
-      request: fields[24] as Reference?,
-      outcome: fields[25] as Code?,
-      outcomeElement: fields[26] as Element?,
-      disposition: fields[27] as String?,
-      dispositionElement: fields[28] as Element?,
-      preAuthRef: fields[29] as String?,
-      preAuthRefElement: fields[30] as Element?,
-      preAuthPeriod: fields[31] as Period?,
-      payeeType: fields[32] as CodeableConcept?,
-      item: (fields[33] as List?)?.cast<ClaimResponseItem>(),
-      addItem: (fields[34] as List?)?.cast<ClaimResponseAddItem>(),
-      adjudication: (fields[35] as List?)?.cast<ClaimResponseAdjudication>(),
-      total: (fields[36] as List?)?.cast<ClaimResponseTotal>(),
-      payment: fields[37] as ClaimResponsePayment?,
-      fundsReserve: fields[38] as CodeableConcept?,
-      formCode: fields[39] as CodeableConcept?,
-      form: fields[40] as Attachment?,
-      processNote: (fields[41] as List?)?.cast<ClaimResponseProcessNote>(),
-      communicationRequest: (fields[42] as List?)?.cast<Reference>(),
-      insurance: (fields[43] as List?)?.cast<ClaimResponseInsurance>(),
-      error: (fields[44] as List?)?.cast<ClaimResponseError>(),
-    );
-  }
-
-  @override
-  void write(BinaryWriter writer, _$_ClaimResponse obj) {
-    writer
-      ..writeByte(44)
-      ..writeByte(0)
-      ..write(obj.resourceType)
-      ..writeByte(1)
-      ..write(obj.id)
-      ..writeByte(2)
-      ..write(obj.meta)
-      ..writeByte(3)
-      ..write(obj.implicitRules)
-      ..writeByte(4)
-      ..write(obj.implicitRulesElement)
-      ..writeByte(5)
-      ..write(obj.language)
-      ..writeByte(6)
-      ..write(obj.languageElement)
-      ..writeByte(7)
-      ..write(obj.text)
-      ..writeByte(12)
-      ..write(obj.status)
-      ..writeByte(13)
-      ..write(obj.statusElement)
-      ..writeByte(14)
-      ..write(obj.type)
-      ..writeByte(15)
-      ..write(obj.subType)
-      ..writeByte(16)
-      ..write(obj.use)
-      ..writeByte(17)
-      ..write(obj.useElement)
-      ..writeByte(18)
-      ..write(obj.patient)
-      ..writeByte(19)
-      ..write(obj.created)
-      ..writeByte(20)
-      ..write(obj.createdElement)
-      ..writeByte(21)
-      ..write(obj.insurer)
-      ..writeByte(22)
-      ..write(obj.requestor)
-      ..writeByte(24)
-      ..write(obj.request)
-      ..writeByte(25)
-      ..write(obj.outcome)
-      ..writeByte(26)
-      ..write(obj.outcomeElement)
-      ..writeByte(27)
-      ..write(obj.disposition)
-      ..writeByte(28)
-      ..write(obj.dispositionElement)
-      ..writeByte(29)
-      ..write(obj.preAuthRef)
-      ..writeByte(30)
-      ..write(obj.preAuthRefElement)
-      ..writeByte(31)
-      ..write(obj.preAuthPeriod)
-      ..writeByte(32)
-      ..write(obj.payeeType)
-      ..writeByte(37)
-      ..write(obj.payment)
-      ..writeByte(38)
-      ..write(obj.fundsReserve)
-      ..writeByte(39)
-      ..write(obj.formCode)
-      ..writeByte(40)
-      ..write(obj.form)
-      ..writeByte(8)
-      ..write(obj.contained)
-      ..writeByte(9)
-      ..write(obj.extension_)
-      ..writeByte(10)
-      ..write(obj.modifierExtension)
-      ..writeByte(11)
-      ..write(obj.identifier)
-      ..writeByte(33)
-      ..write(obj.item)
-      ..writeByte(34)
-      ..write(obj.addItem)
-      ..writeByte(35)
-      ..write(obj.adjudication)
-      ..writeByte(36)
-      ..write(obj.total)
-      ..writeByte(41)
-      ..write(obj.processNote)
-      ..writeByte(42)
-      ..write(obj.communicationRequest)
-      ..writeByte(43)
-      ..write(obj.insurance)
-      ..writeByte(44)
-      ..write(obj.error);
-  }
-
-  @override
-  int get hashCode => typeId.hashCode;
-
-  @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is ClaimResponseAdapter &&
-          runtimeType == other.runtimeType &&
-          typeId == other.typeId;
-}
-
-class InvoiceAdapter extends TypeAdapter<_$_Invoice> {
-  @override
-  final int typeId = 163;
-
-  @override
-  _$_Invoice read(BinaryReader reader) {
-    final numOfFields = reader.readByte();
-    final fields = <int, dynamic>{
-      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
-    };
-    return _$_Invoice(
-      resourceType: fields[0] as R4ResourceType,
-      id: fields[1] as String?,
-      meta: fields[2] as FhirMeta?,
-      implicitRules: fields[3] as FhirUri?,
-      implicitRulesElement: fields[4] as Element?,
-      language: fields[5] as Code?,
-      languageElement: fields[6] as Element?,
-      text: fields[7] as Narrative?,
-      contained: (fields[8] as List?)?.cast<Resource>(),
-      extension_: (fields[9] as List?)?.cast<FhirExtension>(),
-      modifierExtension: (fields[10] as List?)?.cast<FhirExtension>(),
-      identifier: (fields[11] as List?)?.cast<Identifier>(),
-      status: fields[12] as Code?,
-      statusElement: fields[13] as Element?,
-      cancelledReason: fields[14] as String?,
-      cancelledReasonElement: fields[15] as Element?,
-      type: fields[16] as CodeableConcept?,
-      subject: fields[17] as Reference?,
-      recipient: fields[18] as Reference?,
-      date: fields[19] as FhirDateTime?,
-      dateElement: fields[20] as Element?,
-      participant: (fields[21] as List?)?.cast<InvoiceParticipant>(),
-      issuer: fields[22] as Reference?,
-      account: fields[23] as Reference?,
-      lineItem: (fields[24] as List?)?.cast<InvoiceLineItem>(),
-      totalPriceComponent: (fields[25] as List?)?.cast<InvoicePriceComponent>(),
-      totalNet: fields[26] as Money?,
-      totalGross: fields[27] as Money?,
-      paymentTerms: fields[28] as Markdown?,
-      paymentTermsElement: fields[29] as Element?,
-      note: (fields[30] as List?)?.cast<Annotation>(),
-    );
-  }
-
-  @override
-  void write(BinaryWriter writer, _$_Invoice obj) {
-    writer
-      ..writeByte(31)
-      ..writeByte(0)
-      ..write(obj.resourceType)
-      ..writeByte(1)
-      ..write(obj.id)
-      ..writeByte(2)
-      ..write(obj.meta)
-      ..writeByte(3)
-      ..write(obj.implicitRules)
-      ..writeByte(4)
-      ..write(obj.implicitRulesElement)
-      ..writeByte(5)
-      ..write(obj.language)
-      ..writeByte(6)
-      ..write(obj.languageElement)
-      ..writeByte(7)
-      ..write(obj.text)
-      ..writeByte(12)
-      ..write(obj.status)
-      ..writeByte(13)
-      ..write(obj.statusElement)
-      ..writeByte(14)
-      ..write(obj.cancelledReason)
-      ..writeByte(15)
-      ..write(obj.cancelledReasonElement)
-      ..writeByte(16)
-      ..write(obj.type)
-      ..writeByte(17)
-      ..write(obj.subject)
-      ..writeByte(18)
-      ..write(obj.recipient)
-      ..writeByte(19)
-      ..write(obj.date)
-      ..writeByte(20)
-      ..write(obj.dateElement)
-      ..writeByte(22)
-      ..write(obj.issuer)
-      ..writeByte(23)
-      ..write(obj.account)
-      ..writeByte(26)
-      ..write(obj.totalNet)
-      ..writeByte(27)
-      ..write(obj.totalGross)
-      ..writeByte(28)
-      ..write(obj.paymentTerms)
-      ..writeByte(29)
-      ..write(obj.paymentTermsElement)
-      ..writeByte(8)
-      ..write(obj.contained)
-      ..writeByte(9)
-      ..write(obj.extension_)
-      ..writeByte(10)
-      ..write(obj.modifierExtension)
-      ..writeByte(11)
-      ..write(obj.identifier)
-      ..writeByte(21)
-      ..write(obj.participant)
-      ..writeByte(24)
-      ..write(obj.lineItem)
-      ..writeByte(25)
-      ..write(obj.totalPriceComponent)
-      ..writeByte(30)
-      ..write(obj.note);
-  }
-
-  @override
-  int get hashCode => typeId.hashCode;
-
-  @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is InvoiceAdapter &&
-          runtimeType == other.runtimeType &&
-          typeId == other.typeId;
-}
-
-// **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
@@ -592,7 +22,7 @@ _$_Claim _$$_ClaimFromJson(Map<String, dynamic> json) => _$_Claim(
           ? null
           : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
       language:
-          json['language'] == null ? null : Code.fromJson(json['language']),
+          json['language'] == null ? null : FhirCode.fromJson(json['language']),
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -611,7 +41,7 @@ _$_Claim _$$_ClaimFromJson(Map<String, dynamic> json) => _$_Claim(
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: json['status'] == null ? null : Code.fromJson(json['status']),
+      status: json['status'] == null ? null : FhirCode.fromJson(json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -619,7 +49,7 @@ _$_Claim _$$_ClaimFromJson(Map<String, dynamic> json) => _$_Claim(
       subType: json['subType'] == null
           ? null
           : CodeableConcept.fromJson(json['subType'] as Map<String, dynamic>),
-      use: json['use'] == null ? null : Code.fromJson(json['use']),
+      use: json['use'] == null ? null : FhirCode.fromJson(json['use']),
       useElement: json['_use'] == null
           ? null
           : Element.fromJson(json['_use'] as Map<String, dynamic>),
@@ -983,14 +413,14 @@ _$_ClaimCareTeam _$$_ClaimCareTeamFromJson(Map<String, dynamic> json) =>
           .toList(),
       sequence: json['sequence'] == null
           ? null
-          : PositiveInt.fromJson(json['sequence']),
+          : FhirPositiveInt.fromJson(json['sequence']),
       sequenceElement: json['_sequence'] == null
           ? null
           : Element.fromJson(json['_sequence'] as Map<String, dynamic>),
       provider: Reference.fromJson(json['provider'] as Map<String, dynamic>),
       responsible: json['responsible'] == null
           ? null
-          : Boolean.fromJson(json['responsible']),
+          : FhirBoolean.fromJson(json['responsible']),
       responsibleElement: json['_responsible'] == null
           ? null
           : Element.fromJson(json['_responsible'] as Map<String, dynamic>),
@@ -1039,7 +469,7 @@ _$_ClaimSupportingInfo _$$_ClaimSupportingInfoFromJson(
           .toList(),
       sequence: json['sequence'] == null
           ? null
-          : PositiveInt.fromJson(json['sequence']),
+          : FhirPositiveInt.fromJson(json['sequence']),
       sequenceElement: json['_sequence'] == null
           ? null
           : Element.fromJson(json['_sequence'] as Map<String, dynamic>),
@@ -1048,8 +478,9 @@ _$_ClaimSupportingInfo _$$_ClaimSupportingInfoFromJson(
       code: json['code'] == null
           ? null
           : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
-      timingDate:
-          json['timingDate'] == null ? null : Date.fromJson(json['timingDate']),
+      timingDate: json['timingDate'] == null
+          ? null
+          : FhirDate.fromJson(json['timingDate']),
       timingDateElement: json['_timingDate'] == null
           ? null
           : Element.fromJson(json['_timingDate'] as Map<String, dynamic>),
@@ -1058,7 +489,7 @@ _$_ClaimSupportingInfo _$$_ClaimSupportingInfoFromJson(
           : Period.fromJson(json['timingPeriod'] as Map<String, dynamic>),
       valueBoolean: json['valueBoolean'] == null
           ? null
-          : Boolean.fromJson(json['valueBoolean']),
+          : FhirBoolean.fromJson(json['valueBoolean']),
       valueBooleanElement: json['_valueBoolean'] == null
           ? null
           : Element.fromJson(json['_valueBoolean'] as Map<String, dynamic>),
@@ -1125,7 +556,7 @@ _$_ClaimDiagnosis _$$_ClaimDiagnosisFromJson(Map<String, dynamic> json) =>
           .toList(),
       sequence: json['sequence'] == null
           ? null
-          : PositiveInt.fromJson(json['sequence']),
+          : FhirPositiveInt.fromJson(json['sequence']),
       sequenceElement: json['_sequence'] == null
           ? null
           : Element.fromJson(json['_sequence'] as Map<String, dynamic>),
@@ -1186,7 +617,7 @@ _$_ClaimProcedure _$$_ClaimProcedureFromJson(Map<String, dynamic> json) =>
           .toList(),
       sequence: json['sequence'] == null
           ? null
-          : PositiveInt.fromJson(json['sequence']),
+          : FhirPositiveInt.fromJson(json['sequence']),
       sequenceElement: json['_sequence'] == null
           ? null
           : Element.fromJson(json['_sequence'] as Map<String, dynamic>),
@@ -1247,11 +678,11 @@ _$_ClaimInsurance _$$_ClaimInsuranceFromJson(Map<String, dynamic> json) =>
           .toList(),
       sequence: json['sequence'] == null
           ? null
-          : PositiveInt.fromJson(json['sequence']),
+          : FhirPositiveInt.fromJson(json['sequence']),
       sequenceElement: json['_sequence'] == null
           ? null
           : Element.fromJson(json['_sequence'] as Map<String, dynamic>),
-      focal: json['focal'] == null ? null : Boolean.fromJson(json['focal']),
+      focal: json['focal'] == null ? null : FhirBoolean.fromJson(json['focal']),
       focalElement: json['_focal'] == null
           ? null
           : Element.fromJson(json['_focal'] as Map<String, dynamic>),
@@ -1315,7 +746,7 @@ _$_ClaimAccident _$$_ClaimAccidentFromJson(Map<String, dynamic> json) =>
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      date: json['date'] == null ? null : Date.fromJson(json['date']),
+      date: json['date'] == null ? null : FhirDate.fromJson(json['date']),
       dateElement: json['_date'] == null
           ? null
           : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -1363,31 +794,31 @@ _$_ClaimItem _$$_ClaimItemFromJson(Map<String, dynamic> json) => _$_ClaimItem(
           .toList(),
       sequence: json['sequence'] == null
           ? null
-          : PositiveInt.fromJson(json['sequence']),
+          : FhirPositiveInt.fromJson(json['sequence']),
       sequenceElement: json['_sequence'] == null
           ? null
           : Element.fromJson(json['_sequence'] as Map<String, dynamic>),
       careTeamSequence: (json['careTeamSequence'] as List<dynamic>?)
-          ?.map((e) => PositiveInt.fromJson(e))
+          ?.map(FhirPositiveInt.fromJson)
           .toList(),
       careTeamSequenceElement: (json['_careTeamSequence'] as List<dynamic>?)
           ?.map((e) =>
               e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       diagnosisSequence: (json['diagnosisSequence'] as List<dynamic>?)
-          ?.map((e) => PositiveInt.fromJson(e))
+          ?.map(FhirPositiveInt.fromJson)
           .toList(),
       diagnosisSequenceElement: (json['_diagnosisSequence'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       procedureSequence: (json['procedureSequence'] as List<dynamic>?)
-          ?.map((e) => PositiveInt.fromJson(e))
+          ?.map(FhirPositiveInt.fromJson)
           .toList(),
       procedureSequenceElement: (json['_procedureSequence'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       informationSequence: (json['informationSequence'] as List<dynamic>?)
-          ?.map((e) => PositiveInt.fromJson(e))
+          ?.map(FhirPositiveInt.fromJson)
           .toList(),
       informationSequenceElement:
           (json['_informationSequence'] as List<dynamic>?)
@@ -1409,7 +840,7 @@ _$_ClaimItem _$$_ClaimItemFromJson(Map<String, dynamic> json) => _$_ClaimItem(
           .toList(),
       servicedDate: json['servicedDate'] == null
           ? null
-          : Date.fromJson(json['servicedDate']),
+          : FhirDate.fromJson(json['servicedDate']),
       servicedDateElement: json['_servicedDate'] == null
           ? null
           : Element.fromJson(json['_servicedDate'] as Map<String, dynamic>),
@@ -1433,7 +864,8 @@ _$_ClaimItem _$$_ClaimItemFromJson(Map<String, dynamic> json) => _$_ClaimItem(
       unitPrice: json['unitPrice'] == null
           ? null
           : Money.fromJson(json['unitPrice'] as Map<String, dynamic>),
-      factor: json['factor'] == null ? null : Decimal.fromJson(json['factor']),
+      factor:
+          json['factor'] == null ? null : FhirDecimal.fromJson(json['factor']),
       factorElement: json['_factor'] == null
           ? null
           : Element.fromJson(json['_factor'] as Map<String, dynamic>),
@@ -1527,7 +959,7 @@ _$_ClaimDetail _$$_ClaimDetailFromJson(Map<String, dynamic> json) =>
           .toList(),
       sequence: json['sequence'] == null
           ? null
-          : PositiveInt.fromJson(json['sequence']),
+          : FhirPositiveInt.fromJson(json['sequence']),
       sequenceElement: json['_sequence'] == null
           ? null
           : Element.fromJson(json['_sequence'] as Map<String, dynamic>),
@@ -1551,7 +983,8 @@ _$_ClaimDetail _$$_ClaimDetailFromJson(Map<String, dynamic> json) =>
       unitPrice: json['unitPrice'] == null
           ? null
           : Money.fromJson(json['unitPrice'] as Map<String, dynamic>),
-      factor: json['factor'] == null ? null : Decimal.fromJson(json['factor']),
+      factor:
+          json['factor'] == null ? null : FhirDecimal.fromJson(json['factor']),
       factorElement: json['_factor'] == null
           ? null
           : Element.fromJson(json['_factor'] as Map<String, dynamic>),
@@ -1610,7 +1043,7 @@ _$_ClaimSubDetail _$$_ClaimSubDetailFromJson(Map<String, dynamic> json) =>
           .toList(),
       sequence: json['sequence'] == null
           ? null
-          : PositiveInt.fromJson(json['sequence']),
+          : FhirPositiveInt.fromJson(json['sequence']),
       sequenceElement: json['_sequence'] == null
           ? null
           : Element.fromJson(json['_sequence'] as Map<String, dynamic>),
@@ -1634,7 +1067,8 @@ _$_ClaimSubDetail _$$_ClaimSubDetailFromJson(Map<String, dynamic> json) =>
       unitPrice: json['unitPrice'] == null
           ? null
           : Money.fromJson(json['unitPrice'] as Map<String, dynamic>),
-      factor: json['factor'] == null ? null : Decimal.fromJson(json['factor']),
+      factor:
+          json['factor'] == null ? null : FhirDecimal.fromJson(json['factor']),
       factorElement: json['_factor'] == null
           ? null
           : Element.fromJson(json['_factor'] as Map<String, dynamic>),
@@ -1694,7 +1128,7 @@ _$_ClaimResponse _$$_ClaimResponseFromJson(Map<String, dynamic> json) =>
           ? null
           : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
       language:
-          json['language'] == null ? null : Code.fromJson(json['language']),
+          json['language'] == null ? null : FhirCode.fromJson(json['language']),
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -1713,7 +1147,7 @@ _$_ClaimResponse _$$_ClaimResponseFromJson(Map<String, dynamic> json) =>
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: json['status'] == null ? null : Code.fromJson(json['status']),
+      status: json['status'] == null ? null : FhirCode.fromJson(json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -1721,7 +1155,7 @@ _$_ClaimResponse _$$_ClaimResponseFromJson(Map<String, dynamic> json) =>
       subType: json['subType'] == null
           ? null
           : CodeableConcept.fromJson(json['subType'] as Map<String, dynamic>),
-      use: json['use'] == null ? null : Code.fromJson(json['use']),
+      use: json['use'] == null ? null : FhirCode.fromJson(json['use']),
       useElement: json['_use'] == null
           ? null
           : Element.fromJson(json['_use'] as Map<String, dynamic>),
@@ -1739,7 +1173,8 @@ _$_ClaimResponse _$$_ClaimResponseFromJson(Map<String, dynamic> json) =>
       request: json['request'] == null
           ? null
           : Reference.fromJson(json['request'] as Map<String, dynamic>),
-      outcome: json['outcome'] == null ? null : Code.fromJson(json['outcome']),
+      outcome:
+          json['outcome'] == null ? null : FhirCode.fromJson(json['outcome']),
       outcomeElement: json['_outcome'] == null
           ? null
           : Element.fromJson(json['_outcome'] as Map<String, dynamic>),
@@ -1876,12 +1311,12 @@ _$_ClaimResponseItem _$$_ClaimResponseItemFromJson(Map<String, dynamic> json) =>
           .toList(),
       itemSequence: json['itemSequence'] == null
           ? null
-          : PositiveInt.fromJson(json['itemSequence']),
+          : FhirPositiveInt.fromJson(json['itemSequence']),
       itemSequenceElement: json['_itemSequence'] == null
           ? null
           : Element.fromJson(json['_itemSequence'] as Map<String, dynamic>),
       noteNumber: (json['noteNumber'] as List<dynamic>?)
-          ?.map((e) => PositiveInt.fromJson(e))
+          ?.map(FhirPositiveInt.fromJson)
           .toList(),
       noteNumberElement: (json['_noteNumber'] as List<dynamic>?)
           ?.map((e) =>
@@ -1940,7 +1375,7 @@ _$_ClaimResponseAdjudication _$$_ClaimResponseAdjudicationFromJson(
       amount: json['amount'] == null
           ? null
           : Money.fromJson(json['amount'] as Map<String, dynamic>),
-      value: json['value'] == null ? null : Decimal.fromJson(json['value']),
+      value: json['value'] == null ? null : FhirDecimal.fromJson(json['value']),
       valueElement: json['_value'] == null
           ? null
           : Element.fromJson(json['_value'] as Map<String, dynamic>),
@@ -1981,12 +1416,12 @@ _$_ClaimResponseDetail _$$_ClaimResponseDetailFromJson(
           .toList(),
       detailSequence: json['detailSequence'] == null
           ? null
-          : PositiveInt.fromJson(json['detailSequence']),
+          : FhirPositiveInt.fromJson(json['detailSequence']),
       detailSequenceElement: json['_detailSequence'] == null
           ? null
           : Element.fromJson(json['_detailSequence'] as Map<String, dynamic>),
       noteNumber: (json['noteNumber'] as List<dynamic>?)
-          ?.map((e) => PositiveInt.fromJson(e))
+          ?.map(FhirPositiveInt.fromJson)
           .toList(),
       noteNumberElement: (json['_noteNumber'] as List<dynamic>?)
           ?.map((e) =>
@@ -2041,13 +1476,13 @@ _$_ClaimResponseSubDetail _$$_ClaimResponseSubDetailFromJson(
           .toList(),
       subDetailSequence: json['subDetailSequence'] == null
           ? null
-          : PositiveInt.fromJson(json['subDetailSequence']),
+          : FhirPositiveInt.fromJson(json['subDetailSequence']),
       subDetailSequenceElement: json['_subDetailSequence'] == null
           ? null
           : Element.fromJson(
               json['_subDetailSequence'] as Map<String, dynamic>),
       noteNumber: (json['noteNumber'] as List<dynamic>?)
-          ?.map((e) => PositiveInt.fromJson(e))
+          ?.map(FhirPositiveInt.fromJson)
           .toList(),
       noteNumberElement: (json['_noteNumber'] as List<dynamic>?)
           ?.map((e) =>
@@ -2097,21 +1532,21 @@ _$_ClaimResponseAddItem _$$_ClaimResponseAddItemFromJson(
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
       itemSequence: (json['itemSequence'] as List<dynamic>?)
-          ?.map((e) => PositiveInt.fromJson(e))
+          ?.map(FhirPositiveInt.fromJson)
           .toList(),
       itemSequenceElement: (json['_itemSequence'] as List<dynamic>?)
           ?.map((e) =>
               e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       detailSequence: (json['detailSequence'] as List<dynamic>?)
-          ?.map((e) => PositiveInt.fromJson(e))
+          ?.map(FhirPositiveInt.fromJson)
           .toList(),
       detailSequenceElement: (json['_detailSequence'] as List<dynamic>?)
           ?.map((e) =>
               e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       subdetailSequence: (json['subdetailSequence'] as List<dynamic>?)
-          ?.map((e) => PositiveInt.fromJson(e))
+          ?.map(FhirPositiveInt.fromJson)
           .toList(),
       subdetailSequenceElement: (json['_subdetailSequence'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
@@ -2129,7 +1564,7 @@ _$_ClaimResponseAddItem _$$_ClaimResponseAddItemFromJson(
           .toList(),
       servicedDate: json['servicedDate'] == null
           ? null
-          : Date.fromJson(json['servicedDate']),
+          : FhirDate.fromJson(json['servicedDate']),
       servicedDateElement: json['_servicedDate'] == null
           ? null
           : Element.fromJson(json['_servicedDate'] as Map<String, dynamic>),
@@ -2153,7 +1588,8 @@ _$_ClaimResponseAddItem _$$_ClaimResponseAddItemFromJson(
       unitPrice: json['unitPrice'] == null
           ? null
           : Money.fromJson(json['unitPrice'] as Map<String, dynamic>),
-      factor: json['factor'] == null ? null : Decimal.fromJson(json['factor']),
+      factor:
+          json['factor'] == null ? null : FhirDecimal.fromJson(json['factor']),
       factorElement: json['_factor'] == null
           ? null
           : Element.fromJson(json['_factor'] as Map<String, dynamic>),
@@ -2167,7 +1603,7 @@ _$_ClaimResponseAddItem _$$_ClaimResponseAddItemFromJson(
           ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
           .toList(),
       noteNumber: (json['noteNumber'] as List<dynamic>?)
-          ?.map((e) => PositiveInt.fromJson(e))
+          ?.map(FhirPositiveInt.fromJson)
           .toList(),
       noteNumberElement: (json['_noteNumber'] as List<dynamic>?)
           ?.map((e) =>
@@ -2258,7 +1694,8 @@ _$_ClaimResponseDetail1 _$$_ClaimResponseDetail1FromJson(
       unitPrice: json['unitPrice'] == null
           ? null
           : Money.fromJson(json['unitPrice'] as Map<String, dynamic>),
-      factor: json['factor'] == null ? null : Decimal.fromJson(json['factor']),
+      factor:
+          json['factor'] == null ? null : FhirDecimal.fromJson(json['factor']),
       factorElement: json['_factor'] == null
           ? null
           : Element.fromJson(json['_factor'] as Map<String, dynamic>),
@@ -2266,7 +1703,7 @@ _$_ClaimResponseDetail1 _$$_ClaimResponseDetail1FromJson(
           ? null
           : Money.fromJson(json['net'] as Map<String, dynamic>),
       noteNumber: (json['noteNumber'] as List<dynamic>?)
-          ?.map((e) => PositiveInt.fromJson(e))
+          ?.map(FhirPositiveInt.fromJson)
           .toList(),
       noteNumberElement: (json['_noteNumber'] as List<dynamic>?)
           ?.map((e) =>
@@ -2335,7 +1772,8 @@ _$_ClaimResponseSubDetail1 _$$_ClaimResponseSubDetail1FromJson(
       unitPrice: json['unitPrice'] == null
           ? null
           : Money.fromJson(json['unitPrice'] as Map<String, dynamic>),
-      factor: json['factor'] == null ? null : Decimal.fromJson(json['factor']),
+      factor:
+          json['factor'] == null ? null : FhirDecimal.fromJson(json['factor']),
       factorElement: json['_factor'] == null
           ? null
           : Element.fromJson(json['_factor'] as Map<String, dynamic>),
@@ -2343,7 +1781,7 @@ _$_ClaimResponseSubDetail1 _$$_ClaimResponseSubDetail1FromJson(
           ? null
           : Money.fromJson(json['net'] as Map<String, dynamic>),
       noteNumber: (json['noteNumber'] as List<dynamic>?)
-          ?.map((e) => PositiveInt.fromJson(e))
+          ?.map(FhirPositiveInt.fromJson)
           .toList(),
       noteNumberElement: (json['_noteNumber'] as List<dynamic>?)
           ?.map((e) =>
@@ -2438,7 +1876,7 @@ _$_ClaimResponsePayment _$$_ClaimResponsePaymentFromJson(
           ? null
           : CodeableConcept.fromJson(
               json['adjustmentReason'] as Map<String, dynamic>),
-      date: json['date'] == null ? null : Date.fromJson(json['date']),
+      date: json['date'] == null ? null : FhirDate.fromJson(json['date']),
       dateElement: json['_date'] == null
           ? null
           : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -2483,12 +1921,13 @@ _$_ClaimResponseProcessNote _$$_ClaimResponseProcessNoteFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      number:
-          json['number'] == null ? null : PositiveInt.fromJson(json['number']),
+      number: json['number'] == null
+          ? null
+          : FhirPositiveInt.fromJson(json['number']),
       numberElement: json['_number'] == null
           ? null
           : Element.fromJson(json['_number'] as Map<String, dynamic>),
-      type: json['type'] == null ? null : Code.fromJson(json['type']),
+      type: json['type'] == null ? null : FhirCode.fromJson(json['type']),
       typeElement: json['_type'] == null
           ? null
           : Element.fromJson(json['_type'] as Map<String, dynamic>),
@@ -2538,11 +1977,11 @@ _$_ClaimResponseInsurance _$$_ClaimResponseInsuranceFromJson(
           .toList(),
       sequence: json['sequence'] == null
           ? null
-          : PositiveInt.fromJson(json['sequence']),
+          : FhirPositiveInt.fromJson(json['sequence']),
       sequenceElement: json['_sequence'] == null
           ? null
           : Element.fromJson(json['_sequence'] as Map<String, dynamic>),
-      focal: json['focal'] == null ? null : Boolean.fromJson(json['focal']),
+      focal: json['focal'] == null ? null : FhirBoolean.fromJson(json['focal']),
       focalElement: json['_focal'] == null
           ? null
           : Element.fromJson(json['_focal'] as Map<String, dynamic>),
@@ -2596,19 +2035,19 @@ _$_ClaimResponseError _$$_ClaimResponseErrorFromJson(
           .toList(),
       itemSequence: json['itemSequence'] == null
           ? null
-          : PositiveInt.fromJson(json['itemSequence']),
+          : FhirPositiveInt.fromJson(json['itemSequence']),
       itemSequenceElement: json['_itemSequence'] == null
           ? null
           : Element.fromJson(json['_itemSequence'] as Map<String, dynamic>),
       detailSequence: json['detailSequence'] == null
           ? null
-          : PositiveInt.fromJson(json['detailSequence']),
+          : FhirPositiveInt.fromJson(json['detailSequence']),
       detailSequenceElement: json['_detailSequence'] == null
           ? null
           : Element.fromJson(json['_detailSequence'] as Map<String, dynamic>),
       subDetailSequence: json['subDetailSequence'] == null
           ? null
-          : PositiveInt.fromJson(json['subDetailSequence']),
+          : FhirPositiveInt.fromJson(json['subDetailSequence']),
       subDetailSequenceElement: json['_subDetailSequence'] == null
           ? null
           : Element.fromJson(
@@ -2658,7 +2097,7 @@ _$_Invoice _$$_InvoiceFromJson(Map<String, dynamic> json) => _$_Invoice(
           ? null
           : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
       language:
-          json['language'] == null ? null : Code.fromJson(json['language']),
+          json['language'] == null ? null : FhirCode.fromJson(json['language']),
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -2677,7 +2116,7 @@ _$_Invoice _$$_InvoiceFromJson(Map<String, dynamic> json) => _$_Invoice(
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: json['status'] == null ? null : Code.fromJson(json['status']),
+      status: json['status'] == null ? null : FhirCode.fromJson(json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -2722,7 +2161,7 @@ _$_Invoice _$$_InvoiceFromJson(Map<String, dynamic> json) => _$_Invoice(
           : Money.fromJson(json['totalGross'] as Map<String, dynamic>),
       paymentTerms: json['paymentTerms'] == null
           ? null
-          : Markdown.fromJson(json['paymentTerms']),
+          : FhirMarkdown.fromJson(json['paymentTerms']),
       paymentTermsElement: json['_paymentTerms'] == null
           ? null
           : Element.fromJson(json['_paymentTerms'] as Map<String, dynamic>),
@@ -2828,7 +2267,7 @@ _$_InvoiceLineItem _$$_InvoiceLineItemFromJson(Map<String, dynamic> json) =>
           .toList(),
       sequence: json['sequence'] == null
           ? null
-          : PositiveInt.fromJson(json['sequence']),
+          : FhirPositiveInt.fromJson(json['sequence']),
       sequenceElement: json['_sequence'] == null
           ? null
           : Element.fromJson(json['_sequence'] as Map<String, dynamic>),
@@ -2880,14 +2319,15 @@ _$_InvoicePriceComponent _$$_InvoicePriceComponentFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      type: json['type'] == null ? null : Code.fromJson(json['type']),
+      type: json['type'] == null ? null : FhirCode.fromJson(json['type']),
       typeElement: json['_type'] == null
           ? null
           : Element.fromJson(json['_type'] as Map<String, dynamic>),
       code: json['code'] == null
           ? null
           : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
-      factor: json['factor'] == null ? null : Decimal.fromJson(json['factor']),
+      factor:
+          json['factor'] == null ? null : FhirDecimal.fromJson(json['factor']),
       factorElement: json['_factor'] == null
           ? null
           : Element.fromJson(json['_factor'] as Map<String, dynamic>),

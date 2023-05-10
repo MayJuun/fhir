@@ -3,7 +3,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:hive/hive.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -14,7 +13,7 @@ part 'evidence_based_medicine.g.dart';
 
 /// [Citation] The Citation Resource enables reference to any knowledge
 @freezed
-class Citation extends HiveObject with Resource, _$Citation {
+class Citation with Resource, _$Citation {
   /// [Citation] The Citation Resource enables reference to any knowledge
   Citation._();
 
@@ -193,135 +192,62 @@ class Citation extends HiveObject with Resource, _$Citation {
   /// [relatesTo] Artifact related to the Citation Resource.
   ///
   /// [citedArtifact] The article or artifact being described.
-  @HiveType(typeId: 63)
   factory Citation({
-    @HiveField(0)
-    @Default(R4ResourceType.Citation)
-        R4ResourceType resourceType,
-    @HiveField(1)
-        String? id,
-    @HiveField(2)
-        FhirMeta? meta,
-    @HiveField(3)
-        FhirUri? implicitRules,
-    @HiveField(4)
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
-    @HiveField(5)
-        FhirCode? language,
-    @HiveField(6)
-    @JsonKey(name: '_language')
-        Element? languageElement,
-    @HiveField(7)
-        Narrative? text,
-    @HiveField(8)
-        List<Resource>? contained,
-    @HiveField(9)
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
-    @HiveField(10)
-        List<FhirExtension>? modifierExtension,
-    @HiveField(11)
-        FhirUri? url,
-    @HiveField(12)
-    @JsonKey(name: '_url')
-        Element? urlElement,
-    @HiveField(13)
-        List<Identifier>? identifier,
-    @HiveField(14)
-        String? version,
-    @HiveField(15)
-    @JsonKey(name: '_version')
-        Element? versionElement,
-    @HiveField(16)
-        String? name,
-    @HiveField(17)
-    @JsonKey(name: '_name')
-        Element? nameElement,
-    @HiveField(18)
-        String? title,
-    @HiveField(19)
-    @JsonKey(name: '_title')
-        Element? titleElement,
-    @HiveField(20)
-        FhirCode? status,
-    @HiveField(21)
-    @JsonKey(name: '_status')
-        Element? statusElement,
-    @HiveField(22)
-        Boolean? experimental,
-    @HiveField(23)
-    @JsonKey(name: '_experimental')
-        Element? experimentalElement,
-    @HiveField(24)
-        FhirDateTime? date,
-    @HiveField(25)
-    @JsonKey(name: '_date')
-        Element? dateElement,
-    @HiveField(26)
-        String? publisher,
-    @HiveField(27)
-    @JsonKey(name: '_publisher')
-        Element? publisherElement,
-    @HiveField(28)
-        List<ContactDetail>? contact,
-    @HiveField(29)
-        Markdown? description,
-    @HiveField(30)
-    @JsonKey(name: '_description')
-        Element? descriptionElement,
-    @HiveField(31)
-        List<UsageContext>? useContext,
-    @HiveField(32)
-        List<CodeableConcept>? jurisdiction,
-    @HiveField(33)
-        Markdown? purpose,
-    @HiveField(34)
-    @JsonKey(name: '_purpose')
-        Element? purposeElement,
-    @HiveField(35)
-        Markdown? copyright,
-    @HiveField(36)
-    @JsonKey(name: '_copyright')
-        Element? copyrightElement,
-    @HiveField(37)
-        Date? approvalDate,
-    @HiveField(38)
-    @JsonKey(name: '_approvalDate')
-        Element? approvalDateElement,
-    @HiveField(39)
-        Date? lastReviewDate,
-    @HiveField(40)
-    @JsonKey(name: '_lastReviewDate')
-        Element? lastReviewDateElement,
-    @HiveField(41)
-        Period? effectivePeriod,
-    @HiveField(42)
+    @Default(R4ResourceType.Citation) R4ResourceType resourceType,
+    String? id,
+    FhirMeta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    FhirCode? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    FhirUri? url,
+    @JsonKey(name: '_url') Element? urlElement,
+    List<Identifier>? identifier,
+    String? version,
+    @JsonKey(name: '_version') Element? versionElement,
+    String? name,
+    @JsonKey(name: '_name') Element? nameElement,
+    String? title,
+    @JsonKey(name: '_title') Element? titleElement,
+    FhirCode? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    FhirBoolean? experimental,
+    @JsonKey(name: '_experimental') Element? experimentalElement,
+    FhirDateTime? date,
+    @JsonKey(name: '_date') Element? dateElement,
+    String? publisher,
+    @JsonKey(name: '_publisher') Element? publisherElement,
+    List<ContactDetail>? contact,
+    FhirMarkdown? description,
+    @JsonKey(name: '_description') Element? descriptionElement,
+    List<UsageContext>? useContext,
+    List<CodeableConcept>? jurisdiction,
+    FhirMarkdown? purpose,
+    @JsonKey(name: '_purpose') Element? purposeElement,
+    FhirMarkdown? copyright,
+    @JsonKey(name: '_copyright') Element? copyrightElement,
+    FhirDate? approvalDate,
+    @JsonKey(name: '_approvalDate') Element? approvalDateElement,
+    FhirDate? lastReviewDate,
+    @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
+    Period? effectivePeriod,
     // List<CodeableConcept>? topic,
-    @HiveField(43)
-        List<ContactDetail>? author,
-    @HiveField(44)
-        List<ContactDetail>? editor,
-    @HiveField(45)
-        List<ContactDetail>? reviewer,
-    @HiveField(46)
-        List<ContactDetail>? endorser,
-    @HiveField(47)
+    List<ContactDetail>? author,
+    List<ContactDetail>? editor,
+    List<ContactDetail>? reviewer,
+    List<ContactDetail>? endorser,
     // List<RelatedArtifact>? relatedArtifact,
-    @HiveField(48)
-        List<CitationSummary>? summary,
-    @HiveField(49)
-        List<CitationClassification>? classification,
-    @HiveField(50)
-        List<Annotation>? note,
-    @HiveField(51)
-        List<CodeableConcept>? currentState,
-    @HiveField(52)
-        List<CitationStatusDate>? statusDate,
-    @HiveField(53)
-        List<CitationRelatesTo>? relatesTo,
-    @HiveField(54)
-        CitationCitedArtifact? citedArtifact,
+    List<CitationSummary>? summary,
+    List<CitationClassification>? classification,
+    List<Annotation>? note,
+    List<CodeableConcept>? currentState,
+    List<CitationStatusDate>? statusDate,
+    List<CitationRelatesTo>? relatesTo,
+    CitationCitedArtifact? citedArtifact,
   }) = _Citation;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -397,7 +323,7 @@ class CitationSummary with _$CitationSummary {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? style,
-    Markdown? text,
+    FhirMarkdown? text,
     @JsonKey(name: '_text') Element? textElement,
   }) = _CitationSummary;
 
@@ -556,7 +482,7 @@ class CitationStatusDate with _$CitationStatusDate {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept activity,
-    Boolean? actual,
+    FhirBoolean? actual,
     @JsonKey(name: '_actual') Element? actualElement,
     required Period period,
   }) = _CitationStatusDate;
@@ -940,7 +866,7 @@ class CitationStatusDate1 with _$CitationStatusDate1 {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept activity,
-    Boolean? actual,
+    FhirBoolean? actual,
     @JsonKey(name: '_actual') Element? actualElement,
     required Period period,
   }) = _CitationStatusDate1;
@@ -1024,7 +950,7 @@ class CitationTitle with _$CitationTitle {
     List<FhirExtension>? modifierExtension,
     List<CodeableConcept>? type,
     CodeableConcept? language,
-    Markdown? text,
+    FhirMarkdown? text,
     @JsonKey(name: '_text') Element? textElement,
   }) = _CitationTitle;
 
@@ -1111,9 +1037,9 @@ class CitationAbstract with _$CitationAbstract {
     List<FhirExtension>? modifierExtension,
     CodeableConcept? type,
     CodeableConcept? language,
-    Markdown? text,
+    FhirMarkdown? text,
     @JsonKey(name: '_text') Element? textElement,
-    Markdown? copyright,
+    FhirMarkdown? copyright,
     @JsonKey(name: '_copyright') Element? copyrightElement,
   }) = _CitationAbstract;
 
@@ -1423,7 +1349,7 @@ class CitationPublicationForm with _$CitationPublicationForm {
     @JsonKey(name: '_lastPage') Element? lastPageElement,
     String? pageCount,
     @JsonKey(name: '_pageCount') Element? pageCountElement,
-    Markdown? copyright,
+    FhirMarkdown? copyright,
     @JsonKey(name: '_copyright') Element? copyrightElement,
   }) = _CitationPublicationForm;
 
@@ -1707,7 +1633,7 @@ class CitationDateOfPublication with _$CitationDateOfPublication {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    Date? date,
+    FhirDate? date,
     @JsonKey(name: '_date') Element? dateElement,
     String? year,
     @JsonKey(name: '_year') Element? yearElement,
@@ -1792,14 +1718,13 @@ class CitationWebLocation with _$CitationWebLocation {
   /// [url] The specific URL.
   ///
   /// [urlElement] _(_url) Extensions for url
-  @HiveType(typeId: 64)
   factory CitationWebLocation({
-    @HiveField(0) String? id,
-    @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    @HiveField(2) List<FhirExtension>? modifierExtension,
-    @HiveField(3) CodeableConcept? type,
-    @HiveField(4) FhirUri? url,
-    @HiveField(5) @JsonKey(name: '_url') Element? urlElement,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    CodeableConcept? type,
+    FhirUri? url,
+    @JsonKey(name: '_url') Element? urlElement,
   }) = _CitationWebLocation;
 
   /// Produces a Yaml formatted String version of the object
@@ -1973,7 +1898,7 @@ class CitationWhoClassified with _$CitationWhoClassified {
     Reference? publisher,
     String? classifierCopyright,
     @JsonKey(name: '_classifierCopyright') Element? classifierCopyrightElement,
-    Boolean? freeToShare,
+    FhirBoolean? freeToShare,
     @JsonKey(name: '_freeToShare') Element? freeToShareElement,
   }) = _CitationWhoClassified;
 
@@ -2055,7 +1980,7 @@ class CitationContributorship with _$CitationContributorship {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    Boolean? complete,
+    FhirBoolean? complete,
     @JsonKey(name: '_complete') Element? completeElement,
     List<CitationEntry>? entry,
     List<CitationSummary1>? summary,
@@ -2177,7 +2102,7 @@ class CitationEntry with _$CitationEntry {
     List<CodeableConcept>? contributionType,
     CodeableConcept? role,
     List<CitationContributionInstance>? contributionInstance,
-    Boolean? correspondingContact,
+    FhirBoolean? correspondingContact,
     @JsonKey(name: '_correspondingContact')
         Element? correspondingContactElement,
     FhirPositiveInt? listOrder,
@@ -2434,7 +2359,7 @@ class CitationSummary1 with _$CitationSummary1 {
     CodeableConcept? type,
     CodeableConcept? style,
     CodeableConcept? source,
-    Markdown? value,
+    FhirMarkdown? value,
     @JsonKey(name: '_value') Element? valueElement,
   }) = _CitationSummary1;
 
@@ -2471,7 +2396,7 @@ class CitationSummary1 with _$CitationSummary1 {
 
 /// [Evidence] The Evidence resource describes the conditional state
 @freezed
-class Evidence extends HiveObject with Resource, _$Evidence {
+class Evidence with Resource, _$Evidence {
   /// [Evidence] The Evidence resource describes the conditional state
   Evidence._();
 
@@ -2667,65 +2592,57 @@ class Evidence extends HiveObject with Resource, _$Evidence {
   ///
   /// [outcome] A reference to a EvidenceVariable resomece that defines the
   ///  outcome for the research.
-  @HiveType(typeId: 65)
   factory Evidence({
     @Default(R4ResourceType.Evidence)
     @JsonKey(unknownEnumValue: R4ResourceType.Evidence)
-    @HiveField(0)
         R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) FhirMeta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @HiveField(4)
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @HiveField(6) @JsonKey(name: '_language') Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @HiveField(9) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) FhirUri? url,
-    @HiveField(12) @JsonKey(name: '_url') Element? urlElement,
-    @HiveField(13) List<Identifier>? identifier,
-    @HiveField(14) String? version,
-    @HiveField(15) @JsonKey(name: '_version') Element? versionElement,
-    @HiveField(16) String? title,
-    @HiveField(17) @JsonKey(name: '_title') Element? titleElement,
-    @HiveField(18) Reference? citeAsReference,
-    @HiveField(19) Markdown? citAsMarkdown,
-    @HiveField(20)
-    @JsonKey(name: '_citeAsMarkdown')
-        Element? citeAsMarkdownElement,
-    @HiveField(21) Code? status,
-    @HiveField(22) @JsonKey(name: '_status') Element? statusElement,
-    @HiveField(23) FhirDateTime? date,
-    @HiveField(24) @JsonKey(name: '_date') Element? dateElement,
-    @HiveField(25) List<UsageContext>? useContext,
-    @HiveField(26) Date? approvalDate,
-    @HiveField(27) @JsonKey(name: '_approvalDate') Element? approvalDateElement,
-    @HiveField(28) Date? lastReviewDate,
-    @HiveField(29)
-    @JsonKey(name: '_lastReviewDate')
-        Element? lastReviewDateElement,
-    @HiveField(30) String? publisher,
-    @HiveField(31) @JsonKey(name: '_publisher') Element? publisherElement,
-    @HiveField(32) List<ContactDetail>? contact,
-    @HiveField(33) List<ContactDetail>? author,
-    @HiveField(34) List<ContactDetail>? editor,
-    @HiveField(35) List<ContactDetail>? reviewer,
-    @HiveField(36) List<ContactDetail>? endorser,
-    @HiveField(37) List<RelatedArtifact>? relatedArtifact,
-    @HiveField(38) Markdown? description,
-    @HiveField(39) @JsonKey(name: '_description') Element? descriptionElement,
-    @HiveField(40) Markdown? assertion,
-    @HiveField(41) @JsonKey(name: '_assertion') Element? assertionElement,
-    @HiveField(42) List<Annotation>? note,
-    @HiveField(43) required List<EvidenceVariableDefinition> variableDefinition,
-    @HiveField(44) CodeableConcept? synthesisType,
-    @HiveField(45) CodeableConcept? studyType,
-    @HiveField(46) List<EvidenceStatistic>? statistic,
-    @HiveField(47) List<EvidenceCertainty>? certainty,
+    String? id,
+    FhirMeta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    FhirCode? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    FhirUri? url,
+    @JsonKey(name: '_url') Element? urlElement,
+    List<Identifier>? identifier,
+    String? version,
+    @JsonKey(name: '_version') Element? versionElement,
+    String? title,
+    @JsonKey(name: '_title') Element? titleElement,
+    Reference? citeAsReference,
+    FhirMarkdown? citAsMarkdown,
+    @JsonKey(name: '_citeAsMarkdown') Element? citeAsMarkdownElement,
+    FhirCode? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    FhirDateTime? date,
+    @JsonKey(name: '_date') Element? dateElement,
+    List<UsageContext>? useContext,
+    FhirDate? approvalDate,
+    @JsonKey(name: '_approvalDate') Element? approvalDateElement,
+    FhirDate? lastReviewDate,
+    @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
+    String? publisher,
+    @JsonKey(name: '_publisher') Element? publisherElement,
+    List<ContactDetail>? contact,
+    List<ContactDetail>? author,
+    List<ContactDetail>? editor,
+    List<ContactDetail>? reviewer,
+    List<ContactDetail>? endorser,
+    List<RelatedArtifact>? relatedArtifact,
+    FhirMarkdown? description,
+    @JsonKey(name: '_description') Element? descriptionElement,
+    FhirMarkdown? assertion,
+    @JsonKey(name: '_assertion') Element? assertionElement,
+    List<Annotation>? note,
+    required List<EvidenceVariableDefinition> variableDefinition,
+    CodeableConcept? synthesisType,
+    CodeableConcept? studyType,
+    List<EvidenceStatistic>? statistic,
+    List<EvidenceCertainty>? certainty,
   }) = _Evidence;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2790,7 +2707,7 @@ class EvidenceVariableDefinition with _$EvidenceVariableDefinition {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    Markdown? description,
+    FhirMarkdown? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     List<Annotation>? note,
     required CodeableConcept variableRole,
@@ -3293,7 +3210,7 @@ class EvidenceCertainty with _$EvidenceCertainty {
 
 /// [EvidenceReport] The EvidenceReport Resource is a specialized container for a collection of resources and codeable concepts, adapted to support compositions of Evidence, EvidenceVariable, and Citation resources and related concepts.
 @freezed
-class EvidenceReport extends HiveObject with Resource, _$EvidenceReport {
+class EvidenceReport with Resource, _$EvidenceReport {
   /// [EvidenceReport] The EvidenceReport Resource is a specialized container for a collection of resources and codeable concepts, adapted to support compositions of Evidence, EvidenceVariable, and Citation resources and related concepts.
   EvidenceReport._();
 
@@ -3415,48 +3332,41 @@ class EvidenceReport extends HiveObject with Resource, _$EvidenceReport {
   /// [relatesTo] Relationships that this composition has with other compositions or documents that already exist.;
   ///
   /// [section] The root of the sections that make up the composition.;
-  @HiveType(typeId: 66)
   factory EvidenceReport({
-    @HiveField(0)
-    @Default(R4ResourceType.EvidenceReport)
-        R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) FhirMeta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @HiveField(4)
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @HiveField(6) @JsonKey(name: '_language') Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @HiveField(9) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) FhirUri? url,
-    @HiveField(12) @JsonKey(name: '_url') Element? urlElement,
-    @HiveField(13) Code? status,
-    @HiveField(14) @JsonKey(name: '_status') Element? statusElement,
-    @HiveField(15) List<UsageContext>? useContext,
-    @HiveField(16) List<Identifier>? identifier,
-    @HiveField(17) List<Identifier>? relatedIdentifier,
-    @HiveField(18) Reference? citeAsReference,
-    @HiveField(19) Markdown? citeAsMarkdown,
-    @HiveField(20)
-    @JsonKey(name: '_citeAsMarkdown')
-        Element? citeAsMarkdownElement,
-    @HiveField(21) CodeableConcept? type,
-    @HiveField(22) List<Annotation>? note,
-    @HiveField(23) List<RelatedArtifact>? relatedArtifact,
-    @HiveField(24) required EvidenceReportSubject subject,
-    @HiveField(25) String? publisher,
-    @HiveField(26) @JsonKey(name: '_publisher') Element? publisherElement,
-    @HiveField(27) List<ContactDetail>? contact,
-    @HiveField(28) List<ContactDetail>? author,
-    @HiveField(29) List<ContactDetail>? editor,
-    @HiveField(30) List<ContactDetail>? reviewer,
-    @HiveField(31) List<ContactDetail>? endorser,
-    @HiveField(32) List<EvidenceReportRelatesTo>? relatesTo,
-    @HiveField(33) List<EvidenceReportSection>? section,
+    @Default(R4ResourceType.EvidenceReport) R4ResourceType resourceType,
+    String? id,
+    FhirMeta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    FhirCode? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    FhirUri? url,
+    @JsonKey(name: '_url') Element? urlElement,
+    FhirCode? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    List<UsageContext>? useContext,
+    List<Identifier>? identifier,
+    List<Identifier>? relatedIdentifier,
+    Reference? citeAsReference,
+    FhirMarkdown? citeAsMarkdown,
+    @JsonKey(name: '_citeAsMarkdown') Element? citeAsMarkdownElement,
+    CodeableConcept? type,
+    List<Annotation>? note,
+    List<RelatedArtifact>? relatedArtifact,
+    required EvidenceReportSubject subject,
+    String? publisher,
+    @JsonKey(name: '_publisher') Element? publisherElement,
+    List<ContactDetail>? contact,
+    List<ContactDetail>? author,
+    List<ContactDetail>? editor,
+    List<ContactDetail>? reviewer,
+    List<ContactDetail>? endorser,
+    List<EvidenceReportRelatesTo>? relatesTo,
+    List<EvidenceReportSection>? section,
   }) = _EvidenceReport;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -3589,11 +3499,11 @@ class EvidenceReportCharacteristic with _$EvidenceReportCharacteristic {
     required CodeableConcept code,
     Reference? valueReference,
     CodeableConcept? valueCodeableConcept,
-    Boolean? valueBoolean,
+    FhirBoolean? valueBoolean,
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
     Quantity? valueQuantity,
     Range? valueRange,
-    Boolean? exclude,
+    FhirBoolean? exclude,
     @JsonKey(name: '_exclude') Element? excludeElement,
     Period? period,
   }) = _EvidenceReportCharacteristic;
@@ -3789,7 +3699,7 @@ class EvidenceReportSection with _$EvidenceReportSection {
 
 /// [EvidenceVariable] The EvidenceVariable resource describes a "PICO"
 @freezed
-class EvidenceVariable extends HiveObject with Resource, _$EvidenceVariable {
+class EvidenceVariable with Resource, _$EvidenceVariable {
   /// [EvidenceVariable] The EvidenceVariable resource describes a "PICO"
   EvidenceVariable._();
 
@@ -3985,63 +3895,58 @@ class EvidenceVariable extends HiveObject with Resource, _$EvidenceVariable {
   /// [characteristic] A characteristic that defines the members of the
   /// evidence element. Multiple characteristics are applied with "and"
   ///  semantics.
-  @HiveType(typeId: 67)
   factory EvidenceVariable({
     @Default(R4ResourceType.EvidenceVariable)
     @JsonKey(unknownEnumValue: R4ResourceType.EvidenceVariable)
-    @HiveField(0)
         R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) FhirMeta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @HiveField(4)
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @HiveField(6) @JsonKey(name: '_language') Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @HiveField(9) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) FhirUri? url,
-    @HiveField(12) @JsonKey(name: '_url') Element? urlElement,
-    @HiveField(13) List<Identifier>? identifier,
-    @HiveField(14) String? version,
-    @HiveField(15) @JsonKey(name: '_version') Element? versionElement,
-    @HiveField(16) String? name,
-    @HiveField(17) @JsonKey(name: '_name') Element? nameElement,
-    @HiveField(18) String? title,
-    @HiveField(19) @JsonKey(name: '_title') Element? titleElement,
-    @HiveField(20) String? shortTitle,
-    @HiveField(21) @JsonKey(name: '_shortTitle') Element? shortTitleElement,
-    @HiveField(22) String? subtitle,
-    @HiveField(23) @JsonKey(name: '_subtitle') Element? subtitleElement,
-    @HiveField(24) Code? status,
-    @HiveField(25) @JsonKey(name: '_status') Element? statusElement,
-    @HiveField(26) FhirDateTime? date,
-    @HiveField(27) @JsonKey(name: '_date') Element? dateElement,
-    @HiveField(28) Markdown? description,
-    @HiveField(29) @JsonKey(name: '_description') Element? descriptionElement,
-    @HiveField(30) List<Annotation>? note,
-    @HiveField(31) List<UsageContext>? useContext,
-    @HiveField(32) String? publisher,
-    @HiveField(33) @JsonKey(name: '_publisher') Element? publisherElement,
-    @HiveField(34) List<ContactDetail>? contact,
-    @HiveField(35) List<ContactDetail>? author,
-    @HiveField(36) List<ContactDetail>? editor,
-    @HiveField(37) List<ContactDetail>? reviewer,
-    @HiveField(38) List<ContactDetail>? endorser,
-    @HiveField(39) List<RelatedArtifact>? relatedArtifact,
-    @HiveField(40) Boolean? actual,
-    @HiveField(41) @JsonKey(name: '_actual') Element? actualElement,
-    @HiveField(42) Code? characteristicCombination,
+    String? id,
+    FhirMeta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    FhirCode? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    FhirUri? url,
+    @JsonKey(name: '_url') Element? urlElement,
+    List<Identifier>? identifier,
+    String? version,
+    @JsonKey(name: '_version') Element? versionElement,
+    String? name,
+    @JsonKey(name: '_name') Element? nameElement,
+    String? title,
+    @JsonKey(name: '_title') Element? titleElement,
+    String? shortTitle,
+    @JsonKey(name: '_shortTitle') Element? shortTitleElement,
+    String? subtitle,
+    @JsonKey(name: '_subtitle') Element? subtitleElement,
+    FhirCode? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    FhirDateTime? date,
+    @JsonKey(name: '_date') Element? dateElement,
+    FhirMarkdown? description,
+    @JsonKey(name: '_description') Element? descriptionElement,
+    List<Annotation>? note,
+    List<UsageContext>? useContext,
+    String? publisher,
+    @JsonKey(name: '_publisher') Element? publisherElement,
+    List<ContactDetail>? contact,
+    List<ContactDetail>? author,
+    List<ContactDetail>? editor,
+    List<ContactDetail>? reviewer,
+    List<ContactDetail>? endorser,
+    List<RelatedArtifact>? relatedArtifact,
+    FhirBoolean? actual,
+    @JsonKey(name: '_actual') Element? actualElement,
+    FhirCode? characteristicCombination,
     @JsonKey(name: '_characteristicCombination')
-    @HiveField(43)
         Element? characteristicCombinationElement,
-    @HiveField(44) required List<EvidenceVariableCharacteristic> characteristic,
-    @HiveField(45) Code? handling,
-    @HiveField(46) @JsonKey(name: '_handling') Element? handlingElement,
-    @HiveField(47) List<EvidenceVariableCategory>? category,
+    required List<EvidenceVariableCharacteristic> characteristic,
+    FhirCode? handling,
+    @JsonKey(name: '_handling') Element? handlingElement,
+    List<EvidenceVariableCategory>? category,
   }) = _EvidenceVariable;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -4179,11 +4084,11 @@ class EvidenceVariableCharacteristic with _$EvidenceVariableCharacteristic {
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     Reference? definitionReference,
-    Canonical? definitionCanonical,
+    FhirCanonical? definitionCanonical,
     @JsonKey(name: '_definitionCanonical') Element? definitionCanonicalElement,
     CodeableConcept? definitionCodeableConcept,
     Expression? definitionExpression,
-    Boolean? exclude,
+    FhirBoolean? exclude,
     @JsonKey(name: '_exclude') Element? excludeElement,
     EvidenceVariableTimeFromStart? timeFromStart,
     FhirCode? groupMeasure,
@@ -4377,8 +4282,7 @@ class EvidenceVariableCategory with _$EvidenceVariableCategory {
 
 /// [ResearchDefinition] The ResearchDefinition resource describes the
 @freezed
-class ResearchDefinition extends HiveObject
-    with Resource, _$ResearchDefinition {
+class ResearchDefinition with Resource, _$ResearchDefinition {
   /// [ResearchDefinition] The ResearchDefinition resource describes the
   ResearchDefinition._();
 
@@ -4608,78 +4512,72 @@ class ResearchDefinition extends HiveObject
   ///
   /// [outcome] A reference to a ResearchElementDefinition resomece that
   ///  defines the outcome for the research.
-  @HiveType(typeId: 68)
   factory ResearchDefinition({
     @Default(R4ResourceType.ResearchDefinition)
     @JsonKey(unknownEnumValue: R4ResourceType.ResearchDefinition)
-    @HiveField(0)
         R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) FhirMeta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @HiveField(4)
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @HiveField(6) @JsonKey(name: '_language') Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @HiveField(9) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) FhirUri? url,
-    @HiveField(12) @JsonKey(name: '_url') Element? urlElement,
-    @HiveField(13) List<Identifier>? identifier,
-    @HiveField(14) String? version,
-    @HiveField(15) @JsonKey(name: '_version') Element? versionElement,
-    @HiveField(16) String? name,
-    @HiveField(17) @JsonKey(name: '_name') Element? nameElement,
-    @HiveField(18) String? title,
-    @HiveField(19) @JsonKey(name: '_title') Element? titleElement,
-    @HiveField(20) String? shortTitle,
-    @HiveField(21) @JsonKey(name: '_shortTitle') Element? shortTitleElement,
-    @HiveField(22) String? subtitle,
-    @HiveField(23) @JsonKey(name: '_subtitle') Element? subtitleElement,
-    @HiveField(24) Code? status,
-    @HiveField(25) @JsonKey(name: '_status') Element? statusElement,
-    @HiveField(26) Boolean? experimental,
-    @HiveField(27) @JsonKey(name: '_experimental') Element? experimentalElement,
-    @HiveField(28) CodeableConcept? subjectCodeableConcept,
-    @HiveField(29) Reference? subjectReference,
-    @HiveField(30) FhirDateTime? date,
-    @HiveField(31) @JsonKey(name: '_date') Element? dateElement,
-    @HiveField(32) String? publisher,
-    @HiveField(33) @JsonKey(name: '_publisher') Element? publisherElement,
-    @HiveField(34) List<ContactDetail>? contact,
-    @HiveField(35) Markdown? description,
-    @HiveField(36) @JsonKey(name: '_description') Element? descriptionElement,
-    @HiveField(37) List<String>? comment,
-    @HiveField(38) @JsonKey(name: '_comment') List<Element?>? commentElement,
-    @HiveField(39) List<UsageContext>? useContext,
-    @HiveField(40) List<CodeableConcept>? jurisdiction,
-    @HiveField(41) Markdown? purpose,
-    @HiveField(42) @JsonKey(name: '_purpose') Element? purposeElement,
-    @HiveField(43) String? usage,
-    @HiveField(44) @JsonKey(name: '_usage') Element? usageElement,
-    @HiveField(45) Markdown? copyright,
-    @HiveField(46) @JsonKey(name: '_copyright') Element? copyrightElement,
-    @HiveField(47) Date? approvalDate,
-    @HiveField(48) @JsonKey(name: '_approvalDate') Element? approvalDateElement,
-    @HiveField(49) Date? lastReviewDate,
-    @HiveField(50)
-    @JsonKey(name: '_lastReviewDate')
-        Element? lastReviewDateElement,
-    @HiveField(51) Period? effectivePeriod,
-    @HiveField(52) List<CodeableConcept>? topic,
-    @HiveField(53) List<ContactDetail>? author,
-    @HiveField(54) List<ContactDetail>? editor,
-    @HiveField(55) List<ContactDetail>? reviewer,
-    @HiveField(56) List<ContactDetail>? endorser,
-    @HiveField(57) List<RelatedArtifact>? relatedArtifact,
-    @HiveField(58) @JsonKey(name: 'library') List<FhirCanonical>? library_,
-    @HiveField(59) required Reference population,
-    @HiveField(60) Reference? exposure,
-    @HiveField(61) Reference? exposureAlternative,
-    @HiveField(62) Reference? outcome,
+    String? id,
+    FhirMeta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    FhirCode? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    FhirUri? url,
+    @JsonKey(name: '_url') Element? urlElement,
+    List<Identifier>? identifier,
+    String? version,
+    @JsonKey(name: '_version') Element? versionElement,
+    String? name,
+    @JsonKey(name: '_name') Element? nameElement,
+    String? title,
+    @JsonKey(name: '_title') Element? titleElement,
+    String? shortTitle,
+    @JsonKey(name: '_shortTitle') Element? shortTitleElement,
+    String? subtitle,
+    @JsonKey(name: '_subtitle') Element? subtitleElement,
+    FhirCode? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    FhirBoolean? experimental,
+    @JsonKey(name: '_experimental') Element? experimentalElement,
+    CodeableConcept? subjectCodeableConcept,
+    Reference? subjectReference,
+    FhirDateTime? date,
+    @JsonKey(name: '_date') Element? dateElement,
+    String? publisher,
+    @JsonKey(name: '_publisher') Element? publisherElement,
+    List<ContactDetail>? contact,
+    FhirMarkdown? description,
+    @JsonKey(name: '_description') Element? descriptionElement,
+    List<String>? comment,
+    @JsonKey(name: '_comment') List<Element?>? commentElement,
+    List<UsageContext>? useContext,
+    List<CodeableConcept>? jurisdiction,
+    FhirMarkdown? purpose,
+    @JsonKey(name: '_purpose') Element? purposeElement,
+    String? usage,
+    @JsonKey(name: '_usage') Element? usageElement,
+    FhirMarkdown? copyright,
+    @JsonKey(name: '_copyright') Element? copyrightElement,
+    FhirDate? approvalDate,
+    @JsonKey(name: '_approvalDate') Element? approvalDateElement,
+    FhirDate? lastReviewDate,
+    @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
+    Period? effectivePeriod,
+    List<CodeableConcept>? topic,
+    List<ContactDetail>? author,
+    List<ContactDetail>? editor,
+    List<ContactDetail>? reviewer,
+    List<ContactDetail>? endorser,
+    List<RelatedArtifact>? relatedArtifact,
+    @JsonKey(name: 'library') List<FhirCanonical>? library_,
+    required Reference population,
+    Reference? exposure,
+    Reference? exposureAlternative,
+    Reference? outcome,
   }) = _ResearchDefinition;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -4712,8 +4610,7 @@ class ResearchDefinition extends HiveObject
 
 /// [ResearchElementDefinition] The ResearchElementDefinition resource
 @freezed
-class ResearchElementDefinition extends HiveObject
-    with Resource, _$ResearchElementDefinition {
+class ResearchElementDefinition with Resource, _$ResearchElementDefinition {
   /// [ResearchElementDefinition] The ResearchElementDefinition resource
   ResearchElementDefinition._();
 
@@ -4950,80 +4847,73 @@ class ResearchElementDefinition extends HiveObject
   /// [characteristic] A characteristic that defines the members of the
   /// research element. Multiple characteristics are applied with "and"
   ///  semantics.
-  @HiveType(typeId: 69)
   factory ResearchElementDefinition({
     @Default(R4ResourceType.ResearchElementDefinition)
     @JsonKey(unknownEnumValue: R4ResourceType.ResearchElementDefinition)
-    @HiveField(0)
         R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) FhirMeta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @HiveField(4)
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @HiveField(6) @JsonKey(name: '_language') Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @HiveField(9) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) FhirUri? url,
-    @HiveField(12) @JsonKey(name: '_url') Element? urlElement,
-    @HiveField(13) List<Identifier>? identifier,
-    @HiveField(14) String? version,
-    @HiveField(15) @JsonKey(name: '_version') Element? versionElement,
-    @HiveField(16) String? name,
-    @HiveField(17) @JsonKey(name: '_name') Element? nameElement,
-    @HiveField(18) String? title,
-    @HiveField(19) @JsonKey(name: '_title') Element? titleElement,
-    @HiveField(20) String? shortTitle,
-    @HiveField(21) @JsonKey(name: '_shortTitle') Element? shortTitleElement,
-    @HiveField(22) String? subtitle,
-    @HiveField(23) @JsonKey(name: '_subtitle') Element? subtitleElement,
-    @HiveField(24) Code? status,
-    @HiveField(25) @JsonKey(name: '_status') Element? statusElement,
-    @HiveField(26) Boolean? experimental,
-    @HiveField(27) @JsonKey(name: '_experimental') Element? experimentalElement,
-    @HiveField(28) CodeableConcept? subjectCodeableConcept,
-    @HiveField(29) Reference? subjectReference,
-    @HiveField(30) FhirDateTime? date,
-    @HiveField(31) @JsonKey(name: '_date') Element? dateElement,
-    @HiveField(32) String? publisher,
-    @HiveField(33) @JsonKey(name: '_publisher') Element? publisherElement,
-    @HiveField(34) List<ContactDetail>? contact,
-    @HiveField(35) Markdown? description,
-    @HiveField(36) @JsonKey(name: '_description') Element? descriptionElement,
-    @HiveField(37) List<String>? comment,
-    @HiveField(38) @JsonKey(name: '_comment') List<Element?>? commentElement,
-    @HiveField(39) List<UsageContext>? useContext,
-    @HiveField(40) List<CodeableConcept>? jurisdiction,
-    @HiveField(41) Markdown? purpose,
-    @HiveField(42) @JsonKey(name: '_purpose') Element? purposeElement,
-    @HiveField(43) String? usage,
-    @HiveField(44) @JsonKey(name: '_usage') Element? usageElement,
-    @HiveField(45) Markdown? copyright,
-    @HiveField(46) @JsonKey(name: '_copyright') Element? copyrightElement,
-    @HiveField(47) Date? approvalDate,
-    @HiveField(48) @JsonKey(name: '_approvalDate') Element? approvalDateElement,
-    @HiveField(49) Date? lastReviewDate,
-    @HiveField(50)
-    @JsonKey(name: '_lastReviewDate')
-        Element? lastReviewDateElement,
-    @HiveField(51) Period? effectivePeriod,
-    @HiveField(52) List<CodeableConcept>? topic,
-    @HiveField(53) List<ContactDetail>? author,
-    @HiveField(54) List<ContactDetail>? editor,
-    @HiveField(55) List<ContactDetail>? reviewer,
-    @HiveField(56) List<ContactDetail>? endorser,
-    @HiveField(57) List<RelatedArtifact>? relatedArtifact,
-    @HiveField(58) @JsonKey(name: 'library') List<FhirCanonical>? library_,
-    @HiveField(59) Code? type,
-    @HiveField(60) @JsonKey(name: '_type') Element? typeElement,
-    @HiveField(61) Code? variableType,
-    @HiveField(62) @JsonKey(name: '_variableType') Element? variableTypeElement,
-    @HiveField(63)
-        required List<ResearchElementDefinitionCharacteristic> characteristic,
+    String? id,
+    FhirMeta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    FhirCode? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    FhirUri? url,
+    @JsonKey(name: '_url') Element? urlElement,
+    List<Identifier>? identifier,
+    String? version,
+    @JsonKey(name: '_version') Element? versionElement,
+    String? name,
+    @JsonKey(name: '_name') Element? nameElement,
+    String? title,
+    @JsonKey(name: '_title') Element? titleElement,
+    String? shortTitle,
+    @JsonKey(name: '_shortTitle') Element? shortTitleElement,
+    String? subtitle,
+    @JsonKey(name: '_subtitle') Element? subtitleElement,
+    FhirCode? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    FhirBoolean? experimental,
+    @JsonKey(name: '_experimental') Element? experimentalElement,
+    CodeableConcept? subjectCodeableConcept,
+    Reference? subjectReference,
+    FhirDateTime? date,
+    @JsonKey(name: '_date') Element? dateElement,
+    String? publisher,
+    @JsonKey(name: '_publisher') Element? publisherElement,
+    List<ContactDetail>? contact,
+    FhirMarkdown? description,
+    @JsonKey(name: '_description') Element? descriptionElement,
+    List<String>? comment,
+    @JsonKey(name: '_comment') List<Element?>? commentElement,
+    List<UsageContext>? useContext,
+    List<CodeableConcept>? jurisdiction,
+    FhirMarkdown? purpose,
+    @JsonKey(name: '_purpose') Element? purposeElement,
+    String? usage,
+    @JsonKey(name: '_usage') Element? usageElement,
+    FhirMarkdown? copyright,
+    @JsonKey(name: '_copyright') Element? copyrightElement,
+    FhirDate? approvalDate,
+    @JsonKey(name: '_approvalDate') Element? approvalDateElement,
+    FhirDate? lastReviewDate,
+    @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
+    Period? effectivePeriod,
+    List<CodeableConcept>? topic,
+    List<ContactDetail>? author,
+    List<ContactDetail>? editor,
+    List<ContactDetail>? reviewer,
+    List<ContactDetail>? endorser,
+    List<RelatedArtifact>? relatedArtifact,
+    @JsonKey(name: 'library') List<FhirCanonical>? library_,
+    FhirCode? type,
+    @JsonKey(name: '_type') Element? typeElement,
+    FhirCode? variableType,
+    @JsonKey(name: '_variableType') Element? variableTypeElement,
+    required List<ResearchElementDefinitionCharacteristic> characteristic,
   }) = _ResearchElementDefinition;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -5178,12 +5068,12 @@ class ResearchElementDefinitionCharacteristic
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? definitionCodeableConcept,
-    Canonical? definitionCanonical,
+    FhirCanonical? definitionCanonical,
     @JsonKey(name: '_definitionCanonical') Element? definitionCanonicalElement,
     Expression? definitionExpression,
     DataRequirement? definitionDataRequirement,
     List<UsageContext>? usageContext,
-    Boolean? exclude,
+    FhirBoolean? exclude,
     @JsonKey(name: '_exclude') Element? excludeElement,
     CodeableConcept? unitOfMeasure,
     String? studyEffectiveDescription,

@@ -3,785 +3,6 @@
 part of 'individuals.dart';
 
 // **************************************************************************
-// TypeAdapterGenerator
-// **************************************************************************
-
-class GroupAdapter extends TypeAdapter<_$_Group> {
-  @override
-  final int typeId = 129;
-
-  @override
-  _$_Group read(BinaryReader reader) {
-    final numOfFields = reader.readByte();
-    final fields = <int, dynamic>{
-      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
-    };
-    return _$_Group(
-      resourceType: fields[0] as R4ResourceType,
-      id: fields[1] as String?,
-      meta: fields[2] as FhirMeta?,
-      implicitRules: fields[3] as FhirUri?,
-      implicitRulesElement: fields[4] as Element?,
-      language: fields[5] as Code?,
-      languageElement: fields[6] as Element?,
-      text: fields[7] as Narrative?,
-      contained: (fields[8] as List?)?.cast<Resource>(),
-      extension_: (fields[9] as List?)?.cast<FhirExtension>(),
-      modifierExtension: (fields[10] as List?)?.cast<FhirExtension>(),
-      identifier: (fields[11] as List?)?.cast<Identifier>(),
-      active: fields[12] as Boolean?,
-      activeElement: fields[13] as Element?,
-      type: fields[14] as Code?,
-      typeElement: fields[15] as Element?,
-      actual: fields[16] as Boolean?,
-      actualElement: fields[17] as Element?,
-      code: fields[18] as CodeableConcept?,
-      name: fields[19] as String?,
-      nameElement: fields[20] as Element?,
-      quantity: fields[21] as UnsignedInt?,
-      quantityElement: fields[22] as Element?,
-      managingEntity: fields[23] as Reference?,
-      characteristic: (fields[24] as List?)?.cast<GroupCharacteristic>(),
-      member: (fields[25] as List?)?.cast<GroupMember>(),
-    );
-  }
-
-  @override
-  void write(BinaryWriter writer, _$_Group obj) {
-    writer
-      ..writeByte(26)
-      ..writeByte(0)
-      ..write(obj.resourceType)
-      ..writeByte(1)
-      ..write(obj.id)
-      ..writeByte(2)
-      ..write(obj.meta)
-      ..writeByte(3)
-      ..write(obj.implicitRules)
-      ..writeByte(4)
-      ..write(obj.implicitRulesElement)
-      ..writeByte(5)
-      ..write(obj.language)
-      ..writeByte(6)
-      ..write(obj.languageElement)
-      ..writeByte(7)
-      ..write(obj.text)
-      ..writeByte(12)
-      ..write(obj.active)
-      ..writeByte(13)
-      ..write(obj.activeElement)
-      ..writeByte(14)
-      ..write(obj.type)
-      ..writeByte(15)
-      ..write(obj.typeElement)
-      ..writeByte(16)
-      ..write(obj.actual)
-      ..writeByte(17)
-      ..write(obj.actualElement)
-      ..writeByte(18)
-      ..write(obj.code)
-      ..writeByte(19)
-      ..write(obj.name)
-      ..writeByte(20)
-      ..write(obj.nameElement)
-      ..writeByte(21)
-      ..write(obj.quantity)
-      ..writeByte(22)
-      ..write(obj.quantityElement)
-      ..writeByte(23)
-      ..write(obj.managingEntity)
-      ..writeByte(8)
-      ..write(obj.contained)
-      ..writeByte(9)
-      ..write(obj.extension_)
-      ..writeByte(10)
-      ..write(obj.modifierExtension)
-      ..writeByte(11)
-      ..write(obj.identifier)
-      ..writeByte(24)
-      ..write(obj.characteristic)
-      ..writeByte(25)
-      ..write(obj.member);
-  }
-
-  @override
-  int get hashCode => typeId.hashCode;
-
-  @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is GroupAdapter &&
-          runtimeType == other.runtimeType &&
-          typeId == other.typeId;
-}
-
-class PatientAdapter extends TypeAdapter<_$_Patient> {
-  @override
-  final int typeId = 130;
-
-  @override
-  _$_Patient read(BinaryReader reader) {
-    final numOfFields = reader.readByte();
-    final fields = <int, dynamic>{
-      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
-    };
-    return _$_Patient(
-      resourceType: fields[0] as R4ResourceType,
-      id: fields[1] as String?,
-      meta: fields[2] as FhirMeta?,
-      implicitRules: fields[3] as FhirUri?,
-      implicitRulesElement: fields[4] as Element?,
-      language: fields[5] as Code?,
-      languageElement: fields[6] as Element?,
-      text: fields[7] as Narrative?,
-      contained: (fields[8] as List?)?.cast<Resource>(),
-      extension_: (fields[9] as List?)?.cast<FhirExtension>(),
-      modifierExtension: (fields[10] as List?)?.cast<FhirExtension>(),
-      identifier: (fields[11] as List?)?.cast<Identifier>(),
-      active: fields[12] as Boolean?,
-      activeElement: fields[13] as Element?,
-      name: (fields[14] as List?)?.cast<HumanName>(),
-      telecom: (fields[15] as List?)?.cast<ContactPoint>(),
-      gender: fields[16] as Code?,
-      genderElement: fields[17] as Element?,
-      birthDate: fields[18] as Date?,
-      birthDateElement: fields[19] as Element?,
-      deceasedBoolean: fields[20] as Boolean?,
-      deceasedBooleanElement: fields[21] as Element?,
-      deceasedDateTime: fields[22] as FhirDateTime?,
-      deceasedDateTimeElement: fields[23] as Element?,
-      address: (fields[24] as List?)?.cast<Address>(),
-      maritalStatus: fields[25] as CodeableConcept?,
-      multipleBirthBoolean: fields[26] as Boolean?,
-      multipleBirthBooleanElement: fields[27] as Element?,
-      multipleBirthInteger: fields[28] as Integer?,
-      multipleBirthIntegerElement: fields[29] as Element?,
-      photo: (fields[30] as List?)?.cast<Attachment>(),
-      contact: (fields[31] as List?)?.cast<PatientContact>(),
-      communication: (fields[32] as List?)?.cast<PatientCommunication>(),
-      generalPractitioner: (fields[33] as List?)?.cast<Reference>(),
-      managingOrganization: fields[34] as Reference?,
-      link: (fields[35] as List?)?.cast<PatientLink>(),
-    );
-  }
-
-  @override
-  void write(BinaryWriter writer, _$_Patient obj) {
-    writer
-      ..writeByte(36)
-      ..writeByte(0)
-      ..write(obj.resourceType)
-      ..writeByte(1)
-      ..write(obj.id)
-      ..writeByte(2)
-      ..write(obj.meta)
-      ..writeByte(3)
-      ..write(obj.implicitRules)
-      ..writeByte(4)
-      ..write(obj.implicitRulesElement)
-      ..writeByte(5)
-      ..write(obj.language)
-      ..writeByte(6)
-      ..write(obj.languageElement)
-      ..writeByte(7)
-      ..write(obj.text)
-      ..writeByte(12)
-      ..write(obj.active)
-      ..writeByte(13)
-      ..write(obj.activeElement)
-      ..writeByte(16)
-      ..write(obj.gender)
-      ..writeByte(17)
-      ..write(obj.genderElement)
-      ..writeByte(18)
-      ..write(obj.birthDate)
-      ..writeByte(19)
-      ..write(obj.birthDateElement)
-      ..writeByte(20)
-      ..write(obj.deceasedBoolean)
-      ..writeByte(21)
-      ..write(obj.deceasedBooleanElement)
-      ..writeByte(22)
-      ..write(obj.deceasedDateTime)
-      ..writeByte(23)
-      ..write(obj.deceasedDateTimeElement)
-      ..writeByte(25)
-      ..write(obj.maritalStatus)
-      ..writeByte(26)
-      ..write(obj.multipleBirthBoolean)
-      ..writeByte(27)
-      ..write(obj.multipleBirthBooleanElement)
-      ..writeByte(28)
-      ..write(obj.multipleBirthInteger)
-      ..writeByte(29)
-      ..write(obj.multipleBirthIntegerElement)
-      ..writeByte(34)
-      ..write(obj.managingOrganization)
-      ..writeByte(8)
-      ..write(obj.contained)
-      ..writeByte(9)
-      ..write(obj.extension_)
-      ..writeByte(10)
-      ..write(obj.modifierExtension)
-      ..writeByte(11)
-      ..write(obj.identifier)
-      ..writeByte(14)
-      ..write(obj.name)
-      ..writeByte(15)
-      ..write(obj.telecom)
-      ..writeByte(24)
-      ..write(obj.address)
-      ..writeByte(30)
-      ..write(obj.photo)
-      ..writeByte(31)
-      ..write(obj.contact)
-      ..writeByte(32)
-      ..write(obj.communication)
-      ..writeByte(33)
-      ..write(obj.generalPractitioner)
-      ..writeByte(35)
-      ..write(obj.link);
-  }
-
-  @override
-  int get hashCode => typeId.hashCode;
-
-  @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is PatientAdapter &&
-          runtimeType == other.runtimeType &&
-          typeId == other.typeId;
-}
-
-class PatientCommunicationAdapter extends TypeAdapter<_$_PatientCommunication> {
-  @override
-  final int typeId = 131;
-
-  @override
-  _$_PatientCommunication read(BinaryReader reader) {
-    final numOfFields = reader.readByte();
-    final fields = <int, dynamic>{
-      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
-    };
-    return _$_PatientCommunication(
-      id: fields[0] as String?,
-      extension_: (fields[1] as List?)?.cast<FhirExtension>(),
-      modifierExtension: (fields[2] as List?)?.cast<FhirExtension>(),
-      language: fields[3] as CodeableConcept,
-      preferred: fields[5] as Boolean?,
-      preferredElement: fields[6] as Element?,
-    );
-  }
-
-  @override
-  void write(BinaryWriter writer, _$_PatientCommunication obj) {
-    writer
-      ..writeByte(6)
-      ..writeByte(0)
-      ..write(obj.id)
-      ..writeByte(3)
-      ..write(obj.language)
-      ..writeByte(5)
-      ..write(obj.preferred)
-      ..writeByte(6)
-      ..write(obj.preferredElement)
-      ..writeByte(1)
-      ..write(obj.extension_)
-      ..writeByte(2)
-      ..write(obj.modifierExtension);
-  }
-
-  @override
-  int get hashCode => typeId.hashCode;
-
-  @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is PatientCommunicationAdapter &&
-          runtimeType == other.runtimeType &&
-          typeId == other.typeId;
-}
-
-class PersonAdapter extends TypeAdapter<_$_Person> {
-  @override
-  final int typeId = 132;
-
-  @override
-  _$_Person read(BinaryReader reader) {
-    final numOfFields = reader.readByte();
-    final fields = <int, dynamic>{
-      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
-    };
-    return _$_Person(
-      resourceType: fields[0] as R4ResourceType,
-      id: fields[1] as String?,
-      meta: fields[2] as FhirMeta?,
-      implicitRules: fields[3] as FhirUri?,
-      implicitRulesElement: fields[4] as Element?,
-      language: fields[5] as Code?,
-      languageElement: fields[6] as Element?,
-      text: fields[7] as Narrative?,
-      contained: (fields[8] as List?)?.cast<Resource>(),
-      extension_: (fields[9] as List?)?.cast<FhirExtension>(),
-      modifierExtension: (fields[10] as List?)?.cast<FhirExtension>(),
-      identifier: (fields[11] as List?)?.cast<Identifier>(),
-      name: (fields[12] as List?)?.cast<HumanName>(),
-      telecom: (fields[13] as List?)?.cast<ContactPoint>(),
-      gender: fields[14] as Code?,
-      genderElement: fields[15] as Element?,
-      birthDate: fields[16] as Date?,
-      birthDateElement: fields[17] as Element?,
-      address: (fields[18] as List?)?.cast<Address>(),
-      photo: fields[19] as Attachment?,
-      managingOrganization: fields[20] as Reference?,
-      active: fields[21] as Boolean?,
-      activeElement: fields[22] as Element?,
-      link: (fields[23] as List?)?.cast<PersonLink>(),
-    );
-  }
-
-  @override
-  void write(BinaryWriter writer, _$_Person obj) {
-    writer
-      ..writeByte(24)
-      ..writeByte(0)
-      ..write(obj.resourceType)
-      ..writeByte(1)
-      ..write(obj.id)
-      ..writeByte(2)
-      ..write(obj.meta)
-      ..writeByte(3)
-      ..write(obj.implicitRules)
-      ..writeByte(4)
-      ..write(obj.implicitRulesElement)
-      ..writeByte(5)
-      ..write(obj.language)
-      ..writeByte(6)
-      ..write(obj.languageElement)
-      ..writeByte(7)
-      ..write(obj.text)
-      ..writeByte(14)
-      ..write(obj.gender)
-      ..writeByte(15)
-      ..write(obj.genderElement)
-      ..writeByte(16)
-      ..write(obj.birthDate)
-      ..writeByte(17)
-      ..write(obj.birthDateElement)
-      ..writeByte(19)
-      ..write(obj.photo)
-      ..writeByte(20)
-      ..write(obj.managingOrganization)
-      ..writeByte(21)
-      ..write(obj.active)
-      ..writeByte(22)
-      ..write(obj.activeElement)
-      ..writeByte(8)
-      ..write(obj.contained)
-      ..writeByte(9)
-      ..write(obj.extension_)
-      ..writeByte(10)
-      ..write(obj.modifierExtension)
-      ..writeByte(11)
-      ..write(obj.identifier)
-      ..writeByte(12)
-      ..write(obj.name)
-      ..writeByte(13)
-      ..write(obj.telecom)
-      ..writeByte(18)
-      ..write(obj.address)
-      ..writeByte(23)
-      ..write(obj.link);
-  }
-
-  @override
-  int get hashCode => typeId.hashCode;
-
-  @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is PersonAdapter &&
-          runtimeType == other.runtimeType &&
-          typeId == other.typeId;
-}
-
-class PractitionerAdapter extends TypeAdapter<_$_Practitioner> {
-  @override
-  final int typeId = 133;
-
-  @override
-  _$_Practitioner read(BinaryReader reader) {
-    final numOfFields = reader.readByte();
-    final fields = <int, dynamic>{
-      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
-    };
-    return _$_Practitioner(
-      resourceType: fields[0] as R4ResourceType,
-      id: fields[1] as String?,
-      meta: fields[2] as FhirMeta?,
-      implicitRules: fields[3] as FhirUri?,
-      implicitRulesElement: fields[4] as Element?,
-      language: fields[5] as Code?,
-      languageElement: fields[6] as Element?,
-      text: fields[7] as Narrative?,
-      contained: (fields[8] as List?)?.cast<Resource>(),
-      extension_: (fields[9] as List?)?.cast<FhirExtension>(),
-      modifierExtension: (fields[10] as List?)?.cast<FhirExtension>(),
-      identifier: (fields[11] as List?)?.cast<Identifier>(),
-      active: fields[12] as Boolean?,
-      activeElement: fields[13] as Element?,
-      name: (fields[14] as List?)?.cast<HumanName>(),
-      telecom: (fields[15] as List?)?.cast<ContactPoint>(),
-      address: (fields[16] as List?)?.cast<Address>(),
-      gender: fields[17] as Code?,
-      genderElement: fields[18] as Element?,
-      birthDate: fields[19] as Date?,
-      birthDateElement: fields[20] as Element?,
-      photo: (fields[21] as List?)?.cast<Attachment>(),
-      qualification: (fields[22] as List?)?.cast<PractitionerQualification>(),
-      communication: (fields[23] as List?)?.cast<CodeableConcept>(),
-    );
-  }
-
-  @override
-  void write(BinaryWriter writer, _$_Practitioner obj) {
-    writer
-      ..writeByte(24)
-      ..writeByte(0)
-      ..write(obj.resourceType)
-      ..writeByte(1)
-      ..write(obj.id)
-      ..writeByte(2)
-      ..write(obj.meta)
-      ..writeByte(3)
-      ..write(obj.implicitRules)
-      ..writeByte(4)
-      ..write(obj.implicitRulesElement)
-      ..writeByte(5)
-      ..write(obj.language)
-      ..writeByte(6)
-      ..write(obj.languageElement)
-      ..writeByte(7)
-      ..write(obj.text)
-      ..writeByte(12)
-      ..write(obj.active)
-      ..writeByte(13)
-      ..write(obj.activeElement)
-      ..writeByte(17)
-      ..write(obj.gender)
-      ..writeByte(18)
-      ..write(obj.genderElement)
-      ..writeByte(19)
-      ..write(obj.birthDate)
-      ..writeByte(20)
-      ..write(obj.birthDateElement)
-      ..writeByte(8)
-      ..write(obj.contained)
-      ..writeByte(9)
-      ..write(obj.extension_)
-      ..writeByte(10)
-      ..write(obj.modifierExtension)
-      ..writeByte(11)
-      ..write(obj.identifier)
-      ..writeByte(14)
-      ..write(obj.name)
-      ..writeByte(15)
-      ..write(obj.telecom)
-      ..writeByte(16)
-      ..write(obj.address)
-      ..writeByte(21)
-      ..write(obj.photo)
-      ..writeByte(22)
-      ..write(obj.qualification)
-      ..writeByte(23)
-      ..write(obj.communication);
-  }
-
-  @override
-  int get hashCode => typeId.hashCode;
-
-  @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is PractitionerAdapter &&
-          runtimeType == other.runtimeType &&
-          typeId == other.typeId;
-}
-
-class PractitionerRoleAdapter extends TypeAdapter<_$_PractitionerRole> {
-  @override
-  final int typeId = 134;
-
-  @override
-  _$_PractitionerRole read(BinaryReader reader) {
-    final numOfFields = reader.readByte();
-    final fields = <int, dynamic>{
-      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
-    };
-    return _$_PractitionerRole(
-      resourceType: fields[0] as R4ResourceType,
-      id: fields[1] as String?,
-      meta: fields[2] as FhirMeta?,
-      implicitRules: fields[3] as FhirUri?,
-      implicitRulesElement: fields[4] as Element?,
-      language: fields[5] as Code?,
-      languageElement: fields[6] as Element?,
-      text: fields[7] as Narrative?,
-      contained: (fields[8] as List?)?.cast<Resource>(),
-      extension_: (fields[9] as List?)?.cast<FhirExtension>(),
-      modifierExtension: (fields[10] as List?)?.cast<FhirExtension>(),
-      identifier: (fields[11] as List?)?.cast<Identifier>(),
-      active: fields[12] as Boolean?,
-      activeElement: fields[13] as Element?,
-      period: fields[14] as Period?,
-      practitioner: fields[15] as Reference?,
-      organization: fields[16] as Reference?,
-      code: (fields[17] as List?)?.cast<CodeableConcept>(),
-      specialty: (fields[18] as List?)?.cast<CodeableConcept>(),
-      location: (fields[19] as List?)?.cast<Reference>(),
-      healthcareService: (fields[20] as List?)?.cast<Reference>(),
-      telecom: (fields[21] as List?)?.cast<ContactPoint>(),
-      availableTime:
-          (fields[22] as List?)?.cast<PractitionerRoleAvailableTime>(),
-      notAvailable: (fields[23] as List?)?.cast<PractitionerRoleNotAvailable>(),
-      availabilityExceptions: fields[24] as String?,
-      availabilityExceptionsElement: fields[26] as Element?,
-      endpoint: (fields[27] as List?)?.cast<Reference>(),
-    );
-  }
-
-  @override
-  void write(BinaryWriter writer, _$_PractitionerRole obj) {
-    writer
-      ..writeByte(27)
-      ..writeByte(0)
-      ..write(obj.resourceType)
-      ..writeByte(1)
-      ..write(obj.id)
-      ..writeByte(2)
-      ..write(obj.meta)
-      ..writeByte(3)
-      ..write(obj.implicitRules)
-      ..writeByte(4)
-      ..write(obj.implicitRulesElement)
-      ..writeByte(5)
-      ..write(obj.language)
-      ..writeByte(6)
-      ..write(obj.languageElement)
-      ..writeByte(7)
-      ..write(obj.text)
-      ..writeByte(12)
-      ..write(obj.active)
-      ..writeByte(13)
-      ..write(obj.activeElement)
-      ..writeByte(14)
-      ..write(obj.period)
-      ..writeByte(15)
-      ..write(obj.practitioner)
-      ..writeByte(16)
-      ..write(obj.organization)
-      ..writeByte(24)
-      ..write(obj.availabilityExceptions)
-      ..writeByte(26)
-      ..write(obj.availabilityExceptionsElement)
-      ..writeByte(8)
-      ..write(obj.contained)
-      ..writeByte(9)
-      ..write(obj.extension_)
-      ..writeByte(10)
-      ..write(obj.modifierExtension)
-      ..writeByte(11)
-      ..write(obj.identifier)
-      ..writeByte(17)
-      ..write(obj.code)
-      ..writeByte(18)
-      ..write(obj.specialty)
-      ..writeByte(19)
-      ..write(obj.location)
-      ..writeByte(20)
-      ..write(obj.healthcareService)
-      ..writeByte(21)
-      ..write(obj.telecom)
-      ..writeByte(22)
-      ..write(obj.availableTime)
-      ..writeByte(23)
-      ..write(obj.notAvailable)
-      ..writeByte(27)
-      ..write(obj.endpoint);
-  }
-
-  @override
-  int get hashCode => typeId.hashCode;
-
-  @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is PractitionerRoleAdapter &&
-          runtimeType == other.runtimeType &&
-          typeId == other.typeId;
-}
-
-class RelatedPersonAdapter extends TypeAdapter<_$_RelatedPerson> {
-  @override
-  final int typeId = 135;
-
-  @override
-  _$_RelatedPerson read(BinaryReader reader) {
-    final numOfFields = reader.readByte();
-    final fields = <int, dynamic>{
-      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
-    };
-    return _$_RelatedPerson(
-      resourceType: fields[0] as R4ResourceType,
-      id: fields[1] as String?,
-      meta: fields[2] as FhirMeta?,
-      implicitRules: fields[3] as FhirUri?,
-      implicitRulesElement: fields[4] as Element?,
-      language: fields[5] as Code?,
-      languageElement: fields[6] as Element?,
-      text: fields[7] as Narrative?,
-      contained: (fields[8] as List?)?.cast<Resource>(),
-      extension_: (fields[9] as List?)?.cast<FhirExtension>(),
-      modifierExtension: (fields[10] as List?)?.cast<FhirExtension>(),
-      identifier: (fields[11] as List?)?.cast<Identifier>(),
-      active: fields[12] as Boolean?,
-      activeElement: fields[13] as Element?,
-      patient: fields[14] as Reference,
-      relationship: (fields[15] as List?)?.cast<CodeableConcept>(),
-      name: (fields[16] as List?)?.cast<HumanName>(),
-      telecom: (fields[17] as List?)?.cast<ContactPoint>(),
-      gender: fields[18] as Code?,
-      genderElement: fields[19] as Element?,
-      birthDate: fields[20] as Date?,
-      birthDateElement: fields[21] as Element?,
-      address: (fields[22] as List?)?.cast<Address>(),
-      photo: (fields[23] as List?)?.cast<Attachment>(),
-      period: fields[24] as Period?,
-      communication: (fields[25] as List?)?.cast<RelatedPersonCommunication>(),
-    );
-  }
-
-  @override
-  void write(BinaryWriter writer, _$_RelatedPerson obj) {
-    writer
-      ..writeByte(26)
-      ..writeByte(0)
-      ..write(obj.resourceType)
-      ..writeByte(1)
-      ..write(obj.id)
-      ..writeByte(2)
-      ..write(obj.meta)
-      ..writeByte(3)
-      ..write(obj.implicitRules)
-      ..writeByte(4)
-      ..write(obj.implicitRulesElement)
-      ..writeByte(5)
-      ..write(obj.language)
-      ..writeByte(6)
-      ..write(obj.languageElement)
-      ..writeByte(7)
-      ..write(obj.text)
-      ..writeByte(12)
-      ..write(obj.active)
-      ..writeByte(13)
-      ..write(obj.activeElement)
-      ..writeByte(14)
-      ..write(obj.patient)
-      ..writeByte(18)
-      ..write(obj.gender)
-      ..writeByte(19)
-      ..write(obj.genderElement)
-      ..writeByte(20)
-      ..write(obj.birthDate)
-      ..writeByte(21)
-      ..write(obj.birthDateElement)
-      ..writeByte(24)
-      ..write(obj.period)
-      ..writeByte(8)
-      ..write(obj.contained)
-      ..writeByte(9)
-      ..write(obj.extension_)
-      ..writeByte(10)
-      ..write(obj.modifierExtension)
-      ..writeByte(11)
-      ..write(obj.identifier)
-      ..writeByte(15)
-      ..write(obj.relationship)
-      ..writeByte(16)
-      ..write(obj.name)
-      ..writeByte(17)
-      ..write(obj.telecom)
-      ..writeByte(22)
-      ..write(obj.address)
-      ..writeByte(23)
-      ..write(obj.photo)
-      ..writeByte(25)
-      ..write(obj.communication);
-  }
-
-  @override
-  int get hashCode => typeId.hashCode;
-
-  @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is RelatedPersonAdapter &&
-          runtimeType == other.runtimeType &&
-          typeId == other.typeId;
-}
-
-class RelatedPersonCommunicationAdapter
-    extends TypeAdapter<_$_RelatedPersonCommunication> {
-  @override
-  final int typeId = 136;
-
-  @override
-  _$_RelatedPersonCommunication read(BinaryReader reader) {
-    final numOfFields = reader.readByte();
-    final fields = <int, dynamic>{
-      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
-    };
-    return _$_RelatedPersonCommunication(
-      id: fields[0] as String?,
-      extension_: (fields[1] as List?)?.cast<FhirExtension>(),
-      modifierExtension: (fields[2] as List?)?.cast<FhirExtension>(),
-      language: fields[3] as CodeableConcept,
-      preferred: fields[5] as Boolean?,
-      preferredElement: fields[6] as Element?,
-    );
-  }
-
-  @override
-  void write(BinaryWriter writer, _$_RelatedPersonCommunication obj) {
-    writer
-      ..writeByte(6)
-      ..writeByte(0)
-      ..write(obj.id)
-      ..writeByte(3)
-      ..write(obj.language)
-      ..writeByte(5)
-      ..write(obj.preferred)
-      ..writeByte(6)
-      ..write(obj.preferredElement)
-      ..writeByte(1)
-      ..write(obj.extension_)
-      ..writeByte(2)
-      ..write(obj.modifierExtension);
-  }
-
-  @override
-  int get hashCode => typeId.hashCode;
-
-  @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is RelatedPersonCommunicationAdapter &&
-          runtimeType == other.runtimeType &&
-          typeId == other.typeId;
-}
-
-// **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
@@ -801,7 +22,7 @@ _$_Group _$$_GroupFromJson(Map<String, dynamic> json) => _$_Group(
           ? null
           : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
       language:
-          json['language'] == null ? null : Code.fromJson(json['language']),
+          json['language'] == null ? null : FhirCode.fromJson(json['language']),
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -820,15 +41,17 @@ _$_Group _$$_GroupFromJson(Map<String, dynamic> json) => _$_Group(
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      active: json['active'] == null ? null : Boolean.fromJson(json['active']),
+      active:
+          json['active'] == null ? null : FhirBoolean.fromJson(json['active']),
       activeElement: json['_active'] == null
           ? null
           : Element.fromJson(json['_active'] as Map<String, dynamic>),
-      type: json['type'] == null ? null : Code.fromJson(json['type']),
+      type: json['type'] == null ? null : FhirCode.fromJson(json['type']),
       typeElement: json['_type'] == null
           ? null
           : Element.fromJson(json['_type'] as Map<String, dynamic>),
-      actual: json['actual'] == null ? null : Boolean.fromJson(json['actual']),
+      actual:
+          json['actual'] == null ? null : FhirBoolean.fromJson(json['actual']),
       actualElement: json['_actual'] == null
           ? null
           : Element.fromJson(json['_actual'] as Map<String, dynamic>),
@@ -841,7 +64,7 @@ _$_Group _$$_GroupFromJson(Map<String, dynamic> json) => _$_Group(
           : Element.fromJson(json['_name'] as Map<String, dynamic>),
       quantity: json['quantity'] == null
           ? null
-          : UnsignedInt.fromJson(json['quantity']),
+          : FhirUnsignedInt.fromJson(json['quantity']),
       quantityElement: json['_quantity'] == null
           ? null
           : Element.fromJson(json['_quantity'] as Map<String, dynamic>),
@@ -1062,7 +285,7 @@ _$_GroupCharacteristic _$$_GroupCharacteristicFromJson(
               json['valueCodeableConcept'] as Map<String, dynamic>),
       valueBoolean: json['valueBoolean'] == null
           ? null
-          : Boolean.fromJson(json['valueBoolean']),
+          : FhirBoolean.fromJson(json['valueBoolean']),
       valueBooleanElement: json['_valueBoolean'] == null
           ? null
           : Element.fromJson(json['_valueBoolean'] as Map<String, dynamic>),
@@ -1075,8 +298,9 @@ _$_GroupCharacteristic _$$_GroupCharacteristicFromJson(
       valueReference: json['valueReference'] == null
           ? null
           : Reference.fromJson(json['valueReference'] as Map<String, dynamic>),
-      exclude:
-          json['exclude'] == null ? null : Boolean.fromJson(json['exclude']),
+      exclude: json['exclude'] == null
+          ? null
+          : FhirBoolean.fromJson(json['exclude']),
       excludeElement: json['_exclude'] == null
           ? null
           : Element.fromJson(json['_exclude'] as Map<String, dynamic>),
@@ -1126,8 +350,9 @@ _$_GroupMember _$$_GroupMemberFromJson(Map<String, dynamic> json) =>
       period: json['period'] == null
           ? null
           : Period.fromJson(json['period'] as Map<String, dynamic>),
-      inactive:
-          json['inactive'] == null ? null : Boolean.fromJson(json['inactive']),
+      inactive: json['inactive'] == null
+          ? null
+          : FhirBoolean.fromJson(json['inactive']),
       inactiveElement: json['_inactive'] == null
           ? null
           : Element.fromJson(json['_inactive'] as Map<String, dynamic>),
@@ -1170,7 +395,7 @@ _$_Patient _$$_PatientFromJson(Map<String, dynamic> json) => _$_Patient(
           ? null
           : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
       language:
-          json['language'] == null ? null : Code.fromJson(json['language']),
+          json['language'] == null ? null : FhirCode.fromJson(json['language']),
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -1189,7 +414,8 @@ _$_Patient _$$_PatientFromJson(Map<String, dynamic> json) => _$_Patient(
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      active: json['active'] == null ? null : Boolean.fromJson(json['active']),
+      active:
+          json['active'] == null ? null : FhirBoolean.fromJson(json['active']),
       activeElement: json['_active'] == null
           ? null
           : Element.fromJson(json['_active'] as Map<String, dynamic>),
@@ -1199,18 +425,19 @@ _$_Patient _$$_PatientFromJson(Map<String, dynamic> json) => _$_Patient(
       telecom: (json['telecom'] as List<dynamic>?)
           ?.map((e) => ContactPoint.fromJson(e as Map<String, dynamic>))
           .toList(),
-      gender: json['gender'] == null ? null : Code.fromJson(json['gender']),
+      gender: json['gender'] == null ? null : FhirCode.fromJson(json['gender']),
       genderElement: json['_gender'] == null
           ? null
           : Element.fromJson(json['_gender'] as Map<String, dynamic>),
-      birthDate:
-          json['birthDate'] == null ? null : Date.fromJson(json['birthDate']),
+      birthDate: json['birthDate'] == null
+          ? null
+          : FhirDate.fromJson(json['birthDate']),
       birthDateElement: json['_birthDate'] == null
           ? null
           : Element.fromJson(json['_birthDate'] as Map<String, dynamic>),
       deceasedBoolean: json['deceasedBoolean'] == null
           ? null
-          : Boolean.fromJson(json['deceasedBoolean']),
+          : FhirBoolean.fromJson(json['deceasedBoolean']),
       deceasedBooleanElement: json['_deceasedBoolean'] == null
           ? null
           : Element.fromJson(json['_deceasedBoolean'] as Map<String, dynamic>),
@@ -1229,14 +456,14 @@ _$_Patient _$$_PatientFromJson(Map<String, dynamic> json) => _$_Patient(
               json['maritalStatus'] as Map<String, dynamic>),
       multipleBirthBoolean: json['multipleBirthBoolean'] == null
           ? null
-          : Boolean.fromJson(json['multipleBirthBoolean']),
+          : FhirBoolean.fromJson(json['multipleBirthBoolean']),
       multipleBirthBooleanElement: json['_multipleBirthBoolean'] == null
           ? null
           : Element.fromJson(
               json['_multipleBirthBoolean'] as Map<String, dynamic>),
       multipleBirthInteger: json['multipleBirthInteger'] == null
           ? null
-          : Integer.fromJson(json['multipleBirthInteger']),
+          : FhirInteger.fromJson(json['multipleBirthInteger']),
       multipleBirthIntegerElement: json['_multipleBirthInteger'] == null
           ? null
           : Element.fromJson(
@@ -1340,7 +567,7 @@ _$_PatientContact _$$_PatientContactFromJson(Map<String, dynamic> json) =>
       address: json['address'] == null
           ? null
           : Address.fromJson(json['address'] as Map<String, dynamic>),
-      gender: json['gender'] == null ? null : Code.fromJson(json['gender']),
+      gender: json['gender'] == null ? null : FhirCode.fromJson(json['gender']),
       genderElement: json['_gender'] == null
           ? null
           : Element.fromJson(json['_gender'] as Map<String, dynamic>),
@@ -1392,7 +619,7 @@ _$_PatientCommunication _$$_PatientCommunicationFromJson(
           CodeableConcept.fromJson(json['language'] as Map<String, dynamic>),
       preferred: json['preferred'] == null
           ? null
-          : Boolean.fromJson(json['preferred']),
+          : FhirBoolean.fromJson(json['preferred']),
       preferredElement: json['_preferred'] == null
           ? null
           : Element.fromJson(json['_preferred'] as Map<String, dynamic>),
@@ -1429,7 +656,7 @@ _$_PatientLink _$$_PatientLinkFromJson(Map<String, dynamic> json) =>
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
       other: Reference.fromJson(json['other'] as Map<String, dynamic>),
-      type: json['type'] == null ? null : Code.fromJson(json['type']),
+      type: json['type'] == null ? null : FhirCode.fromJson(json['type']),
       typeElement: json['_type'] == null
           ? null
           : Element.fromJson(json['_type'] as Map<String, dynamic>),
@@ -1471,7 +698,7 @@ _$_Person _$$_PersonFromJson(Map<String, dynamic> json) => _$_Person(
           ? null
           : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
       language:
-          json['language'] == null ? null : Code.fromJson(json['language']),
+          json['language'] == null ? null : FhirCode.fromJson(json['language']),
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -1496,12 +723,13 @@ _$_Person _$$_PersonFromJson(Map<String, dynamic> json) => _$_Person(
       telecom: (json['telecom'] as List<dynamic>?)
           ?.map((e) => ContactPoint.fromJson(e as Map<String, dynamic>))
           .toList(),
-      gender: json['gender'] == null ? null : Code.fromJson(json['gender']),
+      gender: json['gender'] == null ? null : FhirCode.fromJson(json['gender']),
       genderElement: json['_gender'] == null
           ? null
           : Element.fromJson(json['_gender'] as Map<String, dynamic>),
-      birthDate:
-          json['birthDate'] == null ? null : Date.fromJson(json['birthDate']),
+      birthDate: json['birthDate'] == null
+          ? null
+          : FhirDate.fromJson(json['birthDate']),
       birthDateElement: json['_birthDate'] == null
           ? null
           : Element.fromJson(json['_birthDate'] as Map<String, dynamic>),
@@ -1515,7 +743,8 @@ _$_Person _$$_PersonFromJson(Map<String, dynamic> json) => _$_Person(
           ? null
           : Reference.fromJson(
               json['managingOrganization'] as Map<String, dynamic>),
-      active: json['active'] == null ? null : Boolean.fromJson(json['active']),
+      active:
+          json['active'] == null ? null : FhirBoolean.fromJson(json['active']),
       activeElement: json['_active'] == null
           ? null
           : Element.fromJson(json['_active'] as Map<String, dynamic>),
@@ -1575,8 +804,9 @@ _$_PersonLink _$$_PersonLinkFromJson(Map<String, dynamic> json) =>
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
       target: Reference.fromJson(json['target'] as Map<String, dynamic>),
-      assurance:
-          json['assurance'] == null ? null : Code.fromJson(json['assurance']),
+      assurance: json['assurance'] == null
+          ? null
+          : FhirCode.fromJson(json['assurance']),
       assuranceElement: json['_assurance'] == null
           ? null
           : Element.fromJson(json['_assurance'] as Map<String, dynamic>),
@@ -1619,7 +849,7 @@ _$_Practitioner _$$_PractitionerFromJson(Map<String, dynamic> json) =>
           ? null
           : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
       language:
-          json['language'] == null ? null : Code.fromJson(json['language']),
+          json['language'] == null ? null : FhirCode.fromJson(json['language']),
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -1638,7 +868,8 @@ _$_Practitioner _$$_PractitionerFromJson(Map<String, dynamic> json) =>
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      active: json['active'] == null ? null : Boolean.fromJson(json['active']),
+      active:
+          json['active'] == null ? null : FhirBoolean.fromJson(json['active']),
       activeElement: json['_active'] == null
           ? null
           : Element.fromJson(json['_active'] as Map<String, dynamic>),
@@ -1651,12 +882,13 @@ _$_Practitioner _$$_PractitionerFromJson(Map<String, dynamic> json) =>
       address: (json['address'] as List<dynamic>?)
           ?.map((e) => Address.fromJson(e as Map<String, dynamic>))
           .toList(),
-      gender: json['gender'] == null ? null : Code.fromJson(json['gender']),
+      gender: json['gender'] == null ? null : FhirCode.fromJson(json['gender']),
       genderElement: json['_gender'] == null
           ? null
           : Element.fromJson(json['_gender'] as Map<String, dynamic>),
-      birthDate:
-          json['birthDate'] == null ? null : Date.fromJson(json['birthDate']),
+      birthDate: json['birthDate'] == null
+          ? null
+          : FhirDate.fromJson(json['birthDate']),
       birthDateElement: json['_birthDate'] == null
           ? null
           : Element.fromJson(json['_birthDate'] as Map<String, dynamic>),
@@ -1777,7 +1009,7 @@ _$_PractitionerRole _$$_PractitionerRoleFromJson(Map<String, dynamic> json) =>
           ? null
           : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
       language:
-          json['language'] == null ? null : Code.fromJson(json['language']),
+          json['language'] == null ? null : FhirCode.fromJson(json['language']),
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -1796,7 +1028,8 @@ _$_PractitionerRole _$$_PractitionerRoleFromJson(Map<String, dynamic> json) =>
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      active: json['active'] == null ? null : Boolean.fromJson(json['active']),
+      active:
+          json['active'] == null ? null : FhirBoolean.fromJson(json['active']),
       activeElement: json['_active'] == null
           ? null
           : Element.fromJson(json['_active'] as Map<String, dynamic>),
@@ -1902,26 +1135,27 @@ _$_PractitionerRoleAvailableTime _$$_PractitionerRoleAvailableTimeFromJson(
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
       daysOfWeek: (json['daysOfWeek'] as List<dynamic>?)
-          ?.map((e) => Code.fromJson(e))
+          ?.map(FhirCode.fromJson)
           .toList(),
       daysOfWeekElement: (json['_daysOfWeek'] as List<dynamic>?)
           ?.map((e) =>
               e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
-      allDay: json['allDay'] == null ? null : Boolean.fromJson(json['allDay']),
+      allDay:
+          json['allDay'] == null ? null : FhirBoolean.fromJson(json['allDay']),
       allDayElement: json['_allDay'] == null
           ? null
           : Element.fromJson(json['_allDay'] as Map<String, dynamic>),
       availableStartTime: json['availableStartTime'] == null
           ? null
-          : Time.fromJson(json['availableStartTime']),
+          : FhirTime.fromJson(json['availableStartTime']),
       availableStartTimeElement: json['_availableStartTime'] == null
           ? null
           : Element.fromJson(
               json['_availableStartTime'] as Map<String, dynamic>),
       availableEndTime: json['availableEndTime'] == null
           ? null
-          : Time.fromJson(json['availableEndTime']),
+          : FhirTime.fromJson(json['availableEndTime']),
       availableEndTimeElement: json['_availableEndTime'] == null
           ? null
           : Element.fromJson(json['_availableEndTime'] as Map<String, dynamic>),
@@ -2013,7 +1247,7 @@ _$_RelatedPerson _$$_RelatedPersonFromJson(Map<String, dynamic> json) =>
           ? null
           : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
       language:
-          json['language'] == null ? null : Code.fromJson(json['language']),
+          json['language'] == null ? null : FhirCode.fromJson(json['language']),
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -2032,7 +1266,8 @@ _$_RelatedPerson _$$_RelatedPersonFromJson(Map<String, dynamic> json) =>
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      active: json['active'] == null ? null : Boolean.fromJson(json['active']),
+      active:
+          json['active'] == null ? null : FhirBoolean.fromJson(json['active']),
       activeElement: json['_active'] == null
           ? null
           : Element.fromJson(json['_active'] as Map<String, dynamic>),
@@ -2046,12 +1281,13 @@ _$_RelatedPerson _$$_RelatedPersonFromJson(Map<String, dynamic> json) =>
       telecom: (json['telecom'] as List<dynamic>?)
           ?.map((e) => ContactPoint.fromJson(e as Map<String, dynamic>))
           .toList(),
-      gender: json['gender'] == null ? null : Code.fromJson(json['gender']),
+      gender: json['gender'] == null ? null : FhirCode.fromJson(json['gender']),
       genderElement: json['_gender'] == null
           ? null
           : Element.fromJson(json['_gender'] as Map<String, dynamic>),
-      birthDate:
-          json['birthDate'] == null ? null : Date.fromJson(json['birthDate']),
+      birthDate: json['birthDate'] == null
+          ? null
+          : FhirDate.fromJson(json['birthDate']),
       birthDateElement: json['_birthDate'] == null
           ? null
           : Element.fromJson(json['_birthDate'] as Map<String, dynamic>),
@@ -2129,7 +1365,7 @@ _$_RelatedPersonCommunication _$$_RelatedPersonCommunicationFromJson(
           CodeableConcept.fromJson(json['language'] as Map<String, dynamic>),
       preferred: json['preferred'] == null
           ? null
-          : Boolean.fromJson(json['preferred']),
+          : FhirBoolean.fromJson(json['preferred']),
       preferredElement: json['_preferred'] == null
           ? null
           : Element.fromJson(json['_preferred'] as Map<String, dynamic>),

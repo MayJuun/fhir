@@ -3,7 +3,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:hive/hive.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -14,8 +13,7 @@ part 'definitional_artifacts.g.dart';
 
 /// [ActivityDefinition] This resource allows for the definition of some
 @freezed
-class ActivityDefinition extends HiveObject
-    with Resource, _$ActivityDefinition {
+class ActivityDefinition with Resource, _$ActivityDefinition {
   /// [ActivityDefinition] This resource allows for the definition of some
   ActivityDefinition._();
 
@@ -309,45 +307,37 @@ class ActivityDefinition extends HiveObject
   /// medication must be computed based on the patient's weight, a dynamic value
   /// would be used to specify an expression that calculated the weight, and the
   ///  path on the request resource that would contain the result.
-  @HiveType(typeId: 70)
   factory ActivityDefinition({
     @Default(R4ResourceType.ActivityDefinition)
     @JsonKey(unknownEnumValue: R4ResourceType.ActivityDefinition)
 
-    /// [resourceType] This is a ActivityDefinition resource
-    @HiveField(0)
+        /// [resourceType] This is a ActivityDefinition resource
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @HiveField(1)
-        String? id,
+    String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    @HiveField(2)
-        FhirMeta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    @HiveField(3)
-        FhirUri? implicitRules,
+    FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
-    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    @HiveField(5)
-        FhirCode? language,
+    FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
-    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
@@ -356,15 +346,13 @@ class ActivityDefinition extends HiveObject
     /// contain sufficient detail to make it "clinically safe" for a human to just
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
-    @HiveField(7)
-        Narrative? text,
+    Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
-    @HiveField(8)
-        List<Resource>? contained,
+    List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -373,7 +361,6 @@ class ActivityDefinition extends HiveObject
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
     @JsonKey(name: 'extension')
-    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -389,8 +376,7 @@ class ActivityDefinition extends HiveObject
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    @HiveField(10)
-        List<FhirExtension>? modifierExtension,
+    List<FhirExtension>? modifierExtension,
 
     /// [url] An absolute URI that is used to identify this activity definition
     /// when it is referenced in a specification, model, design or an instance;
@@ -399,27 +385,20 @@ class ActivityDefinition extends HiveObject
     /// this activity definition is (or will be) published. This URL can be the
     /// target of a canonical reference. It SHALL remain the same when the
     ///  activity definition is stored on different servers.
-    @HiveField(11)
-        FhirUri? url,
+    FhirUri? url,
 
     /// [urlElement] Extensions for url
     @JsonKey(name: '_url')
-    @HiveField(12)
         Element? urlElement,
 
     /// [identifier] A formal identifier that is used to identify this activity
     /// definition when it is represented in other formats, or referenced in a
     ///  specification, model, design or an instance.
-    @HiveField(13)
-        List<Identifier>? identifier,
+    List<Identifier>? identifier,
 
     /// [version] The identifier that is used to identify this version of the
-    @HiveField(14)
-
     /// activity definition when it is referenced in a specification, model,
     /// design or instance. This is an arbitrary value managed by the activity
-    @HiveField(15)
-
     /// definition author and is not expected to be globally unique. For example,
     /// it might be a timestamp (e.g. yyyymmdd) if a managed version is not
     /// available. There is also no expectation that versions can be placed in a
@@ -428,116 +407,93 @@ class ActivityDefinition extends HiveObject
     /// Major.Minor.Revision (e.g. 1.0.0). For more information on versioning
     /// knowledge assets, refer to the Decision Support Service specification.
     ///  Note that a version is required for non-experimental active assets.
-    @HiveField(16)
-        String? version,
+    String? version,
 
     /// [versionElement] Extensions for version
     @JsonKey(name: '_version')
-    @HiveField(17)
         Element? versionElement,
 
     /// [name] A natural language name identifying the activity definition. This
     /// name should be usable as an identifier for the module by machine
     ///  processing applications such as code generation.
-    @HiveField(18)
-        String? name,
+    String? name,
 
     /// [nameElement] Extensions for name
     @JsonKey(name: '_name')
-    @HiveField(19)
         Element? nameElement,
 
     /// [title] A short, descriptive, user-friendly title for the activity
     ///  definition.
-    @HiveField(20)
-        String? title,
+    String? title,
 
     /// [titleElement] Extensions for title
     @JsonKey(name: '_title')
-    @HiveField(21)
         Element? titleElement,
 
     /// [subtitle] An explanatory or alternate title for the activity definition
     ///  giving additional information about its content.
-    @HiveField(22)
-        String? subtitle,
+    String? subtitle,
 
     /// [subtitleElement] Extensions for subtitle
     @JsonKey(name: '_subtitle')
-    @HiveField(23)
         Element? subtitleElement,
 
     /// [status] The status of this activity definition. Enables tracking the
     ///  life-cycle of the content.
-    @HiveField(24)
-        FhirCode? status,
+    FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
-    @HiveField(25)
         Element? statusElement,
 
     /// [experimental] A Boolean value to indicate that this activity definition
     /// is authored for testing purposes (or education/evaluation/marketing) and
     ///  is not intended to be used for genuine usage.
-    @HiveField(26)
-        Boolean? experimental,
+    FhirBoolean? experimental,
 
     /// [experimentalElement] Extensions for experimental
     @JsonKey(name: '_experimental')
-    @HiveField(27)
         Element? experimentalElement,
 
     /// [subjectCodeableConcept] A code or group definition that describes the
     ///  intended subject of the activity being defined.
-    @HiveField(28)
-        CodeableConcept? subjectCodeableConcept,
+    CodeableConcept? subjectCodeableConcept,
 
     /// [subjectReference] A code or group definition that describes the intended
     ///  subject of the activity being defined.
-    @HiveField(29)
-        Reference? subjectReference,
-    @HiveField(30)
-        Canonical? subjectCanonical,
+    Reference? subjectReference,
+    FhirCanonical? subjectCanonical,
     @JsonKey(name: '_subjectCanonical')
-    @HiveField(31)
         Element? subjectCanonicalElement,
 
     /// [date] The date  (and optionally time) when the activity definition was
     /// published. The date must change when the business version changes and it
     /// must change if the status code changes. In addition, it should change when
     ///  the substantive content of the activity definition changes.
-    @HiveField(32)
-        FhirDateTime? date,
+    FhirDateTime? date,
 
     /// [dateElement] Extensions for date
     @JsonKey(name: '_date')
-    @HiveField(33)
         Element? dateElement,
 
     /// [publisher] The name of the organization or individual that published the
     ///  activity definition.
-    @HiveField(34)
-        String? publisher,
+    String? publisher,
 
     /// [publisherElement] Extensions for publisher
     @JsonKey(name: '_publisher')
-    @HiveField(35)
         Element? publisherElement,
 
     /// [contact] Contact details to assist a user in finding and communicating
     ///  with the publisher.
-    @HiveField(36)
-        List<ContactDetail>? contact,
+    List<ContactDetail>? contact,
 
     /// [description] A free text natural language description of the activity
     ///  definition from a consumer's perspective.
-    @HiveField(37)
-        Markdown? description,
+    FhirMarkdown? description,
 
     /// [descriptionElement] Extensions for description
     @JsonKey(name: '_description')
-    @HiveField(38)
         Element? descriptionElement,
 
     /// [useContext] The content was developed with a focus and intent of
@@ -545,151 +501,121 @@ class ActivityDefinition extends HiveObject
     /// categories (gender, age, ...) or may be references to specific programs
     /// (insurance plans, studies, ...) and may be used to assist with indexing
     ///  and searching for appropriate activity definition instances.
-    @HiveField(39)
-        List<UsageContext>? useContext,
+    List<UsageContext>? useContext,
 
     /// [jurisdiction] A legal or geographic region in which the activity
     ///  definition is intended to be used.
-    @HiveField(40)
-        List<CodeableConcept>? jurisdiction,
+    List<CodeableConcept>? jurisdiction,
 
     /// [purpose] Explanation of why this activity definition is needed and why
     ///  it has been designed as it has.
-    @HiveField(41)
-        Markdown? purpose,
+    FhirMarkdown? purpose,
 
     /// [purposeElement] Extensions for purpose
     @JsonKey(name: '_purpose')
-    @HiveField(42)
         Element? purposeElement,
 
     /// [usage] A detailed description of how the activity definition is used
     ///  from a clinical perspective.
-    @HiveField(43)
-        String? usage,
+    String? usage,
 
     /// [usageElement] Extensions for usage
     @JsonKey(name: '_usage')
-    @HiveField(44)
         Element? usageElement,
 
     /// [copyright] A copyright statement relating to the activity definition
     /// and/or its contents. Copyright statements are generally legal restrictions
     ///  on the use and publishing of the activity definition.
-    @HiveField(45)
-        Markdown? copyright,
+    FhirMarkdown? copyright,
 
     /// [copyrightElement] Extensions for copyright
     @JsonKey(name: '_copyright')
-    @HiveField(46)
         Element? copyrightElement,
 
     /// [approvalDate] The date on which the resource content was approved by the
     /// publisher. Approval happens once when the content is officially approved
     ///  for usage.
-    @HiveField(47)
-        Date? approvalDate,
+    FhirDate? approvalDate,
 
     /// [approvalDateElement] Extensions for approvalDate
     @JsonKey(name: '_approvalDate')
-    @HiveField(48)
         Element? approvalDateElement,
 
     /// [lastReviewDate] The date on which the resource content was last
     /// reviewed. Review happens periodically after approval but does not change
     ///  the original approval date.
-    @HiveField(49)
-        Date? lastReviewDate,
+    FhirDate? lastReviewDate,
 
     /// [lastReviewDateElement] Extensions for lastReviewDate
     @JsonKey(name: '_lastReviewDate')
-    @HiveField(50)
         Element? lastReviewDateElement,
 
     /// [effectivePeriod] The period during which the activity definition content
     ///  was or is planned to be in active use.
-    @HiveField(51)
-        Period? effectivePeriod,
+    Period? effectivePeriod,
 
     /// [topic] Descriptive topics related to the content of the activity. Topics
     /// provide a high-level categorization of the activity that can be useful for
     ///  filtering and searching.
-    @HiveField(52)
-        List<CodeableConcept>? topic,
+    List<CodeableConcept>? topic,
 
     /// [author] An individiual or organization primarily involved in the
     ///  creation and maintenance of the content.
-    @HiveField(53)
-        List<ContactDetail>? author,
+    List<ContactDetail>? author,
 
     /// [editor] An individual or organization primarily responsible for internal
     ///  coherence of the content.
-    @HiveField(54)
-        List<ContactDetail>? editor,
+    List<ContactDetail>? editor,
 
     /// [reviewer] An individual or organization primarily responsible for review
     ///  of some aspect of the content.
-    @HiveField(55)
-        List<ContactDetail>? reviewer,
+    List<ContactDetail>? reviewer,
 
     /// [endorser] An individual or organization responsible for officially
     ///  endorsing the content for use in some setting.
-    @HiveField(56)
-        List<ContactDetail>? endorser,
-    @HiveField(57)
+    List<ContactDetail>? endorser,
 
     /// [relatedArtifact] Related artifacts such as additional documentation,
     ///  justification, or bibliographic references.
-    @HiveField(58)
-        List<RelatedArtifact>? relatedArtifact,
+    List<RelatedArtifact>? relatedArtifact,
 
     /// [library] A reference to a Library resource containing any formal logic
     ///  used by the activity definition.
     @JsonKey(name: 'library')
-    @HiveField(59)
         List<FhirCanonical>? library_,
 
     /// [kind] A description of the kind of resource the activity definition is
     /// representing. For example, a MedicationRequest, a ServiceRequest, or a
     /// CommunicationRequest. Typically, but not always, this is a Request
     ///  resource.
-    @HiveField(60)
-        FhirCode? kind,
+    FhirCode? kind,
 
     /// [kindElement] Extensions for kind
     @JsonKey(name: '_kind')
-    @HiveField(61)
         Element? kindElement,
 
     /// [profile] A profile to which the target of the activity definition is
     ///  expected to conform.
-    @HiveField(62)
-        Canonical? profile,
-    @HiveField(63)
+    FhirCanonical? profile,
 
     /// [code] Detailed description of the type of activity; e.g. What lab test,
     ///  what procedure, what kind of encounter.
-    @HiveField(64)
-        CodeableConcept? code,
+    CodeableConcept? code,
 
     /// [intent] Indicates the level of authority/intentionality associated with
     ///  the activity and where the request should fit into the workflow chain.
-    @HiveField(65)
-        FhirCode? intent,
+    FhirCode? intent,
 
     /// [intentElement] Extensions for intent
     @JsonKey(name: '_intent')
-    @HiveField(66)
         Element? intentElement,
 
     /// [priority] Indicates how quickly the activity  should be addressed with
     ///  respect to other requests.
-    @HiveField(67)
-        FhirCode? priority,
+    FhirCode? priority,
 
     /// [priorityElement] Extensions for priority
     @JsonKey(name: '_priority')
-    @HiveField(68)
         Element? priorityElement,
 
     /// [doNotPerform] Set this to true if the definition is to indicate that a
@@ -697,112 +623,91 @@ class ActivityDefinition extends HiveObject
     /// be interpreted to reinforce a negative coding. For example NPO as a code
     /// with a doNotPerform of true would still indicate to NOT perform the
     ///  action.
-    @HiveField(69)
-        Boolean? doNotPerform,
+    FhirBoolean? doNotPerform,
 
     /// [doNotPerformElement] Extensions for doNotPerform
     @JsonKey(name: '_doNotPerform')
-    @HiveField(70)
         Element? doNotPerformElement,
 
     /// [timingTiming] The period, timing or frequency upon which the described
     ///  activity is to occur.
-    @HiveField(71)
-        Timing? timingTiming,
+    Timing? timingTiming,
 
     /// [timingDateTime] The period, timing or frequency upon which the described
     ///  activity is to occur.
-    @HiveField(72)
-        FhirDateTime? timingDateTime,
+    FhirDateTime? timingDateTime,
 
     /// [timingDateTimeElement] Extensions for timingDateTime
     @JsonKey(name: '_timingDateTime')
-    @HiveField(73)
         Element? timingDateTimeElement,
 
     /// [timingAge] The period, timing or frequency upon which the described
     ///  activity is to occur.
-    @HiveField(74)
-        Age? timingAge,
+    Age? timingAge,
 
     /// [timingPeriod] The period, timing or frequency upon which the described
     ///  activity is to occur.
-    @HiveField(75)
-        Period? timingPeriod,
+    Period? timingPeriod,
 
     /// [timingRange] The period, timing or frequency upon which the described
     ///  activity is to occur.
-    @HiveField(76)
-        Range? timingRange,
+    Range? timingRange,
 
     /// [timingDuration] The period, timing or frequency upon which the described
     ///  activity is to occur.
-    @HiveField(77)
-        FhirDuration? timingDuration,
+    FhirDuration? timingDuration,
 
     /// [location] Identifies the facility where the activity will occur; e.g.
     ///  home, hospital, specific clinic, etc.
-    @HiveField(78)
-        Reference? location,
+    Reference? location,
 
     /// [participant] Indicates who should participate in performing the action
     ///  described.
-    @HiveField(79)
-        List<ActivityDefinitionParticipant>? participant,
+    List<ActivityDefinitionParticipant>? participant,
 
     /// [productReference] Identifies the food, drug or other product being
     ///  consumed or supplied in the activity.
-    @HiveField(80)
-        Reference? productReference,
+    Reference? productReference,
 
     /// [productCodeableConcept] Identifies the food, drug or other product being
     ///  consumed or supplied in the activity.
-    @HiveField(81)
-        CodeableConcept? productCodeableConcept,
+    CodeableConcept? productCodeableConcept,
 
     /// [quantity] Identifies the quantity expected to be consumed at once (per
     ///  dose, per meal, etc.).
-    @HiveField(82)
-        Quantity? quantity,
+    Quantity? quantity,
 
     /// [dosage] Provides detailed dosage instructions in the same way that they
     ///  are described for MedicationRequest resources.
-    @HiveField(83)
-        List<Dosage>? dosage,
+    List<Dosage>? dosage,
 
     /// [bodySite] Indicates the sites on the subject's body where the procedure
     ///  should be performed (I.e. the target sites).
-    @HiveField(84)
-        List<CodeableConcept>? bodySite,
+    List<CodeableConcept>? bodySite,
 
     /// [specimenRequirement] Defines specimen requirements for the action to be
     ///  performed, such as required specimens for a lab test.
-    @HiveField(85)
-        List<Reference>? specimenRequirement,
+    List<Reference>? specimenRequirement,
 
     /// [observationRequirement] Defines observation requirements for the action
     ///  to be performed, such as body weight or surface area.
-    @HiveField(86)
-        List<Reference>? observationRequirement,
+    List<Reference>? observationRequirement,
 
     /// [observationResultRequirement] Defines the observations that are expected
     ///  to be produced by the action.
-    @HiveField(87)
-        List<Reference>? observationResultRequirement,
+    List<Reference>? observationResultRequirement,
 
     /// [transform] A reference to a StructureMap resource that defines a
     /// transform that can be executed to produce the intent resource using the
     ///  ActivityDefinition instance as the input.
-    @HiveField(88)
-        Canonical? transform,
+    FhirCanonical? transform,
 
     /// [dynamicValue] Dynamic values that will be evaluated to produce values
     /// for elements of the resulting resource. For example, if the dosage of a
     /// medication must be computed based on the patient's weight, a dynamic value
     /// would be used to specify an expression that calculated the weight, and the
     ///  path on the request resource that would contain the result.
-    @HiveField(89)
-        List<ActivityDefinitionDynamicValue>? dynamicValue,
+    List<ActivityDefinitionDynamicValue>? dynamicValue,
   }) = _ActivityDefinition;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1070,7 +975,7 @@ class ActivityDefinitionDynamicValue with _$ActivityDefinitionDynamicValue {
 
 /// [DeviceDefinition] The characteristics, operational status and
 @freezed
-class DeviceDefinition extends HiveObject with Resource, _$DeviceDefinition {
+class DeviceDefinition with Resource, _$DeviceDefinition {
   /// [DeviceDefinition] The characteristics, operational status and
   DeviceDefinition._();
 
@@ -1200,45 +1105,37 @@ class DeviceDefinition extends HiveObject with Resource, _$DeviceDefinition {
   ///
   /// [material] A substance used to create the material(s) of which the device
   ///  is made.
-  @HiveType(typeId: 71)
   factory DeviceDefinition({
     @Default(R4ResourceType.DeviceDefinition)
     @JsonKey(unknownEnumValue: R4ResourceType.DeviceDefinition)
 
-    /// [resourceType] This is a DeviceDefinition resource
-    @HiveField(0)
+        /// [resourceType] This is a DeviceDefinition resource
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @HiveField(1)
-        String? id,
+    String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    @HiveField(2)
-        FhirMeta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    @HiveField(3)
-        FhirUri? implicitRules,
+    FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
-    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    @HiveField(5)
-        FhirCode? language,
+    FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
-    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
@@ -1247,15 +1144,13 @@ class DeviceDefinition extends HiveObject with Resource, _$DeviceDefinition {
     /// contain sufficient detail to make it "clinically safe" for a human to just
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
-    @HiveField(7)
-        Narrative? text,
+    Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
-    @HiveField(8)
-        List<Resource>? contained,
+    List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -1264,7 +1159,6 @@ class DeviceDefinition extends HiveObject with Resource, _$DeviceDefinition {
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
     @JsonKey(name: 'extension')
-    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -1280,140 +1174,111 @@ class DeviceDefinition extends HiveObject with Resource, _$DeviceDefinition {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    @HiveField(10)
-        List<FhirExtension>? modifierExtension,
+    List<FhirExtension>? modifierExtension,
 
     /// [identifier] Unique instance identifiers assigned to a device by the
     /// software, manufacturers, other organizations or owners. For example:
     ///  handle ID.
-    @HiveField(11)
-        List<Identifier>? identifier,
+    List<Identifier>? identifier,
 
     /// [udiDeviceIdentifier] Unique device identifier (UDI) assigned to device
     /// label or package.  Note that the Device may include multiple udiCarriers
     /// as it either may include just the udiCarrier for the jurisdiction it is
     ///  sold, or for multiple jurisdictions it could have been sold.
-    @HiveField(12)
-        List<DeviceDefinitionUdiDeviceIdentifier>? udiDeviceIdentifier,
+    List<DeviceDefinitionUdiDeviceIdentifier>? udiDeviceIdentifier,
 
     /// [manufacturerString] A name of the manufacturer.
-    @HiveField(13)
-        String? manufacturerString,
+    String? manufacturerString,
 
     /// [manufacturerStringElement] Extensions for manufacturerString
     @JsonKey(name: '_manufacturerString')
-    @HiveField(14)
         Element? manufacturerStringElement,
 
     /// [manufacturerReference] A name of the manufacturer.
-    @HiveField(15)
-        Reference? manufacturerReference,
+    Reference? manufacturerReference,
 
     /// [deviceName] A name given to the device to identify it.
-    @HiveField(16)
-        List<DeviceDefinitionDeviceName>? deviceName,
+    List<DeviceDefinitionDeviceName>? deviceName,
 
     /// [modelNumber] The model number for the device.
-    @HiveField(17)
-        String? modelNumber,
+    String? modelNumber,
 
     /// [modelNumberElement] Extensions for modelNumber
     @JsonKey(name: '_modelNumber')
-    @HiveField(18)
         Element? modelNumberElement,
 
     /// [type] What kind of device or device system this is.
-    @HiveField(19)
-        CodeableConcept? type,
+    CodeableConcept? type,
 
     /// [specialization] The capabilities supported on a  device, the standards
     /// to which the device conforms for a particular purpose, and used for the
     ///  communication.
-    @HiveField(20)
-        List<DeviceDefinitionSpecialization>? specialization,
+    List<DeviceDefinitionSpecialization>? specialization,
 
     /// [version] The available versions of the device, e.g., software versions.
-    @HiveField(21)
-        List<String>? version,
+    List<String>? version,
 
     /// [versionElement] Extensions for version
     @JsonKey(name: '_version')
-    @HiveField(22)
         List<Element?>? versionElement,
 
     /// [safety] Safety characteristics of the device.
-    @HiveField(23)
-        List<CodeableConcept>? safety,
+    List<CodeableConcept>? safety,
 
     /// [shelfLifeStorage] Shelf Life and storage information.
-    @HiveField(24)
-        List<ProductShelfLife>? shelfLifeStorage,
+    List<ProductShelfLife>? shelfLifeStorage,
 
     /// [physicalCharacteristics] Dimensions, color etc.
-    @HiveField(25)
-        ProdCharacteristic? physicalCharacteristics,
+    ProdCharacteristic? physicalCharacteristics,
 
     /// [languageCode] Language code for the human-readable text strings produced
     ///  by the device (all supported).
-    @HiveField(26)
-        List<CodeableConcept>? languageCode,
+    List<CodeableConcept>? languageCode,
 
     /// [capability] Device capabilities.
-    @HiveField(27)
-        List<DeviceDefinitionCapability>? capability,
+    List<DeviceDefinitionCapability>? capability,
 
     /// [property] The actual configuration settings of a device as it actually
     ///  operates, e.g., regulation status, time properties.
-    @HiveField(28)
-        List<DeviceDefinitionProperty>? property,
+    List<DeviceDefinitionProperty>? property,
 
     /// [owner] An organization that is responsible for the provision and ongoing
     ///  maintenance of the device.
-    @HiveField(29)
-        Reference? owner,
+    Reference? owner,
 
     /// [contact] Contact details for an organization or a particular human that
     ///  is responsible for the device.
-    @HiveField(30)
-        List<ContactPoint>? contact,
+    List<ContactPoint>? contact,
 
     /// [url] A network address on which the device may be contacted directly.
-    @HiveField(31)
-        FhirUri? url,
+    FhirUri? url,
 
     /// [urlElement] Extensions for url
     @JsonKey(name: '_url')
-    @HiveField(32)
         Element? urlElement,
 
     /// [onlineInformation] Access to on-line information about the device.
-    @HiveField(33)
-        FhirUri? onlineInformation,
+    FhirUri? onlineInformation,
 
     /// [onlineInformationElement] Extensions for onlineInformation
     @JsonKey(name: '_onlineInformation')
-    @HiveField(34)
         Element? onlineInformationElement,
 
     /// [note] Descriptive information, usage information or implantation
     ///  information that is not captured in an existing element.
-    @HiveField(35)
-        List<Annotation>? note,
+    List<Annotation>? note,
 
     /// [quantity] The quantity of the device present in the packaging (e.g. the
     /// number of devices present in a pack, or the number of devices in the same
     ///  package of the medicinal product).
-    @HiveField(36)
-        Quantity? quantity,
+    Quantity? quantity,
 
     /// [parentDevice] The parent device it can be part of.
-    @HiveField(37)
-        Reference? parentDevice,
+    Reference? parentDevice,
 
     /// [material] A substance used to create the material(s) of which the device
     ///  is made.
-    @HiveField(38)
-        List<DeviceDefinitionMaterial>? material,
+    List<DeviceDefinitionMaterial>? material,
   }) = _DeviceDefinition;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2076,14 +1941,14 @@ class DeviceDefinitionMaterial with _$DeviceDefinitionMaterial {
     required CodeableConcept substance,
 
     /// [alternate] Indicates an alternative material of the device.
-    Boolean? alternate,
+    FhirBoolean? alternate,
 
     /// [alternateElement] Extensions for alternate
     @JsonKey(name: '_alternate') Element? alternateElement,
 
     /// [allergenicIndicator] Whether the substance is a known or suspected
     ///  allergen.
-    Boolean? allergenicIndicator,
+    FhirBoolean? allergenicIndicator,
 
     /// [allergenicIndicatorElement] Extensions for allergenicIndicator
     @JsonKey(name: '_allergenicIndicator') Element? allergenicIndicatorElement,
@@ -2122,7 +1987,7 @@ class DeviceDefinitionMaterial with _$DeviceDefinitionMaterial {
 
 /// [EventDefinition] The EventDefinition resource provides a reusable
 @freezed
-class EventDefinition extends HiveObject with Resource, _$EventDefinition {
+class EventDefinition with Resource, _$EventDefinition {
   /// [EventDefinition] The EventDefinition resource provides a reusable
   EventDefinition._();
 
@@ -2321,45 +2186,37 @@ class EventDefinition extends HiveObject with Resource, _$EventDefinition {
   /// [trigger] The trigger element defines when the event occurs. If more than
   /// one trigger condition is specified, the event fires whenever any one of
   ///  the trigger conditions is met.
-  @HiveType(typeId: 72)
   factory EventDefinition({
     @Default(R4ResourceType.EventDefinition)
     @JsonKey(unknownEnumValue: R4ResourceType.EventDefinition)
 
-    /// [resourceType] This is a EventDefinition resource
-    @HiveField(0)
+        /// [resourceType] This is a EventDefinition resource
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @HiveField(1)
-        String? id,
+    String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    @HiveField(2)
-        FhirMeta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    @HiveField(3)
-        FhirUri? implicitRules,
+    FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
-    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    @HiveField(5)
-        FhirCode? language,
+    FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
-    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
@@ -2368,15 +2225,13 @@ class EventDefinition extends HiveObject with Resource, _$EventDefinition {
     /// contain sufficient detail to make it "clinically safe" for a human to just
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
-    @HiveField(7)
-        Narrative? text,
+    Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
-    @HiveField(8)
-        List<Resource>? contained,
+    List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -2385,7 +2240,6 @@ class EventDefinition extends HiveObject with Resource, _$EventDefinition {
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
     @JsonKey(name: 'extension')
-    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -2401,8 +2255,7 @@ class EventDefinition extends HiveObject with Resource, _$EventDefinition {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    @HiveField(10)
-        List<FhirExtension>? modifierExtension,
+    List<FhirExtension>? modifierExtension,
 
     /// [url] An absolute URI that is used to identify this event definition when
     /// it is referenced in a specification, model, design or an instance; also
@@ -2411,19 +2264,16 @@ class EventDefinition extends HiveObject with Resource, _$EventDefinition {
     /// event definition is (or will be) published. This URL can be the target of
     /// a canonical reference. It SHALL remain the same when the event definition
     ///  is stored on different servers.
-    @HiveField(11)
-        FhirUri? url,
+    FhirUri? url,
 
     /// [urlElement] Extensions for url
     @JsonKey(name: '_url')
-    @HiveField(12)
         Element? urlElement,
 
     /// [identifier] A formal identifier that is used to identify this event
     /// definition when it is represented in other formats, or referenced in a
     ///  specification, model, design or an instance.
-    @HiveField(13)
-        List<Identifier>? identifier,
+    List<Identifier>? identifier,
 
     /// [version] The identifier that is used to identify this version of the
     /// event definition when it is referenced in a specification, model, design
@@ -2432,111 +2282,90 @@ class EventDefinition extends HiveObject with Resource, _$EventDefinition {
     /// a timestamp (e.g. yyyymmdd) if a managed version is not available. There
     /// is also no expectation that versions can be placed in a lexicographical
     ///  sequence.
-    @HiveField(14)
-        String? version,
+    String? version,
 
     /// [versionElement] Extensions for version
     @JsonKey(name: '_version')
-    @HiveField(15)
         Element? versionElement,
 
     /// [name] A natural language name identifying the event definition. This
     /// name should be usable as an identifier for the module by machine
     ///  processing applications such as code generation.
-    @HiveField(16)
-        String? name,
+    String? name,
 
     /// [nameElement] Extensions for name
     @JsonKey(name: '_name')
-    @HiveField(17)
         Element? nameElement,
 
     /// [title] A short, descriptive, user-friendly title for the event
     ///  definition.
-    @HiveField(18)
-        String? title,
+    String? title,
 
     /// [titleElement] Extensions for title
     @JsonKey(name: '_title')
-    @HiveField(19)
         Element? titleElement,
 
     /// [subtitle] An explanatory or alternate title for the event definition
     ///  giving additional information about its content.
-    @HiveField(20)
-        String? subtitle,
+    String? subtitle,
 
     /// [subtitleElement] Extensions for subtitle
     @JsonKey(name: '_subtitle')
-    @HiveField(21)
         Element? subtitleElement,
 
     /// [status] The status of this event definition. Enables tracking the
     ///  life-cycle of the content.
-    @HiveField(22)
-        FhirCode? status,
+    FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
-    @HiveField(23)
         Element? statusElement,
 
     /// [experimental] A Boolean value to indicate that this event definition is
     /// authored for testing purposes (or education/evaluation/marketing) and is
     ///  not intended to be used for genuine usage.
-    @HiveField(24)
-        Boolean? experimental,
+    FhirBoolean? experimental,
 
     /// [experimentalElement] Extensions for experimental
     @JsonKey(name: '_experimental')
-    @HiveField(25)
         Element? experimentalElement,
 
     /// [subjectCodeableConcept] A code or group definition that describes the
     ///  intended subject of the event definition.
-    @HiveField(26)
-        CodeableConcept? subjectCodeableConcept,
+    CodeableConcept? subjectCodeableConcept,
 
     /// [subjectReference] A code or group definition that describes the intended
     ///  subject of the event definition.
-    @HiveField(27)
-        Reference? subjectReference,
+    Reference? subjectReference,
 
     /// [date] The date  (and optionally time) when the event definition was
     /// published. The date must change when the business version changes and it
     /// must change if the status code changes. In addition, it should change when
     ///  the substantive content of the event definition changes.
-    @HiveField(28)
-        FhirDateTime? date,
+    FhirDateTime? date,
 
     /// [dateElement] Extensions for date
     @JsonKey(name: '_date')
-    @HiveField(29)
         Element? dateElement,
 
     /// [publisher] The name of the organization or individual that published the
     ///  event definition.
-    @HiveField(30)
-        String? publisher,
+    String? publisher,
 
     /// [publisherElement] Extensions for publisher
     @JsonKey(name: '_publisher')
-    @HiveField(31)
         Element? publisherElement,
 
     /// [contact] Contact details to assist a user in finding and communicating
     ///  with the publisher.
-    @HiveField(32)
-        List<ContactDetail>? contact,
+    List<ContactDetail>? contact,
 
     /// [description] A free text natural language description of the event
     ///  definition from a consumer's perspective.
-    @HiveField(33)
-        Markdown? description,
+    FhirMarkdown? description,
 
     /// [descriptionElement] Extensions for description
     @JsonKey(name: '_description')
-    @HiveField(34)
         Element? descriptionElement,
 
     /// [useContext] The content was developed with a focus and intent of
@@ -2544,109 +2373,88 @@ class EventDefinition extends HiveObject with Resource, _$EventDefinition {
     /// categories (gender, age, ...) or may be references to specific programs
     /// (insurance plans, studies, ...) and may be used to assist with indexing
     ///  and searching for appropriate event definition instances.
-    @HiveField(35)
-        List<UsageContext>? useContext,
+    List<UsageContext>? useContext,
 
     /// [jurisdiction] A legal or geographic region in which the event definition
     ///  is intended to be used.
-    @HiveField(36)
-        List<CodeableConcept>? jurisdiction,
+    List<CodeableConcept>? jurisdiction,
 
     /// [purpose] Explanation of why this event definition is needed and why it
     ///  has been designed as it has.
-    @HiveField(37)
-        Markdown? purpose,
+    FhirMarkdown? purpose,
 
     /// [purposeElement] Extensions for purpose
     @JsonKey(name: '_purpose')
-    @HiveField(38)
         Element? purposeElement,
 
     /// [usage] A detailed description of how the event definition is used from a
     ///  clinical perspective.
-    @HiveField(39)
-        String? usage,
+    String? usage,
 
     /// [usageElement] Extensions for usage
     @JsonKey(name: '_usage')
-    @HiveField(40)
         Element? usageElement,
 
     /// [copyright] A copyright statement relating to the event definition and/or
     /// its contents. Copyright statements are generally legal restrictions on the
     ///  use and publishing of the event definition.
-    @HiveField(41)
-        Markdown? copyright,
+    FhirMarkdown? copyright,
 
     /// [copyrightElement] Extensions for copyright
     @JsonKey(name: '_copyright')
-    @HiveField(42)
         Element? copyrightElement,
 
     /// [approvalDate] The date on which the resource content was approved by the
     /// publisher. Approval happens once when the content is officially approved
     ///  for usage.
-    @HiveField(43)
-        Date? approvalDate,
+    FhirDate? approvalDate,
 
     /// [approvalDateElement] Extensions for approvalDate
     @JsonKey(name: '_approvalDate')
-    @HiveField(44)
         Element? approvalDateElement,
 
     /// [lastReviewDate] The date on which the resource content was last
     /// reviewed. Review happens periodically after approval but does not change
     ///  the original approval date.
-    @HiveField(45)
-        Date? lastReviewDate,
+    FhirDate? lastReviewDate,
 
     /// [lastReviewDateElement] Extensions for lastReviewDate
     @JsonKey(name: '_lastReviewDate')
-    @HiveField(46)
         Element? lastReviewDateElement,
 
     /// [effectivePeriod] The period during which the event definition content
     ///  was or is planned to be in active use.
-    @HiveField(47)
-        Period? effectivePeriod,
+    Period? effectivePeriod,
 
     /// [topic] Descriptive topics related to the module. Topics provide a
     /// high-level categorization of the module that can be useful for filtering
     ///  and searching.
-    @HiveField(48)
-        List<CodeableConcept>? topic,
+    List<CodeableConcept>? topic,
 
     /// [author] An individiual or organization primarily involved in the
     ///  creation and maintenance of the content.
-    @HiveField(49)
-        List<ContactDetail>? author,
+    List<ContactDetail>? author,
 
     /// [editor] An individual or organization primarily responsible for internal
     ///  coherence of the content.
-    @HiveField(50)
-        List<ContactDetail>? editor,
+    List<ContactDetail>? editor,
 
     /// [reviewer] An individual or organization primarily responsible for review
     ///  of some aspect of the content.
-    @HiveField(51)
-        List<ContactDetail>? reviewer,
+    List<ContactDetail>? reviewer,
 
     /// [endorser] An individual or organization responsible for officially
     ///  endorsing the content for use in some setting.
-    @HiveField(52)
-        List<ContactDetail>? endorser,
-    @HiveField(53)
+    List<ContactDetail>? endorser,
 
     /// [relatedArtifact] Related resources such as additional documentation,
     ///  justification, or bibliographic references.
-    @HiveField(54)
-        List<RelatedArtifact>? relatedArtifact,
+    List<RelatedArtifact>? relatedArtifact,
 
     /// [trigger] The trigger element defines when the event occurs. If more than
     /// one trigger condition is specified, the event fires whenever any one of
     ///  the trigger conditions is met.
-    @HiveField(55)
-        required List<TriggerDefinition> trigger,
+    required List<TriggerDefinition> trigger,
   }) = _EventDefinition;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2679,8 +2487,7 @@ class EventDefinition extends HiveObject with Resource, _$EventDefinition {
 
 /// [ObservationDefinition] Set of definitional characteristics for a kind of
 @freezed
-class ObservationDefinition extends HiveObject
-    with Resource, _$ObservationDefinition {
+class ObservationDefinition with Resource, _$ObservationDefinition {
   /// [ObservationDefinition] Set of definitional characteristics for a kind of
   ObservationDefinition._();
 
@@ -2784,45 +2591,37 @@ class ObservationDefinition extends HiveObject
   ///
   /// [criticalCodedValueSet] The set of critical coded results for the
   ///  observation conforming to this ObservationDefinition.
-  @HiveType(typeId: 73)
   factory ObservationDefinition({
     @Default(R4ResourceType.ObservationDefinition)
     @JsonKey(unknownEnumValue: R4ResourceType.ObservationDefinition)
 
-    /// [resourceType] This is a ObservationDefinition resource
-    @HiveField(0)
+        /// [resourceType] This is a ObservationDefinition resource
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @HiveField(1)
-        String? id,
+    String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    @HiveField(2)
-        FhirMeta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    @HiveField(3)
-        FhirUri? implicitRules,
+    FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
-    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    @HiveField(5)
-        FhirCode? language,
+    FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
-    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
@@ -2831,15 +2630,13 @@ class ObservationDefinition extends HiveObject
     /// contain sufficient detail to make it "clinically safe" for a human to just
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
-    @HiveField(7)
-        Narrative? text,
+    Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
-    @HiveField(8)
-        List<Resource>? contained,
+    List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -2848,7 +2645,6 @@ class ObservationDefinition extends HiveObject
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
     @JsonKey(name: 'extension')
-    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -2864,87 +2660,70 @@ class ObservationDefinition extends HiveObject
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    @HiveField(10)
-        List<FhirExtension>? modifierExtension,
+    List<FhirExtension>? modifierExtension,
 
     /// [category] A code that classifies the general type of observation.
-    @HiveField(11)
-        List<CodeableConcept>? category,
+    List<CodeableConcept>? category,
 
     /// [code] Describes what will be observed. Sometimes this is called the
     ///  observation "name".
-    @HiveField(12)
-        required CodeableConcept code,
+    required CodeableConcept code,
 
     /// [identifier] A unique identifier assigned to this ObservationDefinition
     ///  artifact.
-    @HiveField(13)
-        List<Identifier>? identifier,
+    List<Identifier>? identifier,
 
     /// [permittedDataType] The data types allowed for the value element of the
     ///  instance observations conforming to this ObservationDefinition.
-    @HiveField(14)
-        List<FhirCode>? permittedDataType,
+    List<FhirCode>? permittedDataType,
     @JsonKey(name: '_permittedDataType')
 
-    /// [permittedDataTypeElement] Extensions for permittedDataType
-    @HiveField(15)
+        /// [permittedDataTypeElement] Extensions for permittedDataType
         List<Element>? permittedDataTypeElement,
 
     /// [multipleResultsAllowed] Multiple results allowed for observations
     ///  conforming to this ObservationDefinition.
-    @HiveField(16)
-        Boolean? multipleResultsAllowed,
+    FhirBoolean? multipleResultsAllowed,
     @JsonKey(name: '_multipleResultsAllowed')
 
-    /// [multipleResultsAllowedElement] Extensions for multipleResultsAllowed
-    @HiveField(17)
+        /// [multipleResultsAllowedElement] Extensions for multipleResultsAllowed
         Element? multipleResultsAllowedElement,
 
     /// [method] The method or technique used to perform the observation.
-    @HiveField(18)
-        CodeableConcept? method,
+    CodeableConcept? method,
 
     /// [preferredReportName] The preferred name to be used when reporting the
     ///  results of observations conforming to this ObservationDefinition.
-    @HiveField(19)
-        String? preferredReportName,
+    String? preferredReportName,
 
     /// [preferredReportNameElement] Extensions for preferredReportName
     @JsonKey(name: '_preferredReportName')
-    @HiveField(20)
         Element? preferredReportNameElement,
 
     /// [quantitativeDetails] Characteristics for quantitative results of this
     ///  observation.
-    @HiveField(21)
-        ObservationDefinitionQuantitativeDetails? quantitativeDetails,
+    ObservationDefinitionQuantitativeDetails? quantitativeDetails,
 
     /// [qualifiedInterval] Multiple  ranges of results qualified by different
     /// contexts for ordinal or continuous observations conforming to this
     ///  ObservationDefinition.
-    @HiveField(22)
-        List<ObservationDefinitionQualifiedInterval>? qualifiedInterval,
+    List<ObservationDefinitionQualifiedInterval>? qualifiedInterval,
 
     /// [validCodedValueSet] The set of valid coded results for the observations
     ///  conforming to this ObservationDefinition.
-    @HiveField(23)
-        Reference? validCodedValueSet,
+    Reference? validCodedValueSet,
 
     /// [normalCodedValueSet] The set of normal coded results for the
     ///  observations conforming to this ObservationDefinition.
-    @HiveField(24)
-        Reference? normalCodedValueSet,
+    Reference? normalCodedValueSet,
 
     /// [abnormalCodedValueSet] The set of abnormal coded results for the
     ///  observation conforming to this ObservationDefinition.
-    @HiveField(25)
-        Reference? abnormalCodedValueSet,
+    Reference? abnormalCodedValueSet,
 
     /// [criticalCodedValueSet] The set of critical coded results for the
     ///  observation conforming to this ObservationDefinition.
-    @HiveField(26)
-        Reference? criticalCodedValueSet,
+    Reference? criticalCodedValueSet,
   }) = _ObservationDefinition;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -3068,7 +2847,7 @@ class ObservationDefinitionQuantitativeDetails
 
     /// [decimalPrecision] Number of digits after decimal separator when the
     ///  results of such observations are of type Quantity.
-    Integer? decimalPrecision,
+    FhirInteger? decimalPrecision,
 
     /// [decimalPrecisionElement] Extensions for decimalPrecision
     @JsonKey(name: '_decimalPrecision') Element? decimalPrecisionElement,
@@ -3244,7 +3023,7 @@ class ObservationDefinitionQualifiedInterval
 
 /// [PlanDefinition] This resource allows for the definition of various types
 @freezed
-class PlanDefinition extends HiveObject with Resource, _$PlanDefinition {
+class PlanDefinition with Resource, _$PlanDefinition {
   /// [PlanDefinition] This resource allows for the definition of various types
   PlanDefinition._();
 
@@ -3459,45 +3238,37 @@ class PlanDefinition extends HiveObject with Resource, _$PlanDefinition {
   ///  improvement objective, etc.
   ///
   /// [action] An action or group of actions to be taken as part of the plan.
-  @HiveType(typeId: 74)
   factory PlanDefinition({
     @Default(R4ResourceType.PlanDefinition)
     @JsonKey(unknownEnumValue: R4ResourceType.PlanDefinition)
 
-    /// [resourceType] This is a PlanDefinition resource
-    @HiveField(0)
+        /// [resourceType] This is a PlanDefinition resource
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @HiveField(1)
-        String? id,
+    String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    @HiveField(2)
-        FhirMeta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    @HiveField(3)
-        FhirUri? implicitRules,
+    FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
-    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    @HiveField(5)
-        FhirCode? language,
+    FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
-    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
@@ -3506,15 +3277,13 @@ class PlanDefinition extends HiveObject with Resource, _$PlanDefinition {
     /// contain sufficient detail to make it "clinically safe" for a human to just
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
-    @HiveField(7)
-        Narrative? text,
+    Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
-    @HiveField(8)
-        List<Resource>? contained,
+    List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -3523,7 +3292,6 @@ class PlanDefinition extends HiveObject with Resource, _$PlanDefinition {
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
     @JsonKey(name: 'extension')
-    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -3539,8 +3307,7 @@ class PlanDefinition extends HiveObject with Resource, _$PlanDefinition {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    @HiveField(10)
-        List<FhirExtension>? modifierExtension,
+    List<FhirExtension>? modifierExtension,
 
     /// [url] An absolute URI that is used to identify this plan definition when
     /// it is referenced in a specification, model, design or an instance; also
@@ -3549,19 +3316,16 @@ class PlanDefinition extends HiveObject with Resource, _$PlanDefinition {
     /// plan definition is (or will be) published. This URL can be the target of a
     /// canonical reference. It SHALL remain the same when the plan definition is
     ///  stored on different servers.
-    @HiveField(11)
-        FhirUri? url,
+    FhirUri? url,
 
     /// [urlElement] Extensions for url
     @JsonKey(name: '_url')
-    @HiveField(12)
         Element? urlElement,
 
     /// [identifier] A formal identifier that is used to identify this plan
     /// definition when it is represented in other formats, or referenced in a
     ///  specification, model, design or an instance.
-    @HiveField(13)
-        List<Identifier>? identifier,
+    List<Identifier>? identifier,
 
     /// [version] The identifier that is used to identify this version of the
     /// plan definition when it is referenced in a specification, model, design or
@@ -3574,121 +3338,97 @@ class PlanDefinition extends HiveObject with Resource, _$PlanDefinition {
     /// For more information on versioning knowledge assets, refer to the Decision
     /// Support Service specification. Note that a version is required for
     ///  non-experimental active artifacts.
-    @HiveField(14)
-        String? version,
+    String? version,
 
     /// [versionElement] Extensions for version
     @JsonKey(name: '_version')
-    @HiveField(15)
         Element? versionElement,
 
     /// [name] A natural language name identifying the plan definition. This name
     /// should be usable as an identifier for the module by machine processing
     ///  applications such as code generation.
-    @HiveField(16)
-        String? name,
+    String? name,
 
     /// [nameElement] Extensions for name
     @JsonKey(name: '_name')
-    @HiveField(17)
         Element? nameElement,
 
     /// [title] A short, descriptive, user-friendly title for the plan
     ///  definition.
-    @HiveField(18)
-        String? title,
+    String? title,
 
     /// [titleElement] Extensions for title
     @JsonKey(name: '_title')
-    @HiveField(19)
         Element? titleElement,
 
     /// [subtitle] An explanatory or alternate title for the plan definition
     ///  giving additional information about its content.
-    @HiveField(20)
-        String? subtitle,
+    String? subtitle,
 
     /// [subtitleElement] Extensions for subtitle
     @JsonKey(name: '_subtitle')
-    @HiveField(21)
         Element? subtitleElement,
 
     /// [type] A high-level category for the plan definition that distinguishes
     ///  the kinds of systems that would be interested in the plan definition.
-    @HiveField(22)
-        CodeableConcept? type,
+    CodeableConcept? type,
 
     /// [status] The status of this plan definition. Enables tracking the
     ///  life-cycle of the content.
-    @HiveField(23)
-        FhirCode? status,
+    FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
-    @HiveField(24)
         Element? statusElement,
 
     /// [experimental] A Boolean value to indicate that this plan definition is
     /// authored for testing purposes (or education/evaluation/marketing) and is
     ///  not intended to be used for genuine usage.
-    @HiveField(25)
-        Boolean? experimental,
+    FhirBoolean? experimental,
 
     /// [experimentalElement] Extensions for experimental
     @JsonKey(name: '_experimental')
-    @HiveField(26)
         Element? experimentalElement,
 
     /// [subjectCodeableConcept] A code or group definition that describes the
     ///  intended subject of the plan definition.
-    @HiveField(27)
-        CodeableConcept? subjectCodeableConcept,
+    CodeableConcept? subjectCodeableConcept,
 
     /// [subjectReference] A code or group definition that describes the intended
     ///  subject of the plan definition.
-    @HiveField(28)
-        Reference? subjectReference,
-    @HiveField(29)
-        Canonical? subjectCanonical,
+    Reference? subjectReference,
+    FhirCanonical? subjectCanonical,
     @JsonKey(name: '_subjectCanonical')
-    @HiveField(30)
         Element? subjectCanonicalElement,
 
     /// [date] The date  (and optionally time) when the plan definition was
     /// published. The date must change when the business version changes and it
     /// must change if the status code changes. In addition, it should change when
     ///  the substantive content of the plan definition changes.
-    @HiveField(31)
-        FhirDateTime? date,
+    FhirDateTime? date,
 
     /// [dateElement] Extensions for date
     @JsonKey(name: '_date')
-    @HiveField(32)
         Element? dateElement,
 
     /// [publisher] The name of the organization or individual that published the
     ///  plan definition.
-    @HiveField(33)
-        String? publisher,
+    String? publisher,
 
     /// [publisherElement] Extensions for publisher
     @JsonKey(name: '_publisher')
-    @HiveField(34)
         Element? publisherElement,
 
     /// [contact] Contact details to assist a user in finding and communicating
     ///  with the publisher.
-    @HiveField(35)
-        List<ContactDetail>? contact,
+    List<ContactDetail>? contact,
 
     /// [description] A free text natural language description of the plan
     ///  definition from a consumer's perspective.
-    @HiveField(36)
-        Markdown? description,
+    FhirMarkdown? description,
 
     /// [descriptionElement] Extensions for description
     @JsonKey(name: '_description')
-    @HiveField(37)
         Element? descriptionElement,
 
     /// [useContext] The content was developed with a focus and intent of
@@ -3696,120 +3436,97 @@ class PlanDefinition extends HiveObject with Resource, _$PlanDefinition {
     /// categories (gender, age, ...) or may be references to specific programs
     /// (insurance plans, studies, ...) and may be used to assist with indexing
     ///  and searching for appropriate plan definition instances.
-    @HiveField(38)
-        List<UsageContext>? useContext,
+    List<UsageContext>? useContext,
 
     /// [jurisdiction] A legal or geographic region in which the plan definition
     ///  is intended to be used.
-    @HiveField(39)
-        List<CodeableConcept>? jurisdiction,
+    List<CodeableConcept>? jurisdiction,
 
     /// [purpose] Explanation of why this plan definition is needed and why it
     ///  has been designed as it has.
-    @HiveField(40)
-        Markdown? purpose,
+    FhirMarkdown? purpose,
 
     /// [purposeElement] Extensions for purpose
     @JsonKey(name: '_purpose')
-    @HiveField(41)
         Element? purposeElement,
 
     /// [usage] A detailed description of how the plan definition is used from a
     ///  clinical perspective.
-    @HiveField(42)
-        String? usage,
+    String? usage,
 
     /// [usageElement] Extensions for usage
     @JsonKey(name: '_usage')
-    @HiveField(43)
         Element? usageElement,
 
     /// [copyright] A copyright statement relating to the plan definition and/or
     /// its contents. Copyright statements are generally legal restrictions on the
     ///  use and publishing of the plan definition.
-    @HiveField(44)
-        Markdown? copyright,
+    FhirMarkdown? copyright,
 
     /// [copyrightElement] Extensions for copyright
     @JsonKey(name: '_copyright')
-    @HiveField(45)
         Element? copyrightElement,
 
     /// [approvalDate] The date on which the resource content was approved by the
     /// publisher. Approval happens once when the content is officially approved
     ///  for usage.
-    @HiveField(46)
-        Date? approvalDate,
+    FhirDate? approvalDate,
 
     /// [approvalDateElement] Extensions for approvalDate
     @JsonKey(name: '_approvalDate')
-    @HiveField(47)
         Element? approvalDateElement,
 
     /// [lastReviewDate] The date on which the resource content was last
     /// reviewed. Review happens periodically after approval but does not change
     ///  the original approval date.
-    @HiveField(48)
-        Date? lastReviewDate,
+    FhirDate? lastReviewDate,
 
     /// [lastReviewDateElement] Extensions for lastReviewDate
     @JsonKey(name: '_lastReviewDate')
-    @HiveField(49)
         Element? lastReviewDateElement,
 
     /// [effectivePeriod] The period during which the plan definition content was
     ///  or is planned to be in active use.
-    @HiveField(50)
-        Period? effectivePeriod,
+    Period? effectivePeriod,
 
     /// [topic] Descriptive topics related to the content of the plan definition.
     /// Topics provide a high-level categorization of the definition that can be
     ///  useful for filtering and searching.
-    @HiveField(51)
-        List<CodeableConcept>? topic,
+    List<CodeableConcept>? topic,
 
     /// [author] An individiual or organization primarily involved in the
     ///  creation and maintenance of the content.
-    @HiveField(52)
-        List<ContactDetail>? author,
+    List<ContactDetail>? author,
 
     /// [editor] An individual or organization primarily responsible for internal
     ///  coherence of the content.
-    @HiveField(53)
-        List<ContactDetail>? editor,
+    List<ContactDetail>? editor,
 
     /// [reviewer] An individual or organization primarily responsible for review
     ///  of some aspect of the content.
-    @HiveField(54)
-        List<ContactDetail>? reviewer,
+    List<ContactDetail>? reviewer,
 
     /// [endorser] An individual or organization responsible for officially
     ///  endorsing the content for use in some setting.
-    @HiveField(55)
-        List<ContactDetail>? endorser,
-    @HiveField(56)
+    List<ContactDetail>? endorser,
 
     /// [relatedArtifact] Related artifacts such as additional documentation,
     ///  justification, or bibliographic references.
-    @HiveField(57)
-        List<RelatedArtifact>? relatedArtifact,
+    List<RelatedArtifact>? relatedArtifact,
 
     /// [library] A reference to a Library resource containing any formal logic
     ///  used by the plan definition.
     @JsonKey(name: 'library')
-    @HiveField(58)
         List<FhirCanonical>? library_,
 
     /// [goal] Goals that describe what the activities within the plan are
     /// intended to achieve. For example, weight loss, restoring an activity of
     /// daily living, obtaining herd immunity via immunization, meeting a process
     ///  improvement objective, etc.
-    @HiveField(59)
-        List<PlanDefinitionGoal>? goal,
+    List<PlanDefinitionGoal>? goal,
 
     /// [action] An action or group of actions to be taken as part of the plan.
-    @HiveField(60)
-        List<PlanDefinitionAction>? action,
+    List<PlanDefinitionAction>? action,
   }) = _PlanDefinition;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -3896,11 +3613,10 @@ class PlanDefinitionGoal with _$PlanDefinitionGoal {
   ///  resources.
   ///
   /// [target] Indicates what should be done and within what timeframe.
-  @HiveType(typeId: 75)
   factory PlanDefinitionGoal({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    @HiveField(0) String? id,
+    String? id,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -3908,7 +3624,7 @@ class PlanDefinitionGoal with _$PlanDefinitionGoal {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the element and that modifies the
@@ -3923,35 +3639,35 @@ class PlanDefinitionGoal with _$PlanDefinitionGoal {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    @HiveField(2) List<FhirExtension>? modifierExtension,
+    List<FhirExtension>? modifierExtension,
 
     /// [category] Indicates a category the goal falls within.
-    @HiveField(3) CodeableConcept? category,
+    CodeableConcept? category,
 
     /// [description] Human-readable and/or coded description of a specific
     /// desired objective of care, such as "control blood pressure" or "negotiate
     ///  an obstacle course" or "dance with child at wedding".
-    @HiveField(4) required CodeableConcept description,
+    required CodeableConcept description,
 
     /// [priority] Identifies the expected level of importance associated with
     ///  reaching/sustaining the defined goal.
-    @HiveField(5) CodeableConcept? priority,
+    CodeableConcept? priority,
 
     /// [start] The event after which the goal should begin being pursued.
-    @HiveField(6) CodeableConcept? start,
+    CodeableConcept? start,
 
     /// [addresses] Identifies problems, conditions, issues, or concerns the goal
     ///  is intended to address.
-    @HiveField(7) List<CodeableConcept>? addresses,
+    List<CodeableConcept>? addresses,
 
     /// [documentation] Didactic or other informational resources associated with
     /// the goal that provide further supporting information about the goal.
     /// Information resources can include inline text commentary and links to web
     ///  resources.
-    @HiveField(8) List<RelatedArtifact>? documentation,
+    List<RelatedArtifact>? documentation,
 
     /// [target] Indicates what should be done and within what timeframe.
-    @HiveField(9) List<PlanDefinitionTarget>? target,
+    List<PlanDefinitionTarget>? target,
   }) = _PlanDefinitionGoal;
 
   /// Produces a Yaml formatted String version of the object
@@ -4399,7 +4115,7 @@ class PlanDefinitionAction with _$PlanDefinitionAction {
     /// [subjectReference] A code or group definition that describes the intended
     ///  subject of the action and its children, if any.
     Reference? subjectReference,
-    Canonical? subjectCanonical,
+    FhirCanonical? subjectCanonical,
     @JsonKey(name: '_subjectCanonical') List<Element?>? subjectCanonicalElement,
 
     /// [trigger] A description of when the action should be triggered.
@@ -4490,7 +4206,7 @@ class PlanDefinitionAction with _$PlanDefinitionAction {
     /// [definitionCanonical] A reference to an ActivityDefinition that describes
     /// the action to be taken in detail, or a PlanDefinition that describes a
     ///  series of actions to be taken.
-    Canonical? definitionCanonical,
+    FhirCanonical? definitionCanonical,
 
     /// [definitionCanonicalElement] Extensions for definitionCanonical
     @JsonKey(name: '_definitionCanonical') Element? definitionCanonicalElement,
@@ -4506,7 +4222,7 @@ class PlanDefinitionAction with _$PlanDefinitionAction {
     /// [transform] A reference to a StructureMap resource that defines a
     /// transform that can be executed to produce the intent resource using the
     ///  ActivityDefinition instance as the input.
-    Canonical? transform,
+    FhirCanonical? transform,
 
     /// [dynamicValue] Customizations that should be applied to the statically
     /// defined resource. For example, if the dosage of a medication must be
@@ -4596,11 +4312,10 @@ class PlanDefinitionCondition with _$PlanDefinitionCondition {
   ///
   /// [expression] An expression that returns true or false, indicating whether
   ///  the condition is satisfied.
-  @HiveType(typeId: 76)
   factory PlanDefinitionCondition({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    @HiveField(0) String? id,
+    String? id,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -4608,7 +4323,7 @@ class PlanDefinitionCondition with _$PlanDefinitionCondition {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the element and that modifies the
@@ -4623,17 +4338,17 @@ class PlanDefinitionCondition with _$PlanDefinitionCondition {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    @HiveField(2) List<FhirExtension>? modifierExtension,
+    List<FhirExtension>? modifierExtension,
 
     /// [kind] The kind of condition.
-    @HiveField(3) Code? kind,
+    FhirCode? kind,
 
     /// [kindElement] Extensions for kind
-    @HiveField(4) @JsonKey(name: '_kind') Element? kindElement,
+    @JsonKey(name: '_kind') Element? kindElement,
 
     /// [expression] An expression that returns true or false, indicating whether
     ///  the condition is satisfied.
-    @HiveField(5) Expression? expression,
+    Expression? expression,
   }) = _PlanDefinitionCondition;
 
   /// Produces a Yaml formatted String version of the object
@@ -5036,7 +4751,7 @@ class PlanDefinitionDynamicValue with _$PlanDefinitionDynamicValue {
 
 /// [Questionnaire] A structured set of questions intended to guide the
 @freezed
-class Questionnaire extends HiveObject with Resource, _$Questionnaire {
+class Questionnaire with Resource, _$Questionnaire {
   /// [Questionnaire] A structured set of questions intended to guide the
   Questionnaire._();
 
@@ -5211,45 +4926,37 @@ class Questionnaire extends HiveObject with Resource, _$Questionnaire {
   ///
   /// [item] A particular question, question grouping or display text that is
   ///  part of the questionnaire.
-  @HiveType(typeId: 77)
   factory Questionnaire({
     @Default(R4ResourceType.Questionnaire)
     @JsonKey(unknownEnumValue: R4ResourceType.Questionnaire)
 
-    /// [resourceType] This is a Questionnaire resource
-    @HiveField(0)
+        /// [resourceType] This is a Questionnaire resource
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @HiveField(1)
-        String? id,
+    String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    @HiveField(2)
-        FhirMeta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    @HiveField(3)
-        FhirUri? implicitRules,
+    FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
-    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    @HiveField(5)
-        FhirCode? language,
+    FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
-    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
@@ -5258,15 +4965,13 @@ class Questionnaire extends HiveObject with Resource, _$Questionnaire {
     /// contain sufficient detail to make it "clinically safe" for a human to just
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
-    @HiveField(7)
-        Narrative? text,
+    Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
-    @HiveField(8)
-        List<Resource>? contained,
+    List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -5275,7 +4980,6 @@ class Questionnaire extends HiveObject with Resource, _$Questionnaire {
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
     @JsonKey(name: 'extension')
-    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -5291,8 +4995,7 @@ class Questionnaire extends HiveObject with Resource, _$Questionnaire {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    @HiveField(10)
-        List<FhirExtension>? modifierExtension,
+    List<FhirExtension>? modifierExtension,
 
     /// [url] An absolute URI that is used to identify this questionnaire when it
     /// is referenced in a specification, model, design or an instance; also
@@ -5301,19 +5004,16 @@ class Questionnaire extends HiveObject with Resource, _$Questionnaire {
     /// questionnaire is (or will be) published. This URL can be the target of a
     /// canonical reference. It SHALL remain the same when the questionnaire is
     ///  stored on different servers.
-    @HiveField(11)
-        FhirUri? url,
+    FhirUri? url,
 
     /// [urlElement] Extensions for url
     @JsonKey(name: '_url')
-    @HiveField(12)
         Element? urlElement,
 
     /// [identifier] A formal identifier that is used to identify this
     /// questionnaire when it is represented in other formats, or referenced in a
     ///  specification, model, design or an instance.
-    @HiveField(13)
-        List<Identifier>? identifier,
+    List<Identifier>? identifier,
 
     /// [version] The identifier that is used to identify this version of the
     /// questionnaire when it is referenced in a specification, model, design or
@@ -5322,105 +5022,85 @@ class Questionnaire extends HiveObject with Resource, _$Questionnaire {
     /// timestamp (e.g. yyyymmdd) if a managed version is not available. There is
     /// also no expectation that versions can be placed in a lexicographical
     ///  sequence.
-    @HiveField(14)
-        String? version,
+    String? version,
 
     /// [versionElement] Extensions for version
     @JsonKey(name: '_version')
-    @HiveField(15)
         Element? versionElement,
 
     /// [name] A natural language name identifying the questionnaire. This name
     /// should be usable as an identifier for the module by machine processing
     ///  applications such as code generation.
-    @HiveField(16)
-        String? name,
+    String? name,
 
     /// [nameElement] Extensions for name
     @JsonKey(name: '_name')
-    @HiveField(17)
         Element? nameElement,
 
     /// [title] A short, descriptive, user-friendly title for the questionnaire.
-    @HiveField(18)
-        String? title,
+    String? title,
 
     /// [titleElement] Extensions for title
     @JsonKey(name: '_title')
-    @HiveField(19)
         Element? titleElement,
 
     /// [derivedFrom] The URL of a Questionnaire that this Questionnaire is based
     ///  on.
-    @HiveField(20)
-        List<FhirCanonical>? derivedFrom,
+    List<FhirCanonical>? derivedFrom,
 
     /// [status] The status of this questionnaire. Enables tracking the
     ///  life-cycle of the content.
-    @HiveField(21)
-        FhirCode? status,
+    FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
-    @HiveField(22)
         Element? statusElement,
 
     /// [experimental] A Boolean value to indicate that this questionnaire is
     /// authored for testing purposes (or education/evaluation/marketing) and is
     ///  not intended to be used for genuine usage.
-    @HiveField(23)
-        Boolean? experimental,
+    FhirBoolean? experimental,
 
     /// [experimentalElement] Extensions for experimental
     @JsonKey(name: '_experimental')
-    @HiveField(24)
         Element? experimentalElement,
 
     /// [subjectType] The types of subjects that can be the subject of responses
     ///  created for the questionnaire.
-    @HiveField(25)
-        List<FhirCode>? subjectType,
+    List<FhirCode>? subjectType,
 
     /// [subjectTypeElement] Extensions for subjectType
     @JsonKey(name: '_subjectType')
-    @HiveField(26)
         List<Element?>? subjectTypeElement,
 
     /// [date] The date  (and optionally time) when the questionnaire was
     /// published. The date must change when the business version changes and it
     /// must change if the status code changes. In addition, it should change when
     ///  the substantive content of the questionnaire changes.
-    @HiveField(27)
-        FhirDateTime? date,
+    FhirDateTime? date,
 
     /// [dateElement] Extensions for date
     @JsonKey(name: '_date')
-    @HiveField(28)
         Element? dateElement,
 
     /// [publisher] The name of the organization or individual that published the
     ///  questionnaire.
-    @HiveField(29)
-        String? publisher,
+    String? publisher,
 
     /// [publisherElement] Extensions for publisher
     @JsonKey(name: '_publisher')
-    @HiveField(30)
         Element? publisherElement,
 
     /// [contact] Contact details to assist a user in finding and communicating
     ///  with the publisher.
-    @HiveField(31)
-        List<ContactDetail>? contact,
+    List<ContactDetail>? contact,
 
     /// [description] A free text natural language description of the
     ///  questionnaire from a consumer's perspective.
-    @HiveField(32)
-        Markdown? description,
+    FhirMarkdown? description,
 
     /// [descriptionElement] Extensions for description
     @JsonKey(name: '_description')
-    @HiveField(33)
         Element? descriptionElement,
 
     /// [useContext] The content was developed with a focus and intent of
@@ -5428,71 +5108,58 @@ class Questionnaire extends HiveObject with Resource, _$Questionnaire {
     /// categories (gender, age, ...) or may be references to specific programs
     /// (insurance plans, studies, ...) and may be used to assist with indexing
     ///  and searching for appropriate questionnaire instances.
-    @HiveField(34)
-        List<UsageContext>? useContext,
+    List<UsageContext>? useContext,
 
     /// [jurisdiction] A legal or geographic region in which the questionnaire is
     ///  intended to be used.
-    @HiveField(35)
-        List<CodeableConcept>? jurisdiction,
+    List<CodeableConcept>? jurisdiction,
 
     /// [purpose] Explanation of why this questionnaire is needed and why it has
     ///  been designed as it has.
-    @HiveField(36)
-        Markdown? purpose,
+    FhirMarkdown? purpose,
 
     /// [purposeElement] Extensions for purpose
     @JsonKey(name: '_purpose')
-    @HiveField(37)
         Element? purposeElement,
 
     /// [copyright] A copyright statement relating to the questionnaire and/or
     /// its contents. Copyright statements are generally legal restrictions on the
     ///  use and publishing of the questionnaire.
-    @HiveField(38)
-        Markdown? copyright,
+    FhirMarkdown? copyright,
 
     /// [copyrightElement] Extensions for copyright
     @JsonKey(name: '_copyright')
-    @HiveField(39)
         Element? copyrightElement,
 
     /// [approvalDate] The date on which the resource content was approved by the
     /// publisher. Approval happens once when the content is officially approved
     ///  for usage.
-    @HiveField(40)
-        Date? approvalDate,
+    FhirDate? approvalDate,
 
     /// [approvalDateElement] Extensions for approvalDate
     @JsonKey(name: '_approvalDate')
-    @HiveField(41)
         Element? approvalDateElement,
 
     /// [lastReviewDate] The date on which the resource content was last
     /// reviewed. Review happens periodically after approval but does not change
     ///  the original approval date.
-    @HiveField(42)
-        Date? lastReviewDate,
+    FhirDate? lastReviewDate,
 
     /// [lastReviewDateElement] Extensions for lastReviewDate
     @JsonKey(name: '_lastReviewDate')
-    @HiveField(43)
         Element? lastReviewDateElement,
 
     /// [effectivePeriod] The period during which the questionnaire content was
     ///  or is planned to be in active use.
-    @HiveField(44)
-        Period? effectivePeriod,
+    Period? effectivePeriod,
 
     /// [code] An identifier for this question or group of questions in a
     ///  particular terminology such as LOINC.
-    @HiveField(45)
-        List<Coding>? code,
+    List<Coding>? code,
 
     /// [item] A particular question, question grouping or display text that is
     ///  part of the questionnaire.
-    @HiveField(46)
-        List<QuestionnaireItem>? item,
+    List<QuestionnaireItem>? item,
   }) = _Questionnaire;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -5727,7 +5394,7 @@ class QuestionnaireItem with _$QuestionnaireItem {
     /// [required] An indication, if true, that the item must be present in a
     /// "completed" QuestionnaireResponse.  If false, the item may be skipped when
     ///  answering the questionnaire.
-    @JsonKey(name: 'required') Boolean? required_,
+    @JsonKey(name: 'required') FhirBoolean? required_,
 
     /// [requiredElement] Extensions for required
     @JsonKey(name: '_required') Element? requiredElement,
@@ -5735,28 +5402,28 @@ class QuestionnaireItem with _$QuestionnaireItem {
     /// [repeats] An indication, if true, that the item may occur multiple times
     /// in the response, collecting multiple answers for questions or multiple
     ///  sets of answers for groups.
-    Boolean? repeats,
+    FhirBoolean? repeats,
 
     /// [repeatsElement] Extensions for repeats
     @JsonKey(name: '_repeats') Element? repeatsElement,
 
     /// [readOnly] An indication, when true, that the value cannot be changed by
     ///  a human respondent to the Questionnaire.
-    Boolean? readOnly,
+    FhirBoolean? readOnly,
 
     /// [readOnlyElement] Extensions for readOnly
     @JsonKey(name: '_readOnly') Element? readOnlyElement,
 
     /// [maxLength] The maximum number of characters that are permitted in the
     ///  answer to be considered a "valid" QuestionnaireResponse.
-    Integer? maxLength,
+    FhirInteger? maxLength,
 
     /// [maxLengthElement] Extensions for maxLength
     @JsonKey(name: '_maxLength') Element? maxLengthElement,
 
     /// [answerValueSet] A reference to a value set containing a list of codes
     ///  representing permitted answers for a "choice" or "open-choice" question.
-    Canonical? answerValueSet,
+    FhirCanonical? answerValueSet,
 
     /// [answerOption] One of the permitted answers for a "choice" or
     ///  "open-choice" question.
@@ -5925,14 +5592,14 @@ class QuestionnaireEnableWhen with _$QuestionnaireEnableWhen {
     @JsonKey(name: '_question') Element? questionElement,
 
     /// [operator] Specifies the criteria by which the question is enabled.
-    @JsonKey(name: 'operator') Code? operator_,
+    @JsonKey(name: 'operator') FhirCode? operator_,
 
     /// [operatorElement] Extensions for operator
     @JsonKey(name: '_operator') Element? operatorElement,
 
     /// [answerBoolean] A value that the referenced question is tested using the
     ///  specified operator in order for the item to be enabled.
-    Boolean? answerBoolean,
+    FhirBoolean? answerBoolean,
 
     /// [answerBooleanElement] Extensions for answerBoolean
     @JsonKey(name: '_answerBoolean') Element? answerBooleanElement,
@@ -5946,14 +5613,14 @@ class QuestionnaireEnableWhen with _$QuestionnaireEnableWhen {
 
     /// [answerInteger] A value that the referenced question is tested using the
     ///  specified operator in order for the item to be enabled.
-    Integer? answerInteger,
+    FhirInteger? answerInteger,
 
     /// [answerIntegerElement] Extensions for answerInteger
     @JsonKey(name: '_answerInteger') Element? answerIntegerElement,
 
     /// [answerDate] A value that the referenced question is tested using the
     ///  specified operator in order for the item to be enabled.
-    Date? answerDate,
+    FhirDate? answerDate,
 
     /// [answerDateElement] Extensions for answerDate
     @JsonKey(name: '_answerDate') Element? answerDateElement,
@@ -6118,14 +5785,14 @@ class QuestionnaireAnswerOption with _$QuestionnaireAnswerOption {
 
     /// [valueInteger] A potential answer that's allowed as the answer to this
     ///  question.
-    Integer? valueInteger,
+    FhirInteger? valueInteger,
 
     /// [valueIntegerElement] Extensions for valueInteger
     @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
 
     /// [valueDate] A potential answer that's allowed as the answer to this
     ///  question.
-    Date? valueDate,
+    FhirDate? valueDate,
 
     /// [valueDateElement] Extensions for valueDate
     @JsonKey(name: '_valueDate') Element? valueDateElement,
@@ -6154,7 +5821,7 @@ class QuestionnaireAnswerOption with _$QuestionnaireAnswerOption {
 
     /// [initialSelected] Indicates whether the answer value is selected when the
     ///  list of possible answers is initially shown.
-    Boolean? initialSelected,
+    FhirBoolean? initialSelected,
 
     /// [initialSelectedElement] Extensions for initialSelected
     @JsonKey(name: '_initialSelected') Element? initialSelectedElement,
@@ -6294,7 +5961,7 @@ class QuestionnaireInitial with _$QuestionnaireInitial {
     List<FhirExtension>? modifierExtension,
 
     /// [valueBoolean] The actual value to for an initial answer.
-    Boolean? valueBoolean,
+    FhirBoolean? valueBoolean,
 
     /// [valueBooleanElement] Extensions for valueBoolean
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
@@ -6306,13 +5973,13 @@ class QuestionnaireInitial with _$QuestionnaireInitial {
     @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
 
     /// [valueInteger] The actual value to for an initial answer.
-    Integer? valueInteger,
+    FhirInteger? valueInteger,
 
     /// [valueIntegerElement] Extensions for valueInteger
     @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
 
     /// [valueDate] The actual value to for an initial answer.
-    Date? valueDate,
+    FhirDate? valueDate,
 
     /// [valueDateElement] Extensions for valueDate
     @JsonKey(name: '_valueDate') Element? valueDateElement,
@@ -6387,8 +6054,7 @@ class QuestionnaireInitial with _$QuestionnaireInitial {
 
 /// [SpecimenDefinition] A kind of specimen with associated set of
 @freezed
-class SpecimenDefinition extends HiveObject
-    with Resource, _$SpecimenDefinition {
+class SpecimenDefinition with Resource, _$SpecimenDefinition {
   /// [SpecimenDefinition] A kind of specimen with associated set of
   SpecimenDefinition._();
 
@@ -6462,45 +6128,37 @@ class SpecimenDefinition extends HiveObject
   ///
   /// [typeTested] Specimen conditioned in a container as expected by the
   ///  testing laboratory.
-  @HiveType(typeId: 78)
   factory SpecimenDefinition({
     @Default(R4ResourceType.SpecimenDefinition)
     @JsonKey(unknownEnumValue: R4ResourceType.SpecimenDefinition)
 
-    /// [resourceType] This is a SpecimenDefinition resource
-    @HiveField(0)
+        /// [resourceType] This is a SpecimenDefinition resource
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @HiveField(1)
-        String? id,
+    String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    @HiveField(2)
-        FhirMeta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    @HiveField(3)
-        FhirUri? implicitRules,
+    FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
-    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    @HiveField(5)
-        FhirCode? language,
+    FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
-    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
@@ -6509,15 +6167,13 @@ class SpecimenDefinition extends HiveObject
     /// contain sufficient detail to make it "clinically safe" for a human to just
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
-    @HiveField(7)
-        Narrative? text,
+    Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
-    @HiveField(8)
-        List<Resource>? contained,
+    List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -6526,7 +6182,6 @@ class SpecimenDefinition extends HiveObject
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
     @JsonKey(name: 'extension')
-    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -6542,38 +6197,30 @@ class SpecimenDefinition extends HiveObject
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    @HiveField(10)
-        List<FhirExtension>? modifierExtension,
+    List<FhirExtension>? modifierExtension,
 
     /// [identifier] A business identifier associated with the kind of specimen.
-    @HiveField(11)
-        Identifier? identifier,
+    Identifier? identifier,
 
     /// [typeCollected] The kind of material to be collected.
-    @HiveField(12)
-        CodeableConcept? typeCollected,
+    CodeableConcept? typeCollected,
 
     /// [patientPreparation] Preparation of the patient for specimen collection.
-    @HiveField(13)
-        List<CodeableConcept>? patientPreparation,
+    List<CodeableConcept>? patientPreparation,
 
     /// [timeAspect] Time aspect of specimen collection (duration or offset).
-    @HiveField(14)
-        String? timeAspect,
+    String? timeAspect,
 
     /// [timeAspectElement] Extensions for timeAspect
     @JsonKey(name: '_timeAspect')
-    @HiveField(15)
         Element? timeAspectElement,
 
     /// [collection] The action to be performed for collecting the specimen.
-    @HiveField(16)
-        List<CodeableConcept>? collection,
+    List<CodeableConcept>? collection,
 
     /// [typeTested] Specimen conditioned in a container as expected by the
     ///  testing laboratory.
-    @HiveField(17)
-        List<SpecimenDefinitionTypeTested>? typeTested,
+    List<SpecimenDefinitionTypeTested>? typeTested,
   }) = _SpecimenDefinition;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -6692,7 +6339,7 @@ class SpecimenDefinitionTypeTested with _$SpecimenDefinitionTypeTested {
     List<FhirExtension>? modifierExtension,
 
     /// [isDerived] Primary of secondary specimen.
-    Boolean? isDerived,
+    FhirBoolean? isDerived,
 
     /// [isDerivedElement] Extensions for isDerived
     @JsonKey(name: '_isDerived') Element? isDerivedElement,

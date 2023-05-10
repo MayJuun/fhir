@@ -3,7 +3,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:hive/hive.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -38,7 +37,6 @@ class ContactDetail with _$ContactDetail {
   ///
   /// [telecom] The contact details for the individual (if a name was provided)
   ///  or the organization.
-
   factory ContactDetail({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
@@ -124,7 +122,6 @@ class Contributor with _$Contributor {
   ///
   /// [contact] Contact details to assist a user in finding and communicating
   ///  with the contributor.
-
   factory Contributor({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
@@ -139,7 +136,6 @@ class Contributor with _$Contributor {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [type] The type of contributor.
-
     @JsonKey(unknownEnumValue: ContributorType.unknown) ContributorType? type,
 
     /// [typeElement] Extensions for type
@@ -250,11 +246,9 @@ class DataRequirement with _$DataRequirement {
   /// [limitElement] Extensions for limit
   ///
   /// [sort] Specifies the order of the results to be returned.
-
   factory DataRequirement({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-
     String? id,
 
     /// [extension_] May be used to represent additional information that is not
@@ -263,32 +257,26 @@ class DataRequirement with _$DataRequirement {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [type] The type of the required data, specified as the type name of a
     /// resource. For profiles, this value is set to the type of the base resource
     ///  of the profile.
-
     FhirCode? type,
 
     /// [typeElement] Extensions for type
-
     @JsonKey(name: '_type') Element? typeElement,
 
     /// [profile] The profile of the required data, specified as the uri of the
     ///  profile definition.
-
     List<FhirCanonical>? profile,
 
     /// [subjectCodeableConcept] The intended subjects of the data requirement.
     ///  If this element is not provided, a Patient subject is assumed.
-
     CodeableConcept? subjectCodeableConcept,
 
     /// [subjectReference] The intended subjects of the data requirement. If this
     ///  element is not provided, a Patient subject is assumed.
-
     Reference? subjectReference,
 
     /// [mustSupport] Indicates that specific elements of the type are referenced
@@ -300,38 +288,31 @@ class DataRequirement with _$DataRequirement {
     /// the DataRequirement. The path SHALL consist only of identifiers, constant
     /// indexers, and .resolve() (see the [Simple FHIRPath
     ///  Profile](fhirpath.html#simple) for full details).
-
     List<String>? mustSupport,
 
     /// [mustSupportElement] Extensions for mustSupport
-
     @JsonKey(name: '_mustSupport') List<Element?>? mustSupportElement,
 
     /// [codeFilter] Code filters specify additional constraints on the data,
     /// specifying the value set of interest for a particular element of the data.
     /// Each code filter defines an additional constraint on the data, i.e. code
     ///  filters are AND'ed, not OR'ed.
-
     List<DataRequirementCodeFilter>? codeFilter,
 
     /// [dateFilter] Date filters specify additional constraints on the data in
     /// terms of the applicable date range for specific elements. Each date filter
     /// specifies an additional constraint on the data, i.e. date filters are
     ///  AND'ed, not OR'ed.
-
     List<DataRequirementDateFilter>? dateFilter,
 
     /// [limit] Specifies a maximum number of results that are required (uses the
     ///  _count search parameter).
-
     FhirPositiveInt? limit,
 
     /// [limitElement] Extensions for limit
-
     @JsonKey(name: '_limit') Element? limitElement,
 
     /// [sort] Specifies the order of the results to be returned.
-
     List<DataRequirementSort>? sort,
   }) = _DataRequirement;
 
@@ -368,8 +349,7 @@ class DataRequirement with _$DataRequirement {
 
 /// [DataRequirementCodeFilter] Describes a required data item for
 @freezed
-class DataRequirementCodeFilter extends HiveObject
-    with _$DataRequirementCodeFilter {
+class DataRequirementCodeFilter with _$DataRequirementCodeFilter {
   /// [DataRequirementCodeFilter] Describes a required data item for
   DataRequirementCodeFilter._();
 
@@ -428,11 +408,9 @@ class DataRequirementCodeFilter extends HiveObject
   /// specified by the path has a value that is one of the specified codes. If
   /// codes are specified in addition to a value set, the filter returns items
   ///  matching a code in the value set or one of the specified codes.
-
   factory DataRequirementCodeFilter({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-
     String? id,
 
     /// [extension_] May be used to represent additional information that is not
@@ -441,7 +419,6 @@ class DataRequirementCodeFilter extends HiveObject
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -457,11 +434,9 @@ class DataRequirementCodeFilter extends HiveObject
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-
     List<FhirExtension>? modifierExtension,
 
     /// [path] The code-valued attribute of the filter. The specified path SHALL
-
     /// be a FHIRPath resolveable on the specified type of the DataRequirement,
     /// and SHALL consist only of identifiers, constant indexers, and .resolve().
     /// The path is allowed to contain qualifiers (.) to traverse sub-elements, as
@@ -469,36 +444,30 @@ class DataRequirementCodeFilter extends HiveObject
     /// the [Simple FHIRPath Profile](fhirpath.html#simple) for full details).
     /// Note that the index must be an integer constant. The path must resolve to
     ///  an element of type code, Coding, or CodeableConcept.
-
     String? path,
 
     /// [pathElement] Extensions for path
-
     @JsonKey(name: '_path') Element? pathElement,
 
     /// [searchParam] A token parameter that refers to a search parameter defined
     /// on the specified type of the DataRequirement, and which searches on
     ///  elements of type code, Coding, or CodeableConcept.
-
     String? searchParam,
 
     /// [searchParamElement] Extensions for searchParam
-
     @JsonKey(name: '_searchParam') Element? searchParamElement,
 
     /// [valueSet] The valueset for the code filter. The valueSet and code
     /// elements are additive. If valueSet is specified, the filter will return
     /// only those data items for which the value of the code-valued element
     ///  specified in the path is a member of the specified valueset.
-
-    Canonical? valueSet,
+    FhirCanonical? valueSet,
 
     /// [code] The codes for the code filter. If values are given, the filter
     /// will return only those data items for which the code-valued attribute
     /// specified by the path has a value that is one of the specified codes. If
     /// codes are specified in addition to a value set, the filter returns items
     ///  matching a code in the value set or one of the specified codes.
-
     List<Coding>? code,
   }) = _DataRequirementCodeFilter;
 
@@ -535,8 +504,7 @@ class DataRequirementCodeFilter extends HiveObject
 
 /// [DataRequirementDateFilter] Describes a required data item for
 @freezed
-class DataRequirementDateFilter extends HiveObject
-    with _$DataRequirementDateFilter {
+class DataRequirementDateFilter with _$DataRequirementDateFilter {
   /// [DataRequirementDateFilter] Describes a required data item for
   DataRequirementDateFilter._();
 
@@ -607,11 +575,9 @@ class DataRequirementDateFilter extends HiveObject
   /// is specified, the filter will return only those data items that are equal
   /// to the specified dateTime. If a Duration is specified, the filter will
   ///  return only those data items that fall within Duration before now.
-
   factory DataRequirementDateFilter({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-
     String? id,
 
     /// [extension_] May be used to represent additional information that is not
@@ -620,7 +586,6 @@ class DataRequirementDateFilter extends HiveObject
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -636,11 +601,9 @@ class DataRequirementDateFilter extends HiveObject
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-
     List<FhirExtension>? modifierExtension,
 
     /// [path] The date-valued attribute of the filter. The specified path SHALL
-
     /// be a FHIRPath resolveable on the specified type of the DataRequirement,
     /// and SHALL consist only of identifiers, constant indexers, and .resolve().
     /// The path is allowed to contain qualifiers (.) to traverse sub-elements, as
@@ -648,21 +611,17 @@ class DataRequirementDateFilter extends HiveObject
     /// the [Simple FHIRPath Profile](fhirpath.html#simple) for full details).
     /// Note that the index must be an integer constant. The path must resolve to
     ///  an element of type date, dateTime, Period, Schedule, or Timing.
-
     String? path,
 
     /// [pathElement] Extensions for path
-
     @JsonKey(name: '_path') Element? pathElement,
 
     /// [searchParam] A date parameter that refers to a search parameter defined
     /// on the specified type of the DataRequirement, and which searches on
     ///  elements of type date, dateTime, Period, Schedule, or Timing.
-
     String? searchParam,
 
     /// [searchParamElement] Extensions for searchParam
-
     @JsonKey(name: '_searchParam') Element? searchParamElement,
 
     /// [valueDateTime] The value of the filter. If period is specified, the
@@ -671,11 +630,9 @@ class DataRequirementDateFilter extends HiveObject
     /// is specified, the filter will return only those data items that are equal
     /// to the specified dateTime. If a Duration is specified, the filter will
     ///  return only those data items that fall within Duration before now.
-
     FhirDateTime? valueDateTime,
 
     /// [valueDateTimeElement] Extensions for valueDateTime
-
     @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
 
     /// [valuePeriod] The value of the filter. If period is specified, the filter
@@ -684,7 +641,6 @@ class DataRequirementDateFilter extends HiveObject
     /// specified, the filter will return only those data items that are equal to
     /// the specified dateTime. If a Duration is specified, the filter will return
     ///  only those data items that fall within Duration before now.
-
     Period? valuePeriod,
 
     /// [valueDuration] The value of the filter. If period is specified, the
@@ -693,7 +649,6 @@ class DataRequirementDateFilter extends HiveObject
     /// is specified, the filter will return only those data items that are equal
     /// to the specified dateTime. If a Duration is specified, the filter will
     ///  return only those data items that fall within Duration before now.
-
     FhirDuration? valueDuration,
   }) = _DataRequirementDateFilter;
 
@@ -773,11 +728,9 @@ class DataRequirementSort with _$DataRequirementSort {
   /// [direction] The direction of the sort, ascending or descending.
   ///
   /// [directionElement] Extensions for direction
-
   factory DataRequirementSort({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-
     String? id,
 
     /// [extension_] May be used to represent additional information that is not
@@ -802,7 +755,6 @@ class DataRequirementSort with _$DataRequirementSort {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-
     List<FhirExtension>? modifierExtension,
 
     /// [path] The attribute of the sort. The specified path must be resolvable
@@ -810,7 +762,6 @@ class DataRequirementSort with _$DataRequirementSort {
     /// qualifiers (.) to traverse sub-elements, as well as indexers ([x]) to
     /// traverse multiple-cardinality sub-elements. Note that the index must be an
     ///  integer constant.
-
     String? path,
 
     /// [pathElement] Extensions for path
@@ -819,7 +770,6 @@ class DataRequirementSort with _$DataRequirementSort {
     @JsonKey(unknownEnumValue: DataRequirementSortDirection.unknown)
 
         /// [direction] The direction of the sort, ascending or descending.
-
         DataRequirementSortDirection? direction,
 
     /// [directionElement] Extensions for direction
@@ -909,7 +859,6 @@ class ParameterDefinition with _$ParameterDefinition {
   ///
   /// [profile] If specified, this indicates a profile that the input data must
   ///  conform to, or that the output data will conform to.
-
   factory ParameterDefinition({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
@@ -938,7 +887,7 @@ class ParameterDefinition with _$ParameterDefinition {
 
     /// [min] The minimum number of times this parameter SHALL appear in the
     ///  request or response.
-    Integer? min,
+    FhirInteger? min,
 
     /// [minElement] Extensions for min
     @JsonKey(name: '_min') Element? minElement,
@@ -955,7 +904,6 @@ class ParameterDefinition with _$ParameterDefinition {
     String? documentation,
 
     /// [documentationElement] Extensions for documentation
-
     @JsonKey(name: '_documentation') Element? documentationElement,
 
     /// [type] The type of the parameter.
@@ -966,7 +914,7 @@ class ParameterDefinition with _$ParameterDefinition {
 
     /// [profile] If specified, this indicates a profile that the input data must
     ///  conform to, or that the output data will conform to.
-    Canonical? profile,
+    FhirCanonical? profile,
   }) = _ParameterDefinition;
 
   /// Produces a Yaml formatted String version of the object
@@ -1048,11 +996,9 @@ class RelatedArtifact with _$RelatedArtifact {
   ///
   /// [resource] The related resource, such as a library, value set, profile,
   ///  or other knowledge resource.
-
   factory RelatedArtifact({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-
     String? id,
 
     /// [extension_] May be used to represent additional information that is not
@@ -1066,7 +1012,6 @@ class RelatedArtifact with _$RelatedArtifact {
     @JsonKey(unknownEnumValue: RelatedArtifactType.unknown)
 
         /// [type] The type of relationship to the related artifact.
-
         RelatedArtifactType? type,
 
     /// [typeElement] Extensions for type
@@ -1075,7 +1020,6 @@ class RelatedArtifact with _$RelatedArtifact {
 
     /// [label] A short label that can be used to reference the citation from
     ///  elsewhere in the containing artifact, such as a footnote index.
-
     String? label,
 
     /// [labelElement] Extensions for label
@@ -1084,7 +1028,6 @@ class RelatedArtifact with _$RelatedArtifact {
 
     /// [display] A brief description of the document or knowledge resource being
     ///  referenced, suitable for display to a consumer.
-
     String? display,
 
     /// [displayElement] Extensions for display
@@ -1093,8 +1036,7 @@ class RelatedArtifact with _$RelatedArtifact {
 
     /// [citation] A bibliographic citation for the related artifact. This text
     ///  SHOULD be formatted according to an accepted citation format.
-
-    Markdown? citation,
+    FhirMarkdown? citation,
 
     /// [citationElement] Extensions for citation
     @JsonKey(name: '_citation')
@@ -1102,7 +1044,6 @@ class RelatedArtifact with _$RelatedArtifact {
 
     /// [url] A url for the artifact that can be followed to access the actual
     ///  content.
-
     FhirUrl? url,
 
     /// [urlElement] Extensions for url
@@ -1111,13 +1052,11 @@ class RelatedArtifact with _$RelatedArtifact {
 
     /// [document] The document being referenced, represented as an attachment.
     ///  This is exclusive with the resource element.
-
     Attachment? document,
 
     /// [resource] The related resource, such as a library, value set, profile,
     ///  or other knowledge resource.
-
-    Canonical? resource,
+    FhirCanonical? resource,
   }) = _RelatedArtifact;
 
   /// Produces a Yaml formatted String version of the object
@@ -1201,11 +1140,9 @@ class TriggerDefinition with _$TriggerDefinition {
   /// [condition] A boolean-valued expression that is evaluated in the context
   /// of the container of the trigger definition and returns whether or not the
   ///  trigger fires.
-
   factory TriggerDefinition({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-
     String? id,
 
     /// [extension_] May be used to represent additional information that is not
@@ -1219,7 +1156,6 @@ class TriggerDefinition with _$TriggerDefinition {
     @JsonKey(unknownEnumValue: TriggerDefinitionType.unknown)
 
         /// [type] The type of triggering event.
-
         TriggerDefinitionType? type,
 
     /// [typeElement] Extensions for type
@@ -1229,7 +1165,6 @@ class TriggerDefinition with _$TriggerDefinition {
     /// [name] A formal name for the event. This may be an absolute URI that
     /// identifies the event formally (e.g. from a trigger registry), or a simple
     ///  relative URI that identifies the event in a local context.
-
     String? name,
 
     /// [nameElement] Extensions for name
@@ -1237,24 +1172,20 @@ class TriggerDefinition with _$TriggerDefinition {
         Element? nameElement,
 
     /// [timingTiming] The timing of the event (if this is a periodic trigger).
-
     Timing? timingTiming,
 
     /// [timingReference] The timing of the event (if this is a periodic
     ///  trigger).
-
     Reference? timingReference,
 
     /// [timingDate] The timing of the event (if this is a periodic trigger).
-
-    Date? timingDate,
+    FhirDate? timingDate,
 
     /// [timingDateElement] Extensions for timingDate
     @JsonKey(name: '_timingDate')
         Element? timingDateElement,
 
     /// [timingDateTime] The timing of the event (if this is a periodic trigger).
-
     FhirDateTime? timingDateTime,
 
     /// [timingDateTimeElement] Extensions for timingDateTime
@@ -1264,13 +1195,11 @@ class TriggerDefinition with _$TriggerDefinition {
     /// [data] The triggering data of the event (if this is a data trigger). If
     /// more than one data is requirement is specified, then all the data
     ///  requirements must be true.
-
     List<DataRequirement>? data,
 
     /// [condition] A boolean-valued expression that is evaluated in the context
     /// of the container of the trigger definition and returns whether or not the
     ///  trigger fires.
-
     Expression? condition,
   }) = _TriggerDefinition;
 
@@ -1340,7 +1269,6 @@ class UsageContext with _$UsageContext {
   ///
   /// [valueReference] A value that defines the context specified in this
   ///  context of use. The interpretation of the value is defined by the code.
-
   factory UsageContext({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
@@ -1449,11 +1377,9 @@ class Expression with _$Expression {
   /// [reference] A URI that defines where the expression is found.
   ///
   /// [referenceElement] Extensions for reference
-
   factory Expression({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-
     String? id,
 
     /// [extension_] May be used to represent additional information that is not
@@ -1467,7 +1393,6 @@ class Expression with _$Expression {
 
     /// [description] A brief, natural language description of the condition that
     ///  effectively communicates the intended semantics.
-
     String? description,
 
     /// [descriptionElement] Extensions for description
@@ -1476,7 +1401,6 @@ class Expression with _$Expression {
 
     /// [name] A short name assigned to the expression to allow for multiple
     ///  reuse of the expression in the context where it is defined.
-
     FhirId? name,
 
     /// [nameElement] Extensions for name
@@ -1485,7 +1409,6 @@ class Expression with _$Expression {
     @JsonKey(unknownEnumValue: ExpressionLanguage.unknown)
 
         /// [language] The media type of the language for the expression.
-
         ExpressionLanguage? language,
 
     /// [languageElement] Extensions for language
@@ -1494,7 +1417,6 @@ class Expression with _$Expression {
 
     /// [expression] An expression in the specified language that returns a
     ///  value.
-
     String? expression,
 
     /// [expressionElement] Extensions for expression
@@ -1502,7 +1424,6 @@ class Expression with _$Expression {
         Element? expressionElement,
 
     /// [reference] A URI that defines where the expression is found.
-
     FhirUri? reference,
 
     /// [referenceElement] Extensions for reference

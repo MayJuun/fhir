@@ -21,82 +21,60 @@ AdministrableProductDefinition _$AdministrableProductDefinitionFromJson(
 
 /// @nodoc
 mixin _$AdministrableProductDefinition {
-  @HiveField(0)
-  @HiveField(1)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  @HiveField(2)
-  @HiveField(3)
+
+  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.",
   String? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
-  @HiveField(4)
   FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
-  @HiveField(5)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
   @JsonKey(name: '_implicitRules')
-  @HiveField(6)
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.;
-  @HiveField(7)
   FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] (_language): Extensions for language;
   @JsonKey(name: '_language')
-  @HiveField(8)
   Element? get languageElement => throw _privateConstructorUsedError;
 
   /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
-  @HiveField(9)
   Narrative? get text => throw _privateConstructorUsedError;
 
   /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
-  @HiveField(10)
   List<Resource>? get contained => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   @JsonKey(name: 'extension')
-  @HiveField(11)
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
-  @HiveField(12)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
   /// [identifier] The identifier(s) of this Ingredient that are assigned by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate.;
-  @HiveField(13)
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [status] The status of this ingredient. Enables tracking the life-cycle of the content.;
-  @HiveField(14)
   FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] (_status): Extensions for status;
   @JsonKey(name: '_status')
-  @HiveField(15)
   Element? get statusElement => throw _privateConstructorUsedError;
-  @HiveField(16)
   List<Reference>? get formOf => throw _privateConstructorUsedError;
-  @HiveField(17)
   CodeableConcept? get administrableDoseForm =>
       throw _privateConstructorUsedError;
-  @HiveField(18)
   CodeableConcept? get unitOfPresentation => throw _privateConstructorUsedError;
-  @HiveField(19)
   List<Reference>? get producedFrom => throw _privateConstructorUsedError;
-  @HiveField(20)
   List<CodeableConcept>? get ingredient => throw _privateConstructorUsedError;
-  @HiveField(21)
   Reference? get device => throw _privateConstructorUsedError;
-  @HiveField(22)
   List<AdministrableProductDefinitionProperty>? get property =>
       throw _privateConstructorUsedError;
-  @HiveField(23)
   List<AdministrableProductDefinitionRouteOfAdministration>
       get routeOfAdministration => throw _privateConstructorUsedError;
 
@@ -115,57 +93,29 @@ abstract class $AdministrableProductDefinitionCopyWith<$Res> {
           AdministrableProductDefinition>;
   @useResult
   $Res call(
-      {@HiveField(0)
-      @HiveField(1)
-          R4ResourceType resourceType,
-      @HiveField(2)
-      @HiveField(3)
-          String? id,
-      @HiveField(4)
-          FhirMeta? meta,
-      @HiveField(5)
-          FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-      @HiveField(6)
-          Element? implicitRulesElement,
-      @HiveField(7)
-          FhirCode? language,
-      @JsonKey(name: '_language')
-      @HiveField(8)
-          Element? languageElement,
-      @HiveField(9)
-          Narrative? text,
-      @HiveField(10)
-          List<Resource>? contained,
-      @JsonKey(name: 'extension')
-      @HiveField(11)
-          List<FhirExtension>? extension_,
-      @HiveField(12)
-          List<FhirExtension>? modifierExtension,
-      @HiveField(13)
-          List<Identifier>? identifier,
-      @HiveField(14)
-          FhirCode? status,
-      @JsonKey(name: '_status')
-      @HiveField(15)
-          Element? statusElement,
-      @HiveField(16)
-          List<Reference>? formOf,
-      @HiveField(17)
-          CodeableConcept? administrableDoseForm,
-      @HiveField(18)
-          CodeableConcept? unitOfPresentation,
-      @HiveField(19)
-          List<Reference>? producedFrom,
-      @HiveField(20)
-          List<CodeableConcept>? ingredient,
-      @HiveField(21)
-          Reference? device,
-      @HiveField(22)
-          List<AdministrableProductDefinitionProperty>? property,
-      @HiveField(23)
-          List<AdministrableProductDefinitionRouteOfAdministration>
-              routeOfAdministration});
+      {R4ResourceType resourceType,
+      String? id,
+      FhirMeta? meta,
+      FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+      FhirCode? language,
+      @JsonKey(name: '_language') Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      FhirCode? status,
+      @JsonKey(name: '_status') Element? statusElement,
+      List<Reference>? formOf,
+      CodeableConcept? administrableDoseForm,
+      CodeableConcept? unitOfPresentation,
+      List<Reference>? producedFrom,
+      List<CodeableConcept>? ingredient,
+      Reference? device,
+      List<AdministrableProductDefinitionProperty>? property,
+      List<AdministrableProductDefinitionRouteOfAdministration>
+          routeOfAdministration});
 
   $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -238,7 +188,7 @@ class _$AdministrableProductDefinitionCopyWithImpl<$Res,
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -266,7 +216,7 @@ class _$AdministrableProductDefinitionCopyWithImpl<$Res,
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -414,57 +364,29 @@ abstract class _$$_AdministrableProductDefinitionCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@HiveField(0)
-      @HiveField(1)
-          R4ResourceType resourceType,
-      @HiveField(2)
-      @HiveField(3)
-          String? id,
-      @HiveField(4)
-          FhirMeta? meta,
-      @HiveField(5)
-          FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-      @HiveField(6)
-          Element? implicitRulesElement,
-      @HiveField(7)
-          FhirCode? language,
-      @JsonKey(name: '_language')
-      @HiveField(8)
-          Element? languageElement,
-      @HiveField(9)
-          Narrative? text,
-      @HiveField(10)
-          List<Resource>? contained,
-      @JsonKey(name: 'extension')
-      @HiveField(11)
-          List<FhirExtension>? extension_,
-      @HiveField(12)
-          List<FhirExtension>? modifierExtension,
-      @HiveField(13)
-          List<Identifier>? identifier,
-      @HiveField(14)
-          FhirCode? status,
-      @JsonKey(name: '_status')
-      @HiveField(15)
-          Element? statusElement,
-      @HiveField(16)
-          List<Reference>? formOf,
-      @HiveField(17)
-          CodeableConcept? administrableDoseForm,
-      @HiveField(18)
-          CodeableConcept? unitOfPresentation,
-      @HiveField(19)
-          List<Reference>? producedFrom,
-      @HiveField(20)
-          List<CodeableConcept>? ingredient,
-      @HiveField(21)
-          Reference? device,
-      @HiveField(22)
-          List<AdministrableProductDefinitionProperty>? property,
-      @HiveField(23)
-          List<AdministrableProductDefinitionRouteOfAdministration>
-              routeOfAdministration});
+      {R4ResourceType resourceType,
+      String? id,
+      FhirMeta? meta,
+      FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+      FhirCode? language,
+      @JsonKey(name: '_language') Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      FhirCode? status,
+      @JsonKey(name: '_status') Element? statusElement,
+      List<Reference>? formOf,
+      CodeableConcept? administrableDoseForm,
+      CodeableConcept? unitOfPresentation,
+      List<Reference>? producedFrom,
+      List<CodeableConcept>? ingredient,
+      Reference? device,
+      List<AdministrableProductDefinitionProperty>? property,
+      List<AdministrableProductDefinitionRouteOfAdministration>
+          routeOfAdministration});
 
   @override
   $FhirMetaCopyWith<$Res>? get meta;
@@ -544,7 +466,7 @@ class __$$_AdministrableProductDefinitionCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -572,7 +494,7 @@ class __$$_AdministrableProductDefinitionCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -615,62 +537,32 @@ class __$$_AdministrableProductDefinitionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@HiveType(typeId: 54)
 class _$_AdministrableProductDefinition
     extends _AdministrableProductDefinition {
   _$_AdministrableProductDefinition(
-      {@HiveField(0)
-      @HiveField(1)
-          this.resourceType = R4ResourceType.AdministrableProductDefinition,
-      @HiveField(2)
-      @HiveField(3)
-          this.id,
-      @HiveField(4)
-          this.meta,
-      @HiveField(5)
-          this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-      @HiveField(6)
-          this.implicitRulesElement,
-      @HiveField(7)
-          this.language,
-      @JsonKey(name: '_language')
-      @HiveField(8)
-          this.languageElement,
-      @HiveField(9)
-          this.text,
-      @HiveField(10)
-          final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-      @HiveField(11)
-          final List<FhirExtension>? extension_,
-      @HiveField(12)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(13)
-          final List<Identifier>? identifier,
-      @HiveField(14)
-          this.status,
-      @JsonKey(name: '_status')
-      @HiveField(15)
-          this.statusElement,
-      @HiveField(16)
-          final List<Reference>? formOf,
-      @HiveField(17)
-          this.administrableDoseForm,
-      @HiveField(18)
-          this.unitOfPresentation,
-      @HiveField(19)
-          final List<Reference>? producedFrom,
-      @HiveField(20)
-          final List<CodeableConcept>? ingredient,
-      @HiveField(21)
-          this.device,
-      @HiveField(22)
-          final List<AdministrableProductDefinitionProperty>? property,
-      @HiveField(23)
-          required final List<
-                  AdministrableProductDefinitionRouteOfAdministration>
-              routeOfAdministration})
+      {this.resourceType = R4ResourceType.AdministrableProductDefinition,
+      this.id,
+      this.meta,
+      this.implicitRules,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      this.language,
+      @JsonKey(name: '_language') this.languageElement,
+      this.text,
+      final List<Resource>? contained,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      this.status,
+      @JsonKey(name: '_status') this.statusElement,
+      final List<Reference>? formOf,
+      this.administrableDoseForm,
+      this.unitOfPresentation,
+      final List<Reference>? producedFrom,
+      final List<CodeableConcept>? ingredient,
+      this.device,
+      final List<AdministrableProductDefinitionProperty>? property,
+      required final List<AdministrableProductDefinitionRouteOfAdministration>
+          routeOfAdministration})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -688,44 +580,36 @@ class _$_AdministrableProductDefinition
 
   @override
   @JsonKey()
-  @HiveField(0)
-  @HiveField(1)
   final R4ResourceType resourceType;
+
+  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.",
   @override
-  @HiveField(2)
-  @HiveField(3)
   final String? id;
 
   /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
   @override
-  @HiveField(4)
   final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
   @override
-  @HiveField(5)
   final FhirUri? implicitRules;
 
   /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
-  @HiveField(6)
   final Element? implicitRulesElement;
 
   /// [language] The base language in which the resource is written.;
   @override
-  @HiveField(7)
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] (_language): Extensions for language;
   @override
   @JsonKey(name: '_language')
-  @HiveField(8)
   final Element? languageElement;
 
   /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
   @override
-  @HiveField(9)
   final Narrative? text;
 
   /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
@@ -733,7 +617,6 @@ class _$_AdministrableProductDefinition
 
   /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
   @override
-  @HiveField(10)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -748,7 +631,6 @@ class _$_AdministrableProductDefinition
   /// [extension_] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   @override
   @JsonKey(name: 'extension')
-  @HiveField(11)
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
@@ -762,7 +644,6 @@ class _$_AdministrableProductDefinition
 
   /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   @override
-  @HiveField(12)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -777,7 +658,6 @@ class _$_AdministrableProductDefinition
 
   /// [identifier] The identifier(s) of this Ingredient that are assigned by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate.;
   @override
-  @HiveField(13)
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
@@ -788,17 +668,14 @@ class _$_AdministrableProductDefinition
 
   /// [status] The status of this ingredient. Enables tracking the life-cycle of the content.;
   @override
-  @HiveField(14)
-  final Code? status;
+  final FhirCode? status;
 
   /// [statusElement] (_status): Extensions for status;
   @override
   @JsonKey(name: '_status')
-  @HiveField(15)
   final Element? statusElement;
   final List<Reference>? _formOf;
   @override
-  @HiveField(16)
   List<Reference>? get formOf {
     final value = _formOf;
     if (value == null) return null;
@@ -808,14 +685,11 @@ class _$_AdministrableProductDefinition
   }
 
   @override
-  @HiveField(17)
   final CodeableConcept? administrableDoseForm;
   @override
-  @HiveField(18)
   final CodeableConcept? unitOfPresentation;
   final List<Reference>? _producedFrom;
   @override
-  @HiveField(19)
   List<Reference>? get producedFrom {
     final value = _producedFrom;
     if (value == null) return null;
@@ -826,7 +700,6 @@ class _$_AdministrableProductDefinition
 
   final List<CodeableConcept>? _ingredient;
   @override
-  @HiveField(20)
   List<CodeableConcept>? get ingredient {
     final value = _ingredient;
     if (value == null) return null;
@@ -836,11 +709,9 @@ class _$_AdministrableProductDefinition
   }
 
   @override
-  @HiveField(21)
   final Reference? device;
   final List<AdministrableProductDefinitionProperty>? _property;
   @override
-  @HiveField(22)
   List<AdministrableProductDefinitionProperty>? get property {
     final value = _property;
     if (value == null) return null;
@@ -852,7 +723,6 @@ class _$_AdministrableProductDefinition
   final List<AdministrableProductDefinitionRouteOfAdministration>
       _routeOfAdministration;
   @override
-  @HiveField(23)
   List<AdministrableProductDefinitionRouteOfAdministration>
       get routeOfAdministration {
     if (_routeOfAdministration is EqualUnmodifiableListView)
@@ -956,158 +826,107 @@ class _$_AdministrableProductDefinition
 abstract class _AdministrableProductDefinition
     extends AdministrableProductDefinition {
   factory _AdministrableProductDefinition(
-      {@HiveField(0)
-      @HiveField(1)
-          final R4ResourceType resourceType,
-      @HiveField(2)
-      @HiveField(3)
-          final String? id,
-      @HiveField(4)
-          final FhirMeta? meta,
-      @HiveField(5)
-          final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-      @HiveField(6)
-          final Element? implicitRulesElement,
-      @HiveField(7)
-          final Code? language,
-      @JsonKey(name: '_language')
-      @HiveField(8)
-          final Element? languageElement,
-      @HiveField(9)
-          final Narrative? text,
-      @HiveField(10)
-          final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-      @HiveField(11)
-          final List<FhirExtension>? extension_,
-      @HiveField(12)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(13)
-          final List<Identifier>? identifier,
-      @HiveField(14)
-          final Code? status,
-      @JsonKey(name: '_status')
-      @HiveField(15)
-          final Element? statusElement,
-      @HiveField(16)
-          final List<Reference>? formOf,
-      @HiveField(17)
-          final CodeableConcept? administrableDoseForm,
-      @HiveField(18)
-          final CodeableConcept? unitOfPresentation,
-      @HiveField(19)
-          final List<Reference>? producedFrom,
-      @HiveField(20)
-          final List<CodeableConcept>? ingredient,
-      @HiveField(21)
-          final Reference? device,
-      @HiveField(22)
-          final List<AdministrableProductDefinitionProperty>? property,
-      @HiveField(23)
-          required final List<
-                  AdministrableProductDefinitionRouteOfAdministration>
-              routeOfAdministration}) = _$_AdministrableProductDefinition;
+      {final R4ResourceType resourceType,
+      final String? id,
+      final FhirMeta? meta,
+      final FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
+      final FhirCode? language,
+      @JsonKey(name: '_language') final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final FhirCode? status,
+      @JsonKey(name: '_status') final Element? statusElement,
+      final List<Reference>? formOf,
+      final CodeableConcept? administrableDoseForm,
+      final CodeableConcept? unitOfPresentation,
+      final List<Reference>? producedFrom,
+      final List<CodeableConcept>? ingredient,
+      final Reference? device,
+      final List<AdministrableProductDefinitionProperty>? property,
+      required final List<AdministrableProductDefinitionRouteOfAdministration>
+          routeOfAdministration}) = _$_AdministrableProductDefinition;
   _AdministrableProductDefinition._() : super._();
 
   factory _AdministrableProductDefinition.fromJson(Map<String, dynamic> json) =
       _$_AdministrableProductDefinition.fromJson;
 
   @override
-  @HiveField(0)
-  @HiveField(1)
   R4ResourceType get resourceType;
   @override
-  @HiveField(2)
-  @HiveField(3)
+
+  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.",
   String? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
-  @HiveField(4)
   FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
-  @HiveField(5)
   FhirUri? get implicitRules;
   @override
 
   /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
   @JsonKey(name: '_implicitRules')
-  @HiveField(6)
   Element? get implicitRulesElement;
   @override
 
   /// [language] The base language in which the resource is written.;
-  @HiveField(7)
   FhirCode? get language;
   @override
 
   /// [languageElement] (_language): Extensions for language;
   @JsonKey(name: '_language')
-  @HiveField(8)
   Element? get languageElement;
   @override
 
   /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
-  @HiveField(9)
   Narrative? get text;
   @override
 
   /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
-  @HiveField(10)
   List<Resource>? get contained;
   @override
 
   /// [extension_] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   @JsonKey(name: 'extension')
-  @HiveField(11)
   List<FhirExtension>? get extension_;
   @override
 
   /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
-  @HiveField(12)
   List<FhirExtension>? get modifierExtension;
   @override
 
   /// [identifier] The identifier(s) of this Ingredient that are assigned by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate.;
-  @HiveField(13)
   List<Identifier>? get identifier;
   @override
 
   /// [status] The status of this ingredient. Enables tracking the life-cycle of the content.;
-  @HiveField(14)
   FhirCode? get status;
   @override
 
   /// [statusElement] (_status): Extensions for status;
   @JsonKey(name: '_status')
-  @HiveField(15)
   Element? get statusElement;
   @override
-  @HiveField(16)
   List<Reference>? get formOf;
   @override
-  @HiveField(17)
   CodeableConcept? get administrableDoseForm;
   @override
-  @HiveField(18)
   CodeableConcept? get unitOfPresentation;
   @override
-  @HiveField(19)
   List<Reference>? get producedFrom;
   @override
-  @HiveField(20)
   List<CodeableConcept>? get ingredient;
   @override
-  @HiveField(21)
   Reference? get device;
   @override
-  @HiveField(22)
   List<AdministrableProductDefinitionProperty>? get property;
   @override
-  @HiveField(23)
   List<AdministrableProductDefinitionRouteOfAdministration>
       get routeOfAdministration;
   @override
@@ -1147,14 +966,14 @@ mixin _$AdministrableProductDefinitionProperty {
   Quantity? get valueQuantity => throw _privateConstructorUsedError;
 
   /// [valueDate] A value for the characteristic.;
-  Date? get valueDate => throw _privateConstructorUsedError;
+  FhirDate? get valueDate => throw _privateConstructorUsedError;
 
   /// [valueDateElement] (_valueDate): Extensions for valueDate;
   @JsonKey(name: '_valueDate')
   Element? get valueDateElement => throw _privateConstructorUsedError;
 
   /// [valueBoolean] A value for the characteristic.;
-  Boolean? get valueBoolean => throw _privateConstructorUsedError;
+  FhirBoolean? get valueBoolean => throw _privateConstructorUsedError;
 
   /// [valueBooleanElement] (_valueBoolean): Extensions for valueBoolean;
   @JsonKey(name: '_valueBoolean')
@@ -1188,9 +1007,9 @@ abstract class $AdministrableProductDefinitionPropertyCopyWith<$Res> {
       CodeableConcept type,
       CodeableConcept? valueCodeableConcept,
       Quantity? valueQuantity,
-      Date? valueDate,
+      FhirDate? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
-      Boolean? valueBoolean,
+      FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       Attachment? valueAttachment,
       CodeableConcept? status});
@@ -1259,7 +1078,7 @@ class _$AdministrableProductDefinitionPropertyCopyWithImpl<$Res,
       valueDate: freezed == valueDate
           ? _value.valueDate
           : valueDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       valueDateElement: freezed == valueDateElement
           ? _value.valueDateElement
           : valueDateElement // ignore: cast_nullable_to_non_nullable
@@ -1267,7 +1086,7 @@ class _$AdministrableProductDefinitionPropertyCopyWithImpl<$Res,
       valueBoolean: freezed == valueBoolean
           ? _value.valueBoolean
           : valueBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       valueBooleanElement: freezed == valueBooleanElement
           ? _value.valueBooleanElement
           : valueBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -1381,9 +1200,9 @@ abstract class _$$_AdministrableProductDefinitionPropertyCopyWith<$Res>
       CodeableConcept type,
       CodeableConcept? valueCodeableConcept,
       Quantity? valueQuantity,
-      Date? valueDate,
+      FhirDate? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
-      Boolean? valueBoolean,
+      FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       Attachment? valueAttachment,
       CodeableConcept? status});
@@ -1458,7 +1277,7 @@ class __$$_AdministrableProductDefinitionPropertyCopyWithImpl<$Res>
       valueDate: freezed == valueDate
           ? _value.valueDate
           : valueDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       valueDateElement: freezed == valueDateElement
           ? _value.valueDateElement
           : valueDateElement // ignore: cast_nullable_to_non_nullable
@@ -1466,7 +1285,7 @@ class __$$_AdministrableProductDefinitionPropertyCopyWithImpl<$Res>
       valueBoolean: freezed == valueBoolean
           ? _value.valueBoolean
           : valueBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       valueBooleanElement: freezed == valueBooleanElement
           ? _value.valueBooleanElement
           : valueBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -1556,7 +1375,7 @@ class _$_AdministrableProductDefinitionProperty
 
   /// [valueDate] A value for the characteristic.;
   @override
-  final Date? valueDate;
+  final FhirDate? valueDate;
 
   /// [valueDateElement] (_valueDate): Extensions for valueDate;
   @override
@@ -1565,7 +1384,7 @@ class _$_AdministrableProductDefinitionProperty
 
   /// [valueBoolean] A value for the characteristic.;
   @override
-  final Boolean? valueBoolean;
+  final FhirBoolean? valueBoolean;
 
   /// [valueBooleanElement] (_valueBoolean): Extensions for valueBoolean;
   @override
@@ -1655,9 +1474,9 @@ abstract class _AdministrableProductDefinitionProperty
           required final CodeableConcept type,
           final CodeableConcept? valueCodeableConcept,
           final Quantity? valueQuantity,
-          final Date? valueDate,
+          final FhirDate? valueDate,
           @JsonKey(name: '_valueDate') final Element? valueDateElement,
-          final Boolean? valueBoolean,
+          final FhirBoolean? valueBoolean,
           @JsonKey(name: '_valueBoolean') final Element? valueBooleanElement,
           final Attachment? valueAttachment,
           final CodeableConcept? status}) =
@@ -1697,7 +1516,7 @@ abstract class _AdministrableProductDefinitionProperty
   @override
 
   /// [valueDate] A value for the characteristic.;
-  Date? get valueDate;
+  FhirDate? get valueDate;
   @override
 
   /// [valueDateElement] (_valueDate): Extensions for valueDate;
@@ -1706,7 +1525,7 @@ abstract class _AdministrableProductDefinitionProperty
   @override
 
   /// [valueBoolean] A value for the characteristic.;
-  Boolean? get valueBoolean;
+  FhirBoolean? get valueBoolean;
   @override
 
   /// [valueBooleanElement] (_valueBoolean): Extensions for valueBoolean;
@@ -3039,100 +2858,78 @@ Ingredient _$IngredientFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Ingredient {
   /// [resourceType] This is a Ingredient resource;
-  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
-  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
-  @HiveField(2)
   FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
-  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
-  @HiveField(4)
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.;
-  @HiveField(5)
   FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] (_language): Extensions for language;
-  @HiveField(6)
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
 
   /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
-  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
 
   /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
-  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
-  @HiveField(9)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
   /// [identifier] The identifier(s) of this Ingredient that are assigned by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate.;
-  @HiveField(11)
   Identifier? get identifier => throw _privateConstructorUsedError;
 
   /// [status] The status of this ingredient. Enables tracking the life-cycle of the content.;
-  @HiveField(12)
   FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] (_status): Extensions for status;
-  @HiveField(13)
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
 
   /// [for] The product which this ingredient is a constituent part of.;
-  @HiveField(14)
   @JsonKey(name: 'for')
   List<Reference>? get for_ => throw _privateConstructorUsedError;
 
   /// [role] A classification of the ingredient identifying its purpose within the product, e.g. active, inactive.;
-  @HiveField(15)
   CodeableConcept get role => throw _privateConstructorUsedError;
 
   /// [function] A classification of the ingredient identifying its precise purpose(s) in the drug product. This extends the Ingredient.role to add more detail. Example: antioxidant, alkalizing agent.;
-  @HiveField(16)
   List<CodeableConcept>? get function => throw _privateConstructorUsedError;
 
   /// [group] A classification of the ingredient according to where in the physical item it tends to be used, such the outer shell of a tablet, inner body or ink.;
-  @HiveField(17)
   CodeableConcept? get group => throw _privateConstructorUsedError;
 
   /// [allergenicIndicator] If the ingredient is a known or suspected allergen. Note that this is a property of the substance, so if a reference to a SubstanceDefinition is used to decribe that (rather than just a code), the allergen information should go there, not here.;
-  @HiveField(18)
-  Boolean? get allergenicIndicator => throw _privateConstructorUsedError;
+  FhirBoolean? get allergenicIndicator => throw _privateConstructorUsedError;
 
   /// [allergenicIndicatorElement] (_allergenicIndicator): Extensions for allergenicIndicator;
-  @HiveField(19)
   @JsonKey(name: '_allergenicIndicator')
   Element? get allergenicIndicatorElement => throw _privateConstructorUsedError;
 
   /// [manufacturer] The organization(s) that manufacture this ingredient. Can be used to indicate:         1) Organizations we are aware of that manufacture this ingredient         2) Specific Manufacturer(s) currently being used         3) Set of organisations allowed to manufacture this ingredient for this product         Users must be clear on the application of context relevant to their use case.;
-  @HiveField(20)
   List<IngredientManufacturer>? get manufacturer =>
       throw _privateConstructorUsedError;
 
   /// [substance] The substance that comprises this ingredient.;
-  @HiveField(21)
   IngredientSubstance get substance => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -3148,56 +2945,34 @@ abstract class $IngredientCopyWith<$Res> {
       _$IngredientCopyWithImpl<$Res, Ingredient>;
   @useResult
   $Res call(
-      {@HiveField(0)
-          R4ResourceType resourceType,
-      @HiveField(1)
-          String? id,
-      @HiveField(2)
-          FhirMeta? meta,
-      @HiveField(3)
-          FhirUri? implicitRules,
-      @HiveField(4)
+      {R4ResourceType resourceType,
+      String? id,
+      FhirMeta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      @HiveField(5)
-          FhirCode? language,
-      @HiveField(6)
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
-      @HiveField(7)
-          Narrative? text,
-      @HiveField(8)
-          List<Resource>? contained,
-      @HiveField(9)
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
-      @HiveField(10)
-          List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          Identifier? identifier,
-      @HiveField(12)
-          FhirCode? status,
-      @HiveField(13)
+      List<FhirExtension>? modifierExtension,
+      Identifier? identifier,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      @HiveField(14)
       @JsonKey(name: 'for')
           List<Reference>? for_,
-      @HiveField(15)
-          CodeableConcept role,
-      @HiveField(16)
-          List<CodeableConcept>? function,
-      @HiveField(17)
-          CodeableConcept? group,
-      @HiveField(18)
-          Boolean? allergenicIndicator,
-      @HiveField(19)
+      CodeableConcept role,
+      List<CodeableConcept>? function,
+      CodeableConcept? group,
+      FhirBoolean? allergenicIndicator,
       @JsonKey(name: '_allergenicIndicator')
           Element? allergenicIndicatorElement,
-      @HiveField(20)
-          List<IngredientManufacturer>? manufacturer,
-      @HiveField(21)
-          IngredientSubstance substance});
+      List<IngredientManufacturer>? manufacturer,
+      IngredientSubstance substance});
 
   $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -3271,7 +3046,7 @@ class _$IngredientCopyWithImpl<$Res, $Val extends Ingredient>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -3299,7 +3074,7 @@ class _$IngredientCopyWithImpl<$Res, $Val extends Ingredient>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -3323,7 +3098,7 @@ class _$IngredientCopyWithImpl<$Res, $Val extends Ingredient>
       allergenicIndicator: freezed == allergenicIndicator
           ? _value.allergenicIndicator
           : allergenicIndicator // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       allergenicIndicatorElement: freezed == allergenicIndicatorElement
           ? _value.allergenicIndicatorElement
           : allergenicIndicatorElement // ignore: cast_nullable_to_non_nullable
@@ -3461,56 +3236,34 @@ abstract class _$$_IngredientCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@HiveField(0)
-          R4ResourceType resourceType,
-      @HiveField(1)
-          String? id,
-      @HiveField(2)
-          FhirMeta? meta,
-      @HiveField(3)
-          FhirUri? implicitRules,
-      @HiveField(4)
+      {R4ResourceType resourceType,
+      String? id,
+      FhirMeta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      @HiveField(5)
-          FhirCode? language,
-      @HiveField(6)
+      FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
-      @HiveField(7)
-          Narrative? text,
-      @HiveField(8)
-          List<Resource>? contained,
-      @HiveField(9)
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
-      @HiveField(10)
-          List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          Identifier? identifier,
-      @HiveField(12)
-          FhirCode? status,
-      @HiveField(13)
+      List<FhirExtension>? modifierExtension,
+      Identifier? identifier,
+      FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      @HiveField(14)
       @JsonKey(name: 'for')
           List<Reference>? for_,
-      @HiveField(15)
-          CodeableConcept role,
-      @HiveField(16)
-          List<CodeableConcept>? function,
-      @HiveField(17)
-          CodeableConcept? group,
-      @HiveField(18)
-          Boolean? allergenicIndicator,
-      @HiveField(19)
+      CodeableConcept role,
+      List<CodeableConcept>? function,
+      CodeableConcept? group,
+      FhirBoolean? allergenicIndicator,
       @JsonKey(name: '_allergenicIndicator')
           Element? allergenicIndicatorElement,
-      @HiveField(20)
-          List<IngredientManufacturer>? manufacturer,
-      @HiveField(21)
-          IngredientSubstance substance});
+      List<IngredientManufacturer>? manufacturer,
+      IngredientSubstance substance});
 
   @override
   $FhirMetaCopyWith<$Res>? get meta;
@@ -3592,7 +3345,7 @@ class __$$_IngredientCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -3620,7 +3373,7 @@ class __$$_IngredientCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -3644,7 +3397,7 @@ class __$$_IngredientCopyWithImpl<$Res>
       allergenicIndicator: freezed == allergenicIndicator
           ? _value.allergenicIndicator
           : allergenicIndicator // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       allergenicIndicatorElement: freezed == allergenicIndicatorElement
           ? _value.allergenicIndicatorElement
           : allergenicIndicatorElement // ignore: cast_nullable_to_non_nullable
@@ -3663,59 +3416,30 @@ class __$$_IngredientCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@HiveType(typeId: 55)
 class _$_Ingredient extends _Ingredient {
   _$_Ingredient(
-      {@HiveField(0)
-          this.resourceType = R4ResourceType.Ingredient,
-      @HiveField(1)
-          this.id,
-      @HiveField(2)
-          this.meta,
-      @HiveField(3)
-          this.implicitRules,
-      @HiveField(4)
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
-      @HiveField(5)
-          this.language,
-      @HiveField(6)
-      @JsonKey(name: '_language')
-          this.languageElement,
-      @HiveField(7)
-          this.text,
-      @HiveField(8)
-          final List<Resource>? contained,
-      @HiveField(9)
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      @HiveField(10)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          this.identifier,
-      @HiveField(12)
-          this.status,
-      @HiveField(13)
-      @JsonKey(name: '_status')
-          this.statusElement,
-      @HiveField(14)
-      @JsonKey(name: 'for')
-          final List<Reference>? for_,
-      @HiveField(15)
-          required this.role,
-      @HiveField(16)
-          final List<CodeableConcept>? function,
-      @HiveField(17)
-          this.group,
-      @HiveField(18)
-          this.allergenicIndicator,
-      @HiveField(19)
-      @JsonKey(name: '_allergenicIndicator')
-          this.allergenicIndicatorElement,
-      @HiveField(20)
-          final List<IngredientManufacturer>? manufacturer,
-      @HiveField(21)
-          required this.substance})
+      {this.resourceType = R4ResourceType.Ingredient,
+      this.id,
+      this.meta,
+      this.implicitRules,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      this.language,
+      @JsonKey(name: '_language') this.languageElement,
+      this.text,
+      final List<Resource>? contained,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      this.identifier,
+      this.status,
+      @JsonKey(name: '_status') this.statusElement,
+      @JsonKey(name: 'for') final List<Reference>? for_,
+      required this.role,
+      final List<CodeableConcept>? function,
+      this.group,
+      this.allergenicIndicator,
+      @JsonKey(name: '_allergenicIndicator') this.allergenicIndicatorElement,
+      final List<IngredientManufacturer>? manufacturer,
+      required this.substance})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -3730,44 +3454,36 @@ class _$_Ingredient extends _Ingredient {
   /// [resourceType] This is a Ingredient resource;
   @override
   @JsonKey()
-  @HiveField(0)
   final R4ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
   @override
-  @HiveField(1)
   final String? id;
 
   /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
   @override
-  @HiveField(2)
   final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
   @override
-  @HiveField(3)
   final FhirUri? implicitRules;
 
   /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
   @override
-  @HiveField(4)
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
 
   /// [language] The base language in which the resource is written.;
   @override
-  @HiveField(5)
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] (_language): Extensions for language;
   @override
-  @HiveField(6)
   @JsonKey(name: '_language')
   final Element? languageElement;
 
   /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
   @override
-  @HiveField(7)
   final Narrative? text;
 
   /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
@@ -3775,7 +3491,6 @@ class _$_Ingredient extends _Ingredient {
 
   /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
   @override
-  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -3789,7 +3504,6 @@ class _$_Ingredient extends _Ingredient {
 
   /// [extension_] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   @override
-  @HiveField(9)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
     final value = _extension_;
@@ -3806,7 +3520,6 @@ class _$_Ingredient extends _Ingredient {
   /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   @override
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -3818,17 +3531,14 @@ class _$_Ingredient extends _Ingredient {
 
   /// [identifier] The identifier(s) of this Ingredient that are assigned by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate.;
   @override
-  @HiveField(11)
   final Identifier? identifier;
 
   /// [status] The status of this ingredient. Enables tracking the life-cycle of the content.;
   @override
-  @HiveField(12)
-  final Code? status;
+  final FhirCode? status;
 
   /// [statusElement] (_status): Extensions for status;
   @override
-  @HiveField(13)
   @JsonKey(name: '_status')
   final Element? statusElement;
 
@@ -3837,7 +3547,6 @@ class _$_Ingredient extends _Ingredient {
 
   /// [for] The product which this ingredient is a constituent part of.;
   @override
-  @HiveField(14)
   @JsonKey(name: 'for')
   List<Reference>? get for_ {
     final value = _for_;
@@ -3849,7 +3558,6 @@ class _$_Ingredient extends _Ingredient {
 
   /// [role] A classification of the ingredient identifying its purpose within the product, e.g. active, inactive.;
   @override
-  @HiveField(15)
   final CodeableConcept role;
 
   /// [function] A classification of the ingredient identifying its precise purpose(s) in the drug product. This extends the Ingredient.role to add more detail. Example: antioxidant, alkalizing agent.;
@@ -3857,7 +3565,6 @@ class _$_Ingredient extends _Ingredient {
 
   /// [function] A classification of the ingredient identifying its precise purpose(s) in the drug product. This extends the Ingredient.role to add more detail. Example: antioxidant, alkalizing agent.;
   @override
-  @HiveField(16)
   List<CodeableConcept>? get function {
     final value = _function;
     if (value == null) return null;
@@ -3868,17 +3575,14 @@ class _$_Ingredient extends _Ingredient {
 
   /// [group] A classification of the ingredient according to where in the physical item it tends to be used, such the outer shell of a tablet, inner body or ink.;
   @override
-  @HiveField(17)
   final CodeableConcept? group;
 
   /// [allergenicIndicator] If the ingredient is a known or suspected allergen. Note that this is a property of the substance, so if a reference to a SubstanceDefinition is used to decribe that (rather than just a code), the allergen information should go there, not here.;
   @override
-  @HiveField(18)
-  final Boolean? allergenicIndicator;
+  final FhirBoolean? allergenicIndicator;
 
   /// [allergenicIndicatorElement] (_allergenicIndicator): Extensions for allergenicIndicator;
   @override
-  @HiveField(19)
   @JsonKey(name: '_allergenicIndicator')
   final Element? allergenicIndicatorElement;
 
@@ -3887,7 +3591,6 @@ class _$_Ingredient extends _Ingredient {
 
   /// [manufacturer] The organization(s) that manufacture this ingredient. Can be used to indicate:         1) Organizations we are aware of that manufacture this ingredient         2) Specific Manufacturer(s) currently being used         3) Set of organisations allowed to manufacture this ingredient for this product         Users must be clear on the application of context relevant to their use case.;
   @override
-  @HiveField(20)
   List<IngredientManufacturer>? get manufacturer {
     final value = _manufacturer;
     if (value == null) return null;
@@ -3898,7 +3601,6 @@ class _$_Ingredient extends _Ingredient {
 
   /// [substance] The substance that comprises this ingredient.;
   @override
-  @HiveField(21)
   final IngredientSubstance substance;
 
   @override
@@ -3995,56 +3697,34 @@ class _$_Ingredient extends _Ingredient {
 
 abstract class _Ingredient extends Ingredient {
   factory _Ingredient(
-      {@HiveField(0)
-          final R4ResourceType resourceType,
-      @HiveField(1)
-          final String? id,
-      @HiveField(2)
-          final FhirMeta? meta,
-      @HiveField(3)
-          final FhirUri? implicitRules,
-      @HiveField(4)
+      {final R4ResourceType resourceType,
+      final String? id,
+      final FhirMeta? meta,
+      final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      @HiveField(5)
-          final Code? language,
-      @HiveField(6)
+      final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
-      @HiveField(7)
-          final Narrative? text,
-      @HiveField(8)
-          final List<Resource>? contained,
-      @HiveField(9)
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
-      @HiveField(10)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          final Identifier? identifier,
-      @HiveField(12)
-          final Code? status,
-      @HiveField(13)
+      final List<FhirExtension>? modifierExtension,
+      final Identifier? identifier,
+      final FhirCode? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
-      @HiveField(14)
       @JsonKey(name: 'for')
           final List<Reference>? for_,
-      @HiveField(15)
-          required final CodeableConcept role,
-      @HiveField(16)
-          final List<CodeableConcept>? function,
-      @HiveField(17)
-          final CodeableConcept? group,
-      @HiveField(18)
-          final Boolean? allergenicIndicator,
-      @HiveField(19)
+      required final CodeableConcept role,
+      final List<CodeableConcept>? function,
+      final CodeableConcept? group,
+      final FhirBoolean? allergenicIndicator,
       @JsonKey(name: '_allergenicIndicator')
           final Element? allergenicIndicatorElement,
-      @HiveField(20)
-          final List<IngredientManufacturer>? manufacturer,
-      @HiveField(21)
-          required final IngredientSubstance substance}) = _$_Ingredient;
+      final List<IngredientManufacturer>? manufacturer,
+      required final IngredientSubstance substance}) = _$_Ingredient;
   _Ingredient._() : super._();
 
   factory _Ingredient.fromJson(Map<String, dynamic> json) =
@@ -4053,119 +3733,97 @@ abstract class _Ingredient extends Ingredient {
   @override
 
   /// [resourceType] This is a Ingredient resource;
-  @HiveField(0)
   R4ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
-  @HiveField(1)
   String? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
-  @HiveField(2)
   FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
-  @HiveField(3)
   FhirUri? get implicitRules;
   @override
 
   /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
-  @HiveField(4)
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
 
   /// [language] The base language in which the resource is written.;
-  @HiveField(5)
   FhirCode? get language;
   @override
 
   /// [languageElement] (_language): Extensions for language;
-  @HiveField(6)
   @JsonKey(name: '_language')
   Element? get languageElement;
   @override
 
   /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
-  @HiveField(7)
   Narrative? get text;
   @override
 
   /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
-  @HiveField(8)
   List<Resource>? get contained;
   @override
 
   /// [extension_] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
-  @HiveField(9)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
 
   /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
 
   /// [identifier] The identifier(s) of this Ingredient that are assigned by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate.;
-  @HiveField(11)
   Identifier? get identifier;
   @override
 
   /// [status] The status of this ingredient. Enables tracking the life-cycle of the content.;
-  @HiveField(12)
   FhirCode? get status;
   @override
 
   /// [statusElement] (_status): Extensions for status;
-  @HiveField(13)
   @JsonKey(name: '_status')
   Element? get statusElement;
   @override
 
   /// [for] The product which this ingredient is a constituent part of.;
-  @HiveField(14)
   @JsonKey(name: 'for')
   List<Reference>? get for_;
   @override
 
   /// [role] A classification of the ingredient identifying its purpose within the product, e.g. active, inactive.;
-  @HiveField(15)
   CodeableConcept get role;
   @override
 
   /// [function] A classification of the ingredient identifying its precise purpose(s) in the drug product. This extends the Ingredient.role to add more detail. Example: antioxidant, alkalizing agent.;
-  @HiveField(16)
   List<CodeableConcept>? get function;
   @override
 
   /// [group] A classification of the ingredient according to where in the physical item it tends to be used, such the outer shell of a tablet, inner body or ink.;
-  @HiveField(17)
   CodeableConcept? get group;
   @override
 
   /// [allergenicIndicator] If the ingredient is a known or suspected allergen. Note that this is a property of the substance, so if a reference to a SubstanceDefinition is used to decribe that (rather than just a code), the allergen information should go there, not here.;
-  @HiveField(18)
-  Boolean? get allergenicIndicator;
+  FhirBoolean? get allergenicIndicator;
   @override
 
   /// [allergenicIndicatorElement] (_allergenicIndicator): Extensions for allergenicIndicator;
-  @HiveField(19)
   @JsonKey(name: '_allergenicIndicator')
   Element? get allergenicIndicatorElement;
   @override
 
   /// [manufacturer] The organization(s) that manufacture this ingredient. Can be used to indicate:         1) Organizations we are aware of that manufacture this ingredient         2) Specific Manufacturer(s) currently being used         3) Set of organisations allowed to manufacture this ingredient for this product         Users must be clear on the application of context relevant to their use case.;
-  @HiveField(20)
   List<IngredientManufacturer>? get manufacturer;
   @override
 
   /// [substance] The substance that comprises this ingredient.;
-  @HiveField(21)
   IngredientSubstance get substance;
   @override
   @JsonKey(ignore: true)
@@ -4262,7 +3920,7 @@ class _$IngredientManufacturerCopyWithImpl<$Res,
       role: freezed == role
           ? _value.role
           : role // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       roleElement: freezed == roleElement
           ? _value.roleElement
           : roleElement // ignore: cast_nullable_to_non_nullable
@@ -4352,7 +4010,7 @@ class __$$_IngredientManufacturerCopyWithImpl<$Res>
       role: freezed == role
           ? _value.role
           : role // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       roleElement: freezed == roleElement
           ? _value.roleElement
           : roleElement // ignore: cast_nullable_to_non_nullable
@@ -4416,7 +4074,7 @@ class _$_IngredientManufacturer extends _IngredientManufacturer {
 
   /// [role] The way in which this manufacturer is associated with the ingredient. For example whether it is a possible one (others allowed), or an exclusive authorized one for this ingredient. Note that this is not the manufacturing process role.;
   @override
-  final Code? role;
+  final FhirCode? role;
 
   /// [roleElement] (_role): Extensions for role;
   @override
@@ -4480,7 +4138,7 @@ abstract class _IngredientManufacturer extends IngredientManufacturer {
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final Code? role,
+      final FhirCode? role,
       @JsonKey(name: '_role') final Element? roleElement,
       required final Reference manufacturer}) = _$_IngredientManufacturer;
   _IngredientManufacturer._() : super._();
@@ -4527,26 +4185,21 @@ IngredientSubstance _$IngredientSubstanceFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$IngredientSubstance {
   /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
-  @HiveField(0)
   String? get id => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
-  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
-  @HiveField(2)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
   /// [code] A code or full resource that represents the ingredient's substance.;
-  @HiveField(3)
   CodeableReference get code => throw _privateConstructorUsedError;
 
   /// [strength] The quantity of substance in the unit of presentation, or in the volume (or mass) of the single pharmaceutical product or manufactured item. The allowed repetitions do not represent different strengths, but are different representations - mathematically equivalent - of a single strength.;
-  @HiveField(4)
   List<IngredientStrength>? get strength => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -4562,11 +4215,11 @@ abstract class $IngredientSubstanceCopyWith<$Res> {
       _$IngredientSubstanceCopyWithImpl<$Res, IngredientSubstance>;
   @useResult
   $Res call(
-      {@HiveField(0) String? id,
-      @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      @HiveField(2) List<FhirExtension>? modifierExtension,
-      @HiveField(3) CodeableReference code,
-      @HiveField(4) List<IngredientStrength>? strength});
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableReference code,
+      List<IngredientStrength>? strength});
 
   $CodeableReferenceCopyWith<$Res> get code;
 }
@@ -4632,11 +4285,11 @@ abstract class _$$_IngredientSubstanceCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@HiveField(0) String? id,
-      @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      @HiveField(2) List<FhirExtension>? modifierExtension,
-      @HiveField(3) CodeableReference code,
-      @HiveField(4) List<IngredientStrength>? strength});
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableReference code,
+      List<IngredientStrength>? strength});
 
   @override
   $CodeableReferenceCopyWith<$Res> get code;
@@ -4686,20 +4339,13 @@ class __$$_IngredientSubstanceCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@HiveType(typeId: 56)
 class _$_IngredientSubstance extends _IngredientSubstance {
   _$_IngredientSubstance(
-      {@HiveField(0)
-          this.id,
-      @HiveField(1)
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      @HiveField(2)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(3)
-          required this.code,
-      @HiveField(4)
-          final List<IngredientStrength>? strength})
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      required this.code,
+      final List<IngredientStrength>? strength})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
         _strength = strength,
@@ -4710,7 +4356,6 @@ class _$_IngredientSubstance extends _IngredientSubstance {
 
   /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   @override
-  @HiveField(0)
   final String? id;
 
   /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
@@ -4718,7 +4363,6 @@ class _$_IngredientSubstance extends _IngredientSubstance {
 
   /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   @override
-  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
     final value = _extension_;
@@ -4735,7 +4379,6 @@ class _$_IngredientSubstance extends _IngredientSubstance {
   /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   @override
-  @HiveField(2)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -4747,7 +4390,6 @@ class _$_IngredientSubstance extends _IngredientSubstance {
 
   /// [code] A code or full resource that represents the ingredient's substance.;
   @override
-  @HiveField(3)
   final CodeableReference code;
 
   /// [strength] The quantity of substance in the unit of presentation, or in the volume (or mass) of the single pharmaceutical product or manufactured item. The allowed repetitions do not represent different strengths, but are different representations - mathematically equivalent - of a single strength.;
@@ -4755,7 +4397,6 @@ class _$_IngredientSubstance extends _IngredientSubstance {
 
   /// [strength] The quantity of substance in the unit of presentation, or in the volume (or mass) of the single pharmaceutical product or manufactured item. The allowed repetitions do not represent different strengths, but are different representations - mathematically equivalent - of a single strength.;
   @override
-  @HiveField(4)
   List<IngredientStrength>? get strength {
     final value = _strength;
     if (value == null) return null;
@@ -4810,17 +4451,11 @@ class _$_IngredientSubstance extends _IngredientSubstance {
 
 abstract class _IngredientSubstance extends IngredientSubstance {
   factory _IngredientSubstance(
-      {@HiveField(0)
-          final String? id,
-      @HiveField(1)
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      @HiveField(2)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(3)
-          required final CodeableReference code,
-      @HiveField(4)
-          final List<IngredientStrength>? strength}) = _$_IngredientSubstance;
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      required final CodeableReference code,
+      final List<IngredientStrength>? strength}) = _$_IngredientSubstance;
   _IngredientSubstance._() : super._();
 
   factory _IngredientSubstance.fromJson(Map<String, dynamic> json) =
@@ -4829,29 +4464,24 @@ abstract class _IngredientSubstance extends IngredientSubstance {
   @override
 
   /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
-  @HiveField(0)
   String? get id;
   @override
 
   /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
-  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
 
   /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
-  @HiveField(2)
   List<FhirExtension>? get modifierExtension;
   @override
 
   /// [code] A code or full resource that represents the ingredient's substance.;
-  @HiveField(3)
   CodeableReference get code;
   @override
 
   /// [strength] The quantity of substance in the unit of presentation, or in the volume (or mass) of the single pharmaceutical product or manufactured item. The allowed repetitions do not represent different strengths, but are different representations - mathematically equivalent - of a single strength.;
-  @HiveField(4)
   List<IngredientStrength>? get strength;
   @override
   @JsonKey(ignore: true)
@@ -6113,104 +5743,81 @@ ClinicalUseDefinition _$ClinicalUseDefinitionFromJson(
 /// @nodoc
 mixin _$ClinicalUseDefinition {
   /// [resourceType] This is a ClinicalUseDefinition resource;
-  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
-  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
-  @HiveField(2)
   FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
-  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
-  @HiveField(4)
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.;
-  @HiveField(5)
   FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] (_language): Extensions for language;
-  @HiveField(6)
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
 
   /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
-  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
 
   /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
-  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
-  @HiveField(9)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
   /// [identifier] Business identifier for this issue.;
-  @HiveField(11)
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [type] indication | contraindication | interaction | undesirable-effect | warning.;
-  @HiveField(12)
   FhirCode? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] (_type): Extensions for type;
-  @HiveField(13)
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
 
   /// [category] A categorisation of the issue, primarily for dividing warnings into subject heading areas such as "Pregnancy and Lactation", "Overdose", "Effects on Ability to Drive and Use Machines".;
-  @HiveField(14)
   List<CodeableConcept>? get category => throw _privateConstructorUsedError;
 
   /// [subject] The medication or procedure for which this is an indication.;
-  @HiveField(15)
   List<Reference>? get subject => throw _privateConstructorUsedError;
 
   /// [status] Whether this is a current issue or one that has been retired etc.;
-  @HiveField(16)
   CodeableConcept? get status => throw _privateConstructorUsedError;
 
   /// [contraindication] Specifics for when this is a contraindication.;
-  @HiveField(17)
   ClinicalUseDefinitionContraindication? get contraindication =>
       throw _privateConstructorUsedError;
 
   /// [indication] Specifics for when this is an indication.;
-  @HiveField(18)
   ClinicalUseDefinitionIndication? get indication =>
       throw _privateConstructorUsedError;
 
   /// [interaction] Specifics for when this is an interaction.;
-  @HiveField(19)
   ClinicalUseDefinitionInteraction? get interaction =>
       throw _privateConstructorUsedError;
 
   /// [population] The population group to which this applies.;
-  @HiveField(20)
   List<Reference>? get population => throw _privateConstructorUsedError;
 
   /// [undesirableEffect] Describe the possible undesirable effects (negative outcomes) from the use of the medicinal product as treatment.;
-  @HiveField(21)
   ClinicalUseDefinitionUndesirableEffect? get undesirableEffect =>
       throw _privateConstructorUsedError;
 
   /// [warning] A critical piece of information about environmental, health or physical risks or hazards that serve as caution to the user. For example 'Do not operate heavy machinery', 'May cause drowsiness', or 'Get medical advice/attention if you feel unwell'.;
-  @HiveField(22)
   ClinicalUseDefinitionWarning? get warning =>
       throw _privateConstructorUsedError;
 
@@ -6227,56 +5834,29 @@ abstract class $ClinicalUseDefinitionCopyWith<$Res> {
       _$ClinicalUseDefinitionCopyWithImpl<$Res, ClinicalUseDefinition>;
   @useResult
   $Res call(
-      {@HiveField(0)
-          R4ResourceType resourceType,
-      @HiveField(1)
-          String? id,
-      @HiveField(2)
-          FhirMeta? meta,
-      @HiveField(3)
-          FhirUri? implicitRules,
-      @HiveField(4)
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      @HiveField(5)
-          FhirCode? language,
-      @HiveField(6)
-      @JsonKey(name: '_language')
-          Element? languageElement,
-      @HiveField(7)
-          Narrative? text,
-      @HiveField(8)
-          List<Resource>? contained,
-      @HiveField(9)
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      @HiveField(10)
-          List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          List<Identifier>? identifier,
-      @HiveField(12)
-          FhirCode? type,
-      @HiveField(13)
-      @JsonKey(name: '_type')
-          Element? typeElement,
-      @HiveField(14)
-          List<CodeableConcept>? category,
-      @HiveField(15)
-          List<Reference>? subject,
-      @HiveField(16)
-          CodeableConcept? status,
-      @HiveField(17)
-          ClinicalUseDefinitionContraindication? contraindication,
-      @HiveField(18)
-          ClinicalUseDefinitionIndication? indication,
-      @HiveField(19)
-          ClinicalUseDefinitionInteraction? interaction,
-      @HiveField(20)
-          List<Reference>? population,
-      @HiveField(21)
-          ClinicalUseDefinitionUndesirableEffect? undesirableEffect,
-      @HiveField(22)
-          ClinicalUseDefinitionWarning? warning});
+      {R4ResourceType resourceType,
+      String? id,
+      FhirMeta? meta,
+      FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+      FhirCode? language,
+      @JsonKey(name: '_language') Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      FhirCode? type,
+      @JsonKey(name: '_type') Element? typeElement,
+      List<CodeableConcept>? category,
+      List<Reference>? subject,
+      CodeableConcept? status,
+      ClinicalUseDefinitionContraindication? contraindication,
+      ClinicalUseDefinitionIndication? indication,
+      ClinicalUseDefinitionInteraction? interaction,
+      List<Reference>? population,
+      ClinicalUseDefinitionUndesirableEffect? undesirableEffect,
+      ClinicalUseDefinitionWarning? warning});
 
   $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -6353,7 +5933,7 @@ class _$ClinicalUseDefinitionCopyWithImpl<$Res,
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -6381,7 +5961,7 @@ class _$ClinicalUseDefinitionCopyWithImpl<$Res,
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       typeElement: freezed == typeElement
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -6572,56 +6152,29 @@ abstract class _$$_ClinicalUseDefinitionCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@HiveField(0)
-          R4ResourceType resourceType,
-      @HiveField(1)
-          String? id,
-      @HiveField(2)
-          FhirMeta? meta,
-      @HiveField(3)
-          FhirUri? implicitRules,
-      @HiveField(4)
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      @HiveField(5)
-          FhirCode? language,
-      @HiveField(6)
-      @JsonKey(name: '_language')
-          Element? languageElement,
-      @HiveField(7)
-          Narrative? text,
-      @HiveField(8)
-          List<Resource>? contained,
-      @HiveField(9)
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      @HiveField(10)
-          List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          List<Identifier>? identifier,
-      @HiveField(12)
-          FhirCode? type,
-      @HiveField(13)
-      @JsonKey(name: '_type')
-          Element? typeElement,
-      @HiveField(14)
-          List<CodeableConcept>? category,
-      @HiveField(15)
-          List<Reference>? subject,
-      @HiveField(16)
-          CodeableConcept? status,
-      @HiveField(17)
-          ClinicalUseDefinitionContraindication? contraindication,
-      @HiveField(18)
-          ClinicalUseDefinitionIndication? indication,
-      @HiveField(19)
-          ClinicalUseDefinitionInteraction? interaction,
-      @HiveField(20)
-          List<Reference>? population,
-      @HiveField(21)
-          ClinicalUseDefinitionUndesirableEffect? undesirableEffect,
-      @HiveField(22)
-          ClinicalUseDefinitionWarning? warning});
+      {R4ResourceType resourceType,
+      String? id,
+      FhirMeta? meta,
+      FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+      FhirCode? language,
+      @JsonKey(name: '_language') Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      FhirCode? type,
+      @JsonKey(name: '_type') Element? typeElement,
+      List<CodeableConcept>? category,
+      List<Reference>? subject,
+      CodeableConcept? status,
+      ClinicalUseDefinitionContraindication? contraindication,
+      ClinicalUseDefinitionIndication? indication,
+      ClinicalUseDefinitionInteraction? interaction,
+      List<Reference>? population,
+      ClinicalUseDefinitionUndesirableEffect? undesirableEffect,
+      ClinicalUseDefinitionWarning? warning});
 
   @override
   $FhirMetaCopyWith<$Res>? get meta;
@@ -6706,7 +6259,7 @@ class __$$_ClinicalUseDefinitionCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -6734,7 +6287,7 @@ class __$$_ClinicalUseDefinitionCopyWithImpl<$Res>
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       typeElement: freezed == typeElement
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -6781,59 +6334,31 @@ class __$$_ClinicalUseDefinitionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@HiveType(typeId: 57)
 class _$_ClinicalUseDefinition extends _ClinicalUseDefinition {
   _$_ClinicalUseDefinition(
-      {@HiveField(0)
-          this.resourceType = R4ResourceType.ClinicalUseDefinition,
-      @HiveField(1)
-          this.id,
-      @HiveField(2)
-          this.meta,
-      @HiveField(3)
-          this.implicitRules,
-      @HiveField(4)
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
-      @HiveField(5)
-          this.language,
-      @HiveField(6)
-      @JsonKey(name: '_language')
-          this.languageElement,
-      @HiveField(7)
-          this.text,
-      @HiveField(8)
-          final List<Resource>? contained,
-      @HiveField(9)
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      @HiveField(10)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          final List<Identifier>? identifier,
-      @HiveField(12)
-          this.type,
-      @HiveField(13)
-      @JsonKey(name: '_type')
-          this.typeElement,
-      @HiveField(14)
-          final List<CodeableConcept>? category,
-      @HiveField(15)
-          final List<Reference>? subject,
-      @HiveField(16)
-          this.status,
-      @HiveField(17)
-          this.contraindication,
-      @HiveField(18)
-          this.indication,
-      @HiveField(19)
-          this.interaction,
-      @HiveField(20)
-          final List<Reference>? population,
-      @HiveField(21)
-          this.undesirableEffect,
-      @HiveField(22)
-          this.warning})
+      {this.resourceType = R4ResourceType.ClinicalUseDefinition,
+      this.id,
+      this.meta,
+      this.implicitRules,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      this.language,
+      @JsonKey(name: '_language') this.languageElement,
+      this.text,
+      final List<Resource>? contained,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      this.type,
+      @JsonKey(name: '_type') this.typeElement,
+      final List<CodeableConcept>? category,
+      final List<Reference>? subject,
+      this.status,
+      this.contraindication,
+      this.indication,
+      this.interaction,
+      final List<Reference>? population,
+      this.undesirableEffect,
+      this.warning})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -6849,44 +6374,36 @@ class _$_ClinicalUseDefinition extends _ClinicalUseDefinition {
   /// [resourceType] This is a ClinicalUseDefinition resource;
   @override
   @JsonKey()
-  @HiveField(0)
   final R4ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
   @override
-  @HiveField(1)
   final String? id;
 
   /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
   @override
-  @HiveField(2)
   final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
   @override
-  @HiveField(3)
   final FhirUri? implicitRules;
 
   /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
   @override
-  @HiveField(4)
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
 
   /// [language] The base language in which the resource is written.;
   @override
-  @HiveField(5)
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] (_language): Extensions for language;
   @override
-  @HiveField(6)
   @JsonKey(name: '_language')
   final Element? languageElement;
 
   /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
   @override
-  @HiveField(7)
   final Narrative? text;
 
   /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
@@ -6894,7 +6411,6 @@ class _$_ClinicalUseDefinition extends _ClinicalUseDefinition {
 
   /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
   @override
-  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -6908,7 +6424,6 @@ class _$_ClinicalUseDefinition extends _ClinicalUseDefinition {
 
   /// [extension_] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   @override
-  @HiveField(9)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
     final value = _extension_;
@@ -6923,7 +6438,6 @@ class _$_ClinicalUseDefinition extends _ClinicalUseDefinition {
 
   /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   @override
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -6938,7 +6452,6 @@ class _$_ClinicalUseDefinition extends _ClinicalUseDefinition {
 
   /// [identifier] Business identifier for this issue.;
   @override
-  @HiveField(11)
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
@@ -6949,12 +6462,10 @@ class _$_ClinicalUseDefinition extends _ClinicalUseDefinition {
 
   /// [type] indication | contraindication | interaction | undesirable-effect | warning.;
   @override
-  @HiveField(12)
-  final Code? type;
+  final FhirCode? type;
 
   /// [typeElement] (_type): Extensions for type;
   @override
-  @HiveField(13)
   @JsonKey(name: '_type')
   final Element? typeElement;
 
@@ -6963,7 +6474,6 @@ class _$_ClinicalUseDefinition extends _ClinicalUseDefinition {
 
   /// [category] A categorisation of the issue, primarily for dividing warnings into subject heading areas such as "Pregnancy and Lactation", "Overdose", "Effects on Ability to Drive and Use Machines".;
   @override
-  @HiveField(14)
   List<CodeableConcept>? get category {
     final value = _category;
     if (value == null) return null;
@@ -6977,7 +6487,6 @@ class _$_ClinicalUseDefinition extends _ClinicalUseDefinition {
 
   /// [subject] The medication or procedure for which this is an indication.;
   @override
-  @HiveField(15)
   List<Reference>? get subject {
     final value = _subject;
     if (value == null) return null;
@@ -6988,22 +6497,18 @@ class _$_ClinicalUseDefinition extends _ClinicalUseDefinition {
 
   /// [status] Whether this is a current issue or one that has been retired etc.;
   @override
-  @HiveField(16)
   final CodeableConcept? status;
 
   /// [contraindication] Specifics for when this is a contraindication.;
   @override
-  @HiveField(17)
   final ClinicalUseDefinitionContraindication? contraindication;
 
   /// [indication] Specifics for when this is an indication.;
   @override
-  @HiveField(18)
   final ClinicalUseDefinitionIndication? indication;
 
   /// [interaction] Specifics for when this is an interaction.;
   @override
-  @HiveField(19)
   final ClinicalUseDefinitionInteraction? interaction;
 
   /// [population] The population group to which this applies.;
@@ -7011,7 +6516,6 @@ class _$_ClinicalUseDefinition extends _ClinicalUseDefinition {
 
   /// [population] The population group to which this applies.;
   @override
-  @HiveField(20)
   List<Reference>? get population {
     final value = _population;
     if (value == null) return null;
@@ -7022,12 +6526,10 @@ class _$_ClinicalUseDefinition extends _ClinicalUseDefinition {
 
   /// [undesirableEffect] Describe the possible undesirable effects (negative outcomes) from the use of the medicinal product as treatment.;
   @override
-  @HiveField(21)
   final ClinicalUseDefinitionUndesirableEffect? undesirableEffect;
 
   /// [warning] A critical piece of information about environmental, health or physical risks or hazards that serve as caution to the user. For example 'Do not operate heavy machinery', 'May cause drowsiness', or 'Get medical advice/attention if you feel unwell'.;
   @override
-  @HiveField(22)
   final ClinicalUseDefinitionWarning? warning;
 
   @override
@@ -7126,57 +6628,29 @@ class _$_ClinicalUseDefinition extends _ClinicalUseDefinition {
 
 abstract class _ClinicalUseDefinition extends ClinicalUseDefinition {
   factory _ClinicalUseDefinition(
-          {@HiveField(0)
-              final R4ResourceType resourceType,
-          @HiveField(1)
-              final String? id,
-          @HiveField(2)
-              final FhirMeta? meta,
-          @HiveField(3)
-              final FhirUri? implicitRules,
-          @HiveField(4)
-          @JsonKey(name: '_implicitRules')
-              final Element? implicitRulesElement,
-          @HiveField(5)
-              final Code? language,
-          @HiveField(6)
-          @JsonKey(name: '_language')
-              final Element? languageElement,
-          @HiveField(7)
-              final Narrative? text,
-          @HiveField(8)
-              final List<Resource>? contained,
-          @HiveField(9)
-          @JsonKey(name: 'extension')
-              final List<FhirExtension>? extension_,
-          @HiveField(10)
-              final List<FhirExtension>? modifierExtension,
-          @HiveField(11)
-              final List<Identifier>? identifier,
-          @HiveField(12)
-              final Code? type,
-          @HiveField(13)
-          @JsonKey(name: '_type')
-              final Element? typeElement,
-          @HiveField(14)
-              final List<CodeableConcept>? category,
-          @HiveField(15)
-              final List<Reference>? subject,
-          @HiveField(16)
-              final CodeableConcept? status,
-          @HiveField(17)
-              final ClinicalUseDefinitionContraindication? contraindication,
-          @HiveField(18)
-              final ClinicalUseDefinitionIndication? indication,
-          @HiveField(19)
-              final ClinicalUseDefinitionInteraction? interaction,
-          @HiveField(20)
-              final List<Reference>? population,
-          @HiveField(21)
-              final ClinicalUseDefinitionUndesirableEffect? undesirableEffect,
-          @HiveField(22)
-              final ClinicalUseDefinitionWarning? warning}) =
-      _$_ClinicalUseDefinition;
+      {final R4ResourceType resourceType,
+      final String? id,
+      final FhirMeta? meta,
+      final FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
+      final FhirCode? language,
+      @JsonKey(name: '_language') final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final FhirCode? type,
+      @JsonKey(name: '_type') final Element? typeElement,
+      final List<CodeableConcept>? category,
+      final List<Reference>? subject,
+      final CodeableConcept? status,
+      final ClinicalUseDefinitionContraindication? contraindication,
+      final ClinicalUseDefinitionIndication? indication,
+      final ClinicalUseDefinitionInteraction? interaction,
+      final List<Reference>? population,
+      final ClinicalUseDefinitionUndesirableEffect? undesirableEffect,
+      final ClinicalUseDefinitionWarning? warning}) = _$_ClinicalUseDefinition;
   _ClinicalUseDefinition._() : super._();
 
   factory _ClinicalUseDefinition.fromJson(Map<String, dynamic> json) =
@@ -7185,121 +6659,98 @@ abstract class _ClinicalUseDefinition extends ClinicalUseDefinition {
   @override
 
   /// [resourceType] This is a ClinicalUseDefinition resource;
-  @HiveField(0)
   R4ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
-  @HiveField(1)
   String? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
-  @HiveField(2)
   FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
-  @HiveField(3)
   FhirUri? get implicitRules;
   @override
 
   /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
-  @HiveField(4)
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
 
   /// [language] The base language in which the resource is written.;
-  @HiveField(5)
   FhirCode? get language;
   @override
 
   /// [languageElement] (_language): Extensions for language;
-  @HiveField(6)
   @JsonKey(name: '_language')
   Element? get languageElement;
   @override
 
   /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
-  @HiveField(7)
   Narrative? get text;
   @override
 
   /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
-  @HiveField(8)
   List<Resource>? get contained;
   @override
 
   /// [extension_] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
-  @HiveField(9)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
 
   /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
 
   /// [identifier] Business identifier for this issue.;
-  @HiveField(11)
   List<Identifier>? get identifier;
   @override
 
   /// [type] indication | contraindication | interaction | undesirable-effect | warning.;
-  @HiveField(12)
   FhirCode? get type;
   @override
 
   /// [typeElement] (_type): Extensions for type;
-  @HiveField(13)
   @JsonKey(name: '_type')
   Element? get typeElement;
   @override
 
   /// [category] A categorisation of the issue, primarily for dividing warnings into subject heading areas such as "Pregnancy and Lactation", "Overdose", "Effects on Ability to Drive and Use Machines".;
-  @HiveField(14)
   List<CodeableConcept>? get category;
   @override
 
   /// [subject] The medication or procedure for which this is an indication.;
-  @HiveField(15)
   List<Reference>? get subject;
   @override
 
   /// [status] Whether this is a current issue or one that has been retired etc.;
-  @HiveField(16)
   CodeableConcept? get status;
   @override
 
   /// [contraindication] Specifics for when this is a contraindication.;
-  @HiveField(17)
   ClinicalUseDefinitionContraindication? get contraindication;
   @override
 
   /// [indication] Specifics for when this is an indication.;
-  @HiveField(18)
   ClinicalUseDefinitionIndication? get indication;
   @override
 
   /// [interaction] Specifics for when this is an interaction.;
-  @HiveField(19)
   ClinicalUseDefinitionInteraction? get interaction;
   @override
 
   /// [population] The population group to which this applies.;
-  @HiveField(20)
   List<Reference>? get population;
   @override
 
   /// [undesirableEffect] Describe the possible undesirable effects (negative outcomes) from the use of the medicinal product as treatment.;
-  @HiveField(21)
   ClinicalUseDefinitionUndesirableEffect? get undesirableEffect;
   @override
 
   /// [warning] A critical piece of information about environmental, health or physical risks or hazards that serve as caution to the user. For example 'Do not operate heavy machinery', 'May cause drowsiness', or 'Get medical advice/attention if you feel unwell'.;
-  @HiveField(22)
   ClinicalUseDefinitionWarning? get warning;
   @override
   @JsonKey(ignore: true)
@@ -8118,7 +7569,7 @@ mixin _$ClinicalUseDefinitionIndication {
   Range? get durationRange => throw _privateConstructorUsedError;
 
   /// [durationString] Timing or duration information, that may be associated with use with the indicated condition e.g. Adult patients suffering from myocardial infarction (from a few days until less than 35 days), ischaemic stroke (from 7 days until less than 6 months).;
-  Markdown? get durationString => throw _privateConstructorUsedError;
+  FhirMarkdown? get durationString => throw _privateConstructorUsedError;
 
   /// [durationStringElement] (_durationString): Extensions for durationString;
   @JsonKey(name: '_durationString')
@@ -8154,7 +7605,7 @@ abstract class $ClinicalUseDefinitionIndicationCopyWith<$Res> {
       List<CodeableReference>? comorbidity,
       CodeableReference? intendedEffect,
       Range? durationRange,
-      Markdown? durationString,
+      FhirMarkdown? durationString,
       @JsonKey(name: '_durationString') Element? durationStringElement,
       List<Reference>? undesirableEffect,
       List<ClinicalUseDefinitionOtherTherapy>? otherTherapy});
@@ -8229,7 +7680,7 @@ class _$ClinicalUseDefinitionIndicationCopyWithImpl<$Res,
       durationString: freezed == durationString
           ? _value.durationString
           : durationString // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       durationStringElement: freezed == durationStringElement
           ? _value.durationStringElement
           : durationStringElement // ignore: cast_nullable_to_non_nullable
@@ -8325,7 +7776,7 @@ abstract class _$$_ClinicalUseDefinitionIndicationCopyWith<$Res>
       List<CodeableReference>? comorbidity,
       CodeableReference? intendedEffect,
       Range? durationRange,
-      Markdown? durationString,
+      FhirMarkdown? durationString,
       @JsonKey(name: '_durationString') Element? durationStringElement,
       List<Reference>? undesirableEffect,
       List<ClinicalUseDefinitionOtherTherapy>? otherTherapy});
@@ -8404,7 +7855,7 @@ class __$$_ClinicalUseDefinitionIndicationCopyWithImpl<$Res>
       durationString: freezed == durationString
           ? _value.durationString
           : durationString // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       durationStringElement: freezed == durationStringElement
           ? _value.durationStringElement
           : durationStringElement // ignore: cast_nullable_to_non_nullable
@@ -8512,7 +7963,7 @@ class _$_ClinicalUseDefinitionIndication
 
   /// [durationString] Timing or duration information, that may be associated with use with the indicated condition e.g. Adult patients suffering from myocardial infarction (from a few days until less than 35 days), ischaemic stroke (from 7 days until less than 6 months).;
   @override
-  final Markdown? durationString;
+  final FhirMarkdown? durationString;
 
   /// [durationStringElement] (_durationString): Extensions for durationString;
   @override
@@ -8626,7 +8077,7 @@ abstract class _ClinicalUseDefinitionIndication
       final List<CodeableReference>? comorbidity,
       final CodeableReference? intendedEffect,
       final Range? durationRange,
-      final Markdown? durationString,
+      final FhirMarkdown? durationString,
       @JsonKey(name: '_durationString') final Element? durationStringElement,
       final List<Reference>? undesirableEffect,
       final List<ClinicalUseDefinitionOtherTherapy>?
@@ -8672,7 +8123,7 @@ abstract class _ClinicalUseDefinitionIndication
   @override
 
   /// [durationString] Timing or duration information, that may be associated with use with the indicated condition e.g. Adult patients suffering from myocardial infarction (from a few days until less than 35 days), ischaemic stroke (from 7 days until less than 6 months).;
-  Markdown? get durationString;
+  FhirMarkdown? get durationString;
   @override
 
   /// [durationStringElement] (_durationString): Extensions for durationString;
@@ -9874,7 +9325,7 @@ mixin _$ClinicalUseDefinitionWarning {
       throw _privateConstructorUsedError;
 
   /// [description] A textual definition of this warning, with formatting.;
-  Markdown? get description => throw _privateConstructorUsedError;
+  FhirMarkdown? get description => throw _privateConstructorUsedError;
 
   /// [descriptionElement] (_description): Extensions for description;
   @JsonKey(name: '_description')
@@ -9901,7 +9352,7 @@ abstract class $ClinicalUseDefinitionWarningCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Markdown? description,
+      FhirMarkdown? description,
       @JsonKey(name: '_description') Element? descriptionElement,
       CodeableConcept? code});
 
@@ -9946,7 +9397,7 @@ class _$ClinicalUseDefinitionWarningCopyWithImpl<$Res,
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -9996,7 +9447,7 @@ abstract class _$$_ClinicalUseDefinitionWarningCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Markdown? description,
+      FhirMarkdown? description,
       @JsonKey(name: '_description') Element? descriptionElement,
       CodeableConcept? code});
 
@@ -10042,7 +9493,7 @@ class __$$_ClinicalUseDefinitionWarningCopyWithImpl<$Res>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -10106,7 +9557,7 @@ class _$_ClinicalUseDefinitionWarning extends _ClinicalUseDefinitionWarning {
 
   /// [description] A textual definition of this warning, with formatting.;
   @override
-  final Markdown? description;
+  final FhirMarkdown? description;
 
   /// [descriptionElement] (_description): Extensions for description;
   @override
@@ -10171,7 +9622,7 @@ abstract class _ClinicalUseDefinitionWarning
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final Markdown? description,
+      final FhirMarkdown? description,
       @JsonKey(name: '_description') final Element? descriptionElement,
       final CodeableConcept? code}) = _$_ClinicalUseDefinitionWarning;
   _ClinicalUseDefinitionWarning._() : super._();
@@ -10195,7 +9646,7 @@ abstract class _ClinicalUseDefinitionWarning
   @override
 
   /// [description] A textual definition of this warning, with formatting.;
-  Markdown? get description;
+  FhirMarkdown? get description;
   @override
 
   /// [descriptionElement] (_description): Extensions for description;
@@ -10218,86 +9669,67 @@ ManufacturedItemDefinition _$ManufacturedItemDefinitionFromJson(
 
 /// @nodoc
 mixin _$ManufacturedItemDefinition {
-  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
-  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
-  @HiveField(2)
   FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
-  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
   @JsonKey(name: '_implicitRules')
-  @HiveField(4)
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.;
-  @HiveField(5)
   FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] (_language): Extensions for language;
   @JsonKey(name: '_language')
-  @HiveField(6)
   Element? get languageElement => throw _privateConstructorUsedError;
 
   /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
-  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
 
   /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
-  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   @JsonKey(name: 'extension')
-  @HiveField(9)
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
   /// [identifier] Unique identifier.;
-  @HiveField(11)
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [status] The status of this item. Enables tracking the life-cycle of the content.;
-  @HiveField(12)
   FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] (_status): Extensions for status;
   @JsonKey(name: '_status')
-  @HiveField(13)
   Element? get statusElement => throw _privateConstructorUsedError;
 
   /// [manufacturedDoseForm] Dose form as manufactured and before any transformation into the pharmaceutical product.;
-  @HiveField(14)
   CodeableConcept get manufacturedDoseForm =>
       throw _privateConstructorUsedError;
 
   /// [unitOfPresentation] The “real world” units in which the quantity of the manufactured item is described.;
-  @HiveField(15)
   CodeableConcept? get unitOfPresentation => throw _privateConstructorUsedError;
 
   /// [manufacturer] Manufacturer of the item (Note that this should be named "manufacturer" but it currently causes technical issues).;
-  @HiveField(16)
   List<Reference>? get manufacturer => throw _privateConstructorUsedError;
 
   /// [ingredient] The ingredients of this manufactured item. This is only needed if the ingredients are not specified by incoming references from the Ingredient resource.;
-  @HiveField(17)
   List<CodeableConcept>? get ingredient => throw _privateConstructorUsedError;
 
   /// [property] General characteristics of this item.;
-  @HiveField(18)
   List<ManufacturedItemDefinitionProperty>? get property =>
       throw _privateConstructorUsedError;
 
@@ -10315,48 +9747,25 @@ abstract class $ManufacturedItemDefinitionCopyWith<$Res> {
           ManufacturedItemDefinition>;
   @useResult
   $Res call(
-      {@HiveField(0)
-          R4ResourceType resourceType,
-      @HiveField(1)
-          String? id,
-      @HiveField(2)
-          FhirMeta? meta,
-      @HiveField(3)
-          FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-      @HiveField(4)
-          Element? implicitRulesElement,
-      @HiveField(5)
-          FhirCode? language,
-      @JsonKey(name: '_language')
-      @HiveField(6)
-          Element? languageElement,
-      @HiveField(7)
-          Narrative? text,
-      @HiveField(8)
-          List<Resource>? contained,
-      @JsonKey(name: 'extension')
-      @HiveField(9)
-          List<FhirExtension>? extension_,
-      @HiveField(10)
-          List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          List<Identifier>? identifier,
-      @HiveField(12)
-          FhirCode? status,
-      @JsonKey(name: '_status')
-      @HiveField(13)
-          Element? statusElement,
-      @HiveField(14)
-          CodeableConcept manufacturedDoseForm,
-      @HiveField(15)
-          CodeableConcept? unitOfPresentation,
-      @HiveField(16)
-          List<Reference>? manufacturer,
-      @HiveField(17)
-          List<CodeableConcept>? ingredient,
-      @HiveField(18)
-          List<ManufacturedItemDefinitionProperty>? property});
+      {R4ResourceType resourceType,
+      String? id,
+      FhirMeta? meta,
+      FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+      FhirCode? language,
+      @JsonKey(name: '_language') Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      FhirCode? status,
+      @JsonKey(name: '_status') Element? statusElement,
+      CodeableConcept manufacturedDoseForm,
+      CodeableConcept? unitOfPresentation,
+      List<Reference>? manufacturer,
+      List<CodeableConcept>? ingredient,
+      List<ManufacturedItemDefinitionProperty>? property});
 
   $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -10425,7 +9834,7 @@ class _$ManufacturedItemDefinitionCopyWithImpl<$Res,
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -10453,7 +9862,7 @@ class _$ManufacturedItemDefinitionCopyWithImpl<$Res,
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -10572,48 +9981,25 @@ abstract class _$$_ManufacturedItemDefinitionCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@HiveField(0)
-          R4ResourceType resourceType,
-      @HiveField(1)
-          String? id,
-      @HiveField(2)
-          FhirMeta? meta,
-      @HiveField(3)
-          FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-      @HiveField(4)
-          Element? implicitRulesElement,
-      @HiveField(5)
-          FhirCode? language,
-      @JsonKey(name: '_language')
-      @HiveField(6)
-          Element? languageElement,
-      @HiveField(7)
-          Narrative? text,
-      @HiveField(8)
-          List<Resource>? contained,
-      @JsonKey(name: 'extension')
-      @HiveField(9)
-          List<FhirExtension>? extension_,
-      @HiveField(10)
-          List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          List<Identifier>? identifier,
-      @HiveField(12)
-          FhirCode? status,
-      @JsonKey(name: '_status')
-      @HiveField(13)
-          Element? statusElement,
-      @HiveField(14)
-          CodeableConcept manufacturedDoseForm,
-      @HiveField(15)
-          CodeableConcept? unitOfPresentation,
-      @HiveField(16)
-          List<Reference>? manufacturer,
-      @HiveField(17)
-          List<CodeableConcept>? ingredient,
-      @HiveField(18)
-          List<ManufacturedItemDefinitionProperty>? property});
+      {R4ResourceType resourceType,
+      String? id,
+      FhirMeta? meta,
+      FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+      FhirCode? language,
+      @JsonKey(name: '_language') Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      FhirCode? status,
+      @JsonKey(name: '_status') Element? statusElement,
+      CodeableConcept manufacturedDoseForm,
+      CodeableConcept? unitOfPresentation,
+      List<Reference>? manufacturer,
+      List<CodeableConcept>? ingredient,
+      List<ManufacturedItemDefinitionProperty>? property});
 
   @override
   $FhirMetaCopyWith<$Res>? get meta;
@@ -10688,7 +10074,7 @@ class __$$_ManufacturedItemDefinitionCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -10716,7 +10102,7 @@ class __$$_ManufacturedItemDefinitionCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -10747,51 +10133,27 @@ class __$$_ManufacturedItemDefinitionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@HiveType(typeId: 58)
 class _$_ManufacturedItemDefinition extends _ManufacturedItemDefinition {
   _$_ManufacturedItemDefinition(
-      {@HiveField(0)
-          this.resourceType = R4ResourceType.ManufacturedItemDefinition,
-      @HiveField(1)
-          this.id,
-      @HiveField(2)
-          this.meta,
-      @HiveField(3)
-          this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-      @HiveField(4)
-          this.implicitRulesElement,
-      @HiveField(5)
-          this.language,
-      @JsonKey(name: '_language')
-      @HiveField(6)
-          this.languageElement,
-      @HiveField(7)
-          this.text,
-      @HiveField(8)
-          final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-      @HiveField(9)
-          final List<FhirExtension>? extension_,
-      @HiveField(10)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          final List<Identifier>? identifier,
-      @HiveField(12)
-          this.status,
-      @JsonKey(name: '_status')
-      @HiveField(13)
-          this.statusElement,
-      @HiveField(14)
-          required this.manufacturedDoseForm,
-      @HiveField(15)
-          this.unitOfPresentation,
-      @HiveField(16)
-          final List<Reference>? manufacturer,
-      @HiveField(17)
-          final List<CodeableConcept>? ingredient,
-      @HiveField(18)
-          final List<ManufacturedItemDefinitionProperty>? property})
+      {this.resourceType = R4ResourceType.ManufacturedItemDefinition,
+      this.id,
+      this.meta,
+      this.implicitRules,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      this.language,
+      @JsonKey(name: '_language') this.languageElement,
+      this.text,
+      final List<Resource>? contained,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      this.status,
+      @JsonKey(name: '_status') this.statusElement,
+      required this.manufacturedDoseForm,
+      this.unitOfPresentation,
+      final List<Reference>? manufacturer,
+      final List<CodeableConcept>? ingredient,
+      final List<ManufacturedItemDefinitionProperty>? property})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -10806,44 +10168,36 @@ class _$_ManufacturedItemDefinition extends _ManufacturedItemDefinition {
 
   @override
   @JsonKey()
-  @HiveField(0)
   final R4ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
   @override
-  @HiveField(1)
   final String? id;
 
   /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
   @override
-  @HiveField(2)
   final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
   @override
-  @HiveField(3)
   final FhirUri? implicitRules;
 
   /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
-  @HiveField(4)
   final Element? implicitRulesElement;
 
   /// [language] The base language in which the resource is written.;
   @override
-  @HiveField(5)
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] (_language): Extensions for language;
   @override
   @JsonKey(name: '_language')
-  @HiveField(6)
   final Element? languageElement;
 
   /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
   @override
-  @HiveField(7)
   final Narrative? text;
 
   /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
@@ -10851,7 +10205,6 @@ class _$_ManufacturedItemDefinition extends _ManufacturedItemDefinition {
 
   /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
   @override
-  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -10866,7 +10219,6 @@ class _$_ManufacturedItemDefinition extends _ManufacturedItemDefinition {
   /// [extension_] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   @override
   @JsonKey(name: 'extension')
-  @HiveField(9)
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
@@ -10882,7 +10234,6 @@ class _$_ManufacturedItemDefinition extends _ManufacturedItemDefinition {
   /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   @override
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -10897,7 +10248,6 @@ class _$_ManufacturedItemDefinition extends _ManufacturedItemDefinition {
 
   /// [identifier] Unique identifier.;
   @override
-  @HiveField(11)
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
@@ -10908,23 +10258,19 @@ class _$_ManufacturedItemDefinition extends _ManufacturedItemDefinition {
 
   /// [status] The status of this item. Enables tracking the life-cycle of the content.;
   @override
-  @HiveField(12)
-  final Code? status;
+  final FhirCode? status;
 
   /// [statusElement] (_status): Extensions for status;
   @override
   @JsonKey(name: '_status')
-  @HiveField(13)
   final Element? statusElement;
 
   /// [manufacturedDoseForm] Dose form as manufactured and before any transformation into the pharmaceutical product.;
   @override
-  @HiveField(14)
   final CodeableConcept manufacturedDoseForm;
 
   /// [unitOfPresentation] The “real world” units in which the quantity of the manufactured item is described.;
   @override
-  @HiveField(15)
   final CodeableConcept? unitOfPresentation;
 
   /// [manufacturer] Manufacturer of the item (Note that this should be named "manufacturer" but it currently causes technical issues).;
@@ -10932,7 +10278,6 @@ class _$_ManufacturedItemDefinition extends _ManufacturedItemDefinition {
 
   /// [manufacturer] Manufacturer of the item (Note that this should be named "manufacturer" but it currently causes technical issues).;
   @override
-  @HiveField(16)
   List<Reference>? get manufacturer {
     final value = _manufacturer;
     if (value == null) return null;
@@ -10946,7 +10291,6 @@ class _$_ManufacturedItemDefinition extends _ManufacturedItemDefinition {
 
   /// [ingredient] The ingredients of this manufactured item. This is only needed if the ingredients are not specified by incoming references from the Ingredient resource.;
   @override
-  @HiveField(17)
   List<CodeableConcept>? get ingredient {
     final value = _ingredient;
     if (value == null) return null;
@@ -10960,7 +10304,6 @@ class _$_ManufacturedItemDefinition extends _ManufacturedItemDefinition {
 
   /// [property] General characteristics of this item.;
   @override
-  @HiveField(18)
   List<ManufacturedItemDefinitionProperty>? get property {
     final value = _property;
     if (value == null) return null;
@@ -11056,48 +10399,25 @@ class _$_ManufacturedItemDefinition extends _ManufacturedItemDefinition {
 
 abstract class _ManufacturedItemDefinition extends ManufacturedItemDefinition {
   factory _ManufacturedItemDefinition(
-          {@HiveField(0)
-              final R4ResourceType resourceType,
-          @HiveField(1)
-              final String? id,
-          @HiveField(2)
-              final FhirMeta? meta,
-          @HiveField(3)
-              final FhirUri? implicitRules,
-          @JsonKey(name: '_implicitRules')
-          @HiveField(4)
-              final Element? implicitRulesElement,
-          @HiveField(5)
-              final Code? language,
-          @JsonKey(name: '_language')
-          @HiveField(6)
-              final Element? languageElement,
-          @HiveField(7)
-              final Narrative? text,
-          @HiveField(8)
-              final List<Resource>? contained,
-          @JsonKey(name: 'extension')
-          @HiveField(9)
-              final List<FhirExtension>? extension_,
-          @HiveField(10)
-              final List<FhirExtension>? modifierExtension,
-          @HiveField(11)
-              final List<Identifier>? identifier,
-          @HiveField(12)
-              final Code? status,
-          @JsonKey(name: '_status')
-          @HiveField(13)
-              final Element? statusElement,
-          @HiveField(14)
-              required final CodeableConcept manufacturedDoseForm,
-          @HiveField(15)
-              final CodeableConcept? unitOfPresentation,
-          @HiveField(16)
-              final List<Reference>? manufacturer,
-          @HiveField(17)
-              final List<CodeableConcept>? ingredient,
-          @HiveField(18)
-              final List<ManufacturedItemDefinitionProperty>? property}) =
+          {final R4ResourceType resourceType,
+          final String? id,
+          final FhirMeta? meta,
+          final FhirUri? implicitRules,
+          @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
+          final FhirCode? language,
+          @JsonKey(name: '_language') final Element? languageElement,
+          final Narrative? text,
+          final List<Resource>? contained,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final List<Identifier>? identifier,
+          final FhirCode? status,
+          @JsonKey(name: '_status') final Element? statusElement,
+          required final CodeableConcept manufacturedDoseForm,
+          final CodeableConcept? unitOfPresentation,
+          final List<Reference>? manufacturer,
+          final List<CodeableConcept>? ingredient,
+          final List<ManufacturedItemDefinitionProperty>? property}) =
       _$_ManufacturedItemDefinition;
   _ManufacturedItemDefinition._() : super._();
 
@@ -11105,102 +10425,83 @@ abstract class _ManufacturedItemDefinition extends ManufacturedItemDefinition {
       _$_ManufacturedItemDefinition.fromJson;
 
   @override
-  @HiveField(0)
   R4ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
-  @HiveField(1)
   String? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
-  @HiveField(2)
   FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
-  @HiveField(3)
   FhirUri? get implicitRules;
   @override
 
   /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
   @JsonKey(name: '_implicitRules')
-  @HiveField(4)
   Element? get implicitRulesElement;
   @override
 
   /// [language] The base language in which the resource is written.;
-  @HiveField(5)
   FhirCode? get language;
   @override
 
   /// [languageElement] (_language): Extensions for language;
   @JsonKey(name: '_language')
-  @HiveField(6)
   Element? get languageElement;
   @override
 
   /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
-  @HiveField(7)
   Narrative? get text;
   @override
 
   /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
-  @HiveField(8)
   List<Resource>? get contained;
   @override
 
   /// [extension_] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   @JsonKey(name: 'extension')
-  @HiveField(9)
   List<FhirExtension>? get extension_;
   @override
 
   /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
 
   /// [identifier] Unique identifier.;
-  @HiveField(11)
   List<Identifier>? get identifier;
   @override
 
   /// [status] The status of this item. Enables tracking the life-cycle of the content.;
-  @HiveField(12)
   FhirCode? get status;
   @override
 
   /// [statusElement] (_status): Extensions for status;
   @JsonKey(name: '_status')
-  @HiveField(13)
   Element? get statusElement;
   @override
 
   /// [manufacturedDoseForm] Dose form as manufactured and before any transformation into the pharmaceutical product.;
-  @HiveField(14)
   CodeableConcept get manufacturedDoseForm;
   @override
 
   /// [unitOfPresentation] The “real world” units in which the quantity of the manufactured item is described.;
-  @HiveField(15)
   CodeableConcept? get unitOfPresentation;
   @override
 
   /// [manufacturer] Manufacturer of the item (Note that this should be named "manufacturer" but it currently causes technical issues).;
-  @HiveField(16)
   List<Reference>? get manufacturer;
   @override
 
   /// [ingredient] The ingredients of this manufactured item. This is only needed if the ingredients are not specified by incoming references from the Ingredient resource.;
-  @HiveField(17)
   List<CodeableConcept>? get ingredient;
   @override
 
   /// [property] General characteristics of this item.;
-  @HiveField(18)
   List<ManufacturedItemDefinitionProperty>? get property;
   @override
   @JsonKey(ignore: true)
@@ -11238,14 +10539,14 @@ mixin _$ManufacturedItemDefinitionProperty {
   Quantity? get valueQuantity => throw _privateConstructorUsedError;
 
   /// [valueDate] A value for the characteristic.;
-  Date? get valueDate => throw _privateConstructorUsedError;
+  FhirDate? get valueDate => throw _privateConstructorUsedError;
 
   /// [valueDateElement] (_valueDate): Extensions for valueDate;
   @JsonKey(name: '_valueDate')
   Element? get valueDateElement => throw _privateConstructorUsedError;
 
   /// [valueBoolean] A value for the characteristic.;
-  Boolean? get valueBoolean => throw _privateConstructorUsedError;
+  FhirBoolean? get valueBoolean => throw _privateConstructorUsedError;
 
   /// [valueBooleanElement] (_valueBoolean): Extensions for valueBoolean;
   @JsonKey(name: '_valueBoolean')
@@ -11276,9 +10577,9 @@ abstract class $ManufacturedItemDefinitionPropertyCopyWith<$Res> {
       CodeableConcept type,
       CodeableConcept? valueCodeableConcept,
       Quantity? valueQuantity,
-      Date? valueDate,
+      FhirDate? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
-      Boolean? valueBoolean,
+      FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       Attachment? valueAttachment});
 
@@ -11344,7 +10645,7 @@ class _$ManufacturedItemDefinitionPropertyCopyWithImpl<$Res,
       valueDate: freezed == valueDate
           ? _value.valueDate
           : valueDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       valueDateElement: freezed == valueDateElement
           ? _value.valueDateElement
           : valueDateElement // ignore: cast_nullable_to_non_nullable
@@ -11352,7 +10653,7 @@ class _$ManufacturedItemDefinitionPropertyCopyWithImpl<$Res,
       valueBoolean: freezed == valueBoolean
           ? _value.valueBoolean
           : valueBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       valueBooleanElement: freezed == valueBooleanElement
           ? _value.valueBooleanElement
           : valueBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -11450,9 +10751,9 @@ abstract class _$$_ManufacturedItemDefinitionPropertyCopyWith<$Res>
       CodeableConcept type,
       CodeableConcept? valueCodeableConcept,
       Quantity? valueQuantity,
-      Date? valueDate,
+      FhirDate? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
-      Boolean? valueBoolean,
+      FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       Attachment? valueAttachment});
 
@@ -11523,7 +10824,7 @@ class __$$_ManufacturedItemDefinitionPropertyCopyWithImpl<$Res>
       valueDate: freezed == valueDate
           ? _value.valueDate
           : valueDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       valueDateElement: freezed == valueDateElement
           ? _value.valueDateElement
           : valueDateElement // ignore: cast_nullable_to_non_nullable
@@ -11531,7 +10832,7 @@ class __$$_ManufacturedItemDefinitionPropertyCopyWithImpl<$Res>
       valueBoolean: freezed == valueBoolean
           ? _value.valueBoolean
           : valueBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       valueBooleanElement: freezed == valueBooleanElement
           ? _value.valueBooleanElement
           : valueBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -11616,7 +10917,7 @@ class _$_ManufacturedItemDefinitionProperty
 
   /// [valueDate] A value for the characteristic.;
   @override
-  final Date? valueDate;
+  final FhirDate? valueDate;
 
   /// [valueDateElement] (_valueDate): Extensions for valueDate;
   @override
@@ -11625,7 +10926,7 @@ class _$_ManufacturedItemDefinitionProperty
 
   /// [valueBoolean] A value for the characteristic.;
   @override
-  final Boolean? valueBoolean;
+  final FhirBoolean? valueBoolean;
 
   /// [valueBooleanElement] (_valueBoolean): Extensions for valueBoolean;
   @override
@@ -11709,9 +11010,9 @@ abstract class _ManufacturedItemDefinitionProperty
           required final CodeableConcept type,
           final CodeableConcept? valueCodeableConcept,
           final Quantity? valueQuantity,
-          final Date? valueDate,
+          final FhirDate? valueDate,
           @JsonKey(name: '_valueDate') final Element? valueDateElement,
-          final Boolean? valueBoolean,
+          final FhirBoolean? valueBoolean,
           @JsonKey(name: '_valueBoolean') final Element? valueBooleanElement,
           final Attachment? valueAttachment}) =
       _$_ManufacturedItemDefinitionProperty;
@@ -11750,7 +11051,7 @@ abstract class _ManufacturedItemDefinitionProperty
   @override
 
   /// [valueDate] A value for the characteristic.;
-  Date? get valueDate;
+  FhirDate? get valueDate;
   @override
 
   /// [valueDateElement] (_valueDate): Extensions for valueDate;
@@ -11759,7 +11060,7 @@ abstract class _ManufacturedItemDefinitionProperty
   @override
 
   /// [valueBoolean] A value for the characteristic.;
-  Boolean? get valueBoolean;
+  FhirBoolean? get valueBoolean;
   @override
 
   /// [valueBooleanElement] (_valueBoolean): Extensions for valueBoolean;
@@ -11783,196 +11084,153 @@ MedicinalProductDefinition _$MedicinalProductDefinitionFromJson(
 
 /// @nodoc
 mixin _$MedicinalProductDefinition {
-  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
-  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
-  @HiveField(2)
   FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
-  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
   @JsonKey(name: '_implicitRules')
-  @HiveField(4)
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.;
-  @HiveField(5)
   FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] (_language): Extensions for language;
   @JsonKey(name: '_language')
-  @HiveField(6)
   Element? get languageElement => throw _privateConstructorUsedError;
 
   /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
-  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
 
   /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
-  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   @JsonKey(name: 'extension')
-  @HiveField(9)
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
   /// [identifier] Business identifier for this product. Could be an MPID. When in development or being regulated, products are typically referenced by official identifiers, assigned by a manufacturer or regulator, and unique to a product (which, when compared to a product instance being prescribed, is actually a product type). See also MedicinalProductDefinition.code.;
-  @HiveField(11)
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [type] Regulatory type, e.g. Investigational or Authorized.;
-  @HiveField(12)
   CodeableConcept? get type => throw _privateConstructorUsedError;
 
   /// [domain] If this medicine applies to human or veterinary uses.;
-  @HiveField(13)
   CodeableConcept? get domain => throw _privateConstructorUsedError;
 
   /// [version] A business identifier relating to a specific version of the product, this is commonly used to support revisions to an existing product.;
-  @HiveField(14)
   String? get version => throw _privateConstructorUsedError;
 
   /// [versionElement] (_version): Extensions for version;
   @JsonKey(name: '_version')
-  @HiveField(15)
   Element? get versionElement => throw _privateConstructorUsedError;
 
   /// [status] The status within the lifecycle of this product record. A high-level status, this is not intended to duplicate details carried elsewhere such as legal status, or authorization status.;
-  @HiveField(16)
   CodeableConcept? get status => throw _privateConstructorUsedError;
 
   /// [statusDate] The date at which the given status became applicable.;
-  @HiveField(17)
   FhirDateTime? get statusDate => throw _privateConstructorUsedError;
 
   /// [statusDateElement] (_statusDate): Extensions for statusDate;
   @JsonKey(name: '_statusDate')
-  @HiveField(18)
   Element? get statusDateElement => throw _privateConstructorUsedError;
 
   /// [description] General description of this product.;
-  @HiveField(19)
-  Markdown? get description => throw _privateConstructorUsedError;
+  FhirMarkdown? get description => throw _privateConstructorUsedError;
 
   /// [descriptionElement] (_description): Extensions for description;
   @JsonKey(name: '_description')
-  @HiveField(20)
   Element? get descriptionElement => throw _privateConstructorUsedError;
 
   /// [combinedPharmaceuticalDoseForm] The dose form for a single part product, or combined form of a multiple part product. This is one concept that describes all the components. It does not represent the form with components physically mixed, if that might be necessary, for which see (AdministrableProductDefinition.administrableDoseForm).;
-  @HiveField(21)
   CodeableConcept? get combinedPharmaceuticalDoseForm =>
       throw _privateConstructorUsedError;
 
   /// [route] The path by which the product is taken into or makes contact with the body. In some regions this is referred to as the licenced or approved route. See also AdministrableProductDefinition resource. MedicinalProductDefinition.route is the same concept as AdministrableProductDefinition.routeOfAdministration.code, and they cannot be used together.;
-  @HiveField(22)
   List<CodeableConcept>? get route => throw _privateConstructorUsedError;
 
   /// [indication] Description of indication(s) for this product, used when structured indications are not required. In cases where structured indications are required, they are captured using the ClinicalUseDefinition resource. An indication is a medical situation for which using the product is appropriate.;
-  @HiveField(23)
-  Markdown? get indication => throw _privateConstructorUsedError;
+  FhirMarkdown? get indication => throw _privateConstructorUsedError;
 
   /// [indicationElement] (_indication): Extensions for indication;
   @JsonKey(name: '_indication')
-  @HiveField(24)
   Element? get indicationElement => throw _privateConstructorUsedError;
 
   /// [legalStatusOfSupply] The legal status of supply of the medicinal product as classified by the regulator.;
-  @HiveField(25)
   CodeableConcept? get legalStatusOfSupply =>
       throw _privateConstructorUsedError;
 
   /// [additionalMonitoringIndicator] Whether the Medicinal Product is subject to additional monitoring for regulatory reasons, such as heightened reporting requirements.;
-  @HiveField(26)
   CodeableConcept? get additionalMonitoringIndicator =>
       throw _privateConstructorUsedError;
 
   /// [specialMeasures] Whether the Medicinal Product is subject to special measures for regulatory reasons, such as a requirement to conduct post-authorisation studies.;
-  @HiveField(27)
   List<CodeableConcept>? get specialMeasures =>
       throw _privateConstructorUsedError;
 
   /// [pediatricUseIndicator] If authorised for use in children, or infants, neonates etc.;
-  @HiveField(28)
   CodeableConcept? get pediatricUseIndicator =>
       throw _privateConstructorUsedError;
 
   /// [classification] Allows the product to be classified by various systems, commonly WHO ATC.;
-  @HiveField(29)
   List<CodeableConcept>? get classification =>
       throw _privateConstructorUsedError;
 
   /// [marketingStatus] Marketing status of the medicinal product, in contrast to marketing authorization. This refers to the product being actually 'on the market' as opposed to being allowed to be on the market (which is an authorization).;
-  @HiveField(30)
   List<MarketingStatus>? get marketingStatus =>
       throw _privateConstructorUsedError;
 
   /// [packagedMedicinalProduct] Package type for the product. See also the PackagedProductDefinition resource.;
-  @HiveField(31)
   List<CodeableConcept>? get packagedMedicinalProduct =>
       throw _privateConstructorUsedError;
 
   /// [ingredient] The ingredients of this medicinal product - when not detailed in other resources. This is only needed if the ingredients are not specified by incoming references from the Ingredient resource, or indirectly via incoming AdministrableProductDefinition, PackagedProductDefinition or ManufacturedItemDefinition references. In cases where those levels of detail are not used, the ingredients may be specified directly here as codes.;
-  @HiveField(32)
   List<CodeableConcept>? get ingredient => throw _privateConstructorUsedError;
 
   /// [impurity] Any component of the drug product which is not the chemical entity defined as the drug substance, or an excipient in the drug product. This includes process-related impurities and contaminants, product-related impurities including degradation products.;
-  @HiveField(33)
   List<CodeableReference>? get impurity => throw _privateConstructorUsedError;
 
   /// [attachedDocument] Additional information or supporting documentation about the medicinal product.;
-  @HiveField(34)
   List<Reference>? get attachedDocument => throw _privateConstructorUsedError;
 
   /// [masterFile] A master file for the medicinal product (e.g. Pharmacovigilance System Master File). Drug master files (DMFs) are documents submitted to regulatory agencies to provide confidential detailed information about facilities, processes or articles used in the manufacturing, processing, packaging and storing of drug products.;
-  @HiveField(35)
   List<Reference>? get masterFile => throw _privateConstructorUsedError;
 
   /// [contact] A product specific contact, person (in a role), or an organization.;
-  @HiveField(36)
   List<MedicinalProductDefinitionContact>? get contact =>
       throw _privateConstructorUsedError;
 
   /// [clinicalTrial] Clinical trials or studies that this product is involved in.;
-  @HiveField(37)
   List<Reference>? get clinicalTrial => throw _privateConstructorUsedError;
 
   /// [code] A code that this product is known by, usually within some formal terminology, perhaps assigned by a third party (i.e. not the manufacturer or regulator). Products (types of medications) tend to be known by identifiers during development and within regulatory process. However when they are prescribed they tend to be identified by codes. The same product may be have multiple codes, applied to it by multiple organizations.;
-  @HiveField(38)
   List<Coding>? get code => throw _privateConstructorUsedError;
 
   /// [name] The product's name, including full name and possibly coded parts.;
-  @HiveField(39)
   List<MedicinalProductDefinitionName> get name =>
       throw _privateConstructorUsedError;
 
   /// [crossReference] Reference to another product, e.g. for linking authorised to investigational product, or a virtual product.;
-  @HiveField(40)
   List<MedicinalProductDefinitionCrossReference>? get crossReference =>
       throw _privateConstructorUsedError;
 
   /// [operation] A manufacturing or administrative process or step associated with (or performed on) the medicinal product.;
-  @HiveField(41)
   List<MedicinalProductDefinitionOperation>? get operation =>
       throw _privateConstructorUsedError;
 
   /// [characteristic] Allows the key product features to be recorded, such as "sugar free", "modified release", "parallel import".;
-  @HiveField(42)
   List<MedicinalProductDefinitionCharacteristic>? get characteristic =>
       throw _privateConstructorUsedError;
 
@@ -11990,99 +11248,49 @@ abstract class $MedicinalProductDefinitionCopyWith<$Res> {
           MedicinalProductDefinition>;
   @useResult
   $Res call(
-      {@HiveField(0)
-          R4ResourceType resourceType,
-      @HiveField(1)
-          String? id,
-      @HiveField(2)
-          FhirMeta? meta,
-      @HiveField(3)
-          FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-      @HiveField(4)
-          Element? implicitRulesElement,
-      @HiveField(5)
-          FhirCode? language,
-      @JsonKey(name: '_language')
-      @HiveField(6)
-          Element? languageElement,
-      @HiveField(7)
-          Narrative? text,
-      @HiveField(8)
-          List<Resource>? contained,
-      @JsonKey(name: 'extension')
-      @HiveField(9)
-          List<FhirExtension>? extension_,
-      @HiveField(10)
-          List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          List<Identifier>? identifier,
-      @HiveField(12)
-          CodeableConcept? type,
-      @HiveField(13)
-          CodeableConcept? domain,
-      @HiveField(14)
-          String? version,
-      @JsonKey(name: '_version')
-      @HiveField(15)
-          Element? versionElement,
-      @HiveField(16)
-          CodeableConcept? status,
-      @HiveField(17)
-          FhirDateTime? statusDate,
-      @JsonKey(name: '_statusDate')
-      @HiveField(18)
-          Element? statusDateElement,
-      @HiveField(19)
-          Markdown? description,
-      @JsonKey(name: '_description')
-      @HiveField(20)
-          Element? descriptionElement,
-      @HiveField(21)
-          CodeableConcept? combinedPharmaceuticalDoseForm,
-      @HiveField(22)
-          List<CodeableConcept>? route,
-      @HiveField(23)
-          Markdown? indication,
-      @JsonKey(name: '_indication')
-      @HiveField(24)
-          Element? indicationElement,
-      @HiveField(25)
-          CodeableConcept? legalStatusOfSupply,
-      @HiveField(26)
-          CodeableConcept? additionalMonitoringIndicator,
-      @HiveField(27)
-          List<CodeableConcept>? specialMeasures,
-      @HiveField(28)
-          CodeableConcept? pediatricUseIndicator,
-      @HiveField(29)
-          List<CodeableConcept>? classification,
-      @HiveField(30)
-          List<MarketingStatus>? marketingStatus,
-      @HiveField(31)
-          List<CodeableConcept>? packagedMedicinalProduct,
-      @HiveField(32)
-          List<CodeableConcept>? ingredient,
-      @HiveField(33)
-          List<CodeableReference>? impurity,
-      @HiveField(34)
-          List<Reference>? attachedDocument,
-      @HiveField(35)
-          List<Reference>? masterFile,
-      @HiveField(36)
-          List<MedicinalProductDefinitionContact>? contact,
-      @HiveField(37)
-          List<Reference>? clinicalTrial,
-      @HiveField(38)
-          List<Coding>? code,
-      @HiveField(39)
-          List<MedicinalProductDefinitionName> name,
-      @HiveField(40)
-          List<MedicinalProductDefinitionCrossReference>? crossReference,
-      @HiveField(41)
-          List<MedicinalProductDefinitionOperation>? operation,
-      @HiveField(42)
-          List<MedicinalProductDefinitionCharacteristic>? characteristic});
+      {R4ResourceType resourceType,
+      String? id,
+      FhirMeta? meta,
+      FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+      FhirCode? language,
+      @JsonKey(name: '_language') Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      CodeableConcept? type,
+      CodeableConcept? domain,
+      String? version,
+      @JsonKey(name: '_version') Element? versionElement,
+      CodeableConcept? status,
+      FhirDateTime? statusDate,
+      @JsonKey(name: '_statusDate') Element? statusDateElement,
+      FhirMarkdown? description,
+      @JsonKey(name: '_description') Element? descriptionElement,
+      CodeableConcept? combinedPharmaceuticalDoseForm,
+      List<CodeableConcept>? route,
+      FhirMarkdown? indication,
+      @JsonKey(name: '_indication') Element? indicationElement,
+      CodeableConcept? legalStatusOfSupply,
+      CodeableConcept? additionalMonitoringIndicator,
+      List<CodeableConcept>? specialMeasures,
+      CodeableConcept? pediatricUseIndicator,
+      List<CodeableConcept>? classification,
+      List<MarketingStatus>? marketingStatus,
+      List<CodeableConcept>? packagedMedicinalProduct,
+      List<CodeableConcept>? ingredient,
+      List<CodeableReference>? impurity,
+      List<Reference>? attachedDocument,
+      List<Reference>? masterFile,
+      List<MedicinalProductDefinitionContact>? contact,
+      List<Reference>? clinicalTrial,
+      List<Coding>? code,
+      List<MedicinalProductDefinitionName> name,
+      List<MedicinalProductDefinitionCrossReference>? crossReference,
+      List<MedicinalProductDefinitionOperation>? operation,
+      List<MedicinalProductDefinitionCharacteristic>? characteristic});
 
   $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -12183,7 +11391,7 @@ class _$MedicinalProductDefinitionCopyWithImpl<$Res,
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -12239,7 +11447,7 @@ class _$MedicinalProductDefinitionCopyWithImpl<$Res,
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -12255,7 +11463,7 @@ class _$MedicinalProductDefinitionCopyWithImpl<$Res,
       indication: freezed == indication
           ? _value.indication
           : indication // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       indicationElement: freezed == indicationElement
           ? _value.indicationElement
           : indicationElement // ignore: cast_nullable_to_non_nullable
@@ -12531,99 +11739,49 @@ abstract class _$$_MedicinalProductDefinitionCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@HiveField(0)
-          R4ResourceType resourceType,
-      @HiveField(1)
-          String? id,
-      @HiveField(2)
-          FhirMeta? meta,
-      @HiveField(3)
-          FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-      @HiveField(4)
-          Element? implicitRulesElement,
-      @HiveField(5)
-          FhirCode? language,
-      @JsonKey(name: '_language')
-      @HiveField(6)
-          Element? languageElement,
-      @HiveField(7)
-          Narrative? text,
-      @HiveField(8)
-          List<Resource>? contained,
-      @JsonKey(name: 'extension')
-      @HiveField(9)
-          List<FhirExtension>? extension_,
-      @HiveField(10)
-          List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          List<Identifier>? identifier,
-      @HiveField(12)
-          CodeableConcept? type,
-      @HiveField(13)
-          CodeableConcept? domain,
-      @HiveField(14)
-          String? version,
-      @JsonKey(name: '_version')
-      @HiveField(15)
-          Element? versionElement,
-      @HiveField(16)
-          CodeableConcept? status,
-      @HiveField(17)
-          FhirDateTime? statusDate,
-      @JsonKey(name: '_statusDate')
-      @HiveField(18)
-          Element? statusDateElement,
-      @HiveField(19)
-          Markdown? description,
-      @JsonKey(name: '_description')
-      @HiveField(20)
-          Element? descriptionElement,
-      @HiveField(21)
-          CodeableConcept? combinedPharmaceuticalDoseForm,
-      @HiveField(22)
-          List<CodeableConcept>? route,
-      @HiveField(23)
-          Markdown? indication,
-      @JsonKey(name: '_indication')
-      @HiveField(24)
-          Element? indicationElement,
-      @HiveField(25)
-          CodeableConcept? legalStatusOfSupply,
-      @HiveField(26)
-          CodeableConcept? additionalMonitoringIndicator,
-      @HiveField(27)
-          List<CodeableConcept>? specialMeasures,
-      @HiveField(28)
-          CodeableConcept? pediatricUseIndicator,
-      @HiveField(29)
-          List<CodeableConcept>? classification,
-      @HiveField(30)
-          List<MarketingStatus>? marketingStatus,
-      @HiveField(31)
-          List<CodeableConcept>? packagedMedicinalProduct,
-      @HiveField(32)
-          List<CodeableConcept>? ingredient,
-      @HiveField(33)
-          List<CodeableReference>? impurity,
-      @HiveField(34)
-          List<Reference>? attachedDocument,
-      @HiveField(35)
-          List<Reference>? masterFile,
-      @HiveField(36)
-          List<MedicinalProductDefinitionContact>? contact,
-      @HiveField(37)
-          List<Reference>? clinicalTrial,
-      @HiveField(38)
-          List<Coding>? code,
-      @HiveField(39)
-          List<MedicinalProductDefinitionName> name,
-      @HiveField(40)
-          List<MedicinalProductDefinitionCrossReference>? crossReference,
-      @HiveField(41)
-          List<MedicinalProductDefinitionOperation>? operation,
-      @HiveField(42)
-          List<MedicinalProductDefinitionCharacteristic>? characteristic});
+      {R4ResourceType resourceType,
+      String? id,
+      FhirMeta? meta,
+      FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+      FhirCode? language,
+      @JsonKey(name: '_language') Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      CodeableConcept? type,
+      CodeableConcept? domain,
+      String? version,
+      @JsonKey(name: '_version') Element? versionElement,
+      CodeableConcept? status,
+      FhirDateTime? statusDate,
+      @JsonKey(name: '_statusDate') Element? statusDateElement,
+      FhirMarkdown? description,
+      @JsonKey(name: '_description') Element? descriptionElement,
+      CodeableConcept? combinedPharmaceuticalDoseForm,
+      List<CodeableConcept>? route,
+      FhirMarkdown? indication,
+      @JsonKey(name: '_indication') Element? indicationElement,
+      CodeableConcept? legalStatusOfSupply,
+      CodeableConcept? additionalMonitoringIndicator,
+      List<CodeableConcept>? specialMeasures,
+      CodeableConcept? pediatricUseIndicator,
+      List<CodeableConcept>? classification,
+      List<MarketingStatus>? marketingStatus,
+      List<CodeableConcept>? packagedMedicinalProduct,
+      List<CodeableConcept>? ingredient,
+      List<CodeableReference>? impurity,
+      List<Reference>? attachedDocument,
+      List<Reference>? masterFile,
+      List<MedicinalProductDefinitionContact>? contact,
+      List<Reference>? clinicalTrial,
+      List<Coding>? code,
+      List<MedicinalProductDefinitionName> name,
+      List<MedicinalProductDefinitionCrossReference>? crossReference,
+      List<MedicinalProductDefinitionOperation>? operation,
+      List<MedicinalProductDefinitionCharacteristic>? characteristic});
 
   @override
   $FhirMetaCopyWith<$Res>? get meta;
@@ -12738,7 +11896,7 @@ class __$$_MedicinalProductDefinitionCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -12794,7 +11952,7 @@ class __$$_MedicinalProductDefinitionCopyWithImpl<$Res>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -12810,7 +11968,7 @@ class __$$_MedicinalProductDefinitionCopyWithImpl<$Res>
       indication: freezed == indication
           ? _value.indication
           : indication // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       indicationElement: freezed == indicationElement
           ? _value.indicationElement
           : indicationElement // ignore: cast_nullable_to_non_nullable
@@ -12893,102 +12051,51 @@ class __$$_MedicinalProductDefinitionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@HiveType(typeId: 59)
 class _$_MedicinalProductDefinition extends _MedicinalProductDefinition {
   _$_MedicinalProductDefinition(
-      {@HiveField(0)
-          this.resourceType = R4ResourceType.MedicinalProductDefinition,
-      @HiveField(1)
-          this.id,
-      @HiveField(2)
-          this.meta,
-      @HiveField(3)
-          this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-      @HiveField(4)
-          this.implicitRulesElement,
-      @HiveField(5)
-          this.language,
-      @JsonKey(name: '_language')
-      @HiveField(6)
-          this.languageElement,
-      @HiveField(7)
-          this.text,
-      @HiveField(8)
-          final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-      @HiveField(9)
-          final List<FhirExtension>? extension_,
-      @HiveField(10)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          final List<Identifier>? identifier,
-      @HiveField(12)
-          this.type,
-      @HiveField(13)
-          this.domain,
-      @HiveField(14)
-          this.version,
-      @JsonKey(name: '_version')
-      @HiveField(15)
-          this.versionElement,
-      @HiveField(16)
-          this.status,
-      @HiveField(17)
-          this.statusDate,
-      @JsonKey(name: '_statusDate')
-      @HiveField(18)
-          this.statusDateElement,
-      @HiveField(19)
-          this.description,
-      @JsonKey(name: '_description')
-      @HiveField(20)
-          this.descriptionElement,
-      @HiveField(21)
-          this.combinedPharmaceuticalDoseForm,
-      @HiveField(22)
-          final List<CodeableConcept>? route,
-      @HiveField(23)
-          this.indication,
-      @JsonKey(name: '_indication')
-      @HiveField(24)
-          this.indicationElement,
-      @HiveField(25)
-          this.legalStatusOfSupply,
-      @HiveField(26)
-          this.additionalMonitoringIndicator,
-      @HiveField(27)
-          final List<CodeableConcept>? specialMeasures,
-      @HiveField(28)
-          this.pediatricUseIndicator,
-      @HiveField(29)
-          final List<CodeableConcept>? classification,
-      @HiveField(30)
-          final List<MarketingStatus>? marketingStatus,
-      @HiveField(31)
-          final List<CodeableConcept>? packagedMedicinalProduct,
-      @HiveField(32)
-          final List<CodeableConcept>? ingredient,
-      @HiveField(33)
-          final List<CodeableReference>? impurity,
-      @HiveField(34)
-          final List<Reference>? attachedDocument,
-      @HiveField(35)
-          final List<Reference>? masterFile,
-      @HiveField(36)
-          final List<MedicinalProductDefinitionContact>? contact,
-      @HiveField(37)
-          final List<Reference>? clinicalTrial,
-      @HiveField(38)
-          final List<Coding>? code,
-      @HiveField(39)
-          required final List<MedicinalProductDefinitionName> name,
-      @HiveField(40)
-          final List<MedicinalProductDefinitionCrossReference>? crossReference,
-      @HiveField(41)
-          final List<MedicinalProductDefinitionOperation>? operation,
-      @HiveField(42)
-          final List<MedicinalProductDefinitionCharacteristic>? characteristic})
+      {this.resourceType = R4ResourceType.MedicinalProductDefinition,
+      this.id,
+      this.meta,
+      this.implicitRules,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      this.language,
+      @JsonKey(name: '_language') this.languageElement,
+      this.text,
+      final List<Resource>? contained,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      this.type,
+      this.domain,
+      this.version,
+      @JsonKey(name: '_version') this.versionElement,
+      this.status,
+      this.statusDate,
+      @JsonKey(name: '_statusDate') this.statusDateElement,
+      this.description,
+      @JsonKey(name: '_description') this.descriptionElement,
+      this.combinedPharmaceuticalDoseForm,
+      final List<CodeableConcept>? route,
+      this.indication,
+      @JsonKey(name: '_indication') this.indicationElement,
+      this.legalStatusOfSupply,
+      this.additionalMonitoringIndicator,
+      final List<CodeableConcept>? specialMeasures,
+      this.pediatricUseIndicator,
+      final List<CodeableConcept>? classification,
+      final List<MarketingStatus>? marketingStatus,
+      final List<CodeableConcept>? packagedMedicinalProduct,
+      final List<CodeableConcept>? ingredient,
+      final List<CodeableReference>? impurity,
+      final List<Reference>? attachedDocument,
+      final List<Reference>? masterFile,
+      final List<MedicinalProductDefinitionContact>? contact,
+      final List<Reference>? clinicalTrial,
+      final List<Coding>? code,
+      required final List<MedicinalProductDefinitionName> name,
+      final List<MedicinalProductDefinitionCrossReference>? crossReference,
+      final List<MedicinalProductDefinitionOperation>? operation,
+      final List<MedicinalProductDefinitionCharacteristic>? characteristic})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -13016,44 +12123,36 @@ class _$_MedicinalProductDefinition extends _MedicinalProductDefinition {
 
   @override
   @JsonKey()
-  @HiveField(0)
   final R4ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
   @override
-  @HiveField(1)
   final String? id;
 
   /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
   @override
-  @HiveField(2)
   final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
   @override
-  @HiveField(3)
   final FhirUri? implicitRules;
 
   /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
-  @HiveField(4)
   final Element? implicitRulesElement;
 
   /// [language] The base language in which the resource is written.;
   @override
-  @HiveField(5)
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] (_language): Extensions for language;
   @override
   @JsonKey(name: '_language')
-  @HiveField(6)
   final Element? languageElement;
 
   /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
   @override
-  @HiveField(7)
   final Narrative? text;
 
   /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
@@ -13061,7 +12160,6 @@ class _$_MedicinalProductDefinition extends _MedicinalProductDefinition {
 
   /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
   @override
-  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -13076,7 +12174,6 @@ class _$_MedicinalProductDefinition extends _MedicinalProductDefinition {
   /// [extension_] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   @override
   @JsonKey(name: 'extension')
-  @HiveField(9)
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
@@ -13092,7 +12189,6 @@ class _$_MedicinalProductDefinition extends _MedicinalProductDefinition {
   /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   @override
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -13107,7 +12203,6 @@ class _$_MedicinalProductDefinition extends _MedicinalProductDefinition {
 
   /// [identifier] Business identifier for this product. Could be an MPID. When in development or being regulated, products are typically referenced by official identifiers, assigned by a manufacturer or regulator, and unique to a product (which, when compared to a product instance being prescribed, is actually a product type). See also MedicinalProductDefinition.code.;
   @override
-  @HiveField(11)
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
@@ -13118,55 +12213,45 @@ class _$_MedicinalProductDefinition extends _MedicinalProductDefinition {
 
   /// [type] Regulatory type, e.g. Investigational or Authorized.;
   @override
-  @HiveField(12)
   final CodeableConcept? type;
 
   /// [domain] If this medicine applies to human or veterinary uses.;
   @override
-  @HiveField(13)
   final CodeableConcept? domain;
 
   /// [version] A business identifier relating to a specific version of the product, this is commonly used to support revisions to an existing product.;
   @override
-  @HiveField(14)
   final String? version;
 
   /// [versionElement] (_version): Extensions for version;
   @override
   @JsonKey(name: '_version')
-  @HiveField(15)
   final Element? versionElement;
 
   /// [status] The status within the lifecycle of this product record. A high-level status, this is not intended to duplicate details carried elsewhere such as legal status, or authorization status.;
   @override
-  @HiveField(16)
   final CodeableConcept? status;
 
   /// [statusDate] The date at which the given status became applicable.;
   @override
-  @HiveField(17)
   final FhirDateTime? statusDate;
 
   /// [statusDateElement] (_statusDate): Extensions for statusDate;
   @override
   @JsonKey(name: '_statusDate')
-  @HiveField(18)
   final Element? statusDateElement;
 
   /// [description] General description of this product.;
   @override
-  @HiveField(19)
-  final Markdown? description;
+  final FhirMarkdown? description;
 
   /// [descriptionElement] (_description): Extensions for description;
   @override
   @JsonKey(name: '_description')
-  @HiveField(20)
   final Element? descriptionElement;
 
   /// [combinedPharmaceuticalDoseForm] The dose form for a single part product, or combined form of a multiple part product. This is one concept that describes all the components. It does not represent the form with components physically mixed, if that might be necessary, for which see (AdministrableProductDefinition.administrableDoseForm).;
   @override
-  @HiveField(21)
   final CodeableConcept? combinedPharmaceuticalDoseForm;
 
   /// [route] The path by which the product is taken into or makes contact with the body. In some regions this is referred to as the licenced or approved route. See also AdministrableProductDefinition resource. MedicinalProductDefinition.route is the same concept as AdministrableProductDefinition.routeOfAdministration.code, and they cannot be used together.;
@@ -13174,7 +12259,6 @@ class _$_MedicinalProductDefinition extends _MedicinalProductDefinition {
 
   /// [route] The path by which the product is taken into or makes contact with the body. In some regions this is referred to as the licenced or approved route. See also AdministrableProductDefinition resource. MedicinalProductDefinition.route is the same concept as AdministrableProductDefinition.routeOfAdministration.code, and they cannot be used together.;
   @override
-  @HiveField(22)
   List<CodeableConcept>? get route {
     final value = _route;
     if (value == null) return null;
@@ -13185,23 +12269,19 @@ class _$_MedicinalProductDefinition extends _MedicinalProductDefinition {
 
   /// [indication] Description of indication(s) for this product, used when structured indications are not required. In cases where structured indications are required, they are captured using the ClinicalUseDefinition resource. An indication is a medical situation for which using the product is appropriate.;
   @override
-  @HiveField(23)
-  final Markdown? indication;
+  final FhirMarkdown? indication;
 
   /// [indicationElement] (_indication): Extensions for indication;
   @override
   @JsonKey(name: '_indication')
-  @HiveField(24)
   final Element? indicationElement;
 
   /// [legalStatusOfSupply] The legal status of supply of the medicinal product as classified by the regulator.;
   @override
-  @HiveField(25)
   final CodeableConcept? legalStatusOfSupply;
 
   /// [additionalMonitoringIndicator] Whether the Medicinal Product is subject to additional monitoring for regulatory reasons, such as heightened reporting requirements.;
   @override
-  @HiveField(26)
   final CodeableConcept? additionalMonitoringIndicator;
 
   /// [specialMeasures] Whether the Medicinal Product is subject to special measures for regulatory reasons, such as a requirement to conduct post-authorisation studies.;
@@ -13209,7 +12289,6 @@ class _$_MedicinalProductDefinition extends _MedicinalProductDefinition {
 
   /// [specialMeasures] Whether the Medicinal Product is subject to special measures for regulatory reasons, such as a requirement to conduct post-authorisation studies.;
   @override
-  @HiveField(27)
   List<CodeableConcept>? get specialMeasures {
     final value = _specialMeasures;
     if (value == null) return null;
@@ -13220,7 +12299,6 @@ class _$_MedicinalProductDefinition extends _MedicinalProductDefinition {
 
   /// [pediatricUseIndicator] If authorised for use in children, or infants, neonates etc.;
   @override
-  @HiveField(28)
   final CodeableConcept? pediatricUseIndicator;
 
   /// [classification] Allows the product to be classified by various systems, commonly WHO ATC.;
@@ -13228,7 +12306,6 @@ class _$_MedicinalProductDefinition extends _MedicinalProductDefinition {
 
   /// [classification] Allows the product to be classified by various systems, commonly WHO ATC.;
   @override
-  @HiveField(29)
   List<CodeableConcept>? get classification {
     final value = _classification;
     if (value == null) return null;
@@ -13242,7 +12319,6 @@ class _$_MedicinalProductDefinition extends _MedicinalProductDefinition {
 
   /// [marketingStatus] Marketing status of the medicinal product, in contrast to marketing authorization. This refers to the product being actually 'on the market' as opposed to being allowed to be on the market (which is an authorization).;
   @override
-  @HiveField(30)
   List<MarketingStatus>? get marketingStatus {
     final value = _marketingStatus;
     if (value == null) return null;
@@ -13256,7 +12332,6 @@ class _$_MedicinalProductDefinition extends _MedicinalProductDefinition {
 
   /// [packagedMedicinalProduct] Package type for the product. See also the PackagedProductDefinition resource.;
   @override
-  @HiveField(31)
   List<CodeableConcept>? get packagedMedicinalProduct {
     final value = _packagedMedicinalProduct;
     if (value == null) return null;
@@ -13271,7 +12346,6 @@ class _$_MedicinalProductDefinition extends _MedicinalProductDefinition {
 
   /// [ingredient] The ingredients of this medicinal product - when not detailed in other resources. This is only needed if the ingredients are not specified by incoming references from the Ingredient resource, or indirectly via incoming AdministrableProductDefinition, PackagedProductDefinition or ManufacturedItemDefinition references. In cases where those levels of detail are not used, the ingredients may be specified directly here as codes.;
   @override
-  @HiveField(32)
   List<CodeableConcept>? get ingredient {
     final value = _ingredient;
     if (value == null) return null;
@@ -13285,7 +12359,6 @@ class _$_MedicinalProductDefinition extends _MedicinalProductDefinition {
 
   /// [impurity] Any component of the drug product which is not the chemical entity defined as the drug substance, or an excipient in the drug product. This includes process-related impurities and contaminants, product-related impurities including degradation products.;
   @override
-  @HiveField(33)
   List<CodeableReference>? get impurity {
     final value = _impurity;
     if (value == null) return null;
@@ -13299,7 +12372,6 @@ class _$_MedicinalProductDefinition extends _MedicinalProductDefinition {
 
   /// [attachedDocument] Additional information or supporting documentation about the medicinal product.;
   @override
-  @HiveField(34)
   List<Reference>? get attachedDocument {
     final value = _attachedDocument;
     if (value == null) return null;
@@ -13314,7 +12386,6 @@ class _$_MedicinalProductDefinition extends _MedicinalProductDefinition {
 
   /// [masterFile] A master file for the medicinal product (e.g. Pharmacovigilance System Master File). Drug master files (DMFs) are documents submitted to regulatory agencies to provide confidential detailed information about facilities, processes or articles used in the manufacturing, processing, packaging and storing of drug products.;
   @override
-  @HiveField(35)
   List<Reference>? get masterFile {
     final value = _masterFile;
     if (value == null) return null;
@@ -13328,7 +12399,6 @@ class _$_MedicinalProductDefinition extends _MedicinalProductDefinition {
 
   /// [contact] A product specific contact, person (in a role), or an organization.;
   @override
-  @HiveField(36)
   List<MedicinalProductDefinitionContact>? get contact {
     final value = _contact;
     if (value == null) return null;
@@ -13342,7 +12412,6 @@ class _$_MedicinalProductDefinition extends _MedicinalProductDefinition {
 
   /// [clinicalTrial] Clinical trials or studies that this product is involved in.;
   @override
-  @HiveField(37)
   List<Reference>? get clinicalTrial {
     final value = _clinicalTrial;
     if (value == null) return null;
@@ -13356,7 +12425,6 @@ class _$_MedicinalProductDefinition extends _MedicinalProductDefinition {
 
   /// [code] A code that this product is known by, usually within some formal terminology, perhaps assigned by a third party (i.e. not the manufacturer or regulator). Products (types of medications) tend to be known by identifiers during development and within regulatory process. However when they are prescribed they tend to be identified by codes. The same product may be have multiple codes, applied to it by multiple organizations.;
   @override
-  @HiveField(38)
   List<Coding>? get code {
     final value = _code;
     if (value == null) return null;
@@ -13370,7 +12438,6 @@ class _$_MedicinalProductDefinition extends _MedicinalProductDefinition {
 
   /// [name] The product's name, including full name and possibly coded parts.;
   @override
-  @HiveField(39)
   List<MedicinalProductDefinitionName> get name {
     if (_name is EqualUnmodifiableListView) return _name;
     // ignore: implicit_dynamic_type
@@ -13382,7 +12449,6 @@ class _$_MedicinalProductDefinition extends _MedicinalProductDefinition {
 
   /// [crossReference] Reference to another product, e.g. for linking authorised to investigational product, or a virtual product.;
   @override
-  @HiveField(40)
   List<MedicinalProductDefinitionCrossReference>? get crossReference {
     final value = _crossReference;
     if (value == null) return null;
@@ -13396,7 +12462,6 @@ class _$_MedicinalProductDefinition extends _MedicinalProductDefinition {
 
   /// [operation] A manufacturing or administrative process or step associated with (or performed on) the medicinal product.;
   @override
-  @HiveField(41)
   List<MedicinalProductDefinitionOperation>? get operation {
     final value = _operation;
     if (value == null) return null;
@@ -13410,7 +12475,6 @@ class _$_MedicinalProductDefinition extends _MedicinalProductDefinition {
 
   /// [characteristic] Allows the key product features to be recorded, such as "sugar free", "modified release", "parallel import".;
   @override
-  @HiveField(42)
   List<MedicinalProductDefinitionCharacteristic>? get characteristic {
     final value = _characteristic;
     if (value == null) return null;
@@ -13573,325 +12637,232 @@ class _$_MedicinalProductDefinition extends _MedicinalProductDefinition {
 
 abstract class _MedicinalProductDefinition extends MedicinalProductDefinition {
   factory _MedicinalProductDefinition(
-      {@HiveField(0)
-          final R4ResourceType resourceType,
-      @HiveField(1)
-          final String? id,
-      @HiveField(2)
-          final FhirMeta? meta,
-      @HiveField(3)
-          final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-      @HiveField(4)
-          final Element? implicitRulesElement,
-      @HiveField(5)
-          final Code? language,
-      @JsonKey(name: '_language')
-      @HiveField(6)
-          final Element? languageElement,
-      @HiveField(7)
-          final Narrative? text,
-      @HiveField(8)
-          final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-      @HiveField(9)
-          final List<FhirExtension>? extension_,
-      @HiveField(10)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          final List<Identifier>? identifier,
-      @HiveField(12)
-          final CodeableConcept? type,
-      @HiveField(13)
-          final CodeableConcept? domain,
-      @HiveField(14)
-          final String? version,
-      @JsonKey(name: '_version')
-      @HiveField(15)
-          final Element? versionElement,
-      @HiveField(16)
-          final CodeableConcept? status,
-      @HiveField(17)
-          final FhirDateTime? statusDate,
-      @JsonKey(name: '_statusDate')
-      @HiveField(18)
-          final Element? statusDateElement,
-      @HiveField(19)
-          final Markdown? description,
-      @JsonKey(name: '_description')
-      @HiveField(20)
-          final Element? descriptionElement,
-      @HiveField(21)
-          final CodeableConcept? combinedPharmaceuticalDoseForm,
-      @HiveField(22)
-          final List<CodeableConcept>? route,
-      @HiveField(23)
-          final Markdown? indication,
-      @JsonKey(name: '_indication')
-      @HiveField(24)
-          final Element? indicationElement,
-      @HiveField(25)
-          final CodeableConcept? legalStatusOfSupply,
-      @HiveField(26)
-          final CodeableConcept? additionalMonitoringIndicator,
-      @HiveField(27)
-          final List<CodeableConcept>? specialMeasures,
-      @HiveField(28)
-          final CodeableConcept? pediatricUseIndicator,
-      @HiveField(29)
-          final List<CodeableConcept>? classification,
-      @HiveField(30)
-          final List<MarketingStatus>? marketingStatus,
-      @HiveField(31)
-          final List<CodeableConcept>? packagedMedicinalProduct,
-      @HiveField(32)
-          final List<CodeableConcept>? ingredient,
-      @HiveField(33)
-          final List<CodeableReference>? impurity,
-      @HiveField(34)
-          final List<Reference>? attachedDocument,
-      @HiveField(35)
-          final List<Reference>? masterFile,
-      @HiveField(36)
-          final List<MedicinalProductDefinitionContact>? contact,
-      @HiveField(37)
-          final List<Reference>? clinicalTrial,
-      @HiveField(38)
-          final List<Coding>? code,
-      @HiveField(39)
-          required final List<MedicinalProductDefinitionName> name,
-      @HiveField(40)
-          final List<MedicinalProductDefinitionCrossReference>? crossReference,
-      @HiveField(41)
-          final List<MedicinalProductDefinitionOperation>? operation,
-      @HiveField(42)
-          final List<MedicinalProductDefinitionCharacteristic>?
-              characteristic}) = _$_MedicinalProductDefinition;
+      {final R4ResourceType resourceType,
+      final String? id,
+      final FhirMeta? meta,
+      final FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
+      final FhirCode? language,
+      @JsonKey(name: '_language') final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final CodeableConcept? type,
+      final CodeableConcept? domain,
+      final String? version,
+      @JsonKey(name: '_version') final Element? versionElement,
+      final CodeableConcept? status,
+      final FhirDateTime? statusDate,
+      @JsonKey(name: '_statusDate') final Element? statusDateElement,
+      final FhirMarkdown? description,
+      @JsonKey(name: '_description') final Element? descriptionElement,
+      final CodeableConcept? combinedPharmaceuticalDoseForm,
+      final List<CodeableConcept>? route,
+      final FhirMarkdown? indication,
+      @JsonKey(name: '_indication') final Element? indicationElement,
+      final CodeableConcept? legalStatusOfSupply,
+      final CodeableConcept? additionalMonitoringIndicator,
+      final List<CodeableConcept>? specialMeasures,
+      final CodeableConcept? pediatricUseIndicator,
+      final List<CodeableConcept>? classification,
+      final List<MarketingStatus>? marketingStatus,
+      final List<CodeableConcept>? packagedMedicinalProduct,
+      final List<CodeableConcept>? ingredient,
+      final List<CodeableReference>? impurity,
+      final List<Reference>? attachedDocument,
+      final List<Reference>? masterFile,
+      final List<MedicinalProductDefinitionContact>? contact,
+      final List<Reference>? clinicalTrial,
+      final List<Coding>? code,
+      required final List<MedicinalProductDefinitionName> name,
+      final List<MedicinalProductDefinitionCrossReference>? crossReference,
+      final List<MedicinalProductDefinitionOperation>? operation,
+      final List<MedicinalProductDefinitionCharacteristic>?
+          characteristic}) = _$_MedicinalProductDefinition;
   _MedicinalProductDefinition._() : super._();
 
   factory _MedicinalProductDefinition.fromJson(Map<String, dynamic> json) =
       _$_MedicinalProductDefinition.fromJson;
 
   @override
-  @HiveField(0)
   R4ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
-  @HiveField(1)
   String? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
-  @HiveField(2)
   FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
-  @HiveField(3)
   FhirUri? get implicitRules;
   @override
 
   /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
   @JsonKey(name: '_implicitRules')
-  @HiveField(4)
   Element? get implicitRulesElement;
   @override
 
   /// [language] The base language in which the resource is written.;
-  @HiveField(5)
   FhirCode? get language;
   @override
 
   /// [languageElement] (_language): Extensions for language;
   @JsonKey(name: '_language')
-  @HiveField(6)
   Element? get languageElement;
   @override
 
   /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
-  @HiveField(7)
   Narrative? get text;
   @override
 
   /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
-  @HiveField(8)
   List<Resource>? get contained;
   @override
 
   /// [extension_] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   @JsonKey(name: 'extension')
-  @HiveField(9)
   List<FhirExtension>? get extension_;
   @override
 
   /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
 
   /// [identifier] Business identifier for this product. Could be an MPID. When in development or being regulated, products are typically referenced by official identifiers, assigned by a manufacturer or regulator, and unique to a product (which, when compared to a product instance being prescribed, is actually a product type). See also MedicinalProductDefinition.code.;
-  @HiveField(11)
   List<Identifier>? get identifier;
   @override
 
   /// [type] Regulatory type, e.g. Investigational or Authorized.;
-  @HiveField(12)
   CodeableConcept? get type;
   @override
 
   /// [domain] If this medicine applies to human or veterinary uses.;
-  @HiveField(13)
   CodeableConcept? get domain;
   @override
 
   /// [version] A business identifier relating to a specific version of the product, this is commonly used to support revisions to an existing product.;
-  @HiveField(14)
   String? get version;
   @override
 
   /// [versionElement] (_version): Extensions for version;
   @JsonKey(name: '_version')
-  @HiveField(15)
   Element? get versionElement;
   @override
 
   /// [status] The status within the lifecycle of this product record. A high-level status, this is not intended to duplicate details carried elsewhere such as legal status, or authorization status.;
-  @HiveField(16)
   CodeableConcept? get status;
   @override
 
   /// [statusDate] The date at which the given status became applicable.;
-  @HiveField(17)
   FhirDateTime? get statusDate;
   @override
 
   /// [statusDateElement] (_statusDate): Extensions for statusDate;
   @JsonKey(name: '_statusDate')
-  @HiveField(18)
   Element? get statusDateElement;
   @override
 
   /// [description] General description of this product.;
-  @HiveField(19)
-  Markdown? get description;
+  FhirMarkdown? get description;
   @override
 
   /// [descriptionElement] (_description): Extensions for description;
   @JsonKey(name: '_description')
-  @HiveField(20)
   Element? get descriptionElement;
   @override
 
   /// [combinedPharmaceuticalDoseForm] The dose form for a single part product, or combined form of a multiple part product. This is one concept that describes all the components. It does not represent the form with components physically mixed, if that might be necessary, for which see (AdministrableProductDefinition.administrableDoseForm).;
-  @HiveField(21)
   CodeableConcept? get combinedPharmaceuticalDoseForm;
   @override
 
   /// [route] The path by which the product is taken into or makes contact with the body. In some regions this is referred to as the licenced or approved route. See also AdministrableProductDefinition resource. MedicinalProductDefinition.route is the same concept as AdministrableProductDefinition.routeOfAdministration.code, and they cannot be used together.;
-  @HiveField(22)
   List<CodeableConcept>? get route;
   @override
 
   /// [indication] Description of indication(s) for this product, used when structured indications are not required. In cases where structured indications are required, they are captured using the ClinicalUseDefinition resource. An indication is a medical situation for which using the product is appropriate.;
-  @HiveField(23)
-  Markdown? get indication;
+  FhirMarkdown? get indication;
   @override
 
   /// [indicationElement] (_indication): Extensions for indication;
   @JsonKey(name: '_indication')
-  @HiveField(24)
   Element? get indicationElement;
   @override
 
   /// [legalStatusOfSupply] The legal status of supply of the medicinal product as classified by the regulator.;
-  @HiveField(25)
   CodeableConcept? get legalStatusOfSupply;
   @override
 
   /// [additionalMonitoringIndicator] Whether the Medicinal Product is subject to additional monitoring for regulatory reasons, such as heightened reporting requirements.;
-  @HiveField(26)
   CodeableConcept? get additionalMonitoringIndicator;
   @override
 
   /// [specialMeasures] Whether the Medicinal Product is subject to special measures for regulatory reasons, such as a requirement to conduct post-authorisation studies.;
-  @HiveField(27)
   List<CodeableConcept>? get specialMeasures;
   @override
 
   /// [pediatricUseIndicator] If authorised for use in children, or infants, neonates etc.;
-  @HiveField(28)
   CodeableConcept? get pediatricUseIndicator;
   @override
 
   /// [classification] Allows the product to be classified by various systems, commonly WHO ATC.;
-  @HiveField(29)
   List<CodeableConcept>? get classification;
   @override
 
   /// [marketingStatus] Marketing status of the medicinal product, in contrast to marketing authorization. This refers to the product being actually 'on the market' as opposed to being allowed to be on the market (which is an authorization).;
-  @HiveField(30)
   List<MarketingStatus>? get marketingStatus;
   @override
 
   /// [packagedMedicinalProduct] Package type for the product. See also the PackagedProductDefinition resource.;
-  @HiveField(31)
   List<CodeableConcept>? get packagedMedicinalProduct;
   @override
 
   /// [ingredient] The ingredients of this medicinal product - when not detailed in other resources. This is only needed if the ingredients are not specified by incoming references from the Ingredient resource, or indirectly via incoming AdministrableProductDefinition, PackagedProductDefinition or ManufacturedItemDefinition references. In cases where those levels of detail are not used, the ingredients may be specified directly here as codes.;
-  @HiveField(32)
   List<CodeableConcept>? get ingredient;
   @override
 
   /// [impurity] Any component of the drug product which is not the chemical entity defined as the drug substance, or an excipient in the drug product. This includes process-related impurities and contaminants, product-related impurities including degradation products.;
-  @HiveField(33)
   List<CodeableReference>? get impurity;
   @override
 
   /// [attachedDocument] Additional information or supporting documentation about the medicinal product.;
-  @HiveField(34)
   List<Reference>? get attachedDocument;
   @override
 
   /// [masterFile] A master file for the medicinal product (e.g. Pharmacovigilance System Master File). Drug master files (DMFs) are documents submitted to regulatory agencies to provide confidential detailed information about facilities, processes or articles used in the manufacturing, processing, packaging and storing of drug products.;
-  @HiveField(35)
   List<Reference>? get masterFile;
   @override
 
   /// [contact] A product specific contact, person (in a role), or an organization.;
-  @HiveField(36)
   List<MedicinalProductDefinitionContact>? get contact;
   @override
 
   /// [clinicalTrial] Clinical trials or studies that this product is involved in.;
-  @HiveField(37)
   List<Reference>? get clinicalTrial;
   @override
 
   /// [code] A code that this product is known by, usually within some formal terminology, perhaps assigned by a third party (i.e. not the manufacturer or regulator). Products (types of medications) tend to be known by identifiers during development and within regulatory process. However when they are prescribed they tend to be identified by codes. The same product may be have multiple codes, applied to it by multiple organizations.;
-  @HiveField(38)
   List<Coding>? get code;
   @override
 
   /// [name] The product's name, including full name and possibly coded parts.;
-  @HiveField(39)
   List<MedicinalProductDefinitionName> get name;
   @override
 
   /// [crossReference] Reference to another product, e.g. for linking authorised to investigational product, or a virtual product.;
-  @HiveField(40)
   List<MedicinalProductDefinitionCrossReference>? get crossReference;
   @override
 
   /// [operation] A manufacturing or administrative process or step associated with (or performed on) the medicinal product.;
-  @HiveField(41)
   List<MedicinalProductDefinitionOperation>? get operation;
   @override
 
   /// [characteristic] Allows the key product features to be recorded, such as "sugar free", "modified release", "parallel import".;
-  @HiveField(42)
   List<MedicinalProductDefinitionCharacteristic>? get characteristic;
   @override
   @JsonKey(ignore: true)
@@ -16191,14 +15162,14 @@ mixin _$MedicinalProductDefinitionCharacteristic {
   Quantity? get valueQuantity => throw _privateConstructorUsedError;
 
   /// [valueDate] A value for the characteristic.text.;
-  Date? get valueDate => throw _privateConstructorUsedError;
+  FhirDate? get valueDate => throw _privateConstructorUsedError;
 
   /// [valueDateElement] (_valueDate): Extensions for valueDate;
   @JsonKey(name: '_valueDate')
   Element? get valueDateElement => throw _privateConstructorUsedError;
 
   /// [valueBoolean] A value for the characteristic.text.;
-  Boolean? get valueBoolean => throw _privateConstructorUsedError;
+  FhirBoolean? get valueBoolean => throw _privateConstructorUsedError;
 
   /// [valueBooleanElement] (_valueBoolean): Extensions for valueBoolean;
   @JsonKey(name: '_valueBoolean')
@@ -16229,9 +15200,9 @@ abstract class $MedicinalProductDefinitionCharacteristicCopyWith<$Res> {
       CodeableConcept type,
       CodeableConcept? valueCodeableConcept,
       Quantity? valueQuantity,
-      Date? valueDate,
+      FhirDate? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
-      Boolean? valueBoolean,
+      FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       Attachment? valueAttachment});
 
@@ -16298,7 +15269,7 @@ class _$MedicinalProductDefinitionCharacteristicCopyWithImpl<$Res,
       valueDate: freezed == valueDate
           ? _value.valueDate
           : valueDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       valueDateElement: freezed == valueDateElement
           ? _value.valueDateElement
           : valueDateElement // ignore: cast_nullable_to_non_nullable
@@ -16306,7 +15277,7 @@ class _$MedicinalProductDefinitionCharacteristicCopyWithImpl<$Res,
       valueBoolean: freezed == valueBoolean
           ? _value.valueBoolean
           : valueBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       valueBooleanElement: freezed == valueBooleanElement
           ? _value.valueBooleanElement
           : valueBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -16404,9 +15375,9 @@ abstract class _$$_MedicinalProductDefinitionCharacteristicCopyWith<$Res>
       CodeableConcept type,
       CodeableConcept? valueCodeableConcept,
       Quantity? valueQuantity,
-      Date? valueDate,
+      FhirDate? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
-      Boolean? valueBoolean,
+      FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       Attachment? valueAttachment});
 
@@ -16477,7 +15448,7 @@ class __$$_MedicinalProductDefinitionCharacteristicCopyWithImpl<$Res>
       valueDate: freezed == valueDate
           ? _value.valueDate
           : valueDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       valueDateElement: freezed == valueDateElement
           ? _value.valueDateElement
           : valueDateElement // ignore: cast_nullable_to_non_nullable
@@ -16485,7 +15456,7 @@ class __$$_MedicinalProductDefinitionCharacteristicCopyWithImpl<$Res>
       valueBoolean: freezed == valueBoolean
           ? _value.valueBoolean
           : valueBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       valueBooleanElement: freezed == valueBooleanElement
           ? _value.valueBooleanElement
           : valueBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -16570,7 +15541,7 @@ class _$_MedicinalProductDefinitionCharacteristic
 
   /// [valueDate] A value for the characteristic.text.;
   @override
-  final Date? valueDate;
+  final FhirDate? valueDate;
 
   /// [valueDateElement] (_valueDate): Extensions for valueDate;
   @override
@@ -16579,7 +15550,7 @@ class _$_MedicinalProductDefinitionCharacteristic
 
   /// [valueBoolean] A value for the characteristic.text.;
   @override
-  final Boolean? valueBoolean;
+  final FhirBoolean? valueBoolean;
 
   /// [valueBooleanElement] (_valueBoolean): Extensions for valueBoolean;
   @override
@@ -16663,9 +15634,9 @@ abstract class _MedicinalProductDefinitionCharacteristic
           required final CodeableConcept type,
           final CodeableConcept? valueCodeableConcept,
           final Quantity? valueQuantity,
-          final Date? valueDate,
+          final FhirDate? valueDate,
           @JsonKey(name: '_valueDate') final Element? valueDateElement,
-          final Boolean? valueBoolean,
+          final FhirBoolean? valueBoolean,
           @JsonKey(name: '_valueBoolean') final Element? valueBooleanElement,
           final Attachment? valueAttachment}) =
       _$_MedicinalProductDefinitionCharacteristic;
@@ -16704,7 +15675,7 @@ abstract class _MedicinalProductDefinitionCharacteristic
   @override
 
   /// [valueDate] A value for the characteristic.text.;
-  Date? get valueDate;
+  FhirDate? get valueDate;
   @override
 
   /// [valueDateElement] (_valueDate): Extensions for valueDate;
@@ -16713,7 +15684,7 @@ abstract class _MedicinalProductDefinitionCharacteristic
   @override
 
   /// [valueBoolean] A value for the characteristic.text.;
-  Boolean? get valueBoolean;
+  FhirBoolean? get valueBoolean;
   @override
 
   /// [valueBooleanElement] (_valueBoolean): Extensions for valueBoolean;
@@ -16737,132 +15708,103 @@ PackagedProductDefinition _$PackagedProductDefinitionFromJson(
 
 /// @nodoc
 mixin _$PackagedProductDefinition {
-  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
-  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
-  @HiveField(2)
   FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
-  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
   @JsonKey(name: '_implicitRules')
-  @HiveField(4)
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.;
-  @HiveField(5)
   FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] (_language): Extensions for language;
   @JsonKey(name: '_language')
-  @HiveField(6)
   Element? get languageElement => throw _privateConstructorUsedError;
 
   /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
-  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
 
   /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
-  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   @JsonKey(name: 'extension')
-  @HiveField(9)
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
   /// [identifier] A unique identifier for this package as whole - not the the content of the package. Unique instance identifiers assigned to a package by manufacturers, regulators, drug catalogue custodians or other organizations.;
-  @HiveField(11)
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [name] A name for this package. Typically what it would be listed as in a drug formulary or catalogue, inventory etc.;
-  @HiveField(12)
   String? get name => throw _privateConstructorUsedError;
 
   /// [nameElement] (_name): Extensions for name;
   @JsonKey(name: '_name')
-  @HiveField(13)
   Element? get nameElement => throw _privateConstructorUsedError;
 
   /// [type] A high level category e.g. medicinal product, raw material, shipping/transport container, etc.;
-  @HiveField(14)
   CodeableConcept? get type => throw _privateConstructorUsedError;
 
   /// [packageFor] The product this package model relates to, not the contents of the package (for which see package.containedItem).;
-  @HiveField(15)
   List<Reference>? get packageFor => throw _privateConstructorUsedError;
 
   /// [status] The status within the lifecycle of this item. A high level status, this is not intended to duplicate details carried elsewhere such as legal status, or authorization or marketing status.;
-  @HiveField(16)
   CodeableConcept? get status => throw _privateConstructorUsedError;
 
   /// [statusDate] The date at which the given status became applicable.;
-  @HiveField(17)
   FhirDateTime? get statusDate => throw _privateConstructorUsedError;
 
   /// [statusDateElement] (_statusDate): Extensions for statusDate;
   @JsonKey(name: '_statusDate')
-  @HiveField(18)
   Element? get statusDateElement => throw _privateConstructorUsedError;
 
   /// [containedItemQuantity] A total of the complete count of contained items of a particular type/form, independent of sub-packaging or organization. This can be considered as the pack size. This attribute differs from containedItem.amount in that it can give a single aggregated count of all tablet types in a pack, even when these are different manufactured items. For example a pill pack of 21 tablets plus 7 sugar tablets, can be denoted here as '28 tablets'. This attribute is repeatable so that the different item types in one pack type can be counted (e.g. a count of vials and count of syringes). Each repeat must have different units, so that it is clear what the different sets of counted items are, and it is not intended to allow different counts of similar items (e.g. not '2 tubes and 3 tubes'). Repeats are not to be used to represent different pack sizes (e.g. 20 pack vs. 50 pack) - which would be different instances of this resource.;
-  @HiveField(19)
   List<Quantity>? get containedItemQuantity =>
       throw _privateConstructorUsedError;
 
   /// [description] Textual description. Note that this is not the name of the package or product.;
-  @HiveField(20)
-  Markdown? get description => throw _privateConstructorUsedError;
+  FhirMarkdown? get description => throw _privateConstructorUsedError;
 
   /// [descriptionElement] (_description): Extensions for description;
   @JsonKey(name: '_description')
-  @HiveField(21)
   Element? get descriptionElement => throw _privateConstructorUsedError;
 
   /// [legalStatusOfSupply] The legal status of supply of the packaged item as classified by the regulator.;
-  @HiveField(22)
   List<PackagedProductDefinitionLegalStatusOfSupply>? get legalStatusOfSupply =>
       throw _privateConstructorUsedError;
 
   /// [marketingStatus] Allows specifying that an item is on the market for sale, or that it is not available, and the dates and locations associated.;
-  @HiveField(23)
   List<MarketingStatus>? get marketingStatus =>
       throw _privateConstructorUsedError;
 
   /// [characteristic] Allows the key features to be recorded, such as "hospital pack", "nurse prescribable", "calendar pack".;
-  @HiveField(24)
   List<CodeableConcept>? get characteristic =>
       throw _privateConstructorUsedError;
 
   /// [copackagedIndicator] Identifies if the package contains different items, such as when a drug product is supplied with another item e.g. a diluent or adjuvant.;
-  @HiveField(25)
-  Boolean? get copackagedIndicator => throw _privateConstructorUsedError;
+  FhirBoolean? get copackagedIndicator => throw _privateConstructorUsedError;
 
   /// [copackagedIndicatorElement] (_copackagedIndicator): Extensions for copackagedIndicator;
   @JsonKey(name: '_copackagedIndicator')
-  @HiveField(26)
   Element? get copackagedIndicatorElement => throw _privateConstructorUsedError;
 
   /// [manufacturer] Manufacturer of this package type. When there are multiple it means these are all possible manufacturers.;
-  @HiveField(27)
   List<Reference>? get manufacturer => throw _privateConstructorUsedError;
 
   /// [package] A packaging item, as a container for medically related items, possibly with other packaging items within, or a packaging component, such as bottle cap (which is not a device or a medication manufactured item).;
-  @HiveField(28)
   PackagedProductDefinitionPackage? get package =>
       throw _privateConstructorUsedError;
 
@@ -16879,72 +15821,42 @@ abstract class $PackagedProductDefinitionCopyWith<$Res> {
       _$PackagedProductDefinitionCopyWithImpl<$Res, PackagedProductDefinition>;
   @useResult
   $Res call(
-      {@HiveField(0)
-          R4ResourceType resourceType,
-      @HiveField(1)
-          String? id,
-      @HiveField(2)
-          FhirMeta? meta,
-      @HiveField(3)
-          FhirUri? implicitRules,
+      {R4ResourceType resourceType,
+      String? id,
+      FhirMeta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           Element? implicitRulesElement,
-      @HiveField(5)
-          FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           Element? languageElement,
-      @HiveField(7)
-          Narrative? text,
-      @HiveField(8)
-          List<Resource>? contained,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           List<FhirExtension>? extension_,
-      @HiveField(10)
-          List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          List<Identifier>? identifier,
-      @HiveField(12)
-          String? name,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      String? name,
       @JsonKey(name: '_name')
-      @HiveField(13)
           Element? nameElement,
-      @HiveField(14)
-          CodeableConcept? type,
-      @HiveField(15)
-          List<Reference>? packageFor,
-      @HiveField(16)
-          CodeableConcept? status,
-      @HiveField(17)
-          FhirDateTime? statusDate,
+      CodeableConcept? type,
+      List<Reference>? packageFor,
+      CodeableConcept? status,
+      FhirDateTime? statusDate,
       @JsonKey(name: '_statusDate')
-      @HiveField(18)
           Element? statusDateElement,
-      @HiveField(19)
-          List<Quantity>? containedItemQuantity,
-      @HiveField(20)
-          Markdown? description,
+      List<Quantity>? containedItemQuantity,
+      FhirMarkdown? description,
       @JsonKey(name: '_description')
-      @HiveField(21)
           Element? descriptionElement,
-      @HiveField(22)
-          List<PackagedProductDefinitionLegalStatusOfSupply>?
-              legalStatusOfSupply,
-      @HiveField(23)
-          List<MarketingStatus>? marketingStatus,
-      @HiveField(24)
-          List<CodeableConcept>? characteristic,
-      @HiveField(25)
-          Boolean? copackagedIndicator,
+      List<PackagedProductDefinitionLegalStatusOfSupply>? legalStatusOfSupply,
+      List<MarketingStatus>? marketingStatus,
+      List<CodeableConcept>? characteristic,
+      FhirBoolean? copackagedIndicator,
       @JsonKey(name: '_copackagedIndicator')
-      @HiveField(26)
           Element? copackagedIndicatorElement,
-      @HiveField(27)
-          List<Reference>? manufacturer,
-      @HiveField(28)
-          PackagedProductDefinitionPackage? package});
+      List<Reference>? manufacturer,
+      PackagedProductDefinitionPackage? package});
 
   $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -17027,7 +15939,7 @@ class _$PackagedProductDefinitionCopyWithImpl<$Res,
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -17087,7 +15999,7 @@ class _$PackagedProductDefinitionCopyWithImpl<$Res,
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -17107,7 +16019,7 @@ class _$PackagedProductDefinitionCopyWithImpl<$Res,
       copackagedIndicator: freezed == copackagedIndicator
           ? _value.copackagedIndicator
           : copackagedIndicator // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       copackagedIndicatorElement: freezed == copackagedIndicatorElement
           ? _value.copackagedIndicatorElement
           : copackagedIndicatorElement // ignore: cast_nullable_to_non_nullable
@@ -17267,72 +16179,42 @@ abstract class _$$_PackagedProductDefinitionCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@HiveField(0)
-          R4ResourceType resourceType,
-      @HiveField(1)
-          String? id,
-      @HiveField(2)
-          FhirMeta? meta,
-      @HiveField(3)
-          FhirUri? implicitRules,
+      {R4ResourceType resourceType,
+      String? id,
+      FhirMeta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           Element? implicitRulesElement,
-      @HiveField(5)
-          FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           Element? languageElement,
-      @HiveField(7)
-          Narrative? text,
-      @HiveField(8)
-          List<Resource>? contained,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           List<FhirExtension>? extension_,
-      @HiveField(10)
-          List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          List<Identifier>? identifier,
-      @HiveField(12)
-          String? name,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      String? name,
       @JsonKey(name: '_name')
-      @HiveField(13)
           Element? nameElement,
-      @HiveField(14)
-          CodeableConcept? type,
-      @HiveField(15)
-          List<Reference>? packageFor,
-      @HiveField(16)
-          CodeableConcept? status,
-      @HiveField(17)
-          FhirDateTime? statusDate,
+      CodeableConcept? type,
+      List<Reference>? packageFor,
+      CodeableConcept? status,
+      FhirDateTime? statusDate,
       @JsonKey(name: '_statusDate')
-      @HiveField(18)
           Element? statusDateElement,
-      @HiveField(19)
-          List<Quantity>? containedItemQuantity,
-      @HiveField(20)
-          Markdown? description,
+      List<Quantity>? containedItemQuantity,
+      FhirMarkdown? description,
       @JsonKey(name: '_description')
-      @HiveField(21)
           Element? descriptionElement,
-      @HiveField(22)
-          List<PackagedProductDefinitionLegalStatusOfSupply>?
-              legalStatusOfSupply,
-      @HiveField(23)
-          List<MarketingStatus>? marketingStatus,
-      @HiveField(24)
-          List<CodeableConcept>? characteristic,
-      @HiveField(25)
-          Boolean? copackagedIndicator,
+      List<PackagedProductDefinitionLegalStatusOfSupply>? legalStatusOfSupply,
+      List<MarketingStatus>? marketingStatus,
+      List<CodeableConcept>? characteristic,
+      FhirBoolean? copackagedIndicator,
       @JsonKey(name: '_copackagedIndicator')
-      @HiveField(26)
           Element? copackagedIndicatorElement,
-      @HiveField(27)
-          List<Reference>? manufacturer,
-      @HiveField(28)
-          PackagedProductDefinitionPackage? package});
+      List<Reference>? manufacturer,
+      PackagedProductDefinitionPackage? package});
 
   @override
   $FhirMetaCopyWith<$Res>? get meta;
@@ -17425,7 +16307,7 @@ class __$$_PackagedProductDefinitionCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -17485,7 +16367,7 @@ class __$$_PackagedProductDefinitionCopyWithImpl<$Res>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -17505,7 +16387,7 @@ class __$$_PackagedProductDefinitionCopyWithImpl<$Res>
       copackagedIndicator: freezed == copackagedIndicator
           ? _value.copackagedIndicator
           : copackagedIndicator // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       copackagedIndicatorElement: freezed == copackagedIndicatorElement
           ? _value.copackagedIndicatorElement
           : copackagedIndicatorElement // ignore: cast_nullable_to_non_nullable
@@ -17524,75 +16406,38 @@ class __$$_PackagedProductDefinitionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@HiveType(typeId: 60)
 class _$_PackagedProductDefinition extends _PackagedProductDefinition {
   _$_PackagedProductDefinition(
-      {@HiveField(0)
-          this.resourceType = R4ResourceType.PackagedProductDefinition,
-      @HiveField(1)
-          this.id,
-      @HiveField(2)
-          this.meta,
-      @HiveField(3)
-          this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-      @HiveField(4)
-          this.implicitRulesElement,
-      @HiveField(5)
-          this.language,
-      @JsonKey(name: '_language')
-      @HiveField(6)
-          this.languageElement,
-      @HiveField(7)
-          this.text,
-      @HiveField(8)
-          final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-      @HiveField(9)
-          final List<FhirExtension>? extension_,
-      @HiveField(10)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          final List<Identifier>? identifier,
-      @HiveField(12)
-          this.name,
-      @JsonKey(name: '_name')
-      @HiveField(13)
-          this.nameElement,
-      @HiveField(14)
-          this.type,
-      @HiveField(15)
-          final List<Reference>? packageFor,
-      @HiveField(16)
-          this.status,
-      @HiveField(17)
-          this.statusDate,
-      @JsonKey(name: '_statusDate')
-      @HiveField(18)
-          this.statusDateElement,
-      @HiveField(19)
-          final List<Quantity>? containedItemQuantity,
-      @HiveField(20)
-          this.description,
-      @JsonKey(name: '_description')
-      @HiveField(21)
-          this.descriptionElement,
-      @HiveField(22)
-          final List<PackagedProductDefinitionLegalStatusOfSupply>?
-              legalStatusOfSupply,
-      @HiveField(23)
-          final List<MarketingStatus>? marketingStatus,
-      @HiveField(24)
-          final List<CodeableConcept>? characteristic,
-      @HiveField(25)
-          this.copackagedIndicator,
-      @JsonKey(name: '_copackagedIndicator')
-      @HiveField(26)
-          this.copackagedIndicatorElement,
-      @HiveField(27)
-          final List<Reference>? manufacturer,
-      @HiveField(28)
-          this.package})
+      {this.resourceType = R4ResourceType.PackagedProductDefinition,
+      this.id,
+      this.meta,
+      this.implicitRules,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      this.language,
+      @JsonKey(name: '_language') this.languageElement,
+      this.text,
+      final List<Resource>? contained,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      this.name,
+      @JsonKey(name: '_name') this.nameElement,
+      this.type,
+      final List<Reference>? packageFor,
+      this.status,
+      this.statusDate,
+      @JsonKey(name: '_statusDate') this.statusDateElement,
+      final List<Quantity>? containedItemQuantity,
+      this.description,
+      @JsonKey(name: '_description') this.descriptionElement,
+      final List<PackagedProductDefinitionLegalStatusOfSupply>?
+          legalStatusOfSupply,
+      final List<MarketingStatus>? marketingStatus,
+      final List<CodeableConcept>? characteristic,
+      this.copackagedIndicator,
+      @JsonKey(name: '_copackagedIndicator') this.copackagedIndicatorElement,
+      final List<Reference>? manufacturer,
+      this.package})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -17610,44 +16455,36 @@ class _$_PackagedProductDefinition extends _PackagedProductDefinition {
 
   @override
   @JsonKey()
-  @HiveField(0)
   final R4ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
   @override
-  @HiveField(1)
   final String? id;
 
   /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
   @override
-  @HiveField(2)
   final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
   @override
-  @HiveField(3)
   final FhirUri? implicitRules;
 
   /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
-  @HiveField(4)
   final Element? implicitRulesElement;
 
   /// [language] The base language in which the resource is written.;
   @override
-  @HiveField(5)
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] (_language): Extensions for language;
   @override
   @JsonKey(name: '_language')
-  @HiveField(6)
   final Element? languageElement;
 
   /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
   @override
-  @HiveField(7)
   final Narrative? text;
 
   /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
@@ -17655,7 +16492,6 @@ class _$_PackagedProductDefinition extends _PackagedProductDefinition {
 
   /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
   @override
-  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -17670,7 +16506,6 @@ class _$_PackagedProductDefinition extends _PackagedProductDefinition {
   /// [extension_] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   @override
   @JsonKey(name: 'extension')
-  @HiveField(9)
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
@@ -17686,7 +16521,6 @@ class _$_PackagedProductDefinition extends _PackagedProductDefinition {
   /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   @override
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -17701,7 +16535,6 @@ class _$_PackagedProductDefinition extends _PackagedProductDefinition {
 
   /// [identifier] A unique identifier for this package as whole - not the the content of the package. Unique instance identifiers assigned to a package by manufacturers, regulators, drug catalogue custodians or other organizations.;
   @override
-  @HiveField(11)
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
@@ -17712,18 +16545,15 @@ class _$_PackagedProductDefinition extends _PackagedProductDefinition {
 
   /// [name] A name for this package. Typically what it would be listed as in a drug formulary or catalogue, inventory etc.;
   @override
-  @HiveField(12)
   final String? name;
 
   /// [nameElement] (_name): Extensions for name;
   @override
   @JsonKey(name: '_name')
-  @HiveField(13)
   final Element? nameElement;
 
   /// [type] A high level category e.g. medicinal product, raw material, shipping/transport container, etc.;
   @override
-  @HiveField(14)
   final CodeableConcept? type;
 
   /// [packageFor] The product this package model relates to, not the contents of the package (for which see package.containedItem).;
@@ -17731,7 +16561,6 @@ class _$_PackagedProductDefinition extends _PackagedProductDefinition {
 
   /// [packageFor] The product this package model relates to, not the contents of the package (for which see package.containedItem).;
   @override
-  @HiveField(15)
   List<Reference>? get packageFor {
     final value = _packageFor;
     if (value == null) return null;
@@ -17742,18 +16571,15 @@ class _$_PackagedProductDefinition extends _PackagedProductDefinition {
 
   /// [status] The status within the lifecycle of this item. A high level status, this is not intended to duplicate details carried elsewhere such as legal status, or authorization or marketing status.;
   @override
-  @HiveField(16)
   final CodeableConcept? status;
 
   /// [statusDate] The date at which the given status became applicable.;
   @override
-  @HiveField(17)
   final FhirDateTime? statusDate;
 
   /// [statusDateElement] (_statusDate): Extensions for statusDate;
   @override
   @JsonKey(name: '_statusDate')
-  @HiveField(18)
   final Element? statusDateElement;
 
   /// [containedItemQuantity] A total of the complete count of contained items of a particular type/form, independent of sub-packaging or organization. This can be considered as the pack size. This attribute differs from containedItem.amount in that it can give a single aggregated count of all tablet types in a pack, even when these are different manufactured items. For example a pill pack of 21 tablets plus 7 sugar tablets, can be denoted here as '28 tablets'. This attribute is repeatable so that the different item types in one pack type can be counted (e.g. a count of vials and count of syringes). Each repeat must have different units, so that it is clear what the different sets of counted items are, and it is not intended to allow different counts of similar items (e.g. not '2 tubes and 3 tubes'). Repeats are not to be used to represent different pack sizes (e.g. 20 pack vs. 50 pack) - which would be different instances of this resource.;
@@ -17761,7 +16587,6 @@ class _$_PackagedProductDefinition extends _PackagedProductDefinition {
 
   /// [containedItemQuantity] A total of the complete count of contained items of a particular type/form, independent of sub-packaging or organization. This can be considered as the pack size. This attribute differs from containedItem.amount in that it can give a single aggregated count of all tablet types in a pack, even when these are different manufactured items. For example a pill pack of 21 tablets plus 7 sugar tablets, can be denoted here as '28 tablets'. This attribute is repeatable so that the different item types in one pack type can be counted (e.g. a count of vials and count of syringes). Each repeat must have different units, so that it is clear what the different sets of counted items are, and it is not intended to allow different counts of similar items (e.g. not '2 tubes and 3 tubes'). Repeats are not to be used to represent different pack sizes (e.g. 20 pack vs. 50 pack) - which would be different instances of this resource.;
   @override
-  @HiveField(19)
   List<Quantity>? get containedItemQuantity {
     final value = _containedItemQuantity;
     if (value == null) return null;
@@ -17773,13 +16598,11 @@ class _$_PackagedProductDefinition extends _PackagedProductDefinition {
 
   /// [description] Textual description. Note that this is not the name of the package or product.;
   @override
-  @HiveField(20)
-  final Markdown? description;
+  final FhirMarkdown? description;
 
   /// [descriptionElement] (_description): Extensions for description;
   @override
   @JsonKey(name: '_description')
-  @HiveField(21)
   final Element? descriptionElement;
 
   /// [legalStatusOfSupply] The legal status of supply of the packaged item as classified by the regulator.;
@@ -17788,7 +16611,6 @@ class _$_PackagedProductDefinition extends _PackagedProductDefinition {
 
   /// [legalStatusOfSupply] The legal status of supply of the packaged item as classified by the regulator.;
   @override
-  @HiveField(22)
   List<PackagedProductDefinitionLegalStatusOfSupply>? get legalStatusOfSupply {
     final value = _legalStatusOfSupply;
     if (value == null) return null;
@@ -17803,7 +16625,6 @@ class _$_PackagedProductDefinition extends _PackagedProductDefinition {
 
   /// [marketingStatus] Allows specifying that an item is on the market for sale, or that it is not available, and the dates and locations associated.;
   @override
-  @HiveField(23)
   List<MarketingStatus>? get marketingStatus {
     final value = _marketingStatus;
     if (value == null) return null;
@@ -17817,7 +16638,6 @@ class _$_PackagedProductDefinition extends _PackagedProductDefinition {
 
   /// [characteristic] Allows the key features to be recorded, such as "hospital pack", "nurse prescribable", "calendar pack".;
   @override
-  @HiveField(24)
   List<CodeableConcept>? get characteristic {
     final value = _characteristic;
     if (value == null) return null;
@@ -17828,13 +16648,11 @@ class _$_PackagedProductDefinition extends _PackagedProductDefinition {
 
   /// [copackagedIndicator] Identifies if the package contains different items, such as when a drug product is supplied with another item e.g. a diluent or adjuvant.;
   @override
-  @HiveField(25)
-  final Boolean? copackagedIndicator;
+  final FhirBoolean? copackagedIndicator;
 
   /// [copackagedIndicatorElement] (_copackagedIndicator): Extensions for copackagedIndicator;
   @override
   @JsonKey(name: '_copackagedIndicator')
-  @HiveField(26)
   final Element? copackagedIndicatorElement;
 
   /// [manufacturer] Manufacturer of this package type. When there are multiple it means these are all possible manufacturers.;
@@ -17842,7 +16660,6 @@ class _$_PackagedProductDefinition extends _PackagedProductDefinition {
 
   /// [manufacturer] Manufacturer of this package type. When there are multiple it means these are all possible manufacturers.;
   @override
-  @HiveField(27)
   List<Reference>? get manufacturer {
     final value = _manufacturer;
     if (value == null) return null;
@@ -17853,7 +16670,6 @@ class _$_PackagedProductDefinition extends _PackagedProductDefinition {
 
   /// [package] A packaging item, as a container for medically related items, possibly with other packaging items within, or a packaging component, such as bottle cap (which is not a device or a medication manufactured item).;
   @override
-  @HiveField(28)
   final PackagedProductDefinitionPackage? package;
 
   @override
@@ -17973,228 +16789,162 @@ class _$_PackagedProductDefinition extends _PackagedProductDefinition {
 
 abstract class _PackagedProductDefinition extends PackagedProductDefinition {
   factory _PackagedProductDefinition(
-          {@HiveField(0)
-              final R4ResourceType resourceType,
-          @HiveField(1)
-              final String? id,
-          @HiveField(2)
-              final FhirMeta? meta,
-          @HiveField(3)
-              final FhirUri? implicitRules,
-          @JsonKey(name: '_implicitRules')
-          @HiveField(4)
-              final Element? implicitRulesElement,
-          @HiveField(5)
-              final Code? language,
-          @JsonKey(name: '_language')
-          @HiveField(6)
-              final Element? languageElement,
-          @HiveField(7)
-              final Narrative? text,
-          @HiveField(8)
-              final List<Resource>? contained,
-          @JsonKey(name: 'extension')
-          @HiveField(9)
-              final List<FhirExtension>? extension_,
-          @HiveField(10)
-              final List<FhirExtension>? modifierExtension,
-          @HiveField(11)
-              final List<Identifier>? identifier,
-          @HiveField(12)
-              final String? name,
-          @JsonKey(name: '_name')
-          @HiveField(13)
-              final Element? nameElement,
-          @HiveField(14)
-              final CodeableConcept? type,
-          @HiveField(15)
-              final List<Reference>? packageFor,
-          @HiveField(16)
-              final CodeableConcept? status,
-          @HiveField(17)
-              final FhirDateTime? statusDate,
-          @JsonKey(name: '_statusDate')
-          @HiveField(18)
-              final Element? statusDateElement,
-          @HiveField(19)
-              final List<Quantity>? containedItemQuantity,
-          @HiveField(20)
-              final Markdown? description,
-          @JsonKey(name: '_description')
-          @HiveField(21)
-              final Element? descriptionElement,
-          @HiveField(22)
-              final List<PackagedProductDefinitionLegalStatusOfSupply>?
-                  legalStatusOfSupply,
-          @HiveField(23)
-              final List<MarketingStatus>? marketingStatus,
-          @HiveField(24)
-              final List<CodeableConcept>? characteristic,
-          @HiveField(25)
-              final Boolean? copackagedIndicator,
-          @JsonKey(name: '_copackagedIndicator')
-          @HiveField(26)
-              final Element? copackagedIndicatorElement,
-          @HiveField(27)
-              final List<Reference>? manufacturer,
-          @HiveField(28)
-              final PackagedProductDefinitionPackage? package}) =
-      _$_PackagedProductDefinition;
+      {final R4ResourceType resourceType,
+      final String? id,
+      final FhirMeta? meta,
+      final FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
+      final FhirCode? language,
+      @JsonKey(name: '_language') final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final String? name,
+      @JsonKey(name: '_name') final Element? nameElement,
+      final CodeableConcept? type,
+      final List<Reference>? packageFor,
+      final CodeableConcept? status,
+      final FhirDateTime? statusDate,
+      @JsonKey(name: '_statusDate') final Element? statusDateElement,
+      final List<Quantity>? containedItemQuantity,
+      final FhirMarkdown? description,
+      @JsonKey(name: '_description') final Element? descriptionElement,
+      final List<PackagedProductDefinitionLegalStatusOfSupply>?
+          legalStatusOfSupply,
+      final List<MarketingStatus>? marketingStatus,
+      final List<CodeableConcept>? characteristic,
+      final FhirBoolean? copackagedIndicator,
+      @JsonKey(name: '_copackagedIndicator') final Element? copackagedIndicatorElement,
+      final List<Reference>? manufacturer,
+      final PackagedProductDefinitionPackage? package}) = _$_PackagedProductDefinition;
   _PackagedProductDefinition._() : super._();
 
   factory _PackagedProductDefinition.fromJson(Map<String, dynamic> json) =
       _$_PackagedProductDefinition.fromJson;
 
   @override
-  @HiveField(0)
   R4ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
-  @HiveField(1)
   String? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
-  @HiveField(2)
   FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
-  @HiveField(3)
   FhirUri? get implicitRules;
   @override
 
   /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
   @JsonKey(name: '_implicitRules')
-  @HiveField(4)
   Element? get implicitRulesElement;
   @override
 
   /// [language] The base language in which the resource is written.;
-  @HiveField(5)
   FhirCode? get language;
   @override
 
   /// [languageElement] (_language): Extensions for language;
   @JsonKey(name: '_language')
-  @HiveField(6)
   Element? get languageElement;
   @override
 
   /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
-  @HiveField(7)
   Narrative? get text;
   @override
 
   /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
-  @HiveField(8)
   List<Resource>? get contained;
   @override
 
   /// [extension_] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   @JsonKey(name: 'extension')
-  @HiveField(9)
   List<FhirExtension>? get extension_;
   @override
 
   /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
 
   /// [identifier] A unique identifier for this package as whole - not the the content of the package. Unique instance identifiers assigned to a package by manufacturers, regulators, drug catalogue custodians or other organizations.;
-  @HiveField(11)
   List<Identifier>? get identifier;
   @override
 
   /// [name] A name for this package. Typically what it would be listed as in a drug formulary or catalogue, inventory etc.;
-  @HiveField(12)
   String? get name;
   @override
 
   /// [nameElement] (_name): Extensions for name;
   @JsonKey(name: '_name')
-  @HiveField(13)
   Element? get nameElement;
   @override
 
   /// [type] A high level category e.g. medicinal product, raw material, shipping/transport container, etc.;
-  @HiveField(14)
   CodeableConcept? get type;
   @override
 
   /// [packageFor] The product this package model relates to, not the contents of the package (for which see package.containedItem).;
-  @HiveField(15)
   List<Reference>? get packageFor;
   @override
 
   /// [status] The status within the lifecycle of this item. A high level status, this is not intended to duplicate details carried elsewhere such as legal status, or authorization or marketing status.;
-  @HiveField(16)
   CodeableConcept? get status;
   @override
 
   /// [statusDate] The date at which the given status became applicable.;
-  @HiveField(17)
   FhirDateTime? get statusDate;
   @override
 
   /// [statusDateElement] (_statusDate): Extensions for statusDate;
   @JsonKey(name: '_statusDate')
-  @HiveField(18)
   Element? get statusDateElement;
   @override
 
   /// [containedItemQuantity] A total of the complete count of contained items of a particular type/form, independent of sub-packaging or organization. This can be considered as the pack size. This attribute differs from containedItem.amount in that it can give a single aggregated count of all tablet types in a pack, even when these are different manufactured items. For example a pill pack of 21 tablets plus 7 sugar tablets, can be denoted here as '28 tablets'. This attribute is repeatable so that the different item types in one pack type can be counted (e.g. a count of vials and count of syringes). Each repeat must have different units, so that it is clear what the different sets of counted items are, and it is not intended to allow different counts of similar items (e.g. not '2 tubes and 3 tubes'). Repeats are not to be used to represent different pack sizes (e.g. 20 pack vs. 50 pack) - which would be different instances of this resource.;
-  @HiveField(19)
   List<Quantity>? get containedItemQuantity;
   @override
 
   /// [description] Textual description. Note that this is not the name of the package or product.;
-  @HiveField(20)
-  Markdown? get description;
+  FhirMarkdown? get description;
   @override
 
   /// [descriptionElement] (_description): Extensions for description;
   @JsonKey(name: '_description')
-  @HiveField(21)
   Element? get descriptionElement;
   @override
 
   /// [legalStatusOfSupply] The legal status of supply of the packaged item as classified by the regulator.;
-  @HiveField(22)
   List<PackagedProductDefinitionLegalStatusOfSupply>? get legalStatusOfSupply;
   @override
 
   /// [marketingStatus] Allows specifying that an item is on the market for sale, or that it is not available, and the dates and locations associated.;
-  @HiveField(23)
   List<MarketingStatus>? get marketingStatus;
   @override
 
   /// [characteristic] Allows the key features to be recorded, such as "hospital pack", "nurse prescribable", "calendar pack".;
-  @HiveField(24)
   List<CodeableConcept>? get characteristic;
   @override
 
   /// [copackagedIndicator] Identifies if the package contains different items, such as when a drug product is supplied with another item e.g. a diluent or adjuvant.;
-  @HiveField(25)
-  Boolean? get copackagedIndicator;
+  FhirBoolean? get copackagedIndicator;
   @override
 
   /// [copackagedIndicatorElement] (_copackagedIndicator): Extensions for copackagedIndicator;
   @JsonKey(name: '_copackagedIndicator')
-  @HiveField(26)
   Element? get copackagedIndicatorElement;
   @override
 
   /// [manufacturer] Manufacturer of this package type. When there are multiple it means these are all possible manufacturers.;
-  @HiveField(27)
   List<Reference>? get manufacturer;
   @override
 
   /// [package] A packaging item, as a container for medically related items, possibly with other packaging items within, or a packaging component, such as bottle cap (which is not a device or a medication manufactured item).;
-  @HiveField(28)
   PackagedProductDefinitionPackage? get package;
   @override
   @JsonKey(ignore: true)
@@ -18568,7 +17318,7 @@ mixin _$PackagedProductDefinitionPackage {
   CodeableConcept? get type => throw _privateConstructorUsedError;
 
   /// [quantity] The quantity of packaging items contained at this layer of the package. This does not relate to the number of contained items but relates solely to the number of packaging items. When looking at the outermost layer it is always 1. If there are two boxes within, at the next layer it would be 2.;
-  Integer? get quantity => throw _privateConstructorUsedError;
+  FhirInteger? get quantity => throw _privateConstructorUsedError;
 
   /// [quantityElement] (_quantity): Extensions for quantity;
   @JsonKey(name: '_quantity')
@@ -18620,7 +17370,7 @@ abstract class $PackagedProductDefinitionPackageCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       CodeableConcept? type,
-      Integer? quantity,
+      FhirInteger? quantity,
       @JsonKey(name: '_quantity') Element? quantityElement,
       List<CodeableConcept>? material,
       List<CodeableConcept>? alternateMaterial,
@@ -18687,7 +17437,7 @@ class _$PackagedProductDefinitionPackageCopyWithImpl<$Res,
       quantity: freezed == quantity
           ? _value.quantity
           : quantity // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       quantityElement: freezed == quantityElement
           ? _value.quantityElement
           : quantityElement // ignore: cast_nullable_to_non_nullable
@@ -18763,7 +17513,7 @@ abstract class _$$_PackagedProductDefinitionPackageCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       CodeableConcept? type,
-      Integer? quantity,
+      FhirInteger? quantity,
       @JsonKey(name: '_quantity') Element? quantityElement,
       List<CodeableConcept>? material,
       List<CodeableConcept>? alternateMaterial,
@@ -18831,7 +17581,7 @@ class __$$_PackagedProductDefinitionPackageCopyWithImpl<$Res>
       quantity: freezed == quantity
           ? _value.quantity
           : quantity // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       quantityElement: freezed == quantityElement
           ? _value.quantityElement
           : quantityElement // ignore: cast_nullable_to_non_nullable
@@ -18956,7 +17706,7 @@ class _$_PackagedProductDefinitionPackage
 
   /// [quantity] The quantity of packaging items contained at this layer of the package. This does not relate to the number of contained items but relates solely to the number of packaging items. When looking at the outermost layer it is always 1. If there are two boxes within, at the next layer it would be 2.;
   @override
-  final Integer? quantity;
+  final FhirInteger? quantity;
 
   /// [quantityElement] (_quantity): Extensions for quantity;
   @override
@@ -19134,7 +17884,7 @@ abstract class _PackagedProductDefinitionPackage
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       final CodeableConcept? type,
-      final Integer? quantity,
+      final FhirInteger? quantity,
       @JsonKey(name: '_quantity') final Element? quantityElement,
       final List<CodeableConcept>? material,
       final List<CodeableConcept>? alternateMaterial,
@@ -19174,7 +17924,7 @@ abstract class _PackagedProductDefinitionPackage
   @override
 
   /// [quantity] The quantity of packaging items contained at this layer of the package. This does not relate to the number of contained items but relates solely to the number of packaging items. When looking at the outermost layer it is always 1. If there are two boxes within, at the next layer it would be 2.;
-  Integer? get quantity;
+  FhirInteger? get quantity;
   @override
 
   /// [quantityElement] (_quantity): Extensions for quantity;
@@ -19852,14 +18602,14 @@ mixin _$PackagedProductDefinitionProperty {
   Quantity? get valueQuantity => throw _privateConstructorUsedError;
 
   /// [valueDate] A value for the characteristic.;
-  Date? get valueDate => throw _privateConstructorUsedError;
+  FhirDate? get valueDate => throw _privateConstructorUsedError;
 
   /// [valueDateElement] (_valueDate): Extensions for valueDate;
   @JsonKey(name: '_valueDate')
   Element? get valueDateElement => throw _privateConstructorUsedError;
 
   /// [valueBoolean] A value for the characteristic.;
-  Boolean? get valueBoolean => throw _privateConstructorUsedError;
+  FhirBoolean? get valueBoolean => throw _privateConstructorUsedError;
 
   /// [valueBooleanElement] (_valueBoolean): Extensions for valueBoolean;
   @JsonKey(name: '_valueBoolean')
@@ -19889,9 +18639,9 @@ abstract class $PackagedProductDefinitionPropertyCopyWith<$Res> {
       CodeableConcept type,
       CodeableConcept? valueCodeableConcept,
       Quantity? valueQuantity,
-      Date? valueDate,
+      FhirDate? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
-      Boolean? valueBoolean,
+      FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       Attachment? valueAttachment});
 
@@ -19957,7 +18707,7 @@ class _$PackagedProductDefinitionPropertyCopyWithImpl<$Res,
       valueDate: freezed == valueDate
           ? _value.valueDate
           : valueDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       valueDateElement: freezed == valueDateElement
           ? _value.valueDateElement
           : valueDateElement // ignore: cast_nullable_to_non_nullable
@@ -19965,7 +18715,7 @@ class _$PackagedProductDefinitionPropertyCopyWithImpl<$Res,
       valueBoolean: freezed == valueBoolean
           ? _value.valueBoolean
           : valueBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       valueBooleanElement: freezed == valueBooleanElement
           ? _value.valueBooleanElement
           : valueBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -20063,9 +18813,9 @@ abstract class _$$_PackagedProductDefinitionPropertyCopyWith<$Res>
       CodeableConcept type,
       CodeableConcept? valueCodeableConcept,
       Quantity? valueQuantity,
-      Date? valueDate,
+      FhirDate? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
-      Boolean? valueBoolean,
+      FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       Attachment? valueAttachment});
 
@@ -20136,7 +18886,7 @@ class __$$_PackagedProductDefinitionPropertyCopyWithImpl<$Res>
       valueDate: freezed == valueDate
           ? _value.valueDate
           : valueDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       valueDateElement: freezed == valueDateElement
           ? _value.valueDateElement
           : valueDateElement // ignore: cast_nullable_to_non_nullable
@@ -20144,7 +18894,7 @@ class __$$_PackagedProductDefinitionPropertyCopyWithImpl<$Res>
       valueBoolean: freezed == valueBoolean
           ? _value.valueBoolean
           : valueBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       valueBooleanElement: freezed == valueBooleanElement
           ? _value.valueBooleanElement
           : valueBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -20229,7 +18979,7 @@ class _$_PackagedProductDefinitionProperty
 
   /// [valueDate] A value for the characteristic.;
   @override
-  final Date? valueDate;
+  final FhirDate? valueDate;
 
   /// [valueDateElement] (_valueDate): Extensions for valueDate;
   @override
@@ -20238,7 +18988,7 @@ class _$_PackagedProductDefinitionProperty
 
   /// [valueBoolean] A value for the characteristic.;
   @override
-  final Boolean? valueBoolean;
+  final FhirBoolean? valueBoolean;
 
   /// [valueBooleanElement] (_valueBoolean): Extensions for valueBoolean;
   @override
@@ -20322,9 +19072,9 @@ abstract class _PackagedProductDefinitionProperty
           required final CodeableConcept type,
           final CodeableConcept? valueCodeableConcept,
           final Quantity? valueQuantity,
-          final Date? valueDate,
+          final FhirDate? valueDate,
           @JsonKey(name: '_valueDate') final Element? valueDateElement,
-          final Boolean? valueBoolean,
+          final FhirBoolean? valueBoolean,
           @JsonKey(name: '_valueBoolean') final Element? valueBooleanElement,
           final Attachment? valueAttachment}) =
       _$_PackagedProductDefinitionProperty;
@@ -20363,7 +19113,7 @@ abstract class _PackagedProductDefinitionProperty
   @override
 
   /// [valueDate] A value for the characteristic.;
-  Date? get valueDate;
+  FhirDate? get valueDate;
   @override
 
   /// [valueDateElement] (_valueDate): Extensions for valueDate;
@@ -20372,7 +19122,7 @@ abstract class _PackagedProductDefinitionProperty
   @override
 
   /// [valueBoolean] A value for the characteristic.;
-  Boolean? get valueBoolean;
+  FhirBoolean? get valueBoolean;
   @override
 
   /// [valueBooleanElement] (_valueBoolean): Extensions for valueBoolean;
@@ -20728,118 +19478,91 @@ RegulatedAuthorization _$RegulatedAuthorizationFromJson(
 /// @nodoc
 mixin _$RegulatedAuthorization {
   /// [resourceType] This is a RegulatedAuthorization resource;
-  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
-  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
-  @HiveField(2)
   FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
-  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
-  @HiveField(4)
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.;
-  @HiveField(5)
   FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] (_language): Extensions for language;
-  @HiveField(6)
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
 
   /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
-  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
 
   /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
-  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
-  @HiveField(9)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
   /// [identifier] Business identifier for the authorization, typically assigned by the authorizing body.;
-  @HiveField(11)
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [subject] The product type, treatment, facility or activity that is being authorized.;
-  @HiveField(12)
   List<Reference>? get subject => throw _privateConstructorUsedError;
 
   /// [type] Overall type of this authorization, for example drug marketing approval, orphan drug designation.;
-  @HiveField(13)
   CodeableConcept? get type => throw _privateConstructorUsedError;
 
   /// [description] General textual supporting information.;
-  @HiveField(14)
-  Markdown? get description => throw _privateConstructorUsedError;
+  FhirMarkdown? get description => throw _privateConstructorUsedError;
 
   /// [descriptionElement] (_description): Extensions for description;
-  @HiveField(15)
   @JsonKey(name: '_description')
   Element? get descriptionElement => throw _privateConstructorUsedError;
 
   /// [region] The territory (e.g., country, jurisdiction etc.) in which the authorization has been granted.;
-  @HiveField(16)
   List<CodeableConcept>? get region => throw _privateConstructorUsedError;
 
   /// [status] The status that is authorised e.g. approved. Intermediate states and actions can be tracked with cases and applications.;
-  @HiveField(17)
   CodeableConcept? get status => throw _privateConstructorUsedError;
 
   /// [statusDate] The date at which the current status was assigned.;
-  @HiveField(18)
   FhirDateTime? get statusDate => throw _privateConstructorUsedError;
 
   /// [statusDateElement] (_statusDate): Extensions for statusDate;
-  @HiveField(19)
   @JsonKey(name: '_statusDate')
   Element? get statusDateElement => throw _privateConstructorUsedError;
 
   /// [validityPeriod] The time period in which the regulatory approval, clearance or licencing is in effect. As an example, a Marketing Authorization includes the date of authorization and/or an expiration date.;
-  @HiveField(20)
   Period? get validityPeriod => throw _privateConstructorUsedError;
 
   /// [indication] Condition for which the use of the regulated product applies.;
-  @HiveField(21)
   CodeableReference? get indication => throw _privateConstructorUsedError;
 
   /// [intendedUse] The intended use of the product, e.g. prevention, treatment, diagnosis.;
-  @HiveField(22)
   CodeableConcept? get intendedUse => throw _privateConstructorUsedError;
 
   /// [basis] The legal or regulatory framework against which this authorization is granted, or other reasons for it.;
-  @HiveField(23)
   List<CodeableConcept>? get basis => throw _privateConstructorUsedError;
 
   /// [holder] The organization that has been granted this authorization, by some authoritative body (the 'regulator').;
-  @HiveField(24)
   Reference? get holder => throw _privateConstructorUsedError;
 
   /// [regulator] The regulatory authority or authorizing body granting the authorization. For example, European Medicines Agency (EMA), Food and Drug Administration (FDA), Health Canada (HC), etc.;
-  @HiveField(25)
   Reference? get regulator => throw _privateConstructorUsedError;
 
   /// [case_] The case or regulatory procedure for granting or amending a regulated authorization. An authorization is granted in response to submissions/applications by those seeking authorization. A case is the administrative process that deals with the application(s) that relate to this and assesses them. Note: This area is subject to ongoing review and the workgroup is seeking implementer feedback on its use (see link at bottom of page).;
-  @HiveField(26)
   @JsonKey(name: 'case')
   RegulatedAuthorizationCase? get case_ => throw _privateConstructorUsedError;
 
@@ -20856,66 +19579,33 @@ abstract class $RegulatedAuthorizationCopyWith<$Res> {
       _$RegulatedAuthorizationCopyWithImpl<$Res, RegulatedAuthorization>;
   @useResult
   $Res call(
-      {@HiveField(0)
-          R4ResourceType resourceType,
-      @HiveField(1)
-          String? id,
-      @HiveField(2)
-          FhirMeta? meta,
-      @HiveField(3)
-          FhirUri? implicitRules,
-      @HiveField(4)
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      @HiveField(5)
-          FhirCode? language,
-      @HiveField(6)
-      @JsonKey(name: '_language')
-          Element? languageElement,
-      @HiveField(7)
-          Narrative? text,
-      @HiveField(8)
-          List<Resource>? contained,
-      @HiveField(9)
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      @HiveField(10)
-          List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          List<Identifier>? identifier,
-      @HiveField(12)
-          List<Reference>? subject,
-      @HiveField(13)
-          CodeableConcept? type,
-      @HiveField(14)
-          Markdown? description,
-      @HiveField(15)
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
-      @HiveField(16)
-          List<CodeableConcept>? region,
-      @HiveField(17)
-          CodeableConcept? status,
-      @HiveField(18)
-          FhirDateTime? statusDate,
-      @HiveField(19)
-      @JsonKey(name: '_statusDate')
-          Element? statusDateElement,
-      @HiveField(20)
-          Period? validityPeriod,
-      @HiveField(21)
-          CodeableReference? indication,
-      @HiveField(22)
-          CodeableConcept? intendedUse,
-      @HiveField(23)
-          List<CodeableConcept>? basis,
-      @HiveField(24)
-          Reference? holder,
-      @HiveField(25)
-          Reference? regulator,
-      @HiveField(26)
-      @JsonKey(name: 'case')
-          RegulatedAuthorizationCase? case_});
+      {R4ResourceType resourceType,
+      String? id,
+      FhirMeta? meta,
+      FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+      FhirCode? language,
+      @JsonKey(name: '_language') Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      List<Reference>? subject,
+      CodeableConcept? type,
+      FhirMarkdown? description,
+      @JsonKey(name: '_description') Element? descriptionElement,
+      List<CodeableConcept>? region,
+      CodeableConcept? status,
+      FhirDateTime? statusDate,
+      @JsonKey(name: '_statusDate') Element? statusDateElement,
+      Period? validityPeriod,
+      CodeableReference? indication,
+      CodeableConcept? intendedUse,
+      List<CodeableConcept>? basis,
+      Reference? holder,
+      Reference? regulator,
+      @JsonKey(name: 'case') RegulatedAuthorizationCase? case_});
 
   $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -20999,7 +19689,7 @@ class _$RegulatedAuthorizationCopyWithImpl<$Res,
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -21035,7 +19725,7 @@ class _$RegulatedAuthorizationCopyWithImpl<$Res,
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -21265,66 +19955,33 @@ abstract class _$$_RegulatedAuthorizationCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@HiveField(0)
-          R4ResourceType resourceType,
-      @HiveField(1)
-          String? id,
-      @HiveField(2)
-          FhirMeta? meta,
-      @HiveField(3)
-          FhirUri? implicitRules,
-      @HiveField(4)
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      @HiveField(5)
-          FhirCode? language,
-      @HiveField(6)
-      @JsonKey(name: '_language')
-          Element? languageElement,
-      @HiveField(7)
-          Narrative? text,
-      @HiveField(8)
-          List<Resource>? contained,
-      @HiveField(9)
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      @HiveField(10)
-          List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          List<Identifier>? identifier,
-      @HiveField(12)
-          List<Reference>? subject,
-      @HiveField(13)
-          CodeableConcept? type,
-      @HiveField(14)
-          Markdown? description,
-      @HiveField(15)
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
-      @HiveField(16)
-          List<CodeableConcept>? region,
-      @HiveField(17)
-          CodeableConcept? status,
-      @HiveField(18)
-          FhirDateTime? statusDate,
-      @HiveField(19)
-      @JsonKey(name: '_statusDate')
-          Element? statusDateElement,
-      @HiveField(20)
-          Period? validityPeriod,
-      @HiveField(21)
-          CodeableReference? indication,
-      @HiveField(22)
-          CodeableConcept? intendedUse,
-      @HiveField(23)
-          List<CodeableConcept>? basis,
-      @HiveField(24)
-          Reference? holder,
-      @HiveField(25)
-          Reference? regulator,
-      @HiveField(26)
-      @JsonKey(name: 'case')
-          RegulatedAuthorizationCase? case_});
+      {R4ResourceType resourceType,
+      String? id,
+      FhirMeta? meta,
+      FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+      FhirCode? language,
+      @JsonKey(name: '_language') Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      List<Reference>? subject,
+      CodeableConcept? type,
+      FhirMarkdown? description,
+      @JsonKey(name: '_description') Element? descriptionElement,
+      List<CodeableConcept>? region,
+      CodeableConcept? status,
+      FhirDateTime? statusDate,
+      @JsonKey(name: '_statusDate') Element? statusDateElement,
+      Period? validityPeriod,
+      CodeableReference? indication,
+      CodeableConcept? intendedUse,
+      List<CodeableConcept>? basis,
+      Reference? holder,
+      Reference? regulator,
+      @JsonKey(name: 'case') RegulatedAuthorizationCase? case_});
 
   @override
   $FhirMetaCopyWith<$Res>? get meta;
@@ -21420,7 +20077,7 @@ class __$$_RegulatedAuthorizationCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -21456,7 +20113,7 @@ class __$$_RegulatedAuthorizationCopyWithImpl<$Res>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -21511,69 +20168,35 @@ class __$$_RegulatedAuthorizationCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@HiveType(typeId: 61)
 class _$_RegulatedAuthorization extends _RegulatedAuthorization {
   _$_RegulatedAuthorization(
-      {@HiveField(0)
-          this.resourceType = R4ResourceType.RegulatedAuthorization,
-      @HiveField(1)
-          this.id,
-      @HiveField(2)
-          this.meta,
-      @HiveField(3)
-          this.implicitRules,
-      @HiveField(4)
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
-      @HiveField(5)
-          this.language,
-      @HiveField(6)
-      @JsonKey(name: '_language')
-          this.languageElement,
-      @HiveField(7)
-          this.text,
-      @HiveField(8)
-          final List<Resource>? contained,
-      @HiveField(9)
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      @HiveField(10)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          final List<Identifier>? identifier,
-      @HiveField(12)
-          final List<Reference>? subject,
-      @HiveField(13)
-          this.type,
-      @HiveField(14)
-          this.description,
-      @HiveField(15)
-      @JsonKey(name: '_description')
-          this.descriptionElement,
-      @HiveField(16)
-          final List<CodeableConcept>? region,
-      @HiveField(17)
-          this.status,
-      @HiveField(18)
-          this.statusDate,
-      @HiveField(19)
-      @JsonKey(name: '_statusDate')
-          this.statusDateElement,
-      @HiveField(20)
-          this.validityPeriod,
-      @HiveField(21)
-          this.indication,
-      @HiveField(22)
-          this.intendedUse,
-      @HiveField(23)
-          final List<CodeableConcept>? basis,
-      @HiveField(24)
-          this.holder,
-      @HiveField(25)
-          this.regulator,
-      @HiveField(26)
-      @JsonKey(name: 'case')
-          this.case_})
+      {this.resourceType = R4ResourceType.RegulatedAuthorization,
+      this.id,
+      this.meta,
+      this.implicitRules,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      this.language,
+      @JsonKey(name: '_language') this.languageElement,
+      this.text,
+      final List<Resource>? contained,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final List<Reference>? subject,
+      this.type,
+      this.description,
+      @JsonKey(name: '_description') this.descriptionElement,
+      final List<CodeableConcept>? region,
+      this.status,
+      this.statusDate,
+      @JsonKey(name: '_statusDate') this.statusDateElement,
+      this.validityPeriod,
+      this.indication,
+      this.intendedUse,
+      final List<CodeableConcept>? basis,
+      this.holder,
+      this.regulator,
+      @JsonKey(name: 'case') this.case_})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -21589,44 +20212,36 @@ class _$_RegulatedAuthorization extends _RegulatedAuthorization {
   /// [resourceType] This is a RegulatedAuthorization resource;
   @override
   @JsonKey()
-  @HiveField(0)
   final R4ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
   @override
-  @HiveField(1)
   final String? id;
 
   /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
   @override
-  @HiveField(2)
   final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
   @override
-  @HiveField(3)
   final FhirUri? implicitRules;
 
   /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
   @override
-  @HiveField(4)
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
 
   /// [language] The base language in which the resource is written.;
   @override
-  @HiveField(5)
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] (_language): Extensions for language;
   @override
-  @HiveField(6)
   @JsonKey(name: '_language')
   final Element? languageElement;
 
   /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
   @override
-  @HiveField(7)
   final Narrative? text;
 
   /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
@@ -21634,7 +20249,6 @@ class _$_RegulatedAuthorization extends _RegulatedAuthorization {
 
   /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
   @override
-  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -21648,7 +20262,6 @@ class _$_RegulatedAuthorization extends _RegulatedAuthorization {
 
   /// [extension_] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   @override
-  @HiveField(9)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
     final value = _extension_;
@@ -21665,7 +20278,6 @@ class _$_RegulatedAuthorization extends _RegulatedAuthorization {
   /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   @override
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -21680,7 +20292,6 @@ class _$_RegulatedAuthorization extends _RegulatedAuthorization {
 
   /// [identifier] Business identifier for the authorization, typically assigned by the authorizing body.;
   @override
-  @HiveField(11)
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
@@ -21694,7 +20305,6 @@ class _$_RegulatedAuthorization extends _RegulatedAuthorization {
 
   /// [subject] The product type, treatment, facility or activity that is being authorized.;
   @override
-  @HiveField(12)
   List<Reference>? get subject {
     final value = _subject;
     if (value == null) return null;
@@ -21705,17 +20315,14 @@ class _$_RegulatedAuthorization extends _RegulatedAuthorization {
 
   /// [type] Overall type of this authorization, for example drug marketing approval, orphan drug designation.;
   @override
-  @HiveField(13)
   final CodeableConcept? type;
 
   /// [description] General textual supporting information.;
   @override
-  @HiveField(14)
-  final Markdown? description;
+  final FhirMarkdown? description;
 
   /// [descriptionElement] (_description): Extensions for description;
   @override
-  @HiveField(15)
   @JsonKey(name: '_description')
   final Element? descriptionElement;
 
@@ -21724,7 +20331,6 @@ class _$_RegulatedAuthorization extends _RegulatedAuthorization {
 
   /// [region] The territory (e.g., country, jurisdiction etc.) in which the authorization has been granted.;
   @override
-  @HiveField(16)
   List<CodeableConcept>? get region {
     final value = _region;
     if (value == null) return null;
@@ -21735,33 +20341,27 @@ class _$_RegulatedAuthorization extends _RegulatedAuthorization {
 
   /// [status] The status that is authorised e.g. approved. Intermediate states and actions can be tracked with cases and applications.;
   @override
-  @HiveField(17)
   final CodeableConcept? status;
 
   /// [statusDate] The date at which the current status was assigned.;
   @override
-  @HiveField(18)
   final FhirDateTime? statusDate;
 
   /// [statusDateElement] (_statusDate): Extensions for statusDate;
   @override
-  @HiveField(19)
   @JsonKey(name: '_statusDate')
   final Element? statusDateElement;
 
   /// [validityPeriod] The time period in which the regulatory approval, clearance or licencing is in effect. As an example, a Marketing Authorization includes the date of authorization and/or an expiration date.;
   @override
-  @HiveField(20)
   final Period? validityPeriod;
 
   /// [indication] Condition for which the use of the regulated product applies.;
   @override
-  @HiveField(21)
   final CodeableReference? indication;
 
   /// [intendedUse] The intended use of the product, e.g. prevention, treatment, diagnosis.;
   @override
-  @HiveField(22)
   final CodeableConcept? intendedUse;
 
   /// [basis] The legal or regulatory framework against which this authorization is granted, or other reasons for it.;
@@ -21769,7 +20369,6 @@ class _$_RegulatedAuthorization extends _RegulatedAuthorization {
 
   /// [basis] The legal or regulatory framework against which this authorization is granted, or other reasons for it.;
   @override
-  @HiveField(23)
   List<CodeableConcept>? get basis {
     final value = _basis;
     if (value == null) return null;
@@ -21780,17 +20379,14 @@ class _$_RegulatedAuthorization extends _RegulatedAuthorization {
 
   /// [holder] The organization that has been granted this authorization, by some authoritative body (the 'regulator').;
   @override
-  @HiveField(24)
   final Reference? holder;
 
   /// [regulator] The regulatory authority or authorizing body granting the authorization. For example, European Medicines Agency (EMA), Food and Drug Administration (FDA), Health Canada (HC), etc.;
   @override
-  @HiveField(25)
   final Reference? regulator;
 
   /// [case_] The case or regulatory procedure for granting or amending a regulated authorization. An authorization is granted in response to submissions/applications by those seeking authorization. A case is the administrative process that deals with the application(s) that relate to this and assesses them. Note: This area is subject to ongoing review and the workgroup is seeking implementer feedback on its use (see link at bottom of page).;
   @override
-  @HiveField(26)
   @JsonKey(name: 'case')
   final RegulatedAuthorizationCase? case_;
 
@@ -21900,66 +20496,34 @@ class _$_RegulatedAuthorization extends _RegulatedAuthorization {
 
 abstract class _RegulatedAuthorization extends RegulatedAuthorization {
   factory _RegulatedAuthorization(
-      {@HiveField(0)
-          final R4ResourceType resourceType,
-      @HiveField(1)
+          {final R4ResourceType resourceType,
           final String? id,
-      @HiveField(2)
           final FhirMeta? meta,
-      @HiveField(3)
           final FhirUri? implicitRules,
-      @HiveField(4)
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
-      @HiveField(5)
-          final Code? language,
-      @HiveField(6)
-      @JsonKey(name: '_language')
-          final Element? languageElement,
-      @HiveField(7)
+          @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
+          final FhirCode? language,
+          @JsonKey(name: '_language') final Element? languageElement,
           final Narrative? text,
-      @HiveField(8)
           final List<Resource>? contained,
-      @HiveField(9)
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      @HiveField(10)
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
-      @HiveField(11)
           final List<Identifier>? identifier,
-      @HiveField(12)
           final List<Reference>? subject,
-      @HiveField(13)
           final CodeableConcept? type,
-      @HiveField(14)
-          final Markdown? description,
-      @HiveField(15)
-      @JsonKey(name: '_description')
-          final Element? descriptionElement,
-      @HiveField(16)
+          final FhirMarkdown? description,
+          @JsonKey(name: '_description') final Element? descriptionElement,
           final List<CodeableConcept>? region,
-      @HiveField(17)
           final CodeableConcept? status,
-      @HiveField(18)
           final FhirDateTime? statusDate,
-      @HiveField(19)
-      @JsonKey(name: '_statusDate')
-          final Element? statusDateElement,
-      @HiveField(20)
+          @JsonKey(name: '_statusDate') final Element? statusDateElement,
           final Period? validityPeriod,
-      @HiveField(21)
           final CodeableReference? indication,
-      @HiveField(22)
           final CodeableConcept? intendedUse,
-      @HiveField(23)
           final List<CodeableConcept>? basis,
-      @HiveField(24)
           final Reference? holder,
-      @HiveField(25)
           final Reference? regulator,
-      @HiveField(26)
-      @JsonKey(name: 'case')
-          final RegulatedAuthorizationCase? case_}) = _$_RegulatedAuthorization;
+          @JsonKey(name: 'case') final RegulatedAuthorizationCase? case_}) =
+      _$_RegulatedAuthorization;
   _RegulatedAuthorization._() : super._();
 
   factory _RegulatedAuthorization.fromJson(Map<String, dynamic> json) =
@@ -21968,143 +20532,116 @@ abstract class _RegulatedAuthorization extends RegulatedAuthorization {
   @override
 
   /// [resourceType] This is a RegulatedAuthorization resource;
-  @HiveField(0)
   R4ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
-  @HiveField(1)
   String? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
-  @HiveField(2)
   FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
-  @HiveField(3)
   FhirUri? get implicitRules;
   @override
 
   /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
-  @HiveField(4)
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
 
   /// [language] The base language in which the resource is written.;
-  @HiveField(5)
   FhirCode? get language;
   @override
 
   /// [languageElement] (_language): Extensions for language;
-  @HiveField(6)
   @JsonKey(name: '_language')
   Element? get languageElement;
   @override
 
   /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
-  @HiveField(7)
   Narrative? get text;
   @override
 
   /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
-  @HiveField(8)
   List<Resource>? get contained;
   @override
 
   /// [extension_] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
-  @HiveField(9)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
 
   /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
 
   /// [identifier] Business identifier for the authorization, typically assigned by the authorizing body.;
-  @HiveField(11)
   List<Identifier>? get identifier;
   @override
 
   /// [subject] The product type, treatment, facility or activity that is being authorized.;
-  @HiveField(12)
   List<Reference>? get subject;
   @override
 
   /// [type] Overall type of this authorization, for example drug marketing approval, orphan drug designation.;
-  @HiveField(13)
   CodeableConcept? get type;
   @override
 
   /// [description] General textual supporting information.;
-  @HiveField(14)
-  Markdown? get description;
+  FhirMarkdown? get description;
   @override
 
   /// [descriptionElement] (_description): Extensions for description;
-  @HiveField(15)
   @JsonKey(name: '_description')
   Element? get descriptionElement;
   @override
 
   /// [region] The territory (e.g., country, jurisdiction etc.) in which the authorization has been granted.;
-  @HiveField(16)
   List<CodeableConcept>? get region;
   @override
 
   /// [status] The status that is authorised e.g. approved. Intermediate states and actions can be tracked with cases and applications.;
-  @HiveField(17)
   CodeableConcept? get status;
   @override
 
   /// [statusDate] The date at which the current status was assigned.;
-  @HiveField(18)
   FhirDateTime? get statusDate;
   @override
 
   /// [statusDateElement] (_statusDate): Extensions for statusDate;
-  @HiveField(19)
   @JsonKey(name: '_statusDate')
   Element? get statusDateElement;
   @override
 
   /// [validityPeriod] The time period in which the regulatory approval, clearance or licencing is in effect. As an example, a Marketing Authorization includes the date of authorization and/or an expiration date.;
-  @HiveField(20)
   Period? get validityPeriod;
   @override
 
   /// [indication] Condition for which the use of the regulated product applies.;
-  @HiveField(21)
   CodeableReference? get indication;
   @override
 
   /// [intendedUse] The intended use of the product, e.g. prevention, treatment, diagnosis.;
-  @HiveField(22)
   CodeableConcept? get intendedUse;
   @override
 
   /// [basis] The legal or regulatory framework against which this authorization is granted, or other reasons for it.;
-  @HiveField(23)
   List<CodeableConcept>? get basis;
   @override
 
   /// [holder] The organization that has been granted this authorization, by some authoritative body (the 'regulator').;
-  @HiveField(24)
   Reference? get holder;
   @override
 
   /// [regulator] The regulatory authority or authorizing body granting the authorization. For example, European Medicines Agency (EMA), Food and Drug Administration (FDA), Health Canada (HC), etc.;
-  @HiveField(25)
   Reference? get regulator;
   @override
 
   /// [case_] The case or regulatory procedure for granting or amending a regulated authorization. An authorization is granted in response to submissions/applications by those seeking authorization. A case is the administrative process that deals with the application(s) that relate to this and assesses them. Note: This area is subject to ongoing review and the workgroup is seeking implementer feedback on its use (see link at bottom of page).;
-  @HiveField(26)
   @JsonKey(name: 'case')
   RegulatedAuthorizationCase? get case_;
   @override
@@ -22646,144 +21183,112 @@ SubstanceDefinition _$SubstanceDefinitionFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$SubstanceDefinition {
   /// [resourceType] This is a SubstanceDefinition resource;
-  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
-  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
-  @HiveField(2)
   FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
-  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
-  @HiveField(4)
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.;
-  @HiveField(5)
   FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] (_language): Extensions for language;
-  @HiveField(6)
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
 
   /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
-  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
 
   /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
-  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
-  @HiveField(9)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
   /// [identifier] Identifier by which this substance is known.;
-  @HiveField(11)
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [version] A business level version identifier of the substance.;
-  @HiveField(12)
   String? get version => throw _privateConstructorUsedError;
 
   /// [versionElement] (_version): Extensions for version;
-  @HiveField(13)
   @JsonKey(name: '_version')
   Element? get versionElement => throw _privateConstructorUsedError;
 
   /// [status] Status of substance within the catalogue e.g. active, retired.;
-  @HiveField(14)
   CodeableConcept? get status => throw _privateConstructorUsedError;
 
   /// [classification] A high level categorization, e.g. polymer or nucleic acid, or food, chemical, biological, or a lower level such as the general types of polymer (linear or branch chain) or type of impurity (process related or contaminant).;
-  @HiveField(15)
   List<CodeableConcept>? get classification =>
       throw _privateConstructorUsedError;
 
   /// [domain] If the substance applies to human or veterinary use.;
-  @HiveField(16)
   CodeableConcept? get domain => throw _privateConstructorUsedError;
 
   /// [grade] The quality standard, established benchmark, to which substance complies (e.g. USP/NF, Ph. Eur, JP, BP, Company Standard).;
-  @HiveField(17)
   List<CodeableConcept>? get grade => throw _privateConstructorUsedError;
 
   /// [description] Textual description of the substance.;
-  @HiveField(18)
-  Markdown? get description => throw _privateConstructorUsedError;
+  FhirMarkdown? get description => throw _privateConstructorUsedError;
 
   /// [descriptionElement] (_description): Extensions for description;
-  @HiveField(19)
   @JsonKey(name: '_description')
   Element? get descriptionElement => throw _privateConstructorUsedError;
 
   /// [informationSource] Supporting literature.;
-  @HiveField(20)
   List<Reference>? get informationSource => throw _privateConstructorUsedError;
 
   /// [note] Textual comment about the substance's catalogue or registry record.;
-  @HiveField(21)
   List<Annotation>? get note => throw _privateConstructorUsedError;
 
   /// [manufacturer] The entity that creates, makes, produces or fabricates the substance. This is a set of potential manufacturers but is not necessarily comprehensive.;
-  @HiveField(22)
   List<Reference>? get manufacturer => throw _privateConstructorUsedError;
 
   /// [supplier] An entity that is the source for the substance. It may be different from the manufacturer. Supplier is synonymous to a distributor.;
-  @HiveField(23)
   List<Reference>? get supplier => throw _privateConstructorUsedError;
 
   /// [moiety] Moiety, for structural modifications.;
-  @HiveField(24)
   List<SubstanceDefinitionMoiety>? get moiety =>
       throw _privateConstructorUsedError;
 
   /// [property] General specifications for this substance.;
-  @HiveField(25)
   List<SubstanceDefinitionProperty>? get property =>
       throw _privateConstructorUsedError;
 
   /// [molecularWeight] The molecular weight or weight range (for proteins, polymers or nucleic acids).;
-  @HiveField(26)
   List<SubstanceDefinitionMolecularWeight>? get molecularWeight =>
       throw _privateConstructorUsedError;
 
   /// [structure] Structural information.;
-  @HiveField(27)
   SubstanceDefinitionStructure? get structure =>
       throw _privateConstructorUsedError;
 
   /// [code] Codes associated with the substance.;
-  @HiveField(28)
   List<SubstanceDefinitionCode>? get code => throw _privateConstructorUsedError;
 
   /// [name] Names applicable to this substance.;
-  @HiveField(29)
   List<SubstanceDefinitionName>? get name => throw _privateConstructorUsedError;
 
   /// [relationship] A link between this substance and another, with details of the relationship.;
-  @HiveField(30)
   List<SubstanceDefinitionRelationship>? get relationship =>
       throw _privateConstructorUsedError;
 
   /// [sourceMaterial] Material or taxonomic/anatomical source for the substance.;
-  @HiveField(31)
   SubstanceDefinitionSourceMaterial? get sourceMaterial =>
       throw _privateConstructorUsedError;
 
@@ -22800,75 +21305,38 @@ abstract class $SubstanceDefinitionCopyWith<$Res> {
       _$SubstanceDefinitionCopyWithImpl<$Res, SubstanceDefinition>;
   @useResult
   $Res call(
-      {@HiveField(0)
-          R4ResourceType resourceType,
-      @HiveField(1)
-          String? id,
-      @HiveField(2)
-          FhirMeta? meta,
-      @HiveField(3)
-          FhirUri? implicitRules,
-      @HiveField(4)
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      @HiveField(5)
-          FhirCode? language,
-      @HiveField(6)
-      @JsonKey(name: '_language')
-          Element? languageElement,
-      @HiveField(7)
-          Narrative? text,
-      @HiveField(8)
-          List<Resource>? contained,
-      @HiveField(9)
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      @HiveField(10)
-          List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          List<Identifier>? identifier,
-      @HiveField(12)
-          String? version,
-      @HiveField(13)
-      @JsonKey(name: '_version')
-          Element? versionElement,
-      @HiveField(14)
-          CodeableConcept? status,
-      @HiveField(15)
-          List<CodeableConcept>? classification,
-      @HiveField(16)
-          CodeableConcept? domain,
-      @HiveField(17)
-          List<CodeableConcept>? grade,
-      @HiveField(18)
-          Markdown? description,
-      @HiveField(19)
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
-      @HiveField(20)
-          List<Reference>? informationSource,
-      @HiveField(21)
-          List<Annotation>? note,
-      @HiveField(22)
-          List<Reference>? manufacturer,
-      @HiveField(23)
-          List<Reference>? supplier,
-      @HiveField(24)
-          List<SubstanceDefinitionMoiety>? moiety,
-      @HiveField(25)
-          List<SubstanceDefinitionProperty>? property,
-      @HiveField(26)
-          List<SubstanceDefinitionMolecularWeight>? molecularWeight,
-      @HiveField(27)
-          SubstanceDefinitionStructure? structure,
-      @HiveField(28)
-          List<SubstanceDefinitionCode>? code,
-      @HiveField(29)
-          List<SubstanceDefinitionName>? name,
-      @HiveField(30)
-          List<SubstanceDefinitionRelationship>? relationship,
-      @HiveField(31)
-          SubstanceDefinitionSourceMaterial? sourceMaterial});
+      {R4ResourceType resourceType,
+      String? id,
+      FhirMeta? meta,
+      FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+      FhirCode? language,
+      @JsonKey(name: '_language') Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      String? version,
+      @JsonKey(name: '_version') Element? versionElement,
+      CodeableConcept? status,
+      List<CodeableConcept>? classification,
+      CodeableConcept? domain,
+      List<CodeableConcept>? grade,
+      FhirMarkdown? description,
+      @JsonKey(name: '_description') Element? descriptionElement,
+      List<Reference>? informationSource,
+      List<Annotation>? note,
+      List<Reference>? manufacturer,
+      List<Reference>? supplier,
+      List<SubstanceDefinitionMoiety>? moiety,
+      List<SubstanceDefinitionProperty>? property,
+      List<SubstanceDefinitionMolecularWeight>? molecularWeight,
+      SubstanceDefinitionStructure? structure,
+      List<SubstanceDefinitionCode>? code,
+      List<SubstanceDefinitionName>? name,
+      List<SubstanceDefinitionRelationship>? relationship,
+      SubstanceDefinitionSourceMaterial? sourceMaterial});
 
   $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -22952,7 +21420,7 @@ class _$SubstanceDefinitionCopyWithImpl<$Res, $Val extends SubstanceDefinition>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -23004,7 +21472,7 @@ class _$SubstanceDefinitionCopyWithImpl<$Res, $Val extends SubstanceDefinition>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -23192,75 +21660,38 @@ abstract class _$$_SubstanceDefinitionCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@HiveField(0)
-          R4ResourceType resourceType,
-      @HiveField(1)
-          String? id,
-      @HiveField(2)
-          FhirMeta? meta,
-      @HiveField(3)
-          FhirUri? implicitRules,
-      @HiveField(4)
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      @HiveField(5)
-          FhirCode? language,
-      @HiveField(6)
-      @JsonKey(name: '_language')
-          Element? languageElement,
-      @HiveField(7)
-          Narrative? text,
-      @HiveField(8)
-          List<Resource>? contained,
-      @HiveField(9)
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      @HiveField(10)
-          List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          List<Identifier>? identifier,
-      @HiveField(12)
-          String? version,
-      @HiveField(13)
-      @JsonKey(name: '_version')
-          Element? versionElement,
-      @HiveField(14)
-          CodeableConcept? status,
-      @HiveField(15)
-          List<CodeableConcept>? classification,
-      @HiveField(16)
-          CodeableConcept? domain,
-      @HiveField(17)
-          List<CodeableConcept>? grade,
-      @HiveField(18)
-          Markdown? description,
-      @HiveField(19)
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
-      @HiveField(20)
-          List<Reference>? informationSource,
-      @HiveField(21)
-          List<Annotation>? note,
-      @HiveField(22)
-          List<Reference>? manufacturer,
-      @HiveField(23)
-          List<Reference>? supplier,
-      @HiveField(24)
-          List<SubstanceDefinitionMoiety>? moiety,
-      @HiveField(25)
-          List<SubstanceDefinitionProperty>? property,
-      @HiveField(26)
-          List<SubstanceDefinitionMolecularWeight>? molecularWeight,
-      @HiveField(27)
-          SubstanceDefinitionStructure? structure,
-      @HiveField(28)
-          List<SubstanceDefinitionCode>? code,
-      @HiveField(29)
-          List<SubstanceDefinitionName>? name,
-      @HiveField(30)
-          List<SubstanceDefinitionRelationship>? relationship,
-      @HiveField(31)
-          SubstanceDefinitionSourceMaterial? sourceMaterial});
+      {R4ResourceType resourceType,
+      String? id,
+      FhirMeta? meta,
+      FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+      FhirCode? language,
+      @JsonKey(name: '_language') Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      String? version,
+      @JsonKey(name: '_version') Element? versionElement,
+      CodeableConcept? status,
+      List<CodeableConcept>? classification,
+      CodeableConcept? domain,
+      List<CodeableConcept>? grade,
+      FhirMarkdown? description,
+      @JsonKey(name: '_description') Element? descriptionElement,
+      List<Reference>? informationSource,
+      List<Annotation>? note,
+      List<Reference>? manufacturer,
+      List<Reference>? supplier,
+      List<SubstanceDefinitionMoiety>? moiety,
+      List<SubstanceDefinitionProperty>? property,
+      List<SubstanceDefinitionMolecularWeight>? molecularWeight,
+      SubstanceDefinitionStructure? structure,
+      List<SubstanceDefinitionCode>? code,
+      List<SubstanceDefinitionName>? name,
+      List<SubstanceDefinitionRelationship>? relationship,
+      SubstanceDefinitionSourceMaterial? sourceMaterial});
 
   @override
   $FhirMetaCopyWith<$Res>? get meta;
@@ -23352,7 +21783,7 @@ class __$$_SubstanceDefinitionCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -23404,7 +21835,7 @@ class __$$_SubstanceDefinitionCopyWithImpl<$Res>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -23463,78 +21894,40 @@ class __$$_SubstanceDefinitionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@HiveType(typeId: 62)
 class _$_SubstanceDefinition extends _SubstanceDefinition {
   _$_SubstanceDefinition(
-      {@HiveField(0)
-          this.resourceType = R4ResourceType.SubstanceDefinition,
-      @HiveField(1)
-          this.id,
-      @HiveField(2)
-          this.meta,
-      @HiveField(3)
-          this.implicitRules,
-      @HiveField(4)
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
-      @HiveField(5)
-          this.language,
-      @HiveField(6)
-      @JsonKey(name: '_language')
-          this.languageElement,
-      @HiveField(7)
-          this.text,
-      @HiveField(8)
-          final List<Resource>? contained,
-      @HiveField(9)
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      @HiveField(10)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          final List<Identifier>? identifier,
-      @HiveField(12)
-          this.version,
-      @HiveField(13)
-      @JsonKey(name: '_version')
-          this.versionElement,
-      @HiveField(14)
-          this.status,
-      @HiveField(15)
-          final List<CodeableConcept>? classification,
-      @HiveField(16)
-          this.domain,
-      @HiveField(17)
-          final List<CodeableConcept>? grade,
-      @HiveField(18)
-          this.description,
-      @HiveField(19)
-      @JsonKey(name: '_description')
-          this.descriptionElement,
-      @HiveField(20)
-          final List<Reference>? informationSource,
-      @HiveField(21)
-          final List<Annotation>? note,
-      @HiveField(22)
-          final List<Reference>? manufacturer,
-      @HiveField(23)
-          final List<Reference>? supplier,
-      @HiveField(24)
-          final List<SubstanceDefinitionMoiety>? moiety,
-      @HiveField(25)
-          final List<SubstanceDefinitionProperty>? property,
-      @HiveField(26)
-          final List<SubstanceDefinitionMolecularWeight>? molecularWeight,
-      @HiveField(27)
-          this.structure,
-      @HiveField(28)
-          final List<SubstanceDefinitionCode>? code,
-      @HiveField(29)
-          final List<SubstanceDefinitionName>? name,
-      @HiveField(30)
-          final List<SubstanceDefinitionRelationship>? relationship,
-      @HiveField(31)
-          this.sourceMaterial})
+      {this.resourceType = R4ResourceType.SubstanceDefinition,
+      this.id,
+      this.meta,
+      this.implicitRules,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      this.language,
+      @JsonKey(name: '_language') this.languageElement,
+      this.text,
+      final List<Resource>? contained,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      this.version,
+      @JsonKey(name: '_version') this.versionElement,
+      this.status,
+      final List<CodeableConcept>? classification,
+      this.domain,
+      final List<CodeableConcept>? grade,
+      this.description,
+      @JsonKey(name: '_description') this.descriptionElement,
+      final List<Reference>? informationSource,
+      final List<Annotation>? note,
+      final List<Reference>? manufacturer,
+      final List<Reference>? supplier,
+      final List<SubstanceDefinitionMoiety>? moiety,
+      final List<SubstanceDefinitionProperty>? property,
+      final List<SubstanceDefinitionMolecularWeight>? molecularWeight,
+      this.structure,
+      final List<SubstanceDefinitionCode>? code,
+      final List<SubstanceDefinitionName>? name,
+      final List<SubstanceDefinitionRelationship>? relationship,
+      this.sourceMaterial})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -23559,44 +21952,36 @@ class _$_SubstanceDefinition extends _SubstanceDefinition {
   /// [resourceType] This is a SubstanceDefinition resource;
   @override
   @JsonKey()
-  @HiveField(0)
   final R4ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
   @override
-  @HiveField(1)
   final String? id;
 
   /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
   @override
-  @HiveField(2)
   final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
   @override
-  @HiveField(3)
   final FhirUri? implicitRules;
 
   /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
   @override
-  @HiveField(4)
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
 
   /// [language] The base language in which the resource is written.;
   @override
-  @HiveField(5)
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] (_language): Extensions for language;
   @override
-  @HiveField(6)
   @JsonKey(name: '_language')
   final Element? languageElement;
 
   /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
   @override
-  @HiveField(7)
   final Narrative? text;
 
   /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
@@ -23604,7 +21989,6 @@ class _$_SubstanceDefinition extends _SubstanceDefinition {
 
   /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
   @override
-  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -23618,7 +22002,6 @@ class _$_SubstanceDefinition extends _SubstanceDefinition {
 
   /// [extension_] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   @override
-  @HiveField(9)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
     final value = _extension_;
@@ -23635,7 +22018,6 @@ class _$_SubstanceDefinition extends _SubstanceDefinition {
   /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   @override
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -23650,7 +22032,6 @@ class _$_SubstanceDefinition extends _SubstanceDefinition {
 
   /// [identifier] Identifier by which this substance is known.;
   @override
-  @HiveField(11)
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
@@ -23661,18 +22042,15 @@ class _$_SubstanceDefinition extends _SubstanceDefinition {
 
   /// [version] A business level version identifier of the substance.;
   @override
-  @HiveField(12)
   final String? version;
 
   /// [versionElement] (_version): Extensions for version;
   @override
-  @HiveField(13)
   @JsonKey(name: '_version')
   final Element? versionElement;
 
   /// [status] Status of substance within the catalogue e.g. active, retired.;
   @override
-  @HiveField(14)
   final CodeableConcept? status;
 
   /// [classification] A high level categorization, e.g. polymer or nucleic acid, or food, chemical, biological, or a lower level such as the general types of polymer (linear or branch chain) or type of impurity (process related or contaminant).;
@@ -23680,7 +22058,6 @@ class _$_SubstanceDefinition extends _SubstanceDefinition {
 
   /// [classification] A high level categorization, e.g. polymer or nucleic acid, or food, chemical, biological, or a lower level such as the general types of polymer (linear or branch chain) or type of impurity (process related or contaminant).;
   @override
-  @HiveField(15)
   List<CodeableConcept>? get classification {
     final value = _classification;
     if (value == null) return null;
@@ -23691,7 +22068,6 @@ class _$_SubstanceDefinition extends _SubstanceDefinition {
 
   /// [domain] If the substance applies to human or veterinary use.;
   @override
-  @HiveField(16)
   final CodeableConcept? domain;
 
   /// [grade] The quality standard, established benchmark, to which substance complies (e.g. USP/NF, Ph. Eur, JP, BP, Company Standard).;
@@ -23699,7 +22075,6 @@ class _$_SubstanceDefinition extends _SubstanceDefinition {
 
   /// [grade] The quality standard, established benchmark, to which substance complies (e.g. USP/NF, Ph. Eur, JP, BP, Company Standard).;
   @override
-  @HiveField(17)
   List<CodeableConcept>? get grade {
     final value = _grade;
     if (value == null) return null;
@@ -23710,12 +22085,10 @@ class _$_SubstanceDefinition extends _SubstanceDefinition {
 
   /// [description] Textual description of the substance.;
   @override
-  @HiveField(18)
-  final Markdown? description;
+  final FhirMarkdown? description;
 
   /// [descriptionElement] (_description): Extensions for description;
   @override
-  @HiveField(19)
   @JsonKey(name: '_description')
   final Element? descriptionElement;
 
@@ -23724,7 +22097,6 @@ class _$_SubstanceDefinition extends _SubstanceDefinition {
 
   /// [informationSource] Supporting literature.;
   @override
-  @HiveField(20)
   List<Reference>? get informationSource {
     final value = _informationSource;
     if (value == null) return null;
@@ -23739,7 +22111,6 @@ class _$_SubstanceDefinition extends _SubstanceDefinition {
 
   /// [note] Textual comment about the substance's catalogue or registry record.;
   @override
-  @HiveField(21)
   List<Annotation>? get note {
     final value = _note;
     if (value == null) return null;
@@ -23753,7 +22124,6 @@ class _$_SubstanceDefinition extends _SubstanceDefinition {
 
   /// [manufacturer] The entity that creates, makes, produces or fabricates the substance. This is a set of potential manufacturers but is not necessarily comprehensive.;
   @override
-  @HiveField(22)
   List<Reference>? get manufacturer {
     final value = _manufacturer;
     if (value == null) return null;
@@ -23767,7 +22137,6 @@ class _$_SubstanceDefinition extends _SubstanceDefinition {
 
   /// [supplier] An entity that is the source for the substance. It may be different from the manufacturer. Supplier is synonymous to a distributor.;
   @override
-  @HiveField(23)
   List<Reference>? get supplier {
     final value = _supplier;
     if (value == null) return null;
@@ -23781,7 +22150,6 @@ class _$_SubstanceDefinition extends _SubstanceDefinition {
 
   /// [moiety] Moiety, for structural modifications.;
   @override
-  @HiveField(24)
   List<SubstanceDefinitionMoiety>? get moiety {
     final value = _moiety;
     if (value == null) return null;
@@ -23795,7 +22163,6 @@ class _$_SubstanceDefinition extends _SubstanceDefinition {
 
   /// [property] General specifications for this substance.;
   @override
-  @HiveField(25)
   List<SubstanceDefinitionProperty>? get property {
     final value = _property;
     if (value == null) return null;
@@ -23809,7 +22176,6 @@ class _$_SubstanceDefinition extends _SubstanceDefinition {
 
   /// [molecularWeight] The molecular weight or weight range (for proteins, polymers or nucleic acids).;
   @override
-  @HiveField(26)
   List<SubstanceDefinitionMolecularWeight>? get molecularWeight {
     final value = _molecularWeight;
     if (value == null) return null;
@@ -23820,7 +22186,6 @@ class _$_SubstanceDefinition extends _SubstanceDefinition {
 
   /// [structure] Structural information.;
   @override
-  @HiveField(27)
   final SubstanceDefinitionStructure? structure;
 
   /// [code] Codes associated with the substance.;
@@ -23828,7 +22193,6 @@ class _$_SubstanceDefinition extends _SubstanceDefinition {
 
   /// [code] Codes associated with the substance.;
   @override
-  @HiveField(28)
   List<SubstanceDefinitionCode>? get code {
     final value = _code;
     if (value == null) return null;
@@ -23842,7 +22206,6 @@ class _$_SubstanceDefinition extends _SubstanceDefinition {
 
   /// [name] Names applicable to this substance.;
   @override
-  @HiveField(29)
   List<SubstanceDefinitionName>? get name {
     final value = _name;
     if (value == null) return null;
@@ -23856,7 +22219,6 @@ class _$_SubstanceDefinition extends _SubstanceDefinition {
 
   /// [relationship] A link between this substance and another, with details of the relationship.;
   @override
-  @HiveField(30)
   List<SubstanceDefinitionRelationship>? get relationship {
     final value = _relationship;
     if (value == null) return null;
@@ -23867,7 +22229,6 @@ class _$_SubstanceDefinition extends _SubstanceDefinition {
 
   /// [sourceMaterial] Material or taxonomic/anatomical source for the substance.;
   @override
-  @HiveField(31)
   final SubstanceDefinitionSourceMaterial? sourceMaterial;
 
   @override
@@ -23988,75 +22349,38 @@ class _$_SubstanceDefinition extends _SubstanceDefinition {
 
 abstract class _SubstanceDefinition extends SubstanceDefinition {
   factory _SubstanceDefinition(
-          {@HiveField(0)
-              final R4ResourceType resourceType,
-          @HiveField(1)
-              final String? id,
-          @HiveField(2)
-              final FhirMeta? meta,
-          @HiveField(3)
-              final FhirUri? implicitRules,
-          @HiveField(4)
-          @JsonKey(name: '_implicitRules')
-              final Element? implicitRulesElement,
-          @HiveField(5)
-              final Code? language,
-          @HiveField(6)
-          @JsonKey(name: '_language')
-              final Element? languageElement,
-          @HiveField(7)
-              final Narrative? text,
-          @HiveField(8)
-              final List<Resource>? contained,
-          @HiveField(9)
-          @JsonKey(name: 'extension')
-              final List<FhirExtension>? extension_,
-          @HiveField(10)
-              final List<FhirExtension>? modifierExtension,
-          @HiveField(11)
-              final List<Identifier>? identifier,
-          @HiveField(12)
-              final String? version,
-          @HiveField(13)
-          @JsonKey(name: '_version')
-              final Element? versionElement,
-          @HiveField(14)
-              final CodeableConcept? status,
-          @HiveField(15)
-              final List<CodeableConcept>? classification,
-          @HiveField(16)
-              final CodeableConcept? domain,
-          @HiveField(17)
-              final List<CodeableConcept>? grade,
-          @HiveField(18)
-              final Markdown? description,
-          @HiveField(19)
-          @JsonKey(name: '_description')
-              final Element? descriptionElement,
-          @HiveField(20)
-              final List<Reference>? informationSource,
-          @HiveField(21)
-              final List<Annotation>? note,
-          @HiveField(22)
-              final List<Reference>? manufacturer,
-          @HiveField(23)
-              final List<Reference>? supplier,
-          @HiveField(24)
-              final List<SubstanceDefinitionMoiety>? moiety,
-          @HiveField(25)
-              final List<SubstanceDefinitionProperty>? property,
-          @HiveField(26)
-              final List<SubstanceDefinitionMolecularWeight>? molecularWeight,
-          @HiveField(27)
-              final SubstanceDefinitionStructure? structure,
-          @HiveField(28)
-              final List<SubstanceDefinitionCode>? code,
-          @HiveField(29)
-              final List<SubstanceDefinitionName>? name,
-          @HiveField(30)
-              final List<SubstanceDefinitionRelationship>? relationship,
-          @HiveField(31)
-              final SubstanceDefinitionSourceMaterial? sourceMaterial}) =
+          {final R4ResourceType resourceType,
+          final String? id,
+          final FhirMeta? meta,
+          final FhirUri? implicitRules,
+          @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
+          final FhirCode? language,
+          @JsonKey(name: '_language') final Element? languageElement,
+          final Narrative? text,
+          final List<Resource>? contained,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final List<Identifier>? identifier,
+          final String? version,
+          @JsonKey(name: '_version') final Element? versionElement,
+          final CodeableConcept? status,
+          final List<CodeableConcept>? classification,
+          final CodeableConcept? domain,
+          final List<CodeableConcept>? grade,
+          final FhirMarkdown? description,
+          @JsonKey(name: '_description') final Element? descriptionElement,
+          final List<Reference>? informationSource,
+          final List<Annotation>? note,
+          final List<Reference>? manufacturer,
+          final List<Reference>? supplier,
+          final List<SubstanceDefinitionMoiety>? moiety,
+          final List<SubstanceDefinitionProperty>? property,
+          final List<SubstanceDefinitionMolecularWeight>? molecularWeight,
+          final SubstanceDefinitionStructure? structure,
+          final List<SubstanceDefinitionCode>? code,
+          final List<SubstanceDefinitionName>? name,
+          final List<SubstanceDefinitionRelationship>? relationship,
+          final SubstanceDefinitionSourceMaterial? sourceMaterial}) =
       _$_SubstanceDefinition;
   _SubstanceDefinition._() : super._();
 
@@ -24066,168 +22390,136 @@ abstract class _SubstanceDefinition extends SubstanceDefinition {
   @override
 
   /// [resourceType] This is a SubstanceDefinition resource;
-  @HiveField(0)
   R4ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
-  @HiveField(1)
   String? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
-  @HiveField(2)
   FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
-  @HiveField(3)
   FhirUri? get implicitRules;
   @override
 
   /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
-  @HiveField(4)
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
 
   /// [language] The base language in which the resource is written.;
-  @HiveField(5)
   FhirCode? get language;
   @override
 
   /// [languageElement] (_language): Extensions for language;
-  @HiveField(6)
   @JsonKey(name: '_language')
   Element? get languageElement;
   @override
 
   /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
-  @HiveField(7)
   Narrative? get text;
   @override
 
   /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
-  @HiveField(8)
   List<Resource>? get contained;
   @override
 
   /// [extension_] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
-  @HiveField(9)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
 
   /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
 
   /// [identifier] Identifier by which this substance is known.;
-  @HiveField(11)
   List<Identifier>? get identifier;
   @override
 
   /// [version] A business level version identifier of the substance.;
-  @HiveField(12)
   String? get version;
   @override
 
   /// [versionElement] (_version): Extensions for version;
-  @HiveField(13)
   @JsonKey(name: '_version')
   Element? get versionElement;
   @override
 
   /// [status] Status of substance within the catalogue e.g. active, retired.;
-  @HiveField(14)
   CodeableConcept? get status;
   @override
 
   /// [classification] A high level categorization, e.g. polymer or nucleic acid, or food, chemical, biological, or a lower level such as the general types of polymer (linear or branch chain) or type of impurity (process related or contaminant).;
-  @HiveField(15)
   List<CodeableConcept>? get classification;
   @override
 
   /// [domain] If the substance applies to human or veterinary use.;
-  @HiveField(16)
   CodeableConcept? get domain;
   @override
 
   /// [grade] The quality standard, established benchmark, to which substance complies (e.g. USP/NF, Ph. Eur, JP, BP, Company Standard).;
-  @HiveField(17)
   List<CodeableConcept>? get grade;
   @override
 
   /// [description] Textual description of the substance.;
-  @HiveField(18)
-  Markdown? get description;
+  FhirMarkdown? get description;
   @override
 
   /// [descriptionElement] (_description): Extensions for description;
-  @HiveField(19)
   @JsonKey(name: '_description')
   Element? get descriptionElement;
   @override
 
   /// [informationSource] Supporting literature.;
-  @HiveField(20)
   List<Reference>? get informationSource;
   @override
 
   /// [note] Textual comment about the substance's catalogue or registry record.;
-  @HiveField(21)
   List<Annotation>? get note;
   @override
 
   /// [manufacturer] The entity that creates, makes, produces or fabricates the substance. This is a set of potential manufacturers but is not necessarily comprehensive.;
-  @HiveField(22)
   List<Reference>? get manufacturer;
   @override
 
   /// [supplier] An entity that is the source for the substance. It may be different from the manufacturer. Supplier is synonymous to a distributor.;
-  @HiveField(23)
   List<Reference>? get supplier;
   @override
 
   /// [moiety] Moiety, for structural modifications.;
-  @HiveField(24)
   List<SubstanceDefinitionMoiety>? get moiety;
   @override
 
   /// [property] General specifications for this substance.;
-  @HiveField(25)
   List<SubstanceDefinitionProperty>? get property;
   @override
 
   /// [molecularWeight] The molecular weight or weight range (for proteins, polymers or nucleic acids).;
-  @HiveField(26)
   List<SubstanceDefinitionMolecularWeight>? get molecularWeight;
   @override
 
   /// [structure] Structural information.;
-  @HiveField(27)
   SubstanceDefinitionStructure? get structure;
   @override
 
   /// [code] Codes associated with the substance.;
-  @HiveField(28)
   List<SubstanceDefinitionCode>? get code;
   @override
 
   /// [name] Names applicable to this substance.;
-  @HiveField(29)
   List<SubstanceDefinitionName>? get name;
   @override
 
   /// [relationship] A link between this substance and another, with details of the relationship.;
-  @HiveField(30)
   List<SubstanceDefinitionRelationship>? get relationship;
   @override
 
   /// [sourceMaterial] Material or taxonomic/anatomical source for the substance.;
-  @HiveField(31)
   SubstanceDefinitionSourceMaterial? get sourceMaterial;
   @override
   @JsonKey(ignore: true)
@@ -24284,7 +22576,7 @@ mixin _$SubstanceDefinitionMoiety {
   Quantity? get amountQuantity => throw _privateConstructorUsedError;
 
   /// [amountString] Quantitative value for this moiety.;
-  Markdown? get amountString => throw _privateConstructorUsedError;
+  FhirMarkdown? get amountString => throw _privateConstructorUsedError;
 
   /// [amountStringElement] (_amountString): Extensions for amountString;
   @JsonKey(name: '_amountString')
@@ -24318,7 +22610,7 @@ abstract class $SubstanceDefinitionMoietyCopyWith<$Res> {
       String? molecularFormula,
       @JsonKey(name: '_molecularFormula') Element? molecularFormulaElement,
       Quantity? amountQuantity,
-      Markdown? amountString,
+      FhirMarkdown? amountString,
       @JsonKey(name: '_amountString') Element? amountStringElement,
       CodeableConcept? measurementType});
 
@@ -24415,7 +22707,7 @@ class _$SubstanceDefinitionMoietyCopyWithImpl<$Res,
       amountString: freezed == amountString
           ? _value.amountString
           : amountString // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       amountStringElement: freezed == amountStringElement
           ? _value.amountStringElement
           : amountStringElement // ignore: cast_nullable_to_non_nullable
@@ -24558,7 +22850,7 @@ abstract class _$$_SubstanceDefinitionMoietyCopyWith<$Res>
       String? molecularFormula,
       @JsonKey(name: '_molecularFormula') Element? molecularFormulaElement,
       Quantity? amountQuantity,
-      Markdown? amountString,
+      FhirMarkdown? amountString,
       @JsonKey(name: '_amountString') Element? amountStringElement,
       CodeableConcept? measurementType});
 
@@ -24663,7 +22955,7 @@ class __$$_SubstanceDefinitionMoietyCopyWithImpl<$Res>
       amountString: freezed == amountString
           ? _value.amountString
           : amountString // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       amountStringElement: freezed == amountStringElement
           ? _value.amountStringElement
           : amountStringElement // ignore: cast_nullable_to_non_nullable
@@ -24776,7 +23068,7 @@ class _$_SubstanceDefinitionMoiety extends _SubstanceDefinitionMoiety {
 
   /// [amountString] Quantitative value for this moiety.;
   @override
-  final Markdown? amountString;
+  final FhirMarkdown? amountString;
 
   /// [amountStringElement] (_amountString): Extensions for amountString;
   @override
@@ -24879,7 +23171,7 @@ abstract class _SubstanceDefinitionMoiety extends SubstanceDefinitionMoiety {
       @JsonKey(name: '_molecularFormula')
           final Element? molecularFormulaElement,
       final Quantity? amountQuantity,
-      final Markdown? amountString,
+      final FhirMarkdown? amountString,
       @JsonKey(name: '_amountString')
           final Element? amountStringElement,
       final CodeableConcept? measurementType}) = _$_SubstanceDefinitionMoiety;
@@ -24943,7 +23235,7 @@ abstract class _SubstanceDefinitionMoiety extends SubstanceDefinitionMoiety {
   @override
 
   /// [amountString] Quantitative value for this moiety.;
-  Markdown? get amountString;
+  FhirMarkdown? get amountString;
   @override
 
   /// [amountStringElement] (_amountString): Extensions for amountString;
@@ -24989,14 +23281,14 @@ mixin _$SubstanceDefinitionProperty {
   Quantity? get valueQuantity => throw _privateConstructorUsedError;
 
   /// [valueDate] A value for the property.;
-  Date? get valueDate => throw _privateConstructorUsedError;
+  FhirDate? get valueDate => throw _privateConstructorUsedError;
 
   /// [valueDateElement] (_valueDate): Extensions for valueDate;
   @JsonKey(name: '_valueDate')
   Element? get valueDateElement => throw _privateConstructorUsedError;
 
   /// [valueBoolean] A value for the property.;
-  Boolean? get valueBoolean => throw _privateConstructorUsedError;
+  FhirBoolean? get valueBoolean => throw _privateConstructorUsedError;
 
   /// [valueBooleanElement] (_valueBoolean): Extensions for valueBoolean;
   @JsonKey(name: '_valueBoolean')
@@ -25026,9 +23318,9 @@ abstract class $SubstanceDefinitionPropertyCopyWith<$Res> {
       CodeableConcept type,
       CodeableConcept? valueCodeableConcept,
       Quantity? valueQuantity,
-      Date? valueDate,
+      FhirDate? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
-      Boolean? valueBoolean,
+      FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       Attachment? valueAttachment});
 
@@ -25094,7 +23386,7 @@ class _$SubstanceDefinitionPropertyCopyWithImpl<$Res,
       valueDate: freezed == valueDate
           ? _value.valueDate
           : valueDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       valueDateElement: freezed == valueDateElement
           ? _value.valueDateElement
           : valueDateElement // ignore: cast_nullable_to_non_nullable
@@ -25102,7 +23394,7 @@ class _$SubstanceDefinitionPropertyCopyWithImpl<$Res,
       valueBoolean: freezed == valueBoolean
           ? _value.valueBoolean
           : valueBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       valueBooleanElement: freezed == valueBooleanElement
           ? _value.valueBooleanElement
           : valueBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -25200,9 +23492,9 @@ abstract class _$$_SubstanceDefinitionPropertyCopyWith<$Res>
       CodeableConcept type,
       CodeableConcept? valueCodeableConcept,
       Quantity? valueQuantity,
-      Date? valueDate,
+      FhirDate? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
-      Boolean? valueBoolean,
+      FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       Attachment? valueAttachment});
 
@@ -25273,7 +23565,7 @@ class __$$_SubstanceDefinitionPropertyCopyWithImpl<$Res>
       valueDate: freezed == valueDate
           ? _value.valueDate
           : valueDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       valueDateElement: freezed == valueDateElement
           ? _value.valueDateElement
           : valueDateElement // ignore: cast_nullable_to_non_nullable
@@ -25281,7 +23573,7 @@ class __$$_SubstanceDefinitionPropertyCopyWithImpl<$Res>
       valueBoolean: freezed == valueBoolean
           ? _value.valueBoolean
           : valueBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       valueBooleanElement: freezed == valueBooleanElement
           ? _value.valueBooleanElement
           : valueBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -25364,7 +23656,7 @@ class _$_SubstanceDefinitionProperty extends _SubstanceDefinitionProperty {
 
   /// [valueDate] A value for the property.;
   @override
-  final Date? valueDate;
+  final FhirDate? valueDate;
 
   /// [valueDateElement] (_valueDate): Extensions for valueDate;
   @override
@@ -25373,7 +23665,7 @@ class _$_SubstanceDefinitionProperty extends _SubstanceDefinitionProperty {
 
   /// [valueBoolean] A value for the property.;
   @override
-  final Boolean? valueBoolean;
+  final FhirBoolean? valueBoolean;
 
   /// [valueBooleanElement] (_valueBoolean): Extensions for valueBoolean;
   @override
@@ -25456,9 +23748,9 @@ abstract class _SubstanceDefinitionProperty
       required final CodeableConcept type,
       final CodeableConcept? valueCodeableConcept,
       final Quantity? valueQuantity,
-      final Date? valueDate,
+      final FhirDate? valueDate,
       @JsonKey(name: '_valueDate') final Element? valueDateElement,
-      final Boolean? valueBoolean,
+      final FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') final Element? valueBooleanElement,
       final Attachment? valueAttachment}) = _$_SubstanceDefinitionProperty;
   _SubstanceDefinitionProperty._() : super._();
@@ -25495,7 +23787,7 @@ abstract class _SubstanceDefinitionProperty
   @override
 
   /// [valueDate] A value for the property.;
-  Date? get valueDate;
+  FhirDate? get valueDate;
   @override
 
   /// [valueDateElement] (_valueDate): Extensions for valueDate;
@@ -25504,7 +23796,7 @@ abstract class _SubstanceDefinitionProperty
   @override
 
   /// [valueBoolean] A value for the property.;
-  Boolean? get valueBoolean;
+  FhirBoolean? get valueBoolean;
   @override
 
   /// [valueBooleanElement] (_valueBoolean): Extensions for valueBoolean;
@@ -27501,7 +25793,7 @@ mixin _$SubstanceDefinitionName {
   CodeableConcept? get status => throw _privateConstructorUsedError;
 
   /// [preferred] If this is the preferred name for this substance.;
-  Boolean? get preferred => throw _privateConstructorUsedError;
+  FhirBoolean? get preferred => throw _privateConstructorUsedError;
 
   /// [preferredElement] (_preferred): Extensions for preferred;
   @JsonKey(name: '_preferred')
@@ -27551,7 +25843,7 @@ abstract class $SubstanceDefinitionNameCopyWith<$Res> {
       @JsonKey(name: '_name') Element? nameElement,
       CodeableConcept? type,
       CodeableConcept? status,
-      Boolean? preferred,
+      FhirBoolean? preferred,
       @JsonKey(name: '_preferred') Element? preferredElement,
       List<CodeableConcept>? language,
       List<CodeableConcept>? domain,
@@ -27630,7 +25922,7 @@ class _$SubstanceDefinitionNameCopyWithImpl<$Res,
       preferred: freezed == preferred
           ? _value.preferred
           : preferred // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       preferredElement: freezed == preferredElement
           ? _value.preferredElement
           : preferredElement // ignore: cast_nullable_to_non_nullable
@@ -27731,7 +26023,7 @@ abstract class _$$_SubstanceDefinitionNameCopyWith<$Res>
       @JsonKey(name: '_name') Element? nameElement,
       CodeableConcept? type,
       CodeableConcept? status,
-      Boolean? preferred,
+      FhirBoolean? preferred,
       @JsonKey(name: '_preferred') Element? preferredElement,
       List<CodeableConcept>? language,
       List<CodeableConcept>? domain,
@@ -27812,7 +26104,7 @@ class __$$_SubstanceDefinitionNameCopyWithImpl<$Res>
       preferred: freezed == preferred
           ? _value.preferred
           : preferred // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       preferredElement: freezed == preferredElement
           ? _value.preferredElement
           : preferredElement // ignore: cast_nullable_to_non_nullable
@@ -27936,7 +26228,7 @@ class _$_SubstanceDefinitionName extends _SubstanceDefinitionName {
 
   /// [preferred] If this is the preferred name for this substance.;
   @override
-  final Boolean? preferred;
+  final FhirBoolean? preferred;
 
   /// [preferredElement] (_preferred): Extensions for preferred;
   @override
@@ -28115,7 +26407,7 @@ abstract class _SubstanceDefinitionName extends SubstanceDefinitionName {
       @JsonKey(name: '_name') final Element? nameElement,
       final CodeableConcept? type,
       final CodeableConcept? status,
-      final Boolean? preferred,
+      final FhirBoolean? preferred,
       @JsonKey(name: '_preferred') final Element? preferredElement,
       final List<CodeableConcept>? language,
       final List<CodeableConcept>? domain,
@@ -28163,7 +26455,7 @@ abstract class _SubstanceDefinitionName extends SubstanceDefinitionName {
   @override
 
   /// [preferred] If this is the preferred name for this substance.;
-  Boolean? get preferred;
+  FhirBoolean? get preferred;
   @override
 
   /// [preferredElement] (_preferred): Extensions for preferred;
@@ -28637,7 +26929,7 @@ mixin _$SubstanceDefinitionRelationship {
   CodeableConcept get type => throw _privateConstructorUsedError;
 
   /// [isDefining] For example where an enzyme strongly bonds with a particular substance, this is a defining relationship for that enzyme, out of several possible substance relationships.;
-  Boolean? get isDefining => throw _privateConstructorUsedError;
+  FhirBoolean? get isDefining => throw _privateConstructorUsedError;
 
   /// [isDefiningElement] (_isDefining): Extensions for isDefining;
   @JsonKey(name: '_isDefining')
@@ -28650,7 +26942,7 @@ mixin _$SubstanceDefinitionRelationship {
   Ratio? get amountRatio => throw _privateConstructorUsedError;
 
   /// [amountString] A numeric factor for the relationship, for instance to express that the salt of a substance has some percentage of the active substance in relation to some other.;
-  Markdown? get amountString => throw _privateConstructorUsedError;
+  FhirMarkdown? get amountString => throw _privateConstructorUsedError;
 
   /// [amountStringElement] (_amountString): Extensions for amountString;
   @JsonKey(name: '_amountString')
@@ -28686,11 +26978,11 @@ abstract class $SubstanceDefinitionRelationshipCopyWith<$Res> {
       Reference? substanceDefinitionReference,
       CodeableConcept? substanceDefinitionCodeableConcept,
       CodeableConcept type,
-      Boolean? isDefining,
+      FhirBoolean? isDefining,
       @JsonKey(name: '_isDefining') Element? isDefiningElement,
       Quantity? amountQuantity,
       Ratio? amountRatio,
-      Markdown? amountString,
+      FhirMarkdown? amountString,
       @JsonKey(name: '_amountString') Element? amountStringElement,
       Ratio? ratioHighLimitAmount,
       CodeableConcept? comparator,
@@ -28766,7 +27058,7 @@ class _$SubstanceDefinitionRelationshipCopyWithImpl<$Res,
       isDefining: freezed == isDefining
           ? _value.isDefining
           : isDefining // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       isDefiningElement: freezed == isDefiningElement
           ? _value.isDefiningElement
           : isDefiningElement // ignore: cast_nullable_to_non_nullable
@@ -28782,7 +27074,7 @@ class _$SubstanceDefinitionRelationshipCopyWithImpl<$Res,
       amountString: freezed == amountString
           ? _value.amountString
           : amountString // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       amountStringElement: freezed == amountStringElement
           ? _value.amountStringElement
           : amountStringElement // ignore: cast_nullable_to_non_nullable
@@ -28927,11 +27219,11 @@ abstract class _$$_SubstanceDefinitionRelationshipCopyWith<$Res>
       Reference? substanceDefinitionReference,
       CodeableConcept? substanceDefinitionCodeableConcept,
       CodeableConcept type,
-      Boolean? isDefining,
+      FhirBoolean? isDefining,
       @JsonKey(name: '_isDefining') Element? isDefiningElement,
       Quantity? amountQuantity,
       Ratio? amountRatio,
-      Markdown? amountString,
+      FhirMarkdown? amountString,
       @JsonKey(name: '_amountString') Element? amountStringElement,
       Ratio? ratioHighLimitAmount,
       CodeableConcept? comparator,
@@ -29015,7 +27307,7 @@ class __$$_SubstanceDefinitionRelationshipCopyWithImpl<$Res>
       isDefining: freezed == isDefining
           ? _value.isDefining
           : isDefining // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       isDefiningElement: freezed == isDefiningElement
           ? _value.isDefiningElement
           : isDefiningElement // ignore: cast_nullable_to_non_nullable
@@ -29031,7 +27323,7 @@ class __$$_SubstanceDefinitionRelationshipCopyWithImpl<$Res>
       amountString: freezed == amountString
           ? _value.amountString
           : amountString // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       amountStringElement: freezed == amountStringElement
           ? _value.amountStringElement
           : amountStringElement // ignore: cast_nullable_to_non_nullable
@@ -29129,7 +27421,7 @@ class _$_SubstanceDefinitionRelationship
 
   /// [isDefining] For example where an enzyme strongly bonds with a particular substance, this is a defining relationship for that enzyme, out of several possible substance relationships.;
   @override
-  final Boolean? isDefining;
+  final FhirBoolean? isDefining;
 
   /// [isDefiningElement] (_isDefining): Extensions for isDefining;
   @override
@@ -29146,7 +27438,7 @@ class _$_SubstanceDefinitionRelationship
 
   /// [amountString] A numeric factor for the relationship, for instance to express that the salt of a substance has some percentage of the active substance in relation to some other.;
   @override
-  final Markdown? amountString;
+  final FhirMarkdown? amountString;
 
   /// [amountStringElement] (_amountString): Extensions for amountString;
   @override
@@ -29262,11 +27554,11 @@ abstract class _SubstanceDefinitionRelationship
       final Reference? substanceDefinitionReference,
       final CodeableConcept? substanceDefinitionCodeableConcept,
       required final CodeableConcept type,
-      final Boolean? isDefining,
+      final FhirBoolean? isDefining,
       @JsonKey(name: '_isDefining') final Element? isDefiningElement,
       final Quantity? amountQuantity,
       final Ratio? amountRatio,
-      final Markdown? amountString,
+      final FhirMarkdown? amountString,
       @JsonKey(name: '_amountString') final Element? amountStringElement,
       final Ratio? ratioHighLimitAmount,
       final CodeableConcept? comparator,
@@ -29305,7 +27597,7 @@ abstract class _SubstanceDefinitionRelationship
   @override
 
   /// [isDefining] For example where an enzyme strongly bonds with a particular substance, this is a defining relationship for that enzyme, out of several possible substance relationships.;
-  Boolean? get isDefining;
+  FhirBoolean? get isDefining;
   @override
 
   /// [isDefiningElement] (_isDefining): Extensions for isDefining;
@@ -29322,7 +27614,7 @@ abstract class _SubstanceDefinitionRelationship
   @override
 
   /// [amountString] A numeric factor for the relationship, for instance to express that the salt of a substance has some percentage of the active substance in relation to some other.;
-  Markdown? get amountString;
+  FhirMarkdown? get amountString;
   @override
 
   /// [amountStringElement] (_amountString): Extensions for amountString;

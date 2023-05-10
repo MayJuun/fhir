@@ -1,320 +1,479 @@
 part of 'resource.dart';
 
+@HiveType(typeId: 3)
 enum R5ResourceType {
+  @HiveField(0)
   @JsonValue('Account')
   Account,
+  @HiveField(1)
   @JsonValue('ActivityDefinition')
   ActivityDefinition,
+  @HiveField(2)
   @JsonValue('ActorDefinition')
   ActorDefinition,
+  @HiveField(3)
   @JsonValue('AdministrableProductDefinition')
   AdministrableProductDefinition,
+  @HiveField(4)
   @JsonValue('AdverseEvent')
   AdverseEvent,
+  @HiveField(5)
   @JsonValue('AllergyIntolerance')
   AllergyIntolerance,
+  @HiveField(6)
   @JsonValue('Appointment')
   Appointment,
+  @HiveField(7)
   @JsonValue('AppointmentResponse')
   AppointmentResponse,
+  @HiveField(8)
   @JsonValue('ArtifactAssessment')
   ArtifactAssessment,
+  @HiveField(9)
   @JsonValue('AuditEvent')
   AuditEvent,
+  @HiveField(10)
   @JsonValue('Basic')
   Basic,
+  @HiveField(11)
   @JsonValue('Binary')
   Binary,
+  @HiveField(12)
   @JsonValue('BiologicallyDerivedProduct')
   BiologicallyDerivedProduct,
+  @HiveField(13)
   @JsonValue('BiologicallyDerivedProductDispense')
   BiologicallyDerivedProductDispense,
+  @HiveField(14)
   @JsonValue('BodyStructure')
   BodyStructure,
+  @HiveField(15)
   @JsonValue('Bundle')
   Bundle,
+  @HiveField(16)
   @JsonValue('CapabilityStatement')
   CapabilityStatement,
+  @HiveField(17)
   @JsonValue('CarePlan')
   CarePlan,
+  @HiveField(18)
   @JsonValue('CareTeam')
   CareTeam,
+  @HiveField(19)
   @JsonValue('ChargeItem')
   ChargeItem,
+  @HiveField(20)
   @JsonValue('ChargeItemDefinition')
   ChargeItemDefinition,
+  @HiveField(21)
   @JsonValue('Citation')
   Citation,
+  @HiveField(22)
   @JsonValue('Claim')
   Claim,
+  @HiveField(23)
   @JsonValue('ClaimResponse')
   ClaimResponse,
+  @HiveField(24)
   @JsonValue('ClinicalImpression')
   ClinicalImpression,
+  @HiveField(25)
   @JsonValue('ClinicalUseDefinition')
   ClinicalUseDefinition,
+  @HiveField(26)
   @JsonValue('CodeSystem')
   CodeSystem,
+  @HiveField(27)
   @JsonValue('Communication')
   Communication,
+  @HiveField(28)
   @JsonValue('CommunicationRequest')
   CommunicationRequest,
+  @HiveField(29)
   @JsonValue('CompartmentDefinition')
   CompartmentDefinition,
+  @HiveField(30)
   @JsonValue('Composition')
   Composition,
+  @HiveField(31)
   @JsonValue('ConceptMap')
   ConceptMap,
+  @HiveField(32)
   @JsonValue('Condition')
   Condition,
+  @HiveField(33)
   @JsonValue('ConditionDefinition')
   ConditionDefinition,
+  @HiveField(34)
   @JsonValue('Consent')
   Consent,
+  @HiveField(35)
   @JsonValue('Contract')
   Contract,
+  @HiveField(36)
   @JsonValue('Coverage')
   Coverage,
+  @HiveField(37)
   @JsonValue('CoverageEligibilityRequest')
   CoverageEligibilityRequest,
+  @HiveField(38)
   @JsonValue('CoverageEligibilityResponse')
   CoverageEligibilityResponse,
+  @HiveField(39)
   @JsonValue('DetectedIssue')
   DetectedIssue,
+  @HiveField(40)
   @JsonValue('Device')
   Device,
+  @HiveField(41)
   @JsonValue('DeviceAssociation')
   DeviceAssociation,
+  @HiveField(42)
   @JsonValue('DeviceDefinition')
   DeviceDefinition,
+  @HiveField(43)
   @JsonValue('DeviceDispense')
   DeviceDispense,
+  @HiveField(44)
   @JsonValue('DeviceMetric')
   DeviceMetric,
+  @HiveField(45)
   @JsonValue('DeviceRequest')
   DeviceRequest,
+  @HiveField(46)
   @JsonValue('DeviceUsage')
   DeviceUsage,
+  @HiveField(47)
   @JsonValue('DiagnosticReport')
   DiagnosticReport,
+  @HiveField(48)
   @JsonValue('DocumentReference')
   DocumentReference,
+  @HiveField(49)
   @JsonValue('Encounter')
   Encounter,
+  @HiveField(50)
   @JsonValue('EncounterHistory')
   EncounterHistory,
+  @HiveField(51)
   @JsonValue('Endpoint')
   Endpoint,
+  @HiveField(52)
   @JsonValue('EnrollmentRequest')
   EnrollmentRequest,
+  @HiveField(53)
   @JsonValue('EnrollmentResponse')
   EnrollmentResponse,
+  @HiveField(54)
   @JsonValue('EpisodeOfCare')
   EpisodeOfCare,
+  @HiveField(55)
   @JsonValue('EventDefinition')
   EventDefinition,
+  @HiveField(56)
   @JsonValue('Evidence')
   Evidence,
+  @HiveField(57)
   @JsonValue('EvidenceReport')
   EvidenceReport,
+  @HiveField(58)
   @JsonValue('EvidenceVariable')
   EvidenceVariable,
+  @HiveField(59)
   @JsonValue('ExampleScenario')
   ExampleScenario,
+  @HiveField(60)
   @JsonValue('ExplanationOfBenefit')
   ExplanationOfBenefit,
+  @HiveField(61)
   @JsonValue('FamilyMemberHistory')
   FamilyMemberHistory,
+  @HiveField(62)
   @JsonValue('Flag')
   Flag,
+  @HiveField(63)
   @JsonValue('FormularyItem')
   FormularyItem,
+  @HiveField(64)
   @JsonValue('GenomicStudy')
   GenomicStudy,
+  @HiveField(65)
   @JsonValue('Goal')
   Goal,
+  @HiveField(66)
   @JsonValue('GraphDefinition')
   GraphDefinition,
+  @HiveField(67)
   @JsonValue('Group')
   Group,
+  @HiveField(68)
   @JsonValue('GuidanceResponse')
   GuidanceResponse,
+  @HiveField(69)
   @JsonValue('HealthcareService')
   HealthcareService,
+  @HiveField(70)
   @JsonValue('ImagingSelection')
   ImagingSelection,
+  @HiveField(71)
   @JsonValue('ImagingStudy')
   ImagingStudy,
+  @HiveField(72)
   @JsonValue('Immunization')
   Immunization,
+  @HiveField(73)
   @JsonValue('ImmunizationEvaluation')
   ImmunizationEvaluation,
+  @HiveField(74)
   @JsonValue('ImmunizationRecommendation')
   ImmunizationRecommendation,
+  @HiveField(75)
   @JsonValue('ImplementationGuide')
   ImplementationGuide,
+  @HiveField(76)
   @JsonValue('Ingredient')
   Ingredient,
+  @HiveField(77)
   @JsonValue('InsurancePlan')
   InsurancePlan,
+  @HiveField(78)
   @JsonValue('InventoryItem')
   InventoryItem,
+  @HiveField(79)
   @JsonValue('InventoryReport')
   InventoryReport,
+  @HiveField(80)
   @JsonValue('Invoice')
   Invoice,
+  @HiveField(81)
   @JsonValue('Library')
   Library,
+  @HiveField(82)
   @JsonValue('Linkage')
   Linkage,
+  @HiveField(83)
   @JsonValue('List')
   FhirList,
+  @HiveField(84)
   @JsonValue('Location')
   Location,
+  @HiveField(85)
   @JsonValue('ManufacturedItemDefinition')
   ManufacturedItemDefinition,
+  @HiveField(86)
   @JsonValue('Measure')
   Measure,
+  @HiveField(87)
   @JsonValue('MeasureReport')
   MeasureReport,
+  @HiveField(88)
   @JsonValue('Medication')
   Medication,
+  @HiveField(89)
   @JsonValue('MedicationAdministration')
   MedicationAdministration,
+  @HiveField(90)
   @JsonValue('MedicationDispense')
   MedicationDispense,
+  @HiveField(91)
   @JsonValue('MedicationKnowledge')
   MedicationKnowledge,
+  @HiveField(92)
   @JsonValue('MedicationRequest')
   MedicationRequest,
+  @HiveField(93)
   @JsonValue('MedicationStatement')
   MedicationStatement,
+  @HiveField(94)
   @JsonValue('MedicinalProductDefinition')
   MedicinalProductDefinition,
+  @HiveField(95)
   @JsonValue('MessageDefinition')
   MessageDefinition,
+  @HiveField(96)
   @JsonValue('MessageHeader')
   MessageHeader,
+  @HiveField(97)
   @JsonValue('MolecularSequence')
   MolecularSequence,
+  @HiveField(98)
   @JsonValue('NamingSystem')
   NamingSystem,
+  @HiveField(99)
   @JsonValue('NutritionIntake')
   NutritionIntake,
+  @HiveField(100)
   @JsonValue('NutritionOrder')
   NutritionOrder,
+  @HiveField(101)
   @JsonValue('NutritionProduct')
   NutritionProduct,
+  @HiveField(102)
   @JsonValue('Observation')
   Observation,
+  @HiveField(103)
   @JsonValue('ObservationDefinition')
   ObservationDefinition,
+  @HiveField(104)
   @JsonValue('OperationDefinition')
   OperationDefinition,
+  @HiveField(105)
   @JsonValue('OperationOutcome')
   OperationOutcome,
+  @HiveField(106)
   @JsonValue('Organization')
   Organization,
+  @HiveField(107)
   @JsonValue('OrganizationAffiliation')
   OrganizationAffiliation,
+  @HiveField(108)
   @JsonValue('PackagedProductDefinition')
   PackagedProductDefinition,
+  @HiveField(109)
   @JsonValue('Parameters')
   Parameters,
+  @HiveField(110)
   @JsonValue('Patient')
   Patient,
+  @HiveField(111)
   @JsonValue('PaymentNotice')
   PaymentNotice,
+  @HiveField(112)
   @JsonValue('PaymentReconciliation')
   PaymentReconciliation,
+  @HiveField(113)
   @JsonValue('Permission')
   Permission,
+  @HiveField(114)
   @JsonValue('Person')
   Person,
+  @HiveField(115)
   @JsonValue('PlanDefinition')
   PlanDefinition,
+  @HiveField(116)
   @JsonValue('Practitioner')
   Practitioner,
+  @HiveField(117)
   @JsonValue('PractitionerRole')
   PractitionerRole,
+  @HiveField(118)
   @JsonValue('Procedure')
   Procedure,
+  @HiveField(119)
   @JsonValue('Provenance')
   Provenance,
+  @HiveField(120)
   @JsonValue('Questionnaire')
   Questionnaire,
+  @HiveField(121)
   @JsonValue('QuestionnaireResponse')
   QuestionnaireResponse,
+  @HiveField(122)
   @JsonValue('RegulatedAuthorization')
   RegulatedAuthorization,
+  @HiveField(123)
   @JsonValue('RelatedPerson')
   RelatedPerson,
+  @HiveField(124)
   @JsonValue('RequestOrchestration')
   RequestOrchestration,
+  @HiveField(125)
   @JsonValue('Requirements')
   Requirements,
+  @HiveField(126)
   @JsonValue('ResearchStudy')
   ResearchStudy,
+  @HiveField(127)
   @JsonValue('ResearchSubject')
   ResearchSubject,
+  @HiveField(128)
   @JsonValue('RiskAssessment')
   RiskAssessment,
+  @HiveField(129)
   @JsonValue('Schedule')
   Schedule,
+  @HiveField(130)
   @JsonValue('SearchParameter')
   SearchParameter,
+  @HiveField(131)
   @JsonValue('ServiceRequest')
   ServiceRequest,
+  @HiveField(132)
   @JsonValue('Slot')
   Slot,
+  @HiveField(133)
   @JsonValue('Specimen')
   Specimen,
+  @HiveField(134)
   @JsonValue('SpecimenDefinition')
   SpecimenDefinition,
+  @HiveField(135)
   @JsonValue('StructureDefinition')
   StructureDefinition,
+  @HiveField(136)
   @JsonValue('StructureMap')
   StructureMap,
+  @HiveField(137)
   @JsonValue('Subscription')
   Subscription,
+  @HiveField(138)
   @JsonValue('SubscriptionStatus')
   SubscriptionStatus,
+  @HiveField(139)
   @JsonValue('SubscriptionTopic')
   SubscriptionTopic,
+  @HiveField(140)
   @JsonValue('Substance')
   Substance,
+  @HiveField(141)
   @JsonValue('SubstanceDefinition')
   SubstanceDefinition,
+  @HiveField(142)
   @JsonValue('SubstanceNucleicAcid')
   SubstanceNucleicAcid,
+  @HiveField(143)
   @JsonValue('SubstancePolymer')
   SubstancePolymer,
+  @HiveField(144)
   @JsonValue('SubstanceProtein')
   SubstanceProtein,
+  @HiveField(145)
   @JsonValue('SubstanceReferenceInformation')
   SubstanceReferenceInformation,
+  @HiveField(146)
   @JsonValue('SubstanceSourceMaterial')
   SubstanceSourceMaterial,
+  @HiveField(147)
   @JsonValue('SupplyDelivery')
   SupplyDelivery,
+  @HiveField(148)
   @JsonValue('SupplyRequest')
   SupplyRequest,
+  @HiveField(149)
   @JsonValue('Task')
   Task,
+  @HiveField(150)
   @JsonValue('TerminologyCapabilities')
   TerminologyCapabilities,
+  @HiveField(151)
   @JsonValue('TestPlan')
   TestPlan,
+  @HiveField(152)
   @JsonValue('TestReport')
   TestReport,
+  @HiveField(153)
   @JsonValue('TestScript')
   TestScript,
+  @HiveField(154)
   @JsonValue('Transport')
   Transport,
+  @HiveField(155)
   @JsonValue('ValueSet')
   ValueSet,
+  @HiveField(156)
   @JsonValue('VerificationResult')
   VerificationResult,
+  @HiveField(157)
   @JsonValue('VisionPrescription')
   VisionPrescription,
 }

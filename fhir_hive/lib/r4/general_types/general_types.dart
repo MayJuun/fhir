@@ -3,7 +3,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:hive/hive.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -45,7 +44,6 @@ class Annotation with _$Annotation {
   /// [text] The text of the annotation in markdown format.
   ///
   /// [textElement] Extensions for text
-
   factory Annotation({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
@@ -75,7 +73,7 @@ class Annotation with _$Annotation {
     @JsonKey(name: '_time') Element? timeElement,
 
     /// [text] The text of the annotation in markdown format.
-    Markdown? text,
+    FhirMarkdown? text,
 
     /// [textElement] Extensions for text
     @JsonKey(name: '_text') Element? textElement,
@@ -167,7 +165,6 @@ class Attachment with _$Attachment {
   /// [creation] The date that the attachment was first created.
   ///
   /// [creationElement] Extensions for creation
-
   factory Attachment({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
@@ -306,7 +303,6 @@ class Identifier with _$Identifier {
   /// [period] Time period during which identifier is/was valid for use.
   ///
   /// [assigner] Organization that issued/manages the identifier.
-
   factory Identifier({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
@@ -321,7 +317,6 @@ class Identifier with _$Identifier {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [use] The purpose of this identifier.
-
     @JsonKey(unknownEnumValue: IdentifierUse.unknown) IdentifierUse? use,
 
     /// [useElement] Extensions for use
@@ -409,7 +404,6 @@ class CodeableConcept with _$CodeableConcept {
   ///  represents the intended meaning of the user.
   ///
   /// [textElement] Extensions for text
-
   factory CodeableConcept({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
@@ -421,7 +415,6 @@ class CodeableConcept with _$CodeableConcept {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [coding] A reference to a code defined by a terminology system.
@@ -514,11 +507,9 @@ class Coding with _$Coding {
   ///  e.g. off a pick list of available items (codes or displays).
   ///
   /// [userSelectedElement] Extensions for userSelected
-
   factory Coding({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-
     String? id,
 
     /// [extension] May be used to represent additional information that is not
@@ -527,16 +518,13 @@ class Coding with _$Coding {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [system] The identification of the code system that defines the meaning
     ///  of the symbol in the code.
-
     FhirUri? system,
 
     /// [systemElement] Extensions for system
-
     @JsonKey(name: '_system') Element? systemElement,
 
     /// [version] The version of the code system which was used when choosing
@@ -545,39 +533,31 @@ class Coding with _$Coding {
     /// versions. However this cannot consistently be assured, and when the
     /// meaning is not guaranteed to be consistent, the version SHOULD be
     ///  exchanged.
-
     String? version,
 
     /// [versionElement] Extensions for version
-
     @JsonKey(name: '_version') Element? versionElement,
 
     /// [code] A symbol in syntax defined by the system. The symbol may be a
     /// predefined code or an expression in a syntax defined by the coding system
     ///  (e.g. post-coordination).
-
     FhirCode? code,
 
     /// [codeElement] Extensions for code
-
     @JsonKey(name: '_code') Element? codeElement,
 
     /// [display] A representation of the meaning of the code in the system,
     ///  following the rules of the system.
-
     String? display,
 
     /// [displayElement] Extensions for display
-
     @JsonKey(name: '_display') Element? displayElement,
 
     /// [userSelected] Indicates that this coding was chosen by a user directly -
     ///  e.g. off a pick list of available items (codes or displays).
-
-    Boolean? userSelected,
+    FhirBoolean? userSelected,
 
     /// [userSelectedElement] Extensions for userSelected
-
     @JsonKey(name: '_userSelected') Element? userSelectedElement,
   }) = _Coding;
 
@@ -657,11 +637,9 @@ class Quantity with _$Quantity {
   ///  representation system.
   ///
   /// [codeElement] Extensions for code
-
   factory Quantity({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-
     String? id,
 
     /// [extension] May be used to represent additional information that is not
@@ -675,7 +653,6 @@ class Quantity with _$Quantity {
 
     /// [value] The value of the measured amount. The value includes an implicit
     ///  precision in the presentation of the value.
-
     FhirDecimal? value,
 
     /// [valueElement] Extensions for value
@@ -687,7 +664,6 @@ class Quantity with _$Quantity {
         /// the actual value is greater or less than the stated value due to
         /// measurement issues; e.g. if the comparator is "<" , then the real value is
         ///  < stated value.
-
         QuantityComparator? comparator,
 
     /// [comparatorElement] Extensions for comparator
@@ -695,7 +671,6 @@ class Quantity with _$Quantity {
         Element? comparatorElement,
 
     /// [unit] A human-readable form of the unit.
-
     String? unit,
 
     /// [unitElement] Extensions for unit
@@ -704,7 +679,6 @@ class Quantity with _$Quantity {
 
     /// [system] The identification of the system that provides the coded form of
     ///  the unit.
-
     FhirUri? system,
 
     /// [systemElement] Extensions for system
@@ -713,7 +687,6 @@ class Quantity with _$Quantity {
 
     /// [code] A computer processable form of the unit in some unit
     ///  representation system.
-
     FhirCode? code,
 
     /// [codeElement] Extensions for code
@@ -795,11 +768,9 @@ class FhirDuration with _$FhirDuration {
   ///  representation system.
   ///
   /// [codeElement] Extensions for code
-
   factory FhirDuration({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-
     String? id,
 
     /// [extension] May be used to represent additional information that is not
@@ -813,7 +784,6 @@ class FhirDuration with _$FhirDuration {
 
     /// [value] The value of the measured amount. The value includes an implicit
     ///  precision in the presentation of the value.
-
     FhirDecimal? value,
 
     /// [valueElement] Extensions for value
@@ -825,7 +795,6 @@ class FhirDuration with _$FhirDuration {
         /// the actual value is greater or less than the stated value due to
         /// measurement issues; e.g. if the comparator is "<" , then the real value is
         ///  < stated value.
-
         DurationComparator? comparator,
 
     /// [comparatorElement] Extensions for comparator
@@ -833,7 +802,6 @@ class FhirDuration with _$FhirDuration {
         Element? comparatorElement,
 
     /// [unit] A human-readable form of the unit.
-
     String? unit,
 
     /// [unitElement] Extensions for unit
@@ -842,7 +810,6 @@ class FhirDuration with _$FhirDuration {
 
     /// [system] The identification of the system that provides the coded form of
     ///  the unit.
-
     FhirUri? system,
 
     /// [systemElement] Extensions for system
@@ -851,7 +818,6 @@ class FhirDuration with _$FhirDuration {
 
     /// [code] A computer processable form of the unit in some unit
     ///  representation system.
-
     FhirCode? code,
 
     /// [codeElement] Extensions for code
@@ -933,11 +899,9 @@ class Distance with _$Distance {
   ///  representation system.
   ///
   /// [codeElement] Extensions for code
-
   factory Distance({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-
     String? id,
 
     /// [extension] May be used to represent additional information that is not
@@ -951,7 +915,6 @@ class Distance with _$Distance {
 
     /// [value] The value of the measured amount. The value includes an implicit
     ///  precision in the presentation of the value.
-
     FhirDecimal? value,
 
     /// [valueElement] Extensions for value
@@ -963,7 +926,6 @@ class Distance with _$Distance {
         /// the actual value is greater or less than the stated value due to
         /// measurement issues; e.g. if the comparator is "<" , then the real value is
         ///  < stated value.
-
         DistanceComparator? comparator,
 
     /// [comparatorElement] Extensions for comparator
@@ -971,7 +933,6 @@ class Distance with _$Distance {
         Element? comparatorElement,
 
     /// [unit] A human-readable form of the unit.
-
     String? unit,
 
     /// [unitElement] Extensions for unit
@@ -980,7 +941,6 @@ class Distance with _$Distance {
 
     /// [system] The identification of the system that provides the coded form of
     ///  the unit.
-
     FhirUri? system,
 
     /// [systemElement] Extensions for system
@@ -989,7 +949,6 @@ class Distance with _$Distance {
 
     /// [code] A computer processable form of the unit in some unit
     ///  representation system.
-
     FhirCode? code,
 
     /// [codeElement] Extensions for code
@@ -1074,11 +1033,9 @@ class Count with _$Count {
   ///  representation system.
   ///
   /// [codeElement] Extensions for code
-
   factory Count({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-
     String? id,
 
     /// [extension] May be used to represent additional information that is not
@@ -1092,7 +1049,6 @@ class Count with _$Count {
 
     /// [value] The value of the measured amount. The value includes an implicit
     ///  precision in the presentation of the value.
-
     FhirDecimal? value,
 
     /// [valueElement] Extensions for value
@@ -1104,7 +1060,6 @@ class Count with _$Count {
         /// the actual value is greater or less than the stated value due to
         /// measurement issues; e.g. if the comparator is "<" , then the real value is
         ///  < stated value.
-
         CountComparator? comparator,
 
     /// [comparatorElement] Extensions for comparator
@@ -1112,7 +1067,6 @@ class Count with _$Count {
         Element? comparatorElement,
 
     /// [unit] A human-readable form of the unit.
-
     String? unit,
 
     /// [unitElement] Extensions for unit
@@ -1121,7 +1075,6 @@ class Count with _$Count {
 
     /// [system] The identification of the system that provides the coded form of
     ///  the unit.
-
     FhirUri? system,
 
     /// [systemElement] Extensions for system
@@ -1130,7 +1083,6 @@ class Count with _$Count {
 
     /// [code] A computer processable form of the unit in some unit
     ///  representation system.
-
     FhirCode? code,
 
     /// [codeElement] Extensions for code
@@ -1192,7 +1144,6 @@ class Money with _$Money {
   /// [currency] ISO 4217 Currency Code.
   ///
   /// [currencyElement] Extensions for currency
-
   factory Money({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
@@ -1292,7 +1243,6 @@ class Age with _$Age {
   ///  representation system.
   ///
   /// [codeElement] Extensions for code
-
   factory Age({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
@@ -1317,7 +1267,6 @@ class Age with _$Age {
     /// the actual value is greater or less than the stated value due to
     /// measurement issues; e.g. if the comparator is "<" , then the real value is
     ///  < stated value.
-
     @JsonKey(unknownEnumValue: AgeComparator.unknown) AgeComparator? comparator,
 
     /// [comparatorElement] Extensions for comparator
@@ -1393,7 +1342,6 @@ class Range with _$Range {
   /// [low] The low limit. The boundary is inclusive.
   ///
   /// [high] The high limit. The boundary is inclusive.
-
   factory Range({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
@@ -1472,7 +1420,6 @@ class Period with _$Period {
   ///  that period is expected/planned to end at that time.
   ///
   /// [endElement] Extensions for end
-
   factory Period({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
@@ -1554,7 +1501,6 @@ class Ratio with _$Ratio {
   /// [numerator] The value of the numerator.
   ///
   /// [denominator] The value of the denominator.
-
   factory Ratio({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
@@ -1616,26 +1562,20 @@ class RatioRange with _$RatioRange {
   /// [lowNumerator] "The value of the low limit numerator."
   /// [highNumerator] "The value of the high limit numerator."
   /// [denominator] "The value of the denominator."
-
   factory RatioRange({
     /// [id] "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
-
     String? id,
 
     /// [extension] "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
-
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [lowNumerator] "The value of the low limit numerator."
-
     Quantity? lowNumerator,
 
     /// [highNumerator] "The value of the high limit numerator."
-
     Quantity? highNumerator,
 
     /// [denominator] "The value of the denominator."
-
     Quantity? denominator,
   }) = _RatioRange;
 
@@ -1726,7 +1666,6 @@ class SampledData with _$SampledData {
   ///  of a decimal value.
   ///
   /// [dataElement] Extensions for data
-
   factory SampledData({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
@@ -1876,7 +1815,6 @@ class Signature with _$Signature {
   ///  not recorded electronically this element would be empty.
   ///
   /// [dataElement] Extensions for data
-
   factory Signature({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
@@ -1897,7 +1835,7 @@ class Signature with _$Signature {
     required List<Coding> type,
 
     /// [when] When the digital signature was signed.
-    Instant? when,
+    FhirInstant? when,
 
     /// [whenElement] Extensions for when
     @JsonKey(name: '_when') Element? whenElement,
@@ -2016,11 +1954,9 @@ class HumanName with _$HumanName {
   ///
   /// [period] Indicates the period of time when this name was valid for the
   ///  named person.
-
   factory HumanName({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-
     String? id,
 
     /// [extension] May be used to represent additional information that is not
@@ -2029,67 +1965,53 @@ class HumanName with _$HumanName {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [use] Identifies the purpose for this name.
-
     @JsonKey(unknownEnumValue: HumanNameUse.unknown) HumanNameUse? use,
 
     /// [useElement] Extensions for use
-
     @JsonKey(name: '_use') Element? useElement,
 
     /// [text] Specifies the entire name as it should be displayed e.g. on an
     /// application UI. This may be provided instead of or as well as the specific
     ///  parts.
-
     String? text,
 
     /// [textElement] Extensions for text
-
     @JsonKey(name: '_text') Element? textElement,
 
     /// [family] The part of a name that links to the genealogy. In some cultures
     ///  (e.g. Eritrea) the family name of a son is the first name of his father.
-
     String? family,
 
     /// [familyElement] Extensions for family
-
     @JsonKey(name: '_family') Element? familyElement,
 
     /// [given] Given name.
-
     List<String>? given,
 
     /// [givenElement] Extensions for given
-
     @JsonKey(name: '_given') List<Element?>? givenElement,
 
     /// [prefix] Part of the name that is acquired as a title due to academic,
     /// legal, employment or nobility status, etc. and that appears at the start
     ///  of the name.
-
     List<String>? prefix,
 
     /// [prefixElement] Extensions for prefix
-
     @JsonKey(name: '_prefix') List<Element?>? prefixElement,
 
     /// [suffix] Part of the name that is acquired as a title due to academic,
     /// legal, employment or nobility status, etc. and that appears at the end of
     ///  the name.
-
     List<String>? suffix,
 
     /// [suffixElement] Extensions for suffix
-
     @JsonKey(name: '_suffix') List<Element?>? suffixElement,
 
     /// [period] Indicates the period of time when this name was valid for the
     ///  named person.
-
     Period? period,
   }) = _HumanName;
 
@@ -2194,7 +2116,6 @@ class Address with _$Address {
   /// [countryElement] Extensions for country
   ///
   /// [period] Time period when address was/is in use.
-
   factory Address({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
@@ -2209,7 +2130,6 @@ class Address with _$Address {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [use] The purpose of this address.
-
     @JsonKey(unknownEnumValue: AddressUse.unknown) AddressUse? use,
 
     /// [useElement] Extensions for use
@@ -2218,7 +2138,6 @@ class Address with _$Address {
     /// [type] Distinguishes between physical addresses (those you can visit) and
     /// mailing addresses (e.g. PO Boxes and care-of addresses). Most addresses
     ///  are both.
-
     @JsonKey(unknownEnumValue: AddressType.unknown) AddressType? type,
 
     /// [typeElement] Extensions for type
@@ -2350,11 +2269,9 @@ class ContactPoint with _$ContactPoint {
   /// [rankElement] Extensions for rank
   ///
   /// [period] Time period when the contact point was/is in use.
-
   factory ContactPoint({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-
     String? id,
 
     /// [extension] May be used to represent additional information that is not
@@ -2369,7 +2286,6 @@ class ContactPoint with _$ContactPoint {
 
         /// [system] Telecommunications form for contact point - what communications
         ///  system is required to make use of the contact.
-
         ContactPointSystem? system,
 
     /// [systemElement] Extensions for system
@@ -2378,7 +2294,6 @@ class ContactPoint with _$ContactPoint {
 
     /// [value] The actual contact point details, in a form that is meaningful to
     ///  the designated communication system (i.e. phone number or email address).
-
     String? value,
 
     /// [valueElement] Extensions for value
@@ -2396,7 +2311,6 @@ class ContactPoint with _$ContactPoint {
     /// [rank] Specifies a preferred order in which to use a set of contacts.
     /// ContactPoints with lower rank values are more preferred than those with
     ///  higher rank values.
-
     FhirPositiveInt? rank,
 
     /// [rankElement] Extensions for rank
@@ -2404,7 +2318,6 @@ class ContactPoint with _$ContactPoint {
         Element? rankElement,
 
     /// [period] Time period when the contact point was/is in use.
-
     Period? period,
   }) = _ContactPoint;
 
@@ -2489,11 +2402,9 @@ class Timing with _$Timing {
   /// and either the code or the data may be used to interpret the Timing, with
   /// the exception that .repeat.bounds still applies over the code (and is not
   ///  contained in the code).
-
   factory Timing({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-
     String? id,
 
     /// [extension] May be used to represent additional information that is not
@@ -2502,7 +2413,6 @@ class Timing with _$Timing {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -2518,30 +2428,24 @@ class Timing with _$Timing {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-
     List<FhirExtension>? modifierExtension,
 
     /// [event] Identifies specific times when the event occurs.
-
     List<FhirDateTime>? event,
 
     /// [eventElement] Extensions for event
-
     @JsonKey(name: '_event') List<Element?>? eventElement,
 
     /// [repeat] A set of rules that describe when the event is scheduled.
-
     TimingRepeat? repeat,
 
     /// [code] A code for the timing schedule (or just text in code.text). Some
     /// codes such as BID are ubiquitous, but many institutions define their own
     /// additional codes. If a code is provided, the code is understood to be a
-
     /// complete statement of whatever is specified in the structured timing data,
     /// and either the code or the data may be used to interpret the Timing, with
     /// the exception that .repeat.bounds still applies over the code (and is not
     ///  contained in the code).
-
     CodeableConcept? code,
   }) = _Timing;
 
@@ -2698,11 +2602,9 @@ class TimingRepeat with _$TimingRepeat {
   ///  is assumed to be after the event.
   ///
   /// [offsetElement] Extensions for offset
-
   factory TimingRepeat({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-
     String? id,
 
     /// [extension] May be used to represent additional information that is not
@@ -2727,31 +2629,26 @@ class TimingRepeat with _$TimingRepeat {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-
     List<FhirExtension>? modifierExtension,
 
     /// [boundsDuration] Either a duration for the length of the timing schedule,
     /// a range of possible length, or outer bounds for start and/or end limits of
     ///  the timing schedule.
-
     FhirDuration? boundsDuration,
 
     /// [boundsRange] Either a duration for the length of the timing schedule, a
     /// range of possible length, or outer bounds for start and/or end limits of
     ///  the timing schedule.
-
     Range? boundsRange,
 
     /// [boundsPeriod] Either a duration for the length of the timing schedule, a
     /// range of possible length, or outer bounds for start and/or end limits of
     ///  the timing schedule.
-
     Period? boundsPeriod,
 
     /// [count] A total count of the desired number of repetitions across the
     /// duration of the entire timing specification. If countMax is present, this
     ///  element indicates the lower bound of the allowed range of count values.
-
     FhirPositiveInt? count,
 
     /// [countElement] Extensions for count
@@ -2760,7 +2657,6 @@ class TimingRepeat with _$TimingRepeat {
 
     /// [countMax] If present, indicates that the count is a range - so to
     ///  perform the action between [count] and [countMax] times.
-
     FhirPositiveInt? countMax,
 
     /// [countMaxElement] Extensions for countMax
@@ -2770,7 +2666,6 @@ class TimingRepeat with _$TimingRepeat {
     /// [duration] How long this thing happens for when it happens. If
     /// durationMax is present, this element indicates the lower bound of the
     ///  allowed range of the duration.
-
     FhirDecimal? duration,
 
     /// [durationElement] Extensions for duration
@@ -2779,7 +2674,6 @@ class TimingRepeat with _$TimingRepeat {
 
     /// [durationMax] If present, indicates that the duration is a range - so to
     ///  perform the action between [duration] and [durationMax] time length.
-
     FhirDecimal? durationMax,
 
     /// [durationMaxElement] Extensions for durationMax
@@ -2788,7 +2682,6 @@ class TimingRepeat with _$TimingRepeat {
     @JsonKey(unknownEnumValue: TimingRepeatDurationUnit.unknown)
 
         /// [durationUnit] The units of time for the duration, in UCUM units.
-
         TimingRepeatDurationUnit? durationUnit,
 
     /// [durationUnitElement] Extensions for durationUnit
@@ -2798,7 +2691,6 @@ class TimingRepeat with _$TimingRepeat {
     /// [frequency] The number of times to repeat the action within the specified
     /// period. If frequencyMax is present, this element indicates the lower bound
     ///  of the allowed range of the frequency.
-
     FhirPositiveInt? frequency,
 
     /// [frequencyElement] Extensions for frequency
@@ -2808,7 +2700,6 @@ class TimingRepeat with _$TimingRepeat {
     /// [frequencyMax] If present, indicates that the frequency is a range - so
     /// to repeat between [frequency] and [frequencyMax] times within the period
     ///  or period range.
-
     FhirPositiveInt? frequencyMax,
 
     /// [frequencyMaxElement] Extensions for frequencyMax
@@ -2819,7 +2710,6 @@ class TimingRepeat with _$TimingRepeat {
     /// occur; e.g. to express "3 times per day", 3 would be the frequency and "1
     /// day" would be the period. If periodMax is present, this element indicates
     ///  the lower bound of the allowed range of the period length.
-
     FhirDecimal? period,
 
     /// [periodElement] Extensions for period
@@ -2829,7 +2719,6 @@ class TimingRepeat with _$TimingRepeat {
     /// [periodMax] If present, indicates that the period is a range from [period]
     /// to [periodMax], allowing expressing concepts such as "do this once every
     /// 3-5 days.
-
     FhirDecimal? periodMax,
 
     /// [periodMaxElement] Extensions for periodMax
@@ -2838,7 +2727,6 @@ class TimingRepeat with _$TimingRepeat {
     @JsonKey(unknownEnumValue: TimingRepeatPeriodUnit.unknown)
 
         /// [periodUnit] The units of time for the period in UCUM units.
-
         TimingRepeatPeriodUnit? periodUnit,
 
     /// [periodUnitElement] Extensions for periodUnit
@@ -2847,7 +2735,6 @@ class TimingRepeat with _$TimingRepeat {
 
     /// [dayOfWeek] If one or more days of week is provided, then the action
     ///  happens only on the specified day(s).
-
     List<FhirCode>? dayOfWeek,
 
     /// [dayOfWeekElement] Extensions for dayOfWeek
@@ -2855,7 +2742,6 @@ class TimingRepeat with _$TimingRepeat {
         List<Element?>? dayOfWeekElement,
 
     /// [timeOfDay] Specified time of day for action to take place.
-
     List<FhirTime>? timeOfDay,
 
     /// [timeOfDayElement] Extensions for timeOfDay
@@ -2864,7 +2750,6 @@ class TimingRepeat with _$TimingRepeat {
 
     /// [when] An approximate time period during the day, potentially linked to
     ///  an event of daily living that indicates when the action should occur.
-
     List<TimingRepeatWhen>? when,
 
     /// [whenElement] Extensions for when
@@ -2874,7 +2759,6 @@ class TimingRepeat with _$TimingRepeat {
     /// [offset] The number of minutes from the event. If the event code does not
     /// indicate whether the minutes is before or after the event, then the offset
     ///  is assumed to be after the event.
-
     FhirUnsignedInt? offset,
 
     /// [offsetElement] Extensions for offset

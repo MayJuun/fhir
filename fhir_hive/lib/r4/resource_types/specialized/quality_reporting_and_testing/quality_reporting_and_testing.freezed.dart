@@ -21,39 +21,32 @@ Measure _$MeasureFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Measure {
   @JsonKey(unknownEnumValue: R4ResourceType.Measure)
-  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
-  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  @HiveField(2)
   FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
-  @HiveField(4)
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  @HiveField(5)
   FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
-  @HiveField(6)
   Element? get languageElement => throw _privateConstructorUsedError;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -62,14 +55,12 @@ mixin _$Measure {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
-  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
 
   /// [contained] These resources do not have an independent existence apart
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
-  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -79,7 +70,6 @@ mixin _$Measure {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
-  @HiveField(9)
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [modifierExtension] May be used to represent additional information that
@@ -95,7 +85,6 @@ mixin _$Measure {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
@@ -106,17 +95,15 @@ mixin _$Measure {
   /// measure is (or will be) published. This URL can be the target of a
   /// canonical reference. It SHALL remain the same when the measure is stored
   ///  on different servers.
-  @HiveField(11)
   FhirUri? get url => throw _privateConstructorUsedError;
 
   /// [urlElement] Extensions for url
   @JsonKey(name: '_url')
-  @HiveField(12)
   Element? get urlElement => throw _privateConstructorUsedError;
 
   /// [identifier] A formal identifier that is used to identify this measure
-  @HiveField(13)
-  @HiveField(14)
+  /// when it is represented in other formats, or referenced in a specification,
+  ///  model, design or an instance.
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [version] The identifier that is used to identify this version of the
@@ -130,113 +117,92 @@ mixin _$Measure {
   /// information on versioning knowledge assets, refer to the Decision Support
   /// Service specification. Note that a version is required for
   ///  non-experimental active artifacts.
-  @HiveField(15)
   String? get version => throw _privateConstructorUsedError;
 
   /// [versionElement] Extensions for version
   @JsonKey(name: '_version')
-  @HiveField(16)
   Element? get versionElement => throw _privateConstructorUsedError;
 
   /// [name] A natural language name identifying the measure. This name should
   /// be usable as an identifier for the module by machine processing
   ///  applications such as code generation.
-  @HiveField(17)
   String? get name => throw _privateConstructorUsedError;
 
   /// [nameElement] Extensions for name
   @JsonKey(name: '_name')
-  @HiveField(18)
   Element? get nameElement => throw _privateConstructorUsedError;
 
   /// [title] A short, descriptive, user-friendly title for the measure.
-  @HiveField(19)
   String? get title => throw _privateConstructorUsedError;
 
   /// [titleElement] Extensions for title
   @JsonKey(name: '_title')
-  @HiveField(20)
   Element? get titleElement => throw _privateConstructorUsedError;
 
   /// [subtitle] An explanatory or alternate title for the measure giving
   ///  additional information about its content.
-  @HiveField(21)
   String? get subtitle => throw _privateConstructorUsedError;
 
   /// [subtitleElement] Extensions for subtitle
   @JsonKey(name: '_subtitle')
-  @HiveField(22)
   Element? get subtitleElement => throw _privateConstructorUsedError;
 
   /// [status] The status of this measure. Enables tracking the life-cycle of
   ///  the content.
-  @HiveField(23)
   FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
-  @HiveField(24)
   Element? get statusElement => throw _privateConstructorUsedError;
 
   /// [experimental] A Boolean value to indicate that this measure is authored
   /// for testing purposes (or education/evaluation/marketing) and is not
   ///  intended to be used for genuine usage.
-  @HiveField(25)
-  Boolean? get experimental => throw _privateConstructorUsedError;
+  FhirBoolean? get experimental => throw _privateConstructorUsedError;
 
   /// [experimentalElement] Extensions for experimental
   @JsonKey(name: '_experimental')
-  @HiveField(26)
   Element? get experimentalElement => throw _privateConstructorUsedError;
 
   /// [subjectCodeableConcept] The intended subjects for the measure. If this
   /// element is not provided, a Patient subject is assumed, but the subject of
   ///  the measure can be anything.
-  @HiveField(27)
   CodeableConcept? get subjectCodeableConcept =>
       throw _privateConstructorUsedError;
 
   /// [subjectReference] The intended subjects for the measure. If this element
   /// is not provided, a Patient subject is assumed, but the subject of the
   ///  measure can be anything.
-  @HiveField(28)
   Reference? get subjectReference => throw _privateConstructorUsedError;
 
   /// [date] The date  (and optionally time) when the measure was published.
   /// The date must change when the business version changes and it must change
   /// if the status code changes. In addition, it should change when the
   ///  substantive content of the measure changes.
-  @HiveField(29)
   FhirDateTime? get date => throw _privateConstructorUsedError;
 
   /// [dateElement] Extensions for date
   @JsonKey(name: '_date')
-  @HiveField(30)
   Element? get dateElement => throw _privateConstructorUsedError;
 
   /// [publisher] The name of the organization or individual that published the
   ///  measure.
-  @HiveField(31)
   String? get publisher => throw _privateConstructorUsedError;
 
   /// [publisherElement] Extensions for publisher
   @JsonKey(name: '_publisher')
-  @HiveField(32)
   Element? get publisherElement => throw _privateConstructorUsedError;
 
   /// [contact] Contact details to assist a user in finding and communicating
   ///  with the publisher.
-  @HiveField(33)
   List<ContactDetail>? get contact => throw _privateConstructorUsedError;
 
   /// [description] A free text natural language description of the measure
   ///  from a consumer's perspective.
-  @HiveField(34)
-  Markdown? get description => throw _privateConstructorUsedError;
+  FhirMarkdown? get description => throw _privateConstructorUsedError;
 
   /// [descriptionElement] Extensions for description
   @JsonKey(name: '_description')
-  @HiveField(35)
   Element? get descriptionElement => throw _privateConstructorUsedError;
 
   /// [useContext] The content was developed with a focus and intent of
@@ -244,169 +210,146 @@ mixin _$Measure {
   /// categories (gender, age, ...) or may be references to specific programs
   /// (insurance plans, studies, ...) and may be used to assist with indexing
   ///  and searching for appropriate measure instances.
-  @HiveField(36)
   List<UsageContext>? get useContext => throw _privateConstructorUsedError;
 
   /// [jurisdiction] A legal or geographic region in which the measure is
   ///  intended to be used.
-  @HiveField(37)
   List<CodeableConcept>? get jurisdiction => throw _privateConstructorUsedError;
 
   /// [purpose] Explanation of why this measure is needed and why it has been
   ///  designed as it has.
-  @HiveField(38)
-  Markdown? get purpose => throw _privateConstructorUsedError;
+  FhirMarkdown? get purpose => throw _privateConstructorUsedError;
 
   /// [purposeElement] Extensions for purpose
   @JsonKey(name: '_purpose')
-  @HiveField(39)
   Element? get purposeElement => throw _privateConstructorUsedError;
 
   /// [usage] A detailed description, from a clinical perspective, of how the
   ///  measure is used.
-  @HiveField(40)
   String? get usage => throw _privateConstructorUsedError;
 
   /// [usageElement] Extensions for usage
   @JsonKey(name: '_usage')
-  @HiveField(41)
   Element? get usageElement => throw _privateConstructorUsedError;
 
   /// [copyright] A copyright statement relating to the measure and/or its
   /// contents. Copyright statements are generally legal restrictions on the use
   ///  and publishing of the measure.
-  @HiveField(42)
-  Markdown? get copyright => throw _privateConstructorUsedError;
+  FhirMarkdown? get copyright => throw _privateConstructorUsedError;
 
   /// [copyrightElement] Extensions for copyright
   @JsonKey(name: '_copyright')
-  @HiveField(43)
   Element? get copyrightElement => throw _privateConstructorUsedError;
 
   /// [approvalDate] The date on which the resource content was approved by the
   /// publisher. Approval happens once when the content is officially approved
   ///  for usage.
-  @HiveField(44)
-  Date? get approvalDate => throw _privateConstructorUsedError;
+  FhirDate? get approvalDate => throw _privateConstructorUsedError;
 
   /// [approvalDateElement] Extensions for approvalDate
   @JsonKey(name: '_approvalDate')
-  @HiveField(45)
   Element? get approvalDateElement => throw _privateConstructorUsedError;
 
   /// [lastReviewDate] The date on which the resource content was last
   /// reviewed. Review happens periodically after approval but does not change
   ///  the original approval date.
-  @HiveField(46)
-  Date? get lastReviewDate => throw _privateConstructorUsedError;
+  FhirDate? get lastReviewDate => throw _privateConstructorUsedError;
 
   /// [lastReviewDateElement] Extensions for lastReviewDate
   @JsonKey(name: '_lastReviewDate')
-  @HiveField(47)
   Element? get lastReviewDateElement => throw _privateConstructorUsedError;
 
   /// [effectivePeriod] The period during which the measure content was or is
   ///  planned to be in active use.
-  @HiveField(48)
   Period? get effectivePeriod => throw _privateConstructorUsedError;
 
   /// [topic] Descriptive topics related to the content of the measure. Topics
   /// provide a high-level categorization grouping types of measures that can be
   ///  useful for filtering and searching.
-  @HiveField(49)
   List<CodeableConcept>? get topic => throw _privateConstructorUsedError;
 
   /// [author] An individiual or organization primarily involved in the
   ///  creation and maintenance of the content.
-  @HiveField(50)
   List<ContactDetail>? get author => throw _privateConstructorUsedError;
 
   /// [editor] An individual or organization primarily responsible for internal
   ///  coherence of the content.
-  @HiveField(51)
   List<ContactDetail>? get editor => throw _privateConstructorUsedError;
 
   /// [reviewer] An individual or organization primarily responsible for review
   ///  of some aspect of the content.
-  @HiveField(52)
   List<ContactDetail>? get reviewer => throw _privateConstructorUsedError;
 
   /// [endorser] An individual or organization responsible for officially
   ///  endorsing the content for use in some setting.
-  @HiveField(53)
   List<ContactDetail>? get endorser => throw _privateConstructorUsedError;
-  @HiveField(54)
-  @HiveField(55)
+
+  /// [relatedArtifact] Related artifacts such as additional documentation,
+  ///  justification, or bibliographic references.
   List<RelatedArtifact>? get relatedArtifact =>
       throw _privateConstructorUsedError;
 
   /// [library] A reference to a Library resource containing the formal logic
   ///  used by the measure.
   @JsonKey(name: 'library')
-  @HiveField(56)
   List<FhirCanonical>? get library_ => throw _privateConstructorUsedError;
 
   /// [disclaimer] Notices and disclaimers regarding the use of the measure or
   /// related to intellectual property (such as code systems) referenced by the
   ///  measure.
-  @HiveField(57)
-  Markdown? get disclaimer => throw _privateConstructorUsedError;
+  FhirMarkdown? get disclaimer => throw _privateConstructorUsedError;
 
   /// [disclaimerElement] Extensions for disclaimer
   @JsonKey(name: '_disclaimer')
-  @HiveField(58)
   Element? get disclaimerElement => throw _privateConstructorUsedError;
-  @HiveField(59)
-  @HiveField(60)
+
+  /// [scoring] Indicates how the calculation is performed for the measure,
+  /// including proportion, ratio, continuous-variable, and cohort. The value
+  /// set is extensible, allowing additional measure scoring types to be
+  ///  represented.
   CodeableConcept? get scoring => throw _privateConstructorUsedError;
 
   /// [compositeScoring] If this is a composite measure, the scoring method
   ///  used to combine the component measures to determine the composite score.
-  @HiveField(61)
   CodeableConcept? get compositeScoring => throw _privateConstructorUsedError;
 
   /// [type] Indicates whether the measure is used to examine a process, an
   /// outcome over time, a patient-reported outcome, or a structure measure such
   ///  as utilization.
-  @HiveField(62)
   List<CodeableConcept>? get type => throw _privateConstructorUsedError;
 
   /// [riskAdjustment] A description of the risk adjustment factors that may
   /// impact the resulting score for the measure and how they may be accounted
   ///  for when computing and reporting measure results.
-  @HiveField(63)
   String? get riskAdjustment => throw _privateConstructorUsedError;
 
   /// [riskAdjustmentElement] Extensions for riskAdjustment
   @JsonKey(name: '_riskAdjustment')
-  @HiveField(64)
   Element? get riskAdjustmentElement => throw _privateConstructorUsedError;
-  @HiveField(65)
-  @HiveField(66)
+
+  /// [rateAggregation] Describes how to combine the information calculated,
+  /// based on logic in each of several populations, into one summarized
+  ///  result.
   String? get rateAggregation => throw _privateConstructorUsedError;
 
   /// [rateAggregationElement] Extensions for rateAggregation
   @JsonKey(name: '_rateAggregation')
-  @HiveField(67)
   Element? get rateAggregationElement => throw _privateConstructorUsedError;
 
   /// [rationale] Provides a succinct statement of the need for the measure.
-  @HiveField(68)
-  @HiveField(69)
-  Markdown? get rationale => throw _privateConstructorUsedError;
+  /// Usually includes statements pertaining to importance criterion: impact,
+  ///  gap in care, and evidence.
+  FhirMarkdown? get rationale => throw _privateConstructorUsedError;
 
   /// [rationaleElement] Extensions for rationale
   @JsonKey(name: '_rationale')
-  @HiveField(70)
   Element? get rationaleElement => throw _privateConstructorUsedError;
 
   /// [clinicalRecommendationStatement] Provides a summary of relevant clinical
   ///  guidelines or other clinical recommendations supporting the measure.
-  @HiveField(71)
-  Markdown? get clinicalRecommendationStatement =>
+  FhirMarkdown? get clinicalRecommendationStatement =>
       throw _privateConstructorUsedError;
   @JsonKey(name: '_clinicalRecommendationStatement')
-  @HiveField(72)
   Element? get clinicalRecommendationStatementElement =>
       throw _privateConstructorUsedError;
 
@@ -414,35 +357,31 @@ mixin _$Measure {
   /// score is the preferred result (e.g., a higher score indicates better
   /// quality OR a lower score indicates better quality OR quality is within a
   ///  range).
-  @HiveField(73)
   CodeableConcept? get improvementNotation =>
       throw _privateConstructorUsedError;
 
   /// [definition] Provides a description of an individual term used within the
   ///  measure.
-  @HiveField(74)
   List<FhirMarkdown>? get definition => throw _privateConstructorUsedError;
 
   /// [definitionElement] Extensions for definition
   @JsonKey(name: '_definition')
-  @HiveField(75)
   List<Element?>? get definitionElement => throw _privateConstructorUsedError;
 
   /// [guidance] Additional guidance for the measure including how it can be
   ///  used in a clinical context, and the intent of the measure.
-  @HiveField(76)
-  Markdown? get guidance => throw _privateConstructorUsedError;
+  FhirMarkdown? get guidance => throw _privateConstructorUsedError;
 
   /// [guidanceElement] Extensions for guidance
   @JsonKey(name: '_guidance')
-  @HiveField(77)
   Element? get guidanceElement => throw _privateConstructorUsedError;
 
   /// [group] A group of population criteria for the measure.
-  @HiveField(78)
   List<MeasureGroup>? get group => throw _privateConstructorUsedError;
-  @HiveField(79)
-  @HiveField(80)
+
+  /// [supplementalData] The supplemental data criteria for the measure report,
+  /// specified as either the name of a valid CQL expression within a referenced
+  ///  library, or a valid FHIR Resource Path.
   List<MeasureSupplementalData>? get supplementalData =>
       throw _privateConstructorUsedError;
 
@@ -458,188 +397,107 @@ abstract class $MeasureCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Measure)
-      @HiveField(0)
           R4ResourceType resourceType,
-      @HiveField(1)
-          String? id,
-      @HiveField(2)
-          FhirMeta? meta,
-      @HiveField(3)
-          FhirUri? implicitRules,
+      String? id,
+      FhirMeta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           Element? implicitRulesElement,
-      @HiveField(5)
-          FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           Element? languageElement,
-      @HiveField(7)
-          Narrative? text,
-      @HiveField(8)
-          List<Resource>? contained,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           List<FhirExtension>? extension_,
-      @HiveField(10)
-          List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          FhirUri? url,
+      List<FhirExtension>? modifierExtension,
+      FhirUri? url,
       @JsonKey(name: '_url')
-      @HiveField(12)
           Element? urlElement,
-      @HiveField(13)
-      @HiveField(14)
-          List<Identifier>? identifier,
-      @HiveField(15)
-          String? version,
+      List<Identifier>? identifier,
+      String? version,
       @JsonKey(name: '_version')
-      @HiveField(16)
           Element? versionElement,
-      @HiveField(17)
-          String? name,
+      String? name,
       @JsonKey(name: '_name')
-      @HiveField(18)
           Element? nameElement,
-      @HiveField(19)
-          String? title,
+      String? title,
       @JsonKey(name: '_title')
-      @HiveField(20)
           Element? titleElement,
-      @HiveField(21)
-          String? subtitle,
+      String? subtitle,
       @JsonKey(name: '_subtitle')
-      @HiveField(22)
           Element? subtitleElement,
-      @HiveField(23)
-          FhirCode? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
-      @HiveField(24)
           Element? statusElement,
-      @HiveField(25)
-          Boolean? experimental,
+      FhirBoolean? experimental,
       @JsonKey(name: '_experimental')
-      @HiveField(26)
           Element? experimentalElement,
-      @HiveField(27)
-          CodeableConcept? subjectCodeableConcept,
-      @HiveField(28)
-          Reference? subjectReference,
-      @HiveField(29)
-          FhirDateTime? date,
+      CodeableConcept? subjectCodeableConcept,
+      Reference? subjectReference,
+      FhirDateTime? date,
       @JsonKey(name: '_date')
-      @HiveField(30)
           Element? dateElement,
-      @HiveField(31)
-          String? publisher,
+      String? publisher,
       @JsonKey(name: '_publisher')
-      @HiveField(32)
           Element? publisherElement,
-      @HiveField(33)
-          List<ContactDetail>? contact,
-      @HiveField(34)
-          Markdown? description,
+      List<ContactDetail>? contact,
+      FhirMarkdown? description,
       @JsonKey(name: '_description')
-      @HiveField(35)
           Element? descriptionElement,
-      @HiveField(36)
-          List<UsageContext>? useContext,
-      @HiveField(37)
-          List<CodeableConcept>? jurisdiction,
-      @HiveField(38)
-          Markdown? purpose,
+      List<UsageContext>? useContext,
+      List<CodeableConcept>? jurisdiction,
+      FhirMarkdown? purpose,
       @JsonKey(name: '_purpose')
-      @HiveField(39)
           Element? purposeElement,
-      @HiveField(40)
-          String? usage,
+      String? usage,
       @JsonKey(name: '_usage')
-      @HiveField(41)
           Element? usageElement,
-      @HiveField(42)
-          Markdown? copyright,
+      FhirMarkdown? copyright,
       @JsonKey(name: '_copyright')
-      @HiveField(43)
           Element? copyrightElement,
-      @HiveField(44)
-          Date? approvalDate,
+      FhirDate? approvalDate,
       @JsonKey(name: '_approvalDate')
-      @HiveField(45)
           Element? approvalDateElement,
-      @HiveField(46)
-          Date? lastReviewDate,
+      FhirDate? lastReviewDate,
       @JsonKey(name: '_lastReviewDate')
-      @HiveField(47)
           Element? lastReviewDateElement,
-      @HiveField(48)
-          Period? effectivePeriod,
-      @HiveField(49)
-          List<CodeableConcept>? topic,
-      @HiveField(50)
-          List<ContactDetail>? author,
-      @HiveField(51)
-          List<ContactDetail>? editor,
-      @HiveField(52)
-          List<ContactDetail>? reviewer,
-      @HiveField(53)
-          List<ContactDetail>? endorser,
-      @HiveField(54)
-      @HiveField(55)
-          List<RelatedArtifact>? relatedArtifact,
+      Period? effectivePeriod,
+      List<CodeableConcept>? topic,
+      List<ContactDetail>? author,
+      List<ContactDetail>? editor,
+      List<ContactDetail>? reviewer,
+      List<ContactDetail>? endorser,
+      List<RelatedArtifact>? relatedArtifact,
       @JsonKey(name: 'library')
-      @HiveField(56)
           List<FhirCanonical>? library_,
-      @HiveField(57)
-          Markdown? disclaimer,
+      FhirMarkdown? disclaimer,
       @JsonKey(name: '_disclaimer')
-      @HiveField(58)
           Element? disclaimerElement,
-      @HiveField(59)
-      @HiveField(60)
-          CodeableConcept? scoring,
-      @HiveField(61)
-          CodeableConcept? compositeScoring,
-      @HiveField(62)
-          List<CodeableConcept>? type,
-      @HiveField(63)
-          String? riskAdjustment,
+      CodeableConcept? scoring,
+      CodeableConcept? compositeScoring,
+      List<CodeableConcept>? type,
+      String? riskAdjustment,
       @JsonKey(name: '_riskAdjustment')
-      @HiveField(64)
           Element? riskAdjustmentElement,
-      @HiveField(65)
-      @HiveField(66)
-          String? rateAggregation,
+      String? rateAggregation,
       @JsonKey(name: '_rateAggregation')
-      @HiveField(67)
           Element? rateAggregationElement,
-      @HiveField(68)
-      @HiveField(69)
-          Markdown? rationale,
+      FhirMarkdown? rationale,
       @JsonKey(name: '_rationale')
-      @HiveField(70)
           Element? rationaleElement,
-      @HiveField(71)
-          Markdown? clinicalRecommendationStatement,
+      FhirMarkdown? clinicalRecommendationStatement,
       @JsonKey(name: '_clinicalRecommendationStatement')
-      @HiveField(72)
           Element? clinicalRecommendationStatementElement,
-      @HiveField(73)
-          CodeableConcept? improvementNotation,
-      @HiveField(74)
-          List<FhirMarkdown>? definition,
+      CodeableConcept? improvementNotation,
+      List<FhirMarkdown>? definition,
       @JsonKey(name: '_definition')
-      @HiveField(75)
           List<Element?>? definitionElement,
-      @HiveField(76)
-          Markdown? guidance,
+      FhirMarkdown? guidance,
       @JsonKey(name: '_guidance')
-      @HiveField(77)
           Element? guidanceElement,
-      @HiveField(78)
-          List<MeasureGroup>? group,
-      @HiveField(79)
-      @HiveField(80)
-          List<MeasureSupplementalData>? supplementalData});
+      List<MeasureGroup>? group,
+      List<MeasureSupplementalData>? supplementalData});
 
   $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -787,7 +645,7 @@ class _$MeasureCopyWithImpl<$Res, $Val extends Measure>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -855,7 +713,7 @@ class _$MeasureCopyWithImpl<$Res, $Val extends Measure>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -863,7 +721,7 @@ class _$MeasureCopyWithImpl<$Res, $Val extends Measure>
       experimental: freezed == experimental
           ? _value.experimental
           : experimental // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       experimentalElement: freezed == experimentalElement
           ? _value.experimentalElement
           : experimentalElement // ignore: cast_nullable_to_non_nullable
@@ -899,7 +757,7 @@ class _$MeasureCopyWithImpl<$Res, $Val extends Measure>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -915,7 +773,7 @@ class _$MeasureCopyWithImpl<$Res, $Val extends Measure>
       purpose: freezed == purpose
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       purposeElement: freezed == purposeElement
           ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -931,7 +789,7 @@ class _$MeasureCopyWithImpl<$Res, $Val extends Measure>
       copyright: freezed == copyright
           ? _value.copyright
           : copyright // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       copyrightElement: freezed == copyrightElement
           ? _value.copyrightElement
           : copyrightElement // ignore: cast_nullable_to_non_nullable
@@ -939,7 +797,7 @@ class _$MeasureCopyWithImpl<$Res, $Val extends Measure>
       approvalDate: freezed == approvalDate
           ? _value.approvalDate
           : approvalDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       approvalDateElement: freezed == approvalDateElement
           ? _value.approvalDateElement
           : approvalDateElement // ignore: cast_nullable_to_non_nullable
@@ -947,7 +805,7 @@ class _$MeasureCopyWithImpl<$Res, $Val extends Measure>
       lastReviewDate: freezed == lastReviewDate
           ? _value.lastReviewDate
           : lastReviewDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       lastReviewDateElement: freezed == lastReviewDateElement
           ? _value.lastReviewDateElement
           : lastReviewDateElement // ignore: cast_nullable_to_non_nullable
@@ -987,7 +845,7 @@ class _$MeasureCopyWithImpl<$Res, $Val extends Measure>
       disclaimer: freezed == disclaimer
           ? _value.disclaimer
           : disclaimer // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       disclaimerElement: freezed == disclaimerElement
           ? _value.disclaimerElement
           : disclaimerElement // ignore: cast_nullable_to_non_nullable
@@ -1023,7 +881,7 @@ class _$MeasureCopyWithImpl<$Res, $Val extends Measure>
       rationale: freezed == rationale
           ? _value.rationale
           : rationale // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       rationaleElement: freezed == rationaleElement
           ? _value.rationaleElement
           : rationaleElement // ignore: cast_nullable_to_non_nullable
@@ -1032,7 +890,7 @@ class _$MeasureCopyWithImpl<$Res, $Val extends Measure>
               clinicalRecommendationStatement
           ? _value.clinicalRecommendationStatement
           : clinicalRecommendationStatement // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       clinicalRecommendationStatementElement: freezed ==
               clinicalRecommendationStatementElement
           ? _value.clinicalRecommendationStatementElement
@@ -1053,7 +911,7 @@ class _$MeasureCopyWithImpl<$Res, $Val extends Measure>
       guidance: freezed == guidance
           ? _value.guidance
           : guidance // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       guidanceElement: freezed == guidanceElement
           ? _value.guidanceElement
           : guidanceElement // ignore: cast_nullable_to_non_nullable
@@ -1454,188 +1312,107 @@ abstract class _$$_MeasureCopyWith<$Res> implements $MeasureCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Measure)
-      @HiveField(0)
           R4ResourceType resourceType,
-      @HiveField(1)
-          String? id,
-      @HiveField(2)
-          FhirMeta? meta,
-      @HiveField(3)
-          FhirUri? implicitRules,
+      String? id,
+      FhirMeta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           Element? implicitRulesElement,
-      @HiveField(5)
-          FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           Element? languageElement,
-      @HiveField(7)
-          Narrative? text,
-      @HiveField(8)
-          List<Resource>? contained,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           List<FhirExtension>? extension_,
-      @HiveField(10)
-          List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          FhirUri? url,
+      List<FhirExtension>? modifierExtension,
+      FhirUri? url,
       @JsonKey(name: '_url')
-      @HiveField(12)
           Element? urlElement,
-      @HiveField(13)
-      @HiveField(14)
-          List<Identifier>? identifier,
-      @HiveField(15)
-          String? version,
+      List<Identifier>? identifier,
+      String? version,
       @JsonKey(name: '_version')
-      @HiveField(16)
           Element? versionElement,
-      @HiveField(17)
-          String? name,
+      String? name,
       @JsonKey(name: '_name')
-      @HiveField(18)
           Element? nameElement,
-      @HiveField(19)
-          String? title,
+      String? title,
       @JsonKey(name: '_title')
-      @HiveField(20)
           Element? titleElement,
-      @HiveField(21)
-          String? subtitle,
+      String? subtitle,
       @JsonKey(name: '_subtitle')
-      @HiveField(22)
           Element? subtitleElement,
-      @HiveField(23)
-          FhirCode? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
-      @HiveField(24)
           Element? statusElement,
-      @HiveField(25)
-          Boolean? experimental,
+      FhirBoolean? experimental,
       @JsonKey(name: '_experimental')
-      @HiveField(26)
           Element? experimentalElement,
-      @HiveField(27)
-          CodeableConcept? subjectCodeableConcept,
-      @HiveField(28)
-          Reference? subjectReference,
-      @HiveField(29)
-          FhirDateTime? date,
+      CodeableConcept? subjectCodeableConcept,
+      Reference? subjectReference,
+      FhirDateTime? date,
       @JsonKey(name: '_date')
-      @HiveField(30)
           Element? dateElement,
-      @HiveField(31)
-          String? publisher,
+      String? publisher,
       @JsonKey(name: '_publisher')
-      @HiveField(32)
           Element? publisherElement,
-      @HiveField(33)
-          List<ContactDetail>? contact,
-      @HiveField(34)
-          Markdown? description,
+      List<ContactDetail>? contact,
+      FhirMarkdown? description,
       @JsonKey(name: '_description')
-      @HiveField(35)
           Element? descriptionElement,
-      @HiveField(36)
-          List<UsageContext>? useContext,
-      @HiveField(37)
-          List<CodeableConcept>? jurisdiction,
-      @HiveField(38)
-          Markdown? purpose,
+      List<UsageContext>? useContext,
+      List<CodeableConcept>? jurisdiction,
+      FhirMarkdown? purpose,
       @JsonKey(name: '_purpose')
-      @HiveField(39)
           Element? purposeElement,
-      @HiveField(40)
-          String? usage,
+      String? usage,
       @JsonKey(name: '_usage')
-      @HiveField(41)
           Element? usageElement,
-      @HiveField(42)
-          Markdown? copyright,
+      FhirMarkdown? copyright,
       @JsonKey(name: '_copyright')
-      @HiveField(43)
           Element? copyrightElement,
-      @HiveField(44)
-          Date? approvalDate,
+      FhirDate? approvalDate,
       @JsonKey(name: '_approvalDate')
-      @HiveField(45)
           Element? approvalDateElement,
-      @HiveField(46)
-          Date? lastReviewDate,
+      FhirDate? lastReviewDate,
       @JsonKey(name: '_lastReviewDate')
-      @HiveField(47)
           Element? lastReviewDateElement,
-      @HiveField(48)
-          Period? effectivePeriod,
-      @HiveField(49)
-          List<CodeableConcept>? topic,
-      @HiveField(50)
-          List<ContactDetail>? author,
-      @HiveField(51)
-          List<ContactDetail>? editor,
-      @HiveField(52)
-          List<ContactDetail>? reviewer,
-      @HiveField(53)
-          List<ContactDetail>? endorser,
-      @HiveField(54)
-      @HiveField(55)
-          List<RelatedArtifact>? relatedArtifact,
+      Period? effectivePeriod,
+      List<CodeableConcept>? topic,
+      List<ContactDetail>? author,
+      List<ContactDetail>? editor,
+      List<ContactDetail>? reviewer,
+      List<ContactDetail>? endorser,
+      List<RelatedArtifact>? relatedArtifact,
       @JsonKey(name: 'library')
-      @HiveField(56)
           List<FhirCanonical>? library_,
-      @HiveField(57)
-          Markdown? disclaimer,
+      FhirMarkdown? disclaimer,
       @JsonKey(name: '_disclaimer')
-      @HiveField(58)
           Element? disclaimerElement,
-      @HiveField(59)
-      @HiveField(60)
-          CodeableConcept? scoring,
-      @HiveField(61)
-          CodeableConcept? compositeScoring,
-      @HiveField(62)
-          List<CodeableConcept>? type,
-      @HiveField(63)
-          String? riskAdjustment,
+      CodeableConcept? scoring,
+      CodeableConcept? compositeScoring,
+      List<CodeableConcept>? type,
+      String? riskAdjustment,
       @JsonKey(name: '_riskAdjustment')
-      @HiveField(64)
           Element? riskAdjustmentElement,
-      @HiveField(65)
-      @HiveField(66)
-          String? rateAggregation,
+      String? rateAggregation,
       @JsonKey(name: '_rateAggregation')
-      @HiveField(67)
           Element? rateAggregationElement,
-      @HiveField(68)
-      @HiveField(69)
-          Markdown? rationale,
+      FhirMarkdown? rationale,
       @JsonKey(name: '_rationale')
-      @HiveField(70)
           Element? rationaleElement,
-      @HiveField(71)
-          Markdown? clinicalRecommendationStatement,
+      FhirMarkdown? clinicalRecommendationStatement,
       @JsonKey(name: '_clinicalRecommendationStatement')
-      @HiveField(72)
           Element? clinicalRecommendationStatementElement,
-      @HiveField(73)
-          CodeableConcept? improvementNotation,
-      @HiveField(74)
-          List<FhirMarkdown>? definition,
+      CodeableConcept? improvementNotation,
+      List<FhirMarkdown>? definition,
       @JsonKey(name: '_definition')
-      @HiveField(75)
           List<Element?>? definitionElement,
-      @HiveField(76)
-          Markdown? guidance,
+      FhirMarkdown? guidance,
       @JsonKey(name: '_guidance')
-      @HiveField(77)
           Element? guidanceElement,
-      @HiveField(78)
-          List<MeasureGroup>? group,
-      @HiveField(79)
-      @HiveField(80)
-          List<MeasureSupplementalData>? supplementalData});
+      List<MeasureGroup>? group,
+      List<MeasureSupplementalData>? supplementalData});
 
   @override
   $FhirMetaCopyWith<$Res>? get meta;
@@ -1811,7 +1588,7 @@ class __$$_MeasureCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -1879,7 +1656,7 @@ class __$$_MeasureCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -1887,7 +1664,7 @@ class __$$_MeasureCopyWithImpl<$Res>
       experimental: freezed == experimental
           ? _value.experimental
           : experimental // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       experimentalElement: freezed == experimentalElement
           ? _value.experimentalElement
           : experimentalElement // ignore: cast_nullable_to_non_nullable
@@ -1923,7 +1700,7 @@ class __$$_MeasureCopyWithImpl<$Res>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -1939,7 +1716,7 @@ class __$$_MeasureCopyWithImpl<$Res>
       purpose: freezed == purpose
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       purposeElement: freezed == purposeElement
           ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -1955,7 +1732,7 @@ class __$$_MeasureCopyWithImpl<$Res>
       copyright: freezed == copyright
           ? _value.copyright
           : copyright // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       copyrightElement: freezed == copyrightElement
           ? _value.copyrightElement
           : copyrightElement // ignore: cast_nullable_to_non_nullable
@@ -1963,7 +1740,7 @@ class __$$_MeasureCopyWithImpl<$Res>
       approvalDate: freezed == approvalDate
           ? _value.approvalDate
           : approvalDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       approvalDateElement: freezed == approvalDateElement
           ? _value.approvalDateElement
           : approvalDateElement // ignore: cast_nullable_to_non_nullable
@@ -1971,7 +1748,7 @@ class __$$_MeasureCopyWithImpl<$Res>
       lastReviewDate: freezed == lastReviewDate
           ? _value.lastReviewDate
           : lastReviewDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       lastReviewDateElement: freezed == lastReviewDateElement
           ? _value.lastReviewDateElement
           : lastReviewDateElement // ignore: cast_nullable_to_non_nullable
@@ -2011,7 +1788,7 @@ class __$$_MeasureCopyWithImpl<$Res>
       disclaimer: freezed == disclaimer
           ? _value.disclaimer
           : disclaimer // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       disclaimerElement: freezed == disclaimerElement
           ? _value.disclaimerElement
           : disclaimerElement // ignore: cast_nullable_to_non_nullable
@@ -2047,7 +1824,7 @@ class __$$_MeasureCopyWithImpl<$Res>
       rationale: freezed == rationale
           ? _value.rationale
           : rationale // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       rationaleElement: freezed == rationaleElement
           ? _value.rationaleElement
           : rationaleElement // ignore: cast_nullable_to_non_nullable
@@ -2056,7 +1833,7 @@ class __$$_MeasureCopyWithImpl<$Res>
               clinicalRecommendationStatement
           ? _value.clinicalRecommendationStatement
           : clinicalRecommendationStatement // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       clinicalRecommendationStatementElement: freezed ==
               clinicalRecommendationStatementElement
           ? _value.clinicalRecommendationStatementElement
@@ -2077,7 +1854,7 @@ class __$$_MeasureCopyWithImpl<$Res>
       guidance: freezed == guidance
           ? _value.guidance
           : guidance // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       guidanceElement: freezed == guidanceElement
           ? _value.guidanceElement
           : guidanceElement // ignore: cast_nullable_to_non_nullable
@@ -2096,192 +1873,110 @@ class __$$_MeasureCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@HiveType(typeId: 79)
 class _$_Measure extends _Measure {
   _$_Measure(
       {@JsonKey(unknownEnumValue: R4ResourceType.Measure)
-      @HiveField(0)
           this.resourceType = R4ResourceType.Measure,
-      @HiveField(1)
-          this.id,
-      @HiveField(2)
-          this.meta,
-      @HiveField(3)
-          this.implicitRules,
+      this.id,
+      this.meta,
+      this.implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           this.implicitRulesElement,
-      @HiveField(5)
-          this.language,
+      this.language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           this.languageElement,
-      @HiveField(7)
-          this.text,
-      @HiveField(8)
-          final List<Resource>? contained,
+      this.text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           final List<FhirExtension>? extension_,
-      @HiveField(10)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          this.url,
+      final List<FhirExtension>? modifierExtension,
+      this.url,
       @JsonKey(name: '_url')
-      @HiveField(12)
           this.urlElement,
-      @HiveField(13)
-      @HiveField(14)
-          final List<Identifier>? identifier,
-      @HiveField(15)
-          this.version,
+      final List<Identifier>? identifier,
+      this.version,
       @JsonKey(name: '_version')
-      @HiveField(16)
           this.versionElement,
-      @HiveField(17)
-          this.name,
+      this.name,
       @JsonKey(name: '_name')
-      @HiveField(18)
           this.nameElement,
-      @HiveField(19)
-          this.title,
+      this.title,
       @JsonKey(name: '_title')
-      @HiveField(20)
           this.titleElement,
-      @HiveField(21)
-          this.subtitle,
+      this.subtitle,
       @JsonKey(name: '_subtitle')
-      @HiveField(22)
           this.subtitleElement,
-      @HiveField(23)
-          this.status,
+      this.status,
       @JsonKey(name: '_status')
-      @HiveField(24)
           this.statusElement,
-      @HiveField(25)
-          this.experimental,
+      this.experimental,
       @JsonKey(name: '_experimental')
-      @HiveField(26)
           this.experimentalElement,
-      @HiveField(27)
-          this.subjectCodeableConcept,
-      @HiveField(28)
-          this.subjectReference,
-      @HiveField(29)
-          this.date,
+      this.subjectCodeableConcept,
+      this.subjectReference,
+      this.date,
       @JsonKey(name: '_date')
-      @HiveField(30)
           this.dateElement,
-      @HiveField(31)
-          this.publisher,
+      this.publisher,
       @JsonKey(name: '_publisher')
-      @HiveField(32)
           this.publisherElement,
-      @HiveField(33)
-          final List<ContactDetail>? contact,
-      @HiveField(34)
-          this.description,
+      final List<ContactDetail>? contact,
+      this.description,
       @JsonKey(name: '_description')
-      @HiveField(35)
           this.descriptionElement,
-      @HiveField(36)
-          final List<UsageContext>? useContext,
-      @HiveField(37)
-          final List<CodeableConcept>? jurisdiction,
-      @HiveField(38)
-          this.purpose,
+      final List<UsageContext>? useContext,
+      final List<CodeableConcept>? jurisdiction,
+      this.purpose,
       @JsonKey(name: '_purpose')
-      @HiveField(39)
           this.purposeElement,
-      @HiveField(40)
-          this.usage,
+      this.usage,
       @JsonKey(name: '_usage')
-      @HiveField(41)
           this.usageElement,
-      @HiveField(42)
-          this.copyright,
+      this.copyright,
       @JsonKey(name: '_copyright')
-      @HiveField(43)
           this.copyrightElement,
-      @HiveField(44)
-          this.approvalDate,
+      this.approvalDate,
       @JsonKey(name: '_approvalDate')
-      @HiveField(45)
           this.approvalDateElement,
-      @HiveField(46)
-          this.lastReviewDate,
+      this.lastReviewDate,
       @JsonKey(name: '_lastReviewDate')
-      @HiveField(47)
           this.lastReviewDateElement,
-      @HiveField(48)
-          this.effectivePeriod,
-      @HiveField(49)
-          final List<CodeableConcept>? topic,
-      @HiveField(50)
-          final List<ContactDetail>? author,
-      @HiveField(51)
-          final List<ContactDetail>? editor,
-      @HiveField(52)
-          final List<ContactDetail>? reviewer,
-      @HiveField(53)
-          final List<ContactDetail>? endorser,
-      @HiveField(54)
-      @HiveField(55)
-          final List<RelatedArtifact>? relatedArtifact,
+      this.effectivePeriod,
+      final List<CodeableConcept>? topic,
+      final List<ContactDetail>? author,
+      final List<ContactDetail>? editor,
+      final List<ContactDetail>? reviewer,
+      final List<ContactDetail>? endorser,
+      final List<RelatedArtifact>? relatedArtifact,
       @JsonKey(name: 'library')
-      @HiveField(56)
           final List<FhirCanonical>? library_,
-      @HiveField(57)
-          this.disclaimer,
+      this.disclaimer,
       @JsonKey(name: '_disclaimer')
-      @HiveField(58)
           this.disclaimerElement,
-      @HiveField(59)
-      @HiveField(60)
-          this.scoring,
-      @HiveField(61)
-          this.compositeScoring,
-      @HiveField(62)
-          final List<CodeableConcept>? type,
-      @HiveField(63)
-          this.riskAdjustment,
+      this.scoring,
+      this.compositeScoring,
+      final List<CodeableConcept>? type,
+      this.riskAdjustment,
       @JsonKey(name: '_riskAdjustment')
-      @HiveField(64)
           this.riskAdjustmentElement,
-      @HiveField(65)
-      @HiveField(66)
-          this.rateAggregation,
+      this.rateAggregation,
       @JsonKey(name: '_rateAggregation')
-      @HiveField(67)
           this.rateAggregationElement,
-      @HiveField(68)
-      @HiveField(69)
-          this.rationale,
+      this.rationale,
       @JsonKey(name: '_rationale')
-      @HiveField(70)
           this.rationaleElement,
-      @HiveField(71)
-          this.clinicalRecommendationStatement,
+      this.clinicalRecommendationStatement,
       @JsonKey(name: '_clinicalRecommendationStatement')
-      @HiveField(72)
           this.clinicalRecommendationStatementElement,
-      @HiveField(73)
-          this.improvementNotation,
-      @HiveField(74)
-          final List<FhirMarkdown>? definition,
+      this.improvementNotation,
+      final List<FhirMarkdown>? definition,
       @JsonKey(name: '_definition')
-      @HiveField(75)
           final List<Element?>? definitionElement,
-      @HiveField(76)
-          this.guidance,
+      this.guidance,
       @JsonKey(name: '_guidance')
-      @HiveField(77)
           this.guidanceElement,
-      @HiveField(78)
-          final List<MeasureGroup>? group,
-      @HiveField(79)
-      @HiveField(80)
-          final List<MeasureSupplementalData>? supplementalData})
+      final List<MeasureGroup>? group,
+      final List<MeasureSupplementalData>? supplementalData})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -2308,20 +2003,17 @@ class _$_Measure extends _Measure {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Measure)
-  @HiveField(0)
   final R4ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
   @override
-  @HiveField(1)
   final String? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
-  @HiveField(2)
   final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -2329,24 +2021,20 @@ class _$_Measure extends _Measure {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   @override
-  @HiveField(3)
   final FhirUri? implicitRules;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
-  @HiveField(4)
   final Element? implicitRulesElement;
 
   /// [language] The base language in which the resource is written.
   @override
-  @HiveField(5)
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] Extensions for language
   @override
   @JsonKey(name: '_language')
-  @HiveField(6)
   final Element? languageElement;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -2356,7 +2044,6 @@ class _$_Measure extends _Measure {
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
   @override
-  @HiveField(7)
   final Narrative? text;
 
   /// [contained] These resources do not have an independent existence apart
@@ -2370,7 +2057,6 @@ class _$_Measure extends _Measure {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   @override
-  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -2395,7 +2081,6 @@ class _$_Measure extends _Measure {
   ///  as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
-  @HiveField(9)
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
@@ -2433,7 +2118,6 @@ class _$_Measure extends _Measure {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   @override
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -2451,22 +2135,22 @@ class _$_Measure extends _Measure {
   /// canonical reference. It SHALL remain the same when the measure is stored
   ///  on different servers.
   @override
-  @HiveField(11)
   final FhirUri? url;
 
   /// [urlElement] Extensions for url
   @override
   @JsonKey(name: '_url')
-  @HiveField(12)
   final Element? urlElement;
 
   /// [identifier] A formal identifier that is used to identify this measure
+  /// when it is represented in other formats, or referenced in a specification,
+  ///  model, design or an instance.
   final List<Identifier>? _identifier;
 
   /// [identifier] A formal identifier that is used to identify this measure
+  /// when it is represented in other formats, or referenced in a specification,
+  ///  model, design or an instance.
   @override
-  @HiveField(13)
-  @HiveField(14)
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
@@ -2487,88 +2171,74 @@ class _$_Measure extends _Measure {
   /// Service specification. Note that a version is required for
   ///  non-experimental active artifacts.
   @override
-  @HiveField(15)
   final String? version;
 
   /// [versionElement] Extensions for version
   @override
   @JsonKey(name: '_version')
-  @HiveField(16)
   final Element? versionElement;
 
   /// [name] A natural language name identifying the measure. This name should
   /// be usable as an identifier for the module by machine processing
   ///  applications such as code generation.
   @override
-  @HiveField(17)
   final String? name;
 
   /// [nameElement] Extensions for name
   @override
   @JsonKey(name: '_name')
-  @HiveField(18)
   final Element? nameElement;
 
   /// [title] A short, descriptive, user-friendly title for the measure.
   @override
-  @HiveField(19)
   final String? title;
 
   /// [titleElement] Extensions for title
   @override
   @JsonKey(name: '_title')
-  @HiveField(20)
   final Element? titleElement;
 
   /// [subtitle] An explanatory or alternate title for the measure giving
   ///  additional information about its content.
   @override
-  @HiveField(21)
   final String? subtitle;
 
   /// [subtitleElement] Extensions for subtitle
   @override
   @JsonKey(name: '_subtitle')
-  @HiveField(22)
   final Element? subtitleElement;
 
   /// [status] The status of this measure. Enables tracking the life-cycle of
   ///  the content.
   @override
-  @HiveField(23)
-  final Code? status;
+  final FhirCode? status;
 
   /// [statusElement] Extensions for status
   @override
   @JsonKey(name: '_status')
-  @HiveField(24)
   final Element? statusElement;
 
   /// [experimental] A Boolean value to indicate that this measure is authored
   /// for testing purposes (or education/evaluation/marketing) and is not
   ///  intended to be used for genuine usage.
   @override
-  @HiveField(25)
-  final Boolean? experimental;
+  final FhirBoolean? experimental;
 
   /// [experimentalElement] Extensions for experimental
   @override
   @JsonKey(name: '_experimental')
-  @HiveField(26)
   final Element? experimentalElement;
 
   /// [subjectCodeableConcept] The intended subjects for the measure. If this
   /// element is not provided, a Patient subject is assumed, but the subject of
   ///  the measure can be anything.
   @override
-  @HiveField(27)
   final CodeableConcept? subjectCodeableConcept;
 
   /// [subjectReference] The intended subjects for the measure. If this element
   /// is not provided, a Patient subject is assumed, but the subject of the
   ///  measure can be anything.
   @override
-  @HiveField(28)
   final Reference? subjectReference;
 
   /// [date] The date  (and optionally time) when the measure was published.
@@ -2576,25 +2246,21 @@ class _$_Measure extends _Measure {
   /// if the status code changes. In addition, it should change when the
   ///  substantive content of the measure changes.
   @override
-  @HiveField(29)
   final FhirDateTime? date;
 
   /// [dateElement] Extensions for date
   @override
   @JsonKey(name: '_date')
-  @HiveField(30)
   final Element? dateElement;
 
   /// [publisher] The name of the organization or individual that published the
   ///  measure.
   @override
-  @HiveField(31)
   final String? publisher;
 
   /// [publisherElement] Extensions for publisher
   @override
   @JsonKey(name: '_publisher')
-  @HiveField(32)
   final Element? publisherElement;
 
   /// [contact] Contact details to assist a user in finding and communicating
@@ -2604,7 +2270,6 @@ class _$_Measure extends _Measure {
   /// [contact] Contact details to assist a user in finding and communicating
   ///  with the publisher.
   @override
-  @HiveField(33)
   List<ContactDetail>? get contact {
     final value = _contact;
     if (value == null) return null;
@@ -2616,13 +2281,11 @@ class _$_Measure extends _Measure {
   /// [description] A free text natural language description of the measure
   ///  from a consumer's perspective.
   @override
-  @HiveField(34)
-  final Markdown? description;
+  final FhirMarkdown? description;
 
   /// [descriptionElement] Extensions for description
   @override
   @JsonKey(name: '_description')
-  @HiveField(35)
   final Element? descriptionElement;
 
   /// [useContext] The content was developed with a focus and intent of
@@ -2638,7 +2301,6 @@ class _$_Measure extends _Measure {
   /// (insurance plans, studies, ...) and may be used to assist with indexing
   ///  and searching for appropriate measure instances.
   @override
-  @HiveField(36)
   List<UsageContext>? get useContext {
     final value = _useContext;
     if (value == null) return null;
@@ -2654,7 +2316,6 @@ class _$_Measure extends _Measure {
   /// [jurisdiction] A legal or geographic region in which the measure is
   ///  intended to be used.
   @override
-  @HiveField(37)
   List<CodeableConcept>? get jurisdiction {
     final value = _jurisdiction;
     if (value == null) return null;
@@ -2666,70 +2327,59 @@ class _$_Measure extends _Measure {
   /// [purpose] Explanation of why this measure is needed and why it has been
   ///  designed as it has.
   @override
-  @HiveField(38)
-  final Markdown? purpose;
+  final FhirMarkdown? purpose;
 
   /// [purposeElement] Extensions for purpose
   @override
   @JsonKey(name: '_purpose')
-  @HiveField(39)
   final Element? purposeElement;
 
   /// [usage] A detailed description, from a clinical perspective, of how the
   ///  measure is used.
   @override
-  @HiveField(40)
   final String? usage;
 
   /// [usageElement] Extensions for usage
   @override
   @JsonKey(name: '_usage')
-  @HiveField(41)
   final Element? usageElement;
 
   /// [copyright] A copyright statement relating to the measure and/or its
   /// contents. Copyright statements are generally legal restrictions on the use
   ///  and publishing of the measure.
   @override
-  @HiveField(42)
-  final Markdown? copyright;
+  final FhirMarkdown? copyright;
 
   /// [copyrightElement] Extensions for copyright
   @override
   @JsonKey(name: '_copyright')
-  @HiveField(43)
   final Element? copyrightElement;
 
   /// [approvalDate] The date on which the resource content was approved by the
   /// publisher. Approval happens once when the content is officially approved
   ///  for usage.
   @override
-  @HiveField(44)
-  final Date? approvalDate;
+  final FhirDate? approvalDate;
 
   /// [approvalDateElement] Extensions for approvalDate
   @override
   @JsonKey(name: '_approvalDate')
-  @HiveField(45)
   final Element? approvalDateElement;
 
   /// [lastReviewDate] The date on which the resource content was last
   /// reviewed. Review happens periodically after approval but does not change
   ///  the original approval date.
   @override
-  @HiveField(46)
-  final Date? lastReviewDate;
+  final FhirDate? lastReviewDate;
 
   /// [lastReviewDateElement] Extensions for lastReviewDate
   @override
   @JsonKey(name: '_lastReviewDate')
-  @HiveField(47)
   final Element? lastReviewDateElement;
 
   /// [effectivePeriod] The period during which the measure content was or is
   ///  planned to be in active use.
   @override
-  @HiveField(48)
   final Period? effectivePeriod;
 
   /// [topic] Descriptive topics related to the content of the measure. Topics
@@ -2741,7 +2391,6 @@ class _$_Measure extends _Measure {
   /// provide a high-level categorization grouping types of measures that can be
   ///  useful for filtering and searching.
   @override
-  @HiveField(49)
   List<CodeableConcept>? get topic {
     final value = _topic;
     if (value == null) return null;
@@ -2757,7 +2406,6 @@ class _$_Measure extends _Measure {
   /// [author] An individiual or organization primarily involved in the
   ///  creation and maintenance of the content.
   @override
-  @HiveField(50)
   List<ContactDetail>? get author {
     final value = _author;
     if (value == null) return null;
@@ -2773,7 +2421,6 @@ class _$_Measure extends _Measure {
   /// [editor] An individual or organization primarily responsible for internal
   ///  coherence of the content.
   @override
-  @HiveField(51)
   List<ContactDetail>? get editor {
     final value = _editor;
     if (value == null) return null;
@@ -2789,7 +2436,6 @@ class _$_Measure extends _Measure {
   /// [reviewer] An individual or organization primarily responsible for review
   ///  of some aspect of the content.
   @override
-  @HiveField(52)
   List<ContactDetail>? get reviewer {
     final value = _reviewer;
     if (value == null) return null;
@@ -2805,7 +2451,6 @@ class _$_Measure extends _Measure {
   /// [endorser] An individual or organization responsible for officially
   ///  endorsing the content for use in some setting.
   @override
-  @HiveField(53)
   List<ContactDetail>? get endorser {
     final value = _endorser;
     if (value == null) return null;
@@ -2814,10 +2459,13 @@ class _$_Measure extends _Measure {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [relatedArtifact] Related artifacts such as additional documentation,
+  ///  justification, or bibliographic references.
   final List<RelatedArtifact>? _relatedArtifact;
+
+  /// [relatedArtifact] Related artifacts such as additional documentation,
+  ///  justification, or bibliographic references.
   @override
-  @HiveField(54)
-  @HiveField(55)
   List<RelatedArtifact>? get relatedArtifact {
     final value = _relatedArtifact;
     if (value == null) return null;
@@ -2834,7 +2482,6 @@ class _$_Measure extends _Measure {
   ///  used by the measure.
   @override
   @JsonKey(name: 'library')
-  @HiveField(56)
   List<FhirCanonical>? get library_ {
     final value = _library_;
     if (value == null) return null;
@@ -2847,23 +2494,23 @@ class _$_Measure extends _Measure {
   /// related to intellectual property (such as code systems) referenced by the
   ///  measure.
   @override
-  @HiveField(57)
-  final Markdown? disclaimer;
+  final FhirMarkdown? disclaimer;
 
   /// [disclaimerElement] Extensions for disclaimer
   @override
   @JsonKey(name: '_disclaimer')
-  @HiveField(58)
   final Element? disclaimerElement;
+
+  /// [scoring] Indicates how the calculation is performed for the measure,
+  /// including proportion, ratio, continuous-variable, and cohort. The value
+  /// set is extensible, allowing additional measure scoring types to be
+  ///  represented.
   @override
-  @HiveField(59)
-  @HiveField(60)
   final CodeableConcept? scoring;
 
   /// [compositeScoring] If this is a composite measure, the scoring method
   ///  used to combine the component measures to determine the composite score.
   @override
-  @HiveField(61)
   final CodeableConcept? compositeScoring;
 
   /// [type] Indicates whether the measure is used to examine a process, an
@@ -2875,7 +2522,6 @@ class _$_Measure extends _Measure {
   /// outcome over time, a patient-reported outcome, or a structure measure such
   ///  as utilization.
   @override
-  @HiveField(62)
   List<CodeableConcept>? get type {
     final value = _type;
     if (value == null) return null;
@@ -2888,45 +2534,41 @@ class _$_Measure extends _Measure {
   /// impact the resulting score for the measure and how they may be accounted
   ///  for when computing and reporting measure results.
   @override
-  @HiveField(63)
   final String? riskAdjustment;
 
   /// [riskAdjustmentElement] Extensions for riskAdjustment
   @override
   @JsonKey(name: '_riskAdjustment')
-  @HiveField(64)
   final Element? riskAdjustmentElement;
+
+  /// [rateAggregation] Describes how to combine the information calculated,
+  /// based on logic in each of several populations, into one summarized
+  ///  result.
   @override
-  @HiveField(65)
-  @HiveField(66)
   final String? rateAggregation;
 
   /// [rateAggregationElement] Extensions for rateAggregation
   @override
   @JsonKey(name: '_rateAggregation')
-  @HiveField(67)
   final Element? rateAggregationElement;
 
   /// [rationale] Provides a succinct statement of the need for the measure.
+  /// Usually includes statements pertaining to importance criterion: impact,
+  ///  gap in care, and evidence.
   @override
-  @HiveField(68)
-  @HiveField(69)
-  final Markdown? rationale;
+  final FhirMarkdown? rationale;
 
   /// [rationaleElement] Extensions for rationale
   @override
   @JsonKey(name: '_rationale')
-  @HiveField(70)
   final Element? rationaleElement;
 
   /// [clinicalRecommendationStatement] Provides a summary of relevant clinical
   ///  guidelines or other clinical recommendations supporting the measure.
   @override
-  @HiveField(71)
-  final Markdown? clinicalRecommendationStatement;
+  final FhirMarkdown? clinicalRecommendationStatement;
   @override
   @JsonKey(name: '_clinicalRecommendationStatement')
-  @HiveField(72)
   final Element? clinicalRecommendationStatementElement;
 
   /// [improvementNotation] Information on whether an increase or decrease in
@@ -2934,7 +2576,6 @@ class _$_Measure extends _Measure {
   /// quality OR a lower score indicates better quality OR quality is within a
   ///  range).
   @override
-  @HiveField(73)
   final CodeableConcept? improvementNotation;
 
   /// [definition] Provides a description of an individual term used within the
@@ -2944,7 +2585,6 @@ class _$_Measure extends _Measure {
   /// [definition] Provides a description of an individual term used within the
   ///  measure.
   @override
-  @HiveField(74)
   List<FhirMarkdown>? get definition {
     final value = _definition;
     if (value == null) return null;
@@ -2959,7 +2599,6 @@ class _$_Measure extends _Measure {
   /// [definitionElement] Extensions for definition
   @override
   @JsonKey(name: '_definition')
-  @HiveField(75)
   List<Element?>? get definitionElement {
     final value = _definitionElement;
     if (value == null) return null;
@@ -2972,13 +2611,11 @@ class _$_Measure extends _Measure {
   /// [guidance] Additional guidance for the measure including how it can be
   ///  used in a clinical context, and the intent of the measure.
   @override
-  @HiveField(76)
-  final Markdown? guidance;
+  final FhirMarkdown? guidance;
 
   /// [guidanceElement] Extensions for guidance
   @override
   @JsonKey(name: '_guidance')
-  @HiveField(77)
   final Element? guidanceElement;
 
   /// [group] A group of population criteria for the measure.
@@ -2986,7 +2623,6 @@ class _$_Measure extends _Measure {
 
   /// [group] A group of population criteria for the measure.
   @override
-  @HiveField(78)
   List<MeasureGroup>? get group {
     final value = _group;
     if (value == null) return null;
@@ -2995,10 +2631,15 @@ class _$_Measure extends _Measure {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [supplementalData] The supplemental data criteria for the measure report,
+  /// specified as either the name of a valid CQL expression within a referenced
+  ///  library, or a valid FHIR Resource Path.
   final List<MeasureSupplementalData>? _supplementalData;
+
+  /// [supplementalData] The supplemental data criteria for the measure report,
+  /// specified as either the name of a valid CQL expression within a referenced
+  ///  library, or a valid FHIR Resource Path.
   @override
-  @HiveField(79)
-  @HiveField(80)
   List<MeasureSupplementalData>? get supplementalData {
     final value = _supplementalData;
     if (value == null) return null;
@@ -3236,208 +2877,124 @@ class _$_Measure extends _Measure {
 abstract class _Measure extends Measure {
   factory _Measure(
       {@JsonKey(unknownEnumValue: R4ResourceType.Measure)
-      @HiveField(0)
           final R4ResourceType resourceType,
-      @HiveField(1)
-          final String? id,
-      @HiveField(2)
-          final FhirMeta? meta,
-      @HiveField(3)
-          final FhirUri? implicitRules,
+      final String? id,
+      final FhirMeta? meta,
+      final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           final Element? implicitRulesElement,
-      @HiveField(5)
-          final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           final Element? languageElement,
-      @HiveField(7)
-          final Narrative? text,
-      @HiveField(8)
-          final List<Resource>? contained,
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           final List<FhirExtension>? extension_,
-      @HiveField(10)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          final FhirUri? url,
+      final List<FhirExtension>? modifierExtension,
+      final FhirUri? url,
       @JsonKey(name: '_url')
-      @HiveField(12)
           final Element? urlElement,
-      @HiveField(13)
-      @HiveField(14)
-          final List<Identifier>? identifier,
-      @HiveField(15)
-          final String? version,
+      final List<Identifier>? identifier,
+      final String? version,
       @JsonKey(name: '_version')
-      @HiveField(16)
           final Element? versionElement,
-      @HiveField(17)
-          final String? name,
+      final String? name,
       @JsonKey(name: '_name')
-      @HiveField(18)
           final Element? nameElement,
-      @HiveField(19)
-          final String? title,
+      final String? title,
       @JsonKey(name: '_title')
-      @HiveField(20)
           final Element? titleElement,
-      @HiveField(21)
-          final String? subtitle,
+      final String? subtitle,
       @JsonKey(name: '_subtitle')
-      @HiveField(22)
           final Element? subtitleElement,
-      @HiveField(23)
-          final Code? status,
+      final FhirCode? status,
       @JsonKey(name: '_status')
-      @HiveField(24)
           final Element? statusElement,
-      @HiveField(25)
-          final Boolean? experimental,
+      final FhirBoolean? experimental,
       @JsonKey(name: '_experimental')
-      @HiveField(26)
           final Element? experimentalElement,
-      @HiveField(27)
-          final CodeableConcept? subjectCodeableConcept,
-      @HiveField(28)
-          final Reference? subjectReference,
-      @HiveField(29)
-          final FhirDateTime? date,
+      final CodeableConcept? subjectCodeableConcept,
+      final Reference? subjectReference,
+      final FhirDateTime? date,
       @JsonKey(name: '_date')
-      @HiveField(30)
           final Element? dateElement,
-      @HiveField(31)
-          final String? publisher,
+      final String? publisher,
       @JsonKey(name: '_publisher')
-      @HiveField(32)
           final Element? publisherElement,
-      @HiveField(33)
-          final List<ContactDetail>? contact,
-      @HiveField(34)
-          final Markdown? description,
+      final List<ContactDetail>? contact,
+      final FhirMarkdown? description,
       @JsonKey(name: '_description')
-      @HiveField(35)
           final Element? descriptionElement,
-      @HiveField(36)
-          final List<UsageContext>? useContext,
-      @HiveField(37)
-          final List<CodeableConcept>? jurisdiction,
-      @HiveField(38)
-          final Markdown? purpose,
+      final List<UsageContext>? useContext,
+      final List<CodeableConcept>? jurisdiction,
+      final FhirMarkdown? purpose,
       @JsonKey(name: '_purpose')
-      @HiveField(39)
           final Element? purposeElement,
-      @HiveField(40)
-          final String? usage,
+      final String? usage,
       @JsonKey(name: '_usage')
-      @HiveField(41)
           final Element? usageElement,
-      @HiveField(42)
-          final Markdown? copyright,
+      final FhirMarkdown? copyright,
       @JsonKey(name: '_copyright')
-      @HiveField(43)
           final Element? copyrightElement,
-      @HiveField(44)
-          final Date? approvalDate,
+      final FhirDate? approvalDate,
       @JsonKey(name: '_approvalDate')
-      @HiveField(45)
           final Element? approvalDateElement,
-      @HiveField(46)
-          final Date? lastReviewDate,
+      final FhirDate? lastReviewDate,
       @JsonKey(name: '_lastReviewDate')
-      @HiveField(47)
           final Element? lastReviewDateElement,
-      @HiveField(48)
-          final Period? effectivePeriod,
-      @HiveField(49)
-          final List<CodeableConcept>? topic,
-      @HiveField(50)
-          final List<ContactDetail>? author,
-      @HiveField(51)
-          final List<ContactDetail>? editor,
-      @HiveField(52)
-          final List<ContactDetail>? reviewer,
-      @HiveField(53)
-          final List<ContactDetail>? endorser,
-      @HiveField(54)
-      @HiveField(55)
-          final List<RelatedArtifact>? relatedArtifact,
+      final Period? effectivePeriod,
+      final List<CodeableConcept>? topic,
+      final List<ContactDetail>? author,
+      final List<ContactDetail>? editor,
+      final List<ContactDetail>? reviewer,
+      final List<ContactDetail>? endorser,
+      final List<RelatedArtifact>? relatedArtifact,
       @JsonKey(name: 'library')
-      @HiveField(56)
           final List<FhirCanonical>? library_,
-      @HiveField(57)
-          final Markdown? disclaimer,
+      final FhirMarkdown? disclaimer,
       @JsonKey(name: '_disclaimer')
-      @HiveField(58)
           final Element? disclaimerElement,
-      @HiveField(59)
-      @HiveField(60)
-          final CodeableConcept? scoring,
-      @HiveField(61)
-          final CodeableConcept? compositeScoring,
-      @HiveField(62)
-          final List<CodeableConcept>? type,
-      @HiveField(63)
-          final String? riskAdjustment,
+      final CodeableConcept? scoring,
+      final CodeableConcept? compositeScoring,
+      final List<CodeableConcept>? type,
+      final String? riskAdjustment,
       @JsonKey(name: '_riskAdjustment')
-      @HiveField(64)
           final Element? riskAdjustmentElement,
-      @HiveField(65)
-      @HiveField(66)
-          final String? rateAggregation,
+      final String? rateAggregation,
       @JsonKey(name: '_rateAggregation')
-      @HiveField(67)
           final Element? rateAggregationElement,
-      @HiveField(68)
-      @HiveField(69)
-          final Markdown? rationale,
+      final FhirMarkdown? rationale,
       @JsonKey(name: '_rationale')
-      @HiveField(70)
           final Element? rationaleElement,
-      @HiveField(71)
-          final Markdown? clinicalRecommendationStatement,
+      final FhirMarkdown? clinicalRecommendationStatement,
       @JsonKey(name: '_clinicalRecommendationStatement')
-      @HiveField(72)
           final Element? clinicalRecommendationStatementElement,
-      @HiveField(73)
-          final CodeableConcept? improvementNotation,
-      @HiveField(74)
-          final List<FhirMarkdown>? definition,
+      final CodeableConcept? improvementNotation,
+      final List<FhirMarkdown>? definition,
       @JsonKey(name: '_definition')
-      @HiveField(75)
           final List<Element?>? definitionElement,
-      @HiveField(76)
-          final Markdown? guidance,
+      final FhirMarkdown? guidance,
       @JsonKey(name: '_guidance')
-      @HiveField(77)
           final Element? guidanceElement,
-      @HiveField(78)
-          final List<MeasureGroup>? group,
-      @HiveField(79)
-      @HiveField(80)
-          final List<MeasureSupplementalData>? supplementalData}) = _$_Measure;
+      final List<MeasureGroup>? group,
+      final List<MeasureSupplementalData>? supplementalData}) = _$_Measure;
   _Measure._() : super._();
 
   factory _Measure.fromJson(Map<String, dynamic> json) = _$_Measure.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Measure)
-  @HiveField(0)
   R4ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
-  @HiveField(1)
   String? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  @HiveField(2)
   FhirMeta? get meta;
   @override
 
@@ -3445,24 +3002,20 @@ abstract class _Measure extends Measure {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  @HiveField(3)
   FhirUri? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
-  @HiveField(4)
   Element? get implicitRulesElement;
   @override
 
   /// [language] The base language in which the resource is written.
-  @HiveField(5)
   FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
-  @HiveField(6)
   Element? get languageElement;
   @override
 
@@ -3472,7 +3025,6 @@ abstract class _Measure extends Measure {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
-  @HiveField(7)
   Narrative? get text;
   @override
 
@@ -3480,7 +3032,6 @@ abstract class _Measure extends Measure {
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
-  @HiveField(8)
   List<Resource>? get contained;
   @override
 
@@ -3491,7 +3042,6 @@ abstract class _Measure extends Measure {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
-  @HiveField(9)
   List<FhirExtension>? get extension_;
   @override
 
@@ -3508,7 +3058,6 @@ abstract class _Measure extends Measure {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
 
@@ -3519,19 +3068,17 @@ abstract class _Measure extends Measure {
   /// measure is (or will be) published. This URL can be the target of a
   /// canonical reference. It SHALL remain the same when the measure is stored
   ///  on different servers.
-  @HiveField(11)
   FhirUri? get url;
   @override
 
   /// [urlElement] Extensions for url
   @JsonKey(name: '_url')
-  @HiveField(12)
   Element? get urlElement;
   @override
 
   /// [identifier] A formal identifier that is used to identify this measure
-  @HiveField(13)
-  @HiveField(14)
+  /// when it is represented in other formats, or referenced in a specification,
+  ///  model, design or an instance.
   List<Identifier>? get identifier;
   @override
 
@@ -3546,88 +3093,74 @@ abstract class _Measure extends Measure {
   /// information on versioning knowledge assets, refer to the Decision Support
   /// Service specification. Note that a version is required for
   ///  non-experimental active artifacts.
-  @HiveField(15)
   String? get version;
   @override
 
   /// [versionElement] Extensions for version
   @JsonKey(name: '_version')
-  @HiveField(16)
   Element? get versionElement;
   @override
 
   /// [name] A natural language name identifying the measure. This name should
   /// be usable as an identifier for the module by machine processing
   ///  applications such as code generation.
-  @HiveField(17)
   String? get name;
   @override
 
   /// [nameElement] Extensions for name
   @JsonKey(name: '_name')
-  @HiveField(18)
   Element? get nameElement;
   @override
 
   /// [title] A short, descriptive, user-friendly title for the measure.
-  @HiveField(19)
   String? get title;
   @override
 
   /// [titleElement] Extensions for title
   @JsonKey(name: '_title')
-  @HiveField(20)
   Element? get titleElement;
   @override
 
   /// [subtitle] An explanatory or alternate title for the measure giving
   ///  additional information about its content.
-  @HiveField(21)
   String? get subtitle;
   @override
 
   /// [subtitleElement] Extensions for subtitle
   @JsonKey(name: '_subtitle')
-  @HiveField(22)
   Element? get subtitleElement;
   @override
 
   /// [status] The status of this measure. Enables tracking the life-cycle of
   ///  the content.
-  @HiveField(23)
   FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
-  @HiveField(24)
   Element? get statusElement;
   @override
 
   /// [experimental] A Boolean value to indicate that this measure is authored
   /// for testing purposes (or education/evaluation/marketing) and is not
   ///  intended to be used for genuine usage.
-  @HiveField(25)
-  Boolean? get experimental;
+  FhirBoolean? get experimental;
   @override
 
   /// [experimentalElement] Extensions for experimental
   @JsonKey(name: '_experimental')
-  @HiveField(26)
   Element? get experimentalElement;
   @override
 
   /// [subjectCodeableConcept] The intended subjects for the measure. If this
   /// element is not provided, a Patient subject is assumed, but the subject of
   ///  the measure can be anything.
-  @HiveField(27)
   CodeableConcept? get subjectCodeableConcept;
   @override
 
   /// [subjectReference] The intended subjects for the measure. If this element
   /// is not provided, a Patient subject is assumed, but the subject of the
   ///  measure can be anything.
-  @HiveField(28)
   Reference? get subjectReference;
   @override
 
@@ -3635,43 +3168,36 @@ abstract class _Measure extends Measure {
   /// The date must change when the business version changes and it must change
   /// if the status code changes. In addition, it should change when the
   ///  substantive content of the measure changes.
-  @HiveField(29)
   FhirDateTime? get date;
   @override
 
   /// [dateElement] Extensions for date
   @JsonKey(name: '_date')
-  @HiveField(30)
   Element? get dateElement;
   @override
 
   /// [publisher] The name of the organization or individual that published the
   ///  measure.
-  @HiveField(31)
   String? get publisher;
   @override
 
   /// [publisherElement] Extensions for publisher
   @JsonKey(name: '_publisher')
-  @HiveField(32)
   Element? get publisherElement;
   @override
 
   /// [contact] Contact details to assist a user in finding and communicating
   ///  with the publisher.
-  @HiveField(33)
   List<ContactDetail>? get contact;
   @override
 
   /// [description] A free text natural language description of the measure
   ///  from a consumer's perspective.
-  @HiveField(34)
-  Markdown? get description;
+  FhirMarkdown? get description;
   @override
 
   /// [descriptionElement] Extensions for description
   @JsonKey(name: '_description')
-  @HiveField(35)
   Element? get descriptionElement;
   @override
 
@@ -3680,199 +3206,176 @@ abstract class _Measure extends Measure {
   /// categories (gender, age, ...) or may be references to specific programs
   /// (insurance plans, studies, ...) and may be used to assist with indexing
   ///  and searching for appropriate measure instances.
-  @HiveField(36)
   List<UsageContext>? get useContext;
   @override
 
   /// [jurisdiction] A legal or geographic region in which the measure is
   ///  intended to be used.
-  @HiveField(37)
   List<CodeableConcept>? get jurisdiction;
   @override
 
   /// [purpose] Explanation of why this measure is needed and why it has been
   ///  designed as it has.
-  @HiveField(38)
-  Markdown? get purpose;
+  FhirMarkdown? get purpose;
   @override
 
   /// [purposeElement] Extensions for purpose
   @JsonKey(name: '_purpose')
-  @HiveField(39)
   Element? get purposeElement;
   @override
 
   /// [usage] A detailed description, from a clinical perspective, of how the
   ///  measure is used.
-  @HiveField(40)
   String? get usage;
   @override
 
   /// [usageElement] Extensions for usage
   @JsonKey(name: '_usage')
-  @HiveField(41)
   Element? get usageElement;
   @override
 
   /// [copyright] A copyright statement relating to the measure and/or its
   /// contents. Copyright statements are generally legal restrictions on the use
   ///  and publishing of the measure.
-  @HiveField(42)
-  Markdown? get copyright;
+  FhirMarkdown? get copyright;
   @override
 
   /// [copyrightElement] Extensions for copyright
   @JsonKey(name: '_copyright')
-  @HiveField(43)
   Element? get copyrightElement;
   @override
 
   /// [approvalDate] The date on which the resource content was approved by the
   /// publisher. Approval happens once when the content is officially approved
   ///  for usage.
-  @HiveField(44)
-  Date? get approvalDate;
+  FhirDate? get approvalDate;
   @override
 
   /// [approvalDateElement] Extensions for approvalDate
   @JsonKey(name: '_approvalDate')
-  @HiveField(45)
   Element? get approvalDateElement;
   @override
 
   /// [lastReviewDate] The date on which the resource content was last
   /// reviewed. Review happens periodically after approval but does not change
   ///  the original approval date.
-  @HiveField(46)
-  Date? get lastReviewDate;
+  FhirDate? get lastReviewDate;
   @override
 
   /// [lastReviewDateElement] Extensions for lastReviewDate
   @JsonKey(name: '_lastReviewDate')
-  @HiveField(47)
   Element? get lastReviewDateElement;
   @override
 
   /// [effectivePeriod] The period during which the measure content was or is
   ///  planned to be in active use.
-  @HiveField(48)
   Period? get effectivePeriod;
   @override
 
   /// [topic] Descriptive topics related to the content of the measure. Topics
   /// provide a high-level categorization grouping types of measures that can be
   ///  useful for filtering and searching.
-  @HiveField(49)
   List<CodeableConcept>? get topic;
   @override
 
   /// [author] An individiual or organization primarily involved in the
   ///  creation and maintenance of the content.
-  @HiveField(50)
   List<ContactDetail>? get author;
   @override
 
   /// [editor] An individual or organization primarily responsible for internal
   ///  coherence of the content.
-  @HiveField(51)
   List<ContactDetail>? get editor;
   @override
 
   /// [reviewer] An individual or organization primarily responsible for review
   ///  of some aspect of the content.
-  @HiveField(52)
   List<ContactDetail>? get reviewer;
   @override
 
   /// [endorser] An individual or organization responsible for officially
   ///  endorsing the content for use in some setting.
-  @HiveField(53)
   List<ContactDetail>? get endorser;
   @override
-  @HiveField(54)
-  @HiveField(55)
+
+  /// [relatedArtifact] Related artifacts such as additional documentation,
+  ///  justification, or bibliographic references.
   List<RelatedArtifact>? get relatedArtifact;
   @override
 
   /// [library] A reference to a Library resource containing the formal logic
   ///  used by the measure.
   @JsonKey(name: 'library')
-  @HiveField(56)
   List<FhirCanonical>? get library_;
   @override
 
   /// [disclaimer] Notices and disclaimers regarding the use of the measure or
   /// related to intellectual property (such as code systems) referenced by the
   ///  measure.
-  @HiveField(57)
-  Markdown? get disclaimer;
+  FhirMarkdown? get disclaimer;
   @override
 
   /// [disclaimerElement] Extensions for disclaimer
   @JsonKey(name: '_disclaimer')
-  @HiveField(58)
   Element? get disclaimerElement;
   @override
-  @HiveField(59)
-  @HiveField(60)
+
+  /// [scoring] Indicates how the calculation is performed for the measure,
+  /// including proportion, ratio, continuous-variable, and cohort. The value
+  /// set is extensible, allowing additional measure scoring types to be
+  ///  represented.
   CodeableConcept? get scoring;
   @override
 
   /// [compositeScoring] If this is a composite measure, the scoring method
   ///  used to combine the component measures to determine the composite score.
-  @HiveField(61)
   CodeableConcept? get compositeScoring;
   @override
 
   /// [type] Indicates whether the measure is used to examine a process, an
   /// outcome over time, a patient-reported outcome, or a structure measure such
   ///  as utilization.
-  @HiveField(62)
   List<CodeableConcept>? get type;
   @override
 
   /// [riskAdjustment] A description of the risk adjustment factors that may
   /// impact the resulting score for the measure and how they may be accounted
   ///  for when computing and reporting measure results.
-  @HiveField(63)
   String? get riskAdjustment;
   @override
 
   /// [riskAdjustmentElement] Extensions for riskAdjustment
   @JsonKey(name: '_riskAdjustment')
-  @HiveField(64)
   Element? get riskAdjustmentElement;
   @override
-  @HiveField(65)
-  @HiveField(66)
+
+  /// [rateAggregation] Describes how to combine the information calculated,
+  /// based on logic in each of several populations, into one summarized
+  ///  result.
   String? get rateAggregation;
   @override
 
   /// [rateAggregationElement] Extensions for rateAggregation
   @JsonKey(name: '_rateAggregation')
-  @HiveField(67)
   Element? get rateAggregationElement;
   @override
 
   /// [rationale] Provides a succinct statement of the need for the measure.
-  @HiveField(68)
-  @HiveField(69)
-  Markdown? get rationale;
+  /// Usually includes statements pertaining to importance criterion: impact,
+  ///  gap in care, and evidence.
+  FhirMarkdown? get rationale;
   @override
 
   /// [rationaleElement] Extensions for rationale
   @JsonKey(name: '_rationale')
-  @HiveField(70)
   Element? get rationaleElement;
   @override
 
   /// [clinicalRecommendationStatement] Provides a summary of relevant clinical
   ///  guidelines or other clinical recommendations supporting the measure.
-  @HiveField(71)
-  Markdown? get clinicalRecommendationStatement;
+  FhirMarkdown? get clinicalRecommendationStatement;
   @override
   @JsonKey(name: '_clinicalRecommendationStatement')
-  @HiveField(72)
   Element? get clinicalRecommendationStatementElement;
   @override
 
@@ -3880,40 +3383,36 @@ abstract class _Measure extends Measure {
   /// score is the preferred result (e.g., a higher score indicates better
   /// quality OR a lower score indicates better quality OR quality is within a
   ///  range).
-  @HiveField(73)
   CodeableConcept? get improvementNotation;
   @override
 
   /// [definition] Provides a description of an individual term used within the
   ///  measure.
-  @HiveField(74)
   List<FhirMarkdown>? get definition;
   @override
 
   /// [definitionElement] Extensions for definition
   @JsonKey(name: '_definition')
-  @HiveField(75)
   List<Element?>? get definitionElement;
   @override
 
   /// [guidance] Additional guidance for the measure including how it can be
   ///  used in a clinical context, and the intent of the measure.
-  @HiveField(76)
-  Markdown? get guidance;
+  FhirMarkdown? get guidance;
   @override
 
   /// [guidanceElement] Extensions for guidance
   @JsonKey(name: '_guidance')
-  @HiveField(77)
   Element? get guidanceElement;
   @override
 
   /// [group] A group of population criteria for the measure.
-  @HiveField(78)
   List<MeasureGroup>? get group;
   @override
-  @HiveField(79)
-  @HiveField(80)
+
+  /// [supplementalData] The supplemental data criteria for the measure report,
+  /// specified as either the name of a valid CQL expression within a referenced
+  ///  library, or a valid FHIR Resource Path.
   List<MeasureSupplementalData>? get supplementalData;
   @override
   @JsonKey(ignore: true)
@@ -3929,7 +3428,6 @@ MeasureGroup _$MeasureGroupFromJson(Map<String, dynamic> json) {
 mixin _$MeasureGroup {
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
-  @HiveField(0)
   String? get id => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -3938,7 +3436,6 @@ mixin _$MeasureGroup {
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
-  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
@@ -3955,7 +3452,6 @@ mixin _$MeasureGroup {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
-  @HiveField(2)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
@@ -3963,26 +3459,21 @@ mixin _$MeasureGroup {
   /// unique identifier, or it can establish meaning in a broader context by
   /// drawing from a terminology, allowing groups to be correlated across
   ///  measures.
-  @HiveField(3)
   CodeableConcept? get code => throw _privateConstructorUsedError;
 
   /// [description] The human readable description of this population group.
-  @HiveField(4)
   String? get description => throw _privateConstructorUsedError;
 
   /// [descriptionElement] Extensions for description
-  @HiveField(5)
   @JsonKey(name: '_description')
   Element? get descriptionElement => throw _privateConstructorUsedError;
 
   /// [population] A population criteria for the measure.
-  @HiveField(6)
   List<MeasurePopulation>? get population => throw _privateConstructorUsedError;
 
   /// [stratifier] The stratifier criteria for the measure report, specified as
   /// either the name of a valid CQL expression defined within a referenced
   ///  library or a valid FHIR Resource Path.
-  @HiveField(7)
   List<MeasureStratifier>? get stratifier => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -3998,14 +3489,14 @@ abstract class $MeasureGroupCopyWith<$Res> {
       _$MeasureGroupCopyWithImpl<$Res, MeasureGroup>;
   @useResult
   $Res call(
-      {@HiveField(0) String? id,
-      @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      @HiveField(2) List<FhirExtension>? modifierExtension,
-      @HiveField(3) CodeableConcept? code,
-      @HiveField(4) String? description,
-      @HiveField(5) @JsonKey(name: '_description') Element? descriptionElement,
-      @HiveField(6) List<MeasurePopulation>? population,
-      @HiveField(7) List<MeasureStratifier>? stratifier});
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept? code,
+      String? description,
+      @JsonKey(name: '_description') Element? descriptionElement,
+      List<MeasurePopulation>? population,
+      List<MeasureStratifier>? stratifier});
 
   $CodeableConceptCopyWith<$Res>? get code;
   $ElementCopyWith<$Res>? get descriptionElement;
@@ -4103,14 +3594,14 @@ abstract class _$$_MeasureGroupCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@HiveField(0) String? id,
-      @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      @HiveField(2) List<FhirExtension>? modifierExtension,
-      @HiveField(3) CodeableConcept? code,
-      @HiveField(4) String? description,
-      @HiveField(5) @JsonKey(name: '_description') Element? descriptionElement,
-      @HiveField(6) List<MeasurePopulation>? population,
-      @HiveField(7) List<MeasureStratifier>? stratifier});
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept? code,
+      String? description,
+      @JsonKey(name: '_description') Element? descriptionElement,
+      List<MeasurePopulation>? population,
+      List<MeasureStratifier>? stratifier});
 
   @override
   $CodeableConceptCopyWith<$Res>? get code;
@@ -4177,27 +3668,16 @@ class __$$_MeasureGroupCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@HiveType(typeId: 80)
 class _$_MeasureGroup extends _MeasureGroup {
   _$_MeasureGroup(
-      {@HiveField(0)
-          this.id,
-      @HiveField(1)
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      @HiveField(2)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(3)
-          this.code,
-      @HiveField(4)
-          this.description,
-      @HiveField(5)
-      @JsonKey(name: '_description')
-          this.descriptionElement,
-      @HiveField(6)
-          final List<MeasurePopulation>? population,
-      @HiveField(7)
-          final List<MeasureStratifier>? stratifier})
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      this.code,
+      this.description,
+      @JsonKey(name: '_description') this.descriptionElement,
+      final List<MeasurePopulation>? population,
+      final List<MeasureStratifier>? stratifier})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
         _population = population,
@@ -4210,7 +3690,6 @@ class _$_MeasureGroup extends _MeasureGroup {
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   @override
-  @HiveField(0)
   final String? id;
 
   /// [extension_] May be used to represent additional information that is not
@@ -4228,7 +3707,6 @@ class _$_MeasureGroup extends _MeasureGroup {
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   @override
-  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
     final value = _extension_;
@@ -4267,7 +3745,6 @@ class _$_MeasureGroup extends _MeasureGroup {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   @override
-  @HiveField(2)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -4282,17 +3759,14 @@ class _$_MeasureGroup extends _MeasureGroup {
   /// drawing from a terminology, allowing groups to be correlated across
   ///  measures.
   @override
-  @HiveField(3)
   final CodeableConcept? code;
 
   /// [description] The human readable description of this population group.
   @override
-  @HiveField(4)
   final String? description;
 
   /// [descriptionElement] Extensions for description
   @override
-  @HiveField(5)
   @JsonKey(name: '_description')
   final Element? descriptionElement;
 
@@ -4301,7 +3775,6 @@ class _$_MeasureGroup extends _MeasureGroup {
 
   /// [population] A population criteria for the measure.
   @override
-  @HiveField(6)
   List<MeasurePopulation>? get population {
     final value = _population;
     if (value == null) return null;
@@ -4319,7 +3792,6 @@ class _$_MeasureGroup extends _MeasureGroup {
   /// either the name of a valid CQL expression defined within a referenced
   ///  library or a valid FHIR Resource Path.
   @override
-  @HiveField(7)
   List<MeasureStratifier>? get stratifier {
     final value = _stratifier;
     if (value == null) return null;
@@ -4383,24 +3855,14 @@ class _$_MeasureGroup extends _MeasureGroup {
 
 abstract class _MeasureGroup extends MeasureGroup {
   factory _MeasureGroup(
-      {@HiveField(0)
-          final String? id,
-      @HiveField(1)
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      @HiveField(2)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(3)
-          final CodeableConcept? code,
-      @HiveField(4)
-          final String? description,
-      @HiveField(5)
-      @JsonKey(name: '_description')
-          final Element? descriptionElement,
-      @HiveField(6)
-          final List<MeasurePopulation>? population,
-      @HiveField(7)
-          final List<MeasureStratifier>? stratifier}) = _$_MeasureGroup;
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final CodeableConcept? code,
+      final String? description,
+      @JsonKey(name: '_description') final Element? descriptionElement,
+      final List<MeasurePopulation>? population,
+      final List<MeasureStratifier>? stratifier}) = _$_MeasureGroup;
   _MeasureGroup._() : super._();
 
   factory _MeasureGroup.fromJson(Map<String, dynamic> json) =
@@ -4410,7 +3872,6 @@ abstract class _MeasureGroup extends MeasureGroup {
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
-  @HiveField(0)
   String? get id;
   @override
 
@@ -4420,7 +3881,6 @@ abstract class _MeasureGroup extends MeasureGroup {
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
-  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
@@ -4438,7 +3898,6 @@ abstract class _MeasureGroup extends MeasureGroup {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
-  @HiveField(2)
   List<FhirExtension>? get modifierExtension;
   @override
 
@@ -4446,30 +3905,25 @@ abstract class _MeasureGroup extends MeasureGroup {
   /// unique identifier, or it can establish meaning in a broader context by
   /// drawing from a terminology, allowing groups to be correlated across
   ///  measures.
-  @HiveField(3)
   CodeableConcept? get code;
   @override
 
   /// [description] The human readable description of this population group.
-  @HiveField(4)
   String? get description;
   @override
 
   /// [descriptionElement] Extensions for description
-  @HiveField(5)
   @JsonKey(name: '_description')
   Element? get descriptionElement;
   @override
 
   /// [population] A population criteria for the measure.
-  @HiveField(6)
   List<MeasurePopulation>? get population;
   @override
 
   /// [stratifier] The stratifier criteria for the measure report, specified as
   /// either the name of a valid CQL expression defined within a referenced
   ///  library or a valid FHIR Resource Path.
-  @HiveField(7)
   List<MeasureStratifier>? get stratifier;
   @override
   @JsonKey(ignore: true)
@@ -6479,39 +5933,32 @@ MeasureReport _$MeasureReportFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$MeasureReport {
   @JsonKey(unknownEnumValue: R4ResourceType.MeasureReport)
-  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
-  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  @HiveField(2)
   FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
-  @HiveField(4)
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  @HiveField(5)
   FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
-  @HiveField(6)
   Element? get languageElement => throw _privateConstructorUsedError;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -6520,14 +5967,12 @@ mixin _$MeasureReport {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
-  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
 
   /// [contained] These resources do not have an independent existence apart
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
-  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -6537,7 +5982,6 @@ mixin _$MeasureReport {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
-  @HiveField(9)
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [modifierExtension] May be used to represent additional information that
@@ -6553,76 +5997,68 @@ mixin _$MeasureReport {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
   /// [identifier] A formal identifier that is used to identify this
   /// MeasureReport when it is represented in other formats or referenced in a
   ///  specification, model, design or an instance.
-  @HiveField(11)
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [status] The MeasureReport status. No data will be available until the
   ///  MeasureReport status is complete.
-  @HiveField(12)
   FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
-  @HiveField(13)
   Element? get statusElement => throw _privateConstructorUsedError;
-  @HiveField(14)
-  @HiveField(15)
+
+  /// [type] The type of measure report. This may be an individual report,
+  /// which provides the score for the measure for an individual member of the
+  /// population; a subject-listing, which returns the list of members that meet
+  /// the various criteria in the measure; a summary report, which returns a
+  /// population count for each of the criteria in the measure; or a
+  /// data-collection, which enables the MeasureReport to be used to exchange
+  ///  the data-of-interest for a quality measure.
   FhirCode? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
-  @HiveField(16)
   Element? get typeElement => throw _privateConstructorUsedError;
 
   /// [measure] A reference to the Measure that was calculated to produce this
   ///  report.
-  @HiveField(17)
-  Canonical get measure => throw _privateConstructorUsedError;
+  FhirCanonical get measure => throw _privateConstructorUsedError;
 
   /// [subject] Optional subject identifying the individual or individuals the
   ///  report is for.
-  @HiveField(18)
   Reference? get subject => throw _privateConstructorUsedError;
 
   /// [date] The date this measure report was generated.
-  @HiveField(19)
   FhirDateTime? get date => throw _privateConstructorUsedError;
 
   /// [dateElement] Extensions for date
   @JsonKey(name: '_date')
-  @HiveField(20)
   Element? get dateElement => throw _privateConstructorUsedError;
 
   /// [reporter] The individual, location, or organization that is reporting
   ///  the data.
-  @HiveField(21)
   Reference? get reporter => throw _privateConstructorUsedError;
 
   /// [period] The reporting period for which the report was calculated.
-  @HiveField(22)
   Period get period => throw _privateConstructorUsedError;
 
   /// [improvementNotation] Whether improvement in the measure is noted by an
   ///  increase or decrease in the measure score.
-  @HiveField(23)
   CodeableConcept? get improvementNotation =>
       throw _privateConstructorUsedError;
 
   /// [group] The results of the calculation, one for each population group in
   ///  the measure.
-  @HiveField(24)
   List<MeasureReportGroup>? get group => throw _privateConstructorUsedError;
 
   /// [evaluatedResource] A reference to a Bundle containing the Resources that
   ///  were used in the calculation of this measure.
-  @HiveField(25)
   List<Reference>? get evaluatedResource => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -6639,63 +6075,37 @@ abstract class $MeasureReportCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.MeasureReport)
-      @HiveField(0)
           R4ResourceType resourceType,
-      @HiveField(1)
-          String? id,
-      @HiveField(2)
-          FhirMeta? meta,
-      @HiveField(3)
-          FhirUri? implicitRules,
+      String? id,
+      FhirMeta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           Element? implicitRulesElement,
-      @HiveField(5)
-          FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           Element? languageElement,
-      @HiveField(7)
-          Narrative? text,
-      @HiveField(8)
-          List<Resource>? contained,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           List<FhirExtension>? extension_,
-      @HiveField(10)
-          List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          List<Identifier>? identifier,
-      @HiveField(12)
-          FhirCode? status,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      FhirCode? status,
       @JsonKey(name: '_status')
-      @HiveField(13)
           Element? statusElement,
-      @HiveField(14)
-      @HiveField(15)
-          FhirCode? type,
+      FhirCode? type,
       @JsonKey(name: '_type')
-      @HiveField(16)
           Element? typeElement,
-      @HiveField(17)
-          Canonical measure,
-      @HiveField(18)
-          Reference? subject,
-      @HiveField(19)
-          FhirDateTime? date,
+      FhirCanonical measure,
+      Reference? subject,
+      FhirDateTime? date,
       @JsonKey(name: '_date')
-      @HiveField(20)
           Element? dateElement,
-      @HiveField(21)
-          Reference? reporter,
-      @HiveField(22)
-          Period period,
-      @HiveField(23)
-          CodeableConcept? improvementNotation,
-      @HiveField(24)
-          List<MeasureReportGroup>? group,
-      @HiveField(25)
-          List<Reference>? evaluatedResource});
+      Reference? reporter,
+      Period period,
+      CodeableConcept? improvementNotation,
+      List<MeasureReportGroup>? group,
+      List<Reference>? evaluatedResource});
 
   $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -6773,7 +6183,7 @@ class _$MeasureReportCopyWithImpl<$Res, $Val extends MeasureReport>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -6801,7 +6211,7 @@ class _$MeasureReportCopyWithImpl<$Res, $Val extends MeasureReport>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -6809,7 +6219,7 @@ class _$MeasureReportCopyWithImpl<$Res, $Val extends MeasureReport>
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       typeElement: freezed == typeElement
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -6817,7 +6227,7 @@ class _$MeasureReportCopyWithImpl<$Res, $Val extends MeasureReport>
       measure: null == measure
           ? _value.measure
           : measure // ignore: cast_nullable_to_non_nullable
-              as Canonical,
+              as FhirCanonical,
       subject: freezed == subject
           ? _value.subject
           : subject // ignore: cast_nullable_to_non_nullable
@@ -6992,63 +6402,37 @@ abstract class _$$_MeasureReportCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.MeasureReport)
-      @HiveField(0)
           R4ResourceType resourceType,
-      @HiveField(1)
-          String? id,
-      @HiveField(2)
-          FhirMeta? meta,
-      @HiveField(3)
-          FhirUri? implicitRules,
+      String? id,
+      FhirMeta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           Element? implicitRulesElement,
-      @HiveField(5)
-          FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           Element? languageElement,
-      @HiveField(7)
-          Narrative? text,
-      @HiveField(8)
-          List<Resource>? contained,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           List<FhirExtension>? extension_,
-      @HiveField(10)
-          List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          List<Identifier>? identifier,
-      @HiveField(12)
-          FhirCode? status,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      FhirCode? status,
       @JsonKey(name: '_status')
-      @HiveField(13)
           Element? statusElement,
-      @HiveField(14)
-      @HiveField(15)
-          FhirCode? type,
+      FhirCode? type,
       @JsonKey(name: '_type')
-      @HiveField(16)
           Element? typeElement,
-      @HiveField(17)
-          Canonical measure,
-      @HiveField(18)
-          Reference? subject,
-      @HiveField(19)
-          FhirDateTime? date,
+      FhirCanonical measure,
+      Reference? subject,
+      FhirDateTime? date,
       @JsonKey(name: '_date')
-      @HiveField(20)
           Element? dateElement,
-      @HiveField(21)
-          Reference? reporter,
-      @HiveField(22)
-          Period period,
-      @HiveField(23)
-          CodeableConcept? improvementNotation,
-      @HiveField(24)
-          List<MeasureReportGroup>? group,
-      @HiveField(25)
-          List<Reference>? evaluatedResource});
+      Reference? reporter,
+      Period period,
+      CodeableConcept? improvementNotation,
+      List<MeasureReportGroup>? group,
+      List<Reference>? evaluatedResource});
 
   @override
   $FhirMetaCopyWith<$Res>? get meta;
@@ -7135,7 +6519,7 @@ class __$$_MeasureReportCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -7163,7 +6547,7 @@ class __$$_MeasureReportCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -7171,7 +6555,7 @@ class __$$_MeasureReportCopyWithImpl<$Res>
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       typeElement: freezed == typeElement
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -7179,7 +6563,7 @@ class __$$_MeasureReportCopyWithImpl<$Res>
       measure: null == measure
           ? _value.measure
           : measure // ignore: cast_nullable_to_non_nullable
-              as Canonical,
+              as FhirCanonical,
       subject: freezed == subject
           ? _value.subject
           : subject // ignore: cast_nullable_to_non_nullable
@@ -7218,67 +6602,40 @@ class __$$_MeasureReportCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@HiveType(typeId: 81)
 class _$_MeasureReport extends _MeasureReport {
   _$_MeasureReport(
       {@JsonKey(unknownEnumValue: R4ResourceType.MeasureReport)
-      @HiveField(0)
           this.resourceType = R4ResourceType.MeasureReport,
-      @HiveField(1)
-          this.id,
-      @HiveField(2)
-          this.meta,
-      @HiveField(3)
-          this.implicitRules,
+      this.id,
+      this.meta,
+      this.implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           this.implicitRulesElement,
-      @HiveField(5)
-          this.language,
+      this.language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           this.languageElement,
-      @HiveField(7)
-          this.text,
-      @HiveField(8)
-          final List<Resource>? contained,
+      this.text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           final List<FhirExtension>? extension_,
-      @HiveField(10)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          final List<Identifier>? identifier,
-      @HiveField(12)
-          this.status,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      this.status,
       @JsonKey(name: '_status')
-      @HiveField(13)
           this.statusElement,
-      @HiveField(14)
-      @HiveField(15)
-          this.type,
+      this.type,
       @JsonKey(name: '_type')
-      @HiveField(16)
           this.typeElement,
-      @HiveField(17)
-          required this.measure,
-      @HiveField(18)
-          this.subject,
-      @HiveField(19)
-          this.date,
+      required this.measure,
+      this.subject,
+      this.date,
       @JsonKey(name: '_date')
-      @HiveField(20)
           this.dateElement,
-      @HiveField(21)
-          this.reporter,
-      @HiveField(22)
-          required this.period,
-      @HiveField(23)
-          this.improvementNotation,
-      @HiveField(24)
-          final List<MeasureReportGroup>? group,
-      @HiveField(25)
-          final List<Reference>? evaluatedResource})
+      this.reporter,
+      required this.period,
+      this.improvementNotation,
+      final List<MeasureReportGroup>? group,
+      final List<Reference>? evaluatedResource})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -7292,20 +6649,17 @@ class _$_MeasureReport extends _MeasureReport {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.MeasureReport)
-  @HiveField(0)
   final R4ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
   @override
-  @HiveField(1)
   final String? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
-  @HiveField(2)
   final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -7313,24 +6667,20 @@ class _$_MeasureReport extends _MeasureReport {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   @override
-  @HiveField(3)
   final FhirUri? implicitRules;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
-  @HiveField(4)
   final Element? implicitRulesElement;
 
   /// [language] The base language in which the resource is written.
   @override
-  @HiveField(5)
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] Extensions for language
   @override
   @JsonKey(name: '_language')
-  @HiveField(6)
   final Element? languageElement;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -7340,7 +6690,6 @@ class _$_MeasureReport extends _MeasureReport {
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
   @override
-  @HiveField(7)
   final Narrative? text;
 
   /// [contained] These resources do not have an independent existence apart
@@ -7354,7 +6703,6 @@ class _$_MeasureReport extends _MeasureReport {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   @override
-  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -7379,7 +6727,6 @@ class _$_MeasureReport extends _MeasureReport {
   ///  as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
-  @HiveField(9)
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
@@ -7417,7 +6764,6 @@ class _$_MeasureReport extends _MeasureReport {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   @override
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -7436,7 +6782,6 @@ class _$_MeasureReport extends _MeasureReport {
   /// MeasureReport when it is represented in other formats or referenced in a
   ///  specification, model, design or an instance.
   @override
-  @HiveField(11)
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
@@ -7448,63 +6793,59 @@ class _$_MeasureReport extends _MeasureReport {
   /// [status] The MeasureReport status. No data will be available until the
   ///  MeasureReport status is complete.
   @override
-  @HiveField(12)
-  final Code? status;
+  final FhirCode? status;
 
   /// [statusElement] Extensions for status
   @override
   @JsonKey(name: '_status')
-  @HiveField(13)
   final Element? statusElement;
+
+  /// [type] The type of measure report. This may be an individual report,
+  /// which provides the score for the measure for an individual member of the
+  /// population; a subject-listing, which returns the list of members that meet
+  /// the various criteria in the measure; a summary report, which returns a
+  /// population count for each of the criteria in the measure; or a
+  /// data-collection, which enables the MeasureReport to be used to exchange
+  ///  the data-of-interest for a quality measure.
   @override
-  @HiveField(14)
-  @HiveField(15)
-  final Code? type;
+  final FhirCode? type;
 
   /// [typeElement] Extensions for type
   @override
   @JsonKey(name: '_type')
-  @HiveField(16)
   final Element? typeElement;
 
   /// [measure] A reference to the Measure that was calculated to produce this
   ///  report.
   @override
-  @HiveField(17)
-  final Canonical measure;
+  final FhirCanonical measure;
 
   /// [subject] Optional subject identifying the individual or individuals the
   ///  report is for.
   @override
-  @HiveField(18)
   final Reference? subject;
 
   /// [date] The date this measure report was generated.
   @override
-  @HiveField(19)
   final FhirDateTime? date;
 
   /// [dateElement] Extensions for date
   @override
   @JsonKey(name: '_date')
-  @HiveField(20)
   final Element? dateElement;
 
   /// [reporter] The individual, location, or organization that is reporting
   ///  the data.
   @override
-  @HiveField(21)
   final Reference? reporter;
 
   /// [period] The reporting period for which the report was calculated.
   @override
-  @HiveField(22)
   final Period period;
 
   /// [improvementNotation] Whether improvement in the measure is noted by an
   ///  increase or decrease in the measure score.
   @override
-  @HiveField(23)
   final CodeableConcept? improvementNotation;
 
   /// [group] The results of the calculation, one for each population group in
@@ -7514,7 +6855,6 @@ class _$_MeasureReport extends _MeasureReport {
   /// [group] The results of the calculation, one for each population group in
   ///  the measure.
   @override
-  @HiveField(24)
   List<MeasureReportGroup>? get group {
     final value = _group;
     if (value == null) return null;
@@ -7530,7 +6870,6 @@ class _$_MeasureReport extends _MeasureReport {
   /// [evaluatedResource] A reference to a Bundle containing the Resources that
   ///  were used in the calculation of this measure.
   @override
-  @HiveField(25)
   List<Reference>? get evaluatedResource {
     final value = _evaluatedResource;
     if (value == null) return null;
@@ -7640,63 +6979,37 @@ class _$_MeasureReport extends _MeasureReport {
 abstract class _MeasureReport extends MeasureReport {
   factory _MeasureReport(
       {@JsonKey(unknownEnumValue: R4ResourceType.MeasureReport)
-      @HiveField(0)
           final R4ResourceType resourceType,
-      @HiveField(1)
-          final String? id,
-      @HiveField(2)
-          final FhirMeta? meta,
-      @HiveField(3)
-          final FhirUri? implicitRules,
+      final String? id,
+      final FhirMeta? meta,
+      final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           final Element? implicitRulesElement,
-      @HiveField(5)
-          final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           final Element? languageElement,
-      @HiveField(7)
-          final Narrative? text,
-      @HiveField(8)
-          final List<Resource>? contained,
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           final List<FhirExtension>? extension_,
-      @HiveField(10)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          final List<Identifier>? identifier,
-      @HiveField(12)
-          final Code? status,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final FhirCode? status,
       @JsonKey(name: '_status')
-      @HiveField(13)
           final Element? statusElement,
-      @HiveField(14)
-      @HiveField(15)
-          final Code? type,
+      final FhirCode? type,
       @JsonKey(name: '_type')
-      @HiveField(16)
           final Element? typeElement,
-      @HiveField(17)
-          required final Canonical measure,
-      @HiveField(18)
-          final Reference? subject,
-      @HiveField(19)
-          final FhirDateTime? date,
+      required final FhirCanonical measure,
+      final Reference? subject,
+      final FhirDateTime? date,
       @JsonKey(name: '_date')
-      @HiveField(20)
           final Element? dateElement,
-      @HiveField(21)
-          final Reference? reporter,
-      @HiveField(22)
-          required final Period period,
-      @HiveField(23)
-          final CodeableConcept? improvementNotation,
-      @HiveField(24)
-          final List<MeasureReportGroup>? group,
-      @HiveField(25)
-          final List<Reference>? evaluatedResource}) = _$_MeasureReport;
+      final Reference? reporter,
+      required final Period period,
+      final CodeableConcept? improvementNotation,
+      final List<MeasureReportGroup>? group,
+      final List<Reference>? evaluatedResource}) = _$_MeasureReport;
   _MeasureReport._() : super._();
 
   factory _MeasureReport.fromJson(Map<String, dynamic> json) =
@@ -7704,20 +7017,17 @@ abstract class _MeasureReport extends MeasureReport {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.MeasureReport)
-  @HiveField(0)
   R4ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
-  @HiveField(1)
   String? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  @HiveField(2)
   FhirMeta? get meta;
   @override
 
@@ -7725,24 +7035,20 @@ abstract class _MeasureReport extends MeasureReport {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  @HiveField(3)
   FhirUri? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
-  @HiveField(4)
   Element? get implicitRulesElement;
   @override
 
   /// [language] The base language in which the resource is written.
-  @HiveField(5)
   FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
-  @HiveField(6)
   Element? get languageElement;
   @override
 
@@ -7752,7 +7058,6 @@ abstract class _MeasureReport extends MeasureReport {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
-  @HiveField(7)
   Narrative? get text;
   @override
 
@@ -7760,7 +7065,6 @@ abstract class _MeasureReport extends MeasureReport {
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
-  @HiveField(8)
   List<Resource>? get contained;
   @override
 
@@ -7771,7 +7075,6 @@ abstract class _MeasureReport extends MeasureReport {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
-  @HiveField(9)
   List<FhirExtension>? get extension_;
   @override
 
@@ -7788,88 +7091,80 @@ abstract class _MeasureReport extends MeasureReport {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
 
   /// [identifier] A formal identifier that is used to identify this
   /// MeasureReport when it is represented in other formats or referenced in a
   ///  specification, model, design or an instance.
-  @HiveField(11)
   List<Identifier>? get identifier;
   @override
 
   /// [status] The MeasureReport status. No data will be available until the
   ///  MeasureReport status is complete.
-  @HiveField(12)
   FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
-  @HiveField(13)
   Element? get statusElement;
   @override
-  @HiveField(14)
-  @HiveField(15)
+
+  /// [type] The type of measure report. This may be an individual report,
+  /// which provides the score for the measure for an individual member of the
+  /// population; a subject-listing, which returns the list of members that meet
+  /// the various criteria in the measure; a summary report, which returns a
+  /// population count for each of the criteria in the measure; or a
+  /// data-collection, which enables the MeasureReport to be used to exchange
+  ///  the data-of-interest for a quality measure.
   FhirCode? get type;
   @override
 
   /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
-  @HiveField(16)
   Element? get typeElement;
   @override
 
   /// [measure] A reference to the Measure that was calculated to produce this
   ///  report.
-  @HiveField(17)
-  Canonical get measure;
+  FhirCanonical get measure;
   @override
 
   /// [subject] Optional subject identifying the individual or individuals the
   ///  report is for.
-  @HiveField(18)
   Reference? get subject;
   @override
 
   /// [date] The date this measure report was generated.
-  @HiveField(19)
   FhirDateTime? get date;
   @override
 
   /// [dateElement] Extensions for date
   @JsonKey(name: '_date')
-  @HiveField(20)
   Element? get dateElement;
   @override
 
   /// [reporter] The individual, location, or organization that is reporting
   ///  the data.
-  @HiveField(21)
   Reference? get reporter;
   @override
 
   /// [period] The reporting period for which the report was calculated.
-  @HiveField(22)
   Period get period;
   @override
 
   /// [improvementNotation] Whether improvement in the measure is noted by an
   ///  increase or decrease in the measure score.
-  @HiveField(23)
   CodeableConcept? get improvementNotation;
   @override
 
   /// [group] The results of the calculation, one for each population group in
   ///  the measure.
-  @HiveField(24)
   List<MeasureReportGroup>? get group;
   @override
 
   /// [evaluatedResource] A reference to a Bundle containing the Resources that
   ///  were used in the calculation of this measure.
-  @HiveField(25)
   List<Reference>? get evaluatedResource;
   @override
   @JsonKey(ignore: true)
@@ -7885,7 +7180,6 @@ MeasureReportGroup _$MeasureReportGroupFromJson(Map<String, dynamic> json) {
 mixin _$MeasureReportGroup {
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
-  @HiveField(0)
   String? get id => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -7894,7 +7188,6 @@ mixin _$MeasureReportGroup {
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
-  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
@@ -7911,30 +7204,25 @@ mixin _$MeasureReportGroup {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
-  @HiveField(2)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
   /// [code] The meaning of the population group as defined in the measure
   ///  definition.
-  @HiveField(3)
   CodeableConcept? get code => throw _privateConstructorUsedError;
 
   /// [population] The populations that make up the population group, one for
   ///  each type of population appropriate for the measure.
-  @HiveField(4)
   List<MeasureReportPopulation>? get population =>
       throw _privateConstructorUsedError;
 
   /// [measureScore] The measure score for this population group, calculated as
   /// appropriate for the measure type and scoring method, and based on the
   ///  contents of the populations defined in the group.
-  @HiveField(5)
   Quantity? get measureScore => throw _privateConstructorUsedError;
 
   /// [stratifier] When a measure includes multiple stratifiers, there will be
   ///  a stratifier group for each stratifier defined by the measure.
-  @HiveField(6)
   List<MeasureReportStratifier>? get stratifier =>
       throw _privateConstructorUsedError;
 
@@ -7951,13 +7239,13 @@ abstract class $MeasureReportGroupCopyWith<$Res> {
       _$MeasureReportGroupCopyWithImpl<$Res, MeasureReportGroup>;
   @useResult
   $Res call(
-      {@HiveField(0) String? id,
-      @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      @HiveField(2) List<FhirExtension>? modifierExtension,
-      @HiveField(3) CodeableConcept? code,
-      @HiveField(4) List<MeasureReportPopulation>? population,
-      @HiveField(5) Quantity? measureScore,
-      @HiveField(6) List<MeasureReportStratifier>? stratifier});
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept? code,
+      List<MeasureReportPopulation>? population,
+      Quantity? measureScore,
+      List<MeasureReportStratifier>? stratifier});
 
   $CodeableConceptCopyWith<$Res>? get code;
   $QuantityCopyWith<$Res>? get measureScore;
@@ -8050,13 +7338,13 @@ abstract class _$$_MeasureReportGroupCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@HiveField(0) String? id,
-      @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      @HiveField(2) List<FhirExtension>? modifierExtension,
-      @HiveField(3) CodeableConcept? code,
-      @HiveField(4) List<MeasureReportPopulation>? population,
-      @HiveField(5) Quantity? measureScore,
-      @HiveField(6) List<MeasureReportStratifier>? stratifier});
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept? code,
+      List<MeasureReportPopulation>? population,
+      Quantity? measureScore,
+      List<MeasureReportStratifier>? stratifier});
 
   @override
   $CodeableConceptCopyWith<$Res>? get code;
@@ -8118,24 +7406,15 @@ class __$$_MeasureReportGroupCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@HiveType(typeId: 82)
 class _$_MeasureReportGroup extends _MeasureReportGroup {
   _$_MeasureReportGroup(
-      {@HiveField(0)
-          this.id,
-      @HiveField(1)
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      @HiveField(2)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(3)
-          this.code,
-      @HiveField(4)
-          final List<MeasureReportPopulation>? population,
-      @HiveField(5)
-          this.measureScore,
-      @HiveField(6)
-          final List<MeasureReportStratifier>? stratifier})
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      this.code,
+      final List<MeasureReportPopulation>? population,
+      this.measureScore,
+      final List<MeasureReportStratifier>? stratifier})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
         _population = population,
@@ -8148,7 +7427,6 @@ class _$_MeasureReportGroup extends _MeasureReportGroup {
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   @override
-  @HiveField(0)
   final String? id;
 
   /// [extension_] May be used to represent additional information that is not
@@ -8166,7 +7444,6 @@ class _$_MeasureReportGroup extends _MeasureReportGroup {
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   @override
-  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
     final value = _extension_;
@@ -8205,7 +7482,6 @@ class _$_MeasureReportGroup extends _MeasureReportGroup {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   @override
-  @HiveField(2)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -8218,7 +7494,6 @@ class _$_MeasureReportGroup extends _MeasureReportGroup {
   /// [code] The meaning of the population group as defined in the measure
   ///  definition.
   @override
-  @HiveField(3)
   final CodeableConcept? code;
 
   /// [population] The populations that make up the population group, one for
@@ -8228,7 +7503,6 @@ class _$_MeasureReportGroup extends _MeasureReportGroup {
   /// [population] The populations that make up the population group, one for
   ///  each type of population appropriate for the measure.
   @override
-  @HiveField(4)
   List<MeasureReportPopulation>? get population {
     final value = _population;
     if (value == null) return null;
@@ -8241,7 +7515,6 @@ class _$_MeasureReportGroup extends _MeasureReportGroup {
   /// appropriate for the measure type and scoring method, and based on the
   ///  contents of the populations defined in the group.
   @override
-  @HiveField(5)
   final Quantity? measureScore;
 
   /// [stratifier] When a measure includes multiple stratifiers, there will be
@@ -8251,7 +7524,6 @@ class _$_MeasureReportGroup extends _MeasureReportGroup {
   /// [stratifier] When a measure includes multiple stratifiers, there will be
   ///  a stratifier group for each stratifier defined by the measure.
   @override
-  @HiveField(6)
   List<MeasureReportStratifier>? get stratifier {
     final value = _stratifier;
     if (value == null) return null;
@@ -8313,22 +7585,13 @@ class _$_MeasureReportGroup extends _MeasureReportGroup {
 
 abstract class _MeasureReportGroup extends MeasureReportGroup {
   factory _MeasureReportGroup(
-          {@HiveField(0)
-              final String? id,
-          @HiveField(1)
-          @JsonKey(name: 'extension')
-              final List<FhirExtension>? extension_,
-          @HiveField(2)
-              final List<FhirExtension>? modifierExtension,
-          @HiveField(3)
-              final CodeableConcept? code,
-          @HiveField(4)
-              final List<MeasureReportPopulation>? population,
-          @HiveField(5)
-              final Quantity? measureScore,
-          @HiveField(6)
-              final List<MeasureReportStratifier>? stratifier}) =
-      _$_MeasureReportGroup;
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final CodeableConcept? code,
+      final List<MeasureReportPopulation>? population,
+      final Quantity? measureScore,
+      final List<MeasureReportStratifier>? stratifier}) = _$_MeasureReportGroup;
   _MeasureReportGroup._() : super._();
 
   factory _MeasureReportGroup.fromJson(Map<String, dynamic> json) =
@@ -8338,7 +7601,6 @@ abstract class _MeasureReportGroup extends MeasureReportGroup {
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
-  @HiveField(0)
   String? get id;
   @override
 
@@ -8348,7 +7610,6 @@ abstract class _MeasureReportGroup extends MeasureReportGroup {
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
-  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
@@ -8366,32 +7627,27 @@ abstract class _MeasureReportGroup extends MeasureReportGroup {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
-  @HiveField(2)
   List<FhirExtension>? get modifierExtension;
   @override
 
   /// [code] The meaning of the population group as defined in the measure
   ///  definition.
-  @HiveField(3)
   CodeableConcept? get code;
   @override
 
   /// [population] The populations that make up the population group, one for
   ///  each type of population appropriate for the measure.
-  @HiveField(4)
   List<MeasureReportPopulation>? get population;
   @override
 
   /// [measureScore] The measure score for this population group, calculated as
   /// appropriate for the measure type and scoring method, and based on the
   ///  contents of the populations defined in the group.
-  @HiveField(5)
   Quantity? get measureScore;
   @override
 
   /// [stratifier] When a measure includes multiple stratifiers, there will be
   ///  a stratifier group for each stratifier defined by the measure.
-  @HiveField(6)
   List<MeasureReportStratifier>? get stratifier;
   @override
   @JsonKey(ignore: true)
@@ -8439,7 +7695,7 @@ mixin _$MeasureReportPopulation {
   CodeableConcept? get code => throw _privateConstructorUsedError;
 
   /// [count] The number of members of the population.
-  Integer? get count => throw _privateConstructorUsedError;
+  FhirInteger? get count => throw _privateConstructorUsedError;
 
   /// [countElement] Extensions for count
   @JsonKey(name: '_count')
@@ -8466,7 +7722,7 @@ abstract class $MeasureReportPopulationCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept? code,
-      Integer? count,
+      FhirInteger? count,
       @JsonKey(name: '_count') Element? countElement,
       Reference? subjectResults});
 
@@ -8517,7 +7773,7 @@ class _$MeasureReportPopulationCopyWithImpl<$Res,
       count: freezed == count
           ? _value.count
           : count // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       countElement: freezed == countElement
           ? _value.countElement
           : countElement // ignore: cast_nullable_to_non_nullable
@@ -8579,7 +7835,7 @@ abstract class _$$_MeasureReportPopulationCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept? code,
-      Integer? count,
+      FhirInteger? count,
       @JsonKey(name: '_count') Element? countElement,
       Reference? subjectResults});
 
@@ -8631,7 +7887,7 @@ class __$$_MeasureReportPopulationCopyWithImpl<$Res>
       count: freezed == count
           ? _value.count
           : count // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       countElement: freezed == countElement
           ? _value.countElement
           : countElement // ignore: cast_nullable_to_non_nullable
@@ -8735,7 +7991,7 @@ class _$_MeasureReportPopulation extends _MeasureReportPopulation {
 
   /// [count] The number of members of the population.
   @override
-  final Integer? count;
+  final FhirInteger? count;
 
   /// [countElement] Extensions for count
   @override
@@ -8804,7 +8060,7 @@ abstract class _MeasureReportPopulation extends MeasureReportPopulation {
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final CodeableConcept? code,
-      final Integer? count,
+      final FhirInteger? count,
       @JsonKey(name: '_count') final Element? countElement,
       final Reference? subjectResults}) = _$_MeasureReportPopulation;
   _MeasureReportPopulation._() : super._();
@@ -8850,7 +8106,7 @@ abstract class _MeasureReportPopulation extends MeasureReportPopulation {
   @override
 
   /// [count] The number of members of the population.
-  Integer? get count;
+  FhirInteger? get count;
   @override
 
   /// [countElement] Extensions for count
@@ -10163,7 +9419,7 @@ mixin _$MeasureReportPopulation1 {
   CodeableConcept? get code => throw _privateConstructorUsedError;
 
   /// [count] The number of members of the population in this stratum.
-  Integer? get count => throw _privateConstructorUsedError;
+  FhirInteger? get count => throw _privateConstructorUsedError;
 
   /// [countElement] Extensions for count
   @JsonKey(name: '_count')
@@ -10191,7 +9447,7 @@ abstract class $MeasureReportPopulation1CopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept? code,
-      Integer? count,
+      FhirInteger? count,
       @JsonKey(name: '_count') Element? countElement,
       Reference? subjectResults});
 
@@ -10242,7 +9498,7 @@ class _$MeasureReportPopulation1CopyWithImpl<$Res,
       count: freezed == count
           ? _value.count
           : count // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       countElement: freezed == countElement
           ? _value.countElement
           : countElement // ignore: cast_nullable_to_non_nullable
@@ -10305,7 +9561,7 @@ abstract class _$$_MeasureReportPopulation1CopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept? code,
-      Integer? count,
+      FhirInteger? count,
       @JsonKey(name: '_count') Element? countElement,
       Reference? subjectResults});
 
@@ -10357,7 +9613,7 @@ class __$$_MeasureReportPopulation1CopyWithImpl<$Res>
       count: freezed == count
           ? _value.count
           : count // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       countElement: freezed == countElement
           ? _value.countElement
           : countElement // ignore: cast_nullable_to_non_nullable
@@ -10461,7 +9717,7 @@ class _$_MeasureReportPopulation1 extends _MeasureReportPopulation1 {
 
   /// [count] The number of members of the population in this stratum.
   @override
-  final Integer? count;
+  final FhirInteger? count;
 
   /// [countElement] Extensions for count
   @override
@@ -10530,7 +9786,7 @@ abstract class _MeasureReportPopulation1 extends MeasureReportPopulation1 {
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final CodeableConcept? code,
-      final Integer? count,
+      final FhirInteger? count,
       @JsonKey(name: '_count') final Element? countElement,
       final Reference? subjectResults}) = _$_MeasureReportPopulation1;
   _MeasureReportPopulation1._() : super._();
@@ -10576,7 +9832,7 @@ abstract class _MeasureReportPopulation1 extends MeasureReportPopulation1 {
   @override
 
   /// [count] The number of members of the population in this stratum.
-  Integer? get count;
+  FhirInteger? get count;
   @override
 
   /// [countElement] Extensions for count
@@ -10601,39 +9857,32 @@ TestReport _$TestReportFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$TestReport {
   @JsonKey(unknownEnumValue: R4ResourceType.TestReport)
-  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
-  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  @HiveField(2)
   FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
-  @HiveField(4)
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  @HiveField(5)
   FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
-  @HiveField(6)
   Element? get languageElement => throw _privateConstructorUsedError;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -10642,14 +9891,12 @@ mixin _$TestReport {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
-  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
 
   /// [contained] These resources do not have an independent existence apart
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
-  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -10659,7 +9906,6 @@ mixin _$TestReport {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
-  @HiveField(9)
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [modifierExtension] May be used to represent additional information that
@@ -10675,97 +9921,78 @@ mixin _$TestReport {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
   /// [identifier] Identifier for the TestScript assigned for external purposes
   ///  outside the context of FHIR.
-  @HiveField(11)
   Identifier? get identifier => throw _privateConstructorUsedError;
 
   /// [name] A free text natural language name identifying the executed
   ///  TestScript.
-  @HiveField(12)
   String? get name => throw _privateConstructorUsedError;
 
   /// [nameElement] Extensions for name
   @JsonKey(name: '_name')
-  @HiveField(13)
   Element? get nameElement => throw _privateConstructorUsedError;
 
   /// [status] The current state of this test report.
-  @HiveField(14)
   FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
-  @HiveField(15)
   Element? get statusElement => throw _privateConstructorUsedError;
 
   /// [testScript] Ideally this is an absolute URL that is used to identify the
   /// version-specific TestScript that was executed, matching the
   ///  `TestScript.url`.
-  @HiveField(16)
   Reference get testScript => throw _privateConstructorUsedError;
 
   /// [result] The overall result from the execution of the TestScript.
-  @HiveField(17)
   FhirCode? get result => throw _privateConstructorUsedError;
 
   /// [resultElement] Extensions for result
   @JsonKey(name: '_result')
-  @HiveField(18)
   Element? get resultElement => throw _privateConstructorUsedError;
 
   /// [score] The final score (percentage of tests passed) resulting from the
   ///  execution of the TestScript.
-  @HiveField(19)
   FhirDecimal? get score => throw _privateConstructorUsedError;
 
   /// [scoreElement] Extensions for score
   @JsonKey(name: '_score')
-  @HiveField(20)
   Element? get scoreElement => throw _privateConstructorUsedError;
 
   /// [tester] Name of the tester producing this report (Organization or
   ///  individual).
-  @HiveField(21)
   String? get tester => throw _privateConstructorUsedError;
 
   /// [testerElement] Extensions for tester
   @JsonKey(name: '_tester')
-  @HiveField(22)
   Element? get testerElement => throw _privateConstructorUsedError;
 
   /// [issued] When the TestScript was executed and this TestReport was
   ///  generated.
-  @HiveField(23)
   FhirDateTime? get issued => throw _privateConstructorUsedError;
 
   /// [issuedElement] Extensions for issued
   @JsonKey(name: '_issued')
-  @HiveField(24)
   Element? get issuedElement => throw _privateConstructorUsedError;
 
   /// [participant] A participant in the test execution, either the execution
   ///  engine, a client, or a server.
-  @HiveField(25)
   List<TestReportParticipant>? get participant =>
       throw _privateConstructorUsedError;
 
   /// [setup] The results of the series of required setup operations before the
   ///  tests were executed.
-  @HiveField(26)
   TestReportSetup? get setup => throw _privateConstructorUsedError;
 
   /// [test] A test executed from the test script.
-  @HiveField(27)
   List<TestReportTest>? get test => throw _privateConstructorUsedError;
 
   /// [teardown] The results of the series of operations required to clean up
   ///  after all the tests were executed (successfully or otherwise).
-  @HiveField(28)
   TestReportTeardown? get teardown => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -10782,73 +10009,44 @@ abstract class $TestReportCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.TestReport)
-      @HiveField(0)
           R4ResourceType resourceType,
-      @HiveField(1)
-          String? id,
-      @HiveField(2)
-          FhirMeta? meta,
-      @HiveField(3)
-          FhirUri? implicitRules,
+      String? id,
+      FhirMeta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           Element? implicitRulesElement,
-      @HiveField(5)
-          FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           Element? languageElement,
-      @HiveField(7)
-          Narrative? text,
-      @HiveField(8)
-          List<Resource>? contained,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           List<FhirExtension>? extension_,
-      @HiveField(10)
-          List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          Identifier? identifier,
-      @HiveField(12)
-          String? name,
+      List<FhirExtension>? modifierExtension,
+      Identifier? identifier,
+      String? name,
       @JsonKey(name: '_name')
-      @HiveField(13)
           Element? nameElement,
-      @HiveField(14)
-          FhirCode? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
-      @HiveField(15)
           Element? statusElement,
-      @HiveField(16)
-          Reference testScript,
-      @HiveField(17)
-          FhirCode? result,
+      Reference testScript,
+      FhirCode? result,
       @JsonKey(name: '_result')
-      @HiveField(18)
           Element? resultElement,
-      @HiveField(19)
-          FhirDecimal? score,
+      FhirDecimal? score,
       @JsonKey(name: '_score')
-      @HiveField(20)
           Element? scoreElement,
-      @HiveField(21)
-          String? tester,
+      String? tester,
       @JsonKey(name: '_tester')
-      @HiveField(22)
           Element? testerElement,
-      @HiveField(23)
-          FhirDateTime? issued,
+      FhirDateTime? issued,
       @JsonKey(name: '_issued')
-      @HiveField(24)
           Element? issuedElement,
-      @HiveField(25)
-          List<TestReportParticipant>? participant,
-      @HiveField(26)
-          TestReportSetup? setup,
-      @HiveField(27)
-          List<TestReportTest>? test,
-      @HiveField(28)
-          TestReportTeardown? teardown});
+      List<TestReportParticipant>? participant,
+      TestReportSetup? setup,
+      List<TestReportTest>? test,
+      TestReportTeardown? teardown});
 
   $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -10933,7 +10131,7 @@ class _$TestReportCopyWithImpl<$Res, $Val extends TestReport>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -10969,7 +10167,7 @@ class _$TestReportCopyWithImpl<$Res, $Val extends TestReport>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -10981,7 +10179,7 @@ class _$TestReportCopyWithImpl<$Res, $Val extends TestReport>
       result: freezed == result
           ? _value.result
           : result // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       resultElement: freezed == resultElement
           ? _value.resultElement
           : resultElement // ignore: cast_nullable_to_non_nullable
@@ -10989,7 +10187,7 @@ class _$TestReportCopyWithImpl<$Res, $Val extends TestReport>
       score: freezed == score
           ? _value.score
           : score // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       scoreElement: freezed == scoreElement
           ? _value.scoreElement
           : scoreElement // ignore: cast_nullable_to_non_nullable
@@ -11204,73 +10402,44 @@ abstract class _$$_TestReportCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.TestReport)
-      @HiveField(0)
           R4ResourceType resourceType,
-      @HiveField(1)
-          String? id,
-      @HiveField(2)
-          FhirMeta? meta,
-      @HiveField(3)
-          FhirUri? implicitRules,
+      String? id,
+      FhirMeta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           Element? implicitRulesElement,
-      @HiveField(5)
-          FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           Element? languageElement,
-      @HiveField(7)
-          Narrative? text,
-      @HiveField(8)
-          List<Resource>? contained,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           List<FhirExtension>? extension_,
-      @HiveField(10)
-          List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          Identifier? identifier,
-      @HiveField(12)
-          String? name,
+      List<FhirExtension>? modifierExtension,
+      Identifier? identifier,
+      String? name,
       @JsonKey(name: '_name')
-      @HiveField(13)
           Element? nameElement,
-      @HiveField(14)
-          FhirCode? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
-      @HiveField(15)
           Element? statusElement,
-      @HiveField(16)
-          Reference testScript,
-      @HiveField(17)
-          FhirCode? result,
+      Reference testScript,
+      FhirCode? result,
       @JsonKey(name: '_result')
-      @HiveField(18)
           Element? resultElement,
-      @HiveField(19)
-          FhirDecimal? score,
+      FhirDecimal? score,
       @JsonKey(name: '_score')
-      @HiveField(20)
           Element? scoreElement,
-      @HiveField(21)
-          String? tester,
+      String? tester,
       @JsonKey(name: '_tester')
-      @HiveField(22)
           Element? testerElement,
-      @HiveField(23)
-          FhirDateTime? issued,
+      FhirDateTime? issued,
       @JsonKey(name: '_issued')
-      @HiveField(24)
           Element? issuedElement,
-      @HiveField(25)
-          List<TestReportParticipant>? participant,
-      @HiveField(26)
-          TestReportSetup? setup,
-      @HiveField(27)
-          List<TestReportTest>? test,
-      @HiveField(28)
-          TestReportTeardown? teardown});
+      List<TestReportParticipant>? participant,
+      TestReportSetup? setup,
+      List<TestReportTest>? test,
+      TestReportTeardown? teardown});
 
   @override
   $FhirMetaCopyWith<$Res>? get meta;
@@ -11367,7 +10536,7 @@ class __$$_TestReportCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -11403,7 +10572,7 @@ class __$$_TestReportCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -11415,7 +10584,7 @@ class __$$_TestReportCopyWithImpl<$Res>
       result: freezed == result
           ? _value.result
           : result // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       resultElement: freezed == resultElement
           ? _value.resultElement
           : resultElement // ignore: cast_nullable_to_non_nullable
@@ -11423,7 +10592,7 @@ class __$$_TestReportCopyWithImpl<$Res>
       score: freezed == score
           ? _value.score
           : score // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       scoreElement: freezed == scoreElement
           ? _value.scoreElement
           : scoreElement // ignore: cast_nullable_to_non_nullable
@@ -11466,77 +10635,47 @@ class __$$_TestReportCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@HiveType(typeId: 83)
 class _$_TestReport extends _TestReport {
   _$_TestReport(
       {@JsonKey(unknownEnumValue: R4ResourceType.TestReport)
-      @HiveField(0)
           this.resourceType = R4ResourceType.TestReport,
-      @HiveField(1)
-          this.id,
-      @HiveField(2)
-          this.meta,
-      @HiveField(3)
-          this.implicitRules,
+      this.id,
+      this.meta,
+      this.implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           this.implicitRulesElement,
-      @HiveField(5)
-          this.language,
+      this.language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           this.languageElement,
-      @HiveField(7)
-          this.text,
-      @HiveField(8)
-          final List<Resource>? contained,
+      this.text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           final List<FhirExtension>? extension_,
-      @HiveField(10)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          this.identifier,
-      @HiveField(12)
-          this.name,
+      final List<FhirExtension>? modifierExtension,
+      this.identifier,
+      this.name,
       @JsonKey(name: '_name')
-      @HiveField(13)
           this.nameElement,
-      @HiveField(14)
-          this.status,
+      this.status,
       @JsonKey(name: '_status')
-      @HiveField(15)
           this.statusElement,
-      @HiveField(16)
-          required this.testScript,
-      @HiveField(17)
-          this.result,
+      required this.testScript,
+      this.result,
       @JsonKey(name: '_result')
-      @HiveField(18)
           this.resultElement,
-      @HiveField(19)
-          this.score,
+      this.score,
       @JsonKey(name: '_score')
-      @HiveField(20)
           this.scoreElement,
-      @HiveField(21)
-          this.tester,
+      this.tester,
       @JsonKey(name: '_tester')
-      @HiveField(22)
           this.testerElement,
-      @HiveField(23)
-          this.issued,
+      this.issued,
       @JsonKey(name: '_issued')
-      @HiveField(24)
           this.issuedElement,
-      @HiveField(25)
-          final List<TestReportParticipant>? participant,
-      @HiveField(26)
-          this.setup,
-      @HiveField(27)
-          final List<TestReportTest>? test,
-      @HiveField(28)
-          this.teardown})
+      final List<TestReportParticipant>? participant,
+      this.setup,
+      final List<TestReportTest>? test,
+      this.teardown})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -11549,20 +10688,17 @@ class _$_TestReport extends _TestReport {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.TestReport)
-  @HiveField(0)
   final R4ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
   @override
-  @HiveField(1)
   final String? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
-  @HiveField(2)
   final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -11570,24 +10706,20 @@ class _$_TestReport extends _TestReport {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   @override
-  @HiveField(3)
   final FhirUri? implicitRules;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
-  @HiveField(4)
   final Element? implicitRulesElement;
 
   /// [language] The base language in which the resource is written.
   @override
-  @HiveField(5)
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] Extensions for language
   @override
   @JsonKey(name: '_language')
-  @HiveField(6)
   final Element? languageElement;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -11597,7 +10729,6 @@ class _$_TestReport extends _TestReport {
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
   @override
-  @HiveField(7)
   final Narrative? text;
 
   /// [contained] These resources do not have an independent existence apart
@@ -11611,7 +10742,6 @@ class _$_TestReport extends _TestReport {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   @override
-  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -11636,7 +10766,6 @@ class _$_TestReport extends _TestReport {
   ///  as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
-  @HiveField(9)
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
@@ -11674,7 +10803,6 @@ class _$_TestReport extends _TestReport {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   @override
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -11687,84 +10815,70 @@ class _$_TestReport extends _TestReport {
   /// [identifier] Identifier for the TestScript assigned for external purposes
   ///  outside the context of FHIR.
   @override
-  @HiveField(11)
   final Identifier? identifier;
 
   /// [name] A free text natural language name identifying the executed
   ///  TestScript.
   @override
-  @HiveField(12)
   final String? name;
 
   /// [nameElement] Extensions for name
   @override
   @JsonKey(name: '_name')
-  @HiveField(13)
   final Element? nameElement;
 
   /// [status] The current state of this test report.
   @override
-  @HiveField(14)
-  final Code? status;
+  final FhirCode? status;
 
   /// [statusElement] Extensions for status
   @override
   @JsonKey(name: '_status')
-  @HiveField(15)
   final Element? statusElement;
 
   /// [testScript] Ideally this is an absolute URL that is used to identify the
   /// version-specific TestScript that was executed, matching the
   ///  `TestScript.url`.
   @override
-  @HiveField(16)
   final Reference testScript;
 
   /// [result] The overall result from the execution of the TestScript.
   @override
-  @HiveField(17)
-  final Code? result;
+  final FhirCode? result;
 
   /// [resultElement] Extensions for result
   @override
   @JsonKey(name: '_result')
-  @HiveField(18)
   final Element? resultElement;
 
   /// [score] The final score (percentage of tests passed) resulting from the
   ///  execution of the TestScript.
   @override
-  @HiveField(19)
-  final Decimal? score;
+  final FhirDecimal? score;
 
   /// [scoreElement] Extensions for score
   @override
   @JsonKey(name: '_score')
-  @HiveField(20)
   final Element? scoreElement;
 
   /// [tester] Name of the tester producing this report (Organization or
   ///  individual).
   @override
-  @HiveField(21)
   final String? tester;
 
   /// [testerElement] Extensions for tester
   @override
   @JsonKey(name: '_tester')
-  @HiveField(22)
   final Element? testerElement;
 
   /// [issued] When the TestScript was executed and this TestReport was
   ///  generated.
   @override
-  @HiveField(23)
   final FhirDateTime? issued;
 
   /// [issuedElement] Extensions for issued
   @override
   @JsonKey(name: '_issued')
-  @HiveField(24)
   final Element? issuedElement;
 
   /// [participant] A participant in the test execution, either the execution
@@ -11774,7 +10888,6 @@ class _$_TestReport extends _TestReport {
   /// [participant] A participant in the test execution, either the execution
   ///  engine, a client, or a server.
   @override
-  @HiveField(25)
   List<TestReportParticipant>? get participant {
     final value = _participant;
     if (value == null) return null;
@@ -11786,7 +10899,6 @@ class _$_TestReport extends _TestReport {
   /// [setup] The results of the series of required setup operations before the
   ///  tests were executed.
   @override
-  @HiveField(26)
   final TestReportSetup? setup;
 
   /// [test] A test executed from the test script.
@@ -11794,7 +10906,6 @@ class _$_TestReport extends _TestReport {
 
   /// [test] A test executed from the test script.
   @override
-  @HiveField(27)
   List<TestReportTest>? get test {
     final value = _test;
     if (value == null) return null;
@@ -11806,7 +10917,6 @@ class _$_TestReport extends _TestReport {
   /// [teardown] The results of the series of operations required to clean up
   ///  after all the tests were executed (successfully or otherwise).
   @override
-  @HiveField(28)
   final TestReportTeardown? teardown;
 
   @override
@@ -11920,73 +11030,44 @@ class _$_TestReport extends _TestReport {
 abstract class _TestReport extends TestReport {
   factory _TestReport(
       {@JsonKey(unknownEnumValue: R4ResourceType.TestReport)
-      @HiveField(0)
           final R4ResourceType resourceType,
-      @HiveField(1)
-          final String? id,
-      @HiveField(2)
-          final FhirMeta? meta,
-      @HiveField(3)
-          final FhirUri? implicitRules,
+      final String? id,
+      final FhirMeta? meta,
+      final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           final Element? implicitRulesElement,
-      @HiveField(5)
-          final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           final Element? languageElement,
-      @HiveField(7)
-          final Narrative? text,
-      @HiveField(8)
-          final List<Resource>? contained,
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           final List<FhirExtension>? extension_,
-      @HiveField(10)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          final Identifier? identifier,
-      @HiveField(12)
-          final String? name,
+      final List<FhirExtension>? modifierExtension,
+      final Identifier? identifier,
+      final String? name,
       @JsonKey(name: '_name')
-      @HiveField(13)
           final Element? nameElement,
-      @HiveField(14)
-          final Code? status,
+      final FhirCode? status,
       @JsonKey(name: '_status')
-      @HiveField(15)
           final Element? statusElement,
-      @HiveField(16)
-          required final Reference testScript,
-      @HiveField(17)
-          final Code? result,
+      required final Reference testScript,
+      final FhirCode? result,
       @JsonKey(name: '_result')
-      @HiveField(18)
           final Element? resultElement,
-      @HiveField(19)
-          final Decimal? score,
+      final FhirDecimal? score,
       @JsonKey(name: '_score')
-      @HiveField(20)
           final Element? scoreElement,
-      @HiveField(21)
-          final String? tester,
+      final String? tester,
       @JsonKey(name: '_tester')
-      @HiveField(22)
           final Element? testerElement,
-      @HiveField(23)
-          final FhirDateTime? issued,
+      final FhirDateTime? issued,
       @JsonKey(name: '_issued')
-      @HiveField(24)
           final Element? issuedElement,
-      @HiveField(25)
-          final List<TestReportParticipant>? participant,
-      @HiveField(26)
-          final TestReportSetup? setup,
-      @HiveField(27)
-          final List<TestReportTest>? test,
-      @HiveField(28)
-          final TestReportTeardown? teardown}) = _$_TestReport;
+      final List<TestReportParticipant>? participant,
+      final TestReportSetup? setup,
+      final List<TestReportTest>? test,
+      final TestReportTeardown? teardown}) = _$_TestReport;
   _TestReport._() : super._();
 
   factory _TestReport.fromJson(Map<String, dynamic> json) =
@@ -11994,20 +11075,17 @@ abstract class _TestReport extends TestReport {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.TestReport)
-  @HiveField(0)
   R4ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
-  @HiveField(1)
   String? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  @HiveField(2)
   FhirMeta? get meta;
   @override
 
@@ -12015,24 +11093,20 @@ abstract class _TestReport extends TestReport {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  @HiveField(3)
   FhirUri? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
-  @HiveField(4)
   Element? get implicitRulesElement;
   @override
 
   /// [language] The base language in which the resource is written.
-  @HiveField(5)
   FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
-  @HiveField(6)
   Element? get languageElement;
   @override
 
@@ -12042,7 +11116,6 @@ abstract class _TestReport extends TestReport {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
-  @HiveField(7)
   Narrative? get text;
   @override
 
@@ -12050,7 +11123,6 @@ abstract class _TestReport extends TestReport {
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
-  @HiveField(8)
   List<Resource>? get contained;
   @override
 
@@ -12061,7 +11133,6 @@ abstract class _TestReport extends TestReport {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
-  @HiveField(9)
   List<FhirExtension>? get extension_;
   @override
 
@@ -12078,113 +11149,94 @@ abstract class _TestReport extends TestReport {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
 
   /// [identifier] Identifier for the TestScript assigned for external purposes
   ///  outside the context of FHIR.
-  @HiveField(11)
   Identifier? get identifier;
   @override
 
   /// [name] A free text natural language name identifying the executed
   ///  TestScript.
-  @HiveField(12)
   String? get name;
   @override
 
   /// [nameElement] Extensions for name
   @JsonKey(name: '_name')
-  @HiveField(13)
   Element? get nameElement;
   @override
 
   /// [status] The current state of this test report.
-  @HiveField(14)
   FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
-  @HiveField(15)
   Element? get statusElement;
   @override
 
   /// [testScript] Ideally this is an absolute URL that is used to identify the
   /// version-specific TestScript that was executed, matching the
   ///  `TestScript.url`.
-  @HiveField(16)
   Reference get testScript;
   @override
 
   /// [result] The overall result from the execution of the TestScript.
-  @HiveField(17)
   FhirCode? get result;
   @override
 
   /// [resultElement] Extensions for result
   @JsonKey(name: '_result')
-  @HiveField(18)
   Element? get resultElement;
   @override
 
   /// [score] The final score (percentage of tests passed) resulting from the
   ///  execution of the TestScript.
-  @HiveField(19)
   FhirDecimal? get score;
   @override
 
   /// [scoreElement] Extensions for score
   @JsonKey(name: '_score')
-  @HiveField(20)
   Element? get scoreElement;
   @override
 
   /// [tester] Name of the tester producing this report (Organization or
   ///  individual).
-  @HiveField(21)
   String? get tester;
   @override
 
   /// [testerElement] Extensions for tester
   @JsonKey(name: '_tester')
-  @HiveField(22)
   Element? get testerElement;
   @override
 
   /// [issued] When the TestScript was executed and this TestReport was
   ///  generated.
-  @HiveField(23)
   FhirDateTime? get issued;
   @override
 
   /// [issuedElement] Extensions for issued
   @JsonKey(name: '_issued')
-  @HiveField(24)
   Element? get issuedElement;
   @override
 
   /// [participant] A participant in the test execution, either the execution
   ///  engine, a client, or a server.
-  @HiveField(25)
   List<TestReportParticipant>? get participant;
   @override
 
   /// [setup] The results of the series of required setup operations before the
   ///  tests were executed.
-  @HiveField(26)
   TestReportSetup? get setup;
   @override
 
   /// [test] A test executed from the test script.
-  @HiveField(27)
   List<TestReportTest>? get test;
   @override
 
   /// [teardown] The results of the series of operations required to clean up
   ///  after all the tests were executed (successfully or otherwise).
-  @HiveField(28)
   TestReportTeardown? get teardown;
   @override
   @JsonKey(ignore: true)
@@ -12317,7 +11369,7 @@ class _$TestReportParticipantCopyWithImpl<$Res,
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       typeElement: freezed == typeElement
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -12442,7 +11494,7 @@ class __$$_TestReportParticipantCopyWithImpl<$Res>
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       typeElement: freezed == typeElement
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -12556,7 +11608,7 @@ class _$_TestReportParticipant extends _TestReportParticipant {
 
   /// [type] The type of participant.
   @override
-  final Code? type;
+  final FhirCode? type;
 
   /// [typeElement] Extensions for type
   @override
@@ -12641,7 +11693,7 @@ abstract class _TestReportParticipant extends TestReportParticipant {
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
-          final Code? type,
+          final FhirCode? type,
           @JsonKey(name: '_type') final Element? typeElement,
           final FhirUri? uri,
           @JsonKey(name: '_uri') final Element? uriElement,
@@ -13489,7 +12541,7 @@ mixin _$TestReportOperation {
   Element? get resultElement => throw _privateConstructorUsedError;
 
   /// [message] An explanatory message associated with the result.
-  Markdown? get message => throw _privateConstructorUsedError;
+  FhirMarkdown? get message => throw _privateConstructorUsedError;
 
   /// [messageElement] Extensions for message
   @JsonKey(name: '_message')
@@ -13520,7 +12572,7 @@ abstract class $TestReportOperationCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       FhirCode? result,
       @JsonKey(name: '_result') Element? resultElement,
-      Markdown? message,
+      FhirMarkdown? message,
       @JsonKey(name: '_message') Element? messageElement,
       FhirUri? detail,
       @JsonKey(name: '_detail') Element? detailElement});
@@ -13569,7 +12621,7 @@ class _$TestReportOperationCopyWithImpl<$Res, $Val extends TestReportOperation>
       result: freezed == result
           ? _value.result
           : result // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       resultElement: freezed == resultElement
           ? _value.resultElement
           : resultElement // ignore: cast_nullable_to_non_nullable
@@ -13577,7 +12629,7 @@ class _$TestReportOperationCopyWithImpl<$Res, $Val extends TestReportOperation>
       message: freezed == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       messageElement: freezed == messageElement
           ? _value.messageElement
           : messageElement // ignore: cast_nullable_to_non_nullable
@@ -13644,7 +12696,7 @@ abstract class _$$_TestReportOperationCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       FhirCode? result,
       @JsonKey(name: '_result') Element? resultElement,
-      Markdown? message,
+      FhirMarkdown? message,
       @JsonKey(name: '_message') Element? messageElement,
       FhirUri? detail,
       @JsonKey(name: '_detail') Element? detailElement});
@@ -13694,7 +12746,7 @@ class __$$_TestReportOperationCopyWithImpl<$Res>
       result: freezed == result
           ? _value.result
           : result // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       resultElement: freezed == resultElement
           ? _value.resultElement
           : resultElement // ignore: cast_nullable_to_non_nullable
@@ -13702,7 +12754,7 @@ class __$$_TestReportOperationCopyWithImpl<$Res>
       message: freezed == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       messageElement: freezed == messageElement
           ? _value.messageElement
           : messageElement // ignore: cast_nullable_to_non_nullable
@@ -13808,7 +12860,7 @@ class _$_TestReportOperation extends _TestReportOperation {
 
   /// [result] The result of this operation.
   @override
-  final Code? result;
+  final FhirCode? result;
 
   /// [resultElement] Extensions for result
   @override
@@ -13817,7 +12869,7 @@ class _$_TestReportOperation extends _TestReportOperation {
 
   /// [message] An explanatory message associated with the result.
   @override
-  final Markdown? message;
+  final FhirMarkdown? message;
 
   /// [messageElement] Extensions for message
   @override
@@ -13893,9 +12945,9 @@ abstract class _TestReportOperation extends TestReportOperation {
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
-          final Code? result,
+          final FhirCode? result,
           @JsonKey(name: '_result') final Element? resultElement,
-          final Markdown? message,
+          final FhirMarkdown? message,
           @JsonKey(name: '_message') final Element? messageElement,
           final FhirUri? detail,
           @JsonKey(name: '_detail') final Element? detailElement}) =
@@ -13948,7 +13000,7 @@ abstract class _TestReportOperation extends TestReportOperation {
   @override
 
   /// [message] An explanatory message associated with the result.
-  Markdown? get message;
+  FhirMarkdown? get message;
   @override
 
   /// [messageElement] Extensions for message
@@ -14012,7 +13064,7 @@ mixin _$TestReportAssert {
   Element? get resultElement => throw _privateConstructorUsedError;
 
   /// [message] An explanatory message associated with the result.
-  Markdown? get message => throw _privateConstructorUsedError;
+  FhirMarkdown? get message => throw _privateConstructorUsedError;
 
   /// [messageElement] Extensions for message
   @JsonKey(name: '_message')
@@ -14043,7 +13095,7 @@ abstract class $TestReportAssertCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       FhirCode? result,
       @JsonKey(name: '_result') Element? resultElement,
-      Markdown? message,
+      FhirMarkdown? message,
       @JsonKey(name: '_message') Element? messageElement,
       String? detail,
       @JsonKey(name: '_detail') Element? detailElement});
@@ -14092,7 +13144,7 @@ class _$TestReportAssertCopyWithImpl<$Res, $Val extends TestReportAssert>
       result: freezed == result
           ? _value.result
           : result // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       resultElement: freezed == resultElement
           ? _value.resultElement
           : resultElement // ignore: cast_nullable_to_non_nullable
@@ -14100,7 +13152,7 @@ class _$TestReportAssertCopyWithImpl<$Res, $Val extends TestReportAssert>
       message: freezed == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       messageElement: freezed == messageElement
           ? _value.messageElement
           : messageElement // ignore: cast_nullable_to_non_nullable
@@ -14167,7 +13219,7 @@ abstract class _$$_TestReportAssertCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       FhirCode? result,
       @JsonKey(name: '_result') Element? resultElement,
-      Markdown? message,
+      FhirMarkdown? message,
       @JsonKey(name: '_message') Element? messageElement,
       String? detail,
       @JsonKey(name: '_detail') Element? detailElement});
@@ -14217,7 +13269,7 @@ class __$$_TestReportAssertCopyWithImpl<$Res>
       result: freezed == result
           ? _value.result
           : result // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       resultElement: freezed == resultElement
           ? _value.resultElement
           : resultElement // ignore: cast_nullable_to_non_nullable
@@ -14225,7 +13277,7 @@ class __$$_TestReportAssertCopyWithImpl<$Res>
       message: freezed == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       messageElement: freezed == messageElement
           ? _value.messageElement
           : messageElement // ignore: cast_nullable_to_non_nullable
@@ -14331,7 +13383,7 @@ class _$_TestReportAssert extends _TestReportAssert {
 
   /// [result] The result of this assertion.
   @override
-  final Code? result;
+  final FhirCode? result;
 
   /// [resultElement] Extensions for result
   @override
@@ -14340,7 +13392,7 @@ class _$_TestReportAssert extends _TestReportAssert {
 
   /// [message] An explanatory message associated with the result.
   @override
-  final Markdown? message;
+  final FhirMarkdown? message;
 
   /// [messageElement] Extensions for message
   @override
@@ -14415,9 +13467,9 @@ abstract class _TestReportAssert extends TestReportAssert {
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
-          final Code? result,
+          final FhirCode? result,
           @JsonKey(name: '_result') final Element? resultElement,
-          final Markdown? message,
+          final FhirMarkdown? message,
           @JsonKey(name: '_message') final Element? messageElement,
           final String? detail,
           @JsonKey(name: '_detail') final Element? detailElement}) =
@@ -14470,7 +13522,7 @@ abstract class _TestReportAssert extends TestReportAssert {
   @override
 
   /// [message] An explanatory message associated with the result.
-  Markdown? get message;
+  FhirMarkdown? get message;
   @override
 
   /// [messageElement] Extensions for message
@@ -16061,39 +15113,32 @@ TestScript _$TestScriptFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$TestScript {
   @JsonKey(unknownEnumValue: R4ResourceType.TestScript)
-  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
-  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  @HiveField(2)
   FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
-  @HiveField(4)
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  @HiveField(5)
   FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
-  @HiveField(6)
   Element? get languageElement => throw _privateConstructorUsedError;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -16102,14 +15147,12 @@ mixin _$TestScript {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
-  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
 
   /// [contained] These resources do not have an independent existence apart
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
-  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -16119,7 +15162,6 @@ mixin _$TestScript {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
-  @HiveField(9)
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [modifierExtension] May be used to represent additional information that
@@ -16135,7 +15177,6 @@ mixin _$TestScript {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
@@ -16146,18 +15187,15 @@ mixin _$TestScript {
   /// test script is (or will be) published. This URL can be the target of a
   /// canonical reference. It SHALL remain the same when the test script is
   ///  stored on different servers.
-  @HiveField(11)
   FhirUri? get url => throw _privateConstructorUsedError;
 
   /// [urlElement] Extensions for url
   @JsonKey(name: '_url')
-  @HiveField(12)
   Element? get urlElement => throw _privateConstructorUsedError;
 
   /// [identifier] A formal identifier that is used to identify this test
   /// script when it is represented in other formats, or referenced in a
   ///  specification, model, design or an instance.
-  @HiveField(13)
   Identifier? get identifier => throw _privateConstructorUsedError;
 
   /// [version] The identifier that is used to identify this version of the
@@ -16167,90 +15205,73 @@ mixin _$TestScript {
   /// timestamp (e.g. yyyymmdd) if a managed version is not available. There is
   /// also no expectation that versions can be placed in a lexicographical
   ///  sequence.
-  @HiveField(14)
   String? get version => throw _privateConstructorUsedError;
 
   /// [versionElement] Extensions for version
   @JsonKey(name: '_version')
-  @HiveField(15)
   Element? get versionElement => throw _privateConstructorUsedError;
 
   /// [name] A natural language name identifying the test script. This name
   /// should be usable as an identifier for the module by machine processing
   ///  applications such as code generation.
-  @HiveField(16)
   String? get name => throw _privateConstructorUsedError;
 
   /// [nameElement] Extensions for name
   @JsonKey(name: '_name')
-  @HiveField(17)
   Element? get nameElement => throw _privateConstructorUsedError;
 
   /// [title] A short, descriptive, user-friendly title for the test script.
-  @HiveField(18)
   String? get title => throw _privateConstructorUsedError;
 
   /// [titleElement] Extensions for title
   @JsonKey(name: '_title')
-  @HiveField(19)
   Element? get titleElement => throw _privateConstructorUsedError;
 
   /// [status] The status of this test script. Enables tracking the life-cycle
   ///  of the content.
-  @HiveField(20)
   FhirCode? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
-  @HiveField(21)
   Element? get statusElement => throw _privateConstructorUsedError;
 
   /// [experimental] A Boolean value to indicate that this test script is
   /// authored for testing purposes (or education/evaluation/marketing) and is
   ///  not intended to be used for genuine usage.
-  @HiveField(22)
-  Boolean? get experimental => throw _privateConstructorUsedError;
+  FhirBoolean? get experimental => throw _privateConstructorUsedError;
 
   /// [experimentalElement] Extensions for experimental
   @JsonKey(name: '_experimental')
-  @HiveField(23)
   Element? get experimentalElement => throw _privateConstructorUsedError;
 
   /// [date] The date  (and optionally time) when the test script was
   /// published. The date must change when the business version changes and it
   /// must change if the status code changes. In addition, it should change when
   ///  the substantive content of the test script changes.
-  @HiveField(24)
   FhirDateTime? get date => throw _privateConstructorUsedError;
 
   /// [dateElement] Extensions for date
   @JsonKey(name: '_date')
-  @HiveField(25)
   Element? get dateElement => throw _privateConstructorUsedError;
 
   /// [publisher] The name of the organization or individual that published the
   ///  test script.
-  @HiveField(26)
   String? get publisher => throw _privateConstructorUsedError;
 
   /// [publisherElement] Extensions for publisher
   @JsonKey(name: '_publisher')
-  @HiveField(27)
   Element? get publisherElement => throw _privateConstructorUsedError;
 
   /// [contact] Contact details to assist a user in finding and communicating
   ///  with the publisher.
-  @HiveField(28)
   List<ContactDetail>? get contact => throw _privateConstructorUsedError;
 
   /// [description] A free text natural language description of the test script
   ///  from a consumer's perspective.
-  @HiveField(29)
-  Markdown? get description => throw _privateConstructorUsedError;
+  FhirMarkdown? get description => throw _privateConstructorUsedError;
 
   /// [descriptionElement] Extensions for description
   @JsonKey(name: '_description')
-  @HiveField(30)
   Element? get descriptionElement => throw _privateConstructorUsedError;
 
   /// [useContext] The content was developed with a focus and intent of
@@ -16258,76 +15279,61 @@ mixin _$TestScript {
   /// categories (gender, age, ...) or may be references to specific programs
   /// (insurance plans, studies, ...) and may be used to assist with indexing
   ///  and searching for appropriate test script instances.
-  @HiveField(31)
   List<UsageContext>? get useContext => throw _privateConstructorUsedError;
 
   /// [jurisdiction] A legal or geographic region in which the test script is
   ///  intended to be used.
-  @HiveField(32)
   List<CodeableConcept>? get jurisdiction => throw _privateConstructorUsedError;
 
   /// [purpose] Explanation of why this test script is needed and why it has
   ///  been designed as it has.
-  @HiveField(33)
-  Markdown? get purpose => throw _privateConstructorUsedError;
+  FhirMarkdown? get purpose => throw _privateConstructorUsedError;
 
   /// [purposeElement] Extensions for purpose
   @JsonKey(name: '_purpose')
-  @HiveField(34)
   Element? get purposeElement => throw _privateConstructorUsedError;
 
   /// [copyright] A copyright statement relating to the test script and/or its
   /// contents. Copyright statements are generally legal restrictions on the use
   ///  and publishing of the test script.
-  @HiveField(35)
-  Markdown? get copyright => throw _privateConstructorUsedError;
+  FhirMarkdown? get copyright => throw _privateConstructorUsedError;
 
   /// [copyrightElement] Extensions for copyright
   @JsonKey(name: '_copyright')
-  @HiveField(36)
   Element? get copyrightElement => throw _privateConstructorUsedError;
 
   /// [origin] An abstract server used in operations within this test script in
   ///  the origin element.
-  @HiveField(37)
   List<TestScriptOrigin>? get origin => throw _privateConstructorUsedError;
 
   /// [destination] An abstract server used in operations within this test
   ///  script in the destination element.
-  @HiveField(38)
   List<TestScriptDestination>? get destination =>
       throw _privateConstructorUsedError;
 
   /// [metadata] The required capability must exist and are assumed to function
   ///  correctly on the FHIR server being tested.
-  @HiveField(39)
-  TestScriptFhirMetadata? get metadata => throw _privateConstructorUsedError;
+  TestScriptMetadata? get metadata => throw _privateConstructorUsedError;
 
   /// [fixture] Fixture in the test script - by reference (uri). All fixtures
   ///  are required for the test script to execute.
-  @HiveField(40)
   List<TestScriptFixture>? get fixture => throw _privateConstructorUsedError;
 
   /// [profile] Reference to the profile to be used for validation.
-  @HiveField(41)
   List<Reference>? get profile => throw _privateConstructorUsedError;
 
   /// [variable] Variable is set based either on element value in response body
   ///  or on header field value in the response headers.
-  @HiveField(42)
   List<TestScriptVariable>? get variable => throw _privateConstructorUsedError;
 
   /// [setup] A series of required setup operations before tests are executed.
-  @HiveField(43)
   TestScriptSetup? get setup => throw _privateConstructorUsedError;
 
   /// [test] A test in this script.
-  @HiveField(44)
   List<TestScriptTest>? get test => throw _privateConstructorUsedError;
 
   /// [teardown] A series of operations required to clean up after all the
   ///  tests are executed (successfully or otherwise).
-  @HiveField(45)
   TestScriptTeardown? get teardown => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -16344,112 +15350,66 @@ abstract class $TestScriptCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.TestScript)
-      @HiveField(0)
           R4ResourceType resourceType,
-      @HiveField(1)
-          String? id,
-      @HiveField(2)
-          FhirMeta? meta,
-      @HiveField(3)
-          FhirUri? implicitRules,
+      String? id,
+      FhirMeta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           Element? implicitRulesElement,
-      @HiveField(5)
-          FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           Element? languageElement,
-      @HiveField(7)
-          Narrative? text,
-      @HiveField(8)
-          List<Resource>? contained,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           List<FhirExtension>? extension_,
-      @HiveField(10)
-          List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          FhirUri? url,
+      List<FhirExtension>? modifierExtension,
+      FhirUri? url,
       @JsonKey(name: '_url')
-      @HiveField(12)
           Element? urlElement,
-      @HiveField(13)
-          Identifier? identifier,
-      @HiveField(14)
-          String? version,
+      Identifier? identifier,
+      String? version,
       @JsonKey(name: '_version')
-      @HiveField(15)
           Element? versionElement,
-      @HiveField(16)
-          String? name,
+      String? name,
       @JsonKey(name: '_name')
-      @HiveField(17)
           Element? nameElement,
-      @HiveField(18)
-          String? title,
+      String? title,
       @JsonKey(name: '_title')
-      @HiveField(19)
           Element? titleElement,
-      @HiveField(20)
-          FhirCode? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
-      @HiveField(21)
           Element? statusElement,
-      @HiveField(22)
-          Boolean? experimental,
+      FhirBoolean? experimental,
       @JsonKey(name: '_experimental')
-      @HiveField(23)
           Element? experimentalElement,
-      @HiveField(24)
-          FhirDateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date')
-      @HiveField(25)
           Element? dateElement,
-      @HiveField(26)
-          String? publisher,
+      String? publisher,
       @JsonKey(name: '_publisher')
-      @HiveField(27)
           Element? publisherElement,
-      @HiveField(28)
-          List<ContactDetail>? contact,
-      @HiveField(29)
-          Markdown? description,
+      List<ContactDetail>? contact,
+      FhirMarkdown? description,
       @JsonKey(name: '_description')
-      @HiveField(30)
           Element? descriptionElement,
-      @HiveField(31)
-          List<UsageContext>? useContext,
-      @HiveField(32)
-          List<CodeableConcept>? jurisdiction,
-      @HiveField(33)
-          Markdown? purpose,
+      List<UsageContext>? useContext,
+      List<CodeableConcept>? jurisdiction,
+      FhirMarkdown? purpose,
       @JsonKey(name: '_purpose')
-      @HiveField(34)
           Element? purposeElement,
-      @HiveField(35)
-          Markdown? copyright,
+      FhirMarkdown? copyright,
       @JsonKey(name: '_copyright')
-      @HiveField(36)
           Element? copyrightElement,
-      @HiveField(37)
-          List<TestScriptOrigin>? origin,
-      @HiveField(38)
-          List<TestScriptDestination>? destination,
-      @HiveField(39)
-          TestScriptFhirMetadata? metadata,
-      @HiveField(40)
-          List<TestScriptFixture>? fixture,
-      @HiveField(41)
-          List<Reference>? profile,
-      @HiveField(42)
-          List<TestScriptVariable>? variable,
-      @HiveField(43)
-          TestScriptSetup? setup,
-      @HiveField(44)
-          List<TestScriptTest>? test,
-      @HiveField(45)
-          TestScriptTeardown? teardown});
+      List<TestScriptOrigin>? origin,
+      List<TestScriptDestination>? destination,
+      TestScriptMetadata? metadata,
+      List<TestScriptFixture>? fixture,
+      List<Reference>? profile,
+      List<TestScriptVariable>? variable,
+      TestScriptSetup? setup,
+      List<TestScriptTest>? test,
+      TestScriptTeardown? teardown});
 
   $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -16467,7 +15427,7 @@ abstract class $TestScriptCopyWith<$Res> {
   $ElementCopyWith<$Res>? get descriptionElement;
   $ElementCopyWith<$Res>? get purposeElement;
   $ElementCopyWith<$Res>? get copyrightElement;
-  $TestScriptFhirMetadataCopyWith<$Res>? get metadata;
+  $TestScriptMetadataCopyWith<$Res>? get metadata;
   $TestScriptSetupCopyWith<$Res>? get setup;
   $TestScriptTeardownCopyWith<$Res>? get teardown;
 }
@@ -16556,7 +15516,7 @@ class _$TestScriptCopyWithImpl<$Res, $Val extends TestScript>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -16616,7 +15576,7 @@ class _$TestScriptCopyWithImpl<$Res, $Val extends TestScript>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -16624,7 +15584,7 @@ class _$TestScriptCopyWithImpl<$Res, $Val extends TestScript>
       experimental: freezed == experimental
           ? _value.experimental
           : experimental // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       experimentalElement: freezed == experimentalElement
           ? _value.experimentalElement
           : experimentalElement // ignore: cast_nullable_to_non_nullable
@@ -16652,7 +15612,7 @@ class _$TestScriptCopyWithImpl<$Res, $Val extends TestScript>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -16668,7 +15628,7 @@ class _$TestScriptCopyWithImpl<$Res, $Val extends TestScript>
       purpose: freezed == purpose
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       purposeElement: freezed == purposeElement
           ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -16676,7 +15636,7 @@ class _$TestScriptCopyWithImpl<$Res, $Val extends TestScript>
       copyright: freezed == copyright
           ? _value.copyright
           : copyright // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       copyrightElement: freezed == copyrightElement
           ? _value.copyrightElement
           : copyrightElement // ignore: cast_nullable_to_non_nullable
@@ -16692,7 +15652,7 @@ class _$TestScriptCopyWithImpl<$Res, $Val extends TestScript>
       metadata: freezed == metadata
           ? _value.metadata
           : metadata // ignore: cast_nullable_to_non_nullable
-              as TestScriptFhirMetadata?,
+              as TestScriptMetadata?,
       fixture: freezed == fixture
           ? _value.fixture
           : fixture // ignore: cast_nullable_to_non_nullable
@@ -16914,12 +15874,12 @@ class _$TestScriptCopyWithImpl<$Res, $Val extends TestScript>
 
   @override
   @pragma('vm:prefer-inline')
-  $TestScriptFhirMetadataCopyWith<$Res>? get metadata {
+  $TestScriptMetadataCopyWith<$Res>? get metadata {
     if (_value.metadata == null) {
       return null;
     }
 
-    return $TestScriptFhirMetadataCopyWith<$Res>(_value.metadata!, (value) {
+    return $TestScriptMetadataCopyWith<$Res>(_value.metadata!, (value) {
       return _then(_value.copyWith(metadata: value) as $Val);
     });
   }
@@ -16959,112 +15919,66 @@ abstract class _$$_TestScriptCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.TestScript)
-      @HiveField(0)
           R4ResourceType resourceType,
-      @HiveField(1)
-          String? id,
-      @HiveField(2)
-          FhirMeta? meta,
-      @HiveField(3)
-          FhirUri? implicitRules,
+      String? id,
+      FhirMeta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           Element? implicitRulesElement,
-      @HiveField(5)
-          FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           Element? languageElement,
-      @HiveField(7)
-          Narrative? text,
-      @HiveField(8)
-          List<Resource>? contained,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           List<FhirExtension>? extension_,
-      @HiveField(10)
-          List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          FhirUri? url,
+      List<FhirExtension>? modifierExtension,
+      FhirUri? url,
       @JsonKey(name: '_url')
-      @HiveField(12)
           Element? urlElement,
-      @HiveField(13)
-          Identifier? identifier,
-      @HiveField(14)
-          String? version,
+      Identifier? identifier,
+      String? version,
       @JsonKey(name: '_version')
-      @HiveField(15)
           Element? versionElement,
-      @HiveField(16)
-          String? name,
+      String? name,
       @JsonKey(name: '_name')
-      @HiveField(17)
           Element? nameElement,
-      @HiveField(18)
-          String? title,
+      String? title,
       @JsonKey(name: '_title')
-      @HiveField(19)
           Element? titleElement,
-      @HiveField(20)
-          FhirCode? status,
+      FhirCode? status,
       @JsonKey(name: '_status')
-      @HiveField(21)
           Element? statusElement,
-      @HiveField(22)
-          Boolean? experimental,
+      FhirBoolean? experimental,
       @JsonKey(name: '_experimental')
-      @HiveField(23)
           Element? experimentalElement,
-      @HiveField(24)
-          FhirDateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date')
-      @HiveField(25)
           Element? dateElement,
-      @HiveField(26)
-          String? publisher,
+      String? publisher,
       @JsonKey(name: '_publisher')
-      @HiveField(27)
           Element? publisherElement,
-      @HiveField(28)
-          List<ContactDetail>? contact,
-      @HiveField(29)
-          Markdown? description,
+      List<ContactDetail>? contact,
+      FhirMarkdown? description,
       @JsonKey(name: '_description')
-      @HiveField(30)
           Element? descriptionElement,
-      @HiveField(31)
-          List<UsageContext>? useContext,
-      @HiveField(32)
-          List<CodeableConcept>? jurisdiction,
-      @HiveField(33)
-          Markdown? purpose,
+      List<UsageContext>? useContext,
+      List<CodeableConcept>? jurisdiction,
+      FhirMarkdown? purpose,
       @JsonKey(name: '_purpose')
-      @HiveField(34)
           Element? purposeElement,
-      @HiveField(35)
-          Markdown? copyright,
+      FhirMarkdown? copyright,
       @JsonKey(name: '_copyright')
-      @HiveField(36)
           Element? copyrightElement,
-      @HiveField(37)
-          List<TestScriptOrigin>? origin,
-      @HiveField(38)
-          List<TestScriptDestination>? destination,
-      @HiveField(39)
-          TestScriptFhirMetadata? metadata,
-      @HiveField(40)
-          List<TestScriptFixture>? fixture,
-      @HiveField(41)
-          List<Reference>? profile,
-      @HiveField(42)
-          List<TestScriptVariable>? variable,
-      @HiveField(43)
-          TestScriptSetup? setup,
-      @HiveField(44)
-          List<TestScriptTest>? test,
-      @HiveField(45)
-          TestScriptTeardown? teardown});
+      List<TestScriptOrigin>? origin,
+      List<TestScriptDestination>? destination,
+      TestScriptMetadata? metadata,
+      List<TestScriptFixture>? fixture,
+      List<Reference>? profile,
+      List<TestScriptVariable>? variable,
+      TestScriptSetup? setup,
+      List<TestScriptTest>? test,
+      TestScriptTeardown? teardown});
 
   @override
   $FhirMetaCopyWith<$Res>? get meta;
@@ -17099,7 +16013,7 @@ abstract class _$$_TestScriptCopyWith<$Res>
   @override
   $ElementCopyWith<$Res>? get copyrightElement;
   @override
-  $TestScriptFhirMetadataCopyWith<$Res>? get metadata;
+  $TestScriptMetadataCopyWith<$Res>? get metadata;
   @override
   $TestScriptSetupCopyWith<$Res>? get setup;
   @override
@@ -17188,7 +16102,7 @@ class __$$_TestScriptCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -17248,7 +16162,7 @@ class __$$_TestScriptCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -17256,7 +16170,7 @@ class __$$_TestScriptCopyWithImpl<$Res>
       experimental: freezed == experimental
           ? _value.experimental
           : experimental // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       experimentalElement: freezed == experimentalElement
           ? _value.experimentalElement
           : experimentalElement // ignore: cast_nullable_to_non_nullable
@@ -17284,7 +16198,7 @@ class __$$_TestScriptCopyWithImpl<$Res>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -17300,7 +16214,7 @@ class __$$_TestScriptCopyWithImpl<$Res>
       purpose: freezed == purpose
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       purposeElement: freezed == purposeElement
           ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -17308,7 +16222,7 @@ class __$$_TestScriptCopyWithImpl<$Res>
       copyright: freezed == copyright
           ? _value.copyright
           : copyright // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       copyrightElement: freezed == copyrightElement
           ? _value.copyrightElement
           : copyrightElement // ignore: cast_nullable_to_non_nullable
@@ -17324,7 +16238,7 @@ class __$$_TestScriptCopyWithImpl<$Res>
       metadata: freezed == metadata
           ? _value.metadata
           : metadata // ignore: cast_nullable_to_non_nullable
-              as TestScriptFhirMetadata?,
+              as TestScriptMetadata?,
       fixture: freezed == fixture
           ? _value._fixture
           : fixture // ignore: cast_nullable_to_non_nullable
@@ -17355,116 +16269,69 @@ class __$$_TestScriptCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@HiveType(typeId: 84)
 class _$_TestScript extends _TestScript {
   _$_TestScript(
       {@JsonKey(unknownEnumValue: R4ResourceType.TestScript)
-      @HiveField(0)
           this.resourceType = R4ResourceType.TestScript,
-      @HiveField(1)
-          this.id,
-      @HiveField(2)
-          this.meta,
-      @HiveField(3)
-          this.implicitRules,
+      this.id,
+      this.meta,
+      this.implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           this.implicitRulesElement,
-      @HiveField(5)
-          this.language,
+      this.language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           this.languageElement,
-      @HiveField(7)
-          this.text,
-      @HiveField(8)
-          final List<Resource>? contained,
+      this.text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           final List<FhirExtension>? extension_,
-      @HiveField(10)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          this.url,
+      final List<FhirExtension>? modifierExtension,
+      this.url,
       @JsonKey(name: '_url')
-      @HiveField(12)
           this.urlElement,
-      @HiveField(13)
-          this.identifier,
-      @HiveField(14)
-          this.version,
+      this.identifier,
+      this.version,
       @JsonKey(name: '_version')
-      @HiveField(15)
           this.versionElement,
-      @HiveField(16)
-          this.name,
+      this.name,
       @JsonKey(name: '_name')
-      @HiveField(17)
           this.nameElement,
-      @HiveField(18)
-          this.title,
+      this.title,
       @JsonKey(name: '_title')
-      @HiveField(19)
           this.titleElement,
-      @HiveField(20)
-          this.status,
+      this.status,
       @JsonKey(name: '_status')
-      @HiveField(21)
           this.statusElement,
-      @HiveField(22)
-          this.experimental,
+      this.experimental,
       @JsonKey(name: '_experimental')
-      @HiveField(23)
           this.experimentalElement,
-      @HiveField(24)
-          this.date,
+      this.date,
       @JsonKey(name: '_date')
-      @HiveField(25)
           this.dateElement,
-      @HiveField(26)
-          this.publisher,
+      this.publisher,
       @JsonKey(name: '_publisher')
-      @HiveField(27)
           this.publisherElement,
-      @HiveField(28)
-          final List<ContactDetail>? contact,
-      @HiveField(29)
-          this.description,
+      final List<ContactDetail>? contact,
+      this.description,
       @JsonKey(name: '_description')
-      @HiveField(30)
           this.descriptionElement,
-      @HiveField(31)
-          final List<UsageContext>? useContext,
-      @HiveField(32)
-          final List<CodeableConcept>? jurisdiction,
-      @HiveField(33)
-          this.purpose,
+      final List<UsageContext>? useContext,
+      final List<CodeableConcept>? jurisdiction,
+      this.purpose,
       @JsonKey(name: '_purpose')
-      @HiveField(34)
           this.purposeElement,
-      @HiveField(35)
-          this.copyright,
+      this.copyright,
       @JsonKey(name: '_copyright')
-      @HiveField(36)
           this.copyrightElement,
-      @HiveField(37)
-          final List<TestScriptOrigin>? origin,
-      @HiveField(38)
-          final List<TestScriptDestination>? destination,
-      @HiveField(39)
-          this.metadata,
-      @HiveField(40)
-          final List<TestScriptFixture>? fixture,
-      @HiveField(41)
-          final List<Reference>? profile,
-      @HiveField(42)
-          final List<TestScriptVariable>? variable,
-      @HiveField(43)
-          this.setup,
-      @HiveField(44)
-          final List<TestScriptTest>? test,
-      @HiveField(45)
-          this.teardown})
+      final List<TestScriptOrigin>? origin,
+      final List<TestScriptDestination>? destination,
+      this.metadata,
+      final List<TestScriptFixture>? fixture,
+      final List<Reference>? profile,
+      final List<TestScriptVariable>? variable,
+      this.setup,
+      final List<TestScriptTest>? test,
+      this.teardown})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -17484,20 +16351,17 @@ class _$_TestScript extends _TestScript {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.TestScript)
-  @HiveField(0)
   final R4ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
   @override
-  @HiveField(1)
   final String? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
-  @HiveField(2)
   final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -17505,24 +16369,20 @@ class _$_TestScript extends _TestScript {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   @override
-  @HiveField(3)
   final FhirUri? implicitRules;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
-  @HiveField(4)
   final Element? implicitRulesElement;
 
   /// [language] The base language in which the resource is written.
   @override
-  @HiveField(5)
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] Extensions for language
   @override
   @JsonKey(name: '_language')
-  @HiveField(6)
   final Element? languageElement;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -17532,7 +16392,6 @@ class _$_TestScript extends _TestScript {
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
   @override
-  @HiveField(7)
   final Narrative? text;
 
   /// [contained] These resources do not have an independent existence apart
@@ -17546,7 +16405,6 @@ class _$_TestScript extends _TestScript {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   @override
-  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -17571,7 +16429,6 @@ class _$_TestScript extends _TestScript {
   ///  as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
-  @HiveField(9)
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
@@ -17609,7 +16466,6 @@ class _$_TestScript extends _TestScript {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   @override
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -17627,20 +16483,17 @@ class _$_TestScript extends _TestScript {
   /// canonical reference. It SHALL remain the same when the test script is
   ///  stored on different servers.
   @override
-  @HiveField(11)
   final FhirUri? url;
 
   /// [urlElement] Extensions for url
   @override
   @JsonKey(name: '_url')
-  @HiveField(12)
   final Element? urlElement;
 
   /// [identifier] A formal identifier that is used to identify this test
   /// script when it is represented in other formats, or referenced in a
   ///  specification, model, design or an instance.
   @override
-  @HiveField(13)
   final Identifier? identifier;
 
   /// [version] The identifier that is used to identify this version of the
@@ -17651,62 +16504,52 @@ class _$_TestScript extends _TestScript {
   /// also no expectation that versions can be placed in a lexicographical
   ///  sequence.
   @override
-  @HiveField(14)
   final String? version;
 
   /// [versionElement] Extensions for version
   @override
   @JsonKey(name: '_version')
-  @HiveField(15)
   final Element? versionElement;
 
   /// [name] A natural language name identifying the test script. This name
   /// should be usable as an identifier for the module by machine processing
   ///  applications such as code generation.
   @override
-  @HiveField(16)
   final String? name;
 
   /// [nameElement] Extensions for name
   @override
   @JsonKey(name: '_name')
-  @HiveField(17)
   final Element? nameElement;
 
   /// [title] A short, descriptive, user-friendly title for the test script.
   @override
-  @HiveField(18)
   final String? title;
 
   /// [titleElement] Extensions for title
   @override
   @JsonKey(name: '_title')
-  @HiveField(19)
   final Element? titleElement;
 
   /// [status] The status of this test script. Enables tracking the life-cycle
   ///  of the content.
   @override
-  @HiveField(20)
-  final Code? status;
+  final FhirCode? status;
 
   /// [statusElement] Extensions for status
   @override
   @JsonKey(name: '_status')
-  @HiveField(21)
   final Element? statusElement;
 
   /// [experimental] A Boolean value to indicate that this test script is
   /// authored for testing purposes (or education/evaluation/marketing) and is
   ///  not intended to be used for genuine usage.
   @override
-  @HiveField(22)
-  final Boolean? experimental;
+  final FhirBoolean? experimental;
 
   /// [experimentalElement] Extensions for experimental
   @override
   @JsonKey(name: '_experimental')
-  @HiveField(23)
   final Element? experimentalElement;
 
   /// [date] The date  (and optionally time) when the test script was
@@ -17714,25 +16557,21 @@ class _$_TestScript extends _TestScript {
   /// must change if the status code changes. In addition, it should change when
   ///  the substantive content of the test script changes.
   @override
-  @HiveField(24)
   final FhirDateTime? date;
 
   /// [dateElement] Extensions for date
   @override
   @JsonKey(name: '_date')
-  @HiveField(25)
   final Element? dateElement;
 
   /// [publisher] The name of the organization or individual that published the
   ///  test script.
   @override
-  @HiveField(26)
   final String? publisher;
 
   /// [publisherElement] Extensions for publisher
   @override
   @JsonKey(name: '_publisher')
-  @HiveField(27)
   final Element? publisherElement;
 
   /// [contact] Contact details to assist a user in finding and communicating
@@ -17742,7 +16581,6 @@ class _$_TestScript extends _TestScript {
   /// [contact] Contact details to assist a user in finding and communicating
   ///  with the publisher.
   @override
-  @HiveField(28)
   List<ContactDetail>? get contact {
     final value = _contact;
     if (value == null) return null;
@@ -17754,13 +16592,11 @@ class _$_TestScript extends _TestScript {
   /// [description] A free text natural language description of the test script
   ///  from a consumer's perspective.
   @override
-  @HiveField(29)
-  final Markdown? description;
+  final FhirMarkdown? description;
 
   /// [descriptionElement] Extensions for description
   @override
   @JsonKey(name: '_description')
-  @HiveField(30)
   final Element? descriptionElement;
 
   /// [useContext] The content was developed with a focus and intent of
@@ -17776,7 +16612,6 @@ class _$_TestScript extends _TestScript {
   /// (insurance plans, studies, ...) and may be used to assist with indexing
   ///  and searching for appropriate test script instances.
   @override
-  @HiveField(31)
   List<UsageContext>? get useContext {
     final value = _useContext;
     if (value == null) return null;
@@ -17792,7 +16627,6 @@ class _$_TestScript extends _TestScript {
   /// [jurisdiction] A legal or geographic region in which the test script is
   ///  intended to be used.
   @override
-  @HiveField(32)
   List<CodeableConcept>? get jurisdiction {
     final value = _jurisdiction;
     if (value == null) return null;
@@ -17804,26 +16638,22 @@ class _$_TestScript extends _TestScript {
   /// [purpose] Explanation of why this test script is needed and why it has
   ///  been designed as it has.
   @override
-  @HiveField(33)
-  final Markdown? purpose;
+  final FhirMarkdown? purpose;
 
   /// [purposeElement] Extensions for purpose
   @override
   @JsonKey(name: '_purpose')
-  @HiveField(34)
   final Element? purposeElement;
 
   /// [copyright] A copyright statement relating to the test script and/or its
   /// contents. Copyright statements are generally legal restrictions on the use
   ///  and publishing of the test script.
   @override
-  @HiveField(35)
-  final Markdown? copyright;
+  final FhirMarkdown? copyright;
 
   /// [copyrightElement] Extensions for copyright
   @override
   @JsonKey(name: '_copyright')
-  @HiveField(36)
   final Element? copyrightElement;
 
   /// [origin] An abstract server used in operations within this test script in
@@ -17833,7 +16663,6 @@ class _$_TestScript extends _TestScript {
   /// [origin] An abstract server used in operations within this test script in
   ///  the origin element.
   @override
-  @HiveField(37)
   List<TestScriptOrigin>? get origin {
     final value = _origin;
     if (value == null) return null;
@@ -17849,7 +16678,6 @@ class _$_TestScript extends _TestScript {
   /// [destination] An abstract server used in operations within this test
   ///  script in the destination element.
   @override
-  @HiveField(38)
   List<TestScriptDestination>? get destination {
     final value = _destination;
     if (value == null) return null;
@@ -17861,8 +16689,7 @@ class _$_TestScript extends _TestScript {
   /// [metadata] The required capability must exist and are assumed to function
   ///  correctly on the FHIR server being tested.
   @override
-  @HiveField(39)
-  final TestScriptFhirMetadata? metadata;
+  final TestScriptMetadata? metadata;
 
   /// [fixture] Fixture in the test script - by reference (uri). All fixtures
   ///  are required for the test script to execute.
@@ -17871,7 +16698,6 @@ class _$_TestScript extends _TestScript {
   /// [fixture] Fixture in the test script - by reference (uri). All fixtures
   ///  are required for the test script to execute.
   @override
-  @HiveField(40)
   List<TestScriptFixture>? get fixture {
     final value = _fixture;
     if (value == null) return null;
@@ -17885,7 +16711,6 @@ class _$_TestScript extends _TestScript {
 
   /// [profile] Reference to the profile to be used for validation.
   @override
-  @HiveField(41)
   List<Reference>? get profile {
     final value = _profile;
     if (value == null) return null;
@@ -17901,7 +16726,6 @@ class _$_TestScript extends _TestScript {
   /// [variable] Variable is set based either on element value in response body
   ///  or on header field value in the response headers.
   @override
-  @HiveField(42)
   List<TestScriptVariable>? get variable {
     final value = _variable;
     if (value == null) return null;
@@ -17912,7 +16736,6 @@ class _$_TestScript extends _TestScript {
 
   /// [setup] A series of required setup operations before tests are executed.
   @override
-  @HiveField(43)
   final TestScriptSetup? setup;
 
   /// [test] A test in this script.
@@ -17920,7 +16743,6 @@ class _$_TestScript extends _TestScript {
 
   /// [test] A test in this script.
   @override
-  @HiveField(44)
   List<TestScriptTest>? get test {
     final value = _test;
     if (value == null) return null;
@@ -17932,7 +16754,6 @@ class _$_TestScript extends _TestScript {
   /// [teardown] A series of operations required to clean up after all the
   ///  tests are executed (successfully or otherwise).
   @override
-  @HiveField(45)
   final TestScriptTeardown? teardown;
 
   @override
@@ -18091,112 +16912,66 @@ class _$_TestScript extends _TestScript {
 abstract class _TestScript extends TestScript {
   factory _TestScript(
       {@JsonKey(unknownEnumValue: R4ResourceType.TestScript)
-      @HiveField(0)
           final R4ResourceType resourceType,
-      @HiveField(1)
-          final String? id,
-      @HiveField(2)
-          final FhirMeta? meta,
-      @HiveField(3)
-          final FhirUri? implicitRules,
+      final String? id,
+      final FhirMeta? meta,
+      final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           final Element? implicitRulesElement,
-      @HiveField(5)
-          final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           final Element? languageElement,
-      @HiveField(7)
-          final Narrative? text,
-      @HiveField(8)
-          final List<Resource>? contained,
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           final List<FhirExtension>? extension_,
-      @HiveField(10)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          final FhirUri? url,
+      final List<FhirExtension>? modifierExtension,
+      final FhirUri? url,
       @JsonKey(name: '_url')
-      @HiveField(12)
           final Element? urlElement,
-      @HiveField(13)
-          final Identifier? identifier,
-      @HiveField(14)
-          final String? version,
+      final Identifier? identifier,
+      final String? version,
       @JsonKey(name: '_version')
-      @HiveField(15)
           final Element? versionElement,
-      @HiveField(16)
-          final String? name,
+      final String? name,
       @JsonKey(name: '_name')
-      @HiveField(17)
           final Element? nameElement,
-      @HiveField(18)
-          final String? title,
+      final String? title,
       @JsonKey(name: '_title')
-      @HiveField(19)
           final Element? titleElement,
-      @HiveField(20)
-          final Code? status,
+      final FhirCode? status,
       @JsonKey(name: '_status')
-      @HiveField(21)
           final Element? statusElement,
-      @HiveField(22)
-          final Boolean? experimental,
+      final FhirBoolean? experimental,
       @JsonKey(name: '_experimental')
-      @HiveField(23)
           final Element? experimentalElement,
-      @HiveField(24)
-          final FhirDateTime? date,
+      final FhirDateTime? date,
       @JsonKey(name: '_date')
-      @HiveField(25)
           final Element? dateElement,
-      @HiveField(26)
-          final String? publisher,
+      final String? publisher,
       @JsonKey(name: '_publisher')
-      @HiveField(27)
           final Element? publisherElement,
-      @HiveField(28)
-          final List<ContactDetail>? contact,
-      @HiveField(29)
-          final Markdown? description,
+      final List<ContactDetail>? contact,
+      final FhirMarkdown? description,
       @JsonKey(name: '_description')
-      @HiveField(30)
           final Element? descriptionElement,
-      @HiveField(31)
-          final List<UsageContext>? useContext,
-      @HiveField(32)
-          final List<CodeableConcept>? jurisdiction,
-      @HiveField(33)
-          final Markdown? purpose,
+      final List<UsageContext>? useContext,
+      final List<CodeableConcept>? jurisdiction,
+      final FhirMarkdown? purpose,
       @JsonKey(name: '_purpose')
-      @HiveField(34)
           final Element? purposeElement,
-      @HiveField(35)
-          final Markdown? copyright,
+      final FhirMarkdown? copyright,
       @JsonKey(name: '_copyright')
-      @HiveField(36)
           final Element? copyrightElement,
-      @HiveField(37)
-          final List<TestScriptOrigin>? origin,
-      @HiveField(38)
-          final List<TestScriptDestination>? destination,
-      @HiveField(39)
-          final TestScriptFhirMetadata? metadata,
-      @HiveField(40)
-          final List<TestScriptFixture>? fixture,
-      @HiveField(41)
-          final List<Reference>? profile,
-      @HiveField(42)
-          final List<TestScriptVariable>? variable,
-      @HiveField(43)
-          final TestScriptSetup? setup,
-      @HiveField(44)
-          final List<TestScriptTest>? test,
-      @HiveField(45)
-          final TestScriptTeardown? teardown}) = _$_TestScript;
+      final List<TestScriptOrigin>? origin,
+      final List<TestScriptDestination>? destination,
+      final TestScriptMetadata? metadata,
+      final List<TestScriptFixture>? fixture,
+      final List<Reference>? profile,
+      final List<TestScriptVariable>? variable,
+      final TestScriptSetup? setup,
+      final List<TestScriptTest>? test,
+      final TestScriptTeardown? teardown}) = _$_TestScript;
   _TestScript._() : super._();
 
   factory _TestScript.fromJson(Map<String, dynamic> json) =
@@ -18204,20 +16979,17 @@ abstract class _TestScript extends TestScript {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.TestScript)
-  @HiveField(0)
   R4ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
-  @HiveField(1)
   String? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  @HiveField(2)
   FhirMeta? get meta;
   @override
 
@@ -18225,24 +16997,20 @@ abstract class _TestScript extends TestScript {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  @HiveField(3)
   FhirUri? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
-  @HiveField(4)
   Element? get implicitRulesElement;
   @override
 
   /// [language] The base language in which the resource is written.
-  @HiveField(5)
   FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
-  @HiveField(6)
   Element? get languageElement;
   @override
 
@@ -18252,7 +17020,6 @@ abstract class _TestScript extends TestScript {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
-  @HiveField(7)
   Narrative? get text;
   @override
 
@@ -18260,7 +17027,6 @@ abstract class _TestScript extends TestScript {
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
-  @HiveField(8)
   List<Resource>? get contained;
   @override
 
@@ -18271,7 +17037,6 @@ abstract class _TestScript extends TestScript {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
-  @HiveField(9)
   List<FhirExtension>? get extension_;
   @override
 
@@ -18288,7 +17053,6 @@ abstract class _TestScript extends TestScript {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
 
@@ -18299,20 +17063,17 @@ abstract class _TestScript extends TestScript {
   /// test script is (or will be) published. This URL can be the target of a
   /// canonical reference. It SHALL remain the same when the test script is
   ///  stored on different servers.
-  @HiveField(11)
   FhirUri? get url;
   @override
 
   /// [urlElement] Extensions for url
   @JsonKey(name: '_url')
-  @HiveField(12)
   Element? get urlElement;
   @override
 
   /// [identifier] A formal identifier that is used to identify this test
   /// script when it is represented in other formats, or referenced in a
   ///  specification, model, design or an instance.
-  @HiveField(13)
   Identifier? get identifier;
   @override
 
@@ -18323,62 +17084,52 @@ abstract class _TestScript extends TestScript {
   /// timestamp (e.g. yyyymmdd) if a managed version is not available. There is
   /// also no expectation that versions can be placed in a lexicographical
   ///  sequence.
-  @HiveField(14)
   String? get version;
   @override
 
   /// [versionElement] Extensions for version
   @JsonKey(name: '_version')
-  @HiveField(15)
   Element? get versionElement;
   @override
 
   /// [name] A natural language name identifying the test script. This name
   /// should be usable as an identifier for the module by machine processing
   ///  applications such as code generation.
-  @HiveField(16)
   String? get name;
   @override
 
   /// [nameElement] Extensions for name
   @JsonKey(name: '_name')
-  @HiveField(17)
   Element? get nameElement;
   @override
 
   /// [title] A short, descriptive, user-friendly title for the test script.
-  @HiveField(18)
   String? get title;
   @override
 
   /// [titleElement] Extensions for title
   @JsonKey(name: '_title')
-  @HiveField(19)
   Element? get titleElement;
   @override
 
   /// [status] The status of this test script. Enables tracking the life-cycle
   ///  of the content.
-  @HiveField(20)
   FhirCode? get status;
   @override
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
-  @HiveField(21)
   Element? get statusElement;
   @override
 
   /// [experimental] A Boolean value to indicate that this test script is
   /// authored for testing purposes (or education/evaluation/marketing) and is
   ///  not intended to be used for genuine usage.
-  @HiveField(22)
-  Boolean? get experimental;
+  FhirBoolean? get experimental;
   @override
 
   /// [experimentalElement] Extensions for experimental
   @JsonKey(name: '_experimental')
-  @HiveField(23)
   Element? get experimentalElement;
   @override
 
@@ -18386,43 +17137,36 @@ abstract class _TestScript extends TestScript {
   /// published. The date must change when the business version changes and it
   /// must change if the status code changes. In addition, it should change when
   ///  the substantive content of the test script changes.
-  @HiveField(24)
   FhirDateTime? get date;
   @override
 
   /// [dateElement] Extensions for date
   @JsonKey(name: '_date')
-  @HiveField(25)
   Element? get dateElement;
   @override
 
   /// [publisher] The name of the organization or individual that published the
   ///  test script.
-  @HiveField(26)
   String? get publisher;
   @override
 
   /// [publisherElement] Extensions for publisher
   @JsonKey(name: '_publisher')
-  @HiveField(27)
   Element? get publisherElement;
   @override
 
   /// [contact] Contact details to assist a user in finding and communicating
   ///  with the publisher.
-  @HiveField(28)
   List<ContactDetail>? get contact;
   @override
 
   /// [description] A free text natural language description of the test script
   ///  from a consumer's perspective.
-  @HiveField(29)
-  Markdown? get description;
+  FhirMarkdown? get description;
   @override
 
   /// [descriptionElement] Extensions for description
   @JsonKey(name: '_description')
-  @HiveField(30)
   Element? get descriptionElement;
   @override
 
@@ -18431,89 +17175,74 @@ abstract class _TestScript extends TestScript {
   /// categories (gender, age, ...) or may be references to specific programs
   /// (insurance plans, studies, ...) and may be used to assist with indexing
   ///  and searching for appropriate test script instances.
-  @HiveField(31)
   List<UsageContext>? get useContext;
   @override
 
   /// [jurisdiction] A legal or geographic region in which the test script is
   ///  intended to be used.
-  @HiveField(32)
   List<CodeableConcept>? get jurisdiction;
   @override
 
   /// [purpose] Explanation of why this test script is needed and why it has
   ///  been designed as it has.
-  @HiveField(33)
-  Markdown? get purpose;
+  FhirMarkdown? get purpose;
   @override
 
   /// [purposeElement] Extensions for purpose
   @JsonKey(name: '_purpose')
-  @HiveField(34)
   Element? get purposeElement;
   @override
 
   /// [copyright] A copyright statement relating to the test script and/or its
   /// contents. Copyright statements are generally legal restrictions on the use
   ///  and publishing of the test script.
-  @HiveField(35)
-  Markdown? get copyright;
+  FhirMarkdown? get copyright;
   @override
 
   /// [copyrightElement] Extensions for copyright
   @JsonKey(name: '_copyright')
-  @HiveField(36)
   Element? get copyrightElement;
   @override
 
   /// [origin] An abstract server used in operations within this test script in
   ///  the origin element.
-  @HiveField(37)
   List<TestScriptOrigin>? get origin;
   @override
 
   /// [destination] An abstract server used in operations within this test
   ///  script in the destination element.
-  @HiveField(38)
   List<TestScriptDestination>? get destination;
   @override
 
   /// [metadata] The required capability must exist and are assumed to function
   ///  correctly on the FHIR server being tested.
-  @HiveField(39)
-  TestScriptFhirMetadata? get metadata;
+  TestScriptMetadata? get metadata;
   @override
 
   /// [fixture] Fixture in the test script - by reference (uri). All fixtures
   ///  are required for the test script to execute.
-  @HiveField(40)
   List<TestScriptFixture>? get fixture;
   @override
 
   /// [profile] Reference to the profile to be used for validation.
-  @HiveField(41)
   List<Reference>? get profile;
   @override
 
   /// [variable] Variable is set based either on element value in response body
   ///  or on header field value in the response headers.
-  @HiveField(42)
   List<TestScriptVariable>? get variable;
   @override
 
   /// [setup] A series of required setup operations before tests are executed.
-  @HiveField(43)
   TestScriptSetup? get setup;
   @override
 
   /// [test] A test in this script.
-  @HiveField(44)
   List<TestScriptTest>? get test;
   @override
 
   /// [teardown] A series of operations required to clean up after all the
   ///  tests are executed (successfully or otherwise).
-  @HiveField(45)
   TestScriptTeardown? get teardown;
   @override
   @JsonKey(ignore: true)
@@ -18558,7 +17287,7 @@ mixin _$TestScriptOrigin {
 
   /// [index] Abstract name given to an origin server in this test script.  The
   ///  name is provided as a number starting at 1.
-  Integer? get index => throw _privateConstructorUsedError;
+  FhirInteger? get index => throw _privateConstructorUsedError;
 
   /// [indexElement] Extensions for index
   @JsonKey(name: '_index')
@@ -18583,7 +17312,7 @@ abstract class $TestScriptOriginCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Integer? index,
+      FhirInteger? index,
       @JsonKey(name: '_index') Element? indexElement,
       Coding profile});
 
@@ -18627,7 +17356,7 @@ class _$TestScriptOriginCopyWithImpl<$Res, $Val extends TestScriptOrigin>
       index: freezed == index
           ? _value.index
           : index // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       indexElement: freezed == indexElement
           ? _value.indexElement
           : indexElement // ignore: cast_nullable_to_non_nullable
@@ -18672,7 +17401,7 @@ abstract class _$$_TestScriptOriginCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Integer? index,
+      FhirInteger? index,
       @JsonKey(name: '_index') Element? indexElement,
       Coding profile});
 
@@ -18716,7 +17445,7 @@ class __$$_TestScriptOriginCopyWithImpl<$Res>
       index: freezed == index
           ? _value.index
           : index // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       indexElement: freezed == indexElement
           ? _value.indexElement
           : indexElement // ignore: cast_nullable_to_non_nullable
@@ -18816,7 +17545,7 @@ class _$_TestScriptOrigin extends _TestScriptOrigin {
   /// [index] Abstract name given to an origin server in this test script.  The
   ///  name is provided as a number starting at 1.
   @override
-  final Integer? index;
+  final FhirInteger? index;
 
   /// [indexElement] Extensions for index
   @override
@@ -18878,7 +17607,7 @@ abstract class _TestScriptOrigin extends TestScriptOrigin {
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final Integer? index,
+      final FhirInteger? index,
       @JsonKey(name: '_index') final Element? indexElement,
       required final Coding profile}) = _$_TestScriptOrigin;
   _TestScriptOrigin._() : super._();
@@ -18921,7 +17650,7 @@ abstract class _TestScriptOrigin extends TestScriptOrigin {
 
   /// [index] Abstract name given to an origin server in this test script.  The
   ///  name is provided as a number starting at 1.
-  Integer? get index;
+  FhirInteger? get index;
   @override
 
   /// [indexElement] Extensions for index
@@ -18975,7 +17704,7 @@ mixin _$TestScriptDestination {
 
   /// [index] Abstract name given to a destination server in this test script.
   ///  The name is provided as a number starting at 1.
-  Integer? get index => throw _privateConstructorUsedError;
+  FhirInteger? get index => throw _privateConstructorUsedError;
 
   /// [indexElement] Extensions for index
   @JsonKey(name: '_index')
@@ -19000,7 +17729,7 @@ abstract class $TestScriptDestinationCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Integer? index,
+      FhirInteger? index,
       @JsonKey(name: '_index') Element? indexElement,
       Coding profile});
 
@@ -19045,7 +17774,7 @@ class _$TestScriptDestinationCopyWithImpl<$Res,
       index: freezed == index
           ? _value.index
           : index // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       indexElement: freezed == indexElement
           ? _value.indexElement
           : indexElement // ignore: cast_nullable_to_non_nullable
@@ -19090,7 +17819,7 @@ abstract class _$$_TestScriptDestinationCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Integer? index,
+      FhirInteger? index,
       @JsonKey(name: '_index') Element? indexElement,
       Coding profile});
 
@@ -19134,7 +17863,7 @@ class __$$_TestScriptDestinationCopyWithImpl<$Res>
       index: freezed == index
           ? _value.index
           : index // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       indexElement: freezed == indexElement
           ? _value.indexElement
           : indexElement // ignore: cast_nullable_to_non_nullable
@@ -19234,7 +17963,7 @@ class _$_TestScriptDestination extends _TestScriptDestination {
   /// [index] Abstract name given to a destination server in this test script.
   ///  The name is provided as a number starting at 1.
   @override
-  final Integer? index;
+  final FhirInteger? index;
 
   /// [indexElement] Extensions for index
   @override
@@ -19297,7 +18026,7 @@ abstract class _TestScriptDestination extends TestScriptDestination {
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final Integer? index,
+      final FhirInteger? index,
       @JsonKey(name: '_index') final Element? indexElement,
       required final Coding profile}) = _$_TestScriptDestination;
   _TestScriptDestination._() : super._();
@@ -19340,7 +18069,7 @@ abstract class _TestScriptDestination extends TestScriptDestination {
 
   /// [index] Abstract name given to a destination server in this test script.
   ///  The name is provided as a number starting at 1.
-  Integer? get index;
+  FhirInteger? get index;
   @override
 
   /// [indexElement] Extensions for index
@@ -19356,13 +18085,12 @@ abstract class _TestScriptDestination extends TestScriptDestination {
       throw _privateConstructorUsedError;
 }
 
-TestScriptFhirMetadata _$TestScriptFhirMetadataFromJson(
-    Map<String, dynamic> json) {
-  return _TestScriptFhirMetadata.fromJson(json);
+TestScriptMetadata _$TestScriptMetadataFromJson(Map<String, dynamic> json) {
+  return _TestScriptMetadata.fromJson(json);
 }
 
 /// @nodoc
-mixin _$TestScriptFhirMetadata {
+mixin _$TestScriptMetadata {
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
@@ -19402,15 +18130,15 @@ mixin _$TestScriptFhirMetadata {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $TestScriptFhirMetadataCopyWith<TestScriptFhirMetadata> get copyWith =>
+  $TestScriptMetadataCopyWith<TestScriptMetadata> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $TestScriptFhirMetadataCopyWith<$Res> {
-  factory $TestScriptFhirMetadataCopyWith(TestScriptFhirMetadata value,
-          $Res Function(TestScriptFhirMetadata) then) =
-      _$TestScriptFhirMetadataCopyWithImpl<$Res, TestScriptFhirMetadata>;
+abstract class $TestScriptMetadataCopyWith<$Res> {
+  factory $TestScriptMetadataCopyWith(
+          TestScriptMetadata value, $Res Function(TestScriptMetadata) then) =
+      _$TestScriptMetadataCopyWithImpl<$Res, TestScriptMetadata>;
   @useResult
   $Res call(
       {String? id,
@@ -19421,10 +18149,9 @@ abstract class $TestScriptFhirMetadataCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$TestScriptFhirMetadataCopyWithImpl<$Res,
-        $Val extends TestScriptFhirMetadata>
-    implements $TestScriptFhirMetadataCopyWith<$Res> {
-  _$TestScriptFhirMetadataCopyWithImpl(this._value, this._then);
+class _$TestScriptMetadataCopyWithImpl<$Res, $Val extends TestScriptMetadata>
+    implements $TestScriptMetadataCopyWith<$Res> {
+  _$TestScriptMetadataCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -19466,11 +18193,11 @@ class _$TestScriptFhirMetadataCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_TestScriptFhirMetadataCopyWith<$Res>
-    implements $TestScriptFhirMetadataCopyWith<$Res> {
-  factory _$$_TestScriptFhirMetadataCopyWith(_$_TestScriptFhirMetadata value,
-          $Res Function(_$_TestScriptFhirMetadata) then) =
-      __$$_TestScriptFhirMetadataCopyWithImpl<$Res>;
+abstract class _$$_TestScriptMetadataCopyWith<$Res>
+    implements $TestScriptMetadataCopyWith<$Res> {
+  factory _$$_TestScriptMetadataCopyWith(_$_TestScriptMetadata value,
+          $Res Function(_$_TestScriptMetadata) then) =
+      __$$_TestScriptMetadataCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -19482,12 +18209,11 @@ abstract class _$$_TestScriptFhirMetadataCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_TestScriptFhirMetadataCopyWithImpl<$Res>
-    extends _$TestScriptFhirMetadataCopyWithImpl<$Res,
-        _$_TestScriptFhirMetadata>
-    implements _$$_TestScriptFhirMetadataCopyWith<$Res> {
-  __$$_TestScriptFhirMetadataCopyWithImpl(_$_TestScriptFhirMetadata _value,
-      $Res Function(_$_TestScriptFhirMetadata) _then)
+class __$$_TestScriptMetadataCopyWithImpl<$Res>
+    extends _$TestScriptMetadataCopyWithImpl<$Res, _$_TestScriptMetadata>
+    implements _$$_TestScriptMetadataCopyWith<$Res> {
+  __$$_TestScriptMetadataCopyWithImpl(
+      _$_TestScriptMetadata _value, $Res Function(_$_TestScriptMetadata) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -19499,7 +18225,7 @@ class __$$_TestScriptFhirMetadataCopyWithImpl<$Res>
     Object? link = freezed,
     Object? capability = null,
   }) {
-    return _then(_$_TestScriptFhirMetadata(
+    return _then(_$_TestScriptMetadata(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -19526,8 +18252,8 @@ class __$$_TestScriptFhirMetadataCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_TestScriptFhirMetadata extends _TestScriptFhirMetadata {
-  _$_TestScriptFhirMetadata(
+class _$_TestScriptMetadata extends _TestScriptMetadata {
+  _$_TestScriptMetadata(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -19539,8 +18265,8 @@ class _$_TestScriptFhirMetadata extends _TestScriptFhirMetadata {
         _capability = capability,
         super._();
 
-  factory _$_TestScriptFhirMetadata.fromJson(Map<String, dynamic> json) =>
-      _$$_TestScriptFhirMetadataFromJson(json);
+  factory _$_TestScriptMetadata.fromJson(Map<String, dynamic> json) =>
+      _$$_TestScriptMetadataFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
@@ -19637,14 +18363,14 @@ class _$_TestScriptFhirMetadata extends _TestScriptFhirMetadata {
 
   @override
   String toString() {
-    return 'TestScriptFhirMetadata(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, link: $link, capability: $capability)';
+    return 'TestScriptMetadata(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, link: $link, capability: $capability)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_TestScriptFhirMetadata &&
+            other is _$_TestScriptMetadata &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
@@ -19668,30 +18394,30 @@ class _$_TestScriptFhirMetadata extends _TestScriptFhirMetadata {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_TestScriptFhirMetadataCopyWith<_$_TestScriptFhirMetadata> get copyWith =>
-      __$$_TestScriptFhirMetadataCopyWithImpl<_$_TestScriptFhirMetadata>(
+  _$$_TestScriptMetadataCopyWith<_$_TestScriptMetadata> get copyWith =>
+      __$$_TestScriptMetadataCopyWithImpl<_$_TestScriptMetadata>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TestScriptFhirMetadataToJson(
+    return _$$_TestScriptMetadataToJson(
       this,
     );
   }
 }
 
-abstract class _TestScriptFhirMetadata extends TestScriptFhirMetadata {
-  factory _TestScriptFhirMetadata(
+abstract class _TestScriptMetadata extends TestScriptMetadata {
+  factory _TestScriptMetadata(
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           final List<TestScriptLink>? link,
           required final List<TestScriptCapability> capability}) =
-      _$_TestScriptFhirMetadata;
-  _TestScriptFhirMetadata._() : super._();
+      _$_TestScriptMetadata;
+  _TestScriptMetadata._() : super._();
 
-  factory _TestScriptFhirMetadata.fromJson(Map<String, dynamic> json) =
-      _$_TestScriptFhirMetadata.fromJson;
+  factory _TestScriptMetadata.fromJson(Map<String, dynamic> json) =
+      _$_TestScriptMetadata.fromJson;
 
   @override
 
@@ -19735,7 +18461,7 @@ abstract class _TestScriptFhirMetadata extends TestScriptFhirMetadata {
   List<TestScriptCapability> get capability;
   @override
   @JsonKey(ignore: true)
-  _$$_TestScriptFhirMetadataCopyWith<_$_TestScriptFhirMetadata> get copyWith =>
+  _$$_TestScriptMetadataCopyWith<_$_TestScriptMetadata> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -20230,7 +18956,7 @@ mixin _$TestScriptCapability {
   /// [required] Whether or not the test execution will require the given
   ///  capabilities of the server in order for this test script to execute.
   @JsonKey(name: 'required')
-  Boolean? get required_ => throw _privateConstructorUsedError;
+  FhirBoolean? get required_ => throw _privateConstructorUsedError;
 
   /// [requiredElement] Extensions for required
   @JsonKey(name: '_required')
@@ -20238,7 +18964,7 @@ mixin _$TestScriptCapability {
 
   /// [validated] Whether or not the test execution will validate the given
   ///  capabilities of the server in order for this test script to execute.
-  Boolean? get validated => throw _privateConstructorUsedError;
+  FhirBoolean? get validated => throw _privateConstructorUsedError;
 
   /// [validatedElement] Extensions for validated
   @JsonKey(name: '_validated')
@@ -20260,7 +18986,7 @@ mixin _$TestScriptCapability {
   List<Element?>? get originElement => throw _privateConstructorUsedError;
 
   /// [destination] Which server these requirements apply to.
-  Integer? get destination => throw _privateConstructorUsedError;
+  FhirInteger? get destination => throw _privateConstructorUsedError;
 
   /// [destinationElement] Extensions for destination
   @JsonKey(name: '_destination')
@@ -20278,7 +19004,7 @@ mixin _$TestScriptCapability {
   /// execute successfully.   If server does not meet at a minimum the
   /// referenced capability statement, then all tests in this script are
   ///  skipped.
-  Canonical get capabilities => throw _privateConstructorUsedError;
+  FhirCanonical get capabilities => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -20296,19 +19022,19 @@ abstract class $TestScriptCapabilityCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      @JsonKey(name: 'required') Boolean? required_,
+      @JsonKey(name: 'required') FhirBoolean? required_,
       @JsonKey(name: '_required') Element? requiredElement,
-      Boolean? validated,
+      FhirBoolean? validated,
       @JsonKey(name: '_validated') Element? validatedElement,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
       List<FhirInteger>? origin,
       @JsonKey(name: '_origin') List<Element?>? originElement,
-      Integer? destination,
+      FhirInteger? destination,
       @JsonKey(name: '_destination') Element? destinationElement,
       List<FhirUri>? link,
       @JsonKey(name: '_link') List<Element?>? linkElement,
-      Canonical capabilities});
+      FhirCanonical capabilities});
 
   $ElementCopyWith<$Res>? get requiredElement;
   $ElementCopyWith<$Res>? get validatedElement;
@@ -20363,7 +19089,7 @@ class _$TestScriptCapabilityCopyWithImpl<$Res,
       required_: freezed == required_
           ? _value.required_
           : required_ // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       requiredElement: freezed == requiredElement
           ? _value.requiredElement
           : requiredElement // ignore: cast_nullable_to_non_nullable
@@ -20371,7 +19097,7 @@ class _$TestScriptCapabilityCopyWithImpl<$Res,
       validated: freezed == validated
           ? _value.validated
           : validated // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       validatedElement: freezed == validatedElement
           ? _value.validatedElement
           : validatedElement // ignore: cast_nullable_to_non_nullable
@@ -20395,7 +19121,7 @@ class _$TestScriptCapabilityCopyWithImpl<$Res,
       destination: freezed == destination
           ? _value.destination
           : destination // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       destinationElement: freezed == destinationElement
           ? _value.destinationElement
           : destinationElement // ignore: cast_nullable_to_non_nullable
@@ -20411,7 +19137,7 @@ class _$TestScriptCapabilityCopyWithImpl<$Res,
       capabilities: null == capabilities
           ? _value.capabilities
           : capabilities // ignore: cast_nullable_to_non_nullable
-              as Canonical,
+              as FhirCanonical,
     ) as $Val);
   }
 
@@ -20476,19 +19202,19 @@ abstract class _$$_TestScriptCapabilityCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      @JsonKey(name: 'required') Boolean? required_,
+      @JsonKey(name: 'required') FhirBoolean? required_,
       @JsonKey(name: '_required') Element? requiredElement,
-      Boolean? validated,
+      FhirBoolean? validated,
       @JsonKey(name: '_validated') Element? validatedElement,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
       List<FhirInteger>? origin,
       @JsonKey(name: '_origin') List<Element?>? originElement,
-      Integer? destination,
+      FhirInteger? destination,
       @JsonKey(name: '_destination') Element? destinationElement,
       List<FhirUri>? link,
       @JsonKey(name: '_link') List<Element?>? linkElement,
-      Canonical capabilities});
+      FhirCanonical capabilities});
 
   @override
   $ElementCopyWith<$Res>? get requiredElement;
@@ -20544,7 +19270,7 @@ class __$$_TestScriptCapabilityCopyWithImpl<$Res>
       required_: freezed == required_
           ? _value.required_
           : required_ // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       requiredElement: freezed == requiredElement
           ? _value.requiredElement
           : requiredElement // ignore: cast_nullable_to_non_nullable
@@ -20552,7 +19278,7 @@ class __$$_TestScriptCapabilityCopyWithImpl<$Res>
       validated: freezed == validated
           ? _value.validated
           : validated // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       validatedElement: freezed == validatedElement
           ? _value.validatedElement
           : validatedElement // ignore: cast_nullable_to_non_nullable
@@ -20576,7 +19302,7 @@ class __$$_TestScriptCapabilityCopyWithImpl<$Res>
       destination: freezed == destination
           ? _value.destination
           : destination // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       destinationElement: freezed == destinationElement
           ? _value.destinationElement
           : destinationElement // ignore: cast_nullable_to_non_nullable
@@ -20592,7 +19318,7 @@ class __$$_TestScriptCapabilityCopyWithImpl<$Res>
       capabilities: null == capabilities
           ? _value.capabilities
           : capabilities // ignore: cast_nullable_to_non_nullable
-              as Canonical,
+              as FhirCanonical,
     ));
   }
 }
@@ -20699,7 +19425,7 @@ class _$_TestScriptCapability extends _TestScriptCapability {
   ///  capabilities of the server in order for this test script to execute.
   @override
   @JsonKey(name: 'required')
-  final Boolean? required_;
+  final FhirBoolean? required_;
 
   /// [requiredElement] Extensions for required
   @override
@@ -20709,7 +19435,7 @@ class _$_TestScriptCapability extends _TestScriptCapability {
   /// [validated] Whether or not the test execution will validate the given
   ///  capabilities of the server in order for this test script to execute.
   @override
-  final Boolean? validated;
+  final FhirBoolean? validated;
 
   /// [validatedElement] Extensions for validated
   @override
@@ -20755,7 +19481,7 @@ class _$_TestScriptCapability extends _TestScriptCapability {
 
   /// [destination] Which server these requirements apply to.
   @override
-  final Integer? destination;
+  final FhirInteger? destination;
 
   /// [destinationElement] Extensions for destination
   @override
@@ -20796,7 +19522,7 @@ class _$_TestScriptCapability extends _TestScriptCapability {
   /// referenced capability statement, then all tests in this script are
   ///  skipped.
   @override
-  final Canonical capabilities;
+  final FhirCanonical capabilities;
 
   @override
   String toString() {
@@ -20880,19 +19606,19 @@ abstract class _TestScriptCapability extends TestScriptCapability {
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      @JsonKey(name: 'required') final Boolean? required_,
+      @JsonKey(name: 'required') final FhirBoolean? required_,
       @JsonKey(name: '_required') final Element? requiredElement,
-      final Boolean? validated,
+      final FhirBoolean? validated,
       @JsonKey(name: '_validated') final Element? validatedElement,
       final String? description,
       @JsonKey(name: '_description') final Element? descriptionElement,
       final List<FhirInteger>? origin,
       @JsonKey(name: '_origin') final List<Element?>? originElement,
-      final Integer? destination,
+      final FhirInteger? destination,
       @JsonKey(name: '_destination') final Element? destinationElement,
       final List<FhirUri>? link,
       @JsonKey(name: '_link') final List<Element?>? linkElement,
-      required final Canonical capabilities}) = _$_TestScriptCapability;
+      required final FhirCanonical capabilities}) = _$_TestScriptCapability;
   _TestScriptCapability._() : super._();
 
   factory _TestScriptCapability.fromJson(Map<String, dynamic> json) =
@@ -20934,7 +19660,7 @@ abstract class _TestScriptCapability extends TestScriptCapability {
   /// [required] Whether or not the test execution will require the given
   ///  capabilities of the server in order for this test script to execute.
   @JsonKey(name: 'required')
-  Boolean? get required_;
+  FhirBoolean? get required_;
   @override
 
   /// [requiredElement] Extensions for required
@@ -20944,7 +19670,7 @@ abstract class _TestScriptCapability extends TestScriptCapability {
 
   /// [validated] Whether or not the test execution will validate the given
   ///  capabilities of the server in order for this test script to execute.
-  Boolean? get validated;
+  FhirBoolean? get validated;
   @override
 
   /// [validatedElement] Extensions for validated
@@ -20972,7 +19698,7 @@ abstract class _TestScriptCapability extends TestScriptCapability {
   @override
 
   /// [destination] Which server these requirements apply to.
-  Integer? get destination;
+  FhirInteger? get destination;
   @override
 
   /// [destinationElement] Extensions for destination
@@ -20994,7 +19720,7 @@ abstract class _TestScriptCapability extends TestScriptCapability {
   /// execute successfully.   If server does not meet at a minimum the
   /// referenced capability statement, then all tests in this script are
   ///  skipped.
-  Canonical get capabilities;
+  FhirCanonical get capabilities;
   @override
   @JsonKey(ignore: true)
   _$$_TestScriptCapabilityCopyWith<_$_TestScriptCapability> get copyWith =>
@@ -21040,7 +19766,7 @@ mixin _$TestScriptFixture {
   /// setup. If true, the fixture is automatically created on each server being
   /// tested during setup, therefore no create operation is required for this
   ///  fixture in the TestScript.setup section.
-  Boolean? get autocreate => throw _privateConstructorUsedError;
+  FhirBoolean? get autocreate => throw _privateConstructorUsedError;
 
   /// [autocreateElement] Extensions for autocreate
   @JsonKey(name: '_autocreate')
@@ -21050,7 +19776,7 @@ mixin _$TestScriptFixture {
   /// teardown. If true, the fixture is automatically deleted on each server
   /// being tested during teardown, therefore no delete operation is required
   ///  for this fixture in the TestScript.teardown section.
-  Boolean? get autodelete => throw _privateConstructorUsedError;
+  FhirBoolean? get autodelete => throw _privateConstructorUsedError;
 
   /// [autodeleteElement] Extensions for autodelete
   @JsonKey(name: '_autodelete')
@@ -21076,9 +19802,9 @@ abstract class $TestScriptFixtureCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Boolean? autocreate,
+      FhirBoolean? autocreate,
       @JsonKey(name: '_autocreate') Element? autocreateElement,
-      Boolean? autodelete,
+      FhirBoolean? autodelete,
       @JsonKey(name: '_autodelete') Element? autodeleteElement,
       Reference? resource});
 
@@ -21125,7 +19851,7 @@ class _$TestScriptFixtureCopyWithImpl<$Res, $Val extends TestScriptFixture>
       autocreate: freezed == autocreate
           ? _value.autocreate
           : autocreate // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       autocreateElement: freezed == autocreateElement
           ? _value.autocreateElement
           : autocreateElement // ignore: cast_nullable_to_non_nullable
@@ -21133,7 +19859,7 @@ class _$TestScriptFixtureCopyWithImpl<$Res, $Val extends TestScriptFixture>
       autodelete: freezed == autodelete
           ? _value.autodelete
           : autodelete // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       autodeleteElement: freezed == autodeleteElement
           ? _value.autodeleteElement
           : autodeleteElement // ignore: cast_nullable_to_non_nullable
@@ -21194,9 +19920,9 @@ abstract class _$$_TestScriptFixtureCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Boolean? autocreate,
+      FhirBoolean? autocreate,
       @JsonKey(name: '_autocreate') Element? autocreateElement,
-      Boolean? autodelete,
+      FhirBoolean? autodelete,
       @JsonKey(name: '_autodelete') Element? autodeleteElement,
       Reference? resource});
 
@@ -21244,7 +19970,7 @@ class __$$_TestScriptFixtureCopyWithImpl<$Res>
       autocreate: freezed == autocreate
           ? _value.autocreate
           : autocreate // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       autocreateElement: freezed == autocreateElement
           ? _value.autocreateElement
           : autocreateElement // ignore: cast_nullable_to_non_nullable
@@ -21252,7 +19978,7 @@ class __$$_TestScriptFixtureCopyWithImpl<$Res>
       autodelete: freezed == autodelete
           ? _value.autodelete
           : autodelete // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       autodeleteElement: freezed == autodeleteElement
           ? _value.autodeleteElement
           : autodeleteElement // ignore: cast_nullable_to_non_nullable
@@ -21356,7 +20082,7 @@ class _$_TestScriptFixture extends _TestScriptFixture {
   /// tested during setup, therefore no create operation is required for this
   ///  fixture in the TestScript.setup section.
   @override
-  final Boolean? autocreate;
+  final FhirBoolean? autocreate;
 
   /// [autocreateElement] Extensions for autocreate
   @override
@@ -21368,7 +20094,7 @@ class _$_TestScriptFixture extends _TestScriptFixture {
   /// being tested during teardown, therefore no delete operation is required
   ///  for this fixture in the TestScript.teardown section.
   @override
-  final Boolean? autodelete;
+  final FhirBoolean? autodelete;
 
   /// [autodeleteElement] Extensions for autodelete
   @override
@@ -21440,9 +20166,9 @@ abstract class _TestScriptFixture extends TestScriptFixture {
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final Boolean? autocreate,
+      final FhirBoolean? autocreate,
       @JsonKey(name: '_autocreate') final Element? autocreateElement,
-      final Boolean? autodelete,
+      final FhirBoolean? autodelete,
       @JsonKey(name: '_autodelete') final Element? autodeleteElement,
       final Reference? resource}) = _$_TestScriptFixture;
   _TestScriptFixture._() : super._();
@@ -21487,7 +20213,7 @@ abstract class _TestScriptFixture extends TestScriptFixture {
   /// setup. If true, the fixture is automatically created on each server being
   /// tested during setup, therefore no create operation is required for this
   ///  fixture in the TestScript.setup section.
-  Boolean? get autocreate;
+  FhirBoolean? get autocreate;
   @override
 
   /// [autocreateElement] Extensions for autocreate
@@ -21499,7 +20225,7 @@ abstract class _TestScriptFixture extends TestScriptFixture {
   /// teardown. If true, the fixture is automatically deleted on each server
   /// being tested during teardown, therefore no delete operation is required
   ///  for this fixture in the TestScript.teardown section.
-  Boolean? get autodelete;
+  FhirBoolean? get autodelete;
   @override
 
   /// [autodeleteElement] Extensions for autodelete
@@ -21764,7 +20490,7 @@ class _$TestScriptVariableCopyWithImpl<$Res, $Val extends TestScriptVariable>
       sourceId: freezed == sourceId
           ? _value.sourceId
           : sourceId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       sourceIdElement: freezed == sourceIdElement
           ? _value.sourceIdElement
           : sourceIdElement // ignore: cast_nullable_to_non_nullable
@@ -22019,7 +20745,7 @@ class __$$_TestScriptVariableCopyWithImpl<$Res>
       sourceId: freezed == sourceId
           ? _value.sourceId
           : sourceId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       sourceIdElement: freezed == sourceIdElement
           ? _value.sourceIdElement
           : sourceIdElement // ignore: cast_nullable_to_non_nullable
@@ -23246,7 +21972,7 @@ mixin _$TestScriptOperation {
 
   /// [destination] The server where the request message is destined for.  Must
   ///  be one of the server numbers listed in TestScript.destination section.
-  Integer? get destination => throw _privateConstructorUsedError;
+  FhirInteger? get destination => throw _privateConstructorUsedError;
 
   /// [destinationElement] Extensions for destination
   @JsonKey(name: '_destination')
@@ -23256,7 +21982,7 @@ mixin _$TestScriptOperation {
   /// encoded format. The default is true to match the standard RESTful client
   /// behavior. Set to false when communicating with a server that does not
   ///  support encoded url paths.
-  Boolean? get encodeRequestUrl => throw _privateConstructorUsedError;
+  FhirBoolean? get encodeRequestUrl => throw _privateConstructorUsedError;
 
   /// [encodeRequestUrlElement] Extensions for encodeRequestUrl
   @JsonKey(name: '_encodeRequestUrl')
@@ -23272,7 +21998,7 @@ mixin _$TestScriptOperation {
 
   /// [origin] The server where the request message originates from.  Must be
   ///  one of the server numbers listed in TestScript.origin section.
-  Integer? get origin => throw _privateConstructorUsedError;
+  FhirInteger? get origin => throw _privateConstructorUsedError;
 
   /// [originElement] Extensions for origin
   @JsonKey(name: '_origin')
@@ -23354,13 +22080,13 @@ abstract class $TestScriptOperationCopyWith<$Res> {
       @JsonKey(name: '_accept') Element? acceptElement,
       FhirCode? contentType,
       @JsonKey(name: '_contentType') Element? contentTypeElement,
-      Integer? destination,
+      FhirInteger? destination,
       @JsonKey(name: '_destination') Element? destinationElement,
-      Boolean? encodeRequestUrl,
+      FhirBoolean? encodeRequestUrl,
       @JsonKey(name: '_encodeRequestUrl') Element? encodeRequestUrlElement,
       FhirCode? method,
       @JsonKey(name: '_method') Element? methodElement,
-      Integer? origin,
+      FhirInteger? origin,
       @JsonKey(name: '_origin') Element? originElement,
       String? params,
       @JsonKey(name: '_params') Element? paramsElement,
@@ -23463,7 +22189,7 @@ class _$TestScriptOperationCopyWithImpl<$Res, $Val extends TestScriptOperation>
       resource: freezed == resource
           ? _value.resource
           : resource // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       resourceElement: freezed == resourceElement
           ? _value.resourceElement
           : resourceElement // ignore: cast_nullable_to_non_nullable
@@ -23487,7 +22213,7 @@ class _$TestScriptOperationCopyWithImpl<$Res, $Val extends TestScriptOperation>
       accept: freezed == accept
           ? _value.accept
           : accept // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       acceptElement: freezed == acceptElement
           ? _value.acceptElement
           : acceptElement // ignore: cast_nullable_to_non_nullable
@@ -23495,7 +22221,7 @@ class _$TestScriptOperationCopyWithImpl<$Res, $Val extends TestScriptOperation>
       contentType: freezed == contentType
           ? _value.contentType
           : contentType // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       contentTypeElement: freezed == contentTypeElement
           ? _value.contentTypeElement
           : contentTypeElement // ignore: cast_nullable_to_non_nullable
@@ -23503,7 +22229,7 @@ class _$TestScriptOperationCopyWithImpl<$Res, $Val extends TestScriptOperation>
       destination: freezed == destination
           ? _value.destination
           : destination // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       destinationElement: freezed == destinationElement
           ? _value.destinationElement
           : destinationElement // ignore: cast_nullable_to_non_nullable
@@ -23511,7 +22237,7 @@ class _$TestScriptOperationCopyWithImpl<$Res, $Val extends TestScriptOperation>
       encodeRequestUrl: freezed == encodeRequestUrl
           ? _value.encodeRequestUrl
           : encodeRequestUrl // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       encodeRequestUrlElement: freezed == encodeRequestUrlElement
           ? _value.encodeRequestUrlElement
           : encodeRequestUrlElement // ignore: cast_nullable_to_non_nullable
@@ -23519,7 +22245,7 @@ class _$TestScriptOperationCopyWithImpl<$Res, $Val extends TestScriptOperation>
       method: freezed == method
           ? _value.method
           : method // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       methodElement: freezed == methodElement
           ? _value.methodElement
           : methodElement // ignore: cast_nullable_to_non_nullable
@@ -23527,7 +22253,7 @@ class _$TestScriptOperationCopyWithImpl<$Res, $Val extends TestScriptOperation>
       origin: freezed == origin
           ? _value.origin
           : origin // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       originElement: freezed == originElement
           ? _value.originElement
           : originElement // ignore: cast_nullable_to_non_nullable
@@ -23547,7 +22273,7 @@ class _$TestScriptOperationCopyWithImpl<$Res, $Val extends TestScriptOperation>
       requestId: freezed == requestId
           ? _value.requestId
           : requestId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       requestIdElement: freezed == requestIdElement
           ? _value.requestIdElement
           : requestIdElement // ignore: cast_nullable_to_non_nullable
@@ -23555,7 +22281,7 @@ class _$TestScriptOperationCopyWithImpl<$Res, $Val extends TestScriptOperation>
       responseId: freezed == responseId
           ? _value.responseId
           : responseId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       responseIdElement: freezed == responseIdElement
           ? _value.responseIdElement
           : responseIdElement // ignore: cast_nullable_to_non_nullable
@@ -23563,7 +22289,7 @@ class _$TestScriptOperationCopyWithImpl<$Res, $Val extends TestScriptOperation>
       sourceId: freezed == sourceId
           ? _value.sourceId
           : sourceId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       sourceIdElement: freezed == sourceIdElement
           ? _value.sourceIdElement
           : sourceIdElement // ignore: cast_nullable_to_non_nullable
@@ -23571,7 +22297,7 @@ class _$TestScriptOperationCopyWithImpl<$Res, $Val extends TestScriptOperation>
       targetId: freezed == targetId
           ? _value.targetId
           : targetId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       targetIdElement: freezed == targetIdElement
           ? _value.targetIdElement
           : targetIdElement // ignore: cast_nullable_to_non_nullable
@@ -23803,13 +22529,13 @@ abstract class _$$_TestScriptOperationCopyWith<$Res>
       @JsonKey(name: '_accept') Element? acceptElement,
       FhirCode? contentType,
       @JsonKey(name: '_contentType') Element? contentTypeElement,
-      Integer? destination,
+      FhirInteger? destination,
       @JsonKey(name: '_destination') Element? destinationElement,
-      Boolean? encodeRequestUrl,
+      FhirBoolean? encodeRequestUrl,
       @JsonKey(name: '_encodeRequestUrl') Element? encodeRequestUrlElement,
       FhirCode? method,
       @JsonKey(name: '_method') Element? methodElement,
-      Integer? origin,
+      FhirInteger? origin,
       @JsonKey(name: '_origin') Element? originElement,
       String? params,
       @JsonKey(name: '_params') Element? paramsElement,
@@ -23926,7 +22652,7 @@ class __$$_TestScriptOperationCopyWithImpl<$Res>
       resource: freezed == resource
           ? _value.resource
           : resource // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       resourceElement: freezed == resourceElement
           ? _value.resourceElement
           : resourceElement // ignore: cast_nullable_to_non_nullable
@@ -23950,7 +22676,7 @@ class __$$_TestScriptOperationCopyWithImpl<$Res>
       accept: freezed == accept
           ? _value.accept
           : accept // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       acceptElement: freezed == acceptElement
           ? _value.acceptElement
           : acceptElement // ignore: cast_nullable_to_non_nullable
@@ -23958,7 +22684,7 @@ class __$$_TestScriptOperationCopyWithImpl<$Res>
       contentType: freezed == contentType
           ? _value.contentType
           : contentType // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       contentTypeElement: freezed == contentTypeElement
           ? _value.contentTypeElement
           : contentTypeElement // ignore: cast_nullable_to_non_nullable
@@ -23966,7 +22692,7 @@ class __$$_TestScriptOperationCopyWithImpl<$Res>
       destination: freezed == destination
           ? _value.destination
           : destination // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       destinationElement: freezed == destinationElement
           ? _value.destinationElement
           : destinationElement // ignore: cast_nullable_to_non_nullable
@@ -23974,7 +22700,7 @@ class __$$_TestScriptOperationCopyWithImpl<$Res>
       encodeRequestUrl: freezed == encodeRequestUrl
           ? _value.encodeRequestUrl
           : encodeRequestUrl // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       encodeRequestUrlElement: freezed == encodeRequestUrlElement
           ? _value.encodeRequestUrlElement
           : encodeRequestUrlElement // ignore: cast_nullable_to_non_nullable
@@ -23982,7 +22708,7 @@ class __$$_TestScriptOperationCopyWithImpl<$Res>
       method: freezed == method
           ? _value.method
           : method // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       methodElement: freezed == methodElement
           ? _value.methodElement
           : methodElement // ignore: cast_nullable_to_non_nullable
@@ -23990,7 +22716,7 @@ class __$$_TestScriptOperationCopyWithImpl<$Res>
       origin: freezed == origin
           ? _value.origin
           : origin // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       originElement: freezed == originElement
           ? _value.originElement
           : originElement // ignore: cast_nullable_to_non_nullable
@@ -24010,7 +22736,7 @@ class __$$_TestScriptOperationCopyWithImpl<$Res>
       requestId: freezed == requestId
           ? _value.requestId
           : requestId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       requestIdElement: freezed == requestIdElement
           ? _value.requestIdElement
           : requestIdElement // ignore: cast_nullable_to_non_nullable
@@ -24018,7 +22744,7 @@ class __$$_TestScriptOperationCopyWithImpl<$Res>
       responseId: freezed == responseId
           ? _value.responseId
           : responseId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       responseIdElement: freezed == responseIdElement
           ? _value.responseIdElement
           : responseIdElement // ignore: cast_nullable_to_non_nullable
@@ -24026,7 +22752,7 @@ class __$$_TestScriptOperationCopyWithImpl<$Res>
       sourceId: freezed == sourceId
           ? _value.sourceId
           : sourceId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       sourceIdElement: freezed == sourceIdElement
           ? _value.sourceIdElement
           : sourceIdElement // ignore: cast_nullable_to_non_nullable
@@ -24034,7 +22760,7 @@ class __$$_TestScriptOperationCopyWithImpl<$Res>
       targetId: freezed == targetId
           ? _value.targetId
           : targetId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       targetIdElement: freezed == targetIdElement
           ? _value.targetIdElement
           : targetIdElement // ignore: cast_nullable_to_non_nullable
@@ -24172,7 +22898,7 @@ class _$_TestScriptOperation extends _TestScriptOperation {
   /// [resource] The type of the resource.  See
   ///  http://build.fhir.org/resourcelist.html.
   @override
-  final Code? resource;
+  final FhirCode? resource;
 
   /// [resourceElement] Extensions for resource
   @override
@@ -24202,7 +22928,7 @@ class _$_TestScriptOperation extends _TestScriptOperation {
   /// [accept] The mime-type to use for RESTful operation in the 'Accept'
   ///  header.
   @override
-  final Code? accept;
+  final FhirCode? accept;
 
   /// [acceptElement] Extensions for accept
   @override
@@ -24212,7 +22938,7 @@ class _$_TestScriptOperation extends _TestScriptOperation {
   /// [contentType] The mime-type to use for RESTful operation in the
   ///  'Content-Type' header.
   @override
-  final Code? contentType;
+  final FhirCode? contentType;
 
   /// [contentTypeElement] Extensions for contentType
   @override
@@ -24222,7 +22948,7 @@ class _$_TestScriptOperation extends _TestScriptOperation {
   /// [destination] The server where the request message is destined for.  Must
   ///  be one of the server numbers listed in TestScript.destination section.
   @override
-  final Integer? destination;
+  final FhirInteger? destination;
 
   /// [destinationElement] Extensions for destination
   @override
@@ -24234,7 +22960,7 @@ class _$_TestScriptOperation extends _TestScriptOperation {
   /// behavior. Set to false when communicating with a server that does not
   ///  support encoded url paths.
   @override
-  final Boolean? encodeRequestUrl;
+  final FhirBoolean? encodeRequestUrl;
 
   /// [encodeRequestUrlElement] Extensions for encodeRequestUrl
   @override
@@ -24244,7 +22970,7 @@ class _$_TestScriptOperation extends _TestScriptOperation {
   /// [method] The HTTP method the test engine MUST use for this operation
   ///  regardless of any other operation details.
   @override
-  final Code? method;
+  final FhirCode? method;
 
   /// [methodElement] Extensions for method
   @override
@@ -24254,7 +22980,7 @@ class _$_TestScriptOperation extends _TestScriptOperation {
   /// [origin] The server where the request message originates from.  Must be
   ///  one of the server numbers listed in TestScript.origin section.
   @override
-  final Integer? origin;
+  final FhirInteger? origin;
 
   /// [originElement] Extensions for origin
   @override
@@ -24469,7 +23195,7 @@ abstract class _TestScriptOperation extends TestScriptOperation {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final Coding? type,
-      final Code? resource,
+      final FhirCode? resource,
       @JsonKey(name: '_resource')
           final Element? resourceElement,
       final String? label,
@@ -24478,22 +23204,22 @@ abstract class _TestScriptOperation extends TestScriptOperation {
       final String? description,
       @JsonKey(name: '_description')
           final Element? descriptionElement,
-      final Code? accept,
+      final FhirCode? accept,
       @JsonKey(name: '_accept')
           final Element? acceptElement,
-      final Code? contentType,
+      final FhirCode? contentType,
       @JsonKey(name: '_contentType')
           final Element? contentTypeElement,
-      final Integer? destination,
+      final FhirInteger? destination,
       @JsonKey(name: '_destination')
           final Element? destinationElement,
-      final Boolean? encodeRequestUrl,
+      final FhirBoolean? encodeRequestUrl,
       @JsonKey(name: '_encodeRequestUrl')
           final Element? encodeRequestUrlElement,
-      final Code? method,
+      final FhirCode? method,
       @JsonKey(name: '_method')
           final Element? methodElement,
-      final Integer? origin,
+      final FhirInteger? origin,
       @JsonKey(name: '_origin')
           final Element? originElement,
       final String? params,
@@ -24609,7 +23335,7 @@ abstract class _TestScriptOperation extends TestScriptOperation {
 
   /// [destination] The server where the request message is destined for.  Must
   ///  be one of the server numbers listed in TestScript.destination section.
-  Integer? get destination;
+  FhirInteger? get destination;
   @override
 
   /// [destinationElement] Extensions for destination
@@ -24621,7 +23347,7 @@ abstract class _TestScriptOperation extends TestScriptOperation {
   /// encoded format. The default is true to match the standard RESTful client
   /// behavior. Set to false when communicating with a server that does not
   ///  support encoded url paths.
-  Boolean? get encodeRequestUrl;
+  FhirBoolean? get encodeRequestUrl;
   @override
 
   /// [encodeRequestUrlElement] Extensions for encodeRequestUrl
@@ -24641,7 +23367,7 @@ abstract class _TestScriptOperation extends TestScriptOperation {
 
   /// [origin] The server where the request message originates from.  Must be
   ///  one of the server numbers listed in TestScript.origin section.
-  Integer? get origin;
+  FhirInteger? get origin;
   @override
 
   /// [originElement] Extensions for origin
@@ -25287,7 +24013,7 @@ mixin _$TestScriptAssert {
 
   /// [navigationLinks] Whether or not the test execution performs validation
   ///  on the bundle navigation links.
-  Boolean? get navigationLinks => throw _privateConstructorUsedError;
+  FhirBoolean? get navigationLinks => throw _privateConstructorUsedError;
 
   /// [navigationLinksElement] Extensions for navigationLinks
   @JsonKey(name: '_navigationLinks')
@@ -25374,7 +24100,7 @@ mixin _$TestScriptAssert {
 
   /// [warningOnly] Whether or not the test execution will produce a warning
   ///  only on error for this assert.
-  Boolean? get warningOnly => throw _privateConstructorUsedError;
+  FhirBoolean? get warningOnly => throw _privateConstructorUsedError;
 
   /// [warningOnlyElement] Extensions for warningOnly
   @JsonKey(name: '_warningOnly')
@@ -25427,7 +24153,7 @@ abstract class $TestScriptAssertCopyWith<$Res> {
       String? minimumId,
       @JsonKey(name: '_minimumId')
           Element? minimumIdElement,
-      Boolean? navigationLinks,
+      FhirBoolean? navigationLinks,
       @JsonKey(name: '_navigationLinks')
           Element? navigationLinksElement,
       @JsonKey(name: 'operator')
@@ -25461,7 +24187,7 @@ abstract class $TestScriptAssertCopyWith<$Res> {
       String? value,
       @JsonKey(name: '_value')
           Element? valueElement,
-      Boolean? warningOnly,
+      FhirBoolean? warningOnly,
       @JsonKey(name: '_warningOnly')
           Element? warningOnlyElement});
 
@@ -25582,7 +24308,7 @@ class _$TestScriptAssertCopyWithImpl<$Res, $Val extends TestScriptAssert>
       direction: freezed == direction
           ? _value.direction
           : direction // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       directionElement: freezed == directionElement
           ? _value.directionElement
           : directionElement // ignore: cast_nullable_to_non_nullable
@@ -25615,7 +24341,7 @@ class _$TestScriptAssertCopyWithImpl<$Res, $Val extends TestScriptAssert>
       contentType: freezed == contentType
           ? _value.contentType
           : contentType // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       contentTypeElement: freezed == contentTypeElement
           ? _value.contentTypeElement
           : contentTypeElement // ignore: cast_nullable_to_non_nullable
@@ -25647,7 +24373,7 @@ class _$TestScriptAssertCopyWithImpl<$Res, $Val extends TestScriptAssert>
       navigationLinks: freezed == navigationLinks
           ? _value.navigationLinks
           : navigationLinks // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       navigationLinksElement: freezed == navigationLinksElement
           ? _value.navigationLinksElement
           : navigationLinksElement // ignore: cast_nullable_to_non_nullable
@@ -25655,7 +24381,7 @@ class _$TestScriptAssertCopyWithImpl<$Res, $Val extends TestScriptAssert>
       operator_: freezed == operator_
           ? _value.operator_
           : operator_ // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       operatorElement: freezed == operatorElement
           ? _value.operatorElement
           : operatorElement // ignore: cast_nullable_to_non_nullable
@@ -25671,7 +24397,7 @@ class _$TestScriptAssertCopyWithImpl<$Res, $Val extends TestScriptAssert>
       requestMethod: freezed == requestMethod
           ? _value.requestMethod
           : requestMethod // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       requestMethodElement: freezed == requestMethodElement
           ? _value.requestMethodElement
           : requestMethodElement // ignore: cast_nullable_to_non_nullable
@@ -25687,7 +24413,7 @@ class _$TestScriptAssertCopyWithImpl<$Res, $Val extends TestScriptAssert>
       resource: freezed == resource
           ? _value.resource
           : resource // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       resourceElement: freezed == resourceElement
           ? _value.resourceElement
           : resourceElement // ignore: cast_nullable_to_non_nullable
@@ -25695,7 +24421,7 @@ class _$TestScriptAssertCopyWithImpl<$Res, $Val extends TestScriptAssert>
       response: freezed == response
           ? _value.response
           : response // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       responseElement: freezed == responseElement
           ? _value.responseElement
           : responseElement // ignore: cast_nullable_to_non_nullable
@@ -25711,7 +24437,7 @@ class _$TestScriptAssertCopyWithImpl<$Res, $Val extends TestScriptAssert>
       sourceId: freezed == sourceId
           ? _value.sourceId
           : sourceId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       sourceIdElement: freezed == sourceIdElement
           ? _value.sourceIdElement
           : sourceIdElement // ignore: cast_nullable_to_non_nullable
@@ -25719,7 +24445,7 @@ class _$TestScriptAssertCopyWithImpl<$Res, $Val extends TestScriptAssert>
       validateProfileId: freezed == validateProfileId
           ? _value.validateProfileId
           : validateProfileId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       validateProfileIdElement: freezed == validateProfileIdElement
           ? _value.validateProfileIdElement
           : validateProfileIdElement // ignore: cast_nullable_to_non_nullable
@@ -25735,7 +24461,7 @@ class _$TestScriptAssertCopyWithImpl<$Res, $Val extends TestScriptAssert>
       warningOnly: freezed == warningOnly
           ? _value.warningOnly
           : warningOnly // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       warningOnlyElement: freezed == warningOnlyElement
           ? _value.warningOnlyElement
           : warningOnlyElement // ignore: cast_nullable_to_non_nullable
@@ -26053,7 +24779,7 @@ abstract class _$$_TestScriptAssertCopyWith<$Res>
       String? minimumId,
       @JsonKey(name: '_minimumId')
           Element? minimumIdElement,
-      Boolean? navigationLinks,
+      FhirBoolean? navigationLinks,
       @JsonKey(name: '_navigationLinks')
           Element? navigationLinksElement,
       @JsonKey(name: 'operator')
@@ -26087,7 +24813,7 @@ abstract class _$$_TestScriptAssertCopyWith<$Res>
       String? value,
       @JsonKey(name: '_value')
           Element? valueElement,
-      Boolean? warningOnly,
+      FhirBoolean? warningOnly,
       @JsonKey(name: '_warningOnly')
           Element? warningOnlyElement});
 
@@ -26228,7 +24954,7 @@ class __$$_TestScriptAssertCopyWithImpl<$Res>
       direction: freezed == direction
           ? _value.direction
           : direction // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       directionElement: freezed == directionElement
           ? _value.directionElement
           : directionElement // ignore: cast_nullable_to_non_nullable
@@ -26261,7 +24987,7 @@ class __$$_TestScriptAssertCopyWithImpl<$Res>
       contentType: freezed == contentType
           ? _value.contentType
           : contentType // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       contentTypeElement: freezed == contentTypeElement
           ? _value.contentTypeElement
           : contentTypeElement // ignore: cast_nullable_to_non_nullable
@@ -26293,7 +25019,7 @@ class __$$_TestScriptAssertCopyWithImpl<$Res>
       navigationLinks: freezed == navigationLinks
           ? _value.navigationLinks
           : navigationLinks // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       navigationLinksElement: freezed == navigationLinksElement
           ? _value.navigationLinksElement
           : navigationLinksElement // ignore: cast_nullable_to_non_nullable
@@ -26301,7 +25027,7 @@ class __$$_TestScriptAssertCopyWithImpl<$Res>
       operator_: freezed == operator_
           ? _value.operator_
           : operator_ // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       operatorElement: freezed == operatorElement
           ? _value.operatorElement
           : operatorElement // ignore: cast_nullable_to_non_nullable
@@ -26317,7 +25043,7 @@ class __$$_TestScriptAssertCopyWithImpl<$Res>
       requestMethod: freezed == requestMethod
           ? _value.requestMethod
           : requestMethod // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       requestMethodElement: freezed == requestMethodElement
           ? _value.requestMethodElement
           : requestMethodElement // ignore: cast_nullable_to_non_nullable
@@ -26333,7 +25059,7 @@ class __$$_TestScriptAssertCopyWithImpl<$Res>
       resource: freezed == resource
           ? _value.resource
           : resource // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       resourceElement: freezed == resourceElement
           ? _value.resourceElement
           : resourceElement // ignore: cast_nullable_to_non_nullable
@@ -26341,7 +25067,7 @@ class __$$_TestScriptAssertCopyWithImpl<$Res>
       response: freezed == response
           ? _value.response
           : response // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       responseElement: freezed == responseElement
           ? _value.responseElement
           : responseElement // ignore: cast_nullable_to_non_nullable
@@ -26357,7 +25083,7 @@ class __$$_TestScriptAssertCopyWithImpl<$Res>
       sourceId: freezed == sourceId
           ? _value.sourceId
           : sourceId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       sourceIdElement: freezed == sourceIdElement
           ? _value.sourceIdElement
           : sourceIdElement // ignore: cast_nullable_to_non_nullable
@@ -26365,7 +25091,7 @@ class __$$_TestScriptAssertCopyWithImpl<$Res>
       validateProfileId: freezed == validateProfileId
           ? _value.validateProfileId
           : validateProfileId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       validateProfileIdElement: freezed == validateProfileIdElement
           ? _value.validateProfileIdElement
           : validateProfileIdElement // ignore: cast_nullable_to_non_nullable
@@ -26381,7 +25107,7 @@ class __$$_TestScriptAssertCopyWithImpl<$Res>
       warningOnly: freezed == warningOnly
           ? _value.warningOnly
           : warningOnly // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       warningOnlyElement: freezed == warningOnlyElement
           ? _value.warningOnlyElement
           : warningOnlyElement // ignore: cast_nullable_to_non_nullable
@@ -26561,7 +25287,7 @@ class _$_TestScriptAssert extends _TestScriptAssert {
 
   /// [direction] The direction to use for the assertion.
   @override
-  final Code? direction;
+  final FhirCode? direction;
 
   /// [directionElement] Extensions for direction
   @override
@@ -26604,7 +25330,7 @@ class _$_TestScriptAssert extends _TestScriptAssert {
   /// [contentType] The mime-type contents to compare against the request or
   ///  response message 'Content-Type' header.
   @override
-  final Code? contentType;
+  final FhirCode? contentType;
 
   /// [contentTypeElement] Extensions for contentType
   @override
@@ -26643,7 +25369,7 @@ class _$_TestScriptAssert extends _TestScriptAssert {
   /// [navigationLinks] Whether or not the test execution performs validation
   ///  on the bundle navigation links.
   @override
-  final Boolean? navigationLinks;
+  final FhirBoolean? navigationLinks;
 
   /// [navigationLinksElement] Extensions for navigationLinks
   @override
@@ -26654,7 +25380,7 @@ class _$_TestScriptAssert extends _TestScriptAssert {
   ///  assert. If not defined, the default is equals.
   @override
   @JsonKey(name: 'operator')
-  final Code? operator_;
+  final FhirCode? operator_;
 
   /// [operatorElement] Extensions for operator
   @override
@@ -26674,7 +25400,7 @@ class _$_TestScriptAssert extends _TestScriptAssert {
   /// [requestMethod] The request method or HTTP operation code to compare
   ///  against that used by the client system under test.
   @override
-  final Code? requestMethod;
+  final FhirCode? requestMethod;
 
   /// [requestMethodElement] Extensions for requestMethod
   @override
@@ -26694,7 +25420,7 @@ class _$_TestScriptAssert extends _TestScriptAssert {
   /// [resource] The type of the resource.  See
   ///  http://build.fhir.org/resourcelist.html.
   @override
-  final Code? resource;
+  final FhirCode? resource;
 
   /// [resourceElement] Extensions for resource
   @override
@@ -26705,7 +25431,7 @@ class _$_TestScriptAssert extends _TestScriptAssert {
   /// notFound | methodNotAllowed | conflict | gone | preconditionFailed |
   ///  unprocessable.
   @override
-  final Code? response;
+  final FhirCode? response;
 
   /// [responseElement] Extensions for response
   @override
@@ -26752,7 +25478,7 @@ class _$_TestScriptAssert extends _TestScriptAssert {
   /// [warningOnly] Whether or not the test execution will produce a warning
   ///  only on error for this assert.
   @override
-  final Boolean? warningOnly;
+  final FhirBoolean? warningOnly;
 
   /// [warningOnlyElement] Extensions for warningOnly
   @override
@@ -26923,7 +25649,7 @@ abstract class _TestScriptAssert extends TestScriptAssert {
       final String? description,
       @JsonKey(name: '_description')
           final Element? descriptionElement,
-      final Code? direction,
+      final FhirCode? direction,
       @JsonKey(name: '_direction')
           final Element? directionElement,
       final String? compareToSourceId,
@@ -26935,7 +25661,7 @@ abstract class _TestScriptAssert extends TestScriptAssert {
       final String? compareToSourcePath,
       @JsonKey(name: '_compareToSourcePath')
           final Element? compareToSourcePathElement,
-      final Code? contentType,
+      final FhirCode? contentType,
       @JsonKey(name: '_contentType')
           final Element? contentTypeElement,
       final String? expression,
@@ -26947,26 +25673,26 @@ abstract class _TestScriptAssert extends TestScriptAssert {
       final String? minimumId,
       @JsonKey(name: '_minimumId')
           final Element? minimumIdElement,
-      final Boolean? navigationLinks,
+      final FhirBoolean? navigationLinks,
       @JsonKey(name: '_navigationLinks')
           final Element? navigationLinksElement,
       @JsonKey(name: 'operator')
-          final Code? operator_,
+          final FhirCode? operator_,
       @JsonKey(name: '_operator')
           final Element? operatorElement,
       final String? path,
       @JsonKey(name: '_path')
           final Element? pathElement,
-      final Code? requestMethod,
+      final FhirCode? requestMethod,
       @JsonKey(name: '_requestMethod')
           final Element? requestMethodElement,
       final String? requestURL,
       @JsonKey(name: '_requestURL')
           final Element? requestURLElement,
-      final Code? resource,
+      final FhirCode? resource,
       @JsonKey(name: '_resource')
           final Element? resourceElement,
-      final Code? response,
+      final FhirCode? response,
       @JsonKey(name: '_response')
           final Element? responseElement,
       final String? responseCode,
@@ -26981,7 +25707,7 @@ abstract class _TestScriptAssert extends TestScriptAssert {
       final String? value,
       @JsonKey(name: '_value')
           final Element? valueElement,
-      final Boolean? warningOnly,
+      final FhirBoolean? warningOnly,
       @JsonKey(name: '_warningOnly')
           final Element? warningOnlyElement}) = _$_TestScriptAssert;
   _TestScriptAssert._() : super._();
@@ -27125,7 +25851,7 @@ abstract class _TestScriptAssert extends TestScriptAssert {
 
   /// [navigationLinks] Whether or not the test execution performs validation
   ///  on the bundle navigation links.
-  Boolean? get navigationLinks;
+  FhirBoolean? get navigationLinks;
   @override
 
   /// [navigationLinksElement] Extensions for navigationLinks
@@ -27234,7 +25960,7 @@ abstract class _TestScriptAssert extends TestScriptAssert {
 
   /// [warningOnly] Whether or not the test execution will produce a warning
   ///  only on error for this assert.
-  Boolean? get warningOnly;
+  FhirBoolean? get warningOnly;
   @override
 
   /// [warningOnlyElement] Extensions for warningOnly

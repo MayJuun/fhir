@@ -22,7 +22,6 @@ Population _$PopulationFromJson(Map<String, dynamic> json) {
 mixin _$Population {
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
-  @HiveField(0)
   String? get id => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -31,7 +30,6 @@ mixin _$Population {
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
-  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
@@ -48,29 +46,23 @@ mixin _$Population {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
-  @HiveField(2)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
   /// [ageRange] The age of the specific population.
-  @HiveField(3)
   Range? get ageRange => throw _privateConstructorUsedError;
 
   /// [ageCodeableConcept] The age of the specific population.
-  @HiveField(4)
   CodeableConcept? get ageCodeableConcept => throw _privateConstructorUsedError;
 
   /// [gender] The gender of the specific population.
-  @HiveField(5)
   CodeableConcept? get gender => throw _privateConstructorUsedError;
 
   /// [race] Race of the specific population.
-  @HiveField(6)
   CodeableConcept? get race => throw _privateConstructorUsedError;
 
   /// [physiologicalCondition] The existing physiological conditions of the
   ///  specific population to which this applies.
-  @HiveField(7)
   CodeableConcept? get physiologicalCondition =>
       throw _privateConstructorUsedError;
 
@@ -87,14 +79,14 @@ abstract class $PopulationCopyWith<$Res> {
       _$PopulationCopyWithImpl<$Res, Population>;
   @useResult
   $Res call(
-      {@HiveField(0) String? id,
-      @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      @HiveField(2) List<FhirExtension>? modifierExtension,
-      @HiveField(3) Range? ageRange,
-      @HiveField(4) CodeableConcept? ageCodeableConcept,
-      @HiveField(5) CodeableConcept? gender,
-      @HiveField(6) CodeableConcept? race,
-      @HiveField(7) CodeableConcept? physiologicalCondition});
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Range? ageRange,
+      CodeableConcept? ageCodeableConcept,
+      CodeableConcept? gender,
+      CodeableConcept? race,
+      CodeableConcept? physiologicalCondition});
 
   $RangeCopyWith<$Res>? get ageRange;
   $CodeableConceptCopyWith<$Res>? get ageCodeableConcept;
@@ -232,14 +224,14 @@ abstract class _$$_PopulationCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@HiveField(0) String? id,
-      @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      @HiveField(2) List<FhirExtension>? modifierExtension,
-      @HiveField(3) Range? ageRange,
-      @HiveField(4) CodeableConcept? ageCodeableConcept,
-      @HiveField(5) CodeableConcept? gender,
-      @HiveField(6) CodeableConcept? race,
-      @HiveField(7) CodeableConcept? physiologicalCondition});
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Range? ageRange,
+      CodeableConcept? ageCodeableConcept,
+      CodeableConcept? gender,
+      CodeableConcept? race,
+      CodeableConcept? physiologicalCondition});
 
   @override
   $RangeCopyWith<$Res>? get ageRange;
@@ -312,26 +304,16 @@ class __$$_PopulationCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@HiveType(typeId: 11)
 class _$_Population extends _Population {
   _$_Population(
-      {@HiveField(0)
-          this.id,
-      @HiveField(1)
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      @HiveField(2)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(3)
-          this.ageRange,
-      @HiveField(4)
-          this.ageCodeableConcept,
-      @HiveField(5)
-          this.gender,
-      @HiveField(6)
-          this.race,
-      @HiveField(7)
-          this.physiologicalCondition})
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      this.ageRange,
+      this.ageCodeableConcept,
+      this.gender,
+      this.race,
+      this.physiologicalCondition})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
         super._();
@@ -342,7 +324,6 @@ class _$_Population extends _Population {
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   @override
-  @HiveField(0)
   final String? id;
 
   /// [extension_] May be used to represent additional information that is not
@@ -360,7 +341,6 @@ class _$_Population extends _Population {
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   @override
-  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
     final value = _extension_;
@@ -399,7 +379,6 @@ class _$_Population extends _Population {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   @override
-  @HiveField(2)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -411,28 +390,23 @@ class _$_Population extends _Population {
 
   /// [ageRange] The age of the specific population.
   @override
-  @HiveField(3)
   final Range? ageRange;
 
   /// [ageCodeableConcept] The age of the specific population.
   @override
-  @HiveField(4)
   final CodeableConcept? ageCodeableConcept;
 
   /// [gender] The gender of the specific population.
   @override
-  @HiveField(5)
   final CodeableConcept? gender;
 
   /// [race] Race of the specific population.
   @override
-  @HiveField(6)
   final CodeableConcept? race;
 
   /// [physiologicalCondition] The existing physiological conditions of the
   ///  specific population to which this applies.
   @override
-  @HiveField(7)
   final CodeableConcept? physiologicalCondition;
 
   @override
@@ -489,23 +463,14 @@ class _$_Population extends _Population {
 
 abstract class _Population extends Population {
   factory _Population(
-      {@HiveField(0)
-          final String? id,
-      @HiveField(1)
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      @HiveField(2)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(3)
-          final Range? ageRange,
-      @HiveField(4)
-          final CodeableConcept? ageCodeableConcept,
-      @HiveField(5)
-          final CodeableConcept? gender,
-      @HiveField(6)
-          final CodeableConcept? race,
-      @HiveField(7)
-          final CodeableConcept? physiologicalCondition}) = _$_Population;
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final Range? ageRange,
+      final CodeableConcept? ageCodeableConcept,
+      final CodeableConcept? gender,
+      final CodeableConcept? race,
+      final CodeableConcept? physiologicalCondition}) = _$_Population;
   _Population._() : super._();
 
   factory _Population.fromJson(Map<String, dynamic> json) =
@@ -515,7 +480,6 @@ abstract class _Population extends Population {
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
-  @HiveField(0)
   String? get id;
   @override
 
@@ -525,7 +489,6 @@ abstract class _Population extends Population {
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
-  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
@@ -543,33 +506,27 @@ abstract class _Population extends Population {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
-  @HiveField(2)
   List<FhirExtension>? get modifierExtension;
   @override
 
   /// [ageRange] The age of the specific population.
-  @HiveField(3)
   Range? get ageRange;
   @override
 
   /// [ageCodeableConcept] The age of the specific population.
-  @HiveField(4)
   CodeableConcept? get ageCodeableConcept;
   @override
 
   /// [gender] The gender of the specific population.
-  @HiveField(5)
   CodeableConcept? get gender;
   @override
 
   /// [race] Race of the specific population.
-  @HiveField(6)
   CodeableConcept? get race;
   @override
 
   /// [physiologicalCondition] The existing physiological conditions of the
   ///  specific population to which this applies.
-  @HiveField(7)
   CodeableConcept? get physiologicalCondition;
   @override
   @JsonKey(ignore: true)
@@ -584,30 +541,23 @@ ProductShelfLife _$ProductShelfLifeFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$ProductShelfLife {
   /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
-  @HiveField(0)
   String? get id => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
-  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
-  @HiveField(2)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  @HiveField(3)
   Identifier? get identifier => throw _privateConstructorUsedError;
 
   /// [type] This describes the shelf life, taking into account various scenarios such as shelf life of the packaged Medicinal Product itself, shelf life after transformation where necessary and shelf life after the first opening of a bottle, etc. The shelf life type shall be specified using an appropriate controlled vocabulary The controlled term and the controlled term identifier shall be specified.;
-  @HiveField(4)
   CodeableConcept? get type => throw _privateConstructorUsedError;
-  @HiveField(5)
   Quantity? get period => throw _privateConstructorUsedError;
 
   /// [specialPrecautionsForStorage] Special precautions for storage, if any, can be specified using an appropriate controlled vocabulary The controlled term and the controlled term identifier shall be specified.;
-  @HiveField(6)
   List<CodeableConcept>? get specialPrecautionsForStorage =>
       throw _privateConstructorUsedError;
 
@@ -624,13 +574,13 @@ abstract class $ProductShelfLifeCopyWith<$Res> {
       _$ProductShelfLifeCopyWithImpl<$Res, ProductShelfLife>;
   @useResult
   $Res call(
-      {@HiveField(0) String? id,
-      @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      @HiveField(2) List<FhirExtension>? modifierExtension,
-      @HiveField(3) Identifier? identifier,
-      @HiveField(4) CodeableConcept? type,
-      @HiveField(5) Quantity? period,
-      @HiveField(6) List<CodeableConcept>? specialPrecautionsForStorage});
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Identifier? identifier,
+      CodeableConcept? type,
+      Quantity? period,
+      List<CodeableConcept>? specialPrecautionsForStorage});
 
   $IdentifierCopyWith<$Res>? get identifier;
   $CodeableConceptCopyWith<$Res>? get type;
@@ -736,13 +686,13 @@ abstract class _$$_ProductShelfLifeCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@HiveField(0) String? id,
-      @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      @HiveField(2) List<FhirExtension>? modifierExtension,
-      @HiveField(3) Identifier? identifier,
-      @HiveField(4) CodeableConcept? type,
-      @HiveField(5) Quantity? period,
-      @HiveField(6) List<CodeableConcept>? specialPrecautionsForStorage});
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Identifier? identifier,
+      CodeableConcept? type,
+      Quantity? period,
+      List<CodeableConcept>? specialPrecautionsForStorage});
 
   @override
   $IdentifierCopyWith<$Res>? get identifier;
@@ -806,24 +756,15 @@ class __$$_ProductShelfLifeCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@HiveType(typeId: 12)
 class _$_ProductShelfLife extends _ProductShelfLife {
   _$_ProductShelfLife(
-      {@HiveField(0)
-          this.id,
-      @HiveField(1)
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      @HiveField(2)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(3)
-          this.identifier,
-      @HiveField(4)
-          this.type,
-      @HiveField(5)
-          this.period,
-      @HiveField(6)
-          final List<CodeableConcept>? specialPrecautionsForStorage})
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      this.identifier,
+      this.type,
+      this.period,
+      final List<CodeableConcept>? specialPrecautionsForStorage})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
         _specialPrecautionsForStorage = specialPrecautionsForStorage,
@@ -834,7 +775,6 @@ class _$_ProductShelfLife extends _ProductShelfLife {
 
   /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   @override
-  @HiveField(0)
   final String? id;
 
   /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
@@ -842,7 +782,6 @@ class _$_ProductShelfLife extends _ProductShelfLife {
 
   /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   @override
-  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
     final value = _extension_;
@@ -859,7 +798,6 @@ class _$_ProductShelfLife extends _ProductShelfLife {
   /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   @override
-  @HiveField(2)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -870,15 +808,12 @@ class _$_ProductShelfLife extends _ProductShelfLife {
   }
 
   @override
-  @HiveField(3)
   final Identifier? identifier;
 
   /// [type] This describes the shelf life, taking into account various scenarios such as shelf life of the packaged Medicinal Product itself, shelf life after transformation where necessary and shelf life after the first opening of a bottle, etc. The shelf life type shall be specified using an appropriate controlled vocabulary The controlled term and the controlled term identifier shall be specified.;
   @override
-  @HiveField(4)
   final CodeableConcept? type;
   @override
-  @HiveField(5)
   final Quantity? period;
 
   /// [specialPrecautionsForStorage] Special precautions for storage, if any, can be specified using an appropriate controlled vocabulary The controlled term and the controlled term identifier shall be specified.;
@@ -886,7 +821,6 @@ class _$_ProductShelfLife extends _ProductShelfLife {
 
   /// [specialPrecautionsForStorage] Special precautions for storage, if any, can be specified using an appropriate controlled vocabulary The controlled term and the controlled term identifier shall be specified.;
   @override
-  @HiveField(6)
   List<CodeableConcept>? get specialPrecautionsForStorage {
     final value = _specialPrecautionsForStorage;
     if (value == null) return null;
@@ -948,21 +882,13 @@ class _$_ProductShelfLife extends _ProductShelfLife {
 
 abstract class _ProductShelfLife extends ProductShelfLife {
   factory _ProductShelfLife(
-          {@HiveField(0)
-              final String? id,
-          @HiveField(1)
-          @JsonKey(name: 'extension')
-              final List<FhirExtension>? extension_,
-          @HiveField(2)
-              final List<FhirExtension>? modifierExtension,
-          @HiveField(3)
-              final Identifier? identifier,
-          @HiveField(4)
-              final CodeableConcept? type,
-          @HiveField(5)
-              final Quantity? period,
-          @HiveField(6)
-              final List<CodeableConcept>? specialPrecautionsForStorage}) =
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final Identifier? identifier,
+          final CodeableConcept? type,
+          final Quantity? period,
+          final List<CodeableConcept>? specialPrecautionsForStorage}) =
       _$_ProductShelfLife;
   _ProductShelfLife._() : super._();
 
@@ -972,35 +898,28 @@ abstract class _ProductShelfLife extends ProductShelfLife {
   @override
 
   /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
-  @HiveField(0)
   String? get id;
   @override
 
   /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
-  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
 
   /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
-  @HiveField(2)
   List<FhirExtension>? get modifierExtension;
   @override
-  @HiveField(3)
   Identifier? get identifier;
   @override
 
   /// [type] This describes the shelf life, taking into account various scenarios such as shelf life of the packaged Medicinal Product itself, shelf life after transformation where necessary and shelf life after the first opening of a bottle, etc. The shelf life type shall be specified using an appropriate controlled vocabulary The controlled term and the controlled term identifier shall be specified.;
-  @HiveField(4)
   CodeableConcept? get type;
   @override
-  @HiveField(5)
   Quantity? get period;
   @override
 
   /// [specialPrecautionsForStorage] Special precautions for storage, if any, can be specified using an appropriate controlled vocabulary The controlled term and the controlled term identifier shall be specified.;
-  @HiveField(6)
   List<CodeableConcept>? get specialPrecautionsForStorage;
   @override
   @JsonKey(ignore: true)
@@ -1016,7 +935,6 @@ ProdCharacteristic _$ProdCharacteristicFromJson(Map<String, dynamic> json) {
 mixin _$ProdCharacteristic {
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
-  @HiveField(0)
   String? get id => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -1025,7 +943,6 @@ mixin _$ProdCharacteristic {
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
-  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
@@ -1042,7 +959,6 @@ mixin _$ProdCharacteristic {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
-  @HiveField(2)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
@@ -1050,84 +966,70 @@ mixin _$ProdCharacteristic {
   /// value and its unit of measurement The unit of measurement shall be
   /// specified in accordance with ISO 11240 and the resulting terminology The
   ///  symbol and the symbol identifier shall be used.
-  @HiveField(3)
   Quantity? get height => throw _privateConstructorUsedError;
 
   /// [width] Where applicable, the width can be specified using a numerical
   /// value and its unit of measurement The unit of measurement shall be
   /// specified in accordance with ISO 11240 and the resulting terminology The
   ///  symbol and the symbol identifier shall be used.
-  @HiveField(4)
   Quantity? get width => throw _privateConstructorUsedError;
 
   /// [depth] Where applicable, the depth can be specified using a numerical
   /// value and its unit of measurement The unit of measurement shall be
   /// specified in accordance with ISO 11240 and the resulting terminology The
   ///  symbol and the symbol identifier shall be used.
-  @HiveField(5)
   Quantity? get depth => throw _privateConstructorUsedError;
 
   /// [weight] Where applicable, the weight can be specified using a numerical
   /// value and its unit of measurement The unit of measurement shall be
   /// specified in accordance with ISO 11240 and the resulting terminology The
   ///  symbol and the symbol identifier shall be used.
-  @HiveField(6)
   Quantity? get weight => throw _privateConstructorUsedError;
 
   /// [nominalVolume] Where applicable, the nominal volume can be specified
   /// using a numerical value and its unit of measurement The unit of
   /// measurement shall be specified in accordance with ISO 11240 and the
   ///  resulting terminology The symbol and the symbol identifier shall be used.
-  @HiveField(7)
   Quantity? get nominalVolume => throw _privateConstructorUsedError;
 
   /// [externalDiameter] Where applicable, the external diameter can be
   /// specified using a numerical value and its unit of measurement The unit of
   /// measurement shall be specified in accordance with ISO 11240 and the
   ///  resulting terminology The symbol and the symbol identifier shall be used.
-  @HiveField(8)
   Quantity? get externalDiameter => throw _privateConstructorUsedError;
 
   /// [shape] Where applicable, the shape can be specified An appropriate
   /// controlled vocabulary shall be used The term and the term identifier shall
   ///  be used.
-  @HiveField(9)
   String? get shape => throw _privateConstructorUsedError;
 
   /// [shapeElement] Extensions for shape
-  @HiveField(10)
   @JsonKey(name: '_shape')
   Element? get shapeElement => throw _privateConstructorUsedError;
 
   /// [color] Where applicable, the color can be specified An appropriate
   /// controlled vocabulary shall be used The term and the term identifier shall
   ///  be used.
-  @HiveField(11)
   List<String>? get color => throw _privateConstructorUsedError;
 
   /// [colorElement] Extensions for color
-  @HiveField(12)
   @JsonKey(name: '_color')
   List<Element?>? get colorElement => throw _privateConstructorUsedError;
 
   /// [imprint] Where applicable, the imprint can be specified as text.
-  @HiveField(13)
   List<String>? get imprint => throw _privateConstructorUsedError;
 
   /// [imprintElement] Extensions for imprint
-  @HiveField(14)
   @JsonKey(name: '_imprint')
   List<Element?>? get imprintElement => throw _privateConstructorUsedError;
 
   /// [image] Where applicable, the image can be provided The format of the
   ///  image attachment shall be specified by regional implementations.
-  @HiveField(15)
   List<Attachment>? get image => throw _privateConstructorUsedError;
 
   /// [scoring] Where applicable, the scoring can be specified An appropriate
   /// controlled vocabulary shall be used The term and the term identifier shall
   ///  be used.
-  @HiveField(16)
   CodeableConcept? get scoring => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -1143,23 +1045,23 @@ abstract class $ProdCharacteristicCopyWith<$Res> {
       _$ProdCharacteristicCopyWithImpl<$Res, ProdCharacteristic>;
   @useResult
   $Res call(
-      {@HiveField(0) String? id,
-      @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      @HiveField(2) List<FhirExtension>? modifierExtension,
-      @HiveField(3) Quantity? height,
-      @HiveField(4) Quantity? width,
-      @HiveField(5) Quantity? depth,
-      @HiveField(6) Quantity? weight,
-      @HiveField(7) Quantity? nominalVolume,
-      @HiveField(8) Quantity? externalDiameter,
-      @HiveField(9) String? shape,
-      @HiveField(10) @JsonKey(name: '_shape') Element? shapeElement,
-      @HiveField(11) List<String>? color,
-      @HiveField(12) @JsonKey(name: '_color') List<Element?>? colorElement,
-      @HiveField(13) List<String>? imprint,
-      @HiveField(14) @JsonKey(name: '_imprint') List<Element?>? imprintElement,
-      @HiveField(15) List<Attachment>? image,
-      @HiveField(16) CodeableConcept? scoring});
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Quantity? height,
+      Quantity? width,
+      Quantity? depth,
+      Quantity? weight,
+      Quantity? nominalVolume,
+      Quantity? externalDiameter,
+      String? shape,
+      @JsonKey(name: '_shape') Element? shapeElement,
+      List<String>? color,
+      @JsonKey(name: '_color') List<Element?>? colorElement,
+      List<String>? imprint,
+      @JsonKey(name: '_imprint') List<Element?>? imprintElement,
+      List<Attachment>? image,
+      CodeableConcept? scoring});
 
   $QuantityCopyWith<$Res>? get height;
   $QuantityCopyWith<$Res>? get width;
@@ -1380,23 +1282,23 @@ abstract class _$$_ProdCharacteristicCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@HiveField(0) String? id,
-      @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      @HiveField(2) List<FhirExtension>? modifierExtension,
-      @HiveField(3) Quantity? height,
-      @HiveField(4) Quantity? width,
-      @HiveField(5) Quantity? depth,
-      @HiveField(6) Quantity? weight,
-      @HiveField(7) Quantity? nominalVolume,
-      @HiveField(8) Quantity? externalDiameter,
-      @HiveField(9) String? shape,
-      @HiveField(10) @JsonKey(name: '_shape') Element? shapeElement,
-      @HiveField(11) List<String>? color,
-      @HiveField(12) @JsonKey(name: '_color') List<Element?>? colorElement,
-      @HiveField(13) List<String>? imprint,
-      @HiveField(14) @JsonKey(name: '_imprint') List<Element?>? imprintElement,
-      @HiveField(15) List<Attachment>? image,
-      @HiveField(16) CodeableConcept? scoring});
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Quantity? height,
+      Quantity? width,
+      Quantity? depth,
+      Quantity? weight,
+      Quantity? nominalVolume,
+      Quantity? externalDiameter,
+      String? shape,
+      @JsonKey(name: '_shape') Element? shapeElement,
+      List<String>? color,
+      @JsonKey(name: '_color') List<Element?>? colorElement,
+      List<String>? imprint,
+      @JsonKey(name: '_imprint') List<Element?>? imprintElement,
+      List<Attachment>? image,
+      CodeableConcept? scoring});
 
   @override
   $QuantityCopyWith<$Res>? get height;
@@ -1520,47 +1422,25 @@ class __$$_ProdCharacteristicCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@HiveType(typeId: 13)
 class _$_ProdCharacteristic extends _ProdCharacteristic {
   _$_ProdCharacteristic(
-      {@HiveField(0)
-          this.id,
-      @HiveField(1)
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      @HiveField(2)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(3)
-          this.height,
-      @HiveField(4)
-          this.width,
-      @HiveField(5)
-          this.depth,
-      @HiveField(6)
-          this.weight,
-      @HiveField(7)
-          this.nominalVolume,
-      @HiveField(8)
-          this.externalDiameter,
-      @HiveField(9)
-          this.shape,
-      @HiveField(10)
-      @JsonKey(name: '_shape')
-          this.shapeElement,
-      @HiveField(11)
-          final List<String>? color,
-      @HiveField(12)
-      @JsonKey(name: '_color')
-          final List<Element?>? colorElement,
-      @HiveField(13)
-          final List<String>? imprint,
-      @HiveField(14)
-      @JsonKey(name: '_imprint')
-          final List<Element?>? imprintElement,
-      @HiveField(15)
-          final List<Attachment>? image,
-      @HiveField(16)
-          this.scoring})
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      this.height,
+      this.width,
+      this.depth,
+      this.weight,
+      this.nominalVolume,
+      this.externalDiameter,
+      this.shape,
+      @JsonKey(name: '_shape') this.shapeElement,
+      final List<String>? color,
+      @JsonKey(name: '_color') final List<Element?>? colorElement,
+      final List<String>? imprint,
+      @JsonKey(name: '_imprint') final List<Element?>? imprintElement,
+      final List<Attachment>? image,
+      this.scoring})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
         _color = color,
@@ -1576,7 +1456,6 @@ class _$_ProdCharacteristic extends _ProdCharacteristic {
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   @override
-  @HiveField(0)
   final String? id;
 
   /// [extension_] May be used to represent additional information that is not
@@ -1594,7 +1473,6 @@ class _$_ProdCharacteristic extends _ProdCharacteristic {
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   @override
-  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
     final value = _extension_;
@@ -1633,7 +1511,6 @@ class _$_ProdCharacteristic extends _ProdCharacteristic {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   @override
-  @HiveField(2)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -1648,7 +1525,6 @@ class _$_ProdCharacteristic extends _ProdCharacteristic {
   /// specified in accordance with ISO 11240 and the resulting terminology The
   ///  symbol and the symbol identifier shall be used.
   @override
-  @HiveField(3)
   final Quantity? height;
 
   /// [width] Where applicable, the width can be specified using a numerical
@@ -1656,7 +1532,6 @@ class _$_ProdCharacteristic extends _ProdCharacteristic {
   /// specified in accordance with ISO 11240 and the resulting terminology The
   ///  symbol and the symbol identifier shall be used.
   @override
-  @HiveField(4)
   final Quantity? width;
 
   /// [depth] Where applicable, the depth can be specified using a numerical
@@ -1664,7 +1539,6 @@ class _$_ProdCharacteristic extends _ProdCharacteristic {
   /// specified in accordance with ISO 11240 and the resulting terminology The
   ///  symbol and the symbol identifier shall be used.
   @override
-  @HiveField(5)
   final Quantity? depth;
 
   /// [weight] Where applicable, the weight can be specified using a numerical
@@ -1672,7 +1546,6 @@ class _$_ProdCharacteristic extends _ProdCharacteristic {
   /// specified in accordance with ISO 11240 and the resulting terminology The
   ///  symbol and the symbol identifier shall be used.
   @override
-  @HiveField(6)
   final Quantity? weight;
 
   /// [nominalVolume] Where applicable, the nominal volume can be specified
@@ -1680,7 +1553,6 @@ class _$_ProdCharacteristic extends _ProdCharacteristic {
   /// measurement shall be specified in accordance with ISO 11240 and the
   ///  resulting terminology The symbol and the symbol identifier shall be used.
   @override
-  @HiveField(7)
   final Quantity? nominalVolume;
 
   /// [externalDiameter] Where applicable, the external diameter can be
@@ -1688,19 +1560,16 @@ class _$_ProdCharacteristic extends _ProdCharacteristic {
   /// measurement shall be specified in accordance with ISO 11240 and the
   ///  resulting terminology The symbol and the symbol identifier shall be used.
   @override
-  @HiveField(8)
   final Quantity? externalDiameter;
 
   /// [shape] Where applicable, the shape can be specified An appropriate
   /// controlled vocabulary shall be used The term and the term identifier shall
   ///  be used.
   @override
-  @HiveField(9)
   final String? shape;
 
   /// [shapeElement] Extensions for shape
   @override
-  @HiveField(10)
   @JsonKey(name: '_shape')
   final Element? shapeElement;
 
@@ -1713,7 +1582,6 @@ class _$_ProdCharacteristic extends _ProdCharacteristic {
   /// controlled vocabulary shall be used The term and the term identifier shall
   ///  be used.
   @override
-  @HiveField(11)
   List<String>? get color {
     final value = _color;
     if (value == null) return null;
@@ -1727,7 +1595,6 @@ class _$_ProdCharacteristic extends _ProdCharacteristic {
 
   /// [colorElement] Extensions for color
   @override
-  @HiveField(12)
   @JsonKey(name: '_color')
   List<Element?>? get colorElement {
     final value = _colorElement;
@@ -1742,7 +1609,6 @@ class _$_ProdCharacteristic extends _ProdCharacteristic {
 
   /// [imprint] Where applicable, the imprint can be specified as text.
   @override
-  @HiveField(13)
   List<String>? get imprint {
     final value = _imprint;
     if (value == null) return null;
@@ -1756,7 +1622,6 @@ class _$_ProdCharacteristic extends _ProdCharacteristic {
 
   /// [imprintElement] Extensions for imprint
   @override
-  @HiveField(14)
   @JsonKey(name: '_imprint')
   List<Element?>? get imprintElement {
     final value = _imprintElement;
@@ -1773,7 +1638,6 @@ class _$_ProdCharacteristic extends _ProdCharacteristic {
   /// [image] Where applicable, the image can be provided The format of the
   ///  image attachment shall be specified by regional implementations.
   @override
-  @HiveField(15)
   List<Attachment>? get image {
     final value = _image;
     if (value == null) return null;
@@ -1786,7 +1650,6 @@ class _$_ProdCharacteristic extends _ProdCharacteristic {
   /// controlled vocabulary shall be used The term and the term identifier shall
   ///  be used.
   @override
-  @HiveField(16)
   final CodeableConcept? scoring;
 
   @override
@@ -1864,44 +1727,23 @@ class _$_ProdCharacteristic extends _ProdCharacteristic {
 
 abstract class _ProdCharacteristic extends ProdCharacteristic {
   factory _ProdCharacteristic(
-      {@HiveField(0)
-          final String? id,
-      @HiveField(1)
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      @HiveField(2)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(3)
-          final Quantity? height,
-      @HiveField(4)
-          final Quantity? width,
-      @HiveField(5)
-          final Quantity? depth,
-      @HiveField(6)
-          final Quantity? weight,
-      @HiveField(7)
-          final Quantity? nominalVolume,
-      @HiveField(8)
-          final Quantity? externalDiameter,
-      @HiveField(9)
-          final String? shape,
-      @HiveField(10)
-      @JsonKey(name: '_shape')
-          final Element? shapeElement,
-      @HiveField(11)
-          final List<String>? color,
-      @HiveField(12)
-      @JsonKey(name: '_color')
-          final List<Element?>? colorElement,
-      @HiveField(13)
-          final List<String>? imprint,
-      @HiveField(14)
-      @JsonKey(name: '_imprint')
-          final List<Element?>? imprintElement,
-      @HiveField(15)
-          final List<Attachment>? image,
-      @HiveField(16)
-          final CodeableConcept? scoring}) = _$_ProdCharacteristic;
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final Quantity? height,
+      final Quantity? width,
+      final Quantity? depth,
+      final Quantity? weight,
+      final Quantity? nominalVolume,
+      final Quantity? externalDiameter,
+      final String? shape,
+      @JsonKey(name: '_shape') final Element? shapeElement,
+      final List<String>? color,
+      @JsonKey(name: '_color') final List<Element?>? colorElement,
+      final List<String>? imprint,
+      @JsonKey(name: '_imprint') final List<Element?>? imprintElement,
+      final List<Attachment>? image,
+      final CodeableConcept? scoring}) = _$_ProdCharacteristic;
   _ProdCharacteristic._() : super._();
 
   factory _ProdCharacteristic.fromJson(Map<String, dynamic> json) =
@@ -1911,7 +1753,6 @@ abstract class _ProdCharacteristic extends ProdCharacteristic {
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
-  @HiveField(0)
   String? get id;
   @override
 
@@ -1921,7 +1762,6 @@ abstract class _ProdCharacteristic extends ProdCharacteristic {
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
-  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
@@ -1939,7 +1779,6 @@ abstract class _ProdCharacteristic extends ProdCharacteristic {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
-  @HiveField(2)
   List<FhirExtension>? get modifierExtension;
   @override
 
@@ -1947,7 +1786,6 @@ abstract class _ProdCharacteristic extends ProdCharacteristic {
   /// value and its unit of measurement The unit of measurement shall be
   /// specified in accordance with ISO 11240 and the resulting terminology The
   ///  symbol and the symbol identifier shall be used.
-  @HiveField(3)
   Quantity? get height;
   @override
 
@@ -1955,7 +1793,6 @@ abstract class _ProdCharacteristic extends ProdCharacteristic {
   /// value and its unit of measurement The unit of measurement shall be
   /// specified in accordance with ISO 11240 and the resulting terminology The
   ///  symbol and the symbol identifier shall be used.
-  @HiveField(4)
   Quantity? get width;
   @override
 
@@ -1963,7 +1800,6 @@ abstract class _ProdCharacteristic extends ProdCharacteristic {
   /// value and its unit of measurement The unit of measurement shall be
   /// specified in accordance with ISO 11240 and the resulting terminology The
   ///  symbol and the symbol identifier shall be used.
-  @HiveField(5)
   Quantity? get depth;
   @override
 
@@ -1971,7 +1807,6 @@ abstract class _ProdCharacteristic extends ProdCharacteristic {
   /// value and its unit of measurement The unit of measurement shall be
   /// specified in accordance with ISO 11240 and the resulting terminology The
   ///  symbol and the symbol identifier shall be used.
-  @HiveField(6)
   Quantity? get weight;
   @override
 
@@ -1979,7 +1814,6 @@ abstract class _ProdCharacteristic extends ProdCharacteristic {
   /// using a numerical value and its unit of measurement The unit of
   /// measurement shall be specified in accordance with ISO 11240 and the
   ///  resulting terminology The symbol and the symbol identifier shall be used.
-  @HiveField(7)
   Quantity? get nominalVolume;
   @override
 
@@ -1987,19 +1821,16 @@ abstract class _ProdCharacteristic extends ProdCharacteristic {
   /// specified using a numerical value and its unit of measurement The unit of
   /// measurement shall be specified in accordance with ISO 11240 and the
   ///  resulting terminology The symbol and the symbol identifier shall be used.
-  @HiveField(8)
   Quantity? get externalDiameter;
   @override
 
   /// [shape] Where applicable, the shape can be specified An appropriate
   /// controlled vocabulary shall be used The term and the term identifier shall
   ///  be used.
-  @HiveField(9)
   String? get shape;
   @override
 
   /// [shapeElement] Extensions for shape
-  @HiveField(10)
   @JsonKey(name: '_shape')
   Element? get shapeElement;
   @override
@@ -2007,37 +1838,31 @@ abstract class _ProdCharacteristic extends ProdCharacteristic {
   /// [color] Where applicable, the color can be specified An appropriate
   /// controlled vocabulary shall be used The term and the term identifier shall
   ///  be used.
-  @HiveField(11)
   List<String>? get color;
   @override
 
   /// [colorElement] Extensions for color
-  @HiveField(12)
   @JsonKey(name: '_color')
   List<Element?>? get colorElement;
   @override
 
   /// [imprint] Where applicable, the imprint can be specified as text.
-  @HiveField(13)
   List<String>? get imprint;
   @override
 
   /// [imprintElement] Extensions for imprint
-  @HiveField(14)
   @JsonKey(name: '_imprint')
   List<Element?>? get imprintElement;
   @override
 
   /// [image] Where applicable, the image can be provided The format of the
   ///  image attachment shall be specified by regional implementations.
-  @HiveField(15)
   List<Attachment>? get image;
   @override
 
   /// [scoring] Where applicable, the scoring can be specified An appropriate
   /// controlled vocabulary shall be used The term and the term identifier shall
   ///  be used.
-  @HiveField(16)
   CodeableConcept? get scoring;
   @override
   @JsonKey(ignore: true)
@@ -2053,7 +1878,6 @@ MarketingStatus _$MarketingStatusFromJson(Map<String, dynamic> json) {
 mixin _$MarketingStatus {
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
-  @HiveField(0)
   String? get id => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -2062,7 +1886,6 @@ mixin _$MarketingStatus {
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
-  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
@@ -2079,14 +1902,12 @@ mixin _$MarketingStatus {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
-  @HiveField(2)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
   /// [country] The country in which the marketing authorisation has been
   /// granted shall be specified It should be specified using the ISO 3166 ‑ 1
   ///  alpha-2 code elements.
-  @HiveField(3)
   CodeableConcept? get country => throw _privateConstructorUsedError;
 
   /// [jurisdiction] Where a Medicines Regulatory Agency has granted a
@@ -2094,13 +1915,11 @@ mixin _$MarketingStatus {
   /// jurisdiction apply, the jurisdiction can be specified using an appropriate
   /// controlled terminology The controlled term and the controlled term
   ///  identifier shall be specified.
-  @HiveField(4)
   CodeableConcept? get jurisdiction => throw _privateConstructorUsedError;
 
   /// [status] This attribute provides information on the status of the
   /// marketing of the medicinal product See ISO/TS 20443 for more information
   ///  and examples.
-  @HiveField(5)
   CodeableConcept get status => throw _privateConstructorUsedError;
 
   /// [dateRange] The date when the Medicinal Product is placed on the market
@@ -2110,7 +1929,6 @@ mixin _$MarketingStatus {
   /// specified using the ISO 8601 date format NOTE “Placed on the market”
   /// refers to the release of the Medicinal Product into the distribution
   ///  chain.
-  @HiveField(6)
   Period? get dateRange => throw _privateConstructorUsedError;
 
   /// [restoreDate] The date when the Medicinal Product is placed on the market
@@ -2120,11 +1938,9 @@ mixin _$MarketingStatus {
   /// specified using the ISO 8601 date format NOTE “Placed on the market”
   /// refers to the release of the Medicinal Product into the distribution
   ///  chain.
-  @HiveField(7)
   FhirDateTime? get restoreDate => throw _privateConstructorUsedError;
 
   /// [restoreDateElement] Extensions for restoreDate
-  @HiveField(8)
   @JsonKey(name: '_restoreDate')
   Element? get restoreDateElement => throw _privateConstructorUsedError;
 
@@ -2141,26 +1957,15 @@ abstract class $MarketingStatusCopyWith<$Res> {
       _$MarketingStatusCopyWithImpl<$Res, MarketingStatus>;
   @useResult
   $Res call(
-      {@HiveField(0)
-          String? id,
-      @HiveField(1)
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      @HiveField(2)
-          List<FhirExtension>? modifierExtension,
-      @HiveField(3)
-          CodeableConcept? country,
-      @HiveField(4)
-          CodeableConcept? jurisdiction,
-      @HiveField(5)
-          CodeableConcept status,
-      @HiveField(6)
-          Period? dateRange,
-      @HiveField(7)
-          FhirDateTime? restoreDate,
-      @HiveField(8)
-      @JsonKey(name: '_restoreDate')
-          Element? restoreDateElement});
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept? country,
+      CodeableConcept? jurisdiction,
+      CodeableConcept status,
+      Period? dateRange,
+      FhirDateTime? restoreDate,
+      @JsonKey(name: '_restoreDate') Element? restoreDateElement});
 
   $CodeableConceptCopyWith<$Res>? get country;
   $CodeableConceptCopyWith<$Res>? get jurisdiction;
@@ -2298,26 +2103,15 @@ abstract class _$$_MarketingStatusCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@HiveField(0)
-          String? id,
-      @HiveField(1)
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      @HiveField(2)
-          List<FhirExtension>? modifierExtension,
-      @HiveField(3)
-          CodeableConcept? country,
-      @HiveField(4)
-          CodeableConcept? jurisdiction,
-      @HiveField(5)
-          CodeableConcept status,
-      @HiveField(6)
-          Period? dateRange,
-      @HiveField(7)
-          FhirDateTime? restoreDate,
-      @HiveField(8)
-      @JsonKey(name: '_restoreDate')
-          Element? restoreDateElement});
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept? country,
+      CodeableConcept? jurisdiction,
+      CodeableConcept status,
+      Period? dateRange,
+      FhirDateTime? restoreDate,
+      @JsonKey(name: '_restoreDate') Element? restoreDateElement});
 
   @override
   $CodeableConceptCopyWith<$Res>? get country;
@@ -2395,29 +2189,17 @@ class __$$_MarketingStatusCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@HiveType(typeId: 14)
 class _$_MarketingStatus extends _MarketingStatus {
   _$_MarketingStatus(
-      {@HiveField(0)
-          this.id,
-      @HiveField(1)
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      @HiveField(2)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(3)
-          this.country,
-      @HiveField(4)
-          this.jurisdiction,
-      @HiveField(5)
-          required this.status,
-      @HiveField(6)
-          this.dateRange,
-      @HiveField(7)
-          this.restoreDate,
-      @HiveField(8)
-      @JsonKey(name: '_restoreDate')
-          this.restoreDateElement})
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      this.country,
+      this.jurisdiction,
+      required this.status,
+      this.dateRange,
+      this.restoreDate,
+      @JsonKey(name: '_restoreDate') this.restoreDateElement})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
         super._();
@@ -2428,7 +2210,6 @@ class _$_MarketingStatus extends _MarketingStatus {
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   @override
-  @HiveField(0)
   final String? id;
 
   /// [extension_] May be used to represent additional information that is not
@@ -2446,7 +2227,6 @@ class _$_MarketingStatus extends _MarketingStatus {
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   @override
-  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
     final value = _extension_;
@@ -2485,7 +2265,6 @@ class _$_MarketingStatus extends _MarketingStatus {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   @override
-  @HiveField(2)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -2499,7 +2278,6 @@ class _$_MarketingStatus extends _MarketingStatus {
   /// granted shall be specified It should be specified using the ISO 3166 ‑ 1
   ///  alpha-2 code elements.
   @override
-  @HiveField(3)
   final CodeableConcept? country;
 
   /// [jurisdiction] Where a Medicines Regulatory Agency has granted a
@@ -2508,14 +2286,12 @@ class _$_MarketingStatus extends _MarketingStatus {
   /// controlled terminology The controlled term and the controlled term
   ///  identifier shall be specified.
   @override
-  @HiveField(4)
   final CodeableConcept? jurisdiction;
 
   /// [status] This attribute provides information on the status of the
   /// marketing of the medicinal product See ISO/TS 20443 for more information
   ///  and examples.
   @override
-  @HiveField(5)
   final CodeableConcept status;
 
   /// [dateRange] The date when the Medicinal Product is placed on the market
@@ -2526,7 +2302,6 @@ class _$_MarketingStatus extends _MarketingStatus {
   /// refers to the release of the Medicinal Product into the distribution
   ///  chain.
   @override
-  @HiveField(6)
   final Period? dateRange;
 
   /// [restoreDate] The date when the Medicinal Product is placed on the market
@@ -2537,12 +2312,10 @@ class _$_MarketingStatus extends _MarketingStatus {
   /// refers to the release of the Medicinal Product into the distribution
   ///  chain.
   @override
-  @HiveField(7)
   final FhirDateTime? restoreDate;
 
   /// [restoreDateElement] Extensions for restoreDate
   @override
-  @HiveField(8)
   @JsonKey(name: '_restoreDate')
   final Element? restoreDateElement;
 
@@ -2603,26 +2376,16 @@ class _$_MarketingStatus extends _MarketingStatus {
 
 abstract class _MarketingStatus extends MarketingStatus {
   factory _MarketingStatus(
-      {@HiveField(0)
-          final String? id,
-      @HiveField(1)
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      @HiveField(2)
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
-      @HiveField(3)
           final CodeableConcept? country,
-      @HiveField(4)
           final CodeableConcept? jurisdiction,
-      @HiveField(5)
           required final CodeableConcept status,
-      @HiveField(6)
           final Period? dateRange,
-      @HiveField(7)
           final FhirDateTime? restoreDate,
-      @HiveField(8)
-      @JsonKey(name: '_restoreDate')
-          final Element? restoreDateElement}) = _$_MarketingStatus;
+          @JsonKey(name: '_restoreDate') final Element? restoreDateElement}) =
+      _$_MarketingStatus;
   _MarketingStatus._() : super._();
 
   factory _MarketingStatus.fromJson(Map<String, dynamic> json) =
@@ -2632,7 +2395,6 @@ abstract class _MarketingStatus extends MarketingStatus {
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
-  @HiveField(0)
   String? get id;
   @override
 
@@ -2642,7 +2404,6 @@ abstract class _MarketingStatus extends MarketingStatus {
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
-  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
@@ -2660,14 +2421,12 @@ abstract class _MarketingStatus extends MarketingStatus {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
-  @HiveField(2)
   List<FhirExtension>? get modifierExtension;
   @override
 
   /// [country] The country in which the marketing authorisation has been
   /// granted shall be specified It should be specified using the ISO 3166 ‑ 1
   ///  alpha-2 code elements.
-  @HiveField(3)
   CodeableConcept? get country;
   @override
 
@@ -2676,14 +2435,12 @@ abstract class _MarketingStatus extends MarketingStatus {
   /// jurisdiction apply, the jurisdiction can be specified using an appropriate
   /// controlled terminology The controlled term and the controlled term
   ///  identifier shall be specified.
-  @HiveField(4)
   CodeableConcept? get jurisdiction;
   @override
 
   /// [status] This attribute provides information on the status of the
   /// marketing of the medicinal product See ISO/TS 20443 for more information
   ///  and examples.
-  @HiveField(5)
   CodeableConcept get status;
   @override
 
@@ -2694,7 +2451,6 @@ abstract class _MarketingStatus extends MarketingStatus {
   /// specified using the ISO 8601 date format NOTE “Placed on the market”
   /// refers to the release of the Medicinal Product into the distribution
   ///  chain.
-  @HiveField(6)
   Period? get dateRange;
   @override
 
@@ -2705,12 +2461,10 @@ abstract class _MarketingStatus extends MarketingStatus {
   /// specified using the ISO 8601 date format NOTE “Placed on the market”
   /// refers to the release of the Medicinal Product into the distribution
   ///  chain.
-  @HiveField(7)
   FhirDateTime? get restoreDate;
   @override
 
   /// [restoreDateElement] Extensions for restoreDate
-  @HiveField(8)
   @JsonKey(name: '_restoreDate')
   Element? get restoreDateElement;
   @override

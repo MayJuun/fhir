@@ -3,7 +3,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:hive/hive.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -14,7 +13,7 @@ part 'quality_reporting_and_testing.g.dart';
 
 /// [Measure] The Measure resource provides the definition of a quality
 @freezed
-class Measure extends HiveObject with Resource, _$Measure {
+class Measure with Resource, _$Measure {
   /// [Measure] The Measure resource provides the definition of a quality
   Measure._();
 
@@ -280,45 +279,37 @@ class Measure extends HiveObject with Resource, _$Measure {
   /// [supplementalData] The supplemental data criteria for the measure report,
   /// specified as either the name of a valid CQL expression within a referenced
   ///  library, or a valid FHIR Resource Path.
-  @HiveType(typeId: 79)
   factory Measure({
     @Default(R4ResourceType.Measure)
     @JsonKey(unknownEnumValue: R4ResourceType.Measure)
 
-    /// [resourceType] This is a Measure resource
-    @HiveField(0)
+        /// [resourceType] This is a Measure resource
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @HiveField(1)
-        String? id,
+    String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    @HiveField(2)
-        FhirMeta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    @HiveField(3)
-        FhirUri? implicitRules,
+    FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
-    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    @HiveField(5)
-        FhirCode? language,
+    FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
-    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
@@ -327,15 +318,13 @@ class Measure extends HiveObject with Resource, _$Measure {
     /// contain sufficient detail to make it "clinically safe" for a human to just
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
-    @HiveField(7)
-        Narrative? text,
+    Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
-    @HiveField(8)
-        List<Resource>? contained,
+    List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -344,7 +333,6 @@ class Measure extends HiveObject with Resource, _$Measure {
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
     @JsonKey(name: 'extension')
-    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -360,8 +348,7 @@ class Measure extends HiveObject with Resource, _$Measure {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    @HiveField(10)
-        List<FhirExtension>? modifierExtension,
+    List<FhirExtension>? modifierExtension,
 
     /// [url] An absolute URI that is used to identify this measure when it is
     /// referenced in a specification, model, design or an instance; also called
@@ -370,21 +357,16 @@ class Measure extends HiveObject with Resource, _$Measure {
     /// measure is (or will be) published. This URL can be the target of a
     /// canonical reference. It SHALL remain the same when the measure is stored
     ///  on different servers.
-    @HiveField(11)
-        FhirUri? url,
+    FhirUri? url,
 
     /// [urlElement] Extensions for url
     @JsonKey(name: '_url')
-    @HiveField(12)
         Element? urlElement,
 
     /// [identifier] A formal identifier that is used to identify this measure
-    @HiveField(13)
-
     /// when it is represented in other formats, or referenced in a specification,
     ///  model, design or an instance.
-    @HiveField(14)
-        List<Identifier>? identifier,
+    List<Identifier>? identifier,
 
     /// [version] The identifier that is used to identify this version of the
     /// measure when it is referenced in a specification, model, design or
@@ -397,112 +379,91 @@ class Measure extends HiveObject with Resource, _$Measure {
     /// information on versioning knowledge assets, refer to the Decision Support
     /// Service specification. Note that a version is required for
     ///  non-experimental active artifacts.
-    @HiveField(15)
-        String? version,
+    String? version,
 
     /// [versionElement] Extensions for version
     @JsonKey(name: '_version')
-    @HiveField(16)
         Element? versionElement,
 
     /// [name] A natural language name identifying the measure. This name should
     /// be usable as an identifier for the module by machine processing
     ///  applications such as code generation.
-    @HiveField(17)
-        String? name,
+    String? name,
 
     /// [nameElement] Extensions for name
     @JsonKey(name: '_name')
-    @HiveField(18)
         Element? nameElement,
 
     /// [title] A short, descriptive, user-friendly title for the measure.
-    @HiveField(19)
-        String? title,
+    String? title,
 
     /// [titleElement] Extensions for title
     @JsonKey(name: '_title')
-    @HiveField(20)
         Element? titleElement,
 
     /// [subtitle] An explanatory or alternate title for the measure giving
     ///  additional information about its content.
-    @HiveField(21)
-        String? subtitle,
+    String? subtitle,
 
     /// [subtitleElement] Extensions for subtitle
     @JsonKey(name: '_subtitle')
-    @HiveField(22)
         Element? subtitleElement,
 
     /// [status] The status of this measure. Enables tracking the life-cycle of
     ///  the content.
-    @HiveField(23)
-        FhirCode? status,
+    FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
-    @HiveField(24)
         Element? statusElement,
 
     /// [experimental] A Boolean value to indicate that this measure is authored
     /// for testing purposes (or education/evaluation/marketing) and is not
     ///  intended to be used for genuine usage.
-    @HiveField(25)
-        Boolean? experimental,
+    FhirBoolean? experimental,
 
     /// [experimentalElement] Extensions for experimental
     @JsonKey(name: '_experimental')
-    @HiveField(26)
         Element? experimentalElement,
 
     /// [subjectCodeableConcept] The intended subjects for the measure. If this
     /// element is not provided, a Patient subject is assumed, but the subject of
     ///  the measure can be anything.
-    @HiveField(27)
-        CodeableConcept? subjectCodeableConcept,
+    CodeableConcept? subjectCodeableConcept,
 
     /// [subjectReference] The intended subjects for the measure. If this element
     /// is not provided, a Patient subject is assumed, but the subject of the
     ///  measure can be anything.
-    @HiveField(28)
-        Reference? subjectReference,
+    Reference? subjectReference,
 
     /// [date] The date  (and optionally time) when the measure was published.
     /// The date must change when the business version changes and it must change
     /// if the status code changes. In addition, it should change when the
     ///  substantive content of the measure changes.
-    @HiveField(29)
-        FhirDateTime? date,
+    FhirDateTime? date,
 
     /// [dateElement] Extensions for date
     @JsonKey(name: '_date')
-    @HiveField(30)
         Element? dateElement,
 
     /// [publisher] The name of the organization or individual that published the
     ///  measure.
-    @HiveField(31)
-        String? publisher,
+    String? publisher,
 
     /// [publisherElement] Extensions for publisher
     @JsonKey(name: '_publisher')
-    @HiveField(32)
         Element? publisherElement,
 
     /// [contact] Contact details to assist a user in finding and communicating
     ///  with the publisher.
-    @HiveField(33)
-        List<ContactDetail>? contact,
+    List<ContactDetail>? contact,
 
     /// [description] A free text natural language description of the measure
     ///  from a consumer's perspective.
-    @HiveField(34)
-        Markdown? description,
+    FhirMarkdown? description,
 
     /// [descriptionElement] Extensions for description
     @JsonKey(name: '_description')
-    @HiveField(35)
         Element? descriptionElement,
 
     /// [useContext] The content was developed with a focus and intent of
@@ -510,224 +471,178 @@ class Measure extends HiveObject with Resource, _$Measure {
     /// categories (gender, age, ...) or may be references to specific programs
     /// (insurance plans, studies, ...) and may be used to assist with indexing
     ///  and searching for appropriate measure instances.
-    @HiveField(36)
-        List<UsageContext>? useContext,
+    List<UsageContext>? useContext,
 
     /// [jurisdiction] A legal or geographic region in which the measure is
     ///  intended to be used.
-    @HiveField(37)
-        List<CodeableConcept>? jurisdiction,
+    List<CodeableConcept>? jurisdiction,
 
     /// [purpose] Explanation of why this measure is needed and why it has been
     ///  designed as it has.
-    @HiveField(38)
-        Markdown? purpose,
+    FhirMarkdown? purpose,
 
     /// [purposeElement] Extensions for purpose
     @JsonKey(name: '_purpose')
-    @HiveField(39)
         Element? purposeElement,
 
     /// [usage] A detailed description, from a clinical perspective, of how the
     ///  measure is used.
-    @HiveField(40)
-        String? usage,
+    String? usage,
 
     /// [usageElement] Extensions for usage
     @JsonKey(name: '_usage')
-    @HiveField(41)
         Element? usageElement,
 
     /// [copyright] A copyright statement relating to the measure and/or its
     /// contents. Copyright statements are generally legal restrictions on the use
     ///  and publishing of the measure.
-    @HiveField(42)
-        Markdown? copyright,
+    FhirMarkdown? copyright,
 
     /// [copyrightElement] Extensions for copyright
     @JsonKey(name: '_copyright')
-    @HiveField(43)
         Element? copyrightElement,
 
     /// [approvalDate] The date on which the resource content was approved by the
     /// publisher. Approval happens once when the content is officially approved
     ///  for usage.
-    @HiveField(44)
-        Date? approvalDate,
+    FhirDate? approvalDate,
 
     /// [approvalDateElement] Extensions for approvalDate
     @JsonKey(name: '_approvalDate')
-    @HiveField(45)
         Element? approvalDateElement,
 
     /// [lastReviewDate] The date on which the resource content was last
     /// reviewed. Review happens periodically after approval but does not change
     ///  the original approval date.
-    @HiveField(46)
-        Date? lastReviewDate,
+    FhirDate? lastReviewDate,
 
     /// [lastReviewDateElement] Extensions for lastReviewDate
     @JsonKey(name: '_lastReviewDate')
-    @HiveField(47)
         Element? lastReviewDateElement,
 
     /// [effectivePeriod] The period during which the measure content was or is
     ///  planned to be in active use.
-    @HiveField(48)
-        Period? effectivePeriod,
+    Period? effectivePeriod,
 
     /// [topic] Descriptive topics related to the content of the measure. Topics
     /// provide a high-level categorization grouping types of measures that can be
     ///  useful for filtering and searching.
-    @HiveField(49)
-        List<CodeableConcept>? topic,
+    List<CodeableConcept>? topic,
 
     /// [author] An individiual or organization primarily involved in the
     ///  creation and maintenance of the content.
-    @HiveField(50)
-        List<ContactDetail>? author,
+    List<ContactDetail>? author,
 
     /// [editor] An individual or organization primarily responsible for internal
     ///  coherence of the content.
-    @HiveField(51)
-        List<ContactDetail>? editor,
+    List<ContactDetail>? editor,
 
     /// [reviewer] An individual or organization primarily responsible for review
     ///  of some aspect of the content.
-    @HiveField(52)
-        List<ContactDetail>? reviewer,
+    List<ContactDetail>? reviewer,
 
     /// [endorser] An individual or organization responsible for officially
     ///  endorsing the content for use in some setting.
-    @HiveField(53)
-        List<ContactDetail>? endorser,
-    @HiveField(54)
+    List<ContactDetail>? endorser,
 
     /// [relatedArtifact] Related artifacts such as additional documentation,
     ///  justification, or bibliographic references.
-    @HiveField(55)
-        List<RelatedArtifact>? relatedArtifact,
+    List<RelatedArtifact>? relatedArtifact,
 
     /// [library] A reference to a Library resource containing the formal logic
     ///  used by the measure.
     @JsonKey(name: 'library')
-    @HiveField(56)
         List<FhirCanonical>? library_,
 
     /// [disclaimer] Notices and disclaimers regarding the use of the measure or
     /// related to intellectual property (such as code systems) referenced by the
     ///  measure.
-    @HiveField(57)
-        Markdown? disclaimer,
+    FhirMarkdown? disclaimer,
 
     /// [disclaimerElement] Extensions for disclaimer
     @JsonKey(name: '_disclaimer')
-    @HiveField(58)
         Element? disclaimerElement,
-    @HiveField(59)
 
     /// [scoring] Indicates how the calculation is performed for the measure,
     /// including proportion, ratio, continuous-variable, and cohort. The value
     /// set is extensible, allowing additional measure scoring types to be
     ///  represented.
-    @HiveField(60)
-        CodeableConcept? scoring,
+    CodeableConcept? scoring,
 
     /// [compositeScoring] If this is a composite measure, the scoring method
     ///  used to combine the component measures to determine the composite score.
-    @HiveField(61)
-        CodeableConcept? compositeScoring,
+    CodeableConcept? compositeScoring,
 
     /// [type] Indicates whether the measure is used to examine a process, an
     /// outcome over time, a patient-reported outcome, or a structure measure such
     ///  as utilization.
-    @HiveField(62)
-        List<CodeableConcept>? type,
+    List<CodeableConcept>? type,
 
     /// [riskAdjustment] A description of the risk adjustment factors that may
     /// impact the resulting score for the measure and how they may be accounted
     ///  for when computing and reporting measure results.
-    @HiveField(63)
-        String? riskAdjustment,
+    String? riskAdjustment,
 
     /// [riskAdjustmentElement] Extensions for riskAdjustment
     @JsonKey(name: '_riskAdjustment')
-    @HiveField(64)
         Element? riskAdjustmentElement,
-    @HiveField(65)
 
     /// [rateAggregation] Describes how to combine the information calculated,
     /// based on logic in each of several populations, into one summarized
     ///  result.
-    @HiveField(66)
-        String? rateAggregation,
+    String? rateAggregation,
 
     /// [rateAggregationElement] Extensions for rateAggregation
     @JsonKey(name: '_rateAggregation')
-    @HiveField(67)
         Element? rateAggregationElement,
 
     /// [rationale] Provides a succinct statement of the need for the measure.
-    @HiveField(68)
-
     /// Usually includes statements pertaining to importance criterion: impact,
     ///  gap in care, and evidence.
-    @HiveField(69)
-        Markdown? rationale,
+    FhirMarkdown? rationale,
 
     /// [rationaleElement] Extensions for rationale
     @JsonKey(name: '_rationale')
-    @HiveField(70)
         Element? rationaleElement,
 
     /// [clinicalRecommendationStatement] Provides a summary of relevant clinical
     ///  guidelines or other clinical recommendations supporting the measure.
-    @HiveField(71)
-        Markdown? clinicalRecommendationStatement,
+    FhirMarkdown? clinicalRecommendationStatement,
     @JsonKey(name: '_clinicalRecommendationStatement')
 
-    /// [clinicalRecommendationStatementElement] Extensions for
-    ///  clinicalRecommendationStatement
-    @HiveField(72)
+        /// [clinicalRecommendationStatementElement] Extensions for
+        ///  clinicalRecommendationStatement
         Element? clinicalRecommendationStatementElement,
 
     /// [improvementNotation] Information on whether an increase or decrease in
     /// score is the preferred result (e.g., a higher score indicates better
     /// quality OR a lower score indicates better quality OR quality is within a
     ///  range).
-    @HiveField(73)
-        CodeableConcept? improvementNotation,
+    CodeableConcept? improvementNotation,
 
     /// [definition] Provides a description of an individual term used within the
     ///  measure.
-    @HiveField(74)
-        List<FhirMarkdown>? definition,
+    List<FhirMarkdown>? definition,
 
     /// [definitionElement] Extensions for definition
     @JsonKey(name: '_definition')
-    @HiveField(75)
         List<Element?>? definitionElement,
 
     /// [guidance] Additional guidance for the measure including how it can be
     ///  used in a clinical context, and the intent of the measure.
-    @HiveField(76)
-        Markdown? guidance,
+    FhirMarkdown? guidance,
 
     /// [guidanceElement] Extensions for guidance
     @JsonKey(name: '_guidance')
-    @HiveField(77)
         Element? guidanceElement,
 
     /// [group] A group of population criteria for the measure.
-    @HiveField(78)
-        List<MeasureGroup>? group,
-    @HiveField(79)
+    List<MeasureGroup>? group,
 
     /// [supplementalData] The supplemental data criteria for the measure report,
     /// specified as either the name of a valid CQL expression within a referenced
     ///  library, or a valid FHIR Resource Path.
-    @HiveField(80)
-        List<MeasureSupplementalData>? supplementalData,
+    List<MeasureSupplementalData>? supplementalData,
   }) = _Measure;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -805,11 +720,10 @@ class MeasureGroup with _$MeasureGroup {
   /// [stratifier] The stratifier criteria for the measure report, specified as
   /// either the name of a valid CQL expression defined within a referenced
   ///  library or a valid FHIR Resource Path.
-  @HiveType(typeId: 80)
   factory MeasureGroup({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    @HiveField(0) String? id,
+    String? id,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -817,7 +731,7 @@ class MeasureGroup with _$MeasureGroup {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the element and that modifies the
@@ -832,27 +746,27 @@ class MeasureGroup with _$MeasureGroup {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    @HiveField(2) List<FhirExtension>? modifierExtension,
+    List<FhirExtension>? modifierExtension,
 
     /// [code] Indicates a meaning for the group. This can be as simple as a
     /// unique identifier, or it can establish meaning in a broader context by
     /// drawing from a terminology, allowing groups to be correlated across
     ///  measures.
-    @HiveField(3) CodeableConcept? code,
+    CodeableConcept? code,
 
     /// [description] The human readable description of this population group.
-    @HiveField(4) String? description,
+    String? description,
 
     /// [descriptionElement] Extensions for description
-    @HiveField(5) @JsonKey(name: '_description') Element? descriptionElement,
+    @JsonKey(name: '_description') Element? descriptionElement,
 
     /// [population] A population criteria for the measure.
-    @HiveField(6) List<MeasurePopulation>? population,
+    List<MeasurePopulation>? population,
 
     /// [stratifier] The stratifier criteria for the measure report, specified as
     /// either the name of a valid CQL expression defined within a referenced
     ///  library or a valid FHIR Resource Path.
-    @HiveField(7) List<MeasureStratifier>? stratifier,
+    List<MeasureStratifier>? stratifier,
   }) = _MeasureGroup;
 
   /// Produces a Yaml formatted String version of the object
@@ -1396,7 +1310,7 @@ class MeasureSupplementalData with _$MeasureSupplementalData {
 
 /// [MeasureReport] The MeasureReport resource contains the results of the
 @freezed
-class MeasureReport extends HiveObject with Resource, _$MeasureReport {
+class MeasureReport with Resource, _$MeasureReport {
   /// [MeasureReport] The MeasureReport resource contains the results of the
   MeasureReport._();
 
@@ -1499,45 +1413,37 @@ class MeasureReport extends HiveObject with Resource, _$MeasureReport {
   ///
   /// [evaluatedResource] A reference to a Bundle containing the Resources that
   ///  were used in the calculation of this measure.
-  @HiveType(typeId: 81)
   factory MeasureReport({
     @Default(R4ResourceType.MeasureReport)
     @JsonKey(unknownEnumValue: R4ResourceType.MeasureReport)
 
-    /// [resourceType] This is a MeasureReport resource
-    @HiveField(0)
+        /// [resourceType] This is a MeasureReport resource
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @HiveField(1)
-        String? id,
+    String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    @HiveField(2)
-        FhirMeta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    @HiveField(3)
-        FhirUri? implicitRules,
+    FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
-    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    @HiveField(5)
-        FhirCode? language,
+    FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
-    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
@@ -1546,15 +1452,13 @@ class MeasureReport extends HiveObject with Resource, _$MeasureReport {
     /// contain sufficient detail to make it "clinically safe" for a human to just
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
-    @HiveField(7)
-        Narrative? text,
+    Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
-    @HiveField(8)
-        List<Resource>? contained,
+    List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -1563,7 +1467,6 @@ class MeasureReport extends HiveObject with Resource, _$MeasureReport {
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
     @JsonKey(name: 'extension')
-    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -1579,25 +1482,20 @@ class MeasureReport extends HiveObject with Resource, _$MeasureReport {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    @HiveField(10)
-        List<FhirExtension>? modifierExtension,
+    List<FhirExtension>? modifierExtension,
 
     /// [identifier] A formal identifier that is used to identify this
     /// MeasureReport when it is represented in other formats or referenced in a
     ///  specification, model, design or an instance.
-    @HiveField(11)
-        List<Identifier>? identifier,
+    List<Identifier>? identifier,
 
     /// [status] The MeasureReport status. No data will be available until the
     ///  MeasureReport status is complete.
-    @HiveField(12)
-        FhirCode? status,
+    FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
-    @HiveField(13)
         Element? statusElement,
-    @HiveField(14)
 
     /// [type] The type of measure report. This may be an individual report,
     /// which provides the score for the measure for an individual member of the
@@ -1606,56 +1504,45 @@ class MeasureReport extends HiveObject with Resource, _$MeasureReport {
     /// population count for each of the criteria in the measure; or a
     /// data-collection, which enables the MeasureReport to be used to exchange
     ///  the data-of-interest for a quality measure.
-    @HiveField(15)
-        FhirCode? type,
+    FhirCode? type,
 
     /// [typeElement] Extensions for type
     @JsonKey(name: '_type')
-    @HiveField(16)
         Element? typeElement,
 
     /// [measure] A reference to the Measure that was calculated to produce this
     ///  report.
-    @HiveField(17)
-        required FhirCanonical measure,
+    required FhirCanonical measure,
 
     /// [subject] Optional subject identifying the individual or individuals the
     ///  report is for.
-    @HiveField(18)
-        Reference? subject,
+    Reference? subject,
 
     /// [date] The date this measure report was generated.
-    @HiveField(19)
-        FhirDateTime? date,
+    FhirDateTime? date,
 
     /// [dateElement] Extensions for date
     @JsonKey(name: '_date')
-    @HiveField(20)
         Element? dateElement,
 
     /// [reporter] The individual, location, or organization that is reporting
     ///  the data.
-    @HiveField(21)
-        Reference? reporter,
+    Reference? reporter,
 
     /// [period] The reporting period for which the report was calculated.
-    @HiveField(22)
-        required Period period,
+    required Period period,
 
     /// [improvementNotation] Whether improvement in the measure is noted by an
     ///  increase or decrease in the measure score.
-    @HiveField(23)
-        CodeableConcept? improvementNotation,
+    CodeableConcept? improvementNotation,
 
     /// [group] The results of the calculation, one for each population group in
     ///  the measure.
-    @HiveField(24)
-        List<MeasureReportGroup>? group,
+    List<MeasureReportGroup>? group,
 
     /// [evaluatedResource] A reference to a Bundle containing the Resources that
     ///  were used in the calculation of this measure.
-    @HiveField(25)
-        List<Reference>? evaluatedResource,
+    List<Reference>? evaluatedResource,
   }) = _MeasureReport;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1732,11 +1619,10 @@ class MeasureReportGroup with _$MeasureReportGroup {
   ///
   /// [stratifier] When a measure includes multiple stratifiers, there will be
   ///  a stratifier group for each stratifier defined by the measure.
-  @HiveType(typeId: 82)
   factory MeasureReportGroup({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    @HiveField(0) String? id,
+    String? id,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -1744,7 +1630,7 @@ class MeasureReportGroup with _$MeasureReportGroup {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the element and that modifies the
@@ -1759,24 +1645,24 @@ class MeasureReportGroup with _$MeasureReportGroup {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    @HiveField(2) List<FhirExtension>? modifierExtension,
+    List<FhirExtension>? modifierExtension,
 
     /// [code] The meaning of the population group as defined in the measure
     ///  definition.
-    @HiveField(3) CodeableConcept? code,
+    CodeableConcept? code,
 
     /// [population] The populations that make up the population group, one for
     ///  each type of population appropriate for the measure.
-    @HiveField(4) List<MeasureReportPopulation>? population,
+    List<MeasureReportPopulation>? population,
 
     /// [measureScore] The measure score for this population group, calculated as
     /// appropriate for the measure type and scoring method, and based on the
     ///  contents of the populations defined in the group.
-    @HiveField(5) Quantity? measureScore,
+    Quantity? measureScore,
 
     /// [stratifier] When a measure includes multiple stratifiers, there will be
     ///  a stratifier group for each stratifier defined by the measure.
-    @HiveField(6) List<MeasureReportStratifier>? stratifier,
+    List<MeasureReportStratifier>? stratifier,
   }) = _MeasureReportGroup;
 
   /// Produces a Yaml formatted String version of the object
@@ -1884,7 +1770,7 @@ class MeasureReportPopulation with _$MeasureReportPopulation {
     CodeableConcept? code,
 
     /// [count] The number of members of the population.
-    Integer? count,
+    FhirInteger? count,
 
     /// [countElement] Extensions for count
     @JsonKey(name: '_count') Element? countElement,
@@ -2335,7 +2221,7 @@ class MeasureReportPopulation1 with _$MeasureReportPopulation1 {
     CodeableConcept? code,
 
     /// [count] The number of members of the population in this stratum.
-    Integer? count,
+    FhirInteger? count,
 
     /// [countElement] Extensions for count
     @JsonKey(name: '_count') Element? countElement,
@@ -2379,7 +2265,7 @@ class MeasureReportPopulation1 with _$MeasureReportPopulation1 {
 
 /// [TestReport] A summary of information based on the results of executing a
 @freezed
-class TestReport extends HiveObject with Resource, _$TestReport {
+class TestReport with Resource, _$TestReport {
   /// [TestReport] A summary of information based on the results of executing a
   TestReport._();
 
@@ -2484,45 +2370,37 @@ class TestReport extends HiveObject with Resource, _$TestReport {
   ///
   /// [teardown] The results of the series of operations required to clean up
   ///  after all the tests were executed (successfully or otherwise).
-  @HiveType(typeId: 83)
   factory TestReport({
     @Default(R4ResourceType.TestReport)
     @JsonKey(unknownEnumValue: R4ResourceType.TestReport)
 
-    /// [resourceType] This is a TestReport resource
-    @HiveField(0)
+        /// [resourceType] This is a TestReport resource
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @HiveField(1)
-        String? id,
+    String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    @HiveField(2)
-        FhirMeta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    @HiveField(3)
-        FhirUri? implicitRules,
+    FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
-    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    @HiveField(5)
-        FhirCode? language,
+    FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
-    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
@@ -2531,15 +2409,13 @@ class TestReport extends HiveObject with Resource, _$TestReport {
     /// contain sufficient detail to make it "clinically safe" for a human to just
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
-    @HiveField(7)
-        Narrative? text,
+    Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
-    @HiveField(8)
-        List<Resource>? contained,
+    List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -2548,7 +2424,6 @@ class TestReport extends HiveObject with Resource, _$TestReport {
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
     @JsonKey(name: 'extension')
-    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -2564,96 +2439,77 @@ class TestReport extends HiveObject with Resource, _$TestReport {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    @HiveField(10)
-        List<FhirExtension>? modifierExtension,
+    List<FhirExtension>? modifierExtension,
 
     /// [identifier] Identifier for the TestScript assigned for external purposes
     ///  outside the context of FHIR.
-    @HiveField(11)
-        Identifier? identifier,
+    Identifier? identifier,
 
     /// [name] A free text natural language name identifying the executed
     ///  TestScript.
-    @HiveField(12)
-        String? name,
+    String? name,
 
     /// [nameElement] Extensions for name
     @JsonKey(name: '_name')
-    @HiveField(13)
         Element? nameElement,
 
     /// [status] The current state of this test report.
-    @HiveField(14)
-        FhirCode? status,
+    FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
-    @HiveField(15)
         Element? statusElement,
 
     /// [testScript] Ideally this is an absolute URL that is used to identify the
     /// version-specific TestScript that was executed, matching the
     ///  `TestScript.url`.
-    @HiveField(16)
-        required Reference testScript,
+    required Reference testScript,
 
     /// [result] The overall result from the execution of the TestScript.
-    @HiveField(17)
-        FhirCode? result,
+    FhirCode? result,
 
     /// [resultElement] Extensions for result
     @JsonKey(name: '_result')
-    @HiveField(18)
         Element? resultElement,
 
     /// [score] The final score (percentage of tests passed) resulting from the
     ///  execution of the TestScript.
-    @HiveField(19)
-        FhirDecimal? score,
+    FhirDecimal? score,
 
     /// [scoreElement] Extensions for score
     @JsonKey(name: '_score')
-    @HiveField(20)
         Element? scoreElement,
 
     /// [tester] Name of the tester producing this report (Organization or
     ///  individual).
-    @HiveField(21)
-        String? tester,
+    String? tester,
 
     /// [testerElement] Extensions for tester
     @JsonKey(name: '_tester')
-    @HiveField(22)
         Element? testerElement,
 
     /// [issued] When the TestScript was executed and this TestReport was
     ///  generated.
-    @HiveField(23)
-        FhirDateTime? issued,
+    FhirDateTime? issued,
 
     /// [issuedElement] Extensions for issued
     @JsonKey(name: '_issued')
-    @HiveField(24)
         Element? issuedElement,
 
     /// [participant] A participant in the test execution, either the execution
     ///  engine, a client, or a server.
-    @HiveField(25)
-        List<TestReportParticipant>? participant,
+    List<TestReportParticipant>? participant,
 
     /// [setup] The results of the series of required setup operations before the
     ///  tests were executed.
-    @HiveField(26)
-        TestReportSetup? setup,
+    TestReportSetup? setup,
 
     /// [test] A test executed from the test script.
-    @HiveField(27)
-        List<TestReportTest>? test,
+    List<TestReportTest>? test,
 
     /// [teardown] The results of the series of operations required to clean up
     ///  after all the tests were executed (successfully or otherwise).
-    @HiveField(28)
-        TestReportTeardown? teardown,
+    TestReportTeardown? teardown,
   }) = _TestReport;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -3086,7 +2942,7 @@ class TestReportOperation with _$TestReportOperation {
     @JsonKey(name: '_result') Element? resultElement,
 
     /// [message] An explanatory message associated with the result.
-    Markdown? message,
+    FhirMarkdown? message,
 
     /// [messageElement] Extensions for message
     @JsonKey(name: '_message') Element? messageElement,
@@ -3208,7 +3064,7 @@ class TestReportAssert with _$TestReportAssert {
     @JsonKey(name: '_result') Element? resultElement,
 
     /// [message] An explanatory message associated with the result.
-    Markdown? message,
+    FhirMarkdown? message,
 
     /// [messageElement] Extensions for message
     @JsonKey(name: '_message') Element? messageElement,
@@ -3672,7 +3528,7 @@ class TestReportAction2 with _$TestReportAction2 {
 
 /// [TestScript] A structured set of tests against a FHIR server or client
 @freezed
-class TestScript extends HiveObject with Resource, _$TestScript {
+class TestScript with Resource, _$TestScript {
   /// [TestScript] A structured set of tests against a FHIR server or client
   TestScript._();
 
@@ -3840,45 +3696,37 @@ class TestScript extends HiveObject with Resource, _$TestScript {
   ///
   /// [teardown] A series of operations required to clean up after all the
   ///  tests are executed (successfully or otherwise).
-  @HiveType(typeId: 84)
   factory TestScript({
     @Default(R4ResourceType.TestScript)
     @JsonKey(unknownEnumValue: R4ResourceType.TestScript)
 
-    /// [resourceType] This is a TestScript resource
-    @HiveField(0)
+        /// [resourceType] This is a TestScript resource
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @HiveField(1)
-        String? id,
+    String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    @HiveField(2)
-        FhirMeta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    @HiveField(3)
-        FhirUri? implicitRules,
+    FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
-    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    @HiveField(5)
-        FhirCode? language,
+    FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
-    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
@@ -3887,15 +3735,13 @@ class TestScript extends HiveObject with Resource, _$TestScript {
     /// contain sufficient detail to make it "clinically safe" for a human to just
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
-    @HiveField(7)
-        Narrative? text,
+    Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
-    @HiveField(8)
-        List<Resource>? contained,
+    List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -3904,7 +3750,6 @@ class TestScript extends HiveObject with Resource, _$TestScript {
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
     @JsonKey(name: 'extension')
-    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -3920,8 +3765,7 @@ class TestScript extends HiveObject with Resource, _$TestScript {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    @HiveField(10)
-        List<FhirExtension>? modifierExtension,
+    List<FhirExtension>? modifierExtension,
 
     /// [url] An absolute URI that is used to identify this test script when it
     /// is referenced in a specification, model, design or an instance; also
@@ -3930,19 +3774,16 @@ class TestScript extends HiveObject with Resource, _$TestScript {
     /// test script is (or will be) published. This URL can be the target of a
     /// canonical reference. It SHALL remain the same when the test script is
     ///  stored on different servers.
-    @HiveField(11)
-        FhirUri? url,
+    FhirUri? url,
 
     /// [urlElement] Extensions for url
     @JsonKey(name: '_url')
-    @HiveField(12)
         Element? urlElement,
 
     /// [identifier] A formal identifier that is used to identify this test
     /// script when it is represented in other formats, or referenced in a
     ///  specification, model, design or an instance.
-    @HiveField(13)
-        Identifier? identifier,
+    Identifier? identifier,
 
     /// [version] The identifier that is used to identify this version of the
     /// test script when it is referenced in a specification, model, design or
@@ -3951,90 +3792,73 @@ class TestScript extends HiveObject with Resource, _$TestScript {
     /// timestamp (e.g. yyyymmdd) if a managed version is not available. There is
     /// also no expectation that versions can be placed in a lexicographical
     ///  sequence.
-    @HiveField(14)
-        String? version,
+    String? version,
 
     /// [versionElement] Extensions for version
     @JsonKey(name: '_version')
-    @HiveField(15)
         Element? versionElement,
 
     /// [name] A natural language name identifying the test script. This name
     /// should be usable as an identifier for the module by machine processing
     ///  applications such as code generation.
-    @HiveField(16)
-        String? name,
+    String? name,
 
     /// [nameElement] Extensions for name
     @JsonKey(name: '_name')
-    @HiveField(17)
         Element? nameElement,
 
     /// [title] A short, descriptive, user-friendly title for the test script.
-    @HiveField(18)
-        String? title,
+    String? title,
 
     /// [titleElement] Extensions for title
     @JsonKey(name: '_title')
-    @HiveField(19)
         Element? titleElement,
 
     /// [status] The status of this test script. Enables tracking the life-cycle
     ///  of the content.
-    @HiveField(20)
-        FhirCode? status,
+    FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
-    @HiveField(21)
         Element? statusElement,
 
     /// [experimental] A Boolean value to indicate that this test script is
     /// authored for testing purposes (or education/evaluation/marketing) and is
     ///  not intended to be used for genuine usage.
-    @HiveField(22)
-        Boolean? experimental,
+    FhirBoolean? experimental,
 
     /// [experimentalElement] Extensions for experimental
     @JsonKey(name: '_experimental')
-    @HiveField(23)
         Element? experimentalElement,
 
     /// [date] The date  (and optionally time) when the test script was
     /// published. The date must change when the business version changes and it
     /// must change if the status code changes. In addition, it should change when
     ///  the substantive content of the test script changes.
-    @HiveField(24)
-        FhirDateTime? date,
+    FhirDateTime? date,
 
     /// [dateElement] Extensions for date
     @JsonKey(name: '_date')
-    @HiveField(25)
         Element? dateElement,
 
     /// [publisher] The name of the organization or individual that published the
     ///  test script.
-    @HiveField(26)
-        String? publisher,
+    String? publisher,
 
     /// [publisherElement] Extensions for publisher
     @JsonKey(name: '_publisher')
-    @HiveField(27)
         Element? publisherElement,
 
     /// [contact] Contact details to assist a user in finding and communicating
     ///  with the publisher.
-    @HiveField(28)
-        List<ContactDetail>? contact,
+    List<ContactDetail>? contact,
 
     /// [description] A free text natural language description of the test script
     ///  from a consumer's perspective.
-    @HiveField(29)
-        Markdown? description,
+    FhirMarkdown? description,
 
     /// [descriptionElement] Extensions for description
     @JsonKey(name: '_description')
-    @HiveField(30)
         Element? descriptionElement,
 
     /// [useContext] The content was developed with a focus and intent of
@@ -4042,76 +3866,61 @@ class TestScript extends HiveObject with Resource, _$TestScript {
     /// categories (gender, age, ...) or may be references to specific programs
     /// (insurance plans, studies, ...) and may be used to assist with indexing
     ///  and searching for appropriate test script instances.
-    @HiveField(31)
-        List<UsageContext>? useContext,
+    List<UsageContext>? useContext,
 
     /// [jurisdiction] A legal or geographic region in which the test script is
     ///  intended to be used.
-    @HiveField(32)
-        List<CodeableConcept>? jurisdiction,
+    List<CodeableConcept>? jurisdiction,
 
     /// [purpose] Explanation of why this test script is needed and why it has
     ///  been designed as it has.
-    @HiveField(33)
-        Markdown? purpose,
+    FhirMarkdown? purpose,
 
     /// [purposeElement] Extensions for purpose
     @JsonKey(name: '_purpose')
-    @HiveField(34)
         Element? purposeElement,
 
     /// [copyright] A copyright statement relating to the test script and/or its
     /// contents. Copyright statements are generally legal restrictions on the use
     ///  and publishing of the test script.
-    @HiveField(35)
-        Markdown? copyright,
+    FhirMarkdown? copyright,
 
     /// [copyrightElement] Extensions for copyright
     @JsonKey(name: '_copyright')
-    @HiveField(36)
         Element? copyrightElement,
 
     /// [origin] An abstract server used in operations within this test script in
     ///  the origin element.
-    @HiveField(37)
-        List<TestScriptOrigin>? origin,
+    List<TestScriptOrigin>? origin,
 
     /// [destination] An abstract server used in operations within this test
     ///  script in the destination element.
-    @HiveField(38)
-        List<TestScriptDestination>? destination,
+    List<TestScriptDestination>? destination,
 
     /// [metadata] The required capability must exist and are assumed to function
     ///  correctly on the FHIR server being tested.
-    @HiveField(39)
-        TestScriptFhirMetadata? metadata,
+    TestScriptMetadata? metadata,
 
     /// [fixture] Fixture in the test script - by reference (uri). All fixtures
     ///  are required for the test script to execute.
-    @HiveField(40)
-        List<TestScriptFixture>? fixture,
+    List<TestScriptFixture>? fixture,
 
     /// [profile] Reference to the profile to be used for validation.
-    @HiveField(41)
-        List<Reference>? profile,
+    List<Reference>? profile,
 
     /// [variable] Variable is set based either on element value in response body
     ///  or on header field value in the response headers.
-    @HiveField(42)
-        List<TestScriptVariable>? variable,
+    List<TestScriptVariable>? variable,
 
     /// [setup] A series of required setup operations before tests are executed.
-    @HiveField(43)
-        TestScriptSetup? setup,
+    TestScriptSetup? setup,
 
     /// [test] A test in this script.
-    @HiveField(44)
-        List<TestScriptTest>? test,
+    List<TestScriptTest>? test,
 
     /// [teardown] A series of operations required to clean up after all the
     ///  tests are executed (successfully or otherwise).
-    @HiveField(45)
-        TestScriptTeardown? teardown,
+    TestScriptTeardown? teardown,
   }) = _TestScript;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -4212,7 +4021,7 @@ class TestScriptOrigin with _$TestScriptOrigin {
 
     /// [index] Abstract name given to an origin server in this test script.  The
     ///  name is provided as a number starting at 1.
-    Integer? index,
+    FhirInteger? index,
 
     /// [indexElement] Extensions for index
     @JsonKey(name: '_index') Element? indexElement,
@@ -4322,7 +4131,7 @@ class TestScriptDestination with _$TestScriptDestination {
 
     /// [index] Abstract name given to a destination server in this test script.
     ///  The name is provided as a number starting at 1.
-    Integer? index,
+    FhirInteger? index,
 
     /// [indexElement] Extensions for index
     @JsonKey(name: '_index') Element? indexElement,
@@ -4362,13 +4171,13 @@ class TestScriptDestination with _$TestScriptDestination {
   }
 }
 
-/// [TestScriptFhirMetadata] A structured set of tests against a FHIR server or
+/// [TestScriptMetadata] A structured set of tests against a FHIR server or
 @freezed
-class TestScriptFhirMetadata with _$TestScriptFhirMetadata {
-  /// [TestScriptFhirMetadata] A structured set of tests against a FHIR server or
-  TestScriptFhirMetadata._();
+class TestScriptMetadata with _$TestScriptMetadata {
+  /// [TestScriptMetadata] A structured set of tests against a FHIR server or
+  TestScriptMetadata._();
 
-  /// [TestScriptFhirMetadata] A structured set of tests against a FHIR server or
+  /// [TestScriptMetadata] A structured set of tests against a FHIR server or
   /// client implementation to determine compliance against the FHIR
   ///  specification.
   ///
@@ -4400,7 +4209,7 @@ class TestScriptFhirMetadata with _$TestScriptFhirMetadata {
   ///
   /// [capability] Capabilities that must exist and are assumed to function
   ///  correctly on the FHIR server being tested.
-  factory TestScriptFhirMetadata({
+  factory TestScriptMetadata({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -4434,32 +4243,32 @@ class TestScriptFhirMetadata with _$TestScriptFhirMetadata {
     /// [capability] Capabilities that must exist and are assumed to function
     ///  correctly on the FHIR server being tested.
     required List<TestScriptCapability> capability,
-  }) = _TestScriptFhirMetadata;
+  }) = _TestScriptMetadata;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory TestScriptFhirMetadata.fromYaml(dynamic yaml) => yaml is String
-      ? TestScriptFhirMetadata.fromJson(
+  factory TestScriptMetadata.fromYaml(dynamic yaml) => yaml is String
+      ? TestScriptMetadata.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? TestScriptFhirMetadata.fromJson(
+          ? TestScriptMetadata.fromJson(
               jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
-              'TestScriptFhirMetadata cannot be constructed from input provided,'
+              'TestScriptMetadata cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory TestScriptFhirMetadata.fromJson(Map<String, dynamic> json) =>
-      _$TestScriptFhirMetadataFromJson(json);
+  factory TestScriptMetadata.fromJson(Map<String, dynamic> json) =>
+      _$TestScriptMetadataFromJson(json);
 
-  /// Acts like a constructor, returns a [TestScriptFhirMetadata], accepts a
+  /// Acts like a constructor, returns a [TestScriptMetadata], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
-  factory TestScriptFhirMetadata.fromJsonString(String source) {
+  factory TestScriptMetadata.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
-      return _$TestScriptFhirMetadataFromJson(json);
+      return _$TestScriptMetadataFromJson(json);
     } else {
       throw FormatException('FormatException:\nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
@@ -4678,14 +4487,14 @@ class TestScriptCapability with _$TestScriptCapability {
 
     /// [required] Whether or not the test execution will require the given
     ///  capabilities of the server in order for this test script to execute.
-    @JsonKey(name: 'required') Boolean? required_,
+    @JsonKey(name: 'required') FhirBoolean? required_,
 
     /// [requiredElement] Extensions for required
     @JsonKey(name: '_required') Element? requiredElement,
 
     /// [validated] Whether or not the test execution will validate the given
     ///  capabilities of the server in order for this test script to execute.
-    Boolean? validated,
+    FhirBoolean? validated,
 
     /// [validatedElement] Extensions for validated
     @JsonKey(name: '_validated') Element? validatedElement,
@@ -4704,7 +4513,7 @@ class TestScriptCapability with _$TestScriptCapability {
     @JsonKey(name: '_origin') List<Element?>? originElement,
 
     /// [destination] Which server these requirements apply to.
-    Integer? destination,
+    FhirInteger? destination,
 
     /// [destinationElement] Extensions for destination
     @JsonKey(name: '_destination') Element? destinationElement,
@@ -4836,7 +4645,7 @@ class TestScriptFixture with _$TestScriptFixture {
     /// setup. If true, the fixture is automatically created on each server being
     /// tested during setup, therefore no create operation is required for this
     ///  fixture in the TestScript.setup section.
-    Boolean? autocreate,
+    FhirBoolean? autocreate,
 
     /// [autocreateElement] Extensions for autocreate
     @JsonKey(name: '_autocreate') Element? autocreateElement,
@@ -4845,7 +4654,7 @@ class TestScriptFixture with _$TestScriptFixture {
     /// teardown. If true, the fixture is automatically deleted on each server
     /// being tested during teardown, therefore no delete operation is required
     ///  for this fixture in the TestScript.teardown section.
-    Boolean? autodelete,
+    FhirBoolean? autodelete,
 
     /// [autodeleteElement] Extensions for autodelete
     @JsonKey(name: '_autodelete') Element? autodeleteElement,
@@ -5459,7 +5268,7 @@ class TestScriptOperation with _$TestScriptOperation {
 
     /// [destination] The server where the request message is destined for.  Must
     ///  be one of the server numbers listed in TestScript.destination section.
-    Integer? destination,
+    FhirInteger? destination,
 
     /// [destinationElement] Extensions for destination
     @JsonKey(name: '_destination') Element? destinationElement,
@@ -5468,7 +5277,7 @@ class TestScriptOperation with _$TestScriptOperation {
     /// encoded format. The default is true to match the standard RESTful client
     /// behavior. Set to false when communicating with a server that does not
     ///  support encoded url paths.
-    Boolean? encodeRequestUrl,
+    FhirBoolean? encodeRequestUrl,
 
     /// [encodeRequestUrlElement] Extensions for encodeRequestUrl
     @JsonKey(name: '_encodeRequestUrl') Element? encodeRequestUrlElement,
@@ -5482,7 +5291,7 @@ class TestScriptOperation with _$TestScriptOperation {
 
     /// [origin] The server where the request message originates from.  Must be
     ///  one of the server numbers listed in TestScript.origin section.
-    Integer? origin,
+    FhirInteger? origin,
 
     /// [originElement] Extensions for origin
     @JsonKey(name: '_origin') Element? originElement,
@@ -5932,7 +5741,7 @@ class TestScriptAssert with _$TestScriptAssert {
 
     /// [navigationLinks] Whether or not the test execution performs validation
     ///  on the bundle navigation links.
-    Boolean? navigationLinks,
+    FhirBoolean? navigationLinks,
 
     /// [navigationLinksElement] Extensions for navigationLinks
     @JsonKey(name: '_navigationLinks')
@@ -6019,7 +5828,7 @@ class TestScriptAssert with _$TestScriptAssert {
 
     /// [warningOnly] Whether or not the test execution will produce a warning
     ///  only on error for this assert.
-    Boolean? warningOnly,
+    FhirBoolean? warningOnly,
 
     /// [warningOnlyElement] Extensions for warningOnly
     @JsonKey(name: '_warningOnly')

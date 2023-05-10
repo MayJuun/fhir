@@ -21,39 +21,32 @@ Group _$GroupFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Group {
   @JsonKey(unknownEnumValue: R4ResourceType.Group)
-  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
-  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  @HiveField(2)
   FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
-  @HiveField(4)
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  @HiveField(5)
   FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
-  @HiveField(6)
   Element? get languageElement => throw _privateConstructorUsedError;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -62,14 +55,12 @@ mixin _$Group {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
-  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
 
   /// [contained] These resources do not have an independent existence apart
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
-  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -79,7 +70,6 @@ mixin _$Group {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
-  @HiveField(9)
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [modifierExtension] May be used to represent additional information that
@@ -95,83 +85,67 @@ mixin _$Group {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
   /// [identifier] A unique business identifier for this group.
-  @HiveField(11)
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [active] Indicates whether the record for the group is available for use
   ///  or is merely being retained for historical purposes.
-  @HiveField(12)
-  Boolean? get active => throw _privateConstructorUsedError;
+  FhirBoolean? get active => throw _privateConstructorUsedError;
 
   /// [activeElement] Extensions for active
   @JsonKey(name: '_active')
-  @HiveField(13)
   Element? get activeElement => throw _privateConstructorUsedError;
 
   /// [type] Identifies the broad classification of the kind of resources the
   ///  group includes.
-  @HiveField(14)
   FhirCode? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
-  @HiveField(15)
   Element? get typeElement => throw _privateConstructorUsedError;
 
   /// [actual] If true, indicates that the resource refers to a specific group
   /// of real individuals.  If false, the group defines a set of intended
   ///  individuals.
-  @HiveField(16)
-  Boolean? get actual => throw _privateConstructorUsedError;
+  FhirBoolean? get actual => throw _privateConstructorUsedError;
 
   /// [actualElement] Extensions for actual
   @JsonKey(name: '_actual')
-  @HiveField(17)
   Element? get actualElement => throw _privateConstructorUsedError;
 
   /// [code] Provides a specific type of resource the group includes; e.g.
   ///  "cow", "syringe", etc.
-  @HiveField(18)
   CodeableConcept? get code => throw _privateConstructorUsedError;
 
   /// [name] A label assigned to the group for human identification and
   ///  communication.
-  @HiveField(19)
   String? get name => throw _privateConstructorUsedError;
 
   /// [nameElement] Extensions for name
   @JsonKey(name: '_name')
-  @HiveField(20)
   Element? get nameElement => throw _privateConstructorUsedError;
 
   /// [quantity] A count of the number of resource instances that are part of
   ///  the group.
-  @HiveField(21)
   FhirUnsignedInt? get quantity => throw _privateConstructorUsedError;
 
   /// [quantityElement] Extensions for quantity
   @JsonKey(name: '_quantity')
-  @HiveField(22)
   Element? get quantityElement => throw _privateConstructorUsedError;
 
   /// [managingEntity] Entity responsible for defining and maintaining Group
   ///  characteristics and/or registered members.
-  @HiveField(23)
   Reference? get managingEntity => throw _privateConstructorUsedError;
 
   /// [characteristic] Identifies traits whose presence r absence is shared by
   ///  members of the group.
-  @HiveField(24)
   List<GroupCharacteristic>? get characteristic =>
       throw _privateConstructorUsedError;
 
   /// [member] Identifies the resource instances that are members of the group.
-  @HiveField(25)
   List<GroupMember>? get member => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -186,66 +160,40 @@ abstract class $GroupCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Group)
-      @HiveField(0)
           R4ResourceType resourceType,
-      @HiveField(1)
-          String? id,
-      @HiveField(2)
-          FhirMeta? meta,
-      @HiveField(3)
-          FhirUri? implicitRules,
+      String? id,
+      FhirMeta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           Element? implicitRulesElement,
-      @HiveField(5)
-          FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           Element? languageElement,
-      @HiveField(7)
-          Narrative? text,
-      @HiveField(8)
-          List<Resource>? contained,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           List<FhirExtension>? extension_,
-      @HiveField(10)
-          List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          List<Identifier>? identifier,
-      @HiveField(12)
-          Boolean? active,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      FhirBoolean? active,
       @JsonKey(name: '_active')
-      @HiveField(13)
           Element? activeElement,
-      @HiveField(14)
-          FhirCode? type,
+      FhirCode? type,
       @JsonKey(name: '_type')
-      @HiveField(15)
           Element? typeElement,
-      @HiveField(16)
-          Boolean? actual,
+      FhirBoolean? actual,
       @JsonKey(name: '_actual')
-      @HiveField(17)
           Element? actualElement,
-      @HiveField(18)
-          CodeableConcept? code,
-      @HiveField(19)
-          String? name,
+      CodeableConcept? code,
+      String? name,
       @JsonKey(name: '_name')
-      @HiveField(20)
           Element? nameElement,
-      @HiveField(21)
-          FhirUnsignedInt? quantity,
+      FhirUnsignedInt? quantity,
       @JsonKey(name: '_quantity')
-      @HiveField(22)
           Element? quantityElement,
-      @HiveField(23)
-          Reference? managingEntity,
-      @HiveField(24)
-          List<GroupCharacteristic>? characteristic,
-      @HiveField(25)
-          List<GroupMember>? member});
+      Reference? managingEntity,
+      List<GroupCharacteristic>? characteristic,
+      List<GroupMember>? member});
 
   $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -324,7 +272,7 @@ class _$GroupCopyWithImpl<$Res, $Val extends Group>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -352,7 +300,7 @@ class _$GroupCopyWithImpl<$Res, $Val extends Group>
       active: freezed == active
           ? _value.active
           : active // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       activeElement: freezed == activeElement
           ? _value.activeElement
           : activeElement // ignore: cast_nullable_to_non_nullable
@@ -360,7 +308,7 @@ class _$GroupCopyWithImpl<$Res, $Val extends Group>
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       typeElement: freezed == typeElement
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -368,7 +316,7 @@ class _$GroupCopyWithImpl<$Res, $Val extends Group>
       actual: freezed == actual
           ? _value.actual
           : actual // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       actualElement: freezed == actualElement
           ? _value.actualElement
           : actualElement // ignore: cast_nullable_to_non_nullable
@@ -388,7 +336,7 @@ class _$GroupCopyWithImpl<$Res, $Val extends Group>
       quantity: freezed == quantity
           ? _value.quantity
           : quantity // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt?,
+              as FhirUnsignedInt?,
       quantityElement: freezed == quantityElement
           ? _value.quantityElement
           : quantityElement // ignore: cast_nullable_to_non_nullable
@@ -549,66 +497,40 @@ abstract class _$$_GroupCopyWith<$Res> implements $GroupCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Group)
-      @HiveField(0)
           R4ResourceType resourceType,
-      @HiveField(1)
-          String? id,
-      @HiveField(2)
-          FhirMeta? meta,
-      @HiveField(3)
-          FhirUri? implicitRules,
+      String? id,
+      FhirMeta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           Element? implicitRulesElement,
-      @HiveField(5)
-          FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           Element? languageElement,
-      @HiveField(7)
-          Narrative? text,
-      @HiveField(8)
-          List<Resource>? contained,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           List<FhirExtension>? extension_,
-      @HiveField(10)
-          List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          List<Identifier>? identifier,
-      @HiveField(12)
-          Boolean? active,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      FhirBoolean? active,
       @JsonKey(name: '_active')
-      @HiveField(13)
           Element? activeElement,
-      @HiveField(14)
-          FhirCode? type,
+      FhirCode? type,
       @JsonKey(name: '_type')
-      @HiveField(15)
           Element? typeElement,
-      @HiveField(16)
-          Boolean? actual,
+      FhirBoolean? actual,
       @JsonKey(name: '_actual')
-      @HiveField(17)
           Element? actualElement,
-      @HiveField(18)
-          CodeableConcept? code,
-      @HiveField(19)
-          String? name,
+      CodeableConcept? code,
+      String? name,
       @JsonKey(name: '_name')
-      @HiveField(20)
           Element? nameElement,
-      @HiveField(21)
-          FhirUnsignedInt? quantity,
+      FhirUnsignedInt? quantity,
       @JsonKey(name: '_quantity')
-      @HiveField(22)
           Element? quantityElement,
-      @HiveField(23)
-          Reference? managingEntity,
-      @HiveField(24)
-          List<GroupCharacteristic>? characteristic,
-      @HiveField(25)
-          List<GroupMember>? member});
+      Reference? managingEntity,
+      List<GroupCharacteristic>? characteristic,
+      List<GroupMember>? member});
 
   @override
   $FhirMetaCopyWith<$Res>? get meta;
@@ -694,7 +616,7 @@ class __$$_GroupCopyWithImpl<$Res> extends _$GroupCopyWithImpl<$Res, _$_Group>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -722,7 +644,7 @@ class __$$_GroupCopyWithImpl<$Res> extends _$GroupCopyWithImpl<$Res, _$_Group>
       active: freezed == active
           ? _value.active
           : active // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       activeElement: freezed == activeElement
           ? _value.activeElement
           : activeElement // ignore: cast_nullable_to_non_nullable
@@ -730,7 +652,7 @@ class __$$_GroupCopyWithImpl<$Res> extends _$GroupCopyWithImpl<$Res, _$_Group>
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       typeElement: freezed == typeElement
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -738,7 +660,7 @@ class __$$_GroupCopyWithImpl<$Res> extends _$GroupCopyWithImpl<$Res, _$_Group>
       actual: freezed == actual
           ? _value.actual
           : actual // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       actualElement: freezed == actualElement
           ? _value.actualElement
           : actualElement // ignore: cast_nullable_to_non_nullable
@@ -758,7 +680,7 @@ class __$$_GroupCopyWithImpl<$Res> extends _$GroupCopyWithImpl<$Res, _$_Group>
       quantity: freezed == quantity
           ? _value.quantity
           : quantity // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt?,
+              as FhirUnsignedInt?,
       quantityElement: freezed == quantityElement
           ? _value.quantityElement
           : quantityElement // ignore: cast_nullable_to_non_nullable
@@ -781,70 +703,43 @@ class __$$_GroupCopyWithImpl<$Res> extends _$GroupCopyWithImpl<$Res, _$_Group>
 
 /// @nodoc
 @JsonSerializable()
-@HiveType(typeId: 129)
 class _$_Group extends _Group {
   _$_Group(
       {@JsonKey(unknownEnumValue: R4ResourceType.Group)
-      @HiveField(0)
           this.resourceType = R4ResourceType.Group,
-      @HiveField(1)
-          this.id,
-      @HiveField(2)
-          this.meta,
-      @HiveField(3)
-          this.implicitRules,
+      this.id,
+      this.meta,
+      this.implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           this.implicitRulesElement,
-      @HiveField(5)
-          this.language,
+      this.language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           this.languageElement,
-      @HiveField(7)
-          this.text,
-      @HiveField(8)
-          final List<Resource>? contained,
+      this.text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           final List<FhirExtension>? extension_,
-      @HiveField(10)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          final List<Identifier>? identifier,
-      @HiveField(12)
-          this.active,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      this.active,
       @JsonKey(name: '_active')
-      @HiveField(13)
           this.activeElement,
-      @HiveField(14)
-          this.type,
+      this.type,
       @JsonKey(name: '_type')
-      @HiveField(15)
           this.typeElement,
-      @HiveField(16)
-          this.actual,
+      this.actual,
       @JsonKey(name: '_actual')
-      @HiveField(17)
           this.actualElement,
-      @HiveField(18)
-          this.code,
-      @HiveField(19)
-          this.name,
+      this.code,
+      this.name,
       @JsonKey(name: '_name')
-      @HiveField(20)
           this.nameElement,
-      @HiveField(21)
-          this.quantity,
+      this.quantity,
       @JsonKey(name: '_quantity')
-      @HiveField(22)
           this.quantityElement,
-      @HiveField(23)
-          this.managingEntity,
-      @HiveField(24)
-          final List<GroupCharacteristic>? characteristic,
-      @HiveField(25)
-          final List<GroupMember>? member})
+      this.managingEntity,
+      final List<GroupCharacteristic>? characteristic,
+      final List<GroupMember>? member})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -858,20 +753,17 @@ class _$_Group extends _Group {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Group)
-  @HiveField(0)
   final R4ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
   @override
-  @HiveField(1)
   final String? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
-  @HiveField(2)
   final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -879,24 +771,20 @@ class _$_Group extends _Group {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   @override
-  @HiveField(3)
   final FhirUri? implicitRules;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
-  @HiveField(4)
   final Element? implicitRulesElement;
 
   /// [language] The base language in which the resource is written.
   @override
-  @HiveField(5)
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] Extensions for language
   @override
   @JsonKey(name: '_language')
-  @HiveField(6)
   final Element? languageElement;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -906,7 +794,6 @@ class _$_Group extends _Group {
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
   @override
-  @HiveField(7)
   final Narrative? text;
 
   /// [contained] These resources do not have an independent existence apart
@@ -920,7 +807,6 @@ class _$_Group extends _Group {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   @override
-  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -945,7 +831,6 @@ class _$_Group extends _Group {
   ///  as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
-  @HiveField(9)
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
@@ -983,7 +868,6 @@ class _$_Group extends _Group {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   @override
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -998,7 +882,6 @@ class _$_Group extends _Group {
 
   /// [identifier] A unique business identifier for this group.
   @override
-  @HiveField(11)
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
@@ -1010,74 +893,62 @@ class _$_Group extends _Group {
   /// [active] Indicates whether the record for the group is available for use
   ///  or is merely being retained for historical purposes.
   @override
-  @HiveField(12)
-  final Boolean? active;
+  final FhirBoolean? active;
 
   /// [activeElement] Extensions for active
   @override
   @JsonKey(name: '_active')
-  @HiveField(13)
   final Element? activeElement;
 
   /// [type] Identifies the broad classification of the kind of resources the
   ///  group includes.
   @override
-  @HiveField(14)
-  final Code? type;
+  final FhirCode? type;
 
   /// [typeElement] Extensions for type
   @override
   @JsonKey(name: '_type')
-  @HiveField(15)
   final Element? typeElement;
 
   /// [actual] If true, indicates that the resource refers to a specific group
   /// of real individuals.  If false, the group defines a set of intended
   ///  individuals.
   @override
-  @HiveField(16)
-  final Boolean? actual;
+  final FhirBoolean? actual;
 
   /// [actualElement] Extensions for actual
   @override
   @JsonKey(name: '_actual')
-  @HiveField(17)
   final Element? actualElement;
 
   /// [code] Provides a specific type of resource the group includes; e.g.
   ///  "cow", "syringe", etc.
   @override
-  @HiveField(18)
   final CodeableConcept? code;
 
   /// [name] A label assigned to the group for human identification and
   ///  communication.
   @override
-  @HiveField(19)
   final String? name;
 
   /// [nameElement] Extensions for name
   @override
   @JsonKey(name: '_name')
-  @HiveField(20)
   final Element? nameElement;
 
   /// [quantity] A count of the number of resource instances that are part of
   ///  the group.
   @override
-  @HiveField(21)
-  final UnsignedInt? quantity;
+  final FhirUnsignedInt? quantity;
 
   /// [quantityElement] Extensions for quantity
   @override
   @JsonKey(name: '_quantity')
-  @HiveField(22)
   final Element? quantityElement;
 
   /// [managingEntity] Entity responsible for defining and maintaining Group
   ///  characteristics and/or registered members.
   @override
-  @HiveField(23)
   final Reference? managingEntity;
 
   /// [characteristic] Identifies traits whose presence r absence is shared by
@@ -1087,7 +958,6 @@ class _$_Group extends _Group {
   /// [characteristic] Identifies traits whose presence r absence is shared by
   ///  members of the group.
   @override
-  @HiveField(24)
   List<GroupCharacteristic>? get characteristic {
     final value = _characteristic;
     if (value == null) return null;
@@ -1101,7 +971,6 @@ class _$_Group extends _Group {
 
   /// [member] Identifies the resource instances that are members of the group.
   @override
-  @HiveField(25)
   List<GroupMember>? get member {
     final value = _member;
     if (value == null) return null;
@@ -1214,86 +1083,57 @@ class _$_Group extends _Group {
 abstract class _Group extends Group {
   factory _Group(
       {@JsonKey(unknownEnumValue: R4ResourceType.Group)
-      @HiveField(0)
           final R4ResourceType resourceType,
-      @HiveField(1)
-          final String? id,
-      @HiveField(2)
-          final FhirMeta? meta,
-      @HiveField(3)
-          final FhirUri? implicitRules,
+      final String? id,
+      final FhirMeta? meta,
+      final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           final Element? implicitRulesElement,
-      @HiveField(5)
-          final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           final Element? languageElement,
-      @HiveField(7)
-          final Narrative? text,
-      @HiveField(8)
-          final List<Resource>? contained,
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           final List<FhirExtension>? extension_,
-      @HiveField(10)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          final List<Identifier>? identifier,
-      @HiveField(12)
-          final Boolean? active,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final FhirBoolean? active,
       @JsonKey(name: '_active')
-      @HiveField(13)
           final Element? activeElement,
-      @HiveField(14)
-          final Code? type,
+      final FhirCode? type,
       @JsonKey(name: '_type')
-      @HiveField(15)
           final Element? typeElement,
-      @HiveField(16)
-          final Boolean? actual,
+      final FhirBoolean? actual,
       @JsonKey(name: '_actual')
-      @HiveField(17)
           final Element? actualElement,
-      @HiveField(18)
-          final CodeableConcept? code,
-      @HiveField(19)
-          final String? name,
+      final CodeableConcept? code,
+      final String? name,
       @JsonKey(name: '_name')
-      @HiveField(20)
           final Element? nameElement,
-      @HiveField(21)
-          final UnsignedInt? quantity,
+      final FhirUnsignedInt? quantity,
       @JsonKey(name: '_quantity')
-      @HiveField(22)
           final Element? quantityElement,
-      @HiveField(23)
-          final Reference? managingEntity,
-      @HiveField(24)
-          final List<GroupCharacteristic>? characteristic,
-      @HiveField(25)
-          final List<GroupMember>? member}) = _$_Group;
+      final Reference? managingEntity,
+      final List<GroupCharacteristic>? characteristic,
+      final List<GroupMember>? member}) = _$_Group;
   _Group._() : super._();
 
   factory _Group.fromJson(Map<String, dynamic> json) = _$_Group.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Group)
-  @HiveField(0)
   R4ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
-  @HiveField(1)
   String? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  @HiveField(2)
   FhirMeta? get meta;
   @override
 
@@ -1301,24 +1141,20 @@ abstract class _Group extends Group {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  @HiveField(3)
   FhirUri? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
-  @HiveField(4)
   Element? get implicitRulesElement;
   @override
 
   /// [language] The base language in which the resource is written.
-  @HiveField(5)
   FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
-  @HiveField(6)
   Element? get languageElement;
   @override
 
@@ -1328,7 +1164,6 @@ abstract class _Group extends Group {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
-  @HiveField(7)
   Narrative? get text;
   @override
 
@@ -1336,7 +1171,6 @@ abstract class _Group extends Group {
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
-  @HiveField(8)
   List<Resource>? get contained;
   @override
 
@@ -1347,7 +1181,6 @@ abstract class _Group extends Group {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
-  @HiveField(9)
   List<FhirExtension>? get extension_;
   @override
 
@@ -1364,96 +1197,80 @@ abstract class _Group extends Group {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
 
   /// [identifier] A unique business identifier for this group.
-  @HiveField(11)
   List<Identifier>? get identifier;
   @override
 
   /// [active] Indicates whether the record for the group is available for use
   ///  or is merely being retained for historical purposes.
-  @HiveField(12)
-  Boolean? get active;
+  FhirBoolean? get active;
   @override
 
   /// [activeElement] Extensions for active
   @JsonKey(name: '_active')
-  @HiveField(13)
   Element? get activeElement;
   @override
 
   /// [type] Identifies the broad classification of the kind of resources the
   ///  group includes.
-  @HiveField(14)
   FhirCode? get type;
   @override
 
   /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
-  @HiveField(15)
   Element? get typeElement;
   @override
 
   /// [actual] If true, indicates that the resource refers to a specific group
   /// of real individuals.  If false, the group defines a set of intended
   ///  individuals.
-  @HiveField(16)
-  Boolean? get actual;
+  FhirBoolean? get actual;
   @override
 
   /// [actualElement] Extensions for actual
   @JsonKey(name: '_actual')
-  @HiveField(17)
   Element? get actualElement;
   @override
 
   /// [code] Provides a specific type of resource the group includes; e.g.
   ///  "cow", "syringe", etc.
-  @HiveField(18)
   CodeableConcept? get code;
   @override
 
   /// [name] A label assigned to the group for human identification and
   ///  communication.
-  @HiveField(19)
   String? get name;
   @override
 
   /// [nameElement] Extensions for name
   @JsonKey(name: '_name')
-  @HiveField(20)
   Element? get nameElement;
   @override
 
   /// [quantity] A count of the number of resource instances that are part of
   ///  the group.
-  @HiveField(21)
   FhirUnsignedInt? get quantity;
   @override
 
   /// [quantityElement] Extensions for quantity
   @JsonKey(name: '_quantity')
-  @HiveField(22)
   Element? get quantityElement;
   @override
 
   /// [managingEntity] Entity responsible for defining and maintaining Group
   ///  characteristics and/or registered members.
-  @HiveField(23)
   Reference? get managingEntity;
   @override
 
   /// [characteristic] Identifies traits whose presence r absence is shared by
   ///  members of the group.
-  @HiveField(24)
   List<GroupCharacteristic>? get characteristic;
   @override
 
   /// [member] Identifies the resource instances that are members of the group.
-  @HiveField(25)
   List<GroupMember>? get member;
   @override
   @JsonKey(ignore: true)
@@ -1506,7 +1323,7 @@ mixin _$GroupCharacteristic {
 
   /// [valueBoolean] The value of the trait that holds (or does not hold - see
   ///  'exclude') for members of the group.
-  Boolean? get valueBoolean => throw _privateConstructorUsedError;
+  FhirBoolean? get valueBoolean => throw _privateConstructorUsedError;
 
   /// [valueBooleanElement] Extensions for valueBoolean
   @JsonKey(name: '_valueBoolean')
@@ -1526,7 +1343,7 @@ mixin _$GroupCharacteristic {
 
   /// [exclude] If true, indicates the characteristic is one that is NOT held
   ///  by members of the group.
-  Boolean? get exclude => throw _privateConstructorUsedError;
+  FhirBoolean? get exclude => throw _privateConstructorUsedError;
 
   /// [excludeElement] Extensions for exclude
   @JsonKey(name: '_exclude')
@@ -1554,12 +1371,12 @@ abstract class $GroupCharacteristicCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       CodeableConcept code,
       CodeableConcept? valueCodeableConcept,
-      Boolean? valueBoolean,
+      FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       Quantity? valueQuantity,
       Range? valueRange,
       Reference? valueReference,
-      Boolean? exclude,
+      FhirBoolean? exclude,
       @JsonKey(name: '_exclude') Element? excludeElement,
       Period? period});
 
@@ -1624,7 +1441,7 @@ class _$GroupCharacteristicCopyWithImpl<$Res, $Val extends GroupCharacteristic>
       valueBoolean: freezed == valueBoolean
           ? _value.valueBoolean
           : valueBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       valueBooleanElement: freezed == valueBooleanElement
           ? _value.valueBooleanElement
           : valueBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -1644,7 +1461,7 @@ class _$GroupCharacteristicCopyWithImpl<$Res, $Val extends GroupCharacteristic>
       exclude: freezed == exclude
           ? _value.exclude
           : exclude // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       excludeElement: freezed == excludeElement
           ? _value.excludeElement
           : excludeElement // ignore: cast_nullable_to_non_nullable
@@ -1764,12 +1581,12 @@ abstract class _$$_GroupCharacteristicCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       CodeableConcept code,
       CodeableConcept? valueCodeableConcept,
-      Boolean? valueBoolean,
+      FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       Quantity? valueQuantity,
       Range? valueRange,
       Reference? valueReference,
-      Boolean? exclude,
+      FhirBoolean? exclude,
       @JsonKey(name: '_exclude') Element? excludeElement,
       Period? period});
 
@@ -1840,7 +1657,7 @@ class __$$_GroupCharacteristicCopyWithImpl<$Res>
       valueBoolean: freezed == valueBoolean
           ? _value.valueBoolean
           : valueBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       valueBooleanElement: freezed == valueBooleanElement
           ? _value.valueBooleanElement
           : valueBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -1860,7 +1677,7 @@ class __$$_GroupCharacteristicCopyWithImpl<$Res>
       exclude: freezed == exclude
           ? _value.exclude
           : exclude // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       excludeElement: freezed == excludeElement
           ? _value.excludeElement
           : excludeElement // ignore: cast_nullable_to_non_nullable
@@ -1976,7 +1793,7 @@ class _$_GroupCharacteristic extends _GroupCharacteristic {
   /// [valueBoolean] The value of the trait that holds (or does not hold - see
   ///  'exclude') for members of the group.
   @override
-  final Boolean? valueBoolean;
+  final FhirBoolean? valueBoolean;
 
   /// [valueBooleanElement] Extensions for valueBoolean
   @override
@@ -2001,7 +1818,7 @@ class _$_GroupCharacteristic extends _GroupCharacteristic {
   /// [exclude] If true, indicates the characteristic is one that is NOT held
   ///  by members of the group.
   @override
-  final Boolean? exclude;
+  final FhirBoolean? exclude;
 
   /// [excludeElement] Extensions for exclude
   @override
@@ -2087,12 +1904,12 @@ abstract class _GroupCharacteristic extends GroupCharacteristic {
       final List<FhirExtension>? modifierExtension,
       required final CodeableConcept code,
       final CodeableConcept? valueCodeableConcept,
-      final Boolean? valueBoolean,
+      final FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') final Element? valueBooleanElement,
       final Quantity? valueQuantity,
       final Range? valueRange,
       final Reference? valueReference,
-      final Boolean? exclude,
+      final FhirBoolean? exclude,
       @JsonKey(name: '_exclude') final Element? excludeElement,
       final Period? period}) = _$_GroupCharacteristic;
   _GroupCharacteristic._() : super._();
@@ -2144,7 +1961,7 @@ abstract class _GroupCharacteristic extends GroupCharacteristic {
 
   /// [valueBoolean] The value of the trait that holds (or does not hold - see
   ///  'exclude') for members of the group.
-  Boolean? get valueBoolean;
+  FhirBoolean? get valueBoolean;
   @override
 
   /// [valueBooleanElement] Extensions for valueBoolean
@@ -2169,7 +1986,7 @@ abstract class _GroupCharacteristic extends GroupCharacteristic {
 
   /// [exclude] If true, indicates the characteristic is one that is NOT held
   ///  by members of the group.
-  Boolean? get exclude;
+  FhirBoolean? get exclude;
   @override
 
   /// [excludeElement] Extensions for exclude
@@ -2231,7 +2048,7 @@ mixin _$GroupMember {
 
   /// [inactive] A flag to indicate that the member is no longer in the group,
   ///  but previously may have been a member.
-  Boolean? get inactive => throw _privateConstructorUsedError;
+  FhirBoolean? get inactive => throw _privateConstructorUsedError;
 
   /// [inactiveElement] Extensions for inactive
   @JsonKey(name: '_inactive')
@@ -2255,7 +2072,7 @@ abstract class $GroupMemberCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       Reference entity,
       Period? period,
-      Boolean? inactive,
+      FhirBoolean? inactive,
       @JsonKey(name: '_inactive') Element? inactiveElement});
 
   $ReferenceCopyWith<$Res> get entity;
@@ -2308,7 +2125,7 @@ class _$GroupMemberCopyWithImpl<$Res, $Val extends GroupMember>
       inactive: freezed == inactive
           ? _value.inactive
           : inactive // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       inactiveElement: freezed == inactiveElement
           ? _value.inactiveElement
           : inactiveElement // ignore: cast_nullable_to_non_nullable
@@ -2363,7 +2180,7 @@ abstract class _$$_GroupMemberCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       Reference entity,
       Period? period,
-      Boolean? inactive,
+      FhirBoolean? inactive,
       @JsonKey(name: '_inactive') Element? inactiveElement});
 
   @override
@@ -2417,7 +2234,7 @@ class __$$_GroupMemberCopyWithImpl<$Res>
       inactive: freezed == inactive
           ? _value.inactive
           : inactive // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       inactiveElement: freezed == inactiveElement
           ? _value.inactiveElement
           : inactiveElement // ignore: cast_nullable_to_non_nullable
@@ -2524,7 +2341,7 @@ class _$_GroupMember extends _GroupMember {
   /// [inactive] A flag to indicate that the member is no longer in the group,
   ///  but previously may have been a member.
   @override
-  final Boolean? inactive;
+  final FhirBoolean? inactive;
 
   /// [inactiveElement] Extensions for inactive
   @override
@@ -2587,7 +2404,7 @@ abstract class _GroupMember extends GroupMember {
           final List<FhirExtension>? modifierExtension,
           required final Reference entity,
           final Period? period,
-          final Boolean? inactive,
+          final FhirBoolean? inactive,
           @JsonKey(name: '_inactive') final Element? inactiveElement}) =
       _$_GroupMember;
   _GroupMember._() : super._();
@@ -2640,7 +2457,7 @@ abstract class _GroupMember extends GroupMember {
 
   /// [inactive] A flag to indicate that the member is no longer in the group,
   ///  but previously may have been a member.
-  Boolean? get inactive;
+  FhirBoolean? get inactive;
   @override
 
   /// [inactiveElement] Extensions for inactive
@@ -2659,39 +2476,32 @@ Patient _$PatientFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Patient {
   @JsonKey(unknownEnumValue: R4ResourceType.Patient)
-  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
-  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  @HiveField(2)
   FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
-  @HiveField(4)
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  @HiveField(5)
   FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
-  @HiveField(6)
   Element? get languageElement => throw _privateConstructorUsedError;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -2700,14 +2510,12 @@ mixin _$Patient {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
-  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
 
   /// [contained] These resources do not have an independent existence apart
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
-  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -2717,7 +2525,6 @@ mixin _$Patient {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
-  @HiveField(9)
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [modifierExtension] May be used to represent additional information that
@@ -2733,12 +2540,10 @@ mixin _$Patient {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
   /// [identifier] An identifier for this patient.
-  @HiveField(11)
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [active] Whether this patient record is in active use.
@@ -2748,115 +2553,91 @@ mixin _$Patient {
   /// It is often used to filter patient lists to exclude inactive patients
   /// Deceased patients may also be marked as inactive for the same reasons, but
   ///  may be active for some time after death.
-  @HiveField(12)
-  Boolean? get active => throw _privateConstructorUsedError;
+  FhirBoolean? get active => throw _privateConstructorUsedError;
 
   /// [activeElement] Extensions for active
   @JsonKey(name: '_active')
-  @HiveField(13)
   Element? get activeElement => throw _privateConstructorUsedError;
 
   /// [name] A name associated with the individual.
-  @HiveField(14)
   List<HumanName>? get name => throw _privateConstructorUsedError;
 
   /// [telecom] A contact detail (e.g. a telephone number or an email address)
   ///  by which the individual may be contacted.
-  @HiveField(15)
   List<ContactPoint>? get telecom => throw _privateConstructorUsedError;
 
   /// [gender] Administrative Gender - the gender that the patient is
   ///  considered to have for administration and record keeping purposes.
-  @HiveField(16)
   FhirCode? get gender => throw _privateConstructorUsedError;
 
   /// [genderElement] Extensions for gender
   @JsonKey(name: '_gender')
-  @HiveField(17)
   Element? get genderElement => throw _privateConstructorUsedError;
 
   /// [birthDate] The date of birth for the individual.
-  @HiveField(18)
-  Date? get birthDate => throw _privateConstructorUsedError;
+  FhirDate? get birthDate => throw _privateConstructorUsedError;
 
   /// [birthDateElement] Extensions for birthDate
   @JsonKey(name: '_birthDate')
-  @HiveField(19)
   Element? get birthDateElement => throw _privateConstructorUsedError;
 
   /// [deceasedBoolean] Indicates if the individual is deceased or not.
-  @HiveField(20)
-  Boolean? get deceasedBoolean => throw _privateConstructorUsedError;
+  FhirBoolean? get deceasedBoolean => throw _privateConstructorUsedError;
 
   /// [deceasedBooleanElement] Extensions for deceasedBoolean
   @JsonKey(name: '_deceasedBoolean')
-  @HiveField(21)
   Element? get deceasedBooleanElement => throw _privateConstructorUsedError;
 
   /// [deceasedDateTime] Indicates if the individual is deceased or not.
-  @HiveField(22)
   FhirDateTime? get deceasedDateTime => throw _privateConstructorUsedError;
 
   /// [deceasedDateTimeElement] Extensions for deceasedDateTime
   @JsonKey(name: '_deceasedDateTime')
-  @HiveField(23)
   Element? get deceasedDateTimeElement => throw _privateConstructorUsedError;
 
   /// [address] An address for the individual.
-  @HiveField(24)
   List<Address>? get address => throw _privateConstructorUsedError;
 
   /// [maritalStatus] This field contains a patient's most recent marital
   ///  (civil) status.
-  @HiveField(25)
   CodeableConcept? get maritalStatus => throw _privateConstructorUsedError;
 
   /// [multipleBirthBoolean] Indicates whether the patient is part of a
   ///  multiple (boolean) or indicates the actual birth order (integer).
-  @HiveField(26)
-  Boolean? get multipleBirthBoolean => throw _privateConstructorUsedError;
+  FhirBoolean? get multipleBirthBoolean => throw _privateConstructorUsedError;
   @JsonKey(name: '_multipleBirthBoolean')
-  @HiveField(27)
   Element? get multipleBirthBooleanElement =>
       throw _privateConstructorUsedError;
 
   /// [multipleBirthInteger] Indicates whether the patient is part of a
   ///  multiple (boolean) or indicates the actual birth order (integer).
-  @HiveField(28)
-  Integer? get multipleBirthInteger => throw _privateConstructorUsedError;
+  FhirInteger? get multipleBirthInteger => throw _privateConstructorUsedError;
   @JsonKey(name: '_multipleBirthInteger')
-  @HiveField(29)
   Element? get multipleBirthIntegerElement =>
       throw _privateConstructorUsedError;
 
   /// [photo] Image of the patient.
-  @HiveField(30)
   List<Attachment>? get photo => throw _privateConstructorUsedError;
 
   /// [contact] A contact party (e.g. guardian, partner, friend) for the
   ///  patient.
-  @HiveField(31)
   List<PatientContact>? get contact => throw _privateConstructorUsedError;
 
   /// [communication] A language which may be used to communicate with the
   ///  patient about his or her health.
-  @HiveField(32)
   List<PatientCommunication>? get communication =>
       throw _privateConstructorUsedError;
 
   /// [generalPractitioner] Patient's nominated care provider.
-  @HiveField(33)
   List<Reference>? get generalPractitioner =>
       throw _privateConstructorUsedError;
 
   /// [managingOrganization] Organization that is the custodian of the patient
   ///  record.
-  @HiveField(34)
   Reference? get managingOrganization => throw _privateConstructorUsedError;
 
   /// [link] Link to another patient resource that concerns the same actual
   ///  patient.
-  @HiveField(35)
   List<PatientLink>? get link => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -2871,88 +2652,52 @@ abstract class $PatientCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Patient)
-      @HiveField(0)
           R4ResourceType resourceType,
-      @HiveField(1)
-          String? id,
-      @HiveField(2)
-          FhirMeta? meta,
-      @HiveField(3)
-          FhirUri? implicitRules,
+      String? id,
+      FhirMeta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           Element? implicitRulesElement,
-      @HiveField(5)
-          FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           Element? languageElement,
-      @HiveField(7)
-          Narrative? text,
-      @HiveField(8)
-          List<Resource>? contained,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           List<FhirExtension>? extension_,
-      @HiveField(10)
-          List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          List<Identifier>? identifier,
-      @HiveField(12)
-          Boolean? active,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      FhirBoolean? active,
       @JsonKey(name: '_active')
-      @HiveField(13)
           Element? activeElement,
-      @HiveField(14)
-          List<HumanName>? name,
-      @HiveField(15)
-          List<ContactPoint>? telecom,
-      @HiveField(16)
-          FhirCode? gender,
+      List<HumanName>? name,
+      List<ContactPoint>? telecom,
+      FhirCode? gender,
       @JsonKey(name: '_gender')
-      @HiveField(17)
           Element? genderElement,
-      @HiveField(18)
-          Date? birthDate,
+      FhirDate? birthDate,
       @JsonKey(name: '_birthDate')
-      @HiveField(19)
           Element? birthDateElement,
-      @HiveField(20)
-          Boolean? deceasedBoolean,
+      FhirBoolean? deceasedBoolean,
       @JsonKey(name: '_deceasedBoolean')
-      @HiveField(21)
           Element? deceasedBooleanElement,
-      @HiveField(22)
-          FhirDateTime? deceasedDateTime,
+      FhirDateTime? deceasedDateTime,
       @JsonKey(name: '_deceasedDateTime')
-      @HiveField(23)
           Element? deceasedDateTimeElement,
-      @HiveField(24)
-          List<Address>? address,
-      @HiveField(25)
-          CodeableConcept? maritalStatus,
-      @HiveField(26)
-          Boolean? multipleBirthBoolean,
+      List<Address>? address,
+      CodeableConcept? maritalStatus,
+      FhirBoolean? multipleBirthBoolean,
       @JsonKey(name: '_multipleBirthBoolean')
-      @HiveField(27)
           Element? multipleBirthBooleanElement,
-      @HiveField(28)
-          Integer? multipleBirthInteger,
+      FhirInteger? multipleBirthInteger,
       @JsonKey(name: '_multipleBirthInteger')
-      @HiveField(29)
           Element? multipleBirthIntegerElement,
-      @HiveField(30)
-          List<Attachment>? photo,
-      @HiveField(31)
-          List<PatientContact>? contact,
-      @HiveField(32)
-          List<PatientCommunication>? communication,
-      @HiveField(33)
-          List<Reference>? generalPractitioner,
-      @HiveField(34)
-          Reference? managingOrganization,
-      @HiveField(35)
-          List<PatientLink>? link});
+      List<Attachment>? photo,
+      List<PatientContact>? contact,
+      List<PatientCommunication>? communication,
+      List<Reference>? generalPractitioner,
+      Reference? managingOrganization,
+      List<PatientLink>? link});
 
   $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -3043,7 +2788,7 @@ class _$PatientCopyWithImpl<$Res, $Val extends Patient>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -3071,7 +2816,7 @@ class _$PatientCopyWithImpl<$Res, $Val extends Patient>
       active: freezed == active
           ? _value.active
           : active // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       activeElement: freezed == activeElement
           ? _value.activeElement
           : activeElement // ignore: cast_nullable_to_non_nullable
@@ -3087,7 +2832,7 @@ class _$PatientCopyWithImpl<$Res, $Val extends Patient>
       gender: freezed == gender
           ? _value.gender
           : gender // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       genderElement: freezed == genderElement
           ? _value.genderElement
           : genderElement // ignore: cast_nullable_to_non_nullable
@@ -3095,7 +2840,7 @@ class _$PatientCopyWithImpl<$Res, $Val extends Patient>
       birthDate: freezed == birthDate
           ? _value.birthDate
           : birthDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       birthDateElement: freezed == birthDateElement
           ? _value.birthDateElement
           : birthDateElement // ignore: cast_nullable_to_non_nullable
@@ -3103,7 +2848,7 @@ class _$PatientCopyWithImpl<$Res, $Val extends Patient>
       deceasedBoolean: freezed == deceasedBoolean
           ? _value.deceasedBoolean
           : deceasedBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       deceasedBooleanElement: freezed == deceasedBooleanElement
           ? _value.deceasedBooleanElement
           : deceasedBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -3127,7 +2872,7 @@ class _$PatientCopyWithImpl<$Res, $Val extends Patient>
       multipleBirthBoolean: freezed == multipleBirthBoolean
           ? _value.multipleBirthBoolean
           : multipleBirthBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       multipleBirthBooleanElement: freezed == multipleBirthBooleanElement
           ? _value.multipleBirthBooleanElement
           : multipleBirthBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -3135,7 +2880,7 @@ class _$PatientCopyWithImpl<$Res, $Val extends Patient>
       multipleBirthInteger: freezed == multipleBirthInteger
           ? _value.multipleBirthInteger
           : multipleBirthInteger // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       multipleBirthIntegerElement: freezed == multipleBirthIntegerElement
           ? _value.multipleBirthIntegerElement
           : multipleBirthIntegerElement // ignore: cast_nullable_to_non_nullable
@@ -3333,88 +3078,52 @@ abstract class _$$_PatientCopyWith<$Res> implements $PatientCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Patient)
-      @HiveField(0)
           R4ResourceType resourceType,
-      @HiveField(1)
-          String? id,
-      @HiveField(2)
-          FhirMeta? meta,
-      @HiveField(3)
-          FhirUri? implicitRules,
+      String? id,
+      FhirMeta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           Element? implicitRulesElement,
-      @HiveField(5)
-          FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           Element? languageElement,
-      @HiveField(7)
-          Narrative? text,
-      @HiveField(8)
-          List<Resource>? contained,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           List<FhirExtension>? extension_,
-      @HiveField(10)
-          List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          List<Identifier>? identifier,
-      @HiveField(12)
-          Boolean? active,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      FhirBoolean? active,
       @JsonKey(name: '_active')
-      @HiveField(13)
           Element? activeElement,
-      @HiveField(14)
-          List<HumanName>? name,
-      @HiveField(15)
-          List<ContactPoint>? telecom,
-      @HiveField(16)
-          FhirCode? gender,
+      List<HumanName>? name,
+      List<ContactPoint>? telecom,
+      FhirCode? gender,
       @JsonKey(name: '_gender')
-      @HiveField(17)
           Element? genderElement,
-      @HiveField(18)
-          Date? birthDate,
+      FhirDate? birthDate,
       @JsonKey(name: '_birthDate')
-      @HiveField(19)
           Element? birthDateElement,
-      @HiveField(20)
-          Boolean? deceasedBoolean,
+      FhirBoolean? deceasedBoolean,
       @JsonKey(name: '_deceasedBoolean')
-      @HiveField(21)
           Element? deceasedBooleanElement,
-      @HiveField(22)
-          FhirDateTime? deceasedDateTime,
+      FhirDateTime? deceasedDateTime,
       @JsonKey(name: '_deceasedDateTime')
-      @HiveField(23)
           Element? deceasedDateTimeElement,
-      @HiveField(24)
-          List<Address>? address,
-      @HiveField(25)
-          CodeableConcept? maritalStatus,
-      @HiveField(26)
-          Boolean? multipleBirthBoolean,
+      List<Address>? address,
+      CodeableConcept? maritalStatus,
+      FhirBoolean? multipleBirthBoolean,
       @JsonKey(name: '_multipleBirthBoolean')
-      @HiveField(27)
           Element? multipleBirthBooleanElement,
-      @HiveField(28)
-          Integer? multipleBirthInteger,
+      FhirInteger? multipleBirthInteger,
       @JsonKey(name: '_multipleBirthInteger')
-      @HiveField(29)
           Element? multipleBirthIntegerElement,
-      @HiveField(30)
-          List<Attachment>? photo,
-      @HiveField(31)
-          List<PatientContact>? contact,
-      @HiveField(32)
-          List<PatientCommunication>? communication,
-      @HiveField(33)
-          List<Reference>? generalPractitioner,
-      @HiveField(34)
-          Reference? managingOrganization,
-      @HiveField(35)
-          List<PatientLink>? link});
+      List<Attachment>? photo,
+      List<PatientContact>? contact,
+      List<PatientCommunication>? communication,
+      List<Reference>? generalPractitioner,
+      Reference? managingOrganization,
+      List<PatientLink>? link});
 
   @override
   $FhirMetaCopyWith<$Res>? get meta;
@@ -3515,7 +3224,7 @@ class __$$_PatientCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -3543,7 +3252,7 @@ class __$$_PatientCopyWithImpl<$Res>
       active: freezed == active
           ? _value.active
           : active // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       activeElement: freezed == activeElement
           ? _value.activeElement
           : activeElement // ignore: cast_nullable_to_non_nullable
@@ -3559,7 +3268,7 @@ class __$$_PatientCopyWithImpl<$Res>
       gender: freezed == gender
           ? _value.gender
           : gender // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       genderElement: freezed == genderElement
           ? _value.genderElement
           : genderElement // ignore: cast_nullable_to_non_nullable
@@ -3567,7 +3276,7 @@ class __$$_PatientCopyWithImpl<$Res>
       birthDate: freezed == birthDate
           ? _value.birthDate
           : birthDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       birthDateElement: freezed == birthDateElement
           ? _value.birthDateElement
           : birthDateElement // ignore: cast_nullable_to_non_nullable
@@ -3575,7 +3284,7 @@ class __$$_PatientCopyWithImpl<$Res>
       deceasedBoolean: freezed == deceasedBoolean
           ? _value.deceasedBoolean
           : deceasedBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       deceasedBooleanElement: freezed == deceasedBooleanElement
           ? _value.deceasedBooleanElement
           : deceasedBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -3599,7 +3308,7 @@ class __$$_PatientCopyWithImpl<$Res>
       multipleBirthBoolean: freezed == multipleBirthBoolean
           ? _value.multipleBirthBoolean
           : multipleBirthBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       multipleBirthBooleanElement: freezed == multipleBirthBooleanElement
           ? _value.multipleBirthBooleanElement
           : multipleBirthBooleanElement // ignore: cast_nullable_to_non_nullable
@@ -3607,7 +3316,7 @@ class __$$_PatientCopyWithImpl<$Res>
       multipleBirthInteger: freezed == multipleBirthInteger
           ? _value.multipleBirthInteger
           : multipleBirthInteger // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       multipleBirthIntegerElement: freezed == multipleBirthIntegerElement
           ? _value.multipleBirthIntegerElement
           : multipleBirthIntegerElement // ignore: cast_nullable_to_non_nullable
@@ -3642,92 +3351,55 @@ class __$$_PatientCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@HiveType(typeId: 130)
 class _$_Patient extends _Patient {
   _$_Patient(
       {@JsonKey(unknownEnumValue: R4ResourceType.Patient)
-      @HiveField(0)
           this.resourceType = R4ResourceType.Patient,
-      @HiveField(1)
-          this.id,
-      @HiveField(2)
-          this.meta,
-      @HiveField(3)
-          this.implicitRules,
+      this.id,
+      this.meta,
+      this.implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           this.implicitRulesElement,
-      @HiveField(5)
-          this.language,
+      this.language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           this.languageElement,
-      @HiveField(7)
-          this.text,
-      @HiveField(8)
-          final List<Resource>? contained,
+      this.text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           final List<FhirExtension>? extension_,
-      @HiveField(10)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          final List<Identifier>? identifier,
-      @HiveField(12)
-          this.active,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      this.active,
       @JsonKey(name: '_active')
-      @HiveField(13)
           this.activeElement,
-      @HiveField(14)
-          final List<HumanName>? name,
-      @HiveField(15)
-          final List<ContactPoint>? telecom,
-      @HiveField(16)
-          this.gender,
+      final List<HumanName>? name,
+      final List<ContactPoint>? telecom,
+      this.gender,
       @JsonKey(name: '_gender')
-      @HiveField(17)
           this.genderElement,
-      @HiveField(18)
-          this.birthDate,
+      this.birthDate,
       @JsonKey(name: '_birthDate')
-      @HiveField(19)
           this.birthDateElement,
-      @HiveField(20)
-          this.deceasedBoolean,
+      this.deceasedBoolean,
       @JsonKey(name: '_deceasedBoolean')
-      @HiveField(21)
           this.deceasedBooleanElement,
-      @HiveField(22)
-          this.deceasedDateTime,
+      this.deceasedDateTime,
       @JsonKey(name: '_deceasedDateTime')
-      @HiveField(23)
           this.deceasedDateTimeElement,
-      @HiveField(24)
-          final List<Address>? address,
-      @HiveField(25)
-          this.maritalStatus,
-      @HiveField(26)
-          this.multipleBirthBoolean,
+      final List<Address>? address,
+      this.maritalStatus,
+      this.multipleBirthBoolean,
       @JsonKey(name: '_multipleBirthBoolean')
-      @HiveField(27)
           this.multipleBirthBooleanElement,
-      @HiveField(28)
-          this.multipleBirthInteger,
+      this.multipleBirthInteger,
       @JsonKey(name: '_multipleBirthInteger')
-      @HiveField(29)
           this.multipleBirthIntegerElement,
-      @HiveField(30)
-          final List<Attachment>? photo,
-      @HiveField(31)
-          final List<PatientContact>? contact,
-      @HiveField(32)
-          final List<PatientCommunication>? communication,
-      @HiveField(33)
-          final List<Reference>? generalPractitioner,
-      @HiveField(34)
-          this.managingOrganization,
-      @HiveField(35)
-          final List<PatientLink>? link})
+      final List<Attachment>? photo,
+      final List<PatientContact>? contact,
+      final List<PatientCommunication>? communication,
+      final List<Reference>? generalPractitioner,
+      this.managingOrganization,
+      final List<PatientLink>? link})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -3747,20 +3419,17 @@ class _$_Patient extends _Patient {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Patient)
-  @HiveField(0)
   final R4ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
   @override
-  @HiveField(1)
   final String? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
-  @HiveField(2)
   final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -3768,24 +3437,20 @@ class _$_Patient extends _Patient {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   @override
-  @HiveField(3)
   final FhirUri? implicitRules;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
-  @HiveField(4)
   final Element? implicitRulesElement;
 
   /// [language] The base language in which the resource is written.
   @override
-  @HiveField(5)
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] Extensions for language
   @override
   @JsonKey(name: '_language')
-  @HiveField(6)
   final Element? languageElement;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -3795,7 +3460,6 @@ class _$_Patient extends _Patient {
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
   @override
-  @HiveField(7)
   final Narrative? text;
 
   /// [contained] These resources do not have an independent existence apart
@@ -3809,7 +3473,6 @@ class _$_Patient extends _Patient {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   @override
-  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -3834,7 +3497,6 @@ class _$_Patient extends _Patient {
   ///  as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
-  @HiveField(9)
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
@@ -3872,7 +3534,6 @@ class _$_Patient extends _Patient {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   @override
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -3887,7 +3548,6 @@ class _$_Patient extends _Patient {
 
   /// [identifier] An identifier for this patient.
   @override
-  @HiveField(11)
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
@@ -3904,13 +3564,11 @@ class _$_Patient extends _Patient {
   /// Deceased patients may also be marked as inactive for the same reasons, but
   ///  may be active for some time after death.
   @override
-  @HiveField(12)
-  final Boolean? active;
+  final FhirBoolean? active;
 
   /// [activeElement] Extensions for active
   @override
   @JsonKey(name: '_active')
-  @HiveField(13)
   final Element? activeElement;
 
   /// [name] A name associated with the individual.
@@ -3918,7 +3576,6 @@ class _$_Patient extends _Patient {
 
   /// [name] A name associated with the individual.
   @override
-  @HiveField(14)
   List<HumanName>? get name {
     final value = _name;
     if (value == null) return null;
@@ -3934,7 +3591,6 @@ class _$_Patient extends _Patient {
   /// [telecom] A contact detail (e.g. a telephone number or an email address)
   ///  by which the individual may be contacted.
   @override
-  @HiveField(15)
   List<ContactPoint>? get telecom {
     final value = _telecom;
     if (value == null) return null;
@@ -3946,46 +3602,38 @@ class _$_Patient extends _Patient {
   /// [gender] Administrative Gender - the gender that the patient is
   ///  considered to have for administration and record keeping purposes.
   @override
-  @HiveField(16)
-  final Code? gender;
+  final FhirCode? gender;
 
   /// [genderElement] Extensions for gender
   @override
   @JsonKey(name: '_gender')
-  @HiveField(17)
   final Element? genderElement;
 
   /// [birthDate] The date of birth for the individual.
   @override
-  @HiveField(18)
-  final Date? birthDate;
+  final FhirDate? birthDate;
 
   /// [birthDateElement] Extensions for birthDate
   @override
   @JsonKey(name: '_birthDate')
-  @HiveField(19)
   final Element? birthDateElement;
 
   /// [deceasedBoolean] Indicates if the individual is deceased or not.
   @override
-  @HiveField(20)
-  final Boolean? deceasedBoolean;
+  final FhirBoolean? deceasedBoolean;
 
   /// [deceasedBooleanElement] Extensions for deceasedBoolean
   @override
   @JsonKey(name: '_deceasedBoolean')
-  @HiveField(21)
   final Element? deceasedBooleanElement;
 
   /// [deceasedDateTime] Indicates if the individual is deceased or not.
   @override
-  @HiveField(22)
   final FhirDateTime? deceasedDateTime;
 
   /// [deceasedDateTimeElement] Extensions for deceasedDateTime
   @override
   @JsonKey(name: '_deceasedDateTime')
-  @HiveField(23)
   final Element? deceasedDateTimeElement;
 
   /// [address] An address for the individual.
@@ -3993,7 +3641,6 @@ class _$_Patient extends _Patient {
 
   /// [address] An address for the individual.
   @override
-  @HiveField(24)
   List<Address>? get address {
     final value = _address;
     if (value == null) return null;
@@ -4005,27 +3652,22 @@ class _$_Patient extends _Patient {
   /// [maritalStatus] This field contains a patient's most recent marital
   ///  (civil) status.
   @override
-  @HiveField(25)
   final CodeableConcept? maritalStatus;
 
   /// [multipleBirthBoolean] Indicates whether the patient is part of a
   ///  multiple (boolean) or indicates the actual birth order (integer).
   @override
-  @HiveField(26)
-  final Boolean? multipleBirthBoolean;
+  final FhirBoolean? multipleBirthBoolean;
   @override
   @JsonKey(name: '_multipleBirthBoolean')
-  @HiveField(27)
   final Element? multipleBirthBooleanElement;
 
   /// [multipleBirthInteger] Indicates whether the patient is part of a
   ///  multiple (boolean) or indicates the actual birth order (integer).
   @override
-  @HiveField(28)
-  final Integer? multipleBirthInteger;
+  final FhirInteger? multipleBirthInteger;
   @override
   @JsonKey(name: '_multipleBirthInteger')
-  @HiveField(29)
   final Element? multipleBirthIntegerElement;
 
   /// [photo] Image of the patient.
@@ -4033,7 +3675,6 @@ class _$_Patient extends _Patient {
 
   /// [photo] Image of the patient.
   @override
-  @HiveField(30)
   List<Attachment>? get photo {
     final value = _photo;
     if (value == null) return null;
@@ -4049,7 +3690,6 @@ class _$_Patient extends _Patient {
   /// [contact] A contact party (e.g. guardian, partner, friend) for the
   ///  patient.
   @override
-  @HiveField(31)
   List<PatientContact>? get contact {
     final value = _contact;
     if (value == null) return null;
@@ -4065,7 +3705,6 @@ class _$_Patient extends _Patient {
   /// [communication] A language which may be used to communicate with the
   ///  patient about his or her health.
   @override
-  @HiveField(32)
   List<PatientCommunication>? get communication {
     final value = _communication;
     if (value == null) return null;
@@ -4079,7 +3718,6 @@ class _$_Patient extends _Patient {
 
   /// [generalPractitioner] Patient's nominated care provider.
   @override
-  @HiveField(33)
   List<Reference>? get generalPractitioner {
     final value = _generalPractitioner;
     if (value == null) return null;
@@ -4092,7 +3730,6 @@ class _$_Patient extends _Patient {
   /// [managingOrganization] Organization that is the custodian of the patient
   ///  record.
   @override
-  @HiveField(34)
   final Reference? managingOrganization;
 
   /// [link] Link to another patient resource that concerns the same actual
@@ -4102,7 +3739,6 @@ class _$_Patient extends _Patient {
   /// [link] Link to another patient resource that concerns the same actual
   ///  patient.
   @override
-  @HiveField(35)
   List<PatientLink>? get link {
     final value = _link;
     if (value == null) return null;
@@ -4248,108 +3884,69 @@ class _$_Patient extends _Patient {
 abstract class _Patient extends Patient {
   factory _Patient(
       {@JsonKey(unknownEnumValue: R4ResourceType.Patient)
-      @HiveField(0)
           final R4ResourceType resourceType,
-      @HiveField(1)
-          final String? id,
-      @HiveField(2)
-          final FhirMeta? meta,
-      @HiveField(3)
-          final FhirUri? implicitRules,
+      final String? id,
+      final FhirMeta? meta,
+      final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           final Element? implicitRulesElement,
-      @HiveField(5)
-          final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           final Element? languageElement,
-      @HiveField(7)
-          final Narrative? text,
-      @HiveField(8)
-          final List<Resource>? contained,
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           final List<FhirExtension>? extension_,
-      @HiveField(10)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          final List<Identifier>? identifier,
-      @HiveField(12)
-          final Boolean? active,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final FhirBoolean? active,
       @JsonKey(name: '_active')
-      @HiveField(13)
           final Element? activeElement,
-      @HiveField(14)
-          final List<HumanName>? name,
-      @HiveField(15)
-          final List<ContactPoint>? telecom,
-      @HiveField(16)
-          final Code? gender,
+      final List<HumanName>? name,
+      final List<ContactPoint>? telecom,
+      final FhirCode? gender,
       @JsonKey(name: '_gender')
-      @HiveField(17)
           final Element? genderElement,
-      @HiveField(18)
-          final Date? birthDate,
+      final FhirDate? birthDate,
       @JsonKey(name: '_birthDate')
-      @HiveField(19)
           final Element? birthDateElement,
-      @HiveField(20)
-          final Boolean? deceasedBoolean,
+      final FhirBoolean? deceasedBoolean,
       @JsonKey(name: '_deceasedBoolean')
-      @HiveField(21)
           final Element? deceasedBooleanElement,
-      @HiveField(22)
-          final FhirDateTime? deceasedDateTime,
+      final FhirDateTime? deceasedDateTime,
       @JsonKey(name: '_deceasedDateTime')
-      @HiveField(23)
           final Element? deceasedDateTimeElement,
-      @HiveField(24)
-          final List<Address>? address,
-      @HiveField(25)
-          final CodeableConcept? maritalStatus,
-      @HiveField(26)
-          final Boolean? multipleBirthBoolean,
+      final List<Address>? address,
+      final CodeableConcept? maritalStatus,
+      final FhirBoolean? multipleBirthBoolean,
       @JsonKey(name: '_multipleBirthBoolean')
-      @HiveField(27)
           final Element? multipleBirthBooleanElement,
-      @HiveField(28)
-          final Integer? multipleBirthInteger,
+      final FhirInteger? multipleBirthInteger,
       @JsonKey(name: '_multipleBirthInteger')
-      @HiveField(29)
           final Element? multipleBirthIntegerElement,
-      @HiveField(30)
-          final List<Attachment>? photo,
-      @HiveField(31)
-          final List<PatientContact>? contact,
-      @HiveField(32)
-          final List<PatientCommunication>? communication,
-      @HiveField(33)
-          final List<Reference>? generalPractitioner,
-      @HiveField(34)
-          final Reference? managingOrganization,
-      @HiveField(35)
-          final List<PatientLink>? link}) = _$_Patient;
+      final List<Attachment>? photo,
+      final List<PatientContact>? contact,
+      final List<PatientCommunication>? communication,
+      final List<Reference>? generalPractitioner,
+      final Reference? managingOrganization,
+      final List<PatientLink>? link}) = _$_Patient;
   _Patient._() : super._();
 
   factory _Patient.fromJson(Map<String, dynamic> json) = _$_Patient.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Patient)
-  @HiveField(0)
   R4ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
-  @HiveField(1)
   String? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  @HiveField(2)
   FhirMeta? get meta;
   @override
 
@@ -4357,24 +3954,20 @@ abstract class _Patient extends Patient {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  @HiveField(3)
   FhirUri? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
-  @HiveField(4)
   Element? get implicitRulesElement;
   @override
 
   /// [language] The base language in which the resource is written.
-  @HiveField(5)
   FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
-  @HiveField(6)
   Element? get languageElement;
   @override
 
@@ -4384,7 +3977,6 @@ abstract class _Patient extends Patient {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
-  @HiveField(7)
   Narrative? get text;
   @override
 
@@ -4392,7 +3984,6 @@ abstract class _Patient extends Patient {
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
-  @HiveField(8)
   List<Resource>? get contained;
   @override
 
@@ -4403,7 +3994,6 @@ abstract class _Patient extends Patient {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
-  @HiveField(9)
   List<FhirExtension>? get extension_;
   @override
 
@@ -4420,12 +4010,10 @@ abstract class _Patient extends Patient {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
 
   /// [identifier] An identifier for this patient.
-  @HiveField(11)
   List<Identifier>? get identifier;
   @override
 
@@ -4436,134 +4024,110 @@ abstract class _Patient extends Patient {
   /// It is often used to filter patient lists to exclude inactive patients
   /// Deceased patients may also be marked as inactive for the same reasons, but
   ///  may be active for some time after death.
-  @HiveField(12)
-  Boolean? get active;
+  FhirBoolean? get active;
   @override
 
   /// [activeElement] Extensions for active
   @JsonKey(name: '_active')
-  @HiveField(13)
   Element? get activeElement;
   @override
 
   /// [name] A name associated with the individual.
-  @HiveField(14)
   List<HumanName>? get name;
   @override
 
   /// [telecom] A contact detail (e.g. a telephone number or an email address)
   ///  by which the individual may be contacted.
-  @HiveField(15)
   List<ContactPoint>? get telecom;
   @override
 
   /// [gender] Administrative Gender - the gender that the patient is
   ///  considered to have for administration and record keeping purposes.
-  @HiveField(16)
   FhirCode? get gender;
   @override
 
   /// [genderElement] Extensions for gender
   @JsonKey(name: '_gender')
-  @HiveField(17)
   Element? get genderElement;
   @override
 
   /// [birthDate] The date of birth for the individual.
-  @HiveField(18)
-  Date? get birthDate;
+  FhirDate? get birthDate;
   @override
 
   /// [birthDateElement] Extensions for birthDate
   @JsonKey(name: '_birthDate')
-  @HiveField(19)
   Element? get birthDateElement;
   @override
 
   /// [deceasedBoolean] Indicates if the individual is deceased or not.
-  @HiveField(20)
-  Boolean? get deceasedBoolean;
+  FhirBoolean? get deceasedBoolean;
   @override
 
   /// [deceasedBooleanElement] Extensions for deceasedBoolean
   @JsonKey(name: '_deceasedBoolean')
-  @HiveField(21)
   Element? get deceasedBooleanElement;
   @override
 
   /// [deceasedDateTime] Indicates if the individual is deceased or not.
-  @HiveField(22)
   FhirDateTime? get deceasedDateTime;
   @override
 
   /// [deceasedDateTimeElement] Extensions for deceasedDateTime
   @JsonKey(name: '_deceasedDateTime')
-  @HiveField(23)
   Element? get deceasedDateTimeElement;
   @override
 
   /// [address] An address for the individual.
-  @HiveField(24)
   List<Address>? get address;
   @override
 
   /// [maritalStatus] This field contains a patient's most recent marital
   ///  (civil) status.
-  @HiveField(25)
   CodeableConcept? get maritalStatus;
   @override
 
   /// [multipleBirthBoolean] Indicates whether the patient is part of a
   ///  multiple (boolean) or indicates the actual birth order (integer).
-  @HiveField(26)
-  Boolean? get multipleBirthBoolean;
+  FhirBoolean? get multipleBirthBoolean;
   @override
   @JsonKey(name: '_multipleBirthBoolean')
-  @HiveField(27)
   Element? get multipleBirthBooleanElement;
   @override
 
   /// [multipleBirthInteger] Indicates whether the patient is part of a
   ///  multiple (boolean) or indicates the actual birth order (integer).
-  @HiveField(28)
-  Integer? get multipleBirthInteger;
+  FhirInteger? get multipleBirthInteger;
   @override
   @JsonKey(name: '_multipleBirthInteger')
-  @HiveField(29)
   Element? get multipleBirthIntegerElement;
   @override
 
   /// [photo] Image of the patient.
-  @HiveField(30)
   List<Attachment>? get photo;
   @override
 
   /// [contact] A contact party (e.g. guardian, partner, friend) for the
   ///  patient.
-  @HiveField(31)
   List<PatientContact>? get contact;
   @override
 
   /// [communication] A language which may be used to communicate with the
   ///  patient about his or her health.
-  @HiveField(32)
   List<PatientCommunication>? get communication;
   @override
 
   /// [generalPractitioner] Patient's nominated care provider.
-  @HiveField(33)
   List<Reference>? get generalPractitioner;
   @override
 
   /// [managingOrganization] Organization that is the custodian of the patient
   ///  record.
-  @HiveField(34)
   Reference? get managingOrganization;
   @override
 
   /// [link] Link to another patient resource that concerns the same actual
   ///  patient.
-  @HiveField(35)
   List<PatientLink>? get link;
   @override
   @JsonKey(ignore: true)
@@ -4725,7 +4289,7 @@ class _$PatientContactCopyWithImpl<$Res, $Val extends PatientContact>
       gender: freezed == gender
           ? _value.gender
           : gender // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       genderElement: freezed == genderElement
           ? _value.genderElement
           : genderElement // ignore: cast_nullable_to_non_nullable
@@ -4890,7 +4454,7 @@ class __$$_PatientContactCopyWithImpl<$Res>
       gender: freezed == gender
           ? _value.gender
           : gender // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       genderElement: freezed == genderElement
           ? _value.genderElement
           : genderElement // ignore: cast_nullable_to_non_nullable
@@ -5039,7 +4603,7 @@ class _$_PatientContact extends _PatientContact {
   /// [gender] Administrative Gender - the gender that the contact person is
   ///  considered to have for administration and record keeping purposes.
   @override
-  final Code? gender;
+  final FhirCode? gender;
 
   /// [genderElement] Extensions for gender
   @override
@@ -5123,7 +4687,7 @@ abstract class _PatientContact extends PatientContact {
       final HumanName? name,
       final List<ContactPoint>? telecom,
       final Address? address,
-      final Code? gender,
+      final FhirCode? gender,
       @JsonKey(name: '_gender') final Element? genderElement,
       final Reference? organization,
       final Period? period}) = _$_PatientContact;
@@ -5215,7 +4779,6 @@ PatientCommunication _$PatientCommunicationFromJson(Map<String, dynamic> json) {
 mixin _$PatientCommunication {
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
-  @HiveField(0)
   String? get id => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -5224,7 +4787,6 @@ mixin _$PatientCommunication {
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
-  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
@@ -5241,20 +4803,20 @@ mixin _$PatientCommunication {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
-  @HiveField(2)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  @HiveField(3)
-  @HiveField(4)
+
+  /// [language] The ISO-639-1 alpha 2 code in lower case for the language,
+  /// optionally followed by a hyphen and the ISO-3166-1 alpha 2 code for the
+  /// region in upper case; e.g. "en" for English, or "en-US" for American
+  ///  English versus "en-EN" for England English.
   CodeableConcept get language => throw _privateConstructorUsedError;
 
   /// [preferred] Indicates whether or not the patient prefers this language
   ///  (over other languages he masters up a certain level).
-  @HiveField(5)
-  Boolean? get preferred => throw _privateConstructorUsedError;
+  FhirBoolean? get preferred => throw _privateConstructorUsedError;
 
   /// [preferredElement] Extensions for preferred
-  @HiveField(6)
   @JsonKey(name: '_preferred')
   Element? get preferredElement => throw _privateConstructorUsedError;
 
@@ -5271,12 +4833,12 @@ abstract class $PatientCommunicationCopyWith<$Res> {
       _$PatientCommunicationCopyWithImpl<$Res, PatientCommunication>;
   @useResult
   $Res call(
-      {@HiveField(0) String? id,
-      @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      @HiveField(2) List<FhirExtension>? modifierExtension,
-      @HiveField(3) @HiveField(4) CodeableConcept language,
-      @HiveField(5) Boolean? preferred,
-      @HiveField(6) @JsonKey(name: '_preferred') Element? preferredElement});
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept language,
+      FhirBoolean? preferred,
+      @JsonKey(name: '_preferred') Element? preferredElement});
 
   $CodeableConceptCopyWith<$Res> get language;
   $ElementCopyWith<$Res>? get preferredElement;
@@ -5323,7 +4885,7 @@ class _$PatientCommunicationCopyWithImpl<$Res,
       preferred: freezed == preferred
           ? _value.preferred
           : preferred // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       preferredElement: freezed == preferredElement
           ? _value.preferredElement
           : preferredElement // ignore: cast_nullable_to_non_nullable
@@ -5361,12 +4923,12 @@ abstract class _$$_PatientCommunicationCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@HiveField(0) String? id,
-      @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      @HiveField(2) List<FhirExtension>? modifierExtension,
-      @HiveField(3) @HiveField(4) CodeableConcept language,
-      @HiveField(5) Boolean? preferred,
-      @HiveField(6) @JsonKey(name: '_preferred') Element? preferredElement});
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept language,
+      FhirBoolean? preferred,
+      @JsonKey(name: '_preferred') Element? preferredElement});
 
   @override
   $CodeableConceptCopyWith<$Res> get language;
@@ -5412,7 +4974,7 @@ class __$$_PatientCommunicationCopyWithImpl<$Res>
       preferred: freezed == preferred
           ? _value.preferred
           : preferred // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       preferredElement: freezed == preferredElement
           ? _value.preferredElement
           : preferredElement // ignore: cast_nullable_to_non_nullable
@@ -5423,24 +4985,14 @@ class __$$_PatientCommunicationCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@HiveType(typeId: 131)
 class _$_PatientCommunication extends _PatientCommunication {
   _$_PatientCommunication(
-      {@HiveField(0)
-          this.id,
-      @HiveField(1)
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      @HiveField(2)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(3)
-      @HiveField(4)
-          required this.language,
-      @HiveField(5)
-          this.preferred,
-      @HiveField(6)
-      @JsonKey(name: '_preferred')
-          this.preferredElement})
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      required this.language,
+      this.preferred,
+      @JsonKey(name: '_preferred') this.preferredElement})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
         super._();
@@ -5451,7 +5003,6 @@ class _$_PatientCommunication extends _PatientCommunication {
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   @override
-  @HiveField(0)
   final String? id;
 
   /// [extension_] May be used to represent additional information that is not
@@ -5469,7 +5020,6 @@ class _$_PatientCommunication extends _PatientCommunication {
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   @override
-  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
     final value = _extension_;
@@ -5508,7 +5058,6 @@ class _$_PatientCommunication extends _PatientCommunication {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   @override
-  @HiveField(2)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -5518,20 +5067,20 @@ class _$_PatientCommunication extends _PatientCommunication {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [language] The ISO-639-1 alpha 2 code in lower case for the language,
+  /// optionally followed by a hyphen and the ISO-3166-1 alpha 2 code for the
+  /// region in upper case; e.g. "en" for English, or "en-US" for American
+  ///  English versus "en-EN" for England English.
   @override
-  @HiveField(3)
-  @HiveField(4)
   final CodeableConcept language;
 
   /// [preferred] Indicates whether or not the patient prefers this language
   ///  (over other languages he masters up a certain level).
   @override
-  @HiveField(5)
-  final Boolean? preferred;
+  final FhirBoolean? preferred;
 
   /// [preferredElement] Extensions for preferred
   @override
-  @HiveField(6)
   @JsonKey(name: '_preferred')
   final Element? preferredElement;
 
@@ -5586,21 +5135,13 @@ class _$_PatientCommunication extends _PatientCommunication {
 
 abstract class _PatientCommunication extends PatientCommunication {
   factory _PatientCommunication(
-      {@HiveField(0)
-          final String? id,
-      @HiveField(1)
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      @HiveField(2)
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
-      @HiveField(3)
-      @HiveField(4)
           required final CodeableConcept language,
-      @HiveField(5)
-          final Boolean? preferred,
-      @HiveField(6)
-      @JsonKey(name: '_preferred')
-          final Element? preferredElement}) = _$_PatientCommunication;
+          final FhirBoolean? preferred,
+          @JsonKey(name: '_preferred') final Element? preferredElement}) =
+      _$_PatientCommunication;
   _PatientCommunication._() : super._();
 
   factory _PatientCommunication.fromJson(Map<String, dynamic> json) =
@@ -5610,7 +5151,6 @@ abstract class _PatientCommunication extends PatientCommunication {
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
-  @HiveField(0)
   String? get id;
   @override
 
@@ -5620,7 +5160,6 @@ abstract class _PatientCommunication extends PatientCommunication {
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
-  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
@@ -5638,22 +5177,22 @@ abstract class _PatientCommunication extends PatientCommunication {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
-  @HiveField(2)
   List<FhirExtension>? get modifierExtension;
   @override
-  @HiveField(3)
-  @HiveField(4)
+
+  /// [language] The ISO-639-1 alpha 2 code in lower case for the language,
+  /// optionally followed by a hyphen and the ISO-3166-1 alpha 2 code for the
+  /// region in upper case; e.g. "en" for English, or "en-US" for American
+  ///  English versus "en-EN" for England English.
   CodeableConcept get language;
   @override
 
   /// [preferred] Indicates whether or not the patient prefers this language
   ///  (over other languages he masters up a certain level).
-  @HiveField(5)
-  Boolean? get preferred;
+  FhirBoolean? get preferred;
   @override
 
   /// [preferredElement] Extensions for preferred
-  @HiveField(6)
   @JsonKey(name: '_preferred')
   Element? get preferredElement;
   @override
@@ -5772,7 +5311,7 @@ class _$PatientLinkCopyWithImpl<$Res, $Val extends PatientLink>
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       typeElement: freezed == typeElement
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -5861,7 +5400,7 @@ class __$$_PatientLinkCopyWithImpl<$Res>
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       typeElement: freezed == typeElement
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -5961,7 +5500,7 @@ class _$_PatientLink extends _PatientLink {
   /// [type] The type of link between this patient resource and another patient
   ///  resource.
   @override
-  final Code? type;
+  final FhirCode? type;
 
   /// [typeElement] Extensions for type
   @override
@@ -6020,7 +5559,7 @@ abstract class _PatientLink extends PatientLink {
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final Reference other,
-      final Code? type,
+      final FhirCode? type,
       @JsonKey(name: '_type') final Element? typeElement}) = _$_PatientLink;
   _PatientLink._() : super._();
 
@@ -6085,39 +5624,32 @@ Person _$PersonFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Person {
   @JsonKey(unknownEnumValue: R4ResourceType.Person)
-  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
-  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  @HiveField(2)
   FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
-  @HiveField(4)
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  @HiveField(5)
   FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
-  @HiveField(6)
   Element? get languageElement => throw _privateConstructorUsedError;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -6126,14 +5658,12 @@ mixin _$Person {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
-  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
 
   /// [contained] These resources do not have an independent existence apart
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
-  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -6143,7 +5673,6 @@ mixin _$Person {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
-  @HiveField(9)
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [modifierExtension] May be used to represent additional information that
@@ -6159,66 +5688,52 @@ mixin _$Person {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
   /// [identifier] Identifier for a person within a particular scope.
-  @HiveField(11)
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [name] A name associated with the person.
-  @HiveField(12)
   List<HumanName>? get name => throw _privateConstructorUsedError;
 
   /// [telecom] A contact detail for the person, e.g. a telephone number or an
   ///  email address.
-  @HiveField(13)
   List<ContactPoint>? get telecom => throw _privateConstructorUsedError;
 
   /// [gender] Administrative Gender.
-  @HiveField(14)
   FhirCode? get gender => throw _privateConstructorUsedError;
 
   /// [genderElement] Extensions for gender
   @JsonKey(name: '_gender')
-  @HiveField(15)
   Element? get genderElement => throw _privateConstructorUsedError;
 
   /// [birthDate] The birth date for the person.
-  @HiveField(16)
-  Date? get birthDate => throw _privateConstructorUsedError;
+  FhirDate? get birthDate => throw _privateConstructorUsedError;
 
   /// [birthDateElement] Extensions for birthDate
   @JsonKey(name: '_birthDate')
-  @HiveField(17)
   Element? get birthDateElement => throw _privateConstructorUsedError;
 
   /// [address] One or more addresses for the person.
-  @HiveField(18)
   List<Address>? get address => throw _privateConstructorUsedError;
 
   /// [photo] An image that can be displayed as a thumbnail of the person to
   ///  enhance the identification of the individual.
-  @HiveField(19)
   Attachment? get photo => throw _privateConstructorUsedError;
 
   /// [managingOrganization] The organization that is the custodian of the
   ///  person record.
-  @HiveField(20)
   Reference? get managingOrganization => throw _privateConstructorUsedError;
 
   /// [active] Whether this person's record is in active use.
-  @HiveField(21)
-  Boolean? get active => throw _privateConstructorUsedError;
+  FhirBoolean? get active => throw _privateConstructorUsedError;
 
   /// [activeElement] Extensions for active
   @JsonKey(name: '_active')
-  @HiveField(22)
   Element? get activeElement => throw _privateConstructorUsedError;
 
   /// [link] Link to a resource that concerns the same actual person.
-  @HiveField(23)
   List<PersonLink>? get link => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -6233,60 +5748,36 @@ abstract class $PersonCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Person)
-      @HiveField(0)
           R4ResourceType resourceType,
-      @HiveField(1)
-          String? id,
-      @HiveField(2)
-          FhirMeta? meta,
-      @HiveField(3)
-          FhirUri? implicitRules,
+      String? id,
+      FhirMeta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           Element? implicitRulesElement,
-      @HiveField(5)
-          FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           Element? languageElement,
-      @HiveField(7)
-          Narrative? text,
-      @HiveField(8)
-          List<Resource>? contained,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           List<FhirExtension>? extension_,
-      @HiveField(10)
-          List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          List<Identifier>? identifier,
-      @HiveField(12)
-          List<HumanName>? name,
-      @HiveField(13)
-          List<ContactPoint>? telecom,
-      @HiveField(14)
-          FhirCode? gender,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      List<HumanName>? name,
+      List<ContactPoint>? telecom,
+      FhirCode? gender,
       @JsonKey(name: '_gender')
-      @HiveField(15)
           Element? genderElement,
-      @HiveField(16)
-          Date? birthDate,
+      FhirDate? birthDate,
       @JsonKey(name: '_birthDate')
-      @HiveField(17)
           Element? birthDateElement,
-      @HiveField(18)
-          List<Address>? address,
-      @HiveField(19)
-          Attachment? photo,
-      @HiveField(20)
-          Reference? managingOrganization,
-      @HiveField(21)
-          Boolean? active,
+      List<Address>? address,
+      Attachment? photo,
+      Reference? managingOrganization,
+      FhirBoolean? active,
       @JsonKey(name: '_active')
-      @HiveField(22)
           Element? activeElement,
-      @HiveField(23)
-          List<PersonLink>? link});
+      List<PersonLink>? link});
 
   $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -6361,7 +5852,7 @@ class _$PersonCopyWithImpl<$Res, $Val extends Person>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -6397,7 +5888,7 @@ class _$PersonCopyWithImpl<$Res, $Val extends Person>
       gender: freezed == gender
           ? _value.gender
           : gender // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       genderElement: freezed == genderElement
           ? _value.genderElement
           : genderElement // ignore: cast_nullable_to_non_nullable
@@ -6405,7 +5896,7 @@ class _$PersonCopyWithImpl<$Res, $Val extends Person>
       birthDate: freezed == birthDate
           ? _value.birthDate
           : birthDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       birthDateElement: freezed == birthDateElement
           ? _value.birthDateElement
           : birthDateElement // ignore: cast_nullable_to_non_nullable
@@ -6425,7 +5916,7 @@ class _$PersonCopyWithImpl<$Res, $Val extends Person>
       active: freezed == active
           ? _value.active
           : active // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       activeElement: freezed == activeElement
           ? _value.activeElement
           : activeElement // ignore: cast_nullable_to_non_nullable
@@ -6554,60 +6045,36 @@ abstract class _$$_PersonCopyWith<$Res> implements $PersonCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Person)
-      @HiveField(0)
           R4ResourceType resourceType,
-      @HiveField(1)
-          String? id,
-      @HiveField(2)
-          FhirMeta? meta,
-      @HiveField(3)
-          FhirUri? implicitRules,
+      String? id,
+      FhirMeta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           Element? implicitRulesElement,
-      @HiveField(5)
-          FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           Element? languageElement,
-      @HiveField(7)
-          Narrative? text,
-      @HiveField(8)
-          List<Resource>? contained,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           List<FhirExtension>? extension_,
-      @HiveField(10)
-          List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          List<Identifier>? identifier,
-      @HiveField(12)
-          List<HumanName>? name,
-      @HiveField(13)
-          List<ContactPoint>? telecom,
-      @HiveField(14)
-          FhirCode? gender,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      List<HumanName>? name,
+      List<ContactPoint>? telecom,
+      FhirCode? gender,
       @JsonKey(name: '_gender')
-      @HiveField(15)
           Element? genderElement,
-      @HiveField(16)
-          Date? birthDate,
+      FhirDate? birthDate,
       @JsonKey(name: '_birthDate')
-      @HiveField(17)
           Element? birthDateElement,
-      @HiveField(18)
-          List<Address>? address,
-      @HiveField(19)
-          Attachment? photo,
-      @HiveField(20)
-          Reference? managingOrganization,
-      @HiveField(21)
-          Boolean? active,
+      List<Address>? address,
+      Attachment? photo,
+      Reference? managingOrganization,
+      FhirBoolean? active,
       @JsonKey(name: '_active')
-      @HiveField(22)
           Element? activeElement,
-      @HiveField(23)
-          List<PersonLink>? link});
+      List<PersonLink>? link});
 
   @override
   $FhirMetaCopyWith<$Res>? get meta;
@@ -6688,7 +6155,7 @@ class __$$_PersonCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -6724,7 +6191,7 @@ class __$$_PersonCopyWithImpl<$Res>
       gender: freezed == gender
           ? _value.gender
           : gender // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       genderElement: freezed == genderElement
           ? _value.genderElement
           : genderElement // ignore: cast_nullable_to_non_nullable
@@ -6732,7 +6199,7 @@ class __$$_PersonCopyWithImpl<$Res>
       birthDate: freezed == birthDate
           ? _value.birthDate
           : birthDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       birthDateElement: freezed == birthDateElement
           ? _value.birthDateElement
           : birthDateElement // ignore: cast_nullable_to_non_nullable
@@ -6752,7 +6219,7 @@ class __$$_PersonCopyWithImpl<$Res>
       active: freezed == active
           ? _value.active
           : active // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       activeElement: freezed == activeElement
           ? _value.activeElement
           : activeElement // ignore: cast_nullable_to_non_nullable
@@ -6767,64 +6234,39 @@ class __$$_PersonCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@HiveType(typeId: 132)
 class _$_Person extends _Person {
   _$_Person(
       {@JsonKey(unknownEnumValue: R4ResourceType.Person)
-      @HiveField(0)
           this.resourceType = R4ResourceType.Person,
-      @HiveField(1)
-          this.id,
-      @HiveField(2)
-          this.meta,
-      @HiveField(3)
-          this.implicitRules,
+      this.id,
+      this.meta,
+      this.implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           this.implicitRulesElement,
-      @HiveField(5)
-          this.language,
+      this.language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           this.languageElement,
-      @HiveField(7)
-          this.text,
-      @HiveField(8)
-          final List<Resource>? contained,
+      this.text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           final List<FhirExtension>? extension_,
-      @HiveField(10)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          final List<Identifier>? identifier,
-      @HiveField(12)
-          final List<HumanName>? name,
-      @HiveField(13)
-          final List<ContactPoint>? telecom,
-      @HiveField(14)
-          this.gender,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final List<HumanName>? name,
+      final List<ContactPoint>? telecom,
+      this.gender,
       @JsonKey(name: '_gender')
-      @HiveField(15)
           this.genderElement,
-      @HiveField(16)
-          this.birthDate,
+      this.birthDate,
       @JsonKey(name: '_birthDate')
-      @HiveField(17)
           this.birthDateElement,
-      @HiveField(18)
-          final List<Address>? address,
-      @HiveField(19)
-          this.photo,
-      @HiveField(20)
-          this.managingOrganization,
-      @HiveField(21)
-          this.active,
+      final List<Address>? address,
+      this.photo,
+      this.managingOrganization,
+      this.active,
       @JsonKey(name: '_active')
-      @HiveField(22)
           this.activeElement,
-      @HiveField(23)
-          final List<PersonLink>? link})
+      final List<PersonLink>? link})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -6840,20 +6282,17 @@ class _$_Person extends _Person {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Person)
-  @HiveField(0)
   final R4ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
   @override
-  @HiveField(1)
   final String? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
-  @HiveField(2)
   final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -6861,24 +6300,20 @@ class _$_Person extends _Person {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   @override
-  @HiveField(3)
   final FhirUri? implicitRules;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
-  @HiveField(4)
   final Element? implicitRulesElement;
 
   /// [language] The base language in which the resource is written.
   @override
-  @HiveField(5)
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] Extensions for language
   @override
   @JsonKey(name: '_language')
-  @HiveField(6)
   final Element? languageElement;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -6888,7 +6323,6 @@ class _$_Person extends _Person {
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
   @override
-  @HiveField(7)
   final Narrative? text;
 
   /// [contained] These resources do not have an independent existence apart
@@ -6902,7 +6336,6 @@ class _$_Person extends _Person {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   @override
-  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -6927,7 +6360,6 @@ class _$_Person extends _Person {
   ///  as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
-  @HiveField(9)
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
@@ -6965,7 +6397,6 @@ class _$_Person extends _Person {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   @override
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -6980,7 +6411,6 @@ class _$_Person extends _Person {
 
   /// [identifier] Identifier for a person within a particular scope.
   @override
-  @HiveField(11)
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
@@ -6994,7 +6424,6 @@ class _$_Person extends _Person {
 
   /// [name] A name associated with the person.
   @override
-  @HiveField(12)
   List<HumanName>? get name {
     final value = _name;
     if (value == null) return null;
@@ -7010,7 +6439,6 @@ class _$_Person extends _Person {
   /// [telecom] A contact detail for the person, e.g. a telephone number or an
   ///  email address.
   @override
-  @HiveField(13)
   List<ContactPoint>? get telecom {
     final value = _telecom;
     if (value == null) return null;
@@ -7021,24 +6449,20 @@ class _$_Person extends _Person {
 
   /// [gender] Administrative Gender.
   @override
-  @HiveField(14)
-  final Code? gender;
+  final FhirCode? gender;
 
   /// [genderElement] Extensions for gender
   @override
   @JsonKey(name: '_gender')
-  @HiveField(15)
   final Element? genderElement;
 
   /// [birthDate] The birth date for the person.
   @override
-  @HiveField(16)
-  final Date? birthDate;
+  final FhirDate? birthDate;
 
   /// [birthDateElement] Extensions for birthDate
   @override
   @JsonKey(name: '_birthDate')
-  @HiveField(17)
   final Element? birthDateElement;
 
   /// [address] One or more addresses for the person.
@@ -7046,7 +6470,6 @@ class _$_Person extends _Person {
 
   /// [address] One or more addresses for the person.
   @override
-  @HiveField(18)
   List<Address>? get address {
     final value = _address;
     if (value == null) return null;
@@ -7058,24 +6481,20 @@ class _$_Person extends _Person {
   /// [photo] An image that can be displayed as a thumbnail of the person to
   ///  enhance the identification of the individual.
   @override
-  @HiveField(19)
   final Attachment? photo;
 
   /// [managingOrganization] The organization that is the custodian of the
   ///  person record.
   @override
-  @HiveField(20)
   final Reference? managingOrganization;
 
   /// [active] Whether this person's record is in active use.
   @override
-  @HiveField(21)
-  final Boolean? active;
+  final FhirBoolean? active;
 
   /// [activeElement] Extensions for active
   @override
   @JsonKey(name: '_active')
-  @HiveField(22)
   final Element? activeElement;
 
   /// [link] Link to a resource that concerns the same actual person.
@@ -7083,7 +6502,6 @@ class _$_Person extends _Person {
 
   /// [link] Link to a resource that concerns the same actual person.
   @override
-  @HiveField(23)
   List<PersonLink>? get link {
     final value = _link;
     if (value == null) return null;
@@ -7189,80 +6607,53 @@ class _$_Person extends _Person {
 abstract class _Person extends Person {
   factory _Person(
       {@JsonKey(unknownEnumValue: R4ResourceType.Person)
-      @HiveField(0)
           final R4ResourceType resourceType,
-      @HiveField(1)
-          final String? id,
-      @HiveField(2)
-          final FhirMeta? meta,
-      @HiveField(3)
-          final FhirUri? implicitRules,
+      final String? id,
+      final FhirMeta? meta,
+      final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           final Element? implicitRulesElement,
-      @HiveField(5)
-          final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           final Element? languageElement,
-      @HiveField(7)
-          final Narrative? text,
-      @HiveField(8)
-          final List<Resource>? contained,
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           final List<FhirExtension>? extension_,
-      @HiveField(10)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          final List<Identifier>? identifier,
-      @HiveField(12)
-          final List<HumanName>? name,
-      @HiveField(13)
-          final List<ContactPoint>? telecom,
-      @HiveField(14)
-          final Code? gender,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final List<HumanName>? name,
+      final List<ContactPoint>? telecom,
+      final FhirCode? gender,
       @JsonKey(name: '_gender')
-      @HiveField(15)
           final Element? genderElement,
-      @HiveField(16)
-          final Date? birthDate,
+      final FhirDate? birthDate,
       @JsonKey(name: '_birthDate')
-      @HiveField(17)
           final Element? birthDateElement,
-      @HiveField(18)
-          final List<Address>? address,
-      @HiveField(19)
-          final Attachment? photo,
-      @HiveField(20)
-          final Reference? managingOrganization,
-      @HiveField(21)
-          final Boolean? active,
+      final List<Address>? address,
+      final Attachment? photo,
+      final Reference? managingOrganization,
+      final FhirBoolean? active,
       @JsonKey(name: '_active')
-      @HiveField(22)
           final Element? activeElement,
-      @HiveField(23)
-          final List<PersonLink>? link}) = _$_Person;
+      final List<PersonLink>? link}) = _$_Person;
   _Person._() : super._();
 
   factory _Person.fromJson(Map<String, dynamic> json) = _$_Person.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Person)
-  @HiveField(0)
   R4ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
-  @HiveField(1)
   String? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  @HiveField(2)
   FhirMeta? get meta;
   @override
 
@@ -7270,24 +6661,20 @@ abstract class _Person extends Person {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  @HiveField(3)
   FhirUri? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
-  @HiveField(4)
   Element? get implicitRulesElement;
   @override
 
   /// [language] The base language in which the resource is written.
-  @HiveField(5)
   FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
-  @HiveField(6)
   Element? get languageElement;
   @override
 
@@ -7297,7 +6684,6 @@ abstract class _Person extends Person {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
-  @HiveField(7)
   Narrative? get text;
   @override
 
@@ -7305,7 +6691,6 @@ abstract class _Person extends Person {
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
-  @HiveField(8)
   List<Resource>? get contained;
   @override
 
@@ -7316,7 +6701,6 @@ abstract class _Person extends Person {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
-  @HiveField(9)
   List<FhirExtension>? get extension_;
   @override
 
@@ -7333,78 +6717,64 @@ abstract class _Person extends Person {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
 
   /// [identifier] Identifier for a person within a particular scope.
-  @HiveField(11)
   List<Identifier>? get identifier;
   @override
 
   /// [name] A name associated with the person.
-  @HiveField(12)
   List<HumanName>? get name;
   @override
 
   /// [telecom] A contact detail for the person, e.g. a telephone number or an
   ///  email address.
-  @HiveField(13)
   List<ContactPoint>? get telecom;
   @override
 
   /// [gender] Administrative Gender.
-  @HiveField(14)
   FhirCode? get gender;
   @override
 
   /// [genderElement] Extensions for gender
   @JsonKey(name: '_gender')
-  @HiveField(15)
   Element? get genderElement;
   @override
 
   /// [birthDate] The birth date for the person.
-  @HiveField(16)
-  Date? get birthDate;
+  FhirDate? get birthDate;
   @override
 
   /// [birthDateElement] Extensions for birthDate
   @JsonKey(name: '_birthDate')
-  @HiveField(17)
   Element? get birthDateElement;
   @override
 
   /// [address] One or more addresses for the person.
-  @HiveField(18)
   List<Address>? get address;
   @override
 
   /// [photo] An image that can be displayed as a thumbnail of the person to
   ///  enhance the identification of the individual.
-  @HiveField(19)
   Attachment? get photo;
   @override
 
   /// [managingOrganization] The organization that is the custodian of the
   ///  person record.
-  @HiveField(20)
   Reference? get managingOrganization;
   @override
 
   /// [active] Whether this person's record is in active use.
-  @HiveField(21)
-  Boolean? get active;
+  FhirBoolean? get active;
   @override
 
   /// [activeElement] Extensions for active
   @JsonKey(name: '_active')
-  @HiveField(22)
   Element? get activeElement;
   @override
 
   /// [link] Link to a resource that concerns the same actual person.
-  @HiveField(23)
   List<PersonLink>? get link;
   @override
   @JsonKey(ignore: true)
@@ -7522,7 +6892,7 @@ class _$PersonLinkCopyWithImpl<$Res, $Val extends PersonLink>
       assurance: freezed == assurance
           ? _value.assurance
           : assurance // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       assuranceElement: freezed == assuranceElement
           ? _value.assuranceElement
           : assuranceElement // ignore: cast_nullable_to_non_nullable
@@ -7611,7 +6981,7 @@ class __$$_PersonLinkCopyWithImpl<$Res>
       assurance: freezed == assurance
           ? _value.assurance
           : assurance // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       assuranceElement: freezed == assuranceElement
           ? _value.assuranceElement
           : assuranceElement // ignore: cast_nullable_to_non_nullable
@@ -7711,7 +7081,7 @@ class _$_PersonLink extends _PersonLink {
   /// [assurance] Level of assurance that this link is associated with the
   ///  target resource.
   @override
-  final Code? assurance;
+  final FhirCode? assurance;
 
   /// [assuranceElement] Extensions for assurance
   @override
@@ -7771,7 +7141,7 @@ abstract class _PersonLink extends PersonLink {
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           required final Reference target,
-          final Code? assurance,
+          final FhirCode? assurance,
           @JsonKey(name: '_assurance') final Element? assuranceElement}) =
       _$_PersonLink;
   _PersonLink._() : super._();
@@ -7837,39 +7207,32 @@ Practitioner _$PractitionerFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Practitioner {
   @JsonKey(unknownEnumValue: R4ResourceType.Practitioner)
-  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
-  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  @HiveField(2)
   FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
-  @HiveField(4)
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  @HiveField(5)
   FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
-  @HiveField(6)
   Element? get languageElement => throw _privateConstructorUsedError;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -7878,14 +7241,12 @@ mixin _$Practitioner {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
-  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
 
   /// [contained] These resources do not have an independent existence apart
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
-  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -7895,7 +7256,6 @@ mixin _$Practitioner {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
-  @HiveField(9)
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [modifierExtension] May be used to represent additional information that
@@ -7911,60 +7271,48 @@ mixin _$Practitioner {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
   /// [identifier] An identifier that applies to this person in this role.
-  @HiveField(11)
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [active] Whether this practitioner's record is in active use.
-  @HiveField(12)
-  Boolean? get active => throw _privateConstructorUsedError;
+  FhirBoolean? get active => throw _privateConstructorUsedError;
 
   /// [activeElement] Extensions for active
   @JsonKey(name: '_active')
-  @HiveField(13)
   Element? get activeElement => throw _privateConstructorUsedError;
 
   /// [name] The name(s) associated with the practitioner.
-  @HiveField(14)
   List<HumanName>? get name => throw _privateConstructorUsedError;
 
   /// [telecom] A contact detail for the practitioner, e.g. a telephone number
   ///  or an email address.
-  @HiveField(15)
   List<ContactPoint>? get telecom => throw _privateConstructorUsedError;
 
   /// [address] Address(es) of the practitioner that are not role specific
   ///  (typically home address).
   /// Work addresses are not typically entered in this property as they are
   ///  usually role dependent.
-  @HiveField(16)
   List<Address>? get address => throw _privateConstructorUsedError;
 
   /// [gender] Administrative Gender - the gender that the person is considered
   ///  to have for administration and record keeping purposes.
-  @HiveField(17)
   FhirCode? get gender => throw _privateConstructorUsedError;
 
   /// [genderElement] Extensions for gender
   @JsonKey(name: '_gender')
-  @HiveField(18)
   Element? get genderElement => throw _privateConstructorUsedError;
 
   /// [birthDate] The date of birth for the practitioner.
-  @HiveField(19)
-  Date? get birthDate => throw _privateConstructorUsedError;
+  FhirDate? get birthDate => throw _privateConstructorUsedError;
 
   /// [birthDateElement] Extensions for birthDate
   @JsonKey(name: '_birthDate')
-  @HiveField(20)
   Element? get birthDateElement => throw _privateConstructorUsedError;
 
   /// [photo] Image of the person.
-  @HiveField(21)
   List<Attachment>? get photo => throw _privateConstructorUsedError;
 
   /// [qualification] The official certifications, training, and licenses that
@@ -7972,13 +7320,11 @@ mixin _$Practitioner {
   /// practitioner.  For example, a medical license issued by a medical board
   /// authorizing the practitioner to practice medicine within a certian
   ///  locality.
-  @HiveField(22)
   List<PractitionerQualification>? get qualification =>
       throw _privateConstructorUsedError;
 
   /// [communication] A language the practitioner can use in patient
   ///  communication.
-  @HiveField(23)
   List<CodeableConcept>? get communication =>
       throw _privateConstructorUsedError;
 
@@ -7996,60 +7342,36 @@ abstract class $PractitionerCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Practitioner)
-      @HiveField(0)
           R4ResourceType resourceType,
-      @HiveField(1)
-          String? id,
-      @HiveField(2)
-          FhirMeta? meta,
-      @HiveField(3)
-          FhirUri? implicitRules,
+      String? id,
+      FhirMeta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           Element? implicitRulesElement,
-      @HiveField(5)
-          FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           Element? languageElement,
-      @HiveField(7)
-          Narrative? text,
-      @HiveField(8)
-          List<Resource>? contained,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           List<FhirExtension>? extension_,
-      @HiveField(10)
-          List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          List<Identifier>? identifier,
-      @HiveField(12)
-          Boolean? active,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      FhirBoolean? active,
       @JsonKey(name: '_active')
-      @HiveField(13)
           Element? activeElement,
-      @HiveField(14)
-          List<HumanName>? name,
-      @HiveField(15)
-          List<ContactPoint>? telecom,
-      @HiveField(16)
-          List<Address>? address,
-      @HiveField(17)
-          FhirCode? gender,
+      List<HumanName>? name,
+      List<ContactPoint>? telecom,
+      List<Address>? address,
+      FhirCode? gender,
       @JsonKey(name: '_gender')
-      @HiveField(18)
           Element? genderElement,
-      @HiveField(19)
-          Date? birthDate,
+      FhirDate? birthDate,
       @JsonKey(name: '_birthDate')
-      @HiveField(20)
           Element? birthDateElement,
-      @HiveField(21)
-          List<Attachment>? photo,
-      @HiveField(22)
-          List<PractitionerQualification>? qualification,
-      @HiveField(23)
-          List<CodeableConcept>? communication});
+      List<Attachment>? photo,
+      List<PractitionerQualification>? qualification,
+      List<CodeableConcept>? communication});
 
   $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -8122,7 +7444,7 @@ class _$PractitionerCopyWithImpl<$Res, $Val extends Practitioner>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -8150,7 +7472,7 @@ class _$PractitionerCopyWithImpl<$Res, $Val extends Practitioner>
       active: freezed == active
           ? _value.active
           : active // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       activeElement: freezed == activeElement
           ? _value.activeElement
           : activeElement // ignore: cast_nullable_to_non_nullable
@@ -8170,7 +7492,7 @@ class _$PractitionerCopyWithImpl<$Res, $Val extends Practitioner>
       gender: freezed == gender
           ? _value.gender
           : gender // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       genderElement: freezed == genderElement
           ? _value.genderElement
           : genderElement // ignore: cast_nullable_to_non_nullable
@@ -8178,7 +7500,7 @@ class _$PractitionerCopyWithImpl<$Res, $Val extends Practitioner>
       birthDate: freezed == birthDate
           ? _value.birthDate
           : birthDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       birthDateElement: freezed == birthDateElement
           ? _value.birthDateElement
           : birthDateElement // ignore: cast_nullable_to_non_nullable
@@ -8293,60 +7615,36 @@ abstract class _$$_PractitionerCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Practitioner)
-      @HiveField(0)
           R4ResourceType resourceType,
-      @HiveField(1)
-          String? id,
-      @HiveField(2)
-          FhirMeta? meta,
-      @HiveField(3)
-          FhirUri? implicitRules,
+      String? id,
+      FhirMeta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           Element? implicitRulesElement,
-      @HiveField(5)
-          FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           Element? languageElement,
-      @HiveField(7)
-          Narrative? text,
-      @HiveField(8)
-          List<Resource>? contained,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           List<FhirExtension>? extension_,
-      @HiveField(10)
-          List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          List<Identifier>? identifier,
-      @HiveField(12)
-          Boolean? active,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      FhirBoolean? active,
       @JsonKey(name: '_active')
-      @HiveField(13)
           Element? activeElement,
-      @HiveField(14)
-          List<HumanName>? name,
-      @HiveField(15)
-          List<ContactPoint>? telecom,
-      @HiveField(16)
-          List<Address>? address,
-      @HiveField(17)
-          FhirCode? gender,
+      List<HumanName>? name,
+      List<ContactPoint>? telecom,
+      List<Address>? address,
+      FhirCode? gender,
       @JsonKey(name: '_gender')
-      @HiveField(18)
           Element? genderElement,
-      @HiveField(19)
-          Date? birthDate,
+      FhirDate? birthDate,
       @JsonKey(name: '_birthDate')
-      @HiveField(20)
           Element? birthDateElement,
-      @HiveField(21)
-          List<Attachment>? photo,
-      @HiveField(22)
-          List<PractitionerQualification>? qualification,
-      @HiveField(23)
-          List<CodeableConcept>? communication});
+      List<Attachment>? photo,
+      List<PractitionerQualification>? qualification,
+      List<CodeableConcept>? communication});
 
   @override
   $FhirMetaCopyWith<$Res>? get meta;
@@ -8424,7 +7722,7 @@ class __$$_PractitionerCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -8452,7 +7750,7 @@ class __$$_PractitionerCopyWithImpl<$Res>
       active: freezed == active
           ? _value.active
           : active // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       activeElement: freezed == activeElement
           ? _value.activeElement
           : activeElement // ignore: cast_nullable_to_non_nullable
@@ -8472,7 +7770,7 @@ class __$$_PractitionerCopyWithImpl<$Res>
       gender: freezed == gender
           ? _value.gender
           : gender // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       genderElement: freezed == genderElement
           ? _value.genderElement
           : genderElement // ignore: cast_nullable_to_non_nullable
@@ -8480,7 +7778,7 @@ class __$$_PractitionerCopyWithImpl<$Res>
       birthDate: freezed == birthDate
           ? _value.birthDate
           : birthDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       birthDateElement: freezed == birthDateElement
           ? _value.birthDateElement
           : birthDateElement // ignore: cast_nullable_to_non_nullable
@@ -8503,64 +7801,39 @@ class __$$_PractitionerCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@HiveType(typeId: 133)
 class _$_Practitioner extends _Practitioner {
   _$_Practitioner(
       {@JsonKey(unknownEnumValue: R4ResourceType.Practitioner)
-      @HiveField(0)
           this.resourceType = R4ResourceType.Practitioner,
-      @HiveField(1)
-          this.id,
-      @HiveField(2)
-          this.meta,
-      @HiveField(3)
-          this.implicitRules,
+      this.id,
+      this.meta,
+      this.implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           this.implicitRulesElement,
-      @HiveField(5)
-          this.language,
+      this.language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           this.languageElement,
-      @HiveField(7)
-          this.text,
-      @HiveField(8)
-          final List<Resource>? contained,
+      this.text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           final List<FhirExtension>? extension_,
-      @HiveField(10)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          final List<Identifier>? identifier,
-      @HiveField(12)
-          this.active,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      this.active,
       @JsonKey(name: '_active')
-      @HiveField(13)
           this.activeElement,
-      @HiveField(14)
-          final List<HumanName>? name,
-      @HiveField(15)
-          final List<ContactPoint>? telecom,
-      @HiveField(16)
-          final List<Address>? address,
-      @HiveField(17)
-          this.gender,
+      final List<HumanName>? name,
+      final List<ContactPoint>? telecom,
+      final List<Address>? address,
+      this.gender,
       @JsonKey(name: '_gender')
-      @HiveField(18)
           this.genderElement,
-      @HiveField(19)
-          this.birthDate,
+      this.birthDate,
       @JsonKey(name: '_birthDate')
-      @HiveField(20)
           this.birthDateElement,
-      @HiveField(21)
-          final List<Attachment>? photo,
-      @HiveField(22)
-          final List<PractitionerQualification>? qualification,
-      @HiveField(23)
-          final List<CodeableConcept>? communication})
+      final List<Attachment>? photo,
+      final List<PractitionerQualification>? qualification,
+      final List<CodeableConcept>? communication})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -8578,20 +7851,17 @@ class _$_Practitioner extends _Practitioner {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Practitioner)
-  @HiveField(0)
   final R4ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
   @override
-  @HiveField(1)
   final String? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
-  @HiveField(2)
   final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -8599,24 +7869,20 @@ class _$_Practitioner extends _Practitioner {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   @override
-  @HiveField(3)
   final FhirUri? implicitRules;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
-  @HiveField(4)
   final Element? implicitRulesElement;
 
   /// [language] The base language in which the resource is written.
   @override
-  @HiveField(5)
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] Extensions for language
   @override
   @JsonKey(name: '_language')
-  @HiveField(6)
   final Element? languageElement;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -8626,7 +7892,6 @@ class _$_Practitioner extends _Practitioner {
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
   @override
-  @HiveField(7)
   final Narrative? text;
 
   /// [contained] These resources do not have an independent existence apart
@@ -8640,7 +7905,6 @@ class _$_Practitioner extends _Practitioner {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   @override
-  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -8665,7 +7929,6 @@ class _$_Practitioner extends _Practitioner {
   ///  as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
-  @HiveField(9)
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
@@ -8703,7 +7966,6 @@ class _$_Practitioner extends _Practitioner {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   @override
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -8718,7 +7980,6 @@ class _$_Practitioner extends _Practitioner {
 
   /// [identifier] An identifier that applies to this person in this role.
   @override
-  @HiveField(11)
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
@@ -8729,13 +7990,11 @@ class _$_Practitioner extends _Practitioner {
 
   /// [active] Whether this practitioner's record is in active use.
   @override
-  @HiveField(12)
-  final Boolean? active;
+  final FhirBoolean? active;
 
   /// [activeElement] Extensions for active
   @override
   @JsonKey(name: '_active')
-  @HiveField(13)
   final Element? activeElement;
 
   /// [name] The name(s) associated with the practitioner.
@@ -8743,7 +8002,6 @@ class _$_Practitioner extends _Practitioner {
 
   /// [name] The name(s) associated with the practitioner.
   @override
-  @HiveField(14)
   List<HumanName>? get name {
     final value = _name;
     if (value == null) return null;
@@ -8759,7 +8017,6 @@ class _$_Practitioner extends _Practitioner {
   /// [telecom] A contact detail for the practitioner, e.g. a telephone number
   ///  or an email address.
   @override
-  @HiveField(15)
   List<ContactPoint>? get telecom {
     final value = _telecom;
     if (value == null) return null;
@@ -8779,7 +8036,6 @@ class _$_Practitioner extends _Practitioner {
   /// Work addresses are not typically entered in this property as they are
   ///  usually role dependent.
   @override
-  @HiveField(16)
   List<Address>? get address {
     final value = _address;
     if (value == null) return null;
@@ -8791,24 +8047,20 @@ class _$_Practitioner extends _Practitioner {
   /// [gender] Administrative Gender - the gender that the person is considered
   ///  to have for administration and record keeping purposes.
   @override
-  @HiveField(17)
-  final Code? gender;
+  final FhirCode? gender;
 
   /// [genderElement] Extensions for gender
   @override
   @JsonKey(name: '_gender')
-  @HiveField(18)
   final Element? genderElement;
 
   /// [birthDate] The date of birth for the practitioner.
   @override
-  @HiveField(19)
-  final Date? birthDate;
+  final FhirDate? birthDate;
 
   /// [birthDateElement] Extensions for birthDate
   @override
   @JsonKey(name: '_birthDate')
-  @HiveField(20)
   final Element? birthDateElement;
 
   /// [photo] Image of the person.
@@ -8816,7 +8068,6 @@ class _$_Practitioner extends _Practitioner {
 
   /// [photo] Image of the person.
   @override
-  @HiveField(21)
   List<Attachment>? get photo {
     final value = _photo;
     if (value == null) return null;
@@ -8838,7 +8089,6 @@ class _$_Practitioner extends _Practitioner {
   /// authorizing the practitioner to practice medicine within a certian
   ///  locality.
   @override
-  @HiveField(22)
   List<PractitionerQualification>? get qualification {
     final value = _qualification;
     if (value == null) return null;
@@ -8854,7 +8104,6 @@ class _$_Practitioner extends _Practitioner {
   /// [communication] A language the practitioner can use in patient
   ///  communication.
   @override
-  @HiveField(23)
   List<CodeableConcept>? get communication {
     final value = _communication;
     if (value == null) return null;
@@ -8961,60 +8210,36 @@ class _$_Practitioner extends _Practitioner {
 abstract class _Practitioner extends Practitioner {
   factory _Practitioner(
       {@JsonKey(unknownEnumValue: R4ResourceType.Practitioner)
-      @HiveField(0)
           final R4ResourceType resourceType,
-      @HiveField(1)
-          final String? id,
-      @HiveField(2)
-          final FhirMeta? meta,
-      @HiveField(3)
-          final FhirUri? implicitRules,
+      final String? id,
+      final FhirMeta? meta,
+      final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           final Element? implicitRulesElement,
-      @HiveField(5)
-          final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           final Element? languageElement,
-      @HiveField(7)
-          final Narrative? text,
-      @HiveField(8)
-          final List<Resource>? contained,
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           final List<FhirExtension>? extension_,
-      @HiveField(10)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          final List<Identifier>? identifier,
-      @HiveField(12)
-          final Boolean? active,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final FhirBoolean? active,
       @JsonKey(name: '_active')
-      @HiveField(13)
           final Element? activeElement,
-      @HiveField(14)
-          final List<HumanName>? name,
-      @HiveField(15)
-          final List<ContactPoint>? telecom,
-      @HiveField(16)
-          final List<Address>? address,
-      @HiveField(17)
-          final Code? gender,
+      final List<HumanName>? name,
+      final List<ContactPoint>? telecom,
+      final List<Address>? address,
+      final FhirCode? gender,
       @JsonKey(name: '_gender')
-      @HiveField(18)
           final Element? genderElement,
-      @HiveField(19)
-          final Date? birthDate,
+      final FhirDate? birthDate,
       @JsonKey(name: '_birthDate')
-      @HiveField(20)
           final Element? birthDateElement,
-      @HiveField(21)
-          final List<Attachment>? photo,
-      @HiveField(22)
-          final List<PractitionerQualification>? qualification,
-      @HiveField(23)
-          final List<CodeableConcept>? communication}) = _$_Practitioner;
+      final List<Attachment>? photo,
+      final List<PractitionerQualification>? qualification,
+      final List<CodeableConcept>? communication}) = _$_Practitioner;
   _Practitioner._() : super._();
 
   factory _Practitioner.fromJson(Map<String, dynamic> json) =
@@ -9022,20 +8247,17 @@ abstract class _Practitioner extends Practitioner {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Practitioner)
-  @HiveField(0)
   R4ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
-  @HiveField(1)
   String? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  @HiveField(2)
   FhirMeta? get meta;
   @override
 
@@ -9043,24 +8265,20 @@ abstract class _Practitioner extends Practitioner {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  @HiveField(3)
   FhirUri? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
-  @HiveField(4)
   Element? get implicitRulesElement;
   @override
 
   /// [language] The base language in which the resource is written.
-  @HiveField(5)
   FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
-  @HiveField(6)
   Element? get languageElement;
   @override
 
@@ -9070,7 +8288,6 @@ abstract class _Practitioner extends Practitioner {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
-  @HiveField(7)
   Narrative? get text;
   @override
 
@@ -9078,7 +8295,6 @@ abstract class _Practitioner extends Practitioner {
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
-  @HiveField(8)
   List<Resource>? get contained;
   @override
 
@@ -9089,7 +8305,6 @@ abstract class _Practitioner extends Practitioner {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
-  @HiveField(9)
   List<FhirExtension>? get extension_;
   @override
 
@@ -9106,34 +8321,28 @@ abstract class _Practitioner extends Practitioner {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
 
   /// [identifier] An identifier that applies to this person in this role.
-  @HiveField(11)
   List<Identifier>? get identifier;
   @override
 
   /// [active] Whether this practitioner's record is in active use.
-  @HiveField(12)
-  Boolean? get active;
+  FhirBoolean? get active;
   @override
 
   /// [activeElement] Extensions for active
   @JsonKey(name: '_active')
-  @HiveField(13)
   Element? get activeElement;
   @override
 
   /// [name] The name(s) associated with the practitioner.
-  @HiveField(14)
   List<HumanName>? get name;
   @override
 
   /// [telecom] A contact detail for the practitioner, e.g. a telephone number
   ///  or an email address.
-  @HiveField(15)
   List<ContactPoint>? get telecom;
   @override
 
@@ -9141,35 +8350,29 @@ abstract class _Practitioner extends Practitioner {
   ///  (typically home address).
   /// Work addresses are not typically entered in this property as they are
   ///  usually role dependent.
-  @HiveField(16)
   List<Address>? get address;
   @override
 
   /// [gender] Administrative Gender - the gender that the person is considered
   ///  to have for administration and record keeping purposes.
-  @HiveField(17)
   FhirCode? get gender;
   @override
 
   /// [genderElement] Extensions for gender
   @JsonKey(name: '_gender')
-  @HiveField(18)
   Element? get genderElement;
   @override
 
   /// [birthDate] The date of birth for the practitioner.
-  @HiveField(19)
-  Date? get birthDate;
+  FhirDate? get birthDate;
   @override
 
   /// [birthDateElement] Extensions for birthDate
   @JsonKey(name: '_birthDate')
-  @HiveField(20)
   Element? get birthDateElement;
   @override
 
   /// [photo] Image of the person.
-  @HiveField(21)
   List<Attachment>? get photo;
   @override
 
@@ -9178,13 +8381,11 @@ abstract class _Practitioner extends Practitioner {
   /// practitioner.  For example, a medical license issued by a medical board
   /// authorizing the practitioner to practice medicine within a certian
   ///  locality.
-  @HiveField(22)
   List<PractitionerQualification>? get qualification;
   @override
 
   /// [communication] A language the practitioner can use in patient
   ///  communication.
-  @HiveField(23)
   List<CodeableConcept>? get communication;
   @override
   @JsonKey(ignore: true)
@@ -9671,39 +8872,32 @@ PractitionerRole _$PractitionerRoleFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$PractitionerRole {
   @JsonKey(unknownEnumValue: R4ResourceType.PractitionerRole)
-  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
-  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  @HiveField(2)
   FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
-  @HiveField(4)
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  @HiveField(5)
   FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
-  @HiveField(6)
   Element? get languageElement => throw _privateConstructorUsedError;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -9712,14 +8906,12 @@ mixin _$PractitionerRole {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
-  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
 
   /// [contained] These resources do not have an independent existence apart
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
-  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -9729,7 +8921,6 @@ mixin _$PractitionerRole {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
-  @HiveField(9)
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [modifierExtension] May be used to represent additional information that
@@ -9745,82 +8936,69 @@ mixin _$PractitionerRole {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
   /// [identifier] Business Identifiers that are specific to a role/location.
-  @HiveField(11)
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [active] Whether this practitioner role record is in active use.
-  @HiveField(12)
-  Boolean? get active => throw _privateConstructorUsedError;
+  FhirBoolean? get active => throw _privateConstructorUsedError;
 
   /// [activeElement] Extensions for active
   @JsonKey(name: '_active')
-  @HiveField(13)
   Element? get activeElement => throw _privateConstructorUsedError;
 
   /// [period] The period during which the person is authorized to act as a
   ///  practitioner in these role(s) for the organization.
-  @HiveField(14)
   Period? get period => throw _privateConstructorUsedError;
 
   /// [practitioner] Practitioner that is able to provide the defined services
   ///  for the organization.
-  @HiveField(15)
   Reference? get practitioner => throw _privateConstructorUsedError;
 
   /// [organization] The organization where the Practitioner performs the roles
   ///  associated.
-  @HiveField(16)
   Reference? get organization => throw _privateConstructorUsedError;
 
   /// [code] Roles which this practitioner is authorized to perform for the
   ///  organization.
-  @HiveField(17)
   List<CodeableConcept>? get code => throw _privateConstructorUsedError;
 
   /// [specialty] Specific specialty of the practitioner.
-  @HiveField(18)
   List<CodeableConcept>? get specialty => throw _privateConstructorUsedError;
 
   /// [location] The location(s) at which this practitioner provides care.
-  @HiveField(19)
   List<Reference>? get location => throw _privateConstructorUsedError;
 
   /// [healthcareService] The list of healthcare services that this worker
   ///  provides for this role's Organization/Location(s).
-  @HiveField(20)
   List<Reference>? get healthcareService => throw _privateConstructorUsedError;
 
   /// [telecom] Contact details that are specific to the role/location/service.
-  @HiveField(21)
   List<ContactPoint>? get telecom => throw _privateConstructorUsedError;
 
   /// [availableTime] A collection of times the practitioner is available or
   ///  performing this role at the location and/or healthcareservice.
-  @HiveField(22)
   List<PractitionerRoleAvailableTime>? get availableTime =>
       throw _privateConstructorUsedError;
 
   /// [notAvailable] The practitioner is not available or performing this role
   ///  during this period of time due to the provided reason.
-  @HiveField(23)
   List<PractitionerRoleNotAvailable>? get notAvailable =>
       throw _privateConstructorUsedError;
-  @HiveField(24)
-  @HiveField(25)
+
+  /// [availabilityExceptions] A description of site availability exceptions,
+  /// e.g. public holiday availability. Succinctly describing all possible
+  /// exceptions to normal site availability as details in the available Times
+  ///  and not available Times.
   String? get availabilityExceptions => throw _privateConstructorUsedError;
   @JsonKey(name: '_availabilityExceptions')
-  @HiveField(26)
   Element? get availabilityExceptionsElement =>
       throw _privateConstructorUsedError;
 
   /// [endpoint] Technical endpoints providing access to services operated for
   ///  the practitioner with this role.
-  @HiveField(27)
   List<Reference>? get endpoint => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -9837,66 +9015,38 @@ abstract class $PractitionerRoleCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.PractitionerRole)
-      @HiveField(0)
           R4ResourceType resourceType,
-      @HiveField(1)
-          String? id,
-      @HiveField(2)
-          FhirMeta? meta,
-      @HiveField(3)
-          FhirUri? implicitRules,
+      String? id,
+      FhirMeta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           Element? implicitRulesElement,
-      @HiveField(5)
-          FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           Element? languageElement,
-      @HiveField(7)
-          Narrative? text,
-      @HiveField(8)
-          List<Resource>? contained,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           List<FhirExtension>? extension_,
-      @HiveField(10)
-          List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          List<Identifier>? identifier,
-      @HiveField(12)
-          Boolean? active,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      FhirBoolean? active,
       @JsonKey(name: '_active')
-      @HiveField(13)
           Element? activeElement,
-      @HiveField(14)
-          Period? period,
-      @HiveField(15)
-          Reference? practitioner,
-      @HiveField(16)
-          Reference? organization,
-      @HiveField(17)
-          List<CodeableConcept>? code,
-      @HiveField(18)
-          List<CodeableConcept>? specialty,
-      @HiveField(19)
-          List<Reference>? location,
-      @HiveField(20)
-          List<Reference>? healthcareService,
-      @HiveField(21)
-          List<ContactPoint>? telecom,
-      @HiveField(22)
-          List<PractitionerRoleAvailableTime>? availableTime,
-      @HiveField(23)
-          List<PractitionerRoleNotAvailable>? notAvailable,
-      @HiveField(24)
-      @HiveField(25)
-          String? availabilityExceptions,
+      Period? period,
+      Reference? practitioner,
+      Reference? organization,
+      List<CodeableConcept>? code,
+      List<CodeableConcept>? specialty,
+      List<Reference>? location,
+      List<Reference>? healthcareService,
+      List<ContactPoint>? telecom,
+      List<PractitionerRoleAvailableTime>? availableTime,
+      List<PractitionerRoleNotAvailable>? notAvailable,
+      String? availabilityExceptions,
       @JsonKey(name: '_availabilityExceptions')
-      @HiveField(26)
           Element? availabilityExceptionsElement,
-      @HiveField(27)
-          List<Reference>? endpoint});
+      List<Reference>? endpoint});
 
   $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -9974,7 +9124,7 @@ class _$PractitionerRoleCopyWithImpl<$Res, $Val extends PractitionerRole>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -10002,7 +9152,7 @@ class _$PractitionerRoleCopyWithImpl<$Res, $Val extends PractitionerRole>
       active: freezed == active
           ? _value.active
           : active // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       activeElement: freezed == activeElement
           ? _value.activeElement
           : activeElement // ignore: cast_nullable_to_non_nullable
@@ -10183,66 +9333,38 @@ abstract class _$$_PractitionerRoleCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.PractitionerRole)
-      @HiveField(0)
           R4ResourceType resourceType,
-      @HiveField(1)
-          String? id,
-      @HiveField(2)
-          FhirMeta? meta,
-      @HiveField(3)
-          FhirUri? implicitRules,
+      String? id,
+      FhirMeta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           Element? implicitRulesElement,
-      @HiveField(5)
-          FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           Element? languageElement,
-      @HiveField(7)
-          Narrative? text,
-      @HiveField(8)
-          List<Resource>? contained,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           List<FhirExtension>? extension_,
-      @HiveField(10)
-          List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          List<Identifier>? identifier,
-      @HiveField(12)
-          Boolean? active,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      FhirBoolean? active,
       @JsonKey(name: '_active')
-      @HiveField(13)
           Element? activeElement,
-      @HiveField(14)
-          Period? period,
-      @HiveField(15)
-          Reference? practitioner,
-      @HiveField(16)
-          Reference? organization,
-      @HiveField(17)
-          List<CodeableConcept>? code,
-      @HiveField(18)
-          List<CodeableConcept>? specialty,
-      @HiveField(19)
-          List<Reference>? location,
-      @HiveField(20)
-          List<Reference>? healthcareService,
-      @HiveField(21)
-          List<ContactPoint>? telecom,
-      @HiveField(22)
-          List<PractitionerRoleAvailableTime>? availableTime,
-      @HiveField(23)
-          List<PractitionerRoleNotAvailable>? notAvailable,
-      @HiveField(24)
-      @HiveField(25)
-          String? availabilityExceptions,
+      Period? period,
+      Reference? practitioner,
+      Reference? organization,
+      List<CodeableConcept>? code,
+      List<CodeableConcept>? specialty,
+      List<Reference>? location,
+      List<Reference>? healthcareService,
+      List<ContactPoint>? telecom,
+      List<PractitionerRoleAvailableTime>? availableTime,
+      List<PractitionerRoleNotAvailable>? notAvailable,
+      String? availabilityExceptions,
       @JsonKey(name: '_availabilityExceptions')
-      @HiveField(26)
           Element? availabilityExceptionsElement,
-      @HiveField(27)
-          List<Reference>? endpoint});
+      List<Reference>? endpoint});
 
   @override
   $FhirMetaCopyWith<$Res>? get meta;
@@ -10327,7 +9449,7 @@ class __$$_PractitionerRoleCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -10355,7 +9477,7 @@ class __$$_PractitionerRoleCopyWithImpl<$Res>
       active: freezed == active
           ? _value.active
           : active // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       activeElement: freezed == activeElement
           ? _value.activeElement
           : activeElement // ignore: cast_nullable_to_non_nullable
@@ -10418,70 +9540,41 @@ class __$$_PractitionerRoleCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@HiveType(typeId: 134)
 class _$_PractitionerRole extends _PractitionerRole {
   _$_PractitionerRole(
       {@JsonKey(unknownEnumValue: R4ResourceType.PractitionerRole)
-      @HiveField(0)
           this.resourceType = R4ResourceType.PractitionerRole,
-      @HiveField(1)
-          this.id,
-      @HiveField(2)
-          this.meta,
-      @HiveField(3)
-          this.implicitRules,
+      this.id,
+      this.meta,
+      this.implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           this.implicitRulesElement,
-      @HiveField(5)
-          this.language,
+      this.language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           this.languageElement,
-      @HiveField(7)
-          this.text,
-      @HiveField(8)
-          final List<Resource>? contained,
+      this.text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           final List<FhirExtension>? extension_,
-      @HiveField(10)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          final List<Identifier>? identifier,
-      @HiveField(12)
-          this.active,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      this.active,
       @JsonKey(name: '_active')
-      @HiveField(13)
           this.activeElement,
-      @HiveField(14)
-          this.period,
-      @HiveField(15)
-          this.practitioner,
-      @HiveField(16)
-          this.organization,
-      @HiveField(17)
-          final List<CodeableConcept>? code,
-      @HiveField(18)
-          final List<CodeableConcept>? specialty,
-      @HiveField(19)
-          final List<Reference>? location,
-      @HiveField(20)
-          final List<Reference>? healthcareService,
-      @HiveField(21)
-          final List<ContactPoint>? telecom,
-      @HiveField(22)
-          final List<PractitionerRoleAvailableTime>? availableTime,
-      @HiveField(23)
-          final List<PractitionerRoleNotAvailable>? notAvailable,
-      @HiveField(24)
-      @HiveField(25)
-          this.availabilityExceptions,
+      this.period,
+      this.practitioner,
+      this.organization,
+      final List<CodeableConcept>? code,
+      final List<CodeableConcept>? specialty,
+      final List<Reference>? location,
+      final List<Reference>? healthcareService,
+      final List<ContactPoint>? telecom,
+      final List<PractitionerRoleAvailableTime>? availableTime,
+      final List<PractitionerRoleNotAvailable>? notAvailable,
+      this.availabilityExceptions,
       @JsonKey(name: '_availabilityExceptions')
-      @HiveField(26)
           this.availabilityExceptionsElement,
-      @HiveField(27)
-          final List<Reference>? endpoint})
+      final List<Reference>? endpoint})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -10501,20 +9594,17 @@ class _$_PractitionerRole extends _PractitionerRole {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.PractitionerRole)
-  @HiveField(0)
   final R4ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
   @override
-  @HiveField(1)
   final String? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
-  @HiveField(2)
   final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -10522,24 +9612,20 @@ class _$_PractitionerRole extends _PractitionerRole {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   @override
-  @HiveField(3)
   final FhirUri? implicitRules;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
-  @HiveField(4)
   final Element? implicitRulesElement;
 
   /// [language] The base language in which the resource is written.
   @override
-  @HiveField(5)
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] Extensions for language
   @override
   @JsonKey(name: '_language')
-  @HiveField(6)
   final Element? languageElement;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -10549,7 +9635,6 @@ class _$_PractitionerRole extends _PractitionerRole {
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
   @override
-  @HiveField(7)
   final Narrative? text;
 
   /// [contained] These resources do not have an independent existence apart
@@ -10563,7 +9648,6 @@ class _$_PractitionerRole extends _PractitionerRole {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   @override
-  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -10588,7 +9672,6 @@ class _$_PractitionerRole extends _PractitionerRole {
   ///  as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
-  @HiveField(9)
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
@@ -10626,7 +9709,6 @@ class _$_PractitionerRole extends _PractitionerRole {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   @override
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -10641,7 +9723,6 @@ class _$_PractitionerRole extends _PractitionerRole {
 
   /// [identifier] Business Identifiers that are specific to a role/location.
   @override
-  @HiveField(11)
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
@@ -10652,31 +9733,26 @@ class _$_PractitionerRole extends _PractitionerRole {
 
   /// [active] Whether this practitioner role record is in active use.
   @override
-  @HiveField(12)
-  final Boolean? active;
+  final FhirBoolean? active;
 
   /// [activeElement] Extensions for active
   @override
   @JsonKey(name: '_active')
-  @HiveField(13)
   final Element? activeElement;
 
   /// [period] The period during which the person is authorized to act as a
   ///  practitioner in these role(s) for the organization.
   @override
-  @HiveField(14)
   final Period? period;
 
   /// [practitioner] Practitioner that is able to provide the defined services
   ///  for the organization.
   @override
-  @HiveField(15)
   final Reference? practitioner;
 
   /// [organization] The organization where the Practitioner performs the roles
   ///  associated.
   @override
-  @HiveField(16)
   final Reference? organization;
 
   /// [code] Roles which this practitioner is authorized to perform for the
@@ -10686,7 +9762,6 @@ class _$_PractitionerRole extends _PractitionerRole {
   /// [code] Roles which this practitioner is authorized to perform for the
   ///  organization.
   @override
-  @HiveField(17)
   List<CodeableConcept>? get code {
     final value = _code;
     if (value == null) return null;
@@ -10700,7 +9775,6 @@ class _$_PractitionerRole extends _PractitionerRole {
 
   /// [specialty] Specific specialty of the practitioner.
   @override
-  @HiveField(18)
   List<CodeableConcept>? get specialty {
     final value = _specialty;
     if (value == null) return null;
@@ -10714,7 +9788,6 @@ class _$_PractitionerRole extends _PractitionerRole {
 
   /// [location] The location(s) at which this practitioner provides care.
   @override
-  @HiveField(19)
   List<Reference>? get location {
     final value = _location;
     if (value == null) return null;
@@ -10730,7 +9803,6 @@ class _$_PractitionerRole extends _PractitionerRole {
   /// [healthcareService] The list of healthcare services that this worker
   ///  provides for this role's Organization/Location(s).
   @override
-  @HiveField(20)
   List<Reference>? get healthcareService {
     final value = _healthcareService;
     if (value == null) return null;
@@ -10745,7 +9817,6 @@ class _$_PractitionerRole extends _PractitionerRole {
 
   /// [telecom] Contact details that are specific to the role/location/service.
   @override
-  @HiveField(21)
   List<ContactPoint>? get telecom {
     final value = _telecom;
     if (value == null) return null;
@@ -10761,7 +9832,6 @@ class _$_PractitionerRole extends _PractitionerRole {
   /// [availableTime] A collection of times the practitioner is available or
   ///  performing this role at the location and/or healthcareservice.
   @override
-  @HiveField(22)
   List<PractitionerRoleAvailableTime>? get availableTime {
     final value = _availableTime;
     if (value == null) return null;
@@ -10777,7 +9847,6 @@ class _$_PractitionerRole extends _PractitionerRole {
   /// [notAvailable] The practitioner is not available or performing this role
   ///  during this period of time due to the provided reason.
   @override
-  @HiveField(23)
   List<PractitionerRoleNotAvailable>? get notAvailable {
     final value = _notAvailable;
     if (value == null) return null;
@@ -10786,13 +9855,14 @@ class _$_PractitionerRole extends _PractitionerRole {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [availabilityExceptions] A description of site availability exceptions,
+  /// e.g. public holiday availability. Succinctly describing all possible
+  /// exceptions to normal site availability as details in the available Times
+  ///  and not available Times.
   @override
-  @HiveField(24)
-  @HiveField(25)
   final String? availabilityExceptions;
   @override
   @JsonKey(name: '_availabilityExceptions')
-  @HiveField(26)
   final Element? availabilityExceptionsElement;
 
   /// [endpoint] Technical endpoints providing access to services operated for
@@ -10802,7 +9872,6 @@ class _$_PractitionerRole extends _PractitionerRole {
   /// [endpoint] Technical endpoints providing access to services operated for
   ///  the practitioner with this role.
   @override
-  @HiveField(27)
   List<Reference>? get endpoint {
     final value = _endpoint;
     if (value == null) return null;
@@ -10920,66 +9989,38 @@ class _$_PractitionerRole extends _PractitionerRole {
 abstract class _PractitionerRole extends PractitionerRole {
   factory _PractitionerRole(
       {@JsonKey(unknownEnumValue: R4ResourceType.PractitionerRole)
-      @HiveField(0)
           final R4ResourceType resourceType,
-      @HiveField(1)
-          final String? id,
-      @HiveField(2)
-          final FhirMeta? meta,
-      @HiveField(3)
-          final FhirUri? implicitRules,
+      final String? id,
+      final FhirMeta? meta,
+      final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           final Element? implicitRulesElement,
-      @HiveField(5)
-          final Code? language,
+      final FhirCode? language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           final Element? languageElement,
-      @HiveField(7)
-          final Narrative? text,
-      @HiveField(8)
-          final List<Resource>? contained,
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           final List<FhirExtension>? extension_,
-      @HiveField(10)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          final List<Identifier>? identifier,
-      @HiveField(12)
-          final Boolean? active,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final FhirBoolean? active,
       @JsonKey(name: '_active')
-      @HiveField(13)
           final Element? activeElement,
-      @HiveField(14)
-          final Period? period,
-      @HiveField(15)
-          final Reference? practitioner,
-      @HiveField(16)
-          final Reference? organization,
-      @HiveField(17)
-          final List<CodeableConcept>? code,
-      @HiveField(18)
-          final List<CodeableConcept>? specialty,
-      @HiveField(19)
-          final List<Reference>? location,
-      @HiveField(20)
-          final List<Reference>? healthcareService,
-      @HiveField(21)
-          final List<ContactPoint>? telecom,
-      @HiveField(22)
-          final List<PractitionerRoleAvailableTime>? availableTime,
-      @HiveField(23)
-          final List<PractitionerRoleNotAvailable>? notAvailable,
-      @HiveField(24)
-      @HiveField(25)
-          final String? availabilityExceptions,
+      final Period? period,
+      final Reference? practitioner,
+      final Reference? organization,
+      final List<CodeableConcept>? code,
+      final List<CodeableConcept>? specialty,
+      final List<Reference>? location,
+      final List<Reference>? healthcareService,
+      final List<ContactPoint>? telecom,
+      final List<PractitionerRoleAvailableTime>? availableTime,
+      final List<PractitionerRoleNotAvailable>? notAvailable,
+      final String? availabilityExceptions,
       @JsonKey(name: '_availabilityExceptions')
-      @HiveField(26)
           final Element? availabilityExceptionsElement,
-      @HiveField(27)
-          final List<Reference>? endpoint}) = _$_PractitionerRole;
+      final List<Reference>? endpoint}) = _$_PractitionerRole;
   _PractitionerRole._() : super._();
 
   factory _PractitionerRole.fromJson(Map<String, dynamic> json) =
@@ -10987,20 +10028,17 @@ abstract class _PractitionerRole extends PractitionerRole {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.PractitionerRole)
-  @HiveField(0)
   R4ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
-  @HiveField(1)
   String? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  @HiveField(2)
   FhirMeta? get meta;
   @override
 
@@ -11008,24 +10046,20 @@ abstract class _PractitionerRole extends PractitionerRole {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  @HiveField(3)
   FhirUri? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
-  @HiveField(4)
   Element? get implicitRulesElement;
   @override
 
   /// [language] The base language in which the resource is written.
-  @HiveField(5)
   FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
-  @HiveField(6)
   Element? get languageElement;
   @override
 
@@ -11035,7 +10069,6 @@ abstract class _PractitionerRole extends PractitionerRole {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
-  @HiveField(7)
   Narrative? get text;
   @override
 
@@ -11043,7 +10076,6 @@ abstract class _PractitionerRole extends PractitionerRole {
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
-  @HiveField(8)
   List<Resource>? get contained;
   @override
 
@@ -11054,7 +10086,6 @@ abstract class _PractitionerRole extends PractitionerRole {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
-  @HiveField(9)
   List<FhirExtension>? get extension_;
   @override
 
@@ -11071,94 +10102,81 @@ abstract class _PractitionerRole extends PractitionerRole {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
 
   /// [identifier] Business Identifiers that are specific to a role/location.
-  @HiveField(11)
   List<Identifier>? get identifier;
   @override
 
   /// [active] Whether this practitioner role record is in active use.
-  @HiveField(12)
-  Boolean? get active;
+  FhirBoolean? get active;
   @override
 
   /// [activeElement] Extensions for active
   @JsonKey(name: '_active')
-  @HiveField(13)
   Element? get activeElement;
   @override
 
   /// [period] The period during which the person is authorized to act as a
   ///  practitioner in these role(s) for the organization.
-  @HiveField(14)
   Period? get period;
   @override
 
   /// [practitioner] Practitioner that is able to provide the defined services
   ///  for the organization.
-  @HiveField(15)
   Reference? get practitioner;
   @override
 
   /// [organization] The organization where the Practitioner performs the roles
   ///  associated.
-  @HiveField(16)
   Reference? get organization;
   @override
 
   /// [code] Roles which this practitioner is authorized to perform for the
   ///  organization.
-  @HiveField(17)
   List<CodeableConcept>? get code;
   @override
 
   /// [specialty] Specific specialty of the practitioner.
-  @HiveField(18)
   List<CodeableConcept>? get specialty;
   @override
 
   /// [location] The location(s) at which this practitioner provides care.
-  @HiveField(19)
   List<Reference>? get location;
   @override
 
   /// [healthcareService] The list of healthcare services that this worker
   ///  provides for this role's Organization/Location(s).
-  @HiveField(20)
   List<Reference>? get healthcareService;
   @override
 
   /// [telecom] Contact details that are specific to the role/location/service.
-  @HiveField(21)
   List<ContactPoint>? get telecom;
   @override
 
   /// [availableTime] A collection of times the practitioner is available or
   ///  performing this role at the location and/or healthcareservice.
-  @HiveField(22)
   List<PractitionerRoleAvailableTime>? get availableTime;
   @override
 
   /// [notAvailable] The practitioner is not available or performing this role
   ///  during this period of time due to the provided reason.
-  @HiveField(23)
   List<PractitionerRoleNotAvailable>? get notAvailable;
   @override
-  @HiveField(24)
-  @HiveField(25)
+
+  /// [availabilityExceptions] A description of site availability exceptions,
+  /// e.g. public holiday availability. Succinctly describing all possible
+  /// exceptions to normal site availability as details in the available Times
+  ///  and not available Times.
   String? get availabilityExceptions;
   @override
   @JsonKey(name: '_availabilityExceptions')
-  @HiveField(26)
   Element? get availabilityExceptionsElement;
   @override
 
   /// [endpoint] Technical endpoints providing access to services operated for
   ///  the practitioner with this role.
-  @HiveField(27)
   List<Reference>? get endpoint;
   @override
   @JsonKey(ignore: true)
@@ -11212,7 +10230,7 @@ mixin _$PractitionerRoleAvailableTime {
 
   /// [allDay] Is this always available? (hence times are irrelevant) e.g. 24
   ///  hour service.
-  Boolean? get allDay => throw _privateConstructorUsedError;
+  FhirBoolean? get allDay => throw _privateConstructorUsedError;
 
   /// [allDayElement] Extensions for allDay
   @JsonKey(name: '_allDay')
@@ -11254,7 +10272,7 @@ abstract class $PractitionerRoleAvailableTimeCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       List<FhirCode>? daysOfWeek,
       @JsonKey(name: '_daysOfWeek') List<Element?>? daysOfWeekElement,
-      Boolean? allDay,
+      FhirBoolean? allDay,
       @JsonKey(name: '_allDay') Element? allDayElement,
       FhirTime? availableStartTime,
       @JsonKey(name: '_availableStartTime') Element? availableStartTimeElement,
@@ -11316,7 +10334,7 @@ class _$PractitionerRoleAvailableTimeCopyWithImpl<$Res,
       allDay: freezed == allDay
           ? _value.allDay
           : allDay // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       allDayElement: freezed == allDayElement
           ? _value.allDayElement
           : allDayElement // ignore: cast_nullable_to_non_nullable
@@ -11324,7 +10342,7 @@ class _$PractitionerRoleAvailableTimeCopyWithImpl<$Res,
       availableStartTime: freezed == availableStartTime
           ? _value.availableStartTime
           : availableStartTime // ignore: cast_nullable_to_non_nullable
-              as Time?,
+              as FhirTime?,
       availableStartTimeElement: freezed == availableStartTimeElement
           ? _value.availableStartTimeElement
           : availableStartTimeElement // ignore: cast_nullable_to_non_nullable
@@ -11332,7 +10350,7 @@ class _$PractitionerRoleAvailableTimeCopyWithImpl<$Res,
       availableEndTime: freezed == availableEndTime
           ? _value.availableEndTime
           : availableEndTime // ignore: cast_nullable_to_non_nullable
-              as Time?,
+              as FhirTime?,
       availableEndTimeElement: freezed == availableEndTimeElement
           ? _value.availableEndTimeElement
           : availableEndTimeElement // ignore: cast_nullable_to_non_nullable
@@ -11392,7 +10410,7 @@ abstract class _$$_PractitionerRoleAvailableTimeCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       List<FhirCode>? daysOfWeek,
       @JsonKey(name: '_daysOfWeek') List<Element?>? daysOfWeekElement,
-      Boolean? allDay,
+      FhirBoolean? allDay,
       @JsonKey(name: '_allDay') Element? allDayElement,
       FhirTime? availableStartTime,
       @JsonKey(name: '_availableStartTime') Element? availableStartTimeElement,
@@ -11456,7 +10474,7 @@ class __$$_PractitionerRoleAvailableTimeCopyWithImpl<$Res>
       allDay: freezed == allDay
           ? _value.allDay
           : allDay // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       allDayElement: freezed == allDayElement
           ? _value.allDayElement
           : allDayElement // ignore: cast_nullable_to_non_nullable
@@ -11464,7 +10482,7 @@ class __$$_PractitionerRoleAvailableTimeCopyWithImpl<$Res>
       availableStartTime: freezed == availableStartTime
           ? _value.availableStartTime
           : availableStartTime // ignore: cast_nullable_to_non_nullable
-              as Time?,
+              as FhirTime?,
       availableStartTimeElement: freezed == availableStartTimeElement
           ? _value.availableStartTimeElement
           : availableStartTimeElement // ignore: cast_nullable_to_non_nullable
@@ -11472,7 +10490,7 @@ class __$$_PractitionerRoleAvailableTimeCopyWithImpl<$Res>
       availableEndTime: freezed == availableEndTime
           ? _value.availableEndTime
           : availableEndTime // ignore: cast_nullable_to_non_nullable
-              as Time?,
+              as FhirTime?,
       availableEndTimeElement: freezed == availableEndTimeElement
           ? _value.availableEndTimeElement
           : availableEndTimeElement // ignore: cast_nullable_to_non_nullable
@@ -11606,7 +10624,7 @@ class _$_PractitionerRoleAvailableTime extends _PractitionerRoleAvailableTime {
   /// [allDay] Is this always available? (hence times are irrelevant) e.g. 24
   ///  hour service.
   @override
-  final Boolean? allDay;
+  final FhirBoolean? allDay;
 
   /// [allDayElement] Extensions for allDay
   @override
@@ -11616,7 +10634,7 @@ class _$_PractitionerRoleAvailableTime extends _PractitionerRoleAvailableTime {
   /// [availableStartTime] The opening time of day. Note: If the AllDay flag is
   ///  set, then this time is ignored.
   @override
-  final Time? availableStartTime;
+  final FhirTime? availableStartTime;
 
   /// [availableStartTimeElement] Extensions for availableStartTime
   @override
@@ -11626,7 +10644,7 @@ class _$_PractitionerRoleAvailableTime extends _PractitionerRoleAvailableTime {
   /// [availableEndTime] The closing time of day. Note: If the AllDay flag is
   ///  set, then this time is ignored.
   @override
-  final Time? availableEndTime;
+  final FhirTime? availableEndTime;
 
   /// [availableEndTimeElement] Extensions for availableEndTime
   @override
@@ -11708,13 +10726,13 @@ abstract class _PractitionerRoleAvailableTime
           final List<FhirCode>? daysOfWeek,
           @JsonKey(name: '_daysOfWeek')
               final List<Element?>? daysOfWeekElement,
-          final Boolean? allDay,
+          final FhirBoolean? allDay,
           @JsonKey(name: '_allDay')
               final Element? allDayElement,
-          final Time? availableStartTime,
+          final FhirTime? availableStartTime,
           @JsonKey(name: '_availableStartTime')
               final Element? availableStartTimeElement,
-          final Time? availableEndTime,
+          final FhirTime? availableEndTime,
           @JsonKey(name: '_availableEndTime')
               final Element? availableEndTimeElement}) =
       _$_PractitionerRoleAvailableTime;
@@ -11768,7 +10786,7 @@ abstract class _PractitionerRoleAvailableTime
 
   /// [allDay] Is this always available? (hence times are irrelevant) e.g. 24
   ///  hour service.
-  Boolean? get allDay;
+  FhirBoolean? get allDay;
   @override
 
   /// [allDayElement] Extensions for allDay
@@ -12240,39 +11258,32 @@ RelatedPerson _$RelatedPersonFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$RelatedPerson {
   @JsonKey(unknownEnumValue: R4ResourceType.RelatedPerson)
-  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
-  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  @HiveField(2)
   FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
-  @HiveField(4)
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  @HiveField(5)
   FhirCode? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
-  @HiveField(6)
   Element? get languageElement => throw _privateConstructorUsedError;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -12281,14 +11292,12 @@ mixin _$RelatedPerson {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
-  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
 
   /// [contained] These resources do not have an independent existence apart
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
-  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -12298,7 +11307,6 @@ mixin _$RelatedPerson {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
-  @HiveField(9)
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [modifierExtension] May be used to represent additional information that
@@ -12314,76 +11322,60 @@ mixin _$RelatedPerson {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
   /// [identifier] Identifier for a person within a particular scope.
-  @HiveField(11)
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [active] Whether this related person record is in active use.
-  @HiveField(12)
-  Boolean? get active => throw _privateConstructorUsedError;
+  FhirBoolean? get active => throw _privateConstructorUsedError;
 
   /// [activeElement] Extensions for active
   @JsonKey(name: '_active')
-  @HiveField(13)
   Element? get activeElement => throw _privateConstructorUsedError;
 
   /// [patient] The patient this person is related to.
-  @HiveField(14)
   Reference get patient => throw _privateConstructorUsedError;
 
   /// [relationship] The nature of the relationship between a patient and the
   ///  related person.
-  @HiveField(15)
   List<CodeableConcept>? get relationship => throw _privateConstructorUsedError;
 
   /// [name] A name associated with the person.
-  @HiveField(16)
   List<HumanName>? get name => throw _privateConstructorUsedError;
 
   /// [telecom] A contact detail for the person, e.g. a telephone number or an
   ///  email address.
-  @HiveField(17)
   List<ContactPoint>? get telecom => throw _privateConstructorUsedError;
 
   /// [gender] Administrative Gender - the gender that the person is considered
   ///  to have for administration and record keeping purposes.
-  @HiveField(18)
   FhirCode? get gender => throw _privateConstructorUsedError;
 
   /// [genderElement] Extensions for gender
   @JsonKey(name: '_gender')
-  @HiveField(19)
   Element? get genderElement => throw _privateConstructorUsedError;
 
   /// [birthDate] The date on which the related person was born.
-  @HiveField(20)
-  Date? get birthDate => throw _privateConstructorUsedError;
+  FhirDate? get birthDate => throw _privateConstructorUsedError;
 
   /// [birthDateElement] Extensions for birthDate
   @JsonKey(name: '_birthDate')
-  @HiveField(21)
   Element? get birthDateElement => throw _privateConstructorUsedError;
 
   /// [address] Address where the related person can be contacted or visited.
-  @HiveField(22)
   List<Address>? get address => throw _privateConstructorUsedError;
 
   /// [photo] Image of the person.
-  @HiveField(23)
   List<Attachment>? get photo => throw _privateConstructorUsedError;
 
   /// [period] The period of time during which this relationship is or was
   ///  active. If there are no dates defined, then the interval is unknown.
-  @HiveField(24)
   Period? get period => throw _privateConstructorUsedError;
 
   /// [communication] A language which may be used to communicate with about
   ///  the patient's health.
-  @HiveField(25)
   List<RelatedPersonCommunication>? get communication =>
       throw _privateConstructorUsedError;
 
@@ -12401,64 +11393,38 @@ abstract class $RelatedPersonCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.RelatedPerson)
-      @HiveField(0)
           R4ResourceType resourceType,
-      @HiveField(1)
-          String? id,
-      @HiveField(2)
-          FhirMeta? meta,
-      @HiveField(3)
-          FhirUri? implicitRules,
+      String? id,
+      FhirMeta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           Element? implicitRulesElement,
-      @HiveField(5)
-          FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           Element? languageElement,
-      @HiveField(7)
-          Narrative? text,
-      @HiveField(8)
-          List<Resource>? contained,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           List<FhirExtension>? extension_,
-      @HiveField(10)
-          List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          List<Identifier>? identifier,
-      @HiveField(12)
-          Boolean? active,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      FhirBoolean? active,
       @JsonKey(name: '_active')
-      @HiveField(13)
           Element? activeElement,
-      @HiveField(14)
-          Reference patient,
-      @HiveField(15)
-          List<CodeableConcept>? relationship,
-      @HiveField(16)
-          List<HumanName>? name,
-      @HiveField(17)
-          List<ContactPoint>? telecom,
-      @HiveField(18)
-          FhirCode? gender,
+      Reference patient,
+      List<CodeableConcept>? relationship,
+      List<HumanName>? name,
+      List<ContactPoint>? telecom,
+      FhirCode? gender,
       @JsonKey(name: '_gender')
-      @HiveField(19)
           Element? genderElement,
-      @HiveField(20)
-          Date? birthDate,
+      FhirDate? birthDate,
       @JsonKey(name: '_birthDate')
-      @HiveField(21)
           Element? birthDateElement,
-      @HiveField(22)
-          List<Address>? address,
-      @HiveField(23)
-          List<Attachment>? photo,
-      @HiveField(24)
-          Period? period,
-      @HiveField(25)
-          List<RelatedPersonCommunication>? communication});
+      List<Address>? address,
+      List<Attachment>? photo,
+      Period? period,
+      List<RelatedPersonCommunication>? communication});
 
   $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -12535,7 +11501,7 @@ class _$RelatedPersonCopyWithImpl<$Res, $Val extends RelatedPerson>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -12563,7 +11529,7 @@ class _$RelatedPersonCopyWithImpl<$Res, $Val extends RelatedPerson>
       active: freezed == active
           ? _value.active
           : active // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       activeElement: freezed == activeElement
           ? _value.activeElement
           : activeElement // ignore: cast_nullable_to_non_nullable
@@ -12587,7 +11553,7 @@ class _$RelatedPersonCopyWithImpl<$Res, $Val extends RelatedPerson>
       gender: freezed == gender
           ? _value.gender
           : gender // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       genderElement: freezed == genderElement
           ? _value.genderElement
           : genderElement // ignore: cast_nullable_to_non_nullable
@@ -12595,7 +11561,7 @@ class _$RelatedPersonCopyWithImpl<$Res, $Val extends RelatedPerson>
       birthDate: freezed == birthDate
           ? _value.birthDate
           : birthDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       birthDateElement: freezed == birthDateElement
           ? _value.birthDateElement
           : birthDateElement // ignore: cast_nullable_to_non_nullable
@@ -12734,64 +11700,38 @@ abstract class _$$_RelatedPersonCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.RelatedPerson)
-      @HiveField(0)
           R4ResourceType resourceType,
-      @HiveField(1)
-          String? id,
-      @HiveField(2)
-          FhirMeta? meta,
-      @HiveField(3)
-          FhirUri? implicitRules,
+      String? id,
+      FhirMeta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           Element? implicitRulesElement,
-      @HiveField(5)
-          FhirCode? language,
+      FhirCode? language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           Element? languageElement,
-      @HiveField(7)
-          Narrative? text,
-      @HiveField(8)
-          List<Resource>? contained,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           List<FhirExtension>? extension_,
-      @HiveField(10)
-          List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          List<Identifier>? identifier,
-      @HiveField(12)
-          Boolean? active,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      FhirBoolean? active,
       @JsonKey(name: '_active')
-      @HiveField(13)
           Element? activeElement,
-      @HiveField(14)
-          Reference patient,
-      @HiveField(15)
-          List<CodeableConcept>? relationship,
-      @HiveField(16)
-          List<HumanName>? name,
-      @HiveField(17)
-          List<ContactPoint>? telecom,
-      @HiveField(18)
-          FhirCode? gender,
+      Reference patient,
+      List<CodeableConcept>? relationship,
+      List<HumanName>? name,
+      List<ContactPoint>? telecom,
+      FhirCode? gender,
       @JsonKey(name: '_gender')
-      @HiveField(19)
           Element? genderElement,
-      @HiveField(20)
-          Date? birthDate,
+      FhirDate? birthDate,
       @JsonKey(name: '_birthDate')
-      @HiveField(21)
           Element? birthDateElement,
-      @HiveField(22)
-          List<Address>? address,
-      @HiveField(23)
-          List<Attachment>? photo,
-      @HiveField(24)
-          Period? period,
-      @HiveField(25)
-          List<RelatedPersonCommunication>? communication});
+      List<Address>? address,
+      List<Attachment>? photo,
+      Period? period,
+      List<RelatedPersonCommunication>? communication});
 
   @override
   $FhirMetaCopyWith<$Res>? get meta;
@@ -12875,7 +11815,7 @@ class __$$_RelatedPersonCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -12903,7 +11843,7 @@ class __$$_RelatedPersonCopyWithImpl<$Res>
       active: freezed == active
           ? _value.active
           : active // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       activeElement: freezed == activeElement
           ? _value.activeElement
           : activeElement // ignore: cast_nullable_to_non_nullable
@@ -12927,7 +11867,7 @@ class __$$_RelatedPersonCopyWithImpl<$Res>
       gender: freezed == gender
           ? _value.gender
           : gender // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       genderElement: freezed == genderElement
           ? _value.genderElement
           : genderElement // ignore: cast_nullable_to_non_nullable
@@ -12935,7 +11875,7 @@ class __$$_RelatedPersonCopyWithImpl<$Res>
       birthDate: freezed == birthDate
           ? _value.birthDate
           : birthDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       birthDateElement: freezed == birthDateElement
           ? _value.birthDateElement
           : birthDateElement // ignore: cast_nullable_to_non_nullable
@@ -12962,68 +11902,41 @@ class __$$_RelatedPersonCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@HiveType(typeId: 135)
 class _$_RelatedPerson extends _RelatedPerson {
   _$_RelatedPerson(
       {@JsonKey(unknownEnumValue: R4ResourceType.RelatedPerson)
-      @HiveField(0)
           this.resourceType = R4ResourceType.RelatedPerson,
-      @HiveField(1)
-          this.id,
-      @HiveField(2)
-          this.meta,
-      @HiveField(3)
-          this.implicitRules,
+      this.id,
+      this.meta,
+      this.implicitRules,
       @JsonKey(name: '_implicitRules')
-      @HiveField(4)
           this.implicitRulesElement,
-      @HiveField(5)
-          this.language,
+      this.language,
       @JsonKey(name: '_language')
-      @HiveField(6)
           this.languageElement,
-      @HiveField(7)
-          this.text,
-      @HiveField(8)
-          final List<Resource>? contained,
+      this.text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-      @HiveField(9)
           final List<FhirExtension>? extension_,
-      @HiveField(10)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(11)
-          final List<Identifier>? identifier,
-      @HiveField(12)
-          this.active,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      this.active,
       @JsonKey(name: '_active')
-      @HiveField(13)
           this.activeElement,
-      @HiveField(14)
-          required this.patient,
-      @HiveField(15)
-          final List<CodeableConcept>? relationship,
-      @HiveField(16)
-          final List<HumanName>? name,
-      @HiveField(17)
-          final List<ContactPoint>? telecom,
-      @HiveField(18)
-          this.gender,
+      required this.patient,
+      final List<CodeableConcept>? relationship,
+      final List<HumanName>? name,
+      final List<ContactPoint>? telecom,
+      this.gender,
       @JsonKey(name: '_gender')
-      @HiveField(19)
           this.genderElement,
-      @HiveField(20)
-          this.birthDate,
+      this.birthDate,
       @JsonKey(name: '_birthDate')
-      @HiveField(21)
           this.birthDateElement,
-      @HiveField(22)
-          final List<Address>? address,
-      @HiveField(23)
-          final List<Attachment>? photo,
-      @HiveField(24)
-          this.period,
-      @HiveField(25)
-          final List<RelatedPersonCommunication>? communication})
+      final List<Address>? address,
+      final List<Attachment>? photo,
+      this.period,
+      final List<RelatedPersonCommunication>? communication})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -13041,20 +11954,17 @@ class _$_RelatedPerson extends _RelatedPerson {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.RelatedPerson)
-  @HiveField(0)
   final R4ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
   @override
-  @HiveField(1)
   final String? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
-  @HiveField(2)
   final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -13062,24 +11972,20 @@ class _$_RelatedPerson extends _RelatedPerson {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   @override
-  @HiveField(3)
   final FhirUri? implicitRules;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
-  @HiveField(4)
   final Element? implicitRulesElement;
 
   /// [language] The base language in which the resource is written.
   @override
-  @HiveField(5)
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] Extensions for language
   @override
   @JsonKey(name: '_language')
-  @HiveField(6)
   final Element? languageElement;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -13089,7 +11995,6 @@ class _$_RelatedPerson extends _RelatedPerson {
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
   @override
-  @HiveField(7)
   final Narrative? text;
 
   /// [contained] These resources do not have an independent existence apart
@@ -13103,7 +12008,6 @@ class _$_RelatedPerson extends _RelatedPerson {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   @override
-  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -13128,7 +12032,6 @@ class _$_RelatedPerson extends _RelatedPerson {
   ///  as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
-  @HiveField(9)
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
@@ -13166,7 +12069,6 @@ class _$_RelatedPerson extends _RelatedPerson {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   @override
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -13181,7 +12083,6 @@ class _$_RelatedPerson extends _RelatedPerson {
 
   /// [identifier] Identifier for a person within a particular scope.
   @override
-  @HiveField(11)
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
@@ -13192,18 +12093,15 @@ class _$_RelatedPerson extends _RelatedPerson {
 
   /// [active] Whether this related person record is in active use.
   @override
-  @HiveField(12)
-  final Boolean? active;
+  final FhirBoolean? active;
 
   /// [activeElement] Extensions for active
   @override
   @JsonKey(name: '_active')
-  @HiveField(13)
   final Element? activeElement;
 
   /// [patient] The patient this person is related to.
   @override
-  @HiveField(14)
   final Reference patient;
 
   /// [relationship] The nature of the relationship between a patient and the
@@ -13213,7 +12111,6 @@ class _$_RelatedPerson extends _RelatedPerson {
   /// [relationship] The nature of the relationship between a patient and the
   ///  related person.
   @override
-  @HiveField(15)
   List<CodeableConcept>? get relationship {
     final value = _relationship;
     if (value == null) return null;
@@ -13227,7 +12124,6 @@ class _$_RelatedPerson extends _RelatedPerson {
 
   /// [name] A name associated with the person.
   @override
-  @HiveField(16)
   List<HumanName>? get name {
     final value = _name;
     if (value == null) return null;
@@ -13243,7 +12139,6 @@ class _$_RelatedPerson extends _RelatedPerson {
   /// [telecom] A contact detail for the person, e.g. a telephone number or an
   ///  email address.
   @override
-  @HiveField(17)
   List<ContactPoint>? get telecom {
     final value = _telecom;
     if (value == null) return null;
@@ -13255,24 +12150,20 @@ class _$_RelatedPerson extends _RelatedPerson {
   /// [gender] Administrative Gender - the gender that the person is considered
   ///  to have for administration and record keeping purposes.
   @override
-  @HiveField(18)
-  final Code? gender;
+  final FhirCode? gender;
 
   /// [genderElement] Extensions for gender
   @override
   @JsonKey(name: '_gender')
-  @HiveField(19)
   final Element? genderElement;
 
   /// [birthDate] The date on which the related person was born.
   @override
-  @HiveField(20)
-  final Date? birthDate;
+  final FhirDate? birthDate;
 
   /// [birthDateElement] Extensions for birthDate
   @override
   @JsonKey(name: '_birthDate')
-  @HiveField(21)
   final Element? birthDateElement;
 
   /// [address] Address where the related person can be contacted or visited.
@@ -13280,7 +12171,6 @@ class _$_RelatedPerson extends _RelatedPerson {
 
   /// [address] Address where the related person can be contacted or visited.
   @override
-  @HiveField(22)
   List<Address>? get address {
     final value = _address;
     if (value == null) return null;
@@ -13294,7 +12184,6 @@ class _$_RelatedPerson extends _RelatedPerson {
 
   /// [photo] Image of the person.
   @override
-  @HiveField(23)
   List<Attachment>? get photo {
     final value = _photo;
     if (value == null) return null;
@@ -13306,7 +12195,6 @@ class _$_RelatedPerson extends _RelatedPerson {
   /// [period] The period of time during which this relationship is or was
   ///  active. If there are no dates defined, then the interval is unknown.
   @override
-  @HiveField(24)
   final Period? period;
 
   /// [communication] A language which may be used to communicate with about
@@ -13316,7 +12204,6 @@ class _$_RelatedPerson extends _RelatedPerson {
   /// [communication] A language which may be used to communicate with about
   ///  the patient's health.
   @override
-  @HiveField(25)
   List<RelatedPersonCommunication>? get communication {
     final value = _communication;
     if (value == null) return null;
@@ -13427,64 +12314,38 @@ class _$_RelatedPerson extends _RelatedPerson {
 abstract class _RelatedPerson extends RelatedPerson {
   factory _RelatedPerson(
           {@JsonKey(unknownEnumValue: R4ResourceType.RelatedPerson)
-          @HiveField(0)
               final R4ResourceType resourceType,
-          @HiveField(1)
-              final String? id,
-          @HiveField(2)
-              final FhirMeta? meta,
-          @HiveField(3)
-              final FhirUri? implicitRules,
+          final String? id,
+          final FhirMeta? meta,
+          final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
-          @HiveField(4)
               final Element? implicitRulesElement,
-          @HiveField(5)
-              final Code? language,
+          final FhirCode? language,
           @JsonKey(name: '_language')
-          @HiveField(6)
               final Element? languageElement,
-          @HiveField(7)
-              final Narrative? text,
-          @HiveField(8)
-              final List<Resource>? contained,
+          final Narrative? text,
+          final List<Resource>? contained,
           @JsonKey(name: 'extension')
-          @HiveField(9)
               final List<FhirExtension>? extension_,
-          @HiveField(10)
-              final List<FhirExtension>? modifierExtension,
-          @HiveField(11)
-              final List<Identifier>? identifier,
-          @HiveField(12)
-              final Boolean? active,
+          final List<FhirExtension>? modifierExtension,
+          final List<Identifier>? identifier,
+          final FhirBoolean? active,
           @JsonKey(name: '_active')
-          @HiveField(13)
               final Element? activeElement,
-          @HiveField(14)
-              required final Reference patient,
-          @HiveField(15)
-              final List<CodeableConcept>? relationship,
-          @HiveField(16)
-              final List<HumanName>? name,
-          @HiveField(17)
-              final List<ContactPoint>? telecom,
-          @HiveField(18)
-              final Code? gender,
+          required final Reference patient,
+          final List<CodeableConcept>? relationship,
+          final List<HumanName>? name,
+          final List<ContactPoint>? telecom,
+          final FhirCode? gender,
           @JsonKey(name: '_gender')
-          @HiveField(19)
               final Element? genderElement,
-          @HiveField(20)
-              final Date? birthDate,
+          final FhirDate? birthDate,
           @JsonKey(name: '_birthDate')
-          @HiveField(21)
               final Element? birthDateElement,
-          @HiveField(22)
-              final List<Address>? address,
-          @HiveField(23)
-              final List<Attachment>? photo,
-          @HiveField(24)
-              final Period? period,
-          @HiveField(25)
-              final List<RelatedPersonCommunication>? communication}) =
+          final List<Address>? address,
+          final List<Attachment>? photo,
+          final Period? period,
+          final List<RelatedPersonCommunication>? communication}) =
       _$_RelatedPerson;
   _RelatedPerson._() : super._();
 
@@ -13493,20 +12354,17 @@ abstract class _RelatedPerson extends RelatedPerson {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.RelatedPerson)
-  @HiveField(0)
   R4ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
-  @HiveField(1)
   String? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
-  @HiveField(2)
   FhirMeta? get meta;
   @override
 
@@ -13514,24 +12372,20 @@ abstract class _RelatedPerson extends RelatedPerson {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  @HiveField(3)
   FhirUri? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
-  @HiveField(4)
   Element? get implicitRulesElement;
   @override
 
   /// [language] The base language in which the resource is written.
-  @HiveField(5)
   FhirCode? get language;
   @override
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
-  @HiveField(6)
   Element? get languageElement;
   @override
 
@@ -13541,7 +12395,6 @@ abstract class _RelatedPerson extends RelatedPerson {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
-  @HiveField(7)
   Narrative? get text;
   @override
 
@@ -13549,7 +12402,6 @@ abstract class _RelatedPerson extends RelatedPerson {
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
-  @HiveField(8)
   List<Resource>? get contained;
   @override
 
@@ -13560,7 +12412,6 @@ abstract class _RelatedPerson extends RelatedPerson {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
-  @HiveField(9)
   List<FhirExtension>? get extension_;
   @override
 
@@ -13577,90 +12428,74 @@ abstract class _RelatedPerson extends RelatedPerson {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
-  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
 
   /// [identifier] Identifier for a person within a particular scope.
-  @HiveField(11)
   List<Identifier>? get identifier;
   @override
 
   /// [active] Whether this related person record is in active use.
-  @HiveField(12)
-  Boolean? get active;
+  FhirBoolean? get active;
   @override
 
   /// [activeElement] Extensions for active
   @JsonKey(name: '_active')
-  @HiveField(13)
   Element? get activeElement;
   @override
 
   /// [patient] The patient this person is related to.
-  @HiveField(14)
   Reference get patient;
   @override
 
   /// [relationship] The nature of the relationship between a patient and the
   ///  related person.
-  @HiveField(15)
   List<CodeableConcept>? get relationship;
   @override
 
   /// [name] A name associated with the person.
-  @HiveField(16)
   List<HumanName>? get name;
   @override
 
   /// [telecom] A contact detail for the person, e.g. a telephone number or an
   ///  email address.
-  @HiveField(17)
   List<ContactPoint>? get telecom;
   @override
 
   /// [gender] Administrative Gender - the gender that the person is considered
   ///  to have for administration and record keeping purposes.
-  @HiveField(18)
   FhirCode? get gender;
   @override
 
   /// [genderElement] Extensions for gender
   @JsonKey(name: '_gender')
-  @HiveField(19)
   Element? get genderElement;
   @override
 
   /// [birthDate] The date on which the related person was born.
-  @HiveField(20)
-  Date? get birthDate;
+  FhirDate? get birthDate;
   @override
 
   /// [birthDateElement] Extensions for birthDate
   @JsonKey(name: '_birthDate')
-  @HiveField(21)
   Element? get birthDateElement;
   @override
 
   /// [address] Address where the related person can be contacted or visited.
-  @HiveField(22)
   List<Address>? get address;
   @override
 
   /// [photo] Image of the person.
-  @HiveField(23)
   List<Attachment>? get photo;
   @override
 
   /// [period] The period of time during which this relationship is or was
   ///  active. If there are no dates defined, then the interval is unknown.
-  @HiveField(24)
   Period? get period;
   @override
 
   /// [communication] A language which may be used to communicate with about
   ///  the patient's health.
-  @HiveField(25)
   List<RelatedPersonCommunication>? get communication;
   @override
   @JsonKey(ignore: true)
@@ -13677,7 +12512,6 @@ RelatedPersonCommunication _$RelatedPersonCommunicationFromJson(
 mixin _$RelatedPersonCommunication {
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
-  @HiveField(0)
   String? get id => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -13686,7 +12520,6 @@ mixin _$RelatedPersonCommunication {
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
-  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
@@ -13703,20 +12536,20 @@ mixin _$RelatedPersonCommunication {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
-  @HiveField(2)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  @HiveField(3)
-  @HiveField(4)
+
+  /// [language] The ISO-639-1 alpha 2 code in lower case for the language,
+  /// optionally followed by a hyphen and the ISO-3166-1 alpha 2 code for the
+  /// region in upper case; e.g. "en" for English, or "en-US" for American
+  ///  English versus "en-EN" for England English.
   CodeableConcept get language => throw _privateConstructorUsedError;
 
   /// [preferred] Indicates whether or not the patient prefers this language
   ///  (over other languages he masters up a certain level).
-  @HiveField(5)
-  Boolean? get preferred => throw _privateConstructorUsedError;
+  FhirBoolean? get preferred => throw _privateConstructorUsedError;
 
   /// [preferredElement] Extensions for preferred
-  @HiveField(6)
   @JsonKey(name: '_preferred')
   Element? get preferredElement => throw _privateConstructorUsedError;
 
@@ -13734,12 +12567,12 @@ abstract class $RelatedPersonCommunicationCopyWith<$Res> {
           RelatedPersonCommunication>;
   @useResult
   $Res call(
-      {@HiveField(0) String? id,
-      @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      @HiveField(2) List<FhirExtension>? modifierExtension,
-      @HiveField(3) @HiveField(4) CodeableConcept language,
-      @HiveField(5) Boolean? preferred,
-      @HiveField(6) @JsonKey(name: '_preferred') Element? preferredElement});
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept language,
+      FhirBoolean? preferred,
+      @JsonKey(name: '_preferred') Element? preferredElement});
 
   $CodeableConceptCopyWith<$Res> get language;
   $ElementCopyWith<$Res>? get preferredElement;
@@ -13786,7 +12619,7 @@ class _$RelatedPersonCommunicationCopyWithImpl<$Res,
       preferred: freezed == preferred
           ? _value.preferred
           : preferred // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       preferredElement: freezed == preferredElement
           ? _value.preferredElement
           : preferredElement // ignore: cast_nullable_to_non_nullable
@@ -13825,12 +12658,12 @@ abstract class _$$_RelatedPersonCommunicationCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@HiveField(0) String? id,
-      @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      @HiveField(2) List<FhirExtension>? modifierExtension,
-      @HiveField(3) @HiveField(4) CodeableConcept language,
-      @HiveField(5) Boolean? preferred,
-      @HiveField(6) @JsonKey(name: '_preferred') Element? preferredElement});
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept language,
+      FhirBoolean? preferred,
+      @JsonKey(name: '_preferred') Element? preferredElement});
 
   @override
   $CodeableConceptCopyWith<$Res> get language;
@@ -13878,7 +12711,7 @@ class __$$_RelatedPersonCommunicationCopyWithImpl<$Res>
       preferred: freezed == preferred
           ? _value.preferred
           : preferred // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       preferredElement: freezed == preferredElement
           ? _value.preferredElement
           : preferredElement // ignore: cast_nullable_to_non_nullable
@@ -13889,24 +12722,14 @@ class __$$_RelatedPersonCommunicationCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@HiveType(typeId: 136)
 class _$_RelatedPersonCommunication extends _RelatedPersonCommunication {
   _$_RelatedPersonCommunication(
-      {@HiveField(0)
-          this.id,
-      @HiveField(1)
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      @HiveField(2)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(3)
-      @HiveField(4)
-          required this.language,
-      @HiveField(5)
-          this.preferred,
-      @HiveField(6)
-      @JsonKey(name: '_preferred')
-          this.preferredElement})
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      required this.language,
+      this.preferred,
+      @JsonKey(name: '_preferred') this.preferredElement})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
         super._();
@@ -13917,7 +12740,6 @@ class _$_RelatedPersonCommunication extends _RelatedPersonCommunication {
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   @override
-  @HiveField(0)
   final String? id;
 
   /// [extension_] May be used to represent additional information that is not
@@ -13935,7 +12757,6 @@ class _$_RelatedPersonCommunication extends _RelatedPersonCommunication {
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   @override
-  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
     final value = _extension_;
@@ -13974,7 +12795,6 @@ class _$_RelatedPersonCommunication extends _RelatedPersonCommunication {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   @override
-  @HiveField(2)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -13984,20 +12804,20 @@ class _$_RelatedPersonCommunication extends _RelatedPersonCommunication {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [language] The ISO-639-1 alpha 2 code in lower case for the language,
+  /// optionally followed by a hyphen and the ISO-3166-1 alpha 2 code for the
+  /// region in upper case; e.g. "en" for English, or "en-US" for American
+  ///  English versus "en-EN" for England English.
   @override
-  @HiveField(3)
-  @HiveField(4)
   final CodeableConcept language;
 
   /// [preferred] Indicates whether or not the patient prefers this language
   ///  (over other languages he masters up a certain level).
   @override
-  @HiveField(5)
-  final Boolean? preferred;
+  final FhirBoolean? preferred;
 
   /// [preferredElement] Extensions for preferred
   @override
-  @HiveField(6)
   @JsonKey(name: '_preferred')
   final Element? preferredElement;
 
@@ -14052,21 +12872,13 @@ class _$_RelatedPersonCommunication extends _RelatedPersonCommunication {
 
 abstract class _RelatedPersonCommunication extends RelatedPersonCommunication {
   factory _RelatedPersonCommunication(
-      {@HiveField(0)
-          final String? id,
-      @HiveField(1)
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      @HiveField(2)
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
-      @HiveField(3)
-      @HiveField(4)
           required final CodeableConcept language,
-      @HiveField(5)
-          final Boolean? preferred,
-      @HiveField(6)
-      @JsonKey(name: '_preferred')
-          final Element? preferredElement}) = _$_RelatedPersonCommunication;
+          final FhirBoolean? preferred,
+          @JsonKey(name: '_preferred') final Element? preferredElement}) =
+      _$_RelatedPersonCommunication;
   _RelatedPersonCommunication._() : super._();
 
   factory _RelatedPersonCommunication.fromJson(Map<String, dynamic> json) =
@@ -14076,7 +12888,6 @@ abstract class _RelatedPersonCommunication extends RelatedPersonCommunication {
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
-  @HiveField(0)
   String? get id;
   @override
 
@@ -14086,7 +12897,6 @@ abstract class _RelatedPersonCommunication extends RelatedPersonCommunication {
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
-  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
@@ -14104,22 +12914,22 @@ abstract class _RelatedPersonCommunication extends RelatedPersonCommunication {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
-  @HiveField(2)
   List<FhirExtension>? get modifierExtension;
   @override
-  @HiveField(3)
-  @HiveField(4)
+
+  /// [language] The ISO-639-1 alpha 2 code in lower case for the language,
+  /// optionally followed by a hyphen and the ISO-3166-1 alpha 2 code for the
+  /// region in upper case; e.g. "en" for English, or "en-US" for American
+  ///  English versus "en-EN" for England English.
   CodeableConcept get language;
   @override
 
   /// [preferred] Indicates whether or not the patient prefers this language
   ///  (over other languages he masters up a certain level).
-  @HiveField(5)
-  Boolean? get preferred;
+  FhirBoolean? get preferred;
   @override
 
   /// [preferredElement] Extensions for preferred
-  @HiveField(6)
   @JsonKey(name: '_preferred')
   Element? get preferredElement;
   @override

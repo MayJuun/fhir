@@ -5,47 +5,47 @@ import 'dart:convert';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
-import 'fhir_number.dart';
+import 'number.dart';
 import 'integer.dart';
 import 'primitive_type_exceptions.dart';
 
-class Decimal extends FhirNumber {
-  const Decimal._(
+class FhirDecimal extends FhirNumber {
+  const FhirDecimal._(
     String valueString,
     double? valueNumber,
     bool isValid,
     this.isInt,
   ) : super(valueString, valueNumber, isValid);
 
-  factory Decimal(dynamic inValue) {
-    if (inValue is Decimal) {
+  factory FhirDecimal(dynamic inValue) {
+    if (inValue is FhirDecimal) {
       return inValue;
-    } else if (inValue is Integer) {
-      return Decimal._(
+    } else if (inValue is FhirInteger) {
+      return FhirDecimal._(
         inValue.toString(),
         inValue.value?.toDouble(),
         inValue.isValid,
         inValue.isValid,
       );
     } else if (inValue is num) {
-      return Decimal._(
+      return FhirDecimal._(
         inValue.toString(),
         inValue.toDouble(),
         true,
         int.tryParse(inValue.toString()) != null,
       );
     }
-    throw CannotBeConstructed<Decimal>(
+    throw CannotBeConstructed<FhirDecimal>(
         'Decimal cannot be constructed from $inValue ${inValue.runtimeType}');
   }
 
-  factory Decimal.fromJson(dynamic json) => Decimal(json);
+  factory FhirDecimal.fromJson(dynamic json) => FhirDecimal(json);
 
-  factory Decimal.fromYaml(dynamic yaml) => yaml is String
-      ? Decimal.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+  factory FhirDecimal.fromYaml(dynamic yaml) => yaml is String
+      ? FhirDecimal.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
-          ? Decimal.fromJson(jsonDecode(jsonEncode(yaml)))
-          : throw YamlFormatException<Decimal>(
+          ? FhirDecimal.fromJson(jsonDecode(jsonEncode(yaml)))
+          : throw YamlFormatException<FhirDecimal>(
               'FormatException: "$json" is not a valid Yaml string or YamlMap.');
 
   final bool isInt;

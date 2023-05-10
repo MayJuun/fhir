@@ -3,7 +3,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:hive/hive.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -14,7 +13,7 @@ part 'security.g.dart';
 
 /// [AuditEvent] A record of an event made for purposes of maintaining a
 @freezed
-class AuditEvent extends HiveObject with Resource, _$AuditEvent {
+class AuditEvent with Resource, _$AuditEvent {
   /// [AuditEvent] A record of an event made for purposes of maintaining a
   AuditEvent._();
 
@@ -109,45 +108,37 @@ class AuditEvent extends HiveObject with Resource, _$AuditEvent {
   /// [source] The system that is reporting the event.
   ///
   /// [entity] Specific instances of data or objects that have been accessed.
-  @HiveType(typeId: 87)
   factory AuditEvent({
     @Default(R4ResourceType.AuditEvent)
     @JsonKey(unknownEnumValue: R4ResourceType.AuditEvent)
 
-    /// [resourceType] This is a AuditEvent resource
-    @HiveField(0)
+        /// [resourceType] This is a AuditEvent resource
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @HiveField(1)
-        String? id,
+    String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    @HiveField(2)
-        FhirMeta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    @HiveField(3)
-        FhirUri? implicitRules,
+    FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
-    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    @HiveField(5)
-        FhirCode? language,
+    FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
-    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
@@ -156,15 +147,13 @@ class AuditEvent extends HiveObject with Resource, _$AuditEvent {
     /// contain sufficient detail to make it "clinically safe" for a human to just
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
-    @HiveField(7)
-        Narrative? text,
+    Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
-    @HiveField(8)
-        List<Resource>? contained,
+    List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -173,7 +162,6 @@ class AuditEvent extends HiveObject with Resource, _$AuditEvent {
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
     @JsonKey(name: 'extension')
-    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -189,78 +177,61 @@ class AuditEvent extends HiveObject with Resource, _$AuditEvent {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    @HiveField(10)
-        List<FhirExtension>? modifierExtension,
-    @HiveField(11)
+    List<FhirExtension>? modifierExtension,
 
     /// [type] Identifier for a family of the event.  For example, a menu item,
     /// program, rule, policy, function code, application name or URL. It
     ///  identifies the performed function.
-    @HiveField(12)
-        required Coding type,
+    required Coding type,
 
     /// [subtype] Identifier for the category of event.
-    @HiveField(13)
-        List<Coding>? subtype,
+    List<Coding>? subtype,
 
     /// [action] Indicator for type of action performed during the event that
     ///  generated the audit.
-    @HiveField(14)
-        FhirCode? action,
+    FhirCode? action,
 
     /// [actionElement] Extensions for action
     @JsonKey(name: '_action')
-    @HiveField(15)
         Element? actionElement,
 
     /// [period] The period during which the activity occurred.
-    @HiveField(16)
-        Period? period,
+    Period? period,
 
     /// [recorded] The time when the event was recorded.
-    @HiveField(17)
-        Instant? recorded,
+    FhirInstant? recorded,
 
     /// [recordedElement] Extensions for recorded
     @JsonKey(name: '_recorded')
-    @HiveField(18)
         Element? recordedElement,
 
     /// [outcome] Indicates whether the event succeeded or failed.
-    @HiveField(19)
-        FhirCode? outcome,
+    FhirCode? outcome,
 
     /// [outcomeElement] Extensions for outcome
     @JsonKey(name: '_outcome')
-    @HiveField(20)
         Element? outcomeElement,
 
     /// [outcomeDesc] A free text description of the outcome of the event.
-    @HiveField(21)
-        String? outcomeDesc,
+    String? outcomeDesc,
 
     /// [outcomeDescElement] Extensions for outcomeDesc
     @JsonKey(name: '_outcomeDesc')
-    @HiveField(22)
         Element? outcomeDescElement,
 
     /// [purposeOfEvent] The purposeOfUse (reason) that was used during the event
     ///  being recorded.
-    @HiveField(23)
-        List<CodeableConcept>? purposeOfEvent,
+    List<CodeableConcept>? purposeOfEvent,
 
     /// [agent] An actor taking an active role in the event or activity that is
     ///  logged.
-    @HiveField(24)
-        required List<AuditEventAgent> agent,
+    required List<AuditEventAgent> agent,
 
     /// [source] The system that is reporting the event.
-    @HiveField(25)
-        required AuditEventSource source,
+    required AuditEventSource source,
 
     /// [entity] Specific instances of data or objects that have been accessed.
-    @HiveField(26)
-        List<AuditEventEntity>? entity,
+    List<AuditEventEntity>? entity,
   }) = _AuditEvent;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -424,7 +395,7 @@ class AuditEventAgent with _$AuditEventAgent {
 
     /// [requestor] Indicator that the user is or is not the requestor, or
     ///  initiator, for the event being audited.
-    Boolean? requestor,
+    FhirBoolean? requestor,
 
     /// [requestorElement] Extensions for requestor
     @JsonKey(name: '_requestor') Element? requestorElement,
@@ -1003,7 +974,7 @@ class AuditEventDetail with _$AuditEventDetail {
 
 /// [Consent] A record of a healthcare consumer’s  choices, which permits or
 @freezed
-class Consent extends HiveObject with Resource, _$Consent {
+class Consent with Resource, _$Consent {
   /// [Consent] A record of a healthcare consumer’s  choices, which permits or
   Consent._();
 
@@ -1116,45 +1087,37 @@ class Consent extends HiveObject with Resource, _$Consent {
   ///
   /// [provision] An exception to the base policy of this consent. An exception
   ///  can be an addition or removal of access permissions.
-  @HiveType(typeId: 88)
   factory Consent({
     @Default(R4ResourceType.Consent)
     @JsonKey(unknownEnumValue: R4ResourceType.Consent)
 
-    /// [resourceType] This is a Consent resource
-    @HiveField(0)
+        /// [resourceType] This is a Consent resource
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @HiveField(1)
-        String? id,
+    String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    @HiveField(2)
-        FhirMeta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    @HiveField(3)
-        FhirUri? implicitRules,
+    FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
-    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    @HiveField(5)
-        FhirCode? language,
+    FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
-    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
@@ -1163,15 +1126,13 @@ class Consent extends HiveObject with Resource, _$Consent {
     /// contain sufficient detail to make it "clinically safe" for a human to just
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
-    @HiveField(7)
-        Narrative? text,
+    Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
-    @HiveField(8)
-        List<Resource>? contained,
+    List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -1180,7 +1141,6 @@ class Consent extends HiveObject with Resource, _$Consent {
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
     @JsonKey(name: 'extension')
-    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -1196,45 +1156,35 @@ class Consent extends HiveObject with Resource, _$Consent {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    @HiveField(10)
-        List<FhirExtension>? modifierExtension,
+    List<FhirExtension>? modifierExtension,
 
     /// [identifier] Unique identifier for this copy of the Consent Statement.
-    @HiveField(11)
-        List<Identifier>? identifier,
+    List<Identifier>? identifier,
 
     /// [status] Indicates the current state of this consent.
-    @HiveField(12)
-        FhirCode? status,
+    FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
-    @HiveField(13)
         Element? statusElement,
-    @HiveField(14)
 
     /// [scope] A selector of the type of consent being presented: ADR, Privacy,
     ///  Treatment, Research.  This list is now extensible.
-    @HiveField(15)
-        required CodeableConcept scope,
+    required CodeableConcept scope,
 
     /// [category] A classification of the type of consents found in the
     /// statement. This element supports indexing and retrieval of consent
     ///  statements.
-    @HiveField(16)
-        required List<CodeableConcept> category,
+    required List<CodeableConcept> category,
 
     /// [patient] The patient/healthcare consumer to whom this consent applies.
-    @HiveField(17)
-        Reference? patient,
+    Reference? patient,
 
     /// [dateTime] When this  Consent was issued / created / indexed.
-    @HiveField(18)
-        FhirDateTime? dateTime,
+    FhirDateTime? dateTime,
 
     /// [dateTimeElement] Extensions for dateTime
     @JsonKey(name: '_dateTime')
-    @HiveField(19)
         Element? dateTimeElement,
 
     /// [performer] Either the Grantor, which is the entity responsible for
@@ -1242,49 +1192,41 @@ class Consent extends HiveObject with Resource, _$Consent {
     /// the entity responsible for complying with the Consent Directive, including
     /// any obligations or limitations on authorizations and enforcement of
     ///  prohibitions.
-    @HiveField(20)
-        List<Reference>? performer,
+    List<Reference>? performer,
 
     /// [organization] The organization that manages the consent, and the
     ///  framework within which it is executed.
-    @HiveField(21)
-        List<Reference>? organization,
+    List<Reference>? organization,
 
     /// [sourceAttachment] The source on which this consent statement is based.
     /// The source might be a scanned original paper form, or a reference to a
     /// consent that links back to such a source, a reference to a document
     ///  repository (e.g. XDS) that stores the original consent document.
-    @HiveField(22)
-        Attachment? sourceAttachment,
+    Attachment? sourceAttachment,
 
     /// [sourceReference] The source on which this consent statement is based.
     /// The source might be a scanned original paper form, or a reference to a
     /// consent that links back to such a source, a reference to a document
     ///  repository (e.g. XDS) that stores the original consent document.
-    @HiveField(23)
-        Reference? sourceReference,
+    Reference? sourceReference,
 
     /// [policy] The references to the policies that are included in this consent
     /// scope. Policies may be organizational, but are often defined
     ///  jurisdictionally, or in law.
-    @HiveField(24)
-        List<ConsentPolicy>? policy,
+    List<ConsentPolicy>? policy,
 
     /// [policyRule] A reference to the specific base computable regulation or
     ///  policy.
-    @HiveField(25)
-        CodeableConcept? policyRule,
+    CodeableConcept? policyRule,
 
     /// [verification] Whether a treatment instruction (e.g. artificial
     /// respiration yes or no) was verified with the patient, his/her family or
     ///  another authorized person.
-    @HiveField(26)
-        List<ConsentVerification>? verification,
+    List<ConsentVerification>? verification,
 
     /// [provision] An exception to the base policy of this consent. An exception
     ///  can be an addition or removal of access permissions.
-    @HiveField(27)
-        ConsentProvision? provision,
+    ConsentProvision? provision,
   }) = _Consent;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1509,7 +1451,7 @@ class ConsentVerification with _$ConsentVerification {
     List<FhirExtension>? modifierExtension,
 
     /// [verified] Has the instruction been verified.
-    Boolean? verified,
+    FhirBoolean? verified,
 
     /// [verifiedElement] Extensions for verified
     @JsonKey(name: '_verified') Element? verifiedElement,
@@ -1953,7 +1895,7 @@ class ConsentData with _$ConsentData {
 
 /// [Provenance] Provenance of a resource is a record that describes entities
 @freezed
-class Provenance extends HiveObject with Resource, _$Provenance {
+class Provenance with Resource, _$Provenance {
   /// [Provenance] Provenance of a resource is a record that describes entities
   Provenance._();
 
@@ -2057,45 +1999,37 @@ class Provenance extends HiveObject with Resource, _$Provenance {
   /// [signature] A digital signature on the target Reference(s). The signer
   /// should match a Provenance.agent. The purpose of the signature is
   ///  indicated.
-  @HiveType(typeId: 89)
   factory Provenance({
     @Default(R4ResourceType.Provenance)
     @JsonKey(unknownEnumValue: R4ResourceType.Provenance)
 
-    /// [resourceType] This is a Provenance resource
-    @HiveField(0)
+        /// [resourceType] This is a Provenance resource
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @HiveField(1)
-        String? id,
+    String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    @HiveField(2)
-        FhirMeta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    @HiveField(3)
-        FhirUri? implicitRules,
+    FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
-    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    @HiveField(5)
-        FhirCode? language,
+    FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
-    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
@@ -2104,15 +2038,13 @@ class Provenance extends HiveObject with Resource, _$Provenance {
     /// contain sufficient detail to make it "clinically safe" for a human to just
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
-    @HiveField(7)
-        Narrative? text,
+    Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
-    @HiveField(8)
-        List<Resource>? contained,
+    List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -2121,7 +2053,6 @@ class Provenance extends HiveObject with Resource, _$Provenance {
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
     @JsonKey(name: 'extension')
-    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -2137,78 +2068,61 @@ class Provenance extends HiveObject with Resource, _$Provenance {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    @HiveField(10)
-        List<FhirExtension>? modifierExtension,
+    List<FhirExtension>? modifierExtension,
 
     /// [target] The Reference(s) that were generated or updated by  the activity
     /// described in this resource. A provenance can point to more than one target
     ///  if multiple resources were created/updated by the same activity.
-    @HiveField(11)
-        required List<Reference> target,
+    required List<Reference> target,
 
     /// [occurredPeriod] The period during which the activity occurred.
-    @HiveField(12)
-        Period? occurredPeriod,
+    Period? occurredPeriod,
 
     /// [occurredDateTime] The period during which the activity occurred.
-    @HiveField(13)
-        FhirDateTime? occurredDateTime,
+    FhirDateTime? occurredDateTime,
 
     /// [occurredDateTimeElement] Extensions for occurredDateTime
     @JsonKey(name: '_occurredDateTime')
-    @HiveField(14)
         Element? occurredDateTimeElement,
 
     /// [recorded] The instant of time at which the activity was recorded.
-    @HiveField(15)
-        Instant? recorded,
+    FhirInstant? recorded,
 
     /// [recordedElement] Extensions for recorded
     @JsonKey(name: '_recorded')
-    @HiveField(16)
         Element? recordedElement,
 
     /// [policy] Policy or plan the activity was defined by. Typically, a single
     /// activity may have multiple applicable policy documents, such as patient
     ///  consent, guarantor funding, etc.
-    @HiveField(17)
-        List<FhirUri>? policy,
+    List<FhirUri>? policy,
 
     /// [policyElement] Extensions for policy
     @JsonKey(name: '_policy')
-    @HiveField(18)
         List<Element?>? policyElement,
 
     /// [location] Where the activity occurred, if relevant.
-    @HiveField(19)
-        Reference? location,
+    Reference? location,
 
     /// [reason] The reason that the activity was taking place.
-    @HiveField(20)
-        List<CodeableConcept>? reason,
+    List<CodeableConcept>? reason,
 
     /// [activity] An activity is something that occurs over a period of time and
-    @HiveField(21)
-
     /// acts upon or with entities; it may include consuming, processing,
     ///  transforming, modifying, relocating, using, or generating entities.
-    @HiveField(22)
-        CodeableConcept? activity,
+    CodeableConcept? activity,
 
     /// [agent] An actor taking a role in an activity  for which it can be
     ///  assigned some degree of responsibility for the activity taking place.
-    @HiveField(23)
-        required List<ProvenanceAgent> agent,
+    required List<ProvenanceAgent> agent,
 
     /// [entity] An entity used in this activity.
-    @HiveField(24)
-        List<ProvenanceEntity>? entity,
+    List<ProvenanceEntity>? entity,
 
     /// [signature] A digital signature on the target Reference(s). The signer
     /// should match a Provenance.agent. The purpose of the signature is
     ///  indicated.
-    @HiveField(25)
-        List<Signature>? signature,
+    List<Signature>? signature,
   }) = _Provenance;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument

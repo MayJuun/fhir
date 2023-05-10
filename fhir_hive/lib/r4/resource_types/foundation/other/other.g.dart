@@ -3,906 +3,6 @@
 part of 'other.dart';
 
 // **************************************************************************
-// TypeAdapterGenerator
-// **************************************************************************
-
-class BasicAdapter extends TypeAdapter<_$_Basic> {
-  @override
-  final int typeId = 90;
-
-  @override
-  _$_Basic read(BinaryReader reader) {
-    final numOfFields = reader.readByte();
-    final fields = <int, dynamic>{
-      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
-    };
-    return _$_Basic(
-      resourceType: fields[0] as R4ResourceType,
-      id: fields[1] as String?,
-      meta: fields[2] as FhirMeta?,
-      implicitRules: fields[3] as FhirUri?,
-      implicitRulesElement: fields[4] as Element?,
-      language: fields[5] as Code?,
-      languageElement: fields[6] as Element?,
-      text: fields[7] as Narrative?,
-      contained: (fields[8] as List?)?.cast<Resource>(),
-      extension_: (fields[9] as List?)?.cast<FhirExtension>(),
-      modifierExtension: (fields[10] as List?)?.cast<FhirExtension>(),
-      identifier: (fields[11] as List?)?.cast<Identifier>(),
-      code: fields[13] as CodeableConcept,
-      subject: fields[14] as Reference?,
-      created: fields[15] as Date?,
-      createdElement: fields[16] as Element?,
-      author: fields[17] as Reference?,
-    );
-  }
-
-  @override
-  void write(BinaryWriter writer, _$_Basic obj) {
-    writer
-      ..writeByte(17)
-      ..writeByte(0)
-      ..write(obj.resourceType)
-      ..writeByte(1)
-      ..write(obj.id)
-      ..writeByte(2)
-      ..write(obj.meta)
-      ..writeByte(3)
-      ..write(obj.implicitRules)
-      ..writeByte(4)
-      ..write(obj.implicitRulesElement)
-      ..writeByte(5)
-      ..write(obj.language)
-      ..writeByte(6)
-      ..write(obj.languageElement)
-      ..writeByte(7)
-      ..write(obj.text)
-      ..writeByte(13)
-      ..write(obj.code)
-      ..writeByte(14)
-      ..write(obj.subject)
-      ..writeByte(15)
-      ..write(obj.created)
-      ..writeByte(16)
-      ..write(obj.createdElement)
-      ..writeByte(17)
-      ..write(obj.author)
-      ..writeByte(8)
-      ..write(obj.contained)
-      ..writeByte(9)
-      ..write(obj.extension_)
-      ..writeByte(10)
-      ..write(obj.modifierExtension)
-      ..writeByte(11)
-      ..write(obj.identifier);
-  }
-
-  @override
-  int get hashCode => typeId.hashCode;
-
-  @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is BasicAdapter &&
-          runtimeType == other.runtimeType &&
-          typeId == other.typeId;
-}
-
-class BinaryAdapter extends TypeAdapter<_$_Binary> {
-  @override
-  final int typeId = 91;
-
-  @override
-  _$_Binary read(BinaryReader reader) {
-    final numOfFields = reader.readByte();
-    final fields = <int, dynamic>{
-      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
-    };
-    return _$_Binary(
-      resourceType: fields[0] as R4ResourceType,
-      id: fields[1] as String?,
-      meta: fields[2] as FhirMeta?,
-      implicitRules: fields[3] as FhirUri?,
-      implicitRulesElement: fields[4] as Element?,
-      language: fields[5] as Code?,
-      languageElement: fields[6] as Element?,
-      contentType: fields[7] as Code?,
-      contentTypeElement: fields[8] as Element?,
-      securityContext: fields[9] as Reference?,
-      data: fields[11] as Base64Binary?,
-      dataElement: fields[12] as Element?,
-    );
-  }
-
-  @override
-  void write(BinaryWriter writer, _$_Binary obj) {
-    writer
-      ..writeByte(12)
-      ..writeByte(0)
-      ..write(obj.resourceType)
-      ..writeByte(1)
-      ..write(obj.id)
-      ..writeByte(2)
-      ..write(obj.meta)
-      ..writeByte(3)
-      ..write(obj.implicitRules)
-      ..writeByte(4)
-      ..write(obj.implicitRulesElement)
-      ..writeByte(5)
-      ..write(obj.language)
-      ..writeByte(6)
-      ..write(obj.languageElement)
-      ..writeByte(7)
-      ..write(obj.contentType)
-      ..writeByte(8)
-      ..write(obj.contentTypeElement)
-      ..writeByte(9)
-      ..write(obj.securityContext)
-      ..writeByte(11)
-      ..write(obj.data)
-      ..writeByte(12)
-      ..write(obj.dataElement);
-  }
-
-  @override
-  int get hashCode => typeId.hashCode;
-
-  @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is BinaryAdapter &&
-          runtimeType == other.runtimeType &&
-          typeId == other.typeId;
-}
-
-class BundleAdapter extends TypeAdapter<_$_Bundle> {
-  @override
-  final int typeId = 92;
-
-  @override
-  _$_Bundle read(BinaryReader reader) {
-    final numOfFields = reader.readByte();
-    final fields = <int, dynamic>{
-      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
-    };
-    return _$_Bundle(
-      resourceType: fields[0] as R4ResourceType,
-      id: fields[1] as String?,
-      meta: fields[2] as FhirMeta?,
-      implicitRules: fields[3] as FhirUri?,
-      implicitRulesElement: fields[4] as Element?,
-      language: fields[5] as Code?,
-      languageElement: fields[6] as Element?,
-      identifier: fields[7] as Identifier?,
-      type: fields[8] as Code?,
-      typeElement: fields[9] as Element?,
-      timestamp: fields[10] as Instant?,
-      timestampElement: fields[11] as Element?,
-      total: fields[12] as UnsignedInt?,
-      totalElement: fields[13] as Element?,
-      link: (fields[14] as List?)?.cast<BundleLink>(),
-      entry: (fields[15] as List?)?.cast<BundleEntry>(),
-      signature: fields[16] as Signature?,
-    );
-  }
-
-  @override
-  void write(BinaryWriter writer, _$_Bundle obj) {
-    writer
-      ..writeByte(17)
-      ..writeByte(0)
-      ..write(obj.resourceType)
-      ..writeByte(1)
-      ..write(obj.id)
-      ..writeByte(2)
-      ..write(obj.meta)
-      ..writeByte(3)
-      ..write(obj.implicitRules)
-      ..writeByte(4)
-      ..write(obj.implicitRulesElement)
-      ..writeByte(5)
-      ..write(obj.language)
-      ..writeByte(6)
-      ..write(obj.languageElement)
-      ..writeByte(7)
-      ..write(obj.identifier)
-      ..writeByte(8)
-      ..write(obj.type)
-      ..writeByte(9)
-      ..write(obj.typeElement)
-      ..writeByte(10)
-      ..write(obj.timestamp)
-      ..writeByte(11)
-      ..write(obj.timestampElement)
-      ..writeByte(12)
-      ..write(obj.total)
-      ..writeByte(13)
-      ..write(obj.totalElement)
-      ..writeByte(16)
-      ..write(obj.signature)
-      ..writeByte(14)
-      ..write(obj.link)
-      ..writeByte(15)
-      ..write(obj.entry);
-  }
-
-  @override
-  int get hashCode => typeId.hashCode;
-
-  @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is BundleAdapter &&
-          runtimeType == other.runtimeType &&
-          typeId == other.typeId;
-}
-
-class LinkageAdapter extends TypeAdapter<_$_Linkage> {
-  @override
-  final int typeId = 93;
-
-  @override
-  _$_Linkage read(BinaryReader reader) {
-    final numOfFields = reader.readByte();
-    final fields = <int, dynamic>{
-      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
-    };
-    return _$_Linkage(
-      resourceType: fields[0] as R4ResourceType,
-      id: fields[1] as String?,
-      meta: fields[2] as FhirMeta?,
-      implicitRules: fields[3] as FhirUri?,
-      implicitRulesElement: fields[4] as Element?,
-      language: fields[5] as Code?,
-      languageElement: fields[6] as Element?,
-      text: fields[7] as Narrative?,
-      contained: (fields[8] as List?)?.cast<Resource>(),
-      extension_: (fields[9] as List?)?.cast<FhirExtension>(),
-      modifierExtension: (fields[10] as List?)?.cast<FhirExtension>(),
-      active: fields[11] as Boolean?,
-      activeElement: fields[12] as Element?,
-      author: fields[13] as Reference?,
-      item: (fields[14] as List).cast<LinkageItem>(),
-    );
-  }
-
-  @override
-  void write(BinaryWriter writer, _$_Linkage obj) {
-    writer
-      ..writeByte(15)
-      ..writeByte(0)
-      ..write(obj.resourceType)
-      ..writeByte(1)
-      ..write(obj.id)
-      ..writeByte(2)
-      ..write(obj.meta)
-      ..writeByte(3)
-      ..write(obj.implicitRules)
-      ..writeByte(4)
-      ..write(obj.implicitRulesElement)
-      ..writeByte(5)
-      ..write(obj.language)
-      ..writeByte(6)
-      ..write(obj.languageElement)
-      ..writeByte(7)
-      ..write(obj.text)
-      ..writeByte(11)
-      ..write(obj.active)
-      ..writeByte(12)
-      ..write(obj.activeElement)
-      ..writeByte(13)
-      ..write(obj.author)
-      ..writeByte(8)
-      ..write(obj.contained)
-      ..writeByte(9)
-      ..write(obj.extension_)
-      ..writeByte(10)
-      ..write(obj.modifierExtension)
-      ..writeByte(14)
-      ..write(obj.item);
-  }
-
-  @override
-  int get hashCode => typeId.hashCode;
-
-  @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is LinkageAdapter &&
-          runtimeType == other.runtimeType &&
-          typeId == other.typeId;
-}
-
-class MessageHeaderAdapter extends TypeAdapter<_$_MessageHeader> {
-  @override
-  final int typeId = 94;
-
-  @override
-  _$_MessageHeader read(BinaryReader reader) {
-    final numOfFields = reader.readByte();
-    final fields = <int, dynamic>{
-      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
-    };
-    return _$_MessageHeader(
-      resourceType: fields[0] as R4ResourceType,
-      id: fields[1] as String?,
-      meta: fields[2] as FhirMeta?,
-      implicitRules: fields[3] as FhirUri?,
-      implicitRulesElement: fields[4] as Element?,
-      language: fields[5] as Code?,
-      languageElement: fields[6] as Element?,
-      text: fields[7] as Narrative?,
-      contained: (fields[8] as List?)?.cast<Resource>(),
-      extension_: (fields[9] as List?)?.cast<FhirExtension>(),
-      modifierExtension: (fields[10] as List?)?.cast<FhirExtension>(),
-      eventCoding: fields[11] as Coding?,
-      eventUri: fields[12] as FhirUri?,
-      eventUriElement: fields[13] as Element?,
-      destination: (fields[14] as List?)?.cast<MessageHeaderDestination>(),
-      sender: fields[15] as Reference?,
-      enterer: fields[16] as Reference?,
-      author: fields[17] as Reference?,
-      source: fields[18] as MessageHeaderSource,
-      responsible: fields[19] as Reference?,
-      reason: fields[20] as CodeableConcept?,
-      response: fields[21] as MessageHeaderResponse?,
-      focus: (fields[22] as List?)?.cast<Reference>(),
-      definition: fields[23] as Canonical?,
-    );
-  }
-
-  @override
-  void write(BinaryWriter writer, _$_MessageHeader obj) {
-    writer
-      ..writeByte(24)
-      ..writeByte(0)
-      ..write(obj.resourceType)
-      ..writeByte(1)
-      ..write(obj.id)
-      ..writeByte(2)
-      ..write(obj.meta)
-      ..writeByte(3)
-      ..write(obj.implicitRules)
-      ..writeByte(4)
-      ..write(obj.implicitRulesElement)
-      ..writeByte(5)
-      ..write(obj.language)
-      ..writeByte(6)
-      ..write(obj.languageElement)
-      ..writeByte(7)
-      ..write(obj.text)
-      ..writeByte(11)
-      ..write(obj.eventCoding)
-      ..writeByte(12)
-      ..write(obj.eventUri)
-      ..writeByte(13)
-      ..write(obj.eventUriElement)
-      ..writeByte(15)
-      ..write(obj.sender)
-      ..writeByte(16)
-      ..write(obj.enterer)
-      ..writeByte(17)
-      ..write(obj.author)
-      ..writeByte(18)
-      ..write(obj.source)
-      ..writeByte(19)
-      ..write(obj.responsible)
-      ..writeByte(20)
-      ..write(obj.reason)
-      ..writeByte(21)
-      ..write(obj.response)
-      ..writeByte(23)
-      ..write(obj.definition)
-      ..writeByte(8)
-      ..write(obj.contained)
-      ..writeByte(9)
-      ..write(obj.extension_)
-      ..writeByte(10)
-      ..write(obj.modifierExtension)
-      ..writeByte(14)
-      ..write(obj.destination)
-      ..writeByte(22)
-      ..write(obj.focus);
-  }
-
-  @override
-  int get hashCode => typeId.hashCode;
-
-  @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is MessageHeaderAdapter &&
-          runtimeType == other.runtimeType &&
-          typeId == other.typeId;
-}
-
-class OperationOutcomeAdapter extends TypeAdapter<_$_OperationOutcome> {
-  @override
-  final int typeId = 95;
-
-  @override
-  _$_OperationOutcome read(BinaryReader reader) {
-    final numOfFields = reader.readByte();
-    final fields = <int, dynamic>{
-      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
-    };
-    return _$_OperationOutcome(
-      resourceType: fields[0] as R4ResourceType,
-      id: fields[1] as String?,
-      meta: fields[2] as FhirMeta?,
-      implicitRules: fields[3] as FhirUri?,
-      implicitRulesElement: fields[4] as Element?,
-      language: fields[5] as Code?,
-      languageElement: fields[6] as Element?,
-      text: fields[7] as Narrative?,
-      contained: (fields[8] as List?)?.cast<Resource>(),
-      extension_: (fields[9] as List?)?.cast<FhirExtension>(),
-      modifierExtension: (fields[10] as List?)?.cast<FhirExtension>(),
-      issue: (fields[11] as List).cast<OperationOutcomeIssue>(),
-    );
-  }
-
-  @override
-  void write(BinaryWriter writer, _$_OperationOutcome obj) {
-    writer
-      ..writeByte(12)
-      ..writeByte(0)
-      ..write(obj.resourceType)
-      ..writeByte(1)
-      ..write(obj.id)
-      ..writeByte(2)
-      ..write(obj.meta)
-      ..writeByte(3)
-      ..write(obj.implicitRules)
-      ..writeByte(4)
-      ..write(obj.implicitRulesElement)
-      ..writeByte(5)
-      ..write(obj.language)
-      ..writeByte(6)
-      ..write(obj.languageElement)
-      ..writeByte(7)
-      ..write(obj.text)
-      ..writeByte(8)
-      ..write(obj.contained)
-      ..writeByte(9)
-      ..write(obj.extension_)
-      ..writeByte(10)
-      ..write(obj.modifierExtension)
-      ..writeByte(11)
-      ..write(obj.issue);
-  }
-
-  @override
-  int get hashCode => typeId.hashCode;
-
-  @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is OperationOutcomeAdapter &&
-          runtimeType == other.runtimeType &&
-          typeId == other.typeId;
-}
-
-class ParametersAdapter extends TypeAdapter<_$_Parameters> {
-  @override
-  final int typeId = 96;
-
-  @override
-  _$_Parameters read(BinaryReader reader) {
-    final numOfFields = reader.readByte();
-    final fields = <int, dynamic>{
-      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
-    };
-    return _$_Parameters(
-      resourceType: fields[0] as R4ResourceType,
-      id: fields[1] as String?,
-      meta: fields[2] as FhirMeta?,
-      implicitRules: fields[3] as FhirUri?,
-      implicitRulesElement: fields[4] as Element?,
-      language: fields[5] as Code?,
-      languageElement: fields[6] as Element?,
-      parameter: (fields[7] as List?)?.cast<ParametersParameter>(),
-    );
-  }
-
-  @override
-  void write(BinaryWriter writer, _$_Parameters obj) {
-    writer
-      ..writeByte(8)
-      ..writeByte(0)
-      ..write(obj.resourceType)
-      ..writeByte(1)
-      ..write(obj.id)
-      ..writeByte(2)
-      ..write(obj.meta)
-      ..writeByte(3)
-      ..write(obj.implicitRules)
-      ..writeByte(4)
-      ..write(obj.implicitRulesElement)
-      ..writeByte(5)
-      ..write(obj.language)
-      ..writeByte(6)
-      ..write(obj.languageElement)
-      ..writeByte(7)
-      ..write(obj.parameter);
-  }
-
-  @override
-  int get hashCode => typeId.hashCode;
-
-  @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is ParametersAdapter &&
-          runtimeType == other.runtimeType &&
-          typeId == other.typeId;
-}
-
-class SubscriptionAdapter extends TypeAdapter<_$_Subscription> {
-  @override
-  final int typeId = 97;
-
-  @override
-  _$_Subscription read(BinaryReader reader) {
-    final numOfFields = reader.readByte();
-    final fields = <int, dynamic>{
-      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
-    };
-    return _$_Subscription(
-      resourceType: fields[0] as R4ResourceType,
-      id: fields[1] as String?,
-      meta: fields[2] as FhirMeta?,
-      implicitRules: fields[3] as FhirUri?,
-      implicitRulesElement: fields[4] as Element?,
-      language: fields[5] as Code?,
-      languageElement: fields[6] as Element?,
-      text: fields[7] as Narrative?,
-      contained: (fields[8] as List?)?.cast<Resource>(),
-      extension_: (fields[9] as List?)?.cast<FhirExtension>(),
-      modifierExtension: (fields[10] as List?)?.cast<FhirExtension>(),
-      status: fields[11] as Code?,
-      statusElement: fields[12] as Element?,
-      contact: (fields[13] as List?)?.cast<ContactPoint>(),
-      end: fields[14] as Instant?,
-      endElement: fields[15] as Element?,
-      reason: fields[16] as String?,
-      reasonElement: fields[17] as Element?,
-      criteria: fields[18] as String?,
-      criteriaElement: fields[19] as Element?,
-      error: fields[20] as String?,
-      errorElement: fields[21] as Element?,
-      channel: fields[22] as SubscriptionChannel,
-    );
-  }
-
-  @override
-  void write(BinaryWriter writer, _$_Subscription obj) {
-    writer
-      ..writeByte(23)
-      ..writeByte(0)
-      ..write(obj.resourceType)
-      ..writeByte(1)
-      ..write(obj.id)
-      ..writeByte(2)
-      ..write(obj.meta)
-      ..writeByte(3)
-      ..write(obj.implicitRules)
-      ..writeByte(4)
-      ..write(obj.implicitRulesElement)
-      ..writeByte(5)
-      ..write(obj.language)
-      ..writeByte(6)
-      ..write(obj.languageElement)
-      ..writeByte(7)
-      ..write(obj.text)
-      ..writeByte(11)
-      ..write(obj.status)
-      ..writeByte(12)
-      ..write(obj.statusElement)
-      ..writeByte(14)
-      ..write(obj.end)
-      ..writeByte(15)
-      ..write(obj.endElement)
-      ..writeByte(16)
-      ..write(obj.reason)
-      ..writeByte(17)
-      ..write(obj.reasonElement)
-      ..writeByte(18)
-      ..write(obj.criteria)
-      ..writeByte(19)
-      ..write(obj.criteriaElement)
-      ..writeByte(20)
-      ..write(obj.error)
-      ..writeByte(21)
-      ..write(obj.errorElement)
-      ..writeByte(22)
-      ..write(obj.channel)
-      ..writeByte(8)
-      ..write(obj.contained)
-      ..writeByte(9)
-      ..write(obj.extension_)
-      ..writeByte(10)
-      ..write(obj.modifierExtension)
-      ..writeByte(13)
-      ..write(obj.contact);
-  }
-
-  @override
-  int get hashCode => typeId.hashCode;
-
-  @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is SubscriptionAdapter &&
-          runtimeType == other.runtimeType &&
-          typeId == other.typeId;
-}
-
-class SubscriptionStatusAdapter extends TypeAdapter<_$_SubscriptionStatus> {
-  @override
-  final int typeId = 98;
-
-  @override
-  _$_SubscriptionStatus read(BinaryReader reader) {
-    final numOfFields = reader.readByte();
-    final fields = <int, dynamic>{
-      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
-    };
-    return _$_SubscriptionStatus(
-      resourceType: fields[0] as R4ResourceType,
-      id: fields[1] as String?,
-      meta: fields[2] as FhirMeta?,
-      implicitRules: fields[3] as FhirUri?,
-      implicitRulesElement: fields[4] as Element?,
-      language: fields[5] as Code?,
-      languageElement: fields[6] as Element?,
-      text: fields[7] as Narrative?,
-      contained: (fields[8] as List?)?.cast<Resource>(),
-      extension_: (fields[9] as List?)?.cast<FhirExtension>(),
-      modifierExtension: (fields[10] as List?)?.cast<FhirExtension>(),
-      status: fields[11] as Code?,
-      statusElement: fields[12] as Element?,
-      type: fields[13] as Code?,
-      typeElement: fields[14] as Element?,
-      eventsSinceSubscriptionStart: fields[15] as Integer64?,
-      eventsSinceSubscriptionStartElement: fields[16] as Element?,
-      notificationEvent:
-          (fields[17] as List?)?.cast<SubscriptionStatusNotificationEvent>(),
-      subscription: fields[18] as Reference,
-      topic: fields[19] as Canonical?,
-      error: (fields[20] as List?)?.cast<CodeableConcept>(),
-    );
-  }
-
-  @override
-  void write(BinaryWriter writer, _$_SubscriptionStatus obj) {
-    writer
-      ..writeByte(21)
-      ..writeByte(0)
-      ..write(obj.resourceType)
-      ..writeByte(1)
-      ..write(obj.id)
-      ..writeByte(2)
-      ..write(obj.meta)
-      ..writeByte(3)
-      ..write(obj.implicitRules)
-      ..writeByte(4)
-      ..write(obj.implicitRulesElement)
-      ..writeByte(5)
-      ..write(obj.language)
-      ..writeByte(6)
-      ..write(obj.languageElement)
-      ..writeByte(7)
-      ..write(obj.text)
-      ..writeByte(11)
-      ..write(obj.status)
-      ..writeByte(12)
-      ..write(obj.statusElement)
-      ..writeByte(13)
-      ..write(obj.type)
-      ..writeByte(14)
-      ..write(obj.typeElement)
-      ..writeByte(15)
-      ..write(obj.eventsSinceSubscriptionStart)
-      ..writeByte(16)
-      ..write(obj.eventsSinceSubscriptionStartElement)
-      ..writeByte(18)
-      ..write(obj.subscription)
-      ..writeByte(19)
-      ..write(obj.topic)
-      ..writeByte(8)
-      ..write(obj.contained)
-      ..writeByte(9)
-      ..write(obj.extension_)
-      ..writeByte(10)
-      ..write(obj.modifierExtension)
-      ..writeByte(17)
-      ..write(obj.notificationEvent)
-      ..writeByte(20)
-      ..write(obj.error);
-  }
-
-  @override
-  int get hashCode => typeId.hashCode;
-
-  @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is SubscriptionStatusAdapter &&
-          runtimeType == other.runtimeType &&
-          typeId == other.typeId;
-}
-
-class SubscriptionTopicAdapter extends TypeAdapter<_$_SubscriptionTopic> {
-  @override
-  final int typeId = 99;
-
-  @override
-  _$_SubscriptionTopic read(BinaryReader reader) {
-    final numOfFields = reader.readByte();
-    final fields = <int, dynamic>{
-      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
-    };
-    return _$_SubscriptionTopic(
-      resourceType: fields[0] as R4ResourceType,
-      id: fields[1] as String?,
-      meta: fields[2] as FhirMeta?,
-      implicitRules: fields[3] as FhirUri?,
-      implicitRulesElement: fields[4] as Element?,
-      language: fields[5] as Code?,
-      languageElement: fields[6] as Element?,
-      text: fields[7] as Narrative?,
-      contained: (fields[8] as List?)?.cast<Resource>(),
-      extension_: (fields[9] as List?)?.cast<FhirExtension>(),
-      modifierExtension: (fields[10] as List?)?.cast<FhirExtension>(),
-      url: fields[11] as FhirUri?,
-      urlElement: fields[12] as Element?,
-      identifier: (fields[13] as List?)?.cast<Identifier>(),
-      version: fields[14] as String?,
-      versionElement: fields[15] as Element?,
-      title: fields[16] as String?,
-      titleElement: fields[17] as Element?,
-      derivedFrom: (fields[18] as List?)?.cast<Canonical>(),
-      status: fields[19] as Code?,
-      statusElement: fields[20] as Element?,
-      experimental: fields[21] as Boolean?,
-      experimentalElement: fields[22] as Element?,
-      date: fields[23] as FhirDateTime?,
-      dateElement: fields[24] as Element?,
-      publisher: fields[25] as String?,
-      publisherElement: fields[26] as Element?,
-      contact: (fields[27] as List?)?.cast<ContactDetail>(),
-      description: fields[28] as Markdown?,
-      descriptionElement: fields[29] as Element?,
-      useContext: (fields[30] as List?)?.cast<UsageContext>(),
-      jurisdiction: (fields[31] as List?)?.cast<CodeableConcept>(),
-      purpose: fields[32] as Markdown?,
-      purposeElement: fields[33] as Element?,
-      copyright: fields[34] as Markdown?,
-      copyrightElement: fields[35] as Element?,
-      approvalDate: fields[36] as Date?,
-      approvalDateElement: fields[37] as Element?,
-      lastReviewDate: fields[38] as Date?,
-      lastReviewDateElement: fields[39] as Element?,
-      effectivePeriod: fields[40] as Period?,
-      resourceTrigger:
-          (fields[41] as List?)?.cast<SubscriptionTopicResourceTrigger>(),
-      eventTrigger:
-          (fields[42] as List?)?.cast<SubscriptionTopicEventTrigger>(),
-      canFilterBy: (fields[43] as List?)?.cast<SubscriptionTopicCanFilterBy>(),
-      notificationShape:
-          (fields[44] as List?)?.cast<SubscriptionTopicNotificationShape>(),
-    );
-  }
-
-  @override
-  void write(BinaryWriter writer, _$_SubscriptionTopic obj) {
-    writer
-      ..writeByte(45)
-      ..writeByte(0)
-      ..write(obj.resourceType)
-      ..writeByte(1)
-      ..write(obj.id)
-      ..writeByte(2)
-      ..write(obj.meta)
-      ..writeByte(3)
-      ..write(obj.implicitRules)
-      ..writeByte(4)
-      ..write(obj.implicitRulesElement)
-      ..writeByte(5)
-      ..write(obj.language)
-      ..writeByte(6)
-      ..write(obj.languageElement)
-      ..writeByte(7)
-      ..write(obj.text)
-      ..writeByte(11)
-      ..write(obj.url)
-      ..writeByte(12)
-      ..write(obj.urlElement)
-      ..writeByte(14)
-      ..write(obj.version)
-      ..writeByte(15)
-      ..write(obj.versionElement)
-      ..writeByte(16)
-      ..write(obj.title)
-      ..writeByte(17)
-      ..write(obj.titleElement)
-      ..writeByte(19)
-      ..write(obj.status)
-      ..writeByte(20)
-      ..write(obj.statusElement)
-      ..writeByte(21)
-      ..write(obj.experimental)
-      ..writeByte(22)
-      ..write(obj.experimentalElement)
-      ..writeByte(23)
-      ..write(obj.date)
-      ..writeByte(24)
-      ..write(obj.dateElement)
-      ..writeByte(25)
-      ..write(obj.publisher)
-      ..writeByte(26)
-      ..write(obj.publisherElement)
-      ..writeByte(28)
-      ..write(obj.description)
-      ..writeByte(29)
-      ..write(obj.descriptionElement)
-      ..writeByte(32)
-      ..write(obj.purpose)
-      ..writeByte(33)
-      ..write(obj.purposeElement)
-      ..writeByte(34)
-      ..write(obj.copyright)
-      ..writeByte(35)
-      ..write(obj.copyrightElement)
-      ..writeByte(36)
-      ..write(obj.approvalDate)
-      ..writeByte(37)
-      ..write(obj.approvalDateElement)
-      ..writeByte(38)
-      ..write(obj.lastReviewDate)
-      ..writeByte(39)
-      ..write(obj.lastReviewDateElement)
-      ..writeByte(40)
-      ..write(obj.effectivePeriod)
-      ..writeByte(8)
-      ..write(obj.contained)
-      ..writeByte(9)
-      ..write(obj.extension_)
-      ..writeByte(10)
-      ..write(obj.modifierExtension)
-      ..writeByte(13)
-      ..write(obj.identifier)
-      ..writeByte(18)
-      ..write(obj.derivedFrom)
-      ..writeByte(27)
-      ..write(obj.contact)
-      ..writeByte(30)
-      ..write(obj.useContext)
-      ..writeByte(31)
-      ..write(obj.jurisdiction)
-      ..writeByte(41)
-      ..write(obj.resourceTrigger)
-      ..writeByte(42)
-      ..write(obj.eventTrigger)
-      ..writeByte(43)
-      ..write(obj.canFilterBy)
-      ..writeByte(44)
-      ..write(obj.notificationShape);
-  }
-
-  @override
-  int get hashCode => typeId.hashCode;
-
-  @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is SubscriptionTopicAdapter &&
-          runtimeType == other.runtimeType &&
-          typeId == other.typeId;
-}
-
-// **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
@@ -922,7 +22,7 @@ _$_Basic _$$_BasicFromJson(Map<String, dynamic> json) => _$_Basic(
           ? null
           : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
       language:
-          json['language'] == null ? null : Code.fromJson(json['language']),
+          json['language'] == null ? null : FhirCode.fromJson(json['language']),
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -945,7 +45,8 @@ _$_Basic _$$_BasicFromJson(Map<String, dynamic> json) => _$_Basic(
       subject: json['subject'] == null
           ? null
           : Reference.fromJson(json['subject'] as Map<String, dynamic>),
-      created: json['created'] == null ? null : Date.fromJson(json['created']),
+      created:
+          json['created'] == null ? null : FhirDate.fromJson(json['created']),
       createdElement: json['_created'] == null
           ? null
           : Element.fromJson(json['_created'] as Map<String, dynamic>),
@@ -1149,20 +250,21 @@ _$_Binary _$$_BinaryFromJson(Map<String, dynamic> json) => _$_Binary(
           ? null
           : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
       language:
-          json['language'] == null ? null : Code.fromJson(json['language']),
+          json['language'] == null ? null : FhirCode.fromJson(json['language']),
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),
       contentType: json['contentType'] == null
           ? null
-          : Code.fromJson(json['contentType']),
+          : FhirCode.fromJson(json['contentType']),
       contentTypeElement: json['_contentType'] == null
           ? null
           : Element.fromJson(json['_contentType'] as Map<String, dynamic>),
       securityContext: json['securityContext'] == null
           ? null
           : Reference.fromJson(json['securityContext'] as Map<String, dynamic>),
-      data: json['data'] == null ? null : Base64Binary.fromJson(json['data']),
+      data:
+          json['data'] == null ? null : FhirBase64Binary.fromJson(json['data']),
       dataElement: json['_data'] == null
           ? null
           : Element.fromJson(json['_data'] as Map<String, dynamic>),
@@ -1227,24 +329,26 @@ _$_Bundle _$$_BundleFromJson(Map<String, dynamic> json) => _$_Bundle(
           ? null
           : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
       language:
-          json['language'] == null ? null : Code.fromJson(json['language']),
+          json['language'] == null ? null : FhirCode.fromJson(json['language']),
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),
       identifier: json['identifier'] == null
           ? null
           : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
-      type: json['type'] == null ? null : Code.fromJson(json['type']),
+      type: json['type'] == null ? null : FhirCode.fromJson(json['type']),
       typeElement: json['_type'] == null
           ? null
           : Element.fromJson(json['_type'] as Map<String, dynamic>),
       timestamp: json['timestamp'] == null
           ? null
-          : Instant.fromJson(json['timestamp']),
+          : FhirInstant.fromJson(json['timestamp']),
       timestampElement: json['_timestamp'] == null
           ? null
           : Element.fromJson(json['_timestamp'] as Map<String, dynamic>),
-      total: json['total'] == null ? null : UnsignedInt.fromJson(json['total']),
+      total: json['total'] == null
+          ? null
+          : FhirUnsignedInt.fromJson(json['total']),
       totalElement: json['_total'] == null
           ? null
           : Element.fromJson(json['_total'] as Map<String, dynamic>),
@@ -1411,11 +515,11 @@ _$_BundleSearch _$$_BundleSearchFromJson(Map<String, dynamic> json) =>
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      mode: json['mode'] == null ? null : Code.fromJson(json['mode']),
+      mode: json['mode'] == null ? null : FhirCode.fromJson(json['mode']),
       modeElement: json['_mode'] == null
           ? null
           : Element.fromJson(json['_mode'] as Map<String, dynamic>),
-      score: json['score'] == null ? null : Decimal.fromJson(json['score']),
+      score: json['score'] == null ? null : FhirDecimal.fromJson(json['score']),
       scoreElement: json['_score'] == null
           ? null
           : Element.fromJson(json['_score'] as Map<String, dynamic>),
@@ -1451,7 +555,7 @@ _$_BundleRequest _$$_BundleRequestFromJson(Map<String, dynamic> json) =>
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      method: json['method'] == null ? null : Code.fromJson(json['method']),
+      method: json['method'] == null ? null : FhirCode.fromJson(json['method']),
       methodElement: json['_method'] == null
           ? null
           : Element.fromJson(json['_method'] as Map<String, dynamic>),
@@ -1465,7 +569,7 @@ _$_BundleRequest _$$_BundleRequestFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_ifNoneMatch'] as Map<String, dynamic>),
       ifModifiedSince: json['ifModifiedSince'] == null
           ? null
-          : Instant.fromJson(json['ifModifiedSince']),
+          : FhirInstant.fromJson(json['ifModifiedSince']),
       ifModifiedSinceElement: json['_ifModifiedSince'] == null
           ? null
           : Element.fromJson(json['_ifModifiedSince'] as Map<String, dynamic>),
@@ -1532,7 +636,7 @@ _$_BundleResponse _$$_BundleResponseFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_etag'] as Map<String, dynamic>),
       lastModified: json['lastModified'] == null
           ? null
-          : Instant.fromJson(json['lastModified']),
+          : FhirInstant.fromJson(json['lastModified']),
       lastModifiedElement: json['_lastModified'] == null
           ? null
           : Element.fromJson(json['_lastModified'] as Map<String, dynamic>),
@@ -1583,7 +687,7 @@ _$_Linkage _$$_LinkageFromJson(Map<String, dynamic> json) => _$_Linkage(
           ? null
           : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
       language:
-          json['language'] == null ? null : Code.fromJson(json['language']),
+          json['language'] == null ? null : FhirCode.fromJson(json['language']),
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -1599,7 +703,8 @@ _$_Linkage _$$_LinkageFromJson(Map<String, dynamic> json) => _$_Linkage(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      active: json['active'] == null ? null : Boolean.fromJson(json['active']),
+      active:
+          json['active'] == null ? null : FhirBoolean.fromJson(json['active']),
       activeElement: json['_active'] == null
           ? null
           : Element.fromJson(json['_active'] as Map<String, dynamic>),
@@ -1651,7 +756,7 @@ _$_LinkageItem _$$_LinkageItemFromJson(Map<String, dynamic> json) =>
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      type: json['type'] == null ? null : Code.fromJson(json['type']),
+      type: json['type'] == null ? null : FhirCode.fromJson(json['type']),
       typeElement: json['_type'] == null
           ? null
           : Element.fromJson(json['_type'] as Map<String, dynamic>),
@@ -1695,7 +800,7 @@ _$_MessageHeader _$$_MessageHeaderFromJson(Map<String, dynamic> json) =>
           ? null
           : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
       language:
-          json['language'] == null ? null : Code.fromJson(json['language']),
+          json['language'] == null ? null : FhirCode.fromJson(json['language']),
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -1749,7 +854,7 @@ _$_MessageHeader _$$_MessageHeaderFromJson(Map<String, dynamic> json) =>
           .toList(),
       definition: json['definition'] == null
           ? null
-          : Canonical.fromJson(json['definition']),
+          : FhirCanonical.fromJson(json['definition']),
     );
 
 Map<String, dynamic> _$$_MessageHeaderToJson(_$_MessageHeader instance) {
@@ -1913,12 +1018,13 @@ _$_MessageHeaderResponse _$$_MessageHeaderResponseFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      identifier:
-          json['identifier'] == null ? null : Id.fromJson(json['identifier']),
+      identifier: json['identifier'] == null
+          ? null
+          : FhirId.fromJson(json['identifier']),
       identifierElement: json['_identifier'] == null
           ? null
           : Element.fromJson(json['_identifier'] as Map<String, dynamic>),
-      code: json['code'] == null ? null : Code.fromJson(json['code']),
+      code: json['code'] == null ? null : FhirCode.fromJson(json['code']),
       codeElement: json['_code'] == null
           ? null
           : Element.fromJson(json['_code'] as Map<String, dynamic>),
@@ -1967,7 +1073,7 @@ _$_OperationOutcome _$$_OperationOutcomeFromJson(Map<String, dynamic> json) =>
           ? null
           : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
       language:
-          json['language'] == null ? null : Code.fromJson(json['language']),
+          json['language'] == null ? null : FhirCode.fromJson(json['language']),
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -2027,11 +1133,11 @@ _$_OperationOutcomeIssue _$$_OperationOutcomeIssueFromJson(
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
       severity:
-          json['severity'] == null ? null : Code.fromJson(json['severity']),
+          json['severity'] == null ? null : FhirCode.fromJson(json['severity']),
       severityElement: json['_severity'] == null
           ? null
           : Element.fromJson(json['_severity'] as Map<String, dynamic>),
-      code: json['code'] == null ? null : Code.fromJson(json['code']),
+      code: json['code'] == null ? null : FhirCode.fromJson(json['code']),
       codeElement: json['_code'] == null
           ? null
           : Element.fromJson(json['_code'] as Map<String, dynamic>),
@@ -2106,7 +1212,7 @@ _$_Parameters _$$_ParametersFromJson(Map<String, dynamic> json) =>
           ? null
           : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
       language:
-          json['language'] == null ? null : Code.fromJson(json['language']),
+          json['language'] == null ? null : FhirCode.fromJson(json['language']),
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -2171,30 +1277,32 @@ _$_ParametersParameter _$$_ParametersParameterFromJson(
           : Element.fromJson(json['_name'] as Map<String, dynamic>),
       valueBase64Binary: json['valueBase64Binary'] == null
           ? null
-          : Base64Binary.fromJson(json['valueBase64Binary']),
+          : FhirBase64Binary.fromJson(json['valueBase64Binary']),
       valueBase64BinaryElement: json['_valueBase64Binary'] == null
           ? null
           : Element.fromJson(
               json['_valueBase64Binary'] as Map<String, dynamic>),
       valueBoolean: json['valueBoolean'] == null
           ? null
-          : Boolean.fromJson(json['valueBoolean']),
+          : FhirBoolean.fromJson(json['valueBoolean']),
       valueBooleanElement: json['_valueBoolean'] == null
           ? null
           : Element.fromJson(json['_valueBoolean'] as Map<String, dynamic>),
       valueCanonical: json['valueCanonical'] == null
           ? null
-          : Canonical.fromJson(json['valueCanonical']),
+          : FhirCanonical.fromJson(json['valueCanonical']),
       valueCanonicalElement: json['_valueCanonical'] == null
           ? null
           : Element.fromJson(json['_valueCanonical'] as Map<String, dynamic>),
-      valueCode:
-          json['valueCode'] == null ? null : Code.fromJson(json['valueCode']),
+      valueCode: json['valueCode'] == null
+          ? null
+          : FhirCode.fromJson(json['valueCode']),
       valueCodeElement: json['_valueCode'] == null
           ? null
           : Element.fromJson(json['_valueCode'] as Map<String, dynamic>),
-      valueDate:
-          json['valueDate'] == null ? null : Date.fromJson(json['valueDate']),
+      valueDate: json['valueDate'] == null
+          ? null
+          : FhirDate.fromJson(json['valueDate']),
       valueDateElement: json['_valueDate'] == null
           ? null
           : Element.fromJson(json['_valueDate'] as Map<String, dynamic>),
@@ -2206,40 +1314,41 @@ _$_ParametersParameter _$$_ParametersParameterFromJson(
           : Element.fromJson(json['_valueDateTime'] as Map<String, dynamic>),
       valueDecimal: json['valueDecimal'] == null
           ? null
-          : Decimal.fromJson(json['valueDecimal']),
+          : FhirDecimal.fromJson(json['valueDecimal']),
       valueDecimalElement: json['_valueDecimal'] == null
           ? null
           : Element.fromJson(json['_valueDecimal'] as Map<String, dynamic>),
-      valueId: json['valueId'] == null ? null : Id.fromJson(json['valueId']),
+      valueId:
+          json['valueId'] == null ? null : FhirId.fromJson(json['valueId']),
       valueIdElement: json['_valueId'] == null
           ? null
           : Element.fromJson(json['_valueId'] as Map<String, dynamic>),
       valueInstant: json['valueInstant'] == null
           ? null
-          : Instant.fromJson(json['valueInstant']),
+          : FhirInstant.fromJson(json['valueInstant']),
       valueInstantElement: json['_valueInstant'] == null
           ? null
           : Element.fromJson(json['_valueInstant'] as Map<String, dynamic>),
       valueInteger: json['valueInteger'] == null
           ? null
-          : Integer.fromJson(json['valueInteger']),
+          : FhirInteger.fromJson(json['valueInteger']),
       valueIntegerElement: json['_valueInteger'] == null
           ? null
           : Element.fromJson(json['_valueInteger'] as Map<String, dynamic>),
       valueMarkdown: json['valueMarkdown'] == null
           ? null
-          : Markdown.fromJson(json['valueMarkdown']),
+          : FhirMarkdown.fromJson(json['valueMarkdown']),
       valueMarkdownElement: json['_valueMarkdown'] == null
           ? null
           : Element.fromJson(json['_valueMarkdown'] as Map<String, dynamic>),
       valueOid:
-          json['valueOid'] == null ? null : Oid.fromJson(json['valueOid']),
+          json['valueOid'] == null ? null : FhirOid.fromJson(json['valueOid']),
       valueOidElement: json['_valueOid'] == null
           ? null
           : Element.fromJson(json['_valueOid'] as Map<String, dynamic>),
       valuePositiveInt: json['valuePositiveInt'] == null
           ? null
-          : PositiveInt.fromJson(json['valuePositiveInt']),
+          : FhirPositiveInt.fromJson(json['valuePositiveInt']),
       valuePositiveIntElement: json['_valuePositiveInt'] == null
           ? null
           : Element.fromJson(json['_valuePositiveInt'] as Map<String, dynamic>),
@@ -2247,14 +1356,15 @@ _$_ParametersParameter _$$_ParametersParameterFromJson(
       valueStringElement: json['_valueString'] == null
           ? null
           : Element.fromJson(json['_valueString'] as Map<String, dynamic>),
-      valueTime:
-          json['valueTime'] == null ? null : Time.fromJson(json['valueTime']),
+      valueTime: json['valueTime'] == null
+          ? null
+          : FhirTime.fromJson(json['valueTime']),
       valueTimeElement: json['_valueTime'] == null
           ? null
           : Element.fromJson(json['_valueTime'] as Map<String, dynamic>),
       valueUnsignedInt: json['valueUnsignedInt'] == null
           ? null
-          : UnsignedInt.fromJson(json['valueUnsignedInt']),
+          : FhirUnsignedInt.fromJson(json['valueUnsignedInt']),
       valueUnsignedIntElement: json['_valueUnsignedInt'] == null
           ? null
           : Element.fromJson(json['_valueUnsignedInt'] as Map<String, dynamic>),
@@ -2268,8 +1378,9 @@ _$_ParametersParameter _$$_ParametersParameterFromJson(
       valueUrlElement: json['_valueUrl'] == null
           ? null
           : Element.fromJson(json['_valueUrl'] as Map<String, dynamic>),
-      valueUuid:
-          json['valueUuid'] == null ? null : Uuid.fromJson(json['valueUuid']),
+      valueUuid: json['valueUuid'] == null
+          ? null
+          : FhirUuid.fromJson(json['valueUuid']),
       valueUuidElement: json['_valueUuid'] == null
           ? null
           : Element.fromJson(json['_valueUuid'] as Map<String, dynamic>),
@@ -2378,9 +1489,9 @@ _$_ParametersParameter _$$_ParametersParameterFromJson(
       valueDosage: json['valueDosage'] == null
           ? null
           : Dosage.fromJson(json['valueDosage'] as Map<String, dynamic>),
-      valueFhirMeta: json['valueFhirMeta'] == null
+      valueMeta: json['valueMeta'] == null
           ? null
-          : FhirMeta.fromJson(json['valueFhirMeta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['valueMeta'] as Map<String, dynamic>),
       resource: json['resource'] == null
           ? null
           : Resource.fromJson(json['resource'] as Map<String, dynamic>),
@@ -2477,7 +1588,7 @@ Map<String, dynamic> _$$_ParametersParameterToJson(
       'valueTriggerDefinition', instance.valueTriggerDefinition?.toJson());
   writeNotNull('valueUsageContext', instance.valueUsageContext?.toJson());
   writeNotNull('valueDosage', instance.valueDosage?.toJson());
-  writeNotNull('valueFhirMeta', instance.valueFhirMeta?.toJson());
+  writeNotNull('valueMeta', instance.valueMeta?.toJson());
   writeNotNull('resource', instance.resource?.toJson());
   writeNotNull('part', instance.part_?.map((e) => e.toJson()).toList());
   return val;
@@ -2500,7 +1611,7 @@ _$_Subscription _$$_SubscriptionFromJson(Map<String, dynamic> json) =>
           ? null
           : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
       language:
-          json['language'] == null ? null : Code.fromJson(json['language']),
+          json['language'] == null ? null : FhirCode.fromJson(json['language']),
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -2516,14 +1627,14 @@ _$_Subscription _$$_SubscriptionFromJson(Map<String, dynamic> json) =>
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: json['status'] == null ? null : Code.fromJson(json['status']),
+      status: json['status'] == null ? null : FhirCode.fromJson(json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
       contact: (json['contact'] as List<dynamic>?)
           ?.map((e) => ContactPoint.fromJson(e as Map<String, dynamic>))
           .toList(),
-      end: json['end'] == null ? null : Instant.fromJson(json['end']),
+      end: json['end'] == null ? null : FhirInstant.fromJson(json['end']),
       endElement: json['_end'] == null
           ? null
           : Element.fromJson(json['_end'] as Map<String, dynamic>),
@@ -2592,7 +1703,7 @@ _$_SubscriptionChannel _$$_SubscriptionChannelFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      type: json['type'] == null ? null : Code.fromJson(json['type']),
+      type: json['type'] == null ? null : FhirCode.fromJson(json['type']),
       typeElement: json['_type'] == null
           ? null
           : Element.fromJson(json['_type'] as Map<String, dynamic>),
@@ -2601,7 +1712,8 @@ _$_SubscriptionChannel _$$_SubscriptionChannelFromJson(
       endpointElement: json['_endpoint'] == null
           ? null
           : Element.fromJson(json['_endpoint'] as Map<String, dynamic>),
-      payload: json['payload'] == null ? null : Code.fromJson(json['payload']),
+      payload:
+          json['payload'] == null ? null : FhirCode.fromJson(json['payload']),
       payloadElement: json['_payload'] == null
           ? null
           : Element.fromJson(json['_payload'] as Map<String, dynamic>),
@@ -2657,7 +1769,7 @@ _$_SubscriptionStatus _$$_SubscriptionStatusFromJson(
           ? null
           : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
       language:
-          json['language'] == null ? null : Code.fromJson(json['language']),
+          json['language'] == null ? null : FhirCode.fromJson(json['language']),
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -2673,17 +1785,17 @@ _$_SubscriptionStatus _$$_SubscriptionStatusFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: json['status'] == null ? null : Code.fromJson(json['status']),
+      status: json['status'] == null ? null : FhirCode.fromJson(json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
-      type: json['type'] == null ? null : Code.fromJson(json['type']),
+      type: json['type'] == null ? null : FhirCode.fromJson(json['type']),
       typeElement: json['_type'] == null
           ? null
           : Element.fromJson(json['_type'] as Map<String, dynamic>),
       eventsSinceSubscriptionStart: json['eventsSinceSubscriptionStart'] == null
           ? null
-          : Integer64.fromJson(json['eventsSinceSubscriptionStart']),
+          : FhirInteger64.fromJson(json['eventsSinceSubscriptionStart']),
       eventsSinceSubscriptionStartElement:
           json['_eventsSinceSubscriptionStart'] == null
               ? null
@@ -2695,7 +1807,8 @@ _$_SubscriptionStatus _$$_SubscriptionStatusFromJson(
           .toList(),
       subscription:
           Reference.fromJson(json['subscription'] as Map<String, dynamic>),
-      topic: json['topic'] == null ? null : Canonical.fromJson(json['topic']),
+      topic:
+          json['topic'] == null ? null : FhirCanonical.fromJson(json['topic']),
       error: (json['error'] as List<dynamic>?)
           ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -2755,13 +1868,13 @@ _$_SubscriptionStatusNotificationEvent
               .toList(),
           eventNumber: json['eventNumber'] == null
               ? null
-              : Integer64.fromJson(json['eventNumber']),
+              : FhirInteger64.fromJson(json['eventNumber']),
           eventNumberElement: json['_eventNumber'] == null
               ? null
               : Element.fromJson(json['_eventNumber'] as Map<String, dynamic>),
           timestamp: json['timestamp'] == null
               ? null
-              : Instant.fromJson(json['timestamp']),
+              : FhirInstant.fromJson(json['timestamp']),
           timestampElement: json['_timestamp'] == null
               ? null
               : Element.fromJson(json['_timestamp'] as Map<String, dynamic>),
@@ -2814,7 +1927,7 @@ _$_SubscriptionTopic _$$_SubscriptionTopicFromJson(Map<String, dynamic> json) =>
           ? null
           : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
       language:
-          json['language'] == null ? null : Code.fromJson(json['language']),
+          json['language'] == null ? null : FhirCode.fromJson(json['language']),
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -2846,15 +1959,15 @@ _$_SubscriptionTopic _$$_SubscriptionTopicFromJson(Map<String, dynamic> json) =>
           ? null
           : Element.fromJson(json['_title'] as Map<String, dynamic>),
       derivedFrom: (json['derivedFrom'] as List<dynamic>?)
-          ?.map((e) => Canonical.fromJson(e))
+          ?.map(FhirCanonical.fromJson)
           .toList(),
-      status: json['status'] == null ? null : Code.fromJson(json['status']),
+      status: json['status'] == null ? null : FhirCode.fromJson(json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
       experimental: json['experimental'] == null
           ? null
-          : Boolean.fromJson(json['experimental']),
+          : FhirBoolean.fromJson(json['experimental']),
       experimentalElement: json['_experimental'] == null
           ? null
           : Element.fromJson(json['_experimental'] as Map<String, dynamic>),
@@ -2871,7 +1984,7 @@ _$_SubscriptionTopic _$$_SubscriptionTopicFromJson(Map<String, dynamic> json) =>
           .toList(),
       description: json['description'] == null
           ? null
-          : Markdown.fromJson(json['description']),
+          : FhirMarkdown.fromJson(json['description']),
       descriptionElement: json['_description'] == null
           ? null
           : Element.fromJson(json['_description'] as Map<String, dynamic>),
@@ -2881,26 +1994,27 @@ _$_SubscriptionTopic _$$_SubscriptionTopicFromJson(Map<String, dynamic> json) =>
       jurisdiction: (json['jurisdiction'] as List<dynamic>?)
           ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
           .toList(),
-      purpose:
-          json['purpose'] == null ? null : Markdown.fromJson(json['purpose']),
+      purpose: json['purpose'] == null
+          ? null
+          : FhirMarkdown.fromJson(json['purpose']),
       purposeElement: json['_purpose'] == null
           ? null
           : Element.fromJson(json['_purpose'] as Map<String, dynamic>),
       copyright: json['copyright'] == null
           ? null
-          : Markdown.fromJson(json['copyright']),
+          : FhirMarkdown.fromJson(json['copyright']),
       copyrightElement: json['_copyright'] == null
           ? null
           : Element.fromJson(json['_copyright'] as Map<String, dynamic>),
       approvalDate: json['approvalDate'] == null
           ? null
-          : Date.fromJson(json['approvalDate']),
+          : FhirDate.fromJson(json['approvalDate']),
       approvalDateElement: json['_approvalDate'] == null
           ? null
           : Element.fromJson(json['_approvalDate'] as Map<String, dynamic>),
       lastReviewDate: json['lastReviewDate'] == null
           ? null
-          : Date.fromJson(json['lastReviewDate']),
+          : FhirDate.fromJson(json['lastReviewDate']),
       lastReviewDateElement: json['_lastReviewDate'] == null
           ? null
           : Element.fromJson(json['_lastReviewDate'] as Map<String, dynamic>),
@@ -3007,7 +2121,7 @@ _$_SubscriptionTopicResourceTrigger
               .toList(),
           description: json['description'] == null
               ? null
-              : Markdown.fromJson(json['description']),
+              : FhirMarkdown.fromJson(json['description']),
           descriptionElement: json['_description'] == null
               ? null
               : Element.fromJson(json['_description'] as Map<String, dynamic>),
@@ -3018,7 +2132,7 @@ _$_SubscriptionTopicResourceTrigger
               ? null
               : Element.fromJson(json['_resource'] as Map<String, dynamic>),
           supportedInteraction: (json['supportedInteraction'] as List<dynamic>?)
-              ?.map((e) => Code.fromJson(e))
+              ?.map(FhirCode.fromJson)
               .toList(),
           supportedInteractionElement:
               (json['_supportedInteraction'] as List<dynamic>?)
@@ -3080,7 +2194,7 @@ _$_SubscriptionTopicQueryCriteria _$$_SubscriptionTopicQueryCriteriaFromJson(
           : Element.fromJson(json['_previous'] as Map<String, dynamic>),
       resultForCreate: json['resultForCreate'] == null
           ? null
-          : Code.fromJson(json['resultForCreate']),
+          : FhirCode.fromJson(json['resultForCreate']),
       resultForCreateElement: json['_resultForCreate'] == null
           ? null
           : Element.fromJson(json['_resultForCreate'] as Map<String, dynamic>),
@@ -3090,13 +2204,13 @@ _$_SubscriptionTopicQueryCriteria _$$_SubscriptionTopicQueryCriteriaFromJson(
           : Element.fromJson(json['_current'] as Map<String, dynamic>),
       resultForDelete: json['resultForDelete'] == null
           ? null
-          : Code.fromJson(json['resultForDelete']),
+          : FhirCode.fromJson(json['resultForDelete']),
       resultForDeleteElement: json['_resultForDelete'] == null
           ? null
           : Element.fromJson(json['_resultForDelete'] as Map<String, dynamic>),
       requireBoth: json['requireBoth'] == null
           ? null
-          : Boolean.fromJson(json['requireBoth']),
+          : FhirBoolean.fromJson(json['requireBoth']),
       requireBothElement: json['_requireBoth'] == null
           ? null
           : Element.fromJson(json['_requireBoth'] as Map<String, dynamic>),
@@ -3142,7 +2256,7 @@ _$_SubscriptionTopicEventTrigger _$$_SubscriptionTopicEventTriggerFromJson(
           .toList(),
       description: json['description'] == null
           ? null
-          : Markdown.fromJson(json['description']),
+          : FhirMarkdown.fromJson(json['description']),
       descriptionElement: json['_description'] == null
           ? null
           : Element.fromJson(json['_description'] as Map<String, dynamic>),
@@ -3189,7 +2303,7 @@ _$_SubscriptionTopicCanFilterBy _$$_SubscriptionTopicCanFilterByFromJson(
           .toList(),
       description: json['description'] == null
           ? null
-          : Markdown.fromJson(json['description']),
+          : FhirMarkdown.fromJson(json['description']),
       descriptionElement: json['_description'] == null
           ? null
           : Element.fromJson(json['_description'] as Map<String, dynamic>),
@@ -3208,9 +2322,8 @@ _$_SubscriptionTopicCanFilterBy _$$_SubscriptionTopicCanFilterByFromJson(
       filterDefinitionElement: json['_filterDefinition'] == null
           ? null
           : Element.fromJson(json['_filterDefinition'] as Map<String, dynamic>),
-      modifier: (json['modifier'] as List<dynamic>?)
-          ?.map((e) => Code.fromJson(e))
-          .toList(),
+      modifier:
+          (json['modifier'] as List<dynamic>?)?.map(FhirCode.fromJson).toList(),
       modifierElement: (json['_modifier'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
           .toList(),

@@ -6,7 +6,7 @@ import 'package:yaml/yaml.dart';
 
 // Project imports:
 import 'date.dart';
-import 'fhir_date_time_base.dart';
+import 'date_time_base.dart';
 import 'primitive_type_exceptions.dart';
 
 enum DateTimePrecision {
@@ -37,7 +37,7 @@ class FhirDateTime extends FhirDateTimeBase {
             inValue, null, false, DateTimePrecision.INVALID, e);
       }
     }
-    if (inValue is Date) {
+    if (inValue is FhirDate) {
       switch (inValue.precision) {
         case DatePrecision.YYYY:
           return FhirDateTime.fromDateTime(

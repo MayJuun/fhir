@@ -51,7 +51,7 @@ mixin _$Annotation {
   Element? get timeElement => throw _privateConstructorUsedError;
 
   /// [text] The text of the annotation in markdown format.
-  Markdown? get text => throw _privateConstructorUsedError;
+  FhirMarkdown? get text => throw _privateConstructorUsedError;
 
   /// [textElement] Extensions for text
   @JsonKey(name: '_text')
@@ -77,7 +77,7 @@ abstract class $AnnotationCopyWith<$Res> {
       @JsonKey(name: '_authorString') Element? authorStringElement,
       FhirDateTime? time,
       @JsonKey(name: '_time') Element? timeElement,
-      Markdown? text,
+      FhirMarkdown? text,
       @JsonKey(name: '_text') Element? textElement});
 
   $ReferenceCopyWith<$Res>? get authorReference;
@@ -141,7 +141,7 @@ class _$AnnotationCopyWithImpl<$Res, $Val extends Annotation>
       text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       textElement: freezed == textElement
           ? _value.textElement
           : textElement // ignore: cast_nullable_to_non_nullable
@@ -214,7 +214,7 @@ abstract class _$$_AnnotationCopyWith<$Res>
       @JsonKey(name: '_authorString') Element? authorStringElement,
       FhirDateTime? time,
       @JsonKey(name: '_time') Element? timeElement,
-      Markdown? text,
+      FhirMarkdown? text,
       @JsonKey(name: '_text') Element? textElement});
 
   @override
@@ -280,7 +280,7 @@ class __$$_AnnotationCopyWithImpl<$Res>
       text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       textElement: freezed == textElement
           ? _value.textElement
           : textElement // ignore: cast_nullable_to_non_nullable
@@ -361,7 +361,7 @@ class _$_Annotation extends _Annotation {
 
   /// [text] The text of the annotation in markdown format.
   @override
-  final Markdown? text;
+  final FhirMarkdown? text;
 
   /// [textElement] Extensions for text
   @override
@@ -432,7 +432,7 @@ abstract class _Annotation extends Annotation {
       @JsonKey(name: '_authorString') final Element? authorStringElement,
       final FhirDateTime? time,
       @JsonKey(name: '_time') final Element? timeElement,
-      final Markdown? text,
+      final FhirMarkdown? text,
       @JsonKey(name: '_text') final Element? textElement}) = _$_Annotation;
   _Annotation._() : super._();
 
@@ -479,7 +479,7 @@ abstract class _Annotation extends Annotation {
   @override
 
   /// [text] The text of the annotation in markdown format.
-  Markdown? get text;
+  FhirMarkdown? get text;
   @override
 
   /// [textElement] Extensions for text
@@ -658,7 +658,7 @@ class _$AttachmentCopyWithImpl<$Res, $Val extends Attachment>
       contentType: freezed == contentType
           ? _value.contentType
           : contentType // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       contentTypeElement: freezed == contentTypeElement
           ? _value.contentTypeElement
           : contentTypeElement // ignore: cast_nullable_to_non_nullable
@@ -666,7 +666,7 @@ class _$AttachmentCopyWithImpl<$Res, $Val extends Attachment>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -674,7 +674,7 @@ class _$AttachmentCopyWithImpl<$Res, $Val extends Attachment>
       data: freezed == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
-              as Base64Binary?,
+              as FhirBase64Binary?,
       dataElement: freezed == dataElement
           ? _value.dataElement
           : dataElement // ignore: cast_nullable_to_non_nullable
@@ -690,7 +690,7 @@ class _$AttachmentCopyWithImpl<$Res, $Val extends Attachment>
       size: freezed == size
           ? _value.size
           : size // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt?,
+              as FhirUnsignedInt?,
       sizeElement: freezed == sizeElement
           ? _value.sizeElement
           : sizeElement // ignore: cast_nullable_to_non_nullable
@@ -698,7 +698,7 @@ class _$AttachmentCopyWithImpl<$Res, $Val extends Attachment>
       hash: freezed == hash
           ? _value.hash
           : hash // ignore: cast_nullable_to_non_nullable
-              as Base64Binary?,
+              as FhirBase64Binary?,
       hashElement: freezed == hashElement
           ? _value.hashElement
           : hashElement // ignore: cast_nullable_to_non_nullable
@@ -907,7 +907,7 @@ class __$$_AttachmentCopyWithImpl<$Res>
       contentType: freezed == contentType
           ? _value.contentType
           : contentType // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       contentTypeElement: freezed == contentTypeElement
           ? _value.contentTypeElement
           : contentTypeElement // ignore: cast_nullable_to_non_nullable
@@ -915,7 +915,7 @@ class __$$_AttachmentCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -923,7 +923,7 @@ class __$$_AttachmentCopyWithImpl<$Res>
       data: freezed == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
-              as Base64Binary?,
+              as FhirBase64Binary?,
       dataElement: freezed == dataElement
           ? _value.dataElement
           : dataElement // ignore: cast_nullable_to_non_nullable
@@ -939,7 +939,7 @@ class __$$_AttachmentCopyWithImpl<$Res>
       size: freezed == size
           ? _value.size
           : size // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt?,
+              as FhirUnsignedInt?,
       sizeElement: freezed == sizeElement
           ? _value.sizeElement
           : sizeElement // ignore: cast_nullable_to_non_nullable
@@ -947,7 +947,7 @@ class __$$_AttachmentCopyWithImpl<$Res>
       hash: freezed == hash
           ? _value.hash
           : hash // ignore: cast_nullable_to_non_nullable
-              as Base64Binary?,
+              as FhirBase64Binary?,
       hashElement: freezed == hashElement
           ? _value.hashElement
           : hashElement // ignore: cast_nullable_to_non_nullable
@@ -1033,7 +1033,7 @@ class _$_Attachment extends _Attachment {
   /// allows a method to be chosen to interpret or render the data. Includes
   ///  mime type parameters such as charset where appropriate.
   @override
-  final Code? contentType;
+  final FhirCode? contentType;
 
   /// [contentTypeElement] Extensions for contentType
   @override
@@ -1043,7 +1043,7 @@ class _$_Attachment extends _Attachment {
   /// [language] The human language of the content. The value can be any valid
   ///  value according to BCP 47.
   @override
-  final Code? language;
+  final FhirCode? language;
 
   /// [languageElement] Extensions for language
   @override
@@ -1053,7 +1053,7 @@ class _$_Attachment extends _Attachment {
   /// [data] The actual data of the attachment - a sequence of bytes, base64
   ///  encoded.
   @override
-  final Base64Binary? data;
+  final FhirBase64Binary? data;
 
   /// [dataElement] Extensions for data
   @override
@@ -1072,7 +1072,7 @@ class _$_Attachment extends _Attachment {
   /// [size] The number of bytes of data that make up this attachment (before
   ///  base64 encoding, if that is done).
   @override
-  final UnsignedInt? size;
+  final FhirUnsignedInt? size;
 
   /// [sizeElement] Extensions for size
   @override
@@ -1082,7 +1082,7 @@ class _$_Attachment extends _Attachment {
   /// [hash] The calculated hash of the data using SHA-1. Represented using
   ///  base64.
   @override
-  final Base64Binary? hash;
+  final FhirBase64Binary? hash;
 
   /// [hashElement] Extensions for hash
   @override
@@ -1190,17 +1190,17 @@ abstract class _Attachment extends Attachment {
   factory _Attachment(
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-          final Code? contentType,
+          final FhirCode? contentType,
           @JsonKey(name: '_contentType') final Element? contentTypeElement,
-          final Code? language,
+          final FhirCode? language,
           @JsonKey(name: '_language') final Element? languageElement,
-          final Base64Binary? data,
+          final FhirBase64Binary? data,
           @JsonKey(name: '_data') final Element? dataElement,
           final FhirUrl? url,
           @JsonKey(name: '_url') final Element? urlElement,
-          final UnsignedInt? size,
+          final FhirUnsignedInt? size,
           @JsonKey(name: '_size') final Element? sizeElement,
-          final Base64Binary? hash,
+          final FhirBase64Binary? hash,
           @JsonKey(name: '_hash') final Element? hashElement,
           final String? title,
           @JsonKey(name: '_title') final Element? titleElement,
@@ -2276,7 +2276,7 @@ mixin _$Coding {
 
   /// [userSelected] Indicates that this coding was chosen by a user directly -
   ///  e.g. off a pick list of available items (codes or displays).
-  Boolean? get userSelected => throw _privateConstructorUsedError;
+  FhirBoolean? get userSelected => throw _privateConstructorUsedError;
 
   /// [userSelectedElement] Extensions for userSelected
   @JsonKey(name: '_userSelected')
@@ -2303,7 +2303,7 @@ abstract class $CodingCopyWith<$Res> {
       @JsonKey(name: '_code') Element? codeElement,
       String? display,
       @JsonKey(name: '_display') Element? displayElement,
-      Boolean? userSelected,
+      FhirBoolean? userSelected,
       @JsonKey(name: '_userSelected') Element? userSelectedElement});
 
   $ElementCopyWith<$Res>? get systemElement;
@@ -2367,7 +2367,7 @@ class _$CodingCopyWithImpl<$Res, $Val extends Coding>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -2383,7 +2383,7 @@ class _$CodingCopyWithImpl<$Res, $Val extends Coding>
       userSelected: freezed == userSelected
           ? _value.userSelected
           : userSelected // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       userSelectedElement: freezed == userSelectedElement
           ? _value.userSelectedElement
           : userSelectedElement // ignore: cast_nullable_to_non_nullable
@@ -2469,7 +2469,7 @@ abstract class _$$_CodingCopyWith<$Res> implements $CodingCopyWith<$Res> {
       @JsonKey(name: '_code') Element? codeElement,
       String? display,
       @JsonKey(name: '_display') Element? displayElement,
-      Boolean? userSelected,
+      FhirBoolean? userSelected,
       @JsonKey(name: '_userSelected') Element? userSelectedElement});
 
   @override
@@ -2535,7 +2535,7 @@ class __$$_CodingCopyWithImpl<$Res>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -2551,7 +2551,7 @@ class __$$_CodingCopyWithImpl<$Res>
       userSelected: freezed == userSelected
           ? _value.userSelected
           : userSelected // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
+              as FhirBoolean?,
       userSelectedElement: freezed == userSelectedElement
           ? _value.userSelectedElement
           : userSelectedElement // ignore: cast_nullable_to_non_nullable
@@ -2639,7 +2639,7 @@ class _$_Coding extends _Coding {
   /// predefined code or an expression in a syntax defined by the coding system
   ///  (e.g. post-coordination).
   @override
-  final Code? code;
+  final FhirCode? code;
 
   /// [codeElement] Extensions for code
   @override
@@ -2659,7 +2659,7 @@ class _$_Coding extends _Coding {
   /// [userSelected] Indicates that this coding was chosen by a user directly -
   ///  e.g. off a pick list of available items (codes or displays).
   @override
-  final Boolean? userSelected;
+  final FhirBoolean? userSelected;
 
   /// [userSelectedElement] Extensions for userSelected
   @override
@@ -2736,11 +2736,11 @@ abstract class _Coding extends Coding {
           @JsonKey(name: '_system') final Element? systemElement,
           final String? version,
           @JsonKey(name: '_version') final Element? versionElement,
-          final Code? code,
+          final FhirCode? code,
           @JsonKey(name: '_code') final Element? codeElement,
           final String? display,
           @JsonKey(name: '_display') final Element? displayElement,
-          final Boolean? userSelected,
+          final FhirBoolean? userSelected,
           @JsonKey(name: '_userSelected') final Element? userSelectedElement}) =
       _$_Coding;
   _Coding._() : super._();
@@ -2811,7 +2811,7 @@ abstract class _Coding extends Coding {
 
   /// [userSelected] Indicates that this coding was chosen by a user directly -
   ///  e.g. off a pick list of available items (codes or displays).
-  Boolean? get userSelected;
+  FhirBoolean? get userSelected;
   @override
 
   /// [userSelectedElement] Extensions for userSelected
@@ -2956,7 +2956,7 @@ class _$QuantityCopyWithImpl<$Res, $Val extends Quantity>
       value: freezed == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       valueElement: freezed == valueElement
           ? _value.valueElement
           : valueElement // ignore: cast_nullable_to_non_nullable
@@ -2988,7 +2988,7 @@ class _$QuantityCopyWithImpl<$Res, $Val extends Quantity>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -3133,7 +3133,7 @@ class __$$_QuantityCopyWithImpl<$Res>
       value: freezed == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       valueElement: freezed == valueElement
           ? _value.valueElement
           : valueElement // ignore: cast_nullable_to_non_nullable
@@ -3165,7 +3165,7 @@ class __$$_QuantityCopyWithImpl<$Res>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -3228,7 +3228,7 @@ class _$_Quantity extends _Quantity {
   /// [value] The value of the measured amount. The value includes an implicit
   ///  precision in the presentation of the value.
   @override
-  final Decimal? value;
+  final FhirDecimal? value;
 
   /// [valueElement] Extensions for value
   @override
@@ -3265,7 +3265,7 @@ class _$_Quantity extends _Quantity {
   /// [code] A computer processable form of the unit in some unit
   ///  representation system.
   @override
-  final Code? code;
+  final FhirCode? code;
 
   /// [codeElement] Extensions for code
   @override
@@ -3339,7 +3339,7 @@ abstract class _Quantity extends Quantity {
       {final String? id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
-      final Decimal? value,
+      final FhirDecimal? value,
       @JsonKey(name: '_value')
           final Element? valueElement,
       @JsonKey(unknownEnumValue: QuantityComparator.unknown)
@@ -3352,7 +3352,7 @@ abstract class _Quantity extends Quantity {
       final FhirUri? system,
       @JsonKey(name: '_system')
           final Element? systemElement,
-      final Code? code,
+      final FhirCode? code,
       @JsonKey(name: '_code')
           final Element? codeElement}) = _$_Quantity;
   _Quantity._() : super._();
@@ -3561,7 +3561,7 @@ class _$FhirDurationCopyWithImpl<$Res, $Val extends FhirDuration>
       value: freezed == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       valueElement: freezed == valueElement
           ? _value.valueElement
           : valueElement // ignore: cast_nullable_to_non_nullable
@@ -3593,7 +3593,7 @@ class _$FhirDurationCopyWithImpl<$Res, $Val extends FhirDuration>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -3739,7 +3739,7 @@ class __$$_FhirDurationCopyWithImpl<$Res>
       value: freezed == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       valueElement: freezed == valueElement
           ? _value.valueElement
           : valueElement // ignore: cast_nullable_to_non_nullable
@@ -3771,7 +3771,7 @@ class __$$_FhirDurationCopyWithImpl<$Res>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -3834,7 +3834,7 @@ class _$_FhirDuration extends _FhirDuration {
   /// [value] The value of the measured amount. The value includes an implicit
   ///  precision in the presentation of the value.
   @override
-  final Decimal? value;
+  final FhirDecimal? value;
 
   /// [valueElement] Extensions for value
   @override
@@ -3871,7 +3871,7 @@ class _$_FhirDuration extends _FhirDuration {
   /// [code] A computer processable form of the unit in some unit
   ///  representation system.
   @override
-  final Code? code;
+  final FhirCode? code;
 
   /// [codeElement] Extensions for code
   @override
@@ -3945,7 +3945,7 @@ abstract class _FhirDuration extends FhirDuration {
       {final String? id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
-      final Decimal? value,
+      final FhirDecimal? value,
       @JsonKey(name: '_value')
           final Element? valueElement,
       @JsonKey(unknownEnumValue: DurationComparator.unknown)
@@ -3958,7 +3958,7 @@ abstract class _FhirDuration extends FhirDuration {
       final FhirUri? system,
       @JsonKey(name: '_system')
           final Element? systemElement,
-      final Code? code,
+      final FhirCode? code,
       @JsonKey(name: '_code')
           final Element? codeElement}) = _$_FhirDuration;
   _FhirDuration._() : super._();
@@ -4167,7 +4167,7 @@ class _$DistanceCopyWithImpl<$Res, $Val extends Distance>
       value: freezed == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       valueElement: freezed == valueElement
           ? _value.valueElement
           : valueElement // ignore: cast_nullable_to_non_nullable
@@ -4199,7 +4199,7 @@ class _$DistanceCopyWithImpl<$Res, $Val extends Distance>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -4344,7 +4344,7 @@ class __$$_DistanceCopyWithImpl<$Res>
       value: freezed == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       valueElement: freezed == valueElement
           ? _value.valueElement
           : valueElement // ignore: cast_nullable_to_non_nullable
@@ -4376,7 +4376,7 @@ class __$$_DistanceCopyWithImpl<$Res>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -4439,7 +4439,7 @@ class _$_Distance extends _Distance {
   /// [value] The value of the measured amount. The value includes an implicit
   ///  precision in the presentation of the value.
   @override
-  final Decimal? value;
+  final FhirDecimal? value;
 
   /// [valueElement] Extensions for value
   @override
@@ -4476,7 +4476,7 @@ class _$_Distance extends _Distance {
   /// [code] A computer processable form of the unit in some unit
   ///  representation system.
   @override
-  final Code? code;
+  final FhirCode? code;
 
   /// [codeElement] Extensions for code
   @override
@@ -4550,7 +4550,7 @@ abstract class _Distance extends Distance {
       {final String? id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
-      final Decimal? value,
+      final FhirDecimal? value,
       @JsonKey(name: '_value')
           final Element? valueElement,
       @JsonKey(unknownEnumValue: DistanceComparator.unknown)
@@ -4563,7 +4563,7 @@ abstract class _Distance extends Distance {
       final FhirUri? system,
       @JsonKey(name: '_system')
           final Element? systemElement,
-      final Code? code,
+      final FhirCode? code,
       @JsonKey(name: '_code')
           final Element? codeElement}) = _$_Distance;
   _Distance._() : super._();
@@ -4770,7 +4770,7 @@ class _$CountCopyWithImpl<$Res, $Val extends Count>
       value: freezed == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       valueElement: freezed == valueElement
           ? _value.valueElement
           : valueElement // ignore: cast_nullable_to_non_nullable
@@ -4802,7 +4802,7 @@ class _$CountCopyWithImpl<$Res, $Val extends Count>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -4944,7 +4944,7 @@ class __$$_CountCopyWithImpl<$Res> extends _$CountCopyWithImpl<$Res, _$_Count>
       value: freezed == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       valueElement: freezed == valueElement
           ? _value.valueElement
           : valueElement // ignore: cast_nullable_to_non_nullable
@@ -4976,7 +4976,7 @@ class __$$_CountCopyWithImpl<$Res> extends _$CountCopyWithImpl<$Res, _$_Count>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -5039,7 +5039,7 @@ class _$_Count extends _Count {
   /// [value] The value of the measured amount. The value includes an implicit
   ///  precision in the presentation of the value.
   @override
-  final Decimal? value;
+  final FhirDecimal? value;
 
   /// [valueElement] Extensions for value
   @override
@@ -5076,7 +5076,7 @@ class _$_Count extends _Count {
   /// [code] A computer processable form of the unit in some unit
   ///  representation system.
   @override
-  final Code? code;
+  final FhirCode? code;
 
   /// [codeElement] Extensions for code
   @override
@@ -5150,7 +5150,7 @@ abstract class _Count extends Count {
       {final String? id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
-      final Decimal? value,
+      final FhirDecimal? value,
       @JsonKey(name: '_value')
           final Element? valueElement,
       @JsonKey(unknownEnumValue: CountComparator.unknown)
@@ -5163,7 +5163,7 @@ abstract class _Count extends Count {
       final FhirUri? system,
       @JsonKey(name: '_system')
           final Element? systemElement,
-      final Code? code,
+      final FhirCode? code,
       @JsonKey(name: '_code')
           final Element? codeElement}) = _$_Count;
   _Count._() : super._();
@@ -5325,7 +5325,7 @@ class _$MoneyCopyWithImpl<$Res, $Val extends Money>
       value: freezed == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       valueElement: freezed == valueElement
           ? _value.valueElement
           : valueElement // ignore: cast_nullable_to_non_nullable
@@ -5333,7 +5333,7 @@ class _$MoneyCopyWithImpl<$Res, $Val extends Money>
       currency: freezed == currency
           ? _value.currency
           : currency // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       currencyElement: freezed == currencyElement
           ? _value.currencyElement
           : currencyElement // ignore: cast_nullable_to_non_nullable
@@ -5414,7 +5414,7 @@ class __$$_MoneyCopyWithImpl<$Res> extends _$MoneyCopyWithImpl<$Res, _$_Money>
       value: freezed == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       valueElement: freezed == valueElement
           ? _value.valueElement
           : valueElement // ignore: cast_nullable_to_non_nullable
@@ -5422,7 +5422,7 @@ class __$$_MoneyCopyWithImpl<$Res> extends _$MoneyCopyWithImpl<$Res, _$_Money>
       currency: freezed == currency
           ? _value.currency
           : currency // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       currencyElement: freezed == currencyElement
           ? _value.currencyElement
           : currencyElement // ignore: cast_nullable_to_non_nullable
@@ -5478,7 +5478,7 @@ class _$_Money extends _Money {
 
   /// [value] Numerical value (with implicit precision).
   @override
-  final Decimal? value;
+  final FhirDecimal? value;
 
   /// [valueElement] Extensions for value
   @override
@@ -5487,7 +5487,7 @@ class _$_Money extends _Money {
 
   /// [currency] ISO 4217 Currency Code.
   @override
-  final Code? currency;
+  final FhirCode? currency;
 
   /// [currencyElement] Extensions for currency
   @override
@@ -5545,9 +5545,9 @@ abstract class _Money extends Money {
   factory _Money(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final Decimal? value,
+      final FhirDecimal? value,
       @JsonKey(name: '_value') final Element? valueElement,
-      final Code? currency,
+      final FhirCode? currency,
       @JsonKey(name: '_currency') final Element? currencyElement}) = _$_Money;
   _Money._() : super._();
 
@@ -5728,7 +5728,7 @@ class _$AgeCopyWithImpl<$Res, $Val extends Age> implements $AgeCopyWith<$Res> {
       value: freezed == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       valueElement: freezed == valueElement
           ? _value.valueElement
           : valueElement // ignore: cast_nullable_to_non_nullable
@@ -5760,7 +5760,7 @@ class _$AgeCopyWithImpl<$Res, $Val extends Age> implements $AgeCopyWith<$Res> {
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -5902,7 +5902,7 @@ class __$$_AgeCopyWithImpl<$Res> extends _$AgeCopyWithImpl<$Res, _$_Age>
       value: freezed == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       valueElement: freezed == valueElement
           ? _value.valueElement
           : valueElement // ignore: cast_nullable_to_non_nullable
@@ -5934,7 +5934,7 @@ class __$$_AgeCopyWithImpl<$Res> extends _$AgeCopyWithImpl<$Res, _$_Age>
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       codeElement: freezed == codeElement
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -5996,7 +5996,7 @@ class _$_Age extends _Age {
   /// [value] The value of the measured amount. The value includes an implicit
   ///  precision in the presentation of the value.
   @override
-  final Decimal? value;
+  final FhirDecimal? value;
 
   /// [valueElement] Extensions for value
   @override
@@ -6038,7 +6038,7 @@ class _$_Age extends _Age {
   /// [code] A computer processable form of the unit in some unit
   ///  representation system.
   @override
-  final Code? code;
+  final FhirCode? code;
 
   /// [codeElement] Extensions for code
   @override
@@ -6112,7 +6112,7 @@ abstract class _Age extends Age {
       {final String? id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
-      final Decimal? value,
+      final FhirDecimal? value,
       @JsonKey(name: '_value')
           final Element? valueElement,
       @JsonKey(unknownEnumValue: AgeComparator.unknown)
@@ -6125,7 +6125,7 @@ abstract class _Age extends Age {
       final FhirUri? system,
       @JsonKey(name: '_system')
           final Element? systemElement,
-      final Code? code,
+      final FhirCode? code,
       @JsonKey(name: '_code')
           final Element? codeElement}) = _$_Age;
   _Age._() : super._();
@@ -7622,7 +7622,7 @@ class _$SampledDataCopyWithImpl<$Res, $Val extends SampledData>
       period: freezed == period
           ? _value.period
           : period // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       periodElement: freezed == periodElement
           ? _value.periodElement
           : periodElement // ignore: cast_nullable_to_non_nullable
@@ -7630,7 +7630,7 @@ class _$SampledDataCopyWithImpl<$Res, $Val extends SampledData>
       factor: freezed == factor
           ? _value.factor
           : factor // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       factorElement: freezed == factorElement
           ? _value.factorElement
           : factorElement // ignore: cast_nullable_to_non_nullable
@@ -7638,7 +7638,7 @@ class _$SampledDataCopyWithImpl<$Res, $Val extends SampledData>
       lowerLimit: freezed == lowerLimit
           ? _value.lowerLimit
           : lowerLimit // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       lowerLimitElement: freezed == lowerLimitElement
           ? _value.lowerLimitElement
           : lowerLimitElement // ignore: cast_nullable_to_non_nullable
@@ -7646,7 +7646,7 @@ class _$SampledDataCopyWithImpl<$Res, $Val extends SampledData>
       upperLimit: freezed == upperLimit
           ? _value.upperLimit
           : upperLimit // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       upperLimitElement: freezed == upperLimitElement
           ? _value.upperLimitElement
           : upperLimitElement // ignore: cast_nullable_to_non_nullable
@@ -7654,7 +7654,7 @@ class _$SampledDataCopyWithImpl<$Res, $Val extends SampledData>
       dimensions: freezed == dimensions
           ? _value.dimensions
           : dimensions // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       dimensionsElement: freezed == dimensionsElement
           ? _value.dimensionsElement
           : dimensionsElement // ignore: cast_nullable_to_non_nullable
@@ -7835,7 +7835,7 @@ class __$$_SampledDataCopyWithImpl<$Res>
       period: freezed == period
           ? _value.period
           : period // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       periodElement: freezed == periodElement
           ? _value.periodElement
           : periodElement // ignore: cast_nullable_to_non_nullable
@@ -7843,7 +7843,7 @@ class __$$_SampledDataCopyWithImpl<$Res>
       factor: freezed == factor
           ? _value.factor
           : factor // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       factorElement: freezed == factorElement
           ? _value.factorElement
           : factorElement // ignore: cast_nullable_to_non_nullable
@@ -7851,7 +7851,7 @@ class __$$_SampledDataCopyWithImpl<$Res>
       lowerLimit: freezed == lowerLimit
           ? _value.lowerLimit
           : lowerLimit // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       lowerLimitElement: freezed == lowerLimitElement
           ? _value.lowerLimitElement
           : lowerLimitElement // ignore: cast_nullable_to_non_nullable
@@ -7859,7 +7859,7 @@ class __$$_SampledDataCopyWithImpl<$Res>
       upperLimit: freezed == upperLimit
           ? _value.upperLimit
           : upperLimit // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       upperLimitElement: freezed == upperLimitElement
           ? _value.upperLimitElement
           : upperLimitElement // ignore: cast_nullable_to_non_nullable
@@ -7867,7 +7867,7 @@ class __$$_SampledDataCopyWithImpl<$Res>
       dimensions: freezed == dimensions
           ? _value.dimensions
           : dimensions // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       dimensionsElement: freezed == dimensionsElement
           ? _value.dimensionsElement
           : dimensionsElement // ignore: cast_nullable_to_non_nullable
@@ -7946,7 +7946,7 @@ class _$_SampledData extends _SampledData {
   /// [period] The length of time between sampling times, measured in
   ///  milliseconds.
   @override
-  final Decimal? period;
+  final FhirDecimal? period;
 
   /// [periodElement] Extensions for period
   @override
@@ -7956,7 +7956,7 @@ class _$_SampledData extends _SampledData {
   /// [factor] A correction factor that is applied to the sampled data points
   ///  before they are added to the origin.
   @override
-  final Decimal? factor;
+  final FhirDecimal? factor;
 
   /// [factorElement] Extensions for factor
   @override
@@ -7967,7 +7967,7 @@ class _$_SampledData extends _SampledData {
   /// needed if any of the data points have the value "L" (lower than detection
   ///  limit).
   @override
-  final Decimal? lowerLimit;
+  final FhirDecimal? lowerLimit;
 
   /// [lowerLimitElement] Extensions for lowerLimit
   @override
@@ -7978,7 +7978,7 @@ class _$_SampledData extends _SampledData {
   /// needed if any of the data points have the value "U" (higher than detection
   ///  limit).
   @override
-  final Decimal? upperLimit;
+  final FhirDecimal? upperLimit;
 
   /// [upperLimitElement] Extensions for upperLimit
   @override
@@ -7989,7 +7989,7 @@ class _$_SampledData extends _SampledData {
   /// value is greater than one, then the dimensions will be interlaced - all
   ///  the sample points for a point in time will be recorded at once.
   @override
-  final PositiveInt? dimensions;
+  final FhirPositiveInt? dimensions;
 
   /// [dimensionsElement] Extensions for dimensions
   @override
@@ -8084,15 +8084,15 @@ abstract class _SampledData extends SampledData {
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       required final Quantity origin,
-      final Decimal? period,
+      final FhirDecimal? period,
       @JsonKey(name: '_period') final Element? periodElement,
-      final Decimal? factor,
+      final FhirDecimal? factor,
       @JsonKey(name: '_factor') final Element? factorElement,
-      final Decimal? lowerLimit,
+      final FhirDecimal? lowerLimit,
       @JsonKey(name: '_lowerLimit') final Element? lowerLimitElement,
-      final Decimal? upperLimit,
+      final FhirDecimal? upperLimit,
       @JsonKey(name: '_upperLimit') final Element? upperLimitElement,
-      final PositiveInt? dimensions,
+      final FhirPositiveInt? dimensions,
       @JsonKey(name: '_dimensions') final Element? dimensionsElement,
       final String? data,
       @JsonKey(name: '_data') final Element? dataElement}) = _$_SampledData;
@@ -8218,7 +8218,7 @@ mixin _$Signature {
   List<Coding> get type => throw _privateConstructorUsedError;
 
   /// [when] When the digital signature was signed.
-  Instant? get when => throw _privateConstructorUsedError;
+  FhirInstant? get when => throw _privateConstructorUsedError;
 
   /// [whenElement] Extensions for when
   @JsonKey(name: '_when')
@@ -8273,7 +8273,7 @@ abstract class $SignatureCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<Coding> type,
-      Instant? when,
+      FhirInstant? when,
       @JsonKey(name: '_when') Element? whenElement,
       Reference who,
       Reference? onBehalfOf,
@@ -8335,7 +8335,7 @@ class _$SignatureCopyWithImpl<$Res, $Val extends Signature>
       when: freezed == when
           ? _value.when
           : when // ignore: cast_nullable_to_non_nullable
-              as Instant?,
+              as FhirInstant?,
       whenElement: freezed == whenElement
           ? _value.whenElement
           : whenElement // ignore: cast_nullable_to_non_nullable
@@ -8351,7 +8351,7 @@ class _$SignatureCopyWithImpl<$Res, $Val extends Signature>
       targetFormat: freezed == targetFormat
           ? _value.targetFormat
           : targetFormat // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       targetFormatElement: freezed == targetFormatElement
           ? _value.targetFormatElement
           : targetFormatElement // ignore: cast_nullable_to_non_nullable
@@ -8359,7 +8359,7 @@ class _$SignatureCopyWithImpl<$Res, $Val extends Signature>
       sigFormat: freezed == sigFormat
           ? _value.sigFormat
           : sigFormat // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       sigFormatElement: freezed == sigFormatElement
           ? _value.sigFormatElement
           : sigFormatElement // ignore: cast_nullable_to_non_nullable
@@ -8367,7 +8367,7 @@ class _$SignatureCopyWithImpl<$Res, $Val extends Signature>
       data: freezed == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
-              as Base64Binary?,
+              as FhirBase64Binary?,
       dataElement: freezed == dataElement
           ? _value.dataElement
           : dataElement // ignore: cast_nullable_to_non_nullable
@@ -8455,7 +8455,7 @@ abstract class _$$_SignatureCopyWith<$Res> implements $SignatureCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<Coding> type,
-      Instant? when,
+      FhirInstant? when,
       @JsonKey(name: '_when') Element? whenElement,
       Reference who,
       Reference? onBehalfOf,
@@ -8521,7 +8521,7 @@ class __$$_SignatureCopyWithImpl<$Res>
       when: freezed == when
           ? _value.when
           : when // ignore: cast_nullable_to_non_nullable
-              as Instant?,
+              as FhirInstant?,
       whenElement: freezed == whenElement
           ? _value.whenElement
           : whenElement // ignore: cast_nullable_to_non_nullable
@@ -8537,7 +8537,7 @@ class __$$_SignatureCopyWithImpl<$Res>
       targetFormat: freezed == targetFormat
           ? _value.targetFormat
           : targetFormat // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       targetFormatElement: freezed == targetFormatElement
           ? _value.targetFormatElement
           : targetFormatElement // ignore: cast_nullable_to_non_nullable
@@ -8545,7 +8545,7 @@ class __$$_SignatureCopyWithImpl<$Res>
       sigFormat: freezed == sigFormat
           ? _value.sigFormat
           : sigFormat // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FhirCode?,
       sigFormatElement: freezed == sigFormatElement
           ? _value.sigFormatElement
           : sigFormatElement // ignore: cast_nullable_to_non_nullable
@@ -8553,7 +8553,7 @@ class __$$_SignatureCopyWithImpl<$Res>
       data: freezed == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
-              as Base64Binary?,
+              as FhirBase64Binary?,
       dataElement: freezed == dataElement
           ? _value.dataElement
           : dataElement // ignore: cast_nullable_to_non_nullable
@@ -8634,7 +8634,7 @@ class _$_Signature extends _Signature {
 
   /// [when] When the digital signature was signed.
   @override
-  final Instant? when;
+  final FhirInstant? when;
 
   /// [whenElement] Extensions for when
   @override
@@ -8654,7 +8654,7 @@ class _$_Signature extends _Signature {
   /// [targetFormat] A mime type that indicates the technical format of the
   ///  target resources signed by the signature.
   @override
-  final Code? targetFormat;
+  final FhirCode? targetFormat;
 
   /// [targetFormatElement] Extensions for targetFormat
   @override
@@ -8666,7 +8666,7 @@ class _$_Signature extends _Signature {
   /// DigSig, application/jose for JWS, and image/* for a graphical image of a
   ///  signature, etc.
   @override
-  final Code? sigFormat;
+  final FhirCode? sigFormat;
 
   /// [sigFormatElement] Extensions for sigFormat
   @override
@@ -8676,7 +8676,7 @@ class _$_Signature extends _Signature {
   /// [data] The base64 encoding of the Signature content. When signature is
   ///  not recorded electronically this element would be empty.
   @override
-  final Base64Binary? data;
+  final FhirBase64Binary? data;
 
   /// [dataElement] Extensions for data
   @override
@@ -8753,15 +8753,15 @@ abstract class _Signature extends Signature {
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       required final List<Coding> type,
-      final Instant? when,
+      final FhirInstant? when,
       @JsonKey(name: '_when') final Element? whenElement,
       required final Reference who,
       final Reference? onBehalfOf,
-      final Code? targetFormat,
+      final FhirCode? targetFormat,
       @JsonKey(name: '_targetFormat') final Element? targetFormatElement,
-      final Code? sigFormat,
+      final FhirCode? sigFormat,
       @JsonKey(name: '_sigFormat') final Element? sigFormatElement,
-      final Base64Binary? data,
+      final FhirBase64Binary? data,
       @JsonKey(name: '_data') final Element? dataElement}) = _$_Signature;
   _Signature._() : super._();
 
@@ -8793,7 +8793,7 @@ abstract class _Signature extends Signature {
   @override
 
   /// [when] When the digital signature was signed.
-  Instant? get when;
+  FhirInstant? get when;
   @override
 
   /// [whenElement] Extensions for when
@@ -10695,7 +10695,7 @@ class _$ContactPointCopyWithImpl<$Res, $Val extends ContactPoint>
       rank: freezed == rank
           ? _value.rank
           : rank // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       rankElement: freezed == rankElement
           ? _value.rankElement
           : rankElement // ignore: cast_nullable_to_non_nullable
@@ -10867,7 +10867,7 @@ class __$$_ContactPointCopyWithImpl<$Res>
       rank: freezed == rank
           ? _value.rank
           : rank // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       rankElement: freezed == rankElement
           ? _value.rankElement
           : rankElement // ignore: cast_nullable_to_non_nullable
@@ -10963,7 +10963,7 @@ class _$_ContactPoint extends _ContactPoint {
   /// ContactPoints with lower rank values are more preferred than those with
   ///  higher rank values.
   @override
-  final PositiveInt? rank;
+  final FhirPositiveInt? rank;
 
   /// [rankElement] Extensions for rank
   @override
@@ -11048,7 +11048,7 @@ abstract class _ContactPoint extends ContactPoint {
           final ContactPointUse? use,
       @JsonKey(name: '_use')
           final Element? useElement,
-      final PositiveInt? rank,
+      final FhirPositiveInt? rank,
       @JsonKey(name: '_rank')
           final Element? rankElement,
       final Period? period}) = _$_ContactPoint;
@@ -11920,7 +11920,7 @@ class _$TimingRepeatCopyWithImpl<$Res, $Val extends TimingRepeat>
       count: freezed == count
           ? _value.count
           : count // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       countElement: freezed == countElement
           ? _value.countElement
           : countElement // ignore: cast_nullable_to_non_nullable
@@ -11928,7 +11928,7 @@ class _$TimingRepeatCopyWithImpl<$Res, $Val extends TimingRepeat>
       countMax: freezed == countMax
           ? _value.countMax
           : countMax // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       countMaxElement: freezed == countMaxElement
           ? _value.countMaxElement
           : countMaxElement // ignore: cast_nullable_to_non_nullable
@@ -11936,7 +11936,7 @@ class _$TimingRepeatCopyWithImpl<$Res, $Val extends TimingRepeat>
       duration: freezed == duration
           ? _value.duration
           : duration // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       durationElement: freezed == durationElement
           ? _value.durationElement
           : durationElement // ignore: cast_nullable_to_non_nullable
@@ -11944,7 +11944,7 @@ class _$TimingRepeatCopyWithImpl<$Res, $Val extends TimingRepeat>
       durationMax: freezed == durationMax
           ? _value.durationMax
           : durationMax // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       durationMaxElement: freezed == durationMaxElement
           ? _value.durationMaxElement
           : durationMaxElement // ignore: cast_nullable_to_non_nullable
@@ -11960,7 +11960,7 @@ class _$TimingRepeatCopyWithImpl<$Res, $Val extends TimingRepeat>
       frequency: freezed == frequency
           ? _value.frequency
           : frequency // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       frequencyElement: freezed == frequencyElement
           ? _value.frequencyElement
           : frequencyElement // ignore: cast_nullable_to_non_nullable
@@ -11968,7 +11968,7 @@ class _$TimingRepeatCopyWithImpl<$Res, $Val extends TimingRepeat>
       frequencyMax: freezed == frequencyMax
           ? _value.frequencyMax
           : frequencyMax // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       frequencyMaxElement: freezed == frequencyMaxElement
           ? _value.frequencyMaxElement
           : frequencyMaxElement // ignore: cast_nullable_to_non_nullable
@@ -11976,7 +11976,7 @@ class _$TimingRepeatCopyWithImpl<$Res, $Val extends TimingRepeat>
       period: freezed == period
           ? _value.period
           : period // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       periodElement: freezed == periodElement
           ? _value.periodElement
           : periodElement // ignore: cast_nullable_to_non_nullable
@@ -11984,7 +11984,7 @@ class _$TimingRepeatCopyWithImpl<$Res, $Val extends TimingRepeat>
       periodMax: freezed == periodMax
           ? _value.periodMax
           : periodMax // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       periodMaxElement: freezed == periodMaxElement
           ? _value.periodMaxElement
           : periodMaxElement // ignore: cast_nullable_to_non_nullable
@@ -12024,7 +12024,7 @@ class _$TimingRepeatCopyWithImpl<$Res, $Val extends TimingRepeat>
       offset: freezed == offset
           ? _value.offset
           : offset // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt?,
+              as FhirUnsignedInt?,
       offsetElement: freezed == offsetElement
           ? _value.offsetElement
           : offsetElement // ignore: cast_nullable_to_non_nullable
@@ -12366,7 +12366,7 @@ class __$$_TimingRepeatCopyWithImpl<$Res>
       count: freezed == count
           ? _value.count
           : count // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       countElement: freezed == countElement
           ? _value.countElement
           : countElement // ignore: cast_nullable_to_non_nullable
@@ -12374,7 +12374,7 @@ class __$$_TimingRepeatCopyWithImpl<$Res>
       countMax: freezed == countMax
           ? _value.countMax
           : countMax // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       countMaxElement: freezed == countMaxElement
           ? _value.countMaxElement
           : countMaxElement // ignore: cast_nullable_to_non_nullable
@@ -12382,7 +12382,7 @@ class __$$_TimingRepeatCopyWithImpl<$Res>
       duration: freezed == duration
           ? _value.duration
           : duration // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       durationElement: freezed == durationElement
           ? _value.durationElement
           : durationElement // ignore: cast_nullable_to_non_nullable
@@ -12390,7 +12390,7 @@ class __$$_TimingRepeatCopyWithImpl<$Res>
       durationMax: freezed == durationMax
           ? _value.durationMax
           : durationMax // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       durationMaxElement: freezed == durationMaxElement
           ? _value.durationMaxElement
           : durationMaxElement // ignore: cast_nullable_to_non_nullable
@@ -12406,7 +12406,7 @@ class __$$_TimingRepeatCopyWithImpl<$Res>
       frequency: freezed == frequency
           ? _value.frequency
           : frequency // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       frequencyElement: freezed == frequencyElement
           ? _value.frequencyElement
           : frequencyElement // ignore: cast_nullable_to_non_nullable
@@ -12414,7 +12414,7 @@ class __$$_TimingRepeatCopyWithImpl<$Res>
       frequencyMax: freezed == frequencyMax
           ? _value.frequencyMax
           : frequencyMax // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       frequencyMaxElement: freezed == frequencyMaxElement
           ? _value.frequencyMaxElement
           : frequencyMaxElement // ignore: cast_nullable_to_non_nullable
@@ -12422,7 +12422,7 @@ class __$$_TimingRepeatCopyWithImpl<$Res>
       period: freezed == period
           ? _value.period
           : period // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       periodElement: freezed == periodElement
           ? _value.periodElement
           : periodElement // ignore: cast_nullable_to_non_nullable
@@ -12430,7 +12430,7 @@ class __$$_TimingRepeatCopyWithImpl<$Res>
       periodMax: freezed == periodMax
           ? _value.periodMax
           : periodMax // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       periodMaxElement: freezed == periodMaxElement
           ? _value.periodMaxElement
           : periodMaxElement // ignore: cast_nullable_to_non_nullable
@@ -12470,7 +12470,7 @@ class __$$_TimingRepeatCopyWithImpl<$Res>
       offset: freezed == offset
           ? _value.offset
           : offset // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt?,
+              as FhirUnsignedInt?,
       offsetElement: freezed == offsetElement
           ? _value.offsetElement
           : offsetElement // ignore: cast_nullable_to_non_nullable
@@ -12636,7 +12636,7 @@ class _$_TimingRepeat extends _TimingRepeat {
   /// duration of the entire timing specification. If countMax is present, this
   ///  element indicates the lower bound of the allowed range of count values.
   @override
-  final PositiveInt? count;
+  final FhirPositiveInt? count;
 
   /// [countElement] Extensions for count
   @override
@@ -12646,7 +12646,7 @@ class _$_TimingRepeat extends _TimingRepeat {
   /// [countMax] If present, indicates that the count is a range - so to
   ///  perform the action between [count] and [countMax] times.
   @override
-  final PositiveInt? countMax;
+  final FhirPositiveInt? countMax;
 
   /// [countMaxElement] Extensions for countMax
   @override
@@ -12657,7 +12657,7 @@ class _$_TimingRepeat extends _TimingRepeat {
   /// durationMax is present, this element indicates the lower bound of the
   ///  allowed range of the duration.
   @override
-  final Decimal? duration;
+  final FhirDecimal? duration;
 
   /// [durationElement] Extensions for duration
   @override
@@ -12667,7 +12667,7 @@ class _$_TimingRepeat extends _TimingRepeat {
   /// [durationMax] If present, indicates that the duration is a range - so to
   ///  perform the action between [duration] and [durationMax] time length.
   @override
-  final Decimal? durationMax;
+  final FhirDecimal? durationMax;
 
   /// [durationMaxElement] Extensions for durationMax
   @override
@@ -12686,7 +12686,7 @@ class _$_TimingRepeat extends _TimingRepeat {
   /// period. If frequencyMax is present, this element indicates the lower bound
   ///  of the allowed range of the frequency.
   @override
-  final PositiveInt? frequency;
+  final FhirPositiveInt? frequency;
 
   /// [frequencyElement] Extensions for frequency
   @override
@@ -12697,7 +12697,7 @@ class _$_TimingRepeat extends _TimingRepeat {
   /// to repeat between [frequency] and [frequencyMax] times within the period
   ///  or period range.
   @override
-  final PositiveInt? frequencyMax;
+  final FhirPositiveInt? frequencyMax;
 
   /// [frequencyMaxElement] Extensions for frequencyMax
   @override
@@ -12709,7 +12709,7 @@ class _$_TimingRepeat extends _TimingRepeat {
   /// day" would be the period. If periodMax is present, this element indicates
   ///  the lower bound of the allowed range of the period length.
   @override
-  final Decimal? period;
+  final FhirDecimal? period;
 
   /// [periodElement] Extensions for period
   @override
@@ -12720,7 +12720,7 @@ class _$_TimingRepeat extends _TimingRepeat {
   /// to [periodMax], allowing expressing concepts such as "do this once every
   /// 3-5 days.
   @override
-  final Decimal? periodMax;
+  final FhirDecimal? periodMax;
 
   /// [periodMaxElement] Extensions for periodMax
   @override
@@ -12826,7 +12826,7 @@ class _$_TimingRepeat extends _TimingRepeat {
   /// indicate whether the minutes is before or after the event, then the offset
   ///  is assumed to be after the event.
   @override
-  final UnsignedInt? offset;
+  final FhirUnsignedInt? offset;
 
   /// [offsetElement] Extensions for offset
   @override
@@ -12971,32 +12971,32 @@ abstract class _TimingRepeat extends TimingRepeat {
       final FhirDuration? boundsDuration,
       final Range? boundsRange,
       final Period? boundsPeriod,
-      final PositiveInt? count,
+      final FhirPositiveInt? count,
       @JsonKey(name: '_count')
           final Element? countElement,
-      final PositiveInt? countMax,
+      final FhirPositiveInt? countMax,
       @JsonKey(name: '_countMax')
           final Element? countMaxElement,
-      final Decimal? duration,
+      final FhirDecimal? duration,
       @JsonKey(name: '_duration')
           final Element? durationElement,
-      final Decimal? durationMax,
+      final FhirDecimal? durationMax,
       @JsonKey(name: '_durationMax')
           final Element? durationMaxElement,
       @JsonKey(unknownEnumValue: TimingRepeatDurationUnit.unknown)
           final TimingRepeatDurationUnit? durationUnit,
       @JsonKey(name: '_durationUnit')
           final Element? durationUnitElement,
-      final PositiveInt? frequency,
+      final FhirPositiveInt? frequency,
       @JsonKey(name: '_frequency')
           final Element? frequencyElement,
-      final PositiveInt? frequencyMax,
+      final FhirPositiveInt? frequencyMax,
       @JsonKey(name: '_frequencyMax')
           final Element? frequencyMaxElement,
-      final Decimal? period,
+      final FhirDecimal? period,
       @JsonKey(name: '_period')
           final Element? periodElement,
-      final Decimal? periodMax,
+      final FhirDecimal? periodMax,
       @JsonKey(name: '_periodMax')
           final Element? periodMaxElement,
       @JsonKey(unknownEnumValue: TimingRepeatPeriodUnit.unknown)
@@ -13012,7 +13012,7 @@ abstract class _TimingRepeat extends TimingRepeat {
       final List<TimingRepeatWhen>? when,
       @JsonKey(name: '_when')
           final List<Element?>? whenElement,
-      final UnsignedInt? offset,
+      final FhirUnsignedInt? offset,
       @JsonKey(name: '_offset')
           final Element? offsetElement}) = _$_TimingRepeat;
   _TimingRepeat._() : super._();

@@ -9,21 +9,21 @@ import 'package:yaml/yaml.dart';
 // Project imports:
 import 'primitive_type_exceptions.dart';
 
-class Markdown {
-  const Markdown._(this._valueString, this._valueMarkdown, this._isValid);
+class FhirMarkdown {
+  const FhirMarkdown._(this._valueString, this._valueMarkdown, this._isValid);
 
-  factory Markdown(dynamic inValue) =>
+  factory FhirMarkdown(dynamic inValue) =>
       inValue is String && RegExp(r'[ \r\n\t\S]+').hasMatch(inValue)
-          ? Markdown._(inValue, inValue, true)
-          : Markdown._(inValue.toString(), null, false);
+          ? FhirMarkdown._(inValue, inValue, true)
+          : FhirMarkdown._(inValue.toString(), null, false);
 
-  factory Markdown.fromJson(dynamic json) => Markdown(json);
+  factory FhirMarkdown.fromJson(dynamic json) => FhirMarkdown(json);
 
-  factory Markdown.fromYaml(dynamic yaml) => yaml is String
-      ? Markdown.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+  factory FhirMarkdown.fromYaml(dynamic yaml) => yaml is String
+      ? FhirMarkdown.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
-          ? Markdown.fromJson(jsonDecode(jsonEncode(yaml)))
-          : throw YamlFormatException<Markdown>(
+          ? FhirMarkdown.fromJson(jsonDecode(jsonEncode(yaml)))
+          : throw YamlFormatException<FhirMarkdown>(
               'FormatException: "$json" is not a valid Yaml string or YamlMap.');
 
   final String _valueString;
@@ -43,7 +43,7 @@ class Markdown {
   @override
   bool operator ==(Object o) => identical(this, o)
       ? true
-      : o is Markdown
+      : o is FhirMarkdown
           ? o.value == _valueMarkdown
           : o is String
               ? o == _valueString

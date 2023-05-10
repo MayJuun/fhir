@@ -3,1179 +3,6 @@
 part of 'evidence_based_medicine.dart';
 
 // **************************************************************************
-// TypeAdapterGenerator
-// **************************************************************************
-
-class CitationAdapter extends TypeAdapter<_$_Citation> {
-  @override
-  final int typeId = 63;
-
-  @override
-  _$_Citation read(BinaryReader reader) {
-    final numOfFields = reader.readByte();
-    final fields = <int, dynamic>{
-      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
-    };
-    return _$_Citation(
-      resourceType: fields[0] as R4ResourceType,
-      id: fields[1] as String?,
-      meta: fields[2] as FhirMeta?,
-      implicitRules: fields[3] as FhirUri?,
-      implicitRulesElement: fields[4] as Element?,
-      language: fields[5] as Code?,
-      languageElement: fields[6] as Element?,
-      text: fields[7] as Narrative?,
-      contained: (fields[8] as List?)?.cast<Resource>(),
-      extension_: (fields[9] as List?)?.cast<FhirExtension>(),
-      modifierExtension: (fields[10] as List?)?.cast<FhirExtension>(),
-      url: fields[11] as FhirUri?,
-      urlElement: fields[12] as Element?,
-      identifier: (fields[13] as List?)?.cast<Identifier>(),
-      version: fields[14] as String?,
-      versionElement: fields[15] as Element?,
-      name: fields[16] as String?,
-      nameElement: fields[17] as Element?,
-      title: fields[18] as String?,
-      titleElement: fields[19] as Element?,
-      status: fields[20] as Code?,
-      statusElement: fields[21] as Element?,
-      experimental: fields[22] as Boolean?,
-      experimentalElement: fields[23] as Element?,
-      date: fields[24] as FhirDateTime?,
-      dateElement: fields[25] as Element?,
-      publisher: fields[26] as String?,
-      publisherElement: fields[27] as Element?,
-      contact: (fields[28] as List?)?.cast<ContactDetail>(),
-      description: fields[29] as Markdown?,
-      descriptionElement: fields[30] as Element?,
-      useContext: (fields[31] as List?)?.cast<UsageContext>(),
-      jurisdiction: (fields[32] as List?)?.cast<CodeableConcept>(),
-      purpose: fields[33] as Markdown?,
-      purposeElement: fields[34] as Element?,
-      copyright: fields[35] as Markdown?,
-      copyrightElement: fields[36] as Element?,
-      approvalDate: fields[37] as Date?,
-      approvalDateElement: fields[38] as Element?,
-      lastReviewDate: fields[39] as Date?,
-      lastReviewDateElement: fields[40] as Element?,
-      effectivePeriod: fields[41] as Period?,
-      author: (fields[42] as List?)?.cast<ContactDetail>(),
-      editor: (fields[44] as List?)?.cast<ContactDetail>(),
-      reviewer: (fields[45] as List?)?.cast<ContactDetail>(),
-      endorser: (fields[46] as List?)?.cast<ContactDetail>(),
-      summary: (fields[47] as List?)?.cast<CitationSummary>(),
-      classification: (fields[49] as List?)?.cast<CitationClassification>(),
-      note: (fields[50] as List?)?.cast<Annotation>(),
-      currentState: (fields[51] as List?)?.cast<CodeableConcept>(),
-      statusDate: (fields[52] as List?)?.cast<CitationStatusDate>(),
-      relatesTo: (fields[53] as List?)?.cast<CitationRelatesTo>(),
-      citedArtifact: fields[54] as CitationCitedArtifact?,
-    );
-  }
-
-  @override
-  void write(BinaryWriter writer, _$_Citation obj) {
-    writer
-      ..writeByte(53)
-      ..writeByte(0)
-      ..write(obj.resourceType)
-      ..writeByte(1)
-      ..write(obj.id)
-      ..writeByte(2)
-      ..write(obj.meta)
-      ..writeByte(3)
-      ..write(obj.implicitRules)
-      ..writeByte(4)
-      ..write(obj.implicitRulesElement)
-      ..writeByte(5)
-      ..write(obj.language)
-      ..writeByte(6)
-      ..write(obj.languageElement)
-      ..writeByte(7)
-      ..write(obj.text)
-      ..writeByte(11)
-      ..write(obj.url)
-      ..writeByte(12)
-      ..write(obj.urlElement)
-      ..writeByte(14)
-      ..write(obj.version)
-      ..writeByte(15)
-      ..write(obj.versionElement)
-      ..writeByte(16)
-      ..write(obj.name)
-      ..writeByte(17)
-      ..write(obj.nameElement)
-      ..writeByte(18)
-      ..write(obj.title)
-      ..writeByte(19)
-      ..write(obj.titleElement)
-      ..writeByte(20)
-      ..write(obj.status)
-      ..writeByte(21)
-      ..write(obj.statusElement)
-      ..writeByte(22)
-      ..write(obj.experimental)
-      ..writeByte(23)
-      ..write(obj.experimentalElement)
-      ..writeByte(24)
-      ..write(obj.date)
-      ..writeByte(25)
-      ..write(obj.dateElement)
-      ..writeByte(26)
-      ..write(obj.publisher)
-      ..writeByte(27)
-      ..write(obj.publisherElement)
-      ..writeByte(29)
-      ..write(obj.description)
-      ..writeByte(30)
-      ..write(obj.descriptionElement)
-      ..writeByte(33)
-      ..write(obj.purpose)
-      ..writeByte(34)
-      ..write(obj.purposeElement)
-      ..writeByte(35)
-      ..write(obj.copyright)
-      ..writeByte(36)
-      ..write(obj.copyrightElement)
-      ..writeByte(37)
-      ..write(obj.approvalDate)
-      ..writeByte(38)
-      ..write(obj.approvalDateElement)
-      ..writeByte(39)
-      ..write(obj.lastReviewDate)
-      ..writeByte(40)
-      ..write(obj.lastReviewDateElement)
-      ..writeByte(41)
-      ..write(obj.effectivePeriod)
-      ..writeByte(54)
-      ..write(obj.citedArtifact)
-      ..writeByte(8)
-      ..write(obj.contained)
-      ..writeByte(9)
-      ..write(obj.extension_)
-      ..writeByte(10)
-      ..write(obj.modifierExtension)
-      ..writeByte(13)
-      ..write(obj.identifier)
-      ..writeByte(28)
-      ..write(obj.contact)
-      ..writeByte(31)
-      ..write(obj.useContext)
-      ..writeByte(32)
-      ..write(obj.jurisdiction)
-      ..writeByte(42)
-      ..write(obj.author)
-      ..writeByte(44)
-      ..write(obj.editor)
-      ..writeByte(45)
-      ..write(obj.reviewer)
-      ..writeByte(46)
-      ..write(obj.endorser)
-      ..writeByte(47)
-      ..write(obj.summary)
-      ..writeByte(49)
-      ..write(obj.classification)
-      ..writeByte(50)
-      ..write(obj.note)
-      ..writeByte(51)
-      ..write(obj.currentState)
-      ..writeByte(52)
-      ..write(obj.statusDate)
-      ..writeByte(53)
-      ..write(obj.relatesTo);
-  }
-
-  @override
-  int get hashCode => typeId.hashCode;
-
-  @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is CitationAdapter &&
-          runtimeType == other.runtimeType &&
-          typeId == other.typeId;
-}
-
-class CitationWebLocationAdapter extends TypeAdapter<_$_CitationWebLocation> {
-  @override
-  final int typeId = 64;
-
-  @override
-  _$_CitationWebLocation read(BinaryReader reader) {
-    final numOfFields = reader.readByte();
-    final fields = <int, dynamic>{
-      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
-    };
-    return _$_CitationWebLocation(
-      id: fields[0] as String?,
-      extension_: (fields[1] as List?)?.cast<FhirExtension>(),
-      modifierExtension: (fields[2] as List?)?.cast<FhirExtension>(),
-      type: fields[3] as CodeableConcept?,
-      url: fields[4] as FhirUri?,
-      urlElement: fields[5] as Element?,
-    );
-  }
-
-  @override
-  void write(BinaryWriter writer, _$_CitationWebLocation obj) {
-    writer
-      ..writeByte(6)
-      ..writeByte(0)
-      ..write(obj.id)
-      ..writeByte(3)
-      ..write(obj.type)
-      ..writeByte(4)
-      ..write(obj.url)
-      ..writeByte(5)
-      ..write(obj.urlElement)
-      ..writeByte(1)
-      ..write(obj.extension_)
-      ..writeByte(2)
-      ..write(obj.modifierExtension);
-  }
-
-  @override
-  int get hashCode => typeId.hashCode;
-
-  @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is CitationWebLocationAdapter &&
-          runtimeType == other.runtimeType &&
-          typeId == other.typeId;
-}
-
-class EvidenceAdapter extends TypeAdapter<_$_Evidence> {
-  @override
-  final int typeId = 65;
-
-  @override
-  _$_Evidence read(BinaryReader reader) {
-    final numOfFields = reader.readByte();
-    final fields = <int, dynamic>{
-      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
-    };
-    return _$_Evidence(
-      resourceType: fields[0] as R4ResourceType,
-      id: fields[1] as String?,
-      meta: fields[2] as FhirMeta?,
-      implicitRules: fields[3] as FhirUri?,
-      implicitRulesElement: fields[4] as Element?,
-      language: fields[5] as Code?,
-      languageElement: fields[6] as Element?,
-      text: fields[7] as Narrative?,
-      contained: (fields[8] as List?)?.cast<Resource>(),
-      extension_: (fields[9] as List?)?.cast<FhirExtension>(),
-      modifierExtension: (fields[10] as List?)?.cast<FhirExtension>(),
-      url: fields[11] as FhirUri?,
-      urlElement: fields[12] as Element?,
-      identifier: (fields[13] as List?)?.cast<Identifier>(),
-      version: fields[14] as String?,
-      versionElement: fields[15] as Element?,
-      title: fields[16] as String?,
-      titleElement: fields[17] as Element?,
-      citeAsReference: fields[18] as Reference?,
-      citAsMarkdown: fields[19] as Markdown?,
-      citeAsMarkdownElement: fields[20] as Element?,
-      status: fields[21] as Code?,
-      statusElement: fields[22] as Element?,
-      date: fields[23] as FhirDateTime?,
-      dateElement: fields[24] as Element?,
-      useContext: (fields[25] as List?)?.cast<UsageContext>(),
-      approvalDate: fields[26] as Date?,
-      approvalDateElement: fields[27] as Element?,
-      lastReviewDate: fields[28] as Date?,
-      lastReviewDateElement: fields[29] as Element?,
-      publisher: fields[30] as String?,
-      publisherElement: fields[31] as Element?,
-      contact: (fields[32] as List?)?.cast<ContactDetail>(),
-      author: (fields[33] as List?)?.cast<ContactDetail>(),
-      editor: (fields[34] as List?)?.cast<ContactDetail>(),
-      reviewer: (fields[35] as List?)?.cast<ContactDetail>(),
-      endorser: (fields[36] as List?)?.cast<ContactDetail>(),
-      relatedArtifact: (fields[37] as List?)?.cast<RelatedArtifact>(),
-      description: fields[38] as Markdown?,
-      descriptionElement: fields[39] as Element?,
-      assertion: fields[40] as Markdown?,
-      assertionElement: fields[41] as Element?,
-      note: (fields[42] as List?)?.cast<Annotation>(),
-      variableDefinition:
-          (fields[43] as List).cast<EvidenceVariableDefinition>(),
-      synthesisType: fields[44] as CodeableConcept?,
-      studyType: fields[45] as CodeableConcept?,
-      statistic: (fields[46] as List?)?.cast<EvidenceStatistic>(),
-      certainty: (fields[47] as List?)?.cast<EvidenceCertainty>(),
-    );
-  }
-
-  @override
-  void write(BinaryWriter writer, _$_Evidence obj) {
-    writer
-      ..writeByte(48)
-      ..writeByte(0)
-      ..write(obj.resourceType)
-      ..writeByte(1)
-      ..write(obj.id)
-      ..writeByte(2)
-      ..write(obj.meta)
-      ..writeByte(3)
-      ..write(obj.implicitRules)
-      ..writeByte(4)
-      ..write(obj.implicitRulesElement)
-      ..writeByte(5)
-      ..write(obj.language)
-      ..writeByte(6)
-      ..write(obj.languageElement)
-      ..writeByte(7)
-      ..write(obj.text)
-      ..writeByte(11)
-      ..write(obj.url)
-      ..writeByte(12)
-      ..write(obj.urlElement)
-      ..writeByte(14)
-      ..write(obj.version)
-      ..writeByte(15)
-      ..write(obj.versionElement)
-      ..writeByte(16)
-      ..write(obj.title)
-      ..writeByte(17)
-      ..write(obj.titleElement)
-      ..writeByte(18)
-      ..write(obj.citeAsReference)
-      ..writeByte(19)
-      ..write(obj.citAsMarkdown)
-      ..writeByte(20)
-      ..write(obj.citeAsMarkdownElement)
-      ..writeByte(21)
-      ..write(obj.status)
-      ..writeByte(22)
-      ..write(obj.statusElement)
-      ..writeByte(23)
-      ..write(obj.date)
-      ..writeByte(24)
-      ..write(obj.dateElement)
-      ..writeByte(26)
-      ..write(obj.approvalDate)
-      ..writeByte(27)
-      ..write(obj.approvalDateElement)
-      ..writeByte(28)
-      ..write(obj.lastReviewDate)
-      ..writeByte(29)
-      ..write(obj.lastReviewDateElement)
-      ..writeByte(30)
-      ..write(obj.publisher)
-      ..writeByte(31)
-      ..write(obj.publisherElement)
-      ..writeByte(38)
-      ..write(obj.description)
-      ..writeByte(39)
-      ..write(obj.descriptionElement)
-      ..writeByte(40)
-      ..write(obj.assertion)
-      ..writeByte(41)
-      ..write(obj.assertionElement)
-      ..writeByte(44)
-      ..write(obj.synthesisType)
-      ..writeByte(45)
-      ..write(obj.studyType)
-      ..writeByte(8)
-      ..write(obj.contained)
-      ..writeByte(9)
-      ..write(obj.extension_)
-      ..writeByte(10)
-      ..write(obj.modifierExtension)
-      ..writeByte(13)
-      ..write(obj.identifier)
-      ..writeByte(25)
-      ..write(obj.useContext)
-      ..writeByte(32)
-      ..write(obj.contact)
-      ..writeByte(33)
-      ..write(obj.author)
-      ..writeByte(34)
-      ..write(obj.editor)
-      ..writeByte(35)
-      ..write(obj.reviewer)
-      ..writeByte(36)
-      ..write(obj.endorser)
-      ..writeByte(37)
-      ..write(obj.relatedArtifact)
-      ..writeByte(42)
-      ..write(obj.note)
-      ..writeByte(43)
-      ..write(obj.variableDefinition)
-      ..writeByte(46)
-      ..write(obj.statistic)
-      ..writeByte(47)
-      ..write(obj.certainty);
-  }
-
-  @override
-  int get hashCode => typeId.hashCode;
-
-  @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is EvidenceAdapter &&
-          runtimeType == other.runtimeType &&
-          typeId == other.typeId;
-}
-
-class EvidenceReportAdapter extends TypeAdapter<_$_EvidenceReport> {
-  @override
-  final int typeId = 66;
-
-  @override
-  _$_EvidenceReport read(BinaryReader reader) {
-    final numOfFields = reader.readByte();
-    final fields = <int, dynamic>{
-      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
-    };
-    return _$_EvidenceReport(
-      resourceType: fields[0] as R4ResourceType,
-      id: fields[1] as String?,
-      meta: fields[2] as FhirMeta?,
-      implicitRules: fields[3] as FhirUri?,
-      implicitRulesElement: fields[4] as Element?,
-      language: fields[5] as Code?,
-      languageElement: fields[6] as Element?,
-      text: fields[7] as Narrative?,
-      contained: (fields[8] as List?)?.cast<Resource>(),
-      extension_: (fields[9] as List?)?.cast<FhirExtension>(),
-      modifierExtension: (fields[10] as List?)?.cast<FhirExtension>(),
-      url: fields[11] as FhirUri?,
-      urlElement: fields[12] as Element?,
-      status: fields[13] as Code?,
-      statusElement: fields[14] as Element?,
-      useContext: (fields[15] as List?)?.cast<UsageContext>(),
-      identifier: (fields[16] as List?)?.cast<Identifier>(),
-      relatedIdentifier: (fields[17] as List?)?.cast<Identifier>(),
-      citeAsReference: fields[18] as Reference?,
-      citeAsMarkdown: fields[19] as Markdown?,
-      citeAsMarkdownElement: fields[20] as Element?,
-      type: fields[21] as CodeableConcept?,
-      note: (fields[22] as List?)?.cast<Annotation>(),
-      relatedArtifact: (fields[23] as List?)?.cast<RelatedArtifact>(),
-      subject: fields[24] as EvidenceReportSubject,
-      publisher: fields[25] as String?,
-      publisherElement: fields[26] as Element?,
-      contact: (fields[27] as List?)?.cast<ContactDetail>(),
-      author: (fields[28] as List?)?.cast<ContactDetail>(),
-      editor: (fields[29] as List?)?.cast<ContactDetail>(),
-      reviewer: (fields[30] as List?)?.cast<ContactDetail>(),
-      endorser: (fields[31] as List?)?.cast<ContactDetail>(),
-      relatesTo: (fields[32] as List?)?.cast<EvidenceReportRelatesTo>(),
-      section: (fields[33] as List?)?.cast<EvidenceReportSection>(),
-    );
-  }
-
-  @override
-  void write(BinaryWriter writer, _$_EvidenceReport obj) {
-    writer
-      ..writeByte(34)
-      ..writeByte(0)
-      ..write(obj.resourceType)
-      ..writeByte(1)
-      ..write(obj.id)
-      ..writeByte(2)
-      ..write(obj.meta)
-      ..writeByte(3)
-      ..write(obj.implicitRules)
-      ..writeByte(4)
-      ..write(obj.implicitRulesElement)
-      ..writeByte(5)
-      ..write(obj.language)
-      ..writeByte(6)
-      ..write(obj.languageElement)
-      ..writeByte(7)
-      ..write(obj.text)
-      ..writeByte(11)
-      ..write(obj.url)
-      ..writeByte(12)
-      ..write(obj.urlElement)
-      ..writeByte(13)
-      ..write(obj.status)
-      ..writeByte(14)
-      ..write(obj.statusElement)
-      ..writeByte(18)
-      ..write(obj.citeAsReference)
-      ..writeByte(19)
-      ..write(obj.citeAsMarkdown)
-      ..writeByte(20)
-      ..write(obj.citeAsMarkdownElement)
-      ..writeByte(21)
-      ..write(obj.type)
-      ..writeByte(24)
-      ..write(obj.subject)
-      ..writeByte(25)
-      ..write(obj.publisher)
-      ..writeByte(26)
-      ..write(obj.publisherElement)
-      ..writeByte(8)
-      ..write(obj.contained)
-      ..writeByte(9)
-      ..write(obj.extension_)
-      ..writeByte(10)
-      ..write(obj.modifierExtension)
-      ..writeByte(15)
-      ..write(obj.useContext)
-      ..writeByte(16)
-      ..write(obj.identifier)
-      ..writeByte(17)
-      ..write(obj.relatedIdentifier)
-      ..writeByte(22)
-      ..write(obj.note)
-      ..writeByte(23)
-      ..write(obj.relatedArtifact)
-      ..writeByte(27)
-      ..write(obj.contact)
-      ..writeByte(28)
-      ..write(obj.author)
-      ..writeByte(29)
-      ..write(obj.editor)
-      ..writeByte(30)
-      ..write(obj.reviewer)
-      ..writeByte(31)
-      ..write(obj.endorser)
-      ..writeByte(32)
-      ..write(obj.relatesTo)
-      ..writeByte(33)
-      ..write(obj.section);
-  }
-
-  @override
-  int get hashCode => typeId.hashCode;
-
-  @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is EvidenceReportAdapter &&
-          runtimeType == other.runtimeType &&
-          typeId == other.typeId;
-}
-
-class EvidenceVariableAdapter extends TypeAdapter<_$_EvidenceVariable> {
-  @override
-  final int typeId = 67;
-
-  @override
-  _$_EvidenceVariable read(BinaryReader reader) {
-    final numOfFields = reader.readByte();
-    final fields = <int, dynamic>{
-      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
-    };
-    return _$_EvidenceVariable(
-      resourceType: fields[0] as R4ResourceType,
-      id: fields[1] as String?,
-      meta: fields[2] as FhirMeta?,
-      implicitRules: fields[3] as FhirUri?,
-      implicitRulesElement: fields[4] as Element?,
-      language: fields[5] as Code?,
-      languageElement: fields[6] as Element?,
-      text: fields[7] as Narrative?,
-      contained: (fields[8] as List?)?.cast<Resource>(),
-      extension_: (fields[9] as List?)?.cast<FhirExtension>(),
-      modifierExtension: (fields[10] as List?)?.cast<FhirExtension>(),
-      url: fields[11] as FhirUri?,
-      urlElement: fields[12] as Element?,
-      identifier: (fields[13] as List?)?.cast<Identifier>(),
-      version: fields[14] as String?,
-      versionElement: fields[15] as Element?,
-      name: fields[16] as String?,
-      nameElement: fields[17] as Element?,
-      title: fields[18] as String?,
-      titleElement: fields[19] as Element?,
-      shortTitle: fields[20] as String?,
-      shortTitleElement: fields[21] as Element?,
-      subtitle: fields[22] as String?,
-      subtitleElement: fields[23] as Element?,
-      status: fields[24] as Code?,
-      statusElement: fields[25] as Element?,
-      date: fields[26] as FhirDateTime?,
-      dateElement: fields[27] as Element?,
-      description: fields[28] as Markdown?,
-      descriptionElement: fields[29] as Element?,
-      note: (fields[30] as List?)?.cast<Annotation>(),
-      useContext: (fields[31] as List?)?.cast<UsageContext>(),
-      publisher: fields[32] as String?,
-      publisherElement: fields[33] as Element?,
-      contact: (fields[34] as List?)?.cast<ContactDetail>(),
-      author: (fields[35] as List?)?.cast<ContactDetail>(),
-      editor: (fields[36] as List?)?.cast<ContactDetail>(),
-      reviewer: (fields[37] as List?)?.cast<ContactDetail>(),
-      endorser: (fields[38] as List?)?.cast<ContactDetail>(),
-      relatedArtifact: (fields[39] as List?)?.cast<RelatedArtifact>(),
-      actual: fields[40] as Boolean?,
-      actualElement: fields[41] as Element?,
-      characteristicCombination: fields[42] as Code?,
-      characteristicCombinationElement: fields[43] as Element?,
-      characteristic:
-          (fields[44] as List).cast<EvidenceVariableCharacteristic>(),
-      handling: fields[45] as Code?,
-      handlingElement: fields[46] as Element?,
-      category: (fields[47] as List?)?.cast<EvidenceVariableCategory>(),
-    );
-  }
-
-  @override
-  void write(BinaryWriter writer, _$_EvidenceVariable obj) {
-    writer
-      ..writeByte(48)
-      ..writeByte(0)
-      ..write(obj.resourceType)
-      ..writeByte(1)
-      ..write(obj.id)
-      ..writeByte(2)
-      ..write(obj.meta)
-      ..writeByte(3)
-      ..write(obj.implicitRules)
-      ..writeByte(4)
-      ..write(obj.implicitRulesElement)
-      ..writeByte(5)
-      ..write(obj.language)
-      ..writeByte(6)
-      ..write(obj.languageElement)
-      ..writeByte(7)
-      ..write(obj.text)
-      ..writeByte(11)
-      ..write(obj.url)
-      ..writeByte(12)
-      ..write(obj.urlElement)
-      ..writeByte(14)
-      ..write(obj.version)
-      ..writeByte(15)
-      ..write(obj.versionElement)
-      ..writeByte(16)
-      ..write(obj.name)
-      ..writeByte(17)
-      ..write(obj.nameElement)
-      ..writeByte(18)
-      ..write(obj.title)
-      ..writeByte(19)
-      ..write(obj.titleElement)
-      ..writeByte(20)
-      ..write(obj.shortTitle)
-      ..writeByte(21)
-      ..write(obj.shortTitleElement)
-      ..writeByte(22)
-      ..write(obj.subtitle)
-      ..writeByte(23)
-      ..write(obj.subtitleElement)
-      ..writeByte(24)
-      ..write(obj.status)
-      ..writeByte(25)
-      ..write(obj.statusElement)
-      ..writeByte(26)
-      ..write(obj.date)
-      ..writeByte(27)
-      ..write(obj.dateElement)
-      ..writeByte(28)
-      ..write(obj.description)
-      ..writeByte(29)
-      ..write(obj.descriptionElement)
-      ..writeByte(32)
-      ..write(obj.publisher)
-      ..writeByte(33)
-      ..write(obj.publisherElement)
-      ..writeByte(40)
-      ..write(obj.actual)
-      ..writeByte(41)
-      ..write(obj.actualElement)
-      ..writeByte(42)
-      ..write(obj.characteristicCombination)
-      ..writeByte(43)
-      ..write(obj.characteristicCombinationElement)
-      ..writeByte(45)
-      ..write(obj.handling)
-      ..writeByte(46)
-      ..write(obj.handlingElement)
-      ..writeByte(8)
-      ..write(obj.contained)
-      ..writeByte(9)
-      ..write(obj.extension_)
-      ..writeByte(10)
-      ..write(obj.modifierExtension)
-      ..writeByte(13)
-      ..write(obj.identifier)
-      ..writeByte(30)
-      ..write(obj.note)
-      ..writeByte(31)
-      ..write(obj.useContext)
-      ..writeByte(34)
-      ..write(obj.contact)
-      ..writeByte(35)
-      ..write(obj.author)
-      ..writeByte(36)
-      ..write(obj.editor)
-      ..writeByte(37)
-      ..write(obj.reviewer)
-      ..writeByte(38)
-      ..write(obj.endorser)
-      ..writeByte(39)
-      ..write(obj.relatedArtifact)
-      ..writeByte(44)
-      ..write(obj.characteristic)
-      ..writeByte(47)
-      ..write(obj.category);
-  }
-
-  @override
-  int get hashCode => typeId.hashCode;
-
-  @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is EvidenceVariableAdapter &&
-          runtimeType == other.runtimeType &&
-          typeId == other.typeId;
-}
-
-class ResearchDefinitionAdapter extends TypeAdapter<_$_ResearchDefinition> {
-  @override
-  final int typeId = 68;
-
-  @override
-  _$_ResearchDefinition read(BinaryReader reader) {
-    final numOfFields = reader.readByte();
-    final fields = <int, dynamic>{
-      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
-    };
-    return _$_ResearchDefinition(
-      resourceType: fields[0] as R4ResourceType,
-      id: fields[1] as String?,
-      meta: fields[2] as FhirMeta?,
-      implicitRules: fields[3] as FhirUri?,
-      implicitRulesElement: fields[4] as Element?,
-      language: fields[5] as Code?,
-      languageElement: fields[6] as Element?,
-      text: fields[7] as Narrative?,
-      contained: (fields[8] as List?)?.cast<Resource>(),
-      extension_: (fields[9] as List?)?.cast<FhirExtension>(),
-      modifierExtension: (fields[10] as List?)?.cast<FhirExtension>(),
-      url: fields[11] as FhirUri?,
-      urlElement: fields[12] as Element?,
-      identifier: (fields[13] as List?)?.cast<Identifier>(),
-      version: fields[14] as String?,
-      versionElement: fields[15] as Element?,
-      name: fields[16] as String?,
-      nameElement: fields[17] as Element?,
-      title: fields[18] as String?,
-      titleElement: fields[19] as Element?,
-      shortTitle: fields[20] as String?,
-      shortTitleElement: fields[21] as Element?,
-      subtitle: fields[22] as String?,
-      subtitleElement: fields[23] as Element?,
-      status: fields[24] as Code?,
-      statusElement: fields[25] as Element?,
-      experimental: fields[26] as Boolean?,
-      experimentalElement: fields[27] as Element?,
-      subjectCodeableConcept: fields[28] as CodeableConcept?,
-      subjectReference: fields[29] as Reference?,
-      date: fields[30] as FhirDateTime?,
-      dateElement: fields[31] as Element?,
-      publisher: fields[32] as String?,
-      publisherElement: fields[33] as Element?,
-      contact: (fields[34] as List?)?.cast<ContactDetail>(),
-      description: fields[35] as Markdown?,
-      descriptionElement: fields[36] as Element?,
-      comment: (fields[37] as List?)?.cast<String>(),
-      commentElement: (fields[38] as List?)?.cast<Element?>(),
-      useContext: (fields[39] as List?)?.cast<UsageContext>(),
-      jurisdiction: (fields[40] as List?)?.cast<CodeableConcept>(),
-      purpose: fields[41] as Markdown?,
-      purposeElement: fields[42] as Element?,
-      usage: fields[43] as String?,
-      usageElement: fields[44] as Element?,
-      copyright: fields[45] as Markdown?,
-      copyrightElement: fields[46] as Element?,
-      approvalDate: fields[47] as Date?,
-      approvalDateElement: fields[48] as Element?,
-      lastReviewDate: fields[49] as Date?,
-      lastReviewDateElement: fields[50] as Element?,
-      effectivePeriod: fields[51] as Period?,
-      topic: (fields[52] as List?)?.cast<CodeableConcept>(),
-      author: (fields[53] as List?)?.cast<ContactDetail>(),
-      editor: (fields[54] as List?)?.cast<ContactDetail>(),
-      reviewer: (fields[55] as List?)?.cast<ContactDetail>(),
-      endorser: (fields[56] as List?)?.cast<ContactDetail>(),
-      relatedArtifact: (fields[57] as List?)?.cast<RelatedArtifact>(),
-      library_: (fields[58] as List?)?.cast<Canonical>(),
-      population: fields[59] as Reference,
-      exposure: fields[60] as Reference?,
-      exposureAlternative: fields[61] as Reference?,
-      outcome: fields[62] as Reference?,
-    );
-  }
-
-  @override
-  void write(BinaryWriter writer, _$_ResearchDefinition obj) {
-    writer
-      ..writeByte(63)
-      ..writeByte(0)
-      ..write(obj.resourceType)
-      ..writeByte(1)
-      ..write(obj.id)
-      ..writeByte(2)
-      ..write(obj.meta)
-      ..writeByte(3)
-      ..write(obj.implicitRules)
-      ..writeByte(4)
-      ..write(obj.implicitRulesElement)
-      ..writeByte(5)
-      ..write(obj.language)
-      ..writeByte(6)
-      ..write(obj.languageElement)
-      ..writeByte(7)
-      ..write(obj.text)
-      ..writeByte(11)
-      ..write(obj.url)
-      ..writeByte(12)
-      ..write(obj.urlElement)
-      ..writeByte(14)
-      ..write(obj.version)
-      ..writeByte(15)
-      ..write(obj.versionElement)
-      ..writeByte(16)
-      ..write(obj.name)
-      ..writeByte(17)
-      ..write(obj.nameElement)
-      ..writeByte(18)
-      ..write(obj.title)
-      ..writeByte(19)
-      ..write(obj.titleElement)
-      ..writeByte(20)
-      ..write(obj.shortTitle)
-      ..writeByte(21)
-      ..write(obj.shortTitleElement)
-      ..writeByte(22)
-      ..write(obj.subtitle)
-      ..writeByte(23)
-      ..write(obj.subtitleElement)
-      ..writeByte(24)
-      ..write(obj.status)
-      ..writeByte(25)
-      ..write(obj.statusElement)
-      ..writeByte(26)
-      ..write(obj.experimental)
-      ..writeByte(27)
-      ..write(obj.experimentalElement)
-      ..writeByte(28)
-      ..write(obj.subjectCodeableConcept)
-      ..writeByte(29)
-      ..write(obj.subjectReference)
-      ..writeByte(30)
-      ..write(obj.date)
-      ..writeByte(31)
-      ..write(obj.dateElement)
-      ..writeByte(32)
-      ..write(obj.publisher)
-      ..writeByte(33)
-      ..write(obj.publisherElement)
-      ..writeByte(35)
-      ..write(obj.description)
-      ..writeByte(36)
-      ..write(obj.descriptionElement)
-      ..writeByte(41)
-      ..write(obj.purpose)
-      ..writeByte(42)
-      ..write(obj.purposeElement)
-      ..writeByte(43)
-      ..write(obj.usage)
-      ..writeByte(44)
-      ..write(obj.usageElement)
-      ..writeByte(45)
-      ..write(obj.copyright)
-      ..writeByte(46)
-      ..write(obj.copyrightElement)
-      ..writeByte(47)
-      ..write(obj.approvalDate)
-      ..writeByte(48)
-      ..write(obj.approvalDateElement)
-      ..writeByte(49)
-      ..write(obj.lastReviewDate)
-      ..writeByte(50)
-      ..write(obj.lastReviewDateElement)
-      ..writeByte(51)
-      ..write(obj.effectivePeriod)
-      ..writeByte(59)
-      ..write(obj.population)
-      ..writeByte(60)
-      ..write(obj.exposure)
-      ..writeByte(61)
-      ..write(obj.exposureAlternative)
-      ..writeByte(62)
-      ..write(obj.outcome)
-      ..writeByte(8)
-      ..write(obj.contained)
-      ..writeByte(9)
-      ..write(obj.extension_)
-      ..writeByte(10)
-      ..write(obj.modifierExtension)
-      ..writeByte(13)
-      ..write(obj.identifier)
-      ..writeByte(34)
-      ..write(obj.contact)
-      ..writeByte(37)
-      ..write(obj.comment)
-      ..writeByte(38)
-      ..write(obj.commentElement)
-      ..writeByte(39)
-      ..write(obj.useContext)
-      ..writeByte(40)
-      ..write(obj.jurisdiction)
-      ..writeByte(52)
-      ..write(obj.topic)
-      ..writeByte(53)
-      ..write(obj.author)
-      ..writeByte(54)
-      ..write(obj.editor)
-      ..writeByte(55)
-      ..write(obj.reviewer)
-      ..writeByte(56)
-      ..write(obj.endorser)
-      ..writeByte(57)
-      ..write(obj.relatedArtifact)
-      ..writeByte(58)
-      ..write(obj.library_);
-  }
-
-  @override
-  int get hashCode => typeId.hashCode;
-
-  @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is ResearchDefinitionAdapter &&
-          runtimeType == other.runtimeType &&
-          typeId == other.typeId;
-}
-
-class ResearchElementDefinitionAdapter
-    extends TypeAdapter<_$_ResearchElementDefinition> {
-  @override
-  final int typeId = 69;
-
-  @override
-  _$_ResearchElementDefinition read(BinaryReader reader) {
-    final numOfFields = reader.readByte();
-    final fields = <int, dynamic>{
-      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
-    };
-    return _$_ResearchElementDefinition(
-      resourceType: fields[0] as R4ResourceType,
-      id: fields[1] as String?,
-      meta: fields[2] as FhirMeta?,
-      implicitRules: fields[3] as FhirUri?,
-      implicitRulesElement: fields[4] as Element?,
-      language: fields[5] as Code?,
-      languageElement: fields[6] as Element?,
-      text: fields[7] as Narrative?,
-      contained: (fields[8] as List?)?.cast<Resource>(),
-      extension_: (fields[9] as List?)?.cast<FhirExtension>(),
-      modifierExtension: (fields[10] as List?)?.cast<FhirExtension>(),
-      url: fields[11] as FhirUri?,
-      urlElement: fields[12] as Element?,
-      identifier: (fields[13] as List?)?.cast<Identifier>(),
-      version: fields[14] as String?,
-      versionElement: fields[15] as Element?,
-      name: fields[16] as String?,
-      nameElement: fields[17] as Element?,
-      title: fields[18] as String?,
-      titleElement: fields[19] as Element?,
-      shortTitle: fields[20] as String?,
-      shortTitleElement: fields[21] as Element?,
-      subtitle: fields[22] as String?,
-      subtitleElement: fields[23] as Element?,
-      status: fields[24] as Code?,
-      statusElement: fields[25] as Element?,
-      experimental: fields[26] as Boolean?,
-      experimentalElement: fields[27] as Element?,
-      subjectCodeableConcept: fields[28] as CodeableConcept?,
-      subjectReference: fields[29] as Reference?,
-      date: fields[30] as FhirDateTime?,
-      dateElement: fields[31] as Element?,
-      publisher: fields[32] as String?,
-      publisherElement: fields[33] as Element?,
-      contact: (fields[34] as List?)?.cast<ContactDetail>(),
-      description: fields[35] as Markdown?,
-      descriptionElement: fields[36] as Element?,
-      comment: (fields[37] as List?)?.cast<String>(),
-      commentElement: (fields[38] as List?)?.cast<Element?>(),
-      useContext: (fields[39] as List?)?.cast<UsageContext>(),
-      jurisdiction: (fields[40] as List?)?.cast<CodeableConcept>(),
-      purpose: fields[41] as Markdown?,
-      purposeElement: fields[42] as Element?,
-      usage: fields[43] as String?,
-      usageElement: fields[44] as Element?,
-      copyright: fields[45] as Markdown?,
-      copyrightElement: fields[46] as Element?,
-      approvalDate: fields[47] as Date?,
-      approvalDateElement: fields[48] as Element?,
-      lastReviewDate: fields[49] as Date?,
-      lastReviewDateElement: fields[50] as Element?,
-      effectivePeriod: fields[51] as Period?,
-      topic: (fields[52] as List?)?.cast<CodeableConcept>(),
-      author: (fields[53] as List?)?.cast<ContactDetail>(),
-      editor: (fields[54] as List?)?.cast<ContactDetail>(),
-      reviewer: (fields[55] as List?)?.cast<ContactDetail>(),
-      endorser: (fields[56] as List?)?.cast<ContactDetail>(),
-      relatedArtifact: (fields[57] as List?)?.cast<RelatedArtifact>(),
-      library_: (fields[58] as List?)?.cast<Canonical>(),
-      type: fields[59] as Code?,
-      typeElement: fields[60] as Element?,
-      variableType: fields[61] as Code?,
-      variableTypeElement: fields[62] as Element?,
-      characteristic:
-          (fields[63] as List).cast<ResearchElementDefinitionCharacteristic>(),
-    );
-  }
-
-  @override
-  void write(BinaryWriter writer, _$_ResearchElementDefinition obj) {
-    writer
-      ..writeByte(64)
-      ..writeByte(0)
-      ..write(obj.resourceType)
-      ..writeByte(1)
-      ..write(obj.id)
-      ..writeByte(2)
-      ..write(obj.meta)
-      ..writeByte(3)
-      ..write(obj.implicitRules)
-      ..writeByte(4)
-      ..write(obj.implicitRulesElement)
-      ..writeByte(5)
-      ..write(obj.language)
-      ..writeByte(6)
-      ..write(obj.languageElement)
-      ..writeByte(7)
-      ..write(obj.text)
-      ..writeByte(11)
-      ..write(obj.url)
-      ..writeByte(12)
-      ..write(obj.urlElement)
-      ..writeByte(14)
-      ..write(obj.version)
-      ..writeByte(15)
-      ..write(obj.versionElement)
-      ..writeByte(16)
-      ..write(obj.name)
-      ..writeByte(17)
-      ..write(obj.nameElement)
-      ..writeByte(18)
-      ..write(obj.title)
-      ..writeByte(19)
-      ..write(obj.titleElement)
-      ..writeByte(20)
-      ..write(obj.shortTitle)
-      ..writeByte(21)
-      ..write(obj.shortTitleElement)
-      ..writeByte(22)
-      ..write(obj.subtitle)
-      ..writeByte(23)
-      ..write(obj.subtitleElement)
-      ..writeByte(24)
-      ..write(obj.status)
-      ..writeByte(25)
-      ..write(obj.statusElement)
-      ..writeByte(26)
-      ..write(obj.experimental)
-      ..writeByte(27)
-      ..write(obj.experimentalElement)
-      ..writeByte(28)
-      ..write(obj.subjectCodeableConcept)
-      ..writeByte(29)
-      ..write(obj.subjectReference)
-      ..writeByte(30)
-      ..write(obj.date)
-      ..writeByte(31)
-      ..write(obj.dateElement)
-      ..writeByte(32)
-      ..write(obj.publisher)
-      ..writeByte(33)
-      ..write(obj.publisherElement)
-      ..writeByte(35)
-      ..write(obj.description)
-      ..writeByte(36)
-      ..write(obj.descriptionElement)
-      ..writeByte(41)
-      ..write(obj.purpose)
-      ..writeByte(42)
-      ..write(obj.purposeElement)
-      ..writeByte(43)
-      ..write(obj.usage)
-      ..writeByte(44)
-      ..write(obj.usageElement)
-      ..writeByte(45)
-      ..write(obj.copyright)
-      ..writeByte(46)
-      ..write(obj.copyrightElement)
-      ..writeByte(47)
-      ..write(obj.approvalDate)
-      ..writeByte(48)
-      ..write(obj.approvalDateElement)
-      ..writeByte(49)
-      ..write(obj.lastReviewDate)
-      ..writeByte(50)
-      ..write(obj.lastReviewDateElement)
-      ..writeByte(51)
-      ..write(obj.effectivePeriod)
-      ..writeByte(59)
-      ..write(obj.type)
-      ..writeByte(60)
-      ..write(obj.typeElement)
-      ..writeByte(61)
-      ..write(obj.variableType)
-      ..writeByte(62)
-      ..write(obj.variableTypeElement)
-      ..writeByte(8)
-      ..write(obj.contained)
-      ..writeByte(9)
-      ..write(obj.extension_)
-      ..writeByte(10)
-      ..write(obj.modifierExtension)
-      ..writeByte(13)
-      ..write(obj.identifier)
-      ..writeByte(34)
-      ..write(obj.contact)
-      ..writeByte(37)
-      ..write(obj.comment)
-      ..writeByte(38)
-      ..write(obj.commentElement)
-      ..writeByte(39)
-      ..write(obj.useContext)
-      ..writeByte(40)
-      ..write(obj.jurisdiction)
-      ..writeByte(52)
-      ..write(obj.topic)
-      ..writeByte(53)
-      ..write(obj.author)
-      ..writeByte(54)
-      ..write(obj.editor)
-      ..writeByte(55)
-      ..write(obj.reviewer)
-      ..writeByte(56)
-      ..write(obj.endorser)
-      ..writeByte(57)
-      ..write(obj.relatedArtifact)
-      ..writeByte(58)
-      ..write(obj.library_)
-      ..writeByte(63)
-      ..write(obj.characteristic);
-  }
-
-  @override
-  int get hashCode => typeId.hashCode;
-
-  @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is ResearchElementDefinitionAdapter &&
-          runtimeType == other.runtimeType &&
-          typeId == other.typeId;
-}
-
-// **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
@@ -1194,7 +21,7 @@ _$_Citation _$$_CitationFromJson(Map<String, dynamic> json) => _$_Citation(
           ? null
           : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
       language:
-          json['language'] == null ? null : Code.fromJson(json['language']),
+          json['language'] == null ? null : FhirCode.fromJson(json['language']),
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -1229,13 +56,13 @@ _$_Citation _$$_CitationFromJson(Map<String, dynamic> json) => _$_Citation(
       titleElement: json['_title'] == null
           ? null
           : Element.fromJson(json['_title'] as Map<String, dynamic>),
-      status: json['status'] == null ? null : Code.fromJson(json['status']),
+      status: json['status'] == null ? null : FhirCode.fromJson(json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
       experimental: json['experimental'] == null
           ? null
-          : Boolean.fromJson(json['experimental']),
+          : FhirBoolean.fromJson(json['experimental']),
       experimentalElement: json['_experimental'] == null
           ? null
           : Element.fromJson(json['_experimental'] as Map<String, dynamic>),
@@ -1252,7 +79,7 @@ _$_Citation _$$_CitationFromJson(Map<String, dynamic> json) => _$_Citation(
           .toList(),
       description: json['description'] == null
           ? null
-          : Markdown.fromJson(json['description']),
+          : FhirMarkdown.fromJson(json['description']),
       descriptionElement: json['_description'] == null
           ? null
           : Element.fromJson(json['_description'] as Map<String, dynamic>),
@@ -1262,26 +89,27 @@ _$_Citation _$$_CitationFromJson(Map<String, dynamic> json) => _$_Citation(
       jurisdiction: (json['jurisdiction'] as List<dynamic>?)
           ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
           .toList(),
-      purpose:
-          json['purpose'] == null ? null : Markdown.fromJson(json['purpose']),
+      purpose: json['purpose'] == null
+          ? null
+          : FhirMarkdown.fromJson(json['purpose']),
       purposeElement: json['_purpose'] == null
           ? null
           : Element.fromJson(json['_purpose'] as Map<String, dynamic>),
       copyright: json['copyright'] == null
           ? null
-          : Markdown.fromJson(json['copyright']),
+          : FhirMarkdown.fromJson(json['copyright']),
       copyrightElement: json['_copyright'] == null
           ? null
           : Element.fromJson(json['_copyright'] as Map<String, dynamic>),
       approvalDate: json['approvalDate'] == null
           ? null
-          : Date.fromJson(json['approvalDate']),
+          : FhirDate.fromJson(json['approvalDate']),
       approvalDateElement: json['_approvalDate'] == null
           ? null
           : Element.fromJson(json['_approvalDate'] as Map<String, dynamic>),
       lastReviewDate: json['lastReviewDate'] == null
           ? null
-          : Date.fromJson(json['lastReviewDate']),
+          : FhirDate.fromJson(json['lastReviewDate']),
       lastReviewDateElement: json['_lastReviewDate'] == null
           ? null
           : Element.fromJson(json['_lastReviewDate'] as Map<String, dynamic>),
@@ -1558,7 +386,7 @@ _$_CitationSummary _$$_CitationSummaryFromJson(Map<String, dynamic> json) =>
       style: json['style'] == null
           ? null
           : CodeableConcept.fromJson(json['style'] as Map<String, dynamic>),
-      text: json['text'] == null ? null : Markdown.fromJson(json['text']),
+      text: json['text'] == null ? null : FhirMarkdown.fromJson(json['text']),
       textElement: json['_text'] == null
           ? null
           : Element.fromJson(json['_text'] as Map<String, dynamic>),
@@ -1635,7 +463,8 @@ _$_CitationStatusDate _$$_CitationStatusDateFromJson(
           .toList(),
       activity:
           CodeableConcept.fromJson(json['activity'] as Map<String, dynamic>),
-      actual: json['actual'] == null ? null : Boolean.fromJson(json['actual']),
+      actual:
+          json['actual'] == null ? null : FhirBoolean.fromJson(json['actual']),
       actualElement: json['_actual'] == null
           ? null
           : Element.fromJson(json['_actual'] as Map<String, dynamic>),
@@ -1878,7 +707,8 @@ _$_CitationStatusDate1 _$$_CitationStatusDate1FromJson(
           .toList(),
       activity:
           CodeableConcept.fromJson(json['activity'] as Map<String, dynamic>),
-      actual: json['actual'] == null ? null : Boolean.fromJson(json['actual']),
+      actual:
+          json['actual'] == null ? null : FhirBoolean.fromJson(json['actual']),
       actualElement: json['_actual'] == null
           ? null
           : Element.fromJson(json['_actual'] as Map<String, dynamic>),
@@ -1922,7 +752,7 @@ _$_CitationTitle _$$_CitationTitleFromJson(Map<String, dynamic> json) =>
       language: json['language'] == null
           ? null
           : CodeableConcept.fromJson(json['language'] as Map<String, dynamic>),
-      text: json['text'] == null ? null : Markdown.fromJson(json['text']),
+      text: json['text'] == null ? null : FhirMarkdown.fromJson(json['text']),
       textElement: json['_text'] == null
           ? null
           : Element.fromJson(json['_text'] as Map<String, dynamic>),
@@ -1964,13 +794,13 @@ _$_CitationAbstract _$$_CitationAbstractFromJson(Map<String, dynamic> json) =>
       language: json['language'] == null
           ? null
           : CodeableConcept.fromJson(json['language'] as Map<String, dynamic>),
-      text: json['text'] == null ? null : Markdown.fromJson(json['text']),
+      text: json['text'] == null ? null : FhirMarkdown.fromJson(json['text']),
       textElement: json['_text'] == null
           ? null
           : Element.fromJson(json['_text'] as Map<String, dynamic>),
       copyright: json['copyright'] == null
           ? null
-          : Markdown.fromJson(json['copyright']),
+          : FhirMarkdown.fromJson(json['copyright']),
       copyrightElement: json['_copyright'] == null
           ? null
           : Element.fromJson(json['_copyright'] as Map<String, dynamic>),
@@ -2156,7 +986,7 @@ _$_CitationPublicationForm _$$_CitationPublicationFormFromJson(
           : Element.fromJson(json['_pageCount'] as Map<String, dynamic>),
       copyright: json['copyright'] == null
           ? null
-          : Markdown.fromJson(json['copyright']),
+          : FhirMarkdown.fromJson(json['copyright']),
       copyrightElement: json['_copyright'] == null
           ? null
           : Element.fromJson(json['_copyright'] as Map<String, dynamic>),
@@ -2318,7 +1148,7 @@ _$_CitationDateOfPublication _$$_CitationDateOfPublicationFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      date: json['date'] == null ? null : Date.fromJson(json['date']),
+      date: json['date'] == null ? null : FhirDate.fromJson(json['date']),
       dateElement: json['_date'] == null
           ? null
           : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -2489,7 +1319,7 @@ _$_CitationWhoClassified _$$_CitationWhoClassifiedFromJson(
               json['_classifierCopyright'] as Map<String, dynamic>),
       freeToShare: json['freeToShare'] == null
           ? null
-          : Boolean.fromJson(json['freeToShare']),
+          : FhirBoolean.fromJson(json['freeToShare']),
       freeToShareElement: json['_freeToShare'] == null
           ? null
           : Element.fromJson(json['_freeToShare'] as Map<String, dynamic>),
@@ -2531,8 +1361,9 @@ _$_CitationContributorship _$$_CitationContributorshipFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      complete:
-          json['complete'] == null ? null : Boolean.fromJson(json['complete']),
+      complete: json['complete'] == null
+          ? null
+          : FhirBoolean.fromJson(json['complete']),
       completeElement: json['_complete'] == null
           ? null
           : Element.fromJson(json['_complete'] as Map<String, dynamic>),
@@ -2611,14 +1442,14 @@ _$_CitationEntry _$$_CitationEntryFromJson(Map<String, dynamic> json) =>
           .toList(),
       correspondingContact: json['correspondingContact'] == null
           ? null
-          : Boolean.fromJson(json['correspondingContact']),
+          : FhirBoolean.fromJson(json['correspondingContact']),
       correspondingContactElement: json['_correspondingContact'] == null
           ? null
           : Element.fromJson(
               json['_correspondingContact'] as Map<String, dynamic>),
       listOrder: json['listOrder'] == null
           ? null
-          : PositiveInt.fromJson(json['listOrder']),
+          : FhirPositiveInt.fromJson(json['listOrder']),
       listOrderElement: json['_listOrder'] == null
           ? null
           : Element.fromJson(json['_listOrder'] as Map<String, dynamic>),
@@ -2765,7 +1596,8 @@ _$_CitationSummary1 _$$_CitationSummary1FromJson(Map<String, dynamic> json) =>
       source: json['source'] == null
           ? null
           : CodeableConcept.fromJson(json['source'] as Map<String, dynamic>),
-      value: json['value'] == null ? null : Markdown.fromJson(json['value']),
+      value:
+          json['value'] == null ? null : FhirMarkdown.fromJson(json['value']),
       valueElement: json['_value'] == null
           ? null
           : Element.fromJson(json['_value'] as Map<String, dynamic>),
@@ -2809,7 +1641,7 @@ _$_Evidence _$$_EvidenceFromJson(Map<String, dynamic> json) => _$_Evidence(
           ? null
           : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
       language:
-          json['language'] == null ? null : Code.fromJson(json['language']),
+          json['language'] == null ? null : FhirCode.fromJson(json['language']),
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -2845,11 +1677,11 @@ _$_Evidence _$$_EvidenceFromJson(Map<String, dynamic> json) => _$_Evidence(
           : Reference.fromJson(json['citeAsReference'] as Map<String, dynamic>),
       citAsMarkdown: json['citAsMarkdown'] == null
           ? null
-          : Markdown.fromJson(json['citAsMarkdown']),
+          : FhirMarkdown.fromJson(json['citAsMarkdown']),
       citeAsMarkdownElement: json['_citeAsMarkdown'] == null
           ? null
           : Element.fromJson(json['_citeAsMarkdown'] as Map<String, dynamic>),
-      status: json['status'] == null ? null : Code.fromJson(json['status']),
+      status: json['status'] == null ? null : FhirCode.fromJson(json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -2862,13 +1694,13 @@ _$_Evidence _$$_EvidenceFromJson(Map<String, dynamic> json) => _$_Evidence(
           .toList(),
       approvalDate: json['approvalDate'] == null
           ? null
-          : Date.fromJson(json['approvalDate']),
+          : FhirDate.fromJson(json['approvalDate']),
       approvalDateElement: json['_approvalDate'] == null
           ? null
           : Element.fromJson(json['_approvalDate'] as Map<String, dynamic>),
       lastReviewDate: json['lastReviewDate'] == null
           ? null
-          : Date.fromJson(json['lastReviewDate']),
+          : FhirDate.fromJson(json['lastReviewDate']),
       lastReviewDateElement: json['_lastReviewDate'] == null
           ? null
           : Element.fromJson(json['_lastReviewDate'] as Map<String, dynamic>),
@@ -2896,13 +1728,13 @@ _$_Evidence _$$_EvidenceFromJson(Map<String, dynamic> json) => _$_Evidence(
           .toList(),
       description: json['description'] == null
           ? null
-          : Markdown.fromJson(json['description']),
+          : FhirMarkdown.fromJson(json['description']),
       descriptionElement: json['_description'] == null
           ? null
           : Element.fromJson(json['_description'] as Map<String, dynamic>),
       assertion: json['assertion'] == null
           ? null
-          : Markdown.fromJson(json['assertion']),
+          : FhirMarkdown.fromJson(json['assertion']),
       assertionElement: json['_assertion'] == null
           ? null
           : Element.fromJson(json['_assertion'] as Map<String, dynamic>),
@@ -3010,7 +1842,7 @@ _$_EvidenceVariableDefinition _$$_EvidenceVariableDefinitionFromJson(
           .toList(),
       description: json['description'] == null
           ? null
-          : Markdown.fromJson(json['description']),
+          : FhirMarkdown.fromJson(json['description']),
       descriptionElement: json['_description'] == null
           ? null
           : Element.fromJson(json['_description'] as Map<String, dynamic>),
@@ -3084,13 +1916,13 @@ _$_EvidenceStatistic _$$_EvidenceStatisticFromJson(Map<String, dynamic> json) =>
           : Quantity.fromJson(json['quantity'] as Map<String, dynamic>),
       numberOfEvents: json['numberOfEvents'] == null
           ? null
-          : UnsignedInt.fromJson(json['numberOfEvents']),
+          : FhirUnsignedInt.fromJson(json['numberOfEvents']),
       numberOfEventsElement: json['_numberOfEvents'] == null
           ? null
           : Element.fromJson(json['_numberOfEvents'] as Map<String, dynamic>),
       numberAffected: json['numberAffected'] == null
           ? null
-          : UnsignedInt.fromJson(json['numberAffected']),
+          : FhirUnsignedInt.fromJson(json['numberAffected']),
       numberAffectedElement: json['_numberAffected'] == null
           ? null
           : Element.fromJson(json['_numberAffected'] as Map<String, dynamic>),
@@ -3160,20 +1992,20 @@ _$_EvidenceSampleSize _$$_EvidenceSampleSizeFromJson(
           .toList(),
       numberOfStudies: json['numberOfStudies'] == null
           ? null
-          : UnsignedInt.fromJson(json['numberOfStudies']),
+          : FhirUnsignedInt.fromJson(json['numberOfStudies']),
       numberOfStudiesElement: json['_numberOfStudies'] == null
           ? null
           : Element.fromJson(json['_numberOfStudies'] as Map<String, dynamic>),
       numberOfParticipants: json['numberOfParticipants'] == null
           ? null
-          : UnsignedInt.fromJson(json['numberOfParticipants']),
+          : FhirUnsignedInt.fromJson(json['numberOfParticipants']),
       numberOfParticipantsElement: json['_numberOfParticipants'] == null
           ? null
           : Element.fromJson(
               json['_numberOfParticipants'] as Map<String, dynamic>),
       knownDataCount: json['knownDataCount'] == null
           ? null
-          : UnsignedInt.fromJson(json['knownDataCount']),
+          : FhirUnsignedInt.fromJson(json['knownDataCount']),
       knownDataCountElement: json['_knownDataCount'] == null
           ? null
           : Element.fromJson(json['_knownDataCount'] as Map<String, dynamic>),
@@ -3230,7 +2062,7 @@ _$_EvidenceAttributeEstimate _$$_EvidenceAttributeEstimateFromJson(
       quantity: json['quantity'] == null
           ? null
           : Quantity.fromJson(json['quantity'] as Map<String, dynamic>),
-      level: json['level'] == null ? null : Decimal.fromJson(json['level']),
+      level: json['level'] == null ? null : FhirDecimal.fromJson(json['level']),
       levelElement: json['_level'] == null
           ? null
           : Element.fromJson(json['_level'] as Map<String, dynamic>),
@@ -3329,7 +2161,7 @@ _$_EvidenceVar _$$_EvidenceVarFromJson(Map<String, dynamic> json) =>
       variableDefinition: Reference.fromJson(
           json['variableDefinition'] as Map<String, dynamic>),
       handling:
-          json['handling'] == null ? null : Code.fromJson(json['handling']),
+          json['handling'] == null ? null : FhirCode.fromJson(json['handling']),
       handlingElement: json['_handling'] == null
           ? null
           : Element.fromJson(json['_handling'] as Map<String, dynamic>),
@@ -3444,7 +2276,7 @@ _$_EvidenceReport _$$_EvidenceReportFromJson(Map<String, dynamic> json) =>
           ? null
           : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
       language:
-          json['language'] == null ? null : Code.fromJson(json['language']),
+          json['language'] == null ? null : FhirCode.fromJson(json['language']),
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -3464,7 +2296,7 @@ _$_EvidenceReport _$$_EvidenceReportFromJson(Map<String, dynamic> json) =>
       urlElement: json['_url'] == null
           ? null
           : Element.fromJson(json['_url'] as Map<String, dynamic>),
-      status: json['status'] == null ? null : Code.fromJson(json['status']),
+      status: json['status'] == null ? null : FhirCode.fromJson(json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -3482,7 +2314,7 @@ _$_EvidenceReport _$$_EvidenceReportFromJson(Map<String, dynamic> json) =>
           : Reference.fromJson(json['citeAsReference'] as Map<String, dynamic>),
       citeAsMarkdown: json['citeAsMarkdown'] == null
           ? null
-          : Markdown.fromJson(json['citeAsMarkdown']),
+          : FhirMarkdown.fromJson(json['citeAsMarkdown']),
       citeAsMarkdownElement: json['_citeAsMarkdown'] == null
           ? null
           : Element.fromJson(json['_citeAsMarkdown'] as Map<String, dynamic>),
@@ -3641,7 +2473,7 @@ _$_EvidenceReportCharacteristic _$$_EvidenceReportCharacteristicFromJson(
               json['valueCodeableConcept'] as Map<String, dynamic>),
       valueBoolean: json['valueBoolean'] == null
           ? null
-          : Boolean.fromJson(json['valueBoolean']),
+          : FhirBoolean.fromJson(json['valueBoolean']),
       valueBooleanElement: json['_valueBoolean'] == null
           ? null
           : Element.fromJson(json['_valueBoolean'] as Map<String, dynamic>),
@@ -3651,8 +2483,9 @@ _$_EvidenceReportCharacteristic _$$_EvidenceReportCharacteristicFromJson(
       valueRange: json['valueRange'] == null
           ? null
           : Range.fromJson(json['valueRange'] as Map<String, dynamic>),
-      exclude:
-          json['exclude'] == null ? null : Boolean.fromJson(json['exclude']),
+      exclude: json['exclude'] == null
+          ? null
+          : FhirBoolean.fromJson(json['exclude']),
       excludeElement: json['_exclude'] == null
           ? null
           : Element.fromJson(json['_exclude'] as Map<String, dynamic>),
@@ -3699,7 +2532,7 @@ _$_EvidenceReportRelatesTo _$$_EvidenceReportRelatesToFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      code: json['code'] == null ? null : Code.fromJson(json['code']),
+      code: json['code'] == null ? null : FhirCode.fromJson(json['code']),
       codeElement: json['_code'] == null
           ? null
           : Element.fromJson(json['_code'] as Map<String, dynamic>),
@@ -3760,7 +2593,7 @@ _$_EvidenceReportSection _$$_EvidenceReportSectionFromJson(
       text: json['text'] == null
           ? null
           : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-      mode: json['mode'] == null ? null : Code.fromJson(json['mode']),
+      mode: json['mode'] == null ? null : FhirCode.fromJson(json['mode']),
       modeElement: json['_mode'] == null
           ? null
           : Element.fromJson(json['_mode'] as Map<String, dynamic>),
@@ -3838,7 +2671,7 @@ _$_EvidenceVariable _$$_EvidenceVariableFromJson(Map<String, dynamic> json) =>
           ? null
           : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
       language:
-          json['language'] == null ? null : Code.fromJson(json['language']),
+          json['language'] == null ? null : FhirCode.fromJson(json['language']),
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -3881,7 +2714,7 @@ _$_EvidenceVariable _$$_EvidenceVariableFromJson(Map<String, dynamic> json) =>
       subtitleElement: json['_subtitle'] == null
           ? null
           : Element.fromJson(json['_subtitle'] as Map<String, dynamic>),
-      status: json['status'] == null ? null : Code.fromJson(json['status']),
+      status: json['status'] == null ? null : FhirCode.fromJson(json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -3891,7 +2724,7 @@ _$_EvidenceVariable _$$_EvidenceVariableFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_date'] as Map<String, dynamic>),
       description: json['description'] == null
           ? null
-          : Markdown.fromJson(json['description']),
+          : FhirMarkdown.fromJson(json['description']),
       descriptionElement: json['_description'] == null
           ? null
           : Element.fromJson(json['_description'] as Map<String, dynamic>),
@@ -3923,13 +2756,14 @@ _$_EvidenceVariable _$$_EvidenceVariableFromJson(Map<String, dynamic> json) =>
       relatedArtifact: (json['relatedArtifact'] as List<dynamic>?)
           ?.map((e) => RelatedArtifact.fromJson(e as Map<String, dynamic>))
           .toList(),
-      actual: json['actual'] == null ? null : Boolean.fromJson(json['actual']),
+      actual:
+          json['actual'] == null ? null : FhirBoolean.fromJson(json['actual']),
       actualElement: json['_actual'] == null
           ? null
           : Element.fromJson(json['_actual'] as Map<String, dynamic>),
       characteristicCombination: json['characteristicCombination'] == null
           ? null
-          : Code.fromJson(json['characteristicCombination']),
+          : FhirCode.fromJson(json['characteristicCombination']),
       characteristicCombinationElement:
           json['_characteristicCombination'] == null
               ? null
@@ -3940,7 +2774,7 @@ _$_EvidenceVariable _$$_EvidenceVariableFromJson(Map<String, dynamic> json) =>
               e as Map<String, dynamic>))
           .toList(),
       handling:
-          json['handling'] == null ? null : Code.fromJson(json['handling']),
+          json['handling'] == null ? null : FhirCode.fromJson(json['handling']),
       handlingElement: json['_handling'] == null
           ? null
           : Element.fromJson(json['_handling'] as Map<String, dynamic>),
@@ -4040,7 +2874,7 @@ _$_EvidenceVariableCharacteristic _$$_EvidenceVariableCharacteristicFromJson(
               json['definitionReference'] as Map<String, dynamic>),
       definitionCanonical: json['definitionCanonical'] == null
           ? null
-          : Canonical.fromJson(json['definitionCanonical']),
+          : FhirCanonical.fromJson(json['definitionCanonical']),
       definitionCanonicalElement: json['_definitionCanonical'] == null
           ? null
           : Element.fromJson(
@@ -4053,8 +2887,9 @@ _$_EvidenceVariableCharacteristic _$$_EvidenceVariableCharacteristicFromJson(
           ? null
           : Expression.fromJson(
               json['definitionExpression'] as Map<String, dynamic>),
-      exclude:
-          json['exclude'] == null ? null : Boolean.fromJson(json['exclude']),
+      exclude: json['exclude'] == null
+          ? null
+          : FhirBoolean.fromJson(json['exclude']),
       excludeElement: json['_exclude'] == null
           ? null
           : Element.fromJson(json['_exclude'] as Map<String, dynamic>),
@@ -4064,7 +2899,7 @@ _$_EvidenceVariableCharacteristic _$$_EvidenceVariableCharacteristicFromJson(
               json['timeFromStart'] as Map<String, dynamic>),
       groupMeasure: json['groupMeasure'] == null
           ? null
-          : Code.fromJson(json['groupMeasure']),
+          : FhirCode.fromJson(json['groupMeasure']),
       groupMeasureElement: json['_groupMeasure'] == null
           ? null
           : Element.fromJson(json['_groupMeasure'] as Map<String, dynamic>),
@@ -4217,7 +3052,7 @@ _$_ResearchDefinition _$$_ResearchDefinitionFromJson(
           ? null
           : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
       language:
-          json['language'] == null ? null : Code.fromJson(json['language']),
+          json['language'] == null ? null : FhirCode.fromJson(json['language']),
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -4260,13 +3095,13 @@ _$_ResearchDefinition _$$_ResearchDefinitionFromJson(
       subtitleElement: json['_subtitle'] == null
           ? null
           : Element.fromJson(json['_subtitle'] as Map<String, dynamic>),
-      status: json['status'] == null ? null : Code.fromJson(json['status']),
+      status: json['status'] == null ? null : FhirCode.fromJson(json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
       experimental: json['experimental'] == null
           ? null
-          : Boolean.fromJson(json['experimental']),
+          : FhirBoolean.fromJson(json['experimental']),
       experimentalElement: json['_experimental'] == null
           ? null
           : Element.fromJson(json['_experimental'] as Map<String, dynamic>),
@@ -4291,7 +3126,7 @@ _$_ResearchDefinition _$$_ResearchDefinitionFromJson(
           .toList(),
       description: json['description'] == null
           ? null
-          : Markdown.fromJson(json['description']),
+          : FhirMarkdown.fromJson(json['description']),
       descriptionElement: json['_description'] == null
           ? null
           : Element.fromJson(json['_description'] as Map<String, dynamic>),
@@ -4307,8 +3142,9 @@ _$_ResearchDefinition _$$_ResearchDefinitionFromJson(
       jurisdiction: (json['jurisdiction'] as List<dynamic>?)
           ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
           .toList(),
-      purpose:
-          json['purpose'] == null ? null : Markdown.fromJson(json['purpose']),
+      purpose: json['purpose'] == null
+          ? null
+          : FhirMarkdown.fromJson(json['purpose']),
       purposeElement: json['_purpose'] == null
           ? null
           : Element.fromJson(json['_purpose'] as Map<String, dynamic>),
@@ -4318,19 +3154,19 @@ _$_ResearchDefinition _$$_ResearchDefinitionFromJson(
           : Element.fromJson(json['_usage'] as Map<String, dynamic>),
       copyright: json['copyright'] == null
           ? null
-          : Markdown.fromJson(json['copyright']),
+          : FhirMarkdown.fromJson(json['copyright']),
       copyrightElement: json['_copyright'] == null
           ? null
           : Element.fromJson(json['_copyright'] as Map<String, dynamic>),
       approvalDate: json['approvalDate'] == null
           ? null
-          : Date.fromJson(json['approvalDate']),
+          : FhirDate.fromJson(json['approvalDate']),
       approvalDateElement: json['_approvalDate'] == null
           ? null
           : Element.fromJson(json['_approvalDate'] as Map<String, dynamic>),
       lastReviewDate: json['lastReviewDate'] == null
           ? null
-          : Date.fromJson(json['lastReviewDate']),
+          : FhirDate.fromJson(json['lastReviewDate']),
       lastReviewDateElement: json['_lastReviewDate'] == null
           ? null
           : Element.fromJson(json['_lastReviewDate'] as Map<String, dynamic>),
@@ -4356,7 +3192,7 @@ _$_ResearchDefinition _$$_ResearchDefinitionFromJson(
           ?.map((e) => RelatedArtifact.fromJson(e as Map<String, dynamic>))
           .toList(),
       library_: (json['library'] as List<dynamic>?)
-          ?.map((e) => Canonical.fromJson(e))
+          ?.map(FhirCanonical.fromJson)
           .toList(),
       population:
           Reference.fromJson(json['population'] as Map<String, dynamic>),
@@ -4476,7 +3312,7 @@ _$_ResearchElementDefinition _$$_ResearchElementDefinitionFromJson(
           ? null
           : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
       language:
-          json['language'] == null ? null : Code.fromJson(json['language']),
+          json['language'] == null ? null : FhirCode.fromJson(json['language']),
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -4519,13 +3355,13 @@ _$_ResearchElementDefinition _$$_ResearchElementDefinitionFromJson(
       subtitleElement: json['_subtitle'] == null
           ? null
           : Element.fromJson(json['_subtitle'] as Map<String, dynamic>),
-      status: json['status'] == null ? null : Code.fromJson(json['status']),
+      status: json['status'] == null ? null : FhirCode.fromJson(json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
       experimental: json['experimental'] == null
           ? null
-          : Boolean.fromJson(json['experimental']),
+          : FhirBoolean.fromJson(json['experimental']),
       experimentalElement: json['_experimental'] == null
           ? null
           : Element.fromJson(json['_experimental'] as Map<String, dynamic>),
@@ -4550,7 +3386,7 @@ _$_ResearchElementDefinition _$$_ResearchElementDefinitionFromJson(
           .toList(),
       description: json['description'] == null
           ? null
-          : Markdown.fromJson(json['description']),
+          : FhirMarkdown.fromJson(json['description']),
       descriptionElement: json['_description'] == null
           ? null
           : Element.fromJson(json['_description'] as Map<String, dynamic>),
@@ -4566,8 +3402,9 @@ _$_ResearchElementDefinition _$$_ResearchElementDefinitionFromJson(
       jurisdiction: (json['jurisdiction'] as List<dynamic>?)
           ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
           .toList(),
-      purpose:
-          json['purpose'] == null ? null : Markdown.fromJson(json['purpose']),
+      purpose: json['purpose'] == null
+          ? null
+          : FhirMarkdown.fromJson(json['purpose']),
       purposeElement: json['_purpose'] == null
           ? null
           : Element.fromJson(json['_purpose'] as Map<String, dynamic>),
@@ -4577,19 +3414,19 @@ _$_ResearchElementDefinition _$$_ResearchElementDefinitionFromJson(
           : Element.fromJson(json['_usage'] as Map<String, dynamic>),
       copyright: json['copyright'] == null
           ? null
-          : Markdown.fromJson(json['copyright']),
+          : FhirMarkdown.fromJson(json['copyright']),
       copyrightElement: json['_copyright'] == null
           ? null
           : Element.fromJson(json['_copyright'] as Map<String, dynamic>),
       approvalDate: json['approvalDate'] == null
           ? null
-          : Date.fromJson(json['approvalDate']),
+          : FhirDate.fromJson(json['approvalDate']),
       approvalDateElement: json['_approvalDate'] == null
           ? null
           : Element.fromJson(json['_approvalDate'] as Map<String, dynamic>),
       lastReviewDate: json['lastReviewDate'] == null
           ? null
-          : Date.fromJson(json['lastReviewDate']),
+          : FhirDate.fromJson(json['lastReviewDate']),
       lastReviewDateElement: json['_lastReviewDate'] == null
           ? null
           : Element.fromJson(json['_lastReviewDate'] as Map<String, dynamic>),
@@ -4615,15 +3452,15 @@ _$_ResearchElementDefinition _$$_ResearchElementDefinitionFromJson(
           ?.map((e) => RelatedArtifact.fromJson(e as Map<String, dynamic>))
           .toList(),
       library_: (json['library'] as List<dynamic>?)
-          ?.map((e) => Canonical.fromJson(e))
+          ?.map(FhirCanonical.fromJson)
           .toList(),
-      type: json['type'] == null ? null : Code.fromJson(json['type']),
+      type: json['type'] == null ? null : FhirCode.fromJson(json['type']),
       typeElement: json['_type'] == null
           ? null
           : Element.fromJson(json['_type'] as Map<String, dynamic>),
       variableType: json['variableType'] == null
           ? null
-          : Code.fromJson(json['variableType']),
+          : FhirCode.fromJson(json['variableType']),
       variableTypeElement: json['_variableType'] == null
           ? null
           : Element.fromJson(json['_variableType'] as Map<String, dynamic>),
@@ -4738,7 +3575,7 @@ _$_ResearchElementDefinitionCharacteristic
                   json['definitionCodeableConcept'] as Map<String, dynamic>),
           definitionCanonical: json['definitionCanonical'] == null
               ? null
-              : Canonical.fromJson(json['definitionCanonical']),
+              : FhirCanonical.fromJson(json['definitionCanonical']),
           definitionCanonicalElement: json['_definitionCanonical'] == null
               ? null
               : Element.fromJson(
@@ -4756,7 +3593,7 @@ _$_ResearchElementDefinitionCharacteristic
               .toList(),
           exclude: json['exclude'] == null
               ? null
-              : Boolean.fromJson(json['exclude']),
+              : FhirBoolean.fromJson(json['exclude']),
           excludeElement: json['_exclude'] == null
               ? null
               : Element.fromJson(json['_exclude'] as Map<String, dynamic>),
@@ -4797,7 +3634,7 @@ _$_ResearchElementDefinitionCharacteristic
                   json['studyEffectiveTimeFromStart'] as Map<String, dynamic>),
           studyEffectiveGroupMeasure: json['studyEffectiveGroupMeasure'] == null
               ? null
-              : Code.fromJson(json['studyEffectiveGroupMeasure']),
+              : FhirCode.fromJson(json['studyEffectiveGroupMeasure']),
           studyEffectiveGroupMeasureElement:
               json['_studyEffectiveGroupMeasure'] == null
                   ? null
@@ -4841,7 +3678,7 @@ _$_ResearchElementDefinitionCharacteristic
           participantEffectiveGroupMeasure:
               json['participantEffectiveGroupMeasure'] == null
                   ? null
-                  : Code.fromJson(json['participantEffectiveGroupMeasure']),
+                  : FhirCode.fromJson(json['participantEffectiveGroupMeasure']),
           participantEffectiveGroupMeasureElement:
               json['_participantEffectiveGroupMeasure'] == null
                   ? null

@@ -6,7 +6,7 @@ Resource _resourceFromXml(String xmlString) {
   final json = myTransformer.toBadgerfish();
   final map = jsonDecode(json) as Map<String, dynamic>;
   if (map.keys.length == 1 &&
-      resourceTypeFromStringMap.keys.contains(map.keys.first)) {
+      ResourceUtils.resourceTypeFromStringMap.keys.contains(map.keys.first)) {
     (map[map.keys.first] as Map<String, dynamic>)['resourceType'] =
         map.keys.first;
     final fhirObjectMap = fhirFieldMap[map.keys.first];
@@ -127,7 +127,8 @@ Map<String, dynamic> reformatXmlJsonMap(
         } else {
           if (oldValue is Map &&
               oldValue.keys.length == 1 &&
-              resourceTypeFromStringMap.keys.contains(oldValue.keys.first) &&
+              ResourceUtils.resourceTypeFromStringMap.keys
+                  .contains(oldValue.keys.first) &&
               oldValue.values.first is Map) {
             ((oldValue as Map<String, dynamic>).values.first
                 as Map<String, dynamic>)['resourceType'] = oldValue.keys.first;
@@ -213,7 +214,8 @@ Map<String, dynamic> reformatXmlJsonMap(
 Map<String, dynamic> checkIfResource(
     Map<String, dynamic> oldValue, String oldType) {
   if (oldValue.keys.length == 1 &&
-      resourceTypeFromStringMap.keys.contains(oldValue.keys.first) &&
+      ResourceUtils.resourceTypeFromStringMap.keys
+          .contains(oldValue.keys.first) &&
       oldValue.values.first is Map) {
     oldType = oldValue.keys.first;
     oldValue = oldValue.values.first as Map<String, dynamic>;

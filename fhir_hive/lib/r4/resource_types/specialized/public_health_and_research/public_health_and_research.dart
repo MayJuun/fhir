@@ -3,7 +3,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:hive/hive.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -14,7 +13,7 @@ part 'public_health_and_research.g.dart';
 
 /// [ResearchStudy] A process where a researcher or organization plans and
 @freezed
-class ResearchStudy extends HiveObject with Resource, _$ResearchStudy {
+class ResearchStudy with Resource, _$ResearchStudy {
   /// [ResearchStudy] A process where a researcher or organization plans and
   ResearchStudy._();
 
@@ -159,45 +158,37 @@ class ResearchStudy extends HiveObject with Resource, _$ResearchStudy {
   /// [objective] A goal that the study is aiming to achieve in terms of a
   /// scientific question to be answered by the analysis of data collected
   ///  during the study.
-  @HiveType(typeId: 85)
   factory ResearchStudy({
     @Default(R4ResourceType.ResearchStudy)
     @JsonKey(unknownEnumValue: R4ResourceType.ResearchStudy)
 
-    /// [resourceType] This is a ResearchStudy resource
-    @HiveField(0)
+        /// [resourceType] This is a ResearchStudy resource
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @HiveField(1)
-        String? id,
+    String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    @HiveField(2)
-        FhirMeta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    @HiveField(3)
-        FhirUri? implicitRules,
+    FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
-    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    @HiveField(5)
-        FhirCode? language,
+    FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
-    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
@@ -206,15 +197,13 @@ class ResearchStudy extends HiveObject with Resource, _$ResearchStudy {
     /// contain sufficient detail to make it "clinically safe" for a human to just
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
-    @HiveField(7)
-        Narrative? text,
+    Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
-    @HiveField(8)
-        List<Resource>? contained,
+    List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -223,7 +212,6 @@ class ResearchStudy extends HiveObject with Resource, _$ResearchStudy {
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
     @JsonKey(name: 'extension')
-    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -239,149 +227,118 @@ class ResearchStudy extends HiveObject with Resource, _$ResearchStudy {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    @HiveField(10)
-        List<FhirExtension>? modifierExtension,
+    List<FhirExtension>? modifierExtension,
 
     /// [identifier] Identifiers assigned to this research study by the sponsor
     ///  or other systems.
-    @HiveField(11)
-        List<Identifier>? identifier,
+    List<Identifier>? identifier,
 
     /// [title] A short, descriptive user-friendly label for the study.
-    @HiveField(12)
-        String? title,
+    String? title,
 
     /// [titleElement] Extensions for title
     @JsonKey(name: '_title')
-    @HiveField(13)
         Element? titleElement,
 
     /// [protocol] The set of steps expected to be performed as part of the
     ///  execution of the study.
-    @HiveField(14)
-        List<Reference>? protocol,
+    List<Reference>? protocol,
 
     /// [partOf] A larger research study of which this particular study is a
     ///  component or step.
-    @HiveField(15)
-        List<Reference>? partOf,
+    List<Reference>? partOf,
 
     /// [status] The current state of the study.
-    @HiveField(16)
-        FhirCode? status,
+    FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
-    @HiveField(17)
         Element? statusElement,
 
     /// [primaryPurposeType] The type of study based upon the intent of the
     ///  study's activities. A classification of the intent of the study.
-    @HiveField(18)
-        CodeableConcept? primaryPurposeType,
+    CodeableConcept? primaryPurposeType,
 
     /// [phase] The stage in the progression of a therapy from initial
     ///  experimental use in humans in clinical trials to post-market evaluation.
-    @HiveField(19)
-        CodeableConcept? phase,
+    CodeableConcept? phase,
 
     /// [category] Codes categorizing the type of study such as investigational
     /// vs. observational, type of blinding, type of randomization, safety vs.
     ///  efficacy, etc.
-    @HiveField(20)
-        List<CodeableConcept>? category,
+    List<CodeableConcept>? category,
 
     /// [focus] The medication(s), food(s), therapy(ies), device(s) or other
     /// concerns or interventions that the study is seeking to gain more
     ///  information about.
-    @HiveField(21)
-        List<CodeableConcept>? focus,
-    @HiveField(22)
+    List<CodeableConcept>? focus,
 
     /// [condition] The condition that is the focus of the study.  For example,
     /// In a study to examine risk factors for Lupus, might have as an inclusion
     /// criterion "healthy volunteer", but the target condition code would be a
     ///  Lupus SNOMED code.
-    @HiveField(23)
-        List<CodeableConcept>? condition,
+    List<CodeableConcept>? condition,
 
     /// [contact] Contact details to assist a user in learning more about or
     ///  engaging with the study.
-    @HiveField(24)
-        List<ContactDetail>? contact,
+    List<ContactDetail>? contact,
 
     /// [relatedArtifact] Citations, references and other related documents.
-    @HiveField(25)
-        List<RelatedArtifact>? relatedArtifact,
+    List<RelatedArtifact>? relatedArtifact,
 
     /// [keyword] Key terms to aid in searching for or filtering the study.
-    @HiveField(26)
-        List<CodeableConcept>? keyword,
+    List<CodeableConcept>? keyword,
 
     /// [location] Indicates a country, state or other region where the study is
     ///  taking place.
-    @HiveField(27)
-        List<CodeableConcept>? location,
+    List<CodeableConcept>? location,
 
     /// [description] A full description of how the study is being conducted.
-    @HiveField(28)
-        Markdown? description,
+    FhirMarkdown? description,
 
     /// [descriptionElement] Extensions for description
     @JsonKey(name: '_description')
-    @HiveField(29)
         Element? descriptionElement,
 
     /// [enrollment] Reference to a Group that defines the criteria for and
     /// quantity of subjects participating in the study.  E.g. " 200 female
     ///  Europeans between the ages of 20 and 45 with early onset diabetes".
-    @HiveField(30)
-        List<Reference>? enrollment,
+    List<Reference>? enrollment,
 
     /// [period] Identifies the start date and the expected (or actual, depending
     ///  on status) end date for the study.
-    @HiveField(31)
-        Period? period,
+    Period? period,
 
     /// [sponsor] An organization that initiates the investigation and is legally
     ///  responsible for the study.
-    @HiveField(32)
-        Reference? sponsor,
+    Reference? sponsor,
 
     /// [principalInvestigator] A researcher in a study who oversees multiple
-    @HiveField(33)
-
     /// aspects of the study, such as concept development, protocol writing,
     /// protocol submission for IRB approval, participant recruitment, informed
     ///  consent, data collection, analysis, interpretation and presentation.
-    @HiveField(34)
-        Reference? principalInvestigator,
+    Reference? principalInvestigator,
 
     /// [site] A facility in which study activities are conducted.
-    @HiveField(35)
-        List<Reference>? site,
+    List<Reference>? site,
 
     /// [reasonStopped] A description and/or code explaining the premature
     ///  termination of the study.
-    @HiveField(36)
-        CodeableConcept? reasonStopped,
+    CodeableConcept? reasonStopped,
 
     /// [note] Comments made about the study by the performer, subject or other
     ///  participants.
-    @HiveField(37)
-        List<Annotation>? note,
+    List<Annotation>? note,
 
     /// [arm] Describes an expected sequence of events for one of the
     /// participants of a study.  E.g. Exposure to drug A, wash-out, exposure to
     ///  drug B, wash-out, follow-up.
-    @HiveField(38)
-        List<ResearchStudyArm>? arm,
+    List<ResearchStudyArm>? arm,
 
     /// [objective] A goal that the study is aiming to achieve in terms of a
     /// scientific question to be answered by the analysis of data collected
     ///  during the study.
-    @HiveField(39)
-        List<ResearchStudyObjective>? objective,
+    List<ResearchStudyObjective>? objective,
   }) = _ResearchStudy;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -652,7 +609,7 @@ class ResearchStudyObjective with _$ResearchStudyObjective {
 
 /// [ResearchSubject] A physical entity which is the primary unit of
 @freezed
-class ResearchSubject extends HiveObject with Resource, _$ResearchSubject {
+class ResearchSubject with Resource, _$ResearchSubject {
   /// [ResearchSubject] A physical entity which is the primary unit of
   ResearchSubject._();
 
@@ -738,45 +695,37 @@ class ResearchSubject extends HiveObject with Resource, _$ResearchSubject {
   ///
   /// [consent] A record of the patient's informed agreement to participate in
   ///  the study.
-  @HiveType(typeId: 86)
   factory ResearchSubject({
     @Default(R4ResourceType.ResearchSubject)
     @JsonKey(unknownEnumValue: R4ResourceType.ResearchSubject)
 
-    /// [resourceType] This is a ResearchSubject resource
-    @HiveField(0)
+        /// [resourceType] This is a ResearchSubject resource
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @HiveField(1)
-        String? id,
+    String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    @HiveField(2)
-        FhirMeta? meta,
+    FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    @HiveField(3)
-        FhirUri? implicitRules,
+    FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
-    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    @HiveField(5)
-        FhirCode? language,
+    FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
-    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
@@ -785,15 +734,13 @@ class ResearchSubject extends HiveObject with Resource, _$ResearchSubject {
     /// contain sufficient detail to make it "clinically safe" for a human to just
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
-    @HiveField(7)
-        Narrative? text,
+    Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
-    @HiveField(8)
-        List<Resource>? contained,
+    List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -802,7 +749,6 @@ class ResearchSubject extends HiveObject with Resource, _$ResearchSubject {
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
     @JsonKey(name: 'extension')
-    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -818,60 +764,48 @@ class ResearchSubject extends HiveObject with Resource, _$ResearchSubject {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    @HiveField(10)
-        List<FhirExtension>? modifierExtension,
+    List<FhirExtension>? modifierExtension,
 
     /// [identifier] Identifiers assigned to this research subject for a study.
-    @HiveField(11)
-        List<Identifier>? identifier,
+    List<Identifier>? identifier,
 
     /// [status] The current state of the subject.
-    @HiveField(12)
-        FhirCode? status,
+    FhirCode? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
-    @HiveField(13)
         Element? statusElement,
 
     /// [period] The dates the subject began and ended their participation in the
     ///  study.
-    @HiveField(14)
-        Period? period,
+    Period? period,
 
     /// [study] Reference to the study the subject is participating in.
-    @HiveField(15)
-        required Reference study,
+    required Reference study,
 
     /// [individual] The record of the person or animal who is involved in the
     ///  study.
-    @HiveField(16)
-        required Reference individual,
+    required Reference individual,
 
     /// [assignedArm] The name of the arm in the study the subject is expected to
     ///  follow as part of this study.
-    @HiveField(17)
-        String? assignedArm,
+    String? assignedArm,
 
     /// [assignedArmElement] Extensions for assignedArm
     @JsonKey(name: '_assignedArm')
-    @HiveField(18)
         Element? assignedArmElement,
 
     /// [actualArm] The name of the arm in the study the subject actually
     ///  followed as part of this study.
-    @HiveField(19)
-        String? actualArm,
+    String? actualArm,
 
     /// [actualArmElement] Extensions for actualArm
     @JsonKey(name: '_actualArm')
-    @HiveField(20)
         Element? actualArmElement,
 
     /// [consent] A record of the patient's informed agreement to participate in
     ///  the study.
-    @HiveField(21)
-        Reference? consent,
+    Reference? consent,
   }) = _ResearchSubject;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument

@@ -5,40 +5,40 @@ import 'dart:convert';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
-import 'fhir_date_time_base.dart';
+import 'date_time_base.dart';
 import 'primitive_type_exceptions.dart';
 
-class Instant extends FhirDateTimeBase {
-  const Instant._(String valueString, DateTime? valueDateTime, bool isValid,
+class FhirInstant extends FhirDateTimeBase {
+  const FhirInstant._(String valueString, DateTime? valueDateTime, bool isValid,
       Exception? parseError)
       : super(valueString, valueDateTime, isValid, parseError);
 
-  factory Instant(dynamic inValue) {
+  factory FhirInstant(dynamic inValue) {
     if (inValue is DateTime) {
-      return Instant._(inValue.toIso8601String(), inValue, true, null);
+      return FhirInstant._(inValue.toIso8601String(), inValue, true, null);
     } else if (inValue is String) {
       try {
         final DateTime dateTimeValue = _parseDateTime(inValue);
-        return Instant._(inValue, dateTimeValue, true, null);
+        return FhirInstant._(inValue, dateTimeValue, true, null);
       } on FormatException catch (e) {
-        return Instant._(inValue, null, false, e);
+        return FhirInstant._(inValue, null, false, e);
       }
     } else {
       throw CannotBeConstructed('Instant cannot be constructed from $inValue.');
     }
   }
 
-  factory Instant.fromDateTime(DateTime dateTime) {
-    return Instant._(dateTime.toIso8601String(), dateTime, true, null);
+  factory FhirInstant.fromDateTime(DateTime dateTime) {
+    return FhirInstant._(dateTime.toIso8601String(), dateTime, true, null);
   }
 
-  factory Instant.fromJson(dynamic json) => Instant(json);
+  factory FhirInstant.fromJson(dynamic json) => FhirInstant(json);
 
-  factory Instant.fromYaml(dynamic yaml) => yaml is String
-      ? Instant.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+  factory FhirInstant.fromYaml(dynamic yaml) => yaml is String
+      ? FhirInstant.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
-          ? Instant.fromJson(jsonDecode(jsonEncode(yaml)))
-          : throw YamlFormatException<Instant>(
+          ? FhirInstant.fromJson(jsonDecode(jsonEncode(yaml)))
+          : throw YamlFormatException<FhirInstant>(
               'FormatException: "$json" is not a valid Yaml string or YamlMap.');
 
   static final RegExp _instantExp = RegExp(
@@ -53,7 +53,7 @@ class Instant extends FhirDateTimeBase {
         throw const FormatException();
       }
     } on FormatException {
-      throw PrimitiveTypeFormatException<Instant>(
+      throw PrimitiveTypeFormatException<FhirInstant>(
           'FormatException: "$value" is not an Instant, as defined by: '
           'https://www.hl7.org/fhir/datatypes.html#instant');
     }
