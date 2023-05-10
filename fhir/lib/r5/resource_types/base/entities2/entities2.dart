@@ -11,21 +11,36 @@ import '../../../../r5.dart';
 part 'entities2.freezed.dart';
 part 'entities2.g.dart';
 
-/// [BiologicallyDerivedProduct] This resource reflects an instance of a biologically derived product. A material substance originating from a biological entity intended to be transplanted or infused into another (possibly the same) biological entity.
+/// [BiologicallyDerivedProduct] This resource reflects an instance of a
+///  biologically derived product. A material substance originating from a
+///  biological entity intended to be transplanted or infused into another
+///  (possibly the same) biological entity.
 @freezed
 class BiologicallyDerivedProduct with Resource, _$BiologicallyDerivedProduct {
-  /// [BiologicallyDerivedProduct] This resource reflects an instance of a biologically derived product. A material substance originating from a biological entity intended to be transplanted or infused into another (possibly the same) biological entity.
+  /// [BiologicallyDerivedProduct] This resource reflects an instance of a
+  ///  biologically derived product. A material substance originating from a
+  ///  biological entity intended to be transplanted or infused into another
+  ///  (possibly the same) biological entity.
   BiologicallyDerivedProduct._();
 
-  /// [BiologicallyDerivedProduct] This resource reflects an instance of a biologically derived product. A material substance originating from a biological entity intended to be transplanted or infused into another (possibly the same) biological entity.
+  /// [BiologicallyDerivedProduct] This resource reflects an instance of a
+  ///  biologically derived product. A material substance originating from a
+  ///  biological entity intended to be transplanted or infused into another
+  ///  (possibly the same) biological entity.
   ///
   /// [resourceType] This is a BiologicallyDerivedProduct resource
   ///
-  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.
+  /// [id] The logical id of the resource, as used in the URL for the resource.
+  ///  Once assigned, this value never changes.
   ///
-  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
+  /// [meta] The metadata about the resource. This is content that is
+  ///  maintained by the infrastructure. Changes to the content might not
+  ///  always be associated with version changes to the resource.
   ///
-  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.
+  /// [implicitRules] A reference to a set of rules that were followed when the
+  ///  resource was constructed, and which must be understood when processing
+  ///  the content. Often, this is a reference to an implementation guide that
+  ///  defines the special rules along with other profiles etc.
   ///
   /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
   ///
@@ -33,29 +48,66 @@ class BiologicallyDerivedProduct with Resource, _$BiologicallyDerivedProduct {
   ///
   /// [languageElement] ("_language") Extensions for language
   ///
-  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
+  /// [text] A human-readable narrative that contains a summary of the resource
+  ///  and can be used to represent the content of the resource to a human. The
+  ///  narrative need not encode all the structured data, but is required to
+  ///  contain sufficient detail to make it "clinically safe" for a human to
+  ///  just read the narrative. Resource definitions may define what content
+  ///  should be represented in the narrative to ensure clinical safety.
   ///
-  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
+  /// [contained] These resources do not have an independent existence apart
+  ///  from the resource that contains them - they cannot be identified
+  ///  independently, nor can they have their own independent transaction
+  ///  scope. This is allowed to be a Parameters resource if and only if it is
+  ///  referenced by a resource that provides context/meaning.
   ///
-  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the resource. To
+  ///  make the use of extensions safe and managable, there is a strict set of
+  ///  governance applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the resource and that modifies
+  ///  the understanding of the element that contains it and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  is allowed to define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension. Applications
+  ///  processing a resource are required to check for modifier
+  ///  extensions.Modifier extensions SHALL NOT change the meaning of any
+  ///  elements on Resource or DomainResource (including cannot change the
+  ///  meaning of modifierExtension itself).
   ///
   /// [productCategory] Broad category of this product.
   ///
-  /// [productCode] A codified value that systematically supports characterization and classification of medical products of human origin inclusive of processing conditions such as additives, volumes and handling conditions.
+  /// [productCode] A codified value that systematically supports
+  ///  characterization and classification of medical products of human origin
+  ///  inclusive of processing conditions such as additives, volumes and
+  ///  handling conditions.
   ///
   /// [parent] Parent product (if any) for this biologically-derived product.
   ///
-  /// [request] Request to obtain and/or infuse this biologically derived product.
+  /// [request] Request to obtain and/or infuse this biologically derived
+  ///  product.
   ///
-  /// [identifier] Unique instance identifiers assigned to a biologically derived product. Note: This is a business identifier, not a resource identifier.
+  /// [identifier] Unique instance identifiers assigned to a biologically
+  ///  derived product. Note: This is a business identifier, not a resource
+  ///  identifier.
   ///
-  /// [biologicalSourceEvent] An identifier that supports traceability to the event during which material in this product from one or more biological entities was obtained or pooled.
+  /// [biologicalSourceEvent] An identifier that supports traceability to the
+  ///  event during which material in this product from one or more biological
+  ///  entities was obtained or pooled.
   ///
-  /// [processingFacility] Processing facilities responsible for the labeling and distribution of this biologically derived product.
+  /// [processingFacility] Processing facilities responsible for the labeling
+  ///  and distribution of this biologically derived product.
   ///
-  /// [division] A unique identifier for an aliquot of a product.  Used to distinguish individual aliquots of a product carrying the same biologicalSource and productCode identifiers.
+  /// [division] A unique identifier for an aliquot of a product.  Used to
+  ///  distinguish individual aliquots of a product carrying the same
+  ///  biologicalSource and productCode identifiers.
   ///
   /// [divisionElement] ("_division") Extensions for division
   ///
@@ -67,9 +119,11 @@ class BiologicallyDerivedProduct with Resource, _$BiologicallyDerivedProduct {
   ///
   /// [collection] How this product was collected.
   ///
-  /// [storageTempRequirements] The temperature requirements for storage of the biologically-derived product.
+  /// [storageTempRequirements] The temperature requirements for storage of the
+  ///  biologically-derived product.
   ///
-  /// [property] A property that is specific to this BiologicallyDerviedProduct instance.
+  /// [property] A property that is specific to this BiologicallyDerviedProduct
+  ///  instance.
   ///
   factory BiologicallyDerivedProduct({
     /// [resourceType] This is a BiologicallyDerivedProduct resource
@@ -77,13 +131,20 @@ class BiologicallyDerivedProduct with Resource, _$BiologicallyDerivedProduct {
     @JsonKey(unknownEnumValue: R5ResourceType.BiologicallyDerivedProduct)
         R5ResourceType resourceType,
 
-    /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.
+    /// [id] The logical id of the resource, as used in the URL for the
+    ///  resource. Once assigned, this value never changes.
     FhirId? id,
 
-    /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
+    /// [meta] The metadata about the resource. This is content that is
+    ///  maintained by the infrastructure. Changes to the content might not
+    ///  always be associated with version changes to the resource.
     FhirMeta? meta,
 
-    /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.
+    /// [implicitRules] A reference to a set of rules that were followed when
+    ///  the resource was constructed, and which must be understood when
+    ///  processing the content. Often, this is a reference to an
+    ///  implementation guide that defines the special rules along with other
+    ///  profiles etc.
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
@@ -95,40 +156,79 @@ class BiologicallyDerivedProduct with Resource, _$BiologicallyDerivedProduct {
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
 
-    /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
+    /// [text] A human-readable narrative that contains a summary of the
+    ///  resource and can be used to represent the content of the resource to a
+    ///  human. The narrative need not encode all the structured data, but is
+    ///  required to contain sufficient detail to make it "clinically safe" for
+    ///  a human to just read the narrative. Resource definitions may define
+    ///  what content should be represented in the narrative to ensure clinical
+    ///  safety.
     Narrative? text,
 
-    /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
+    /// [contained] These resources do not have an independent existence apart
+    ///  from the resource that contains them - they cannot be identified
+    ///  independently, nor can they have their own independent transaction
+    ///  scope. This is allowed to be a Parameters resource if and only if it
+    ///  is referenced by a resource that provides context/meaning.
     List<Resource>? contained,
 
-    /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+    /// [extension_] ("extension") May be used to represent additional
+    ///  information that is not part of the basic definition of the resource.
+    ///  To make the use of extensions safe and managable, there is a strict
+    ///  set of governance applied to the definition and use of extensions.
+    ///  Though any implementer can define an extension, there is a set of
+    ///  requirements that SHALL be met as part of the definition of the
+    ///  extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
-    /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+    /// [modifierExtension] May be used to represent additional information
+    ///  that is not part of the basic definition of the resource and that
+    ///  modifies the understanding of the element that contains it and/or the
+    ///  understanding of the containing element's descendants. Usually
+    ///  modifier elements provide negation or qualification. To make the use
+    ///  of extensions safe and managable, there is a strict set of governance
+    ///  applied to the definition and use of extensions. Though any
+    ///  implementer is allowed to define an extension, there is a set of
+    ///  requirements that SHALL be met as part of the definition of the
+    ///  extension. Applications processing a resource are required to check
+    ///  for modifier extensions.Modifier extensions SHALL NOT change the
+    ///  meaning of any elements on Resource or DomainResource (including
+    ///  cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
     /// [productCategory] Broad category of this product.
     Coding? productCategory,
 
-    /// [productCode] A codified value that systematically supports characterization and classification of medical products of human origin inclusive of processing conditions such as additives, volumes and handling conditions.
+    /// [productCode] A codified value that systematically supports
+    ///  characterization and classification of medical products of human
+    ///  origin inclusive of processing conditions such as additives, volumes
+    ///  and handling conditions.
     CodeableConcept? productCode,
 
     /// [parent] Parent product (if any) for this biologically-derived product.
     List<Reference>? parent,
 
-    /// [request] Request to obtain and/or infuse this biologically derived product.
+    /// [request] Request to obtain and/or infuse this biologically derived
+    ///  product.
     List<Reference>? request,
 
-    /// [identifier] Unique instance identifiers assigned to a biologically derived product. Note: This is a business identifier, not a resource identifier.
+    /// [identifier] Unique instance identifiers assigned to a biologically
+    ///  derived product. Note: This is a business identifier, not a resource
+    ///  identifier.
     List<Identifier>? identifier,
 
-    /// [biologicalSourceEvent] An identifier that supports traceability to the event during which material in this product from one or more biological entities was obtained or pooled.
+    /// [biologicalSourceEvent] An identifier that supports traceability to the
+    ///  event during which material in this product from one or more
+    ///  biological entities was obtained or pooled.
     Identifier? biologicalSourceEvent,
 
-    /// [processingFacility] Processing facilities responsible for the labeling and distribution of this biologically derived product.
+    /// [processingFacility] Processing facilities responsible for the labeling
+    ///  and distribution of this biologically derived product.
     List<Reference>? processingFacility,
 
-    /// [division] A unique identifier for an aliquot of a product.  Used to distinguish individual aliquots of a product carrying the same biologicalSource and productCode identifiers.
+    /// [division] A unique identifier for an aliquot of a product.  Used to
+    ///  distinguish individual aliquots of a product carrying the same
+    ///  biologicalSource and productCode identifiers.
     String? division,
 
     /// [divisionElement] ("_division") Extensions for division
@@ -140,16 +240,19 @@ class BiologicallyDerivedProduct with Resource, _$BiologicallyDerivedProduct {
     /// [expirationDate] Date, and where relevant time, of expiration.
     FhirDateTime? expirationDate,
 
-    /// [expirationDateElement] ("_expirationDate") Extensions for expirationDate
+    /// [expirationDateElement] ("_expirationDate") Extensions for
+    ///  expirationDate
     @JsonKey(name: '_expirationDate') Element? expirationDateElement,
 
     /// [collection] How this product was collected.
     BiologicallyDerivedProductCollection? collection,
 
-    /// [storageTempRequirements] The temperature requirements for storage of the biologically-derived product.
+    /// [storageTempRequirements] The temperature requirements for storage of
+    ///  the biologically-derived product.
     Range? storageTempRequirements,
 
-    /// [property] A property that is specific to this BiologicallyDerviedProduct instance.
+    /// [property] A property that is specific to this
+    ///  BiologicallyDerviedProduct instance.
     List<BiologicallyDerivedProductProperty>? property,
   }) = _BiologicallyDerivedProduct;
 
@@ -185,51 +288,102 @@ class BiologicallyDerivedProduct with Resource, _$BiologicallyDerivedProduct {
   }
 }
 
-/// [BiologicallyDerivedProductCollection] This resource reflects an instance of a biologically derived product. A material substance originating from a biological entity intended to be transplanted or infused into another (possibly the same) biological entity.
+/// [BiologicallyDerivedProductCollection] This resource reflects an instance
+///  of a biologically derived product. A material substance originating from a
+///  biological entity intended to be transplanted or infused into another
+///  (possibly the same) biological entity.
 @freezed
 class BiologicallyDerivedProductCollection
     with _$BiologicallyDerivedProductCollection {
-  /// [BiologicallyDerivedProductCollection] This resource reflects an instance of a biologically derived product. A material substance originating from a biological entity intended to be transplanted or infused into another (possibly the same) biological entity.
+  /// [BiologicallyDerivedProductCollection] This resource reflects an instance
+  ///  of a biologically derived product. A material substance originating from
+  ///  a biological entity intended to be transplanted or infused into another
+  ///  (possibly the same) biological entity.
   BiologicallyDerivedProductCollection._();
 
-  /// [BiologicallyDerivedProductCollection] This resource reflects an instance of a biologically derived product. A material substance originating from a biological entity intended to be transplanted or infused into another (possibly the same) biological entity.
+  /// [BiologicallyDerivedProductCollection] This resource reflects an instance
+  ///  of a biologically derived product. A material substance originating from
+  ///  a biological entity intended to be transplanted or infused into another
+  ///  (possibly the same) biological entity.
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and managable, there is a strict set of
+  ///  governance applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be
+  ///  met as part of the definition of the extension. Applications processing
+  ///  a resource are required to check for modifier extensions.Modifier
+  ///  extensions SHALL NOT change the meaning of any elements on Resource or
+  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  itself).
   ///
   /// [collector] Healthcare professional who is performing the collection.
   ///
-  /// [source] The patient or entity, such as a hospital or vendor in the case of a processed/manipulated/manufactured product, providing the product.
+  /// [source] The patient or entity, such as a hospital or vendor in the case
+  ///  of a processed/manipulated/manufactured product, providing the product.
   ///
   /// [collectedDateTime] Time of product collection.
   ///
-  /// [collectedDateTimeElement] ("_collectedDateTime") Extensions for collectedDateTime
+  /// [collectedDateTimeElement] ("_collectedDateTime") Extensions for
+  ///  collectedDateTime
   ///
   /// [collectedPeriod] Time of product collection.
   ///
   factory BiologicallyDerivedProductCollection({
-    /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+    /// [id] Unique id for the element within a resource (for internal
+    ///  references). This may be any string value that does not contain spaces.
     String? id,
 
-    /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+    /// [extension_] ("extension") May be used to represent additional
+    ///  information that is not part of the basic definition of the element.
+    ///  To make the use of extensions safe and managable, there is a strict
+    ///  set of governance applied to the definition and use of extensions.
+    ///  Though any implementer can define an extension, there is a set of
+    ///  requirements that SHALL be met as part of the definition of the
+    ///  extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
-    /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+    /// [modifierExtension] May be used to represent additional information
+    ///  that is not part of the basic definition of the element and that
+    ///  modifies the understanding of the element in which it is contained
+    ///  and/or the understanding of the containing element's descendants.
+    ///  Usually modifier elements provide negation or qualification. To make
+    ///  the use of extensions safe and managable, there is a strict set of
+    ///  governance applied to the definition and use of extensions. Though any
+    ///  implementer can define an extension, there is a set of requirements
+    ///  that SHALL be met as part of the definition of the extension.
+    ///  Applications processing a resource are required to check for modifier
+    ///  extensions.Modifier extensions SHALL NOT change the meaning of any
+    ///  elements on Resource or DomainResource (including cannot change the
+    ///  meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
     /// [collector] Healthcare professional who is performing the collection.
     Reference? collector,
 
-    /// [source] The patient or entity, such as a hospital or vendor in the case of a processed/manipulated/manufactured product, providing the product.
+    /// [source] The patient or entity, such as a hospital or vendor in the
+    ///  case of a processed/manipulated/manufactured product, providing the
+    ///  product.
     Reference? source,
 
     /// [collectedDateTime] Time of product collection.
     FhirDateTime? collectedDateTime,
 
-    /// [collectedDateTimeElement] ("_collectedDateTime") Extensions for collectedDateTime
+    /// [collectedDateTimeElement] ("_collectedDateTime") Extensions for
+    ///  collectedDateTime
     @JsonKey(name: '_collectedDateTime') Element? collectedDateTimeElement,
 
     /// [collectedPeriod] Time of product collection.
@@ -257,7 +411,8 @@ class BiologicallyDerivedProductCollection
           Map<String, dynamic> json) =>
       _$BiologicallyDerivedProductCollectionFromJson(json);
 
-  /// Acts like a constructor, returns a [BiologicallyDerivedProductCollection], accepts a
+  /// Acts like a constructor, returns a
+  ///  [BiologicallyDerivedProductCollection], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory BiologicallyDerivedProductCollection.fromJsonString(String source) {
     final json = jsonDecode(source);
@@ -270,22 +425,50 @@ class BiologicallyDerivedProductCollection
   }
 }
 
-/// [BiologicallyDerivedProductProperty] This resource reflects an instance of a biologically derived product. A material substance originating from a biological entity intended to be transplanted or infused into another (possibly the same) biological entity.
+/// [BiologicallyDerivedProductProperty] This resource reflects an instance of
+///  a biologically derived product. A material substance originating from a
+///  biological entity intended to be transplanted or infused into another
+///  (possibly the same) biological entity.
 @freezed
 class BiologicallyDerivedProductProperty
     with _$BiologicallyDerivedProductProperty {
-  /// [BiologicallyDerivedProductProperty] This resource reflects an instance of a biologically derived product. A material substance originating from a biological entity intended to be transplanted or infused into another (possibly the same) biological entity.
+  /// [BiologicallyDerivedProductProperty] This resource reflects an instance
+  ///  of a biologically derived product. A material substance originating from
+  ///  a biological entity intended to be transplanted or infused into another
+  ///  (possibly the same) biological entity.
   BiologicallyDerivedProductProperty._();
 
-  /// [BiologicallyDerivedProductProperty] This resource reflects an instance of a biologically derived product. A material substance originating from a biological entity intended to be transplanted or infused into another (possibly the same) biological entity.
+  /// [BiologicallyDerivedProductProperty] This resource reflects an instance
+  ///  of a biologically derived product. A material substance originating from
+  ///  a biological entity intended to be transplanted or infused into another
+  ///  (possibly the same) biological entity.
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and managable, there is a strict set of
+  ///  governance applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be
+  ///  met as part of the definition of the extension. Applications processing
+  ///  a resource are required to check for modifier extensions.Modifier
+  ///  extensions SHALL NOT change the meaning of any elements on Resource or
+  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  itself).
   ///
-  /// [type] Code that specifies the property. It should reference an established coding system.
+  /// [type] Code that specifies the property. It should reference an
+  ///  established coding system.
   ///
   /// [valueBoolean] Property values.
   ///
@@ -312,16 +495,36 @@ class BiologicallyDerivedProductProperty
   /// [valueAttachment] Property values.
   ///
   factory BiologicallyDerivedProductProperty({
-    /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+    /// [id] Unique id for the element within a resource (for internal
+    ///  references). This may be any string value that does not contain spaces.
     String? id,
 
-    /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+    /// [extension_] ("extension") May be used to represent additional
+    ///  information that is not part of the basic definition of the element.
+    ///  To make the use of extensions safe and managable, there is a strict
+    ///  set of governance applied to the definition and use of extensions.
+    ///  Though any implementer can define an extension, there is a set of
+    ///  requirements that SHALL be met as part of the definition of the
+    ///  extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
-    /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+    /// [modifierExtension] May be used to represent additional information
+    ///  that is not part of the basic definition of the element and that
+    ///  modifies the understanding of the element in which it is contained
+    ///  and/or the understanding of the containing element's descendants.
+    ///  Usually modifier elements provide negation or qualification. To make
+    ///  the use of extensions safe and managable, there is a strict set of
+    ///  governance applied to the definition and use of extensions. Though any
+    ///  implementer can define an extension, there is a set of requirements
+    ///  that SHALL be met as part of the definition of the extension.
+    ///  Applications processing a resource are required to check for modifier
+    ///  extensions.Modifier extensions SHALL NOT change the meaning of any
+    ///  elements on Resource or DomainResource (including cannot change the
+    ///  meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
-    /// [type] Code that specifies the property. It should reference an established coding system.
+    /// [type] Code that specifies the property. It should reference an
+    ///  established coding system.
     required CodeableConcept type,
 
     /// [valueBoolean] Property values.
@@ -382,7 +585,8 @@ class BiologicallyDerivedProductProperty
           Map<String, dynamic> json) =>
       _$BiologicallyDerivedProductPropertyFromJson(json);
 
-  /// Acts like a constructor, returns a [BiologicallyDerivedProductProperty], accepts a
+  /// Acts like a constructor, returns a [BiologicallyDerivedProductProperty],
+  ///  accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory BiologicallyDerivedProductProperty.fromJsonString(String source) {
     final json = jsonDecode(source);
@@ -398,18 +602,32 @@ class BiologicallyDerivedProductProperty
 @freezed
 class BiologicallyDerivedProductDispense
     with Resource, _$BiologicallyDerivedProductDispense {
-  /// [BiologicallyDerivedProductDispense] This resource reflects an instance of a biologically derived product dispense. The supply or dispense of a biologically derived product from the supply organization or department (e.g. hospital transfusion laboratory) to the clinical team responsible for clinical application.
+  /// [BiologicallyDerivedProductDispense] This resource reflects an instance
+  ///  of a biologically derived product dispense. The supply or dispense of a
+  ///  biologically derived product from the supply organization or department
+  ///  (e.g. hospital transfusion laboratory) to the clinical team responsible
+  ///  for clinical application.
   BiologicallyDerivedProductDispense._();
 
-  /// [BiologicallyDerivedProductDispense] This resource reflects an instance of a biologically derived product dispense. The supply or dispense of a biologically derived product from the supply organization or department (e.g. hospital transfusion laboratory) to the clinical team responsible for clinical application.
+  /// [BiologicallyDerivedProductDispense] This resource reflects an instance
+  ///  of a biologically derived product dispense. The supply or dispense of a
+  ///  biologically derived product from the supply organization or department
+  ///  (e.g. hospital transfusion laboratory) to the clinical team responsible
+  ///  for clinical application.
   ///
   /// [resourceType] This is a BiologicallyDerivedProductDispense resource
   ///
-  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.
+  /// [id] The logical id of the resource, as used in the URL for the resource.
+  ///  Once assigned, this value never changes.
   ///
-  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
+  /// [meta] The metadata about the resource. This is content that is
+  ///  maintained by the infrastructure. Changes to the content might not
+  ///  always be associated with version changes to the resource.
   ///
-  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.
+  /// [implicitRules] A reference to a set of rules that were followed when the
+  ///  resource was constructed, and which must be understood when processing
+  ///  the content. Often, this is a reference to an implementation guide that
+  ///  defines the special rules along with other profiles etc.
   ///
   /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
   ///
@@ -417,17 +635,46 @@ class BiologicallyDerivedProductDispense
   ///
   /// [languageElement] ("_language") Extensions for language
   ///
-  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
+  /// [text] A human-readable narrative that contains a summary of the resource
+  ///  and can be used to represent the content of the resource to a human. The
+  ///  narrative need not encode all the structured data, but is required to
+  ///  contain sufficient detail to make it "clinically safe" for a human to
+  ///  just read the narrative. Resource definitions may define what content
+  ///  should be represented in the narrative to ensure clinical safety.
   ///
-  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
+  /// [contained] These resources do not have an independent existence apart
+  ///  from the resource that contains them - they cannot be identified
+  ///  independently, nor can they have their own independent transaction
+  ///  scope. This is allowed to be a Parameters resource if and only if it is
+  ///  referenced by a resource that provides context/meaning.
   ///
-  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the resource. To
+  ///  make the use of extensions safe and managable, there is a strict set of
+  ///  governance applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the resource and that modifies
+  ///  the understanding of the element that contains it and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  is allowed to define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension. Applications
+  ///  processing a resource are required to check for modifier
+  ///  extensions.Modifier extensions SHALL NOT change the meaning of any
+  ///  elements on Resource or DomainResource (including cannot change the
+  ///  meaning of modifierExtension itself).
   ///
-  /// [identifier] Unique instance identifiers assigned to a biologically derived product dispense. Note: This is a business identifier, not a resource identifier.
+  /// [identifier] Unique instance identifiers assigned to a biologically
+  ///  derived product dispense. Note: This is a business identifier, not a
+  ///  resource identifier.
   ///
-  /// [basedOn] The order or request that the dispense is fulfilling. This is a reference to a ServiceRequest resource.
+  /// [basedOn] The order or request that the dispense is fulfilling. This is a
+  ///  reference to a ServiceRequest resource.
   ///
   /// [partOf] A larger event of which this particular event is a component.
   ///
@@ -435,11 +682,14 @@ class BiologicallyDerivedProductDispense
   ///
   /// [statusElement] ("_status") Extensions for status
   ///
-  /// [originRelationshipType] Indicates the relationship between the donor of the biologically derived product and the intended recipient.
+  /// [originRelationshipType] Indicates the relationship between the donor of
+  ///  the biologically derived product and the intended recipient.
   ///
-  /// [product] A link to a resource identifying the biologically derived product that is being dispensed.
+  /// [product] A link to a resource identifying the biologically derived
+  ///  product that is being dispensed.
   ///
-  /// [patient] A link to a resource representing the patient that the product is dispensed for.
+  /// [patient] A link to a resource representing the patient that the product
+  ///  is dispensed for.
   ///
   /// [matchStatus] Indicates the type of matching associated with the dispense.
   ///
@@ -447,7 +697,9 @@ class BiologicallyDerivedProductDispense
   ///
   /// [location] The physical location where the dispense was performed.
   ///
-  /// [quantity] The amount of product in the dispense. Quantity will depend on the product being dispensed. Examples are: volume; cell count; concentration.
+  /// [quantity] The amount of product in the dispense. Quantity will depend on
+  ///  the product being dispensed. Examples are: volume; cell count;
+  ///  concentration.
   ///
   /// [preparedDate] When the product was selected/ matched.
   ///
@@ -457,13 +709,15 @@ class BiologicallyDerivedProductDispense
   ///
   /// [whenHandedOverElement] ("_whenHandedOver") Extensions for whenHandedOver
   ///
-  /// [destination] Link to a resource identifying the physical location that the product was dispatched to.
+  /// [destination] Link to a resource identifying the physical location that
+  ///  the product was dispatched to.
   ///
   /// [note] Additional notes.
   ///
   /// [usageInstruction] Specific instructions for use.
   ///
-  /// [usageInstructionElement] ("_usageInstruction") Extensions for usageInstruction
+  /// [usageInstructionElement] ("_usageInstruction") Extensions for
+  ///  usageInstruction
   ///
   factory BiologicallyDerivedProductDispense({
     /// [resourceType] This is a BiologicallyDerivedProductDispense resource
@@ -471,13 +725,20 @@ class BiologicallyDerivedProductDispense
     @JsonKey(unknownEnumValue: R5ResourceType.BiologicallyDerivedProductDispense)
         R5ResourceType resourceType,
 
-    /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.
+    /// [id] The logical id of the resource, as used in the URL for the
+    ///  resource. Once assigned, this value never changes.
     FhirId? id,
 
-    /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
+    /// [meta] The metadata about the resource. This is content that is
+    ///  maintained by the infrastructure. Changes to the content might not
+    ///  always be associated with version changes to the resource.
     FhirMeta? meta,
 
-    /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.
+    /// [implicitRules] A reference to a set of rules that were followed when
+    ///  the resource was constructed, and which must be understood when
+    ///  processing the content. Often, this is a reference to an
+    ///  implementation guide that defines the special rules along with other
+    ///  profiles etc.
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
@@ -489,22 +750,53 @@ class BiologicallyDerivedProductDispense
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
 
-    /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
+    /// [text] A human-readable narrative that contains a summary of the
+    ///  resource and can be used to represent the content of the resource to a
+    ///  human. The narrative need not encode all the structured data, but is
+    ///  required to contain sufficient detail to make it "clinically safe" for
+    ///  a human to just read the narrative. Resource definitions may define
+    ///  what content should be represented in the narrative to ensure clinical
+    ///  safety.
     Narrative? text,
 
-    /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
+    /// [contained] These resources do not have an independent existence apart
+    ///  from the resource that contains them - they cannot be identified
+    ///  independently, nor can they have their own independent transaction
+    ///  scope. This is allowed to be a Parameters resource if and only if it
+    ///  is referenced by a resource that provides context/meaning.
     List<Resource>? contained,
 
-    /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+    /// [extension_] ("extension") May be used to represent additional
+    ///  information that is not part of the basic definition of the resource.
+    ///  To make the use of extensions safe and managable, there is a strict
+    ///  set of governance applied to the definition and use of extensions.
+    ///  Though any implementer can define an extension, there is a set of
+    ///  requirements that SHALL be met as part of the definition of the
+    ///  extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
-    /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+    /// [modifierExtension] May be used to represent additional information
+    ///  that is not part of the basic definition of the resource and that
+    ///  modifies the understanding of the element that contains it and/or the
+    ///  understanding of the containing element's descendants. Usually
+    ///  modifier elements provide negation or qualification. To make the use
+    ///  of extensions safe and managable, there is a strict set of governance
+    ///  applied to the definition and use of extensions. Though any
+    ///  implementer is allowed to define an extension, there is a set of
+    ///  requirements that SHALL be met as part of the definition of the
+    ///  extension. Applications processing a resource are required to check
+    ///  for modifier extensions.Modifier extensions SHALL NOT change the
+    ///  meaning of any elements on Resource or DomainResource (including
+    ///  cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
-    /// [identifier] Unique instance identifiers assigned to a biologically derived product dispense. Note: This is a business identifier, not a resource identifier.
+    /// [identifier] Unique instance identifiers assigned to a biologically
+    ///  derived product dispense. Note: This is a business identifier, not a
+    ///  resource identifier.
     List<Identifier>? identifier,
 
-    /// [basedOn] The order or request that the dispense is fulfilling. This is a reference to a ServiceRequest resource.
+    /// [basedOn] The order or request that the dispense is fulfilling. This is
+    ///  a reference to a ServiceRequest resource.
     List<Reference>? basedOn,
 
     /// [partOf] A larger event of which this particular event is a component.
@@ -516,16 +808,20 @@ class BiologicallyDerivedProductDispense
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
 
-    /// [originRelationshipType] Indicates the relationship between the donor of the biologically derived product and the intended recipient.
+    /// [originRelationshipType] Indicates the relationship between the donor
+    ///  of the biologically derived product and the intended recipient.
     CodeableConcept? originRelationshipType,
 
-    /// [product] A link to a resource identifying the biologically derived product that is being dispensed.
+    /// [product] A link to a resource identifying the biologically derived
+    ///  product that is being dispensed.
     required Reference product,
 
-    /// [patient] A link to a resource representing the patient that the product is dispensed for.
+    /// [patient] A link to a resource representing the patient that the
+    ///  product is dispensed for.
     required Reference patient,
 
-    /// [matchStatus] Indicates the type of matching associated with the dispense.
+    /// [matchStatus] Indicates the type of matching associated with the
+    ///  dispense.
     CodeableConcept? matchStatus,
 
     /// [performer] Indicates who or what performed an action.
@@ -534,7 +830,9 @@ class BiologicallyDerivedProductDispense
     /// [location] The physical location where the dispense was performed.
     Reference? location,
 
-    /// [quantity] The amount of product in the dispense. Quantity will depend on the product being dispensed. Examples are: volume; cell count; concentration.
+    /// [quantity] The amount of product in the dispense. Quantity will depend
+    ///  on the product being dispensed. Examples are: volume; cell count;
+    ///  concentration.
     Quantity? quantity,
 
     /// [preparedDate] When the product was selected/ matched.
@@ -546,10 +844,12 @@ class BiologicallyDerivedProductDispense
     /// [whenHandedOver] When the product was dispatched for clinical use.
     FhirDateTime? whenHandedOver,
 
-    /// [whenHandedOverElement] ("_whenHandedOver") Extensions for whenHandedOver
+    /// [whenHandedOverElement] ("_whenHandedOver") Extensions for
+    ///  whenHandedOver
     @JsonKey(name: '_whenHandedOver') Element? whenHandedOverElement,
 
-    /// [destination] Link to a resource identifying the physical location that the product was dispatched to.
+    /// [destination] Link to a resource identifying the physical location that
+    ///  the product was dispatched to.
     Reference? destination,
 
     /// [note] Additional notes.
@@ -558,7 +858,8 @@ class BiologicallyDerivedProductDispense
     /// [usageInstruction] Specific instructions for use.
     String? usageInstruction,
 
-    /// [usageInstructionElement] ("_usageInstruction") Extensions for usageInstruction
+    /// [usageInstructionElement] ("_usageInstruction") Extensions for
+    ///  usageInstruction
     @JsonKey(name: '_usageInstruction') Element? usageInstructionElement,
   }) = _BiologicallyDerivedProductDispense;
 
@@ -583,7 +884,8 @@ class BiologicallyDerivedProductDispense
           Map<String, dynamic> json) =>
       _$BiologicallyDerivedProductDispenseFromJson(json);
 
-  /// Acts like a constructor, returns a [BiologicallyDerivedProductDispense], accepts a
+  /// Acts like a constructor, returns a [BiologicallyDerivedProductDispense],
+  ///  accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory BiologicallyDerivedProductDispense.fromJsonString(String source) {
     final json = jsonDecode(source);
@@ -596,36 +898,87 @@ class BiologicallyDerivedProductDispense
   }
 }
 
-/// [BiologicallyDerivedProductDispensePerformer] This resource reflects an instance of a biologically derived product dispense. The supply or dispense of a biologically derived product from the supply organization or department (e.g. hospital transfusion laboratory) to the clinical team responsible for clinical application.
+/// [BiologicallyDerivedProductDispensePerformer] This resource reflects an
+///  instance of a biologically derived product dispense. The supply or
+///  dispense of a biologically derived product from the supply organization or
+///  department (e.g. hospital transfusion laboratory) to the clinical team
+///  responsible for clinical application.
 @freezed
 class BiologicallyDerivedProductDispensePerformer
     with _$BiologicallyDerivedProductDispensePerformer {
-  /// [BiologicallyDerivedProductDispensePerformer] This resource reflects an instance of a biologically derived product dispense. The supply or dispense of a biologically derived product from the supply organization or department (e.g. hospital transfusion laboratory) to the clinical team responsible for clinical application.
+  /// [BiologicallyDerivedProductDispensePerformer] This resource reflects an
+  ///  instance of a biologically derived product dispense. The supply or
+  ///  dispense of a biologically derived product from the supply organization
+  ///  or department (e.g. hospital transfusion laboratory) to the clinical
+  ///  team responsible for clinical application.
   BiologicallyDerivedProductDispensePerformer._();
 
-  /// [BiologicallyDerivedProductDispensePerformer] This resource reflects an instance of a biologically derived product dispense. The supply or dispense of a biologically derived product from the supply organization or department (e.g. hospital transfusion laboratory) to the clinical team responsible for clinical application.
+  /// [BiologicallyDerivedProductDispensePerformer] This resource reflects an
+  ///  instance of a biologically derived product dispense. The supply or
+  ///  dispense of a biologically derived product from the supply organization
+  ///  or department (e.g. hospital transfusion laboratory) to the clinical
+  ///  team responsible for clinical application.
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and managable, there is a strict set of
+  ///  governance applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be
+  ///  met as part of the definition of the extension. Applications processing
+  ///  a resource are required to check for modifier extensions.Modifier
+  ///  extensions SHALL NOT change the meaning of any elements on Resource or
+  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  itself).
   ///
-  /// [function_] ("function") Identifies the function of the performer during the dispense.
+  /// [function_] ("function") Identifies the function of the performer during
+  ///  the dispense.
   ///
   /// [actor] Identifies the person responsible for the action.
   ///
   factory BiologicallyDerivedProductDispensePerformer({
-    /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+    /// [id] Unique id for the element within a resource (for internal
+    ///  references). This may be any string value that does not contain spaces.
     String? id,
 
-    /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+    /// [extension_] ("extension") May be used to represent additional
+    ///  information that is not part of the basic definition of the element.
+    ///  To make the use of extensions safe and managable, there is a strict
+    ///  set of governance applied to the definition and use of extensions.
+    ///  Though any implementer can define an extension, there is a set of
+    ///  requirements that SHALL be met as part of the definition of the
+    ///  extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
-    /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+    /// [modifierExtension] May be used to represent additional information
+    ///  that is not part of the basic definition of the element and that
+    ///  modifies the understanding of the element in which it is contained
+    ///  and/or the understanding of the containing element's descendants.
+    ///  Usually modifier elements provide negation or qualification. To make
+    ///  the use of extensions safe and managable, there is a strict set of
+    ///  governance applied to the definition and use of extensions. Though any
+    ///  implementer can define an extension, there is a set of requirements
+    ///  that SHALL be met as part of the definition of the extension.
+    ///  Applications processing a resource are required to check for modifier
+    ///  extensions.Modifier extensions SHALL NOT change the meaning of any
+    ///  elements on Resource or DomainResource (including cannot change the
+    ///  meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
-    /// [function_] ("function") Identifies the function of the performer during the dispense.
+    /// [function_] ("function") Identifies the function of the performer
+    ///  during the dispense.
     @JsonKey(name: 'function') CodeableConcept? function_,
 
     /// [actor] Identifies the person responsible for the action.
@@ -653,7 +1006,8 @@ class BiologicallyDerivedProductDispensePerformer
           Map<String, dynamic> json) =>
       _$BiologicallyDerivedProductDispensePerformerFromJson(json);
 
-  /// Acts like a constructor, returns a [BiologicallyDerivedProductDispensePerformer], accepts a
+  /// Acts like a constructor, returns a
+  ///  [BiologicallyDerivedProductDispensePerformer], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory BiologicallyDerivedProductDispensePerformer.fromJsonString(
       String source) {
@@ -667,21 +1021,33 @@ class BiologicallyDerivedProductDispensePerformer
   }
 }
 
-/// [Device] A type of a manufactured item that is used in the provision of healthcare without being substantially changed through that activity. The device may be a medical or non-medical device.
+/// [Device] A type of a manufactured item that is used in the provision of
+///  healthcare without being substantially changed through that activity. The
+///  device may be a medical or non-medical device.
 @freezed
 class Device with Resource, _$Device {
-  /// [Device] A type of a manufactured item that is used in the provision of healthcare without being substantially changed through that activity. The device may be a medical or non-medical device.
+  /// [Device] A type of a manufactured item that is used in the provision of
+  ///  healthcare without being substantially changed through that activity.
+  ///  The device may be a medical or non-medical device.
   Device._();
 
-  /// [Device] A type of a manufactured item that is used in the provision of healthcare without being substantially changed through that activity. The device may be a medical or non-medical device.
+  /// [Device] A type of a manufactured item that is used in the provision of
+  ///  healthcare without being substantially changed through that activity.
+  ///  The device may be a medical or non-medical device.
   ///
   /// [resourceType] This is a Device resource
   ///
-  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.
+  /// [id] The logical id of the resource, as used in the URL for the resource.
+  ///  Once assigned, this value never changes.
   ///
-  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
+  /// [meta] The metadata about the resource. This is content that is
+  ///  maintained by the infrastructure. Changes to the content might not
+  ///  always be associated with version changes to the resource.
   ///
-  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.
+  /// [implicitRules] A reference to a set of rules that were followed when the
+  ///  resource was constructed, and which must be understood when processing
+  ///  the content. Often, this is a reference to an implementation guide that
+  ///  defines the special rules along with other profiles etc.
   ///
   /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
   ///
@@ -689,41 +1055,79 @@ class Device with Resource, _$Device {
   ///
   /// [languageElement] ("_language") Extensions for language
   ///
-  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
+  /// [text] A human-readable narrative that contains a summary of the resource
+  ///  and can be used to represent the content of the resource to a human. The
+  ///  narrative need not encode all the structured data, but is required to
+  ///  contain sufficient detail to make it "clinically safe" for a human to
+  ///  just read the narrative. Resource definitions may define what content
+  ///  should be represented in the narrative to ensure clinical safety.
   ///
-  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
+  /// [contained] These resources do not have an independent existence apart
+  ///  from the resource that contains them - they cannot be identified
+  ///  independently, nor can they have their own independent transaction
+  ///  scope. This is allowed to be a Parameters resource if and only if it is
+  ///  referenced by a resource that provides context/meaning.
   ///
-  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the resource. To
+  ///  make the use of extensions safe and managable, there is a strict set of
+  ///  governance applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the resource and that modifies
+  ///  the understanding of the element that contains it and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  is allowed to define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension. Applications
+  ///  processing a resource are required to check for modifier
+  ///  extensions.Modifier extensions SHALL NOT change the meaning of any
+  ///  elements on Resource or DomainResource (including cannot change the
+  ///  meaning of modifierExtension itself).
   ///
-  /// [identifier] Unique instance identifiers assigned to a device by manufacturers other organizations or owners.
+  /// [identifier] Unique instance identifiers assigned to a device by
+  ///  manufacturers other organizations or owners.
   ///
-  /// [displayName] The name used to display by default when the device is referenced. Based on intent of use by the resource creator, this may reflect one of the names in Device.name, or may be another simple name.
+  /// [displayName] The name used to display by default when the device is
+  ///  referenced. Based on intent of use by the resource creator, this may
+  ///  reflect one of the names in Device.name, or may be another simple name.
   ///
   /// [displayNameElement] ("_displayName") Extensions for displayName
   ///
   /// [definition] The reference to the definition for the device.
   ///
-  /// [udiCarrier] Unique device identifier (UDI) assigned to device label or package.  Note that the Device may include multiple udiCarriers as it either may include just the udiCarrier for the jurisdiction it is sold, or for multiple jurisdictions it could have been sold.
+  /// [udiCarrier] Unique device identifier (UDI) assigned to device label or
+  ///  package.  Note that the Device may include multiple udiCarriers as it
+  ///  either may include just the udiCarrier for the jurisdiction it is sold,
+  ///  or for multiple jurisdictions it could have been sold.
   ///
-  /// [status] The Device record status. This is not the status of the device like availability.
+  /// [status] The Device record status. This is not the status of the device
+  ///  like availability.
   ///
   /// [statusElement] ("_status") Extensions for status
   ///
   /// [availabilityStatus] The availability of the device.
   ///
-  /// [biologicalSourceEvent] An identifier that supports traceability to the event during which material in this product from one or more biological entities was obtained or pooled.
+  /// [biologicalSourceEvent] An identifier that supports traceability to the
+  ///  event during which material in this product from one or more biological
+  ///  entities was obtained or pooled.
   ///
-  /// [manufacturer] A name of the manufacturer or entity legally responsible for the device.
+  /// [manufacturer] A name of the manufacturer or entity legally responsible
+  ///  for the device.
   ///
   /// [manufacturerElement] ("_manufacturer") Extensions for manufacturer
   ///
   /// [manufactureDate] The date and time when the device was manufactured.
   ///
-  /// [manufactureDateElement] ("_manufactureDate") Extensions for manufactureDate
+  /// [manufactureDateElement] ("_manufactureDate") Extensions for
+  ///  manufactureDate
   ///
-  /// [expirationDate] The date and time beyond which this device is no longer valid or should not be used (if applicable).
+  /// [expirationDate] The date and time beyond which this device is no longer
+  ///  valid or should not be used (if applicable).
   ///
   /// [expirationDateElement] ("_expirationDate") Extensions for expirationDate
   ///
@@ -731,11 +1135,15 @@ class Device with Resource, _$Device {
   ///
   /// [lotNumberElement] ("_lotNumber") Extensions for lotNumber
   ///
-  /// [serialNumber] The serial number assigned by the organization when the device was manufactured.
+  /// [serialNumber] The serial number assigned by the organization when the
+  ///  device was manufactured.
   ///
   /// [serialNumberElement] ("_serialNumber") Extensions for serialNumber
   ///
-  /// [name] This represents the manufacturer's name of the device as provided by the device, from a UDI label, or by a person describing the Device.  This typically would be used when a person provides the name(s) or when the device represents one of the names available from DeviceDefinition.
+  /// [name] This represents the manufacturer's name of the device as provided
+  ///  by the device, from a UDI label, or by a person describing the Device. 
+  ///  This typically would be used when a person provides the name(s) or when
+  ///  the device represents one of the names available from DeviceDefinition.
   ///
   /// [modelNumber] The manufacturer's model number for the device.
   ///
@@ -747,23 +1155,36 @@ class Device with Resource, _$Device {
   ///
   /// [category] Devices may be associated with one or more categories.
   ///
-  /// [type] The kind or type of device. A device instance may have more than one type - in which case those are the types that apply to the specific instance of the device.
+  /// [type] The kind or type of device. A device instance may have more than
+  ///  one type - in which case those are the types that apply to the specific
+  ///  instance of the device.
   ///
-  /// [version] The actual design of the device or software version running on the device.
+  /// [version] The actual design of the device or software version running on
+  ///  the device.
   ///
-  /// [conformsTo] Identifies the standards, specifications, or formal guidances for the capabilities supported by the device. The device may be certified as conformant to these specifications e.g., communication, performance, process, measurement, or specialization standards.
+  /// [conformsTo] Identifies the standards, specifications, or formal
+  ///  guidances for the capabilities supported by the device. The device may
+  ///  be certified as conformant to these specifications e.g., communication,
+  ///  performance, process, measurement, or specialization standards.
   ///
-  /// [property] Static or essentially fixed characteristics or features of the device (e.g., time or timing attributes, resolution, accuracy, intended use or instructions for use, and physical attributes) that are not otherwise captured in more specific attributes.
+  /// [property] Static or essentially fixed characteristics or features of the
+  ///  device (e.g., time or timing attributes, resolution, accuracy, intended
+  ///  use or instructions for use, and physical attributes) that are not
+  ///  otherwise captured in more specific attributes.
   ///
   /// [mode] The designated condition for performing a task with the device.
   ///
-  /// [cycle] The series of occurrences that repeats during the operation of the device.
+  /// [cycle] The series of occurrences that repeats during the operation of
+  ///  the device.
   ///
-  /// [duration] A measurement of time during the device's operation (e.g., days, hours, mins, etc.).
+  /// [duration] A measurement of time during the device's operation (e.g.,
+  ///  days, hours, mins, etc.).
   ///
-  /// [owner] An organization that is responsible for the provision and ongoing maintenance of the device.
+  /// [owner] An organization that is responsible for the provision and ongoing
+  ///  maintenance of the device.
   ///
-  /// [contact] Contact details for an organization or a particular human that is responsible for the device.
+  /// [contact] Contact details for an organization or a particular human that
+  ///  is responsible for the device.
   ///
   /// [location] The place where the device can be found.
   ///
@@ -771,15 +1192,21 @@ class Device with Resource, _$Device {
   ///
   /// [urlElement] ("_url") Extensions for url
   ///
-  /// [endpoint] Technical endpoints providing access to services provided by the device defined at this resource.
+  /// [endpoint] Technical endpoints providing access to services provided by
+  ///  the device defined at this resource.
   ///
-  /// [gateway] The linked device acting as a communication controller, data collector, translator, or concentrator for the current device (e.g., mobile phone application that relays a blood pressure device's data).
+  /// [gateway] The linked device acting as a communication controller, data
+  ///  collector, translator, or concentrator for the current device (e.g.,
+  ///  mobile phone application that relays a blood pressure device's data).
   ///
-  /// [note] Descriptive information, usage information or implantation information that is not captured in an existing element.
+  /// [note] Descriptive information, usage information or implantation
+  ///  information that is not captured in an existing element.
   ///
-  /// [safety] Provides additional safety characteristics about a medical device.  For example devices containing latex.
+  /// [safety] Provides additional safety characteristics about a medical
+  ///  device.  For example devices containing latex.
   ///
-  /// [parent] The higher level or encompassing device that this device is a logical part of.
+  /// [parent] The higher level or encompassing device that this device is a
+  ///  logical part of.
   ///
   factory Device({
     /// [resourceType] This is a Device resource
@@ -787,13 +1214,20 @@ class Device with Resource, _$Device {
     @JsonKey(unknownEnumValue: R5ResourceType.Device)
         R5ResourceType resourceType,
 
-    /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.
+    /// [id] The logical id of the resource, as used in the URL for the
+    ///  resource. Once assigned, this value never changes.
     FhirId? id,
 
-    /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
+    /// [meta] The metadata about the resource. This is content that is
+    ///  maintained by the infrastructure. Changes to the content might not
+    ///  always be associated with version changes to the resource.
     FhirMeta? meta,
 
-    /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.
+    /// [implicitRules] A reference to a set of rules that were followed when
+    ///  the resource was constructed, and which must be understood when
+    ///  processing the content. Often, this is a reference to an
+    ///  implementation guide that defines the special rules along with other
+    ///  profiles etc.
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
@@ -805,22 +1239,53 @@ class Device with Resource, _$Device {
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
 
-    /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
+    /// [text] A human-readable narrative that contains a summary of the
+    ///  resource and can be used to represent the content of the resource to a
+    ///  human. The narrative need not encode all the structured data, but is
+    ///  required to contain sufficient detail to make it "clinically safe" for
+    ///  a human to just read the narrative. Resource definitions may define
+    ///  what content should be represented in the narrative to ensure clinical
+    ///  safety.
     Narrative? text,
 
-    /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
+    /// [contained] These resources do not have an independent existence apart
+    ///  from the resource that contains them - they cannot be identified
+    ///  independently, nor can they have their own independent transaction
+    ///  scope. This is allowed to be a Parameters resource if and only if it
+    ///  is referenced by a resource that provides context/meaning.
     List<Resource>? contained,
 
-    /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+    /// [extension_] ("extension") May be used to represent additional
+    ///  information that is not part of the basic definition of the resource.
+    ///  To make the use of extensions safe and managable, there is a strict
+    ///  set of governance applied to the definition and use of extensions.
+    ///  Though any implementer can define an extension, there is a set of
+    ///  requirements that SHALL be met as part of the definition of the
+    ///  extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
-    /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+    /// [modifierExtension] May be used to represent additional information
+    ///  that is not part of the basic definition of the resource and that
+    ///  modifies the understanding of the element that contains it and/or the
+    ///  understanding of the containing element's descendants. Usually
+    ///  modifier elements provide negation or qualification. To make the use
+    ///  of extensions safe and managable, there is a strict set of governance
+    ///  applied to the definition and use of extensions. Though any
+    ///  implementer is allowed to define an extension, there is a set of
+    ///  requirements that SHALL be met as part of the definition of the
+    ///  extension. Applications processing a resource are required to check
+    ///  for modifier extensions.Modifier extensions SHALL NOT change the
+    ///  meaning of any elements on Resource or DomainResource (including
+    ///  cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
-    /// [identifier] Unique instance identifiers assigned to a device by manufacturers other organizations or owners.
+    /// [identifier] Unique instance identifiers assigned to a device by
+    ///  manufacturers other organizations or owners.
     List<Identifier>? identifier,
 
-    /// [displayName] The name used to display by default when the device is referenced. Based on intent of use by the resource creator, this may reflect one of the names in Device.name, or may be another simple name.
+    /// [displayName] The name used to display by default when the device is
+    ///  referenced. Based on intent of use by the resource creator, this may
+    ///  reflect one of the names in Device.name, or may be another simple name.
     String? displayName,
 
     /// [displayNameElement] ("_displayName") Extensions for displayName
@@ -829,10 +1294,14 @@ class Device with Resource, _$Device {
     /// [definition] The reference to the definition for the device.
     CodeableReference? definition,
 
-    /// [udiCarrier] Unique device identifier (UDI) assigned to device label or package.  Note that the Device may include multiple udiCarriers as it either may include just the udiCarrier for the jurisdiction it is sold, or for multiple jurisdictions it could have been sold.
+    /// [udiCarrier] Unique device identifier (UDI) assigned to device label or
+    ///  package.  Note that the Device may include multiple udiCarriers as it
+    ///  either may include just the udiCarrier for the jurisdiction it is
+    ///  sold, or for multiple jurisdictions it could have been sold.
     List<DeviceUdiCarrier>? udiCarrier,
 
-    /// [status] The Device record status. This is not the status of the device like availability.
+    /// [status] The Device record status. This is not the status of the device
+    ///  like availability.
     FhirCode? status,
 
     /// [statusElement] ("_status") Extensions for status
@@ -841,10 +1310,13 @@ class Device with Resource, _$Device {
     /// [availabilityStatus] The availability of the device.
     CodeableConcept? availabilityStatus,
 
-    /// [biologicalSourceEvent] An identifier that supports traceability to the event during which material in this product from one or more biological entities was obtained or pooled.
+    /// [biologicalSourceEvent] An identifier that supports traceability to the
+    ///  event during which material in this product from one or more
+    ///  biological entities was obtained or pooled.
     Identifier? biologicalSourceEvent,
 
-    /// [manufacturer] A name of the manufacturer or entity legally responsible for the device.
+    /// [manufacturer] A name of the manufacturer or entity legally responsible
+    ///  for the device.
     String? manufacturer,
 
     /// [manufacturerElement] ("_manufacturer") Extensions for manufacturer
@@ -853,13 +1325,16 @@ class Device with Resource, _$Device {
     /// [manufactureDate] The date and time when the device was manufactured.
     FhirDateTime? manufactureDate,
 
-    /// [manufactureDateElement] ("_manufactureDate") Extensions for manufactureDate
+    /// [manufactureDateElement] ("_manufactureDate") Extensions for
+    ///  manufactureDate
     @JsonKey(name: '_manufactureDate') Element? manufactureDateElement,
 
-    /// [expirationDate] The date and time beyond which this device is no longer valid or should not be used (if applicable).
+    /// [expirationDate] The date and time beyond which this device is no
+    ///  longer valid or should not be used (if applicable).
     FhirDateTime? expirationDate,
 
-    /// [expirationDateElement] ("_expirationDate") Extensions for expirationDate
+    /// [expirationDateElement] ("_expirationDate") Extensions for
+    ///  expirationDate
     @JsonKey(name: '_expirationDate') Element? expirationDateElement,
 
     /// [lotNumber] Lot number assigned by the manufacturer.
@@ -868,13 +1343,18 @@ class Device with Resource, _$Device {
     /// [lotNumberElement] ("_lotNumber") Extensions for lotNumber
     @JsonKey(name: '_lotNumber') Element? lotNumberElement,
 
-    /// [serialNumber] The serial number assigned by the organization when the device was manufactured.
+    /// [serialNumber] The serial number assigned by the organization when the
+    ///  device was manufactured.
     String? serialNumber,
 
     /// [serialNumberElement] ("_serialNumber") Extensions for serialNumber
     @JsonKey(name: '_serialNumber') Element? serialNumberElement,
 
-    /// [name] This represents the manufacturer's name of the device as provided by the device, from a UDI label, or by a person describing the Device.  This typically would be used when a person provides the name(s) or when the device represents one of the names available from DeviceDefinition.
+    /// [name] This represents the manufacturer's name of the device as
+    ///  provided by the device, from a UDI label, or by a person describing
+    ///  the Device.  This typically would be used when a person provides the
+    ///  name(s) or when the device represents one of the names available from
+    ///  DeviceDefinition.
     List<DeviceName>? name,
 
     /// [modelNumber] The manufacturer's model number for the device.
@@ -892,31 +1372,45 @@ class Device with Resource, _$Device {
     /// [category] Devices may be associated with one or more categories.
     List<CodeableConcept>? category,
 
-    /// [type] The kind or type of device. A device instance may have more than one type - in which case those are the types that apply to the specific instance of the device.
+    /// [type] The kind or type of device. A device instance may have more than
+    ///  one type - in which case those are the types that apply to the
+    ///  specific instance of the device.
     List<CodeableConcept>? type,
 
-    /// [version] The actual design of the device or software version running on the device.
+    /// [version] The actual design of the device or software version running
+    ///  on the device.
     List<DeviceVersion>? version,
 
-    /// [conformsTo] Identifies the standards, specifications, or formal guidances for the capabilities supported by the device. The device may be certified as conformant to these specifications e.g., communication, performance, process, measurement, or specialization standards.
+    /// [conformsTo] Identifies the standards, specifications, or formal
+    ///  guidances for the capabilities supported by the device. The device may
+    ///  be certified as conformant to these specifications e.g.,
+    ///  communication, performance, process, measurement, or specialization
+    ///  standards.
     List<DeviceConformsTo>? conformsTo,
 
-    /// [property] Static or essentially fixed characteristics or features of the device (e.g., time or timing attributes, resolution, accuracy, intended use or instructions for use, and physical attributes) that are not otherwise captured in more specific attributes.
+    /// [property] Static or essentially fixed characteristics or features of
+    ///  the device (e.g., time or timing attributes, resolution, accuracy,
+    ///  intended use or instructions for use, and physical attributes) that
+    ///  are not otherwise captured in more specific attributes.
     List<DeviceProperty>? property,
 
     /// [mode] The designated condition for performing a task with the device.
     CodeableConcept? mode,
 
-    /// [cycle] The series of occurrences that repeats during the operation of the device.
+    /// [cycle] The series of occurrences that repeats during the operation of
+    ///  the device.
     Count? cycle,
 
-    /// [duration] A measurement of time during the device's operation (e.g., days, hours, mins, etc.).
+    /// [duration] A measurement of time during the device's operation (e.g.,
+    ///  days, hours, mins, etc.).
     FhirDuration? duration,
 
-    /// [owner] An organization that is responsible for the provision and ongoing maintenance of the device.
+    /// [owner] An organization that is responsible for the provision and
+    ///  ongoing maintenance of the device.
     Reference? owner,
 
-    /// [contact] Contact details for an organization or a particular human that is responsible for the device.
+    /// [contact] Contact details for an organization or a particular human
+    ///  that is responsible for the device.
     List<ContactPoint>? contact,
 
     /// [location] The place where the device can be found.
@@ -928,19 +1422,25 @@ class Device with Resource, _$Device {
     /// [urlElement] ("_url") Extensions for url
     @JsonKey(name: '_url') Element? urlElement,
 
-    /// [endpoint] Technical endpoints providing access to services provided by the device defined at this resource.
+    /// [endpoint] Technical endpoints providing access to services provided by
+    ///  the device defined at this resource.
     List<Reference>? endpoint,
 
-    /// [gateway] The linked device acting as a communication controller, data collector, translator, or concentrator for the current device (e.g., mobile phone application that relays a blood pressure device's data).
+    /// [gateway] The linked device acting as a communication controller, data
+    ///  collector, translator, or concentrator for the current device (e.g.,
+    ///  mobile phone application that relays a blood pressure device's data).
     List<CodeableReference>? gateway,
 
-    /// [note] Descriptive information, usage information or implantation information that is not captured in an existing element.
+    /// [note] Descriptive information, usage information or implantation
+    ///  information that is not captured in an existing element.
     List<Annotation>? note,
 
-    /// [safety] Provides additional safety characteristics about a medical device.  For example devices containing latex.
+    /// [safety] Provides additional safety characteristics about a medical
+    ///  device.  For example devices containing latex.
     List<CodeableConcept>? safety,
 
-    /// [parent] The higher level or encompassing device that this device is a logical part of.
+    /// [parent] The higher level or encompassing device that this device is a
+    ///  logical part of.
     Reference? parent,
   }) = _Device;
 
@@ -975,41 +1475,84 @@ class Device with Resource, _$Device {
   }
 }
 
-/// [DeviceUdiCarrier] A type of a manufactured item that is used in the provision of healthcare without being substantially changed through that activity. The device may be a medical or non-medical device.
+/// [DeviceUdiCarrier] A type of a manufactured item that is used in the
+///  provision of healthcare without being substantially changed through that
+///  activity. The device may be a medical or non-medical device.
 @freezed
 class DeviceUdiCarrier with _$DeviceUdiCarrier {
-  /// [DeviceUdiCarrier] A type of a manufactured item that is used in the provision of healthcare without being substantially changed through that activity. The device may be a medical or non-medical device.
+  /// [DeviceUdiCarrier] A type of a manufactured item that is used in the
+  ///  provision of healthcare without being substantially changed through that
+  ///  activity. The device may be a medical or non-medical device.
   DeviceUdiCarrier._();
 
-  /// [DeviceUdiCarrier] A type of a manufactured item that is used in the provision of healthcare without being substantially changed through that activity. The device may be a medical or non-medical device.
+  /// [DeviceUdiCarrier] A type of a manufactured item that is used in the
+  ///  provision of healthcare without being substantially changed through that
+  ///  activity. The device may be a medical or non-medical device.
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and managable, there is a strict set of
+  ///  governance applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be
+  ///  met as part of the definition of the extension. Applications processing
+  ///  a resource are required to check for modifier extensions.Modifier
+  ///  extensions SHALL NOT change the meaning of any elements on Resource or
+  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  itself).
   ///
-  /// [deviceIdentifier] The device identifier (DI) is a mandatory, fixed portion of a UDI that identifies the labeler and the specific version or model of a device.
+  /// [deviceIdentifier] The device identifier (DI) is a mandatory, fixed
+  ///  portion of a UDI that identifies the labeler and the specific version or
+  ///  model of a device.
   ///
-  /// [deviceIdentifierElement] ("_deviceIdentifier") Extensions for deviceIdentifier
+  /// [deviceIdentifierElement] ("_deviceIdentifier") Extensions for
+  ///  deviceIdentifier
   ///
-  /// [issuer] Organization that is charged with issuing UDIs for devices. For example, the US FDA issuers include:
+  /// [issuer] Organization that is charged with issuing UDIs for devices. For
+  ///  example, the US FDA issuers include:
   /// 1) GS1: http://hl7.org/fhir/NamingSystem/gs1-di,
   /// 2) HIBCC: http://hl7.org/fhir/NamingSystem/hibcc-diI,
-  /// 3) ICCBBA for blood containers: http://hl7.org/fhir/NamingSystem/iccbba-blood-di,
-  /// 4) ICCBA for other devices: http://hl7.org/fhir/NamingSystem/iccbba-other-di # Informationsstelle für Arzneispezialitäten (IFA GmbH) (EU only): http://hl7.org/fhir/NamingSystem/ifa-gmbh-di.
+  /// 3) ICCBBA for blood containers:
+  ///  http://hl7.org/fhir/NamingSystem/iccbba-blood-di,
+  /// 4) ICCBA for other devices:
+  ///  http://hl7.org/fhir/NamingSystem/iccbba-other-di # Informationsstelle
+  ///  für Arzneispezialitäten (IFA GmbH) (EU only):
+  ///  http://hl7.org/fhir/NamingSystem/ifa-gmbh-di.
   ///
   /// [issuerElement] ("_issuer") Extensions for issuer
   ///
-  /// [jurisdiction] The identity of the authoritative source for UDI generation within a jurisdiction. All UDIs are globally unique within a single namespace with the appropriate repository uri as the system. For example, UDIs of devices managed in the U.S. by the FDA, the value is http://hl7.org/fhir/NamingSystem/us-fda-udi or in the European Union by the European Commission http://hl7.org/fhir/NamingSystem/eu-ec-udi.
+  /// [jurisdiction] The identity of the authoritative source for UDI
+  ///  generation within a jurisdiction. All UDIs are globally unique within a
+  ///  single namespace with the appropriate repository uri as the system. For
+  ///  example, UDIs of devices managed in the U.S. by the FDA, the value is
+  ///  http://hl7.org/fhir/NamingSystem/us-fda-udi or in the European Union by
+  ///  the European Commission http://hl7.org/fhir/NamingSystem/eu-ec-udi.
   ///
   /// [jurisdictionElement] ("_jurisdiction") Extensions for jurisdiction
   ///
-  /// [carrierAIDC] The full UDI carrier of the Automatic Identification and Data Capture (AIDC) technology representation of the barcode string as printed on the packaging of the device - e.g., a barcode or RFID.   Because of limitations on character sets in XML and the need to round-trip JSON data through XML, AIDC Formats *SHALL* be base64 encoded.
+  /// [carrierAIDC] The full UDI carrier of the Automatic Identification and
+  ///  Data Capture (AIDC) technology representation of the barcode string as
+  ///  printed on the packaging of the device - e.g., a barcode or RFID.  
+  ///  Because of limitations on character sets in XML and the need to
+  ///  round-trip JSON data through XML, AIDC Formats *SHALL* be base64 encoded.
   ///
   /// [carrierAIDCElement] ("_carrierAIDC") Extensions for carrierAIDC
   ///
-  /// [carrierHRF] The full UDI carrier as the human readable form (HRF) representation of the barcode string as printed on the packaging of the device.
+  /// [carrierHRF] The full UDI carrier as the human readable form (HRF)
+  ///  representation of the barcode string as printed on the packaging of the
+  ///  device.
   ///
   /// [carrierHRFElement] ("_carrierHRF") Extensions for carrierHRF
   ///
@@ -1018,44 +1561,84 @@ class DeviceUdiCarrier with _$DeviceUdiCarrier {
   /// [entryTypeElement] ("_entryType") Extensions for entryType
   ///
   factory DeviceUdiCarrier({
-    /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+    /// [id] Unique id for the element within a resource (for internal
+    ///  references). This may be any string value that does not contain spaces.
     String? id,
 
-    /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+    /// [extension_] ("extension") May be used to represent additional
+    ///  information that is not part of the basic definition of the element.
+    ///  To make the use of extensions safe and managable, there is a strict
+    ///  set of governance applied to the definition and use of extensions.
+    ///  Though any implementer can define an extension, there is a set of
+    ///  requirements that SHALL be met as part of the definition of the
+    ///  extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
-    /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+    /// [modifierExtension] May be used to represent additional information
+    ///  that is not part of the basic definition of the element and that
+    ///  modifies the understanding of the element in which it is contained
+    ///  and/or the understanding of the containing element's descendants.
+    ///  Usually modifier elements provide negation or qualification. To make
+    ///  the use of extensions safe and managable, there is a strict set of
+    ///  governance applied to the definition and use of extensions. Though any
+    ///  implementer can define an extension, there is a set of requirements
+    ///  that SHALL be met as part of the definition of the extension.
+    ///  Applications processing a resource are required to check for modifier
+    ///  extensions.Modifier extensions SHALL NOT change the meaning of any
+    ///  elements on Resource or DomainResource (including cannot change the
+    ///  meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
-    /// [deviceIdentifier] The device identifier (DI) is a mandatory, fixed portion of a UDI that identifies the labeler and the specific version or model of a device.
+    /// [deviceIdentifier] The device identifier (DI) is a mandatory, fixed
+    ///  portion of a UDI that identifies the labeler and the specific version
+    ///  or model of a device.
     String? deviceIdentifier,
 
-    /// [deviceIdentifierElement] ("_deviceIdentifier") Extensions for deviceIdentifier
+    /// [deviceIdentifierElement] ("_deviceIdentifier") Extensions for
+    ///  deviceIdentifier
     @JsonKey(name: '_deviceIdentifier') Element? deviceIdentifierElement,
 
-    /// [issuer] Organization that is charged with issuing UDIs for devices. For example, the US FDA issuers include:
+    /// [issuer] Organization that is charged with issuing UDIs for devices.
+    ///  For example, the US FDA issuers include:
     /// 1) GS1: http://hl7.org/fhir/NamingSystem/gs1-di,
     /// 2) HIBCC: http://hl7.org/fhir/NamingSystem/hibcc-diI,
-    /// 3) ICCBBA for blood containers: http://hl7.org/fhir/NamingSystem/iccbba-blood-di,
-    /// 4) ICCBA for other devices: http://hl7.org/fhir/NamingSystem/iccbba-other-di # Informationsstelle für Arzneispezialitäten (IFA GmbH) (EU only): http://hl7.org/fhir/NamingSystem/ifa-gmbh-di.
+    /// 3) ICCBBA for blood containers:
+    ///  http://hl7.org/fhir/NamingSystem/iccbba-blood-di,
+    /// 4) ICCBA for other devices:
+    ///  http://hl7.org/fhir/NamingSystem/iccbba-other-di # Informationsstelle
+    ///  für Arzneispezialitäten (IFA GmbH) (EU only):
+    ///  http://hl7.org/fhir/NamingSystem/ifa-gmbh-di.
     FhirUri? issuer,
 
     /// [issuerElement] ("_issuer") Extensions for issuer
     @JsonKey(name: '_issuer') Element? issuerElement,
 
-    /// [jurisdiction] The identity of the authoritative source for UDI generation within a jurisdiction. All UDIs are globally unique within a single namespace with the appropriate repository uri as the system. For example, UDIs of devices managed in the U.S. by the FDA, the value is http://hl7.org/fhir/NamingSystem/us-fda-udi or in the European Union by the European Commission http://hl7.org/fhir/NamingSystem/eu-ec-udi.
+    /// [jurisdiction] The identity of the authoritative source for UDI
+    ///  generation within a jurisdiction. All UDIs are globally unique within
+    ///  a single namespace with the appropriate repository uri as the system.
+    ///  For example, UDIs of devices managed in the U.S. by the FDA, the value
+    ///  is http://hl7.org/fhir/NamingSystem/us-fda-udi or in the European
+    ///  Union by the European Commission
+    ///  http://hl7.org/fhir/NamingSystem/eu-ec-udi.
     FhirUri? jurisdiction,
 
     /// [jurisdictionElement] ("_jurisdiction") Extensions for jurisdiction
     @JsonKey(name: '_jurisdiction') Element? jurisdictionElement,
 
-    /// [carrierAIDC] The full UDI carrier of the Automatic Identification and Data Capture (AIDC) technology representation of the barcode string as printed on the packaging of the device - e.g., a barcode or RFID.   Because of limitations on character sets in XML and the need to round-trip JSON data through XML, AIDC Formats *SHALL* be base64 encoded.
+    /// [carrierAIDC] The full UDI carrier of the Automatic Identification and
+    ///  Data Capture (AIDC) technology representation of the barcode string as
+    ///  printed on the packaging of the device - e.g., a barcode or RFID.  
+    ///  Because of limitations on character sets in XML and the need to
+    ///  round-trip JSON data through XML, AIDC Formats *SHALL* be base64
+    ///  encoded.
     FhirBase64Binary? carrierAIDC,
 
     /// [carrierAIDCElement] ("_carrierAIDC") Extensions for carrierAIDC
     @JsonKey(name: '_carrierAIDC') Element? carrierAIDCElement,
 
-    /// [carrierHRF] The full UDI carrier as the human readable form (HRF) representation of the barcode string as printed on the packaging of the device.
+    /// [carrierHRF] The full UDI carrier as the human readable form (HRF)
+    ///  representation of the barcode string as printed on the packaging of
+    ///  the device.
     String? carrierHRF,
 
     /// [carrierHRFElement] ("_carrierHRF") Extensions for carrierHRF
@@ -1100,25 +1683,50 @@ class DeviceUdiCarrier with _$DeviceUdiCarrier {
   }
 }
 
-/// [DeviceName] A type of a manufactured item that is used in the provision of healthcare without being substantially changed through that activity. The device may be a medical or non-medical device.
+/// [DeviceName] A type of a manufactured item that is used in the provision of
+///  healthcare without being substantially changed through that activity. The
+///  device may be a medical or non-medical device.
 @freezed
 class DeviceName with _$DeviceName {
-  /// [DeviceName] A type of a manufactured item that is used in the provision of healthcare without being substantially changed through that activity. The device may be a medical or non-medical device.
+  /// [DeviceName] A type of a manufactured item that is used in the provision
+  ///  of healthcare without being substantially changed through that activity.
+  ///  The device may be a medical or non-medical device.
   DeviceName._();
 
-  /// [DeviceName] A type of a manufactured item that is used in the provision of healthcare without being substantially changed through that activity. The device may be a medical or non-medical device.
+  /// [DeviceName] A type of a manufactured item that is used in the provision
+  ///  of healthcare without being substantially changed through that activity.
+  ///  The device may be a medical or non-medical device.
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and managable, there is a strict set of
+  ///  governance applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be
+  ///  met as part of the definition of the extension. Applications processing
+  ///  a resource are required to check for modifier extensions.Modifier
+  ///  extensions SHALL NOT change the meaning of any elements on Resource or
+  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  itself).
   ///
   /// [value] The actual name that identifies the device.
   ///
   /// [valueElement] ("_value") Extensions for value
   ///
-  /// [type] Indicates the kind of name. RegisteredName | UserFriendlyName | PatientReportedName.
+  /// [type] Indicates the kind of name. RegisteredName | UserFriendlyName |
+  ///  PatientReportedName.
   ///
   /// [typeElement] ("_type") Extensions for type
   ///
@@ -1127,13 +1735,32 @@ class DeviceName with _$DeviceName {
   /// [displayElement] ("_display") Extensions for display
   ///
   factory DeviceName({
-    /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+    /// [id] Unique id for the element within a resource (for internal
+    ///  references). This may be any string value that does not contain spaces.
     String? id,
 
-    /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+    /// [extension_] ("extension") May be used to represent additional
+    ///  information that is not part of the basic definition of the element.
+    ///  To make the use of extensions safe and managable, there is a strict
+    ///  set of governance applied to the definition and use of extensions.
+    ///  Though any implementer can define an extension, there is a set of
+    ///  requirements that SHALL be met as part of the definition of the
+    ///  extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
-    /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+    /// [modifierExtension] May be used to represent additional information
+    ///  that is not part of the basic definition of the element and that
+    ///  modifies the understanding of the element in which it is contained
+    ///  and/or the understanding of the containing element's descendants.
+    ///  Usually modifier elements provide negation or qualification. To make
+    ///  the use of extensions safe and managable, there is a strict set of
+    ///  governance applied to the definition and use of extensions. Though any
+    ///  implementer can define an extension, there is a set of requirements
+    ///  that SHALL be met as part of the definition of the extension.
+    ///  Applications processing a resource are required to check for modifier
+    ///  extensions.Modifier extensions SHALL NOT change the meaning of any
+    ///  elements on Resource or DomainResource (including cannot change the
+    ///  meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
     /// [value] The actual name that identifies the device.
@@ -1142,7 +1769,8 @@ class DeviceName with _$DeviceName {
     /// [valueElement] ("_value") Extensions for value
     @JsonKey(name: '_value') Element? valueElement,
 
-    /// [type] Indicates the kind of name. RegisteredName | UserFriendlyName | PatientReportedName.
+    /// [type] Indicates the kind of name. RegisteredName | UserFriendlyName |
+    ///  PatientReportedName.
     FhirCode? type,
 
     /// [typeElement] ("_type") Extensions for type
@@ -1187,23 +1815,49 @@ class DeviceName with _$DeviceName {
   }
 }
 
-/// [DeviceVersion] A type of a manufactured item that is used in the provision of healthcare without being substantially changed through that activity. The device may be a medical or non-medical device.
+/// [DeviceVersion] A type of a manufactured item that is used in the provision
+///  of healthcare without being substantially changed through that activity.
+///  The device may be a medical or non-medical device.
 @freezed
 class DeviceVersion with _$DeviceVersion {
-  /// [DeviceVersion] A type of a manufactured item that is used in the provision of healthcare without being substantially changed through that activity. The device may be a medical or non-medical device.
+  /// [DeviceVersion] A type of a manufactured item that is used in the
+  ///  provision of healthcare without being substantially changed through that
+  ///  activity. The device may be a medical or non-medical device.
   DeviceVersion._();
 
-  /// [DeviceVersion] A type of a manufactured item that is used in the provision of healthcare without being substantially changed through that activity. The device may be a medical or non-medical device.
+  /// [DeviceVersion] A type of a manufactured item that is used in the
+  ///  provision of healthcare without being substantially changed through that
+  ///  activity. The device may be a medical or non-medical device.
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and managable, there is a strict set of
+  ///  governance applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be
+  ///  met as part of the definition of the extension. Applications processing
+  ///  a resource are required to check for modifier extensions.Modifier
+  ///  extensions SHALL NOT change the meaning of any elements on Resource or
+  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  itself).
   ///
-  /// [type] The type of the device version, e.g. manufacturer, approved, internal.
+  /// [type] The type of the device version, e.g. manufacturer, approved,
+  ///  internal.
   ///
-  /// [component] The hardware or software module of the device to which the version applies.
+  /// [component] The hardware or software module of the device to which the
+  ///  version applies.
   ///
   /// [installDate] The date the version was installed on the device.
   ///
@@ -1214,19 +1868,40 @@ class DeviceVersion with _$DeviceVersion {
   /// [valueElement] ("_value") Extensions for value
   ///
   factory DeviceVersion({
-    /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+    /// [id] Unique id for the element within a resource (for internal
+    ///  references). This may be any string value that does not contain spaces.
     String? id,
 
-    /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+    /// [extension_] ("extension") May be used to represent additional
+    ///  information that is not part of the basic definition of the element.
+    ///  To make the use of extensions safe and managable, there is a strict
+    ///  set of governance applied to the definition and use of extensions.
+    ///  Though any implementer can define an extension, there is a set of
+    ///  requirements that SHALL be met as part of the definition of the
+    ///  extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
-    /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+    /// [modifierExtension] May be used to represent additional information
+    ///  that is not part of the basic definition of the element and that
+    ///  modifies the understanding of the element in which it is contained
+    ///  and/or the understanding of the containing element's descendants.
+    ///  Usually modifier elements provide negation or qualification. To make
+    ///  the use of extensions safe and managable, there is a strict set of
+    ///  governance applied to the definition and use of extensions. Though any
+    ///  implementer can define an extension, there is a set of requirements
+    ///  that SHALL be met as part of the definition of the extension.
+    ///  Applications processing a resource are required to check for modifier
+    ///  extensions.Modifier extensions SHALL NOT change the meaning of any
+    ///  elements on Resource or DomainResource (including cannot change the
+    ///  meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
-    /// [type] The type of the device version, e.g. manufacturer, approved, internal.
+    /// [type] The type of the device version, e.g. manufacturer, approved,
+    ///  internal.
     CodeableConcept? type,
 
-    /// [component] The hardware or software module of the device to which the version applies.
+    /// [component] The hardware or software module of the device to which the
+    ///  version applies.
     Identifier? component,
 
     /// [installDate] The date the version was installed on the device.
@@ -1274,45 +1949,98 @@ class DeviceVersion with _$DeviceVersion {
   }
 }
 
-/// [DeviceConformsTo] A type of a manufactured item that is used in the provision of healthcare without being substantially changed through that activity. The device may be a medical or non-medical device.
+/// [DeviceConformsTo] A type of a manufactured item that is used in the
+///  provision of healthcare without being substantially changed through that
+///  activity. The device may be a medical or non-medical device.
 @freezed
 class DeviceConformsTo with _$DeviceConformsTo {
-  /// [DeviceConformsTo] A type of a manufactured item that is used in the provision of healthcare without being substantially changed through that activity. The device may be a medical or non-medical device.
+  /// [DeviceConformsTo] A type of a manufactured item that is used in the
+  ///  provision of healthcare without being substantially changed through that
+  ///  activity. The device may be a medical or non-medical device.
   DeviceConformsTo._();
 
-  /// [DeviceConformsTo] A type of a manufactured item that is used in the provision of healthcare without being substantially changed through that activity. The device may be a medical or non-medical device.
+  /// [DeviceConformsTo] A type of a manufactured item that is used in the
+  ///  provision of healthcare without being substantially changed through that
+  ///  activity. The device may be a medical or non-medical device.
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and managable, there is a strict set of
+  ///  governance applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be
+  ///  met as part of the definition of the extension. Applications processing
+  ///  a resource are required to check for modifier extensions.Modifier
+  ///  extensions SHALL NOT change the meaning of any elements on Resource or
+  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  itself).
   ///
-  /// [category] Describes the type of the standard, specification, or formal guidance.
+  /// [category] Describes the type of the standard, specification, or formal
+  ///  guidance.
   ///
-  /// [specification] Code that identifies the specific standard, specification, protocol, formal guidance, regulation, legislation, or certification scheme to which the device adheres.
+  /// [specification] Code that identifies the specific standard,
+  ///  specification, protocol, formal guidance, regulation, legislation, or
+  ///  certification scheme to which the device adheres.
   ///
-  /// [version] Identifies the specific form or variant of the standard, specification, or formal guidance. This may be a 'version number', release, document edition, publication year, or other label.
+  /// [version] Identifies the specific form or variant of the standard,
+  ///  specification, or formal guidance. This may be a 'version number',
+  ///  release, document edition, publication year, or other label.
   ///
   /// [versionElement] ("_version") Extensions for version
   ///
   factory DeviceConformsTo({
-    /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+    /// [id] Unique id for the element within a resource (for internal
+    ///  references). This may be any string value that does not contain spaces.
     String? id,
 
-    /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+    /// [extension_] ("extension") May be used to represent additional
+    ///  information that is not part of the basic definition of the element.
+    ///  To make the use of extensions safe and managable, there is a strict
+    ///  set of governance applied to the definition and use of extensions.
+    ///  Though any implementer can define an extension, there is a set of
+    ///  requirements that SHALL be met as part of the definition of the
+    ///  extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
-    /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+    /// [modifierExtension] May be used to represent additional information
+    ///  that is not part of the basic definition of the element and that
+    ///  modifies the understanding of the element in which it is contained
+    ///  and/or the understanding of the containing element's descendants.
+    ///  Usually modifier elements provide negation or qualification. To make
+    ///  the use of extensions safe and managable, there is a strict set of
+    ///  governance applied to the definition and use of extensions. Though any
+    ///  implementer can define an extension, there is a set of requirements
+    ///  that SHALL be met as part of the definition of the extension.
+    ///  Applications processing a resource are required to check for modifier
+    ///  extensions.Modifier extensions SHALL NOT change the meaning of any
+    ///  elements on Resource or DomainResource (including cannot change the
+    ///  meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
-    /// [category] Describes the type of the standard, specification, or formal guidance.
+    /// [category] Describes the type of the standard, specification, or formal
+    ///  guidance.
     CodeableConcept? category,
 
-    /// [specification] Code that identifies the specific standard, specification, protocol, formal guidance, regulation, legislation, or certification scheme to which the device adheres.
+    /// [specification] Code that identifies the specific standard,
+    ///  specification, protocol, formal guidance, regulation, legislation, or
+    ///  certification scheme to which the device adheres.
     required CodeableConcept specification,
 
-    /// [version] Identifies the specific form or variant of the standard, specification, or formal guidance. This may be a 'version number', release, document edition, publication year, or other label.
+    /// [version] Identifies the specific form or variant of the standard,
+    ///  specification, or formal guidance. This may be a 'version number',
+    ///  release, document edition, publication year, or other label.
     String? version,
 
     /// [versionElement] ("_version") Extensions for version
@@ -1351,83 +2079,142 @@ class DeviceConformsTo with _$DeviceConformsTo {
   }
 }
 
-/// [DeviceProperty] A type of a manufactured item that is used in the provision of healthcare without being substantially changed through that activity. The device may be a medical or non-medical device.
+/// [DeviceProperty] A type of a manufactured item that is used in the
+///  provision of healthcare without being substantially changed through that
+///  activity. The device may be a medical or non-medical device.
 @freezed
 class DeviceProperty with _$DeviceProperty {
-  /// [DeviceProperty] A type of a manufactured item that is used in the provision of healthcare without being substantially changed through that activity. The device may be a medical or non-medical device.
+  /// [DeviceProperty] A type of a manufactured item that is used in the
+  ///  provision of healthcare without being substantially changed through that
+  ///  activity. The device may be a medical or non-medical device.
   DeviceProperty._();
 
-  /// [DeviceProperty] A type of a manufactured item that is used in the provision of healthcare without being substantially changed through that activity. The device may be a medical or non-medical device.
+  /// [DeviceProperty] A type of a manufactured item that is used in the
+  ///  provision of healthcare without being substantially changed through that
+  ///  activity. The device may be a medical or non-medical device.
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and managable, there is a strict set of
+  ///  governance applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be
+  ///  met as part of the definition of the extension. Applications processing
+  ///  a resource are required to check for modifier extensions.Modifier
+  ///  extensions SHALL NOT change the meaning of any elements on Resource or
+  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  itself).
   ///
-  /// [type] Code that specifies the property, such as resolution, color, size, being represented.
+  /// [type] Code that specifies the property, such as resolution, color, size,
+  ///  being represented.
   ///
-  /// [valueQuantity] The value of the property specified by the associated property.type code.
+  /// [valueQuantity] The value of the property specified by the associated
+  ///  property.type code.
   ///
-  /// [valueCodeableConcept] The value of the property specified by the associated property.type code.
+  /// [valueCodeableConcept] The value of the property specified by the
+  ///  associated property.type code.
   ///
-  /// [valueString] The value of the property specified by the associated property.type code.
+  /// [valueString] The value of the property specified by the associated
+  ///  property.type code.
   ///
   /// [valueStringElement] ("_valueString") Extensions for valueString
   ///
-  /// [valueBoolean] The value of the property specified by the associated property.type code.
+  /// [valueBoolean] The value of the property specified by the associated
+  ///  property.type code.
   ///
   /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
   ///
-  /// [valueInteger] The value of the property specified by the associated property.type code.
+  /// [valueInteger] The value of the property specified by the associated
+  ///  property.type code.
   ///
   /// [valueIntegerElement] ("_valueInteger") Extensions for valueInteger
   ///
-  /// [valueRange] The value of the property specified by the associated property.type code.
+  /// [valueRange] The value of the property specified by the associated
+  ///  property.type code.
   ///
-  /// [valueAttachment] The value of the property specified by the associated property.type code.
+  /// [valueAttachment] The value of the property specified by the associated
+  ///  property.type code.
   ///
   factory DeviceProperty({
-    /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+    /// [id] Unique id for the element within a resource (for internal
+    ///  references). This may be any string value that does not contain spaces.
     String? id,
 
-    /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+    /// [extension_] ("extension") May be used to represent additional
+    ///  information that is not part of the basic definition of the element.
+    ///  To make the use of extensions safe and managable, there is a strict
+    ///  set of governance applied to the definition and use of extensions.
+    ///  Though any implementer can define an extension, there is a set of
+    ///  requirements that SHALL be met as part of the definition of the
+    ///  extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
-    /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+    /// [modifierExtension] May be used to represent additional information
+    ///  that is not part of the basic definition of the element and that
+    ///  modifies the understanding of the element in which it is contained
+    ///  and/or the understanding of the containing element's descendants.
+    ///  Usually modifier elements provide negation or qualification. To make
+    ///  the use of extensions safe and managable, there is a strict set of
+    ///  governance applied to the definition and use of extensions. Though any
+    ///  implementer can define an extension, there is a set of requirements
+    ///  that SHALL be met as part of the definition of the extension.
+    ///  Applications processing a resource are required to check for modifier
+    ///  extensions.Modifier extensions SHALL NOT change the meaning of any
+    ///  elements on Resource or DomainResource (including cannot change the
+    ///  meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
-    /// [type] Code that specifies the property, such as resolution, color, size, being represented.
+    /// [type] Code that specifies the property, such as resolution, color,
+    ///  size, being represented.
     required CodeableConcept type,
 
-    /// [valueQuantity] The value of the property specified by the associated property.type code.
+    /// [valueQuantity] The value of the property specified by the associated
+    ///  property.type code.
     Quantity? valueQuantity,
 
-    /// [valueCodeableConcept] The value of the property specified by the associated property.type code.
+    /// [valueCodeableConcept] The value of the property specified by the
+    ///  associated property.type code.
     CodeableConcept? valueCodeableConcept,
 
-    /// [valueString] The value of the property specified by the associated property.type code.
+    /// [valueString] The value of the property specified by the associated
+    ///  property.type code.
     String? valueString,
 
     /// [valueStringElement] ("_valueString") Extensions for valueString
     @JsonKey(name: '_valueString') Element? valueStringElement,
 
-    /// [valueBoolean] The value of the property specified by the associated property.type code.
+    /// [valueBoolean] The value of the property specified by the associated
+    ///  property.type code.
     FhirBoolean? valueBoolean,
 
     /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
 
-    /// [valueInteger] The value of the property specified by the associated property.type code.
+    /// [valueInteger] The value of the property specified by the associated
+    ///  property.type code.
     FhirInteger? valueInteger,
 
     /// [valueIntegerElement] ("_valueInteger") Extensions for valueInteger
     @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
 
-    /// [valueRange] The value of the property specified by the associated property.type code.
+    /// [valueRange] The value of the property specified by the associated
+    ///  property.type code.
     Range? valueRange,
 
-    /// [valueAttachment] The value of the property specified by the associated property.type code.
+    /// [valueAttachment] The value of the property specified by the associated
+    ///  property.type code.
     Attachment? valueAttachment,
   }) = _DeviceProperty;
 
@@ -1463,21 +2250,30 @@ class DeviceProperty with _$DeviceProperty {
   }
 }
 
-/// [DeviceMetric] Describes a measurement, calculation or setting capability of a device.
+/// [DeviceMetric] Describes a measurement, calculation or setting capability
+///  of a device.
 @freezed
 class DeviceMetric with Resource, _$DeviceMetric {
-  /// [DeviceMetric] Describes a measurement, calculation or setting capability of a device.
+  /// [DeviceMetric] Describes a measurement, calculation or setting capability
+  ///  of a device.
   DeviceMetric._();
 
-  /// [DeviceMetric] Describes a measurement, calculation or setting capability of a device.
+  /// [DeviceMetric] Describes a measurement, calculation or setting capability
+  ///  of a device.
   ///
   /// [resourceType] This is a DeviceMetric resource
   ///
-  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.
+  /// [id] The logical id of the resource, as used in the URL for the resource.
+  ///  Once assigned, this value never changes.
   ///
-  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
+  /// [meta] The metadata about the resource. This is content that is
+  ///  maintained by the infrastructure. Changes to the content might not
+  ///  always be associated with version changes to the resource.
   ///
-  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.
+  /// [implicitRules] A reference to a set of rules that were followed when the
+  ///  resource was constructed, and which must be understood when processing
+  ///  the content. Often, this is a reference to an implementation guide that
+  ///  defines the special rules along with other profiles etc.
   ///
   /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
   ///
@@ -1485,37 +2281,84 @@ class DeviceMetric with Resource, _$DeviceMetric {
   ///
   /// [languageElement] ("_language") Extensions for language
   ///
-  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
+  /// [text] A human-readable narrative that contains a summary of the resource
+  ///  and can be used to represent the content of the resource to a human. The
+  ///  narrative need not encode all the structured data, but is required to
+  ///  contain sufficient detail to make it "clinically safe" for a human to
+  ///  just read the narrative. Resource definitions may define what content
+  ///  should be represented in the narrative to ensure clinical safety.
   ///
-  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
+  /// [contained] These resources do not have an independent existence apart
+  ///  from the resource that contains them - they cannot be identified
+  ///  independently, nor can they have their own independent transaction
+  ///  scope. This is allowed to be a Parameters resource if and only if it is
+  ///  referenced by a resource that provides context/meaning.
   ///
-  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the resource. To
+  ///  make the use of extensions safe and managable, there is a strict set of
+  ///  governance applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the resource and that modifies
+  ///  the understanding of the element that contains it and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  is allowed to define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension. Applications
+  ///  processing a resource are required to check for modifier
+  ///  extensions.Modifier extensions SHALL NOT change the meaning of any
+  ///  elements on Resource or DomainResource (including cannot change the
+  ///  meaning of modifierExtension itself).
   ///
-  /// [identifier] Instance identifiers assigned to a device, by the device or gateway software, manufacturers, other organizations or owners. For example, handle ID.
+  /// [identifier] Instance identifiers assigned to a device, by the device or
+  ///  gateway software, manufacturers, other organizations or owners. For
+  ///  example, handle ID.
   ///
-  /// [type] Describes the type of the metric. For example: Heart Rate, PEEP Setting, etc.
+  /// [type] Describes the type of the metric. For example: Heart Rate, PEEP
+  ///  Setting, etc.
   ///
-  /// [unit] Describes the unit that an observed value determined for this metric will have. For example: Percent, Seconds, etc.
+  /// [unit] Describes the unit that an observed value determined for this
+  ///  metric will have. For example: Percent, Seconds, etc.
   ///
-  /// [device] Describes the link to the Device.  This is also known as a channel device.
+  /// [device] Describes the link to the Device.  This is also known as a
+  ///  channel device.
   ///
-  /// [operationalStatus] Indicates current operational state of the device. For example: On, Off, Standby, etc.
+  /// [operationalStatus] Indicates current operational state of the device.
+  ///  For example: On, Off, Standby, etc.
   ///
-  /// [operationalStatusElement] ("_operationalStatus") Extensions for operationalStatus
+  /// [operationalStatusElement] ("_operationalStatus") Extensions for
+  ///  operationalStatus
   ///
-  /// [color] The preferred color associated with the metric (e.g., display color). This is often used to aid clinicians to track and identify parameter types by color. In practice, consider a Patient Monitor that has ECG/HR and Pleth; the metrics are displayed in different characteristic colors, such as HR in blue, BP in green, and PR and SpO2 in magenta.
+  /// [color] The preferred color associated with the metric (e.g., display
+  ///  color). This is often used to aid clinicians to track and identify
+  ///  parameter types by color. In practice, consider a Patient Monitor that
+  ///  has ECG/HR and Pleth; the metrics are displayed in different
+  ///  characteristic colors, such as HR in blue, BP in green, and PR and SpO2
+  ///  in magenta.
   ///
   /// [colorElement] ("_color") Extensions for color
   ///
-  /// [category] Indicates the category of the observation generation process. A DeviceMetric can be for example a setting, measurement, or calculation.
+  /// [category] Indicates the category of the observation generation process.
+  ///  A DeviceMetric can be for example a setting, measurement, or calculation.
   ///
   /// [categoryElement] ("_category") Extensions for category
   ///
-  /// [measurementFrequency] The frequency at which the metric is taken or recorded. Devices measure metrics at a wide range of frequencies; for example, an ECG might sample measurements in the millisecond range, while an NIBP might trigger only once an hour. Less often, the measurementFrequency may be based on a unit other than time, such as distance (e.g. for a measuring wheel). The update period may be different than the measurement frequency, if the device does not update the published observed value with the same frequency as it was measured.
+  /// [measurementFrequency] The frequency at which the metric is taken or
+  ///  recorded. Devices measure metrics at a wide range of frequencies; for
+  ///  example, an ECG might sample measurements in the millisecond range,
+  ///  while an NIBP might trigger only once an hour. Less often, the
+  ///  measurementFrequency may be based on a unit other than time, such as
+  ///  distance (e.g. for a measuring wheel). The update period may be
+  ///  different than the measurement frequency, if the device does not update
+  ///  the published observed value with the same frequency as it was measured.
   ///
-  /// [calibration] Describes the calibrations that have been performed or that are required to be performed.
+  /// [calibration] Describes the calibrations that have been performed or that
+  ///  are required to be performed.
   ///
   factory DeviceMetric({
     /// [resourceType] This is a DeviceMetric resource
@@ -1523,13 +2366,20 @@ class DeviceMetric with Resource, _$DeviceMetric {
     @JsonKey(unknownEnumValue: R5ResourceType.DeviceMetric)
         R5ResourceType resourceType,
 
-    /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.
+    /// [id] The logical id of the resource, as used in the URL for the
+    ///  resource. Once assigned, this value never changes.
     FhirId? id,
 
-    /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
+    /// [meta] The metadata about the resource. This is content that is
+    ///  maintained by the infrastructure. Changes to the content might not
+    ///  always be associated with version changes to the resource.
     FhirMeta? meta,
 
-    /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.
+    /// [implicitRules] A reference to a set of rules that were followed when
+    ///  the resource was constructed, and which must be understood when
+    ///  processing the content. Often, this is a reference to an
+    ///  implementation guide that defines the special rules along with other
+    ///  profiles etc.
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
@@ -1541,52 +2391,103 @@ class DeviceMetric with Resource, _$DeviceMetric {
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
 
-    /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
+    /// [text] A human-readable narrative that contains a summary of the
+    ///  resource and can be used to represent the content of the resource to a
+    ///  human. The narrative need not encode all the structured data, but is
+    ///  required to contain sufficient detail to make it "clinically safe" for
+    ///  a human to just read the narrative. Resource definitions may define
+    ///  what content should be represented in the narrative to ensure clinical
+    ///  safety.
     Narrative? text,
 
-    /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
+    /// [contained] These resources do not have an independent existence apart
+    ///  from the resource that contains them - they cannot be identified
+    ///  independently, nor can they have their own independent transaction
+    ///  scope. This is allowed to be a Parameters resource if and only if it
+    ///  is referenced by a resource that provides context/meaning.
     List<Resource>? contained,
 
-    /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+    /// [extension_] ("extension") May be used to represent additional
+    ///  information that is not part of the basic definition of the resource.
+    ///  To make the use of extensions safe and managable, there is a strict
+    ///  set of governance applied to the definition and use of extensions.
+    ///  Though any implementer can define an extension, there is a set of
+    ///  requirements that SHALL be met as part of the definition of the
+    ///  extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
-    /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+    /// [modifierExtension] May be used to represent additional information
+    ///  that is not part of the basic definition of the resource and that
+    ///  modifies the understanding of the element that contains it and/or the
+    ///  understanding of the containing element's descendants. Usually
+    ///  modifier elements provide negation or qualification. To make the use
+    ///  of extensions safe and managable, there is a strict set of governance
+    ///  applied to the definition and use of extensions. Though any
+    ///  implementer is allowed to define an extension, there is a set of
+    ///  requirements that SHALL be met as part of the definition of the
+    ///  extension. Applications processing a resource are required to check
+    ///  for modifier extensions.Modifier extensions SHALL NOT change the
+    ///  meaning of any elements on Resource or DomainResource (including
+    ///  cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
-    /// [identifier] Instance identifiers assigned to a device, by the device or gateway software, manufacturers, other organizations or owners. For example, handle ID.
+    /// [identifier] Instance identifiers assigned to a device, by the device
+    ///  or gateway software, manufacturers, other organizations or owners. For
+    ///  example, handle ID.
     List<Identifier>? identifier,
 
-    /// [type] Describes the type of the metric. For example: Heart Rate, PEEP Setting, etc.
+    /// [type] Describes the type of the metric. For example: Heart Rate, PEEP
+    ///  Setting, etc.
     required CodeableConcept type,
 
-    /// [unit] Describes the unit that an observed value determined for this metric will have. For example: Percent, Seconds, etc.
+    /// [unit] Describes the unit that an observed value determined for this
+    ///  metric will have. For example: Percent, Seconds, etc.
     CodeableConcept? unit,
 
-    /// [device] Describes the link to the Device.  This is also known as a channel device.
+    /// [device] Describes the link to the Device.  This is also known as a
+    ///  channel device.
     required Reference device,
 
-    /// [operationalStatus] Indicates current operational state of the device. For example: On, Off, Standby, etc.
+    /// [operationalStatus] Indicates current operational state of the device.
+    ///  For example: On, Off, Standby, etc.
     FhirCode? operationalStatus,
 
-    /// [operationalStatusElement] ("_operationalStatus") Extensions for operationalStatus
+    /// [operationalStatusElement] ("_operationalStatus") Extensions for
+    ///  operationalStatus
     @JsonKey(name: '_operationalStatus') Element? operationalStatusElement,
 
-    /// [color] The preferred color associated with the metric (e.g., display color). This is often used to aid clinicians to track and identify parameter types by color. In practice, consider a Patient Monitor that has ECG/HR and Pleth; the metrics are displayed in different characteristic colors, such as HR in blue, BP in green, and PR and SpO2 in magenta.
+    /// [color] The preferred color associated with the metric (e.g., display
+    ///  color). This is often used to aid clinicians to track and identify
+    ///  parameter types by color. In practice, consider a Patient Monitor that
+    ///  has ECG/HR and Pleth; the metrics are displayed in different
+    ///  characteristic colors, such as HR in blue, BP in green, and PR and
+    ///  SpO2 in magenta.
     FhirCode? color,
 
     /// [colorElement] ("_color") Extensions for color
     @JsonKey(name: '_color') Element? colorElement,
 
-    /// [category] Indicates the category of the observation generation process. A DeviceMetric can be for example a setting, measurement, or calculation.
+    /// [category] Indicates the category of the observation generation
+    ///  process. A DeviceMetric can be for example a setting, measurement, or
+    ///  calculation.
     FhirCode? category,
 
     /// [categoryElement] ("_category") Extensions for category
     @JsonKey(name: '_category') Element? categoryElement,
 
-    /// [measurementFrequency] The frequency at which the metric is taken or recorded. Devices measure metrics at a wide range of frequencies; for example, an ECG might sample measurements in the millisecond range, while an NIBP might trigger only once an hour. Less often, the measurementFrequency may be based on a unit other than time, such as distance (e.g. for a measuring wheel). The update period may be different than the measurement frequency, if the device does not update the published observed value with the same frequency as it was measured.
+    /// [measurementFrequency] The frequency at which the metric is taken or
+    ///  recorded. Devices measure metrics at a wide range of frequencies; for
+    ///  example, an ECG might sample measurements in the millisecond range,
+    ///  while an NIBP might trigger only once an hour. Less often, the
+    ///  measurementFrequency may be based on a unit other than time, such as
+    ///  distance (e.g. for a measuring wheel). The update period may be
+    ///  different than the measurement frequency, if the device does not
+    ///  update the published observed value with the same frequency as it was
+    ///  measured.
     Quantity? measurementFrequency,
 
-    /// [calibration] Describes the calibrations that have been performed or that are required to be performed.
+    /// [calibration] Describes the calibrations that have been performed or
+    ///  that are required to be performed.
     List<DeviceMetricCalibration>? calibration,
   }) = _DeviceMetric;
 
@@ -1622,19 +2523,40 @@ class DeviceMetric with Resource, _$DeviceMetric {
   }
 }
 
-/// [DeviceMetricCalibration] Describes a measurement, calculation or setting capability of a device.
+/// [DeviceMetricCalibration] Describes a measurement, calculation or setting
+///  capability of a device.
 @freezed
 class DeviceMetricCalibration with _$DeviceMetricCalibration {
-  /// [DeviceMetricCalibration] Describes a measurement, calculation or setting capability of a device.
+  /// [DeviceMetricCalibration] Describes a measurement, calculation or setting
+  ///  capability of a device.
   DeviceMetricCalibration._();
 
-  /// [DeviceMetricCalibration] Describes a measurement, calculation or setting capability of a device.
+  /// [DeviceMetricCalibration] Describes a measurement, calculation or setting
+  ///  capability of a device.
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and managable, there is a strict set of
+  ///  governance applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be
+  ///  met as part of the definition of the extension. Applications processing
+  ///  a resource are required to check for modifier extensions.Modifier
+  ///  extensions SHALL NOT change the meaning of any elements on Resource or
+  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  itself).
   ///
   /// [type] Describes the type of the calibration method.
   ///
@@ -1649,13 +2571,32 @@ class DeviceMetricCalibration with _$DeviceMetricCalibration {
   /// [timeElement] ("_time") Extensions for time
   ///
   factory DeviceMetricCalibration({
-    /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+    /// [id] Unique id for the element within a resource (for internal
+    ///  references). This may be any string value that does not contain spaces.
     String? id,
 
-    /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+    /// [extension_] ("extension") May be used to represent additional
+    ///  information that is not part of the basic definition of the element.
+    ///  To make the use of extensions safe and managable, there is a strict
+    ///  set of governance applied to the definition and use of extensions.
+    ///  Though any implementer can define an extension, there is a set of
+    ///  requirements that SHALL be met as part of the definition of the
+    ///  extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
-    /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+    /// [modifierExtension] May be used to represent additional information
+    ///  that is not part of the basic definition of the element and that
+    ///  modifies the understanding of the element in which it is contained
+    ///  and/or the understanding of the containing element's descendants.
+    ///  Usually modifier elements provide negation or qualification. To make
+    ///  the use of extensions safe and managable, there is a strict set of
+    ///  governance applied to the definition and use of extensions. Though any
+    ///  implementer can define an extension, there is a set of requirements
+    ///  that SHALL be met as part of the definition of the extension.
+    ///  Applications processing a resource are required to check for modifier
+    ///  extensions.Modifier extensions SHALL NOT change the meaning of any
+    ///  elements on Resource or DomainResource (including cannot change the
+    ///  meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
     /// [type] Describes the type of the calibration method.
@@ -1719,11 +2660,17 @@ class NutritionProduct with Resource, _$NutritionProduct {
   ///
   /// [resourceType] This is a NutritionProduct resource
   ///
-  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.
+  /// [id] The logical id of the resource, as used in the URL for the resource.
+  ///  Once assigned, this value never changes.
   ///
-  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
+  /// [meta] The metadata about the resource. This is content that is
+  ///  maintained by the infrastructure. Changes to the content might not
+  ///  always be associated with version changes to the resource.
   ///
-  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.
+  /// [implicitRules] A reference to a set of rules that were followed when the
+  ///  resource was constructed, and which must be understood when processing
+  ///  the content. Often, this is a reference to an implementation guide that
+  ///  defines the special rules along with other profiles etc.
   ///
   /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
   ///
@@ -1731,33 +2678,67 @@ class NutritionProduct with Resource, _$NutritionProduct {
   ///
   /// [languageElement] ("_language") Extensions for language
   ///
-  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
+  /// [text] A human-readable narrative that contains a summary of the resource
+  ///  and can be used to represent the content of the resource to a human. The
+  ///  narrative need not encode all the structured data, but is required to
+  ///  contain sufficient detail to make it "clinically safe" for a human to
+  ///  just read the narrative. Resource definitions may define what content
+  ///  should be represented in the narrative to ensure clinical safety.
   ///
-  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
+  /// [contained] These resources do not have an independent existence apart
+  ///  from the resource that contains them - they cannot be identified
+  ///  independently, nor can they have their own independent transaction
+  ///  scope. This is allowed to be a Parameters resource if and only if it is
+  ///  referenced by a resource that provides context/meaning.
   ///
-  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the resource. To
+  ///  make the use of extensions safe and managable, there is a strict set of
+  ///  governance applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the resource and that modifies
+  ///  the understanding of the element that contains it and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  is allowed to define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension. Applications
+  ///  processing a resource are required to check for modifier
+  ///  extensions.Modifier extensions SHALL NOT change the meaning of any
+  ///  elements on Resource or DomainResource (including cannot change the
+  ///  meaning of modifierExtension itself).
   ///
-  /// [code] The code assigned to the product, for example a USDA NDB number, a USDA FDC ID number, or a Langual code.
+  /// [code] The code assigned to the product, for example a USDA NDB number, a
+  ///  USDA FDC ID number, or a Langual code.
   ///
   /// [status] The current state of the product.
   ///
   /// [statusElement] ("_status") Extensions for status
   ///
-  /// [category] Nutrition products can have different classifications - according to its nutritional properties, preparation methods, etc.
+  /// [category] Nutrition products can have different classifications -
+  ///  according to its nutritional properties, preparation methods, etc.
   ///
-  /// [manufacturer] The organisation (manufacturer, representative or legal authorization holder) that is responsible for the device.
+  /// [manufacturer] The organisation (manufacturer, representative or legal
+  ///  authorization holder) that is responsible for the device.
   ///
-  /// [nutrient] The product's nutritional information expressed by the nutrients.
+  /// [nutrient] The product's nutritional information expressed by the
+  ///  nutrients.
   ///
   /// [ingredient] Ingredients contained in this product.
   ///
-  /// [knownAllergen] Allergens that are known or suspected to be a part of this nutrition product.
+  /// [knownAllergen] Allergens that are known or suspected to be a part of
+  ///  this nutrition product.
   ///
-  /// [characteristic] Specifies descriptive properties of the nutrition product.
+  /// [characteristic] Specifies descriptive properties of the nutrition
+  ///  product.
   ///
-  /// [instance] Conveys instance-level information about this product item. One or several physical, countable instances or occurrences of the product.
+  /// [instance] Conveys instance-level information about this product item.
+  ///  One or several physical, countable instances or occurrences of the
+  ///  product.
   ///
   /// [note] Comments made about the product.
   ///
@@ -1767,13 +2748,20 @@ class NutritionProduct with Resource, _$NutritionProduct {
     @JsonKey(unknownEnumValue: R5ResourceType.NutritionProduct)
         R5ResourceType resourceType,
 
-    /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.
+    /// [id] The logical id of the resource, as used in the URL for the
+    ///  resource. Once assigned, this value never changes.
     FhirId? id,
 
-    /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
+    /// [meta] The metadata about the resource. This is content that is
+    ///  maintained by the infrastructure. Changes to the content might not
+    ///  always be associated with version changes to the resource.
     FhirMeta? meta,
 
-    /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.
+    /// [implicitRules] A reference to a set of rules that were followed when
+    ///  the resource was constructed, and which must be understood when
+    ///  processing the content. Often, this is a reference to an
+    ///  implementation guide that defines the special rules along with other
+    ///  profiles etc.
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
@@ -1785,19 +2773,48 @@ class NutritionProduct with Resource, _$NutritionProduct {
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
 
-    /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
+    /// [text] A human-readable narrative that contains a summary of the
+    ///  resource and can be used to represent the content of the resource to a
+    ///  human. The narrative need not encode all the structured data, but is
+    ///  required to contain sufficient detail to make it "clinically safe" for
+    ///  a human to just read the narrative. Resource definitions may define
+    ///  what content should be represented in the narrative to ensure clinical
+    ///  safety.
     Narrative? text,
 
-    /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
+    /// [contained] These resources do not have an independent existence apart
+    ///  from the resource that contains them - they cannot be identified
+    ///  independently, nor can they have their own independent transaction
+    ///  scope. This is allowed to be a Parameters resource if and only if it
+    ///  is referenced by a resource that provides context/meaning.
     List<Resource>? contained,
 
-    /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+    /// [extension_] ("extension") May be used to represent additional
+    ///  information that is not part of the basic definition of the resource.
+    ///  To make the use of extensions safe and managable, there is a strict
+    ///  set of governance applied to the definition and use of extensions.
+    ///  Though any implementer can define an extension, there is a set of
+    ///  requirements that SHALL be met as part of the definition of the
+    ///  extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
-    /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+    /// [modifierExtension] May be used to represent additional information
+    ///  that is not part of the basic definition of the resource and that
+    ///  modifies the understanding of the element that contains it and/or the
+    ///  understanding of the containing element's descendants. Usually
+    ///  modifier elements provide negation or qualification. To make the use
+    ///  of extensions safe and managable, there is a strict set of governance
+    ///  applied to the definition and use of extensions. Though any
+    ///  implementer is allowed to define an extension, there is a set of
+    ///  requirements that SHALL be met as part of the definition of the
+    ///  extension. Applications processing a resource are required to check
+    ///  for modifier extensions.Modifier extensions SHALL NOT change the
+    ///  meaning of any elements on Resource or DomainResource (including
+    ///  cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
-    /// [code] The code assigned to the product, for example a USDA NDB number, a USDA FDC ID number, or a Langual code.
+    /// [code] The code assigned to the product, for example a USDA NDB number,
+    ///  a USDA FDC ID number, or a Langual code.
     CodeableConcept? code,
 
     /// [status] The current state of the product.
@@ -1806,25 +2823,32 @@ class NutritionProduct with Resource, _$NutritionProduct {
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
 
-    /// [category] Nutrition products can have different classifications - according to its nutritional properties, preparation methods, etc.
+    /// [category] Nutrition products can have different classifications -
+    ///  according to its nutritional properties, preparation methods, etc.
     List<CodeableConcept>? category,
 
-    /// [manufacturer] The organisation (manufacturer, representative or legal authorization holder) that is responsible for the device.
+    /// [manufacturer] The organisation (manufacturer, representative or legal
+    ///  authorization holder) that is responsible for the device.
     List<Reference>? manufacturer,
 
-    /// [nutrient] The product's nutritional information expressed by the nutrients.
+    /// [nutrient] The product's nutritional information expressed by the
+    ///  nutrients.
     List<NutritionProductNutrient>? nutrient,
 
     /// [ingredient] Ingredients contained in this product.
     List<NutritionProductIngredient>? ingredient,
 
-    /// [knownAllergen] Allergens that are known or suspected to be a part of this nutrition product.
+    /// [knownAllergen] Allergens that are known or suspected to be a part of
+    ///  this nutrition product.
     List<CodeableReference>? knownAllergen,
 
-    /// [characteristic] Specifies descriptive properties of the nutrition product.
+    /// [characteristic] Specifies descriptive properties of the nutrition
+    ///  product.
     List<NutritionProductCharacteristic>? characteristic,
 
-    /// [instance] Conveys instance-level information about this product item. One or several physical, countable instances or occurrences of the product.
+    /// [instance] Conveys instance-level information about this product item.
+    ///  One or several physical, countable instances or occurrences of the
+    ///  product.
     List<NutritionProductInstance>? instance,
 
     /// [note] Comments made about the product.
@@ -1863,38 +2887,80 @@ class NutritionProduct with Resource, _$NutritionProduct {
   }
 }
 
-/// [NutritionProductNutrient] A food or supplement that is consumed by patients.
+/// [NutritionProductNutrient] A food or supplement that is consumed by
+///  patients.
 @freezed
 class NutritionProductNutrient with _$NutritionProductNutrient {
-  /// [NutritionProductNutrient] A food or supplement that is consumed by patients.
+  /// [NutritionProductNutrient] A food or supplement that is consumed by
+  ///  patients.
   NutritionProductNutrient._();
 
-  /// [NutritionProductNutrient] A food or supplement that is consumed by patients.
+  /// [NutritionProductNutrient] A food or supplement that is consumed by
+  ///  patients.
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and managable, there is a strict set of
+  ///  governance applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be
+  ///  met as part of the definition of the extension. Applications processing
+  ///  a resource are required to check for modifier extensions.Modifier
+  ///  extensions SHALL NOT change the meaning of any elements on Resource or
+  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  itself).
   ///
   /// [item] The (relevant) nutrients in the product.
   ///
-  /// [amount] The amount of nutrient expressed in one or more units: X per pack / per serving / per dose.
+  /// [amount] The amount of nutrient expressed in one or more units: X per
+  ///  pack / per serving / per dose.
   ///
   factory NutritionProductNutrient({
-    /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+    /// [id] Unique id for the element within a resource (for internal
+    ///  references). This may be any string value that does not contain spaces.
     String? id,
 
-    /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+    /// [extension_] ("extension") May be used to represent additional
+    ///  information that is not part of the basic definition of the element.
+    ///  To make the use of extensions safe and managable, there is a strict
+    ///  set of governance applied to the definition and use of extensions.
+    ///  Though any implementer can define an extension, there is a set of
+    ///  requirements that SHALL be met as part of the definition of the
+    ///  extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
-    /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+    /// [modifierExtension] May be used to represent additional information
+    ///  that is not part of the basic definition of the element and that
+    ///  modifies the understanding of the element in which it is contained
+    ///  and/or the understanding of the containing element's descendants.
+    ///  Usually modifier elements provide negation or qualification. To make
+    ///  the use of extensions safe and managable, there is a strict set of
+    ///  governance applied to the definition and use of extensions. Though any
+    ///  implementer can define an extension, there is a set of requirements
+    ///  that SHALL be met as part of the definition of the extension.
+    ///  Applications processing a resource are required to check for modifier
+    ///  extensions.Modifier extensions SHALL NOT change the meaning of any
+    ///  elements on Resource or DomainResource (including cannot change the
+    ///  meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
     /// [item] The (relevant) nutrients in the product.
     CodeableReference? item,
 
-    /// [amount] The amount of nutrient expressed in one or more units: X per pack / per serving / per dose.
+    /// [amount] The amount of nutrient expressed in one or more units: X per
+    ///  pack / per serving / per dose.
     List<Ratio>? amount,
   }) = _NutritionProductNutrient;
 
@@ -1930,32 +2996,72 @@ class NutritionProductNutrient with _$NutritionProductNutrient {
   }
 }
 
-/// [NutritionProductIngredient] A food or supplement that is consumed by patients.
+/// [NutritionProductIngredient] A food or supplement that is consumed by
+///  patients.
 @freezed
 class NutritionProductIngredient with _$NutritionProductIngredient {
-  /// [NutritionProductIngredient] A food or supplement that is consumed by patients.
+  /// [NutritionProductIngredient] A food or supplement that is consumed by
+  ///  patients.
   NutritionProductIngredient._();
 
-  /// [NutritionProductIngredient] A food or supplement that is consumed by patients.
+  /// [NutritionProductIngredient] A food or supplement that is consumed by
+  ///  patients.
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and managable, there is a strict set of
+  ///  governance applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be
+  ///  met as part of the definition of the extension. Applications processing
+  ///  a resource are required to check for modifier extensions.Modifier
+  ///  extensions SHALL NOT change the meaning of any elements on Resource or
+  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  itself).
   ///
   /// [item] The ingredient contained in the product.
   ///
   /// [amount] The amount of ingredient that is in the product.
   ///
   factory NutritionProductIngredient({
-    /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+    /// [id] Unique id for the element within a resource (for internal
+    ///  references). This may be any string value that does not contain spaces.
     String? id,
 
-    /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+    /// [extension_] ("extension") May be used to represent additional
+    ///  information that is not part of the basic definition of the element.
+    ///  To make the use of extensions safe and managable, there is a strict
+    ///  set of governance applied to the definition and use of extensions.
+    ///  Though any implementer can define an extension, there is a set of
+    ///  requirements that SHALL be met as part of the definition of the
+    ///  extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
-    /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+    /// [modifierExtension] May be used to represent additional information
+    ///  that is not part of the basic definition of the element and that
+    ///  modifies the understanding of the element in which it is contained
+    ///  and/or the understanding of the containing element's descendants.
+    ///  Usually modifier elements provide negation or qualification. To make
+    ///  the use of extensions safe and managable, there is a strict set of
+    ///  governance applied to the definition and use of extensions. Though any
+    ///  implementer can define an extension, there is a set of requirements
+    ///  that SHALL be met as part of the definition of the extension.
+    ///  Applications processing a resource are required to check for modifier
+    ///  extensions.Modifier extensions SHALL NOT change the meaning of any
+    ///  elements on Resource or DomainResource (including cannot change the
+    ///  meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
     /// [item] The ingredient contained in the product.
@@ -1997,23 +3103,46 @@ class NutritionProductIngredient with _$NutritionProductIngredient {
   }
 }
 
-/// [NutritionProductCharacteristic] A food or supplement that is consumed by patients.
+/// [NutritionProductCharacteristic] A food or supplement that is consumed by
+///  patients.
 @freezed
 class NutritionProductCharacteristic with _$NutritionProductCharacteristic {
-  /// [NutritionProductCharacteristic] A food or supplement that is consumed by patients.
+  /// [NutritionProductCharacteristic] A food or supplement that is consumed by
+  ///  patients.
   NutritionProductCharacteristic._();
 
-  /// [NutritionProductCharacteristic] A food or supplement that is consumed by patients.
+  /// [NutritionProductCharacteristic] A food or supplement that is consumed by
+  ///  patients.
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and managable, there is a strict set of
+  ///  governance applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be
+  ///  met as part of the definition of the extension. Applications processing
+  ///  a resource are required to check for modifier extensions.Modifier
+  ///  extensions SHALL NOT change the meaning of any elements on Resource or
+  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  itself).
   ///
-  /// [type] A code specifying which characteristic of the product is being described (for example, colour, shape).
+  /// [type] A code specifying which characteristic of the product is being
+  ///  described (for example, colour, shape).
   ///
-  /// [valueCodeableConcept] The actual characteristic value corresponding to the type.
+  /// [valueCodeableConcept] The actual characteristic value corresponding to
+  ///  the type.
   ///
   /// [valueString] The actual characteristic value corresponding to the type.
   ///
@@ -2021,30 +3150,54 @@ class NutritionProductCharacteristic with _$NutritionProductCharacteristic {
   ///
   /// [valueQuantity] The actual characteristic value corresponding to the type.
   ///
-  /// [valueBase64Binary] The actual characteristic value corresponding to the type.
+  /// [valueBase64Binary] The actual characteristic value corresponding to the
+  ///  type.
   ///
-  /// [valueBase64BinaryElement] ("_valueBase64Binary") Extensions for valueBase64Binary
+  /// [valueBase64BinaryElement] ("_valueBase64Binary") Extensions for
+  ///  valueBase64Binary
   ///
-  /// [valueAttachment] The actual characteristic value corresponding to the type.
+  /// [valueAttachment] The actual characteristic value corresponding to the
+  ///  type.
   ///
   /// [valueBoolean] The actual characteristic value corresponding to the type.
   ///
   /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
   ///
   factory NutritionProductCharacteristic({
-    /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+    /// [id] Unique id for the element within a resource (for internal
+    ///  references). This may be any string value that does not contain spaces.
     String? id,
 
-    /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+    /// [extension_] ("extension") May be used to represent additional
+    ///  information that is not part of the basic definition of the element.
+    ///  To make the use of extensions safe and managable, there is a strict
+    ///  set of governance applied to the definition and use of extensions.
+    ///  Though any implementer can define an extension, there is a set of
+    ///  requirements that SHALL be met as part of the definition of the
+    ///  extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
-    /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+    /// [modifierExtension] May be used to represent additional information
+    ///  that is not part of the basic definition of the element and that
+    ///  modifies the understanding of the element in which it is contained
+    ///  and/or the understanding of the containing element's descendants.
+    ///  Usually modifier elements provide negation or qualification. To make
+    ///  the use of extensions safe and managable, there is a strict set of
+    ///  governance applied to the definition and use of extensions. Though any
+    ///  implementer can define an extension, there is a set of requirements
+    ///  that SHALL be met as part of the definition of the extension.
+    ///  Applications processing a resource are required to check for modifier
+    ///  extensions.Modifier extensions SHALL NOT change the meaning of any
+    ///  elements on Resource or DomainResource (including cannot change the
+    ///  meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
-    /// [type] A code specifying which characteristic of the product is being described (for example, colour, shape).
+    /// [type] A code specifying which characteristic of the product is being
+    ///  described (for example, colour, shape).
     required CodeableConcept type,
 
-    /// [valueCodeableConcept] The actual characteristic value corresponding to the type.
+    /// [valueCodeableConcept] The actual characteristic value corresponding to
+    ///  the type.
     CodeableConcept? valueCodeableConcept,
 
     /// [valueString] The actual characteristic value corresponding to the type.
@@ -2053,19 +3206,24 @@ class NutritionProductCharacteristic with _$NutritionProductCharacteristic {
     /// [valueStringElement] ("_valueString") Extensions for valueString
     @JsonKey(name: '_valueString') Element? valueStringElement,
 
-    /// [valueQuantity] The actual characteristic value corresponding to the type.
+    /// [valueQuantity] The actual characteristic value corresponding to the
+    ///  type.
     Quantity? valueQuantity,
 
-    /// [valueBase64Binary] The actual characteristic value corresponding to the type.
+    /// [valueBase64Binary] The actual characteristic value corresponding to
+    ///  the type.
     FhirBase64Binary? valueBase64Binary,
 
-    /// [valueBase64BinaryElement] ("_valueBase64Binary") Extensions for valueBase64Binary
+    /// [valueBase64BinaryElement] ("_valueBase64Binary") Extensions for
+    ///  valueBase64Binary
     @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
 
-    /// [valueAttachment] The actual characteristic value corresponding to the type.
+    /// [valueAttachment] The actual characteristic value corresponding to the
+    ///  type.
     Attachment? valueAttachment,
 
-    /// [valueBoolean] The actual characteristic value corresponding to the type.
+    /// [valueBoolean] The actual characteristic value corresponding to the
+    ///  type.
     FhirBoolean? valueBoolean,
 
     /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
@@ -2092,7 +3250,8 @@ class NutritionProductCharacteristic with _$NutritionProductCharacteristic {
   factory NutritionProductCharacteristic.fromJson(Map<String, dynamic> json) =>
       _$NutritionProductCharacteristicFromJson(json);
 
-  /// Acts like a constructor, returns a [NutritionProductCharacteristic], accepts a
+  /// Acts like a constructor, returns a [NutritionProductCharacteristic],
+  ///  accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory NutritionProductCharacteristic.fromJsonString(String source) {
     final json = jsonDecode(source);
@@ -2105,23 +3264,46 @@ class NutritionProductCharacteristic with _$NutritionProductCharacteristic {
   }
 }
 
-/// [NutritionProductInstance] A food or supplement that is consumed by patients.
+/// [NutritionProductInstance] A food or supplement that is consumed by
+///  patients.
 @freezed
 class NutritionProductInstance with _$NutritionProductInstance {
-  /// [NutritionProductInstance] A food or supplement that is consumed by patients.
+  /// [NutritionProductInstance] A food or supplement that is consumed by
+  ///  patients.
   NutritionProductInstance._();
 
-  /// [NutritionProductInstance] A food or supplement that is consumed by patients.
+  /// [NutritionProductInstance] A food or supplement that is consumed by
+  ///  patients.
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and managable, there is a strict set of
+  ///  governance applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be
+  ///  met as part of the definition of the extension. Applications processing
+  ///  a resource are required to check for modifier extensions.Modifier
+  ///  extensions SHALL NOT change the meaning of any elements on Resource or
+  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  itself).
   ///
-  /// [quantity] The amount of items or instances that the resource considers, for instance when referring to 2 identical units together.
+  /// [quantity] The amount of items or instances that the resource considers,
+  ///  for instance when referring to 2 identical units together.
   ///
-  /// [identifier] The identifier for the physical instance, typically a serial number or manufacturer number.
+  /// [identifier] The identifier for the physical instance, typically a serial
+  ///  number or manufacturer number.
   ///
   /// [name] The name for the specific product.
   ///
@@ -2131,30 +3313,55 @@ class NutritionProductInstance with _$NutritionProductInstance {
   ///
   /// [lotNumberElement] ("_lotNumber") Extensions for lotNumber
   ///
-  /// [expiry] The time after which the product is no longer expected to be in proper condition, or its use is not advised or not allowed.
+  /// [expiry] The time after which the product is no longer expected to be in
+  ///  proper condition, or its use is not advised or not allowed.
   ///
   /// [expiryElement] ("_expiry") Extensions for expiry
   ///
-  /// [useBy] The time after which the product is no longer expected to be in proper condition, or its use is not advised or not allowed.
+  /// [useBy] The time after which the product is no longer expected to be in
+  ///  proper condition, or its use is not advised or not allowed.
   ///
   /// [useByElement] ("_useBy") Extensions for useBy
   ///
-  /// [biologicalSourceEvent] An identifier that supports traceability to the event during which material in this product from one or more biological entities was obtained or pooled.
+  /// [biologicalSourceEvent] An identifier that supports traceability to the
+  ///  event during which material in this product from one or more biological
+  ///  entities was obtained or pooled.
   ///
   factory NutritionProductInstance({
-    /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+    /// [id] Unique id for the element within a resource (for internal
+    ///  references). This may be any string value that does not contain spaces.
     String? id,
 
-    /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+    /// [extension_] ("extension") May be used to represent additional
+    ///  information that is not part of the basic definition of the element.
+    ///  To make the use of extensions safe and managable, there is a strict
+    ///  set of governance applied to the definition and use of extensions.
+    ///  Though any implementer can define an extension, there is a set of
+    ///  requirements that SHALL be met as part of the definition of the
+    ///  extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
-    /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+    /// [modifierExtension] May be used to represent additional information
+    ///  that is not part of the basic definition of the element and that
+    ///  modifies the understanding of the element in which it is contained
+    ///  and/or the understanding of the containing element's descendants.
+    ///  Usually modifier elements provide negation or qualification. To make
+    ///  the use of extensions safe and managable, there is a strict set of
+    ///  governance applied to the definition and use of extensions. Though any
+    ///  implementer can define an extension, there is a set of requirements
+    ///  that SHALL be met as part of the definition of the extension.
+    ///  Applications processing a resource are required to check for modifier
+    ///  extensions.Modifier extensions SHALL NOT change the meaning of any
+    ///  elements on Resource or DomainResource (including cannot change the
+    ///  meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
-    /// [quantity] The amount of items or instances that the resource considers, for instance when referring to 2 identical units together.
+    /// [quantity] The amount of items or instances that the resource
+    ///  considers, for instance when referring to 2 identical units together.
     Quantity? quantity,
 
-    /// [identifier] The identifier for the physical instance, typically a serial number or manufacturer number.
+    /// [identifier] The identifier for the physical instance, typically a
+    ///  serial number or manufacturer number.
     List<Identifier>? identifier,
 
     /// [name] The name for the specific product.
@@ -2169,19 +3376,23 @@ class NutritionProductInstance with _$NutritionProductInstance {
     /// [lotNumberElement] ("_lotNumber") Extensions for lotNumber
     @JsonKey(name: '_lotNumber') Element? lotNumberElement,
 
-    /// [expiry] The time after which the product is no longer expected to be in proper condition, or its use is not advised or not allowed.
+    /// [expiry] The time after which the product is no longer expected to be
+    ///  in proper condition, or its use is not advised or not allowed.
     FhirDateTime? expiry,
 
     /// [expiryElement] ("_expiry") Extensions for expiry
     @JsonKey(name: '_expiry') Element? expiryElement,
 
-    /// [useBy] The time after which the product is no longer expected to be in proper condition, or its use is not advised or not allowed.
+    /// [useBy] The time after which the product is no longer expected to be in
+    ///  proper condition, or its use is not advised or not allowed.
     FhirDateTime? useBy,
 
     /// [useByElement] ("_useBy") Extensions for useBy
     @JsonKey(name: '_useBy') Element? useByElement,
 
-    /// [biologicalSourceEvent] An identifier that supports traceability to the event during which material in this product from one or more biological entities was obtained or pooled.
+    /// [biologicalSourceEvent] An identifier that supports traceability to the
+    ///  event during which material in this product from one or more
+    ///  biological entities was obtained or pooled.
     Identifier? biologicalSourceEvent,
   }) = _NutritionProductInstance;
 
@@ -2227,11 +3438,17 @@ class Substance with Resource, _$Substance {
   ///
   /// [resourceType] This is a Substance resource
   ///
-  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.
+  /// [id] The logical id of the resource, as used in the URL for the resource.
+  ///  Once assigned, this value never changes.
   ///
-  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
+  /// [meta] The metadata about the resource. This is content that is
+  ///  maintained by the infrastructure. Changes to the content might not
+  ///  always be associated with version changes to the resource.
   ///
-  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.
+  /// [implicitRules] A reference to a set of rules that were followed when the
+  ///  resource was constructed, and which must be understood when processing
+  ///  the content. Often, this is a reference to an implementation guide that
+  ///  defines the special rules along with other profiles etc.
   ///
   /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
   ///
@@ -2239,17 +3456,46 @@ class Substance with Resource, _$Substance {
   ///
   /// [languageElement] ("_language") Extensions for language
   ///
-  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
+  /// [text] A human-readable narrative that contains a summary of the resource
+  ///  and can be used to represent the content of the resource to a human. The
+  ///  narrative need not encode all the structured data, but is required to
+  ///  contain sufficient detail to make it "clinically safe" for a human to
+  ///  just read the narrative. Resource definitions may define what content
+  ///  should be represented in the narrative to ensure clinical safety.
   ///
-  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
+  /// [contained] These resources do not have an independent existence apart
+  ///  from the resource that contains them - they cannot be identified
+  ///  independently, nor can they have their own independent transaction
+  ///  scope. This is allowed to be a Parameters resource if and only if it is
+  ///  referenced by a resource that provides context/meaning.
   ///
-  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the resource. To
+  ///  make the use of extensions safe and managable, there is a strict set of
+  ///  governance applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the resource and that modifies
+  ///  the understanding of the element that contains it and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  is allowed to define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension. Applications
+  ///  processing a resource are required to check for modifier
+  ///  extensions.Modifier extensions SHALL NOT change the meaning of any
+  ///  elements on Resource or DomainResource (including cannot change the
+  ///  meaning of modifierExtension itself).
   ///
-  /// [identifier] Unique identifier for the substance. For an instance, an identifier associated with the package/container (usually a label affixed directly).
+  /// [identifier] Unique identifier for the substance. For an instance, an
+  ///  identifier associated with the package/container (usually a label
+  ///  affixed directly).
   ///
-  /// [instance] A boolean to indicate if this an instance of a substance or a kind of one (a definition).
+  /// [instance] A boolean to indicate if this an instance of a substance or a
+  ///  kind of one (a definition).
   ///
   /// [instanceElement] ("_instance") Extensions for instance
   ///
@@ -2257,15 +3503,18 @@ class Substance with Resource, _$Substance {
   ///
   /// [statusElement] ("_status") Extensions for status
   ///
-  /// [category] A code that classifies the general type of substance.  This is used  for searching, sorting and display purposes.
+  /// [category] A code that classifies the general type of substance.  This is
+  ///  used  for searching, sorting and display purposes.
   ///
   /// [code] A code (or set of codes) that identify this substance.
   ///
-  /// [description] A description of the substance - its appearance, handling requirements, and other usage notes.
+  /// [description] A description of the substance - its appearance, handling
+  ///  requirements, and other usage notes.
   ///
   /// [descriptionElement] ("_description") Extensions for description
   ///
-  /// [expiry] When the substance is no longer valid to use. For some substances, a single arbitrary date is used for expiry.
+  /// [expiry] When the substance is no longer valid to use. For some
+  ///  substances, a single arbitrary date is used for expiry.
   ///
   /// [expiryElement] ("_expiry") Extensions for expiry
   ///
@@ -2279,13 +3528,20 @@ class Substance with Resource, _$Substance {
     @JsonKey(unknownEnumValue: R5ResourceType.Substance)
         R5ResourceType resourceType,
 
-    /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.
+    /// [id] The logical id of the resource, as used in the URL for the
+    ///  resource. Once assigned, this value never changes.
     FhirId? id,
 
-    /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
+    /// [meta] The metadata about the resource. This is content that is
+    ///  maintained by the infrastructure. Changes to the content might not
+    ///  always be associated with version changes to the resource.
     FhirMeta? meta,
 
-    /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.
+    /// [implicitRules] A reference to a set of rules that were followed when
+    ///  the resource was constructed, and which must be understood when
+    ///  processing the content. Often, this is a reference to an
+    ///  implementation guide that defines the special rules along with other
+    ///  profiles etc.
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
@@ -2297,22 +3553,53 @@ class Substance with Resource, _$Substance {
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
 
-    /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
+    /// [text] A human-readable narrative that contains a summary of the
+    ///  resource and can be used to represent the content of the resource to a
+    ///  human. The narrative need not encode all the structured data, but is
+    ///  required to contain sufficient detail to make it "clinically safe" for
+    ///  a human to just read the narrative. Resource definitions may define
+    ///  what content should be represented in the narrative to ensure clinical
+    ///  safety.
     Narrative? text,
 
-    /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
+    /// [contained] These resources do not have an independent existence apart
+    ///  from the resource that contains them - they cannot be identified
+    ///  independently, nor can they have their own independent transaction
+    ///  scope. This is allowed to be a Parameters resource if and only if it
+    ///  is referenced by a resource that provides context/meaning.
     List<Resource>? contained,
 
-    /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+    /// [extension_] ("extension") May be used to represent additional
+    ///  information that is not part of the basic definition of the resource.
+    ///  To make the use of extensions safe and managable, there is a strict
+    ///  set of governance applied to the definition and use of extensions.
+    ///  Though any implementer can define an extension, there is a set of
+    ///  requirements that SHALL be met as part of the definition of the
+    ///  extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
-    /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+    /// [modifierExtension] May be used to represent additional information
+    ///  that is not part of the basic definition of the resource and that
+    ///  modifies the understanding of the element that contains it and/or the
+    ///  understanding of the containing element's descendants. Usually
+    ///  modifier elements provide negation or qualification. To make the use
+    ///  of extensions safe and managable, there is a strict set of governance
+    ///  applied to the definition and use of extensions. Though any
+    ///  implementer is allowed to define an extension, there is a set of
+    ///  requirements that SHALL be met as part of the definition of the
+    ///  extension. Applications processing a resource are required to check
+    ///  for modifier extensions.Modifier extensions SHALL NOT change the
+    ///  meaning of any elements on Resource or DomainResource (including
+    ///  cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
-    /// [identifier] Unique identifier for the substance. For an instance, an identifier associated with the package/container (usually a label affixed directly).
+    /// [identifier] Unique identifier for the substance. For an instance, an
+    ///  identifier associated with the package/container (usually a label
+    ///  affixed directly).
     List<Identifier>? identifier,
 
-    /// [instance] A boolean to indicate if this an instance of a substance or a kind of one (a definition).
+    /// [instance] A boolean to indicate if this an instance of a substance or
+    ///  a kind of one (a definition).
     FhirBoolean? instance,
 
     /// [instanceElement] ("_instance") Extensions for instance
@@ -2324,19 +3611,22 @@ class Substance with Resource, _$Substance {
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
 
-    /// [category] A code that classifies the general type of substance.  This is used  for searching, sorting and display purposes.
+    /// [category] A code that classifies the general type of substance.  This
+    ///  is used  for searching, sorting and display purposes.
     List<CodeableConcept>? category,
 
     /// [code] A code (or set of codes) that identify this substance.
     required CodeableReference code,
 
-    /// [description] A description of the substance - its appearance, handling requirements, and other usage notes.
+    /// [description] A description of the substance - its appearance, handling
+    ///  requirements, and other usage notes.
     FhirMarkdown? description,
 
     /// [descriptionElement] ("_description") Extensions for description
     @JsonKey(name: '_description') Element? descriptionElement,
 
-    /// [expiry] When the substance is no longer valid to use. For some substances, a single arbitrary date is used for expiry.
+    /// [expiry] When the substance is no longer valid to use. For some
+    ///  substances, a single arbitrary date is used for expiry.
     FhirDateTime? expiry,
 
     /// [expiryElement] ("_expiry") Extensions for expiry
@@ -2389,35 +3679,78 @@ class SubstanceIngredient with _$SubstanceIngredient {
 
   /// [SubstanceIngredient] A homogeneous material with a definite composition.
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and managable, there is a strict set of
+  ///  governance applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be
+  ///  met as part of the definition of the extension. Applications processing
+  ///  a resource are required to check for modifier extensions.Modifier
+  ///  extensions SHALL NOT change the meaning of any elements on Resource or
+  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  itself).
   ///
-  /// [quantity] The amount of the ingredient in the substance - a concentration ratio.
+  /// [quantity] The amount of the ingredient in the substance - a
+  ///  concentration ratio.
   ///
-  /// [substanceCodeableConcept] Another substance that is a component of this substance.
+  /// [substanceCodeableConcept] Another substance that is a component of this
+  ///  substance.
   ///
-  /// [substanceReference] Another substance that is a component of this substance.
+  /// [substanceReference] Another substance that is a component of this
+  ///  substance.
   ///
   factory SubstanceIngredient({
-    /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+    /// [id] Unique id for the element within a resource (for internal
+    ///  references). This may be any string value that does not contain spaces.
     String? id,
 
-    /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+    /// [extension_] ("extension") May be used to represent additional
+    ///  information that is not part of the basic definition of the element.
+    ///  To make the use of extensions safe and managable, there is a strict
+    ///  set of governance applied to the definition and use of extensions.
+    ///  Though any implementer can define an extension, there is a set of
+    ///  requirements that SHALL be met as part of the definition of the
+    ///  extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
-    /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+    /// [modifierExtension] May be used to represent additional information
+    ///  that is not part of the basic definition of the element and that
+    ///  modifies the understanding of the element in which it is contained
+    ///  and/or the understanding of the containing element's descendants.
+    ///  Usually modifier elements provide negation or qualification. To make
+    ///  the use of extensions safe and managable, there is a strict set of
+    ///  governance applied to the definition and use of extensions. Though any
+    ///  implementer can define an extension, there is a set of requirements
+    ///  that SHALL be met as part of the definition of the extension.
+    ///  Applications processing a resource are required to check for modifier
+    ///  extensions.Modifier extensions SHALL NOT change the meaning of any
+    ///  elements on Resource or DomainResource (including cannot change the
+    ///  meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
-    /// [quantity] The amount of the ingredient in the substance - a concentration ratio.
+    /// [quantity] The amount of the ingredient in the substance - a
+    ///  concentration ratio.
     Ratio? quantity,
 
-    /// [substanceCodeableConcept] Another substance that is a component of this substance.
+    /// [substanceCodeableConcept] Another substance that is a component of
+    ///  this substance.
     CodeableConcept? substanceCodeableConcept,
 
-    /// [substanceReference] Another substance that is a component of this substance.
+    /// [substanceReference] Another substance that is a component of this
+    ///  substance.
     Reference? substanceReference,
   }) = _SubstanceIngredient;
 
