@@ -1,7 +1,6 @@
 import 'dart:convert';
 
 import 'package:fhir/r4.dart';
-import 'package:fhir_validation/structure_definitions/structureDefinitions.dart';
 import 'package:http/http.dart';
 
 import '../structure_definition_maps.dart';

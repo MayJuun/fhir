@@ -8,7 +8,7 @@ environment:
 
 dependencies:
   cupertino_icons: ^1.0.5
-  fhir: ^0.9.5
+  fhir: ^0.9.7
   flutter:
     sdk: flutter
   supabase_flutter: ^1.5.0

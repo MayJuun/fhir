@@ -1,6 +1,6 @@
 name: fhir_uscore
 description: FHIR library for using the USCore specifications, based on the full fhir package.
-version: 0.9.5
+version: 0.9.7
 homepage: https://www.fhirfli.dev/
 repository: https://github.com/MayJuun/fhir/tree/main/fhir_uscore
 
@@ -8,10 +8,10 @@ environment:
   sdk: '>=2.19.0 <3.0.0'
 
 dependencies:
-  fhir: ^0.9.5
+  fhir: ^0.9.7
+  fhir_at_rest: ^0.9.7
   # fhir:
   #   path: ../fhir
-  fhir_at_rest: ^0.9.5
   # fhir_at_rest:
   #   path: ../fhir_at_rest
   freezed_annotation: ^2.2.0

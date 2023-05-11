@@ -1,5 +1,5 @@
 // Package imports:
-import 'package:petitparser/petitparser.dart';
+import 'package:petitparser/petitparser.dart' as pt;
 
 // Project imports:
 import '../petit_fhir_path.dart';
@@ -11,134 +11,142 @@ import '../petit_fhir_path.dart';
  *****************************************************************************/
 
 /// identifies unionFunctions
-final Parser<UnionFunctionParser> unionFunctionLexer =
-    (string('union(') | string('.union(')).map((_) => UnionFunctionParser());
+final pt.Parser<UnionFunctionParser> unionFunctionLexer =
+    (pt.string('union(') | pt.string('.union('))
+        .map((_) => UnionFunctionParser());
 
 /// identifies combines
-final Parser<CombineParser> combineLexer =
-    (string('combine(') | string('.combine(')).map((_) => CombineParser());
+final pt.Parser<CombineParser> combineLexer =
+    (pt.string('combine(') | pt.string('.combine('))
+        .map((_) => CombineParser());
 
 /// identifies toQuantitys
-final Parser<ToQuantityParser> toQuantityLexer =
-    (string('toQuantity(') | string('.toQuantity('))
+final pt.Parser<ToQuantityParser> toQuantityLexer =
+    (pt.string('toQuantity(') | pt.string('.toQuantity('))
         .map((_) => ToQuantityParser());
 
 /// identifies convertsToQuantitys
-final Parser<ConvertsToQuantityParser> convertsToQuantityLexer =
-    (string('convertsToQuantity(') | string('.convertsToQuantity('))
+final pt.Parser<ConvertsToQuantityParser> convertsToQuantityLexer =
+    (pt.string('convertsToQuantity(') | pt.string('.convertsToQuantity('))
         .map((_) => ConvertsToQuantityParser());
 
 /// identifies existss
-final Parser<ExistsParser> existsLexer =
-    (string('exists(') | string('.exists(')).map((_) => ExistsParser());
+final pt.Parser<ExistsParser> existsLexer =
+    (pt.string('exists(') | pt.string('.exists(')).map((_) => ExistsParser());
 
 /// identifies alls
-final Parser<AllParser> allLexer =
-    (string('all(') | string('.all(')).map((_) => AllParser());
+final pt.Parser<AllParser> allLexer =
+    (pt.string('all(') | pt.string('.all(')).map((_) => AllParser());
 
 /// identifies subsetOfs
-final Parser<SubsetOfParser> subsetOfLexer =
-    (string('subsetOf(') | string('.subsetOf(')).map((_) => SubsetOfParser());
+final pt.Parser<SubsetOfParser> subsetOfLexer =
+    (pt.string('subsetOf(') | pt.string('.subsetOf('))
+        .map((_) => SubsetOfParser());
 
 /// identifies supersetOfs
-final Parser<SupersetOfParser> supersetOfLexer =
-    (string('supersetOf(') | string('.supersetOf('))
+final pt.Parser<SupersetOfParser> supersetOfLexer =
+    (pt.string('supersetOf(') | pt.string('.supersetOf('))
         .map((_) => SupersetOfParser());
 
 /// identifies wheres
-final Parser<FpWhereParser> whereLexer =
-    (string('where(') | string('.where(')).map((_) => FpWhereParser());
+final pt.Parser<FpWhereParser> whereLexer =
+    (pt.string('where(') | pt.string('.where(')).map((_) => FpWhereParser());
 
 /// identifies selects
-final Parser<SelectParser> selectLexer =
-    (string('select(') | string('.select(')).map((_) => SelectParser());
+final pt.Parser<SelectParser> selectLexer =
+    (pt.string('select(') | pt.string('.select(')).map((_) => SelectParser());
 
 /// identifies repeats
-final Parser<RepeatParser> repeatLexer =
-    (string('repeat(') | string('.repeat(')).map((_) => RepeatParser());
+final pt.Parser<RepeatParser> repeatLexer =
+    (pt.string('repeat(') | pt.string('.repeat(')).map((_) => RepeatParser());
 
 /// identifies ofTypes
-final Parser<OfTypeParser> ofTypeLexer =
-    (string('ofType(') | string('.ofType(')).map((_) => OfTypeParser());
+final pt.Parser<OfTypeParser> ofTypeLexer =
+    (pt.string('ofType(') | pt.string('.ofType(')).map((_) => OfTypeParser());
 
-final Parser<ExtensionParser> extensionLexer =
-    (string('extension(') | string('.extension('))
+final pt.Parser<ExtensionParser> extensionLexer =
+    (pt.string('extension(') | pt.string('.extension('))
         .map((_) => ExtensionParser());
 
 /// identifies logs
-final Parser<LogParser> logLexer =
-    (string('log(') | string('.log(')).map((_) => LogParser());
+final pt.Parser<LogParser> logLexer =
+    (pt.string('log(') | pt.string('.log(')).map((_) => LogParser());
 
 /// identifies powers
-final Parser<PowerParser> powerLexer =
-    (string('power(') | string('.power(')).map((_) => PowerParser());
+final pt.Parser<PowerParser> powerLexer =
+    (pt.string('power(') | pt.string('.power(')).map((_) => PowerParser());
 
 /// identifies rounds
-final Parser<RoundParser> roundLexer =
-    (string('round(') | string('.round(')).map((_) => RoundParser());
+final pt.Parser<RoundParser> roundLexer =
+    (pt.string('round(') | pt.string('.round(')).map((_) => RoundParser());
 
 /// identifies indexOfs
-final Parser<IndexOfParser> indexOfLexer =
-    (string('indexOf(') | string('.indexOf(')).map((_) => IndexOfParser());
+final pt.Parser<IndexOfParser> indexOfLexer =
+    (pt.string('indexOf(') | pt.string('.indexOf('))
+        .map((_) => IndexOfParser());
 
 /// identifies substrings
-final Parser<SubstringParser> substringLexer =
-    (string('substring(') | string('.substring('))
+final pt.Parser<SubstringParser> substringLexer =
+    (pt.string('subpt.string(') | pt.string('.subpt.string('))
         .map((_) => SubstringParser());
 
 /// identifies startsWiths
-final Parser<StartsWithParser> startsWithLexer =
-    (string('startsWith(') | string('.startsWith('))
+final pt.Parser<StartsWithParser> startsWithLexer =
+    (pt.string('startsWith(') | pt.string('.startsWith('))
         .map((_) => StartsWithParser());
 
 /// identifies endsWiths
-final Parser<EndsWithParser> endsWithLexer =
-    (string('endsWith(') | string('.endsWith(')).map((_) => EndsWithParser());
+final pt.Parser<EndsWithParser> endsWithLexer =
+    (pt.string('endsWith(') | pt.string('.endsWith('))
+        .map((_) => EndsWithParser());
 
 /// identifies containsFunctions
-final Parser<ContainsFunctionParser> containsFunctionLexer =
-    (string('contains(') | string('.contains('))
+final pt.Parser<ContainsFunctionParser> containsFunctionLexer =
+    (pt.string('contains(') | pt.string('.contains('))
         .map((_) => ContainsFunctionParser());
 
 /// identifies replaces
-final Parser<ReplaceParser> replaceLexer =
-    (string('replace(') | string('.replace(')).map((_) => ReplaceParser());
+final pt.Parser<ReplaceParser> replaceLexer =
+    (pt.string('replace(') | pt.string('.replace('))
+        .map((_) => ReplaceParser());
 
 /// identifies matchess
-final Parser<FpMatchesParser> matchesLexer =
-    (string('matches(') | string('.matches(')).map((_) => FpMatchesParser());
+final pt.Parser<FpMatchesParser> matchesLexer =
+    (pt.string('matches(') | pt.string('.matches('))
+        .map((_) => FpMatchesParser());
 
 /// identifies replaceMatchess
-final Parser<ReplaceMatchesParser> replaceMatchesLexer =
-    (string('replaceMatches(') | string('.replaceMatches('))
+final pt.Parser<ReplaceMatchesParser> replaceMatchesLexer =
+    (pt.string('replaceMatches(') | pt.string('.replaceMatches('))
         .map((_) => ReplaceMatchesParser());
 
 /// identifies skips
-final Parser<SkipParser> skipLexer =
-    (string('skip(') | string('.skip(')).map((value) => SkipParser());
+final pt.Parser<SkipParser> skipLexer =
+    (pt.string('skip(') | pt.string('.skip(')).map((value) => SkipParser());
 
 /// identifies takes
-final Parser<TakeParser> takeLexer =
-    (string('take(') | string('.take(')).map((_) => TakeParser());
+final pt.Parser<TakeParser> takeLexer =
+    (pt.string('take(') | pt.string('.take(')).map((_) => TakeParser());
 
 /// identifies intersects
-final Parser<IntersectParser> intersectLexer =
-    (string('intersect(') | string('.intersect('))
+final pt.Parser<IntersectParser> intersectLexer =
+    (pt.string('intersect(') | pt.string('.intersect('))
         .map((_) => IntersectParser());
 
 /// identifies excludes
-final Parser<ExcludeParser> excludeLexer =
-    (string('exclude(') | string('.exclude(')).map((_) => ExcludeParser());
+final pt.Parser<ExcludeParser> excludeLexer =
+    (pt.string('exclude(') | pt.string('.exclude('))
+        .map((_) => ExcludeParser());
 
 /// identifies traces
-final Parser<TraceParser> traceLexer =
-    (string('trace(') | string('.trace(')).map((_) => TraceParser());
+final pt.Parser<TraceParser> traceLexer =
+    (pt.string('trace(') | pt.string('.trace(')).map((_) => TraceParser());
 
 /// identifies aggregates
-final Parser<AggregateParser> aggregateLexer =
-    (string('aggregate(') | string('.aggregate('))
+final pt.Parser<AggregateParser> aggregateLexer =
+    (pt.string('aggregate(') | pt.string('.aggregate('))
         .map((_) => AggregateParser());
 
 /// identifies iifs
-final Parser<IifParser> iifLexer =
-    (string('iif(') | string('.iif(')).map((_) => IifParser());
+final pt.Parser<IifParser> iifLexer =
+    (pt.string('iif(') | pt.string('.iif(')).map((_) => IifParser());

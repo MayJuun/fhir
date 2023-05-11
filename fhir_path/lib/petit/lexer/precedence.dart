@@ -1,5 +1,5 @@
 // Package imports:
-import 'package:petitparser/petitparser.dart';
+import 'package:petitparser/petitparser.dart' as pt;
 
 // Project imports:
 import '../petit_fhir_path.dart';
@@ -120,7 +120,7 @@ const operatorOrderMap = {
   LowerParser: 1,
   MaxParser: 1,
   MinParser: 1,
-  NotParser: 1,
+  pt.NotParser: 1,
   NowParser: 1,
   OfTypeParser: 1,
   OrdinalParser: 1,
